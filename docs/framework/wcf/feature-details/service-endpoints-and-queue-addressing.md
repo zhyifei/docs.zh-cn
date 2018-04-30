@@ -1,24 +1,26 @@
 ---
-title: "服务终结点和队列寻址"
-ms.custom: 
+title: 服务终结点和队列寻址
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服务终结点和队列寻址
 本主题讨论客户端如何对从队列中读取的服务进行寻址以及服务终结点如何映射到队列。 作为提示，下图演示传统 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 排队应用程序部署。  
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/19/2018
   
  路径名映射到"FormatNames"以确定地址，包括路由和队列管理器传输协议的其他方面。 队列管理器支持两种传输协议：本机 MSMQ 协议和 SOAP 可靠消息协议 (SRMP)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ 路径和格式名，请参阅[有关消息队列](http://go.microsoft.com/fwlink/?LinkId=94837)。  
+ 有关 MSMQ 路径和格式名的详细信息，请参阅[有关消息队列](http://go.microsoft.com/fwlink/?LinkId=94837)。  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding 和服务寻址  
  在将消息发送到服务中的目标地址时，将根据用于通信的传输协议选择 URI 中的方案。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的每个传输协议都有唯一的方案。 此方案必须反映用于通信的传输协议的性质。 例如，net.tcp、net.pipe、HTTP 等等。  
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/19/2018
 |基于 WCF URI 的队列地址|使用 Active Directory 属性|队列传输协议属性|得到的 MSMQ 格式名|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |Net.msmq://\<machine-name>/private/abc|False（默认值）|Native（默认值）|DIRECT=OS:计算机名\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|直接 =http://machine/msmq/private$/ abc|  
 |Net.msmq://\<machine-name>/private/abc|True|Native|PUBLIC=some-guid（队列的 GUID）|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>从死信队列或病毒消息队列读取消息  
@@ -111,7 +113,7 @@ ms.lasthandoff: 01/19/2018
   
  请注意，当使用 `MsmqIntegrationBinding` 从队列接收消息时，只能使用直接格式名以及公共和专用格式名（需要 Active Directory 集成）。 但是，建议您使用直接格式名。 例如，在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用任何其他格式名都将导致错误，因为系统会尝试打开一个子队列，而该子队列只能使用直接格式名打开。  
   
- 在使用 `MsmqIntegrationBinding` 对 SRMP 进行寻址时，不需要在直接格式名中添加 /msmq/ 来帮助 Internet 信息服务 (IIS) 进行调度。 例如：在使用 SRMP 协议对队列 abc 进行寻址时，应使用 DIRECT=http://adatum.com/private$/abc 而不是 DIRECT=http://adatum.com/msmq/private$/abc。  
+ 在使用 `MsmqIntegrationBinding` 对 SRMP 进行寻址时，不需要在直接格式名中添加 /msmq/ 来帮助 Internet 信息服务 (IIS) 进行调度。 例如： 当寻址的队列 abc 使用 SRMP 协议，而不是 DIRECT =http://adatum.com/msmq/private$/ abc，则应使用 DIRECT =http://adatum.com/private$/ abc。  
   
  请注意，对于 `MsmqIntegrationBinding`，不能使用 net.msmq:// 寻址。 因为 `MsmqIntegrationBinding` 支持任意形式的 MSMQ 格式名寻址，所以您可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，该服务使用此绑定来使用 MSMQ 中的多路广播和通讯组列表功能。 一个例外是在使用 `CustomDeadLetterQueue` 时指定 `MsmqIntegrationBinding`。 它必须采用 net.msmq:// 形式，这与使用 `NetMsmqBinding` 进行指定的方式相似。  
   

@@ -19,14 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bf92f12e415b937c36dfc518af4a4c1795c8b789
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bf38c4b15f59ca90d00f8f6b365a3233ee3516bb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>部署 WPF 应用程序 (WPF)
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 应用程序在生成后需要进行部署。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和.NET Framework 包含多种部署技术。 用于部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署技术取决于应用程序的类型。 本主题将简要概述各项部署技术，以及如何使用这些技术来满足各类 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署要求。  
+Windows Presentation Foundation (WPF) 应用程序都生成后，它们需要进行部署。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和.NET Framework 包含多种部署技术。 用于部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署技术取决于应用程序的类型。 本主题将简要概述各项部署技术，以及如何使用这些技术来满足各类 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署要求。  
   
    
 <a name="Deployment_Technologies"></a>   

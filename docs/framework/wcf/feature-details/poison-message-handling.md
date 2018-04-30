@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="poison-message-handling"></a>病毒消息处理
 A*病毒消息*是一条消息，已超出向应用程序传递尝试最大数量。 当基于队列的应用程序由于错误而无法处理消息时，可能会引起这种情况。 为符合可靠性要求，排队的应用程序是在事务中接收消息的。 中止已接收某个排队消息的事务时，该消息仍会保留在队列中，这样当开始一个新事务时，将对该消息重试操作。 如果导致事务中止的问题未得到更正，则直到超出最大传递尝试次数并导致产生病毒消息时，接收应用程序才会中断接收和中止同一消息的循环。  
@@ -104,7 +104,7 @@ A*病毒消息*是一条消息，已超出向应用程序传递尝试最大数�
  会话所经历的重试和病毒消息处理过程与单个消息的经历是一样的。 前面列出的病毒消息属性适用于整个会话。 这意味着整个会话将会重试，并前进到最终病毒消息队列或发送方的死信队列（如果消息被拒绝）。  
   
 ## <a name="batching-and-poison-messages"></a>批处理和病毒消息  
- 如果某条消息变为病毒消息，并且是某个批处理的一部分，则整个批处理将回滚，通道会返回到一次读取一条消息的状态。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 批处理，请参阅[在事务中对消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ 如果某条消息变为病毒消息，并且是某个批处理的一部分，则整个批处理将回滚，通道会返回到一次读取一条消息的状态。 有关批处理的详细信息，请参阅[在事务中对消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>对病毒队列中的消息进行病毒消息处理  
  只要有消息放入病毒消息队列中，病毒消息处理就不会结束。 还必须读取和处理病毒消息队列中的消息。 当从最终病毒子队列读取消息时，可以使用病毒消息处理设置的子集。 适用的设置有 `ReceiveRetryCount` 和 `ReceiveErrorHandling`。 您可以将 `ReceiveErrorHandling` 设置为“删除”、“拒绝”或“错误”。 如果 `MaxRetryCycles` 设置为“移动”，`ReceiveErrorHandling` 将被忽略并引发异常。  

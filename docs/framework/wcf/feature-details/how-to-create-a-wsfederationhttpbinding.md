@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>如何：创建 WSFederationHttpBinding
 在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]、<xref:System.ServiceModel.WSFederationHttpBinding>类 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)配置中) 提供了用于公开联合的服务的机制。 即，服务要求客户端使用安全令牌服务颁发的安全令牌进行身份验证。 本主题演示如何通过代码和配置来设置 <xref:System.ServiceModel.WSFederationHttpBinding>。 绑定一经创建，您就可以设置一个终结点来使用该绑定。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/28/2018
   
      SAML 1.1 令牌的 URI 是"http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1"。  
   
-4.  可选。 在联合服务上，将 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> 属性设置为安全令牌服务的元数据 URL。 使用元数据终结点，服务的客户端可以选择一个适合的绑定/终结点对，前提是将服务配置为发布元数据。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 发布元数据，请参阅[发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
+4.  可选。 在联合服务上，将 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> 属性设置为安全令牌服务的元数据 URL。 使用元数据终结点，服务的客户端可以选择一个适合的绑定/终结点对，前提是将服务配置为发布元数据。 有关发布元数据的详细信息，请参阅[发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
   
  你还可以设置其他属性，包括已颁发令牌中用作校验密钥的密钥类型、在客户端和服务之间使用的算法套件、是协商还是显式指定服务凭据、服务期望已颁发令牌中包含的任何特定声明，以及必须添加到由客户端发送到安全令牌服务的请求的其他 XML 元素。  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 04/28/2018
   
 12. 有关详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
-13. 如果未指定本地颁发者则在客户端上是必需的；不能在服务上使用。 创建[\<绑定 >](../../../../docs/framework/misc/binding.md)可以用于与安全令牌服务通信的绑定部分中的元素。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建一个绑定，请参阅[如何： 在配置中指定服务绑定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+13. 如果未指定本地颁发者则在客户端上是必需的；不能在服务上使用。 创建[\<绑定 >](../../../../docs/framework/misc/binding.md)可以用于与安全令牌服务通信的绑定部分中的元素。 有关创建绑定的详细信息，请参阅[如何： 在配置中指定服务绑定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
   
 14. 通过设置 `binding` 元素的 `bindingConfiguration` 和 `<issuer>` 属性，来指定在上一步创建的绑定。  
   

@@ -1,12 +1,13 @@
 ---
-title: "图像处理概述"
-ms.custom: 
+title: 图像处理概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -28,16 +29,17 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c7d0a880dd30fe737a1bd4d1368dde16ed0df1e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8715f04f6cdec84e74d53213c0a5a5ff360c7d28
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="imaging-overview"></a>图像处理概述
 本主题介绍 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]。 借助 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]，开发人员可以显示、转换图像和设置图像的格式。  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
 -   对文件内的专用元数据的支持。  
   
--   托管组件利用非托管基础结构提供图像与其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能（如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、动画和图形）的无缝集成。 托管组件还可以从 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 图像处理编解码器扩展性模型中获益，利用该模型可以自动识别 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序中的新图像格式。  
+-   托管组件利用非托管基础结构提供图像与其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能（如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、动画和图形）的无缝集成。 托管的组件还受益于的 Windows Presentation Foundation (WPF) 映像编解码器扩展性模型可以自动识别中的新图像格式的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序。  
   
  托管的大多数[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]驻留在<xref:System.Windows.Media.Imaging?displayProperty=nameWithType>命名空间，但几个重要类型，如<xref:System.Windows.Media.ImageBrush>和<xref:System.Windows.Media.ImageDrawing>驻留在<xref:System.Windows.Media?displayProperty=nameWithType>命名空间和<xref:System.Windows.Controls.Image>驻留在<xref:System.Windows.Controls?displayProperty=nameWithType>命名空间。  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="wpf-image-formats"></a>WPF 图像格式  
  编解码器用于对特定媒体格式进行解码或编码。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 包括一个适用于 [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)]、[!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]、[!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、[!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] 和 ICON 图像格式的编解码器。 利用上述每个编解码器，应用程序可以对其各自的图像格式进行解码（ICON 除外）和编码。  
   
- <xref:System.Windows.Media.Imaging.BitmapSource>是一个重要的类用于解码和编码的映像。 它是 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 管道的基本构建基块，表示具有特定大小和分辨率的单个不变的像素集。 A<xref:System.Windows.Media.Imaging.BitmapSource>可以是单个镇的多个帧图像，也可以是上执行转换的结果<xref:System.Windows.Media.Imaging.BitmapSource>。 它是许多中使用的主类的父[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]如映像<xref:System.Windows.Media.Imaging.BitmapFrame>。  
+ <xref:System.Windows.Media.Imaging.BitmapSource> 是一个重要的类用于解码和编码的映像。 它是 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 管道的基本构建基块，表示具有特定大小和分辨率的单个不变的像素集。 A<xref:System.Windows.Media.Imaging.BitmapSource>可以是单个镇的多个帧图像，也可以是上执行转换的结果<xref:System.Windows.Media.Imaging.BitmapSource>。 它是许多中使用的主类的父[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]如映像<xref:System.Windows.Media.Imaging.BitmapFrame>。  
   
  A<xref:System.Windows.Media.Imaging.BitmapFrame>用于存储实际位图图像格式的数据。 许多图像格式仅支持单个<xref:System.Windows.Media.Imaging.BitmapFrame>，尽管格式例如[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)]和[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]支持每个图像的多个帧。 帧由解码器用作输入数据，并传递到编码器以创建图像文件。  
   
@@ -100,25 +102,25 @@ ms.lasthandoff: 12/22/2017
   
 <a name="_displayingimages"></a>   
 ## <a name="displaying-images-in-wpf"></a>在 WPF 中显示图像  
- 可以通过多种方式在 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 应用程序中显示图像。 可以使用显示映像<xref:System.Windows.Controls.Image>控件，在 visual using 上绘制<xref:System.Windows.Media.ImageBrush>，或使用绘制<xref:System.Windows.Media.ImageDrawing>。  
+ 有多种方法可在 Windows Presentation Foundation (WPF) 应用程序中显示图像。 可以使用显示映像<xref:System.Windows.Controls.Image>控件，在 visual using 上绘制<xref:System.Windows.Media.ImageBrush>，或使用绘制<xref:System.Windows.Media.ImageDrawing>。  
   
 ### <a name="using-the-image-control"></a>使用 Image 控件  
- <xref:System.Windows.Controls.Image>是一个框架元素，在应用程序中显示图像的主要方法。 在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，<xref:System.Windows.Controls.Image>可在两种方法; 特性语法或属性语法。 以下示例演示如何使用特性语法或属性标记语法来呈现宽度为 200 像素的图像。 有关特性语法和属性语法的详细信息，请参阅[依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+ <xref:System.Windows.Controls.Image> 是一个框架元素，在应用程序中显示图像的主要方法。 在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，<xref:System.Windows.Controls.Image>可在两种方法; 特性语法或属性语法。 以下示例演示如何使用特性语法或属性标记语法来呈现宽度为 200 像素的图像。 有关特性语法和属性语法的详细信息，请参阅[依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
   
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
- 许多示例使用<xref:System.Windows.Media.Imaging.BitmapImage>对象，以引用的图像文件。 <xref:System.Windows.Media.Imaging.BitmapImage>是一个专用<xref:System.Windows.Media.Imaging.BitmapSource>针对进行了优化[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]加载和轻松地图像显示为<xref:System.Windows.Controls.Image.Source%2A>的<xref:System.Windows.Controls.Image>控件。  
+ 许多示例使用<xref:System.Windows.Media.Imaging.BitmapImage>对象，以引用的图像文件。 <xref:System.Windows.Media.Imaging.BitmapImage> 是一个专用<xref:System.Windows.Media.Imaging.BitmapSource>针对进行了优化[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]加载和轻松地图像显示为<xref:System.Windows.Controls.Image.Source%2A>的<xref:System.Windows.Controls.Image>控件。  
   
  以下示例演示如何使用代码呈现宽度为 200 像素的图像。  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage>实现<xref:System.ComponentModel.ISupportInitialize>接口来优化多个属性上的初始化。 只能在对象初始化过程中进行属性更改。 调用<xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>发出信号初始化已开始和<xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A>发出信号初始化已完成。 初始化后，将忽略所做的属性更改。  
+>  <xref:System.Windows.Media.Imaging.BitmapImage> 实现<xref:System.ComponentModel.ISupportInitialize>接口来优化多个属性上的初始化。 只能在对象初始化过程中进行属性更改。 调用<xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>发出信号初始化已开始和<xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A>发出信号初始化已完成。 初始化后，将忽略所做的属性更改。  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>旋转、转换和剪切图像  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用户能够使用的属性转换图像<xref:System.Windows.Media.Imaging.BitmapImage>或使用其他<xref:System.Windows.Media.Imaging.BitmapSource>对象如<xref:System.Windows.Media.Imaging.CroppedBitmap>或<xref:System.Windows.Media.Imaging.FormatConvertedBitmap>。 上述图像转换可以缩放或旋转图像、更改图像的像素格式或剪切图像。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用户能够使用的属性转换图像<xref:System.Windows.Media.Imaging.BitmapImage>或使用其他<xref:System.Windows.Media.Imaging.BitmapSource>对象如<xref:System.Windows.Media.Imaging.CroppedBitmap>或<xref:System.Windows.Media.Imaging.FormatConvertedBitmap>。 上述图像转换可以缩放或旋转图像、更改图像的像素格式或剪切图像。  
   
  使用来执行图像旋转<xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A>属性<xref:System.Windows.Media.Imaging.BitmapImage>。 只能以 90 度为增量进行旋转。 在以下示例中，图像旋转了 90 度。  
   
@@ -177,15 +179,15 @@ ms.lasthandoff: 12/22/2017
 ## <a name="image-metadata"></a>图像元数据  
  某些图像文件包含用于描述文件的内容或特征的元数据。 例如，大多数数数字相机创建的图像中包含用于捕获该图像的照相机品牌和型号的元数据。 每种图像格式处理元数据的方式不同，但 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 为存储和检索每种受支持图像格式的元数据提供了一种统一方式。  
   
- 通过提供对元数据的访问<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>属性<xref:System.Windows.Media.Imaging.BitmapSource>对象。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>返回<xref:System.Windows.Media.Imaging.BitmapMetadata>包括映像包含的所有元数据的对象。 此数据可以位于一个元数据架构中或位于不同架构的组合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 支持以下图像元数据架构：[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]、tEXt（PNG 文本数据）、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、[!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
+ 通过提供对元数据的访问<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>属性<xref:System.Windows.Media.Imaging.BitmapSource>对象。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 返回<xref:System.Windows.Media.Imaging.BitmapMetadata>包括映像包含的所有元数据的对象。 此数据可以位于一个元数据架构中或位于不同架构的组合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 支持以下图像元数据架构：[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]、tEXt（PNG 文本数据）、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、[!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
   
- 为了简化读取元数据的过程<xref:System.Windows.Media.Imaging.BitmapMetadata>提供多个命名的属性，可以如轻松访问<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>， <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>，和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 许多命名属性还可以用于编写元数据。 元数据查询读取器提供对读取元数据的其他支持。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>方法用于检索元数据查询读取器通过如提供字符串查询*"/ app1/exif /"*。 在下面的示例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>用于获取文本存储在*"/ 文本/说明"*位置。  
+ 为了简化读取元数据的过程<xref:System.Windows.Media.Imaging.BitmapMetadata>提供多个命名的属性，可以如轻松访问<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>， <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>，和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 许多命名属性还可以用于编写元数据。 元数据查询读取器提供对读取元数据的其他支持。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>方法用于检索元数据查询读取器通过如提供字符串查询 *"/ app1/exif /"*。 在下面的示例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>用于获取文本存储在 *"/ 文本/说明"* 位置。  
   
  [!code-cpp[BitmapMetadata#GetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
  [!code-csharp[BitmapMetadata#GetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
  [!code-vb[BitmapMetadata#GetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
   
- 若要编写元数据，请使用元数据查询编写器。 <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>获取查询编写器和设置所需的值。 在下面的示例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>用于写入文本存储在*"/ 文本/说明"*位置。  
+ 若要编写元数据，请使用元数据查询编写器。 <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> 获取查询编写器和设置所需的值。 在下面的示例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>用于写入文本存储在 *"/ 文本/说明"* 位置。  
   
  [!code-cpp[BitmapMetadata#SetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
  [!code-csharp[BitmapMetadata#SetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]

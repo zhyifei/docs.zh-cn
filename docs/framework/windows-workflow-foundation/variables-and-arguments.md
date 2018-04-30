@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c81d05120f8cf0decc7c6036e2a722ba6271dab8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 66b11dda1b245fa88548cf70268a6ca10ee27708
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="variables-and-arguments"></a>变量和自变量
 在 Windows Workflow Foundation (WF) 中，变量表示数据的存储参数表示流入和流的数据流入和流出活动。 活动拥有一组自变量，这些自变量构成活动的签名。 此外，活动可以维护一个变量列表，在工作流设计期间，开发人员可在该列表中添加或移除变量。 使用可返回值的表达式可以绑定参数。  
@@ -152,4 +152,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 使用自变量、 变量和代码中的表达式，请参阅[创作工作流、 活动和表达式使用命令性代码](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)和[所需的参数和重载组](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)。
+ 有关使用自变量、 变量和代码中的表达式的详细信息，请参阅[创作工作流、 活动和表达式使用命令性代码](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)和[所需的参数和重载组](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).

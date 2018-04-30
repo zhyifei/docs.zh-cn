@@ -1,30 +1,32 @@
 ---
-title: "如何：实现异步服务操作"
-ms.custom: 
+title: 如何：实现异步服务操作
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ba82242d0d3d42d4a2e3774186f2a282e279938
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe823fc8b86dd20cfa344c9889eca9dff21514ec
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>如何：实现异步服务操作
-在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序中，服务操作可以按同步方式或异步方式实现，而无需指示客户端如何调用它。 例如，异步服务操作可以同步调用，而同步服务操作可以异步调用。 有关演示如何在客户端应用程序中以异步方式调用操作的示例，请参阅[如何： 以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]同步和异步操作，请参阅[设计服务协定](../../../docs/framework/wcf/designing-service-contracts.md)和[同步和异步操作](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。 本主题介绍异步服务操作的基本结构，代码并不完整。 有关的服务和客户端的完整示例，请参阅[异步](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)。  
+在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序中，服务操作可以按同步方式或异步方式实现，而无需指示客户端如何调用它。 例如，异步服务操作可以同步调用，而同步服务操作可以异步调用。 有关演示如何在客户端应用程序中以异步方式调用操作的示例，请参阅[如何： 以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。 有关同步和异步操作的详细信息，请参阅[设计服务协定](../../../docs/framework/wcf/designing-service-contracts.md)和[同步和异步操作](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。 本主题介绍异步服务操作的基本结构，代码并不完整。 有关的服务和客户端的完整示例，请参阅[异步](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)。  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>按异步方式实现服务操作  
   

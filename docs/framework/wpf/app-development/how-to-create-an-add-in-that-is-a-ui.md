@@ -1,12 +1,13 @@
 ---
-title: "如何：创建作为 UI 的外接程序"
-ms.custom: 
+title: 如何：创建作为 UI 的外接程序
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fea1c718eedb12d49eced9964e4f9045badf07ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cadb992a68f4ee9f06ad37adf71856cdc4f46503
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>如何：创建作为 UI 的外接程序
-此示例演示如何创建外接程序是[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)][!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]承载的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]独立的应用程序。  
+此示例演示如何为 Windows Presentation Foundation (WPF) 由承载的外接程序创建[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]独立的应用程序。  
   
  外接程序是[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]即[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]用户控件。 用户控件的内容是单个按钮，单击时会显示消息框。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]外接程序的独立应用程序承载[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]用作应用程序主窗口的内容。  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- 在外接程序模型在外接程序返回[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)](请参阅[创建外接程序中，将返回 UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)) 外, 接程序适配器转换<xref:System.Windows.FrameworkElement>到<xref:System.AddIn.Contract.INativeHandleContract>通过调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>必须还调用在此模型中，尽管你需要实现一种方法从其编写代码以调用它。 执行此操作通过重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>和实现调用的代码，<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>如果正在调用的代码<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>预期<xref:System.AddIn.Contract.INativeHandleContract>。 在此情况下，调用方将为主机端适配器，这在后续子节中有所介绍。  
+ 在外接程序模型在外接程序返回[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)](请参阅[创建外接程序中，将返回 UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)) 外, 接程序适配器转换<xref:System.Windows.FrameworkElement>到<xref:System.AddIn.Contract.INativeHandleContract>通过调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 必须还调用在此模型中，尽管你需要实现一种方法从其编写代码以调用它。 执行此操作通过重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>和实现调用的代码，<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>如果正在调用的代码<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>预期<xref:System.AddIn.Contract.INativeHandleContract>。 在此情况下，调用方将为主机端适配器，这在后续子节中有所介绍。  
   
 > [!NOTE]
 >  你还需要重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>使用 tab 键切换之间主机应用程序在此模型中[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]和外接程序[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 有关详细信息，请参阅"WPF 外接程序限制" [WPF 外接程序概述](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  

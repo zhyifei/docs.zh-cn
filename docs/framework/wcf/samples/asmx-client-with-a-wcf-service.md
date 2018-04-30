@@ -1,24 +1,26 @@
 ---
-title: "带有 WCF 服务的 ASMX 客户端"
-ms.custom: 
+title: 带有 WCF 服务的 ASMX 客户端
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4df9060f173647767a3a070a451e0f2d3e02cf0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26fc56ae465c2792f895f08a8e55577d3b74b97d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>带有 WCF 服务的 ASMX 客户端
 此示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建服务，然后从非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端（如 ASMX 客户端）访问该服务。  
@@ -149,7 +151,7 @@ Press <ENTER> to terminate client.
 3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]传递和返回复杂数据类型，请参阅： [Windows 窗体客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)， [Windows Presentation Foundation 客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)，和[ASP.NET 中的数据绑定客户端](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  有关传递和返回复杂数据的详细信息类型，请参阅： [Windows 窗体客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)， [Windows Presentation Foundation 客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)，和[数据ASP.NET 客户端中的绑定](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

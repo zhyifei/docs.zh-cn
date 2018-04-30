@@ -1,27 +1,29 @@
 ---
-title: "安全会话的安全注意事项"
-ms.custom: 
+title: 安全会话的安全注意事项
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: be460249ed877b2f67f2d153c2aea4a3cc4d2b37
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d1e5082ace452eabddd91a45a20c6d6363e118b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-considerations-for-secure-sessions"></a>安全会话的安全注意事项
-您应考虑实现安全会话时影响安全的下列事项。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]安全注意事项，请参阅[安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)和[安全性的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)。  
+您应考虑实现安全会话时影响安全的下列事项。 有关安全注意事项的详细信息，请参阅[安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)和[安全性的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)。  
   
 ## <a name="secure-sessions-and-metadata"></a>安全会话和元数据  
  当建立安全会话并且 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> 属性设置为 `false` 时，作为服务终结点的 Web Services 描述语言 (WSDL) 文档中元数据的一部分，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 发送 `mssp:MustNotSendCancel` 断言。 `mssp:MustNotSendCancel` 断言通知客户端此服务不响应取消安全会话的请求。 当 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> 属性设置为 `true` 时，在 WSDL 文档中，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不发出 `mssp:MustNotSendCancel` 断言。 当客户端不再需要安全会话时，客户端应向服务发送一个取消请求。 使用生成客户端时[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，客户端代码是否存在对相应地做出反应`mssp:MustNotSendCancel`断言。  

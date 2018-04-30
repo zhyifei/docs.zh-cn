@@ -19,14 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5a2ca8d6ce6cf907538c534f97300e418f5e825f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 14059ebc3efe57a38a093faed9cfbd254c372920
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>如何：作为 Atom 和 RSS 公开源
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允许您创建公开联合源的服务。 本主题讨论如何使用 Atom 1.0 和 RSS 2.0 创建公开联合源的联合服务。 此服务公开一个可以返回任一联合格式的终结点。 为了简单起见，本示例中使用的服务为自承载服务。 在生产环境中，此类型的服务将承载在 IIS 或 WAS 下。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 不同[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]宿主选项，请参阅[宿主](../../../../docs/framework/wcf/feature-details/hosting.md)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允许您创建公开联合源的服务。 本主题讨论如何使用 Atom 1.0 和 RSS 2.0 创建公开联合源的联合服务。 此服务公开一个可以返回任一联合格式的终结点。 为了简单起见，本示例中使用的服务为自承载服务。 在生产环境中，此类型的服务将承载在 IIS 或 WAS 下。 有关其他详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]宿主选项，请参阅[宿主](../../../../docs/framework/wcf/feature-details/hosting.md)。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>创建基本联合服务  
   

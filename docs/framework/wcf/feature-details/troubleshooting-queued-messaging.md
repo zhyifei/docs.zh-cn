@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>排队消息处理疑难解答
 本节包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用队列时出现的常见问题以及疑难解答帮助。  
@@ -125,7 +125,7 @@ ms.lasthandoff: 04/28/2018
   
  **问：**哪里可以找到常见问题的答案在 MSMQ 上？  
   
- **答：** [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ，请参阅[Microsoft 消息队列](http://go.microsoft.com/fwlink/?LinkId=87810)。  
+ **答：** MSMQ 有关的详细信息，请参阅[Microsoft 消息队列](http://go.microsoft.com/fwlink/?LinkId=87810)。  
   
  **问：**我的服务是为什么引发`ProtocolException`时从同时包含队列中的读取排队会话消息和排队数据报消息？  
   

@@ -1,33 +1,33 @@
 ---
-title: "创建用户定义的绑定"
-ms.custom: 
+title: 创建用户定义的绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-user-defined-bindings"></a>创建用户定义的绑定
 有多种方式可以创建系统未提供的绑定：  
   
--   基于 <xref:System.ServiceModel.Channels.CustomBinding> 类（可向其中填充绑定元素的容器）创建一个自定义绑定。 然后将自定义绑定添加到服务终结点。 可以通过编程方式或者在应用程序配置文件中创建自定义绑定。 若要从应用程序配置文件中使用绑定元素，该绑定元素必须扩展 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义绑定，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)和<xref:System.ServiceModel.Channels.CustomBinding>。  
+-   基于 <xref:System.ServiceModel.Channels.CustomBinding> 类（可向其中填充绑定元素的容器）创建一个自定义绑定。 然后将自定义绑定添加到服务终结点。 可以通过编程方式或者在应用程序配置文件中创建自定义绑定。 若要从应用程序配置文件中使用绑定元素，该绑定元素必须扩展 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>。 有关自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)和<xref:System.ServiceModel.Channels.CustomBinding>。  
   
 -   可以创建一个从标准绑定派生的类。 例如，可以从 <xref:System.ServiceModel.WSHttpBinding> 派生一个类并重写 <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> 方法，以获取绑定元素并插入自定义绑定元素或建立一个特定的安全值。  
   

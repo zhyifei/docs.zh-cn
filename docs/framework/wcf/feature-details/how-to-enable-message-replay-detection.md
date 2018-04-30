@@ -24,16 +24,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55cd4b928c640f506e058f6a441189842bc9b8a3
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cada24098f5800f56d7dd50119c3fe3394ba14cd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>如何：启用消息重播检测
 当攻击者复制双方之间的消息流并将该消息流向一方或多方重播时，将发生重播攻击。 除非攻击程度降低，否则受到攻击的计算机会将该流处理为合法消息，从而导致产生大量不良结果，例如某项的冗余排序。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 消息重播检测，请参阅[消息重播检测](http://go.microsoft.com/fwlink/?LinkId=88536)。  
+ 有关消息重播检测的详细信息，请参阅[消息重播检测](http://go.microsoft.com/fwlink/?LinkId=88536)。  
   
  下面的过程演示在用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 控制重播检测时所使用的各种属性。  
   

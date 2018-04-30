@@ -1,28 +1,30 @@
 ---
-title: "批注架构"
-ms.custom: 
+title: 批注架构
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML schema definition (XSD)
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7989269e8076eda1deef6384b7efdb51c2d279ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a78e287065fb714878d4d97b037d44440d063a5a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="annotations-schema"></a>批注架构
 本主题介绍 Microsoft Annotations Framework 用来保存和检索用户批注数据的 XML 架构定义 (XSD)。  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
  核心架构定义的主 XML 结构<xref:System.Windows.Annotations.Annotation>。  大部分核心架构中定义的 XML 元素中的类型对应<xref:System.Windows.Annotations>命名空间。  核心架构公开应用程序可在其中添加自己的 XML 数据的三个扩展点。  这些扩展点包括<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和"内容"。  (内容中的形式提供了元素<xref:System.Xml.XmlElement>列表。)  
   
- 本主题中描述的基架构定义的扩展<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和内容类型包含与初始[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]释放。  
+ 本主题中描述的基架构定义的扩展<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和内容与初始的 Windows Presentation Foundation (WPF) 版本包含的类型。  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>批注 XML 核心架构  

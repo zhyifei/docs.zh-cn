@@ -1,12 +1,13 @@
 ---
-title: "高级文本格式设置"
-ms.custom: 
+title: 高级文本格式设置
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9bb2664b267301fdf1e3a67e385595a5d28212bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15b5d74c7607c59f7a4b568774e3d870138e56a4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="advanced-text-formatting"></a>高级文本格式设置
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]提供一组可靠的[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]在你的应用程序中包含文本。 布局和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，如<xref:System.Windows.Controls.TextBlock>、 提供最常见和常规使用元素的文本表示形式。 绘制[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，如<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.FormattedText>，提供一种在绘图中包括格式化的文本。 在最高级别，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供一个可扩展的文本格式引擎，用于控制文本呈现，例如文本存储管理、 运行的文本格式设置管理和嵌入的对象管理的各个方面。  
+Windows Presentation Foundation (WPF) 提供一组可靠的[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]在你的应用程序中包含文本。 布局和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，如<xref:System.Windows.Controls.TextBlock>、 提供最常见和常规使用元素的文本表示形式。 绘制[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，如<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.FormattedText>，提供一种在绘图中包括格式化的文本。 在最高级别，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供一个可扩展的文本格式引擎，用于控制文本呈现，例如文本存储管理、 运行的文本格式设置管理和嵌入的对象管理的各个方面。  
   
  本主题提供的简介[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]文本格式设置。 它注重客户端实现和利用[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]文本格式引擎。  
   
@@ -49,14 +51,14 @@ ms.lasthandoff: 12/22/2017
   
 <a name="section2"></a>   
 ## <a name="using-the-text-formatter"></a>使用文本格式化程序  
- <xref:System.Windows.Media.TextFormatting.TextFormatter>是[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]文本格式引擎，并提供有关格式设置和换行的服务。 文本格式化程序可处理各种文本字符格式和段落样式，并提供对国际文本布局的支持。  
+ <xref:System.Windows.Media.TextFormatting.TextFormatter> 是[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]文本格式引擎，并提供有关格式设置和换行的服务。 文本格式化程序可处理各种文本字符格式和段落样式，并提供对国际文本布局的支持。  
   
  与传统的文本不同[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]、<xref:System.Windows.Media.TextFormatting.TextFormatter>与通过回调方法的一组文本布局客户端交互。 它要求客户端提供这些方法的实现中<xref:System.Windows.Media.TextFormatting.TextSource>类。 下图说明了客户端应用程序之间的文本布局交互和<xref:System.Windows.Media.TextFormatting.TextFormatter>。  
   
  ![文本布局客户端和 TextFormatter 示意图](../../../../docs/framework/wpf/advanced/media/textformatter01.png "TextFormatter01")  
 应用程序和 TextFormatter 之间的交互  
   
- 文本格式化程序用于从文本存储中，检索格式化的文本行即的实现<xref:System.Windows.Media.TextFormatting.TextSource>。 这可通过第一个创建的实例的文本格式化程序使用<xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A>方法。 此方法可创建一个文本格式化程序实例，并设置最大行高值和行宽值。 一旦创建文本格式化程序的实例，通过调用启动行创建过程<xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>方法。 <xref:System.Windows.Media.TextFormatting.TextFormatter>回拨到文本源以便检索的文本和格式设置参数的文本运行该窗体的行。  
+ 文本格式化程序用于从文本存储中，检索格式化的文本行即的实现<xref:System.Windows.Media.TextFormatting.TextSource>。 这可通过第一个创建的实例的文本格式化程序使用<xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A>方法。 此方法可创建一个文本格式化程序实例，并设置最大行高值和行宽值。 一旦创建文本格式化程序的实例，通过调用启动行创建过程<xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>方法。 <xref:System.Windows.Media.TextFormatting.TextFormatter> 回拨到文本源以便检索的文本和格式设置参数的文本运行该窗体的行。  
   
  下例演示文本存储的格式设置过程。 <xref:System.Windows.Media.TextFormatting.TextFormatter>对象用于从文本存储中检索文本行，然后设置格式到绘制的文本行<xref:System.Windows.Media.DrawingContext>。  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="implementing-the-client-text-store"></a>实现客户端文本存储  
  扩展文本格式引擎时，需要实现和管理文本存储的各个方面。 该任务不是无关紧要的。 文本存储负责跟踪文本运行属性、段落属性、嵌入对象和其他类似内容。 它还提供与单个文本格式化程序<xref:System.Windows.Media.TextFormatting.TextRun>对象文本格式化程序使用来创建<xref:System.Windows.Media.TextFormatting.TextLine>对象。  
   
- 若要处理文本存储的虚拟化，文本存储必须派生自<xref:System.Windows.Media.TextFormatting.TextSource>。 <xref:System.Windows.Media.TextFormatting.TextSource>定义文本格式化程序使用从文本存储中检索文本运行的方法。 <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>是文本格式化程序用于检索文本的方法运行行格式设置中使用。 调用<xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>重复进行文本格式化程序直到出现以下情况之一：  
+ 若要处理文本存储的虚拟化，文本存储必须派生自<xref:System.Windows.Media.TextFormatting.TextSource>。 <xref:System.Windows.Media.TextFormatting.TextSource> 定义文本格式化程序使用从文本存储中检索文本运行的方法。 <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> 是文本格式化程序用于检索文本的方法运行行格式设置中使用。 调用<xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>重复进行文本格式化程序直到出现以下情况之一：  
   
 -   A<xref:System.Windows.Media.TextFormatting.TextEndOfLine>或返回子类。  
   
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="section5"></a>   
 ## <a name="specifying-formatting-properties"></a>指定格式设置属性  
- <xref:System.Windows.Media.TextFormatting.TextRun>对象设置格式的使用提供的文本存储属性。 这些属性包括分为两种类型，<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>。 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties>处理涉及段落的属性，如<xref:System.Windows.TextAlignment>和<xref:System.Windows.FlowDirection>。 <xref:System.Windows.Media.TextFormatting.TextRunProperties>是可以为每个文本域中的段落，如前景画笔，不同的属性<xref:System.Windows.Media.Typeface>，和字体大小。 若要实现自定义的段落，然后运行属性类型的自定义文本，你的应用程序必须创建派生自的类<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>分别。  
+ <xref:System.Windows.Media.TextFormatting.TextRun> 对象设置格式的使用提供的文本存储属性。 这些属性包括分为两种类型，<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>。 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 处理涉及段落的属性，如<xref:System.Windows.TextAlignment>和<xref:System.Windows.FlowDirection>。 <xref:System.Windows.Media.TextFormatting.TextRunProperties> 是可以为每个文本域中的段落，如前景画笔，不同的属性<xref:System.Windows.Media.Typeface>，和字体大小。 若要实现自定义的段落，然后运行属性类型的自定义文本，你的应用程序必须创建派生自的类<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>分别。  
   
 ## <a name="see-also"></a>请参阅  
  [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  

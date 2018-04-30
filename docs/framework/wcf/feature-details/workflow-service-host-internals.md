@@ -1,24 +1,26 @@
 ---
-title: "工作流服务主机内部机制"
-ms.custom: 
+title: 工作流服务主机内部机制
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6761c044f166105a2e463d0f89ed0b3813d4b97a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 84bd0c5b93984e126019699caf64a61183c08f13
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-service-host-internals"></a>工作流服务主机内部机制
 <xref:System.ServiceModel.WorkflowServiceHost> 为工作流服务提供主机。 它负责侦听传入消息并将这些消息路由到相应的工作流服务实例，控制空闲工作流的卸载与持久保留，等等。 本主题说明 WorkflowServiceHost 如何处理传入消息。  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
  ![工作流服务主机消息流](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")  
   
- 此图演示了三个不同的终结点：应用程序终结点、工作流控制终结点和工作流承载终结点。 应用程序终结点可接收针对特定工作流实例绑定的消息。 工作流控制终结点可侦听控制操作。 工作流承载终结点可侦听导致 <xref:System.ServiceModel.WorkflowServiceHost> 加载和执行非服务工作流的消息。 如图所示，通过 WCF 运行时处理所有消息。  使用 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> 属性实现工作流服务实例限制。 此属性将限制并发工作流服务实例的数量。 超过此限制后，对新工作流服务实例的任何其他请求或激活持久性工作流实例的请求将进行排队。 按 FIFO 顺序处理排队的请求，无论是对新实例的请求还是对正在运行的持久性实例的请求。 加载主机策略信息，用于确定如何处理未处理的异常以及如何卸载和持久保留空闲工作流服务。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]请参阅这些主题[如何： 配置工作流未处理异常行为使用 WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)和[如何： 使用 WorkflowServiceHost 配置空闲行为](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)。 根据主机策略持久化工作流实例，并在需要时重新加载这些实例。 有关工作流持久性的详细信息请参阅：[如何： 使用 WorkflowServiceHost 配置永久性](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)，[创建长时间运行工作流服务](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)，和[工作流持久性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
+ 此图演示了三个不同的终结点：应用程序终结点、工作流控制终结点和工作流承载终结点。 应用程序终结点可接收针对特定工作流实例绑定的消息。 工作流控制终结点可侦听控制操作。 工作流承载终结点可侦听导致 <xref:System.ServiceModel.WorkflowServiceHost> 加载和执行非服务工作流的消息。 如图所示，通过 WCF 运行时处理所有消息。  使用 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> 属性实现工作流服务实例限制。 此属性将限制并发工作流服务实例的数量。 超过此限制后，对新工作流服务实例的任何其他请求或激活持久性工作流实例的请求将进行排队。 按 FIFO 顺序处理排队的请求，无论是对新实例的请求还是对正在运行的持久性实例的请求。 加载主机策略信息，用于确定如何处理未处理的异常以及如何卸载和持久保留空闲工作流服务。 有关这些主题的详细信息请参阅[如何： 配置工作流未处理异常行为使用 WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)和[如何： 使用 WorkflowServiceHost 配置空闲行为](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)。 根据主机策略持久化工作流实例，并在需要时重新加载这些实例。 有关工作流持久性的详细信息请参阅：[如何： 使用 WorkflowServiceHost 配置永久性](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)，[创建长时间运行工作流服务](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)，和[工作流持久性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
   
  下图演示 WorkflowServiceHost.Open 调用的内容。  
   

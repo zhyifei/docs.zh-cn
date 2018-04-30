@@ -1,27 +1,29 @@
 ---
-title: "将模拟用于传输安全"
-ms.custom: 
+title: 将模拟用于传输安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d5610a107a198a3d8fd0517dca6ca7e2f4d22cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-impersonation-with-transport-security"></a>将模拟用于传输安全
-*模拟*是客户端的标识对其执行的服务器应用程序的功能。 服务在验证对资源的访问时常常使用模拟。 服务器应用程序使用服务帐户运行，但当服务器接受客户端连接时，它模拟客户端，以便使用客户端凭据执行访问检查。 传输安全是一种传递凭据和使用这些凭据确保通信安全的机制。 本主题介绍如何将 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的传输安全性与模拟功能结合使用。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]模拟使用消息安全，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+*模拟*是客户端的标识对其执行的服务器应用程序的功能。 服务在验证对资源的访问时常常使用模拟。 服务器应用程序使用服务帐户运行，但当服务器接受客户端连接时，它模拟客户端，以便使用客户端凭据执行访问检查。 传输安全是一种传递凭据和使用这些凭据确保通信安全的机制。 本主题介绍如何将 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的传输安全性与模拟功能结合使用。 有关使用消息安全模拟的详细信息，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ## <a name="five-impersonation-levels"></a>五个模拟级别  
  传输安全使用五级模拟，如下表所述。  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   命名管道不能用在 `Impersonate` 或 `Delegate` 模拟级别上。 命名管道不能在这些模拟级别实施计算机上的保证。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]命名管道，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
+ 有关 named pipes 的详细信息，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
 ### <a name="http-transport"></a>HTTP 传输协议  
  使用 HTTP 传输的绑定 (<xref:System.ServiceModel.WSHttpBinding>和<xref:System.ServiceModel.BasicHttpBinding>) 中所述支持多个身份验证方案，[了解 HTTP 身份验证](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)。 支持的模拟级别取决于身份验证方案。 使用 HTTP 传输协议时，请注意以下事项：  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Kerberos 身份验证方案（只能通过协商选择）可用于任何受支持的模拟级别。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]HTTP 传输，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
+ 有关 HTTP 传输的详细信息，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  

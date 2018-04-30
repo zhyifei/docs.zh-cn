@@ -22,20 +22,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ffb33ea70f67e209648e470656a2719404dd7f2d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 063f4da3ca920f17f77b3cc53f7c5903fc89b8cf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>如何：在联合身份验证服务上配置凭据
 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，创建联合服务涉及以下主要过程：  
   
-1.  配置 <xref:System.ServiceModel.WSFederationHttpBinding> 或类似的自定义绑定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建一个相应的绑定，请参阅[如何： 创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。  
+1.  配置 <xref:System.ServiceModel.WSFederationHttpBinding> 或类似的自定义绑定。 有关创建一个相应的绑定的详细信息，请参阅[如何： 创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。  
   
 2.  配置 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>，它控制如何对提供给服务的已颁发令牌进行身份验证。  
   
- 本主题提供有关第二个步骤的详细信息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 联合的服务的工作原理，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ 本主题提供有关第二个步骤的详细信息。 有关联合的服务的工作原理的详细信息，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>在代码中设置 IssuedTokenServiceCredential 的属性  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/28/2018
   
 -   如果已颁发令牌的签名使用 X.509 颁发者序列号、X.509 主题密钥标识符或 X.509 指纹安全标识符，则已颁发的令牌必须由 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 类的 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 属性返回的集合中的证书进行签名。  
   
--   如果使用 X.509 证书对已颁发的令牌进行签名，该证书必须按照由 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 属性的值指定的语义进行验证，无论该证书是作为 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> 发送给依赖方还是从 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 属性获取。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] X.509 证书验证，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+-   如果使用 X.509 证书对已颁发的令牌进行签名，该证书必须按照由 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 属性的值指定的语义进行验证，无论该证书是作为 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> 发送给依赖方还是从 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 属性获取。 有关 X.509 证书验证的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
  例如，将 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> 将对签名证书位于 `TrustedPeople` 证书存储中的任何已颁发令牌进行身份验证。 在这种情况下，请将 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 属性设置为 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> 或 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>。 您可以选择其他模式，包括 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>。 如果选择了 `Custom`，则必须将 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 类的一个实例分配给 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 属性。 自定义验证程序可以使用它喜欢的任何条件来验证证书。 有关详细信息，请参阅[如何： 创建服务，它采用一个自定义证书验证程序](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
   

@@ -1,12 +1,13 @@
 ---
-title: "样式设置和模板化"
-ms.custom: 
+title: 样式设置和模板化
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aafd709bfc1da63d11a56ada59aedf0ada12f3a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="styling-and-templating"></a>样式设置和模板化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 样式设置和模板化是指一套功能（样式、模板、触发器和情节提要），可使开发者和设计者创建极具视觉表现力的效果，并为其产品创建一致的外观。 尽管开发者和/或设计者可以逐个应用程序地广泛自定义外观，但为了实现应用程序内部和之间的外观维护和共享，需要一个强大的样式设置和模板化模型。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供该模型。  
@@ -181,15 +183,15 @@ ms.lasthandoff: 12/22/2017
  ![样式设置示例屏幕截图](../../../../docs/framework/wpf/controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTrigger、DataTrigger 和 MultiDataTrigger  
- 除了<xref:System.Windows.Trigger>和<xref:System.Windows.EventTrigger>，有其他类型的触发器。 <xref:System.Windows.MultiTrigger>使用此选项可以设置基于多个条件的属性值。 你使用<xref:System.Windows.DataTrigger>和<xref:System.Windows.MultiDataTrigger>时的您的条件，该属性是数据绑定。  
+ 除了<xref:System.Windows.Trigger>和<xref:System.Windows.EventTrigger>，有其他类型的触发器。 <xref:System.Windows.MultiTrigger> 使用此选项可以设置基于多个条件的属性值。 你使用<xref:System.Windows.DataTrigger>和<xref:System.Windows.MultiDataTrigger>时的您的条件，该属性是数据绑定。  
   
 <a name="styling_themes"></a>   
 ## <a name="shared-resources-and-themes"></a>共享资源和主题  
- 典型的 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 应用程序可能具有多个用户界面 (UI) 资源，它们可应用于整个应用程序。 总体上，可以将这组资源视为应用程序的主题。 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]通过打包用户界面 (UI) 资源为主题使用支持一个资源字典，其中封装为<xref:System.Windows.ResourceDictionary>类。  
+ 典型的 Windows Presentation Foundation (WPF) 应用程序可能具有多个将应用于整个应用程序的用户界面 (UI) 资源。 总体上，可以将这组资源视为应用程序的主题。 Windows Presentation Foundation (WPF) 打包用户界面 (UI) 资源为主题使用提供的支持一个资源字典，其中封装为<xref:System.Windows.ResourceDictionary>类。  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 主题通过使用 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 公开的样式设置和模板化机制来定义，该机制用于自定义任何元素的视觉对象。  
+ Windows Presentation Foundation (WPF) 主题使用定义的样式设置和 Windows Presentation Foundation (WPF) 公开的模板化机制用于自定义视觉对象的任何元素。  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 主题资源存储在嵌入的资源字典中。 这些资源必须嵌入到已签名的程序集内，并且可以嵌入到与代码本身相同的程序集内或并行程序集内。 对于包含 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 控件的程序集 PresentationFramework.dll，主题资源位于一系列并行程序集内。  
+ Windows Presentation Foundation (WPF) 主题资源存储在嵌入的资源字典中。 这些资源必须嵌入到已签名的程序集内，并且可以嵌入到与代码本身相同的程序集内或并行程序集内。 对于 PresentationFramework.dll，程序集，其中包含 Windows Presentation Foundation (WPF) 控件，主题资源是中的并行程序集的一系列。  
   
  该主题成为在搜索元素样式时最后查看的位置。 通常，搜索先沿着元素树搜索适当的资源，然后在应用程序资源集合中查找，最后查询系统。 这样一来，应用程序开发者便有机会在到达主题之前在树或应用程序级别上为任何对象重新定义样式。  
   

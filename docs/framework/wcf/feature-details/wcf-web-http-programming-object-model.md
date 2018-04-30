@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 7bf6512be6fabb87797fb6338f64320d5787d547
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP 编程对象模型
 WCF WEB HTTP 编程模型使开发人员无需 SOAP，通过基本 HTTP 请求即可公开 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web 服务。 WCF WEB HTTP 编程模型是基于现有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 扩展性模型生成的。 它定义以下各类：  
@@ -110,9 +110,9 @@ WCF WEB HTTP 编程模型使开发人员无需 SOAP，通过基本 HTTP 请求�
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型不使用基于 SOAP 的消息，因此不支持 WS-* 协议。 但是，您可以通过两个终结点公开同一协定：一个终结点使用 SOAP，另一个终结点不使用 SOAP。 请参阅[如何： 向 SOAP 和 Web 客户端公开协定](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)有关示例。  
   
 ## <a name="security"></a>安全性  
- 因为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型不支持 WS-* 协议，因此保证基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型生成的 Web 服务安全的唯一方式是通过使用 SSL 公开服务。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 设置 SSL 与[!INCLUDE[iisver](../../../../includes/iisver-md.md)]请参阅[如何在 IIS 中实现 SSL](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ 因为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型不支持 WS-* 协议，因此保证基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型生成的 Web 服务安全的唯一方式是通过使用 SSL 公开服务。 有关设置 SSL 与[!INCLUDE[iisver](../../../../includes/iisver-md.md)]请参阅[如何在 IIS 中实现 SSL](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>  
  <xref:System.ServiceModel.Web.WebInvokeAttribute>  

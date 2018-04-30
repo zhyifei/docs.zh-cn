@@ -1,28 +1,28 @@
 ---
-title: "负载平衡"
-ms.custom: 
+title: 负载平衡
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5874d7237608331e5d8284a4ad1cd94ba6fb3451
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe13c4aee41cd7af188ccaea77b3c0af07603e2c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="load-balancing"></a>负载平衡
 提高 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序功能的方法之一是通过将它们部署到负载平衡的服务器场来扩展它们。 使用标准的负载平衡技术，包括诸如 Windows 网络负载平衡这样的软件负载平衡器以及基于硬件的负载平衡设备，可以使 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序实现负载平衡。  
@@ -90,7 +90,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 默认终结点、绑定和行为，请参阅 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) 和 [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ 有关默认终结点、 绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>WSHttp 绑定和 WSDualHttp 绑定的负载平衡  
  如果对默认的绑定配置进行一些修改，则 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.WSDualHttpBinding> 都可以使用 HTTP 负载平衡技术来实现负载平衡。  

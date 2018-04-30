@@ -1,12 +1,13 @@
 ---
-title: "WPF 应用程序资源、内容和数据文件"
-ms.custom: 
+title: WPF 应用程序资源、内容和数据文件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284c3b6788fd43a10d65cfa8bd6c032e4b1e1cd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcf0a725b7b3467a50a9f51850709dd972da217d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 应用程序资源、内容和数据文件
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]应用程序通常依赖于文件中包含非可执行文件数据，例如[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，图像、 视频和音频。 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 为配置、标识和使用这些类型的数据文件（称为应用程序数据文件）提供了特殊支持。 这种支持主要针对一组特定的应用程序数据文件类型，包括：  
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 应用程序通常依赖于文件中包含非可执行文件数据，例如[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，图像、 视频和音频。 Windows Presentation Foundation (WPF) 提供特殊支持配置、 标识，并使用这些类型的数据文件，也称为应用程序数据文件。 这种支持主要针对一组特定的应用程序数据文件类型，包括：  
   
 -   **资源文件**： 编译为可执行文件或库的数据文件[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集。  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  这三种类型的文件之间的一个重要区别是：资源文件和内容文件在生成时即为程序集所知；程序集明确知道它们的存在。 为源站点文件，但是，程序集可能完全不了解它们，或通过包的隐式知识[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]引用; 后者的情况下验证实际是否存在原始文件的引用的站点不能保证。  
   
- 若要引用应用程序数据文件，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]使用包[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]方案，这中的详细信息中所述[WPF 中的包 Uri](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md))。  
+ 若要引用应用程序数据文件，Windows Presentation Foundation (WPF) 可使用包[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]方案，这中的详细信息中所述[WPF 中的包 Uri](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md))。  
   
  本主题介绍如何配置和使用应用程序数据文件。  
   
@@ -85,7 +87,7 @@ ms.lasthandoff: 12/22/2017
  当生成该项目时，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]将资源编译为程序集。  
   
 ### <a name="using-resource-files"></a>使用资源文件  
- 若要加载资源文件，可以调用<xref:System.Windows.Application.GetResourceStream%2A>方法<xref:System.Windows.Application>类，并传入包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]标识所需的资源文件。 <xref:System.Windows.Application.GetResourceStream%2A>返回<xref:System.Windows.Resources.StreamResourceInfo>对象，后者公开资源文件作为<xref:System.IO.Stream>并描述其内容类型。  
+ 若要加载资源文件，可以调用<xref:System.Windows.Application.GetResourceStream%2A>方法<xref:System.Windows.Application>类，并传入包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]标识所需的资源文件。 <xref:System.Windows.Application.GetResourceStream%2A> 返回<xref:System.Windows.Resources.StreamResourceInfo>对象，后者公开资源文件作为<xref:System.IO.Stream>并描述其内容类型。  
   
  例如，下面的代码演示如何使用<xref:System.Windows.Application.GetResourceStream%2A>加载<xref:System.Windows.Controls.Page>资源文件，并将其设置为的内容<xref:System.Windows.Controls.Frame>(`pageFrame`):  
   
@@ -165,7 +167,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>值也是生成输出文件夹中的内容文件的路径的值。  
   
 ### <a name="using-content-files"></a>使用内容文件  
- 若要加载的内容文件，可以调用<xref:System.Windows.Application.GetContentStream%2A>方法<xref:System.Windows.Application>类，并传入包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]标识所需的内容文件。 <xref:System.Windows.Application.GetContentStream%2A>返回<xref:System.Windows.Resources.StreamResourceInfo>对象，后者公开内容文件作为<xref:System.IO.Stream>并描述其内容类型。  
+ 若要加载的内容文件，可以调用<xref:System.Windows.Application.GetContentStream%2A>方法<xref:System.Windows.Application>类，并传入包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]标识所需的内容文件。 <xref:System.Windows.Application.GetContentStream%2A> 返回<xref:System.Windows.Resources.StreamResourceInfo>对象，后者公开内容文件作为<xref:System.IO.Stream>并描述其内容类型。  
   
  例如，下面的代码演示如何使用<xref:System.Windows.Application.GetContentStream%2A>加载<xref:System.Windows.Controls.Page>内容文件，并将其设置为的内容<xref:System.Windows.Controls.Frame>(`pageFrame`)。  
   
@@ -227,7 +229,7 @@ ms.lasthandoff: 12/22/2017
  当生成该项目时，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]将指定的文件复制到生成输出文件夹。  
   
 ### <a name="using-site-of-origin-files"></a>使用源站点文件  
- 若要加载的原始文件的站点，你可以调用<xref:System.Windows.Application.GetRemoteStream%2A>方法<xref:System.Windows.Application>类，并传入包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]标识原始文件的所需的网站。 <xref:System.Windows.Application.GetRemoteStream%2A>返回<xref:System.Windows.Resources.StreamResourceInfo>对象，它公开的原始文件作为站点<xref:System.IO.Stream>并描述其内容类型。  
+ 若要加载的原始文件的站点，你可以调用<xref:System.Windows.Application.GetRemoteStream%2A>方法<xref:System.Windows.Application>类，并传入包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]标识原始文件的所需的网站。 <xref:System.Windows.Application.GetRemoteStream%2A> 返回<xref:System.Windows.Resources.StreamResourceInfo>对象，它公开的原始文件作为站点<xref:System.IO.Stream>并描述其内容类型。  
   
  例如，下面的代码演示如何使用<xref:System.Windows.Application.GetRemoteStream%2A>加载<xref:System.Windows.Controls.Page>源站点的文件，并将其设置为的内容<xref:System.Windows.Controls.Frame>(`pageFrame`)。  
   

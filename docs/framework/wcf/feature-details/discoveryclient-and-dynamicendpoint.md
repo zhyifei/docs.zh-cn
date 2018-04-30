@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c652e58b20a6fe836e647ed07c6a84328ee4631e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3e7c8c5700159b5568a5a455b21f738d1be43dfe
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient 和 DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> 和 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是客户端上用来搜索服务的两个类。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 为您提供与一组特定条件相匹配的服务列表，并允许您连接到这些服务。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 执行相同的操作，另外会自动连接到所发现的服务之一。 可以将任何终结点转换为 <xref:System.ServiceModel.Discovery.DynamicEndpoint>，也可以在配置中添加搜索条件，这样，如果您需要在解决方案中执行发现操作，但不希望修改客户端逻辑，则 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 会非常有用 – 此时您只需修改终结点。 另一方面，<xref:System.ServiceModel.Discovery.DiscoveryClient> 可用于对您的搜索操作获得更精细的控制。 下面对每个类的用途和优势加以详细说明。  
@@ -92,7 +92,7 @@ static void discoveryClient_FindCompleted(object sender, FindCompletedEventArgs 
         }  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 进行异步查找调用，请参阅[异步查找](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)。  
+ 找到的调用，使异步有关详细信息，请参阅[异步查找](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)。  
   
  使用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> 和 <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveAsync%28System.ServiceModel.Discovery.ResolveCriteria%29> 方法可以查找基于其终结点地址的服务。 如果终结点地址不是网络可寻址地址，则此操作非常有用。 Resolve 方法接受 <xref:System.ServiceModel.Discovery.ResolveCriteria> 的实例，该实例可用于指定要解析的服务终结点地址、解析操作的最大持续时间和一组扩展。 下面的示例演示如何使用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> 方法来解析服务。  
   

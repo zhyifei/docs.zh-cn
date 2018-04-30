@@ -1,28 +1,28 @@
 ---
-title: "启用事务流"
-ms.custom: 
+title: 启用事务流
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffc7a1af9c9a021e93c0fca14c0d7d2826f8af6a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="enabling-transaction-flow"></a>启用事务流
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供用于控制事务流的灵活性较高的选项。 服务事务流设置可以使用属性与配置的组合来表示。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
  如果该绑定已禁用事务流，但对服务协定的操作之一要求一个传入事务，则将在服务启动时引发验证异常。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的大多数持续绑定都包含 `transactionFlow` 和 `transactionProtocol` 特性，以允许您将特定的绑定配置为接受传入事务。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]设置的配置元素，请参阅[\<绑定 >](../../../../docs/framework/misc/binding.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的大多数持续绑定都包含 `transactionFlow` 和 `transactionProtocol` 特性，以允许您将特定的绑定配置为接受传入事务。 有关设置的配置元素的详细信息，请参阅[\<绑定 >](../../../../docs/framework/misc/binding.md)。  
   
  管理员或部署人员可以使用终结点级别的事务流在部署时使用配置文件来配置事务流需求或约束。  
   

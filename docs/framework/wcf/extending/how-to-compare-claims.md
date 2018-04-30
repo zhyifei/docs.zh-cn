@@ -1,12 +1,13 @@
 ---
-title: "如何：比较声明"
-ms.custom: 
+title: 如何：比较声明
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf7a621a7aa457b2993c761caa2ad576d216638b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5188ed17e3a10bfd93b885fcdd93e01391dd8256
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-compare-claims"></a>如何：比较声明
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的标识模型基础结构用于执行授权检查。 因此，一个常见的任务是将授权上下文中的声明与执行请求的操作或访问请求的资源所需的声明进行比较。 本主题说明如何比较声明，包括内置和自定义声明类型。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]标识模型基础结构，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的标识模型基础结构用于执行授权检查。 因此，一个常见的任务是将授权上下文中的声明与执行请求的操作或访问请求的资源所需的声明进行比较。 本主题说明如何比较声明，包括内置和自定义声明类型。 有关标识模型基础结构的详细信息，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
   
  声明比较包括将一个声明的三个部分（类型、权限和资源）与另一个声明中的相同部分进行比较，以确定它们是否相等。 请参见以下示例。  
   

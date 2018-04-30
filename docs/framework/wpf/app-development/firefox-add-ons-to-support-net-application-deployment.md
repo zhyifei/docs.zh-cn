@@ -1,12 +1,13 @@
 ---
-title: "支持 .NET 应用程序部署的 Firefox 加载项"
-ms.custom: 
+title: 支持 .NET 应用程序部署的 Firefox 加载项
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Firefox add-ons for .NET application deployment
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5734d58d0cce15c52da6b7242b28ffc8d574060
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1066332b8c5b98b5cca45e7ffbea83bd8cee8775
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>支持 .NET 应用程序部署的 Firefox 加载项
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]插件 Firefox 和.NET Framework 适用于助手 Firefox 启用[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]、 松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，和 ClickOnce 应用程序来处理 Mozilla Firefox 浏览器。  
+Windows Presentation Foundation (WPF) 插件 Firefox 和.NET Framework 适用于助手 Firefox 启用[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]、 松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，和 ClickOnce 应用程序来处理 Mozilla Firefox 浏览器。  
   
 ## <a name="wpf-plug-in-for-firefox"></a>WPF Firefox 插件  
  Firefox 插件 WPF 使[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]和松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]要导航到并在顶级或 Firefox 浏览器中 HTML IFRAME 运行文件。 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]是[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可发布到 Web 服务器和中启动应用程序支持的浏览器。 松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]是一个仅 XAML 文件，可以导航到并显示在支持的浏览器，类似于 XML 文件。  

@@ -1,27 +1,29 @@
 ---
-title: "演练：创建自定义客户端和服务凭据"
-ms.custom: 
+title: 演练：创建自定义客户端和服务凭据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99ee624ef6198ed67141d3d92e63fb9ba815c4fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cf9f6c1ad5be3a2d63140f03f74713809624e277
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>演练：创建自定义客户端和服务凭据
 本主题演示如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用自定义凭据。  
@@ -35,7 +37,7 @@ ms.lasthandoff: 01/19/2018
   
  <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 类都继承自用于定义返回 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 的协定的抽象 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]凭据类和它们如何融入[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全体系结构，请参阅[安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ 有关详细信息，有关凭据类以及它们如何融入[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全体系结构，请参阅[安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中提供的默认实现支持系统提供的凭据类型并可以创建能够处理这些凭据类型的安全令牌管理器。  
   
@@ -81,11 +83,11 @@ ms.lasthandoff: 01/19/2018
   
 1.  定义一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 派生的新类。  
   
-2.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义安全令牌提供程序，请参阅[如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
+2.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。 有关自定义安全令牌提供程序的详细信息，请参阅[如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
   
-3.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义安全令牌的身份验证器，请参阅[如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
+3.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。 有关自定义安全令牌身份验证器的详细信息，请参阅[如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
   
-4.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义安全令牌和自定义安全令牌序列化程序，请参阅[如何： 创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
+4.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。 有关自定义安全令牌和自定义安全令牌序列化程序的详细信息，请参阅[如何： 创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
   
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
@@ -169,11 +171,11 @@ ms.lasthandoff: 01/19/2018
   
 1.  定义一个从 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 类派生的新类。  
   
-2.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义安全令牌提供程序，请参阅[如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
+2.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。 有关自定义安全令牌提供程序的详细信息，请参阅[如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
   
-3.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义安全令牌的身份验证器，请参阅[如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)主题。  
+3.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。 有关自定义安全令牌身份验证器的详细信息，请参阅[如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)主题。  
   
-4.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义安全令牌和自定义安全令牌序列化程序，请参阅[如何： 创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
+4.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。 有关自定义安全令牌和自定义安全令牌序列化程序的详细信息，请参阅[如何： 创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
   
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  

@@ -1,45 +1,47 @@
 ---
-title: "WCF 分析跟踪"
-ms.custom: 
+title: WCF 分析跟踪
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析跟踪
 此示例演示如何将您自己的跟踪事件添加到分析跟踪流中，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 将把该分析跟踪流写入 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 中的 ETW。 跟踪分析是为了便于查看服务，而不会导致较高性能损失。 此示例演示如何使用 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API 来写入与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务集成的事件。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API 的更多信息，请参见 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>。  
+ 有关详细信息<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api，请参阅<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>。  
   
  若要了解有关 Windows 中的事件跟踪的详细信息，请参阅[改进调试和性能优化使用 ETW](http://go.microsoft.com/fwlink/?LinkId=166488)。  
   
 ## <a name="disposing-eventprovider"></a>释放 EventProvider  
- 此示例使用 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> 类，该类实现 <xref:System.IDisposable?displayProperty=nameWithType>。 在实现 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的跟踪时，可以针对服务的生存期使用 <xref:System.Diagnostics.Eventing.EventProvider> 的资源。 因此，为了便于阅读，此示例永远不会释放已包装的 <xref:System.Diagnostics.Eventing.EventProvider>。 如果出于某种原因，您的服务具有不同的跟踪需求，并且必须释放此资源，则应根据释放非托管资源的最佳做法来修改此示例。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]释放非托管的资源，请参阅[实现 Dispose 方法](http://go.microsoft.com/fwlink/?LinkId=166436)。  
+ 此示例使用 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> 类，该类实现 <xref:System.IDisposable?displayProperty=nameWithType>。 在实现 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的跟踪时，可以针对服务的生存期使用 <xref:System.Diagnostics.Eventing.EventProvider> 的资源。 因此，为了便于阅读，此示例永远不会释放已包装的 <xref:System.Diagnostics.Eventing.EventProvider>。 如果出于某种原因，您的服务具有不同的跟踪需求，并且必须释放此资源，则应根据释放非托管资源的最佳做法来修改此示例。 有关释放非托管的资源的详细信息，请参阅[实现 Dispose 方法](http://go.microsoft.com/fwlink/?LinkId=166436)。  
   
 ## <a name="self-hosting-vs-web-hosting"></a>自我承载与Web 承载  
- 对于 Web 承载的服务，WCF 的分析跟踪提供了一个名为"HostReference"，用于标识发出这些跟踪的服务的字段。 可扩展的用户跟踪可以参与此模型，此示例演示执行该操作的最佳做法。 Web 宿主引用的格式时管道 &#124; 实际显示在随后出现的字符字符串可以是以下任何一个：  
+ 对于 Web 承载的服务，WCF 的分析跟踪提供了一个名为"HostReference"，用于标识发出这些跟踪的服务的字段。 可扩展的用户跟踪可以参与此模型，此示例演示执行该操作的最佳做法。 Web 宿主引用的格式时管道&#124;实际显示在随后出现的字符字符串可以是以下任何一个：  
   
 -   如果该应用程序不在根处。  
   
-     \<SiteName >\<ApplicationVirtualPath > &#124;\<ServiceVirtualPath > &#124;\<ServiceName >  
+     \<SiteName >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
 -   如果该应用程序在根处。  
   
-     \<SiteName > &#124;\<ServiceVirtualPath > &#124;\<ServiceName >  
+     \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
  对于自承载服务，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的分析跟踪不会填充"HostReference"字段。 此示例中的 `WCFUserEventProvider` 类在由自承载服务使用时，其行为是一致的。  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  在 WCF 测试客户端中，双击**add （)** ICalculator 服务节点下。  
   
-         **Add （)**方法将显示在右窗格中，带有两个参数。  
+         **Add （)** 方法将显示在右窗格中，带有两个参数。  
   
     2.  为第一个参数键入 2，为第二个参数键入 3。  
   

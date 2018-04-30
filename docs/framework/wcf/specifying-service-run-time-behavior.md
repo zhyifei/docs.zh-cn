@@ -1,35 +1,37 @@
 ---
-title: "指定服务运行时行为"
-ms.custom: 
+title: 指定服务运行时行为
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e45c35d0b19833b6fd43c7fd5794ecf8bd3a9769
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服务运行时行为
-在已经设计（[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)）并实现服务协定（[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)）之后，就可以配置服务运行时的操作行为。 本主题讨论系统提供的服务和操作行为，并说明在何处查找更多信息来创建新行为。 尽管有些行为是作为属性应用的，但很多行为是使用应用程序配置文件或以编程方式应用的。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 配置服务应用程序，请参阅 [Configuring Services](../../../docs/framework/wcf/configuring-services.md)。  
+在已经设计（[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)）并实现服务协定（[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)）之后，就可以配置服务运行时的操作行为。 本主题讨论系统提供的服务和操作行为，并说明在何处查找更多信息来创建新行为。 尽管有些行为是作为属性应用的，但很多行为是使用应用程序配置文件或以编程方式应用的。 有关配置服务应用程序的详细信息，请参阅[配置服务](../../../docs/framework/wcf/configuring-services.md)。  
   
 ## <a name="overview"></a>概述  
  协定定义相应类型的服务的输入、输出、数据类型和功能。 实现一个服务协定将会创建一个类，当使用某个地址的绑定对该类进行配置时，该类会满足其实现的协定。 客户端了解协定、绑定和地址信息等所有信息，如果没有它们，客户端将不能使用相应服务。  
   
- 但是，操作详细信息（例如，线程处理问题或实例管理）对客户端是不透明的。 在已实现服务协定之后，就可以使用行为 配置大量操作特征。 行为是一些对象，可通过设置运行时属性或通过在运行时中插入自定义类型来修改 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 运行时。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 通过创建用户定义的行为来修改运行时，请参阅 [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
+ 但是，操作详细信息（例如，线程处理问题或实例管理）对客户端是不透明的。 在已实现服务协定之后，就可以使用行为 配置大量操作特征。 行为是一些对象，可通过设置运行时属性或通过在运行时中插入自定义类型来修改 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 运行时。 有关通过创建用户定义的行为修改运行时的详细信息，请参阅[扩展 ServiceHost 和服务模型层](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 和 <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> 属性是用途最广泛的行为，公开了最常请求的操作功能。 因为它们是属性，所以应将其应用于服务或操作实现。 其他行为（例如，<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>）通常是使用应用程序配置文件进行应用的，但可以以编程方式使用它们。  
   

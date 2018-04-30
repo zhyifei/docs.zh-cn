@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b0042d9b90066553d6fc962bba1b7a7b990ca242
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7f083ea44b9bdbd9bf85d65c42d663d87af8d812
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-client-overview"></a>WCF 客户端概述
 本节描述客户端应用程序可以做什么，如何配置、创建和使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 客户端，以及如何保护客户端应用程序。  
@@ -86,13 +86,13 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  建议您首先创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象，然后使用该对象并在一个单独的 try/catch 块内将它关闭。 不应使用`using`语句 (`Using`在 Visual Basic 中) 因为它可以屏蔽处于某些失败模式的异常。 有关详细信息，请参阅以下部分，以及[避免问题与 Using 语句](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
   
 ### <a name="contracts-bindings-and-addresses"></a>协定、绑定和地址  
- 在可以创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象之前，必须配置客户端对象。 具体而言，它必须有一个服务*终结点*使用。 终结点由服务协定、绑定和地址组成。 ([!INCLUDE[crabout](../../../includes/crabout-md.md)]终结点，请参阅[终结点： 地址、 绑定和协定](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)。)通常情况下，此信息是否位于[\<终结点 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)客户端应用程序配置文件，例如 Svcutil.exe 工具生成，并创建你的客户端时自动加载中的元素对象。 两种 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端类型都具有使您能够以编程方式指定此信息的重载。  
+ 在可以创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象之前，必须配置客户端对象。 具体而言，它必须有一个服务*终结点*使用。 终结点由服务协定、绑定和地址组成。 (有关终结点的详细信息，请参阅[终结点： 地址、 绑定和协定](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)。)通常情况下，此信息是否位于[\<终结点 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)客户端应用程序配置文件，例如 Svcutil.exe 工具生成，并创建你的客户端时自动加载中的元素对象。 两种 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端类型都具有使您能够以编程方式指定此信息的重载。  
   
  例如，上述示例中所使用的 `ISampleService` 的生成的配置文件包含以下终结点信息。  
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- 此配置文件在 `<client>` 元素中指定目标终结点。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]使用多个目标终结点的更多信息，请参见 <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> 构造函数。  
+ 此配置文件在 `<client>` 元素中指定目标终结点。 有关使用多个目标终结点的详细信息，请参阅<xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType>或<xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType>构造函数。  
   
 ## <a name="calling-operations"></a>调用操作  
  创建并配置了客户端对象后，请创建一个 try/catch 块，如果该对象是本地对象，则以相同的方式调用操作，然后关闭 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象。 当客户端应用程序调用第一个操作时，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 将自动打开基础通道，并在回收对象时关闭基础通道。 （或者，还可以在调用其他操作之前或之后显式打开和关闭该通道。）  
@@ -145,14 +145,14 @@ End Interface
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
 ## <a name="handling-errors"></a>处理错误  
- 当打开基础客户端通道（无论是通过显式打开还是通过调用操作自动打开）、使用客户端或通道对象调用操作，或关闭基础客户端通道时，都会在客户端应用程序中出现异常。 除了由操作返回的 SOAP 错误导致引发的任何 <xref:System.TimeoutException?displayProperty=nameWithType> 对象外，建议您至少将应用程序设置为能够处理可能的 <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 和 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 异常。 操作协定中指定的 SOAP 错误将作为 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 在客户端应用程序中引发，此异常中的类型参数为 SOAP 错误的详细信息类型。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 处理客户端应用程序中的错误状态，请参阅[发送和接收错误](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 有关完整的示例演示如何处理客户端中的错误，请参阅[预期异常](../../../docs/framework/wcf/samples/expected-exceptions.md)。  
+ 当打开基础客户端通道（无论是通过显式打开还是通过调用操作自动打开）、使用客户端或通道对象调用操作，或关闭基础客户端通道时，都会在客户端应用程序中出现异常。 除了由操作返回的 SOAP 错误导致引发的任何 <xref:System.TimeoutException?displayProperty=nameWithType> 对象外，建议您至少将应用程序设置为能够处理可能的 <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 和 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 异常。 操作协定中指定的 SOAP 错误将作为 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 在客户端应用程序中引发，此异常中的类型参数为 SOAP 错误的详细信息类型。 有关客户端应用程序中处理错误条件的详细信息，请参阅[发送和接收错误](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 有关完整的示例演示如何处理客户端中的错误，请参阅[预期异常](../../../docs/framework/wcf/samples/expected-exceptions.md)。  
   
 ## <a name="configuring-and-securing-clients"></a>配置和保护客户端  
  若要配置客户端，请首先为客户端或通道对象加载目标终结点信息，通常是从配置文件中加载该信息，但是也可以使用客户端构造函数和属性以编程方式加载。 但是，若要启用特定的客户端行为或实施一些安全方案还需要执行其他配置步骤。  
   
  例如，服务协定的安全要求已在服务协定接口中声明，并且如果 Svcutil.exe 已创建了一个配置文件，则该文件通常会包含一个能够支持服务安全要求的绑定。 但是在某些情况中，可能需要更多的安全配置，例如配置客户端凭据。 有关安全配置的完整信息[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]客户端，请参阅[保护客户端](../../../docs/framework/wcf/securing-clients.md)。  
   
- 此外，在客户端应用程序中还可以启用一些自定义修改，例如自定义运行时行为。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何配置自定义客户端行为，请参阅[配置客户端行为](../../../docs/framework/wcf/configuring-client-behaviors.md)。  
+ 此外，在客户端应用程序中还可以启用一些自定义修改，例如自定义运行时行为。 有关如何配置自定义客户端行为的详细信息，请参阅[配置客户端行为](../../../docs/framework/wcf/configuring-client-behaviors.md)。  
   
 ## <a name="creating-callback-objects-for-duplex-services"></a>为双工服务创建回调对象  
  双工服务指定一个回调协定，客户端应用程序必须实现该协定以便提供一个该服务能够根据协定要求调用的回调对象。 虽然回调对象不是完整的服务（例如，您无法使用回调对象启动一个通道），但是为了实现和配置，这些回调对象可以被视为一种服务。  

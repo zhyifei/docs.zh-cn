@@ -1,24 +1,26 @@
 ---
-title: "流消息传输"
-ms.custom: 
+title: 流消息传输
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-message-transfer"></a>流消息传输
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 传输机制支持两种消息传输模式：  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  某些 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能（例如，可靠消息、事务和 SOAP 消息级安全）依赖于缓冲消息以便进行传输。 使用这些功能可能减小或消除通过使用流获得的性能好处。 若要保证流传输的安全，请只使用传输级安全，或者使用传输级安全外加仅进行身份验证的消息安全。  
   
- 即使传输模式设置为流模式，SOAP 标头也总是被缓冲。 消息的标头不得超出 `MaxBufferSize` 传输配额的大小。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]此设置，请参阅[传输配额](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。  
+ 即使传输模式设置为流模式，SOAP 标头也总是被缓冲。 消息的标头不得超出 `MaxBufferSize` 传输配额的大小。 有关此设置的详细信息，请参阅[传输配额](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>缓冲传输和流传输之间的差异  
  将传输模式从缓冲模式更改为流模式还会更改 TCP 和命名管道传输协议的本机通道形状。 对于缓冲传输模式，本机通道形状为 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>。 对于流传输模式，本机通道为 <xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>。 在直接（即，不是通过服务协定）使用这些传输协议的现有应用程序中更改传输模式需要更改通道工厂和侦听器的预期通道形状。  

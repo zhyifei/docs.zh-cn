@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 17528db182676ae69694c4e416ee10bff1ae6ef2
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 32fb7be6f8c465994b40814a94efd95d42a481da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="c-expressions"></a>C# 表达式
 从开始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，在 Windows Workflow Foundation (WF) 支持 C# 表达式。 在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中面向 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 新建的 C# 工作流项目使用 C# 表达式，而 Visual Basic 工作流项目则使用 Visual Basic 表达式。 现有使用 Visual Basic 表达式的 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 工作流项目可以不受项目语言限制而迁移到 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]，并得到支持。 本主题概述了 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的 C# 表达式。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/27/2018
  ![自动创建的序列活动](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
   
 > [!NOTE]
->  C# 表达式仅在 Visual Studio 中支持和不支持在重新承载的工作流设计器中。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 新 WF45 功能支持在重新承载设计器中，请参阅[重新承载工作流设计器中新 Workflow Foundation 4.5 功能的支持](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。  
+>  C# 表达式仅在 Visual Studio 中支持和不支持在重新承载的工作流设计器中。 有关在重新承载的设计器中受支持的新 WF45 功能的详细信息，请参阅[重新承载工作流设计器中新 Workflow Foundation 4.5 功能的支持](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。  
   
 ####  <a name="BackwardCompat"></a> 向后兼容性  
  在现有已迁移到 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] C# 工作流项目中使用的 Visual Basic 表达式是得到支持的。 当在工作流设计器中查看 Visual Basic 表达式时，现有的 Visual Basic 表达式的文本替换**值在 XAML 中设置**，除非 Visual Basic 表达式是有效的 C# 语法。 如果 Visual Basic 表达式符合 C# 语法则予以显示。 若要将 Visual Basic 表达式更新为 C#，可在工作流设计器中编辑这些表达式，指定等效的 C# 表达式。 将 Visual Basic 表达式更新为 C# 不是必须的，但一旦在工作流设计器中进行更新，这些表达式即转换成 C# 并不可重新转换为 Visual Basic。  
@@ -195,7 +195,7 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
   
 -   调用 `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` 而非 `CompiledExpressionInvoker.SetCompiledExpressionRoot`。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 使用代码中的表达式，请参阅[创作工作流、 活动和表达式使用命令性代码](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。  
+ 有关使用代码中的表达式的详细信息，请参阅[创作工作流、 活动和表达式使用命令性代码](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。  
   
 ###  <a name="XamlWorkflows"></a> 在 XAML 工作流中使用 C# 表达式  
  XAML 工作流支持 C# 表达式。 编译型 XAML 工作流被编译到类型中，而宽松型 XAML 工作流由运行时加载，并在工作流执行时编译到活动树中。  
@@ -219,7 +219,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 使用 XAML 工作流，请参阅[序列化工作流和活动和从 XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  
+ 有关使用 XAML 工作流的详细信息，请参阅[序列化工作流和活动和从 XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  
   
 ###  <a name="WFServices"></a> 在 XAMLX 工作流服务中使用 C# 表达式  
  XAMLX 工作流服务支持 C# 表达式。 当工作流服务承载于 IIS 或 WAS 中时，无须执行任何额外步骤，但如果 XAML 工作流服务是自承载的，则 C# 表达式必须经过编译。 若要编译中自承载的 XAMLX 工作流服务的 C# 表达式，首先将 XAMLX 文件加载到`WorkflowService`，然后将传递`Body`的`WorkflowService`到`CompileExpressions`中前面所述的方法[使用 C#在代码工作流中的表达式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows)部分。 下例加载一个 XAMLX 工作流服务，编译 C# 表达式，随后打开该工作流服务并等待请求。  

@@ -1,27 +1,29 @@
 ---
-title: "如何：在托管 Windows 服务中承载 WCF 服务"
-ms.custom: 
+title: 如何：在托管 Windows 服务中承载 WCF 服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4b2c8daa176ef1f9aef24cac3125d59fcc02fa9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>如何：在托管 Windows 服务中承载 WCF 服务
 本主题概述了创建由 Windows 服务承载的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所需的基本步骤。 此方案可通过托管 Windows 服务承载选项启用，此选项是在没有消息激活的安全环境中在 Internet 信息服务 (IIS) 外部承载的、长时间运行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 服务的生存期改由操作系统控制。 此宿主选项在 Windows 的所有版本中都是可用的。  
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
   
      右键单击 App.config 文件中的**解决方案资源管理器**和选择**属性**。 下**复制到输出目录**选择**如果较新则复制**。  
   
-     此示例显式指定配置文件中的终结点。 如果您不希望向服务添加任何终结点，则运行时为您添加默认终结点。 在此示例中，由于服务的 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 设置为 `true`，因此服务还启用了发布元数据。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]默认终结点、 绑定和行为，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+     此示例显式指定配置文件中的终结点。 如果您不希望向服务添加任何终结点，则运行时为您添加默认终结点。 在此示例中，由于服务的 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 设置为 `true`，因此服务还启用了发布元数据。 有关默认终结点、 绑定和行为的详细信息，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ### <a name="install-and-run-the-service"></a>安装并运行服务  
   

@@ -1,28 +1,28 @@
 ---
-title: "Windows Communication Foundation 绑定概述"
-ms.custom: 
+title: Windows Communication Foundation 绑定概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 绑定概述
 绑定是用于指定连接到 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务终结点所必需的通信详细信息的对象。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务中的每个终结点都要求正确指定绑定。 本主题概述了绑定所定义的通信详细信息类型、绑定的元素、[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中包含哪些绑定以及如何为终结点指定绑定。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/22/2017
  确定要使用的基础传输协议（例如，TCP 或 HTTP）。  
   
 ## <a name="the-elements-of-a-binding"></a>绑定的元素  
- 绑定基本上由绑定元素的有序堆栈组成，其中每个元素都指定了连接到服务终结点所必需的通信信息的一部分。 该堆栈中最底下的两层都是必需的。 该堆栈的最底层为传输绑定元素，而紧挨着它的上面一层为包含消息编码规范的元素。 用于指定其他通信协议的可选绑定元素位于这两个必需元素的上面。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]这些绑定元素以及它们正确的顺序，请参阅[自定义绑定](../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 绑定基本上由绑定元素的有序堆栈组成，其中每个元素都指定了连接到服务终结点所必需的通信信息的一部分。 该堆栈中最底下的两层都是必需的。 该堆栈的最底层为传输绑定元素，而紧挨着它的上面一层为包含消息编码规范的元素。 用于指定其他通信协议的可选绑定元素位于这两个必需元素的上面。 有关这些绑定元素和它们的正确顺序的详细信息，请参阅[自定义绑定](../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="system-provided-bindings"></a>系统提供的绑定  
  绑定中的信息可能十分复杂，而且某些设置可能与其他设置不兼容。 因此，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包含一组系统提供的绑定。 这些绑定旨在满足大多数应用程序要求。 下面的类表示系统提供的绑定的一些示例：  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
  有关完整列表，包含的所有描述[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-提供的绑定，请参阅[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。  
   
 ## <a name="using-your-own-bindings"></a>使用自己的绑定  
- 如果系统提供的绑定都不具有服务应用程序所需的正确功能组合，则可以创建自己的绑定。 有两种方法可以实现此目的。 您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 对象从预先存在的绑定元素创建新的绑定，也可以通过从 <xref:System.ServiceModel.Channels.Binding> 绑定派生来创建完全由用户定义的绑定。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]创建你自己绑定使用这两种方法，请参阅[自定义绑定](../../../docs/framework/wcf/extending/custom-bindings.md)和[创建用户定义绑定](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。  
+ 如果系统提供的绑定都不具有服务应用程序所需的正确功能组合，则可以创建自己的绑定。 有两种方法可以实现此目的。 您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 对象从预先存在的绑定元素创建新的绑定，也可以通过从 <xref:System.ServiceModel.Channels.Binding> 绑定派生来创建完全由用户定义的绑定。 有关创建自己的绑定使用这两种方法的详细信息，请参阅[自定义绑定](../../../docs/framework/wcf/extending/custom-bindings.md)和[创建用户定义绑定](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。  
   
 ## <a name="using-bindings"></a>使用绑定  
  使用绑定需要执行两个基本步骤：  

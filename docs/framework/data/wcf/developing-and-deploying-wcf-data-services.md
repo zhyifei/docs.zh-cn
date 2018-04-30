@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bc962b328f2321d1cfb016b78a53307b43fac30d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>开发和部署 WCF 数据服务
 本主题提供有关开发和部署 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]的信息。 有关更多基本信息[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，请参阅[入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)和[概述](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)。  
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/28/2018
   
 3.  **Microsoft Azure 开发环境**  
   
-     Windows Azure Tools for Visual Studio 包含一组集成的工具，用于开发 Visual Studio 中的 Windows Azure 服务。 使用这些工具，可以开发可部署到 Microsoft Azure 的数据服务，并且可以在部署之前在本地计算机上测试数据服务。 使用 Visual Studio 开发在 Windows Azure 平台运行的数据服务时，请使用这些工具。 你可以下载 Windows Azure Tools 从 Visual Studio [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 有关开发在 Microsoft Azure 上运行的数据服务，请参阅博文 [在 Microsoft Azure 中部署 OData 服务](http://go.microsoft.com/fwlink/?LinkId=201847)。  
+     Windows Azure Tools for Visual Studio 包含一组集成的工具，用于开发 Visual Studio 中的 Windows Azure 服务。 使用这些工具，可以开发可部署到 Microsoft Azure 的数据服务，并且可以在部署之前在本地计算机上测试数据服务。 使用 Visual Studio 开发在 Windows Azure 平台运行的数据服务时，请使用这些工具。 你可以下载 Windows Azure Tools 从 Visual Studio [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848)。 有关开发 Windows Azure 运行的数据服务的详细信息，请参阅文章[部署 OData 服务在 Windows Azure 中](http://go.microsoft.com/fwlink/?LinkId=201847)。  
   
 ### <a name="development-tips"></a>开发提示  
  开发数据服务时，应注意以下事项：  
@@ -116,21 +116,21 @@ ms.lasthandoff: 04/28/2018
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 部署选项[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序，请参阅[for Visual Studio 和 ASP.NET 的 Web 部署概述](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3)。  
+     有关的部署选项的详细信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序，请参阅[for Visual Studio 和 ASP.NET 的 Web 部署概述](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3)。  
   
     > [!TIP]
     >  在尝试将数据服务部署到 IIS 之前，请确保已测试了向运行 IIS 的 Web 服务器的部署。 有关详细信息，请参阅 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
   
 -   **Microsoft Azure**  
   
-     通过使用 Windows Azure Tools for Visual Studio，可部署到 Windows Azure 的数据服务。 你可以下载 Windows Azure Tools 从 Visual Studio [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 有关将数据服务部署到 Microsoft Azure，请参阅博文 [在 Microsoft Azure 中部署 OData 服务](http://go.microsoft.com/fwlink/?LinkId=201847)。  
+     通过使用 Windows Azure Tools for Visual Studio，可部署到 Windows Azure 的数据服务。 你可以下载 Windows Azure Tools 从 Visual Studio [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848)。 有关将数据服务部署到 Windows Azure 的详细信息，请参阅文章[部署 OData 服务在 Windows Azure 中](http://go.microsoft.com/fwlink/?LinkId=201847)。  
   
 ### <a name="deployment-considerations"></a>部署注意事项  
  部署数据服务时，应注意以下事项：  
   
 -   当您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供程序访问 SQL Server 数据库的数据服务时，还可能需要通过数据服务部署传播数据结构和/或数据。 Visual Studio 可以自动创建脚本 (.sql files) 来执行此操作在目标数据库中，并且这些脚本可以包含的 Web 部署包在[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序。 有关详细信息，请参阅[NIB： 如何： 部署数据库与 Web 应用程序项目](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b)。 有关[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]网站上，你可以使用执行此操作**数据库发布向导**Visual Studio 中。 有关详细信息，请参阅 [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)。  
   
--   因为 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包括基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现，您可以使用 Windows Server AppFabric 来监视数据服务（它部署到在 Windows Server 上运行的 IIS）。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 有关使用 Windows Server AppFabric 监视数据服务，请参阅博文 [Tracking WCF Data Services with Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005)（使用 Windows Server AppFabric 跟踪 WCF 数据服务）。  
+-   因为 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包括基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现，您可以使用 Windows Server AppFabric 来监视数据服务（它部署到在 Windows Server 上运行的 IIS）。 有关使用 Windows Server AppFabric 来监视数据服务的详细信息，请参阅文章[与 Windows Server AppFabric 跟踪 WCF 数据服务](http://go.microsoft.com/fwlink/?LinkID=202005)。  
   
 ## <a name="see-also"></a>请参阅  
  [承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

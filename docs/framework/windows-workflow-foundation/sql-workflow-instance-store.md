@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 11e61e1d702572af10cf4e46b9d1b284022fa56e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 60eaef2bbbb2ff7653aeac832163276c32bc696b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-workflow-instance-store"></a>SQL 工作流实例存储
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 附带的 SQL 工作流实例存储允许工作流在 SQL Server 2005 或 SQL Server 2008 数据库中持久保存有关工作流实例的状态信息。 此功能主要以 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 类的形式实现，该类是从持久性框架的抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> 类派生的。 SQL 工作流实例存储功能包含一个 SQL 持久性提供程序，该提供程序是持久性 API 的具体实现，宿主将使用此持久性 API 向存储发送持久性命令。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/28/2018
   
  本节中的主题介绍 SQL 工作流实例存储的属性和功能，并且提供有关配置该存储的详细信息。  
   
- Windows Server App Fabric 提供自己的实例存储区和工具以便简化实例存储区的配置和使用。 有关详细信息，请参阅[Windows Server App Fabric 实例存储区](http://go.microsoft.com/fwlink/?LinkId=201201)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] App Fabric SQL Server 持久性数据库，请参阅[App Fabric SQL Server 持久性数据库](http://go.microsoft.com/fwlink/?LinkId=201202)  
+ Windows Server App Fabric 提供自己的实例存储区和工具以便简化实例存储区的配置和使用。 有关详细信息，请参阅[Windows Server App Fabric 实例存储区](http://go.microsoft.com/fwlink/?LinkId=201201)。 有关 App Fabric SQL Server 持久性数据库，请参阅详细信息[App Fabric SQL Server 持久性数据库](http://go.microsoft.com/fwlink/?LinkId=201202)  
   
 ## <a name="in-this-section"></a>本节内容  
   

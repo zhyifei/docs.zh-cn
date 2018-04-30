@@ -19,16 +19,16 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 89ad47ad898184b99f32743855091c0985722f77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>如何：使用 X.509 证书保证服务的安全
 使用 X.509 证书保证服务的安全是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中多数绑定使用的基本技术。 本主题演练使用 X.509 证书配置自承载服务的步骤。  
   
- 先决条件是具有可用于对服务器进行身份验证的有效证书。 证书必须由受信任的证书颁发机构颁发给服务器。 如果证书无效，则尝试使用该服务的任何客户端都不会信任该服务，因此不会建立连接。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用证书，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ 先决条件是具有可用于对服务器进行身份验证的有效证书。 证书必须由受信任的证书颁发机构颁发给服务器。 如果证书无效，则尝试使用该服务的任何客户端都不会信任该服务，因此不会建立连接。 有关使用证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>使用代码用证书配置服务  
   

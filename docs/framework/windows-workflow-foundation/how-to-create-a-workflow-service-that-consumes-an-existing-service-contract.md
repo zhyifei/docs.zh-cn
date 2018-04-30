@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09c3f7656284dd73dd5f50c4ef9f77cd5adcbfe7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c7c28d8c2edbda5a42a290786b0ff40e3ab6dd5b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>如何：创建使用现有服务协定的工作流服务
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以协定优先工作流开发的形式实现了 Web 服务与工作流之间的更佳集成。 通过协定优先的工作流开发工具，可以在代码中优先设计协定。 然后该工具在工具箱中为协定中的操作自动生成活动模板。  
   
 > [!NOTE]
->  本主题提供了有关创建协定优先工作流服务的分步指南。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 协定优先工作流服务开发，请参阅[协定第一个工作流服务开发](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)。  
+>  本主题提供了有关创建协定优先工作流服务的分步指南。 有关协定优先工作流服务开发的详细信息，请参阅[协定第一个工作流服务开发](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)。  
   
 ### <a name="creating-the-workflow-project"></a>创建工作流项目  
   

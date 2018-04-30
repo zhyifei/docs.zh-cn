@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab3baf8cc0bb6af951f6f3e6396b7545d0c6b301
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3c68a23e9ee86050a9db4c63c8c97d017794bce8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transaction-models"></a>事务模型
 本主题描述 Microsoft 提供的事务编程模型和基础结构组件之间的关系。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="systemtransactions-transactions"></a>System.Transactions 事务  
  <xref:System.Transactions> 命名空间同时提供了一个基于 <xref:System.Transactions.Transaction> 类的显式编程模型和一个使用 <xref:System.Transactions.TransactionScope> 类的隐式编程模型（在此模型中，基础结构自动管理事务）。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何创建使用这两种模型的事务应用程序，请参阅[编写事务应用程序](http://go.microsoft.com/fwlink/?LinkId=94947)。  
+ 有关如何创建使用这两种模型的事务应用程序的详细信息，请参阅[编写事务应用程序](http://go.microsoft.com/fwlink/?LinkId=94947)。  
   
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务或应用程序中，可使用 <xref:System.Transactions> 提供的编程模型在客户端应用程序中创建事务，以及在需要时与服务内的事务显式进行交互。  
   

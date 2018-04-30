@@ -1,34 +1,36 @@
 ---
-title: "匿名客户端的传输安全"
-ms.custom: 
+title: 匿名客户端的传输安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 97a3c9c618fc7d6c96deba0b72e25ef36c5785e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2b52a32db1f1ac02f9204198a4cda5d4cb157486
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>匿名客户端的传输安全
 此 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 方案使用传输安全 (HTTPS) 确保保密性和完整性。 必须使用安全套接字层 (SSL) 证书对服务器进行身份验证，并且客户端必须信任服务器的证书。 客户端不通过任何机制进行身份验证，因此是匿名的。  
   
- 有关示例应用程序，请参阅[WS 传输安全](../../../../docs/framework/wcf/samples/ws-transport-security.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]传输安全，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
+ 有关示例应用程序，请参阅[WS 传输安全](../../../../docs/framework/wcf/samples/ws-transport-security.md)。 有关传输安全的详细信息，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用证书与服务，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+ 有关使用服务证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
  ![与匿名客户端使用传输安全](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")  
   

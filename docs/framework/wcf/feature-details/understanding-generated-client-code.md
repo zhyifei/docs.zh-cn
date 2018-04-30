@@ -19,14 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 95e27941cece3bfb96c4567516d07bcbe07c7490
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8cd3e7f5ac8f129e29ed080cbf510dfe106edfb7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="understanding-generated-client-code"></a>了解生成的客户端代码
-[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 可生成用于生成客户端应用程序的客户端代码和客户端应用程序配置文件。 本主题提供了有关标准服务协定方案的生成代码示例的教程。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用生成的代码生成客户端应用程序的详细信息，请参阅 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)。  
+[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 可生成用于生成客户端应用程序的客户端代码和客户端应用程序配置文件。 本主题提供了有关标准服务协定方案的生成代码示例的教程。 有关生成使用生成的代码的客户端应用程序的详细信息，请参阅[WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)。  
   
 ## <a name="overview"></a>概述  
  如果你使用 Visual Studio 生成[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]你的项目的客户端类型，你通常不需要检查生成的客户端代码。 如果您并未使用为您执行相同服务的开发环境，您可以使用 Svcutil.exe 之类的工具来生成客户端代码，然后使用该代码开发客户端应用程序。  
@@ -73,10 +73,10 @@ ms.lasthandoff: 04/28/2018
   
  [!code-csharp[C_GeneratedCodeFiles#30](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#30)]  
   
- 在本示例中，数据类型为客户端上的特定异常（一个 <xref:System.ServiceModel.FaultException%601> ，其中详细信息类型为 `microsoft.wcf.documentation.SampleFault`）引发的详细信息类型。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 数据类型，请参阅 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 在客户端处理异常，请参阅 [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
+ 在本示例中，数据类型为客户端上的特定异常（一个 <xref:System.ServiceModel.FaultException%601> ，其中详细信息类型为 `microsoft.wcf.documentation.SampleFault`）引发的详细信息类型。 有关数据类型的详细信息，请参阅[指定服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。 有关在客户端中处理异常的详细信息，请参阅[发送和接收错误](../../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>查找双工服务的回调协定  
- 如果要查找协定接口为其 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 属性指定一个值的服务协定，则该协定指定一个双工协定。 双工协定要求客户端应用程序创建一个回调类，该类实现回调协定并将此类的一个实例传递给 <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> 或用来与服务进行通信的 <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 双工客户端，请参阅[如何： 使用双工协定访问服务](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。  
+ 如果要查找协定接口为其 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 属性指定一个值的服务协定，则该协定指定一个双工协定。 双工协定要求客户端应用程序创建一个回调类，该类实现回调协定并将此类的一个实例传递给 <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> 或用来与服务进行通信的 <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>。 有关双工客户端的详细信息，请参阅[如何： 使用双工协定访问服务](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。  
   
  下面的协定指定一个 `SampleDuplexHelloCallback`类型的回调协定。  
   

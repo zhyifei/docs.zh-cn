@@ -1,24 +1,26 @@
 ---
-title: "WCF 中的消息安全"
-ms.custom: 
+title: WCF 中的消息安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ef96dd25903076fedc59ad1507674dd40dcfcc5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-in-wcf"></a>WCF 中的消息安全
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 有两个用于提供安全性的主要模式（`Transport` 和 `Message`），以及结合了这两者的第三个模式 (`TransportWithMessageCredential`)。 本主题讨论消息安全和使用它的原因。  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   对多个传输的支持。 可以通过许多不同的传输（例如命名管道和 TCP）来发送受保护的消息，而不必依赖于安全协议。 使用传输级安全时，所有安全信息的范围限定于单个特殊的传输连接，不能从消息内容本身获取这些信息。 无论您使用什么传输来传送消息，消息安全都会让消息变得安全，并且安全上下文直接嵌入消息内。  
   
--   对一组范围广泛的凭据和声明的支持。 消息安全基于 WS-Security 规范，该规范提供能够在 SOAP 消息内传输任何类型声明的可扩展框架。 与传输安全不同，您可以使用的这组身份验证机制或声明不受传输能力的限制。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息安全包括多种类型的身份验证和声明传输，并且可以根据需要进行扩展以支持其他类型。 例如，由于这些原因，如果没有消息安全，联合凭据方案不可能实现。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WCF 支持联合身份验证方案，请参阅[联合身份验证和颁发令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
+-   对一组范围广泛的凭据和声明的支持。 消息安全基于 WS-Security 规范，该规范提供能够在 SOAP 消息内传输任何类型声明的可扩展框架。 与传输安全不同，您可以使用的这组身份验证机制或声明不受传输能力的限制。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息安全包括多种类型的身份验证和声明传输，并且可以根据需要进行扩展以支持其他类型。 例如，由于这些原因，如果没有消息安全，联合凭据方案不可能实现。 有关 WCF 支持联合身份验证方案的详细信息，请参阅[联合身份验证和颁发令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
   
 ## <a name="how-message-and-transport-security-compare"></a>消息安全与传输安全比较  
   

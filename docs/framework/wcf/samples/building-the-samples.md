@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b8b3e3006072855673c37786ffb763fcd610e40c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fcc57d28c109801cc5f995bebd31c49fcbdbe19c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>生成 Windows Communication Foundation 示例
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]可以生成示例，使用 Visual Studio 2010 或使用**msbuild**命令从命令行。 本主题介绍这两个过程。  
@@ -52,10 +52,10 @@ ms.lasthandoff: 04/27/2018
  Setup.exe 和 Cleanup.exe 批处理文件和脚本应在 Visual Studio 命令提示中运行。 有几个设置和清理文件将执行需要具有管理特权的任务，应使用管理特权来启动它们。  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>有关元数据终结点的重要安全信息  
- 为了防止无意中泄露潜在的敏感服务元数据，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的默认配置将禁用元数据发布。 默认情况下此行为是安全的，但也意味着你无法使用元数据导入工具（例如 Svcutil.exe）生成调用服务所需的客户端代码，除非在配置中显式启用服务的元数据发布行为。 为了使示例体验更简单，几乎所有示例都公开一个不安全的元数据发布终结点。 此类终结点或许可以供未通过身份验证的匿名使用者使用，因此在部署此类终结点之前，必须谨慎以确保适合公开透露服务元数据。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 发布服务元数据，请参阅[元数据发布行为](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)示例。 请参阅[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例有关保护元数据终结点的示例。  
+ 为了防止无意中泄露潜在的敏感服务元数据，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的默认配置将禁用元数据发布。 默认情况下此行为是安全的，但也意味着你无法使用元数据导入工具（例如 Svcutil.exe）生成调用服务所需的客户端代码，除非在配置中显式启用服务的元数据发布行为。 为了使示例体验更简单，几乎所有示例都公开一个不安全的元数据发布终结点。 此类终结点或许可以供未通过身份验证的匿名使用者使用，因此在部署此类终结点之前，必须谨慎以确保适合公开透露服务元数据。 有关发布服务元数据的详细信息，请参阅[元数据发布行为](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)示例。 请参阅[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例有关保护元数据终结点的示例。  
   
 ## <a name="exception-handling"></a>异常处理  
- 一般来说，这些示例不包括异常处理，以使代码集中处理示例的主题。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 异常处理，请参阅[预期异常](../../../../docs/framework/wcf/samples/expected-exceptions.md)示例。  
+ 一般来说，这些示例不包括异常处理，以使代码集中处理示例的主题。 有关异常处理的详细信息，请参阅[预期异常](../../../../docs/framework/wcf/samples/expected-exceptions.md)示例。  
   
 ## <a name="regenerating-clients-and-configuration-with-svcutil"></a>使用 Svcutil 重新生成客户端和配置  
  你可以使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)重新生成的大多数示例用于客户端代码和配置。 某些示例需要手动编辑的配置。 例如，如果您使用 Svcutil.exe 为某个使用客户端证书凭据的示例重新生成配置，必须手动指定之前配置的凭据。 某些示例使用特定的 Svcutil.exe 选项来影响生成的代码，这些选项在具体的示例主题中进行指定。  

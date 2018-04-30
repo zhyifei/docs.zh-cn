@@ -1,28 +1,28 @@
 ---
-title: "为 Windows Communication Foundation 服务配置绑定"
-ms.custom: 
+title: 为 Windows Communication Foundation 服务配置绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>为 Windows Communication Foundation 服务配置绑定
 创建应用程序时，您经常需要将一些决策交给管理员在部署应用程序后制定。 例如，通常没有办法提前知道服务地址或统一资源标识符 (URI)。 最好允许管理员在创建服务后指定地址，而不是对地址进行硬编码。 这种灵活性是通过配置实现的。  
@@ -47,13 +47,13 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ### <a name="servicemodel-elements"></a>ServiceModel 元素  
- 你可以使用界定的部分`system.ServiceModel`元素来配置与一个或多个终结点，以及服务设置的服务类型。 然后，可以为每个终结点配置地址、协定以及绑定。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]终结点，请参阅[终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)。 如果未指定任何终结点，则运行时添加默认终结点。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 默认终结点、绑定和行为，请参阅 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) 和 [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ 你可以使用界定的部分`system.ServiceModel`元素来配置与一个或多个终结点，以及服务设置的服务类型。 然后，可以为每个终结点配置地址、协定以及绑定。 有关终结点的详细信息，请参阅[终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)。 如果未指定任何终结点，则运行时添加默认终结点。 有关默认终结点、 绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
  绑定指定传输（HTTP、TCP、管道、消息队列）和协议（安全性、可靠性、事务流）。绑定由绑定元素组成，其中的每个元素都指定终结点与世界的通信方式的一个方面。  
   
  例如，指定[ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)元素指示要使用 HTTP 作为传输协议的终结点。 这用于在使用此终结点的服务打开时在运行时连接终结点。  
   
- 有两种绑定：预定义绑定和自定义绑定。 预定义绑定包含在常见方案中使用的元素的有用组合。 预定义绑定的列表类型的[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]提供，请参阅[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。 如果没有任何预定义绑定集合具有服务应用程序所需的功能的正确组合，那么你可以构造自定义绑定来满足应用程序的需求。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]自定义绑定，请参阅[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+ 有两种绑定：预定义绑定和自定义绑定。 预定义绑定包含在常见方案中使用的元素的有用组合。 预定义绑定的列表类型的[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]提供，请参阅[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。 如果没有任何预定义绑定集合具有服务应用程序所需的功能的正确组合，那么你可以构造自定义绑定来满足应用程序的需求。 有关自定义绑定的详细信息，请参阅[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
  下面四个示例说明了用于设置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的最常见绑定配置。  
   

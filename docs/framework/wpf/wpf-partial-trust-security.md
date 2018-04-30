@@ -29,14 +29,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 740146bffe869dc30bbf8e8472c30be317ce6f7c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 023de9e20206411f7dd6774553ae39eefaa508a0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全
-<a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下，[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)]和客户端脚本语言不能访问关键系统资源。 因为[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]可以从浏览器启动浏览器承载的应用程序，它们应该符合一组类似的限制。 若要强制执行这些限制，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]依赖于同时[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]和[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](请参阅[WPF 安全策略 — 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md))。 默认情况下，浏览器承载的应用程序请求 Internet 区域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]组权限，而不考虑是否从 Internet、 本地 intranet 或本地计算机启动的权限。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
+<a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下，[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)]和客户端脚本语言不能访问关键系统资源。 由于 Windows Presentation Foundation (WPF) 可以从浏览器启动浏览器承载的应用程序，它们应符合一组类似的限制。 若要强制执行这些限制，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]依赖于同时[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]和[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](请参阅[WPF 安全策略 — 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md))。 默认情况下，浏览器承载的应用程序请求 Internet 区域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]组权限，而不考虑是否从 Internet、 本地 intranet 或本地计算机启动的权限。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供支持，以确保在部分信任，并连同，，可以安全地使用尽可能多的功能的各种[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]，为部分信任编程提供额外支持。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>WPF 功能部分信任支持  
- 下表列出的高级功能[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]，才可以安全地使用 Internet 区域权限集的限制内。  
+ 下表列出了安全在 Internet 区域权限集的限制内使用的高级功能的 Windows Presentation Foundation (WPF)。  
   
  表 1：在部分信任环境中安全的 WPF 功能  
   

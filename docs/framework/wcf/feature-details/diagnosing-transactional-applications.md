@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>诊断事务应用程序
 本主题介绍如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 管理和诊断功能来解决事务应用程序的问题。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/28/2018
 |Transactions Flowed Per Second（每秒流动的事务数）|每秒钟流向此终结点上的操作的事务数。 每当发送到终结点的消息中存在事务时，此计数器即会递增。|  
   
 ## <a name="windows-management-instrumentation"></a>Windows Management Instrumentation  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供程序在运行时公开服务的检测数据。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 访问 WMI 数据，请参阅[使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供程序在运行时公开服务的检测数据。 有关访问 WMI 数据的详细信息，请参阅[使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
   
  很多 WMI 只读属性都指示为服务应用的事务设置。 下表列出了所有这些设置。  
   

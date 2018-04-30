@@ -1,27 +1,29 @@
 ---
-title: "WCF Web HTTP 服务帮助页"
-ms.custom: 
+title: WCF Web HTTP 服务帮助页
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cdd05397990c2b1bfc89493235804e14f6d41a1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dabb5e7a949cb26c619ad02dc73d0405222d08cf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服务帮助页
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]提供了 WCF WEB HTTP 服务的自动帮助页。 此帮助页列出了每个操作的说明、请求和响应格式以及架构。 默认情况下关闭此功能。 如果用户浏览到 WCF WEB HTTP 服务并在 URL 的末尾附加“/Help”（例如 http://localhost:8000/Customers/Help），则将显示如下所示的帮助页。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]提供了 WCF WEB HTTP 服务的自动帮助页。 此帮助页列出了每个操作的说明、请求和响应格式以及架构。 默认情况下关闭此功能。 当用户浏览到 WCF WEB HTTP 服务和追加"/ 帮助"到 URL，例如末尾http://localhost:8000/Customers/Help，如同显示以下帮助页。  
   
  ![WCF REST 帮助页](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
@@ -251,4 +253,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]数据协定序列化架构，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。
+ 有关数据协定序列化架构的详细信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。

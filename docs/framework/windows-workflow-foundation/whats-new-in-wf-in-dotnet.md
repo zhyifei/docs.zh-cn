@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d862865057f9978a0b815f3026f2ba67c87eac7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>什么&#39;s.NET 4.5 中的 Windows Workflow Foundation 中的新增功能
-中的 Windows Workflow Foundation (WF)[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引入了许多新功能，如新的活动、 设计器的功能和工作流开发模型。 重新承载的工作流设计器支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的许多（但不是全部）新工作流功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 新功能支持，请参阅[重新承载工作流设计器中新 Workflow Foundation 4.5 功能的支持](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本，请参阅[迁移指南](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主题概述了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的新工作流功能。  
+中的 Windows Workflow Foundation (WF)[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引入了许多新功能，如新的活动、 设计器的功能和工作流开发模型。 重新承载的工作流设计器支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的许多（但不是全部）新工作流功能。 有关支持的新功能的详细信息，请参阅[重新承载工作流设计器中新 Workflow Foundation 4.5 功能的支持](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 有关迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本的详细信息，请参阅[迁移指南](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主题概述了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的新工作流功能。  
   
 > [!WARNING]
 >  中引入的新 Windows Workflow Foundation 功能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]对于面向以前版本的 framework 的项目不可用。 如果面向 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的项目重新面向以前版本的框架，则可能会发生多个问题。  
@@ -158,7 +158,7 @@ ms.lasthandoff: 04/28/2018
   
  将在设计时对 C# 表达式进行验证。 C# 表达式中的错误将标有红色波浪形下划线。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] C# 表达式，请参阅[C# 表达式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)。  
+ 有关 C# 表达式的详细信息，请参阅[C# 表达式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)。  
   
 ###  <a name="BKMK_Visibility"></a> Shell 栏和标头的可见性的更多控制项  
  在重新承载的设计器中，某些标准 UI 控件可能对于给定的工作流没有意义，并可能已关闭。 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，此自定义仅受设计器底部的 shell 栏支持。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可通过用合适的 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 值设置 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 来调整设计器顶部 shell 标头项的可见性。  

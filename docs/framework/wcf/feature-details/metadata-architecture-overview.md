@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: df603da0f4feedeacc59198c156322c78fd2f388
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="metadata-architecture-overview"></a>元数据体系结构概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了丰富的基础结构，用于导出、发布、检索和导入服务元数据。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务使用元数据来描述如何与服务的终结点进行交互，以便工具（如 Svcutil.exe）可以自动生成客户端代码来访问服务。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/28/2018
   
  若要添加使用 MEX 协议的元数据终结点，请向您使用名为 IMetadataExchange 的服务协定的服务主机添加服务终结点。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定义<xref:System.ServiceModel.Description.IMetadataExchange>具有此服务协定名称的接口。 WS-MetadataExchange 终结点或 MEX 终结点可以使用由 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 类上静态工厂方法公开的四个默认绑定之一，以匹配 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工具（如 Svcutil.exe）使用的默认绑定。 也可以使用自定义绑定配置 MEX 元数据终结点。  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 使用 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 来导出服务中所有服务终结点的元数据。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 导出元数据从一种服务，请参阅[导出和导入元数据](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 使用 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 来导出服务中所有服务终结点的元数据。 有关从服务中导出元数据的详细信息，请参阅[导出和导入元数据](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
   
  通过将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 实例作为服务主机的扩展添加，<xref:System.ServiceModel.Description.ServiceMetadataExtension> 增强了服务主机。 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> 提供了元数据发布协议的实现。 还可以使用 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> 通过访问 <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A> 属性来在运行时获取服务的元数据。  
   

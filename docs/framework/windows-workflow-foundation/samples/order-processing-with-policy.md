@@ -1,23 +1,24 @@
 ---
-title: "使用策略的订单处理"
-ms.custom: 
+title: 使用策略的订单处理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86c7890af651ba9f0ee0ec2a1763f9c579bac89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f99db44a636a5255990f734d34266b3b2e4a678b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="order-processing-with-policy"></a>使用策略的订单处理
 订单处理策略示例演示了 Windows Workflow Foundation (WF) 的 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中引入的一些主要功能。 以下功能对 WF 规则引擎而言是新功能：  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  此示例演示了一个 `OrderProcessingPolicy` 项目，在该项目中输入客户订单和邮政编码，订单包括一份可用项的编号列表。 如果两项输入均正确，则订单将成功处理；否则，策略会创建错误对象，并利用重载 `+` 运算符和预定义的扩展方法将该错误通知给用户。  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]扩展方法，请参阅[C# 3.0 版规范](http://go.microsoft.com/fwlink/?LinkId=95402)。  
+>  有关扩展方法的详细信息，请参阅[C# 3.0 版规范](http://go.microsoft.com/fwlink/?LinkId=95402)。  
   
  该示例由下列项目组成：  
   

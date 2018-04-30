@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 490b756a9beae09b20a36d3fc6a20c85aad76618
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 24ca6899e6ac2bb316c0543932d70abc13626aa2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑难解答快速入门
 本主题列出了一些客户开发 WCF 客户端和服务时所遇到的已知问题。 如果您遇到的问题不在此列表中，我们建议您为您的服务配置跟踪。 这将生成一个跟踪文件，您可以使用跟踪文件查看器查看它并获取有关服务中可能发生的异常的详细信息。 有关配置跟踪的详细信息，请参阅： [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 有关跟踪文件查看器的详细信息，请参阅： [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/28/2018
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>如果我的客户端在第一次请求后暂时处于空闲，有时我会在第二次请求时收到 MessageSecurityException。 发生了什么情况？  
- 第二次请求失败主要有两个原因：(1) 会话已超时或 (2) 承载服务的 Web 服务器被回收。 在第一种情况下，会话在服务超时前有效。当服务在其绑定指定的时间段 (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) 内未接收到来自客户端的请求时，服务将终止安全会话。 后续客户端消息会导致 <xref:System.ServiceModel.Security.MessageSecurityException>。 客户端必须重新建立与服务的安全会话，才能发送以后的消息或使用有状态安全上下文令牌。 有状态的安全上下文令牌还允许安全会话在回收 Web 服务器后存在。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 安全会话中使用有状态安全上下文令牌，请参阅[如何： 为安全会话创建安全上下文令牌](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。 或者，也可禁用安全会话。 当你使用[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)绑定，你可以设置`establishSecurityContext`属性`false`以禁用安全会话。 若要为其他绑定禁用安全会话，必须创建自定义绑定。 有关创建自定义绑定的详细信息，请参阅 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 在应用任何这些选择前，您必须先了解应用程序的安全要求。  
+ 第二次请求失败主要有两个原因：(1) 会话已超时或 (2) 承载服务的 Web 服务器被回收。 在第一种情况下，会话在服务超时前有效。当服务在其绑定指定的时间段 (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) 内未接收到来自客户端的请求时，服务将终止安全会话。 后续客户端消息会导致 <xref:System.ServiceModel.Security.MessageSecurityException>。 客户端必须重新建立与服务的安全会话，才能发送以后的消息或使用有状态安全上下文令牌。 有状态的安全上下文令牌还允许安全会话在回收 Web 服务器后存在。 有关安全会话中使用有状态安全上下文令牌的详细信息，请参阅[如何： 为安全会话创建安全上下文令牌](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。 或者，也可禁用安全会话。 当你使用[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)绑定，你可以设置`establishSecurityContext`属性`false`以禁用安全会话。 若要为其他绑定禁用安全会话，必须创建自定义绑定。 有关创建自定义绑定的详细信息，请参阅 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 在应用任何这些选择前，您必须先了解应用程序的安全要求。  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>大约有 10 个客户端与我的服务交互后，我的服务开始拒绝新的客户端。 发生了什么情况？  
@@ -145,7 +145,7 @@ public class MyServiceHost : ServiceHost
   
     4.  使用 SetSPN 在域中注册一个新的 SPN。 请注意，您需要具有域管理员的身份才能执行此操作。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Kerberos 协议，请参阅 [Security Concepts Used in WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) 和：  
+ 有关 Kerberos 协议的详细信息，请参阅[WCF 中使用的安全概念](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)和：  
   
 -   [调试 Windows 身份验证错误](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
@@ -175,7 +175,7 @@ public class MyServiceHost : ServiceHost
   
  如果的确如此，则必须向该进程的帐户授予对包含该私钥的文件的读访问特权。 例如，如果 IIS 辅助进程运行在 Bob 帐户下，则您需要向 Bob 授予对包含该私钥的文件的读访问权。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何向正确的用户帐户授予对包含特定 X.509 证书的私钥的文件的访问权的详细信息，请参阅 [How to: Make X.509 Certificates Accessible to WCF](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md)。  
+ 有关如何向正确的用户帐户访问权限授予对包含特定 X.509 证书的私钥文件的详细信息，请参阅[如何： 使 X.509 证书可由 WCF 访问](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md)。  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>我将操作的第一个参数从大写更改为了小写，现在我的客户端引发一个异常。 发生了什么情况？  

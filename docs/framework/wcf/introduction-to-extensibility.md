@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 331e71f26b1c703f7df27086d943e799b4eb13e2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="introduction-to-extensibility"></a>扩展性介绍
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序模型设计用于解决任何分布式应用程序的大部分通信要求。 但是，总是会存在一些默认应用程序模型和系统提供的实现不支持的情况。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 扩展性模型旨在支持自定义方案，方法是通过修改各个级别的系统行为，甚至替换整个应用程序模型。 本主题概述各个扩展范围并指出关于每个范围的更多信息。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/28/2018
   
  应用程序消息中包含发往客户端或发往您或您的客户创建的服务操作的数据。 这些消息可用于采用消息或对象形式的应用程序级扩展系统，具体取决于您的需要。  
   
- 所有消息都通过通道系统传递；只有应用程序消息是从通道系统传入应用程序的。 若要创建新的通道级功能，必须扩展通道系统。 若要创建新的应用程序级功能，必须扩展服务或客户端运行库（分别为调度程序和通道工厂）。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 扩展应用程序运行时，请参阅[扩展 ServiceHost 和服务模型层](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
+ 所有消息都通过通道系统传递；只有应用程序消息是从通道系统传入应用程序的。 若要创建新的通道级功能，必须扩展通道系统。 若要创建新的应用程序级功能，必须扩展服务或客户端运行库（分别为调度程序和通道工厂）。 有关扩展应用程序运行时的详细信息，请参阅[扩展 ServiceHost 和服务模型层](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
   
 #### <a name="extending-security"></a>扩展安全性  
  若要生成自定义安全机制（如令牌和凭据），必须扩展安全系统。 有关详细信息，请参阅[扩展安全](../../../docs/framework/wcf/extending/extending-security.md)。  

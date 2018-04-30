@@ -1,26 +1,26 @@
 ---
-title: "服务版本控制"
-ms.custom: 
+title: 服务版本控制
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: fef65a4134f1cf526a7082b08aa4d8d1c6ea7f4d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-versioning"></a>服务版本控制
 服务（及其公开的终结点）在初始部署之后，可能出于多种原因（例如，更改业务需求、信息技术需求，或者为了解决其他问题）而需要更改，并且在其生存期期间可能需要更改多次。 每次更改都会引入服务的一个新版本。 本主题说明如何考虑 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中的版本管理。  
@@ -138,7 +138,7 @@ ms.lasthandoff: 03/19/2018
  对终结点地址和绑定的更改是中断性更改，除非客户端能够动态发现新的终结点地址或绑定。 实现此功能的一种机制是使用通用发现、描述和集成 (UDDI) 注册表以及 UDDI 调用模式，在此机制下，客户端尝试与终结点进行通信，并在失败时查询已知的 UDDI 注册表，以获得当前终结点元数据。 然后，客户端使用这些元数据中的地址和绑定来与终结点进行通信。 如果此通信成功，客户端将缓存这些地址和绑定信息以备将来使用。  
   
 ## <a name="routing-service-and-versioning"></a>路由服务和版本管理  
- 如果对服务所做的更改是中断性更改，并且您需要同时运行该服务的两个或多个不同版本，则可使用 WCF 路由服务将消息路由到适当的服务实例。 WCF 路由服务使用基于内容的路由，换句话说，该服务使用消息中的信息来确定将消息路由到何处。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] WCF 路由服务，请参阅[路由服务](../../../docs/framework/wcf/feature-details/routing-service.md)。 有关如何使用 WCF 路由服务进行服务版本控制的示例，请参阅[How To： 服务版本控制](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
+ 如果对服务所做的更改是中断性更改，并且您需要同时运行该服务的两个或多个不同版本，则可使用 WCF 路由服务将消息路由到适当的服务实例。 WCF 路由服务使用基于内容的路由，换句话说，该服务使用消息中的信息来确定将消息路由到何处。 WCF 路由服务，请参阅有关详细信息[路由服务](../../../docs/framework/wcf/feature-details/routing-service.md)。 有关如何使用 WCF 路由服务进行服务版本控制的示例，请参阅[How To： 服务版本控制](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
   
 ## <a name="appendix"></a>附录  
  在需要严格版本管理时，通常的数据协定版本管理准则是将数据协定视为不可变，并在需要更改时创建新的协定。 对于每个新的数据协定，需要分别创建一个新类，因此需要一种机制来避免不得不获得按照旧数据协定类编写的现有代码，并按照新数据协定类重新编写代码。  
@@ -188,7 +188,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
   
  该服务协定将更新为包含按照 `PurchaseOrderV2` 编写的新操作。 按照 `IPurchaseOrderV1` 编写的现有业务逻辑对于 `PurchaseOrderV2` 仍然可用，并且需要 `OrderDate` 属性的新业务逻辑将按照 `IPurchaseOrderV2` 编写。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  

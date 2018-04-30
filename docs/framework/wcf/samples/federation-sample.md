@@ -1,30 +1,32 @@
 ---
-title: "联合示例"
-ms.custom: 
+title: 联合示例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c87984b08a073f37dcf155a39fab0f5e580e985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 58a8ab012682d5acb04b201c36d931276426ffe8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="federation-sample"></a>联合示例
 本示例演示联合安全。  
   
 ## <a name="sample-details"></a>示例详细信息  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 为通过 `wsFederationHttpBinding` 部署联合安全体系结构提供支持。 `wsFederationHttpBinding` 提供安全可靠并且可互操作的绑定，该绑定中使用 HTTP 作为请求/回复通信的基础传输机制，并使用文本/XML 作为编码的联网格式。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]中的联合身份验证[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 为通过 `wsFederationHttpBinding` 部署联合安全体系结构提供支持。 `wsFederationHttpBinding` 提供安全可靠并且可互操作的绑定，该绑定中使用 HTTP 作为请求/回复通信的基础传输机制，并使用文本/XML 作为编码的联网格式。 有关中的联合身份验证的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
  此方案包括 4 个部分：  
   

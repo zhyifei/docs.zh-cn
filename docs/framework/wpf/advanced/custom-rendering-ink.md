@@ -1,12 +1,13 @@
 ---
-title: "自定义呈现墨迹"
-ms.custom: 
+title: 自定义呈现墨迹
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 481990acdf2f5b8f798144d36434569b9e2cd481
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e8f7288d9d3b729ab9c38bc6b2afd603b4d6d1aa
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-rendering-ink"></a>自定义呈现墨迹
-<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>笔画属性允许你指定的外观描边，如其大小、 颜色和形状，但可能有些时候你想要自定义超出什么外观<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>允许。 建议通过使用喷笔、油画和多种其他效果呈现外观，从而自定义墨迹的外观。 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]允许你自定义实现自定义呈现墨迹<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>和<xref:System.Windows.Ink.Stroke>对象。  
+<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>笔画属性允许你指定的外观描边，如其大小、 颜色和形状，但可能有些时候你想要自定义超出什么外观<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>允许。 建议通过使用喷笔、油画和多种其他效果呈现外观，从而自定义墨迹的外观。 Windows Presentation Foundation (WPF) 允许你自定义实现自定义呈现墨迹<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>和<xref:System.Windows.Ink.Stroke>对象。  
   
  本主题包含以下小节：  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  **笔画**： 实现派生自类<xref:System.Windows.Ink.Stroke>。 此类负责静态呈现<xref:System.Windows.Input.StylusPoint>数据后已转换为<xref:System.Windows.Ink.Stroke>对象。 重写<xref:System.Windows.Ink.Stroke.DrawCore%2A>方法，以确保该静态呈现的笔划的是与动态呈现一致。  
   
-3.  **InkCanvas:**实现派生自类<xref:System.Windows.Controls.InkCanvas>。 分配的自定义<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>到<xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>属性。 重写<xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A>方法并添加到自定义笔画<xref:System.Windows.Controls.InkCanvas.Strokes%2A>属性。 这样可以确保墨迹外观一致。  
+3.  **InkCanvas:** 实现派生自类<xref:System.Windows.Controls.InkCanvas>。 分配的自定义<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>到<xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>属性。 重写<xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A>方法并添加到自定义笔画<xref:System.Windows.Controls.InkCanvas.Strokes%2A>属性。 这样可以确保墨迹外观一致。  
   
 <a name="ImplementingADynamicRenderer"></a>   
 ## <a name="implementing-a-dynamic-renderer"></a>实现动态呈现器  

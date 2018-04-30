@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d4463a04ac2113778d9ea0d315beeef7d564764
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: aebd21186f7d038dfa5d7c3c65f833d41f4a1f71
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-equivalence"></a>数据协定等效性
 对于客户端要将某种类型的数据成功发送到服务，或者服务要将数据成功发送到客户端的情况，接收端上并不一定必须存在此发送数据类型。 唯一的需求是两种类型的数据协定应该等效。 (有时，严格等效性不是必需的如中所述[数据协定版本管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。)  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/28/2018
 > [!NOTE]
 >  请注意，数据协定名称和命名空间以及数据成员名称均区分大小写。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 数据协定名称和命名空间，以及数据成员名称，请参阅[数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
+ 有关数据协定名称和命名空间，以及数据成员名称的详细信息，请参阅[数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
  如果同一端（发送方或接收方）存在两种类型，而其数据协定又不等效（例如，它们的数据成员不同），则不应为它们指定相同的名称和命名空间。 否则，可能会引发异常。  
   

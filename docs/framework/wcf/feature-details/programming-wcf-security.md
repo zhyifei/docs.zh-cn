@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6c8769511f608834c7539779d83977880e1d4093
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="programming-wcf-security"></a>WCF 安全编程
 本主题描述用于创建安全的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序的基本编程任务。 本主题介绍身份验证、 保密性和完整性，统称为*传输安全*。 本主题不涉及授权 （资源或服务的访问控制）;有关授权的信息，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/28/2018
   
     1.  `Transport`  
   
-         传输安全取决于所选绑定使用的机制。 例如，如果要使用 `WSHttpBinding`，则安全机制是安全套接字层 (SSL)（它也是 HTTPS 协议的机制）。 一般说来，传输安全的主要优点是它提供了较高的吞吐量，而无论您使用哪种传输协议。 但是，它确实具有两个限制：第一个限制是传输机制指示了用于对用户进行身份验证的凭据类型。 只有当服务需要与其他要求不同类型凭据的服务交互操作时，这才是一个缺点。 第二个限制是，因为安全不是在消息级应用的，所以安全是逐个跃点实现的，而不是以端对端方式实现的。 只有当客户端和服务之间的消息路径包含中介时，后一个限制才会成为问题。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 哪种传输若要使用，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用传输安全，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
+         传输安全取决于所选绑定使用的机制。 例如，如果要使用 `WSHttpBinding`，则安全机制是安全套接字层 (SSL)（它也是 HTTPS 协议的机制）。 一般说来，传输安全的主要优点是它提供了较高的吞吐量，而无论您使用哪种传输协议。 但是，它确实具有两个限制：第一个限制是传输机制指示了用于对用户进行身份验证的凭据类型。 只有当服务需要与其他要求不同类型凭据的服务交互操作时，这才是一个缺点。 第二个限制是，因为安全不是在消息级应用的，所以安全是逐个跃点实现的，而不是以端对端方式实现的。 只有当客户端和服务之间的消息路径包含中介时，后一个限制才会成为问题。 要使用的传输有关的详细信息，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 有关使用传输安全的详细信息，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
   
     2.  `Message`  
   

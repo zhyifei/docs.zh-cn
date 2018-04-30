@@ -1,24 +1,24 @@
 ---
-title: "SendMail 自定义活动"
-ms.custom: 
+title: SendMail 自定义活动
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 46038466233e7039229890b15b0ad6ca9d1a717f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自定义活动
 本示例演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。 自定义活动使用的功能<xref:System.Net.Mail.SmtpClient>以异步方式发送电子邮件以及发送邮件使用身份验证。 它还提供一些最终用户功能，例如测试模式、标记替换、文件模板和测试放置路径。  
@@ -116,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>设置说明  
  此示例要求具有对 SMTP 服务器的访问权限。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 设置 SMTP 服务器，请参阅以下链接。  
+ 有关设置 SMTP 服务器的详细信息，请参阅以下链接。  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   

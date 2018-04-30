@@ -1,24 +1,26 @@
 ---
-title: "如何：以编程方式向 WCF 服务和客户端添加可检测性"
-ms.custom: 
+title: 如何：以编程方式向 WCF 服务和客户端添加可检测性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a0a59788544a32b78e75ac25e787dcbae478451e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可检测性
 本主题说明如何检测到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务。 它基于[自承载](http://go.microsoft.com/fwlink/?LinkId=145523)示例。  
@@ -231,7 +233,7 @@ ms.lasthandoff: 12/22/2017
     ```  
   
 ## <a name="example"></a>示例  
- 下面是此示例的代码清单。 因为此代码基于[自承载](http://go.microsoft.com/fwlink/?LinkId=145523)示例列出那些更改的文件。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自承载示例中，请参阅[设置说明](http://go.microsoft.com/fwlink/?LinkId=145522)。  
+ 下面是此示例的代码清单。 因为此代码基于[自承载](http://go.microsoft.com/fwlink/?LinkId=145523)示例列出那些更改的文件。 有关自承载示例的详细信息，请参阅[设置说明](http://go.microsoft.com/fwlink/?LinkId=145522)。  
   
 ```csharp  
 // Service.cs  

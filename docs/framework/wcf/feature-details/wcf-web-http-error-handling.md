@@ -1,24 +1,26 @@
 ---
-title: "WCF Web HTTP 错误处理"
-ms.custom: 
+title: WCF Web HTTP 错误处理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c5f397d50a5a97801241afd8e64abf2e56b05dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcd0e6d1e6318404eb47741dc61ccf2ff9358b47
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 错误处理
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 错误处理可用于从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 服务返回指定 HTTP 状态代码的错误，并且返回的错误详细信息使用与操作相同的格式（如 XML 或 JSON）。  
@@ -56,7 +58,7 @@ Public string Operation2()
   
 -   通过访问 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 得到的 <xref:System.ServiceModel.Web.OutgoingWebResponseContext> 属性值。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何将这些值会影响操作的格式设置，请参阅[WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。  
+ 有关这些值如何影响操作的格式设置的详细信息，请参阅[WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。  
   
  <xref:System.ServiceModel.Web.WebFaultException> 是一个 <xref:System.ServiceModel.FaultException>，因此可用作公开 SOAP 终结点和 Web HTTP 终结点的服务的错误异常编程模型。  
   

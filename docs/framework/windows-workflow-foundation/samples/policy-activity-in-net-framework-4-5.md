@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d8457182b666570853953830a92c3f2380a0eb85
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 5ff750942a2d05310669361e83a10a5acefbcbd4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的策略活动
-Policy4 活动允许 Windows Workflow Foundation 中[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>对象用于在 Windows Workflow Foundation 中[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接通过 WF 3.5 中附带的规则引擎。 通过使用此活动，可以创建和执行 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WF 3.5 规则引擎的更多信息（此信息已作为 Windows Workflow Foundation 的一部分包含），请参见 Windows Workflow Foundation 规则引擎简介。 有关迁移的详细信息中的 WF 规则[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，请阅读[迁移指南](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
+Policy4 活动允许 Windows Workflow Foundation 中[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>对象用于在 Windows Workflow Foundation 中[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接通过 WF 3.5 中附带的规则引擎。 通过使用此活动，可以创建和执行 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 有关 Windows Workflow Foundation 的一部分包含的 WF 3.5 规则引擎的详细信息，请阅读 Windows Workflow Foundation 规则引擎简介。 有关迁移的详细信息中的 WF 规则[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，请阅读[迁移指南](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

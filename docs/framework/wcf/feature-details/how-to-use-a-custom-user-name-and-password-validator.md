@@ -1,13 +1,13 @@
 ---
-title: "如何：使用自定义用户名和密码验证程序"
-ms.custom: 
+title: 如何：使用自定义用户名和密码验证程序
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ee138c52c8cdd63137bf3c468ebbdd064d60d443
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ea4f4d7021f02d239b9e2e93a85b5baaf5a0317
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>如何：使用自定义用户名和密码验证程序
 默认情况下，当用户名和密码用于身份验证时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 会使用 Windows 来验证用户名和密码。 但是，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]允许为自定义用户名称和密码身份验证方案，也称为*验证程序*。 若要合并自定义用户名和密码验证程序，请创建一个从 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> 派生的类，然后对其进行配置。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  在配置文件中，在[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素中，添加[\<绑定 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素。  
   
-    2.  添加[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)或[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)绑定节的元素。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]绑定元素，请参阅[如何： 在配置中指定服务绑定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+    2.  添加[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)或[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)绑定节的元素。 有关创建[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]绑定元素，请参阅[如何： 在配置中指定服务绑定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
   
     3.  设置`mode`属性[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)或[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)到`Message`， `Transport`， `or``TransportWithMessageCredential`。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/22/2017
         > [!NOTE]
         >  如果使用传输级安全在 Internet 信息服务(IIS) 中承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，并且将 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> 属性设置为 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>，则自定义身份验证方案会使用 Windows 身份验证的子集。 这是因为在此情况下，IIS 会在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 调用自定义验证器之前执行 Windows 身份验证。  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]绑定元素，请参阅[如何： 在配置中指定服务绑定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+     有关创建[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]绑定元素，请参阅[如何： 在配置中指定服务绑定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
   
      下面的示例显示绑定的配置代码。  
   

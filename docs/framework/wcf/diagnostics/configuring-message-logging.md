@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6e2d45e7b8769ee525835ad3dc50262a03a5a7b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-message-logging"></a>配置消息日志记录
 本主题描述如何针对不同的方案配置消息日志记录。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/28/2018
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 消息日志记录设置，请参阅[建议的设置进行跟踪和消息日志记录](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。  
+ 有关消息日志记录设置的详细信息，请参阅[建议的设置进行跟踪和消息日志记录](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。  
   
  可以使用 `add` 指定要使用的侦听器的名称和类型。 在示例配置中，侦听器命名为“messages”，并添加了标准 .NET Framework 跟踪侦听器(`System.Diagnostics.XmlWriterTraceListener`)，作为要使用的类型。 如果使用 `System.Diagnostics.XmlWriterTraceListener`，则必须在配置文件中指定输出文件的位置和名称。 这是通过将 `initializeData` 设置为该日志文件的名称来完成的。 否则，系统将引发异常。 还可以实现能向默认文件发出日志的自定义侦听器。  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/28/2018
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- 如果希望禁用跟踪源，应该使用 `logMessagesAtServiceLevel`, `logMalformedMessages` 以及 `logMessagesAtTransportLevel` 元素的 `messageLogging` 属性。 应将所有这些属性设置为 `false`。 可以使用前面的代码示例中的配置文件、通过配置编辑器的 UI 接口或使用 WMI 来完成此操作。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 配置编辑器工具，请参阅[配置编辑器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI，请参阅[使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
+ 如果希望禁用跟踪源，应该使用 `logMessagesAtServiceLevel`, `logMalformedMessages` 以及 `logMessagesAtTransportLevel` 元素的 `messageLogging` 属性。 应将所有这些属性设置为 `false`。 可以使用前面的代码示例中的配置文件、通过配置编辑器的 UI 接口或使用 WMI 来完成此操作。 有关配置编辑器工具的详细信息，请参阅[配置编辑器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。 有关 WMI 的详细信息，请参阅[使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
   
 ## <a name="logging-levels-and-options"></a>日志记录的级别和选项  
  对于传入消息，在消息形成后、在消息到达服务级别中的用户代码之前以及在检测到格式不正确的消息时，都会立即进行日志记录。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 04/28/2018
  在这个层上记录的消息已准备好进行编码以便在网络上传输，或已准备好在经过网络传输后进行解码。 如果已定义筛选器，则仅记录与筛选器相匹配的消息。 否则将记录传输层上的所有消息。 所有基础结构消息都在此层上记录，包括可靠传递消息。 对于经过流处理的消息，则只记录标头。 此外，安全消息在此级别上按加密记录，但使用诸如 HTTPS 的安全传输时除外。  
   
 ### <a name="malformed-level"></a>“格式不正确”级别  
- 格式不正确的消息是在处理的任何阶段被 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆栈所拒绝的消息。 格式错误的消息将被如实记录：已加密（如果是加密的）、带有不适当的 XML 等。 `maxSizeOfMessageToLog` 定义了记录为 CDATA 的消息大小。 默认情况下，`maxSizeOfMessageToLog` 等于 256K。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]此属性，请参阅“其他选项”部分。  
+ 格式不正确的消息是在处理的任何阶段被 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆栈所拒绝的消息。 格式错误的消息将被如实记录：已加密（如果是加密的）、带有不适当的 XML 等。 `maxSizeOfMessageToLog` 定义了记录为 CDATA 的消息大小。 默认情况下，`maxSizeOfMessageToLog` 等于 256K。 有关此属性的详细信息，请参阅其他选项部分。  
   
 ### <a name="other-options"></a>其他选项  
  除了日志记录的级别外，用户可以指定以下选项：  

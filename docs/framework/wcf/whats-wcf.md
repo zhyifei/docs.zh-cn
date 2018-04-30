@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c182cf5e5cc9346645f15293060671a0a0ce1caf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>什么是 Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用于构建面向服务的应用程序的框架。 借助 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，可以将数据作为异步消息从一个服务终结点发送至另一个服务终结点。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：  
@@ -52,11 +52,11 @@ ms.lasthandoff: 04/28/2018
   
 -   **互操作性**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 实现了 Web 服务互操作性的现代行业标准。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 支持的标准，请参阅 [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 实现了 Web 服务互操作性的现代行业标准。 有关支持的标准的详细信息，请参阅[互操作性和集成](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)。  
   
 -   **多种消息模式**  
   
-     采用多种模式之一交换消息。 最常用的模式是请求/答复模式，其中一个终结点从另一个终结点请求数据， 另一个终结点进行答复。 还有其他模式，比如单向消息，其中只有一个终结点发送消息，而不期望得到答复。 更复杂的模式是双工交换模式，在该模式下，两个终结点建立连接并来回发送数据，类似于即时消息传递程序。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 实现不同的消息交换模式，请参阅 [Contracts](../../../docs/framework/wcf/feature-details/contracts.md).  
+     采用多种模式之一交换消息。 最常用的模式是请求/答复模式，其中一个终结点从另一个终结点请求数据， 另一个终结点进行答复。 还有其他模式，比如单向消息，其中只有一个终结点发送消息，而不期望得到答复。 更复杂的模式是双工交换模式，在该模式下，两个终结点建立连接并来回发送数据，类似于即时消息传递程序。 有关如何实现使用不同的消息交换模式的详细信息[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[协定](../../../docs/framework/wcf/feature-details/contracts.md)。  
   
 -   **服务元数据**  
   
@@ -72,11 +72,11 @@ ms.lasthandoff: 04/28/2018
   
 -   **多种传输和编码方式**  
   
-     可通过多种内置传输协议和编码中的任意一种发送消息。 最常用的协议和编码是将发送文本编码使用超文本传输协议 (HTTP)，以便在万维网上使用的 SOAP 消息。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还允许通过 TCP、命名管道或 MSMQ 发送消息。 这些消息可以编码为文本，也可以使用优化的二进制格式。  使用 MTOM 标准可有效地发送二进制数据。 如果所提供的传输或编码都不符合您的需要，您可以创建自己的自定义传输或编码。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 支持通过传输和编码[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[传输](../../../docs/framework/wcf/feature-details/transports.md)。  
+     可通过多种内置传输协议和编码中的任意一种发送消息。 最常用的协议和编码是将发送文本编码使用超文本传输协议 (HTTP)，以便在万维网上使用的 SOAP 消息。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还允许通过 TCP、命名管道或 MSMQ 发送消息。 这些消息可以编码为文本，也可以使用优化的二进制格式。  使用 MTOM 标准可有效地发送二进制数据。 如果所提供的传输或编码都不符合您的需要，您可以创建自己的自定义传输或编码。 有关支持的传输和编码的详细信息[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[传输](../../../docs/framework/wcf/feature-details/transports.md)。  
   
 -   **可靠的排队消息**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持使用通过 WS-Reliable Messaging 实现的可靠会话和使用 MSMQ 进行可靠的消息交换。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 中的可靠和排队消息支持[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[队列和可靠会话](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持使用通过 WS-Reliable Messaging 实现的可靠会话和使用 MSMQ 进行可靠的消息交换。 有关可靠的排队消息传递支持在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[队列和可靠会话](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。  
   
 -   **持久性消息**  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **事务**  
   
-     WCF 还使用三个事务模型之一来支持事务：WS-AtomicTtransactions、 <xref:System.Transactions> 命名空间中的 API 以及 Microsoft 分布式事务协调器。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 中的事务支持[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[事务](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。  
+     WCF 还使用三个事务模型之一来支持事务：WS-AtomicTtransactions、 <xref:System.Transactions> 命名空间中的 API 以及 Microsoft 分布式事务协调器。 有关事务的详细信息，支持在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[事务](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。  
   
 -   **AJAX 和 REST 支持**  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **扩展性**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 体系结构具有大量扩展点。 如果需要额外功能，它还提供许多入口点，允许您自定义服务的行为。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 可用扩展点，请参阅[扩展 WCF](../../../docs/framework/wcf/extending/index.md)。  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 体系结构具有大量扩展点。 如果需要额外功能，它还提供许多入口点，允许您自定义服务的行为。 有关可用扩展点，请参阅[扩展 WCF](../../../docs/framework/wcf/extending/index.md)。  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF 与其他 Microsoft 技术的集成  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是一个灵活的平台。 由于这一极强的灵活性， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还在 Microsoft 的一些其他产品中得以利用。 如果您也在使用这些产品中的任何产品，通过了解 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的基础知识，您会立即受益。  

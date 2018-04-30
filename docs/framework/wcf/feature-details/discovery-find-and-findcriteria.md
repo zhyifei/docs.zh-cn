@@ -1,27 +1,29 @@
 ---
-title: "Discovery Find 和 FindCriteria"
-ms.custom: 
+title: Discovery Find 和 FindCriteria
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>Discovery Find 和 FindCriteria
-发现查找操作是发现功能中的主要操作之一，它由客户端启动，用于发现一个或多个服务。 执行查找时将通过网络发送一条 WS-Discovery Probe 消息。 与指定条件匹配的服务通过 WS-Discovery ProbeMatch 消息进行答复。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]发现消息，请参阅[Ws-discovery 规范](http://go.microsoft.com/fwlink/?LinkID=122347)。  
+发现查找操作是发现功能中的主要操作之一，它由客户端启动，用于发现一个或多个服务。 执行查找时将通过网络发送一条 WS-Discovery Probe 消息。 与指定条件匹配的服务通过 WS-Discovery ProbeMatch 消息进行答复。 有关发现消息的详细信息，请参阅[Ws-discovery 规范](http://go.microsoft.com/fwlink/?LinkID=122347)。  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
  <xref:System.ServiceModel.Discovery.DiscoveryClient> 类提供执行查找操作的机制，并简化了发现客户端操作的执行过程。 该类包含 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法和 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> 方法，前者用于执行（阻塞的）同步查找，后者用于启动非阻塞的异步查找。 这两个方法均采用 <xref:System.ServiceModel.Discovery.FindCriteria> 参数，并通过 <xref:System.ServiceModel.Discovery.FindResponse> 对象将结果提供给用户。  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> 执行区分大小写的基本字符串比较。  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>按细分的匹配项隔开"/"。 搜索 http://contoso/building1 与范围为 http://contoso/building/floor1 的服务相匹配。 请注意，该搜索与 http://contoso/building100 不匹配，因为最后两个段不匹配。  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 按细分的匹配项隔开"/"。 搜索http://contoso/building1匹配具有作用域的服务http://contoso/building/floor1。 请注意，它不匹配http://contoso/building100因为最后两个段不匹配。  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> 按使用 LDAP URL 的段来匹配范围。  
   

@@ -1,30 +1,32 @@
 ---
-title: "通过基本身份验证确保的传输安全"
-ms.custom: 
+title: 通过基本身份验证确保的传输安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: fe6b996c37e66f41c3946b8ef3437f8fa82c5201
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7430767c80515d14ae23e17ae2b94e0acc97ff30
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transport-security-with-basic-authentication"></a>通过基本身份验证确保的传输安全
-下图演示一个 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务和客户端。 服务器需要一个有效的可用于安全套接字层 (SSL) 的 X.509 证书，并且客户端必须信任此服务器证书。 而且，Web 服务已经有了一个可以使用的 SSL 实现。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]启用基本身份验证在 Internet 信息服务 (IIS)，请参阅[http://go.microsoft.com/fwlink/?LinkId=83822](http://go.microsoft.com/fwlink/?LinkId=83822)。  
+下图演示一个 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务和客户端。 服务器需要一个有效的可用于安全套接字层 (SSL) 的 X.509 证书，并且客户端必须信任此服务器证书。 而且，Web 服务已经有了一个可以使用的 SSL 实现。 有关详细信息启用基本身份验证在 Internet 信息服务 (IIS)，请参阅[ http://go.microsoft.com/fwlink/?LinkId=83822 ](http://go.microsoft.com/fwlink/?LinkId=83822)。  
   
  ![传输安全基本身份验证](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
   
@@ -127,5 +129,5 @@ ms.lasthandoff: 12/22/2017
  [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [\<c a t e >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
+ [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
  [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

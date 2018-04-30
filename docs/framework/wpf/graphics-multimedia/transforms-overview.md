@@ -1,12 +1,13 @@
 ---
-title: "变换概述"
-ms.custom: 
+title: 变换概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transformations [WPF], about transformations
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4992b5be4243d8d29b6075c0ad746494dc2eb168
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e63b83ea455a342d5d3fedaee0ad7d1714e90998
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transforms-overview"></a>变换概述
 本主题介绍如何使用[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>类才能旋转、 缩放、 移动 （转换），和扭曲<xref:System.Windows.FrameworkElement>对象。  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  A<xref:System.Windows.Media.Transform>定义如何映射，或转换从一个坐标空间指向另一个坐标空间。 此映射描述转换<xref:System.Windows.Media.Matrix>，它是包含三个列的三个行的集合<xref:System.Double>值。  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 使用行优先矩阵。 矢量表示为行矢量，而非列矢量。  
+>  Windows Presentation Foundation (WPF) 使用行优先矩阵。 矢量表示为行矢量，而非列矢量。  
   
  下表显示了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 矩阵的结构。  
   
@@ -51,13 +53,13 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> 默认值：0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> 默认值：1.0|0.0|  
 |<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> 默认值：0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> 默认值：0.0|1.0|  
   
- 通过操作矩阵值，可以旋转、缩放、倾斜和移动（转换）对象。 例如，如果你更改第三行的第一列中的值 (<xref:System.Windows.Media.Matrix.OffsetX%2A>值) 为 100，你可以使用它将沿 x 轴对象 100 单位。 如果将第二行第二列中的值更改为 3，可使用它来将对象的当前高度拉伸三倍。 如果同时更改这两个值，将使对象沿 x 轴移动 100 个单位，并将其高度拉伸 3 倍。 由于 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 仅支持仿射转换，因此右边列中的值始终为 0, 0, 1。  
+ 通过操作矩阵值，可以旋转、缩放、倾斜和移动（转换）对象。 例如，如果你更改第三行的第一列中的值 (<xref:System.Windows.Media.Matrix.OffsetX%2A>值) 为 100，你可以使用它将沿 x 轴对象 100 单位。 如果将第二行第二列中的值更改为 3，可使用它来将对象的当前高度拉伸三倍。 如果同时更改这两个值，将使对象沿 x 轴移动 100 个单位，并将其高度拉伸 3 倍。 由于 Windows Presentation Foundation (WPF) 仅支持仿射转换，因此右侧列中的值始终是 0，0，1。  
   
- 尽管[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]让您以直接操作矩阵值，它还提供了许多<xref:System.Windows.Media.Transform>使你无需知道基础的矩阵结构的配置方式变换对象类。 例如，<xref:System.Windows.Media.ScaleTransform>类使你能够通过设置缩放对象其<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>和<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>属性，而不是操作的转换矩阵。 同样，<xref:System.Windows.Media.RotateTransform>类使你能够旋转对象只需通过设置其<xref:System.Windows.Media.RotateTransform.Angle%2A>属性。  
+ 尽管 Windows Presentation Foundation (WPF) 使你能够直接处理矩阵值，它还提供几个<xref:System.Windows.Media.Transform>使你无需知道基础的矩阵结构的配置方式变换对象类。 例如，<xref:System.Windows.Media.ScaleTransform>类使你能够通过设置缩放对象其<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>和<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>属性，而不是操作的转换矩阵。 同样，<xref:System.Windows.Media.RotateTransform>类使你能够旋转对象只需通过设置其<xref:System.Windows.Media.RotateTransform.Angle%2A>属性。  
   
 <a name="transformClassesSection"></a>   
 ## <a name="transform-classes"></a>转换类  
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]提供了以下[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>对常见的转换操作的类：  
+ Windows Presentation Foundation (WPF) 提供了以下[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>对常见的转换操作的类：  
   
 |类|描述|示例|图示|  
 |-----------|-----------------|-------------|------------------|  
@@ -66,18 +68,18 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Media.SkewTransform>|通过指定扭曲元素<xref:System.Windows.Media.SkewTransform.AngleX%2A>和<xref:System.Windows.Media.SkewTransform.AngleY%2A>金额。|[倾斜元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)|![倾斜图](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
 |<xref:System.Windows.Media.TranslateTransform>|将移动 （转换） 由指定的元素<xref:System.Windows.Media.TranslateTransform.X%2A>和<xref:System.Windows.Media.TranslateTransform.Y%2A>金额。|[转换元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|![转换图](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
   
- 为了创建更复杂的转换，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 提供了以下两个类：  
+ 有关如何创建更复杂的转换，Windows Presentation Foundation (WPF) 提供了以下两个类：  
   
 |类|描述|示例|  
 |-----------|-----------------|-------------|  
 |<xref:System.Windows.Media.TransformGroup>|组合多个<xref:System.Windows.Media.TransformGroup>到单个对象<xref:System.Windows.Media.Transform>，你可以随后应用于转换属性。|[将多个转换应用到对象](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|创建自定义的转换不提供由其他<xref:System.Windows.Media.Transform>类。 当你使用<xref:System.Windows.Media.MatrixTransform>，直接处理矩阵。|[使用 MatrixTransform 创建自定义转换](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 也提供 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 转换。 有关更多信息，请参见 <xref:System.Windows.Media.Media3D.Transform3D> 类。  
+ Windows Presentation Foundation (WPF) 还提供了[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]转换。 有关更多信息，请参见 <xref:System.Windows.Media.Media3D.Transform3D> 类。  
   
 <a name="transformationproperties"></a>   
 ## <a name="common-transformation-properties"></a>常见转换属性  
- 若要转换的对象的一种方法是声明适当<xref:System.Windows.Media.Transform>键入和将其应用于对象的转换属性。 对象类型不同，转换属性的类型也会不同。 下表列出了几种常用 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 类型及其转换属性。  
+ 若要转换的对象的一种方法是声明适当<xref:System.Windows.Media.Transform>键入和将其应用于对象的转换属性。 对象类型不同，转换属性的类型也会不同。 下表列出了几个常用的 Windows Presentation Foundation (WPF) 类型及其转换属性。  
   
 |类型|转换属性|  
 |----------|-------------------------------|  
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
  下面的示例使用<xref:System.Windows.Media.RotateTransform>旋转<xref:System.Windows.Shapes.Rectangle>元素中，一种<xref:System.Windows.FrameworkElement>，旋转 45 度围绕其默认中心，（0，0）。 下图显示了旋转效果。  
   
- ![有关旋转 45 度的 FrameworkElement & #40; 0，0 & #41;] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
+ ![FrameworkElement 有关旋转 45 度&#40;0，0&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
 围绕点 (0,0) 旋转 45 度的矩形元素  
   
  [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
@@ -104,7 +106,7 @@ ms.lasthandoff: 12/22/2017
   
  下一个示例还使用<xref:System.Windows.Media.RotateTransform>旋转<xref:System.Windows.Shapes.Rectangle>元素旋转 45 度; 但是，这一次<xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>设置属性以便<xref:System.Windows.Media.RotateTransform>具有的中心 （25，25）。 下图显示了旋转效果。  
   
- ![有关的 45 度 & #40; 旋转的几何图形 25，25 & #41;] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
+ ![有关旋转 45 度的几何图形&#40;25，25&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
 围绕点 (25, 25) 旋转 45 度矩形元素  
   
  [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
@@ -113,9 +115,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="transforming-a-frameworkelement"></a>转换 FrameworkElement  
  若要应用到的转换<xref:System.Windows.FrameworkElement>，创建<xref:System.Windows.Media.Transform>并将其应用到这两个属性之一，<xref:System.Windows.FrameworkElement>类提供：  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A>– 在布局过程前应用了一种转换。 转换应用后，布局系统处理元素转换后的大小和位置。  
+-   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – 在布局过程前应用了一种转换。 转换应用后，布局系统处理元素转换后的大小和位置。  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A>– 修改元素的外观，但在布局处理过程完成后应用一种转换。 通过使用<xref:System.Windows.UIElement.RenderTransform%2A>属性而不是<xref:System.Windows.FrameworkElement.LayoutTransform%2A>属性，您可以获得性能优势。  
+-   <xref:System.Windows.UIElement.RenderTransform%2A> – 修改元素的外观，但在布局处理过程完成后应用一种转换。 通过使用<xref:System.Windows.UIElement.RenderTransform%2A>属性而不是<xref:System.Windows.FrameworkElement.LayoutTransform%2A>属性，您可以获得性能优势。  
   
  应使用哪个属性？ 它提供的性能优势，由于使用<xref:System.Windows.UIElement.RenderTransform%2A>属性可能，尤其是当你使用动画时<xref:System.Windows.Media.Transform>对象。 使用<xref:System.Windows.FrameworkElement.LayoutTransform%2A>时缩放、 旋转或扭曲的属性，并且需要为已转换元素的大小调整元素的父级。 请注意，如果它们用于<xref:System.Windows.FrameworkElement.LayoutTransform%2A>属性，<xref:System.Windows.Media.TranslateTransform>对象似乎不起作用的元素上。 这是因为布局系统将转换后的元素返回到其原始位置作为其处理的一部分。  
   

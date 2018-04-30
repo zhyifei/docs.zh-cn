@@ -1,29 +1,31 @@
 ---
-title: "如何：将 ASP.NET 角色提供程序与服务一起使用"
-ms.custom: 
+title: 如何：将 ASP.NET 角色提供程序与服务一起使用
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef526ed1f809fad2f07b66629bbc80530b764d65
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9180ebe687d61315a66160a6fc95569a0e6b8e72
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>如何：将 ASP.NET 角色提供程序与服务一起使用
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序（与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格提供程序一起提供）是一种可供 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 开发人员创建网站的功能，这些网站允许用户通过网站创建帐户并向用户分配用于授权的角色。 借助此功能，任何用户都可以通过网站建立帐户，并登录以获取该网站及其服务的独占访问权。 这与要求用户在 Windows 域中具有帐户的 Windows 安全完全不同。 所有提供凭据（用户名/密码组合）的用户都可以使用该站点及其服务。  
   
- 有关示例应用程序，请参阅[成员资格和角色提供程序](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]成员资格提供程序功能，请参阅[如何： 使用 ASP.NET 成员资格提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)。  
+ 有关示例应用程序，请参阅[成员资格和角色提供程序](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 有关详细信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]成员资格提供程序功能，请参阅[如何： 使用 ASP.NET 成员资格提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)。  
   
  角色提供程序功能使用 SQL Server 数据库存储用户信息。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 开发人员可以出于安全目的利用这些功能。 当集成到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序中时，用户必须向 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端应用程序提供用户名/密码组合。 若要让 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用该数据库，您必须创建 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 类的一个实例，将其 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 属性设置为 <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>，并将行为集合的实例添加到承载服务的 <xref:System.ServiceModel.ServiceHost> 中。  
   

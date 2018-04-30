@@ -1,12 +1,13 @@
 ---
-title: "WPF 中的 Pack URI"
-ms.custom: 
+title: WPF 中的 Pack URI
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - pack URI scheme [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3143bcc05d88cde43e844ec21b95963e672bbc52
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d90345f6c6e44bfdd98d2a1313a36372cdfe8b06
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
-在[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]，[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]用于标识和加载在许多方面，包括以下文件：  
+在 Windows Presentation Foundation (WPF)[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]用于标识和加载在许多方面，包括以下文件：  
   
 -   指定[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]以显示应用程序第一次启动时。  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Resource_File_Pack_URIs___Local_Assembly"></a>   
 ## <a name="resource-file-pack-uris"></a>资源文件 Pack URI  
- 资源文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Resource`项，并被编译到程序集。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]支持包的构造[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]可以用于标识资源文件编译到的本地程序集或编译到从本地程序集引用的程序集中。  
+ 资源文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Resource`项，并被编译到程序集。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持包的构造[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]可以用于标识资源文件编译到的本地程序集或编译到从本地程序集引用的程序集中。  
   
 <a name="Local_Assembly_Resource_File"></a>   
 ### <a name="local-assembly-resource-file"></a>本地程序集资源文件  
@@ -183,7 +185,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Page_Files"></a>   
 ## <a name="page-files"></a>页面文件  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]配置为的文件[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`项被编译到程序集资源文件的方式相同。 因此， [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page`项可以使用包来识别[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]资源文件。  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 配置为的文件[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`项被编译到程序集资源文件的方式相同。 因此， [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page`项可以使用包来识别[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]资源文件。  
   
  类型的[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通常被配置为的文件[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`项具有作为其根元素下列项之一：  
   
@@ -256,7 +258,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  如果未找到资源，则内部创建<xref:System.Uri>无效。  
   
- [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]解决方法不适用于[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，请参阅以下：  
+ [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 解决方法不适用于[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，请参阅以下：  
   
 -   内容中引用的程序集的文件： 这些文件类型不受[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。  
   
@@ -286,7 +288,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Using_Pack_URIs_in_Markup"></a>   
 ### <a name="using-pack-uris-in-markup"></a>在标记中使用 Pack URI  
- 包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]通过设置具有包的属性元素标记中指定[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。 例如:  
+ 包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]通过设置具有包的属性元素标记中指定[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。 例如：  
   
  `<element attribute="pack://application:,,,/File.xaml" />`  
   
@@ -294,7 +296,7 @@ ms.lasthandoff: 12/22/2017
   
  表 1：标记中的绝对 Pack URI  
   
-|文件|绝对包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|文件|绝对包 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |资源文件 - 本地程序集|`"pack://application:,,,/ResourceFile.xaml"`|  
 |子文件夹中的资源文件 - 本地程序集|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|  
@@ -310,7 +312,7 @@ ms.lasthandoff: 12/22/2017
   
  表 2：标记中的相对 Pack URI  
   
-|文件|相对包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|文件|相对包 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |本地程序集内的资源文件|`"/ResourceFile.xaml"`|  
 |本地程序集的子文件夹中的资源文件|`"/Subfolder/ResourceFile.xaml"`|  
@@ -355,7 +357,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  表 3：代码中的绝对 Pack URI  
   
-|文件|绝对包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|文件|绝对包 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |资源文件 - 本地程序集|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|  
 |子文件夹中的资源文件 - 本地程序集|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|  
@@ -371,7 +373,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  表 4：代码中的相对 Pack URI  
   
-|文件|相对包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|文件|相对包 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |资源文件 - 本地程序集|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|  
 |子文件夹中的资源文件 - 本地程序集|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|  
@@ -386,7 +388,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>   
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>指定当应用程序启动时显示的 UI  
- <xref:System.Windows.Application.StartupUri%2A>指定第一个[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]时显示[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]启动应用程序。 对于独立应用程序，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]可以是一个窗口，如下面的示例中所示。  
+ <xref:System.Windows.Application.StartupUri%2A> 指定第一个[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]时显示[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]启动应用程序。 对于独立应用程序，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]可以是一个窗口，如下面的示例中所示。  
   
  [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]  
   
@@ -416,7 +418,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
 <a name="Loading_Image__Audio__and_Video_Files"></a>   
 #### <a name="loading-image-audio-and-video-files"></a>加载图像、音频和视频文件  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]允许应用程序使用广泛的媒体类型，您可以标识和加载包与所有这些[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，下面的示例中所示。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 允许应用程序使用广泛的媒体类型，您可以标识和加载包与所有这些[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，下面的示例中所示。  
   
  [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]  
   

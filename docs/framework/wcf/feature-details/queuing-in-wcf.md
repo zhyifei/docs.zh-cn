@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queuing-in-wcf"></a>在 WCF 中排队
 本节描述如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的排队通信。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/28/2018
   
  也可以使用向 Active Directory 目录服务注册的 Windows 标识对 MSMQ 队列进行保护。 安装 MSMQ 时，可以安装 Active Directory 集成，这要求计算机加入 Windows 域网络。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ，请参阅[安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
+ 有关 MSMQ 的详细信息，请参阅[安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)是排队的绑定[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]提供两个[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]终结点使用 MSMQ 进行通信。 因此，该绑定将公开特定于 MSMQ 的属性。 然而，并非所有 MSMQ 功能和属性都在 `NetMsmqBinding` 中公开。 紧凑 `NetMsmqBinding` 设计为具有一组大多数客户都认为足够的最佳功能。  
@@ -79,12 +79,12 @@ ms.lasthandoff: 04/28/2018
   
  绑定具有两个相关属性：  
   
--   `DeadLetterQueue`：该属性是一个枚举，指示是否请求死信队列。 如果请求某类死信队列，则该枚举还包含这种死信队列。 该属性的值为 `None`、`System` 和 `Custom`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 这些属性的解释，请参阅[使用死信队列的处理消息传输失败](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`：该属性是一个枚举，指示是否请求死信队列。 如果请求某类死信队列，则该枚举还包含这种死信队列。 该属性的值为 `None`、`System` 和 `Custom`。 有关这些属性的解释的详细信息，请参阅[使用死信队列的处理消息传输失败](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`：该属性是应用程序特定死信队列的统一资源标识符 (URI) 地址。 如果这是必需`DeadLetterQueue`。`Custom` 选择。  
   
 #### <a name="poison-message-handling-properties"></a>病毒消息处理属性  
- 当服务从事务中的目标队列读取消息时，服务可能由于种种原因而无法处理消息。 然后，将消息放回队列以备再次读取。 若要处理反复失败的消息，可以在绑定中配置一组病毒消息处理属性。 有如下四个属性：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 这些属性，请参阅[的病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
+ 当服务从事务中的目标队列读取消息时，服务可能由于种种原因而无法处理消息。 然后，将消息放回队列以备再次读取。 若要处理反复失败的消息，可以在绑定中配置一组病毒消息处理属性。 有如下四个属性：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 有关这些属性的详细信息，请参阅[的病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
   
 #### <a name="security-properties"></a>安全属性  
  MSMQ 公开其自己的安全模型，如队列上的访问控制列表 (ACL) 或发送经过验证身份的消息。 `NetMsmqBinding` 将这些安全属性作为其传输安全设置的一部分而公开。 绑定中有两个用于传输安全的属性：`MsmqAuthenticationMode` 和 `MsmqProtectionLevel`。 这些属性中的设置取决于 MSMQ 的配置方式。 有关详细信息，请参阅[使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  

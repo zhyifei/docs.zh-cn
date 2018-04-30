@@ -1,34 +1,34 @@
 ---
-title: "ServiceModel 事务配置"
-ms.custom: 
+title: ServiceModel 事务配置
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 650f34c37917a7f7ce407df1a3af42d177593c33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96cf83be06949160cf3efa73344e4a7680d24e09
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 事务配置
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了以下三个用于为服务配置事务的属性：`transactionFlow`、`transactionProtocol` 和 `transactionTimeout`。  
   
 ## <a name="configuring-transactionflow"></a>配置 transactionFlow  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的大多数预定义绑定都包含 `transactionFlow` 和 `transactionProtocol` 属性，以便您可以使用特定的事务流协议为特定终结点配置用于接受传入事务的绑定。 此外，您可以使用 `transactionFlow` 元素及其 `transactionProtocol` 特性生成您自己的自定义绑定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]设置的配置元素，请参阅[\<绑定 >](../../../../docs/framework/misc/binding.md)和[WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的大多数预定义绑定都包含 `transactionFlow` 和 `transactionProtocol` 属性，以便您可以使用特定的事务流协议为特定终结点配置用于接受传入事务的绑定。 此外，您可以使用 `transactionFlow` 元素及其 `transactionProtocol` 特性生成您自己的自定义绑定。 有关设置的配置元素的详细信息，请参阅[\<绑定 >](../../../../docs/framework/misc/binding.md)和[WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
   
  `transactionFlow` 属性指定是否为使用绑定的服务终结点启用事务流。  
   

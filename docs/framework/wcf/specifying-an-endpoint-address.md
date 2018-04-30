@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 99fdfad6c06e74a92d7fffb7c7a5e14284757e12
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>指定终结点地址
 与 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务的所有通信都是通过服务的终结点发生的。 每个 <xref:System.ServiceModel.Description.ServiceEndpoint> 都包含一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 和一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。 协定指定可用的操作。 绑定指定如何与服务进行通信，而地址指定查找服务的位置。 每个终结点都必须具有一个唯一的地址。 终结点的地址由 <xref:System.ServiceModel.EndpointAddress> 类表示，该类包含一个表示服务地址的统一资源定位符 (URI)，一个表示服务的安全标识的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 和一个可选的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 集合。 可选标头提供用于标识终结点或与终结点交互的更多详细寻址信息。 例如，标头可指示如何处理传入消息，终结点应发送答复消息的位置，或在多个实例可用时应使用哪个服务实例处理来自特定用户的传入消息。  
@@ -93,7 +93,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="using-default-endpoints"></a>使用默认终结点  
  如果在代码或配置中未指定任何终结点，则运行时通过在该服务实现的每个服务协定的每个基地址上添加一个默认终结点，来提供默认终结点。 可以在代码或配置中指定基地址，默认终结点是在 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 上调用 <xref:System.ServiceModel.ServiceHost> 时添加的。  
   
- 如果显式提供了终结点，则仍可以添加默认终结点，方法是先在 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 上调用 <xref:System.ServiceModel.ServiceHost>，然后调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 默认终结点、绑定和行为，请参阅 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) 和 [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ 如果显式提供了终结点，则仍可以添加默认终结点，方法是先在 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 上调用 <xref:System.ServiceModel.ServiceHost>，然后调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>。 有关默认终结点、 绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.EndpointAddress>  

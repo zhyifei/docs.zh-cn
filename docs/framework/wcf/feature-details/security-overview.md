@@ -19,11 +19,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: a50b3d3ec2a99d53bc7d5817f3ed530ef92d474b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1475891cf83c05552da247ffb04a866d80a396ea
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-overview"></a>安全性概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是一个基于 SOAP 消息的分布式编程平台，因此保护客户端和服务之间的消息安全对于保护数据非常重要。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基于现有安全性基础结构和 SOAP 消息的经验证的安全标准提供可互操作的安全消息交换通用平台。  
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/28/2018
   
 -   *消息安全模式*，而另一只手、 使用 Ws-security （和其他规范） 实现传输安全性。 因为消息安全性直接应用于 SOAP 消息并与应用程序数据一起包含在 SOAP 信封内，它的优点是独立于传输协议、可扩展性更强以及可确保端到端安全性（与点到点相对）；它的缺点是比传输安全性模式慢很多倍，因为它必须处理 SOAP 消息的 XML 特性。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 这些差异，请参阅[保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。  
+ 有关这些差异的详细信息，请参阅[保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。  
   
  第三种安全模式同时使用前两种模式，并具备这两种模式的优点。 此模式称为 `TransportWithMessageCredential`。 在此模式下，消息安全性用于对客户端进行身份验证，而传输安全性则用于对服务器进行身份验证并提供消息机密性和完整性。 得益于这一特点，`TransportWithMessageCredential` 安全模式几乎与传输安全模式一样快，并且提供与消息安全性一样的客户端身份验证可扩展性。 但是，与消息安全性模式不同，它不提供完整的端到端安全性。  
   

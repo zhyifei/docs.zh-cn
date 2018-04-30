@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8311c558c180de5010850a982dc4cca7576382a3
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ac7de48b801036ac186ffe92117269ae86d14a10
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-services"></a>承载服务
 要变为活动状态，服务必须承载于创建它并控制它的上下文和生存期的运行时环境中。 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务设计为在支持托管代码的任意 Windows 进程中运行。  
@@ -42,14 +42,14 @@ ms.lasthandoff: 04/28/2018
  此宿主选项包括注册 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务作为托管 Windows 服务（以前称为 NT 服务）承载于其中的应用程序域 (AppDomain)，以便服务的进程生存期由 Windows 服务的服务控制管理器 (SCM) 控制。 与自承载选项一样，此类型的宿主环境要求作为应用程序的一部分编写某些宿主代码。 通过使服务从 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 类以及从 <xref:System.ServiceProcess.ServiceBase> 服务协定接口继承，将该服务同时实现为 Windows 服务和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。 然后创建 <xref:System.ServiceModel.ServiceHost> ，在被重写的 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 方法内打开它并在被重写的 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法内关闭它。 还必须实现从 <xref:System.Configuration.Install.Installer> 继承的安装程序类，以允许 Installutil.exe 工具将程序安装为 Windows 服务。 有关详细信息，请参阅[如何： 承载 WCF 服务中托管的 Windows 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)。 在未激活消息的安全环境中，由托管 Windows 服务宿主选项启用的方案是承载于 IIS 之外、长时间运行的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的方案。 服务的生存期改由操作系统控制。 此宿主选项在 Windows 的所有版本中都是可用的。  
   
 #### <a name="internet-information-services-iis"></a>Internet 信息服务 (IIS)  
- IIS 宿主选项与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 集成在一起，并使用这些技术提供的功能，如进程回收、空闲关闭、进程状况监视和基于消息的激活。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 操作系统上，这是作为必须高度可用且高度可伸缩的 Web 服务应用程序宿主的首选解决方案。 IIS 还提供了客户期望企业级服务器产品具有的集成可管理性。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务配置 IIS 托管，请参阅 [How to: Host a WCF Service in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+ IIS 宿主选项与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 集成在一起，并使用这些技术提供的功能，如进程回收、空闲关闭、进程状况监视和基于消息的激活。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 操作系统上，这是作为必须高度可用且高度可伸缩的 Web 服务应用程序宿主的首选解决方案。 IIS 还提供了客户期望企业级服务器产品具有的集成可管理性。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 有关如何配置 IIS 托管的详细信息[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务，请参阅[如何： 承载在 IIS 中的 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
   
  请注意，以 IIS 为宿主的服务只能使用 HTTP 传输。 它在 IIS 5.1 中的实现在 [!INCLUDE[wxp](../../../includes/wxp-md.md)]中引入了一些限制。 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 上由 IIS 5.1 为 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 服务提供的基于消息的激活阻止同一计算机上任何其他自承载的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务使用端口 80 进行通信。 在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 上由 [!INCLUDE[iis601](../../../includes/iis601-md.md)] 承载时， [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]服务可以在与其他应用程序相同的 AppDomain/应用程序池/工作进程中运行。 但是，由于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 和 [!INCLUDE[iis601](../../../includes/iis601-md.md)] 都使用内核模式 HTTP 堆栈 (HTTP.sys)，因此 [!INCLUDE[iis601](../../../includes/iis601-md.md)] 可以与在同一计算机上运行的其他自承载 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务共享端口 80，这与 IIS 5.1 是不同的。  
   
 #### <a name="windows-process-activation-service-was"></a>Windows 进程激活服务 (WAS)  
  Windows 进程激活服务 (WAS) 是在 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 上也可用的 [!INCLUDE[wv](../../../includes/wv-md.md)]的新进程激活机制。 它保留了熟悉的 [!INCLUDE[iis601](../../../includes/iis601-md.md)] 进程模型（应用程序池和基于消息的进程激活）和承载功能（如快速失败保护、运行状况监视和回收），但是它从激活体系结构中移除了对 HTTP 的依赖。 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 使用 WAS 通过 HTTP 完成基于消息的激活。 其他 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 组件也插入了 WAS，以通过 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持的其他协议（如 TCP、MSMQ 和命名管道）提供基于消息的激活。 这样，使用通信协议的应用程序就可以使用 IIS 功能（如进程回收、快速失败保护）和仅对基于 HTTP 的应用程序可用的通用配置系统。  
   
- 此承载选项要求正确配置 WAS，但不需要编写任何承载代码作为应用程序的一部分。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何配置 WAS 托管，请参阅 [How to: Host a WCF Service in WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ 此承载选项要求正确配置 WAS，但不需要编写任何承载代码作为应用程序的一部分。 有关详细信息，有关如何配置 WAS 托管，请参阅[如何： 承载在 WAS 中的 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
   
 ## <a name="choosing-a-hosting-environment"></a>选择宿主环境  
  下表汇总了与每个宿主选项关联的一些主要优点和方案。  

@@ -1,12 +1,13 @@
 ---
-title: "源自定义（WCF 数据服务）"
-ms.custom: 
+title: 源自定义（WCF 数据服务）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c5e33490a94346880986fdf66a4c5907084c8cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c59bfdd22125f10b8a35afc8c264b6b2869a3998
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="feed-customization-wcf-data-services"></a>源自定义（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]来公开作为源的数据。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]支持 Atom 和 JavaScript 对象表示法 (JSON) 格式的数据馈送。 当你使用 Atom 馈送时，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供标准的方法来序列化数据，如实体和关系，为 XML 格式，可以包含在 HTTP 消息的正文。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]定义实体中包含的数据与 Atom 元素之间的默认实体-属性映射。 有关详细信息，请参阅[OData: Atom 格式](http://go.microsoft.com/fwlink/?LinkID=185794)。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]来公开作为源的数据。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持 Atom 和 JavaScript 对象表示法 (JSON) 格式的数据馈送。 当你使用 Atom 馈送时，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供标准的方法来序列化数据，如实体和关系，为 XML 格式，可以包含在 HTTP 消息的正文。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定义实体中包含的数据与 Atom 元素之间的默认实体-属性映射。 有关详细信息，请参阅[OData: Atom 格式](http://go.microsoft.com/fwlink/?LinkID=185794)。  
   
  您的应用程序方案可能要求以自定义方式而非标准源格式序列化数据服务返回的属性数据。 与[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]，可以自定义数据馈送中的序列化，以便可以将实体属性映射到未使用的元素和属性的项或自定义元素的源中的条目。  
   
@@ -53,19 +55,19 @@ ms.lasthandoff: 01/19/2018
  有关详细信息，请参阅[如何： 使用实体框架提供程序自定义源](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)。  
   
 > [!NOTE]
->  由于实体设计器不支持数据模型扩展，因此必须手动修改包含数据模型的 XML 文件。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]生成的.edmx 文件[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]工具，请参阅[.edmx 文件概述](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)。  
+>  由于实体设计器不支持数据模型扩展，因此必须手动修改包含数据模型的 XML 文件。 有关.edmx 文件由生成的详细信息[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]工具，请参阅[.edmx 文件概述](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)。  
   
 ### <a name="custom-feed-attributes"></a>自定义源特性  
  下表列出了一些 XML 特性，这些特性自定义可添加到用于定义数据模型的概念架构定义语言 (CSDL) 的源。 这些特性等效于用于反射提供程序的 <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> 的属性。  
   
 |特性名|描述|  
 |--------------------|-----------------|  
-|`FC_ContentKind`|指示内容类型。 以下关键字定义联合内容类型。<br /><br /> `text:`属性值在源中显示为文本。<br /><br /> `html:`属性值在源中显示为 HTML。<br /><br /> `xhtml:`属性值在源中显示为 XML 格式的 HTML。<br /><br /> 这些关键字等效于用于反射提供程序的 <xref:System.Data.Services.Common.SyndicationTextContentKind> 枚举的值。<br /><br /> 如果使用了 `FC_NsPrefix` 和 `FC_NsUri` 特性，则不支持此特性。<br /><br /> 为 `xhtml` 特性指定值 `FC_ContentKind` 时，必须确保该属性值包含格式正确的 XML。 数据服务返回值，但不执行任何转换。 还必须确保返回的 XML 中任何 XML 元素前缀在映射的源中定义了命名空间 URI 和前缀。|  
+|`FC_ContentKind`|指示内容类型。 以下关键字定义联合内容类型。<br /><br /> `text:` 属性值在源中显示为文本。<br /><br /> `html:` 属性值在源中显示为 HTML。<br /><br /> `xhtml:` 属性值在源中显示为 XML 格式的 HTML。<br /><br /> 这些关键字等效于用于反射提供程序的 <xref:System.Data.Services.Common.SyndicationTextContentKind> 枚举的值。<br /><br /> 如果使用了 `FC_NsPrefix` 和 `FC_NsUri` 特性，则不支持此特性。<br /><br /> 为 `xhtml` 特性指定值 `FC_ContentKind` 时，必须确保该属性值包含格式正确的 XML。 数据服务返回值，但不执行任何转换。 还必须确保返回的 XML 中任何 XML 元素前缀在映射的源中定义了命名空间 URI 和前缀。|  
 |`FC_KeepInContent`|指示是否应将引用的属性值包含到源的内容部分和映射的位置中。 有效值为 `true` 和 `false`。 若要使结果源与早期版本的向后兼容[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，将值指定为`true`以确保将该值包含源的内容部分中。|  
 |`FC_NsPrefix`|非联合映射中的 XML 元素的命名空间前缀。 此特性必须与 `FC_NsUri` 特性一起使用，但不能与 `FC_ContentKind` 特性一起使用。|  
 |`FC_NsUri`|非联合映射中的 XML 元素的命名空间 URI。 此特性必须与 `FC_NsPrefix` 特性一起使用，但不能与 `FC_ContentKind` 特性一起使用。|  
 |`FC_SourcePath`|应用此源映射规则的实体属性的路径。 仅当在 `EntityType` 元素中使用时，才支持此特性。<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 属性无法直接引用复杂类型。 对于复杂类型，必须使用路径表达式，在此路径表达式中，使用反斜杠 (`/`) 字符分隔属性名称。 例如，针对某个实体类型可以为下列值`Person`具有整数属性`Age`和复杂属性<br /><br /> `Address`：<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> 不能将 <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 属性设置为包含空格或在属性名称中无效的任何其他字符的值。|  
-|`FC_TargetPath`|属性将映射到的结果源中的目标元素的名称。 此元素可以是按 Atom 规范定义的元素，也可以是自定义元素。<br /><br /> 以下关键字是指向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源中特定位置的预定义联合目标路径值。<br /><br /> `SyndicationAuthorEmail:``atom:email`的子元素`atom:author`元素。<br /><br /> `SyndicationAuthorName:``atom:name`的子元素`atom:author`元素。<br /><br /> `SyndicationAuthorUri:``atom:uri`的子元素`atom:author`元素。<br /><br /> `SyndicationContributorEmail:``atom:email`的子元素`atom:contributor`元素。<br /><br /> `SyndicationContributorName:``atom:name`的子元素`atom:contributor`元素。<br /><br /> `SyndicationContributorUri:``atom:uri`的子元素`atom:contributor`元素。<br /><br /> `SyndicationCustomProperty:`一个自定义属性元素。 映射到自定义元素时，目标必须是路径表达式，在此路径表达式中，使用反斜杠 (`/`) 分隔嵌套元素，并使用 `@` 指定特性。 在以下示例中，字符串 `UnitsInStock/@ReorderLevel` 将属性值映射到根项元素的 `ReorderLevel` 子元素上的 `UnitsInStock` 特性。<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> 如果目标是自定义元素名称，还必须指定 `FC_NsPrefix` 和 `FC_NsUri` 特性。<br /><br /> `SyndicationPublished:``atom:published`元素。<br /><br /> `SyndicationRights:``atom:rights`元素。<br /><br /> `SyndicationSummary:``atom:summary`元素。<br /><br /> `SyndicationTitle:``atom:title`元素。<br /><br /> `SyndicationUpdated:``atom:updated`元素。<br /><br /> 这些关键字等效于用于反射提供程序的 <xref:System.Data.Services.Common.SyndicationItemProperty> 枚举的值。|  
+|`FC_TargetPath`|属性将映射到的结果源中的目标元素的名称。 此元素可以是按 Atom 规范定义的元素，也可以是自定义元素。<br /><br /> 以下关键字是指向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源中特定位置的预定义联合目标路径值。<br /><br /> `SyndicationAuthorEmail:` `atom:email`的子元素`atom:author`元素。<br /><br /> `SyndicationAuthorName:` `atom:name`的子元素`atom:author`元素。<br /><br /> `SyndicationAuthorUri:` `atom:uri`的子元素`atom:author`元素。<br /><br /> `SyndicationContributorEmail:` `atom:email`的子元素`atom:contributor`元素。<br /><br /> `SyndicationContributorName:` `atom:name`的子元素`atom:contributor`元素。<br /><br /> `SyndicationContributorUri:` `atom:uri`的子元素`atom:contributor`元素。<br /><br /> `SyndicationCustomProperty:` 一个自定义属性元素。 映射到自定义元素时，目标必须是路径表达式，在此路径表达式中，使用反斜杠 (`/`) 分隔嵌套元素，并使用 `@` 指定特性。 在以下示例中，字符串 `UnitsInStock/@ReorderLevel` 将属性值映射到根项元素的 `ReorderLevel` 子元素上的 `UnitsInStock` 特性。<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> 如果目标是自定义元素名称，还必须指定 `FC_NsPrefix` 和 `FC_NsUri` 特性。<br /><br /> `SyndicationPublished:` `atom:published`元素。<br /><br /> `SyndicationRights:` `atom:rights`元素。<br /><br /> `SyndicationSummary:` `atom:summary`元素。<br /><br /> `SyndicationTitle:` `atom:title`元素。<br /><br /> `SyndicationUpdated:` `atom:updated`元素。<br /><br /> 这些关键字等效于用于反射提供程序的 <xref:System.Data.Services.Common.SyndicationItemProperty> 枚举的值。|  
   
 > [!NOTE]
 >  特性名称和值是区分大小写的。 特性可以应用于 `EntityType` 元素，也可以应用于一个或多个 `Property` 元素，但不能同时应用于二者。  

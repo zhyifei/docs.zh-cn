@@ -27,20 +27,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 51b940d4a2463be7aaea9d0ff8e48e2b9f47363a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
-<a name="introduction"></a> 在开发时[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]独立应用程序和浏览器承载的应用程序，你必须考虑的安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立应用程序使用不受限制的权限执行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**权限集)、 是否使用 Windows Installer (.msi) XCopy 部署或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是，完全信任主机应用程序可以创建部分信任<xref:System.AppDomain>使用.NET Framework 外接程序模型。 有关详细信息，请参阅[WPF 外接程序概述](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
+<a name="introduction"></a> 在开发时 Windows Presentation Foundation (WPF) 独立应用程序和浏览器承载的应用程序，你必须考虑的安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立应用程序使用不受限制的权限执行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**权限集)、 是否使用 Windows Installer (.msi) XCopy 部署或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是，完全信任主机应用程序可以创建部分信任<xref:System.AppDomain>使用.NET Framework 外接程序模型。 有关详细信息，请参阅[WPF 外接程序概述](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序托管的[!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]或 Firefox，和可以是[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]或松散[!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)]文档中的详细信息，请参阅[WPF XAML 浏览器应用程序概述](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序在默认情况下，仅限于默认值在部分信任安全沙盒内, 执行[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet**区域权限集。 这将有效地隔离[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]浏览器承载你希望典型 Web 应用程序隔离的相同方式中的客户端计算机的应用程序。 XBAP 最高可以将权限提升到“完全信任”，具体取决于部署 URL 的安全区域和客户端的安全配置。 有关详细信息，请参阅 [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   
- 本主题讨论的安全模型[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]独立和浏览器承载的应用程序。  
+ 本主题讨论 Windows Presentation Foundation (WPF) 独立应用程序和浏览器承载的应用程序的安全模型。  
   
  本主题包含以下各节：  
   

@@ -19,16 +19,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c31f149a28d6b2b323881439fc89aa60cf6fbf17
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b4af593edd355ed89da8c5b2c79a4c029b966fe4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>如何：使用协定接口创建服务
 创建 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 协定的首选方式是使用接口。 此协定指定访问服务提供的操作所必需的消息的集合和结构。 此接口通过将 <xref:System.ServiceModel.ServiceContractAttribute> 类应用到该接口并将 <xref:System.ServiceModel.OperationContractAttribute> 类应用到要公开的方法来定义输入和输出类型。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 服务协定，请参阅[设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md)。  
+ 有关服务协定的详细信息，请参阅[设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md)。  
   
 ### <a name="creating-a-wcf-contract-with-an-interface"></a>使用接口创建 WCF 协定  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/26/2018
  [!code-csharp[c_HowTo_CreateContractWithInterface#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createcontractwithinterface/cs/source.cs#1)]
  [!code-vb[c_HowTo_CreateContractWithInterface#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_createcontractwithinterface/vb/source.vb#1)]  
   
- 默认情况下，应用了 <xref:System.ServiceModel.OperationContractAttribute> 类的方法使用请求-答复消息模式。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 此消息模式，请参阅[如何： 创建请求-答复协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)。 您还可以通过设置属性 (Attribute) 的属性 (Property) 来创建和使用其他消息模式。 有关更多示例，请参阅[如何： 创建单向协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)和[如何： 创建双工协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。  
+ 默认情况下，应用了 <xref:System.ServiceModel.OperationContractAttribute> 类的方法使用请求-答复消息模式。 有关此消息模式的详细信息，请参阅[如何： 创建请求-答复协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)。 您还可以通过设置属性 (Attribute) 的属性 (Property) 来创建和使用其他消息模式。 有关更多示例，请参阅[如何： 创建单向协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)和[如何： 创建双工协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ServiceContractAttribute>  

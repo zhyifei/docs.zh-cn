@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2138a412af30812b4ff443963604dda52eafea11
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-client"></a>使用客户端访问服务
 客户端应用程序必须创建、配置和使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端或通道对象，以便与服务进行通信。 [WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)主题提供的对象和创建基本的客户端和通道对象和使用它们所涉及的步骤概述。  
@@ -76,7 +76,7 @@ ms.lasthandoff: 04/28/2018
   
  即使在关闭数据报通道时出现异常，这些通道也从来不会出错。 另外，使用安全对话但未能通过身份验证的非双工客户端通常会引发 <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>。 但是，与此不同的是，如果使用安全对话的双工客户端未能通过身份验证，该客户端会收到 <xref:System.TimeoutException?displayProperty=nameWithType>。  
   
- 有关使用应用程序级别的错误信息的更完整信息，请参阅[指定和处理在协定和服务中的错误](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 [预期异常](../../../../docs/framework/wcf/samples/expected-exceptions.md)描述预期的异常，并显示如何处理它们。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何在开发通道时处理错误，请参阅[处理异常和错误](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
+ 有关使用应用程序级别的错误信息的更完整信息，请参阅[指定和处理在协定和服务中的错误](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 [预期异常](../../../../docs/framework/wcf/samples/expected-exceptions.md)描述预期的异常，并显示如何处理它们。 有关如何开发通道时处理错误的详细信息，请参阅[处理异常和错误](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
   
 ### <a name="client-blocking-and-performance"></a>客户端阻塞和性能  
  当应用程序同步调用请求-答复操作时，客户端会阻塞，直到接收到返回值或引发异常（例如 <xref:System.TimeoutException?displayProperty=nameWithType>）为止。 此行为与本地行为类似。 当应用程序同步调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象或通道上的操作时，客户端将直到通道层可以向网络写入数据或引发异常时才返回。 虽然单向消息交换模式（通过标记操作来指定，即将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 设置为 `true`）可以使某些客户端更快做出响应，但是根据绑定和已经发送的消息的性质，单向操作也可能阻塞。 单向操作仅与消息交换有关。 有关详细信息，请参阅[单向服务](../../../../docs/framework/wcf/feature-details/one-way-services.md)。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/28/2018
   
  如果应用程序在操作完成过程中必须做更多的工作，则应在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端实现的服务协定接口上创建一个异步方法对。 若要执行此操作的最简单方法是使用`/async`切换[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 有关示例，请参阅[如何： 以异步方式调用服务操作](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 增加客户端性能，请参阅[中间层客户端应用程序](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。  
+ 有关提高客户端性能的详细信息，请参阅[中间层客户端应用程序](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。  
   
 ### <a name="enabling-the-user-to-select-credentials-dynamically"></a>使用户可以动态选择凭据  
  <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> 接口使应用程序可以显示一个用户界面，用户可以使用该界面选择凭据，以便用来在超时计时器启动之前创建通道。  

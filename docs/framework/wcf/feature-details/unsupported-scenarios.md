@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
 由于各种原因，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 不支持某些特定安全方案。 例如，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 没有实现 SSPI 或 Kerberos 身份验证协议，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在该平台上不支持使用 Windows 身份验证来运行服务。 在 Windows XP Home Edition 下运行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/28/2018
 >  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 类的 <xref:System.ServiceModel.Security.WindowsClientCredential> 属性的默认值为 <xref:System.Security.Principal.TokenImpersonationLevel.Identification>。 大多数情况下，标识级模拟上下文不具有加载任何其他程序集的权限。 这是默认值，因此这是一个需要注意的非常常见的条件。 当模拟进程不具有 `SeImpersonate` 特权时，也会发生标识级模拟。 有关详细信息，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ### <a name="delegation-requires-credential-negotiation"></a>委托要求凭据协商  
- 若要将 Kerberos 身份验证协议与委托联合使用，必须实现带有凭据协商的 Kerberos 协议（有时称作多段或多步 Kerberos）。 如果不用凭据协商来实现 Kerberos 协议（有时称作单稳或单路 Kerberos），则会引发异常。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何实现凭据协商，请参阅[调试 Windows 身份验证错误](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)。  
+ 若要将 Kerberos 身份验证协议与委托联合使用，必须实现带有凭据协商的 Kerberos 协议（有时称作多段或多步 Kerberos）。 如果不用凭据协商来实现 Kerberos 协议（有时称作单稳或单路 Kerberos），则会引发异常。 有关如何实现凭据协商的详细信息，请参阅[调试 Windows 身份验证错误](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)。  
   
 ## <a name="cryptography"></a>密码  
   

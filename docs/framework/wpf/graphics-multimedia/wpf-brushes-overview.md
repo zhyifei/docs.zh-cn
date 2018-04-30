@@ -1,13 +1,13 @@
 ---
-title: "WPF 画笔概述"
-ms.custom: 
+title: WPF 画笔概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ef53da1febd6a49af8404e5889a728a1b7c649b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-brushes-overview"></a>WPF 画笔概述
 在你的屏幕上可见的所有内容是可见的因为它已由画笔绘制。 例如，画笔用于描述背景的按钮、 文本、 前景和形状的填充。 本主题介绍的概念与绘制[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]画笔并提供了示例。 借助画笔，可以利用任意内容（从简单的纯色到复杂的图案和图像集）绘制 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 对象。  
@@ -142,7 +142,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
 ## <a name="paint-using-predefined-and-system-brushes"></a>使用预定义画笔和系统画笔绘制  
- 为方便起见，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]提供一组预定义和系统画笔可用于绘制对象。  
+ 为方便起见，Windows Presentation Foundation (WPF) 提供一组预定义和系统画笔可用于绘制对象。  
   
 -   有关可用的预定义画笔的列表，请参阅<xref:System.Windows.Media.Brushes>类。 有关演示如何使用预定义的画笔的示例，请参阅[使用纯色绘制区域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)。  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>常见的画笔功能  
- <xref:System.Windows.Media.Brush>对象提供<xref:System.Windows.Media.Brush.Opacity%2A>属性，可以用于将透明或半透明的画笔。 <xref:System.Windows.Media.Brush.Opacity%2A>值为 0，则画笔完全透明，而<xref:System.Windows.Media.Brush.Opacity%2A>值为 1，则画笔完全不透明。 下面的示例使用<xref:System.Windows.Media.Brush.Opacity%2A>属性以使<xref:System.Windows.Media.SolidColorBrush>25%不透明。  
+ <xref:System.Windows.Media.Brush> 对象提供<xref:System.Windows.Media.Brush.Opacity%2A>属性，可以用于将透明或半透明的画笔。 <xref:System.Windows.Media.Brush.Opacity%2A>值为 0，则画笔完全透明，而<xref:System.Windows.Media.Brush.Opacity%2A>值为 1，则画笔完全不透明。 下面的示例使用<xref:System.Windows.Media.Brush.Opacity%2A>属性以使<xref:System.Windows.Media.SolidColorBrush>25%不透明。  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   

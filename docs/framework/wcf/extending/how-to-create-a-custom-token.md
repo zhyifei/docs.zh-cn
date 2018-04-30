@@ -1,12 +1,13 @@
 ---
-title: "如何：创建自定义令牌"
-ms.custom: 
+title: 如何：创建自定义令牌
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0aeed7e1beac1a290aebec46a356952ddf994ed7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c270b63586809044f1bb3e56841ae8cf590e7bb1
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>如何：创建自定义令牌
 本主题介绍如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 类创建自定义安全令牌，以及如何将其与自定义安全令牌提供程序和身份验证器进行集成。 有关完整的代码示例请参阅[自定义令牌](../../../../docs/framework/wcf/samples/custom-token.md)示例。  
@@ -37,11 +39,11 @@ ms.lasthandoff: 01/19/2018
   
  下面的过程演示如何创建自定义安全令牌，以及如何将其与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构进行集成。 本主题创建一个信用卡令牌，用于将客户端的信用卡相关信息传递到服务器。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义凭据和安全令牌管理器，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+ 有关自定义凭据和安全令牌管理器的详细信息，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
  若要了解更多表示安全令牌的类，请参见 <xref:System.IdentityModel.Tokens> 命名空间。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]凭据、 安全令牌管理器和提供程序和身份验证器类，请参阅[安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ 有关凭据、 安全令牌管理器和提供程序和身份验证器类的详细信息，请参阅[安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
 ## <a name="procedures"></a>过程  
  客户端应用程序必须有一种方式来指定安全基础结构的信用卡信息。 应用程序通过自定义客户端凭据类可访问此信息。 第一步是创建一个类，用以表示自定义客户端凭据的信用卡信息。  
@@ -115,14 +117,14 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>将自定义安全令牌与安全令牌提供程序进行集成  
   
-1.  安全令牌提供程序可以创建、修改（如果需要）和返回令牌的实例。 若要创建自定义安全令牌的自定义提供程序，请创建一个从 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 类继承的类。 下面的示例重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法以返回 `CreditCardToken` 的实例。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义安全令牌提供程序，请参阅[如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
+1.  安全令牌提供程序可以创建、修改（如果需要）和返回令牌的实例。 若要创建自定义安全令牌的自定义提供程序，请创建一个从 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 类继承的类。 下面的示例重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法以返回 `CreditCardToken` 的实例。 有关自定义安全令牌提供程序的详细信息，请参阅[如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>将自定义安全令牌与安全令牌身份验证器进行集成  
   
-1.  当安全令牌从消息中提取出来，安全令牌身份验证器即对其内容进行验证。 若要为自定义安全令牌创建自定义身份验证器，请创建一个从 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 类继承的类。 下面的示例将会重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> 方法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义安全令牌的身份验证器，请参阅[如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
+1.  当安全令牌从消息中提取出来，安全令牌身份验证器即对其内容进行验证。 若要为自定义安全令牌创建自定义身份验证器，请创建一个从 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 类继承的类。 下面的示例将会重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> 方法。 有关自定义安全令牌身份验证器的详细信息，请参阅[如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -132,7 +134,7 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>将自定义安全令牌与安全令牌管理器进行集成  
   
-1.  安全令牌管理器可以创建相应的令牌提供程序、安全身份验证器和令牌序列化程序实例。 若要创建自定义令牌管理器，请创建一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类继承的类。 该类的主要方法使用 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 来创建相应的提供程序以及客户端或服务凭据。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义安全令牌管理器，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+1.  安全令牌管理器可以创建相应的令牌提供程序、安全身份验证器和令牌序列化程序实例。 若要创建自定义令牌管理器，请创建一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类继承的类。 该类的主要方法使用 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 来创建相应的提供程序以及客户端或服务凭据。 关于自定义安全令牌管理器的详细信息，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -142,7 +144,7 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>将自定义安全令牌与自定义客户端和服务凭据进行集成  
   
-1.  必须添加自定义客户端和服务凭据，才能向应用程序提供一个 API，使其能够指定先前创建的自定义安全令牌基础结构所使用的自定义令牌信息，从而提供自定义安全令牌内容并对内容进行身份验证。 下面的示例演示如何执行此操作。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义客户端和服务凭据，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+1.  必须添加自定义客户端和服务凭据，才能向应用程序提供一个 API，使其能够指定先前创建的自定义安全令牌基础结构所使用的自定义令牌信息，从而提供自定义安全令牌内容并对内容进行身份验证。 下面的示例演示如何执行此操作。 有关自定义客户端和服务凭据的详细信息，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  

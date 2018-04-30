@@ -1,37 +1,37 @@
 ---
-title: "保证客户端的安全"
-ms.custom: 
+title: 保证客户端的安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-clients"></a>保证客户端的安全
-在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中，由服务规定客户端的安全要求。 即，由服务指定要使用的安全模式以及客户端是否必须提供凭据。 因此，保证客户端安全的过程非常简单：使用从服务那里获得的元数据（如果已发布）来生成客户端。 元数据指定如何配置客户端。 如果服务要求客户端提供凭据，您必须获得能够满足要求的凭据。 本主题进一步详细讨论此过程。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]创建安全的服务，请参阅[服务的安全](../../../docs/framework/wcf/securing-services.md)。  
+在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中，由服务规定客户端的安全要求。 即，由服务指定要使用的安全模式以及客户端是否必须提供凭据。 因此，保证客户端安全的过程非常简单：使用从服务那里获得的元数据（如果已发布）来生成客户端。 元数据指定如何配置客户端。 如果服务要求客户端提供凭据，您必须获得能够满足要求的凭据。 本主题进一步详细讨论此过程。 有关创建安全服务的详细信息，请参阅[服务的安全](../../../docs/framework/wcf/securing-services.md)。  
   
 ## <a name="the-service-specifies-security"></a>服务指定安全性  
  默认情况下，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 绑定启用安全功能。 （<xref:System.ServiceModel.BasicHttpBinding> 是一个例外。）因此，如果服务是使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 创建的，则它可以更好地实现安全性，以确保身份验证、保密性和完整性。 在这种情况下，服务提供的元数据将指示建立安全通信通道需要哪些条件。 如果服务元数据不包含安全要求，则无法对服务强行实施安全方案，例如 Secure Sockets Layer (SSL) over HTTP。 但是，如果服务要求客户端提供凭据，则客户端开发人员、部署人员或管理员必须提供客户端用来向该服务证明自己身份的实际凭据。  
   
 ## <a name="obtaining-metadata"></a>获取元数据  
- 创建客户端时，第一步是获取客户端将与其通信的服务的元数据。 有两种方法可以做到这一点。 首先，如果此服务发布元数据交换 (MEX) 终结点，或使其元数据可通过 HTTP 或 HTTPS，你可以下载元数据使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，这将生成同时客户端，以及配置文件的代码文件。 ([!INCLUDE[crabout](../../../includes/crabout-md.md)]使用该工具，请参阅[使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)。)其次，如果服务没有发布 MEX 终结点，也没有使自己的元数据可通过 HTTP 或 HTTPS 获得，您必须与服务创建者联系，以获得描述安全要求和元数据的文档。  
+ 创建客户端时，第一步是获取客户端将与其通信的服务的元数据。 有两种方法可以做到这一点。 首先，如果此服务发布元数据交换 (MEX) 终结点，或使其元数据可通过 HTTP 或 HTTPS，你可以下载元数据使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，这将生成同时客户端，以及配置文件的代码文件。 (有关使用该工具的详细信息，请参阅[使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)。)其次，如果服务没有发布 MEX 终结点，也没有使自己的元数据可通过 HTTP 或 HTTPS 获得，您必须与服务创建者联系，以获得描述安全要求和元数据的文档。  
   
 > [!IMPORTANT]
 >  建议使用来自受信任的源且未被篡改的元数据。 使用 HTTP 协议检索到的元数据是以明文形式发送的，可能被篡改。 如果服务使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 和 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 属性，请根据服务创建者提供的 URL，使用 HTTPS 协议下载数据。  
@@ -147,7 +147,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  有些客户端凭据值无法使用应用程序配置文件来设置，例如，用户名和密码值或 Windows 用户和密码值。 这种凭据值只能在代码中指定。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]设置客户端凭据，请参阅[如何： 指定客户端凭据值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 有关设置客户端凭据的详细信息，请参阅[如何： 指定客户端凭据值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 > [!NOTE]
 >  当 `ClientCredentialType` 设置为 `SecurityMode` 时，`"TransportWithMessageCredential",` 将被忽略，如下面的示例配置所示。  
@@ -171,7 +171,7 @@ ms.lasthandoff: 01/19/2018
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
  [配置编辑器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [保护服务](../../../docs/framework/wcf/securing-services.md)  
  [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  

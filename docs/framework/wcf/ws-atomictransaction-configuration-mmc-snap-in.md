@@ -1,24 +1,26 @@
 ---
-title: "WS-AtomicTransaction 配置 MMC 管理单元"
-ms.custom: 
+title: WS-AtomicTransaction 配置 MMC 管理单元
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73db4b201aba6e07891803aa86c56403f135f863
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e8b127e0d3c241a1e37ac2161d9fadcea990425
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 配置 MMC 管理单元
 WS-AtomicTransaction 配置 MMC 管理单元用于在本地计算机和远程计算机上配置一部分 WS-AtomicTransaction 设置。  
@@ -42,9 +44,9 @@ regasm.exe /codebase WsatUI.dll
   
  您可以使用此工具来修改基本 WS-AtomicTransaction 设置。 例如，您可以启用和禁用 WS-AtomicTransaction 协议支持、为 WS-AT 配置 HTTP 端口、将 SSL 证书绑定到 HTTP 端口、通过指定证书主题名称来配置证书、选择跟踪模式以及设置默认和最大超时。  
   
- 如果只必须在本地计算机上配置 WS-AtomicTransaction 支持，您可以使用此工具的命令行版本。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]命令行工具，请参阅[Ws-atomictransaction 配置实用工具 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)主题。  
+ 如果只必须在本地计算机上配置 WS-AtomicTransaction 支持，您可以使用此工具的命令行版本。 有关命令行工具的详细信息，请参阅[Ws-atomictransaction 配置实用工具 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)主题。  
   
- 应该注意，MMC 管理单元和命令行工具都不支持配置所有 WS-AT 设置。 只能通过直接修改注册表来编辑这些设置。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]这些注册表设置，请参阅[配置 Ws-atomic 事务支持](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)。  
+ 应该注意，MMC 管理单元和命令行工具都不支持配置所有 WS-AT 设置。 只能通过直接修改注册表来编辑这些设置。 有关这些注册表设置的详细信息，请参阅[配置 Ws-atomic 事务支持](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)。  
   
 ### <a name="user-interface-description"></a>用户界面说明  
  **启用 Ws-atomictransaction 网络支持**:  
@@ -95,7 +97,7 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 >  如果另一个跟踪使用者正在使用 WS-AT 跟踪提供程序，则您无法为跟踪事件创建新的日志记录会话。 任何试图在此时配置日志记录的操作都会导致错误消息“无法启用提供程序。 错误代码: 1”。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]跟踪和日志记录，请参阅[管理和诊断](../../../docs/framework/wcf/diagnostics/index.md)。  
+ 有关跟踪和日志记录的详细信息，请参阅[管理和诊断](../../../docs/framework/wcf/diagnostics/index.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [配置 WS-Atomic 事务支持](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  

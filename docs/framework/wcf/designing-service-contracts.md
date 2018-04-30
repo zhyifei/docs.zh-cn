@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: df3e207cdca3a40bb0cfaff1890f6e010bd0790c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 14973d3612eb5739e0dfcd7b50409904ab5d6844
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="designing-service-contracts"></a>设计服务协定
 本主题介绍什么是服务协定、如何定义服务协定、可用的操作（以及基础消息交换的含义）、使用的数据类型以及可帮助您设计能满足方案需求的操作的其他问题。  
@@ -86,7 +86,7 @@ ms.lasthandoff: 04/28/2018
   
  数据协定是可选的样式协定：除非您显式应用数据协定属性，否则不会序列化任何类型或数据成员。 数据协定与托管代码的访问范围无关：可以对私有数据成员进行序列化，并将其发送到其他位置，以便可以公开访问它们。 (有关数据协定的基本示例，请参阅[如何： 创建基本的数据协定类或结构](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)。)[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]处理启用操作的功能的基础 SOAP 消息的定义，以及序列化您的数据类型的传入和传出的消息正文。 只要数据类型可序列化，您就无需在设计操作时考虑基础消息交换基础结构。  
   
- 尽管典型的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性来创建用于操作的数据协定，您仍可以使用其他序列化机制。 标准 <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> 和 <xref:System.Xml.Serialization.IXmlSerializable> 机制都可用于处理数据类型到基础 SOAP 消息的序列化，这些消息可将数据类型从一个应用程序带到另一个应用程序。 如果您的数据类型需要特别支持，您可以采用多个序列化策略。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 中的数据类型的序列化的选择[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]应用程序，请参阅[指定服务协定中的数据传输](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
+ 尽管典型的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性来创建用于操作的数据协定，您仍可以使用其他序列化机制。 标准 <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> 和 <xref:System.Xml.Serialization.IXmlSerializable> 机制都可用于处理数据类型到基础 SOAP 消息的序列化，这些消息可将数据类型从一个应用程序带到另一个应用程序。 如果您的数据类型需要特别支持，您可以采用多个序列化策略。 有关中的数据类型的序列化的选择[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]应用程序，请参阅[指定服务协定中的数据传输](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
   
 #### <a name="mapping-parameters-and-return-values-to-message-exchanges"></a>将参数和返回值映射到消息交换  
  除了应用程序支持特定标准安全、事务和与会话相关的功能时所需的数据之外，对应用程序数据进行往返传输的 SOAP 消息的基础交换还支持服务操作。 由于这是这种情况，服务操作的签名指定特定的基础*消息交换模式*(MEP)，可以支持数据传输和操作要求的功能。 您可以在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 编程模型中指定三种模式：请求/答复、单向和双工消息模式。  
@@ -122,7 +122,7 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- 如果执行操作需要很长的时间，则上面的示例会降低客户端性能和响应能力，但是，即使在请求/答复操作返回 `void` 时，这种操作仍有优势。 最明显的优势在于，响应消息中可返回 SOAP 错误，这表明可能在通信或处理中发生了一些与服务有关的错误状况。 在服务协定中指定的 SOAP 错误将作为 <xref:System.ServiceModel.FaultException%601> 对象传递到客户端应用程序，其中类型参数是在服务协定中指定的类型。 这使得将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的错误状况通知给客户端的过程变得很方便。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 异常、 SOAP 错误和错误处理问题，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 若要查看的请求/答复服务和客户端示例，请参阅[如何： 创建请求-答复协定](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 问题与请求-答复模式中，请参阅[请求-答复服务](../../../docs/framework/wcf/feature-details/request-reply-services.md)。  
+ 如果执行操作需要很长的时间，则上面的示例会降低客户端性能和响应能力，但是，即使在请求/答复操作返回 `void` 时，这种操作仍有优势。 最明显的优势在于，响应消息中可返回 SOAP 错误，这表明可能在通信或处理中发生了一些与服务有关的错误状况。 在服务协定中指定的 SOAP 错误将作为 <xref:System.ServiceModel.FaultException%601> 对象传递到客户端应用程序，其中类型参数是在服务协定中指定的类型。 这使得将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的错误状况通知给客户端的过程变得很方便。 有关异常、 SOAP 错误和错误处理的详细信息，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 若要查看的请求/答复服务和客户端示例，请参阅[如何： 创建请求-答复协定](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)。 有关问题的请求-答复模式的详细信息，请参阅[请求-答复服务](../../../docs/framework/wcf/feature-details/request-reply-services.md)。  
   
 ##### <a name="one-way"></a>单向  
  如果 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务应用程序的客户端不必等待操作完成，并且不处理 SOAP 错误，则该操作可以指定单向消息模式。 单向操作是客户端调用操作并在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 将消息写入网络后继续进行处理的操作。 通常这意味着，除非在出站消息中发送的数据极其庞大，否则客户端几乎立即继续运行（除非发送数据时出错）。 此种类型的消息交换模式支持从客户端到服务应用程序的类似于事件的行为。  
@@ -145,7 +145,7 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- 此方法与前面的请求/答复示例相同，但是，将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 属性设置为 `true` 意味着尽管方法相同，服务操作也不会发送返回消息，而客户端将在出站消息抵达通道层时立即返回。 有关示例，请参阅[如何： 创建单向协定](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 单向模式时，请参阅[单向服务](../../../docs/framework/wcf/feature-details/one-way-services.md)。  
+ 此方法与前面的请求/答复示例相同，但是，将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 属性设置为 `true` 意味着尽管方法相同，服务操作也不会发送返回消息，而客户端将在出站消息抵达通道层时立即返回。 有关示例，请参阅[如何： 创建单向协定](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)。 有关单向模式的详细信息，请参阅[单向服务](../../../docs/framework/wcf/feature-details/one-way-services.md)。  
   
 ##### <a name="duplex"></a>双工  
  双工模式的特点是，无论使用单向消息发送还是请求/答复消息发送方式，服务和客户端均能够独立地向对方发送消息。 对于必须直接与客户端通信或向消息交换的任意一方提供异步体验（包括类似于事件的行为）的服务来说，这种双向通信形式非常有用。  
@@ -156,7 +156,7 @@ Sub Hello (ByVal greeting As String)
   
  若要实现双工模式，您必须创建第二个接口，该接口包含在客户端调用的方法声明。  
   
- 有关创建服务和客户端访问该服务的示例，请参阅[如何： 创建双工协定](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)和[如何： 使用双工协定访问服务](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。 有关工作示例，请参阅[双工](../../../docs/framework/wcf/samples/duplex.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 问题使用双工协定，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)。  
+ 有关创建服务和客户端访问该服务的示例，请参阅[如何： 创建双工协定](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)和[如何： 使用双工协定访问服务](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。 有关工作示例，请参阅[双工](../../../docs/framework/wcf/samples/duplex.md)。 有关使用双工协定的问题的详细信息，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)。  
   
 > [!CAUTION]
 >  当服务接收双工消息时，它会在该传入消息中查找 `ReplyTo` 元素，以确定要发送答复的位置。 如果用于接收消息的通道不安全，则不受信任的客户端可能使用目标计算机的 `ReplyTo` 发送恶意消息，从而导致该目标计算机发生拒绝服务 (DOS)。  
@@ -270,12 +270,12 @@ End Interface
   
 -   `GetGuid` 操作 <xref:System.Guid?displayProperty=nameWithType> 将在一条已加密且签名的消息中返回。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 保护级别和如何使用它们，请参阅[了解保护级别](../../../docs/framework/wcf/understanding-protection-level.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 安全，请参阅[服务的安全](../../../docs/framework/wcf/securing-services.md)。  
+ 有关保护级别和如何使用它们的详细信息，请参阅[了解保护级别](../../../docs/framework/wcf/understanding-protection-level.md)。 有关安全性的详细信息，请参阅[服务的安全](../../../docs/framework/wcf/securing-services.md)。  
   
 ##### <a name="other-operation-signature-requirements"></a>其他操作签名需求  
  某些应用程序功能要求特定种类的操作签名。 例如，<xref:System.ServiceModel.NetMsmqBinding> 绑定支持持久性服务和客户端，即应用程序可以在通信期间重新启动，并在其停止的位置处拾取，不会遗漏任何消息。 (有关详细信息，请参阅[WCF 中的队列](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)但是，持久性操作只能接受一个 `in` 参数，并且没有返回值。  
   
- 另一个示例是在操作中使用 <xref:System.IO.Stream> 类型。 由于 <xref:System.IO.Stream> 参数包括整个消息正文，如果输入或输出（也就是 `ref` 参数、`out` 参数或返回值）的类型为 <xref:System.IO.Stream>，则它必须是在操作中指定的唯一输入或输出。 此外，参数或返回类型必须是 <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> 或 <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 流，请参阅[大型数据和流式处理](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
+ 另一个示例是在操作中使用 <xref:System.IO.Stream> 类型。 由于 <xref:System.IO.Stream> 参数包括整个消息正文，如果输入或输出（也就是 `ref` 参数、`out` 参数或返回值）的类型为 <xref:System.IO.Stream>，则它必须是在操作中指定的唯一输入或输出。 此外，参数或返回类型必须是 <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> 或 <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>。 有关流的详细信息，请参阅[大型数据和流式处理](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   
 ##### <a name="names-namespaces-and-obfuscation"></a>名称、命名空间和混淆处理  
  在将协定转换为 WSDL 以及创建和发送协定消息时，协定与操作的定义中的 .NET 类型的名称和命名空间意义重大。 因此，强烈建议使用所有支持协定属性 (Attribute)（如 `Name`、`Namespace`、<xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.OperationContractAttribute> 和其他协定属性 (Attribute)）的 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Property) 显式设置服务协定名称和命名空间。  

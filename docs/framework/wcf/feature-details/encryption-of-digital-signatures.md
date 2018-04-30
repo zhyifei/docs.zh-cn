@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: aa6abc39159b14eae41e43de5a8976857b1d4c13
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 630465367eb4cee164a222bb5449070ac0726d5e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="encryption-of-digital-signatures"></a>数字签名的加密
 默认情况下，会对消息进行签名和加密，并对签名进行数字加密。 您可以对此进行控制，方法是用 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 的实例创建一个自定义绑定，然后将其中一个类的 `MessageProtectionOrder` 属性设置为一个 <xref:System.ServiceModel.Security.MessageProtectionOrder> 枚举值。 默认值为 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>。 此过程要比仅仅签名和加密多花 10% 到 40% 的时间。 但是，禁用签名的加密可能会使攻击者猜出消息的内容。 这种情况是可能的，原因是签名元素包含消息中每个签名部分的纯文本的哈希代码。 例如，尽管默认情况下加密了消息正文，可是未加密的签名包含消息正文的哈希代码。 如果消息简短，攻击者有可能推测出内容。 对签名进行加密可减小或消除这种可能性。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/28/2018
   
 3.  将 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>，或将 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建自定义绑定，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建自定义绑定为特定身份验证的模式，请参阅[如何： 为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
+ 有关创建自定义绑定的详细信息，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。 有关创建自定义绑定的特定身份验证模式的详细信息，请参阅[如何： 为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Security.MessageProtectionOrder>  

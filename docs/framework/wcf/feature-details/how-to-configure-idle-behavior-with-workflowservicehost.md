@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55cc10357e8ae6b5458ca3440e1728cb578208b3
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 22c71c0840b4fa44c585dfac4d99bdcbb3227fdb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>如何：使用 WorkflowServiceHost 配置空闲行为
 当工作流遇到必须由某种外部刺激恢复的书签时（例如，当工作流实例正在等待使用 <xref:System.ServiceModel.Activities.Receive> 活动传递消息时），将转入空闲状态。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 行为允许您指定服务实例进入空闲状态与保留或卸载服务实例之间的时间。 它包含两个使您能够设置这些时间跨度的属性。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> 指定工作流服务实例进入空闲状态与保留工作流服务实例之间的时间跨度。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 指定工作流服务实例进入空闲状态与卸载工作流服务实例之间的时间跨度，其中，卸载意味着将实例保留到实例存储区中并从内存中将其删除。 本主题解释如何在配置文件中配置 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/28/2018
     </behaviors>  
     ```  
   
-     `timeToUnload` 特性指定工作流服务实例进入空闲状态与卸载工作流服务之间的时间段。 `timeToPersist` 特性指定工作流服务实例进入空闲状态与保存该实例之间的时间段。 `timeToUnload` 默认值为 1 分钟。 `timeToPersist` 的默认值为 <xref:System.TimeSpan.MaxValue>。 如果要在内存中保留空闲实例，但是为实现可靠性而保持这些实例，请设置值以使 `timeToPersist` < `timeToUnload`。 如果要防止卸载空闲实例，请将 `timeToUnload` 设置为 <xref:System.TimeSpan.MaxValue>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>请参阅[工作流服务主机可扩展性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
+     `timeToUnload` 特性指定工作流服务实例进入空闲状态与卸载工作流服务之间的时间段。 `timeToPersist` 特性指定工作流服务实例进入空闲状态与保存该实例之间的时间段。 `timeToUnload` 默认值为 1 分钟。 `timeToPersist` 的默认值为 <xref:System.TimeSpan.MaxValue>。 如果要在内存中保留空闲实例，但是为实现可靠性而保持这些实例，请设置值以使 `timeToPersist` < `timeToUnload`。 如果要防止卸载空闲实例，请将 `timeToUnload` 设置为 <xref:System.TimeSpan.MaxValue>。 有关详细信息<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>，请参阅[工作流服务主机可扩展性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
   
     > [!NOTE]
     >  上面的配置示例使用的是简化配置。 有关详细信息，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)。  

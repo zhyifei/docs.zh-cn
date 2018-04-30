@@ -1,33 +1,35 @@
 ---
-title: "&lt;serviceCredentials&gt; 的 &lt;serviceCertificate&gt;"
-ms.custom: 
+title: '&lt;serviceCredentials&gt; 的 &lt;serviceCertificate&gt;'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5b6baca250e4fadc2a66bb0fe83b076522f82ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 16c5c065e805cb672f85dd9ff28f5b5d82d1ffba
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltservicecertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;serviceCertificate&gt;
 指定一个 X.509 证书，以供服务用来向使用 Message 安全模式的客户端证明自己的身份。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<行为 >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<行为 >  
-\<serviceCredentials >  
+\<serviceCredentials>  
 \<serviceCertificate >  
   
 ## <a name="syntax"></a>语法  
@@ -50,7 +52,7 @@ x509FindType="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/
 |`findValue`|一个字符串，包含要在 X.509 证书存储中搜索的值。 此属性中包含的类型必须满足指定 X509FindType 的要求。 默认值为一个空字符串。|  
 |`storeLocation`|指定客户端可用于验证服务器证书的 X.509 证书存储的位置。 包括以下有效值：<br /><br /> -LocalMachine： 分配给本地计算机的证书存储。<br />-CurrentUser： 分配给当前用户的证书存储。<br /><br /> 默认值为 LocalMachine。|  
 |`storeName`|指定要打开的 X.509 证书存储区的名称。 包括以下有效值：<br /><br /> -AddressBook： 其他用户证书存储区。<br />-AuthRoot： 证书存储第三方证书颁发机构 (Ca)。<br />-CertificatAuthority： 中间证书颁发机构 (Ca) 证书存储区。<br />-不允许： 证书吊销的证书存储。<br />-My： 个人证书的证书存储区。<br />-Root： 受信任的根证书颁发机构 (Ca) 证书存储区。<br />-TrustedPeople： 直接受信任的人和资源的证书存储区。<br />-TrustedPublisher： 直接受信任的发行者的证书存储区。<br /><br /> 默认值为 My。|  
-|`x509FindType`|定义要执行的 X.509 搜索的类型。 包括以下有效值：<br /><br /> -FindByThumbprint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-和 FindBySubjectKeyIdentifier<br /><br /> `findValue` 属性中包含的类型必须满足指定 X509FindType 的要求。<br /><br /> 默认值为 FindBySubjectDistinguishedName。|  
+|`x509FindType`|定义要执行的 X.509 搜索的类型。 包括以下有效值：<br /><br /> -FindByThumbprint<br />-   FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> `findValue` 属性中包含的类型必须满足指定 X509FindType 的要求。<br /><br /> 默认值为 FindBySubjectDistinguishedName。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -59,12 +61,12 @@ x509FindType="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。|  
+|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。|  
   
 ## <a name="remarks"></a>备注  
  使用此元素可指定一个 X.509 证书，以供服务用来向使用 Message 安全模式的客户端证明自己的身份。 如果您使用的是将会定期续订的证书，则证书的指纹将会变更。 在此情况下，请使用主题名称作为 `x509FindType`，因为可以使用同一主题名称来重新颁发该证书。  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]使用了元素，请参阅[如何： 指定客户端凭据值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 有关使用元素的详细信息，请参阅[如何： 指定客户端凭据值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>  

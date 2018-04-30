@@ -18,18 +18,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 46bafbb0063f72b56f647caaa9dd0fa2944f3298
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 62a8774ab2843d0b1f0a19ad04fc0a76abb7cac5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
 通过使用配置文件配置 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务，可提供在部署时而非设计时提供终结点和服务行为数据的灵活性。 本主题概述了当前可用的主要技术。  
   
  可使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置技术对 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 服务进行配置。 通常情况下，向承载 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的 Internet 信息服务 (IIS) 网站的 Web.config 文件添加 XML 元素。 通过这些元素，可以逐台计算机更改详细信息，例如终结点地址（用于与服务进行通信的实际地址）。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包括几个系统提供的元素，可用于快速选择服务的最基本的功能。 从 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]开始， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 附带一个新的默认配置模型，该模型简化了 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置要求。 如果您没有为特定服务提供任何 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置，运行时将自动使用一些标准终结点和默认绑定/行为配置您的服务。 实际上，编写配置是 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序编程的主要部分。  
   
- 有关详细信息，请参阅[配置服务的绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 对于一份最常用元素，请参阅[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 默认终结点、绑定和行为，请参阅 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) 和 [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ 有关详细信息，请参阅[配置服务的绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 对于一份最常用元素，请参阅[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。 有关默认终结点、 绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 > [!IMPORTANT]
 >  在部署并行方案（其中部署了服务的两个不同版本）时，必须指定配置文件中引用的程序集的部分名称。 这是因为配置文件将在服务的所有版本间共享，并可在不同版本的 .NET Framework 下运行。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/28/2018
   
  在 Visual Studio 中，名为 App.config 文件用于创建最终的配置文件。 实际用于配置的最终名称取决于程序集名称。 例如，名为“Cohowinery.exe”的程序集具有的最终配置文件名称为“Cohowinery.exe.config”。 但是，只需要修改 App.config 文件。 在编译时，对该文件所做的更改会自动应用于最终应用程序配置文件。  
   
- 在使用 App.config 文件的过程中，当应用程序启动并应用配置时，文件配置系统会将 App.config 文件与 Machine.config 文件的内容合并。 此机制允许在 Machine.config 文件中定义计算机范围的设置。 可以使用 App.config 文件重写 Machine.config 文件的设置；也可以锁定 Machine.config 文件中的设置以应用它们。 对于 Web.config，配置系统会将应用程序目录之下的所有目录中的 Web.config 文件合并到要应用的配置中。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 配置和设置属性的更多信息，请参见 <xref:System.Configuration> 命名空间中的主题。  
+ 在使用 App.config 文件的过程中，当应用程序启动并应用配置时，文件配置系统会将 App.config 文件与 Machine.config 文件的内容合并。 此机制允许在 Machine.config 文件中定义计算机范围的设置。 可以使用 App.config 文件重写 Machine.config 文件的设置；也可以锁定 Machine.config 文件中的设置以应用它们。 对于 Web.config，配置系统会将应用程序目录之下的所有目录中的 Web.config 文件合并到要应用的配置中。 有关配置和设置优先级的详细信息，请参阅中的主题<xref:System.Configuration>命名空间。  
   
 ## <a name="major-sections-of-the-configuration-file"></a>配置文件的主要部分  
  配置文件中的主要部分包括以下元素。  
@@ -114,7 +114,7 @@ ms.lasthandoff: 04/28/2018
 ### <a name="the-binding-element"></a>\<绑定 > 元素  
  在 `binding` 元素中包含的 `bindings` 元素可以是系统提供的绑定之一（请参阅 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)），也可以是自定义绑定（请参阅 [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)）。 `binding` 元素具有 `name` 属性，此属性将绑定与 `bindingConfiguration` 元素的 `endpoint` 属性中指定的终结点相关联。 如果未指定任何名称，则该绑定对应于该绑定类型的默认值。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 配置服务和客户端，请参阅[配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
+ 有关配置服务和客户端的详细信息，请参阅[配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
  [\<绑定 >](../../../docs/framework/misc/binding.md)  
   

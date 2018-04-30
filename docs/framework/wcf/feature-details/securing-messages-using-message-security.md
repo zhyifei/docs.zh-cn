@@ -16,11 +16,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-messages-using-message-security"></a>使用消息安全保护消息
 本主题讨论在使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时的 <xref:System.ServiceModel.NetMsmqBinding> 消息安全。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/28/2018
   
  鉴于队列有断开连接的特性，客户端和服务可能不会同时联机。 这样，客户端和服务必须在带外交换证书。 尤其是，由于客户端在其受信任存储区中存有服务的证书（可以将该证书链接到证书颁发机构），因此必须信任它将与正确的服务进行通信。 至于对客户端进行身份验证，服务使用附有消息的 X.509 证书将该客户端与其存储中的证书进行匹配来验证客户端的真实性。 该证书必须再次链接到证书颁发机构。  
   
- 在运行 Windows 的计算机上，证书存放在多类存储区中。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 不同存储区，请参阅[证书存储](http://go.microsoft.com/fwlink/?LinkId=87787)。  
+ 在运行 Windows 的计算机上，证书存放在多类存储区中。 有关不同的存储的详细信息，请参阅[证书存储](http://go.microsoft.com/fwlink/?LinkId=87787)。  
   
 ### <a name="windows"></a>Windows  
  Windows 消息凭据类型使用 Kerberos 协议。  

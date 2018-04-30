@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8489c0bf20d3d62501db269c5a72de657bcbbc97
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fe4ef5b17013bf1a9abf5fd1ca0807fe4d335df4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="schema-import-and-export"></a>架构导入和导出
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括新序列化引擎 <xref:System.Runtime.Serialization.DataContractSerializer>。 `DataContractSerializer` 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象和 XML 之间进行转换（双向）。 除了序列化程序本身，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还包括关联的架构导入和架构导出机制。 *架构*是序列化程序生成或反序列化程序可以访问的 XML 的形状的正式、 精确和计算机可读说明。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用万维网联合会 (W3C) XML 架构定义语言 (XSD) 作为其架构表示形式，它可以与许多第三方平台广泛互操作。  
@@ -68,9 +68,9 @@ ms.lasthandoff: 04/28/2018
   
  `XsdDataContractExporter` 支持可以用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 序列化的任何 `DataContractSerializer` 类型。 有关详细信息，请参阅[类型受数据协定序列化程序](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 请注意，使用 `XsdDataContractExporter` 生成的架构通常是 `XsdDataContractImporter` 可以使用的有效数据（除非 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 用于对架构进行自定义）。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用<xref:System.Runtime.Serialization.XsdDataContractImporter>，请参阅[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
+ 有关使用<xref:System.Runtime.Serialization.XsdDataContractImporter>，请参阅[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用<xref:System.Runtime.Serialization.XsdDataContractExporter>，请参阅[从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
+ 有关使用<xref:System.Runtime.Serialization.XsdDataContractExporter>，请参阅[从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

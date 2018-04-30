@@ -18,20 +18,20 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-caps.latest.revision: ''
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: aad070bca408fc608eb000948c1b942d08f02018
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 03a2b8c6184a6cb79d1e42598a65972a08718e10
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>将玻璃框扩展到 WPF 应用程序
-本主题演示如何将 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 玻璃框扩展到 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 应用程序的工作区。  
+本主题演示如何扩展[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]到 Windows Presentation Foundation (WPF) 应用程序的客户端区域的玻璃框。  
   
 > [!NOTE]
 >  此示例仅在运行已启用玻璃效果的桌面窗口管理器 (DWM) 的 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 计算机上才起作用。 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 家庭普通版不支持透明玻璃效果。 在 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 的其他版本上通常使用透明玻璃效果呈现的区域呈现为不透明。  
@@ -162,7 +162,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
   
  ![扩展到 WPF 应用程序中的玻璃框。](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [桌面窗口管理器概述](https://msdn.microsoft.com/library/aa969540.aspx)  
  [桌面窗口管理器模糊概述](https://msdn.microsoft.com/library/aa969537.aspx)  
  [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx)

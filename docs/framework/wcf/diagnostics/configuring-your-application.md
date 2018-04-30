@@ -16,22 +16,22 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b9c5c53e04719f3ed48d0ff6386f21bf83e99
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 170583239ed357904e723aebdaef9809938b5123
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-your-application"></a>配置应用程序
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用 .NET 配置系统并允许您在计算机和应用程序范围配置服务。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定义的配置设置位于 `<system.serviceModel>` 节组中。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，请参见以下主题：  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定义的配置设置位于 `<system.serviceModel>` 节组中。 有关如何配置详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务，请参阅以下主题：  
   
 -   [配置服务](../../../../docs/framework/wcf/configuring-services.md)  
   
 -   [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
- 应用程序定义的配置设置是在 `<appSettings>` 节组中定义的。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 应用程序设置中.NET 配置文件，请参阅[ \<appSettings >](http://go.microsoft.com/fwlink/?LinkId=95159)。  
+ 应用程序定义的配置设置是在 `<appSettings>` 节组中定义的。 有关.NET 配置文件中的应用程序设置的详细信息，请参阅[ \<appSettings >](http://go.microsoft.com/fwlink/?LinkId=95159)。  
   
 ## <a name="using-the-configuration-editor"></a>使用配置编辑器  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)][配置编辑器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)允许管理员和开发人员创建和修改配置设置[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务使用图形用户界面。 利用此工具，您无需直接编辑 XML 配置文件就可管理 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 绑定、行为、服务和诊断的设置。  

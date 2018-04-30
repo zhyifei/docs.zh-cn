@@ -1,38 +1,38 @@
 ---
-title: "联合与信任"
-ms.custom: 
+title: 联合与信任
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98b1274866dec2a4ca923d390f33df68449cf286
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ccd395f96f3e7af0ce7afe9938c0295d5778914
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="federation-and-trust"></a>联合与信任
 本主题介绍与联合应用程序、信任边界和配置，以及颁发的令牌在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的用法相关的各个方面。  
   
 ## <a name="services-security-token-services-and-trust"></a>服务、安全令牌服务和信任  
- 公开联合终结点的服务通常期望客户端使用特定颁发机构提供的令牌进行身份验证。 使用颁发机构的正确凭据来配置服务很重要；否则，将无法通过颁发的令牌来验证签名，客户端也将无法与服务通信。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]在服务上配置颁发者凭据，请参阅[如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
+ 公开联合终结点的服务通常期望客户端使用特定颁发机构提供的令牌进行身份验证。 使用颁发机构的正确凭据来配置服务很重要；否则，将无法通过颁发的令牌来验证签名，客户端也将无法与服务通信。 有关在服务上配置颁发者凭据的详细信息，请参阅[如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
  同样，使用对称密钥时，密钥是针对目标服务加密的，因此，必须使用目标服务的正确凭据来配置安全令牌服务；否则，将无法针对目标服务加密密钥，客户端也将无法与服务通信。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务使用的值<xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A>属性[SecurityBindingElement](../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)以允许时钟偏差在客户端和服务之间。 在联合中，`MaxClockSkew` 设置应用于客户端与客户端从中获得颁发的令牌的安全令牌服务之间的时钟偏差。 因此，在设置颁发的令牌的有效时间和过期时间时，安全令牌服务不需要进行时钟偏差许可。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务使用的值<xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A>属性[SecurityBindingElement](../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)以允许时钟偏差在客户端和服务之间。 在联合中，`MaxClockSkew` 设置应用于客户端与客户端从中获得颁发的令牌的安全令牌服务之间的时钟偏差。 因此，在设置颁发的令牌的有效时间和过期时间时，安全令牌服务不需要进行时钟偏差许可。  
   
 > [!NOTE]
 >  时钟偏差的重要性随颁发的令牌的生存期的缩短而增加。 在大多数情况下，如果令牌生存期为 30 分钟或更长，则时钟偏差不是一个重要问题。 如果生存期更短或令牌的确切有效时间非常重要，则在设计时应考虑时钟偏差。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  例如，客户端通道的超时值设置为 30 秒。 在向最终终结点发送消息之前，需要调用两个令牌颁发机构来检索令牌，因此，每个颁发机构有 15 秒钟来颁发令牌。 这种情况下，尝试将失败，并引发 <xref:System.TimeoutException>。 因此，需要将客户端通道的 <xref:System.ServiceModel.IContextChannel.OperationTimeout%2A> 值设置为一个足够大的值，以便有时间检索所有颁发的令牌。 如果没有为 <xref:System.ServiceModel.IContextChannel.OperationTimeout%2A> 属性指定一个值，则需要将 <xref:System.ServiceModel.Channels.Binding.OpenTimeout%2A> 属性和/或 <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A> 属性设置为一个足够大的值，以便有时间检索所有颁发的令牌。  
   
 ## <a name="token-lifetime-and-renewal"></a>令牌生存期和续订  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端向服务进行初始请求时，不检查颁发的令牌。  相反，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 相信安全令牌服务会颁发具有适当有效时间和过期时间的令牌。 如果客户端缓存并重用令牌，则会在后续请求时检查令牌生存期，如有必要，客户端会自动续订令牌。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]令牌缓存，请参阅[如何： 创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端向服务进行初始请求时，不检查颁发的令牌。  相反，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 相信安全令牌服务会颁发具有适当有效时间和过期时间的令牌。 如果客户端缓存并重用令牌，则会在后续请求时检查令牌生存期，如有必要，客户端会自动续订令牌。 有关令牌缓存的详细信息，请参阅[如何： 创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。  
   
  如果为颁发的令牌或安全上下文令牌指定较短的生存期（30 秒左右或更短），则可能在请求颁发的令牌或者协商或续订安全上下文令牌时导致 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端引发协商超时或其他异常。  
   

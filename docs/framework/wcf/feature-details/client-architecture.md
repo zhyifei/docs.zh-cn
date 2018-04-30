@@ -1,27 +1,29 @@
 ---
-title: "客户端体系结构"
-ms.custom: 
+title: 客户端体系结构
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6418c3b5c82ac42fb7e6d3ce85913896a3f76442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12db0d4f5717287439b66810e6354b12a4c68b77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="client-architecture"></a>客户端体系结构
-应用程序使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端对象来调用服务操作。 本主题讨论 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象、[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端通道以及它们与基础通道体系结构的关系。 有关的基本概述[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端对象，请参阅[WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]通道层，请参阅[扩展通道层](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。  
+应用程序使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端对象来调用服务操作。 本主题讨论 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象、[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端通道以及它们与基础通道体系结构的关系。 有关的基本概述[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端对象，请参阅[WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)。 有关通道层的详细信息，请参阅[扩展通道层](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。  
   
 ## <a name="overview"></a>概述  
  服务模型运行时创建 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端，这些客户端由以下各项构成：  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
  应该记住的是，在调用 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> 之前，通道工厂会为所提供的配置创建客户端通道的新实例。 一旦调用 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>（或 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>、<xref:System.ServiceModel.ClientBase%601.CreateChannel%2A?displayProperty=nameWithType> 或对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象执行的任何操作）后，不能修改通道工厂和期待获取到不同服务实例的通道，即使只是更改目标终结点地址也是如此。 如果您想用不同配置创建客户端对象或客户端通道，则必须首先创建新的通道工厂。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用的各种问题[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端对象和[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端通道，请参阅[使用 WCF 客户端访问服务](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
+ 有关使用的各种问题的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端对象和[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端通道，请参阅[使用 WCF 客户端访问服务](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   
  以下两节说明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端通道对象的创建和使用。  
   

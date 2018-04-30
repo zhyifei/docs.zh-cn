@@ -1,33 +1,33 @@
 ---
-title: "AJAX 集成和 JSON 支持"
-ms.custom: 
+title: AJAX 集成和 JSON 支持
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: cd5c84250349f4adaaac68a302d771280328a4e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0d62da8cf67fb8f996f341018c39146b51e308c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX 集成和 JSON 支持
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支持 ASP.NET 异步 JavaScript 和 XML (AJAX)，并且 JavaScript 对象表示法 (JSON) 数据格式允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务向 AJAX 客户端公开操作。 AJAX 客户端是运行 JavaScript 代码并使用 HTTP 请求访问这些 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的网页。 本节中的主题提供有关此支持以及如何实现此支持的信息。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET AJAX 和的集成与 ASP.NET 2.0，请参阅[ASP.NET AJAX 概述](http://go.microsoft.com/fwlink/?LinkId=96725)。  
+ 有关 ASP.NET AJAX 的详细信息和与 ASP.NET 2.0 的集成，请参阅[ASP.NET AJAX 概述](http://go.microsoft.com/fwlink/?LinkId=96725)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [为 ASP.NET AJAX 创建 WCF 服务](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  

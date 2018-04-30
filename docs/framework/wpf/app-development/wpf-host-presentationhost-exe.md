@@ -1,40 +1,42 @@
 ---
-title: "WPF 主机 (PresentationHost.exe)"
-ms.custom: 
+title: WPF 主机 (PresentationHost.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c5a9df438353701932a3e732d6df28b08402ee8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd9586564d79d3c4ef1425eec1499b9b3143ff3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 主机 (PresentationHost.exe)
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 主机 (PresentationHost.exe) 是一个应用程序，它使 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序可在兼容浏览器（包括 [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] 及更高版本）中承载。 默认情况下，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 主机会注册为浏览器承载的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 内容的 shell 和 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 处理程序，其中包括：  
+Windows Presentation Foundation (WPF) 主机 (PresentationHost.exe) 是应用程序，使[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中兼容的浏览器托管的应用程序 (包括[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]及更高版本)。 默认情况下，Windows Presentation Foundation (WPF) 主机注册为 shell 和[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]处理程序浏览器承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]内容，其中包括：  
   
 -   松散（未编译）[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件 (.xaml)。  
   
 -   [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap)。  
   
- 对于这些文件类型，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 主机会：  
+ 对于这些类型，Windows Presentation Foundation (WPF) 主机的文件：  
   
--   启动注册的 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 处理程序来承载 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 内容。  
+-   启动注册[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]处理程序来承载 Windows Presentation Foundation (WPF) 的内容。  
   
--   加载所需 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 和 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 程序集的正确版本。  
+-   加载的所需的正确版本[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]和 Windows Presentation Foundation (WPF) 程序集。  
   
 -   确保部署区域具有适当的权限级别。  
   

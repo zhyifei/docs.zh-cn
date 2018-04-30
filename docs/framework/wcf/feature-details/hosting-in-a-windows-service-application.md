@@ -1,27 +1,29 @@
 ---
-title: "在 Windows 服务应用程序中承载"
-ms.custom: 
+title: 在 Windows 服务应用程序中承载
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1a39162097c21f20c0dd04f3911442602871436
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c1f0d2336c2682bd525a66c6e5b12ce2d17ad219
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服务应用程序中承载
-Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于下面这样的应用程序的进程模型：必须在长时间运行的可执行程序中生存，并且不显示任何形式的用户界面。 Windows 服务应用程序的进程生存期由服务控制管理器 (SCM) 管理，您可以通过该管理器启动、停止和暂停 Windows 服务应用程序。 你可以配置 Windows 服务进程启动计算机，使其成为"始终运行的"应用程序的合适的宿主环境时自动启动。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows 服务应用程序，请参阅[Windows 服务应用程序](http://go.microsoft.com/fwlink/?LinkId=89450)。  
+Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于下面这样的应用程序的进程模型：必须在长时间运行的可执行程序中生存，并且不显示任何形式的用户界面。 Windows 服务应用程序的进程生存期由服务控制管理器 (SCM) 管理，您可以通过该管理器启动、停止和暂停 Windows 服务应用程序。 你可以配置 Windows 服务进程启动计算机，使其成为"始终运行的"应用程序的合适的宿主环境时自动启动。 有关 Windows 服务应用程序的详细信息，请参阅[Windows 服务应用程序](http://go.microsoft.com/fwlink/?LinkId=89450)。  
   
  承载长时间运行的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的应用程序具有许多和 Windows 服务一样的特性。 具体而言，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务是长时间运行的服务器可执行程序，并且不与用户直接交互，因此也不实现任何形式的用户界面。 因此，在 Windows 服务应用程序内承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务是一个用于生成可靠的、长时间运行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的可行方案。  
   

@@ -1,12 +1,13 @@
 ---
-title: "对话框概述"
-ms.custom: 
+title: 对话框概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 112a9badaf9a64b2c6d3f73d64c27fbc36ec48a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfe22dec0827f0ceb880b9410b64668f219a422f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="dialog-boxes-overview"></a>对话框概述
 独立应用程序通常具有主窗口，同时显示的主数据，通过该应用程序进行运行，并将处理通过该数据的功能公开[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]机制，如菜单栏、 工具栏和状态栏。 重要的应用程序可能还会显示其他窗口来执行以下操作：  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  A*无模式*对话框中，另一方面，不会阻止用户激活其他窗口处于打开状态时。 例如，如果用户想要在某个文档中查找特定字的出现次数，主窗口通常会打开一个对话框，询问用户要查找的字是什么。 查找字并不会防止用户编辑文档，因此对话框无需为模式对话框。 无模式对话框至少提供**关闭**按钮以关闭对话框，并可能提供其他按钮来执行特定的功能，如**查找下一个**按钮以查找下一个词与 word 搜索查找条件匹配。  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 允许创建多种类型的对话框，包括消息框、通用对话框和自定义对话框。 本主题介绍了每一个，和[对话框示例](http://go.microsoft.com/fwlink/?LinkID=159984)提供匹配的示例。  
+ Windows Presentation Foundation (WPF)，可创建几种类型的对话框框中，包括消息框、 通用对话框和自定义对话框。 本主题介绍了每一个，和[对话框示例](http://go.microsoft.com/fwlink/?LinkID=159984)提供匹配的示例。  
   
  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  ![“字处理器”对话框](../../../../docs/framework/wpf/app-development/media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
   
- 若要创建一个消息框，你可以使用<xref:System.Windows.MessageBox>类。 <xref:System.Windows.MessageBox>可以配置消息框文本、 标题、 图标和按钮，使用代码如下所示。  
+ 若要创建一个消息框，你可以使用<xref:System.Windows.MessageBox>类。 <xref:System.Windows.MessageBox> 可以配置消息框文本、 标题、 图标和按钮，使用代码如下所示。  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
@@ -72,13 +74,13 @@ ms.lasthandoff: 12/22/2017
   
  尽管<xref:System.Windows.MessageBox>可提供简单对话框框中用户体验，使用的优点<xref:System.Windows.MessageBox>是可以由在部分信任安全沙盒中运行的应用程序显示的窗口的唯一类型 (请参阅[安全](../../../../docs/framework/wpf/security-wpf.md))，如[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。  
   
- 大多数对话框显示和收集比消息框结果更复杂的数据，包括文本、选项（复选框）、互斥选项（单选按钮）和列表选项（列表框、组合框、下拉列表框）。 对于这些数据，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]提供几个通用对话框，并允许你创建你自己的对话框，尽管这两类使用仅限于以完全信任运行的应用程序。  
+ 大多数对话框显示和收集比消息框结果更复杂的数据，包括文本、选项（复选框）、互斥选项（单选按钮）和列表选项（列表框、组合框、下拉列表框）。 对于这些数据，Windows Presentation Foundation (WPF) 提供几个通用对话框，并允许你创建你自己的对话框，尽管这两类使用仅限于以完全信任运行的应用程序。  
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>通用对话框  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 实现所有应用程序（包括用于打开文件、保存文件和打印的对话框）共用的各种可重用的对话框。 这些对话框由操作系统实现，因此可以在运行于该操作系统上的所有应用程序之间共享，这对用户体验的一致性很有帮助；当用户熟悉一个应用程序中操作系统所提供的对话框时，他们就无需再去了解如何在其他应用程序中使用该对话框。 因为这些对话框可供所有应用程序，因为它可以帮助提供一致的用户体验，它们被称为*通用对话框*。  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 将打开文件、保存文件及打印通用对话框封装在一起并将其公开为托管类以便在独立应用程序中使用。 本主题提供每个通用对话框的简要概述。  
+ Windows Presentation Foundation (WPF) 封装打开的文件、 保存文件，并打印通用对话框并将它们公开为托管的类供你使用独立应用程序中。 本主题提供每个通用对话框的简要概述。  
   
 <a name="Open_File_Dialog"></a>   
 ### <a name="open-file-dialog"></a>打开文件对话框  
@@ -94,7 +96,7 @@ ms.lasthandoff: 12/22/2017
  打开文件对话框中的详细信息，请参阅<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>。  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog>可以用于安全地检索文件的名称在部分信任运行的应用程序 (请参阅[安全](../../../../docs/framework/wpf/security-wpf.md))。  
+>  <xref:Microsoft.Win32.OpenFileDialog> 可以用于安全地检索文件的名称在部分信任运行的应用程序 (请参阅[安全](../../../../docs/framework/wpf/security-wpf.md))。  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>保存文件对话框  
@@ -124,7 +126,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>自定义对话框  
- 尽管通用对话框很有用并应尽可能使用，但它们并不支持特定于域的对话框的要求。 在这些情况下，就需要创建自己的对话框。 如我们所见，对话框是具有特殊行为的窗口。 <xref:System.Windows.Window>实现这些行为和中，因此，使用<xref:System.Windows.Window>创建自定义模式和无模式对话框。  
+ 尽管通用对话框很有用并应尽可能使用，但它们并不支持特定于域的对话框的要求。 在这些情况下，就需要创建自己的对话框。 如我们所见，对话框是具有特殊行为的窗口。 <xref:System.Windows.Window> 实现这些行为和中，因此，使用<xref:System.Windows.Window>创建自定义模式和无模式对话框。  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>创建模式自定义对话框  
@@ -307,7 +309,7 @@ ms.lasthandoff: 12/22/2017
  与不同<xref:System.Windows.Window.ShowDialog%2A>，<xref:System.Windows.Window.Show%2A>立即返回。 因此，调用窗口无法判断无模式对话框何时关闭，也就不知道何时检查对话框结果或从对话框获取数据进行进一步处理。 相反，对话框需要创建替代方法来将数据返回到调用窗口进行处理。  
   
 #### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>处理无模式对话框返回的数据  
- 在此示例中，`FindDialogBox`可能会返回一个或多个查找到主窗口中，具体取决于而无需任何特定的频率要搜索的文本的结果。 和模式对话框一样，无模式对话框也可以使用属性返回结果。 但拥有对话框的窗口需要了解何时检查那些属性。 实现此目的的一种方法是用对话框实现事件，只要找到文本就引发它。 `FindDialogBox`实现`TextFoundEvent`用于此目的，这首先需要委托。  
+ 在此示例中，`FindDialogBox`可能会返回一个或多个查找到主窗口中，具体取决于而无需任何特定的频率要搜索的文本的结果。 和模式对话框一样，无模式对话框也可以使用属性返回结果。 但拥有对话框的窗口需要了解何时检查那些属性。 实现此目的的一种方法是用对话框实现事件，只要找到文本就引发它。 `FindDialogBox` 实现`TextFoundEvent`用于此目的，这首先需要委托。  
   
  [!code-csharp[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs#textfoundeventhandlercode)]
  [!code-vb[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb#textfoundeventhandlercode)]  

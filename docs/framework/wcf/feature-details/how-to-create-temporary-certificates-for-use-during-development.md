@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ccbc8c6fa638c674dea28c312b2dedbc9d41968a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>如何：创建开发期间使用的临时证书
 当使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]开发安全服务或客户程序时，经常需要提供 X.509 证书以用作凭据。 该证书通常是证书链的一部分，在计算机的受信任的根证书颁发机构存储区中可找到根证书颁发机构。 拥有一个证书链，使您可以限定一组证书，其中根证书颁发机构通常来自于您的组织或业务单元。 若要在开发时模拟此情况，请创建两个证书以满足安全要求。 第一个证书是自签名证书，放置在受信任的根证书颁发机构存储区中；第二个证书是从第一个证书创建的，放置在本地计算机位置的个人存储区中或当前用户位置的个人存储区中。 本主题指导你逐步完成使用 [证书创建工具 (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185)创建这两个证书的步骤，该工具由 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK 提供。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/28/2018
 >   
 >  默认情况下， [Makecert.exe （证书创建工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)创建的证书的根证书颁发机构称为"根证书代理**。"** 的证书。由于“根证书代理”不是受信任的根证书颁发机构存储区，这会使这些证书不安全。 创建一个放置在受信任的根证书颁发机构存储区的自签名证书，您可以创建一个与您的部署环境极其类似的开发环境。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建和使用证书，请参阅 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用证书作为凭据，请参阅 [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 有关使用 Microsoft Authenticode 技术的教程，请参阅 [Authenticode Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=88919)（Authenticode 概述和教程）。  
+ 有关创建和使用证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 有关使用证书作为凭据的详细信息，请参阅[保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 有关使用 Microsoft Authenticode 技术的教程，请参阅 [Authenticode Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=88919)（Authenticode 概述和教程）。  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>创建一个自签名根证书颁发机构证书并导出私钥  
   

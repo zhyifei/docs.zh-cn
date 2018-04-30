@@ -21,23 +21,23 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bindings-and-security"></a>绑定与安全
 包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的系统提供的绑定提供了一种编写 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的快捷方法。 但有一个例外，就是所有绑定都启用了默认的安全方案。 本主题将帮助你根据安全需要来选择正确的绑定。  
   
- 有关概述[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 编程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用绑定，请参阅[编程 WCF 安全](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
+ 有关概述[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 有关编程的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用绑定，请参阅[编程 WCF 安全](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
   
  如果你已选择一个绑定，则可以了解有关在中与安全性相关联的运行时行为的详细信息[安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
   
  部分安全性功能无法用系统提供的绑定进行编程。 使用自定义绑定的更多控制，请参阅[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
   
 ## <a name="security-functions-of-bindings"></a>绑定的安全功能  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含许多由系统提供的绑定，这些绑定可以满足大多数需求。 如果某个特定绑定不能满足要求，你还可以创建自定义绑定。 系统提供的绑定的列表，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 自定义绑定，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含许多由系统提供的绑定，这些绑定可以满足大多数需求。 如果某个特定绑定不能满足要求，你还可以创建自定义绑定。 系统提供的绑定的列表，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。 有关自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的每个绑定都具有两种形式：一种是 API，一种是在配置文件中使用的 XML 元素。 例如， `WSHttpBinding` (API) 具有一个对应[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
   

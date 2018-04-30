@@ -1,27 +1,29 @@
 ---
-title: "与 COM+ 应用程序集成的概述"
-ms.custom: 
+title: 与 COM+ 应用程序集成的概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>与 COM+ 应用程序集成的概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了用于创建分布式应用程序的丰富环境。 如果您使用的是 COM+ 中承载的基于组件的应用程序逻辑，则可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 来扩展现有逻辑，而不必重写它。 最常见的情形是通过 Web 服务来公开现有 COM+ 或企业服务业务逻辑。  
@@ -51,9 +53,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  选择相应的宿主模式。  
   
-3.  使用 COM+ 服务模块配置工具 (ComSvcConfig.exe) 为该接口添加 Web 服务。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何使用 ComSvcConfig.exe，请参阅[如何： 使用 COM + 服务模型配置工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
+3.  使用 COM+ 服务模块配置工具 (ComSvcConfig.exe) 为该接口添加 Web 服务。 有关如何使用 ComSvcConfig.exe 的详细信息，请参阅[如何： 使用 COM + 服务模型配置工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
   
-4.  在应用程序配置文件中配置任何其他服务设置。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何配置一个组件，请参阅[如何： 配置 COM + 服务设置](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)。  
+4.  在应用程序配置文件中配置任何其他服务设置。 有关如何配置一个组件的详细信息，请参阅[如何： 配置 COM + 服务设置](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)。  
   
 ## <a name="supported-interfaces"></a>支持的接口  
  对可作为 Web 服务公开的接口的类型有一些限制。 不支持以下类型的接口：  

@@ -1,28 +1,30 @@
 ---
-title: "服务器端 UI 自动化提供程序的实现"
-ms.custom: 
+title: 服务器端 UI 自动化提供程序的实现
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - server-side UI Automation provider implementation
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d25f561444cd672e8842711025f4299c375d6bb4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0068efb6f45fca15232be61a8a997f6df94f99a5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>服务器端 UI 自动化提供程序的实现
 > [!NOTE]
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/19/2018
   
  本部分将介绍如何实现自定义控件的服务器端 UI 自动化提供程序。  
   
- [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 元素和非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素（如那些用于 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]的元素）的实现完全不同。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 派生的类提供对 <xref:System.Windows.Automation.Peers.AutomationPeer>的支持。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过提供程序接口的实现提供支持。  
+ 实现 Windows Presentation Foundation (WPF) 元素和非-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]元素 (如那些用于[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) 完全不同。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 派生的类提供对 <xref:System.Windows.Automation.Peers.AutomationPeer>的支持。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过提供程序接口的实现提供支持。  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>安全注意事项  

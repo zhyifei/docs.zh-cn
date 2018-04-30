@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 216136ba084505947b5ab3c985284d704cb5872f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 460f6db9334c2ede7d968e10f9e594c49e806bea
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a>将变量用于 .NET Framework 3.5 规则集
 此示例演示如何创建一个工作流，该工作流使用 <xref:System.Activities.Statements.Interop> 活动来集成在 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 中编写并应用了策略和规则的自定义活动。 该工作流将数据传递给此自定义活动，采用的方式是将变量绑定到此自定义活动公开的依赖项属性。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/26/2018
   
 4.  右键单击`DiscountPolicy`和选择**查看代码**选项以检查活动的 C# 代码旁边的代码。  
   
-     观察 `DiscountLevel` 的依赖项属性设置。 这等效于 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 中的参数。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 自变量，请参阅[变量和自变量](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md)。  
+     观察 `DiscountLevel` 的依赖项属性设置。 这等效于 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 中的参数。 有关参数的详细信息，请参阅[变量和自变量](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md)。  
   
 ## <a name="interopwith35ruleset"></a>InteropWith35RuleSet  
  这是一个顺序工作流项目，该项目使用 <xref:System.Activities.Statements.Interop> 活动与 `TravelRuleLibrary` 项目中创建的自定义规则集集成。 变量是在顶级 <xref:System.Activities.Statements.Sequence> 活动上创建的。 <xref:System.Activities.Statements.Interop> 活动用于与 `TravelRuleSet` 活动进行的集成。 在 <xref:System.Activities.Statements.Sequence> 上声明的变量用于绑定到依赖项属性。  

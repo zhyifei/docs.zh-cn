@@ -1,27 +1,29 @@
 ---
-title: "如何：使用 Windows Server App Fabric 承载工作流服务"
-ms.custom: 
+title: 如何：使用 Windows Server App Fabric 承载工作流服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc7af813f7fff422a2513c58c9e3cba6376de060
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ef60a291af39a39d3427d74b8a6ea7d00382c8d6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>如何：使用 Windows Server App Fabric 承载工作流服务
-在 App Fabric 中承载工作流服务类似于在 IIS/WAS 下承载。 唯一的区别在于 App Fabric 提供的用于部署、监控和管理工作流服务的工具。 本主题使用在创建的工作流服务[创建长时间运行工作流服务](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)。 本主题将指导您创建工作流服务。 本主题将介绍如何使用 App Fabric 承载工作流服务。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric，请参阅[Windows Server App Fabric 文档](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)。 完成以下步骤之前，请确保已安装 Windows Server App Fabric。  为此，请打开 Internet Information services (inetmgr.exe)，请单击服务器名称**连接**查看，单击站点，然后单击**Default Web Site**。 在屏幕的右侧，你应该看到名为一节**App Fabric**。 如果您看不到这一部分（它位于右侧窗格的顶部），则表示您还未安装 App Fabric。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]安装 Windows Server App Fabric 请参阅[安装 Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136)。  
+在 App Fabric 中承载工作流服务类似于在 IIS/WAS 下承载。 唯一的区别在于 App Fabric 提供的用于部署、监控和管理工作流服务的工具。 本主题使用在创建的工作流服务[创建长时间运行工作流服务](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)。 本主题将指导您创建工作流服务。 本主题将介绍如何使用 App Fabric 承载工作流服务。 有关 Windows Server App Fabric 的详细信息，请参阅[Windows Server App Fabric 文档](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)。 完成以下步骤之前，请确保已安装 Windows Server App Fabric。  为此，请打开 Internet Information services (inetmgr.exe)，请单击服务器名称**连接**查看，单击站点，然后单击**Default Web Site**。 在屏幕的右侧，你应该看到名为一节**App Fabric**。 如果您看不到这一部分（它位于右侧窗格的顶部），则表示您还未安装 App Fabric。 有关安装 Windows Server App Fabric 的详细信息请参阅[安装 Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136)。  
   
 ### <a name="creating-a-simple-workflow-service"></a>创建简单工作流服务  
   
@@ -51,37 +53,37 @@ ms.lasthandoff: 12/22/2017
   
      ![应用程序结构配置监视选项卡](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration 监视")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]配置在 App Fabric 中的工作流服务监视请参阅[配置使用 App Fabric 监视](http://go.microsoft.com/fwlink/?LinkId=193153)。  
+     有关配置工作流服务的详细信息中 App Fabric 监视请参阅[配置使用 App Fabric 监视](http://go.microsoft.com/fwlink/?LinkId=193153)。  
   
 6.  选择**工作流持久性**选项卡。这样，您可以将应用程序配置为使用 App Fabric 的默认暂留提供程序，如下面的屏幕快照所示。  
   
-     ![应用程序结构配置 &#45;持久性](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration 持久性")  
+     ![应用程序结构配置&#45;持久性](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration 持久性")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]在 Windows Server App Fabric 中配置工作流持久性请参阅[App Fabric 中配置工作流持久性](http://go.microsoft.com/fwlink/?LinkId=193148)。  
+     有关在 Windows Server App Fabric 中配置工作流持久性的详细信息请参阅[App Fabric 中配置工作流持久性](http://go.microsoft.com/fwlink/?LinkId=193148)。  
   
 7.  选择**工作流主机管理**选项卡。这样，您可以指定何时应卸载和暂留空闲的工作流服务实例，如下面的屏幕快照所示。  
   
      ![应用程序结构配置工作流主机管理](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-management.gif "AppFabricConfiguration 管理")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]配置工作流主机管理，请参阅[App Fabric 中配置工作流主机管理](http://go.microsoft.com/fwlink/?LinkId=193151)。  
+     有关工作流主机管理配置的详细信息请参阅[App Fabric 中配置工作流主机管理](http://go.microsoft.com/fwlink/?LinkId=193151)。  
   
 8.  选择**自动启动**选项卡。这样，您可以为应用程序中的工作流服务指定自动启动设置，如下面的屏幕快照所示。  
   
-     ![应用程序结构自动 &#45; 开始配置](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     ![应用程序结构自动&#45;启动配置](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]配置自动启动请参阅[使用 App Fabric 配置的自动启动](http://go.microsoft.com/fwlink/?LinkId=193150)。  
+     有关配置自动启动的详细信息请参阅[使用 App Fabric 配置的自动启动](http://go.microsoft.com/fwlink/?LinkId=193150)。  
   
 9. 选择**限制**选项卡。这样，您可以为工作流服务配置限制设置，如下面的屏幕快照所示。  
   
      ![应用程序结构配置限制](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]请参阅配置限制[配置限制使用 App Fabric](http://go.microsoft.com/fwlink/?LinkId=193149)。  
+     有关配置限制的详细信息请参阅[配置限制使用 App Fabric](http://go.microsoft.com/fwlink/?LinkId=193149)。  
   
 10. 选择**安全**选项卡。这样，您可以为应用程序配置安全设置，如下面的屏幕快照所示。  
   
      ![应用程序结构安全性配置](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-security.gif "AppFabricConfiguration 安全")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]请参阅使用 Windows Server App Fabric 中配置安全性[使用 App Fabric 中配置安全性](http://go.microsoft.com/fwlink/?LinkId=193152)。  
+     有关使用 Windows Server App Fabric 中配置安全性的详细信息请参阅[使用 App Fabric 中配置安全性](http://go.microsoft.com/fwlink/?LinkId=193152)。  
   
 ### <a name="using-windows-server-app-fabric"></a>使用 Windows Server App Fabric  
   

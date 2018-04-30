@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="denial-of-service"></a>拒绝服务
 当系统处于过载状态而无法处理消息或者处理速度极慢时，会出现拒绝服务的情况。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="auditing-event-log-can-be-filled"></a>可以填充审核事件日志  
  如果恶意用户了解到审核功能处于启用状态，则该攻击者可能会发送导致写入审核项的无效消息。 如果以这种方式填充审核日志，则审核系统会出现故障。  
   
- 为了缓解此问题，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，然后使用事件查看器的属性来控制审核行为。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用事件查看器查看和管理事件日志，请参阅[事件查看器](http://go.microsoft.com/fwlink/?LinkId=186123)。 有关详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
+ 为了缓解此问题，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，然后使用事件查看器的属性来控制审核行为。 有关使用事件查看器查看和管理事件日志的详细信息，请参阅[事件查看器](http://go.microsoft.com/fwlink/?LinkId=186123)。 有关详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>无效的 IAuthorizationPolicy 实现可能会致使服务挂起  
  如果在有错误的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 接口实现上调用 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 方法，则可能会致使服务挂起。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 04/28/2018
   
  若要缓解此问题，引用要通过使用更精确的搜索条件上使用的确切证书[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。 例如，使用 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 选项并按照证书的唯一指纹（哈希）来指定证书。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 自动注册功能，请参阅[Windows Server 2003 中的证书自动注册](http://go.microsoft.com/fwlink/?LinkId=95166)。  
+ 有关自动注册功能的详细信息，请参阅[Windows Server 2003 中的证书自动注册](http://go.microsoft.com/fwlink/?LinkId=95166)。  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>用于授权的多个备选主题名称中的最后一个  
  在极少数情况下，如果 X.509 证书包含多个备选主题名称，并且您使用备选主题名称进行授权，则授权可能会失败。  
@@ -88,7 +88,7 @@ ms.lasthandoff: 04/28/2018
  当客户端由某个服务成功进行身份验证，而且与此服务建立了安全会话时，此服务会记住该会话，直到该会话被客户端取消或者过期。 对于建立的每个会话都将进行计数，直到达到与该服务的同时活动会话的最大数目限制。 达到该限制时，尝试与该服务创建新会话的客户端将被拒绝，直到一个或多个活动会话过期或者被客户端取消。 一个客户端可以与某个服务建立多个会话，对于每个会话都将计数，直到达到相应的限制。  
   
 > [!NOTE]
->  在使用有状态会话时，上述内容并不适用。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 有状态会话，请参阅[如何： 为安全会话创建安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+>  在使用有状态会话时，上述内容并不适用。 有状态会话有关的详细信息，请参阅[如何： 为安全会话创建安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
  若要缓解此问题，请通过设置 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 属性来设置活动会话的最大数目限制以及会话的最长生存期限制。  
   

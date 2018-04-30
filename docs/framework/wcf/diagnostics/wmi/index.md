@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2e01418844db4197cea2f9292f72b9089e77a596
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 进行诊断
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 通过 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供程序在运行时公开服务的检测数据。  
   
 ## <a name="enabling-wmi"></a>启用 WMI  
- WMI 是 Microsoft 基于 Web 的企业管理 (WBEM) 标准的实现。 [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] WMI SDK，请参阅[Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)。 WBEM 是有关应用程序如何向外部管理工具公开管理规范的行业标准。  
+ WMI 是 Microsoft 基于 Web 的企业管理 (WBEM) 标准的实现。 有关 WMI SDK 的详细信息，请参阅[Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)。 WBEM 是有关应用程序如何向外部管理工具公开管理规范的行业标准。  
   
  WMI 提供程序是一个在运行时通过 WBEM 兼容接口公开规范的组件。 它由一组包含属性/值对的 WMI 对象组成。 这些对可以是多个简单类型。 管理工具可以在运行时通过接口连接至服务。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 公开服务的特性，如地址、绑定、行为和侦听器。  
   

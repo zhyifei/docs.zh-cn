@@ -21,16 +21,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e731fd31f2a247466891abbf75d67a61dba7f286
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3c023b27ace10919c51aa13e2635040d9d5b812b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="working-with-certificates"></a>使用证书
 对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和证书来完成常见任务。  
   
- 简言之，数字证书是属于*公钥基础结构*(PKI)，这是数字证书、 证书颁发机构和其他注册机构验证和身份验证的有效性的系统使用公钥加密对电子事务所涉及的每一方。 证书颁发机构颁发证书，每个证书都有包含数据，如的字段的一组*主题*（向其颁发证书的实体） 生效日期 （当证书是否有效），颁发者 (颁发证书的实体），和公钥。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，这些属性中的每一个都作为 <xref:System.IdentityModel.Claims.Claim> 进行处理，而每个声明又进一步分为两种类型：标识和权限。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] X.509 证书，请查看[X.509 公钥证书](http://go.microsoft.com/fwlink/?LinkId=209952)[!INCLUDE[crabout](../../../../includes/crabout-md.md)]声明和 WCF 中的授权参见[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 实施 PKI，请参阅[Windows Server 2008 R2-证书服务](http://go.microsoft.com/fwlink/?LinkId=209949)。  
+ 简言之，数字证书是属于*公钥基础结构*(PKI)，这是数字证书、 证书颁发机构和其他注册机构验证和身份验证的有效性的系统使用公钥加密对电子事务所涉及的每一方。 证书颁发机构颁发证书，每个证书都有包含数据，如的字段的一组*主题*（向其颁发证书的实体） 生效日期 （当证书是否有效），颁发者 (颁发证书的实体），和公钥。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，这些属性中的每一个都作为 <xref:System.IdentityModel.Claims.Claim> 进行处理，而每个声明又进一步分为两种类型：标识和权限。 有关 X.509 证书，请查看[X.509 公钥证书](http://go.microsoft.com/fwlink/?LinkId=209952)有关声明和授权的详细信息，请在 WCF 请[管理声明和使用标识模型授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). 有关实施 PKI 的详细信息，请参阅[Windows Server 2008 R2-证书服务](http://go.microsoft.com/fwlink/?LinkId=209949)。  
   
  证书的主要功能是向其他各方验证证书所有者的身份。 证书包含*公钥*的所有者，所有者保留的私钥。 公钥可用来对发送给证书所有者的消息进行加密。 只有所有者才能访问私钥，因此，只有所有者才能解密这些消息。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **个人**。 此存储区用于放置与计算机用户关联的证书。 通常，此存储区用于存放在受信任的根证书颁发机构存储区中找到的证书颁发机构证书之一所颁发的证书。 此外，此处还可存放应用程序自行颁发并且信任的证书。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 证书存储，请参阅[证书存储](http://go.microsoft.com/fwlink/?LinkId=88912)。  
+ 有关证书存储的详细信息，请参阅[证书存储](http://go.microsoft.com/fwlink/?LinkId=88912)。  
   
 ### <a name="selecting-a-store"></a>选择存储区  
  证书存储位置的选择，取决于服务或客户端运行的方式和时间。 适用以下一般规则：  
@@ -65,12 +65,12 @@ ms.lasthandoff: 04/28/2018
 -   如果服务或客户端是在用户帐户下运行的应用程序，则使用**当前用户**存储。  
   
 ### <a name="accessing-stores"></a>访问存储区  
- 与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 在创建由 Internet 信息服务 (IIS) 承载的服务时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 进程运行在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帐户下。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 若要了解如何修改使用 WinHttpCertConfig.exe 工具的访问列表，请参阅[如何： 创建开发期间使用的临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 向 IIS 使用客户端证书，请参阅[如何通过使用客户端证书进行身份验证 ASP.NET Web 应用程序中调用 Web 服务](http://go.microsoft.com/fwlink/?LinkId=88914)。  
+ 与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 在创建由 Internet 信息服务 (IIS) 承载的服务时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 进程运行在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帐户下。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 若要了解如何修改使用 WinHttpCertConfig.exe 工具的访问列表，请参阅[如何： 创建开发期间使用的临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 有关向 IIS 使用客户端证书的详细信息，请参阅[如何通过使用客户端证书进行身份验证 ASP.NET Web 应用程序中调用 Web 服务](http://go.microsoft.com/fwlink/?LinkId=88914)。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>链信任和证书颁发机构  
  证书是在某种层次结构中创建的，其中每个证书都链接到颁发该证书的 CA。 该链接指向 CA 的证书。 CA 的证书又链接到颁发原始 CA 证书的 CA。 这一过程不断重复，直至到达根 CA 的证书。 根 CA 的证书将以继承方式受到信任。  
   
- 数字证书用于对实体进行身份验证利用此层次结构，也称为*信任链*。 你可以查看通过双击任何证书，再单击 MMC 管理单元中使用的任何证书链**证书路径**选项卡。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]导入的证书颁发机构证书链，请参阅[如何： 指定用于验证签名的证书颁发机构证书链](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
+ 数字证书用于对实体进行身份验证利用此层次结构，也称为*信任链*。 你可以查看通过双击任何证书，再单击 MMC 管理单元中使用的任何证书链**证书路径**选项卡。有关导入的证书颁发机构证书链的详细信息，请参阅[如何： 指定证书颁发机构证书链用于验证签名](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
   
 > [!NOTE]
 >  通过将颁发机构的证书放入受信任的根颁发机构证书存储区中，可以向任何颁发机构指定受信任的根颁发机构。  
@@ -159,9 +159,9 @@ ms.lasthandoff: 04/28/2018
  此外，通过配置也可以设置证书。 如果要创建的服务，在指定凭据，包括证书， [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)。 在编程客户端时，在指定证书[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)。  
   
 ## <a name="mapping-a-certificate-to-a-user-account"></a>将证书映射到用户帐户  
- IIS 和 Active Directory 的一个功能是将证书映射到 Windows 用户帐户。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 该功能，请参阅[将证书映射到用户帐户](http://go.microsoft.com/fwlink/?LinkId=88917)。  
+ IIS 和 Active Directory 的一个功能是将证书映射到 Windows 用户帐户。 有关功能的详细信息，请参阅[将证书映射到用户帐户](http://go.microsoft.com/fwlink/?LinkId=88917)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用 Active Directory 映射，请参阅[映射客户端证书与目录服务映射](http://go.microsoft.com/fwlink/?LinkId=88918)。  
+ 有关使用 Active Directory 映射的详细信息，请参阅[映射客户端证书与目录服务映射](http://go.microsoft.com/fwlink/?LinkId=88918)。  
   
  如果启用了这一功能，则可以将 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 类的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 属性设置为 `true`。 在配置中，你可以设置`mapClientCertificateToWindowsAccount`属性[\<身份验证 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)元素`true`，如下面的代码中所示。  
   

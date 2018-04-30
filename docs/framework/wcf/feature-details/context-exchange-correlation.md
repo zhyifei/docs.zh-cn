@@ -1,24 +1,26 @@
 ---
-title: "上下文交换相关"
-ms.custom: 
+title: 上下文交换相关
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee22feab20e2c96f3e708a277f9048f739213520
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bf84dfce2b2164d78bf07f840d66d6089a16ff23
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="context-exchange-correlation"></a>上下文交换相关
 上下文相关基于中所述的上下文交换机制[.NET 上下文交换协议规范](http://go.microsoft.com/fwlink/?LinkId=166059)。 上下文相关使用已知的上下文头或 cookie 将消息与正确的实例相关。 若要使用上下文相关，必须在提供给 <xref:System.ServiceModel.BasicHttpContextBinding> 的终结点上使用诸如 <xref:System.ServiceModel.WSHttpContextBinding>、<xref:System.ServiceModel.NetTcpContextBinding> 或 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 之类的基于上下文的绑定。 此主题说明如何在工作流服务中将上下文相关用于消息传送活动。  
@@ -54,7 +56,7 @@ SendReply ReplyToStartOrder = new SendReply
 ```  
   
 > [!NOTE]
->  在此示例中，实际上使用了两种类型的相关：上下文相关和请求-答复相关。 使用上下文相关是为了将来自客户端的调用路由到正确的实例。 请求-答复相关由 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 活动一起使用，以实现这些活动建模的双向操作。 在此示例中，显式配置仅上下文相关，与<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>对使用由的隐式提供的默认请求-答复相关<xref:System.ServiceModel.Activities.CorrelationHandle>管理<xref:System.ServiceModel.Activities.WorkflowServiceHost>。 使用时**ReceiveAndSendReply**显式配置在工作流设计器中，请求-答复相关的活动模板。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]请求-答复相关和隐式相关句柄管理，请参阅[请求-答复](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)和[相关概述](../../../../docs/framework/wcf/feature-details/correlation-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]**ReceiveAndSendReply**活动模板，请参阅[ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer)。  
+>  在此示例中，实际上使用了两种类型的相关：上下文相关和请求-答复相关。 使用上下文相关是为了将来自客户端的调用路由到正确的实例。 请求-答复相关由 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 活动一起使用，以实现这些活动建模的双向操作。 在此示例中，显式配置仅上下文相关，与<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>对使用由的隐式提供的默认请求-答复相关<xref:System.ServiceModel.Activities.CorrelationHandle>管理<xref:System.ServiceModel.Activities.WorkflowServiceHost>。 使用时**ReceiveAndSendReply**显式配置在工作流设计器中，请求-答复相关的活动模板。 有关请求-答复相关和隐式相关句柄管理的详细信息，请参阅[请求-答复](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)和[相关概述](../../../../docs/framework/wcf/feature-details/correlation-overview.md)。 有关详细信息**ReceiveAndSendReply**活动模板，请参阅[ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer)。  
   
  工作流服务中的后续 <xref:System.ServiceModel.Activities.Receive> 活动可以引用由上一示例中的 <xref:System.ServiceModel.Activities.CorrelationHandle> 初始化的 <xref:System.ServiceModel.Activities.SendReply>。  
   
@@ -109,6 +111,6 @@ Send request2 = new Send
 };  
 ```  
   
- 请注意，在上面这些示例中，已显式配置上下文相关。 如果客户端工作流也未在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中承载，除非活动都包含在一个 <xref:System.ServiceModel.Activities.CorrelationScope> 活动中，否则必须显式配置相关。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]上下文相关，请参阅[NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)示例。  
+ 请注意，在上面这些示例中，已显式配置上下文相关。 如果客户端工作流也未在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中承载，除非活动都包含在一个 <xref:System.ServiceModel.Activities.CorrelationScope> 活动中，否则必须显式配置相关。 有关上下文相关的详细信息，请参阅[NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)示例。  
   
  如果调用工作流服务的客户端不是工作流，则只要客户端将首次调用工作流服务时返回的上下文显式传递回去，它仍然可以进行重复调用。 默认情况下，通过添加服务而生成的代理在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 存储中引用此上下文，并传递此上下文。

@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 754915d5ba596b5121c47be3533ee679b4f9594b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 998920e4c1d7e0524da1c9843378e92517f4ee96
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>系统提供的互操作性绑定支持的 Web 服务协议
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以与 Web 服务进行互操作，它支持一组称为 Web 服务规范的规范。 为了简化互操作性最佳做法的服务配置，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 引入三个可互操作的系统提供绑定：<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>、<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 和 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>。 对于与结构化信息标准促进组织 (OASIS) 标准的互操作性，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包括一个可互操作的系统提供绑定：<xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 对于元数据发布，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]包括两个可互操作的系统提供绑定： [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)和[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主题列出系统提供的可互操作绑定支持的规范。  
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/28/2018
  下表说明系统提供的可互操作元数据绑定（由 <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> 类公开）支持的协议。  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)绑定支持以下协议。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用此绑定，请参阅[发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
+ [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)绑定支持以下协议。 有关使用此绑定的详细信息，请参阅[发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
   
 |类别|协议|规范和用法|  
 |--------------|--------------|-----------------------------|  
@@ -112,7 +112,7 @@ ms.lasthandoff: 04/28/2018
 |元数据|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 WS-MetadataExchange 以检索 XML 架构、WSDL 和 WS-Policy。|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)支持以下协议。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用此绑定，请参阅[发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
+ [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)支持以下协议。 有关使用此绑定的详细信息，请参阅[发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
   
 |类别|协议|规范和用法|  
 |--------------|--------------|-----------------------------|  

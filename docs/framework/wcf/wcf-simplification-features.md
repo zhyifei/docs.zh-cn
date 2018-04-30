@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e465713fb33d438ef6e4a508fc5192ce731b46b5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cdb36a39f74b9884f2002d0e56524d453efb705f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-simplification-features"></a>WCF 简化功能
 本主题讨论可使编写 WCF 应用程序更简单的新功能。  
@@ -96,17 +96,17 @@ ms.lasthandoff: 04/28/2018
   
 -   向 WCF 添加了对异步流的新支持。 若要启用异步流，请将 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> 终结点行为添加到服务主机，并将其 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> 属性设置为 `true`。  在服务将经过流处理的消息发送到多个正在缓慢读取的客户端时，这样做有益于可伸缩性。 WCF 不再阻止每个客户端的一个线程，并将释放该线程以便为另一个客户端提供服务。  
   
--   消除了服务由 IIS 承载时缓冲消息方面的限制。 在以前版本的 WCF 中，在收到关于使用流消息传输的 IIS 承载服务的消息时，ASP.NET 会在将该消息发送到 WCF 之前缓冲整个消息。 这将导致消耗大量内存。 在 .NET 4.5 中已取消这种缓冲，现在，IIS 承载的 WCF 服务可以在收到整个消息之前开始处理传入流，从而实现真正的流处理。 这样，WCF 就可立即对消息作出响应，并可以提高性能。 此外，您不必再指定 `maxRequestLength` 的值，即 ASP.NET 对传入请求的大小限制。 如果设置了此属性，则会将其忽略。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] `maxRequestLength` 请参阅[ \<httpRuntime > 配置元素](http://go.microsoft.com/fwlink/?LinkId=223344)。 将仍需要配置 maxAllowedContentLength，有关详细信息，请参阅[IIS 请求限制](http://go.microsoft.com/fwlink/?LinkId=225908)。  
+-   消除了服务由 IIS 承载时缓冲消息方面的限制。 在以前版本的 WCF 中，在收到关于使用流消息传输的 IIS 承载服务的消息时，ASP.NET 会在将该消息发送到 WCF 之前缓冲整个消息。 这将导致消耗大量内存。 在 .NET 4.5 中已取消这种缓冲，现在，IIS 承载的 WCF 服务可以在收到整个消息之前开始处理传入流，从而实现真正的流处理。 这样，WCF 就可立即对消息作出响应，并可以提高性能。 此外，您不必再指定 `maxRequestLength` 的值，即 ASP.NET 对传入请求的大小限制。 如果设置了此属性，则会将其忽略。 有关详细信息`maxRequestLength`请参阅[ \<httpRuntime > 配置元素](http://go.microsoft.com/fwlink/?LinkId=223344)。 将仍需要配置 maxAllowedContentLength，有关详细信息，请参阅[IIS 请求限制](http://go.microsoft.com/fwlink/?LinkId=225908)。  
   
 ## <a name="new-transport-default-values"></a>新传输默认值  
  下表描述了已更改的设置以及可在何处找到其他信息。  
   
 |属性|On|新默认值|详细信息|  
 |--------------|--------|-----------------|----------------------|  
-|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|此属性确定 TCP 连接可使用 .Net Framing 协议对自身进行身份验证的时间。 客户端需要发送一些初始数据，然后服务器才有足够的信息来执行身份验证。 此超时被有意设置为小于 ReceiveTimeout（10 分钟），这样，未经身份验证的恶意客户端就无法长时间保持绑到该服务器的连接。 默认值为 30 秒。 [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
-|listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 处理器数目|此套接字级别的属性描述了要排队的“挂起接受”请求的数目。 如果侦听积压工作队列已满，则会拒绝新的套接字请求。 [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
+|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|此属性确定 TCP 连接可使用 .Net Framing 协议对自身进行身份验证的时间。 客户端需要发送一些初始数据，然后服务器才有足够的信息来执行身份验证。 此超时被有意设置为小于 ReceiveTimeout（10 分钟），这样，未经身份验证的恶意客户端就无法长时间保持绑到该服务器的连接。 默认值为 30 秒。 有关详细信息 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
+|listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 处理器数目|此套接字级别的属性描述了要排队的“挂起接受”请求的数目。 如果侦听积压工作 (backlog) 队列已满，则会拒绝新的套接字请求。 有关详细信息 <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 传输处理器的数目<br /><br /> 4 \* smsvchost.exe 的处理器数目|此属性会限制服务器可具有的等待侦听器的通道数目。 当 MaxPendingAccepts 太低时，会有一个较小的时间间隔，在此间隔内，所有等待的通道都已开始服务连接，但没有新通道已开始侦听。 连接可在此间隔内到达，但将会因服务器上没有等待它的内容而失败。 可通过将 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> 属性设置为较大的数字来配置此属性。 有关详细信息，请参阅<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>和[配置 Net.TCP 端口共享服务](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
-|maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 处理器数目|此属性控制一个传输已接受但 ServiceModel 调度程序尚未选取的连接的数目。 若要设置此值，请对该绑定使用 `MaxConnections` 或对该绑定元素使用 `maxOutboundConnectionsPerEndpoint`。 [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
+|maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 处理器数目|此属性控制一个传输已接受但 ServiceModel 调度程序尚未选取的连接的数目。 若要设置此值，请对该绑定使用 `MaxConnections` 或对该绑定元素使用 `maxOutboundConnectionsPerEndpoint`。 有关详细信息 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
 |receiveTimeout|SMSvcHost.exe|30 秒|此属性为读取 TCP 组帧数据并执行来自基础连接的连接调度指定超时值。 此超时值用于对该时间段施加一个限制，SMSvcHost.exe 服务将在该时段内保持从传入连接读取前导码数据。 有关详细信息，请参阅[配置 Net.TCP Port Sharing Service](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)。|  
   
 > [!NOTE]

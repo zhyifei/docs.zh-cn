@@ -1,28 +1,28 @@
 ---
-title: "Windows Communication Foundation 中的队列"
-ms.custom: 
+title: Windows Communication Foundation 中的队列
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的队列
 本节中的主题讨论 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 队列支持。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通过利用 Microsoft 消息队列（以前称为 MSMQ）作为传输机制来提供队列支持，并支持以下方案：  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/19/2018
   
 -   断开连接的操作。 在高延迟网络或有限可用性网络上通信（例如，在移动设备中）时，发送、接收和处理操作可能会断开连接。 队列允许这些操作继续执行，即使终结点断开连接也是如此。 重新建立连接后，队列将消息转发到接收应用程序。  
   
- 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序中使用队列功能，可以使用其中一个标准绑定；或者，如果其中一个标准绑定不符合要求，也可以创建自定义绑定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]相关的标准绑定以及如何选择一个，请参阅[如何： 使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建自定义绑定，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序中使用队列功能，可以使用其中一个标准绑定；或者，如果其中一个标准绑定不符合要求，也可以创建自定义绑定。 有关相关的标准绑定以及如何选择其中一个的详细信息，请参阅[如何： 使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

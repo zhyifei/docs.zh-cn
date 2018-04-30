@@ -1,34 +1,36 @@
 ---
-title: "打印帮助主题"
-ms.custom: 
+title: 打印帮助主题
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0865e0f2d28ec44647882c030050638144fa715d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="printing-how-to-topics"></a>打印帮助主题
 此部分中的主题演示如何使用打印和打印系统管理功能附带[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以及新[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]打印路径。  
   
 ## <a name="in-this-section"></a>本节内容  
  [调用打印对话框](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
- 有关 XAML 标记来声明说明[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]打印对话框对象和使用代码来调用中的对话框[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]应用程序。  
+ 有关 XAML 标记来声明说明[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]打印对话框对象和使用代码来调用从在 Windows Presentation Foundation (WPF) 应用程序的对话框。  
   
  [克隆打印机](../../../../docs/framework/wpf/advanced/how-to-clone-a-printer.md)  
  说明如何使用与现有相同的属性中安装第二个打印队列打印队列。  

@@ -1,12 +1,13 @@
 ---
-title: "Drawing 对象概述"
-ms.custom: 
+title: Drawing 对象概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ImageDrawing objects [WPF]
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9b77b47a3f3ade27f2ba86304b1868a8d388482
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3672e4b1deacd8fb50a5318270854daae9c74761
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="drawing-objects-overview"></a>Drawing 对象概述
 本主题介绍<xref:System.Windows.Media.Drawing>对象，并说明如何使用它们来有效地绘制形状、 位图、 文本和媒体。 使用<xref:System.Windows.Media.Drawing>对象时创建剪贴画，绘制与<xref:System.Windows.Media.DrawingBrush>，或使用<xref:System.Windows.Media.Visual>对象。  
@@ -36,17 +38,17 @@ ms.lasthandoff: 01/19/2018
 ## <a name="what-is-a-drawing-object"></a>什么是 Drawing 对象？  
  A<xref:System.Windows.Media.Drawing>对象描述可见内容，如形状、 位图、 视频或文本行。 不同类型的图形描述不同类型的内容。 下面是不同类型图形对象的列表。  
   
--   <xref:System.Windows.Media.GeometryDrawing>– 绘制一个形状。  
+-   <xref:System.Windows.Media.GeometryDrawing> – 绘制一个形状。  
   
--   <xref:System.Windows.Media.ImageDrawing>– 绘制图像。  
+-   <xref:System.Windows.Media.ImageDrawing> – 绘制图像。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>– 绘制文本。  
+-   <xref:System.Windows.Media.GlyphRunDrawing> – 绘制文本。  
   
--   <xref:System.Windows.Media.VideoDrawing>– 播放音频或视频文件。  
+-   <xref:System.Windows.Media.VideoDrawing> – 播放音频或视频文件。  
   
--   <xref:System.Windows.Media.DrawingGroup>– 绘制其他绘制项。 使用图形组将其他图形合并到单个复合图形。  
+-   <xref:System.Windows.Media.DrawingGroup> – 绘制其他绘制项。 使用图形组将其他图形合并到单个复合图形。  
   
- <xref:System.Windows.Media.Drawing>对象是通用;有多种方法可以使用<xref:System.Windows.Media.Drawing>对象。  
+ <xref:System.Windows.Media.Drawing> 对象是通用;有多种方法可以使用<xref:System.Windows.Media.Drawing>对象。  
   
 -   您可以通过将它显示为图像<xref:System.Windows.Media.DrawingImage>和<xref:System.Windows.Controls.Image>控件。  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/19/2018
   
  以下示例将在一个矩形的 (75,75) 处绘制一个 100 x 100 像素的图像。 下图显示<xref:System.Windows.Media.ImageDrawing>创建的示例。 添加了一条灰色边框来显示的边界<xref:System.Windows.Media.ImageDrawing>。  
   
- ![100 通过 100 ImageDrawing 绘制在 &#40; 75，75 &#41;] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
+ ![100 通过 100 ImageDrawing 绘制在&#40;75，75&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
 100 x 100 的 ImageDrawing  
   
  [!code-csharp[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawing100by100inline)]
@@ -180,7 +182,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
  [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
   
- A<xref:System.Windows.Media.DrawingGroup>还可用于将不透明蒙板、 转换、 位图效果和其他操作应用于其内容。 <xref:System.Windows.Media.DrawingGroup>按以下顺序应用操作： <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>， <xref:System.Windows.Media.DrawingGroup.Opacity%2A>， <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>， <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>， <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>，，然后<xref:System.Windows.Media.DrawingGroup.Transform%2A>。  
+ A<xref:System.Windows.Media.DrawingGroup>还可用于将不透明蒙板、 转换、 位图效果和其他操作应用于其内容。 <xref:System.Windows.Media.DrawingGroup> 按以下顺序应用操作： <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>， <xref:System.Windows.Media.DrawingGroup.Opacity%2A>， <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>， <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>， <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>，，然后<xref:System.Windows.Media.DrawingGroup.Transform%2A>。  
   
  下图显示在其中顺序<xref:System.Windows.Media.DrawingGroup>将操作应用。  
   
@@ -232,7 +234,7 @@ DrawingGroup 操作的顺序
 ## <a name="drawingcontext-objects"></a>DrawingContext 对象  
  <xref:System.Windows.Media.DrawingContext>类使你能够填充<xref:System.Windows.Media.Visual>或<xref:System.Windows.Media.Drawing>可视化内容。 此类的很多较低级别图形对象使用<xref:System.Windows.Media.DrawingContext>因为它非常高效地说明了图形的内容。  
   
- 尽管<xref:System.Windows.Media.DrawingContext>绘图方法看上去相似的绘图方法<xref:System.Drawing.Graphics?displayProperty=nameWithType>类型，它们是却大相径庭。 <xref:System.Windows.Media.DrawingContext>是与一个保留的模式图形系统一起使用，而<xref:System.Drawing.Graphics?displayProperty=nameWithType>与即时模式图形系统使用类型。 当你使用<xref:System.Windows.Media.DrawingContext>对象的绘图命令时，实际上存储一组呈现指令 (尽管具体的存储机制取决于提供的对象的类型<xref:System.Windows.Media.DrawingContext>)，将更高版本使用图形系统; 您都不绘制到实时屏幕。 有关 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 图形系统工作原理的详细信息，请参阅 [WPF 图形绘制概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)。  
+ 尽管<xref:System.Windows.Media.DrawingContext>绘图方法看上去相似的绘图方法<xref:System.Drawing.Graphics?displayProperty=nameWithType>类型，它们是却大相径庭。 <xref:System.Windows.Media.DrawingContext> 是与一个保留的模式图形系统一起使用，而<xref:System.Drawing.Graphics?displayProperty=nameWithType>与即时模式图形系统使用类型。 当你使用<xref:System.Windows.Media.DrawingContext>对象的绘图命令时，实际上存储一组呈现指令 (尽管具体的存储机制取决于提供的对象的类型<xref:System.Windows.Media.DrawingContext>)，将更高版本使用图形系统; 您都不绘制到实时屏幕。 有关 Windows Presentation Foundation (WPF) 图形系统的工作原理的详细信息，请参阅[WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)。  
   
  你永远不会直接实例化<xref:System.Windows.Media.DrawingContext>; 但是，可以获取绘制上下文从某些方法，如<xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType>和<xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>。  
   

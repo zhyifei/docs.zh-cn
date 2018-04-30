@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 885faab43b620cf347c1780d445a72361cb5cdb4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8fc08c442813991b425b2bed3a0047fc5efa0d83
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF 的委派和模拟
 模拟 是一种常用技术，服务可使用该技术限制客户端对服务域资源的访问。 服务域资源可以是计算机资源，如本地文件（模拟），也可以是其他计算机上的资源，如文件共享（委托）。 有关示例应用程序，请参见 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 有关如何使用模拟的示例，请参阅 [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/28/2018
  服务可以模拟客户端的范围取决于服务帐户在尝试模拟时拥有的权限、使用的模拟类型和客户端可能允许的模拟范围。  
   
 > [!NOTE]
->  当客户端和服务在同一计算机上运行，并且客户端在系统帐户（例如 `Local System` 或 `Network Service`）下运行时，如果安全会话是使用有状态安全上下文令牌建立的，则不能模拟客户端。 Windows 窗体或控制台应用程序通常在当前登录的帐户下运行，因此默认情况下可以模拟该帐户。 但是，如果客户端为 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 页并且该页承载在 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 或 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]中，则客户端默认情况下运行在 `Network Service` 帐户下。 默认情况下，系统提供的所有支持安全会话的绑定都使用无状态安全上下文令牌 (SCT)。 但如果客户端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 页，并且使用了具有有状态 SCT 的安全会话，则不能模拟该客户端。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 安全会话中使用有状态 Sct，请参阅[如何： 为安全会话创建安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+>  当客户端和服务在同一计算机上运行，并且客户端在系统帐户（例如 `Local System` 或 `Network Service`）下运行时，如果安全会话是使用有状态安全上下文令牌建立的，则不能模拟客户端。 Windows 窗体或控制台应用程序通常在当前登录的帐户下运行，因此默认情况下可以模拟该帐户。 但是，如果客户端为 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 页并且该页承载在 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 或 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]中，则客户端默认情况下运行在 `Network Service` 帐户下。 默认情况下，系统提供的所有支持安全会话的绑定都使用无状态安全上下文令牌 (SCT)。 但如果客户端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 页，并且使用了具有有状态 SCT 的安全会话，则不能模拟该客户端。 有关安全会话中使用有状态 Sct 的详细信息，请参阅[如何： 为安全会话创建安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>服务方法中的模拟：声明性模型  
  大多数模拟方案都涉及在调用方上下文中执行服务方法。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了一种模拟功能，此功能通过允许用户在 <xref:System.ServiceModel.OperationBehaviorAttribute> 特性中指定模拟要求，使此操作易于执行。 例如，在下面的代码中， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构在执行 `Hello` 方法之前模拟调用方。 只有当本机资源的访问控制列表 (ACL) 允许调用方访问权限时，在 `Hello` 方法内访问该本机资源的任何尝试才能成功。 若要启用模拟，请将 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 属性设置为 <xref:System.ServiceModel.ImpersonationOption> 枚举值之一（<xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>），如下面的示例所示。  

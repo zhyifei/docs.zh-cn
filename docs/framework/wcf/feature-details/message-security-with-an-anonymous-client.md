@@ -1,30 +1,32 @@
 ---
-title: "匿名客户端的消息安全"
-ms.custom: 
+title: 匿名客户端的消息安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e8c10c9d4838a2b6c9d3a021d22d2dfd4dc865da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 25c184d32c6cedf893c79f15d77ba93ec5e9461e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-with-an-anonymous-client"></a>匿名客户端的消息安全
-下面的方案演示通过 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 消息安全进行保护的客户端和服务。 设计目标是使用消息安全而非传输安全，以便将来可支持更加丰富的基于声明的模型。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用丰富的声明进行授权，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
+下面的方案演示通过 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 消息安全进行保护的客户端和服务。 设计目标是使用消息安全而非传输安全，以便将来可支持更加丰富的基于声明的模型。 有关使用丰富的声明进行授权的详细信息，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
   
  有关示例应用程序，请参阅[匿名消息安全](../../../../docs/framework/wcf/samples/message-security-anonymous.md)。  
   

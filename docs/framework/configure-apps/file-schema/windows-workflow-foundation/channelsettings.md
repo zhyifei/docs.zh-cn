@@ -1,30 +1,31 @@
 ---
 title: '&lt;channelSettings&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 94a4457f-f43f-458d-a47e-2d11103ee75e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f045665565a29f0248bf2e05bd1b285d59d6c375
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e65802b5f132668b6861dff7699ca212f62277d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltchannelsettingsgt"></a>&lt;channelSettings&gt;
 指定通道缓存的设置。  
   
-\<系统。ServiceModel >  
+\<system.ServiceModel>  
 \<行为 >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<行为 >  
 \<sendMessageChannelCache >  
 \<channelSettings >  
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
  默认情况下，在 <xref:System.ServiceModel.WorkflowServiceHost> 承载的工作流中，由 <xref:System.ServiceModel.Activities.Send> 消息传递活动使用的缓存可在 <xref:System.ServiceModel.WorkflowServiceHost> 中的所有工作流实例中共享（主机级缓存）。 对于未由 <xref:System.ServiceModel.WorkflowServiceHost> 承载的客户端工作流，缓存仅对该工作流实例可用（实例级缓存）。 对于已在配置中定义了终结点的工作流中的所有 Send 活动，默认情况下为禁用缓存。  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]如何更改默认的缓存共享级别和缓存的通道工厂和通道缓存的设置，请参阅[更改发送活动的缓存共享级别](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。  
+ 有关如何更改默认的缓存共享级别和通道工厂和通道缓存的缓存设置的详细信息，请参阅[更改发送活动的缓存共享级别](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。  
   
 ## <a name="example"></a>示例  
  在承载的工作流服务中，可以在应用程序配置文件中指定工厂缓存和通道缓存设置。 为此，应添加一个包含工厂和通道缓存的缓存设置的服务行为，并将此服务行为添加到您的服务中。 下面的示例演示配置文件中包含的内容**MyChannelCacheBehavior**使用自定义工厂缓存和通道缓存设置服务行为。 此服务行为添加到服务通过**behaviorConfiguarion**属性。  

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15fa4372f4a110577f055d0e3c22977d0f5417bb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d4cc95041e96f5f4bb2d6b50e150c99a57404208
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>任务 2：承载工作流设计器
 本主题描述用于托管的实例的过程[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]Windows Presentation Foundation (WPF) 应用程序中。  
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/26/2018
         }  
         ```  
   
-         [!INCLUDE[crabout](../../../includes/crabout-md.md)] 注册活动设计器，请参阅[如何： 创建自定义活动设计器](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)。  
+         有关注册活动设计器的详细信息，请参阅[如何： 创建自定义活动设计器](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)。  
   
     5.  在 `MainWindow` 类构造函数中，添加对上文声明的方法的调用，以便注册设计器支持元数据，并创建 <xref:System.Activities.Presentation.WorkflowDesigner>。  
   

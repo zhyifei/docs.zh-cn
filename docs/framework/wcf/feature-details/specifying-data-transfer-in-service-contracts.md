@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fc64ff14c321bd2053b0a97b3cf1ac075b02e973
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 852519dc1edc499511652f4027f4cd4eed6eef98
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>在服务协定中指定数据传输
 可以将 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 视为一种消息传递基础结构。 服务操作可以接收消息、处理消息以及发送消息。 消息是使用操作协定描述的。 例如，请考虑以下协定。  
@@ -453,7 +453,7 @@ End Class
  可以执行许多操作来自定义序列化数据的方式。  
   
 ### <a name="changing-server-serialization-settings"></a>更改服务器序列化设置  
- 当使用默认 <xref:System.Runtime.Serialization.DataContractSerializer> 时，可以通过将 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性应用于服务，控制服务上的序列化过程的某些方面。 具体说来，您可以使用 `MaxItemsInObjectGraph` 属性设置相应的配额，以便对 <xref:System.Runtime.Serialization.DataContractSerializer> 反序列化的最大对象数进行限制。 可以使用 `IgnoreExtensionDataObject` 属性关闭往返过程版本管理功能。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 配额，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 往返，请参阅[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ 当使用默认 <xref:System.Runtime.Serialization.DataContractSerializer> 时，可以通过将 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性应用于服务，控制服务上的序列化过程的某些方面。 具体说来，您可以使用 `MaxItemsInObjectGraph` 属性设置相应的配额，以便对 <xref:System.Runtime.Serialization.DataContractSerializer> 反序列化的最大对象数进行限制。 可以使用 `IgnoreExtensionDataObject` 属性关闭往返过程版本管理功能。 有关配额的详细信息，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。 有关往返过程的详细信息，请参阅[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -585,7 +585,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 3.  在打开服务主机或创建客户端通道之前，移除现有的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行为并插入在前面的步骤中创建的自定义派生类。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 高级序列化概念，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
+ 有关高级序列化概念的详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  

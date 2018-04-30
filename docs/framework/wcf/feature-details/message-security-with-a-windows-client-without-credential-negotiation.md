@@ -1,27 +1,29 @@
 ---
-title: "没有凭据协商的 Windows 客户端的消息安全"
-ms.custom: 
+title: 没有凭据协商的 Windows 客户端的消息安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f069ff100a2fba1f6bace1d9a81ed69314261eae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>没有凭据协商的 Windows 客户端的消息安全
 下面的方案演示了由 Kerberos 协议保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务。  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  使用任意 Active Directory 域帐户运行服务。 在这种情况下，您需要为该域帐户建立一个 SPN。 执行此操作的一种方法是使用 Setspn.exe 实用工具。 为该服务的帐户创建 SPN 后，配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以通过服务的元数据 (WSDL) 将该 SPN 发布到服务的客户端。 通过为公开的终结点设置终结点标识（或通过应用程序配置文件或代码）也可完成此操作。 下面的示例以编程方式发布标识。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Spn、 Kerberos 协议和 Active Directory，请参阅[技术补充面向 Windows 的 Kerberos](http://go.microsoft.com/fwlink/?LinkId=88330)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]终结点标识，请参阅[SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
+ 有关 Spn 的详细信息、 Kerberos 协议和 Active Directory，请参阅[技术补充面向 Windows 的 Kerberos](http://go.microsoft.com/fwlink/?LinkId=88330)。 有关终结点标识的详细信息，请参阅[SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
   
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
@@ -117,9 +119,9 @@ ms.lasthandoff: 12/22/2017
  下面的代码将配置客户端。 安全模式设置为 Message，客户端凭据类型设置为 Windows。 请注意，<xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 和 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 属性设置为 `false`。  
   
 > [!NOTE]
->  若要使用没有协商的 Windows 凭据类型，则必须在开始与服务进行通信前使用服务的帐户 SPN 配置客户端。 客户端使用 SPN 获取 Kerberos 令牌对与服务的通信进行身份验证和保护。 下面的示例演示如何使用服务的 SPN 配置客户端。 如果你使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)若要生成客户端，服务的 SPN 将自动传播到客户端从服务的元数据 (WSDL)，如果服务的元数据包含该信息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何将服务配置为在服务的元数据中包含服务的 SPN 的更多信息，请参见本主题后面的“服务”部分。  
+>  若要使用没有协商的 Windows 凭据类型，则必须在开始与服务进行通信前使用服务的帐户 SPN 配置客户端。 客户端使用 SPN 获取 Kerberos 令牌对与服务的通信进行身份验证和保护。 下面的示例演示如何使用服务的 SPN 配置客户端。 如果你使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)若要生成客户端，服务的 SPN 将自动传播到客户端从服务的元数据 (WSDL)，如果服务的元数据包含该信息。 有关如何配置服务以在服务的元数据中包含服务的 SPN 的详细信息，请参阅本主题中后面的"服务"部分。  
 >   
->  有关 Spn、 Kerberos 和 Active Directory 的详细信息，请参阅[技术补充面向 Windows 的 Kerberos](http://go.microsoft.com/fwlink/?LinkId=88330)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]终结点标识，请参阅[SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)主题。  
+>  有关 Spn、 Kerberos 和 Active Directory 的详细信息，请参阅[技术补充面向 Windows 的 Kerberos](http://go.microsoft.com/fwlink/?LinkId=88330)。 有关终结点标识的详细信息，请参阅[SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)主题。  
   
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  

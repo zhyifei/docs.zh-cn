@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: fad7970711435cdabecd883f5e1dc44c64bd2c93
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d30769c854dad04a333509f64169a257fc461ad0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>如何：使用传输安全和消息凭据
-同时使用传输凭据和消息凭据来保护服务，可以发挥 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的传输安全模式和消息安全模式的优点。 总之，传输层安全提供了完整性和机密性，而消息层安全则提供了严格的传输安全机制所不可能提供的多种凭据。 本主题演示使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 绑定通过消息凭据实现传输的基本步骤。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 设置安全模式，请参阅[如何： 将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
+同时使用传输凭据和消息凭据来保护服务，可以发挥 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的传输安全模式和消息安全模式的优点。 总之，传输层安全提供了完整性和机密性，而消息层安全则提供了严格的传输安全机制所不可能提供的多种凭据。 本主题演示使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 绑定通过消息凭据实现传输的基本步骤。 有关设置安全模式的详细信息，请参阅[如何： 将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
   
  在将安全模式设置为 `TransportWithMessageCredential` 时，传输会确定实际提供传输级安全的机制。 对于 HTTP，该机制为基于 HTTP 的安全套接字层 (SSL)（SSL over HTPP，或 HTTPS）；对于 TCP，该机制为 SSL over TCP 或 Windows。  
   

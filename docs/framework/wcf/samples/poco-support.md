@@ -1,27 +1,29 @@
 ---
-title: "POCO 支持"
-ms.custom: 
+title: POCO 支持
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c471a6726d8f7e621d666e014b2363c088e2b0e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c67b39c8d3c48281eb0ec9c360de7eaff1cfad6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="poco-support"></a>POCO 支持
-此示例演示对未标记的类型的序列化支持，未标记的类型是指尚未应用序列化属性的类型，有时称作“简单传统 CLR 对象 (POCO)”类型。 <xref:System.Runtime.Serialization.DataContractSerializer> 为所有具有默认构造函数的公共未标记类型推断一个数据协定。 数据协定允许您在服务中传入和传出结构化数据。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]未标记的类型，请参阅[可序列化类型](../../../../docs/framework/wcf/feature-details/serializable-types.md)。  
+此示例演示对未标记的类型的序列化支持，未标记的类型是指尚未应用序列化属性的类型，有时称作“简单传统 CLR 对象 (POCO)”类型。 <xref:System.Runtime.Serialization.DataContractSerializer> 为所有具有默认构造函数的公共未标记类型推断一个数据协定。 数据协定允许您在服务中传入和传出结构化数据。 有关未标记的类型的详细信息，请参阅[可序列化类型](../../../../docs/framework/wcf/feature-details/serializable-types.md)。  
   
  此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，但使用而不是基元数值类型的复数。 它也是类似于[基本数据协定](../../../../docs/framework/wcf/samples/basic-data-contract.md)示例，只不过<xref:System.Runtime.Serialization.DataContractAttribute>和<xref:System.Runtime.Serialization.DataMemberAttribute>不使用属性。  
   

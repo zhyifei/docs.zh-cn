@@ -1,24 +1,26 @@
 ---
-title: "通过 Discovery 客户端通道使用自定义绑定"
-ms.custom: 
+title: 通过 Discovery 客户端通道使用自定义绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 85c88132b1fa610b2bcb63635ae553ef47bb359c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a5c80a257efb5f6006a0cf6394a1079cf92d2471
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>通过 Discovery 客户端通道使用自定义绑定
 通过 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 使用自定义绑定时，必须定义创建 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 实例的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。  
@@ -54,7 +56,7 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用 discovery 客户端通道，请参阅[使用 Discovery 客户端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)。 有关完整的代码示例，请参阅[发现绑定元素示例](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
+ 有关使用 discovery 客户端通道的详细信息，请参阅[使用 Discovery 客户端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)。 有关完整的代码示例，请参阅[发现绑定元素示例](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
   
 ## <a name="see-also"></a>请参阅  
  [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  

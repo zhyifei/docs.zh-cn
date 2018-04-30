@@ -1,23 +1,24 @@
 ---
-title: "内置配置"
-ms.custom: 
+title: 内置配置
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ddf9b316074a69a88f08a0d7f519533f2db0002
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0c414f34da0cd4bbf484c0a439f8832f02a5ae58
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="built-in-configuration"></a>内置配置
 此示例演示了 SQL 工作流实例存储的使用和配置。 SQL 工作流实例存储是基于 SQL 的实例存储实现。 它允许实例将状态保存到 SQL Server 或 SQL Server Express 数据库中以及从中加载状态。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
  计数工作流是通过工作流服务主机自承载的。 程序的 `Main` 方法创建一个可承载计数工作流的工作流服务主机的实例。 它定义计数工作流可以到达的终结点。 之后，它定义一个 SQL 工作流实例存储行为，用于配置 SQL 工作流实例存储。 接下来，程序创建一个客户端，调用计数工作流的启动方法。  
   
- 在程序启动之后，计数器自动开始计数。 请注意，加载该实例并配置 SQL 工作流实例存储可能需要花费几秒钟的时间。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]工作流实例存储，请参阅[SQL 工作流实例存储](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。  
+ 在程序启动之后，计数器自动开始计数。 请注意，加载该实例并配置 SQL 工作流实例存储可能需要花费几秒钟的时间。 有关工作流实例存储的详细信息，请参阅[SQL 工作流实例存储](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。  
   
  此示例由两部分组成：  
   

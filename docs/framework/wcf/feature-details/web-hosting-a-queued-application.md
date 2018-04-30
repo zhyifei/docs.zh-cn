@@ -1,31 +1,33 @@
 ---
-title: "承载排队应用程序的 Web"
-ms.custom: 
+title: 承载排队应用程序的 Web
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a12348c3c49c29812530bc568bb5873ec53f7eb5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>承载排队应用程序的 Web
 Windows 进程激活服务 (WAS) 管理辅助进程的激活和生存期，该辅助进程包含承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的应用程序。 WAS 进程模型通过移除对 HTTP 的依赖性使 HTTP 服务器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 进程模型通用化。 这就使 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务可以在宿主环境中同时使用 HTTP 和非 HTTP 协议（如 net.msmq 和 msmq.formatname），该宿主环境支持基于消息的激活以及在给定计算机上提供承载大量应用程序的能力。  
   
  WAS 中包含一项消息队列 (MSMQ) 激活服务，当有一条或多条消息放入某排队的应用程序所使用的某个队列时，该服务将激活该应用程序。 MSMQ 激活服务是默认情况下自动启动的 NT 服务。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WAS 和优点，请参阅[在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ，请参阅[队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ 有关 WAS 和及其优点的详细信息，请参阅[在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。 有关 MSMQ 的详细信息，请参阅[队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
   
 ## <a name="queue-addressing-in-was"></a>WAS 中的队列寻址  
  WAS 应用程序具有统一资源标识符 (URI) 地址。 应用程序地址有两部分：基本 URI 前缀和应用程序特定的相关地址（路径）。 这两部分连接在一起时可提供应用程序的外部地址。 基本 URI 前缀从网站绑定进行构造并且适用于站点，例如，"net.msmq: //localhost"、"msmq.formatname 或"net.tcp: //localhost"下的所有应用程序。 通过拍摄应用程序特定的路径片段然后构造应用程序地址 (如"/ applicationOne") 并将其追加到基 URI 前缀，以形成完整的应用程序 URI，例如，"net.msmq: //localhost/applicationone"。  

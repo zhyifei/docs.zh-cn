@@ -1,27 +1,29 @@
 ---
 title: AspNetRouteIntegration
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf4f96116e8a4e687e7818796fa4b95e1b9b171a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d248030c4b32bd7725cf9c6fbbb829a19f7845
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-此示例演示如何使用 ASP.NET 路由来承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 服务。 [基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)示例演示了这种情况下的自承载的版本，并讨论深度中的服务实现。 本主题重点介绍 ASP.NET 集成功能。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET 路由的更多信息，请参见 <xref:System.Web.Routing>。  
+此示例演示如何使用 ASP.NET 路由来承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 服务。 [基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)示例演示了这种情况下的自承载的版本，并讨论深度中的服务实现。 本主题重点介绍 ASP.NET 集成功能。 有关 ASP.NET 路由的详细信息，请参阅<xref:System.Web.Routing>。  
   
 ## <a name="sample-details"></a>示例详细信息  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务以面向资源的/REST 方式公开客户集合。 与基于 SOAP 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务一样，该服务可使用 .svc 文件在 ASP.NET 中承载。 但是，这通常不是 HTTP 方案的首选，因为它要求该服务的 URL 中有 .svc。 此外，它还需要与服务库一起部署 .svc 文件。 通过使用 ASP.NET 路由承载该服务，可以避免这些限制，如此示例中所演示。  

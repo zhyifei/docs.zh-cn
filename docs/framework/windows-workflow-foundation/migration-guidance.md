@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 11a4b1d6665e0198f8c9afc0209e9fb09cc599ad
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 2e6b42296d6780d93d5835b89732d114de6d8aca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="migration-guidance"></a>迁移指南
 在[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，Microsoft 将发布的第二个主版本的 Windows Workflow Foundation (WF)。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 发布在 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中（包含 System.Workflow.* 命名空间中的类型；目前称之为 WF3）并在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中得到增强。 WF3 也是属于[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，但伴随新工作流技术 (System.Activities。 中的类型\*命名空间; 称之为 WF4)。 考虑何时采用 WF4 时，重要的是首先要认识到您来控制时间安排。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/27/2018
  [WF 指南： 状态机](http://go.microsoft.com/fwlink/?LinkId=153855)  
  讨论在缺乏状态机活动下的 WF4 控制流建模。  
   
- 请注意，本指南仅适用于面向 .NET Framework 4 的工作流项目。 状态机工作流在 .NET 4.0.1 中是通过发布 Platform Update 1 加入的，是 .NET Framework 4.5 的组成部分。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 状态机工作流在.NET 4.0.1-4.0.3 和.NET Framework 4.5，请参阅[Microsoft.NET Framework 4 功能更新 4.0.1](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc)和[状态机工作流](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。  
+ 请注意，本指南仅适用于面向 .NET Framework 4 的工作流项目。 状态机工作流在 .NET 4.0.1 中是通过发布 Platform Update 1 加入的，是 .NET Framework 4.5 的组成部分。 有关在.NET 4.0.1-4.0.3 和.NET Framework 4.5 中的状态机工作流的详细信息请参阅[Microsoft.NET Framework 4 功能更新 4.0.1](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc)和[状态机工作流](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。  
   
  [WF 迁移实用手册： 自定义活动](http://go.microsoft.com/fwlink/?LinkId=153856)  
  提供用于在 WF4 上重新设计 WF3 自定义活动的示例和说明。  

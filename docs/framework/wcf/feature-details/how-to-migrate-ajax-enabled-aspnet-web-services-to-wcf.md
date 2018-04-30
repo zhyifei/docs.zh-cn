@@ -1,24 +1,26 @@
 ---
-title: "如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF"
-ms.custom: 
+title: 如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ca8dbbffdb48c33160e3c4f7495057b9ce60c13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2b728e6283a2f038b7e5ef4c535da41f4eb8ebef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF
 本主题概述将基本 ASP.NET AJAX 服务迁移到等效的启用了 AJAX 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的过程。 它演示了如何为 ASP.NET AJAX 服务创建在功能上等效的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 版本。 随后可以并行使用这两项服务，也可以用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务替换 ASP.NET AJAX 服务。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
  从本主题概述的过程中得到的代码将在过程后面的示例中提供。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]公开[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务通过支持 AJAX 的终结点，请参阅[如何： 使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主题。  
+ 有关详细信息公开有关[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务通过支持 AJAX 的终结点，请参阅[如何： 使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主题。  
   
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>创建并测试 ASP.NET Web 服务应用程序  
   
@@ -206,7 +208,7 @@ d.Add("two", 2);
   
 -   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 将其表示为 [{"Key":"one","Value":1},{"Key":"two","Value":2}]  
   
--   {"one": 1，"two": 2} ASP.NET ajax<xref:System.Web.Script.Serialization.JavaScriptSerializer>  
+-   {"one": 1，"two": 2} ASP.NET ajax <xref:System.Web.Script.Serialization.JavaScriptSerializer>  
   
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 可以处理其中的键类型不是字符串的词典，而 <xref:System.Web.Script.Serialization.JavaScriptSerializer> 则无法处理，在这一方面前者的功能更为强大。 但后者与 JSON 的兼容性更好。  
   
@@ -215,11 +217,11 @@ d.Add("two", 2);
 |差异类别|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|  
 |-----------------------------|--------------------------------|---------------------------------------|  
 |将空缓冲区（新 byte[0]）反序列化为 <xref:System.Object>（或 <xref:System.Uri>，或某些其他类）。|SerializationException|null|  
-|<xref:System.DBNull.Value> 的序列化|{}（或 {"__type":"#System"}）|null|  
+|<xref:System.DBNull.Value> 的序列化|{} (或 {"__type":"#System"})|null|  
 |[Serializable] 类型的私有成员的序列化。|已序列化|未序列化|  
 |<xref:System.Runtime.Serialization.ISerializable> 类型的公共属性的序列化。|未序列化|已序列化|  
 |JSON 的“扩展”|遵循 JSON 规范，该规范要求为对象成员名称加上引号 ({"a":"hello"})。|支持不带引号的对象成员名称 ({a:"hello"})。|  
-|<xref:System.DateTime> 协调世界时 (UTC)|不支持格式"\\/Date(123456789U)\\/"或"\\/Date\\(\d+ (&#124; (\\+\\-[\d{4}]))？\\)\\\\/)".|支持格式"\\/Date(123456789U)\\/"和"\\/Date\\(\d+ (&#124; (\\+\\-[\d{4}]))？\\)\\ \\/)"作为 DateTime 值。|  
+|<xref:System.DateTime> 协调世界时 (UTC)|不支持格式"\\/Date(123456789U)\\/"或"\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))？\\)\\\\/)".|支持格式"\\/Date(123456789U)\\/"和"\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))？\\)\\ \\/)"作为 DateTime 值。|  
 |词典的表示形式|数组 KeyValuePair\<K，V >，处理不是字符串的密钥类型。|作为实际的 JSON 对象 - 但仅处理是字符串的键类型。|  
 |转义符|始终应带有转义正斜杠 (/)；切勿使用非转义的无效 JSON 字符，例如“\n”。|对于 DateTime 值，带有转义正斜杠 (/)。|  
   

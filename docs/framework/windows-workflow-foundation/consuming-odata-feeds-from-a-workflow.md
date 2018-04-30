@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09eb22c0c4bfaf549bd18cccae0c84957e730aa6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ce7d7812eadea2d9472a62bd007d2eca6ae07891
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>使用工作流中的 OData 源
 WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的一个组件，可以使用此组件创建一些服务，利用开放式数据协议 (OData) 来借助具象状态传输 (REST) 语义通过 Web 或 Intranet 公开和使用数据。 OData 将数据公开为可通过 URI 进行寻址的资源。 如果任一应用程序可发送 HTTP 请求并处理数据服务返回的 OData 源，则该应用程序可与基于 OData 的数据服务进行交互。 此外，WCF 数据服务包括多个客户端库，当从 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序使用 OData 源时，这些客户端库会提供更丰富的编程体验。 本主题概述如何在使用/未使用客户端库的情况下，在工作流中使用 OData 源。  
@@ -78,7 +78,7 @@ WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
  下面的示例定义了一个 `ListCustomers` 活动。 此活动将查询示例 Northwind 数据服务并返回一个包含 Northwind 数据库中的所有客户的 `List<Customer>` 。 异步工作由 `GetCustomers` 方法执行。 此方法将查询所有客户的服务，然后将这些客户复制到 `List<Customer>`。 然后，此方法会检查结果是否已分页。 如果结果已分页，则此方法会查询下一页结果的服务，再将这些结果添加到列表，然后继续操作直到检索到所有客户数据。  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] WCF 数据服务中的分页，请参阅。 [如何：加载分页结果（WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193452)。  
+>  有关 WCF Data Services 中的分页的详细信息，请参阅。 [如何：加载分页结果（WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193452)。  
   
  在添加所有客户后，将返回该列表。 活动的 `GetCustomers` 重写中指定了 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 方法。 由于该方法具有一个返回值，因此将创建一个 `Func<string, List<Customer>>` 来指定该方法。  
   
@@ -143,4 +143,4 @@ WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
  **\<k rel ="edit"title ="Order"href="Orders(10643)"/ >**  
  **\<k rel ="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer"**  
  **类型 ="应用程序/atom + xml; 键入 = entry"title ="客户"href ="订单 （10643）/客户"/ >**  
-**...** 本示例提供了一个方法，工作流应用程序作者可通过该方法使用从 OData 服务返回的原始数据。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 使用 URI 访问 WCF 数据服务的详细信息，请参阅 [访问数据服务资源（WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193397) 和 [OData：URI 约定](http://go.microsoft.com/fwlink/?LinkId=185564)。
+**...** 本示例提供了一个方法，工作流应用程序作者可通过该方法使用从 OData 服务返回的原始数据。 有关访问 WCF 数据服务使用 Uri 的详细信息，请参阅[访问数据服务资源 （WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193397)和[OData: URI 约定](http://go.microsoft.com/fwlink/?LinkId=185564)。

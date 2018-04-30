@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-versioning"></a>数据协定版本管理
 随着应用程序的发展，您也可能不得不更改服务使用的数据协定。 本主题说明如何管理数据协定的版本。 本主题介绍数据协定版本管理机制。 有关完整概述和版本管理指南，请参阅[最佳做法： 数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
@@ -125,7 +125,7 @@ ms.lasthandoff: 04/28/2018
  添加或移除枚举成员是重大更改。 更改枚举成员的名称是重大更改，除非使用 `EnumMemberAtttribute` 属性将其协定名称保持为与旧版本中的名称相同。 有关详细信息，请参阅[数据协定中的枚举类型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
   
 ## <a name="collections"></a>集合  
- 大多数集合更改是非重大更改，这是因为在数据协定模型中，大多数集合类型可以彼此互换。 但是，将非自定义集合更改为自定义集合是重大更改，反之亦然。 此外，更改集合的自定义设置（即，更改其数据协定名称和命名空间、重复元素名称、键元素名称以及值元素名称）也是重大更改。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 集合自定义项，请参阅[数据协定中的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
+ 大多数集合更改是非重大更改，这是因为在数据协定模型中，大多数集合类型可以彼此互换。 但是，将非自定义集合更改为自定义集合是重大更改，反之亦然。 此外，更改集合的自定义设置（即，更改其数据协定名称和命名空间、重复元素名称、键元素名称以及值元素名称）也是重大更改。 有关集合自定义的详细信息，请参阅[数据协定中的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
 更改集合内容的数据协定（例如，从整数列表更改为字符串列表）自然也是重大更改。  
   
 ## <a name="see-also"></a>请参阅  

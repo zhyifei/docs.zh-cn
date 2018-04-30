@@ -1,12 +1,13 @@
 ---
-title: "如何：使 X.509 证书可由 WCF 访问"
-ms.custom: 
+title: 如何：使 X.509 证书可由 WCF 访问
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b95ee7c28c67ff861dc401d1405306c78b9663de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 77ee21074b6f1bb5a2f5bd4ee653100d3534075d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>如何：使 X.509 证书可由 WCF 访问
 若要使 X.509 证书可由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 访问，应用程序代码必须指定证书存储区的名称和位置。 在某些情况下，进程标识必须具有对包含私钥的文件的访问权限，此私钥与 X.509 证书相关联。 若要获取与证书存储区中的 X.509 证书关联的私钥，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 必须有权这样做。 默认情况下，只有所有者和“系统”帐户才可以访问证书的私钥。  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
     3.  确定证书的私钥的计算机上位于使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具。  
   
-         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具需要证书存储名称、 证书存储位置和内容唯一标识该证书。 此工具接受将证书的主题名称或其指纹作为唯一标识符。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何确定证书的指纹，请参阅[如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
+         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具需要证书存储名称、 证书存储位置和内容唯一标识该证书。 此工具接受将证书的主题名称或其指纹作为唯一标识符。 有关如何确定证书的指纹的详细信息，请参阅[如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
   
          下面的代码示例使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具来确定的位置中的证书的私钥`My`将存储在`CurrentUser`指纹为`46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`。  
   

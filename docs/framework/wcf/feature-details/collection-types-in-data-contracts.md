@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>数据协定中的集合类型
  “集合”指特定类型的项的列表。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用数组或者其他各种类型（泛型列表、泛型 <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>）来表示此类列表。 例如，集合可以容纳给定客户的地址列表。 无论这些集合的实际类型是什么，这些集合都称为“列表集合” 。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/28/2018
   
  包含在集合中的类型必须是数据协定类型，或者是可序列化的。 有关详细信息，请参阅[类型受数据协定序列化程序](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 什么被视为有效集合，什么不被视为有效集合，以及如何序列化集合的更多信息，请参见本主题“高级集合规则”部分中有关序列化集合的信息。  
+ 有关新增功能和什么不被视为有效集合，以及如何序列化的集合的详细信息，请参阅本主题的"高级集合规则"部分中的序列化集合有关的信息。  
   
 ## <a name="interchangeable-collections"></a>可互换的集合  
  同一类型的所有列表集合均被视为具有相同的数据协定（除非它们是使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性自定义的，如本主题后面所述）。 因此，举例而言，下面的数据协定是等效的。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="customizing-collection-types"></a>自定义集合类型  
  您可以通过使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性来自定义集合类型，该属性具有几种用法。  
   
- 请注意，自定义集合类型会危害集合的可互换性，因此通常建议尽量避免应用此特性。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 此问题，请参见本主题后面的“高级集合规则”一节。  
+ 请注意，自定义集合类型会危害集合的可互换性，因此通常建议尽量避免应用此特性。 有关此问题的详细信息，请参阅本主题中后面的"高级集合规则"部分。  
   
 ### <a name="collection-data-contract-naming"></a>集合数据协定命名  
  如 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)中所述，命名集合类型的规则与命名常规数据协定类型的规则类似，但存在一些重要的区别：  
@@ -203,7 +203,7 @@ ms.lasthandoff: 04/28/2018
 </CountriesOrRegionsWithCapitals>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 字典集合的更多信息，请参见本主题后面部分中的“高级集合规则”一节。  
+ 字典集合有关的详细信息，请参阅本主题中后面的"高级集合规则"部分。  
   
 ## <a name="collections-and-known-types"></a>集合和已知类型  
  如果集合类型是以多态方式来代替其他集合或集合接口的，您不需要将这样的集合类型添加到已知类型中。 例如，如果您声明一个 <xref:System.Collections.IEnumerable> 类型的数据成员并将其用于发送 <xref:System.Collections.ArrayList>的一个实例，则无需将 <xref:System.Collections.ArrayList> 添加到已知类型。  
@@ -318,7 +318,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   允许组合集合类型（具有集合的集合）。 交错数组被视为集合的集合。 不支持多维数组。  
   
--   字节数组和 <xref:System.Xml.XmlNode> 数组是特殊的数组类型，将被视为基元，而不是集合。 序列化字节数组会产生单个包含一个 Base64 编码数据块的 XML 元素，而不是为每个字节都生成一个单独的元素。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何处理 <xref:System.Xml.XmlNode> 的数组，请参阅 [XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). 当然，这些特殊类型本身可以参与集合：字节数组的数组会产生多个 XML 元素，其中每个元素都包含一个 Base64 编码数据块。  
+-   字节数组和 <xref:System.Xml.XmlNode> 数组是特殊的数组类型，将被视为基元，而不是集合。 序列化字节数组会产生单个包含一个 Base64 编码数据块的 XML 元素，而不是为每个字节都生成一个单独的元素。 有关如何的详细信息的数组<xref:System.Xml.XmlNode>是处理，请参阅[XML 和 ADO.NET 数据协定中的类型](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。 当然，这些特殊类型本身可以参与集合：字节数组的数组会产生多个 XML 元素，其中每个元素都包含一个 Base64 编码数据块。  
   
 -   如果 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于集合类型，则该类型会被视为常规数据协定类型，而不是集合。  
   
@@ -361,7 +361,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   列表集合数据协定的默认名称如果未使用 Name 重写，则是“ArrayOf”字符串与集合中包含类型的数据协定名称的组合。 例如，某个整数泛型列表的数据协定名称是“ArrayOfint”。 请记住， `Object` 的数据协定名称是“anyType”，因此诸如 <xref:System.Collections.ArrayList> 这样的非泛型列表的数据协定名称是“ArrayOfanyType”。  
   
- 字典集合数据协定的默认名称如果未使用 `Name` 重写，则是“ArrayOfKeyValueOf”字符串与键类型的数据协定名称以及值类型的数据协定名称（按此顺序）的组合。 例如，String 和 Integer 的泛型字典的数据协定名称是“ArrayOfKeyValueOfstringint”。 此外，如果键或值类型不是基元类型，则键和值类型的数据协定命名空间的命名空间哈希将会追加到名称的末尾。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 哈希值命名空间，请参阅 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ 字典集合数据协定的默认名称如果未使用 `Name` 重写，则是“ArrayOfKeyValueOf”字符串与键类型的数据协定名称以及值类型的数据协定名称（按此顺序）的组合。 例如，String 和 Integer 的泛型字典的数据协定名称是“ArrayOfKeyValueOfstringint”。 此外，如果键或值类型不是基元类型，则键和值类型的数据协定命名空间的命名空间哈希将会追加到名称的末尾。 有关命名空间哈希值的详细信息，请参阅[数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
  每个字典集合数据协定都有一个表示字典中的一项的伴随数据协定。 除“ArrayOf”前缀外，它的名称与字典数据协定相同，并且命名空间也与字典数据协定相同。 例如，对于“ArrayOfKeyValueOfstringint”字典数据协定，“KeyValueofstringint”数据协定表示字典中的一项。 您可以使用 `ItemName` 属性来自定义该数据协定的名称，具体说明请见下一部分。  
   

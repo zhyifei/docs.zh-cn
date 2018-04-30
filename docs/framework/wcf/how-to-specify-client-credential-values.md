@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 856d33f88b55c35927998b15acc7bbf8ff1e9fe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>如何：指定客户端凭据值
 使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]，服务可以指定客户端如何向服务进行身份验证。 例如，服务可以规定客户端使用证书进行身份验证。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/28/2018
   
 3.  添加[ \<t i a l >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)元素[ \<c a t e >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)元素。  
   
-4.  将下列特性设置为适当的值：`storeLocation`、`storeName`、`x509FindType` 和 `findValue`，如下面的代码中所示。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 证书，请参阅[使用证书](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+4.  将下列特性设置为适当的值：`storeLocation`、`storeName`、`x509FindType` 和 `findValue`，如下面的代码中所示。 有关证书的详细信息，请参阅[使用证书](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
     ```xml  
     <behaviors>  

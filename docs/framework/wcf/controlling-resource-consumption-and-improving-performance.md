@@ -1,24 +1,26 @@
 ---
-title: "控制资源使用并提高性能"
-ms.custom: 
+title: 控制资源使用并提高性能
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8ae5edfb35ccaffecbfb4e960d3f4a46bad0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>控制资源使用并提高性能
 本主题介绍 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 体系结构的不同方面的不同属性，这些属性可控制资源使用并影响性能指标。  
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
  [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)可以通过从应用程序的已编译程序集生成必要的序列化代码提高这些应用程序的启动性能。 有关详细信息，请参阅[How to： 改善启动时间的 WCF 客户端应用程序使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。  
   
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>在 ASP.NET 下承载 WCF 服务时的性能问题  
- 当在 IIS 和 ASP.NET 下承载 WCF 服务时，IIS 和 ASP.NET 的配置设置可能会影响 WCF 服务的吞吐量和内存需求量。  [!INCLUDE[crabout](../../../includes/crabout-md.md)]ASP.NET 性能，请参阅[因而提高了 ASP.NET 性能](http://go.microsoft.com/fwlink/?LinkId=186462)。  可能具有意外结果的一种设置为 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>，该设置为 <xref:System.Web.Configuration.ProcessModelSection> 的属性。 如果应用程序具有固定量或少量的客户端，则将 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 设置为 2 可能会显著提高 CPU 利用率接近 100% 的多处理器计算机上的吞吐量。 这种性能上的提高是以增加内存使用为代价的，这可能会降低可伸缩性。  
+ 当在 IIS 和 ASP.NET 下承载 WCF 服务时，IIS 和 ASP.NET 的配置设置可能会影响 WCF 服务的吞吐量和内存需求量。  有关 ASP.NET 性能的详细信息，请参阅[因而提高了 ASP.NET 性能](http://go.microsoft.com/fwlink/?LinkId=186462)。  可能具有意外结果的一种设置为 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>，该设置为 <xref:System.Web.Configuration.ProcessModelSection> 的属性。 如果应用程序具有固定量或少量的客户端，则将 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 设置为 2 可能会显著提高 CPU 利用率接近 100% 的多处理器计算机上的吞吐量。 这种性能上的提高是以增加内存使用为代价的，这可能会降低可伸缩性。  
   
 ## <a name="see-also"></a>请参阅  
  [管理和诊断](../../../docs/framework/wcf/diagnostics/index.md)  

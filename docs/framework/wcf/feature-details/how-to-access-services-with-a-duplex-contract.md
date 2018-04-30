@@ -1,13 +1,13 @@
 ---
-title: "如何：使用双工协定访问服务"
-ms.custom: 
+title: 如何：使用双工协定访问服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 425d17fa34b61985ad3600f992e028e156f6adb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c80980ff5a5b1011c021bcaf0688747178ec5b9b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>如何：使用双工协定访问服务
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的一个功能是可以创建使用双工消息传递模式的服务。 此模式允许服务通过回调与客户端进行通信。 本主题演示在实现回调接口的客户端类中创建 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的步骤。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-access-a-duplex-service"></a>访问双工服务  
   
-1.  创建包含两个接口的服务。 第一个接口用于服务，第二个接口用于回调。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建双工服务，请参阅[如何： 创建双工协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。  
+1.  创建包含两个接口的服务。 第一个接口用于服务，第二个接口用于回调。 有关创建双工服务的详细信息，请参阅[如何： 创建双工协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。  
   
 2.  运行服务。  
   

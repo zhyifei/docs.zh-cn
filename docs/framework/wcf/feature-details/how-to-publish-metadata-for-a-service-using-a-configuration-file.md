@@ -1,24 +1,26 @@
 ---
-title: "如何：使用配置文件发布服务的元数据"
-ms.custom: 
+title: 如何：使用配置文件发布服务的元数据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42f70cd34f65d5393d79b8ace4f9eb704f309d0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d30031db590b424688cc0af6a573c1042099e64e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>如何：使用配置文件发布服务的元数据
 这是演示发布 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的元数据的两个帮助主题之一。 有两种方式可以指定服务应如何发布元数据：使用配置文件和使用代码。 本主题演示如何使用配置文件发布服务的元数据。  
@@ -26,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 > [!CAUTION]
 >  本主题演示如何以不安全的方式发布元数据。 任何客户端都可以检索服务的元数据。 如果您要求服务以安全方式发布元数据，请参阅[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]发布元数据在代码中，请参阅[如何： 发布元数据服务使用代码](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。 通过发布元数据，客户端可以使用 WS-Transfer GET 请求或使用 `?wsdl` 查询字符串的 HTTP/GET 来检索元数据。 若要确保代码能够工作，必须创建一个基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 为了简单起见，将在以下代码中提供一个基本的自承载服务。  
+ 有关在代码中发布元数据的详细信息，请参阅[如何： 发布元数据服务使用代码](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。 通过发布元数据，客户端可以使用 WS-Transfer GET 请求或使用 `?wsdl` 查询字符串的 HTTP/GET 来检索元数据。 若要确保代码能够工作，必须创建一个基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 为了简单起见，将在以下代码中提供一个基本的自承载服务。  
   
 ```csharp  
 using System;  
@@ -177,7 +179,7 @@ namespace Metadata.Samples
   
 9. 生成并运行控制台应用程序。  
   
-10. 使用 Internet Explorer 浏览服务的基址（本示例中的 http://localhost:8001/MetadataSample）并验证是否已打开元数据发布。 如果未显示上述内容，则结果页顶部会显示消息：“Metadata publishing for this service is currently disabled”（当前禁用服务的元数据发布）。  
+10. 使用 Internet Explorer 浏览到该服务的基址 (http://localhost:8001/MetadataSample在此示例中)，并验证是否已打开元数据发布。 如果未显示上述内容，则结果页顶部会显示消息：“Metadata publishing for this service is currently disabled”（当前禁用服务的元数据发布）。  
   
 ### <a name="to-use-default-endpoints"></a>使用默认终结点  
   
@@ -198,7 +200,7 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     由于该服务有一个 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 设置为 `httpGetEnabled` 的 `true`，因此该服务启用了发布元数据，但是由于未显式添加任何终结点，因此运行时添加默认终结点。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]默认终结点、 绑定和行为，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+     由于该服务有一个 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 设置为 `httpGetEnabled` 的 `true`，因此该服务启用了发布元数据，但是由于未显式添加任何终结点，因此运行时添加默认终结点。 有关默认终结点、 绑定和行为的详细信息，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的实现，以及发布服务的元数据的配置文件。  

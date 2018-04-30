@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e367c11b48e6f4034afb1f42ded3498d748848a7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="large-data-and-streaming"></a>大型数据和流
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是基于 XML 的通信基础结构。 因为 XML 数据通常编码中定义的标准文本格式[XML 1.0 规范](http://go.microsoft.com/fwlink/?LinkId=94838)的连接系统开发人员和架构师通常关心发送的消息的网络占用内存的情况 （或大小） 跨网络和基于文本的编码的 XML 又高效传输的二进制数据带来了特殊的挑战。  
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  因此，这种情况下仅限制最大传入消息大小是不够的。 要限制 `MaxBufferSize` 缓冲的内存量，必须使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 属性。 进行流处理时，将此属性设置为一个安全值（或保留为默认值）很重要。 例如，假设您的服务必须接收大至 4 GB 的文件，并将其存储在本地磁盘上。 另外，还假设您的内存存在一些约束，一次只能缓冲 64 KB 的数据。 这样，您应该将 `MaxReceivedMessageSize` 设置为 4 GB，将 `MaxBufferSize` 设置为 64 KB。 另外，在您的服务实现中，必须确保仅按 64 KB 大小的块从传入流中读取数据，并且在上一块写入到磁盘并从内存中丢弃之前，不读取下一块。  
   
- 另外很重要的一点是，务必了解此配额仅限制由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 执行的缓冲，而无法防止您在自己的服务或客户端实现中执行的任何缓冲。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 其他安全注意事项，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
+ 另外很重要的一点是，务必了解此配额仅限制由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 执行的缓冲，而无法防止您在自己的服务或客户端实现中执行的任何缓冲。 有关其他安全注意事项的详细信息，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
   
 > [!NOTE]
 >  使用缓冲传输还是流传输是在终结点本地决定的。 对于 HTTP 传输，传输模式不会通过连接传播，也不会传播到代理服务器和其他中间方。 设置传输模式不会反映在服务接口的说明中。 在对服务生成一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端后，必须为旨在与流传输一起使用的服务编辑配置文件，以设置此模式。 对于 TCP 和命名管道传输协议，该传输模式将作为策略断言传播。  

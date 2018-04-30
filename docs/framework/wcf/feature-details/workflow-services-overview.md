@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6eb5381438aa082eae8b4252bbd1cf343ba0ebf7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-services-overview"></a>工作流服务概述
-工作流服务是使用工作流实现的基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的服务。 工作流服务是使用消息传递活动发送和接收 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 消息的工作流。 .NET Framework 4.5 引入了多个消息传递活动，可用于从工作流中发送和接收消息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 消息传递活动以及如何使用它们来实现不同的消息交换模式，请参阅[消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。  
+工作流服务是使用工作流实现的基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的服务。 工作流服务是使用消息传递活动发送和接收 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 消息的工作流。 .NET Framework 4.5 引入了多个消息传递活动，可用于从工作流中发送和接收消息。 有关消息传送活动以及如何使用它们来实现不同的消息交换模式的详细信息，请参阅[消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。  
   
 ## <a name="benefits-of-using-workflow-services"></a>使用工作流服务的优势  
  随着应用程序的分布越来越广泛，各服务可负责调用其他服务来减轻工作负载。 作为异步操作实现这些调用会增加代码的复杂性。 错误处理需要处理异常和提供详细跟踪信息，从而进一步增加了这些形式的复杂性。 有些服务经常长时间运行，并且在等待输入时可能会占用宝贵的系统资源。 鉴于这些问题，分布式应用程序往往非常复杂，且难以编写和维护。 工作流很自然地表示异步工作的协调，特别是对外部服务的调用。 工作流也是表示长时间运行的业务流程的有效方式。 正是这些特性使得工作流成为了在分布式环境中生成服务的一笔宝贵财富。  

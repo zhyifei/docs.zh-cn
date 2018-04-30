@@ -1,23 +1,24 @@
 ---
-title: "为工作流中的取消行为进行建模"
-ms.custom: 
+title: 为工作流中的取消行为进行建模
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a3cb69e2e897e992a05a19325630ca9bb1ae3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e455bf4d74f77c6cd87301dc9a21f56117777ecf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>为工作流中的取消行为进行建模
 可以在工作流内部通过一个 <xref:System.Activities.Statements.Parallel> 活动（此活动在其 <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> 的计算结果为 `true` 时将取消不完整的分支）取消活动，也可以从工作流外部取消活动（如果主机调用 <xref:System.Activities.WorkflowApplication.Cancel%2A>）。 若要提供取消处理，工作流作者可以使用 <xref:System.Activities.Statements.CancellationScope> 活动和 <xref:System.Activities.Statements.CompensableActivity> 活动，也可以创建提供取消逻辑的自定义活动。 本主题概述了工作流中的取消。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/22/2017
  利用事务，应用程序可以在事务进程的任何部分中出现错误时中止（回滚）事务内执行的所有更改。 但并非所有可能需要取消或撤销的工作都适用于事务，如长时间运行的工作或未涉及事务性资源的工作。 如果工作流中发生后续失败，补偿将提供用于撤销之前完成的非事务性工作的模型。 取消将为工作流作者和活动作者提供用于处理未完成的非事务性工作的模型。 如果某个活动的执行过程尚未完成就被取消，则将调用此活动的取消逻辑（如果可用）。  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]事务和补偿，请参阅[事务](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)和[补偿](../../../docs/framework/windows-workflow-foundation/compensation.md)。  
+>  有关事务和补偿的详细信息，请参阅[事务](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)和[补偿](../../../docs/framework/windows-workflow-foundation/compensation.md)。  
   
 ## <a name="using-cancellationscope"></a>使用 CancellationScope  
  <xref:System.Activities.Statements.CancellationScope> 活动包含两个部分，这两个部分可包含的子活动为 <xref:System.Activities.Statements.CancellationScope.Body%2A> 和 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>。 <xref:System.Activities.Statements.CancellationScope.Body%2A> 用于放置构成活动逻辑的活动，<xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> 用于放置提供活动的取消逻辑的活动。 只能在某个活动尚未完成时取消此活动。 对于 <xref:System.Activities.Statements.CancellationScope> 活动，完成是指完成 <xref:System.Activities.Statements.CancellationScope.Body%2A> 中的活动。 如果安排了取消请求且 <xref:System.Activities.Statements.CancellationScope.Body%2A> 中的活动尚未完成，则将 <xref:System.Activities.Statements.CancellationScope> 标记为 <xref:System.Activities.ActivityInstanceState.Canceled>，并执行 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> 活动。  

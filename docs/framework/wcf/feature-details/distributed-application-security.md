@@ -1,32 +1,34 @@
 ---
-title: "分布式应用程序安全"
-ms.custom: 
+title: 分布式应用程序安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="distributed-application-security"></a>分布式应用程序安全
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全分为三个主要功能区域：传输安全、访问控制和审核。 传输安全提供完整性、保密性和身份验证。 传输安全由传送安全、消息安全或 `TransportWithMessageCredential` 实现。  
   
- 有关概述[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]消息安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]其他两条[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)和[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
+ 有关概述[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]消息安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 有关其他两个参数的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)和[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
   
 ## <a name="transfer-security-scenarios"></a>传输安全方案  
  使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 传输安全的常见方案包括：  
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  在证书凭据中，主题名称、主题备用名称或证书中的特定字段可用于表示已声明标识和/或功能。 凭据中的数据所有权证明的建立，是用关联私钥生成签名实现的。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]编程传输安全，并指定凭据，请参阅[绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)和[安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
+ 有关编程的详细信息传输安全性，以及指定凭据，请参阅[绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)和[安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
   
 ### <a name="transport-client-credential-types"></a>传送客户端凭据类型  
  下表列出了在创建使用传输安全的应用程序时可能使用的值。 在代码或绑定设置中，可以使用这些值。  

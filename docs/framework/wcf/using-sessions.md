@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-sessions"></a>使用会话
 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序中，“会话”  将一组消息相互关联，从而形成对话。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 会话与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序中提供的会话对象不同，它们支持不同的行为，并且可通过不同的方式进行控制。 本主题描述了会话在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序中启用的功能以及如何使用这些功能。  
@@ -144,7 +144,7 @@ ms.lasthandoff: 04/28/2018
   
  有关示例，请参阅 [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) 以及 [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 和 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 示例。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 客户端和会话，请参阅[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
+ 有关客户端和会话的详细信息，请参阅[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>会话与 InstanceContext 设置进行交互  
  协定中的 <xref:System.ServiceModel.SessionMode> 枚举与 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 属性之间存在交互，该属性可控制通道和特定服务对象之间的关联。 有关详细信息，请参阅[会话、 实例存储功能和并发](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)。  

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8a11ab534cbb643d17985670e202954313f5a068
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: de177180dc22fc3236924da691cf9b1f594519ce
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>如何：使用 WorkflowServiceHost 配置永久性
 本主题介绍如何使用配置文件配置 SQL 工作流实例存储功能，以便对 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中承载的工作流启用永久性。 使用 SQL 工作流实例存储功能之前，必须创建用于保存工作流实例的 SQL 数据库。 有关详细信息，请参阅[如何： 对工作流和工作流服务启用 SQL 持久性](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/28/2018
     </serviceBehaviors>  
     ```  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何配置 SQL 工作流实例存储，请参阅[如何： 对工作流和工作流服务启用 SQL 持久性](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 各项设置 <`sqlWorkflowInstanceStore`> 行为元素，请参阅[SQL 工作流实例存储](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。 Windows Server App Fabric 提供其自己的永久性存储。 有关详细信息，请参阅[Windows Server App Fabric 持久性](http://go.microsoft.com/fwlink/?LinkId=193121)。  
+     有关如何配置 SQL 工作流实例存储的详细信息，请参阅[如何： 对工作流和工作流服务启用 SQL 持久性](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。 有关各项设置的详细信息 <`sqlWorkflowInstanceStore`> 行为元素，请参阅[SQL 工作流实例存储](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。 Windows Server App Fabric 提供其自己的永久性存储。 有关详细信息，请参阅[Windows Server App Fabric 持久性](http://go.microsoft.com/fwlink/?LinkId=193121)。  
   
     > [!NOTE]
     >  上面的配置示例使用的是简化配置。 有关详细信息，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)  
@@ -65,7 +65,7 @@ ms.lasthandoff: 04/28/2018
     });  
     ```  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何配置 SQL 工作流实例存储，请参阅[如何： 对工作流和工作流服务启用 SQL 持久性](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 各项设置<xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>行为元素，请参阅[SQL 工作流实例存储](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。 Windows Server App Fabric 提供其自己的永久性存储。 有关详细信息，请参阅[Windows Server App Fabric 持久性](http://go.microsoft.com/fwlink/?LinkId=193121)。  
+     有关如何配置 SQL 工作流实例存储的详细信息，请参阅[如何： 对工作流和工作流服务启用 SQL 持久性](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。 有关各项设置的详细信息<xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>行为元素，请参阅[SQL 工作流实例存储](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。 Windows Server App Fabric 提供其自己的永久性存储。 有关详细信息，请参阅[Windows Server App Fabric 持久性](http://go.microsoft.com/fwlink/?LinkId=193121)。  
   
     > [!NOTE]
     >  上面的配置示例使用的是简化配置。 有关详细信息，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)  

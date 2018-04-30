@@ -1,13 +1,13 @@
 ---
-title: "使用 WCF 客户端访问服务"
-ms.custom: 
+title: 使用 WCF 客户端访问服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69352ba5c12267f5075ae38c5bdcc0665b3fe050
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 客户端访问服务
 创建服务之后，下一步是创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理。 客户端应用程序使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理与服务进行通信。 客户端应用程序通常导入服务的元数据来生成可用来调用该服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代码。  
@@ -61,7 +61,7 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>  
 ```  
   
- 如果仅提供了一个文件名，则该文件名是输出文件的名称。 如果提供了两个文件名，则第一个文件是输入配置文件，其内容将与生成的配置合并，然后写出到第二个文件中。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]配置，请参阅[配置服务的绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。  
+ 如果仅提供了一个文件名，则该文件名是输出文件的名称。 如果提供了两个文件名，则第一个文件是输入配置文件，其内容将与生成的配置合并，然后写出到第二个文件中。 有关配置的详细信息，请参阅[配置服务的绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。  
   
 > [!IMPORTANT]
 >  与任何未受保护的网络请求一样，未受保护的元数据请求也会带来一定的风险：如果您不能确定您正在与其进行通信的终结点身份属实，那么您检索的信息有可能是来自于恶意服务的元数据。  
@@ -194,7 +194,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
   
 -   <xref:System.ServiceModel.CommunicationObjectAbortedException>: 套接字连接已中止。 这可能是由于处理消息时出错或远程主机超过接收超时或者潜在的网络资源问题导致的。  
   
- 当发生这些类型的异常时，解决问题的最佳方式是在服务端启用跟踪并确定服务端发生了何种异常。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]跟踪，请参阅[跟踪](../../../docs/framework/wcf/diagnostics/tracing/index.md)和[解决应用程序中使用跟踪](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。  
+ 当发生这些类型的异常时，解决问题的最佳方式是在服务端启用跟踪并确定服务端发生了何种异常。 有关跟踪的详细信息，请参阅[跟踪](../../../docs/framework/wcf/diagnostics/tracing/index.md)和[解决应用程序中使用跟踪](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  

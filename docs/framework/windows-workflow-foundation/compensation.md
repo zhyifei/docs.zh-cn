@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 861e0c9eb4e9afa5f9924160efed428d565bac4e
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 2ed51d14c56358e283d6c014f036a8aff73d2bfe
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="compensation"></a>补偿
 补偿中 Windows Workflow Foundation (WF) 是依据以前可撤消或补偿 （后跟应用程序定义的逻辑） 已完成的工作的机制发生后续失败时。 本节介绍如何在工作流中使用补偿。  
@@ -27,7 +27,7 @@ ms.lasthandoff: 04/27/2018
  通过事务可以将多个操作合并为单个工作单元。 使用事务时，如果事务进程中任何部分出现错误，则您的应用程序可以中止（回滚）在事务内执行的所有更改。 但是，如果工作长时间运行，使用事务可能不合适。 例如，一个作为工作流实现的差旅计划应用程序。 该工作流的步骤可能包含预订航班、等待经理批准，然后支付机票费用。 这个过程会花费几天的时间，不适合将预订航班步骤和支付机票费用步骤合并到同一事务中。 在此类方案中，如果在以后的处理中出现失败，可以使用补偿来撤消工作流的预订步骤。  
   
 > [!NOTE]
->  本主题介绍工作流中的补偿。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 事务中工作流，请参阅[事务](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)和<xref:System.Activities.Statements.TransactionScope>。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]事务的更多信息，请参见 <xref:System.Transactions?displayProperty=nameWithType> 和 <xref:System.Transactions.Transaction?displayProperty=nameWithType>。  
+>  本主题介绍工作流中的补偿。 有关工作流中的事务的详细信息，请参阅[事务](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)和<xref:System.Activities.Statements.TransactionScope>。 有关事务的详细信息，请参阅<xref:System.Transactions?displayProperty=nameWithType>和<xref:System.Transactions.Transaction?displayProperty=nameWithType>。  
   
 ## <a name="using-compensableactivity"></a>使用 CompensableActivity  
  <xref:System.Activities.Statements.CompensableActivity> 是 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的核心补偿活动。 将执行可能需要补偿的工作的所有活动放置到 <xref:System.Activities.Statements.CompensableActivity.Body%2A> 的 <xref:System.Activities.Statements.CompensableActivity> 中。 在本示例中，将购买机票的预订步骤放置到 <xref:System.Activities.Statements.CompensableActivity.Body%2A> 的 <xref:System.Activities.Statements.CompensableActivity> 中，并且将取消预订放置到 <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> 中。 紧接着在工作流中的 <xref:System.Activities.Statements.CompensableActivity> 之后是两个活动，即等待经理批准，然后完成购买机票的步骤。 如果在 <xref:System.Activities.Statements.CompensableActivity> 成功完成之后某个错误条件导致要取消工作流，则会安排 <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> 处理程序中的活动并且取消相应的航班。  
@@ -177,7 +177,7 @@ Activity wf = new Sequence()
 **工作流未处理的异常：**   
 **System.ApplicationException： 工作流中的模拟的错误条件。**   
 **CancelCreditCard： 取消信用卡收费。**   
-**工作流成功完成，状态： 已取消。**  [!INCLUDE[crabout](../../../includes/crabout-md.md)] 取消，请参阅[取消](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md)。  
+**工作流成功完成，状态： 已取消。**  有关取消的详细信息，请参阅[取消](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md)。  
   
 ### <a name="explicit-compensation-using-the-compensate-activity"></a>使用 Compensate 活动的显式补偿  
  在上一节中，我们介绍了隐式补偿。 隐式补偿可能适合于简单方案，但如果在安排补偿处理时需要更多显式控件，则可以使用 <xref:System.Activities.Statements.Compensate> 活动。 若要使用 <xref:System.Activities.Statements.Compensate> 活动启动补偿过程，请使用需要补偿的 <xref:System.Activities.Statements.CompensationToken> 的 <xref:System.Activities.Statements.CompensableActivity>。 可以使用 <xref:System.Activities.Statements.Compensate> 活动在尚未确认或补偿的任何已完成的 <xref:System.Activities.Statements.CompensableActivity> 上启动补偿。 例如，可以在 <xref:System.Activities.Statements.Compensate> 活动的 <xref:System.Activities.Statements.TryCatch.Catches%2A> 部分中或完成 <xref:System.Activities.Statements.TryCatch> 之后的任何时间使用 <xref:System.Activities.Statements.CompensableActivity> 活动。 在本示例中，在 <xref:System.Activities.Statements.Compensate> 活动的 <xref:System.Activities.Statements.TryCatch.Catches%2A> 部分中使用了 <xref:System.Activities.Statements.TryCatch> 活动以反转 <xref:System.Activities.Statements.CompensableActivity> 的操作。  

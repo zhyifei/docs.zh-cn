@@ -1,24 +1,26 @@
 ---
-title: "窗体发布"
-ms.custom: 
+title: 窗体发布
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe1be9177f3e811a3037377360f46f42904d5af3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31d2ebbdb6f899390d7b3af485c1583fb80ae6dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="form-post"></a>窗体发布
 此示例演示如何扩展 WCF REST 编程模型以支持新的传入请求格式。 该示例还包含一个格式化程序的实现，该格式化程序可以将请求从 HTML 窗体发布反序列化为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型。 此外，该示例使用一个 T4 模板返回 HTML 页，该页提供用户可以回发到 WCF REST 服务的 HTML 窗体。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  此控制台应用程序项目扩展[基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)示例。 基本资源服务示例演示如何以使用 WCF REST 编程模型的方式公开资源。 在基本资源服务示例中，公开了一个客户集合资源，从而可以创建、检索、更新和删除集合中的客户。 基本资源服务示例仅使用两个本机支持的传入请求格式，即 XML 和 JSON。  
   
- 此窗体发布示例中的控制台应用程序利用 HtmlFormProcessing 库中的自定义格式化程序，该格式化程序使用户可以通过使用浏览器从 HTML 窗体发布发送请求来创建客户。 它还添加返回 HTML 页的操作，该页包含要回发到服务的窗体。 此 HTML 页使用预处理的 T4 模板生成，该模板包含一个 .tt 文件和一个自动生成的 .cs 文件。 通过 .tt 文件，开发人员可以采用包含变量和控制结构的模板形式编写响应。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4 的更多信息，请参阅[通过使用文本模板生成项目](http://go.microsoft.com/fwlink/?LinkId=178139)。  
+ 此窗体发布示例中的控制台应用程序利用 HtmlFormProcessing 库中的自定义格式化程序，该格式化程序使用户可以通过使用浏览器从 HTML 窗体发布发送请求来创建客户。 它还添加返回 HTML 页的操作，该页包含要回发到服务的窗体。 此 HTML 页使用预处理的 T4 模板生成，该模板包含一个 .tt 文件和一个自动生成的 .cs 文件。 通过 .tt 文件，开发人员可以采用包含变量和控制结构的模板形式编写响应。 T4 的更多信息，请参阅[通过使用文本模板生成项目](http://go.microsoft.com/fwlink/?LinkId=178139)。  
   
 #### <a name="to-run-the-sample"></a>运行示例  
   

@@ -1,23 +1,24 @@
 ---
-title: "Windows 工作流概述"
-ms.custom: 
+title: Windows 工作流概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dce6962feb0f425958f89182ee7695332389b567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-workflow-overview"></a>Windows 工作流概述
 工作流是一套调用的基本单元*活动*存储为模型，它描述实际进程。 工作流提供了一种方法，用于描述多项短期运行或长期运行的工作之间的执行顺序和依赖关系。 此工作从头到尾地贯穿模型，并且活动可以人工执行或由系统功能执行。  
@@ -45,11 +46,11 @@ ms.lasthandoff: 12/22/2017
   
  在上图中，<xref:System.Activities.WorkflowInvoker.Invoke%2A> 类的 <xref:System.Activities.WorkflowInvoker> 方法用于调用多个工作流实例。 <xref:System.Activities.WorkflowInvoker> 用于不需要由宿主管理的轻型工作流；需要由宿主管理的工作流（如 <xref:System.Activities.Bookmark> 恢复）必须改用 <xref:System.Activities.WorkflowApplication.Run%2A> 来执行。 无需等待一个工作流实例完成即可调用下一个工作流实例；运行时引擎支持同时运行多个工作流实例。  调用的工作流如下：  
   
--   一个包含 <xref:System.Activities.Statements.Sequence> 子活动的 <xref:System.Activities.Statements.WriteLine> 活动。 父活动的 <xref:System.Activities.Variable> 绑定到子活动的 <xref:System.Activities.InArgument>。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]在变量、 自变量和绑定，请参阅[变量和自变量](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md)。  
+-   一个包含 <xref:System.Activities.Statements.Sequence> 子活动的 <xref:System.Activities.Statements.WriteLine> 活动。 父活动的 <xref:System.Activities.Variable> 绑定到子活动的 <xref:System.Activities.InArgument>。 在变量、 自变量和绑定的详细信息，请参阅[变量和自变量](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md)。  
   
 -   一个调用 `ReadLine` 的自定义活动。 将 <xref:System.Activities.OutArgument> 活动的 `ReadLine` 返回给调用 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 方法。  
   
--   一个派生自 <xref:System.Activities.CodeActivity> 抽象类的自定义活动。 <xref:System.Activities.CodeActivity> 可以使用作为 <xref:System.Activities.CodeActivityContext> 方法的参数提供的 <xref:System.Activities.CodeActivity.Execute%2A> 访问运行时功能（如跟踪和属性）。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]这些运行时功能，请参阅[工作流跟踪](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[工作流执行属性](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md)。  
+-   一个派生自 <xref:System.Activities.CodeActivity> 抽象类的自定义活动。 <xref:System.Activities.CodeActivity> 可以使用作为 <xref:System.Activities.CodeActivityContext> 方法的参数提供的 <xref:System.Activities.CodeActivity.Execute%2A> 访问运行时功能（如跟踪和属性）。 有关这些运行时功能的详细信息，请参阅[工作流跟踪](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[工作流执行属性](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [BizTalk Server 2006 或 WF？为你的项目中选择适当的工作流工具](http://go.microsoft.com/fwlink/?LinkId=154901)

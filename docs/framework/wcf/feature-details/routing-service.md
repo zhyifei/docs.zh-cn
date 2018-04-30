@@ -1,24 +1,26 @@
 ---
-title: "路由服务"
-ms.custom: 
+title: 路由服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="routing-service"></a>路由服务
 路由服务是充当消息路由器的泛型 SOAP 中介。 路由服务的核心功能是基于消息内容来路由消息，通过该功能，可基于消息本身（标头或消息正文）中的值将消息转发到客户端终结点。  
@@ -98,12 +100,12 @@ ms.lasthandoff: 12/22/2017
   
  如果路由服务在尝试发送消息时遇到 <xref:System.ServiceModel.CommunicationException>，将会进行错误处理。  这些异常通常指示在尝试与定义的客户端终结点进行通信时遇到了问题，例如 <xref:System.ServiceModel.EndpointNotFoundException>、<xref:System.ServiceModel.ServerTooBusyException> 或 <xref:System.ServiceModel.CommunicationObjectFaultedException>。  错误处理代码还将捕获并尝试重新发送时**TimeoutException**发生，这是不派生自的另一个常见异常**CommunicationException**。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]错误处理，请参阅[路由简介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)。  
+ 有关错误处理的详细信息，请参阅[路由简介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)。  
   
 ## <a name="backup-endpoints"></a>备份终结点  
  除了与筛选器表中的每个筛选器定义关联的目标客户端终结点，您还可以创建在传输失败时将消息路由到的备份终结点的列表。 如果为筛选器条目定义了备份列表，则一旦出现错误，路由服务会尝试将消息发送到列表中定义的第一个终结点。 如果此传输尝试失败，路由服务将尝试发送到下一个终结点，并一直继续此过程，直到传输尝试成功、返回与传输无关的错误或者备份列表中的所有终结点都返回传输错误。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]备份终结点，请参阅[路由简介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)和[消息筛选器](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
+ 有关备份终结点的详细信息，请参阅[路由简介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)和[消息筛选器](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
   
 ## <a name="streaming"></a>流式处理  
  如果您设置绑定以支持流式处理，则路由服务可以成功对消息进行流式处理。  但是，在某些情况下可能需要对消息进行缓冲：  

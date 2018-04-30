@@ -1,24 +1,26 @@
 ---
-title: "Windows Communication Foundation 示例的一次性安装过程"
-ms.custom: 
+title: Windows Communication Foundation 示例的一次性安装过程
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 示例的一次性安装过程
 大多数 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例均承载于 Internet 信息服务 (IIS) 中，并从公共虚拟目录中运行。 此一次性安装过程在磁盘; 上创建一个文件夹它还将虚拟目录添加到名为的 IIS **ServiceModelSamples**。  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF 示例的一次性安装过程  
   
-1.  确保已安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何设置[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，请参阅[Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)。  
+1.  确保已安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。 有关如何设置的详细信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，请参阅[Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)。  
   
 2.  确保已安装 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]。 搜索以下目录 v4.0 （或更高版本）： **\Windows\Microsoft.NET\Framework**  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/19/2018
     > [!NOTE]
     >  出于安全方面的考虑，请记住在完成这些示例后，通过运行名为 Cleanupvroot.bat 的批处理文件来移除虚拟目录定义和在上面的设置步骤中授予的权限。  
   
-13. 自承载（不承载于 IIS 中）的示例需要在计算机上注册要侦听的 HTTP 地址的权限。 用于 HTTP 命名空间保留的权限由用于运行该示例的用户帐户提供。 默认情况下，管理员帐户具有注册任何 HTTP 地址的权限。 必须向非管理员帐户授予针对示例所使用的 HTTP 命名空间的权限。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何配置命名空间保留，请参阅[配置 HTTP 和 HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。  
+13. 自承载（不承载于 IIS 中）的示例需要在计算机上注册要侦听的 HTTP 地址的权限。 用于 HTTP 命名空间保留的权限由用于运行该示例的用户帐户提供。 默认情况下，管理员帐户具有注册任何 HTTP 地址的权限。 必须向非管理员帐户授予针对示例所使用的 HTTP 命名空间的权限。 有关如何配置命名空间保留的详细信息，请参阅[配置 HTTP 和 HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。  
   
 14. 有些示例需要使用消息队列。 请参阅[安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)有关安装说明。  
   

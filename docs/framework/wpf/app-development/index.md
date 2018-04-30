@@ -19,15 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 00161608997abc14202775c06ecfb283d8d67013
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 22d0b54fa6e75e47fa62b6323c64ec86ddd07008
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="application-development"></a>应用程序开发
-<a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 是一个演示文稿框架，可用于开发以下类型的应用程序：  
+<a name="introduction"></a> Windows Presentation Foundation (WPF) 是一个演示文稿框架，可用于开发以下类型的应用程序：  
   
 -   独立应用程序（传统风格的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 应用程序，这些应用程序作为要安装到客户端计算机并从客户端计算机运行的可执行程序集来生成）。  
   

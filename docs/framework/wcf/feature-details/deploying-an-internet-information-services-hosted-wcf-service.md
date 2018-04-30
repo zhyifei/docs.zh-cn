@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ca37e8b3f59875ed912c02d0a8237a040bf79518
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 49ee6091b18dfcf2a5b46c173490b317fe770554
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署承载于 Internet 信息服务中的 WCF 服务
 开发和部署承载于 Internet 信息服务 (IIS) 中的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务包括以下任务：  
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/28/2018
  有关创建承载于 IIS 中的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的详细演练，请参见 [How to: Host a WCF Service in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
   
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>确保已正确安装和注册 IIS、ASP.NET 和 WCF  
- 必须同时安装[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]、IIS 和 ASP.NET，承载于 IIS 中的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务才能正常工作。 安装 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] （作为 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]的一部分）、ASP.NET 和 IIS 的过程因所使用的操作系统版本不同而不同。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 安装 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]，请参见 [Microsoft .NET Framework 4.0 Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=201185)。 有关安装 IIS 的说明可以在 [安装 IIS](http://go.microsoft.com/fwlink/?LinkId=201188)（可能为英文网页）上找到。  
+ 必须同时安装[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]、IIS 和 ASP.NET，承载于 IIS 中的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务才能正常工作。 安装 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] （作为 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]的一部分）、ASP.NET 和 IIS 的过程因所使用的操作系统版本不同而不同。 有关安装的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]，请参阅[Microsoft.NET Framework 4 Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=201185)。 有关安装 IIS 的说明可以在 [安装 IIS](http://go.microsoft.com/fwlink/?LinkId=201188)（可能为英文网页）上找到。  
   
  如果计算机上已存在 IIS，则在安装 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 的过程中自动向 IIS 注册 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 。 如果在安装 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]后安装 IIS，则需要执行其他步骤向 IIS 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 注册 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。 根据您的操作系统，可以按如下所述执行此操作：  
   
@@ -51,9 +51,9 @@ ms.lasthandoff: 04/28/2018
  最后，必须确认已将 ASP.NET 配置为使用 .NET Framework 版本 4。 通过运行带 –i 选项的 ASPNET_Regiis 工具执行此操作。 有关详细信息，请参阅[ASP.NET IIS 注册工具](http://go.microsoft.com/fwlink/?LinkId=201186)  
   
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>创建新的 IIS 应用程序或重新使用现有的 ASP.NET 应用程序  
- 承载于 IIS 中的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务必须驻留在 IIS 应用程序内。 可以创建一个新的 IIS 应用程序专门承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 或者，也可以将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务部署到现有应用程序，该应用程序已经承载 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 内容（如 .aspx 页和 ASP.NET Web 服务 [ASMX]）。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 这些选项，请参见 [WCF Services and ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
+ 承载于 IIS 中的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务必须驻留在 IIS 应用程序内。 可以创建一个新的 IIS 应用程序专门承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 或者，也可以将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务部署到现有应用程序，该应用程序已经承载 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 内容（如 .aspx 页和 ASP.NET Web 服务 [ASMX]）。 有关这些选项的详细信息，请参阅"托管 WCF-并排使用 ASP.NET"和"在 ASP.NET 兼容模式下承载 WCF 服务"部分中[WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
   
- 请注意， [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 和更高版本定期重新启动独立的面向对象编程应用程序。 默认值为 1740 分钟。 支持的最大值为 71,582 分钟。 可以禁用此重新启动。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 此属性，请参见 [PeriodicRestartTime](http://go.microsoft.com/fwlink/?LinkId=109968)。  
+ 请注意， [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 和更高版本定期重新启动独立的面向对象编程应用程序。 默认值为 1740 分钟。 支持的最大值为 71,582 分钟。 可以禁用此重新启动。 有关此属性的详细信息，请参阅[PeriodicRestartTime](http://go.microsoft.com/fwlink/?LinkId=109968)。  
   
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>为 WCF 服务创建 .svc 文件  
  承载于 IIS 中的[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务在 IIS 应用程序内表示为特殊内容文件（.svc 文件）。 此模型与在 IIS 应用程序内将 ASMX 页表示为 .asmx 文件的方式类似。 .svc 文件包含 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]特定的处理指令 ([@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md))，该指令允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 承载基础结构激活所承载的服务以响应传入消息。 .svc 文件的最常见语法如以下语句所示。  
@@ -70,7 +70,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
   
  也可以执行其他承载配置，如创建服务的基址列表。 也可以使用自定义 <xref:System.ServiceModel.Activation.ServiceHostFactory> 扩展指令以用于自定义承载解决方案。 承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 IIS 应用程序不负责管理 <xref:System.ServiceModel.ServiceHost> 实例的创建和生存期。 收到 .svc 文件的第一个请求时，托管 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 承载基础结构动态创建必需的 <xref:System.ServiceModel.ServiceHost> 实例。 在代码显式关闭该实例之前或回收应用程序时，不释放该实例。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] .svc 文件语法的更多信息，请参见 [@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)。  
+ 有关.svc 文件语法的详细信息，请参阅[ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)。  
   
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>将服务实现部署到 IIS 应用程序  
  承载于 IIS 中的[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务与 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]使用相同的动态编译模型。 就像在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]中那样，可以在各种位置通过几种方式部署承载于 IIS 中的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的实现代码，如下所示：  
@@ -81,7 +81,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
   
 -   作为直接放置在 .svc 文件中的未编译代码。 实现代码也可以按内联方式位于的服务的.svc 文件之后,@ServiceHost指令。 对内联代码进行的任何更改导致在收到下一个请求时回收和重新编译应用程序。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 编译模型的更多信息，请参见 [ASP.NET 编译概述](http://go.microsoft.com/fwlink/?LinkId=94773)（可能为英文网页）。  
+ 有关详细信息[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]编译模型，请参阅[ASP.NET 编译概述](http://go.microsoft.com/fwlink/?LinkId=94773)。  
   
 ## <a name="configure-the-wcf-service"></a>配置 WCF 服务  
  承载于 IIS 中的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务将其配置存储在应用程序 Web.config 文件中。 承载于 IIS 中的服务使用与承载于 IIS 外部的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务相同的配置元素和语法。 但是，下面的约束对 IIS 承载环境是唯一的：  

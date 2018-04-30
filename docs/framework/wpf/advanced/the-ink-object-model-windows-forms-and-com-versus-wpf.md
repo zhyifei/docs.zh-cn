@@ -1,8 +1,9 @@
 ---
-title: "Ink 对象模型：Windows 窗体和 COM 与 WPF 之比较"
+title: Ink 对象模型：Windows 窗体和 COM 与 WPF 之比较
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +16,21 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38c7692d433fb91584718984ef2ad81e563517db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06a2c2049ec7fe7046bd6dae2711fe8e46592fcf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Ink 对象模型：Windows 窗体和 COM 与 WPF 之比较
 
-有实质上是支持数字墨迹的三个平台： Tablet PC Windows 窗体平台、 Tablet PC COM 平台和[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]平台。  为模型类似的对象模型，但该对象的 Windows 窗体和 COM 平台共享[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]平台具有显著差异。  本主题讨论了在高级别的差异，以便使用了一个对象模型的开发人员可以更好地了解其他对象模型。  
+有实质上是支持数字墨迹的三个平台： Tablet PC Windows 窗体平台、 平板电脑 COM 平台层和 Windows Presentation Foundation (WPF) 平台。  为模型类似的对象模型，但该对象的 Windows 窗体和 COM 平台共享[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]平台具有显著差异。  本主题讨论了在高级别的差异，以便使用了一个对象模型的开发人员可以更好地了解其他对象模型。  
   
 ## <a name="enabling-ink-in-an-application"></a>在应用程序中启用墨迹  
  所有三个平台都附带了对象和控件，使应用程序接收来自触笔的输入。  Windows 窗体和 COM 平台附带[Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx)， [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx)， [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx)和[Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx)类。  [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx)和[Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx)是控件，你可以添加到应用程序以收集墨迹。  [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx)和[Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx)可以附加到现有的窗口墨迹启用 windows 和自定义控件。  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
  以下两个图例比较墨迹数据对象模型。  Windows 窗体和 COM 平台上[Microsoft.Ink.Ink](https://msdn.microsoft.com/library/aa515768.aspx?displayProperty=nameWithType)对象约束的生存期[Microsoft.Ink.Stroke](https://msdn.microsoft.com/library/ms827842.aspx?displayProperty=nameWithType)对象以及属于单个描边的触笔数据包。  两个或多个笔画可以引用相同[Microsoft.Ink.DrawingAttributes](https://msdn.microsoft.com/library/ms837931.aspx?displayProperty=nameWithType)对象，如下面的插图中所示。  
   
- ![&#47; 墨迹对象模型关系图Winforms。] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
+ ![COM 的墨迹对象模型关系图&#47;Winforms。] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
   
  上[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，每个<xref:System.Windows.Ink.Stroke?displayProperty=nameWithType>是公共语言运行时对象存在，只要有对它的引用。  每个<xref:System.Windows.Ink.Stroke>引用<xref:System.Windows.Input.StylusPointCollection>和<xref:System.Windows.Ink.DrawingAttributes?displayProperty=nameWithType>对象，也是公共语言运行时对象。  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 |命中的测试|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://msdn.microsoft.com/library/aa515934.aspx)|  
 |复制墨迹|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardcopy(v=vs.100).aspx)|  
 |粘贴墨迹|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft.Ink.Ink.ClipboardPaste](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardpaste(v=vs.100).aspx)|  
-|访问自定义属性的集合的描边|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>(的属性是内部存储，并且通过访问<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>， <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>，和<xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|使用[Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
+|访问自定义属性的集合的描边|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (的属性是内部存储，并且通过访问<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>， <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>，和<xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|使用[Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
   
 ### <a name="sharing-ink-between-platforms"></a>平台之间共享墨迹  
  尽管平台墨迹数据的不同的对象模型，但共享平台之间的数据，则非常简单。 下面的示例将墨迹保存从 Windows 窗体应用程序，并将墨迹加载到 Windows Presentation Foundation 应用程序。  

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15e958a3bfe4dfdeebfaaad83130a604c56932c7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5a628215848d46ec3fe24030dfb1dd55fc3383bf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 类
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以使用两种不同的序列化技术将应用程序中的数据转换为在客户端和服务之间进行传输的 XML，此过程称为序列化。  
@@ -133,7 +133,7 @@ ms.lasthandoff: 04/28/2018
 ### <a name="schema-considerations-for-ixmlserializable-content-types"></a>IXmlSerializable 内容类型的架构注意事项  
  当导出架构和 `IXmlSerializable` 内容类型时，将调用架构提供程序方法。 并将 <xref:System.Xml.Schema.XmlSchemaSet> 传递给架构提供程序方法。 该方法可以将任何有效架构添加到架构集中。 该架构集将包含发生架构导出时已知的架构。 当架构提供程序方法必须将某项添加到架构集时，它必须确定该集中是否已存在具有相应命名空间的 <xref:System.Xml.Schema.XmlSchema>。 如果已存在，则架构提供程序方法必须将新项添加到现有 `XmlSchema` 中。 否则，它必须创建一个新的 `XmlSchema` 实例。 如果使用的是 `IXmlSerializable` 类型数组，这是非常重要的。 例如，如果您有一个 `IXmlSerializable` 类型，且已作为命名空间“B”中的类型“A”导出，则在调用架构提供程序方法时，架构集可能已包含保存“ArrayOfA”类型的“B”架构。  
   
- 除了将类型添加到 <xref:System.Xml.Schema.XmlSchemaSet>，内容类型的架构提供程序方法必须返回非空值。 它可能返回 <xref:System.Xml.XmlQualifiedName>，指定用于给定 `IXmlSerializable` 类型的架构类型名称。 此限定名称也将用作数据协定名称和该类型的命名空间。 返回架构提供程序方法时允许立即返回架构集中不存在的类型。 但是，导出所有相关类型（调用 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 方法中有关 <xref:System.Runtime.Serialization.XsdDataContractExporter> 的所有相关类型并访问 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 属性）时，该类型应该存在于架构集中。 在进行所有相关的 `Schemas` 调用之前访问 `Export` 属性可能会导致 <xref:System.Xml.Schema.XmlSchemaException>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 导出过程中，请参阅[从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
+ 除了将类型添加到 <xref:System.Xml.Schema.XmlSchemaSet>，内容类型的架构提供程序方法必须返回非空值。 它可能返回 <xref:System.Xml.XmlQualifiedName>，指定用于给定 `IXmlSerializable` 类型的架构类型名称。 此限定名称也将用作数据协定名称和该类型的命名空间。 返回架构提供程序方法时允许立即返回架构集中不存在的类型。 但是，导出所有相关类型（调用 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 方法中有关 <xref:System.Runtime.Serialization.XsdDataContractExporter> 的所有相关类型并访问 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 属性）时，该类型应该存在于架构集中。 在进行所有相关的 `Schemas` 调用之前访问 `Export` 属性可能会导致 <xref:System.Xml.Schema.XmlSchemaException>。 有关导出过程的详细信息，请参阅[从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
   
  架构提供程序方法也可以返回要使用的 <xref:System.Xml.Schema.XmlSchemaType>。 该类型可能是匿名的，也可能不是。 如果它是匿名的，则每次将 `IXmlSerializable` 类型用作数据成员时，`IXmlSerializable` 类型的架构都将作为匿名类型导出。 `IXmlSerializable` 类型仍具有数据协定名称和命名空间。 (这确定的中所述[数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)只不过<xref:System.Runtime.Serialization.DataContractAttribute>属性不能用于自定义的名称。)如果它不是匿名的，则它必须是 `XmlSchemaSet` 中的一种类型。 这种情况相当于返回该类型的 `XmlQualifiedName`。  
   

@@ -1,24 +1,26 @@
 ---
-title: "自定义编码器"
-ms.custom: 
+title: 自定义编码器
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1c8223ea7900ba0a89ee2c5c48895a1782d18a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-encoders"></a>自定义编码器
 本主题讨论如何创建自定义编码器。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="system-provided-encoders"></a>系统提供的编码器  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供多个系统提供的绑定，旨在涵盖最常见的应用程序方案。 这些绑定中的每个绑定均由传输选项、消息编码器选项和其他选项（如安全性）组成。 本主题描述如何扩展包含在 `Text` 中的 `Binary`、`MTOM` 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息编码器，或者创建您自己的自定义编码器。 文本消息编码器同时支持纯 XML 编码和 SOAP 编码。 文本消息编码器的纯 XML 编码模式称为 POX（“Plain Old XML”）编码器，以便与基于文本的 SOAP 编码进行区分。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]组合的绑定元素由系统提供的绑定，请参阅中的相应部分[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
+ 有关的系统提供的绑定所提供的绑定元素组合的详细信息，请参阅中的相应部分[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>如何使用系统提供的编码器  
  使用派生自 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 的类将编码添加到绑定中。  
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示指定基于二进制的 XML 消息所使用的字符编码和消息版本管理的绑定元素。 这是最有效但互操作性最差的编码选项，因为仅有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点支持此编码。  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement -->`System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>： 表示绑定元素，指定的字符编码和消息版本管理用于使用消息传输优化机制 (MTOM) 编码的消息。 MTOM 是一种用于在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息中传输二进制数据的有效技术。 MTOM 编码器力图在效率和互操作性之间取得平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。  
+-   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>： 表示绑定元素，指定的字符编码和消息版本管理用于使用消息传输优化机制 (MTOM) 编码的消息。 MTOM 是一种用于在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息中传输二进制数据的有效技术。 MTOM 编码器力图在效率和互操作性之间取得平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。  
   
  绑定元素创建二进制、MTOM 或文本 <xref:System.ServiceModel.Channels.MessageEncoderFactory>。 工厂创建二进制、MTOM 或文本 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 实例。 通常，只有一个实例。 但是如果使用会话，将为每个会话提供一个不同的编码器。 二进制编码器用此来调整动态字典（请参见“XML 基础结构”）。  
   

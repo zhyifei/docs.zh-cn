@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9626905dbcec6bd40570e4188e9a188fca164144
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fceb0f2ab7caa2bf3ab34ff957e3ed5f300e557c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 模板
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Visual Studio 模板是预定义的项目和项模板，你可以使用 Visual Studio 中快速生成[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务和周边应用程序。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/27/2018
  如果现有项目是 Web 项目，则也会创建服务主机文件 (service1.svc)。  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF 服务项目和项模板。  
- 这些模板将创建承载工作流服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务，工作流服务是可像 Web 服务那样被访问的工作流。 XAML 或命令式编程模型具有单独的模板。 通过使用模板，可以创建顺序工作流或状态机工作流。 有关这些类型的工作流的详细信息，请参阅[Windows Workflow Foundation 教程](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 创建工作流项目，请参阅[创建旧版工作流项目](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。  
+ 这些模板将创建承载工作流服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务，工作流服务是可像 Web 服务那样被访问的工作流。 XAML 或命令式编程模型具有单独的模板。 通过使用模板，可以创建顺序工作流或状态机工作流。 有关这些类型的工作流的详细信息，请参阅[Windows Workflow Foundation 教程](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97)。 有关创建工作流项目的详细信息，请参阅[创建旧版工作流项目](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。  
   
  使用工作流的 XOML 类型代替基于代码的是，visual Studio 设计器时更快地响应。 XOML 工作流是要创建的默认工作流类型。  
   

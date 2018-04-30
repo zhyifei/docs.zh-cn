@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c3a5b9965f63a9fc501025493b3a323013ea2a4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 72403671fe6700ae26cae4471a1d0ac100005f3a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 集成
-在 Internet 信息服务 (IIS) 中承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 时，需要将一个 .svc 文件放在虚拟目录中。 此 .svc 文件指定所用的服务主机工厂以及实现服务的类。 向服务发出请求时你的.svc 文件在 URI 中指定，例如： http://contoso.com/EmployeeServce.svc。 对于编写 REST 服务的程序员，此类型的 URI 并非最佳选择。 REST 服务的 URI 指定了特定资源，通常没有任何扩展。 <xref:System.Web.Routing> 集成功能可用于承载响应无扩展的 URI 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 服务。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 路由，请参阅[ASP.NET 路由](http://go.microsoft.com/fwlink/?LinkId=184660)和[AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)示例。  
+在 Internet 信息服务 (IIS) 中承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 时，需要将一个 .svc 文件放在虚拟目录中。 此 .svc 文件指定所用的服务主机工厂以及实现服务的类。 向服务发出请求时你的.svc 文件在 URI 中指定，例如： http://contoso.com/EmployeeServce.svc。 对于编写 REST 服务的程序员，此类型的 URI 并非最佳选择。 REST 服务的 URI 指定了特定资源，通常没有任何扩展。 <xref:System.Web.Routing> 集成功能可用于承载响应无扩展的 URI 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 服务。 有关路由，请参阅详细信息[ASP.NET 路由](http://go.microsoft.com/fwlink/?LinkId=184660)和[AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)示例。  
   
 ## <a name="using-systemwebrouting-integration"></a>使用 System.Web.Routing 集成  
  若要使用 <xref:System.Web.Routing> 集成功能，请使用 <xref:System.ServiceModel.Activation.ServiceRoute> 类创建一个或多个路由，然后将这些路由添加到 Global.asax 文件中的 <xref:System.Web.Routing.RouteTable>。 这些路由可指定服务所响应的相对 URI。 下面的示例演示如何执行此操作。  

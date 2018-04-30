@@ -1,27 +1,29 @@
 ---
-title: "如何：使用 WCF 终结点交换排队消息"
-ms.custom: 
+title: 如何：使用 WCF 终结点交换排队消息
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba057a0b96d393a5efbaf054e75c34f446c7dde6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f44f3a58e0a8283753cb682f25cf2f167450724
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>如何：使用 WCF 终结点交换排队消息
 即使在通信时 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务不可用，队列也能确保客户端和该服务之间的可靠消息传输。 下面的过程演示如何在实现 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时使用标准排队绑定确保客户端和服务间的持久性通信。  
@@ -52,7 +54,7 @@ ms.lasthandoff: 01/19/2018
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  在指定服务地址并使用标准 <xref:System.ServiceModel.Description.ServiceEndpoint> 绑定的配置中定义 <xref:System.ServiceModel.NetMsmqBinding>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]配置，请参阅[配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
+5.  在指定服务地址并使用标准 <xref:System.ServiceModel.Description.ServiceEndpoint> 绑定的配置中定义 <xref:System.ServiceModel.NetMsmqBinding>。 有关使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]配置，请参阅[配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
   
   

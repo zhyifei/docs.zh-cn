@@ -1,27 +1,29 @@
 ---
-title: "使用死信队列处理消息传输故障"
-ms.custom: 
+title: 使用死信队列处理消息传输故障
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>使用死信队列处理消息传输故障
 排队消息可能传送失败。 这些失败的消息将记录在死信队列中。 传送失败可能是由于网络故障、队列已删除、队列已满、身份验证失败或未能准时传送等原因而引起的。  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   若要从自定义死信队列读取消息，URI 必须为的窗体： net.msmq://localhost/private/\<*自定义 dlq 名称*> 其中*自定义 dlq 名称*是自定义的名称死信队列。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何解决队列，请参阅[服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
+ 有关如何对地址队列的详细信息，请参阅[服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   
  接收器上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆栈将该服务正在侦听的各个地址与消息上的地址进行匹配。 如果地址匹配，则调度该消息；否则，不调度该消息。 在从死信队列中进行读取时，这种操作可能会引发问题，原因是死信队列中的消息通常将寻址到该服务而非死信队列服务。 因此，从死信队列中进行读取的服务必须安装一个地址筛选器 `ServiceBehavior`，指示堆栈独立于被寻地址来与队列中的所有消息匹配。 具体而言，您必须将一个带有 `ServiceBehavior` 参数的 <xref:System.ServiceModel.AddressFilterMode.Any> 添加到从死信队列中读取消息的服务中。  
   

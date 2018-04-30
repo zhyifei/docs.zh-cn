@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1c20905c8eafb1ac31702a46878e517ac090e484
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fff55f6177a50d05f54c8839fd3497c181290ecf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>在 ASP.NET 中使用 System.Transactions
 本主题介绍如何才能在 <xref:System.Transactions> 应用程序中成功使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/28/2018
 </PermissionSet>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 安全策略，请参阅[securityPolicy 元素 （ASP.NET 设置架构）](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)。  
+ 有关详细信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]安全策略，请参阅[securityPolicy 元素 （ASP.NET 设置架构）](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)。  
   
 ## <a name="dynamic-compilation"></a>动态编译  
  如果要在访问时动态编译的 <xref:System.Transactions> 应用程序中导入和使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ，则应将对该 <xref:System.Transactions> 程序集的引用放入配置文件中。 具体来说，应将该引用添加到默认根 **Web.config**/**compilation** / **assemblies** 节之下。 下面的示例演示这一操作。  

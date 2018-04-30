@@ -1,24 +1,26 @@
 ---
-title: "创建长时间运行的工作流服务"
-ms.custom: 
+title: 创建长时间运行的工作流服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a62a54fb138e394d8e9fa944e49e6526ae7152
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>创建长时间运行的工作流服务
 本主题描述如何创建长时间运行的工作流服务。 长时间运行的工作流服务可能会运行很长一段时间。 在某一时刻，工作流可能会转入空闲状态，等待一些附加信息。 当这种情况发生时，工作流将保存到 SQL 数据库并从内存中删除。 当附加信息变得可用时，工作流实例将重新加载回内存，继续执行。  在此方案中，您将实现一个非常简化的订单系统。  客户端向工作流服务发送初始消息以启动订单。 此服务将订单 ID 返回给客户端。 此时，工作流服务要等待来自客户端的另一条消息，它转入空闲状态并保存到 SQL Server 数据库。  当客户端发送下一条消息订购项目时，工作流服务将重新加载回内存，完成处理此订单。 在代码示例中它将返回一个字符串，指示项目已添加到订单中。 代码示例并不是技术的现实应用，而是作为一个简单的示例来说明长时间运行的工作流服务。 本主题假定你知道如何创建 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 项目和解决方案。  
@@ -82,9 +84,9 @@ ms.lasthandoff: 12/22/2017
   
          ![设置 Receive 活动属性](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
   
-         DisplayName 属性设置在设计器中显示的 Receive 活动的名称。 ServiceContractName 和 OperationName 属性指定 Receive 活动实现的服务协定和操作的名称。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何在工作流中使用协定服务，请参见[工作流中使用协定](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)。  
+         DisplayName 属性设置在设计器中显示的 Receive 活动的名称。 ServiceContractName 和 OperationName 属性指定 Receive 活动实现的服务协定和操作的名称。 有关如何在工作流服务中使用的协定的详细信息请参阅[工作流中使用协定](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)。  
   
-    2.  单击**定义...**中链接**ReceiveStartOrder**活动并设置下图中所示的属性。  请注意，**参数**选择单选按钮时，一个名为参数`p_customerName`绑定到`customerName`变量。 这会将配置**接收**活动来接收某种数据并将该数据绑定到本地变量。  
+    2.  单击**定义...** 中链接**ReceiveStartOrder**活动并设置下图中所示的属性。  请注意，**参数**选择单选按钮时，一个名为参数`p_customerName`绑定到`customerName`变量。 这会将配置**接收**活动来接收某种数据并将该数据绑定到本地变量。  
   
          ![设置 Receive 活动接收的数据](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
          ![设置 SendReply 活动的属性](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")  
   
-    4.  单击**定义...**中链接**SendReplyToStartOrder**活动并设置下图中所示的属性。 请注意，**参数**单选按钮处于选中状态; 参数名为`p_orderId`绑定到`orderId`变量。 此设置指定 SendReplyToStartOrder 活动将类型字符串的值返回给调用方。  
+    4.  单击**定义...** 中链接**SendReplyToStartOrder**活动并设置下图中所示的属性。 请注意，**参数**单选按钮处于选中状态; 参数名为`p_orderId`绑定到`orderId`变量。 此设置指定 SendReplyToStartOrder 活动将类型字符串的值返回给调用方。  
   
          ![配置 SendReply 活动内容数据](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")  
   
@@ -116,17 +118,17 @@ ms.lasthandoff: 12/22/2017
   
          ![设置 Receive 活动属性](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")  
   
-    3.  单击**定义...**中链接**ReceiveAddItem**活动并添加下图中所示的参数： 这会将配置接收活动，以接受两个参数，即订单 ID 和订购的项的 ID。  
+    3.  单击**定义...** 中链接**ReceiveAddItem**活动并添加下图中所示的参数： 这会将配置接收活动，以接受两个参数，即订单 ID 和订购的项的 ID。  
   
          ![指定第二个参数接收](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
   
-    4.  单击**CorrelateOn**省略号按钮，然后输入`orderIdHandle`。 下**XPath 查询**，单击下拉箭头并选择`p_orderId`。 这将对第二个接收活动配置相关性。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]相关，请参阅[相关](../../../../docs/framework/wcf/feature-details/correlation.md)。  
+    4.  单击**CorrelateOn**省略号按钮，然后输入`orderIdHandle`。 下**XPath 查询**，单击下拉箭头并选择`p_orderId`。 这将对第二个接收活动配置相关性。 有关相关的详细信息请参阅[相关](../../../../docs/framework/wcf/feature-details/correlation.md)。  
   
          ![设置 CorrelatesOn 属性](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
   
     5.  拖放式**如果**活动后立即**ReceiveAddItem**活动。 此活动的行为与 if 语句类似。  
   
-        1.  设置**条件**属性`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
+        1.  设置**条件**属性 `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
   
         2.  拖放式**分配**到中的活动**然后**部分，另一个到**Else**部分设置的属性**分配**下图中所示的活动。  
   
@@ -138,7 +140,7 @@ ms.lasthandoff: 12/22/2017
   
              ![设置 SendReply 活动属性](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")  
   
-        4.  单击**定义...**中链接**SetReplyToAddItem**活动并将其配置如下图中所示。 这会将配置**SendReplyToAddItem**活动可返回中的值`orderResult`变量。  
+        4.  单击**定义...** 中链接**SetReplyToAddItem**活动并将其配置如下图中所示。 这会将配置**SendReplyToAddItem**活动可返回中的值`orderResult`变量。  
   
              ![设置 SendReply 活动的数据绑定](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")  
   

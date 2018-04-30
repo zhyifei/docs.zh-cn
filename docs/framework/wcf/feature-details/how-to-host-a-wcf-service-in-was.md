@@ -1,29 +1,31 @@
 ---
-title: "如何：在 WAS 中承载 WCF 服务"
-ms.custom: 
+title: 如何：在 WAS 中承载 WCF 服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3bfa798bf2f2c758905512df32e03214634b6c2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c4613587d829b082ee7182cc32e34d2d2d563241
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>如何：在 WAS 中承载 WCF 服务
 本主题概述了创建由 Windows 进程激活服务（也称为 WAS）承载的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所需的基本步骤。 WAS 是新的进程激活服务，是对使用非 HTTP 传输协议的 Internet Information Services (IIS) 功能的泛化。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用监听器适配器接口传递激活请求，这些请求是通过由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的非 HTTP 协议（如 TCP、命名管道和消息队列）收到的。  
   
- 此主机选项要求正确安装和配置 WAS 激活组件，但不要求编写任何主机代码作为应用程序的一部分。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]安装和配置 WAS，请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
+ 此主机选项要求正确安装和配置 WAS 激活组件，但不要求编写任何主机代码作为应用程序的一部分。 有关安装和配置 WAS 的详细信息，请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
   
 > [!WARNING]
 >  如果将 Web 服务器的请求处理管道设置为经典模式，则将不支持 WAS 激活。 如果要使用 WAS 激活，则必须将 Web 服务器的请求处理管道设置为集成模式。  

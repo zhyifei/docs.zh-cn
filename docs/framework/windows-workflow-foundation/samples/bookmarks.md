@@ -1,26 +1,27 @@
 ---
 title: Bookmarks2
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3b06ab0e3b80fded2abf3a27d9cf08e499267902
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7c7a1ac8848bd5eff4e79e7a5e3b058720e7a12c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bookmarks"></a>书签
-此示例演示如何编写一个自定义活动，该活动创建一个书签以接收外部输入。 此示例还包含一个基本控制台应用程序，该应用程序使用工作流中的自定义活动，并演示如何发现和恢复与正在运行的工作流实例关联的书签。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]书签，请参阅[书签](../../../../docs/framework/windows-workflow-foundation/bookmarks.md)。  
+此示例演示如何编写一个自定义活动，该活动创建一个书签以接收外部输入。 此示例还包含一个基本控制台应用程序，该应用程序使用工作流中的自定义活动，并演示如何发现和恢复与正在运行的工作流实例关联的书签。 有关书签的详细信息，请参阅[书签](../../../../docs/framework/windows-workflow-foundation/bookmarks.md)。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   

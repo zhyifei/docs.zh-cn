@@ -19,16 +19,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c99d23769e99ea01fe1e1d264361a933228f4c1c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b177517b809adfbfa4afdc292f98f949a68101bb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-walkthroughs"></a>WPF 演练
 演练提供有关常见方案的分步说明。 这使得它们成为了着手学习产品或特定功能区域的理想地点。  
   
- 本主题包含指向[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]演练。  
+ 本主题包含指向 Windows Presentation Foundation (WPF) 的演练。  
   
 ## <a name="wpf-designer-walkthroughs"></a>WPF 设计器演练  
   

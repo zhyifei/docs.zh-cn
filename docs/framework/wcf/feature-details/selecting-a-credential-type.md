@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="selecting-a-credential-type"></a>选择凭据类型
 *凭据*是数据[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]用于建立声明的标识或功能。 例如，护照就是政府颁发的用以证明国家或地区的公民身份的凭据。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，凭据可以采用多种形式，例如用户名标记和 X.509 证书。 本主题讨论凭据、如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用凭据以及如何为应用程序选择正确的凭据。  
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/28/2018
 > [!IMPORTANT]
 >  无法切换标识时，要格外注意一种情况（即启用建立安全上下文时的默认行为）。 如果创建的服务可以与另一个服务进行通信，则无法更改用于打开第二个服务的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的标识。 如果允许多个客户端使用第一个服务，且该服务访问第二个服务时将模拟客户端，则这将成为问题所在。 如果该服务重新使用所有调用方的相同客户端，则对第二个服务的所有调用都是以第一个调用方的标识进行的，该标识用于打开第二个服务的客户端。 换言之，该服务将第一个客户端的标识用于它的所有客户端以与第二个服务进行通信。 这可以导致特权提升。 如果这不是服务所需的行为，就必须跟踪每个调用方并为每个单独的调用方创建第二个服务的新客户端，并确保该服务仅使用正确调用方的正确客户端与第二个服务进行通信。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 凭据和安全会话，请参阅[安全会话的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
+ 有关凭据和安全会话的详细信息，请参阅[安全会话的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

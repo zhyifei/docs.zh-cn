@@ -1,28 +1,30 @@
 ---
-title: "配置系统提供的绑定"
-ms.custom: 
+title: 配置系统提供的绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], system-provided bindings
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e77cf5cc271e86c02e8355dde6f721fe7751416
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bbf04f549c492ddc392b429edf3a703f3c307a0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-system-provided-bindings"></a>配置系统提供的绑定
 绑定可指定在与终结点通话时所使用的通信机制，并指示如何连接到终结点。 绑定由一些元素组成，这些元素指定如何对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道进行分层以提供所需的通信功能。 绑定包含三种类型的元素：  
@@ -33,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
 -   消息编码绑定元素，用于确定要对发送到终结点的消息使用的网络编码，例如，文本/XML、二进制或消息传输优化机制 (MTOM)。  
   
- 本主题介绍系统提供的所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 绑定。 如果这些绑定没有一个完全符合应用程序的要求，则可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 类创建一个绑定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建自定义绑定，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 本主题介绍系统提供的所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 绑定。 如果这些绑定没有一个完全符合应用程序的要求，则可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 类创建一个绑定。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 > [!IMPORTANT]
 >  选择启用了安全性的绑定。 默认情况下，除 <xref:System.ServiceModel.BasicHttpBinding> 绑定之外的所有绑定都启用了安全性。 如果不选择安全绑定或禁用了安全性，请确保以某种其他方式保护网络交换，例如在安全的数据中心或独立的网络上进行网络交换。  
@@ -46,27 +48,27 @@ ms.lasthandoff: 12/22/2017
   
 |绑定|配置元素|描述|  
 |-------------|---------------------------|-----------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|一个绑定，适用于与符合 WS-Basic Profile 的 Web 服务（例如基于 ASP.NET Web 服务 (ASMX) 的服务）进行的通信。 此绑定使用 HTTP 作为传输协议，并使用文本/XML 作为默认的消息编码。|  
-|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|一个安全且可互操作的绑定，适合于非双工服务约定。|  
-|<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|一个安全且可互操作的绑定，可为 <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession> 的正确版本和 <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> 绑定元素提供支持。|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|一个安全且可互操作的绑定，适用于双工服务协定或通过 SOAP 媒介进行的通信。|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|一个安全且可互操作的绑定，支持 WS 联合协议并使联合中的组织可以高效地对用户进行身份验证和授权。|  
+|<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|一个绑定，适用于与符合 WS-Basic Profile 的 Web 服务（例如基于 ASP.NET Web 服务 (ASMX) 的服务）进行的通信。 此绑定使用 HTTP 作为传输协议，并使用文本/XML 作为默认的消息编码。|  
+|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|一个安全且可互操作的绑定，适合于非双工服务约定。|  
+|<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|一个安全且可互操作的绑定，可为 <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession> 的正确版本和 <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> 绑定元素提供支持。|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|一个安全且可互操作的绑定，适用于双工服务协定或通过 SOAP 媒介进行的通信。|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|一个安全且可互操作的绑定，支持 WS 联合协议并使联合中的组织可以高效地对用户进行身份验证和授权。|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|一个安全且可互操作的绑定，它派生自 <xref:System.ServiceModel.WS2007HttpBinding>并支持联合安全性。|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|一个安全且经过优化的绑定，适用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序之间跨计算机的通信。|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|一个安全且经过优化的绑定，适用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序之间跨计算机的通信。|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|一个安全、可靠且经过优化的绑定，适用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序之间计算机上的通信。|  
 |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|一个排队绑定，适用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序之间的跨计算机的通信。|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|一个支持多计算机安全通信的绑定。|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|一个绑定，可用于为通过 HTTP 请求（而不是 SOAP 消息）公开的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web 服务配置终结点。|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|一个绑定，适用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序和现有消息队列（也称为 MSMQ）应用程序之间跨计算机的通信。|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|一个绑定，可用于为通过 HTTP 请求（而不是 SOAP 消息）公开的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web 服务配置终结点。|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|一个绑定，适用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序和现有消息队列（也称为 MSMQ）应用程序之间跨计算机的通信。|  
   
 ## <a name="binding-features"></a>绑定功能  
  下表显示了每个系统提供的绑定所提供的一些主要功能。 第一列中列出了这些绑定，并在表中描述有关功能的信息。 下表提供所用绑定缩写的概要。 若要选择绑定，应确定哪列能满足所需的所有行中的功能。  
   
 |绑定|互操作性|安全模式（默认）|会话<br /><br /> (默认)|事务|双工|  
 |-------------|----------------------|----------------------------------|-----------------------------|------------------|------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1（基本配置文件 1.1）|（无）、传输、消息、混合|无、（无）|（无）|不可用|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|无、传输、（消息）、混合|（无）、传输、可靠会话|（无）、是|不可用|  
-|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security、WS-Trust、WS-SecureConversation、WS-SecurityPolicy|无、传输、（消息）、混合|（无）、传输、可靠会话|（无）、是|不可用|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1（基本配置文件 1.1）|（无）、传输、消息、混合|无、（无）|（无）|n/a|  
+|<xref:System.ServiceModel.WSHttpBinding>|WS|无、传输、（消息）、混合|（无）、传输、可靠会话|（无）、是|n/a|  
+|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security、WS-Trust、WS-SecureConversation、WS-SecurityPolicy|无、传输、（消息）、混合|（无）、传输、可靠会话|（无）、是|n/a|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|无、（消息）|（可靠会话）|（无）、是|是|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|无、（消息）、混合|（无）、可靠会话|（无）、是|否|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|无、（消息）、混合|（无）、可靠会话|（无）、是|否|  
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|无、<br /><br /> （传输）|无、（传输）|（无）、是|是|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|无、消息、（传输）、两者|（无）|（无）、是|否|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|对等|无、消息、（传输）、混合|（无）|（无）|是|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|无、（传输）|（无）|（无）、是|不可用|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|无、（传输）|（无）|（无）、是|n/a|  
   
  下表解释上一个表中的功能。  
   

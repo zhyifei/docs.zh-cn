@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="architecture-of-syndication"></a>联合体系结构
 联合 API 是专为提供不限制格式编程模型而设计的，该编程模型允许将各种格式的联合内容写入网络中。 抽象数据模型由以下类组成：  
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/28/2018
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- 联合支持是基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 编程模型生成的，该模型定义了 <xref:System.ServiceModel.WebHttpBinding> 绑定，该绑定与 <xref:System.ServiceModel.Description.WebHttpBehavior> 一起用于使源可用作服务。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 编程模型，请参阅[WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)。  
+ 联合支持是基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 编程模型生成的，该模型定义了 <xref:System.ServiceModel.WebHttpBinding> 绑定，该绑定与 <xref:System.ServiceModel.Description.WebHttpBehavior> 一起用于使源可用作服务。 有关详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]REST 编程模型，请参阅[WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)。  
   
 > [!NOTE]
 >  Atom 1.0 规范允许在其任何日期构造中指定秒的小数部分。 在序列化和反序列化时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现会忽略秒的小数部分。  

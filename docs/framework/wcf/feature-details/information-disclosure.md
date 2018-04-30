@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="information-disclosure"></a>信息泄露
 信息泄露会使攻击者获得有价值的系统相关信息。 因此，应始终考虑到您正在泄露何种信息以及恶意用户是否可能使用这些信息。 下面列出了可能的信息泄露攻击并针对每种攻击提供了缓解措施。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/28/2018
  如果正在 HTTP 传输层上使用消息级安全性，请注意消息级安全性不保护 HTTP 头。 保护 HTTP 头的唯一方式是使用 HTTPS 传输协议而不是 HTTP 传输协议。 HTTPS 传输协议会导致使用安全套接字层 (SSL) 协议对整个消息（包括 HTTP 头）进行加密。  
   
 ## <a name="policy-information"></a>策略信息  
- 保持策略安全是十分重要的，在联合方案中尤其如此 — 在这些方案中，会在策略中公开敏感的已颁发令牌要求或令牌颁发者信息。 在这些情况下，建议保护联合服务的策略终结点，以防止攻击者获取服务的有关信息（如要放置在已颁发令牌中的声明的类型）或是将客户端重定向到恶意的令牌颁发者。 例如，攻击者可能通过将联合信任链重新配置为终止于执行中间人攻击的颁发者处，来发现用户名/密码对。 此外，还建议通过策略检索来获取绑定的联合客户端验证是否信任所获得的联合信任链中的颁发者。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 联合身份验证方案，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ 保持策略安全是十分重要的，在联合方案中尤其如此 — 在这些方案中，会在策略中公开敏感的已颁发令牌要求或令牌颁发者信息。 在这些情况下，建议保护联合服务的策略终结点，以防止攻击者获取服务的有关信息（如要放置在已颁发令牌中的声明的类型）或是将客户端重定向到恶意的令牌颁发者。 例如，攻击者可能通过将联合信任链重新配置为终止于执行中间人攻击的颁发者处，来发现用户名/密码对。 此外，还建议通过策略检索来获取绑定的联合客户端验证是否信任所获得的联合信任链中的颁发者。 有关联合身份验证方案的详细信息，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>内存转储可能泄露声明信息  
  当应用程序失败时，日志文件（如由 Dr. Watson 生成的那些日志文件）可能包含声明信息。 不应该将这些信息导出到其他实体，如支持团队；否则，包含私有数据的声明信息也会导出。 通过避免将日志文件发送到未知实体，可以减轻这一问题带来的威胁。 有关详细信息，请参阅[Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160)。  
@@ -67,7 +67,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  这段代码未指定域名，因而将使用 NTLM。  
   
- 如果指定了域，但使用终结点标识功能指定了无效的服务主体名称，则会使用 NTLM。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何指定终结点标识，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 如果指定了域，但使用终结点标识功能指定了无效的服务主体名称，则会使用 NTLM。 有关如何指定终结点标识的详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  

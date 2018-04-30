@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-tracing"></a>配置跟踪
 本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。  
@@ -146,7 +146,7 @@ ms.lasthandoff: 04/28/2018
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 创建用户定义跟踪源，请参阅[扩展跟踪](../../../../../docs/framework/wcf/samples/extending-tracing.md)。  
+ 有关创建用户定义的跟踪源的详细信息，请参阅[扩展跟踪](../../../../../docs/framework/wcf/samples/extending-tracing.md)。  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>配置要使用跟踪的跟踪侦听器  
  在运行时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 向处理数据的侦听器馈送跟踪数据。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 为 <xref:System.Diagnostics> 提供多个预定义的侦听器，这些侦听器用于输出的格式有所不同。 您也可以添加自定义侦听器类型。  
@@ -187,7 +187,7 @@ ms.lasthandoff: 04/28/2018
   
  `propagateActivity` 属性指示是否应将活动传播到参与消息交换的其他终结点。 将此值设置为 `true` 后，可以获取由任意两个终结点生成的跟踪文件，然后观察某一终结点上的一组跟踪是如何流向另一终结点上的一组跟踪的。  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 活动跟踪和传播，请参阅[传播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)。  
+ 有关活动跟踪和传播的详细信息，请参阅[传播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)。  
   
  同时`propagateActivity`和`ActivityTracing`布尔值均适用于 System.ServiceModel TraceSource。 `ActivityTracing`值也适用于任何跟踪源，包括[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]或用户定义的。  
   

@@ -1,28 +1,28 @@
 ---
-title: "配置 WS-Atomic 事务支持"
-ms.custom: 
+title: 配置 WS-Atomic 事务支持
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b2048a262e722a11ee77c41e96dddec411326
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2d94c96b8cc225344300540d9fc406a4742db2a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>配置 WS-Atomic 事务支持
 本主题介绍如何通过 WS-AT 配置实用工具来配置 WS-AtomicTransaction (WS-AT) 支持。  
@@ -34,11 +34,11 @@ ms.lasthandoff: 12/22/2017
   
  在 Windows SDK 安装位置“%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation”中，可访问命令行窗口。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]命令行工具，请参阅[Ws-atomictransaction 配置实用工具 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)。  
+ 有关命令行工具的详细信息，请参阅[Ws-atomictransaction 配置实用工具 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)。  
   
  如果你正在运行[!INCLUDE[wxp](../../../../includes/wxp-md.md)]或[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，你可以通过导航到访问 MMC 管理单元中**控件控制面板 / 管理工具 / 组件服务**，右击**我的电脑**，和选择**属性**。 Microsoft 分布式事务处理协调器 (MSDTC) 也可以在这个位置配置。 下面的选项可用于配置的分组**WS-AT**选项卡。如果你正在运行 Windows Vista 或[!INCLUDE[lserver](../../../../includes/lserver-md.md)]，MMC 管理单元中找不到通过单击**启动**按钮，并输入`dcomcnfg.exe`中**搜索**框。 MMC 打开后，定位到**我 Computer\Distributed 事务 Coordinator\Local DTC**节点，右键单击并选择**属性**。 下面的选项可用于配置的分组**WS-AT**选项卡。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]管理单元中，请参阅[Ws-atomictransaction 配置 MMC 管理单元中](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)。  
+ 有关管理单元的详细信息，请参阅[Ws-atomictransaction 配置 MMC 管理单元中](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)。  
   
  若要启用该工具的用户界面，必须首先注册 WsatUI.dll 文件，该文件位于以下路径下  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="configuring-msdtc-to-use-certificates"></a>配置 MSDTC 使用证书  
  由于 WS-AT 协议服务既作为客户端又作为服务器，因此它必须侦听传入连接和发起传出连接。 因此，需要对 MSDTC 进行配置，以使它知道在与外部各方通信时要使用哪个证书，在接受传入通信时要授权哪个证书。  
   
- 可以使用 MMC WS-AT 管理单元进行这一配置。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]此工具，请参阅[Ws-atomictransaction 配置 MMC 管理单元中](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)主题。 下面的步骤介绍如何在运行 MSDTC 的两台计算机之间建立信任。  
+ 可以使用 MMC WS-AT 管理单元进行这一配置。 有关此工具的详细信息，请参阅[Ws-atomictransaction 配置 MMC 管理单元中](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)主题。 下面的步骤介绍如何在运行 MSDTC 的两台计算机之间建立信任。  
   
 1.  配置计算机 A 的设置。 对于"终结点证书"，选择 certA。 对于"授权的证书"中，选择 certB。  
   

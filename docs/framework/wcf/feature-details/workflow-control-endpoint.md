@@ -1,24 +1,26 @@
 ---
-title: "工作流控制终结点"
-ms.custom: 
+title: 工作流控制终结点
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3cd72919acd8e6392d809f22ddd87042d00008f6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-control-endpoint"></a>工作流控制终结点
 开发人员可以使用工作流控制终结点调用控制操作，从而远程控制使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 承载的工作流实例。 可以利用此功能以编程方式执行控制操作，如挂起、继续和终止。  
@@ -57,10 +59,10 @@ ms.lasthandoff: 12/22/2017
 |TransactedTerminate|在某个事务（从客户端流入或在本地创建）下执行终止操作。 如果系统维护了工作流实例的持久状态，则工作流实例必须在执行此操作期间存在。|  
 |TransactedUnsuspend|在某个事务（从客户端流入或在本地创建）下执行取消挂起操作。 如果系统维护了工作流实例的持久状态，则工作流实例必须在执行此操作期间存在。|  
   
- <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 协定无法用于创建新工作流实例，它只能管理现有工作流实例。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]远程创建新的工作流实例，请参阅[工作流服务主机可扩展性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)。  
+ <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 协定无法用于创建新工作流实例，它只能管理现有工作流实例。 有关远程创建新的工作流实例的详细信息，请参阅[工作流服务主机可扩展性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)。  
   
 ## <a name="workflowcontrolendpoint"></a>WorkflowControlEndpoint  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 是具有固定协定 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 的标准终结点。 将此终结点添加到 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 实例后，可以使用此终结点将命令操作发送到由主机实例承载的任何工作流实例。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]标准终结点，请参阅[标准终结点](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)。  
+ <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 是具有固定协定 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 的标准终结点。 将此终结点添加到 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 实例后，可以使用此终结点将命令操作发送到由主机实例承载的任何工作流实例。 有关标准终结点的详细信息，请参阅[标准终结点](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)。  
   
 ## <a name="workflowcontrolclient"></a>WorkflowControlClient  
  <xref:System.ServiceModel.Activities.WorkflowControlClient> 是一个类，可用于将控制消息发送到位于 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost>。 它对于 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 协定支持的每个操作包含一个方法，但事务处理的操作除外。 <xref:System.ServiceModel.Activities.WorkflowControlClient> 使用环境事务来确定是否应使用事务处理的操作。

@@ -1,27 +1,29 @@
 ---
-title: "创建 .NET Framework 客户端应用程序（WCF 数据服务快速入门）"
-ms.custom: 
+title: 创建 .NET Framework 客户端应用程序（WCF 数据服务快速入门）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 563d08a5907c8248a74ba992de17ac3dd0679827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0bdbb88cc3070c68c540a09ab0d6ce41f790d1c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>创建 .NET Framework 客户端应用程序（WCF 数据服务快速入门）
 这是最后一项任务[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]快速入门。 在此任务中，你将添加到解决方案的控制台应用程序，添加对的引用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]到此新客户端应用程序，然后访问馈送[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]来自客户端应用程序通过使用生成的客户端数据服务类和客户端的源库。  
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  在**解决方案资源管理器**下**NorthwindClient**，右键单击项目，然后单击**添加引用**。  
   
-2.  在添加引用对话框中，单击**.NET**选项卡上，选择 System.Data.Services.Client.dll 程序集，，然后单击**确定**。 在**解决方案资源管理器**下**NorthwindClient**，打开 MainWindow.xaml 文件的代码页，并添加以下`using`语句 (`Imports`在 Visual Basic 中)。  
+2.  在添加引用对话框中，单击 **.NET**选项卡上，选择 System.Data.Services.Client.dll 程序集，，然后单击**确定**。 在**解决方案资源管理器**下**NorthwindClient**，打开 MainWindow.xaml 文件的代码页，并添加以下`using`语句 (`Imports`在 Visual Basic 中)。  
   
      [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#using)]
      [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#using)]  
@@ -89,7 +91,7 @@ ms.lasthandoff: 12/22/2017
     >  此版本的 NorthwindClient 应用程序不支持添加和删除实体。  
   
 ## <a name="next-steps"></a>后续步骤  
- 您已成功创建了用于访问 Northwind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 示例源的客户端应用程序。 您还完成了 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 快速入门。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]访问[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]来自源[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]应用程序，请参阅[WCF 数据服务客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)。  
+ 您已成功创建了用于访问 Northwind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 示例源的客户端应用程序。 您还完成了 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 快速入门。 有关访问的详细信息[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]来自源[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]应用程序，请参阅[WCF 数据服务客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  

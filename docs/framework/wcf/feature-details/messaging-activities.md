@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8db31e8559d22e35f0d754a44ce425e144487296
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bbc9fdfff5b5c6ab6e56af12269061f06bb79404
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="messaging-activities"></a>消息传递活动
 消息传递活动使工作流能够发送和接收 WCF 消息。 通过将消息传递活动添加到工作流，您可以对任意复杂的消息交换模式 (MEP) 进行建模。  
@@ -114,7 +114,7 @@ Request = rcv
  To make setting up a request/response MEP on the client and service easier, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.  
 -->
 ## <a name="messaging-activities-and-transactions"></a>消息传递活动和事务  
- 调用工作流服务时，您可能希望将事务流动到服务操作中。 为此，请将 <xref:System.ServiceModel.Activities.Receive> 活动放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动中。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动包含 `Receive` 活动和主体。 流向服务的事务在执行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 的主体的整个过程中保持为环境事务。 事务在执行完主体后完成。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 工作流和事务，请参阅[工作流事务](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)。  
+ 调用工作流服务时，您可能希望将事务流动到服务操作中。 为此，请将 <xref:System.ServiceModel.Activities.Receive> 活动放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动中。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动包含 `Receive` 活动和主体。 流向服务的事务在执行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 的主体的整个过程中保持为环境事务。 事务在执行完主体后完成。 有关工作流和事务的详细信息请参阅[工作流事务](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [如何发送和接收工作流服务中的错误](http://go.microsoft.com/fwlink/?LinkId=189151)  

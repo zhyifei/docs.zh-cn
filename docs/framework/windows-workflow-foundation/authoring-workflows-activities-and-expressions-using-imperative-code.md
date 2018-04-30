@@ -1,23 +1,24 @@
 ---
-title: "使用命令性代码创作工作流、活动和表达式"
-ms.custom: 
+title: 使用命令性代码创作工作流、活动和表达式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee7c5320caa3b7704813b94d4ddfbf1ce0fecf96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: efbefbffdc0314826a361b4a165c67ab1828e40b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>使用命令性代码创作工作流、活动和表达式
 工作流定义是已配置活动对象的树。 这种活动树有多种定义方法，包括手动编辑 XAML 或使用工作流设计器来生成 XAML。 但是，并非必须使用 XAML。 工作流定义也可以通过编程方式来创建。 本主题概述如何通过使用代码创建工作流定义、活动和表达式。 有关使用 XAML 工作流使用的代码示例，请参阅[序列化工作流和活动和从 XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[CFX_WorkflowApplicationExample#47](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#47)]  
   
 > [!NOTE]
->  本主题中的示例使用 <xref:System.Activities.WorkflowInvoker> 来运行示例工作流。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]调用工作流、 传递自变量和可用的不同宿主选项，请参阅[使用 WorkflowInvoker 和 WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)。  
+>  本主题中的示例使用 <xref:System.Activities.WorkflowInvoker> 来运行示例工作流。 有关调用工作流、 传递自变量和可用的不同宿主选项的详细信息，请参阅[使用 WorkflowInvoker 和 WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)。  
   
  在本示例中，将要创建由单个 <xref:System.Activities.Statements.WriteLine> 活动组成的工作流。 还要设置 <xref:System.Activities.Statements.WriteLine> 活动的 <xref:System.Activities.Statements.WriteLine.Text%2A> 参数，并调用该工作流。 如果活动包含子活动，构造方法类似。 以下示例使用一个包含两个 <xref:System.Activities.Statements.Sequence> 活动的 <xref:System.Activities.Statements.WriteLine> 活动。  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[CFX_WorkflowApplicationExample#49](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]对象初始值设定项，请参阅[如何： 初始化对象而不会调用构造函数 （C# 编程指南）](http://go.microsoft.com/fwlink/?LinkId=161015)和[如何： 使用对象初始值设定项声明对象](http://go.microsoft.com/fwlink/?LinkId=161016)。  
+ 有关对象初始值设定项的详细信息，请参阅[如何： 初始化对象而不会调用构造函数 （C# 编程指南）](http://go.microsoft.com/fwlink/?LinkId=161015)和[如何： 使用对象初始值设定项声明对象](http://go.microsoft.com/fwlink/?LinkId=161016)。  
   
 ### <a name="working-with-variables-literal-values-and-expressions"></a>使用变量、文本值和表达式  
  使用代码创建工作流定义时，请注意哪些代码是作为创建工作流定义的一部分来执行，哪些代码是作为该工作流实例执行的一部分来执行。 例如，以下工作流将生成一个随机数，并将其写入控制台。  
@@ -71,7 +72,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]lambda 表达式，请参阅[Lambda 表达式 （C# 编程指南）](http://go.microsoft.com/fwlink/?LinkID=152436)或[Lambda 表达式 (Visual Basic)](http://go.microsoft.com/fwlink/?LinkID=152437)。  
+ 有关 lambda 表达式的详细信息，请参阅[Lambda 表达式 （C# 编程指南）](http://go.microsoft.com/fwlink/?LinkID=152436)或[Lambda 表达式 (Visual Basic)](http://go.microsoft.com/fwlink/?LinkID=152437)。  
   
  Lambda 表达式不可序列化为 XAML 格式。 如果尝试用 lambda 表达式序列化工作流，会引发 <xref:System.Activities.Expressions.LambdaSerializationException>，并带有消息：“此工作流包含以代码形式指定的 lambda 表达式。 这些表达式不可序列化为 XAML。 若要使工作流可序列化为 XAML，请使用 VisualBasicValue/VisualBasicReference 或 ExpressionServices.Convert(lambda)。 这会将 lambda 表达式转换为表达式活动。” 若要使此表达式与 XAML 相兼容，请使用 <xref:System.Activities.Expressions.ExpressionServices> 和 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>，如下例所示。  
   
@@ -81,7 +82,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#54](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#54)]  
   
- Visual Basic 表达式在运行时编译为 LINQ 表达式。 前面两个示例都可序列化为 XAML，但是，如果序列化后的 XAML 用于在工作流设计器中查看和编辑，则对表达式使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>。 使用 `ExpressionServices.Convert` 的序列化工作流可在设计器中打开，但是表达式的值将为空。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]序列化到使用 XAML 的工作流，请参阅[序列化工作流和活动和从 XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  
+ Visual Basic 表达式在运行时编译为 LINQ 表达式。 前面两个示例都可序列化为 XAML，但是，如果序列化后的 XAML 用于在工作流设计器中查看和编辑，则对表达式使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>。 使用 `ExpressionServices.Convert` 的序列化工作流可在设计器中打开，但是表达式的值将为空。 有关序列化到使用 XAML 的工作流的详细信息，请参阅[序列化工作流和活动和从 XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  
   
 #### <a name="literal-expressions-and-reference-types"></a>文本表达式和引用类型  
  在工作流中，通过 <xref:System.Activities.Expressions.Literal%601> 活动表示文本表达式。 下面的 <xref:System.Activities.Statements.WriteLine> 活动在功能上是等效的。  
@@ -117,7 +118,7 @@ new Assign
 },  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]表达式，请参阅[表达式](../../../docs/framework/windows-workflow-foundation/expressions.md)。  
+ 有关表达式的详细信息，请参阅[表达式](../../../docs/framework/windows-workflow-foundation/expressions.md)。  
   
 #### <a name="invoking-methods-on-objects-using-expressions-and-the-invokemethod-activity"></a>使用表达式和 InvokeMethod 活动调用对象上的方法  
  <xref:System.Activities.Expressions.InvokeMethod%601> 活动可用于调用 .NET Framework 中的类的静态和实例方法。 在此主题中的上一个示例中，使用 <xref:System.Random> 类生成随机数。  
@@ -147,7 +148,7 @@ new InvokeMethod<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#55](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#55)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]动态活动，请参阅[在运行时创建活动](../../../docs/framework/windows-workflow-foundation/creating-an-activity-at-runtime-with-dynamicactivity.md)。  
+ 有关动态活动的详细信息，请参阅[在运行时创建活动](../../../docs/framework/windows-workflow-foundation/creating-an-activity-at-runtime-with-dynamicactivity.md)。  
   
 ## <a name="compiled-activities"></a>编译活动  
  动态活动是使用代码定义包含参数的活动的一种方法，但是活动还可以通过代码创建和编译为类型。 可以创建派生自 <xref:System.Activities.CodeActivity> 的简单活动和派生自 <xref:System.Activities.AsyncCodeActivity> 的异步活动。 这些活动可以有自变量、返回值，可以使用命令性代码对其逻辑进行定义。 有关创建这些类型的活动的示例，请参阅[CodeActivity 基类](../../../docs/framework/windows-workflow-foundation/workflow-activity-authoring-using-the-codeactivity-class.md)和[创建异步活动](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)。  

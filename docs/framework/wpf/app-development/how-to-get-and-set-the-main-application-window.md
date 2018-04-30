@@ -1,12 +1,13 @@
 ---
-title: "如何： 获取和设置应用程序主窗口"
-ms.custom: 
+title: 如何： 获取和设置应用程序主窗口
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,22 +18,23 @@ helpviewer_keywords:
 - windows objects [WPF], getting
 - getting windows objects [WPF]
 ms.assetid: ec902bc4-4a59-46f5-8ec1-963b46789356
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9aa02b0d5ff4456cf5ef86fa0d4f8431fe3d846b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bdc96c509f88650edd93ba4a7f595e2b161db39
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-get-and-set-the-main-application-window"></a>如何： 获取和设置应用程序主窗口
 此示例演示如何获取和设置应用程序主窗口。  
   
 ## <a name="example"></a>示例  
- 第一个<xref:System.Windows.Window>中实例化的[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]应用程序自动通过设置<xref:System.Windows.Application>作为主应用程序窗口。 第一个<xref:System.Windows.Window>要实例化的将最可能是指定为启动窗口[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)](请参阅<xref:System.Windows.Application.StartupUri%2A>)。  
+ 第一个<xref:System.Windows.Window>，实例化中 Windows Presentation Foundation (WPF) 应用程序自动通过设置<xref:System.Windows.Application>作为主应用程序窗口。 第一个<xref:System.Windows.Window>要实例化的将最可能是指定为启动窗口[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)](请参阅<xref:System.Windows.Application.StartupUri%2A>)。  
   
  第一个<xref:System.Windows.Window>也无法使用代码来实例化。 一个示例应用程序在启动期间，如下所示打开一个窗口：  
   

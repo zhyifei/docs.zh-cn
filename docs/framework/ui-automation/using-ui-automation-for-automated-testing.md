@@ -20,11 +20,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6539829feacf8c9a5c9c1339df299a21ac5fe64f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d38183d90e99c7b8b9b5ffabb871f13886d801f0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自动化进行自动化测试
 > [!NOTE]
@@ -52,7 +52,7 @@ ms.lasthandoff: 04/27/2018
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>实现 UI 自动化  
- 如前所述，如果没有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]提供的统一模型，则测试工具和开发人员必须了解特定于框架的信息才能公开该框架中控件的属性和行为。 因为可能有几个不同的 UI 框架在任一时间在 Windows 操作系统内部存在，包括[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，和[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]，因此可以是一项极其困难的任务，看上去相似的控件的多个应用程序进行测试. 例如，下表概述了检索与按钮控件相关联的名称（或文本）所需的框架特定属性名，并显示了单个等效的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。  
+ 如前所述，如果没有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]提供的统一模型，则测试工具和开发人员必须了解特定于框架的信息才能公开该框架中控件的属性和行为。 因为可能有几个不同的 UI 框架在任一时间在 Windows 操作系统内部存在，包括[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，和 Windows Presentation Foundation (WPF)，因此可以是一项极其困难的任务，多个应用程序进行测试看上去相似的控件。 例如，下表概述了检索与按钮控件相关联的名称（或文本）所需的框架特定属性名，并显示了单个等效的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。  
   
 |UI 自动化控件类型|UI 框架|特定于框架的属性|UI 自动化属性|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

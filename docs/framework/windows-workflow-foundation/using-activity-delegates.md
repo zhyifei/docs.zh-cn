@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
-ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
+ms.openlocfilehash: a8b30882ef2e75f21c3b90d0e13ff06b52fe5229
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-activity-delegates"></a>使用活动委托
 通过活动委托，活动作者可以公开具有特定签名的回调，活动的用户可为其提供基于活动的处理程序。 可以使用两种类型的活动委托：<xref:System.Activities.ActivityAction%601> 用于定义没有返回值的活动委托，<xref:System.Activities.ActivityFunc%601> 用于定义有返回值的活动委托。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/20/2018
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 对象初始值设定项，请参阅[如何： 初始化对象而不会调用构造函数 （C# 编程指南）](http://go.microsoft.com/fwlink/?LinkId=161015)和[如何： 使用对象初始值设定项声明对象](http://go.microsoft.com/fwlink/?LinkId=161016)。  
+ 有关对象初始值设定项的详细信息，请参阅[如何： 初始化对象而不会调用构造函数 （C# 编程指南）](http://go.microsoft.com/fwlink/?LinkId=161015)和[如何： 使用对象初始值设定项声明对象](http://go.microsoft.com/fwlink/?LinkId=161016)。  
   
  在下面的示例中，在工作流中使用一个 <xref:System.Activities.Statements.TryCatch> 活动。 该工作流引发一个 <xref:System.ApplicationException>，并由 <xref:System.Activities.Statements.Catch%601> 活动对其进行处理。 处理程序<xref:System.Activities.Statements.Catch%601>活动的活动操作是<xref:System.Activities.Statements.WriteLine>活动和异常详细信息流动到使用`ex` <xref:System.Activities.DelegateInArgument%601>。  
   

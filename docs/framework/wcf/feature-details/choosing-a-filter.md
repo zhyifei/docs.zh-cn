@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 653013de37278f051f37fdda52e68fc3d84c2cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-filter"></a>选择筛选器
 配置路由服务时，选择正确的消息筛选器并将它们配置为允许您针对接收的消息进行完全匹配非常重要。 如果所选筛选器筛选出的匹配项太广或者配置不当，则消息会错误地进行路由。 如果筛选器的筛选范围太窄，则某些消息可能没有任何可用的有效路由。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/26/2018
  选择由路由服务使用的筛选器时，了解每个筛选器的工作方式以及哪些信息可以作为传入消息的一部分非常重要。 例如，如果所有消息都是通过同一终结点接收的，则 Address 和 EndpointName 筛选器可能没有用，因为所有消息都与这两个筛选器匹配。  
   
 ### <a name="action"></a>操作  
- Action 筛选器检查 <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> 属性。 如果消息中 Action 标头的内容与筛选器配置中指定的筛选器数据值相匹配，此筛选器将返回 `true`。 下面的示例定义`FilterElement`，它使用 Action 筛选器匹配，其包含值"http://namespace/contract/operation/"的操作标头的消息。  
+ Action 筛选器检查 <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> 属性。 如果消息中 Action 标头的内容与筛选器配置中指定的筛选器数据值相匹配，此筛选器将返回 `true`。 下面的示例定义`FilterElement`，它使用 Action 筛选器匹配，其包含值的操作标头的消息"http://namespace/contract/operation/"。  
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -144,10 +144,10 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  如果您知道要接收的消息包含特定值，则此筛选器非常有用。 例如，如果您要承载同一服务的两个版本，并且知道发送到较新版本服务的消息在自定义标头中包含唯一值，则您可以创建这样的筛选器：使用 XPath 导航到此标头，并比较标头中存在的值与筛选器配置中指定的另一个值来确定筛选器是否匹配。  
   
- 由于 XPath 查询通常包含唯一命名空间（通常为很长或复杂的字符串值），因此 XPath 筛选器允许您使用命名空间表来定义命名空间的唯一前缀。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 命名空间表中，请参阅[消息筛选器](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
+ 由于 XPath 查询通常包含唯一命名空间（通常为很长或复杂的字符串值），因此 XPath 筛选器允许您使用命名空间表来定义命名空间的唯一前缀。 命名空间表有关的详细信息，请参阅[消息筛选器](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 设计 XPath 查询，请参阅[XPath 语法](http://go.microsoft.com/fwlink/?LinkId=164592)。  
+ 有关设计 XPath 查询的详细信息，请参阅[XPath 语法](http://go.microsoft.com/fwlink/?LinkId=164592)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [消息筛选器](../../../../docs/framework/wcf/feature-details/message-filters.md)  
  [如何：使用筛选器](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

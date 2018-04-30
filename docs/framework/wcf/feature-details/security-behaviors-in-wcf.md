@@ -16,14 +16,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98323b4d29b68d57d3c01e9a007b5f0f9fc08377
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bb10d98eb96213029ae43533935312c6f1cf09c7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全行为
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的行为在服务级别或终结点级别修改运行时行为。 ([!INCLUDE[crabout](../../../../includes/crabout-md.md)]行为一般情况下，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全行为*允许控制凭据、 身份验证、 授权和审核日志。 可以通过编程或通过配置来使用行为。 本主题重点讨论如何配置下列与安全功能相关的行为：  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的行为在服务级别或终结点级别修改运行时行为。 (有关详细信息，有关各种行为一般情况下，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全行为*允许控制凭据、 身份验证、 授权和审核日志。 可以通过编程或通过配置来使用行为。 本主题重点讨论如何配置下列与安全功能相关的行为：  
   
 -   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="setting-credentials-with-behaviors"></a>用行为设置凭据  
  使用[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)和[ \<c a t e >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)若要设置的服务或客户端凭据值。 基础绑定配置决定是否必须设置凭据。 例如，如果安全模式设置为 `None`，则客户端和服务不会相互进行身份验证，并且不需要任何类型的凭据。  
   
- 另一方面，服务绑定可能要求使用客户端凭据类型。 在此情况下，您可能必须使用行为来设置凭据值。 ([!INCLUDE[crabout](../../../../includes/crabout-md.md)]可能类型的凭据，请参阅[选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)在某些情况下（例如，使用 Windows 凭据进行身份验证），环境会自动确定实际凭据值，而无需显式设置凭据值（除非您想要指定一组不同的凭据）。  
+ 另一方面，服务绑定可能要求使用客户端凭据类型。 在此情况下，您可能必须使用行为来设置凭据值。 (有关可能的凭据类型的详细信息，请参阅[选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)在某些情况下（例如，使用 Windows 凭据进行身份验证），环境会自动确定实际凭据值，而无需显式设置凭据值（除非您想要指定一组不同的凭据）。  
   
  所有服务凭据都可作为子元素的[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)。 下面的示例演示一个用作服务凭据的证书。  
   
@@ -66,10 +66,10 @@ ms.lasthandoff: 04/28/2018
 ### <a name="servicecertificate-element"></a>\<serviceCertificate > 元素  
  使用此元素可指定一个 X.509 证书，以供服务用来向使用消息安全模式的客户端证明自己的身份。 如果您使用的是定期续订的证书，则证书的指纹将会变更。 在此情况下，请使用主题名称作为 `X509FindType`，因为可以使用同一主题名称来重新颁发该证书。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用了元素，请参阅[如何： 指定客户端凭据值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 有关使用元素的详细信息，请参阅[如何： 指定客户端凭据值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 ### <a name="certificate-of-clientcertificate-element"></a>\<证书 > 的\<i c a t > 元素  
- 使用[\<证书 >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)元素时该服务必须事先以与客户端进行安全通信的客户端的证书。 使用双工通信模式时，会出现这种情况。 在更为典型的请求-答复模式中，客户端会将它的证书包含在请求中，服务会使用该证书来确保它的响应安全返回客户端。 但是，双工通信模式没有请求和答复。 服务无法从通信中推断出客户端的证书，因此服务需要事先得到客户端的证书来保护发送到客户端的消息。 您必须通过带外方式来获取客户端的证书，并使用此元素指定该证书。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 双工服务，请参阅[如何： 创建双工协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。  
+ 使用[\<证书 >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)元素时该服务必须事先以与客户端进行安全通信的客户端的证书。 使用双工通信模式时，会出现这种情况。 在更为典型的请求-答复模式中，客户端会将它的证书包含在请求中，服务会使用该证书来确保它的响应安全返回客户端。 但是，双工通信模式没有请求和答复。 服务无法从通信中推断出客户端的证书，因此服务需要事先得到客户端的证书来保护发送到客户端的消息。 您必须通过带外方式来获取客户端的证书，并使用此元素指定该证书。 有关双工服务的详细信息，请参阅[如何： 创建双工协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<身份验证 > 的\<i c a t > 元素  
  [\<身份验证 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)元素允许你自定义如何对客户端进行身份验证。 可以将 `CertificateValidationMode` 属性设置为 `None`、`ChainTrust`、`PeerOrChainTrust`、`PeerTrust` 或 `Custom`。 默认情况下，级别设置为`ChainTrust`，它指定每个证书必须位于层次结构的证书以*根颁发机构*在链顶部。 这是最安全的模式。 您还可以将此值设置为 `PeerOrChainTrust`，该值指定受信任的链中的证书以及自行颁发的证书（对等信任）都被接受。 因为不需要从受信任的证书颁发机构那里购买自行颁发的证书，所以可以在开发和调试客户端和服务时使用此值。 在部署客户端时，请改用 `ChainTrust` 值。 还可以将该值设置为 `Custom`。 当该值设置为 `Custom` 值时，您还必须将 `CustomCertificateValidatorType` 属性设置为用于验证证书的程序集和类型。 若要创建您自己的自定义验证程序，必须从 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 抽象类进行继承。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/28/2018
   
  有关详细信息，请参阅<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用此配置元素，请参阅[如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
+ 有关使用此配置元素的详细信息，请参阅[如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>允许匿名 CardSpace 用户  
  将 `AllowUntrustedRsaIssuers` 元素的 `<IssuedTokenAuthentication>` 属性设置为 `true`，可以显式允许任何客户端提供已用任意 RSA 密钥对签名的自行颁发的令牌。 颁发者是*不受信任*因为密钥都有没有与之关联的颁发者数据。 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 用户可以创建一个自行颁发的卡，卡中包含自行提供的标识声明。 使用此功能时一定要小心。 若要使用此功能，请将 RSA 公钥视为更加安全的密码，应将其与用户名一起存储在数据库中。 在允许客户端访问服务之前，请将客户端提供的 RSA 公钥与所提供的用户名的已存储公钥进行比较，以便对该公钥进行验证。 这里假设您已建立了注册过程，用户可以通过此过程来注册他们的用户名并将其用户名与自行颁发的 RSA 公钥相关联。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="client-credentials"></a>客户端凭据  
  在要求相互进行身份验证的情况下，需要使用客户端凭据使客户端通过服务的身份验证。 当客户端必须使用服务的证书来保护发送到服务的消息时，可以使用该节来指定服务证书。  
   
- 您还可以将客户端配置为联合方案的一部分，以便使用来自安全令牌服务或本地令牌颁发机构颁发的令牌。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 联合的方案，请参阅[联合身份验证和颁发令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。 所有客户端凭据下找到[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)，如下面的代码中所示。  
+ 您还可以将客户端配置为联合方案的一部分，以便使用来自安全令牌服务或本地令牌颁发机构颁发的令牌。 有关联合方案的详细信息，请参阅[联合身份验证和颁发令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。 所有客户端凭据下找到[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)，如下面的代码中所示。  
   
 ```xml  
 <behaviors>  

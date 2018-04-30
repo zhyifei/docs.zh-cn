@@ -21,16 +21,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6b0b331da49fca7be5106610e4b6f144220cc849
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e56a95bf773e22166297bc153ee3ef88320db0f9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>如何：授权时允许元数据请求
 自定义授权时，可能有必要允许处理对元数据的请求。 以下主题将演练验证此类请求的步骤。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 授权，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
+ 有关详细信息[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]授权，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>授权时允许元数据请求  
   

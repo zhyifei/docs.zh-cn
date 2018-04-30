@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a215be76002b9e8fca8ac4a9073885b3b30a97b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a36b8a6bdf1a024f4ddee91bd937afac516e391f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>将工作流和活动序列化为 XAML 和从 XAML 序列化工作流和活动
 除了可将工作流定义编译为程序集中包含的类型之外，还可将工作流定义序列化为 XAML。 这些已序列化的定义可以重新加载以供编辑或检测，可以传递给生成系统以供编译，也可以加载并调用。 本主题概述如何序列化工作流定义以及如何使用 XAML 工作流定义。  
@@ -84,7 +84,7 @@ sw.Close();
  **25 + 15**  
 **40**    
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] 调用工作流使用输入和输出参数，请参阅[使用 WorkflowInvoker 和 WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)和<xref:System.Activities.WorkflowInvoker.Invoke%2A>。  
+>  有关调用工作流使用输入和输出自变量的详细信息，请参阅[使用 WorkflowInvoker 和 WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)和<xref:System.Activities.WorkflowInvoker.Invoke%2A>。  
   
  如果序列化的工作流包含 C# 表达式，则<xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings>实例与其<xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A>属性设置为`true`必须作为参数传递给传递<xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>，否则为<xref:System.NotSupportedException>将引发类似于的消息以下： `Expression Activity type 'CSharpValue`1 需要编译才能运行。  请确保已编译工作流。  
   

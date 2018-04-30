@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
   
 -   在下列情况下，可在客户端应用程序或调用应用程序中使用异步方法：  
   
--   如果从中间层应用程序调用操作。 ([!INCLUDE[crabout](../../../includes/crabout-md.md)]这种情况下，请参阅[中间层客户端应用程序](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。)  
+-   如果从中间层应用程序调用操作。 (有关这种方案的详细信息，请参阅[中间层客户端应用程序](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。)  
   
 -   如果在 ASP.NET 页中调用操作，可使用异步页。  
   

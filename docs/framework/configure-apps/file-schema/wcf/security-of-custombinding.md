@@ -1,31 +1,33 @@
 ---
-title: "&lt;customBinding&gt; 的 &lt;security&gt;"
-ms.custom: 
+title: '&lt;customBinding&gt; 的 &lt;security&gt;'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e35f10071f8931c551645d4d07ca0f2113c52002
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15f2dd3eac33a54e53a609fc706397eef5e7dbe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;customBinding&gt; 的 &lt;security&gt;
 指定自定义绑定的安全选项。  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<绑定 >  
-\<customBinding >  
+\<customBinding>  
 \<绑定 >  
 \<安全 >  
   
@@ -103,7 +105,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<issuedTokenParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|指定一个当前颁发的令牌。 此元素的类型为 <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>。|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|指定一个当前颁发的令牌。 此元素的类型为 <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>。|  
 |[\<g s >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|指定此绑定的本地客户端安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>。|  
 |[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|指定此绑定的本地服务安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>。|  
 |[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用于启动安全对话服务的默认值。|  
@@ -115,7 +117,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]使用此元素，请参阅[SecurityBindingElement 身份验证模式](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)和[如何： 自定义绑定使用 SecurityBindingElement 创建](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
+ 有关使用此元素的详细信息，请参阅[SecurityBindingElement 身份验证模式](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)和[如何： 自定义绑定使用 SecurityBindingElement 创建](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用自定义绑定配置安全性。 并演示如何使用自定义绑定实现消息级安全性和安全传输。 如果在客户端和服务之间传输消息时需要进行安全的传输，同时消息必须在消息级别上保持安全，这非常有用。 系统提供的绑定不支持此配置。  
@@ -185,6 +187,6 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

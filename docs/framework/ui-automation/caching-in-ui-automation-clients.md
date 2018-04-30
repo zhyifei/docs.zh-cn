@@ -19,11 +19,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2db81007b745a1c3ee8434b400ab92a01aeeb6e2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>在 UI 自动化客户端中缓存
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
  在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，缓存意味着预提取的数据。 然后，无需进一步的跨进程通信即可访问数据。 UI 自动化客户端应用程序通常使用缓存来批量检索属性和控件模式。 然后，根据需要从缓存中检索信息。 应用程序会定期更新缓存，通常使为了响应表明 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中的内容发生更改的事件。  
   
- 对于具有服务器端 UI 自动化提供程序的 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 控件和自定义控件，缓存的优势非常突出。 在访问客户端提供程序（如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件的默认提供程序）时，其优势稍小一些。  
+ 缓存的优点是最为明显使用 Windows Presentation Foundation (WPF) 控件和具有服务器端 UI 自动化提供程序的自定义控件。 在访问客户端提供程序（如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件的默认提供程序）时，其优势稍小一些。  
   
  当应用程序激活 <xref:System.Windows.Automation.CacheRequest> ，然后使用任何返回 <xref:System.Windows.Automation.AutomationElement>的方法或属性时，就会进行缓存；例如， <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>和 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。 方法<xref:System.Windows.Automation.TreeWalker>类是一个例外; 如果仅完成缓存<xref:System.Windows.Automation.CacheRequest>指定为参数 (例如， <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>。  
   

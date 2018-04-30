@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba8a2eb97b071608b16b5549ead403b578329ee5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f617aa68a052b60933db2dc4b2051c910af6b9b9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 编程模型概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WEB HTTP 编程模型提供使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成 WEB HTTP 服务所需的基本元素。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务旨在提供给最大范围的可能客户端（包括 Web 浏览器）访问，并且具有以下独特要求：  
@@ -31,12 +31,12 @@ ms.lasthandoff: 04/28/2018
   
 -   **多种数据格式**Web 样式服务处理很多种数据以外的 SOAP 消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior> 来支持许多不同的数据格式，包括 XML 文档、JSON 数据对象和二进制内容（例如图像、视频文件或纯文本）的流。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 扩展到覆盖 Web 样式的方案，包括 WEB HTTP 服务、AJAX 和 JSON 服务以及联合 (ATOM/RSS) 源。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] AJAX 和 JSON 服务，请参阅[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 联合，请参阅[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 扩展到覆盖 Web 样式的方案，包括 WEB HTTP 服务、AJAX 和 JSON 服务以及联合 (ATOM/RSS) 源。 AJAX 和 JSON 服务有关的详细信息，请参阅[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。 有关联合的详细信息，请参阅[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。  
   
  对于可从 WEB HTTP 服务返回的数据的类型没有额外的限制。 任何可序列化类型都可以从 WEB HTTP 服务操作返回。 因为 WEB HTTP 服务操作可以通过 Web 浏览器调用，所以对可在 URL 中指定的数据类型有一个限制。 默认情况下支持哪些类型的详细信息请参阅**UriTemplate 查询字符串参数和 Url**下面一节。 通过提供您自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 实现来指定如何将 URL 中指定的参数转换为实际参数类型，可以更改默认行为。 有关详细信息，请参阅<xref:System.ServiceModel.Dispatcher.QueryStringConverter>。  
   
 > [!CAUTION]
->  使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型编写的服务不使用 SOAP 消息。 由于不使用 SOAP，因此无法使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的安全功能。 然而，您可以通过使用 HTTPS 承载服务来使用基于传输的安全性。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+>  使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型编写的服务不使用 SOAP 消息。 由于不使用 SOAP，因此无法使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的安全功能。 然而，您可以通过使用 HTTPS 承载服务来使用基于传输的安全性。 有关详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
 >  为 IIS 安装 WebDAV 扩展会导致 Web HTTP 服务返回 HTTP 405 错误，因为 WebDAV 扩展试图处理所有 PUT 请求。 若要解决此问题，你可卸载 WebDAV 扩展或为网站禁用 WebDAV 扩展。 有关详细信息，请参阅[IIS 和 WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
@@ -66,7 +66,7 @@ ms.lasthandoff: 04/28/2018
   
  在很多时候（尤其是在服务器需要基于 URI 将请求调度到某个服务操作时），对于那些可以单独对包含的每个模板进行寻址的数据结构，您需要一直跟踪其中的一组 <xref:System.UriTemplate> 对象。 <xref:System.UriTemplateTable> 表示一组 URI 模板，并在给定的一组模板和候选 URI 中选择最匹配的项。 这与任何特定网络堆栈（包括 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]）不相关，因此可以在任何需要的地方使用。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务模型使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 将服务操作与由 <xref:System.UriTemplate> 描述的一组 URI 相关联。 通过使用 <xref:System.UriTemplate> 或 <xref:System.ServiceModel.Web.WebGetAttribute>，将服务操作与 <xref:System.ServiceModel.Web.WebInvokeAttribute> 相关联。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] <xref:System.UriTemplate> 和<xref:System.UriTemplateTable>，请参阅[UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务模型使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 将服务操作与由 <xref:System.UriTemplate> 描述的一组 URI 相关联。 通过使用 <xref:System.UriTemplate> 或 <xref:System.ServiceModel.Web.WebGetAttribute>，将服务操作与 <xref:System.ServiceModel.Web.WebInvokeAttribute> 相关联。 有关详细信息<xref:System.UriTemplate>和<xref:System.UriTemplateTable>，请参阅[UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
   
 ## <a name="webget-and-webinvoke-attributes"></a>WebGet 和 WebInvoke 特性  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务除了使用各种调用谓词（例如 HTTP POST、PUT 和 DELETE）之外，还使用检索谓词（例如 HTTP GET）。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型允许服务开发人员使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 控制与其服务操作相关联的 URI 模板和谓词。 可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 来控制各个操作如何绑定到 URI 以及与这些 URI 相关联的 HTTP 方法。 例如，在下面的代码中添加 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute>。  
@@ -148,10 +148,10 @@ interface ICustomer
   
  这意味着 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型可以处理任何类型的数据，但是您可能会对 <xref:System.IO.Stream> 进行编程。  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 支持 JSON 数据 (AJAX) 和联合源（包括 ATOM 和 RSS）。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 这些功能，请参阅[WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)和[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 支持 JSON 数据 (AJAX) 和联合源（包括 ATOM 和 RSS）。 有关这些功能的详细信息，请参阅[WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)和[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP 编程模型和安全  
- 由于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型不支持 WS-* 协议，因此保证 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务安全的唯一方式是使用 SSL 通过 HTTPS 公开服务。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 设置 SSL 与[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[如何在 IIS 中实现 SSL](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ 由于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型不支持 WS-* 协议，因此保证 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务安全的唯一方式是使用 SSL 通过 HTTPS 公开服务。 有关设置 SSL 与[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[如何在 IIS 中实现 SSL](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 编程模型疑难解答  
  当使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 调用 WCF WEB HTTP 服务以创建通道时，即使将其他 <xref:System.ServiceModel.Description.WebHttpBehavior> 传递给 <xref:System.ServiceModel.EndpointAddress>，<xref:System.ServiceModel.EndpointAddress> 也会使用配置文件中设置的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>。  

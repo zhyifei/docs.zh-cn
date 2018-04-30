@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="stand-alone-json-serialization"></a>独立 JSON 序列化
 JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行的 JavaScript 代码而设计的一种数据格式。 它是在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中创建的 ASP.NET AJAX 服务所使用的默认数据格式。  
@@ -53,7 +53,7 @@ JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行�
 |任何类型的 `Null` 值|null|也支持可以为 null 的类型，这些类型映射到 JSON 的方式与不可以为 null 的类型相同。|  
   
 ### <a name="enumerations-and-json"></a>枚举和 JSON  
- 在 JSON 中，枚举成员值被作为数字处理，这与数据协定中处理枚举成员值的方式不同。在数据协定中，枚举成员值被视为成员名称。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 数据协定的处理，请参阅[数据协定中的枚举类型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
+ 在 JSON 中，枚举成员值被作为数字处理，这与数据协定中处理枚举成员值的方式不同。在数据协定中，枚举成员值被视为成员名称。 有关数据协定处理的详细信息，请参阅[数据协定中的枚举类型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
   
 -   例如，如果存在 `public enum Color {red, green, blue, yellow, pink}`，则序列化 `yellow` 将生成数字 3，而不是字符串“yellow”。  
   

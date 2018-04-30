@@ -23,18 +23,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 34c53389694aa48742becfd713796feb8111d888
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bdfd273f7a541cac4f1fd8a03a976d73e997b718
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>如何：设置安全模式
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 安全有三个常用安全模式：传输、消息和“使用消息凭据的传输”，这三种模式存在于大多数预定义绑定中。 另外，还有两种特定于两个绑定的模式：<xref:System.ServiceModel.BasicHttpBinding> 上的“transport-credential only”模式和 <xref:System.ServiceModel.NetMsmqBinding> 上的“Both”模式。 不过，本主题主要讨论三种常见安全模式：<xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message> 和 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
   
  请注意，并非所有预定义绑定都支持所有这些模式。 本主题使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 类来设置模式，并演示如何以编程方式来设置安全模式，如何通过配置来设置安全模式。  
   
- 有关详细信息，请参阅[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../docs/framework/wcf/feature-details/security-overview.md)，[服务的安全](../../../docs/framework/wcf/securing-services.md)，和[保护服务和客户端](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 传输模式和消息，请参阅[传输安全](../../../docs/framework/wcf/feature-details/transport-security.md)和[消息安全](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
+ 有关详细信息，请参阅[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../docs/framework/wcf/feature-details/security-overview.md)，[服务的安全](../../../docs/framework/wcf/securing-services.md)，和[保护服务和客户端](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 有关传输模式和消息的详细信息，请参阅[传输安全](../../../docs/framework/wcf/feature-details/transport-security.md)和[消息安全](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
   
 ### <a name="to-set-the-security-mode-in-code"></a>在代码中设置安全模式  
   

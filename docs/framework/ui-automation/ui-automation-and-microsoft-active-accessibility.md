@@ -21,11 +21,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2028f312433e3a4cf8c90f2e6809ed29288d7819
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 581fe3272808da84fcf31667f8191f3cc6322033
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 自动化和 Microsoft Active Accessibility
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Windows Presentation Foundation 中的支持  
- [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 是用于创建用户界面的新模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素本身不支持 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]；但是，它们支持 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，包括 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 客户端的桥接支持。 只有专门为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 编写的客户端才可以充分利用 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]的辅助功能，例如对文本的丰富支持。  
+ Windows Presentation Foundation (WPF) 是用于创建用户界面的新模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素本身不支持 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]；但是，它们支持 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，包括 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 客户端的桥接支持。 只有专门为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 编写的客户端才可以充分利用 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]的辅助功能，例如对文本的丰富支持。  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>服务器和客户端  

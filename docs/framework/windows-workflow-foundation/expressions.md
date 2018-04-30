@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 18c64daca1532bb626a59e5f01528e207e6b6b87
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 805a49d45da308744fc528b63e8a74bb69bbd124
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="expressions"></a>表达式
 Windows Workflow Foundation (WF) 表达式是任何返回结果的活动。 从 <xref:System.Activities.Activity%601> 间接派生的所有表达式活动，其中包含名为 <xref:System.Activities.OutArgument> 的 <xref:System.Activities.Activity%601.Result%2A> 属性作为活动的返回值。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 随附了从简单活动（如 <xref:System.Activities.Expressions.VariableValue%601> 和 <xref:System.Activities.Expressions.VariableReference%601>，它们通过运算符活动提供对单个工作流变量的访问）到复杂活动（如 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，它们提供对 Visual Basic 语言的全面访问，以获得结果）的广泛表达式活动。 可以通过从 <xref:System.Activities.CodeActivity%601> 或 <xref:System.Activities.NativeActivity%601> 派生来创建其他表达式活动。  
@@ -176,4 +176,4 @@ Sequence w = new Sequence
 };  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 在代码中使用表达式，请参阅[创作工作流、 活动和表达式使用命令性代码](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。
+ 有关在代码中使用表达式的详细信息，请参阅[创作工作流、 活动和表达式使用命令性代码](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。

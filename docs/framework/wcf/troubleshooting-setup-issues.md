@@ -1,24 +1,26 @@
 ---
-title: "安装问题疑难解答"
-ms.custom: 
+title: 安装问题疑难解答
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284805f8ca1fb9778dc6bccd9807fa86dc7e2d77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9238c1a1c9092e6806ee941bd7c992071cf98e09
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>安装问题疑难解答
 本主题说明如何排除 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 安装问题。  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  若要解决前面说明的问题，必须按照以下步骤操作。  
   
-1.  运行[WMI 诊断实用程序，版本 2.0](http://go.microsoft.com/fwlink/?LinkId=94685)要修复的 WMI 服务。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]使用此工具，请参阅[WMI 诊断实用程序](http://go.microsoft.com/fwlink/?LinkId=94686)主题。  
+1.  运行[WMI 诊断实用程序，版本 2.0](http://go.microsoft.com/fwlink/?LinkId=94685)要修复的 WMI 服务。 有关使用此工具的详细信息，请参阅[WMI 诊断实用程序](http://go.microsoft.com/fwlink/?LinkId=94686)主题。  
   
  使用修复.NET Framework 3.0 安装**添加/删除程序**小程序位于**控制面板**，或卸载/重新安装.NET Framework 3.0。  
   

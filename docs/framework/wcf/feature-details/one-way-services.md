@@ -1,28 +1,30 @@
 ---
-title: "单向服务"
-ms.custom: 
+title: 单向服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-way-services"></a>单向服务
 服务操作的默认行为是请求-答复模式。 在请求-答复模式中，即使服务操作以代码形式表示为 `void` 方法，客户端也会等待答复消息。 使用单向操作时，只能传输一个消息。 接收方不发送答复消息，发送方也不需要获得答复消息。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 -   客户端必须调用操作且在操作级别不受操作结果的影响。  
   
--   使用 <xref:System.ServiceModel.NetMsmqBinding> 或 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 类。 ([!INCLUDE[crabout](../../../../includes/crabout-md.md)]此方案中，请参阅[WCF 中的队列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)  
+-   使用 <xref:System.ServiceModel.NetMsmqBinding> 或 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 类。 (有关此方案的详细信息，请参阅[WCF 中的队列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)  
   
  如果是单向操作，则不会向客户端返回承载错误信息的响应消息。 可以通过使用基础绑定的功能（如可靠会话）或通过设计一个可使用两个单向操作的双工服务协定（一个单向协定从客户端到服务，用于调用服务操作；另一个单向协定在服务和客户端之间，以使服务可以使用客户端实现的回调将错误发回到客户端）来检测错误条件。  
   

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7b051cdeebf83b34b6e503d8d9cb54a38a46a2a6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 989ae3d70bce2a4cb374904ee6b2f30f770ccf8a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-transport"></a>选择传输方式
 本主题讨论选择 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中包含的三种主要传输的标准：HTTP、TCP 和命名管道。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还包括消息队列（也称为 MSMQ）传输，但本文档并不讨论消息队列。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/28/2018
  本节介绍在三种主要传输方式中选择其中之一的主要理由，包括一个用于进行选择的详细决策表。  
   
 ### <a name="when-to-use-http-transport"></a>适合使用 HTTP 传输的情况  
- HTTP 是客户端与服务器之间的一个请求/响应协议。 最常见的应用程序包括与 Web 服务器进行通信的 Web 浏览器客户端。 该客户端向服务器发送一个请求，服务器侦听客户端请求消息。 当服务器接收到一个请求时，会返回响应，其中包含请求的状态。 如果成功，将返回可选数据，如网页、错误消息或其他信息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] HTTP 协议，请参阅[HTTP 的超文本传输协议](http://go.microsoft.com/fwlink/?LinkId=94858)。  
+ HTTP 是客户端与服务器之间的一个请求/响应协议。 最常见的应用程序包括与 Web 服务器进行通信的 Web 浏览器客户端。 该客户端向服务器发送一个请求，服务器侦听客户端请求消息。 当服务器接收到一个请求时，会返回响应，其中包含请求的状态。 如果成功，将返回可选数据，如网页、错误消息或其他信息。 有关 HTTP 协议的详细信息，请参阅[HTTP 的超文本传输协议](http://go.microsoft.com/fwlink/?LinkId=94858)。  
   
  HTTP 协议不是基于连接的 － 一旦发送了响应，就不会再维护任何状态。 要处理多页事务，应用程序必须持续保持任何必要的状态。  
   

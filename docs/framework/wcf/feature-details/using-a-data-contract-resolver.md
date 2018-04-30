@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 20ef713c67ee21aa8f7a92975bc6e6ce8798a087
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 53459517591c36430b9326d6605c4eb1b28a13e7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-a-data-contract-resolver"></a>使用数据协定解析程序
-使用数据协定解析程序可以动态配置已知类型。 序列化或反序列化并非数据协定所需的类型时，要求提供已知类型。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 已知类型的更多信息，请参见 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)将 CLR 类型映射到 XSD。 已知类型通常以静态方式指定。 这意味着您必须了解在实现某个操作期间，该操作可能接收的所有可能类型。 在某些方案中无法做到这一点，因此能够以动态方式指定已知类型十分重要。  
+使用数据协定解析程序可以动态配置已知类型。 序列化或反序列化并非数据协定所需的类型时，要求提供已知类型。 有关已知类型的详细信息，请参阅[数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。 已知类型通常以静态方式指定。 这意味着您必须了解在实现某个操作期间，该操作可能接收的所有可能类型。 在某些方案中无法做到这一点，因此能够以动态方式指定已知类型十分重要。  
   
 ## <a name="creating-a-data-contract-resolver"></a>创建数据协定解析程序  
  创建数据协定解析程序涉及到实现两个方法：<xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> 和 <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>。 这两个方法分别实现在序列化和反序列化期间使用的回调。 在序列化期间将调用 <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> 方法，用于获取数据协定类型并将其映射到 `xsi:type` 名称和命名空间。 在反序列化期间将调用 <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> 方法，用于获取 `xsi:type` 名称和命名空间并将其解析为数据协定类型。 这两个方法均具有 `knownTypeResolver` 参数，该参数可用于在实现中使用默认已知类型解析程序。  

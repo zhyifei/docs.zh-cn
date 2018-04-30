@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4153ed905fc9c5c67ce1743fa76497f76b7398cc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-tracking"></a>SQL 跟踪
-此示例演示如何编写一个自定义 SQL 跟踪参与者，该参与者将跟踪记录写入到一个 SQL 数据库。 Windows Workflow Foundation (WF) 提供工作流跟踪以查看工作流实例的执行。 跟踪运行时在工作流执行过程中会发出工作流跟踪记录。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 工作流跟踪，请参阅[工作流跟踪](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。  
+此示例演示如何编写一个自定义 SQL 跟踪参与者，该参与者将跟踪记录写入到一个 SQL 数据库。 Windows Workflow Foundation (WF) 提供工作流跟踪以查看工作流实例的执行。 跟踪运行时在工作流执行过程中会发出工作流跟踪记录。 有关工作流跟踪的详细信息，请参阅[工作流跟踪](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。  
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 04/27/2018
   
 10. 在 WCF 测试客户端中，双击**GetStockPrice**。 这将打开`GetStockPrice`采用一个参数，值中的类型的操作`Contoso`单击**Invoke**。  
   
-11. 发出的跟踪记录将写入一个 SQL 数据库中。 若要查看跟踪记录，请在 SQL Management Studio 中打开 TrackingSample 数据库，然后导航到表。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio，请参阅[SQL Server Management Studio 简介](http://go.microsoft.com/fwlink/?LinkId=165645)。 可以下载 SQL Server 2008 Management Studio Express[此处](http://go.microsoft.com/fwlink/?LinkId=180520)。 对表运行一个选择查询，将显示存储在相关表中的跟踪记录内的数据。  
+11. 发出的跟踪记录将写入一个 SQL 数据库中。 若要查看跟踪记录，请在 SQL Management Studio 中打开 TrackingSample 数据库，然后导航到表。 有关 SQL Server Management Studio 的详细信息，请参阅[SQL Server Management Studio 简介](http://go.microsoft.com/fwlink/?LinkId=165645)。 可以下载 SQL Server 2008 Management Studio Express[此处](http://go.microsoft.com/fwlink/?LinkId=180520)。 对表运行一个选择查询，将显示存储在相关表中的跟踪记录内的数据。  
   
 #### <a name="to-uninstall-the-sample"></a>卸载此示例  
   

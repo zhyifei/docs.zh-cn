@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a13e5a0044c51700acce6b123688868443f635ae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d8c9fdefd286e32b169b96065e6164a236941133
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>如何：承载和运行基本的 Windows Communication Foundation 服务
 这是创建 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序所需的六项任务中的第三项任务。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
@@ -159,10 +159,10 @@ ms.lasthandoff: 04/26/2018
   
     2.  第 2 步 – 创建 <xref:System.ServiceModel.ServiceHost> 类的实例以承载服务。 构造函数采用两个参数：实现服务协定的类的类型，以及服务的基址。  
   
-    3.  步骤 3 – 创建<!--zz <xref:System.ServiceModel.ServiceEndpoint>-->` System.ServiceModel.ServiceEndpoint`实例。 服务终结点由地址、绑定和服务协定组成。 <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint`构造函数，因此采用服务协定接口类型、 绑定和地址。 服务协定是在服务类型中定义和实现的 `ICalculator`。 在此示例中使用的绑定是 <xref:System.ServiceModel.WSHttpBinding>，这是用于连接到符合 WS-＊ 规范的终结点的内置绑定。 有关 WCF 绑定的详细信息，请参阅[WCF 绑定概述](../../../docs/framework/wcf/bindings-overview.md)。 该地址追加到基址以标识终结点。 此代码中指定的地址为"CalculatorService"，因此终结点的完全限定的地址是`"http://localhost:8000/GettingStarted/CalculatorService"`添加服务终结点是可选的当使用.NET Framework 4.0 或更高版本。 在这些版本中，如果在代码或配置中未添加任何终结点，则 WCF 为该服务实现的基址和协定的每个组合添加一个默认终结点。 有关默认终结点请参阅[指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 默认终结点、绑定和行为，请参阅 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) 和 [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    3.  步骤 3 – 创建<!--zz <xref:System.ServiceModel.ServiceEndpoint>-->` System.ServiceModel.ServiceEndpoint`实例。 服务终结点由地址、绑定和服务协定组成。 <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint`构造函数，因此采用服务协定接口类型、 绑定和地址。 服务协定是在服务类型中定义和实现的 `ICalculator`。 在此示例中使用的绑定是 <xref:System.ServiceModel.WSHttpBinding>，这是用于连接到符合 WS-＊ 规范的终结点的内置绑定。 有关 WCF 绑定的详细信息，请参阅[WCF 绑定概述](../../../docs/framework/wcf/bindings-overview.md)。 该地址追加到基址以标识终结点。 此代码中指定的地址为"CalculatorService"，因此终结点的完全限定的地址是`"http://localhost:8000/GettingStarted/CalculatorService"`添加服务终结点是可选的当使用.NET Framework 4.0 或更高版本。 在这些版本中，如果在代码或配置中未添加任何终结点，则 WCF 为该服务实现的基址和协定的每个组合添加一个默认终结点。 有关默认终结点请参阅[指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。 有关默认终结点、 绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
         > [!IMPORTANT]
-        >  使用 .NET Framework 4 或更高版本时，添加服务终结点是可选的。 在这些版本中，如果在代码或配置中未添加任何终结点，则 WCF 为该服务实现的基址和协定的每个组合添加一个默认终结点。 有关默认终结点请参阅[指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 默认终结点、绑定和行为，请参阅 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) 和 [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+        >  使用 .NET Framework 4 或更高版本时，添加服务终结点是可选的。 在这些版本中，如果在代码或配置中未添加任何终结点，则 WCF 为该服务实现的基址和协定的每个组合添加一个默认终结点。 有关默认终结点请参阅[指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。 有关默认终结点、 绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
     4.  第 4 步 - 启用元数据交换。 客户端将使用元数据交换来生成将用于调用服务操作的代理。 若要启用元数据交换创建<xref:System.ServiceModel.Description.ServiceMetadataBehavior>实例时，将其设置的<xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>属性`true`，并将行为添加到<!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A`集合<xref:System.ServiceModel.ServiceHost>实例。  
   
@@ -424,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  此类服务需要在计算机上注册 HTTP 地址以进行侦听的权限。 管理员帐户具有此权限，但对于非管理员帐户来说，必须授予对 HTTP 命名空间的权限。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何配置命名空间保留，请参阅[配置 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 Visual Studio 下运行时，必须使用管理员特权运行 service.exe。  
+>  此类服务需要在计算机上注册 HTTP 地址以进行侦听的权限。 管理员帐户具有此权限，但对于非管理员帐户来说，必须授予对 HTTP 命名空间的权限。 有关如何配置命名空间保留的详细信息，请参阅[配置 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 Visual Studio 下运行时，必须使用管理员特权运行 service.exe。  
   
  此时服务正在运行。 继续执行[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 有关疑难解答的信息，请参阅[疑难解答入门教程](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。  
   

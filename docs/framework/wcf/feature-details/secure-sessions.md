@@ -16,14 +16,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9506e791cf4da947eaadaff1669e5f2f975431c8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 068615510d7e1d73ae260441ccef6536ee6ff317
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="secure-sessions"></a>安全会话
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的功能之一是可靠会话，它能够保证以发送消息的顺序接收消息。 本节中的主题讨论在创建可靠会话时要考虑的安全性问题。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 可靠会话，请参阅[使用会话](../../../../docs/framework/wcf/using-sessions.md)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的功能之一是可靠会话，它能够保证以发送消息的顺序接收消息。 本节中的主题讨论在创建可靠会话时要考虑的安全性问题。 有关可靠会话的详细信息，请参阅[使用会话](../../../../docs/framework/wcf/using-sessions.md)。  
   
 > [!NOTE]
 >  当需要在 Windows XP 上进行模拟时，请不要在安全会话中使用有状态安全令牌上下文 (SCT)。 如果在模拟时使用有状态 SCT，则会引发 <xref:System.InvalidOperationException>。 有关详细信息，请参阅[不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5bdf111e6802692aef893cf9dcae88f0f51aa467
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2de3a8cac6e12d898173f8181b295c3e2e461cc7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-correlation"></a>针对相关的疑难解答
 相关用于在工作流服务消息之间和工作流服务消息与正确的工作流实例之间建立关联，如果未正确配置相关，则将接收不到消息，且应用程序无法正常运行。 本主题概述了对相关问题进行疑难解答的几种方法，还列出了使用相关时可能出现的一些常见问题。  
@@ -91,7 +91,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
   
  跟踪参与者（如 ConsoleTrackingParticipant）对于具有控制台窗口的自承载工作流服务很有用。 对于 Web 承载的服务，一个跟踪参与者将跟踪信息记录到持久存储区，应使用，如内置<xref:System.Activities.Tracking.EtwTrackingParticipant>，或自定义跟踪参与者，可将信息记录到文件，如`TextWriterTrackingParticpant`从[使用文本文件跟踪](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md)示例。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 跟踪和配置跟踪对于 Web 承载的工作流服务，请参阅[工作流跟踪](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)，[工作流配置跟踪](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)，和[跟踪&#91;WF示例&#93;](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)示例。  
+ 有关跟踪和配置 Web 承载的工作流服务的跟踪的详细信息，请参阅[工作流跟踪](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)，[工作流配置跟踪](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)，和[跟踪&#91;WF 示例&#93;](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)示例。  
   
 ## <a name="use-wcf-tracing"></a>使用 WCF 跟踪  
  WCF 跟踪提供对发往和来自工作流服务的消息流的跟踪。 对相关问题（尤其是基于内容的相关）进行疑难解答时，此跟踪信息很有用。 若要启用跟踪，对于 Web 承载的工作流服务，请在 `system.diagnostics` 文件的 `web.config` 节中指定所需跟踪侦听器，对于自承载的工作流服务，请在 `app.config` 文件中指定所需跟踪侦听器。 若要在跟踪文件中包括消息内容，请在 `true` 的 `logEntireMessage` 节的 `messageLogging` 元素中将 `diagnostics` 指定为 `system.serviceModel`。 在下面的示例中，将包括消息内容的跟踪信息配置为写入名为 `service.svclog` 的文件。  
@@ -129,7 +129,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>  
 ```  
   
- 若要查看的跟踪信息，包含在`service.svclog`、[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)使用。 对基于内容的相关问题进行疑难解答时，此工具尤其有用，因为您可查看消息内容，并准确了解传递的内容以及它是否与基于内容的相关的 <xref:System.ServiceModel.CorrelationQuery> 匹配。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WCF 跟踪，请参阅[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)，[配置跟踪](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)，和[解决应用程序中使用跟踪](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。  
+ 若要查看的跟踪信息，包含在`service.svclog`、[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)使用。 对基于内容的相关问题进行疑难解答时，此工具尤其有用，因为您可查看消息内容，并准确了解传递的内容以及它是否与基于内容的相关的 <xref:System.ServiceModel.CorrelationQuery> 匹配。 有关 WCF 跟踪的详细信息，请参阅[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)，[配置跟踪](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)，和[使用跟踪解决应用程序](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="common-context-exchange-correlation-issues"></a>常见上下文交换相关问题  
  某些类型的相关需要使用特定类型的绑定才能正常工作。 例如需要双向绑定（如 <xref:System.ServiceModel.BasicHttpBinding>）的请求-答复相关和需要基于上下文的绑定（如 <xref:System.ServiceModel.BasicHttpContextBinding>）的上下文交换相关。 大多数绑定支持双向操作，因此这对于请求-答复相关并不是常见问题，但是只有几种基于上下文的绑定，包括 <xref:System.ServiceModel.BasicHttpContextBinding>、<xref:System.ServiceModel.WSHttpContextBinding> 和 <xref:System.ServiceModel.NetTcpContextBinding>。 如果未使用这些绑定中的一种，则对工作流服务的初次调用会成功，但是后续调用会失败并出现下面的 <xref:System.ServiceModel.FaultException>。  
@@ -178,7 +178,7 @@ SendReply ReplyToStartOrder = new SendReply
   
  之间不允许存在持久性<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>对或<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>对。 会创建一个非永久性区域，该区域会持续到两个活动都已完成。 如果某个活动（如延迟活动）处于此非永久性区域中，并使工作流成为空闲状态，则工作流不会持久，即使主机配置为在工作流成为空闲状态时保持工作流也是如此。 如果某个活动（如 Persist 活动）尝试在非永久性区域中显式保持，则会引发严重异常，工作流会中止，并将 <xref:System.ServiceModel.FaultException> 返回给调用方。 严重异常消息为“System.InvalidOperationException: 非永久性块内不能包含 Persist 活动”。 此异常不会返回给调用方，但是可以观察到（如果启用了跟踪）。 返回给调用方的 <xref:System.ServiceModel.FaultException> 消息为“无法执行操作，因为 WorkflowInstance‘5836145b-7da2-49d0-a052-a49162adeab6’已完成”。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 请求-答复相关，请参阅[请求-答复](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。  
+ 有关请求-答复相关的详细信息，请参阅[请求-答复](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。  
   
 ## <a name="common-content-correlation-issues"></a>常见内容相关问题  
  当工作流服务接收到多个消息，且交换的消息中的一段数据标识了所需实例时，会使用基于内容的相关。 基于内容的相关使用消息中的此数据（如客户编号或订单 ID）将消息路由到正确的工作流实例。 本节描述使用基于内容的相关时可能出现的几个常见问题。  
@@ -263,4 +263,4 @@ sm:header()/tempuri:CartId
 </Receive>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 基于内容的相关性，请参阅[基于内容](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)和[相关计算器](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)示例。
+ 有关基于内容的相关性的详细信息，请参阅[基于内容](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)和[相关计算器](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)示例。

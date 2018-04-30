@@ -21,14 +21,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: dfb3d781a570db6a929a7d984aa45c224dda66bd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：数据协定版本管理
-本主题列出了创建容易随时间而改变的数据协定的最佳做法。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 数据协定，请参阅中的主题[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+本主题列出了创建容易随时间而改变的数据协定的最佳做法。 有关数据协定的详细信息，请参阅中的主题[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ## <a name="note-on-schema-validation"></a>有关架构验证的说明  
  讨论数据协定版本管理时，注意除非元素被默认标记为可选之外，由 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 导出的数据协定架构不具有任何版本管理支持，这很重要。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/28/2018
   
 -   对 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性 (Property) 设置为 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> 的服务协定应用 `true` 属性 (Attribute)。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 往返，请参阅[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ 有关往返过程的详细信息，请参阅[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>不要求进行架构验证时的版本管理  
  一般不要求严格遵从架构。 许多平台允许使用不是架构描述的其他元素。 完整的功能集，这容忍，只要中所述[数据协定版本管理](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)和[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)可用。 下面是一些建议的准则。  
@@ -69,7 +69,7 @@ ms.lasthandoff: 04/28/2018
   
 3.  从数据协定的第一个版本开始，始终实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 可启用往返。 有关详细信息，请参阅[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 如果已经释放了某个类型的一个或多个版本，而没有实现此接口，则在该类型的下一个版本中实现它。  
   
-4.  在较新的版本中，不要更改数据协定名称或命名空间。 如果更改该类型在数据协定下的名称或命名空间，请确保使用适当的机制（例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 属性）保留数据协定名称和命名空间。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 命名，请参阅[数据协定名称](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
+4.  在较新的版本中，不要更改数据协定名称或命名空间。 如果更改该类型在数据协定下的名称或命名空间，请确保使用适当的机制（例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 属性）保留数据协定名称和命名空间。 有关命名的详细信息，请参阅[数据协定名称](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
 5.  在以后的版本中，不要更改任何数据成员的名称。 如果更改数据成员下的字段、属性或事件的名称，请使用 `Name` 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性以保留现有数据成员名称。  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 04/28/2018
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性应始终保留其默认值 `false`。  
   
-    2.  如果对于成员，默认值为 `null` 或零是不可接受的，则应使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 提供一个回调方法，以便在传入流中不存在该成员时提供一个合理的默认值。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 回调，请参阅[版本容错序列化回调](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
+    2.  如果对于成员，默认值为 `null` 或零是不可接受的，则应使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 提供一个回调方法，以便在传入流中不存在该成员时提供一个合理的默认值。 有关回调的详细信息，请参阅[版本容错序列化回调](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
   
     3.  应使用 `Order` 上的 `DataMemberAttribute` 属性，以确保所有新添加的数据成员显示在现有数据成员之后。 达到此目的的建议方法为：不应设置数据协定的第一个版本中的任何数据成员的 `Order` 属性。 应将添加到数据协定版本 2 中的所有数据成员的 `Order` 属性设置为 2。 将添加到数据协定版本 3 中的所有数据成员的 `Order` 设置为 3，依次类推。 允许将多个数据成员集设置为同一个 `Order` 编号。  
   

@@ -1,34 +1,36 @@
 ---
-title: "如何：自定义系统提供的绑定"
-ms.custom: 
+title: 如何：自定义系统提供的绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b048b5c57d174ac921793ee8677622b88a0595
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d70a4c4234047e7410ae4f631e48595a0859f37
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>如何：自定义系统提供的绑定
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包含若干个系统提供的绑定，这些绑定允许您配置基础绑定元素的某些属性，但不是全部的属性。 本主题演示如何设置绑定元素上的属性以创建自定义绑定。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何直接创建和配置的绑定元素，而无需使用系统提供的绑定，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 有关如何直接创建和配置而无需使用系统提供的绑定的绑定元素的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建和扩展自定义绑定，请参阅[扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
+ 有关创建和扩展自定义绑定的详细信息，请参阅[扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
  在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]所有绑定的都组成*绑定元素*。 每个绑定元素都是从 <xref:System.ServiceModel.Channels.BindingElement> 类派生的。 系统提供的绑定（如 <xref:System.ServiceModel.BasicHttpBinding>）可创建和配置各自的绑定元素。 本主题演示如何访问和更改这些绑定元素的属性，这些属性不会直接在绑定上公开，具体而言，这些属性不会直接在 <xref:System.ServiceModel.BasicHttpBinding> 类上公开。  
   

@@ -1,31 +1,31 @@
 ---
-title: "按类别分类的控件"
-ms.custom: 
+title: 按类别分类的控件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 26cd5c40a68b42b16fd2b7aacfcd84fdce483ee8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e88dc45d640391798a22af7a6a1d34f1acebcc0a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="controls-by-category"></a>按类别分类的控件
-可以按逻辑将 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 控件分组为若干类别。 可以使用这些类别来为方案选择适当的控件，从而有助于查看具有相同用法模式或功能的控件。  
+Windows Presentation Foundation (WPF) 控件可以进行逻辑分组为几个类别。 可以使用这些类别来为方案选择适当的控件，从而有助于查看具有相同用法模式或功能的控件。  
   
 ## <a name="layout"></a>布局  
  布局控件用于管理子元素的大小、尺寸、位置和排列。  

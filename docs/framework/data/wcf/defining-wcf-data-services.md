@@ -1,31 +1,31 @@
 ---
-title: "定义 WCF 数据服务"
-ms.custom: 
+title: 定义 WCF 数据服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
-caps.latest.revision: 
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61b04be25f54ef22511f45b5752c3ccfa90d94ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 569f2e16cca7ec6dbfbe83cce5a597be37bce8e0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="defining-wcf-data-services"></a>定义 WCF 数据服务
-本部分介绍如何创建和配置[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]来公开数据作为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建数据服务时，所需的基本步骤，请参阅[公开数据作为一种服务恢复](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)。  
+本部分介绍如何创建和配置[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]来公开数据作为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 有关创建数据服务所需的基本步骤的详细信息，请参阅[公开数据作为一种服务恢复](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [配置数据服务](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)  

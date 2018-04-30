@@ -1,27 +1,29 @@
 ---
-title: "重写服务标识以便进行身份验证"
-ms.custom: 
+title: 重写服务标识以便进行身份验证
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1f8f6bd4d8661393bc849405a8668341f65f8d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5383a1d241134318ce48c8c0c9f39f831396730
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>重写服务标识以便进行身份验证
 通常情况下不需要设置服务上的标识，因为客户端凭据类型的选择即规定了服务元数据中公开的标识的类型。 例如，下面的配置代码使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素并设置`clientCredentialType`Windows 属性。  
@@ -32,12 +34,12 @@ ms.lasthandoff: 12/22/2017
   
   
   
- 有关演示如何标识设置的示例应用，请参阅[服务标识示例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]服务标识，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 有关演示如何标识设置的示例应用，请参阅[服务标识示例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 有关服务标识的详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos 身份验证和标识  
  默认情况下，当服务配置为使用 Windows 凭据， [\<标识 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)包含的元素[ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)或[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素生成的 WSDL 中。 如果服务下运行`LocalSystem`， `LocalService`，或`NetworkService`帐户、 服务主体名称 (SPN) 生成的窗体在默认情况下`host/` \<*主机名*> 因为这些帐户有权访问计算机的 SPN 数据。 如果使用不同帐户运行服务[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]的形式生成 UPN \<*用户名*>@<*domainName*`>`。 发生这种情况的原因是 Kerberos 身份验证要求向客户端提供 UPN 或 SPN，以便对服务进行身份验证。  
   
- 您还可以使用 Setspn.exe 工具向域中服务的帐户注册其他 SPN。 然后，可以使用该 SPN 作为服务的标识。 若要下载该工具，请参阅[Windows 2000 资源工具包工具： Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]该工具，请参阅[Setspn 概述](http://go.microsoft.com/fwlink/?LinkId=61374)。  
+ 您还可以使用 Setspn.exe 工具向域中服务的帐户注册其他 SPN。 然后，可以使用该 SPN 作为服务的标识。 若要下载该工具，请参阅[Windows 2000 资源工具包工具： Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752)。 有关工具的详细信息，请参阅[Setspn 概述](http://go.microsoft.com/fwlink/?LinkId=61374)。  
   
 > [!NOTE]
 >  若要使用不带协商的 Windows 凭据类型，服务的用户帐户必须有权访问向 Active Directory 域注册的 SPN。 可以使用下列方式来实现：  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 -   使用任意 Active Directory 域帐户运行服务。 在这种情况下，需要为该域帐户建立一个 SPN，这可以使用 Setspn.exe 实用工具来完成。 为服务的帐户创建 SPN 后，配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以通过服务的元数据 (WSDL) 将该 SPN 发布到服务的客户端。 这可以通过为公开的终结点设置终结点标识（借助于应用程序配置文件或代码）来完成。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Spn、 Kerberos 协议和 Active Directory，请参阅[技术补充面向 Windows 的 Kerberos](http://go.microsoft.com/fwlink/?LinkId=88330)。  
+ 有关 Spn 的详细信息、 Kerberos 协议和 Active Directory，请参阅[技术补充面向 Windows 的 Kerberos](http://go.microsoft.com/fwlink/?LinkId=88330)。  
   
 ### <a name="when-spn-or-upn-equals-the-empty-string"></a>当 SPN 或 UPN 等于空字符串时  
  如果将 SPN 或 UPN 设置为等于空字符串，将出现多种不同的情况，具体取决于所使用的安全级别和身份验证模式：  

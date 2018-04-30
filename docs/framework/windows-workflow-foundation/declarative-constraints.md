@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4406bbbe7780fabc8872718ca21e8d755ea85c59
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="declarative-constraints"></a>声明性约束
 声明性约束为活动及其与其他活动的关系提供了一个功能强大的验证方法。 约束是在创作过程中为活动配置的，但工作流宿主也可以指定其他约束。 本主题概述了如何使用声明性约束提供活动验证。  
@@ -188,4 +188,4 @@ else
 }  
 ```  
   
- 如果 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 的 <xref:System.Activities.Validation.ValidationSettings> 属性为 `true`，则在通过调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 调用验证时只计算指定的其他约束。 对于检查工作流的特定验证配置，这非常有用。 但是，请注意调用工作流时，对在工作流中配置的验证逻辑进行计算并且必须传递给该工作流才能成功开始。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 调用验证，请参阅[调用活动验证](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。
+ 如果 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 的 <xref:System.Activities.Validation.ValidationSettings> 属性为 `true`，则在通过调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 调用验证时只计算指定的其他约束。 对于检查工作流的特定验证配置，这非常有用。 但是，请注意调用工作流时，对在工作流中配置的验证逻辑进行计算并且必须传递给该工作流才能成功开始。 有关调用验证的详细信息，请参阅[调用活动验证](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。

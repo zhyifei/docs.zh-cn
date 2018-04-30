@@ -1,23 +1,24 @@
 ---
-title: "必需自变量和重载组"
-ms.custom: 
+title: 必需自变量和重载组
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6025fb65c5e2d4d0683d302638f8a1d2803662
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e94c65ff722d3b4f98b026d69ecd31bc02b934
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="required-arguments-and-overload-groups"></a>必需自变量和重载组
 可以对活动进行配置，以便必须绑定某些自变量才能有效执行该活动。 `RequiredArgument` 特性用于指示活动中的某些参数是必需参数，`OverloadGroup` 特性用于将必需参数的多个类别组合在一起。 使用这些特性，活动作者可以提供简单或复杂的活动验证配置。  
@@ -73,7 +74,7 @@ public sealed class Add : CodeActivity<int>
   
  **未提供必要的活动自变量 Operand1 的值。**  
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]有关检查和处理验证错误和警告，请参阅[调用活动验证](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。  
+>  有关检查和处理验证错误和警告的详细信息，请参阅[调用活动验证](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。  
   
 ## <a name="using-overload-groups"></a>使用重载组  
  重载组提供了一种方法，指示哪些参数组合在活动中有效。 使用 <xref:System.Activities.OverloadGroupAttribute> 将参数组合在一起。 将为每个组提供一个名称，该名称由 <xref:System.Activities.OverloadGroupAttribute> 指定，仅当绑定重载组中的一组参数时，该活动才有效。 在下面的示例，摘自[OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md)示例中，`CreateLocation`定义类。  

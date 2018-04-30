@@ -1,12 +1,13 @@
 ---
-title: "优化性能：其他建议"
-ms.custom: 
+title: 优化性能：其他建议
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e45296befd51af5e4b03f123241efba030fd3754
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: afe0e93706089e1893d46316b33c2568df83ffd3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="optimizing-performance-other-recommendations"></a>优化性能：其他建议
 <a name="introduction"></a>本主题提供[优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)这一节中各主题内容之外的性能改进建议。  
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>配置字体缓存服务以缩短启动时间  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 字体缓存服务会在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序之间共享字体数据。 如果该服务尚未运行，则首个运行的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序将启动此服务。 如果使用 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，则可以将“[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 字体缓存 3.0.0.0”服务从“手动”（默认值）设置为“自动(延迟的启动)”，以缩短 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的初始启动时间。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 字体缓存服务会在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序之间共享字体数据。 如果该服务尚未运行，则首个运行的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序将启动此服务。 如果你使用[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，可以设置从"手动"（默认值） 的"Windows Presentation Foundation (WPF) 字体缓存 3.0.0.0"服务为"自动 （延迟启动）"，以减少的初始启动时间[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序。  
   
 ## <a name="see-also"></a>请参阅  
  [规划应用程序性能](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  

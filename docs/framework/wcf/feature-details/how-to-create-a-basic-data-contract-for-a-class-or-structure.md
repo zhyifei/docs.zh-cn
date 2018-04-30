@@ -23,14 +23,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5f12302fd395197363fe058fe260f717da78145e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 43fa318d2910fcd8b1d9ce75fc02d75bb39d4079
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>如何：创建类或结构的基本数据协定
-本主题演示使用类或结构创建数据协定的基本步骤。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 数据协定以及如何使用它们，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+本主题演示使用类或结构创建数据协定的基本步骤。 有关数据协定和如何使用它们的详细信息，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  有关演练创建一个基本的步骤的教程[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]服务和客户端，请参阅[入门教程](../../../../docs/framework/wcf/getting-started-tutorial.md)。 有关工作示例应用程序，它包含基本服务和客户端，请参阅[基本数据协定](../../../../docs/framework/wcf/samples/basic-data-contract.md)。  
   

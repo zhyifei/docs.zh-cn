@@ -18,18 +18,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="auditing-security-events"></a>审核安全事件
 使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建的应用程序可以利用审核功能来记录安全事件（成功、失败或两者）。 这些事件被写入 Windows 系统事件日志，并且可以使用事件查看器进行检查。  
   
  审核为管理员提供了一种检测已经发生或正在发生的攻击的方式。 此外，审核有助于开发人员调试与安全相关的问题。 例如，如果授权或检查策略配置中的错误意外拒绝授权用户进行访问，开发人员可以通过检查事件日志迅速发现并隔离此错误的原因。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 编程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
+ 有关详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 有关编程的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="audit-level-and-behavior"></a>审核级别和行为  
  存在两个安全审核级别：  

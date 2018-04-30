@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d0b12fc6c91f57ec49050a0a37b16f64d0e54e6d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>使用 WorkflowInvoker 和 WorkflowApplication
-Windows Workflow Foundation (WF) 提供承载工作流的若干方法。 <xref:System.Activities.WorkflowInvoker> 提供一种简单工作流调用方法，就像方法调用一样，仅可用于不使用持久性的工作流。 <xref:System.Activities.WorkflowApplication> 为执行工作流（包括生命周期事件通知、执行控制、书签恢复和持久性）提供更丰富的模型。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 为消息传递活动提供支持，主要用于工作流服务。 本主题介绍使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 的工作流承载。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 承载工作流与<xref:System.ServiceModel.Activities.WorkflowServiceHost>，请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)和[承载工作流服务概述](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。  
+Windows Workflow Foundation (WF) 提供承载工作流的若干方法。 <xref:System.Activities.WorkflowInvoker> 提供一种简单工作流调用方法，就像方法调用一样，仅可用于不使用持久性的工作流。 <xref:System.Activities.WorkflowApplication> 为执行工作流（包括生命周期事件通知、执行控制、书签恢复和持久性）提供更丰富的模型。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 为消息传递活动提供支持，主要用于工作流服务。 本主题介绍使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 的工作流承载。 有关承载工作流与<xref:System.ServiceModel.Activities.WorkflowServiceHost>，请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)和[承载工作流服务概述](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。  
   
 ## <a name="using-workflowinvoker"></a>使用 WorkflowInvoker  
  <xref:System.Activities.WorkflowInvoker> 提供一种执行工作流的模型，如同使用方法调用。 若要使用 <xref:System.Activities.WorkflowInvoker> 调用工作流，请调用 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 方法，并传入要调用的工作流的工作流定义。 在本示例中，使用 <xref:System.Activities.Statements.WriteLine> 调用 <xref:System.Activities.WorkflowInvoker> 活动。  
@@ -78,7 +78,7 @@ Windows Workflow Foundation (WF) 提供承载工作流的若干方法。 <xref:S
  [!code-csharp[CFX_WorkflowApplicationExample#21](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#21)]  
   
 > [!NOTE]
->  <xref:System.Activities.WorkflowApplication> 和 <xref:System.Activities.WorkflowInvoker> 采用输入实参字典，并返回 `out` 实参的字典。 这些字典形参、属性及返回值的类型为 `IDictionary<string, object>`。 传入的字典类的实际实例可以是实现了 `IDictionary<string, object>` 的任何类。 在这些示例中使用了 `Dictionary<string, object>`。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 字典，请参阅<xref:System.Collections.Generic.IDictionary%602>和<xref:System.Collections.Generic.Dictionary%602>。  
+>  <xref:System.Activities.WorkflowApplication> 和 <xref:System.Activities.WorkflowInvoker> 采用输入实参字典，并返回 `out` 实参的字典。 这些字典形参、属性及返回值的类型为 `IDictionary<string, object>`。 传入的字典类的实际实例可以是实现了 `IDictionary<string, object>` 的任何类。 在这些示例中使用了 `Dictionary<string, object>`。 有关字典的详细信息，请参阅<xref:System.Collections.Generic.IDictionary%602>和<xref:System.Collections.Generic.Dictionary%602>。  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>使用书签将数据传入运行中的工作流  
  书签是使活动能够被动等待继续的机制，也是将数据传入运行中的工作流实例的机制。 如果某个活动在等待数据，它可以创建 <xref:System.Activities.Bookmark>，并注册一个在继续 <xref:System.Activities.Bookmark> 时要调用的回调方法，如下例所示。  

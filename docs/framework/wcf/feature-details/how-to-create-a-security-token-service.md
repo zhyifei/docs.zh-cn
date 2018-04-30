@@ -22,11 +22,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: e043b9b9a3b09bec0d7484fb732e33571b5aaf0c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 827fef90a6277387ceac1c8f1d6df00a69a5d612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-security-token-service"></a>如何：创建安全令牌服务
 安全令牌服务实现在 WS-Trust 规范中定义的协议。 此协议为颁发、续订、取消和验证安全令牌定义消息格式和消息交换模式。 给定的安全令牌服务提供这些功能中的一个或多个功能。 本主题考虑最常见的情况：实现令牌颁发。  
@@ -124,7 +124,7 @@ ms.lasthandoff: 04/28/2018
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何构造证明令牌，如果客户端和安全令牌服务同时提供的共享密钥的密钥材料，请参阅[联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+ 有关如何在客户端和安全令牌服务都提供的共享密钥的密钥材料时构造证明令牌的详细信息，请参阅[联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
  通过创建 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> 类的实例来构造颁发的令牌的引用。  
   

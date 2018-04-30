@@ -1,12 +1,13 @@
 ---
-title: "定义和指定错误"
-ms.custom: 
+title: 定义和指定错误
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 713b9594ac628c2c256e8592d3894feee8029332
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6c200ad587d437875f510adc4f05b30bdb7ab089
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="defining-and-specifying-faults"></a>定义和指定错误
-SOAP 错误可将错误情况信息从服务传达到客户端，在双工情况下，还可以以互操作方式从客户端传达到服务。 此主题讨论何时并且如何自定义错误内容并指定可以返回错误的操作。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何将服务或双工客户端，可以发送这些错误和客户端或服务应用程序如何处理这些错误，请参阅[发送和接收错误](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 有关概述中的错误处理[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]应用程序，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
+SOAP 错误可将错误情况信息从服务传达到客户端，在双工情况下，还可以以互操作方式从客户端传达到服务。 此主题讨论何时并且如何自定义错误内容并指定可以返回错误的操作。 有关服务或双工客户端如何发送这些错误和客户端或服务应用程序如何处理这些错误的详细信息，请参阅[发送和接收错误](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 有关概述中的错误处理[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]应用程序，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
   
 ## <a name="overview"></a>概述  
  声明的 SOAP 错误是指其中的某个操作具有 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 的错误，该属性指定自定义 SOAP 错误类型。 未声明的 SOAP 错误是指那些未在相应操作的协定中指定的错误。 本主题帮助您识别这些错误情况并为您的服务创建一个错误协定，当收到自定义 SOAP 错误时，客户端可以用它正确地处理这些错误情况。 基本任务依次为：  
@@ -77,7 +79,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何确保你的数据是可序列化，请参阅[指定服务协定中的数据传输](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。 有关序列化的列表支持<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>提供，请参阅[类型受数据协定序列化程序](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
+ 如何确保你的数据是可序列化有关的详细信息，请参阅[指定服务协定中的数据传输](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。 有关序列化的列表支持<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>提供，请参阅[类型受数据协定序列化程序](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>标记操作以建立错误协定  
  定义了一个将作为自定义 SOAP 错误的一部分返回的可序列化数据结构后，最后一步是将操作协定标记为引发该类型的一个 SOAP 错误。 为此，可以使用 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 属性并传递构造的自定义数据类型的类型。 下面的代码示例演示如何使用 <xref:System.ServiceModel.FaultContractAttribute> 属性将 `Divide` 运算指定为可以返回一个 `MathFault` 类型的 SOAP 错误。 现在也可以将其他基于数学的运算指定为可以返回 `MathFault`。  

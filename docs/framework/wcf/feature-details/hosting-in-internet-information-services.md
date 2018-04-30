@@ -1,28 +1,28 @@
 ---
-title: "在 Internet 信息服务中承载"
-ms.custom: 
+title: 在 Internet 信息服务中承载
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 988216447e47345b6d863de6e46d0de9a025f068
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b933626c2f3f5ee7121d141d3704376efeb54ba5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-internet-information-services"></a>在 Internet 信息服务中承载
 若要承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，一种选择是在 Internet 信息服务 (IIS) 应用程序内部承载。 此承载模型与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 ASP.NET Web 服务 (ASMX) 使用的模型类似。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 上的 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 提供了一种高级进程模型，这种模型可提供更好的可伸缩性、可靠性和应用程序隔离。 此环境适合对以独占方式使用 HTTP 通信的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行成品部署。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 和 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上的 IIS 7.0。 IIS 7.0 提供了与 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 相同的高级进程模型，但它使用 Windows 进程激活服务 (WAS) 来允许通过 HTTP 之外的协议进行激活和网络通信。 此环境适合开发可通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的任何网络协议（包括 HTTP、net.tcp、net.pipe 和 net.msmq）进行通信的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]，请参阅[在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
+-   [!INCLUDE[wv](../../../../includes/wv-md.md)] 和 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上的 IIS 7.0。 IIS 7.0 提供了与 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 相同的高级进程模型，但它使用 Windows 进程激活服务 (WAS) 来允许通过 HTTP 之外的协议进行激活和网络通信。 此环境适合开发可通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的任何网络协议（包括 HTTP、net.tcp、net.pipe 和 net.msmq）进行通信的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 有关 WAS 的详细信息，请参阅[在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
   
 -   [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496)配合[!INCLUDE[iisver](../../../../includes/iisver-md.md)]和 Windows 进程激活服务 (WAS) 提供丰富的应用程序宿主环境为 NET4 WCF 和 WF 服务。 这些优点包括进程生命周期管理、进程回收、共享承载、快速失败保护、进程孤立、按需激活和运行状况监视。 有关详细信息，请参阅[AppFabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=196494)和[AppFabric 承载概念](http://go.microsoft.com/fwlink/?LinkId=196495)。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
 -   IIS 中承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务与 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 使用相同的动态编译模型，该模型简化了承载的服务的开发和部署。  
   
- 当决定在 IIS 中承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，一定要记住 IIS 5.1 和 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 仅限于 HTTP 通信。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]选择宿主环境，请参阅[托管服务](../../../../docs/framework/wcf/hosting-services.md)。  
+ 当决定在 IIS 中承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，一定要记住 IIS 5.1 和 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 仅限于 HTTP 通信。 有关选择宿主环境的详细信息，请参阅[托管服务](../../../../docs/framework/wcf/hosting-services.md)。  
   
 ## <a name="deploying-an-iis-hosted-wcf-service"></a>部署 IIS 承载的 WCF 服务  
  开发和部署 IIS 承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务由以下任务组成：  

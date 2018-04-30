@@ -1,32 +1,34 @@
 ---
-title: "如何：使用 WCF 客户端访问 WSE 3.0 服务"
-ms.custom: 
+title: 如何：使用 WCF 客户端访问 WSE 3.0 服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49ff6378bcd35ab2d4e2adf3783a1c4e73025d3a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 382762917e790d54dca31158f2b7ffde560c1427
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>如何：使用 WCF 客户端访问 WSE 3.0 服务
 当 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端配置为使用 2004 年 8 月版的 WS-Addressing 规范时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端在网络级别与 Web Services Enhancements (WSE) 3.0 for Microsoft .NET 服务兼容。 但是，WSE 3.0 服务不支持元数据交换 (MEX) 协议，因此当你使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)创建[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端类的安全设置不适用于生成[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端。 因此，在生成 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端后，必须指定 WSE 3.0 服务要求的安全设置。  
   
- 您可以在考虑 WSE 3.0 服务的要求以及 WSE 3.0 服务和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端之间的互操作要求的情况下，使用自定义绑定来应用这些安全设置。 这些互操作性要求包括前面提到的使用 2004 年 8 月版的 WS-Addressing 规范和 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> 的 WSE 3.0 默认消息保护。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的默认消息保护为 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>。 本主题详细介绍如何创建与 WSE 3.0 服务互操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 绑定。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还提供了融入此绑定的示例。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]此示例中，请参阅[与 ASMX Web 服务互操作](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)。  
+ 您可以在考虑 WSE 3.0 服务的要求以及 WSE 3.0 服务和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端之间的互操作要求的情况下，使用自定义绑定来应用这些安全设置。 这些互操作性要求包括前面提到的使用 2004 年 8 月版的 WS-Addressing 规范和 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> 的 WSE 3.0 默认消息保护。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的默认消息保护为 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>。 本主题详细介绍如何创建与 WSE 3.0 服务互操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 绑定。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还提供了融入此绑定的示例。 有关此示例的详细信息，请参阅[与 ASMX Web 服务互操作](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)。  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>使用 WCF 客户端访问 WSE 3.0 Web 服务  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/19/2018
   
      对于 WSE 3.0 Web 服务，会创建一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端。 因为 WSE 3.0 不支持 MEX 协议，因此不能使用该工具检索 Web 服务的安全要求。 应用程序开发人员必须为客户端添加安全设置。  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端，请参阅[如何： 创建客户端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+     有关创建[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端，请参阅[如何： 创建客户端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 2.  创建一个类，表示可与 WSE 3.0 Web 服务进行通信的绑定。  
   

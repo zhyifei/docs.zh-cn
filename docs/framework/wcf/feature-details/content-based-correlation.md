@@ -1,24 +1,26 @@
 ---
-title: "基于内容的相关性"
-ms.custom: 
+title: 基于内容的相关性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b4ebd49fbed12f1e8120e67f32496cd782531da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="content-based-correlation"></a>基于内容的相关性
 当工作流服务与客户端和其他服务通信时，交换的消息中通常包含一些数据，用于以唯一方式使消息和特定实例相关。 基于内容的相关使用消息中的此数据（如客户编号或订单 ID）将消息路由到正确的工作流实例。 本主题说明如何在工作流中使用基于内容的相关。  
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  当工作流服务具有多个由单个客户端访问的方法，且交换消息中的一段数据标识了所需实例时，将使用基于内容的相关。  
   
 > [!NOTE]
->  当因绑定不是支持的上下文交换绑定之一而导致无法使用上下文相关时，基于内容的相关非常有用。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]上下文相关，请参阅[上下文交换](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)。  
+>  当因绑定不是支持的上下文交换绑定之一而导致无法使用上下文相关时，基于内容的相关非常有用。 有关上下文相关的详细信息，请参阅[上下文交换](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)。  
   
  这些通信中使用的每个消息传递活动都必须指定唯一标识实例的数据在消息中的位置。 通过提供 <xref:System.ServiceModel.MessageQuerySet>，并使用 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 或 <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A>（在消息中查询唯一标识实例的一段或几段数据）可以实现此操作。  
   

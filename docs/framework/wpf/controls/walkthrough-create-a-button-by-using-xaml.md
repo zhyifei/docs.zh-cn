@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94ec5e56862190026b43331488cbc699fe7dfda4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a05e0af94cc84db117c7b8caf389d084cd4c3fd5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>演练：使用 XAML 创建按钮
-本演练的目的是了解如何创建用于动画的按钮[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]应用程序。 本演练使用样式和模板来创建自定义的按钮资源允许的代码重用，并从按钮声明的按钮逻辑分离。 本演练完全在编写[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
+本演练的目的是若要了解如何在 Windows Presentation Foundation (WPF) 应用程序中创建的动画的按钮，供使用。 本演练使用样式和模板来创建自定义的按钮资源允许的代码重用，并从按钮声明的按钮逻辑分离。 本演练完全在编写[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
   
 > [!IMPORTANT]
 >  本演练将指导你逐步完成创建应用程序，通过键入或复制并粘贴[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]到 Microsoft Visual Studio。 如果你想要了解如何使用设计工具 (Microsoft Expression Blend) 来创建相同的应用程序，请参阅[创建通过使用 Microsoft Expression Blend 按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)。  

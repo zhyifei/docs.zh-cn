@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5550e97d97adf28a84566c5d7936369656c65e43
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>从 Web 浏览器访问服务（WCF 数据服务快速入门）
 在此任务中，您将从 Visual Studio 启动 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，并在 Web 浏览器中禁用源阅读（可选）。 你将进而检索服务定义文档以及提交给公开的资源的 Web 浏览器通过 HTTP GET 请求以访问数据服务资源。  
   
 > [!NOTE]
->  默认情况下，Visual Studio 自动为计算机上的 `localhost` URI 分配一个端口号。 本任务在 URI 示例中使用端口号 `12345`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何在你 Visual Studio 项目，请参阅中设置特定的端口号[创建数据服务](../../../../docs/framework/data/wcf/creating-the-data-service.md)。  
+>  默认情况下，Visual Studio 自动为计算机上的 `localhost` URI 分配一个端口号。 本任务在 URI 示例中使用端口号 `12345`。 有关如何在 Visual Studio 项目中设置特定的端口号的详细信息请参阅[创建数据服务](../../../../docs/framework/data/wcf/creating-the-data-service.md)。  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>使用 Internet Explorer 请求默认服务文档  
   

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-message-contracts"></a>使用消息约定
 通常，在生成 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序时，开发人员会密切关注数据结构和序列化问题，而不必关心携带数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 (有关详细信息，请参阅[指定服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/28/2018
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- 通常，定义消息的架构时使用数据协定就足够了。 例如，在前面的示例中，如果 `BankingTransaction` 和 `BankingTransactionResponse` 具有定义基础 SOAP 消息内容的数据协定，则对于大多数应用程序就足够了。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 数据协定，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 通常，定义消息的架构时使用数据协定就足够了。 例如，在前面的示例中，如果 `BankingTransaction` 和 `BankingTransactionResponse` 具有定义基础 SOAP 消息内容的数据协定，则对于大多数应用程序就足够了。 有关数据协定的详细信息，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  但是，有时需要精确控制 SOAP 消息的结构如何通过网络进行传输。 对于这种情况，最常见的方案是插入自定义 SOAP 标头。 另一种常见方案是定义消息头和正文的安全属性，也就是说，确定是否对这些元素进行数字签名和加密。 最后，一些第三方 SOAP 堆栈要求消息采用特定的格式。 消息样式的操作可提供这种控制。  
   

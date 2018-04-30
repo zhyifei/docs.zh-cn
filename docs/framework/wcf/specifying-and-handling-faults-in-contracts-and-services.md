@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 00b3687169aa2e5521a3e3348be2a45738e97093
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>在协定和服务中指定和处理错误
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序通过以下方式来处理错误情况：将托管异常对象映射到 SOAP 错误对象，并将 SOAP 错误对象映射到托管异常对象。 本节中的主题讨论如何设计协定以将错误条件作为自定义 SOAP 错误公开、如何作为服务实现的一部分返回这些错误，以及客户端如何捕捉这些错误。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="map-exceptions-to-soap-faults"></a>将异常映射到 SOAP 错误  
  创建用于处理错误条件的操作的第一步是：决定在什么条件下应向客户端应用程序通知有关错误的信息。 某些操作具有特定于其功能的错误条件。 例如，`PurchaseOrder` 操作可能会向不再允许其发起采购订单的用户返回特定信息。 在其他情况下（如 `Calculator` 服务），一个更宽泛的 `MathFault` SOAP 错误也许可以描述整个服务内的所有错误条件。 在标识服务客户端的错误条件之后，可以构造一个自定义 SOAP 错误，并可以将操作标记为在出现相应的 SOAP 错误条件时返回该 SOAP 错误。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 此步骤中的开发你的服务或客户端，请参阅[定义和指定错误](../../../docs/framework/wcf/defining-and-specifying-faults.md)。  
+ 有关此步骤开发你的服务或客户端的详细信息，请参阅[定义和指定错误](../../../docs/framework/wcf/defining-and-specifying-faults.md)。  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>客户端和服务将 SOAP 错误作为异常进行处理  
  在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序中成功进行错误处理的第一步是：标识操作错误条件，定义自定义 SOAP 错误，并将这些操作标记为返回这些错误。 下一步是正确实现这些错误的发送和接收。 通常，服务会发送错误以通知客户端应用程序有关错误条件的情况，但是双工客户端也可以向服务发送 SOAP 错误。  

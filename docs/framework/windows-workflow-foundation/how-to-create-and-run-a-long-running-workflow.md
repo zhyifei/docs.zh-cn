@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10ca88533297e56d48b73b6368c2e8457380f543
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: c7776c9155ef2c2c5c4ea804285cd67e995ef119
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>How to: Create and Run a Long Running Workflow
 主要功能的 Windows Workflow Foundation (WF) 之一是运行时能够在持久保存和卸载空闲工作流保存到数据库。 中的步骤[如何： 运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)演示工作流宿主使用控制台应用程序的基础知识。 示例演示了启动工作流、工作流生命周期处理程序和恢复书签。 为了有效演示工作流持久性，需要一个支持启动和恢复多个工作流实例的更为复杂的工作流主机。 教程中此步骤演示了如何创建 Windows 窗体主机应用程序，此 Windows 窗体主机应用程序支持启动和恢复多个工作流实例、工作流持久性，并为高级功能（如在后续教程步骤中演示的跟踪和版本控制）提供基础。  
@@ -703,7 +703,7 @@ ms.lasthandoff: 04/27/2018
     ```  
   
 ###  <a name="BKMK_WorkflowVersionMap"></a> 若要启用启动和恢复多个工作流类型  
- 要恢复工作流实例，主机必须提供工作流定义。 在此教程中有三个工作流类型，且后续教程步骤会介绍这些类型的多个版本。 主机应用程序可通过 `WorkflowIdentity` 将标识信息与持久化工作流实例相关联。 本节中的步骤演示了如何创建一个实用工具类，以帮助将工作流标识从持久化工作流实例映射到对应的工作流定义。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] `WorkflowIdentity` 和版本管理，请参阅[使用 WorkflowIdentity 和版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)。  
+ 要恢复工作流实例，主机必须提供工作流定义。 在此教程中有三个工作流类型，且后续教程步骤会介绍这些类型的多个版本。 主机应用程序可通过 `WorkflowIdentity` 将标识信息与持久化工作流实例相关联。 本节中的步骤演示了如何创建一个实用工具类，以帮助将工作流标识从持久化工作流实例映射到对应的工作流定义。 有关详细信息`WorkflowIdentity`和版本管理，请参阅[使用 WorkflowIdentity 和版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)。  
   
 1.  右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**选择**添加**，**类**。 类型`WorkflowVersionMap`到**名称**框中，单击**添加**。  
   

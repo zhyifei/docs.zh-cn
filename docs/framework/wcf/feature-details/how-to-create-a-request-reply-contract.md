@@ -1,24 +1,26 @@
 ---
-title: "如何：创建请求-答复协定"
-ms.custom: 
+title: 如何：创建请求-答复协定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f86679d38b8d1a1d6443c1aac37cfa75f426e402
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2a272eaa88a53814daea9d515550a37f7991ecb8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>如何：创建请求-答复协定
 请求-答复协定指定返回答复的方法。 必须根据此协定的条款发送答复并与请求相关联。 即使该方法不返回任何答复（采用 C# 语言时，返回 `void`，采用 Visual Basic 语言时，返回 `Sub`），基础结构也将创建一条空消息并将其发送给调用方。 若要防止发送空答复消息，请对操作使用单向协定。  
@@ -54,7 +56,7 @@ public interface ICalculator
 }
 ```
   
--   [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何指定操作协定的更多信息，请参见 <xref:System.ServiceModel.OperationContractAttribute> 类和 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 属性。  
+-   有关如何指定操作协定的详细信息，请参阅<xref:System.ServiceModel.OperationContractAttribute>类和<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>属性。  
   
 -   在部署了服务之后，应用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 特性会导致在 Web 服务描述语言 (WSDL) 文档中自动生成服务协定定义。 通过将 `?wsdl` 追加到该服务的 HTTP 基址，可下载此文档。 例如，`http://microsoft/CalculatorService?wsdl`  
   

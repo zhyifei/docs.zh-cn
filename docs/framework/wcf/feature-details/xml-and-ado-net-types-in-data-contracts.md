@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3a1fceb1017c5225b4e1de6891d6609c9ad5062e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7efef63668bb78bdc9a7d66654c9e33ef6c0138c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>数据协定中的 XML 和 ADO.NET 类型
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 数据协定模型支持某些直接表示 XML 的类型。 当这些类型序列化为 XML 时，序列化程序将写出这些类型的 XML 内容，而不再进一步进行任何处理。 支持的类型为 <xref:System.Xml.XmlElement>、<xref:System.Xml.XmlNode> 的数组（但不是 `XmlNode` 类型本身）以及实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。 <xref:System.Data.DataSet> 和 <xref:System.Data.DataTable> 类型以及类型化数据集通常用于数据库编程。 这些类型可实现 `IXmlSerializable` 接口，因此它们在数据协定模型中可序列化。 本主题的结尾还列出了一些有关这些类型的特殊注意事项。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/28/2018
 </MyDataContract>  
 ```  
   
- 请注意，包装数据成员元素 `<myDataMember>` 仍然存在。 无法在数据协定模型中移除此元素。 处理此模型的序列化程序（<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer>）可以将特殊属性发出到此包装元素。 这些属性包括标准 XML 架构实例“nil”属性（允许 `XmlElement` 为 `null`）和“Type”属性（允许以多元方式使用 `XmlElement`）。 此外，以下 XML 属性是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所特有的：“Id”、“Ref”、“Type”和“Assembly”。 可以发出这些属性以支持与已启用的对象图保留模式或 `XmlElement` 一起使用 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 ([!INCLUDE[crabout](../../../../includes/crabout-md.md)]对象图保存模式，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。)  
+ 请注意，包装数据成员元素 `<myDataMember>` 仍然存在。 无法在数据协定模型中移除此元素。 处理此模型的序列化程序（<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer>）可以将特殊属性发出到此包装元素。 这些属性包括标准 XML 架构实例“nil”属性（允许 `XmlElement` 为 `null`）和“Type”属性（允许以多元方式使用 `XmlElement`）。 此外，以下 XML 属性是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所特有的：“Id”、“Ref”、“Type”和“Assembly”。 可以发出这些属性以支持与已启用的对象图保留模式或 `XmlElement` 一起使用 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 (有关对象图保存模式的详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。)  
   
  允许使用 `XmlElement` 的数组或集合，并且可以将它们作为任何其他数组或集合进行处理。 也就是说，将有一个包装元素适用于整个集合，并且数组中的每一个 `<myDataMember>` 都对应一个单独的包装元素（类似于上面示例中的 `XmlElement`）。  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/28/2018
 ### <a name="schema-considerations-for-ixmlserializable-content-types"></a>IXmlSerializable 内容类型的架构注意事项  
  导出 `IXmlSerializable` 内容类型的架构时，将调用架构提供程序方法。 并将 <xref:System.Xml.Schema.XmlSchemaSet> 传递给架构提供程序方法。 该方法可以将任何有效架构添加到架构集中。 该架构集将包含发生架构导出时已知的架构。 当架构提供程序方法必须将项添加到架构集中时，它必须确定该集中是否已存在具有适当命名空间的 <xref:System.Xml.Schema.XmlSchema>。 如果已存在，则架构提供程序方法必须将新项添加到现有 `XmlSchema` 中。 否则，它必须创建一个新的 `XmlSchema` 实例。 如果使用的是 `IXmlSerializable` 类型数组，这是非常重要的。 例如，如果您有一个 `IXmlSerializable` 类型，且已作为命名空间“B”中的类型“A”导出，则在调用架构提供程序方法时，架构集可能已包含保存“ArrayOfA”类型的“B”架构。  
   
- 除了将类型添加到 <xref:System.Xml.Schema.XmlSchemaSet>，内容类型的架构提供程序方法必须返回非空值。 它可能返回 <xref:System.Xml.XmlQualifiedName>，指定用于给定 `IXmlSerializable` 类型的架构类型名称。 此限定名称也将用作数据协定名称和该类型的命名空间。 返回架构提供程序方法时允许立即返回架构集中不存在的类型。 但是，导出所有相关类型（调用 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 方法中有关 <xref:System.Runtime.Serialization.XsdDataContractExporter> 的所有相关类型并访问 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 属性）时，该类型应该存在于架构集中。 在进行所有相关的 `Schemas` 调用之前访问 `Export` 属性可能会导致 <xref:System.Xml.Schema.XmlSchemaException>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 导出过程中，请参阅[从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
+ 除了将类型添加到 <xref:System.Xml.Schema.XmlSchemaSet>，内容类型的架构提供程序方法必须返回非空值。 它可能返回 <xref:System.Xml.XmlQualifiedName>，指定用于给定 `IXmlSerializable` 类型的架构类型名称。 此限定名称也将用作数据协定名称和该类型的命名空间。 返回架构提供程序方法时允许立即返回架构集中不存在的类型。 但是，导出所有相关类型（调用 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 方法中有关 <xref:System.Runtime.Serialization.XsdDataContractExporter> 的所有相关类型并访问 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 属性）时，该类型应该存在于架构集中。 在进行所有相关的 `Schemas` 调用之前访问 `Export` 属性可能会导致 <xref:System.Xml.Schema.XmlSchemaException>。 有关导出过程的详细信息，请参阅[从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
   
  架构提供程序方法也可以返回要使用的 <xref:System.Xml.Schema.XmlSchemaType>。 该类型可能是匿名的，也可能不是。 如果它是匿名的，则每次将 `IXmlSerializable` 类型用作数据成员时，`IXmlSerializable` 类型的架构都将作为匿名类型导出。 `IXmlSerializable` 类型仍具有数据协定名称和命名空间。 (这确定的中所述[数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)只不过<xref:System.Runtime.Serialization.DataContractAttribute>属性不能用于自定义的名称。)如果它不是匿名的，则它必须是 `XmlSchemaSet` 中的一种类型。 这种情况相当于返回该类型的 `XmlQualifiedName`。  
   
@@ -211,7 +211,7 @@ ms.lasthandoff: 04/28/2018
   
 -   这些类型的架构（尤其是 <xref:System.Data.DataSet> 及其类型化派生类）可能与一些非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 平台无法交互，或者在与这些平台一起使用时可能导致可用性很差。 另外，使用 `DataSet` 类型可能会影响性能。 最后，这可能会增加将来升级应用程序版本的难度。 考虑使用显式定义的数据协定类型代替协定中的 `DataSet` 类型。  
   
--   导入 `DataSet` 或 `DataTable` 架构时，引用这些类型很重要。 使用 Svcutil.exe 命令行工具，这可以通过实现 System.Data.dll 程序集将名称传递给`/reference`切换。 如果导入类型化数据集架构，则必须引用类型化数据集的类型。 使用 Svcutil.exe，传递到类型化数据集的程序集的位置`/reference`切换。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 引用类型，请参阅[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
+-   导入 `DataSet` 或 `DataTable` 架构时，引用这些类型很重要。 使用 Svcutil.exe 命令行工具，这可以通过实现 System.Data.dll 程序集将名称传递给`/reference`切换。 如果导入类型化数据集架构，则必须引用类型化数据集的类型。 使用 Svcutil.exe，传递到类型化数据集的程序集的位置`/reference`切换。 有关引用类型的详细信息，请参阅[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   
  对数据协定模型中类型化数据集的支持是有限的。 类型化数据集可以序列化和反序列化，并可导出其架构。 但是，数据协定架构导入无法从该架构生成新的类型化数据集类型，因为它只能重新使用现有的类型化数据集类型。 通过对 Svcutil.exe 使用 `/r` 开关，可以指向现有类型化数据集。 如果尝试在不使用 `/r` 开关的情况下对使用类型化数据集的服务使用 Svcutil.exe，则会自动选择替代序列化程序 (XmlSerializer)。 如果必须使用 DataContractSerializer 且必须从架构生成数据集，则可使用以下过程：生成类型化数据集类型（通过将 Xsd.exe 工具与 `/d` 开关结合起来用于服务）、编译类型，然后在 Svcutil.exe 上使用 `/r` 开关来指向这些类型。  
   

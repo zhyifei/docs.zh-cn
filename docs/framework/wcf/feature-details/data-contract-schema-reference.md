@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-schema-reference"></a>数据协定架构参考
 本主题介绍 <xref:System.Runtime.Serialization.DataContractSerializer> 用来描述 XML 序列化的公共语言运行库 (CLR) 类型的 XML 架构 (XSD) 的子集。  
@@ -245,7 +245,7 @@ ms.lasthandoff: 04/28/2018
   
 -   除 `xs:string` 之外没有任何限制方面的 `xs:enumeration` 的简单类型限制映射到枚举数据协定。  
   
--   将所有其他简单类型限制映射到它们限制的类型。 例如， `xs:int` 的限制将映射到一个整数，就像 `xs:int` 自身一样。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 基元类型映射，请参见“类型/基元映射”。  
+-   将所有其他简单类型限制映射到它们限制的类型。 例如， `xs:int` 的限制将映射到一个整数，就像 `xs:int` 自身一样。 有关基元类型映射的信息的详细信息，请参阅类型/基元映射。  
   
 ### <a name="xsrestriction-attributes"></a>\<xs: restriction >： 属性  
   
@@ -549,7 +549,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- 数据协定序列化架构中声明的可选属性 `ser:FactoryType` 引用可以反序列化类型的工厂类。 工厂类必须是正在使用的 `DataContractSerializer` 实例的已知类型集合的一部分。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 已知类型的更多信息，请参见 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)将 CLR 类型映射到 XSD。  
+ 数据协定序列化架构中声明的可选属性 `ser:FactoryType` 引用可以反序列化类型的工厂类。 工厂类必须是正在使用的 `DataContractSerializer` 实例的已知类型集合的一部分。 有关已知类型的详细信息，请参阅[数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
 ## <a name="datacontract-serialization-schema"></a>DataContract 序列化架构  
  许多由 `DataContractSerializer` 导出的架构都使用一个特殊数据协定序列化命名空间中的类型、元素和属性：  

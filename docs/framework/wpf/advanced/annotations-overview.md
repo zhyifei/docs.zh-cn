@@ -23,16 +23,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f3ac3ce66d944934724bef1b69307030ec813e2
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: dcc881421e1a6960ab1ab9760ec2cd18a4c77c36
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="annotations-overview"></a>批注概述
 在纸质文档上编写说明或注释毫不稀奇，我们几乎认为这是理所当然的。 这些说明或注释就是“批注”，我们将其添加到文档，用于标注信息或突出显示兴趣项以供日后参考。 虽然在打印文档上编写注释很简单也很平常，但是就算在所有电子文档上添加个人注释，功能上却通常有很多限制。  
   
- 本主题介绍几种常见类型的批注，重点介绍便笺和突出显示，并举例说明 [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] 如何通过 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 文档查看控件简化在应用程序中使用这些类型的批注。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]支持注释的文档查看控件包括<xref:System.Windows.Controls.FlowDocumentReader>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>、 以及控件派生自<xref:System.Windows.Controls.Primitives.DocumentViewerBase>如<xref:System.Windows.Controls.DocumentViewer>和<xref:System.Windows.Controls.FlowDocumentPageViewer>。  
+ 本主题查看几个常见类型的批注，专门便笺和突出显示，并说明了如何[!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)]简化这些类型的应用程序可以通过 Windows Presentation Foundation (WPF) 文档中的批注查看控件。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持注释的文档查看控件包括<xref:System.Windows.Controls.FlowDocumentReader>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>、 以及控件派生自<xref:System.Windows.Controls.Primitives.DocumentViewerBase>如<xref:System.Windows.Controls.DocumentViewer>和<xref:System.Windows.Controls.FlowDocumentPageViewer>。  
   
   
 <a name="caf1_type_stickynotes"></a>   
