@@ -1,23 +1,24 @@
 ---
-title: "F-P 语句"
+title: F-P 语句
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 ms.assetid: cdce7ab0-c52e-4d33-a29b-bf32cdacc79f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cae859cbe8081ce1b7278f96fb55f1e876f0986b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e2c3dc3d56dc494cbbd3197558c86d4ef4e2f4e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="f-p-statements"></a>F-P 语句
-下表包含的列表[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]语言语句。  
+下表包含 Visual Basic 语言语句的列表。  
   
 |||||  
 |---|---|---|---|  
@@ -25,10 +26,10 @@ ms.lasthandoff: 11/21/2017
 |[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md)|[如果...然后...其他](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[Implements](../../../visual-basic/language-reference/statements/implements-statement.md)|[Imports (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)|  
 |[Imports (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)|[Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)|[Interface](../../../visual-basic/language-reference/statements/interface-statement.md)|[Mid](../../../visual-basic/language-reference/statements/mid-statement.md)|  
 |[模块](../../../visual-basic/language-reference/statements/module-statement.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[错误](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
-|[选项\<关键字 >](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[选项比较](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[显式选项](../../../visual-basic/language-reference/statements/option-explicit-statement.md)|[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)|  
-|[严格的选项](../../../visual-basic/language-reference/statements/option-strict-statement.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|||  
+|[选项\<关键字 >](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)|[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)|  
+|[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [A-E 语句](../../../visual-basic/language-reference/statements/a-e-statements.md)  
  [Q-Z 语句](../../../visual-basic/language-reference/statements/q-z-statements.md)  
  [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)

@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7f49b19b0836636bf7656dc618ef2f181a0d7fff
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 8ee1918091fe72e8606be6e7503ecd850084a4ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>对于 Docker 应用程序的内部循环开发工作流
 
@@ -193,7 +194,7 @@ services:
 
 -   链接到 redis 服务的 web 服务
 
-Redis 服务使用[最新的公共 redis 映像](https://hub.docker.com/_/redis/)从 Docker Hub 注册表中提取。 [redis](http://redis.io/)是一个非常受欢迎的缓存系统，用于服务器端应用程序。
+Redis 服务使用[最新的公共 redis 映像](https://hub.docker.com/_/redis/)从 Docker Hub 注册表中提取。 [redis](https://redis.io/)是一个非常受欢迎的缓存系统，用于服务器端应用程序。
 
 ### <a name="step-5-build-and-run-your-docker-app"></a>步骤 5： 生成并运行你的 Docker 应用
 
