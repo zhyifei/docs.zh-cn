@@ -1,32 +1,34 @@
 ---
-title: "如何：使用配置文件发布服务的元数据"
-ms.custom: 
+title: 如何：使用配置文件发布服务的元数据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42f70cd34f65d5393d79b8ace4f9eb704f309d0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d30031db590b424688cc0af6a573c1042099e64e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a><span data-ttu-id="634b0-102">如何：使用配置文件发布服务的元数据</span><span class="sxs-lookup"><span data-stu-id="634b0-102">How to: Publish Metadata for a Service Using a Configuration File</span></span>
-<span data-ttu-id="634b0-103">这是演示发布 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的元数据的两个帮助主题之一。</span><span class="sxs-lookup"><span data-stu-id="634b0-103">This is one of two how-to topics that demonstrate publishing metadata for a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service.</span></span> <span data-ttu-id="634b0-104">有两种方式可以指定服务应如何发布元数据：使用配置文件和使用代码。</span><span class="sxs-lookup"><span data-stu-id="634b0-104">There are two ways to specify how a service should publish metadata, using a configuration file and using code.</span></span> <span data-ttu-id="634b0-105">本主题演示如何使用配置文件发布服务的元数据。</span><span class="sxs-lookup"><span data-stu-id="634b0-105">This topic shows how to publish metadata for a service using a configuration file.</span></span>  
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a><span data-ttu-id="fb13d-102">如何：使用配置文件发布服务的元数据</span><span class="sxs-lookup"><span data-stu-id="fb13d-102">How to: Publish Metadata for a Service Using a Configuration File</span></span>
+<span data-ttu-id="fb13d-103">这是演示发布 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的元数据的两个帮助主题之一。</span><span class="sxs-lookup"><span data-stu-id="fb13d-103">This is one of two how-to topics that demonstrate publishing metadata for a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service.</span></span> <span data-ttu-id="fb13d-104">有两种方式可以指定服务应如何发布元数据：使用配置文件和使用代码。</span><span class="sxs-lookup"><span data-stu-id="fb13d-104">There are two ways to specify how a service should publish metadata, using a configuration file and using code.</span></span> <span data-ttu-id="fb13d-105">本主题演示如何使用配置文件发布服务的元数据。</span><span class="sxs-lookup"><span data-stu-id="fb13d-105">This topic shows how to publish metadata for a service using a configuration file.</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="634b0-106">本主题演示如何以不安全的方式发布元数据。</span><span class="sxs-lookup"><span data-stu-id="634b0-106">This topic shows how to publish metadata in an unsecure manner.</span></span> <span data-ttu-id="634b0-107">任何客户端都可以检索服务的元数据。</span><span class="sxs-lookup"><span data-stu-id="634b0-107">Any client can retrieve the metadata from the service.</span></span> <span data-ttu-id="634b0-108">如果您要求服务以安全方式发布元数据，请参阅[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。</span><span class="sxs-lookup"><span data-stu-id="634b0-108">If you require your service to publish metadata in a secure manner, see [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).</span></span>  
+>  <span data-ttu-id="fb13d-106">本主题演示如何以不安全的方式发布元数据。</span><span class="sxs-lookup"><span data-stu-id="fb13d-106">This topic shows how to publish metadata in an unsecure manner.</span></span> <span data-ttu-id="fb13d-107">任何客户端都可以检索服务的元数据。</span><span class="sxs-lookup"><span data-stu-id="fb13d-107">Any client can retrieve the metadata from the service.</span></span> <span data-ttu-id="fb13d-108">如果您要求服务以安全方式发布元数据，请参阅[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。</span><span class="sxs-lookup"><span data-stu-id="fb13d-108">If you require your service to publish metadata in a secure manner, see [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="634b0-109">发布元数据在代码中，请参阅[如何： 发布元数据服务使用代码](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。</span><span class="sxs-lookup"><span data-stu-id="634b0-109"> publishing metadata in code, see [How to: Publish Metadata for a Service Using Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span></span> <span data-ttu-id="634b0-110">通过发布元数据，客户端可以使用 WS-Transfer GET 请求或使用 `?wsdl` 查询字符串的 HTTP/GET 来检索元数据。</span><span class="sxs-lookup"><span data-stu-id="634b0-110">Publishing metadata allows clients to retrieve the metadata using a WS-Transfer GET request or an HTTP/GET request using the `?wsdl` query string.</span></span> <span data-ttu-id="634b0-111">若要确保代码能够工作，必须创建一个基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。</span><span class="sxs-lookup"><span data-stu-id="634b0-111">To be sure that the code is working, create a basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="634b0-112">为了简单起见，将在以下代码中提供一个基本的自承载服务。</span><span class="sxs-lookup"><span data-stu-id="634b0-112">For simplicity, a basic self-hosted service is provided in the following code.</span></span>  
+ <span data-ttu-id="fb13d-109">有关在代码中发布元数据的详细信息，请参阅[如何： 发布元数据服务使用代码](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。</span><span class="sxs-lookup"><span data-stu-id="fb13d-109">For more information about publishing metadata in code, see [How to: Publish Metadata for a Service Using Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span></span> <span data-ttu-id="fb13d-110">通过发布元数据，客户端可以使用 WS-Transfer GET 请求或使用 `?wsdl` 查询字符串的 HTTP/GET 来检索元数据。</span><span class="sxs-lookup"><span data-stu-id="fb13d-110">Publishing metadata allows clients to retrieve the metadata using a WS-Transfer GET request or an HTTP/GET request using the `?wsdl` query string.</span></span> <span data-ttu-id="fb13d-111">若要确保代码能够工作，必须创建一个基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。</span><span class="sxs-lookup"><span data-stu-id="fb13d-111">To be sure that the code is working, create a basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="fb13d-112">为了简单起见，将在以下代码中提供一个基本的自承载服务。</span><span class="sxs-lookup"><span data-stu-id="fb13d-112">For simplicity, a basic self-hosted service is provided in the following code.</span></span>  
   
 ```csharp  
 using System;  
@@ -82,7 +84,7 @@ namespace Metadata.Samples
 }  
 ```  
   
- <span data-ttu-id="634b0-113">此服务为自承载服务，并且是使用配置文件配置的。</span><span class="sxs-lookup"><span data-stu-id="634b0-113">This service is a self-hosted service, which is configured using a configuration file.</span></span> <span data-ttu-id="634b0-114">下面的配置文件作为开始点。</span><span class="sxs-lookup"><span data-stu-id="634b0-114">The following configuration file serves as a starting point.</span></span>  
+ <span data-ttu-id="fb13d-113">此服务为自承载服务，并且是使用配置文件配置的。</span><span class="sxs-lookup"><span data-stu-id="fb13d-113">This service is a self-hosted service, which is configured using a configuration file.</span></span> <span data-ttu-id="fb13d-114">下面的配置文件作为开始点。</span><span class="sxs-lookup"><span data-stu-id="fb13d-114">The following configuration file serves as a starting point.</span></span>  
   
 ```xml  
 <configuration>  
@@ -101,25 +103,25 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a><span data-ttu-id="634b0-115">使用应用程序配置文件发布 WCF 服务的元数据</span><span class="sxs-lookup"><span data-stu-id="634b0-115">To publish metadata for a WCF service using an application configuration file</span></span>  
+### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a><span data-ttu-id="fb13d-115">使用应用程序配置文件发布 WCF 服务的元数据</span><span class="sxs-lookup"><span data-stu-id="fb13d-115">To publish metadata for a WCF service using an application configuration file</span></span>  
   
-1.  <span data-ttu-id="634b0-116">在 App.config 文件内，在结束 `</services>` 元素之后创建 `<behaviors>` 元素。</span><span class="sxs-lookup"><span data-stu-id="634b0-116">Within the App.config file, after the closing `</services>` element, create a `<behaviors>` element.</span></span>  
-  
-  
-  
-2.  <span data-ttu-id="634b0-117">在 `<behaviors>` 元素内，添加一个 `<serviceBehaviors>` 元素。</span><span class="sxs-lookup"><span data-stu-id="634b0-117">Within the `<behaviors>` element, add a `<serviceBehaviors>` element.</span></span>  
+1.  <span data-ttu-id="fb13d-116">在 App.config 文件内，在结束 `</services>` 元素之后创建 `<behaviors>` 元素。</span><span class="sxs-lookup"><span data-stu-id="fb13d-116">Within the App.config file, after the closing `</services>` element, create a `<behaviors>` element.</span></span>  
   
   
   
-3.  <span data-ttu-id="634b0-118">向 `<behavior>``<serviceBehaviors>` 元素中添加一个 `name` 元素，并为 元素的 `<behavior>` 属性指定一个值。</span><span class="sxs-lookup"><span data-stu-id="634b0-118">Add a `<behavior>` element to the `<serviceBehaviors>` element and specify a value for the `name` attribute of the `<behavior>` element.</span></span>  
+2.  <span data-ttu-id="fb13d-117">在 `<behaviors>` 元素内，添加一个 `<serviceBehaviors>` 元素。</span><span class="sxs-lookup"><span data-stu-id="fb13d-117">Within the `<behaviors>` element, add a `<serviceBehaviors>` element.</span></span>  
   
   
   
-4.  <span data-ttu-id="634b0-119">向 `<serviceMetadata>` 元素中添加一个 `<behavior>` 元素。</span><span class="sxs-lookup"><span data-stu-id="634b0-119">Add a `<serviceMetadata>` element to the `<behavior>` element.</span></span> <span data-ttu-id="634b0-120">将 `httpGetEnabled` 属性设置为 `true`，并将 `policyVersion` 属性设置为 Policy15。</span><span class="sxs-lookup"><span data-stu-id="634b0-120">Set the `httpGetEnabled` attribute to `true` and the `policyVersion` attribute to Policy15.</span></span> <span data-ttu-id="634b0-121">`httpGetEnabled` 可让服务响应 HTTP GET 请求发出的元数据请求。</span><span class="sxs-lookup"><span data-stu-id="634b0-121">`httpGetEnabled` allows the service to respond to metadata requests made by an HTTP GET request.</span></span> <span data-ttu-id="634b0-122">`policyVersion` 通知服务在生成元数据时应符合 WS-Policy 1.5。</span><span class="sxs-lookup"><span data-stu-id="634b0-122">`policyVersion` tells the service to conform to WS-Policy 1.5 when generating metadata.</span></span>  
+3.  <span data-ttu-id="fb13d-118">向 `<behavior>``<serviceBehaviors>` 元素中添加一个 `name` 元素，并为 元素的 `<behavior>` 属性指定一个值。</span><span class="sxs-lookup"><span data-stu-id="fb13d-118">Add a `<behavior>` element to the `<serviceBehaviors>` element and specify a value for the `name` attribute of the `<behavior>` element.</span></span>  
   
   
   
-5.  <span data-ttu-id="634b0-123">将 `behaviorConfiguration` 特性添加到 `<service>` 元素，并指定在步骤 1 中添加的 `name` 元素的 `<behavior>` 特性，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="634b0-123">Add a `behaviorConfiguration` attribute to the `<service>` element and specify the `name` attribute of the `<behavior>` element added in step 1, as shown in the following code example.</span></span>  
+4.  <span data-ttu-id="fb13d-119">向 `<serviceMetadata>` 元素中添加一个 `<behavior>` 元素。</span><span class="sxs-lookup"><span data-stu-id="fb13d-119">Add a `<serviceMetadata>` element to the `<behavior>` element.</span></span> <span data-ttu-id="fb13d-120">将 `httpGetEnabled` 属性设置为 `true`，并将 `policyVersion` 属性设置为 Policy15。</span><span class="sxs-lookup"><span data-stu-id="fb13d-120">Set the `httpGetEnabled` attribute to `true` and the `policyVersion` attribute to Policy15.</span></span> <span data-ttu-id="fb13d-121">`httpGetEnabled` 可让服务响应 HTTP GET 请求发出的元数据请求。</span><span class="sxs-lookup"><span data-stu-id="fb13d-121">`httpGetEnabled` allows the service to respond to metadata requests made by an HTTP GET request.</span></span> <span data-ttu-id="fb13d-122">`policyVersion` 通知服务在生成元数据时应符合 WS-Policy 1.5。</span><span class="sxs-lookup"><span data-stu-id="fb13d-122">`policyVersion` tells the service to conform to WS-Policy 1.5 when generating metadata.</span></span>  
+  
+  
+  
+5.  <span data-ttu-id="fb13d-123">将 `behaviorConfiguration` 特性添加到 `<service>` 元素，并指定在步骤 1 中添加的 `name` 元素的 `<behavior>` 特性，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="fb13d-123">Add a `behaviorConfiguration` attribute to the `<service>` element and specify the `name` attribute of the `<behavior>` element added in step 1, as shown in the following code example.</span></span>  
   
     ```xml  
     <services>  
@@ -138,7 +140,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6.  <span data-ttu-id="634b0-124">添加一个或多个其协定设置为 `<endpoint>` 的 `IMetadataExchange` 元素，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="634b0-124">Add one or more `<endpoint>` elements with the contract set to `IMetadataExchange`, as shown in the following code example.</span></span>  
+6.  <span data-ttu-id="fb13d-124">添加一个或多个其协定设置为 `<endpoint>` 的 `IMetadataExchange` 元素，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="fb13d-124">Add one or more `<endpoint>` elements with the contract set to `IMetadataExchange`, as shown in the following code example.</span></span>  
   
     ```xml  
     <services>  
@@ -157,31 +159,31 @@ namespace Metadata.Samples
     </services>  
     ```  
   
-7.  <span data-ttu-id="634b0-125">对于上一步中添加的元数据终结点，将 `binding` 特性设置为下列值之一：</span><span class="sxs-lookup"><span data-stu-id="634b0-125">For the metadata endpoints added in the previous step, set the `binding` attribute to one of the following:</span></span>  
+7.  <span data-ttu-id="fb13d-125">对于上一步中添加的元数据终结点，将 `binding` 特性设置为下列值之一：</span><span class="sxs-lookup"><span data-stu-id="fb13d-125">For the metadata endpoints added in the previous step, set the `binding` attribute to one of the following:</span></span>  
   
-    -   <span data-ttu-id="634b0-126">`mexHttpBinding`（对于 HTTP 发布）。</span><span class="sxs-lookup"><span data-stu-id="634b0-126">`mexHttpBinding` for HTTP publication.</span></span>  
+    -   <span data-ttu-id="fb13d-126">`mexHttpBinding`（对于 HTTP 发布）。</span><span class="sxs-lookup"><span data-stu-id="fb13d-126">`mexHttpBinding` for HTTP publication.</span></span>  
   
-    -   <span data-ttu-id="634b0-127">`mexHttpsBinding`（对于 HTTPS 发布）。</span><span class="sxs-lookup"><span data-stu-id="634b0-127">`mexHttpsBinding` for HTTPS publication.</span></span>  
+    -   <span data-ttu-id="fb13d-127">`mexHttpsBinding`（对于 HTTPS 发布）。</span><span class="sxs-lookup"><span data-stu-id="fb13d-127">`mexHttpsBinding` for HTTPS publication.</span></span>  
   
-    -   <span data-ttu-id="634b0-128">`mexNamedPipeBinding`（对于命名管道发布）。</span><span class="sxs-lookup"><span data-stu-id="634b0-128">`mexNamedPipeBinding` for named pipe publication.</span></span>  
+    -   <span data-ttu-id="fb13d-128">`mexNamedPipeBinding`（对于命名管道发布）。</span><span class="sxs-lookup"><span data-stu-id="fb13d-128">`mexNamedPipeBinding` for named pipe publication.</span></span>  
   
-    -   <span data-ttu-id="634b0-129">`mexTcpBinding`（对于 TCP 发布）。</span><span class="sxs-lookup"><span data-stu-id="634b0-129">`mexTcpBinding` for TCP publication.</span></span>  
+    -   <span data-ttu-id="fb13d-129">`mexTcpBinding`（对于 TCP 发布）。</span><span class="sxs-lookup"><span data-stu-id="fb13d-129">`mexTcpBinding` for TCP publication.</span></span>  
   
-8.  <span data-ttu-id="634b0-130">对于上一步中添加的元数据终结点，将地址设置为等于：</span><span class="sxs-lookup"><span data-stu-id="634b0-130">For the metadata endpoints added in a previous step, set the address equal to:</span></span>  
+8.  <span data-ttu-id="fb13d-130">对于上一步中添加的元数据终结点，将地址设置为等于：</span><span class="sxs-lookup"><span data-stu-id="fb13d-130">For the metadata endpoints added in a previous step, set the address equal to:</span></span>  
   
-    -   <span data-ttu-id="634b0-131">一个空字符串，以在基址和元数据绑定相同的情况下将主机应用程序的基址用作发布点。</span><span class="sxs-lookup"><span data-stu-id="634b0-131">An empty string to use the host application's base address as the publication point if the base address is the same as the metadata binding.</span></span>  
+    -   <span data-ttu-id="fb13d-131">一个空字符串，以在基址和元数据绑定相同的情况下将主机应用程序的基址用作发布点。</span><span class="sxs-lookup"><span data-stu-id="fb13d-131">An empty string to use the host application's base address as the publication point if the base address is the same as the metadata binding.</span></span>  
   
-    -   <span data-ttu-id="634b0-132">一个相对地址，前提是主机应用程序具有一个基址。</span><span class="sxs-lookup"><span data-stu-id="634b0-132">A relative address if the host application has a base address.</span></span>  
+    -   <span data-ttu-id="fb13d-132">一个相对地址，前提是主机应用程序具有一个基址。</span><span class="sxs-lookup"><span data-stu-id="fb13d-132">A relative address if the host application has a base address.</span></span>  
   
-    -   <span data-ttu-id="634b0-133">一个绝对地址。</span><span class="sxs-lookup"><span data-stu-id="634b0-133">An absolute address.</span></span>  
+    -   <span data-ttu-id="fb13d-133">一个绝对地址。</span><span class="sxs-lookup"><span data-stu-id="fb13d-133">An absolute address.</span></span>  
   
-9. <span data-ttu-id="634b0-134">生成并运行控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="634b0-134">Build and run the console application.</span></span>  
+9. <span data-ttu-id="fb13d-134">生成并运行控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="fb13d-134">Build and run the console application.</span></span>  
   
-10. <span data-ttu-id="634b0-135">使用 Internet Explorer 浏览服务的基址（本示例中的 http://localhost:8001/MetadataSample）并验证是否已打开元数据发布。</span><span class="sxs-lookup"><span data-stu-id="634b0-135">Use Internet Explorer to browse to the base address of the service (http://localhost:8001/MetadataSample in this sample) and verify that the metadata publishing is turned on.</span></span> <span data-ttu-id="634b0-136">如果未显示上述内容，则结果页顶部会显示消息：“Metadata publishing for this service is currently disabled”（当前禁用服务的元数据发布）。</span><span class="sxs-lookup"><span data-stu-id="634b0-136">If not, a message at the top of the resulting page displays: "Metadata publishing for this service is currently disabled."</span></span>  
+10. <span data-ttu-id="fb13d-135">使用 Internet Explorer 浏览到该服务的基址 (http://localhost:8001/MetadataSample在此示例中)，并验证是否已打开元数据发布。</span><span class="sxs-lookup"><span data-stu-id="fb13d-135">Use Internet Explorer to browse to the base address of the service (http://localhost:8001/MetadataSample in this sample) and verify that the metadata publishing is turned on.</span></span> <span data-ttu-id="fb13d-136">如果未显示上述内容，则结果页顶部会显示消息：“Metadata publishing for this service is currently disabled”（当前禁用服务的元数据发布）。</span><span class="sxs-lookup"><span data-stu-id="fb13d-136">If not, a message at the top of the resulting page displays: "Metadata publishing for this service is currently disabled."</span></span>  
   
-### <a name="to-use-default-endpoints"></a><span data-ttu-id="634b0-137">使用默认终结点</span><span class="sxs-lookup"><span data-stu-id="634b0-137">To use default endpoints</span></span>  
+### <a name="to-use-default-endpoints"></a><span data-ttu-id="fb13d-137">使用默认终结点</span><span class="sxs-lookup"><span data-stu-id="fb13d-137">To use default endpoints</span></span>  
   
-1.  <span data-ttu-id="634b0-138">若要配置使用默认终结点的服务上的元数据，请在上一个示例中的配置文件中指定 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>，但不要指定任何终结点。</span><span class="sxs-lookup"><span data-stu-id="634b0-138">To configure metadata on a service that uses default endpoints, specify the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> in the configuration file as in the previous example, but do not specify any endpoints.</span></span> <span data-ttu-id="634b0-139">配置文件将类似如下所示。</span><span class="sxs-lookup"><span data-stu-id="634b0-139">The configuration file would then look like this.</span></span>  
+1.  <span data-ttu-id="fb13d-138">若要配置使用默认终结点的服务上的元数据，请在上一个示例中的配置文件中指定 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>，但不要指定任何终结点。</span><span class="sxs-lookup"><span data-stu-id="fb13d-138">To configure metadata on a service that uses default endpoints, specify the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> in the configuration file as in the previous example, but do not specify any endpoints.</span></span> <span data-ttu-id="fb13d-139">配置文件将类似如下所示。</span><span class="sxs-lookup"><span data-stu-id="fb13d-139">The configuration file would then look like this.</span></span>  
   
     ```xml  
     <configuration>  
@@ -198,10 +200,10 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     <span data-ttu-id="634b0-140">由于该服务有一个 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 设置为 `httpGetEnabled` 的 `true`，因此该服务启用了发布元数据，但是由于未显式添加任何终结点，因此运行时添加默认终结点。</span><span class="sxs-lookup"><span data-stu-id="634b0-140">Because the service has a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> with the `httpGetEnabled` set to `true`, the service has publishing metadata enabled, and because no endpoints were explicitly added, the runtime adds the default endpoints.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="634b0-141">默认终结点、 绑定和行为，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="634b0-141"> default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
+     <span data-ttu-id="fb13d-140">由于该服务有一个 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 设置为 `httpGetEnabled` 的 `true`，因此该服务启用了发布元数据，但是由于未显式添加任何终结点，因此运行时添加默认终结点。</span><span class="sxs-lookup"><span data-stu-id="fb13d-140">Because the service has a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> with the `httpGetEnabled` set to `true`, the service has publishing metadata enabled, and because no endpoints were explicitly added, the runtime adds the default endpoints.</span></span> <span data-ttu-id="fb13d-141">有关默认终结点、 绑定和行为的详细信息，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="fb13d-141">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="634b0-142">示例</span><span class="sxs-lookup"><span data-stu-id="634b0-142">Example</span></span>  
- <span data-ttu-id="634b0-143">下面的代码示例演示基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的实现，以及发布服务的元数据的配置文件。</span><span class="sxs-lookup"><span data-stu-id="634b0-143">The following code example shows the implementation of a basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service and the configuration file that publishes metadata for the service.</span></span>  
+## <a name="example"></a><span data-ttu-id="fb13d-142">示例</span><span class="sxs-lookup"><span data-stu-id="fb13d-142">Example</span></span>  
+ <span data-ttu-id="fb13d-143">下面的代码示例演示基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的实现，以及发布服务的元数据的配置文件。</span><span class="sxs-lookup"><span data-stu-id="fb13d-143">The following code example shows the implementation of a basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service and the configuration file that publishes metadata for the service.</span></span>  
   
 ```csharp  
 using System;  
@@ -272,10 +274,10 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="634b0-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="634b0-144">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fb13d-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="fb13d-144">See Also</span></span>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- [<span data-ttu-id="634b0-145">如何：在托管应用程序中托管 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="634b0-145">How to: Host a WCF Service in a Managed Application</span></span>](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
- [<span data-ttu-id="634b0-146">自承载</span><span class="sxs-lookup"><span data-stu-id="634b0-146">Self-Host</span></span>](../../../../docs/framework/wcf/samples/self-host.md)  
- [<span data-ttu-id="634b0-147">元数据体系结构概述</span><span class="sxs-lookup"><span data-stu-id="634b0-147">Metadata Architecture Overview</span></span>](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [<span data-ttu-id="634b0-148">使用元数据</span><span class="sxs-lookup"><span data-stu-id="634b0-148">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [<span data-ttu-id="634b0-149">如何：使用代码发布服务的元数据</span><span class="sxs-lookup"><span data-stu-id="634b0-149">How to: Publish Metadata for a Service Using Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+ [<span data-ttu-id="fb13d-145">如何：在托管应用程序中托管 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="fb13d-145">How to: Host a WCF Service in a Managed Application</span></span>](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
+ [<span data-ttu-id="fb13d-146">自承载</span><span class="sxs-lookup"><span data-stu-id="fb13d-146">Self-Host</span></span>](../../../../docs/framework/wcf/samples/self-host.md)  
+ [<span data-ttu-id="fb13d-147">元数据体系结构概述</span><span class="sxs-lookup"><span data-stu-id="fb13d-147">Metadata Architecture Overview</span></span>](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [<span data-ttu-id="fb13d-148">使用元数据</span><span class="sxs-lookup"><span data-stu-id="fb13d-148">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [<span data-ttu-id="fb13d-149">如何：使用代码发布服务的元数据</span><span class="sxs-lookup"><span data-stu-id="fb13d-149">How to: Publish Metadata for a Service Using Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
