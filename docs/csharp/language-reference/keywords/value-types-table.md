@@ -46,5 +46,5 @@ ms.lasthandoff: 11/21/2017
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)  
  [值类型](../../../csharp/language-reference/keywords/value-types.md)  
- [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
+ [数值格式化结果表](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
  [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)

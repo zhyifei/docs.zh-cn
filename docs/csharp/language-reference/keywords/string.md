@@ -115,4 +115,4 @@ Console.WriteLine(a);
  [值类型](../../../csharp/language-reference/keywords/value-types.md)  
  [基本字符串操作](../../../standard/base-types/basic-string-operations.md)  
  [新建字符串](../../../standard/base-types/creating-new.md)  
- [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+ [数值格式化结果表](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)

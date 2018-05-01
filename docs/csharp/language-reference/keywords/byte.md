@@ -22,7 +22,7 @@ ms.lasthandoff: 11/21/2017
 ---
 # <a name="byte-c-reference"></a>byte（C# 参考）
 
-`byte` 表示存储下表所示值的整型类型。  
+`byte` 表示存储下表所示值的整数类型。  
   
 |类型|范围|大小|.NET Framework 类型|  
 |----------|-----------|----------|-------------------------|  
@@ -49,9 +49,11 @@ C# 从 7 开始，已添加几个功能以增强可读性。
  
 ## <a name="conversions"></a>转换  
  存在从 `byte` 到 [short](../../../csharp/language-reference/keywords/short.md)、[ushort](../../../csharp/language-reference/keywords/ushort.md)、[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 的预定义隐式转换。  
-  
- 不可将大存储大小的非文本数字类型隐式转换为 `byte`。 有关整型类型存储大小的详细信息，请参阅[整型类型表](../../../csharp/language-reference/keywords/integral-types-table.md)。 以下面两个 `byte` 变量 `x` 和 `y` 为例：  
-  
+
+你不能将较大存储大小的非字面数字类型隐式转换为 `byte`。有关整数类型存储大小的详细信息，请参阅[整数类型表](../../../csharp/language-reference/keywords/integral-types-table.md)。
+
+以下面两个 `byte` 变量 `x` 和 `y` 为例：  
+
 ```  
 byte x = 10, y = 20;  
 ```  
@@ -103,7 +105,7 @@ SampleMethod(5);
 SampleMethod((byte)5);  
 ```  
   
- 有关兼用浮点类型和整型类型的算术表达式的信息，请参阅 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。  
+ 有关兼用浮点类型和整数类型的算术表达式的信息，请参阅 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。  
   
  有关隐式数值转换规则的详细信息，请参阅[隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
@@ -115,7 +117,7 @@ SampleMethod((byte)5);
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [整数类型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

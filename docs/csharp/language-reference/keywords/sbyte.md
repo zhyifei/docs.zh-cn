@@ -115,7 +115,7 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [整数类型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

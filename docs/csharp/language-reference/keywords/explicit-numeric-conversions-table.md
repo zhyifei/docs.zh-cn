@@ -67,6 +67,6 @@ ms.lasthandoff: 11/21/2017
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
  [() 运算符](../../../csharp/language-reference/operators/invocation-operator.md)  
- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [整数类型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)

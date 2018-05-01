@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
  `bool` 变量的默认值为 `false`。 `bool?` 变量的默认值为 `null`。  
   
 ## <a name="conversions"></a>转换  
- 在 C++ 中，`bool` 类型的值可转换为 `int` 类型的值；也就是说，`false` 等效于零值，而 `true` 等效于非零值。 在 C# 中，不存在 `bool` 类型与其他类型之间的相互转换。 例如，下面的 `if` 语句在 C# 中无效：  
+在 C++ 中，`bool` 类型的值可转换为 `int` 类型的值；也就是说，`false` 相当于零，而 `true` 相当于非零。在 C# 中，不存在 `bool` 类型与其他类型之间的相互转换。例如，下面的 `if` 语句在 C# 中无效：
   
  [!code-csharp[csrefKeywordsTypes#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_2.cs)]  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/21/2017
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [整数类型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

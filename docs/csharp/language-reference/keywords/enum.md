@@ -98,7 +98,7 @@ int x = (int)Day.Sun;
  [C# 参考](../../../csharp/language-reference/index.md)  
  [枚举类型](../../../csharp/programming-guide/enumeration-types.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [整数类型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

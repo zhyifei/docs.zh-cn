@@ -30,22 +30,22 @@ ms.lasthandoff: 02/22/2018
 `decimal` 的默认值为 0m。
   
 ## <a name="literals"></a>文本  
- 如果希望实数被视为 `decimal` 类型，请使用后缀 m 或 M，例如：  
+如果你希望数值字面量被视为 `decimal` 类型，请使用后缀 m 或 M，例如：
   
 ```csharp
 decimal myMoney = 300.5m;  
 ```  
   
- 如果没有后缀 m，则数字将被视为 [double](../../../csharp/language-reference/keywords/double.md) 类型并会生成编译器错误。  
+如果没有后缀 m，则数字将被视为 [double](../../../csharp/language-reference/keywords/double.md) 类型并产生编译错误。
   
 ## <a name="conversions"></a>转换  
- 整型将被隐式转换为 `decimal` 类型，其计算结果为 `decimal`。 因此，你可以使用整数文本初始化十进制变量而不使用后缀，如下所示：  
+整型将被隐式转换为 `decimal` 类型，其计算结果为 `decimal`。因此，你可以用整数字面量初始化 decimal 变量而不使用后缀，如下所示：
   
 ```csharp
 decimal myMoney = 300;  
 ```  
   
- 在其他浮点型和 `decimal` 类型之间不存在隐式转换；因此，必须使用强制转换在这两个类型之间转换。 例如:  
+其他浮点类型和 `decimal` 类型之间不存在隐式转换；因此，必须使用强制转换来转换这两个类型。例如: 
   
 ```csharp
 decimal myMoney = 99.9m;  
@@ -98,7 +98,7 @@ Console.WriteLine((double)dec + dub);
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [整数类型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

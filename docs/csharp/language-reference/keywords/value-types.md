@@ -103,7 +103,7 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  有关 new 运算符的详细信息，请参阅 [new](../../../csharp/language-reference/keywords/new.md)。  
   
- 有关设置数值类型的输出格式的信息，请参阅[设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)。  
+ 有关格式化数值类型的输出结果的信息，请参阅[数值格式化结果表](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)。
   
 ## <a name="see-also"></a>另请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
