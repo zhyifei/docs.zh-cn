@@ -16,11 +16,11 @@ ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
 caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d6b740e78503d0937c9a0f38a573bb7dd778075d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 16c08ff42ce77b3901f5909571c528394d139e03
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>演练：创建和使用动态对象（C# 和 Visual Basic）
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-create-a-custom-dynamic-class"></a>创建自定义动态类  
   
-1.  启动 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。  
+1.  启动 Visual Studio。  
   
 2.  在 **“文件”** 菜单上指向 **“新建”** ，然后单击 **“项目”**。  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-create-a-custom-dynamic-class"></a>创建自定义动态类  
   
-1.  在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中的“文件”菜单上，指向“新建”，然后单击“项目”。  
+1.  在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。  
   
 2.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“控制台应用程序”。 在“名称”框中，键入 `DynamicIronPythonSample`，然后单击“确定”。 新项目创建完成。  
   
