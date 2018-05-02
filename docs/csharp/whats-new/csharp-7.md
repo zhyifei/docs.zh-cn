@@ -1,7 +1,7 @@
 ---
-title: "C# 7 中的新增功能 - C# 指南"
-description: "大致了解 C# 语言即将发布的版本 7 中将推出的新功能。"
-keywords: "C#、.NET、.NET Core、最新功能、新增功能"
+title: C# 7.0 中的新增功能 - C# 指南
+description: 大致了解 C# 语言即将发布的版本 7 中将推出的新功能。
+keywords: C#、.NET、.NET Core、最新功能、新增功能
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/21/2016
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="whats-new-in-c-7"></a>C# 7 中的新增功能
+# <a name="whats-new-in-c-70"></a>C# 7.0 中的新增功能
 
-C# 7 向 C# 语言添加了许多新功能：
+C# 7.0 向 C# 语言添加了许多新功能：
 * [`out` 变量](#out-variables)
     - 可以将 `out` 值内联作为参数声明到使用这些参数的方法中。
 * [元组](#tuples)
@@ -88,8 +88,8 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 这些字段没有经过验证，并且你无法定义自己的方法
 
 > [!NOTE]
-> 低于 C# 7 的版本中也提供元组，但它们效率低下且不具有语言支持。
-> 这意味着元组元素只能作为 `Item1` 和 `Item2` 等引用。 C# 7 引入了对元组的语言支持，可利用更有效的新元组类型向元组字段赋予语义名称。
+> 低于 C# 7.0 的版本中也提供元组，但它们效率低下且不具有语言支持。
+> 这意味着元组元素只能作为 `Item1` 和 `Item2` 等引用。 C# 7.0 引入了对元组的语言支持，可利用更有效的新元组类型向元组字段赋予语义名称。
 
 通过为每个成员赋值，可以创建一个元组：
 
@@ -131,9 +131,6 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 在某些时候，你可能想要解包从方法返回的元组的成员。  可通过为元组中的每个值声明单独的变量来实现此目的。 这称为析构元组：
 
 [!code-csharp[CallingWithDeconstructor](../../../samples/snippets/csharp/new-in-7/program.cs#10_CallingWithDeconstructor "Deconstructing a tuple")]
-
-<!-- Add wildcards here, if they are in C# 7
--->
 
 还可以为 .NET 中的任何类型提供类似的析构。 这通过将 `Deconstruct` 方法编写为类的成员来完成。 `Deconstruct` 方法为你要提取的每个属性提供一组 `out` 参数。 考虑提供析构函数方法的此 `Point` 类，该方法提取 `X` 和 `Y` 坐标：
 
@@ -327,7 +324,7 @@ C# 语言还设有三条规则，可防止你误用 `ref` 局部变量和返回�
 
 ## <a name="more-expression-bodied-members"></a>更多的 expression-bodied 成员
 
-C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6.md#expression-bodied-function-members)。 C# 7 扩展了可作为表达式实现的允许的成员。 在 C# 7 中，你可以在属性和索引器上实现构造函数、终结器以及 `get` 和 `set` 访问器。 以下代码演示了每种情况的示例：
+C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6.md#expression-bodied-function-members)。 C# 7.0 扩展了可作为表达式实现的允许的成员。 在 C# 7.0 中，你可以在属性和索引器上实现构造函数、终结器以及 `get` 和 `set` 访问器。 以下代码演示了每种情况的示例：
 
 [!code-csharp[ExpressionBodiedMembers](../../../samples/snippets/csharp/new-in-7/expressionmembers.cs#36_ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -338,7 +335,7 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 
 ## <a name="throw-expressions"></a>引发表达式
 
-在 C# 中，`throw` 始终是一个语句。 因为 `throw` 是一个语句而非表达式，所以在某些 C# 构造中无法使用它。 它们包括条件表达式、null 合并表达式和一些 lambda 表达式。 添加 expression-bodied 成员将添加更多位置，在这些位置中，`throw` 表达式会很有用。 为了可以编写任何这些构造，C# 7 引入了引发表达式。
+在 C# 中，`throw` 始终是一个语句。 因为 `throw` 是一个语句而非表达式，所以在某些 C# 构造中无法使用它。 它们包括条件表达式、null 合并表达式和一些 lambda 表达式。 添加 expression-bodied 成员将添加更多位置，在这些位置中，`throw` 表达式会很有用。 为了可以编写任何这些构造，C# 7.0 引入了引发表达式。
 
 语法与你一直以来用于 `throw` 语句的语法相同。 唯一的区别是，现在你可以将它们放在新位置中（例如条件表达式中）：
 
@@ -376,7 +373,7 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 
 ## <a name="numeric-literal-syntax-improvements"></a>数字文本语法改进
 
-误读的数值常量可能使第一次阅读代码时更难理解。 当这些数字被用作位掩码或其他符号而非数字值时，通常会发生这种情况。 C# 7 包括两项新功能，使得更容易以最可读的方式写入数字来用于预期用途：二进制文本和数字分隔符。
+误读的数值常量可能使第一次阅读代码时更难理解。 当这些数字被用作位掩码或其他符号而非数字值时，通常会发生这种情况。 C# 7.0 包括两项新功能，使得更容易以最可读的方式写入数字来用于预期用途：二进制文本和数字分隔符。
 
 在创建位掩码时，或每当数字的二进制表示形式使代码最具可读性时，以二进制形式写入该数字：
 

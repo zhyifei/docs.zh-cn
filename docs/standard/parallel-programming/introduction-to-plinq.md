@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1148d2b245d67304071d8dd23bb1a88bdc020b8d
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 24541b681844a2023df8d4d05f13b53d55375b80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 介绍
 ## <a name="what-is-a-parallel-query"></a>什么是并行查询？  
@@ -93,10 +93,10 @@ ms.lasthandoff: 04/18/2018
  某些操作要求按顺序提供源数据。 必要时，<xref:System.Linq.ParallelEnumerable> 查询运算符自动还原为顺序模式。 对于要求顺序执行的用户定义的查询运算符和用户委托，PLINQ 提供了 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 方法。 使用 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 时，查询中的所有后续运算符都会顺序执行，直到再次调用 <xref:System.Linq.ParallelEnumerable.AsParallel%2A>。 有关详细信息，请参阅[如何：合并并行和顺序 LINQ 查询](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)。  
   
 ## <a name="options-for-merging-query-results"></a>合并查询结果的选项  
- 当一个 PLINQ 查询并行执行时，它从每个工作线程得到的结果必须合并回到主线程上，以便由 `foreach` 循环（在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中为 `For Each`）使用或插入到列表或数组中。 例如在某些情况下，指定一个特定类型的合并操作可能会有好处，以更快地开始产生结果。 为此，PLINQ 支持 <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> 方法和 <xref:System.Linq.ParallelMergeOptions> 枚举。 有关详细信息，请参阅 [PLINQ 中的合并选项](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。  
+ 当一个 PLINQ 查询并行执行时，它从每个工作线程得到的结果必须合并回到主线程上，以便由 `foreach` 循环（在 Visual Basic 中为 `For Each`）使用或插入到列表或数组中。 例如在某些情况下，指定一个特定类型的合并操作可能会有好处，以更快地开始产生结果。 为此，PLINQ 支持 <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> 方法和 <xref:System.Linq.ParallelMergeOptions> 枚举。 有关详细信息，请参阅 [PLINQ 中的合并选项](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。  
   
 ## <a name="the-forall-operator"></a>ForAll 运算符  
- 在顺序 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] 查询中，执行一直延迟到在 `foreach`（[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中的 `For Each`）循环中或通过调用 <xref:System.Linq.ParallelEnumerable.ToList%2A>、<xref:System.Linq.ParallelEnumerable.ToArray%2A> 或 <xref:System.Linq.ParallelEnumerable.ToDictionary%2A> 等方法枚举查询。 在 PLINQ 中，还可以使用 `foreach` 执行查询以及循环访问结果。 但是，`foreach` 本身不会并行运行，因此，它要求将所有并行任务的输出合并回该循环正在上面运行的线程中。 在 PLINQ 中，在必须保留查询结果的最终排序，以及以按串行方式处理结果时，例如当为每个元素调用 `Console.WriteLine` 时，则可以使用 `foreach`。 为了在无需顺序暂留以及可自行并行处理结果时更快地执行查询，请使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法执行 PLINQ 查询。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 不执行最终的这一合并步骤。 下面的代码示例说明如何使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法。 此处使用 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> 是因为它已优化，可以同时添加多个线程，而无需尝试移除任何项。  
+ 在顺序 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] 查询中，执行一直延迟到在 `foreach`（Visual Basic 中为 `For Each`）循环中或通过调用 <xref:System.Linq.ParallelEnumerable.ToList%2A>、<xref:System.Linq.ParallelEnumerable.ToArray%2A> 或 <xref:System.Linq.ParallelEnumerable.ToDictionary%2A> 等方法枚举查询。 在 PLINQ 中，还可以使用 `foreach` 执行查询以及循环访问结果。 但是，`foreach` 本身不会并行运行，因此，它要求将所有并行任务的输出合并回该循环正在上面运行的线程中。 在 PLINQ 中，在必须保留查询结果的最终排序，以及以按串行方式处理结果时，例如当为每个元素调用 `Console.WriteLine` 时，则可以使用 `foreach`。 为了在无需顺序暂留以及可自行并行处理结果时更快地执行查询，请使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法执行 PLINQ 查询。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 不执行最终的这一合并步骤。 下面的代码示例说明如何使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法。 此处使用 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> 是因为它已优化，可以同时添加多个线程，而无需尝试移除任何项。  
   
  [!code-csharp[PLINQ#4](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#4)]
  [!code-vb[PLINQ#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#4)]  

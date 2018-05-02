@@ -1,11 +1,12 @@
 ---
-title: ".NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)"
-ms.custom: 
+title: .NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 02eaa98b8a52a2b9efa2b273b2a58158a5848b86
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)
 使用 <xref:System.IO> 命名空间中的类与驱动器、文件和目录一起工作。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/21/2017
  <xref:System.IO> 命名空间包含 <xref:System.IO.File> 和 <xref:System.IO.Directory> 类，它们提供 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 对操作文件和目录的功能。 由于这些对象的方法是静态或共享成员，因此可直接使用，无需首先创建类的实例。 与这些类相关联的是 <xref:System.IO.FileInfo> 和 <xref:System.IO.DirectoryInfo> 类，使用 `My` 功能的用户将对它们很熟悉。 若要使用这些类，必须通过在受影响的代码开头包含 `Imports` 语句，完全限定名称或导入相应的命名空间。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
 > [!NOTE]
->  此部分中的其他主题使用 `My.Computer.FileSystem` 对象，而不使用 `System.IO` 类与驱动器、文件和目录一起工作。 `My.Computer.FileSystem` 对象的主要目的是用在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 程序中。 `System.IO` 类旨在供任何支持 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的语言使用，其中包括 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+>  此部分中的其他主题使用 `My.Computer.FileSystem` 对象，而不使用 `System.IO` 类与驱动器、文件和目录一起工作。 `My.Computer.FileSystem` 对象的主要目的是用在 Visual Basic 程序中。 `System.IO` 类旨在供任何支持 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的语言使用，其中包括 Visual Basic。  
   
 ## <a name="definition-of-a-stream"></a>流的定义  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 使用流来支持从文件中读取和写入文件。 可以将流视为一维连续数据集，具有开始和结束，并且其中的游标指示流中的当前位置。  

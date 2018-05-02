@@ -1,29 +1,29 @@
 ---
-title: "垃圾回收和性能"
-ms.custom: 
+title: 垃圾回收和性能
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: daf70cdb7344f895059d0bc8b986edddbf7d53bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="garbage-collection-and-performance"></a>垃圾回收和性能
 <a name="top"></a> 本主题介绍与垃圾回收和内存使用情况相关的问题。 它解决了关于托管堆的问题，并解释了如何最小化垃圾回收对应用程序的影响。 每个问题具有访问可用来调查问题的过程的链接。  
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/09/2018
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>用 SOS 调试  
- 可以使用 [Windows 调试器 (WinDbg)](/windows-hardware/drivers/debugger/index) 检查托管堆上的对象。  
-  
- 若要安装 WinDbg，请从 [WDK 和开发人员工具网站](http://go.microsoft.com/fwlink/?LinkID=103787)安装 Windows 调试工具。  
+ 可以使用 [Windows 调试器 (WinDbg)](/windows-hardware/drivers/debugger/index) 检查托管堆上的对象。
+ 
+ 若要安装 WinDbg，请从[下载 Windows 调试工具](/windows-hardware/drivers/debugger/debugger-download-tools)页安装 Windows 调试工具。
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>垃圾回收 ETW 事件  

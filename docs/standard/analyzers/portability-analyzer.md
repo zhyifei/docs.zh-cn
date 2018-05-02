@@ -1,6 +1,6 @@
 ---
-title: ".NET 可移植性分析器 - .NET"
-description: "了解如何使用 .NET 可移植性分析器工具，评估代码在各种 .NET 实现（包括 .NET Core、.NET Standard、UWP 和 Xamarin）间的可移植性。"
+title: .NET 可移植性分析器 - .NET
+description: 了解如何使用 .NET 可移植性分析器工具，评估代码在各种 .NET 实现（包括 .NET Core、.NET Standard、UWP 和 Xamarin）间的可移植性。
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -13,15 +13,15 @@ ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7e3d628fe4b4a8f01e692a70892658fceeb87953
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 3d813292a821c2ebfa7b40ee873cf36e71104ebf
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 可移植性分析器
 
-想要让你的库在多个平台上使用？ 想要了解让应用与其他 .NET 实现和配置文件（包括 .NET Core、.NET Standard、UWP 以及适用于 iOS、Android 和 Mac 的 Xamarin）兼容所需的工作量？ [.NET 可移植性分析器](http://go.microsoft.com/fwlink/?LinkID=507467)工具可通过分析程序集，详细报告程序在各种 .NET 实现上的灵活性。 可移植性分析器以 Visual Studio 扩展和控制台应用的形式提供。
+想要让你的库在多个平台上使用？ 想要了解让应用与其他 .NET 实现和配置文件（包括 .NET Core、.NET Standard、UWP 以及适用于 iOS、Android 和 Mac 的 Xamarin）兼容所需的工作量？ [.NET 可移植性分析器](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)工具可通过分析程序集，详细报告程序在各种 .NET 实现上的灵活性。 可移植性分析器以 Visual Studio 扩展和控制台应用的形式提供。
 
 ## <a name="new-targets"></a>新目标
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a name="how-to-use-portability-analyzer"></a>如何使用可移植性分析器
 
-若要开始使用 .NET 可移植性分析器，首先需要从 [Visual Studio 库](http://go.microsoft.com/fwlink/?LinkID=507467)下载相应的扩展。 它适用于 Visual Studio 2015 和 Visual Studio 2017。 可以在 Visual Studio 中转到“分析” > “可移植性分析器设置”并选择目标平台，对可移植性分析器进行配置。
+若要开始使用 .NET 可移植性分析器，首先需要从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) 下载相应的扩展。 它适用于 Visual Studio 2015 和 Visual Studio 2017。 可以在 Visual Studio 中转到“分析” > “可移植性分析器设置”并选择目标平台，对可移植性分析器进行配置。
 
 ![可移植性屏幕截图](./media/portability-analyzer/portability-screenshot.png)
 

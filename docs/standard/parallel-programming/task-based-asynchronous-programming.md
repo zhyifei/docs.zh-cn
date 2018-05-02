@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c0782498743f857afac4af073fb0a0cb8fc4d55a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 87c49eb1cb2b8cef7057e73eca19f74e818b043e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>基于任务的异步编程
 任务并行库 (TPL) 以“任务”的概念为基础，后者表示异步操作。 在某些方面，任务类似于线程或 <xref:System.Threading.ThreadPool> 工作项，但是抽象级别更高。 术语“任务并行”是指一个或多个独立的任务同时运行。 任务提供两个主要好处：  
@@ -191,7 +191,7 @@ ms.lasthandoff: 04/18/2018
  等待任务时，其实是在隐式等待使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建的该任务的所有子级。 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 在该任务已完成时立即返回。 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法将抛出由某任务引发的任何异常，即使 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法是在该任务完成之后调用的。  
   
 ## <a name="composing-tasks"></a>组合任务  
- <xref:System.Threading.Tasks.Task> 类和 <xref:System.Threading.Tasks.Task%601> 类提供多种方法，这些方法能够帮助你组合多个任务以实现常见模式，并更好地使用由 C#、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 和 F# 提供的异步语言功能。 本节介绍了 <xref:System.Threading.Tasks.Task.WhenAll%2A>、<xref:System.Threading.Tasks.Task.WhenAny%2A>、<xref:System.Threading.Tasks.Task.Delay%2A> 和 <xref:System.Threading.Tasks.Task.FromResult%2A> 方法。  
+ <xref:System.Threading.Tasks.Task> 类和 <xref:System.Threading.Tasks.Task%601> 类提供多种方法，这些方法能够帮助你组合多个任务以实现常见模式，并更好地使用由 C#、Visual Basic 和 F# 提供的异步语言功能。 本节介绍了 <xref:System.Threading.Tasks.Task.WhenAll%2A>、<xref:System.Threading.Tasks.Task.WhenAny%2A>、<xref:System.Threading.Tasks.Task.Delay%2A> 和 <xref:System.Threading.Tasks.Task.FromResult%2A> 方法。  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
  <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法异步等待多个 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 对象完成。 通过它提供的重载版本可以等待非均匀任务组。 例如，你可以等待多个 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象在一个方法调用中完成。  

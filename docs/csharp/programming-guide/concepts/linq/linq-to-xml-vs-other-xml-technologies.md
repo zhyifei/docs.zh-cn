@@ -1,21 +1,22 @@
 ---
-title: "LINQ to XML 与其他 XML 技术 3"
-ms.custom: 
+title: LINQ to XML 与其他 XML 技术 3
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a159c906799a61372c1a40e7464d885339b9256
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f13e2d64db9265f03aec3fa5da9f171fcb366f72
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 与其他 XML 技术
 本主题将 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 与下面的 XML 技术进行比较：<xref:System.Xml.XmlReader>、XSLT、MSXML 和 XmlLite。 了解这些信息，有助于确定要使用哪种技术。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML 与MSXML  
  MSXML 是基于 COM 的技术，用于处理 Microsoft Windows 提供的 XML。 MSXML 提供 DOM 的本机实现，并且支持 XPath 和 XSLT。 它还包含基于事件的 SAX2 非缓存分析器。  
   
- MSXML 性能良好，默认情况下，在大多数情况中都是安全的，在 Internet Explorer 中可以利用此功能来执行 AJAX 式应用程序中的客户端 XML 处理。 在任何支持 COM 的编程语言（包括 C++、JavaScript 和 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0）中，都可以使用 MSXML。  
+ MSXML 性能良好，默认情况下，在大多数情况中都是安全的，在 Internet Explorer 中可以利用此功能来执行 AJAX 式应用程序中的客户端 XML 处理。 在任何支持 COM 的编程语言（包括 C++、JavaScript 和 Visual Basic 6.0）中，都可以使用 MSXML。  
   
  建议不要在基于公共语言运行库 (CLR) 的托管代码中使用 MSXML。  
   

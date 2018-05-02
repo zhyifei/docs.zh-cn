@@ -1,8 +1,9 @@
 ---
-title: "throw（C# 参考）"
+title: throw（C# 参考）
 ms.date: 03/02/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - throw
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e56bd8f8b6bfcc7c8f1eb2df6ac157e28adac331
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 088a8e70c5aaaae6f833f12cad1052c30fbb6bfa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="throw-c-reference"></a>throw（C# 参考）
 发出程序执行期间出现异常的信号。  
@@ -50,9 +51,9 @@ throw [e]
  
 ## <a name="the-throw-expression"></a>`throw` 表达式
 
-从 C# 7 开始，`throw` 可以用作表达式和语句。 这允许在以前不支持的上下文中引发异常。 这些方法包括：
+从 C# 7.0 开始，`throw` 可以用作表达式和语句。 这允许在以前不支持的上下文中引发异常。 这些方法包括：
 
-- [条件运算符](../operators/conditional-operator.md)。 下例使用 `throw` 表达式在向方法传递空字符串数组时引发 <xref:System.ArgumentException>。 在 C# 7 之前，此逻辑将需要显示在 `if`/`else` 语句中。
+- [条件运算符](../operators/conditional-operator.md)。 下例使用 `throw` 表达式在向方法传递空字符串数组时引发 <xref:System.ArgumentException>。 在 C# 7.0 之前，此逻辑将需要显示在 `if`/`else` 语句中。
 
    [!code-csharp[csrefKeyword#4](../../../../samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
   
@@ -68,11 +69,11 @@ throw [e]
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [Try、 catch 和 throw 语句在 c + +](../../../csharp/language-reference/keywords/try-catch.md)  
+ [C++ 中的 try、catch 和 throw 语句](../../../csharp/language-reference/keywords/try-catch.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
  [异常处理语句](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
  [如何显式引发异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

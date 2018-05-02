@@ -1,12 +1,12 @@
 ---
-title: "如何：创建预先计算的任务"
-ms.custom: 
+title: 如何：创建预先计算的任务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - tasks, creating pre-computed
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
-caps.latest.revision: 
+caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 262aa626e9e426da94de0d2ad5f2ef04a5bbc5f3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ce34e609dc9b1e2a5f1822ce27f65be74a636c86
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-pre-computed-tasks"></a>如何：创建预先计算的任务
 本文档介绍如何使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法检索缓存中包含的异步下载操作的结果。 <xref:System.Threading.Tasks.Task.FromResult%2A> 方法返回一个将所提供的值作为其 <xref:System.Threading.Tasks.Task%601> 属性的已完成的 <xref:System.Threading.Tasks.Task%601.Result%2A> 对象。 执行返回 <xref:System.Threading.Tasks.Task%601> 对象的异步运算，且已计算该 <xref:System.Threading.Tasks.Task%601> 对象的结果时，此方法将十分有用。  
@@ -39,13 +39,13 @@ ms.lasthandoff: 12/23/2017
  此示例计算两次下载多个字符串需要的时间。 与第一组下载操作相比，第二组下载操作应该会花费较少的时间，因为结果已包含在缓存中。 <xref:System.Threading.Tasks.Task.FromResult%2A> 方法可以使 `DownloadStringAsync` 方法创建包含这些预计算结果的 <xref:System.Threading.Tasks.Task%601> 对象。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 复制示例代码并将其粘贴到 Visual Studio 项目中，或粘贴到一个名为 `CachedDownloads.cs`（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，则为 `CachedDownloads.vb`）的文件中，然后在 Visual Studio 命令提示符窗口中运行以下命令。  
+ 复制示例代码，并将它粘贴到 Visual Studio 项目中，或粘贴到 `CachedDownloads.cs`（对于 Visual Basic，则为 `CachedDownloads.vb`）文件中，再在 Visual Studio 命令提示符窗口中运行以下命令。  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe CachedDownloads.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe CachedDownloads.vb**  
   

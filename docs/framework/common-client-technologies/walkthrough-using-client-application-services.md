@@ -1,13 +1,13 @@
 ---
-title: "演练：使用客户端应用程序服务"
-ms.custom: 
+title: 演练：使用客户端应用程序服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>演练：使用客户端应用程序服务
 本主题介绍如何创建使用客户端应用程序服务对用户进行身份验证并检索用户角色和设置的 Windows 应用程序。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/01/2018
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
+-   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)]。  
   
 ## <a name="creating-the-client-application"></a>创建客户端应用程序  
  将执行的第一个操作是创建一个 Windows 窗体项目。 本演练使用 Windows 窗体，因为更多的人熟悉它，不过过程类似于 Windows Presentation Foundation (WPF) 项目。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 02/01/2018
   
 7.  确保选择 **“使用 Forms 身份验证”** ，然后将 **“身份验证服务位置”**、 **“角色服务位置”**和 **“Web 设置服务位置”** 设置为 `http://localhost:55555/AppServices`。  
   
-8.  对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，在 **“应用程序”** 选项卡上，将 **“身份验证模式”** 设置为 **“由应用程序定义”**。  
+8.  对于 Visual Basic，在“应用程序”选项卡上，将“身份验证模式”设置为“由应用程序定义”。  
   
  设计器会将指定设置存储在应用程序的 app.config 文件中。  
   
@@ -315,7 +315,7 @@ ms.lasthandoff: 02/01/2018
 ### <a name="creating-a-login-form"></a>创建一个登录窗体  
  凭据提供程序是实现 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 接口的类。 此接口具有名为 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 的单一方法，它返回 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> 对象。 以下过程介绍如何创建一个登录对话框，它实现 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 以显示本身并返回用户指定的凭据。  
   
- 为 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 和 C# 提供了单独的过程，因为 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 提供 **“登录窗体”** 模板。 这可节省一些时间并减少编码工作。  
+ 为 Visual Basic 和 C# 提供了单独的过程，因为 Visual Basic 提供“登录窗体”模板。 这可节省一些时间并减少编码工作。  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>在 Visual Basic 中创建一个登录对话框作为凭据提供程序  
   
@@ -407,7 +407,7 @@ ms.lasthandoff: 02/01/2018
  现在可以运行应用程序，并以 employee 身份登录以看到按钮不会出现，然后以 manager 身份登录以看到按钮。  
   
 ## <a name="accessing-web-settings"></a>访问 Web 设置  
- 在下面的过程中，会将一个文本框添加到窗体，然后将它绑定到 Web 设置。 与前面使用身份验证和角色的代码一样，设置代码不直接访问设置提供程序。 而是使用由 `Settings` 为项目生成的强类型 `Properties.Settings.Default` 类（在 C# 中作为 `My.Settings` 并在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]中作为 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]来访问）。  
+ 在下面的过程中，会将一个文本框添加到窗体，然后将它绑定到 Web 设置。 与前面使用身份验证和角色的代码一样，设置代码不直接访问设置提供程序。 而是使用由 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 为项目生成的强类型 `Settings` 类（在 C# 中作为 `Properties.Settings.Default`，在 Visual Basic 中作为 `My.Settings` 访问）。  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>在用户界面中使用 Web 设置  
   
@@ -527,7 +527,7 @@ ms.lasthandoff: 02/01/2018
     > [!NOTE]
     >  <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> 方法只是为了方便。 因为它没有返回值，所以无法指示重新验证是否失败。 例如，如果在服务器上更改了用户凭据，则重新验证可能会失败。 在这种情况下，你可能要包含在服务调用失败之后显式验证用户的代码。 有关详细信息，请参阅本演练前面的“访问 Web 设置”部分。  
   
-     重新验证之后，此代码会将任何更改都保存到本地 Web 设置，具体方法是调用以前添加的 `SaveSettings` 方法。 它随后通过调用项目的 <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> 类的 `Settings` 方法（在 C# 中作为 `Properties.Settings.Default` 并且在 `My.Settings` 中作为 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]来访问），来检索服务器上的任何新值。  
+     重新验证之后，此代码会将任何更改都保存到本地 Web 设置，具体方法是调用以前添加的 `SaveSettings` 方法。 它随后通过调用项目的 `Settings` 类的 <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> 方法（在 C# 中作为 `Properties.Settings.Default` 并且在 Visual Basic 中作为 `My.Settings` 来访问），来检索服务器上的任何新值。  
   
      [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
      [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  
@@ -539,7 +539,7 @@ ms.lasthandoff: 02/01/2018
   
  这样便完成了示例应用程序。 若要测试脱机功能，请运行应用程序，以 employee 或 manager 身份登录，然后选择 **“脱机工作”**。 修改文本框中的值，然后关闭应用程序。 重新启动应用程序。 登录之前，请在任务栏的通知区域中右键单击“ASP.NET 开发服务器”图标，然后单击 **“停止”**。 随后照常登录。 即使服务器未运行时，仍可以登录。 修改文本框值，退出，然后重新启动以查看修改后的值。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  在本演练中，学习了如何在 Windows 窗体应用程序中启用并使用客户端应用程序服务。 设置测试服务器之后，向应用程序添加了代码以对用户进行身份验证，并从服务器检索用户角色和应用程序设置。 还学习了如何启用脱机模式，以便应用程序在连接不可用时使用本地数据缓存而不是远程服务。  
   
 ## <a name="next-steps"></a>后续步骤  

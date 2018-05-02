@@ -8,15 +8,15 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 98c58d083cb806a92e28c1c9d27effa1124fd153
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 返回值和局部变量
 
-从 C# 7 开始，C# 支持引用返回值（ref 返回值）。 借助引用返回值，方法可以将对变量的引用（而不是值）返回给调用方。 然后，调用方可以选择将返回的变量视为按值返回或按引用返回。 调用方可以新建称为“引用本地”的变量，其本身就是对返回值的引用。
+从 C# 7.0 开始，C# 支持引用返回值（ref 返回值）。 借助引用返回值，方法可以将对变量的引用（而不是值）返回给调用方。 然后，调用方可以选择将返回的变量视为按值返回或按引用返回。 调用方可以新建称为“引用本地”的变量，其本身就是对返回值的引用。
 
 ## <a name="what-is-a-reference-return-value"></a>什么是引用返回值？
 

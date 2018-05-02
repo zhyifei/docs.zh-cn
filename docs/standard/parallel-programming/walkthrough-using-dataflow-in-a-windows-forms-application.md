@@ -1,5 +1,5 @@
 ---
-title: "演练：在 Windows 窗体应用程序中使用数据流"
+title: 演练：在 Windows 窗体应用程序中使用数据流
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8c0d44ca7933626c95603ccc81102889ba4c23cb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>演练：在 Windows 窗体应用程序中使用数据流
 本文档演示如何创建在 Windows 窗体应用程序中执行图像处理的数据流块网络。  
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-create-the-windows-forms-application"></a>创建 Windows 窗体应用程序  
   
-1.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，创建一个 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 或 Visual Basic **Windows 窗体应用程序**项目。 在本文档中，该项目名为 `CompositeImages`。  
+1.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，创建一个 C# 或 Visual Basic“Windows 窗体应用程序”项目。 在本文档中，该项目名为 `CompositeImages`。  
   
-2.  在主窗体 Form1.cs（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，则为 Form1.vb）的窗体设计器中，添加 <xref:System.Windows.Forms.ToolStrip> 控件。  
+2.  在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic，则为 Form1.vb）添加了 <xref:System.Windows.Forms.ToolStrip> 控件。  
   
 3.  向 <xref:System.Windows.Forms.ToolStrip> 控件添加 <xref:System.Windows.Forms.ToolStripButton> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，并将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“Choose Folder”。  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  向项目中添加对 System.Threading.Tasks.Dataflow.dll 的引用。  
   
-2.  确保 Form1.cs（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 则为 Form1.vb）包含以下 `using`（在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中为 `Using`）语句：  
+2.  确保 Form1.cs（对于 Visual Basic，则为 Form1.vb）包含以下 `using`（Visual Basic 中为 `Using`）语句：  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 01/19/2018
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  C# 版本的 `CreateCompositeBitmap` 方法使用指针启用高效处理 <xref:System.Drawing.Bitmap?displayProperty=nameWithType> 对象。 因此，若要使用 [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md) 关键字，必须在项目中启用“允许不安全代码”选项。 有关如何在 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 项目中启用不安全代码的详细信息，请参阅[“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+    >  C# 版本的 `CreateCompositeBitmap` 方法使用指针启用高效处理 <xref:System.Drawing.Bitmap?displayProperty=nameWithType> 对象。 因此，若要使用 [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md) 关键字，必须在项目中启用“允许不安全代码”选项。 有关如何在 Visual C# 项目中启用不安全代码的详细信息，请参阅[“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
  下表描述了网络的成员。  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/19/2018
 |`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|在窗体上显示复合位图。|  
 |`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|显示图像以表示操作取消并使用户能够选择其他文件夹。|  
   
- 为了连接数据流块以形成网络，此示例使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 方法。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 方法包含重载版本，需要使用 <xref:System.Predicate%601> 对象确定目标数据流块是接受还是拒绝消息。 此筛选机制使消息块只接收特定值。 在此示例中，网络能以两种方式进行分支。 主分支从磁盘加载图像，创建复合图像并在窗体上显示该图像。 备用分支取消当前操作。 借助 <xref:System.Predicate%601> 对象，主分支的数据流块可以拒绝特定消息，从而切换到替换分支。 例如，如果用户取消了操作，数据流块 `createCompositeBitmap` 将生成 `null`（在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中为 `Nothing`）作为其输出。 数据流块 `displayCompositeBitmap` 拒绝 `null` 输入值，因此该消息将传递到 `operationCancelled`。 数据流块 `operationCancelled` 接受所有消息，并因此显示图像以表示操作取消。  
+ 为了连接数据流块以形成网络，此示例使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 方法。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 方法包含重载版本，需要使用 <xref:System.Predicate%601> 对象确定目标数据流块是接受还是拒绝消息。 此筛选机制使消息块只接收特定值。 在此示例中，网络能以两种方式进行分支。 主分支从磁盘加载图像，创建复合图像并在窗体上显示该图像。 备用分支取消当前操作。 借助 <xref:System.Predicate%601> 对象，主分支的数据流块可以拒绝特定消息，从而切换到替换分支。 例如，如果用户取消了操作，数据流块 `createCompositeBitmap` 将生成 `null`（在 Visual Basic 中为 `Nothing`）作为其输出。 数据流块 `displayCompositeBitmap` 拒绝 `null` 输入值，因此该消息将传递到 `operationCancelled`。 数据流块 `operationCancelled` 接受所有消息，并因此显示图像以表示操作取消。  
   
  下图显示图像处理网络。  
   

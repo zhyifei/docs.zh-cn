@@ -1,7 +1,7 @@
 ---
-title: "官方 .NET Docker 映像"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 官方 .NET Docker 映像"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 官方 .NET Docker 映像
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 官方 .NET Docker 映像
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 42872caa1a9306187daeefd35feb9bec3fae60af
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: adbe63a2d2f93819b5b29c6dd8d8089cd35ad2f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="official-net-docker-images"></a>官方 .NET Docker 映像
 
@@ -41,7 +41,7 @@ Microsoft 对 .NET 存储库的愿景是要具有细粒度和集中存储库，�
 
 ### <a name="during-development-and-build"></a>在开发和生成过程中
 
-在开发期间，重要的是可循环访问更改的速度以及调试更改的能力。 与更改代码的能力和快速查看更改相比，映像的大小不是那么重要。 某些工具和“build-agent 容器”在开发和生成过程中使用开发 ASP.NET Core 映像 (microsoft/aspnetcore-build)。 在 Docker 容器中生成时，重要方面是为了编译应用所需要的元素。 这包括编译器和任何其他 .NET 依赖项，以及 npm、Gulp和 Bower 等 Web 开发依赖项。
+在开发期间，重要的是可循环访问更改的速度以及调试更改的能力。 与更改代码的能力和快速查看更改相比，映像的大小不是那么重要。 某些工具和“build-agent 容器”在开发和生成进程中使用开发 ASP.NET Core 映像 (microsoft/aspnetcore-build)。 在 Docker 容器中生成时，重要方面是为了编译应用所需要的元素。 这包括编译器和任何其他 .NET 依赖项，以及 npm、Gulp和 Bower 等 Web 开发依赖项。
 
 为什么此类型的生成映像很重要？ 不能将此映像部署到生产中。 相反，它是用于生成放置在生产映像中的内容的映像。 此映像将用于持续集成 (CI) 环境或生成环境中。 例如，生成代理会将 .NET Core 实例化，其中包含构建应用程序所需的所有依赖项，而不是直接在生成代理主机（例如 VM）上手动安装所有应用程序依赖项。 生成代理只需要了解如何运行此 Docker 映像即可。 这简化了 CI 环境，并使其更可预测。
 

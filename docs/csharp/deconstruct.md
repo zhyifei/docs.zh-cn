@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: 5a119f935b1cc80fe5cf738f03057c68c7eb5ba5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>析构元组和其他类型 #
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/27/2017
 
 从对象检索多个字段值和属性值可能同样麻烦：必须按成员逐个将字段值或属性值赋给一个变量。 
 
-从 C# 7 开始，用户可从元组中检索多个元素，或在单个析构操作中从对象检索多个字段值、属性值和计算值。 析构元组时，将其元素分配给各个变量。 析构对象时，将选定值分配给各个变量。 
+从 C# 7.0 开始，用户可从元组中检索多个元素，或在单个析构操作中从对象检索多个字段值、属性值和计算值。 析构元组时，将其元素分配给各个变量。 析构对象时，将选定值分配给各个变量。 
 
 ## <a name="deconstructing-a-tuple"></a>析构元组
 
@@ -34,7 +34,7 @@ C# 提供内置的元组析构支持，可在单个操作中解包一个元组�
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-有三种方法可以解构元组：
+有三种方法可用于析构元组：
 
 - 可以在括号内显式声明每个字段的类型。 以下示例使用此方法来析构由 `QueryCityData` 方法返回的 3 元组。
 
@@ -50,7 +50,7 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
     这很麻烦，不建议这样做。
 
-- 最后，你可能会为已声明的变量解构元组。
+- 最后，可将元组析构到已声明的变量中。
 
     [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
 
@@ -58,11 +58,11 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 请注意，还必须将元组的每个元素分配给一个变量。 如果省略任何元素，编译器将生成错误 CS8132，“无法将 ‘x’ 元素的元组析构为 ‘y’ 变量”。
 
-请注意不能混合使用声明和赋值给左侧的现有变量的析构。 编译器将生成错误 CS8184，"析构能混合使用声明和左左表达式。" 当成员包括新声明和现有变量。
+请注意，不能混合析构左侧上现有变量的声明和赋值。 编译器生成错误 CS8184“析构不能混合左侧的声明和表达式”。 当成员包括新声明的和现有的变量。
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>使用弃元析构元组元素
 
-析构元组时，通常只需要关注某些元素的值。 从 C# 7 开始，便可利用 C# 对弃元的支持，弃元是一种仅能写入的变量，且其值将被忽略。 在赋值中，通过下划线字符 (\_) 指定弃元。 可弃元任意数量的值，且均由单个弃元  `_` 表示。
+析构元组时，通常只需要关注某些元素的值。 从 C# 7.0 开始，便可利用 C# 对弃元的支持，弃元是一种仅能写入的变量，且其值将被忽略。 在赋值中，通过下划线字符 (\_) 指定弃元。 可弃元任意数量的值，且均由单个弃元  `_` 表示。
 
 以下示例演示了对元组使用弃元时的用法。 `QueryCityDataForYears` 方法返回一个 6 元组，包含城市名称、城市面积、一个年份、该年份的城市人口、另一个年份及该年份的城市人口。 该示例显示了两个年份之间人口的变化。 对于元组提供的数据，我们不关注城市面积，并在一开始就知道城市名称和两个日期。 因此，我们只关注存储在元组中的两个人口数量值，可将其余值作为弃元处理。    
 
@@ -70,7 +70,7 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 ### <a name="deconstructing-user-defined-types"></a>析构用户定义类型
 
-非元组类型不提供对弃元的内置支持。 但是，用户作为类、结构或接口的创建者，可通过实现一个或多个 `Deconstruct`方法来析构该类型的实例。 该方法返回 void，且要析构的每个值由方法签名中的 [out](language-reference/keywords/out-parameter-modifier.md) 参数指示。 例如，下面的 `Person` 类的 `Deconstruct` 方法返回名字、中间名和姓氏：
+非元组类型不提供对放弃的内置支持。 但是，用户作为类、结构或接口的创建者，可通过实现一个或多个 `Deconstruct` 方法来析构该类型的实例。 该方法返回 void，且要析构的每个值由方法签名中的 [out](language-reference/keywords/out-parameter-modifier.md) 参数指示。 例如，下面的 `Person` 类的 `Deconstruct` 方法返回名字、中间名和姓氏：
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 

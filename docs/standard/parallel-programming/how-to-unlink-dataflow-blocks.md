@@ -1,5 +1,5 @@
 ---
-title: "如何：取消链接数据流块"
+title: 如何：取消链接数据流块
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: db3c0d3a6d94e2e9eb65046267f14feff0c056cb
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: c7cdfa227e330a4b8ed46395c9793e5dca570fac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>如何：取消链接数据流块
 本文档介绍如何取消目标数据流块与其源的链接。
@@ -40,13 +40,13 @@ ms.lasthandoff: 01/10/2018
  为了使 `TrySolution` 的剩余调用能够在其中一个调用计算了一个值后结束，`TrySolution` 方法采用一个 <xref:System.Threading.CancellationToken> 对象，该对象在对 `ReceiveFromAny(T)` 的调用返回后将被取消。 当此 <xref:System.Threading.SpinWait.SpinUntil%2A> 对象取消时，<xref:System.Threading.CancellationToken> 方法将返回。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 复制示例代码并将其粘贴到 Visual Studio 项目中，或粘贴到一个名为 `DataflowReceiveAny.cs`（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，则为 `DataflowReceiveAny.vb`）的文件中，然后在 Visual Studio 命令提示符窗口中运行以下命令。  
+ 复制示例代码，并将它粘贴到 Visual Studio 项目中，或粘贴到 `DataflowReceiveAny.cs`（对于 Visual Basic，则为 `DataflowReceiveAny.vb`）文件中，再在 Visual Studio 命令提示符窗口中运行以下命令。  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.vb**  
 

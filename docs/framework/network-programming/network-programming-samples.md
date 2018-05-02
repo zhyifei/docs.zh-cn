@@ -1,80 +1,74 @@
 ---
-title: "网络编程示例"
-ms.custom: 
+title: 网络编程示例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: df1e1c16c52afc79219d7ea2503b200a420477df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3e450582e85c07060d13eb90a4c069abdbd17982
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="network-programming-samples"></a>网络编程示例
-本节包含可下载的网络编程示例的说明和链接，这些示例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.PeerToPeer>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相关命名空间中的类。  
+本节包含可下载的网络编程示例的说明和链接，这些示例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相关命名空间中的类。 
   
+> [!NOTE]
+> 所有示例都在 [.NET Framework SDK 版本 2.0 示例下载](https://www.microsoft.com/en-us/download/confirmation.aspx?id=22181)中提供，它针对 .NET Framework 2.0 发布，可能已过期。
+
 ## <a name="in-this-section"></a>本节内容  
- [下载进度指示技术示例](http://go.microsoft.com/fwlink/?LinkID=179556)  
+ [下载进度指示技术示例](https://msdn.microsoft.com/en-us/library/t8w6294a(v=vs.85).aspx)  
  演示如何显示文件的下载进度。  
   
- [FTP 客户端技术示例](http://go.microsoft.com/fwlink/?LinkID=179557)  
+ [FTP 客户端技术示例](https://msdn.microsoft.com/en-us/library/b7810t5c(v=vs.85).aspx)  
  演示如何向/从 FTP 服务器上传/下载文件。  
   
- [HttpListener 技术示例](http://go.microsoft.com/fwlink/?LinkID=179558)  
+ [HttpListener 技术示例](https://msdn.microsoft.com/en-us/library/y7cbb2y2(v=vs.85).aspx)  
  演示如何处理来自应用程序的 HTTP 请求。  
+ 
+ [HttpListener ASPX 主机应用程序示例](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
+ 演示如何使用 <xref:System.Net.HttpListener?displayProperty=nameWithType> 类的功能创建将调用路由至托管的 ASP.NET 应用程序的 HTTP 服务器。
   
- [HttpListener ASPX 主机应用程序示例](http://go.microsoft.com/fwlink/?LinkID=179560)  
- 演示如何使用 <xref:System.Net.HttpListener> 类的功能创建将调用路由至托管的 ASP.NET 应用程序的 HTTP 服务器。  
-  
- [Mailer 技术示例](http://go.microsoft.com/fwlink/?LinkID=179561)  
+ [Mailer 技术示例](https://msdn.microsoft.com/en-us/library/whw7xbk2(v=vs.85).aspx)  
  演示如何从客户端应用程序发送电子邮件。  
   
- [NetStat 工具技术示例](http://go.microsoft.com/fwlink/?LinkID=179562)  
+ [NetStat 工具技术示例](https://msdn.microsoft.com/en-us/library/ks32hs88(v=vs.85).aspx)  
  演示 NCLNetStat 网络信息工具。  
   
- [网络信息技术示例](http://go.microsoft.com/fwlink/?LinkID=179564)  
+ [网络信息技术示例](https://msdn.microsoft.com/en-us/library/2xatedhd(v=vs.85).aspx)  
  演示如何监视和显示网络信息。  
   
- [Ping 客户端技术示例](http://go.microsoft.com/fwlink/?LinkID=179565)  
+ [Ping 客户端技术示例](https://msdn.microsoft.com/en-us/library/5253acs7(v=vs.85).aspx)  
  演示可以 ping 远程主机的客户端应用程序。  
   
- [WebClient 技术示例](http://go.microsoft.com/fwlink/?LinkID=179566)  
+ [WebClient 技术示例](https://msdn.microsoft.com/en-us/library/fxk992zc(v=vs.85).aspx)  
  演示如何执行常见操作，如上传或下载文件或数据。  
   
- [安全流示例](http://go.microsoft.com/fwlink/?LinkID=179567)  
+ [安全流示例](https://msdn.microsoft.com/en-us/library/ms180980(v=vs.85).aspx)  
  演示如何使用安全流在客户端和服务器之间进行通信。  
   
- [IPv6 套接字示例](http://go.microsoft.com/fwlink/?LinkID=179568)  
+ [IPv6 套接字示例](https://msdn.microsoft.com/en-us/library/ms180981(v=vs.85).aspx)  
  演示启用 IPv6 时如何使用套接字。  
   
- [FTP 资源管理器技术示例](http://go.microsoft.com/fwlink/?LinkID=179569)  
+ [FTP 资源管理器技术示例](https://msdn.microsoft.com/en-us/library/ms233623(v=vs.85).aspx)  
  演示如何列出 FTP 服务器的内容。  
   
- [套接字性能技术示例](http://go.microsoft.com/fwlink/?LinkID=179570)  
- 演示如何使用 <xref:System.Net.Sockets.Socket> 类中的增强功能来构建使用异步网络 I/O 实现最高性能的服务器应用程序。  
-  
- [PeerToPeer 技术示例](http://go.microsoft.com/fwlink/?LinkID=179571)  
- 演示如何使用 <xref:System.Net.PeerToPeer> 命名空间中的新类注册和发布对等名称并解析对等名称。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Net>  
   
  <xref:System.Net.NetworkInformation>  
   
- <xref:System.Net.PeerToPeer>  
-  
- <xref:System.Net.Sockets>  
-  
 ## <a name="see-also"></a>请参阅  
  [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)  
  [网络编程操作说明主题](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
- [ .NET 网络示例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

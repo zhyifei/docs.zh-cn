@@ -1,30 +1,31 @@
 ---
-title: "读取和写入注册表 (Visual Basic)"
-ms.custom: 
+title: 读取和写入注册表 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Computer.Registry object, tasks
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: db564b428d585829b220674271f4636bfcc68562
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: a207b169e267fbcaccd46f7240d81afb3db27a8c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>读取和写入注册表 (Visual Basic)
 本主题介绍与注册表相关的任务和概念性主题。  
   
- 在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中编程时，可以通过 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 提供的函数或者通过 .NET Framework 的注册表类访问注册表。 注册表托管有关操作系统的信息，以及有关计算机上托管的应用程序的信息。 对注册表进行操作时，如果允许对系统资源或受保护的信息进行不适当的访问，则可能会降低安全性。  
+ 在 Visual Basic 中编程时，可以通过 Visual Basic 提供的函数或者通过 .NET Framework 的注册表类访问注册表。 注册表托管有关操作系统的信息，以及有关计算机上托管的应用程序的信息。 对注册表进行操作时，如果允许对系统资源或受保护的信息进行不适当的访问，则可能会降低安全性。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：创建注册表项并设置其值](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  

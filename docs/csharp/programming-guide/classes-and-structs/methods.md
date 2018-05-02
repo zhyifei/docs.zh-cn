@@ -1,5 +1,5 @@
 ---
-title: "方法（C# 编程指南）"
+title: 方法（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: 
+caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5390ee08ddd0f4725bb42bbdf7240bb99bd25301
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: dad1be88e39b708d34f454875e2cfb3ec100c430
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="methods-c-programming-guide"></a>方法（C# 编程指南）
 方法是包含一系列语句的代码块。 程序通过调用该方法并指定任何所需的方法参数使语句得以执行。 在 C# 中，每个执行的指令均在方法的上下文中执行。 Main 方法是每个 C# 应用程序的入口点，并在启动程序时由公共语言运行时 (CLR) 调用。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/15/2018
 ## <a name="return-values"></a>返回值  
 方法可以将值返回到调用方。 如果列在方法名之前的返回类型不是 `void`，则该方法可通过使用 `return` 关键字返回值。 带 `return` 关键字，后跟与返回类型匹配的值的语句将该值返回到方法调用方。 
 
-值可以按值或[按引用](ref-returns.md)返回到调用方，以 C# 7 开头。 如果在方法签名中使用 `ref` 关键字且其跟随每个 `return` 关键字，值将按引用返回到调用方。 例如，以下方法签名和返回语句指示该方法按对调用方的引用返回变量名 `estDistance`。
+值可以按值或[按引用](ref-returns.md)返回到调用方，以 C# 7.0 开头。 如果在方法签名中使用 `ref` 关键字且其跟随每个 `return` 关键字，值将按引用返回到调用方。 例如，以下方法签名和返回语句指示该方法按对调用方的引用返回变量名 `estDistance`。
 
 ```csharp
 public ref double GetEstimatedDistance()

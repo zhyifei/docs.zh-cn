@@ -1,5 +1,5 @@
 ---
-title: "如何：将消息写入数据流块和从数据流块读取消息"
+title: 如何：将消息写入数据流块和从数据流块读取消息
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b64ef07c6ef28377c11dc879ad17f7c806e9f66a
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 032fa1190039969095f8b91bb6ee0138a583ddd9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>如何：将消息写入数据流块和从数据流块读取消息
 本文档介绍如何使用 TPL 数据流库从数据流块写入和读取消息。 TPL 数据流库同时提供用于从数据流块写入和读取消息的同步和异步方法。 本文档使用 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> 类。 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 类将缓冲消息，而且其行为方式与消息源相同，也与消息目标相同。  
@@ -57,13 +57,13 @@ ms.lasthandoff: 01/10/2018
  [!code-vb[TPLDataflow_ReadWrite#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#1)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 复制示例代码并将其粘贴到 Visual Studio 项目中，或粘贴到一个名为 `DataflowReadWrite.cs`（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，则为 `DataflowReadWrite.vb`）的文件中，然后在 Visual Studio 命令提示符窗口中运行以下命令。  
+ 复制示例代码，并将它粘贴到 Visual Studio 项目中，或粘贴到 `DataflowReadWrite.cs`（对于 Visual Basic，则为 `DataflowReadWrite.vb`）文件中，再在 Visual Studio 命令提示符窗口中运行以下命令。  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**  
   

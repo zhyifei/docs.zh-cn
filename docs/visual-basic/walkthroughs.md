@@ -1,8 +1,9 @@
 ---
-title: "Visual Basic 语言演练"
+title: Visual Basic 语言演练
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic, walkthroughs
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c57ee0b94e5aafb6b1287707b10977e86ee631f1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b34c513e54ba41bf845abaa59dd630b6877d9bbd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 语言演练
 演练提供有关常见方案的分步说明，这使它们成为了解产品或特定功能部分的良好开端。  
@@ -26,13 +27,13 @@ ms.lasthandoff: 10/18/2017
  演示如何使用 [Async](../visual-basic/language-reference/modifiers/async.md) 和 [Await](../visual-basic/language-reference/operators/await-operator.md) 创建异步解决方案。  
   
  [声明和引发事件](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- 演示如何在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中声明和引发事件。  
+ 演示如何在 Visual Basic 中声明和引发事件。  
   
  [处理事件](../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
  演示如何使用标准的 `WithEvents` 关键字或新的 `AddHandler`/`RemoveHandler` 关键字处理事件。  
   
  [创建和实现接口](../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
- 演示如何在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中声明和实现接口。  
+ 演示如何在 Visual Basic 中声明和实现接口。  
   
  [定义类](../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
  描述如何声明类及其字段、属性、方法和事件。  
@@ -47,10 +48,10 @@ ms.lasthandoff: 10/18/2017
  说明如何使用 `Declare` 语句并调用 Windows API。 包括以下信息：使用特性来控制 API 调用的封送，以及如何将 API 调用公开为类的方法。  
   
  [使用 Visual Basic 创建 COM 对象](../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- 演示如何在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中（使用或不使用 COM 类模板）创建 COM 对象。  
+ 演示如何在 Visual Basic 中（使用或不使用 COM 类模板）创建 COM 对象。  
   
  [使用 COM 对象实现继承](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- 演示如何使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 创建包含类的 COM 对象，然后将其用作 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的基类。  
+ 演示如何使用 Visual Basic 6.0 创建包含类的 COM 对象，然后将其用作 Visual Basic 中的基类。  
   
  [多线程处理](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  演示如何创建在文本文件中搜索单词出现次数的多线程应用程序。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/18/2017
  演示如何使用 <xref:System.Security.Cryptography.DESCryptoServiceProvider> 类加密和解密字符串。  
   
  [在 Visual Basic 中操作文件和文件夹](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- 演示如何使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 函数确定文件信息、在文件中搜索字符串以及对文件进行写入操作。  
+ 演示如何使用 Visual Basic 函数确定文件信息、在文件中搜索字符串以及对文件进行写入操作。  
   
  [使用 .NET Framework 方法操作文件](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  演示如何使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 方法确定文件信息，在文件中搜索字符串，以及对文件进行写入操作。  

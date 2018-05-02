@@ -1,11 +1,12 @@
 ---
-title: "使用 Visual Basic 访问文件"
-ms.custom: 
+title: 使用 Visual Basic 访问文件
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - file access
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9929061feeccee31028056bc93f0f0a2f119eb4e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 2aabea79e3c7a6dabf47647c7e27b072738ba363
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="file-access-with-visual-basic"></a>使用 Visual Basic 访问文件
-`My.Computer.FileSystem` 对象提供用于处理文件和文件夹的工具。 它的属性、方法和事件使你可以创建、复制、移动、调查以及删除文件和文件夹。 `My.Computer.FileSystem` 提供的性能比 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 为后向兼容性提供的旧版功能（`FileOpen`、`FileClose`、`Input`、`InputString`、`LineInput` 等）的性能更好。  
+`My.Computer.FileSystem` 对象提供用于处理文件和文件夹的工具。 它的属性、方法和事件使你可以创建、复制、移动、调查以及删除文件和文件夹。 `My.Computer.FileSystem` 提供的性能比 Visual Basic 为后向兼容性提供的旧版功能（`FileOpen`、`FileClose`、`Input`、`InputString`、`LineInput` 等）的性能更好。  
   
 ## <a name="in-this-section"></a>本节内容  
  [从文件读取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  

@@ -1,5 +1,5 @@
 ---
-title: "演练：创建数据流管道"
+title: 演练：创建数据流管道
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2d0c886a443263897330dbd46a7f6f194bb20857
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: e6471de1a6231f114f6967bb6f777a8dc4d39b82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>演练：创建数据流管道
 尽管可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> 方法从源块接收消息，但也可以连接消息块来形成一个*数据流管道*。 数据流管道是一系列组件或“数据流块”，每个组件或数据流块执行一个有助于实现更大目标的特定任务。 数据流管道中的每个数据流块会在收到来自另一数据流块的消息时执行工作。 这就好比是汽车制造装配线。 每辆汽车通过装配线时，一站组装车架，下一站则安装引擎，以此类推。 因为装配线可以同时装配多辆汽车，所以比一次装配整辆车拥有更高的产出。
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/01/2018
  开始本演练之前，请阅读[数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)。  
   
 ## <a name="creating-a-console-application"></a>创建控制台应用程序  
- 在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，创建一个 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 或 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 控制台应用程序项目。 安装 System.Threading.Tasks.Dataflow NuGet 包。
+ 在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，创建 Visual C# 或 Visual Basic“控制台应用”项目。 安装 System.Threading.Tasks.Dataflow NuGet 包。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 

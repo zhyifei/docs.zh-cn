@@ -1,12 +1,12 @@
 ---
-title: "如何：向文件写入文本"
-ms.custom: 
+title: 如何：向文件写入文本
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-caps.latest.revision: 
+caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0ff0d79762ba47214217a261a325aad9f5eaf6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 926dfe1ea254fdb6460c835f58721f54609ddc90
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-write-text-to-a-file"></a>如何：向文件写入文本
 本主题展示了针对 .NET Framework 应用程序或 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用将文本写入文件的几种不同的方式。 下面的类和方法通常用于将文本写入文件：  
@@ -38,7 +38,10 @@ ms.lasthandoff: 12/23/2017
 -   <xref:System.IO.File> – 用于 .NET Framework 应用程序。 它提供了将文本写入文件的静态方法，如 <xref:System.IO.File.WriteAllLines%2A> 和 <xref:System.IO.File.WriteAllText%2A>，或者向文件中追加文本的静态方法（<xref:System.IO.File.AppendAllLines%2A><xref:System.IO.File.AppendAllText%2A> 或 <xref:System.IO.File.AppendText%2A>。  
   
 -   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) - 用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。 它包含将文本写入文件的异步方法（[WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) 或 [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)）或者向文件中追加文本的异步方法（[AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) 或 [AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)）。  
-  
+
+- <xref:System.IO.Path> - 用于包含文件或目录路径信息的字符串。 它包含可以串联字符串来生成文件或目录路径的 <xref:System.IO.Path.Combine%2A> 方法。
+
+
  这些示例都很简单，以便将重点放在正在执行的任务上。 为此，这些示例执行最低限度的错误检查和异常处理（如果有）。 实际的应用程序通常提供更可靠的错误检查和异常处理。  
   
 ## <a name="example"></a>示例  
@@ -95,6 +98,7 @@ ms.lasthandoff: 12/23/2017
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.IO.StreamWriter>  
+ <xref:System.IO.Path>  
  <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
  [如何：枚举目录和文件](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
  [如何：对新建的数据文件进行读取和写入](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  

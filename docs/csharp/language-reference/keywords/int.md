@@ -1,5 +1,5 @@
 ---
-title: "int（C# 参考）"
+title: int（C# 参考）
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e7acb8bb482ebf8f5c2b508e7cfd45b5b64aae3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f3e82dd195252a8c55e4ba7b18b657b341553047
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="int-c-reference"></a>int（C# 参考）
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>文本  
  
-可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `int` 变量。  如果整数文本在 `int` 范围之外（即，如果它小于 <xref:System.Int32.MinValue?displayProperty=nameWithType> 或大于 <xref:System.Int32.MaxValue?displayProperty=nameWithType>），会发生编译错误。 
+可以通过为其分配十进制文本、十六进制文本或（从 C# 7.0 开始）二进制文本来声明和初始化 `int` 变量。  如果整数文本在 `int` 范围之外（即，如果它小于 <xref:System.Int32.MinValue?displayProperty=nameWithType> 或大于 <xref:System.Int32.MaxValue?displayProperty=nameWithType>），会发生编译错误。 
 
 在以下示例中，表示为十进制、十六进制和二进制文本且等于 90,946 的整数被分配给 `int` 值。  
   
@@ -39,11 +39,11 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE] 
 > 使用前缀 `0x` 或 `0X` 表示十六进制文本，使用前缀 `0b` 或 `0B` 表示二进制文本。 十进制文本没有前缀。 
 
-C# 从 7 开始，已添加几个功能以增强可读性。 
- - C# 7.0 允许使用下划线字符， `_`，作为数字分隔符。
- - C# 7.2 允许`_`前缀后要使用作为二进制或十六进制文本中，数字分隔符。 十进制文本不允许具有前导下划线。
+从 C# 7.0 开始，添加了一些功能以增强可读性。 
+ - C# 7.0 允许将下划线字符 (`_`) 用作数字分隔符。
+ - C# 7.2 允许将 `_` 用作二进制或十六进制文本的数字分隔符，位于前缀之后。 十进制文本不能够有前导下划线。
 
-下面显示了一些示例。
+下面是一些示例。
 
 [!code-csharp[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#IntS)]  
  
@@ -57,7 +57,7 @@ C# 从 7 开始，已添加几个功能以增强可读性。
 在这些示例中，文本 90946 属于类型 `int`。
   
 ## <a name="conversions"></a>转换  
- 存在从 `int` 到 [long](../../../csharp/language-reference/keywords/long.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 的预定义隐式转换。 例如:   
+ 存在从 `int` 到 [long](../../../csharp/language-reference/keywords/long.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 的预定义隐式转换。 例如:  
   
 ```csharp  
 // '123' is an int, so an implicit conversion takes place here:  
@@ -84,7 +84,7 @@ int y = (int)3.0;    // OK: explicit conversion.
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Int32>  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  

@@ -1,5 +1,5 @@
 ---
-title: "互操作性概述（C# 编程指南）"
+title: 互操作性概述（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-caps.latest.revision: 
+caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ebdd2d58f2fe502dbeb14148c303487774f531b
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互操作性概述（C# 编程指南）
 本主题描述在 C# 托管代码和非托管代码之间实现互操作性的方法。  
@@ -55,11 +55,11 @@ ms.lasthandoff: 02/05/2018
   
 1.  在 C# 项目中添加互操作特性。  
   
-     可通过修改 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 项目属性使程序集 COM 可见。 有关详细信息，请参阅[“程序集信息”对话框](/visualstudio/ide/reference/assembly-information-dialog-box)。  
+     可通过修改 Visual C# 项目属性使程序集 COM 可见。 有关详细信息，请参阅[“程序集信息”对话框](/visualstudio/ide/reference/assembly-information-dialog-box)。  
   
 2.  生成 COM 类型库并对它进行注册以供 COM 使用。  
   
-     可修改 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 项目属性以自动注册 COM 互操作的 C# 程序集。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用 [Regasm.exe（程序集注册工具）](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)方法是使用 `/tlb` 命令行开关，其将托管组件作为输入），以生成类型库。 此类型库描述程序集中的 `public` 类型并添加注册表项，以便 COM 客户端可以创建托管类。  
+     可修改 Visual C# 项目属性以自动注册 COM 互操作的 C# 程序集。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用 [Regasm.exe（程序集注册工具）](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)方法是使用 `/tlb` 命令行开关，其将托管组件作为输入），以生成类型库。 此类型库描述程序集中的 `public` 类型并添加注册表项，以便 COM 客户端可以创建托管类。  
   
  有关详细信息，请参阅[向 COM 公开 .NET Framework 组件](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)和 [COM 类示例](../../../csharp/programming-guide/interop/example-com-class.md)。  
   

@@ -1,12 +1,12 @@
 ---
-title: "BlockingCollection 概述"
-ms.custom: 
+title: BlockingCollection 概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5e2235c1a5bbe4a39cf029059290268faa5be154
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 74303f07134401193d07d3b5d584c9498f023d90
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 概述
 <xref:System.Collections.Concurrent.BlockingCollection%601> 是一个线程安全集合类，可提供以下功能：  
@@ -85,7 +85,7 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  有关详细信息，请参阅[如何：向集合添加控制和锁定功能](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)。  
   
 ## <a name="ienumerable-support"></a>IEnumerable 支持  
- <xref:System.Collections.Concurrent.BlockingCollection%601> 提供 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> 方法，该方法允许使用者使用 `foreach`（在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中为 `For Each`）删除项直到完成集合，也就是说，集合为空且不再添加项。 有关详细信息，请参阅[如何：使用 ForEach 移除 BlockingCollection 中的项](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)。  
+ <xref:System.Collections.Concurrent.BlockingCollection%601> 提供 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> 方法，该方法允许使用者使用 `foreach`（在 Visual Basic 中为 `For Each`）删除项直到完成集合，也就是说，集合为空且不再添加项。 有关详细信息，请参阅[如何：使用 ForEach 移除 BlockingCollection 中的项](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)。  
   
 ## <a name="using-many-blockingcollections-as-one"></a>将多个 BlockingCollection 作为整体使用  
  在使用者需要同时取出多个集合中的项的情况下，可以创建 <xref:System.Collections.Concurrent.BlockingCollection%601> 的数组并使用静态方法，如 <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> 方法，这两个方法可以在该数组的任意集合中添加或取出项。 如果一个集合发生阻塞，此方法会立即尝试其他集合，直到找到能够执行该操作的集合。 有关详细信息，请参阅[如何：在管道中使用阻塞集合的数组](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)。  

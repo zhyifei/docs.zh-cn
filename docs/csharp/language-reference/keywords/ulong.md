@@ -1,5 +1,5 @@
 ---
-title: "ulong（C# 参考）"
+title: ulong（C# 参考）
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
-caps.latest.revision: 
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2058d9f6a228b13938fe08d7e2fb11e3b9f4600a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 049d1cc4b30e16535f20cee8e0ad80e5c80b4a49
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ulong-c-reference"></a>ulong（C# 参考）
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>文本  
 
-可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `ulong` 变量。  如果整数文本在 `ulong` 范围之外（即，如果它小于 <xref:System.UInt64.MinValue?displayProperty=nameWithType> 或大于 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>），会发生编译错误。 
+可以通过为其分配十进制文本、十六进制文本或（从 C# 7.0 开始）二进制文本来声明和初始化 `ulong` 变量。  如果整数文本在 `ulong` 范围之外（即，如果它小于 <xref:System.UInt64.MinValue?displayProperty=nameWithType> 或大于 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>），会发生编译错误。 
 
 在以下示例中，表示为十进制、十六进制和二进制文本且等于 7,934,076,125 的整数被分配给 `ulong` 值。  
   
@@ -39,11 +39,11 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE] 
 > 使用前缀 `0x` 或 `0X` 表示十六进制文本，使用前缀 `0b` 或 `0B` 表示二进制文本。 十进制文本没有前缀。 
 
-C# 从 7 开始，已添加几个功能以增强可读性。 
- - C# 7.0 允许使用下划线字符， `_`，作为数字分隔符。
- - C# 7.2 允许`_`前缀后要使用作为二进制或十六进制文本中，数字分隔符。 十进制文本不允许具有前导下划线。
+从 C# 7.0 开始，添加了一些功能以增强可读性。 
+ - C# 7.0 允许将下划线字符 (`_`) 用作数字分隔符。
+ - C# 7.2 允许将 `_` 用作二进制或十六进制文本的数字分隔符，位于前缀之后。 十进制文本不能够有前导下划线。
 
-下面显示了一些示例。
+下面是一些示例。
 
 [!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
@@ -101,7 +101,7 @@ ulong y = (ulong)3.0;
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.UInt64>  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  

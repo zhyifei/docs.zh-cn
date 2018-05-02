@@ -14,11 +14,11 @@ ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a2e8426e5c5be16be0114b5ccc66f30793ce7dda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3cdf639065ee5bf0cb9e920061557991c0a4b921
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-c-reference"></a>get（C# 参考）
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 11/21/2017
  
  [!code-csharp[get#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
   
-通常，`get` 访问器包含返回一个值的单个语句，如前面的示例所示。 从 C# 7 开始，可以将 `get` 访问器作为 expression-bodied 成员实现。 以下示例将 `get` 和 `set` 访问器都作为 expression-bodied 成员实现。
+通常，`get` 访问器包含返回一个值的单个语句，如前面的示例所示。 从 C# 7.0 开始，可以将 `get` 访问器作为 expression-bodied 成员实现。 以下示例将 `get` 和 `set` 访问器都作为 expression-bodied 成员实现。
 
  [!code-csharp[get#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)

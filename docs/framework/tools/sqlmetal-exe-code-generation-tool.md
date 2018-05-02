@@ -1,12 +1,13 @@
 ---
-title: "SqlMetal.exe（代码生成工具）"
-ms.custom: 
+title: SqlMetal.exe（代码生成工具）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLMetal [LINQ to SQL]
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c14c01c670eccbc7f13210d3c0bb7df7bec07679
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c21c08cf76143959d11498594fbc94fb1dac55c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe（代码生成工具）
 SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]组件生成代码和映射。 通过应用本主题后面出现的选项，可以指示 SqlMetal 执行若干种不同的操作，其中包括：  
@@ -103,7 +105,7 @@ sqlmetal [options] [<input file>]
   
 -   生成一个代码输出文件。  
   
-     通过使用适当的命令行选项，可以生成 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 或 C# 源代码，也可以生成 XML 映射文件。  
+     通过使用适当的命令行选项，可以生成 Visual Basic 或 C# 源代码，也可以生成 XML 映射文件。  
   
  若要从 .mdf 文件中提取元数据，必须在所有其他选项后指定 .mdf 文件的名称。  
   

@@ -1,11 +1,12 @@
 ---
-title: "在 Visual Basic 中操作文件和目录"
-ms.custom: 
+title: 在 Visual Basic 中操作文件和目录
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -21,23 +22,23 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>演练：在 Visual Basic 中操作文件和目录
-本演练简单介绍 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中文件 I/O 的基础知识。 描述如何创建列出并检查目录中文本文件的小型应用程序。 对于所选的每个文本文件，该应用程序都会提供文件属性和内容的第一行。 可以选择将信息写入日志文件中。  
+本演练简单介绍 Visual Basic 中文件 I/O 的基础知识。 描述如何创建列出并检查目录中文本文件的小型应用程序。 对于所选的每个文本文件，该应用程序都会提供文件属性和内容的第一行。 可以选择将信息写入日志文件中。  
   
- 本演练使用 `My.Computer.FileSystem Object` 的成员，这些成员可从 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中获得。 有关更多信息，请参见<xref:Microsoft.VisualBasic.FileIO.FileSystem>。 本演练结尾部分提供等效示例，该示例使用来自 <xref:System.IO> 命名空间的类。  
+ 本演练使用 `My.Computer.FileSystem Object` 的成员，这些成员可从 Visual Basic 中获得。 有关更多信息，请参见<xref:Microsoft.VisualBasic.FileIO.FileSystem>。 本演练结尾部分提供等效示例，该示例使用来自 <xref:System.IO> 命名空间的类。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-the-project"></a>创建项目  
+### <a name="to-create-the-project"></a>要创建项目  
   
 1.  在“文件”菜单上，单击“新建项目”。  
   
@@ -53,11 +54,11 @@ ms.lasthandoff: 11/21/2017
   
     |控件|属性|值|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Name**|`filesListBox`|  
-    |**Button**|**Name**<br /><br /> **文本**|`browseButton`<br /><br /> **浏览**|  
-    |**Button**|**Name**<br /><br /> **文本**|`examineButton`<br /><br /> **检查**|  
-    |**CheckBox**|**Name**<br /><br /> **文本**|`saveCheckBox`<br /><br /> **保存结果**|  
-    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
+    |**ListBox**|**名称**|`filesListBox`|  
+    |**Button**|**名称**<br /><br /> **文本**|`browseButton`<br /><br /> **浏览**|  
+    |**Button**|**名称**<br /><br /> **文本**|`examineButton`<br /><br /> **检查**|  
+    |**CheckBox**|**名称**<br /><br /> **文本**|`saveCheckBox`<br /><br /> **保存结果**|  
+    |**FolderBrowserDialog**|**名称**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>选择一个文件夹，并列出文件夹中的文件  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/21/2017
   
      <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 方法将文件内容读取到 <xref:System.IO.StreamReader>。 该内容的第一行是从 `StreamReader` 获取的，然后将添加到 `StringBuilder`。  
   
-4.  运行该应用程序。 单击“浏览”，然后浏览到包含 .txt 文件的文件夹。 单击“确定”。  
+4.  运行该应用程序。 单击“浏览”，然后浏览到包含 .txt 文件的文件夹。 单击 **“确定”**。  
   
      在 `ListBox` 中选择一个文件，然后单击“检查”。 `MessageBox` 显示文件信息。  
   
@@ -167,7 +168,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IO>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>  

@@ -1,19 +1,20 @@
 ---
-title: "Expression-bodied 成员（C# 编程指南）"
+title: Expression-bodied 成员（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ead1e474fe87bd9fbd0f972bc0f2fc4fefc12ecf
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 5690a2ddb9127bb0c9b06d3607e3d105fca9a2e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Expression-bodied 成员（C# 编程指南）
 通过表达式主体定义，可采用非常简洁的可读形式提供成员的实现。 只要任何支持的成员（如方法或属性）的逻辑包含单个表达式，就可以使用表达式主体定义。 表达式主体定义具有下列常规语法：
@@ -24,16 +25,16 @@ member => expression;
 
 其中“expression”是有效的表达式。 
 
-C# 6 中引入了针对方法和属性 Get 访问器的表达式主体定义支持，并在 C# 7 中进行了扩展。 表达式主体定义可用于下表列出的类型成员： 
+C# 6 中引入了针对方法和属性 Get 访问器的表达式主体定义支持，并在 C# 7.0 中进行了扩展。 表达式主体定义可用于下表列出的类型成员： 
 
 |成员  |开始提供支持的版本 |
 |---------|---------|
 |[方法](#methods)  |C# 6 |
-|[构造函数](#constructors)   |C# 7 |
-|[终结器](#finalizers)     |C# 7 |
+|[构造函数](#constructors)   |C# 7.0 |
+|[终结器](#finalizers)     |C# 7.0 |
 |[属性 Get](#property-get-statements)  |C# 6 |
-|[属性 Set](#property-set-statements)  |C# 7 |
-|[索引器](#indexers)       |C# 7 |
+|[属性 Set](#property-set-statements)  |C# 7.0 |
+|[索引器](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>方法
 

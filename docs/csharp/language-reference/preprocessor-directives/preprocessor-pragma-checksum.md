@@ -13,11 +13,11 @@ ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0604a559be25c300fcdc6041975306b465fc595f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b196bbbce110acb596602fa4de2507515cdbb68
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum（C# 参考）
 为源文件生成校验和，以帮助调试校验 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 页。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  此解决方案不适合 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 项目，因为计算的校验和用于生成的源文件，而不是 .aspx 文件。 为了解决此问题，`#pragma checksum` 为 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 页提供了校验和支持。  
   
- 在 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 中创建 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 项目时，生成的源文件包含从其生成源的 .aspx 文件的校验和。 编译器随后将此信息写入 PDB 文件中。  
+ 在 Visual C# 中创建 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 项目时，生成的源文件包含从其生成源的 .aspx 文件的校验和。 编译器随后将此信息写入 PDB 文件中。  
   
  如果编译器在文件中未遇到 `#pragma checksum` 指令，则它会计算校验和并将值写入 PDB 文件中。  
   
@@ -59,7 +59,7 @@ class TestClass
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)

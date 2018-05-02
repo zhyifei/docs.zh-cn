@@ -1,5 +1,5 @@
 ---
-title: "如何：实现和调用自定义扩展方法（C# 编程指南）"
+title: 如何：实现和调用自定义扩展方法（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,14 +8,14 @@ ms.topic: article
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a277412c69d26f20721381d9cfa839c7f082f2f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e73ccee84c35678a4923347ab04619bb6017aca5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何：实现和调用自定义扩展方法（C# 编程指南）
 本主题将介绍如何为任意 .NET 类型实现自定义扩展方法。 客户端代码可以通过以下方法使用扩展方法，添加包含这些扩展方法的 DLL 的引用，以及添加 [using](../../../csharp/language-reference/keywords/using-directive.md) 指令，该指令指定在其中定义扩展方法的命名空间。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 若要运行此代码，请将其复制并粘贴到已在 [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] 中创建的 Visual C# 控制台应用程序项目。 默认情况下，此项目面向 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版，并且具有对 System.Core.dll 的引用和一个用于 System.Linq 的 `using` 指令。 如果项目中缺少其中一个或多个要求，则可以手动添加它们。  
+ 若要运行此代码，请将其复制并粘贴到已在 Visual Studio 中创建的 Visual C# 控制台应用程序项目。 默认情况下，此项目面向 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版，并且具有对 System.Core.dll 的引用和一个用于 System.Linq 的 `using` 指令。 如果项目中缺少其中一个或多个要求，则可以手动添加它们。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  扩展方法不存在特定的安全漏洞。 始终不会将扩展方法用于模拟类型的现有方法，因为为了支持类型本身定义的实例或静态方法，已解决所有名称冲突。 扩展方法无法访问扩展类中的任何隐私数据。  
@@ -52,8 +52,8 @@ ms.lasthandoff: 01/19/2018
  [扩展方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
  [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
- [受保护](../../../csharp/language-reference/keywords/protected.md)  
- [内部](../../../csharp/language-reference/keywords/internal.md)  
- [公用](../../../csharp/language-reference/keywords/public.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
  [this](../../../csharp/language-reference/keywords/this.md)  
  [namespace](../../../csharp/language-reference/keywords/namespace.md)

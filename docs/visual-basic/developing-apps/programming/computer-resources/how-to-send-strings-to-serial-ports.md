@@ -1,11 +1,12 @@
 ---
-title: "如何：在 Visual Basic 中将字符串发送到串行端口"
-ms.custom: 
+title: 如何：在 Visual Basic 中将字符串发送到串行端口
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ports, sending strings to
@@ -13,22 +14,22 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - serial ports, sending strings to
 ms.assetid: 6ebf46cd-b2d0-4b2c-9a1f-be177b22ad52
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 95c67b344572d21f418cbc14d350e6ff28611bd3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d796f2d581188fd3753bf3d18b04b2fbeb901945
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中将字符串发送到串行端口
-本主题介绍在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中如何使用 `My.Computer.Ports` 将字符串发送到计算机的串行端口。  
+本主题介绍在 Visual Basic 中如何使用 `My.Computer.Ports` 将字符串发送到计算机的串行端口。  
   
 ## <a name="example"></a>示例  
  本示例将字符串发送到 COM1 串行端口。 你可能需要使用计算机上的其他串行端口。  
   
- 使用 `My.Computer.Ports.OpenSerialPort` 方法获取对端口的引用。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
+ 使用 `My.Computer.Ports.OpenSerialPort` 方法获取对端口的引用。 有关更多信息，请参见<xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
   
  `Using` 块允许应用程序在即使会生成异常的情况下也关闭串行端口。 操作串行端口的所有代码都应出现在此块中，或者出现在 `Try...Catch...Finally` 块中。  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  本示例使用 `Using` 块来确保应用程序在即使会引发异常的情况下也关闭端口。 有关详细信息，请参阅 [Using 语句](../../../../visual-basic/language-reference/statements/using-statement.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>  
  [如何：使用连接到串行端口的调制解调器拨号](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  

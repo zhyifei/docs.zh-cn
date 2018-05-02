@@ -15,15 +15,15 @@ ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
 caps.latest.revision: 20
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44c15eb9d65adf10904f8777847b0653ff1dbc99
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="is-c-reference"></a>is（C# 参考） #
 
-检查对象是否与给定类型兼容，或（从 C# 7 开始）针对某个模式测试表达式。
+检查对象是否与给定类型兼容，或（从 C# 7.0 开始）针对某个模式测试表达式。
 
 ## <a name="testing-for-type-compatibility"></a>类型兼容性测试 ##
 
@@ -60,11 +60,11 @@ ms.lasthandoff: 11/21/2017
 `expr` 可以是返回值的任何表达式，匿名方法和 Lambda 表达式除外。 下例使用 `is` 来计算方法调用的返回值。   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-从 C# 7 开始，可以使用[类型模式](#type)的模式匹配来编写代码，代码使用 `is` 语句更为简洁。
+从 C# 7.0 开始，可以使用[类型模式](#type)的模式匹配来编写代码，代码使用 `is` 语句更为简洁。
 
 ## <a name="pattern-matching-with-is"></a>利用 `is` 的模式匹配 ##
 
-从 C# 7 开始，`is` 和 [switch](../../../csharp/language-reference/keywords/switch.md) 语句支持模式匹配。 `is` 关键字支持以下模式：
+从 C# 7.0 开始，`is` 和 [switch](../../../csharp/language-reference/keywords/switch.md) 语句支持模式匹配。 `is` 关键字支持以下模式：
 
 - [类型模式](#type)，用于测试表达式是否可转换为指定类型，如果可以，则将其转换为该类型的一个变量。
 
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/21/2017
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" />常量模式 ###
 
-使用常量模式执行模式匹配时，`is` 会测试表达式结果是否等于指定常量。 在 C# 6 和更低版本中，[switch](switch.md) 语句支持常量模式。 从 C# 7 开始，`is` 语句也支持常量模式。 语法为：
+使用常量模式执行模式匹配时，`is` 会测试表达式结果是否等于指定常量。 在 C# 6 和更低版本中，[switch](switch.md) 语句支持常量模式。 从 C# 7.0 开始，`is` 语句也支持常量模式。 语法为：
 
 ```csharp
    expr is constant

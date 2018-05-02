@@ -1,22 +1,23 @@
 ---
-title: "如何：为枚举创建新方法（C# 编程指南）"
+title: 如何：为枚举创建新方法（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3cc15d24c9ba954a19fb87d4e364ac6e7f78e8b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b05d9f910e8c268fded8cdcc462392a1e80efdb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>如何：为枚举创建新方法（C# 编程指南）
 可使用扩展方法添加特定于某个特定枚举类型的功能。  
@@ -29,8 +30,8 @@ ms.lasthandoff: 11/21/2017
  请注意，`Extensions` 类还包含一个动态更新的静态变量，并且扩展方法的返回值反映了该变量的当前值。 这表明在幕后，将在定义扩展方法的静态类上直接调用这些方法。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 若要运行此代码，请将其复制并粘贴到已在 [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] 中创建的 Visual C# 控制台应用程序项目。 默认情况下，此项目面向 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版，并且具有对 System.Core.dll 的引用和一个用于 System.Linq 的 `using` 指令。 如果项目中缺少其中一个或多个要求，则可以手动添加它们。  
+ 若要运行此代码，请将其复制并粘贴到已在 Visual Studio 中创建的 Visual C# 控制台应用程序项目。 默认情况下，此项目面向 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版，并且具有对 System.Core.dll 的引用和一个用于 System.Linq 的 `using` 指令。 如果项目中缺少其中一个或多个要求，则可以手动添加它们。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [扩展方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

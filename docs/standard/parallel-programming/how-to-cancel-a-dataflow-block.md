@@ -1,5 +1,5 @@
 ---
-title: "如何：取消数据流块"
+title: 如何：取消数据流块
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ef7fa62513072e1ee0dc7a8fecf3e600f9c26f2
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: eece4992deecbf30299d6e9e96fa8c2faf16d3ab
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>如何：取消数据流块
 本文档介绍如何在应用程序中启用取消。 此示例使用 Windows 窗体显示数据流管道中工作项的活动位置以及取消的效果。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  创建一个 C# 或 Visual Basic **Windows 窗体应用程序**项目。 在以下步骤中，该项目命名为 `CancellationWinForms`。  
   
-2.  在主窗体 Form1.cs（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，则为 Form1.vb）的窗体设计器中，添加 <xref:System.Windows.Forms.ToolStrip> 控件。  
+2.  在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic，则为 Form1.vb）添加了 <xref:System.Windows.Forms.ToolStrip> 控件。  
   
 3.  向 <xref:System.Windows.Forms.ToolStrip> 控件添加 <xref:System.Windows.Forms.ToolStripButton> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，并将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“添加工作项”。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  在项目中，添加对 System.Threading.Tasks.Dataflow.dll 的引用。  
   
-2.  确保 Form1.cs（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 则为 Form1.vb）包含以下 `using` 语句（`Imports` 中为 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）。  
+2.  确保 Form1.cs（对于 Visual Basic 则为 Form1.vb）包含以下 `using` 语句（Visual Basic 中为 `Imports`）。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#1)]  
@@ -92,7 +92,7 @@ ms.lasthandoff: 01/10/2018
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>示例  
- 下面的示例演示 Form1.cs（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 则为 Form1.vb）的完整代码。  
+ 下面的示例演示 Form1.cs（对于 Visual Basic 则为 Form1.vb）的完整代码。  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#100)]  

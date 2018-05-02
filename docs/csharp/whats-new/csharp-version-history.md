@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: d24d190eab5896121231543e6696b6a4861b5bb8
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 0a24e8cf22bb8350777879a3adfd2757b89cd305
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-history-of-c"></a>C# 发展历史 #
 
@@ -48,7 +48,7 @@ C# 2.0 版引入了迭代器。 简单地说就是可以使用 `foreach` 循环�
 
 ## <a name="c-version-30"></a>C# 3.0 版
 
-C# 3.0 版和 Visual Studio 2008 一起发布于 2007 年下半年，但完整的语言功能是在 C# 3.5 版中发布的。 此版本标示着 C# 发展过程中的重大更改。 C# 成为了真正强大的编程语言。 我们来看看此版本中的一些主要功能：
+C# 3.0 版和 Visual Studio 2008 一起发布于 2007 年下半年，但完整的语言功能是在 .NET Framework 3.5 版中发布的。 此版本标示着 C# 发展过程中的重大更改。 C# 成为了真正强大的编程语言。 我们来看看此版本中的一些主要功能：
 
 - [自动实现的属性](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [匿名类型](../programming-guide/classes-and-structs/anonymous-types.md)

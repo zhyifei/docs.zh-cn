@@ -15,11 +15,11 @@ ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
 caps.latest.revision: 52
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 50b22ea94e8079e29c1e2ba2a595544ce23bd216
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-c-reference"></a>async（C# 参考）
 使用 `async` 修饰符可将方法、[lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)指定为异步。 如果对方法或表达式使用此修饰符，则其称为异步方法。 如下示例定义了一个名为 `ExampleMethodAsync` 的异步方法： 
@@ -76,7 +76,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
 - [void](../../../csharp/language-reference/keywords/void.md)（应仅用于事件处理程序）。
-- 从 C# 7 开始，任何具有可访问的 `GetAwaiter` 方法的类型。 `System.Threading.Tasks.ValueTask<TResult>` 类型属于此类实现。 它通过添加 NuGet 包 `System.Threading.Tasks.Extensions` 的方式可用。 
+- 从 C# 7.0 开始，任何具有可访问的 `GetAwaiter` 方法的类型。 `System.Threading.Tasks.ValueTask<TResult>` 类型属于此类实现。 它通过添加 NuGet 包 `System.Threading.Tasks.Extensions` 的方式可用。 
 
 此异步方法既不能声明任何 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)、[ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数，也不能具有[引用返回值](../../programming-guide/classes-and-structs/ref-returns.md)，但它可以调用具有此类参数的方法。  
   
@@ -84,7 +84,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
   
 你应主要使用 `void` 返回类型来定义事件处理程序，这些处理程序需要此返回类型。 `void` 返回异步方法的调用方不能等待，并且无法捕获该方法引发的异常。  
 
-从 C# 7 开始，返回另一个类型（通常为值类型），该类型具有 `GetAwaiter` 方法，可尽可能减少性能关键代码段中的内存分配。 
+从 C# 7.0 开始，返回另一个类型（通常为值类型），该类型具有 `GetAwaiter` 方法，可尽可能减少性能关键代码段中的内存分配。 
 
 有关详细信息和示例，请参阅[异步返回类型](../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   

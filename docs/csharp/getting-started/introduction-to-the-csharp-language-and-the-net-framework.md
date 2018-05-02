@@ -1,28 +1,29 @@
 ---
-title: "C# 语言和 .NET Framework 介绍"
-description: "了解 C# 和 .NET 的基础知识。 概述了 C# 语言和 .NET 生态系统。"
+title: C# 语言和 .NET Framework 介绍
+description: 了解 C# 和 .NET 的基础知识。 概述了 C# 语言和 .NET 生态系统。
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: get-started-article
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b2ffb641f436a41c97a94a6ec117f6087851d482
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9713b61e9af25e6acba2d6b11b46f2e99f1f1800
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 语言和 .NET Framework 介绍
 C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 上运行的各种安全可靠的应用程序。 C# 可用于创建 Windows 客户端应用程序、XML Web service、分布式组件、客户端服务器应用程序、数据库应用程序等。 Visual C# 提供高级代码编辑器、方便使用的用户界面设计器、集成调试器和其他许多工具，以便你可以更轻松地开发基于 C# 语言和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的应用程序。  
   
 > [!NOTE]
-> 阅读 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 文档的前提是，你已了解基本的编程概念。 如果是完完全全的初学者，不妨探索 [!INCLUDE[csprcsxpr](~/includes/csprcsxpr-md.md)]（可从 Web 获取）。 还可以利用介绍 C# 的书籍和 Web 资源来学习实用的编程技巧。  
+> 阅读 Visual C# 文档的前提是，你已了解基本的编程概念。 如果是完完全全的初学者，不妨探索 Visual C# 速成版（可从 Web 获取）。 还可以利用介绍 C# 的书籍和 Web 资源来学习实用的编程技巧。  
   
 ## <a name="c-language"></a>C# 语言  
  C# 语法高度重视表达，但学习起来也很简单轻松。 任何熟悉 C、C++ 或 Java 的人都可以立即认出 C# 的大括号语法。 通常情况下，了解上述任何一种语言的开发者可以在很短的时间内就开始使用 C# 高效工作。 C# 语法简化了 C++ 的许多复杂操作，并提供强大功能，如可以为 null 的值类型、枚举、委托、lambda 表达式和直接内存访问，而 Java 并不提供这些功能。 C# 不仅支持泛型方法和类型，提升了类型安全性和性能，还支持迭代器，以便集合类的实现者可以定义方便客户端代码使用的自定义迭代行为。 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 表达式让强类型查询成为最高级的语言构造。  

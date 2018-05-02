@@ -14,11 +14,11 @@ ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
 caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b810280724dcf608859bfa455947a75ce64b7abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b095520326c439601caa8fefa458dda75ba603e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-c-reference"></a>set（C# 参考）
 `set` 关键字在属性或索引器中定义访问器，它会向属性或索引器元素分配值。 有关详细信息和示例，请参阅[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[自动实现的属性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引器](../../../csharp/programming-guide/indexers/index.md)。  
@@ -27,7 +27,7 @@ ms.lasthandoff: 11/21/2017
  
  [!code-csharp[set#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
 
-通常，`set` 访问器包含返回一个值的单个语句，如前面的示例所示。 从 C# 7 开始，可以将 `set` 访问器作为表达式主体成员实现。 下面的示例将 `get` 和 `set` 访问器都作为表达式主体成员实现。
+通常，`set` 访问器包含返回一个值的单个语句，如前面的示例所示。 从 C# 7.0 开始，可以将 `set` 访问器作为 expression-bodied 成员实现。 下面的示例将 `get` 和 `set` 访问器都作为表达式主体成员实现。
 
  [!code-csharp[set#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
     
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  

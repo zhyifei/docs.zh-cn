@@ -1,18 +1,18 @@
 ---
-title: "Windows 上 .NET Core 的先决条件"
-description: "了解在 Windows 计算机上开发和运行 .NET Core 应用程序所需的依赖项。"
+title: Windows 上 .NET Core 的先决条件
+description: 了解在 Windows 计算机上开发和运行 .NET Core 应用程序所需的依赖项。
 author: JRAlexander
 ms.author: johalex
-ms.date: 03/02/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac898ea87c0247581154eb7de65e8cbe6ea6ba15
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的先决条件
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/08/2018
 * 通过 .zip 文件安装 .NET Core。 这可能包括 build/CI/CD 服务器。
 
 > [!NOTE]
-> 仅限 Windows 7 和 Windows Server 2008 计算机：请确保 Windows 安装为最新版本，并且包括通过 Windows 更新安装的修补程序 [KB2533623](https://support.microsoft.com/help/2533623)。
+> 对于 Windows 8.1 和更早版本，或 Windows Server 2012 R2 和更早版本：请确保你的 Windows 安装为最新版本，并且包含可以通过 Windows 更新安装的 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)。 如果没有安装此更新，则在启动 .NET Core 应用程序时会看到如下错误：`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`。
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 的先决条件
 

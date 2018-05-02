@@ -15,11 +15,11 @@ ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 34c7e7147ce7ae43926de1796bee433667f08331
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -129,7 +129,7 @@ Visual Basic 命令行编译器现在支持 [-refout](../reference/command-line-
 
 **支持 C# 引用返回值**
 
-从 C# 7 开始，C# 支持引用返回值。 也就是说，当调用方法收到引用返回的值时，可以更改引用的值。 Visual Basic 不允许使用引用返回值创建方法，但允许使用和修改引用返回值。
+从 C# 7.0 开始，C# 支持引用返回值。 也就是说，当调用方法收到引用返回的值时，可以更改引用的值。 Visual Basic 不允许使用引用返回值创建方法，但允许使用和修改引用返回值。
 
 例如，用 C# 编写的以下 `Sentence` 类包括 `FindNext` 方法，该方法查找句子中以指定的子字符串开头的下一个单词。 该字符串作为引用返回值返回，方法引用传递的 `Boolean` 变量指示搜索是否成功。 这意味着调用方不仅可以读取返回的值；还可以修改此值，此修改在 `Sentence` 类中反映。
 

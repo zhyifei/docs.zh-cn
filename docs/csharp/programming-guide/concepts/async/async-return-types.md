@@ -1,21 +1,22 @@
 ---
-title: "异步返回类型 (C#)"
-ms.custom: 
+title: 异步返回类型 (C#)
+ms.custom: ''
 ms.date: 05/29/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 4927d6324b6bda5a897ce81928fc13cae303a99a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-return-types-c"></a>异步返回类型 (C#)
 异步方法可以具有以下返回类型：
@@ -26,7 +27,7 @@ ms.lasthandoff: 11/18/2017
 
 - `void`（对于事件处理程序）。 
 
-- 从 C# 7 开始，任何具有可访问的 `GetAwaiter` 方法的类型。 `GetAwaiter` 方法返回的对象必须实现 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> 接口。
+- 从 C# 7.0 开始，任何具有可访问的 `GetAwaiter` 方法的类型。 `GetAwaiter` 方法返回的对象必须实现 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> 接口。
   
 有关异步方法的详细信息，请参阅[使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/18/2017
  
 ## <a name="generalized-async-return-types-and-valuetaskt"></a>通用的异步返回类型和 ValueTask<T>
 
-从 C# 7 开始，异步方法可返回任何具有可访问的 `GetAwaiter` 方法的类型。
+从 C# 7.0 开始，异步方法可返回任何具有可访问的 `GetAwaiter` 方法的类型。
  
 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 是引用类型，因此，性能关键路径中的内存分配会对性能产生负面影响，尤其当分配出现在紧凑循环中时。 支持通用返回类型意味着可返回轻量值类型（而不是引用类型），从而避免额外的内存分配。 
 

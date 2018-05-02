@@ -1,28 +1,28 @@
 ---
-title: "如何：配置客户端应用程序服务"
-ms.custom: 
+title: 如何：配置客户端应用程序服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>如何：配置客户端应用程序服务
 本主题介绍如何使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的“项目设计器”启用并配置客户端应用程序服务。 你可以使用客户端应用程序服务来验证用户，并从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务检索用户角色和设置。 完成配置后，可以访问应用程序代码中启用的服务，如[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)所述。 有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
@@ -111,7 +111,7 @@ ms.lasthandoff: 01/19/2018
     Data Source = |SQL/CE|;password=<password>;encrypt database=true  
     ```  
   
-5.  若要使用你自己的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库，请使用你自己的连接字符串。 有关有效的连接字符串格式的信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 文档。 此数据库不是自动生成的。 连接字符串必须引用现有的数据库，你可以使用以下 SQL 语句创建该数据库。  
+5.  若要使用你自己的 SQL Server 数据库，请使用你自己的连接字符串。 有关有效的连接字符串格式的信息，请参阅 SQL Server 文档。 此数据库不是自动生成的。 连接字符串必须引用现有的数据库，你可以使用以下 SQL 语句创建该数据库。  
   
     ```  
     CREATE TABLE ApplicationProperties (PropertyName nvarchar(256),  
@@ -127,7 +127,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="using-custom-providers"></a>使用自定义提供程序  
  默认情况下，客户端应用程序服务功能使用 <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType> 命名空间中的提供程序。 使用“项目设计器”的“服务”页配置应用程序时，对这些提供程序的引用会添加到 App.config 文件中。 这些默认的提供程序访问服务器上相应的提供程序。 Web 服务通常配置为通过提供程序（如 <xref:System.Web.Security.SqlMembershipProvider> 和 <xref:System.Web.Security.SqlRoleProvider>）访问用户数据。  
   
- 如果想要使用自定义服务提供程序，则通常将在服务器端更改提供程序，以便这些提供程序对访问服务器的所有客户端应用程序产生影响。 但是，你可以选择在客户端使用非默认提供程序。 你可以在项目的 App.config 文件中指定自定义身份验证或角色提供程序，如下面的步骤所示。 有关如何创建自定义身份验证和角色提供程序的信息，请参阅[实现成员资格提供程序](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)和[实现角色提供程序](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)。 你还可通过修改项目的`Settings`类（在 C# 中作为 `Properties.Settings.Default` 访问，在 `My.Settings` 中作为 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 访问）来使用自定义设置提供程序。 有关详细信息，请参阅[应用程序设置体系结构](../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
+ 如果想要使用自定义服务提供程序，则通常将在服务器端更改提供程序，以便这些提供程序对访问服务器的所有客户端应用程序产生影响。 但是，你可以选择在客户端使用非默认提供程序。 你可以在项目的 App.config 文件中指定自定义身份验证或角色提供程序，如下面的步骤所示。 有关如何创建自定义身份验证和角色提供程序的信息，请参阅[实现成员资格提供程序](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)和[实现角色提供程序](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)。 你还可通过修改项目的`Settings`类（在 C# 中作为 `Properties.Settings.Default` 访问，在 `My.Settings` 中作为 Visual Basic 访问）来使用自定义设置提供程序。 有关详细信息，请参阅[应用程序设置体系结构](../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
   
 #### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>将客户端应用程序服务配置为使用非默认提供程序  
   

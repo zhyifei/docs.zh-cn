@@ -1,5 +1,5 @@
 ---
-title: "如何：在数据流块中指定任务计划程序"
+title: 如何：在数据流块中指定任务计划程序
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 15b1168c34a22394424f250e8ab1887ec8ee1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>如何：在数据流块中指定任务计划程序
 本文档演示在应用程序中使用数据流时如何关联特定任务计划程序。 示例在 Windows 窗体应用程序中使用 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 类来显示读取器任务处于活动状态的时间和编写器任务处于活动状态的时间。 它还使用 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法使数据流块能够在用户界面线程上运行。
@@ -31,9 +31,9 @@ ms.lasthandoff: 01/10/2018
 
 ## <a name="to-create-the-windows-forms-application"></a>创建 Windows 窗体应用程序  
   
-1.  创建 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 或 Visual Basic“Windows 窗体应用”项目。 在以下步骤中，该项目命名为 `WriterReadersWinForms`。  
+1.  创建一个 Visual C# 或 Visual Basic“Windows 窗体应用程序”项目。 在以下步骤中，该项目命名为 `WriterReadersWinForms`。  
   
-2.  在主窗体的窗体设计器中，Form1.cs（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 则为 Form1.vb）添加了四个 <xref:System.Windows.Forms.CheckBox> 控件。 将 `checkBox1`、`checkBox2`、`checkBox3`、`checkBox4` 的 <xref:System.Windows.Forms.Control.Text%2A> 属性分别设置为“读取器 1”、“读取器 2”、“读取器 3”和“编写器”。 将每个控件的 <xref:System.Windows.Forms.Control.Enabled%2A> 属性设置为 `False`。  
+2.  在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic 则为 Form1.vb）添加了四个 <xref:System.Windows.Forms.CheckBox> 控件。 将 `checkBox1`、`checkBox2`、`checkBox3`、`checkBox4` 的 <xref:System.Windows.Forms.Control.Text%2A> 属性分别设置为“读取器 1”、“读取器 2”、“读取器 3”和“编写器”。 将每个控件的 <xref:System.Windows.Forms.Control.Enabled%2A> 属性设置为 `False`。  
   
 3.  在窗体上添加一个 <xref:System.Windows.Forms.Timer> 控件。 将 <xref:System.Windows.Forms.Timer.Interval%2A> 属性设置为 `2500`。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  在项目中，添加对 System.Threading.Tasks.Dataflow.dll 的引用。  
   
-2.  确保 Form1.cs（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 则为 Form1.vb）包含以下 `using` 语句（`Imports` 中为 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）。  
+2.  确保 Form1.cs（对于 Visual Basic 则为 Form1.vb）包含以下 `using` 语句（Visual Basic 中为 `Imports`）。  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#1)]  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/10/2018
  对于在同一 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 对象上运行的所有其他数据流块，此示例还使用了 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 类使某些数据流块能够并发操作，而使其他数据流块能够单独执行。 当多个数据流块共享资源，但有些需要对该资源独占访问时，这种技术很有用，因为它不需要手动同步对该资源的访问。 手动同步的消除会使代码更高效。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示 Form1.cs（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 则为 Form1.vb）的完整代码。  
+ 下面的示例演示 Form1.cs（对于 Visual Basic 则为 Form1.vb）的完整代码。  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  

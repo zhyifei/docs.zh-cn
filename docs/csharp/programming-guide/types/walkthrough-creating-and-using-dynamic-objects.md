@@ -1,5 +1,5 @@
 ---
-title: "演练：创建和使用动态对象（C# 和 Visual Basic）"
+title: 演练：创建和使用动态对象（C# 和 Visual Basic）
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
-ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
+ms.openlocfilehash: d6b740e78503d0937c9a0f38a573bb7dd778075d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>演练：创建和使用动态对象（C# 和 Visual Basic）
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/11/2018
   
  动态对象还提供对 IronPython 和 IronRuby 等动态语言的便捷访问。 可以使用动态对象来引用在运行时解释的动态脚本。  
   
- 使用晚期绑定引用动态对象。 在 C# 中，将晚期绑定对象的类型指定为 `dynamic`。 在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中，将晚期绑定对象的类型指定为 `Object`。 有关详细信息，请参阅[动态](../../../csharp/language-reference/keywords/dynamic.md)和[早期绑定和晚期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。  
+ 使用晚期绑定引用动态对象。 在 C# 中，将晚期绑定对象的类型指定为 `dynamic`。 在 Visual Basic 中，将晚期绑定对象的类型指定为 `Object`。 有关详细信息，请参阅[动态](../../../csharp/language-reference/keywords/dynamic.md)和[早期绑定和晚期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。  
   
  可以使用 <xref:System.Dynamic?displayProperty=nameWithType> 命名空间中的类来创建自定义动态对象。 例如，可以创建 <xref:System.Dynamic.ExpandoObject> 并在运行时指定该对象的成员。 还可以创建继承 <xref:System.Dynamic.DynamicObject> 类的自己的类型。 然后，可以替代 <xref:System.Dynamic.DynamicObject> 类的成员以提供运行时动态功能。  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 02/11/2018
   
 #### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>创建一个使用自定义动态对象的示例应用程序  
   
-1.  在“解决方案资源管理器”中，双击 Module1.vb 文件（如果使用的是 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]）或 Program.cs 文件（如果使用的是 Visual C#）。  
+1.  在“解决方案资源管理器”中，双击 Module1.vb 文件（如果使用的是 Visual Basic）或 Program.cs 文件（如果使用的是 Visual C#）。  
   
 2.  将以下代码添加到 Main 过程，为 TextFile1.txt 文件创建一个 `ReadOnlyFile` 类的实例。 代码将使用晚期绑定来调用动态成员，并检索包含字符串“Customer”的文本行。  
   
@@ -147,11 +147,11 @@ ms.lasthandoff: 02/11/2018
   
 2.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“控制台应用程序”。 在“名称”框中，键入 `DynamicIronPythonSample`，然后单击“确定”。 新项目创建完成。  
   
-3.  如果使用的是 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，请右击 DynamicIronPythonSample 项目，然后单击“属性”。 单击“引用”选项卡。单击“添加”按钮。 如果使用的是 Visual C#，请在“解决方案资源管理器”中，右键单击“引用”文件夹，然后单击“添加引用”。  
+3.  如果使用的是 Visual Basic，请右击 DynamicIronPythonSample 项目，然后单击“属性”。 单击“引用”选项卡。单击“添加”按钮。 如果使用的是 Visual C#，请在“解决方案资源管理器”中，右键单击“引用”文件夹，然后单击“添加引用”。  
   
-4.  在“浏览”选项卡上，浏览到安装 IronPython 库的文件夹。 例如，C:\Program Files\IronPython 2.6 for .NET 4.0。 选择“IronPython.dll”、“IronPython.Modules.dll”、“Microsoft.Scripting.dll”和“Microsoft.Dynamic.dll”库。 单击“确定”。  
+4.  在“浏览”选项卡上，浏览到安装 IronPython 库的文件夹。 例如，C:\Program Files\IronPython 2.6 for .NET 4.0。 选择“IronPython.dll”、“IronPython.Modules.dll”、“Microsoft.Scripting.dll”和“Microsoft.Dynamic.dll”库。 单击 **“确定”**。  
   
-5.  如果使用的是 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，请编辑 Module1.vb 文件。 如果使用的是 Visual C#，请编辑 Program.cs 文件。  
+5.  如果使用的是 Visual Basic，请编辑 Module1.vb 文件。 如果使用的是 Visual C#，请编辑 Program.cs 文件。  
   
 6.  在文件的顶部，添加以下代码以从 IronPython 库导入 `Microsoft.Scripting.Hosting` 和 `IronPython.Hosting` 命名空间。  
   

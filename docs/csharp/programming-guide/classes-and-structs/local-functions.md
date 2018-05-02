@@ -9,15 +9,15 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b4e95d48e451038f0f7004d0901f329b2c57fe5
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: ac18aa57f443f28f55779ff9c92a5349b9b39fd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-functions-c-programming-guide"></a>本地函数（C# 编程指南）
 
-从 C# 7 开始，C# 支持本地函数。 本地函数是一种嵌套在另一成员中的类型的私有方法。 仅能从其包含成员中调用它们。 可以在以下位置中声明和调用本地函数：
+从 C# 7.0 开始，C# 支持本地函数。 本地函数是一种嵌套在另一成员中的类型的私有方法。 仅能从其包含成员中调用它们。 可以在以下位置中声明和调用本地函数：
 
 - 方法（尤其是迭代器方法和异步方法）
 - 构造函数

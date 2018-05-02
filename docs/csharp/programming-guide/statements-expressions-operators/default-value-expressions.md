@@ -1,37 +1,52 @@
 ---
-title: "默认值表达式（C# 编程指南）"
-description: "默认值表达式生成任何引用类型或值类型的默认值"
-ms.date: 08/23/2017
+title: 默认值表达式（C# 编程指南）
+description: 默认值表达式生成任何引用类型或值类型的默认值
+ms.date: 04/25/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.assetid: b9daf449-4e64-496e-8592-6ed2c8875a98
-caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c2bb1c269e5347d615c47ab828506aef538c4761
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 174ac79c9e2c4a4e628816b1178d420ec7cfc809
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>默认值表达式（C# 编程指南）
 
-默认值表达式生成类型的默认值。 默认值表达式在泛型类和泛型方法中非常有用。 使用泛型类和泛型方法时出现的一个问题是，如何在无法提前知道以下内容的情况下将默认值赋值给参数化类型 `T`：
+默认值表达式 `default(T)` 生成 `T` 类型的默认值。 下表显示为各种类型生成的值：
+
+|类型|默认值|
+|---------|---------|
+|任何引用类型|`null`|
+|数值类型|零|
+|[bool](../../language-reference/keywords/bool.md)|`false`|
+|[char](../../language-reference/keywords/char.md)|`'\0'`|
+|[enum](../../language-reference/keywords/enum.md)|表达式 `(E)0` 生成的值，其中 `E` 是枚举标识符。|
+|[struct](../../language-reference/keywords/struct.md)|通过如下设置生成的值：将所有值类型的字段设置为其默认值，将所有引用类型的字段设置为 `null`。|
+|可以为 null 的类型|<xref:System.Nullable%601.HasValue%2A> 属性为 `false` 且 <xref:System.Nullable%601.Value%2A> 属性未定义的实例。|
+
+默认值表达式在泛型类和泛型方法中非常有用。 使用泛型类和泛型方法时出现的一个问题是，如何在无法提前知道以下内容的情况下将默认值赋值给参数化类型 `T`：
 
 - `T` 是引用类型还是值类型。
-- 如果 `T` 是值类型，它是数值还是用户定义的结构。
+- 如果 `T` 是值类型，它是数值还是结构。
 
- 已知参数化类型 `T` 的变量 `t`，仅当 `T` 为引用类型时，语句 `t = null` 才有效。 赋值 `t = 0` 仅对数值类型有效，对结构无效。 解决方案是使用默认值表达式，该表达式对引用类型（类类型和接口类型）返回 `null`，对数值类型返回零。 对于用户定义的结构，返回初始化为零位模式的结构，该结构根据成员是值还是引用类型，为每个成员生成 0 或 `null`。 对于可为 NULL 的值类型，`default` 返回像任何结构一样初始化的 <xref:System.Nullable%601?displayProperty=nameWithType>。
+ 已知参数化类型 `T` 的变量 `t`，仅当 `T` 为引用类型时，语句 `t = null` 才有效。 赋值 `t = 0` 仅对数值类型有效，对结构无效。 若要解决此问题，请使用默认值表达式：
+
+```csharp
+T t = default(T);
+```
 
 `default(T)` 表达式不限于泛型类和泛型方法。 默认值表达式可用于任何托管类型。 以下任一表达式都是有效的：
 
  [!code-csharp[csProgGuideGenerics#1](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-value-expressions.cs)]
 
- `GenericList<T>` 类的以下示例演示如何在泛型类中使用 `default(T)` 运算符。 有关详细信息，请参阅[泛型概述](../generics/introduction-to-generics.md)。
+ `GenericList<T>` 类的以下示例演示如何在泛型类中使用 `default(T)` 运算符。 有关详细信息，请参阅[泛型介绍](../generics/introduction-to-generics.md)。
 
  [!code-csharp[csProgGuideGenerics#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#Snippet41)]
 
@@ -51,7 +66,9 @@ ms.lasthandoff: 11/21/2017
 
 ## <a name="see-also"></a>请参阅
 
- <xref:System.Collections.Generic>[C# 编程指南](../index.md)  
- [泛型](../generics/index.md)  
+ <xref:System.Collections.Generic>  
+ [C# 编程指南](../index.md)  
+ [泛型（C# 编程指南）](../generics/index.md)  
  [泛型方法](../generics/generic-methods.md)  
- [泛型](~/docs/standard/generics/index.md)  
+ [.NET 中的泛型](~/docs/standard/generics/index.md)  
+ [默认值表](../../language-reference/keywords/default-values-table.md)

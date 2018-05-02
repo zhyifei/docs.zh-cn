@@ -1,5 +1,5 @@
 ---
-title: "如何：指定数据流块中的并行度"
+title: 如何：指定数据流块中的并行度
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e9d0f0eb22beff23b9090e458be7e434368bc9eb
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 0631603e3426a08cc1f3abb07bc0f9ecc73adb21
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>如何：指定数据流块中的并行度
 本文档介绍如何设置 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A?displayProperty=nameWithType> 属性使执行数据流块一次处理多条消息。 当数据流块需要执行长时间运行的计算并且可从并行处理消息中获益时，这种做法很有用。 此示例使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType> 类并发执行多个数据流操作；但是，您可以对 TPL 数据流库提供的任何预定义的执行块类型（<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType>）指定最大并行度。
@@ -36,13 +36,13 @@ ms.lasthandoff: 01/10/2018
  [!code-vb[TPLDataflow_DegreeOfParallelism#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_degreeofparallelism/vb/dataflowdegreeofparallelism.vb#1)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 复制示例代码并将其粘贴到 Visual Studio 项目中，或粘贴到一个名为 `DataflowDegreeOfParallelism.cs`（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，则为 `DataflowDegreeOfParallelism.vb`）的文件中，然后在 Visual Studio 命令提示符窗口中运行以下命令。  
+ 复制示例代码，并将它粘贴到 Visual Studio 项目中，或粘贴到 `DataflowDegreeOfParallelism.cs`（对于 Visual Basic，则为 `DataflowDegreeOfParallelism.vb`）文件中，再在 Visual Studio 命令提示符窗口中运行以下命令。  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowDegreeOfParallelism.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowDegreeOfParallelism.vb**  
   

@@ -1,8 +1,9 @@
 ---
-title: "switch 关键字（C# 参考）"
+title: switch 关键字（C# 参考）
 ms.date: 03/07/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1c345d0c6c935271600a386752e18c19a25cc389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6506278edb782f61b83cecfccba3126282c0ecf8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="switch-c-reference"></a>switch（C# 参考）
 `switch` 是一个选择语句，它根据与匹配表达式匹配的模式，从候选列表中选择单个开关部分进行执行。 
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 - 整数值，例如 [int](int.md) 或 [long](long.md)。
 - [枚举](enum.md)值。
 
-从 C# 7 开始，匹配表达式可以是任何非 null 表达式。
+从 C# 7.0 开始，匹配表达式可以是任何非 null 表达式。
  
 ## <a name="the-switch-section"></a>开关部分
  
@@ -91,7 +92,7 @@ switch (caseSwitch)
 
  因为 C# 6 仅支持常量模式并且不允许重复常量值，所以 case 标签定义了互斥值，而且仅有一个模式可与匹配表达式相匹配。 因此，`case` 语句显示的顺序并不重要。
 
- 然而，在 C# 7 中，因为支持其他模式，所以 case 标签不需要定义互斥值，并且多个模式可以与匹配表达式相匹配。 因为仅执行包含首次匹配模式的开关部分中的语句，所以 `case` 语句显示的顺序很重要。 如果 C# 检测到开关部分的 case 语句或语句等效于或是先前语句的子集，它将生成编译错误 CS8120：“开关 case 已由先前 case 处理。” 
+ 然而，在 C# 7.0 中，因为支持其他模式，所以 case 标签不需要定义互斥值，并且多个模式可以与匹配表达式相匹配。 因为仅执行包含首次匹配模式的开关部分中的语句，所以 `case` 语句显示的顺序很重要。 如果 C# 检测到开关部分的 case 语句或语句等效于或是先前语句的子集，它将生成编译错误 CS8120：“开关 case 已由先前 case 处理。” 
 
  以下示例说明了使用各种非互斥模式的 `switch` 语句。 如果移动 `case 0:` 开关部分，使其不再是 `switch` 语句中的第一部分，C# 会生成编译器错误，因为值为零的整数是所有整数的子集（由 `case int val` 语句定义的模式）。
 
@@ -111,7 +112,7 @@ switch (caseSwitch)
 
 ## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>使用 `switch` 语句的 <a name="pattern" /> 模式匹配
   
-每个 `case` 语句定义一个模式，如果它与匹配表达式相匹配，则会导致执行其包含的开关部分。 所有版本的 C# 都支持常量模式。 其余模式从 C# 7 开始支持。 
+每个 `case` 语句定义一个模式，如果它与匹配表达式相匹配，则会导致执行其包含的开关部分。 所有版本的 C# 都支持常量模式。 其余模式从 C# 7.0 开始支持。 
   
 ### <a name="constant-pattern"></a>常量模式 
 
@@ -181,7 +182,7 @@ case null:
 
 ## <a name="the-case-statement-and-the-when-clause"></a>`case` 语句和 `when` 子句
 
-从 C# 7 开始，因为 case 语句不需要互相排斥，因此可以添加 `when` 子句来指定必须满足的附加条件使 case 语句计算为 true。 `when` 子句可以是返回布尔值的任何表达式。 `when` 子句的更常见用法之一是防止在匹配表达式的值为 `null` 时执行开关部分。 
+从 C# 7.0 开始，因为 case 语句不需要互相排斥，因此可以添加 `when` 子句来指定必须满足的附加条件使 case 语句计算为 true。 `when` 子句可以是返回布尔值的任何表达式。 `when` 子句的更常见用法之一是防止在匹配表达式的值为 `null` 时执行开关部分。 
 
  下面的示例定义了 `Shape` 基类、从 `Shape` 派生的 `Rectangle` 类以及从 `Rectangle` 派生的 `Square` 类。 它使用 `when` 子句来确保 `ShowShapeInfo` 将已分配相等长度和宽度的 `Rectangle` 对象作为 `Square` 来处理（即使未实例化为 `Square` 对象）。 该方法不会尝试显示关于值为 `null` 的对象或区域为零的形状的信息。 
 
@@ -192,7 +193,7 @@ case null:
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](../../../../includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
  [C# 参考](../index.md)  
  [C# 编程指南](../../programming-guide/index.md)  

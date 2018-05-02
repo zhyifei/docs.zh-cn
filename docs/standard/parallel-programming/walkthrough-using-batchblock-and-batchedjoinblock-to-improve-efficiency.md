@@ -1,5 +1,5 @@
 ---
-title: "演练：使用 BatchBlock 和 BatchedJoinBlock 提高效率"
+title: 演练：使用 BatchBlock 和 BatchedJoinBlock 提高效率
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 49056607d84b48584660ff62bba13147d6aa43ec
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: c9ea53fb186551a24f678d905d35caaaa0c26494
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>演练：使用 BatchBlock 和 BatchedJoinBlock 提高效率
 TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> 类，以便可以接收和缓冲一个或多个源的数据，再将缓冲的数据作为一个集合传播出去。 如果从一个或多个源收集数据，再批处理多个数据元素，就会发现这种批处理机制非常有用。 例如，假设应用使用数据流将记录插入数据库。 如果同时插入多项，而不是顺序一次插入一个，此操作可能会更高效。 本文档介绍了如何使用 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 类，提高此类数据库插入操作的效率。 它还介绍了如何使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 类，捕获程序从数据库读取数据时的结果和发生的任何异常。
@@ -61,7 +61,7 @@ TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?disp
   
 2.  在项目中，添加对 System.Data.SqlServerCe.dll 和 System.Threading.Tasks.Dataflow.dll 的引用。  
   
-3.  确保 Form1.cs（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，则为 Form1.vb）包含以下 `using`（[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中的 `Imports`）语句。  
+3.  确保 Form1.cs（对于 Visual Basic，则为 Form1.vb）包含以下 `using`（Visual Basic 中为 `Imports`）语句。  
   
      [!code-csharp[TPLDataflow_BatchDatabase#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#1)]
      [!code-vb[TPLDataflow_BatchDatabase#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#1)]  

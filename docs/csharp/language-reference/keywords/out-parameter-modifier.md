@@ -1,5 +1,5 @@
 ---
-title: "out 参数修饰符（C# 参考）"
+title: out 参数修饰符（C# 参考）
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - out parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c0686d8bb0dec2a5ea6dd92491e58c93b7ee53a8
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 052416f97c1fe9ed3aa1a3bafa7410e602096991
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 参数修饰符（C# 参考）
 `out` 关键字通过引用传递参数。 它与 [ref](ref.md) 关键字相似，只不过 `ref` 要求在传递之前初始化变量。 它也类似于 [in](in-parameter-modifier.md) 关键字，只不过 `in` 不允许通过调用方法来修改参数值。 若要使用 `out` 参数，方法定义和调用方法均必须显式使用 `out` 关键字。 例如:  
@@ -68,7 +68,7 @@ class CS0663_Example
 
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#4)]  
 
-从 C# 7 开始，可以在方法调用的参数列表而不是单独的变量声明中声明 `out` 变量。 这使得代码更简洁可读，还能防止在方法调用之前无意中向该变量赋值。 下面的示例与上一个示例基本相同，不同之处在于它在对 [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) 方法的调用中定义了 `number` 变量。
+从 C# 7.0 开始，可以在方法调用的参数列表而不是单独的变量声明中声明 `out` 变量。 这使得代码更简洁可读，还能防止在方法调用之前无意中向该变量赋值。 下面的示例与上一个示例基本相同，不同之处在于它在对 [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) 方法的调用中定义了 `number` 变量。
 
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#5)]  
    

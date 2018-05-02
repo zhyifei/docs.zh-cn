@@ -1,62 +1,61 @@
 ---
-title: "固定大小的缓冲区（C# 编程指南）"
-ms.date: 07/20/2015
+title: 固定大小的缓冲区（C# 编程指南）
+ms.date: 04/20/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.assetid: 6220d454-947c-4977-ac9d-9308c6ed5051
-caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3f99c2c6d477fca988fcca77de5ca5c2f8addd4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9158550885ea0a95a56f318362b21db48e648234
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定大小的缓冲区（C# 编程指南）
-在 C# 中，可以使用 [fixed](../../../csharp/language-reference/keywords/fixed-statement.md) 语句来创建在数据结构中具有固定大小的数组的缓冲区。 当使用现有代码（例如使用其他语言编写的代码、预先存在的 DLL 或 COM 项目）时，这非常有用。 固定的数组可以采用允许用于常规结构成员的任何属性或修饰符。 唯一的限制是数组类型必须为 `bool`、`byte`、`char`、`short`、`int`, `long`、`sbyte`、`ushort`、`uint`、`ulong`、`float` 或 `double`。  
-  
-```  
-private fixed char name[30];  
-```  
-  
-## <a name="remarks"></a>备注  
- 在早期版本的 C# 中，声明 C++ 样式固定大小的结构是很困难的，因为包含数组的 C# 结构不包含数组元素。 而该结构包含对元素的引用。  
-  
- C# 2.0 增加了在[结构](../../../csharp/language-reference/keywords/struct.md)中嵌入固定大小的数组的功能（当在[不安全的](../../../csharp/language-reference/keywords/unsafe.md)代码块中使用该数组时）。  
-  
- 例如，在 C# 2.0 之前，以下 `struct` 的大小为 8 个字节。 `pathName` 数组是对堆分配数组的引用：  
-  
- [!code-csharp[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
-  
- 从 C# 2.0 开始，`struct` 可以包含嵌入的数组。 在下面的示例中，`fixedBuffer` 数组具有固定的大小。 若要访问数组的元素，请使用 `fixed` 语句，以建立指向第一个元素的指针。 `fixed` 语句将 `fixedBuffer` 的实例锁定到内存中的特定位置。  
-  
- [!code-csharp[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
-  
- 包含 128 个元素的 `char` 数组的大小为 256 个字节。 固定大小的 [char](../../../csharp/language-reference/keywords/char.md) 缓冲区每个字符始终占用两个字节，而不考虑编码。 甚至在将 char 缓冲区封送到 API 方法或具有 `CharSet = CharSet.Auto` 或 `CharSet = CharSet.Ansi` 的结构时，这也为 true。 有关更多信息，请参见<xref:System.Runtime.InteropServices.CharSet>。  
-  
- 另一常见的固定大小的数组是 [bool](../../../csharp/language-reference/keywords/bool.md) 数组。 `bool` 数组中的元素大小始终为一个字节。 `bool` 数组不适用于创建位数组或缓冲区。  
-  
+
+在 C# 中，可以使用 [fixed](../../language-reference/keywords/fixed-statement.md) 语句来创建在数据结构中具有固定大小的数组的缓冲区。 当编写与其他语言或平台的数据源进行互操作的方法时，固定大小的缓冲区很有用。 固定的数组可以采用允许用于常规结构成员的任何属性或修饰符。 唯一的限制是数组类型必须为 `bool`、`byte`、`char`、`short`、`int`, `long`、`sbyte`、`ushort`、`uint`、`ulong`、`float` 或 `double`。
+
+```csharp
+private fixed char name[30];
+```
+
+## <a name="remarks"></a>备注
+
+在安全代码中，包含数组的 C# 结构不包含该数组元素。 而该结构包含对元素的引用。 当在[不安全的](../../language-reference/keywords/unsafe.md)代码块中使用数组时，可以在[结构](../../language-reference/keywords/struct.md)中嵌入该固定大小的数组。
+
+以下 `struct` 的大小为 8 字节。 `pathName` 数组是引用：
+
+[!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
+
+`struct` 可以在不安全代码中包含嵌入的数组。 在下面的示例中，`fixedBuffer` 数组具有固定的大小。 使用 `fixed` 语句建立指向第一个元素的指针。 通过此指针访问数组的元素。 `fixed` 语句将 `fixedBuffer` 实例字段固定到内存中的特定位置。
+
+[!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
+
+包含 128 个元素的 `char` 数组的大小为 256 个字节。 固定大小的 [char](../../language-reference/keywords/char.md) 缓冲区每个字符始终占用两个字节，而不考虑编码。 甚至在将 char 缓冲区封送到 API 方法或具有 `CharSet = CharSet.Auto` 或 `CharSet = CharSet.Ansi` 的结构时，这也为 true。 有关更多信息，请参见<xref:System.Runtime.InteropServices.CharSet>。
+
+前面的示例演示访问未固定的 `fixed` 字段，此功能从 C# 7.3 开始提供...
+
+另一常见的固定大小的数组是 [bool](../../language-reference/keywords/bool.md) 数组。 `bool` 数组中的元素大小始终为一个字节。 `bool` 数组不适用于创建位数组或缓冲区。
+
 > [!NOTE]
->  除了通过使用 [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md) 创建的内存外，C# 编译器和公共语言运行时 (CLR) 不执行任何安全缓冲区溢出检查。 与所有不安全代码一样，请谨慎使用。  
-  
- 不安全的缓冲区与常规数组的区别体现在以下方面：  
-  
--   只能在不安全的上下文中使用不安全的缓冲区。  
-  
--   不安全的缓冲区始终是矢量或一维数组。  
-  
--   数组的声明应包括计数，如 `char id[8]`。 不能改用 `char id[]`。  
-  
--   在不安全的上下文中，不安全的缓冲区只能是结构的实例字段。  
-  
-## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [互操作性](../../../csharp/programming-guide/interop/index.md)
+> 除了通过使用 [stackalloc](../../language-reference/keywords/stackalloc.md) 创建的内存外，C# 编译器和公共语言运行时 (CLR) 不执行任何安全缓冲区溢出检查。 与所有不安全代码一样，请谨慎使用。
+
+不安全的缓冲区与常规数组的区别体现在以下方面：
+
+- 只能在不安全的上下文中使用不安全的缓冲区。
+- 不安全的缓冲区始终是矢量或一维数组。
+- 数组的声明应包括计数，如 `char id[8]`。 不能使用 `char id[]`。
+- 在不安全的上下文中，不安全的缓冲区只能是结构的实例字段。
+
+## <a name="see-also"></a>请参阅
+
+[C# 编程指南](../index.md)  
+[不安全代码和指针](index.md)  
+[fixed 语句](../../language-reference/keywords/fixed-statement.md)  
+[互操作性](../interop/index.md)
