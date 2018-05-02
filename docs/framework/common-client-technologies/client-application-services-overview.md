@@ -1,27 +1,29 @@
 ---
-title: "客户端应用程序服务概述"
-ms.custom: 
+title: 客户端应用程序服务概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9ddc1b505146e7ca31bca5acc5e9d19d258a860d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="client-application-services-overview"></a>客户端应用程序服务概述
 使用客户端应用程序服务，可简便地从 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序访问 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登录、角色和配置文件服务。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务包含在 Microsoft ASP.NET 2.0 AJAX Extensions 中，而它又包含在 [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] 和 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 中。 这些服务使多个基于 Web 和 Windows 的应用程序共享来自单个服务器的用户信息和用户管理功能。  
@@ -59,7 +61,7 @@ ms.lasthandoff: 12/22/2017
  有关如何设置 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 角色服务的信息，请参阅[将角色信息用于 Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)。  
   
 ## <a name="settings"></a>设置  
- 可以使用客户端应用程序服务从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 配置文件服务中检索用户应用程序设置。 客户端应用程序服务 Web 设置功能与 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 提供的应用程序设置功能集成。 若要检索 Web 设置，首先使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 项目设计器的“设置”选项卡为项目生成一个 `Settings` 类（在 C# 中作为 `Properties.Settings.Default` 访问，在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中作为 `My.Settings` 访问）。 在“设置”选项卡上，可以使用“加载 Web 设置”按钮检索 Web 设置，并将它们添加到生成的 `Settings` 类。 你可以使用为所有已经过身份验证的用户或所有匿名用户的使用而配置的 Web 设置。  
+ 可以使用客户端应用程序服务从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 配置文件服务中检索用户应用程序设置。 客户端应用程序服务 Web 设置功能与 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 提供的应用程序设置功能集成。 若要检索 Web 设置，首先使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 项目设计器的“设置”选项卡为项目生成一个 `Settings` 类（在 C# 中作为 `Properties.Settings.Default` 访问，在 Visual Basic 中作为 `My.Settings` 访问）****。 在“设置”选项卡上，可以使用“加载 Web 设置”按钮检索 Web 设置，并将它们添加到生成的 `Settings` 类。 你可以使用为所有已经过身份验证的用户或所有匿名用户的使用而配置的 Web 设置。  
   
  有关应用程序设置的详细信息，请参阅[应用程序设置概述](../../../docs/framework/winforms/advanced/application-settings-overview.md)。 有关如何实现你自己的设置类而不是在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中生成一个设置类的信息，请参阅[如何：创建应用程序设置](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。 有关如何设置 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 配置文件服务的信息，请参阅[将配置文件信息用于 Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)。  
   
