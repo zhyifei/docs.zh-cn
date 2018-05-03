@@ -17,14 +17,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7671001fb63a5e09c5d7a3dc4b2414d41a790e16
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 386d7a4ce7168fbe70d9037254a1540b7bf00478
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>数据流（任务并行库）
-<a name="top"></a> 任务并行库 (TPL) 提供数据流组件，可帮助提高启用并发的应用程序的可靠性。 这些数据流组件统称为 TPL 数据流库。 这种数据流模型通过向粗粒度的数据流和管道任务提供进程内消息传递来促进基于角色的编程。 数据流组件基于 TPL 的类型和计划基础结构，并与 C#、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 和 F# 语言支持集成，从而可以进行异步编程。 当您有必须相互异步沟通的多个操作或者想要在数据可用时对其处理时，这些数据流组件就非常有用。 例如，请考虑一个处理网络摄像机图像数据的应用程序。 通过使用数据流模型，当图像帧可用时，应用程序就可以处理它们。 如果应用程序增强图像帧（例如执行灯光修正或消除红眼），则可以创建数据流组件的管道。 管道的每个阶段可以使用更粗粒度的并行功能（例如 TPL 提供的功能）来转换图像。  
+<a name="top"></a> 任务并行库 (TPL) 提供数据流组件，可帮助提高启用并发的应用程序的可靠性。 这些数据流组件统称为 TPL 数据流库。 这种数据流模型通过向粗粒度的数据流和管道任务提供进程内消息传递来促进基于角色的编程。 数据流组件基于 TPL 的类型和计划基础结构，并集成了 C#、Visual Basic 和 F# 语言的异步编程支持。 当您有必须相互异步沟通的多个操作或者想要在数据可用时对其处理时，这些数据流组件就非常有用。 例如，请考虑一个处理网络摄像机图像数据的应用程序。 通过使用数据流模型，当图像帧可用时，应用程序就可以处理它们。 如果应用程序增强图像帧（例如执行灯光修正或消除红眼），则可以创建数据流组件的管道。 管道的每个阶段可以使用更粗粒度的并行功能（例如 TPL 提供的功能）来转换图像。  
   
  本文档对 TPL 数据流库进行了概述。 它介绍编程模型，预定义的数据流块类型，以及如何配置数据流块来满足应用程序的特定要求。  
 
@@ -116,7 +116,7 @@ ms.lasthandoff: 04/18/2018
  有关展示了如何使用 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 将消息广播给多个目标数据流块的完整示例，请参阅[如何：在数据流块中指定任务计划程序](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)。  
   
 #### <a name="writeonceblockt"></a>WriteOnceBlock(T)  
- <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 类与 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 类相似，不同之处在于 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象仅可被写入一次。 可以将 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 视作类似于 C# 中的 [readonly](~/docs/csharp/language-reference/keywords/readonly.md)（[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中的 [ReadOnly](~/docs/visual-basic/language-reference/modifiers/readonly.md)）关键字，不同之处在于 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象在收到值后（而不是在构造时）成为不可变对象。 与 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 类相似，在目标收到来自 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象的消息时，不会从该目标删除此消息。 因此，多个目标将接收到该消息的副本。 当您想要仅传播多条消息中的第一条时，<xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 类很有用。  
+ <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 类与 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 类相似，不同之处在于 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象仅可被写入一次。 可以将 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 视作类似于 C# 中的 [readonly](~/docs/csharp/language-reference/keywords/readonly.md)（Visual Basic 中的 [ReadOnly](~/docs/visual-basic/language-reference/modifiers/readonly.md)）关键字，不同之处在于 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象在收到值后（而不是在构造时）成为不可变对象。 与 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 类相似，在目标收到来自 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象的消息时，不会从该目标删除此消息。 因此，多个目标将接收到该消息的副本。 当您想要仅传播多条消息中的第一条时，<xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 类很有用。  
   
  下面的基本示例将多个 <xref:System.String> 值发送给 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象，然后从该对象读回该值。 由于 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象在 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象接收消息后只能写入一次，因此它放弃后续消息。  
   

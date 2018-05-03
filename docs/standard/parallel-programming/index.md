@@ -1,33 +1,28 @@
 ---
 title: .NET 中的并行编程
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parallel programming
-ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1e649bcb37b711d01199bd4e4823a9bb0cac60b4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 679ffe40e525884070ee62662b7a7e5acd7e58ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="parallel-programming-in-net"></a>.NET 中的并行编程
-许多个人计算机和工作站都有两个或四个内核（即 CPU），使多个线程能够同时执行。 在不久的将来，计算机预期会有更多的内核。 为了利用当今和未来的硬件，您可以对代码进行并行化，以将工作分摊在多个处理器上。 过去，并行化需要线程和锁的低级操作。 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 新增了运行时、类库类型和诊断工具，增强了对并行编程的支持。 这些功能简化了并行开发，使您能够通过固有方法编写高效、细化且可伸缩的并行代码，而不必直接处理线程或线程池。 下图从较高层面上概述了 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中的并行编程体系结构。  
+
+许多个人计算机和工作站都有多个 CPU 内核，以便多个线程能够同时执行。 在不久的将来，计算机预期会有更多的内核。 为了利用当今和未来的硬件，您可以对代码进行并行化，以将工作分摊在多个处理器上。 过去，并行化需要线程和锁的低级操作。 Visual Studio 2010 和 .NET Framework 4 新增了运行时、类库类型和诊断工具，增强了对并行编程的支持。 这些功能简化了并行开发，使您能够通过固有方法编写高效、细化且可伸缩的并行代码，而不必直接处理线程或线程池。 下图简要概述了 .NET Framework 4 中的并行编程体系结构。
   
- ![.NET 并行编程体系结构](../../../docs/standard/parallel-programming/media/tpl-architecture.png "TPL_Architecture")  
+ ![.NET 并行编程体系结构](./media/tpl-architecture.png "TPL_Architecture")  
   
 ## <a name="related-topics"></a>相关主题  
   
@@ -40,8 +35,8 @@ ms.lasthandoff: 04/18/2018
 |[PLINQ 和 TPL 的自定义分区程序](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|描述分区程序的工作方式，以及如何配置默认分区程序或创建新的分区程序。|  
 |[任务计划程序](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|描述计划程序的工作方式，以及如何配置默认计划程序。|  
 |[PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|简要概述 C# 和 Visual Basic 中的 Lambda 表达式，并演示如何在 PLINQ 和任务并行库中使用这些表达式。|  
-|[其他阅读材料](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|提供一些链接，这些链接指向其他文档以及在 .NET Framework 中进行并行编程的示例资源。|  
-  
+|[其他阅读材料](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|收录了指向其他信息以及 .NET 中并行编程示例资源的链接。|  
+
 ## <a name="see-also"></a>请参阅  
- [并行编程模式：了解并使用 .NET Framework 4 应用并行模式](https://www.microsoft.com/download/details.aspx?id=19222)  
- [使用 .NET Framework 进行并行编程的示例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+ [异步概述](../async.md)  
+ [托管线程](../threading/index.md)  

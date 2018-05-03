@@ -1,21 +1,19 @@
 ---
-title: ".NET Core 分发打包"
-description: "了解如何为 .NET Core 打包、命名并进行版本控制以进行分发。"
-keywords: ".NET, .NET Core, 源, 生成"
+title: .NET Core 分发打包
+description: 了解如何为 .NET Core 打包、命名并进行版本控制以进行分发。
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 71b9d722-c5a8-4271-9ce1-d87e7ae2494d
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e511ea13c578ab44c65a5ba78f666cce1ab6a0c4
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 63ff542dbde30f8ff72a2d257a16a18b2a9e71b8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 分发打包
 
@@ -126,4 +124,4 @@ SDK 版本采用同样的 `[major].[minor]`，并有一个独立的 `[patch]`，
 
 ## <a name="building-packages"></a>生成包
 
-https://github.com/dotnet/source-build 存储库中说明了如何生成 .NET Core SDK 的源 tarball 及其所有组件。 源版本存储库中的输出内容符合本文第一部分中所描述的布局。
+https://github.com/dotnet/source-build 存储库介绍了如何生成 .NET Core SDK 的源 tarball 及其所有组件。 源版本存储库中的输出内容符合本文第一部分中所描述的布局。

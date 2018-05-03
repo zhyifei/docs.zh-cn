@@ -1,24 +1,22 @@
 ---
-title: "生成 .NET Core Docker 映像"
-description: "了解 Docker 映像和 .NET Core"
-keywords: .NET, .NET Core, Docker
+title: 生成 .NET Core Docker 映像
+description: 了解 Docker 映像和 .NET Core
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
-ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: d5631bdbc0334640b290c08df17cba0bfe99fe85
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: c1983be59b4a961cabd94915852e0cab7811682c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>为 .NET Core 应用程序生成 Docker 映像
 
@@ -167,7 +165,7 @@ cd aspnetapp
 dotnet run
 ```
 
-应用程序启动后，在 Web 浏览器中访问 http://localhost:5000 。
+应用程序启动后，在 Web 浏览器中访问 **http://localhost:5000**。
 
 ### <a name="build-and-run-the-sample-with-docker-for-linux-containers"></a>使用 Docker for Linux 容器生成和运行示例
 
@@ -182,7 +180,7 @@ docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 > [!NOTE]
 > `docker run` 的“-p”参数将本地计算机上的端口 5000 映射到容器中的端口 80（该端口映射形式为 `host:container`）。 有关详细信息，请参阅命令行参数中的 [docker run](https://docs.docker.com/engine/reference/commandline/exec/) 引用。
 
-应用程序启动后，在 Web 浏览器中访问 http://localhost:5000 。
+应用程序启动后，在 Web 浏览器中访问 **http://localhost:5000**。
 
 ### <a name="build-and-run-the-sample-with-docker-for-windows-containers"></a>使用 Docker for Windows 容器生成和运行示例
 
@@ -195,7 +193,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 > [!IMPORTANT]
-> 使用 Windows 容器时，必须直接在浏览器中导航到容器 IP 地址（而不是 http://localhost） 。 可通过以下步骤获取容器的 IP 地址：
+> 使用 Windows 容器时，必须直接在浏览器中转到容器 IP 地址（而不是 http://localhost)）。 可通过以下步骤获取容器的 IP 地址：
 
 * 打开另一个命令提示符。
 * 运行 `docker ps`，查看正在运行的容器。 其中应包含“Aspnetcore_sample”。

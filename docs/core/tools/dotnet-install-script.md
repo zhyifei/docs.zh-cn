@@ -1,21 +1,20 @@
 ---
-title: "dotnet-install 脚本"
-description: "了解用于安装 .NET Core CLI 工具和共享运行时的 dotnet-install 脚本。"
-keywords: "dotnet-install, dotnet-install 脚本, .NET Core"
+title: dotnet-install 脚本
+description: 了解用于安装 .NET Core CLI 工具和共享运行时的 dotnet-install 脚本。
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
-ms.workload: dotnetcore
-ms.openlocfilehash: bc38ca7b9f00c6c252ff4963c42519a64c456b43
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 96336df087ea2ad01584010f0715ad31e079b663
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
@@ -39,8 +38,8 @@ macOS/Linux：
 
 建议使用在 [.NET Core 主网站](https://dot.net)上托管的稳定版本。 脚本的直接路径为：
 
-* https://dot.net/v1/dotnet-install.sh (UNIX bash)
-* https://dot.net/v1/dotnet-install.ps1 (Windows Powershell)
+* https://dot.net/v1/dotnet-install.sh（bash、UNIX）
+* https://dot.net/v1/dotnet-install.ps1（Powershell、Windows）
 
 这些脚本主要用于自动化方案和非管理员安装。 共有两个脚本，一个是在 Windows 上运行的 PowerShell 脚本。 另一脚本是适用于 Linux/macOS 的 bash 脚本。 这两个脚本的行为相同。 bash 脚本也读取 PowerShell 开关。因此，可以在 Linux/macOS 系统上将 PowerShell 开关与脚本结合使用。 
 

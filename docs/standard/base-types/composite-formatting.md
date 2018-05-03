@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="composite-formatting"></a>复合格式设置
 .NET 复合格式设置功能使用对象列表和复合格式字符串作为输入。 复合格式字符串由固定文本和索引占位符混和组成，其中索引占位符称为格式项，对应于列表中的对象。 格式设置操作产生的结果字符串由原始固定文本和列表中对象的字符串表示形式混和组成。  
@@ -74,12 +74,12 @@ ms.lasthandoff: 03/28/2018
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- 通过指定相同的参数说明符，多个格式项可以引用对象列表中的同一个元素。 例如，通过指定诸如“0x{0:X} {0:E} {0:N}”的复合格式字符串，可以将同一个数值设置为十六进制、科学记数法和数字格式，如下面的示例所示。  
+ 通过指定相同的参数说明符，多个格式项可以引用对象列表中的同一个元素。 例如，通过指定“0x{0:X} {0:E} {0:N}”等复合格式字符串，可以将同一个数值设置为十六进制、科学记数法和数字格式，如下面的示例所示。  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- 每个格式项都可以引用列表中的任一对象。 例如，如果有三个对象，则可以通过指定类似于“{1} {0} {2}”的复合格式字符串来设置第二、第一和第三个对象的格式。 格式项未引用的对象会被忽略。 如果参数说明符指定了超出对象列表范围的项，将引发运行时 <xref:System.FormatException>。  
+ 每个格式项都可以引用列表中的任一对象。 例如，如果有三个对象，可以指定“{1} {0} {2}”等复合格式字符串，以设置第二个、第一个和第三个对象的格式。 格式项未引用的对象会被忽略。 如果参数说明符指定了超出对象列表范围的项，将引发运行时 <xref:System.FormatException>。  
   
 ### <a name="alignment-component"></a>对齐组件  
  可选的*对齐*组件是一个带符号的整数，指示首选的设置了格式的字段宽度。 如果 *alignment* 值小于设置了格式的字符串的长度，*alignment* 将被忽略，并使用设置了格式的字符串的长度作为字段宽度。 如果 *alignment* 为正数，字段中设置了格式的数据为右对齐；如果 *alignment* 为负数，字段中的设置了格式的数据为左对齐。 如果需要填充，则使用空白。 如果指定 *alignment*，则需要使用逗号。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 03/28/2018
 ### <a name="escaping-braces"></a>转义大括号  
  左大括号和右大括号被解释为格式项的开始和结束。 因此，必须使用转义序列显示文本左大括号或右大括号。 在固定文本中指定两个左大括号 ("{{") 以显示一个左大括号 ("{")，或指定两个右大括号 ("}}") 以显示一个右大括号 ("}")。 按照在格式项中遇到大括号的顺序依次解释它们。 不支持解释嵌套的大括号。  
   
- 解释转义大括号的方式会导致意外的结果。 例如，考虑要显示一个左大括号、一个设置为十进制数格式的数值和一个右大括号的格式项“{{{0:D}}}”。 但是，实际是按照以下方式解释该格式项：  
+ 解释转义大括号的方式会导致意外的结果。 例如，假设格式项为“{{{0:D}}}”，旨在显示左大括号、采用十进制数格式的数值和右大括号。 但是，实际是按照以下方式解释该格式项：  
   
 1.  前两个左大括号 ("{{") 被转义，生成一个左大括号。  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 03/28/2018
   
     -   对于日期和时间值，如果调用带非 null <xref:System.IFormatProvider> 参数的复合格式设置方法，则运行时从其 <xref:System.Globalization.DateTimeFormatInfo> 方法请求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 对象。 在以下情况下，使用当前线程区域性的 `null` 对象：无法提供该值、参数值为 <xref:System.IFormatProvider> 或复合格式设置方法没有 <xref:System.Globalization.DateTimeFormatInfo> 参数。  
   
-    -   对于其他类型的对象，如果调用带 <xref:System.IFormatProvider> 参数的复合格式设置，则将其值（如果没有提供 `null` 对象，则包括 <xref:System.IFormatProvider>）直接传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。  否则，将表示当前线程区域性的 <xref:System.Globalization.CultureInfo> 对象传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。  
+    -   对于其他类型的对象，如果调用带 <xref:System.IFormatProvider> 参数的复合格式设置方法，它的值会直接传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。 否则，`null` 传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。  
   
 4.  调用类型的无参数的 `ToString` 方法（该方法将重写 <xref:System.Object.ToString?displayProperty=nameWithType> 或继承其基类的行为）。 在这种情况下，如果格式项中存在 *formatString* 组件指定的格式字符串，则将忽略该字符串。  
   
