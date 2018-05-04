@@ -69,7 +69,7 @@ float x = 3.5F;
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
  [C# 关键字](index.md)  
- [整数类型表](integral-types-table.md)  
+ [整型表](integral-types-table.md)   
  [内置类型表](built-in-types-table.md)  
  [隐式数值转换表](implicit-numeric-conversions-table.md)  
  [显式数值转换表](explicit-numeric-conversions-table.md)
