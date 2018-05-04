@@ -1,14 +1,6 @@
 ---
-title: "&lt;添加&gt;元素&lt;侦听器&gt;为&lt;源&gt;"
-ms.custom: 
+title: '&lt;添加&gt;元素&lt;侦听器&gt;为&lt;源&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 86177010d8ed70302b51ec9c416a3295009e7394
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba8ff652003a9167ec370643797ac9300b83889a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;添加&gt;元素&lt;侦听器&gt;为&lt;源&gt;
 将侦听器添加到跟踪源的 `Listeners` 集合中。  
@@ -57,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 |`initializeData`|可选特性。<br /><br /> 传递给构造函数指定类的字符串。 A<xref:System.Configuration.ConfigurationException>如果类没有采用字符串的构造函数引发。|  
 |`name`|可选特性。<br /><br /> 指定侦听器的名称。|  
 |`traceOutputOptions`|可选特性。<br /><br /> 指定<xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A>跟踪侦听器的属性值。|  
-|[自定义属性]|可选特性。<br /><br /> 指定由标识的特定于侦听器的属性的值<xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A>为该侦听器的方法。 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>是一个示例的额外特性的唯一的<xref:System.Diagnostics.DelimitedListTraceListener>类。|  
+|[自定义属性]|可选特性。<br /><br /> 指定由标识的特定于侦听器的属性的值<xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A>为该侦听器的方法。 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 是一个示例的额外特性的唯一的<xref:System.Diagnostics.DelimitedListTraceListener>类。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -67,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  

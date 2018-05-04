@@ -1,9 +1,6 @@
 ---
-title: "ConnectionGroup.m_ConnectionList 字段"
+title: ConnectionGroup.m_ConnectionList 字段
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology: 
-ms.topic: reference
 topic_type:
 - apiref
 api_name:
@@ -15,18 +12,15 @@ api_type:
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b89a621e5a438e2385f07bcaf910d799a49d32d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5844f8d63aa5646bfd7860dc0407528fb2eaf329
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList 字段
 
-`ConnectionGroup.m_ConnectionList`是<xref:System.Collections.ArrayList>提供相同的 URI 和共享的连接对象的其他一些属性的相同值，如过期和身份验证。
+`ConnectionGroup.m_ConnectionList` 是<xref:System.Collections.ArrayList>提供相同的 URI 和共享的连接对象的其他一些属性的相同值，如过期和身份验证。
 
 ## <a name="syntax"></a>语法
   
@@ -39,9 +33,9 @@ private ArrayList m_ConnectionList
 > 
 > Microsoft 不支持在生产应用程序在任何情况下使用此字段。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
-**Namespace:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
 **程序集：**系统 （在 System.dll)
 

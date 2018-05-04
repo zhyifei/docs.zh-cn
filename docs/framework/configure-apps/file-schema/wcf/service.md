@@ -1,30 +1,18 @@
 ---
-title: "&lt;服务&gt;"
-ms.custom: 
+title: '&lt;服务&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 689dfae90baffa3e9895258d1635c7840d8df6b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a73e4699e0998338f09e1ed0504f5b1cfd73b225
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicegt"></a>&lt;服务&gt;
 `service` 元素包含 Windows Communication Foundation (WCF) 服务的设置。 它还包含公开此服务的终结点。  
   
- \<系统。ServiceModel >  
-\<服务 >  
+ \<system.ServiceModel>  
+\<services>  
 \<服务 >  
   
 ## <a name="syntax"></a>语法  
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<服务 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|所有 WCF 配置元素的根元素。|  
+|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|所有 WCF 配置元素的根元素。|  
   
 ## <a name="remarks"></a>备注  
  服务是在配置文件的 `services` 节中定义的。 程序集可以包含任意多个服务。 每个服务都有自己的 `service` 配置节。 本节及其内容定义特定服务的服务协定、行为和终结点。  

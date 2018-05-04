@@ -1,9 +1,6 @@
 ---
-title: "&lt;supportedRuntime&gt;元素"
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+title: '&lt;supportedRuntime&gt;元素'
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
@@ -15,12 +12,11 @@ ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 544aaf5a58b743c437b42764bdea3c6b7eea7c74
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt;元素
 
@@ -45,9 +41,9 @@ ms.lasthandoff: 01/20/2018
   
 ## <a name="remarks"></a>备注
 
-如果 **\<supportedRuntime >**元素不存在应用程序配置文件中，使用用于生成应用程序的运行时的版本。  
+如果 **\<supportedRuntime >** 元素不存在应用程序配置文件中，使用用于生成应用程序的运行时的版本。  
 
-**\<SupportedRuntime >**元素应由使用版本 1.1 或更高版本的运行时生成的所有应用程序。 为支持仅运行时 1.0 版而生成的应用程序必须使用[ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)元素。  
+**\<SupportedRuntime >** 元素应由使用版本 1.1 或更高版本的运行时生成的所有应用程序。 为支持仅运行时 1.0 版而生成的应用程序必须使用[ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)元素。  
   
 > [!NOTE]
 >  如果你使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函数来指定配置文件，必须使用`<requiredRuntime>`所有的运行时版本的元素。 `<supportedRuntime>`元素将被忽略，当你使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。  
@@ -70,7 +66,7 @@ ms.lasthandoff: 01/20/2018
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0-4.7.1|"v4.0"|  
+|4.0 4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>“SKU ID”值
@@ -95,6 +91,7 @@ ms.lasthandoff: 01/20/2018
 |4.6.2|".NETFramework,Version=v4.6.2"|  
 |4.7|".NETFramework,Version=v4.7"|
 |4.7.1|".NETFramework,Version=v4.7.1"|
+|4.7.2|".NETFramework，Version = v4.7.2"|
 
 ## <a name="example"></a>示例  
  下面的示例演示如何在配置文件中指定支持的运行时版本。 该配置文件指示应用面向.NET Framework 4.7。  

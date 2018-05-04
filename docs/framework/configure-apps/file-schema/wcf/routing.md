@@ -1,28 +1,16 @@
 ---
-title: "&lt;路由&gt;"
-ms.custom: 
+title: '&lt;路由&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6ef71753a4b0ff20a966842119adb6e637ded1f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1771d8a2603a8f61af6ba6e2acf6243d2fd073f7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltroutinggt"></a>&lt;路由&gt;
 
-表示用于定义一组路由筛选器的配置节，这些筛选器确定计算传入消息时使用的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> 的类型，以及用于定义在筛选器匹配时消息发送到的目标终结点的路由表。
+表示一个配置节，用于定义一组路由筛选器，这些扩展名决定了类型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>计算传入消息，以及路由表定义到的目标终结点时使用将消息发送到筛选器匹配时。
 
 [**\<system.serviceModel >**](system-servicemodel.md)   
 &nbsp;&nbsp;**\<路由 >**
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<筛选器 >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | 包含一组路由筛选器，这些筛选器确定计算传入消息时将使用的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] MessageFilter 的类型。 |
+| [**\<筛选器 >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | 包含一组路由筛选器确定计算传入消息时，将使用 Windows Communication Foundation (WCF) MessageFilter 的类型。 |
 | [**\<filterTables >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | 包含路由筛选器和目标终结点之间的映射，以便指定在筛选器匹配时使用的终结点。 |
 
 ### <a name="parent-elements"></a>父元素

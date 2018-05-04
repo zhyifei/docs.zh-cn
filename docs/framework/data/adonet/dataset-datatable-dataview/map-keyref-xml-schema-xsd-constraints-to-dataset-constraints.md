@@ -1,24 +1,12 @@
 ---
-title: "将 keyref XML 架构 (XSD) 约束映射到数据集约束"
-ms.custom: 
+title: 将 keyref XML 架构 (XSD) 约束映射到数据集约束
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e364efe0856a5291fc8157ef6ab185c2438a3347
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a3a5033292db2b47e7a9811e36c0a4af016951fc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>将 keyref XML 架构 (XSD) 约束映射到数据集约束
 **Keyref**元素，你可以在文档内的元素之间建立链接。 它类似于关系数据库中的外键关系。 如果架构指定**keyref**元素，该元素转换到的表中的列上的相应外键约束在架构映射过程<xref:System.Data.DataSet>。 默认情况下， **keyref**元素还会生成关系，使用**ParentTable**， **ChildTable**， **ParentColumn**，和**ChildColumn**对关系指定的属性。  
@@ -27,7 +15,7 @@ ms.lasthandoff: 01/17/2018
   
 |特性名|描述|  
 |--------------------|-----------------|  
-|**msdata:ConstraintOnly**|如果**ConstraintOnly ="true"**上指定**keyref**架构中的元素，将创建一个约束，但不创建任何关系。 如果未指定此属性 (或设置为**False**)，在中创建约束和关系**数据集**。|  
+|**msdata:ConstraintOnly**|如果**ConstraintOnly ="true"** 上指定**keyref**架构中的元素，将创建一个约束，但不创建任何关系。 如果未指定此属性 (或设置为**False**)，在中创建约束和关系**数据集**。|  
 |**msdata:ConstraintName**|如果**ConstraintName**指定属性，其值用作约束的名称。 否则为**名称**属性**keyref**架构中的元素提供中的约束名称**数据集**。|  
 |**msdata:UpdateRule**|如果**UpdateRule**中指定属性**keyref**架构中的元素，其值分配给**UpdateRule**中的约束属性**数据集**。 否则为**UpdateRule**属性设置为**Cascade**。|  
 |**msdata:DeleteRule**|如果**DeleteRule**中指定属性**keyref**架构中的元素，其值分配给**DeleteRule**中的约束属性**数据集**。 否则为**DeleteRule**属性设置为**Cascade**。|  

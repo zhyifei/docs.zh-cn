@@ -1,27 +1,18 @@
 ---
-title: "&lt;applicationPool&gt;元素 （Web 设置）"
-ms.custom: 
+title: '&lt;applicationPool&gt;元素 （Web 设置）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d75e9eedf42523301b3c1745c05d90bcdafbdbf5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a2eafc6b5ad1446fd07518f877a8ec001ad8dbd6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt;元素 （Web 设置）
 指定 ASP.NET 用于 ASP.NET 应用程序在中集成模式下运行时管理进程范围的行为的配置设置[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本。  
@@ -79,7 +70,7 @@ ms.lasthandoff: 01/19/2018
   
 -   应用程序托管在[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]应用程序池。  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]在集成模式下运行。  
+-   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 在集成模式下运行。  
   
 -   应用程序使用[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]或更高版本。  
   

@@ -1,29 +1,17 @@
 ---
 title: '&lt;allowAccounts&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a1716aa77808b2a9f8f3ca903dabf81b21b8f709
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bbfe0d5d531cf61c01f95d0e82ce0f894031d6f3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
-包含一个配置元素集合，这些元素指定进程的用户帐户，这些进程承载 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务并被授予了对该共享服务的连接访问权限。  
+包含的指定用户帐户，进程承载 Windows Communication Foundation (WCF) 服务并被授予了对该共享服务的连接访问权限的配置元素的集合。  
   
- \<system.serviceModel.activation >  
+ \<system.serviceModel.activation>  
   
 ## <a name="syntax"></a>语法  
   

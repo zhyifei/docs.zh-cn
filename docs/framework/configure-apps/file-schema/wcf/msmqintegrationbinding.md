@@ -1,34 +1,20 @@
 ---
 title: '&lt;msmqIntegrationBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0715952077db755386a0381f68ccc6e33705a031
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bae6b4e6bd11074b47c55bf310215f296394c90d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 定义一个绑定，此绑定通过利用 MSMQ 路由消息来提供队列支持。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<绑定 >  
 msmqIntegrationBinding  
   
 ## <a name="syntax"></a>语法  
@@ -105,7 +91,7 @@ msmqIntegrationBinding
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[\<绑定 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
  此绑定元素可以用于启用 Windows Communication Foundation (WCF) 应用程序将消息发送到和从使用 COM、 MSMQ 本机 Api 或中定义的类型的现有 MSMQ 应用程序接收消息<xref:System.Messaging?displayProperty=nameWithType>命名空间你可以使用此配置元素以指定解决队列传输保证，是否必须持久存储消息，以及如何保护和身份验证消息。 有关详细信息，请参阅[如何： 使用 WCF 终结点和消息队列应用程序交换消息](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
@@ -147,7 +133,7 @@ msmqIntegrationBinding
  <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<绑定 >](../../../../../docs/framework/misc/binding.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  

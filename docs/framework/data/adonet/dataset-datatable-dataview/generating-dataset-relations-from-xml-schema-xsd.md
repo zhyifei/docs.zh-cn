@@ -1,24 +1,12 @@
 ---
-title: "从 XML 架构生成数据集关系 (XSD)"
-ms.custom: 
+title: 从 XML 架构生成数据集关系 (XSD)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4634e54c620fdd206582af94b825210331d11c14
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fdf22c311ef7b4267f4a4da8566e4ea59504b103
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>从 XML 架构生成数据集关系 (XSD)
 在 <xref:System.Data.DataSet> 中，可通过创建父子关系来形成两个或更多个列之间的关联。 有三种方法来表示**数据集**XML 架构定义语言 (XSD) 架构中的关系：  
@@ -44,7 +32,7 @@ ms.lasthandoff: 01/17/2018
 </xs:element>  
 ```  
   
- 在 XML 架构映射过程创建中的表**数据集**对应于架构中嵌套的复杂类型。 它还将创建用作父的其他列**-**所生成的表的子列。 请注意，这些父子**-**子列指定关系，这是不与指定主键/外键约束相同。  
+ 在 XML 架构映射过程创建中的表**数据集**对应于架构中嵌套的复杂类型。 它还将创建用作父的其他列**-** 所生成的表的子列。 请注意，这些父子**-** 子列指定关系，这是不与指定主键/外键约束相同。  
   
 ## <a name="msdatarelationship-annotation"></a>msdata:Relationship 批注  
  **Msdata: relationship**批注可以显式指定架构中不嵌套的元素之间的父-子关系。 下面的示例演示的结构**关系**元素。  

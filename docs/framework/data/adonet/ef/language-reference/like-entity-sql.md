@@ -1,24 +1,12 @@
 ---
 title: LIKE (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 021a999e79239e3da5c874cb459ac7f03fdb5661
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f2d06b364c577b581bb64af0436c133ca830bb2b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 确定特定字符 `String` 是否与指定模式相匹配。  
@@ -52,10 +40,10 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
 |通配符|描述|示例|  
 |------------------------|-----------------|-------------|  
-|%|包含零个或零个以上字符的任何 `string`。|`title like '%computer%'`查找包含的单词的所有标题`"computer"`标题中的任意位置。|  
-|_（下划线）|任意单个字符。|`firstname like '_ean'`查找所有四个字母的名字结尾`"ean`，"如 Dean 或 Sean。|  
-|[ ]|指定范围 ([a-f]) 或集合 ([abcdef]) 中的任意单个字符。|`lastname like '[C-P]arsen'`查找姓氏以"arsen"结尾且 C 与 P，如 Carsen 或 Larsen 之间的任何单个字符开头。|  
-|[^]|不在指定范围 ([^a-f]) 或集合 ([^abcdef]) 中的任意单个字符。|`lastname like 'de[^l]%'`查找所有以"de"开头，但不包括以下号为"l"的最后一个名称。|  
+|%|包含零个或零个以上字符的任何 `string`。|`title like '%computer%'` 查找包含的单词的所有标题`"computer"`标题中的任意位置。|  
+|_（下划线）|任意单个字符。|`firstname like '_ean'` 查找所有四个字母的名字结尾`"ean`，"如 Dean 或 Sean。|  
+|[ ]|指定范围 ([a-f]) 或集合 ([abcdef]) 中的任意单个字符。|`lastname like '[C-P]arsen'` 查找姓氏以"arsen"结尾且 C 与 P，如 Carsen 或 Larsen 之间的任何单个字符开头。|  
+|[^]|不在指定范围 ([^a-f]) 或集合 ([^abcdef]) 中的任意单个字符。|`lastname like 'de[^l]%'` 查找所有以"de"开头，但不包括以下号为"l"的最后一个名称。|  
   
 > [!NOTE]
 >  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 运算符和 ESCAPE 子句不适用于 `System.DateTime` 或 `System.Guid` 值。  

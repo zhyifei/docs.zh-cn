@@ -1,30 +1,18 @@
 ---
 title: '&lt;netMsmqBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-caps.latest.revision: "35"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e8f18988568d9b634b3ae5ec92d746c08ff00e77
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d4d28a799acecd335d8155a7ae67b6365b3f0023
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 定义适用于跨计算机通信的排队绑定。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<绑定 >  
 \<netMsmqBinding>  
   
 ## <a name="syntax"></a>语法  
@@ -90,7 +78,7 @@ ms.lasthandoff: 01/19/2018
 |`retryCycleDelay`|一个 TimeSpan 值，指定尝试传递无法立即传递的消息时，各个重试周期之间的时间延迟。 该值只定义最小等待时间，因为实际等待时间可能较长。 默认值为 00:10:00。 有关详细信息，请参阅<xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>。|  
 |`sendTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成发送操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
 |`timeToLive`|一个 TimeSpan 值，指定在消息过期并放入死信队列之前消息保持有效的持续时间。 默认值为 1.00:00:00。<br /><br /> 设置此属性可以确保具有时效性的消息不会在由接收应用程序进行处理之前过时。 如果队列中的消息在指定时间间隔内未被接收应用程序进行处理，则称该消息为过时消息。 过时消息被发送到称为“死信队列”的特殊队列中。 死信队列的位置通过 `DeadLetterQueue` 属性进行设置，或基于保证设置为适当的默认值。|  
-|`usingActiveDirectory`|一个布尔值，指定是否应该使用 Active Directory 转换队列地址。<br /><br /> MSMQ 队列地址可由路径名或直接格式名组成。 对于直接格式名，MSMQ 会使用 DNS、NetBIOS 或 IP 解析计算机名称。 对于路径名，MSMQ 会使用 Active Directory 解析计算机名称。<br /><br /> 默认情况下，[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 排队传输会将消息队列的 URI 转换为直接格式名。 通过将 `UseActiveDirectory` 属性设置为 True，应用程序可以指定排队传输应使用 Active Directory 而不是 DNS、NetBIOS 或 IP 来解析计算机名称。|  
+|`usingActiveDirectory`|一个布尔值，指定是否应该使用 Active Directory 转换队列地址。<br /><br /> MSMQ 队列地址可由路径名或直接格式名组成。 对于直接格式名，MSMQ 会使用 DNS、NetBIOS 或 IP 解析计算机名称。 对于路径名，MSMQ 会使用 Active Directory 解析计算机名称。<br /><br /> 默认情况下，Windows Communication Foundation (WCF) 排队传输将转换为直接格式名消息队列的 URI。 通过将 `UseActiveDirectory` 属性设置为 True，应用程序可以指定排队传输应使用 Active Directory 而不是 DNS、NetBIOS 或 IP 来解析计算机名称。|  
 |`useMsmqTracing`|一个布尔值，指定是否应跟踪由此绑定处理的消息。 默认值为 `false`。 如果启用了跟踪，则每当消息离开或到达消息队列计算机时，都会创建报告消息并将其发送到报告队列。|  
 |`useSourceJournal`|一个布尔值，指定是否应将由此绑定处理的消息的副本存储在源日志中。 默认值为 `false`。<br /><br /> 如果排队应用程序要保留已离开计算机传出队列的消息的记录，则可以将这些消息复制到日志队列。 在消息离开传出队列，并且接收到目标计算机已接收该消息的确认后，该消息的副本就会保留在发送计算机的系统日志队列中。|  
   
@@ -105,7 +93,7 @@ ms.lasthandoff: 01/19/2018
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[\<绑定 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
  `netMsmqBinding` 绑定通过利用 Microsoft 消息队列 (MSMQ) 作为传输来提供队列支持，并且为松耦合应用程序、故障隔离、负载均衡和断开连接的操作提供支持。 有关这些功能的讨论，请参阅[WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。  
@@ -147,7 +135,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.NetMsmqBinding>  
  <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<绑定 >](../../../../../docs/framework/misc/binding.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  

@@ -1,11 +1,12 @@
 ---
-title: "使用 .NET Framework 方法操作文件 (Visual Basic)"
-ms.custom: 
+title: 使用 .NET Framework 方法操作文件 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bc42dee640271ef84d35ceeb039d98741d296c5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ed363efeeef008927f2c34b393de66ca4ccbb0bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>演练：使用 .NET Framework 方法操作文件 (Visual Basic)
 此演练演示了如何使用 <xref:System.IO.StreamReader> 类打开和读取文件，如何查看文件是否正被访问，如何在使用 <xref:System.IO.StreamReader> 类实例读取的文件中搜索字符串，以及如何使用 <xref:System.IO.StreamWriter> 类写入文件。  
@@ -36,9 +37,9 @@ ms.lasthandoff: 11/21/2017
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>创建应用程序  
- 启动 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]，并创建一个用户可用于写入指定文件的窗体来开始项目。  
+ 启动 Visual Studio，并创建一个用户可用于写入指定文件的窗体来开始项目。  
   
-#### <a name="to-create-the-project"></a>创建项目  
+#### <a name="to-create-the-project"></a>要创建项目  
   
 1.  在“文件”菜单上，选择“新建项目”。  
   
@@ -46,15 +47,15 @@ ms.lasthandoff: 11/21/2017
   
 3.  在“名称”框中，键入 `MyDiary`，然后单击“确定”。  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 就会将该项目添加到“解决方案资源管理器”中，“Windows 窗体设计器”也将随即打开。  
+     Visual Studio 将项目添加到“解决方案资源管理器”中，“Windows 窗体设计器”随即打开。  
   
 4.  将下表中的控件添加到窗体中，并为其属性设置相应的值。  
   
 |**对象**|**属性**|**值**|  
 |---|---|---|   
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**|`Submit`<br /><br /> **提交项**|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**|`Clear`<br /><br /> **清除项**|  
-|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **文本**<br /><br /> **多行**|`Entry`<br /><br /> **请输入内容。**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**|`Submit`<br /><br /> **提交项**|  
+|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**|`Clear`<br /><br /> **清除项**|  
+|<xref:System.Windows.Forms.TextBox>|**名称**<br /><br /> **文本**<br /><br /> **多行**|`Entry`<br /><br /> **请输入内容。**<br /><br /> `False`|  
   
 ## <a name="writing-to-the-file"></a>写入文件  
  若要通过应用程序添加写入文件的功能，请使用 <xref:System.IO.StreamWriter> 类。 <xref:System.IO.StreamWriter> 设计用于特定编码的字符输出，而 <xref:System.IO.Stream> 类设计用于字节的输入和输出。 使用 <xref:System.IO.StreamWriter> 可将多行信息写入标准的文本文件。 有关 <xref:System.IO.StreamWriter> 类的详细信息，请参阅 <xref:System.IO.StreamWriter>。  
@@ -99,10 +100,10 @@ ms.lasthandoff: 11/21/2017
   
 |控件|属性|值|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **可见**<br /><br /> **Size**<br /><br /> **多行**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**|`Display`<br /><br /> **显示**|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**|`GetEntries`<br /><br /> **获取项**|  
-|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **文本**<br /><br /> **启用**|`PickEntries`<br /><br /> **选择一项**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.TextBox>|**名称**<br /><br /> **可见**<br /><br /> **Size**<br /><br /> **多行**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
+|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**|`Display`<br /><br /> **显示**|  
+|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**|`GetEntries`<br /><br /> **获取项**|  
+|<xref:System.Windows.Forms.ComboBox>|**名称**<br /><br /> **文本**<br /><br /> **启用**|`PickEntries`<br /><br /> **选择一项**<br /><br /> `False`|  
   
 #### <a name="to-populate-the-combo-box"></a>填充组合框  
   
@@ -127,9 +128,9 @@ ms.lasthandoff: 11/21/2017
   
 |控件|属性|值|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**<br /><br /> **启用**|`DeleteEntry`<br /><br /> **删除项**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**<br /><br /> **启用**|`EditEntry`<br /><br /> **编辑项**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**<br /><br /> **启用**|`SubmitEdit`<br /><br /> **提交编辑**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**<br /><br /> **启用**|`DeleteEntry`<br /><br /> **删除项**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**<br /><br /> **启用**|`EditEntry`<br /><br /> **编辑项**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**<br /><br /> **启用**|`SubmitEdit`<br /><br /> **提交编辑**<br /><br /> `False`|  
   
 #### <a name="to-enable-deletion-and-modification-of-entries"></a>允许删除和修改项  
   
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/21/2017
   
  若要测试代码，请按 F5 编译该应用程序。 单击“获取项”，选择一项，然后单击“显示”。 条目将出现在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。 单击“编辑项”。 条目将出现在 `Entry`<xref:System.Windows.Forms.TextBox> 中。 编辑 `Entry`<xref:System.Windows.Forms.TextBox> 中的项，然后单击“提交编辑”。 打开 `MyDiary.txt` 文件以确认所做的更正。 现在，选择一项，然后单击“删除项”。 当 <xref:System.Windows.Forms.MessageBox> 请求确认时，请单击“确定”。 关闭该应用程序，然后打开 `MyDiary.txt`，以确认该项已删除。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IO.StreamReader>  
  <xref:System.IO.StreamWriter>  
  [演练](../../../../visual-basic/walkthroughs.md)

@@ -1,10 +1,6 @@
 ---
-title: "&lt;删除&gt;元素&lt;configSections&gt;"
+title: '&lt;删除&gt;元素&lt;configSections&gt;'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/remove
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bf2cb49fbeb01ad176a1d24d711cebc97ba14004
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6555981edeb6f7f088fb12c710d0146cf58d5be1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-element-for-configsections"></a>\<删除 > 元素\<configSections >
 
@@ -46,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configSections >**元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
+| [**\<configSections >** 元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
 
 # <a name="child-elements"></a>子元素
 
@@ -54,11 +47,11 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="remarks"></a>备注
 
-你可以使用**\<删除 >**元素从你在配置文件层次结构中较高级别定义的应用程序中删除节和节组。
+你可以使用**\<删除 >** 元素从你在配置文件层次结构中较高级别定义的应用程序中删除节和节组。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用**\<删除 >**删除先前在计算机配置文件中定义的节的应用程序配置文件中的元素。
+下面的示例演示如何使用**\<删除 >** 删除先前在计算机配置文件中定义的节的应用程序配置文件中的元素。
 
 下面的计算机配置文件代码声明部分 **\<sampleSection >**:
 
@@ -75,7 +68,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>
 ```
 
-下面的应用程序配置文件代码移除 **\<sampleSection >**部分。 删除之后，应用程序无法检索中的设置 **\<sampleSection >**。
+下面的应用程序配置文件代码移除 **\<sampleSection >** 部分。 删除之后，应用程序无法检索中的设置 **\<sampleSection >**。
 
 ```xml
 <!-- Application configuration file -->

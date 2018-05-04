@@ -1,24 +1,12 @@
 ---
-title: "Entity Type — 实体类型"
-ms.custom: 
+title: Entity Type — 实体类型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9b32f188d09114cdef4327df3aa1a74a304e7c3e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c694f29d36988ea52aeca650cf2bba2c50c91e89
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-type"></a>Entity Type — 实体类型
 *实体类型*是用于描述实体数据模型 (EDM) 的数据结构的基本构建块。 在概念模型中，实体类型表示顶级概念（例如客户或订单）的结构。 实体类型是实体类型实例的模板。 每个模板都包含以下信息：  

@@ -1,24 +1,12 @@
 ---
-title: "关联端重数"
-ms.custom: 
+title: 关联端重数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 36f6d22a8fd3a3c0f1fd997d5101b9fdf8e91a8c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2f70fa4b163b957ea1e43506033863c3540b0418
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="association-end-multiplicity"></a>关联端重数
 *关联端重数*定义数[实体类型](../../../../docs/framework/data/adonet/entity-type.md)的一端可以存在的实例[关联](../../../../docs/framework/data/adonet/association-type.md)。  

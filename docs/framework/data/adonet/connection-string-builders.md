@@ -1,27 +1,15 @@
 ---
-title: "连接字符串生成器"
-ms.custom: 
+title: 连接字符串生成器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: beec0aba34bc38ba310aa87dadeeaa4b41c82649
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 01bbf726ffa8d1c595b1ef53df420431bf28560f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-string-builders"></a>连接字符串生成器
 在早期版本的[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]，编译时检查具有串联字符串值没有出现的连接字符串，以便在运行时，不正确的关键字生成<xref:System.ArgumentException>。 每个 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序支持的连接字符串关键字的语法不同，这使得手动构造有效连接字符串变得很困难。 为了解决这个问题，[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 为每个 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序引入了新的连接字符串生成器。 每个数据提供程序包括一个从 <xref:System.Data.Common.DbConnectionStringBuilder> 继承的强类型连接字符串生成器类。 下表列出了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序及其关联的连接字符串生成器类。  

@@ -1,12 +1,13 @@
 ---
-title: "Aximp.exe（Windows 窗体 ActiveX 控件导入程序）"
-ms.custom: 
+title: Aximp.exe（Windows 窗体 ActiveX 控件导入程序）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebde5bd48b02c20f7d607ebcda2b18ed0830c569
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8098a44c9275be0a40ec8e067d33ac8a00654ec1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe（Windows 窗体 ActiveX 控件导入程序）
 ActiveX 控件导入程序将 ActiveX 控件的 COM 类型库中的类型定义转换为 Windows 窗体控件。  
@@ -79,7 +81,7 @@ aximp [options]{file.dll | file.ocx}
   
  在对 shdocvw.dll 运行 Aximp.exe 时，该工具始终会在运行它的目录中创建另一个名为 shdocvw.dll 的文件。 如果将此生成文件放在 Documents and Settings 目录下，则会导致 Microsoft Internet Explorer 和 Windows 资源管理器出现问题。 重启计算机时，Windows 会先在 Documents and Settings 目录查找 shdocvw.dll 的副本，然后再在 system32 目录查找。 它将使用在 Documents and Settings 目录中找到的副本，并尝试加载托管的包装器。 由于 Internet Explorer 和 Windows 资源管理器依赖于 system32 目录中的 shdocvw.dll 版本中的呈现引擎，因此它们将无法正常工作。 如果出现此问题，请在 Documents and Settings 目录中删除 shdocvw.dll 的副本，然后重启计算机。  
   
- 通过对 shdocvw.dll 使用 Aximp.exe 来创建用于应用程序开发的 .NET 程序集也会导致问题。 在这种情况下，应用程序将同时加载 shdocvw.dll 的系统版本和生成版本，并可能为系统版本赋予更高的优先级。 此时，如果尝试在 WebBrowser ActiveX 控件内加载网页，用户可能会收到打开/保存对话框提示。 用户单击“打开”后，将在 Internet Explorer 中打开该网页。 此情况只出现在运行 Internet Explorer 版本 6 或更早版本的计算机上。 若要防止出现此问题，请使用托管 <xref:System.Windows.Forms.WebBrowser> 控件或使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 生成托管的 shdocvw.dll，如[如何：添加对类型库的引用](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)中所述。  
+ 通过对 shdocvw.dll 使用 Aximp.exe 来创建用于应用程序开发的 .NET 程序集也会导致问题。 在这种情况下，应用程序将同时加载 shdocvw.dll 的系统版本和生成版本，并可能为系统版本赋予更高的优先级。 此时，如果尝试在 WebBrowser ActiveX 控件内加载网页，用户可能会收到打开/保存对话框提示。 用户单击“打开”后，将在 Internet Explorer 中打开该网页。 此情况只出现在运行 Internet Explorer 版本 6 或更早版本的计算机上。 若要防止出现此问题，请使用托管的 <xref:System.Windows.Forms.WebBrowser> 控件或使用 Visual Studio 生成托管的 shdocvw.dll，如[如何：添加对类型库的引用](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)中所述。  
   
 ## <a name="example"></a>示例  
  下面的命令为媒体播放器控件 `msdxm.ocx` 生成 MediaPlayer.dll 和 AxMediaPlayer.dll。  

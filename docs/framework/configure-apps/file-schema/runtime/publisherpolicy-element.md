@@ -1,13 +1,6 @@
 ---
-title: "&lt;publisherPolicy&gt;元素"
-ms.custom: 
+title: '&lt;publisherPolicy&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/publisherPolicy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/publisherPolicy
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5f629dd347f63c8fb8e624c475bfb0ecf658f41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2cc3b7220fe34f5dc049a3da71b160a88f82fdb1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltpublisherpolicygt-element"></a>&lt;publisherPolicy&gt;元素
 指定运行时是否使用发布者策略。  
@@ -64,13 +54,13 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 当组件供应商释放程序集的新版本时，供应商可以包括发布服务器策略，因此现在使用旧版本的应用程序使用新版本。 若要指定是否为特定的程序集应用出版商策略，请将 **\<publisherPolicy >**中的元素 **\<dependentAssembly >**元素。  
+ 当组件供应商释放程序集的新版本时，供应商可以包括发布服务器策略，因此现在使用旧版本的应用程序使用新版本。 若要指定是否为特定的程序集应用出版商策略，请将 **\<publisherPolicy >** 中的元素 **\<dependentAssembly >** 元素。  
   
  默认设置**应用**属性是**是**。 设置**应用**属性设为**没有**替代以前所有**是**的程序集的设置。  
   

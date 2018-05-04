@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 DEVPATH 查找程序集"
-ms.custom: 
+title: 如何：使用 DEVPATH 查找程序集
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DEVPATH
 - .NET Framework application configuration, assemblies
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 0944f2798c45a039149baaa6e46ce2b56eb5c5df
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 918acf069c63d3aa8187f0f04e1f6c55ec961458
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>如何：使用 DEVPATH 查找程序集
 开发人员可能想要确保它们在构建共享程序集与多个应用程序一起正常运行。 而不是不断地将全局程序集缓存中的程序集放置在开发周期中，开发人员可以创建一个 DEVPATH 环境变量，指向程序集的生成输出目录。  

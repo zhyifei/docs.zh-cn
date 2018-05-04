@@ -1,10 +1,6 @@
 ---
-title: "&lt;清除&gt;元素&lt;configSections&gt;"
+title: '&lt;清除&gt;元素&lt;configSections&gt;'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/clear
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e48887cf7e227f463b92edd50f69746bbd8abd0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 42a44d66a3f70d0572484adf4c8dd946edf2297f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clear-element-for-configsections"></a>\<清除 > 元素\<configSections >
 
@@ -46,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configSections >**元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
+| [**\<configSections >** 元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
 
 # <a name="child-elements"></a>子元素
 
@@ -54,13 +47,13 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="remarks"></a>备注
 
-**\<清除 >**元素从你当前的配置文件中或在配置文件层次结构中较高级别前面定义的应用程序中删除所有节和节组。
+**\<清除 >** 元素从你当前的配置文件中或在配置文件层次结构中较高级别前面定义的应用程序中删除所有节和节组。
 
 ## <a name="example"></a>示例
 
-此示例定义计算机配置文件和应用程序配置文件，并演示如何使用**\<清除 >**清除以前中定义部分的应用程序配置文件中的元素计算机配置文件。
+此示例定义计算机配置文件和应用程序配置文件，并演示如何使用**\<清除 >** 清除以前中定义部分的应用程序配置文件中的元素计算机配置文件。
 
-下面的计算机配置文件代码声明两个部分，  **\<sampleSection >**和 **\<anotherSampleSection >**，这应用程序之前，读取配置文件：
+下面的计算机配置文件代码声明两个部分，  **\<sampleSection >** 和 **\<anotherSampleSection >**，这应用程序之前，读取配置文件：
 
 ```xml
 <!-- Machine.config file -->
@@ -77,7 +70,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>
 ```
 
-下面的应用程序配置文件代码清除所有以前声明的节。 应用程序不能使用或检索中的各个部分的计算机配置文件中声明的设置。 但是，它可以使用从设置 **\<anotherSection >**因为它之后**\<清除 >**元素。
+下面的应用程序配置文件代码清除所有以前声明的节。 应用程序不能使用或检索中的各个部分的计算机配置文件中声明的设置。 但是，它可以使用从设置 **\<anotherSection >** 因为它之后**\<清除 >** 元素。
 
 ```xml
 <!-- Application configuration file -->

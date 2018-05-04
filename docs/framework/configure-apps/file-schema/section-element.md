@@ -1,9 +1,6 @@
 ---
-title: "&lt;部分&gt;元素"
+title: '&lt;部分&gt;元素'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/section
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/sectionGroup/section
@@ -13,13 +10,11 @@ helpviewer_keywords:
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4e7de6e5ce6415c58deeca14df74c26e24957054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17b44ca93efc26f4732f5fe2926f894257d8f984
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="section-element"></a>\<部分 > 元素
 
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 |           | 描述 |
 | --------- | ----------- |
 | **name**  | 指定的配置节的名称。 |
-| **type**  | 指定从配置文件中读取节的配置节处理程序类的名称。 类型值具有语法"fully-qualified-section-handler-class-name，简单程序集名称"。 简单程序集名称是根文件名无*.dll*文件扩展名。 |
+| **type**  | 指定从配置文件中读取节的配置节处理程序类的名称。 类型值具有语法"fully-qualified-section-handler-class-name，简单程序集名称"。 简单程序集名称是根文件名无 *.dll*文件扩展名。 |
 
 ## <a name="optional-attributes"></a>可选特性
 
@@ -57,17 +52,17 @@ ms.lasthandoff: 12/22/2017
 |                     | 描述 |
 | ------------------- | ----------- |
 | **allowDefinition** | 指定可以在使用的节的配置文件。 使用下列值之一：<br><br>**无处不在**<br>允许在任何配置文件中使用该节。 这是默认设置。<br>**MachineOnly**<br>允许仅在计算机配置文件中使用该节 (*Machine.config*)。<br>**MachineToApplication**<br>允许要在计算机配置文件或应用程序配置文件中使用的部分。 |
-| **allowLocation**   | 确定是否可以在使用的部分**\<位置 >**元素。 使用下列值之一：<br><br>**true**<br>允许要在中使用该节**\<位置 >**元素。 这是默认设置。<br>**false**<br>不允许在中使用的部分**\<位置 >**元素。 |
+| **allowLocation**   | 确定是否可以在使用的部分**\<位置 >** 元素。 使用下列值之一：<br><br>**true**<br>允许要在中使用该节**\<位置 >** 元素。 这是默认设置。<br>**false**<br>不允许在中使用的部分**\<位置 >** 元素。 |
 
 ## <a name="parent-elements"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configSections >**元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
-| [**\<sectionGroup >**元素](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
+| [**\<configSections >** 元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
+| [**\<sectionGroup >** 元素](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
 
 > [!NOTE]
-> A **\<部分 >**元素是其中任何一个子元素 **\<configSections >**或 **\<sectionGroup >**但不是两者。
+> A **\<部分 >** 元素是其中任何一个子元素 **\<configSections >** 或 **\<sectionGroup >** 但不是两者。
 
 ## <a name="child-elements"></a>子元素
 

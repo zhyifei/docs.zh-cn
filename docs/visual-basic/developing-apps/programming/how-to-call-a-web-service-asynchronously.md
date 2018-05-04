@@ -1,27 +1,28 @@
 ---
-title: "如何：异步调用 Web 服务 (Visual Basic)"
+title: 如何：异步调用 Web 服务 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6410ef93a706c047047aa24b3d47f8915e928015
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c7a9666141accdcc0b1346de7b0c2903c7cc86df
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>如何：异步调用 Web 服务 (Visual Basic)
-此示例在 Web 服务的异步处理程序事件中附加了一个处理程序，以便它能检索异步方法调用的结果。 此示例使用了 DemoTemperatureService Web 服务（位于 http://www.xmethods.net。  
+此示例在 Web 服务的异步处理程序事件中附加了一个处理程序，以便它能检索异步方法调用的结果。 此示例使用了 DemoTemperatureService Web 服务（位于 http://www.xmethods.net）。  
   
- 当你在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境 (IDE) 中引用项目中的 Web 服务时，该服务将添加到 `My.WebServices` 对象中，并且 IDE 将生成一个客户端代理类来访问指定的 Web 服务  
+ 在 Visual Studio 集成开发环境 (IDE) 中引用项目中的 Web 服务时，该服务将添加到 `My.WebServices` 对象中，且 IDE 将生成一个客户端代理类来访问指定的 Web 服务  
   
  使用此代理类可以同步调用 Web 服务方法，而应用程序则在 Web 服务方法内等待函数执行完成。 另外，代理还创建其他成员来协助异步调用方法。 对于每一个 Web 服务函数（*NameOfWebServiceFunction*），代理都会创建一个 *NameOfWebServiceFunction*`Async` 子例程、一个 *NameOfWebServiceFunction*`Completed` 事件和一个 *NameOfWebServiceFunction*`CompletedEventArgs` 类。 此示例演示如何使用异步成员访问 DemoTemperatureService Web 服务的 `getTemp` 函数。  
   
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-call-a-web-service-asynchronously"></a>以异步方式调用 Web 服务  
   
-1.  请参考 DemoTemperatureService Web 服务（位于 http://www.xmethods.net）。 网址为  
+1.  引用 DemoTemperatureService Web 服务（位于 http://www.xmethods.net）。 网址为  
   
     ```  
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl  
@@ -71,6 +72,6 @@ ms.lasthandoff: 11/21/2017
   
      若要以异步方式调用 `getTemp` Web 方法，请调用 `CallGetTempAsync` 方法。 当 Web 方法执行完成后，其返回值将被传递到 `getTempCompletedHandler` 事件处理程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [访问应用程序 Web 服务](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)

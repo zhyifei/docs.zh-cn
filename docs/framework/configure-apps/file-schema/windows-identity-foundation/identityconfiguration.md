@@ -1,30 +1,20 @@
 ---
 title: '&lt;identityConfiguration&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 48f9eef329f5d2e0e751fd2a03b0d3af9ddc355c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5070d9e886b8f5a8a0abf27593d40df8b5281267
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltidentityconfigurationgt"></a>&lt;identityConfiguration&gt;
 指定服务级别标识设置。  
   
- \<system.identityModel >  
-\<identityConfiguration >  
+ \<system.identityModel>  
+\<identityConfiguration>  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 |[\<claimsAuthenticationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|注册用于传入声明的声明身份验证管理器。 可选。|  
 |[\<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|注册用于传入声明的声明授权管理器。 可选。|  
 |[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|指定传入安全令牌所需的声明的集。 可选。|  
-|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定安全令牌处理程序的集合。 可以指定零个或多个安全令牌处理程序集合。 可选。|  
+|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定安全令牌处理程序的集合。 可以指定零个或多个安全令牌处理程序集合。 可选。|  
 |[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|启用令牌重放检测并指定令牌的过期时间。 可以指定在服务级别或对安全令牌处理程序集合。 可选。|  
   
 ### <a name="parent-elements"></a>父元素  

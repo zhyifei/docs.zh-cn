@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f8a6c6be6874c1a90c9e40b5b82d833aeaa9b63a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>如何：配置客户端应用程序服务
-本主题介绍如何使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的“项目设计器”启用并配置客户端应用程序服务。 你可以使用客户端应用程序服务来验证用户，并从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务检索用户角色和设置。 完成配置后，可以访问应用程序代码中启用的服务，如[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)所述。 有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
+本主题介绍了如何使用 Visual Studio 的“项目设计器”来启用和配置客户端应用程序服务。 你可以使用客户端应用程序服务来验证用户，并从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务检索用户角色和设置。 完成配置后，可以访问应用程序代码中启用的服务，如[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)所述。 有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
   
  可以在“项目设计器”的“服务”页上启用并配置客户端应用程序服务。 “服务”页会更新项目的 App.config 文件中的值。 若要访问“项目设计器”，请使用“项目”菜单上的“属性”命令。 有关“服务”页的详细信息，请参阅[“项目设计器”->“服务”页](https://msdn.microsoft.com/library/bb398109)。  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 04/26/2018
   
      文本框中将显示 `Data Source = |SQL/CE|` 的默认值。  
   
-3.  若要生成并使用 SQL Server Compact 数据库，请保留默认连接字符串值。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 将生成一个数据库文件，并将其放在 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 属性指示的目录中。  
+3.  若要生成并使用 SQL Server Compact 数据库，请保留默认连接字符串值。 Visual Studio 会生成数据库文件，并将它放置在 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 属性指定的目录中。  
   
 4.  若要生成并使用加密的 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 数据库，请将 `password` 和 `encrypt database` 值添加到连接字符串中，如下面的示例所示。  
   

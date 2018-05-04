@@ -1,27 +1,17 @@
 ---
-title: "&lt;legacyCorruptedStateExceptionsPolicy&gt;元素"
-ms.custom: 
+title: '&lt;legacyCorruptedStateExceptionsPolicy&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f09d6cf256e072d01f3cfc79987aa4d240f96235
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6228aaf4c7da70337d9d1a99adcb78f71a0039b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a>&lt;legacyCorruptedStateExceptionsPolicy&gt;元素
 指定公共语言运行时是否允许托管的代码获取访问冲突和其他损坏的状态异常。  
@@ -57,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
@@ -69,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
 -   设置`<legacyCorruptedStateExceptionsPolicy>`元素的`enabled`属性设为`true`。 此配置设置是适用，并且会影响所有方法。  
   
- - 或 -  
+ -或-  
   
 -   应用<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>属性设为包含异常的方法`catch`块。  
   

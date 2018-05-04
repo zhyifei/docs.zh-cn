@@ -1,33 +1,21 @@
 ---
-title: "&lt;basicHttpBinding&gt; 的 &lt;message&gt;"
-ms.custom: 
+title: '&lt;basicHttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17840cd9b9e4f05e705d4d8201dd350a140fdf9c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: f58fadbc3ac3f193232ad075c4973f6ac2f2d1f6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; 的 &lt;message&gt;
 定义的消息级安全性设置[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<绑定 >  
 \<basicHttpBinding>  
-\<binding>  
-\<security>  
+\<绑定 >  
+\<安全 >  
 \<message>  
   
 ## <a name="syntax"></a>语法  
@@ -52,7 +40,7 @@ ms.lasthandoff: 01/19/2018
   
 |值|描述|  
 |-----------|-----------------|  
-|UserName|-要求客户端在使用 UserName 凭据向服务器进行身份验证。 此凭据需要指定使用[ \<c a t e >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)。<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]不支持发送密码摘要，也使用派生密钥的密码并使用这样的密钥来提供消息安全性。 因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保传输的安全性。 对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
+|UserName|-要求客户端在使用 UserName 凭据向服务器进行身份验证。 此凭据需要指定使用[ \<c a t e >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)。<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不支持发送密码摘要，也使用派生密钥的密码并使用这样的密钥来提供消息安全性。 因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保传输的安全性。 对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
 |证书|要求使用证书向服务器对客户端进行身份验证。 在这种情况下，客户端凭据需要指定使用[ \<c a t e >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)和[ \<t i a l >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)。 此外，在使用消息安全模式时，需要向客户端提供服务证书。 在这种情况下需要使用指定服务凭据<xref:System.ServiceModel.Description.ClientCredentials>类或`ClientCredentials`行为元素并指定服务证书使用[ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -145,4 +133,4 @@ ms.lasthandoff: 01/19/2018
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<绑定 >](../../../../../docs/framework/misc/binding.md)

@@ -1,24 +1,12 @@
 ---
-title: "字符串函数"
-ms.custom: 
+title: 字符串函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ba371840cf5c3b19ee232be0934557d87e7c343f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0faac7eb37a1405c38137ce9887cf7de4c36df3a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>字符串函数
 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种 `String` 函数，这些函数针对输入 `String` 执行操作并返回 `String` 或数值结果。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。  
@@ -46,7 +34,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种 `String
 |`SOUNDEX(expression)`|返回一个四字符代码 (SOUNDEX) 以评估两个字符串的相似性。**自变量**<br /><br /> `expression`：Unicode 或 ASCII String 类型。<br /><br /> **返回值**<br /><br /> ASCII `String`。 一个由四个字符组成的代码 (SOUNDEX)，用于评估两个字符串的相似性。<br /><br /> **示例**<br /><br /> `Select SqlServer.SOUNDEX('Smith'), SqlServer.SOUNDEX('Smythe') FROM {1}`<br /><br /> **返回**<br /><br /> `----- -----  S530  S530`|  
 |`SPACE(int_expression)`|返回由重复的空格组成的 ASCII `String`。<br /><br /> **参数**<br /><br /> `int_expression`：指示空格数的 `Int64`（在 SQL Server 2000 中不返回）或 `Int32`。<br /><br /> **返回值**<br /><br /> ASCII `String`。<br /><br /> **示例**<br /><br /> `SqlServer.SPACE(2)`|  
 |`STR(float_expression [, length [, decimal]])`|返回从数值数据转换而成的 ASCII `String`。<br /><br /> **参数**<br /><br /> `float _expression`：带小数点的近似数值 (`Double`) 数据类型的表达式。<br /><br /> `length`：（可选）表示总长度的 `Int32`。 它包括小数点、符号、数字以及空格。 默认值为 10。<br /><br /> `decimal`: (可选)`Int32`表示小数点右侧的位数。 小数必须小于或等于 16 位。 如果小数超过 16 位，则会将结果截断至小数点右侧 16 位。<br /><br /> **返回值**<br /><br /> ASCII `String`。<br /><br /> **示例**<br /><br /> `SqlServer.STR(212.0)`|  
-|`STUFF(str_expression, start, length, str_expression_to_insert)`|在字符串表达式中，在指定的起始点删除指定长度的字符并插入另一组字符。<br /><br /> **参数**<br /><br /> `str_expression`：Unicode 或 ASCII `String`。<br /><br /> `start:``Int64` （在 SQL Server 2000 中不返回） 或`Int32`值，该值指定要开始删除和插入的位置。<br /><br /> `length`：`Int64`（在 SQL Server 2000 中不返回）或 `Int32` 值，指定要删除的字符数。<br /><br /> `str_expression_to_insert`：Unicode 或 ASCII `String`。<br /><br /> **返回值**<br /><br /> Unicode 或 ASCII `String`。<br /><br /> **示例**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
+|`STUFF(str_expression, start, length, str_expression_to_insert)`|在字符串表达式中，在指定的起始点删除指定长度的字符并插入另一组字符。<br /><br /> **参数**<br /><br /> `str_expression`：Unicode 或 ASCII `String`。<br /><br /> `start:` `Int64` （在 SQL Server 2000 中不返回） 或`Int32`值，该值指定要开始删除和插入的位置。<br /><br /> `length`：`Int64`（在 SQL Server 2000 中不返回）或 `Int32` 值，指定要删除的字符数。<br /><br /> `str_expression_to_insert`：Unicode 或 ASCII `String`。<br /><br /> **返回值**<br /><br /> Unicode 或 ASCII `String`。<br /><br /> **示例**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
 |`SUBSTRING(str_expression, start, length)`|返回 `String` 表达式的一部分。<br /><br /> **参数**<br /><br /> `str_expression`：`String`（ASCII 或 Unicode）类型或 `Binary` 类型的表达式。<br /><br /> `start`：`Int64`（在 SQL Server 2000 中不返回）或 `Int32`，指定子字符串的开始位置。 1 指此字符串中的第一个字符。<br /><br /> `length`：`Int64`（在 SQL Server 2000 中不返回）或 `Int32`，指定将返回表达式中的多少个字符。<br /><br /> **返回值**<br /><br /> `String`（ASCII 或 Unicode）类型或 `Binary` 类型。<br /><br /> **示例**<br /><br /> `SqlServer.SUBSTRING('abcd', 2, 2)`|  
 |`UNICODE(expression)`|如 Unicode 标准所定义，返回输入表达式的第一个字符的整数值。<br /><br /> **参数**<br /><br /> `expression`：Unicode `String`。<br /><br /> **返回值**<br /><br /> 一个 `Int32`。<br /><br /> **示例**<br /><br /> `SqlServer.UNICODE('a')`|  
 |`UPPER(expression)`|将小写字符数据转换成大写后返回 `String` 表达式。<br /><br /> **参数**<br /><br /> `expression`：ASCII 或 Unicode String 类型的表达式。<br /><br /> **返回值**<br /><br /> ASCII 或 Unicode `String` 类型。<br /><br /> **示例**<br /><br /> `SqlServer.UPPER('AbB')`|  

@@ -1,32 +1,20 @@
 ---
-title: "日期和时间函数"
-ms.custom: 
+title: 日期和时间函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e68a78a3a24bf6da4e9827cb17d4715b6d60d0b8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: dbde1a2d19e9cf1559129adf8fe3dcc4fadddf0a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-and-time-functions"></a>日期和时间函数
 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了日期和时间函数，这些函数针对 `System.DateTime` 输入值执行运算并返回 `string`、数值或 `System.DateTime` 值结果。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。下表显示 SqlClient 日期和时间函数。  
   
 |函数|描述|  
 |--------------|-----------------|  
-|`DATEADD(` `datepart`, `number`, `date``)`|返回给指定日期加上一个间隔后的新 `DateTime` 值。<br /><br /> **参数**<br /><br /> `datepart`：一个 `String`，表示用于返回新值的日期部分。<br /><br /> `number`：用于增加 `Int32` 的 `Int64`、`Decimal`、`Double` 或 `datepart` 值。<br /><br /> `date:`一个表达式，返回`DateTime`，或`DateTimeOffset`，或`Time`精度为 [0-7]，或日期格式的字符串。<br /><br /> **返回值**<br /><br /> 精度为 0 到 7 的新 `DateTime`、`DateTimeOffset` 或 `Time` 值。<br /><br /> **示例**<br /><br /> `SqlServer.DATEADD('day', 22, cast('6/9/2006' as DateTime))`|  
-|`DATEDIFF(` `datepart`, `startdate`, `enddate``)`|返回两个指定日期之间所跨的日期和时间边界的数目。<br /><br /> **参数**<br /><br /> `datepart`：一个 `String`，表示用于计算差异的日期部分。<br /><br /> `startdate`：计算的开始日期为一个表达式，该表达式返回精度为 0 到 7 的 `DateTime`、`DateTimeOffset` 或 `Time` 值或日期格式的字符串。<br /><br /> `enddate:`进行计算的结束日期是一个表达式，返回`DateTime`，或`DateTimeOffset`，或`Time`精度值 = [0-7]，或日期格式的字符串。<br /><br /> **返回值**<br /><br /> 一个 `Int32`。<br /><br /> **示例**<br /><br /> `SqlServer.DATEDIFF('day', cast('6/9/2006' as DateTime),`<br /><br /> `cast('6/20/2006' as DateTime))`|  
+|`DATEADD(` `datepart`, `number`, `date``)`|返回给指定日期加上一个间隔后的新 `DateTime` 值。<br /><br /> **参数**<br /><br /> `datepart`：一个 `String`，表示用于返回新值的日期部分。<br /><br /> `number`：用于增加 `Int32` 的 `Int64`、`Decimal`、`Double` 或 `datepart` 值。<br /><br /> `date:` 一个表达式，返回`DateTime`，或`DateTimeOffset`，或`Time`精度为 [0-7]，或日期格式的字符串。<br /><br /> **返回值**<br /><br /> 精度为 0 到 7 的新 `DateTime`、`DateTimeOffset` 或 `Time` 值。<br /><br /> **示例**<br /><br /> `SqlServer.DATEADD('day', 22, cast('6/9/2006' as DateTime))`|  
+|`DATEDIFF(` `datepart`, `startdate`, `enddate``)`|返回两个指定日期之间所跨的日期和时间边界的数目。<br /><br /> **参数**<br /><br /> `datepart`：一个 `String`，表示用于计算差异的日期部分。<br /><br /> `startdate`：计算的开始日期为一个表达式，该表达式返回精度为 0 到 7 的 `DateTime`、`DateTimeOffset` 或 `Time` 值或日期格式的字符串。<br /><br /> `enddate:` 进行计算的结束日期是一个表达式，返回`DateTime`，或`DateTimeOffset`，或`Time`精度值 = [0-7]，或日期格式的字符串。<br /><br /> **返回值**<br /><br /> 一个 `Int32`。<br /><br /> **示例**<br /><br /> `SqlServer.DATEDIFF('day', cast('6/9/2006' as DateTime),`<br /><br /> `cast('6/20/2006' as DateTime))`|  
 |`DATENAME(` `datepart`, `date``)`|返回表示指定日期的指定日期部分的字符串。<br /><br /> **参数**<br /><br /> `datepart`：一个 `String`，表示用于返回新值的日期部分。<br /><br /> `date`：一个表达式，返回精度为 0 到 7 的 `DateTime,`、`DateTimeOffset` 或 `Time` 值或日期格式的字符串。<br /><br /> **返回值**<br /><br /> 表示指定日期的指定日期部分的字符串。<br /><br /> **示例**<br /><br /> `SqlServer.DATENAME('year', cast('6/9/2006' as DateTime))`|  
 |`DATEPART(` `datepart`, `date``)`|返回表示指定日期的指定日期部分的整数。<br /><br /> **参数**<br /><br /> `datepart`：一个 `String`，表示用于返回新值的日期部分。<br /><br /> `date`：一个表达式，返回精度为 0 到 7 的 `DateTime,`、`DateTimeOffset,` 或 `Time` 值或日期格式的字符串。<br /><br /> **返回值**<br /><br /> 指定日期的指定日期部分（以 `Int32` 表示）。<br /><br /> **示例**<br /><br /> `SqlServer.DATEPART('year', cast('6/9/2006' as DateTime))`|  
 |`DAY(` `date` `)`|以整数形式返回指定日期的“日”。<br /><br /> **参数**<br /><br /> `date`： 类型的表达式`DateTime`或`DateTimeOffset`精度为 0-7。<br /><br /> **返回值**<br /><br /> 指定日期的“日”（以 `Int32` 表示）。<br /><br /> **示例**<br /><br /> `SqlServer.DAY(cast('6/9/2006' as DateTime))`|  

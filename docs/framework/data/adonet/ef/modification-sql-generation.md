@@ -1,24 +1,12 @@
 ---
-title: "修改 SQL 生成"
-ms.custom: 
+title: 修改 SQL 生成
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 生成
 本节讨论如何开发用于（符合 SQL:1999 的数据库）提供程序的修改 SQL 生成模块。 此模块负责将修改命令目录树转换成适当的 SQL INSERT、UPDATE 或 DELETE 语句。  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/17/2018
   
  DbModificationCommandTree 及其实现生成的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]始终表示单行操作。 本节将介绍这些类型及其在 .NET Framework 版本 3.5 中的约束。  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![关系图](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
  DbModificationCommandTree 具有 Target 属性，该属性表示修改操作的目标集。 Target 的 Expression 属性定义输入集，始终为 DbScanExpression。  DbScanExpression 可以代表一个表或视图，或一组数据使用查询定义如果元数据属性"Defining Query"其目标的非 null。  
   
@@ -115,7 +103,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>生成插入 SQL 命令  
  对于示例提供程序中给定的 DbInsertCommandTree，生成的插入命令跟在下面两个插入模板中的一个后面。  
   
- 第一个模板包含一个命令来执行插入操作（假定值在 SetClauses 列表中）以及一个 SELECT 语句来为插入的行返回在 Returning 属性中指定的属性（如果 Returning 属性不为 null）。 谓词元素"@@ROWCOUNT > 0"如果插入一行也是如此。 谓词元素"keyMemberI = keyValueI &#124;scope_identity （)"使用了的形状"keyMemberI = scope_identity （）"仅当 keyMemeberI 为存储生成的键，因为 scope_identity （） 返回插入到标识 （存储生成的） 列的最后一个标识值。  
+ 第一个模板包含一个命令来执行插入操作（假定值在 SetClauses 列表中）以及一个 SELECT 语句来为插入的行返回在 Returning 属性中指定的属性（如果 Returning 属性不为 null）。 谓词元素"@@ROWCOUNT > 0"如果插入一行也是如此。 谓词元素"keyMemberI = keyValueI &#124; scope_identity （)"使用了的形状"keyMemberI = scope_identity （）"仅当 keyMemeberI 为存储生成的键，因为 scope_identity （） 返回插入到标识 （最后一个标识值存储生成的） 列。  
   
 ```  
 -- first insert Template  

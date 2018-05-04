@@ -1,12 +1,12 @@
 ---
-title: "确定何时实现基于事件的异步模式"
-ms.custom: 
+title: 确定何时实现基于事件的异步模式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 111aaaa86877368ccbd0c9c11a26dff47b065698
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 330dc5ec76fe33a7f6165857334a367f578840ef
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>确定何时实现基于事件的异步模式
 基于事件的异步模式可用于公开类的异步行为。 通过引入此模式，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 定义了下面两种用于公开异步行为的模式：基于 <xref:System.IAsyncResult?displayProperty=nameWithType> 接口的异步模式和基于事件的模式。 本主题介绍了何时适合实现这两种模式。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/23/2017
   
     -   如果生成的对象模型复杂性远远超过分离实现的好处，请对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 对一个类公开两种模式优于避免公开基于事件的模式。  
   
-    -   如果必须对一个类公开基于事件的模式和 <xref:System.IAsyncResult> 模式，请将 <xref:System.ComponentModel.EditorBrowsableAttribute> 设置为 <xref:System.ComponentModel.EditorBrowsableState.Advanced>，以将 <xref:System.IAsyncResult> 模式实现标记为高级功能。 这会指示设计环境（如 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense）不显示 <xref:System.IAsyncResult> 属性和方法。 这些属性和方法仍完全可用，这样做只是为了让使用 IntelliSense 的开发人员对 API 更加明确。  
+    -   如果必须对一个类公开基于事件的模式和 <xref:System.IAsyncResult> 模式，请将 <xref:System.ComponentModel.EditorBrowsableAttribute> 设置为 <xref:System.ComponentModel.EditorBrowsableState.Advanced>，以将 <xref:System.IAsyncResult> 模式实现标记为高级功能。 这会指示设计环境（如 Visual Studio IntelliSense）不显示 <xref:System.IAsyncResult> 属性和方法。 这些属性和方法仍完全可用，这样做只是为了让使用 IntelliSense 的开发人员对 API 更加明确。  
   
 ## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>除了基于事件的模式外还公开 IAsyncResult 模式的条件  
  虽然基于事件的异步模式在上述情况下有许多优点，但也有一些缺点。如果性能是最重要的要求，应注意这些缺点。  

@@ -1,31 +1,21 @@
 ---
 title: '&lt;audienceUris&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 69c96698b309a789b4527c76e1fe8b8b99811a19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7415cb3f1792d2de566161ae6c348ef591b4a0c3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 指定是可接受的信赖方 (RP) 标识符的 Uri 的集。 除非允许的受众 Uri 之一划分作用域，将不会接受令牌。  
   
- \<system.identityModel >  
-\<identityConfiguration >  
-\<securityTokenHandlers >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<securityTokenHandlers>  
 \<securityTokenHandlerConfiguration >  
 \<audienceUris >  
   
@@ -71,7 +61,7 @@ ms.lasthandoff: 12/22/2017
 |[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
   
 ## <a name="remarks"></a>备注  
- 默认情况下，该集合为空;使用`<add>`， `<clear>`，和`<remove>`元素来修改该集合。 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>和<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>对象，请使用来配置所有的受众 URI 集合中的值允许受众 URI 限制在<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>对象。  
+ 默认情况下，该集合为空;使用`<add>`， `<clear>`，和`<remove>`元素来修改该集合。 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> 和<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>对象，请使用来配置所有的受众 URI 集合中的值允许受众 URI 限制在<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>对象。  
   
  `<audienceUris>`元素表示由<xref:System.IdentityModel.Configuration.AudienceUriElementCollection>类。 添加到集合的单个 URI 由<xref:System.IdentityModel.Configuration.AudienceUriElement>类。  
   

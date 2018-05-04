@@ -1,29 +1,15 @@
 ---
 title: 为类型化的数据集进行批注
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: cc09f3f9b43b70b7f9b302d7a9d75428b5a0e6c7
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 1974ac71e367203b8b94375e43d4fde13f2df51f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="annotating-typed-datasets"></a>为类型化的数据集进行批注
 批注使您能够在不修改基础架构的情况下修改类型化 <xref:System.Data.DataSet> 中元素的名称。 如果修改基础架构中元素的名称会使类型化**数据集**来指代执行不存在于数据源，并且会丢失对存在于数据源中的对象的引用的对象。  
@@ -62,7 +48,7 @@ ms.lasthandoff: 03/26/2018
 |**typedPlural**|对象集合的名称。|  
 |**typedParent**|对象在父关系中被引用时的名称。|  
 |**typedChildren**|用于从子关系中返回对象的方法的名称。|  
-|**nullValue**|值的基础值是否**DBNull**。 请参阅下的表获取**nullValue**批注。 默认值是**_throw**。|  
+|**nullValue**|值的基础值是否**DBNull**。 请参阅下的表获取**nullValue**批注。 默认值是 **_throw**。|  
   
  下表显示可以为指定的值**nullValue**批注。  
   
@@ -80,7 +66,7 @@ ms.lasthandoff: 03/26/2018
 |**DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable**方法|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
-|**DataRow**|TableNameRow|typedName|  
+|**dataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
 |**Property**|PropertyName|typedName|  
 |**子**访问器|GetChildTableNameRows|typedChildren|  
@@ -235,7 +221,7 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Data.DataColumnCollection>  
  <xref:System.Data.DataSet>  
  [类型化数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  

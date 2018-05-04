@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e45c35d0b19833b6fd43c7fd5794ecf8bd3a9769
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 9733bb29701e4d1b46cc08c14b91e0357c935b42
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服务运行时行为
 在已经设计（[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)）并实现服务协定（[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)）之后，就可以配置服务运行时的操作行为。 本主题讨论系统提供的服务和操作行为，并说明在何处查找更多信息来创建新行为。 尽管有些行为是作为属性应用的，但很多行为是使用应用程序配置文件或以编程方式应用的。 有关配置服务应用程序的详细信息，请参阅[配置服务](../../../docs/framework/wcf/configuring-services.md)。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="overview"></a>概述  
  协定定义相应类型的服务的输入、输出、数据类型和功能。 实现一个服务协定将会创建一个类，当使用某个地址的绑定对该类进行配置时，该类会满足其实现的协定。 客户端了解协定、绑定和地址信息等所有信息，如果没有它们，客户端将不能使用相应服务。  
   
- 但是，操作详细信息（例如，线程处理问题或实例管理）对客户端是不透明的。 在已实现服务协定之后，就可以使用行为 配置大量操作特征。 行为是一些对象，可通过设置运行时属性或通过在运行时中插入自定义类型来修改 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 运行时。 有关通过创建用户定义的行为修改运行时的详细信息，请参阅[扩展 ServiceHost 和服务模型层](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
+ 但是，操作详细信息（例如，线程处理问题或实例管理）对客户端是不透明的。 在已实现服务协定之后，就可以使用行为 配置大量操作特征。 行为是修改的 Windows Communication Foundation (WCF) 运行时，通过设置运行时属性或通过运行时中插入自定义类型的对象。 有关通过创建用户定义的行为修改运行时的详细信息，请参阅[扩展 ServiceHost 和服务模型层](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 和 <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> 属性是用途最广泛的行为，公开了最常请求的操作功能。 因为它们是属性，所以应将其应用于服务或操作实现。 其他行为（例如，<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>）通常是使用应用程序配置文件进行应用的，但可以以编程方式使用它们。  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 04/30/2018
   
  可使用 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> 构造函数创建此类服务。 当您希望提供一个特定的对象实例供单一实例服务使用时，可以使用它作为实现自定义 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> 的替代方法。 当服务实现类型难以构造时（例如，它没有实现默认的无参数的公共构造函数），可以使用此重载。  
   
- 请注意，在为此构造函数提供对象时，一些与 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 实例化行为相关的功能将有不同的工作方式。 例如，在提供已知对象实例时，调用 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 没有任何效果。 同样，也将忽略所有其他实例释放机制。 <xref:System.ServiceModel.ServiceHost> 类的行为总是像对于所有操作都将 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> 一样。  
+ 请注意，为此构造函数提供对象之后，相关到 Windows Communication Foundation (WCF) 实例化行为的某些功能的工作方式不同。 例如，在提供已知对象实例时，调用 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 没有任何效果。 同样，也将忽略所有其他实例释放机制。 <xref:System.ServiceModel.ServiceHost> 类的行为总是像对于所有操作都将 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> 一样。  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>其他服务、终结点、协定和操作行为  
  服务行为（如 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性）在整个服务中运行。 例如，如果将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType>，则必须自己在服务中的每个操作内处理线程同步问题。 终结点行为在终结点上运行，许多系统提供的终结点行为是针对客户端功能的。 协定行为在协定级别上运行，并且操作行为修改操作传递。  

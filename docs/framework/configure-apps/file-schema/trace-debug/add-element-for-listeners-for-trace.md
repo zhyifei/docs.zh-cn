@@ -1,14 +1,6 @@
 ---
-title: "&lt;添加&gt;元素&lt;侦听器&gt;为&lt;跟踪&gt;"
-ms.custom: 
+title: '&lt;添加&gt;元素&lt;侦听器&gt;为&lt;跟踪&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb624052c3638cb49abe143ebd4173a5ee85a054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27187c05b49b7f73ef19243a3286e8c1de71579
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;添加&gt;元素&lt;侦听器&gt;为&lt;跟踪&gt;
 将侦听器添加到**侦听器**集合。  
@@ -64,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`listeners`|指定收集，侦听器存储区，并将消息路由。 侦听器将跟踪输出定向到适当的目标。|  
@@ -96,7 +85,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|文件的名称，<xref:System.Diagnostics.XmlWriterTraceListener>写入。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用**\<添加 >**元素将侦听器`MyListener`和`MyEventListener`到**侦听器**集合。 `MyListener`创建名为的文件`MyListener.log`并将输出写入文件。 `MyEventListener`事件日志中创建的项。  
+ 下面的示例演示如何使用**\<添加 >** 元素将侦听器`MyListener`和`MyEventListener`到**侦听器**集合。 `MyListener` 创建名为的文件`MyListener.log`并将输出写入文件。 `MyEventListener` 事件日志中创建的项。  
   
 ```xml  
 <configuration>  

@@ -1,24 +1,26 @@
 ---
-title: "实例化初始化"
-ms.custom: 
+title: 实例化初始化
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bc034028f8dacbac638c27e6fb8f48603cdcf2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: f32b1c7159185bb9d4ccd99c916f00c552502748
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="instancing-initialization"></a>实例化初始化
 此示例扩展[Pooling](../../../../docs/framework/wcf/samples/pooling.md)示例通过定义一个接口， `IObjectControl`，其中的激活和停用它自定义对象的初始化。 客户端调用向池中返回对象以及不向池中返回对象的方法。  
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
 ## <a name="extensibility-points"></a>扩展点  
- 创建 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 扩展的第一步是确定要使用的扩展点。 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，术语*EndpointDispatcher*指的是一个运行时组件，负责将传入消息转换为用户的服务上的方法调用，并将该方法的返回值传出消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务为每个终结点创建一个 EndpointDispatcher。  
+ 创建 Windows Communication Foundation (WCF) 扩展的第一步是决定要使用的扩展点。 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，术语*EndpointDispatcher*指的是一个运行时组件，负责将传入消息转换为用户的服务上的方法调用，并将该方法的返回值传出消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务为每个终结点创建一个 EndpointDispatcher。  
   
  EndpointDispatcher 使用 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 类提供终结点范围（适用于服务收到或发送的所有消息）的扩展。 通过此类可以自定义控制 EndpointDispatcher 行为的各种属性。 本示例重点介绍 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 属性，该属性指向提供服务类实例的对象。  
   
@@ -272,7 +274,7 @@ else if (pool.Count < minPoolSize)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
   

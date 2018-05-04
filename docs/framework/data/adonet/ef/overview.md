@@ -1,24 +1,12 @@
 ---
-title: "实体框架概述"
-ms.custom: 
+title: 实体框架概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2bfccccbcfa41f8ed67cb309a0e4a3dd9dda6b90
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8b07fb9b80d5d0d13967c807198194b3a2228202
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-framework-overview"></a>实体框架概述
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是 ADO.NET 中的一套支持开发面向数据的软件应用程序的技术。 面向数据的应用程序的架构师和开发人员曾为实现两个迥然不同的目标费尽心机： 他们必须为要解决的业务问题的实体、关系和逻辑构建模型，还必须处理用于存储和检索数据的数据引擎。 数据可能跨多个各有不同协议的存储系统；甚至使用单个存储系统的应用程序也必须在存储系统的需求与编写高效且容易维护的应用程序代码之间取得平衡。  
@@ -73,7 +61,7 @@ ms.lasthandoff: 01/19/2018
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]。 提供语言集成查询 (LINQ) 支持，用于查询在概念模型中定义的实体类型。 有关详细信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 这是直接使用概念模型中的实体和支持的 SQL 独立于存储的方言[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)]可用于对象查询和使用 EntityClient 提供程序执行的查询。 有关详细信息，请参阅[Entity SQL 概述](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 这是直接使用概念模型中的实体和支持的 SQL 独立于存储的方言[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 可用于对象查询和使用 EntityClient 提供程序执行的查询。 有关详细信息，请参阅[Entity SQL 概述](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 中包含 EntityClient 数据提供程序。 此提供程序管理连接，将实体查询转换为特定于数据源的查询，并返回[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]用于将实体数据具体化为对象的数据读取器。 不需要对象具体化时，在 EntityClient 提供程序，还可像一个标准使用[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]通过使应用程序要执行的数据提供程序[!INCLUDE[esql](../../../../../includes/esql-md.md)]查询并使用返回的只读数据读取器。 有关详细信息，请参阅[用于实体框架的 EntityClient 提供程序](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。  
   

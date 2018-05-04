@@ -15,11 +15,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 51a92f89415fd3750d8d2e1880be0d9c2867600d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互操作性概述（C# 编程指南）
 本主题描述在 C# 托管代码和非托管代码之间实现互操作性的方法。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/26/2018
   
 2.  向项目添加对 COM 组件或类型库的引用。  
   
-     添加引用时，[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用 [Tlbimp.exe（类型库导入程序）](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)，该导入程序将类型库作为输入，以输出 .NET Framework 互操作程序集。 该程序集又称为运行时可调用包装器 (RCW)，其中包含包装类型库中的 COM 类和接口的托管类和接口。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 将对生成程序集的引用添加至项目。  
+     添加引用时，Visual Studio 使用 [Tlbimp.exe（类型库导入程序）](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)。此程序需要使用类型库作为输入，以输出 .NET Framework 互操作程序集。 该程序集又称为运行时可调用包装器 (RCW)，其中包含包装类型库中的 COM 类和接口的托管类和接口。 Visual Studio 向项目添加对生成程序集的引用。  
   
 3.  创建在 RCW 中定义的类的实例。 这会创建 COM 对象的实例。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/26/2018
   
 2.  生成 COM 类型库并对它进行注册以供 COM 使用。  
   
-     可修改 Visual C# 项目属性以自动注册 COM 互操作的 C# 程序集。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用 [Regasm.exe（程序集注册工具）](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)方法是使用 `/tlb` 命令行开关，其将托管组件作为输入），以生成类型库。 此类型库描述程序集中的 `public` 类型并添加注册表项，以便 COM 客户端可以创建托管类。  
+     可修改 Visual C# 项目属性以自动注册 COM 互操作的 C# 程序集。 Visual Studio 通过 `/tlb` 命令行开关使用 [Regasm.exe（程序集注册工具）](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)。此工具使用托管组件作为输入，以生成类型库。 此类型库描述程序集中的 `public` 类型并添加注册表项，以便 COM 客户端可以创建托管类。  
   
  有关详细信息，请参阅[向 COM 公开 .NET Framework 组件](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)和 [COM 类示例](../../../csharp/programming-guide/interop/example-com-class.md)。  
   

@@ -1,29 +1,17 @@
 ---
-title: "从 XML 架构派生数据集关系结构 (XSD)"
-ms.custom: 
+title: 从 XML 架构派生数据集关系结构 (XSD)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: eb4f6e3a63c901ec69ca5572a6f79d2f0ac4adfc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7599577c4e0f485e336e7f79a6c3bd17f0f0c316
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>从 XML 架构派生数据集关系结构 (XSD)
 本节将概述如何从 XML 架构定义语言 (XSD) 架构文档生成 `DataSet` 的关系架构。 一般情况下，为每个`complexType`的架构元素的子元素，在生成一个表`DataSet`。 表结构取决于复杂类型的定义。 在中创建表`DataSet`架构中的顶级元素。 但是，仅为创建了表的顶级`complexType`元素时`complexType`元素嵌套在另一个`complexType`元素，在这种情况下嵌套`complexType`元素映射到`DataTable`内`DataSet`。  
   
- 有关 XSD 的更多信息，请参阅万维网联合会 (W3C) XML 架构第 0 部分： 入门建议，XML 架构第 1 部分： 结构建议和 XML 架构第 2 部分： 数据类型建议，位于[http://www.w3.org/](http://www.w3.org/TR/)。  
+ 有关 XSD 的更多信息，请参阅万维网联合会 (W3C) XML 架构第 0 部分： 入门建议，XML 架构第 1 部分： 结构建议和 XML 架构第 2 部分： 数据类型建议，位于[ http://www.w3.org/](http://www.w3.org/TR/).  
   
  下面的示例演示一个 XML 架构其中`customers`是的子元素`MyDataSet`元素，它是**数据集**元素。  
   

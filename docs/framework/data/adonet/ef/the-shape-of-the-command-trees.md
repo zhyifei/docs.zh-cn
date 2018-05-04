@@ -1,24 +1,12 @@
 ---
-title: "命令目录树的形状"
-ms.custom: 
+title: 命令目录树的形状
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d7e2b25788b088d9da49bad206f8f2f11d0104a2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9084e2616ac4ea540bdf755afd011d67a5c991fa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令目录树的形状
 SQL 生成模块负责生成基于给定输入查询命令目录树表达式的后端特定 SQL 查询。 本节讨论查询命令目录树的特征、属性和结构。  
@@ -82,7 +70,7 @@ SQL 生成模块负责生成基于给定输入查询命令目录树表达式的�
   
  规范函数 (请参阅[规范函数](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)有关详细信息) 的一部分指定[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，并提供程序应提供基于这些规范的规范函数的实现。 存储函数基于相应的提供程序清单中的规范。 用户定义的函数基于 SSDL 中的规范。  
   
- 另外，具有 NiladicFunction 特性的函数没有任何自变量，并且此类函数在转换时末尾不应有括号。  它是到 *\<functionName >*而不是 *\<functionName > （)*。  
+ 另外，具有 NiladicFunction 特性的函数没有任何自变量，并且此类函数在转换时末尾不应有括号。  它是到 *\<functionName >* 而不是 *\<functionName > （)*。  
   
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  DbNewInstanceExpression 只能在以下两种情况下出现：  

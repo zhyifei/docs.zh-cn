@@ -1,9 +1,6 @@
 ---
-title: CoreResponseData.m_ResponseHeaders Field
+title: CoreResponseData.m_ResponseHeaders 字段
 ms.date: 01/29/2018
-ms.prod: .net-framework
-ms.technology: 
-ms.topic: reference
 topic_type:
 - apiref
 api_name:
@@ -13,19 +10,15 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.author: stwhi
-manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: eaece5bfe9cda7d35905ecd7e1da503ec11faf9c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: ea93b70ae8e1a710b4208050d7ec823a28b218b7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="coreresponsedatamresponseheaders-field"></a>CoreResponseData.m\_ResponseHeaders 字段
 
-`CoreResponseData.m_ResponseHeaders`是<xref:System.Net.WebHeaderCollection>与服务器响应关联的标头。
+`CoreResponseData.m_ResponseHeaders` 是<xref:System.Net.WebHeaderCollection>与服务器响应关联的标头。
 
 ## <a name="syntax"></a>语法
   
@@ -38,9 +31,9 @@ public WebHeaderCollection m_ResponseHeaders
 > 
 > Microsoft 不支持在生产应用程序在任何情况下使用此类。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
-**Namespace:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
 **程序集：**系统 （在 System.dll)
 

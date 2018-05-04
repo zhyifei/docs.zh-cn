@@ -1,24 +1,12 @@
 ---
-title: "关联端"
-ms.custom: 
+title: 关联端
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ffa768f50b3a80c22b4c84cffaf42897193a7d9f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9d7bd6fa92a4337add18deafbeb5ad28fefcb749
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="association-end"></a>关联端
 *关联端*标识[实体类型](../../../../docs/framework/data/adonet/entity-type.md)的一个 end[关联](../../../../docs/framework/data/adonet/association-type.md)以及在该末尾关联类型可以存在的实例的实体数。 关联端定义为关联的一部分；关联必须正好有两个关联端。 [导航属性](../../../../docs/framework/data/adonet/navigation-property.md)允许从一个关联端导航到其他。  

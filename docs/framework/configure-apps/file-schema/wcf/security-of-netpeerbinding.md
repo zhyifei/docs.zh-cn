@@ -1,33 +1,23 @@
 ---
-title: "&lt;netPeerBinding&gt; 的 &lt;security&gt;"
-ms.custom: 
+title: '&lt;netPeerBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-caps.latest.revision: "14"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c8e979768bdc9a8f78fb97c6c7838e44e81b52ac
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7413820f1a1f38b3d533573715267df3b85c9d9a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a>&lt;netPeerBinding&gt; 的 &lt;security&gt;
 定义的安全设置[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)，包括身份验证的类型使用，安全用于消息传输。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<绑定 >  
 \<netPeerBinding>  
-\<binding>  
-\<security>  
+\<绑定 >  
+\<安全 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +59,7 @@ ms.lasthandoff: 01/19/2018
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义的所有绑定功能[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
+|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义的所有绑定功能[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
   
 ## <a name="remarks"></a>备注  
  安全性可以是特定于消息的，也可以是特定于传输的。  
@@ -84,4 +74,4 @@ ms.lasthandoff: 01/19/2018
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<绑定 >](../../../../../docs/framework/misc/binding.md)

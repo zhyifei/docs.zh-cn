@@ -1,29 +1,17 @@
 ---
-title: "&lt;client&gt; 的 &lt;endpoint&gt;"
-ms.custom: 
+title: '&lt;client&gt; 的 &lt;endpoint&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 351f49c346cb8126cdd9d540a4db382bf5f4e721
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9a69483ab058823fd419edc84868e801b91d2c9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;client&gt; 的 &lt;endpoint&gt;
 指定通道终结点的协定、绑定和地址属性，客户端使用通道终结点与服务器上的服务终结点连接。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<客户端 >  
 \<终结点 >  
   
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<标头 >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|一个地址标头集合。|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|一个地址标头集合。|  
 |[\<标识 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|一个标识，与某个终结点交换消息的其他终结点可以使用该标识对该终结点进行身份验证。|  
   
 ### <a name="parent-elements"></a>父元素  

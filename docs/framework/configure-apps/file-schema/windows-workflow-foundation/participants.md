@@ -1,30 +1,20 @@
 ---
-title: "&lt;参与者&gt;"
-ms.custom: 
+title: '&lt;参与者&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 560dd0bb-f9fb-423c-8857-2101a3654b06
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a6e00ccbe4a43fd1dbf96a40d5bc4bca70ea7f78
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d5ce06a535283a7789419fb9d87433a45e37fa81
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltparticipantsgt"></a>&lt;参与者&gt;
 配置一列跟踪参与者，它们侦听直接从运行时发出的跟踪记录，并按照它们的任何方式处理这些记录。 这包括写入特定输出（例如，文件、控制台、ETW）、处理/聚合记录或可能需要的任何其他组合。  
   
  工作流跟踪和跟踪参与者的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[跟踪参与者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)。  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<跟踪 >  
 \<参与者 >  
   
@@ -68,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>示例  
  下面的配置示例演示在 Web.config 文件中配置的标准 ETW 跟踪参与者。  
   
- 在中定义 ETW 跟踪参与者使用跟踪记录写入 ETW 提供程序 Id **\<诊断 >**部分。 跟踪参与者具有一个与其关联的配置文件，用来指定跟踪参与者已订阅的跟踪记录。 这定义由**profileName**属性**\<添加 >**元素。 这些定义后，跟踪参与者添加到 **\<etwTracking >**服务行为。 这会将所选跟踪参与者添加到工作流实例的扩展中，以便它们开始接收跟踪记录。  
+ 在中定义 ETW 跟踪参与者使用跟踪记录写入 ETW 提供程序 Id **\<诊断 >** 部分。 跟踪参与者具有一个与其关联的配置文件，用来指定跟踪参与者已订阅的跟踪记录。 这定义由**profileName**属性**\<添加 >** 元素。 这些定义后，跟踪参与者添加到 **\<etwTracking >** 服务行为。 这会将所选跟踪参与者添加到工作流实例的扩展中，以便它们开始接收跟踪记录。  
   
 ```xml
 <configuration>   

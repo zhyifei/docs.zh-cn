@@ -1,13 +1,6 @@
 ---
-title: "&lt;g s&gt;元素"
-ms.custom: 
+title: '&lt;g s&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptographySettings
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 73a4f362be1612658e6911b7e7ea7a6c3e670e01
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14b510df192dcff1f005eec4f029aa0f26b967a4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcryptographysettingsgt-element"></a>&lt;g s&gt;元素
 包含加密设置。  
@@ -55,13 +46,13 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`mscorlib`|包含`cryptographySettings`元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<g s >**元素以包含加密名称映射和 OID 映射。 此示例将配置为运行时，以便<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>返回`MyHashClass`对象和`MyCryptoClass`类映射到对象标识符 1.3.36.2.1。  
+ 下面的示例演示如何使用 **\<g s >** 元素以包含加密名称映射和 OID 映射。 此示例将配置为运行时，以便<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>返回`MyHashClass`对象和`MyCryptoClass`类映射到对象标识符 1.3.36.2.1。  
   
 ```xml  
 <configuration>  

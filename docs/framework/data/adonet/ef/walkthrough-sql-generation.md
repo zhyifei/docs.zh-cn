@@ -1,24 +1,12 @@
 ---
-title: "演练：SQL 生成"
-ms.custom: 
+title: 演练：SQL 生成
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 272d0b8bc58094737d157abfff9f3f026a0f5953
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ab08b404dc60483a39e5c6ae56d82b63932c3f3e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-sql-generation"></a>演练：SQL 生成
 本主题说明了如何在进行 SQL 生成[示例提供程序](http://go.microsoft.com/fwlink/?LinkId=180616)。 下面的 Entity SQL 查询使用随示例提供程序提供的模型：  
@@ -151,7 +139,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  下图显示了刚好在访问 Join2 之后但在完成其后续处理 (ProcessJoinInputResult) 之前的那一刻访问者的状态：  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
+ ![关系图](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
   
  在上图中，SelectStatement2 显示为可自由浮动，原因是它已从堆栈中弹出，但尚未由父级进行后续处理。 需要将它添加到父级的 FROM 部分，但它没有 SELECT 子句，并不是完整的 SQL 语句。 因此，此时将由 AddDefaultColumns 方法将默认列（由 SelectStatement2 输入生成的所有列）添加到选择列表中。 AddDefaultColumns 循环访问 FromExtents 中的每个符号，并为每个符号添加范围内的所有列。 对于简单符号，它将查看符号类型来检索要添加的所有符号属性。 它还使用列名称填充 AllColumnNames 字典。 将已完成的 SelectStatement2 追加到 SelectStatement1 的 FROM 子句。  
   

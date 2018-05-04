@@ -1,13 +1,6 @@
 ---
-title: "&lt;system.diagnostics&gt;元素"
-ms.custom: 
+title: '&lt;system.diagnostics&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: e76f5ef38e29a1afc9f438abb37239d109876cc5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 090c296ba84043445364b350c8b74587c35b5940
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a>&lt;system.diagnostics&gt;元素
 指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。  
@@ -58,12 +49,12 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何将跟踪开关和跟踪侦听器嵌入 **\<system.diagnostics >**元素。 `General`跟踪开关设置为<xref:System.Diagnostics.TraceLevel>级别。 跟踪侦听器`myListener`创建名为的文件`MyListener.log`并将输出写入文件。  
+ 下面的示例演示如何将跟踪开关和跟踪侦听器嵌入 **\<system.diagnostics >** 元素。 `General`跟踪开关设置为<xref:System.Diagnostics.TraceLevel>级别。 跟踪侦听器`myListener`创建名为的文件`MyListener.log`并将输出写入文件。  
   
 > [!NOTE]
 >  在 .NET Framework 2.0 版中，你可以使用文本指定开关值。 例如，可以指定`true`为<xref:System.Diagnostics.BooleanSwitch>或使用如表示一个枚举值的文本`Error`为<xref:System.Diagnostics.TraceSwitch>。 行 `<add name="myTraceSwitch" value="Error" />` 等于 `<add name="myTraceSwitch" value="1" />`。  

@@ -1,27 +1,15 @@
 ---
-title: "标识符 (Entity SQL)"
-ms.custom: 
+title: 标识符 (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 18bfb654a6f116f87ae7eeb6059fe994b9084c19
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-entity-sql"></a>标识符 (Entity SQL)
-在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]提供两种类型的标识符： 简单标识符和带引号的标识符。  
+在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供两种类型的标识符： 简单标识符和带引号的标识符。  
   
 ## <a name="simple-identifiers"></a>简单标识符  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的简单标识符是字母数字和下划线字符的序列。 标识符的第一个字符必须是字母字符（a-z 或 A-Z）。  

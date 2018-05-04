@@ -1,13 +1,6 @@
 ---
-title: "&lt;connectionManagement&gt;元素 （网络设置）"
-ms.custom: 
+title: '&lt;connectionManagement&gt;元素 （网络设置）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#connectionManagement
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 700d06d22c76762c80ea877006a8ac3789052b14
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a7e1609df0a7a1de4e70f425e649115459b43f8c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt;元素 （网络设置）
 指定到网络主机的最大连接数。  
   
  \<configuration>  
-\<system.net >  
+\<system.net>  
 \<connectionManagement >  
   
 ## <a name="syntax"></a>语法  

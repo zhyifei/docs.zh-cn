@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |详细信息|在序列化派生类型时，如果该类型包含不可访问的字段或属性，即（通过“new”关键字）隐藏之前基类型上可访问的同名字段或属性（例如，public），则 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> 可能会失败。|
-|建议|通过将新的隐藏成员设为可访问 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name>（例如，将其标记为 public），可以解决此问题。或者，以下 config 设置将还原为 4.0 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> 行为，也可解决此问题：<pre><code class="language-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
+|建议|通过将新的隐藏成员设为可访问 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name>（例如，将其标记为 public），可以解决此问题。或者，以下 config 设置将还原为 4.0 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> 行为，也可解决此问题：<pre><code class="lang-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
 |范围|次要|
 |版本|4.5|
 |类型|运行时|

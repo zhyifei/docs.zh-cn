@@ -1,35 +1,23 @@
 ---
-title: "聚合函数 (Entity SQL)"
-ms.custom: 
+title: 聚合函数 (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e1ed9a7532269a149f6f522e8fe9c6161e1aae27
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 63e366f323b38a24c4d067681b47d8a8b96125b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-functions-entity-sql"></a>聚合函数 (Entity SQL)
 聚合是一种语言构造，它将集合浓缩为标量以作为组运算的一部分。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 聚合分为两种形式：  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)]集合函数可能在表达式中的任意位置使用。 这包括在作用于集合的投影和谓词中使用聚合函数。 集合函数是在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中指定聚合的首选模式。  
+-   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集合函数可能在表达式中的任意位置使用。 这包括在作用于集合的投影和谓词中使用聚合函数。 集合函数是在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中指定聚合的首选模式。  
   
 -   具有 GROUP BY 子句的表达式中的组聚合。 与在 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中一样，组聚合接受 DISTINCT 和 ALL 作为聚合输入的修饰符。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]首先尝试将解释为集合函数的表达式，如果表达式处于 SELECT 表达式的上下文中则可将其解释为组聚合。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 首先尝试将解释为集合函数的表达式，如果表达式处于 SELECT 表达式的上下文中则可将其解释为组聚合。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]定义特殊的聚合运算符调用[GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)。 此运算符，您可以获取对分组的输入集的引用。 这样，就可以进行更高级的分组查询，其中，GROUP BY 子句的结果可以用在除组聚合或集合函数之外的位置。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 定义特殊的聚合运算符调用[GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)。 此运算符，您可以获取对分组的输入集的引用。 这样，就可以进行更高级的分组查询，其中，GROUP BY 子句的结果可以用在除组聚合或集合函数之外的位置。  
   
 ## <a name="collection-functions"></a>集合函数  
  集合函数针对集合运行并返回标量值。 例如，如果 `orders` 是所有 `orders` 的集合，则可以使用以下表达式计算最早的发货日期：  

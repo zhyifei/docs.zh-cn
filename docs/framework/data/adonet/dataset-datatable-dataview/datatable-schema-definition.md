@@ -1,29 +1,17 @@
 ---
-title: "数据表架构定义"
-ms.custom: 
+title: 数据表架构定义
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ae4d5af0238108d0f309ae311e172450bf226c23
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 81da3937b709d4ef046eb1c470546f168bde4132
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatable-schema-definition"></a>数据表架构定义
 表的架构（即结构）由列和约束表示。 使用 <xref:System.Data.DataTable> 对象以及 <xref:System.Data.DataColumn> 和 <xref:System.Data.ForeignKeyConstraint> 对象定义 <xref:System.Data.UniqueConstraint> 的架构。 表中的列可以映射到数据源中的列、包含从表达式计算所得的值、自动递增它们的值，或包含主键值。  
   
- 按名称引用表中的列、关系和约束是区分大小写的。 因此，一个表中可以存在两个或两个以上名称相同（但大小写不同）的列、关系或约束。 例如，你可以**Col1**和**col1**。 在这种情况下，按名称引用某一列就必须完全符合该列名的大小写，否则会引发异常。 例如，如果表**myTable**包含列**Col1**和**col1**，将引用**Col1**通过与名称**myTable.Columns["Col1"]**，和**col1**作为**myTable.Columns["col1"]**。 尝试引用，则为这些列**myTable.Columns["COL1"]**也会生成异常。  
+ 按名称引用表中的列、关系和约束是区分大小写的。 因此，一个表中可以存在两个或两个以上名称相同（但大小写不同）的列、关系或约束。 例如，你可以**Col1**和**col1**。 在这种情况下，按名称引用某一列就必须完全符合该列名的大小写，否则会引发异常。 例如，如果表**myTable**包含列**Col1**和**col1**，将引用**Col1**通过与名称**myTable.Columns["Col1"]**，和**col1**作为**myTable.Columns["col1"]**。 尝试引用，则为这些列**myTable.Columns["COL1"]** 也会生成异常。  
   
  如果某个特定名称只存在一个列、关系或约束，则不应用区分大小写规则。 也就是说，如果表中没有其他的列、关系或约束对象与该特定列、关系或约束对象的名称匹配，您就可以使用任意的大小写来按名称引用该对象，并且不会引发异常。 例如，如果表中只有**Col1**，您可以引用它使用**我。列 ["COL1"]**。  
   

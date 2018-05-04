@@ -1,33 +1,21 @@
 ---
-title: "&lt;defaultCertificate&gt; 元素"
-ms.custom: 
+title: '&lt;defaultCertificate&gt; 元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eeb4c1b010e2d446303e780966668fc8a6f5ddb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt; 元素
 指定在服务或 STS 未通过协商协议提供证书时要使用的 X.509 证书。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<行为 >  
 endpointBehaviors 部分  
 \<行为 >  
-\<c a t e >  
+\<clientCredentials>  
 \<serviceCertificate >  
 \<defaultCertificate >  
   
@@ -89,7 +77,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  对于使用基于证书的消息安全的绑定，此配置元素指定的证书用于加密发送给服务的消息，并期望服务用它来对客户端的应答进行签名。 如果服务未指定任何证书，它只存储要使用的一个证书。  
   
 ## <a name="example"></a>示例  
- 下面的示例指定了两个证书，一个证书用于 URI 以 http://www.contoso.com 开头的终结点，另一个证书用于不执行证书协商的所有其他终结点。  
+ 下面的示例指定证书用于 URI 以开头的终结点http://www.contoso.com和要使用其他不执行证书协商的所有终结点的证书。  
   
 ```xml  
 <serviceCertificate>  

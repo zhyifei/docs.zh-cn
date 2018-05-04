@@ -1,29 +1,17 @@
 ---
-title: "&lt;baseAddressPrefixFilter&gt; 的 &lt;add&gt;"
-ms.custom: 
+title: '&lt;baseAddressPrefixFilter&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad6ad6f71ef015ad97a2688a7334e8a0c6e5af44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 549574d0d6585a857f3e0979e814c827139c7536
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;baseAddressPrefixFilter&gt; 的 &lt;add&gt;
-表示一个指定传递筛选器的配置元素。传递筛选器提供了一种机制，使得在 IIS 中承载 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 应用程序时可选取适当的 Internet 信息服务 (IIS) 绑定。  
+表示一个配置元素，指定传递筛选器，它提供一种机制，承载在 IIS 中的 Windows Communication Foundation (WCF) 应用程序时可选取适当的 Internet 信息服务 (IIS) 绑定。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
 \<Baseaddressprefixfilter >  
 \<add>  
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Baseaddressprefixfilter >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|一个指定传递筛选器的配置元素的集合。传递筛选器提供了一种机制，使得在 IIS 中承载 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 应用程序时可选取适当的 IIS 绑定。|  
+|[\<Baseaddressprefixfilter >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|指定传递筛选器提供了一种机制时可选取适当的 IIS 绑定承载在 IIS 中的 Windows Communication Foundation (WCF) 应用程序的配置元素的集合。|  
   
 ## <a name="remarks"></a>备注  
  前缀筛选器为共享的宿主提供程序提供一种指定服务要使用的 URI 的方法。 它使得共享主机可以在同一站点上通过同一方案的不同基址承载多个应用程序。  

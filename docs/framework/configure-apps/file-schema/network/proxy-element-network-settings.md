@@ -1,13 +1,6 @@
 ---
-title: "&lt;代理&gt;元素 （网络设置）"
-ms.custom: 
+title: '&lt;代理&gt;元素 （网络设置）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#proxy
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b0b397e66e0f73d10f482bc9151a6fbacf3e774d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b5ae716994f9b8222a633699367c94480179c97b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;代理&gt;元素 （网络设置）
 定义代理服务器。  
   
  \<configuration>  
-\<system.net >  
+\<system.net>  
 \<defaultProxy >  
 \<代理 >  
   
@@ -54,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 |**特性**|**说明**|  
 |-------------------|---------------------|  
 |`autoDetect`|指定是否自动检测代理。 默认值为 `unspecified`。|  
-|`bypassonlocal`|指定对于本地资源是否跳过代理。 本地资源包括本地服务器 （http://localhost、 http://loopback 或 http://127.0.0.1） 和不带句点 (http://webserver) 的 URI。 默认值为 `unspecified`。|  
+|`bypassonlocal`|指定对于本地资源是否跳过代理。 本地资源包括本地服务器 (http://localhost， http://loopback，或http://127.0.0.1)和不带句点的 URI (http://webserver)。 默认值为 `unspecified`。|  
 |`proxyaddress`|指定的代理 URI 来使用。|  
 |`scriptLocation`|指定的配置脚本的位置。|  
 |`usesystemdefault`|指定是否使用 Internet Explorer 代理设置。 如果设置为`true`，后续的属性将替代 Internet Explorer 代理设置。 默认值为 `unspecified`。|  

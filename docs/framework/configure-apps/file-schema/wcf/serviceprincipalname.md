@@ -1,26 +1,14 @@
 ---
-title: '&lt;servicePrincipalName&gt;'
-ms.custom: 
+title: '&lt;ServicePrincipalName&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7f9b4ec506097cf010af78b3504def08102e0774
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5c1f5a6986d57d20180560b12f5c7c5540a590d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltserviceprincipalnamegt"></a>&lt;servicePrincipalName&gt;
+# <a name="ltserviceprincipalnamegt"></a>&lt;ServicePrincipalName&gt;
 利用对应的服务主体名称 (SPN) 指定服务的标识。  
   
  有关设置 SPN 的详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 |[\<标识 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由客户端进行身份验证的服务的标识。|  
   
 ## <a name="remarks"></a>备注  
- 通过此标识连接到终结点的安全 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 客户端在使用终结点进行 SSPI 身份验证时将使用 SPN。  
+ 执行与终结点的 SSPI 身份验证时，连接到通过此标识终结点的安全的 Windows Communication Foundation (WCF) 客户端使用 SPN。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.IdentityElement>  

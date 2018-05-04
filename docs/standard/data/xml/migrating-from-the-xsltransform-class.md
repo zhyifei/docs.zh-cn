@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 09d982105d8cf1297a53bd755003e3ef2b089293
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 07b90baf64ad00509cf5cadea4b9a3008237759b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>从 XslTransform 类迁移
 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] 版本重新设计了 XSLT 体系结构。 <xref:System.Xml.Xsl.XslTransform> 类已被 <xref:System.Xml.Xsl.XslCompiledTransform> 类所取代。  
@@ -73,7 +73,7 @@ writer.Close();
 ```  
   
 ### <a name="debug-option"></a>调试选项  
- <xref:System.Xml.Xsl.XslCompiledTransform> 类可以生成调试信息，使您可以使用 Microsoft [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 调试器调试样式表。 有关更多信息，请参见<xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>。  
+ <xref:System.Xml.Xsl.XslCompiledTransform> 类可生成调试信息，让用户能够使用 Microsoft Visual Studio 调试器调试样式表。 有关更多信息，请参见<xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>。  
   
 ## <a name="behavioral-differences"></a>行为差异  
   

@@ -1,13 +1,6 @@
 ---
-title: "&lt;qualifyAssembly&gt;元素"
-ms.custom: 
+title: '&lt;qualifyAssembly&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#qualifyAssembly
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/qualifyAssembly
@@ -16,23 +9,20 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dd24ae9e5659deff7ddbe4183c70d5b442542cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d08cfbde82f74dcf88ddadd844854bdfeb403935
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt;元素
 指定使用部分名称时应动态加载的程序集全名。  
   
  \<configuration>  
-\<runtime>  
-\<assemblyBinding>  
+\<运行时 >  
+\<assemblyBinding >  
 \<qualifyAssembly>  
   
 ## <a name="syntax"></a>语法  
@@ -65,7 +55,7 @@ ms.lasthandoff: 01/19/2018
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 调用<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>使用部分程序集名称的方法使公共语言运行时查找仅在应用程序基目录中的程序集。 使用 **\<qualifyAssembly >**中应用程序配置文件可提供完整的程序集信息 （名称、 版本、 公钥标记和区域性） 并且使公共语言运行时，要搜索的元素全局程序集缓存中程序集。  
+ 调用<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>使用部分程序集名称的方法使公共语言运行时查找仅在应用程序基目录中的程序集。 使用 **\<qualifyAssembly >** 中应用程序配置文件可提供完整的程序集信息 （名称、 版本、 公钥标记和区域性） 并且使公共语言运行时，要搜索的元素全局程序集缓存中程序集。  
   
  **FullName**属性必须包含程序集标识的四个字段： 名称、 版本、 公钥标记和区域性。 **PartialName**属性部分必须引用的程序集。 你必须至少指定程序集的文本名称 （最常见的情况），但你也可以包括版本、 公钥标记或区域性 （或四个，但并非所有四个的任意组合）。 **PartialName**必须匹配你调用中指定的名称。 例如，不能指定`"math"`作为**partialName**中你的配置文件和调用属性`Assembly.Load("math, Version=3.3.3.3")`在代码中。  
   

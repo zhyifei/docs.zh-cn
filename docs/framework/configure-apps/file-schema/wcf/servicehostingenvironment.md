@@ -1,29 +1,17 @@
 ---
 title: '&lt;serviceHostingEnvironment&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a08df7c620065bb483d276e3ead2c179040f1c9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e6c69e06b691e40b6b2c39a54be83d7bdbe3a650
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 此元素定义服务主机环境要为特定传输实例化的类型。 如果此元素为空，则使用默认类型。 此元素只能在应用程序或计算机级别的配置文件中使用。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
   
 ## <a name="syntax"></a>语法  
@@ -51,9 +39,9 @@ ms.lasthandoff: 12/22/2017
   
 |特性|描述|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|一个布尔值，指示是否已为当前应用程序启用了 ASP.NET 兼容模式。 默认值为 `false`。<br /><br /> 当此属性设置为 `true` 时，对 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务的请求将流经 ASP.NET HTTP 管道，而通过非 HTTP 协议的通信将被禁止。 有关详细信息，请参阅[WCF 服务和 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。|  
+|aspNetCompatibilityEnabled|一个布尔值，指示是否已为当前应用程序启用了 ASP.NET 兼容模式。 默认值为 `false`。<br /><br /> 当此属性设置为`true`、 对 Windows Communication Foundation (WCF) 服务的请求将流经 ASP.NET HTTP 管道中，和禁止通过非 HTTP 协议的通信。 有关详细信息，请参阅[WCF 服务和 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。|  
 |minFreeMemoryPercentageToActivateService|一个整数，指定在可以激活 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务之前，系统应该具有的最小可用内存量。 **注意：**指定此属性以及网站的 web.config 文件中的部分信任[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服务将导致<xref:System.Security.SecurityException>服务运行时发生。|  
-|multipleSiteBindingsEnabled|一个布尔值，指定是否对每个站点启用多个 IIS 绑定。<br /><br /> IIS 由网站组成，这些网站是包含虚拟目录的虚拟应用程序的容器。 可通过一个或多个 IIS 绑定访问站点上的应用程序。 一个 IIS 绑定提供两条信息：绑定协议和绑定信息。 绑定协议定义进行通信所依据的方案，而绑定信息是用于访问站点的信息。 绑定协议的一个示例可以是 HTTP，而绑定信息可包含 IP 地址、端口、主机标头等。<br /><br /> IIS 支持一个站点指定多个 IIS 绑定，这会导致一个方案有多个基址。 但是，在一个站点下承载的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务允许每个方案只绑定一个 BbaseAddress。<br /><br /> 若要为 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务对每个站点启用多个 IIS 绑定，请将此特性设置为 `true`。 请注意，仅对 HTTP 协议支持多个站点绑定。 配置文件中的终结点地址需要是一个完整的 URI。|  
+|multipleSiteBindingsEnabled|一个布尔值，指定是否对每个站点启用多个 IIS 绑定。<br /><br /> IIS 由网站组成，这些网站是包含虚拟目录的虚拟应用程序的容器。 可通过一个或多个 IIS 绑定访问站点上的应用程序。 一个 IIS 绑定提供两条信息：绑定协议和绑定信息。 绑定协议定义进行通信所依据的方案，而绑定信息是用于访问站点的信息。 绑定协议的一个示例可以是 HTTP，而绑定信息可包含 IP 地址、端口、主机标头等。<br /><br /> IIS 支持一个站点指定多个 IIS 绑定，这会导致一个方案有多个基址。 但是，在一个站点下承载的 Windows Communication Foundation (WCF) 服务允许绑定到每个方案只能有一个 baseAddress。<br /><br /> 若要启用每个站点的 Windows Communication Foundation (WCF) 服务的多个 IIS 绑定，请将此属性设置为`true`。 请注意，仅对 HTTP 协议支持多个站点绑定。 配置文件中的终结点地址需要是一个完整的 URI。|  
   
 ### <a name="child-elements"></a>子元素  
   

@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c9ea53fb186551a24f678d905d35caaaa0c26494
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e9305fd2a0e61a71f6875d6061f835e9cdae5dd1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>演练：使用 BatchBlock 和 BatchedJoinBlock 提高效率
 TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> 类，以便可以接收和缓冲一个或多个源的数据，再将缓冲的数据作为一个集合传播出去。 如果从一个或多个源收集数据，再批处理多个数据元素，就会发现这种批处理机制非常有用。 例如，假设应用使用数据流将记录插入数据库。 如果同时插入多项，而不是顺序一次插入一个，此操作可能会更高效。 本文档介绍了如何使用 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 类，提高此类数据库插入操作的效率。 它还介绍了如何使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 类，捕获程序从数据库读取数据时的结果和发生的任何异常。
@@ -35,7 +35,7 @@ TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?disp
 2.  确保计算机上有 Northwind 数据库的副本 Northwind.sdf。 此文件通常位于 %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\ 文件夹中。  
   
     > [!IMPORTANT]
-    >  在一些版本的 Windows 中，如果 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 以非管理员模式运行，则无法连接到 Northwind.sdf。 若要连接到 Northwind.sdf，请在“以管理员身份运行”模式下启动 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 命令提示符。  
+    >  在一些版本的 Windows 中，如果以非管理员模式运行 Visual Studio，便无法连接到 Northwind.sdf。 若要连接到 Northwind.sdf，请在“以管理员身份运行”模式下启动 Visual Studio 或 Visual Studio 命令提示符。  
   
  本演练包含以下各节：  
   
@@ -57,7 +57,7 @@ TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?disp
 ## <a name="creating-the-console-application"></a>创建控制台应用  
   
 <a name="consoleApp"></a>   
-1.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，创建 Visual C# 或 Visual Basic“控制台应用”项目。 在本文档中，该项目名为 `DataflowBatchDatabase`。  
+1.  在 Visual Studio 中，创建 Visual C# 或 Visual Basic“控制台应用程序”项目。 在本文档中，该项目名为 `DataflowBatchDatabase`。  
   
 2.  在项目中，添加对 System.Data.SqlServerCe.dll 和 System.Threading.Tasks.Dataflow.dll 的引用。  
   

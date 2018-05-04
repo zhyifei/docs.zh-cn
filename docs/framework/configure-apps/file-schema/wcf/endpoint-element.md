@@ -1,29 +1,17 @@
 ---
-title: "&lt;endpoint&gt; 元素"
-ms.custom: 
+title: '&lt;endpoint&gt; 元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7175cf55df6bb735367effa8f806a472b9ce5ea6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef436acca40eaac135a54042b62abd76ec55febf
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltendpointgt-element"></a>&lt;endpoint&gt; 元素
 指定用于公开服务的服务终结点的绑定、协定和地址属性。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<服务 >  
 \<终结点 >  
   
@@ -67,14 +55,14 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<标头 >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|一个地址标头集合。|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|一个地址标头集合。|  
 |[\<标识 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|一个标识，与某个终结点交换消息的其他终结点可以使用该标识对该终结点进行身份验证。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<服务 >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|一个配置节，定义客户端可以连接的终结点的列表。|  
+|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|一个配置节，定义客户端可以连接的终结点的列表。|  
   
 ## <a name="example"></a>示例  
  这是服务终结点配置的一个示例。  

@@ -1,24 +1,12 @@
 ---
 title: '&lt;net.tcp&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 61b799afa1761e59c5cedf5b14eadcaf6fcaada0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 9312d5f7544a794f036f0a623df0d537eb96d145
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 指定允许多个进程共享同一 TCP 端口的 NET.TCP 端口共享服务的配置设置。  
@@ -63,7 +51,7 @@ ms.lasthandoff: 01/19/2018
   
 |特性|描述|  
 |---------------|-----------------|  
-|`listenBacklog`|一个整数，指定从共享连接接受但仍未调度给 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务的最大未完成连接数。 默认值为 10。|  
+|`listenBacklog`|一个整数，指定从共享连接接受但仍未调度到 Windows Communication Foundation (WCF) 服务的最大未完成连接。 默认值为 10。|  
 |`maxPendingAccepts`|一个整数，指定共享服务侦听终结点上的最大未完成并发接受线程数。 默认值为 2。|  
 |`MaxPendingConnections`|侦听器可以拥有的正在等待应用程序接受的最大连接数。 超出此配额值时，新的传入连接会被丢弃而不是等待接受。 连接功能（如消息安全）可能会使客户端打开多个连接。 在设置此配额值时，服务管理员应该考虑这些额外的连接。 默认值为 10。|  
 |`receiveTimeout`|`TimeSpan`，它将为读取组帧数据并执行来自基础连接的连接调度指定超时值。 默认值为“00:00:10”。|  

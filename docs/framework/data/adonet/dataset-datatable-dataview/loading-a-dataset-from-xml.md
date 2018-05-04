@@ -1,27 +1,15 @@
 ---
-title: "从 XML 加载数据集"
-ms.custom: 
+title: 从 XML 加载数据集
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1d17bb97811bb3a2ae979e5a05b8d39baf2b9c63
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0b74480209c8d06f38ea39e7a89741fc5a89512b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-a-dataset-from-xml"></a>从 XML 加载数据集
 ADO.NET <xref:System.Data.DataSet> 的内容可以从 XML 流或文档创建。 此外，利用 .NET Framework，您可以相当灵活地控制从 XML 中加载哪些信息以及如何创建 <xref:System.Data.DataSet> 的架构（即关系结构）。  
@@ -111,7 +99,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
->  如果的 XSD 架构你<xref:System.Data.DataSet>包括**targetNamespace**，不能读取数据，且调用时，你可能会发生异常， **ReadXml**加载<xref:System.Data.DataSet>与包含的 XML与非限定命名空间的元素。 若要读取未限定的元素在这种情况下，设置**elementFormDefault**等于"qualified"中的 XSD 架构。 例如:  
+>  如果的 XSD 架构你<xref:System.Data.DataSet>包括**targetNamespace**，不能读取数据，且调用时，你可能会发生异常， **ReadXml**加载<xref:System.Data.DataSet>与包含的 XML与非限定命名空间的元素。 若要读取未限定的元素在这种情况下，设置**elementFormDefault**等于"qualified"中的 XSD 架构。 例如：  
   
 ```xml  
 <xsd:schema id="customDataSet"   

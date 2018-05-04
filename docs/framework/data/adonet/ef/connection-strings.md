@@ -1,24 +1,12 @@
 ---
-title: "连接字符串"
-ms.custom: 
+title: 连接字符串
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d582383d59928d72c15aabba37b50ed878b67ca5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ac2c618272044ac9aaaba697f6583c9a814aa79f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings"></a>连接字符串
 连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。 其语法取决于数据提供程序，并且会在试图打开连接的过程中对连接字符串进行分析。 实体框架使用的连接字符串包含用于连接到支持实体框架的基础 ADO.NET 数据提供程序的信息。 它们还包含有关所需的模型和映射文件的信息。  
@@ -102,12 +90,12 @@ Metadata=datadir\metadata\
 Metadata=.\  
 ```  
   
-## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>支持 &#124; DataDirectory &#124;替代字符串和 Web 应用程序根目录运算符 （~）  
- `DataDirectory`和 ~ 运算符用在<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>作为的一部分`Metadata`和`Provider Connection String`关键字。 <xref:System.Data.EntityClient.EntityConnection> 将 `DataDirectory` 和 ~ 运算符分别转发给 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 和存储提供程序。  
+## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>支持&#124;DataDirectory&#124;替代字符串和 Web 应用程序根目录运算符 （~）  
+ `DataDirectory` 和 ~ 运算符用在<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>作为的一部分`Metadata`和`Provider Connection String`关键字。 <xref:System.Data.EntityClient.EntityConnection> 将 `DataDirectory` 和 ~ 运算符分别转发给 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 和存储提供程序。  
   
 |术语|描述|  
 |----------|-----------------|  
-|`&#124;DataDirectory&#124;`|解析为映射和元数据文件的相对路径。 这是通过 `AppDomain.SetData("DataDirectory", objValue)` 方法设置的值。 `DataDirectory` 替代字符串必须由竖线字符括起来，并且在其名称与竖线字符之间不能存在任何空格。 `DataDirectory` 名称不区分大小写。<br /><br /> 如果名为“DataDirectory”的物理目录必须作为元数据路径列表的成员传递，则应在该名称的一边或两边添加空格，例如：`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`。 ASP.NET 应用程序解析 &#124; DataDirectory &#124;到"\<应用程序根目录 > / app_data"文件夹。|  
+|`&#124;DataDirectory&#124;`|解析为映射和元数据文件的相对路径。 这是通过 `AppDomain.SetData("DataDirectory", objValue)` 方法设置的值。 `DataDirectory` 替代字符串必须由竖线字符括起来，并且在其名称与竖线字符之间不能存在任何空格。 `DataDirectory` 名称不区分大小写。<br /><br /> 如果名为“DataDirectory”的物理目录必须作为元数据路径列表的成员传递，则应在该名称的一边或两边添加空格，例如：`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`。 ASP.NET 应用程序解析&#124;DataDirectory&#124;到"\<应用程序根目录 > / app_data"文件夹。|  
 |~|解析为 Web 应用程序根目录。 位于开头的 ~ 字符总是被解释为 Web 应用程序根目录运算符 (~)，不过它也可以表示有效的本地子目录。 若要引用这样的本地子目录，用户应显示传递 `./~`。|  
   
  `DataDirectory` 和 ~ 运算符仅应指定在路径的开头，放在任何其他位置将得不到解析。 实体框架将尝试解析 `~/data`，但会将 `/data/~` 视为物理路径。  

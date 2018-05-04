@@ -1,33 +1,21 @@
 ---
-title: "&lt;wsFederationHttpBinding&gt; 的 &lt;message&gt; 元素"
-ms.custom: 
+title: '&lt;wsFederationHttpBinding&gt; 的 &lt;message&gt; 元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 548e5ec5369c697d2b35723a0778ccaf95c3b535
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 24d7370eaadba08d449b886a09cb9903ca0a64c2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt; 的 &lt;message&gt; 元素
 定义的消息级安全性设置[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<绑定 >  
 \<wsFederatedBinding>  
-\<binding>  
-\<security>  
+\<绑定 >  
+\<安全 >  
 \<message>  
   
 ## <a name="syntax"></a>语法  
@@ -99,7 +87,7 @@ ms.lasthandoff: 01/19/2018
 |特性|描述|  
 |---------------|-----------------|  
 |algorithmSuite|设置消息加密和密钥包装算法。 有关此属性的有效值，请参见“algorithmSuite 属性”表。 默认值为 `Basic256`。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。 这些算法映射到安全策略语言 (WS-SecurityPolicy) 规范中指定的算法。|  
-|issuedKeyType|指定要颁发的密钥类型。 包括以下有效值：<br /><br /> -   SymmetricKey<br />-   PublicKey<br /><br /> 默认值为 `SymmetricKey`。 此属性的类型为 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
+|issuedKeyType|指定要颁发的密钥类型。 包括以下有效值：<br /><br /> -   SymmetricKey<br />-PublicKey<br /><br /> 默认值为 `SymmetricKey`。 此属性的类型为 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
 |issuedTokenType|一个字符串，它所包含的 URI 指定要颁发的令牌的类型。 默认值为 `null`。|  
 |negotiateServiceCredential|一个布尔值，指定是否应在协商过程中交换服务凭据，或者是否可在带外使用服务凭据。 默认值为 `true`，这意味着对服务凭据进行协商。|  
   
@@ -143,8 +131,8 @@ ms.lasthandoff: 01/19/2018
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
  <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>  
  <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>  
- `System.ServiceModel.Configuration.FederatedMessageSecurityElement`[保护服务和客户端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [保护服务和客户端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<绑定 >](../../../../../docs/framework/misc/binding.md)

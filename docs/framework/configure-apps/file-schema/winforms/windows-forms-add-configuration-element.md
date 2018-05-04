@@ -1,26 +1,17 @@
 ---
-title: "Windows 窗体添加配置元素"
-ms.custom: 
+title: Windows 窗体添加配置元素
 ms.date: 04/07/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 331b2238ae87776938422484d34bb68b4653a56e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 529dbccd5ddb4dd1f1456fb9a6043f3c5f7b378d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows 窗体添加配置元素
 
@@ -45,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 | `key`     | 必需的特性。 预定义的密钥名称对应于特定的 Windows 窗体可自定义功能。 |
 | `value`   | 必需的特性。 要赋给 `key` 的值。 |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key`特性名称和关联的值
+### <a name="key-attribute-names-and-associated-values"></a>`key` 特性名称和关联的值
 
 | `key` 名称 | 值 | 描述 |
 | ---------- | ------ | ----------- |
@@ -69,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | 配置对新 Windows 窗体应用程序功能的支持。 |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" />备注
+## <a name="a-nameremarks--remarks"></a><a name="remarks" /> 备注
 
 从 .NET Framework 4.7 开始，`<System.Windows.Forms.ApplicationConfigurationSection>` 元素允许配置 Windows 窗体应用程序，以利用最新版本的 .NET Framework 中添加的功能。 
 

@@ -1,14 +1,8 @@
 ---
-title: "DataMemberFieldEditor 类"
-ms.custom: 
+title: DataMemberFieldEditor 类
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 api_name:
 - System.Windows.Forms.Design.DataMemberFieldEditor
 api_location:
@@ -18,17 +12,13 @@ api_type:
 ms.assetid: 27ae39b7-3491-40f9-9b33-2de798f123ad
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b976587b452aaf5bc97069d6413c85e13f5f5b61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ca28c0c440ea67716244670e2b636a3099987e1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor 类
 
@@ -45,9 +35,9 @@ internal class DataMemberFieldEditor : UITypeEditor
 > 
 > Microsoft 不支持在生产应用程序在任何情况下使用此类。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
-**Namespace:**<xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
 **程序集：** System.Design （System.Design.dll) 中  
   

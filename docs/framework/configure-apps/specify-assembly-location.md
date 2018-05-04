@@ -1,30 +1,21 @@
 ---
-title: "指定程序集 &#39; s 位置"
-ms.custom: 
+title: 指定程序集&#39;s 位置
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - configuration [.NET Framework], applications
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4cfe8752ce3a562e1e4b576c63b56ff56255ff62
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 65bd075115e33486e86e8081b01b96db665e9da5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="specifying-an-assembly39s-location"></a>指定程序集 &#39; s 位置
+# <a name="specifying-an-assembly39s-location"></a>指定程序集&#39;s 位置
 有两种方法来指定程序集的位置：  
   
 -   使用[\<基本代码 >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)元素。  
@@ -34,7 +25,7 @@ ms.lasthandoff: 01/19/2018
  你还可以使用[.NET Framework 配置工具 (Mscorcfg.msc)](http://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764)以指定程序集的位置或指定为公共语言运行时来探测程序集的位置。  
   
 ## <a name="using-the-codebase-element"></a>使用\<基本代码 > 元素  
- 你可以使用**\<基本代码 >**仅在计算机配置文件或发布服务器策略文件也重定向程序集版本程序中的元素。 当运行时确定要使用的程序集版本时，它适用确定版本的文件中的基本代码设置。 如果指示没有基本代码，运行时探测程序集以正常方式。 有关详细信息，请参阅[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
+ 你可以使用**\<基本代码 >** 仅在计算机配置文件或发布服务器策略文件也重定向程序集版本程序中的元素。 当运行时确定要使用的程序集版本时，它适用确定版本的文件中的基本代码设置。 如果指示没有基本代码，运行时探测程序集以正常方式。 有关详细信息，请参阅[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
  下面的示例演示如何指定程序集的位置。  
   
@@ -54,7 +45,7 @@ ms.lasthandoff: 01/19/2018
 </configuration>  
 ```  
   
- **版本**属性是必需的所有具有强名称程序集，但应省略不具有强名称的程序集。 **\<基本代码 >**元素需要**href**属性。 你不能指定版本范围中的**\<基本代码 >**元素。  
+ **版本**属性是必需的所有具有强名称程序集，但应省略不具有强名称的程序集。 **\<基本代码 >** 元素需要**href**属性。 你不能指定版本范围中的**\<基本代码 >** 元素。  
   
 > [!NOTE]
 >  如果你所提供的不是具有强名称程序集的基本代码的提示，提示必须指向应用程序基或应用程序基目录的子目录。  

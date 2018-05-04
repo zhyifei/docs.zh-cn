@@ -1,13 +1,6 @@
 ---
-title: "&lt;启动&gt;元素"
-ms.custom: 
+title: '&lt;启动&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#startup
@@ -16,22 +9,20 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4299775cd23162839ab9846adc7d2c64cc18a404
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 60699f0335bb35589341558800cfd64503d0aa0a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltstartupgt-element"></a>&lt;启动&gt;元素
 指定公共语言运行时启动信息。  
   
  \<configuration>  
-\<startup>  
+\<启动 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,9 +40,9 @@ ms.lasthandoff: 01/19/2018
 |---------------|-----------------|  
 |`useLegacyV2RuntimeActivationPolicy`|可选特性。<br /><br /> 指定是否启用[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]运行时激活策略或使用[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]激活策略。|  
   
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy Attribute  
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`true`|启用[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]选运行时，是将绑定旧式运行时激活技术的运行时激活策略 (如[CorBindToRuntimeEx 函数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) 为运行时从配置文件而不是选择上限它们设置在 CLR 版本 2.0。 因此，如果从配置文件选择 CLR 版本 4 或更高版本，则使用.NET Framework 的早期版本创建的混合模式程序集是加载与选择的 CLR 版本。 将设置此值可防止 CLR 版本 1.1 或 CLR 版本 2.0 加载到相同的过程中，有效地禁用进程内并行的功能。|  
 |`false`|使用的默认激活策略[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]和更高版本，即允许旧式运行时加载到进程的 CLR 版本 1.1 或 2.0 的激活方法。 设置此值禁止从加载到.NET Framework 4 或更高版本，除非它们生成.NET Framework 4 或更高版本的混合模式程序集。 此值是默认值。|  
@@ -60,7 +51,7 @@ ms.lasthandoff: 01/19/2018
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|指定应用程序仅支持 1.0 版本的公共语言运行时。 运行时 1.1 版或更高版本生成的应用程序应使用 **\<supportedRuntime >**元素。|  
+|[\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|指定应用程序仅支持 1.0 版本的公共语言运行时。 运行时 1.1 版或更高版本生成的应用程序应使用 **\<supportedRuntime >** 元素。|  
 |[\<supportedRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|指定应用程序支持的公共语言运行时版本。|  
   
 ### <a name="parent-elements"></a>父元素  
@@ -70,9 +61,9 @@ ms.lasthandoff: 01/19/2018
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="remarks"></a>备注  
- **\<SupportedRuntime >**元素应由使用版本 1.1 或更高版本的运行时生成的所有应用程序。 为支持仅运行时 1.0 版而生成的应用程序必须使用 **\<requiredRuntime >**元素。  
+ **\<SupportedRuntime >** 元素应由使用版本 1.1 或更高版本的运行时生成的所有应用程序。 为支持仅运行时 1.0 版而生成的应用程序必须使用 **\<requiredRuntime >** 元素。  
   
- 在 Microsoft Internet Explorer 中托管的应用程序的启动代码将忽略**\<启动 >**元素及其子元素。  
+ 在 Microsoft Internet Explorer 中托管的应用程序的启动代码将忽略**\<启动 >** 元素及其子元素。  
   
 ## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>UseLegacyV2RuntimeActivationPolicy 属性  
  此属性是很有用，如果你的应用程序使用旧式激活路径，如[CorBindToRuntimeEx 函数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)，并且你希望这些路径激活而不是早期版本，CLR 版本 4 或如果你的应用程序使用生成[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]但在使用.NET Framework 的早期版本生成的混合模式程序集具有的依赖关系。 在这些情况下，将属性设置为`true`。  

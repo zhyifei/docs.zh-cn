@@ -1,13 +1,6 @@
 ---
-title: "管线开发"
-ms.custom: 
+title: 管线开发
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-in pipeline [.NET Framework], segments
 - activation path for add-ins [.NET Framework]
@@ -16,23 +9,20 @@ helpviewer_keywords:
 - add-in pipeline [.NET Framework], about
 - add-ins [.NET Framework], pipeline development
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2d889b7de4bc766deda9b91877ceefb4aebfc551
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pipeline-development"></a>管线开发
 外接程序管线是主机应用程序和其外接程序必须使用才能相互之间进行通信的管道段的路径。  
   
  下图显示的通信管道和其片段。  
   
- ![添加 &#45; 管道模型中。] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![添加&#45;管道模型中。] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 外接程序管道  
   
  主机应用程序是管道的另一端外, 接程序在另一端。 从每个结尾和向中间移动，主机应用程序和外接程序将具有一个定义它们都共享的对象模型的视图的抽象基类。 这些类型 （类） 构成了外接程序视图管道段和外接程序管线段的主机视图。 外接程序视图管道段通常包含多个抽象类，但外接程序继承自的类称为外接程序基准。  
@@ -45,7 +35,7 @@ ms.lasthandoff: 01/19/2018
   
  下图显示构成的管道段的类型。 在图中所示的类型的名称是任意的但主机和主机除外的所有类型都视图之外的外接程序中需要特性使构造信息存储的方法可以发现它们。  
   
- ![添加 &#45; 在模型中具有必需特性的类型。] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
+ ![添加&#45;在模型中具有必需特性的类型。] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 类型与外接程序管线  
   
  下表描述了有关激活外接程序中的管道段。 有关这些段的详细信息，请参阅[协定、 视图和适配器](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)。  
@@ -63,7 +53,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="pipeline-activation-path"></a>管道激活路径  
  当激活外接程序时下, 图显示类型的激活。 它还显示到主机，如计算或对象的集合的结果的传递的对象。 这是最典型的情形。  
   
- ![添加 &#45; 具有激活路径的模型中。] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
+ ![添加&#45;具有激活路径的模型中。] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
 从外接程序到宿主的激活路径  
   
  管道的激活路径发生，如下所示：  

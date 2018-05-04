@@ -12,11 +12,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 306a618f193f9223443938ae2a9e0996c1b5295c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fb6645279a71252ff0ac81348c460b8981771797
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>在 Visual Basic 应用程序中访问数据
 Visual Basic 包括多种新功能，以帮助开发访问数据的应用程序。 通过将项从[“数据源”窗口](/visualstudio/data-tools/add-new-data-sources)拖到窗体上来创建 Windows 应用程序的数据绑定窗体。 通过将项从“数据源窗口”拖动到现有控件上来将控件绑定到数据。  
@@ -26,7 +26,7 @@ Visual Basic 包括多种新功能，以帮助开发访问数据的应用程序�
  提供相关页面链接，这些页面讨论如何将数据访问功能结合到应用程序中。
 
  [适用于 NET 的 Visual Studio Data Tools](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- 提供相关页面链接，这些页面介绍如何使用 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 创建处理数据的应用程序。  
+ 收录了相关页面链接，这些页面介绍了如何使用 Visual Studio 创建数据处理应用程序。  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  提供介绍如何在 Visual Basic 中使用 LINQ 的主题的链接。  
@@ -41,7 +41,7 @@ Visual Basic 包括多种新功能，以帮助开发访问数据的应用程序�
  提供介绍如何创建多层数据应用程序的主题的链接。  
      
  [添加新连接](/visualstudio/data-tools/add-new-connections)  
- 提供相关页面的链接，这些页面介绍如何通过 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用设计时工具和 ADO.NET 连接对象将应用程序连接到数据。  
+ 收录了相关页面链接，这些页面介绍了如何通过 Visual Studio 使用设计时工具和 ADO.NET 连接对象将应用程序连接到数据。  
 
  [Visual Studio 中的数据集工具](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  提供介绍如何将数据加载到数据集以及如何执行 SQL 语句和存储过程的页面的链接。  

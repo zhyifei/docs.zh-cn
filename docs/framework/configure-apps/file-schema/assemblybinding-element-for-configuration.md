@@ -1,31 +1,20 @@
 ---
-title: "&lt;assemblyBinding&gt;元素&lt;配置&gt;"
-ms.custom: 
+title: '&lt;assemblyBinding&gt;元素&lt;配置&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding
 helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8d670c56a885a5fdae059a87f63fba9ab32f020c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a3358b2d64ade65e641caa203e2e760dcc4be2c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > 元素\<配置 >
 
@@ -65,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 [  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)元素中的配置文件允许应用程序配置文件包含程序集，从而简化组件程序集的管理已知位置，而不是复制的程序集配置设置。
 
 > [!NOTE]
->  **\<LinkedConfiguration >**与 Windows 并排显示清单的应用程序中不支持元素。
+> **\<LinkedConfiguration >** 与 Windows 并排显示清单的应用程序中不支持元素。
 
 ## <a name="example"></a>示例
 

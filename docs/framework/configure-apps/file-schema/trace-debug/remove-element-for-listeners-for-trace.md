@@ -1,31 +1,20 @@
 ---
-title: "&lt;删除&gt;元素&lt;侦听器&gt;为&lt;跟踪&gt;"
-ms.custom: 
+title: '&lt;删除&gt;元素&lt;侦听器&gt;为&lt;跟踪&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
 helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7bc4136fb917ee9b63b7cca26ba1834de21f542e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11f4b648ac1ffc614f18a3686eb2b6508a272980
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;删除&gt;元素&lt;侦听器&gt;为&lt;跟踪&gt;
 删除从侦听器**侦听器**集合。  
@@ -34,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 \<system.diagnostics >  
 \<跟踪 >  
 \<侦听器 >  
-\<删除 >  
+\<remove>  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`listeners`|指定收集，侦听器存储区，并将消息路由。 侦听器将跟踪输出定向到适当的目标。|  

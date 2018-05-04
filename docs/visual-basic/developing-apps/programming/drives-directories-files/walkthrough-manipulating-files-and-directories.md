@@ -25,11 +25,11 @@ ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 12461cc99ec03ed87924c894e23740f9d76385ed
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>演练：在 Visual Basic 中操作文件和目录
 本演练简单介绍 Visual Basic 中文件 I/O 的基础知识。 描述如何创建列出并检查目录中文本文件的小型应用程序。 对于所选的每个文本文件，该应用程序都会提供文件属性和内容的第一行。 可以选择将信息写入日志文件中。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/26/2018
   
 3.  在“名称”框中，键入 `FileExplorer` 以设置项目名称，然后单击“确定”。  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 会将项目添加到“解决方案资源管理器”中，并打开 Windows 窗体设计器。  
+     Visual Studio 会将项目添加到“解决方案资源管理器”中，此时“Windows 窗体设计器”随即打开。  
   
 4.  将下表中的控件添加到窗体，并设置控件属性相应的值。  
   

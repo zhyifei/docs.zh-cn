@@ -1,14 +1,6 @@
 ---
-title: "&lt;providerOption&gt;元素"
-ms.custom: 
+title: '&lt;providerOption&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - provideroption
 helpviewer_keywords:
@@ -16,23 +8,20 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: f28b7b43f2f782744a0dbc81bd0b91bbbcd8abba
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fa3410cc2c8812c59528676bfad6cd7e887c5f73
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt;元素
 指定语言提供程序的编译器版本属性。  
   
  \<配置元素 >  
-\<system.codedom Element>  
+\<system.codedom 元素 >  
 \<编译器元素 >  
 \<编译器 > 元素  
 \<providerOption > 元素  
@@ -64,7 +53,7 @@ ms.lasthandoff: 01/19/2018
 |元素|描述|  
 |-------------|-----------------|  
 |[\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|公共语言运行库和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用语言提供程序的编译器配置设置。|  
+|[\<system.codedom > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用语言提供程序的编译器配置设置。|  
 |[\<编译器 > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|编译器配置元素，则容器包含零个或多`<compiler>`元素。|  
 |[\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|指定语言提供程序的编译器配置属性。|  
   

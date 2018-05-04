@@ -1,33 +1,21 @@
 ---
-title: "&lt;netTcpBinding&gt; 的 &lt;transport&gt;"
-ms.custom: 
+title: '&lt;netTcpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ad2271b86d37d9063ac54d9a4e45681d132eb1d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9369351e4e197f321feb4ae56939bec2a8280a64
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; 的 &lt;transport&gt;
 定义与配置的终结点的消息级安全性要求的类型[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<绑定 >  
 \<netTcpBinding>  
-\<binding>  
-\<security>  
+\<绑定 >  
+\<安全 >  
 \<transport>  
   
 ## <a name="syntax"></a>语法  
@@ -59,7 +47,7 @@ ms.lasthandoff: 01/19/2018
 |---------------|-----------------|  
 |clientCredentialType|可选。 指定要在使用传输安全性执行客户端身份验证时使用的凭据类型。<br /><br /> 默认值是`Windows`。<br />-此特性的类型是<xref:System.ServiceModel.TcpClientCredentialType>。|  
 |protectionLevel|可选。 定义 TCP 传输级别的安全性。 对消息进行签名可以降低该消息在传输过程中被第三方篡改的风险。 加密可以在传输过程中提供数据级保密。<br /><br /> 默认值为 `EncryptAndSign`。|  
-|sslProtocols|指定支持哪些 SslProtocols 的 SslProtocols 枚举标志值。 默认值是 Tls &#124;Tls11 &#124; Tls12。|  
+|sslProtocols|指定支持哪些 SslProtocols 的 SslProtocols 枚举标志值。 默认值是 Tls&#124;Tls11&#124;Tls12。|  
 |policyEnforcement|此枚举指定应何时强制实施 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>。<br /><br /> 1.Never – 绝不强制实施此策略（禁用扩展保护）。<br />2.WhenSupported – 仅在客户端支持扩展保护时才强制实施此策略。<br />3.Always – 总是强制实施此策略。 不支持扩展保护的客户端将无法进行身份验证。|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
@@ -99,4 +87,4 @@ ms.lasthandoff: 01/19/2018
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<绑定 >](../../../../../docs/framework/misc/binding.md)

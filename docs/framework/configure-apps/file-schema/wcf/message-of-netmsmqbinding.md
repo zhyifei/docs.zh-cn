@@ -1,33 +1,21 @@
 ---
-title: "&lt;netMsmqBinding&gt; 的 &lt;message&gt;"
-ms.custom: 
+title: '&lt;netMsmqBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a7fdb8c6df84a76450aabaa983275f563d342fa
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a552b0f22a79b30dcbbe1951906b121d4c5e8cf8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; 的 &lt;message&gt;
 在此 `netMsmqBinding` 绑定上定义 SOAP 消息安全设置。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<绑定 >  
 \<netMsmqBinding>  
-\<binding>  
-\<security>  
+\<绑定 >  
+\<安全 >  
 \<message>  
   
 ## <a name="syntax"></a>语法  
@@ -51,7 +39,7 @@ ms.lasthandoff: 01/19/2018
 |特性|描述|  
 |---------------|-----------------|  
 |algorithmSuite|设置消息加密和密钥包装算法，这些算法用于针对通过 MSMQ 传输发送的消息实现基于消息的安全性。<br /><br /> 默认值为 `Aes256`。 此属性的类型为 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。|  
-|clientCredentialType|指定针对通过 MSMQ 传输发送的消息执行客户端身份验证时要使用的凭据类型。 包括以下有效值：<br /><br /> -None： 允许服务与匿名客户端交互。 服务和客户端都不需要凭据。<br />-Windows： 使 SOAP 交换在已通过身份验证的 Windows 凭据上下文。 此设置总是执行基于 Kerberos 的身份验证。<br />-UserName： 使服务可以要求客户端进行身份验证使用 UserName 凭据。 在这种情况下，凭据需要指定使用`clientCredentials`行为**警告：** [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]不支持发送密码摘要或派生密钥使用的密码，并使用这样的密钥来提供消息安全性。 因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保交换的安全性。 此模式要求使用 `clientCredential` 行为和 `serviceCertificate` 在客户端指定服务证书。 <br /><br /> -Certificate： 使服务可以要求客户端进行身份验证使用的证书。 在此情况下，需要使用 `clientCredentials` 行为指定客户端凭据。 在此情况下，需要使用 `clientCredentials` 行为，通过指定 `serviceCertificate` 来指定服务凭据。<br />-CardSpace： 允许服务要求客户端进行身份验证使用 CardSpace。 必须在 `serviceCertiifcate` 行为中设置 `clientCredential`。<br /><br /> 默认值为 `Windows`。 此属性的类型为 <xref:System.ServiceModel.MessageCredentialType>。|  
+|clientCredentialType|指定针对通过 MSMQ 传输发送的消息执行客户端身份验证时要使用的凭据类型。 包括以下有效值：<br /><br /> -None： 允许服务与匿名客户端交互。 服务和客户端都不需要凭据。<br />-Windows： 使 SOAP 交换在已通过身份验证的 Windows 凭据上下文。 此设置总是执行基于 Kerberos 的身份验证。<br />-UserName： 使服务可以要求客户端进行身份验证使用 UserName 凭据。 在这种情况下，凭据需要指定使用`clientCredentials`行为**警告：** Windows Communication Foundation (WCF) 不支持发送密码摘要或派生密钥使用的密码，并使用这样的密钥为消息安全。 因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保交换的安全性。 此模式要求使用 `clientCredential` 行为和 `serviceCertificate` 在客户端指定服务证书。 <br /><br /> -Certificate： 使服务可以要求客户端进行身份验证使用的证书。 在此情况下，需要使用 `clientCredentials` 行为指定客户端凭据。 在此情况下，需要使用 `clientCredentials` 行为，通过指定 `serviceCertificate` 来指定服务凭据。<br />-CardSpace： 允许服务要求客户端进行身份验证使用 CardSpace。 必须在 `serviceCertiifcate` 行为中设置 `clientCredential`。<br /><br /> 默认值为 `Windows`。 此属性的类型为 <xref:System.ServiceModel.MessageCredentialType>。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -72,4 +60,4 @@ ms.lasthandoff: 01/19/2018
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<绑定 >](../../../../../docs/framework/misc/binding.md)

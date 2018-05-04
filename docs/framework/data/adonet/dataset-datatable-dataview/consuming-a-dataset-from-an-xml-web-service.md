@@ -1,29 +1,15 @@
 ---
 title: 通过 XML Web 服务使用数据集
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bfcd4d8dca38c9438c072c143cf7ba0eafd6ecf
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: da3eca875df9b80f66241a2ecb72c5ba5c1df309
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>通过 XML Web 服务使用数据集
 <xref:System.Data.DataSet> 是用断开式设计来构建的，其部分目的是为了便于通过 Internet 来传输数据。 **数据集**在于它可以被指定为的输入或输出而无需任何其他编码的 XML Web 服务所需的内容流处理所显示"可序列化"**数据集**从 XML Web 服务为客户端以及反向。 **数据集**隐式转换为使用 DiffGram 格式的 XML 流，通过网络发送和从 XML 流作为然后重新构造**数据集**在接收端。 它为你使用 XML Web services 传输和返回关系数据提供了非常简单而灵活的方法。 有关 DiffGram 格式的详细信息，请参阅[Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
@@ -176,7 +162,7 @@ ms.lasthandoff: 03/22/2018
   
      XML Web services 的客户端将需要通过 SOAP 代理来使用公开的方法。 可以使用 Visual Studio 生成此代理。 通过从 Visual Studio 中设置对现有 Web 服务的 Web 引用，此步骤中所述的所有行为均将透明地发生。 如果要自己创建代理类，请继续阅读本讨论。 但是，在大多数情况下，使用 Visual Studio 足以为客户端应用程序创建代理类。  
   
-     代理可以使用 Web 服务描述语言工具来创建。 例如，如果 URL http://myserver/data/DataSetSample.asmx 处公开 XML Web 服务时，发出如下命令创建的命名空间的 Visual Basic.NET 代理**WebData.DSSample**并将其存储在文件中sample.vb 中。  
+     代理可以使用 Web 服务描述语言工具来创建。 例如，如果 XML Web 服务公开在 URL http://myserver/data/DataSetSample.asmx，发出如下命令创建的命名空间的 Visual Basic.NET 代理**WebData.DSSample**并将其存储在文件 sample.vb 中。  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
@@ -272,7 +258,7 @@ ms.lasthandoff: 03/22/2018
     csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  

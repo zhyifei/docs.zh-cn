@@ -1,29 +1,17 @@
 ---
-title: "&lt;protocolMapping&gt; 的 &lt;add&gt;"
-ms.custom: 
+title: '&lt;protocolMapping&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a254b8a4de8f66cb0d051d246be2d07e905615a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b9559a6921bdededf760f54f58abadb46612b174
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;protocolMapping&gt; 的 &lt;add&gt;
-表示传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 之间的默认协议映射和[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]绑定。 当在运行时创建默认终结点时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将查看已配置的映射，并确定要用于基于特定内容的地址的绑定。  
+表示传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 Windows Communication Foundation (WCF) 绑定之间的默认协议映射。 当在运行时创建默认终结点时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将查看已配置的映射，并确定要用于基于特定内容的地址的绑定。  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<protocolMapping >  
 \<add>  
   
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|表示一个配置节，用于定义传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 之间的默认协议映射和[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]绑定。|  
+|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|表示一个配置节，用于定义传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 Windows Communication Foundation (WCF) 的绑定之间的默认协议映射。|  
   
 ## <a name="example"></a>示例  
  下面的配置示例演示 machine.config 文件中的默认协议映射。 您可以通过修改 machine.config 文件在计算机级别重写此默认映射。 或者，如果您只希望在应用程序范围内重写此映射，则可以在应用程序配置文件中重写此节，并为单独的协议方案更改映射。  

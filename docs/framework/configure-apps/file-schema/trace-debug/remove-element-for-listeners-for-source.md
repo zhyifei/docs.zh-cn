@@ -1,31 +1,20 @@
 ---
-title: "&lt;删除&gt;元素&lt;侦听器&gt;为&lt;源&gt;"
-ms.custom: 
+title: '&lt;删除&gt;元素&lt;侦听器&gt;为&lt;源&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
 helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: b983c5eb80f958098b6991970559d077b97a0759
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc6772e7a9b98f09df21fd1acf24f578b66ae51e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;删除&gt;元素&lt;侦听器&gt;为&lt;源&gt;
 从跟踪源的 `Listeners` 集合中删除侦听器。  
@@ -35,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 \<源 >  
 \<源 >  
 \<侦听器 >  
-\<删除 >  
+\<remove>  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  

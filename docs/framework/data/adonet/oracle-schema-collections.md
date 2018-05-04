@@ -1,24 +1,12 @@
 ---
-title: "Oracle 架构集合"
-ms.custom: 
+title: Oracle 架构集合
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4f199a0fc0939bd5fae4fefb7440c46bd471e4b6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oracle-schema-collections"></a>Oracle 架构集合
 除了通用架构集合之外，Microsoft Oracle .NET Framework 数据提供程序还支持下列特定的架构集合：  
@@ -112,10 +100,10 @@ ms.lasthandoff: 01/17/2018
 |LAST_ANALYZED|DateTime|最近分析此索引的日期。|  
 |DEGREE|String|每个实例用于扫描索引的线程数。|  
 |INSTANCES|String|在其上扫描索引的实例数。|  
-|PARTITIONED|String|此索引进行分区是否 (是 &#124;否）。|  
+|PARTITIONED|String|此索引进行分区是否 (是&#124;否)。|  
 |TEMPORARY|String|索引是否在临时表上。|  
-|GENERATED|String|索引的名称是否是系统生成 (Y &#124;N)。|  
-|SECONDARY|String|索引是否由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124;N)。|  
+|GENERATED|String|索引的名称是否是系统生成 (Y&#124;N)。|  
+|SECONDARY|String|索引是否由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y&#124;N)。|  
 |BUFFER_POOL|String|用于索引块的默认缓冲区池的名称。|  
 |USER_STATS|String|统计信息是否已由用户直接输入。|  
 |DURATION|String|指示临时表的持续时间：1)SYS$SESSION：在会话期间保留行，2) SYS$TRANSACTION：在 COMMIT 之后删除行，3) Null 表示永久表。|  
@@ -156,8 +144,8 @@ ms.lasthandoff: 01/17/2018
 |TIMESTAMP|String|指定对象（字符数据）的时间戳。|  
 |STATUS|String|对象的状态（VALID、INVALID 或 N/A）。|  
 |TEMPORARY|String|对象是否是临时对象（当前会话只能看到其放入此对象本身的数据）。|  
-|GENERATED|String|此对象的名称是否由系统生成？ (Y &#124;N)。|  
-|SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124;N)。|  
+|GENERATED|String|此对象的名称是否由系统生成？ (Y &AMP;#124; N)。|  
+|SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124; N)。|  
 |CREATED|DateTime|创建对象的日期。|  
   
 ## <a name="sequences"></a>序列  
@@ -231,8 +219,8 @@ ms.lasthandoff: 01/17/2018
 |TIMESTAMP|String|指定对象（字符数据）的时间戳。|  
 |STATUS|String|对象的状态（VALID、INVALID 或 N/A）。|  
 |TEMPORARY|String|对象是否是临时对象（当前会话只能看到其放入此对象本身的数据）。|  
-|GENERATED|String|此对象的名称是否由系统生成？ (Y &#124;N)。|  
-|SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124;N)。|  
+|GENERATED|String|此对象的名称是否由系统生成？ (Y &AMP;#124; N)。|  
+|SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124; N)。|  
   
 ## <a name="packages"></a>包  
   
@@ -247,8 +235,8 @@ ms.lasthandoff: 01/17/2018
 |TIMESTAMP|String|指定对象（字符数据）的时间戳。|  
 |STATUS|String|对象的状态（VALID、INVALID 或 N/A）。|  
 |TEMPORARY|String|对象是否是临时对象（当前会话只能看到其放入此对象本身的数据）。|  
-|GENERATED|String|此对象的名称是否由系统生成？ (Y &#124;N)。|  
-|SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124;N)。|  
+|GENERATED|String|此对象的名称是否由系统生成？ (Y &AMP;#124; N)。|  
+|SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124; N)。|  
 |CREATED|DateTime|创建对象的日期。|  
   
 ## <a name="packagebodies"></a>PackageBodies  
@@ -264,8 +252,8 @@ ms.lasthandoff: 01/17/2018
 |TIMESTAMP|String|指定对象（字符数据）的时间戳。|  
 |STATUS|String|对象的状态（VALID、INVALID 或 N/A）。|  
 |TEMPORARY|String|对象是否是临时对象（当前会话只能看到其放入此对象本身的数据）。|  
-|GENERATED|String|此对象的名称是否由系统生成？ (Y &#124;N)。|  
-|SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124;N)。|  
+|GENERATED|String|此对象的名称是否由系统生成？ (Y &AMP;#124; N)。|  
+|SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124; N)。|  
 |CREATED|DateTime|创建对象的日期。|  
   
 ## <a name="arguments"></a>参数  

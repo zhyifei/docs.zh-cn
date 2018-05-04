@@ -1,31 +1,21 @@
 ---
 title: '&lt;sslStreamSecurity&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-caps.latest.revision: "11"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 65233bf416080212a5c1447cffd329eca1b921f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a86e1aae7ddd5389f098e532ae2c2cc67f4085e3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsslstreamsecuritygt"></a>&lt;sslStreamSecurity&gt;
 表示支持使用 SSL 流的通道安全的自定义绑定元素。  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<绑定 >  
-\<customBinding >  
+\<customBinding>  
 \<绑定 >  
 \<sslStreamSecurity >  
   
@@ -43,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 |特性|描述|  
 |---------------|-----------------|  
 |requireClientCertificate|一个布尔值，指定此绑定是否需要客户端证书。 默认值为 `false`。|  
-|sslProtocols|指定支持哪些 SslProtocols 的 SslProtocols 枚举标志值。 默认值是 Ssl3 &#124;Tls &#124;Tls11 &#124; Tls12。|  
+|sslProtocols|指定支持哪些 SslProtocols 的 SslProtocols 枚举标志值。 默认值是 Ssl3&#124;Tls&#124;Tls11&#124;Tls12。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -61,4 +51,4 @@ ms.lasthandoff: 12/22/2017
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -1,27 +1,17 @@
 ---
-title: "&lt;UseSmallInternalThreadStacks&gt;元素"
-ms.custom: 
+title: '&lt;UseSmallInternalThreadStacks&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UseSmallInternalThreadStacks element
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c96537cad59034578d1284f7dc432e5775f3730b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a11b9a008878e716e9b3d8cd54abe5eb4169672a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt;元素
 请求公共语言运行时 (CLR) 减少内存使用通过指定显式的堆栈大小，创建某些它在内部使用，而不是使用默认堆栈大小适用于这些线程的线程时。  
@@ -50,14 +40,14 @@ ms.lasthandoff: 12/22/2017
 |值|描述|  
 |-----------|-----------------|  
 |true|请求显式的堆栈大小。|  
-|false|使用默认堆栈大小。 这是默认值[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]。|  
+|False|使用默认堆栈大小。 这是默认值[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  

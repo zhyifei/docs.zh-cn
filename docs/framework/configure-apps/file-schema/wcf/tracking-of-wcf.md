@@ -1,31 +1,19 @@
 ---
-title: "WCF 的 &lt;tracking&gt;"
-ms.custom: 
+title: WCF 的 &lt;tracking&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7475c4a083d27e9c34e3662393981297c93580f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f09c8c59bf805ec7a061fba3ebfecd5fb457e402
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttrackinggt-of-wcf"></a>WCF 的 &lt;tracking&gt;
 表示一个配置节，用于定义工作流服务的跟踪设置。  
   
  在工作流跟踪和其配置的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[工作流配置跟踪](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<跟踪 >  
   
 ## <a name="syntax"></a>语法  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 |元素|描述|  
 |-------------|-----------------|  
 |[\<参与者 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|定义参与者的配置元素的集合，这些订阅跟踪记录。 跟踪参与者包含用于处理跟踪记录中负载的逻辑（例如，它们可以选择向某个文件中写入）。|  
-|[\<trackingProfile >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|一个跟踪配置文件，用于筛选从工作流实例发出的跟踪记录。|  
+|[\<trackingProfile>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|一个跟踪配置文件，用于筛选从工作流实例发出的跟踪记录。|  
   
 ### <a name="parent-elements"></a>父元素  
   

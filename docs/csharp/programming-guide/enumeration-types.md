@@ -1,8 +1,9 @@
 ---
-title: "枚举类型（C# 编程指南）"
+title: 枚举类型（C# 编程指南）
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cdaa609acfa34f3b0b3073d88f09fe735d48e9a2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="enumeration-types-c-programming-guide"></a>枚举类型（C# 编程指南）
 
@@ -47,7 +48,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 - 明确为客户端代码指定对变量有效的值。
 
-- 在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中，IntelliSense 列出了定义的值。
+- 在 Visual Studio 中，IntelliSense 列出了定义的值。
 
 如果未为枚举器列表中的元素指定值，则值将自动按 1 递增。 在上例中，`Day.Sunday` 的值为 0，`Day.Monday` 的值为 1，依此类推。 创建新的 `Day` 对象时，如果没有明确为其分配值，它将具有默认值 `Day.Sunday` (0)。 创建枚举时，请选择最有逻辑的默认值，并为其分配值零。 这将导致所有枚举都具有默认值（如果未在创建时显式分配值）。
 

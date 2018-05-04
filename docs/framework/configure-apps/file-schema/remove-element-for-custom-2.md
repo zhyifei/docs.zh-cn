@@ -1,10 +1,6 @@
 ---
-title: "&lt;删除&gt;NameValueSectionHandler 和 DictionarySectionHandler 元素"
+title: '&lt;删除&gt;NameValueSectionHandler 和 DictionarySectionHandler 元素'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 27b01120cb279dc23b3b081e35f17addc6d1897d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61f1c98d3f12b5aa1d25595ca28328602683b073
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<删除 > 来 NameValueSectionHandler 和 DictionarySectionHandler 元素
 
@@ -46,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 
 | 元素 | 描述 |
 | ------- | ------------|
-| [**\<sectionName >**元素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定义使用的自定义配置节设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。 |
+| [**\<sectionName >** 元素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定义使用的自定义配置节设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -54,13 +47,13 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="remarks"></a>备注
 
-你可以使用**\<删除 >**元素以删除从应用程序在配置文件层次结构中较高级别定义的设置。
+你可以使用**\<删除 >** 元素以删除从应用程序在配置文件层次结构中较高级别定义的设置。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用**\<删除 >**删除先前在计算机配置文件中定义的设置的应用程序配置文件中的元素。
+下面的示例演示如何使用**\<删除 >** 删除先前在计算机配置文件中定义的设置的应用程序配置文件中的元素。
 
-下面的计算机配置文件代码声明部分 **\<mySection >**并添加两个设置`key1`和`key2`，到它：
+下面的计算机配置文件代码声明部分 **\<mySection >** 并添加两个设置`key1`和`key2`，到它：
 
 ```xml
 <!-- Machine.config file -->

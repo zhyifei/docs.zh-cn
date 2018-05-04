@@ -1,30 +1,18 @@
 ---
 title: '&lt;discoveryEndpoint&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 51caf46f85e7edd1f8e4b9a08ab6a1198ccd9c79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a352fbfced08001f76dceaff283d6bca25f56f9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdiscoveryendpointgt"></a>&lt;discoveryEndpoint&gt;
 
 此配置元素定义具有固定发现协定的标准终结点。 将此元素添加到服务配置后，该元素将指定侦听发现消息的位置。 将此元素添加到客户端配置后，该元素将指定发送发现查询的位置。  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<standardEndpoints >  
   
 ## <a name="syntax"></a>语法

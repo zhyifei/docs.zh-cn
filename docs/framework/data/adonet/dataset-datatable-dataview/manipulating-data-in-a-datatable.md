@@ -1,24 +1,12 @@
 ---
-title: "操作数据表中的数据"
-ms.custom: 
+title: 操作数据表中的数据
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: eb4ecf8996836fde443216f1d9225e8f113b0b7f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f21ac216ed69db99001e324eb34cacf1254fcf6e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manipulating-data-in-a-datatable"></a>操作数据表中的数据
 在 <xref:System.Data.DataTable> 中创建 <xref:System.Data.DataSet> 之后，您执行的活动可以与使用数据库中的表时执行的活动相同。 您可以添加、查看、编辑和删除表中的数据；可以监视错误和事件；并且可以查询表中的数据。 当在中修改数据**DataTable**，你还可以验证更改是否正确，并确定是否以编程方式接受或拒绝更改。  

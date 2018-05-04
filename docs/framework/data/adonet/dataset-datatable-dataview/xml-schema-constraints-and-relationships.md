@@ -1,24 +1,12 @@
 ---
-title: "XML 架构约束和关系"
-ms.custom: 
+title: XML 架构约束和关系
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e450954e4b0e51057e98dd329fe26c38f0ebbb05
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b62b6bafa9ceeafd250e722314c4bd6c594bf82
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML 架构约束和关系
 在 XML 架构定义语言 (XSD) 架构中，你可以指定约束 (唯一的键和 keyref 约束) 和关系 (使用**msdata: relationship**批注)。 本主题说明如何解释在 XML 架构中指定的约束和关系，以生成 <xref:System.Data.DataSet>。  
@@ -195,7 +183,7 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ..RelatedColumns: OrderNumber  
 ```  
   
- 如果引用嵌套表的 keyref 约束包含**msdata: isnested ="true"**批注，**数据集**将创建单个嵌套的关系基于 keyref 约束和相关的唯一/键约束。  
+ 如果引用嵌套表的 keyref 约束包含**msdata: isnested ="true"** 批注，**数据集**将创建单个嵌套的关系基于 keyref 约束和相关的唯一/键约束。  
   
 ## <a name="see-also"></a>请参阅  
  [从 XML 架构派生数据集关系结构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  

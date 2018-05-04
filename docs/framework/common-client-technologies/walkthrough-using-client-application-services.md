@@ -22,18 +22,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e67d4297ca0fe7028380b6d862f9f86c93bcaa61
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>演练：使用客户端应用程序服务
 本主题介绍如何创建使用客户端应用程序服务对用户进行身份验证并检索用户角色和设置的 Windows 应用程序。  
   
  在本演练中，你将要执行以下任务：  
   
--   创建一个 Windows 窗体应用程序并使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 项目设计器启用和配置客户端应用程序服务。  
+-   创建 Windows 窗体应用程序，并使用 Visual Studio 项目设计器启用和配置客户端应用程序服务。  
   
 -   创建一个简单 ASP.NET Web 服务应用程序，以承载应用程序服务并测试客户端配置。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-create-a-client-application-and-enable-client-application-services"></a>创建客户端应用程序和启用客户端应用程序服务  
   
-1.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，选择“文件”|“新建”|“项目”菜单选项。  
+1.  在 Visual Studio 中，依次选择“文件”&#124;“新建”&#124;“项目”菜单选项。  
   
 2.  在“新建项目”对话框的“项目类型”窗格中，展开“Visual Basic”或“Visual C#”节点，然后选择“Windows”项目类型。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 04/26/2018
   
 4.  将项目 **“名称”** 更改为 `ClientAppServicesDemo`，然后单击 **“确定”**。  
   
-     一个新 Windows 窗体项目随即在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中打开。  
+     此时，新 Windows 窗体项目在 Visual Studio 中打开。  
   
 5.  在 **“项目”** 菜单上，选择 **“ClientAppServicesDemo 属性”**。  
   
@@ -250,7 +250,7 @@ ms.lasthandoff: 04/26/2018
   
 1.  在“解决方案资源管理器”的 ClientAppServicesDemo 项目中，添加对 System.Web 程序集的引用。  
   
-2.  选择 Form1 文件，然后从 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 主菜单中选择“视图”|“代码”。  
+2.  选择“Form1”文件，再依次选择 Visual Studio 主菜单中的“视图”&#124;“代码”。  
   
 3.  在代码编辑器中，将以下语句添加到 Form1 文件顶部：  
   
@@ -331,7 +331,7 @@ ms.lasthandoff: 04/26/2018
   
 5.  在“属性”窗口中，将“(Name)”值指定为 `rememberMeCheckBox`，并将“Text”值指定为 `&Remember me`。  
   
-6.  从 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 主菜单中选择“视图”|“代码”。  
+6.  依次选择 Visual Studio 主菜单中的“视图”&#124;“代码”。  
   
 7.  在代码编辑器中，将以下代码添加到文件顶部：  
   
@@ -371,7 +371,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-change-the-user-interface-based-on-user-role"></a>基于用户角色更改用户界面  
   
-1.  在“解决方案资源管理器”的 ClientAppServicesDemo 项目中，选择 Form1，然后从 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 主菜单中选择“视图”|“设计器”。  
+1.  在“解决方案资源管理器”的 ClientAppServicesDemo 项目中，选择“Form1”，再依次选择 Visual Studio 主菜单中的“视图”&#124;“设计器”。  
   
 2.  在设计器中，从“工具箱”向窗体添加一个 <xref:System.Windows.Forms.Button> 控件。  
   
@@ -407,7 +407,7 @@ ms.lasthandoff: 04/26/2018
  现在可以运行应用程序，并以 employee 身份登录以看到按钮不会出现，然后以 manager 身份登录以看到按钮。  
   
 ## <a name="accessing-web-settings"></a>访问 Web 设置  
- 在下面的过程中，会将一个文本框添加到窗体，然后将它绑定到 Web 设置。 与前面使用身份验证和角色的代码一样，设置代码不直接访问设置提供程序。 而是使用由 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 为项目生成的强类型 `Settings` 类（在 C# 中作为 `Properties.Settings.Default`，在 Visual Basic 中作为 `My.Settings` 访问）。  
+ 在下面的过程中，会将一个文本框添加到窗体，然后将它绑定到 Web 设置。 与前面使用身份验证和角色的代码一样，设置代码不直接访问设置提供程序。 而是使用 Visual Studio 为项目生成的强类型 `Settings` 类（在 C# 中作为 `Properties.Settings.Default` 访问，在 Visual Basic 中作为 `My.Settings` 访问）。  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>在用户界面中使用 Web 设置  
   
@@ -425,7 +425,7 @@ ms.lasthandoff: 04/26/2018
   
      `WebSettingsTestText` 设置随即出现在设计器中，具有默认值 `DefaultText`。 此外，会为项目生成包含 `WebSettingsTestText` 属性的 `Settings` 类。  
   
-5.  在“解决方案资源管理器”的 ClientAppServicesDemo 项目中，选择 Form1，然后从 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 主菜单中选择“视图”|“设计器”。  
+5.  在“解决方案资源管理器”的 ClientAppServicesDemo 项目中，选择“Form1”，再依次选择 Visual Studio 主菜单中的“视图”&#124;“设计器”。  
   
 6.  在设计器中，向窗体添加一个 <xref:System.Windows.Forms.TextBox> 控件。  
   
@@ -510,7 +510,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-enable-offline-mode-in-your-application"></a>在应用程序中启用脱机模式  
   
-1.  在“解决方案资源管理器”的 ClientAppServicesDemo 项目中，选择 Form1，然后从 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 主菜单中选择“视图”|“设计器”。  
+1.  在“解决方案资源管理器”的 ClientAppServicesDemo 项目中，选择“Form1”，再依次选择 Visual Studio 主菜单中的“视图”&#124;“设计器”。  
   
 2.  在设计器中，向窗体添加一个 <xref:System.Windows.Forms.CheckBox> 控件。  
   

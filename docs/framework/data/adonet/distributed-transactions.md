@@ -1,24 +1,12 @@
 ---
-title: "分布式事务"
-ms.custom: 
+title: 分布式事务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c2de777dbd8bf6ac18db95a1cf647d259a252f8d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributed-transactions"></a>分布式事务
 事务是一组相关的任务，作为独立于其他任务的独立单元成功（提交）或失败（中止）。 A*分布式事务*是影响多个资源的事务。 要提交分布式事务，所有参与者都必须保证对数据的任何更改是永久的。 即使发生系统崩溃或其他不可预见的事件，更改也必须是永久的。 即使只有一个参与者无法保证这一点，整个事务也将失败，在事务范围内对数据的任何更改均将回滚。  
@@ -44,7 +32,7 @@ ms.lasthandoff: 01/17/2018
   
  在分布式事务中登记尤其适用于为业务对象建立池连接。 如果业务对象使用打开的连接建立池连接，自动事务登记只有在该连接打开时才会进行。 如果使用池中的业务对象执行多个事务，则该对象的打开连接不自动登记在新启动的事务中。 在这种情况下，可以对该连接禁用自动事务登记，并使用 `EnlistTransaction` 在事务中登记连接。  
   
- `EnlistTransaction`采用单个参数的类型<xref:System.Transactions.Transaction>，它是对现有的事务的引用。 在调用连接的 `EnlistTransaction` 方法之后，所有使用该连接在数据源上进行的修改均将加入事务中。 传递空值将取消该连接在当前分布式事务登记中的登记。 注意，在调用 `EnlistTransaction` 之前连接必须打开。  
+ `EnlistTransaction` 采用单个参数的类型<xref:System.Transactions.Transaction>，它是对现有的事务的引用。 在调用连接的 `EnlistTransaction` 方法之后，所有使用该连接在数据源上进行的修改均将加入事务中。 传递空值将取消该连接在当前分布式事务登记中的登记。 注意，在调用 `EnlistTransaction` 之前连接必须打开。  
   
 > [!NOTE]
 >  在某个事务中显式登记了连接之后，在该事务完成之前，连接将无法取消登记或在另一个事务中登记。  

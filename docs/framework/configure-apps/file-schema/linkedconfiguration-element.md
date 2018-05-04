@@ -1,13 +1,6 @@
 ---
-title: "&lt;linkedConfiguration&gt;元素"
-ms.custom: 
+title: '&lt;linkedConfiguration&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding/linkedConfiguration
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#linkedConfiguration
@@ -18,16 +11,14 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dffff7fefa80f420e61045b21b0e0c1a170e2911
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71769efa1233fc8a693219dc02ae56ea39c164e7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 元素
 
@@ -53,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<assemblyBinding >**元素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定配置级的程序集绑定策略。 |
+| [**\<assemblyBinding >** 元素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定配置级的程序集绑定策略。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -61,10 +52,10 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="remarks"></a>备注
 
- **\<LinkedConfiguration >**元素简化了维护的组件程序集。 如果一个或多个应用程序使用具有配置文件中的已知位置的程序集，可以使用的应用程序使用的程序集的配置文件 **\<linkedConfiguration >**元素以包含程序集配置文件，而不是直接包含配置信息。 组件程序集已维修，更新常见的配置文件提供所有应用程序使用的程序集的更新的配置的信息。
+**\<LinkedConfiguration >** 元素简化了维护的组件程序集。 如果一个或多个应用程序使用具有配置文件中的已知位置的程序集，可以使用的应用程序使用的程序集的配置文件 **\<linkedConfiguration >** 元素以包含程序集配置文件，而不是直接包含配置信息。 组件程序集已维修，更新常见的配置文件提供所有应用程序使用的程序集的更新的配置的信息。
 
 > [!NOTE]
->  **\<LinkedConfiguration >**与 Windows 并排显示清单的应用程序中不支持元素。
+> **\<LinkedConfiguration >** 与 Windows 并排显示清单的应用程序中不支持元素。
 
 以下规则控制的链接的配置文件的使用：
 
@@ -76,9 +67,9 @@ ms.lasthandoff: 12/22/2017
 
 - 所有链接的配置文件合并，以形成一个文件的行为类似`#include`C/c + + 中的指令。
 
--  **\<LinkedConfiguration >**元素允许仅在应用程序配置文件中; 在将被忽略*Machine.config*。
+- **\<LinkedConfiguration >** 元素允许仅在应用程序配置文件中; 在将被忽略*Machine.config*。
 
-- 检测和终止循环引用。 也就是说，如果 **\<linkedConfiguration >**的一系列的配置文件的元素形成循环，循环是检测到，并已停止。
+- 检测和终止循环引用。 也就是说，如果 **\<linkedConfiguration >** 的一系列的配置文件的元素形成循环，循环是检测到，并已停止。
 
 ## <a name="example"></a>示例
 
@@ -94,5 +85,5 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="see-also"></a>请参阅
 
-[**\<assemblyBinding >**元素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+[**\<assemblyBinding >** 元素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
 [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)

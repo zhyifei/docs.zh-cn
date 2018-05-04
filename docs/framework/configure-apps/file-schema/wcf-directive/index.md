@@ -1,29 +1,15 @@
 ---
 title: WCF 指令语法
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 34ea3b412af75f136255c7e95cc4f321bafe075b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 79656391324f6c4ad68ec23c6c905ad8a38c9952
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wcf-directive-syntax"></a>WCF 指令语法
-指定由 .svc 文件中的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 指令用来指挥编译器的设置。 每个指令都可以包含一个或多个特定于该指令的特性（与值成对出现）。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 仅具有 [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 指令。  
+指定由.svc 文件中的 Windows Communication Foundation (WCF) 指令用来指挥编译器的设置。 每个指令都可以包含一个或多个特定于该指令的特性（与值成对出现）。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 仅具有 [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 指令。  
   
 ## <a name="in-this-section"></a>本节内容  
  [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)  

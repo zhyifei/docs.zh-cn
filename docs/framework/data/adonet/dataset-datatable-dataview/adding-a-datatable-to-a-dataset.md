@@ -1,27 +1,15 @@
 ---
-title: "将数据表添加到数据集中"
-ms.custom: 
+title: 将数据表添加到数据集中
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6b72727ac42691b510e52370c937fa40baf6c006
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3554790bb65310031b00ca5fb320aa4c111e1e11
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>将数据表添加到数据集中
 ADO.NET 使您能够创建 <xref:System.Data.DataTable> 对象并将其添加到现有 <xref:System.Data.DataSet> 中。 可以使用 <xref:System.Data.DataTable> 和 <xref:System.Data.DataTable.PrimaryKey%2A> 属性为 <xref:System.Data.DataColumn.Unique%2A> 设置约束信息。  
@@ -33,7 +21,7 @@ ADO.NET 使您能够创建 <xref:System.Data.DataTable> 对象并将其添加到
  [!code-vb[DataWorks Data.DataTableAdd#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableAdd/VB/source.vb#1)]  
   
 ## <a name="case-sensitivity"></a>区分大小写  
- <xref:System.Data.DataSet> 中可以存在两个或两个以上的同名但是大小写不同的表或关系。 在这种情况下，通过名称对表和关系的引用将区分大小写。 例如，如果<xref:System.Data.DataSet>**数据集**包含表**Table1**和**table1**，将引用**Table1**通过与名称**dataSet.Tables["Table1"]**，和**table1**作为**dataSet.Tables["table1"]**。 尝试引用，则将表作为**dataSet.Tables["TABLE1"]**也会生成异常。  
+ <xref:System.Data.DataSet> 中可以存在两个或两个以上的同名但是大小写不同的表或关系。 在这种情况下，通过名称对表和关系的引用将区分大小写。 例如，如果<xref:System.Data.DataSet>**数据集**包含表**Table1**和**table1**，将引用**Table1**通过与名称**dataSet.Tables["Table1"]**，和**table1**作为**dataSet.Tables["table1"]**。 尝试引用，则将表作为**dataSet.Tables["TABLE1"]** 也会生成异常。  
   
  如果只有一个具有特定名称的表或关系，则区分大小写行为不适用。 例如，如果<xref:System.Data.DataSet>只有**Table1**，您可以引用它使用**dataSet.Tables["TABLE1"]**。  
   

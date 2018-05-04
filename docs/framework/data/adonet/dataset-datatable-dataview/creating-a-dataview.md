@@ -1,27 +1,15 @@
 ---
-title: "创建数据视图"
-ms.custom: 
+title: 创建数据视图
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1a8529c317025dbabd9c7467557b244b2f452a77
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d118f97e425782dbdf89c7e5d1eccd4d371b419c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-a-dataview"></a>创建数据视图
 创建 <xref:System.Data.DataView> 的方法有两种。 你可以使用**DataView**构造函数，也可以创建对引用<xref:System.Data.DataTable.DefaultView%2A>属性<xref:System.Data.DataTable>。 **DataView**构造函数可以为空，或它可以采用**DataTable**作为单个参数，或**DataTable**与筛选条件、 排序条件和行状态筛选器。 有关用于与一起使用的其他参数的详细信息**DataView**，请参阅[排序和筛选数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)。  

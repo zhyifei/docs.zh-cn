@@ -1,34 +1,20 @@
 ---
 title: '&lt;httpTransport&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50cbf6521870a54f4f87c3eeb12030d5d7f2f6bb
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cd3a17eee9d4eebbefa880e14aadbc4715a18ac1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 为自定义绑定指定用于传输 SOAP 消息的 HTTP 传输。  
   
  \<system.serviceModel>  
-\<bindings>  
+\<绑定 >  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<httpTransport>  
   
 ## <a name="syntax"></a>语法  
@@ -59,7 +45,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |---------------|-----------------|  
 |allowCookies|一个布尔值，指定客户端是否接受 Cookie 并在今后的请求中传播这些 Cookie。 默认值为 `false`。<br /><br /> 在与使用 Cookie 的 ASMX Web 服务进行交互时，可以使用此属性。 通过这种方式，可以确保从服务器返回的 Cookie 自动复制到客户端今后对该服务的所有请求。|  
 |authenticationScheme|指定用来验证 HTTP 侦听器正在处理的客户端请求的协议。 包括以下有效值：<br /><br /> -Digest： 指定摘要式身份验证。<br />-Negotiate： 协商使用客户端，以确定身份验证方案。 如果客户端和服务器均支持 Kerberos，则使用 Kerberos；否则使用 NTLM。<br />-Ntlm： 指定 NTLM 身份验证。<br />-Basic： 指定基本身份验证。<br />-Anonymous： 指定匿名身份验证。<br /><br /> 默认值为 Anonymous。 此属性的类型为 <xref:System.Net.AuthenticationSchemes>。 此属性只能设置一次。|  
-|bypassProxyOnLocal|一个布尔值，指示是否对本地地址不使用代理服务器。 默认值为 `false`。<br /><br /> 本地地址是指位于本地 LAN 或 Intranet 上的地址。<br /><br /> 如果服务地址以 http://localhost 开头，则 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 总是忽略代理。<br /><br /> 如果希望客户端在与同一台计算机上的服务通话时使用代理，则应使用主机名称而非 localhost。|  
+|bypassProxyOnLocal|一个布尔值，指示是否对本地地址不使用代理服务器。 默认值为 `false`。<br /><br /> 本地地址是指位于本地 LAN 或 Intranet 上的地址。<br /><br /> Windows Communication Foundation (WCF) 总是忽略代理，如果服务地址以开始http://localhost。<br /><br /> 如果希望客户端在与同一台计算机上的服务通话时使用代理，则应使用主机名称而非 localhost。|  
 |hostnameComparisonMode|指定用于分析 URI 的 HTTP 主机名比较模式。 有效值为<br /><br /> -StrongWildcard: （"+"） 与指定的方案、 端口和相对 URI 的上下文中的所有可能的主机名进行匹配。<br />精确： 使用通配符<br />-WeakWildcard: ("*") 与所有可能的主机名的上下文的指定的方案、 端口和相对 UIR 尚未显式匹配或通过强通配符机制匹配。<br /><br /> 默认值为 StrongWildcard。 此属性的类型为 `System.ServiceModel.HostnameComparisonMode`。|  
 |keepAliveEnabled|一个布尔值，指定是否与 Internet 资源建立持久性连接。|  
 |maxBufferSize|一个正整数，指定缓冲区的最大大小。 默认值为 524288。|  
@@ -77,12 +63,12 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
- `httpTransport` 元素是创建实现 HTTP 传输协议的自定义绑定的起始点。 HTTP 是用于互操作性用途的主要传输。 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 支持此传输以确保与其他非 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Web 服务堆栈的互操作性。  
+ `httpTransport` 元素是创建实现 HTTP 传输协议的自定义绑定的起始点。 HTTP 是用于互操作性用途的主要传输。 通过 Windows Communication Foundation (WCF) 以确保与其他非互操作性支持此传输[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]Web 服务堆栈。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.HttpTransportElement>  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>  

@@ -1,24 +1,12 @@
 ---
-title: "LINQ to Entities 查询中的标准查询运算符"
-ms.custom: 
+title: LINQ to Entities 查询中的标准查询运算符
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 94a024081acfcf4b1926f485c6dbfc2f394b418c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a65f759ef51d34cc3ac6d37fe3575b9e89aadf7c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 查询中的标准查询运算符
 在查询中，您可以指定要从数据源检索哪些信息。 查询也可以指定返回信息之前信息的排序、分组和表现方式。 LINQ 提供了一组可在查询中使用的标准查询方法。 这些方法的大多数作用于序列;在此上下文中，序列是其类型实现的对象<xref:System.Collections.Generic.IEnumerable%601>接口或<xref:System.Linq.IQueryable%601>接口。 标准查询运算符查询功能包括筛选、投影、聚合、排序、分组和分页等。 一些更为频繁使用的标准查询运算符包含专用关键字语法，以便可通过查询表达式语法调用。 查询表达式是另一种比基于方法的等式更具可读性的查询表达方法。 查询表达式子句在编译时被转换为对查询方法的调用。 具有等效的查询表达式子句的标准查询运算符的列表，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  

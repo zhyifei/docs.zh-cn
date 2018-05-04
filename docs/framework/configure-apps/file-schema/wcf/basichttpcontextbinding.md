@@ -1,30 +1,18 @@
 ---
 title: '&lt;basicHttpContextBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f754c5f47d7bd1a1f28e5ccb763696b7f73bc7e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fb6388244ea0bfb583c9a0d3ee5a4843727e45a0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbasichttpcontextbindinggt"></a>&lt;basicHttpContextBinding&gt;
 指定一个绑定，该绑定为将通过启用 HTTP Cookie 作为交换机制来进行交换的 <xref:System.ServiceModel.BasicHttpBinding> 提供上下文。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<绑定 >  
 \<basicHttpContextBinding>  
   
 ## <a name="syntax"></a>语法  
@@ -68,7 +56,7 @@ ms.lasthandoff: 01/19/2018
 |特性|描述|  
 |---------------|-----------------|  
 |`allowCookies`|一个布尔值，指示客户端是否接受 Cookie 并在今后的请求中传播这些 Cookie。 默认值为 `false`。<br /><br /> 在与使用 Cookie 的 ASMX Web 服务进行交互时，可以使用此属性。 通过这种方式，可以确保从服务器返回的 Cookie 自动复制到客户端今后对该服务的所有请求。|  
-|`bypassProxyOnLocal`|一个布尔值，指示是否对本地地址不使用代理服务器。 默认值为 `false`。<br /><br /> 如果 Internet 资源具有本地地址，则该资源是本地资源。 本地地址是指位于相同的计算机、本地 LAN 或 Intranet 上的地址，在语法上通过省略句点 (.)（如 URI“http://webserver/”和“http://localhost/”）来标识本地地址。<br /><br /> 通过设置此属性，可以确定在访问本地资源时，采用 BasicHttpBinding 配置的终结点是否使用代理服务器。 如果此属性为 `true`，则对本地 Internet 资源的请求不使用代理服务器。 当此属性设置为 `true` 时，如果希望客户端在与同一台计算机上的服务通话时使用代理，请使用主机名称（而非 localhost）。<br /><br /> 当此属性为 `false` 时，所有 Internet 请求都通过代理服务器发出。|  
+|`bypassProxyOnLocal`|一个布尔值，指示是否对本地地址不使用代理服务器。 默认值为 `false`。<br /><br /> 如果 Internet 资源具有本地地址，则该资源是本地资源。 本地地址是指位于同一台计算机、 本地 LAN 或 intranet 上和标识，语法上通过省略句点 （.） 如 Uri"http://webserver/"和"http://localhost/"。<br /><br /> 通过设置此属性，可以确定在访问本地资源时，采用 BasicHttpBinding 配置的终结点是否使用代理服务器。 如果此属性为 `true`，则对本地 Internet 资源的请求不使用代理服务器。 当此属性设置为 `true` 时，如果希望客户端在与同一台计算机上的服务通话时使用代理，请使用主机名称（而非 localhost）。<br /><br /> 当此属性为 `false` 时，所有 Internet 请求都通过代理服务器发出。|  
 |`closeTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成关闭操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
 |`envelopeVersion`|指定用于通过此绑定处理的消息的 SOAP 版本。 只有 Soap11 是有效值。|  
 |`hostnameComparisonMode`|指定用于分析 URI 的 HTTP 主机名比较模式。 此属性的类型为 <xref:System.ServiceModel.HostNameComparisonMode>，指示在对 URI 进行匹配时，是否使用主机名来访问服务。 默认值为 <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>，表示忽略匹配项中的主机名。|  
@@ -98,7 +86,7 @@ ms.lasthandoff: 01/19/2018
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[\<绑定 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
  此绑定元素提供一个保护级别和一种交换机制，作为 `BasicHttpBinding` 的上下文的一部分。  
@@ -111,5 +99,5 @@ ms.lasthandoff: 01/19/2018
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<绑定 >](../../../../../docs/framework/misc/binding.md)  
  [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)

@@ -1,29 +1,20 @@
 ---
-title: "应用程序设置架构"
-ms.custom: 
+title: 应用程序设置架构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - schema application settings
 - application settings, schema [Windows Forms]
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-caps.latest.revision: "3"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3581c8079132de5f1faad4a01e6b43c8e4833316
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7af6342e9c05fc4e6c1bf4daac59db14ccdf22c7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-settings-schema"></a>应用程序设置架构
 
@@ -35,18 +26,18 @@ ms.lasthandoff: 12/22/2017
 
 | 元素                    | 描述                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | 包含所有**\<设置 >**标记特定于应用程序。                         |
-| **\<g s >**        | 包含所有**\<设置 >**特定于当前用户的标记。                        |
-| **\<设置 >**             | 定义设置。 子 **\<applicationSettings >**或 **\<g s >**。 |
+| **\<applicationSettings >** | 包含所有**\<设置 >** 标记特定于应用程序。                         |
+| **\<g s >**        | 包含所有**\<设置 >** 特定于当前用户的标记。                        |
+| **\<设置 >**             | 定义设置。 子 **\<applicationSettings >** 或 **\<g s >**。 |
 | **\<value>**               | 定义设置的值。 子**\<设置 >**。                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > 元素
 
-此元素包含所有**\<设置 >**是特定于客户端计算机上的应用程序实例的标记。 未定义任何属性。
+此元素包含所有**\<设置 >** 是特定于客户端计算机上的应用程序实例的标记。 未定义任何属性。
 
 ## <a name="usersettings-element"></a>\<g s > 元素
 
-此元素包含所有**\<设置 >**特定于当前正在使用应用程序的用户的标记。 未定义任何属性。
+此元素包含所有**\<设置 >** 特定于当前正在使用应用程序的用户的标记。 未定义任何属性。
 
 ## <a name="setting-element"></a>\<设置 > 元素
 

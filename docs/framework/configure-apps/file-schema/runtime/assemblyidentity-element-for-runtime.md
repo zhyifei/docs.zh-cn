@@ -1,13 +1,6 @@
 ---
-title: "&lt;assemblyIdentity&gt;元素&lt;运行时&gt;"
-ms.custom: 
+title: '&lt;assemblyIdentity&gt;元素&lt;运行时&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#assemblyIdentity
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 0dadf0e07f5e3a9f9152ae7cd57c62721402bff0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d985d1620b7dec324c0113bcd5652cede044950
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;元素&lt;运行时&gt;
 包含有关程序集的标识信息。  
@@ -55,7 +46,7 @@ culture="assembly culture"/>
 |`name`|必需的特性。<br /><br /> 程序集的名称|  
 |`culture`|可选特性。<br /><br /> 一个字符串，指定的语言和国家/地区的程序集。|  
 |`publicKeyToken`|可选特性。<br /><br /> 一个十六进制值，指定的程序集的强名称。|  
-|`processorArchitecture`|可选特性。<br /><br /> 指定包含特定于处理器的代码程序集的处理器体系结构的值"x86"、"amd64"、"msil"或"ia64"之一。 值不区分大小写。 如果该特性被赋予任何其他值，整个`<assemblyIdentity>`元素将被忽略。 请参阅<xref:System.Reflection.ProcessorArchitecture>。|  
+|`processorArchitecture`|可选特性。<br /><br /> 指定包含特定于处理器的代码程序集的处理器体系结构的值"x86"、"amd64"、"msil"或"ia64"之一。 值不区分大小写。 如果该特性被赋予任何其他值，整个`<assemblyIdentity>`元素将被忽略。 请参阅 <xref:System.Reflection.ProcessorArchitecture>。|  
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture 属性  
   
@@ -79,7 +70,7 @@ culture="assembly culture"/>
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 每个 **\<dependentAssembly >**元素都必须有一个 **\<assemblyIdentity >**子元素。  
+ 每个 **\<dependentAssembly >** 元素都必须有一个 **\<assemblyIdentity >** 子元素。  
   
  如果`processorArchitecture`属性是否存在、`<assemblyIdentity>`元素仅适用于具有相应的处理器体系结构的程序集。 如果`processorArchitecture`属性不存在，`<assemblyIdentity>`元素可以应用于任何处理器体系结构包含的程序集。  
   

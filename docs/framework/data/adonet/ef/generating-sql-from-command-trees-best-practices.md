@@ -1,26 +1,12 @@
 ---
 title: 从命令目录树生成 SQL - 最佳做法
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>从命令目录树生成 SQL - 最佳做法
 输出查询命令目录树高度模拟可使用 SQL 表示的查询。 但是，对于提供程序编写者而言，从输出命令目录树生成 SQL 还是存在一些常见的难题。 本主题讨论这些难题。 在下一主题中，示例提供程序将演示如何解决这些难题。  

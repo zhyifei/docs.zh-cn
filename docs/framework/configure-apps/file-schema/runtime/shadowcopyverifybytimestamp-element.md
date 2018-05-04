@@ -1,27 +1,17 @@
 ---
-title: "&lt;shadowCopyVerifyByTimestamp&gt;元素"
-ms.custom: 
+title: '&lt;shadowCopyVerifyByTimestamp&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - <shadowCopyTimeStampVerification> element
 - shadowCopyTimeStampVerification element
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bae98c91c8a9b68ec7c21b142bc9f004c7bc1394
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2439a4812163562a73bd3520e65b9973e666a863
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltshadowcopyverifybytimestampgt-element"></a>&lt;shadowCopyVerifyByTimestamp&gt;元素
 指定卷影复制是否使用 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 中引入的默认启动行为，或恢复到 .NET Framework 的早期版本的启动行为。  
@@ -50,14 +40,14 @@ ms.lasthandoff: 12/22/2017
 |值|描述|  
 |-----------|-----------------|  
 |true|在启动时，将复制仅以来它们上次复制到卷影复制目录，已更新的程序集。 这是默认值[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]。|  
-|false|恢复到的启动行为的以前版本的.NET Framework 中，这是将在启动的所有文件复制。|  
+|False|恢复到的启动行为的以前版本的.NET Framework 中，这是将在启动的所有文件复制。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  

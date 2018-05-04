@@ -1,9 +1,6 @@
 ---
-title: "&lt;源&gt;元素"
+title: '&lt;源&gt;元素'
 ms.date: 09/29/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#source
@@ -13,12 +10,11 @@ helpviewer_keywords:
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d6c5c65be8a540fdbba64d5a604c0963f9797e0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7c2a71b129a0ad7d1c2a72b18b8a69a111f9495
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsourcegt-element"></a>&lt;源&gt;元素
 指定用于启动跟踪消息的跟踪源。  
@@ -56,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  

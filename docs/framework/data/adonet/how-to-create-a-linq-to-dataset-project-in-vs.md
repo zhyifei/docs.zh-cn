@@ -1,24 +1,12 @@
 ---
-title: "如何：在 Visual Studio 中创建 LINQ to DataSet 项目"
-ms.custom: 
+title: 如何：在 Visual Studio 中创建 LINQ to DataSet 项目
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c749cdd56f0c964b84788b05470406234ef3eb0a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 094d766146fe55a865713a4672a2bee6a838ff55
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>如何：在 Visual Studio 中创建 LINQ to DataSet 项目
 不同类型的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 项目需要某些导入的命名空间 (Visual Basic) 或 `using` 指令 (C#) 和引用。 最低要求是对 System.Core.dll 的引用和针对 `using` 的 <xref:System.Linq> 指令。 默认情况下，如果创建一个新的 [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] 项目，这些都可以自动提供。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 还需要对 System.Data.dll 和 System.Data.DataSetExtensions.dll 的引用以及 `Imports` (Visual Basic) 或 `using` (C#) 指令。  
@@ -26,7 +14,7 @@ ms.lasthandoff: 01/19/2018
  如果您要从早期版本的 Visual Studio 升级某个项目，则可能必须手动提供这些与 LINQ 相关的引用。 您可能还必须将项目手动设置为面向 .NET Framework 3.5 版。  
   
 > [!NOTE]
->  如果你要在命令提示符下生成的则必须手动引用中与 LINQ 相关的 Dll `drive` **:**\Program Files\Reference Assemblies\Microsoft\Framework\v3.5。  
+>  如果你要在命令提示符下生成的则必须手动引用中与 LINQ 相关的 Dll `drive` **:** \Program Files\Reference Assemblies\Microsoft\Framework\v3.5。  
   
 ### <a name="to-target-the-net-framework-35"></a>面向 .NET Framework 3.5  
   
@@ -40,7 +28,7 @@ ms.lasthandoff: 01/19/2018
   
     1.  在**编译**属性页中，单击**高级编译选项**，然后选择中的.NET Framework 3.5**目标 Framework （所有配置）**下拉列表。  
   
-4.  上**项目**菜单上，单击**添加引用**，单击**.NET**选项卡上，向下滚动到**System.Core**，请单击它，，然后单击**确定**。  
+4.  上**项目**菜单上，单击**添加引用**，单击 **.NET**选项卡上，向下滚动到**System.Core**，请单击它，，然后单击**确定**。  
   
 5.  向源代码文件或项目中添加用于 `using` 的 <xref:System.Linq> 指令或导入的命名空间。  
   
@@ -52,7 +40,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  在 C# 或 Visual Basic 中，单击**项目**菜单，，然后单击**添加引用**。  
   
-3.  在**添加引用**对话框中，单击**.NET**选项卡上，如果不在最前面。 向下滚动到**System.Data**和**System.Data.DataSetExtensions**并单击它们。 单击**确定**按钮。  
+3.  在**添加引用**对话框中，单击 **.NET**选项卡上，如果不在最前面。 向下滚动到**System.Data**和**System.Data.DataSetExtensions**并单击它们。 单击**确定**按钮。  
   
 4.  向源代码文件或项目中添加用于 `using` 的 <xref:System.Data> 指令或导入的命名空间。 有关详细信息，请参阅[using 指令](~/docs/csharp/language-reference/keywords/using-directive.md)或[如何： 添加或删除已导入命名空间 (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)。  
   

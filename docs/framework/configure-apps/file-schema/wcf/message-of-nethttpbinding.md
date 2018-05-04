@@ -1,33 +1,21 @@
 ---
-title: "&lt;netHttpBinding&gt; 的 &lt;message&gt;"
-ms.custom: 
+title: '&lt;netHttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17a0043188c36a31dc4ee35e8f5889240b9b7407
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 6e4cd2c000d577e26b54e09f24279e0fd74afcf1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; 的 &lt;message&gt;
 定义的消息级安全性设置[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<绑定 >  
 \<netHttpBinding>  
-\<binding>  
-\<security>  
+\<绑定 >  
+\<安全 >  
 \<message>  
   
 ## <a name="syntax"></a>语法  
@@ -52,7 +40,7 @@ ms.lasthandoff: 01/19/2018
   
 |值|描述|  
 |-----------|-----------------|  
-|UserName|-要求客户端在使用 UserName 凭据向服务器进行身份验证。 需要使用 <`clientCredentials`> 元素来指定此凭据。<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]不支持发送密码摘要，也使用派生密钥的密码并使用这样的密钥来提供消息安全性。 因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保传输的安全性。 对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
+|UserName|-要求客户端在使用 UserName 凭据向服务器进行身份验证。 需要使用 <`clientCredentials`> 元素来指定此凭据。<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不支持发送密码摘要，也使用派生密钥的密码并使用这样的密钥来提供消息安全性。 因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保传输的安全性。 对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
 |证书|要求使用证书向服务器对客户端进行身份验证。 在此情况下，需要使用 <`clientCredentials`> 和 <`clientCertificate`> 来指定客户端凭据。 此外，在使用消息安全模式时，需要向客户端提供服务证书。 在这种情况下需要使用指定服务凭据<xref:System.ServiceModel.Description.ClientCredentials>类或`ClientCredentials`行为元素并指定服务证书使用\<serviceCertificate > serviceCredentials 的元素。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -141,4 +129,4 @@ ms.lasthandoff: 01/19/2018
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<绑定 >](../../../../../docs/framework/misc/binding.md)

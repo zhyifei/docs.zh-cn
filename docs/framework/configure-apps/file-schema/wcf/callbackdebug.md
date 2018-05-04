@@ -1,31 +1,19 @@
 ---
 title: '&lt;callbackDebug&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ccb48efcdd1924ade27220a685e146a7f5eeef76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2103c32112b6c5554d7b510f486d4cbb1349f35d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcallbackdebuggt"></a>&lt;callbackDebug&gt;
-指定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 回调对象的服务调试。  
+指定服务调试 Windows Communication Foundation (WCF) 回调对象。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<行为 >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<行为 >  
 \<callbackDebug >  
   

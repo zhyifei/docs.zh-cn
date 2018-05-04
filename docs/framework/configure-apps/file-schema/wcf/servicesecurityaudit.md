@@ -1,34 +1,22 @@
 ---
 title: '&lt;serviceSecurityAudit&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25355acfd7bc82ccff33f68a690f3f02d1235438
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 293cd3118ace2e073933e4c124664c775902e7d8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 指定用于在服务操作过程中启用安全事件审核的设置。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行为 >  
 \<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>语法  
@@ -60,10 +48,10 @@ ms.lasthandoff: 03/08/2018
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="remarks"></a>备注  
- 此配置元素用于审核 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 身份验证事件。 当启用了审核时，可对成功或失败的身份验证尝试（或这两者）进行审核。 事件会写入到三个事件日志之一：操作系统版本的应用程序日志、安全日志或默认日志。 可以使用 Windows 事件查看器查看所有事件日志。  
+ 此配置元素用于审核 Windows Communication Foundation (WCF) 身份验证事件。 当启用了审核时，可对成功或失败的身份验证尝试（或这两者）进行审核。 事件会写入到三个事件日志之一：操作系统版本的应用程序日志、安全日志或默认日志。 可以使用 Windows 事件查看器查看所有事件日志。  
   
  使用此配置元素的详细示例，请参阅[服务审核行为](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)。  
   

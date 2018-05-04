@@ -1,33 +1,21 @@
 ---
-title: "&lt;clientCredentials&gt; 的 &lt;serviceCertificate&gt; 元素"
-ms.custom: 
+title: '&lt;clientCredentials&gt; 的 &lt;serviceCertificate&gt; 元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f6f52eae3ed9ac3236f54c62ce8712656392f0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d54c39fd681e0686e419b7b73243703e9184d1f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 的 &lt;serviceCertificate&gt; 元素
 指定客户端对服务进行身份验证时使用的证书。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<行为 >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<行为 >  
-\<c a t e >  
+\<clientCredentials>  
 \<serviceCertificate >  
   
 ## <a name="syntax"></a>语法  
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<c a t e >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定客户端用于向服务证明自己的身份的凭据。|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定客户端用于向服务证明自己的身份的凭据。|  
   
 ## <a name="remarks"></a>备注  
  此配置元素指定客户端在验证使用 SSL 身份验证的服务所出示的证书时使用的设置。 它还包含在客户端上显式配置为对发送给使用消息安全的服务的消息进行加密的服务的所有证书。  

@@ -1,14 +1,6 @@
 ---
-title: "&lt;删除&gt;webRequestModules （网络设置） 的元素"
-ms.custom: 
+title: '&lt;删除&gt;webRequestModules （网络设置） 的元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#remove
@@ -18,17 +10,14 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 391e5f2a7d9d8076ba9e9a3057e3d8899e2ce672
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: e20d414b3be41fc175037c6691518adf6a424b69
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;删除&gt;webRequestModules （网络设置） 的元素
 从应用程序中删除自定义的 Web 请求模块。  
@@ -89,6 +78,6 @@ ms.lasthandoff: 03/19/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.WebRequest>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

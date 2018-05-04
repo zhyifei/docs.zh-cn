@@ -1,29 +1,19 @@
 ---
 title: '&lt;system.identityModel&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
-caps.latest.revision: "5"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e5d26ab2ff3207b0905c33ba237bf71e623a103d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6faeadc9fcdffc8c8aa14fdcc744896b45a941f0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
 提供用于启用应用程序中的 Windows Identity Foundation (WIF) 选项的配置。  
   
- \<system.identityModel >  
+ \<system.identityModel>  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`<configuration>`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   

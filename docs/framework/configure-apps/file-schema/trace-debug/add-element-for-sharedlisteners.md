@@ -1,14 +1,6 @@
 ---
-title: "&lt;添加&gt;元素&lt;sharedListeners&gt;"
-ms.custom: 
+title: '&lt;添加&gt;元素&lt;sharedListeners&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
 helpviewer_keywords:
@@ -16,20 +8,17 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 490e58d4514667c5ec781dd76644012b0c97509d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27d83ba706b4d93b4ac5426bf5bae59b4bfc0d9a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;添加&gt;元素&lt;sharedListeners&gt;
-将侦听器添加到 `sharedListeners` 集合中。 `sharedListeners`是的侦听器集合的任何[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以引用。  默认情况下，侦听器中`sharedListeners`集合不都将置于`Listeners`集合。 它们肯定会添加到名称[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不能获取侦听器`sharedListeners`在运行时在代码中的集合。  
+将侦听器添加到 `sharedListeners` 集合中。 `sharedListeners` 是的侦听器集合的任何[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以引用。  默认情况下，侦听器中`sharedListeners`集合不都将置于`Listeners`集合。 它们肯定会添加到名称[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不能获取侦听器`sharedListeners`在运行时在代码中的集合。  
   
  \<configuration>  
 \<system.diagnostics >  
@@ -63,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
@@ -90,7 +79,7 @@ ms.lasthandoff: 12/22/2017
  计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<add>`要添加元素<xref:System.Diagnostics.TextWriterTraceListener>`textListener`到`sharedListeners`集合。   `textListener`按名称添加到`Listeners`跟踪源集合`TraceSourceApp`。 `textListener`侦听器将跟踪输出写入文件 myListener.log。  
+ 下面的示例演示如何使用`<add>`要添加元素<xref:System.Diagnostics.TextWriterTraceListener>`textListener`到`sharedListeners`集合。   `textListener` 按名称添加到`Listeners`跟踪源集合`TraceSourceApp`。 `textListener`侦听器将跟踪输出写入文件 myListener.log。  
   
 ```xml  
 <configuration>  

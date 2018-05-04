@@ -1,24 +1,14 @@
 ---
 title: '&lt;federationConfiguration&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0014e0224221cd5143709ba0a5b38f10e457b494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 44014d620dcd03e055eb58b50a1428b8e1b41186
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
 配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) 时使用联合身份验证通过 WS 联合身份验证协议。 配置<xref:System.Security.Claims.ClaimsAuthorizationManager>时使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类以提供基于声明的访问控制。  
@@ -76,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  如果多个名为`<federationConfiguration>`元素是否存在以及是否未命名`<federationConfiguration>`元素存在，将引发异常。  
   
- 通常情况下，只有一个`<federationConfiguration>`定义部分。 本部分是默认联合身份验证配置。 你可以指定多个唯一地命名`<federationConfiguration>`元素; 但是，在这种情况下，如果你想要加载未命名以外的联合身份验证配置，则必须提供的处理程序。 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>事件并设置<xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType>到处理程序内的属性<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>对象从相应的值初始化`<federationConfiguration>`配置文件中的元素。  
+ 通常情况下，只有一个`<federationConfiguration>`定义部分。 本部分是默认联合身份验证配置。 你可以指定多个唯一地命名`<federationConfiguration>`元素; 但是，在这种情况下，如果你想要加载未命名以外的联合身份验证配置，则必须提供的处理程序。 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> 事件并设置<xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType>到处理程序内的属性<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>对象从相应的值初始化`<federationConfiguration>`配置文件中的元素。  
   
  `<federationConfiguration>`元素表示由<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement>类。 配置对象本身由<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>类。 单个<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>实例上设置<xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>属性，并提供应用程序的联合的配置。  
   

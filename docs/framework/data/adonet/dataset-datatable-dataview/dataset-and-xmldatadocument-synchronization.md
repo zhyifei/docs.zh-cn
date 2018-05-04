@@ -1,27 +1,15 @@
 ---
-title: "数据集和 XmlDataDocument 同步"
-ms.custom: 
+title: 数据集和 XmlDataDocument 同步
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9cdfdf01b950d13ba77f76b126fe6d2ff430ef07
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cb16d4fae5dc153361fe2cb31cfd6af9b4b83c68
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>数据集和 XmlDataDocument 同步
 ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。 若要实现分层数据访问，可以使用 .NET Framework 中的可用 XML 类。 以前，数据的这两种表示形式是单独使用的。 不过，.NET Framework 允许对通过数据的关系和分层表示的实时同步访问**数据集**对象和<xref:System.Xml.XmlDataDocument>对象，分别。  
@@ -30,7 +18,7 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
   
  有多种方法可以同步**数据集**与**XmlDataDocument**。 你可以：  
   
--   填充**数据集**使用架构 （即关系结构） 和数据，然后使其与新同步**XmlDataDocument**。 这将提供现有关系数据的分层视图。 例如:  
+-   填充**数据集**使用架构 （即关系结构） 和数据，然后使其与新同步**XmlDataDocument**。 这将提供现有关系数据的分层视图。 例如：  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  

@@ -1,13 +1,6 @@
 ---
-title: "&lt;基本代码&gt;元素"
-ms.custom: 
+title: '&lt;基本代码&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#codeBase
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/codeBase
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 272a4262295b5dd67414dd0ef6523f90b2125836
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b614546e8ed23cc1a5e169a33fb5878695037ae
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcodebasegt-element"></a>&lt;基本代码&gt;元素
 指定公共语言运行时可在其中找到程序集。  
@@ -73,7 +64,7 @@ href="URL of assembly"/>
 |`System.web`|为 ASP.NET 配置节指定根元素。|  
   
 ## <a name="remarks"></a>备注  
- 若要使用运行时**\<基本代码 >**设置的计算机配置文件或发布服务器策略文件中，该文件还必须重定向程序集版本。 应用程序配置文件可以具有的基本代码设置，而无需将程序集版本重定向。 确定要使用的程序集版本时后, 运行时将应用于确定的版本的文件的基本代码设置。 如果指示没有基本代码，运行时探测程序集按照通常的方式。  
+ 若要使用运行时**\<基本代码 >** 设置的计算机配置文件或发布服务器策略文件中，该文件还必须重定向程序集版本。 应用程序配置文件可以具有的基本代码设置，而无需将程序集版本重定向。 确定要使用的程序集版本时后, 运行时将应用于确定的版本的文件的基本代码设置。 如果指示没有基本代码，运行时探测程序集按照通常的方式。  
   
  如果集具有强名称，可以任意位置是基本代码设置，本地 intranet 或 Internet 上。 如果程序集私有程序集，基本代码设置必须是相对于应用程序的目录的路径。  
   

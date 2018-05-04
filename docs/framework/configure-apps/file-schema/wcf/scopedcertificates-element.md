@@ -1,33 +1,21 @@
 ---
-title: "&lt;scopedCertificates&gt; 元素"
-ms.custom: 
+title: '&lt;scopedCertificates&gt; 元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 719a52fb1a0f558bda2b337e1402f8aecafc6b8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; 元素
 表示特定服务为身份验证提供的 X.509（作用域）证书的集合。 此集合通常用于指定联合方案中安全令牌服务的服务证书。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<行为 >  
 endpointBehaviors 部分  
 \<行为 >  
-\<c a t e >  
+\<clientCredentials>  
 \<serviceCertificate >  
 \<scopedCertificates > 元素  
 \<添加 > 元素\<scopedCertificates >  
@@ -70,7 +58,7 @@ endpointBehaviors 部分
  有关详细信息，请参阅的"作用域证书"部分[如何： 创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例指定一个服务证书，以便供客户端在通过 HTTP 协议与域名为 http://www.contoso.com 的终结点通信时使用。  
+ 下面的示例指定客户端在其域名与终结点进行通信时要使用的服务证书http://www.contoso.com通过 HTTP 协议。  
   
 ```xml  
 <serviceCertificate>  
