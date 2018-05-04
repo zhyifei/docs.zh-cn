@@ -1,27 +1,15 @@
 ---
-title: "从数据视图中创建数据表"
-ms.custom: 
+title: 从数据视图中创建数据表
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1dff746ff4767f2d0f9a9ab66275ee4d9fc8d3e0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a389f75ca6516f8bad55934717bee056aca65f1f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>从数据视图中创建数据表
 如果从数据源检索到数据，并且使用该数据填充了 <xref:System.Data.DataTable>，则在可能需要对返回的数据进行排序和筛选，或者通过其他方式限制返回的数据时，不必重新检索该数据。 <xref:System.Data.DataView> 类可以实现此目的。 此外，如果你需要创建一个新<xref:System.Data.DataTable>从<xref:System.Data.DataView>，你可以使用<xref:System.Data.DataView.ToTable%2A>方法将所有行和列或者数据的子集复制到新<xref:System.Data.DataTable>。 <xref:System.Data.DataView.ToTable%2A> 方法使您可以：  

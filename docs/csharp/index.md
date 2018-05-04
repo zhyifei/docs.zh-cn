@@ -1,31 +1,25 @@
 ---
 title: C# 指南
 description: 了解 C# 指南如何帮助新的开发人员或经验丰富的专家深入了解 C#。
-author: BillWagner
 ms.date: 01/30/2018
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 helpviewer_keywords:
 - documentation [C#]
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.author: wiwagn
-ms.openlocfilehash: bfdde4c3c42943cd26c499f6f9761439fb85cc4e
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 598ddfbe16a1a09326d811b4eafcf87f3ca6e971
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-guide"></a>C# 指南
 
 C# 指南提供了许多有关 C# 语言的资源。 此网站面向许多不同的受众群体。 你可能希望探索本指南的不同部分，具体视你的编程经验或 C# 语言和 .NET 使用经验而定。
 
 * 对于从未接触过编程的开发者：
-  * 请从[快速入门](quick-starts/index.md)部分着手。 这些快速入门可让你在浏览器中交互式浏览 C# 语言。 从这里你可以转到[教程](tutorials/index.md)部分。 这些教程介绍了如何从头开始创建 C# 程序。 其中分步介绍了如何创建程序， 同时还解释了语言概念以及如何自行生成 C# 程序。 如果希望先阅读概述内容，请尝试阅读 [C# 语言介绍](tour-of-csharp/index.md)。 其中介绍了 C# 语言的概念。 阅读完这一部分后，你将会对 C# 语言有一个基本的了解，可以尝试阅读各个教程或自行生成一些程序。
+  * 请从[快速入门](quick-starts/index.md)部分着手。 这些快速入门可让你在浏览器中交互式浏览 C# 语言。 从这里你可以转到[教程](tutorials/index.md)部分。 这些教程介绍了如何从头开始创建 C# 程序。 其中分步介绍了如何创建程序。 同时还解释了语言概念以及如何自行生成 C# 程序。 如果希望先阅读概述内容，请尝试阅读 [C# 语言介绍](tour-of-csharp/index.md)。 其中介绍了 C# 语言的概念。 阅读完这一部分后，你将会对 C# 语言有一个基本的了解，可以尝试阅读各个教程或自行生成一些程序。
 
 * 对于刚开始接触 C# 的开发者：
   * 如果以前从事过开发工作，但是刚开始接触 C#，请阅读 [C# 语言介绍](tour-of-csharp/index.md)。 其中涵盖了该语言的基本语法和结构，你可以通过“语言介绍部分”将 C# 与你用过的其他语言进行比较。 还可以浏览[教程](tutorials/index.md)，尝试生成基本的 C# 程序。

@@ -1,24 +1,12 @@
 ---
-title: "&lt;serviceBehaviors&gt; 的 &lt;behavior&gt;"
-ms.custom: 
+title: '&lt;serviceBehaviors&gt; 的 &lt;behavior&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b86d685cd3b5fc26f2df2d3e722a908c04422d50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c8716b7de5b9901683a5c111f66f14f26f7f9923
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbehaviorgt-of-ltservicebehaviorsgt"></a>&lt;serviceBehaviors&gt; 的 &lt;behavior&gt;
 `behavior` 元素包含服务行为的设置集合。 每个行为都按其 `name` 进行索引。 服务可以将链接到通过此名称使用每个行为`behaviorConfiguration`属性[\<终结点 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)元素。 这样，终结点可以共享公共行为配置而不用重新定义设置。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无名称的绑定和行为的详细信息，请参阅[简化配置](../../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
@@ -26,9 +14,9 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  行为元素特定于 Windows 工作流活动，如[ \<sendMessageChannelCache >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md)元素中, 所述[\<行为 > 的\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)页。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<行为 >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<行为 >  
   
 ## <a name="syntax"></a>语法  
@@ -61,14 +49,14 @@ ms.lasthandoff: 12/22/2017
 |[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md)|提供对路由服务的运行时访问以允许对路由配置进行动态修改。|  
 |[\<serviceAuthenticationManager >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthenticationmanager.md)|提供一个工作流配置元素，该元素在服务级别建立传输、消息或发起方的有效性。|  
 |[\<serviceAuthorization >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)|指定用于授予服务操作访问权限的设置。|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。|  
-|[\<serviceDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)|指定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务的调试和帮助信息功能。|  
+|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。|  
+|[\<serviceDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)|指定 Windows Communication Foundation (WCF) 服务的调试和帮助信息的功能。|  
 |[\<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)|指定服务终结点的可发现性。|  
 |[\<serviceMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)|指定服务元数据的发布和相关信息。|  
 |[\<serviceSecurityAudit >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)|指定用于在服务操作过程中启用安全事件审核的设置。|  
 |[\<serviceThrottling >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)|指定 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务的限制机制。|  
 |[\<serviceTimeouts >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicetimeouts.md)|指定服务的超时。|  
-|[\<workflowRuntime >](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|指定用于承载基于工作流的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务的 WorkflowRuntime 实例的设置。|  
+|[\<workflowRuntime>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|指定用于承载基于工作流的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务的 WorkflowRuntime 实例的设置。|  
 |[\<useRequestHeadersForMetadataAddress >](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|允许从请求消息头中检索元数据地址信息。|  
   
 ### <a name="parent-elements"></a>父元素  

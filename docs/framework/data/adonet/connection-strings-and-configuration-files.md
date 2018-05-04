@@ -1,27 +1,15 @@
 ---
-title: "连接字符串和配置文件"
-ms.custom: 
+title: 连接字符串和配置文件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a4876d3b794282852b364f58cc84b58546567d80
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>连接字符串和配置文件
 在应用程序代码中嵌入连接字符串可能导致安全漏洞和维护问题。 可以使用查看编译到应用程序源代码的加密的连接字符串[Ildasm.exe （IL 反汇编程序）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)工具。 此外，如果连接字符串发生更改，则必须重新编译应用程序。 因此，我们建议您将连接字符串存储在应用程序配置文件中。  

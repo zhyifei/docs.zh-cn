@@ -1,32 +1,22 @@
 ---
-title: "“变量”&lt;&gt;"
-ms.custom: 
+title: “变量”&lt;&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: da0fd144-dda9-4613-b650-fe6325076513
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49255241e7adc187c2df68407cae05573fc3d4d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0dc83951bdf894d0061971ae4b79854a7c8bcd8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltvariablesgt"></a>“变量”&lt;&gt;
 表示与此活动查询关联的变量的集合。  
   
  有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<跟踪 >  
-\<trackingProfile >  
+\<trackingProfile>  
 \<工作流 >  
 \<activityStateQueries >  
 \<activityStateQuery >  

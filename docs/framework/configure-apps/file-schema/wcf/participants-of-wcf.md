@@ -1,31 +1,19 @@
 ---
-title: "WCF 的 &lt;participants&gt;"
-ms.custom: 
+title: WCF 的 &lt;participants&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d99dbddc-0057-4e18-8e42-f91411d39970
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 881ee8486d7939e743613fb8a0261a4fcfe7499f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 093ed0ed51c068fe0a999dc5f7b7a3adec39ae77
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltparticipantsgt-of-wcf"></a>WCF 的 &lt;participants&gt;
 配置一列跟踪参与者，它们侦听直接从运行时发出的跟踪记录，并按照它们的任何方式处理这些记录。 这包括写入特定输出（例如，文件、控制台、ETW）、处理/聚合记录或可能需要的任何其他组合。  
   
  工作流跟踪和跟踪参与者的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[跟踪参与者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)。  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<跟踪 >  
 \<参与者 >  
   

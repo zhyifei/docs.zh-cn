@@ -1,26 +1,14 @@
 ---
-title: "&lt;useLegacyJit&gt;元素"
-ms.custom: 
+title: '&lt;useLegacyJit&gt;元素'
 ms.date: 04/26/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-bcl
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d2a71e44db2d6e85ae730f4603bf191f54525c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd0ae1a44b41ddcae2149bcf685871a37dd01b06
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt;元素
 
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="enabled-attribute"></a>enabled 的特性  
   
-| “值” | 描述                                                                                                         |  
+| 值 | 描述                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
 | 0     | 公共语言运行时使用新的 64 位 JIT 编译器包含在.NET Framework 4.6 和更高版本。 |  
 | 1     | 公共语言运行时使用较旧的 64 位 JIT 编译器。                                                     |  
@@ -61,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-| 元素         | 说明                                                                                                       |  
+| 元素         | 描述                                                                                                       |  
 | --------------- | ----------------------------------------------------------------------------------------------------------------- |  
 | `configuration` | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |  
 | `runtime`       | 包含有关运行时初始化选项的信息。                                                        |  

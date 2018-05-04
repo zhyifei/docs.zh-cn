@@ -1,29 +1,17 @@
 ---
 title: '&lt;serviceActivations&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47a7d0984a5fafa7f03a589570e2a1aa2546dd8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c62f2bd1a34aca31ea9f9d5de17840f2967b269c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
-一个配置元素，用于添加可定义虚拟服务激活设置（映射到 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务类型）的设置。 使用此配置元素可以在不使用 .svc 文件的情况下激活承载在 WAS/IIS 中的服务。  
+一个配置元素，您可以添加定义虚拟服务激活设置的设置映射到你的 Windows Communication Foundation (WCF) 服务类型。 使用此配置元素可以在不使用 .svc 文件的情况下激活承载在 WAS/IIS 中的服务。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<serviceHostingEnvironment >  
 \<serviceActivations >  
   

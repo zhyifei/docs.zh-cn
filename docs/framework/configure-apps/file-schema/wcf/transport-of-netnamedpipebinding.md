@@ -1,33 +1,21 @@
 ---
-title: "&lt;netNamedPipeBinding&gt; 的 &lt;transport&gt;"
-ms.custom: 
+title: '&lt;netNamedPipeBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84811c70f2f3608c10d8886900169f804a8c9b62
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9116532c8b4aae2f7539706b97d564444195c79d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; 的 &lt;transport&gt;
 定义命名管道的传输安全设置。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<绑定 >  
 \<netNamedPipeBinding>  
-\<binding>  
-\<security>  
+\<绑定 >  
+\<安全 >  
 \<transport>  
   
 ## <a name="syntax"></a>语法  
@@ -69,4 +57,4 @@ ms.lasthandoff: 01/19/2018
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<绑定 >](../../../../../docs/framework/misc/binding.md)

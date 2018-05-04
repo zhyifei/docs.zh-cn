@@ -1,33 +1,21 @@
 ---
-title: "&lt;allowedAudienceUris&gt; 的 &lt;add&gt;"
-ms.custom: 
+title: '&lt;allowedAudienceUris&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b10a0ef5718197464ffa40126f0a013d82256dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfd18d6af5248e680b9520069fb34c412ee12b3f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltallowedaudienceurisgt"></a>&lt;allowedAudienceUris&gt; 的 &lt;add&gt;
 添加 <xref:System.IdentityModel.Tokens.SamlSecurityToken> 安全令牌的目标 URI，只有在使用该目标 URI 时，<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 实例才会将该令牌视为有效令牌。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<行为 >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<行为 >  
-\<serviceCredentials >  
+\<serviceCredentials>  
 \<issuedTokenAuthentication >  
 \<d d >  
 \<添加 > 元素\<d d >  

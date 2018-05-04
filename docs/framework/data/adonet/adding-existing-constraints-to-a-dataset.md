@@ -1,27 +1,15 @@
 ---
-title: "将现有约束添加到数据集"
-ms.custom: 
+title: 将现有约束添加到数据集
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2f2f6c60197b1d71feb13ca351ad19298e09ea56
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c3c28392a9e4bee0e2f9e0dcf553e13b67c378dd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>将现有约束添加到数据集
 **填充**方法**DataAdapter**填充<xref:System.Data.DataSet>只与表中的列和行从数据源; 但约束通常由设置数据源，**填充**方法不会添加到此架构信息**数据集**默认情况下。 若要填充**数据集**与现有主键约束信息从数据源，可以通过调用**FillSchema**方法**DataAdapter**，或设置**MissingSchemaAction**属性**DataAdapter**到**AddWithKey**之前调用**填充**。 这将确保该主键约束中的**数据集**反映数据源。 外键约束信息不包括，并且必须显式中所示创建[数据表约束](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)。  

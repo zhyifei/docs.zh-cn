@@ -1,23 +1,16 @@
 ---
 title: C# 编译器错误
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: error-reference
 helpviewer_keywords:
 - C# language, compiler errors
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2253183c0dc99ff56d06698420c9f0f8acf8dfef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e67e568b67400807ba7a1668acb6b3a36b4c7f22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-compiler-errors"></a>C# 编译器错误
 一些 C# 编译器错误有对应的主题，其中介绍了导致错误生成的原因，在某些情况下还介绍了错误修复方法。 请执行下列操作之一，查看是否有特定错误消息的相关帮助资料。  
@@ -34,7 +27,7 @@ ms.lasthandoff: 11/21/2017
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [很抱歉，我们没有关于此 C# 错误的具体信息](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)  
  [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)  

@@ -1,24 +1,12 @@
 ---
-title: "CLR 方法至规范函数映射"
-ms.custom: 
+title: CLR 方法至规范函数映射
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 29f0c8e663dad2eaa849137e1d02d24b9cef398b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 07d488eb8caba8309857ef7fba42e67e155363e2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>CLR 方法至规范函数映射
 实体框架提供了一组规范函数（如字符串操作函数和数学函数），这些函数可以实现很多数据库系统通用的功能。 这使开发人员可以面向广泛的数据库系统。 通过查询技术（如 LINQ to Entities）调用时，这些规范函数将转换为要使用的提供程序的相应正确存储区函数。 这样，可以用一种数据源通用的形式表示函数调用，从而在数据源之间提供一致的查询体验。 如果操作数是数值类型，则按位 AND、OR、NOT 和 XOR 运算符也将映射到规范函数。 对于布尔操作数，按位 AND、OR、NOT 和 XOR 运算符将计算其操作数的逻辑 AND、OR、NOT 和 XOR 运算。 有关详细信息，请参阅[规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)。  
@@ -51,7 +39,7 @@ ms.lasthandoff: 01/17/2018
 |System.String 方法（实例）|规范函数|备注|  
 |---------------------------------------|------------------------|-----------|  
 |Boolean Contains(String `value`)|`this` LIKE '%`value`%'|如果 `value` 不是常量，则它映射到 IndexOf(`this`, `value`) > 0|  
-|Boolean EndsWith(String `value`)|`this`如`'` % `value`|如果 `value` 不是常量，则它映射到 Right(`this`, length(`value`)) = `value`。|  
+|Boolean EndsWith(String `value`)|`this` 如`'` % `value`|如果 `value` 不是常量，则它映射到 Right(`this`, length(`value`)) = `value`。|  
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|如果 `value` 不是常量，则它映射到 IndexOf(`this`, `value`) = 1。|  
 |长度|Length(`this`)||  
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||  
@@ -79,9 +67,9 @@ ms.lasthandoff: 01/17/2018
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> 运算符||  
 |Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= 运算符||  
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= 运算符||  
-|Boolean op_LessThan(DateTime `t1`, DateTime `t2`)|< 运算符||  
+|布尔 op_LessThan (DateTime `t1`，DateTime `t2`)|< 运算符||  
 |Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= 运算符||  
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal`Interval`作为 DateInterval，\_<br /><br /> ByVal `DateValue` datetime 类型，\_<br /><br /> 可选 ByVal`FirstDayOfWeekValue`作为 FirstDayOfWeek = VbSunday，\_<br /><br /> 可选 ByVal`FirstWeekOfYearValue`作为 FirstWeekOfYear = VbFirstJan1\_<br /><br /> ) As Integer||有关详细信息，请参见“DatePart 函数”部分。|  
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal`Interval`作为 DateInterval， \_<br /><br /> ByVal `DateValue` datetime 类型， \_<br /><br /> 可选 ByVal`FirstDayOfWeekValue`作为 FirstDayOfWeek = VbSunday， \_<br /><br /> 可选 ByVal`FirstWeekOfYearValue`作为 FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||有关详细信息，请参见“DatePart 函数”部分。|  
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||  
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||  

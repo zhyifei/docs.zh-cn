@@ -1,22 +1,12 @@
 ---
 title: 特性 (C#)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: f148f13f-a0d5-4f22-9c87-4b73d5dde270
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f9fc23cf7afbd28f0c9ae438cbce298cbf362fbd
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: a7e64c29ab8ca56a47ec6554ebc316f4922d3aca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributes-c"></a>特性 (C#)
 使用特性，可以有效地将元数据或声明性信息与代码（程序集、类型、方法、属性等）相关联。 将特性与程序实体相关联后，可以在运行时使用*反射*这项技术查询特性。 有关详细信息，请参阅[反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)。  
@@ -145,9 +135,9 @@ int Method3() { return 0; }
 ## <a name="common-uses-for-attributes"></a>特性的常见用途  
  下面列出了代码中特性的一些常见用途：  
   
--   在 Web 服务中使用 `WebMethod` 特性标记方法，以指明方法应可通过 SOAP 协议进行调用。 有关详细信息，请参阅<xref:System.Web.Services.WebMethodAttribute>。  
+-   在 Web 服务中使用 `WebMethod` 特性标记方法，以指明方法应可通过 SOAP 协议进行调用。 有关更多信息，请参见<xref:System.Web.Services.WebMethodAttribute>。  
   
--   描述在与本机代码互操作时如何封送方法参数。 有关详细信息，请参阅<xref:System.Runtime.InteropServices.MarshalAsAttribute>。  
+-   描述在与本机代码互操作时如何封送方法参数。 有关更多信息，请参见<xref:System.Runtime.InteropServices.MarshalAsAttribute>。  
   
 -   描述类、方法和接口的 COM 属性。  
   
@@ -180,7 +170,7 @@ int Method3() { return 0; }
   
 -   [调用方信息 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../../csharp/programming-guide/index.md)  
  [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [特性](../../../../../docs/standard/attributes/index.md)

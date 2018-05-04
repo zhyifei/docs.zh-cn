@@ -1,28 +1,16 @@
 ---
-title: "&lt;筛选器&gt;"
-ms.custom: 
+title: '&lt;筛选器&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 186c511cd8a69cef5e30e369641628a10a0972d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93d47fc6b25a75eedae43cd70582abc863a74e6c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfiltergt"></a>&lt;筛选器&gt;
 
-定义路由筛选器，该筛选器确定计算传入消息时使用的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> 的类型，以及该筛选器所需的任何支持数据或参数。
+定义路由筛选器，确定类型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>以作为也任何支持的数据或筛选器所需参数计算传入消息时使用。
 
 \<system.serviceModel >\<路由 >\<筛选器 >\<筛选器 >
 
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 
 | 特性  | 描述 |
 | ---------- | ----------- |
-| customType | 一个字符串，包含要用作筛选器的自定义类型的完全限定类型名称。 如果`filterType`设置为`custom`，此属性包含要创建的类的完全限定的类型名称。  `filterData`可能还包含要自定义类型筛选器求值期间使用的值。 |
+| customType | 一个字符串，包含要用作筛选器的自定义类型的完全限定类型名称。 如果`filterType`设置为`custom`，此属性包含要创建的类的完全限定的类型名称。  `filterData` 可能还包含要自定义类型筛选器求值期间使用的值。 |
 | filterData | 一个包含筛选器数据的字符串。 有关如何指定此特性的更多信息，请参见 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>。 |
 | filterType | 一个包含筛选器类型的字符串。 此特性的类型为 <xref:System.ServiceModel.Routing.Configuration.FilterType>。  有关如何使用此 `filterData` 特性的更多信息，请参见 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>。 |
 | name       | 一个字符串，包含此筛选器元素的唯一名称。 |
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 
 | 元素 | 描述 |
 | ------- | ----------- |
-| [\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | 一个配置节，用于定义一组路由筛选器，这些筛选器确定计算传入消息时使用的 [!INCLUDE[ indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> 的类型。 |
+| [\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | 用于定义一组路由筛选器，这些扩展名决定了类型的 Windows Communication Foundation (WCF) 的配置节<xref:System.ServiceModel.Dispatcher.MessageFilter>计算传入消息时使用。 |
 
 ## <a name="see-also"></a>请参阅
 

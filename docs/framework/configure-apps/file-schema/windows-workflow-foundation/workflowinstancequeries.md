@@ -1,34 +1,24 @@
 ---
 title: '&lt;workflowInstanceQueries&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 4fe7ce85-cf9a-4dbf-a8f7-bc9b1fc2fe35
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a65f6b888e210c1786395bbbb9f60050fe8e2c1b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a165d6f55afbbf1489a7355d4207a74ac1f003ef
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltworkflowinstancequeriesgt"></a>&lt;workflowInstanceQueries&gt;
 表示配置元素的集合，这些配置元素跟踪工作流实例生命周期的更改，例如已开始或已完成的事件。  
   
  有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<跟踪 >  
-\<trackingProfile >  
+\<trackingProfile>  
 \<工作流 >  
-\<workflowInstanceQueries >  
+\<workflowInstanceQueries>  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<workflowInstanceQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|一个查询，用于跟踪工作流实例生命周期的更改。|  
+|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|一个查询，用于跟踪工作流实例生命周期的更改。|  
   
 ### <a name="parent-elements"></a>父元素  
   

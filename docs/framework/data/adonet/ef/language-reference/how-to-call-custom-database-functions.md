@@ -1,27 +1,15 @@
 ---
-title: "如何：调用自定义数据库函数"
-ms.custom: 
+title: 如何：调用自定义数据库函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2aab11481bb23228f9ad920c5d01ef7d345e05d3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 790bb8d4ea1e146d94ea7cf153b8909c6cc1af7a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-call-custom-database-functions"></a>如何：调用自定义数据库函数
 本主题介绍如何从 LINQ to Entities 查询中调用在数据库中定义的自定义函数。  

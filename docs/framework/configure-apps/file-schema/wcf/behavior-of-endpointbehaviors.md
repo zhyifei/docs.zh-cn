@@ -1,31 +1,19 @@
 ---
-title: "&lt;endpointBehaviors&gt; 的 &lt;behavior&gt;"
-ms.custom: 
+title: '&lt;endpointBehaviors&gt; 的 &lt;behavior&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aed43e76b817c9a2eded6c1e5daee183625ecc0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0619d14444d835ed959a1a1db7cd37aaf0429728
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbehaviorgt-of-ltendpointbehaviorsgt"></a>&lt;endpointBehaviors&gt; 的 &lt;behavior&gt;
 `behavior` 元素包含终结点行为的设置集合。 每个行为都按其 `name` 进行索引。 终结点可以通过此名称链接到每个行为。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无名称的绑定和行为的详细信息，请参阅[简化配置](../../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<行为 >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<行为 >  
   
 ## <a name="syntax"></a>语法  
@@ -53,8 +41,8 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<c a t e >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用于向服务验证客户端身份的凭据。|  
-|[\<callbackDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/callbackdebug.md)|指定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 回调对象的服务调试。|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用于向服务验证客户端身份的凭据。|  
+|[\<callbackDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/callbackdebug.md)|指定服务调试 Windows Communication Foundation (WCF) 回调对象。|  
 |[\<callbackTimeouts >](../../../../../docs/framework/configure-apps/file-schema/wcf/callbacktimeouts.md)|指定客户端回调的超时。|  
 |[\<clientVia >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientvia.md)|指定消息应采用的路由。|  
 |[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer.md)|包含 DataContractSerializer 的配置数据。|  

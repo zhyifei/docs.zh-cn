@@ -1,26 +1,12 @@
 ---
 title: '&lt;serviceMetadata&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0b98c637c98c75aab5009f9a2f35b8ce6b90012
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3c59a47f8a45fbccb05eb1f385215fe2aa739836
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 指定服务元数据的发布和相关信息。  
@@ -74,7 +60,7 @@ ms.lasthandoff: 04/28/2018
 |[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="remarks"></a>备注  
- 此配置元素允许您控制服务的元数据发布功能。 为了防止无意中泄露潜在的敏感服务元数据，[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务的默认配置将禁用元数据发布。 默认情况下此行为是安全的，但也意味着您无法使用元数据导入工具（例如 Svcutil.exe）生成调用服务所需的客户端代码，除非在配置中显式启用服务的元数据发布行为。 使用此配置元素，可以为服务启用此发布行为。  
+ 此配置元素允许您控制服务的元数据发布功能。 为了防止无意中泄露潜在的敏感服务元数据，Windows Communication Foundation (WCF) 服务的默认配置，请禁用元数据发布。 默认情况下此行为是安全的，但也意味着你无法使用元数据导入工具（例如 Svcutil.exe）生成调用服务所需的客户端代码，除非在配置中显式启用服务的元数据发布行为。 使用此配置元素，可以为服务启用此发布行为。  
   
  有关配置此行为的详细示例，请参阅[元数据发布行为](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)。  
   

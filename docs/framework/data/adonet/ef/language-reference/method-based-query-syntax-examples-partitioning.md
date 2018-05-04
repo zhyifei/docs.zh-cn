@@ -1,27 +1,15 @@
 ---
-title: "基于方法的查询语法示例：分区"
-ms.custom: 
+title: 基于方法的查询语法示例：分区
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b7b64874-c3c8-4bdb-862c-89a168d07827
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3d52c30ec6414e5c70345e93c8aae27151d47635
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5e2707463fd3cb9a5761805bc335104486ac44d7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="method-based-query-syntax-examples-partitioning"></a>基于方法的查询语法示例：分区
 本主题中的示例演示如何使用<xref:System.Linq.Enumerable.Skip%2A>，和<xref:System.Linq.Enumerable.Take%2A>方法来查询[AdventureWorks 销售模型](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  

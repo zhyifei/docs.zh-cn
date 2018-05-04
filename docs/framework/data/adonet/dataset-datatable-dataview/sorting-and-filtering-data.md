@@ -1,34 +1,22 @@
 ---
-title: "对数据进行排序和筛选"
-ms.custom: 
+title: 对数据进行排序和筛选
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2411307623c714ae521d00dcffca05d3569a656e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 02a67a490eb8339663aac08c97c665ffee09f0df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sorting-and-filtering-data"></a>对数据进行排序和筛选
 <xref:System.Data.DataView> 为在 <xref:System.Data.DataTable> 中对数据排序和筛选提供了多种方法：  
   
 -   可以使用 <xref:System.Data.DataView.Sort%2A> 属性指定单个或多个列排序顺序并包含 ASC（升序）和 DESC（降序）参数。  
   
--   可以使用 <xref:System.Data.DataView.ApplyDefaultSort%2A> 属性自动以升序创建基于表的一个或多个主键列的排序顺序。 <xref:System.Data.DataView.ApplyDefaultSort%2A>时，才适用**排序**属性为空引用或空字符串，并且在表已定义主键。  
+-   可以使用 <xref:System.Data.DataView.ApplyDefaultSort%2A> 属性自动以升序创建基于表的一个或多个主键列的排序顺序。 <xref:System.Data.DataView.ApplyDefaultSort%2A> 时，才适用**排序**属性为空引用或空字符串，并且在表已定义主键。  
   
 -   可以使用 <xref:System.Data.DataView.RowFilter%2A> 属性根据行的列值来指定行的子集。 有关有效表达式的详细信息**RowFilter**属性，请参阅的引用信息<xref:System.Data.DataColumn.Expression%2A>属性<xref:System.Data.DataColumn>类。  
   

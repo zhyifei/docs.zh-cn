@@ -1,31 +1,21 @@
 ---
 title: '&lt;securityTokenHandlerConfiguration&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: ac7284fa418c1540582c40bd744e913ba31aa881
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 168bdc4fbf640b201ebc61462d04727c23f838f2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritytokenhandlerconfigurationgt"></a>&lt;securityTokenHandlerConfiguration&gt;
 提供配置令牌处理程序的集合。  
   
- \<system.identityModel >  
-\<identityConfiguration >  
-\<securityTokenHandlers >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<securityTokenHandlers>  
 \<securityTokenHandlerConfiguration >  
   
 ## <a name="syntax"></a>语法  
@@ -68,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定与终结点注册的安全令牌处理程序的集合。|  
+|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定与终结点注册的安全令牌处理程序的集合。|  
   
 ## <a name="remarks"></a>备注  
  本部分提供的属性值<xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration>对象。 此节中配置的设置会覆盖的服务上配置。 其中某些设置可以反过来，重写由处理程序添加到安全令牌的处理程序集合时指定的设置。  

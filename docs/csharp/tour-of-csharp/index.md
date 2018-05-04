@@ -1,20 +1,13 @@
 ---
 title: C# 介绍 - C# 指南
 description: 刚开始接触 C#？ 了解 C# 语言的基础知识。
-keywords: .NET, .NET Core, C#, C# Primer, C# 指南
-author: BillWagner
-ms.author: wiwagn
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: 0fa7f9f906ba72b114fc59c8026b4b6c79586dd2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bdb8a84083b391c27d39f5c566a01b2db318123f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 语言介绍  
 
@@ -70,7 +63,7 @@ Hello, World
     - ***类***是最基本的 C# 类型。 ***对象***是类实例。 类是使用***成员***生成的，此主题也对此进行了介绍。
 * [结构](structs.md)
     - 与类不同，***结构***是属于值类型的数据结构。
-* [阵列](arrays.md)
+* [数组](arrays.md)
     - ***数组***是一种数据结构，其中包含许多通过计算索引访问的变量。
 * [接口](interfaces.md)
     - ***接口***定义了可由类和结构实现的协定。 接口可以包含方法、属性、事件和索引器。 接口不提供所定义的成员的实现代码，仅指定必须由实现接口的类或结构提供的成员。

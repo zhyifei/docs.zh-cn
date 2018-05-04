@@ -1,13 +1,6 @@
 ---
-title: "&lt;gcConcurrent&gt;元素"
-ms.custom: 
+title: '&lt;gcConcurrent&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#gcConcurrent
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 254b3be8f270a9186377b264094c919314efb27f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee00c3a307523d2cae831274630ad6828cd9daf6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt;元素
 指定公共语言运行时是否在单独线程上运行垃圾回收。  
@@ -62,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  

@@ -1,24 +1,12 @@
 ---
-title: "EDM 生成器 (EdmGen.exe)"
-ms.custom: 
+title: EDM 生成器 (EdmGen.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8d310786a12aa538a8a820c1c05788f30fe28c44
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 90d67af0d2ba3ff04ee5c78b7d0a3f061a69bc1d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 生成器 (EdmGen.exe)
 EdmGen.exe 是用于处理[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]模型和映射文件的命令行工具。 使用 EdmGen.exe 工具可以执行以下任务：  
@@ -73,7 +61,7 @@ EdmGen /mode:choice [options]
 |`/SupressForeignKeyProperties or /nofk`|防止外键列公开为概念模型中实体类型上的标量属性。|  
 |`/help` 或 `?`|显示该工具的命令语法和选项。|  
 |`/nologo`|禁止显示版权信息。|  
-|`/targetversion:` \<string>|将用于编译生成的代码的 .NET Framework 版本。 支持的版本是 4 和 4.5。 默认值为 4。|  
+|`/targetversion:` \<字符串 >|将用于编译生成的代码的 .NET Framework 版本。 支持的版本是 4 和 4.5。 默认值为 4。|  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：使用 EdmGen.exe 生成模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  

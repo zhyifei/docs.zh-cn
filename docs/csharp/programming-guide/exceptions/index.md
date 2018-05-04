@@ -1,23 +1,16 @@
 ---
 title: 异常和异常处理（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-caps.latest.revision: 33
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3c4ff558f2b850e195138dcc8901d6d860365cfc
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: de396ca4da2e115d221036d3ec49fb7b43d3d21d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>异常和异常处理（C# 编程指南）
 C# 语言的异常处理功能有助于处理在程序运行期间发生的任何意外或异常情况。 异常处理功能使用 `try`、`catch` 和 `finally` 关键字来尝试执行可能失败的操作、在你确定合理的情况下处理故障，以及在事后清除资源。 公共语言运行时 (CLR)、.NET Framework/任何第三方库或应用程序代码都可以生成异常。 异常是使用 `throw` 关键字创建而成。  

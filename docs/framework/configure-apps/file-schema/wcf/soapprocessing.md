@@ -1,24 +1,12 @@
 ---
 title: '&lt;soapProcessing&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1aeb100e1b8e160d30566cd43d67cbf49c6b5c4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 780c0e9a1d88c9f00883753091b102fbe9d41aa5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 
 SOAP 处理是指在各消息版本之间转换消息的过程。
 
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 路由服务可以将消息从一个协议转换为另一个协议。 如果传入消息和传出消息的版本不相同，则会创建一条具有正确版本的新消息。 处理消息从一个<!--zz <xref:System.ServiceModel.Channel.MessageVersion> -->`MessageVersion`到另一个通过构造一个新实现[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]包含正文部分和相关标头从传入消息[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]消息。 在构造新的 WCF 消息的过程中，不会使用特定于寻址的标头或在路由器级别理解的标头，这是因为这些标头要么具有不同的版本（如果为寻址标头），要么已作为客户端和路由器之间的通信的一部分处理。
+Windows Communication Foundation (WCF) 路由服务可以从一个协议转换为另一个消息。 如果传入消息和传出消息的版本不相同，则会创建一条具有正确版本的新消息。 处理消息从一个<!--zz <xref:System.ServiceModel.Channel.MessageVersion> -->`MessageVersion`到另一个通过构造一个新实现[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]包含正文部分和相关标头从传入消息[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]消息。 在构造新的 WCF 消息的过程中，不会使用特定于寻址的标头或在路由器级别理解的标头，这是因为这些标头要么具有不同的版本（如果为寻址标头），要么已作为客户端和路由器之间的通信的一部分处理。
 
 是否将一个标头置于出站消息内由此标头在通过传入通道层时是否已标记为已理解来决定。 不会移除不理解的标头（如自定义标头），并且会将此标头复制到出站消息中，以通过路由服务。 系统会将消息正文复制到出站消息中， 然后将此消息外发到出站通道，此时将创建和添加特定于该通信协议/传输的所有标头和其他信封数据。
 

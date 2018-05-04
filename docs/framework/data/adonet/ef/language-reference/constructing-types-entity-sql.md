@@ -1,27 +1,15 @@
 ---
-title: "构造类型 (Entity SQL)"
-ms.custom: 
+title: 构造类型 (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8a6ae2334c879733e964014716c2b67e77f271d5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 91ed123132965353ff354282f6850e9ef9cba3d0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constructing-types-entity-sql"></a>构造类型 (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]提供了三种构造函数： 行构造函数、 命名的类型构造函数和集合构造函数。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了三种构造函数： 行构造函数、 命名的类型构造函数和集合构造函数。  
   
 ## <a name="row-constructors"></a>行构造函数  
  使用 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的行构造函数可以从一个或多个值构造结构上类型化的匿名记录。 行构造函数的结果类型为行类型，其字段类型对应于用于构造该行的值的类型。 例如，下面的表达式构造类型的值`Record(a int, b string, c int)`:  

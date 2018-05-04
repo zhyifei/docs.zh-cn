@@ -1,26 +1,12 @@
 ---
-title: "比较语义 (Entity SQL)"
-ms.custom: 
+title: 比较语义 (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: e20d47e0ae97067d2dcafcf929f717598d4e3e80
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 2184f86ee43f88b0c4cfc1b96e42e2486c17fe5f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparison-semantics-entity-sql"></a>比较语义 (Entity SQL)
 执行下列任一 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 运算符时都涉及类型实例的比较：  
@@ -81,13 +67,13 @@ ms.lasthandoff: 02/19/2018
   
 |**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**为 NULL**<br /><br /> **不为 NULL**|  
 |-|-|-|-|-|-|-|-|  
-|实体类型|Ref<sup>1</sup>|所有属性<sup>2</sup>|所有属性<sup>2</sup>|所有属性<sup>2</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Ref<sup>1</sup>|  
-|复杂类型|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
-|行|所有属性<sup>4</sup>|所有属性<sup>4</sup>|所有属性<sup>4</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|所有属性<sup>4</sup>|Throw<sup>3</sup>|  
+|实体类型|Ref<sup>1</sup>|所有属性<sup>2</sup>|所有属性<sup>2</sup>|所有属性<sup>2</sup>|引发<sup>3</sup>|引发<sup>3</sup>|Ref<sup>1</sup>|  
+|复杂类型|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|  
+|行|所有属性<sup>4</sup>|所有属性<sup>4</sup>|所有属性<sup>4</sup>|引发<sup>3</sup>|引发<sup>3</sup>|所有属性<sup>4</sup>|引发<sup>3</sup>|  
 |基元类型|特定于提供程序|特定于提供程序|特定于提供程序|特定于提供程序|特定于提供程序|特定于提供程序|特定于提供程序|  
-|多集|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
+|多集|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|  
 |引用|是<sup>5</sup>|是<sup>5</sup>|是<sup>5</sup>|是<sup>5</sup>|引发|引发|是<sup>5</sup>|  
-|关联<br /><br /> 类型|Throw<sup>3</sup>|引发|引发|引发|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
+|关联<br /><br /> 类型|引发<sup>3</sup>|引发|引发|引发|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|  
   
  <sup>1</sup>隐式比较给定的实体类型实例的引用，如下面的示例中所示：  
   

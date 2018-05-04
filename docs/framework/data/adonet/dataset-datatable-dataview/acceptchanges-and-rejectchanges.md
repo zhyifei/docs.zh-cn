@@ -1,27 +1,15 @@
 ---
-title: "AcceptChange 和 RejectChange"
-ms.custom: 
+title: AcceptChange 和 RejectChange
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4c7d86aed61957d15d9c37f494bf80088b164dea
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 65e47bafda3e3e47241405c9c8b8e3b4b0055601
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChange 和 RejectChange
 在验证中的数据所做的更改的准确性后<xref:System.Data.DataTable>，你可以接受所做的更改使用<xref:System.Data.DataRow.AcceptChanges%2A>方法<xref:System.Data.DataRow>， <xref:System.Data.DataTable>，或<xref:System.Data.DataSet>，它将设置**当前**行值应为**原始**值并将设置**RowState**属性**Unchanged**。 接受或拒绝更改会清除所有**RowError**信息和集**HasErrors**属性**false**。 接受或拒绝更改还可以影响在数据源中更新数据。 有关详细信息，请参阅[使用 Dataadapter 更新数据源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)。  

@@ -1,22 +1,15 @@
 ---
 title: 委托（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-caps.latest.revision: 30
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 498d2946a6efc8c9dcb710e41c11f20168cfe568
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 516f5193509d3c87cc8fb7a36e2d69e04a85a6b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegates-c-programming-guide"></a>委托（C# 编程指南）
 [委托](../../../csharp/language-reference/keywords/delegate.md)是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。  
@@ -30,7 +23,7 @@ ms.lasthandoff: 02/24/2018
 > [!NOTE]
 >  在方法重载的上下文中，方法的签名不包括返回值。 但在委托的上下文中，签名包括返回值。 换句话说，方法和委托必须具有相同的返回类型。  
   
- 将方法作为参数进行引用的能力使委托成为定义回调方法的理想选择。 例如，对比较两个对象的方法的引用可以作为参数传递到排序算法中。 由于比较代码在一个单独的过程中，因此可通过更通用的方式编写排序算法。  
+ 将方法作为参数进行引用的能力使委托成为定义回调方法的理想选择。 例如，对比较两个对象的方法的引用可以作为参数传递到排序算法中。 由于比较代码在一个单独的过程中，因此可通过更常见的方式编写排序算法。  
   
 ## <a name="delegates-overview"></a>委托概述  
  委托具有以下属性：  

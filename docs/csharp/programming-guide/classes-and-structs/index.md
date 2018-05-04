@@ -1,12 +1,7 @@
 ---
 title: 类和结构（C# 编程指南）
 description: 介绍了如何在 C# 中使用类和结构。
-keywords: 类 (C#), 结构 (C#), 结构 (C#), 引用类型 (C#), 值类型 (C#)
 ms.date: 01/17/2016
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - structs [C#], about structs
 - classes [C#], overview
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-caps.latest.revision: 48
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8c4cbbdd0384c0c0e97d6a7c655e798d0562d9a8
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 801f8e64bf64ee55651521ba53915000cc326303
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>类和结构（C# 编程指南）
 类和结构是 .NET Framework 通用类型系统的两种基本构造。 每种本质上都是一种数据结构，其中封装了同属一个逻辑单元的一组数据和行为。 数据和行为是类或结构的*成员*，包括方法、属性和事件等（此主题稍后将具体列举）。  
@@ -100,7 +92,7 @@ ms.lasthandoff: 11/18/2017
  如果不方便或没有必要创建已命名的类（例如，使用无需保留或传递给其他方法的数据结构填充列表时），可以使用匿名类型。 有关详细信息，请参阅[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
 ### <a name="extension-methods"></a>扩展方法  
- 可以单独创建类型（其方法可以调用，就像它们属于原始类型一样）来“扩展”类，而无需创建派生类。 有关详细信息，请参阅[扩展方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ 可以单独创建类型（其方法可以调用，就像它们属于原始类型一样）来“扩展”类，而无需创建派生类。 有关详细信息，请参阅[扩展方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。  
   
 ### <a name="implicitly-typed-local-variables"></a>隐式类型的局部变量  
  在类或结构方法中，可以使用隐式类型指示编译器在编译时确定正确的类型。 有关详细信息，请参阅[隐式类型局部变量](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
@@ -108,5 +100,5 @@ ms.lasthandoff: 11/18/2017
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)

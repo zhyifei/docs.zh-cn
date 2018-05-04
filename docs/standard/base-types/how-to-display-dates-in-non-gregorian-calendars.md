@@ -1,12 +1,12 @@
 ---
-title: "如何：用非公历日历显示日期"
-ms.custom: 
+title: 如何：用非公历日历显示日期
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-caps.latest.revision: 
+caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1a9e45fe43e38be3c618df37a639d63a6a0a5349
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8b0af7aad0efc63518291292b0d0b4ca4872956c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>如何：用非公历日历显示日期
 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 类型使用公历作为默认日历。 这意味着，调用日期和时间值的 `ToString` 方法会用公历日历显示该日期和时间的字符串表示形式，即使该日期和时间是使用其他日历创建的。 下面的示例对此进行了展示，虽然使用两种不同的方式创建采用波斯历的日期和时间值，但在调用 <xref:System.DateTime.ToString%2A> 方法时仍采用公历显示这些日期和时间值。 此示例对于用特定日历显示日期，反映了两种常用但不正确的方法。  
@@ -98,7 +98,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要引用 System.Core.dll。  
   
- 使用 csc.exe 或 vb.exe 通过命令行编译代码。 若要在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中编译代码，请将代码添加到控制台应用项目模板中。  
+ 使用 csc.exe 或 vb.exe 通过命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
 ## <a name="see-also"></a>请参阅  
  [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)

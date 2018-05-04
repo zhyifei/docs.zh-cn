@@ -1,30 +1,23 @@
 ---
 title: 文件系统和注册表（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - file system [C#]
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3d1b4e3fa9b6c6da89abd242be855e9fb7c16dd6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 20e8b857759253736d11bc31988fadb4843fa87a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>文件系统和注册表（C# 编程指南）
 下面各主题介绍了如何使用 C# 和 .NET Framework 对文件、文件夹和注册表执行各种基本操作。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|**标题**|**描述**|  
+|**标题**|**说明**|  
 |---------------|---------------------|  
 |[如何：循环访问目录树](../../../csharp/programming-guide/file-system/how-to-iterate-through-a-directory-tree.md)|介绍了如何手动循环访问目录树。|  
 |[如何：获取有关文件、文件夹和驱动器的信息](../../../csharp/programming-guide/file-system/how-to-get-information-about-files-folders-and-drives.md)|介绍了如何检索有关文件、文件夹和驱动器的信息，如创建时间和大小。|  

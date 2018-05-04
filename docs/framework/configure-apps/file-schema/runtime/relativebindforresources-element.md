@@ -1,27 +1,17 @@
 ---
-title: "&lt;relativeBindForResources&gt;元素"
-ms.custom: 
+title: '&lt;relativeBindForResources&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - RelativeBindForResources element
 - <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8409b1fe86776397ceb3db5b338fb8aaadef9cbe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ae5d1ca6403d84c9828dcf9550e9fbf40b28e1b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltrelativebindforresourcesgt-element"></a>&lt;relativeBindForResources&gt;元素
 优化附属程序集的探测。  
@@ -58,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关运行时初始化选项的信息。|  
