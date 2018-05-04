@@ -1,4 +1,4 @@
----
+﻿---
 title: ulong（C# 参考）
 ms.date: 03/14/2017
 ms.prod: .net
@@ -106,7 +106,7 @@ ulong y = (ulong)3.0;
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

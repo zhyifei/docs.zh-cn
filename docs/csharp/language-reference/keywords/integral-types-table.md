@@ -1,5 +1,5 @@
 ---
-title: "整型表（C# 参考）"
+title: "整数类型表（C# 参考）"
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology: devlang-csharp
@@ -43,5 +43,5 @@ ms.lasthandoff: 11/21/2017
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [浮点型表](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
  [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)  
- [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
+ [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md) 
  [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
