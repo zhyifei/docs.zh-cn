@@ -63,6 +63,6 @@ Console.WriteLine(myVariable.GetType());
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
  [值类型](../../../csharp/language-reference/keywords/value-types.md)  
  [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)  
- [数值格式化结果表](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
+ [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
  [动态](../../../csharp/language-reference/keywords/dynamic.md)  
  [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
