@@ -1,4 +1,4 @@
----
+﻿---
 title: int（C# 参考）
 ms.date: 03/14/2017
 ms.prod: .net
