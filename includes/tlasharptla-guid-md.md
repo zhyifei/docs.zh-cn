@@ -1,1 +1,0 @@
-<span data-ttu-id="91356-101">全局唯一标识符 (GUID)</span><span class="sxs-lookup"><span data-stu-id="91356-101">globally unique identifier (GUID)</span></span>

@@ -1,1 +1,0 @@
-<span data-ttu-id="970d4-101">可扩展权限标记语言 (XrML)</span><span class="sxs-lookup"><span data-stu-id="970d4-101">Extensible Rights Markup Language (XrML)</span></span>

@@ -1,1 +1,0 @@
-<span data-ttu-id="95266-101">XAML 浏览器应用程序 (XBAP)</span><span class="sxs-lookup"><span data-stu-id="95266-101">XAML browser application (XBAP)</span></span>

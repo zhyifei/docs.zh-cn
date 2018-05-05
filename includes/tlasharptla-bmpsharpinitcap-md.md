@@ -1,1 +1,0 @@
-<span data-ttu-id="dfe36-101">位图 (BMP)</span><span class="sxs-lookup"><span data-stu-id="dfe36-101">Bitmap (BMP)</span></span>

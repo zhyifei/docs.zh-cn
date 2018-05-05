@@ -1,1 +1,0 @@
-<span data-ttu-id="d4c01-101">RTF 格式 (RTF)</span><span class="sxs-lookup"><span data-stu-id="d4c01-101">Rich Text Format (RTF)</span></span>

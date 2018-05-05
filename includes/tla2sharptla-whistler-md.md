@@ -1,1 +1,0 @@
-<span data-ttu-id="1b1a7-101">Windows XP</span><span class="sxs-lookup"><span data-stu-id="1b1a7-101">Windows XP</span></span>
