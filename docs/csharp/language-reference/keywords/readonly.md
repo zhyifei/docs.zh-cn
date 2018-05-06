@@ -40,8 +40,7 @@ ms.lasthandoff: 03/15/2018
   
 > [!NOTE]
 >  `readonly` 关键字不同于 [const](../../../csharp/language-reference/keywords/const.md) 关键字。 `const` 字段只能在该字段的声明中初始化。 
-
--  `readonly` 字段可以在声明或构造函数中初始化。 因此，根据所使用的构造函数，`readonly` 字段可能具有不同的值。 另外，虽然 `const` 字段是编译时常量，但 `readonly` 字段可用于运行时常量，如下面的示例所示：  
+`readonly` 字段可以在声明或构造函数中初始化。 因此，根据所使用的构造函数，`readonly` 字段可能具有不同的值。 另外，虽然 `const` 字段是编译时常量，但 `readonly` 字段可用于运行时常量，如下面的示例所示：  
   
 ```  
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;  
