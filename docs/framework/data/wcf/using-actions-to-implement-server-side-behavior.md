@@ -1,30 +1,18 @@
 ---
-title: "使用操作来实现服务器端行为"
-ms.custom: 
+title: 使用操作来实现服务器端行为
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d8ca19a5a49815130103672f43452ebbfedfae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4be2aa42c667460232f6aa3cd8dc707805750e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用操作来实现服务器端行为
-OData 操作提供了用于实现这样一种行为方法，即该行为将作用于从 OData 服务检索的资源。  例如，请考虑将一部数字电影作为资源，您可能需要完成许多事情：签出、评级/注释或签入。 这些是用于管理数字电影的 WCF 数据服务可能实现的所有动作示例。 动作在 OData 响应中描述，而此响应包含对其调用此动作的资源。 当用户请求表示数字电影的资源时，从 WCF 数据服务返回的响应将包含有关可用于该资源的动作的信息。 动作的可用性可能取决于数据服务或资源的状态。 例如，一旦数字电影已被签出，其他用户就无法签出。 客户只需指定 URL 即可调用动作。 例如，http://MyServer/MovieService.svc/Movies(6) 标识一部特定的数字电影，而 http://MyServer/MovieService.svc/Movies(6)/Checkout 将对这部特定电影调用此动作。 动作使您能够公开服务模型，但不必公开数据模型。 继续探讨此电影服务示例，您可能希望允许用户对电影评级，但不能直接将评级数据公开为资源。 您可以实现评级动作，以使用户能够对电影评级，但不能直接将评级数据作为资源进行访问。  
+OData 操作提供了用于实现这样一种行为方法，即该行为将作用于从 OData 服务检索的资源。  例如，请考虑将一部数字电影作为资源，您可能需要完成许多事情：签出、评级/注释或签入。 这些是用于管理数字电影的 WCF 数据服务可能实现的所有动作示例。 动作在 OData 响应中描述，而此响应包含对其调用此动作的资源。 当用户请求表示数字电影的资源时，从 WCF 数据服务返回的响应将包含有关可用于该资源的动作的信息。 动作的可用性可能取决于数据服务或资源的状态。 例如，一旦数字电影已被签出，其他用户就无法签出。 客户只需指定 URL 即可调用动作。 例如http://MyServer/MovieService.svc/Movies(6)标识特定的数字电影和http://MyServer/MovieService.svc/Movies(6)/Checkout将调用对这部特定电影的操作。 动作使您能够公开服务模型，但不必公开数据模型。 继续探讨此电影服务示例，您可能希望允许用户对电影评级，但不能直接将评级数据公开为资源。 您可以实现评级动作，以使用户能够对电影评级，但不能直接将评级数据作为资源进行访问。  
   
 ## <a name="implementing-an-action"></a>实现动作  
- 若要实现服务动作，则必须实现<xref:System.IServiceProvider>， [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)，和[IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx)接口。 <xref:System.IServiceProvider>使 WCF 数据服务能够获得的实现[IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)。 [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)允许 WCF 数据服务能够创建、 查找、 描述和调用服务操作。 [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx)使您能够调用用于实现服务动作行为的代码并获得结果，如果有。 请记住，WCF 数据服务是“每次调用”的 WCF 服务，也即，每次调用此服务时，都会创建此服务的一个新实例。  确保创建此服务时不执行多余的任务。  
+ 若要实现服务动作，则必须实现<xref:System.IServiceProvider>， [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)，和[IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx)接口。 <xref:System.IServiceProvider> 使 WCF 数据服务能够获得的实现[IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)。 [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)允许 WCF 数据服务能够创建、 查找、 描述和调用服务操作。 [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx)使您能够调用用于实现服务动作行为的代码并获得结果，如果有。 请记住，WCF 数据服务是“每次调用”的 WCF 服务，也即，每次调用此服务时，都会创建此服务的一个新实例。  确保创建此服务时不执行多余的任务。  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
  <xref:System.IServiceProvider> 包含一个名为 <xref:System.IServiceProvider.GetService%2A> 的方法。 WCF 数据服务调用此方法来检索一些服务提供程序，包括元数据服务提供程序和数据服务动作提供程序。 当要求数据服务操作提供程序，则返回你[IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx)实现。  

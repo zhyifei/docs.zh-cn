@@ -1,13 +1,6 @@
 ---
-title: "将数据绑定到控件（WCF 数据服务）"
-ms.custom: 
+title: 将数据绑定到控件（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4f6c4d7fb657cf091c5637f110d115059055c42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85a50d5425b8eec0166c839440f15e31500f3984
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>将数据绑定到控件（WCF 数据服务）
 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可以将 `ComboBox` 和 `ListView` 等控件绑定到 <xref:System.Data.Services.Client.DataServiceCollection%601> 类的实例。 从 <xref:System.Collections.ObjectModel.ObservableCollection%601> 类继承的这一集合包含[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 源中的数据。 此类表示一个动态数据集合，在添加项或移除项时，此集合将提供通知。 当你使用的实例<xref:System.Data.Services.Client.DataServiceCollection%601>用于数据绑定，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库处理这些事件来确保通过跟踪的对象<xref:System.Data.Services.Client.DataServiceContext>与绑定 UI 元素中的数据保持同步。  

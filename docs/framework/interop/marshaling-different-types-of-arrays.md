@@ -1,10 +1,6 @@
 ---
 title: 封送处理不同类型的数组
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,17 +8,13 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 62958f1656dfbfcb45356378161090b8271b6b83
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: ed2a4b91608306021ce510098eaf044520cbb089
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送处理不同类型的数组
 数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。 尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。 此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。 有关其他详细信息，请参阅[复制和固定](copying-and-pinning.md)。  
@@ -121,7 +113,7 @@ typedef struct _MYPERSON
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [封送类型数组](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))  
  [平台调用数据类型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
  [在托管代码中创建原型](creating-prototypes-in-managed-code.md)

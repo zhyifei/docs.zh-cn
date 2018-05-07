@@ -1,10 +1,6 @@
 ---
 title: 如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - components [.NET Framework], manifest
 - application manifests [.NET Framework]
@@ -14,14 +10,11 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8b97f73e93ad0ef8d9def596361ac68e93ae5e6e
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 744ce1f2810eee025f071cafaa71e473b6ed4c50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 基于 .NET Framework 的组件的免注册激活略复杂于 COM 组件的免注册激活。 安装需要两个清单：  
@@ -178,7 +171,7 @@ ms.lasthandoff: 04/16/2018
   
      同样，`myresource.res` 是包含嵌入资源的资源文件的名称。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [免注册 COM 互操作](registration-free-com-interop.md)  
  [免注册 COM 互操作要求](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
  [将 COM 组件配置为免注册激活](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  

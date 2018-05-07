@@ -1,27 +1,17 @@
 ---
-title: "应用程序域资源监视 (ARM) ETW 事件"
-ms.custom: 
+title: 应用程序域资源监视 (ARM) ETW 事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6384700c7039cb705f2db759ebd3d733bf8954ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 47ab6e52278c77156e828869dd23575561879bff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>应用程序域资源监视 (ARM) ETW 事件
 <a name="top"></a> 这些事件提供有关应用程序域的状态的详细诊断信息。 你可以使用这些事件，或使用应用程序域资源监视 (ARM) 功能来获取相同的信息。  
@@ -57,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |ThreadID|win:UInt64|已创建的线程 ID。|  
 |AppDomainID|win:UInt64|正在报告其线程活动的应用程序域的标识符。|  
@@ -84,7 +74,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|正在报告其资源使用情况的应用程序域的标识符。|  
 |已分配|win:UInt64|自应用程序域创建以来在此应用程序域中分配的字节总数（不减去已释放的内存量）。|  
@@ -108,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|正在报告其资源使用情况的域的标识符。|  
 |已保留|win:UInt64|上次回收后保留下来的、已知由此应用程序域保留的字节数。 此数字在完整回收之后准确且完整，但在暂时的回收之后可能不完整。|  
@@ -134,7 +124,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |ThreadID|win:UInt64|线程标识符。|  
 |AppDomainID|win:UInt64|应用程序域标识符。|  
@@ -159,7 +149,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据：  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |ThreadID|win:UInt64|线程标识符。|  
 |AppDomainID|win:UInt64|应用程序域标识符。|  

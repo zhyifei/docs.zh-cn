@@ -1,31 +1,17 @@
 ---
 title: 开发和部署 WCF 数据服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, developing
 - WCF Data Services, deploying
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc962b328f2321d1cfb016b78a53307b43fac30d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e02b7317eef8e7124bd5ba9ceef201cddc9bbea1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>开发和部署 WCF 数据服务
 本主题提供有关开发和部署 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]的信息。 有关更多基本信息[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，请参阅[入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)和[概述](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)。  
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
   
 1.  **本地 IIS 服务器**  
   
-     创建作为在 Internet Information Services (IIS) 上运行的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序或 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 网站的数据服务时，建议使用 IIS 在本地计算机上开发和测试数据服务。 在 IIS 上运行数据服务更便于在调试过程中跟踪 HTTP 请求。 这还允许预先确定 IIS 访问数据服务所需的文件、数据库和其他资源所必须具备的权限。 要在 IIS 上运行数据服务，必须确保正确安装和配置了 IIS 和 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ，并且在文件系统和数据库中授予了 IIS 帐户的访问权限。 有关详细信息，请参阅 [如何：开发在 IIS 上运行的 WCF 数据服务](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
+     创建作为在 Internet Information Services (IIS) 上运行的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序或 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 网站的数据服务时，建议使用 IIS 在本地计算机上开发和测试数据服务。 在 IIS 上运行数据服务更便于在调试过程中跟踪 HTTP 请求。 这还允许预先确定 IIS 访问数据服务所需的文件、数据库和其他资源所必须具备的权限。 若要在 IIS 上运行你的数据服务，你必须确保安装并正确配置 IIS 和 Windows Communication Foundation (WCF) 是在文件系统和数据库授予了 IIS 帐户的访问权限。 有关详细信息，请参阅 [如何：开发在 IIS 上运行的 WCF 数据服务](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
   
     > [!NOTE]
     >  你必须具有管理员权限才能启用开发环境以配置本地 IIS 服务器来运行 Visual Studio。  

@@ -1,26 +1,12 @@
 ---
 title: 从 Web 浏览器访问服务（WCF 数据服务快速入门）
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5550e97d97adf28a84566c5d7936369656c65e43
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b7fcead5eed2dd4c0c779d9a881563a39f88d094
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>从 Web 浏览器访问服务（WCF 数据服务快速入门）
 在此任务中，您将从 Visual Studio 启动 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，并在 Web 浏览器中禁用源阅读（可选）。 你将进而检索服务定义文档以及提交给公开的资源的 Web 浏览器通过 HTTP GET 请求以访问数据服务资源。  

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugAssembly::EnumerateModules 方法"
-ms.custom: 
+title: ICorDebugAssembly::EnumerateModules 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugAssembly.EnumerateModules
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c7ba51a1-0dd5-4452-b471-232febe0f897
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e5bc6aced78d1d7ffc6521bca52bed1b2e232bbe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ada2e0e81c9e022e152e01472839d5d506332fac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugassemblyenumeratemodules-method"></a>ICorDebugAssembly::EnumerateModules 方法
 中包含的模块中获取的枚举数`ICorDebugAssembly`。  
@@ -50,11 +38,11 @@ HRESULT EnumerateModules (
  `ppModules`  
  [out]ICorDebugModuleEnum 接口即枚举器的地址指向的指针。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

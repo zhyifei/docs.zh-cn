@@ -1,13 +1,6 @@
 ---
-title: "如何：定义服务操作（WCF 数据服务）"
-ms.custom: 
+title: 如何：定义服务操作（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 03dc0b774fe6c3e077fa539fc14c7df4a1fb448d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d40011e701525912c4406d1ab35712ee21009da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>如何：定义服务操作（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 公开在服务器上作为服务操作定义的方法。 服务操作允许数据服务以提供通过在服务器定义的方法的 URI 的访问。 若要定义服务操作，将应用 [`WebGet]`或`[WebInvoke]`属性设为该方法。 若要支持查询运算符，服务操作必须返回<xref:System.Linq.IQueryable%601>实例。 服务操作可以通过 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601> 属性访问基础数据源。 有关详细信息，请参阅[服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。  

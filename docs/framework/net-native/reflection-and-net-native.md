@@ -1,24 +1,14 @@
 ---
-title: "反射和 .NET Native"
-ms.custom: 
+title: 反射和 .NET Native
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9e248071a0d35c5552976e5e4663094b76ee162e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee56107c5d8760f69a29d9e4ad6e1bd445d4831d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-and-net-native"></a>反射和 .NET Native
 在 .NET Framework 中，托管开发通过反射 API 支持元编程。 反射允许你检查应用中的对象，调用通过检查发现的对象上的方法，在运行时间生成性类型，并支持所有其他动态代码方案。 它还支持序列化和反序列化，这允许一个对象的字段值被持久化并在后来得到还原。 这些方案都要求 .NET Framework 及时生成 (JIT) 编译器以可用的元数据为基础生成本机代码。  

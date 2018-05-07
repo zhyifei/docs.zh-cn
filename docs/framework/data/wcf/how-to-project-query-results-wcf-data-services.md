@@ -1,13 +1,6 @@
 ---
-title: "如何：投影查询结果（WCF 数据服务）"
-ms.custom: 
+title: 如何：投影查询结果（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 80c6216315ca1fb1200e12bca89ae8ef27652947
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b75eb21cab7cd3acf25f7bcb9a3f009e8d5748b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>如何：投影查询结果（WCF 数据服务）
 投影提供减少查询返回的数据量的机制，方法是指定在响应中仅返回某个实体的某些属性。 你可以对结果执行投影[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]查询通过使用`$select`查询选项或通过使用[选择](~/docs/csharp/language-reference/keywords/select-clause.md)子句 ([选择](~/docs/visual-basic/language-reference/queries/select-clause.md)在 Visual Basic 中) 中的 LINQ 查询。 有关详细信息，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  

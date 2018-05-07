@@ -1,13 +1,6 @@
 ---
-title: "&lt;cryptoNameMapping&gt;元素"
-ms.custom: 
+title: '&lt;cryptoNameMapping&gt;元素'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b0ddd8368b84ec1b218f2c48fddd898f83fc71fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f6811a2dbd8859a8765c5e855e0fe423bd31f287
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltcryptonamemappinggt-element"></a>&lt;cryptoNameMapping&gt;元素
 包含类到友好名称的映射。  
@@ -56,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`cryptographySettings`|包含加密设置。|  
@@ -64,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 |`mscorlib`|包含\<g s > 元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<cryptoNameMapping >**元素来引用密码类并配置运行时。 然后，你可以将字符串"RSA"传递到<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。  
+ 下面的示例演示如何使用 **\<cryptoNameMapping >** 元素来引用密码类并配置运行时。 然后，你可以将字符串"RSA"传递到<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。  
   
 ```xml  
 <configuration>  

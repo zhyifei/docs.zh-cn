@@ -1,19 +1,12 @@
 ---
 title: 使用 Async 和 Await 的异步编程 (C#)
 ms.date: 05/22/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-caps.latest.revision: 5
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b1797a6d37728021820f5dfa5c01a7ee0c972f1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>使用 Async 和 Await 的异步编程 (C#)
 通过使用异步编程，你可以避免性能瓶颈并增强应用程序的总体响应能力。 但是，编写异步应用程序的传统技术可能比较复杂，使它们难以编写、调试和维护。  
@@ -153,7 +146,7 @@ string urlContents = await client.GetStringAsync();
   
 `async` 和 `await` 关键字不会创建其他线程。 因为异步方法不会在其自身线程上运行，因此它不需要多线程。 只有当方法处于活动状态时，该方法将在当前同步上下文中运行并使用线程上的时间。 可以使用 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 将占用大量 CPU 的工作移到后台线程，但是后台线程不会帮助正在等待结果的进程变为可用状态。  
   
-对于异步编程而言，该基于异步的方法优于几乎每个用例中的现有方法。 具体而言，此方法比 <xref:System.ComponentModel.BackgroundWorker> 类更适用于 IO 绑定操作，因为此代码更简单且无需防止争用条件。 结合 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法使用时，异步编程比 <xref:System.ComponentModel.BackgroundWorker> 更适用于 CPU 绑定操作，因为异步编程将运行代码的协调细节与 `Task.Run` 传输至线程池的工作区分开来。  
+对于异步编程而言，该基于异步的方法优于几乎每个用例中的现有方法。 具体而言，此方法比 <xref:System.ComponentModel.BackgroundWorker> 类更适用于 I/O 绑定操作，因为此代码更简单且无需防止争用条件。 结合 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法使用时，异步编程比 <xref:System.ComponentModel.BackgroundWorker> 更适用于 CPU 绑定操作，因为异步编程将运行代码的协调细节与 `Task.Run` 传输至线程池的工作区分开来。  
   
 ##  <a name="BKMK_AsyncandAwait"></a>async 和 await  
  如果使用 [async](../../../../csharp/language-reference/keywords/async.md) 修饰符将某种方法指定为异步方法，即启用以下两种功能。  

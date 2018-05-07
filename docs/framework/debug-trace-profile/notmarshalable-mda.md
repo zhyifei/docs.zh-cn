@@ -1,13 +1,6 @@
 ---
 title: notMarshalable MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - managed debugging assistants (MDAs), interface pointer not marshalable
 - interface pointer not marshalable MDA
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - notMarshalable MDA
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 489f0e2ff4dc1eeaa9721ec6cf59faad0bee2ca8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c52f104228db0b9e7f664ee7c1de393aa696c71a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable MDA
 当公共语言运行时 (CLR) 尝试跨上下文封送接口时，如果遇到 COM 接口指针且没有有效的注册代理/存根或 `IMarshal` 接口实现不正确，将激活 `notMarshalable` 托管调试助手 (MDA)。  

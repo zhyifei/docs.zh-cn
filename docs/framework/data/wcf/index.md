@@ -1,29 +1,15 @@
 ---
 title: WCF 数据服务 4.5
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b5b27a51dcec17f72b86e77a7ee2ab773aec1dc3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 148e6e50e81552b2418abba9f6655234fc023c4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-services-45"></a>WCF 数据服务 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]（以前称为“ADO.NET Data Services”）是 .NET Framework 的一个组件。可以使用此组件创建一些服务，利用 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 借助 [representational state transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919)（表述性状态转移 (REST)）语义通过 Web 或 Intranet 公开和使用数据。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 将数据公开为可通过 URI 进行寻址的资源。 通过使用标准 HTTP 谓词 GET、PUT、POST 和 DELETE 访问和更改数据。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 使用[实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)的实体关系约定将资源公开为通过关联相关的实体集。  

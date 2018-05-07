@@ -1,27 +1,17 @@
 ---
-title: "线程池 ETW 事件"
-ms.custom: 
+title: 线程池 ETW 事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a68f35dc5abb653514034cf0d30b62457b933de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 41a37fa34b9d75eb8cfc1bdcb55b237faf137cad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-pool-etw-events"></a>线程池 ETW 事件
 <a name="top"></a> 这些事件收集有关工作线程和 I/O 线程的信息。  
@@ -54,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |ActiveWorkerThreadCount|win:UInt32|可用于处理工作的工作线程数，包括已在处理工作的工作线程。|  
 |RetiredWorkerThreadCount|win:UInt32|不能用于处理工作但被保留以防之后需要更多线程的工作线程数。|  
@@ -72,13 +62,13 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件信息。  
   
-|Event|事件 ID|说明|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|指一个示例的信息收集，即具有一定并发级别的即时吞吐量测量。|  
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |吞吐量|win:Double|每个时间单位的完成数。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
@@ -98,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |AverageThroughput|win:Double|测量示例的平均吞吐量。|  
 |NewWorkerThreadCount|win:UInt32|新的活动工作线程数。|  
@@ -120,7 +110,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |持续时间|win:Double|收集这些统计信息的时间量（以秒为单位）。|  
 |吞吐量|win:Double|在此间隔期间每秒完成的平均数量。|  

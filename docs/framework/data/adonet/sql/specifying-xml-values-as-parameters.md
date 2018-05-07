@@ -1,29 +1,15 @@
 ---
 title: 将 XML 值指定为参数
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: dace7c3adc1b7a55c8c945e82399828ce16f1bb0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c963b3e08eba7776a0ed579017f1e84828794379
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-xml-values-as-parameters"></a>将 XML 值指定为参数
 如果查询需要其值为一个 XML 字符串的参数，开发人员可以使用提供该值的实例**SqlXml**数据类型。 真的没有任何窍门;SQL Server 中的 XML 列接受参数值，方式与其他数据类型完全相同。  

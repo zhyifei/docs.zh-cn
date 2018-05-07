@@ -1,13 +1,6 @@
 ---
-title: "跟踪开关"
-ms.custom: 
+title: 跟踪开关
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4df092afd4d60811683b4187df78f27ad971cf89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b8ee0d04644cf504354767c296f504a937055d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trace-switches"></a>跟踪开关
 跟踪开关用于启用、禁用和筛选跟踪输出。 它们是代码中存在并可通过 .config 文件在外部配置的对象。 .NET Framework 中提供三种跟踪开关类型： <xref:System.Diagnostics.BooleanSwitch> 类、 <xref:System.Diagnostics.TraceSwitch> 类和 <xref:System.Diagnostics.SourceSwitch> 类。 <xref:System.Diagnostics.BooleanSwitch> 类充当切换开关，可启用或禁用各种跟踪语句。 使用 <xref:System.Diagnostics.TraceSwitch> 和 <xref:System.Diagnostics.SourceSwitch> 类，可以启用特定跟踪级别的跟踪开关，以确保出现为该级别以及其下所有级别指定的 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.TraceSource> 消息。 如果禁用此开关，则不会出现跟踪消息。 所有这些类均派生自抽象 (MustInherit**T:System.Diagnostics.Switch**) 类 **Switch**，用户开发的任何开关也应如此。  
@@ -66,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
  TraceSwitch **T:System.Diagnostics.Switch** 属性指示开关的最大跟踪级别。 也就是说，将在指定的级别以及其下的所有级别写入跟踪信息。 例如，如果 TraceInfo **T:System.Diagnostics.Switch** 为 **true**，则 **TraceError** 和 **TraceWarning** 也为 **true** ，但 **TraceVerbose** 可能为 **false**。  
   
- 这些属性是只读的。 当设置了 **TraceLevel** 属性时，TraceSwitch **T:System.Diagnostics.Switch** 对象会自动对这些属性进行设置。 例如:  
+ 这些属性是只读的。 当设置了 **TraceLevel** 属性时，TraceSwitch **T:System.Diagnostics.Switch** 对象会自动对这些属性进行设置。 例如：  
   
 ```vb  
 Dim myTraceSwitch As New TraceSwitch("SwitchOne", "The first switch")  

@@ -2,11 +2,11 @@
 title: '&lt;netTcpBinding&gt; 的 &lt;message&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 4e05182d40348b215f39bb85e0848ed608dcdf16
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 4a487d695cab259fc6b82fdf44b4c1bfdf5d04e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; 的 &lt;message&gt; 元素
 定义与配置的终结点的消息级安全性要求的类型[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 05/03/2018
 |-----------|-----------------|  
 |无|允许服务与匿名客户端交互。 对于服务，这表示服务不需要任何客户端凭据。 对于客户端，这表示客户端不提供任何客户端凭据。|  
 |Windows|允许 SOAP 交换在已通过身份验证的 Windows 凭据上下文中执行。|  
-|UserName|允许服务要求使用 UserName 凭据对客户端进行身份验证。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不支持发送密码摘要，也不支持使用密码派生密钥并使用这样的密钥来提供消息安全性。 因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保传输的安全性。 这种凭据模式将产生可互操作的交换或不可互操作的协商，具体取决于 `negotiateServiceCredential` 属性。|  
+|UserName|允许服务要求使用 UserName 凭据对客户端进行身份验证。 WCF 不支持发送密码摘要，也派生密钥使用的密码，并使用这样的密钥来提供消息安全性。 在这种情况下，WCF 将确保传输的安全性时使用 UserName 凭据。 这种凭据模式将产生可互操作的交换或不可互操作的协商，具体取决于 `negotiateServiceCredential` 属性。|  
 |证书|允许服务要求使用证书对客户端进行身份验证。 如果使用消息安全模式并且将 `negotiateServiceCredential` 属性设置为 `false`，则必须向客户端提供服务证书。|  
 |IssuedToken|指定自定义令牌，该令牌通常由安全令牌服务 (STS) 颁发。|  
   

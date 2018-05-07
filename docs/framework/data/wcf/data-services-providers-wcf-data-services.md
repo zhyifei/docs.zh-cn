@@ -1,34 +1,20 @@
 ---
-title: "数据服务提供程序（WCF 数据服务）"
-ms.custom: 
+title: 数据服务提供程序（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6f25f1f9137206c1adb3ab3f89b7c6a783aeccf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7be6578f0b237f986bcb68a3ace10ba04cf06474
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-services-providers-wcf-data-services"></a>数据服务提供程序（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支持用于将数据作为公开多个提供程序模型[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 本主题提供的信息有助于为数据源选择最佳的 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]提供程序。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持用于将数据作为公开多个提供程序模型[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 本主题提供的信息有助于为数据源选择最佳的 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]提供程序。  
   
 ## <a name="data-source-providers"></a>数据源提供程序  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用于定义数据服务的数据模型中支持以下提供程序。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用于定义数据服务的数据模型中支持以下提供程序。  
   
 |提供程序|描述|  
 |--------------|-----------------|  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 |自定义数据服务提供程序|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]包括一组提供程序，用于基于后期绑定数据类型动态定义数据模型。 当要公开的数据未知时、当正在设计应用程序时或当实体框架或反射提供程序不足时，应实现这些接口。 有关详细信息，请参阅[自定义数据服务提供商](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)。|  
   
 ## <a name="other-data-service-providers"></a>其他数据服务提供程序  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]具有以下的其他数据服务提供程序可增强通过使用其他提供程序之一定义的数据源的性能。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 具有以下的其他数据服务提供程序可增强通过使用其他提供程序之一定义的数据源的性能。  
   
 |提供程序|描述|  
 |--------------|-----------------|  

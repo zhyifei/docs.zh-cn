@@ -1,27 +1,17 @@
 ---
-title: "互操作 ETW 事件"
-ms.custom: 
+title: 互操作 ETW 事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5670eb910406626096f776d3b4192e2d58d7ce1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3bc9a90e9d889673d8f67e4f9158edebcb65235b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interop-etw-events"></a>互操作 ETW 事件
 <a name="top"></a> 互操作事件捕获有关 Microsoft 中间语言 (MSIL) 存根生成和缓存的信息。  
@@ -48,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|模块标识符。|  
 |StubMethodID|win:UInt64|存根方法标识符。|  
@@ -80,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|模块标识符。|  
 |StubMethodID|win:UInt64|存根方法标识符。|  

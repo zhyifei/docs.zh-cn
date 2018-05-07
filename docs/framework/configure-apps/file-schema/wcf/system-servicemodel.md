@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 0ce459b5b3d739770353d9913f30c6feaceabfd8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: ef3af4663462ff2bb93622e128e58a3ac039dcf5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsystemservicemodelgt"></a>&lt;system.serviceModel&gt;
 此配置节包含所有 Windows Communication Foundation (WCF) ServiceModel 配置元素。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
 |[\<绑定 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此节包含标准绑定和自定义绑定的集合。 每一项均由其唯一的 `name` 进行标识。 服务通过用 `name` 与绑定进行链接来使用绑定。|  
 |[\<客户端 >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|此节包含客户端用来连接到服务的终结点的列表。|  
 |[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|此节定义支持 WCF 和 COM 互操作的 COM 协定。|  
-|[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|此节只能在 machine.config 文件中定义。 它定义了名为 `endpointBehaviors` 和 `serviceBehaviors` 的两个子集合。  每个集合分别定义计算机上所有 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 终结点和服务所使用的行为元素。  如果中都定义一个行为`<commonBehaviors>`和`<behaviors>`部分中的行为\<行为 > 部分优先。|  
+|[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|此节只能在 machine.config 文件中定义。 它定义了名为 `endpointBehaviors` 和 `serviceBehaviors` 的两个子集合。  每个集合定义分别使用的所有 WCF 终结点和在计算机上的服务行为元素。  如果中都定义一个行为`<commonBehaviors>`和`<behaviors>`部分中的行为\<行为 > 部分优先。|  
 |[\<扩展 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|此节包含一个扩展集合，这些扩展使用户能够创建扩展的用户定义绑定、行为和其他方面。|  
 |[\<诊断 >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|此节包含 WCF 的诊断功能设置。 用户可以启用/禁用跟踪、性能计数器和 WMI 提供程序，还可以添加自定义消息筛选器。|  
 |[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|此节定义一组的传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 WCF 绑定之间的默认协议映射。|  
@@ -78,9 +78,9 @@ ms.lasthandoff: 05/03/2018
 |\<configuration>|.NET 配置文件中的所有配置元素的根元素。|  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不会向其他产品的配置节中添加元素。  
+ WCF 不会向其他产品的配置节中添加元素。  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务是在配置文件的 `services` 节中定义的。 程序集可以包含任意多个服务。 每个服务都有自己的 `service` 配置节。 本节及其内容定义特定服务的服务协定、行为和终结点。  
+ WCF 服务中定义`services`配置文件节。 程序集可以包含任意多个服务。 每个服务都有自己的 `service` 配置节。 本节及其内容定义特定服务的服务协定、行为和终结点。  
   
  只有服务的 `name` 属性是必需的。  默认情况下，服务的名称描述用于实现服务的基础 CLR 类型；但是，您可以更改 <xref:System.ServiceModel.ServiceContractAttribute> 上的 ConfigurationName 属性以重写 CLR 类型要求。  
   

@@ -1,14 +1,6 @@
 ---
 title: 如何：开发在 IIS 上运行的 WCF 数据服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9df38d200be864ab24efdb0d002fe7b75cfc3e4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c9b0128de6459c65e42fc2935222aecc643ec1d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>如何：开发在 IIS 上运行的 WCF 数据服务
 本主题演示如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]来创建基于 Northwind 示例数据库由 Internet 信息服务 (IIS) 上运行的 ASP.NET Web 应用程序承载数据服务。 有关如何创建 ASP.NET Development Server 上运行的 ASP.NET Web 应用相同的 Northwind 数据服务的示例，请参阅[WCF 数据服务快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  

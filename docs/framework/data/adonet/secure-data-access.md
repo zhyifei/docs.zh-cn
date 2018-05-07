@@ -1,24 +1,12 @@
 ---
-title: "安全数据访问"
-ms.custom: 
+title: 安全数据访问
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c26854af585fc026ba9abee77bc3b8a95bcaba79
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 85f40000ed1c4901342c697c97069a7ba55ed7f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="secure-data-access"></a>安全数据访问
 要编写安全的 ADO.NET 代码，必须了解基础数据存储（即数据库）中提供的安全机制。 您还需要考虑应用程序可能包含的其他功能或组件对安全性的影响。  

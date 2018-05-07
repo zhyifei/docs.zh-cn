@@ -1,28 +1,14 @@
 ---
-title: "反射提供程序（WCF 数据服务）"
-ms.custom: 
+title: 反射提供程序（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 617754fcd9515f080dc6cf8ae923c2c6fc34ad3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c6885ee7976461379513e8e579f58160146769a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-provider-wcf-data-services"></a>反射提供程序（WCF 数据服务）
 除通过实体框架公开数据模型中的数据以外，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 还可以公开未在基于实体的模型中严格定义的数据。 反射提供程序公开类中的数据，这些类返回实现 <xref:System.Linq.IQueryable%601> 接口的类型。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用反射推断这些类的数据模型，并且可以将针对资源的基于地址的查询转换为针对已公开 <xref:System.Linq.IQueryable%601> 类型的基于语言集成查询 (LINQ) 的查询。  

@@ -1,26 +1,14 @@
 ---
-title: "基于声明的标识模型"
-ms.custom: 
+title: 基于声明的标识模型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: dadcc397783e003574d417aa6253ebc561ed28db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-based-identity-model"></a>基于声明的标识模型
 在生成声明感知应用程序时，用户标识在应用程序中表示为一组声明。 一个声明可能是用户的名称，另一个可能是电子邮件地址。 其理念是，配置外部标识系统以便为您的应用程序提供所需的一切，是其了解用户及用户发出的每个请求和加密，从而确保您收到的标识数据来自受信任的源。  

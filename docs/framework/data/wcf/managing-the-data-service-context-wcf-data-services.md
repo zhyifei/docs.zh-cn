@@ -1,24 +1,12 @@
 ---
-title: "管理数据服务上下文（WCF 数据服务）"
-ms.custom: 
+title: 管理数据服务上下文（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c993a4f09a7187b45331f6beb71a9637da87d20f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b2b0bb709081ca7b0b2a1367f10e1f7a08c98c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>管理数据服务上下文（WCF 数据服务）
 <xref:System.Data.Services.Client.DataServiceContext> 类封装针对指定数据服务支持的操作。 尽管 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服务是无状态的，但上下文不是。 因此，你可以使用<xref:System.Data.Services.Client.DataServiceContext>类保持与数据服务中，以便支持各种交互之间客户端的状态功能诸如更改管理。 该类还对更改的标识和跟踪进行管理。  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
  默认情况下，客户端只针对 <xref:System.Data.Services.Client.DataServiceContext> 尚未跟踪的实体，将响应源中的项具体化为对象。 这意味着不会覆盖缓存中已存在的对象更改。 此行为通过为查询和加载操作指定 <xref:System.Data.Services.Client.MergeOption> 值进行控制。 通过设置 <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> 的 <xref:System.Data.Services.Client.DataServiceContext> 属性可指定此选项。 默认的合并选项值为 <xref:System.Data.Services.Client.MergeOption.AppendOnly>。 这样将只为尚未进行跟踪的实体具体化对象，这意味着不会覆盖现有对象。 防止数据服务中的更新覆盖客户端上的对象更改的另一种方式是指定 <xref:System.Data.Services.Client.MergeOption.PreserveChanges>。 当指定 <xref:System.Data.Services.Client.MergeOption.OverwriteChanges> 时，客户端上对象的值将替换为响应源中对应项的最新值，即使已对这些对象进行了更改也是如此。 当使用 <xref:System.Data.Services.Client.MergeOption.NoTracking> 合并选项时，<xref:System.Data.Services.Client.DataServiceContext> 无法将对客户端对象所做的更改发送到数据服务。 使用此选项时，将始终用数据服务中的值覆盖更改。  
   
 ## <a name="managing-concurrency"></a>管理并发  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]支持使数据服务能够检测更新冲突的乐观并发。 可以按这种方式配置数据服务提供程序，使得数据服务能够使用并发标记检查实体是否更改。 此标记包含实体类型的一个或多个属性，数据服务通过验证这些属性来确定某个资源是否已更改。 并发标记，包括在对请求和从数据服务的响应的 eTag 标头中，管理为你通过[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端。 有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持使数据服务能够检测更新冲突的乐观并发。 可以按这种方式配置数据服务提供程序，使得数据服务能够使用并发标记检查实体是否更改。 此标记包含实体类型的一个或多个属性，数据服务通过验证这些属性来确定某个资源是否已更改。 并发标记，包括在对请求和从数据服务的响应的 eTag 标头中，管理为你通过[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端。 有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
   
  <xref:System.Data.Services.Client.DataServiceContext> 通过使用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或通过 <xref:System.Data.Services.Client.DataServiceCollection%601> 跟踪已手动报告的对对象所做的更改。 当调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时，客户端将更改发送回数据服务。 如果客户端中的数据更改与数据服务中的更改冲突，则 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 会失败。 当发生这种情况时，您必须再次查询实体资源以接收更新数据。 若要覆盖数据服务中的更改，请使用 <xref:System.Data.Services.Client.MergeOption.PreserveChanges> 合并选项执行查询。 再次调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 时，只要尚未对数据服务中的资源进行其他更改，客户端上保留的更改将永久保存到数据服务。  
   

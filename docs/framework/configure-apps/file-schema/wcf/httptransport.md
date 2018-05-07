@@ -2,11 +2,11 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: cd3a17eee9d4eebbefa880e14aadbc4715a18ac1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 77400348e9adc31d8121fc75f46d75d757af270f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 为自定义绑定指定用于传输 SOAP 消息的 HTTP 传输。  
@@ -66,7 +66,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
- `httpTransport` 元素是创建实现 HTTP 传输协议的自定义绑定的起始点。 HTTP 是用于互操作性用途的主要传输。 通过 Windows Communication Foundation (WCF) 以确保与其他非互操作性支持此传输[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]Web 服务堆栈。  
+ `httpTransport` 元素是创建实现 HTTP 传输协议的自定义绑定的起始点。 HTTP 是用于互操作性用途的主要传输。 通过 Windows Communication Foundation (WCF) 以确保与其他非 WCF Web 服务堆栈的互操作性支持此传输。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.HttpTransportElement>  

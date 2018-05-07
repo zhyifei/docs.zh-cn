@@ -1,10 +1,6 @@
 ---
 title: 封送处理字符串
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - marshaling, samples
 - platform invoke, marshaling data
@@ -15,17 +11,13 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: adcdf55f3e33a48c4fd10ea243bb0ce3497f522f
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 52a78e0c3969e879bf2fd1b1f5c41b2caac2ba11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshaling-strings"></a>封送处理字符串
 平台调用复制字符串参数，根据需要将其从 .NET Framework 格式 (Unicode) 转换为非托管格式 (ANSI)。 由于托管的字符串不可变，在函数返回时，平台调用并不将它们从非托管内存复制回托管内存。  
@@ -45,7 +37,7 @@ ms.lasthandoff: 04/16/2018
 |作为字符串数组按值。|创建按值传递的字符串数组。|[数组](marshaling-different-types-of-arrays.md)|  
 |作为包含字符串的结构数组按值。|创建包含字符串的结构数组，且该数组是按值传递的。|[数组](marshaling-different-types-of-arrays.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用平台调用封送数据](marshaling-data-with-platform-invoke.md)  
  [平台调用数据类型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
  [封送类、结构和联合](marshaling-classes-structures-and-unions.md)  

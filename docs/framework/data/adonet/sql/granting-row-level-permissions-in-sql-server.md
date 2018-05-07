@@ -1,24 +1,12 @@
 ---
-title: "在 SQL Server 中授予行级权限"
-ms.custom: 
+title: 在 SQL Server 中授予行级权限
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c086ad08e4170d0033ae32bd730b239d5541d541
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5f777b47c9b2f92c40fec01b4ff0c35fc28dbd89
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>在 SQL Server 中授予行级权限
 在某些情况下，会要求更为细致地控制数据访问，而不仅仅是授予、撤消或拒绝提供的权限。 例如，医院数据库应用程序可能需要限制各个医生只访问与自己的患者相关的信息。 在很多环境（包括财务、法律、政府和军事应用程序）中都存在类似的要求。 为了满足这些情况，SQL Server 2016 提供了 [行级安全](https://msdn.microsoft.com/library/dn765131.aspx) 功能，可以用于简化并集中化安全策略中的行级访问逻辑。 对于 SQL Server 的早期版本，可以通过使用视图制定行级筛选来实现类似功能。  

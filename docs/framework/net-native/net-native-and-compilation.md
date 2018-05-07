@@ -1,24 +1,14 @@
 ---
-title: ".NET Native 和编译"
-ms.custom: 
+title: .NET Native 和编译
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86d8a740aa0597a21c6665ee722f4a601dec9bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 046b71a8f1d948a785a15cfc148b93292bf673f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-native-and-compilation"></a>.NET Native 和编译
 面向 .Net Framework 的 Windows 8.1 应用程序和 Windows 桌面应用程序由特定的编程语言进行编写并编译为中间语言 (IL)。 在运行时，实时 (JIT) 编译器负责恰好在首次执行方法前为本地计算机将 IL 编译到本机代码中。 与此相反，.NET 本机工具链在编译时将源代码转换为本机代码。 本主题将 .NET 本机与其他可用于 .NET Framework 应用程序的编译技术进行比较，还提供了 .NET 本机如何生成本机代码的实用概述，可帮助用户了解使用 .NET 本机编译的代码中发生的异常为什么不会出现在 JIT 编译的代码中。  

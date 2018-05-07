@@ -1,24 +1,14 @@
 ---
-title: "如何：使用 WIF 显示登录状态"
-ms.custom: 
+title: 如何：使用 WIF 显示登录状态
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f6951eb6c9df7a3fef09f5972f3cb5fcabe5496f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53ef5e8b3fae976bacff3be9a50c323a22aef0e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>如何：使用 WIF 显示登录状态
 ## <a name="applies-to"></a>适用于  
@@ -27,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET® Web 窗体  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  本主题介绍如何在已启用 WIF 的 ASP.NET 应用程序中显示登录状态。 WIF 提供的机制可使应用程序声明感知、管理应用程序资源的身份验证和授权。  
   
 ## <a name="contents"></a>内容  

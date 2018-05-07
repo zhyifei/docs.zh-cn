@@ -1,13 +1,6 @@
 ---
-title: "跟踪应用程序和在应用程序中插入检测点"
-ms.custom: 
+title: 跟踪应用程序和在应用程序中插入检测点
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20eea5ed6f69c17466aeb33617f418ac71a3e1b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33d940a051c3185d8a3a04e77ea5899de0475ffc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing-and-instrumenting-applications"></a>跟踪应用程序和在应用程序中插入检测点
 跟踪是指应用程序正在运行时监视其执行情况的方式。 可在开发 .NET Framework 应用程序时向其添加跟踪和调试检测，也可在开发应用程序时或在部署此应用程序之后使用此检测。 可使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 类将错误和应用程序执行的相关信息记录在日志、文本文件或其他设备中，以供将来分析。  
@@ -53,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 类提供了在开发期间或部署之后监视和检查应用程序性能的方法。 例如，您可以使用 <xref:System.Diagnostics.Trace> 类跟踪在已部署的应用程序中发生的特定类型的操作（例如新建数据库连接），因而可以监视该应用程序的效率。  
   
 ## <a name="code-tracing-and-debugging"></a>代码跟踪和调试  
- 在开发过程中，使用 <xref:System.Diagnostics.Debug> 类的输出方法，可以在 Visual Studio 集成开发环境 (IDE) 的“输出”窗口中显示消息。 例如:  
+ 在开发过程中，使用 <xref:System.Diagnostics.Debug> 类的输出方法，可以在 Visual Studio 集成开发环境 (IDE) 的“输出”窗口中显示消息。 例如：  
   
 ```vb  
 Trace.WriteLine("Hello World!")  

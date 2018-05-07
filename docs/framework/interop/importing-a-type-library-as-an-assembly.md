@@ -1,14 +1,6 @@
 ---
 title: 将类型库当作程序集导入
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - importing type library
 - type metadata
@@ -23,17 +15,13 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0299ef58d58318714b8f0eb8082928f8da565d2f
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 89479ca4a41f761d4aacaf6d8d962bfba62be811
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>将类型库当作程序集导入
 COM 类型定义通常位于类型库中。 而符合 CLS 的编译器则在程序集中生成类型元数据。 类型信息的这两种来源具有很大的区别。 本主题将说明从类型库中生成元数据的技术。 生成的程序集称为互操作程序集，其中包含的类型信息允许 .NET Framework 应用程序使用 COM 类型。  
@@ -81,7 +69,7 @@ COM 类型定义通常位于类型库中。 而符合 CLS 的编译器则在程�
   
  有关 COM 互操作导入过程的详细信息，请参阅[有关从类型库转换到程序集的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)  
  [有关从类型库转换到程序集的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  

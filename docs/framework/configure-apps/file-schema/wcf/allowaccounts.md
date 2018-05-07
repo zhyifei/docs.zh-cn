@@ -2,11 +2,11 @@
 title: '&lt;allowAccounts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: bbfe0d5d531cf61c01f95d0e82ce0f894031d6f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 097112a8b54467843554047882e55b62d7813c0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
 包含的指定用户帐户，进程承载 Windows Communication Foundation (WCF) 服务并被授予了对该共享服务的连接访问权限的配置元素的集合。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 |特性|描述|  
 |---------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|添加进程的用户帐户，这些进程承载 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务并被授予了对该共享服务的连接访问权限。|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|将添加这些进程承载 WCF 服务并被授予对该共享服务的连接访问权限的用户帐户|  
   
 ### <a name="parent-elements"></a>父元素  
   

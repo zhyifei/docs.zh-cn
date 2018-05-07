@@ -1,14 +1,6 @@
 ---
-title: "EmitAssembly 方法"
-ms.custom: 
+title: EmitAssembly 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink2.EmitAssembly
 - EmitAssembly
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 605ff39e-e5cc-4bff-8196-e8d68a9715b9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f012ea89fec0e64bc1639e6c47fb79249c25411a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1cd1c077a8f2a5fe3b2b46c2e1da2e92b5a797a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="emitassembly-method"></a>EmitAssembly 方法
 创建程序集。 调用此方法后所有其他文件都将关闭的程序集文件除外。 当生成未绑定的模块时，请勿调用此方法。  
@@ -53,7 +41,7 @@ HRESULT EmitAssembly(
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  需要 alink.h  
   
 ## <a name="see-also"></a>请参阅  

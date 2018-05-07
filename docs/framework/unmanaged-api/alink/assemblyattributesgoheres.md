@@ -1,14 +1,6 @@
 ---
 title: AssemblyAttributesGoHereS
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - AssemblyAttributesGoHereS
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4e817f35-a2bc-4403-9e6f-f731e6b9fe23
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac8f25632521f2e8abe5209608e42632293feb4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d68450d05f667851404a009c0984f8722253e71e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="assemblyattributesgoheres"></a>AssemblyAttributesGoHereS
 由 ALink 用作占位符以存储有关自定义特性的信息。  
@@ -51,7 +39,7 @@ AssemblyAttributesGoHereS
   
  这些类型在 .NET Framework 中标记为“内部的”，并位于 <xref:System.Runtime.CompilerServices>。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  mscorlib.dll  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,24 +1,12 @@
 ---
-title: "保护连接信息"
-ms.custom: 
+title: 保护连接信息
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ffd77bb1875b2de47602a6bd766463b0a274fadc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4cf503af6f57eefb0990a8e7e728ea5c1474bfa7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="protecting-connection-information"></a>保护连接信息
 保护应用程序时，最重要的目标之一是保护对数据源的访问。 如果连接字符串未受保护，那么它就是一个潜在漏洞。 如果以纯文本形式存储连接信息或者使连接信息持续位于内存中，则可能会损害整个系统。 可以使用读取嵌入在源代码中的连接字符串[Ildasm.exe （IL 反汇编程序）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)若要查看 Microsoft 中间语言 (MSIL) 在编译的程序集。  
@@ -48,7 +36,7 @@ ms.lasthandoff: 01/19/2018
  `Persist Security Info` 的默认值为 false；建议在所有连接字符串中使用此默认值。 如果将 `Persist Security Info` 设置为 `true` 或 `yes`，则允许在打开连接后通过连接获取安全敏感信息（包括用户 ID 和密码）。 如果将 `Persist Security Info` 设置为 `false` 或 `no`，则在使用安全信息打开连接后会丢弃安全信息，这可确保不受信任的来源不能访问安全敏感信息。  
   
 ## <a name="encrypt-configuration-files"></a>加密配置文件  
- 您还可以在配置文件中存储连接字符串，从而不必将它们嵌入到应用程序的代码中。 配置文件是标准 XML 文件，.NET Framework 已为这些文件定义了一组常用的元素。 配置文件中的连接字符串通常存储在内部 **\<connectionStrings >**中的元素**app.config** Windows 应用程序，或**web.config** ASP.NET 应用程序的文件。 有关存储的基础知识的详细信息，检索和加密连接字符串从配置文件，请参阅[连接字符串和配置文件](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)。  
+ 您还可以在配置文件中存储连接字符串，从而不必将它们嵌入到应用程序的代码中。 配置文件是标准 XML 文件，.NET Framework 已为这些文件定义了一组常用的元素。 配置文件中的连接字符串通常存储在内部 **\<connectionStrings >** 中的元素**app.config** Windows 应用程序，或**web.config** ASP.NET 应用程序的文件。 有关存储的基础知识的详细信息，检索和加密连接字符串从配置文件，请参阅[连接字符串和配置文件](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

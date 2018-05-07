@@ -1,27 +1,17 @@
 ---
-title: "异常 Thrown_V1 ETW 事件"
-ms.custom: 
+title: 异常 Thrown_V1 ETW 事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ExceptionThrown_V1 event [.NET Framework]
 - ETW, ExceptionThrown_V1 event (CLR)
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
-caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60013d0df8c63033f6da8d61479bacac7b944094
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dafa5846f779276ab81e8e30e7c7a50b9fbff853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-thrownv1-etw-event"></a>异常 Thrown_V1 ETW 事件
 该事件捕获有关引发的异常的信息。  
@@ -34,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|引发托管异常。|  
   

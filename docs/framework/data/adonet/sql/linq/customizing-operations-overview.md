@@ -1,24 +1,12 @@
 ---
-title: "自定义操作：概述"
-ms.custom: 
+title: 自定义操作：概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a3546296-1443-4b88-aa6e-d41011041ba7
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6d3491ccd183224063c435f6b377f60b175d5383
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d495632faf2f57df21d07e0be85244d7ba9d9da7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-operations-overview"></a>自定义操作：概述
 默认情况下，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会根据映射生成动态 SQL 来执行插入、更新和删除操作。 但在实践中，您通常需要添加您自己的业务逻辑来提供安全、验证等。  

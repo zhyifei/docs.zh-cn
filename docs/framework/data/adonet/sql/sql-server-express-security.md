@@ -1,24 +1,12 @@
 ---
-title: "SQL Server Express 安全性"
-ms.custom: 
+title: SQL Server Express 安全性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6593e075d1a9d672f414cfa0cd8652f760b084e1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7bc0fdf218f8fca1f904505c552df6986c47e4de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 安全性
 Microsoft SQL Server Express Edition (SQL Server Express) 基于 Microsoft SQL Server，支持数据库引擎的大多数功能。 它如此设计旨在默认情况下关闭不重要的功能和网络连接。 这可减少恶意用户可以利用的攻击面。  
@@ -44,7 +32,7 @@ Microsoft SQL Server Express Edition (SQL Server Express) 基于 Microsoft SQL S
 |-|-|  
 |[SQL Server 联机丛书](http://msdn.microsoft.com/library/bb543165.aspx)|包含 SQL Server Express 的文档。|  
 |[连接到 SQL Server Express](http://msdn.microsoft.com/library/ms165679.aspx) SQL Server 联机丛书中|说明如何在网络上使用 SQL Server Express Edition。|  
-|[Microsoft SQL Server 2005 Express Edition Books Online](http://msdn.microsoft.com/library/ms165706.aspx)|SQL Server 2005 Express Edition 的完整文档。|  
+|[Microsoft SQL Server 2005 Express Edition 联机丛书](http://msdn.microsoft.com/library/ms165706.aspx)|SQL Server 2005 Express Edition 的完整文档。|  
 |[非管理员的用户实例](http://msdn.microsoft.com/library/ms143684.aspx)SQL Server 联机丛书中|说明如何创建和部署用户实例。|  
 |[SQL Server Express 用户实例](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|说明 ADO.NET 应用程序中的用户实例功能。 提供有关如何启用用户实例、使用 <xref:System.Data.SqlClient.SqlConnection> 连接到用户实例、用户实例生存期和用户实例方案的信息。|  
   

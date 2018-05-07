@@ -1,29 +1,19 @@
 ---
-title: "CLR ETW 关键字和级别"
-ms.custom: 
+title: CLR ETW 关键字和级别
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - CLR ETW keywords
 - CLR ETW levels
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72775d4cb478b6d9c9d2e65119c63f8a34ae47d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8332eba909c3ebe475e3f364f81a676733e4e3d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 关键字和级别
 <a name="top"></a> Windows (ETW) 事件的事件跟踪可以按类别和级别进行筛选。 事件 [CLR ETW 关键字](#keywords) 启用按类别筛选事件；它们用于运行时提供程序和断开提供程序的组合。 [事件级别](#levels) 由标志来标识。  

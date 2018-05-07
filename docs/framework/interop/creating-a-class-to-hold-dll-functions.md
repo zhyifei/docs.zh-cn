@@ -1,14 +1,6 @@
 ---
-title: "创建用于容纳 DLL 函数的类"
-ms.custom: 
+title: 创建用于容纳 DLL 函数的类
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM interop, DLL functions
 - unmanaged functions
@@ -18,17 +10,13 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed5ef9b7aaad3405ff31ff45ee8d0b22f56f51d7
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 09088d1ac0a8312ee5832a5f3bc0547e6654de93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>创建用于容纳 DLL 函数的类
 将常用的 DLL 函数包装在托管类中，这是封装平台功能的一种有效方式。 虽然不必在每种情形下都这样做，但由于定义 DLL 函数相当麻烦且容易出错，所以提供类包装器非常简便。 如果使用 Visual Basic 或 C# 进行编程，必须在一个类或 Visual Basic 模块中声明 DLL 函数。  

@@ -1,14 +1,6 @@
 ---
-title: "“Cor调试记录格式”枚举"
-ms.custom: 
+title: “Cor调试记录格式”枚举
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorDebugRecordFormat
 api_location:
@@ -18,17 +10,13 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eaf962250d97f031eaa60b7cc0b15622897aad3f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a27c96a7be9b5d868e07da11f1a239b9dd5fe2f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cordebugrecordformat-enumeration"></a>“Cor调试记录格式”枚举
 描述包含本机异常调试事件相关信息的字节数组的数据格式。  
@@ -55,14 +43,14 @@ typedef enum CorDebugRecordFormat {
 > [!NOTE]
 >  此枚举仅用于 .NET Native 调试方案。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

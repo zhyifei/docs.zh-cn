@@ -1,14 +1,6 @@
 ---
-title: "SetNonAssemblyFlags 方法"
-ms.custom: 
+title: SetNonAssemblyFlags 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink.SetNonAssemblyFlags
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: f8ba6fc8-f5aa-4066-ac96-56332758f5ec
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7e944f285ee0925b76fdd9b95c824deee38cead2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0399a135eddfd87342db63e107c8eea59a6e54d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags 方法
 设置不是程序集特定的标志。  
@@ -52,7 +40,7 @@ HRESULT SetNonAssemblyFlags(
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  需要 alink.h  
   
 ## <a name="see-also"></a>请参阅  

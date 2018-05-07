@@ -1,24 +1,14 @@
 ---
-title: "使用 WIF 的基于声明的授权"
-ms.custom: 
+title: 使用 WIF 的基于声明的授权
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bc6a9d828f1ab666ddda687931785f3853b74374
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d2972ccef6829a2b7a052ba30258086443bd833
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 的基于声明的授权
 在依赖方应用程序中，授权可确定允许已经过身份验证的标识访问的资源以及允许该标识对这些资源执行的操作。 授权不当会导致信息泄露和数据篡改。 本主题概述了可用于通过 Windows Identity Foundation (WIF) 和安全令牌服务 (STS) 来实现针对声明感知 ASP.NET Web 应用程序和服务（例如，Microsoft Azure 访问控制服务 (ACS)）的授权的方法。  
@@ -52,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
 -   **在令牌颁发过程中**。 对用户进行身份验证时，可由标识提供程序 STS 或联合身份验证提供程序（如 Microsoft Azure 访问控制服务 (ACS)）发布角色声明。  
   
--   **使用 ClaimsAuthenticationManager 将任意声明转换为声明角色类型**。 ClaimsAuthenticationManager 是作为 WIF 的一部分附带的组件。 它允许在请求启动应用程序时拦截请求，并通过添加、更改或删除声明来检查并转换令牌。 有关如何使用 ClaimsAuthenticationManager 来转换声明的详细信息，请参阅[操作方法：在声明感知 ASP.NET 应用程序中使用 WIF 和 ACS 实施基于角色的访问控制 (RBAC)](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247444)。  
+-   **使用 ClaimsAuthenticationManager 将任意声明转换为声明角色类型**。 ClaimsAuthenticationManager 是作为 WIF 的一部分附带的组件。 它允许在请求启动应用程序时拦截请求，并通过添加、更改或删除声明来检查并转换令牌。 有关如何使用 ClaimsAuthenticationManager 转换声明的详细信息，请参阅[How To： 实现角色基于访问控制 (RBAC) 中的声明感知 ASP.NET 应用程序使用 WIF 和 ACS](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247444)。  
   
 -   使用 samlSecurityTokenRequirement 配置节将任意声明映射到角色类型 - 一种声明性方法，其中仅使用配置完成声明转换且无需编码。  
   

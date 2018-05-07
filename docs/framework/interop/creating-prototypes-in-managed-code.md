@@ -1,10 +1,6 @@
 ---
 title: 在托管代码中创建原型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,17 +17,13 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c59a05c5f6abfa30a71ccf7608f8a84738f99c3a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在托管代码中创建原型
 本主题介绍了如何访问非托管函数，并介绍了在托管代码中批注方法定义的若干属性字段。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](marshaling-data-with-platform-invoke.md)。  
@@ -228,7 +220,7 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用非托管 DLL 函数](consuming-unmanaged-dll-functions.md)  
  [指定入口点](specifying-an-entry-point.md)  
  [指定字符集](specifying-a-character-set.md)  

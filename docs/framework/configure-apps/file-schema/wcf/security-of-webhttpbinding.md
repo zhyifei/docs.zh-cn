@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: dd65b488a2d3f18f2e19191f143243204c4303d4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 2df10c0a35a5547dc2f1dafc6a2b9c0f9bbdc0a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt; 的 &lt;security&gt;
 指定与配置的终结点的安全要求[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 |-----------|-----------------|  
 |无|禁用安全性。|  
 |传输|使用 HTTPS 提供安全性。 此服务需要使用 SSL 证书进行配置。 消息使用 HTTPS 获得全面保护，而且客户端使用服务的 SSL 证书对服务进行身份验证。 可以通过控制客户端身份验证的`ClientCredentialType`属性[\<传输 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)。|  
-|TransportCredentialOnly|此模式并不提供消息的完整性和保密性， 而是提供基于 HTTP 的客户端身份验证。 使用此模式时应当小心。 在通过其他方式（如 IPSec）提供传输安全并且 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 基础结构只提供客户端身份验证的环境中，应该使用此模式。|  
+|TransportCredentialOnly|此模式并不提供消息的完整性和保密性， 而是提供基于 HTTP 的客户端身份验证。 使用此模式时应当小心。 它应在其中通过其他方式 （如 IPSec) 提供传输安全并且只有客户端身份验证由 WCF 基础结构的环境中使用。|  
   
 ### <a name="child-elements"></a>子元素  
   

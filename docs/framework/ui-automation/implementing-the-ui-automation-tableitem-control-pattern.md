@@ -1,28 +1,19 @@
 ---
-title: "实现 UI 自动化 TableItem 控件模式"
-ms.custom: 
+title: 实现 UI 自动化 TableItem 控件模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, Table Item
 - UI Automation, Table Item control pattern
 - TableItem control pattern
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
-caps.latest.revision: "14"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: caf2a6983ba7a6a993424eadec7d700fb30db57c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e28ac8762c2c3a58a282b92da2b0a2dfadf32dbb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>实现 UI 自动化 TableItem 控件模式
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 <a name="Required_Members_for_ITableItemProvider"></a>   
 ## <a name="required-members-for-itableitemprovider"></a>ITableItemProvider 必需的成员  
   
-|必需的成员|成员类型|备注|  
+|必需的成员|成员类型|说明|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|方法|无|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|方法|无|  
