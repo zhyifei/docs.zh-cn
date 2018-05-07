@@ -1,14 +1,6 @@
 ---
-title: "StrongNameCompareAssemblies 函数"
-ms.custom: 
+title: StrongNameCompareAssemblies 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameCompareAssemblies
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1ed98b1713427a71c73c30ddd64188f61d51045c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4bd1d098f21a3d5ba43b6251c87c36df4347a924
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 函数
 确定是否两个程序集的差异仅在于其强名称签名。  
@@ -59,23 +47,23 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out]以下值之一：  
   
--   `SN_CMP_DIFFERENT`(0)-指定程序集包含不同的数据。  
+-   `SN_CMP_DIFFERENT` (0)-指定程序集包含不同的数据。  
   
--   `SN_CMP_IDENTICAL`(1)-指定程序程序集完全相同，包括其签名和校验和。  
+-   `SN_CMP_IDENTICAL` (1)-指定程序程序集完全相同，包括其签名和校验和。  
   
--   `SN_CMP_SIGONLY`(2)-指定程序集不同只能由签名和校验和。  
+-   `SN_CMP_SIGONLY` (2)-指定程序集不同只能由签名和校验和。  
   
 ## <a name="return-value"></a>返回值  
- `true`在成功完成;否则为`false`。  
+ `true` 在成功完成;否则为`false`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** StrongName.h  
   
  **库：**作为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>备注  
  程序集的强名称签名组成程序集的文本名称、 版本、 区域性和公钥标记。  

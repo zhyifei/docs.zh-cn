@@ -1,22 +1,12 @@
 ---
-title: "如何： 检索元素 (LINQ to XML) 的值 (Visual Basic)"
-ms.custom: 
+title: 如何： 检索元素 (LINQ to XML) 的值 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e688872ea514e822a81b4b3e285ad0d0aa8a0f17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ff2a1712a79bdedd74fe51391f01dd900ae585e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>如何： 检索元素 (LINQ to XML) 的值 (Visual Basic)
 本主题演示如何获取元素的值。 有两种主要方法可以完成此操作。 一种方法是将 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型。 然后，显式转换运算符将元素或属性的内容转换为指定的类型，并将其分配给变量。 此外，还可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 属性。  
@@ -158,5 +148,5 @@ v4:element does not exist
   
  通常情况下，当使用强制转换来检索元素和属性的内容时，可以编写更简易的代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ to XML 轴 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

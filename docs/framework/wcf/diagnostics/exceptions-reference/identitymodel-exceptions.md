@@ -1,24 +1,12 @@
 ---
-title: "IdentityModel 异常"
-ms.custom: 
+title: IdentityModel 异常
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 异常
 本主题列出 IdentityModel 生成的所有异常。  
@@ -91,8 +79,8 @@ ms.lasthandoff: 12/22/2017
 |SAMLSignatureAlreadyRead|已在 SAML 断言中读取签名。|  
 |AlgorithmAndPrivateKeyMisMatch|指定的算法和私钥不匹配。|  
 |EmptyTransformChainNotSupported|不支持空转换链。|  
-|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper &#124;偏移量超出范围。|  
-|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper &#124;大小超出范围。 SecurityTokenManagerCannotCreateAuthenticatorForRequirement=安全令牌管理器无法为特定需求创建令牌身份验证器。|  
+|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper&#124;'offset' 超出范围。|  
+|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper&#124;'size' 超出范围。 SecurityTokenManagerCannotCreateAuthenticatorForRequirement=安全令牌管理器无法为特定需求创建令牌身份验证器。|  
 |UnableToCreateKeyedHashAlgorithm|无法从特定签名算法的特定值创建 KeyedHashAlgorithm。|  
 |SAMLUnableToLoadAssertion|\<Saml:assertion > 元素加载失败。|  
 |X509FindValueMismatchMulti|特定的 X509FindType 要求自变量 findValue 的类型为两个值之一。 而自变量 findValue 为另外的类型。|  

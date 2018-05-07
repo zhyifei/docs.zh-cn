@@ -1,22 +1,12 @@
 ---
-title: "异步返回类型 (Visual Basic)"
-ms.custom: 
+title: 异步返回类型 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1a62556fb93a3d8547d880e4ea6770b206ead900
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0c6c02efd282f8581f3dc85905149acf7b3ea6ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="async-return-types-visual-basic"></a>异步返回类型 (Visual Basic)
 异步方法具有三个可能的返回类型： <xref:System.Threading.Tasks.Task%601>， <xref:System.Threading.Tasks.Task>，和 void。 在 Visual Basic 中，void 返回类型被写为 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 过程。 有关异步方法的详细信息，请参阅[使用 Async 和 Await (Visual Basic 中) 的异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
@@ -107,7 +97,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync`调用和等待通过使用 await 语句而不 await 表达式，类似于同步的调用语句`Sub`或返回返回 void 的方法。 应用程序的`Await`运算符在此情况下不生成值。  
+ `Task_MethodAsync` 调用和等待通过使用 await 语句而不 await 表达式，类似于同步的调用语句`Sub`或返回返回 void 的方法。 应用程序的`Await`运算符在此情况下不生成值。  
   
  以下代码调用和等待方法 `Task_MethodAsync`。  
   
@@ -301,7 +291,7 @@ End Sub
     All done, exiting button-click event handler.  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.Tasks.Task.FromResult%2A>  
  [演练：使用 Async 和 Await 访问 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [异步程序中的控制流 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)  

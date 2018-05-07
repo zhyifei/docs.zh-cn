@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedDocumentWriter 接口"
-ms.custom: 
+title: ISymUnmanagedDocumentWriter 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedDocumentWriter
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: edc8a02b-a0ac-46e3-80c1-fb8b5cef6341
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0f618901472ac1ab4a9ae86788582e8c9348a4a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2ee8a5d98c3577bc54ecdaa5205f08a5c610830
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanageddocumentwriter-interface"></a>ISymUnmanagedDocumentWriter 接口
 提供用于写入到符号存储区引用的文档的方法。  
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 |[SetCheckSum 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|设置校验和信息。|  
 |[SetSource 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|正在写入的文档集嵌入的源。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>请参阅  

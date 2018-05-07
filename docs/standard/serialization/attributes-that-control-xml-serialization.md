@@ -1,12 +1,6 @@
 ---
-title: "用来控制 XML 序列化的属性"
-ms.custom: 
+title: 用来控制 XML 序列化的属性
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - classes, serializing
 - XmlSerializer class, serializing
@@ -15,18 +9,11 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e93912fc221d5c76dd5a462e6141fae2d0f4ca16
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3c6e46c97a943f1c77ffd12dd2b3bc85a64b3c11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributes-that-control-xml-serialization"></a>用来控制 XML 序列化的属性
 通过将下表中的特性应用于类和类成员，可以控制 <xref:System.Xml.Serialization.XmlSerializer> 序列化或反序列化该类的实例的方式。 若要了解这些属性如何控制 XML 序列化，请参阅[使用属性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)。  

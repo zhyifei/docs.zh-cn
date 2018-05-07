@@ -1,28 +1,19 @@
 ---
-title: "UI 自动化对 Text 控件类型的支持"
-ms.custom: 
+title: UI 自动化对 Text 控件类型的支持
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Text control type
 - UI Automation, Text control type
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
-caps.latest.revision: "19"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 33477a2d193d8c9e9e3ea84e178f6bf5ea4d5ff5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d57b51e88e203100ea7dd41aa937ca8530cbce1c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>UI 自动化对 Text 控件类型的支持
 > [!NOTE]
@@ -56,7 +47,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出了值或定义与文本控件密切相关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。 有关详细信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]属性，请参阅[的客户端 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|备注|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|说明|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -73,7 +64,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-control-patterns"></a>必需的 UI 自动化控件模式  
  下表列出了需要由文本控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
   
-|控件模式|支持|备注|  
+|控件模式|支持|说明|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Never|文本从不支持 ValuePattern。 如果文本可编辑，则它为 Edit 控件类型。|  
 |<xref:System.Windows.Automation.Provider.ITextProvider>|视情况而定|为了提供更好的辅助功能，文本应支持 Text 控件模式，尽管这不是必需的。 当文本具有丰富的样式和特性（例如，颜色、粗体和斜体）时，Text 控件模式非常有用。取决于框架。|  
@@ -84,7 +75,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出了需要由所有文本控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|备注|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|说明|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|必需|无|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|必需|无|  

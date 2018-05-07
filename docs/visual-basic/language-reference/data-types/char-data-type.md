@@ -1,11 +1,6 @@
 ---
 title: Char 数据类型 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Char
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 16ff547fccbf4481d31ca79537962cc7090fc9b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e672402535215ca30d19cc480e39b42b0364f137
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="char-data-type-visual-basic"></a>Char 数据类型 (Visual Basic)
 取值范围为 0 到 65535 的保存无符号的 16 位 （2 个字节） 码位。 每个*代码点*，或字符代码，表示单个 Unicode 字符。  
@@ -54,17 +46,17 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>编程提示  
   
--   **负数。** `Char`是无符号的类型且不能表示为负值。 在任何情况下，不应使用`Char`来保存数值。  
+-   **负数。** `Char` 是无符号的类型且不能表示为负值。 在任何情况下，不应使用`Char`来保存数值。  
   
 -   **互操作注意事项。** 如果接口与组件不是为.NET Framework 中，编写如自动化或 COM 对象，请记住，字符类型具有不同的数据宽度 （8 位） 在其他环境中。 如果将 8 位自变量传递到此类组件时，将其声明为`Byte`而不是`Char`在新的 Visual Basic 代码。  
   
 -   **扩大转换。** `Char`数据类型加宽到`String`。 这意味着你可以将转换`Char`到`String`而不会遇到<xref:System.OverflowException?displayProperty=nameWithType>错误。  
   
--   **类型字符。** 追加文本类型字符`C`到单字符字符串文本将其强制转换到`Char`数据类型。 `Char`中有任何标识符类型字符。  
+-   **类型字符。** 追加文本类型字符`C`到单字符字符串文本将其强制转换到`Char`数据类型。 `Char` 中有任何标识符类型字符。  
   
 -   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Char?displayProperty=nameWithType> 结构。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Char?displayProperty=nameWithType>  
  <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  

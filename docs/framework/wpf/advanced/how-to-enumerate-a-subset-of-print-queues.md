@@ -1,13 +1,6 @@
 ---
-title: "如何：枚举打印队列的子集"
-ms.custom: 
+title: 如何：枚举打印队列的子集
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 397ec40e2d8a0694e208296593687e9268546fc7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3e616b3b61b4b1b561d5bdb7e51525f391901a22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>如何：枚举打印队列的子集
 信息技术 (IT) 专业人员负责管理公司范围内打印机所面临的常见情况是生成具有特定特征的打印机的列表。 此功能由<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法<xref:System.Printing.PrintServer>对象和<xref:System.Printing.EnumeratedPrintQueueTypes>枚举。  

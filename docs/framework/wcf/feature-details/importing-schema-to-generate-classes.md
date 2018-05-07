@@ -1,14 +1,6 @@
 ---
 title: 导入架构以生成类
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 338daa031ac2c1b31a121908643a15449c5401a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>导入架构以生成类
-若要从与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 一起使用的可用架构中生成类，则使用 <xref:System.Runtime.Serialization.XsdDataContractImporter> 类。 本主题描述该过程和变体。  
+若要从使用 Windows Communication Foundation (WCF) 可用架构中生成类，请使用<xref:System.Runtime.Serialization.XsdDataContractImporter>类。 本主题描述该过程和变体。  
   
 ## <a name="the-import-process"></a>导入过程  
  架构导入过程以一个 <xref:System.Xml.Schema.XmlSchemaSet> 开始并生成一个 <xref:System.CodeDom.CodeCompileUnit>。  
@@ -114,7 +100,7 @@ ms.lasthandoff: 04/28/2018
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  也可将任何关联视为列表。 例如，可以将上面的关联视为一个复杂的 `city` 对象列表，这些对象碰巧有两个字段（一个字符串字段和一个整数字段）。 这两种模式在 XSD 架构中都有一种表示形式。 由于无法区分列表和关联，因此始终将这种模式作为列表处理，架构中出现特定于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的特殊批注除外。 该批注指示给定模式表示一个关联。 有关详细信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
+>  也可将任何关联视为列表。 例如，可以将上面的关联视为一个复杂的 `city` 对象列表，这些对象碰巧有两个字段（一个字符串字段和一个整数字段）。 这两种模式在 XSD 架构中都有一种表示形式。 没有无法区分列表和关联，因此这种模式始终将作为列表处理除非特定于 WCF 的特殊批注是架构中出现。 该批注指示给定模式表示一个关联。 有关详细信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
  通常情况下，将列表作为派生自泛型列表的集合数据协定导入，或作为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数组导入，具体取决于架构是否遵循集合的标准命名模式。 此进行了更详细地描述[数据协定中的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 通常将关联作为 <xref:System.Collections.Generic.Dictionary%602> 或派生自字典对象的集合数据协定导入。 例如，考虑下面的架构。  
   

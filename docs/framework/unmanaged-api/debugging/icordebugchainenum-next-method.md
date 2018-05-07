@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugChainEnum::Next 方法"
-ms.custom: 
+title: ICorDebugChainEnum::Next 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugChainEnum.Next
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6b791351-bcc5-4ddd-9cab-eff2f7dd5142
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e78340d26e4a7ab67fa6c312b1dbd537c5c0a28c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cd4f27b958aa4b25c2662d8a5e9da6bcdc73d5d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next 方法
 获取指定的数量的 ICorDebugChain 实例的枚举，从当前位置开始。  
@@ -59,11 +47,11 @@ HRESULT Next (
  `pceltFetched`  
  [out]指向数`ICorDebugChain`实际返回的实例。 此值可能为 null 如果`celt`是之一。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

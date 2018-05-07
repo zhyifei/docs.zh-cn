@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugManagedCallback::Breakpoint 方法"
-ms.custom: 
+title: ICorDebugManagedCallback::Breakpoint 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugManagedCallback.Breakpoint
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d7b0c521f1b2c5a2c258738239696ad48d4e9350
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 381fdecfb2cb194cd1eb00a5b55db6fb89eeebbc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint 方法
 遇到断点时，请通知调试器。  
@@ -58,14 +46,14 @@ HRESULT Breakpoint (
  `pBreakpoint`  
  [in]指向一个表示该断点的 ICorDebugBreakpoint 对象的指针。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

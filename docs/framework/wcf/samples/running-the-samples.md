@@ -1,29 +1,15 @@
 ---
 title: 运行 Windows Communication Foundation 示例
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2aca4555277a1b365ddee1c672a6375edfde9f34
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: ee02b6e737e4728a378533ebb5ba89cec9807b33
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>运行 Windows Communication Foundation 示例
-可以用单机配置或跨计算机配置来运行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例。 示例在提供时就可用于在单机上运行。 在跨计算机配置中，必须修改示例的配置文件设置。 下面的过程说明如何用同一计算机配置和跨计算机配置来运行示例。 请注意，Internet 信息服务 (IIS) 中承载的服务和自承载示例在步骤上有所不同。 大多数示例承载于 IIS 中，请参见示例自述文件信息以确定示例的承载方式。  
+可以在单计算机或跨计算机配置中运行 Windows Communication Foundation (WCF) 示例。 示例在提供时就可用于在单机上运行。 在跨计算机配置中，必须修改示例的配置文件设置。 下面的过程说明如何用同一计算机配置和跨计算机配置来运行示例。 请注意，Internet 信息服务 (IIS) 中承载的服务和自承载示例在步骤上有所不同。 大多数示例承载于 IIS 中，请参见示例自述文件信息以确定示例的承载方式。  
   
  在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，未在 IIS 中承载的示例需要提升的权限以使用 Http.sys 注册侦听器。 以服务运行所用的帐户使用 Httpcfg.exe 注册服务侦听地址，或从以管理员特权运行的命令提示符启动服务。  
   

@@ -1,12 +1,6 @@
 ---
 title: Enum 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Enum
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-caps.latest.revision: 44
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a8244318e0be8e50f3384b56cf63e59182b6cda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 语句 (Visual Basic)
 声明枚举，并定义其成员的值。  
@@ -66,7 +57,7 @@ End Enum
   
 -   `enumerationname`  
   
-     必需。 枚举的名称。 有关有效的名称的信息，请参阅[声明元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+     必须的。 枚举的名称。 有关有效的名称的信息，请参阅[声明元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
 -   `datatype`  
   
@@ -74,13 +65,13 @@ End Enum
   
 -   `memberlist`  
   
-     必需。 正在此语句中声明的成员常量的列表。 在单个源代码行上显示多个成员。  
+     必须的。 正在此语句中声明的成员常量的列表。 在单个源代码行上显示多个成员。  
   
-     每个`member`具有以下语法和部件：`[<attribute list>] member name [ = initializer ]`  
+     每个`member`具有以下语法和部件： `[<attribute list>] member name [ = initializer ]`  
   
     |部件|描述|  
     |---|---|  
-    |`membername`|必需。 此成员的名称。|  
+    |`membername`|必须的。 此成员的名称。|  
     |`initializer`|可选。 在编译时计算并将其分配给此成员的表达式。|  
   
 -   `End` `Enum`  
@@ -177,7 +168,7 @@ End Enum
   
  [!code-vb[VbEnumsTask#51](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_7.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Enum>  
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
  [Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)  

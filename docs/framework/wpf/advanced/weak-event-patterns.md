@@ -1,30 +1,16 @@
 ---
 title: 弱事件模式
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - weak event pattern implementation [WPF]
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f96327f8eaad36f3faebf48db083125816589821
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4b1e8649e5d550ffa2c7ee614cb9102f86a83ff8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weak-event-patterns"></a>弱事件模式
 在应用程序，很可能不会被附加到事件源的处理程序破坏与附加到源的处理程序的侦听器对象结合使用。 这种情况下可能会导致内存泄漏。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 引入了一种设计模式，可以用于解决此问题，通过专用管理器类的特定事件并在该事件的侦听器上实现接口。 此设计模式中被称为*弱事件模式*。  

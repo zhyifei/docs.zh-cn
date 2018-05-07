@@ -1,13 +1,6 @@
 ---
-title: "向量图形概述"
-ms.custom: 
+title: 向量图形概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31fec6d0d3769251d21783b4657d00b06431e942
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vector-graphics-overview"></a>向量图形概述
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]坐标系统上绘制线条、 矩形和其他形状。 你可以选择使用不同的坐标系统，但默认坐标系统有原点左上角 x 轴指向右和向下 y 轴。 默认坐标系统中单位是度量的像素。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 坐标系统上绘制线条、 矩形和其他形状。 你可以选择使用不同的坐标系统，但默认坐标系统有原点左上角 x 轴指向右和向下 y 轴。 默认坐标系统中单位是度量的像素。  
   
 ## <a name="the-building-blocks-of-gdi"></a>GDI + 构建基块  
  ![矢量图形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
  ![矢量图形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- 当你使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]若要绘制线条、 矩形或曲线，提供有关要绘制的项的某些关键信息。 例如，你可以通过提供两个点，指定的行，并可以通过提供一个点、 高度和宽度指定矩形。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]显示驱动程序软件，以确定哪些像素必须打开以显示行、 矩形或曲线协同工作。 下图显示已打开，可以显示一条线的 （4，2） 的点到点 （12、 8） 的像素。  
+ 当你使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]若要绘制线条、 矩形或曲线，提供有关要绘制的项的某些关键信息。 例如，你可以通过提供两个点，指定的行，并可以通过提供一个点、 高度和宽度指定矩形。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 显示驱动程序软件，以确定哪些像素必须打开以显示行、 矩形或曲线协同工作。 下图显示已打开，可以显示一条线的 （4，2） 的点到点 （12、 8） 的像素。  
   
  ![矢量图形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   

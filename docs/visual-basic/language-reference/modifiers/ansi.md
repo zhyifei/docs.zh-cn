@@ -1,11 +1,6 @@
 ---
 title: Ansi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Ansi
 helpviewer_keywords:
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - ANSI, Visual Basic
 - ANSI
 ms.assetid: 4f1fa6ff-5557-41ab-b6da-90baf4c15917
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa5724eb9123b2776c3a579e4244c55b3129816b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c7037acac58de56a396bd89f595ef897743ff4e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
 指定 Visual Basic 应封送到美国国家标准学会 (ANSI) 值，无论所声明的外部过程的名称的所有字符串。  
@@ -39,7 +31,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="smart-device-developer-notes"></a>智能设备的开发人员说明  
  此关键字不受支持。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
  [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
  [关键字](../../../visual-basic/language-reference/keywords/index.md)

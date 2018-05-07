@@ -1,31 +1,17 @@
 ---
-title: "数据协定中的枚举类型"
-ms.custom: 
+title: 数据协定中的枚举类型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7989996f7ed64ba4b85ddc1ca01538ec05e99e1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumeration-types-in-data-contracts"></a>数据协定中的枚举类型
 枚举可以用数据协定模型来表示。 本主题演练几个介绍编程模型的示例。  
@@ -43,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  可以照常将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性（<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 和 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>）用于枚举数据协定。  
   
 ### <a name="enumeration-member-values"></a>枚举成员值  
- 通常数据协定包括枚举成员名称，而不包括数值。 但是，如果使用数据协定模型并且接收端为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端，则导出的架构保留数值。 请注意，这不是这样使用时[使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
+ 通常数据协定包括枚举成员名称，而不包括数值。 但是，当使用数据协定模型中，如果接收方是 WCF 客户端，则导出的架构保留数值。 请注意，这不是这样使用时[使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
   
  在上面的示例中，如果将 `condition` 设置为 `Used` 并且将数据序列化为 XML，则生成的 XML 是 `<condition>Used</condition>` 而不是 `<condition>1</condition>`。 因此，下面的数据协定等效于 `CarConditionEnum` 的数据协定。  
   

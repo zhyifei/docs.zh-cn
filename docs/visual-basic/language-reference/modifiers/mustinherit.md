@@ -1,10 +1,6 @@
 ---
 title: MustInherit (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - MustInherit
 - vb.MustInherit
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9d384986e42ee69a0f425c1590599aa2c82bc856
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d622c1cff77a45c8de7772af7efbb73586f4400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 指定一个类可以仅用作基类，您不能直接从它创建一个对象。  
@@ -31,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
  另一个用途`MustInherit`类是限制对一组相关的类的变量。 你可以定义一个基类，并从其派生所有这些相关的类。 基类不需要提供任何功能普遍适用于所有派生的类，但其可用作筛选器将值赋给变量。 如果你使用的代码声明一个变量，作为类的基类，则 Visual Basic，可从派生类之一仅对象分配给该变量。  
   
- .NET Framework 定义了几个`MustInherit`类，它们之间<xref:System.Array>， <xref:System.Enum>，和<xref:System.ValueType>。 <xref:System.ValueType>是一个基类，用于限制变量的示例。 所有值类型都派生自<xref:System.ValueType>。 如果你声明一个变量，作为<xref:System.ValueType>，可以将只有值类型分配给该变量。  
+ .NET Framework 定义了几个`MustInherit`类，它们之间<xref:System.Array>， <xref:System.Enum>，和<xref:System.ValueType>。 <xref:System.ValueType> 是一个基类，用于限制变量的示例。 所有值类型都派生自<xref:System.ValueType>。 如果你声明一个变量，作为<xref:System.ValueType>，可以将只有值类型分配给该变量。  
   
 ## <a name="rules"></a>规则  
   
@@ -53,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)  
  [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
  [关键字](../../../visual-basic/language-reference/keywords/index.md)  

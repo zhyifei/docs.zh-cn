@@ -1,29 +1,15 @@
 ---
 title: 流消息传输
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-message-transfer"></a>流消息传输
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 传输机制支持两种消息传输模式：  
+Windows Communication Foundation (WCF) 传输来传输消息支持两种模式：  
   
 -   缓冲传输将整个消息保留在内存缓冲区中，直到传输完成。 必须完整传递缓冲的消息，接收方才能读取该消息。  
   
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
   
  在整个流传输中发生的操作最多只能与一个输入或输出参数之间具有协定。 该参数对应于整个消息正文，并且必须为 <xref:System.ServiceModel.Channels.Message>、<xref:System.IO.Stream> 的派生类型或 <xref:System.Xml.Serialization.IXmlSerializable> 实现。 具有某个操作的返回值等效于具有一个输出参数。  
   
- 某些 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能（例如，可靠消息、事务和 SOAP 消息级安全）依赖于缓冲消息以便进行传输。 使用这些功能可能减小或消除通过使用流获得的性能好处。 若要保证流传输的安全，请只使用传输级安全，或者使用传输级安全外加仅进行身份验证的消息安全。  
+ 某些 WCF 功能，如可靠消息传递、 事务和 SOAP 消息级安全，依赖于缓冲消息以便进行传输。 使用这些功能可能减小或消除通过使用流获得的性能好处。 若要保证流传输的安全，请只使用传输级安全，或者使用传输级安全外加仅进行身份验证的消息安全。  
   
  即使传输模式设置为流模式，SOAP 标头也总是被缓冲。 消息的标头不得超出 `MaxBufferSize` 传输配额的大小。 有关此设置的详细信息，请参阅[传输配额](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。  
   

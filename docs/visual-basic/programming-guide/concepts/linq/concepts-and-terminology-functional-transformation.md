@@ -1,22 +1,12 @@
 ---
-title: "概念和术语 （功能转换） (Visual Basic)"
-ms.custom: 
+title: 概念和术语 （功能转换） (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 12b40d31688d852c9f9b3f644f64fc273c76209c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 67986e36333ac9a1aba7bec3c1b6c248b4faf55f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>概念和术语 （功能转换） (Visual Basic)
 本主题介绍纯函数转换的概念和术语。 与更加传统的命令性编程方式相比，用来转换数据的函数转换方法所生成的代码往往编程速度更快、含义更明确、更易于调试和维护。  
@@ -80,6 +70,6 @@ ms.lasthandoff: 11/21/2017
   
  本节各处的代码示例中将使用这些语言功能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [介绍纯函数转换 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
  [函数编程与命令性编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

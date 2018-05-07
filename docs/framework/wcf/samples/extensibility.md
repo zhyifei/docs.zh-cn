@@ -1,27 +1,15 @@
 ---
-title: "扩展性"
-ms.custom: 
+title: 扩展性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensibility"></a>扩展性
-本节包含处理 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的自定义扩展性和其他功能的示例。  
+本节包含处理自定义扩展性和其他功能的 Windows Communication Foundation (WCF) 的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [通道扩展性](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
  演示扩展点如何使用自定义消息数据格式。  
   
  [自定义消息筛选器](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- 演示如何替换 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用于将消息调度给终结点的消息筛选器。  
+ 演示如何将 Windows Communication Foundation (WCF) 用于将消息调度到终结点的消息筛选器。  
   
  [自定义服务主机](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  演示如何使用 <xref:System.ServiceModel.ServiceHost> 类的自定义派生来改变服务的运行时行为。  

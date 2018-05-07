@@ -1,28 +1,14 @@
 ---
 title: 拒绝服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 52a22d96e981ff10d444569465d8e74ddf890836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="denial-of-service"></a>拒绝服务
 当系统处于过载状态而无法处理消息或者处理速度极慢时，会出现拒绝服务的情况。  
@@ -62,15 +48,15 @@ ms.lasthandoff: 04/30/2018
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>无效的 IAuthorizationPolicy 实现可能会致使服务挂起  
  如果在有错误的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 接口实现上调用 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 方法，则可能会致使服务挂起。  
   
- 缓解操作：仅使用受信任的代码。 即，仅使用在编写后经过测试的代码或者来自受信任提供者的代码。 未经深思熟虑，请勿允许在代码中插入对 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 的不受信任的扩展。 这适用于服务实现中所使用的全部扩展。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不在应用程序代码与使用扩展点插入的外部代码之间进行任何区分。  
+ 缓解操作：仅使用受信任的代码。 即，仅使用在编写后经过测试的代码或者来自受信任提供者的代码。 未经深思熟虑，请勿允许在代码中插入对 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 的不受信任的扩展。 这适用于服务实现中所使用的全部扩展。 WCF 不作任何应用程序代码和插入的外部代码之间的区别使用扩展点。  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>可能需要调整最大 Kerberos 令牌大小  
- 如果客户端属于许多组（大约 900 个，尽管实际数字因组的数目而异），则可能会在消息头的块超过 64 KB 时出现问题。 在这种情况下，增加最大的 Kerberos 令牌大小，Microsoft 支持文章中所述"[由于连接到 IIS 的缓冲区不足，Internet Explorer Kerberos 身份验证不起作用](http://go.microsoft.com/fwlink/?LinkId=89176)。" 您还可能需要增加最大 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息大小来容纳较大的 Kerberos 令牌。  
+ 如果客户端属于许多组（大约 900 个，尽管实际数字因组的数目而异），则可能会在消息头的块超过 64 KB 时出现问题。 在这种情况下，增加最大的 Kerberos 令牌大小，Microsoft 支持文章中所述"[由于连接到 IIS 的缓冲区不足，Internet Explorer Kerberos 身份验证不起作用](http://go.microsoft.com/fwlink/?LinkId=89176)。" 你可能还需要增加最大的 WCF 消息大小以容纳更大的 Kerberos 令牌。  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>自动注册功能会为计算机生成多个具有相同主题名称的证书  
  *自动注册*的功能[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]自动注册用户和计算机证书。 如果计算机处于启用了该功能的域中，那么，每当有新计算机加入网络中时，都会自动创建一个既定目的为客户端身份验证的 X.509 证书，并将其插入本地计算机的“个人”证书存储区。 但是，自动注册功能对它在缓存中创建的所有证书使用同一主题名称。  
   
- 其影响是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务可能无法在具有自动注册功能的域中打开。 出现此问题的原因在于，有多个证书具有计算机的完全限定域名系统 (DNS) 名称，从而使得默认的服务 X.509 凭据搜索条件可能会不明确。 一个证书源于自动注册功能；而另一个可能是自行颁发的证书。  
+ 影响是 WCF 服务可能无法在具有自动注册的域上打开。 出现此问题的原因在于，有多个证书具有计算机的完全限定域名系统 (DNS) 名称，从而使得默认的服务 X.509 凭据搜索条件可能会不明确。 一个证书源于自动注册功能；而另一个可能是自行颁发的证书。  
   
  若要缓解此问题，引用要通过使用更精确的搜索条件上使用的确切证书[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。 例如，使用 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 选项并按照证书的唯一指纹（哈希）来指定证书。  
   
@@ -82,7 +68,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="protect-configuration-files-with-acls"></a>使用 ACL 保护配置文件  
  您可以在代码和配置文件中为 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 所颁发的令牌指定必需的和可选的声明。 这会导致在发送到安全令牌服务的 `RequestSecurityToken` 消息中发出相应的元素。 攻击者可能会通过修改代码或配置来移除必需的或可选的声明，从而可能会让安全令牌服务颁发不允许访问目标服务的令牌。  
   
- 缓解措施：要求具有访问计算机的权限才能修改配置文件。 使用文件访问控制列表 (ACL) 来保护配置文件。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 只允许从配置中加载位于应用程序目录或全局程序集缓存中的代码。 使用目录 ACL 可以保护目录。  
+ 缓解措施：要求具有访问计算机的权限才能修改配置文件。 使用文件访问控制列表 (ACL) 来保护配置文件。 WCF 要求代码是在应用程序目录或全局程序集缓存中，只允许从配置加载此类代码。 使用目录 ACL 可以保护目录。  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>达到了服务安全会话的最大数目  
  当客户端由某个服务成功进行身份验证，而且与此服务建立了安全会话时，此服务会记住该会话，直到该会话被客户端取消或者过期。 对于建立的每个会话都将进行计数，直到达到与该服务的同时活动会话的最大数目限制。 达到该限制时，尝试与该服务创建新会话的客户端将被拒绝，直到一个或多个活动会话过期或者被客户端取消。 一个客户端可以与某个服务建立多个会话，对于每个会话都将计数，直到达到相应的限制。  

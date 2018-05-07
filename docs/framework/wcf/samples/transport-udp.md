@@ -1,27 +1,15 @@
 ---
-title: "传输：UDP"
-ms.custom: 
+title: 传输：UDP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-caps.latest.revision: "48"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b7bb9f60340915f27c451d05bfbc28e1670c9d83
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 51f445d7f53f70fa206c53835b107da68749e3c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-udp"></a>传输：UDP
-“UDP 传输”示例演示如何将 UDP 单播和多播作为自定义 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 传输来实现。 此示例介绍了使用通道框架并遵循 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 最佳做法在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中创建自定义传输的推荐过程。 创建自定义传输的步骤如下：  
+UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Communication Foundation (WCF) 传输。 此示例介绍了使用通道框架并遵循 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 最佳做法在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中创建自定义传输的推荐过程。 创建自定义传输的步骤如下：  
   
 1.  决定哪种通道[消息交换模式](#MessageExchangePatterns)（IOutputChannel、 IInputChannel、 IDuplexChannel、 IRequestChannel 或 IReplyChannel） 您的 ChannelFactory 和 ChannelListener 将要支持。 然后确定是否要支持这些接口的会话变体。  
   
@@ -488,6 +476,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

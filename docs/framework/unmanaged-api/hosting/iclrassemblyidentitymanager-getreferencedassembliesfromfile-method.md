@@ -1,14 +1,6 @@
 ---
-title: "ICLRAssemblyIdentityManager::GetReferencedAssembliesFromFile 方法"
-ms.custom: 
+title: ICLRAssemblyIdentityManager::GetReferencedAssembliesFromFile 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRAssemblyIdentityManager.GetReferencedAssembliesFromFile
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: eed63d31-d977-4c7d-9443-f9d37a2a7d81
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 856843cf1c4c5f1dffe23b04cf2655dfe37e476e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 721cf93f1edecfc347c5ab6efa056aebd4dc6f9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrassemblyidentitymanagergetreferencedassembliesfromfile-method"></a>ICLRAssemblyIdentityManager::GetReferencedAssembliesFromFile 方法
 获取[ICLRReferenceAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md)实例，其中包含由在指定的文件路径的程序集引用的程序集的列表。  
@@ -76,14 +64,14 @@ HRESULT GetReferencedAssembliesFromFile (
 ## <a name="remarks"></a>备注  
  调用方可以选择从返回的列表中排除一组已知程序集引用。 此集定义为`pExcludeAssembliesList`参数。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRAssemblyIdentityManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  

@@ -1,13 +1,6 @@
 ---
 title: 如何：定义一个过程的多个版本 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e6db075e9b31355d4a0a593040b1fe7c96a0c730
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a4d0c5bbb07dd5433ff62179fc10a6274bf19364
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>如何：定义一个过程的多个版本 (Visual Basic)
 你可以通过多个版本中定义的过程*重载*它在每个版本中使用的相同名称但不同的参数列表。 重载的目的是定义过程的几个密切相关的版本，而无需将它们按名称区分开来。  

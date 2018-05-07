@@ -1,29 +1,15 @@
 ---
 title: WMI 提供程序
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c1b90a5231505f7d72d10c0ab9f9f80037d48bd7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 202923ab1d09b0ce836dbfce7360dd22a479a900
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wmi-provider"></a>WMI 提供程序
-此示例演示如何在运行时使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中内置的 Windows Management Instrumentation (WMI) 提供程序从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务中收集数据。 另外，此示例还演示如何向服务添加用户定义的 WMI 对象。 示例激活的 WMI 提供程序[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)并演示了如何收集数据`ICalculator`服务在运行时。  
+此示例演示如何从 Windows Communication Foundation (WCF) 服务在运行时收集数据，通过使用内置于 Windows Management Instrumentation (WMI) 提供程序[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 另外，此示例还演示如何向服务添加用户定义的 WMI 对象。 示例激活的 WMI 提供程序[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)并演示了如何收集数据`ICalculator`服务在运行时。  
   
  WMI 是 Microsoft 基于 Web 的企业管理 (WBEM) 标准的实现。 有关 WMI SDK 的详细信息，请参阅[Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)。 WBEM 是有关应用程序如何向外部管理工具公开管理规范的行业标准。  
   
@@ -152,7 +138,7 @@ cscript EnumerateCustomObjects.js
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataError::OnError 方法"
-ms.custom: 
+title: IMetaDataError::OnError 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataError.OnError
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c1e744b8-a6fb-4d9c-a971-8babc875d8f0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b6e136f3fd76b9eb2be1e49a48316dc65c481fc6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ed9e097dccd0fcb81ea9023cc9b84906589ccb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError 方法
 提供在元数据合并过程中发生的错误的通知。  
@@ -54,14 +42,14 @@ HRESULT OnError (
  `token`  
  [in]出现错误时合并的代码对象的元数据标记。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：**用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IMetaDataError 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

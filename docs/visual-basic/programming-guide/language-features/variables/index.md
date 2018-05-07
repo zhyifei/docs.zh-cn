@@ -1,26 +1,15 @@
 ---
 title: 变量 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic]
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5e4397fb90e4fa5a3e68390137b84a375cf35956
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 79cd5629d4de6279eb370c18db617a5ad532108d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variables-in-visual-basic"></a>变量 (Visual Basic)
 你通常需要执行使用 Visual Basic 的计算时存储值。 例如，可能需要计算、比较多个值，并根据比较结果对这些值执行不同的运算。 若要进行比较，必须保留这些值。  

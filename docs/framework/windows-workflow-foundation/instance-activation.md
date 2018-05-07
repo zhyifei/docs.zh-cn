@@ -1,28 +1,17 @@
 ---
-title: "实例激活"
-ms.custom: 
+title: 实例激活
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41615618857c804c37f00e9d20a031a6d17bcab3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1b78dc62fbdc6e5551addf400ceb14dc9e822f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instance-activation"></a>实例激活
 SQL 工作流实例存储运行一个内部任务，该任务将定期唤醒并检测持久性数据库中是否有可运行或可激活的工作流实例。 如果找到可运行的工作流实例，SQL 工作流实例存储将通知能够激活该实例的工作流主机。 如果实例存储找到可激活的工作流实例，它将通知用于激活工作流主机的泛型主机，而泛型主机将运行此工作流实例。 本主题的以下各节详细说明了实例激活过程。  
   
-##  <a name="RunnableSection"></a>检测和激活可运行工作流实例  
+##  <a name="RunnableSection"></a> 检测和激活可运行工作流实例  
  SQL 工作流实例存储将工作流实例*可运行*如果实例不处于挂起的状态或完成的状态并且满足以下条件：  
   
 -   实例处于解除锁定状态，并且具有已过期的挂起计时器。  

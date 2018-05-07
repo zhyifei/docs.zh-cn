@@ -1,22 +1,12 @@
 ---
-title: "基本查询 (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: 基本查询 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a6611d4aeba39dd96ea7ea92bbaef9630bb6d870
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 25f0e49e57f03cbde190125ca2d24a01f208fda6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-queries-linq-to-xml-visual-basic"></a>基本查询 (LINQ to XML) (Visual Basic)
 本节提供基本 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询的示例。  
@@ -39,5 +29,5 @@ ms.lasthandoff: 10/18/2017
 |[如何： 编写一个查询，查找元素根据上下文 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|演示如何根据树中的其他元素来选择元素。|  
 |[如何： 调试空查询结果集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|显示在对针对默认命名空间中 XML 的查询进行调试时相应的修补程序。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

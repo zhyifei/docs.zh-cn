@@ -1,29 +1,15 @@
 ---
 title: 自定义绑定
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5fc38becb4a737ada5102c187ddeaac73aaceb1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6880b04a3f8a82c1e109c32674804c5241913a8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-bindings"></a>自定义绑定
 当系统提供的某个绑定不符合服务的要求时，可使用 <xref:System.ServiceModel.Channels.CustomBinding> 类。 所有绑定都是从绑定元素的有序集构造而来的。 自定义绑定可以从一组系统提供的绑定元素生成，也可以包含用户定义的自定义绑定元素。 例如，可以使用自定义绑定元素在服务终结点使用新的传输或编码器。 有关工作示例，请参阅[自定义绑定示例](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)。 有关详细信息，请参阅[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
@@ -55,7 +41,7 @@ ms.lasthandoff: 04/28/2018
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
- 底层是一个必需的传输元素。 可以使用自己的传输，或者使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供的以下传输绑定元素之一：  
+ 底层是一个必需的传输元素。 你可以使用自己的传输或 Windows Communication Foundation (WCF) 提供的以下传输绑定元素之一：  
   
 -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   

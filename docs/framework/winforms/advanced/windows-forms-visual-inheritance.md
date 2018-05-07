@@ -1,13 +1,6 @@
 ---
-title: "Windows 窗体可视化继承"
-ms.custom: 
+title: Windows 窗体可视化继承
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 177b3034e9afc71a8ecc899364cc4911ef42a1a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6cf2a7d95f7f6b015c785859b646a5d42f907127
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-visual-inheritance"></a>Windows 窗体可视化继承
 有时，项目可能需要一个与之前项目中创建的窗体类似的窗体。 或者，可能需要创建一个基本窗体，其中包含某些设置，如随后将再次在项目中使用的水印或某种控件布局，然后每次重复使用时，都需要对该原始窗体模板进行修改。 通过窗体继承，可创建基窗体，然后从其继承并进行修改，同时保留所需的任何原始设置。  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  [继承的基础知识 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  描述如何定义作为其他类的基础的 Visual Basic 类。  
   
- [类](~/docs/csharp/language-reference/keywords/class.md)  
+ [class](~/docs/csharp/language-reference/keywords/class.md)  
  描述类的 C# 方法，此方法中允许单个继承。  
   
  [Visual Basic 中继承的事件处理程序疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  

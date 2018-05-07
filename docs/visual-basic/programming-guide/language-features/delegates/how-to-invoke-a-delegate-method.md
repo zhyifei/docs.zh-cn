@@ -1,21 +1,12 @@
 ---
-title: "如何：调用委托方法 (Visual Basic)"
-ms.custom: 
+title: 如何：调用委托方法 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ea94d4bb26e168667fd75c6928e52261f230c85e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aca87dd9fa1990d44c99aab7753f2fd7d508adc1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>如何：调用委托方法 (Visual Basic)
 此示例演示如何将一种方法的委托相关联，然后通过调用该方法的委托。  
@@ -50,7 +41,7 @@ ms.lasthandoff: 11/21/2017
     End Sub  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Delegate 语句](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
  [委托](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)  

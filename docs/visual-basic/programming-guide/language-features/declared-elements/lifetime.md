@@ -1,13 +1,6 @@
 ---
 title: Visual Basic 中的生存期
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
 - static variables [Visual Basic], Visual Basic
@@ -17,14 +10,11 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 14a75a2c3af52f63051d02df9341faf19c3b76c7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d32639f1c392d53a7e9f6258440b6c0925d27a5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic 中的生存期
 *生存期*的已声明的元素是的时间段期间它是可供使用。 变量是具有生存期的唯一元素。 为此，编译器将过程参数和函数返回值视为变量的特殊情况。 变量的生存期表示在此期间它可以存放一个值的时间。 其值可以更改在其生存期内，但它始终包含一些值。  

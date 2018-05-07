@@ -1,24 +1,14 @@
 ---
 title: 常量概述 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 40330e8c2c60c866200e009a8280c7ec9c855435
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2ec43254013df5444048b5197489c55217d5328a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constants-overview-visual-basic"></a>常量概述 (Visual Basic)
 常量是有意义的名称发生的数字或字符串不会更改。 常量存储的名称可以看出，保持不变的应用程序的执行中值。 你可以大幅提高代码的可读性和更加轻松地使用常量的维护。 在包含重新出现的值的代码中使用它们，或这取决于一些很难记住或没有明显意义的数字。  

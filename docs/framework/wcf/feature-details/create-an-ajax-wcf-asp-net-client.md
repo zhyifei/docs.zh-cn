@@ -1,27 +1,15 @@
 ---
-title: "如何：创建支持 AJAX 的 WCF 服务和访问该服务的 ASP.NET 客户端"
-ms.custom: 
+title: 如何：创建支持 AJAX 的 WCF 服务和访问该服务的 ASP.NET 客户端
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aafa15129e4a131c5f50eb3296a87fc141e1bda6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58971d11ab76112627dd81d53381236932268e25
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>如何：创建支持 AJAX 的 WCF 服务和访问该服务的 ASP.NET 客户端
-本主题演示如何使用 Visual Studio 2008 创建一个支持 AJAX 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务和一个访问该服务的 ASP.NET 客户端。 在“过程”一节中描述了创建服务和客户端的代码的步骤之后，在“示例”一节中提供了相应的代码。  
+本主题演示如何使用 Visual Studio 2008 创建启用了 AJAX 的 Windows Communication Foundation (WCF) 服务和 ASP.NET 客户端访问该服务。 在“过程”一节中描述了创建服务和客户端的代码的步骤之后，在“示例”一节中提供了相应的代码。  
   
 ### <a name="to-create-the-aspnet-client-application"></a>创建 ASP.NET 客户端应用程序  
   
@@ -82,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  单击**添加**，指定`CostService.svc`作为**路径**引用，并且单击**确定**。  
   
-7.  展开**HTML**中的节点**工具箱**和拖放**Input (Button)**到 Default.aspx 页。  
+7.  展开**HTML**中的节点**工具箱**和拖放**Input (Button)** 到 Default.aspx 页。  
   
 8.  右键单击**按钮**和选择**属性**。  
   

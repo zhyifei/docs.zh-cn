@@ -1,14 +1,6 @@
 ---
-title: "ICLRStrongName::StrongNameSignatureGenerationEx 方法"
-ms.custom: 
+title: ICLRStrongName::StrongNameSignatureGenerationEx 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameSignatureGenerationEx
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 247bcfa3c9f7a02dea331ff14948a00812fb06e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bf9a94c55258193e3172459da129ba16f9c3265
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx 方法
 为指定的程序集中，根据指定的标志生成的强名称签名。  
@@ -80,12 +68,12 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in]一个或多个以下值：  
   
--   `SN_SIGN_ALL_FILES`(0x00000001)-重新计算所有链接的模块的哈希值。  
+-   `SN_SIGN_ALL_FILES` (0x00000001)-重新计算所有链接的模块的哈希值。  
   
--   `SN_TEST_SIGN`(0x00000002) — 程序集进行测试签名。  
+-   `SN_TEST_SIGN` (0x00000002) — 程序集进行测试签名。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK`如果成功，则完成的方法否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
+ `S_OK` 如果成功，则完成的方法否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
   
 ## <a name="remarks"></a>备注  
  指定为空`wszFilePath`来计算而无需创建签名的签名的大小。  
@@ -96,14 +84,14 @@ HRESULT StrongNameSignatureGenerationEx (
   
  如果`SN_TEST_SIGN`指定，则不会修改公共语言运行时标头以指示程序集使用强名称签名。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [StrongNameSignatureGeneration 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)  

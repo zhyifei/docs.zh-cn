@@ -1,14 +1,6 @@
 ---
-title: "CorValidatorModuleType 枚举"
-ms.custom: 
+title: CorValidatorModuleType 枚举
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorValidatorModuleType
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3367f6928b5d7378b2686185ee3e03d0279cc11d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 枚举
 指定模块的类型。  
@@ -64,14 +52,14 @@ typedef enum
 |`ValidatorModuleTypeIncr`|该模块是指以增量方式生成。|  
 |`ValidatorModuleTypeMax`|最大值`CorValidatorModuleType`枚举。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：**作为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

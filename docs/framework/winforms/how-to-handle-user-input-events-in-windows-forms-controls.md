@@ -1,14 +1,6 @@
 ---
 title: 如何：在 Windows 窗体控件中处理用户输入事件
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - Windows Forms controls, user input
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8132b2d1d63db6f30a3292204df5e9887cc5efc3
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 1faff6112f7857c2b1d6e4ac70c87f1a2adb62a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>如何：在 Windows 窗体控件中处理用户输入事件
 此示例演示如何处理大多数键盘、鼠标、焦点和 Windows 窗体控件中可能会发生的验证事件。 命名为 `TextBoxInput` 的文本框在其具有焦点时接收事件，有关每个事件的信息将以事件发生的顺序写入被命名为 `TextBoxOutput` 的文本框中。 该应用程序还包括一组复选框，可用于筛选要报告的事件。  

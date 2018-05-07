@@ -1,29 +1,17 @@
 ---
-title: "如何：创作复合控件"
-ms.custom: 
+title: 如何：创作复合控件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UserControl class [Windows Forms], creating composite controls
 - user controls [Windows Forms], creating
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 621d761411d5c33316d80e6dcdc9d0ec675242b2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d13b2a3a89a27c8494d3efa990a1368cec55a28c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-author-composite-controls"></a>如何：创作复合控件
 可通过多种方式使用复合控件。 可将其作为 Windows 桌面应用程序项目的一部分创作，并只在该项目的窗体上使用它们。 或者，可在 Windows 控件库项目中创作它们，将该项目编译为程序集，在其他项目中使用这些控件。 甚至可以从它们继承，并针对特殊目的使用视觉对象继承快速对它们进行自定义。  

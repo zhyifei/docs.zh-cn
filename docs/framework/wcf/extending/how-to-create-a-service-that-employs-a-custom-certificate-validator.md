@@ -1,36 +1,22 @@
 ---
-title: "如何：创建使用自定义证书验证程序的服务"
-ms.custom: 
+title: 如何：创建使用自定义证书验证程序的服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0a48801b1d4674b81a0e4b54a80b69d026ce2af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>如何：创建使用自定义证书验证程序的服务
 本主题介绍如何实现自定义证书验证程序，以及如何配置客户端或服务凭据以使用自定义证书验证程序替换默认证书验证逻辑。  
   
- 如果使用 X.509 证书对客户端或服务进行身份验证，则默认情况下，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用 Windows 证书存储区和加密 API 来验证该证书并确保它是受信任的。 有时，内置证书验证功能并不足够且必须更改。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了一种简单的方法，允许用户添加自定义证书验证程序来更改验证逻辑。 如果指定了自定义证书验证程序，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不使用内置证书验证逻辑，而是依靠自定义验证程序。  
+ 如果使用 X.509 证书进行身份验证的客户端或服务，默认情况下的 Windows Communication Foundation (WCF) 就会使用 Windows 证书存储区和加密 API 以验证证书，并以确保它是受信任。 有时，内置证书验证功能并不足够且必须更改。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了一种简单的方法，允许用户添加自定义证书验证程序来更改验证逻辑。 如果指定了自定义证书验证程序，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不使用内置证书验证逻辑，而是依靠自定义验证程序。  
   
 ## <a name="procedures"></a>过程  
   

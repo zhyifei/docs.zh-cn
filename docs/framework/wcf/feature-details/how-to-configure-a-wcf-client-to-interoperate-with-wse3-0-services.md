@@ -1,38 +1,26 @@
 ---
-title: "如何：配置 WCF 客户端以与 WSE 3.0 服务进行互操作"
-ms.custom: 
+title: 如何：配置 WCF 客户端以与 WSE 3.0 服务进行互操作
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea71737e1e214aa1a035739901bf79f8ef4a9c7a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e30403f9c97f31e93c22a9658ffb74d4d02a49ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>如何：配置 WCF 客户端以与 WSE 3.0 服务进行互操作
-当 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端配置为使用 2004 年 8 月版的 WS-Addressing 规范时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端在网络级与 Web Services Enhancements 3.0 for Microsoft .NET (WSE) 服务兼容。  
+当 WCF 客户端配置为使用 2004 年 8 月版 Ws-addressing 规范时，Windows Communication Foundation (WCF) 客户端是与 Web Services Enhancements 3.0 for Microsoft.NET (WSE) 服务的网络级别兼容性。  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>配置 WCF 客户端以与 WSE 3.0 Web 服务进行互操作  
   
-1.  运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)创建[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]WSE 3.0 Web 服务客户端。  
+1.  运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)创建 WSE 3.0 Web 服务的 WCF 客户端。  
   
-     对于 WSE Web 服务，将创建一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端类。  
+     对于 WSE Web 服务时，将创建 WCF 客户端类。  
   
-     有关创建详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端，请参阅[如何： 创建客户端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+     有关创建 WCF 客户端的详细信息，请参阅[如何： 创建客户端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 2.  创建一个类，表示可与 WSE 3.0 Web 服务进行通信的绑定。  
   
@@ -61,13 +49,13 @@ ms.lasthandoff: 01/19/2018
   
 3.  在客户端应用程序代码中，添加设置绑定属性的代码。  
   
-     下面的代码示例指定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端必须使用 WSE 3.0 `AnonymousForCertificate` 完整安全断言定义的消息保护和身份验证。 此外，还需要安全会话和派生密钥。  
+     下面的代码示例指定 WCF 客户端必须使用消息保护和身份验证，由 WSE 3.0 定义`AnonymousForCertificate`关守安全断言。 此外，还需要安全会话和派生密钥。  
   
      [!code-csharp[c_WCFClientToWSEService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#4)]
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>示例  
- 下面的代码示例定义了一个自定义绑定，该绑定公开对应于 WSE 3.0 完整安全断言的各个属性的属性。 该自定义绑定（名为 `WseHttpBinding`）然后用于指定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的绑定属性。  
+ 下面的代码示例定义了一个自定义绑定，该绑定公开对应于 WSE 3.0 完整安全断言的各个属性的属性。 自定义绑定，名为`WseHttpBinding`，然后将其用于将 WCF 客户端指定的绑定属性。  
   
   
 [!code-csharp[c_WCFClientToWSEService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#0)]

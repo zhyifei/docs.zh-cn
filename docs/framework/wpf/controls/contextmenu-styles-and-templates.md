@@ -1,13 +1,6 @@
 ---
-title: "ContextMenu 样式和模板"
-ms.custom: 
+title: ContextMenu 样式和模板
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - templates [WPF], ContextMenu
 - parts [WPF], ContextMenu
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ContextMenu
 - states [WPF], ContextMenu
 ms.assetid: 342d1f17-c406-4f94-8f55-867c5f3ea511
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fbe7bdc39ed8b7cf342e7e3d2d3c9a3824a8b819
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4208f8cf197849876a100ab8c799ef04331a3e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contextmenu-styles-and-templates"></a>ContextMenu 样式和模板
 本主题介绍的样式和模板的<xref:System.Windows.Controls.ContextMenu>控件。 你可以修改默认<xref:System.Windows.Controls.ControlTemplate>提供独特外观的控件。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  

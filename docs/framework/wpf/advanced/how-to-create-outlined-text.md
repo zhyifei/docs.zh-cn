@@ -1,13 +1,6 @@
 ---
-title: "如何：创建空心文字"
-ms.custom: 
+title: 如何：创建空心文字
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41254d8f93174c896923b1c070e6bf9b5b7c863c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c79f5c1c6812b1175119133664e39995af29bd4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-outlined-text"></a>如何：创建空心文字
 在大多数情况下，在对中的文本字符串添加装饰时你[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序中，使用离散字符或标志符号的集合形式的文本。 例如，你可以创建线性渐变画笔，并将其应用于<xref:System.Windows.Controls.Control.Foreground%2A>属性<xref:System.Windows.Controls.TextBox>对象。 当你显示或编辑文本框中时，线性渐变画笔自动应用于当前集文本字符串中的字符。  

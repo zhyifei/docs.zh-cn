@@ -1,11 +1,6 @@
 ---
 title: Decimal 数据类型 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Decimal
 helpviewer_keywords:
@@ -25,14 +20,11 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 55a9293fa680a7a04cff4099654d4d66790e8d3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e256e93d7857c8674a1d711fa9cafd3ed9a29f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 数据类型 (Visual Basic)
 保存有符号表示 96 位 （12 个字节） 整数变量 10 的幂缩放的数字的 128 位 （16 个字节） 值。 缩放因子指定数字的小数点; 右侧数它的范围介于 0 到 28。 小数位数为 0 （没有小数位），最大可能值为 + 79228162514264337593543950335 / (+ /-7.9228162514264337593543950335E + 28)。 带 28 个小数的最大值是 + /-7.9228162514264337593543950335，和的最小的非零值为 + /-0.0000000000000000000000000001 （+ /-1E-28)。  
@@ -44,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="programming-tips"></a>编程提示  
   
--   **精度。** `Decimal`不是浮点数据类型。 `Decimal`结构保存二进制整数值，以及一个符号位的整数比例因子，用于指定值的哪些部分是小数部分。 因此，`Decimal`数字在比浮点类型的内存中具有更精确的表示形式 (`Single`和`Double`)。  
+-   **精度。** `Decimal` 不是浮点数据类型。 `Decimal`结构保存二进制整数值，以及一个符号位的整数比例因子，用于指定值的哪些部分是小数部分。 因此，`Decimal`数字在比浮点类型的内存中具有更精确的表示形式 (`Single`和`Double`)。  
   
 -   **性能。** `Decimal`数据类型时速度最慢的所有数值类型。 你应权衡针对性能，而不选择数据类型的精度的重要性。  
   
@@ -85,7 +77,7 @@ Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
   
  有关`bigDec3`，文本类型字符`D`可解决问题，通过强制编译器将解释为文本`Decimal`而不是作为`Long`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Decimal?displayProperty=nameWithType>  
  <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>  
  <xref:System.Math.Round%2A?displayProperty=nameWithType>  

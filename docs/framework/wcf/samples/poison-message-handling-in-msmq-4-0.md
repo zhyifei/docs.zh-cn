@@ -1,26 +1,12 @@
 ---
 title: MSMQ 4.0 中的病毒消息处理
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6f2361ed862986d2490968ae422b9b1313eedea3
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 25d99e6864b967b498fc53a6f6d78f476f4d938f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的病毒消息处理
 本示例演示如何在服务中执行病毒消息处理。 此示例基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 其中使用到了 `netMsmqBinding`。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -334,7 +320,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`  
   

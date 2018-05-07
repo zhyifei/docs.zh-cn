@@ -1,29 +1,15 @@
 ---
 title: 承载工作流服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 21c4ba6a85c2da655b3d0988917165bf84ae64d1
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 02d77b851dcd35108668ee6a42022e9721b84bd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-workflow-services"></a>承载工作流服务
-工作流服务在承载后才能对传入消息做出响应。 工作流服务使用的是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息传递基础结构，因此承载的方式也类似。 工作流服务与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务类似，可以承载于任何托管应用程序、Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS)。 此外，工作流服务还可以承载于 Windows Server App Fabric 下。 有关 Windows Server App Fabric 的详细信息请参阅[Windows Server App Fabric 文档](http://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=196494)，和[AppFabric 承载概念](http://go.microsoft.com/fwlink/?LinkId=196495)。 有关到主机的各种方法的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务，请参阅[托管服务](../../../../docs/framework/wcf/hosting-services.md)。  
+工作流服务在承载后才能对传入消息做出响应。 工作流服务使用的是 WCF 消息传递基础结构，因此承载的方式也类似。 与 WCF 服务类似情况下，工作流服务可以承载于任何托管应用程序，在 Internet 信息服务 (IIS) 或在 Windows 进程激活服务 (WAS) 中。 此外，工作流服务还可以承载于 Windows Server App Fabric 下。 有关 Windows Server App Fabric 的详细信息请参阅[Windows Server App Fabric 文档](http://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=196494)，和[AppFabric 承载概念](http://go.microsoft.com/fwlink/?LinkId=196495)。 有关详细信息的各种方式承载 WCF 服务，请参见[托管服务](../../../../docs/framework/wcf/hosting-services.md)。  
   
 ## <a name="hosting-in-a-managed-application"></a>在托管应用程序中承载  
  若要在托管应用程序中承载工作流服务，请使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 构造函数可用于指定单一工作流服务实例、工作流服务定义或使用工作流消息传递活动的活动。 调用 <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> 会导致服务开始侦听传入消息。  

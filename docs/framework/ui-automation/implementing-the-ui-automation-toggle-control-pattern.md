@@ -1,28 +1,19 @@
 ---
-title: "实现 UI 自动化 Toggle 控件模式"
-ms.custom: 
+title: 实现 UI 自动化 Toggle 控件模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Toggle control pattern
 - control patterns, Toggle
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-caps.latest.revision: "19"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 73a1182adad742f1cb53b809ae07d78d1ec27cd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eed3f6771526f7a026bd411b3f12c39b4bb64bf4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>实现 UI 自动化 Toggle 控件模式
 > [!NOTE]
@@ -48,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-members-for-itoggleprovider"></a>IToggleProvider 必需的成员  
  实现 <xref:System.Windows.Automation.Provider.IToggleProvider>需要以下属性和方法。  
   
-|必需的成员|成员类型|备注|  
+|必需的成员|成员类型|说明|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|方法|无|  
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|属性|无|  

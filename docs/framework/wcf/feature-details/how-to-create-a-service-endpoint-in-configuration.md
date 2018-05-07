@@ -1,29 +1,15 @@
 ---
 title: 如何：在配置中创建服务终结点
-ms.custom: ''
 ms.date: 06/16/2016
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ecb7345dbbff04388edb39dae9e5c05f2c40fd75
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f1a2696e2aeb8d0c704d008b064a8f8c8b0745d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>如何：在配置中创建服务终结点
-终结点为客户端提供对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所提供的功能的访问权。 您可以通过使用相对和绝对终结点地址的组合来定义一个或多个终结点，或者如果您未定义任何服务终结点，则默认情况下运行时为您提供一些终结点。 本主题演示如何使用同时包含相对和绝对地址的配置文件来添加终结点。  
+终结点提供有权访问 Windows Communication Foundation (WCF) 服务提供的功能的客户端。 您可以通过使用相对和绝对终结点地址的组合来定义一个或多个终结点，或者如果您未定义任何服务终结点，则默认情况下运行时为您提供一些终结点。 本主题演示如何使用同时包含相对和绝对地址的配置文件来添加终结点。  
   
 ## <a name="example"></a>示例  
  下列服务配置指定一个基址和五个终结点。  

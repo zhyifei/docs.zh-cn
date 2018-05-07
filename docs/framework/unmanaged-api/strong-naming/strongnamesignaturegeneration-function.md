@@ -1,14 +1,6 @@
 ---
-title: "StrongNameSignatureGeneration 函数"
-ms.custom: 
+title: StrongNameSignatureGeneration 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureGeneration
 api_location:
@@ -21,17 +13,13 @@ f1_keywords:
 helpviewer_keywords:
 - StrongNameSignatureGeneration function [.NET Framework strong naming]
 ms.assetid: 839b765c-3e41-44ce-bf1b-dc10453db18e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c26e230f2bc0b115d898a34742fe3e637f934fd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c0555299779aebc6cc37c3863e8b5504b357b262
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamesignaturegeneration-function"></a>StrongNameSignatureGeneration 函数
 为指定的程序集生成强名称签名。  
@@ -79,7 +67,7 @@ BOOLEAN StrongNameSignatureGeneration (
  [out]以字节为单位，返回签名的大小。  
   
 ## <a name="return-value"></a>返回值  
- `true`在成功完成;否则为`false`。  
+ `true` 在成功完成;否则为`false`。  
   
 ## <a name="remarks"></a>备注  
  指定为空`wszFilePath`来计算而无需创建签名的签名的大小。  
@@ -88,14 +76,14 @@ BOOLEAN StrongNameSignatureGeneration (
   
  如果`StrongNameSignatureGeneration`函数未成功完成，请调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数可检索的最后一个生成的错误。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** StrongName.h  
   
  **库：**作为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [StrongNameSignatureGeneration 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)  

@@ -1,30 +1,18 @@
 ---
-title: "如何：创建使用 HTTPS 的自定义可靠会话绑定"
-ms.custom: 
+title: 如何：创建使用 HTTPS 的自定义可靠会话绑定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56b54b5d49fcd307821211e7db858299f9f446d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3699593f783fff1227ec51194956e0cc8577dd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>如何：创建使用 HTTPS 的自定义可靠会话绑定
 
 本主题演示如何对可靠会话使用安全套接字层 (SSL) 传输安全。 若要通过 HTTPS 使用可靠会话，必须创建使用可靠会话和 HTTPS 传输协议的自定义绑定。 使用代码以强制方式或配置文件中以声明方式启用可靠会话。 此过程使用客户端和服务配置文件来启用可靠会话和[  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)元素。
 
-此过程的关键部分是， **\<终结点 >**配置元素包含`bindingConfiguration`引用一个名为的自定义绑定配置的属性`reliableSessionOverHttps`。 [ **\<绑定 >** ](../../../../docs/framework/misc/binding.md)配置元素将引用此名称来指定通过包括使用可靠会话和 HTTPS 传输 **\<reliableSession >**和 **\<httpsTransport >**元素。
+此过程的关键部分是， **\<终结点 >** 配置元素包含`bindingConfiguration`引用一个名为的自定义绑定配置的属性`reliableSessionOverHttps`。 [ **\<绑定 >** ](../../../../docs/framework/misc/binding.md)配置元素将引用此名称来指定通过包括使用可靠会话和 HTTPS 传输 **\<reliableSession >** 和 **\<httpsTransport >** 元素。
 
 此示例中的源副本，请参阅[自定义绑定可靠会话通过 HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)。
 

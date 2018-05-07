@@ -1,13 +1,6 @@
 ---
-title: "Windows 窗体和 WPF 互操作性输入体系结构"
-ms.custom: 
+title: Windows 窗体和 WPF 互操作性输入体系结构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - input architecture [WPF interoperability]
 - messages [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a246a3297d212eabc31bf2ac9d000aeb56329d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 250f34e3e5420a613bc7b1035c62af90665e71ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows 窗体和 WPF 互操作性输入体系结构
 之间的互操作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]要求这两种技术具有相应的键盘输入的处理。 本主题介绍这些技术键盘和消息处理，以支持混合应用程序中的平滑互操作的实现。  
@@ -105,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
 -   命令键和对话框键。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]快捷键处理。  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 快捷键处理。  
   
  下列各节介绍了这些部分中更多详细信息。  
   
@@ -131,7 +119,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType>方法被重写，以确保所有的 WM_CHAR 消息都转发至承载的元素。  
   
--   当按下 ALT 键，则消息将 WM_SYSCHAR。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]不进行预处理通过此消息<xref:System.Windows.Forms.Control.IsInputChar%2A>方法。 因此，<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>方法被重写查询[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager>已注册的快捷键。 如果找到已注册的快捷键，则<xref:System.Windows.Input.AccessKeyManager>处理它。  
+-   当按下 ALT 键，则消息将 WM_SYSCHAR。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 不进行预处理通过此消息<xref:System.Windows.Forms.Control.IsInputChar%2A>方法。 因此，<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>方法被重写查询[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager>已注册的快捷键。 如果找到已注册的快捷键，则<xref:System.Windows.Input.AccessKeyManager>处理它。  
   
 -   如果未按下 ALT 键， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>类处理未处理的输入。 如果输入是快捷键，<xref:System.Windows.Input.AccessKeyManager>处理它。 <xref:System.Windows.Input.InputManager.PostProcessInput>的未处理的 WM_CHAR 消息处理事件。  
   

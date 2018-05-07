@@ -1,31 +1,17 @@
 ---
-title: "声明和令牌"
-ms.custom: 
+title: 声明和令牌
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b2e571e8526581269cedb65b83c9ea0d8a81e280
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 087deeef91367210db936f2976a3846d0279dcba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-and-tokens"></a>声明和令牌
-本主题描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 根据所支持的默认令牌创建的各种声明类型。  
+本主题介绍从它支持的默认令牌创建 Windows Communication Foundation (WCF) 的各种声明类型。  
   
  可以使用 <xref:System.IdentityModel.Claims.ClaimSet> 和 <xref:System.IdentityModel.Claims.Claim> 类来检查客户端凭据的声明。 `ClaimSet` 包含 `Claim` 对象的集合。 每个 `Claim` 都具有以下重要成员：  
   

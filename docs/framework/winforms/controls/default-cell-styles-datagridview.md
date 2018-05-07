@@ -1,29 +1,17 @@
 ---
-title: "如何：使用设计器设置 Windows 窗体 DataGridView 控件的默认单元格样式和数据格式"
-ms.custom: 
+title: 如何：使用设计器设置 Windows 窗体 DataGridView 控件的默认单元格样式和数据格式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
 - cells [Windows Forms], setting styles
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 65f876742526d13093a852e99f4e6a069c3fba47
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 47e15afe71ed3497b634e965c96badcee2fe3ed4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体 DataGridView 控件的默认单元格样式和数据格式
 <xref:System.Windows.Forms.DataGridView>控制可用于指定默认单元格样式和单元格为整个控件、 特定列的、 行和列标题和为交替行创建帐目型效果的数据格式。 设置整个控件的默认样式中被重写默认列和交替行样式设置中。 此外，在单独的行和单元格的代码中设置的样式重写默认样式。  

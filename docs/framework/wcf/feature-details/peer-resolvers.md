@@ -1,24 +1,12 @@
 ---
-title: "对等解析程序"
-ms.custom: 
+title: 对等解析程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 760011dda4a3059a217dcfbfc3fddaa67edc9995
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-resolvers"></a>对等解析程序
 为了连接到网格，对等节点需要获得其他节点的 IP 地址。 IP 地址可通过联系解析程序服务来获取，该服务获取网格 ID，然后返回与向该特定网格 ID 注册的节点对应的地址列表。 解析程序保持已注册地址的列表，此列表是它通过让网格中的每个节点向该服务注册而创建的。  
@@ -28,7 +16,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="supported-peer-resolvers"></a>支持的对等解析程序  
  对等通道支持两种类型的解析程序：对等名称解析协议 (PNRP) 和自定义解析程序服务。  
   
- 默认情况下，对等通道使用 PNRP 对等解析程序服务发现网格中的对等方和邻居。 对于 PNRP 不可用或不可行的情况/平台，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供一种基于服务器的替代发现服务：<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>。 也可以通过编写实现 <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> 接口的类来显式定义自定义解析程序服务。  
+ 默认情况下，对等通道使用 PNRP 对等解析程序服务发现网格中的对等方和邻居。 对于 PNRP 不可用或不可行的情况/平台，Windows Communication Foundation (WCF) 提供的可选、 基于服务器的发现服务- <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>。 也可以通过编写实现 <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> 接口的类来显式定义自定义解析程序服务。  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>对等名称解析协议 (PNRP)  
  PNRP 是 [!INCLUDE[wv](../../../../includes/wv-md.md)] 的默认解析程序，它是一种分布式、不使用服务器的名称解析程序服务。 通过安装 Advanced Networking Pack，还可以在 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 中使用 PNRP。 只要满足一定条件（例如中间不存在企业防火墙），则任何两个运行相同版本 PNRP 的客户端都可以使用此协议找到对方。 请注意，[!INCLUDE[wv](../../../../includes/wv-md.md)] 包含的 PNRP 的版本要比 Advanced Networking Pack 中包含的 PNRP 的版本新。 请访问 Microsoft 下载中心以获得针对 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 的 PNRP 的更新。  

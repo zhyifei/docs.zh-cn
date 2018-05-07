@@ -1,27 +1,15 @@
 ---
-title: "如何：从工作流应用程序访问服务"
-ms.custom: 
+title: 如何：从工作流应用程序访问服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0ffac399e3f7cb3f860128b072251131ac356a2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f1ef07d92eea2b526259cd11caf56e45c83675d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>如何：从工作流应用程序访问服务
-本主题说明如何从工作流控制台应用程序调用工作流服务。 它依赖于完成[如何： 使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主题。 尽管本主题说明如何从工作流应用程序调用工作流服务，但是，当从工作流应用程序调用任何 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务时，同样可以使用相同方法。  
+本主题说明如何从工作流控制台应用程序调用工作流服务。 它依赖于完成[如何： 使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主题。 虽然本主题介绍如何从工作流应用程序调用工作流服务，但是相同的方法可以用于从工作流应用程序调用任何 Windows Communication Foundation (WCF) 服务。  
   
 ### <a name="create-a-workflow-console-application-project"></a>创建工作流控制台应用程序项目  
   

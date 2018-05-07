@@ -1,12 +1,6 @@
 ---
-title: "使用 Visual Basic 运算符执行的常规任务"
-ms.custom: 
+title: 使用 Visual Basic 运算符执行的常规任务
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - operators [Visual Basic], logical
 - operators [Visual Basic], string concatenation
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0886bc0365f37f964c4c4872a7b1624ec7388067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab0b7e7c35992908aeaac14053665ff84719f1fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>使用 Visual Basic 运算符执行的常规任务
 运算符执行许多常见的任务涉及一个或多个表达式调用*操作数*。  
@@ -34,7 +25,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="arithmetic-and-bit-shift-tasks"></a>算术和移位的任务  
  下表总结了可用的算术和移位运算。  
   
-|到|请参阅|  
+|到|查看|  
 |---|---|  
 |添加到另一个数字值|[+ 运算符](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
 |从另一个数字值减去|[-运算符 (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
@@ -44,20 +35,20 @@ ms.lasthandoff: 11/21/2017
 |找到一个数字值除以另一个 （不带余数） 的商|[\ 运算符 (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
 |查找一个数字值除以另一个 （没有商） 的其余部分|[Mod 运算符](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
 |引发一个数字值的另一次幂|[^ 运算符](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|向左移动的数字值的位模式|[<\<运算符](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
+|向左移动的数字值的位模式|[<\< 运算符](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
 |向右移位的数字值的位模式|[>> 运算符](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
   
 ## <a name="comparison-tasks"></a>比较任务  
  下表总结了可用的比较运算。  
   
-|到|请参阅|  
+|到|查看|  
 |---|---|  
-|确定两个值是否相等|`=`运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|确定两个值是否不相等|`<>`运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|确定一个值是否小于另一个|`<`运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|确定一个值是否大于另一个|`>`运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|确定一个值是否小于或等于另一个|`<=`运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|确定一个值是否大于或等于另一个|`>=`运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|确定两个值是否相等|`=` 运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|确定两个值是否不相等|`<>` 运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|确定一个值是否小于另一个|`<` 运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|确定一个值是否大于另一个|`>` 运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|确定一个值是否小于或等于另一个|`<=` 运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|确定一个值是否大于或等于另一个|`>=` 运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
 |确定两个对象变量是否引用同一对象实例|[Is 运算符](../../../../visual-basic/language-reference/operators/is-operator.md)|  
 |确定两个对象变量是否引用不同对象实例|[IsNot 运算符](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
 |确定对象是否属于特定类型|[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
@@ -65,15 +56,15 @@ ms.lasthandoff: 11/21/2017
 ## <a name="concatenation-tasks"></a>串联任务  
  下表总结了可用的串联运算。  
   
-|到|请参阅|  
+|到|查看|  
 |---|---|  
-|将多个字符串联接成单个字符串|`&`运算符 ([在 Visual Basic 中的串联运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
-|联接使用字符串值的数值|`+`运算符 ([在 Visual Basic 中的串联运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
+|将多个字符串联接成单个字符串|`&` 运算符 ([在 Visual Basic 中的串联运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
+|联接使用字符串值的数值|`+` 运算符 ([在 Visual Basic 中的串联运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
   
 ## <a name="logical-and-bitwise-tasks"></a>逻辑和按位任务  
  下表总结了可用的逻辑和按位运算。  
   
-|到|请参阅|  
+|到|查看|  
 |---|---|  
 |上一个布尔值执行逻辑求反|[Not 运算符](../../../../visual-basic/language-reference/operators/not-operator.md)|  
 |对两个布尔值执行逻辑与|[And 运算符](../../../../visual-basic/language-reference/operators/and-operator.md)|  
@@ -86,6 +77,6 @@ ms.lasthandoff: 11/21/2017
 |对两个整数值执行按位独占逻辑析取|[Xor 运算符](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
 |对整数值执行按位逻辑求反|[Not 运算符](../../../../visual-basic/language-reference/operators/not-operator.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符和表达式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
  [按功能列出的运算符](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

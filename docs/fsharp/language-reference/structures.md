@@ -1,17 +1,12 @@
 ---
 title: 结构 (F#)
 description: '了解有关 F # 结构，紧凑对象类型通常比具有少量的数据和简单的行为的类型的类更有效。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 14a4799b13c40e363dd400f7effd53264acc5614
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 728533e24dcfae219ae5ab3d410389e95fcfaee1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structures"></a>结构
 

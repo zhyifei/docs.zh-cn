@@ -1,20 +1,12 @@
 ---
-title: "WCF Web HTTP 格式设置"
+title: WCF Web HTTP 格式设置
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab18e739b061ac6d28877eaac23c258a79f07a2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abbfc74f33ddb676c8ac85eb712757615a2972ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP 格式设置
 通过 WCF Web HTTP 编程模型，你可以动态确定服务操作返回其响应所采用的最佳格式。 支持使用以下两种方法来确定相应格式：即自动和显式。  
@@ -30,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  WebHttpBehavior 中的默认格式设置。  
   
- 如果请求消息包含 Accept 标头，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基础结构将搜索其支持的类型。 如果 `Accept` 标头指定了其媒体类型的优先级，则会遵循这些优先级。 如果未在 `Accept` 标头中找到适当的格式，则使用请求消息的内容类型。 如果未指定适当的内容类型，则使用操作的默认格式设置。 默认格式使用 `ResponseFormat` 和 <xref:System.ServiceModel.Web.WebGetAttribute> 特性的 <xref:System.ServiceModel.Web.WebInvokeAttribute> 参数设置。 如果未对操作指定默认格式，则使用 <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> 属性的值。 自动格式设置依赖于 <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 属性。 如果此属性设置为 `true`，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构将确定要使用的最佳格式。 默认情况下，禁用自动格式选择，以保证向后兼容性。 可以通过编程方式或配置启用自动格式选择。 下面的示例演示如何在代码中启用自动格式选择。  
+ 如果请求消息包含 Accept 标头的 Windows Communication Foundation (WCF) 基础结构将搜索它支持的类型。 如果 `Accept` 标头指定了其媒体类型的优先级，则会遵循这些优先级。 如果未在 `Accept` 标头中找到适当的格式，则使用请求消息的内容类型。 如果未指定适当的内容类型，则使用操作的默认格式设置。 默认格式使用 `ResponseFormat` 和 <xref:System.ServiceModel.Web.WebGetAttribute> 特性的 <xref:System.ServiceModel.Web.WebInvokeAttribute> 参数设置。 如果未对操作指定默认格式，则使用 <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> 属性的值。 自动格式设置依赖于 <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 属性。 如果此属性设置为 `true`，WCF 基础结构将确定要使用的最佳格式。 默认情况下，禁用自动格式选择，以保证向后兼容性。 可以通过编程方式或配置启用自动格式选择。 下面的示例演示如何在代码中启用自动格式选择。  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     

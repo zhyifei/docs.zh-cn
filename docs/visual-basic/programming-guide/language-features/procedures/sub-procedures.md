@@ -1,13 +1,6 @@
 ---
 title: Sub 过程 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
 - statement blocks
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7258d57d2677042a2020097893a4f7a0adb35508
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3286df1a5babfcf7d6b759ff5c9a920bb44f51ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 过程 (Visual Basic)
 A`Sub`过程是一系列 Visual Basic 语句括在`Sub`和`End Sub`语句。 `Sub`过程执行任务，再将控制权返回给调用代码，但是它不会返回一个值调用的代码。  
@@ -39,7 +29,7 @@ A`Sub`过程是一系列 Visual Basic 语句括在`Sub`和`End Sub`语句。 `Su
 ## <a name="declaration-syntax"></a>声明语法  
  声明的语法`Sub`过程是，如下所示：  
   
- `[` *修饰符* `] Sub` *subname* `[(` *parameterlist*  `)]`  
+ `[` *修饰符* `] Sub` *subname* `[(` *parameterlist* `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -52,11 +42,11 @@ A`Sub`过程是一系列 Visual Basic 语句括在`Sub`和`End Sub`语句。 `Su
   
  在参数列表中每个参数的语法如下所示：  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*`As`*数据类型*   
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*`As`*数据类型*  
   
  如果参数是可选的你还必须提供默认值作为其声明的一部分。 用于指定默认值的语法如下所示：  
   
- `Optional [ByVal | ByRef]`  *parametername*`As`*datatype*`=`*defaultvalue*   
+ `Optional [ByVal | ByRef]`  *parametername*`As`*datatype*`=`*defaultvalue*  
   
 ### <a name="parameters-as-local-variables"></a>作为本地变量的参数  
  当控制权传递给该过程时，每个参数被视为本地变量。 这意味着它的生存期即相同的过程，并且其作用域是整个过程。  

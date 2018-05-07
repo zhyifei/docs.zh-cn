@@ -1,13 +1,6 @@
 ---
-title: "如何：在 TreeView 中查找 TreeViewItem"
-ms.custom: 
+title: 如何：在 TreeView 中查找 TreeViewItem
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 696a9e2d92b9c44e4aedbcc200b41e5548cd7411
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cff931312e6bc6db5ae5f26c0db80ad2f43825f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>如何：在 TreeView 中查找 TreeViewItem
 <xref:System.Windows.Controls.TreeView>控件提供一种简便方式显示分层数据。 如果你<xref:System.Windows.Controls.TreeView>绑定到数据源，<xref:System.Windows.Controls.TreeView.SelectedItem%2A>属性提供便利的方法，让你快速检索所选的数据对象。 通常，最好使用基础数据对象，但有时你可能需要以编程方式操作数据的包含<xref:System.Windows.Controls.TreeViewItem>。 例如，你可能需要以编程方式展开<xref:System.Windows.Controls.TreeViewItem>，或选择不同的项在<xref:System.Windows.Controls.TreeView>。  

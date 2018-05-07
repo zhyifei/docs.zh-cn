@@ -1,13 +1,6 @@
 ---
-title: "如何：从 MDI 下拉菜单移除 ToolStripMenuItem（Windows 窗体）"
-ms.custom: 
+title: 如何：从 MDI 下拉菜单移除 ToolStripMenuItem（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], removing
 - MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4ef6927c56e18f74e04648c541f8cff4d29167cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0649e99c682464928aaae68451b2cb29d5675485
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>如何：从 MDI 下拉菜单移除 ToolStripMenuItem（Windows 窗体）
 在某些应用程序中，多文档界面 (MDI) 子窗口的类型可以不同于 MDI 父窗口。 例如，MDI 父窗口可能为电子表格，而 MDI 子窗口可能为图表。 在这种情况下，由于激活了不同类型的 MDI 子窗口，你想用 MDI 子菜单上的内容更新 MDI 父菜单的内容。  

@@ -1,14 +1,6 @@
 ---
 title: 联合
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +8,19 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d69de8c01a23eff5314220a10a51f6487080df41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation"></a>联合
-本主题概要介绍联合安全概念。 本主题还说明 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 对部署联合安全体系结构的支持。 有关演示联合身份验证的示例应用，请参阅[联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+本主题概要介绍联合安全概念。 它还描述对部署联合的安全体系结构的 Windows Communication Foundation (WCF) 支持。 有关演示联合身份验证的示例应用，请参阅[联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
 ## <a name="definition-of-federated-security"></a>联合安全的定义  
  联合安全允许客户端访问的服务与关联的身份验证和授权过程完全分离。 联合安全还允许跨不同信任领域内的多个系统、网络和组织进行协作。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为生成和部署使用联合安全的分布式系统提供支持。  
+ WCF 提供了用于生成和部署使用联合的安全的分布式的系统的支持。  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>联合安全体系结构的元素  
  联合安全体系结构有三个关键元素，如下表所述。  
@@ -80,7 +66,7 @@ ms.lasthandoff: 04/28/2018
  用户从 STS A 获取安全令牌后，他们可以将该令牌提供给 STS B。组织 B 将继续对用户的请求执行身份验证并从其自己的安全令牌集中向用户颁发安全令牌。 之后，用户可以将他们的令牌提供给组织 B 的资源并访问服务。  
   
 ## <a name="support-for-federated-security-in-wcf"></a>WCF 中的联合安全支持  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供对部署联合的安全体系结构通过的关守支持[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
+ WCF 提供了有关部署通过联合的安全体系结构的关守支持[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)元素提供安全、 可靠且可互操作的绑定需要使用 HTTP 作为请求-答复通信样式的底层传输机制采用文本和 XML 作为编码的联网格式。  
   
@@ -98,10 +84,10 @@ ms.lasthandoff: 04/28/2018
 -   向服务提供令牌以访问该服务。  
   
 ### <a name="phase-2-run-time-phase"></a>阶段 2：运行时阶段  
- 在运行时阶段，客户端实例化 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端类的对象并使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端执行调用。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的基础框架处理先前在联合安全通信模式中提到的步骤并使客户端能够无缝地使用服务。  
+ 在运行时阶段中，客户端实例化 WCF 客户端类的对象，并使用 WCF 客户端调用。 WCF 的基础框架处理先前提到的步骤在联合的安全通信模式中，并使客户端能够无缝地使用该服务。  
   
 ## <a name="sample-implementation-using-wcf"></a>使用 WCF 的实现示例  
- 下图显示使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中本机支持的联合安全体系结构的实现示例。  
+ 下图显示使用 WCF 的本机支持的联合的安全体系结构的示例实现。  
   
  ![在 WCF 中的联合身份验证安全](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
@@ -300,7 +286,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  ![联合身份验证](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
 ## <a name="summary"></a>总结  
- 联合安全可以清晰划分责任范围并有助于生成安全、可伸缩的服务体系结构。 作为一种用于生成和部署分布式应用程序的平台，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为实现联合安全提供本机支持。  
+ 联合安全可以清晰划分责任范围并有助于生成安全、可伸缩的服务体系结构。 作为构建和部署分布式应用程序的平台，WCF 为实现联合的安全提供本机支持。  
   
 ## <a name="see-also"></a>请参阅  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)

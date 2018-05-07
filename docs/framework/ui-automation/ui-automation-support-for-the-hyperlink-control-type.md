@@ -1,30 +1,19 @@
 ---
-title: "UI 自动化对 Hyperlink 控件类型的支持"
-ms.custom: 
+title: UI 自动化对 Hyperlink 控件类型的支持
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Hyperlink control type
 - UI Automation, Hyperlink control type
 - control types, Hyperlink
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
-caps.latest.revision: 
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2cc63513214f43220ef26b479be353949fa89fa4
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: c8eb7bfc56b4dddaf352477e3817864700460db7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>UI 自动化对 Hyperlink 控件类型的支持
 > [!NOTE]
@@ -70,7 +59,7 @@ ms.lasthandoff: 03/19/2018
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|是|所有超链接控件必须支持 Invoke 模式。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|视情况而定|当链接包含可用且对用户有意义的信息时，超链接控件应支持 Value 控件模式。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|例如，“http://www....”|Internet 或 Intranet 地址的 URL 是一个包含对用户有意义的信息的超链接示例。 但是，以编程方式的链接仅对应用程序有意义，不建议用于 Value 属性。|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|例如，"http://www...。"|Internet 或 Intranet 地址的 URL 是一个包含对用户有意义的信息的超链接示例。 但是，以编程方式的链接仅对应用程序有意义，不建议用于 Value 属性。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
@@ -85,7 +74,7 @@ ms.lasthandoff: 03/19/2018
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Automation.ControlType.Hyperlink>  
  [UI 自动化控件类型概述](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
  [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)

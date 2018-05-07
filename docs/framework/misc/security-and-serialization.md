@@ -1,13 +1,6 @@
 ---
-title: "安全和序列化"
-ms.custom: 
+title: 安全和序列化
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - secure coding, serialization
 - security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a870834b86f1ed99181614278a7381932a18ac8a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a30e80b1b4a412405787c0c14ad58995a2d7fffc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-and-serialization"></a>安全和序列化
 由于序列化可以允许其他代码查看或修改在其他情况下无法访问的对象实例数据，因此执行序列化的代码需要具有特殊的权限：带有指定 <xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 。 在默认策略下，通过 Internet 下载的代码或 Intranet 代码不会授予该权限；只有本地计算机上的代码才被授予该权限。  
@@ -37,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Runtime.Serialization.ISerializable> 接口只适合由序列化基础结构使用。 然而，如果该接口未受到保护，则可能会漏露敏感信息。 如果通过实现 **ISerializable**来提供自定义序列化，请确保采取以下预防措施：  
   
--   应通过如下方法显式保护 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> 方法的安全：要求为 **SecurityPermission** 指定 **SerializationFormatter** 权限，或确保不会在方法输出中泄露敏感信息。 例如:  
+-   应通过如下方法显式保护 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> 方法的安全：要求为 **SecurityPermission** 指定 **SerializationFormatter** 权限，或确保不会在方法输出中泄露敏感信息。 例如：  
   
     ```vb  
     Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  

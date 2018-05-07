@@ -1,26 +1,17 @@
 ---
 title: 此第一个语句&#39;Sub New&#39;必须显式调用&#39;MyBase.New&#39;或&#39;MyClass.New&#39;因为&#39; &lt;n a m e&gt; &#39;基类中&#39;&lt;n a m e&gt; &#39;的&#39; &lt;derivedclassname&gt; &#39;标记为已过时： &#39; &lt;errormessage&gt;&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30920
 - bc30920
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7690c9dcdb97e63959d2f0e31791d55ee7b09ffc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: dbce2a9edcc38ff137cb7ec0c97e5c259c0a0979
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>此第一个语句&#39;Sub New&#39;必须显式调用&#39;MyBase.New&#39;或&#39;MyClass.New&#39;因为&#39; &lt;n a m e&gt; &#39;基类中&#39;&lt;n a m e&gt; &#39;的&#39; &lt;derivedclassname&gt; &#39;标记为已过时： &#39; &lt;errormessage&gt;&#39;
 类构造函数不显式调用基类构造函数，并且隐式基类构造函数标有 <xref:System.ObsoleteAttribute> 特性和将其视为错误的指令。  

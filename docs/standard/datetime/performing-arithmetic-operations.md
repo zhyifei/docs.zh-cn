@@ -1,13 +1,7 @@
 ---
-title: "使用日期和时间执行算术运算"
-ms.custom: 
+title: 使用日期和时间执行算术运算
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,18 +14,13 @@ helpviewer_keywords:
 - DateTime structure, arithmetic operations
 - DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: edad8fc6643b90afc8327b574e19b178270829b3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5bbd5afb89d2b992e06583c7427c1a25a5b8f273
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>使用日期和时间执行算术运算
 
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/23/2017
 
 <xref:System.DateTime.CompareTo%28System.DateTime%29>方法，则报告本地时间早于 (或小于) 的 UTC 时间和减法运算指示在美国 UTC 系统的本地时间之间的差异其 UTC 时间与本地时间之间的时差是 7 小时。 但由于这两个值提供的单个时间点的表现形式有所不同，因此从本例中可清楚得知，此时间间隔完全是由本地时区与 UTC 之间的时差所致。
 
-一般来说，<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>属性不会影响返回的结果<xref:System.DateTime.Kind>比较和算术方法 （如所示的两个相同时间点进行比较），尽管它可能会影响这些结果的解释。 例如:
+一般来说，<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>属性不会影响返回的结果<xref:System.DateTime.Kind>比较和算术方法 （如所示的两个相同时间点进行比较），尽管它可能会影响这些结果的解释。 例如：
 
 * 对两个日期和时间值的任何算术运算的结果执行其<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>属性都等于<xref:System.DateTimeKind>反映两个值之间的实际时间间隔。 同样，对两个日期和时间值进行比较可精确反映出时间之间的关系。
 

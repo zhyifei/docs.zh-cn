@@ -1,13 +1,6 @@
 ---
-title: "如何：控制 MediaElement（播放、暂停、停止、音量和速度）"
-ms.custom: 
+title: 如何：控制 MediaElement（播放、暂停、停止、音量和速度）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - multimedia [WPF], controlling playback of media
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 57b140391526c5b2a0e73a8bab2355ae445b395b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: beeddc658f16d8b52142a8a79f9c61e4f7070b01
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>如何：控制 MediaElement（播放、暂停、停止、音量和速度）
 下面的示例演示如何控制播放的媒体使用<xref:System.Windows.Controls.MediaElement>。 该示例创建简单的媒体播放，您可以播放、 暂停、 停止，并跳过在媒体中的来回以及调整卷和速度比。  

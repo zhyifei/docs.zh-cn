@@ -1,11 +1,7 @@
 ---
-title: "GetCurrentApartmentType 函数 （非托管 API 参考）"
-description: "GetCurrentApartmentType 函数检索的单元在其中执行调用方的类型。"
+title: GetCurrentApartmentType 函数 （非托管 API 参考）
+description: GetCurrentApartmentType 函数检索的单元在其中执行调用方的类型。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetCurrentApartmentType
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a42c6c3c778dbdefd4b83621e65b81741b940ebe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca7b5fa5bf6d845d542d3e80c0571e59f3d4c1e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 函数
 检索在其中执行调用方的单元的类型。   
@@ -58,7 +51,7 @@ HRESULT GetCurrentApartmentType (
 ## <a name="return-value"></a>返回值
 
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `S_OK` | 0 | 已成功完成该函数。 |
 | `E_FAIL` | 0x80000008 | 在单元中未执行调用方。 |
@@ -67,12 +60,12 @@ HRESULT GetCurrentApartmentType (
 
 此函数包装对的调用[IComThreadingInfo::GetCurrentApartmentType](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx)方法。
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

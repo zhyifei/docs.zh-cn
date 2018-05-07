@@ -1,31 +1,19 @@
 ---
-title: "如何：创建自定义安全令牌提供程序"
-ms.custom: 
+title: 如何：创建自定义安全令牌提供程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37e7f9541457c475bfe187485520df63a84f7555
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 480b968a15193bccb84ba491347dbba69e16fb52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>如何：创建自定义安全令牌提供程序
 本主题介绍如何使用自定义安全令牌提供程序来创建新令牌类型，以及如何将该提供程序与自定义安全令牌管理器集成。  
@@ -33,7 +21,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  如果在 <xref:System.IdentityModel.Tokens> 命名空间中找到的系统提供的令牌不符合要求，请创建一个自定义令牌提供程序。  
   
- 安全令牌提供程序会基于客户端或服务凭据中的信息创建一个安全令牌表示形式。 若要在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全中使用自定义安全令牌提供程序，则必须创建自定义凭据和安全令牌管理器实现。  
+ 安全令牌提供程序会基于客户端或服务凭据中的信息创建一个安全令牌表示形式。 若要在 Windows Communication Foundation (WCF) 安全中使用自定义安全令牌提供程序，必须创建自定义凭据和安全令牌管理器实现。  
   
  有关自定义凭据和安全令牌管理器的详细信息请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   

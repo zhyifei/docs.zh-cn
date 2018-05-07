@@ -1,11 +1,7 @@
 ---
-title: "删除函数 （非托管 API 参考）"
-description: "Delete 函数从 CIM 类定义中删除指定的属性和所有其限定符。"
+title: 删除函数 （非托管 API 参考）
+description: Delete 函数从 CIM 类定义中删除指定的属性和所有其限定符。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Delete
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 30f5bf651990cafe06811019cf2b3d92f866f646
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delete-function"></a>删除函数
 从 CIM 类定义中删除指定的属性和所有其限定符。
@@ -53,13 +46,13 @@ HRESULT Delete (
 [in]指向的指针[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)实例。
 
 `wszName`  
-[in]要删除的属性名称。 `wszName`必须为有效的指针`LPCWSTR`。
+[in]要删除的属性名称。 `wszName` 必须为有效的指针`LPCWSTR`。
 
 ## <a name="return-value"></a>返回值
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | 无法删除属性。 |
@@ -75,12 +68,12 @@ HRESULT Delete (
 
 此函数包装对的调用[IWbemClassObject::Delete](https://msdn.microsoft.com/library/aa391438(v=vs.85).aspx)方法。
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

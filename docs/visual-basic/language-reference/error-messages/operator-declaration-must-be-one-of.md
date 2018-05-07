@@ -1,26 +1,17 @@
 ---
 title: '运算符声明必须是: +、-，*，-，-，^， &amp;，Like、 Mod，和，或 Xor，不是， &lt; &lt;， &gt; &gt;，=， &lt; &gt;， &lt;， &lt;=、 &gt;&gt;= CType，为 true 时，IsFalse'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc33000
 - vbc33000
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 80c8358dd13105c18e73e94735a51b02d5bd22c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb1e7e8088ec8661be2469aff043c0f1a96e4d01
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a>运算符声明必须是: +、-，*，\,/，^， &amp;，Like、 Mod，和，或 Xor，不是， &lt; &lt;， &gt; &gt;...
 您可以声明仅有资格享受重载的运算符。 下表列出可以声明的运算符。  
@@ -41,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  如果你需要重载无法直接重载的运算符这一功能，请创建用于获取适当参数并返回适当值的 `Function` 过程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
  [运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
  [如何：定义运算符](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  

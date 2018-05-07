@@ -1,27 +1,15 @@
 ---
-title: "无序消息处理"
-ms.custom: 
+title: 无序消息处理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 19ab5afbc1eb13a3126e94a040d51204fea131a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a7839b60dbad7919a644c196a1c63f6bc46fb5d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="out-of-order-message-processing"></a>无序消息处理
-工作流服务可能依赖于按特定顺序发送的消息。 工作流服务包含一个或多个 <xref:System.ServiceModel.Activities.Receive> 活动，而每个 <xref:System.ServiceModel.Activities.Receive> 活动需要一条特定消息。 如果无法保证单独传递传输，客户端发送的消息可能会延迟，从而可能无法按工作流服务所需的顺序传递消息。 实现无需按特定顺序传送消息的工作流服务时，通常使用并行活动来完成此操作。 对于更复杂的应用程序协议，工作流将很快变得极其复杂。  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的无序消息处理功能可用于创建此类工作流，而且能够避免嵌套并行活动中的所有复杂性。 只有支持 <xref:System.ServiceModel.Channels.ReceiveContext> 的通道（如 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ 绑定）才支持无序消息处理。  
+工作流服务可能依赖于按特定顺序发送的消息。 工作流服务包含一个或多个 <xref:System.ServiceModel.Activities.Receive> 活动，而每个 <xref:System.ServiceModel.Activities.Receive> 活动需要一条特定消息。 如果无法保证单独传递传输，客户端发送的消息可能会延迟，从而可能无法按工作流服务所需的顺序传递消息。 实现无需按特定顺序传送消息的工作流服务时，通常使用并行活动来完成此操作。 对于更复杂的应用程序协议，工作流将很快变得极其复杂。  无序消息处理功能在 Windows Communication Foundation (WCF) 允许你创建此类工作流而无需所有嵌套并行活动的复杂性。 对支持的通道仅支持无序消息处理<xref:System.ServiceModel.Channels.ReceiveContext>例如 WCF MSMQ 绑定。  
   
 ## <a name="enabling-out-of-order-message-processing"></a>启用无序消息处理  
  在 WorkflowService 上将 <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> 属性设置为`true` 即会启用无序消息处理。 下面的示例演示如何在代码中设置 <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> 属性。  

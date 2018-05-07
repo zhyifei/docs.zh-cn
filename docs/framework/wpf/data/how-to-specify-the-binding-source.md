@@ -1,13 +1,6 @@
 ---
-title: "如何：指定绑定源"
-ms.custom: 
+title: 如何：指定绑定源
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 23a4c180eb62dd152f1ed24c01b8103ccf1ec562
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 333a85bc59ded3fd42bef6aff5845c9a6ddeb49b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-binding-source"></a>如何：指定绑定源
 在数据绑定中，绑定源对象是指从其获取数据的对象。 本主题描述了指定绑定源的不同方法。  

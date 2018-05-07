@@ -1,24 +1,12 @@
 ---
-title: "WCF Discovery 对象模型"
-ms.custom: 
+title: WCF Discovery 对象模型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 68d6e156612ce707aa678b6589510b710b73e38a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a325ee0fd6376f101ca8ccc6097e79c30198a011
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-discovery-object-model"></a>WCF Discovery 对象模型
 WCF Discovery 由一组类型组成，通过这些类型提供的统一编程模型，您可以编写在运行时可发现的服务以及查找并使用这些服务的客户端。  

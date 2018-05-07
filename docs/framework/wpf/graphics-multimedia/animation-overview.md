@@ -1,13 +1,6 @@
 ---
-title: "动画概述"
-ms.custom: 
+title: 动画概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,20 +8,15 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-caps.latest.revision: "73"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 118d63bbbcd0cbb52d092af7002df2538df7790b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fb9550ddce4ead900206c2ece2f976ab8b42c4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="animation-overview"></a>动画概述
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供一组功能强大的图形和布局功能，使您可以创建具吸引力的用户界面和吸引人的文档。 动画不仅可以使引起注意的用户界面更加引人注目，还可以使其更加便于使用。 通过仅对进行动画处理的背景色或应用动画<xref:System.Windows.Media.Transform>，可以创建显著屏幕转换，也可以提供有用的视觉提示。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一组功能强大的图形和布局功能，使您可以创建具吸引力的用户界面和吸引人的文档。 动画不仅可以使引起注意的用户界面更加引人注目，还可以使其更加便于使用。 通过仅对进行动画处理的背景色或应用动画<xref:System.Windows.Media.Transform>，可以创建显著屏幕转换，也可以提供有用的视觉提示。  
   
  本概述介绍[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]动画和时间系统。 它注重的动画[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用情节提要的对象。  
 
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 -   然后，程序用新值更新矩形并重画此矩形。  
   
- 之前[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]开发人员必须创建并管理其自己的计时系统或使用特殊的自定义库。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]包括通过托管代码公开高效计时系统和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]深度集成到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]framework。 通过使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画，可以轻松地对控件和其他图形对象进行动画处理。  
+ 之前[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]开发人员必须创建并管理其自己的计时系统或使用特殊的自定义库。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括通过托管代码公开高效计时系统和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]深度集成到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]framework。 通过使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画，可以轻松地对控件和其他图形对象进行动画处理。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以高效地处理管理计时系统和重绘屏幕的所有后台任务。 它提供了计时类，使用户能够重点关注要创造的效果，而非实现这些效果的机制。 此外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 通过公开动画基类（你使用的类可以继承这些类）可以轻松创建自己的动画，这样便可以制作自定义动画。 这些自定义动画获得了标准动画类的许多性能优点。  
   
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   必须存在可用的兼容动画类型。 (如果[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]未提供，你可以创建你自己。 请参阅[自定义动画概述](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)。)  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]包含许多对象具有<xref:System.Windows.Media.Animation.IAnimatable>属性。 控件如<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.TabControl>，以及<xref:System.Windows.Controls.Panel>和<xref:System.Windows.Shapes.Shape>对象继承自<xref:System.Windows.DependencyObject>。 其中大多数属性都是依赖属性。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含许多对象具有<xref:System.Windows.Media.Animation.IAnimatable>属性。 控件如<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.TabControl>，以及<xref:System.Windows.Controls.Panel>和<xref:System.Windows.Shapes.Shape>对象继承自<xref:System.Windows.DependencyObject>。 其中大多数属性都是依赖属性。  
   
  几乎可以在任何地方使用动画，包括在样式和控件模板中使用。 动画未必可见；如果不属于用户界面的对象满足本部分中所述的条件，则可以对其进行动画处理。  
   
@@ -268,7 +256,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="applyanimationstoproperty"></a>   
 ## <a name="applying-an-animation-to-a-property"></a>对属性应用动画  
- 前面部分介绍了动画的不同类型及其计时属性。 本部分演示如何对要进行动画处理的属性应用动画。 <xref:System.Windows.Media.Animation.Storyboard>对象提供了一种方法将动画应用于属性。 A<xref:System.Windows.Media.Animation.Storyboard>是*容器时间线*提供为它包含的动画的目标信息。  
+ 前面部分介绍了动画的不同类型及其计时属性。 本部分演示如何对要进行动画处理的属性应用动画。 <xref:System.Windows.Media.Animation.Storyboard> 对象提供了一种方法将动画应用于属性。 A<xref:System.Windows.Media.Animation.Storyboard>是*容器时间线*提供为它包含的动画的目标信息。  
   
 ### <a name="targeting-objects-and-properties"></a>以对象和属性为目标  
  <xref:System.Windows.Media.Animation.Storyboard>类提供<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A>附加属性。 通过在动画上设置这些属性，告诉动画对哪些内容进行动画处理。 但是，通常必须为对象提供一个名称，动画才能以该对象作为目标。  

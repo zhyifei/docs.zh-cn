@@ -1,22 +1,12 @@
 ---
-title: "线程池 (Visual Basic)"
-ms.custom: 
+title: 线程池 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4903fb7a-eaad-435a-9add-1d1b32de3b83
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 33b89d261aa2d038926f8c7e1832436b0cd34019
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 445c1c70cc1371ef918f32046e0c30ae2a473da2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-pooling-visual-basic"></a>线程池 (Visual Basic)
 线程池是可用于在后台执行多种任务的线程集合。 (请参阅[线程处理 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/threading/index.md)有关背景信息。)这使主线程可以自由地异步执行其他任务。  
@@ -62,7 +52,7 @@ End Sub
   
  不能使用结构在状态对象内部返回值。 由于结构属于值类型，异步进程所做的更改不会更改原始结构的成员。 如果不需要返回值，可以使用结构来提供参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
  <xref:System.Threading>  
  <xref:System.Threading.ThreadPool>  

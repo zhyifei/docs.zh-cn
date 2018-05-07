@@ -1,22 +1,14 @@
 ---
 title: My.Application.Log 对象
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9ba367f3d5f5cb5505300b7f4a54d9b3d7c4422e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4a4fbb2b823436a16f9f0646632e66f66fe62fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log 对象
 提供属性和方法来将事件和异常信息写入应用程序的日志侦听器。  
@@ -30,11 +22,11 @@ ms.lasthandoff: 10/18/2017
 >  还可以使用.NET Framework 中的类来记录应用程序中的信息。 有关详细信息，请参阅 [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md)。  
   
 ## <a name="requirements"></a>要求  
- **Namespace:**<xref:Microsoft.VisualBasic.Logging>  
+ **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
   
- **类：**<xref:Microsoft.VisualBasic.Logging.Log>  
+ **类：** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **程序集：**[!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **程序集：** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [My.Application 对象](../../../visual-basic/language-reference/objects/my-application-object.md)

@@ -1,14 +1,6 @@
 ---
-title: "ICLRMetaHost::QueryLegacyV2RuntimeBinding 方法"
-ms.custom: 
+title: ICLRMetaHost::QueryLegacyV2RuntimeBinding 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRMetaHost.RequestRuntimeLoadedNotification
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9929817e-acc9-40b7-960c-598664e04b60
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 889d8ca00726c0b271a1d43519803af73018b2a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1664c47e580730fb0000465f9010e024c64fec2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a>ICLRMetaHost::QueryLegacyV2RuntimeBinding 方法
 返回表示旧式激活策略具有已绑定到，例如，通过使用的运行时的接口`useLegacyV2RuntimeActivationPolicy`属性[\<启动 > 元素](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)配置文件项，直接使用通过旧激活 Api 或通过调用[iclrruntimeinfo:: Bindaslegacyv2runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md)方法。  
@@ -64,14 +52,14 @@ HRESULT QueryLegacyV2RuntimeBinding (
   
 ## <a name="remarks"></a>备注  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRMetaHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  

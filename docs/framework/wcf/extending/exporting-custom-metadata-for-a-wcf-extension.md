@@ -1,27 +1,15 @@
 ---
-title: "导出 WCF 扩展的自定义元数据"
-ms.custom: 
+title: 导出 WCF 扩展的自定义元数据
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbdbef495232fb1ffaeb8d1dc739c2db1355556d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>导出 WCF 扩展的自定义元数据
-在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，元数据导出是一个过程，用于描述服务终结点并将服务终结点映射到并行的标准化表示形式，客户端通过这种表示形式，可以理解如何使用服务。 自定义元数据包含系统提供的元数据导出程序无法导出的 XML 元素。 通常，这包括自定义 WSDL 元素（用于用户定义的行为）、绑定元素和策略断言（与绑定和协定的功能和要求有关）。  
+在 Windows Communication Foundation (WCF) 中，元数据导出是描述服务终结点并将它们投影到客户端可用来了解如何使用服务的并行的标准化表示形式的过程。 自定义元数据包含系统提供的元数据导出程序无法导出的 XML 元素。 通常，这包括自定义 WSDL 元素（用于用户定义的行为）、绑定元素和策略断言（与绑定和协定的功能和要求有关）。  
   
  本节介绍如何导出自定义 WSDL 或策略断言，而不关注导出过程本身。 有关如何使用导出和导入元数据，无论元数据是否自定义或系统构造的类型的详细信息，请参阅[导出和导入元数据](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
   

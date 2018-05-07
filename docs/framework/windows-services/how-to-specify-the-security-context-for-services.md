@@ -1,13 +1,6 @@
 ---
-title: "如何：为服务指定安全上下文"
-ms.custom: 
+title: 如何：为服务指定安全上下文
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, security
 - security [Visual Studio], contexts
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - services, security
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
-caps.latest.revision: "10"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 9ce65358f6d63414dbe6798d3cc2464ee2741980
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e3e5ad7dd44dcaf1593ac80bbe6d0a367964e4e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>如何：为服务指定安全上下文
 默认情况下，服务以外的登录的用户的不同的安全上下文中运行。 默认的系统帐户的上下文中运行的服务调用`LocalSystem`，这将给予他们不同的访问权限到用户以外的系统资源。 你可以更改此行为，以指定应在其下运行你的服务的不同用户帐户。  

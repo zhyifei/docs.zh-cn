@@ -1,29 +1,19 @@
 ---
-title: "托管代码的安全编码指南"
-ms.custom: 
+title: 托管代码的安全编码指南
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - code security, unmanaged code
 - unmanaged code, securing
 - security [.NET Framework], unmanaged code
 - secure coding, unmanaged code
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adbdd005bba9e7276a77f2e78c53be43fdceffae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60e293ac8c9100876aa5a524bb5dda04e9f4183f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>托管代码的安全编码指南
 有些库代码需要调入非托管代码（如本机代码 API（如 Win32））。 因为这意味着超出托管代码的安全外围，所以需要适当小心。 如果你的代码在安全性方面是非特定的，你的代码和调用它的任何代码都必须具有非托管代码权限（指定了<xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ）。  

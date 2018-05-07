@@ -1,18 +1,12 @@
 ---
-title: "LINQ to XML 针对 XPath 用户 (Visual Basic)"
+title: LINQ to XML 针对 XPath 用户 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bb0666ee1ae5626a4721ea597a53889e1acf8b0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4a84c373a4b355297db130c64ca3a1df5726c5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML 针对 XPath 用户 (Visual Basic)
 
@@ -42,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 |[如何： 查找子元素基于位置 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position.md)|比较如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 根据元素的相对位置查找元素。<br /><br /> 关联的 XPath 表达式为：`"Test[position() >= 2 and position() <= 4]"`|  
 |[如何： 查找紧前面的同级 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|比较如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查找节点前面紧邻的同级。<br /><br /> 关联的 XPath 表达式为：`"preceding-sibling::*[1]"`|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.XPath?displayProperty=nameWithType>  
  [查询 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)  
  [使用 XPath 数据模型处理 XML 数据](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

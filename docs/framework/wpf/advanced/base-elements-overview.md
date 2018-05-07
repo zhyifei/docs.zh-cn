@@ -1,39 +1,25 @@
 ---
-title: "基元素概述"
-ms.custom: 
+title: 基元素概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52f0bb90d7eb61a199097813eb8313cd9c154f3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bcfcb87d0ddf5181a47d459e821bacd9b9f6b61c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="base-elements-overview"></a>基元素概述
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中较高比重的类都派生自四类，它们通常在 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 文档中称为基元素。 这些类是<xref:System.Windows.UIElement>， <xref:System.Windows.FrameworkElement>， <xref:System.Windows.ContentElement>，和<xref:System.Windows.FrameworkContentElement>。 <xref:System.Windows.DependencyObject>还相关类，因为它是这两者的一个公共基类<xref:System.Windows.UIElement>和<xref:System.Windows.ContentElement>  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中较高比重的类都派生自四类，它们通常在 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 文档中称为基元素。 这些类是<xref:System.Windows.UIElement>， <xref:System.Windows.FrameworkElement>， <xref:System.Windows.ContentElement>，和<xref:System.Windows.FrameworkContentElement>。 <xref:System.Windows.DependencyObject>还相关类，因为它是这两者的一个公共基类<xref:System.Windows.UIElement>和 <xref:System.Windows.ContentElement>  
  
   
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>WPF 类中的基元素 API  
- 同时<xref:System.Windows.UIElement>和<xref:System.Windows.ContentElement>派生自<xref:System.Windows.DependencyObject>，途径略有不同。 在此级别拆分处理如何<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>中的用户界面和什么作用它们服务应用程序中使用。 <xref:System.Windows.UIElement>此外具有<xref:System.Windows.Media.Visual>在其类层次结构中，它是一个类公开较低级别图形支持基础[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。 <xref:System.Windows.Media.Visual>通过定义独立的矩形屏幕区域，提供了一个呈现框架。 在实践中，<xref:System.Windows.UIElement>是元素将支持更大的对象模型，旨在呈现和分成若干个区域，可以被描述为矩形屏幕区域和其中的内容模型是有意更加开放，以允许不同的布局元素的组合。 <xref:System.Windows.ContentElement>不是派生自<xref:System.Windows.Media.Visual>; 其模型是<xref:System.Windows.ContentElement>将供出于其他目的，如读取器或查看器，然后将解释元素并生成完整<xref:System.Windows.Media.Visual>为[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]来使用。 某些<xref:System.Windows.UIElement>类都应是内容主机： 它们提供对托管组织和呈现为一个或多个<xref:System.Windows.ContentElement>类 (<xref:System.Windows.Controls.DocumentViewer>举例说明这样的类)。 <xref:System.Windows.ContentElement>具有某种程度上较小的对象模型的元素的基类和地址文本、 信息的更多信息或文档内容可能承载于用作<xref:System.Windows.UIElement>。  
+ 同时<xref:System.Windows.UIElement>和<xref:System.Windows.ContentElement>派生自<xref:System.Windows.DependencyObject>，途径略有不同。 在此级别拆分处理如何<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>中的用户界面和什么作用它们服务应用程序中使用。 <xref:System.Windows.UIElement> 此外具有<xref:System.Windows.Media.Visual>在其类层次结构中，它是一个类公开较低级别图形支持基础[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。 <xref:System.Windows.Media.Visual> 通过定义独立的矩形屏幕区域，提供了一个呈现框架。 在实践中，<xref:System.Windows.UIElement>是元素将支持更大的对象模型，旨在呈现和分成若干个区域，可以被描述为矩形屏幕区域和其中的内容模型是有意更加开放，以允许不同的布局元素的组合。 <xref:System.Windows.ContentElement> 不是派生自<xref:System.Windows.Media.Visual>; 其模型是<xref:System.Windows.ContentElement>将供出于其他目的，如读取器或查看器，然后将解释元素并生成完整<xref:System.Windows.Media.Visual>为[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]来使用。 某些<xref:System.Windows.UIElement>类都应是内容主机： 它们提供对托管组织和呈现为一个或多个<xref:System.Windows.ContentElement>类 (<xref:System.Windows.Controls.DocumentViewer>举例说明这样的类)。 <xref:System.Windows.ContentElement> 具有某种程度上较小的对象模型的元素的基类和地址文本、 信息的更多信息或文档内容可能承载于用作<xref:System.Windows.UIElement>。  
   
 ### <a name="framework-level-and-core-level"></a>框架级别和核心级别  
- <xref:System.Windows.UIElement>充当类的基类<xref:System.Windows.FrameworkElement>，和<xref:System.Windows.ContentElement>用作类的基类<xref:System.Windows.FrameworkContentElement>。 此下一级别类的目的是支持独立于 WPF 框架级别的 WPF 核心级别，同时这种划分也存在于 PresentationCore 和 PresentationFramework 程序集间如何划分 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 WPF 框架级别表示一种更完整的解决方案，以满足基本应用程序需求，其中包括实现演示文稿的布局管理器。 WPF 核心级别可提供一种方法，使你能够充分利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，而无需使用其他程序集的开销。 这些级别间的区别对大多数典型的应用程序开发方案几乎没影响，但一般情况下，你应整体考虑 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是关注 WPF 框架级别和 WPF 核心级别间的差异。 如果应用程序设计选择替换大量 WPF 框架级别功能，建议了解级别差异，例如，整体解决方案是否已有其自己的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 组合和布局的实现。  
+ <xref:System.Windows.UIElement> 充当类的基类<xref:System.Windows.FrameworkElement>，和<xref:System.Windows.ContentElement>用作类的基类<xref:System.Windows.FrameworkContentElement>。 此下一级别类的目的是支持独立于 WPF 框架级别的 WPF 核心级别，同时这种划分也存在于 PresentationCore 和 PresentationFramework 程序集间如何划分 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 WPF 框架级别表示一种更完整的解决方案，以满足基本应用程序需求，其中包括实现演示文稿的布局管理器。 WPF 核心级别可提供一种方法，使你能够充分利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，而无需使用其他程序集的开销。 这些级别间的区别对大多数典型的应用程序开发方案几乎没影响，但一般情况下，你应整体考虑 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是关注 WPF 框架级别和 WPF 核心级别间的差异。 如果应用程序设计选择替换大量 WPF 框架级别功能，建议了解级别差异，例如，整体解决方案是否已有其自己的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 组合和布局的实现。  
   
 <a name="subclassing_elements"></a>   
 ## <a name="choosing-which-element-to-derive-from"></a>选择要从其中派生的元素  
@@ -45,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
  如果你创建一个派生自的类<xref:System.Windows.DependencyObject>，继承了以下功能：  
   
--   <xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>支持和常规属性系统支持。  
+-   <xref:System.Windows.DependencyObject.GetValue%2A> 和<xref:System.Windows.DependencyObject.SetValue%2A>支持和常规属性系统支持。  
   
 -   能够使用依赖属性和实现为依赖属性的附加属性。  
   
@@ -95,20 +81,20 @@ ms.lasthandoff: 12/22/2017
 ## <a name="other-base-classes"></a>其他基类  
   
 ### <a name="dispatcherobject"></a>DispatcherObject  
- <xref:System.Windows.Threading.DispatcherObject>提供对支持[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]线程处理模型和启用的所有对象都创建为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序与关联<xref:System.Windows.Threading.Dispatcher>。 即使你是非派生自<xref:System.Windows.UIElement>， <xref:System.Windows.DependencyObject>，或<xref:System.Windows.Media.Visual>，应考虑派生自<xref:System.Windows.Threading.DispatcherObject>以便获得此线程处理模型支持。 有关详细信息，请参阅[线程模型](../../../../docs/framework/wpf/advanced/threading-model.md)。  
+ <xref:System.Windows.Threading.DispatcherObject> 提供对支持[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]线程处理模型和启用的所有对象都创建为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序与关联<xref:System.Windows.Threading.Dispatcher>。 即使你是非派生自<xref:System.Windows.UIElement>， <xref:System.Windows.DependencyObject>，或<xref:System.Windows.Media.Visual>，应考虑派生自<xref:System.Windows.Threading.DispatcherObject>以便获得此线程处理模型支持。 有关详细信息，请参阅[线程模型](../../../../docs/framework/wpf/advanced/threading-model.md)。  
   
 ### <a name="visual"></a>视觉对象  
- <xref:System.Windows.Media.Visual>实现通常需要大约矩形区域中的可视化表示形式的二维对象的概念。 实际呈现<xref:System.Windows.Media.Visual>发生在其他类 （它不是自包含），但<xref:System.Windows.Media.Visual>类提供由各种级别的呈现进程使用的已知的类型。 <xref:System.Windows.Media.Visual>实现命中测试，但它不公开报告命中测试阳性结果的事件 (这些结果位于<xref:System.Windows.UIElement>)。 有关详细信息，请参阅[可视化层编程](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming.md)。  
+ <xref:System.Windows.Media.Visual> 实现通常需要大约矩形区域中的可视化表示形式的二维对象的概念。 实际呈现<xref:System.Windows.Media.Visual>发生在其他类 （它不是自包含），但<xref:System.Windows.Media.Visual>类提供由各种级别的呈现进程使用的已知的类型。 <xref:System.Windows.Media.Visual> 实现命中测试，但它不公开报告命中测试阳性结果的事件 (这些结果位于<xref:System.Windows.UIElement>)。 有关详细信息，请参阅[可视化层编程](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming.md)。  
   
 ### <a name="freezable"></a>Freezable  
- <xref:System.Windows.Freezable>通过提供了一种所需或所需的出于性能原因不可变对象时生成的对象的副本来模拟可变对象中的不可变性。 <xref:System.Windows.Freezable>类型的提供公共基础对于某些图形元素，如几何图形和画笔，以及动画。 值得注意的是，<xref:System.Windows.Freezable>不<xref:System.Windows.Media.Visual>; 它可以存放成为子属性的属性时<xref:System.Windows.Freezable>应用以填充属性值的另一个对象，并可能会影响呈现，这些子属性。 有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ <xref:System.Windows.Freezable> 通过提供了一种所需或所需的出于性能原因不可变对象时生成的对象的副本来模拟可变对象中的不可变性。 <xref:System.Windows.Freezable>类型的提供公共基础对于某些图形元素，如几何图形和画笔，以及动画。 值得注意的是，<xref:System.Windows.Freezable>不<xref:System.Windows.Media.Visual>; 它可以存放成为子属性的属性时<xref:System.Windows.Freezable>应用以填充属性值的另一个对象，并可能会影响呈现，这些子属性。 有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
  <xref:System.Windows.Media.Animation.Animatable>  
   
- <xref:System.Windows.Media.Animation.Animatable>是<xref:System.Windows.Freezable>派生类，它特别添加动画控件层和一些实用工具的成员，以便可以区分当前动画的属性的属性区分开。  
+ <xref:System.Windows.Media.Animation.Animatable> 是<xref:System.Windows.Freezable>派生类，它特别添加动画控件层和一些实用工具的成员，以便可以区分当前动画的属性的属性区分开。  
   
 ### <a name="control"></a>控件  
- <xref:System.Windows.Controls.Control>是称为控件或组件，具体取决于技术的类型所需的基类。 一般情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件类可直接表示 UI 控件或积极参与控件组合。 主要功能，<xref:System.Windows.Controls.Control>启用是控件模板化。  
+ <xref:System.Windows.Controls.Control> 是称为控件或组件，具体取决于技术的类型所需的基类。 一般情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件类可直接表示 UI 控件或积极参与控件组合。 主要功能，<xref:System.Windows.Controls.Control>启用是控件模板化。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.Control>  

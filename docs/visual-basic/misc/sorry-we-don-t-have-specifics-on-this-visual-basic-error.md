@@ -1,11 +1,6 @@
 ---
 title: 抱歉，我们不&#39;t 对此 Visual Basic 错误的详细信息
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 f1_keywords:
 - vbc30234
 - vbc30533
@@ -3049,14 +3044,11 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2af9ad571f1e89c11d3aafc118124093d1246f19
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 44bc5647fe740a4900b99794fe7af907e6328665
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>抱歉，我们不&#39;t 对此 Visual Basic 错误的详细信息
 很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可使用以下论坛之一咨询其他开发人员：  

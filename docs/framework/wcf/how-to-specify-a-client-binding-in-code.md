@@ -1,32 +1,20 @@
 ---
-title: "如何：在代码中指定客户端绑定"
-ms.custom: 
+title: 如何：在代码中指定客户端绑定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6c44bc03642eb83a28497b320a77b2f9f8c6fb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a05c60b6e68f87c31e74774bf0b50e535477b56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a>如何：在代码中指定客户端绑定
 在本示例中，创建了一个使用计算器服务的客户端，并在代码中以强制方式指定该客户端的绑定。 该客户端访问实现了 `CalculatorService` 接口的 `ICalculator`，并且服务和客户端都使用 <xref:System.ServiceModel.BasicHttpBinding> 类。  
   
- 此过程假设计算器服务正在运行。 生成服务的信息，请参阅[如何： 在配置中指定服务绑定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。 它还使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]提供自动生成的客户端组件。 该工具生成用于访问服务的客户端代码。  
+ 此过程假设计算器服务正在运行。 生成服务的信息，请参阅[如何： 在配置中指定服务绑定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。 它还使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)Windows Communication Foundation (WCF) 提供的自动生成的客户端组件。 该工具生成用于访问服务的客户端代码。  
   
  客户端分两部分生成。 Svcutil.exe 生成实现 `ClientCalculator` 接口的 `ICalculator`。 然后，通过构造 `ClientCalculator` 的一个实例，并在代码中指定服务的绑定和地址，构造此客户端应用程序。  
   

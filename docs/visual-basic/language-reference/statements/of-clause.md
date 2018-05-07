@@ -1,11 +1,6 @@
 ---
-title: "Of 子句 (Visual Basic)"
+title: Of 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Of
 - vb.Of
@@ -22,14 +17,11 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ef3ac4ac88727b1dcae50fa14abde03f29a16fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9ace0ad55d9eb1618dbdafb0d49d1ff4b169a877
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="of-clause-visual-basic"></a>Of 子句 (Visual Basic)
 引入了`Of`子句，用于标识*类型参数*上*泛型*类、 结构、 接口、 委托或过程。 泛型类型的信息，请参阅[Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。  
@@ -51,7 +43,7 @@ End Class
   
  如果完成前面的类定义，您可以构造各种`dictionary`从它的类。 提供给类型`entryType`和`keyType`确定哪种类型的条目类包含和哪种类型的密钥，它将关联的每一项。 由于存在约束，则你必须提供给`keyType`实现的类型<xref:System.IComparable>。  
   
- 下面的代码示例创建包含的对象`String`条目并将关联`Integer`与每个密钥。 `Integer`实现<xref:System.IComparable>并且因此上满足约束`keyType`。  
+ 下面的代码示例创建包含的对象`String`条目并将关联`Integer`与每个密钥。 `Integer` 实现<xref:System.IComparable>并且因此上满足约束`keyType`。  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  
@@ -71,7 +63,7 @@ Dim d As New dictionary(Of String, Integer)
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IComparable>  
  [类型列表](../../../visual-basic/language-reference/statements/type-list.md)  
  [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  

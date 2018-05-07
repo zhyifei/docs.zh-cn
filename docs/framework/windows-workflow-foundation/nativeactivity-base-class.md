@@ -1,23 +1,12 @@
 ---
-title: "NativeActivity 基类"
-ms.custom: 
+title: NativeActivity 基类
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e53471a2d0245b1547ae5ee3c3a147e024aedefb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca4a497f1e78989f9488507015526214ead6cae7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 基类
 <xref:System.Activities.NativeActivity> 是一个带有受保护的构造函数的抽象类。 与 <xref:System.Activities.CodeActivity> 一样，<xref:System.Activities.NativeActivity> 用于通过实现 <xref:System.Activities.NativeActivity.Execute%2A> 方法来编写命令性行为。 与 <xref:System.Activities.CodeActivity> 不同的是，通过传递给 <xref:System.Activities.NativeActivity> 方法的 <xref:System.Activities.NativeActivityContext> 对象，<xref:System.Activities.NativeActivity.Execute%2A> 有权访问工作流运行时的所有公开的功能。  
@@ -45,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  打开 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  选择**文件**，**新**，，然后**项目**。 选择**Workflow 4.0**下**Visual C#**中**项目类型**窗口中，然后选择**v2010**节点。 选择**活动库**中**模板**窗口。 将新项目命名为 HelloActivity。  
+2.  选择**文件**，**新**，，然后**项目**。 选择**Workflow 4.0**下**Visual C#** 中**项目类型**窗口中，然后选择**v2010**节点。 选择**活动库**中**模板**窗口。 将新项目命名为 HelloActivity。  
   
 3.  右击 HelloActivity 项目中的 Activity1.xaml，然后选择**删除**。  
   

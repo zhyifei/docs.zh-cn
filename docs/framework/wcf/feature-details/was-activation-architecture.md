@@ -1,24 +1,12 @@
 ---
-title: "WAS 激活体系结构"
-ms.custom: 
+title: WAS 激活体系结构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7563510fdd44336cb5f8c50705edefd732082347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="was-activation-architecture"></a>WAS 激活体系结构
 本主题详细列举和讨论了 Windows 进程激活服务（也称为 WAS）的组件。  
@@ -41,14 +29,14 @@ ms.lasthandoff: 12/22/2017
  ![WAS 体系结构](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
 ### <a name="listener-adapters"></a>侦听器适配器  
- 侦听器适配器是一些单独的 Windows 服务，这些服务可以实现用于通过其侦听的网络协议接收消息的网络通信逻辑。 下表列出了 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 协议的侦听器适配器。  
+ 侦听器适配器是一些单独的 Windows 服务，这些服务可以实现用于通过其侦听的网络协议接收消息的网络通信逻辑。 下表列出 Windows Communication Foundation (WCF) 协议的侦听器的适配器。  
   
 |侦听器适配器服务名称|协议|说明|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|为 IIS 7.0 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供 HTTP 激活的公共组件。|  
+|W3SVC|http|提供 IIS 7.0 和 WCF HTTP 激活的公共组件。|  
 |NetTcpActivator|net.tcp|取决于 NetTcpPortSharing 服务。|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|适用于基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的消息队列应用程序。|  
+|NetMsmqActivator|net.msmq|与基于 WCF 的消息队列应用程序一起使用。|  
 |NetMsmqActivator|msmq.formatname|提供与现有消息队列应用程序的向后兼容性。|  
   
  在安装过程中，在 applicationHost.config 文件中注册特定协议的侦听器适配器，如下面的 XML 示例中所示。  

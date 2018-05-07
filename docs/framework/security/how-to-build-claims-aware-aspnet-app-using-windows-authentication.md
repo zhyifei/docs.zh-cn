@@ -1,24 +1,14 @@
 ---
-title: "如何：使用 Windows 身份验证生成声明感知 ASP.NET 应用程序"
-ms.custom: 
+title: 如何：使用 Windows 身份验证生成声明感知 ASP.NET 应用程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
-caps.latest.revision: "5"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1f623cceec04e45d168269379e1af6bdeb573af0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a5dbec2e92d32e45bc0271de04f8c6403f67f90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>如何：使用 Windows 身份验证生成声明感知 ASP.NET 应用程序
 ## <a name="applies-to"></a>适用于  
@@ -27,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET® Web 窗体  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  本操作说明提供了创建使用 Windows 身份验证的简单声明感知 ASP.NET Web 窗体应用程序的详细分步过程。 还提供关于如何测试应用程序以验证用户使用 Windows 身份验证登录时是否呈现声明的说明。  
   
 ## <a name="contents"></a>内容  

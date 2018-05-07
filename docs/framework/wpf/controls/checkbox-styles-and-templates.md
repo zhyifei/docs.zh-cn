@@ -1,13 +1,6 @@
 ---
-title: "CheckBox 样式和模板"
-ms.custom: 
+title: CheckBox 样式和模板
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - states [WPF], CheckBox
 - templates [WPF], CheckBox
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - CheckBox [WPF], styles and templates
 - styles [WPF], CheckBox
 ms.assetid: bfdaec96-d101-4d3d-864d-c27e6b621d03
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08b37be727c8a124ea7c4955b3eaf23d1bc9a485
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca7033f3a9f2d8a46c9a19c0b1e4e441efb39c7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="checkbox-styles-and-templates"></a>CheckBox 样式和模板
 本主题介绍的样式和模板的<xref:System.Windows.Controls.CheckBox>控件。 你可以修改默认<xref:System.Windows.Controls.ControlTemplate>提供独特外观的控件。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 |失去焦点|FocusStates|控件没有焦点。|  
 |已选中|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 为 `true`。|  
 |未选中状态|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 为 `false`。|  
-|不确定|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A>是`true`，和<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>是`null`。|  
+|不确定|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> 是`true`，和<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>是`null`。|  
 |有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`false`。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`true`已在控件有焦点。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`true`具有该控件没有焦点。|  

@@ -1,26 +1,12 @@
 ---
 title: 演练：仅使用存储过程 (C#)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4c13e4c12abf17f995bb819ddd7d6337407e3b28
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 223c93a790e610414aa48c2aea8e884b9d841666
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>演练：仅使用存储过程 (C#)
 本演练提供了通过仅执行存储过程来访问数据的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 基本端对端方案。 数据库管理员经常使用此方法来限制数据存储的访问方式。  

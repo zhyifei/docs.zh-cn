@@ -1,9 +1,6 @@
 ---
-title: "版式和代码约定 (Visual Basic)"
+title: 版式和代码约定 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - best practices [Visual Basic], coding conventions
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - conventions [Visual Basic], documentation
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7b6db5c223b0548e308b49a686cff72eaaf8da36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb7a33ef21bf6beda730dffa8eb7ff9cabe599fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>版式和代码约定 (Visual Basic)
 Visual Basic 文档将使用以下版式和代码约定。  
@@ -32,7 +26,7 @@ Visual Basic 文档将使用以下版式和代码约定。
 |`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|特定于语言的关键字和运行时成员的首字母大写，其格式如在此示例中所示。|  
 |**SmallProject**， **ButtonCollection**|此示例中所示，单词和短语指示你键入的格式设置。|  
 |[Module 语句](../../visual-basic/language-reference/statements/module-statement.md)|此示例中所示，你可以单击以转到另一个帮助页的链接进行格式化。|  
-|*对象*， *variableName*，`argumentList`|此示例中所示的格式为你提供的信息的占位符。|  
+|*对象*， *variableName*， `argumentList`|此示例中所示的格式为你提供的信息的占位符。|  
 |[阴影] [ *expressionList* ]|在语法中，可选项括在方括号中。|  
 |{ `Public` &#124; `Friend` &#124; `Private` }|在语法中，你必须在两个或多个项之间进行选择时，物料被括在大括号中并由竖线分隔。<br /><br /> 您必须选择一个，且只有一个项。|  
 |[ `Protected` &#124; `Friend` ]|在语法中，如果你具有两个或多个项之间进行选择的选项是括在方括号项并且由竖线分隔。<br /><br /> 你可以选择的项的任意组合或任何项。|  
@@ -51,7 +45,7 @@ Visual Basic 文档将使用以下版式和代码约定。
 |`' This is a comment.`<br /><br /> `REM This is also a comment.`|撇号 （'） 或 REM 关键字的情况下，所引入代码注释。|  
 |`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|跟下划线 (_) 行末尾的空格指示语句继续在下一行。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)  
  [关键字](../../visual-basic/language-reference/keywords/index.md)  
  [Visual Basic 运行库成员](../../visual-basic/language-reference/runtime-library-members.md)  

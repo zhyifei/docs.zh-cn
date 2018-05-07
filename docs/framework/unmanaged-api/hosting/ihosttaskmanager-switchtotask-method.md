@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::SwitchToTask 方法"
-ms.custom: 
+title: IHostTaskManager::SwitchToTask 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.SwitchToTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 35d0c27e-4b14-49ce-810d-7ab2120177e8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 03578a6a9579a807323d54308347f16f24ae90dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c4b6780b9784c5d02499224e6787f2cda6cc8e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>IHostTaskManager::SwitchToTask 方法
 通知主机应该换出当前任务。  
@@ -54,7 +42,7 @@ HRESULT SwitchToTask (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SwitchToTask`已成功返回。|  
+|S_OK|`SwitchToTask` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -65,16 +53,16 @@ HRESULT SwitchToTask (
  主机可以在为所需的或所需的另一个任务切换。  
   
 > [!NOTE]
->  `SwitchToTask`未指定主机应切换到; 的任务它指定它应从切换任务。  
+>  `SwitchToTask` 未指定主机应切换到; 的任务它指定它应从切换任务。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

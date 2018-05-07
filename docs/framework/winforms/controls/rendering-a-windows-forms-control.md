@@ -1,13 +1,6 @@
 ---
-title: "呈现 Windows 窗体控件"
-ms.custom: 
+title: 呈现 Windows 窗体控件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 587c9c8fb0bf634a2491acb1ae0b2f60979fa899
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2d7a02e725e3f8065b80a6b30ea21158be43ea8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rendering-a-windows-forms-control"></a>呈现 Windows 窗体控件
 呈现是指创建在用户的屏幕上的可视表示形式的过程。 Windows 窗体使用[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]（的新 Windows 图形库） 呈现。 提供对访问托管的类[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]中<xref:System.Drawing?displayProperty=nameWithType>命名空间及其子命名空间。  
@@ -72,9 +60,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics>是封装绘制功能的托管的类的讨论中所述[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]本主题中更高版本。 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>是的一个实例<xref:System.Drawing.Rectangle>结构和定义可以在其中绘制控件的可用区域。 控件开发人员可以计算<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>使用<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>控件，如本主题中后面的几何图形的讨论中所述的属性。  
+ <xref:System.Drawing.Graphics> 是封装绘制功能的托管的类的讨论中所述[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]本主题中更高版本。 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>是的一个实例<xref:System.Drawing.Rectangle>结构和定义可以在其中绘制控件的可用区域。 控件开发人员可以计算<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>使用<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>控件，如本主题中后面的几何图形的讨论中所述的属性。  
   
- 控件必须通过重写提供呈现逻辑<xref:System.Windows.Forms.Control.OnPaint%2A>方法，它继承自<xref:System.Windows.Forms.Control>。 <xref:System.Windows.Forms.Control.OnPaint%2A>获取访问权限的图形对象和要通过在绘制的矩形<xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A>和<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>属性<xref:System.Windows.Forms.PaintEventArgs>实例传递给它。  
+ 控件必须通过重写提供呈现逻辑<xref:System.Windows.Forms.Control.OnPaint%2A>方法，它继承自<xref:System.Windows.Forms.Control>。 <xref:System.Windows.Forms.Control.OnPaint%2A> 获取访问权限的图形对象和要通过在绘制的矩形<xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A>和<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>属性<xref:System.Windows.Forms.PaintEventArgs>实例传递给它。  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -99,7 +87,7 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A>绘制背景 (，从而形状) 的窗口，并保证要快速完成，而<xref:System.Windows.Forms.Control.OnPaint%2A>绘制详细信息，并且可能会降低，因为各个绘制请求合并成一个<xref:System.Windows.Forms.Control.Paint>涵盖所有方面必须具备的事件在重绘。 你可能想要调用<xref:System.Windows.Forms.Control.OnPaintBackground%2A>如果，例如，你想要绘制控件的颜色渐变背景。  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 绘制背景 (，从而形状) 的窗口，并保证要快速完成，而<xref:System.Windows.Forms.Control.OnPaint%2A>绘制详细信息，并且可能会降低，因为各个绘制请求合并成一个<xref:System.Windows.Forms.Control.Paint>涵盖所有方面必须具备的事件在重绘。 你可能想要调用<xref:System.Windows.Forms.Control.OnPaintBackground%2A>如果，例如，你想要绘制控件的颜色渐变背景。  
   
  虽然<xref:System.Windows.Forms.Control.OnPaintBackground%2A>具有类似于事件的术语和采用相同的自变量作为`OnPaint`方法，<xref:System.Windows.Forms.Control.OnPaintBackground%2A>不是真正的事件方法。 没有任何`PaintBackground`事件和<xref:System.Windows.Forms.Control.OnPaintBackground%2A>不会调用事件委托。 在重写<xref:System.Windows.Forms.Control.OnPaintBackground%2A>方法，派生的类不需要调用<xref:System.Windows.Forms.Control.OnPaintBackground%2A>其基本类的方法。  
   

@@ -1,23 +1,12 @@
 ---
-title: "如何：创建自定义活动设计器"
-ms.custom: 
+title: 如何：创建自定义活动设计器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 10fc7461c077d73fedb1e326f88156e4a816cdee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4aab60a598be2d6df5546ab1c98a289b4aef04a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>如何：创建自定义活动设计器
 通常实现自定义活动设计器，以便其相关活动可与其他活动（这些活动的设计器可与它们一起放置到设计图面上）组合在一起。 此功能要求自定义活动设计器提供可在其中放置任意活动的"放置区"以及用于管理得到的设计图面上的元素集合的方法。 本主题介绍如何创建一个包含上述放置区的自定义活动设计器，以及如何创建一个可提供管理设计器元素集合所需的编辑功能的自定义活动设计器。  
@@ -58,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 10. 在右击 UsingWorkflowItemPresenter 项目**解决方案资源管理器**，选择**添加**，然后**新建项...** 弹出**添加新项**对话框并选择**WPF**从类别**已安装的模板**左侧的部分。  
   
-11. 选择**Window (WPF)**模板，将其命名为`RehostingWFDesigner`，然后单击**添加**。  
+11. 选择**Window (WPF)** 模板，将其命名为`RehostingWFDesigner`，然后单击**添加**。  
   
 12. 打开 RehostingWFDesigner.xaml 文件，将下面的代码粘贴到其中以定义应用程序的 UI。  
   
@@ -165,7 +154,7 @@ ms.lasthandoff: 12/22/2017
   
 14. 右键单击解决方案资源管理器中的引用目录，然后选择**添加引用...** 弹出**添加引用**对话框。  
   
-15. 单击**.NET**选项卡上，找到名为程序集**System.Activities.Core.Presentation**，选中它，然后单击**确定**。  
+15. 单击 **.NET**选项卡上，找到名为程序集**System.Activities.Core.Presentation**，选中它，然后单击**确定**。  
   
 16. 使用相同的过程，添加对下列程序集的引用：  
   

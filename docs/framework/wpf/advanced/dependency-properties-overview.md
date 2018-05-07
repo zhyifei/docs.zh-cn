@@ -1,10 +1,7 @@
 ---
-title: "依赖项属性概述"
-description: "由 WPF 属性系统支持的属性称为依赖项属性。 本概述介绍 WPF 属性系统和依赖项属性的功能。"
+title: 依赖项属性概述
+description: 由 WPF 属性系统支持的属性称为依赖项属性。 本概述介绍 WPF 属性系统和依赖项属性的功能。
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +14,11 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d90e47c400f24eb10f2d262f9cb0e757ff472f0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-properties-overview"></a>依赖项属性概述
 
@@ -43,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 在 SDK 参考中，可以根据某个属性的托管引用页上是否存在“依赖属性信息”部分来确定该属性是否为依赖属性。 依赖项属性信息部分包含的链接<xref:System.Windows.DependencyProperty>标识符字段对于该依赖项属性，并且还设置该属性，每个类重写信息和其他详细信息的元数据选项的列表。
 
 ## <a name="dependency-properties-back-clr-properties"></a>依赖项属性返回的 CLR 属性
-依赖属性和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统通过提供一个支持属性的类型来扩展属性功能，这是使用私有字段支持该属性的标准模式的替代实现方法。 此类型的名称是<xref:System.Windows.DependencyProperty>。 其他重要类型，它定义[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]属性系统是<xref:System.Windows.DependencyObject>。 <xref:System.Windows.DependencyObject>定义可以注册并拥有依赖项属性的基类。
+依赖属性和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统通过提供一个支持属性的类型来扩展属性功能，这是使用私有字段支持该属性的标准模式的替代实现方法。 此类型的名称是<xref:System.Windows.DependencyProperty>。 其他重要类型，它定义[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]属性系统是<xref:System.Windows.DependencyObject>。 <xref:System.Windows.DependencyObject> 定义可以注册并拥有依赖项属性的基类。
 
 下面汇集了在本[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 文档中，在讨论依赖属性时所使用的术语：
 

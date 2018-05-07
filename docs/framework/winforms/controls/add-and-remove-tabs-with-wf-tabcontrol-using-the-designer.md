@@ -1,13 +1,6 @@
 ---
-title: "如何：使用设计器用 Windows 窗体 TabControl 添加和移除选项卡"
-ms.custom: 
+title: 如何：使用设计器用 Windows 窗体 TabControl 添加和移除选项卡
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tabs [Windows Forms], removing from pages
 - TabPage control
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e603e420be2c5be6174fab3876008fdf73c8459
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 89440b083aa6b2dc3f95e0878075a20aeac65b32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>如何：使用设计器用 Windows 窗体 TabControl 添加和移除选项卡
 当你将放置<xref:System.Windows.Forms.TabControl>控制窗体中，它包含两个选项卡默认情况下。 你可以添加或移除使用设计器的选项卡。  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/19/2018
   
 -   在控件的智能标记上，单击**添加选项卡**或**删除选项卡**  
   
-     或  
+     -或-  
   
      在**属性**窗口中，单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.TabControl.TabPages%2A>以打开**TabPage 集合编辑器**。 单击**添加**或**删除**按钮。  
   

@@ -1,14 +1,6 @@
 ---
-title: "ICLRRuntimeInfo::IsLoadable 方法"
-ms.custom: 
+title: ICLRRuntimeInfo::IsLoadable 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeInfo.IsLoadable
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 205ca53b-e78e-49b2-9a46-2a7823e96b8c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d3825f8dc529cf9c5fbfc44ae70008695e32054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e60c3b06453e0f447249bddf5d4da5c240576577
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>ICLRRuntimeInfo::IsLoadable 方法
 指示与此接口关联的运行时是否可以加载到当前进程，并考虑可能已加载到进程的其他运行时。  
@@ -62,14 +50,14 @@ HRESULT IsLoadable(
   
  如果没有运行时加载到进程，此方法始终返回`true`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRRuntimeInfo 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  

@@ -1,30 +1,20 @@
 ---
-title: "不安全的 Intranet 客户端和服务"
-ms.custom: 
+title: 不安全的 Intranet 客户端和服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-caps.latest.revision: "20"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0cfd98d401921c47bd85f8d4089e3efb437ca6b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08e8b5f9a22fc558af6f8f7c2ca3049e4a692ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intranet-unsecured-client-and-service"></a>不安全的 Intranet 客户端和服务
-下面的插图描述了一种简单的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，开发此服务的目的是为了向 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序提供有关安全专用网络的信息。 在以下情况下无需提供安全性：数据重要性较低、网络在本质上是安全的，或者由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构的下层提供安全性。  
+下图描绘了开发到 WCF 应用程序安全的专用网络上提供的信息的简单 Windows Communication Foundation (WCF) 服务。 因为数据重要性较低、 网络预期本质上是安全的或通过下面 WCF 基础结构层提供安全，则不需要安全。  
   
  ![Intranet 不安全的客户端和服务方案](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
@@ -33,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 |安全模式|无|  
 |传输|TCP|  
 |绑定|<xref:System.ServiceModel.NetTcpBinding>|  
-|互操作性|仅 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|互操作性|WCF 仅|  
 |身份验证|无|  
 |完整性|无|  
 |保密性|无|  
@@ -92,7 +82,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>代码  
- 以下代码演示一个使用 TCP 协议访问不安全终结点的基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端。  
+ 下面的代码演示一个基本的 WCF 客户端访问使用 TCP 协议不安全终结点。  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  

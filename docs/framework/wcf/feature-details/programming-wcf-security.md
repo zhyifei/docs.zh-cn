@@ -1,42 +1,30 @@
 ---
 title: WCF 安全编程
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-caps.latest.revision: 25
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 3eb645dcc5b8cc1c52818e290699ebadcd0943c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-wcf-security"></a>WCF 安全编程
-本主题描述用于创建安全的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序的基本编程任务。 本主题介绍身份验证、 保密性和完整性，统称为*传输安全*。 本主题不涉及授权 （资源或服务的访问控制）;有关授权的信息，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
+本主题介绍用于创建安全的 Windows Communication Foundation (WCF) 应用程序的基本编程任务。 本主题介绍身份验证、 保密性和完整性，统称为*传输安全*。 本主题不涉及授权 （资源或服务的访问控制）;有关授权的信息，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
   
 > [!NOTE]
->  有关安全性的基础概念，尤其是在考虑到的有价值介绍[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，在 MSDN 上查看的模式和实践教程集[方案、 模式和实施指导原则的 Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
+>  有关安全性的基础概念，尤其是与 WCF，有关的有价值介绍在 MSDN 上查看的模式和实践教程集[方案、 模式和实施指导原则的 Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250)。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全编程基于三个步骤，它们分别设置以下方面：安全模式、客户端凭据类型和凭据值。 可以通过代码或配置执行这些步骤。  
+ WCF 安全编程基于三个步骤，设置以下： 安全模式、 客户端凭据类型和凭据值。 可以通过代码或配置执行这些步骤。  
   
 ## <a name="setting-the-security-mode"></a>设置安全模式  
- 下面解释了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的安全模式编程的常规步骤：  
+ 以下说明在 WCF 中的安全模式编程的常规步骤：  
   
 1.  选择一个适合于应用程序需求的预定义绑定。 绑定选项列表，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。 默认情况下，几乎每个绑定都启用了安全。 一个例外是<xref:System.ServiceModel.BasicHttpBinding>类 (使用配置则[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md))。  
   

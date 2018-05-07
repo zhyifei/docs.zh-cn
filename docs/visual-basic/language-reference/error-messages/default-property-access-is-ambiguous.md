@@ -1,28 +1,19 @@
 ---
-title: 默认属性访问之间不明确继承的接口成员 &#39;&lt;defaultpropertyname&gt;&#39; 的接口 &#39;&lt;interfacename1&gt;&#39; 和 &#39;&lt;defaultpropertyname&gt;&#39; 的接口 &#39;&lt;interfacename2&gt;&#39;
+title: 默认属性访问之间不明确继承的接口成员&#39; &lt;defaultpropertyname&gt; &#39;的接口&#39; &lt;interfacename1&gt; &#39;和&#39; &lt;defaultpropertyname&gt; &#39;的接口&#39; &lt;interfacename2&gt;&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30686
 - bc30686
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>默认属性访问之间不明确继承的接口成员 &#39;&lt;defaultpropertyname&gt;&#39; 的接口 &#39;&lt;interfacename1&gt;&#39; 和 &#39;&lt;defaultpropertyname&gt;&#39; 的接口 &#39;&lt;interfacename2&gt;&#39;
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>默认属性访问之间不明确继承的接口成员&#39; &lt;defaultpropertyname&gt; &#39;的接口&#39; &lt;interfacename1&gt; &#39;和&#39; &lt;defaultpropertyname&gt; &#39;的接口&#39; &lt;interfacename2&gt;&#39;
 接口继承自两个接口，其中每个声明具有相同名称的默认属性。 编译器无法解析访问而无需限定此默认属性。 下面的示例阐释了这一点。  
   
 ```  
@@ -55,7 +46,7 @@ End Class
     Dim testObj As Iface1  
     ```  
   
-     - 或 -  
+     -或-  
   
 -   在类中实现继承的接口。 然后你可以实现每个具有不同名称的继承属性。 但是，仅有一种可以实现的类的默认属性。 下面的示例阐释了这一点。  
   
@@ -71,5 +62,5 @@ End Class
     End Class  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

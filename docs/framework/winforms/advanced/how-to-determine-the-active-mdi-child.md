@@ -1,13 +1,6 @@
 ---
-title: "如何：确定活动的 MDI 子窗体"
-ms.custom: 
+title: 如何：确定活动的 MDI 子窗体
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c026df631c2ac033594ea86887bb8440a6aa240a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b084d204361764af1b36b154acfc5b360fc977e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>如何：确定活动的 MDI 子窗体
 有时，你将想要在当前处于活动状态的子窗体具有焦点的控件上提供的命令。 例如，假设你想要将子窗体的文本框中的选定的文本复制到剪贴板。 将创建一个过程，它将选定的文本复制到剪贴板使用<xref:System.Windows.Forms.Control.Click>标准的编辑菜单上的复制菜单项的事件。  

@@ -1,43 +1,31 @@
 ---
 title: WCF 中安全性的最佳做法
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0545ff40247b7ff86cb6227fa8cf4af8666c3629
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 62675bc5cca2eccfcd4f210f96e5eeec93341399
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
-下节列出了在使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建安全应用程序时应考虑的最佳做法。 有关安全性的详细信息，请参阅[安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)，[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)，和[与元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
+以下各节列出了创建使用 Windows Communication Foundation (WCF) 的安全应用程序时要考虑的最佳做法。 有关安全性的详细信息，请参阅[安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)，[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)，和[与元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>使用 SPN 标识执行 Windows 身份验证的服务  
  服务可以使用用户主体名称 (UPN) 或服务主体名称 (SPN) 来标识。 使用计算机帐户运行的服务（如网络服务）具有 SPN 标识，该标识对应于正在运行它们的计算机。 使用用户帐户运行的服务具有 UPN 标识，该标识对应于它们正在以其身份运行的用户，但可以使用 `setspn` 工具为该用户帐户分配一个 SPN。 配置服务以便可以通过 SPN 标识它，同时将连接到该服务的客户端配置为使用该 SPN，这可以提高对某些攻击的抵御能力。 此指导信息适用于使用 Kerberos 或 SSPI 协商的绑定。  即使 SSPI 降级为 NTLM，客户端应仍指定 SPN。  
   
 ## <a name="verify-service-identities-in-wsdl"></a>验证 WSDL 中的服务标识  
- WS-SecurityPolicy 允许服务在元数据中发布有关其自身标识的信息。 通过 `svcutil` 或其他方法（如 <xref:System.ServiceModel.Description.WsdlImporter>）进行检索时，此标识信息将转换为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务终结点地址的标识属性。 若客户端不验证这些服务标识是否正确、有效，则实际上是跳过了服务身份验证。 恶意服务可以通过更改其 WSDL 中声称的标识，利用此类客户端来执行凭据转发和其他“中间人”攻击。  
+ WS-SecurityPolicy 允许服务在元数据中发布有关其自身标识的信息。 通过检索时`svcutil`或其他方法，如<xref:System.ServiceModel.Description.WsdlImporter>，此标识信息将转换为 WCF 服务终结点地址的标识属性。 若客户端不验证这些服务标识是否正确、有效，则实际上是跳过了服务身份验证。 恶意服务可以通过更改其 WSDL 中声称的标识，利用此类客户端来执行凭据转发和其他“中间人”攻击。  
   
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>使用 X509 证书而不是 NTLM  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为对等身份验证提供两种机制：X509 证书（由对等通道使用）和 Windows 身份验证（其中 SSPI 协商从 Kerberos 降级为 NTLM）。  由于以下几个原因，使用 1024 位或更多位的密钥、基于证书的身份验证优于 NTLM：  
+ WCF 提供了两种用于对等身份验证机制： X509 证书 （对等通道使用） 和 Windows 身份验证其中 SSPI 协商从 Kerberos 降级为 NTLM。  由于以下几个原因，使用 1024 位或更多位的密钥、基于证书的身份验证优于 NTLM：  
   
 -   提供相互身份验证；  
   

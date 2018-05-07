@@ -1,14 +1,6 @@
 ---
-title: "COR_PRF_MISC 枚举"
-ms.custom: 
+title: COR_PRF_MISC 枚举
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_PRF_MISC
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: da858ecf9fc002061d663e8c8f4d4036ef134d5a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c8f4cffd718fffa9145e1082092ecec45b80a2ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC 枚举
 包含指定特殊标识符的常数值。  
@@ -55,14 +43,14 @@ typedef enum {
 |`PROFILER_GLOBAL_CLASS`|不属于一个类的全局常量默认类标识符。|  
 |`PROFILER_GLOBAL_MODULE`|不属于模块的全局对象默认模块标识符。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

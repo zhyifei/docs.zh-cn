@@ -1,29 +1,15 @@
 ---
 title: 服务版本控制
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fef65a4134f1cf526a7082b08aa4d8d1c6ea7f4d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: efff9778f1cbe2ee5d97912ada0193c4e8ba137c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-versioning"></a>服务版本控制
-服务（及其公开的终结点）在初始部署之后，可能出于多种原因（例如，更改业务需求、信息技术需求，或者为了解决其他问题）而需要更改，并且在其生存期期间可能需要更改多次。 每次更改都会引入服务的一个新版本。 本主题说明如何考虑 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中的版本管理。  
+服务（及其公开的终结点）在初始部署之后，可能出于多种原因（例如，更改业务需求、信息技术需求，或者为了解决其他问题）而需要更改，并且在其生存期期间可能需要更改多次。 每次更改都会引入服务的一个新版本。 本主题说明如何考虑版本控制中 Windows Communication Foundation (WCF)。  
   
 ## <a name="four-categories-of-service-changes"></a>服务更改的四个类别  
  可能需要的服务更改可分成四类：  

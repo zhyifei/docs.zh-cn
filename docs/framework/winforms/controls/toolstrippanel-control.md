@@ -1,13 +1,6 @@
 ---
-title: "ToolStripPanel 控件"
-ms.custom: 
+title: ToolStripPanel 控件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStripPanel control [Windows Forms]
 - horizontal space
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - tool area [Windows Forms]
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d062e46ce0cb8d6ce6fa7189377735a4c480e030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14ddd56540d8649a3705ef2d19726499fbfcaf9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel 控件
 `ToolStripPanel` 控件在工具区域内启用停靠时共享水平或垂直空间，并且当无需四个面板和 <xref:System.Windows.Forms.ToolStripContainer> 的中心面板时启用排列 <xref:System.Windows.Forms.ToolStrip> 控件。  

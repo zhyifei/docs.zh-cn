@@ -1,14 +1,6 @@
 ---
-title: "CompareAssemblyIdentity 函数"
-ms.custom: 
+title: CompareAssemblyIdentity 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CompareAssemblyIdentity
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8b364ae1-8efa-4744-a7da-81fd093d84d6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 266868a65a0db75b57d46d92a469b4b6ceaa88e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b48adcb8e9de49a312af77c8a9b80a07455ebfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 函数
 比较两个程序集标识，以确定它们是否等效。  
@@ -71,10 +59,10 @@ STDAPI CompareAssemblyIdentity (
  [out][AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)枚举，其中包含有关比较的详细的信息。  
   
 ## <a name="return-value"></a>返回值  
- `pfEquivalent`返回一个布尔值，该值指示两个程序集是否等效。 `pResult`返回的一个`AssemblyComparisonResult`值，以给出的值的详细的原因`pfEquivalent`。  
+ `pfEquivalent` 返回一个布尔值，该值指示两个程序集是否等效。 `pResult` 返回的一个`AssemblyComparisonResult`值，以给出的值的详细的原因`pfEquivalent`。  
   
 ## <a name="remarks"></a>备注  
- `CompareAssemblyIdentity`检查是否`pwzAssemblyIdentity1`和`pwzAssemblyIdentity2`是等效的。 `pfEquivalent`设置为`true`下一个或多个以下条件：  
+ `CompareAssemblyIdentity` 检查是否`pwzAssemblyIdentity1`和`pwzAssemblyIdentity2`是等效的。 `pfEquivalent` 设置为`true`下一个或多个以下条件：  
   
 -   两个程序集标识是等效的。 对于强名称程序集，等效性要求的程序集名称、 版本、 公钥标记和区域性视为相同。 对于只需名称的程序集，等效性要求匹配的程序集名称和区域性。  
   
@@ -86,14 +74,14 @@ STDAPI CompareAssemblyIdentity (
   
  `pResult`参数包括有关为什么两个程序集都被视为等效也不等效的特定信息。 有关详细信息，请参阅[AssemblyComparisonResult 枚举](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   
  **库：**作为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  

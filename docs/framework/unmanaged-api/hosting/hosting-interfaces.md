@@ -1,28 +1,18 @@
 ---
-title: "承载接口"
-ms.custom: 
+title: 承载接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - interfaces [.NET Framework hosting]
 - hosting interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], hosting
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
-caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4fb24db8ad5b1ff92eadee139ddf10c044488f7d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c2bef9e1671b8487a6702cce71106c84a2984317
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-interfaces"></a>承载接口
 本部分描述的接口以及非托管主机可用于将公共语言运行时 (CLR) 集成到其应用程序。  

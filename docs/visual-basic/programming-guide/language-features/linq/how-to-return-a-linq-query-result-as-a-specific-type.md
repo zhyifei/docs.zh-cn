@@ -1,12 +1,6 @@
 ---
-title: "如何：以特定类型返回 LINQ 查询结果 (Visual Basic)"
-ms.custom: 
+title: 如何：以特定类型返回 LINQ 查询结果 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], specific type returned
 - projection [LINQ in Visual Basic]
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 33b79a00533e4ad8960c7f3cb512aafbe36e50b0
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: e0b7e402fba4fb51afb60ad0ae7698bd4947b2f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>如何：以特定类型返回 LINQ 查询结果 (Visual Basic)
 语言集成查询 (LINQ)，可以轻松地访问数据库信息和执行查询。 默认情况下，LINQ 查询以匿名类型返回的对象的列表。 你还可以指定查询返回特定类型的列表，通过使用`Select`子句。  
@@ -47,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  在 **“项目”** 菜单上，单击 **“添加新项”**。 选择**LINQ to SQL 类**项模板。  
   
-3.  为 `northwind.dbml` 文件命名。 单击 **“添加”**。 此时，northwind.dbml 文件打开的对象关系设计器 （O/R 设计器）。  
+3.  为 `northwind.dbml` 文件命名。 单击 **添加**。 此时，northwind.dbml 文件打开的对象关系设计器 （O/R 设计器）。  
   
 ### <a name="to-add-tables-to-query-to-the-or-designer"></a>若要添加到 O/R 设计器查询的表  
   

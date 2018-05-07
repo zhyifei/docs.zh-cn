@@ -1,29 +1,15 @@
 ---
 title: 消息相关性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52dd8d66a4a28b515ebfaee88c4383889839fff0
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 1573cdafafb5861099b275caa888c79d23cafeb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-correlation"></a>消息相关性
-此示例演示在请求/响应方案中，消息队列 (MSMQ) 应用程序如何向 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务发送 MSMQ 消息，以及如何在发送方应用程序与接收方应用程序之间将消息关联起来。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k  
+此示例演示如何消息队列 (MSMQ) 应用程序可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务以及如何消息也可以在请求/响应方案中的发送方和接收方应用程序之间关联起来。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k  
   
  该服务处理接收的来自发送方的消息，并向发送方回发一个响应消息。 发送方将它收到的响应与其最初发送的请求关联。 可以使用消息的 `MessageID` 和 `CorrelationID` 属性将请求消息与响应消息关联。  
   
@@ -321,7 +307,7 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   

@@ -1,29 +1,15 @@
 ---
 title: 如何：以编程方式向 WCF 服务和客户端添加可检测性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可检测性
-本主题说明如何检测到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务。 它基于[自承载](http://go.microsoft.com/fwlink/?LinkId=145523)示例。  
+本主题说明如何使 Windows Communication Foundation (WCF) 服务可发现。 它基于[自承载](http://go.microsoft.com/fwlink/?LinkId=145523)示例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>针对 Discovery 配置现有自承载服务示例  
   
@@ -105,7 +91,7 @@ ms.lasthandoff: 04/30/2018
     }  
     ```  
   
-     此代码指示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.Discovery.DiscoveryClient> 类应使用标准 UDP 发现终结点来发送和接收发现消息。  
+     这将告知 WCF，<xref:System.ServiceModel.Discovery.DiscoveryClient>类应使用标准 UDP 发现终结点发送和接收发现消息。  
   
 8.  在下一行，调用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法并指定包含要搜索的服务协定的 <xref:System.ServiceModel.Discovery.FindCriteria> 实例。 在本示例中，指定的是 `ICalculator`。  
   

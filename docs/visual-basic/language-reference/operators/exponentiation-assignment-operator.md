@@ -1,12 +1,6 @@
 ---
 title: ^= 运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.^=
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fa9d87d2f090a8c18aaab742e73878c7b80f55c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 571ef26eb188d9044ec8f6c8e6e4b490780f17a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>^= 运算符 (Visual Basic)
 引发的变量或表达式的次幂的属性的值，并将结果赋回给该变量或属性。  
@@ -35,10 +26,10 @@ variableorproperty ^= expression
   
 ## <a name="parts"></a>部件  
  `variableorproperty`  
- 必需。 任何数值变量或属性。  
+ 必须的。 任何数值变量或属性。  
   
  `expression`  
- 必需。 任何数值表达式。  
+ 必须的。 任何数值表达式。  
   
 ## <a name="remarks"></a>备注  
  在左侧的元素`^=`运算符可以是简单的标量变量、 属性或数组的元素。 变量或属性不能为[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
@@ -57,7 +48,7 @@ variableorproperty ^= expression
   
  [!code-vb[VbVbalrOperators#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-assignment-operator_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [^ 运算符](../../../visual-basic/language-reference/operators/exponentiation-operator.md)  
  [赋值运算符](../../../visual-basic/language-reference/operators/assignment-operators.md)  
  [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  

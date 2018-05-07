@@ -1,27 +1,15 @@
 ---
-title: "处理 Null 值"
-ms.custom: 
+title: 处理 Null 值
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 23a502cc3a286ed5cb47c7bbe21253f312722409
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9c0b6d250dcedc9b5996c50ccdb2f183707e54e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-null-values"></a>处理 Null 值
 在列中的值未知或缺失时，在关系数据库中使用空值。 空既不是空字符串（对于 character 或 datetime 数据类型），也不是零值（对于 numeric 数据类型）。 ANSI SQL-92 规范规定，空必须对于所有数据类型均相同，以便以一致的方式处理所有空。 <xref:System.Data.SqlTypes> 命名空间通过实现 <xref:System.Data.SqlTypes.INullable> 接口，提供空语义。 <xref:System.Data.SqlTypes> 中的每种数据类型都有其自己的 `IsNull` 属性和可分配给该数据类型的实例的 `Null` 值。  
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/17/2018
  ![真值表](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>理解 ANSI_NULLS 选项  
- <xref:System.Data.SqlTypes> 提供与在 SQL Server 中设置 ANSI_NULLS 选项时相同的语义。 所有算术运算符 (+、-，*，/，%)，按位运算符 (~、 &、 &#124;)，和大多数函数都返回 null 如果上述任何操作数或参数为 null，但该属性除外`IsNull`。  
+ <xref:System.Data.SqlTypes> 提供与在 SQL Server 中设置 ANSI_NULLS 选项时相同的语义。 所有算术运算符 (+、-，*，/、 %)，按位运算符 (~、 &、 &#124;)，和大多数函数都返回 null 如果上述任何操作数或参数为 null，但该属性除外`IsNull`。  
   
  ANSI sql-92 标准不支持*columnName* = NULL 的 WHERE 子句中。 在 SQL Server 中，ANSI_NULLS 选项既控制数据库中的默认可空性，也控制对空值的比较计算。 如果启用 ANSI_NULLS（这是默认设置），则在测试空值时在表达式中必须使用 IS NULL 运算符。 例如，在 ANSI_NULLS 为 on 时，以下比较始终生成 unknown：  
   

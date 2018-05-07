@@ -1,13 +1,6 @@
 ---
-title: "如何：在 Windows 窗体中为 ToolStrip 控件创建和设置自定义呈现器"
-ms.custom: 
+title: 如何：在 Windows 窗体中为 ToolStrip 控件创建和设置自定义呈现器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,24 +10,19 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad328af3aed9a319fe80d829b9556e867533e601
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b7a77a4a923065cba8c7ea366826f7b04126f11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>如何：在 Windows 窗体中为 ToolStrip 控件创建和设置自定义呈现器
-<xref:System.Windows.Forms.ToolStrip>控件向主题和样式轻松支持。 你可以通过设置实现完全自定义外观和行为 （外观和感觉）<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>属性或<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>到自定义呈现器的属性。  
+<xref:System.Windows.Forms.ToolStrip> 控件向主题和样式轻松支持。 你可以通过设置实现完全自定义外观和行为 （外观和感觉）<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>属性或<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>到自定义呈现器的属性。  
   
  你可以将呈现器分配给每个单独<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>， <xref:System.Windows.Forms.ContextMenuStrip>，或<xref:System.Windows.Forms.StatusStrip>控件，也可以使用<xref:System.Windows.Forms.ToolStripManager.Renderer%2A>属性以影响所有对象通过设置<xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType>属性<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>返回<xref:System.Windows.Forms.ToolStripRenderMode.Custom>才的值<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>不`null`。  
+>  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 返回<xref:System.Windows.Forms.ToolStripRenderMode.Custom>才的值<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>不`null`。  
   
 ### <a name="to-create-a-custom-renderer"></a>若要创建自定义呈现器  
   

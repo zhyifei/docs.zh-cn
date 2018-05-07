@@ -1,11 +1,6 @@
 ---
 title: Auto (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Auto
 helpviewer_keywords:
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1e32c4c910567829a4f5c59b48020db4dfbbeb7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 414998b4bef526060e7ba4f584fa071fbd0acaa5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
 指定 Visual Basic 应封送根据.NET Framework 规则基于所声明的外部过程的外部名称的字符串。  
@@ -40,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="smart-device-developer-notes"></a>智能设备的开发人员说明  
  此关键字不受支持。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
  [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
  [关键字](../../../visual-basic/language-reference/keywords/index.md)

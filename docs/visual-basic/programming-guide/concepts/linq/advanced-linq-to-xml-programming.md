@@ -1,22 +1,12 @@
 ---
-title: "高级的 LINQ to XML 编程 (Visual Basic)"
-ms.custom: 
+title: 高级的 LINQ to XML 编程 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 36018532-a55c-4538-8a27-98f475ea3415
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 75d06dcecb5501a23a8c1410f9248548f9e2a720
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0b8e9ac1596c369fc8f4b91fb77248536a9630f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-linq-to-xml-programming-visual-basic"></a>高级的 LINQ to XML 编程 (Visual Basic)
 本节为高级开发人员提供一些只适用于某些 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 方案的信息。  
@@ -37,5 +27,5 @@ ms.lasthandoff: 10/18/2017
 |[序列化对象图包含 XElement 对象 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|介绍如何序列化包含 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 对象的对象图。|  
 |[使用 LINQ to XML 进行 WPF 数据绑定](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|介绍如何将 LINQ to XML 用作 Windows Presentation Foundation 应用程序中数据绑定的数据源。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编程指南 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

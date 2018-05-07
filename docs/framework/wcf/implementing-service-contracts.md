@@ -1,31 +1,17 @@
 ---
 title: 实现服务协定
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e477b11893d2b74ebe1674225e05b13cb9f67ca
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4e6570291571815781ce543f5991ae40ed57d1e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-service-contracts"></a>实现服务协定
-服务是一个类，会在一个或多个终结点公开客户端可用的功能。 若要创建服务，请编写一个实现 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 协定的类。 可以通过两种方法执行此操作。 可以将协定单独定义为接口，然后创建一个实现该接口的类。 或者，可以通过将 <xref:System.ServiceModel.ServiceContractAttribute> 属性放在该类本身，将 <xref:System.ServiceModel.OperationContractAttribute> 属性放在服务的客户端可用的方法上，来直接创建类和协定。  
+服务是一个类，会在一个或多个终结点公开客户端可用的功能。 若要创建服务时，编写实现 Windows Communication Foundation (WCF) 协定的类。 可以通过两种方法执行此操作。 可以将协定单独定义为接口，然后创建一个实现该接口的类。 或者，可以通过将 <xref:System.ServiceModel.ServiceContractAttribute> 属性放在该类本身，将 <xref:System.ServiceModel.OperationContractAttribute> 属性放在服务的客户端可用的方法上，来直接创建类和协定。  
   
 ## <a name="creating-a-service-class"></a>创建服务类  
  下面的示例是实现已单独定义的 `IMath` 协定的服务。  

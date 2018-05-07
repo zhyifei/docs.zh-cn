@@ -1,19 +1,12 @@
 ---
-title: "对 Func 和 Action 泛型委托 (Visual Basic 中) 中使用变体"
+title: 对 Func 和 Action 泛型委托 (Visual Basic 中) 中使用变体
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b8f9b2ebf758bc0d67b2b623038a4beeb7149261
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4c878f65867c575a1691423df583662d72a257c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>对 Func 和 Action 泛型委托 (Visual Basic 中) 中使用变体
 这些示例演示如何使用 `Func` 和 `Action` 泛型委托中的协变和逆变来启用重用方法并为代码中提供更多的灵活性。  
@@ -95,6 +88,6 @@ Class AddressBook
 End Class  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [协变和逆变 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)  
  [泛型](~/docs/standard/generics/index.md)

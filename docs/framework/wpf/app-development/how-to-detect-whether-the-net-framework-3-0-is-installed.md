@@ -1,30 +1,16 @@
 ---
 title: 如何：检测是否安装了 .NET Framework 3.0
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dfa5eb8ec1e4f9f2eeeb142670b92d5ec35ab6cf
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 09de427980ecfb515b8d341d0d7833b878140286
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>如何：检测是否安装了 .NET Framework 3.0
 管理员可部署的系统上的 Microsoft.NET Framework 应用程序之前，它们必须首先确认存在的.NET Framework 运行时。 本主题提供了用 HTML/JavaScript 编写的脚本，可以使用管理员确定.NET Framework 是否存在的系统上。  

@@ -1,14 +1,6 @@
 ---
-title: "StrongNameGetPublicKey 函数"
-ms.custom: 
+title: StrongNameGetPublicKey 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameGetPublicKey
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5b58c87f-3f72-40df-9b9a-291076931cc3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cec7c1edac24d43924abb2bf8784d45ed6372129
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c3ace4a3103231f776d4e2b034f8e18ce861ee97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey 函数
 获取从私钥/公钥对的公钥。 可以提供的密钥对，为加密服务提供商 (CSP) 中的密钥容器名称或原始字节的集合。  
@@ -73,21 +61,21 @@ BOOLEAN StrongNameGetPublicKey (
  [out]返回的公共密钥 BLOB 的大小。  
   
 ## <a name="return-value"></a>返回值  
- `true`在成功完成;否则为`false`。  
+ `true` 在成功完成;否则为`false`。  
   
 ## <a name="remarks"></a>备注  
  中包含的公钥[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)结构。  
   
  如果`StrongNameGetPublicKey`函数未成功完成，请调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数可检索的最后一个生成的错误。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** StrongName.h  
   
  **库：**作为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [StrongNameGetPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  

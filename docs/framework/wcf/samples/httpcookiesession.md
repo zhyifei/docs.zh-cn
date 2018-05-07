@@ -1,27 +1,15 @@
 ---
 title: HttpCookieSession
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c06efd7450afe93eaecca1e678eb6f8bf5de7a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 54e2459f5b480d8f53df42a08d4ebc8ac07b128c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-此示例演示如何生成自定义协议通道，以便使用 HTTP Cookie 进行会话管理。 通过此通道可以在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务和 ASMX 客户端或者 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和 ASMX 服务之间进行通信。  
+此示例演示如何生成自定义协议通道，以便使用 HTTP Cookie 进行会话管理。 此通道可以之间或 Windows Communication Foundation (WCF) 服务和 ASMX 客户端之间通信[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端和 ASMX 服务。  
   
  当客户端在基于会话的 ASMX Web 服务中调用 Web 方法时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 引擎将执行以下操作：  
   
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   

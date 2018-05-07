@@ -1,27 +1,15 @@
 ---
-title: "扩展对错误处理和错误报告的控制"
-ms.custom: 
+title: 扩展对错误处理和错误报告的控制
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0ab2e105c9055760bbeaeef5e56a8cb18c538306
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 83df5ffb790ee69ab290ad703c46b421cd6a02e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>扩展对错误处理和错误报告的控制
-此示例演示如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务中使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口对错误处理和错误报告进行扩展控制。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)使用的一些其他代码添加到服务来处理错误。 客户端强制实施若干个错误条件。 服务将截获这些错误并将其记录到某个文件中。  
+此示例演示如何对错误处理和中 Windows Communication Foundation (WCF) 服务使用的错误报告进行扩展控制<xref:System.ServiceModel.Dispatcher.IErrorHandler>接口。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)使用的一些其他代码添加到服务来处理错误。 客户端强制实施若干个错误条件。 服务将截获这些错误并将其记录到某个文件中。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -165,7 +153,7 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
   

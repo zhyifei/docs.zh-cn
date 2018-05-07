@@ -1,13 +1,6 @@
 ---
 title: 如何：声明常量 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.constant
 helpviewer_keywords:
@@ -30,14 +23,11 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 554f659e060087228fb43efd8b9d06103e21e980
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ce45e4df7f74cd68bde0fb2adba10197a11edb1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>如何：声明常量 (Visual Basic)
 你使用`Const`语句以声明常量，并将其值设置。 通过声明一个常量，你将有意义的名称分配给一个值。 一旦声明一个常数，它无法修改或分配一个新值。  
@@ -74,7 +64,7 @@ ms.lasthandoff: 11/21/2017
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)  
  [常量和文本数据类型](constant-and-literal-data-types.md)  
  [常量概述](constants-overview.md)[如何： 声明常量](how-to-declare-a-constant.md)[用户定义的常量](user-defined-constants.md)[常量和 Literal 数据类型](constant-and-literal-data-types.md) [How to： 组相关的常量值一起](how-to-group-related-constant-values-together.md)[枚举概述](enumerations-overview.md)[如何： 声明枚举](how-to-declare-enumerations.md)[如何： 为枚举成员，请参阅](how-to-refer-to-an-enumeration-member.md)[枚举和名称限定](enumerations-and-name-qualification.md)[如何： 循环访问枚举](how-to-iterate-through-an-enumeration.md)[如何： 确定与枚举值关联的字符串](how-to-determine-the-string-associated-with-an-enumeration-value.md)[何时使用枚举](when-to-use-an-enumeration.md)

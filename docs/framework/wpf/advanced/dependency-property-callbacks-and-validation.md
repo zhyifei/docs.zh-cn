@@ -1,13 +1,6 @@
 ---
-title: "依赖项属性回调和验证"
-ms.custom: 
+title: 依赖项属性回调和验证
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 15ba7f3315b2ce71357bd4735e2dfca1b3de616d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e181c2d9610619587642f982959f809b96b011dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>依赖项属性回调和验证
 本主题介绍如何使用与属性相关的功能（如验证确定、更改属性的有效值时调用的回调）的替代自定义实现，并重写对值确定的外部可能影响来创建依赖属性。 本主题还讨论使用这些技术扩展默认属性系统行为所适用的方案。  

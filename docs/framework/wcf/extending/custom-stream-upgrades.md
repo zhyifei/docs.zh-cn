@@ -1,24 +1,12 @@
 ---
-title: "自定义流升级"
-ms.custom: 
+title: 自定义流升级
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73359c293f7d29c16702e826ed6caa61149935bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-stream-upgrades"></a>自定义流升级
 面向流的传输（如 TCP 和命名管道）对客户端与服务器之间的连续字节流进行操作。 该流通过 <xref:System.IO.Stream> 对象实现。 在流升级中，客户端需要向通道堆栈中添加可选的协议层，并要求通信通道的另一端也执行该操作。 流升级包括使用升级后的对象替换原始 <xref:System.IO.Stream> 对象的过程。  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  请注意，如果要进行多个升级，则发起程序和接受程序将会封装状态计算机，以便强制实施哪些升级转变对于每次“发起”都是有效的。  
   
 ## <a name="how-to-implement-a-stream-upgrade"></a>如何实现流升级  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了四个可以实现的 `abstract` 类：  
+ Windows Communication Foundation (WCF) 提供了四个`abstract`可以实现的类：  
   
 -   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   

@@ -1,24 +1,12 @@
 ---
 title: WSStreamedHttpBinding
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d6259640bae2b4be4fac73883df8945bf1db7ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f146e469a323dffa2cdb9b76b6956be97747b2de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 此示例演示如何创建一个绑定，该绑定用于在使用 HTTP 传输时支持流方案。  
@@ -31,7 +19,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`  
   
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  创建新的标准绑定  
   
-     [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的标准绑定（如 basicHttpBinding 和 netTcpBinding）根据具体要求配置基础传输和通道堆栈。 在该示例中，`WSStreamedHttpBinding` 将通道堆栈配置为支持流。 默认情况下，不将 WS-Security 和可靠消息传递添加到通道堆栈中，因为流不支持这两个功能。 新绑定是在派生自 `WSStreamedHttpBinding` 的 <xref:System.ServiceModel.Channels.Binding> 类中实现的。 `WSStreamedHttpBinding` 包含下列绑定元素：<xref:System.ServiceModel.Channels.HttpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpsTransportBindingElement>、<xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 该类提供一种 `CreateBindingElements()` 方法来配置所得到的绑定堆栈，如下面的示例代码中所示。  
+     如 basicHttpBinding 和 netTcpBinding 的标准绑定中 Windows Communication Foundation (WCF) 配置的基础传输和通道堆栈的特定要求。 在该示例中，`WSStreamedHttpBinding` 将通道堆栈配置为支持流。 默认情况下，不将 WS-Security 和可靠消息传递添加到通道堆栈中，因为流不支持这两个功能。 新绑定是在派生自 `WSStreamedHttpBinding` 的 <xref:System.ServiceModel.Channels.Binding> 类中实现的。 `WSStreamedHttpBinding` 包含下列绑定元素：<xref:System.ServiceModel.Channels.HttpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpsTransportBindingElement>、<xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 该类提供一种 `CreateBindingElements()` 方法来配置所得到的绑定堆栈，如下面的示例代码中所示。  
   
     ```  
     public override BindingElementCollection CreateBindingElements()  
@@ -145,7 +133,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding 示例客户端  
- 在使用 `WSStreamedHttpBinding` 与服务进行交互时所用的客户端位于客户端子目录中。 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，所以，当尝试在浏览器中访问 HTTPS 地址（如 https://localhost/servicemodelsamples/service.svc）时，将显示一个安全警报。 为了允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端就地使用测试证书，已向客户端添加了一些附加代码，以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
+ 在使用 `WSStreamedHttpBinding` 与服务进行交互时所用的客户端位于客户端子目录中。 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当您尝试访问你的浏览器中的 HTTPS 地址，例如显示一个安全警报https://localhost/servicemodelsamples/service.svc。 为了允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端就地使用测试证书，已向客户端添加了一些附加代码，以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

@@ -1,29 +1,17 @@
 ---
-title: "使用钢笔绘制线条和形状"
-ms.custom: 
+title: 使用钢笔绘制线条和形状
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - pens
 - examples [Windows Forms], drawing lines and shapes
 - examples [Windows Forms], pens
 - drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 35f43316e2535aae6622ccf7952f649cdb92fc81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 667a5b13c5e8cb5d9a693d6f8512b254f130d606
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>使用钢笔绘制线条和形状
 使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]`Pen`对象绘制直线线段、 曲线和形状的轮廓。 在本部分中，*行*指任一这些，除非另行指定，表示仅一条直线段。 设置钢笔若要控制颜色、 宽度、 对齐方式，以及使用该钢笔绘制的直线的样式的属性。  

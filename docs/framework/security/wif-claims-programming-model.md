@@ -1,26 +1,14 @@
 ---
-title: "WIF 声明编程模型"
-ms.custom: 
+title: WIF 声明编程模型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 71327fb5a86c30d15ff060eff5cce170695e86a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-claims-programming-model"></a>WIF 声明编程模型
 ASP.NET 和 Windows Communication Foundation (WCF) 开发人员通常使用 IIdentity 和 IPrincipal 接口处理用户的标识信息。 .NET 4.5 中集成了 Windows Identity Foundation (WIF)，因此对于任何主体，声明都将始终存在，如下图所示：  
@@ -35,7 +23,7 @@ ASP.NET 和 Windows Communication Foundation (WCF) 开发人员通常使用 IIde
   
 -   <xref:System.Security.Claims.Claim.Value%2A> 包含声明的值，表现形式为字符串。 例如，电子邮件地址可以表示为"someone@contoso.com"。  
   
--   <xref:System.Security.Claims.Claim.ValueType%2A> 表示声明值的类型，通常是一个 URI。 例如，字符串类型表示为 `http://www.w3.org/2001/XMLSchema#string`。 根据 XML 架构，该值类型必须为 QName。 为使 WIF 输出有效的 QName 值，值的格式必须为 `namespace#format`。 如果命名空间不是定义完善的命名空间，生成的 XML 可能无法进行架构验证，因为没有为该命名空间发布的 XSD 文件。 默认值类型为 `http://www.w3.org/2001/XMLSchema#string`。 若要了解可安全使用的已知值类型，请参阅 [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155)。  
+-   <xref:System.Security.Claims.Claim.ValueType%2A> 表示声明值的类型，通常是一个 URI。 例如，字符串类型表示为 `http://www.w3.org/2001/XMLSchema#string`。 根据 XML 架构，该值类型必须为 QName。 为使 WIF 输出有效的 QName 值，值的格式必须为 `namespace#format`。 如果命名空间不是定义完善的命名空间，生成的 XML 可能无法进行架构验证，因为没有为该命名空间发布的 XSD 文件。 默认值类型为 `http://www.w3.org/2001/XMLSchema#string`。 请参阅[ http://www.w3.org/2001/XMLSchema ](http://go.microsoft.com/fwlink/?LinkId=209155)的已知值类型，你可以安全地使用。  
   
 -   <xref:System.Security.Claims.Claim.Issuer%2A> 是颁发声明的安全令牌服务 (STS) 标识符。 这可以表示为 STS 或者代表 STS名称的 URL ，例如 `https://sts1.contoso.com/sts`。  
   

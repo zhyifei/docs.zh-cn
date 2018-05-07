@@ -1,27 +1,15 @@
 ---
-title: "上下文交换协议"
-ms.custom: 
+title: 上下文交换协议
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f19b228eadcf8dabfaba2fc31f4f49f1b4d149b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a682b94b1ab659515e618e79230d94f57f140717
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="context-exchange-protocol"></a>上下文交换协议
-本部分介绍在中引入的上下文交换协议[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]释放。 此协议允许客户端通道接受某个服务提供的上下文，并将其应用于通过相同客户端通道实例发送的针对该服务的所有后续请求。 上下文交换协议的实现可以使用以下两个机制之一在服务器和客户端之间传播上下文：HTTP Cookie 或 SOAP 标头。  
+本部分介绍 Windows Communication Foundation (WCF) 版本.NET Framework 版本 3.5 中引入的上下文交换协议。 此协议允许客户端通道接受某个服务提供的上下文，并将其应用于通过相同客户端通道实例发送的针对该服务的所有后续请求。 上下文交换协议的实现可以使用以下两个机制之一在服务器和客户端之间传播上下文：HTTP Cookie 或 SOAP 标头。  
   
  上下文交换协议是在自定义通道层中实现的。 通道使用 <xref:System.ServiceModel.Channels.ContextMessageProperty> 属性在应用程序层之间来回传递上下文。 对于终结点之间的传输，上下文的值或者在通道层序列化为 SOAP 标头，或者在表示 HTTP 请求和响应的消息属性之间来回转换。 在后一种情况下，应有一个基础通道层将 HTTP 请求和响应消息属性分别与 HTTP Cookie 来回进行转换。 可通过使用 <xref:System.ServiceModel.Channels.ContextExchangeMechanism> 上的 <xref:System.ServiceModel.Channels.ContextBindingElement> 属性来选择用于交换上下文的机制。 有效值为 `HttpCookie` 或 `SoapHeader`。  
   

@@ -1,14 +1,6 @@
 ---
-title: "CorBindToCurrentRuntime 函数"
-ms.custom: 
+title: CorBindToCurrentRuntime 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorBindToCurrentRuntime
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0fed8829f8f14833724d1770273ff905d6f5eabf
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3667ac5a19664507b767ee6c5421a5e93f6cdfe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 函数
 通过使用版本信息存储在 XML 文件中，到的进程中加载公共语言运行时 (CLR)。 XML 文件的格式是标准的应用程序配置文件之后制定的。 有关配置文件的详细信息，请参阅[配置文件架构](../../../../docs/framework/configure-apps/file-schema/index.md)。  
@@ -68,14 +56,14 @@ HRESULT CorBindToCurrentRuntime (
  `ppv`  
  [out]返回的接口指针。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [CorBindToRuntime 函数](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  

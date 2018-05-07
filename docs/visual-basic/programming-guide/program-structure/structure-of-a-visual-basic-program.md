@@ -1,27 +1,17 @@
 ---
 title: Visual Basic 程序的结构
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], Visual Basic
 - program structure [Visual Basic], Visual Basic
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5def0de1e22af39eb16489a2d4d27bdbd1853f2b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5c45cc8982a03d5bdd974434164187b03529ae05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程序的结构
 Visual Basic 程序是从标准构建基块构建。 A*解决方案*由一个或多个项目组成。 A*项目*又可以包含一个或多个程序集。 每个*程序集*从一个或多个源代码文件编译。 A*源文件*提供定义和实现的类、 结构、 模块和接口，最终包含了所有代码。  

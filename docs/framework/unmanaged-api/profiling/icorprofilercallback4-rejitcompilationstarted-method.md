@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback4::ReJITCompilationStarted 方法"
-ms.custom: 
+title: ICorProfilerCallback4::ReJITCompilationStarted 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback4.ReJITCompilationStarted
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 512fdd00-262a-4456-a075-365ef4133c4d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 903db06089f7c68843b503c94483087ff9fce636
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3e21d42340378c576bfc65750fba26a257b82cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted 方法
 通知探查器在实时 (JIT) 编译器已开始重新编译函数。  
@@ -41,7 +29,8 @@ ms.lasthandoff: 12/22/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-HRESULT ReJITCompilationStarted(    [in] FunctionID functionId,  
+HRESULT ReJITCompilationStarted(   
+    [in] FunctionID functionId,  
     [in] ReJITID    rejitId,  
     [in] BOOL       fIsSafeToBlock);  
 ```  
@@ -61,14 +50,14 @@ HRESULT ReJITCompilationStarted(    [in] FunctionID functionId,
   
  在两个线程同时执行回调的情况下，探查器必须支持 JIT 重新编译回调的序列。 例如，调用线程 A `ReJITCompilationStarted`; 但是，在线程的调用之前[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)，线程 B 调用[icorprofilercallback:: Exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)函数 id从`ReJITCompilationStarted`回调线程 a。它可能会出现，函数 ID 尚未有效期不应由于调用[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)具有尚未收到探查器。 但是，在这种情况下，函数 ID 有效。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  

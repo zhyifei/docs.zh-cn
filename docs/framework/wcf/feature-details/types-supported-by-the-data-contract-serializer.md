@@ -1,31 +1,17 @@
 ---
 title: 数据协定序列化程序支持的类型
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c53a11408254dc3c5f2abfb7d5d45305d3429280
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 9a6279b9850ce5cd3d23cffeaf233dec1b360deb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>数据协定序列化程序支持的类型
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用 <xref:System.Runtime.Serialization.DataContractSerializer> 作为其默认的序列化引擎以将数据转换到 XML 并将 XML 转换回数据。 <xref:System.Runtime.Serialization.DataContractSerializer> 是专为序列化数据协定  类型而设计的。 但是，它支持许多其他可视为具有隐式数据协定的类型。 以下是可以序列化的类型的完整列表：  
+Windows Communication Foundation (WCF) 使用<xref:System.Runtime.Serialization.DataContractSerializer>作为其默认序列化引擎将数据转换为 XML，并将 XML 转换回数据。 <xref:System.Runtime.Serialization.DataContractSerializer> 是专为序列化数据协定  类型而设计的。 但是，它支持许多其他可视为具有隐式数据协定的类型。 以下是可以序列化的类型的完整列表：  
   
 -   具有不带参数的构造函数的所有公开可见类型。  
   
@@ -51,13 +37,13 @@ ms.lasthandoff: 04/28/2018
   
 -   若要使用 <xref:System.Runtime.Serialization.ISerializable> 在部分受信任的代码中序列化或反序列化实现 <xref:System.Runtime.Serialization.DataContractSerializer> 的类型，则需要 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> 和 <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> 权限。  
   
--   在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模式中运行 [indigo2](../../../../docs/framework/wcf/feature-details/partial-trust.md) 代码时，不支持 `readonly` 字段（ `public` 和 `private`）的序列化和反序列化。 这是因为生成的 IL 无法验证，所以需要提升权限。  
+-   在运行时 WCF 代码[部分信任](../../../../docs/framework/wcf/feature-details/partial-trust.md)模式、 序列化和反序列化`readonly`字段 (同时`public`和`private`) 不支持。 这是因为生成的 IL 无法验证，所以需要提升权限。  
   
 -   在部分信任环境中支持 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 。 但是，使用 <xref:System.Runtime.Serialization.DataContractSerializer> 时需要遵循以下条件：  
   
     -   所有可序列化的 `[DataContract]` 类型必须为 Public。  
   
-    -   `[DataMember]` 类型中的所有可序列化的 `[DataContract]` 字段或属性必须是公共字段或属性并且可以读取/写入。 在部分受信任的应用程序中运行 `readonly` 时，不支持 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 字段的序列化和反序列化。  
+    -   `[DataMember]` 类型中的所有可序列化的 `[DataContract]` 字段或属性必须是公共字段或属性并且可以读取/写入。 序列化和反序列化`readonly`在部分受信任的应用程序中运行 WCF 时，不支持字段。  
   
     -   支持 `[Serializable]`/`ISerializable]` 编程模型。  
   
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/28/2018
   
 -   支持结构和类。  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> 不支持 <xref:System.Xml.Serialization.XmlSerializer> 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务使用的编程模型。 具体而言，它不支持类似于 <xref:System.Xml.Serialization.XmlElementAttribute> 和 <xref:System.Xml.Serialization.XmlAttributeAttribute>的属性。 若要启用对此编程模型的支持，必须切换 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以使用 <xref:System.Xml.Serialization.XmlSerializer> 而非 <xref:System.Runtime.Serialization.DataContractSerializer>。  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> 不支持 <xref:System.Xml.Serialization.XmlSerializer> 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务使用的编程模型。 具体而言，它不支持类似于 <xref:System.Xml.Serialization.XmlElementAttribute> 和 <xref:System.Xml.Serialization.XmlAttributeAttribute>的属性。 若要启用对此编程模型的支持，必须将 WCF 切换为使用<xref:System.Xml.Serialization.XmlSerializer>而不是<xref:System.Runtime.Serialization.DataContractSerializer>。  
   
 -   以特殊方式处理 <xref:System.DBNull> 类型。 此类型是一个单一类型，在反序列化时，反序列化程序遵循单一约束并将所有 `DBNull` 引用指向单一实例。 因为 `DBNull` 是可序列化的类型，所以它需要 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> 权限。  
   

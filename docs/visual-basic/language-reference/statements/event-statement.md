@@ -1,11 +1,6 @@
 ---
-title: "Event 语句"
+title: Event 语句
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-statement"></a>Event 语句
 声明用户定义的事件。  
@@ -72,7 +64,7 @@ End Event
 |`eventname`|必须的。 事件的名称；遵循标准变量命名约定。|  
 |`parameterlist`|可选。 表示此事件的参数的本地变量列表。 必须将括[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)在括号中。|  
 |`Implements`|可选。 指示此事件实现接口的事件。|  
-|`implementslist`|如果提供 `Implements`，则是必需的。 所实现的 `Sub` 过程的列表。 用逗号分隔多个过程：<br /><br /> *implementedprocedure* [， *implementedprocedure* ...]<br /><br /> 每个 `implementedprocedure` 都具有以下语法和部件：<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`必需。 此过程的包含类或结构所实现的接口的名称。<br />-   `Definedname`必需。 在 `interface` 中用于定义过程的名称。 这不必与 `name`（此过程用于实现定义的过程的名称）相同。|  
+|`implementslist`|如果提供 `Implements`，则是必需的。 所实现的 `Sub` 过程的列表。 用逗号分隔多个过程：<br /><br /> *implementedprocedure* [， *implementedprocedure* ...]<br /><br /> 每个 `implementedprocedure` 都具有以下语法和部件：<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` 必需。 此过程的包含类或结构所实现的接口的名称。<br />-   `Definedname` 必需。 在 `interface` 中用于定义过程的名称。 这不必与 `name`（此过程用于实现定义的过程的名称）相同。|  
 |`Custom`|必须的。 声明为 `Custom` 的事件必须定义自定义 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 访问器。|  
 |`delegatename`|可选。 指定事件处理程序签名的委托的名称。|  
 |`AddHandler`|必须的。 声明 `AddHandler` 访问器，它指定要在添加事件处理程序（显式使用 `AddHandler` 语句或隐式使用 `Handles` 子句）时执行的语句。|  

@@ -1,13 +1,6 @@
 ---
 title: 处理事件 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
 - walkthroughs [Visual Basic], event handling
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c1743e5f5d9dcdf83ab646407cd1fcdc77ff71cd
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0ac3514505ca42870d77317feec30a27e4384e6c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>演练：处理事件 (Visual Basic)
 这是演示如何使用事件的两个主题的第二个。 第一个主题，[演练： 声明和引发事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，演示如何声明和引发事件。 本部分使用的窗体和该演练中的类以显示如何处理事件发生时。  

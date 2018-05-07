@@ -1,32 +1,20 @@
 ---
 title: 通过 Windows 身份验证确保的传输安全
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-caps.latest.revision: 17
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5effb18435241b00c3036fd23e15ef5ce485b646
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d291cd3d00f8d0d40e0b8543d5347e1509cb8b90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-windows-authentication"></a>通过 Windows 身份验证确保的传输安全
-下面的方案演示通过 Windows 安全性进行保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务。 有关编程的详细信息，请参阅[如何： 使用 Windows 凭据来保护服务](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
+下面的方案演示 Windows Communication Foundation (WCF) 客户端和服务由 Windows 安全保护。 有关编程的详细信息，请参阅[如何： 使用 Windows 凭据来保护服务](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
   
  Intranet Web 服务显示了人力资源信息。 客户端是 Windows 窗体应用程序。 该应用程序部署在具有 Kerberos 控制器保护的域中。  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 04/30/2018
 |特征|描述|  
 |--------------------|-----------------|  
 |安全模式|传输|  
-|互操作性|仅 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|互操作性|WCF 仅|  
 |身份验证（服务器）<br /><br /> 身份验证（客户端）|是（使用 Windows 集成身份验证）<br /><br /> 是（使用 Windows 集成身份验证）|  
 |完整性|是|  
 |保密性|是|  

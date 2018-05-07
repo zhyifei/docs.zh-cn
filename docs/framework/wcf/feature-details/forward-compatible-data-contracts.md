@@ -1,34 +1,20 @@
 ---
 title: 向前兼容的数据协定
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 554176d2b6ac0c1d5cbe817721c55d06f88457cc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 95a72d5d09538bc6f663f2376c7f8f928909cd57
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="forward-compatible-data-contracts"></a>向前兼容的数据协定
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 数据协定系统的一个特征是协定能够以不间断的方式随着时间而逐步演化。 也就是说，具有旧版本数据协定的客户端可以与具有相同数据协定的新版本的服务进行通信，或者具有新版本数据协定的客户端可以与相同数据协定的旧版本进行通信。 有关详细信息，请参阅[最佳做法： 数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
+一项功能的 Windows Communication Foundation (WCF) 是数据协定系统的协定可以随时间发展，在不间断的方式。 也就是说，具有旧版本数据协定的客户端可以与具有相同数据协定的新版本的服务进行通信，或者具有新版本数据协定的客户端可以与相同数据协定的旧版本进行通信。 有关详细信息，请参阅[最佳做法： 数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
   
  如果创建了现有数据协定的新版本，您可以根据需要来应用大多数版本管理功能。 但是，一个版本管理功能，*往返*，必须生成为的类型中的第一个版本才能正常工作。  
   
@@ -48,7 +34,7 @@ ms.lasthandoff: 04/28/2018
  [!code-csharp[C_DataContract#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#8)]
  [!code-vb[C_DataContract#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#8)]  
   
- 当 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构遇到不属于原始数据协定的数据时，该数据被存储在该属性中并保留下来。 除非是临时存储，否则不会以任何其他方式处理该数据。 如果对象返回到它的起始位置，则原始（未知）数据也将返回。 由此，数据完成了从起始终结点又回到起始终结点的往返过程而没有丢失。 但请注意，如果起始终结点要求处理数据，则不会满足这一期望，该终结点必须以某种方式检测并调整更改。  
+ 当 WCF 基础结构遇到不是原始的数据协定的一部分的数据时，并将数据存储在属性中保留。 除非是临时存储，否则不会以任何其他方式处理该数据。 如果对象返回到它的起始位置，则原始（未知）数据也将返回。 由此，数据完成了从起始终结点又回到起始终结点的往返过程而没有丢失。 但请注意，如果起始终结点要求处理数据，则不会满足这一期望，该终结点必须以某种方式检测并调整更改。  
   
  <xref:System.Runtime.Serialization.ExtensionDataObject> 类型不包含公共方法或属性。 因此，无法直接访问存储在 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 属性内部的数据。  
   

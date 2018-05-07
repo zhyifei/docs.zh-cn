@@ -1,29 +1,17 @@
 ---
-title: "XAML 资源"
-ms.custom: 
+title: XAML 资源
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - reusing resources [WPF]
 - resources [WPF], reusing
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2d58802bcdfa57bb7689e7406651fcc9829a7e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b917b13909c463cd9d518d79bf8ce2683591dda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-resources"></a>XAML 资源
 资源是可以在应用程序中的不同位置重复使用的对象。 资源的示例包括画笔和样式。 本概述介绍如何使用中的资源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 你还可以创建和使用代码，或者通过互换使用代码访问资源和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 有关详细信息，请参阅[资源和代码](../../../../docs/framework/wpf/advanced/resources-and-code.md)。  
@@ -162,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
  如果不在控件上适用的样式隐式键<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>是`true`(另请注意，<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>可能设置为本机控件类，而不是显式的控件实例上的行为的一部分)。 此外，为了对派生的类方案支持隐式键，控件必须重写<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(作为的一部分提供的所有现有控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]执行此操作)。 有关样式、 主题和控件设计的详细信息，请参阅[准则设计样式化控件](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)。  
   
- <xref:System.Windows.DataTemplate>也有一个隐式键。 隐式密钥<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>属性值。 <xref:System.Windows.DataTemplate.DataType%2A>此外可以指定为类型的名称，而不是使用显式[{x: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 有关详细信息，请参阅[数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)。  
+ <xref:System.Windows.DataTemplate> 也有一个隐式键。 隐式密钥<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>属性值。 <xref:System.Windows.DataTemplate.DataType%2A> 此外可以指定为类型的名称，而不是使用显式[{x: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 有关详细信息，请参阅[数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.ResourceDictionary>  

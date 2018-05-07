@@ -1,12 +1,6 @@
 ---
-title: "运算符的有效组合 (Visual Basic)"
-ms.custom: 
+title: 运算符的有效组合 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - expressions [Visual Basic], parentheses
 - operators [Visual Basic], associativity
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4b0f1d637bc1757515cf271a8c70d62effab0843
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8ced464cb0cc8e1bec3c3449dccb827575599905
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>运算符的有效组合 (Visual Basic)
 复杂表达式可以包含许多不同的运算符。 下面的示例阐释了这一点。  
@@ -53,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  在前面的示例中，`z + 2`为首先进行评估，则其他带括号的表达式。 求幂，通常具有优先权要高于加法或乘法，是在此示例中上次评估，因为其他表达式括在括号中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Visual Basic 中的算术运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
  [在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
  [在 Visual Basic 中的逻辑和按位运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  

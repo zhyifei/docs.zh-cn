@@ -1,27 +1,15 @@
 ---
 title: 如何：创建活动
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: 39
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0d0d48d1e78efb3484f521958edf22d97ca8053d
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 18b03468646a4d016e383f5662d9827551d1141c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-activity"></a>如何：创建活动
 活动是 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的核心行为单元。 活动的执行逻辑可以使用托管代码实现，也可以使用其他活动实现。 本主题演示如何创建两个活动。 第一个活动是简单活动，它使用代码来实现其执行逻辑。 第二个活动的实现是用其他活动定义的。 后续教程步骤会使用这些活动。  

@@ -1,24 +1,12 @@
 ---
-title: "如何：服务版本控制"
-ms.custom: 
+title: 如何：服务版本控制
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-caps.latest.revision: "6"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4da80d264b05f9c7a1461a7298e521623a97f31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a745a35f72722003fc98ecf14d5f39027dc141f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-service-versioning"></a>如何：服务版本控制
 本主题概述了创建路由配置以将消息路由到同一服务的不同版本所需采取的基本步骤。 在本示例中，消息将路由到计算器服务的两个不同版本：`roundingCalc` (v1) 和 `regularCalc` (v2)。 这两个实现都支持相同的操作，但较早的服务 `roundingCalc` 在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用较新的 `regularCalc` 服务。  
@@ -105,7 +93,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  S12 命名空间前缀默认情况下，在命名空间表中，定义并表示命名空间"http://www.w3.org/2003/05/soap-envelope"。  
+    >  S12 命名空间前缀默认情况下，在命名空间表中，定义和表示的命名空间"http://www.w3.org/2003/05/soap-envelope"。  
   
 3.  定义筛选器表，该表将各个筛选器与客户端终结点相关联。 如果消息中包含"CalcVer"标头值为 1，则将发送到 regularCalc 服务中。 如果标头包含值 2，则系统将该消息发送到 roundingCalc 服务。 如果没有标头，则系统将该消息路由到 regularCalc。  
   

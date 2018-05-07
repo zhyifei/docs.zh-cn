@@ -1,26 +1,12 @@
 ---
 title: 死信队列
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9f92aeb02d997820fa2955419a3cdcf1c4369b45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dead-letter-queues"></a>死信队列
 本示例演示如何处理传递失败的消息。 它基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 本示例使用 `netMsmqBinding` 绑定。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -182,7 +168,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- 死信队列中的消息是被发送到处理消息的服务的消息。 因此，当死信消息服务从队列中读取消息时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道层会发现终结点的不匹配，因此不会调度该消息。 在这种情况下，会将消息发送到订单处理服务，但由死信消息服务接收。 若要接收发送到不同终结点的消息，请在 `ServiceBehavior` 中指定一个可匹配任何地址的地址筛选器。 这是成功处理从死信队列中读取的消息所必需的。  
+ 死信队列中的消息是被发送到处理消息的服务的消息。 因此，当死信消息服务从队列中读取消息，Windows Communication Foundation (WCF) 通道层终结点中发现不匹配，并且不会调度消息。 在这种情况下，会将消息发送到订单处理服务，但由死信消息服务接收。 若要接收发送到不同终结点的消息，请在 `ServiceBehavior` 中指定一个可匹配任何地址的地址筛选器。 这是成功处理从死信队列中读取的消息所必需的。  
   
  在本示例中，如果失败的原因是消息超时，则死信消息服务会重新发送该消息。对于所有其他原因，则显示传送失败，如下面的示例代码所示：  
 
@@ -370,7 +356,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   

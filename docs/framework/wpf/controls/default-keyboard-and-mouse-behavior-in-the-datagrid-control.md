@@ -1,29 +1,17 @@
 ---
-title: "DataGrid 控件中的默认键盘和鼠标行为"
-ms.custom: 
+title: DataGrid 控件中的默认键盘和鼠标行为
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid [WPF], keyboard behavior
 - DataGrid [WPF], mouse behavior
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28cb1b02e67d076f9190e2d8e36b72c20cc5c4e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 559b84d3e6b5ece6c71f17e6766cac4ec14824cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid 控件中的默认键盘和鼠标行为
 本主题介绍用户如何与交互<xref:System.Windows.Controls.DataGrid>通过使用键盘和鼠标的控件。  
@@ -96,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 |CTRL + 单击的行|如果<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>设置为<xref:System.Windows.Controls.DataGridSelectionMode.Extended>，修改非连续的多行选择。<br /><br /> 如果已选择行，则取消选择该行。|  
 |按住 SHIFT 的同时单击的行|如果<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>设置为<xref:System.Windows.Controls.DataGridSelectionMode.Extended>，修改连续的多行选择。|  
 |单击行组头|展开或折叠组。|  
-|单击左上角的全选按钮<xref:System.Windows.Controls.DataGrid>|如果<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>设置为<xref:System.Windows.Controls.DataGridSelectionMode.Extended>，选择中的所有行<xref:System.Windows.Controls.DataGrid>。|  
+|单击左上角的全选按钮 <xref:System.Windows.Controls.DataGrid>|如果<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>设置为<xref:System.Windows.Controls.DataGridSelectionMode.Extended>，选择中的所有行<xref:System.Windows.Controls.DataGrid>。|  
   
 ## <a name="mouse-selection"></a>鼠标选择  
  如果<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>属性设置为<xref:System.Windows.Controls.DataGridSelectionMode.Extended>，按住 CTRL 或 SHIFT 的同时单击行将修改多行选择。  

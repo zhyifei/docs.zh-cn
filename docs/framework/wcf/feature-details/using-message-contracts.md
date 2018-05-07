@@ -1,41 +1,27 @@
 ---
 title: 使用消息约定
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ea0a107a67753e919439a6be2035ab77001641ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-message-contracts"></a>使用消息约定
-通常，在生成 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序时，开发人员会密切关注数据结构和序列化问题，而不必关心携带数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 (有关详细信息，请参阅[指定服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
+通常在生成 Windows Communication Foundation (WCF) 应用程序时，开发人员将密切注意数据结构和序列化问题，无需自己考虑在其中执行数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 (有关详细信息，请参阅[指定服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
   
  但是，有时完全控制 SOAP 消息的结构与控制其内容一样重要。 当必须提供互操作性或需要在消息或消息部分级别特别控制安全问题时，更是如此。 在这些情况下，你可以创建*消息协定*可用于指定所需的精确 SOAP 消息的结构。  
   
  本主题讨论如何使用各种消息协定属性为操作创建特定消息协定。  
   
 ## <a name="using-message-contracts-in-operations"></a>在操作中使用消息协定  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持上建模的操作*远程过程调用 (RPC) 样式*或*消息样式*。 在 RPC 样式的操作中，可以使用任何可序列化的类型并可以访问可用于本地调用的功能，如多个参数以及 `ref` 和 `out` 参数。 在此样式中，所选的序列化形式控制基础消息中数据的结构，并且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 运行时会创建这些消息以支持操作。 这使对 SOAP 和 SOAP 消息不熟悉的开发人员能够快速容易地创建和使用服务应用程序。  
+ WCF 支持上建模的操作*远程过程调用 (RPC) 样式*或*消息样式*。 在 RPC 样式的操作中，可以使用任何可序列化的类型并可以访问可用于本地调用的功能，如多个参数以及 `ref` 和 `out` 参数。 在此样式中，选择的序列化的窗体控件的基础消息中的数据的结构和 WCF 运行时创建消息后，以支持该操作。 这使对 SOAP 和 SOAP 消息不熟悉的开发人员能够快速容易地创建和使用服务应用程序。  
   
  下面的代码示例演示在 RPC 样式上建模的服务操作。  
   
@@ -263,7 +249,7 @@ public class PatientRecord
   
 -   `Relay`  
   
- `Actor` 或 `Role` 属性指定要使用给定标头的节点的统一资源标识符 (URI)。 `MustUnderstand` 属性指定处理标头的节点是否必须理解该标头。 `Relay` 特性指定标头是否要中继到下游节点。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不会对传入消息的这些特性执行任何处理，但 `MustUnderstand` 特性除外，如本主题后面的“消息协定版本管理”部分中所指定。 但它允许您根据需要读取和写入这些属性，如下所述。  
+ `Actor` 或 `Role` 属性指定要使用给定标头的节点的统一资源标识符 (URI)。 `MustUnderstand` 属性指定处理标头的节点是否必须理解该标头。 `Relay` 特性指定标头是否要中继到下游节点。 WCF 不执行任何处理传入消息，这些特性除外`MustUnderstand`属性，在本主题后面的"消息协定版本管理"部分中指定。 但它允许您根据需要读取和写入这些属性，如下所述。  
   
  发送消息时，默认情况下不会发出这些属性。 您可以采取两种方式更改这一行为。 第一种方式是通过更改 <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>、<xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> 属性，以静态方式将这些特性设置为任何需要的值，如下面的代码示例所示。 （请注意，没有 `Role` 属性；如果使用 SOAP 1.2，则设置 <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> 属性会发出 `Role` 特性）。  
   
@@ -336,9 +322,9 @@ public class BankingTransaction
   
  下面的规则适用于标头的版本管理：  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不反对缺少标头，相应的成员将保留其默认值。  
+-   WCF 不反对缺少标头-相应的成员将保留其默认值。  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还忽略意外的额外标头。 此规则的一种例外情况是在传入的 SOAP 消息中，额外标头的 `MustUnderstand` 属性设置为 `true`。在这种情况下，由于存在一个无法处理但必须理解的标头，因此会引发异常。  
+-   WCF 还忽略意外的额外标头。 此规则的一种例外情况是在传入的 SOAP 消息中，额外标头的 `MustUnderstand` 属性设置为 `true`。在这种情况下，由于存在一个无法处理但必须理解的标头，因此会引发异常。  
   
  消息正文具有类似的版本管理规则，即忽略缺少和附加的消息正文部分。  
   
@@ -383,7 +369,7 @@ public class PatientRecord : PersonRecord
 -   在多个操作中使用同一个消息协定时，会在 WSDL 文档中生成多个消息类型。 对于后续使用，会在名称中添加数字“2”、“3”等以使名称唯一。 在导回 WSDL 时，会创建多个消息协定类型，除了名称不同外，这些消息协定类型完全相同。  
   
 ## <a name="soap-encoding-considerations"></a>SOAP 编码注意事项  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允许但不推荐使用 XML 的旧式 SOAP 编码样式。 使用这种样式时（在应用于服务协定的 `Use` 上将 `Encoded` 属性设置为 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>），下面的附加注意事项适用：  
+ WCF 允许你使用的旧式 SOAP 编码样式的 XML，但是，其建议不要使用。 使用这种样式时（在应用于服务协定的 `Use` 上将 `Encoded` 属性设置为 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>），下面的附加注意事项适用：  
   
 -   不支持消息头；这意味着属性 <xref:System.ServiceModel.MessageHeaderAttribute> 和数组属性 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 与 SOAP 编码不兼容。  
   

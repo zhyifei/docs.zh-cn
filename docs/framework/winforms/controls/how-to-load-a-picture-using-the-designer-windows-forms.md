@@ -1,13 +1,6 @@
 ---
-title: "如何：使用设计器加载图片（Windows 窗体）"
-ms.custom: 
+title: 如何：使用设计器加载图片（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - picture formats
 - images [Windows Forms], displaying on Windows Forms
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1dec3c71c0c93ce580925744fe55f05cd2e5f383
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5eb85c6f3ca232f8b53ac01d57ee71f73415cf83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>如何：使用设计器加载图片（Windows 窗体）
 在 Windows 窗体<xref:System.Windows.Forms.PictureBox>控件，可以加载并将图片窗体上显示在设计时，通过设置<xref:System.Windows.Forms.PictureBox.Image%2A>属性设置为有效的图片。 下表显示可接受文件类型。  

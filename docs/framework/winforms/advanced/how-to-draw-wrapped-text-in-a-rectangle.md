@@ -1,13 +1,6 @@
 ---
-title: "如何：在矩形中绘制换行文本"
-ms.custom: 
+title: 如何：在矩形中绘制换行文本
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82e8c324cac8f9eda8f3052f77230733dd47777d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c753be6a200f166e59e1330c7dbcf1fadc7588a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>如何：在矩形中绘制换行文本
 你可以在矩形中绘制换行的文本，通过使用<xref:System.Drawing.Graphics.DrawString%2A>重载的方法的<xref:System.Drawing.Graphics>采用类<xref:System.Drawing.Rectangle>或<xref:System.Drawing.RectangleF>参数。 你还将使用<xref:System.Drawing.Brush>和<xref:System.Drawing.Font>。  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例需要：  
   
--   <xref:System.Windows.Forms.PaintEventArgs>`e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+-   <xref:System.Windows.Forms.PaintEventArgs> `e`这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>请参阅  
  [如何：用 GDI 绘制文本](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  

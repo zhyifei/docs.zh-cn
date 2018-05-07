@@ -1,13 +1,6 @@
 ---
-title: "如何：设置 JPEG 压缩级别"
-ms.custom: 
+title: 如何：设置 JPEG 压缩级别
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02e417fbcdb68e114ea0fc7afad7c22f6b2fdae9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f12f0ed8bae7b6cfb6f3162848e3c3761f7dbbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>如何：设置 JPEG 压缩级别
 在将图像保存到磁盘中时，可能需要修改图像的参数，以最大限度地减小文件的大小或提高其质量。 可以通过修改 JPEG 图像的压缩级别来调整其质量。 若要保存为 JPEG 图像时，请指定压缩级别，必须创建<xref:System.Drawing.Imaging.EncoderParameters>对象，并将其传递到<xref:System.Drawing.Image.Save%2A>方法<xref:System.Drawing.Image>类。 初始化<xref:System.Drawing.Imaging.EncoderParameters>对象以使其具有一个数组，其中包含一个<xref:System.Drawing.Imaging.EncoderParameter>。 当你创建<xref:System.Drawing.Imaging.EncoderParameter>，指定<xref:System.Drawing.Imaging.Encoder.Quality>编码器选项和所需的压缩级别。  

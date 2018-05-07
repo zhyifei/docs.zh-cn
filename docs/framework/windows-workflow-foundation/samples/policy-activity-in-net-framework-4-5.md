@@ -1,24 +1,12 @@
 ---
 title: .NET Framework 4.5 中的策略活动
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5ff750942a2d05310669361e83a10a5acefbcbd4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 52f0cdd3714367598c83f72e2a8203c2ae27eb4e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的策略活动
 Policy4 活动允许 Windows Workflow Foundation 中[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>对象用于在 Windows Workflow Foundation 中[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接通过 WF 3.5 中附带的规则引擎。 通过使用此活动，可以创建和执行 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 有关 Windows Workflow Foundation 的一部分包含的 WF 3.5 规则引擎的详细信息，请阅读 Windows Workflow Foundation 规则引擎简介。 有关迁移的详细信息中的 WF 规则[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，请阅读[迁移指南](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
@@ -28,7 +16,7 @@ Policy4 活动允许 Windows Workflow Foundation 中[!INCLUDE[netfx35_long](../.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Rules-Policy4`  
   

@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedReader::UpdateSymbolStore 方法"
-ms.custom: 
+title: ISymUnmanagedReader::UpdateSymbolStore 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedReader.UpdateSymbolStore
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 267037cbdf9e9bf45454bd8b584563ba1ecd847d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 81f9db872e9904d2297221e266be710837d0fb66
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore 方法
 使用增量符号存储区更新现有的符号存储区。 此方法在编辑并继续方案中用于更新要匹配的原始的可移植可执行 (PE) 文件的增量可以保持的符号存储区。  
@@ -59,7 +47,7 @@ HRESULT UpdateSymbolStore (
 ## <a name="return-value"></a>返回值  
  如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>请参阅  

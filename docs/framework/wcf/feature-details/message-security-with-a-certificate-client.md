@@ -1,32 +1,20 @@
 ---
 title: 使用证书客户端的消息安全
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e31c7a9e53e8b918661c0c6c544e697e2a772e6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 570c7763da912de4e0d2729e7579a200f35c4941
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-certificate-client"></a>使用证书客户端的消息安全
-下面的方案演示使用消息安全模式保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务。 使用证书对客户端和服务进行身份验证。 有关详细信息，请参阅[分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
+下面的方案演示 Windows Communication Foundation (WCF) 客户端和服务使用消息安全模式保护。 使用证书对客户端和服务进行身份验证。 有关详细信息，请参阅[分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
   
  有关示例应用程序，请参阅[消息安全证书](../../../../docs/framework/wcf/samples/message-security-certificate.md)。  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 04/30/2018
 |特征|描述|  
 |--------------------|-----------------|  
 |安全模式|消息|  
-|互操作性|仅 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|互操作性|WCF 仅|  
 |身份验证（服务器）|使用服务证书|  
 |身份验证（客户端）|使用客户端证书|  
 |完整性|是|  

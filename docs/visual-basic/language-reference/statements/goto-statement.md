@@ -1,12 +1,6 @@
 ---
 title: GoTo 语句
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.GoTo
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 22a6315e69cd6c797d462d0835e85bb1dde67dcc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27ebc677bab8b7f61a02408fddb30a6ec21c43cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="goto-statement"></a>GoTo 语句
 无条件地分支到过程中指定的行。  
@@ -39,13 +30,13 @@ GoTo line
   
 ## <a name="part"></a>部件  
  `line`  
- 必需。 所有行标签。  
+ 必须的。 所有行标签。  
   
 ## <a name="remarks"></a>备注  
  `GoTo`语句只能跳转到它在其中出现的过程中的行。 行必须具有的行标签`GoTo`可以指。 有关详细信息，请参阅[How to： 标签语句](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
   
 > [!NOTE]
->  `GoTo`语句会使代码更难读取和维护。 只要有可能，请改为使用控制结构。 有关详细信息，请参阅[控制流](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
+>  `GoTo` 语句会使代码更难读取和维护。 只要有可能，请改为使用控制结构。 有关详细信息，请参阅[控制流](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
   
  不能使用`GoTo`语句从外部分支到`For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`，或`Using`...`End Using`到内的标签的构造。  
   
@@ -54,9 +45,9 @@ GoTo line
   
 |块或地区|从外向内分支|从内向外分支|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try`块|只能从`Catch`相同的构造块<sup>1</sup>|仅为整个构造外部|  
-|`Catch`块|永远不会允许|只能向外的整个构造，或为`Try`相同的构造块<sup>1</sup>|  
-|`Finally`块|永远不会允许|永远不会允许|  
+|`Try` 块|只能从`Catch`相同的构造块<sup>1</sup>|仅为整个构造外部|  
+|`Catch` 块|永远不会允许|只能向外的整个构造，或为`Try`相同的构造块<sup>1</sup>|  
+|`Finally` 块|永远不会允许|永远不会允许|  
   
  <sup>1</sup>如果一个`Try`...`Catch`...`Finally`构造嵌套在另一个，`Catch`块可以分支到`Try`块在其自己嵌套的级别，但不是到任何其他`Try`块。 嵌套`Try`...`Catch`...`Finally`构造必须完全在包含`Try`或`Catch`它嵌套在其中的构造块。  
   
@@ -70,7 +61,7 @@ Try 构造中的有效和无效分支
   
  [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Do...Loop 语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
  [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [For Each...Next 语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  

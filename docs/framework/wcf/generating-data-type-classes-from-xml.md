@@ -1,24 +1,12 @@
 ---
-title: "从 XML 生成数据类型类"
-ms.custom: 
+title: 从 XML 生成数据类型类
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30d6035e04f09ae1169ef8e89bcfb38470be9d12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b38a0aea3101c70b3c3ec0c8feb4ee88018b64e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generating-data-type-classes-from-xml"></a>从 XML 生成数据类型类
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 包括用于从 XML 生成数据类型类的新功能。 本主题介绍如何为.NET 博客 RSS 源自动生成数据类型。  

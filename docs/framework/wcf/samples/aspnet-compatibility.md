@@ -1,27 +1,15 @@
 ---
-title: "ASP.NET 兼容性"
-ms.custom: 
+title: ASP.NET 兼容性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 751fe96caa2be63e925b3107fa2c198b523bef72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 35d9362fde21faf4998051e85f66fc4ddfb8b94b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 兼容性
-本示例演示如何在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 中启用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 兼容性模式。 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容性模式中运行的服务可完全参与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序管道并可利用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能，如文件/URL 授权、会话状态和 <xref:System.Web.HttpContext> 类。 使用 <xref:System.Web.HttpContext> 类可以访问 Cookie、会话和其他 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能。 此模式要求绑定使用 HTTP 传输，且服务本身必须承载于 IIS 中。  
+此示例演示如何启用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]兼容模式中 Windows Communication Foundation (WCF)。 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容性模式中运行的服务可完全参与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序管道并可利用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能，如文件/URL 授权、会话状态和 <xref:System.Web.HttpContext> 类。 使用 <xref:System.Web.HttpContext> 类可以访问 Cookie、会话和其他 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能。 此模式要求绑定使用 HTTP 传输，且服务本身必须承载于 IIS 中。  
   
  在此示例中，客户端是一个控制台应用程序（一个可执行文件），服务由 Internet 信息服务 (IIS) 承载。  
   
@@ -33,15 +21,15 @@ ms.lasthandoff: 12/22/2017
 >   
 >  1.  打开“控制面板” 。  打开**管理工具**下的小程序**系统和安全**标题。 打开**Internet Information Services (IIS) Manager**小程序。  
 > 2.  展开中的树视图**连接**窗格。 选择**应用程序池**节点。  
-> 3.  若要设置要使用的默认应用程序池[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（它可能会导致与现有站点的不兼容问题），右键单击**DefaultAppPool**列表项，然后选择**基本设置...**. 设置**.Net Framework 版本**到**.Net Framework v4.0.30128** （或更高版本）。  
-> 4.  若要创建新的应用程序池使用[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（以保持与其他应用程序兼容性），右键单击**应用程序池**节点，然后选择**添加应用程序池...**. 命名新的应用程序池，并设置**.Net Framework 版本**到**.Net Framework v4.0.30128** （或更高版本）。 运行安装程序下面的步骤后，右键单击**ServiceModelSamples**应用程序并选择**管理应用程序**，**高级设置...**. 设置**应用程序池**到新的应用程序池。  
+> 3.  若要设置要使用的默认应用程序池[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（它可能会导致与现有站点的不兼容问题），右键单击**DefaultAppPool**列表项，然后选择**基本设置...**. 设置 **.Net Framework 版本**到 **.Net Framework v4.0.30128** （或更高版本）。  
+> 4.  若要创建新的应用程序池使用[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（以保持与其他应用程序兼容性），右键单击**应用程序池**节点，然后选择**添加应用程序池...**. 命名新的应用程序池，并设置 **.Net Framework 版本**到 **.Net Framework v4.0.30128** （或更高版本）。 运行安装程序下面的步骤后，右键单击**ServiceModelSamples**应用程序并选择**管理应用程序**，**高级设置...**. 设置**应用程序池**到新的应用程序池。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`  
   

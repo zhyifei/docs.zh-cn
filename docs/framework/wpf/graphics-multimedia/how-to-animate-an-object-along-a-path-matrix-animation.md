@@ -1,13 +1,6 @@
 ---
-title: "如何：沿着路径针对对象进行动画处理（矩阵动画）"
-ms.custom: 
+title: 如何：沿着路径针对对象进行动画处理（矩阵动画）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eb1bbe43c7e1797d5943bf3da6b4aca22a11c3a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 03e1e40f8ee6840558ad7b712d96e63d9e2bf15f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>如何：沿着路径针对对象进行动画处理（矩阵动画）
 此示例演示如何使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>沿路径定义的对象进行动画处理的类<xref:System.Windows.Media.PathGeometry>。  

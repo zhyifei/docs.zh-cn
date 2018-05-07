@@ -1,24 +1,14 @@
 ---
-title: "WIF 配置架构约定"
-ms.custom: 
+title: WIF 配置架构约定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
-caps.latest.revision: "3"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e327b45ddd260d1a52066b5bf53e7114100ff45c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3109b75ccf9cefcad4e112cca02e932ea5489d24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF 配置架构约定
 本主题讨论 Windows Identity Foundation (WIF) 配置主题中使用的约定并描述 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 和 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 部分中使用的一些常见功能和属性。  

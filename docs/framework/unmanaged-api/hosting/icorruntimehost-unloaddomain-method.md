@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::UnloadDomain 方法"
-ms.custom: 
+title: ICorRuntimeHost::UnloadDomain 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.UnloadDomain
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: dd9e9204-a80d-44f3-8192-779224b35056
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 067b60b9da02300e9e7316712d0058a61ab8a697
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c4db96133315b23a2d0b4bd32b597ee03f5d697b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehostunloaddomain-method"></a>ICorRuntimeHost::UnloadDomain 方法
 卸载指定的应用程序域中从当前进程。  
@@ -59,7 +47,7 @@ HRESULT UnloadDomain (
 |E_FAIL|发生了未知的灾难性故障。 如果某方法返回 E_FAIL，公共语言运行时 (CLR) 不再可用进程中。 对任何托管 Api 的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  

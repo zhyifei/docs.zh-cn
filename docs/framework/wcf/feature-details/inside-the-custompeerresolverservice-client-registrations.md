@@ -1,24 +1,12 @@
 ---
-title: "CustomPeerResolverService 内部：客户端注册"
-ms.custom: 
+title: CustomPeerResolverService 内部：客户端注册
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9c979922bf8c7b786fd0a671c22289fb148a883c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f8b6f5ac3a41fdc7f817553693b0621ee0ea3de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService 内部：客户端注册
 网格中的每个节点都通过 `Register` 函数，将自己的终结点信息发布到解析程序服务。 解析程序服务将此信息存储为注册记录。 此记录包含节点的唯一标识符 (RegistrationID) 和终结点信息 (PeerNodeAddress)。  

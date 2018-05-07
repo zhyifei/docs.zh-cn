@@ -1,22 +1,12 @@
 ---
-title: "LINQ to XML 与DOM (Visual Basic)"
-ms.custom: 
+title: LINQ to XML 与DOM (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1f89d3ded61daf16d4a59ccabb4d58625cae4a58
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f62b7564e9ba7adfe1aa83c5d0336d7a43e7c362
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML 与DOM (Visual Basic)
 本节说明 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和当前主导 XML 编程 API（W3C 文档对象模型 (DOM)）之间的主要区别。  
@@ -122,7 +112,7 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 未提供 `XmlDocumentFragment` 类的等效项。 但在很多情况下，`XmlDocumentFragment` 概念都可以通过执行类型化为<xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XNode> 或 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 的查询来进行处理。  
   
 ## <a name="support-for-xpathnavigator"></a>对 XPathNavigator 的支持  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过 <xref:System.Xml.XPath.XPathNavigator> 命名空间中的扩展方法提供对 <xref:System.Xml.XPath?displayProperty=nameWithType> 的支持。 有关更多信息，请参见<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过 <xref:System.Xml.XPath.XPathNavigator> 命名空间中的扩展方法提供对 <xref:System.Xml.XPath?displayProperty=nameWithType> 的支持。 有关详细信息，请参阅<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
   
 ## <a name="support-for-white-space-and-indentation"></a>对空白和缩进的支持  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 处理空白的方式比 DOM 更简单。  
@@ -139,5 +129,5 @@ doc.AppendChild(name)
 ## <a name="support-for-schema-information"></a>对架构信息的支持  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的扩展方法提供对 XSD 验证的支持。 你可以验证 XML 树是否符合 XSD。 你可以用架构验证后信息集 (PSVI) 填充 XML 树。 有关详细信息，请参阅[如何：使用 XSD 进行验证](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b)和 <xref:System.Xml.Schema.Extensions>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

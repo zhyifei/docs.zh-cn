@@ -1,28 +1,14 @@
 ---
-title: "FileDialog 类"
-ms.custom: 
+title: FileDialog 类
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - FileDialog class [Windows Forms]
 ms.assetid: 85a8fb62-c7d9-4a30-9b74-1cd10efe6ccb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 40c304ba3af28b20dfe158a40ef9cf2e7dd5b083
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 208c4820479b0327818e02b0fd487ebcb3a85e3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filedialog-class"></a>FileDialog 类
 Windows 窗体<xref:System.Windows.Forms.FileDialog>类是公共类的基类<xref:System.Windows.Forms.OpenFileDialog>和<xref:System.Windows.Forms.SaveFileDialog>组件。 你可以更改到<xref:System.Windows.Forms.FileDialog>影响的外观和行为的这些对话框，具体取决于应用程序运行上的 Windows 版本的类。  

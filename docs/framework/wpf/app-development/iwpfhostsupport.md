@@ -1,34 +1,20 @@
 ---
 title: IWpfHostSupport
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a516d5917c2106bc83842befac9b506312fcce1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51964358d27a16d9840e29be06c11f57de2fad23
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 托管应用程序[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]内容 PresentationHost.exe 通过实现此接口可提供的主机和 PresentationHost.exe 之间的集成点。  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]例如 Web 浏览器的应用程序可以承载[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]内容，包括[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]和松散 XAML。 到主机[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]内容，[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]应用程序创建的实例[WebBrowser 控件](http://go.microsoft.com/fwlink/?LinkId=97911)。 要进行承载，[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]创建 PresentationHost.exe，提供所承载的一个实例[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]到的主机中的显示内容[WebBrowser 控件](http://go.microsoft.com/fwlink/?LinkId=97911)。  
+ [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 例如 Web 浏览器的应用程序可以承载[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]内容，包括[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]和松散 XAML。 到主机[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]内容，[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]应用程序创建的实例[WebBrowser 控件](http://go.microsoft.com/fwlink/?LinkId=97911)。 要进行承载，[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]创建 PresentationHost.exe，提供所承载的一个实例[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]到的主机中的显示内容[WebBrowser 控件](http://go.microsoft.com/fwlink/?LinkId=97911)。  
   
  由启用的集成`IWpfHostSupport`允许 PresentationHost.exe 到：  
   

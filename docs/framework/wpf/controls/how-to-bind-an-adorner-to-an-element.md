@@ -1,13 +1,6 @@
 ---
-title: "如何：将装饰器绑定到元素"
-ms.custom: 
+title: 如何：将装饰器绑定到元素
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - UIElements [WPF], binding adorners to
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3c657cde9da19f8ebc6b6d4d05077ed027781b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb419ee5a57e81e7e3bc72ae04fd200703b80cd3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>如何：将装饰器绑定到元素
 此示例演示如何以编程方式将装饰器绑定到指定<xref:System.Windows.UIElement>。  
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>示例  
  若要将装饰器绑定到特定<xref:System.Windows.UIElement>，请按照下列步骤：  
   
-1.  调用`static`方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>获取<xref:System.Windows.Documents.AdornerLayer>对象<xref:System.Windows.UIElement>装饰。 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>上移到可视化树，开始指定**UIElement**，并返回它找到的第一个装饰器层。 （如果未发现装饰器层，该方法将返回 null。）  
+1.  调用`static`方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>获取<xref:System.Windows.Documents.AdornerLayer>对象<xref:System.Windows.UIElement>装饰。 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 上移到可视化树，开始指定**UIElement**，并返回它找到的第一个装饰器层。 （如果未发现装饰器层，该方法将返回 null。）  
   
 2.  调用<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法将装饰器绑定到目标**UIElement**。  
   

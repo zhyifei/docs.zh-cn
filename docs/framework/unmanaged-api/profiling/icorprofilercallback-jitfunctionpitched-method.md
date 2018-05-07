@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback::JITFunctionPitched 方法"
-ms.custom: 
+title: ICorProfilerCallback::JITFunctionPitched 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.JITFunctionPitched
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 116085df-7a77-404a-afac-d0557a12b986
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 48432911d7844e6519689961c985da37219179a2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf51d2a0e7381cd495da8f3846302ec806c34774
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched 方法
 通知探查器的已实时 (JIT) 的函数的编译已从内存中删除。  
@@ -54,14 +42,14 @@ HRESULT JITFunctionPitched(
   
  值`functionId`才会有效重新编译函数。 当重新编译函数时，相同`functionId`将使用的值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

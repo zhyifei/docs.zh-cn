@@ -1,12 +1,6 @@
 ---
 title: Where 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryWhere
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8c2572f513d00bc72e869cf28d382be799f7a303
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0b61a52a366fb37a0834c9223bc8b7f099354d16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="where-clause-visual-basic"></a>Where 子句 (Visual Basic)
 指定查询的筛选条件。  
@@ -34,7 +25,7 @@ Where condition
   
 ## <a name="parts"></a>部件  
  `condition`  
- 必需。 一个表达式，确定输出集合中是否包含集合中的当前项的值。 表达式的计算结果必须为`Boolean`值或等效于`Boolean`值。 如果条件计算结果为`True`，该元素是包含在查询结果; 否则为查询结果中排除该元素。  
+ 必须的。 一个表达式，确定输出集合中是否包含集合中的当前项的值。 表达式的计算结果必须为`Boolean`值或等效于`Boolean`值。 如果条件计算结果为`True`，该元素是包含在查询结果; 否则为查询结果中排除该元素。  
   
 ## <a name="remarks"></a>备注  
  `Where`子句，可以通过选择满足特定条件的元素来筛选查询数据。 其值会导致的元素`Where`子句计算结果为`True`包含在查询结果; 排除其他元素。 使用中的表达式`Where`子句的计算结果必须为`Boolean`或等效于`Boolean`，如计算结果为一个整数`False`时其值为零。 你可以组合多个表达式中的`Where`子句通过使用逻辑运算符，如`And`， `Or`， `AndAlso`， `OrElse`， `Is`，和`IsNot`。  
@@ -53,7 +44,7 @@ Where condition
   
  [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [查询](../../../visual-basic/language-reference/queries/queries.md)  
  [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  

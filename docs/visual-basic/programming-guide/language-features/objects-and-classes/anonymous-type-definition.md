@@ -1,24 +1,14 @@
 ---
 title: 匿名类型定义 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8b5b7eba55d719c1482b7224ecffc78b776feb00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 179fb9773fde2631666498d54894037b2bbfd087
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>匿名类型定义 (Visual Basic)
 在响应的匿名类型的实例声明时，编译器将创建包含类型的指定的属性的新类定义。  
@@ -63,7 +53,7 @@ End Class
   
  类型定义匿名类型声明包含至少一个键属性，如果将继承自的三个成员重写<xref:System.Object>: <xref:System.Object.Equals%2A>， <xref:System.Object.GetHashCode%2A>，和<xref:System.Object.ToString%2A>。 如果不声明了任何键属性，仅<xref:System.Object.ToString%2A>被重写。 重写提供以下功能：  
   
--   `Equals`返回`True`如果两个匿名类型实例相同的实例，或者如果只要满足以下条件：  
+-   `Equals` 返回`True`如果两个匿名类型实例相同的实例，或者如果只要满足以下条件：  
   
     -   它们具有相同数量的属性。  
   
@@ -77,9 +67,9 @@ End Class
   
      [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
--   `GetHashcode`提供的适当唯一 GetHashCode 算法。 该算法使用仅键的属性来计算哈希代码。  
+-   `GetHashcode` 提供的适当唯一 GetHashCode 算法。 该算法使用仅键的属性来计算哈希代码。  
   
--   `ToString`返回连接的属性值的字符串，如下面的示例中所示。 将包含密钥和非键属性。  
+-   `ToString` 返回连接的属性值的字符串，如下面的示例中所示。 将包含密钥和非键属性。  
   
      [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   
@@ -90,6 +80,6 @@ End Class
 > [!NOTE]
 >  匿名类型声明中，它们出现在同一程序集中、 其属性具有相同名称和相同的推断类型、 属性的声明的相同顺序和相同的属性标记为键属性时，才会创建同一匿名类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
  [如何：推断匿名类型声明中的属性名和类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

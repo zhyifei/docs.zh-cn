@@ -1,28 +1,18 @@
 ---
-title: "元数据接口"
-ms.custom: 
+title: 元数据接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - unmanaged interfaces [.NET Framework], metadata
 - metadata interfaces [.NET Framework]
 - interfaces (.NET Framework metadata]
 ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
-caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4043bdb7ea128e7ac34349dad8c51a0b247df71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a704d531b1c49ffe653009e0e90f33b7a126e91
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata-interfaces"></a>元数据接口
 本节描述非托管接口，这些接口提供对由 .NET Framework 类型、方法、字段等公开的元数据的访问。  

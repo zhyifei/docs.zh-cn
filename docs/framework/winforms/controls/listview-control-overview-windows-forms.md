@@ -1,14 +1,6 @@
 ---
-title: "ListView 控件概述（Windows 窗体）"
-ms.custom: 
+title: ListView 控件概述（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ListView
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f92b5f5ae40287c95da10ef96aad0fa764fa00e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.ListView> 控件显示带图标的项列表。 你可以使用列表视图创建类似 Windows 资源管理器右窗格的用户界面。 在控件有四种视图模式： 视图、 SmallIcon、 列表和详细信息。  
@@ -50,13 +36,13 @@ Windows 窗体 <xref:System.Windows.Forms.ListView> 控件显示带图标的项�
 |<xref:System.Windows.Forms.ListView.FindItemWithText%2A> 方法|<xref:System.Windows.Forms.View.Details>、<xref:System.Windows.Forms.View.List> 或 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.FindNearestItem%2A> 方法|<xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.GetItemAt%2A> 方法|<xref:System.Windows.Forms.View.Details> 或 <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.Groups%2A> 属性|除之外的所有视图<xref:System.Windows.Forms.View.List>|  
+|<xref:System.Windows.Forms.ListView.Groups%2A> 属性|除之外的所有视图 <xref:System.Windows.Forms.View.List>|  
 |<xref:System.Windows.Forms.ListView.HeaderStyle%2A> 属性|<xref:System.Windows.Forms.View.Details>。|  
 |<xref:System.Windows.Forms.ListView.InsertionMark%2A> 属性|<xref:System.Windows.Forms.View.LargeIcon>、<xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.Tile>|  
   
  键属性的<xref:System.Windows.Forms.ListView>控件是<xref:System.Windows.Forms.ListView.Items%2A>，其中包含由控件显示的项。 <xref:System.Windows.Forms.ListView.SelectedItems%2A>属性包含控件中当前选定的项的集合。 用户可以选择多个项，例如，拖放到另一个控件，一次的多个项，如果<xref:System.Windows.Forms.ListView.MultiSelect%2A>属性设置为`true`。 <xref:System.Windows.Forms.ListView>控件可以显示项旁的复选框，如果<xref:System.Windows.Forms.ListView.CheckBoxes%2A>属性设置为`true`。  
   
- <xref:System.Windows.Forms.ListView.Activation%2A>属性确定用户要激活列表中的某个项而必须执行的操作类型： 的选项为<xref:System.Windows.Forms.ItemActivation.Standard>， <xref:System.Windows.Forms.ItemActivation.OneClick>，和<xref:System.Windows.Forms.ItemActivation.TwoClick>。 <xref:System.Windows.Forms.ItemActivation.OneClick>激活要求通过单击来激活选项。 <xref:System.Windows.Forms.ItemActivation.TwoClick>激活时，要求用户通过双击来激活项;单击一次更改的项文本的颜色。 <xref:System.Windows.Forms.ItemActivation.Standard>激活要求用户双击以激活某个项但该项不会更改外观。  
+ <xref:System.Windows.Forms.ListView.Activation%2A>属性确定用户要激活列表中的某个项而必须执行的操作类型： 的选项为<xref:System.Windows.Forms.ItemActivation.Standard>， <xref:System.Windows.Forms.ItemActivation.OneClick>，和<xref:System.Windows.Forms.ItemActivation.TwoClick>。 <xref:System.Windows.Forms.ItemActivation.OneClick> 激活要求通过单击来激活选项。 <xref:System.Windows.Forms.ItemActivation.TwoClick> 激活时，要求用户通过双击来激活项;单击一次更改的项文本的颜色。 <xref:System.Windows.Forms.ItemActivation.Standard> 激活要求用户双击以激活某个项但该项不会更改外观。  
   
  <xref:System.Windows.Forms.ListView>控件还支持视觉样式和提供的其他功能在 Windows XP 平台上，包括分组、 磁贴视图，以及插入标记。 有关详细信息，请参阅[Windows XP 功能和 Windows 窗体控件](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。  
   

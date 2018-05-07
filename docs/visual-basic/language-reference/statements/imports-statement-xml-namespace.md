@@ -1,12 +1,6 @@
 ---
 title: Imports 语句（XML 命名空间）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ImportsXmlns
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a0fe6d37c58ead94f2c03736318209abb67cd6dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ba7475416d8a4e2eb3c892d457c03eeb695045eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports 语句（XML 命名空间）
 导入在 XML 文本和 XML 轴属性中使用的 XML 命名空间前缀。  
@@ -38,7 +29,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
  可选。 通过的 XML 元素和属性可以指字符串`xmlNamespaceName`。 如果没有`xmlNamespacePrefix`是提供，导入的 XML 命名空间是默认 XML 命名空间。 必须是有效的 XML 标识符。 有关详细信息，请参阅[名称的声明 XML 元素和属性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。  
   
  `xmlNamespaceName`  
- 必需。 标识要导入的 XML 命名空间的字符串。  
+ 必须的。 标识要导入的 XML 命名空间的字符串。  
   
 ## <a name="remarks"></a>备注  
  你可以使用`Imports`语句以定义你可以使用具有 XML 文本和 XML 轴属性，或作为参数传递到的全局 XML 命名空间`GetXmlNamespace`运算符。 (有关使用信息`Imports`语句导入别名，可在代码中，其中使用类型名称请参阅[Imports 语句 （.NET Namespace 和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。)通过使用声明 XML 命名空间的语法`Imports`语句等同于在 XML 中使用的语法。 因此，你可以从 XML 文件中复制的命名空间声明，并使用它在`Imports`语句。  
@@ -96,7 +87,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 元素文本](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
  [XML 轴属性](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
  [已声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  

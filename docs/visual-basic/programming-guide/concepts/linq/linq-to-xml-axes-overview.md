@@ -1,22 +1,12 @@
 ---
-title: "LINQ to XML 轴概述 (Visual Basic)"
-ms.custom: 
+title: LINQ to XML 轴概述 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ae01d8c7257eb03d091a9e249475ef46a67a1c44
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9164dcff118c5fa3d15a5fe673b2174a4002e9d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>LINQ to XML 轴概述 (Visual Basic)
 创建 XML 树或将 XML 文档加载到 XML 树之后，可以进行查询，从而查找元素和属性并检索它们的值。 通过*轴方法*（也叫做*轴*）来检索集合。 一些轴就是 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 类中返回 <xref:System.Collections.Generic.IEnumerable%601> 集合的方法。 另一些轴是 <xref:System.Xml.Linq.Extensions> 类中的扩展方法。 实现为扩展方法的轴对集合进行操作，然后返回集合。  
@@ -63,5 +53,5 @@ ms.lasthandoff: 10/18/2017
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|返回具有指定 <xref:System.Xml.Linq.XAttribute> 的 <xref:System.Xml.Linq.XName>。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ to XML 轴 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

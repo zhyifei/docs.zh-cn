@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedReader::GetMethodFromDocumentPosition 方法"
-ms.custom: 
+title: ISymUnmanagedReader::GetMethodFromDocumentPosition 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedReader.GetMethodFromDocumentPosition
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 55773dbc-9053-46e3-8a3c-86caa9d91fb4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4fa9bfa324254a48d43c4c3df5ecebb91b3f0ae1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f756a6e80eee0998398b4955d1d091d97b2ad73f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition 方法
 返回包含在文档中的给定位置处的断点的方法。  
@@ -64,7 +52,7 @@ HRESULT GetMethodFromDocumentPosition (
 ## <a name="return-value"></a>返回值  
  如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>请参阅  

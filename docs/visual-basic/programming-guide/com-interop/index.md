@@ -1,25 +1,15 @@
 ---
 title: COM 互操作 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a2c418855cd2e79c31301705706ff1b98f119a97
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 08e7c488d6a546f3efd6098c38ca601b5f443a26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="com-interop-visual-basic"></a>COM 互操作 (Visual Basic)
 组件对象模型 (COM) 允许对象向其他组件和主机应用公开自己的功能。 如今的大部分软件都包含 COM 对象。 尽管 .NET 程序集是新应用的最佳选择，有时也建议使用 COM 对象。 本部分将介绍一些创建和使用 Visual Basic 中使用 COM 对象相关联的问题。  

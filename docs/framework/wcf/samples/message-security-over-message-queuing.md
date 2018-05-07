@@ -1,26 +1,14 @@
 ---
 title: 基于消息队列的消息安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-caps.latest.revision: 22
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: aeb0e66c5bad2b2d03a08560e1021b57e793ad55
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 25a06ac7c13f0abe0f1e8bf27fe117aa9cf038bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-over-message-queuing"></a>基于消息队列的消息安全性
 此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS-Security 和 X.509v3 证书身份验证，并要求使用服务器的 X.509v3 证书对 MSMQ 进行服务器身份验证。 有时候消息安全性更重要，以确保 MSMQ 存储区中的消息始终是加密的，并且应用程序能够对消息执行其自己的身份验证。  
@@ -93,7 +81,7 @@ ms.lasthandoff: 04/27/2018
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="requirements"></a>要求  
  此示例要求安装并运行 MSMQ。  
@@ -101,7 +89,7 @@ ms.lasthandoff: 04/27/2018
 ## <a name="demonstrates"></a>演示  
  客户端使用服务的公钥对消息进行加密，并使用其自己的证书对消息进行签名。 从队列中读取消息的服务使用其受信任人的存储区中的证书对客户端证书进行身份验证。 然后它对消息进行解密并将消息调度给服务操作。  
   
- 因为 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 消息是作为负载通过 MSMQ 消息的正文携带的，所以正文在 MSMQ 存储区中依然保持加密状态。 这样可以保护消息，以防意外泄漏。 请注意，MSMQ 本身并不知道它携带的消息是否经过加密。  
+ 由于 Windows Communication Foundation (WCF) 消息所进行作为 MSMQ 消息的正文中的负载，因此正文保持加密状态在 MSMQ 存储区。 这样可以保护消息，以防意外泄漏。 请注意，MSMQ 本身并不知道它携带的消息是否经过加密。  
   
  此示例演示如何在消息级别对 MSMQ 进行相互身份验证。 证书是在带外交换的。 对于排队的应用程序始终是这样，因为服务和客户端不是必须同时处于开启状态并正在运行。  
   
@@ -313,7 +301,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
 -   将客户端证书安装到服务器的受信任证书存储区中。  
   
-     批处理文件中的以下行将客户端证书复制到服务器的 TrustedPeople 存储中，以使服务器能够做出相关的信任或不信任决定。 为了使 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务信任安装在 TrustedPeople 存储区中的证书，必须将客户端证书验证模式设置为 `PeerOrChainTrust` 或 `PeerTrust` 值。 请参见前面的服务配置示例，了解如何使用配置文件完成此操作。  
+     批处理文件中的以下行将客户端证书复制到服务器的 TrustedPeople 存储中，以使服务器能够做出相关的信任或不信任决定。 安装在 TrustedPeople 存储区的 Windows Communication Foundation (WCF) 服务信任的证书，客户端证书验证模式必须设置为`PeerOrChainTrust`或`PeerTrust`值。 请参见前面的服务配置示例，了解如何使用配置文件完成此操作。  
   
     ```bat
     echo ************  
@@ -354,7 +342,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
   

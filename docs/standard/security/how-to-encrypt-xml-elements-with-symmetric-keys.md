@@ -1,13 +1,7 @@
 ---
-title: "如何：用对称密钥对 XML 元素进行加密"
-ms.custom: 
+title: 如何：用对称密钥对 XML 元素进行加密
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,18 +16,13 @@ helpviewer_keywords:
 - Advanced Encryption Standard algorithm
 - Rijndael
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2130a8c615faefeb49219b9df7e5765f77f4fac8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9fa06ed0befd82a3efdd46deaa2362b1f10fa35
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>如何：用对称密钥对 XML 元素进行加密
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类加密 XML 文档内的元素。  XML 加密可用于存储或传输敏感 XML，而无需担心数据被轻易读取。  此过程使用高级加密标准 (AES) 算法（也称为 Rijndael）对 XML 元素进行解密。  

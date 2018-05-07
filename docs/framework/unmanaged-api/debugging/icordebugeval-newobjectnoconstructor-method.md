@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEval::NewObjectNoConstructor 方法"
-ms.custom: 
+title: ICorDebugEval::NewObjectNoConstructor 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEval.NewObjectNoConstructor
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 80d509ca-b5e3-4c46-9c14-800db73d9bf7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ceb35781d4685e3576470da3b99a6666ba233e19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3e99cafe39a030a412bf33aeb9d96d5006ca02df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor 方法
 分配新的对象实例的指定类型，而不尝试调用构造函数方法。  
@@ -52,7 +40,7 @@ HRESULT NewObjectNoConstructor (
  `pClass`  
  [in]指向一个 ICorDebugClass 对象，表示要进行实例化的对象类型的指针。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

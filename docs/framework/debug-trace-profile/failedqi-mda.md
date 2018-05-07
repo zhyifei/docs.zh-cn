@@ -1,13 +1,6 @@
 ---
 title: failedQI MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - failed QueryInterface
 - FailedQI MDA
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), failed QueryInterface
 - managed debugging assistants (MDAs), failed QueryInterface
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
-caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc717f1500d202ae2590adb61b0376e93eba0944
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60fd5c29f716aa55f35c520794fbc9a0f673b9f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 当运行时代表运行时可调用包装器 (RCW) 在 COM 接口指针上调用 `QueryInterface` 且 `QueryInterface` 调用失败时，将激活 `failedQI` 托管调试助手 (MDA)。  

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::GetModuleFromScope 方法"
-ms.custom: 
+title: IMetaDataImport::GetModuleFromScope 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.GetModuleFromScope
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: add68d3f-45fd-4bef-af94-eb5273f26b11
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b389df634a69bff6197ae11dea96fbb6344dd369
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1f8acc546c0d96aca079223200b43aec933f729
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>IMetaDataImport::GetModuleFromScope 方法
 获取当前元数据范围内引用的模块元数据标记。  
@@ -50,14 +38,14 @@ HRESULT GetModuleFromScope (
  `pmd`  
  [out]指向表示当前元数据范围内引用的模块的标记的指针。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：**作为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

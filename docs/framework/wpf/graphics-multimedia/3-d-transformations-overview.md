@@ -1,13 +1,6 @@
 ---
-title: "三维变换概述"
-ms.custom: 
+title: 三维变换概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b45c2c12393f296f916eaf8ea3f912958b54b09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0fb859905327b30c0ea509e5d07072b81dcf30e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="3-d-transformations-overview"></a>三维变换概述
 本主题描述如何向 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 图形系统中的 3D 模型应用转换。 开发人员可以借助转换功能对模型进行重定位、大小调整和重定向，而无需更改用来定义模型的基值。  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="translation-transformations"></a>平移转换  
  三维转换继承的抽象基类<xref:System.Windows.Media.Media3D.Transform3D>; 其中包括仿射转换类<xref:System.Windows.Media.Media3D.TranslateTransform3D>， <xref:System.Windows.Media.Media3D.ScaleTransform3D>，和<xref:System.Windows.Media.Media3D.RotateTransform3D>。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]三维系统还提供了<xref:System.Windows.Media.Media3D.MatrixTransform3D>类，你可以更简洁矩阵操作中指定相同的转换。  
   
- <xref:System.Windows.Media.Media3D.TranslateTransform3D>在使用指定的偏移量向量方向与 Model3D 中移动所有点<xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>， <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>，和<xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A>属性。 例如，假设立方体的一个顶点位于 (2,2,2)，偏移矢量 (0,1.6,1) 会将该顶点 (2,2,2) 移到 (2,3.6,3)。 该立方体的顶点在模型空间中仍位于 (2,2,2)，但是现在，该模型空间与全局空间的关系已经发生改变，因此，模型空间中的 (2,2,2) 是世界空间中的 (2,3.6,3)。  
+ <xref:System.Windows.Media.Media3D.TranslateTransform3D> 在使用指定的偏移量向量方向与 Model3D 中移动所有点<xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>， <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>，和<xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A>属性。 例如，假设立方体的一个顶点位于 (2,2,2)，偏移矢量 (0,1.6,1) 会将该顶点 (2,2,2) 移到 (2,3.6,3)。 该立方体的顶点在模型空间中仍位于 (2,2,2)，但是现在，该模型空间与全局空间的关系已经发生改变，因此，模型空间中的 (2,2,2) 是世界空间中的 (2,3.6,3)。  
   
  ![平移图](../../../../docs/framework/wpf/graphics-multimedia/media/transforms-translate.png "转换转换")  
 偏移后的平移  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
  [!code-xaml[animation3dgallery_snip#Translation3DAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationexamplewholepage)]  
   
 ## <a name="scale-transformations"></a>缩放转换  
- <xref:System.Windows.Media.Media3D.ScaleTransform3D>通过相对于中心点指定的比例向量中更改模型的比例。 可以指定等比缩放，即在 X、Y 和 Z 轴上将模型缩放同样的值来按比例更改模型的大小。 例如，设置转换的<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>， <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>，和<xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A>属性设置为 0.5 减半模型大小; 将相同的属性设置为 2 两倍，其在所有三个轴的刻度。  
+ <xref:System.Windows.Media.Media3D.ScaleTransform3D> 通过相对于中心点指定的比例向量中更改模型的比例。 可以指定等比缩放，即在 X、Y 和 Z 轴上将模型缩放同样的值来按比例更改模型的大小。 例如，设置转换的<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>， <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>，和<xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A>属性设置为 0.5 减半模型大小; 将相同的属性设置为 2 两倍，其在所有三个轴的刻度。  
   
  ![统一 ScaleTransform3D](../../../../docs/framework/wpf/graphics-multimedia/media/threecubes-uniformscale-1.png "threecubes_uniformscale_1")  
 ScaleVector 示例  
@@ -87,7 +75,7 @@ ScaleVector 示例
   
  若要“就地”旋转模型，请将模型的实际中心指定为旋转中心。 由于几何形状通常围绕原点建模，因此，在依次执行下列操作时通常将获取一组预期的转换结果：调整模型大小（缩放该模型），然后设置模型方向（旋转该模型），最后将模型移到所需的位置（平移该模型）。  
   
- ![旋转 60 度在 x &#45;和 y &#45; 轴](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
+ ![旋转 60 度在 x&#45;和 y&#45;轴](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
 旋转示例  
   
  指定了轴和角度的旋转非常适于静态转换和某些动画。 但是，请考虑围绕 X 轴将立方体模型旋转 60 度，然后围绕 Z 轴将其旋转 45 度。 可以将这种转换描述为两个离散的仿射转换，也可以将其描述为一个矩阵。 但是，对于按照这种方式定义的旋转，可能很难顺利地进行动画处理。 尽管按照这两种方法计算的模型起始位置和结束位置相同，但是，从计算的角度来看，无法确定该模型经过的中间位置。 四元数提供了一种用来在旋转的起始位置和结束位置之间计算内插值的替代方法。  

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataAssemblyImport 接口"
-ms.custom: 
+title: IMetaDataAssemblyImport 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyImport
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 29c6fba5-4cea-417d-b484-7ed22ebff1c9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 992b588d16bc221f6b72044da40d09fbb6894511
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da75f98edb54080658dc86f48d4ebb458d72f20d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyimport-interface"></a>IMetaDataAssemblyImport 接口
 提供访问和检查程序集清单内容的方法。  
@@ -56,14 +44,14 @@ ms.lasthandoff: 12/22/2017
 |[GetFileProps 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getfileprops-method.md)|获取指定的文件的属性设置。|  
 |[GetManifestResourceProps 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getmanifestresourceprops-method.md)|获取指定的清单资源的属性设置。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：**用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

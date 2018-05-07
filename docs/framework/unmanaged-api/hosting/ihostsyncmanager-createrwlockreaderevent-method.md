@@ -1,14 +1,6 @@
 ---
-title: "IHostSyncManager::CreateRWLockReaderEvent 方法"
-ms.custom: 
+title: IHostSyncManager::CreateRWLockReaderEvent 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateRWLockReaderEvent
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 68c4ea19-c47c-45c6-b420-d3a2ba1c2d50
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b583e7b5dd1a83ecb891591c25802ae257ad7c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb2a7a6650da03796628b647bc0b06174c576538
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreaterwlockreaderevent-method"></a>IHostSyncManager::CreateRWLockReaderEvent 方法
 为创建一个手动重置事件对象将读线程锁的实现。  
@@ -62,7 +50,7 @@ HRESULT CreateRWLockReaderEvent (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`CreateRWLockReaderEvent`已成功返回。|  
+|S_OK|`CreateRWLockReaderEvent` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -73,14 +61,14 @@ HRESULT CreateRWLockReaderEvent (
 ## <a name="remarks"></a>备注  
  CLR 调用`CreateRWLockReaderEvent`获取对引用`IHostManualEvent`实例，以使用在其实现中将读线程锁。 主机可以使用 cookie 来确定哪些任务在通过查询读取器锁等待[ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)接口。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRSyncManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

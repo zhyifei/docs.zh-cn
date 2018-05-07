@@ -1,14 +1,6 @@
 ---
 title: 如何：设置安全模式
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,16 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-caps.latest.revision: 22
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: bdfd273f7a541cac4f1fd8a03a976d73e997b718
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: ddcf6983a7308bc1a615b11e86f17da1302d5085
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>如何：设置安全模式
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 安全有三个常用安全模式：传输、消息和“使用消息凭据的传输”，这三种模式存在于大多数预定义绑定中。 另外，还有两种特定于两个绑定的模式：<xref:System.ServiceModel.BasicHttpBinding> 上的“transport-credential only”模式和 <xref:System.ServiceModel.NetMsmqBinding> 上的“Both”模式。 不过，本主题主要讨论三种常见安全模式：<xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message> 和 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
+Windows Communication Foundation (WCF) 安全有三个存在于大多数预定义绑定的常见安全模式： 传输、 消息和"使用消息凭据的传输"。 另外，还有两种特定于两个绑定的模式：<xref:System.ServiceModel.BasicHttpBinding> 上的“transport-credential only”模式和 <xref:System.ServiceModel.NetMsmqBinding> 上的“Both”模式。 不过，本主题主要讨论三种常见安全模式：<xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message> 和 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
   
  请注意，并非所有预定义绑定都支持所有这些模式。 本主题使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 类来设置模式，并演示如何以编程方式来设置安全模式，如何通过配置来设置安全模式。  
   

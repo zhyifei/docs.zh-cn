@@ -1,14 +1,6 @@
 ---
 title: 如何：创建安全令牌服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-caps.latest.revision: 12
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 827fef90a6277387ceac1c8f1d6df00a69a5d612
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 364d4e6b1009993c11a7f23edcd262de4ad435c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-security-token-service"></a>如何：创建安全令牌服务
 安全令牌服务实现在 WS-Trust 规范中定义的协议。 此协议为颁发、续订、取消和验证安全令牌定义消息格式和消息交换模式。 给定的安全令牌服务提供这些功能中的一个或多个功能。 本主题考虑最常见的情况：实现令牌颁发。  

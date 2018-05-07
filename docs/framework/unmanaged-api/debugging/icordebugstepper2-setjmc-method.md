@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugStepper2::SetJMC 方法"
-ms.custom: 
+title: ICorDebugStepper2::SetJMC 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugStepper2.SetJMC
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f5cdc135-6db4-4b32-9dd1-260ec58b774f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7fbbe0d3e42df073a5718ca037b44f6f2f31ec23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ad05d2f6226d570fc854fb48575851dd718e410
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugstepper2setjmc-method"></a>ICorDebugStepper2::SetJMC 方法
 设置一个值，指定是否有此 ICorDebugStepper 步骤只能通过由应用程序的开发人员创作的代码。 此过程也称为认为只我的代码 (JMC) 调试。  
@@ -50,11 +38,11 @@ HRESULT SetJMC (
  `fIsJMCStepper`  
  [in]设置为`true`逐句通过代码是由应用程序的开发人员创作; 否则，设置为仅`false`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

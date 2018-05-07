@@ -1,13 +1,6 @@
 ---
-title: "资源和代码"
-ms.custom: 
+title: 资源和代码
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 772c44b63627204da7056a5707f2840a82053f11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27b72d4be9012caf388c90d52a61d9837713c71f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resources-and-code"></a>资源和代码
 本概述主要介绍如何使用代码（而非 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 语法）来访问或创建 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 资源。 有关常规资源用法以及 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法角度的资源的详细信息，请参阅 [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="accessing"></a>   
 ## <a name="accessing-resources-from-code"></a>从代码访问资源  
- 用于识别通过 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 定义的资源的键也用于检索特定资源（如果你在代码中请求此资源）。 从代码中检索资源的最简单方法是调用<xref:System.Windows.FrameworkElement.FindResource%2A>或<xref:System.Windows.FrameworkElement.TryFindResource%2A>从应用程序中的框架级别对象的方法。 这两个方法之间的行为差异在于当未找到所请求的键时所发生的情况。 <xref:System.Windows.FrameworkElement.FindResource%2A>引发异常;<xref:System.Windows.FrameworkElement.TryFindResource%2A>不会引发异常，但返回`null`。 每个方法都将资源键作为一个输入参数，并返回一个松散类型化对象。 资源键通常是字符串，但有时也用作非字符串；有关详细信息，请参阅[将对象用作键](#objectaskey)部分。 通常应将返回的对象强制转换为请求资源时设置的属性所要求的类型。 代码资源解析的查找逻辑与动态资源引用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 情况相同。 对资源的搜索从调用元素开始，然后继续搜索逻辑树中的后续父元素。 如果必要，将继续查找应用程序资源、主题以及系统资源。 资源的代码请求将正确地说明资源字典（可能排在从 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 加载的资源字典之后）中的运行时更改，也将说明实时系统资源更改。  
+ 用于识别通过 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 定义的资源的键也用于检索特定资源（如果你在代码中请求此资源）。 从代码中检索资源的最简单方法是调用<xref:System.Windows.FrameworkElement.FindResource%2A>或<xref:System.Windows.FrameworkElement.TryFindResource%2A>从应用程序中的框架级别对象的方法。 这两个方法之间的行为差异在于当未找到所请求的键时所发生的情况。 <xref:System.Windows.FrameworkElement.FindResource%2A> 引发异常;<xref:System.Windows.FrameworkElement.TryFindResource%2A>不会引发异常，但返回`null`。 每个方法都将资源键作为一个输入参数，并返回一个松散类型化对象。 资源键通常是字符串，但有时也用作非字符串；有关详细信息，请参阅[将对象用作键](#objectaskey)部分。 通常应将返回的对象强制转换为请求资源时设置的属性所要求的类型。 代码资源解析的查找逻辑与动态资源引用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 情况相同。 对资源的搜索从调用元素开始，然后继续搜索逻辑树中的后续父元素。 如果必要，将继续查找应用程序资源、主题以及系统资源。 资源的代码请求将正确地说明资源字典（可能排在从 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 加载的资源字典之后）中的运行时更改，也将说明实时系统资源更改。  
   
  以下是一个简短代码示例，按的键查找资源并使用返回的值来设置属性，作为实现<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件处理程序。  
   

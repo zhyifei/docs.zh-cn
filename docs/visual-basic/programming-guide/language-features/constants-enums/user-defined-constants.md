@@ -1,13 +1,6 @@
 ---
 title: 用户定义的常量 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - constants [Visual Basic], circular references
 - Const statement [Visual Basic], user-defined constants
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9f4210193aeb386d3a4a76794cc9329cb24b2317
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b4a7e2b63b930b98ee082c0104c24f6857b5b35b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-constants-visual-basic"></a>用户定义的常量 (Visual Basic)
 常量是有意义的名称发生的数字或字符串不会更改。 顾名思义，常量存储在应用程序的执行过程中保持不变的值。 你可以使用由控件或你使用的组件定义的常量或可以创建你自己。 你自己创建的常量被描述为*用户定义*。  

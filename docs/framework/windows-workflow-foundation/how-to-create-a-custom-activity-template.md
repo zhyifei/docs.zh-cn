@@ -1,26 +1,15 @@
 ---
-title: "如何：创建自定义活动模板"
-ms.custom: 
+title: 如何：创建自定义活动模板
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 772ad2a7ea56001bf3ecba089e62d6bc0f59e5ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b455f8a763859d31405380e25cd7516856e8da2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>如何：创建自定义活动模板
-可使用自定义活动模板来自定义活动（包括自定义复合活动）的配置，使用户无需单独创建每个活动并手动配置其属性和其他设置。 这些自定义模板可以使其可在**工具箱**上[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]或从重新承载设计器中，从该用户可以将它们拖到预配置的设计图面。 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]附带了很好此类模板的示例： [SendAndReceiveReply 模板设计器](/visualstudio/workflow-designer/sendandreceivereply-template-designer)和[ReceiveAndSendReply 模板设计器](/visualstudio/workflow-designer/receiveandsendreply-template-designer)中[消息传递活动设计器](/visualstudio/workflow-designer/messaging-activity-designers)类别。  
+可使用自定义活动模板来自定义活动（包括自定义复合活动）的配置，使用户无需单独创建每个活动并手动配置其属性和其他设置。 这些自定义模板可以使其可在**工具箱**上[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]或从重新承载设计器中，从该用户可以将它们拖到预配置的设计图面。 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 附带了很好此类模板的示例： [SendAndReceiveReply 模板设计器](/visualstudio/workflow-designer/sendandreceivereply-template-designer)和[ReceiveAndSendReply 模板设计器](/visualstudio/workflow-designer/receiveandsendreply-template-designer)中[消息传递活动设计器](/visualstudio/workflow-designer/messaging-activity-designers)类别。  
   
  本主题中的第一个过程描述如何创建自定义活动模板**延迟**活动和第二个过程简要介绍如何在中提供[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]验证该自定义模板是否有效。  
   
@@ -30,11 +19,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  启动 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  上**文件**菜单上，指向**新建**，然后选择**项目**。  
+2.  在“文件”菜单上，指向“新建”，然后选择“项目”。  
   
      **“新建项目”** 对话框随即打开。  
   
-3.  在**项目类型**窗格中，选择**工作流**从**Visual C#**项目或**Visual Basic**分组，具体取决于你语言首选项。  
+3.  在**项目类型**窗格中，选择**工作流**从**Visual C#** 项目或**Visual Basic**分组，具体取决于你语言首选项。  
   
 4.  在**模板**窗格中，选择**活动库**。  
   
@@ -44,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  右击 DelayActivityTemplate 项目中的引用目录**解决方案资源管理器**选择**添加引用**以打开**添加引用**对话框。  
   
-8.  转到**.NET**选项卡并选择**PresentationFramework**从**组件名称**列在左侧和单击**确定**添加的引用对 PresentationFramework.dll 文件中。  
+8.  转到 **.NET**选项卡并选择**PresentationFramework**从**组件名称**列在左侧和单击**确定**添加的引用对 PresentationFramework.dll 文件中。  
   
 9. 重复此过程以添加对 System.Activities.Presentation.dll 文件和 WindowsBase.dll 文件的引用。  
   

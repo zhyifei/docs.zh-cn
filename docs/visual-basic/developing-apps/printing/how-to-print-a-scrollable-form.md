@@ -1,22 +1,15 @@
 ---
-title: "如何：打印可滚动的窗体 (Visual Basic)"
+title: 如何：打印可滚动的窗体 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - entire form [Visual Basic], printing
 - scrollable form [Visual Basic], printing
 ms.assetid: 1196e1cf-b77f-4928-a3e4-85b51ba3787d
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 380e0f833dc69718142809c99ed7615256dd2e73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d43c2e0e564f6f0c37831cd3105a16c4bc4aaea0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-print-a-scrollable-form-visual-basic"></a>如何：打印可滚动的窗体 (Visual Basic)
 通过 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 组件，可以在不使用 <xref:System.Drawing.Printing.PrintDocument> 组件的情况下快速打印窗体的图像。 默认情况下，只打印窗体当前可见部分；如果用户在运行时调整了窗体的大小，则可能无法按预期打印图像。 下面的过程演示如何打印可滚动窗体的完整工作区，即使已调整该窗体大小。  
@@ -40,7 +33,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  在某些操作系统上，通过 <xref:System.Drawing.Graphics> 方法绘制的文本或图形可能无法正确打印。 在这种情况下，你将无法使用 `Scrollable` 参数进行打印。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
  [PrintForm 组件](../../../visual-basic/developing-apps/printing/printform-component.md)  

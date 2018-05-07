@@ -1,11 +1,6 @@
 ---
-title: "Like 运算符 (Visual Basic)"
+title: Like 运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Like
 - vb.Like
@@ -27,14 +22,11 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9c672a397510c69c9ee67358689feff80d8831a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="like-operator-visual-basic"></a>Like 运算符 (Visual Basic)
 将字符串与模式进行比较。  
@@ -47,13 +39,13 @@ result = string Like pattern
   
 ## <a name="parts"></a>部件  
  `result`  
- 必需。 任何`Boolean`变量。 结果是`Boolean`值，该值指示是否`string`满足`pattern`。  
+ 必须的。 任何`Boolean`变量。 结果是`Boolean`值，该值指示是否`string`满足`pattern`。  
   
  `string`  
- 必需。 任何 `String` 表达式。  
+ 必须的。 任何 `String` 表达式。  
   
  `pattern`  
- 必需。 任何`String`符合"备注。"中所述的模式匹配的约定的表达式  
+ 必须的。 任何`String`符合"备注。"中所述的模式匹配的约定的表达式  
   
 ## <a name="remarks"></a>备注  
  如果中的值`string`满足中包含的模式`pattern`，`result`是`True`。 如果字符串不符合该模式中，`result`是`False`。 如果这两个`string`和`pattern`都是空字符串，则结果是`True`。  
@@ -64,13 +56,13 @@ result = string Like pattern
 ## <a name="pattern-options"></a>模式选项  
  内置的模式匹配的字符串比较提供通用工具。 模式匹配功能可让你中的每个字符相匹配`string`针对特定的字符、 通配符、 字符列表或字符范围。 下表显示在允许的字符数`pattern`和它们的匹配。  
   
-|中的字符`pattern`|中的匹配项`string`|  
+|中的字符 `pattern`|中的匹配项 `string`|  
 |-----------------------------|-------------------------|  
 |`?`|任何单个字符|  
 |`*`|零个或多个字符|  
 |`#`|任何单个数字 (0-9)|  
-|`[charlist]`|任何单个字符`charlist`|  
-|`[!charlist]`|不在任何单个字符`charlist`|  
+|`[charlist]`|任何单个字符 `charlist`|  
+|`[!charlist]`|不在任何单个字符 `charlist`|  
   
 ## <a name="character-lists"></a>字符列表  
  一组的一个或多个字符 (`charlist`) 用括号括起来 (`[ ]`) 可以使用来匹配任何单个字符`string`并且可以包含几乎任何字符代码，包括数字。  
@@ -109,7 +101,7 @@ result = string Like pattern
   
  [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
  <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
  [比较运算符](../../../visual-basic/language-reference/operators/comparison-operators.md)  

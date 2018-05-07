@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::CreateDomainEx 方法"
-ms.custom: 
+title: ICorRuntimeHost::CreateDomainEx 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.CreateDomainEx
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1bdde382-f8ba-4cc8-94b2-d1ac919c585e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a2a577e1bd8765c7359e521b007bea943de7a984
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e851cf16e4b23b1f8510c4d96b23c01eb726a77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehostcreatedomainex-method"></a>ICorRuntimeHost::CreateDomainEx 方法
 创建应用程序域。 调用方会收到类型的接口指针<xref:System._AppDomain>，到类型的实例<xref:System.AppDomain?displayProperty=nameWithType>。 此方法允许调用方传递一个 IAppDomainSetup 实例，以便配置其他功能，则返回的<xref:System._AppDomain>实例。  
@@ -72,9 +60,9 @@ HRESULT CreateDomainEx (
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
   
 ## <a name="remarks"></a>备注  
- `CreateDomainEx`扩展的功能[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)通过允许调用方传入`IAppDomainSetup`实例与用于配置应用程序域的属性值。  
+ `CreateDomainEx` 扩展的功能[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)通过允许调用方传入`IAppDomainSetup`实例与用于配置应用程序域的属性值。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  

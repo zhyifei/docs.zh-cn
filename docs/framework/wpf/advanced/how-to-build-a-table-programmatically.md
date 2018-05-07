@@ -1,31 +1,17 @@
 ---
-title: "如何：以编程方式生成表"
-ms.custom: 
+title: 如何：以编程方式生成表
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tables [WPF], creating programmatically
 ms.assetid: e3ca88f3-6e94-4b61-82fc-42104c10b761
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fca6a304ea12dd90a71f8718fed5f1595f4cd4b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74f16935a496e4315038cc7c5ea37efef3e5f2f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-build-a-table-programmatically"></a>如何：以编程方式生成表
 下面的示例演示如何以编程方式创建<xref:System.Windows.Documents.Table>和填充其内容。 表的内容分配到五个行 (由表示<xref:System.Windows.Documents.TableRow>中所含对象<xref:System.Windows.Documents.Table.RowGroups%2A>对象) 和六个列 (由表示<xref:System.Windows.Documents.TableColumn>对象)。 各行用于不同的显示目的，其中，标题行用于显示整个表的标题，标头行用于描述表中的数据列，而页脚行则包含摘要信息。  请注意，“标题”行、“标头”行和“页脚”行并非表格所固有的，它们只是具有不同特征的行。 表格单元格包含实际的内容，它可以包含文本、 图像或几乎任何其他[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]元素。  

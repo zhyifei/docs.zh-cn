@@ -1,13 +1,6 @@
 ---
-title: "如何：使用线条、曲线和形状创建图形"
-ms.custom: 
+title: 如何：使用线条、曲线和形状创建图形
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from shapes
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40520f566beafc83075d0563148b5d0f9bd4fe85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 222245fa4b3b593e0a38752a8cb991a12e469698
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>如何：使用线条、曲线和形状创建图形
 若要创建一个数字，构造<xref:System.Drawing.Drawing2D.GraphicsPath>，然后调用方法，如<xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>和<xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>，以将基元添加到路径。  

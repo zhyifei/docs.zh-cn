@@ -1,34 +1,20 @@
 ---
 title: 客户端配置
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c2c0d17c7274cc9fdaf1b5080950ddb4f69f539a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-configuration"></a>客户端配置
-可以使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端配置来指定客户端终结点的地址 (Address)、绑定 (Binding)、行为 (Behavior) 和协定 (Contract)，即客户端终结点的“ABC”属性来连接服务终结点。 [\<客户端 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)元素具有[\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)其属性用于配置终结点的 abc 属性的元素。 这些属性将在本主题的“配置终结点”一节中讨论。  
+Windows Communication Foundation (WCF) 客户端配置可用于指定地址、 绑定、 行为和协定，客户端终结点，哪些客户端用于连接到服务终结点的"ABC"属性。 [\<客户端 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)元素具有[\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)其属性用于配置终结点的 abc 属性的元素。 这些属性将在本主题的“配置终结点”一节中讨论。  
   
  [\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素还包含[\<元数据 >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)元素，用于指定用于导入和导出元数据，设置[ \<标头 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)包含自定义地址标头的集合的元素和[\<标识 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)进行身份验证的其他终结点的终结点的元素交换与其消息。 [\<标头 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)和[\<标识 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)元素属于<xref:System.ServiceModel.EndpointAddress>进行讨论[地址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)主题。 本主题的“配置元数据”子节中提供了一些主题链接，这些主题对元数据扩展的使用进行说明。  
   
 ## <a name="configuring-endpoints"></a>配置终结点  
- 客户端配置旨在允许客户端指定一个或多个终结点，每个都有其自己的名称，地址、 和协定，与每个引用[\<绑定 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)和[ \<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)要用于配置该终结点的客户端配置中的元素。 客户端配置文件应命名为“App.config”，因为这是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 运行库所期望的名称。 下面的示例演示一个客户端配置文件。  
+ 客户端配置旨在允许客户端指定一个或多个终结点，每个都有其自己的名称，地址、 和协定，与每个引用[\<绑定 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)和[ \<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)要用于配置该终结点的客户端配置中的元素。 客户端配置文件应命名为"App.config"因为这是 WCF 运行时需要的名称。 下面的示例演示一个客户端配置文件。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

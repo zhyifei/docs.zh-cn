@@ -1,11 +1,6 @@
 ---
 title: Visual Basic 中的数组
-ms.custom: ''
 ms.date: 12/06/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Array
 helpviewer_keywords:
@@ -14,12 +9,11 @@ helpviewer_keywords:
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 author: rpetrusha
 ms.author: ronpet
-ms.manager: wpickett
-ms.openlocfilehash: d223ca8b0ff59a13c31fa777e5cb6a97918421c6
-ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
+ms.openlocfilehash: 3b6c1db0131f2a150dc1b00dd5e6dafc3a418f05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的数组
 数组是一组值，称为*元素*，，逻辑上彼此相关。 例如，数组可能包含的语法学校; 每个年级的学生的数量数组的每个元素是单个年级的学生的数量。 同样，数组可能包含的类，则的学生成绩数组的每个元素是单个评分。    
@@ -165,7 +159,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  [!code-vb[iterate-one-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]  
   
- 下面的示例循环访问一个多维数组使用[ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md)语句。 <xref:System.Array.GetUpperBound%2A> 方法具有用于指定维度的参数。 `GetUpperBound(0)`返回的最高的第一个维度的索引和`GetUpperBound(1)`返回第二个维度的最高的索引。
+ 下面的示例循环访问一个多维数组使用[ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md)语句。 <xref:System.Array.GetUpperBound%2A> 方法具有用于指定维度的参数。 `GetUpperBound(0)` 返回的最高的第一个维度的索引和`GetUpperBound(1)`返回第二个维度的最高的索引。
   
  [!code-vb[iterate-two-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]  
   
@@ -246,12 +240,12 @@ Dim sales()() As Double = New Double(11)() {}
 [!code-vb[jagged-array-size](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-length.vb)] 
 
 ## <a name="zero-length-arrays"></a>零长度数组  
-Visual Basic 区分未初始化的数组 (其值是一个数组`Nothing`) 和一个*零长度数组*或空数组 （不包含任何元素的数组。）未初始化的数组是指不维度化或已分配给它的任何值。 例如: 
+Visual Basic 区分未初始化的数组 (其值是一个数组`Nothing`) 和一个*零长度数组*或空数组 （不包含任何元素的数组。）未初始化的数组是指不维度化或已分配给它的任何值。 例如：
 
 ```vb
 Dim arr() As String
 ```
-一个零长度数组声明一个尺寸为-1。 例如: 
+一个零长度数组声明一个尺寸为-1。 例如：
 
 ```vb
 Dim arrZ(-1) As String
@@ -328,7 +322,7 @@ Dim arrZ(-1) As String
 |[如何：将一个数组赋给另一个数组](../../../../visual-basic/programming-guide/language-features/arrays/how-to-assign-one-array-to-another-array.md)|说明将数组分配到另一个数组变量的规则和步骤。|  
 |[数组疑难解答](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)|讨论在使用数组时出现的一些常见问题。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Array?displayProperty=nameWithType>  
  [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)  
  [ReDim 语句](../../../../visual-basic/language-reference/statements/redim-statement.md)

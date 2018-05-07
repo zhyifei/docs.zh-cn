@@ -1,23 +1,12 @@
 ---
-title: "在 WF 中创建异步活动"
-ms.custom: 
+title: 在 WF 中创建异步活动
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d06f825b96f66e35bdd30db272b99bb4e2e3e1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>在 WF 中创建异步活动
 <xref:System.Activities.AsyncCodeActivity> 提供一个可供活动作者使用的基类，该基类允许派生的活动实现异步执行逻辑。 这对如下自定义活动非常有用：必须执行异步工作，而不会保持工作流计划程序线程并阻止可以并行运行的所有活动。 本主题概述了如何使用 <xref:System.Activities.AsyncCodeActivity> 创建自定义异步活动。  
@@ -26,7 +15,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Activities?displayProperty=nameWithType> 为自定义活动作者提供了不同基类，以满足不同的活动创作需求。 每一种基类都采用特定语义，并为工作流作者（和活动运行时）提供相应协定。 基于 <xref:System.Activities.AsyncCodeActivity> 的活动是指异步执行工作（相对于计划程序线程）且以托管代码表示其执行逻辑的活动。 由于将异步执行，因此 <xref:System.Activities.AsyncCodeActivity> 可能会在执行时引入一个空闲点。 鉴于异步工作灵活多变的性质，<xref:System.Activities.AsyncCodeActivity> 始终创建一个非持久性块来持久执行活动。 这可以防止工作流运行时在异步工作中持久化工作流实例，还可以防止工作流实例在执行异步代码时进行卸载。  
   
 ### <a name="asynccodeactivity-methods"></a>AsyncCodeActivity 方法  
- 从 <xref:System.Activities.AsyncCodeActivity> 派生的活动可以通过用自定义代码重写 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 方法来创建异步执行逻辑。 当运行时调用这些方法时，会向这些方法传递一个 <xref:System.Activities.AsyncCodeActivityContext>。 <xref:System.Activities.AsyncCodeActivityContext>允许活动作者可以提供跨共享的状态<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>的上下文中<xref:System.Activities.AsyncCodeActivityContext.UserState%2A>属性。 在下面的示例中，`GenerateRandom` 活动异步生成一个随机数。  
+ 从 <xref:System.Activities.AsyncCodeActivity> 派生的活动可以通过用自定义代码重写 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 方法来创建异步执行逻辑。 当运行时调用这些方法时，会向这些方法传递一个 <xref:System.Activities.AsyncCodeActivityContext>。 <xref:System.Activities.AsyncCodeActivityContext> 允许活动作者可以提供跨共享的状态<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>的上下文中<xref:System.Activities.AsyncCodeActivityContext.UserState%2A>属性。 在下面的示例中，`GenerateRandom` 活动异步生成一个随机数。  
   
  [!code-csharp[CFX_ActivityExample#8](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#8)]  
   

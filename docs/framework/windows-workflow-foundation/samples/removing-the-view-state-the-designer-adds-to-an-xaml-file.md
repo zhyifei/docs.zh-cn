@@ -1,23 +1,12 @@
 ---
-title: "移除设计器添加到 XAML 文件的视图状态"
-ms.custom: 
+title: 移除设计器添加到 XAML 文件的视图状态
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5da4423b5f6106bde106de739a8a33e351d17c3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f63723c29c76854602308ba3e8d7e6dd65d9fb94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>移除设计器添加到 XAML 文件的视图状态
 此示例演示如何创建派生自 <xref:System.Windows.Markup.XamlWriter> 的类以及如何从 XAML 文件中移除视图状态。 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 会将信息写入称作视图状态的 XAML 文档中。 视图状态是指设计时所需的信息（如布局定位），运行时不需要此信息。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 将此信息插入正在编辑的 XAML 文档中。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 使用 `mc:Ignorable` 特性将视图状态写入 XAML 文件中，因此在运行时加载 XAML 文件时不会加载此信息。 此示例演示如何创建一个类，此类将在处理 XAML 节点时移除视图状态信息。  
@@ -129,6 +118,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

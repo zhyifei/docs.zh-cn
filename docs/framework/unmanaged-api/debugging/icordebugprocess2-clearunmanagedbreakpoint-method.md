@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugProcess2::ClearUnmanagedBreakpoint 方法"
-ms.custom: 
+title: ICorDebugProcess2::ClearUnmanagedBreakpoint 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugProcess2.ClearUnmanagedBreakpoint
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14258ef1ae473fc867d86c89ec877ddbf8c80213
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc34ab9c8dbfe10282f36a241a4e433debef7dd0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint 方法
 删除以前设置给定的地址处的断点。  
@@ -57,11 +45,11 @@ HRESULT ClearUnmanagedBreakpoint (
   
  `ClearUnmanagedBreakpoint`方法返回了失败代码，如果在仅托管模式下附加调试器，或指定地址处不存在任何断点。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

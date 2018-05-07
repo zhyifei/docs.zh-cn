@@ -1,14 +1,6 @@
 ---
-title: "IHostMAlloc::DebugAlloc 方法"
-ms.custom: 
+title: IHostMAlloc::DebugAlloc 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMAlloc.DebugAlloc
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63249f6ce64071ddaa2bb9dff221ae40d924bbfe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8447f6fa2771128c1bdf424cb9aac141b2dfd486
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc 方法
 请求主机从堆中，分配指定的数量的内存和此外跟踪分配内存时。  
@@ -70,7 +58,7 @@ HRESULT DebugAlloc (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`DebugAlloc`已成功返回。|  
+|S_OK|`DebugAlloc` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -79,16 +67,16 @@ HRESULT DebugAlloc (
 |E_OUTOFMEMORY|可用于完成分配请求没有足够的内存。|  
   
 ## <a name="remarks"></a>备注  
- CLR 获取到的接口指针[IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)实例通过调用[ihostmemorymanager:: Createmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)方法。 `DebugAlloc`允许运行时获取代码文件信息以供在调试期间使用。  
+ CLR 获取到的接口指针[IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)实例通过调用[ihostmemorymanager:: Createmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)方法。 `DebugAlloc` 允许运行时获取代码文件信息以供在调试期间使用。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  

@@ -1,27 +1,15 @@
 ---
-title: "PropertyPath XAML 语法"
-ms.custom: 
+title: PropertyPath XAML 语法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9778094eb098d1e119ef4ef0c25dd022130a11ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 547c7d009d2fecf863284324c7ea45006d20d20c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 语法
 <xref:System.Windows.PropertyPath>对象支持复杂内联[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]设置需要的各种属性的语法<xref:System.Windows.PropertyPath>作为其值的类型。 本主题讨论<xref:System.Windows.PropertyPath>语法应用于绑定和动画的语法。  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="where"></a>   
 ## <a name="where-propertypath-is-used"></a>PropertyPath 的使用情景  
- <xref:System.Windows.PropertyPath>是一个用于多种的公共对象[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]功能。 尽管使用此通用<xref:System.Windows.PropertyPath>为了属性路径信息，每个用法功能区域其中<xref:System.Windows.PropertyPath>用作类型而变化。 因此，基于每个功能来讨论语法更为可行。  
+ <xref:System.Windows.PropertyPath> 是一个用于多种的公共对象[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]功能。 尽管使用此通用<xref:System.Windows.PropertyPath>为了属性路径信息，每个用法功能区域其中<xref:System.Windows.PropertyPath>用作类型而变化。 因此，基于每个功能来讨论语法更为可行。  
   
  主要原因是，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.PropertyPath>来描述对象模型以遍历对象数据源的属性的路径，并可进行说明目标动画的目标路径。  
   
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="propertypath-for-objects-in-data-binding"></a>数据绑定中对象的 PropertyPath  
  数据绑定是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，借此可以绑定到任意依赖属性的目标值。 但是，此类数据绑定的源不需要是依赖属性；可以是适用数据提供程序能识别的任意属性类型。 属性路径特别适用于<xref:System.Windows.Data.ObjectDataProvider>，它用于获取从绑定源[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象及其属性。  
   
- 请注意，数据绑定到[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]不使用<xref:System.Windows.PropertyPath>，因为它不使用<xref:System.Windows.Data.Binding.Path%2A>中<xref:System.Windows.Data.Binding>。 相反，你使用<xref:System.Windows.Data.Binding.XPath%2A>并指定有效的 XPath 语法，到[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]的数据。 <xref:System.Windows.Data.Binding.XPath%2A>此外指定为字符串，但未在此处; 介绍请参阅[将绑定到 XML 数据使用 XPath 查询和 XMLDataProvider](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
+ 请注意，数据绑定到[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]不使用<xref:System.Windows.PropertyPath>，因为它不使用<xref:System.Windows.Data.Binding.Path%2A>中<xref:System.Windows.Data.Binding>。 相反，你使用<xref:System.Windows.Data.Binding.XPath%2A>并指定有效的 XPath 语法，到[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]的数据。 <xref:System.Windows.Data.Binding.XPath%2A> 此外指定为字符串，但未在此处; 介绍请参阅[将绑定到 XML 数据使用 XPath 查询和 XMLDataProvider](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
   
  理解数据绑定中的属性路径的关键是将绑定到单个属性值设置为目标，或者改为绑定到采用列表或集合的目标属性。 如果你正在绑定集合，例如绑定<xref:System.Windows.Controls.ListBox>，将根据多少数据项是在集合中，展开然后属性路径应引用集合对象，而不是单个集合项。 数据绑定引擎将匹配集合用作数据源绑定目标的类型为自动，导致的行为，例如填充<xref:System.Windows.Controls.ListBox>具有项数组。  
   
@@ -70,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 <Binding Path="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName`必须解析为当前的属性的名称<xref:System.Windows.FrameworkElement.DataContext%2A>。 路径属性 `propertyName` 和 `propertyName2` 可以是关系中的任意属性，其中 `propertyName2` 是存在于类型中的值为 `propertyName` 的属性。  
+ `propertyName` 必须解析为当前的属性的名称<xref:System.Windows.FrameworkElement.DataContext%2A>。 路径属性 `propertyName` 和 `propertyName2` 可以是关系中的任意属性，其中 `propertyName2` 是存在于类型中的值为 `propertyName` 的属性。  
   
 <a name="singleattached"></a>   
 ### <a name="single-property-attached-or-otherwise-type-qualified"></a>附加的或类型限定的单个属性  
@@ -166,7 +154,7 @@ or
 <animation Storyboard.TargetProperty="propertyName" .../>  
 ```  
   
- `propertyName`必须解析为存在于指定的依赖项属性的名称<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。  
+ `propertyName` 必须解析为存在于指定的依赖项属性的名称<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。  
   
 <a name="indirectanim"></a>   
 ### <a name="indirect-property-targeting"></a>间接属性目标设定  
@@ -175,7 +163,7 @@ or
 <animation Storyboard.TargetProperty="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName`必须是一个属性，可以是<xref:System.Windows.Freezable>值类型或基元，存在于指定<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。  
+ `propertyName` 必须是一个属性，可以是<xref:System.Windows.Freezable>值类型或基元，存在于指定<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。  
   
  `propertyName2` 必须为依赖属性的名称，该属性存在于作为 `propertyName` 值的对象中。 换而言之，`propertyName2`作为依赖项属性的类型上必须存在`propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>。  
   

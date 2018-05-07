@@ -1,13 +1,6 @@
 ---
-title: "演练：对用户控件启用拖放功能"
-ms.custom: 
+title: 演练：对用户控件启用拖放功能
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d87872d3009b46878b7b614c1aef728d5b1d511d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e4dba856b973f1210f2d088de3ed8ae5df2c6988
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>演练：对用户控件启用拖放功能
 本演练演示如何创建可在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中参与拖放数据传输的自定义用户控件。  
@@ -131,9 +119,9 @@ ms.lasthandoff: 01/19/2018
   
         -   `dragSource` – 对此控件的引用。  
   
-        -   `data`–<xref:System.Windows.DataObject>在前面的代码中创建。  
+        -   `data` –<xref:System.Windows.DataObject>在前面的代码中创建。  
   
-        -   `allowedEffects`-允许的拖放操作，它们是<xref:System.Windows.DragDropEffects.Copy>或<xref:System.Windows.DragDropEffects.Move>。  
+        -   `allowedEffects` -允许的拖放操作，它们是<xref:System.Windows.DragDropEffects.Copy>或<xref:System.Windows.DragDropEffects.Move>。  
   
 3.  按 F5 生成并运行该应用程序。  
   

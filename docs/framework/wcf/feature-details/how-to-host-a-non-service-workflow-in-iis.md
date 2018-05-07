@@ -1,24 +1,12 @@
 ---
-title: "如何：在 IIS 中承载非服务工作流"
-ms.custom: 
+title: 如何：在 IIS 中承载非服务工作流
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70fd6aca94f2addd7ee568e897171ae1da86db67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>如何：在 IIS 中承载非服务工作流
 可在 IIS/WAS 下承载不属于工作流服务的工作流。 这在您需要承载他人编写的工作流时非常有用。 例如，如果您重新承载工作流设计器，并允许用户创建自己的工作流。  通过在 IIS 中承载非服务工作流，可支持进程回收、空闲时关闭、进程运行状况监视和基于消息的激活等功能。 承载于 IIS 的工作流服务包含 <xref:System.ServiceModel.Activities.Receive> 活动，并在 IIS 接收到消息时激活。 非服务工作流不包含消息传递活动，默认情况下无法通过发送消息激活这些工作流。  您必须从 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 派生一个类，并定义包含创建工作流实例的操作的服务协定。 本主题将指导你完成创建简单工作流、 定义客户端可用来激活工作流服务协定和派生类从<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>它使用服务协定侦听工作流创建请求。  
@@ -332,7 +320,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  将 web.config 复制到你的 IIS 应用程序目录。  
   
-9. 通过启动 Internet Explorer 并浏览到 http://localhost/MyCreationEndpoint/Workflow1.xamlx，测试创建终结点是否在工作。 Internet Explorer 应显示下面的屏幕：  
+9. 测试以查看创建终结点是否正在工作通过启动 Internet Explorer 并浏览到http://localhost/MyCreationEndpoint/Workflow1.xamlx。 Internet Explorer 应显示下面的屏幕：  
   
      ![正在测试服务](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   

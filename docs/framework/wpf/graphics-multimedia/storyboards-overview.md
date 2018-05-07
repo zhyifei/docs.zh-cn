@@ -1,13 +1,6 @@
 ---
-title: "演示图板概述"
-ms.custom: 
+title: 演示图板概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 614b5cc4843dbb886fa9cb02c56b28452e9fae8a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 36922dce795443a4c1136f6442eff1c297f3c641
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="storyboards-overview"></a>演示图板概述
 本主题演示如何使用<xref:System.Windows.Media.Animation.Storyboard>对象来组织和应用动画。 它描述如何以交互方式操作<xref:System.Windows.Media.Animation.Storyboard>对象，并说明间接属性目标语法。  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="what-is-a-storyboard"></a>什么是情节提要？  
  动画并非唯一有用的时间线类型。 还提供了其他时间线类来帮助组织时间线集，并将时间线应用于属性。 容器时间线派生自<xref:System.Windows.Media.Animation.TimelineGroup>类，并包含<xref:System.Windows.Media.Animation.ParallelTimeline>和<xref:System.Windows.Media.Animation.Storyboard>。  
   
- A<xref:System.Windows.Media.Animation.Storyboard>是一种为它包含的时间线提供目标信息的容器时间线。 情节提要可以包含任何类型的<xref:System.Windows.Media.Animation.Timeline>，包括其他容器时间线和动画。 <xref:System.Windows.Media.Animation.Storyboard>对象使您能够合并影响各种对象和属性条时间线树，就可以更轻松来组织和控制复杂计时行为的时间线。 例如，假设需要一个执行以下三个操作的按钮。  
+ A<xref:System.Windows.Media.Animation.Storyboard>是一种为它包含的时间线提供目标信息的容器时间线。 情节提要可以包含任何类型的<xref:System.Windows.Media.Animation.Timeline>，包括其他容器时间线和动画。 <xref:System.Windows.Media.Animation.Storyboard> 对象使您能够合并影响各种对象和属性条时间线树，就可以更轻松来组织和控制复杂计时行为的时间线。 例如，假设需要一个执行以下三个操作的按钮。  
   
 -   当用户选择该按钮时，按钮增大并更改颜色。  
   
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/19/2018
   
 -   当该按钮变为禁用状态时，按钮缩小且不透明度缩减到 50%。  
   
- 在此情况下，有多组动画适用于同一对象，并且需要根据按钮的状态在不同的时间播放它们。 <xref:System.Windows.Media.Animation.Storyboard>对象可用于组织动画和组中将其应用到一个或多个对象。  
+ 在此情况下，有多组动画适用于同一对象，并且需要根据按钮的状态在不同的时间播放它们。 <xref:System.Windows.Media.Animation.Storyboard> 对象可用于组织动画和组中将其应用到一个或多个对象。  
   
 <a name="wherecanyouuseastoryboard"></a>   
 ## <a name="where-can-you-use-a-storyboard"></a>何处可以使用情节提要？  
@@ -72,9 +60,9 @@ ms.lasthandoff: 01/19/2018
   
 |情节提要开始时使用…|基于实例|样式|控件模板|数据模板|示例|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>和<xref:System.Windows.EventTrigger>|是|是|是|是|[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>和属性<xref:System.Windows.Trigger>|否|是|是|是|[在属性值更改时触发动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>和<xref:System.Windows.DataTrigger>|否|是|是|是|[如何：在数据更改时触发动画](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.EventTrigger>|是|是|是|是|[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 和属性 <xref:System.Windows.Trigger>|否|是|是|是|[在属性值更改时触发动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.DataTrigger>|否|是|是|是|[如何：在数据更改时触发动画](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|No|否|否|[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  下面的示例使用<xref:System.Windows.Media.Animation.Storyboard>要进行动画处理<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>元素和<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>用于进行绘制， <xref:System.Windows.Shapes.Rectangle>。  
@@ -107,7 +95,7 @@ ms.lasthandoff: 01/19/2018
   
  [!code-csharp[storyboards_ovw_snip#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#105)]  
   
- <xref:System.Windows.Freezable>类型是继承自这些类<xref:System.Windows.Freezable>类。 示例<xref:System.Windows.Freezable>包括<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.RotateTransform>，和<xref:System.Windows.Media.GradientStop>。  
+ <xref:System.Windows.Freezable> 类型是继承自这些类<xref:System.Windows.Freezable>类。 示例<xref:System.Windows.Freezable>包括<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.RotateTransform>，和<xref:System.Windows.Media.GradientStop>。  
   
  若要启用的目标<xref:System.Windows.Freezable>通过在动画[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，你使用[X:name 指令](../../../../docs/framework/xaml-services/x-name-directive.md)以将其分配一个名称。 在代码中，你使用<xref:System.Windows.NameScope.RegisterName%2A>方法以将其名称注册为其已创建的元素<xref:System.Windows.NameScope>。  
   
@@ -123,7 +111,7 @@ ms.lasthandoff: 01/19/2018
   
  [!code-csharp[storyboards_ovw_snip#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#107)]  
   
- <xref:System.Windows.Media.Animation.Storyboard>对象使用名称作用域来解决<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>属性。 有关 WPF 名称范围的详细信息，请参阅 [WPF XAML 名称范围](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)。 如果<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>省略属性、 动画目标元素上定义的或者，对于样式的样式元素。  
+ <xref:System.Windows.Media.Animation.Storyboard> 对象使用名称作用域来解决<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>属性。 有关 WPF 名称范围的详细信息，请参阅 [WPF XAML 名称范围](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)。 如果<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>省略属性、 动画目标元素上定义的或者，对于样式的样式元素。  
   
  有时，名称不能分配给<xref:System.Windows.Freezable>对象。 例如，如果<xref:System.Windows.Freezable>声明作为资源或用于设置属性值中一种样式，它不能为指定的名称。 由于该对象没有名称，因此不能直接以它为目标，但可以间接以它为目标。 下面几节描述如何使用间接目标。  
   
@@ -157,7 +145,7 @@ ms.lasthandoff: 01/19/2018
   
  下面的代码演示如何进行动画处理<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>用于设置  
   
- <xref:System.Windows.Shapes.Shape.Fill%2A>一个矩形元素。  
+ <xref:System.Windows.Shapes.Shape.Fill%2A> 一个矩形元素。  
   
  [!code-xaml[storyboards_ovw_snip_XAML#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#32)]  
   
@@ -234,7 +222,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="controllable_storyboards"></a>   
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>在 XAML 中以交互方式控制情节提要  
- 若要在中启动情节提要[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，你使用<xref:System.Windows.Media.Animation.BeginStoryboard>触发操作。 <xref:System.Windows.Media.Animation.BeginStoryboard>将分发到的对象和属性，它们进行动画处理，并启动情节提要的动画。 (有关此过程的详细信息，请参阅[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。)如果你向提供<xref:System.Windows.Media.Animation.BeginStoryboard>通过指定的名称及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>属性，你可以让它从此情节提要。 然后，可以在情节提要启动后以交互方式对它进行控制。 下面列出了可与事件触发器一起使用来控制情节提要的可控制情节提要操作。  
+ 若要在中启动情节提要[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，你使用<xref:System.Windows.Media.Animation.BeginStoryboard>触发操作。 <xref:System.Windows.Media.Animation.BeginStoryboard> 将分发到的对象和属性，它们进行动画处理，并启动情节提要的动画。 (有关此过程的详细信息，请参阅[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。)如果你向提供<xref:System.Windows.Media.Animation.BeginStoryboard>通过指定的名称及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>属性，你可以让它从此情节提要。 然后，可以在情节提要启动后以交互方式对它进行控制。 下面列出了可与事件触发器一起使用来控制情节提要的可控制情节提要操作。  
   
 -   <xref:System.Windows.Media.Animation.PauseStoryboard>： 暂停情节提要。  
   

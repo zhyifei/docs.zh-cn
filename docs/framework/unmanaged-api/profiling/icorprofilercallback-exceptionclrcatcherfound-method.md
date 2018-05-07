@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback::ExceptionCLRCatcherFound 方法"
-ms.custom: 
+title: ICorProfilerCallback::ExceptionCLRCatcherFound 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.ExceptionCLRCatcherFound
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 73fe8b4b-8f9a-4ba5-a10c-b26521396a66
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5f539a93b72c7bf3570dd3cf4cb484564999699c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33dc6a863af0c03066d5f01e5101c9a6cc6d5859
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound 方法
 时调用`catch`阻止阻止公共语言运行时 (CLR) 自身内找到异常。 此方法是.NET Framework 2.0 版中过时。  
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 HRESULT ExceptionCLRCatcherFound();  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  

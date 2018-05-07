@@ -1,24 +1,12 @@
 ---
-title: "路由协定"
-ms.custom: 
+title: 路由协定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-caps.latest.revision: "7"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c026c57129672eb25bb244a4fc928b827398e08
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 64ebb673b17159967bb4acd4e3a5e0a3f89142f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-contracts"></a>路由协定
 路由协定定义路由服务可处理的消息模式。  每个协定都是无类型协定，允许服务在不了解消息架构或操作的情况下接收消息。 这样，路由服务就可以按照通常方式来路由消息，而不必对路由的基础消息的细节进行额外配置。  

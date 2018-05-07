@@ -1,34 +1,20 @@
 ---
 title: 配置编辑器工具 (SvcConfigEditor.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuration files, creating
 - configuration files
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-caps.latest.revision: 45
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1531c68bdbb3b28436d0701536ef274f34513b19
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: ab6e3a99f951d2977a079f49e4aa3eff250ee8d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>配置编辑器工具 (SvcConfigEditor.exe)
-使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务配置编辑器 (SvcConfigEditor.exe)，管理员和开发人员可以使用图形用户界面来创建和修改 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的配置设置。 利用此工具，您不必直接编辑 XML 配置文件就可管理 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 绑定、行为、服务和诊断的设置。  
+Windows Communication Foundation (WCF) 服务配置编辑器 (SvcConfigEditor.exe) 允许管理员和开发人员创建和修改配置设置[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务使用图形用户界面。 利用此工具，您不必直接编辑 XML 配置文件就可管理 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 绑定、行为、服务和诊断的设置。  
   
  在 C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin 文件夹中可以找到服务配置编辑器。  
   

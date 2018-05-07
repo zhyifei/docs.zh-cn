@@ -1,13 +1,6 @@
 ---
-title: "如何：提取与 Windows 窗体中的文件关联的图标"
-ms.custom: 
+title: 如何：提取与 Windows 窗体中的文件关联的图标
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - file name extension icons [Windows Forms], displaying in a ListView
 - extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a5153f6389c4477a18c647d7cdaf7b49b43bb7ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 21bce2f630649afb59272362a7f40055855ed512
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>如何：提取与 Windows 窗体中的文件关联的图标
 多个文件都有嵌入式提供可视表示形式的关联的文件类型的图标。 例如，Microsoft Word 文档包含一个图标，将它们标识为 Word 文档。 时在表控件或列表控件中显示文件，你可能想要显示的图标表示每个文件名旁边的文件类型。 你可以轻松执行此操作通过使用<xref:System.Drawing.Icon.ExtractAssociatedIcon%2A>方法。  

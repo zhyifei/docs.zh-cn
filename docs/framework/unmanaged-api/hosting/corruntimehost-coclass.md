@@ -1,14 +1,6 @@
 ---
-title: "CorRuntimeHost 组件类"
-ms.custom: 
+title: CorRuntimeHost 组件类
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorRuntimeHost Coclass
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5833740b-7d67-44b4-865c-b5bf45e291e3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 23bee1a79dfb54a696495fdb61a7ba9ba4b4c143
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b9b9b8a728932caa085bba1665dc97faf02be8fe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost 组件类
 提供用于管理正由公共语言运行时执行的应用程序的接口。  
@@ -59,14 +47,14 @@ coclass CorRuntimeHost {
 |[IGCHost 接口](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|提供用于获取有关垃圾回收系统的信息以及控制垃圾回收的某些方面的方法。|  
 |"IValidator"|提供用于验证和验证错误的详细报告的可移植可执行映像的方法。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.idl  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [承载组件类](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

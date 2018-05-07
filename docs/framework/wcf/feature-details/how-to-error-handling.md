@@ -1,24 +1,12 @@
 ---
-title: "如何：错误处理"
-ms.custom: 
+title: 如何：错误处理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-caps.latest.revision: "5"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a5b0fe57bb6a4604c86e63a154e3af5542672912
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b173997eb53f8cf156ccb14083885a199dc8921
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-error-handling"></a>如何：错误处理
 本主题概述了创建采用错误处理的路由配置所需要的基本步骤。 在本示例中，消息路由到目标终结点。 如果消息因网络或通信相关故障 (<xref:System.ServiceModel.CommunicationException>) 而无法传递，则会将消息重新发送到备用终结点。  

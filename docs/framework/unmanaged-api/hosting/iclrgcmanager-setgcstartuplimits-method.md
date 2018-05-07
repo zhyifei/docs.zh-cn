@@ -1,14 +1,6 @@
 ---
-title: "ICLRGCManager::SetGCStartupLimits 方法"
-ms.custom: 
+title: ICLRGCManager::SetGCStartupLimits 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRGCManager.SetGCStartupLimits
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1c8d9959-95b5-4131-be4a-556d97774014
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4fd5a1135866b75ea1d11fc5a14289104edfeac4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8cbcd3ae758add4beec24959314d2cf806c2a2b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>ICLRGCManager::SetGCStartupLimits 方法
 设置的垃圾回收段的大小和第 0 代垃圾回收系统的最大大小。  
@@ -65,7 +53,7 @@ HRESULT SetGCStartupLimits (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimits`已成功返回。|  
+|S_OK|`SetGCStartupLimits` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -75,14 +63,14 @@ HRESULT SetGCStartupLimits (
 ## <a name="remarks"></a>备注  
  值的`SetGCStartupLimits`集可以只能指定一次。 更高版本调用`SetGCStartupLimits`将被忽略。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [自动内存管理](../../../../docs/standard/automatic-memory-management.md)  

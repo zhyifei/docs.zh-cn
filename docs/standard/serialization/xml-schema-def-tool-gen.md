@@ -1,30 +1,17 @@
 ---
 title: 'How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
 - generating XML Schema Document using XML Schema Definition tool
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0e390b808f9eaa5d6b305284e1abe28f45f4d104
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c169a3068b240e8d4d1cdb1d307938ee113066fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
 使用 XML 架构定义工具 (Xsd.exe) 可以生成描述类的 XML 架构，也可以生成 XML 架构定义的类。 下面的过程说明如何执行这两种操作。  
@@ -39,7 +26,7 @@ ms.lasthandoff: 12/23/2017
     xsd mySchema.xsd  
     ```  
   
-     该工具只能处理引用万维网联合会 2001 年 3 月 16 日的 XML 规范的架构。 换句话说，XML 架构命名空间必须是“http://www.w3.org/2001/XMLSchema”，如下面的示例所示。  
+     该工具只能处理引用万维网联合会 2001 年 3 月 16 日的 XML 规范的架构。 换而言之，XML 架构命名空间必须是"http://www.w3.org/2001/XMLSchema"下面的示例中所示。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  

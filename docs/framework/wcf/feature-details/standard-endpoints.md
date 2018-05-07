@@ -1,24 +1,12 @@
 ---
-title: "标准终结点"
-ms.custom: 
+title: 标准终结点
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de5f1c858b9018071489354441cab197bf5db6e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-endpoints"></a>标准终结点
 通过指定地址、绑定和协定来定义终结点。 终结点上可以设置的其他参数包括行为配置、标头和侦听 URI。  对于特定类型的终结点，这些值不会更改。 例如，元数据交换终结点始终使用 <xref:System.ServiceModel.Description.IMetadataExchange> 协定， 其他终结点（如 <xref:System.ServiceModel.Description.WebHttpEndpoint>）始终需要指定的终结点行为。 通过为常用终结点属性设置默认值可以提高终结点的可用性。 开发人员可以通过标准终结点定义具有默认值的终结点，或者定义一个或多个终结点属性不会更改的终结点。  这些终结点的优点是，可以使用此类终结点而无需指定静态性质的信息。 标准终结点可供基础结构终结点和应用程序终结点使用。  

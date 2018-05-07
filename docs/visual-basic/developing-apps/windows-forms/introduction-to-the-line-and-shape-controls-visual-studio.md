@@ -1,24 +1,17 @@
 ---
-title: "Line 和 Shape 控件简介 (Visual Studio)"
+title: Line 和 Shape 控件简介 (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Line control [Visual Basic], overview
 - Shape control [Visual Basic], overview
 - lines, drawing
 - shapes, drawing
 ms.assetid: 5c4e8b1a-0733-4020-af6c-f582f4026728
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e691d57c6de640c83556937eeddedf89e79b6846
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3ad740f7dd15194830959a5493970b4ba54ce142
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a>Line 和 Shape 控件简介 (Visual Studio)
 Visual Basic Power Pack Line 和 Shape 控件是一组可用于在窗体和容器上绘制线条和形状的三个图形控件。 <xref:Microsoft.VisualBasic.PowerPacks.LineShape>控件用于绘制水平线、 垂线、 对角线和行。 <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>控件用于绘制圆形和椭圆形，和<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>控件用于绘制矩形和正方形。  
@@ -53,7 +46,7 @@ Line 和 Shape 对象层次结构
 > [!NOTE]
 >  并非所有的容器控件支持 Line 和 Shape 控件。 你不能在托管线条或形状控件<xref:System.Windows.Forms.TableLayoutPanel>或<xref:System.Windows.Forms.FlowLayoutPanel>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.PowerPacks>  
  [如何：使用 LineShape 控件绘制直线](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
  [如何：使用 OvalShape 和 RectangleShape 控件绘制形状](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  

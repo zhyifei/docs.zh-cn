@@ -1,14 +1,6 @@
 ---
 title: WCF 的委派和模拟
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-caps.latest.revision: 40
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8fc08c442813991b425b2bed3a0047fc5efa0d83
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 811ab308b881b5209d44612b29fb51d1c79e8bf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF 的委派和模拟
 模拟 是一种常用技术，服务可使用该技术限制客户端对服务域资源的访问。 服务域资源可以是计算机资源，如本地文件（模拟），也可以是其他计算机上的资源，如文件共享（委托）。 有关示例应用程序，请参见 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 有关如何使用模拟的示例，请参阅 [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -40,12 +26,12 @@ ms.lasthandoff: 04/30/2018
  模拟和委托都要求客户端具有 Windows 标识。 如果客户端没有 Windows 标识，则唯一的选择就是使客户端的标识流向第二个服务。  
   
 ## <a name="impersonation-basics"></a>模拟基础知识  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支持各种客户端凭据的模拟。 本主题说明在实现某一服务方法的过程中支持模拟调用方的服务模型。 还讨论了其中涉及模拟以及 SOAP 安全和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 选项的常见部署方案。  
+ Windows Communication Foundation (WCF) 支持各种客户端凭据的模拟。 本主题说明在实现某一服务方法的过程中支持模拟调用方的服务模型。 此外讨论了涉及模拟以及 SOAP 安全以及在这些情况下的 WCF 选项的常见部署方案。  
   
- 本主题重点介绍使用 SOAP 安全时 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的模拟和委托。 你也可以在使用传输安全时使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的模拟和委托，如 [Using Impersonation with Transport Security](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)。  
+ 本主题着重于模拟和 WCF 中的委托时使用 SOAP 安全。 你还可以使用模拟和委托与 WCF 结合使用时使用传输安全中所述[传输安全使用模拟](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)。  
   
 ## <a name="two-methods"></a>两种方法  
- 对于模拟的执行，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 安全有两种截然不同的方法。 所用的方法取决于绑定。 一种方法是从 Windows 令牌模拟，此令牌从安全支持提供程序接口 (SSPI) 或 Kerberos 身份验证获取，然后在服务上缓存。 另一种方法是从 Windows 令牌模拟，此令牌从 Kerberos 扩展获取，统称为“Service-for-User”  (S4U)。  
+ WCF SOAP 安全有两个不同方法对于模拟的执行。 所用的方法取决于绑定。 一种方法是从 Windows 令牌模拟，此令牌从安全支持提供程序接口 (SSPI) 或 Kerberos 身份验证获取，然后在服务上缓存。 另一种方法是从 Windows 令牌模拟，此令牌从 Kerberos 扩展获取，统称为“Service-for-User”  (S4U)。  
   
 ### <a name="cached-token-impersonation"></a>缓存的令牌模拟  
  您可以对以下各项执行缓存的令牌模拟：  
@@ -73,7 +59,7 @@ ms.lasthandoff: 04/30/2018
 >  当客户端和服务在同一计算机上运行，并且客户端在系统帐户（例如 `Local System` 或 `Network Service`）下运行时，如果安全会话是使用有状态安全上下文令牌建立的，则不能模拟客户端。 Windows 窗体或控制台应用程序通常在当前登录的帐户下运行，因此默认情况下可以模拟该帐户。 但是，如果客户端为 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 页并且该页承载在 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 或 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]中，则客户端默认情况下运行在 `Network Service` 帐户下。 默认情况下，系统提供的所有支持安全会话的绑定都使用无状态安全上下文令牌 (SCT)。 但如果客户端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 页，并且使用了具有有状态 SCT 的安全会话，则不能模拟该客户端。 有关安全会话中使用有状态 Sct 的详细信息，请参阅[如何： 为安全会话创建安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>服务方法中的模拟：声明性模型  
- 大多数模拟方案都涉及在调用方上下文中执行服务方法。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了一种模拟功能，此功能通过允许用户在 <xref:System.ServiceModel.OperationBehaviorAttribute> 特性中指定模拟要求，使此操作易于执行。 例如，在下面的代码中， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构在执行 `Hello` 方法之前模拟调用方。 只有当本机资源的访问控制列表 (ACL) 允许调用方访问权限时，在 `Hello` 方法内访问该本机资源的任何尝试才能成功。 若要启用模拟，请将 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 属性设置为 <xref:System.ServiceModel.ImpersonationOption> 枚举值之一（<xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>），如下面的示例所示。  
+ 大多数模拟方案都涉及在调用方上下文中执行服务方法。 WCF 提供了一种模拟功能，使此操作易于执行通过允许用户指定模拟要求在<xref:System.ServiceModel.OperationBehaviorAttribute>属性。 例如，在下面的代码中，WCF 基础结构模拟调用方在执行前`Hello`方法。 只有当本机资源的访问控制列表 (ACL) 允许调用方访问权限时，在 `Hello` 方法内访问该本机资源的任何尝试才能成功。 若要启用模拟，请将 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 属性设置为 <xref:System.ServiceModel.ImpersonationOption> 枚举值之一（<xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>），如下面的示例所示。  
   
 > [!NOTE]
 >  当服务具有比远程客户端更高的凭据时，在 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 属性设置为 <xref:System.ServiceModel.ImpersonationOption.Allowed>的情况下将使用服务的凭据。 也就是说，如果低权限的用户提供其凭据，则较高权限的服务会使用服务的凭据执行该方法，并可以使用低权限的用户不能使用的资源。  
@@ -81,7 +67,7 @@ ms.lasthandoff: 04/30/2018
  [!code-csharp[c_ImpersonationAndDelegation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#1)]
  [!code-vb[c_ImpersonationAndDelegation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#1)]  
   
- 只有当调用方使用可以映射到 Windows 用户帐户的凭据进行身份验证时， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构才能模拟调用方。 如果将服务配置为使用无法映射到 Windows 用户帐户的凭据进行身份验证，则不会执行服务方法。  
+ 仅当调用方使用可以映射到 Windows 用户帐户的凭据进行身份验证，WCF 基础结构才能模拟调用方。 如果将服务配置为使用无法映射到 Windows 用户帐户的凭据进行身份验证，则不会执行服务方法。  
   
 > [!NOTE]
 >  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，如果创建了有状态 SCT，则模拟会失败，导致 <xref:System.InvalidOperationException>。 有关详细信息，请参阅[不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
@@ -101,14 +87,14 @@ ms.lasthandoff: 04/30/2018
  [!code-csharp[c_ImpersonationAndDelegation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#3)]
  [!code-vb[c_ImpersonationAndDelegation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#3)]  
   
- 下表说明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对于 `ImpersonationOption` 和 `ImpersonateCallerForAllServiceOperations`的所有可能组合的行为。  
+ 下表描述的所有可能组合的 WCF 行为`ImpersonationOption`和`ImpersonateCallerForAllServiceOperations`。  
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|行为|  
 |---------------------------|------------------------------------------------|--------------|  
-|必需|n/a|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模拟调用方|  
-|Allowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不模拟调用方|  
-|Allowed|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模拟调用方|  
-|NotAllowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不模拟调用方|  
+|必需|n/a|WCF 模拟调用方|  
+|Allowed|False|WCF 不模拟调用方|  
+|Allowed|true|WCF 模拟调用方|  
+|NotAllowed|False|WCF 不模拟调用方|  
 |NotAllowed|true|不允许。 （引发 <xref:System.InvalidOperationException> 。）|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>从 Windows 凭据和缓存的令牌模拟获取的模拟级别  
@@ -136,7 +122,7 @@ ms.lasthandoff: 04/30/2018
 |委托|否|n/a|标识|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>从用户名凭据和缓存的令牌模拟获取的模拟级别  
- 通过向服务传递客户端的用户名和密码，客户端可以让 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以该用户的身份登录，这等效于将 `AllowedImpersonationLevel` 属性设置为 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>。 （`AllowedImpersonationLevel` 在 <xref:System.ServiceModel.Security.WindowsClientCredential> 和 <xref:System.ServiceModel.Security.HttpDigestClientCredential> 类中可用。）下表提供了当服务接收用户名凭据时获取的模拟级别。  
+ 通过向服务传递的用户名和密码，客户端使 WCF 作为该用户，这等于设置登录`AllowedImpersonationLevel`属性<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>。 （`AllowedImpersonationLevel` 在 <xref:System.ServiceModel.Security.WindowsClientCredential> 和 <xref:System.ServiceModel.Security.HttpDigestClientCredential> 类中可用。）下表提供了当服务接收用户名凭据时获取的模拟级别。  
   
 |`AllowedImpersonationLevel`|服务具有 `SeImpersonatePrivilege`|服务和客户端能够委托|缓存的令牌 `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  

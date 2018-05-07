@@ -1,22 +1,14 @@
 ---
 title: 字符串函数 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0e7672f03cda99aa0e1dcecd79b0358f9d5f16f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f6c7f28cee03c2d5ac258cf1e2c8956225334f7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-functions-visual-basic"></a>字符串函数 (Visual Basic)
 下表列出了 Visual Basic 提供搜索和操作字符串的函数。  
@@ -88,7 +80,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关键字](../../../visual-basic/language-reference/keywords/index.md)  
  [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)  
  [字符串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

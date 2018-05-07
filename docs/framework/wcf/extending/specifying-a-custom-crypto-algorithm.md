@@ -1,24 +1,12 @@
 ---
-title: "指定自定义加密算法"
-ms.custom: 
+title: 指定自定义加密算法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 965f121faa851722e6e2e7f92e805252f7e927c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>指定自定义加密算法
 WCF 允许指定在加密数据或计算数字签名时使用的自定义加密算法。 为此，请执行下列步骤：  
@@ -116,7 +104,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- 下的部分 <`cryptoClasses`> 元素创建 SHA256CryptoServiceProvider 与别名"SHA256CSP"之间的映射。 <`nameEntry`> 元素创建"SHA256CSP"别名和指定的 URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm) 之间的映射。  
+ 下的部分 <`cryptoClasses`> 元素创建 SHA256CryptoServiceProvider 与别名"SHA256CSP"之间的映射。 <`nameEntry`> 元素创建"SHA256CSP"别名和指定的 URL 之间的映射 (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm )。  
   
  要在代码中注册自定义算法，可使用 <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> 方法。 该方法可创建这两个映射。 以下示例揭示了如何调用此方法：  
   

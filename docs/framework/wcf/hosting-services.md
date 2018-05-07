@@ -1,31 +1,17 @@
 ---
 title: 承载服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-caps.latest.revision: 31
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac7de48b801036ac186ffe92117269ae86d14a10
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6b7e94bdbec483f32fa41bb60032cca56c5e1593
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-services"></a>承载服务
-要变为活动状态，服务必须承载于创建它并控制它的上下文和生存期的运行时环境中。 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务设计为在支持托管代码的任意 Windows 进程中运行。  
+要变为活动状态，服务必须承载于创建它并控制它的上下文和生存期的运行时环境中。 Windows Communication Foundation (WCF) 服务设计为支持托管代码的任意 Windows 进程中运行。  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供了统一编程模型，用于生成面向服务的应用程序。 此编程模型保持一致且独立于部署服务的运行时环境。 实际上，这意味着不管使用什么宿主选项，服务的代码看起来都非常类似。  
   

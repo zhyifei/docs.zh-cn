@@ -1,26 +1,12 @@
 ---
 title: 通过自定义绑定发布和检索元数据
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f6226f01a284a9a24593c1be4fed2f96f3eae730
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 607cf70e8e226e6c97a785f2478ad3a655b21a7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>通过自定义绑定发布和检索元数据
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 提供对向服务添加元数据终结点的支持。 这些元数据终结点可以对具有的 URL 处的 HTTP GET 请求作出响应`?wsdl`查询字符串并可对 Ws-transfer GET 请求的 Ws-metadataexchange (MEX) 规范中定义。 MEX 终结点可实现 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 协定。  
@@ -28,7 +14,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="publishing-metadata-over-a-custom-binding"></a>通过自定义绑定发布元数据  
  通过将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A?displayProperty=nameWithType> 属性设置为 `true`，可以启用 HTTP GET 元数据终结点和 HTTPS GET 元数据终结点。 无法配置这些终结点的绑定。  
   
- 不过，<xref:System.ServiceModel.Description.IMetadataExchange> 协定可与任何终结点（包括使用自定义绑定的终结点）一起使用，这是因为 <xref:System.ServiceModel.Description.IMetadataExchange> 终结点与任何其他 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务终结点相同。 如果您了解如何修改系统提供的绑定的配置，或者了解如何配置 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>，则可以将绑定配置为与 <xref:System.ServiceModel.Description.IMetadataExchange> 终结点一起使用。  
+ <xref:System.ServiceModel.Description.IMetadataExchange>协定，但是，可与任何终结点，包括使用自定义绑定，因为<xref:System.ServiceModel.Description.IMetadataExchange>终结点是与任何其他 Windows Communication Foundation (WCF) 服务终结点相同。 如果您了解如何修改系统提供的绑定的配置，或者了解如何配置 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>，则可以将绑定配置为与 <xref:System.ServiceModel.Description.IMetadataExchange> 终结点一起使用。  
   
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>通过自定义绑定检索元数据  
  可以从 HTTP Get 和 HTTPS Get 元数据终结点使用标准 HTTP 或 HTTPS GET 请求检索元数据。  

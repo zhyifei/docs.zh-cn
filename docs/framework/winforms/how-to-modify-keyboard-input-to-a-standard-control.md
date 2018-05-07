@@ -1,14 +1,6 @@
 ---
 title: 如何：修改标准控件中的键盘输入
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc6d9bd6f1d5e1a7472a538b2a579766cee92c93
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 726444e1decb3e03989317431e1f8c4a5fc4a697
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>如何：修改标准控件中的键盘输入
 Windows 窗体提供使用和修改键盘输入的功能。 使用键是指处理方法或事件处理程序内的键，以便消息队列更低处的其他方法和事件不会接收到键值。 修改键是指修改键的值，以便消息队列更低处的方法和事件处理程序接收不同的键值。 本主题演示如何完成这些任务。  

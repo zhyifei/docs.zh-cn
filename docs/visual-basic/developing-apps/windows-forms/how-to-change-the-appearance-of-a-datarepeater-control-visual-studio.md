@@ -1,10 +1,6 @@
 ---
-title: "如何：更改 DataRepeater 控件的外观 (Visual Studio)"
+title: 如何：更改 DataRepeater 控件的外观 (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - DataRepeater, customizing
 - DataRepeater, changing run time appearance
 ms.assetid: 2af6dfce-760b-489e-b863-8da967f315c3
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 585ff4c942185f3199fe6e9e47a4ebd9f1f0a478
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9863d9343ffcecc1e4aae7f6bc16dae39ef76385
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-appearance-of-a-datarepeater-control-visual-studio"></a>如何：更改 DataRepeater 控件的外观 (Visual Studio)
 你可以更改的外观<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件在设计时通过设置属性或在运行时通过处理<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>事件。  
@@ -51,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  请注意，对于这两个自定义，必须提供代码以设置条件的双方的属性。 如果不指定`Else`条件，你将在运行时中看到意外的结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>  
  [DataRepeater 控件简介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  

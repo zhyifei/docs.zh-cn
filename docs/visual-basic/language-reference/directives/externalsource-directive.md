@@ -1,10 +1,6 @@
 ---
-title: "#<a name=\"externalsource-directive\"></a>ExternalSource 指令"
+title: '#ExternalSource 指令'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - '#Externalsource'
 - '#ExternalSource'
@@ -16,14 +12,11 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-caps.latest.revision: "160"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f90b838e50b65b8652cd9cf6f6ee084e9552f025
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 146ab41d74b45acc4063e2463baca26c7caa4652
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="externalsource-directive"></a>#ExternalSource 指令
 指示代码的源代码的特定行和源的外部文本之间的映射。  
@@ -56,5 +49,5 @@ ms.lasthandoff: 10/18/2017
   
  外部源指令不会影响编译，而且不能嵌套。 它们是由应用程序仅供内部使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

@@ -1,13 +1,6 @@
 ---
-title: "如何：以编程方式编写服务"
-ms.custom: 
+title: 如何：以编程方式编写服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - services, creating
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
-caps.latest.revision: "21"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: cdb9c7bba564b71bfba86076218e48610cf73076
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99fd44723bba21127e2a5e0ba3e9bfc4b90b52d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-services-programmatically"></a>如何：以编程方式编写服务
 如果你选择不使用 Windows 服务项目模板，你可以通过设置继承和其他基础结构元素自己编写你自己的服务。 当以编程方式创建服务时，你必须执行该模板将为您处理的几个步骤：  
@@ -41,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  在**解决方案资源管理器**，右键单击**引用**节点，然后单击**添加引用**。  
   
-    2.  上**.NET Framework**选项卡上，向下滚动到**System.dll**单击**选择**。  
+    2.  上 **.NET Framework**选项卡上，向下滚动到**System.dll**单击**选择**。  
   
     3.  滚动到**System.ServiceProcess.dll**单击**选择**。  
   

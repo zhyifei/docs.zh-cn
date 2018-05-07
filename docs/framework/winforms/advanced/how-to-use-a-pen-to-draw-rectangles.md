@@ -1,13 +1,6 @@
 ---
-title: "如何：使用钢笔绘制矩形"
-ms.custom: 
+title: 如何：使用钢笔绘制矩形
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7257fa21432ec5d849a257f4a5e412515f474363
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad5b436f7162c282198c7a9d3cce4d3ce3fd3c6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-pen-to-draw-rectangles"></a>如何：使用钢笔绘制矩形
 若要绘制的矩形，你需要<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Graphics>对象提供<xref:System.Drawing.Graphics.DrawRectangle%2A>方法，与<xref:System.Drawing.Pen>对象存储在行中，如颜色和宽度的功能。  

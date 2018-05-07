@@ -1,24 +1,12 @@
 ---
-title: "循环跟踪"
-ms.custom: 
+title: 循环跟踪
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4942e7e23b3cddd0f1c5bd3be8195ceeb190ca3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce39a5d1b65bad78ff67154a7d8b62c2f19b1fa9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="circular-tracing"></a>循环跟踪
 此示例演示如何实现循环缓冲区跟踪侦听器。 生产服务的一个常见方案是，拥有可以长时间使用的服务，并在较低级别启用跟踪日志记录。 这些服务占用大量磁盘空间。 在对某个服务进行疑难解答时，跟踪日志中的最新数据与解决问题相关。 此示例演示如何实现一个循环缓冲区跟踪侦听器，在该侦听器中，磁盘上仅保留最新的跟踪数据，最多可以保存可配置的数据量。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)和包括自定义跟踪侦听器。  
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`  
   

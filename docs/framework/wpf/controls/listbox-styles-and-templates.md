@@ -1,13 +1,6 @@
 ---
-title: "ListBox 样式和模板"
-ms.custom: 
+title: ListBox 样式和模板
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - styles [WPF], ListBox
 - templates [WPF], ListBox
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - parts [WPF], ListBox
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: edf8c50424a9694c4e00f5bf319d3122999bda85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb4fdcd8b0487d3fbd2b96bc06968dca1f65d854
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listbox-styles-and-templates"></a>ListBox 样式和模板
 本主题介绍的样式和模板的<xref:System.Windows.Controls.ListBox>控件。 你可以修改默认<xref:System.Windows.Controls.ControlTemplate>提供独特外观的控件。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  

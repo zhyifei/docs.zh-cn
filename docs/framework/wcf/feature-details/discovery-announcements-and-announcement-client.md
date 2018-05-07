@@ -1,27 +1,15 @@
 ---
-title: "发现公告和公告客户端"
-ms.custom: 
+title: 发现公告和公告客户端
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67eab6a5b35e29fe3df09ab286090433d25e8ca3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>发现公告和公告客户端
-借助 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发现功能，组件可以公告其可用性。 如果对某个服务进行了此配置，则该服务将发送 Hello 和 Bye 公告。 客户端或其他组件可以侦听此类公告消息并据此采取操作。 这就向客户端提供了另一种感知服务的方法。 公告功能具有多种用途，例如，如果服务频繁进入和退出网络，则相比搜索服务，公告是较好的替代方法。 通过此方法可以减少网络流量，并且客户端在收到公告时可立即了解到服务是进入还是退出状态。  
+WCF 发现功能使组件可以公告其可用性。 如果对某个服务进行了此配置，则该服务将发送 Hello 和 Bye 公告。 客户端或其他组件可以侦听此类公告消息并据此采取操作。 这就向客户端提供了另一种感知服务的方法。 公告功能具有多种用途，例如，如果服务频繁进入和退出网络，则相比搜索服务，公告是较好的替代方法。 通过此方法可以减少网络流量，并且客户端在收到公告时可立即了解到服务是进入还是退出状态。  
   
 ## <a name="discovery-announcements"></a>发现公告  
  如果配置了公告的服务加入网络并可以被检测到，该服务将发送 Hello 消息以向侦听客户端公告其可用性。 该消息包含与发现相关的服务信息，如服务的协定、终结点地址和相关范围。 可以使用 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 类指定公告消息的发送位置。 如果公告终结点是 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>，则相应地多播 Hello 和 Bye；而如果公告终结点是单播，则消息将直接发送到指定终结点。  

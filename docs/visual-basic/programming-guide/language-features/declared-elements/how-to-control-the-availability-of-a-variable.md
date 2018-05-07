@@ -1,12 +1,6 @@
 ---
-title: "如何：控制变量的可用性 (Visual Basic)"
-ms.custom: 
+title: 如何：控制变量的可用性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - access levels, declared elements
 - Private keyword [Visual Basic], accessing variables
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 004fb101661fadeaee084e1f9374ca8332ac7234
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27ee5d3405ea24c0754cffa85e9b89b2ac561e42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>如何：控制变量的可用性 (Visual Basic)
 通过指定控制变量的可用性其*访问级别*。 访问级别确定哪些代码有权读取或写入到该变量。  
@@ -53,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
      您可以读取或从互操作的任何代码与您的程序集写入变量。  
   
- - 或 -  
+ -或-  
   
 1.  对于本地变量，请将`Dim`过程内的变量的语句。  
   
@@ -94,7 +85,7 @@ Private numberForMeOnly As Integer
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  限制性更强的变量的访问级别，它的使用变量越小的恶意代码可以不正确的机会。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)  
  [Public](../../../../visual-basic/language-reference/modifiers/public.md)  

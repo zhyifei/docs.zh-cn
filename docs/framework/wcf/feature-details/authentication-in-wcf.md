@@ -1,34 +1,22 @@
 ---
-title: "WCF 中的身份验证"
-ms.custom: 
+title: WCF 中的身份验证
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 432ed9debeffad82125b567508ed46b46d4b8821
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4f9b719024db1334b599f0f02fe01bc083bf3c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authentication-in-wcf"></a>WCF 中的身份验证
-下面的主题演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中用于提供身份验证的多个不同机制，例如 Windows 身份验证、X.509 证书以及用户名和密码。  
+以下主题中 Windows Communication Foundation (WCF) 提供身份验证，例如、 Windows 身份验证、 X.509 证书和用户名和密码显示多种不同的机制。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：使用 ASP.NET 成员资格提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
- ASP.NET 功能包括成员资格和角色提供程序、用于存储用户名/密码对以供进行身份验证的数据库，以及用于身份验证的用户角色。 本主题说明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务如何使用同一数据库对用户进行身份验证和授权。  
+ ASP.NET 功能包括成员资格和角色提供程序、用于存储用户名/密码对以供进行身份验证的数据库，以及用于身份验证的用户角色。 本主题介绍 WCF 服务如何使用相同的数据库用户进行身份验证和授权。  
   
  [如何：使用自定义用户名和密码验证程序](../../../../docs/framework/wcf/feature-details/how-to-use-a-custom-user-name-and-password-validator.md)  
  演示如何集成自定义用户名/密码验证程序。  

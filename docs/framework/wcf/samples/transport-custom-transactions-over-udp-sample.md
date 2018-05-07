@@ -1,27 +1,15 @@
 ---
-title: "传输：UDP 示例上的自定义事务"
-ms.custom: 
+title: 传输：UDP 示例上的自定义事务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7e26d0c25879b3b1b6ed873543f051de989ddd92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e395300df4cd9917b9662d4bc3b1e8d50d82914d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>传输：UDP 示例上的自定义事务
-此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][传输可扩展性](../../../../docs/framework/wcf/samples/transport-extensibility.md)。 它扩展 UDP 传输示例，以支持自定义事务流并演示 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 属性的用法。  
+此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)中 Windows Communication Foundation (WCF) 示例[传输可扩展性](../../../../docs/framework/wcf/samples/transport-extensibility.md)。 它扩展 UDP 传输示例，以支持自定义事务流并演示 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 属性的用法。  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>UDP 传输示例中的代码更改  
  为了演示事务流，示例对 `ICalculatorContract` 的服务协定进行了更改，用于为 `CalculatorService.Add()` 设定一个事务范围。 本示例还向 `System.Guid` 操作的协定另外添加了一个 `Add` 参数。 此参数用于将客户端事务的标识符传递给服务。  
@@ -269,7 +257,7 @@ if (transaction != null)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   

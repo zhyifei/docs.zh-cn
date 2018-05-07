@@ -1,27 +1,15 @@
 ---
-title: "服务跟踪查看器工具 (SvcTraceViewer.exe)"
-ms.custom: 
+title: 服务跟踪查看器工具 (SvcTraceViewer.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-caps.latest.revision: "55"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服务跟踪查看器工具 (SvcTraceViewer.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务跟踪查看器工具可帮助您分析 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 生成的诊断跟踪。 服务跟踪查看器提供了一种方法，可以轻松地合并、查看和筛选日志中的跟踪消息，以便能够诊断、修复和验证 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务问题。  
+Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助你分析由生成的诊断跟踪[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]。 服务跟踪查看器提供了一种方法，可以轻松地合并、查看和筛选日志中的跟踪消息，以便能够诊断、修复和验证 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务问题。  
   
 ## <a name="configuring-tracing"></a>配置跟踪  
  诊断跟踪提供的信息显示了应用程序操作过程中所发生的情况。 顾名思义，您可以从操作来源跟踪操作直至目标，也可以通过中间点进行跟踪。  
@@ -272,7 +260,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  左侧的树视图显示您在步骤 1 中选择的跟踪记录的结构。 通过浏览找到要为其创建条件的元素。 在此示例中，浏览到位于 XPath 的 ThreadID:/E2ETraceEvent/System/Execution/@ThreadID节点。 在树视图中双击“ThreadID”属性。 这样可在对话框右侧为该属性创建一个表达式。  
   
-5.  将 ThreadID 条件的参数字段从“无”更改为“{0}”。 通过这一步骤，在应用筛选器时就可以配置 ThreadID 值。 （请参见“如何应用筛选器”一节）最多可以定义四个参数。 条件是用“或”运算符组合在一起的。  
+5.  将 ThreadID 条件的参数字段从无到更改{0}。 通过这一步骤，在应用筛选器时就可以配置 ThreadID 值。 （请参见“如何应用筛选器”一节）最多可以定义四个参数。 条件是用“或”运算符组合在一起的。  
   
 6.  单击**确定**创建筛选器。  
   
@@ -297,7 +285,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  单击**立即筛选**，并观察操作结果。  
   
- 如果你的筛选器使用多个参数，输入它们使用; 作为分隔符，在**查找内容**字段。 例如，以下字符串定义 3 个参数：“1;findValue;text”。 查看器将“1”应用到筛选器的 {0} 参数。 “findValue”和“text”分别应用到 {1} 和 {2}。  
+ 如果你的筛选器使用多个参数，输入它们使用; 作为分隔符，在**查找内容**字段。 例如，以下字符串定义 3 个参数：“1;findValue;text”。 查看器"1"适用于{0}筛选器的参数。 findValue 和文本将应用到{1}和{2}分别。  
   
 ###### <a name="sharing-custom-filters"></a>共享自定义筛选器  
  可以在不同会话和不同用户之间共享自定义筛选器。 可以将筛选器导出到一个定义文件，然后在另一个位置导入该文件。  

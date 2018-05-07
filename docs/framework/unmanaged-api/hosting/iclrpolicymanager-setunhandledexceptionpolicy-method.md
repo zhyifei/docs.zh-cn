@@ -1,14 +1,6 @@
 ---
-title: "ICLRPolicyManager::SetUnhandledExceptionPolicy 方法"
-ms.custom: 
+title: ICLRPolicyManager::SetUnhandledExceptionPolicy 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetUnhandledExceptionPolicy
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5268480e-280a-4931-b7a3-dc3ffdf7f78f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9ad287fedbc06768dd683c254292e0c28760d59a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f6a3d5bb8a8cc5acc88373fa4952848d08ccd485
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>ICLRPolicyManager::SetUnhandledExceptionPolicy 方法
 发生未处理的异常时，请指定公共语言运行时 (CLR) 的行为。  
@@ -54,7 +42,7 @@ HRESULT SetUnhandledExceptionPolicy (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetUnhandledExceptionPolicy`已成功返回。|  
+|S_OK|`SetUnhandledExceptionPolicy` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -64,14 +52,14 @@ HRESULT SetUnhandledExceptionPolicy (
 ## <a name="remarks"></a>备注  
  默认情况下，CLR 的最后一个处理程序所有未经处理的异常，并且其默认行为是关闭进程。 主机可以更改此行为，通过设置`policy`eHostDeterminedPolicy 的值。 此值允许宿主实现其自己的默认行为，与早期版本的 CLR。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [EClrUnhandledException 枚举](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)  

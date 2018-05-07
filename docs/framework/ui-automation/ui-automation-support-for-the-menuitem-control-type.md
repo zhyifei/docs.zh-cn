@@ -1,28 +1,19 @@
 ---
-title: "UI 自动化对 MenuItem 控件类型的支持"
-ms.custom: 
+title: UI 自动化对 MenuItem 控件类型的支持
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control types, Menu Item
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: fe4e46294f10d3b48dcf4162d64047ae2930d777
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 618a28d5a58880166087dd77016353f9d7efd3ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>UI 自动化对 MenuItem 控件类型的支持
 > [!NOTE]
@@ -50,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与菜单项控件尤其相关。 有关详细信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]属性，请参阅[的客户端 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|属性|值|说明|  
+|属性|值|描述|  
 |--------------|-----------|-----------------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -67,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-control-patterns"></a>必需的 UI 自动化控件模式  
  下表列出需要由菜单项控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
   
-|控件模式属性|支持|备注|  
+|控件模式属性|支持|说明|  
 |------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|视情况而定|如果控件可以展开或折叠，则实现 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>。|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|视情况而定|如果该控件执行单个操作或命令，则实现 <xref:System.Windows.Automation.Provider.IInvokeProvider>。|  
@@ -78,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="ui-automation-events-for-menu-item"></a>菜单项的 UI 自动化事件  
  下表列出与菜单项控件关联的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件。  
   
-|Event|支持|说明|  
+|事件|支持|说明|  
 |-----------|-------------|-----------------|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|视情况而定|如果控件支持 Invoke 控件模式则必须引发。|  
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 属性更改事件。|视情况而定|如果控件支持 Toggle 控件模式则必须引发。|  
@@ -89,7 +80,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有菜单项控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持/值|备注|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持/值|说明|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|视情况而定|无|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|视情况而定|无|  

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataDispenserEx::SetOption 方法"
-ms.custom: 
+title: IMetaDataDispenserEx::SetOption 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataDispenserEx.SetOption
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96810ba0eab99d1df58f0b68b85ef4da8ce7084e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfe600b54eb03a07ea01375355c5ff94190e5d9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption 方法
 将指定的选项设置为当前的元数据范围的给定值。 选项控制如何处理对当前的元数据范围的调用。  
@@ -57,7 +45,7 @@ HRESULT SetOption (
 ## <a name="remarks"></a>备注  
  下表列出了可用的 Guid，`optionId`参数可以指向和有效的相应值`pValue`参数。  
   
-|GUID|描述|`pValue`参数|  
+|GUID|描述|`pValue` 参数|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|控制哪些项检查重复项。 每次调用[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)创建新项的方法，你可以要求检查项目是否已存在当前作用域中的方法。 例如，你可以检查是否存在`mdMethodDef`项; 在这种情况下，当调用[imetadataemit:: Definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)，它将检查，该方法不存在当前作用域中。 此检查将使用唯一标识给定的方法的密钥： 父类型、 名称和签名。|必须是变体类型 UI4，并且必须包含的值的组合[CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md)枚举。|  
 |MetaDataRefToDefCheck|控制哪些引用项转换为定义。 默认情况下，元数据引擎将通过将引用的项转换为其定义中，如果在当前范围中实际定义引用的项优化的代码。|必须是变体类型 UI4，并且必须包含的值的组合[CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md)枚举。|  
@@ -73,14 +61,14 @@ HRESULT SetOption (
 |MetaDataMergerOptions|指定合并元数据的选项。|必须是变体类型 UI4，并且必须包含的值的组合`MergeFlags`CorHdr.h 文件中描述的枚举。|  
 |MetaDataPreserveLocalRefs|禁用优化定义的本地引用。|必须包含的值的组合[CorLocalRefPreservation](../../../../docs/framework/unmanaged-api/metadata/corlocalrefpreservation-enumeration.md)枚举。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：**用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IMetaDataDispenserEx 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  

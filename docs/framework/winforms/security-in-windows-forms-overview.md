@@ -1,14 +1,6 @@
 ---
 title: Windows 窗体中的安全性概述
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
 - permissions [Windows Forms], Windows Forms
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 57f46620e7b98bb1a4c120684075dbe065db9714
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ef90daa9700a60e3d88f75439bf8511b67a71dda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows 窗体中的安全性概述
 在发布 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 之前，用户计算机上运行的所有代码都有相同的权利或权限来访问该计算机的用户所拥有的资源。 例如，如果允许用户访问文件系统，则会允许代码访问文件系统；如果允许用户访问数据库，则会允许代码访问数据库。 尽管这些权利或权限对用户显式安装在本地计算机上的可执行文件中的代码来说是可接受的，但对来自 Internet 或本地 Intranet 的恶意代码来说可能是不可接受的。 此代码没有权限时应不能访问用户的计算机资源。  

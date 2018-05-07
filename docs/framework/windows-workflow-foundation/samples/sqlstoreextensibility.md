@@ -1,24 +1,12 @@
 ---
 title: SQLStoreExtensibility
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 722c7cda49b2efc4c146970c69cc5e3c7bbad9b0
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 37c83a9c1062fe074e41ec5db211fd513355c045
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 此示例演示了 SQL 工作流实例存储中的已提升属性的使用和配置。 SQL 工作流实例存储是基于 SQL 的实例存储实现。 利用此存储，实例可保存其状态，并将其状态加载到 SQL Server 或 SQL Server Express 数据库中以及从 SQL Server 或 SQL Server Express 数据库中加载其状态。 用户可使用存储扩展性功能来定义存储在示例存储中的属性。 这些属性显示在已提升属性视图中，用户可利用该视图查询这些属性。  
@@ -84,7 +72,7 @@ ms.lasthandoff: 04/30/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   

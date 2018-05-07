@@ -1,13 +1,7 @@
 ---
 title: 加密服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cryptography [.NET Framework]
 - pattern of derived class inheritance
@@ -30,18 +24,13 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: 34
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02d399d85c53cd296fc5f49ca0ec4b51b14ad677
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: f8193932deac3854b07085cba9faac76e68c4da8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cryptographic-services"></a>加密服务
 <a name="top"></a> 公共网络（如 Internet）不提供实体之间安全通信的方式。 此类网络上的通信易被读取或甚至被未经授权的第三方修改。 加密有助于防止数据被查看，提供检测数据是否已修改的方法，并帮助提供一种跨不安全通道安全通信的方式。 例如，数据可通过使用加密算法进行加密、以加密状态进行传输并在稍后由预期方进行解密。 如果某个第三方截获了加密数据，将很难解密此数据。  

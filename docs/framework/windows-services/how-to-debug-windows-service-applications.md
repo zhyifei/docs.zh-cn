@@ -1,13 +1,6 @@
 ---
-title: "如何：调试 Windows 服务应用程序"
-ms.custom: 
+title: 如何：调试 Windows 服务应用程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - debugging Windows Service applications
 - debugging [Visual Studio], Windows services
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - Windows Service applications, debugging
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
-caps.latest.revision: "16"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 86d90e4129f089a77e51e6e58233a1087fe5d0f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c73ccd75bdbd1298371921bababa87ba4520495
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-debug-windows-service-applications"></a>如何：调试 Windows 服务应用程序
 必须从服务控制管理器的上下文中而不是 Visual Studio 中运行服务。 因此，调试服务不像调试其他 Visual Studio 应用程序类型一样简单。 要调试服务，必须启动该服务，然后将调试器附加到该服务正在其中运行的进程中。 然后你可以使用所有 Visual Studio 的标准调试功能来调试你的应用程序。  

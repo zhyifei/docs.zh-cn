@@ -1,29 +1,15 @@
 ---
 title: WCF Visual Studio 模板
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: 31
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fceb0f2ab7caa2bf3ab34ff957e3ed5f300e557c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 873e728b72529fb5153913c44cac0abd77f1f7c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 模板
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Visual Studio 模板是预定义的项目和项模板，你可以使用 Visual Studio 中快速生成[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务和周边应用程序。  
+Windows Communication Foundation (WCF) Visual Studio 模板是预定义的项目和项模板，你可以使用 Visual Studio 中快速生成[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务和周边应用程序。  
   
 ## <a name="using-the-wcf-templates"></a>使用 WCF 模板  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Visual Studio 模板为服务开发提供基本的类结构。 具体地说，这些模板提供服务协定、数据协定、服务实现和配置的基本定义。 可以使用这些模板创建代码交互最少的简单服务以及更高级的服务的构造块。  

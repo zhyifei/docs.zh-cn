@@ -1,22 +1,12 @@
 ---
-title: "示例 XML 文件： 客户和订单中 1>"
-ms.custom: 
+title: 示例 XML 文件： 客户和订单中 1>
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b8b61c9dde25a55f9188bd6d4ceaad958c42a552
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 363da08b7185d42c464dd927bcbbf5d0af4c1899
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>示例 XML 文件：命名空间中的客户和订单
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件包含客户和订单。 该 XML 在某个命名空间中。  

@@ -1,28 +1,16 @@
 ---
-title: "优化性能：控件"
-ms.custom: 
+title: 优化性能：控件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e4ceee26263a1d047aeda0881b955070de4326d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-controls"></a>优化性能：控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包含大多数 Windows 应用程序中使用的许多常见用户界面 (UI) 组件。 本主题包含提高 UI 性能的技术。  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  UI 虚拟化是列表控件的一个重要方面。 不应混淆 UI 虚拟化和数据虚拟化。 UI 虚拟化在内存中仅存储可见项，但在数据绑定方案中会存储内存中的整个数据结构。 相反，数据虚拟化仅存储内存中屏幕上可见的数据项。  
   
- 默认情况下，为启用 UI 虚拟化<xref:System.Windows.Controls.ListView>和<xref:System.Windows.Controls.ListBox>控制其列表项绑定到数据时。 <xref:System.Windows.Controls.TreeView>可以通过设置启用虚拟化<!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> -->`IsVirtualizing`附加到属性`true`。 如果你想要启用对派生自的自定义控件的 UI 虚拟化<xref:System.Windows.Controls.ItemsControl>现有项控件使用或<xref:System.Windows.Controls.StackPanel>类，如<xref:System.Windows.Controls.ComboBox>，你可以设置<xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A>到<xref:System.Windows.Controls.VirtualizingStackPanel>并设置<xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A>到`true`. 遗憾的是，可对没有实现虚拟化的控件禁用 UI 虚拟化。 以下为禁用 UI 虚拟化的条件列表。  
+ 默认情况下，为启用 UI 虚拟化<xref:System.Windows.Controls.ListView>和<xref:System.Windows.Controls.ListBox>控制其列表项绑定到数据时。 <xref:System.Windows.Controls.TreeView> 可以通过设置启用虚拟化<!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> -->`IsVirtualizing`附加到属性`true`。 如果你想要启用对派生自的自定义控件的 UI 虚拟化<xref:System.Windows.Controls.ItemsControl>现有项控件使用或<xref:System.Windows.Controls.StackPanel>类，如<xref:System.Windows.Controls.ComboBox>，你可以设置<xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A>到<xref:System.Windows.Controls.VirtualizingStackPanel>并设置<xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A>到`true`. 遗憾的是，可对没有实现虚拟化的控件禁用 UI 虚拟化。 以下为禁用 UI 虚拟化的条件列表。  
   
 -   项容器直接添加到<xref:System.Windows.Controls.ItemsControl>。 例如，如果应用程序显式添加<xref:System.Windows.Controls.ListBoxItem>对象添加到<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.ListBox>不会虚拟<xref:System.Windows.Controls.ListBoxItem>对象。  
   
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Supporting"></a>   
 ## <a name="supporting-bidirectional-virtualization"></a>支持双向虚拟化  
- <xref:System.Windows.Controls.VirtualizingStackPanel>水平或垂直，请提供一个方向 UI 虚拟化的内置支持。 如果你想要为控件使用双向虚拟化，则必须实现扩展的自定义面板<xref:System.Windows.Controls.VirtualizingStackPanel>类。 <xref:System.Windows.Controls.VirtualizingStackPanel>类公开虚拟方法，如<xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>， <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>， <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>，和<xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>。这些虚拟方法，可以检测到列表的可见部分中的更改并相应地进行处理。  
+ <xref:System.Windows.Controls.VirtualizingStackPanel> 水平或垂直，请提供一个方向 UI 虚拟化的内置支持。 如果你想要为控件使用双向虚拟化，则必须实现扩展的自定义面板<xref:System.Windows.Controls.VirtualizingStackPanel>类。 <xref:System.Windows.Controls.VirtualizingStackPanel>类公开虚拟方法，如<xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>， <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>， <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>，和<xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>。这些虚拟方法，可以检测到列表的可见部分中的更改并相应地进行处理。  
   
 <a name="Optimizing"></a>   
 ## <a name="optimizing-templates"></a>优化模板  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="deferred-scrolling"></a>延迟滚动  
  默认情况下，用户拖动滚动条上的滚动块时，内容视图会不断更新。  如果控件中滚动较慢，请考虑使用延迟滚动。  在延迟滚动中，仅在用户释放滚动块时才会更新内容。  
   
- 若要实现延迟滚动，设置<xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>属性`true`。  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>是一个附加的属性，并且可以对设置<xref:System.Windows.Controls.ScrollViewer>和具有的所有控件<xref:System.Windows.Controls.ScrollViewer>在其控件模板中。  
+ 若要实现延迟滚动，设置<xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>属性`true`。  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> 是一个附加的属性，并且可以对设置<xref:System.Windows.Controls.ScrollViewer>和具有的所有控件<xref:System.Windows.Controls.ScrollViewer>在其控件模板中。  
   
 <a name="Controls"></a>   
 ## <a name="controls-that-implement-performance-features"></a>实现性能功能的控件  

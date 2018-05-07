@@ -1,31 +1,19 @@
 ---
-title: "数据协定序列化程序"
-ms.custom: 
+title: 数据协定序列化程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], serializer
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8591a2b42f375f0b0e275fa9f6e34e69e7c054ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79f9f6eb8ced7c292e7a7c3c6fc9acbb9a34ffcd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-serializer"></a>数据协定序列化程序
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基础结构使用 <xref:System.Runtime.Serialization.DataContractSerializer> 类作为默认序列化程序。 本节中的主题提供将该类用作独立序列化程序的更多详细信息。  
+Windows Communication Foundation (WCF) 基础结构使用<xref:System.Runtime.Serialization.DataContractSerializer>类作为默认序列化程序。 本节中的主题提供将该类用作独立序列化程序的更多详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
  [序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)  

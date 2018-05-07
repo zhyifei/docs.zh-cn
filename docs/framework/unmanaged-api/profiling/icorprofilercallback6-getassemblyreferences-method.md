@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback6::GetAssemblyReferences 方法"
-ms.custom: 
+title: ICorProfilerCallback6::GetAssemblyReferences 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 dev_langs:
 - cpp
 api_name:
@@ -21,17 +13,13 @@ api_type:
 ms.assetid: 8b391afb-d79f-41bd-94ce-43ce62c6b5fc
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc2e80d6d8207a869d43beb46cc9448bdd86dfec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a431283386f847c5fb0e7e8ac9d5a1d3d5875181
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallback6getassemblyreferences-method"></a>ICorProfilerCallback6::GetAssemblyReferences 方法
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -65,14 +53,14 @@ HRESULT GetAssemblyReferences(        [in, string] const WCHAR* wszAssemblyPath,
   
  探查器应该准备接收同一程序集，对此回调的重复调用，并应完全相同地响应每个此类重复调用 (通过使属于同一套[ICorProfilerAssemblyReferenceProvider::AddAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)调用)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICorProfilerCallback6 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-interface.md)  

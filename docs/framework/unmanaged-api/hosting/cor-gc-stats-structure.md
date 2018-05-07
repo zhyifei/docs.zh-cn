@@ -1,14 +1,6 @@
 ---
-title: "COR_GC_STATS 结构"
-ms.custom: 
+title: COR_GC_STATS 结构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_GC_STATS
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 02a775be4976760b354a492e7252a67ef04eace9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 009f1482de6e1daea21766300b4fb6a3ab0ffc8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS 结构
 提供有关垃圾回收机制的公共语言运行时 (CLR) 的统计信息。  
@@ -88,14 +76,14 @@ GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** GCHost.idl  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [承载结构](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  

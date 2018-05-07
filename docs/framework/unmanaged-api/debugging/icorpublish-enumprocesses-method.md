@@ -1,14 +1,6 @@
 ---
-title: "ICorPublish::EnumProcesses 方法"
-ms.custom: 
+title: ICorPublish::EnumProcesses 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorPublish.EnumProcesses
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4ae765f0-93b2-4b6f-aea1-7b0cf44e04a7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d7e0af492cbec401d7470502de807033f21e39f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2779138a0999e34ad6424d76ddfebbcfdf611d58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses 方法
 获取在此计算机上运行的托管进程的枚举数。  
@@ -59,14 +47,14 @@ HRESULT EnumProcesses (
   
  `EnumProcesses`方法可对这一次调用[ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)实例来创建新的最新进程集合。 后续调用将不影响现有集合`EnumProcesses`方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorPub.idl、 CorPub.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICorPublish 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::Stop 方法"
-ms.custom: 
+title: ICorRuntimeHost::Stop 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.Stop
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 46a0d450-b516-4bef-8b71-8d3bf265cbed
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9e27bd5d05b10f8db24a1119e4ed3717ce044e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1aea8cb4c180477fdd763a8af2f251db2d37d066
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop 方法
 停止执行当前进程的运行时中的代码。  
@@ -59,7 +47,7 @@ HRESULT Stop ();
 > [!NOTE]
 >  调用了`Stop`，CLR 不能重新初始化到同一进程。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  

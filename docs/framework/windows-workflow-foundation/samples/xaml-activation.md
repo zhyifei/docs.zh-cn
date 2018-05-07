@@ -1,23 +1,12 @@
 ---
-title: "XAML 激活"
-ms.custom: 
+title: XAML 激活
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 486760e2-bb10-4ed5-8c02-fe7472498d2d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 53665f39c6c0c7e5c7956912b05e3fd80659ddcb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8621b0ea7b390c81e76ac7eeedb0b547b44320d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-activation"></a>XAML 激活
 此示例演示如何在 IIS 中承载声明性工作流。 此示例是一个名为 `EchoService` 的基本工作流，它具有一个操作。  
@@ -27,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果该目录不存在，请转到（下载页）以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到 （下载页） 以下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLActivation`  
   
@@ -43,10 +32,10 @@ ms.lasthandoff: 12/22/2017
   
     2.  运行 WcfTestClient.exe。  
   
-4.  通过以下方式设置 WcfTestClient.exe 的服务地址：按 Ctrl+Shift+A 并将服务地址设置为 http://localhost:56133/Service.xamlx。  
+4.  设置 wcftestclient.exe 的服务的地址，通过按 CTRL + SHIFT + A 并将服务地址设置为http://localhost:56133/Service.xamlx。  
   
 5.  执行 echo 操作以测试服务。  
   
 6.  通过管理员特权在命令提示中使用 DeployToIIS.Bat 在 IIS 中部署服务。  
   
-7.  将客户端中的服务地址更新为 http://localhost/XAMLActivation/Service.xamlx，并使用 WcfTestClient.exe 重新测试服务。
+7.  在客户端到服务地址更新http://localhost/XAMLActivation/Service.xamlx和测试使用 WcfTestClient.exe 重新此服务。

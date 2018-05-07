@@ -1,30 +1,18 @@
 ---
-title: "如何：创建自定义授权策略"
-ms.custom: 
+title: 如何：创建自定义授权策略
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1af5e2cbf7c124e490fea04deadd1afffcde5cbb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 83b796c76887c6ba30ddb3c985ee43ab8dce2ec9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>如何：创建自定义授权策略
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的标识模型基础结构支持基于声明的授权模型。 声明从令牌中提取，并可以选择由自定义授权策略进行处理，然后放入 <xref:System.IdentityModel.Policy.AuthorizationContext> 中，之后进行检查以做出授权决定。 可以使用自定义策略将声明从传入令牌转换成应用程序需要的声明。 这样，可以将应用程序层从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的不同令牌类型所提供的不同声明的详细信息中隔离出来。 本主题演示如何实现自定义授权策略和如何将该策略添加到服务所使用的策略集中。  
+标识模型基础结构在 Windows Communication Foundation (WCF) 支持基于声明的授权模型。 声明从令牌中提取，并可以选择由自定义授权策略进行处理，然后放入 <xref:System.IdentityModel.Policy.AuthorizationContext> 中，之后进行检查以做出授权决定。 可以使用自定义策略将声明从传入令牌转换成应用程序需要的声明。 这样，可以将应用程序层从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的不同令牌类型所提供的不同声明的详细信息中隔离出来。 本主题演示如何实现自定义授权策略和如何将该策略添加到服务所使用的策略集中。  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>实现自定义授权策略  
   

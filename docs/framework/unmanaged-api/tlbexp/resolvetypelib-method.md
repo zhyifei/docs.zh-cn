@@ -1,14 +1,6 @@
 ---
-title: "ResolveTypeLib 方法"
-ms.custom: 
+title: ResolveTypeLib 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ResolveTypeLib
 api_location:
@@ -21,17 +13,13 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 72d1cedbfc1a1ec6c3588a7b0be9cf657d7369fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 96a9672ee05cb1fe2573620bd1dea23e57339c93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 方法
 通过返回其完全限定的路径来解析类型库的简单名称。  
@@ -76,14 +64,14 @@ HRESULT ResolveTypeLib(
   
  此接口的自定义实现必须返回[BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) ，其中包含在名为的类型库的完整路径`bstrSimpleName`参数。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** TlbRef.idl、 TlbRef.h  
   
  **库：** TlbRef.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [Tlbexp Helper 函数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  

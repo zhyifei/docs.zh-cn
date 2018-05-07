@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 TabControl 显示边对齐的选项卡"
-ms.custom: 
+title: 如何：使用 TabControl 显示边对齐的选项卡
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0dcbf2cc1aee1333ad5062f2a467adfd0dbe00c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e145547ba4c8648a765e9507b7f35e50cb15fd82
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>如何：使用 TabControl 显示边对齐的选项卡
 <xref:System.Windows.Forms.TabControl> 的 <xref:System.Windows.Forms.TabControl.Alignment%2A> 属性支持垂直显示选项卡（沿控件的左边缘或右边缘），而不是水平显示（沿控件的顶部或底部）。 默认情况下，此垂直显示会造成不良的用户体验，因为当视觉样式启用时，<xref:System.Windows.Forms.TabPage> 对象的 <xref:System.Windows.Forms.TabPage.Text%2A> 属性不显示在选项卡中。 此外，也没有直接的方法来控制选项卡内文本的方向。可以使用 <xref:System.Windows.Forms.TabControl> 的所有者描述来改善此体验。  

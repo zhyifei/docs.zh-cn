@@ -1,28 +1,16 @@
 ---
-title: "使用渐变画笔填充形状"
-ms.custom: 
+title: 使用渐变画笔填充形状
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - brushes [Windows Forms], gradient brushes
 - gradient brushes
 - examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a84a68f9082d00559938c2710b6574690fa6ab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 857a9276a731ae5e69b3caa1a639d1315aba9901
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>使用渐变画笔填充形状
 渐变画笔用于填充形状的渐变的颜色。 例如，水平渐变可用于填充形状的右边缘移动距左边缘的形状时逐渐改变的颜色。 设想这样一个矩形的左边缘为黑色 （0，0，0，则表示由红色、 绿色和蓝色组件） 和右边缘，即红色 （表示 255，0，0）。 如果矩形为 256 像素宽，给定像素的红色组件将一个大于其左侧像素的红色组件。 行中的最左侧像素的颜色分量为 （0，0，0），第二个像素 （1，0，0），第三个像素都有 （2，0，0），依此类推，直到你到达最右边的像素，它具有颜色组件 （255，0，0）。 这些相比内, 插的颜色值构成的颜色渐变。  

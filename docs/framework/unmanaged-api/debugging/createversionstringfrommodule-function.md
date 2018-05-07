@@ -1,14 +1,6 @@
 ---
-title: "CreateVersionStringFromModule 函数"
-ms.custom: 
+title: CreateVersionStringFromModule 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CreateVersionStringFromModule
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9d7d545256393cfbe37216f0d6db064d5e7cb410
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0988b2c4471cb5449f7c7fac82c6e94bcd537b7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 函数
 从目标进程中的公共语言运行时 (CLR) 路径创建版本字符串。  
@@ -89,7 +77,7 @@ HRESULT CreateVersionStringFromModule (
   
  应两次调用此函数。 第一次调用此函数时，为 `pBuffer` 和 `cchBuffer` 传递 null。 执行此操作时，`pBuffer` 所需的缓冲区大小将在 `pdwLength` 中返回。 然后可以第二次调用该函数，并将缓冲区传入 `pBuffer` 以及将缓冲区大小传入 `cchBuffer`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** dbgshim.h  

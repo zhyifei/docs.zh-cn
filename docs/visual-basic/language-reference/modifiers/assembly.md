@@ -1,10 +1,6 @@
 ---
-title: "程序集 (Visual Basic)"
+title: 程序集 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Assembly
 - vb.AssemblyAttribute
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ef4434f0bc520abfc621567fc68e0b8bcfd6e381
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7ee6cddefd5955ee76510ffeb23335f05460657b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="assembly-visual-basic"></a>程序集 (Visual Basic)
 指定源文件开头特性应用于整个程序集。  
@@ -33,7 +26,7 @@ ms.lasthandoff: 11/21/2017
   
  你可以还将特性应用于程序集在 AssemblyInfo.vb 文件中，在这种情况下则不需要主源代码文件中使用特性块。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Module \<关键字>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
  [属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 

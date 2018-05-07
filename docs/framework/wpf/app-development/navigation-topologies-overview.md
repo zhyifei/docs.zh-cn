@@ -1,13 +1,6 @@
 ---
-title: "导航拓扑概述"
-ms.custom: 
+title: 导航拓扑概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - linear topology [WPF]
 - fixed hierarchical topology [WPF]
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbe7fe80639537293413d8fb923033909a2451e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8976ba7973e4f53022846b98c47d5613fd6ba158
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="navigation-topologies-overview"></a>导航拓扑概述
-<a name="introduction"></a>此概述提供的简介中的导航拓扑[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 三个常见导航拓扑及示例将在随后讨论。  
+<a name="introduction"></a> 此概述提供的简介中的导航拓扑[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 三个常见导航拓扑及示例将在随后讨论。  
   
 > [!NOTE]
 >  在阅读本主题之前, 应该熟悉的概念中的结构化导航[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用页函数。 有关这两个这些主题的详细信息，请参阅[结构化导航概述](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)。  

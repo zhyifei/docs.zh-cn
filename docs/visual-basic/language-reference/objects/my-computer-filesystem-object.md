@@ -1,10 +1,6 @@
 ---
-title: "My.Computer.FileSystem 对象"
+title: My.Computer.FileSystem 对象
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - FileSystem module
 - FileClose function
@@ -16,14 +12,11 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa6b61333152e6cb52fac969551e93d6b3697e53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 111dde90912e586c92da4ed9f5be50d15a75485b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem 对象
 提供了用于处理驱动器、文件和目录的属性和方法。  
@@ -37,12 +30,12 @@ ms.lasthandoff: 11/21/2017
 >  你还可以使用中的类<xref:System.IO?displayProperty=nameWithType>命名空间，用于驱动器、 文件和目录。  
   
 ## <a name="requirements"></a>要求  
- **Namespace:**<xref:Microsoft.VisualBasic.MyServices>  
+ **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
  **类：** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (提供对访问<xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
  **程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [My.Computer.FileSystem.SpecialDirectories 对象](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
  [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)

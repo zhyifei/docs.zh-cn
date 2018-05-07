@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedWriter::Initialize2 方法"
-ms.custom: 
+title: ISymUnmanagedWriter::Initialize2 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter.Initialize2
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 015c7d43a856990251b3e67febe685759cc4e5fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac76ef58badcc8e443279415b7239c0b6017af3e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 方法
 设置元数据发射器接口此编写器将与之相关联，并设置将向其写入调试符号的输出文件名称。 此方法还允许你设置的程序数据库 (PDB) 文件的最终位置。  
@@ -68,7 +56,7 @@ HRESULT Initialize2(
 ## <a name="return-value"></a>返回值  
  如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,26 +1,15 @@
 ---
-title: "在工作流服务中设置消息格式"
-ms.custom: 
+title: 在工作流服务中设置消息格式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6d15d44b-20f8-4cb7-bd4f-598c32781ebc
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be200882b59af3604a88c33ad1b3a99687ded860
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eac9f7042dbcbd31f9a8c7d5e56c7b7d2ab62156
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatting-messages-in-workflow-services"></a>在工作流服务中设置消息格式
-此示例演示如何在消息传递活动（WF 服务）中使用不同的用户类型。 此示例服务是一个简单的费用审批服务，并公开三个操作。 `ApproveExpense` 接受一个数据协定，并演示如何使用已知类型。 该操作根据费用金额返回 `true` 或 `false`。 `ApprovePO`接受一个 XmlSerializer 类型，并返回`true`或`false`根据费用金额。`ApprovedVendor` 接受一个消息协定类型和返回`true`或`false`如果供应商的已批准的供应商列表中，或者请求来自财务部门 （财务部门可以使用任何供应商）。  
+此示例演示如何在消息传递活动（WF 服务）中使用不同的用户类型。 此示例服务是一个简单的费用审批服务，并公开三个操作。 `ApproveExpense` 接受一个数据协定，并演示如何使用已知类型。 该操作根据费用金额返回 `true` 或 `false`。 `ApprovePO` 接受一个 XmlSerializer 类型，并返回`true`或`false`根据费用金额。`ApprovedVendor` 接受一个消息协定类型和返回`true`或`false`如果供应商的已批准的供应商列表中，或者请求来自财务部门 （财务部门可以使用任何供应商）。  
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
@@ -37,6 +26,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\Formatter`

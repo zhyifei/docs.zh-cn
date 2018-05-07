@@ -1,27 +1,15 @@
 ---
-title: "Windows 窗体中鼠标输入的工作原理"
-ms.custom: 
+title: Windows 窗体中鼠标输入的工作原理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 388fd8d3e7f23dc55d46c5a097be99e9f1c34ab0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 265693eef3008362994ad04d9faaf8e20554d13e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Windows 窗体中鼠标输入的工作原理
 接收和处理鼠标输入是每个 Windows 应用程序的一个重要部分。 你可以处理鼠标事件以在你的应用程序，执行操作，或使用鼠标位置信息来执行的命中测试或其他操作。 此外，你可以更改你的应用程序中的控件处理鼠标输入的方式。 本主题介绍这些详细信息，以及如何获取和更改鼠标的系统设置中的鼠标事件。 事件和在其中鼠标单击事件的顺序引发有关使用鼠标提供的数据的详细信息，请参阅[Windows 窗体中的鼠标事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。  

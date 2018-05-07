@@ -1,28 +1,15 @@
 ---
-title: "如何：控制派生类的序列化"
-ms.custom: 
+title: 如何：控制派生类的序列化
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8f66f737b0668028fa45434fed4e6d6180ee69f8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e54388737371cc450eba375e1ac09f0ddbe563a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>如何：控制派生类的序列化
 使用 XmlElementAttribute 属性更改 XML 元素的名称不是自定义对象序列化的唯一方法。 您还可以自定义 XML 流，具体方法为从现有类派生以及指示 <xref:System.Xml.Serialization.XmlSerializer> 实例如何序列化新类。  

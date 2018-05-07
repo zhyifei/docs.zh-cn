@@ -1,10 +1,6 @@
 ---
 title: ParamArray (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ParamArray
 - ParamArray
@@ -12,20 +8,17 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 06770f05aabedcf13cc9af1970a2c511a30c73b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: be8ddb7f9ba08535d12890d1c5c82a9b7b485f3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-指定过程参数是一个指定类型的元素的可选数组。 `ParamArray`可以仅在参数列表的最后一个参数上使用。  
+指定过程参数是一个指定类型的元素的可选数组。 `ParamArray` 可以仅在参数列表的最后一个参数上使用。  
   
 ## <a name="remarks"></a>备注  
- `ParamArray`可以将任意数量的参数传递给过程。 A`ParamArray`始终使用声明参数[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)。  
+ `ParamArray` 可以将任意数量的参数传递给过程。 A`ParamArray`始终使用声明参数[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)。  
   
  你可以提供一个或多个自变量`ParamArray`参数传递的适当的数据的数组类型，则以逗号分隔列表的值，或执行任何操作根本。 有关详细信息，请参阅"调用 ParamArray"[参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)。  
   
@@ -42,6 +35,6 @@ ms.lasthandoff: 11/21/2017
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关键字](../../../visual-basic/language-reference/keywords/index.md)  
  [参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)

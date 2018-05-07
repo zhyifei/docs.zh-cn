@@ -1,14 +1,6 @@
 ---
 title: 数据协定已知类型
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: 42
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 00ae32ff394b1ce2acb38fb237527e934934b935
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-known-types"></a>数据协定已知类型
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 类允许您预先指定应该在反序列化期间包括在考虑范围内的类型。 有关工作示例，请参阅 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 示例。  
@@ -43,7 +29,7 @@ ms.lasthandoff: 04/28/2018
 -   某些类型（包括 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型）具有上述三种类别之一中的成员。 例如， <xref:System.Collections.Hashtable> 使用 <xref:System.Object> 在哈希表中存储实际对象。 在序列化这些类型时，接收方无法预先确定这些成员的数据协定。  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute 类  
- 在数据到达接收终结点时， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 运行库尝试将数据反序列化为公共语言运行库 (CLR) 类型的实例。 通过首先检查传入消息选择为反序列化而实例化的类型，以确定消息内容遵循的数据协定。 然后反序列化引擎尝试查找实现与消息内容兼容的数据协定的 CLR 类型。 反序列化引擎在此过程中允许的侯选类型集称为反序列化程序的“已知类型”集。  
+ 当数据到达接收终结点时，WCF 运行时将尝试将数据反序列化为公共语言运行时 (CLR) 类型的实例。 通过首先检查传入消息选择为反序列化而实例化的类型，以确定消息内容遵循的数据协定。 然后反序列化引擎尝试查找实现与消息内容兼容的数据协定的 CLR 类型。 反序列化引擎在此过程中允许的侯选类型集称为反序列化程序的“已知类型”集。  
   
  让反序列化引擎了解某个类型的一种方法是使用 <xref:System.Runtime.Serialization.KnownTypeAttribute>。 不能将属性应用于单个数据成员，只能将它应用于整个数据协定类型。 将属性应用于可能为类或结构的“外部类型”  。 在其最基本的用法中，应用属性会将类型指定为“已知类型”。 只要反序列化外部类型的对象或通过其成员引用的任何对象，这就会导致已知类型成为已知类型集的一部分。 可以将多个 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性应用于同一类型。  
   
@@ -144,7 +130,7 @@ ms.lasthandoff: 04/28/2018
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>添加已知类型的其他方法  
- 此外，可以通过配置文件添加已知类型。 在不控制需要已知类型才能正确反序列化的类型时，这是很有用的，如将第三方类型库与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]一起使用时。  
+ 此外，可以通过配置文件添加已知类型。 不控制需要已知的类型才能正确反序列化，如当使用第三方类型库与 Windows Communication Foundation (WCF) 的类型时，这非常有用。  
   
  下面的配置文件演示如何在配置文件中指定已知类型。  
   

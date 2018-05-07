@@ -1,13 +1,6 @@
 ---
-title: "如何：创建用于绘制的 Graphics 对象"
-ms.custom: 
+title: 如何：创建用于绘制的 Graphics 对象
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d4b626d3d87c6537b74b6d28e086303474ea2c3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c25ddcfb3a566055afd5e233c2a69b3b7a8c66e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>如何：创建用于绘制的 Graphics 对象
 您可以绘制线条和形状之前，呈现文本，或显示和操作与图像[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，你需要创建<xref:System.Drawing.Graphics>对象。 <xref:System.Drawing.Graphics>对象所表示[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]绘图图面，并且是用于创建图形映像的对象。  
@@ -44,11 +32,11 @@ ms.lasthandoff: 12/22/2017
   
 -   作为的一部分接收到的图形对象的引用<xref:System.Windows.Forms.PaintEventArgs>中<xref:System.Windows.Forms.Control.Paint>的窗体或控件的事件。 这通常是如何获取对图形对象的引用，创建控件的绘制代码时。 同样，你还可以作为的属性获取的图形对象<xref:System.Drawing.Printing.PrintPageEventArgs>时处理<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件<xref:System.Drawing.Printing.PrintDocument>。  
   
-     或  
+     -或-  
   
 -   调用<xref:System.Windows.Forms.Control.CreateGraphics%2A>控件或窗体，以获得对引用方法<xref:System.Drawing.Graphics>对象，表示该控件或窗体的绘图图面。 如果你想要在窗体或已存在的控件上绘制，请使用此方法。  
   
-     或  
+     -或-  
   
 -   创建<xref:System.Drawing.Graphics>从继承自任何对象的对象<xref:System.Drawing.Image>。 当你想要更改现有的映像时，此方法非常有用。  
   

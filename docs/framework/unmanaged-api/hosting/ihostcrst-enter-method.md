@@ -1,14 +1,6 @@
 ---
-title: "IHostCrst::Enter 方法"
-ms.custom: 
+title: IHostCrst::Enter 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostCrst.Enter
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 100dd7eb-7053-4295-9bb3-32ba47f6ec79
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 390f30c85dac494451af1ff82328c913dd9438ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a472b686799bfec4b53b8880a0c52c6f0846b03a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostcrstenter-method"></a>IHostCrst::Enter 方法
 进入临界区表示由当前[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)实例。  
@@ -54,7 +42,7 @@ HRESULT Enter (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`Enter`已成功返回。|  
+|S_OK|`Enter` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -62,19 +50,19 @@ HRESULT Enter (
 |E_FAIL|出现未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再可用进程内。 到托管方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- `Enter`镜像 Win32`EnterCriticalSection`函数。  
+ `Enter` 镜像 Win32`EnterCriticalSection`函数。  
   
 > [!NOTE]
 >  此方法不返回直到输入关键部分。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRSyncManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

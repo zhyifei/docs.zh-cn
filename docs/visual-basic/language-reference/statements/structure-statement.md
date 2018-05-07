@@ -1,11 +1,6 @@
 ---
-title: "Structure 语句"
+title: Structure 语句
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Structure
 - Structure
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a3626706b226b0be253fd35fa60b33a71b86007
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-statement"></a>Structure 语句
 声明结构的名称，并引入的变量、 属性、 事件和结构包含的过程的定义。  
@@ -48,14 +40,14 @@ End Structure
 |`accessmodifier`|可选。 可以是以下各项之一：<br /><br /> -   [公共](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私有](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
 |`Shadows`|可选。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
 |`Partial`|可选。 指示结构的部分定义。 请参阅[部分](../../../visual-basic/language-reference/modifiers/partial.md)。|  
-|`name`|必需。 此结构的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`name`|必须的。 此结构的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
 |`Of`|可选。 指定这是泛型的结构。|  
 |`typelist`|如果你使用是必需的[的](../../../visual-basic/language-reference/statements/of-clause.md)关键字。 此结构的类型参数的列表。 请参阅[键入列表](../../../visual-basic/language-reference/statements/type-list.md)。|  
 |`Implements`|可选。 指示此结构实现一个或多个接口的成员。 请参阅[实现语句](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
 |`interfacenames`|如果你使用是必需的`Implements`语句。 此结构实现的接口的名称。|  
-|`datamemberdeclarations`|必需。 零个或多`Const`， `Dim`， `Enum`，或`Event`语句声明*数据成员*的结构。|  
+|`datamemberdeclarations`|必须的。 零个或多`Const`， `Dim`， `Enum`，或`Event`语句声明*数据成员*的结构。|  
 |`methodmemberdeclarations`|可选。 零个或多个声明的`Function`， `Operator`， `Property`，或`Sub`过程，充当*方法成员*的结构。|  
-|`End Structure`|必需。 终止`Structure`定义。|  
+|`End Structure`|必须的。 终止`Structure`定义。|  
   
 ## <a name="remarks"></a>备注  
  `Structure`语句定义你可以自定义的复合值类型。 A*结构*是用户定义的类型 (UDT) 的 Visual Basic 早期版本的泛化。 有关详细信息，请参阅[结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)。  
@@ -111,7 +103,7 @@ End Structure
   
  [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
  [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)  
  [Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)  

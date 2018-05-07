@@ -1,14 +1,6 @@
 ---
-title: "STARTUP_FLAGS 枚举"
-ms.custom: 
+title: STARTUP_FLAGS 枚举
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - STARTUP_FLAGS
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ca2db0cd7082a596999f1d74c9092264a65692ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc1d3ffc34cd74d68bf10cb677b68f0a75bb7c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 枚举
 包含指示公共语言运行时 (CLR) 的启动行为的值。 默认情况下，垃圾回收是是非并发的并且只基类库加载到非特定于域的区域。  
@@ -85,14 +73,14 @@ typedef enum {
 |`STARTUP_ETW`|指定为公共语言运行时事件启用了事件跟踪 Windows (ETW)。 从 Windows Vista 开始，事件跟踪始终会启用，因此此标志没有任何效果。 请参阅[控制.NET Framework 日志记录](../../../../docs/framework/performance/controlling-logging.md)。|  
 |`STARTUP_ARM`|指定启用了应用程序域资源监视。 请参阅<xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>属性和[ \<appDomainResourceMonitoring > 元素](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

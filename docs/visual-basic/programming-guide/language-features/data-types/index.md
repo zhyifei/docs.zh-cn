@@ -1,13 +1,6 @@
 ---
 title: Visual Basic 中的数据类型
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - data types [Visual Basic], declaring
 - typing
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 20a24c8632e1f2193cfa86319a824dfcc038d9d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 855e32463284604fc27d4b73331ae48967dddefb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic 中的数据类型
 编程元素的*数据类型*是指可以保留的数据种类以及相应类型数据的存储方式。 数据类型适用于所有可以存储到计算机内存中或参与表达式求值的值。 每个变量、文本、常量、枚举、属性、过程参数、过程自变量和过程返回值都有对应的数据类型。  
@@ -34,7 +24,7 @@ ms.lasthandoff: 11/21/2017
 |-------------------------|---------------------------|  
 |变量|使用 [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)<br /><br /> `Dim`   `amount As Double`<br /><br /> `Static`   `yourName As String`<br /><br /> `Public`   `billsPaid As Decimal = 0`|  
 |Literal|含文本类型字符；请参阅[类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)中的“文本类型字符”<br /><br /> `Dim searchChar As Char = "."`  `C`|  
-|常量|使用 [Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
+|返回的常量|使用 [Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
 |枚举|使用 [Enum 语句](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
 |属性|使用 [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
 |过程参数|使用 [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)、[Function 语句](../../../../visual-basic/language-reference/statements/function-statement.md)或 [Operator 语句](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
@@ -43,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  有关 Visual Basic 数据类型的列表，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
  [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  

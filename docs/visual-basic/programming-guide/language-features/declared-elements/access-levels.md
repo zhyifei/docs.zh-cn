@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic 中的访问级别"
-ms.custom: 
+title: Visual Basic 中的访问级别
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - members [Visual Basic], accessing in Visual Basic
 - Friend access modifier
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 87e43ac7e813cece1179bdaf24c86fa62adcb438
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f8fda62e468e3735e3ae36afdebe440a8e4bc04
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic 中的访问级别
 *访问级别*的已声明的元素是能够访问它的范围，哪些代码，即有权读取或写入到它。 这确定如何声明元素本身，不仅还由元素的容器的访问级别。 无法访问包含元素的代码不能访问任何其包含的元素，甚至那些声明为`Public`。 例如，`Public`变量中`Private`结构可以从访问，在类中包含表的结构，但不是能从该类的外部。  
@@ -89,7 +80,7 @@ Private numberForMeOnly As Integer
 |`Protected` `Friend`|联合的`Protected`和`Friend`:<br /><br /> 在同一个类或相同的程序集用作受保护的友元元素，或从元素的类派生的任何类中的代码，可以访问它|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|类|  
 |`Private`|声明上下文：<br /><br /> 声明一个私有元素，包括中包含的类型的代码可以访问的元素的类型中的代码|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 结构成员<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|模块<br /><br /> 类<br /><br /> 结构|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)  
  [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
  [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

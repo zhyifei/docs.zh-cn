@@ -1,12 +1,6 @@
 ---
 title: Not 运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Not
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ac160aef7b7dc8acb8bf0211b403599692f2373c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 332cee57c8d25d7f51737e01e70ba515d50bd6e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="not-operator-visual-basic"></a>Not 运算符 (Visual Basic)
 在执行逻辑求反`Boolean`表达式或对数值表达式的按位求反运算。  
@@ -40,10 +31,10 @@ result = Not expression
   
 ## <a name="parts"></a>部件  
  `result`  
- 必需。 任何`Boolean`或数值表达式。  
+ 必须的。 任何`Boolean`或数值表达式。  
   
  `expression`  
- 必需。 任何`Boolean`或数值表达式。  
+ 必须的。 任何`Boolean`或数值表达式。  
   
 ## <a name="remarks"></a>备注  
  有关`Boolean`表达式下, 表说明了如何`result`确定。  
@@ -83,7 +74,7 @@ result = Not expression
   
  上面的示例分别产生结果 – 11、-9 和-7。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [逻辑/按位运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
  [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  

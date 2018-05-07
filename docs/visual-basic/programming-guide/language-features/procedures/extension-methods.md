@@ -1,27 +1,17 @@
 ---
 title: 扩展方法 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ExtensionMethods
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-caps.latest.revision: 41
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3db3bc2b213b78ef2dceebcf56c9d5fbfa3016e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1cc2ccef09dd027c6f1e82f60ed4ac5f50db6ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extension-methods-visual-basic"></a>扩展方法 (Visual Basic)
 扩展方法使开发人员能够将自定义功能添加到已定义而无需创建新的派生的类型的数据类型。 扩展方法使您可以用来编写可以就像它是现有类型的实例方法调用的方法。  
@@ -38,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
- 请注意，标记扩展方法定义为具有扩展属性`<Extension()>`。 标记在其中定义该方法的模块是可选的但必须标记每个扩展方法。 <xref:System.Runtime.CompilerServices>必须导入才能访问扩展属性。  
+ 请注意，标记扩展方法定义为具有扩展属性`<Extension()>`。 标记在其中定义该方法的模块是可选的但必须标记每个扩展方法。 <xref:System.Runtime.CompilerServices> 必须导入才能访问扩展属性。  
   
  扩展方法可以仅在模块内声明。 通常，在其中定义的扩展方法的模块不是调用它的一个相同的模块。 相反，包含扩展方法是导入的模块，如果它必须是，以使其进入作用域。 包含该模块后`Print`是在作用域，就像它是普通的实例方法，如不采用任何参数，可以调用该方法`ToUpper`:  
   
@@ -48,9 +38,9 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
- 默认情况下，调用方法的字符串参数发送`punc`:`example.PrintAndPunctuate(".")`  
+ 默认情况下，调用方法的字符串参数发送`punc`: `example.PrintAndPunctuate(".")`  
   
- 下面的示例演示`Print`和`PrintAndPunctuate`定义和调用。 <xref:System.Runtime.CompilerServices>将以导入定义模块以启用扩展属性的访问权限。  
+ 下面的示例演示`Print`和`PrintAndPunctuate`定义和调用。 <xref:System.Runtime.CompilerServices> 将以导入定义模块以启用扩展属性的访问权限。  
   
 ### <a name="code"></a>代码  
   
@@ -183,7 +173,7 @@ End Module
   
  如果优先不解析多义性，可以使用完全限定的名称以指定要调用的方法。 如果`Print`前面示例中的方法定义一个名为模块中`StringExtensions`，完全限定的名称是`StringExtensions.Print(example)`而不是`example.Print()`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.CompilerServices>  
  <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
  [扩展方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  

@@ -1,27 +1,15 @@
 ---
-title: "如何：在 Windows 窗体之间复制控件"
-ms.custom: 
+title: 如何：在 Windows 窗体之间复制控件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, copying
 - controls [Windows Forms], copying
 ms.assetid: 106c1eb2-1fba-4f69-b2ec-9ea3fa182f1e
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47cae789fb816286a9a22b87a2a86638c7876bda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da8ff1ae5abb65683e4f11bed5de328dc37c57a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>如何：在 Windows 窗体之间复制控件
 控件可复制到相同的格式、 另一种形式在项目中，或到剪贴板，以便在其他解决方案中使用。  

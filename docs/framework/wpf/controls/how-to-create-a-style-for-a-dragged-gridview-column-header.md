@@ -1,28 +1,14 @@
 ---
-title: "如何：为拖动的 GridView 列标题创建样式"
-ms.custom: 
+title: 如何：为拖动的 GridView 列标题创建样式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 001d0ec45ad990ef366e7fc1216a7370aade9cb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e57b4cb1b8ddb90e8e6e0abc6db3e7f0b864cfa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>如何：为拖动的 GridView 列标题创建样式
 此示例演示如何更改外观的拖动<xref:System.Windows.Controls.GridViewColumnHeader>当用户更改列的位置。  

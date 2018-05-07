@@ -1,23 +1,12 @@
 ---
-title: "为工作流配置跟踪"
-ms.custom: 
+title: 为工作流配置跟踪
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb64569984d71e35ef9f502c79d3a0bb8b4b8988
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 70697d82242ab0704dd67129940a6660d300bef9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>为工作流配置跟踪
 工作流可以按以下三种方法执行：  
@@ -156,7 +145,7 @@ invoker.Invoke();
 ```  
   
 ### <a name="viewing-tracking-records-in-event-viewer"></a>在事件查看器中查看跟踪记录  
- 在跟踪 WF 执行时有两种特殊的事件查看器日志可供查看 - 分析日志和调试日志。 这两者均驻留在 Microsoft &#124;Windows &#124;应用程序服务器-应用程序节点。  此部分内的日志包含来自单一应用程序的事件，而不包含对整个系统范围产生影响的事件。  
+ 在跟踪 WF 执行时有两种特殊的事件查看器日志可供查看 - 分析日志和调试日志。 这两者均驻留在 Microsoft&#124;Windows&#124;应用程序服务器-应用程序节点。  此部分内的日志包含来自单一应用程序的事件，而不包含对整个系统范围产生影响的事件。  
   
  调试跟踪事件将写入调试日志。 若要收集事件查看器中的 WF 调试跟踪事件，请启用调试日志。  
   

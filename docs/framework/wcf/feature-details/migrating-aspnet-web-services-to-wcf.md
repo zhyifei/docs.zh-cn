@@ -1,50 +1,38 @@
 ---
-title: "将 ASP.NET Web 服务迁移到 WCF"
-ms.custom: 
+title: 将 ASP.NET Web 服务迁移到 WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f90f7dd508e2ff4058b787fc29d152abc18f24fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d43c66952d17a91e38ae1b086478b9416321b8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>将 ASP.NET Web 服务迁移到 WCF
-ASP.NET 提供 .NET Framework 类库和工具以用于生成 Web 服务，并提供用于在 Internet Information Services (IIS) 内承载服务的功能。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了 .NET Framework 类库、工具和承载功能，使软件实体可以使用任何协议（包括 Web 服务使用的协议）进行通信。  将 ASP.NET Web 服务迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以让应用程序充分利用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特有的新功能和改进。  
+ASP.NET 提供 .NET Framework 类库和工具以用于生成 Web 服务，并提供用于在 Internet Information Services (IIS) 内承载服务的功能。 Windows Communication Foundation (WCF) 提供.NET Framework 类库、 工具和承载功能，使软件实体可以使用任何协议，包括由 Web 服务使用的协议进行通信。  将 ASP.NET Web 服务迁移到 WCF 允许你的应用程序充分利用新功能和特定于 WCF 的改进。  
   
- 对于 ASP.NET Web 服务，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 具有多个重要优势。 ASP.NET Web 服务工具仅用于生成 Web 服务，如果必须使软件实体之间相互通信，则可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的工具。 这会减少开发人员为适应不同软件通信方案而必需了解的技术的数量，从而降低软件开发资源的成本及完成软件开发项目所需的时间。  
+ WCF 具有对于 ASP.NET Web 服务的多个重要优势。 尽管 ASP.NET Web 服务工具仅用于生成 Web 服务，WCF 提供了必须使软件实体之间相互通信时，可以使用的工具。 这会减少开发人员为适应不同软件通信方案而必需了解的技术的数量，从而降低软件开发资源的成本及完成软件开发项目所需的时间。  
   
- 即使对于 Web 服务开发项目，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的 Web 服务协议也比 ASP.NET Web 服务支持的协议多。 这些附加协议提供更完善的解决方案，涉及可靠会话和事务等其他内容。  
+ 即使对于 Web 服务开发项目，WCF 支持协议比 ASP.NET Web 服务支持的更多 Web 服务。 这些附加协议提供更完善的解决方案，涉及可靠会话和事务等其他内容。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的消息传输协议比 ASP.NET Web 服务支持的协议更多。 ASP.NET Web 服务仅支持使用超文本传输协议 (HTTP) 发送消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持通过使用 HTTP、传输控制协议 (TCP)、命名管道和 Microsoft 消息队列 (MSMQ) 来发送消息。 更重要的是，可以扩展 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以支持其他传输协议。 因此，使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 开发的软件适合于与更广泛的其他软件一起使用，从而提高潜在的投资回报。  
+ WCF 支持多个协议比 ASP.NET Web 服务的消息传输。 ASP.NET Web 服务仅支持使用超文本传输协议 (HTTP) 发送消息。 WCF 支持通过使用 HTTP，以及传输控制协议 (TCP)，命名管道和 Microsoft 消息队列 (MSMQ) 发送消息。 更重要的是，WCF 可以进行扩展以支持其他传输协议。 因此，使用 WCF 开发的软件可以进行适配以便与更广泛的其他软件，从而提高潜在的投资回报一起工作。  
   
- 与 ASP.NET Web 服务相比，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的用于部署和管理应用程序的工具要多得多。 除了 ASP.NET 也具有的配置系统外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还提供配置编辑器、通过任意数目的媒介在发送方和接收方之间来回进行的活动跟踪、跟踪查看器、消息日志记录、大量性能计数器和对 Windows Management Instrumentation 的支持。  
+ WCF 提供了用于部署多更丰富功能，并管理比 ASP.NET Web 服务的应用程序提供。 WCF 配置系统，ASP.NET 还提供了，除了提供配置编辑器，从发送方到接收方并通过任意数目的媒介、 跟踪查看器、 消息日志记录、 大量性能计数器的返回的活动跟踪和对 Windows Management Instrumentation 的支持。  
   
- 对于 ASP.NET Web 服务，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 具有这些潜在的好处，如果您正在使用或正在考虑使用 ASP.NET Web 服务，您可以进行以下几种选择：  
+ 给定这些潜在的好处的 WCF 相对于 ASP.NET Web 服务，如果你正在使用或正在考虑使用 ASP.NET Web 服务有几个选项：  
   
--   继续使用 ASP.NET Web 服务，放弃 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的好处。  
+-   继续使用 ASP.NET Web 服务，放弃 WCF 提供的好处。  
   
--   继续使用 ASP.NET Web 服务，并打算在未来的某时采用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 本节中的主题说明如何最大化与未来 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序一起使用新 ASP.NET Web 服务应用程序的前景。 本节中的主题还说明如何生成新的 ASP.NET Web 服务以便于将这些服务迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 不过，如果必须要保证服务的安全，或者需要可靠性或事务保证，或者必须构造自定义管理工具，则最好选择采用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 正是为这样的方案而设计的。  
+-   继续使用 ASP.NET Web 服务，并打算在未来某个时刻采用 WCF。 此部分中的主题说明如何最大化才能使用新 ASP.NET Web 服务的应用程序以及将来的 WCF 应用程序的前景。 本部分中的主题还说明如何生成新的 ASP.NET Web 服务，以更加轻松地将它们迁移到 WCF。 但是，如果保证服务的安全，或者需要可靠性或事务保证是必需的或者如果自定义管理工具将需要构造，则它是更好的选择采用 WCF。 WCF 专为确切地说是这种情况。  
   
--   采用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以进行新开发，同时继续保持现有的 ASP.NET Web 服务应用程序。 这种选择很可能是最佳选择。 它提供 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的好处，同时可节省修改现有应用程序的成本。 在这种方案中，新的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序可以与现有 ASP.NET 应用程序共存。 新 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序将能够使用现有的 ASP.NET Web 服务，并且可以借助于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 兼容模式使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将新操作功能编程到现有的 ASP.NET 应用程序中。  
+-   对于新开发，同时继续保持现有的 ASP.NET Web 服务应用程序采用 WCF。 这种选择很可能是最佳选择。 它的好处 WCF，同时可节省修改现有应用程序中，若要使用它的成本。 在此方案中，在现有的 ASP.NET 应用程序中新的 WCF 应用程序可以共存。 新的 WCF 应用程序将能够使用现有的 ASP.NET Web 服务，并可以使用 WCF 进行编程新操作功能编程到现有的 ASP.NET 应用程序，因为 WCF ASP.NET 兼容模式。  
   
--   采用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 并将现有 ASP.NET Web 服务应用程序迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 您可以选择此选项以增强现有的应用程序，使其具有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的功能，或者在新的、功能更强大的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序中重现现有 ASP.NET Web 服务的功能。  
+-   采用 WCF 和现有 ASP.NET Web 服务应用程序迁移到 WCF。 你可以选择此选项以增强现有的应用程序与 WCF，提供的功能，或者以重现现有 ASP.NET Web 服务在新的功能、 更强大的 WCF 应用程序。  
   
 > [!NOTE]
->  如果 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务由 IIS 5.x 承载，则在卸载 ASP.NET 时必须小心。 如果 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务由 IIS 5.x 承载，则在卸载 ASP.NET 时，可能会请求该服务的代码。 在已卸载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的情况下，在运行 IIS 5.x 的操作系统上卸载 ASP.NET 时，会将带有 .svc 扩展名的文件视为文本文件，其内容（包括任何源代码）会返回给请求者。  
+>  必须格外谨慎，如果承载 WCF 服务由 IIS 5.x 和 ASP.NET 被卸载。 当由 IIS 承载的 WCF 服务可能会在卸载 ASP.NET 请求 5.x，服务的代码。 运行 IIS 的操作系统上卸载 ASP.NET 卸载 5.x 和 WCF 带有.svc 扩展名的文件视为文本文件，其内容，包括任何源代码，会返回给请求者。  
   
- 本节详细说明这些选项，将 ASP.NET Web 服务与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 进行对比，并提供有关如何将 ASP.NET Web 服务代码迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的说明。  
+ 本部分介绍了这些选项在详细信息、 比较 ASP.NET Web 服务迁移到 WCF 和说明了如何将 ASP.NET Web 服务代码迁移到 WCF。  
   
 ## <a name="see-also"></a>请参阅  
  [预期采用 Windows Communication Foundation：便于以后迁移](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)  

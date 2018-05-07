@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedReader::GetUserEntryPoint 方法"
-ms.custom: 
+title: ISymUnmanagedReader::GetUserEntryPoint 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedReader.GetUserEntryPoint
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3fd3a34c-d176-46e9-9996-fb1646cff9b0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 328f44e797a49a899545fa43d940a3b0399ee8c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b4c334d82320066bf9459907660fe6b7e2acefd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>ISymUnmanagedReader::GetUserEntryPoint 方法
 如果有，则返回指定为该模块的用户入口点的方法。 例如，用户的主要方法，而不是编译器生成存根 （stub） 的主要方法之前，可能是此方法。  
@@ -52,7 +40,7 @@ HRESULT GetUserEntryPoint (
 ## <a name="return-value"></a>返回值  
  如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>请参阅  

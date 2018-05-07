@@ -1,14 +1,6 @@
 ---
 title: 如何：使用 SSL 证书配置端口
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bbf3d4b9888d07a89d1b6a8225a7f7415e8c67cc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c3cede1eb90b963f4c0b567a8df48925bca9b02d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>如何：使用 SSL 证书配置端口
-使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 类（使用传输安全）创建自承载 <xref:System.ServiceModel.WSHttpBinding> 服务时，还必须使用 X.509 证书配置端口。 如果不是在创建自承载服务，可以在 Internet 信息服务 (IIS) 上承载服务。 有关详细信息，请参阅[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+创建与自承载的 Windows Communication Foundation (WCF) 服务时<xref:System.ServiceModel.WSHttpBinding>类，它使用传输安全中，你还必须使用 X.509 证书配置端口。 如果不是在创建自承载服务，可以在 Internet 信息服务 (IIS) 上承载服务。 有关详细信息，请参阅[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  若要配置端口，使用的工具取决于计算机运行的操作系统。  
   

@@ -1,23 +1,12 @@
 ---
-title: "持久延迟"
-ms.custom: 
+title: 持久延迟
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8313bfafa66e012eea65f1c4d9b50a9ce37908f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5307b8144e17f91cd3ba8c2e385492f86c167820
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-delay"></a>持久延迟
 此示例演示如何使用持久延迟，在持久延迟过程中，将把工作流保留到持久性设备。 示例工作流包含发送到控制台并由延迟分隔的两个消息。 触发延迟时，工作流会卸载，并在重新加载到内存中之前，在工作流实例存储中等待 5 秒。  
@@ -27,7 +16,7 @@ ms.lasthandoff: 12/22/2017
   
  下面的列表详细介绍初始化过程中工作流服务主机进行的设置。  
   
-1.  创建一个地址为 (http://localhost:8080/Client) 的服务主机。  
+1.  创建一个地址的服务主机 (http://localhost:8080/Client)。  
   
 2.  在该服务主机中创建一个终结点，以便与工作流内的 <xref:System.ServiceModel.Activities.Receive> 活动进行通信。  
   
@@ -76,6 +65,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDelay`

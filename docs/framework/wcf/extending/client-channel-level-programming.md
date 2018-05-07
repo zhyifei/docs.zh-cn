@@ -1,30 +1,18 @@
 ---
-title: "客户端通道级编程"
-ms.custom: 
+title: 客户端通道级编程
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c3d9bc1819045c8261f003cbab52dd71c4da408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff399a2f3a4b86404695502fb002ee6920bea758
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-channel-level-programming"></a>客户端通道级编程
-本主题介绍如何在不使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 类及其关联的对象模型的情况下编写 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 客户端应用程序。  
+本主题介绍如何编写的 Windows Communication Foundation (WCF) 客户端应用时无需使用<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>类和其关联的对象模型。  
   
 ## <a name="sending-messages"></a>发送消息  
  若要准备发送消息并接收和处理回复，需要执行下列步骤：  

@@ -1,22 +1,12 @@
 ---
-title: "创建变体泛型接口 (Visual Basic)"
-ms.custom: 
+title: 创建变体泛型接口 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 380af3b29172b1fa13d42d33e574201607cb804b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>创建变体泛型接口 (Visual Basic)
 接口中的泛型类型参数可以声明为协变或逆变。 协变允许接口方法具有与泛型类型参数定义的返回类型相比，派生程度更大的返回类型。 逆变允许接口方法具有与泛型形参指定的实参类型相比，派生程度更小的实参类型。 具有协变或逆变泛型类型参数的泛型接口称为“变体”。  
@@ -28,7 +18,7 @@ ms.lasthandoff: 11/21/2017
  可通过对泛型类型参数使用 `in` 和 `out` 关键字来声明变体泛型接口。  
   
 > [!IMPORTANT]
->  `ByRef`在 Visual Basic 中的参数不能为变体。 值类型也不支持变体。  
+>  `ByRef` 在 Visual Basic 中的参数不能为变体。 值类型也不支持变体。  
   
  可以使用 `out` 关键字将泛型类型参数声明为协变。 协变类型必须满足以下条件：  
   
@@ -234,6 +224,6 @@ End Sub
   
  在此示例中，没有指定 `pets.GetEnumerator` 方法如何在 `Cat` 和 `Dog` 之间选择。 这可能导致代码中出现问题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [泛型接口中的变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
  [对 Func 和 Action 泛型委托使用变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

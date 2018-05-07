@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback4::ReJITError 方法"
-ms.custom: 
+title: ICorProfilerCallback4::ReJITError 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback4.ReJITError
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c746d0f7a6be96f95f1a051e22de0ad1bd2d2269
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec6472a33c49d9345793d73ac2f78f8896dc218b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError 方法
 通知探查器在实时 (JIT) 编译器遇到重新编译过程中的错误。  
@@ -75,14 +63,14 @@ HRESULT ReJITError(
 |E_OUTOFMEMORY|尝试将标记为 JIT 重新编译指定的方法时，CLR 耗尽了内存。|  
 |其他|操作系统返回了 CLR 控件范围之外的失败。 例如，如果要更改一个内存页的访问权限保护的系统调用失败，将显示操作系统错误。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  

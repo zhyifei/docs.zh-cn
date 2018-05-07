@@ -1,29 +1,18 @@
 ---
-title: "Windows Workflow Foundation 功能详细信息"
-ms.custom: 
+title: Windows Workflow Foundation 功能详细信息
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6943a7eaeaecf8f11de7c10237979067c83c24d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能详细信息
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 向 Windows Workflow Foundation 添加了大量功能。 本文档介绍了大量新的功能，并详述了这些功能可用于的方案。  
   
 ## <a name="messaging-activities"></a>消息传递活动  
- 消息传递活动 (<xref:System.ServiceModel.Activities.Receive>， <xref:System.ServiceModel.Activities.SendReply>， <xref:System.ServiceModel.Activities.Send>， <xref:System.ServiceModel.Activities.ReceiveReply>) 用于发送和接收[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]从工作流的消息。  <xref:System.ServiceModel.Activities.Receive>和<xref:System.ServiceModel.Activities.SendReply>活动来形成[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]服务就像标准一样通过 WSDL 公开的操作[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]web 服务。  <xref:System.ServiceModel.Activities.Send>和<xref:System.ServiceModel.Activities.ReceiveReply>用于使用类似于 WCF web 服务<xref:System.ServiceModel.ChannelFactory>;**添加服务引用**体验还存在生成预配置的活动的 Workflow Foundation。  
+ 消息传递活动 (<xref:System.ServiceModel.Activities.Receive>， <xref:System.ServiceModel.Activities.SendReply>， <xref:System.ServiceModel.Activities.Send>， <xref:System.ServiceModel.Activities.ReceiveReply>) 用于发送和接收[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]从工作流的消息。  <xref:System.ServiceModel.Activities.Receive> 和<xref:System.ServiceModel.Activities.SendReply>活动用于构成 Windows Communication Foundation (WCF) 服务操作，就像标准一样通过 WSDL 公开[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]web 服务。  <xref:System.ServiceModel.Activities.Send> 和<xref:System.ServiceModel.Activities.ReceiveReply>用于使用类似于 WCF web 服务<xref:System.ServiceModel.ChannelFactory>;**添加服务引用**体验还存在生成预配置的活动的 Workflow Foundation。  
   
 ### <a name="getting-started-with-messaging-activities"></a>消息传递活动入门  
   
@@ -305,7 +294,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  文档：[路由](../../../docs/framework/wcf/feature-details/routing.md)  
   
-2.  示例：[路由服务和 #91;WCF 示例 &#93;](../../../docs/framework/wcf/samples/routing-services.md)  
+2.  示例：[路由服务&#91;WCF 示例&#93;](../../../docs/framework/wcf/samples/routing-services.md)  
   
 3.  博客：[路由规则 ！](http://go.microsoft.com/fwlink/?LinkId=204956)  
   

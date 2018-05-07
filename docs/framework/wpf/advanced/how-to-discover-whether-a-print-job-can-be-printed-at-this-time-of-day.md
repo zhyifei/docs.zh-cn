@@ -1,14 +1,6 @@
 ---
 title: 如何：确定此时是否可以打印一项打印作业
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eef74cfa290614e530fa22a34533c7924d4af1b4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e5ea5ad3bcb10bfbc091f0b5852ee181a2c3fa8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>如何：确定此时是否可以打印一项打印作业
 打印队列并不总是可用的一天 24 小时。 它们具有开始和结束时间属性，可设置为使它们在每天的某些时间不可用。 例如，此功能可以用于保留以供在下午 5 点后的特定部门专用打印机。 该部门都使用不同队列维护比其他部门打印机。 将设置为其他部门队列来下午 5 点以后将不可用，尽管可将队列的支持的部门设置为始终保持可用。  

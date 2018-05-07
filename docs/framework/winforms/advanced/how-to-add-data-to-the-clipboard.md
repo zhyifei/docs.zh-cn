@@ -1,13 +1,6 @@
 ---
-title: "如何：将数据添加到剪贴板"
-ms.custom: 
+title: 如何：将数据添加到剪贴板
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 452dfc5a9645e8f43ab583099deec60faa2d1b4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6002acfadfd0e688ef432baacbdabffb83890cb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>如何：将数据添加到剪贴板
 <xref:System.Windows.Forms.Clipboard>类提供了可以使用与 Windows 操作系统的剪贴板功能进行交互的方法。 许多应用程序的数据作为临时存储库使用剪贴板。 例如，字处理器在剪切和粘贴操作期间使用剪贴板。 剪贴板还可用于将数据传输到另一个应用程序。  

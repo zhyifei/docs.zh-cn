@@ -1,28 +1,16 @@
 ---
 title: Windows Workflow Foundation 编程
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], programming
 - programming [WF]
 - WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b704357d914f72049d0639c402bf2ae64975d00
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 2e60a98492947a5ce21652cff1ca7dda7993e8bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation 编程
 本部分包含一的组你应了解成为熟练的 Windows Workflow Foundation (WF) 程序员的入门知识主题。  
@@ -62,7 +50,7 @@ ms.lasthandoff: 04/27/2018
  介绍工作流跟踪以及如何将这些功能用于监视工作流应用程序的主题。  
   
  [工作流安全性](../../../docs/framework/windows-workflow-foundation/workflow-security.md)  
- 讨论使用 SQL 和 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 时如何保护工作流的安全。  
+ 讨论如何保护你的工作流，在使用 SQL 和 Windows Communication Foundation (WCF) 时。  
   
  [Windows Workflow Foundation 4 性能](../../../docs/framework/windows-workflow-foundation/performance.md)  
  讨论 Windows Workflow Foundation 4 性能，并将它与以前的 WF 版本进行比较。

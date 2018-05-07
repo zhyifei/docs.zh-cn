@@ -1,24 +1,14 @@
 ---
-title: "如何：转换传入声明"
-ms.custom: 
+title: 如何：转换传入声明
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1f736554cd50a5ca2bd45dfab2f41ba672601f29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb71e320116c3af73139f1a8083fa62e8a7e21a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-transform-incoming-claims"></a>如何：转换传入声明
 ## <a name="applies-to"></a>适用于  
@@ -27,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET® Web 窗体  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  本指南提供了创建简单的声明感知 ASP.NET Web 窗体应用程序和转换传入声明的详细分步过程。 它还提供关于如何测试应用程序的说明，以便验证当应用程序运行时是否呈现已转换声明。  
   
 ## <a name="contents"></a>内容  
@@ -183,4 +173,4 @@ ms.lasthandoff: 12/22/2017
   
     ||||||  
     |-|-|-|-|-|  
-    |本地机构|本地机构|http://schemas.microsoft.com/ws/2008/06/identity/claims/role|管理|http://www.w3.org/2001/XMLSchema#string|
+    |本地机构|本地机构|http://schemas.microsoft.com/ws/2008/06/identity/claims/role|管理员|http://www.w3.org/2001/XMLSchema#string|

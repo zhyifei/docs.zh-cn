@@ -1,12 +1,6 @@
 ---
 title: '&amp;= 运算符 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.&=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 929a9e8c3384451679fc52ad478eb03219d67192
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c3db2d4095600f32af92d1a4ce1f806a3f032af0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= 运算符 (Visual Basic)
 串联`String`表达式`String`变量或属性并将结果赋给该变量或属性。  
@@ -36,10 +27,10 @@ variableorproperty &= expression
   
 ## <a name="parts"></a>部件  
  `variableorproperty`  
- 必需。 任何`String`变量或属性。  
+ 必须的。 任何`String`变量或属性。  
   
  `expression`  
- 必需。 任何 `String` 表达式。  
+ 必须的。 任何 `String` 表达式。  
   
 ## <a name="remarks"></a>备注  
  在左侧的元素`&=`运算符可以是简单的标量变量、 属性或数组的元素。 变量或属性不能为[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。 `&=`运算符串联`String`到右侧的表达式`String`变量或属性在其左侧，并将结果赋给该变量或与其左侧的属性。  
@@ -52,7 +43,7 @@ variableorproperty &= expression
   
  [!code-vb[VbVbalrOperators#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-assignment-operator_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [& 运算符](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
  [+= 运算符](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
  [赋值运算符](../../../visual-basic/language-reference/operators/assignment-operators.md)  

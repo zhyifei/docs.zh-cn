@@ -1,21 +1,16 @@
 ---
 title: '@（指定响应文件）(Visual Basic)'
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af66000208dee0896792892a52dc6acdf5cb1e37
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4ad4201dcc094364899984e13c85f2f43a6467ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-specify-response-file-visual-basic"></a>@（指定响应文件）(Visual Basic)
 指定包含编译器选项的文件和要编译的源代码文件。  
@@ -66,7 +61,7 @@ source2.vb
 vbc @file1.rsp  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

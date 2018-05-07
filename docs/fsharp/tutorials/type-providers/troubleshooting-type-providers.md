@@ -1,17 +1,12 @@
 ---
 title: 类型提供程序疑难解答
 description: '发现问题的最有可能，若要在 F # 中使用类型提供程序时遇到的潜在的解决方案。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: e7374a051ca63e003288702c6d882e72d77d71e8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6dcae0e510d27fb0b07799b4edfe2d5bb9aeb2d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-type-providers"></a>类型提供程序疑难解答
 

@@ -1,24 +1,12 @@
 ---
-title: "自定义消息拦截器"
-ms.custom: 
+title: 自定义消息拦截器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: acac4baa5be68d042dd1b0a11d7acfe609169e10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-interceptor"></a>自定义消息拦截器
 此示例演示通道扩展模型的使用。 特别是，演示如何实现可创建通道工厂和通道侦听器的自定义绑定元素，以便在运行时堆栈的特定点截获所有传入和传出消息。 此示例还包括一个客户端和一个服务器，用于演示这些自定义工厂的使用。  
@@ -33,11 +21,11 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- 此示例介绍了使用通道框架并遵循 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 最佳做法在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中创建自定义分层通道的推荐过程。 创建自定义分层通道的步骤如下所示：  
+ 此示例介绍了使用通道框架并遵循在 Windows Communication Foundation (WCF) 中，创建自定义分层的通道的推荐的过程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]最佳做法。 创建自定义分层通道的步骤如下所示：  
   
 1.  确定您的通道工厂和通道侦听器将要支持哪些通道形状。  
   
@@ -63,7 +51,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>添加绑定元素  
- 此示例定义了一个自定义绑定元素：`InterceptingBindingElement`。 `InterceptingBindingElement`采用`ChannelMessageInterceptor`作为输入，并使用此`ChannelMessageInterceptor`操作通过它传递的邮件。 这是唯一必须公开的类。 工厂、侦听器和通道都可以是公共运行库接口的内部实现。  
+ 此示例定义了一个自定义绑定元素：`InterceptingBindingElement`。 `InterceptingBindingElement` 采用`ChannelMessageInterceptor`作为输入，并使用此`ChannelMessageInterceptor`操作通过它传递的邮件。 这是唯一必须公开的类。 工厂、侦听器和通道都可以是公共运行库接口的内部实现。  
   
 ```  
 public class InterceptingBindingElement : BindingElement  

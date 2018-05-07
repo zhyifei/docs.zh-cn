@@ -1,13 +1,6 @@
 ---
-title: "如何：设置 Windows 窗体 DataGridView 控件中列的排序模式"
-ms.custom: 
+title: 如何：设置 Windows 窗体 DataGridView 控件中列的排序模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 - data grids [Windows Forms], sorting data
 ms.assetid: 57dfed60-a608-40d5-86f9-d65686ffb325
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a8571209ea0a80a64c1f30336c9a52b1bc79622
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 08d90bb45006af798b629f58821cbf50ee9ef089
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>如何：设置 Windows 窗体 DataGridView 控件中列的排序模式
 在<xref:System.Windows.Forms.DataGridView>控件，文本框列使用自动排序默认情况下，而其他列类型不会自动排序。 有时想要覆盖这些默认值。 例如，可以显示图像以代替文本、 数字或枚举单元格的值。 映像不能进行排序，而它们表示的基础值可以进行排序。  

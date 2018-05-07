@@ -1,29 +1,15 @@
 ---
 title: 如何：创建支持凭据
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6ec7412d1de2bca349c7cfbf4a37c98ca60cc78d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>如何：创建支持凭据
-自定义安全方案可能要求提供多个凭据。 例如，某个服务可能要求客户端不仅提供用户名和密码，还要提供能够证明客户端用户已满 18 岁的凭据。 第二个凭据是*支持凭据*。 本主题说明如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端中实现此类凭据。  
+自定义安全方案可能要求提供多个凭据。 例如，某个服务可能要求客户端不仅提供用户名和密码，还要提供能够证明客户端用户已满 18 岁的凭据。 第二个凭据是*支持凭据*。 本主题说明如何在 Windows Communication Foundation (WCF) 客户端中实现此类凭据。  
   
 > [!NOTE]
 >  支持凭据的规范是 WS-SecurityPolicy 规范的一部分。 有关详细信息，请参阅[Web 服务安全规范](http://go.microsoft.com/fwlink/?LinkId=88537)。  

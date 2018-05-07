@@ -1,28 +1,16 @@
 ---
-title: "为 Windows 窗体上的控件提供辅助功能信息"
-ms.custom: 
+title: 为 Windows 窗体上的控件提供辅助功能信息
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, accessibility
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9b7c0d570dbb6389ef22dba635bbbc2885c5f3a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffeecc1dfe52f1703fc201ef196644afbcc4708c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>为 Windows 窗体上的控件提供辅助功能信息
 辅助工具是专用的程序和设备，用于帮助残障人士更加有效地使用计算机。 示例包括适用于盲人的屏幕阅读器，还有声音输入实用功能，方便人们发出声音命令，而不使用鼠标或键盘。 这些辅助工具与由 Windows 窗体控件公开的辅助功能属性相交互。 这些属性为：  

@@ -1,13 +1,7 @@
 ---
-title: "如何：用非对称密钥对 XML 元素进行加密"
-ms.custom: 
+title: 如何：用非对称密钥对 XML 元素进行加密
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,21 +17,16 @@ helpviewer_keywords:
 - Rijndael
 - encryption [.NET Framework], asymmetric keys
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cadd6e5af8ed95da34091bc3a9f3ac8d5af4e9cb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b6840a9005aaca4805252298e1ceaf7e51f38971
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>如何：用非对称密钥对 XML 元素进行加密
-可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类加密 XML 文档内的元素。  XML 加密是交换或存储加密的 XML 数据的一种标准方式，使用后就无需担心数据被轻易读取。  有关 XML 加密标准的详细信息，请参阅万维网联合会 (W3C) 对于 XML 加密的规范，该规范位于：http://www.w3.org/TR/xmldsig-core/。  
+可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类加密 XML 文档内的元素。  XML 加密是交换或存储加密的 XML 数据的一种标准方式，使用后就无需担心数据被轻易读取。  有关 XML 加密标准的详细信息，请参阅万维网联合会 (W3C) 规范 XML 加密位于http://www.w3.org/TR/xmldsig-core/。  
   
  可以使用 XML 加密将任何 XML 元素或文档替换为包含加密 XML 数据的 <`EncryptedData`> 元素。  <`EncryptedData`> 元素也可包含一些子元素来收入关于加密期间使用的密钥和进程的信息。  XML 加密允许文档包含多个加密元素，并允许对一个元素进行多次加密。  此过程中的代码示例演示了如何创建一个 <`EncryptedData`> 元素和几个其他子元素，以便以后在解密过程中使用。  
   

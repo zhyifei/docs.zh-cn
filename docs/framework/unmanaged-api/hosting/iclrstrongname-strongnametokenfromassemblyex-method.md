@@ -1,14 +1,6 @@
 ---
-title: "ICLRStrongName::StrongNameTokenFromAssemblyEx 方法"
-ms.custom: 
+title: ICLRStrongName::StrongNameTokenFromAssemblyEx 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameTokenFromAssemblyEx
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 648ea90e-5e60-40a0-a56a-3e61bf2fba7c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b8b3437d8c07cd57a4791995890cab1b06aafc6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a5bb3d48d33333e888200bc607d3a193482f0336
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a>ICLRStrongName::StrongNameTokenFromAssemblyEx 方法
 从指定的程序集文件中，创建强名称标记并返回标记表示的公钥。  
@@ -67,21 +55,21 @@ HRESULT StrongNameTokenFromAssemblyEx (
  [out]以字节为单位的公钥大小。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK`如果成功，则完成的方法否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
+ `S_OK` 如果成功，则完成的方法否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
   
 ## <a name="remarks"></a>备注  
  强名称标记是公钥的缩写形式。 令牌是从用于对程序集进行签名的公钥创建一个 64 位哈希。 该令牌属于的强名称的程序集，且可从程序集元数据中读取。  
   
  检索到密钥，并创建令牌后，应调用[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法来释放分配的内存。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [StrongNameTokenFromAssembly 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)  

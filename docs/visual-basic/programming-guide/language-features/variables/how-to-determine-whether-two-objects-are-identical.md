@@ -1,27 +1,16 @@
 ---
 title: 如何：确定两个对象是否相同 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - testing [Visual Basic], objects
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 266e878e7f5fa8deb1c8cd91795af8d63ded0177
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bbcac2fc51e57427b125ec2f5e68f017a60186d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>如何：确定两个对象是否相同 (Visual Basic)
 在 Visual Basic 中，两个变量的引用将被视为同一如果其指针相同，即，如果两个变量指向内存中的同一个类实例。 例如，在 Windows 窗体应用程序中，你可能想要进行比较以确定是否当前的实例 (`Me`) 等同于一个特定实例，如`Form2`。  

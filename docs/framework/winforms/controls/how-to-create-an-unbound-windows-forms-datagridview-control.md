@@ -1,14 +1,6 @@
 ---
 title: 如何：创建未绑定的 Windows 窗体 DataGridView 控件
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying data without binding to a data source
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ee05ab225fe8bb4417fe1581b801106b60896f5b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6b297b95ee97262ab3ad2d24c539f88bde066099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>如何：创建未绑定的 Windows 窗体 DataGridView 控件
 下面的代码示例演示如何以编程方式填充 <xref:System.Windows.Forms.DataGridView> 控件，而无需将其绑定到数据源。 当有少量要以表格格式显示的数据时，这会非常有用。  

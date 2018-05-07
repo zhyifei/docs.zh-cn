@@ -1,31 +1,17 @@
 ---
 title: 使用配置文件配置服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 62a8774ab2843d0b1f0a19ad04fc0a76abb7cac5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: abfe502c6b50234037cad786a658edc3d479cc9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
-通过使用配置文件配置 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务，可提供在部署时而非设计时提供终结点和服务行为数据的灵活性。 本主题概述了当前可用的主要技术。  
+使用配置文件配置 Windows Communication Foundation (WCF) 服务允许你灵活地提供终结点和服务行为数据在部署时而非设计时。 本主题概述了当前可用的主要技术。  
   
  可使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置技术对 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 服务进行配置。 通常情况下，向承载 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的 Internet 信息服务 (IIS) 网站的 Web.config 文件添加 XML 元素。 通过这些元素，可以逐台计算机更改详细信息，例如终结点地址（用于与服务进行通信的实际地址）。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包括几个系统提供的元素，可用于快速选择服务的最基本的功能。 从 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]开始， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 附带一个新的默认配置模型，该模型简化了 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置要求。 如果您没有为特定服务提供任何 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置，运行时将自动使用一些标准终结点和默认绑定/行为配置您的服务。 实际上，编写配置是 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序编程的主要部分。  
   

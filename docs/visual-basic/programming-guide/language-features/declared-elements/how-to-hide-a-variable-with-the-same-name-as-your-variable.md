@@ -1,12 +1,6 @@
 ---
-title: "如何：隐藏与您的变量同名的变量 (Visual Basic)"
-ms.custom: 
+title: 如何：隐藏与您的变量同名的变量 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
 - declarations [Visual Basic], elements
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: af031f3ef134b2a509922e6ada28aa5b2b80d641
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a7ebc4eb44592800decd5ef943750f0cd845afb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>如何：隐藏与您的变量同名的变量 (Visual Basic)
 可以隐藏由变量*隐藏*也就是说，它通过将它重新定义具有相同名称的变量。 你可以隐藏你想要在两种方式中隐藏的变量：  
@@ -111,7 +102,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="robust-programming"></a>可靠编程  
  隐藏引入了多个版本具有相同名称的变量。 当代码语句引用的变量的名称时，编译器将该引用解析的版本取决于因素，如代码语句的位置和限定字符串的状态。 这会增加引用隐藏的变量的非预期版本的风险。 你可以通过完全限定到隐藏的变量的所有引用来降低该风险。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  [在 Visual Basic 中隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
  [隐藏和重写之间的差异](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  

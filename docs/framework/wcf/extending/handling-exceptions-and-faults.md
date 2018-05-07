@@ -1,30 +1,18 @@
 ---
-title: "处理异常和错误"
-ms.custom: 
+title: 处理异常和错误
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae8d16db6fefccf01692088e29676f6bfeace0e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7fb7b5dd5755b9d534d9a96af3db598a44b42b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-exceptions-and-faults"></a>处理异常和错误
 异常用来在服务或客户端实现中在本地传达错误， 而错误则用来跨服务边界传达错误，如在服务器与客户端之间传达。 除了错误以外，传输通道也常常使用传输特定的机制来传达传输级错误。 例如，HTTP 传输机制使用状态码（如 404）来传达不存在的终结点 URL（不存在发回错误的终结点）。 本文档由三部分组成，它们为自定义通道的作者提供指南。 第一部分提供关于何时以及如何定义和引发异常的指南。 第二部分提供关于生成和使用错误的指南。 第三部分说明如何提供跟踪信息来帮助自定义通道用户对所运行的应用程序进行疑难解答。  
   
 ## <a name="exceptions"></a>异常  
- 在引发异常时需要牢记两件事情：第一，异常的类型必须允许用户编写能对异常做出适当反应的正确代码。 第二，异常必须为用户提供足够的信息，使用户能了解究竟哪里出现了故障，该故障带来的影响以及如何修复该故障。 后面几节提供关于 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道的异常类型和消息的指南， “异常的设计准则”文档中也有关于 .NET 中的异常的一般性指南。  
+ 在引发异常时需要牢记两件事情：第一，异常的类型必须允许用户编写能对异常做出适当反应的正确代码。 第二，异常必须为用户提供足够的信息，使用户能了解究竟哪里出现了故障，该故障带来的影响以及如何修复该故障。 以下部分提供关于异常的类型和消息的 Windows Communication Foundation (WCF) 通道指南。 “异常的设计准则”文档中也有关于 .NET 中的异常的一般性指南。  
   
 ### <a name="exception-types"></a>异常类型  
  由通道引发的所有异常都必须是 <xref:System.TimeoutException?displayProperty=nameWithType>、<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 或者是派生自 <xref:System.ServiceModel.CommunicationException> 的类型 （还可能会引发诸如 <xref:System.ObjectDisposedException> 之类的异常，但这仅仅是为了指示调用代码误用了通道。 如果某个通道的使用正确无误，则它只能引发给定的异常）。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了七个派生自 <xref:System.ServiceModel.CommunicationException> 的异常类型，它们设计为供通道使用。 还存在其他从 <xref:System.ServiceModel.CommunicationException> 派生的异常，这些异常设计用于系统的其他部分。 这些异常类型包括：  

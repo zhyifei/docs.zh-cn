@@ -1,27 +1,15 @@
 ---
-title: "如何：对分层数据使用主-从模式"
-ms.custom: 
+title: 如何：对分层数据使用主-从模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2e392b47682d1bf53dc31073920bdf212fb7d997
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46733b462861bdac3381cdacb8f2fbe0536d12eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>如何：对分层数据使用主-从模式
 此示例演示如何实现主 / 从方案。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
  下面是该示例的一个屏幕快照。 `Divisions` <xref:System.Windows.Controls.ListBox>自动跟踪中的选择`Leagues`<xref:System.Windows.Controls.ListBox>并显示相应的数据。 `Teams` <xref:System.Windows.Controls.ListBox>跟踪中与其他两个选项<xref:System.Windows.Controls.ListBox>控件。  
   
- ![Master &#45; 详细信息示例](../../../../docs/framework/wpf/data/media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
+ ![Master&#45;详细信息示例](../../../../docs/framework/wpf/data/media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
   
  需要注意，在此示例中，两个的事项为：  
   

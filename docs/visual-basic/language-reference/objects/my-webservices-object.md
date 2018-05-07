@@ -1,25 +1,17 @@
 ---
 title: My.WebServices 对象
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.WebServices
 - My.MyProject.WebServices
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9f2c4017a1df8059f2cc57e7c30a96c474cfda0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9519638c7609b9b1d0f5e07397c46975e2696c94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mywebservices-object"></a>My.WebServices 对象
 提供用于创建和访问当前的项目所引用的每个 XML Web 服务的单个实例的属性。  
@@ -67,9 +59,9 @@ ms.lasthandoff: 11/21/2017
 |Windows 控件库|**是**|  
 |Web 控件库|**是**|  
 |Windows 服务|**是**|  
-|网站|No|  
+|网站|否|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>  
  <xref:System.ArgumentException>  
  [访问应用程序 Web 服务](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)

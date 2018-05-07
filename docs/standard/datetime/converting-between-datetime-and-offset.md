@@ -1,13 +1,7 @@
 ---
-title: "在 DateTime 与 DateTimeOffset 之间进行转换"
-ms.custom: 
+title: 在 DateTime 与 DateTimeOffset 之间进行转换
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,25 +16,20 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2055df26618664ee130be417599f4ec46e439444
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dec0e5138ecf08783f11d21cd28d7291d27ea68d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>在 DateTime 与 DateTimeOffset 之间进行转换
 
 尽管<xref:System.DateTimeOffset>结构可提供更高程度的时区识别能力比<xref:System.DateTime>结构，<xref:System.DateTime>更常见的方法调用中使用参数。 因此，可以在转换<xref:System.DateTimeOffset>值复制到<xref:System.DateTime>值并，反之亦然，这样就显得尤为重要。 本主题演示如何保留尽可能时区信息的方式执行这些转换。
 
 > [!NOTE]
-> 同时<xref:System.DateTime>和<xref:System.DateTimeOffset>类型表示时区中的时间时有一些限制。 使用其<xref:System.DateTime.Kind%2A>属性，<xref:System.DateTime>能够反映仅协调世界时 (UTC) 和系统的本地时区。 <xref:System.DateTimeOffset>反映时间的 UTC 偏移量，但它不反映该偏移量实际时区所属。 有关时间值和时区的支持的详细信息，请参阅[选择之间 DateTime、 DateTimeOffset、 TimeSpan 和 TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)。
+> 同时<xref:System.DateTime>和<xref:System.DateTimeOffset>类型表示时区中的时间时有一些限制。 使用其<xref:System.DateTime.Kind%2A>属性，<xref:System.DateTime>能够反映仅协调世界时 (UTC) 和系统的本地时区。 <xref:System.DateTimeOffset> 反映时间的 UTC 偏移量，但它不反映该偏移量实际时区所属。 有关时间值和时区的支持的详细信息，请参阅[选择之间 DateTime、 DateTimeOffset、 TimeSpan 和 TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)。
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>从 DateTime 转换为 DateTimeOffset
 

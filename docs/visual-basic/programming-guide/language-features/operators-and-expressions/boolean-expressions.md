@@ -1,12 +1,6 @@
 ---
-title: "布尔表达式 (Visual Basic)"
-ms.custom: 
+title: 布尔表达式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - short-circuiting
 - Boolean expressions
@@ -20,17 +14,14 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 48071c6833f9841fa42311dda59d6959c0645ff4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ff5843c815658468ac69fe5d62a9ea4cac2be830
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boolean-expressions-visual-basic"></a>布尔表达式 (Visual Basic)
-A*布尔表达式*是计算结果为的值的表达式[布尔数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md):`True`或`False`。 `Boolean`表达式可以采用多种形式。 最简单的是直接比较的值的`Boolean`变量`Boolean`文本，如下面的示例中所示。  
+A*布尔表达式*是计算结果为的值的表达式[布尔数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md):`True`或`False`。 `Boolean` 表达式可以采用多种形式。 最简单的是直接比较的值的`Boolean`变量`Boolean`文本，如下面的示例中所示。  
   
  [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
   
@@ -74,7 +65,7 @@ A*布尔表达式*是计算结果为的值的表达式[布尔数据类型](../..
 ## <a name="parenthetical-expressions"></a>带括号的表达式  
  可以使用括号来控制布尔表达式的计算顺序。 首先计算用括号括起来的表达式。 针对多个级别的嵌套，优先授予嵌套最深的表达式。 在括号内，计算将继续按照运算符优先级规则。 有关详细信息，请参阅[Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Visual Basic 中的逻辑和按位运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
  [值的比较](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
  [语句](../../../../visual-basic/programming-guide/language-features/statements.md)  

@@ -1,25 +1,16 @@
 ---
-title: "如何：在 Visual Basic 中循环访问枚举"
-ms.custom: 
+title: 如何：在 Visual Basic 中循环访问枚举
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - arrays [Visual Basic], iterating
 - enumerations [Visual Basic], iterating
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 439e6eae7d475316625a2cc1d3a70a9e7181f68a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 06609d38c805e5f073a2f3a299ecc3aa7cf7be01
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>如何：在 Visual Basic 中循环访问枚举
 枚举提供了使用相关常量集以及将常量值与名称相关联的一个便捷方法。 若要循环枚举，你可以将其移到数组使用<xref:System.Enum.GetValues%2A>方法。 你还可以循环访问枚举使用`For...Each`语句中，使用<xref:System.Enum.GetNames%2A>或<xref:System.Enum.GetValues%2A>方法以提取的字符串或数值的值。  
@@ -30,11 +21,11 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-iterate-through-an-enumeration_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [枚举概述](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
  [如何： 声明枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
  [何时使用枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)  
  [如何：确定与枚举值关联的字符串](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)  
  [如何：引用枚举成员](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
  [枚举和名称限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
- [阵列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+ [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

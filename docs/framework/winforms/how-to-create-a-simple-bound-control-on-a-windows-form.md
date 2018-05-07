@@ -1,27 +1,15 @@
 ---
-title: "如何：在 Windows 窗体上创建简单绑定控件"
-ms.custom: 
+title: 如何：在 Windows 窗体上创建简单绑定控件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 887f5cd89e52cf91c4e18fab5c97f82cba9a5b85
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ce4585a1c5c2b9acbdb7ec33c62a1e91851b720e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>如何：在 Windows 窗体上创建简单绑定控件
 与*简单绑定*，你可以在控件中显示单个数据元素，如从数据集表中列的值。 可以将控件的任何属性的简单绑定到数据值。  
@@ -35,9 +23,9 @@ ms.lasthandoff: 01/19/2018
   
 2.  在表单中，选择控件，并显示**属性**窗口。  
   
-3.  展开**(DataBindings)**属性。  
+3.  展开 **(DataBindings)** 属性。  
   
-     最常绑定的属性将显示下**(DataBindings)**属性。 例如，在大多数控件，**文本**最经常绑定属性。  
+     最常绑定的属性将显示下 **(DataBindings)** 属性。 例如，在大多数控件，**文本**最经常绑定属性。  
   
 4.  如果属性你想要绑定不是一个经常绑定的属性，单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 在**（高级）**框，以显示**格式设置和高级绑定**对话框中的完整列表与该控件的属性。  
   

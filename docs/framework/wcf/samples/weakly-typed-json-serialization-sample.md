@@ -1,31 +1,17 @@
 ---
 title: 弱类型 JSON 序列化示例
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4cc75ff1078c35c177f0809d25cd32ca3b2b8e16
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 66e68985da94df11a81ba6d387438fe29dd96d56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱类型 JSON 序列化示例
 将用户定义的类型序列化为给定的连网格式，或者将连网格式反序列为原来的用户定义的类型时，给定的用户定义的类型必须在服务和客户端上可用。 通常，为实现此目的，系统将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于这些用户定义的类型，并将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性应用于这些类型的成员。 处理 JavaScript 对象符号 (JSON) 对象时，该机制同样适用，如主题 [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)中所述。  
   
- 在某些情况下， [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务或客户端必须访问由不受开发人员控制的服务或客户端生成的 JSON 对象。 随着越来越多的 Web 服务公开 JSON API，由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 开发人员构造任意 JSON 对象要反序列化为的本地用户定义的类型可能会不切实际。 本示例提供了一种机制，以允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 开发人员无需创建用户定义的类型便可处理反序列化的任意 JSON 对象。 这称为 JSON 对象的“弱类型序列化”  ，因为 JSON 对象反序列化为的类型在编译时是未知的。  
+ 在某些情况下，Windows Communication Foundation (WCF) 服务或客户端必须访问由服务或不受开发人员控制的客户端生成的 JSON 对象。 随着越来越多的 Web 服务公开 JSON API，由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 开发人员构造任意 JSON 对象要反序列化为的本地用户定义的类型可能会不切实际。 本示例提供了一种机制，以允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 开发人员无需创建用户定义的类型便可处理反序列化的任意 JSON 对象。 这称为 JSON 对象的“弱类型序列化”  ，因为 JSON 对象反序列化为的类型在编译时是未知的。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -149,7 +135,7 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
   

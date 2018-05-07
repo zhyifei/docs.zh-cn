@@ -1,22 +1,12 @@
 ---
-title: "如何： 使用复杂筛选 (Visual Basic) 编写查询"
-ms.custom: 
+title: 如何： 使用复杂筛选 (Visual Basic) 编写查询
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 15ed0dcf87ad05b1da984aca494d28c1b19eb685
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 500cd9cdc62252eff3addc26006c4ce815ae1b4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>如何： 使用复杂筛选 (Visual Basic) 编写查询
 有时，您需要编写使用复杂筛选器的 LINQ to XML 查询。 例如，您可能必须查找其子元素具有特定名称和值的所有元素。 本主题提供一个编写使用复杂筛选的查询的示例。  
@@ -85,7 +75,7 @@ End Module
 99505  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Linq.XElement.Attribute%2A>  
  <xref:System.Xml.Linq.XContainer.Elements%2A>  
  [基本查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  

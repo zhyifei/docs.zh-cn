@@ -1,27 +1,15 @@
 ---
 title: 什么&#39;s Windows Workflow Foundation 中的新增功能
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 73f4364d92c366dc6750144668f722fea93bca2b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d45c16d4f16c239d1c1c8116b4b41dd41f8a953d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>什么&#39;s Windows Workflow Foundation 中的新增功能
 中的 Windows Workflow Foundation (WF)[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]从以前的版本更改多个开发范例。 现在，工作流可以更方便地创建、执行、维护和实现许多新功能。 有关迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本的详细信息，请参阅[迁移指南](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  

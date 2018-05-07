@@ -1,31 +1,17 @@
 ---
-title: "队列概述"
-ms.custom: 
+title: 队列概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-overview"></a>队列概述
-本节介绍与排队通信相关的一般概念和核心概念。 后面的各节将详细介绍如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中显示此处描述的队列概念。  
+本节介绍与排队通信相关的一般概念和核心概念。 后续部分将详细介绍如何在 Windows Communication Foundation (WCF) 显示此处所述的队列概念。  
   
 ## <a name="basic-queuing-concepts"></a>基本的队列概念  
  设计分布式应用程序时，在服务和客户端之间选择正确的通信传输是非常重要的。 使用的传输种类受几个因素影响。 一个重要的因素是服务、客户端和传输之间的隔离，它可确定是使用排队传输，还是使用直接传输（如 TCP 或 HTTP）。 由于直接传输（如 TCP 和 HTTP）的特性，如果服务或客户端停止工作或网络发生故障时，通信就会停止。 服务、客户端和网络必须同时运行，应用程序才能工作。 排队传输可提供隔离，即如果服务或客户端发生故障或它们之间的通信链接出现问题，客户端和服务还可以继续工作。  

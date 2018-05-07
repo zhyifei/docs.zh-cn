@@ -1,24 +1,12 @@
 ---
 title: Expressions1
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 805a49d45da308744fc528b63e8a74bb69bbd124
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 015bf50fc718881ee4e67d17298031ef0f94d4cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expressions"></a>表达式
 Windows Workflow Foundation (WF) 表达式是任何返回结果的活动。 从 <xref:System.Activities.Activity%601> 间接派生的所有表达式活动，其中包含名为 <xref:System.Activities.OutArgument> 的 <xref:System.Activities.Activity%601.Result%2A> 属性作为活动的返回值。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 随附了从简单活动（如 <xref:System.Activities.Expressions.VariableValue%601> 和 <xref:System.Activities.Expressions.VariableReference%601>，它们通过运算符活动提供对单个工作流变量的访问）到复杂活动（如 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，它们提供对 Visual Basic 语言的全面访问，以获得结果）的广泛表达式活动。 可以通过从 <xref:System.Activities.CodeActivity%601> 或 <xref:System.Activities.NativeActivity%601> 派生来创建其他表达式活动。  

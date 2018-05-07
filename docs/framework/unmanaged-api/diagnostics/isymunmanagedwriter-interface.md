@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedWriter 接口"
-ms.custom: 
+title: ISymUnmanagedWriter 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7d6733ec-f081-4166-bc17-de09e16dc304
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4996f0196df4c2bcf890df6ad972f313403e435
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 86aa8d3d23d82d51cfe4e6ce6b15b554704ad41c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedwriter-interface"></a>ISymUnmanagedWriter 接口
 表示符号编写器，并提供方法来定义文档、 序列点、 词法作用域和变量。  
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 |[SetUserEntryPoint 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setuserentrypoint-method.md)|指定是为此模块的入口点的用户定义的方法。|  
 |[UsingNamespace 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-usingnamespace-method.md)|指定当前打开的词法范围内，使用给定的完全限定的命名空间名称。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,33 +1,19 @@
 ---
 title: 为 ASP.NET AJAX 创建 WCF 服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64ab5c6bf4b555504562dbf68a60d032743df865
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c2d56380b626cd0eafc178b4db3584883b00a6bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>为 ASP.NET AJAX 创建 WCF 服务
 使用 Microsoft ASP.NET AJAX，可以通过快速响应的熟悉用户界面元素快速创建包括丰富用户体验的网页。 ASP.NET AJAX 提供了并入跨浏览器 ECMAScript (JavaScript) 和动态 HTML (DHTML) 技术的客户端脚本库，并将其与基于 ASP.NET 2.0 服务器的开发平台集成在一起。 通过使用 ASP.NET AJAX，可以改进用户体验和 Web 应用程序的效率。  
   
  ASP.NET AJAX 由客户端脚本库和集成的服务器组件组成，以提供稳定的开发框架。 从 ASP.NET 页访问服务：将服务 URL 添加到页上的 ASP.NET 脚本管理器控件后，就可以使用看起来与常规 JavaScript 函数调用完全相同的 JavaScript 代码调用服务操作。 请参阅[了解 ASP.NET AJAX](http://go.microsoft.com/fwlink/?LinkId=186475)有关 AJAX 框架内的 Web 服务使用。  
   
- 通过添加相应的 ASP.NET AJAX 终结点，可以将大多数 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务作为与 ASP.NET AJAX 兼容的服务公开。  
+ 大多数 Windows Communication Foundation (WCF) 服务可能会暴露作为服务与 ASP.NET AJAX 兼容，通过添加相应的 ASP.NET AJAX 终结点。  
   
  如果使用 Visual Studio，你可以使用启用了 AJAX 的 WCF 服务中, 可用的预建的模板**添加新项**处理 ASP.NET 网站或 Web 应用程序时的对话框。  
   
@@ -35,7 +21,7 @@ ms.lasthandoff: 04/28/2018
   
 -   使用动态主机激活（而不使用任何配置）创建终结点。 如果您不熟悉 WCF 配置系统，则这是最基本的方法。 有关详细信息，请参阅[如何： 添加 ASP.NET AJAX 终结点而不使用配置](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)。  
   
--   使用配置将启用了 AJAX 的终结点添加到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 有关详细信息，请参阅[如何： 使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)。  
+-   将支持 AJAX 的终结点添加到使用配置的 WCF 服务。 有关详细信息，请参阅[如何： 使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)。  
   
  Web 编程模型中所述[WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)可能的 ASP.NET AJAX 服务一起使用。 尤其是在下列情况下：  
   
@@ -62,13 +48,13 @@ ms.lasthandoff: 04/28/2018
   
 -   如果要求与 ASP.NET AJAX 兼容，则不能更改 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 特性上的任何其他属性。 只要不违反 ASP.NET AJAX 调用约定，就可以使用 Web 编程模型的其他方面。  
   
- 更高级的方案要求了解 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中 AJAX 支持的某些其他详细信息：  
+ 更高级的方案需要理解在 WCF 中的 AJAX 支持的某些其他详细信息：  
   
--   若要了解如何将数据传输之间的 AJAX 页客户端和[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务中使用 JavaScript 和.NET Framework 类型如何映射到 JavaScript 类型的详细信息，请参阅[支持 JSON 和其他数据传输格式](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md).  
+-   若要了解如何传输数据之间的 AJAX 页客户端和 WCF 服务使用 JavaScript，和有关详细信息上的.NET Framework 类型如何映射到 JavaScript 类型，请参阅[支持 JSON 和其他数据传输格式](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)。  
   
 -   若要利用 ASP.NET 功能（例如，基于 URL 的身份验证和访问 ASP.NET 会话信息），可能希望通过配置启用 ASP.NET 兼容性模式。  
   
- 甚至在没有 ASP.NET AJAX 框架时，也可能使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 AJAX 终结点。 执行此操作需要了解 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中 AJAX 支持的支持体系结构。 有关此体系结构的讨论，请参阅[WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)。 有关演示此方法的代码示例，请参阅[具有 JSON 和 XML 的 AJAX 服务](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md)。  
+ 即使可能没有 ASP.NET AJAX 框架使用 WCF 中的 AJAX 终结点。 执行此操作需要了解的 WCF 中的 AJAX 支持的支持体系结构。 有关此体系结构的讨论，请参阅[WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)。 有关演示此方法的代码示例，请参阅[具有 JSON 和 XML 的 AJAX 服务](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  

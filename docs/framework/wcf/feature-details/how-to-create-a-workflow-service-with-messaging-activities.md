@@ -1,24 +1,12 @@
 ---
-title: "如何：使用消息传递活动创建工作流服务"
-ms.custom: 
+title: 如何：使用消息传递活动创建工作流服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24456bbbefe305a3e9620e5396c8d300163e00d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b646d1e242d570ec758865b48ab3720033ea9302
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>如何：使用消息传递活动创建工作流服务
 此主题说明如何使用消息传递活动创建简单工作流服务， 本主题着重介绍工作流服务的创建机制，其中的服务仅包含消息传递活动。 在实际服务中，工作流包含其他许多活动。 该服务实现一个名为 Echo 的操作，来获取一个字符串并将该字符串返回到调用方。 本主题是一系列主题（包含两个主题）中的第一个。 下一主题[How To: 服务从工作流应用程序访问](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)讨论如何创建工作流应用程序可以调用在本主题中创建服务。  
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
      此步骤指定由 Receive 活动接收字符串参数，并且将该数据绑定到 `msg` 变量。 单击**确定**关闭**内容定义**对话框。  
   
-7.  单击**定义...**中链接**内容**框中<xref:System.ServiceModel.Activities.SendReply>活动来显示**内容定义**对话框。 选择**参数**单选按钮，单击**添加新参数**链接，键入`outMsg`中**名称**文本框中，选择**字符串**中**类型**下拉列表框中，和`msg`中**值**文本框中，如下面的插图中所示。  
+7.  单击**定义...** 中链接**内容**框中<xref:System.ServiceModel.Activities.SendReply>活动来显示**内容定义**对话框。 选择**参数**单选按钮，单击**添加新参数**链接，键入`outMsg`中**名称**文本框中，选择**字符串**中**类型**下拉列表框中，和`msg`中**值**文本框中，如下面的插图中所示。  
   
      ![添加参数内容](../../../../docs/framework/wcf/feature-details/media/parameterscontent2.jpg "ParametersContent2")  
   

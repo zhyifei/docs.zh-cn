@@ -1,31 +1,17 @@
 ---
-title: "为什么转换顺序非常重要"
-ms.custom: 
+title: 为什么转换顺序非常重要
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943bfa73b54a1ac5d68d21d2bb6e271133db595a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="why-transformation-order-is-significant"></a>为什么转换顺序非常重要
 单个<xref:System.Drawing.Drawing2D.Matrix>对象可以存储一次转换的序列。 后者称为复合转换。 复合转换的矩阵被获取的各个变换的矩阵相乘。  
@@ -35,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
  顺序很重要的原因之一是，这样像旋转和缩放转换是针对坐标系统的原点。 缩放以原点中心的对象生成比缩放已离开源的对象不同的结果。 同样，轮换基于原点居中的对象生成已离开源的对象与旋转不同的结果。  
   
- 下面的示例结合缩放、 旋转和平移 （按照这个顺序），以形成复合转换。 自变量<xref:System.Drawing.Drawing2D.MatrixOrder.Append>传递给<xref:System.Drawing.Graphics.RotateTransform%2A>方法指示旋转将遵循这样的缩放。 同样，参数<xref:System.Drawing.Drawing2D.MatrixOrder.Append>传递给<xref:System.Drawing.Graphics.TranslateTransform%2A>方法指示转换将遵循旋转。 <xref:System.Drawing.Drawing2D.MatrixOrder.Append>和<xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>成员的<xref:System.Drawing.Drawing2D.MatrixOrder>枚举。  
+ 下面的示例结合缩放、 旋转和平移 （按照这个顺序），以形成复合转换。 自变量<xref:System.Drawing.Drawing2D.MatrixOrder.Append>传递给<xref:System.Drawing.Graphics.RotateTransform%2A>方法指示旋转将遵循这样的缩放。 同样，参数<xref:System.Drawing.Drawing2D.MatrixOrder.Append>传递给<xref:System.Drawing.Graphics.TranslateTransform%2A>方法指示转换将遵循旋转。 <xref:System.Drawing.Drawing2D.MatrixOrder.Append> 和<xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>成员的<xref:System.Drawing.Drawing2D.MatrixOrder>枚举。  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  

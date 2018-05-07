@@ -1,27 +1,15 @@
 ---
-title: "简化配置"
-ms.custom: 
+title: 简化配置
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 334dfce44b1f0a7b6b38f509f2f0a346ef90630f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a07ab26b19004df97f4ac65f711b03fc6a6ba445
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simplified-configuration"></a>简化配置
-配置 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务是一项非常复杂的任务。 该任务涉及多个不同选项，并且有时会很难确定需要哪些设置。 虽然配置文件提高了 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的灵活性，但是它们同时也带来了许多难以发现的问题。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]解决了这些问题，并向用户提供了一种减小服务配置大小和降低复杂性的方法。  
+配置 Windows Communication Foundation (WCF) 服务可以是一个复杂的任务。 该任务涉及多个不同选项，并且有时会很难确定需要哪些设置。 虽然配置文件提高了 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的灵活性，但是它们同时也带来了许多难以发现的问题。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]解决了这些问题，并向用户提供了一种减小服务配置大小和降低复杂性的方法。  
   
 ## <a name="simplified-configuration"></a>简化配置  
  在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务配置文件中，<`system.serviceModel`> 部分针对承载的每一服务各包含一个 <`service`> 元素。 <`service`> 元素包含 <`endpoint`> 元素的集合（这些元素指定为各服务公开的终结点）以及一组服务行为（可选）。 <`endpoint`> 元素指定终结点公开的地址、绑定和协定，以及绑定配置和终结点行为（可选）。 <`system.serviceModel`> 部分还包含一个用于指定服务或终结点行为的 <`behaviors`> 元素。 下面的示例演示配置文件的 <`system.serviceModel`> 部分。  

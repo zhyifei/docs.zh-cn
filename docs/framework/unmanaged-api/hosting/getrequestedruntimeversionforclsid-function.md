@@ -1,14 +1,6 @@
 ---
-title: "GetRequestedRuntimeVersionForCLSID 函数"
-ms.custom: 
+title: GetRequestedRuntimeVersionForCLSID 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetRequestedRuntimeVersionForCLSID
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: be55754bc626ce24c51eec7b10d9f46aec92cfe5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e8d3a7168ce0ee3484384ae0e2d10ca00367fc9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID 函数
 获取适当的公共语言运行时 (CLR) 版本信息，使用指定的类`CLSID`。  
@@ -79,14 +67,14 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 |E_INVALIDARG|其中一个参数具有无效的类型或格式。|  
 |ERROR_INSUFFICIENT_BUFFER|`pVersion`的缓冲区不可足以容纳完整版本字符串。|  
 |REGDB_E_CLASSNOTREG|没有注册使用指定的类`CLSID`。|  
-|E_POINTER|`dwLength`为 null，或`cchBuffer`足够大，能够容纳的版本字符串，但`pVersion`为 null。|  
+|E_POINTER|`dwLength` 为 null，或`cchBuffer`足够大，能够容纳的版本字符串，但`pVersion`为 null。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

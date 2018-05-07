@@ -1,13 +1,6 @@
 ---
 title: 如何：将自变量传递给过程 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
 - procedures [Visual Basic], arguments
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1e8f8e438dc749e7f5f0d33aeaa26dfbcf4c29f3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f393f17f87c5920fb9bfa2a2097c09d48bebdc16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>如何：将自变量传递给过程 (Visual Basic)
 当调用过程时，过程名后面加上括号中的参数列表。 你提供参数对应于每个所需的参数为过程所定义，并且 （可选） 可以提供自变量`Optional`参数。 如果未提供`Optional`调用中的参数，必须包含逗号来标记其位置自变量列表中的，如果你所提供的任何后续自变量。  

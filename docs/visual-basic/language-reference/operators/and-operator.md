@@ -1,12 +1,6 @@
 ---
 title: And 运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.And
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83e1f9df11152f88ef0db24a794026d6f5888a2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e14dfd8ba200598084cad04d1faa05f3561f8dab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="and-operator-visual-basic"></a>And 运算符 (Visual Basic)
 对两个执行逻辑与`Boolean`表达式或对两个数值表达式位与运算。  
@@ -39,13 +30,13 @@ result = expression1 And expression2
   
 ## <a name="parts"></a>部件  
  `result`  
- 必需。 任何`Boolean`或数值表达式。 有关布尔比较，`result`是逻辑的两个联合`Boolean`值。 对于按位运算，`result`表示两个数值的位模式的位与的数值。  
+ 必须的。 任何`Boolean`或数值表达式。 有关布尔比较，`result`是逻辑的两个联合`Boolean`值。 对于按位运算，`result`表示两个数值的位模式的位与的数值。  
   
  `expression1`  
- 必需。 任何`Boolean`或数值表达式。  
+ 必须的。 任何`Boolean`或数值表达式。  
   
  `expression2`  
- 必需。 任何`Boolean`或数值表达式。  
+ 必须的。 任何`Boolean`或数值表达式。  
   
 ## <a name="remarks"></a>备注  
  有关布尔比较，`result`是`True`当且仅当`expression1`和`expression2`计算结果为`True`。 下表说明了如何`result`确定。  
@@ -94,7 +85,7 @@ result = expression1 And expression2
   
  上面的示例分别产生 8，2，0，结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [逻辑/按位运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
  [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  

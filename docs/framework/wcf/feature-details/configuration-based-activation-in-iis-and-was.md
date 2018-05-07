@@ -1,27 +1,15 @@
 ---
-title: "IIS 和 WAS 中的基于配置的激活"
-ms.custom: 
+title: IIS 和 WAS 中的基于配置的激活
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc0e954ae5cadbe7e70cd8a83d3d5841f4e0d142
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa4a3c682ab1d5d7ca0869fee588934b9ed2bf75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS 和 WAS 中的基于配置的激活
-在 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 下承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务时，通常必须提供 .svc 文件。 .svc 文件包含该服务的名称以及可选的自定义服务主机工厂。 此附加文件将增加可管理性开销。 基于配置的激活功能不要求具有 .svc 文件，因此不会有相关开销。  
+通常当承载于 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 的 Windows Communication Foundation (WCF) 服务时，你必须提供.svc 文件。 .svc 文件包含该服务的名称以及可选的自定义服务主机工厂。 此附加文件将增加可管理性开销。 基于配置的激活功能不要求具有 .svc 文件，因此不会有相关开销。  
   
 ## <a name="configuration-based-activation"></a>基于配置的激活  
  基于配置的激活接受通常放置在 .svc 文件中的元数据并将其放置在 Web.config 文件中。 在 <`serviceHostingEnvironment`> 没有的元素 <`serviceActivations`> 元素。 在 <`serviceActivations`> 元素是一个或多个 <`add`> 元素、 一个用于每个托管服务。 <`add`> 元素包含使你能够设置的服务以及服务类型或服务主机工厂的相对地址的属性。 下面的配置示例代码演示如何使用此节。  

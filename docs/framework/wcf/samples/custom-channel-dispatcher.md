@@ -1,30 +1,18 @@
 ---
-title: "自定义通道调度程序"
-ms.custom: 
+title: 自定义通道调度程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c67425c67625fcfcfaac5ec689f4f70dbd3d64f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-channel-dispatcher"></a>自定义通道调度程序
 此示例演示如何通过直接实现 <xref:System.ServiceModel.ServiceHostBase> 以自定义方式生成通道堆栈，以及如何在 Web 宿主环境中创建自定义通道调度程序。 通道调度程序与 <xref:System.ServiceModel.Channels.IChannelListener> 交互以接受通道并从通道堆栈中检索消息。 此示例还提供一个基本示例，用于演示如何使用 <xref:System.ServiceModel.Activation.VirtualPathExtension> 在 Web 宿主环境中生成通道堆栈。  
   
 ## <a name="custom-servicehostbase"></a>自定义 ServiceHostBase  
- 此示例将实现基类型 <xref:System.ServiceModel.ServiceHostBase> 而不是 <xref:System.ServiceModel.ServiceHost>，以演示如何将 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 堆栈实现替换为通道堆栈上面的自定义消息处理层。 重写虚拟方法 <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> 可生成通道侦听器和通道调度程序。  
+ 此示例实现的基类型<xref:System.ServiceModel.ServiceHostBase>而不是<xref:System.ServiceModel.ServiceHost>来演示如何将 Windows Communication Foundation (WCF) 堆栈实现替换为自定义消息处理通道堆栈顶部的层。 重写虚拟方法 <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> 可生成通道侦听器和通道调度程序。  
   
  若要实现 Web 承载的服务，请从 <xref:System.ServiceModel.Activation.VirtualPathExtension> 集合获取服务扩展 <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> 并将其添加到 <xref:System.ServiceModel.Channels.BindingParameterCollection>，以便传输层知道如何基于宿主环境设置（即，Internet 信息服务 (IIS)/Windows 进程激活服务 (WAS) 设置）来配置通道侦听器。  
   
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
  调度程序首先打开通道侦听器，然后接受单一答复通道。 通过该通道，调度程序开始在一个无限循环中发送消息（请求）。 对于每个请求，它都会创建一条答复消息，并将其发送回客户端。  
   
 ## <a name="creating-a-response-message"></a>创建响应消息  
- 消息处理是在 `MyServiceManager` 类型中实现的。 在 `HandleRequest` 方法中，将首先检查消息的 `Action` 标头以查看是否支持该请求。 将定义一个预定义的 SOAP 操作“http://tempuri.org/HelloWorld/Hello”以提供消息筛选。 这类似于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 <xref:System.ServiceModel.ServiceHost> 实现中的服务协定概念。  
+ 消息处理是在 `MyServiceManager` 类型中实现的。 在 `HandleRequest` 方法中，将首先检查消息的 `Action` 标头以查看是否支持该请求。 一个预定义的 SOAP 操作"http://tempuri.org/HelloWorld/Hello"定义以提供消息筛选。 这类似于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 <xref:System.ServiceModel.ServiceHost> 实现中的服务协定概念。  
   
  对于正确的 SOAP 操作情况，此示例将检索请求的消息数据，并生成一个与该请求对应的响应，类似于在 <xref:System.ServiceModel.ServiceHost> 示例中所看到的内容。  
   
@@ -62,6 +50,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

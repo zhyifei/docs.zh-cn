@@ -1,13 +1,6 @@
 ---
-title: "Windows 窗体中的鼠标指针"
-ms.custom: 
+title: Windows 窗体中的鼠标指针
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - pointers [Windows Forms], setting
 - mouse pointers
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aaca18bff265fafbb5bad26adfe2a8c490d85132
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed6312cb386d1557d4217a330318664b4e87c330
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows 窗体中的鼠标指针
 鼠标*指针*，这有时称为光标，是在用户使用鼠标的输入屏幕指定的点，焦点的位图。 本主题提供 Windows 窗体中鼠标指针的概述，并介绍了一些方法来修改和控制鼠标指针。  

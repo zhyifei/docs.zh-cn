@@ -1,14 +1,6 @@
 ---
-title: "ICLRMetaHostPolicy 接口"
-ms.custom: 
+title: ICLRMetaHostPolicy 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRMetaHostPolicy
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1bdeccb6-0698-4c97-ad69-eae2b69e59f1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd9b8d6aef2289833a0bd192b838e6f70ea8c0ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9a70cf0812f84908630f109ef06aafa4b4f7525
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy 接口
 提供[GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法，将指针返回到基于策略条件的公共语言运行时 (CLR) 接口，托管程序集、 版本和配置文件。  
@@ -57,14 +45,14 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
   
  [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]托管 API 将合并策略，以便的特定需求的主机可以使用基本功能，而不会产生意外的损失。 例如，许多 MSCorEE.dll 导出将绑定到特定的 CLR，虽然方法可能逻辑上需要它。 [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)枚举提供了所共有的大部分主机的绑定策略。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [.NET Framework 4 和 4.5 中添加的 CLR 承载接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  

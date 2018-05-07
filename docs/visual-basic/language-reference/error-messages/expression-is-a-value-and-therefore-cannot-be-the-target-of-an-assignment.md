@@ -1,26 +1,17 @@
 ---
 title: 表达式是一个值，因此不能作为赋值目标
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30068
 - vbc30068
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bec3e2d298160bd0b459dc3b7ef93b94648e439a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dd5618bd0533f885a6aef8229b2d8cb1bc34c237
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>表达式是一个值，因此不能作为赋值目标
 语句试图将值分配给表达式。 在运行时，可以仅向可写的变量、 属性或数组元素分配一个值。 下面的示例演示如何可能出现此错误。  
@@ -65,7 +56,7 @@ exitButton.Location = exitLocation
   
 -   使用变量来访问要为其分配值的属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
  [语句](../../../visual-basic/programming-guide/language-features/statements.md)  
  [过程疑难解答](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)

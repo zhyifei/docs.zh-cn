@@ -1,34 +1,20 @@
 ---
 title: 终结点创建概述
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-caps.latest.revision: 40
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3317bc47c03e0b100d094ba1d929a003dddab055
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 91e5e45d380ec6a8229a7272c841e1a345423c7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-creation-overview"></a>终结点创建概述
-与所有通信[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]服务是通过*终结点*的服务。 终结点为客户端提供对 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务所提供的功能的访问权。 本节描述终结点的结构，并概述如何在配置和代码中定义终结点。  
+与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点为客户端提供对 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务所提供的功能的访问权。 本节描述终结点的结构，并概述如何在配置和代码中定义终结点。  
   
 ## <a name="the-structure-of-an-endpoint"></a>终结点的结构  
  每个终结点包含一个指示可在何处找到此终结点的地址、一个指定客户端如何与此终结点进行通信的绑定和一个标识可用方法的协定。  

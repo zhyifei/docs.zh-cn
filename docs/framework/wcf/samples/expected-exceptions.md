@@ -1,26 +1,12 @@
 ---
 title: 预期异常
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 28af4a374d7ff474cf313aad711a3062f56263c9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expected-exceptions"></a>预期异常
 此示例演示如何在使用类型化客户端时捕获预期异常。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。  
@@ -30,7 +16,7 @@ ms.lasthandoff: 04/27/2018
   
  此示例演示如何捕获和处理正确的程序所必须处理的两个预期异常类型：`TimeoutException` 和 `CommunicationException`。  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端上从通信方法中引发的异常要么是预期异常，要么是意外异常。 意外异常包括灾难性故障（如 `OutOfMemoryException`）和编程错误（如 `ArgumentNullException` 或 `InvalidOperationException`）。 通常没有有效的方法来处理意外错误，所以通常不应在调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端通信方法时捕获这些异常。  
+ 从 Windows Communication Foundation (WCF) 客户端上的通信方法引发的异常是正常或异常。 意外异常包括灾难性故障（如 `OutOfMemoryException`）和编程错误（如 `ArgumentNullException` 或 `InvalidOperationException`）。 通常没有有效的方法来处理意外错误，所以通常不应在调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端通信方法时捕获这些异常。  
   
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端上从通信方法中引发的预期异常包括 `TimeoutException`、`CommunicationException` 以及 `CommunicationException` 的任何派生类。 这些异常表明通信过程中出现问题，该问题可以通过中止 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端并报告通信故障而得到安全的处理。 因为外部因素可能导致任何应用程序中出现这些错误，所以正确的应用程序必须捕获这些异常并在发生异常时进行恢复。  
   
@@ -89,7 +75,7 @@ Got System.TimeoutException
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
   

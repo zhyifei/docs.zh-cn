@@ -1,27 +1,15 @@
 ---
-title: "核心通信： HTTP HTTPS 传输通道"
-ms.custom: 
+title: 核心通信： HTTP HTTPS 传输通道
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d67bb810ced381749dca0dc698ca405bb59cfb0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbdb5b350425aad7108402dec939f036e971d053
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>核心通信：HTTP/HTTPS 传输通道
-本主题列出了由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 传输 HTTP/HTTPS 通道生成的所有异常。  
+本主题列出由 Windows Communication Foundation (WCF) 传输 HTTP/HTTPS 通道生成的所有异常。  
   
 ## <a name="exception-list"></a>异常列表  
   
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
 |Hosting_SslSettingsMisconfigured|指定服务的安全套接字层设置与 Internet 信息服务中的相应设置不匹配。|  
 |HttpAuthSchemeAndClientCert|已将 HTTPS 侦听器工厂配置为需要客户端证书和指定的身份验证方案。 但是，一次只能需要一种形式的客户端身份验证。|  
 |HttpReceiveFailure|接收对指定服务终结点的 HTTP 响应时发生错误。 服务终结点绑定可能未使用 HTTP 协议。 另一种可能性是因为关闭了服务，所以服务器终止了 HTTP 请求上下文。 有关详细信息，请参见服务器日志。|  
-|HttpRegistrationAccessDenied|HTTP 无法注册指定的 URL。 你的进程不具有访问此命名空间的权限（有关详细信息，请参阅 http://msdn.microsoft.com/library/default.asp?url=/library/en-us/http/http/namespace_reservations_registrations_and_routing.asp）。|  
+|HttpRegistrationAccessDenied|HTTP 无法注册指定的 URL。 你的进程不具有对此命名空间的访问权限 (请参阅http://msdn.microsoft.com/library/default.asp?url=/library/http/http/namespace_reservations_registrations_and_routing.asp有关详细信息)。|  
 |HttpRegistrationAlreadyExists|HTTP 无法注册指定的 URL。 另一应用程序已经向 HTTP.SYS 注册了此 URL。|  
 |HttpRegistrationPortInUse|HTTP 无法注册指定的 URL，因为另一应用程序正在使用指定 TCP 端口。|  
 |HttpSendFailure|向指定的服务终结点发出 HTTP 请求时发生错误。 请确保原因不是安全绑定不匹配。 还要确保该服务的配置不是针对安全套接字层进行的。|  

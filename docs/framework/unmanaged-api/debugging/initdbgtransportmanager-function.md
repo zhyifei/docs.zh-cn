@@ -1,14 +1,6 @@
 ---
-title: "InitDbgTransportManager 函数"
-ms.custom: 
+title: InitDbgTransportManager 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - InitDbgTransportManager
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: a30102ff-c52e-48c9-b3a9-aa14286a42b2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37b849ed482f76692a63c70cbb0a3b9e1bacc8ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74cb2c7d1f79d23e1331cc7192ba2d6acfd9835c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager 函数
 初始化传输管理器以连接到进程和运行时枚举的远程目标。  
@@ -55,7 +43,7 @@ HRESULT InitDbgTransportManager ();
  E_FAIL（或其他 E_ 返回代码）  
  其他故障。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CoreClrRemoteDebuggingInterfaces.h  

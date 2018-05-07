@@ -1,29 +1,15 @@
 ---
 title: 指定服务运行时行为
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9733bb29701e4d1b46cc08c14b91e0357c935b42
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38035230cf4f5e411f7ec769a169528ada130749
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服务运行时行为
 在已经设计（[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)）并实现服务协定（[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)）之后，就可以配置服务运行时的操作行为。 本主题讨论系统提供的服务和操作行为，并说明在何处查找更多信息来创建新行为。 尽管有些行为是作为属性应用的，但很多行为是使用应用程序配置文件或以编程方式应用的。 有关配置服务应用程序的详细信息，请参阅[配置服务](../../../docs/framework/wcf/configuring-services.md)。  

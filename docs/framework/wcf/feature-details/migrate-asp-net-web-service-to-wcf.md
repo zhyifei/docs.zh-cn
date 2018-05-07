@@ -1,27 +1,15 @@
 ---
-title: "如何：将 ASP.NET Web 服务代码迁移到 Windows Communication Foundation"
-ms.custom: 
+title: 如何：将 ASP.NET Web 服务代码迁移到 Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e528c64f-c027-4f2e-ada6-d8f3994cf8d6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56d2481785a9a8486174e611001b9d800c7c869
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90a6109a56299ec1bcaff4a35141abc194484772
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a>如何：将 ASP.NET Web 服务代码迁移到 Windows Communication Foundation
-下面的过程描述如何将 ASP.NET Web 服务迁移到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]。  
+以下过程描述如何将 ASP.NET Web 服务迁移到 Windows Communication Foundation (WCF)。  
   
 ## <a name="procedure"></a>过程  
   
@@ -85,9 +73,9 @@ ms.lasthandoff: 12/22/2017
   
 7.  测试更改。  
   
-8.  将对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 程序集 System.ServiceModel 和 System.Runtime.Serialization 的引用添加到 ASP.NET Web 服务项目。  
+8.  将对 WCF 程序集 System.ServiceModel 和 System.Runtime.Serialization 的引用添加到 ASP.NET Web 服务项目。  
   
-9. 运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]从 WSDL 的客户端类。 将生成的类模块添加到解决方案。  
+9. 运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)来从 WSDL 生成 WCF 客户端类。 将生成的类模块添加到解决方案。  
   
 10. 前面的步骤中生成的类模块包含接口定义。  
   
@@ -145,7 +133,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-13. 配置类（现在为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务类型）以要求使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 兼容模式，前提是 ASP.NET Web 服务依赖下列任意项：  
+13. 配置类，它现在是 WCF 服务类型，如果是 ASP.NET Web 服务依赖于以下任一需要 WCF ASP.NET 兼容模式：  
   
     -   <xref:System.Web.HttpContext> 类。  
   
@@ -167,14 +155,14 @@ ms.lasthandoff: 12/22/2017
   
 14. 将原始 .asmx 文件重命名为 .asmx.old。  
   
-15. 为服务创建一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务文件，为该文件指定扩展名 .asmx，然后将其保存到 IIS 中的应用程序根目录中。  
+15. 创建服务的 WCF 服务文件，为其指定扩展名.asmx，并将其保存到 IIS 中的应用程序根目录。  
   
     ```xml  
     <%@Service Class="MyOrganization.Adder" %>  
     <%@Assembly Name="MyServiceAssembly" %>   
     ```  
   
-16. 将服务的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 配置添加到其 Web.config 文件中。 配置服务以使用[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)，若要使用在前面的步骤中，创建扩展名为.asmx 服务文件和不为其自身，生成的 WSDL 但若要使用第 2 步中从 WSDL。 另外，还要将其配置为使用 ASP.NET 兼容模式（如果需要）。  
+16. 将服务的 WCF 配置添加到其 Web.config 文件。 配置服务以使用[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)，若要使用在前面的步骤中，创建扩展名为.asmx 服务文件和不为其自身，生成的 WSDL 但若要使用第 2 步中从 WSDL。 另外，还要将其配置为使用 ASP.NET 兼容模式（如果需要）。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

@@ -1,27 +1,15 @@
 ---
-title: "框架属性元数据"
-ms.custom: 
+title: 框架属性元数据
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4fec11a973572dce9e8d6f77bf65ce31ee77eb41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d968bc7a3033bd994590520c5cd5062d3c212b4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="framework-property-metadata"></a>框架属性元数据
 对于 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 体系结构中被视为 WPF 框架级的对象元素的属性，将报告框架属性元数据选项。 通常，WPF 框架级指示要求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 演示 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和可执行文件处理呈现、数据绑定和属性系统优化等功能。 这些系统对框架属性元数据进行查询，以便为特定的元素属性确定特定于功能的特征。  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
   
 -   报告的影响元素的父元素布局属性 (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>， <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>)。 默认情况下设置了这些标志一些示例包括<xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType>和<xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>。  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>。 默认情况下，依赖属性不会继承值。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A>允许的继承路径进入可视化树中，这是某些控件组合方案所必需的途径。  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>。 默认情况下，依赖属性不会继承值。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 允许的继承路径进入可视化树中，这是某些控件组合方案所必需的途径。  
   
     > [!NOTE]
     >  属性值上下文中的术语“继承”指特定于依赖属性的情况；它意味着由于存在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统的 WPF 框架级功能，子元素可以从父元素继承实际的依赖属性值。 它与通过派生类型的托管代码类型和成员继承没有直接关系。 有关详细信息，请参阅[属性值继承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)。  
@@ -69,13 +57,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="framework-property-metadata-merge-behavior"></a>框架属性元数据合并行为  
  重写框架属性元数据时，会合并或替换不同的元数据特征。  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>合并。 如果你添加新<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>，该回调将存储在元数据。 如果不指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中重写时，值<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>提升为从元数据中指定的最近上级的引用。  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 合并。 如果你添加新<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>，该回调将存储在元数据。 如果不指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中重写时，值<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>提升为从元数据中指定的最近上级的引用。  
   
 -   实际的属性系统行为<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>是实现为层次结构中的所有元数据所有者会保留，并添加到表中，使用属性系统的最深派生的类的回调的执行顺序第一次调用。 继承的回叫仅运行一次，当将这些回叫放置在元数据中的类占有时计数。  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>将被替换。 如果不指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中重写时，值<xref:System.Windows.PropertyMetadata.DefaultValue%2A>来自元数据中指定的最近上级。  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 将被替换。 如果不指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中重写时，值<xref:System.Windows.PropertyMetadata.DefaultValue%2A>来自元数据中指定的最近上级。  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>实现将被替换。 如果你添加新<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>，该回调将存储在元数据。 如果不指定<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>中重写时，值<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>提升为从元数据中指定的最近上级的引用。  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 实现将被替换。 如果你添加新<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>，该回调将存储在元数据。 如果不指定<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>中重写时，值<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>提升为从元数据中指定的最近上级的引用。  
   
 -   属性的系统行为是仅<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>调用即时元数据中。 没有对其他引用<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>保留层次结构中的实现。  
   

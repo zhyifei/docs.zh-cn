@@ -1,24 +1,12 @@
 ---
 title: 异常
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9e78546a10e1a8cdff780c44898fd209ca829c6c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cfeefcd29dc05ed5e325950194d9f0775b1fa9fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions"></a>异常
 工作流可以使用 <xref:System.Activities.Statements.TryCatch> 活动处理工作流执行期间引发的异常。 可以对这些异常进行处理，或者使用 <xref:System.Activities.Statements.Rethrow> 活动重新引发异常。 <xref:System.Activities.Statements.TryCatch.Finally%2A> 节中的活动在 <xref:System.Activities.Statements.TryCatch.Try%2A> 节或 <xref:System.Activities.Statements.TryCatch.Catches%2A> 节完成时执行。 由工作流承载<xref:System.Activities.WorkflowApplication>实例还可以使用<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>事件处理程序来处理未由处理的异常<xref:System.Activities.Statements.TryCatch>活动。  

@@ -1,36 +1,24 @@
 ---
-title: "如何：创建自定义安全令牌身份验证器"
-ms.custom: 
+title: 如何：创建自定义安全令牌身份验证器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4415edbe9f04cb56cefadcb3ae521994fac28ffb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 41936b407dfdb3fecee80b2513b557016cdcfe5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>如何：创建自定义安全令牌身份验证器
 本主题演示如何创建自定义安全令牌身份验证器以及如何将其与自定义安全令牌管理器相集成。 安全令牌身份验证器可验证随传入消息一起提供的安全令牌的内容。 如果验证成功，身份验证器将返回 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 实例的集合，该集合经过计算后可返回一组声明。  
   
- 若要在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用自定义安全令牌身份验证器，必须首先创建自定义凭据和安全令牌管理器实现。 有关创建自定义凭据和安全令牌管理器的详细信息，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。 有关凭据、 安全令牌管理器和提供程序和身份验证器类的详细信息，请参阅[安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ 若要使用的自定义安全令牌身份验证中 Windows Communication Foundation (WCF)，你必须首先创建自定义凭据和安全令牌管理器实现。 有关创建自定义凭据和安全令牌管理器的详细信息，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。 有关凭据、 安全令牌管理器和提供程序和身份验证器类的详细信息，请参阅[安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
 ## <a name="procedures"></a>过程  
   

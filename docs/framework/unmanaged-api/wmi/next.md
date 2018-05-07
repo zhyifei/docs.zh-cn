@@ -1,11 +1,7 @@
 ---
-title: "下一步函数 （非托管 API 参考）"
-description: "下一步的函数 retireves 枚举中的下一步属性中。"
+title: 下一步函数 （非托管 API 参考）
+description: 下一步的函数 retireves 枚举中的下一步属性中。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Next
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e59ef3f65b75a91708dc65f7d4e3d811dc2d3f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e945930a9a668d0a1c1e4c26bf3add9cc574c261
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="next-function"></a>下一步函数
 检索到的调用开始枚举中的下一步属性[BeginEnumeration](beginenumeration.md)。  
@@ -75,7 +68,7 @@ HRESULT Next (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 发生了常规错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
@@ -95,18 +88,18 @@ HRESULT Next (
 
 如果`plFlavor`不`null`、`LONG`值接收有关原点的属性的信息，如下所示：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 属性是标准系统属性。 |
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 类： 从父类继承属性。 </br> 实例： 属性，继承自的父类、 时未修改的实例。  |
 | `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 类： 属性所属的派生类。 </br> 实例： 实例; 修改的属性也就是说，已提供的值，或限定符已添加或修改。 |
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

@@ -1,10 +1,6 @@
 ---
-title: "分部 (Visual Basic)"
+title: 分部 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Partial
 - partial
@@ -18,14 +14,11 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5129ef7737b1b07317d47f8d18e9aceb668bf05a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c94c3bf1a1e3e4c724f90690f52e97e8216cb9a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-visual-basic"></a>分部 (Visual Basic)
 指示类型声明为类型的分部定义。  
@@ -56,7 +49,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |`Shadows`|可选。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
 |`MustInherit`|可选。 请参阅[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。|  
 |`NotInheritable`|可选。 请参阅[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)。|  
-|`name`|必需。 此类型的名称。 必须匹配在同一类型的所有其他分部声明中定义的名称。|  
+|`name`|必须的。 此类型的名称。 必须匹配在同一类型的所有其他分部声明中定义的名称。|  
 |`Of`|可选。 指定这是一种泛型类型。 请参阅[Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。|  
 |`typelist`|如果你使用是必需的[的](../../../visual-basic/language-reference/statements/of-clause.md)。 请参阅[键入列表](../../../visual-basic/language-reference/statements/type-list.md)。|  
 |`Inherits`|可选。 请参阅[Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
@@ -99,7 +92,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
  前面示例中的两个分部定义可能在同一源文件中或在两个不同的源文件中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
  [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)  
  [类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)  

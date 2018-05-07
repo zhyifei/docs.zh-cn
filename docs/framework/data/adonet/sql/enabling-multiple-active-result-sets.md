@@ -1,27 +1,15 @@
 ---
-title: "启用多个活动结果集"
-ms.custom: 
+title: 启用多个活动结果集
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b2b1e3ccfe162b6d4903aaf162673ba476296d8b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ab866356e979ec6c041d12620cfb6abfc8928668
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-multiple-active-result-sets"></a>启用多个活动结果集
 多个活动结果集 (MARS) 是一项用于 SQL Server 的功能，可用来对单个连接执行多个批处理。 如果对 SQL Server 启用了 MARS，使用的每个命令对象将向该连接添加一个会话。  
@@ -79,7 +67,7 @@ string connectionString = "Data Source=MSSQL1;" +
  MARS 操作不是线程安全的。  
   
 ### <a name="connection-pooling"></a>连接池  
- 启用 MARS 的连接像任何其他连接一样建立池连接。 如果应用程序打开两个连接，一个启用了 MARS，一个禁用了 MARS，这两个连接将位于独立的池中。 有关详细信息，请参阅[SQL Server 连接池 (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+ 启用 MARS 的连接像任何其他连接一样建立池连接。 如果应用程序打开两个连接，一个启用了 MARS，一个禁用了 MARS，这两个连接将位于独立的池中。 有关详细信息，请参阅 [SQL Server 连接池 (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
   
 ### <a name="sql-server-batch-execution-environment"></a>SQL Server 批处理执行环境  
  打开连接时，将定义默认的环境。 然后，将此环境复制到逻辑 MARS 会话中。  

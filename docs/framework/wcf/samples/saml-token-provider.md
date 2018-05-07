@@ -1,27 +1,15 @@
 ---
-title: "SAML 令牌提供程序"
-ms.custom: 
+title: SAML 令牌提供程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5c1fdb3801762f20dd99c0f2d9e6835eb98d0d1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 56c432b0874f59fed87c0d892732422161d668ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="saml-token-provider"></a>SAML 令牌提供程序
-本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的令牌提供程序用于为安全性基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 随附有默认凭据管理器令牌提供程序。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还附带了一个 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
+本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 令牌提供程序在 Windows Communication Foundation (WCF) 用于为安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 随附有默认凭据管理器令牌提供程序。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还附带了一个 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
   
 -   存在不能由这些令牌提供程序操作的凭据存储。  
   

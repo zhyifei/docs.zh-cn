@@ -1,27 +1,15 @@
 ---
-title: "传播"
-ms.custom: 
+title: 传播
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17b20b76d4932272c8e2a9e26603dc8483505242
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propagation"></a>传播
-本主题描述 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 跟踪模型中的活动传播。  
+本主题介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动传播。  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>使用传播关联终结点之间的活动  
  传播可向用户提供应用程序终结点之间相同处理单元的错误跟踪的直接关联，如请求。 在不同终结点为相同处理单元发出的错误将被分组到相同的活动中，甚至跨应用程序域。 这是通过活动 ID 在消息头中的传播实现的。 因此，如果客户端由于服务器内部错误而超时，则这两个错误都会显示在同一活动中以便直接关联。  

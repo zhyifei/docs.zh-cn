@@ -1,28 +1,14 @@
 ---
-title: "检索元数据"
-ms.custom: 
+title: 检索元数据
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfc96c585ba55fbf63283d7cb23fae5b364b0465
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f0665b4f0fb91b102ef1d5b75a5433992f5a6e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-metadata"></a>检索元数据
 元数据检索是从元数据终结点（如 WS-MetadataExchange (MEX) 元数据终结点或 HTTP/GET 元数据终结点）请求和检索元数据的过程。  
@@ -31,7 +17,7 @@ ms.lasthandoff: 12/22/2017
  您可以检索服务元数据通过使用 Ws-metadataexchange 或 HTTP/GET 请求[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具并传递`/target:metadata`开关和地址。 Svcutil.exe 在指定地址下载元数据并将文件保存到磁盘上。 Svcutil.exe 在内部使用一个 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 实例，并从配置中加载名称与作为输入传递给 Svcutil.exe 的地址方案相匹配的 <xref:System.ServiceModel.Description.IMetadataExchange> 终结点配置。  
   
 ## <a name="retrieving-metadata-programmatically-using-the-metadataexchangeclient"></a>使用 MetadataExchangeClient 以编程方式检索元数据  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以使用标准化协议（如 WS-MetadataExchange 和 HTTP/GET 请求）检索元数据。 这两种协议均受 <xref:System.ServiceModel.Description.MetadataExchangeClient> 类型支持。 您可以通过提供元数据终结点的地址和一个可选绑定，使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 类型来检索服务元数据。 由 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 实例使用的绑定可以是 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 静态类中的默认绑定之一、用户提供的绑定或从 `IMetadataExchange` 协定的终结点配置加载的绑定。 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 也可以使用 <xref:System.Net.HttpWebRequest> 类型来解析 HTTP URL 对元数据的引用。  
+ Windows Communication Foundation (WCF) 可以检索服务元数据使用标准的协议如 Ws-metadataexchange 和 HTTP/GET 请求。 这两种协议均受 <xref:System.ServiceModel.Description.MetadataExchangeClient> 类型支持。 您可以通过提供元数据终结点的地址和一个可选绑定，使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 类型来检索服务元数据。 由 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 实例使用的绑定可以是 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 静态类中的默认绑定之一、用户提供的绑定或从 `IMetadataExchange` 协定的终结点配置加载的绑定。 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 也可以使用 <xref:System.Net.HttpWebRequest> 类型来解析 HTTP URL 对元数据的引用。  
   
  默认情况下，<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 实例与单个 <xref:System.ServiceModel.ChannelFactory> 实例关联。 通过重写 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 虚拟方法，您可以更改或替换由 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 使用的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> 实例。 同样，通过重写 <xref:System.Net.HttpWebRequest> 虚拟方法，可以更改或替换由 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 使用的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> 实例以发出 HTTP/GET 请求。  
   

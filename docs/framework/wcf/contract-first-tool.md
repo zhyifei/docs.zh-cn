@@ -1,24 +1,12 @@
 ---
-title: "协定优先工具"
-ms.custom: 
+title: 协定优先工具
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5079a4b45c7adf0cfd4d9ae1069379184422dc98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contract-first-tool"></a>协定优先工具
 服务协定往往需要从现有的服务创建。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以使用协定优先工具从现有服务自动创建数据协定类。 要使用协定优先工具，必须本地下载 XML 架构定义 (XSD) 文件；该工具无法通过 HTTP 导入远程数据协定。  
@@ -72,11 +60,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="configuring-contract-first-options"></a>配置协定优先选项  
  协定优先选项可以在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 项目的“属性”菜单中配置。 若要启用协定优先开发，请选择**XSD 作为类型定义语言**项目属性窗口的 WCF 页中的复选框。  
   
- ![WCF 项目选项显示协定 &#45; 首先](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
+ ![WCF 项目选项显示协定&#45;第一个](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   
  要配置高级属性，请单击“高级”按钮。  
   
- ![高级的协定 &#45;第一个属性](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
+ ![高级协定&#45;第一个属性](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
   
  可以从协定中配置下列高级设置用于代码生成。 只能为项目中的所有文件配置设置；目前不能为单独的文件配置设置。  
   

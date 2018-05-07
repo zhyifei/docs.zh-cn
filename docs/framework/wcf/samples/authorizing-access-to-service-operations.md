@@ -1,28 +1,16 @@
 ---
-title: "授予对服务操作的访问权限"
-ms.custom: 
+title: 授予对服务操作的访问权限
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - service behaviors, authorizing access sample
 - Authorizing Access To Service Operations Sample [Windows Communication Foundation]
 - authorization, Windows Communication Foundation sample
 ms.assetid: ddcfdaa5-8b2e-4e13-bd85-887209dc6328
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d291e6bf3892a8bbd52bf193797b203787dbfe65
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7f8b9b5fc4e6524da49b4d3f23de90a123e92e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authorizing-access-to-service-operations"></a>授予对服务操作的访问权限
 此示例演示如何使用[ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)地使用<xref:System.Security.Permissions.PrincipalPermissionAttribute>特性以授予服务操作访问权限。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)示例。 服务和客户端使用配置[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。 `mode`属性[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)已设置为`Message`和`clientCredentialType`已设置为`Windows`。 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 应用到每个服务方法并用于限制对每个操作的访问。 调用方必须是 Windows 管理员才能访问每项操作。  

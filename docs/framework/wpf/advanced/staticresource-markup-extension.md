@@ -1,13 +1,6 @@
 ---
-title: "StaticResource 标记扩展"
-ms.custom: 
+title: StaticResource 标记扩展
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - StaticResource
 - StaticResourceExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97b83feb9d19760208d9cc103290c5c6293c30c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 518a85c158c9a4472689d3c236b84278114cf3ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource 标记扩展
 任何提供的值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通过查找对已定义的资源的引用的属性特性。 该资源的查找行为是类似于将查找以前已从标记当前加载的资源的加载时间查找[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页面以及其他应用程序源，并将生成此资源值在运行时对象中的属性值。  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
  特性语法是最常用于该标记扩展的语法。 在 `StaticResource` 标识符字符串之后提供的字符串标记被指定为基础 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 扩展类的 <xref:System.Windows.StaticResourceExtension> 值。  
   
- `StaticResource`可在对象元素语法。 在这种情况下，指定的值<xref:System.Windows.StaticResourceExtension.ResourceKey%2A>属性是必需的。  
+ `StaticResource` 可在对象元素语法。 在这种情况下，指定的值<xref:System.Windows.StaticResourceExtension.ResourceKey%2A>属性是必需的。  
   
  `StaticResource` 还可以在详细特性用法中使用，以便将 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 属性指定为一个 property=value 对：  
   

@@ -1,13 +1,6 @@
 ---
 title: 匿名类型 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AnonymousType
 helpviewer_keywords:
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 530e21e1595f9bbc3436280418287413e2a48111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 451fe45c9b5efbeb64b1066d6ba8e5f9b27300c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名类型 (Visual Basic)
 Visual Basic 支持匿名类型，使你可以创建对象，而无需编写数据类型的类定义。 此时，编译器将为你生成类。 类具有没有可用的名称，直接继承自<xref:System.Object>，并包含在声明对象指定的属性。 由于未指定数据类型的名称，因此将它称为*匿名类型*。  
@@ -95,11 +85,11 @@ Visual Basic 支持匿名类型，使你可以创建对象，而无需编写数�
 ## <a name="anonymous-types-from-query-expressions"></a>从查询表达式的匿名类型  
  查询表达式并不总是要求创建匿名类型。 如果可能，它们将使用现有类型以保存列的数据。 查询从数据源或只有一个字段从每个记录返回任一整条记录时，将发生这种情况。 在下面的代码示例中，`customers`是对象的集合`Customer`类。 类具有多个属性，并可以将一个或多个包含在查询结果中，按任何顺序。 在前两个示例中，没有匿名类型是必需的这是因为查询中选择命名类型的元素：  
   
--   `custs1`将包含一个字符串，集合，因为`cust.Name`是一个字符串。  
+-   `custs1` 将包含一个字符串，集合，因为`cust.Name`是一个字符串。  
   
      [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
   
--   `custs2`包含一套`Customer`对象，因为每个元素的`customers`是`Customer`查询选择对象，并且整个元素。  
+-   `custs2` 包含一套`Customer`对象，因为每个元素的`customers`是`Customer`查询选择对象，并且整个元素。  
   
      [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
   
@@ -135,7 +125,7 @@ Visual Basic 支持匿名类型，使你可以创建对象，而无需编写数�
   
  有关由编译器和重写方法的功能创建的代码的详细信息，请参阅[匿名类型定义](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象初始值设定项：命名类型和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  

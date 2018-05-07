@@ -1,27 +1,15 @@
 ---
-title: "对象状态和更改跟踪"
-ms.custom: 
+title: 对象状态和更改跟踪
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f7eb1a8afe87caece18432c66a8d8a268ce9fbd2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 482299f90a92acec9307649ec04a89f8ce6be414
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-states-and-change-tracking"></a>对象状态和更改跟踪
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象始终处于某种*状态*。 例如，当 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 创建一个新对象时，该对象就处于 `Unchanged` 状态。 您自己创建的新对象对于 <xref:System.Data.Linq.DataContext> 而言是未知的，因而处于 `Untracked` 状态。 在成功执行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 后，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 已知的所有对象均处于 `Unchanged` 状态。 （唯一的例外是已从数据库中成功删除的那些对象，它们处于 `Deleted` 状态，并且在该 <xref:System.Data.Linq.DataContext> 实例中无法使用。）  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象始终处于某种*状态*。 例如，当 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 创建一个新对象时，该对象就处于 `Unchanged` 状态。 您自己创建的新对象对于 <xref:System.Data.Linq.DataContext> 而言是未知的，因而处于 `Untracked` 状态。 在成功执行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 后，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 已知的所有对象均处于 `Unchanged` 状态。 （唯一的例外是已从数据库中成功删除的那些对象，它们处于 `Deleted` 状态，并且在该 <xref:System.Data.Linq.DataContext> 实例中无法使用。）  
   
 ## <a name="object-states"></a>对象状态  
  下表列出了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象可能的状态。  

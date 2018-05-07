@@ -1,14 +1,6 @@
 ---
-title: "CorMethodSemanticsAttr 枚举"
-ms.custom: 
+title: CorMethodSemanticsAttr 枚举
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorMethodSemanticsAttr
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 09e0c1397a94b75a812e6cbdc52e612a930edae9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: de467c98dfa7ad3eac69502f2afe311b301e1ec5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr 枚举
 包含一些值，用于描述方法和关联属性或事件之间的关系。  
@@ -63,12 +51,12 @@ typedef enum CorMethodSemanticsAttr {
 |`msRemoveOn`|指定该方法中删除事件处理程序方法。|  
 |`msFire`|指定该方法将引发事件。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

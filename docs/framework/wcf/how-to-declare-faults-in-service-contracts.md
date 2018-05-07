@@ -1,30 +1,18 @@
 ---
-title: "如何：在服务协定中声明错误"
-ms.custom: 
+title: 如何：在服务协定中声明错误
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf707e58586673097c89e0e0f4d72ea68ef7247
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 142ad26702f0732bc5103e29d5a44bc57ab37625
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>如何：在服务协定中声明错误
-在托管代码中，出现错误条件时引发异常。 但是，在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序中，通过在服务协定中声明 SOAP 错误可以使服务协定指定向客户端返回哪些错误信息。 异常和错误之间的关系的概述，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
+在托管代码中，出现错误条件时引发异常。 在 Windows Communication Foundation (WCF) 应用程序，但是，服务协定指定哪些错误信息返回到客户端上，通过声明服务协定中的 SOAP 错误。 异常和错误之间的关系的概述，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>创建指定 SOAP 错误的服务协定  
   

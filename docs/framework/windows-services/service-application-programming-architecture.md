@@ -1,13 +1,6 @@
 ---
-title: "服务应用程序编程体系结构"
-ms.custom: 
+title: 服务应用程序编程体系结构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,25 +14,22 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-caps.latest.revision: "15"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 2d44ee323040346437261b51fddb707a30d1de6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0c760d0f9b65fc9b612a8bee8abb68fa5b4ecae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-application-programming-architecture"></a>服务应用程序编程体系结构
 Windows 服务应用程序都基于从继承的类<xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>类。 重写此类的方法，并为这些表来确定你的服务的行为方式定义功能。  
   
  所涉及的服务创建的主类如下：  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>-您重写方法从<xref:System.ServiceProcess.ServiceBase>类创建服务时，并定义代码，以确定如何在此您服务的函数继承类。  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> -您重写方法从<xref:System.ServiceProcess.ServiceBase>类创建服务时，并定义代码，以确定如何在此您服务的函数继承类。  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType>和<xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType>-使用这些类用于安装和卸载你的服务。  
+-   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> 和<xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType>-使用这些类用于安装和卸载你的服务。  
   
  此外，类名为<xref:System.ServiceProcess.ServiceController>可用于操作服务本身。 此类不参与创建服务，但可以用于启动和停止该服务，将命令传递到它，并返回一系列的枚举。  
   

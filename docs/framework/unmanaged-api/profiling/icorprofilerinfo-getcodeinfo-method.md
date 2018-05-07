@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo::GetCodeInfo 方法"
-ms.custom: 
+title: ICorProfilerInfo::GetCodeInfo 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo.GetCodeInfo
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 90140b0f-a926-4a7e-b6fa-23e05f703cce
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd05f1ed64e32c4b451f3e60d856be0e99e302b1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 21dc937bef2bbe197a5dc4af72ff50dff64dbbbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo 方法
 获取与指定函数 ID 关联的本机代码的范围。  
@@ -64,7 +52,7 @@ HRESULT GetCodeInfo(
   
  此函数使用调用方分配的缓冲区。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  

@@ -1,13 +1,6 @@
 ---
-title: "如何：更改光标类型"
-ms.custom: 
+title: 如何：更改光标类型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - mouse pointer [WPF], cursor type
 - cursor (mouse pointer)
 ms.assetid: 08c945a7-8ab0-4320-acf3-0b4955a344c2
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 31c59f4c90eed00775fc9fceaf872391faa93784
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26fc2584381307612c40b615f169902089d9d1f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-cursor-type"></a>如何：更改光标类型
 此示例演示如何更改<xref:System.Windows.Input.Cursor>鼠标指针的特定元素和应用程序。  

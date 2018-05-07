@@ -1,29 +1,15 @@
 ---
 title: 到 Windows Communication Foundation 的消息队列
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6a29c0225117c57079b5048705f58dcde4a06426
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: c0208de93ad0c903b8a75383b509de57365ac4bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>到 Windows Communication Foundation 的消息队列
-本示例演示消息队列 (MSMQ) 应用程序如何将 MSMQ 消息发送到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
+此示例演示如何消息队列 (MSMQ) 应用程序可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
   
  服务协定是 `IOrderProcessor`，它定义了适合与队列一起使用的单向服务。 MSMQ 消息没有 Action 标头，因此无法将不同的 MSMQ 消息自动映射到操作协定。 所以只能有一个操作协定。 如果希望为服务定义多个操作协定，则应用程序必须提供有关 MSMQ 消息中的哪个标头（例如，标签或 correlationID）可用于确定要调度的操作协定的信息。 此进行了演示[自定义多路分解器](../../../../docs/framework/wcf/samples/custom-demux.md)。  
   
@@ -162,7 +148,7 @@ Console.ReadLine();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   

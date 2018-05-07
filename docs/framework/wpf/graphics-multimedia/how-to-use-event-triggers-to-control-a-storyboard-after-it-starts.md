@@ -1,28 +1,16 @@
 ---
-title: "如何：在演示图板启动之后使用事件触发器来控制演示图板"
-ms.custom: 
+title: 如何：在演示图板启动之后使用事件触发器来控制演示图板
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - triggers [WPF], controlling Storyboards
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 80871d9daeec257351134e9f7a72a10b697e842a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c864668026c4f8bb58a4d6c4c36f96fb07445a9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>如何：在演示图板启动之后使用事件触发器来控制演示图板
 此示例演示如何控制<xref:System.Windows.Media.Animation.Storyboard>启动后对它。 若要启动<xref:System.Windows.Media.Animation.Storyboard>使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用<xref:System.Windows.Media.Animation.BeginStoryboard>，这样可以将对象和属性，它们进行动画处理，然后启动情节提要的动画。 如果你向提供<xref:System.Windows.Media.Animation.BeginStoryboard>通过指定的名称及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>属性，你可以让它从此情节提要。 然后，你可以以交互方式控制情节提要在其开始后。  

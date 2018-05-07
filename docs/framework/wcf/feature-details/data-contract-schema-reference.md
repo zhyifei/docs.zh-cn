@@ -1,34 +1,20 @@
 ---
 title: 数据协定架构参考
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-schema-reference"></a>数据协定架构参考
 本主题介绍 <xref:System.Runtime.Serialization.DataContractSerializer> 用来描述 XML 序列化的公共语言运行库 (CLR) 类型的 XML 架构 (XSD) 的子集。  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer 映射  
- 在使用元数据终结点或 `DataContractSerializer` 从 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务中导出元数据时， [DataContractSerializer](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)将 CLR 类型映射到 XSD。 有关详细信息，请参阅[数据协定序列化程序](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
+ `DataContractSerializer`时从 Windows Communication Foundation (WCF) 服务使用元数据终结点导出元数据将 CLR 类型映射到 XSD 或[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 有关详细信息，请参阅[数据协定序列化程序](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
   
  在使用 Svcutil.exe 访问 Web 服务描述语言 (WSDL) 或 XSD 并生成服务或客户端的数据协定时， `DataContractSerializer` 还会将 XSD 映射到 CLR 类型。  
   
@@ -105,7 +91,7 @@ ms.lasthandoff: 04/30/2018
 |`choice`|已禁止|  
 |`sequence`|支持，将映射到数据协定的数据成员。|  
 |`attribute`|已禁止，即使 use="prohibited"（但有一个例外）。 只支持标准序列化架构命名空间中的可选属性。 这些属性不映射到数据协定编程模型中的数据成员。 当前，仅有一个这样的属性有意义，将在“ISerializable”一节讨论。 将忽略所有其他成员。|  
-|`attributeGroup`|已禁止。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] v1 版本中， `DataContractSerializer` 将忽略 `attributeGroup` 内是否存在 `xs:complexType`。|  
+|`attributeGroup`|已禁止。 在 WCF v1 版本中，`DataContractSerializer`忽略是否存在`attributeGroup`内`xs:complexType`。|  
 |`anyAttribute`|已禁止。|  
 |（空）|映射到没有数据成员的数据协定。|  
   
@@ -215,7 +201,7 @@ ms.lasthandoff: 04/30/2018
   
  \* 使用时`simpleType`和`complexType,`匿名类型的映射是与非匿名类型相同，只不过没有匿名数据协定，因此创建命名的数据协定，使用派生自元素名称的生成名称。 下面的列表中是匿名类型的规则：  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现详细信息：如果 `xs:element` 名称不包含句点，则匿名类型映射到外部数据协定类型的内部类型。 如果名称包含句点，则结果数据协定类型是独立的（不是内部类型）。  
+-   WCF 实现详细信息： 如果`xs:element`名称不包含句点，则匿名类型映射到外部数据协定类型的内部类型。 如果名称包含句点，则结果数据协定类型是独立的（不是内部类型）。  
   
 -   内部类型的生成数据协定名称是由外部类型的数据协定名称后跟一个句点、元素名称和字符串“Type”构成。  
   

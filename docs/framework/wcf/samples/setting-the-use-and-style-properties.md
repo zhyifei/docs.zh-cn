@@ -1,24 +1,12 @@
 ---
-title: "设置 Use 和 Style 属性"
-ms.custom: 
+title: 设置 Use 和 Style 属性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f69ce60e6c9ab98ef773fa54b1c057d3c2b3b48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74d5baca77fd1af6260def762094b3ce01816179
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-the-use-and-style-properties"></a>设置 Use 和 Style 属性
 本示例演示如何使用 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 和 <xref:System.ServiceModel.DataContractFormatAttribute> 的 Use 和 Style 属性。 这些属性影响如何格式化消息。 默认情况下，使用设置为 <xref:System.ServiceModel.OperationFormatStyle.Document> 的样式格式化消息正文。 可以在服务协定级别或在操作协定级别指定这些设置。  
@@ -84,7 +72,7 @@ public interface IUseAndStyleCalculator
 }  
 ```  
   
- 若要查看不同的 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 设置之间的差异，请在服务中修改这些设置、重新生成客户端、运行示例并用服务跟踪查看器工具检查 c:\logs\message.logs 文件。 还可以通过查看 http://localhost/ServiceModelSamples/service.svc?wsdl 观察对元数据的影响。 服务的元数据通常分为多页。 虽然 wsdl 主页包含 WSDL 绑定，但查看 http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 可观察到消息定义。  
+ 若要查看不同的 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 设置之间的差异，请在服务中修改这些设置、重新生成客户端、运行示例并用服务跟踪查看器工具检查 c:\logs\message.logs 文件。 此外通过查看观察对元数据的影响http://localhost/ServiceModelSamples/service.svc?wsdl。 服务的元数据通常分为多页。 Wsdl 主页包含 WSDL 绑定，但查看http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0可观察到消息定义。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -101,7 +89,7 @@ public interface IUseAndStyleCalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`  
   

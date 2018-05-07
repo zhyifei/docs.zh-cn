@@ -1,32 +1,18 @@
 ---
 title: 数据协定中的 XML 和 ADO.NET 类型
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7efef63668bb78bdc9a7d66654c9e33ef6c0138c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ae21174d19ad69f87165427cf5a0bfd29ac872db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>数据协定中的 XML 和 ADO.NET 类型
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 数据协定模型支持某些直接表示 XML 的类型。 当这些类型序列化为 XML 时，序列化程序将写出这些类型的 XML 内容，而不再进一步进行任何处理。 支持的类型为 <xref:System.Xml.XmlElement>、<xref:System.Xml.XmlNode> 的数组（但不是 `XmlNode` 类型本身）以及实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。 <xref:System.Data.DataSet> 和 <xref:System.Data.DataTable> 类型以及类型化数据集通常用于数据库编程。 这些类型可实现 `IXmlSerializable` 接口，因此它们在数据协定模型中可序列化。 本主题的结尾还列出了一些有关这些类型的特殊注意事项。  
+Windows Communication Foundation (WCF) 数据协定模型支持某些直接表示 XML 的类型。 当这些类型序列化为 XML 时，序列化程序将写出这些类型的 XML 内容，而不再进一步进行任何处理。 支持的类型为 <xref:System.Xml.XmlElement>、<xref:System.Xml.XmlNode> 的数组（但不是 `XmlNode` 类型本身）以及实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。 <xref:System.Data.DataSet> 和 <xref:System.Data.DataTable> 类型以及类型化数据集通常用于数据库编程。 这些类型可实现 `IXmlSerializable` 接口，因此它们在数据协定模型中可序列化。 本主题的结尾还列出了一些有关这些类型的特殊注意事项。  
   
 ## <a name="xml-types"></a>XML 类型  
   
@@ -48,7 +34,7 @@ ms.lasthandoff: 04/30/2018
 </MyDataContract>  
 ```  
   
- 请注意，包装数据成员元素 `<myDataMember>` 仍然存在。 无法在数据协定模型中移除此元素。 处理此模型的序列化程序（<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer>）可以将特殊属性发出到此包装元素。 这些属性包括标准 XML 架构实例“nil”属性（允许 `XmlElement` 为 `null`）和“Type”属性（允许以多元方式使用 `XmlElement`）。 此外，以下 XML 属性是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所特有的：“Id”、“Ref”、“Type”和“Assembly”。 可以发出这些属性以支持与已启用的对象图保留模式或 `XmlElement` 一起使用 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 (有关对象图保存模式的详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。)  
+ 请注意，包装数据成员元素 `<myDataMember>` 仍然存在。 无法在数据协定模型中移除此元素。 处理此模型的序列化程序（<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer>）可以将特殊属性发出到此包装元素。 这些属性包括标准 XML 架构实例“nil”属性（允许 `XmlElement` 为 `null`）和“Type”属性（允许以多元方式使用 `XmlElement`）。 此外，下面的 XML 属性是特定于 WCF:"Id"、"Ref"、"Type"和"Assembly"。 可以发出这些属性以支持与已启用的对象图保留模式或 `XmlElement` 一起使用 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 (有关对象图保存模式的详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。)  
   
  允许使用 `XmlElement` 的数组或集合，并且可以将它们作为任何其他数组或集合进行处理。 也就是说，将有一个包装元素适用于整个集合，并且数组中的每一个 `<myDataMember>` 都对应一个单独的包装元素（类似于上面示例中的 `XmlElement`）。  
   
@@ -88,7 +74,7 @@ ms.lasthandoff: 04/30/2018
   
  产生无效 XML 的 `XmlNode` 数组无法序列化。 例如，两个 `XmlNode` 实例（其中一个是 `XmlElement`，另一个是 <xref:System.Xml.XmlAttribute>）的数组是无效的，因为此序列与任何有效的 XML 实例都不对应（没有附加该属性的位置）。  
   
- 在反序列化 `XmlNode` 数组时，将创建节点并用传入 XML 的信息进行填充。 反序列化程序还将提供一个有效的父 <xref:System.Xml.XmlDocument>。 将反序列化所有节点，包括包装数据成员元素的任何属性，但由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 序列化程序放置在那里的属性（如用于指示多态分配的属性）除外。 有关在 XML 片段中定义所有命名空间前缀的注意事项适用于反序列化 `XmlNode` 数组，它们所起的作用与在反序列化 `XmlElement` 时类似。  
+ 在反序列化 `XmlNode` 数组时，将创建节点并用传入 XML 的信息进行填充。 反序列化程序还将提供一个有效的父 <xref:System.Xml.XmlDocument>。 所有节点将反序列都化，包括包装数据成员元素中，在任何属性，但不包括特性那里放置的 WCF 序列化程序 （如用于指示多态分配的属性）。 有关在 XML 片段中定义所有命名空间前缀的注意事项适用于反序列化 `XmlNode` 数组，它们所起的作用与在反序列化 `XmlElement` 时类似。  
   
  如果在启用对象图保留时使用序列化程序，则对象相等仅保留在 `XmlNode` 数组级别上，而不是各个 `XmlNode` 实例上。  
   
@@ -142,7 +128,7 @@ ms.lasthandoff: 04/30/2018
   
  如果正在反序列化实现 `IXmlSerializable` 的类型的数据成员，且该类型为前面定义的内容类型，则反序列化程序会将 XML 读取器放置在该数据成员的包装元素上，并将控制权传递给 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法。 该方法必须读取整个元素，包括起始和结束标记。 请确保您的 `ReadXml` 代码可处理元素为空的情况。 此外，您的 `ReadXml` 实现也不应该依赖于以特殊方式进行命名的包装元素。 序列化程序所选的名称可以不同。  
   
- 允许以多元方式分配 `IXmlSerializable` 内容类型，例如，分配给 <xref:System.Object> 类型的数据成员。 还允许类型实例为 null。 最后，可以在启用对象图保留的情况下使用 `IXmlSerializable` 类型，以及和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 一起使用。 所有这些功能都需要 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 序列化程序将某些属性附加到包装元素（XML 架构实例命名空间中的“nil”和“type”，以及特定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 命名空间中的“Id”、“Ref”、“Type”和“Assembly”）中。  
+ 允许以多元方式分配 `IXmlSerializable` 内容类型，例如，分配给 <xref:System.Object> 类型的数据成员。 还允许类型实例为 null。 最后，可以在启用对象图保留的情况下使用 `IXmlSerializable` 类型，以及和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 一起使用。 所有这些功能都需要 WCF 序列化程序将某些属性附加到包装元素 ("nil"和"类型"XML 架构实例命名空间和"Id"、"Ref"、"Type"和"Assembly"中特定于 WCF 的命名空间中)。  
   
 #### <a name="attributes-to-ignore-when-implementing-readxml"></a>实现 ReadXml 时要忽略的属性  
  在将控制权传递给 `ReadXml` 代码之前，反序列化程序将检查 XML 元素、检测这些特殊的 XML 属性，以及对它们进行操作。 例如，如果“nil”为 `true`，则将反序列化一个 Null 值，并且不调用 `ReadXml`。 如果检测到多态性，则将反序列化该元素的内容，就好像该元素为其他类型一样。 调用以多元方式分配的类型的 `ReadXml` 实现。 在任何情况下，`ReadXml` 实现都应忽略这些特殊属性，因为它们均由反序列化程序处理。  
@@ -200,16 +186,16 @@ ms.lasthandoff: 04/30/2018
   
 -   XML 编写器通常不允许 XML 文档声明 (例如， \<？ xml 版本 ='1.0 '？ >) 中间编写另一个文档。 您不能使用完整的 XML 文档并将其作为 `Array` 数据成员的 `XmlNode` 进行序列化。 要执行此操作，您必须提取出文档声明或使用自己的编码方案表示它。  
   
--   所有提供的 XML 编写器[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]拒绝 XML 处理指令 (\<？ … ？ >) 和文档类型定义 (\<！ … … >)，因为 SOAP 消息中禁止这些内容。 同样，您可以使用自己的编码机制避免此限制。 如果您必须要在生成的 XML 中包含这些内容，则可以编写一个自定义编码器，以使用支持这些内容的 XML 编写器。  
+-   所有 WCF 提供的 XML 写入器拒绝 XML 处理指令 (\<？ … ？ >) 和文档类型定义 (\<！ … … >)，因为 SOAP 消息中禁止这些内容。 同样，您可以使用自己的编码机制避免此限制。 如果您必须要在生成的 XML 中包含这些内容，则可以编写一个自定义编码器，以使用支持这些内容的 XML 编写器。  
   
--   在实现 `WriteXml` 时，避免对 XML 编写器调用 <xref:System.Xml.XmlWriter.WriteRaw%2A> 方法。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用多种 XML 编码（包括二进制），非常难或无法使用 `WriteRaw`，使结果可用于任何编码。  
+-   在实现 `WriteXml` 时，避免对 XML 编写器调用 <xref:System.Xml.XmlWriter.WriteRaw%2A> 方法。 WCF 使用多种 XML 编码 （包括二进制），非常难或无法使用`WriteRaw`以便使结果可用于任何编码。  
   
--   实现 `WriteXml` 时，避免使用 <xref:System.Xml.XmlWriter.WriteEntityRef%2A> 提供的 XML 编写器所不支持的 <xref:System.Xml.XmlWriter.WriteNmToken%2A> 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 方法。  
+-   在实现时`WriteXml`，避免使用<xref:System.Xml.XmlWriter.WriteEntityRef%2A>和<xref:System.Xml.XmlWriter.WriteNmToken%2A>WCF 提供的 XML 编写器不受支持的方法。  
   
 ## <a name="using-dataset-typed-dataset-and-datatable"></a>使用数据集、类型化数据集和数据表  
  数据协定模型中完全支持使用这些类型。 使用这些类型时，请考虑以下事项：  
   
--   这些类型的架构（尤其是 <xref:System.Data.DataSet> 及其类型化派生类）可能与一些非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 平台无法交互，或者在与这些平台一起使用时可能导致可用性很差。 另外，使用 `DataSet` 类型可能会影响性能。 最后，这可能会增加将来升级应用程序版本的难度。 考虑使用显式定义的数据协定类型代替协定中的 `DataSet` 类型。  
+-   这些类型的架构 (尤其是<xref:System.Data.DataSet>及其类型化的派生类) 可能会导致与这些平台一起使用时的可用性很差或可能不可以与某些非 WCF 平台，互操作。 另外，使用 `DataSet` 类型可能会影响性能。 最后，这可能会增加将来升级应用程序版本的难度。 考虑使用显式定义的数据协定类型代替协定中的 `DataSet` 类型。  
   
 -   导入 `DataSet` 或 `DataTable` 架构时，引用这些类型很重要。 使用 Svcutil.exe 命令行工具，这可以通过实现 System.Data.dll 程序集将名称传递给`/reference`切换。 如果导入类型化数据集架构，则必须引用类型化数据集的类型。 使用 Svcutil.exe，传递到类型化数据集的程序集的位置`/reference`切换。 有关引用类型的详细信息，请参阅[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   

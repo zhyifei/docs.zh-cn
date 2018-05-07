@@ -1,24 +1,12 @@
 ---
 title: 使用 WorkflowInvoker 和 WorkflowApplication
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d0b12fc6c91f57ec49050a0a37b16f64d0e54e6d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 6cbfca14eddeb82fc2d88b70703cae0fe59d63ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>使用 WorkflowInvoker 和 WorkflowApplication
 Windows Workflow Foundation (WF) 提供承载工作流的若干方法。 <xref:System.Activities.WorkflowInvoker> 提供一种简单工作流调用方法，就像方法调用一样，仅可用于不使用持久性的工作流。 <xref:System.Activities.WorkflowApplication> 为执行工作流（包括生命周期事件通知、执行控制、书签恢复和持久性）提供更丰富的模型。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 为消息传递活动提供支持，主要用于工作流服务。 本主题介绍使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 的工作流承载。 有关承载工作流与<xref:System.ServiceModel.Activities.WorkflowServiceHost>，请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)和[承载工作流服务概述](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。  

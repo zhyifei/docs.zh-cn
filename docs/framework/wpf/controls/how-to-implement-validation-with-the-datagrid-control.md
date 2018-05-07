@@ -1,13 +1,6 @@
 ---
-title: "如何：用 DataGrid 控件实现验证"
-ms.custom: 
+title: 如何：用 DataGrid 控件实现验证
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78846e2b6a1d73e011441b0ccb46b8aad365d5dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20fcc8ebafb25e4e4f176447972e7637aaa5cd7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>如何：用 DataGrid 控件实现验证
 <xref:System.Windows.Controls.DataGrid>控制，你可以执行的单元格和行级别的验证。 与单元格级别验证时用户更新的值验证绑定的数据对象的各个属性。 与行级别验证用户提交更改的行时验证整个数据对象。 也可以为验证错误，提供自定义的可视反馈，或使用默认的视觉反馈，<xref:System.Windows.Controls.DataGrid>控件提供。  

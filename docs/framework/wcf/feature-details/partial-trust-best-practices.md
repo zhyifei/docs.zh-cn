@@ -1,27 +1,15 @@
 ---
-title: "部分信任最佳实践"
-ms.custom: 
+title: 部分信任最佳实践
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817f7aeeb7adece1c375bb8b0cc455a17fb54185
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fca975ff4216384b970535273511eb07cd6ded68
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-trust-best-practices"></a>部分信任最佳实践
-本主题描述在部分信任环境中运行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 时的最佳实践。  
+本主题介绍时在部分信任环境中运行 Windows Communication Foundation (WCF) 的最佳做法。  
   
 ## <a name="serialization"></a>序列化  
  当在部分受信任的应用程序中使用 <xref:System.Runtime.Serialization.DataContractSerializer> 时，请应用以下做法。  
@@ -56,23 +44,23 @@ ms.lasthandoff: 12/22/2017
 -   实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口的实例方法必须为 `public`。  
   
 ## <a name="using-wcf-from-fully-trusted-platform-code-that-allows-calls-from-partially-trusted-callers"></a>从允许来自部分受信任的调用方的调用的完全受信任平台代码使用 WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 部分信任安全性模型假定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 公共方法或属性的任何调用方在承载应用程序的代码访问安全性 (CAS) 上下文中运行。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还假定对于每个 <xref:System.AppDomain> 只存在一个应用程序安全性上下文，并由受信任的主机（例如，通过调用 <xref:System.AppDomain> 或由 ASP.NET 应用程序管理器）在 <xref:System.AppDomain.CreateDomain%2A> 创建时建立此上下文。  
+ WCF 部分信任安全性模型假定 WCF 公共方法或属性的任何调用方托管应用程序的代码访问安全性 (CAS) 上下文中运行。 WCF 还假定该只有一个应用程序安全上下文存在为每个<xref:System.AppDomain>，和建立此上下文<xref:System.AppDomain>由受信任的主机的创建时间 (例如，通过调用<xref:System.AppDomain.CreateDomain%2A>或由 ASP.NET 应用程序管理器)。  
   
- 此安全模型适用于无法断言其他 CAS 权限的用户编写应用程序，如在 Medium Trust ASP.NET 应用程序中运行的用户代码。 但是，在代表部分受信任的应用程序调用到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中时，必须当心完全受信任的平台代码（例如，在全局程序集缓存中安装并接受来自部分受信任代码的调用的第三方程序集），以免引入应用程序级安全漏洞。  
+ 此安全模型适用于无法断言其他 CAS 权限的用户编写应用程序，如在 Medium Trust ASP.NET 应用程序中运行的用户代码。 但是，完全受信任平台代码 （例如，第三方程序集安装到全局程序集缓存中并接受来自部分受信任的代码调用），必须当心时代表部分受信任的应用程序到调入 WCF可以避免引入应用程序级安全漏洞。  
   
- 在代表部分受信任的代码调用 <xref:System.Security.PermissionSet.Assert%2A> API 之前，完全信任代码应该避免更改当前线程的 CAS 权限集（通过调用 <xref:System.Security.PermissionSet.PermitOnly%2A>、<xref:System.Security.PermissionSet.Deny%2A> 或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 更改）。 断言、拒绝或通过其他方式创建特定于线程且独立于应用程序级安全上下文的权限上下文可能会导致意外行为。 根据应用程序，此行为可能会导致应用程序级安全漏洞。  
+ 完全信任代码应该避免更改当前线程的 CAS 权限集 (通过调用<xref:System.Security.PermissionSet.Assert%2A>， <xref:System.Security.PermissionSet.PermitOnly%2A>，或<xref:System.Security.PermissionSet.Deny%2A>) 在代表部分受信任的代码中调用 WCF Api 之前。 断言、拒绝或通过其他方式创建特定于线程且独立于应用程序级安全上下文的权限上下文可能会导致意外行为。 根据应用程序，此行为可能会导致应用程序级安全漏洞。  
   
- 必须准备好使用线程特定的权限上下文调用到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的代码，才能处理可能出现的以下情况：  
+ 调入 WCF 中使用线程特定的权限上下文必须准备好处理可能出现的以下情况的代码：  
   
 -   在操作期间可能未维护线程特定的安全上下文，这导致潜在的安全异常。  
   
--   内部 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 代码以及用户提供的任何回调均可能在与最初启动调用所在的安全上下文不同的安全上下文中运行。 这些上下文包括：  
+-   内部 WCF 代码以及用户提供的任何回调均可能比在其下最初启动调用不同的安全上下文中运行。 这些上下文包括：  
   
     -   应用程序权限上下文。  
   
-    -   其他用户线程以前创建的任何线程特定的权限上下文，用于在当前正在运行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的生存期内调入 <xref:System.AppDomain>。  
+    -   用于在当前正在运行的生存期内调入 WCF 其他用户线程以前创建的任何线程特定的权限上下文<xref:System.AppDomain>。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可保证部分受信任的代码无法获取完全信任权限，除非此类权限在调入 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 公共 API 中之前已由完全受信任的组件断言。 但是，它不保证断言完全信任的效果隔离到特定的线程、操作或用户操作。  
+ WCF 可保证部分受信任的代码无法获取完全信任权限，除非此类权限已由完全信任的组件之前调入 WCF 公共 Api 断言。 但是，它不保证断言完全信任的效果隔离到特定的线程、操作或用户操作。  
   
  作为最佳实践，避免通过调用 <xref:System.Security.PermissionSet.Assert%2A>、<xref:System.Security.PermissionSet.PermitOnly%2A> 或 <xref:System.Security.PermissionSet.Deny%2A> 创建线程特定的权限上下文。 而是对应用程序本身授予或拒绝特权，以便不需要 <xref:System.Security.PermissionSet.Assert%2A>、<xref:System.Security.PermissionSet.Deny%2A> 或 <xref:System.Security.PermissionSet.PermitOnly%2A>。  
   

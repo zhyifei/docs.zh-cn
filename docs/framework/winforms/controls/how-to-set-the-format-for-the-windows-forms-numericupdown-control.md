@@ -1,13 +1,6 @@
 ---
-title: "如何：设置 Windows 窗体 NumericUpDown 控件的格式"
-ms.custom: 
+title: 如何：设置 Windows 窗体 NumericUpDown 控件的格式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b4ff6d8e584e65482285012af351ebd1a669b806
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1cb8f8b7d2f86125736c08cd9eadf4eee30063bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>如何：设置 Windows 窗体 NumericUpDown 控件的格式
 你可以配置 Windows 窗体中显示值的方式<xref:System.Windows.Forms.NumericUpDown>控件。 <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>属性决定小数点后出现多少个号码; 默认值为 0。 <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>属性确定是否将每隔三个十进制数字之间插入分隔符; 默认值为`false`。 如果控件可以显示值而不是十进制格式的十六进制<xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A>属性设置为`true`; 默认值是`false`。  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     或  
+     -或-  
   
 -   通过设置显示的十六进制值<xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A>属性`true`。  
   

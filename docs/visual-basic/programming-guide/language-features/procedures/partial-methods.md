@@ -1,12 +1,6 @@
 ---
-title: "分部方法 (Visual Basic)"
-ms.custom: 
+title: 分部方法 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.PartialMethod
 - PartialMethod
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 33e34c63988e74be2c22cb7b1358f5e8b04048c6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: a1708c1d953a60429c1bd87fd858da5c50a3e759
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-methods-visual-basic"></a>分部方法 (Visual Basic)
 分部方法允许开发人员将自定义逻辑插入到代码。 通常情况下，代码是类的设计器生成的一部分。 分部方法定义中创建的代码生成器中，分部类和它们通常用于提供的内容已更改的通知。 它们使开发人员在更改的响应中指定自定义行为。  

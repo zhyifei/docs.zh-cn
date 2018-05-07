@@ -1,27 +1,15 @@
 ---
-title: "发出用户代码跟踪"
-ms.custom: 
+title: 发出用户代码跟踪
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="emitting-user-code-traces"></a>发出用户代码跟踪
-除了在配置中启用跟踪以收集 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 生成的检测数据之外，您还可以采用编程方式以用户代码的形式发出跟踪。 这样，您就可以主动创建检测数据，过后您可以细读这些数据以进行诊断。 本主题讨论如何实现这一目的。  
+除了启用跟踪以收集生成 Windows Communication Foundation (WCF) 的检测数据，还可以发出以编程方式在用户代码中的跟踪。 这样，您就可以主动创建检测数据，过后您可以细读这些数据以进行诊断。 本主题讨论如何实现这一目的。  
   
  此外，[扩展跟踪](../../../../../docs/framework/wcf/samples/extending-tracing.md)的示例包含以下各节中所示的所有代码。  
   
@@ -134,17 +122,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  在下图中，我们还看到跟踪在“Calculator activity”（计算器活动）中来回转移，而且每个请求活动都具有两对“开始”和“停止”跟踪，一对用于客户端，另一对用于服务（每个跟踪源一对）。  
   
- ![跟踪查看器： 发出用户 &#45; 代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![跟踪查看器： 发出用户&#45;代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 按创建时间（左面板）及其嵌套活动（右上面板）排列的活动列表  
   
  如果活动代码引发的异常会导致客户端引发异常（例如，当客户端没有获得请求的响应时），将在同一个直接相关的活动中显示服务和客户端警告或错误消息。 在下图中，服务引发了一个异常，指示"服务拒绝处理用户代码中的此请求。" 客户端也会引发一个异常，指示"服务器无法处理请求，因为内部错误。"  
   
- ![使用跟踪查看器发出用户 &#45; 代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
+ ![使用跟踪查看器发出用户&#45;代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
 如果传播了请求活动 ID，给定请求的各终结点上的错误将显示在同一个活动中  
   
  在左面板上双击“乘”活动将显示下图，图中包含所涉及的每个进程的“乘”活动中的跟踪。 我们首先会看到服务上发生了一个警告（引发的异常），随后因无法处理请求而在客户端上显示警告和错误。 因此，我们可以由此获知终结点之间存在因果错误关系并推理出错误的根本原因。  
   
- ![使用跟踪查看器发出用户 &#45; 代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
+ ![使用跟踪查看器发出用户&#45;代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 错误关联的图形视图  
   
  若要获取之前的跟踪，我们为用户跟踪源设置 `ActivityTracing` 并为 `propagateActivity=true` 跟踪源设置 `System.ServiceModel`。 我们没有为 `ActivityTracing` 跟踪源设置 `System.ServiceModel`，以便实现用户代码活动之间的传播。 （当启用“ServiceModel”活动跟踪时，客户端中定义的活动 ID 将不会传播到服务用户代码；但是，转移会将客户端和服务用户代码活动与中间的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 活动相关联。）  

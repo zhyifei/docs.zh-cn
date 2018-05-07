@@ -1,26 +1,17 @@
 ---
-title: "结构变量 (Visual Basic)"
-ms.custom: 
+title: 结构变量 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - structures [Visual Basic], variables
 - structures [Visual Basic], structure variables
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ef42c44de84caffde909eb2b3e9361016a6abb97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0dad7bdcac5428753e252f3b26ca0a127c293a7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-variables-visual-basic"></a>结构变量 (Visual Basic)
 一旦你已创建一个结构，你可以将过程级别和模块级变量声明该类型。 例如，可以创建一个有关计算机系统该记录的信息。 下面的示例演示这一操作。  
@@ -60,7 +51,7 @@ yourSystem = mySystem
   
  如果某个结构元素是引用类型，如`String`， `Object`，或复制数组，指向的数据。 在前面的示例中，如果`systemInfo`已包含的对象变量，则前面的示例将具有将复制从指针`mySystem`到`yourSystem`，并通过一个结构的对象的数据的更改都是有效的访问时通过其他结构。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
  [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  

@@ -1,14 +1,6 @@
 ---
-title: "IHostGCManager::ThreadIsBlockingForSuspension 方法"
-ms.custom: 
+title: IHostGCManager::ThreadIsBlockingForSuspension 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostGCManager.ThreadIsBlockingForSuspension
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2657d45d-26d2-4d0a-8473-32b652e3321d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93f17e687ebc3d121db36d8fce8b6bd514867a91
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85921156860f52eb2a898e6be356e191c2a4f02d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a>IHostGCManager::ThreadIsBlockingForSuspension 方法
 通知主机从中进行方法调用的线程即将阻止垃圾回收。  
@@ -48,7 +36,7 @@ HRESULT ThreadIsBlockingForSuspension ();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`ThreadIsBlockingForSuspension`已成功返回。|  
+|S_OK|`ThreadIsBlockingForSuspension` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -61,14 +49,14 @@ HRESULT ThreadIsBlockingForSuspension ();
 > [!IMPORTANT]
 >  仅在调用后，主机可以重新计划任务`ThreadIsBlockingForSuspension`。 在运行时调用后[SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md)，主机必须不重新安排任务。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

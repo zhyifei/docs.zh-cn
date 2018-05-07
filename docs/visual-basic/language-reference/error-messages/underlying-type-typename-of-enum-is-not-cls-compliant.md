@@ -1,26 +1,17 @@
 ---
 title: 基础类型&lt;typename&gt;枚举不符合 CLS
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc40032
 - bc40032
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 44727a60f99e0d00cde7d569e2017928551b1812
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 876a59d1441c1ba4c5057556d5ef2fb2ecb43af6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>基础类型&lt;typename&gt;枚举不符合 CLS
 为此枚举不符合指定的数据类型的一部分[语言独立性和独立于语言的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)。 这不是在您的组件，一个错误，因为[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]和 Visual Basic 支持此数据类型。 但是，在严格符合 cls 的代码中编写的另一个组件可能不支持此数据类型。 此类组件可能不能成功与你的组件进行交互。  

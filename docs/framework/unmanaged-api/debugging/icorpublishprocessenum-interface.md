@@ -1,14 +1,6 @@
 ---
-title: "ICorPublishProcessEnum 接口"
-ms.custom: 
+title: ICorPublishProcessEnum 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorPublishProcessEnum
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: aac8fcf9-ac09-437c-bd5c-2fda14ae1007
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a3598af7dcdfa106b50e884c0f9d3752a595da89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dd71a2bd4a52da8fa77592363e2eb7c8f5101fd3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorpublishprocessenum-interface"></a>ICorPublishProcessEnum 接口
 一个子类[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)接口，提供用于遍历集合的方法[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)对象。  
@@ -48,14 +36,14 @@ ms.lasthandoff: 12/22/2017
   
  `ICorPublishProcessEnum`实例由创建[icorpublish:: Enumprocesses](../../../../docs/framework/unmanaged-api/debugging/icorpublish-enumprocesses-method.md)方法。 集合遍历`ICorPublishProcess`对象基于时给定的筛选器条件`ICorPublishProcessEnum`创建实例。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorPub.idl、 CorPub.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

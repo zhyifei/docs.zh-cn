@@ -1,23 +1,12 @@
 ---
-title: "服务内的 TransactionScope 嵌套"
-ms.custom: 
+title: 服务内的 TransactionScope 嵌套
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c4e51f65df010f466f43c2018d9b1eec6e4ca58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c556df417548ab348d1dd5bc642928ae68d8878
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>服务内的 TransactionScope 嵌套
 此示例包含两个演示如何在一个服务中处理 <xref:System.Activities.Statements.TransactionScope> 活动实例的方案。 首先使用 <xref:System.Activities.Statements.TransactionScope> 活动发起事务，以在客户端上创建一个新的事务和要接收的 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，并确定事务在服务器上的生存期范围。 该服务内的第一个方案运行一个辅助 <xref:System.Activities.Statements.TransactionScope> 活动，以演示服务中的 <xref:System.Activities.Statements.TransactionScope> 活动的嵌套。 第二个方案演示如何在嵌套的 <xref:System.Activities.Statements.TransactionScope> 活动中遵循超时限制。  
@@ -43,6 +32,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\TRSComposability`

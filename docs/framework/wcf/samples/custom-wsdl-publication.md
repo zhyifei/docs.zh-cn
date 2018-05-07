@@ -1,24 +1,12 @@
 ---
-title: "自定义 WSDL 发布"
-ms.custom: 
+title: 自定义 WSDL 发布
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba62c44ecf72df7faaed77f54f07ecd88157c6d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-wsdl-publication"></a>自定义 WSDL 发布
 此示例演示如何：  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 -   分别在自定义协定行为和自定义操作行为上实现 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>，以便在 CodeDom 中将导入的批注作为导入的协定和操作的注释写入。  
   
--   使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 下载 WSDL，使用 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 通过自定义 WSDL 导入程序导入 WSDL，并使用 <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> 生成 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端代码（在 C# 和 Visual Basic 中将 WSDL 批注作为 /// 和 ''' 注释）。  
+-   使用<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>下载 WSDL，<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>若要通过自定义 WSDL 导入，导入 WSDL 和<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>生成 Windows Communication Foundation (WCF) 客户端代码将 WSDL 批注作为 / / 和 ' C# 和 Visual 中的注释基本。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -311,7 +299,7 @@ public interface ICalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
   

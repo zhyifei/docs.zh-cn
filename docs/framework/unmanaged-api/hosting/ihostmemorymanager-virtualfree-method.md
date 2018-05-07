@@ -1,14 +1,6 @@
 ---
 title: IHostMemoryManager::VirtualFree 方法
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: reference
 api_name:
 - IHostMemoryManager.VirtualFree
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1a436e89-eb28-4d15-bcf1-a072f86dbd99
 topic_type:
 - apiref
-caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 663c01d7e4b551ecf18bdd85a63aefc43f9750e2
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 063ddd0bfa1734d43f90b4680166c21b80f5cc05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>IHostMemoryManager::VirtualFree 方法
 用作相应的 Win32 函数的逻辑包装。 Win32 实现`VirtualFree`释放、 解除或释放和解除的调用进程的虚拟地址空间中的页区域。  
@@ -84,6 +72,6 @@ HRESULT VirtualFree (
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
  [IHostMalloc 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)

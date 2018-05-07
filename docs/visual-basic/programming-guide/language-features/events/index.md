@@ -1,25 +1,15 @@
 ---
 title: 事件 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6a303b0bc9a51ec5566be5cf6db40ff9b9de4c9c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b69615a5cf05427a2bfde82af976cfafb41171b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
 大多数程序时可能会将 Visual Studio 项目可视化为一系列实际上，在序列中，执行的过程是事件驱动的-也就是说执行流由外部发生的事情调用决定*事件*。  

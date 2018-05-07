@@ -1,11 +1,6 @@
 ---
-title: "Aggregate 子句 (Visual Basic)"
+title: Aggregate 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryAggregateIn
 - vb.QueryAggregate
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47017414a92bfbca0df4ce6e2b70398a01762d37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1db4b7fdcf9c8a38c2c49eca9d874eccea90ab1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 子句 (Visual Basic)
 向集合应用一个或多个聚合函数。  
@@ -40,11 +32,11 @@ Aggregate element [As type] In collection _
   
 |术语|定义|  
 |---|---|  
-|`element`|必需。 用于循环访问集合的元素的变量。|  
+|`element`|必须的。 用于循环访问集合的元素的变量。|  
 |`type`|可选。 `element` 的类型。 如果指定没有类型，则的一种`element`从推断`collection`。|  
-|`collection`|必需。 引用集合上进行操作。|  
+|`collection`|必须的。 引用集合上进行操作。|  
 |`clause`|可选。 一个或多个查询子句，如`Where`子句，以优化要向其应用聚合子句的查询结果。|  
-|`expressionList`|必需。 一个或多个以逗号分隔表达式，标识要将应用于集合的聚合函数。 你可以应用到聚合函数来指定查询结果的成员名称的别名。 如果不提供别名，则使用聚合函数的名称。 有关示例，请参阅有关本主题中后面的聚合函数的部分。|  
+|`expressionList`|必须的。 一个或多个以逗号分隔表达式，标识要将应用于集合的聚合函数。 你可以应用到聚合函数来指定查询结果的成员名称的别名。 如果不提供别名，则使用聚合函数的名称。 有关示例，请参阅有关本主题中后面的聚合函数的部分。|  
   
 ## <a name="remarks"></a>备注  
  `Aggregate`子句可用来在你查询中包含聚合函数。 聚合函数通过一组值执行检查和计算并返回单个值。 你可以通过使用查询结果类型的成员访问计算的值。 你可以使用标准聚合函数是`All`， `Any`， `Average`， `Count`， `LongCount`， `Max`， `Min`，和`Sum`函数。 这些函数对于熟悉的开发人员熟悉 SQL 中的聚合。 它们是本主题的以下部分中所述。  
@@ -84,7 +76,7 @@ Aggregate element [As type] In collection _
   
  [!code-vb[VbSimpleQuerySamples#19](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_10.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [查询](../../../visual-basic/language-reference/queries/queries.md)  
  [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  

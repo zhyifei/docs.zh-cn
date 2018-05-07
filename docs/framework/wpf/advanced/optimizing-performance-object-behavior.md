@@ -1,13 +1,6 @@
 ---
-title: "优化性能：对象行为"
-ms.custom: 
+title: 优化性能：对象行为
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 12c4dc202ac4db2c21b0a45b61608f5c03c24ac9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e1f56dec87de7a22aa8a0bfefe84222d74ba085
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-object-behavior"></a>优化性能：对象行为
 了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 对象的内部行为，有助于在功能和性能之间做出适当的取舍。  
@@ -80,8 +68,8 @@ ms.lasthandoff: 12/22/2017
   
 |**状态**|**Size**|  
 |---------------|--------------|  
-|冻结<xref:System.Windows.Media.SolidColorBrush>|212 字节|  
-|非冻结<xref:System.Windows.Media.SolidColorBrush>|972 字节|  
+|冻结 <xref:System.Windows.Media.SolidColorBrush>|212 字节|  
+|非冻结 <xref:System.Windows.Media.SolidColorBrush>|972 字节|  
   
  以下代码示例演示了此概念：  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>解冻的可冻结对象的已更改处理程序可以使对象保持活动状态  
  对象传递给委托<xref:System.Windows.Freezable>对象的<xref:System.Windows.Freezable.Changed>事件实际上是对该对象的引用。 因此，<xref:System.Windows.Freezable.Changed>事件处理程序可以使对象保持活动状态时间超过预期时间。 已注册来侦听的对象执行清除时<xref:System.Windows.Freezable>对象的<xref:System.Windows.Freezable.Changed>事件，请务必在释放对象前移除该委托。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]此外挂钩<xref:System.Windows.Freezable.Changed>事件内部。 例如，所有依赖项属性需要<xref:System.Windows.Freezable>为值将侦听到<xref:System.Windows.Freezable.Changed>事件自动。 <xref:System.Windows.Shapes.Shape.Fill%2A>属性，采用<xref:System.Windows.Media.Brush>，阐述了此概念。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 此外挂钩<xref:System.Windows.Freezable.Changed>事件内部。 例如，所有依赖项属性需要<xref:System.Windows.Freezable>为值将侦听到<xref:System.Windows.Freezable.Changed>事件自动。 <xref:System.Windows.Shapes.Shape.Fill%2A>属性，采用<xref:System.Windows.Media.Brush>，阐述了此概念。  
   
  [!code-csharp[Performance#PerformanceSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
  [!code-vb[Performance#PerformanceSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
@@ -110,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="User_Interface_Virtualization"></a>   
 ## <a name="user-interface-virtualization"></a>用户界面虚拟化  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]此外提供了一种变体<xref:System.Windows.Controls.StackPanel>自动"显示"数据绑定子内容的元素。 在此上下文中，“虚拟化”一词指的是以下技术：通过此技术，从较多的数据项中生成一个对象子集，具体取决于屏幕上哪些项可见。 如果在指定时刻只有少量 UI 元素位于屏幕上，则此时生成大量 UI 元素需要占用大量内存和处理器。 <xref:System.Windows.Controls.VirtualizingStackPanel>(由提供的功能通过<xref:System.Windows.Controls.VirtualizingPanel>) 计算可见的项，并处理<xref:System.Windows.Controls.ItemContainerGenerator>从<xref:System.Windows.Controls.ItemsControl>(如<xref:System.Windows.Controls.ListBox>或<xref:System.Windows.Controls.ListView>) 仅创建为可见项的元素。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 此外提供了一种变体<xref:System.Windows.Controls.StackPanel>自动"显示"数据绑定子内容的元素。 在此上下文中，“虚拟化”一词指的是以下技术：通过此技术，从较多的数据项中生成一个对象子集，具体取决于屏幕上哪些项可见。 如果在指定时刻只有少量 UI 元素位于屏幕上，则此时生成大量 UI 元素需要占用大量内存和处理器。 <xref:System.Windows.Controls.VirtualizingStackPanel> (由提供的功能通过<xref:System.Windows.Controls.VirtualizingPanel>) 计算可见的项，并处理<xref:System.Windows.Controls.ItemContainerGenerator>从<xref:System.Windows.Controls.ItemsControl>(如<xref:System.Windows.Controls.ListBox>或<xref:System.Windows.Controls.ListView>) 仅创建为可见项的元素。  
   
  作为性能优化的结果，将仅生成这些项的视觉对象，或如果它们在屏幕上是可见的，则保持活动状态。 这些视觉对象不再位于控件的可视区域时，则可能已被删除。 请勿将此与数据虚拟化发生混淆，数据虚拟化中的数据对象不会全部出现在本地集合中 - 而是根据需要进行流式处理。  
   

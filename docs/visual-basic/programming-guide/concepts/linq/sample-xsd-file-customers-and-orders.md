@@ -1,22 +1,12 @@
 ---
-title: "示例 XSD 文件： 客户和 Orders2"
-ms.custom: 
+title: 示例 XSD 文件： 客户和 Orders2
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a0c0b414-c8e1-45e4-bb67-b5e650c97130
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2894970ab279ca73178876234762a6c139950e17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5679aa39b1b5ee0b08cb9e7caa23cc01d43b7b50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>示例 XSD 文件：客户和订单
 下面的 XSD 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件包含[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) 的架构定义。 架构使用 XSD 的 `xs:key` 和 `xs:keyref` 功能将 `CustomerID` 元素的 `Customer` 属性设置为键，并在每个 `CustomerID` 元素的 `Order` 元素和每个 `CustomerID` 元素的 `Customer` 属性之间建立关系。  

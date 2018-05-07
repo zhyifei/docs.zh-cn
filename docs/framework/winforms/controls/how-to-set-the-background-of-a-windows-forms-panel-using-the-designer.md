@@ -1,29 +1,17 @@
 ---
-title: "如何：使用设计器设置 Windows 窗体面板的背景"
-ms.custom: 
+title: 如何：使用设计器设置 Windows 窗体面板的背景
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - background colors [Windows Forms], Windows Forms Panel controls
 - background images [Windows Forms], Windows Forms Panel controls
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 451fa6433a53255f5fe45557c2d8b03ac319de71
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 896aa61f3f0900760dffd09bcab6a08bbc01628d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>如何：使用设计器设置 Windows 窗体面板的背景
 Windows 窗体<xref:System.Windows.Forms.Panel>控件可以显示背景色和背景图像。 <xref:System.Windows.Forms.Control.BackColor%2A>属性设置为包含在面板中，例如标签和单选按钮的控件的背景色。 如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>未设置属性，<xref:System.Windows.Forms.Control.BackColor%2A>选择将填充整个面板。 如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>属性设置，则将在面板中包含的控件后面显示的图像。  
