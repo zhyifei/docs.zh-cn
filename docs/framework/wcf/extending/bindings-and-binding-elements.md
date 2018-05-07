@@ -1,28 +1,14 @@
 ---
-title: "绑定和绑定元素"
-ms.custom: 
+title: 绑定和绑定元素
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-binding-elements"></a>绑定和绑定元素
 绑定是特殊配置元素，调用组成的集合*绑定元素*、 其计算由服务运行时每当客户端或正在构建服务终结点。 绑定内绑定元素的类型和顺序确定了终结点的通道堆栈中协议和传输通道的选择和堆叠顺序。  
@@ -32,7 +18,7 @@ ms.lasthandoff: 12/22/2017
  绑定必须恰好包含一个传输协议绑定元素。 每个传输协议绑定元素都隐含一个默认的消息编码绑定元素，该元素可以通过向绑定中最多添加一个消息编码绑定元素进行重写。 除了传输协议和编码器绑定元素以外，绑定还可能包含任意数量的协议绑定元素，这些元素共同实现从一个终结点向其他终结点提供和发送 SOAP 消息所需的功能。 有关详细信息，请参阅[到配置的服务和客户端使用的绑定](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   
 ## <a name="extending-bindings-and-binding-elements"></a>扩展绑定和绑定元素  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包含系统提供的绑定，这些绑定涵盖了种类繁多的方案。 (有关详细信息，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。)但是，您有时可能需要创建和使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中未包含的绑定。 下面的方案需要创建新绑定。  
+ Windows Communication Foundation (WCF) 包含涵盖了种类繁多的方案的系统提供的绑定。 (有关详细信息，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。)但是，您有时可能需要创建和使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中未包含的绑定。 下面的方案需要创建新绑定。  
   
 -   若要使用新的绑定元素（例如，新的传输协议、编码或协议绑定元素），你必须创建一个包含该绑定元素的新绑定。 例如，如果您为 UDP 传输协议添加了一个自定义 `UdpTransportBindingElement`，则需要创建一个新绑定来利用它。 有关执行此行为使用信息<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>类型，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   

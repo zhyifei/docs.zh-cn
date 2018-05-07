@@ -1,23 +1,12 @@
 ---
-title: "工作流跟踪"
-ms.custom: 
+title: 工作流跟踪
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b07dda940e35746a4d57c0cd300375692c6ab2f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f4ce25efae0e42fa7c95ce5dffe8da8e31db05a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-tracing"></a>工作流跟踪
 工作流跟踪提供了一种使用 .NET Framework 跟踪侦听器捕获诊断信息的方法。 如果检测到应用程序存在问题，可以启用跟踪，然后在解决问题之后再次禁用跟踪。 可以通过两种方法为工作流启用调试跟踪。 您可以使用事件跟踪查看器配置调试跟踪，也可以使用 <xref:System.Diagnostics> 向文件发送跟踪事件。  
@@ -48,7 +37,7 @@ ms.lasthandoff: 12/22/2017
     3.  在当前框架目录（例如，C:\Windows\Microsoft.NET\Framework\v4.0.21203）中执行以下命令：`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
->  如果你使用的.NET Framework 4 Client Profile，首先必须通过从.NET Framework 4 目录运行以下命令来注册 ETW 清单：`ServiceModelReg.exe –i –c:etw`  
+>  如果你使用的.NET Framework 4 Client Profile，首先必须通过从.NET Framework 4 目录运行以下命令来注册 ETW 清单： `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>使用 System.Diagnostics 启用调试跟踪  
  上述侦听器可以在工作流应用程序的 App.config 文件或工作流服务的 Web.config 中配置。 在此示例中， [TextWriterTraceListener](http://go.microsoft.com/fwlink/?LinkId=165424)配置为将跟踪信息保存到当前目录中的 MyTraceLog.txt 文件。  

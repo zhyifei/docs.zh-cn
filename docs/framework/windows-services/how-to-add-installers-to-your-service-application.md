@@ -1,13 +1,6 @@
 ---
-title: "如何：将安装程序添加到服务应用程序"
-ms.custom: 
+title: 如何：将安装程序添加到服务应用程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, deploying
 - installation components, adding to services
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - ServiceInstaller class, adding installers to services
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
-caps.latest.revision: "14"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 15487d4311f896aa09c1c7712292058086a49b50
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: faece1d7ee752e4c17f39027ff8a97fc95ed451b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>如何：将安装程序添加到服务应用程序
 Visual Studio 会安装组件，可以安装与你的服务应用程序关联的资源。 安装组件注册到它正在安装并让服务控制管理器知道存在该服务在系统上的某一项服务。 当与服务应用程序时，你可以在属性窗口，自动将适当的安装程序添加到你的项目中选择一个链接。  
@@ -55,7 +45,7 @@ Visual Studio 会安装组件，可以安装与你的服务应用程序关联的
   
 5.  若要确定你的服务将启动方式如何，请单击<xref:System.ServiceProcess.ServiceInstaller>组件，并且已设置<xref:System.ServiceProcess.ServiceInstaller.StartType%2A>为适当的值的属性。  
   
-    |“值”|结果|  
+    |值|结果|  
     |-----------|------------|  
     |<xref:System.ServiceProcess.ServiceStartMode.Manual>|安装后必须手动启动该服务。 有关详细信息，请参阅[如何： 启动服务](../../../docs/framework/windows-services/how-to-start-services.md)。|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|该服务将启动时，计算机重新启动。|  

@@ -1,13 +1,6 @@
 ---
-title: "更新数据服务（WCF 数据服务）"
-ms.custom: 
+title: 更新数据服务（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc8041dee12c8300e18e6321c717cbd80b93d650
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58bbe74fdeb0af5d7095b0b1a57fb8bd475032ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>更新数据服务（WCF 数据服务）
 当你使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源，库将转换源客户端数据服务类的实例中的条目。 通过使用 <xref:System.Data.Services.Client.DataServiceContext> 所属的 <xref:System.Data.Services.Client.DataServiceQuery%601> 跟踪这些数据服务类。 客户端通过使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法跟踪您报告的实体更改。 客户端利用这些方法可跟踪已添加和删除的实体以及您对属性值或对实体实例之间关系的更改。 调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时，将以基于 REST 的操作的形式将这些跟踪的更改发送回数据服务。  
@@ -78,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="creating-and-modifying-relationship-links"></a>创建并修改关系链接  
  通过使用添加新实体时<xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>方法或相应*AddTo*方法<xref:System.Data.Services.Client.DataServiceContext>类**添加服务引用**对话框生成，任何关系新实体与相关的实体之间不会自动定义。  
   
- 可创建和更改实体实例之间的关系，以及让客户端库在数据服务中反映这些更改。 实体之间的关系在模型中定义为关联，<xref:System.Data.Services.Client.DataServiceContext> 在上下文中以链接对象的形式跟踪每个关系。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]提供有关以下方法<xref:System.Data.Services.Client.DataServiceContext>类来创建、 修改和删除这些链接：  
+ 可创建和更改实体实例之间的关系，以及让客户端库在数据服务中反映这些更改。 实体之间的关系在模型中定义为关联，<xref:System.Data.Services.Client.DataServiceContext> 在上下文中以链接对象的形式跟踪每个关系。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供有关以下方法<xref:System.Data.Services.Client.DataServiceContext>类来创建、 修改和删除这些链接：  
   
 |方法|描述|  
 |------------|-----------------|  

@@ -1,23 +1,12 @@
 ---
-title: "实现资源管理器"
-ms.custom: 
+title: 实现资源管理器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a45626564bb58950b251ae5e9041609d96a207
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3e29dae095fbe56181cf7b67787c1044efa07ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-resource-manager"></a>实现资源管理器
 事务中使用的每个资源都由资源管理器进行管理，而后者的操作则由事务管理器进行协调。 资源管理器与事务管理器协调工作，为应用程序提供了原子性和隔离性的保证。 例如，Microsoft SQL Server、持久消息队列、内存中的哈希表都是资源管理器。  

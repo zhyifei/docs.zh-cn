@@ -1,32 +1,18 @@
 ---
 title: 如何：自定义系统提供的绑定
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d70a4c4234047e7410ae4f631e48595a0859f37
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 40efa49836561351dc14c2cb49d906a6d344a5bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>如何：自定义系统提供的绑定
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包含若干个系统提供的绑定，这些绑定允许您配置基础绑定元素的某些属性，但不是全部的属性。 本主题演示如何设置绑定元素上的属性以创建自定义绑定。  
+Windows Communication Foundation (WCF) 包括多个的系统提供绑定，允许您配置基础绑定元素的属性的某些但并非所有属性。 本主题演示如何设置绑定元素上的属性以创建自定义绑定。  
   
  有关如何直接创建和配置而无需使用系统提供的绑定的绑定元素的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   

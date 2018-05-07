@@ -1,29 +1,15 @@
 ---
 title: 重写服务标识以便进行身份验证
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5383a1d241134318ce48c8c0c9f39f831396730
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>重写服务标识以便进行身份验证
 通常情况下不需要设置服务上的标识，因为客户端凭据类型的选择即规定了服务元数据中公开的标识的类型。 例如，下面的配置代码使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素并设置`clientCredentialType`Windows 属性。  
@@ -37,7 +23,7 @@ ms.lasthandoff: 04/30/2018
  有关演示如何标识设置的示例应用，请参阅[服务标识示例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 有关服务标识的详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos 身份验证和标识  
- 默认情况下，当服务配置为使用 Windows 凭据， [\<标识 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)包含的元素[ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)或[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素生成的 WSDL 中。 如果服务下运行`LocalSystem`， `LocalService`，或`NetworkService`帐户、 服务主体名称 (SPN) 生成的窗体在默认情况下`host/` \<*主机名*> 因为这些帐户有权访问计算机的 SPN 数据。 如果使用不同帐户运行服务[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]的形式生成 UPN \<*用户名*>@<*domainName*`>`。 发生这种情况的原因是 Kerberos 身份验证要求向客户端提供 UPN 或 SPN，以便对服务进行身份验证。  
+ 默认情况下，当服务配置为使用 Windows 凭据， [\<标识 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)包含的元素[ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)或[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素生成的 WSDL 中。 如果服务下运行`LocalSystem`， `LocalService`，或`NetworkService`帐户、 服务主体名称 (SPN) 生成的窗体在默认情况下`host/` \<*主机名*> 因为这些帐户有权访问计算机的 SPN 数据。 如果服务在不同帐户下运行，Windows Communication Foundation (WCF) 生成的形式的 UPN \<*用户名*>@<*domainName* `>`. 发生这种情况的原因是 Kerberos 身份验证要求向客户端提供 UPN 或 SPN，以便对服务进行身份验证。  
   
  您还可以使用 Setspn.exe 工具向域中服务的帐户注册其他 SPN。 然后，可以使用该 SPN 作为服务的标识。 若要下载该工具，请参阅[Windows 2000 资源工具包工具： Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752)。 有关工具的详细信息，请参阅[Setspn 概述](http://go.microsoft.com/fwlink/?LinkId=61374)。  
   

@@ -1,24 +1,12 @@
 ---
-title: "可互操作的对象引用"
-ms.custom: 
+title: 可互操作的对象引用
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d74c54d29f7da085d9d87bf37cc93078726f308
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eeedd39ec14a6758395aee1f4c3b8ab26a0c2ffd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interoperable-object-references"></a>可互操作的对象引用
 默认情况下，<xref:System.Runtime.Serialization.DataContractSerializer> 按值序列化对象。 可以使用 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 属性指示数据协定序列化程序在序列化类型的对象时保留对象引用。  

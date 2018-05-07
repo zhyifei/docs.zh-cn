@@ -1,27 +1,15 @@
 ---
-title: "Popup 概述"
-ms.custom: 
+title: Popup 概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9261e2151f116b46a0c25d8dc775bf41bf932b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="popup-overview"></a>Popup 概述
 <xref:System.Windows.Controls.Primitives.Popup>控件提供了如何通过当前的应用程序窗口相对于指定的元素或屏幕坐标浮动的单独窗口中显示内容。 本主题介绍<xref:System.Windows.Controls.Primitives.Popup>控件并提供有关其使用情况信息。  
@@ -81,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="popup-size"></a>Popup 大小  
  默认情况下，<xref:System.Windows.Controls.Primitives.Popup>对其内容自动调整大小。 由于某些位图效果时自动调整大小后，可能被隐藏为定义的屏幕区域的默认大小<xref:System.Windows.Controls.Primitives.Popup>内容不提供足够的空间要显示的位图效果。  
   
- <xref:System.Windows.Controls.Primitives.Popup>设置时，内容可以也被遮盖<xref:System.Windows.UIElement.RenderTransform%2A>的内容。 如果某些内容可能隐藏在此方案中，转换后的内容<xref:System.Windows.Controls.Primitives.Popup>超出的原始区域<xref:System.Windows.Controls.Primitives.Popup>。 如果位图效果或转换需要更多空间，则可以定义边距<xref:System.Windows.Controls.Primitives.Popup>内容以便为控件提供更多的区域。  
+ <xref:System.Windows.Controls.Primitives.Popup> 设置时，内容可以也被遮盖<xref:System.Windows.UIElement.RenderTransform%2A>的内容。 如果某些内容可能隐藏在此方案中，转换后的内容<xref:System.Windows.Controls.Primitives.Popup>超出的原始区域<xref:System.Windows.Controls.Primitives.Popup>。 如果位图效果或转换需要更多空间，则可以定义边距<xref:System.Windows.Controls.Primitives.Popup>内容以便为控件提供更多的区域。  
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>定义 Popup 位置  

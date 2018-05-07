@@ -1,10 +1,6 @@
 ---
 title: Object Data Type
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Object
 - vb.Variant
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 847f2b50296ad1a1ba6f0009d1d6afced27f9abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9b1da5a88c12e0d883c3afe63be98c3fa3e9173
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-data-type"></a>Object Data Type
 包含引用的对象的地址。 你可以将任何引用类型 （字符串、 数组、 类或接口） 分配给`Object`变量。 `Object`变量也可以指任何值类型的数据 (数字， `Boolean`， `Char`， `Date`，结构或枚举)。  
@@ -58,7 +51,7 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
      但是，如果值类型之间进行转换和`Object`，Visual Basic 执行调用的操作*装箱*和*取消装箱*，这使执行速度更慢。  
   
--   **类型字符。** `Object`不包含文本类型字符或标识符类型字符。  
+-   **类型字符。** `Object` 不包含文本类型字符或标识符类型字符。  
   
 -   **Framework 类型。** .NET Framework 中的对应类型是<xref:System.Object?displayProperty=nameWithType>类。  
   
@@ -72,7 +65,7 @@ Dim myCollection As New Collection()
 objDb = myCollection.Item(1)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Object>  
  [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

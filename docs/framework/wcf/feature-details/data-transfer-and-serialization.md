@@ -1,30 +1,18 @@
 ---
-title: "数据传输和序列化"
-ms.custom: 
+title: 数据传输和序列化
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8daadec1eef20e62747cdbfcafd1fd13cfc16093
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-transfer-and-serialization"></a>数据传输和序列化
-在已连接的系统中，服务和客户端依赖于数据交换来完成任何任务。 作为服务或客户端的开发人员，您还必须了解 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 如何处理数据和数据序列化以便创建可轻松维护的高效应用程序。  
+在已连接的系统中，服务和客户端依赖于数据交换来完成任何任务。 作为开发人员的服务或客户端，您还必须了解 Windows Communication Foundation (WCF) 如何才能创建高效且易于维护应用程序处理了数据和数据序列化。  
   
 ## <a name="in-this-section"></a>本节内容  
  [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  描述在对数据传输和序列化进行编程时要注意的项。  
   
  [数据传输体系结构概述](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- 描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中数据传输的总体设计视图。  
+ 描述在 WCF 中的数据传输的总体设计视图。  
   
 ## <a name="reference"></a>参考  
  <xref:System.ServiceModel>  

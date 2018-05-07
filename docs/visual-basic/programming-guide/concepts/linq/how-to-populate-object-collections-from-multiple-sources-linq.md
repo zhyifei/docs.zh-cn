@@ -1,22 +1,12 @@
 ---
-title: "如何： 从多个源 (LINQ) (Visual Basic) 填充对象集合"
-ms.custom: 
+title: 如何： 从多个源 (LINQ) (Visual Basic) 填充对象集合
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3b52042078667ccfbefadcdf1cef5ab0873cc97b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e890900cd2f53e62a55adef56bfdb27b9787d598
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>如何： 从多个源 (LINQ) (Visual Basic) 填充对象集合
 本示例演示如何将来自不同源的数据合并到一系列新的类型。  
@@ -135,5 +125,5 @@ Next
 ## <a name="compiling-the-code"></a>编译代码  
  创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

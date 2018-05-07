@@ -1,27 +1,15 @@
 ---
-title: "如何：使用单向和请求-答复协定访问 WCF 服务"
-ms.custom: 
+title: 如何：使用单向和请求-答复协定访问 WCF 服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ae2153ef7246194774535fd399d03dd109a221a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>如何：使用单向和请求-答复协定访问 WCF 服务
-下面的过程描述了如何访问一个 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，该服务定义一个单向协定和一个请求-答复协定，并且未使用双工通信模式。  
+下面的过程介绍如何访问 Windows Communication Foundation (WCF) 服务，它定义一个单向协定和请求-答复协定，并且不使用双工通信模式。  
   
 ### <a name="to-define-the-service"></a>定义服务  
   

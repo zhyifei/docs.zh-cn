@@ -1,28 +1,16 @@
 ---
-title: "生成数据服务客户端库（WCF 数据服务）"
-ms.custom: 
+title: 生成数据服务客户端库（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - client applications, WCF Data Services
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72b75451d69e107b78152b301027f902ff77a25d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 999cbaa98c26d2d00b7e8f319ee87f8b07d7f5c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>生成数据服务客户端库（WCF 数据服务）
 数据服务实现[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可以返回描述公开的数据模型的服务元数据文档[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源。 有关详细信息，请参阅[OData： 服务元数据文档](http://go.microsoft.com/fwlink/?LinkId=186070)。 你可以使用**添加服务引用**对话框在 Visual Studio 中添加对引用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于服务。 当你使用此工具以添加对返回的元数据的引用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]送入在客户端项目，请执行下列操作：  

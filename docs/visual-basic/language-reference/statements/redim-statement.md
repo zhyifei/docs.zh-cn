@@ -1,11 +1,6 @@
 ---
-title: "ReDim 语句 (Visual Basic)"
+title: ReDim 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ReDim
 - vb.Preserve
@@ -31,14 +26,11 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8cec66ee33bfd82b3abd623a0130f5635aa3d1d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 语句 (Visual Basic)
 为数组变量重新分配存储空间。  
@@ -54,8 +46,8 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |术语|定义|  
 |----------|----------------|  
 |`Preserve`|可选。 修饰符，当仅更改最后一个维度的大小时，用来保留现有数组中的数据。|  
-|`name`|必需。 数组变量的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`boundlist`|必需。 列出重新定义的数组各个维度的边界。|  
+|`name`|必须的。 数组变量的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`boundlist`|必须的。 列出重新定义的数组各个维度的边界。|  
   
 ## <a name="remarks"></a>备注  
  可以使用 `ReDim` 语句来更改某个已声明数组的一个或多个维度的大小。 如果数组较大，并且你不再需要它的某些元素，`ReDim`可通过减少数组大小来释放内存。 另一方面，如果数组需要更多元素，也可使用 `ReDim` 进行添加。  
@@ -86,7 +78,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>行为  
   
--   **数组替换。** `ReDim`释放现有数组，并创建具有相同秩的新数组。 新数组将替换数组变量中已释放的数组。  
+-   **数组替换。** `ReDim` 释放现有数组，并创建具有相同秩的新数组。 新数组将替换数组变量中已释放的数组。  
   
 -   **不是保留的情况下初始化。** 如果未指定 `Preserve`，则 `ReDim` 会通过使用新数组元素的数据类型的默认值来初始化这些元素。  
   
@@ -107,10 +99,10 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  有关其他示例，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IndexOutOfRangeException>  
  [Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)  
  [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
  [Erase 语句](../../../visual-basic/language-reference/statements/erase-statement.md)  
  [Nothing](../../../visual-basic/language-reference/nothing.md)  
- [阵列](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+ [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)

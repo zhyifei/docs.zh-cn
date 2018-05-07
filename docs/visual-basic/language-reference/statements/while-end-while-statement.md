@@ -1,11 +1,6 @@
 ---
-title: "While...End While 语句 (Visual Basic)"
+title: While...End While 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.While
 - vb.While...EndWhile
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f831f233eaa4f1c38d56f3a89bda9b0cf1bccaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f46a6ec65faef4448bdd25e30a6cc0c605cd0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While 语句 (Visual Basic)
 只要给定的条件运行一系列语句`True`。  
@@ -42,11 +34,11 @@ End While
   
 |术语|定义|  
 |---|---|  
-|`condition`|必需。 `Boolean`表达式。 如果`condition`是`Nothing`，Visual Basic 会将其视为`False`。|  
+|`condition`|必须的。 `Boolean` 表达式。 如果`condition`是`Nothing`，Visual Basic 会将其视为`False`。|  
 |`statements`|可选。 一个或多个语句以下`While`，每次运行该`condition`是`True`。|  
 |`Continue While`|可选。 将控制转移到的下一个迭代`While`块。|  
 |`Exit While`|可选。 将扩展的控制转移`While`块。|  
-|`End While`|必需。 终止 `While` 块的定义。|  
+|`End While`|必须的。 终止 `While` 块的定义。|  
   
 ## <a name="remarks"></a>备注  
  使用`While...End While`结构时，只要条件仍然要重复语句无限次，一组`True`。 如果想要更灵活地选择你在其中测试条件以及针对什么结果进行测试，你可能希望[执行...循环语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)。 如果你想要重复执行语句，一定的时间，[为...下一条语句](../../../visual-basic/language-reference/statements/for-next-statement.md)通常是更好的选择。  
@@ -63,7 +55,7 @@ End While
  可以嵌套`While`通过将另一个循环内的循环。 此外可以嵌套在另一个控制结构的不同类型。 有关详细信息，请参阅[嵌套控制结构](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。  
   
 ## <a name="exit-while"></a>退出时  
- [退出时](../../../visual-basic/language-reference/statements/exit-statement.md)语句可以提供另一种方式退出`While`循环。 `Exit While`立即将控制权转交给后面的语句`End While`语句。  
+ [退出时](../../../visual-basic/language-reference/statements/exit-statement.md)语句可以提供另一种方式退出`While`循环。 `Exit While` 立即将控制权转交给后面的语句`End While`语句。  
   
  通常使用`Exit While`对某些条件进行评估后 (例如，在`If...Then...Else`结构)。 你可能想要退出循环，如果检测到的条件，使它不必要或不可能继续循环，如错误的值或终止请求。 你可以使用`Exit While`当你测试的条件，可能会导致*无限循环*，即无法运行次数极大甚至无限循环。 然后，可以使用`Exit While`来退出循环。  
   
@@ -88,7 +80,7 @@ End While
   
  [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_3.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [循环结构](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
  [Do...Loop 语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
  [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)  

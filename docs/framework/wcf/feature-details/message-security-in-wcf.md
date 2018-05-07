@@ -1,29 +1,15 @@
 ---
 title: WCF 中的消息安全
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ef96dd25903076fedc59ad1507674dd40dcfcc5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 27f8354cf4d96f8da408cffa3cef42ab9609c76d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-in-wcf"></a>WCF 中的消息安全
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 有两个用于提供安全性的主要模式（`Transport` 和 `Message`），以及结合了这两者的第三个模式 (`TransportWithMessageCredential`)。 本主题讨论消息安全和使用它的原因。  
+Windows Communication Foundation (WCF) 有两种主要模式用于提供安全性 (`Transport`和`Message`) 和第三个模式 (`TransportWithMessageCredential`) 结合了这两者。 本主题讨论消息安全和使用它的原因。  
   
 ## <a name="what-is-message-security"></a>何为消息安全？  
  消息安全使用 WS-Security 规范来保护消息。 WS-Security 规范描述 SOAP 消息传送的增强功能，以便在 SOAP 消息级（而非传输级）确保保密性、完整性和身份验证。  
@@ -35,11 +21,11 @@ ms.lasthandoff: 04/30/2018
   
 -   端对端安全。 传输安全（如安全套接字层 (SSL)）仅在通信是点对点时才保护消息。 如果消息在到达最终接收方之前要路由到一个或多个 SOAP 中介（如路由器），则一旦中介从网络上读取消息，消息本身将不会受到保护。 此外，客户端身份验证信息仅对第一个中介可用，而且必须以带外方式重新传输到最终接收方（如果需要）。 即使整个路由在单个跃点之间使用 SSL 安全也是如此。 因为消息安全直接作用于消息并保护其中的 XML，所以无论消息在到达最终接收方之前涉及到多少个中介，总能保持安全。 这可以实现真正的端对端安全方案。  
   
--   增强的灵活性。 可以对消息的某些部分（而非整个消息）进行签名或加密。 这表示中介可以查看消息中为它们提供的那些部分。 如果发送方需要让消息中的部分信息对中介可见，但又希望确保消息不被篡改，则它可以只对消息进行签名而不加密。 由于签名属于消息，因而最终接收方可以验证消息中的信息是否按原样接收的。 在某个方案中，可能有一个 SOAP 中介服务，该服务根据 Action 标头值路由消息。 默认情况下，如果使用消息安全，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不加密 Action 值但对其进行签名。 因此，所有中介都可获得此信息，但没有一个能更改它。  
+-   增强的灵活性。 可以对消息的某些部分（而非整个消息）进行签名或加密。 这表示中介可以查看消息中为它们提供的那些部分。 如果发送方需要让消息中的部分信息对中介可见，但又希望确保消息不被篡改，则它可以只对消息进行签名而不加密。 由于签名属于消息，因而最终接收方可以验证消息中的信息是否按原样接收的。 在某个方案中，可能有一个 SOAP 中介服务，该服务根据 Action 标头值路由消息。 默认情况下，WCF 不加密 Action 值但对其进行签名，如果使用消息安全。 因此，所有中介都可获得此信息，但没有一个能更改它。  
   
 -   对多个传输的支持。 可以通过许多不同的传输（例如命名管道和 TCP）来发送受保护的消息，而不必依赖于安全协议。 使用传输级安全时，所有安全信息的范围限定于单个特殊的传输连接，不能从消息内容本身获取这些信息。 无论您使用什么传输来传送消息，消息安全都会让消息变得安全，并且安全上下文直接嵌入消息内。  
   
--   对一组范围广泛的凭据和声明的支持。 消息安全基于 WS-Security 规范，该规范提供能够在 SOAP 消息内传输任何类型声明的可扩展框架。 与传输安全不同，您可以使用的这组身份验证机制或声明不受传输能力的限制。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息安全包括多种类型的身份验证和声明传输，并且可以根据需要进行扩展以支持其他类型。 例如，由于这些原因，如果没有消息安全，联合凭据方案不可能实现。 有关 WCF 支持联合身份验证方案的详细信息，请参阅[联合身份验证和颁发令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
+-   对一组范围广泛的凭据和声明的支持。 消息安全基于 WS-Security 规范，该规范提供能够在 SOAP 消息内传输任何类型声明的可扩展框架。 与传输安全不同，您可以使用的这组身份验证机制或声明不受传输能力的限制。 WCF 消息安全包括多种类型的身份验证和声明传输，并且可以扩展以支持根据需要的其他类型。 例如，由于这些原因，如果没有消息安全，联合凭据方案不可能实现。 有关 WCF 支持联合身份验证方案的详细信息，请参阅[联合身份验证和颁发令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
   
 ## <a name="how-message-and-transport-security-compare"></a>消息安全与传输安全比较  
   

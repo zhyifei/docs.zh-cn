@@ -1,28 +1,16 @@
 ---
-title: "关于 GDI+ 托管代码"
-ms.custom: 
+title: 关于 GDI+ 托管代码
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GDI+, about GDI+
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817f90194d73bf6608cccde0ce3917717d0b4878
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 913654b98eb8bf72fe43b744886a28e0f675a5c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="about-gdi-managed-code"></a>关于 GDI+ 托管代码
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是 Windows 操作系统提供二维矢量图形、图像处理和版式的部分。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 在 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]（早期的 Windows 版本包含的图形设备接口）的基础上进行了改进，添加了新功能和优化了现有功能。  

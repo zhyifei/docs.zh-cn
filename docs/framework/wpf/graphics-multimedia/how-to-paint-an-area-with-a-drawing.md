@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Drawing 绘制区域"
-ms.custom: 
+title: 如何：使用 Drawing 绘制区域
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - painting [WPF], with drawings
 - drawings [WPF], painting with
 ms.assetid: c10dc4b1-09b1-41e8-ad14-456b5fb377df
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fbb7c4aff56fae9b4cc0346f8086bc490269ec8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 222aa3fbb72ebaf15be3ed7f9804936e7e1187e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>如何：使用 Drawing 绘制区域
 本示例演示如何使用 Drawing 绘制一个区域。 若要绘制带有绘制的区域，请使用<xref:System.Windows.Media.DrawingBrush>和一个或多个<xref:System.Windows.Media.Drawing>对象。   下面的示例使用<xref:System.Windows.Media.DrawingBrush>来绘制具有两个椭圆的绘图的对象。  

@@ -1,26 +1,12 @@
 ---
-title: "路由简介"
-ms.custom: 
+title: 路由简介
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-introduction"></a>路由简介
 路由服务提供的泛型可插入 SOAP 中介能够根据消息内容路由消息。 使用路由服务，您可以创建复杂的路由逻辑，以便实现服务聚合、服务版本管理、优先级路由和多播路由等方案。 路由服务还提供了错误处理功能，使您可以设置备份终结点的列表。如果将消息发送到主目标终结点时失败，则会发送到这些备份终结点。  
@@ -111,7 +97,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- 此示例将配置路由服务公开单个终结点地址为": //localhost: 8000/routingservice/router"，用于接收要路由消息。 由于消息路由到请求-答复终结点，因此该服务终结点使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 协定。 此配置还定义了": //localhost: 8000/servicemodelsample/服务"，消息将路由到的单个客户端终结点。 名为"routingTable1"的筛选器表 （未显示） 包含用于路由消息的路由逻辑并关联与服务终结点通过使用**RoutingBehavior** （适用于配置文件） 或**RoutingConfiguration** （适用于编程配置）。  
+ 此示例将配置路由服务公开单个终结点地址为"http://localhost:8000/routingservice/router"，用于接收要路由消息。 由于消息路由到请求-答复终结点，因此该服务终结点使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 协定。 此配置还定义的单个客户端终结点"http://localhost:8000/servicemodelsample/service"消息将路由到。 名为"routingTable1"的筛选器表 （未显示） 包含用于路由消息的路由逻辑并关联与服务终结点通过使用**RoutingBehavior** （适用于配置文件） 或**RoutingConfiguration** （适用于编程配置）。  
   
 ### <a name="routing-logic"></a>路由逻辑  
  若要定义用于路由消息的路由逻辑，必须确定传入消息包含的哪些数据可以采用唯一方式执行操作。 例如，如果要路由到的所有目标终结点共享相同的 SOAP 操作，则消息中包含的 Action 的值无法很好地指示应将消息路由到的特定终结点。 如果必须以唯一方式将消息路由至某一特定终结点，您应当根据唯一标识消息将路由至的目标终结点的数据进行筛选。  
@@ -173,7 +159,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   多个筛选器在计算消息时必须返回 `true`。  
   
- 如果满足这些条件，则将消息路由至计算结果为 `true` 的所有筛选器的所有终结点。 如果消息中的终结点地址为 http://localhost:8000/routingservice/router/rounding，下面的示例定义的路由配置会导致将消息同时路由至两个终结点。  
+ 如果满足这些条件，则将消息路由至计算结果为 `true` 的所有筛选器的所有终结点。 下面的示例定义路由的配置会导致消息同时路由至两个终结点，如果消息中的终结点地址为http://localhost:8000/routingservice/router/rounding。  
   
 ```xml  
 <!--ROUTING SECTION -->  
@@ -414,7 +400,7 @@ using (ServiceHost serviceHost =
   
  要将 Windows 凭据模拟用于路由服务，您需要同时配置凭据和服务。 客户端凭据对象（<xref:System.ServiceModel.Security.WindowsClientCredential>，可从 <xref:System.ServiceModel.ChannelFactory> 访问）定义了一个 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 属性，此属性必须设置为允许模拟。 最后，您需要在服务上配置 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 行为，以便将 `ImpersonateCallerForAllOperations` 设置为 `true`。 路由服务使用此标志来决定是否创建客户端，以便转发启用模拟的消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [消息筛选器](../../../../docs/framework/wcf/feature-details/message-filters.md)  
  [路由协定](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
  [选择筛选器](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)

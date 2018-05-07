@@ -1,30 +1,16 @@
 ---
 title: 单向服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 03efc27f2ba54ca22f03e3ece84770fe0dcadbb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way-services"></a>单向服务
 服务操作的默认行为是请求-答复模式。 在请求-答复模式中，即使服务操作以代码形式表示为 `void` 方法，客户端也会等待答复消息。 使用单向操作时，只能传输一个消息。 接收方不发送答复消息，发送方也不需要获得答复消息。  
@@ -57,7 +43,7 @@ public interface IOneWayCalculator
  有关完整示例，请参阅[单向](../../../../docs/framework/wcf/samples/one-way.md)示例。  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>单向操作的客户端阻止  
- 值得注意的是，虽然一些单向应用程序可以在出站数据写入到网络连接后立即返回，但在很多情况下，绑定或服务的实现可导致 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端阻止使用单向操作。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端应用程序中，在将出站数据写入到网络连接之前，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象不会返回。 所有消息交换模式都是如此，包括单向操作；这意味着在将数据写入传输时发生的任何问题都会阻止客户端返回。 结果可能是在将消息发送到服务的过程中出现异常或延迟，具体取决于所发生的问题。  
+ 请务必认识到，虽然一些单向应用程序后立即返回出站数据写入到网络连接，在以下情况下的绑定或服务的实现可能会导致 WCF 客户端阻止使用单向操作。 WCF 客户端应用程序中的 WCF 客户端对象不返回之前的出站数据已写入到网络连接。 所有消息交换模式都是如此，包括单向操作；这意味着在将数据写入传输时发生的任何问题都会阻止客户端返回。 结果可能是在将消息发送到服务的过程中出现异常或延迟，具体取决于所发生的问题。  
   
  例如，如果传输找不到终结点，则会在短时间内引发 <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> 异常。 但是，由于某种原因，服务也可能无法读取网络上的数据，这将阻止客户端传输发送操作返回。 在这些情况下，如果超出了客户端传输绑定上的 <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> 期限，则会引发 <xref:System.TimeoutException?displayProperty=nameWithType>，但会在超出超时期限后引发。 也有可能向某一服务发送了过多的消息，而当超过某一特定点后，该服务无法处理这些消息。 在这种情况下，单向客户端也会发生阻止，直到服务可以处理这些消息或直到引发异常。  
   

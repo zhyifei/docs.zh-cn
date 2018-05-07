@@ -1,32 +1,20 @@
 ---
-title: "比较 COM+ 和 ServiceModel 中的事务"
-ms.custom: 
+title: 比较 COM+ 和 ServiceModel 中的事务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e493bcdd-b91a-4486-853f-83dbcd1931b7
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87e3df31060a9c71e0b2868aa34373bca221fa79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a47fe1686dff2e705b06b001d7d5e4ea6e8c5f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparing-transactions-in-com-and-servicemodel"></a>比较 COM+ 和 ServiceModel 中的事务
-本主题讨论如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 命名空间提供的 <xref:System.ServiceModel> 属性来模拟事务性 COM+ 服务的行为。  
+本主题讨论如何模拟事务性 COM + 服务使用 Windows Communication Foundation (WCF) 属性的行为<xref:System.ServiceModel>命名空间提供。  
   
 ## <a name="emulating-com-using-servicemodel-attributes"></a>使用 ServiceModel 属性模拟 COM+  
- 下表比较用于创建 <xref:System.EnterpriseServices.TransactionOption> 事务的 `EnterpriseServices` 枚举，以及他们如何与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的 <xref:System.ServiceModel> 属性关联。  
+ 下表比较<xref:System.EnterpriseServices.TransactionOption>枚举用于创建`EnterpriseServices`事务和如何将 WCF 属性的关联<xref:System.ServiceModel>命名空间提供。  
   
-|COM+ 属性|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 属性|  
+|COM+ 属性|WCF 属性|  
 |---------------------|------------------------------------------------------------------------|  
 |RequiresNew|将 <xref:System.ServiceModel.TransactionFlowAttribute> 设置为 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>。<br /><br /> <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 为 `true`。<br /><br /> 绑定元素中的 `TransactionFlow` 属性为 `false`。|  
 |必需|将 <xref:System.ServiceModel.TransactionFlowAttribute> 设置为 <xref:System.ServiceModel.TransactionFlowOption.Allowed>。<br /><br /> <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 为 `true`。<br /><br /> 绑定元素中的 `TransactionFlow` 属性为 `true`。|  

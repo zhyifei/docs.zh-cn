@@ -1,13 +1,6 @@
 ---
-title: "可视化层中的命中测试"
-ms.custom: 
+title: 可视化层中的命中测试
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1bdecedece4581eaf8a010eddc0974e44fe88ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60da11af51722e86a61c5e3298fafba2221f000b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>可视化层中的命中测试
 本主题概述可视化层提供的命中测试功能。 命中测试的支持使你能够确定是否几何图形或点值落在所呈现内容的<xref:System.Windows.Media.Visual>，从而可以实现用户界面行为，例如选择矩形来选择多个对象。  
@@ -61,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
  在下图中，圆形对象在正方形和三角形对象之上。 如果要仅对感兴趣的命中测试其 z 顺序值为最顶层的视觉对象，可以设置要返回的可视命中的测试枚举<xref:System.Windows.Media.HitTestResultBehavior.Stop>从<xref:System.Windows.Media.HitTestResultCallback>的第一项后停止命中的测试遍历。  
   
- ![关系图的 z &#45; 可视化树的顺序](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
+ ![关系图的 z&#45;可视化树的顺序](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
 可视化树的 z 顺序示意图  
   
  如果你想要枚举特定点或几何图形下的所有视觉对象，返回<xref:System.Windows.Media.HitTestResultBehavior.Continue>从<xref:System.Windows.Media.HitTestResultCallback>。 这意味着可以为其他对象之下的视觉对象进行命中测试，即使它们被完全遮挡也是如此。 有关详细信息，请参阅“使用命中测试结果回叫”部分中的示例代码。  

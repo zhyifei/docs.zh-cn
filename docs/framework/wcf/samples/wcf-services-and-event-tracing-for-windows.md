@@ -1,27 +1,15 @@
 ---
-title: "针对 Windows 的 WCF 服务和事件跟踪"
-ms.custom: 
+title: 针对 Windows 的 WCF 服务和事件跟踪
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb8924cc04442e3b9eda5e251e6dcdc57f5660c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>针对 Windows 的 WCF 服务和事件跟踪
-此示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的分析跟踪在 Windows 事件跟踪 (ETW) 中发出事件。 分析跟踪是在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆栈中的关键点处发出的事件，用于在生产环境中排除 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的故障。  
+此示例演示如何使用 Windows Communication Foundation (WCF) 中的分析跟踪，将发出事件事件跟踪的 Windows (ETW) 中。 分析跟踪是在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆栈中的关键点处发出的事件，用于在生产环境中排除 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的故障。  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务中的分析跟踪是可以在生产环境中以最小性能影响启用的跟踪。 这些跟踪都以事件的形式向 ETW 会话发出。  
   
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
      在 Web 浏览器中，单击**Calculator.svc**。 服务的 WSDL 文档的 URI 应出现在浏览器中。 复制该 URI。  
   
-     默认情况下，服务开始在端口 1378 上侦听请求 (http://localhost:1378/Calculator.svc)。  
+     默认情况下，在服务启动侦听端口 1378年上的请求 (http://localhost:1378/Calculator.svc)。  
   
 4.  运行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 测试客户端 (WcfTestClient.exe)。  
   
@@ -94,7 +82,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   

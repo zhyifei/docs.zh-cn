@@ -1,11 +1,6 @@
 ---
 title: Double 数据类型 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Double
 helpviewer_keywords:
@@ -24,14 +19,11 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad0e8082edfb7b7d96b0ca2019da88514e5b3b09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c2d3d7d360ccb240bafbe0e19e9f396adfba7f7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="double-data-type-visual-basic"></a>Double 数据类型 (Visual Basic)
 保留带符号的 IEEE 64 位 （8 字节） 双精度浮点数，从-1.79769313486231570 e + 308 到-的值的范围 4.94065645841246544 e-324 负值和 4.94065645841246544 e-324 1.79769313486231570 e + 308 到正值。 双精度数字存储实际数目的近似值。  
@@ -62,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Double?displayProperty=nameWithType> 结构。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Double?displayProperty=nameWithType>  
  [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [Decimal 数据类型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  

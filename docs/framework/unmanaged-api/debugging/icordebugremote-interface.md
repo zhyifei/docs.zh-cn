@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugRemote 接口"
-ms.custom: 
+title: ICorDebugRemote 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugRemote
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cc34c3a1049a24a27fae4d13288efbd5a98a4dc9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab8ed5c4fa3dc0ed77c1948aa6c1b940ecc25c14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote 接口
 提供启动托管调试器或将其附加到远程目标进程的能力。  
@@ -79,7 +67,7 @@ interface ICorDebugRemote : IUnknown
 ## <a name="remarks"></a>备注  
  目前，仅为调试在远程 Macintosh 计算机运行的基于 Silverlight 的应用程序目标支持此功能。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

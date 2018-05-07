@@ -1,27 +1,15 @@
 ---
-title: "在工作流中使用协定"
-ms.custom: 
+title: 在工作流中使用协定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1ff40241bd48a4355738ca93ef2c80ceec55db11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1772c61147bb8a96f3f78b4226a1d341df3eb9d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-contracts-in-workflow"></a>在工作流中使用协定
-当实现服务时，您可以定义一些协定来描述此服务及其收发的数据。 这些数据表示为数据协定和消息协定；[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和工作流服务均在服务说明中使用数据协定和消息协定定义。 服务自身以 WSDL 形式公开元数据，以便描述服务的操作。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，服务协定和操作协定将定义该框架支持的服务和操作。 但在工作流服务中，这些协定属于业务流程自身，它们由称为协定推理的过程在元数据中公开。  
+当实现服务时，您可以定义一些协定来描述此服务及其收发的数据。 数据表示为数据协定和消息协定;WCF 和工作流服务的服务说明的一部分使用数据协定和消息协定定义。 服务自身以 WSDL 形式公开元数据，以便描述服务的操作。 在 WCF 中，服务协定和操作协定定义其支持的服务和操作。 但在工作流服务中，这些协定属于业务流程自身，它们由称为协定推理的过程在元数据中公开。  
   
 ## <a name="contract-inference"></a>协定推理  
  使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 承载工作流服务时，将检查工作流定义，并根据在工作流中找到的消息传递活动集生成协定。 具体而言，是使用下面的活动和属性来生成协定：  

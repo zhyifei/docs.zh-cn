@@ -1,12 +1,6 @@
 ---
 title: Take While 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryTakeWhile
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5c8add6c55bb9353bac3489e68f497cb32785aad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e0a6bd77ca2594e9d74e669fcd9cddf91ee1cad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 子句 (Visual Basic)
 包括集合中指定条件为 `true` 的任何元素，并绕过剩余元素。  
@@ -36,7 +27,7 @@ Take While expression
   
 |术语|定义|  
 |---|---|  
-|`expression`|必需。 一个表示要测试的元素的条件的表达式。 该表达式必须返回`Boolean`值或等效的功能，如`Integer`作为计算`Boolean`。|  
+|`expression`|必须的。 一个表示要测试的元素的条件的表达式。 该表达式必须返回`Boolean`值或等效的功能，如`Integer`作为计算`Boolean`。|  
   
 ## <a name="remarks"></a>备注  
  `Take While`子句之前提供包括从查询结果的开始元素`expression`返回`false`。 后`expression`返回`false`，查询将跳过所有剩余元素。 `expression`对于剩余的结果，将忽略。  
@@ -48,7 +39,7 @@ Take While expression
   
  [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [查询](../../../visual-basic/language-reference/queries/queries.md)  
  [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  

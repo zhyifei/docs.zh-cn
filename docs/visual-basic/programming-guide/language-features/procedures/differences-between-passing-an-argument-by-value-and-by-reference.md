@@ -1,13 +1,6 @@
 ---
 title: 通过值传递自变量和通过引用传递自变量之间的差异 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
 - Visual Basic code, procedures
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8f733b4fd50612292c0c4ac7195304d99ae2dbea
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e846c59d3da01d4d9fe943795376c37db4fb397
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>通过值传递自变量和通过引用传递自变量之间的差异 (Visual Basic)
 当将一个或多个自变量传递给过程时，每个自变量与调用的代码中的基础编程元素相对应。 你可以传递此基础元素的值，或者对它的引用。 这称为*传递机制*。  

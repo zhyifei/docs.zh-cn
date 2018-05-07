@@ -1,36 +1,24 @@
 ---
-title: "可靠会话概述"
-ms.custom: 
+title: 可靠会话概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d2749188214f3f68ee3ed5df87fc0aa7cac604d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c5344c2804cf4c17fdc46a7fea5a4a360122b6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions-overview"></a>可靠会话概述
 
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] SOAP 可靠消息传递提供 SOAP 终结点之间的端对端消息传输可靠性。 此消息传递通过克服传输失败和 SOAP 消息级别失败，可在不可靠的网络上实现传输可靠性。 具体而言，它为跨 SOAP 或传输中介发送的消息提供了一种基于会话的、单一的和（可选）有序的传送。 基于会话的传递提供用于将消息分组具有顺序 （可选） 的消息的会话中。
+Windows Communication Foundation (WCF) SOAP 可靠消息传递提供 SOAP 终结点之间的端到端消息传输可靠性。 此消息传递通过克服传输失败和 SOAP 消息级别失败，可在不可靠的网络上实现传输可靠性。 具体而言，它为跨 SOAP 或传输中介发送的消息提供了一种基于会话的、单一的和（可选）有序的传送。 基于会话的传递提供用于将消息分组具有顺序 （可选） 的消息的会话中。
 
 本主题描述可靠会话、 如何和何时使用它们，以及如何保护它们。
 
 ## <a name="wcf-reliable-sessions"></a>WCF 可靠会话
 
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可靠会话是一个如 WS-ReliableMessaging 协议所定义的 SOAP 可靠消息传递的实现。
+WCF 可靠会话是 SOAP 可靠消息传递的 Ws-reliablemessaging 协议所定义的实现。
 
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 可靠消息传递提供两个终结点之间的端到端的可靠会话，而不管消息传递的终结点之间相隔的中介的数量或类型如何。 这包括不使用 SOAP （例如，HTTP 代理） 的任何传输中介或使用 SOAP 的中介 （例如，基于 SOAP 的路由器或网桥） 所需的消息的终结点之间流动。 可靠会话通道支持*交互式*通信，以便同时运行这类通道所连接的服务和交换和处理消息的低延迟、，即条件下在相对较短时间间隔。 这种耦合意味着这些组件将同时成功或同时失败，因此没有它们之间提供隔离。
+WCF SOAP 可靠消息传递提供两个终结点，而不考虑数或分隔消息传递终结点的中介的类型之间的端到端可靠会话。 这包括不使用 SOAP （例如，HTTP 代理） 的任何传输中介或使用 SOAP 的中介 （例如，基于 SOAP 的路由器或网桥） 所需的消息的终结点之间流动。 可靠会话通道支持*交互式*通信，以便同时运行这类通道所连接的服务和交换和处理消息的低延迟、，即条件下在相对较短时间间隔。 这种耦合意味着这些组件将同时成功或同时失败，因此没有它们之间提供隔离。
 
 可靠会话可以屏蔽两种失败情况：
 
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="reliable-sessions-and-bindings"></a>可靠会话和绑定
 
-如前所述，可靠会话是非传输特定。 此外，你可以通过许多消息交换模式，例如请求-答复或双工建立可靠会话。 A[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]可靠会话作为一组绑定的属性进行公开。
+如前所述，可靠会话是非传输特定。 此外，你可以通过许多消息交换模式，例如请求-答复或双工建立可靠会话。 WCF 可靠会话作为一组绑定的属性进行公开。
 
 使用终结点上使用可靠会话：
 
@@ -74,7 +62,7 @@ ms.lasthandoff: 12/22/2017
 
 你可以堆栈可靠会话上不同的基础通道类型，并生成的可靠会话通道形状将会不同。 在客户端和服务器上，支持的可靠会话通道的类型取决于使用的基础通道的类型。 下表列出了在客户端上作为基础通道的一项功能支持的会话通道的类型。
 
-| 支持可靠会话通道类型和 #8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| 支持可靠会话通道类型&#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
 | `IOutputSessionChannel`                         | 是               | 是                      | 是              | 是                     |
 | `IRequestSessionChannel`                        | 是               | 是                      | No               | 否                      |
@@ -84,7 +72,7 @@ ms.lasthandoff: 12/22/2017
 
 下表列出了在服务器上作为基础通道的一项功能支持的会话通道的类型。
 
-| 支持可靠会话通道类型和 #8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| 支持可靠会话通道类型&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
 | `IInputSessionChannel`                          | 是             | 是                    | 是              | 是                     |
 | `IReplySessionChannel`                          | 是             | 是                    | No               | 否                      |
@@ -102,7 +90,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="using-reliable-sessions"></a>使用可靠会话
 
-若要使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可靠会话，请使用支持可靠会话的绑定创建一个终结点。 使用系统提供的绑定之一，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]启用可靠会话提供或创建可完成此自己自定义绑定。
+若要使用 WCF 可靠会话，创建支持可靠会话的绑定的终结点。 使用 WCF 提供了可靠会话的系统提供绑定之一启用，或创建可完成此自己自定义绑定。
 
 默认情况下支持并启用可靠会话的系统定义的绑定包括：
 
@@ -118,11 +106,11 @@ ms.lasthandoff: 12/22/2017
 
 有关如何创建自定义绑定的示例，请参阅[如何： 创建使用 HTTPS 的自定义的可靠会话绑定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)。
 
-有关的讨论[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]绑定支持可靠会话，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。
+支持可靠会话的 WCF 绑定的讨论，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。
 
 ## <a name="when-to-use-reliable-sessions"></a>何时使用可靠会话
 
-请务必了解何时在你的应用程序中使用可靠会话。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持同时处于活动状态并在生命期内的终结点之间的可靠会话。 如果你的应用程序要求的终结点之一将不可用的持续时间，然后使用队列来实现可靠性。
+请务必了解何时在你的应用程序中使用可靠会话。 WCF 支持在同一时间处于活动状态并的终结点之间的可靠会话。 如果你的应用程序要求的终结点之一将不可用的持续时间，然后使用队列来实现可靠性。
 
 如果方案要求通过 TCP 连接的两个终结点，TCP 可能不足以提供可靠的消息交换。 尽管无需使用可靠会话，因为 TCP 可确保数据包到达顺序和唯一一次。
 

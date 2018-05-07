@@ -1,14 +1,6 @@
 ---
-title: "FUSION_INSTALL_REFERENCE 结构"
-ms.custom: 
+title: FUSION_INSTALL_REFERENCE 结构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - FUSION_INSTALL_REFERENCE
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: ae181ec8-36bf-4ed1-9a02-ca27d417c80b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 36321606fe208233fb6114fe9568b655f0e1b400
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4685d1a23fdf1874817522a16ccd428d81acd1ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fusioninstallreference-structure"></a>FUSION_INSTALL_REFERENCE 结构
 表示应用程序对应用程序已安装在全局程序集缓存中程序集的引用。  
@@ -59,12 +47,12 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
 |`szIdentifier`|一个标识的应用程序在全局程序集缓存中安装了程序集的唯一字符串。 其值取决于值`guidScheme`字段。|  
 |`szNonCanonicalData`|一个字符串，理解只能通过将引用添加的实体。 全局程序集缓存存储此字符串中，但不使用它。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [合成结构](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  

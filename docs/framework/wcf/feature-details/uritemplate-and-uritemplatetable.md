@@ -1,29 +1,15 @@
 ---
 title: UriTemplate 和 UriTemplateTable
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 和 UriTemplateTable
-Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 添加了两个新类，让开发人员控制他们的 URI。 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 构成 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中基于 URI 的调度引擎的基础。 这些类还可单独使用，使开发人员能够利用模板和 URI 映射机制，而无需实现 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局。 Windows Communication Foundation (WCF) 添加两个新类，以便开发人员控制他们的 Uri。 <xref:System.UriTemplate> 和<xref:System.UriTemplateTable>在 WCF 中形成基于 URI 的调度引擎的基础。 这些类还可在其自身，从而允许开发人员利用模板和 URI 映射机制而无需实现 WCF 服务。  
   
 ## <a name="templates"></a>模板  
  模板是一种描述一组相对 URI 的方法。 下表中的一组 URI 模板演示如何定义一个检索各类天气信息的系统。  
@@ -35,7 +21,7 @@ Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局�
 |城市预报|weather/{state}/{city}|  
 |活动预报|weather/{state}/{city}/{activity}|  
   
- 上表描述了一组结构相似的 URI。 每一项都是一个 URI 模板。 大括号中的各段描述变量； 大括号之外的各段描述文本字符串。 通过使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模板类，开发人员可以获取一个传入 URI，例如“/weather/wa/seattle/cycling”，并将其与描述它的模板“/weather/{state}/{city}/{activity}”进行匹配。  
+ 上表描述了一组结构相似的 URI。 每一项都是一个 URI 模板。 大括号中的各段描述变量； 大括号之外的各段描述文本字符串。 WCF 模板类，开发人员可以获取一个传入 URI，例如，"/ weather/wa/seattle/重启"，然后将其与描述它的模板"/weather/{state}/{city}/{activity} / {city} / {活动}"。  
   
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> 是包装 URI 模板的类。 其构造函数接受一个定义模板的字符串参数。 此字符串包含具有下节所述格式的模板。 <xref:System.UriTemplate> 类提供一些方法，用于将传入的 URI 与模板进行匹配，根据模板生成 URI，检索在模板中使用的变量名集合，确定两个模板是否等效，返回模板的字符串。  

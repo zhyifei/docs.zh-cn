@@ -1,24 +1,14 @@
 ---
-title: "&lt;Library&gt; 元素 (.NET Native)"
-ms.custom: 
+title: '&lt;Library&gt; 元素 (.NET Native)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd2663bbd5ca93341455b7bd036469d25d91f4a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f867d6f65a28c36037ff6617cce9d18bc39a67d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltlibrarygt-element-net-native"></a>&lt;Library&gt; 元素 (.NET Native)
 定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。  

@@ -1,25 +1,16 @@
 ---
 title: Const 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="const-statement-visual-basic"></a>Const 语句 (Visual Basic)
 用于声明和定义一个或多个常量。  
@@ -42,7 +33,7 @@ Const constantlist
  可选。 用于重新声明并隐藏基类中的编程元素。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
   
  `constantlist`  
- 必需。 正在此语句中声明的常量的列表。  
+ 必须的。 正在此语句中声明的常量的列表。  
   
  `constant` `[ ,` `constant` `... ]`  
   
@@ -52,9 +43,9 @@ Const constantlist
   
 |部件|描述|  
 |----------|-----------------|  
-|`constantname`|必需。 常数的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`constantname`|必须的。 常数的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
 |`datatype`|如果存在`Option Strict`是`On`。 数据类型的常数。|  
-|`initializer`|必需。 在编译时计算并将其分配给常量的表达式。|  
+|`initializer`|必须的。 在编译时计算并将其分配给常量的表达式。|  
   
 ## <a name="remarks"></a>备注  
  如果应用程序中有一个值，永远不会更改，你可以定义一个命名的常量并用它来代替文字值。 名称是易于记住比值。 你可以只需一次定义常量，并在代码中的许多地方使用它。 如果需要更高版本中重新定义的值，`Const`语句是你需要进行更改的唯一位置。  
@@ -107,7 +98,7 @@ Const constantlist
   
  上面的示例使用<xref:System.Type.ToString%2A>方法<xref:System.Type>返回对象[GetType 运算符](../../../visual-basic/language-reference/operators/gettype-operator.md)，这是因为<xref:System.Type>不能转换为`String`使用`CStr`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
  [Enum 语句](../../../visual-basic/language-reference/statements/enum-statement.md)  

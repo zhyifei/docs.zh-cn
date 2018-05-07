@@ -1,28 +1,19 @@
 ---
-title: "&#39;&lt;表达式&gt;&#39; 不能用作类型约束"
+title: '&#39;&lt;表达式&gt;&#39;不能用作类型约束'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc32061
 - vbc32061
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c7271018a93c97ed90dc272f7f5404c0f0a22d42
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 8e9aad2ec65e037b15e19ca2e624fdc8f28bc94e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;表达式&gt;&#39; 不能用作类型约束
+# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;表达式&gt;&#39;不能用作类型约束
 约束列表包含的表达式不表示对类型形参的有效约束。  
   
  约束列表对传递给类型形参的类型实参有一定要求。 你可以采用任意组合指定以下要求：  

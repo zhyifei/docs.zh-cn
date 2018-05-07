@@ -1,31 +1,17 @@
 ---
-title: "ServiceModel 事务属性"
-ms.custom: 
+title: ServiceModel 事务属性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel attributes
 ms.assetid: 1e0d2436-6ae5-439b-9765-a448d6f60000
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aac52f3c542f88adbca40c6cbbdddc734e12903b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79d97eee328d816281348b5b15cf779e1ee65893
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-transaction-attributes"></a>ServiceModel 事务属性
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 在以下三个标准 <xref:System.ServiceModel> 属性 (Attribute) 上提供用于配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的事务行为的属性 (Property)：  
+Windows Communication Foundation (WCF) 上提供以下三个标准<xref:System.ServiceModel>使你能够配置 WCF 服务的事务的行为的属性：  
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>  
   
@@ -50,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>，此属性指定一个时间段，在服务中创建的新事务必须在此时间段内完成。 如果达到此时间时事务没有完成，则会中止事务。 对于已将 <xref:System.TimeSpan> 设置为 <xref:System.Transactions.TransactionScope> 的任何操作以及为其创建了新事务的任何操作，<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 用作 `true` 超时。 该超时是从创建事务到完成两阶段提交协议的第 1 阶段所允许的最长时间。 使用的超时值始终是 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 属性和 `transactionTimeout` 配置设置之间的较小值。  
   
 ## <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute  
- <xref:System.ServiceModel.OperationBehaviorAttribute> 属性指定服务实现中方法的行为。 可以用此属性指示操作的特定执行行为。 此属性 (Attribute) 的属性 (Property) 不影响服务协定的 Web 服务描述语言 (WSDL) 说明，它们只是用于启用通用功能的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 编程模型元素，如果没有这些属性 (Property)，开发人员将不得不自己实现这些功能。  
+ <xref:System.ServiceModel.OperationBehaviorAttribute> 属性指定服务实现中方法的行为。 可以用此属性指示操作的特定执行行为。 此属性的属性不会影响服务协定的 Web 服务描述语言 (WSDL) 描述和是纯粹启用具有开发人员不得不自己实现的常见功能的 WCF 编程模型中的元素。  
   
  此属性 (Attribute) 具有以下特定于事务的属性 (Property)：  
   

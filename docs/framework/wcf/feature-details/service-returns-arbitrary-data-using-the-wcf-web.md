@@ -1,27 +1,15 @@
 ---
-title: "如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务"
-ms.custom: 
+title: 如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
-有时，开发人员必须完全控制从服务操作返回数据的方式。 这是这种情况，服务操作必须在不支持的格式返回数据时[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 本主题讨论使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型来创建此类服务。 此服务具有一个返回流的操作。  
+有时，开发人员必须完全控制从服务操作返回数据的方式。 服务操作必须在由 WCF 不支持的格式返回数据时，这种情况。 本主题讨论如何使用 WCF WEB HTTP 编程模型来创建此类服务。 此服务具有一个返回流的操作。  
   
 ### <a name="to-implement-the-service-contract"></a>实现服务协定  
   
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
         }  
     ```  
   
-     由于该方法返回 <xref:System.IO.Stream>，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 假定服务操作返回的字节由该操作完全控制，自己无需对返回的数据应用任何格式设置。  
+     因为该方法返回<xref:System.IO.Stream>、 WCF 假定该操作具有完全控制从服务操作返回的字节数和它应用到返回的数据的任何格式设置。  
   
 2.  实现服务协定。 该协定只有一个操作：`GetImage`。 此方法生成一个位图，再以 .jpg 格式将其保存到 <xref:System.IO.MemoryStream>。 随后，操作将该流返回给调用方。  
   

@@ -1,27 +1,15 @@
 ---
-title: "跨关系查询"
-ms.custom: 
+title: 跨关系查询
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f06297f79807a1548a6b5ac77aed45f52c8d03af
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f5b2775b2f0c8e35d398d5d0666d47bf0009a9e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="querying-across-relationships"></a>跨关系查询
 您的类定义中对其他对象或其他对象的集合的直接引用相当于数据库中的外键关系。 您可以通过使用点表示法在查询时利用这些关系来访问关系属性以及从一个对象定位到另一个对象。 这些访问操作会转换成用等效的 SQL 表示的更为复杂的联接或关联子查询。  

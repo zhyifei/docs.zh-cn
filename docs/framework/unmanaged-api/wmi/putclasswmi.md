@@ -1,11 +1,7 @@
 ---
-title: "PutClassWmi 函数 （非托管 API 参考）"
-description: "PutClassWmi 函数创建一个新类，或更新现有。"
+title: PutClassWmi 函数 （非托管 API 参考）
+description: PutClassWmi 函数创建一个新类，或更新现有。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutClassWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 219cec2096cd3d1dfe1e0d3c0903b62692e444e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce887d59d02cfc2e4d8c183aa495dcc1535853c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi 函数
 创建新的类或更新现有。  
@@ -53,7 +46,7 @@ HRESULT PutClassWmi (
 `lFlags`   
 [in]影响此函数的行为的标志的组合。 在中定义以下值*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中： 
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果集，WMI 不存储任何限定符与已修正的风格。 </br> 如果不设置，则假定此对象未本地化，以及所有的限定符是 storedwith 此实例。 |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | 如果不存在，或如果它已存在对其进行覆盖，请创建类。 |
@@ -75,7 +68,7 @@ HRESULT PutClassWmi (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 用户没有创建或修改类的权限。 |
 | `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |
@@ -84,7 +77,7 @@ HRESULT PutClassWmi (
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | 指定的类名称无效。 |
 | `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | 尝试进行的更改会使子类无效。 |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY`指定了标记，但该类已存在。 |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`中指定`lFlags`，但找不到类。 |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` 中指定`lFlags`，但找不到类。 |
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | 类的必需的属性不是所有尚未设置。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存是可用于完成该操作。 |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 时可能已停止和重新启动。 调用[ConnectServerWmi](connectserverwmi.md)试。 |
@@ -99,12 +92,12 @@ HRESULT PutClassWmi (
 
 如果函数调用失败，你可以通过调用来获取其他错误信息[GetErrorInfo](geterrorinfo.md)函数。
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

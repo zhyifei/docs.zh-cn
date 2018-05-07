@@ -1,13 +1,6 @@
 ---
-title: "HScrollBar 控件和 VScrollBar 控件概述（Windows 窗体）"
-ms.custom: 
+title: HScrollBar 控件和 VScrollBar 控件概述（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - HScrollBar
 - VScrollBar
@@ -18,21 +11,16 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fbdb3778959d1691200cde49e485d8a63c6e645
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 572ba9f16d1c78e1825d0c9db7530c6c78175d27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar 控件和 VScrollBar 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ScrollBar>控件用于提供较长列表项或大量信息中的轻松导航，请水平或垂直滚动内的应用程序或控件。 滚动条是一种常见元素的 Windows 界面中，因此<xref:System.Windows.Forms.ScrollBar>控件通常用于是非派生自的控件<xref:System.Windows.Forms.ScrollableControl>类。 同样，许多开发人员选择合并<xref:System.Windows.Forms.ScrollBar>控制创建其自己的用户控件时。  
   
- <xref:System.Windows.Forms.HScrollBar> （水平） 和<xref:System.Windows.Forms.VScrollBar>（垂直） 控件运行独立于其他控件，并且具有其自己的事件、 属性和方法集。 <xref:System.Windows.Forms.ScrollBar>控件不是附加到文本框、 列表框、 组合框或 MDI 窗体的内置滚动条相同 (<xref:System.Windows.Forms.TextBox>控件具有<xref:System.Windows.Forms.TextBox.ScrollBars%2A>属性来显示或隐藏附加到控件的滚动条)。  
+ <xref:System.Windows.Forms.HScrollBar> （水平） 和<xref:System.Windows.Forms.VScrollBar>（垂直） 控件运行独立于其他控件，并且具有其自己的事件、 属性和方法集。 <xref:System.Windows.Forms.ScrollBar> 控件不是附加到文本框、 列表框、 组合框或 MDI 窗体的内置滚动条相同 (<xref:System.Windows.Forms.TextBox>控件具有<xref:System.Windows.Forms.TextBox.ScrollBars%2A>属性来显示或隐藏附加到控件的滚动条)。  
   
  <xref:System.Windows.Forms.ScrollBar>控制是否使用<xref:System.Windows.Forms.ScrollBar.Scroll>事件来监视沿滚动条的滚动框 （有时称为滚动块） 的移动。 使用<xref:System.Windows.Forms.ScrollBar.Scroll>事件提供滚动栏值的访问，如进行拖动。  
   

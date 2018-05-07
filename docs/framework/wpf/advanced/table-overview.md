@@ -1,13 +1,6 @@
 ---
-title: "表概述"
-ms.custom: 
+title: 表概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 922faa06456a1aa86ffd0c805ab33577280ccf4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 631a14ae8eb17713186f7db66700026cc476024e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="table-overview"></a>表概述
-<xref:System.Windows.Documents.Table>是支持的流文档内容的基于网格的演示文稿的块级别元素。 此元素极具灵活性，因此很有用，但也因此显得更加复杂，从而不容易理解和正确使用。  
+<xref:System.Windows.Documents.Table> 是支持的流文档内容的基于网格的演示文稿的块级别元素。 此元素极具灵活性，因此很有用，但也因此显得更加复杂，从而不容易理解和正确使用。  
   
  本主题包含以下各节：  
   
@@ -55,11 +43,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="table_vs_Grid"></a>   
 ### <a name="how-is-table-different-then-grid"></a>表与网格有什么区别？  
- <xref:System.Windows.Documents.Table>和<xref:System.Windows.Controls.Grid>共享一些常见的功能，但每个最适合于不同的方案。 A<xref:System.Windows.Documents.Table>旨在用于在流内容中 (请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)有关流内容的详细信息)。 网格最适合在表单内（主要在流内容以外的任意位置）使用。 在<xref:System.Windows.Documents.FlowDocument>，<xref:System.Windows.Documents.Table>支持流分页、 列回流等内容时选择的内容行为<xref:System.Windows.Controls.Grid>却没有。 A<xref:System.Windows.Controls.Grid>另一方面最佳使用外部<xref:System.Windows.Documents.FlowDocument>包括的原因有很多<xref:System.Windows.Controls.Grid>添加基于一个行和列的索引，元素<xref:System.Windows.Documents.Table>却没有。 <xref:System.Windows.Controls.Grid>元素允许的子内容，允许多个元素中的单个"单元格。"存在分层 <xref:System.Windows.Documents.Table>不支持分层。 子元素的<xref:System.Windows.Controls.Grid>进行绝对定位相对于其"单元格"边界的区域。 <xref:System.Windows.Documents.Table>不支持此功能。 最后，<xref:System.Windows.Controls.Grid>需要较少的资源则<xref:System.Windows.Documents.Table>因此请考虑使用<xref:System.Windows.Controls.Grid>以提高性能。  
+ <xref:System.Windows.Documents.Table> 和<xref:System.Windows.Controls.Grid>共享一些常见的功能，但每个最适合于不同的方案。 A<xref:System.Windows.Documents.Table>旨在用于在流内容中 (请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)有关流内容的详细信息)。 网格最适合在表单内（主要在流内容以外的任意位置）使用。 在<xref:System.Windows.Documents.FlowDocument>，<xref:System.Windows.Documents.Table>支持流分页、 列回流等内容时选择的内容行为<xref:System.Windows.Controls.Grid>却没有。 A<xref:System.Windows.Controls.Grid>另一方面最佳使用外部<xref:System.Windows.Documents.FlowDocument>包括的原因有很多<xref:System.Windows.Controls.Grid>添加基于一个行和列的索引，元素<xref:System.Windows.Documents.Table>却没有。 <xref:System.Windows.Controls.Grid>元素允许的子内容，允许多个元素中的单个"单元格。"存在分层 <xref:System.Windows.Documents.Table> 不支持分层。 子元素的<xref:System.Windows.Controls.Grid>进行绝对定位相对于其"单元格"边界的区域。 <xref:System.Windows.Documents.Table> 不支持此功能。 最后，<xref:System.Windows.Controls.Grid>需要较少的资源则<xref:System.Windows.Documents.Table>因此请考虑使用<xref:System.Windows.Controls.Grid>以提高性能。  
   
 <a name="basic_table_structure"></a>   
 ### <a name="basic-table-structure"></a>基本表结构  
- <xref:System.Windows.Documents.Table>提供基于网格的表示形式，包括列 (由表示<xref:System.Windows.Documents.TableColumn>元素) 和行 (由表示<xref:System.Windows.Documents.TableRow>元素)。 <xref:System.Windows.Documents.TableColumn>元素未承载内容;它们只需定义列和列的特性。 <xref:System.Windows.Documents.TableRow>元素必须承载于<xref:System.Windows.Documents.TableRowGroup>元素，它定义的表的行分组。 <xref:System.Windows.Documents.TableCell>元素，其中包含由表中显示的实际内容，必须承载于<xref:System.Windows.Documents.TableRow>元素。 <xref:System.Windows.Documents.TableCell>只能包含派生自的元素<xref:System.Windows.Documents.Block>。  有效的子元素<xref:System.Windows.Documents.TableCell>包括。  
+ <xref:System.Windows.Documents.Table> 提供基于网格的表示形式，包括列 (由表示<xref:System.Windows.Documents.TableColumn>元素) 和行 (由表示<xref:System.Windows.Documents.TableRow>元素)。 <xref:System.Windows.Documents.TableColumn> 元素未承载内容;它们只需定义列和列的特性。 <xref:System.Windows.Documents.TableRow> 元素必须承载于<xref:System.Windows.Documents.TableRowGroup>元素，它定义的表的行分组。 <xref:System.Windows.Documents.TableCell> 元素，其中包含由表中显示的实际内容，必须承载于<xref:System.Windows.Documents.TableRow>元素。 <xref:System.Windows.Documents.TableCell> 只能包含派生自的元素<xref:System.Windows.Documents.Block>。  有效的子元素<xref:System.Windows.Documents.TableCell>包括。  
   
 -   <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -72,10 +60,10 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableCell>元素可能不会直接承载文本内容。 有关流的包含规则详细信息之类的内容元素<xref:System.Windows.Documents.TableCell>，请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
+>  <xref:System.Windows.Documents.TableCell> 元素可能不会直接承载文本内容。 有关流的包含规则详细信息之类的内容元素<xref:System.Windows.Documents.TableCell>，请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Table>类似于<xref:System.Windows.Controls.Grid>元素但具有更多功能，因此，需要更大的资源开销。  
+>  <xref:System.Windows.Documents.Table> 类似于<xref:System.Windows.Controls.Grid>元素但具有更多功能，因此，需要更大的资源开销。  
   
  下面的示例定义的简单 2x3 表[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]。  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>表包容  
- <xref:System.Windows.Documents.Table>派生自<xref:System.Windows.Documents.Block>元素，并遵循常见规则<xref:System.Windows.Documents.Block>级别元素。  A<xref:System.Windows.Documents.Table>元素可能包含任何以下元素：  
+ <xref:System.Windows.Documents.Table> 派生自<xref:System.Windows.Documents.Block>元素，并遵循常见规则<xref:System.Windows.Documents.Block>级别元素。  A<xref:System.Windows.Documents.Table>元素可能包含任何以下元素：  
   
 -   <xref:System.Windows.Documents.FlowDocument>  
   

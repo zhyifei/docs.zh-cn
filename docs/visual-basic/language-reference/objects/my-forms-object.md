@@ -1,25 +1,17 @@
 ---
-title: "My.Forms 对象"
+title: My.Forms 对象
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.Forms
 - My.MyProject.Forms
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fe548caacf2c8e7498e3b7abc814b4f89af9b3d6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 4d6bb371b13dfb3fb735223b2a6a6a35e1416593
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myforms-object"></a>My.Forms 对象
 提供用于访问在当前项目中声明每个 Windows 窗体的实例的属性。  
@@ -66,11 +58,11 @@ ms.lasthandoff: 12/21/2017
 |项目类型|可用|  
 |---|---|  
 |Windows 应用程序|**是**|  
-|类库|No|  
-|控制台应用程序|No|  
-|Windows 控件库|No|  
-|Web 控件库|No|  
-|Windows 服务|No|  
+|类库|否|  
+|控制台应用程序|否|  
+|Windows 控件库|否|  
+|Web 控件库|否|  
+|Windows 服务|否|  
 |网站|否|  
   
 ## <a name="see-also"></a>请参阅  

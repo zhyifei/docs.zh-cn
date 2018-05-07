@@ -1,31 +1,17 @@
 ---
 title: 路由服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-service"></a>路由服务
 路由服务是充当消息路由器的泛型 SOAP 中介。 路由服务的核心功能是基于消息内容来路由消息，通过该功能，可基于消息本身（标头或消息正文）中的值将消息转发到客户端终结点。  
   
- <xref:System.ServiceModel.Routing.RoutingService> 是作为 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务在 <xref:System.ServiceModel.Routing> 命名空间中实现的。 路由服务公开一个或多个用于接收消息的服务终结点，然后基于消息内容将每个消息路由到一个或多个客户端终结点。 该服务提供了以下功能：  
+ <xref:System.ServiceModel.Routing.RoutingService>作为 Windows Communication Foundation (WCF) 服务中实现<xref:System.ServiceModel.Routing>命名空间。 路由服务公开一个或多个用于接收消息的服务终结点，然后基于消息内容将每个消息路由到一个或多个客户端终结点。 该服务提供了以下功能：  
   
 -   基于内容的路由  
   
@@ -47,10 +33,10 @@ ms.lasthandoff: 04/30/2018
   
  尽管可以创建可实现上述一个或多个目标的中介服务，但是此实现通常与特定方案或解决方案相关，并且不能轻松应用于新应用程序。  
   
- 路由服务提供一个可动态配置的泛型可插入 SOAP 中介，该中介与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务和通道模型兼容，使您能够基于内容路由基于 SOAP 的消息。  
+ 路由服务提供的泛型，可动态配置，可插入 SOAP 中介与 WCF 服务与通道模型兼容，并允许你执行基于内容的路由的基于 SOAP 的消息。  
   
 > [!NOTE]
->  路由服务当前不支持路由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 服务。  若要路由 REST 调用，请考虑使用<xref:System.Web.Routing>或[应用程序请求路由](http://go.microsoft.com/fwlink/?LinkId=164589)(http://go.microsoft.com/fwlink/?LinkId=164589)。  
+>  路由服务当前不支持路由 WCF REST 服务。  若要路由 REST 调用，请考虑使用<xref:System.Web.Routing>或[应用程序请求路由](http://go.microsoft.com/fwlink/?LinkId=164589)(http://go.microsoft.com/fwlink/?LinkId=164589)。  
   
 ## <a name="content-based-routing"></a>基于内容的路由  
  基于内容的路由是指根据消息中包含的一个或多个值路由消息的能力。 路由服务检查每条消息，并根据消息内容和您创建的路由逻辑将其路由至目标终结点。 基于内容的路由为服务聚合、服务版本控制和优先级路由提供了基础。  

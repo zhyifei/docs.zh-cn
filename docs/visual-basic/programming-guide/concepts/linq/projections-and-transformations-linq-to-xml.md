@@ -1,22 +1,12 @@
 ---
-title: "投影和转换 (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: 投影和转换 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 297de224-b625-44cf-8c00-186b6189aa0e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 92179ce3f1919187038b1bf7be92a82c1b6483ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 33be64420eb2c42ed1c8b680985609ceca241b4e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="projections-and-transformations-linq-to-xml-visual-basic"></a>投影和转换 (LINQ to XML) (Visual Basic)
 本节提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 投影和转换的示例。  
@@ -34,5 +24,5 @@ ms.lasthandoff: 10/18/2017
 |[如何： 从 XML (Visual Basic 中) 生成文本文件](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md)|演示如何将 XML 文件转换为非 XML 文本文件。|  
 |[如何： 从 CSV 文件 (Visual Basic 中) 生成 XML](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|演示如何使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 分析 CSV 文件并从它生成 XML。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataEmit::SetFieldProps 方法"
-ms.custom: 
+title: IMetaDataEmit::SetFieldProps 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.SetFieldProps
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: daec4bb11115d4f31764fde767b083796eabbb73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a2c38340614e633de4049515b38cb387031739b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps 方法
 设置或更新指定的字段标记所引用的字段的默认值。  
@@ -58,7 +46,7 @@ HRESULT SetFieldProps (
  [in]字段特性。 这是一个位掩码的`CorFieldAttr`值。  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_`  *\** 的常量值。 这是`CorElementType`值。 如果未定义常量，将此值设置为`ELEMENT_TYPE_END`。  
+ [in]`ELEMENT_TYPE_` *\** 的常量值。 这是`CorElementType`值。 如果未定义常量，将此值设置为`ELEMENT_TYPE_END`。  
   
  `pValue`  
  [in]字段的常量值。  
@@ -66,14 +54,14 @@ HRESULT SetFieldProps (
  `cchValue`  
  [in]大小，以 Unicode 字符的`pValue`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：**用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

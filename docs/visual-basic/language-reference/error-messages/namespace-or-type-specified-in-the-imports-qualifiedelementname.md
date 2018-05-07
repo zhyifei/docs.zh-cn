@@ -1,28 +1,19 @@
 ---
-title: Namespace 或导入 &#39; 中指定的类型&lt;qualifiedelementname&gt;&#39; 没有 &#39; 不包含任何公共成员，或无法找到
+title: Namespace 或类型指定在导入时&#39; &lt;qualifiedelementname&gt; &#39;不&#39;t 包含任何公共成员，或者找不到
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc40056
 - vbc40056
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 49cd9fa5d5182b2cf2d7fc4623bc8e9aa02bf85e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8be0df5cbe4b8d4a640c9b6c2e126b3828254fd6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace 或导入 &#39; 中指定的类型&lt;qualifiedelementname&gt;&#39; 没有 &#39; 不包含任何公共成员，或无法找到
+# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace 或类型指定在导入时&#39; &lt;qualifiedelementname&gt; &#39;不&#39;t 包含任何公共成员，或者找不到
 Namespace 或类型中的导入的指定\<qualifiedelementname > 不包含任何公共成员，或无法找到。 请确保命名空间或类型定义，并且包含至少一个公共成员。 请确保该别名名称不包含其他别名。  
   
  `Imports`语句指定的包含的元素不能找到或未定义任何`Public`成员。  
@@ -51,7 +42,7 @@ Namespace 或类型中的导入的指定\<qualifiedelementname > 不包含任何
   
 3.  验证包含元素公开至少一个`Public`成员。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Imports 语句（.NET 命名空间和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
  [Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)  
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  

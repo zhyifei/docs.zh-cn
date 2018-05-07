@@ -1,13 +1,6 @@
 ---
-title: "使用图像、图形和视觉对象进行绘制"
-ms.custom: 
+title: 使用图像、图形和视觉对象进行绘制
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abb5733ed54ea430ba161db5ea2dcb33e99298ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>使用图像、图形和视觉对象进行绘制
 本主题介绍如何使用<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>对象来绘制的图像的区域<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。  
@@ -69,15 +57,15 @@ ms.lasthandoff: 12/22/2017
   
  A<xref:System.Windows.Media.DrawingBrush>使用绘制区域<xref:System.Windows.Media.Drawing>对象。 A<xref:System.Windows.Media.Drawing>对象描述可见内容，如形状、 位图、 视频或文本行。 不同类型的图形描述不同类型的内容。 下面是不同类型图形对象的列表。  
   
--   <xref:System.Windows.Media.GeometryDrawing>– 绘制一个形状。  
+-   <xref:System.Windows.Media.GeometryDrawing> – 绘制一个形状。  
   
--   <xref:System.Windows.Media.ImageDrawing>– 绘制图像。  
+-   <xref:System.Windows.Media.ImageDrawing> – 绘制图像。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>– 绘制文本。  
+-   <xref:System.Windows.Media.GlyphRunDrawing> – 绘制文本。  
   
--   <xref:System.Windows.Media.VideoDrawing>– 播放音频或视频文件。  
+-   <xref:System.Windows.Media.VideoDrawing> – 播放音频或视频文件。  
   
--   <xref:System.Windows.Media.DrawingGroup>– 绘制其他绘制项。 使用图形组将其他图形合并到单个复合图形。  
+-   <xref:System.Windows.Media.DrawingGroup> – 绘制其他绘制项。 使用图形组将其他图形合并到单个复合图形。  
   
  有关详细信息<xref:System.Windows.Media.Drawing>对象，请参阅[绘制对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)。  
   
@@ -133,7 +121,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>TileBrush 功能  
- <xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>类型的<xref:System.Windows.Media.TileBrush>对象。 <xref:System.Windows.Media.TileBrush>对象提供了大量的控制如何使用图像、 绘图或 visual 绘制区域。 例如，不使用单个拉伸图像绘制区域，而是使用创建图案的一系列平铺图像绘制区域。  
+ <xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>类型的<xref:System.Windows.Media.TileBrush>对象。 <xref:System.Windows.Media.TileBrush> 对象提供了大量的控制如何使用图像、 绘图或 visual 绘制区域。 例如，不使用单个拉伸图像绘制区域，而是使用创建图案的一系列平铺图像绘制区域。  
   
  A<xref:System.Windows.Media.TileBrush>有三个主要组件： 内容、 磁贴和输出区域。  
   

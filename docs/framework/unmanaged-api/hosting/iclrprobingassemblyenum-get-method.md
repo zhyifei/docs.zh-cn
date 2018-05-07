@@ -1,14 +1,6 @@
 ---
-title: "ICLRProbingAssemblyEnum::Get 方法"
-ms.custom: 
+title: ICLRProbingAssemblyEnum::Get 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRProbingAssemblyEnum.Get
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fdb67a77-782f-44cf-a8a1-b75999b0f3c8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd54558eeb49ebf7a2a2e9304830b09a08d1038e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f5ddd352d027365e02366e9aa779053da3bdc2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>ICLRProbingAssemblyEnum::Get 方法
 获取指定索引处的程序集标识。  
@@ -62,8 +50,8 @@ HRESULT Get (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`Get`已成功返回。|  
-|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer`对于太小。|  
+|S_OK|`Get` 已成功返回。|  
+|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` 对于太小。|  
 |ERROR_NO_MORE_ITEMS|该枚举包含更多的项。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
@@ -74,16 +62,16 @@ HRESULT Get (
 ## <a name="remarks"></a>备注  
  在索引 0 处的标识是特定于处理器体系结构的标识。 索引 1 处的标识是 Microsoft 中间语言 (MSIL) 的非特定于体系结构的程序集。 索引 2 处的标识不包含体系结构信息。  
   
- `Get`通常称为两次。 第一个调用提供的 null 值`pwzBuffer`，并将设置`pcchBufferSize`到适合的大小`pwzBuffer`。 第二个调用提供大小合适`pwzBuffer`，并包含完成后的规范的程序集标识数据。  
+ `Get` 通常称为两次。 第一个调用提供的 null 值`pwzBuffer`，并将设置`pcchBufferSize`到适合的大小`pwzBuffer`。 第二个调用提供大小合适`pwzBuffer`，并包含完成后的规范的程序集标识数据。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRProbingAssemblyEnum 接口](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)  

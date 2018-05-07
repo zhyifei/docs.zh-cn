@@ -1,23 +1,12 @@
 ---
-title: "使用跟踪确定工作流执行持续时间"
-ms.custom: 
+title: 使用跟踪确定工作流执行持续时间
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f04ad0fd-edc7-4cbc-8979-356f2a1131c4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2687d045db28974e99b2f2b6a3222924a520720
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f9c65f2c873d54da443db14e7f5797ef1e14174
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-workflow-execution-duration-using-tracing"></a>使用跟踪确定工作流执行持续时间
 本主题演示如何使用工作流跟踪来确定执行成功完成的自承载工作流所需的时间。  

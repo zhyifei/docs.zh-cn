@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback 接口"
-ms.custom: 
+title: ICorProfilerCallback 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c4a53687c473a87edae38207c44f89f0140f8ccd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96c8c9de7a6b26c9a00a0ffaf4fb50c08a80d5a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback 接口
 提供公共语言运行时 (CLR) 用于探查器已订阅的事件发生时通知代码探查器的方法。  
@@ -121,14 +109,14 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  探查器注册的单个 COM 对象。 如果探查器面向.NET Framework 版本 1.0 或 1.1，需要实现的方法的 COM 对象`ICorProfilerCallback`。 如果它面向.NET Framework 2.0 或更高版本，COM 对象还必须实现的方法`ICorProfilerCallback2`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  

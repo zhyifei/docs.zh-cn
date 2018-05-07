@@ -1,39 +1,27 @@
 ---
-title: "ToolBar 概述"
-ms.custom: 
+title: ToolBar 概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f00597d48ff100325c1fb2884f64169164415a50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c66867ce4d86a11424d7a7a859817d603b4227e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-overview"></a>ToolBar 概述
-<xref:System.Windows.Controls.ToolBar>控件是一组命令或控件，通常在功能上相关的容器。 A<xref:System.Windows.Controls.ToolBar>通常包含调用命令的按钮。  
+<xref:System.Windows.Controls.ToolBar> 控件是一组命令或控件，通常在功能上相关的容器。 A<xref:System.Windows.Controls.ToolBar>通常包含调用命令的按钮。  
   
   
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>ToolBar 控件  
- <xref:System.Windows.Controls.ToolBar>控制所采用的按钮或其他控件栏类似的排列方式到单个行或列从其名称。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.ToolBar>控件提供一种溢出机制，然后放置在大小约束自然不适合任何项<xref:System.Windows.Controls.ToolBar>到特殊溢出区域。 此外， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar>控件通常用于与相关<xref:System.Windows.Controls.ToolBarTray>控件，它为用户启动调整大小和排列的工具栏提供特殊的布局行为，以及支持。  
+ <xref:System.Windows.Controls.ToolBar>控制所采用的按钮或其他控件栏类似的排列方式到单个行或列从其名称。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> 控件提供一种溢出机制，然后放置在大小约束自然不适合任何项<xref:System.Windows.Controls.ToolBar>到特殊溢出区域。 此外， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar>控件通常用于与相关<xref:System.Windows.Controls.ToolBarTray>控件，它为用户启动调整大小和排列的工具栏提供特殊的布局行为，以及支持。  
   
 <a name="Creating_ToolBars"></a>   
 ## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>在 ToolBarTray 中指定 ToolBar 位置  
- 使用<xref:System.Windows.Controls.ToolBar.Band%2A>和<xref:System.Windows.Controls.ToolBar.BandIndex%2A>属性来定位<xref:System.Windows.Controls.ToolBar>中<xref:System.Windows.Controls.ToolBarTray>。 <xref:System.Windows.Controls.ToolBar.Band%2A>指示在其中的位置<xref:System.Windows.Controls.ToolBar>放置在其父内<xref:System.Windows.Controls.ToolBarTray>。 <xref:System.Windows.Controls.ToolBar.BandIndex%2A>指示的顺序<xref:System.Windows.Controls.ToolBar>放置在其带内。 下面的示例演示如何使用此属性将<xref:System.Windows.Controls.ToolBar>控件内<xref:System.Windows.Controls.ToolBarTray>。  
+ 使用<xref:System.Windows.Controls.ToolBar.Band%2A>和<xref:System.Windows.Controls.ToolBar.BandIndex%2A>属性来定位<xref:System.Windows.Controls.ToolBar>中<xref:System.Windows.Controls.ToolBarTray>。 <xref:System.Windows.Controls.ToolBar.Band%2A> 指示在其中的位置<xref:System.Windows.Controls.ToolBar>放置在其父内<xref:System.Windows.Controls.ToolBarTray>。 <xref:System.Windows.Controls.ToolBar.BandIndex%2A> 指示的顺序<xref:System.Windows.Controls.ToolBar>放置在其带内。 下面的示例演示如何使用此属性将<xref:System.Windows.Controls.ToolBar>控件内<xref:System.Windows.Controls.ToolBarTray>。  
   
  [!code-xaml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   

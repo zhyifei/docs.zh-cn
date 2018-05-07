@@ -1,27 +1,15 @@
 ---
-title: "在 ADO.NET 中修改大值 (max) 数据"
-ms.custom: 
+title: 在 ADO.NET 中修改大值 (max) 数据
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e42ff73cda8fc63d9b8ae6061cfbdb9749a0a864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 285803d92474efd3268816d1af06eb3ff4abbc79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>在 ADO.NET 中修改大值 (max) 数据
 大型对象 (LOB) 数据类型是那些超过 8 千字节 (KB) 最大行大小的数据类型。 SQL Server 为 `max`、`varchar` 和 `nvarchar` 数据类型提供了 `varbinary` 说明符以允许存储最大为 2^32 字节的值。 表列和 Transact-SQL 变量可以指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 数据类型。 在 ADO.NET 中，`max` 数据类型可通过 `DataReader` 来获取，并可指定为输入和输出参数值而无需任何特殊处理。 对于大型 `varchar` 数据类型，可以增量检索和更新数据。  
@@ -72,13 +60,13 @@ FROM OPENROWSET
   
  SET  
   
- { *column_name* = { .WRITE ( *expression* , @Offset , @Length ) }  
+ { *column_name* = {。写入 (*表达式*， @Offset ， @Length )}  
   
  WRITE 方法指定的值的部分*column_name*将进行相应修改。 表达式是将复制到的值*column_name*、`@Offset`是从该处将写入表达式的开始点和`@Length`自变量是列中部分的长度。  
   
 |如果|Then|  
 |--------|----------|  
-|表达式设置为 NULL|`@Length`将忽略和中的值*column_name*将被截断处指定`@Offset`。|  
+|表达式设置为 NULL|`@Length` 将忽略和中的值*column_name*将被截断处指定`@Offset`。|  
 |`@Offset` 为 NULL|更新操作将在现有的末尾表达式追加*column_name*值和`@Length`将被忽略。|  
 |`@Offset` 大于 column_name 值的长度|SQL Server 返回一个错误。|  
 |`@Length` 为 NULL|更新操作移除从 `@Offset` 到 `column_name` 值末尾的所有数据。|  

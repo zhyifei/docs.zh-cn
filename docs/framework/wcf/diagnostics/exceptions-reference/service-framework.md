@@ -1,26 +1,12 @@
 ---
 title: 服务框架
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-framework"></a>服务框架
 本主题列出由服务框架数据生成的所有异常。  
@@ -49,8 +35,8 @@ ms.lasthandoff: 03/26/2018
 |channelDoesNotHaveADuplexSession0|当前的通道不支持关闭输出会话， 此通道未实现 ISessionChannel\<因为 >。|  
 |ClientRuntimeRequiresFormatter0|指定的 ClientOperation 需要格式化程序，因为 SerializeRequest 和 DeserializeReply 并不都是 False。|  
 |CommunicationObjectAborted1|无法将指定的通信对象用于通信，因为它已经被停止。|  
-|CommunicationObjectAbortedStack2|无法将指定的通信对象用于通信，因为它已经被停止: {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|指定的通信对象已经重写虚拟函数 {1}，但是它未调用基类中定义的版本。|  
+|CommunicationObjectAbortedStack2|指定的通信对象无法用于通信，因为它已经被停止： {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|指定的通信对象已重写虚函数{1}但不调用基类中定义的版本。|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|指定的协定包含一个或多个 IsTerminating 或者非 IsInitiating 操作， 但是它未将 SessionMode 属性 (Property) 设置为 SessionMode.Required。 IsInitiating 和 IsTerminating 属性 (Attribute) 只能在会话的上下文中使用。|  
 |CouldnTCreateChannelForChannelType2|请求指定的通道类型，但是指定的绑定不支持它或者因配置不正确而无法支持它。|  
 |DispatchRuntimeRequiresFormatter0|指定的 DispatchOperation 需要格式化程序，因为 DeserializeRequest 和 SerializeReply 并非均为 False。|  

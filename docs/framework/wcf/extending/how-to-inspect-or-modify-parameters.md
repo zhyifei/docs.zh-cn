@@ -1,30 +1,18 @@
 ---
-title: "如何：检查或修改参数"
-ms.custom: 
+title: 如何：检查或修改参数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f1a0ef31ba074082e4c3aa8a26e6a59502a7566
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ddf6ad667eb131ec6fa4f12ed112c57368c43d9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>如何：检查或修改参数
-通过实现 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 接口并将它插入客户端或服务运行库，您可以检查或修改对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象或 <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> 服务执行的单个操作的传入或传出消息。 通常，操作行为用于为单个操作添加参数检查器；其他行为可以用于在更大范围内提供对运行库的方便访问。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)和[扩展调度程序](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
+您可以检查或修改 Windows Communication Foundation (WCF) 客户端对象上为单个操作的传入或传出消息或[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务通过实现<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>接口并将其插入到客户端或服务运行时。 通常，操作行为用于为单个操作添加参数检查器；其他行为可以用于在更大范围内提供对运行库的方便访问。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)和[扩展调度程序](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
   
 ### <a name="inspecting-or-modifying-parameters"></a>检查或修改参数  
   

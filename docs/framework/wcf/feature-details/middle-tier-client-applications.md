@@ -1,44 +1,32 @@
 ---
-title: "中间层客户端应用程序"
-ms.custom: 
+title: 中间层客户端应用程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13399243994943ddf853447e2e29f3695702aa35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cca832266b2eb2ab7b1b4eb1a5fe937525db97d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="middle-tier-client-applications"></a>中间层客户端应用程序
-本主题讨论特定于使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的中间层客户端应用程序的各种问题。  
+本主题讨论特定于使用 Windows Communication Foundation (WCF) 的中间层客户端应用程序的各种问题。  
   
 ## <a name="increasing-middle-tier-client-performance"></a>提高中间层客户端应用程序的性能  
- 与以前的通信技术（如使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 的 Web 服务）相比，由于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的功能集比较丰富，所以创建 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端实例会更复杂。 例如，打开 <xref:System.ServiceModel.ChannelFactory%601> 对象时，该对象会与服务建立一个安全会话，该过程将增加客户端实例的启动时间。 通常，这些附加功能不会对客户端应用程序造成很大影响，这是因为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端执行几次调用后将关闭。  
+ 与以前的通信技术，例如使用的 Web 服务相比[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，创建 WCF 客户端实例会更复杂由于 WCF 丰富功能集。 例如，打开 <xref:System.ServiceModel.ChannelFactory%601> 对象时，该对象会与服务建立一个安全会话，该过程将增加客户端实例的启动时间。 通常情况下，这些附加功能不会影响客户端应用程序极大地由于 WCF 客户端执行几次调用后将关闭。  
   
- 然而，中间层客户端应用程序可以快速地创建许多 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象，因此，可以体验到已提高的初始化要求。 调用服务时，有两种主要的方法可以提高中间层应用程序的性能：  
+ 中间层客户端应用程序，但是，可以快速创建多个 WCF 客户端对象并，因此，实现提高的初始化要求。 调用服务时，有两种主要的方法可以提高中间层应用程序的性能：  
   
--   缓存 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象，并尽可能在后续调用中重用它。  
+-   缓存的 WCF 客户端对象并将其重复用于后续调用在可能的情况。  
   
--   创建一个 <xref:System.ServiceModel.ChannelFactory%601> 对象，然后使用该对象为每次调用创建新的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端通道对象。  
+-   创建<xref:System.ServiceModel.ChannelFactory%601>对象，然后使用该对象来创建新的 WCF 客户端通道对象，每个调用。  
   
  使用这些方法时要考虑的问题包括：  
   
--   如果服务正在使用会话维护特定于客户端的状态，则您就无法使用多客户层请求重用中间层 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端，因为服务的状态与中间层客户端的状态相关联。  
+-   如果服务正在使用会话维护特定于客户端的状态，然后你无法重用中间层 WCF 客户端与多个客户端层请求因为服务的状态与中间层客户端。  
   
--   如果服务必须基于每个客户端执行身份验证，则必须在中间层为每个传入的请求创建新客户端，而不是重用中间层 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端（或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端通道对象），原因是在创建了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端（或 <xref:System.ServiceModel.ChannelFactory%601>）后将无法修改中间层的客户端凭据。  
+-   如果服务必须在每个客户端基础上进行身份验证，必须创建而不是重用中间层 WCF 客户端 （或 WCF 客户端通道对象），因为在中间层上的每个传入请求的新客户端的中间层客户端凭据WCF 客户端后，无法修改 (或<xref:System.ServiceModel.ChannelFactory%601>) 已创建。  
   
--   由于通道及其创建的客户端是线程安全的，因此它们可能不支持同时向网络中写入多条消息。 如果要发送较大的消息，特别是消息流，则发送操作可能会阻塞，因为它要等待另一个发送操作完成。 这会导致两种问题：缺少并发性；当控制流返回到重用信道的服务（即，共享的客户端调用了一种服务，该服务的代码路径会导致对共享的客户端进行回调）时，存在死锁的可能性。 无论重用什么类型的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端，情况都是如此。  
+-   由于通道及其创建的客户端是线程安全的，因此它们可能不支持同时向网络中写入多条消息。 如果要发送较大的消息，特别是消息流，则发送操作可能会阻塞，因为它要等待另一个发送操作完成。 这会导致两种问题：缺少并发性；当控制流返回到重用信道的服务（即，共享的客户端调用了一种服务，该服务的代码路径会导致对共享的客户端进行回调）时，存在死锁的可能性。 这是 true 而不考虑你重复使用的 WCF 客户端的类型。  
   
 -   无论您是否共享出错的通道，您都必须处理它。 然而，重用通道时，出错通道可以关闭多个挂起的请求或发送。  
   

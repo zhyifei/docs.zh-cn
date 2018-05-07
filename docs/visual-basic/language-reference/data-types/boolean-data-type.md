@@ -1,10 +1,6 @@
 ---
-title: "Boolean 数据类型 (Visual Basic)"
+title: Boolean 数据类型 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.FALSE
 - vb.TRUE
@@ -16,14 +12,11 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bdc106f1ec874c1a2165df069d5f3485fe5b2e43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 00f77fe5e98099868e02d74fe1adc7690cb95cca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 数据类型 (Visual Basic)
 只能是保留值`True`或`False`。 关键字`True`和`False`对应的两个状态`Boolean`变量。  
@@ -33,7 +26,7 @@ ms.lasthandoff: 11/21/2017
   
  `Boolean` 的默认值为 `False`。  
   
- `Boolean`值不会存储为数字，并且存储的值不应为等效于数字。 绝不应编写依赖于等效数字值的代码`True`和`False`。 只要有可能，应限制使用`Boolean`到为其设计的逻辑值的变量。  
+ `Boolean` 值不会存储为数字，并且存储的值不应为等效于数字。 绝不应编写依赖于等效数字值的代码`True`和`False`。 只要有可能，应限制使用`Boolean`到为其设计的逻辑值的变量。  
   
 ## <a name="type-conversions"></a>类型转换  
  当 Visual Basic 数值数据类型将值转换为`Boolean`，0 会变为`False`和所有其他值将成为`True`。 当 Visual Basic 将转换`Boolean`为数字类型的值`False`变为 0 和`True`会变为-1。  
@@ -42,9 +35,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="programming-tips"></a>编程提示  
   
--   **负数。** `Boolean`不是数值类型，不能表示为负值。 在任何情况下，不应使用`Boolean`来保存数值。  
+-   **负数。** `Boolean` 不是数值类型，不能表示为负值。 在任何情况下，不应使用`Boolean`来保存数值。  
   
--   **类型字符。** `Boolean`不包含文本类型字符或标识符类型字符。  
+-   **类型字符。** `Boolean` 不包含文本类型字符或标识符类型字符。  
   
 -   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Boolean?displayProperty=nameWithType> 结构。  
   
@@ -59,7 +52,7 @@ If scriptEngine = "VB" Then
 End If  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Boolean?displayProperty=nameWithType>  
  [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

@@ -1,28 +1,14 @@
 ---
-title: "最大程度地提高 WPF 三维性能"
-ms.custom: 
+title: 最大程度地提高 WPF 三维性能
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45053762a4782544531a09c92531b26f99663016
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6677ee3a6d17ea38636d49327d7af22b53bc900e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="maximize-wpf-3d-performance"></a>最大程度地提高 WPF 三维性能
 当你使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]生成 3D 控件并将三维场景包括在你的应用程序，务必考虑性能优化。 本主题提供 3D 类和产生性能影响你的应用程序，以及有关使用它们时优化性能的建议的属性的列表。  
@@ -33,15 +19,15 @@ ms.lasthandoff: 12/22/2017
   
 |属性|建议|  
 |-|-|  
-|<xref:System.Windows.Media.Brush>|画笔速度 （最快到最慢）：<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>（已缓存）<br /><br /> <xref:System.Windows.Media.VisualBrush>（已缓存）<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>（缓存）<br /><br /> <xref:System.Windows.Media.VisualBrush>（缓存）|  
-|<xref:System.Windows.UIElement.ClipToBoundsProperty>|设置`Viewport3D.ClipToBounds`为 false 时不需要具有[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]显式剪辑的内容<xref:System.Windows.Controls.Viewport3D>到 Viewport3D 的矩形。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]消除锯齿剪辑可能会很慢，和`ClipToBounds`默认处于启用状态 （较慢） 上<xref:System.Windows.Controls.Viewport3D>。|  
-|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|设置`Viewport3D.IsHitTestVisible`为 false 时不需要[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]要考虑的内容<xref:System.Windows.Controls.Viewport3D>执行鼠标命中测试。  命中测试的 3D 内容在软件中完成，并可能会遇到大型网格很慢。 <xref:System.Windows.UIElement.IsHitTestVisible%2A>（较慢） 上默认启用<xref:System.Windows.Controls.Viewport3D>。|  
+|<xref:System.Windows.Media.Brush>|画笔速度 （最快到最慢）：<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> （已缓存）<br /><br /> <xref:System.Windows.Media.VisualBrush> （已缓存）<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> （缓存）<br /><br /> <xref:System.Windows.Media.VisualBrush> （缓存）|  
+|<xref:System.Windows.UIElement.ClipToBoundsProperty>|设置`Viewport3D.ClipToBounds`为 false 时不需要具有[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]显式剪辑的内容<xref:System.Windows.Controls.Viewport3D>到 Viewport3D 的矩形。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 消除锯齿剪辑可能会很慢，和`ClipToBounds`默认处于启用状态 （较慢） 上<xref:System.Windows.Controls.Viewport3D>。|  
+|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|设置`Viewport3D.IsHitTestVisible`为 false 时不需要[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]要考虑的内容<xref:System.Windows.Controls.Viewport3D>执行鼠标命中测试。  命中测试的 3D 内容在软件中完成，并可能会遇到大型网格很慢。 <xref:System.Windows.UIElement.IsHitTestVisible%2A> （较慢） 上默认启用<xref:System.Windows.Controls.Viewport3D>。|  
 |<xref:System.Windows.Media.Media3D.GeometryModel3D>|仅当它们需要不同的材料或转换时，请创建不同的模型。  否则，尝试将合并许多<xref:System.Windows.Media.Media3D.GeometryModel3D>实例具有相同的材料和转换到更大一些<xref:System.Windows.Media.Media3D.GeometryModel3D>和<xref:System.Windows.Media.Media3D.MeshGeometry3D>实例。|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|网格动画-更改每个帧基于网格的各个顶点-并不总是有效地[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  为了尽量减少对性能的影响更改通知，修改每个顶点时，请在执行每个顶点修改之前分离从可视化树网格。  后已修改网格，将其重新附加到的可视化树。  此外，应尝试尽量减少将以这种方式进行动画处理的网格的大小。|  
 |三维抗锯齿|若要提高呈现速度，禁用多级采样上<xref:System.Windows.Controls.Viewport3D>通过设置附加的属性<xref:System.Windows.Media.RenderOptions.EdgeMode%2A>到`Aliased`。  默认情况下上, 禁用三维抗锯齿[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]并已启用上[!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)]具有 4 个样本每个像素。|  
 |Text|在三维场景中实时文本 (因为它在实时<xref:System.Windows.Media.DrawingBrush>或<xref:System.Windows.Media.VisualBrush>) 可能会很慢。 尝试改为使用文本的图像 (通过<xref:System.Windows.Media.Imaging.RenderTargetBitmap>) 除非文本会更改。|  
 |<xref:System.Windows.Media.TileBrush>|如果必须使用<xref:System.Windows.Media.VisualBrush>或<xref:System.Windows.Media.DrawingBrush>三维场景中由于画笔的内容不是静态的请尝试缓存画笔 (设置附加的属性<xref:System.Windows.Media.RenderOptions.CachingHint%2A>到`Cache`)。  设置最小和最大刻度失效阈值 (具有附加属性<xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A>和<xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>)，以便缓存的画笔都不会同时仍保持你所需的质量级别过于频繁，重新生成。  默认情况下，<xref:System.Windows.Media.DrawingBrush>和<xref:System.Windows.Media.VisualBrush>不缓存，这意味着，每次使用画笔绘制的内容必须是重新呈现，画笔的整个内容必须首先重新呈现到中间面。|  
-|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect>强制所有受影响的内容，而无需硬件加速呈现。  为了获得最佳性能，不要使用<xref:System.Windows.Media.Effects.BitmapEffect>。|  
+|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect> 强制所有受影响的内容，而无需硬件加速呈现。  为了获得最佳性能，不要使用<xref:System.Windows.Media.Effects.BitmapEffect>。|  
   
 ## <a name="performance-impact-medium"></a>对性能的影响： 中型  
   
@@ -58,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Media.Media3D.Light>|浅色速度 （最快到最慢）：<br /><br /> <xref:System.Windows.Media.Media3D.AmbientLight><br /><br /> <xref:System.Windows.Media.Media3D.DirectionalLight><br /><br /> <xref:System.Windows.Media.Media3D.PointLight><br /><br /> <xref:System.Windows.Media.Media3D.SpotLight>|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|尝试使网格大小小于这些限制：<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>: 20001 个<xref:System.Windows.Media.Media3D.Point3D>实例<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>: 60003 个<xref:System.Int32>实例|  
 |<xref:System.Windows.Media.Media3D.Material>|材料速度 （最快到最慢）：<br /><br /> <xref:System.Windows.Media.Media3D.EmissiveMaterial><br /><br /> <xref:System.Windows.Media.Media3D.DiffuseMaterial><br /><br /> <xref:System.Windows.Media.Media3D.SpecularMaterial>|  
-|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]三维不一致的方式来取消不可见的画笔 （黑色的环境画笔、 清除画笔等）。  请考虑省略这些场景。|  
+|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 三维不一致的方式来取消不可见的画笔 （黑色的环境画笔、 清除画笔等）。  请考虑省略这些场景。|  
 |<xref:System.Windows.Media.Media3D.MaterialGroup>|每个<xref:System.Windows.Media.Media3D.Material>中<xref:System.Windows.Media.Media3D.MaterialGroup>导致另一个呈现处理过程，因此包含多个材料，甚至简单材料，可以极大地提高你的 GPU 上的填充请求。  中 material 的数量降至最低你<xref:System.Windows.Media.Media3D.MaterialGroup>。|  
   
 ## <a name="performance-impact-low"></a>对性能的影响： 低  

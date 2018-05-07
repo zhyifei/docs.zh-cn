@@ -1,26 +1,12 @@
 ---
 title: Discovery Find 和 FindCriteria
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>Discovery Find 和 FindCriteria
 发现查找操作是发现功能中的主要操作之一，它由客户端启动，用于发现一个或多个服务。 执行查找时将通过网络发送一条 WS-Discovery Probe 消息。 与指定条件匹配的服务通过 WS-Discovery ProbeMatch 消息进行答复。 有关发现消息的详细信息，请参阅[Ws-discovery 规范](http://go.microsoft.com/fwlink/?LinkID=122347)。  
@@ -33,7 +19,7 @@ ms.lasthandoff: 04/30/2018
   
  搜索条件包括：  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 可选项。 要搜索的服务的协定名称以及搜索服务时通常采用的条件。 如果指定了多个协定名称，则只有与所有协定均匹配的服务终结点才会进行答复。 请注意，在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，一个终结点只能支持一个协定。  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 可选项。 要搜索的服务的协定名称以及搜索服务时通常采用的条件。 如果指定了多个协定名称，则只有与所有协定均匹配的服务终结点才会进行答复。 请注意，在 WCF 中终结点只能支持一个协定。  
   
 -   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - 可选项。 范围表示对各服务终结点进行分类所使用的绝对 URI。 如果多个终结点公开同一协定，并且您希望采用某种方法来搜索终结点的子集，则您可能希望使用此搜索条件。 如果指定了多个范围，则只有与所有范围匹配的服务终结点才会进行答复。  
   

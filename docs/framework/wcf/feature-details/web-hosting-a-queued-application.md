@@ -1,29 +1,15 @@
 ---
 title: 承载排队应用程序的 Web
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f396ffadeca81d86d867842b63cad3c63d67ff3a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>承载排队应用程序的 Web
-Windows 进程激活服务 (WAS) 管理辅助进程的激活和生存期，该辅助进程包含承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的应用程序。 WAS 进程模型通过移除对 HTTP 的依赖性使 HTTP 服务器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 进程模型通用化。 这就使 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务可以在宿主环境中同时使用 HTTP 和非 HTTP 协议（如 net.msmq 和 msmq.formatname），该宿主环境支持基于消息的激活以及在给定计算机上提供承载大量应用程序的能力。  
+Windows 进程激活服务 (WAS) 管理激活和生存期，包含该主机 Windows Communication Foundation (WCF) 服务的应用程序的辅助进程。 WAS 进程模型通过移除对 HTTP 的依赖性使 HTTP 服务器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 进程模型通用化。 这使 WCF 服务能够使用 HTTP 和非 HTTP 协议，如 net.msmq 和 msmq.formatname，在宿主环境支持基于消息的激活并提供承载大量的某一给定计算机上的应用程序的能力。  
   
  WAS 中包含一项消息队列 (MSMQ) 激活服务，当有一条或多条消息放入某排队的应用程序所使用的某个队列时，该服务将激活该应用程序。 MSMQ 激活服务是默认情况下自动启动的 NT 服务。  
   
@@ -49,7 +35,7 @@ Windows 进程激活服务 (WAS) 管理辅助进程的激活和生存期，该�
  MSMQ 激活服务将作为 NETWORK SERVICE 运行。 这是监视要激活应用程序的队列的服务。 由于它将从队列激活应用程序，因此该队列必须提供 NETWORK SERVICE 访问权限以查看其访问控制列表 (ACL) 中的消息。  
   
 ### <a name="poison-messaging"></a>病毒消息  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的病毒消息处理由通道执行，通道不仅检测中毒的消息，还会根据用户配置选择处理。 因此，队列中仅有一条消息。 Web 承载的应用程序可连续多次中止并将该消息移到重试队列中。 在重试周期延迟确定的点，消息从重试队列中移到主队列以便进行重试。 但是这要求排队通道应是活动的。 如果 WAS 回收了该应用程序，则在另一条消息到达主队列以激活排队应用程序之前，此消息仍保留在重试队列中。 本例中的解决方法就是手动将消息从重试队列移回主队列，以便重新激活应用程序。  
+ 由通道，通道不仅检测到一条消息已中毒，但选择根据用户配置处理处理病毒消息处理在 WCF 中。 因此，队列中仅有一条消息。 Web 承载的应用程序可连续多次中止并将该消息移到重试队列中。 在重试周期延迟确定的点，消息从重试队列中移到主队列以便进行重试。 但是这要求排队通道应是活动的。 如果 WAS 回收了该应用程序，则在另一条消息到达主队列以激活排队应用程序之前，此消息仍保留在重试队列中。 本例中的解决方法就是手动将消息从重试队列移回主队列，以便重新激活应用程序。  
   
 ### <a name="subqueue-and-system-queue-caveat"></a>子队列和系统队列注意事项  
  不能基于系统队列（如系统级死信队列）或子队列（如病毒子队列）中的消息激活 WAS 承载的应用程序。 这是此版本产品的一个限制。  

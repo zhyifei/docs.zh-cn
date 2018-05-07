@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataAssemblyEmit::DefineExportedType 方法"
-ms.custom: 
+title: IMetaDataAssemblyEmit::DefineExportedType 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyEmit.DefineExportedType
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 59aae188e404ebc717a140fb7918e3fbf69f3f70
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2eb894a8bac702c30826d1e965c91cae9b259ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType 方法
 创建包含指定导出类型的元数据的 `ExportedType` 结构，并返回关联的元数据标记。  
@@ -57,13 +45,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in]指定导出的类型实现了一个令牌。 有效的值和其关联的含义是：  
   
--   `mdFile`类型是此程序集内的不同文件中实现的。  
+-   `mdFile` 类型是此程序集内的不同文件中实现的。  
   
--   `mdAssemblyRef`类型是在不同的程序集中实现的。  
+-   `mdAssemblyRef` 类型是在不同的程序集中实现的。  
   
--   `mdExportedTYpe`类型嵌套在其他类型。  
+-   `mdExportedTYpe` 类型嵌套在其他类型。  
   
--   `mdFileNil`类型在与清单相同的文件，并不是嵌套的类型。  
+-   `mdFileNil` 类型在与清单相同的文件，并不是嵌套的类型。  
   
  `tkTypeDef`  
  [in]指定要导出的类型的元数据标记。 在输入此值`TypeDef`中的文件，可实现类型并仅当该文件处于此程序集相关的表。  
@@ -77,14 +65,14 @@ HRESULT DefineExportedType (
 ## <a name="remarks"></a>备注  
  `ExportedType`必须为每个，则公开此程序集和实现中不包含清单的模块类型定义元数据结构。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：**用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

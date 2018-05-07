@@ -1,39 +1,25 @@
 ---
-title: "如何：实现 ICommandSource"
-ms.custom: 
+title: 如何：实现 ICommandSource
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d82a211f59fbdecdc932b7e57b242274e91cd5b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9308bfbbb7fff86ca5e93c1155cc29e4ee0d05f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-icommandsource"></a>如何：实现 ICommandSource
-此示例演示如何通过实现来创建命令源<xref:System.Windows.Input.ICommandSource>。  命令源是知道如何调用命令的对象。  <xref:System.Windows.Input.ICommandSource>接口公开三个成员： <xref:System.Windows.Input.ICommandSource.Command%2A>， <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>，和<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>。  <xref:System.Windows.Input.ICommandSource.Command%2A>是将调用该命令。 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>是从命令源传递到该方法用于处理该命令的用户定义数据类型。 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>是在其执行该命令的对象。  
+此示例演示如何通过实现来创建命令源<xref:System.Windows.Input.ICommandSource>。  命令源是知道如何调用命令的对象。  <xref:System.Windows.Input.ICommandSource>接口公开三个成员： <xref:System.Windows.Input.ICommandSource.Command%2A>， <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>，和<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>。  <xref:System.Windows.Input.ICommandSource.Command%2A> 是将调用该命令。 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>是从命令源传递到该方法用于处理该命令的用户定义数据类型。 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>是在其执行该命令的对象。  
   
  在此示例中，创建类的子类<xref:System.Windows.Controls.Slider>控制和实现<xref:System.Windows.Input.ICommandSource>。  
   
 ## <a name="example"></a>示例  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供了多个类实现该<xref:System.Windows.Input.ICommandSource>，如<xref:System.Windows.Controls.Button>， <xref:System.Windows.Controls.MenuItem>，和<xref:System.Windows.Controls.ListBoxItem>。  命令源定义它将命令的调用。   <xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.MenuItem>在被单击时调用的命令。  A<xref:System.Windows.Controls.ListBoxItem>时被双击调用命令。 这些类仅会成为命令源时其<xref:System.Windows.Input.ICommandSource.Command%2A>属性设置。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了多个类实现该<xref:System.Windows.Input.ICommandSource>，如<xref:System.Windows.Controls.Button>， <xref:System.Windows.Controls.MenuItem>，和<xref:System.Windows.Controls.ListBoxItem>。  命令源定义它将命令的调用。   <xref:System.Windows.Controls.Button> 和<xref:System.Windows.Controls.MenuItem>在被单击时调用的命令。  A<xref:System.Windows.Controls.ListBoxItem>时被双击调用命令。 这些类仅会成为命令源时其<xref:System.Windows.Input.ICommandSource.Command%2A>属性设置。  
   
  此示例中我们将调用该命令，当移动滑块时，更准确地说，当<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>属性更改。  
   

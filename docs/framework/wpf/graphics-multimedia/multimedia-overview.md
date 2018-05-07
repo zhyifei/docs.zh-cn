@@ -1,27 +1,15 @@
 ---
-title: "多媒体概述"
-ms.custom: 
+title: 多媒体概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 65553e18fc66825c9c0a991aba600b4b90d0d4c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a986125cff1ff4812528212fa3aee7689af1f16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimedia-overview"></a>多媒体概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的多媒体功能能够使音频和视频集成到应用程序，增强用户体验。 本主题介绍了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的多媒体功能。  
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="media-api"></a>媒体 API  
  <xref:System.Windows.Controls.MediaElement>和<xref:System.Windows.Media.MediaPlayer>类用于呈现音频或视频的内容。 可以以交互方式或时钟控制这些类。 这些类可以用在 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 控件上进行媒体播放。 要使用哪个类取决于方案。  
   
- <xref:System.Windows.Controls.MediaElement>是<xref:System.Windows.UIElement>，均支持[布局](../../../../docs/framework/wpf/advanced/layout.md)，且可用作多个控件的内容使用。 它也可用在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 与代码中。 <xref:System.Windows.Media.MediaPlayer>另一方面，专用于<xref:System.Windows.Media.Drawing>对象，并缺少布局的支持。 加载使用的媒体<xref:System.Windows.Media.MediaPlayer>仅可以通过使用显示<xref:System.Windows.Media.VideoDrawing>或通过直接与进行交互<xref:System.Windows.Media.DrawingContext>。 <xref:System.Windows.Media.MediaPlayer>不能在 XAML 中使用。  
+ <xref:System.Windows.Controls.MediaElement> 是<xref:System.Windows.UIElement>，均支持[布局](../../../../docs/framework/wpf/advanced/layout.md)，且可用作多个控件的内容使用。 它也可用在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 与代码中。 <xref:System.Windows.Media.MediaPlayer>另一方面，专用于<xref:System.Windows.Media.Drawing>对象，并缺少布局的支持。 加载使用的媒体<xref:System.Windows.Media.MediaPlayer>仅可以通过使用显示<xref:System.Windows.Media.VideoDrawing>或通过直接与进行交互<xref:System.Windows.Media.DrawingContext>。 <xref:System.Windows.Media.MediaPlayer> 不能在 XAML 中使用。  
   
  有关绘图对象和绘图上下文的详细信息，请参阅 [Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)。  
   
@@ -88,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="controlling-a-mediaelement"></a>控制 MediaElement  
  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>和<xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>属性控制的行为<xref:System.Windows.Controls.MediaElement>时<xref:System.Windows.FrameworkElement.IsLoaded%2A>是`true`或`false`分别。 <xref:System.Windows.Controls.MediaState>设置了属性以影响媒体播放行为。 例如，默认值<xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>是<xref:System.Windows.Controls.MediaState.Play>和默认<xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>是<xref:System.Windows.Controls.MediaState.Close>。 这意味着，只要<xref:System.Windows.Controls.MediaElement>加载和预播放已完成，则媒体开始播放。 一旦播放完毕，媒体就会关闭并且发布所有媒体资源。  
   
- <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>和<xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>属性不控制媒体的播放的唯一方法。 在时钟模式下，可以控制时钟<xref:System.Windows.Controls.MediaElement>和时，具有控制权的交互式控制方法<xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>是<xref:System.Windows.Controls.MediaState.Manual>。 <xref:System.Windows.Controls.MediaElement>通过评估以下优先级来处理这种控制争用。  
+ <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>和<xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>属性不控制媒体的播放的唯一方法。 在时钟模式下，可以控制时钟<xref:System.Windows.Controls.MediaElement>和时，具有控制权的交互式控制方法<xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>是<xref:System.Windows.Controls.MediaState.Manual>。 <xref:System.Windows.Controls.MediaElement> 通过评估以下优先级来处理这种控制争用。  
   
 1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>。 卸载媒体时就位。 这可确保，默认情况下，释放所有媒体资源，即使<xref:System.Windows.Media.MediaClock>与关联<xref:System.Windows.Controls.MediaElement>。  
   
@@ -107,7 +95,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="mediaplayer"></a>   
 ## <a name="mediaplayer-class"></a>MediaPlayer 类  
- 其中<xref:System.Windows.Controls.MediaElement>类是框架元素时，<xref:System.Windows.Media.MediaPlayer>类旨在用于<xref:System.Windows.Media.Drawing>对象。 当可以牺牲 framework 级别功能，以获得性能优势或在需要时，将使用图形对象<xref:System.Windows.Freezable>功能。 <xref:System.Windows.Media.MediaPlayer>可以同时提供你的应用程序中的媒体内容要利用这些功能。 如<xref:System.Windows.Controls.MediaElement>，<xref:System.Windows.Media.MediaPlayer>可在独立于或不时钟模式，但不是具有<xref:System.Windows.Controls.MediaElement>对象的卸载和加载状态。 这将减少播放控制的复杂程度<xref:System.Windows.Media.MediaPlayer>。  
+ 其中<xref:System.Windows.Controls.MediaElement>类是框架元素时，<xref:System.Windows.Media.MediaPlayer>类旨在用于<xref:System.Windows.Media.Drawing>对象。 当可以牺牲 framework 级别功能，以获得性能优势或在需要时，将使用图形对象<xref:System.Windows.Freezable>功能。 <xref:System.Windows.Media.MediaPlayer> 可以同时提供你的应用程序中的媒体内容要利用这些功能。 如<xref:System.Windows.Controls.MediaElement>，<xref:System.Windows.Media.MediaPlayer>可在独立于或不时钟模式，但不是具有<xref:System.Windows.Controls.MediaElement>对象的卸载和加载状态。 这将减少播放控制的复杂程度<xref:System.Windows.Media.MediaPlayer>。  
   
 ### <a name="controlling-mediaplayer"></a>控制 MediaPlayer  
  因为<xref:System.Windows.Media.MediaPlayer>是无状态的有只有两种方式控制媒体的播放。  

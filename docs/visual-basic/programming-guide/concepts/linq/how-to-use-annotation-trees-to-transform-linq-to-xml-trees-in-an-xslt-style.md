@@ -1,22 +1,12 @@
 ---
-title: "如何： 使用批注以转换 LINQ to XML 树的 XSLT 样式 (Visual Basic)"
-ms.custom: 
+title: 如何： 使用批注以转换 LINQ to XML 树的 XSLT 样式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e2e5fce154d5d59657302deb2ce0be80a3bc3ac6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c19d290e5b7acdf2702e24383a176ed06c9c7a1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何： 使用批注以转换 LINQ to XML 树的 XSLT 样式 (Visual Basic)
 使用批注可帮助进行 XML 树的转换。  
@@ -387,5 +377,5 @@ After Transform
 </Root>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -1,12 +1,6 @@
 ---
 title: Select 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QuerySelect
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9d8cabcbd8554ca2aee639eaac8a52f0485a266
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 55c1e79b9e8e26483c1b7374a755bf977129169b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="select-clause-visual-basic"></a>Select 子句 (Visual Basic)
 定义查询的结果。  
@@ -37,7 +28,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  可选。 可以用于引用列表达式的结果的别名。  
   
  `fieldName1`  
- 必需。 要返回查询结果中的字段的名称。  
+ 必须的。 要返回查询结果中的字段的名称。  
   
 ## <a name="remarks"></a>备注  
  你可以使用`Select`子句定义要从查询返回的结果。 这使你可以定义通过查询创建新的匿名类型的成员或目标的命名查询返回的类型的成员。 `Select`子句不需要查询。 如果没有`Select`指定子句，则查询将返回基于标识为当前作用域的范围变量的所有成员的类型。 有关详细信息，请参阅[匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。 当查询创建命名的类型时，它将返回的结果类型<xref:System.Collections.Generic.IEnumerable%601>其中`T`是创建的类型。  
@@ -59,7 +50,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [查询](../../../visual-basic/language-reference/queries/queries.md)  
  [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  

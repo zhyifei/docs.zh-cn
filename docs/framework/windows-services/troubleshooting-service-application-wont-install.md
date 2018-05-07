@@ -1,13 +1,6 @@
 ---
-title: "疑难解答： 服务应用程序赢得 &#39; 无法安装"
-ms.custom: 
+title: 疑难解答： 服务应用程序赢得&#39;t 安装
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - troubleshooting service applications
 - services, troubleshooting
@@ -16,18 +9,15 @@ helpviewer_keywords:
 - troubleshooting NT services
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
-caps.latest.revision: "8"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 43c973d83d2d1b614cf0ce49ba8d4af24123b47e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f3e5674f9a52627efdc24d6c70c0ab16dcdbbbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="troubleshooting-service-application-won39t-install"></a>疑难解答： 服务应用程序赢得 &#39; 无法安装
+# <a name="troubleshooting-service-application-won39t-install"></a>疑难解答： 服务应用程序赢得&#39;t 安装
 如果服务应用程序将无法正确安装，请检查以确保<xref:System.ServiceProcess.ServiceBase.ServiceName%2A>为服务类的属性设置为相同的值，该服务的安装程序中所示。 值必须是为了使你的服务以正确安装两个实例中相同。  
   
 > [!NOTE]

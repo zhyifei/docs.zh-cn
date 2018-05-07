@@ -1,29 +1,17 @@
 ---
-title: "XAML 中的空白处理"
-ms.custom: 
+title: XAML 中的空白处理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - East Asian characters [XAML Services]
 - XAML [XAML Services], whitespace processing
 - whitespace processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-caps.latest.revision: "20"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c382be7dabca90ef201fa24cfb79472955347eef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f7d7ca900955b8899322533f9d69338042d88ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whitespace-processing-in-xaml"></a>XAML 中的空白处理
 XAML 的语言规则规定有意义的空格必须由 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 处理器实现进行处理。 本主题介绍这些 XAML 语言规则。 它还介绍了由进行序列化的 XAML 处理器和 XAML 编写器的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 实现定义的其他空格处理。  

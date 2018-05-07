@@ -1,34 +1,20 @@
 ---
 title: 访问控制机制
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89606d1e02b58f5f627d28b7354def848cd5a350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57ead53dd9e6bc1b2e3624791c7cc0c7d437cd7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-control-mechanisms"></a>访问控制机制
-使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，可以采用多种方式来控制访问。 本主题简要讨论各种机制并提供关于何时使用每种机制的建议；旨在帮助您选择使用正确的机制。 访问技术按复杂程度顺序列出。 最简单的是 <xref:System.Security.Permissions.PrincipalPermissionAttribute>；而最复杂的是标识模型。  
+你可以控制采用多种方式与 Windows Communication Foundation (WCF) 的访问。 本主题简要讨论各种机制并提供关于何时使用每种机制的建议；旨在帮助您选择使用正确的机制。 访问技术按复杂程度顺序列出。 最简单的是 <xref:System.Security.Permissions.PrincipalPermissionAttribute>；而最复杂的是标识模型。  
   
- 除了这些机制、 模拟和具有委派[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中所述[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+ 除了这些机制，模拟和 WCF 的委派中进行了说明[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ## <a name="principalpermissionattribute"></a>PrincipalPermissionAttribute  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute> 用于限制对服务方法的访问。 将该属性应用于方法时，它可用于请求特定调用方在 Windows 组或 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色中的标识或成员资格。 如果使用 X.509 证书对客户端进行身份验证，则将为该客户端提供一个由该证书的主题名称和指纹组成的主标识。  
@@ -41,16 +27,16 @@ ms.lasthandoff: 04/30/2018
  成员资格提供程序是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 中的一项功能。 虽然成员资格提供程序在技术上不是访问控制机制，但它允许通过限制可以访问服务终结点的可能标识的集来控制对服务的访问。 成员资格功能包括一个可以用用户名/密码组合（允许网站用户开立该网站的帐户）来填充的数据库。 若要访问使用成员资格提供程序的服务，用户必须使用自己的用户名和密码登录。  
   
 > [!NOTE]
->  必须先使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能填充该数据库，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务才能使用该数据库进行授权。  
+>  你必须先用数据填充数据库使用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]功能之前的 WCF 服务可以将其用于授权目的。  
   
  如果已拥有现有 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 网站的成员资格数据库并希望使相同的用户可以使用您的服务（使用相同的用户名和密码授权的），则也可以使用成员资格功能。  
   
- 有关使用中的成员资格功能的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务，请参阅[如何： 使用 ASP.NET 成员资格提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)。  
+ 有关使用 WCF 服务中的成员资格功能的详细信息，请参阅[如何： 使用 ASP.NET 成员资格提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)。  
   
 ## <a name="aspnet-role-provider"></a>ASP.NET 角色提供程序  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 还有一项使用角色管理授权的功能。 使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序，开发人员可以为用户创建角色，然后将每个用户分配给一个或多个角色。 与成员资格提供程序一样，角色和分配也存储在数据库中，而且可以使用由 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序的专门实现所提供的工具来进行填充。 与成员资格功能一样，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 开发人员可以使用该数据库中的信息按角色对服务用户进行授权。 例如，他们可以将该角色提供程序与上述 `PrincipalPermissionAttribute` 访问控制机制结合使用。  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 还有一项使用角色管理授权的功能。 使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序，开发人员可以为用户创建角色，然后将每个用户分配给一个或多个角色。 与成员资格提供程序一样，角色和分配也存储在数据库中，而且可以使用由 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序的专门实现所提供的工具来进行填充。 作为成员资格功能，使用 WCF 开发人员可以使用信息在数据库中按角色服务用户进行授权。 例如，他们可以将该角色提供程序与上述 `PrincipalPermissionAttribute` 访问控制机制结合使用。  
   
- 如果拥有现有的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序数据库并希望在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 服务中使用同一组规则和用户分配，则也可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 角色提供程序。  
+ 你还可以使用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色提供程序，如果你有一个现成[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色提供程序数据库并想要在您的 WCF 服务中使用的相同的一套规则和用户分配。  
   
  有关使用角色提供程序功能的详细信息，请参阅[如何： 使用 ASP.NET 角色提供程序与服务](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)。  
   
@@ -59,7 +45,7 @@ ms.lasthandoff: 04/30/2018
   
  如果已拥有对现有 AzMan 安装的访问权并希望使用 AzMan/角色提供程序组合功能向服务用户进行授权，则也可以使用 AzMan 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序。  
   
- AzMan 有关详细信息和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色提供程序，请参阅[How To： 使用授权管理器 (AzMan) 与 ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=88951)。 有关使用 AzMan 和角色提供程序的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务，请参阅[如何： 将 ASP.NET 授权管理器角色提供程序用于服务](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)。  
+ AzMan 有关详细信息和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色提供程序，请参阅[How To： 使用授权管理器 (AzMan) 与 ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=88951)。 有关使用 AzMan 和角色提供程序的 WCF 服务的详细信息，请参阅[如何： 将 ASP.NET 授权管理器角色提供程序用于服务](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)。  
   
 ## <a name="identity-model"></a>标识模型  
  标识模型是一组 API，可以用于管理用于向客户端授权的声明和策略。 使用标识模型，可以检查包含在调用方用于将其自身向服务进行身份验证的凭据中的每个声明，将这些声明与服务策略的集进行比较，然后基于比较结果授予或拒绝访问权限。  

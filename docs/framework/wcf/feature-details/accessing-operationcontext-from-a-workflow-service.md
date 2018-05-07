@@ -1,24 +1,12 @@
 ---
-title: "从工作流服务访问 OperationContext"
-ms.custom: 
+title: 从工作流服务访问 OperationContext
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f63c2e2305eab5a97cf547bf607fbe97bb573376
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c10e83c02ec0e2e74462e84c68fd2fcd3ff761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>从工作流服务访问 OperationContext
 若要访问工作流服务内的 <xref:System.ServiceModel.OperationContext>，您必须实现自定义执行属性中的 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 接口。 重写 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> 方法，向此方法传递了对 <xref:System.ServiceModel.OperationContext> 的引用。 本主题将指导您实现此执行属性以检索自定义标头和一个自定义活动，该活动在运行时会将此属性呈现给 <xref:System.ServiceModel.Activities.Receive>。  自定义活动将实现相同的行为<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活动时除外，<xref:System.ServiceModel.Activities.Receive>置于内，<xref:System.ServiceModel.Activities.IReceiveMessageCallback>将调用和<xref:System.ServiceModel.OperationContext>将检索信息。  本主题还说明如何访问客户端 <xref:System.ServiceModel.OperationContext> 以通过 <xref:System.ServiceModel.Activities.ISendMessageCallback> 接口添加传出标头。  

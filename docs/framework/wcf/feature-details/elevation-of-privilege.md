@@ -1,29 +1,15 @@
 ---
 title: 特权提升
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6d93a8ae074e4016d7d8ec4b8734f0d14ead938f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c71936d087ef046848c75d1fa0638aaafbe43c9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="elevation-of-privilege"></a>特权提升
 *特权提升*源于使攻击者授权权限超出最初授予的权限。 例如，具有“只读”权限特权集的攻击者以某种方式将该特权集升级为包括“读取和写入”。  
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="switching-identity-without-a-security-context"></a>在没有安全上下文的情况下切换标识  
  以下内容仅适用于 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]。  
   
- 在客户端和服务器之间建立一个连接时，如果满足以下所有条件，则客户端的标识不发生更改（一种情况除外：打开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端后）：  
+ 客户端和服务器，客户端的标识之间建立连接时不会更改，除非在一种情况： 打开 WCF 客户端时，如果以下条件都为真后：  
   
 -   若要建立安全上下文 （使用传输安全会话或消息安全会话） 的过程被禁用 (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>属性设置为`false`在消息安全或传输不能建立安全的情况下在传输安全情况下使用会话。 HTTPS 就是此类传输的一个示例）。  
   
@@ -46,7 +32,7 @@ ms.lasthandoff: 04/28/2018
   
 -   正在模拟安全上下文下调用服务。  
   
- 如果满足这些条件，则在打开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端后，用于向服务验证客户端身份的标识可能更改（它可能不是模拟标识，而是进程标识）。 之所以出现此情况，是因为用于向服务验证客户端身份的 Windows 凭据是随每条消息传输的，而且用于身份验证的凭据是从当前线程的 Windows 标识获取的。 如果当前线程的 Windows 标识发生更改（例如，通过模拟其他调用方），则附加到消息、用于向服务验证客户端身份的凭据可能也发生更改。  
+ 如果这些条件都成立，用于对服务客户端身份验证的标识可能发生更改 （它可能不是模拟的标识，而进程标识相反） 打开 WCF 客户端后。 之所以出现此情况，是因为用于向服务验证客户端身份的 Windows 凭据是随每条消息传输的，而且用于身份验证的凭据是从当前线程的 Windows 标识获取的。 如果当前线程的 Windows 标识发生更改（例如，通过模拟其他调用方），则附加到消息、用于向服务验证客户端身份的凭据可能也发生更改。  
   
  如果要在将 Windows 身份验证与模拟一起使用时具有确定性行为，则需要显式设置 Windows 凭据或需要使用该服务建立安全上下文。 为此，请使用消息安全会话或传输安全会话。 例如，net.tcp 传输可以提供传输安全会话。 此外，在调用服务时，必须仅使用客户端操作的同步版本。 如果建立消息安全上下文，则与服务的连接的打开时间不应长于所配置的会话续订期限，因为在会话续订过程中标识也可能更改。  
   
@@ -59,9 +45,9 @@ ms.lasthandoff: 04/28/2018
 >  在使用 `BeginOpen` 方法时，无法保证所捕获的凭据是调用该方法的进程的凭据。  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>令牌缓存允许使用过时数据的重放  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用本地安全机构 (LSA) `LogonUser` 函数，按用户名和密码验证用户身份。 由于该登录函数是开销很大的操作，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允许您缓存表示经过身份验证的用户的令牌，以提高性能。 该缓存机制保存来自 `LogonUser` 的结果，以备将来之用。 默认情况下; 禁用此机制若要启用它，将设置<xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A>属性`true`，或使用`cacheLogonTokens`属性[ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)。  
+ WCF 使用本地安全机构 (LSA)`LogonUser`函数通过用户名和密码的用户进行身份验证。 因为该登录函数是高昂的操作，WCF 允许你表示缓存令牌身份验证的用户以提高性能。 该缓存机制保存来自 `LogonUser` 的结果，以备将来之用。 默认情况下; 禁用此机制若要启用它，将设置<xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A>属性`true`，或使用`cacheLogonTokens`属性[ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)。  
   
- 可以为已缓存的令牌设置生存时间 (TTL)，方法是将 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> 属性设置为 <xref:System.TimeSpan> 或使用 `cachedLogonTokenLifetime` 元素的 `userNameAuthentication` 属性；默认值为 15 分钟。 请注意，令牌缓存后，提供相同的用户名和密码的任何客户端便可以使用该令牌，即使用户帐户已从 Windows 中删除或其密码已更改，也是如此。 在 TTL 过期且从缓存中删除令牌之前，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允许（可能有恶意的）用户进行身份验证。  
+ 可以为已缓存的令牌设置生存时间 (TTL)，方法是将 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> 属性设置为 <xref:System.TimeSpan> 或使用 `cachedLogonTokenLifetime` 元素的 `userNameAuthentication` 属性；默认值为 15 分钟。 请注意，令牌缓存后，提供相同的用户名和密码的任何客户端便可以使用该令牌，即使用户帐户已从 Windows 中删除或其密码已更改，也是如此。 直到 TTL 过期，并且从缓存中删除该令牌，WCF 允许 （可能是恶意的） 用户进行身份验证。  
   
  缓解此问题：通过将 `cachedLogonTokenLifetime` 值设置为用户所需的最短时间间隔，减小攻击时限。  
   
@@ -91,7 +77,7 @@ ms.lasthandoff: 04/28/2018
   
 -   服务的计算机包含具有相同公钥的两个或多个证书，但是这些证书包含不同的信息。  
   
--   服务检索一个与主题密钥标识符匹配的证书，但是该证书不是客户端打算使用的证书。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 收到消息和验证签名时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将非预期 X.509 证书中的信息映射到与客户端预期的不同且有可能从其提升的一组声明。  
+-   服务检索一个与主题密钥标识符匹配的证书，但是该证书不是客户端打算使用的证书。 当 WCF 收到消息和验证签名时，WCF 会将非预期 X.509 证书中的信息映射到一组声明的不同且可能提升从客户端的预期。  
   
  若要缓解此问题，请以其他方式引用 X.509 证书，如使用 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>。  
   

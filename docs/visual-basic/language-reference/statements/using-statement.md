@@ -1,12 +1,6 @@
 ---
 title: Using 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.using
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ed9cc0d04c89eac1fe342a0924dd89bb1e258a11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 725eeb42dc5462022ac1a021c537d701929398ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-statement-visual-basic"></a>Using 语句 (Visual Basic)
 声明的开头`Using`阻止并根据需要获取该块控制的系统资源。  
@@ -42,13 +33,13 @@ End Using
 |`resourcelist`|如果未提供所需`resourceexpression`。 该列表的一个或多个系统资源`Using`阻止控件，并用逗号隔开。|  
 |`resourceexpression`|如果未提供所需`resourcelist`。 引用变量或表达式引用系统资源，以控制此`Using`块。|  
 |`statements`|可选。 语句块的`Using`块将运行。|  
-|`End Using`|必需。 终止的定义`Using`块，并释放它所控制的所有资源。|  
+|`End Using`|必须的。 终止的定义`Using`块，并释放它所控制的所有资源。|  
   
  在每个资源`resourcelist`部件具有以下语法和部件：  
   
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
- - 或 -  
+ -或-  
   
  `resourcename As resourcetype = resourceexpression`  
   
@@ -56,11 +47,11 @@ End Using
   
 |术语|定义|  
 |---|---|  
-|`resourcename`|必需。 指系统资源的引用变量，`Using`阻止控件。|  
+|`resourcename`|必须的。 指系统资源的引用变量，`Using`阻止控件。|  
 |`New`|如果存在`Using`语句获取资源。 如果你已获取资源，使用第二个语法替代项。|  
-|`resourcetype`|必需。 资源的类。 类必须实现<xref:System.IDisposable>接口。|  
+|`resourcetype`|必须的。 资源的类。 类必须实现<xref:System.IDisposable>接口。|  
 |`arglist`|可选。 你传递给构造函数来创建的实例的自变量列表的`resourcetype`。 请参阅[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`resourceexpression`|必需。 为满足的要求的系统资源引用变量或表达式`resourcetype`。 如果你使用第二个语法替代方法，您必须在将控制权传递给之前获取资源`Using`语句。|  
+|`resourceexpression`|必须的。 为满足的要求的系统资源引用变量或表达式`resourcetype`。 如果你使用第二个语法替代方法，您必须在将控制权传递给之前获取资源`Using`语句。|  
   
 ## <a name="remarks"></a>备注  
  有时，代码需要一个非托管的资源，如文件句柄、 COM 包装器或 SQL 连接。 A`Using`块时你的代码已完成，但它们都可确保对一个或多个此类资源处置。 这使它们可供其他代码使用。  
@@ -117,7 +108,7 @@ End Try
   
  [!code-vb[VbVbalrStatements#50](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/using-statement_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IDisposable>  
  [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
  [如何：释放系统资源](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)

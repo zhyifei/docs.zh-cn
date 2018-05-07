@@ -1,31 +1,17 @@
 ---
 title: 负载平衡
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe13c4aee41cd7af188ccaea77b3c0af07603e2c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="load-balancing"></a>负载平衡
-提高 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序功能的方法之一是通过将它们部署到负载平衡的服务器场来扩展它们。 使用标准的负载平衡技术，包括诸如 Windows 网络负载平衡这样的软件负载平衡器以及基于硬件的负载平衡设备，可以使 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序实现负载平衡。  
+一种方法来增加 Windows Communication Foundation (WCF) 应用程序的容量是扩展通过将它们部署到的负载平衡服务器场。 使用标准的负载均衡技术，包括诸如 Windows 网络负载均衡这样的软件负载均衡器以及基于硬件的负载均衡设备，可以使 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序实现负载均衡。  
   
  以下各节讨论对使用各种系统提供的绑定生成的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序实现负载平衡时的注意事项。  
   

@@ -1,13 +1,6 @@
 ---
-title: "如何：绑定到 Web 服务"
-ms.custom: 
+title: 如何：绑定到 Web 服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b035f5922722a05759ff1e13514cc760a57d668
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75d9d5b6981f868c7a172edd7f23cf923fedd525
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-a-web-service"></a>如何：绑定到 Web 服务
 此示例演示如何将绑定到 Web 服务方法调用返回的对象。  
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  从**项目**菜单上，单击**添加 Web 引用**。  
   
-3.  在对话框中，设置**URL**到[http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)。  
+3.  在对话框中，设置**URL**到[ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)。  
   
 4.  按**转**然后**添加引用**。  
   

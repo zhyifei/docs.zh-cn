@@ -1,12 +1,6 @@
 ---
 title: Array Dimensions in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - dimensions, arrays
 - arrays [Visual Basic], dimensions
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21e170ca5942862a26e05428fffaea7d1e875e19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf295288dd034d744dceb71b5c58278be5cc2a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 A*维度*是在其中您可以改变数组的元素的规范方向。 保存总销量，每月的每一天的数组具有一个维度 （每月天数）。 保存总销量由部门的每一天的月份的数组具有两个维度 （部门数和每月天数）。 调用的维数的数组具有其*级别*。  
@@ -35,13 +26,13 @@ A*维度*是在其中您可以改变数组的元素的规范方向。 保存总�
   
  下图显示具有不同的秩的数组的概念结构。 每个元素的插图内显示访问它的索引值。 例如，可以通过指定索引访问二维数组的第二行的第一个元素`(1, 0)`。  
   
- ![示意图一个 &#45; 的二维数组](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
+ ![一个示意图&#45;维数组](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
 一维数组  
   
- ![示意图两个 &#45; 的二维数组](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
+ ![两个图形关系图&#45;维数组](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
 二维数组  
   
- ![示意图三个 &#45; 的二维数组](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
+ ![三个示意图&#45;维数组](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
 三维数组  
   
 ### <a name="one-dimension"></a>一个维度  
@@ -97,6 +88,6 @@ Dim salesAmounts(4, 11, 30) As Double
 > [!NOTE]
 >  你可以创建一个数组，而不使用`Dim`语句或`New`子句。 例如，你可以调用<xref:System.Array.CreateInstance%2A>方法或另一个组件可以通过你的代码以这种方式创建的数组。 这样的数组可以下限为非 0。 始终可以通过使用测试维度的下限<xref:System.Array.GetLowerBound%2A>方法或`LBound`函数。  
   
-## <a name="see-also"></a>另请参阅  
- [阵列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+## <a name="see-also"></a>请参阅  
+ [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [数组疑难解答](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

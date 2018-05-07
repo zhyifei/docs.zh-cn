@@ -1,30 +1,18 @@
 ---
-title: "如何：创建自定义声明"
-ms.custom: 
+title: 如何：创建自定义声明
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92420b993a1959b03090181944a34a32ab500733
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c1e8886ab3d9d90b217ce79078633433458bbe4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-claim"></a>如何：创建自定义声明
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的标识模型基础结构提供了一组内置的声明类型和权限，并且提供了用来创建具有这些类型和权限的 <xref:System.IdentityModel.Claims.Claim> 实例的帮助器函数。 这些内置的声明用于对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 默认支持的客户端凭据类型中的信息进行建模。 在许多情况下，这些内置的声明足够满足需要，然而一些应用程序可能需要自定义声明。 声明由声明类型、要应用该声明的资源和在该资源上断言的权限组成。 本主题描述如何创建自定义声明。  
+标识模型基础结构在 Windows Communication Foundation (WCF) 提供一套内置的声明类型和权限的帮助器函数具有用于创建<xref:System.IdentityModel.Claims.Claim>具有这些类型和权限的实例。 这些内置的声明用于对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 默认支持的客户端凭据类型中的信息进行建模。 在许多情况下，这些内置的声明足够满足需要，然而一些应用程序可能需要自定义声明。 声明由声明类型、要应用该声明的资源和在该资源上断言的权限组成。 本主题描述如何创建自定义声明。  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>创建基于基元数据类型的自定义声明  
   

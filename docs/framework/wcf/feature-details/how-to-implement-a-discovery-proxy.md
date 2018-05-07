@@ -1,29 +1,15 @@
 ---
 title: 如何：实现发现代理
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e984a55137aec0042f8de0d69aa1310ed43a0df
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c3088da4dbd042d0022a56c28c90e2fcfbf24ba4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>如何：实现发现代理
-本主题介绍如何实现发现代理。 有关中的发现功能的详细信息[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，请参阅[WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 可以通过创建一个扩展 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象类的类来实现发现代理。 此示例中定义并使用了多个其他支持类。 `OnResolveAsyncResult`、`OnFindAsyncResult` 和 `AsyncResult`。 这些类实现 <xref:System.IAsyncResult> 接口。 有关详细信息<xref:System.IAsyncResult>请参阅[System.IAsyncResult 接口](xref:System.IAsyncResult)。
+本主题介绍如何实现发现代理。 有关发现功能在 Windows Communication Foundation (WCF) 的详细信息，请参阅[WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 可以通过创建一个扩展 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象类的类来实现发现代理。 此示例中定义并使用了多个其他支持类。 `OnResolveAsyncResult`、`OnFindAsyncResult` 和 `AsyncResult`。 这些类实现 <xref:System.IAsyncResult> 接口。 有关详细信息<xref:System.IAsyncResult>请参阅[System.IAsyncResult 接口](xref:System.IAsyncResult)。
   
  本主题分三个主要部分来讨论如何实现发现代理：  
   

@@ -1,11 +1,6 @@
 ---
-title: "参数列表 (Visual Basic)"
+title: 参数列表 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - parameters [Visual Basic], Visual Basic
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2c7190b618aa98c91b826ca7c065660d3b19c31a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 147a2501219db9f1f1c10f9cf1a81aa395b5ec2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameter-list-visual-basic"></a>参数列表 (Visual Basic)
 指定一个过程需要调用的参数。 用逗号分隔多个参数。 下面是一个参数的语法。  
@@ -51,7 +43,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
  可选。 指定的参数列表中的最后一个参数是指定的数据类型的元素的可选数组。 这样将任意数量的参数传递给过程调用的代码。  
   
  `parametername`  
- 必需。 表示参数的本地变量的名称。  
+ 必须的。 表示参数的本地变量的名称。  
   
  `parametertype`  
  如果存在`Option Strict`是`On`。 表示参数的本地变量的数据类型。  
@@ -93,7 +85,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
  [!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices.DllImportAttribute>  
  [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  

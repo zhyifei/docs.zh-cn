@@ -1,24 +1,12 @@
 ---
-title: "如何：将服务标记用于 WSDL 协定"
-ms.custom: 
+title: 如何：将服务标记用于 WSDL 协定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c36ac73ced510c1ba3b7e16c71f764c46d6c8f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 838e7affcf47742c8f372879fcb33946d53ba43f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>如何：将服务标记用于 WSDL 协定
 在某些情况下，您可能希望具有完全自包含的 COM 互操作客户端。 您要调用的服务可能不会公开 MEX 终结点，而 WCF 客户端 DLL 可能不会为 COM 互操作注册。 在这些情况下，您可以创建用于描述该服务的 WSDL 文件，并将该文件传递到 WCF 服务标记中。 本主题描述如何使用 WCF WSDL 标记调用 WCF 入门示例。  
@@ -27,7 +15,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  打开并生成 GettingStarted 示例解决方案。  
   
-2.  打开 Internet Explorer 并浏览到 http://localhost/ServiceModelSamples/Service.svc，以确保服务正在运行。  
+2.  打开 Internet Explorer 并浏览到http://localhost/ServiceModelSamples/Service.svc若要确保服务正在运行。  
   
 3.  在 Service.cs 文件中，将下面的属性添加到 CalculatorService 类中：  
   
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
   
   
-5.  为要读取的应用程序创建 WSDL 文件。 因为在步骤 3 和 4 中添加了命名空间，所以可以使用 IE 通过浏览到 http://localhost/ServiceModelSamples/Service.svc?wsdl 来查询服务的完整 WSDL 说明。 然后，将文件从 Internet Explorer 另存为 serviceWSDL.xml。 如果未在步骤 3 和 4 中指定命名空间，则从查询上述 URL 返回的 WSDL 文档将不是完整的 WSDL。 返回的 WSDL 文档将包括导入其他 WSDL 文档的多条导入语句。 您必须完成每条导入语句并生成完整的 WSDL 文档，从而将从服务返回的 WSDL 与导入的 WSDL 合并在一起。  
+5.  为要读取的应用程序创建 WSDL 文件。 因为在步骤 3 和 4 中添加了命名空间，可以使用 IE 通过浏览到查询的服务的完整 WSDL 说明http://localhost/ServiceModelSamples/Service.svc?wsdl。 然后，将文件从 Internet Explorer 另存为 serviceWSDL.xml。 如果未在步骤 3 和 4 中指定命名空间，则从查询上述 URL 返回的 WSDL 文档将不是完整的 WSDL。 返回的 WSDL 文档将包括导入其他 WSDL 文档的多条导入语句。 您必须完成每条导入语句并生成完整的 WSDL 文档，从而将从服务返回的 WSDL 与导入的 WSDL 合并在一起。  
   
 6.  打开 Visual Basic 6.0 并创建一个新的 Standard .exe 文件。 在窗体中添加一个按钮并双击该按钮，以将以下代码添加到 Click 处理程序中：  
   

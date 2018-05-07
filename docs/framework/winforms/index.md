@@ -1,30 +1,16 @@
 ---
 title: Windows 窗体
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5949bebe91767539c230ba166f9389f09dc2392b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: bb785860ed3cccbd93273805e5f2bada2f5f9c34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms"></a>Windows 窗体
 因为窗体是应用程序的基本单位，有必要思考一下它们的功能和设计。 窗体最终成为白板，作为开发成员，你要用控件进行增强以创建用户界面，并借助代码操纵数据。 为此，Visual Studio 为您提供的集成的开发环境 (IDE) 可帮助编写代码，以及丰富的控件集编写的[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。 通过使用代码补充这些控件的功能，你可轻松并快速开发所需要的解决方案。  

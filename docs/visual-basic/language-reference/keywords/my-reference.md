@@ -1,22 +1,15 @@
 ---
-title: "My 引用 (Visual Basic)"
+title: My 引用 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My feature
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9cf23a3cc435f3ddea778b368716a35dde90656c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f9940c67d86263f3a7e25823464b08f714a7645c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="my-reference-visual-basic"></a>My 引用 (Visual Basic)
 `My`功能使编程更快且更易到常用的方法、 属性和事件向您提供直观的访问。 此表列出了中包含的对象`My`，以及可以与每个执行的操作。  
@@ -34,6 +27,6 @@ ms.lasthandoff: 11/21/2017
 |访问当前用户的安全上下文。|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
 |访问当前的项目所引用的 XML Web 服务。|[My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 应用程序模型概述](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
  [使用 My 开发](../../../visual-basic/developing-apps/development-with-my/index.md)

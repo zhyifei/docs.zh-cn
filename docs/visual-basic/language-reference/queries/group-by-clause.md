@@ -1,11 +1,6 @@
 ---
-title: "Group By 子句 (Visual Basic)"
+title: Group By 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryGroupByInto
 - vb.QueryGroupBy
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b719bfa2ebe4c324acf82a03e215e481283845fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7cf688dc2e0ccd10c8bfbe5f0308f0aa808fbef0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 子句 (Visual Basic)
 对查询结果的元素进行分组。 也可用于将聚合函数应用于每个组。 分组运算基于一个或多个键。  
@@ -44,7 +36,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 -   `keyExp1`  
   
-     必需。 标识键以用于确定元素所在的组的表达式。 可以指定多个键以形成组合键。  
+     必须的。 标识键以用于确定元素所在的组的表达式。 可以指定多个键以形成组合键。  
   
 -   `keyExp2`  
   
@@ -52,13 +44,13 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 -   `aggregateList`  
   
-     必需。 标识如何对组进行聚合的一个或多个表达式。 若要标识分组结果的成员名称，请使用 `Group` 关键字，它可以采用以下任意一种形式：  
+     必须的。 标识如何对组进行聚合的一个或多个表达式。 若要标识分组结果的成员名称，请使用 `Group` 关键字，它可以采用以下任意一种形式：  
   
     ```  
     Into Group  
     ```  
   
-     - 或 -  
+     -或-  
   
     ```  
     Into <alias> = Group  
@@ -76,7 +68,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#11](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [查询](../../../visual-basic/language-reference/queries/queries.md)  
  [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  

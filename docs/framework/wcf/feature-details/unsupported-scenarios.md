@@ -1,29 +1,15 @@
 ---
 title: 不支持的方案
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: 43
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5cc4e65ce4f93a352b651203757a484a9d90a85d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
-由于各种原因，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 不支持某些特定安全方案。 例如，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 没有实现 SSPI 或 Kerberos 身份验证协议，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在该平台上不支持使用 Windows 身份验证来运行服务。 在 Windows XP Home Edition 下运行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。  
+由于各种原因，Windows Communication Foundation (WCF) 不支持某些特定安全方案。 例如， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 没有实现 SSPI 或 Kerberos 身份验证协议，并因此 WCF 不支持在该平台上使用 Windows 身份验证来运行服务。 运行 Windows XP Home Edition 下的 WCF 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。  
   
 ## <a name="impersonation-scenarios"></a>模拟方案  
   
@@ -31,7 +17,7 @@ ms.lasthandoff: 04/30/2018
  当 WCF 客户端通过模拟使用 Windows 身份验证对 WCF 服务进行异步调用时，可能会使用客户端进程的标识进行身份验证，而不是使用模拟的标识进行身份验证。  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>启用了 Windows XP 和安全上下文令牌 Cookie  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持模拟。存在下列条件时，将引发 <xref:System.InvalidOperationException>：  
+ WCF 不支持模拟和<xref:System.InvalidOperationException>存在下列条件时，将引发：  
   
 -   操作系统为 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
@@ -49,7 +35,7 @@ ms.lasthandoff: 04/30/2018
 >  上述需求是特定的。 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 创建一个产生 Windows 标识的绑定元素，但并不建立一个 SCT。 因此，在 `Required` 上，可以将其与 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 选项一起使用。  
   
 ### <a name="possible-aspnet-conflict"></a>可能发生 ASP.NET 冲突  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 都可能启用或禁用模拟。 当 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 配置设置之间可能存在冲突。 如果发生冲突，将优先采用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 设置，除非 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 属性设置为 <xref:System.ServiceModel.ImpersonationOption.NotAllowed>（在这种情况下，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模拟设置优先）。  
+ WCF 和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]都可能启用或禁用模拟。 当[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]托管 WCF 应用程序，WCF 之间可能存在冲突和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]配置设置。 如果发生冲突，WCF 设置优先，除非<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>属性设置为<xref:System.ServiceModel.ImpersonationOption.NotAllowed>，在这种情况下[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]模拟设置优先。  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>程序集加载操作可能在模拟下失败  
  如果所模拟的上下文没有加载程序集的访问权限，并且这是公共语言运行库 (CLR) 第一次试图加载该 AppDomain 的程序集，则 <xref:System.AppDomain> 会缓存失败。 随后进行的加载该程序集（或多个程序集）的尝试仍将失败，即使撤消了模拟，并且恢复之后的上下文具有加载该程序集的访问权限。 这是因为，用户上下文更改后，CLR 不会重新尝试加载。 必须重新启动应用程序域才能从失败中恢复。  
@@ -63,13 +49,13 @@ ms.lasthandoff: 04/30/2018
 ## <a name="cryptography"></a>密码  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>仅为对称密钥的使用支持 SHA-256  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持多种加密和签名摘要创建算法，可以在系统提供的绑定中使用算法组加以指定。 为了提高安全性，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持使用安全哈希算法 (SHA) 2 算法（具体说就是 SHA-256）来创建签名摘要哈希。 此版本仅在使用对称密钥（例如，Kerberos 密钥）并且没有使用 X.509 证书对消息进行签名的情况下才支持 SHA-256。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持使用 SHA-256 哈希进行 RSA 签名（在 X.509 证书中使用），因为 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 中当前缺少对 RSA-SHA256 的支持。  
+ WCF 支持多种加密和签名摘要创建算法，你可以指定在系统提供的绑定中使用算法套件加以。 为了提高安全性，WCF 支持使用安全哈希算法 (SHA) 2 算法，专门 SHA 256，来创建签名摘要哈希。 此版本仅在使用对称密钥（例如，Kerberos 密钥）并且没有使用 X.509 证书对消息进行签名的情况下才支持 SHA-256。 WCF 不支持 RSA 签名 （在 X.509 证书中使用） 用于在 rsa-sha256 由于当前不支持 sha-256 哈希[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]。  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>不支持与 FIPS 兼容的 SHA-256 哈希  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持与 FIPS 兼容的 SHA-256 哈希，因此在要求使用与 FIPS 兼容的算法的系统上，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持使用 SHA-256 的算法组。  
+ WCF 不支持 sha-256 符合 fips 标准的哈希，因此使用 sha-256 的算法套件要求使用与 FIPS 兼容算法的系统上不支持由 WCF。  
   
 ### <a name="fips-compliant-algorithms-may-fail-if-registry-is-edited"></a>如果编辑注册表，与 FIPS 兼容的算法可能失败  
- 使用本地安全设置 Microsoft 管理控制台 (MMC) 管理单元，可以启用和禁用与美国联邦信息处理标准 (FIPS) 兼容的算法。 您还可以在注册表中访问该设置。 但是，请注意，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持使用注册表来重置该设置。 如果该值设置为除 1 或 0 之外的任何值，CLR 和操作系统之间就可能出现不一致的结果。  
+ 使用本地安全设置 Microsoft 管理控制台 (MMC) 管理单元，可以启用和禁用与美国联邦信息处理标准 (FIPS) 兼容的算法。 您还可以在注册表中访问该设置。 但是，请注意，WCF 不支持使用注册表来重置该设置。 如果该值设置为除 1 或 0 之外的任何值，CLR 和操作系统之间就可能出现不一致的结果。  
   
 ### <a name="fips-compliant-aes-encryption-limitation"></a>与 FIPS 兼容的 AES 加密限制  
  与 FIPS 兼容的 AES 加密无法在标识级模拟下以双工回调模式工作。  
@@ -86,7 +72,7 @@ ms.lasthandoff: 04/30/2018
 -   使用`certutil`命令从命令行来查询证书。 有关详细信息，请参阅[证书疑难解答方面的 Certutil 任务](http://go.microsoft.com/fwlink/?LinkId=120056)。  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>如果要求使用 ASP.NET 模拟和 ASP.NET 兼容性，消息安全将失败  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持以下设置组合，因为它们可能阻止客户端身份验证的发生：  
+ WCF 不支持以下设置组合，因为它们可能阻止客户端身份验证的发生：  
   
 -   启用了 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模拟。 这通过 Web.config 文件中设置`impersonate`属性 <`identity`> 元素`true`。  
   
@@ -94,7 +80,7 @@ ms.lasthandoff: 04/30/2018
   
 -   使用了消息模式安全。  
   
- 解决办法是禁用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容模式。 或者，如果要求使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容模式，则可以禁用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模拟功能，并且改用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的模拟。 有关详细信息，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+ 解决办法是禁用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容模式。 或者，如果[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]兼容性模式下是必需的禁用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]模拟功能，并改为使用提供 WCF 模拟。 有关详细信息，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6 文本地址失败  
  当客户端和服务位于同一台计算机上，并且为服务使用了 IPv6 文本地址时，安全请求将失败。  
@@ -102,7 +88,7 @@ ms.lasthandoff: 04/30/2018
  如果服务和客户端位于不同的计算机上，IPv6 文本地址有效。  
   
 ## <a name="wsdl-retrieval-failures-with-federated-trust"></a>涉及联合信任的 WSDL 检索失败问题  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 要求联合信任链中的每个节点都恰好有一个对应的 WSDL 文档。 指定终结点时，务必不要设置循环。 可能导致循环的一种情形是，将联合信任链的 WSDL 下载用于同一 WSDL 文档中的两个或多个链接。 可能产生此问题的一个常见方案是联合服务，其中安全令牌服务器和服务包含在同一 ServiceHost 内。  
+ WCF 联合的信任链中每个节点要求恰好一个 WSDL 文档。 指定终结点时，务必不要设置循环。 可能导致循环的一种情形是，将联合信任链的 WSDL 下载用于同一 WSDL 文档中的两个或多个链接。 可能产生此问题的一个常见方案是联合服务，其中安全令牌服务器和服务包含在同一 ServiceHost 内。  
   
  举例来说，若某个服务具有以下三个终结点地址，便可能出现此情况：  
   

@@ -1,13 +1,6 @@
 ---
 title: 继承的基础知识 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - derived classes [Visual Basic], inheritance
 - MyClass keyword [Visual Basic], using
@@ -27,14 +20,11 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4e37dabefcbda48144af910298dd4d82c13b7042
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9225e5fd9fa35ae06414018a109f66515f99363f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-basics-visual-basic"></a>继承的基础知识 (Visual Basic)
 `Inherits`语句用于声明新类，称为*派生类*基于现有类，称为*基类*。 派生的类继承，并且可以扩展属性、 方法、 事件、 字段和基类中定义的常量。 以下部分介绍了一些继承的规则并可以使用要更改的方式类修饰符继承或继承：  

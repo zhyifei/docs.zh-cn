@@ -1,14 +1,6 @@
 ---
 title: 如何：创建联合客户端
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9a52aa5c2c3af6c7288b2a375e44024195dfe1cc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5c33c26043d90d99c295b2e066c897e2cdad32d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-federated-client"></a>如何：创建联合客户端
-在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，创建的客户端*联合服务*包括三个主要步骤：  
+在 Windows Communication Foundation (WCF) 中，创建的客户端*联合服务*包括三个主要步骤：  
   
 1.  配置[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或类似的自定义绑定。 有关创建一个相应的绑定的详细信息，请参阅[如何： 创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。 或者，运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)针对元数据终结点的联合服务，以生成与联合的服务和一个或多个通信配置文件安全令牌服务。  
   

@@ -1,26 +1,17 @@
 ---
-title: "如何：使用 LINQ 调用存储过程 (Visual Basic)"
-ms.custom: 
+title: 如何：使用 LINQ 调用存储过程 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], stored procedure calls
 - stored procedures sample [Visual Basic]
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8bb7b970d42a44ad925883b7a935aae386b1f1d5
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 47ff6b354ef10de99cb6ad821e8b67b3f4205022
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>如何：使用 LINQ 调用存储过程 (Visual Basic)
 语言集成查询 (LINQ)，可以轻松地访问数据库信息，包括数据库对象，如存储过程。  
@@ -45,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  在 **“项目”** 菜单上，单击 **“添加新项”**。 选择**LINQ to SQL 类**项模板。  
   
-3.  为 `northwind.dbml` 文件命名。 单击 **“添加”**。 此时，northwind.dbml 文件打开的对象关系设计器 （O/R 设计器）。  
+3.  为 `northwind.dbml` 文件命名。 单击 **添加**。 此时，northwind.dbml 文件打开的对象关系设计器 （O/R 设计器）。  
   
 ### <a name="to-add-stored-procedures-to-the-or-designer"></a>若要将存储的过程添加到 O/R 设计器  
   

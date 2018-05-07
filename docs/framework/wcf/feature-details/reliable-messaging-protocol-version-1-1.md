@@ -1,29 +1,17 @@
 ---
-title: "可靠消息传送协议版本 1.1"
-ms.custom: 
+title: 可靠消息传送协议版本 1.1
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67df8b539109d7e4dafcbc42ad7679643767021a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ff02bc6953ec1e5030dd0b592a352b7e23ab0d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>可靠消息传送协议版本 1.1
-本主题介绍使用 HTTP 传输进行互操作所需的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WS-ReliableMessaging 2007 年 2 月（版本 1.1）协议的实现细节。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 遵循 WS ReliableMessaging 规范以及本主题中解释的约束和声明。 请注意，Ws-reliablemessaging 版本 1.1 协议实现开头[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]。  
+本主题介绍 Windows Communication Foundation (WCF) 的实现详细信息，用于 Ws-reliablemessaging 2007 年 2 月 （版本 1.1） 协议需要使用 HTTP 传输进行互操作。 WCF 遵循 WS ReliableMessaging 规范的约束和本主题中所述的说明。 请注意，Ws-reliablemessaging 版本 1.1 协议实现开头[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]。  
   
- 2007 年 2 月发布的 WS-ReliableMessaging 协议是在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中由 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> 实现的。  
+ Ws-reliablemessaging 2007 年 2 月在通过的 WCF 中实现协议<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>。  
   
  为方便起见，本主题使用以下角色：  
   
@@ -47,41 +35,41 @@ ms.lasthandoff: 12/22/2017
 ## <a name="messaging"></a>消息  
   
 ### <a name="sequence-creation"></a>序列创建  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 `CreateSequence` 和 `CreateSequenceResponse` 消息以建立可靠消息序列。 适用以下约束：  
+ WCF 实现`CreateSequence`和`CreateSequenceResponse`消息以建立可靠消息序列。 适用以下约束：  
   
--   B1101：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方与 `CreateSequence` 消息的 `ReplyTo`、`AcksTo` 和 `Offer/Endpoint` 使用相同的终结点引用。  
+-   B1101: WCF 发起程序使用相同的终结点引用作为`CreateSequence`消息的`ReplyTo`，`AcksTo`和`Offer/Endpoint`。  
   
 -   R1102：`AcksTo` 消息中的 `ReplyTo`、`Offer/Endpoint` 和 `CreateSequence` 终结点引用必须具有包含相同字符串表示的地址值，以便它们与八进制形式匹配。  
   
-    -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方在创建序列之前验证 `AcksTo`、`ReplyTo` 和 `Endpoint` 终结点引用的 URI 部分是否相同。  
+    -   WCF 响应方验证的 URI 部分`AcksTo`，`ReplyTo`和`Endpoint`创建序列之前终结点引用相等。  
   
 -   R1103：`AcksTo` 消息中的 `ReplyTo`、`Offer/Endpoint` 和 `CreateSequence` 终结点引用应该具有一组相同的引用参数。  
   
-    -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不强制而是假定 `AcksTo` 上的 `ReplyTo`、`Offer/Endpoint` 和 `CreateSequence` 终结点引用的引用参数是相同的，并将来自 `ReplyTo` 终结点应用的引用参数用于确认和相反序列消息。  
+    -   WCF 并不强制但假定该引用的参数`AcksTo`，`ReplyTo`和`Offer/Endpoint`终结点引用`CreateSequence`相同，并使用从引用参数`ReplyTo`终结点引用确认和相反序列消息。  
   
--   B1104：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方不在 `Expires` 消息中生成可选的 `Offer/Expires` 或 `CreateSequence` 元素。  
+-   B1104: WCF 发起程序不会生成可选`Expires`或`Offer/Expires`中的元素`CreateSequence`消息。  
   
--   B1105：访问 `CreateSequence` 消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方将 `Expires` 元素中的 `CreateSequence` 值用作 `Expires` 元素中的 `CreateSequenceResponse` 值。 否则，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方读取并忽略 `Expires` 和 `Offer/Expires` 值。  
+-   B1105： 访问时`CreateSequence`消息，WCF 响应方使用`Expires`中的值`CreateSequence`元素作为`Expires`中的值`CreateSequenceResponse`元素。 否则为 WCF 响应方读取并忽略`Expires`和`Offer/Expires`值。  
   
--   B1106：访问 `CreateSequenceResponse` 消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方读取可选的 `Expires` 值但不使用它。  
+-   B1106： 访问时`CreateSequenceResponse`消息，WCF 发起方读取可选`Expires`值，但不使用它。  
   
--   B1107：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方和响应方始终在 `IncompleteSequenceBehavior` 和 `CreateSequence/Offer` 元素中生成可选的 `CreateSequenceResponse` 元素。  
+-   B1107: WCF 发起方和响应方始终生成可选`IncompleteSequenceBehavior`中的元素`CreateSequence/Offer`和`CreateSequenceResponse`元素。  
   
--   B1108：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 仅使用 `DiscardFollowingFirstGap` 元素中的 `NoDiscard` 和 `IncompleteSequenceBehavior` 值。  
+-   B1108: WCF 仅使用`DiscardFollowingFirstGap`和`NoDiscard`中值`IncompleteSequenceBehavior`元素。  
   
     -   WS-ReliableMessaging 利用 `Offer` 机制建立构成会话的两个相反的相关序列。  
   
--   B1109：如果 `CreateSequence` 包含 `Offer` 元素，则单向 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方通过没有 `CreateSequenceResponse` 元素的 `Accept` 进行响应来拒绝所提供的序列。  
+-   B1109： 如果`CreateSequence`包含`Offer`元素，一种方法的 WCF 响应方拒绝所提供的序列由响应`CreateSequenceResponse`而无需`Accept`元素。  
   
--   B1110：如果可靠消息响应方拒绝所提供的序列，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方查找新建立的序列中的错误。  
+-   B1110： 如果可靠消息响应方拒绝所提供的序列，WCF 发起程序错误新建立的序列。  
   
--   B1111：如果 `CreateSequence` 不包含 `Offer` 元素，则双向 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方通过 `CreateSequenceRefused` 错误进行响应来拒绝所提供的序列。  
+-   B1111： 如果`CreateSequence`不包含`Offer`元素，双向 WCF 响应方拒绝所提供的序列由响应`CreateSequenceRefused`错误。  
   
 -   R1112：使用 `Offer` 机制建立两个相反序列时，`[address]` 终结点引用的 `CreateSequenceResponse/Accept/AcksTo` 属性必须与 `CreateSequence` 消息的目标 URI 逐字节匹配。  
   
 -   R1113：使用 `Offer` 机制建立两个相反序列时，从发起方流向响应方的两个序列上的所有消息都必须发送到同一终结点引用。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 WS-ReliableMessaging 在发起方和响应方之间建立可靠的会话。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-ReliableMessaging 实现为单向、请求-答复和全双工消息模式提供了可靠的会话。 `Offer` 和 `CreateSequence` 上的 WS-ReliableMessaging `CreateSequenceResponse` 机制允许您建立两个相关的相反序列，并提供适合于所有消息终结点的会话协议。 由于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为这样的会话提供了安全保证（包括会话完整性的端到端保护），因此确保发往同一方的消息到达同一目标是很实用的。 这还允许应用程序消息上序列确认的“非法携带”。 因此，约束 R1102、 R1112 和 R1113 适用于[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
+ WCF 使用 Ws-reliablemessaging 在发起方和响应方之间建立可靠会话。 WCF 的 Ws-reliablemessaging 实现提供可靠会话为单向、 请求-答复和完全双工消息传递模式。 `Offer` 和 `CreateSequence` 上的 WS-ReliableMessaging `CreateSequenceResponse` 机制允许您建立两个相关的相反序列，并提供适合于所有消息终结点的会话协议。 WCF 提供了安全保证，包括会话完整性的端到端保护会话，因为它是可行以确保旨在供相同方的消息到达同一目标的。 这还允许应用程序消息上序列确认的“非法携带”。 因此，约束 R1102、 R1112 和 R1113 应用到 WCF。  
   
  `CreateSequence` 消息的一个示例。  
   
@@ -136,9 +124,9 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ### <a name="closing-a-sequence"></a>关闭序列  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将 `CloseSequence` 和 `CloseSequenceResponse` 消息用于可靠消息源启动的关闭。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可靠消息目标不会启动关闭，且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可靠消息源不支持可靠消息目标启动的关闭。 适用以下约束：  
+ WCF 使用`CloseSequence`和`CloseSequenceResponse`的可靠消息源启动的关闭消息。 WCF 可靠消息目标不会启动关闭和 WCF 可靠消息源不支持可靠消息目标启动的关闭。 适用以下约束：  
   
--   B1201：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可靠消息源始终发送 `CloseSequence` 消息以关闭序列。  
+-   B1201: WCF 可靠消息源始终发送`CloseSequence`消息来关闭序列。  
   
 -   B1202：可靠消息源在发送 `CloseSequence` 消息之前，等待确认全部的序列消息。  
   
@@ -146,7 +134,7 @@ ms.lasthandoff: 12/22/2017
   
 -   R1204：可靠消息目标不得通过发送 `CloseSequence` 消息启动关闭。  
   
--   B1205：接收到 `CloseSequence` 消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可靠消息源认为序列不完整并发送错误。  
+-   ： B1205 接收`CloseSequence`消息，WCF 可靠消息源认为序列不完整并发送错误。  
   
  `CloseSequence` 消息的一个示例。  
   
@@ -189,15 +177,15 @@ Example CloseSequenceResponse message:
 ```  
   
 ### <a name="sequence-termination"></a>序列终止  
- 在完成 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 握手后 `TerminateSequence/TerminateSequenceResponse` 主要使用 `CloseSequence/CloseSequenceResponse` 握手。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可靠消息目标不启动终止，且可靠消息源不支持可靠消息目标启动的终止。 适用以下约束：  
+ WCF 主要使用`TerminateSequence/TerminateSequenceResponse`握手完成之后`CloseSequence/CloseSequenceResponse`握手。 WCF 可靠消息目标不启动终止和可靠消息源不支持可靠消息目标启动的终止。 适用以下约束：  
   
--   B1301：在成功完成 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 握手后，`TerminateSequence` 发起方仅发送 `CloseSequence/CloseSequenceResponse` 消息。  
+-   B1301: WCF 发起方仅发送`TerminateSequence`成功完成后的消息`CloseSequence/CloseSequenceResponse`握手。  
   
--   R1302：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 验证 `LastMsgNumber` 元素在给定序列的所有 `CloseSequence` 和 `TerminateSequence` 消息中是否一致。 这意味着 `LastMsgNumber` 并不存在于所有 `CloseSequence` 和 `TerminateSequence` 消息上，或者它存在于所有 `CloseSequence` 和 `TerminateSequence` 消息上且完全相同。  
+-   R1302: WCF 验证`LastMsgNumber`元素是一致的所有`CloseSequence`和`TerminateSequence`给定序列的消息。 这意味着 `LastMsgNumber` 并不存在于所有 `CloseSequence` 和 `TerminateSequence` 消息上，或者它存在于所有 `CloseSequence` 和 `TerminateSequence` 消息上且完全相同。  
   
 -   B1303：在 `TerminateSequence` 握手后收到 `CloseSequence/CloseSequenceResponse` 消息时，可靠消息目标通过 `TerminateSequenceResponse` 消息进行响应。 由于可靠消息源在发送 `TerminateSequence` 消息之前具有最终确认，因此可靠消息目标可毫无疑问地知道序列将结束，并立即回收资源。  
   
--   B1304：在 `TerminateSequence` 握手之前收到 `CloseSequence/CloseSequenceResponse` 消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可靠消息目标通过 `TerminateSequenceResponse` 消息进行响应。 如果可靠消息目标确定序列中没有不一致之处，则可靠消息目标将在回收资源之前等待应用程序目标指定的时间，以便客户端有机会接收最终确认。 否则，可靠消息目标立即回收资源，并通过引发 `Faulted` 事件向应用程序目标指出序列结束但存有疑问。  
+-   B1304： 在接收时`TerminateSequence`消息之前`CloseSequence/CloseSequenceResponse`握手，WCF 可靠消息目标通过`TerminateSequenceResponse`消息。 如果可靠消息目标确定序列中没有不一致之处，则可靠消息目标将在回收资源之前等待应用程序目标指定的时间，以便客户端有机会接收最终确认。 否则，可靠消息目标立即回收资源，并通过引发 `Faulted` 事件向应用程序目标指出序列结束但存有疑问。  
   
  `TerminateSequence` 消息的一个示例。  
   
@@ -242,7 +230,7 @@ Example TerminateSequenceResponse message:
 ### <a name="sequences"></a>序列  
  以下是适用于序列的约束的列表：  
   
--   B1401:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]生成，并访问序列号不高于`xs:long`的最大非独占值，9223372036854775807。  
+-   B1401:WCF 生成，并访问序列号不高于`xs:long`的最大非独占值，9223372036854775807。  
   
  `Sequence` 标头的一个示例。  
   
@@ -254,7 +242,7 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="request-acknowledgement"></a>请求确认  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将 `AckRequested` 头用作“保持活动状态”机制。  
+ WCF 使用`AckRequested`标头作为保持活动状态的机制。  
   
  `AckRequested` 标头的一个示例。  
   
@@ -265,11 +253,11 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将“非法携带”机制用于在 WS-Reliable Messaging 中提供的序列确认。 适用以下约束：  
+ WCF 将"非法携带"机制用于在 Ws-reliable Messaging 中提供的序列确认。 适用以下约束：  
   
 -   R1601： 两个相反序列建立时使用`Offer`机制，`SequenceAcknowledgement`标头可能包含在传输到目标接收方的任何应用程序消息。 远程终结点必须能够访问非法携带的 `SequenceAcknowledgement` 标头。  
   
--   B1602：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不生成包含 `SequenceAcknowledgement` 元素的 `Nack` 标题。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 验证每个 `Nack` 元素都包含一个序列号；如果不包含序列号，则忽略 `Nack` 元素和值。  
+-   B1602: WCF 不会生成`SequenceAcknowledgement`标头包含`Nack`元素。 WCF 验证每个`Nack`元素包含一个序列号，但否则忽略`Nack`元素和值。  
   
  `SequenceAcknowledgement` 标头的一个示例。  
   
@@ -281,11 +269,11 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="ws-reliablemessaging-faults"></a>WS-ReliableMessaging 错误  
- 下面列出了适用 WS-ReliableMessaging 错误的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现的约束。 适用以下约束：  
+ 下面是适用于 Ws-reliablemessaging 错误的 WCF 实现的约束的列表。 适用以下约束：  
   
--   B1701:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]不会生成`MessageNumberRollover`错误。  
+-   B1701: WCF 不会生成`MessageNumberRollover`错误。  
   
--   B1702：对于 SOAP 1.2，当服务终结点达到其连接限制而无法处理新连接时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成嵌套的 `CreateSequenceRefused` 错误子代码 `netrm:ConnectionLimitReached`，如以下示例所示。  
+-   B1702： 通过 SOAP 1.2 时的服务终结点达到其连接限制，因此无法处理新连接时，WCF 会生成嵌套`CreateSequenceRefused`错误子代码`netrm:ConnectionLimitReached`，下面的示例中所示。  
   
 ```xml  
 <s:Envelope>  
@@ -312,9 +300,9 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="ws-addressing-faults"></a>WS-Addressing 错误  
- 由于 WS-ReliableMessaging 使用 WS-Addressing，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-ReliableMessaging 实现可能会生成并传输 WS-Addressing 错误。 本节介绍 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在 WS-ReliableMessaging 层上显式生成并传输的 WS-Addressing 错误：  
+ 由于 Ws-reliablemessaging 使用 Ws-addressing，WCF Ws-reliablemessaging 实现可能会生成并传输 Ws-addressing 错误。 本部分介绍 WCF 显式生成并在 Ws-reliablemessaging 层上传输的 Ws-addressing 错误：  
   
--   B1801:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]生成并传输`Message Addressing Header Required`错误下列情况之一时：  
+-   B1801:WCF 生成并传输`Message Addressing Header Required`错误下列情况之一时：  
   
     -   `CreateSequence``CloseSequence` 或 `TerminateSequence` 消息缺少 `MessageId` 头。  
   
@@ -322,26 +310,26 @@ Example TerminateSequenceResponse message:
   
     -   `CreateSequenceResponse`、`CloseSequenceResponse` 或 `TerminateSequenceResponse` 消息缺少 `RelatesTo` 头。  
   
--   B1802:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]生成并传输`Endpoint Unavailable`故障，用于指示侦听，没有终结点可以处理基于中的寻址标头检查序列`CreateSequence`消息。  
+-   B1802:WCF 生成并传输`Endpoint Unavailable`故障，用于指示侦听，没有终结点可以处理基于中的寻址标头检查序列`CreateSequence`消息。  
   
 ## <a name="protocol-composition"></a>协议组合  
   
 ### <a name="composition-with-ws-addressing"></a>与 WS-Addressing 组合  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持 WS-Addressing 的两种版本：WS-Addressing 2004/08 [WS-ADDR] 以及 W3C WS-Addressing 1.0 建议 [WS-ADDR-CORE] 和 [WS-ADDR-SOAP]。  
+ WCF 支持 Ws-addressing 的两个版本： Ws-addressing 2004/08 [WS-ADDR] 以及 W3C Ws-addressing 1.0 建议 [WS ADDR 核] 和 [WS ADDR SOAP]。  
   
- 尽管 WS-ReliableMessaging 规范仅提及 WS-Addressing 2004/08，但是它不限制要使用的 WS-Addressing 版本。 下面列出了适用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的约束：  
+ 尽管 WS-ReliableMessaging 规范仅提及 WS-Addressing 2004/08，但是它不限制要使用的 WS-Addressing 版本。 下面是适用于 WCF 的约束的列表：  
   
 -   R2101：WS-Addressing 2004/08 和 WS-Addressing 1.0 都可以与 WS-Reliable Messaging 一起使用。  
   
 -   R2102：在整个的给定 WS-ReliableMessaging 序列或通过使用 `Offer` 机制关联的一对相反序列中，必须使用 WS-Addressing 的单个版本。  
   
 ### <a name="composition-with-soap"></a>与 SOAP 组合  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持将 SOAP 1.1 和 SOAP 1.2 与 WS-Reliable Messaging 一起使用。  
+ WCF 支持 SOAP 1.1 和 SOAP 1.2 与 Ws-reliable Messaging 的使用。  
   
 ### <a name="composition-with-ws-security-and-ws-secureconversation"></a>与 WS-Security 和 WS-SecureConversation 组合  
- 通过使用安全传输 (HTTPS)、与 WS-Security 的组合以及与 WS-Secure Conversation 的组合，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了对 WS-ReliableMessaging 序列的保护。 WS-ReliableMessaging 1.1 协议、WS-Security 1.1 和 WS-Secure Conversation 1.3 协议应该一起使用。 下面列出了适用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的约束：  
+ WCF 通过使用 Ws-secure Conversation 安全传输协议 (HTTPS)、 与 Ws-security、 组合和组合提供了对 Ws-reliablemessaging 序列的保护。 WS-ReliableMessaging 1.1 协议、WS-Security 1.1 和 WS-Secure Conversation 1.3 协议应该一起使用。 下面是适用于 WCF 的约束的列表：  
   
--   R2301：为了保护单个消息的完整性和机密性以及 WS-ReliableMessaging 序列的完整性，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 要求必须使用 WS-Secure Conversation。  
+-   R2301： 为了保护单个消息的完整性除了 Ws-reliablemessaging 序列的完整性和保密性，WCF 需要必须使用 Ws-secure Conversation。  
   
 -   R2302:AWS-必须建立 Ws-reliablemessaging sequence(s) 前建立安全对话会话。  
   
@@ -349,7 +337,7 @@ Example TerminateSequenceResponse message:
   
 -   B2304:WS-ReliableMessaging 序列或一对相关的反向序列始终被绑定到单个 Ws-secureconversation 会话。  
   
--   R2305：与 WS-Secure Conversation 组合时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方要求 `CreateSequence` 消息包含 `wsse:SecurityTokenReference` 元素和 `wsrm:UsesSequenceSTR` 头。  
+-   R2305： 与 Ws-secure Conversation 的组合，当 WCF 响应方要求`CreateSequence`消息包含`wsse:SecurityTokenReference`元素和`wsrm:UsesSequenceSTR`标头。  
   
  `UsesSequenceSTR` 标头的一个示例。  
   
@@ -358,31 +346,31 @@ Example TerminateSequenceResponse message:
 ```  
   
 ### <a name="composition-with-ssltls-sessions"></a>与 SSL/TLS 会话组合  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持与 SSL/TLS 会话组合：  
+ WCF 不支持与 SSL/TLS 会话组合：  
   
--   B2401：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不生成 `wsrm:UsesSequenceSSL` 头。  
+-   B2401: WCF 不会生成`wsrm:UsesSequenceSSL`标头。  
   
--   R2402：可靠消息发起方不得将包含 `CreateSequence` 头的 `wsrm:UsesSequenceSSL` 消息发送到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方。  
+-   R2402： 可靠消息发起方必须发送`CreateSequence`消息`wsrm:UsesSequenceSSL`给 WCF 响应方的标头。  
   
 ### <a name="composition-with-ws-policy"></a>与 WS-Policy 组合  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持 WS-Policy 的两种版本：WS-Policy 1.2 和 WS-Policy 1.5。  
+ WCF 支持 Ws-policy 的两个版本： Ws-policy 1.2 和 Ws-policy 1.5。  
   
 ## <a name="ws-reliablemessaging-ws-policy-assertion"></a>WS-ReliableMessaging WS-Policy 断言  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 WS-ReliableMessaging WS-Policy 断言 `wsrm:RMAssertion` 描述终结点功能。 下面列出了适用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的约束：  
+ WCF 使用 Ws-reliablemessaging Ws-policy 断言`wsrm:RMAssertion`描述终结点功能。 下面是适用于 WCF 的约束的列表：  
   
--   B3001：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将 `wsrmn:RMAssertion` WS-Policy 断言附加到 `wsdl:binding` 元素。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同时支持附加到 `wsdl:binding` 和 `wsdl:port` 元素。  
+-   B3001: WCF 将附加`wsrmn:RMAssertion`到 Ws-policy 断言`wsdl:binding`元素。 WCF 同时支持附加到`wsdl:binding`和`wsdl:port`元素。  
   
--   B3002：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 从不生成 `wsp:Optional` 标记。  
+-   B3002: WCF 永远不会生成`wsp:Optional`标记。  
   
--   B3003：访问 `wsrmp:RMAssertion` WS-Policy 断言时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 忽略 `wsp:Optional` 标记并将 WS-RM 策略视为强制。  
+-   B3003： 访问时`wsrmp:RMAssertion`Ws-policy 断言，WCF 将忽略`wsp:Optional`标记并将 WS-RM 策略视为强制。  
   
--   R3004：由于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不与 SSL/TLS 会话组合，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不接受指定 `wsrmp:SequenceTransportSecurity` 的策略。  
+-   R3004: WCF 未构成与 SSL/TLS 会话，因为 WCF 不接受指定的策略`wsrmp:SequenceTransportSecurity`。  
   
--   B3005：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 始终生成 `wsrmp:DeliveryAssurance` 元素。  
+-   B3005: WCF 始终生成`wsrmp:DeliveryAssurance`元素。  
   
--   B3006：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 始终指定 `wsrmp:ExactlyOnce` 传递确定性。  
+-   B3006: WCF 始终指定`wsrmp:ExactlyOnce`传递保证。  
   
--   B3007:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]生成并读取 Ws-reliablemessaging 断言的以下属性并提供有关对其进行控制[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableSessionBindingElement`:  
+-   B3007: WCF 生成并读取 Ws-reliablemessaging 断言的以下属性和对其进行控制了 WCF`ReliableSessionBindingElement`:  
   
     -   `netrmp:InactivityTimeout`  
   
@@ -407,11 +395,11 @@ Example TerminateSequenceResponse message:
     ```  
   
 ## <a name="flow-control-ws-reliablemessaging-extension"></a>流控制 WS-ReliableMessaging 扩展  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 WS-ReliableMessaging 扩展性提供对序列消息流的其他可选的更紧密控制。  
+ WCF 使用 Ws-reliablemessaging 扩展性提供对序列消息流的可选更紧密控制。  
   
- 通过设置启用流控制`ReliableSessionBindingElement`的`FlowControlEnabled``boolean`属性`true`。 下面列出了适用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的约束：  
+ 通过设置启用流控制`ReliableSessionBindingElement`的`FlowControlEnabled``boolean`属性`true`。 下面是适用于 WCF 的约束的列表：  
   
--   B4001：启用可靠消息流控制时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在 `netrm:BufferRemaining` 头的元素扩展性中生成 `SequenceAcknowledgement` 元素，如下面的示例所示。  
+-   B4001： 启用可靠消息传递流控制时，WCF 生成`netrm:BufferRemaining`元素的元素扩展性中`SequenceAcknowledgement`标头，如下面的示例中所示。  
   
     ```xml  
     <wsrm:SequenceAcknowledgement>  
@@ -421,16 +409,16 @@ Example TerminateSequenceResponse message:
     </wsrm:SequenceAcknowledgement>  
     ```  
   
--   B4002：甚至在启用可靠消息流控制时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也不要求 `netrm:BufferRemaining` 标头中包含 `SequenceAcknowledgement` 元素。  
+-   B4002： 甚至时启用可靠消息传递流控制时，WCF 不需要`netrm:BufferRemaining`中的元素`SequenceAcknowledgement`标头。  
   
--   B4003：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可靠消息目标使用 `netrm:BufferRemaining` 指示它可以缓冲多少条新消息。  
+-   B4003: WCF 可靠消息目标使用`netrm:BufferRemaining`以指示多少条新消息它可以缓冲。  
   
--   启用 B4004:When 可靠消息传递流控制时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]可靠消息源使用的值`netrm:BufferRemaining`限制消息传输。  
+-   启用 B4004:When 可靠消息传递流控制时，WCF 可靠消息源使用的值`netrm:BufferRemaining`限制消息传输。  
   
--   B4005：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成介于 0 和 4096（包括这两个值）之间的 `netrm:BufferRemaining` 整数值，并读取介于 0 和 `xs:int` 的 `maxInclusive` 值 214748364（包括这两个值）之间的整数值。  
+-   B4005: WCF 生成`netrm:BufferRemaining`整数值介于 0 和 4096 （含)，并读取介于 0 的整数值和`xs:int`的`maxInclusive`值 214748364 （含)。  
   
 ## <a name="message-exchange-patterns"></a>消息交换模式  
- 本节介绍 WS-ReliableMessaging 用于不同消息交换模式时 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的行为。 对于每个消息交换模式，可以考虑下面的两个部署方案：  
+ Ws-reliablemessaging 用于不同消息交换模式时，本部分将介绍 WCF 的行为。 对于每个消息交换模式，可以考虑下面的两个部署方案：  
   
 -   不可寻址的发起方：发起方位于防火墙背后；响应方只能在 HTTP 响应上将消息传递到发起方。  
   
@@ -439,97 +427,97 @@ Example TerminateSequenceResponse message:
 ### <a name="one-way-non-addressable-initiator"></a>单向、不可寻址的发起方  
   
 #### <a name="binding"></a>绑定  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通过在一个 HTTP 通道上使用一个序列的方式，提供单向消息交换模式。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 HTTP 请求将所有消息从发起方传输到响应方，并使用 HTTP 响应将所有消息从响应方传输到发起方。  
+ WCF 提供了通过一个 HTTP 通道使用一个序列的单向消息交换模式。 WCF 使用 HTTP 请求传输所有消息从发起方到响应方，并使用 HTTP 响应将所有消息从响应方到发起方传输。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 交换  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 HTTP 请求上传输没有 `CreateSequence` 元素的 `Offer` 消息，并在 HTTP 响应上期望 `CreateSequenceResponse` 消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方创建一个序列，并在 HTTP 响应上传输没有 `CreateSequenceResponse` 元素的 `Accept` 消息。  
+ WCF 发起方传输`CreateSequence`消息没有`Offer`的 HTTP 请求上的元素，且希望获得`CreateSequenceResponse`HTTP 响应上的消息。 WCF 响应方创建一个序列并传输`CreateSequenceResponse`消息没有`Accept`HTTP 响应上的元素。  
   
 #### <a name="sequenceacknowledgement"></a>SequenceAcknowledgement  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方处理除 `CreateSequence` 消息和错误消息之外的所有消息答复的确认消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方始终将 HTTP 响应上的独立确认传输到所有序列和 `AckRequested` 消息。  
+ WCF 发起方处理除之外的所有消息答复的确认`CreateSequence`消息和错误消息。 WCF 响应方始终将所有序列的 HTTP 响应上的独立确认传输和`AckRequested`消息。  
   
 #### <a name="closesequence-exchange"></a>CloseSequence 交换  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 HTTP 请求上传输 `CloseSequence` 消息，并在 HTTP 响应上期望 `CreateSequenceResponse` 消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方在 HTTP 响应上传输 `CloseSequenceResponse` 消息。  
+ WCF 发起方传输`CloseSequence`的 HTTP 请求上发送消息以及需要`CreateSequenceResponse`HTTP 响应上的消息。 WCF 响应方传输`CloseSequenceResponse`HTTP 响应上的消息。  
   
 #### <a name="terminatesequence-exchange"></a>TerminateSequence 交换  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 HTTP 请求上传输 `TerminateSequence` 消息，并在 HTTP 响应上期望 `TerminateSequenceResponse` 消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方在 HTTP 响应上传输 `TerminateSequenceResponse` 消息。  
+ WCF 发起方传输`TerminateSequence`的 HTTP 请求上发送消息以及需要`TerminateSequenceResponse`HTTP 响应上的消息。 WCF 响应方传输`TerminateSequenceResponse`HTTP 响应上的消息。  
   
 ### <a name="one-way-addressable-initiator"></a>单向、可寻址的发起方  
   
 #### <a name="binding"></a>绑定  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供一种单向消息交换模式，这种模式在一个入站和一个出站 HTTP 通道上使用一个序列。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 HTTP 请求传输所有消息。 所有 HTTP 响应的正文都为空，并且具有 HTTP 202 状态代码。  
+ WCF 提供了通过一个使用一个序列的单向消息交换模式入站和一个出站 HTTP 通道。 WCF 使用 HTTP 请求传输所有消息。 所有 HTTP 响应的正文都为空，并且具有 HTTP 202 状态代码。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 交换  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 HTTP 请求上传输没有 `CreateSequence` 元素的 `Offer` 消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方创建一个序列，并在 HTTP 请求上传输没有 `CreateSequenceResponse` 元素的 `Accept` 消息。  
+ WCF 发起方传输`CreateSequence`消息没有`Offer`的 HTTP 请求上的元素。 WCF 响应方创建一个序列并传输`CreateSequenceResponse`消息没有`Accept`的 HTTP 请求上的元素。  
   
 ### <a name="duplex-addressable-initiator"></a>双工、可寻址的发起方  
   
 #### <a name="binding"></a>绑定  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了通过一个入站和一个出站 HTTP 通道使用两个序列的完全异步的双向消息交换模式。 此消息交换模式可以与 `Request/Reply`、`Addressable` 发起方消息交换模式以有限方式混合使用。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 HTTP 请求传输所有消息。 所有 HTTP 响应的正文都为空，并且具有 HTTP 202 状态代码。  
+ WCF 提供了完全异步的双向消息交换模式使用两个序列通过一个入站和一个出站 HTTP 通道。 此消息交换模式可以与 `Request/Reply`、`Addressable` 发起方消息交换模式以有限方式混合使用。 WCF 使用 HTTP 请求传输所有消息。 所有 HTTP 响应的正文都为空，并且具有 HTTP 202 状态代码。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 交换  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 HTTP 请求上传输具有 `CreateSequence` 元素的 `Offer` 消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方确保 `CreateSequence` 具有 `Offer` 元素，然后创建一个序列并传输具有 `CreateSequenceResponse` 元素的 `Accept` 消息。  
+ WCF 发起方传输`CreateSequence`消息`Offer`的 HTTP 请求上的元素。 WCF 响应方确保`CreateSequence`具有`Offer`元素，然后创建一个序列并传输`CreateSequenceResponse`消息`Accept`元素。  
   
 #### <a name="sequence-lifetime"></a>序列生存期  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将两个序列视为一个全双工会话。  
+ WCF 将两个序列视为一个全双工会话。  
   
- 生成使一个序列出错的错误时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 期望远程终结点使这两个序列出错。 读取使一个序列出错的错误时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会使这两个序列出错。  
+ 在生成使一个序列出错的错误时，WCF 期望远程终结点中，使这两个序列。 在读取使一个序列出错的错误，WCF 错误这两个序列。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以关闭其出站序列并继续处理其入站序列上的消息。 相反，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以处理入站序列的关闭，并在其出站序列上继续发送消息。  
+ WCF 可以关闭其出站序列并继续处理其入站序列上的消息。 相反，WCF 可以处理入站序列的关闭，并继续在其出站序列上发送消息。  
   
 ### <a name="request-reply-and-one-way-non-addressable-initiator"></a>请求-答复和单向、不可寻址的发起方  
   
 #### <a name="binding"></a>绑定  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通过在一个 HTTP 通道上使用两个序列的方式，提供了单向和请求-答复消息交换模式。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 HTTP 请求将所有消息从发起方传输到响应方，并使用 HTTP 响应将所有消息从响应方传输到发起方。  
+ WCF 提供了单向和请求-答复消息交换模式使用两个序列通过在一个 HTTP 通道。 WCF 使用 HTTP 请求传输所有消息从发起方到响应方，并使用 HTTP 响应将所有消息从响应方到发起方传输。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 交换  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 HTTP 请求上传输具有 `CreateSequence` 元素的 `Offer` 消息，并在 HTTP 响应上期望 `CreateSequenceResponse` 消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方创建一个序列，并在 HTTP 响应上传输具有 `CreateSequenceResponse` 元素的 `Accept` 消息。  
+ WCF 发起方传输`CreateSequence`消息`Offer`的 HTTP 请求上的元素，且希望获得`CreateSequenceResponse`HTTP 响应上的消息。 WCF 响应方创建一个序列并传输`CreateSequenceResponse`消息`Accept`HTTP 响应上的元素。  
   
 #### <a name="one-way-message"></a>单向消息  
- 为成功完成单向消息交换，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 HTTP 请求上传输请求序列消息，并在 HTTP 响应上接收独立的 `SequenceAcknowledgement` 消息。 `SequenceAcknowledgement` 必须确认已传输的消息。  
+ 若要成功完成单向消息交换，WCF 发起方传输请求序列消息的 HTTP 请求上和接收独立`SequenceAcknowledgement`HTTP 响应上的消息。 `SequenceAcknowledgement` 必须确认已传输的消息。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方可能通过确认、错误或正文为空且具有 HTTP 202 状态代码的响应来答复请求。  
+ WCF 响应方可能通过确认、 错误或正文空且具有 HTTP 202 状态代码响应请求答复。  
   
 #### <a name="two-way-messages"></a>双向消息  
- 为了成功地完成双向消息交换协议，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 HTTP 请求上传输请求序列消息，并在 HTTP 响应上接收答复序列消息。 响应必须包含一个确认已传输的请求序列消息的 `SequenceAcknowledgement`。  
+ 若要成功地完成双向消息交换协议，WCF 发起方传输请求序列消息的 HTTP 请求上和接收 HTTP 响应上的答复序列消息。 响应必须包含一个确认已传输的请求序列消息的 `SequenceAcknowledgement`。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方可以使用应用程序答复、错误或正文为空且具有 HTTP 202 状态代码的响应来答复请求。  
+ 应用程序答复、 错误或正文空且具有 HTTP 202 状态代码的响应的请求的 WCF 响应可能答复。  
   
  由于存在单向消息和应用程序答复的计时，因此请求序列消息的序列号与响应消息的序列号不相关联。  
   
 #### <a name="retrying-replies"></a>重试答复  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 依赖于 HTTP 请求-答复关联来进行双向消息交换协议关联。 由于这一原因，在已确认请求序列消息时而不是在 HTTP 响应包含 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]、应用程序答复或错误时，`SequenceAcknowledgement` 发起方不停止重试请求序列消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方在答复与其相关的请求的 HTTP 响应上重试答复。  
+ WCF 依赖于 HTTP 请求-答复关联来进行双向消息交换协议关联。 因此，WCF 发起程序不会停止重试请求序列消息时确认请求序列消息但而是当 HTTP 响应携带`SequenceAcknowledgement`，应用程序答复或错误。 WCF 响应方重试向其在答复与其相关的请求在 HTTP 响应上的答复。  
   
 #### <a name="closesequence-exchange"></a>CloseSequence 交换  
- 收到所有单向请求序列消息的所有答复序列消息和确认后，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 HTTP 请求上传输请求序列的 `CloseSequence` 消息，并在 HTTP 响应上期望 `CloseSequenceResponse`。  
+ 收到后的所有答复序列消息和所有单向请求序列消息的确认，WCF 发起方传输`CloseSequence`HTTP 请求上的请求序列消息，并需要`CloseSequenceResponse`HTTP 响应上。  
   
- 关闭请求序列将隐式关闭答复序列。 这意味着 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 `SequenceAcknowledgement` 消息上包括答复序列的最终 `CloseSequence`，且答复序列没有 `CloseSequence` 交换。  
+ 关闭请求序列将隐式关闭答复序列。 这意味着 WCF 发起程序包括答复序列的最终`SequenceAcknowledgement`上`CloseSequence`消息和答复序列没有`CloseSequence`exchange。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方确保已确认所有答复并在 HTTP 响应上传输 `CloseSequenceResponse` 消息。  
+ WCF 响应方确保所有答复已确认并传输`CloseSequenceResponse`HTTP 响应上的消息。  
   
 #### <a name="terminatesequence-exchange"></a>TerminateSequence 交换  
- 收到 `CloseSequenceResponse` 消息后，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 HTTP 请求上传输请求序列的 `TerminateSequence` 消息，并在 HTTP 响应上期望 `TerminateSequenceResponse`。  
+ 收到后`CloseSequenceResponse`消息，WCF 发起方传输`TerminateSequence`HTTP 请求上的请求序列消息，并需要`TerminateSequenceResponse`HTTP 响应上。  
   
- 与 `CloseSequence` 交换一样，终止请求序列将隐式终止答复序列。 这意味着 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 `SequenceAcknowledgement` 消息上包括答复序列的最终 `TerminateSequence`，且答复序列没有 `TerminateSequence` 交换。  
+ 与 `CloseSequence` 交换一样，终止请求序列将隐式终止答复序列。 这意味着 WCF 发起程序包括答复序列的最终`SequenceAcknowledgement`上`TerminateSequence`消息和答复序列没有`TerminateSequence`exchange。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方在 HTTP 响应上传输 `TerminateSequenceResponse` 消息。  
+ WCF 响应方传输`TerminateSequenceResponse`HTTP 响应上的消息。  
   
 ### <a name="requestreply-addressable-initiator"></a>请求/答复、可寻址的发起方  
   
 #### <a name="binding"></a>绑定  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了通过一个入站和一个出站 HTTP 通道使用两个序列的请求-答复消息交换模式。 此消息交换模式可以与 `Duplex, Addressable` 发起方消息交换模式以有限方式混合使用。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 HTTP 请求传输所有消息。 所有 HTTP 响应的正文都为空，并且具有 HTTP 202 状态代码。  
+ WCF 提供了使用两个请求-答复消息交换模式序列通过一个入站和一个出站 HTTP 通道。 此消息交换模式可以与 `Duplex, Addressable` 发起方消息交换模式以有限方式混合使用。 WCF 使用 HTTP 请求传输所有消息。 所有 HTTP 响应的正文都为空，并且具有 HTTP 202 状态代码。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence 交换  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 HTTP 请求上传输具有 `CreateSequence` 元素的 `Offer` 消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 响应方确保 `CreateSequence` 具有 `Offer` 元素，然后创建一个序列并传输具有 `CreateSequenceResponse` 元素的 `Accept` 消息。  
+ WCF 发起方传输`CreateSequence`消息`Offer`的 HTTP 请求上的元素。 WCF 响应方确保`CreateSequence`具有`Offer`元素，然后创建一个序列并传输`CreateSequenceResponse`消息`Accept`元素。  
   
 #### <a name="requestreply-correlation"></a>请求/答复关联  
  以下内容适用于所有关联的请求和答复：  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 确保所有应用程序请求消息都具有 `ReplyTo` 终结点引用和 `MessageId`。  
+-   WCF 可确保所有应用程序请求消息都具有`ReplyTo`终结点引用和一个`MessageId`。  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将本地终结点引用作为每个应用程序请求消息的 `ReplyTo` 应用。 本地终结点引用是发起方的 `CreateSequence` 消息的 `ReplyTo` 和响应方的 `CreateSequence` 消息的 `To`。  
+-   WCF 将作为每个应用程序请求消息的应用的本地终结点引用`ReplyTo`。 本地终结点引用是发起方的 `CreateSequence` 消息的 `ReplyTo` 和响应方的 `CreateSequence` 消息的 `To`。  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 确保传入请求消息具有 `MessageId` 和 `ReplyTo`。  
+-   WCF 可确保传入的请求消息具有`MessageId`和`ReplyTo`。  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 确保所有应用程序请求消息的 `ReplyTo` 终结点引用的 URI 都与前面定义的本地终结点引用匹配。  
+-   WCF 可确保`ReplyTo`前面定义的所有应用程序请求消息的终结点引用的 URI 与匹配的本地终结点引用。  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 确保所有答复都具有遵循 `RelatesTo` 请求/答复关联规则的正确 `To` 和 `wsa` 头。
+-   WCF 可确保所有答复都具有正确`RelatesTo`和`To`标头后`wsa`请求/答复关联规则。

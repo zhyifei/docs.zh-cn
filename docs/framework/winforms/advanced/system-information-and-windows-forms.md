@@ -1,13 +1,6 @@
 ---
-title: "系统信息和 Windows 窗体"
-ms.custom: 
+title: 系统信息和 Windows 窗体
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 685a62b885469a9cac8884cc045b67bac02bea80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 727bcc53750081ae2d957527332ed3199c7d8e8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-information-and-windows-forms"></a>系统信息和 Windows 窗体
 有时很必要收集有关你的应用程序在运行以便在你的代码做出的决策的计算机的信息。 例如，你可能必须才适用时连接到特定网络域; 函数在这种情况下，你需要一种方法来确定的域和禁用该函数，如果域不存在。  

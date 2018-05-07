@@ -1,25 +1,17 @@
 ---
 title: 数组界限不能出现在类型说明符中
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30638
 - bc30638
 helpviewer_keywords:
 - BC30638
 ms.assetid: 93b654f4-70fa-4a48-baed-ffae42075550
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 770f86ca960110965b6917a22d284678ff8b6f8c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 45787db51de562f2266c587fd2bb15ef29ebefbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-bounds-cannot-appear-in-type-specifiers"></a>数组界限不能出现在类型说明符中
 数组大小不能声明为数据类型说明符的一部分。  
@@ -40,5 +32,5 @@ ms.lasthandoff: 10/18/2017
     Dim Array2() As Integer = New Integer(8) {}  
     ```  
   
-## <a name="see-also"></a>另请参阅  
- [阵列](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>请参阅  
+ [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)

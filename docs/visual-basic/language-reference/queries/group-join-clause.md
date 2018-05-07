@@ -1,11 +1,6 @@
 ---
-title: "Group Join 子句 (Visual Basic)"
+title: Group Join 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryGroupJoinIn
 - vb.QueryGroupJoinOn
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 094281b0afb34451ae8539e4eb967043b21d379c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join 子句 (Visual Basic)
 将两个集合合并为单个分层集合。 联接操作基于匹配键对。  
@@ -40,11 +32,11 @@ Group Join element [As type] In collection _
   
 |术语|定义|  
 |---|---|  
-|`element`|必需。 一个被联接集合控制变量。|  
+|`element`|必须的。 一个被联接集合控制变量。|  
 |`type`|可选。 `element` 的类型。 如果没有`type`指定的一种`element`从推断`collection`。|  
-|`collection`|必需。 集合以与位于左侧的内容的集合进行组合`Group Join`运算符。 A`Group Join`子句可以嵌套在`Join`子句或另一个`Group Join`子句。|  
-|`key1` `Equals` `key2`|必需。 标识被联接集合的键。 必须使用`Equals`运算符从被联接集合的键进行比较。 你可以通过使用组合联接条件`And`运算符来标识多个密钥。 `key1`参数必须是从左侧的内容的集合`Join`运算符。 `key2`参数必须是从右侧的集合`Join`运算符。<br /><br /> 联接条件中使用的密钥可以是包含集合中的多个项的表达式。 但是，每个键的表达式可以包含仅其各自的集合中的项。|  
-|`expressionList`|必需。 标识如何聚合该集合中元素的组的一个或多个表达式。 若要标识分组结果的成员名称，使用`Group`关键字 (`<alias> = Group`)。 还可以包含聚合函数以将其应用于该组。|  
+|`collection`|必须的。 集合以与位于左侧的内容的集合进行组合`Group Join`运算符。 A`Group Join`子句可以嵌套在`Join`子句或另一个`Group Join`子句。|  
+|`key1` `Equals` `key2`|必须的。 标识被联接集合的键。 必须使用`Equals`运算符从被联接集合的键进行比较。 你可以通过使用组合联接条件`And`运算符来标识多个密钥。 `key1`参数必须是从左侧的内容的集合`Join`运算符。 `key2`参数必须是从右侧的集合`Join`运算符。<br /><br /> 联接条件中使用的密钥可以是包含集合中的多个项的表达式。 但是，每个键的表达式可以包含仅其各自的集合中的项。|  
+|`expressionList`|必须的。 标识如何聚合该集合中元素的组的一个或多个表达式。 若要标识分组结果的成员名称，使用`Group`关键字 (`<alias> = Group`)。 还可以包含聚合函数以将其应用于该组。|  
   
 ## <a name="remarks"></a>备注  
  `Group Join`子句将基于匹配被联接集合中的键值对的两个集合合并。 生成的集合可以包含从第二个匹配从第一个集合的密钥值的集合引用的元素集合的成员。 你还可以指定要应用到分组元素从第二个集合的聚合函数。 有关聚合函数的信息，请参阅[Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
@@ -62,7 +54,7 @@ Group Join element [As type] In collection _
   
  [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [查询](../../../visual-basic/language-reference/queries/queries.md)  
  [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  

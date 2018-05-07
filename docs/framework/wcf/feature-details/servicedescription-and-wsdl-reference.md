@@ -1,36 +1,22 @@
 ---
 title: ServiceDescription 和 WSDL 引用
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7eadfaaae920071092f569fe2b8882875ed9497f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: e70d653519c13d2f40fa2a579b674893e1b7ab02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 和 WSDL 引用
-本主题描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 如何在 Web 服务描述语言 (WSDL) 文档与 <xref:System.ServiceModel.Description.ServiceDescription> 实例之间进行映射。  
+本主题介绍与 Windows Communication Foundation (WCF) 如何映射 Web 服务描述语言 (WSDL) 文档<xref:System.ServiceModel.Description.ServiceDescription>实例。  
   
 ## <a name="how-servicedescription-maps-to-wsdl-11"></a>ServiceDescription 如何映射到 WSDL 1.1  
- 可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为服务从 <xref:System.ServiceModel.Description.ServiceDescription> 实例导出 WSDL 文档。 发布元数据终结点时，将为服务自动生成 WSDL 文档。  
+ 您可以使用 WCF 导出从 WSDL 文档<xref:System.ServiceModel.Description.ServiceDescription>为你的服务的实例。 发布元数据终结点时，将为服务自动生成 WSDL 文档。  
   
  还可以使用 <xref:System.ServiceModel.Description.ServiceEndpoint> 类型从 WSDL 文档导入 <xref:System.ServiceModel.Description.ContractDescription> 实例、<xref:System.ServiceModel.Channels.Binding> 实例和 `WsdlImporter` 实例。  
   
- 由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 导出的 WSDL 文档将从外部 XML 架构文档导入使用的所有 XML 架构定义。 为服务中数据类型使用的每个目标命名空间导出单独的 XML 架构文档。 同样，为服务协定使用的每个目标命名空间导出单独的 WSDL 文档。  
+ 由 WCF，导出的 WSDL 文档导入外部 XML 架构文档中使用任何 XML 架构定义。 为服务中数据类型使用的每个目标命名空间导出单独的 XML 架构文档。 同样，为服务协定使用的每个目标命名空间导出单独的 WSDL 文档。  
   
 ### <a name="servicedescription"></a>ServiceDescription  
  <xref:System.ServiceModel.Description.ServiceDescription> 实例映射到 `wsdl:service` 元素。 <xref:System.ServiceModel.Description.ServiceDescription> 实例包含 <xref:System.ServiceModel.Description.ServiceEndpoint> 实例的集合，其中每个实例都映射到单独的 `wsdl:port` 元素。  
@@ -49,13 +35,13 @@ ms.lasthandoff: 03/26/2018
 |属性|WSDL 映射|  
 |----------------|------------------|  
 |`Name`|`wsdl:port` /@name终结点的值与`wsdl:binding`/@name终结点绑定的值。|  
-|`Address`|终结点的 `wsdl:port` 定义的地址。<br /><br /> 终结点的传输确定地址的格式。 例如，对于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的传输，则可能是 SOAP 地址或终结点引用。|  
-|`Binding`|终结点的 `wsdl:binding` 定义。<br /><br /> 与 `wsdl:binding` 定义不同，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的绑定不会与任何一个协定关联。|  
+|`Address`|终结点的 `wsdl:port` 定义的地址。<br /><br /> 终结点的传输确定地址的格式。 例如，对于 WCF 支持传输，它可能是 SOAP 地址或终结点引用。|  
+|`Binding`|终结点的 `wsdl:binding` 定义。<br /><br /> 与不同`wsdl:binding`定义，WCF 中的绑定不会与任何一个协定关联。|  
 |`Contract`|终结点的 `wsdl:portType` 定义。|  
 |`Behaviors`|实现 <xref:System.ServiceModel.Description.IWsdlExportExtension> 接口的终结点行为可以修改终结点的 `wsdl:port`。|  
   
 ### <a name="bindings"></a>绑定  
- `ServiceEndpoint` 实例的绑定实例映射到 `wsdl:binding` 定义。 `wsdl:binding` 定义与 `wsdl:portType` 绑定不同，前者必须与特定的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定义相关联，而后者独立于任何协定。  
+ `ServiceEndpoint` 实例的绑定实例映射到 `wsdl:binding` 定义。 与不同`wsdl:binding`定义，这必须是与一个特定关联`wsdl:portType`定义，WCF 绑定都独立于任何协定。  
   
  绑定由绑定元素的集合组成。 每个元素描述终结点与客户端的通信方式的某一方面。 另外，绑定还具有一个 <xref:System.ServiceModel.Channels.MessageVersion>，指示终结点的 <xref:System.ServiceModel.EnvelopeVersion> 和 <xref:System.ServiceModel.Channels.AddressingVersion>。  
   
@@ -72,10 +58,10 @@ ms.lasthandoff: 03/26/2018
  绑定的 <xref:System.ServiceModel.Channels.TransportBindingElement> 为 SOAP 绑定确定传输统一资源标识符 (URI)。  
   
 #### <a name="addressingversion"></a>AddressingVersion  
- 绑定上的 `AddressingVersion` 映射到 `wsd:port` 中使用的寻址版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持 SOAP 1.1 和 SOAP 1.2 地址以及 WS-Addressing 08/2004 和 WS-Addressing 1.0 终结点引用。  
+ 绑定上的 `AddressingVersion` 映射到 `wsd:port` 中使用的寻址版本。 WCF 支持 SOAP 1.1 和 SOAP 1.2 地址以及 Ws-addressing 08/2004年和 Ws-addressing 1.0 终结点引用。  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
- 绑定上的 `EnvelopeVersion` 映射到 `wsdl:binding` 中使用的 SOAP 的版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持 SOAP 1.1 和 SOAP 1.2 绑定。  
+ 绑定上的 `EnvelopeVersion` 映射到 `wsdl:binding` 中使用的 SOAP 的版本。 WCF 支持 SOAP 1.1 和 SOAP 1.2 绑定。  
   
 ### <a name="contracts"></a>协定  
  <xref:System.ServiceModel.Description.ContractDescription> 实例的 `ServiceEndpoint` 实例映射到 `wsdl:portType`。 `ContractDescription` 实例描述给定协定的所有操作。  
@@ -84,7 +70,7 @@ ms.lasthandoff: 03/26/2018
 |----------------|------------------|  
 |`Name`|`wsdl:portType` /@name协定的值。|  
 |`Namespace`|`wsdl:portType` 定义的 targetNamespace。|  
-|`SessionMode`|`wsdl:portType` /@msc:usingSession协定的值。 此属性是 WSDL 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 扩展。|  
+|`SessionMode`|`wsdl:portType` /@msc:usingSession协定的值。 此属性是 WSDL 1.1 的 WCF 扩展。|  
 |`Operations`|协定的 `wsdl:operation` 定义。|  
   
 ### <a name="operations"></a>操作  
@@ -96,8 +82,8 @@ ms.lasthandoff: 03/26/2018
 |----------------|------------------|  
 |`Name`|`wsdl:portType` / `wsdl:operation` /@name操作的值。|  
 |`ProtectionLevel`|附加到此操作的 `wsdl:binding/wsdl:operation` 消息的安全策略中的保护断言。|  
-|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating操作的值。 此属性是 WSDL 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 扩展。|  
-|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating操作的值。 此属性是 WSDL 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 扩展。|  
+|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating操作的值。 此属性是 WSDL 1.1 的 WCF 扩展。|  
+|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating操作的值。 此属性是 WSDL 1.1 的 WCF 扩展。|  
 |`Messages`|`wsdl:portType` / `wsdl:operation` / `wsdl:input`和`wsdl:portType` / `wsdl:operation` / `wsdl:output`操作的消息。|  
 |`Faults`|`wsdl:portType` / `wsdl:operation` / `wsdl:fault`定义，则为该操作。|  
 |`Behaviors`|`DataContractSerializerOperationBehavior` 和 `XmlSerializerOperationBehavior` 处理操作绑定和操作消息。|  
@@ -164,5 +150,5 @@ ms.lasthandoff: 03/26/2018
 |`DetailType`|详细消息部分所指向的元素的 XML 架构类型。|  
 |`Name, ContractDescription.Name, OperationDescription.Name,`|用于派生`wsdl:message`/@name错误消息的值。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Description>

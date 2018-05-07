@@ -1,27 +1,15 @@
 ---
-title: "从 DataAdapter 填充数据集"
-ms.custom: 
+title: 从 DataAdapter 填充数据集
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c0991398a28e491d381d10dea8a14ed463c67c89
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ced280be0fa14077be893c59596ed65b424172c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>从 DataAdapter 填充数据集
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> 是数据的内存驻留表示形式，它提供了独立于数据源的一致关系编程模型。 `DataSet` 表示整个数据集，其中包含表、约束和表之间的关系。 由于 `DataSet` 独立于数据源，因此 `DataSet` 可以包含应用程序本地的数据，也可以包含来自多个数据源的数据。 与现有数据源的交互通过 `DataAdapter`来控制。  
@@ -33,7 +21,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  使用 `DataAdapter` 检索表的全部内容会花费些时间，尤其是在表中有很多行时。 这是因为访问数据库，定位和处理数据，然后将数据传输到客户端是需要很长时间的。 将表中全部内容提取到客户端还会在服务器上锁定所有行。 若要提高性能，您可以使用 `WHERE` 子句使返回客户端的行数大为减少。 还可以通过只显式列出 `SELECT` 语句要求的列减少返回到客户端的数据量。 另一种好的变通方法是以批次检索行（例如一次检索几百行），并且在客户端完成当前批次后只检索下一批次。  
   
- `Fill` 方法使用 `DataReader` 对象来隐式地返回用于在 `DataSet`中创建表的列名称和类型，以及用于填充 `DataSet`中的表行的数据。 表和列仅在不存在时才创建；否则， `Fill` 将使用现有的 `DataSet` 架构。 列类型，作为创建[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]类型中的表根据[在 ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。 除非数据源中存在主键且 `DataAdapter`**来控制。**`MissingSchemaAction` 设置为 `MissingSchemaAction`**来控制。**`AddWithKey`来控制。 如果 `Fill` 发现某个表存在主键，对于主键列的值与从数据源返回的行的主键列的值匹配的行，将使用数据源中的数据重写 `DataSet` 中的数据。 如果未找到任何主键，则将数据追加到 `DataSet`中的表。 `Fill`使用你在填充时可能存在的任何映射`DataSet`(请参阅[DataAdapter 数据表和 DataColumn 映射](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md))。  
+ `Fill` 方法使用 `DataReader` 对象来隐式地返回用于在 `DataSet`中创建表的列名称和类型，以及用于填充 `DataSet`中的表行的数据。 表和列仅在不存在时才创建；否则， `Fill` 将使用现有的 `DataSet` 架构。 列类型，作为创建[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]类型中的表根据[在 ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。 除非数据源中存在主键且 `DataAdapter`**来控制。**`MissingSchemaAction` 设置为 `MissingSchemaAction`**来控制。**`AddWithKey`来控制。 如果 `Fill` 发现某个表存在主键，对于主键列的值与从数据源返回的行的主键列的值匹配的行，将使用数据源中的数据重写 `DataSet` 中的数据。 如果未找到任何主键，则将数据追加到 `DataSet`中的表。 `Fill` 使用你在填充时可能存在的任何映射`DataSet`(请参阅[DataAdapter 数据表和 DataColumn 映射](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md))。  
   
 > [!NOTE]
 >  如果 `SelectCommand` 返回 OUTER JOIN 的结果，则 `DataAdapter` 不会为生成的 `PrimaryKey` 设置 `DataTable`值。 您必须自己定义 `PrimaryKey` 以确保正确解析重复行。 有关详细信息，请参阅[定义主键](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  

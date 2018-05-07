@@ -1,24 +1,14 @@
 ---
-title: "使用传输安全保护消息"
-ms.custom: 
+title: 使用传输安全保护消息
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-caps.latest.revision: "21"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 461ec7d3cda41194317054ca2413b99f39ebda2c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 50e450f4241abc7d8b688c58a121f64c3ca0e709
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-messages-using-transport-security"></a>使用传输安全保护消息
 本节讨论消息队列 (MSMQ) 传输安全，您可将其用于保护发送到队列的消息。  
@@ -26,11 +16,11 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  在阅读之前通读本主题，建议你阅读[安全性的基础概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
   
- 以下插图提供了使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的排队通信的概念模型。 此插图和术语用于说明传输安全概念。  
+ 以下插图提供了使用 Windows Communication Foundation (WCF) 的排队通信的概念模型。 此插图和术语用于说明传输安全概念。  
   
  ![排队应用程序关系图](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分布式队列图")  
   
- 使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 与 <xref:System.ServiceModel.NetMsmqBinding> 发送排队消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息将作为 MSMQ 消息的正文附加。 传输安全可以保护全部 MSMQ 消息（MSMQ 消息头或属性和消息正文）的安全。 由于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息是 MSMQ 消息的正文，因此使用传输安全还可以确保它的安全。  
+ 发送排队时使用的 WCF 消息<xref:System.ServiceModel.NetMsmqBinding>，WCF 消息附加作为 MSMQ 消息的正文。 传输安全可以保护全部 MSMQ 消息（MSMQ 消息头或属性和消息正文）的安全。 因为它是 MSMQ 消息的正文，使用传输安全还可以确保 WCF 消息。  
   
  传输安全的关键概念在于，客户端必须满足安全要求，才能使消息进入目标队列。 这与消息安全不同。在消息安全中，针对接收消息的应用程序来保护消息。  
   
@@ -49,19 +39,19 @@ ms.lasthandoff: 01/19/2018
   
  MSMQ 还能够将证书附加到未向 Active Directory 注册的消息中。 在这种情况下，它可以确保该消息已使用附加的证书进行签名。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将这些选项作为 MSMQ 传输安全的一部分提供，这些选项是传输安全的关键核心。  
+ WCF MSMQ 传输安全的一部分提供了这两个选项，并且它们是传输安全的关键核心。  
   
  默认情况下将启用传输安全。  
   
  了解这些基本知识后，以下各节将详细介绍与 <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 绑定的传输安全属性。  
   
 #### <a name="msmq-authentication-mode"></a>MSMQ 身份验证模式  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 指示是使用 Windows 域安全还是基于外部证书的安全来保护消息。 在这两种身份验证模式下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 排队传输通道均使用服务配置中指定的 `CertificateValidationMode`。 证书验证模式指定用于检查证书有效性的机制。  
+ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 指示是使用 Windows 域安全还是基于外部证书的安全来保护消息。 在这两种身份验证模式，WCF 排队的传输通道使用`CertificateValidationMode`在服务配置中指定。 证书验证模式指定用于检查证书有效性的机制。  
   
  启用传输安全时，默认的设置为 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>。  
   
 #### <a name="windows-domain-authentication-mode"></a>Windows 域身份验证模式  
- 如果选择使用 Windows 安全，则需要 Active Directory 集成。 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 是默认的传输安全模式。 如果依此设置，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道会将 Windows SID 附加到 MSMQ 消息，并使用其从 Active Directory 获得的内部证书。 MSMQ 将此内部证书用于保护消息。 接收队列管理器使用 Active Directory 来搜索并查找匹配的证书，以便对客户端进行身份验证，并检查 SID 是否还与客户端的 SID 匹配。 如果证书（在 `WindowsDomain` 身份验证模式下在内部生成或在 `Certificate` 身份验证模式下在外部生成）附加到消息中，则即使目标队列未标记为要求身份验证，也将执行此身份验证步骤。  
+ 如果选择使用 Windows 安全，则需要 Active Directory 集成。 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 是默认的传输安全模式。 当此设置时，WCF 通道将 Windows SID 附加到 MSMQ 消息，并使用从 Active Directory 获取其内部证书。 MSMQ 将此内部证书用于保护消息。 接收队列管理器使用 Active Directory 来搜索并查找匹配的证书，以便对客户端进行身份验证，并检查 SID 是否还与客户端的 SID 匹配。 如果证书（在 `WindowsDomain` 身份验证模式下在内部生成或在 `Certificate` 身份验证模式下在外部生成）附加到消息中，则即使目标队列未标记为要求身份验证，也将执行此身份验证步骤。  
   
 > [!NOTE]
 >  创建队列时，您可以将队列标记为已进行身份验证的队列，以指示队列要求对向队列发送消息的客户端进行身份验证。 这可以确保队列中不接受未经身份验证的消息。  
@@ -71,9 +61,9 @@ ms.lasthandoff: 01/19/2018
 #### <a name="certificate-authentication-mode"></a>证书身份验证模式  
  使用证书身份验证模式不需要 Active Directory 集成。 实际上，在某些情况下，例如在工作组模式（没有 Active Directory 集成）中安装 MSMQ 时，或使用 SOAP 可靠传送消息协议 (SRMP) 将消息发送到队列时，只有 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 才起作用。  
   
- 发送具有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道不会将 Windows SID 附加到 MSMQ 消息中。 同样，目标队列 ACL 必须允许使用 `Anonymous` 用户权限向队列发送消息。 接收队列管理器检查 MSMQ 消息是否已使用证书进行签名，但不执行任何身份验证。  
+ 发送 WCF 消息与时<xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>，WCF 通道不会附加到 MSMQ 消息的 Windows SID。 同样，目标队列 ACL 必须允许使用 `Anonymous` 用户权限向队列发送消息。 接收队列管理器检查 MSMQ 消息是否已使用证书进行签名，但不执行任何身份验证。  
   
- 包含声明和标识信息的证书由 <xref:System.ServiceModel.ServiceSecurityContext> 排队传输通道在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中填充。 服务可使用此信息来对发送方执行其自己的身份验证。  
+ 在填充包含其声明和标识信息的证书<xref:System.ServiceModel.ServiceSecurityContext>WCF 排队的传输通道。 服务可使用此信息来对发送方执行其自己的身份验证。  
   
 ### <a name="msmq-protection-level"></a>MSMQ 保护级别  
  保护级别指示如何保护 MSMQ 消息以确保该消息不会被篡改。 保护级别是在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 属性中指定的。 默认值为 <xref:System.Net.Security.ProtectionLevel.Sign>。  

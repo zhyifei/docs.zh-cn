@@ -1,31 +1,17 @@
 ---
-title: "Windows Communication Foundation 终结点"
-ms.custom: 
+title: Windows Communication Foundation 终结点
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0725c4f4275853cce958072a57d7f6ca4059e8cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2588cc0bd70932aa91d300d8ecbe35cd2bcd7d00
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation 终结点
-与所有通信[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]服务是通过*终结点*的服务。 利用终结点，客户端可访问 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务提供的功能。  
+与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 利用终结点，客户端可访问 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务提供的功能。  
   
  有关如何创建一个终结点的概述，请参阅[终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)。 每个终结点包含：  
   

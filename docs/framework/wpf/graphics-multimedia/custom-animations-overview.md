@@ -1,13 +1,6 @@
 ---
-title: "自定义动画概述"
-ms.custom: 
+title: 自定义动画概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom classes [WPF], animation
 - key frames [WPF], custom
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb8dcce1d72991a803d8a068f29cd0fe3430fdfc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f212cd89fe9fe1bcf95a374fa0cd92aedadefa9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-animations-overview"></a>自定义动画概述
 本主题介绍如何以及何时通过以下方法来扩展 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统：创建自定义关键帧、动画类或者使用每帧回叫来绕过它。  
@@ -39,9 +27,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="extending-the-animation-system"></a>扩展动画系统  
  扩展 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统有多种方法，具体取决于要使用的内置功能的级别。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画引擎中有三个主要的扩展点：  
   
--   通过继承之一创建自定义关键帧对象*\<类型 >*关键帧类，如<xref:System.Windows.Media.Animation.DoubleKeyFrame>。 此方法使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画引擎的大部分内置功能。  
+-   通过继承之一创建自定义关键帧对象*\<类型 >* 关键帧类，如<xref:System.Windows.Media.Animation.DoubleKeyFrame>。 此方法使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画引擎的大部分内置功能。  
   
--   通过继承创建您自己的动画类<xref:System.Windows.Media.Animation.AnimationTimeline>或之一*\<类型 >*AnimationBase 类。  
+-   通过继承创建您自己的动画类<xref:System.Windows.Media.Animation.AnimationTimeline>或之一*\<类型 >* AnimationBase 类。  
   
 -   使用每帧回叫针对每个帧生成动画。 此方法完全绕过动画和计时系统。  
   
@@ -49,8 +37,8 @@ ms.lasthandoff: 12/22/2017
   
 |要执行此操作...|使用此方法|  
 |-------------------------|-----------------------|  
-|自定义具有对应 *\<Type>*AnimationUsingKeyFrames 的类型值之间的内插|创建自定义关键帧。 有关详细信息，请参阅[创建自定义关键帧](#createacustomkeyframe)部分。|  
-|除了自定义具有对应 *\<Type>*Animation 的类型值之间的内插外，还要自定义其他内容。|创建自定义动画类，该类继承自对应于要进行动画处理的类型的 *\<Type>*AnimationBase 类。 有关详细信息，请参阅[创建自定义动画类](#createacustomanimationtype)部分。|  
+|自定义具有对应 *\<Type>* AnimationUsingKeyFrames 的类型值之间的内插|创建自定义关键帧。 有关详细信息，请参阅[创建自定义关键帧](#createacustomkeyframe)部分。|  
+|除了自定义具有对应 *\<Type>* Animation 的类型值之间的内插外，还要自定义其他内容。|创建自定义动画类，该类继承自对应于要进行动画处理的类型的 *\<Type>* AnimationBase 类。 有关详细信息，请参阅[创建自定义动画类](#createacustomanimationtype)部分。|  
 |对没有对应 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画的类型进行动画处理|使用<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>或创建一个继承自的类<xref:System.Windows.Media.Animation.AnimationTimeline>。 有关详细信息，请参阅[创建自定义动画类](#createacustomanimationtype)部分。|  
 |对多个对象进行动画处理，这些对象带有按每个帧进行计算并基于最后一组对象交互的值|使用每帧回叫。 有关详细信息，请参阅[使用每帧回叫](#useperframecallback)部分。|  
   
@@ -66,30 +54,30 @@ ms.lasthandoff: 12/22/2017
   
  **实现说明**  
   
- 从 *\<Type>*KeyFrame 抽象类派生，并实现 InterpolateValueCore 方法。 InterpolateValueCore 方法返回关键帧的当前值。 它采用两个参数：上一个关键帧的值和范围是从 0 到 1 的进度值。 刚刚启动关键帧，和的值为 1 指示关键帧刚刚完成，应返回指定的值，该值指示 0 的进度其<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>属性。  
+ 从 *\<Type>* KeyFrame 抽象类派生，并实现 InterpolateValueCore 方法。 InterpolateValueCore 方法返回关键帧的当前值。 它采用两个参数：上一个关键帧的值和范围是从 0 到 1 的进度值。 刚刚启动关键帧，和的值为 1 指示关键帧刚刚完成，应返回指定的值，该值指示 0 的进度其<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>属性。  
   
- 因为*\<类型 >*关键帧类都继承自<xref:System.Windows.Freezable>类，你还必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>核心以返回你的类的新实例。 如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ 因为*\<类型 >* 关键帧类都继承自<xref:System.Windows.Freezable>类，你还必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>核心以返回你的类的新实例。 如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
- 创建自定义 *\<Type>*KeyFrame 动画后，可以将其与该类型的 *\<Type>*AnimationUsingKeyFrames 结合使用。  
+ 创建自定义 *\<Type>* KeyFrame 动画后，可以将其与该类型的 *\<Type>* AnimationUsingKeyFrames 结合使用。  
   
 <a name="createacustomanimationtype"></a>   
 ## <a name="create-a-custom-animation-class"></a>创建自定义动画类  
- 创建自己的动画类型可以更好地控制对某个对象进行动画处理的方法。 有两种建议的方法来创建你自己动画类型： 你可以从派生<xref:System.Windows.Media.Animation.AnimationTimeline>类或*\<类型 >*AnimationBase 类。 不建议从 *\<Type>*Animation 或 *\<Type>*AnimationUsingKeyFrames 类派生。  
+ 创建自己的动画类型可以更好地控制对某个对象进行动画处理的方法。 有两种建议的方法来创建你自己动画类型： 你可以从派生<xref:System.Windows.Media.Animation.AnimationTimeline>类或*\<类型 >* AnimationBase 类。 不建议从 *\<Type>* Animation 或 *\<Type>* AnimationUsingKeyFrames 类派生。  
   
 ### <a name="derive-from-typeanimationbase"></a>从 \<Type>AnimationBase 派生  
- 从 *\<Type>*AnimationBase 类派生是创建新动画类型的最简单方法。 要为已经具有对应 *\<Type>*AnimationBase 类的类型创建新动画时，请使用此方法。  
+ 从 *\<Type>* AnimationBase 类派生是创建新动画类型的最简单方法。 要为已经具有对应 *\<Type>* AnimationBase 类的类型创建新动画时，请使用此方法。  
   
  **实现说明**  
   
- 从 *\<Type>*Animation 类派生并实现 GetCurrentValueCore 方法。 GetCurrentValueCore 方法返回动画的当前值。 它采用三个参数： 建议的起始值、 建议的结束值和<xref:System.Windows.Media.Animation.AnimationClock>，用于确定的动画进度。  
+ 从 *\<Type>* Animation 类派生并实现 GetCurrentValueCore 方法。 GetCurrentValueCore 方法返回动画的当前值。 它采用三个参数： 建议的起始值、 建议的结束值和<xref:System.Windows.Media.Animation.AnimationClock>，用于确定的动画进度。  
   
- 因为*\<类型 >*AnimationBase 类都继承自<xref:System.Windows.Freezable>类，你还必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>核心以返回你的类的新实例。 如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ 因为*\<类型 >* AnimationBase 类都继承自<xref:System.Windows.Freezable>类，你还必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>核心以返回你的类的新实例。 如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
- 有关详细信息，请参阅要进行动画处理的类型的 *\<Type>*AnimationBase 类的 GetCurrentValueCore 方法文档。 有关示例，请参阅[自定义动画示例](http://go.microsoft.com/fwlink/?LinkID=159981)  
+ 有关详细信息，请参阅要进行动画处理的类型的 *\<Type>* AnimationBase 类的 GetCurrentValueCore 方法文档。 有关示例，请参阅[自定义动画示例](http://go.microsoft.com/fwlink/?LinkID=159981)  
   
  **替代方法**  
   
- 如果只需更改动画值的内插方式，请考虑从某个 *\<Type>*KeyFrame 类派生。 可以将所创建的关键帧与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的对应 *\<Type>*AnimationUsingKeyFrames 结合使用。  
+ 如果只需更改动画值的内插方式，请考虑从某个 *\<Type>* KeyFrame 类派生。 可以将所创建的关键帧与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的对应 *\<Type>* AnimationUsingKeyFrames 结合使用。  
   
 ### <a name="derive-from-animationtimeline"></a>从 AnimationTimeline 派生  
  派生自<xref:System.Windows.Media.Animation.AnimationTimeline>类在你想要创建已没有匹配的一种动画[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]动画，或者你想要创建一个不强类型的动画。  
@@ -98,21 +86,21 @@ ms.lasthandoff: 12/22/2017
   
  派生自<xref:System.Windows.Media.Animation.AnimationTimeline>类并重写以下成员：  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A>– 如果你的新类是具体的则必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>以返回你的类的新实例。  
+-   <xref:System.Windows.Freezable.CreateInstanceCore%2A> – 如果你的新类是具体的则必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>以返回你的类的新实例。  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>– 重写此方法以返回你动画的当前值。 它采用三个参数： 默认的原始值、 默认目标值和<xref:System.Windows.Media.Animation.AnimationClock>。 使用<xref:System.Windows.Media.Animation.AnimationClock>以便获取当前时间或的动画进度。 可以选择是否使用默认的原始和目标值。  
+-   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – 重写此方法以返回你动画的当前值。 它采用三个参数： 默认的原始值、 默认目标值和<xref:System.Windows.Media.Animation.AnimationClock>。 使用<xref:System.Windows.Media.Animation.AnimationClock>以便获取当前时间或的动画进度。 可以选择是否使用默认的原始和目标值。  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>– 重写此属性以指示是否动画使用指定的默认目标值<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>方法。  
+-   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – 重写此属性以指示是否动画使用指定的默认目标值<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>方法。  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>– 重写此属性以指示<xref:System.Type>动画产生的输出。  
+-   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – 重写此属性以指示<xref:System.Type>动画产生的输出。  
   
  如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
  推荐的范例（由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画使用）是使用两个继承级别：  
   
-1.  创建一个抽象*\<类型 >*AnimationBase 类派生自<xref:System.Windows.Media.Animation.AnimationTimeline>。 此类应重写<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>方法。 它还应引入新的抽象方法，GetCurrentValueCore，并重写<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>，以便它会验证默认的原始值和默认目标值参数的类型，然后调用 GetCurrentValueCore。  
+1.  创建一个抽象*\<类型 >* AnimationBase 类派生自<xref:System.Windows.Media.Animation.AnimationTimeline>。 此类应重写<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>方法。 它还应引入新的抽象方法，GetCurrentValueCore，并重写<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>，以便它会验证默认的原始值和默认目标值参数的类型，然后调用 GetCurrentValueCore。  
   
-2.  创建另一个类继承从新*\<类型 >*AnimationBase 类并重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法，你引入 GetCurrentValueCore 方法和<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>属性。  
+2.  创建另一个类继承从新*\<类型 >* AnimationBase 类并重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法，你引入 GetCurrentValueCore 方法和<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>属性。  
   
  **替代方法**  
   

@@ -1,14 +1,6 @@
 ---
-title: "IHostAssemblyStore::ProvideAssembly 方法"
-ms.custom: 
+title: IHostAssemblyStore::ProvideAssembly 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyStore.ProvideAssembly
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2097c1ea64e5e9a2a09e0ec57243624b05eeea65
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e32d48931177a42dd14092b4052370764a217abe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly 方法
 获取未被引用程序集的引用[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)从返回[ihostassemblymanager:: Getnonhoststoreassemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)。 公共语言运行时 (CLR) 调用`ProvideAssembly`列表中未显示每个程序集。  
@@ -58,7 +46,7 @@ HRESULT ProvideAssembly (
  [out]指向此请求的程序集的唯一标识符的`IStream`。  
   
  `pHostContext`  
- [out]用于确定请求的程序集而无需平台的证据的特定于宿主的数据的指针调用。 `pHostContext`对应于<xref:System.Reflection.Assembly.HostContext%2A>属性托管的<xref:System.Reflection.Assembly>类。  
+ [out]用于确定请求的程序集而无需平台的证据的特定于宿主的数据的指针调用。 `pHostContext` 对应于<xref:System.Reflection.Assembly.HostContext%2A>属性托管的<xref:System.Reflection.Assembly>类。  
   
  `ppStmAssemblyImage`  
  [out]指向的地址的指针`IStream`包含要加载的或如果找不到程序集为 null 的可移植可执行 (PE) 映像。  
@@ -70,7 +58,7 @@ HRESULT ProvideAssembly (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`ProvideAssembly`已成功返回。|  
+|S_OK|`ProvideAssembly` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -82,14 +70,14 @@ HRESULT ProvideAssembly (
 ## <a name="remarks"></a>备注  
  返回标识值`pAssemblyId`宿主指定。 标识符在进程的生存期内必须是唯一的。 CLR 使用此值流作为唯一标识符。 它会检查每个值对的值`pAssemblyId`返回到其他调用`ProvideAssembly`。 如果主机返回相同`pAssemblyId`另一项的值`IStream`，CLR 将检查是否已映射了该流的内容。 如果是这样，则运行时将加载映像而不是映射一个新的现有副本。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRAssemblyReferenceList 接口](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  

@@ -1,14 +1,6 @@
 ---
 title: 数据协定中的集合类型
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: dccc53f13889e2073579af19e86459fe56b069e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>数据协定中的集合类型
  “集合”指特定类型的项的列表。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用数组或者其他各种类型（泛型列表、泛型 <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>）来表示此类列表。 例如，集合可以容纳给定客户的地址列表。 无论这些集合的实际类型是什么，这些集合都称为“列表集合” 。  
@@ -86,7 +72,7 @@ ms.lasthandoff: 04/30/2018
   
  序列化期间，当声明的类型是接口时，使用的实际实例类型可以是实现该接口的任何类型。 前面讨论的限制（具有默认构造函数和 `Add` 方法）不适用。 例如，即使您不能直接声明泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 类型的数据成员，仍然可以将 Customer2 中的地址设置为 Address 的泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>的实例。  
   
- 反序列化期间，当声明的类型是接口时，序列化引擎会选择实现所声明的接口的类型，并且该类型会实例化。 已知的类型机制（已在 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)中介绍）在这里没有任何效果；类型的选择内置于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ 反序列化期间，当声明的类型是接口时，序列化引擎会选择实现所声明的接口的类型，并且该类型会实例化。 已知类型机制 (中所述[数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) 不起作用此处; 类型的选择内置于 WCF。  
   
 ## <a name="customizing-collection-types"></a>自定义集合类型  
  您可以通过使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性来自定义集合类型，该属性具有几种用法。  
@@ -235,7 +221,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="collections-and-schema"></a>集合与架构  
  所有等效的集合在 XML 架构定义 (XSD) 语言架构中都具有相同的表示。 因此，您通常不会在所生成的客户端代码中获得与服务器上的集合类型相同的集合类型。 例如，服务器可能使用具有 Integer 数据成员的泛型 <xref:System.Collections.Generic.List%601> 的数据协定，但是在生成的客户端代码中，该数据成员可能成为整数数组。  
   
- 字典集合标记有特定于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的架构批注，该批注表示这些集合是字典；否则，这些集合将不能与包含具有键和值的项的简单列表区分开来。 有关如何在数据协定架构中表示集合的准确说明，请参阅 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
+ 字典集合标记有特定于 WCF 的架构批注，该批注指示它们是字典;否则，它们是没有区别包含具有键和值的项的简单列表。 有关如何在数据协定架构中表示集合的准确说明，请参阅 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
  默认情况下，不会为导入的代码中的非自定义集合生成类型。 列表集合类型的数据成员是作为数组导入的，字典集合类型的数据成员是作为泛型字典导入的。  
   

@@ -1,24 +1,15 @@
 ---
-title: "如何：创建 Lambda 表达式 (Visual Basic)"
-ms.custom: 
+title: 如何：创建 Lambda 表达式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 16365b64e5430be61c113ac7601154df260e4ca5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f437166bc5206b4145d6508aa2131ec94d6eca95
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>如何：创建 Lambda 表达式 (Visual Basic)
 A *lambda 表达式*是函数或子例程的不具有名称。 一个委托类型有效的任何地方，可以使用 lambda 表达式。  
@@ -112,7 +103,7 @@ A *lambda 表达式*是函数或子例程的不具有名称。 一个委托类�
   
  [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Linq.Enumerable>  
  [Lambda 表达式](./lambda-expressions.md)  
  [Function 语句](../../../../visual-basic/language-reference/statements/function-statement.md)  

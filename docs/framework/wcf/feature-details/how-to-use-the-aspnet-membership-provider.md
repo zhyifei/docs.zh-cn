@@ -1,30 +1,16 @@
 ---
 title: 如何：使用 ASP.NET 成员资格提供程序
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 19fb83d21c77f3206c314a2e6c40562fcb75f151
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d71e3679f4bf395b240c330fc573d6f613d1be07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>如何：使用 ASP.NET 成员资格提供程序
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格提供程序是一种功能，可供 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 开发人员用于创建允许用户创建唯一用户名和密码组合的网站。 使用此工具，任何用户都可以在该网站上建立帐户，并登录网站以便独占访问该网站及其服务。 这与要求用户在 Windows 域中具有帐户的 Windows 安全完全不同。 所有提供凭据（用户名/密码组合）的用户都可以使用该网站及其服务。  
@@ -33,10 +19,10 @@ ms.lasthandoff: 04/30/2018
   
  成员资格功能要求使用 SQL Server 数据库来存储用户信息。 此功能还包括用于向忘记密码的用户提示问题的方法。  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 开发人员可以出于安全目的利用这些功能。 当集成到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序中时，用户必须向 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端应用程序提供用户名/密码组合。 若要将数据传输到[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务，请使用一个绑定，支持用户/密码凭据，如<xref:System.ServiceModel.WSHttpBinding>(在配置中， [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) 并设置客户端凭据类型转换为`UserName`。 在服务上，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基于用户名和密码对用户进行身份验证，还会分配由 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色指定的角色。  
+ Windows Communication Foundation (WCF) 开发人员可以利用这些功能，出于安全目的。 当集成到 WCF 应用程序，用户必须提供用户名/密码组合到 WCF 客户端应用程序。 若要将数据传输到 WCF 服务，使用支持用户/密码凭据，如绑定<xref:System.ServiceModel.WSHttpBinding>(在配置中， [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) 并设置客户端凭据类型设置为`UserName`. 在服务上，WCF 安全基于用户名和密码，用户进行身份验证，并还会将通过指定的角色分配[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色。  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不提供使用用户名/密码组合或其他用户信息填充数据库的方法。  
+>  WCF 不提供用户名/密码组合的数据库或其他用户信息填充的方法。  
   
 ### <a name="to-configure-the-membership-provider"></a>配置成员资格提供程序  
   
@@ -73,7 +59,7 @@ ms.lasthandoff: 04/30/2018
   
 1.  在配置文件中，在[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素中，添加[\<绑定 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素。  
   
-2.  添加[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)绑定部分。 有关创建[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]绑定元素，请参阅[如何： 在配置中指定服务绑定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+2.  添加[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)绑定部分。 有关创建 WCF 绑定元素的详细信息，请参阅[如何： 在配置中指定服务绑定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
   
 3.  将 `mode` 元素的 `<security>` 属性设置为 `Message`。  
   
@@ -111,7 +97,7 @@ ms.lasthandoff: 04/30/2018
 6.  将 `userNamePasswordValidationMode` 属性设置为 `MembershipProvider`。  
   
     > [!IMPORTANT]
-    >  如果未设置 `userNamePasswordValidationMode` 值，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将使用 Windows 身份验证代替 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格提供程序。  
+    >  如果`userNamePasswordValidationMode`未设置值，WCF 使用 Windows 身份验证而不是[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]成员资格提供程序。  
   
 7.  将 `membershipProviderName` 属性设置为提供程序的名称（在本主题的第一个过程中添加提供程序时指定）。 下面的示例演示至此为止的 `<serviceCredentials>` 片段。  
   

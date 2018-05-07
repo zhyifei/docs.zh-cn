@@ -1,26 +1,12 @@
 ---
 title: 在配置文件中配置发现
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ba224bbf27e5a61168040c944bb940c3e6b0d8c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c282767e686ac8a6382268aee8b45eb2d1297f5a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>在配置文件中配置发现
 发现功能主要采用四组配置设置。 本主题将简要介绍其中的每组设置，并用示例演示如何配置这些设置。 本主题每一部分后面都将提供一个链接，以便于您获取有关各个方面的更详尽的文档。  

@@ -1,13 +1,6 @@
 ---
-title: "如何：使用后台线程搜索文件"
-ms.custom: 
+title: 如何：使用后台线程搜索文件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,35 +10,30 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea1f2edf4677e3a04e6dd007dcf0fef9137180fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1034868939837fc43cf7595c819a6109331a2684
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>如何：使用后台线程搜索文件
 <xref:System.ComponentModel.BackgroundWorker>组件替换，并添加了功能<xref:System.Threading>命名空间; 但是，<xref:System.Threading>命名空间将保留向后兼容性和将来使用，如果你选择。 有关详细信息，请参阅[BackgroundWorker 组件概述](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)。  
   
  Windows 窗体使用单线程单元 (STA) 模型，因为在本质上是单元线程的本机 Win32 windows 上基于 Windows 窗体。 STA 模型意味着可以在任何线程上创建一个窗口但就不能切换线程一次创建，并且所有函数调用必须在其创建线程上都执行操作。 外部 Windows 窗体，.NET Framework 中的类使用的可用线程模型。 有关在.NET Framework 线程处理的信息，请参阅[线程处理](../../../../docs/standard/threading/index.md)。  
   
- STA 模型要求，需要从外部控件的创建线程调用的控件上的任何方法必须封送到 （其上执行） 控件的创建线程。 基类<xref:System.Windows.Forms.Control>提供了若干方法 (<xref:System.Windows.Forms.Control.Invoke%2A>， <xref:System.Windows.Forms.Control.BeginInvoke%2A>，和<xref:System.Windows.Forms.Control.EndInvoke%2A>) 为此目的。 <xref:System.Windows.Forms.Control.Invoke%2A>使同步方法调用异步方法。<xref:System.Windows.Forms.Control.BeginInvoke%2A>异步方法调用。  
+ STA 模型要求，需要从外部控件的创建线程调用的控件上的任何方法必须封送到 （其上执行） 控件的创建线程。 基类<xref:System.Windows.Forms.Control>提供了若干方法 (<xref:System.Windows.Forms.Control.Invoke%2A>， <xref:System.Windows.Forms.Control.BeginInvoke%2A>，和<xref:System.Windows.Forms.Control.EndInvoke%2A>) 为此目的。 <xref:System.Windows.Forms.Control.Invoke%2A> 使同步方法调用异步方法。<xref:System.Windows.Forms.Control.BeginInvoke%2A>异步方法调用。  
   
  如果你使用多线程处理中你控件占用大量资源的任务中，用户界面可以保持响应状态时在后台线程上执行资源密集型计算。  
   
  下面的示例 (`DirectorySearcher`) 显示为与指定的搜索字符串相匹配的文件使用使用后台线程对以递归方式搜索目录，然后填充搜索结果在列表框中的多线程的 Windows 窗体控件。 此示例所示的关键概念如下所示：  
   
--   `DirectorySearcher`启动新的线程来执行搜索。 线程执行`ThreadProcedure`反过来调用帮助器方法`RecurseDirectory`方法来执行实际搜索和列表框中填充。 但是，填充列表框中需要跨线程调用，如下面的两个项目符号列表项中所述。  
+-   `DirectorySearcher` 启动新的线程来执行搜索。 线程执行`ThreadProcedure`反过来调用帮助器方法`RecurseDirectory`方法来执行实际搜索和列表框中填充。 但是，填充列表框中需要跨线程调用，如下面的两个项目符号列表项中所述。  
   
--   `DirectorySearcher`定义`AddFiles`方法将文件添加到列表框中; 但是，`RecurseDirectory`不能直接调用`AddFiles`因为`AddFiles`可以只在创建在 STA 线程中执行`DirectorySearcher`。  
+-   `DirectorySearcher` 定义`AddFiles`方法将文件添加到列表框中; 但是，`RecurseDirectory`不能直接调用`AddFiles`因为`AddFiles`可以只在创建在 STA 线程中执行`DirectorySearcher`。  
   
--   唯一方法`RecurseDirectory`可以调用`AddFiles`是通过跨线程调用 — 即，通过调用<xref:System.Windows.Forms.Control.Invoke%2A>或<xref:System.Windows.Forms.Control.BeginInvoke%2A>要封送`AddFiles`到创建线程的`DirectorySearcher`。 `RecurseDirectory`使用<xref:System.Windows.Forms.Control.BeginInvoke%2A>，以便可以以异步方式进行调用。  
+-   唯一方法`RecurseDirectory`可以调用`AddFiles`是通过跨线程调用 — 即，通过调用<xref:System.Windows.Forms.Control.Invoke%2A>或<xref:System.Windows.Forms.Control.BeginInvoke%2A>要封送`AddFiles`到创建线程的`DirectorySearcher`。 `RecurseDirectory` 使用<xref:System.Windows.Forms.Control.BeginInvoke%2A>，以便可以以异步方式进行调用。  
   
--   封送方法需要函数指针或回调的等效项。 这是.NET Framework 中使用委托来完成的。 <xref:System.Windows.Forms.Control.BeginInvoke%2A>将委托作为参数。 `DirectorySearcher`因此可定义委托 (`FileListDelegate`)，将绑定`AddFiles`到实例`FileListDelegate`在其构造函数，并将传递到此委托实例<xref:System.Windows.Forms.Control.BeginInvoke%2A>。 `DirectorySearcher`此外定义完成搜索后封送处理的事件委托。  
+-   封送方法需要函数指针或回调的等效项。 这是.NET Framework 中使用委托来完成的。 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 将委托作为参数。 `DirectorySearcher` 因此可定义委托 (`FileListDelegate`)，将绑定`AddFiles`到实例`FileListDelegate`在其构造函数，并将传递到此委托实例<xref:System.Windows.Forms.Control.BeginInvoke%2A>。 `DirectorySearcher` 此外定义完成搜索后封送处理的事件委托。  
   
 ```vb  
 Option Strict  

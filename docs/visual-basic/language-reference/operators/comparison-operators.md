@@ -1,11 +1,6 @@
 ---
-title: "比较运算符 (Visual Basic)"
+title: 比较运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<>
 - vb.>=
@@ -35,29 +30,26 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa450f7978f46196663c7534b31597b04d80482a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e37f55b4c873c3dbea22a8edf0e5e2b58824720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-operators-visual-basic"></a>比较运算符 (Visual Basic)
 以下是定义在 Visual Basic 中的比较运算符。  
   
- `<`运算符  
+ `<` 运算符  
   
- `<=`运算符  
+ `<=` 运算符  
   
- `>`运算符  
+ `>` 运算符  
   
- `>=`运算符  
+ `>=` 运算符  
   
- `=`运算符  
+ `=` 运算符  
   
- `<>`运算符  
+ `<>` 运算符  
   
  [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)  
   
@@ -77,34 +69,34 @@ result = string Like pattern
   
 ## <a name="parts"></a>部件  
  `result`  
- 必需。 A`Boolean`表示结果的比较的值。  
+ 必须的。 A`Boolean`表示结果的比较的值。  
   
  `expression`  
- 必需。 任何表达式。  
+ 必须的。 任何表达式。  
   
  `comparisonoperator`  
- 必需。 任何关系的比较运算符。  
+ 必须的。 任何关系的比较运算符。  
   
  `object1`, `object2`  
- 必需。 对象名称的任何引用。  
+ 必须的。 对象名称的任何引用。  
   
  `string`  
- 必需。 任何 `String` 表达式。  
+ 必须的。 任何 `String` 表达式。  
   
  `pattern`  
- 必需。 任何`String`表达式或范围的字符。  
+ 必须的。 任何`String`表达式或范围的字符。  
   
 ## <a name="remarks"></a>备注  
  下表包含关系的比较运算符和确定的条件的列表是否`result`是`True`或`False`。  
   
-|运算符|`True`如果|`False`如果|  
+|运算符|`True` 如果|`False` 如果|  
 |--------------|---------------|----------------|  
-|`<`（小于）|`expression1` < `expression2`|`expression1` >= `expression2`|  
-|`<=`（小于或等于）|`expression1` <= `expression2`|`expression1` > `expression2`|  
-|`>`（大于）|`expression1` > `expression2`|`expression1` <= `expression2`|  
-|`>=`（大于或等于）|`expression1` >= `expression2`|`expression1` < `expression2`|  
-|`=`（等于）|`expression1` = `expression2`|`expression1` <> `expression2`|  
-|`<>`（不等于）|`expression1` <> `expression2`|`expression1` = `expression2`|  
+|`<` （小于）|`expression1` < `expression2`|`expression1` >= `expression2`|  
+|`<=` （小于或等于）|`expression1` <= `expression2`|`expression1` > `expression2`|  
+|`>` （大于）|`expression1` > `expression2`|`expression1` <= `expression2`|  
+|`>=` （大于或等于）|`expression1` >= `expression2`|`expression1` < `expression2`|  
+|`=` （等于）|`expression1` = `expression2`|`expression1` <> `expression2`|  
+|`<>` （不等于）|`expression1` <> `expression2`|`expression1` = `expression2`|  
   
 > [!NOTE]
 >  [= 运算符](../../../visual-basic/language-reference/operators/assignment-operator.md)还用作赋值运算符。  
@@ -122,11 +114,11 @@ result = string Like pattern
 ## <a name="comparing-strings"></a>比较字符串  
  当比较字符串时，根据其按字母顺序排序顺序，具体取决于对的字符串表达式进行计算`Option Compare`设置。  
   
- `Option Compare Binary`基的字符串比较派生自字符的内部二进制表示的排序顺序。 排序顺序取决于代码页。 下面的示例演示典型的二进制排序顺序。  
+ `Option Compare Binary` 基的字符串比较派生自字符的内部二进制表示的排序顺序。 排序顺序取决于代码页。 下面的示例演示典型的二进制排序顺序。  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- `Option Compare Text`基的字符串由应用程序的区域设置的不区分大小写、 文本排序顺序的比较。 当你将设置`Option Compare Text`和排序的字符在前面的示例，请应用以下文本排序顺序：  
+ `Option Compare Text` 基的字符串由应用程序的区域设置的不区分大小写、 文本排序顺序的比较。 当你将设置`Option Compare Text`和排序的字符在前面的示例，请应用以下文本排序顺序：  
   
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
   
@@ -138,10 +130,10 @@ result = string Like pattern
   
 |如果操作数都是|比较是|  
 |---------------------|-------------------|  
-|同时`String`|排序基于字符串排序特征进行比较。|  
+|同时 `String`|排序基于字符串排序特征进行比较。|  
 |这两个数字|对象转换为`Double`，数值比较。|  
-|一个数值而另一个`String`|`String`转换为`Double`和执行数值比较。 如果`String`不能转换为`Double`、<xref:System.InvalidCastException>引发。|  
-|一种或两是以外的其他引用类型`String`|引发 <xref:System.InvalidCastException>。|  
+|一个数值而另一个 `String`|`String`转换为`Double`和执行数值比较。 如果`String`不能转换为`Double`、<xref:System.InvalidCastException>引发。|  
+|一种或两是以外的其他引用类型 `String`|引发 <xref:System.InvalidCastException>。|  
   
  数值比较将`Nothing`为 0。 字符串比较将`Nothing`作为`""`（空字符串）。  
   
@@ -157,7 +149,7 @@ result = string Like pattern
   
  在前面的示例中，返回的第一个比较`False`和其余的比较返回`True`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.InvalidCastException>  
  [= 运算符](../../../visual-basic/language-reference/operators/assignment-operator.md)  
  [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)  

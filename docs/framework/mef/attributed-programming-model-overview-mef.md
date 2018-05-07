@@ -1,9 +1,6 @@
 ---
-title: "特性化编程模型概述 (MEF)"
+title: 特性化编程模型概述 (MEF)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -11,16 +8,13 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 565cd9384e150f707b2e5e72342579d95c3a096e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributed-programming-model-overview-mef"></a>特性化编程模型概述 (MEF)
 在 Managed Extensibility Framework (MEF) 中， *编程模型* 是定义 MEF 所操作的概念性对象集的特定方法。 这些概念对象包括部件、导入和导出。 MEF 使用这些对象，但未指定应如何表示这些对象。 因此，将可能有各种各样的编程模型，其中包括自定义编程模型。  

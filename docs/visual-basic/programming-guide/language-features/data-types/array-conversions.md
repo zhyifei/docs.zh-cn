@@ -1,12 +1,6 @@
 ---
-title: "数组转换 (Visual Basic)"
-ms.custom: 
+title: 数组转换 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - arrays [Visual Basic], converting type
 - type conversion [Visual Basic], arrays
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 40dc9805157dd0bc991ca2375c3436aa6b6e09a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a179b7cf5b82132db88fb5412f0ca4be207f0987
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-conversions-visual-basic"></a>数组转换 (Visual Basic)
 可以将数组类型转换为另一个数组类型，但必须满足以下条件：  
@@ -67,7 +58,7 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [隐式转换和显式转换](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
@@ -75,4 +66,4 @@ students = names
  [如何： 将对象转换为在 Visual Basic 中的另一种类型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  [数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [阵列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+ [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

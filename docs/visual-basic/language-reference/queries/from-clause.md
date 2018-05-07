@@ -1,11 +1,6 @@
 ---
-title: "From 子句 (Visual Basic)"
+title: From 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryFrom
 - vb.QueryFromIn
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0ecdc8b70fb1ae164a6c78998ce11db9938fbb56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f113444efae83de7d299db330593937c7800bb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="from-clause-visual-basic"></a>From 子句 (Visual Basic)
 指定一个或多个范围变量和查询的集合。  
@@ -38,9 +30,9 @@ From element [ As type ] In collection [ _ ]
   
 |术语|定义|  
 |---|---|  
-|`element`|必需。 A*范围变量*用于循环访问集合的元素。 范围变量用于引用的每个成员`collection`如查询循环访问`collection`。 必须是可枚举类型。|  
+|`element`|必须的。 A*范围变量*用于循环访问集合的元素。 范围变量用于引用的每个成员`collection`如查询循环访问`collection`。 必须是可枚举类型。|  
 |`type`|可选。 `element` 的类型。 如果没有`type`指定的一种`element`从推断`collection`。|  
-|`collection`|必需。 是指要查询的集合。 必须是可枚举类型。|  
+|`collection`|必须的。 是指要查询的集合。 必须是可枚举类型。|  
   
 ## <a name="remarks"></a>备注  
  `From`子句用于标识查询和用于在源集合中引用元素的变量的源数据。 这些变量称为*范围变量*。 `From`子句是必需的对于查询，除非`Aggregate`子句用于确定某个查询仅返回聚合结果。 有关详细信息，请参阅[Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
@@ -76,7 +68,7 @@ From element [ As type ] In collection [ _ ]
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询](../../../visual-basic/language-reference/queries/queries.md)  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [For Each...Next 语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  

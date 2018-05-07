@@ -1,23 +1,12 @@
 ---
-title: "跟踪事件参考"
-ms.custom: 
+title: 跟踪事件参考
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5fba1e622a9be31f7db7bc0ccc05fda0997b12c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 211cb1d059bbe969c4334ea995c5676b09a3846a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracking-events-reference"></a>跟踪事件参考
 执行期间，[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中的工作流在逐步经历其生存期内的各个阶段时会引发跟踪事件。 宿主可以订阅这些事件并且在生存期内使工作流的进度状态保持最新。 本节介绍引发的跟踪事件。  

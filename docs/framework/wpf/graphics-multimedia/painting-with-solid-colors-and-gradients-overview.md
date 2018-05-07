@@ -1,13 +1,6 @@
 ---
-title: "使用纯色和渐变进行绘制概述"
-ms.custom: 
+title: 使用纯色和渐变进行绘制概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - solid colors [WPF], painting with
 - painting with gradients [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb71a1ae52b35b421474954410869f20fa004eb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cea4b2dbd17178a6943b0f4a84182e65232330fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>使用纯色和渐变进行绘制概述
 本主题介绍如何使用<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.LinearGradientBrush>，和<xref:System.Windows.Media.RadialGradientBrush>要纯色、 线性渐变与径向渐变绘制的对象。  
@@ -74,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="gradient"></a>   
 ## <a name="painting-an-area-with-a-gradient"></a>使用渐变绘制区域  
- 渐变画笔使用沿轴相互混合的多种颜色绘制区域。 可以使用它们创建光和影的效果，使控件具有三维外观。 还可以使用它们来模拟玻璃、镶边、水和其他光滑表面。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供两种类型的渐变画刷：<xref:System.Windows.Media.LinearGradientBrush>和<xref:System.Windows.Media.RadialGradientBrush>。  
+ 渐变画笔使用沿轴相互混合的多种颜色绘制区域。 可以使用它们创建光和影的效果，使控件具有三维外观。 还可以使用它们来模拟玻璃、镶边、水和其他光滑表面。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供两种类型的渐变画刷：<xref:System.Windows.Media.LinearGradientBrush>和<xref:System.Windows.Media.RadialGradientBrush>。  
   
 <a name="lineargradientbrush"></a>   
 ## <a name="linear-gradients"></a>线性渐变  

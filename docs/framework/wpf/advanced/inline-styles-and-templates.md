@@ -1,45 +1,33 @@
 ---
-title: "内联样式和模板"
-ms.custom: 
+title: 内联样式和模板
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - inline templates [WPF]
 - styles [WPF], inline
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5dccf0b274121ff4fe88c9270119a2f631ffcf29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c06f61bce1e17770fa0a9b9ed7a0e20625a79ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inline-styles-and-templates"></a>内联样式和模板
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供<xref:System.Windows.Style>对象和模板对象 (<xref:System.Windows.FrameworkTemplate>子类) 作为在资源中定义的元素的可视外观的方法，以便它们可以使用多次。 为此中的属性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]它们采用类型<xref:System.Windows.Style>和<xref:System.Windows.FrameworkTemplate>几乎总是建立了对现有样式和模板的资源引用而不是内联定义新的。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供<xref:System.Windows.Style>对象和模板对象 (<xref:System.Windows.FrameworkTemplate>子类) 作为在资源中定义的元素的可视外观的方法，以便它们可以使用多次。 为此中的属性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]它们采用类型<xref:System.Windows.Style>和<xref:System.Windows.FrameworkTemplate>几乎总是建立了对现有样式和模板的资源引用而不是内联定义新的。  
   
 ## <a name="limitations-of-inline-styles-and-templates"></a>内联样式和模板的限制  
  在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，从技术上讲可以在两种方式之一设置样式和模板的属性。 你可以使用的特性语法来引用样式已在其中定义资源，例如`<`*对象*`Style="{StaticResource`*myResourceKey*`}" .../>`。 或者，可以使用属性元素语法来定义内联样式，例如：  
   
- `<`*对象*`>`  
+ `<` *对象* `>`  
   
- `<`*对象*`.Style>`  
+ `<` *对象* `.Style>`  
   
  `<` `Style`  `.../>`  
   
- `</`*对象*`.Style>`  
+ `</` *对象* `.Style>`  
   
- `</`*对象*`>`  
+ `</` *对象* `>`  
   
  特性用法是得更加常见。 样式会以内联方式定义和未定义中资源一定范围限定为仅包含的元素，不能重新使用一样轻松因为它具有没有资源键。 为资源定义的样式通常是更通用和有用，因此更符合常规[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]编程模型将在代码中的程序逻辑中分离从标记中的设计原则。  
   

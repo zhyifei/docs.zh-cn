@@ -1,10 +1,6 @@
 ---
-title: "&lt;添加&gt;NameValueSectionHandler 和 DictionarySectionHandler 元素"
+title: '&lt;添加&gt;NameValueSectionHandler 和 DictionarySectionHandler 元素'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
 helpviewer_keywords:
@@ -13,18 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e29d0007820bb0218338394fe199e7acfd66344e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aeb3e3a4be201369ca2df8d231498dd2400d3c07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<添加 > 来 NameValueSectionHandler 和 DictionarySectionHandler 元素
 
-添加自定义应用程序设置。 每个**\<添加 >**标记包含键/值对。
+添加自定义应用程序设置。 每个**\<添加 >** 标记包含键/值对。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
@@ -41,13 +34,13 @@ ms.lasthandoff: 12/22/2017
 | 特性 | 描述 |
 | --------- | ----------- |
 | **key**   | 必需的特性。<br><br>指定设置的名称。 |
-| **值** | 必需的特性。<br><br>指定设置的值。 |
+| **value** | 必需的特性。<br><br>指定设置的值。 |
 
 ## <a name="parent-element"></a>父元素
 
 | 元素 | 描述 |
 | ------- | ------------|
-| [**\<sectionName >**元素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定义使用的自定义配置节设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。 |
+| [**\<sectionName >** 元素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定义使用的自定义配置节设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -55,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何定义自定义配置节以及如何使用**\<添加 >**元素将设置放入部分：
+下面的示例演示如何定义自定义配置节以及如何使用**\<添加 >** 元素将设置放入部分：
 
 ```xml
 <configuration>

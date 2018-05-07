@@ -1,34 +1,20 @@
 ---
 title: 使用 Message 类
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0ff65d9173838a8eb8850253e62d822f06942f26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-message-class"></a>使用 Message 类
-<xref:System.ServiceModel.Channels.Message> 类是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的基本类。 客户端与服务之间的所有通信最终都会产生要进行发送和接收的 <xref:System.ServiceModel.Channels.Message> 实例。  
+<xref:System.ServiceModel.Channels.Message>类是到 Windows Communication Foundation (WCF) 的基础。 客户端与服务之间的所有通信最终都会产生要进行发送和接收的 <xref:System.ServiceModel.Channels.Message> 实例。  
   
- 您通常不会与 <xref:System.ServiceModel.Channels.Message> 类直接进行交互。 相反，您需要使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务模型构造（如数据协定、消息协定和操作协定）来描述传入消息和传出消息。 但是，在某些高级方案中，可以直接使用 <xref:System.ServiceModel.Channels.Message> 类进行编程。 例如，在以下情况下可能需要使用 <xref:System.ServiceModel.Channels.Message> 类：  
+ 您通常不会与 <xref:System.ServiceModel.Channels.Message> 类直接进行交互。 相反，WCF 服务模型构造，如数据协定、 消息协定和操作协定，用于描述传入和传出消息。 但是，在某些高级方案中，可以直接使用 <xref:System.ServiceModel.Channels.Message> 类进行编程。 例如，在以下情况下可能需要使用 <xref:System.ServiceModel.Channels.Message> 类：  
   
 -   需要一种替代方式来创建传出的消息内容（例如，从磁盘上的文件直接创建消息），而不是序列化 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象。  
   
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
   
 -   无论消息内容怎样都需要使用常规方式来处理消息（例如，在生成路由器、负载平衡器或发布-订阅系统时对消息进行路由或转发）。  
   
- 在使用之前<xref:System.ServiceModel.Channels.Message>类中，使自己熟悉[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]数据传输体系结构中的[数据传输体系结构概述](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)。  
+ 在使用之前<xref:System.ServiceModel.Channels.Message>类中，应熟悉的 WCF 数据传输体系结构在[数据传输体系结构概述](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)。  
   
  <xref:System.ServiceModel.Channels.Message> 是一种通用的数据容器，但其设计严格遵循 SOAP 协议中消息的设计方式。 就像 SOAP 中一样，消息同时具有消息正文和标头。 消息正文包含实际负载数据，而标头包含其他已命名的数据容器。 用于读取和写入消息正文与标头的规则是不同的，例如，标头总是在内存中进行缓冲，并且可以按任意顺序访问任意次，而正文仅能读取一次且可以进行流式处理。 通常，使用 SOAP 时，消息正文被映射到 SOAP 正文，而消息头被映射到 SOAP 标头。  
   
@@ -181,7 +167,7 @@ ms.lasthandoff: 04/28/2018
  若要访问标头中的 XML 数据，可以调用 <xref:System.ServiceModel.Channels.MessageHeaders.GetReaderAtHeader%2A>，并为特定标头索引返回一个 XML 读取器。 如果您希望将标头内容反序列化为对象，请使用 <xref:System.ServiceModel.Channels.MessageHeaders.GetHeader%60%601%28System.Int32%29> 或其他重载之一。 最基本的重载使用以默认方式配置的 <xref:System.Runtime.Serialization.DataContractSerializer> 来反序列化标头。 如果您希望使用其他序列化程序或 `DataContractSerializer` 的其他配置，请使用采用一个 `XmlObjectSerializer` 作为参数的重载之一。 还有一些重载采用标头名称、命名空间作为参数，还可能采用一个 `Actor` 值列表而不是一个索引作为参数；这种重载是 `FindHeader` 和 `GetHeader` 的组合。  
   
 ## <a name="working-with-properties"></a>使用属性  
- 一个 `Message` 实例可以包含任意多个具有任意类型的命名对象。 此集合可以通过类型为 `Properties` 的 `MessageProperties` 属性访问。 此集合实现了 <xref:System.Collections.Generic.IDictionary%602> 接口，并充当从 <xref:System.String> 到 <xref:System.Object> 的映射。 通常，属性值不会直接映射到网络上消息的任何部分，而是向 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道堆栈中的各个通道或 <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> 服务框架提供各种消息处理提示。 有关示例，请参阅[数据传输体系结构概述](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)。  
+ 一个 `Message` 实例可以包含任意多个具有任意类型的命名对象。 此集合可以通过类型为 `Properties` 的 `MessageProperties` 属性访问。 此集合实现了 <xref:System.Collections.Generic.IDictionary%602> 接口，并充当从 <xref:System.String> 到 <xref:System.Object> 的映射。 通常情况下，属性值不直接对应的消息在网络上的任何部分，但而是提供各种消息处理提示的各个通道 WCF 通道堆栈中或到<xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29>服务框架。 有关示例，请参阅[数据传输体系结构概述](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)。  
   
 ## <a name="inheriting-from-the-message-class"></a>从 Message 类继承  
  如果使用 `CreateMessage` 创建的内置消息类型不能满足您的要求，请创建一个从 `Message` 类派生的类。  

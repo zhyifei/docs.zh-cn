@@ -1,24 +1,14 @@
 ---
-title: "如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序"
-ms.custom: 
+title: 如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 70d503448946b60f1d6b63bf850d8d62fb63acc2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e8dc6b1c5073ac55be224eb0d410ad7f87d135d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序
 ## <a name="applies-to"></a>适用于  
@@ -27,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET® Web 窗体  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  本操作说明提供了创建简单的声明感知 ASP.NET Web 窗体应用程序的详细分步过程。 还提供关于如何测试简单声明感知 ASP.NET Web 窗体应用程序以确保成功实现联合身份验证的说明。 本操作说明不包括如何创建安全令牌服务 (STS) 的详细说明，且假定你已配置 STS。  
   
 ## <a name="contents"></a>内容  

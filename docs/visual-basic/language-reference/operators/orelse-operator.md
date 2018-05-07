@@ -1,11 +1,6 @@
 ---
-title: "OrElse 运算符 (Visual Basic)"
+title: OrElse 运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - OrElse
 - vb.OrElse
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47239a1d2b5b20f2b8cacc9b9185a0f95f63dc84
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1ee3c1a5b6089f44742281eb40e2a7e9cb3e2812
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse 运算符 (Visual Basic)
 执行短路对两个表达式的非独占逻辑或运算。  
@@ -36,13 +28,13 @@ result = expression1 OrElse expression2
   
 ## <a name="parts"></a>部件  
  `result`  
- 必需。 任何 `Boolean` 表达式。  
+ 必须的。 任何 `Boolean` 表达式。  
   
  `expression1`  
- 必需。 任何 `Boolean` 表达式。  
+ 必须的。 任何 `Boolean` 表达式。  
   
  `expression2`  
- 必需。 任何 `Boolean` 表达式。  
+ 必须的。 任何 `Boolean` 表达式。  
   
 ## <a name="remarks"></a>备注  
  逻辑操作称为*短路*如果编译的代码可以绕过根据另一个表达式的结果的一个表达式的计算。 如果计算的第一个表达式的结果确定该操作的最终结果，则不需要计算第二个表达式，因为它不能更改的最终结果。 如果跳过的表达式是复杂，或如果它涉及过程调用，则短路可以提高性能。  
@@ -73,7 +65,7 @@ result = expression1 OrElse expression2
   
  [!code-vb[VbVbalrOperators#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [逻辑/按位运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
  [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  

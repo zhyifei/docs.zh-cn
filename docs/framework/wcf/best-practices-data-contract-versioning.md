@@ -1,37 +1,23 @@
 ---
 title: 最佳做法：数据协定版本管理
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts
 - service contracts
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：数据协定版本管理
 本主题列出了创建容易随时间而改变的数据协定的最佳做法。 有关数据协定的详细信息，请参阅中的主题[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ## <a name="note-on-schema-validation"></a>有关架构验证的说明  
- 讨论数据协定版本管理时，注意除非元素被默认标记为可选之外，由 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 导出的数据协定架构不具有任何版本管理支持，这很重要。  
+ 讨论数据协定版本管理，务必请注意，导出由 Windows Communication Foundation (WCF) 的数据协定架构没有任何版本管理支持，元素被标记为可选默认情况下的事实之外。  
   
  这意味着即使是最常用的版本管理方案（例如添加新的数据成员）也不能通过与给定架构无缝相关的方法实现。 较新版本的数据协定（例如新添数据成员）不会使用旧架构进行验证。  
   

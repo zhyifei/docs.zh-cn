@@ -1,13 +1,6 @@
 ---
-title: "局部类型推理 (Visual Basic)"
-ms.custom: 
+title: 局部类型推理 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - local type inference
 - vb.TypeInfer
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-caps.latest.revision: "43"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d753d1fbdc60f70dcf0513d809f28a112243c111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="local-type-inference-visual-basic"></a>局部类型推理 (Visual Basic)
 Visual Basic 编译器使用*类型推理*来确定未声明的本地变量的数据类型`As`子句。 编译器推断出从初始化表达式的类型变量的类型。 这使您可以无需显式声明类型，声明变量，如下面的示例中所示。 由于声明，同时`num1`和`num2`强类型为整数。  
@@ -68,7 +58,7 @@ Visual Basic 编译器使用*类型推理*来确定未声明的本地变量的�
  [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## <a name="option-infer"></a>Option Infer  
- `Option Infer`允许你指定特定文件中是否允许局部类型推理。 若要启用或阻止该选项，请在文件的开头键入以下语句之一。  
+ `Option Infer` 允许你指定特定文件中是否允许局部类型推理。 若要启用或阻止该选项，请在文件的开头键入以下语句之一。  
   
  `Option Infer On`  
   
@@ -80,7 +70,7 @@ Visual Basic 编译器使用*类型推理*来确定未声明的本地变量的�
   
  有关详细信息，请参阅[Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)和[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
  [早期绑定和后期绑定](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
  [For Each...Next 语句](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)  

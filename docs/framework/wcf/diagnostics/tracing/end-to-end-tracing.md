@@ -1,36 +1,24 @@
 ---
-title: "端到端跟踪"
-ms.custom: 
+title: 端到端跟踪
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a2127c8dda26c376d7d722a24d72d2330174027
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 733ea0724fdbaea9c7d28ed2a94aba25f67ef87c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-to-end-tracing"></a>端到端跟踪
-端到端 (e2e) 跟踪可使开发人员跟踪 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 基础结构中的代码执行，从而调查代码路径失败的原因，或者提供详细的跟踪以进行容量规划和性能分析。 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供三种关联机制帮助诊断发生错误的原因：活动、传输和传播。  
+端到端 (e2e) 跟踪可使开发人员跟踪中的 Windows Communication Foundation (WCF) 基础结构，从而调查代码路径失败的原因，或者提供详细的跟踪以进行容量规划和性能分析的代码执行。 Windows Communication Foundation (WCF) 提供三种关联机制帮助诊断错误的原因： 活动、 传输和传播。  
   
  请参阅[端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)有关的端到端跟踪方案和其相应的活动和跟踪设计的列表。  
   
 ## <a name="in-this-section"></a>本节内容  
- [活动](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md)： 描述中的活动跟踪[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]跟踪模型。  
+ [活动](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md)： 介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动跟踪。  
   
- [传输](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md)： 描述中的传输[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]跟踪模型中，以及使用传输关联终结点内的活动。  
+ [传输](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md)： 介绍在 Windows Communication Foundation (WCF) 跟踪模型中，传输，并使用传输关联终结点内的活动。  
   
- [传播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)： 描述中的活动传播[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]跟踪模型中，以及使用传播关联终结点之间的活动。  
+ [传播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)： 描述活动传播中 Windows Communication Foundation (WCF) 跟踪模型中，以及使用传播关联终结点之间的活动。  
   
  [跟踪类型摘要](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
   

@@ -1,14 +1,6 @@
 ---
-title: "COR_IL_MAP 结构"
-ms.custom: 
+title: COR_IL_MAP 结构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_IL_MAP
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e2772833d75ced2209896ca37cf6cf37fb965f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9676730a4f11ed77996b7a4aab4e538aba9b53c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP 结构
 指定函数的相对偏移量的更改。  
@@ -53,7 +41,7 @@ typedef struct _COR_IL_MAP {
 |------------|-----------------|  
 |`oldOffset`|旧 Microsoft 中间语言 (MSIL) 偏移量相对于函数的开头。|  
 |`newOffset`|相对于函数的开头新 MSIL 偏移量。|  
-|`fAccurate`|`true`如果映射已知不准确的。否则为`false`。|  
+|`fAccurate`|`true` 如果映射已知不准确的。否则为`false`。|  
   
 ## <a name="remarks"></a>备注  
  映射的格式如下： 调试器将假定`oldOffset`指内原始、 未修改 MSIL 代码的 MSIL 偏移量。 `newOffset`参数是指已插入检测点的最新的代码中的相应 MSIL 偏移量。  
@@ -92,14 +80,14 @@ typedef struct _COR_IL_MAP {
   
 -   20 或更高版本的新的偏移量将映射到旧偏移量为 9。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorProf.idl  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

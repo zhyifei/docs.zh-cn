@@ -1,12 +1,6 @@
 ---
 title: Take 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryTake
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ee289a24c15226126a526af116ed53b4a9055b35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0dddb411af1b4ee269e091c07553a94589d90b2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="take-clause-visual-basic"></a>Take 子句 (Visual Basic)
 从集合的开头返回指定数量的连续元素。  
@@ -34,7 +25,7 @@ Take count
   
 ## <a name="parts"></a>部件  
  `count`  
- 必需。 一个值或表达式计算结果为要返回的序列的元素的数目。  
+ 必须的。 一个值或表达式计算结果为要返回的序列的元素的数目。  
   
 ## <a name="remarks"></a>备注  
  `Take`子句将使查询以包含指定的数量的结果列表的开始的连续元素。 指定要包括的元素数`count`参数。  
@@ -50,7 +41,7 @@ Take count
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-clause_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [查询](../../../visual-basic/language-reference/queries/queries.md)  
  [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  

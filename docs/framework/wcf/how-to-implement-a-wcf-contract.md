@@ -1,34 +1,20 @@
 ---
-title: "如何：实现 Windows Communication Foundation 服务协定"
-ms.custom: 
+title: 如何：实现 Windows Communication Foundation 服务协定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4bf590b2f508cc6661b5acb045a7d66b38ed169c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8d1712e6fcc844a3606403efc3c2648ddcc9c65
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>如何：实现 Windows Communication Foundation 服务协定
-这是创建基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务和可以调用该服务的客户端所需的六项任务中的第二项任务。 所有六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
+这是创建基本的 Windows Communication Foundation (WCF) 服务和客户端可以调用服务所需的六项任务的第二个。 所有六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
   
  创建 WCF 应用程序的下一步是实现服务接口。 这涉及到创建一个名为 `CalculatorService` 的类，该类实现用户定义的 `ICalculator` 接口。  
   

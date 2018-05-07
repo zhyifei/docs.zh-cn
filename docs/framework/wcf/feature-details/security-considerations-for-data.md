@@ -1,32 +1,20 @@
 ---
 title: 数据的安全考虑事项
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: aa0692c130fdfcf3685c152cdcb73a07d041ab9b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 077d6b3527119f00ecec3014778fecf0dd1a4bde
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-considerations-for-data"></a>数据的安全考虑事项
-当在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]中处理数据时，必须考虑许多种类的威胁。 下表列出了与数据处理相关的最重要的威胁类。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了缓解这些威胁的工具。  
+在处理数据在 Windows Communication Foundation (WCF)，你必须考虑许多种类的威胁。 下表列出了与数据处理相关的最重要的威胁类。 WCF 提供了缓解这些威胁的工具。  
   
  拒绝服务  
  当接收不受信任的数据时，这些数据可能导致非常耗时的计算，致使接收方访问数量过于巨大的各种资源，例如，内存、线程、可用连接或处理器周期。 针对服务器的拒绝服务攻击可能导致它崩溃，从而无法处理来自其他合法客户端的消息。  
@@ -38,7 +26,7 @@ ms.lasthandoff: 04/28/2018
  远程攻击方强制接收方以一种泄露它想要的更多信息的方式来响应它的请求。  
   
 ## <a name="user-provided-code-and-code-access-security"></a>用户提供的代码和代码访问安全性  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基础结构中的许多位置都运行用户提供的代码。 例如， <xref:System.Runtime.Serialization.DataContractSerializer> 序列化引擎可能调用用户提供的属性 `set` 访问器和 `get` 访问器。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道基础结构可能还调入用户提供的 <xref:System.ServiceModel.Channels.Message> 类的派生类。  
+ 许多 Windows Communication Foundation (WCF) 基础结构中的位置运行用户提供的代码。 例如， <xref:System.Runtime.Serialization.DataContractSerializer> 序列化引擎可能调用用户提供的属性 `set` 访问器和 `get` 访问器。 WCF 通道基础结构可能还调入用户提供的派生类的<xref:System.ServiceModel.Channels.Message>类。  
   
  代码创作者应负责确保不存在任何安全漏洞。 例如，如果您创建一个具有整数类型的数据成员属性的数据协定类型，并在 `set` 访问器实现中基于该属性值分配一个数组，则当恶意消息中包含该数据成员的一个极其庞大的值时，您可能会遭到拒绝服务攻击。 通常，应当在用户提供的代码中避免任何基于传入数据或耗时处理的分配（尤其当耗时处理可以由少量的传入数据导致时）。 当对用户提供的代码执行安全分析时，应确保同时考虑所有失败情况（即，引发异常的所有代码分支）。  
   
@@ -68,7 +56,7 @@ ms.lasthandoff: 04/28/2018
   
  超过配额的情况是可恢复的；如果是在正在运行的服务中遇到此问题，则会丢弃当前正在处理的消息，服务继续运行并处理更多的消息。 但是，内存不足和堆栈溢出的情况在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中的任何位置都是不可恢复的；服务遇到这样的异常将会终止。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的配额不涉及任何预分配。 例如，如果 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> 配额（在各个类中都可找到）设置为 128 KB，并不意味着会自动为每个消息分配 128 KB。 实际分配的量取决于实际的传入消息大小。  
+ 在 WCF 中的配额不涉及任何预分配。 例如，如果 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> 配额（在各个类中都可找到）设置为 128 KB，并不意味着会自动为每个消息分配 128 KB。 实际分配的量取决于实际的传入消息大小。  
   
  传输层有许多配额。 这些配额是由正在使用的特定传输通道（HTTP、TCP 等等）强制施加的。 虽然本主题讨论其中的一些配额，但这些配额的详细介绍是在 [Transport Quotas](../../../../docs/framework/wcf/feature-details/transport-quotas.md)中。  
   
@@ -85,19 +73,19 @@ ms.lasthandoff: 04/28/2018
  当使用二进制 XML 编码时，将其他配额设置为 `MaxReceivedMessageSize` 尤为重要。 使用二进制编码有一点像压缩：传入消息中的一小组字节可表示大量的数据。 这样，即使消息不超过 `MaxReceivedMessageSize` 限制，其完全展开形式也可能占用多得多的内存。 要缓解 XML 特有的此类威胁，必须正确设置所有 XML 读取器配额，具体如本主题后面的“安全地使用 XML”一节所述。  
   
 ## <a name="limiting-memory-consumption-with-streaming"></a>在使用流模式的情况下限制内存消耗  
- 当使用流模式时，您可能使用一个小的 `MaxReceivedMessageSize` 设置来防止拒绝服务攻击。 但是，在流模式下可能出现更复杂的情况。 例如，文件上载服务接受大于所有可用内存的文件。 在这种情况下，应当将 `MaxReceivedMessageSize` 设置为一个非常大的值，此时预计的情况是：几乎不会有任何数据缓冲在内存中，并且消息将以流的形式直接传送到磁盘中。 如果在这种情况下恶意消息可以通过某种方式强制 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 缓冲数据，而不是以流的形式传送数据，则 `MaxReceivedMessageSize` 不再能阻止消息访问所有可用内存。  
+ 当使用流模式时，您可能使用一个小的 `MaxReceivedMessageSize` 设置来防止拒绝服务攻击。 但是，在流模式下可能出现更复杂的情况。 例如，文件上载服务接受大于所有可用内存的文件。 在这种情况下，应当将 `MaxReceivedMessageSize` 设置为一个非常大的值，此时预计的情况是：几乎不会有任何数据缓冲在内存中，并且消息将以流的形式直接传送到磁盘中。 如果恶意消息可以通过某种方式强制缓冲数据，而不是在这种情况下，流数据的 WCF`MaxReceivedMessageSize`不再能阻止消息访问所有可用内存。  
   
- 若要缓解这种威胁，限制缓冲的各个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 数据处理组件上必须存在特定的配额设置。 其中最重要的一个设置是各个传输绑定元素和标准绑定的 `MaxBufferSize` 属性。 当采用流模式时，应当在考虑将为每个消息分配的最大内存量的情况下设置此配额。 与 `MaxReceivedMessageSize`一样，此设置也不对内存消耗施加一个绝对上限值，而只限定它不得超过某个常量系数。 此外，与 `MaxReceivedMessageSize`一样，也要注意同时处理多个消息的可能性。  
+ 若要缓解此威胁，特定的配额设置存在 WCF 的各种数据处理组件上该限制缓冲。 其中最重要的一个设置是各个传输绑定元素和标准绑定的 `MaxBufferSize` 属性。 当采用流模式时，应当在考虑将为每个消息分配的最大内存量的情况下设置此配额。 与 `MaxReceivedMessageSize`一样，此设置也不对内存消耗施加一个绝对上限值，而只限定它不得超过某个常量系数。 此外，与 `MaxReceivedMessageSize`一样，也要注意同时处理多个消息的可能性。  
   
 ### <a name="maxbuffersize-details"></a>MaxBufferSize 详细信息  
- `MaxBufferSize` 属性限制 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 执行任何大容量缓冲。 例如， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 始终缓冲 SOAP 头和 SOAP 错误，以及消息传输优化机制 (Message Transmission Optimization Mechanism, MTOM) 消息中不在自然读取顺序中的所有 MIME 部分。 此设置可限制所有这些情况下的缓冲量。  
+ `MaxBufferSize`属性限制缓冲 WCF 未任何大容量。 例如，WCF 始终缓冲 SOAP 标头和 SOAP 错误，以及所有 MIME 部分不在自然读取顺序中的消息传输优化机制 (MTOM) 消息。 此设置可限制所有这些情况下的缓冲量。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通过将 `MaxBufferSize` 值传递给可能进行缓冲的各个组件来实现此限制。 例如， <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> 类的一些 <xref:System.ServiceModel.Channels.Message> 重载采用 `maxSizeOfHeaders` 参数。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将 `MaxBufferSize` 值传递给此参数来限制 SOAP 标头缓冲的量。 当直接使用 <xref:System.ServiceModel.Channels.Message> 类时，设置此参数非常重要。 通常，当在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用采用配额参数的组件时，必须了解这些参数的安全含义并正确地设置它们，这一点非常重要。  
+ WCF 通过完成此操作传递`MaxBufferSize`可能缓冲的各个组件的值。 例如， <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> 类的一些 <xref:System.ServiceModel.Channels.Message> 重载采用 `maxSizeOfHeaders` 参数。 WCF 将传递`MaxBufferSize`给此参数来限制 SOAP 标头缓冲的量的值。 当直接使用 <xref:System.ServiceModel.Channels.Message> 类时，设置此参数非常重要。 通常情况下，当在采用配额参数的 WCF 中使用的组件，是一定要了解这些参数的安全含义并正确地设置它们。  
   
  MTOM 消息编码器也有一个 `MaxBufferSize` 设置。 当使用标准绑定时，它自动设置为传输层的 `MaxBufferSize` 值。 但是，当使用 MTOM 消息编码器绑定元素来构造一个自定义绑定时，在使用流模式的情况下应当将 `MaxBufferSize` 属性设置为一个安全值，这一点非常重要。  
   
 ## <a name="xml-based-streaming-attacks"></a>基于 XML 的流式攻击  
- 当预计使用流模式时，如果要确保不能强制`MaxBufferSize` 进行缓冲，仅仅 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 是不够的。 例如， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML 读取器在开始读取新元素时，始终会缓冲整个 XML 元素开始标记。 这样做是为了正确处理命名空间和属性。 如果 `MaxReceivedMessageSize` 配置为一个很大的值（例如，为了启用直接到磁盘的大型文件流式传送方案），那么，当整个消息正文是一个大型的 XML 元素开始标记时，可能会构造恶意消息。 尝试读取它会导致 <xref:System.OutOfMemoryException>。 这是许多可能基于 XML 的拒绝服务攻击之一可以所有缓解使用 XML 读取器配额，本主题中后面的"安全地使用 XML"部分所述。 当使用流模式时，设置所有这些配额尤为重要。  
+ `MaxBufferSize` 单独不足以确保 WCF 不能强制进行缓冲当预计使用流模式。 例如，WCF XML 读取器始终会缓冲整个 XML 元素开始标记时开始读取新元素。 这样做是为了正确处理命名空间和属性。 如果 `MaxReceivedMessageSize` 配置为一个很大的值（例如，为了启用直接到磁盘的大型文件流式传送方案），那么，当整个消息正文是一个大型的 XML 元素开始标记时，可能会构造恶意消息。 尝试读取它会导致 <xref:System.OutOfMemoryException>。 这是许多可能基于 XML 的拒绝服务攻击之一可以所有缓解使用 XML 读取器配额，本主题中后面的"安全地使用 XML"部分所述。 当使用流模式时，设置所有这些配额尤为重要。  
   
 ### <a name="mixing-streaming-and-buffering-programming-models"></a>混合流式和缓冲编程模型  
  许多可能的攻击都是因为在同一个服务中混合流式和非流式编程模型而引起的。 假定存在一个具有两个操作的服务协定：一个操作采用一个 <xref:System.IO.Stream> ，另一个操作采用某个自定义类型的数组。 另外还假定 `MaxReceivedMessageSize` 设置为一个较大的值，以使第一个操作可以处理大型流。 遗憾的是，这意味着大型消息现在也可以发送给第二个操作，并且在调用该操作之前，反序列化程序将数据作为一个数组缓冲在内存中。 这是潜在的拒绝服务攻击： `MaxBufferSize` 配额不限制反序列化程序所处理的消息正文的大小。  
@@ -123,7 +111,7 @@ ms.lasthandoff: 04/28/2018
 ### <a name="slow-stream-attacks"></a>慢速流式攻击  
  流式拒绝服务攻击类不涉及内存消耗。 此类攻击涉及数据的慢速发送方或接收方。 当等待发送或接收数据时，诸如线程和可用连接之类的资源将消耗殆尽。 恶意攻击或者慢速网络连接上的合法发送方/接收方均会导致这种情形的发生。  
   
- 若要缓解这样的攻击，应正确设置传输超时时间。 有关详细信息，请参阅[传输配额](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。 其次，当在 `Read` 中处理流时，绝不要使用同步的 `Write` 或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]操作。  
+ 若要缓解这样的攻击，应正确设置传输超时时间。 有关详细信息，请参阅[传输配额](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。 其次，绝不要使用同步`Read`或`Write`操作处理在 WCF 中的流时。  
   
 ## <a name="using-xml-safely"></a>安全地使用 XML  
   
@@ -131,11 +119,11 @@ ms.lasthandoff: 04/28/2018
 >  虽然本节是有关 XML 的内容，但是这些信息同样适用于 JavaScript 对象表示法 (JSON) 文档。 使用 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)时，配额同样发挥作用。  
   
 ### <a name="secure-xml-readers"></a>安全的 XML 读取器  
- XML Infoset 是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中的所有消息处理的基础。 当接受来自不受信任源的 XML 数据时，可能存在许多必须缓解的拒绝服务攻击。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供特殊而安全的 XML 读取器。 这些读取器是在使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的标准编码之一（文本、二进制或 MTOM）时自动创建的。  
+ 在 WCF 中，XML Infoset 窗体的所有消息处理的基础。 当接受来自不受信任源的 XML 数据时，可能存在许多必须缓解的拒绝服务攻击。 WCF 提供特殊而安全的 XML 读取器。 在 WCF （文本、 二进制或 MTOM） 中使用的标准编码之一时，将自动创建这些读取器。  
   
  这些读取器上的一些安全功能始终处于活动状态。 例如，这些读取器从不处理文档类型定义 (DTD)，这些定义是拒绝服务攻击的潜在来源，绝不应出现在合法的 SOAP 消息中。 其他安全功能包括必须配置的读取器配额，这些在下一节介绍。  
   
- 当直接处理 XML 读取器（例如，编写您自己的自定义编码器或者直接处理 <xref:System.ServiceModel.Channels.Message> 类）时，只要存在处理不受信任的数据的可能性，就总是应使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全读取器。 通过在 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>类上调用 <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>、 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 或 <xref:System.Xml.XmlDictionaryReader> 的静态工厂方法重载之一来创建安全读取器。 创建读取器时，应传入安全的配额值。 不要调用 `Create` 方法重载。 这些重载不会创建 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 读取器， 而是创建不受本节所介绍的安全功能保护的读取器。  
+ 当直接处理 XML 读取器 (如编写您自己的自定义编码器时，或当直接处理<xref:System.ServiceModel.Channels.Message>类)，处理不受信任数据的可能性时始终使用 WCF 安全读取器。 通过在 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>类上调用 <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>、 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 或 <xref:System.Xml.XmlDictionaryReader> 的静态工厂方法重载之一来创建安全读取器。 创建读取器时，应传入安全的配额值。 不要调用 `Create` 方法重载。 这些不会创建一个 WCF 读取器。 而是创建不受本节所介绍的安全功能保护的读取器。  
   
 ### <a name="reader-quotas"></a>读取器配额  
  安全的 XML 读取器具有五个可配置的配额。 这些配额通常是使用编码绑定元素或标准绑定的 `ReaderQuotas` 属性配置的，或者是使用在创建读取器时传入的 <xref:System.Xml.XmlDictionaryReaderQuotas> 对象创建的。  
@@ -164,9 +152,9 @@ ms.lasthandoff: 04/28/2018
  此配额限制 XML 读取器返回的基元数组（包括字节数组）的最大大小。 此配额不限制 XML 读取器本身的内存消耗，但限制使用该读取器的所有组件的内存消耗。 例如，当 <xref:System.Runtime.Serialization.DataContractSerializer> 使用一个以 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>保护的读取器时，将不会反序列化大于此配额的字节数组。 当尝试在一个协定中混合流式编程模型和缓冲编程模型时，设置此配额非常重要。 请记住，当直接使用 <xref:System.Xml.XmlDictionaryReader> 类时，只有专门设计用于读取某些基元类型的任意大小数组的方法（如 <xref:System.Xml.XmlDictionaryReader.ReadInt32Array%2A>）才受此配额的约束。  
   
 ## <a name="threats-specific-to-the-binary-encoding"></a>二进制编码所特有的威胁  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所支持的二进制 XML 编码包括一个字典字符串功能  。 可以仅仅使用几个字节对一个大型字符串进行编码。 这会实现显著的性能改进，但也引入了必须缓解的新型拒绝服务威胁。  
+ 二进制 XML 编码 WCF 支持包括*字典字符串*功能。 可以仅仅使用几个字节对一个大型字符串进行编码。 这会实现显著的性能改进，但也引入了必须缓解的新型拒绝服务威胁。  
   
- 有两种类型的字典： *静态* 字典和 *动态*字典。 静态字典是可以使用二进制编码中的短代码表示的长字符串的内置列表。 当读取器已创建且无法修改时，这一字符串列表是固定的。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用的静态字典中不会有任何字符串大到造成严重的拒绝服务威胁，但它们仍然可能用于字典展开攻击。 在您提供自己的静态字典的复杂情况下，在引入大型字典字符串时应谨慎。  
+ 有两种类型的字典： *静态* 字典和 *动态*字典。 静态字典是可以使用二进制编码中的短代码表示的长字符串的内置列表。 当读取器已创建且无法修改时，这一字符串列表是固定的。 默认情况下使用 WCF 的静态字典中的字符串都足够大到造成严重的拒绝服务威胁，但它们仍然可能用于字典展开攻击。 在您提供自己的静态字典的复杂情况下，在引入大型字典字符串时应谨慎。  
   
  动态字典功能使得消息可以定义它们自己的字符串，并将它们与短代码关联。 字符串与代码的这些映射在整个通信会话期间一直保留在内存中，这样后续消息就不必重新发送字符串，并且可以利用已经定义的代码。 这些字符串可以是任意长度，因此造成了比静态字典中的字符串更严重的威胁。  
   
@@ -272,7 +260,7 @@ ms.lasthandoff: 04/28/2018
 -   在未首先验证的情况下，绝不要信任从不受信任的数据源反序列化的对象图。 每个单独的对象可能都处于一致状态，但对象图整体有可能处于不一致状态。 此外，即使禁用对象图保存模式，反序列化的对象图也可能具有对同一对象的多个引用或者具有循环引用。 有关详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
 ### <a name="using-the-netdatacontractserializer-securely"></a>安全地使用 NetDataContractSerializer  
- <xref:System.Runtime.Serialization.NetDataContractSerializer> 是一个序列化引擎，它使用类型的紧密耦合。 这类似于 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>。 也就是说，它通过从传入数据中读取 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程序集和类型名来确定要实例化的类型。 尽管它是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的一部分，但没有现成的方法来插入此序列化引擎，必须编写自定义代码。 提供 `NetDataContractSerializer` 主要是为了简化从 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 远程处理到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的迁移过程。 有关详细信息，请参阅中的相关部分[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> 是一个序列化引擎，它使用类型的紧密耦合。 这类似于 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>。 也就是说，它通过从传入数据中读取 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程序集和类型名来确定要实例化的类型。 尽管它是 WCF 的一部分，但是没有现成的插入此序列化引擎; 方法必须编写自定义代码。 `NetDataContractSerializer`提供主要是为了简化从迁移[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]远程处理与 WCF。 有关详细信息，请参阅中的相关部分[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
  因为消息本身可能指示可以加载的任何类型，所以 <xref:System.Runtime.Serialization.NetDataContractSerializer> 机制本质上是不安全的，应当仅与受信任的数据一起使用。 通过使用 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 属性编写安全的、类型限制的类型联编程序来仅允许加载安全类型，可使它变成安全的机制。  
   
@@ -343,7 +331,7 @@ ms.lasthandoff: 04/28/2018
  通常，导入架构以生成类型的过程只会在设计时发生，例如，当在 Web 服务上使用 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 来生成客户端类时就会发生此过程。 但是，在更复杂的情况下，也可能在运行时处理架构。 请注意，这样做可能会有遭到拒绝服务攻击的风险。 有些架构可能需要很长时间才能导入。 如果架构可能来自不受信任的源，那么在这种情况下绝不要使用 <xref:System.Xml.Serialization.XmlSerializer> 架构导入组件。  
   
 ## <a name="threats-specific-to-aspnet-ajax-integration"></a>特定于 ASP.NET AJAX 集成的威胁  
- 用户实现 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 或 <xref:System.ServiceModel.Description.WebHttpBehavior>时， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将公开可同时接受 XML 和 JSON 消息的终结点。 但是，只有一组读取器配额，供 XML 读取器和 JSON 读取器同时使用。 某些配额设置可能适合于一种读取器，但对另一种读取器而言太大。  
+ 当用户实现<xref:System.ServiceModel.Description.WebScriptEnablingBehavior>或<xref:System.ServiceModel.Description.WebHttpBehavior>，WCF 公开可以接受 XML 和 JSON 消息的终结点。 但是，只有一组读取器配额，供 XML 读取器和 JSON 读取器同时使用。 某些配额设置可能适合于一种读取器，但对另一种读取器而言太大。  
   
  实现 `WebScriptEnablingBehavior`时，用户可选择公开位于终结点的 JavaScript 代理。 必须考虑以下安全问题：  
   
@@ -352,9 +340,9 @@ ms.lasthandoff: 04/28/2018
 -   使用 JavaScript 终结点时，可能会在客户端的 Web 浏览器缓存中保留敏感信息和私有信息。  
   
 ## <a name="a-note-on-components"></a>关于组件的说明  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 是一个灵活且可自定义的系统。 本主题中的大多数内容关注的都是最常见的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用方案。 但是，也许可以通过许多不同的方法组合 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所提供的组件。 必须了解使用每个组件的安全含义。 具体而言：  
+ WCF 是一个灵活且可自定义的系统。 本主题的内容的大多数关注最常见的 WCF 使用方案。 但是，就可以编写 WCF 提供了许多不同的方式的组件。 必须了解使用每个组件的安全含义。 具体而言：  
   
--   当您必须使用 XML 读取器时，应使用 <xref:System.Xml.XmlDictionaryReader> 类所提供的读取器，而不要使用其他任何读取器。 安全读取器是使用 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>、 <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>或 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 方法创建的。 不要使用 <xref:System.Xml.XmlReader.Create%2A> 方法。 应始终为读取器配置安全配额。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的序列化引擎只有在与来自 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的安全 XML 读取器一起使用时，才是安全的。  
+-   当您必须使用 XML 读取器时，应使用 <xref:System.Xml.XmlDictionaryReader> 类所提供的读取器，而不要使用其他任何读取器。 安全读取器是使用 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>、 <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>或 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 方法创建的。 不要使用 <xref:System.Xml.XmlReader.Create%2A> 方法。 应始终为读取器配置安全配额。 在 WCF 中的序列化引擎是仅当从 WCF 的安全 XML 读取器一起使用安全的。  
   
 -   当使用 <xref:System.Runtime.Serialization.DataContractSerializer> 来反序列化可能不受信任的数据时，应总是设置 <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A> 属性。  
   

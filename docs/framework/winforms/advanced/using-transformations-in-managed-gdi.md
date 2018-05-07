@@ -1,27 +1,15 @@
 ---
-title: "在托管 GDI+ 中使用转换"
-ms.custom: 
+title: 在托管 GDI+ 中使用转换
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transformations
 - examples [Windows Forms], transformations
 ms.assetid: 1f8e18d3-d2f5-460e-a8e3-2da891c301de
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 07f10050d669e0de741e8aa1361a078928eebef5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e20f779a3314b0f8f88cdeb67f60841302264f1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-transformations-in-managed-gdi"></a>在托管 GDI+ 中使用转换
 仿射转换包括旋转、 缩放、 反映、 修剪和平移。 在[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、<xref:System.Drawing.Drawing2D.Matrix>类提供的基础上矢量图形、 图像和文本执行仿射转换。  

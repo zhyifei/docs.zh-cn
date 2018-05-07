@@ -1,34 +1,20 @@
 ---
 title: 使用会话
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e826e0952f95608fd8d85a5b1fad6b17d3fdacb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-sessions"></a>使用会话
-在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序中，“会话”  将一组消息相互关联，从而形成对话。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 会话与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序中提供的会话对象不同，它们支持不同的行为，并且可通过不同的方式进行控制。 本主题描述了会话在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序中启用的功能以及如何使用这些功能。  
+Windows Communication Foundation (WCF) 应用程序中*会话*将一组消息关联起来形成对话。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 会话与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序中提供的会话对象不同，它们支持不同的行为，并且可通过不同的方式进行控制。 本主题描述了会话在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序中启用的功能以及如何使用这些功能。  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Windows Communication Foundation 应用程序中的会话  
  当某个服务协定指定它需要会话时，该协定会指定所有调用（即，支持调用的基础消息交换）必须是同一对话的一部分。 如果某个协定指定它允许使用会话但不要求使用会话，则客户端可以进行连接，并选择建立会话或不建立会话。 如果会话结束，然后在同一个通道上发送消息，将会引发异常。  

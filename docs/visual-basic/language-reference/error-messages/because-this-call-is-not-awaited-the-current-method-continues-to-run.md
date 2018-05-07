@@ -1,26 +1,17 @@
 ---
 title: 由于不等待此调用，因此在调用完成之前，当前方法将继续运行
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc42358
 - vbc42358
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a0d0a5e7c50bacc657a3f54a7f08036ede59cbfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 754fc6750e63f6d9f39da94041fc452829bca46d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>由于不等待此调用，因此在调用完成之前，当前方法将继续运行
 在调用完成之前，会继续执行当前方法，原因是此调用不处于等待状态。 请考虑向调用结果应用“Await”运算符。  
@@ -211,6 +202,6 @@ ms.lasthandoff: 11/21/2017
   
      预期的输出显示在代码末尾。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Await 运算符](../../../visual-basic/language-reference/operators/await-operator.md)  
  [使用 Async 和 Await 的异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)

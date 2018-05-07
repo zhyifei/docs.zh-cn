@@ -1,31 +1,19 @@
 ---
-title: "如何：配置 WCF 服务以便与 WSE 3.0 客户端进行互操作"
-ms.custom: 
+title: 如何：配置 WCF 服务以便与 WSE 3.0 客户端进行互操作
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c93b91123c7622bea125bfa702c53a697b1ac84c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 174ecd279f9380136532ce0d5105b7a71b6d88da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>如何：配置 WCF 服务以便与 WSE 3.0 客户端进行互操作
-在将 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务配置为使用 WS-Addressing 规范的 2004 年 8 月版时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务与 Web Services Enhancements 3.0 for Microsoft .NET 客户端具有网络级别兼容性。  
+当 WCF 服务配置为使用 2004 年 8 月版 Ws-addressing 规范时，Windows Communication Foundation (WCF) 服务是与 Web Services Enhancements 3.0 for Microsoft.NET (WSE) 客户端的网络级别兼容性。  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>使 WCF 服务与 WSE 3.0 客户端进行互操作  
   
-1.  定义 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的自定义绑定。  
+1.  定义自定义绑定的 WCF 服务。  
   
      若要指定将 WS-Addressing 规范的 2004 年 8 月版用于消息编码，必须创建自定义绑定。  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
     3.  指定身份验证模式和用于保护通过添加子级与 WSE 3.0 中，兼容的消息的 Ws-security 规范的版本[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)到[ \<绑定 >](../../../../docs/framework/misc/binding.md)。  
   
-         若要设置的身份验证模式，设置`authenicationMode`属性[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)。 身份验证模式大致等效于 WSE 3.0 中的关守安全断言。 下表将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的身份验证模式映射为 WSE 3.0 中的关守安全断言。  
+         若要设置的身份验证模式，设置`authenicationMode`属性[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)。 身份验证模式大致等效于 WSE 3.0 中的关守安全断言。 下表将映射到在 WSE 3.0 关守安全断言的 WCF 中的身份验证模式。  
   
         |WCF 身份验证模式|WSE 3.0 关守安全断言|  
         |-----------------------------|----------------------------------------|  
@@ -46,11 +34,11 @@ ms.lasthandoff: 12/22/2017
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameOverTransport>|`usernameOverTransportSecurity`|  
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameForCertificate>|`usernameForCertificateSecurity`|  
   
-         \*之间的主要区别之一`mutualCertificate10Security`和`mutualCertificate11Security`关守安全断言是，WSE 用于保护 SOAP 消息的 Ws-security 规范的版本。 `mutualCertificate10Security` 使用 WS-Security 1.0，而 WS-Security 1.1 用于 `mutualCertificate11Security`。 有关[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，Ws-security 规范的版本中指定`messageSecurityVersion`属性[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)。  
+         \* 之间的主要区别之一`mutualCertificate10Security`和`mutualCertificate11Security`关守安全断言是，WSE 用于保护 SOAP 消息的 Ws-security 规范的版本。 `mutualCertificate10Security` 使用 WS-Security 1.0，而 WS-Security 1.1 用于 `mutualCertificate11Security`。 对于 WCF，Ws-security 规范的版本中指定`messageSecurityVersion`属性[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)。  
   
          若要设置用于保护 SOAP 消息的 Ws-security 规范的版本，设置`messageSecurityVersion`属性[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)。 若要与 WSE 3.0 进行互操作，请将 `messageSecurityVersion` 属性的值设置为 <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A>。  
   
-    4.  指定由 Ws-addressing 规范的 2004 年 8 月版本[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]通过添加[ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)并设置`messageVersion`为其值以<xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>。  
+    4.  指定使用 Ws-addressing 规范的 2004 年 8 月版本是由 WCF 通过添加[ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)并设置`messageVersion`为其值以<xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>。  
   
         > [!NOTE]
         >  在使用 SOAP 1.2 时，请将 `messageVersion` 属性设置为 <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>。  

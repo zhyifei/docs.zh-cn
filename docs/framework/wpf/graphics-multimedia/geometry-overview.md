@@ -1,13 +1,6 @@
 ---
-title: "Geometry 概述"
-ms.custom: 
+title: Geometry 概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01c460ae18c489a21c860c6d2b10f551e6e68242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="geometry-overview"></a>Geometry 概述
 本概述介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Media.Geometry>类来描述形状。 本主题还形成了鲜明对比之间的差异<xref:System.Windows.Media.Geometry>对象和<xref:System.Windows.Shapes.Shape>元素。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="what-is-a-geometry"></a>什么是 Geometry？  
  <xref:System.Windows.Media.Geometry>类和类从中派生，如<xref:System.Windows.Media.EllipseGeometry>， <xref:System.Windows.Media.PathGeometry>，和<xref:System.Windows.Media.CombinedGeometry>，使你可以描述的二维形状的几何图形。 这些几何描述具有许多用途，例如定义要绘制到屏幕的形状或定义命中测试和剪裁区域。 甚至可以使用几何定义动画路径。  
   
- <xref:System.Windows.Media.Geometry>对象可以是简单，，例如矩形和圆形或复合，创建两个或多个几何对象。  可以通过创建更复杂的几何图形<xref:System.Windows.Media.PathGeometry>和<xref:System.Windows.Media.StreamGeometry>类，使你可以描述弧线和曲线。  
+ <xref:System.Windows.Media.Geometry> 对象可以是简单，，例如矩形和圆形或复合，创建两个或多个几何对象。  可以通过创建更复杂的几何图形<xref:System.Windows.Media.PathGeometry>和<xref:System.Windows.Media.StreamGeometry>类，使你可以描述弧线和曲线。  
   
  因为<xref:System.Windows.Media.Geometry>是一种<xref:System.Windows.Freezable>，<xref:System.Windows.Media.Geometry>对象提供几个特殊功能： 它们可以声明为[资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、 多个对象，进行只读的以提高性能，克隆，之间共享和设为线程安全。 有关提供的不同功能的详细信息<xref:System.Windows.Freezable>对象，请参阅[可冻结对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
@@ -187,7 +175,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="composite-geometries"></a>复合几何  
  可以使用创建的复合几何图形对象<xref:System.Windows.Media.GeometryGroup>、 <xref:System.Windows.Media.CombinedGeometry>，或通过调用静态<xref:System.Windows.Media.Geometry>方法<xref:System.Windows.Media.Geometry.Combine%2A>。  
   
--   <xref:System.Windows.Media.CombinedGeometry>对象和<xref:System.Windows.Media.Geometry.Combine%2A>方法执行布尔操作，以合并两个几何图形由定义的区域。 <xref:System.Windows.Media.Geometry>有没有区域的对象将被丢弃。 只有两个<xref:System.Windows.Media.Geometry>（尽管这两个几何图形也可能是复合几何图形），可以组合对象。  
+-   <xref:System.Windows.Media.CombinedGeometry>对象和<xref:System.Windows.Media.Geometry.Combine%2A>方法执行布尔操作，以合并两个几何图形由定义的区域。 <xref:System.Windows.Media.Geometry> 有没有区域的对象将被丢弃。 只有两个<xref:System.Windows.Media.Geometry>（尽管这两个几何图形也可能是复合几何图形），可以组合对象。  
   
 -   <xref:System.Windows.Media.GeometryGroup>类创建的组合体<xref:System.Windows.Media.Geometry>对象但不合并其区域包含。 任意数量的<xref:System.Windows.Media.Geometry>对象可以添加到<xref:System.Windows.Media.GeometryGroup>。 有关示例，请参阅[创建复合形状](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)。  
   
@@ -219,11 +207,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="other-geometry-features"></a>其他几何功能  
  <xref:System.Windows.Media.Geometry>类还提供了有用的实用工具方法，如下所示：  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A>-获取的区域<xref:System.Windows.Media.Geometry>。  
+-   <xref:System.Windows.Media.Geometry.GetArea%2A> -获取的区域<xref:System.Windows.Media.Geometry>。  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A>-确定几何图形是否包含另一个<xref:System.Windows.Media.Geometry>。  
+-   <xref:System.Windows.Media.Geometry.FillContains%2A> -确定几何图形是否包含另一个<xref:System.Windows.Media.Geometry>。  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A>-确定是否的描边<xref:System.Windows.Media.Geometry>包含指定的点。  
+-   <xref:System.Windows.Media.Geometry.StrokeContains%2A> -确定是否的描边<xref:System.Windows.Media.Geometry>包含指定的点。  
   
  请参阅<xref:System.Windows.Media.Geometry>有关其方法的完整列表的类。  
   

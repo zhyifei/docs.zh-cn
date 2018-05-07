@@ -1,24 +1,12 @@
 ---
-title: "使用元数据"
-ms.custom: 
+title: 使用元数据
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa545e812de8c87191d6bba7df5cc5a5a494af3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c2fd0fc54c868c72903d5ea5ad847725d813f2da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-metadata"></a>使用元数据
 服务元数据包含计算机可读的服务说明。 服务元数据包括服务终结点、绑定、约定、操作和消息的说明。 服务元数据有多种用途，包括自动生成使用服务的客户端、实现服务说明和动态更新客户端的绑定。  
@@ -31,7 +19,7 @@ ms.lasthandoff: 12/22/2017
  演示如何使用 Svcutil.exe 检索元数据和实现相容服务。  
   
  [根据服务元数据生成 WCF 客户端](../../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)  
- 演示如何使用 Svcutil.exe 检索元数据和生成 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端。  
+ 演示如何使用 Svcutil.exe 检索元数据和生成 Windows Communication Foundation (WCF) 客户端。  
   
 ## <a name="see-also"></a>请参阅  
  [元数据](../../../../docs/framework/wcf/feature-details/metadata.md)

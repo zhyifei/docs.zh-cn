@@ -1,36 +1,22 @@
 ---
-title: "传输配额"
-ms.custom: 
+title: 传输配额
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-quotas"></a>传输配额
 传输配额是一种策略机制，用于决定连接何时正在占用过多资源。 配额是一种硬性限制，它在超出配额值时立即禁止使用其他资源。 传输配额可防止恶意或无意的拒绝服务攻击。  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 传输的默认配额值基于资源的保守分配。 这些默认值适合于开发环境和小型安装方案。 如果某个安装耗尽了资源或是连接受到限制，则无论是否还有其他资源可用，服务管理员都应检查传输配额并调整各个配额值。  
+ Windows Communication Foundation (WCF) 传输的默认配额值基于资源的保守分配。 这些默认值适合于开发环境和小型安装方案。 如果某个安装耗尽了资源或是连接受到限制，则无论是否还有其他资源可用，服务管理员都应检查传输配额并调整各个配额值。  
   
 ## <a name="types-of-transport-quotas"></a>传输配额的类型  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 传输具有三种类型的配额：  
+ WCF 传输具有三种类型的配额：  
   
 -   *超时*缓解拒绝服务攻击依赖于的时间长时间占用资源。  
   
@@ -39,11 +25,11 @@ ms.lasthandoff: 12/22/2017
 -   *集合大小限制*限制对间接分配内存或限量供应的资源的消耗。  
   
 ## <a name="transport-quota-descriptions"></a>传输配额说明  
- 本节介绍可用于下列标准 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 传输的传输配额：HTTP(S)、TCP/IP 和命名管道。 自定义传输可以公开它们自己的、未包含在此列表中的可配置配额。 若要了解自定义传输的配额，请参考自定义传输的文档。  
+ 本部分介绍可用于标准 WCF 传输的传输配额： HTTP (S)、 TCP/IP 和命名的管道。 自定义传输可以公开它们自己的、未包含在此列表中的可配置配额。 若要了解自定义传输的配额，请参考自定义传输的文档。  
   
  每个配额设置都有类型、最小值和默认值。 配额的最大值由其类型限制。 由于计算机的限制，并不总是可以将配额设置为它的最大值。  
   
-|name|类型|最小<br /><br /> 值|默认<br /><br /> 值|描述|  
+|名称|类型|最小<br /><br /> 值|默认<br /><br /> 值|描述|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 个计时周期|5 秒|初始读取过程中等待连接发送前导码的最长时间。 此数据在进行身份验证前接收。 此设置通常要比 `ReceiveTimeout` 配额值小得多。|  
 |`CloseTimeout`|TimeSpan|0|1 分钟|在传输引发异常之前等待连接关闭的最长时间。|  
@@ -72,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>通过绑定元素控制传输配额  
  通过绑定元素设置传输配额为控制传输行为提供了最大的灵活性。 生成通道时，将从绑定中获取关闭、打开、接收和发送操作的默认超时值。  
   
-|name|HTTP|TCP/IP|命名管道|  
+|名称|HTTP|TCP/IP|命名管道|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -94,7 +80,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="controlling-transport-quotas-from-the-binding"></a>通过绑定控制传输配额  
  通过绑定设置传输配额可提供一组简化的配额以供选择，同时仍然提供对最常用配额值的访问。  
   
-|name|HTTP|TCP/IP|命名管道|  
+|名称|HTTP|TCP/IP|命名管道|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  

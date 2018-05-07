@@ -1,31 +1,19 @@
 ---
-title: "如何：部署 COM+ 集成应用程序"
-ms.custom: 
+title: 如何：部署 COM+ 集成应用程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aca9df2be74dba308d3c4e4eb1c61b3e1afaa580
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 872d0f0c84c1ac0ea96a87ed24a386bb9bedcf85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>如何：部署 COM+ 集成应用程序
 编写了 COM+ 集成应用程序后，您可能要将它部署在另一台计算机上。 本主题说明如何将 COM+ 集成应用程序从一台计算机移动到另一台计算机。  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>移动 COM+ 承载的集成应用程序  
   
-1.  确保两台计算机上都安装了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
+1.  确保两台计算机上安装了 WCF。  
   
 2.  从计算机 A 中导出应用程序。  
   
@@ -35,11 +23,11 @@ ms.lasthandoff: 12/22/2017
   
 5.  将计算机 A 上应用程序根目录中的 Application.config 和 Application.manifest 文件复制到计算机 B 上的应用程序根目录。  
   
-6.  在计算机 B 的 Application.config 文件中编辑服务终结点地址以标识相应计算机。 例如，将 http://machineA/MyService 更改为 http://machineB/MyService。  
+6.  在计算机 B 的 Application.config 文件中编辑服务终结点地址以标识相应计算机。 例如，更改http://machineA/MyService到http://machineB/MyService。  
   
 ### <a name="moving-a-web-hosted-integration-application"></a>移动 Web 承载的集成应用程序  
   
-1.  确保两台计算机上都安装了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
+1.  确保两台计算机上安装了 WCF。  
   
 2.  从计算机 A 中导出应用程序。  
   

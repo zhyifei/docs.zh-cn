@@ -1,14 +1,6 @@
 ---
 title: 运行时分析
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - performance counters
 - common language runtime, profiling
@@ -19,17 +11,13 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4a8f3af4878e0f6911fcc55ec76b26649d517b3b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fec1fb5a2dc3d6589f49d4a5864dabfb03a5477c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="runtime-profiling"></a>运行时分析
 分析是用于在任何开发或部署方案中收集性能数据的方法。 本节面向想要收集有关应用程序性能的信息的开发人员和系统管理员。  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  在“选定对象的实例”列表框中，单击“\<所有实例>”，指定要在全局（也就是在整个系统范围内）监视公共语言运行时的性能计数器。  
   
-     或  
+     -或-  
   
      在“选定对象的实例”  列表框中，单击要监视该应用程序的性能计数器的应用程序的名称。  
   
@@ -70,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>以编程方式读取和创建性能计数器  
  可以使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供的类以编程方式访问性能控制台中提供的相同性能信息。 另外，还可以使用这些类创建自定义性能计数器。 下表描述了 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]中提供的某些性能监视类。  
   
-|类|说明|  
+|类|描述|  
 |-----------|-----------------|  
 |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|表示 Windows NT 性能计数器组件。 使用此类可读取现有预定义或自定义计数器，并向自定义计数器发布（写入）性能数据。|  
 |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|提供与计数器交互的几种方法以及计算机上计数器的类别。|  

@@ -1,10 +1,6 @@
 ---
-title: "如何：在 DataRepeater 控件中搜索数据 (Visual Studio)"
+title: 如何：在 DataRepeater 控件中搜索数据 (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - DataRepeater, implementing search
 - DataRepeater, searching data
 ms.assetid: a8ab5d17-b94f-43c4-8dd7-d0450226d73f
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a3ed7138c142a83584ecd19ccaebe0e31e421ce3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 689990ee125c85c3151a4e965b619fde068d220e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-search-data-in-a-datarepeater-control-visual-studio"></a>如何：在 DataRepeater 控件中搜索数据 (Visual Studio)
 如果要使用<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>包含多个记录，你可能想让的用户搜索特定记录的控件。 而不是在该控件本身中搜索数据，你可以通过查询基础实现搜索<xref:System.Windows.Forms.BindingSource>。 如果找到该项，则可以使用<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CurrentItemIndex%2A>属性选择的项并滚动到视图。  
@@ -41,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
      替换*ProductsBindingSource*同名的<xref:System.Windows.Forms.BindingSource>为你<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>，并将*ProductID*替换为你想要搜索的字段的名称。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
  [DataRepeater 控件简介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
  [DataRepeater 控件疑难解答](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  

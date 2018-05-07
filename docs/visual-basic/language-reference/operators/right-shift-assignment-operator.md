@@ -1,12 +1,6 @@
 ---
 title: '&gt;&gt;= 运算符 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.>>=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 - '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0e7e388471b9adf424c55b1ad1042e5aed1ea8ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d0c0ea819741f80e30e55a960b1187699898a3bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gtgt-operator-visual-basic"></a>&gt;&gt;= 运算符 (Visual Basic)
 对变量或属性的值执行算术右移位运算，并将结果赋回给该变量或属性。  
@@ -36,10 +27,10 @@ variableorproperty >>= amount
   
 ## <a name="parts"></a>部件  
  `variableorproperty`  
- 必需。 变量或属性的整数类型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`，或`ULong`)。  
+ 必须的。 变量或属性的整数类型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`，或`ULong`)。  
   
  `amount`  
- 必需。 数值表达式的数据类型扩大到`Integer`。  
+ 必须的。 数值表达式的数据类型扩大到`Integer`。  
   
 ## <a name="remarks"></a>备注  
  在左侧的元素`>>=`运算符可以是简单的标量变量、 属性或数组的元素。 变量或属性不能为[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
@@ -56,7 +47,7 @@ variableorproperty >>= amount
   
  [!code-vb[VbVbalrOperators#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-assignment-operator_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [>> 运算符](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
  [赋值运算符](../../../visual-basic/language-reference/operators/assignment-operators.md)  
  [移位运算符](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  

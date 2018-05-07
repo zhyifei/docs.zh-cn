@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::CreateDomainSetup 方法"
-ms.custom: 
+title: ICorRuntimeHost::CreateDomainSetup 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.CreateDomainSetup
 api_location:
@@ -23,20 +15,16 @@ helpviewer_keywords:
 ms.assetid: c21dab60-fb65-47d9-8a94-7fd47ca53b48
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e15f40402b222037f7ed8b23be3df36acafc73c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bf3aff2c3c4d10c4ee805a6110561d6fdcd63a55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup 方法
-获取的接口指针的类型到 IAppDomainSetup<xref:System.AppDomainSetup?displayProperty=nameWithType>实例。 `IAppDomainSetup`提供用于配置应用程序域的方面，它将在创建之前方法。  
+获取的接口指针的类型到 IAppDomainSetup<xref:System.AppDomainSetup?displayProperty=nameWithType>实例。 `IAppDomainSetup` 提供用于配置应用程序域的方面，它将在创建之前方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +50,7 @@ HRESULT CreateDomainSetup (
 ## <a name="remarks"></a>备注  
  从此方法返回的指针通常传递作为参数传递给[CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)方法。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  

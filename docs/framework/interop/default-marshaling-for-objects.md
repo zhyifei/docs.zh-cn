@@ -1,10 +1,6 @@
 ---
 title: 对象的默认封送处理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -14,14 +10,11 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6980db381322d354cace38709586e50681ae0a7e
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 0fe3cfe2070516cf4c79f6af9ebcea682bf4d933
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-marshaling-for-objects"></a>对象的默认封送处理
 可将类型化为 <xref:System.Object?displayProperty=nameWithType> 的参数和字段作为下列任一类型向非托管代码公开：  
@@ -336,7 +329,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |变体  v (VT_BYREF | VT_)**\***|对象 o|Never|  
 |变体 v (VT_BYREF | VT_)|Ref 对象 o|仅类型未发生更改时。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [默认封送处理行为](default-marshaling-behavior.md)  
  [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)  
  [方向特性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  

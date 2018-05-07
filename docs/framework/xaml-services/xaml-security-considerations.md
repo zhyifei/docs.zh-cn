@@ -1,27 +1,15 @@
 ---
-title: "XAML 安全注意事项"
-ms.custom: 
+title: XAML 安全注意事项
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-caps.latest.revision: "7"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b58719f36cd911497c5cd892610330688221e7ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef47e7e370082a2050406710edcb62d0967df8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-security-considerations"></a>XAML 安全注意事项
 本主题介绍在应用程序中的安全性的最佳做法，当你使用 XAML 和.NET Framework XAML 服务 API。  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="untrusted-xaml-in-applications"></a>在应用程序中不受信任的 XAML  
  在最常规的意义上，不受信任的 XAML 是你的应用程序不是专门未包括或发出的任何 XAML 源。  
   
- XAML 是编译为或存储为`resx`-在受信任和签名的程序集内的类型资源不是本质上是不受信任。 根据你信任的程序集作为一个整体，可以信任 XAML。 在大多数情况下，你是仅关心宽松 XAML，即从流或其他 IO 加载的 XAML 源的信任方面。 宽松型 XAML 不是特定的组件或功能的应用程序模型进行部署和打包基础结构。 但是，程序集可能会实施涉及加载松散的 XAML 的行为。  
+ XAML 是编译为或存储为`resx`-在受信任和签名的程序集内的类型资源不是本质上是不受信任。 根据你信任的程序集作为一个整体，可以信任 XAML。 在大多数情况下，你是仅关心宽松 XAML，即从流或其他 I/O 加载的 XAML 源的信任方面。 宽松型 XAML 不是特定的组件或功能的应用程序模型进行部署和打包基础结构。 但是，程序集可能会实施涉及加载松散的 XAML 的行为。  
   
  对于不受信任的 XAML，应将其通常相同就像它是不受信任的代码。 使用沙盒或其他形式以防止可能不受信任的 XAML 访问受信任的代码。  
   

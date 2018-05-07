@@ -1,33 +1,19 @@
 ---
 title: 系统提供的互操作性绑定支持的 Web 服务协议
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WS-protocols
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-caps.latest.revision: 39
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 998920e4c1d7e0524da1c9843378e92517f4ee96
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 728dba65a99d71a52551b16e5f1822104ed40ea7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>系统提供的互操作性绑定支持的 Web 服务协议
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以与 Web 服务进行互操作，它支持一组称为 Web 服务规范的规范。 为了简化互操作性最佳做法的服务配置，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 引入三个可互操作的系统提供绑定：<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>、<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 和 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>。 对于与结构化信息标准促进组织 (OASIS) 标准的互操作性，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包括一个可互操作的系统提供绑定：<xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 对于元数据发布，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]包括两个可互操作的系统提供绑定： [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)和[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主题列出系统提供的可互操作绑定支持的规范。  
+Windows Communication Foundation (WCF) 生成与支持的一组称为 Web 服务规范的规范的 Web 服务进行互操作。 为了简化互操作性最佳做法的服务配置，WCF，引入了以下三种可互操作的系统提供绑定： <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>， <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>，和<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>。 WCF 的互操作性组织促进的结构化信息标准 (OASIS) 标准，包括一个可互操作的系统提供绑定： <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 对于元数据发布，WCF 包含两个可互操作的系统提供绑定： [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)和[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主题列出系统提供的可互操作绑定支持的规范。  
   
 ## <a name="web-services-protocols-supported-by-basichttpbinding-wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding-bindings"></a>basicHttpBinding、wsHttpBinding、ws2007HttpBinding 和 wsDualHttpBinding 绑定支持的 Web 服务协议  
   
@@ -41,11 +27,11 @@ ms.lasthandoff: 04/30/2018
 |--------------|--------------|-----------------------------|  
 |传输|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`、`WSHttpBinding` 和 `WS2007HttpBinding` 使用 HTTP 和 HTTPS 传输。|  
 |消息|MTOM|[MTOM](http://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`、`wsHttpBinding` 和 `ws2007HttpBinding` 支持消息传输优化机制 (MTOM)。 默认情况下不使用。 若要使用 MTOM，请将 `messageEncoding` 属性设置为 `"Mtom"`。<br /><br /> 示例:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
-|元数据|WSDL 1.1|[WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 Web 服务描述语言 (WSDL) 描述服务。|  
-|元数据|WS-Policy|[WS-Policy](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 WS-Policy 规范和特定于域的断言描述服务要求和功能。|  
-|元数据|WS-Policy 1.5|[Ws-policy 1.5](http://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 WS-Policy 规范和特定于域的断言描述服务要求和功能。|  
-|元数据|WS-PolicyAttachment|[WS-PolicyAttachment](http://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 WS-PolicyAttachment 以在各个范围使用 Web 服务描述语言 (WSDL) 附加策略表达式。|  
-|元数据|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 WS-MetadataExchange 以检索 XML 架构、WSDL 和 WS-Policy。|  
+|元数据|WSDL 1.1|[WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> WCF 使用 Web 服务描述语言 (WSDL) 描述服务。|  
+|元数据|WS-Policy|[WS-Policy](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> WCF 使用 WS 策略规范和特定于域的断言描述服务要求和功能。|  
+|元数据|WS-Policy 1.5|[Ws-policy 1.5](http://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> WCF 使用 WS 策略规范和特定于域的断言描述服务要求和功能。|  
+|元数据|WS-PolicyAttachment|[WS-PolicyAttachment](http://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> WCF 实现 Ws-policyattachment 以在 Web 服务描述语言 (WSDL) 中的不同范围附加策略表达式。|  
+|元数据|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF 实现 Ws-metadataexchange 以检索 XML 架构、 WSDL 和 Ws-policy。|  
   
 ### <a name="basichttpbinding"></a>basicHttpBinding  
   
@@ -70,7 +56,7 @@ ms.lasthandoff: 04/30/2018
 |安全性|WS-SecureConversation|[WS-SecureConversation](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> 当 `security/@mode` 属性设置为“Message”且 `message/@establishSecurityContext` 属性设置为“true”（默认值）时用于提供安全会话。|  
 |安全性|WS-Trust|[WS-Trust](http://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> 由 WS-SecureConversation 使用（参见上面）。|  
 |可靠消息传递|WS-ReliableMessaging|[WS-ReliableMessaging](http://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> 当绑定配置为使用 `reliableSession` 时使用。<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
-|事务|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> 用于事务管理器之间的通信。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和服务始终使用本地事务管理器。|  
+|事务|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> 用于事务管理器之间的通信。 WCF 客户端和服务始终使用本地事务管理器。|  
 |事务|WS-Coordination|[WS-Coordination](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> 当 `flowTransactions` 属性设置为“Allowed”或“Required”时用于对事务上下文进行流处理。<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding 和 ws2007FederationHttpBinding  
@@ -109,7 +95,7 @@ ms.lasthandoff: 04/30/2018
 |传输|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)|  
 |消息|SOAP 1.2|[入门](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [消息传递框架](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附属 （包括 HTTP 绑定）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |消息|Ws-addressing 2005/08|[Web 服务寻址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服务寻址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
-|元数据|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 WS-MetadataExchange 以检索 XML 架构、WSDL 和 WS-Policy。|  
+|元数据|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF 实现 Ws-metadataexchange 以检索 XML 架构、 WSDL 和 Ws-policy。|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
  [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)支持以下协议。 有关使用此绑定的详细信息，请参阅[发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
@@ -119,7 +105,7 @@ ms.lasthandoff: 04/30/2018
 |传输|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> 启用传输安全。|  
 |消息|SOAP 1.2|[入门](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [消息传递框架](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附属 （包括 HTTP 绑定）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |消息|Ws-addressing 2005/08|[Web 服务寻址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服务寻址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
-|元数据|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 WS-MetadataExchange 以检索 XML 架构、WSDL 和 WS-Policy。|  
+|元数据|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF 实现 Ws-metadataexchange 以检索 XML 架构、 WSDL 和 Ws-policy。|  
   
 ## <a name="see-also"></a>请参阅  
  [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)  

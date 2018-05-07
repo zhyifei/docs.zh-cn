@@ -1,34 +1,20 @@
 ---
-title: "入门示例"
-ms.custom: 
+title: 入门示例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f97ad418f3d5ed197e8c35edf9e897eb393ef18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-sample"></a>入门示例
-此入门示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 来实现典型的服务和典型的客户端。 此示例是所有其他基本技术示例的基础。  
+此入门示例演示如何实现典型的服务和典型的客户端使用 Windows Communication Foundation (WCF)。 此示例是所有其他基本技术示例的基础。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
@@ -154,9 +140,9 @@ public class CalculatorService : ICalculator
   
  服务在 IIS 或 WAS 主机所提供的基址处公开该终结点。 绑定是用标准 <xref:System.ServiceModel.WSHttpBinding> 进行配置的，该标准配置提供 HTTP 通信以及用来进行寻址和实现安全性的标准 Web 服务协议。 协定是由服务实现的 `ICalculator`。  
   
- 经过配置之后，服务便可以由同一台计算机上的客户端在 http://localhost/servicemodelsamples/service.svc 处访问。 若要使远程计算机上的客户端能够访问该服务，必须指定完全限定域名，而不是本地主机。  
+ 经过配置之后，可以在访问服务http://localhost/servicemodelsamples/service.svc通过同一台计算机上的客户端。 若要使远程计算机上的客户端能够访问该服务，必须指定完全限定域名，而不是本地主机。  
   
- 默认情况下，框架不公开任何元数据。 同样，服务会打开 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 并在 http://localhost/servicemodelsamples/service.svc/mex 处公开元数据交换 (MEX) 终结点。 下面的配置对此进行了演示。  
+ 默认情况下，框架不公开任何元数据。 在这种情况下，该服务将打开<xref:System.ServiceModel.Description.ServiceMetadataBehavior>和公开元数据交换 (MEX) 终结点在http://localhost/servicemodelsamples/service.svc/mex。 下面的配置对此进行了演示。  
   
 ```xaml  
 <system.serviceModel>  

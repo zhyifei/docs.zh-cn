@@ -1,11 +1,6 @@
 ---
-title: "ULong 数据类型 (Visual Basic)"
+title: ULong 数据类型 (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ulong
 helpviewer_keywords:
@@ -23,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 606e0ef87b209bb2e75e28223f27d081713c1b7e
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 1b0137f0f33abfdb3f03758323edeaa63ac60117
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong 数据类型 (Visual Basic)
 
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/01/2018
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如:
+从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如：
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C
@@ -80,7 +75,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
   
 -   **扩大转换。** `ULong`数据类型加宽到`Decimal`， `Single`，和`Double`。 这意味着你可以将转换`ULong`到而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。  
   
--   **类型字符。** 附加文本类型字符`UL`到文本将其强制转换到`ULong`数据类型。 `ULong`中有任何标识符类型字符。
+-   **类型字符。** 附加文本类型字符`UL`到文本将其强制转换到`ULong`数据类型。 `ULong` 中有任何标识符类型字符。
   
 -   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.UInt64?displayProperty=nameWithType> 结构。  
   

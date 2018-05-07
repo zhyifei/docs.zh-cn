@@ -1,14 +1,6 @@
 ---
-title: "COR_PRF_FUNCTION_ARGUMENT_INFO 结构"
-ms.custom: 
+title: COR_PRF_FUNCTION_ARGUMENT_INFO 结构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_PRF_FUNCTION_ARGUMENT_INFO
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 07cf3bab-e193-4991-8205-3f41cf2d67b3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e26377fe3c5cfbae68f90087e3fb624ae4db0dc8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fbc41ca1366b412c37d6af09e90e3f1b042ba21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO 结构
 按从左向右的顺序表示函数的自变量。  
@@ -62,14 +50,14 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
  存储在寄存器中的自变量会溢出至内存来生成结构。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

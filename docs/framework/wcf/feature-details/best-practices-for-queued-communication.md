@@ -1,32 +1,18 @@
 ---
 title: 排队通信的最佳做法
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>排队通信的最佳做法
-本主题对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的排队通信提供建议做法。 以下各节从方案角度讨论建议的做法。  
+本主题的排队通信中 Windows Communication Foundation (WCF) 提供建议的做法。 以下各节从方案角度讨论建议的做法。  
   
 ## <a name="fast-best-effort-queued-messaging"></a>快速、高效的排队消息处理  
  如果方案需要排队消息处理所提供的分离，还需要具有高效保证的快速、高性能消息处理，请使用非事务性队列并将 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> 属性设置为 `false`。  
@@ -69,7 +55,7 @@ ms.lasthandoff: 04/28/2018
   
  使用批处理时，应注意并发和遏制转换为并发批处理。  
   
- 若要实现高吞吐量和可用性，请使用从队列中进行读取操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务场。 这要求所有这些服务都在相同的终结点上公开相同的协定。 场方法最适用于具有高消息产生率的应用程序，因为它使大量服务都从同一队列中进行读取操作。  
+ 若要实现高吞吐量和可用性，请使用从队列中读取的 WCF 服务的场。 这要求所有这些服务都在相同的终结点上公开相同的协定。 场方法最适用于具有高消息产生率的应用程序，因为它使大量服务都从同一队列中进行读取操作。  
   
  使用场时，应注意 MSMQ 3.0 不支持远程事务处理读取。 MSMQ 4.0 支持远程事务处理读取。  
   
@@ -84,11 +70,11 @@ ms.lasthandoff: 04/28/2018
  虽然队列一般是单向的，但在某些情况下，可能希望将接收到的回复关联到先前发送的请求。 如果需要此类关联，建议应用自己的 SOAP 消息头，它包含消息的关联信息。 通常，发送方将此标头附加到消息，接收方处理消息并在回复队列中用新消息回复时，会附加发送方的消息头，消息头包含关联信息，这样发送方就能通过请求消息识别出回复消息。  
   
 ## <a name="integrating-with-non-wcf-applications"></a>集成非 WCF 应用程序  
- 当集成 `MsmqIntegrationBinding` 服务或客户端与非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务或客户端时，可使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 非[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]应用程序可以是一个使用 System.Messaging、 COM +、 Visual Basic 或 c + + 编写的 MSMQ 应用程序。  
+ 使用`MsmqIntegrationBinding`集成非 WCF 服务或客户端 WCF 服务或客户端时。 非 WCF 应用程序可以是一个使用 System.Messaging、 COM +、 Visual Basic 或 c + + 编写的 MSMQ 应用程序。  
   
  使用 `MsmqIntegrationBinding` 时，应注意以下几点：  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息正文与 MSMQ 消息正文不同。 使用排队绑定发送 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息正文置于 MSMQ 消息内。 MSMQ 基础结构并不在意这一额外信息，它只注意 MSMQ 消息。  
+-   WCF 消息正文不是 MSMQ 消息正文相同。 在发送时使用的排队的绑定的 WCF 消息，则会将 WCF 消息正文置于 MSMQ 消息内。 MSMQ 基础结构并不在意这一额外信息，它只注意 MSMQ 消息。  
   
 -   `MsmqIntegrationBinding` 支持常见的序列化类型。 根据序列化类型和一般消息的正文类型，<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> 采用不同的类型参数。 例如，<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> 需要 `MsmqMessage\<byte[]>` 而 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> 需要 `MsmqMessage<Stream>`。  
   

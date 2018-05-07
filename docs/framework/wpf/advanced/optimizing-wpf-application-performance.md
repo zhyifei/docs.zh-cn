@@ -1,31 +1,17 @@
 ---
 title: 优化 WPF 应用程序性能
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - application rendering [WPF], performance
 - application optimization [WPF]
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-caps.latest.revision: 45
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d2de2d4009cb29c5e9cbdace0d69c220f95a54e1
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: faa06e4558401c1d0e9335fbc630c5371d1bc516
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-wpf-application-performance"></a>优化 WPF 应用程序性能
 本部分旨在作为的参考[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序开发人员正在寻找方法来提高其应用程序的性能。 如果你是开发人员是新的 Microsoft.NET framework 和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，你应该首先熟悉这两个平台。 本部分假定知识两种方法，并为已经知道不足以获得其应用程序启动并正在运行的程序员编写。  

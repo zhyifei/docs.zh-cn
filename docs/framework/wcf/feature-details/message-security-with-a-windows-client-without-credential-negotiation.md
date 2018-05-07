@@ -1,32 +1,20 @@
 ---
 title: 没有凭据协商的 Windows 客户端的消息安全
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: 18
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 05ffe731a578f8b8d2cdbdf5e3c9229e2b03821c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>没有凭据协商的 Windows 客户端的消息安全
-下面的方案演示了由 Kerberos 协议保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务。  
+下面的方案演示 Windows Communication Foundation (WCF) 客户端和服务保护的 Kerberos 协议。  
   
  服务和客户端位于相同的域或可信域。  
   
@@ -59,9 +47,9 @@ ms.lasthandoff: 04/30/2018
 > [!NOTE]
 >  若要使用没有协商的 Windows 凭据类型，则服务的用户帐户必须能够访问在 Active Directory 域注册的服务主体名称 (SPN)。 可以通过以下两种方式执行此操作：  
   
-1.  使用 `NetworkService` 或 `LocalSystem` 帐户运行服务。 由于这些帐户能够访问在计算机连接 Active Directory 域时建立的计算机 SPN，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将自动在服务的元数据（Web 服务描述语言 (WSDL)）中的该服务终结点内生成正确的 SPN 元素。  
+1.  使用 `NetworkService` 或 `LocalSystem` 帐户运行服务。 因为这些帐户有权访问的计算机在计算机连接 Active Directory 域时建立的 SPN，WCF 自动服务的终结点内正确的 SPN 元素在中生成服务的元数据 （Web 服务描述语言中或 WSDL）。  
   
-2.  使用任意 Active Directory 域帐户运行服务。 在这种情况下，您需要为该域帐户建立一个 SPN。 执行此操作的一种方法是使用 Setspn.exe 实用工具。 为该服务的帐户创建 SPN 后，配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以通过服务的元数据 (WSDL) 将该 SPN 发布到服务的客户端。 通过为公开的终结点设置终结点标识（或通过应用程序配置文件或代码）也可完成此操作。 下面的示例以编程方式发布标识。  
+2.  使用任意 Active Directory 域帐户运行服务。 在这种情况下，您需要为该域帐户建立一个 SPN。 执行此操作的一种方法是使用 Setspn.exe 实用工具。 服务的帐户创建 SPN 后，配置 WCF 将该 SPN 发布到通过其元数据 (WSDL) 的服务的客户端。 通过为公开的终结点设置终结点标识（或通过应用程序配置文件或代码）也可完成此操作。 下面的示例以编程方式发布标识。  
   
  有关 Spn 的详细信息、 Kerberos 协议和 Active Directory，请参阅[技术补充面向 Windows 的 Kerberos](http://go.microsoft.com/fwlink/?LinkId=88330)。 有关终结点标识的详细信息，请参阅[SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
   

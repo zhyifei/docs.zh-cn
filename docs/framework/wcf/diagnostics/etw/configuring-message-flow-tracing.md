@@ -1,27 +1,15 @@
 ---
-title: "配置消息流跟踪"
-ms.custom: 
+title: 配置消息流跟踪
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8df32a64c07db8a45dfb41a46e7a65a92fbef434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7bfba8ababc6ddc0b2ddd78e879058cfa9e8ebb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-message-flow-tracing"></a>配置消息流跟踪
-启用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 活动跟踪后，系统会将端对端活动 ID 分配到整个 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 堆栈中的逻辑活动。 在 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 中，此功能现在具备性能更高的版本。它与 Windows 事件跟踪 (ETW) 一起使用，称为消息流跟踪。 启用此功能时，端对端活动 ID 取自（如果为空，则分配到）传入消息，并传播到在通道解码消息之后发出的所有跟踪事件。 客户通过此功能，可以在解码来自不同服务的跟踪日志后重新构造消息流。  
+启用 Windows Communication Foundation (WCF) 活动跟踪后，端到端活动 Id 分配给整个的逻辑活动[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]堆栈。 在 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 中，此功能现在具备性能更高的版本。它与 Windows 事件跟踪 (ETW) 一起使用，称为消息流跟踪。 启用此功能时，端对端活动 ID 取自（如果为空，则分配到）传入消息，并传播到在通道解码消息之后发出的所有跟踪事件。 客户通过此功能，可以在解码来自不同服务的跟踪日志后重新构造消息流。  
   
  检测到应用程序存在问题后，可以启用跟踪，然后在解决问题之后立即禁用跟踪。  
   

@@ -1,14 +1,6 @@
 ---
 title: 同步和异步操作
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +8,16 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
   
- 许多应用程序都以异步方式调用方法，因为这样允许应用程序在运行方法调用时继续执行有用的工作。 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务和客户端可以在两个不同的应用程序级别参与异步操作调用，这会为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序在最大化针对交互性而平衡的吞吐量方面提供更好的灵活性。  
+ 许多应用程序都以异步方式调用方法，因为这样允许应用程序在运行方法调用时继续执行有用的工作。 Windows Communication Foundation (WCF) 服务和客户端可以参与两个不同级别的应用程序，它们提供的异步操作调用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]更多的灵活性，以使吞吐量最大化针对平衡的应用程序交互性。  
   
 ## <a name="types-of-asynchronous-operations"></a>异步操作的类型  
  无论参数类型和返回值如何， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中的所有服务协定都使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 特性来指定客户端和服务之间的特殊消息交换模式。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 自动将入站和出站消息路由到相应的服务操作或正在运行的客户端代码。  

@@ -1,37 +1,23 @@
 ---
 title: 设计服务协定
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14973d3612eb5739e0dfcd7b50409904ab5d6844
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6d1e9ba7f5546923b222f2d495aacdb2c1caaf96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-service-contracts"></a>设计服务协定
 本主题介绍什么是服务协定、如何定义服务协定、可用的操作（以及基础消息交换的含义）、使用的数据类型以及可帮助您设计能满足方案需求的操作的其他问题。  
   
 ## <a name="creating-a-service-contract"></a>创建服务协定  
- 服务公开一系列操作。 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序中，通过创建一个方法并使用 <xref:System.ServiceModel.OperationContractAttribute> 属性对其进行标记来定义操作。 然后，若要创建服务协定，需要将操作组合到一起，具体方法是在使用 <xref:System.ServiceModel.ServiceContractAttribute> 属性标记的接口中声明这些操作，或在使用同一属性进行标记的类中定义它们。 (有关的基本示例，请参阅[如何： 定义服务协定](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)。)  
+ 服务公开一系列操作。 Windows Communication Foundation (WCF) 应用程序中定义的操作通过创建一个方法，并将其与标记<xref:System.ServiceModel.OperationContractAttribute>属性。 然后，若要创建服务协定，需要将操作组合到一起，具体方法是在使用 <xref:System.ServiceModel.ServiceContractAttribute> 属性标记的接口中声明这些操作，或在使用同一属性进行标记的类中定义它们。 (有关的基本示例，请参阅[如何： 定义服务协定](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)。)  
   
  任何不具有 <xref:System.ServiceModel.OperationContractAttribute> 特性的方法都不是服务操作，不能由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务公开。  
   
@@ -82,7 +68,7 @@ ms.lasthandoff: 04/30/2018
 >  操作签名中的参数名称值是协定的一部分且区分大小写。 如果要在本地使用相同的参数名称，但是要在已发布的元数据中修改名称，请参见 <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>。  
   
 #### <a name="data-contracts"></a>数据协定  
- 面向服务的应用程序（例如 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序）设计为与 Microsoft 平台和非 Microsoft 平台上的最大可能数量的客户端应用程序进行互操作。 为了获得最大可能的互操作性，建议您使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性对您的类型进行标记，以创建数据协定。数据协定是服务协定的一部分，用于描述您的服务操作交换的数据。  
+ 面向服务的应用程序，如 Windows Communication Foundation (WCF) 应用程序旨在与 Microsoft 和非 Microsoft 平台上的客户端应用程序的提供给最大可能数量进行互操作。 为了获得最大可能的互操作性，建议您使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性对您的类型进行标记，以创建数据协定。数据协定是服务协定的一部分，用于描述您的服务操作交换的数据。  
   
  数据协定是可选的样式协定：除非您显式应用数据协定属性，否则不会序列化任何类型或数据成员。 数据协定与托管代码的访问范围无关：可以对私有数据成员进行序列化，并将其发送到其他位置，以便可以公开访问它们。 (有关数据协定的基本示例，请参阅[如何： 创建基本的数据协定类或结构](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)。)[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]处理启用操作的功能的基础 SOAP 消息的定义，以及序列化您的数据类型的传入和传出的消息正文。 只要数据类型可序列化，您就无需在设计操作时考虑基础消息交换基础结构。  
   

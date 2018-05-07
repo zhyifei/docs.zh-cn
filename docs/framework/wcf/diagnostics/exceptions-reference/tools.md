@@ -1,35 +1,21 @@
 ---
 title: 工具
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tools"></a>工具
-本主题列出由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 工具生成的所有异常。  
+本主题列出由 Windows Communication Foundation (WCF) 工具生成的所有异常。  
   
 ## <a name="exception-list"></a>异常列表  
   
 |资源代码|资源字符串|  
 |-------------------|---------------------|  
-|ParametersTarget|\<enum>|  
+|ParametersTarget|\<枚举 >|  
 |ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|指定的路径无效。 请检查指定的参数。|  
 |ParametersReference|\<文件路径 >|  
@@ -88,7 +74,7 @@ ms.lasthandoff: 03/26/2018
 |ErrInputConflictsWithMode|从指定位置读取的输入和其他选项不一致。|  
 |ErrDuplicateValuePassedToTypeArg|多次向指定的选项传递了指定的值。 每个类型仅可以指定一次。|  
 |ErrInputEPRFileParseError|无法从指定位置读取终结点引用。 请验证 XML 是否格式正确且有效。|  
-|ErrCouldNotCreateCodeProvider|无法为传递给 /{1} 参数的指定值创建代码提供程序。 请验证是否正确安装并配置了代码提供程序。|  
+|ErrCouldNotCreateCodeProvider|无法为指定的值传递到创建代码提供程序 /{1}自变量。 请验证是否正确安装并配置了代码提供程序。|  
 |ErrPathTooLongDirOnly|产生的指定路径过长。 请检查指定的自变量。|  
 |HelpDataContractSerializer|生成使用 DataContract 序列化程序进行序列化和反序列化的数据类型。|  
 |ErrUnableToExportEndpoint|导出在为程序集加载的配置文件中找到的指定服务类型的指定命名空间中的指定终结点名称时出错。|  
@@ -127,7 +113,7 @@ ms.lasthandoff: 03/26/2018
 |HelpCommonOptionsCategory|-= 常用选项 =-|  
 |ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|没有指定有效的输入文件。 请指定元数据文档或程序集文件。|  
-|ParametersLanguage|\<language>|  
+|ParametersLanguage|\<语言 >|  
 |ErrUnableToLoadMetadataDocument|从加载的文档之一读取元数据时出错。 已指定文档标识符。|  
 |ErrConflictingInputs|指定的输入自变量与指定内容冲突，因为它们指示了不同的工具操作模式。|  
 |WrnUnableToLoadContractForValidation|加载协定类型时出错。 已指定类型和详细信息。|  
@@ -155,7 +141,7 @@ ms.lasthandoff: 03/26/2018
 |ErrCodegenError|生成指定语言的代码时出错。<br /><br /> 该语言不支持所有正在生成的代码元素。 应使用另一种语言。|  
 |ErrInputWsdlParseError|读取指定的内容时发生 WSDL 分析错误。 请验证 XML 是否格式正确且有效。|  
 |ErrCouldNotCreateInstance|无法创建传递给指定参数的指定类型的实例。|  
-|ParametersNamespace|\<string,string>|  
+|ParametersNamespace|\<字符串，字符串 >|  
 |HelpNostdlib|不引用标准库（默认情况下，引用 mscorlib.dll 和 system.servicemodel.dll）。|  
 |WrnCannotLoadConfigFileForExport|处理从指定位置加载的配置文件时出错。 无法加载此配置文件中定义的服务。|  
 |WrnUnableToLoadContractForExport|加载协定类型时出错。 无法导出该指定类型。|

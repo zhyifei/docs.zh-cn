@@ -1,13 +1,6 @@
 ---
-title: "ComponentResourceKey 标记扩展"
-ms.custom: 
+title: ComponentResourceKey 标记扩展
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ComponentResourceKey
 - ComponentResourceKeyExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4bfaee35ba9f8cf60deb01c52a142433d08021c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d11c26add084165eaa9fd0b319a375c4b98c7fb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 标记扩展
 定义和引用从外部程序集加载的资源键。 这使得资源查找功能可以在一个程序集，而不是在程序集或在类上的显式资源字典中指定的目标类型。  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 -   从程序集访问主题资源，当你是重新模板化控件，但想要使用来自控件的主题提供资源的属性值。  
   
- 用于引用来自主题的组件资源，通常建议您使用`{DynamicResource}`而非`{StaticResource}`。 这是与用法中所示。 `{DynamicResource}`建议，因为用户可以更改主题本身。 如果你想存储组件资源与支持该主题的控件作者意向最相匹配，则应启用组件资源参考，用于也会动态。  
+ 用于引用来自主题的组件资源，通常建议您使用`{DynamicResource}`而非`{StaticResource}`。 这是与用法中所示。 `{DynamicResource}` 建议，因为用户可以更改主题本身。 如果你想存储组件资源与支持该主题的控件作者意向最相匹配，则应启用组件资源参考，用于也会动态。  
   
  <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>标识存在于实际定义资源所在的目标程序集的类型。 A`ComponentResourceKey`可以定义和使用独立于完全了解其中<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>已定义，但最终必须解决通过引用的程序集的类型。  
   
@@ -79,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
  从技术上讲，值`targetID`可以是任何对象，它没有为一个字串符。 但是，在 WPF 中的最常见用法是对齐`targetID`窗体，是字符串，且此类字符串是在中有效的值[XamlName 语法](../../../../docs/framework/xaml-services/xamlname-grammar.md)。  
   
- `ComponentResourceKey`可在对象元素语法。 在这种情况下，指定的值都<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>和<xref:System.Windows.ComponentResourceKey.ResourceId%2A>正确初始化扩展所需的属性。  
+ `ComponentResourceKey` 可在对象元素语法。 在这种情况下，指定的值都<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>和<xref:System.Windows.ComponentResourceKey.ResourceId%2A>正确初始化扩展所需的属性。  
   
  在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]读取器实现，对此标记扩展的处理定义的<xref:System.Windows.ComponentResourceKey>类。  
   

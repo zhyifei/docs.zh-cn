@@ -1,29 +1,17 @@
 ---
-title: "MonthCalendar 控件（Windows 窗体）"
-ms.custom: 
+title: MonthCalendar 控件（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - calendar controls
 - MonthCalendar control [Windows Forms]
 - dates [Windows Forms], controls
 - calendars
 ms.assetid: 051c6518-e0ca-426b-855c-f9bf70972970
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ed5ccd46a6563ced2cf5946304a36d0c204a00a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b11a23121fe62cd99b5c48194846e836fb0dd9d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="monthcalendar-control-windows-forms"></a>MonthCalendar 控件（Windows 窗体）
 Windows 窗体`MonthCalendar`控件显示直观的图形界面，供用户查看并设置日期信息。 控件显示一个网格，包含的月份，排列在下星期所有日期列的编号的日期。 你可以通过单击箭头按钮在月标题的任意一侧选择不同的月份。 与类似<xref:System.Windows.Forms.DateTimePicker>控件，你可以选择与此控件; 日期范围内的但是，<xref:System.Windows.Forms.DateTimePicker>控件可以设置时间以及日期。  

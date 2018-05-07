@@ -1,27 +1,15 @@
 ---
-title: "基本 HTTP 服务"
-ms.custom: 
+title: 基本 HTTP 服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 687eba2a346b3f554c8a7618bebe2e9c04f4d5b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0d00ee21fa328c32549f89d8d5fc4c767f64582c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-http-service"></a>基本 HTTP 服务
-此示例演示如何实现基于 HTTP 的、 基于 RPC 的服务 （一般称为"POX"(Plain Old XML) 服务） 使用[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]REST 编程模型。 此示例由两个组件组成：一个自承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服务 (Service.cs) 和一个创建服务并对该服务进行调用的控制台应用程序 (Program.cs)。  
+此示例演示如何实现基于 HTTP 的、 基于 RPC 的服务的一般称为"POX"(Plain Old XML) 服务 – 使用 Windows Communication Foundation (WCF) REST 编程模型。 此示例由两个组件组成：一个自承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服务 (Service.cs) 和一个创建服务并对该服务进行调用的控制台应用程序 (Program.cs)。  
   
 ## <a name="sample-details"></a>示例详细信息  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务公开 2 个操作：`EchoWithGet` 和 `EchoWithPost`，后者返回作为输入传递的字符串。  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   

@@ -1,13 +1,6 @@
 ---
-title: "如何：旋转、反射和扭曲图像"
-ms.custom: 
+title: 如何：旋转、反射和扭曲图像
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 163af74d27adcb7ec720a54bfd969bd704f7b1e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f580b4d3016f1ecedc33302fe57caeec5698aeb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>如何：旋转、反射和扭曲图像
 你可以旋转、 反射和扭曲图像通过指定的原始图像的左上角、 右上角和左下角的目标点。 三个目标点确定映射到一个平行四边形的原始矩形图像仿射转换。  

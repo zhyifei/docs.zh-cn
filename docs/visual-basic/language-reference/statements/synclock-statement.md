@@ -1,11 +1,6 @@
 ---
-title: "SyncLock 语句"
+title: SyncLock 语句
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.SyncLock
 - SyncLock
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c363b41bb7a409c490a6e07d4a1a4f1bb44c1438
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: cf2aad9ec2ba67200d175fbcddfcb49afeac6efc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synclock-statement"></a>SyncLock 语句
 在执行块之前获取语句块的排他的锁。  
@@ -45,7 +37,7 @@ End SyncLock
  终止`SyncLock`块。  
   
 ## <a name="remarks"></a>备注  
- `SyncLock`语句可确保多个线程不会在同一时间中执行的语句块。 `SyncLock`防止每个线程正在进入块，直到没有其他线程正在执行它。  
+ `SyncLock`语句可确保多个线程不会在同一时间中执行的语句块。 `SyncLock` 防止每个线程正在进入块，直到没有其他线程正在执行它。  
   
  最常见的用途`SyncLock`是为了防止数据由多个线程同时更新。 如果操作数据的语句必须转到完成而不会中断，则将它们放`SyncLock`块。  
   

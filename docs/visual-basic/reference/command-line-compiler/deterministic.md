@@ -1,25 +1,21 @@
 ---
-title: -确定性
+title: -deterministic
 ms.date: 04/11/2018
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 273abf8811f04cd7f58599ce3421ca1f17c740d9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ffb1d27f614afc3b07f9d663831fc2071535236f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="-deterministic"></a>-确定性
+# <a name="-deterministic"></a>-deterministic
 
-使编译器生成的程序集针对同一个输入编译都是相同的字节的字节输出。 
+如果输入相同，则会导致编译器生成的程序集其逐字节输出在整个编译期间中相同。 
 
 ## <a name="syntax"></a>语法
 
@@ -29,15 +25,15 @@ ms.lasthandoff: 04/27/2018
 
 ## <a name="remarks"></a>备注
 
-默认情况下，从给定的一组输入编译器输出是唯一的因为编译器将添加的时间戳和从随机数生成的 GUID。 你使用`-deterministic`选项来生成*确定性的程序集*，其中一个，只要输入保持不变，其二进制内容是跨编译相同。
+默认情况下，一组给定输入的编译器输出是唯一的，因为编译器会添加时间戳和随意数字生成的 GUID。 使用 `-deterministic` 选项生成确定性的程序集，只要输入保持不变，该程序集的二进制内容在整个编译中都是相同的。
 
-编译器认为出于确定性目的的以下输入：
+出于确定性目的，编译器会考虑以下输入：
 
-- 命令行参数的序列。
-- 编译器的.rsp 响应文件的内容。
-- 使用，则编译器的精确版本和其引用的程序集。
-- 当前的目录路径。
-- 所有文件的二进制内容显式传递到编译器直接或间接包括： 
+- 命令行参数序列。
+- 编译器 .rsp 响应文件的内容。
+- 所用编译器的精确版本及其引用的程序集。
+- 当前目录路径。
+- 直接或间接地显式传递到编译器的所有文件的二进制内容，包括： 
     - 源文件
     - 引用的程序集
     - 引用的模块
@@ -46,14 +42,14 @@ ms.lasthandoff: 04/27/2018
     - @ 响应文件
     - 分析器
     - 规则集
-    - 可能由分析器的其他文件
-- （用于诊断和异常生成消息的语言） 的当前区域性。
-- 默认编码 （或当前代码页） 如果未指定的编码。
-- 是否存在、 不存在，以及编译器的搜索路径上的文件的内容 (例如，由指定`/lib`或`/recurse`)。
-- 在其运行编译器 CLR 平台。
-- 值`%LIBPATH%`，这可能会影响分析器的依赖项加载。
+    - 分析器可能使用的其他文件
+- 当前区域性（针对生成诊断和异常消息的语言）。
+- 在未指定编码情况下使用的默认编码（或当前代码页）。
+- 编译器搜索路径（例如，由`/lib` 或 `/recurse` 指定）上文件是否存在及其内容。
+- 运行编译器的 CLR 平台。
+- `%LIBPATH%` 的值，该值会影响分析器的依赖项加载。
 
-当源公开可用时，确定性编译可以用于建立从受信任的源是否已编译二进制文件。 它还可用于确定是否依赖于对二进制文件的更改的生成步骤需要执行连续生成系统中有用。 
+当源公开可用时，可使用确定性编译来确定是否从可信源编译二进制内容。 它还可有效用于连续生成系统，确定是否需要执行依赖于二进制内容更改的生成步骤。 
 
 ## <a name="see-also"></a>请参阅
 [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  

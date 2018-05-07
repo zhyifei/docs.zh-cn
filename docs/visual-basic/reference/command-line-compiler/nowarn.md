@@ -1,25 +1,16 @@
 ---
 title: -nowarn
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - nowarn compiler option [Visual Basic]
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d2f3f15ef12b24b8baedc9db59e772aa9eb073bc
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 338b4672d215968275c30d37a2f8061e764aed8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-nowarn"></a>-nowarn
 禁止编译器生成警告的能力。  
@@ -61,7 +52,7 @@ vbc -nowarn t2.vb
 vbc -nowarn:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [在 Visual Basic 中配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)

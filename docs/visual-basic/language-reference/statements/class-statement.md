@@ -1,12 +1,6 @@
 ---
 title: Class 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Class
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: df86ef0eec67d96f2f997dc5dac7ee2357c6362b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2346823e7b774c21171bd81023cc5b920d34d19a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-statement-visual-basic"></a>Class 语句 (Visual Basic)
 声明类的名称，并引入的变量、 属性、 事件和类包含的过程的定义。  
@@ -52,7 +43,7 @@ End Class
 |`MustInherit`|可选。 请参阅[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。|  
 |`NotInheritable`|可选。 请参阅[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)。|  
 |`Partial`|可选。 指示类的分部定义。 请参阅[部分](../../../visual-basic/language-reference/modifiers/partial.md)。|  
-|`name`|必需。 此类的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`name`|必须的。 此类的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
 |`Of`|可选。 指定这是一个泛型类。|  
 |`typelist`|如果你使用是必需的[的](../../../visual-basic/language-reference/statements/of-clause.md)关键字。 此类的类型参数的列表。 请参阅[键入列表](../../../visual-basic/language-reference/statements/type-list.md)。|  
 |`Inherits`|可选。 指示此类继承另一个类的成员。 请参阅[Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
@@ -60,7 +51,7 @@ End Class
 |`Implements`|可选。 指示此类实现一个或多个接口的成员。 请参阅[实现语句](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
 |`interfacenames`|如果你使用是必需的`Implements`语句。 此类实现的接口名称。|  
 |`statements`|可选。 定义此类的成员的语句。|  
-|`End Class`|必需。 终止`Class`定义。|  
+|`End Class`|必须的。 终止`Class`定义。|  
   
 ## <a name="remarks"></a>备注  
  A`Class`语句定义新的数据类型。 A*类*是面向对象的编程 (OOP) 的基本构建块。 有关详细信息，请参阅[对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
@@ -115,7 +106,7 @@ End Class
   
  [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/class-statement_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  [结构和类](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
  [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)  

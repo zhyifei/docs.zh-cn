@@ -1,14 +1,6 @@
 ---
 title: XAML 的类型转换器和标记扩展
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converter services
 - XAML [XAML Services], value converters
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a6ab52105785dc1efbffe093cdafb12cdf8eac4d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0c9cb7e87416860dda98df0da967ffbc070bc270
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的类型转换器和标记扩展
 类型转换器和标记扩展是 XAML 类型系统和 XAML 编写器用来生成对象图组件的两种技术。 尽管类型转换器和标记扩展共享一些特征，但它们在 XAML 节点流中以不同的方式表示。 在本文档集中，类型转换器、标记扩展和类似的构造有时统称为值转换器。  
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/30/2018
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>类型转换器  
- 在 .NET Framework XAML 服务定义中，类型转换器是从 CLR <xref:System.ComponentModel.TypeConverter> 类派生的类。 <xref:System.ComponentModel.TypeConverter> 是一个在 XAML 存在之前就存在于 [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] 中的类。 它的原始用途是向 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] 属性提供对属性窗口和类似的基于文本的编辑隐喻的支持。 对 .NET Framework 引入 XAML 则使用 <xref:System.ComponentModel.TypeConverter> 将文本语法（如某一特性值或 XAML 值节点中的）转换为对象。 <xref:System.ComponentModel.TypeConverter> 还可用于将对象值序列化为文本语法。 <xref:System.ComponentModel.TypeConverter> 此外用于在 Windows Presentation Foundation (WPF) 和 Windows Communication Foundation (WCF) 中的上一个特定于框架的 XAML 实现。 有关 XAML 中 <xref:System.ComponentModel.TypeConverter> 的更多信息，请参见 [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)中特定于框架的 XAML 实现。  
+ 在 .NET Framework XAML 服务定义中，类型转换器是从 CLR <xref:System.ComponentModel.TypeConverter> 类派生的类。 <xref:System.ComponentModel.TypeConverter> 是一个在 XAML 存在之前，已在 Microsoft.NET Framework 中的类。 它的原始用途是向 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] 属性提供对属性窗口和类似的基于文本的编辑隐喻的支持。 对 .NET Framework 引入 XAML 则使用 <xref:System.ComponentModel.TypeConverter> 将文本语法（如某一特性值或 XAML 值节点中的）转换为对象。 <xref:System.ComponentModel.TypeConverter> 还可用于将对象值序列化为文本语法。 <xref:System.ComponentModel.TypeConverter> 此外用于在 Windows Presentation Foundation (WPF) 和 Windows Communication Foundation (WCF) 中的上一个特定于框架的 XAML 实现。 有关 XAML 中 <xref:System.ComponentModel.TypeConverter> 的更多信息，请参见 [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)中特定于框架的 XAML 实现。  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>标记扩展  

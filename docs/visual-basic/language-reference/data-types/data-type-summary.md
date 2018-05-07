@@ -1,10 +1,6 @@
 ---
-title: "数据类型摘要 (Visual Basic)"
+title: 数据类型摘要 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Boolean data type [Visual Basic], supported types in Visual Basic
 - storage [Visual Basic], order of storage
@@ -41,14 +37,11 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f69a112718eed7bb7baaff9bdffd110865c21081
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-type-summary-visual-basic"></a>数据类型摘要 (Visual Basic)
 下表显示 Visual Basic 数据类型、 其支持的公共语言运行时类型、 他们的名义存储分配和其值的范围。  
@@ -63,11 +56,11 @@ ms.lasthandoff: 11/21/2017
 |[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) （双精度浮点）|<xref:System.Double>|8 个字节|-1.79769313486231570 e + 308 到-4.94065645841246544 e-324 <sup>†</sup>负值;<br /><br /> 最大 4.94065645841246544 e-324 到 1.79769313486231570 e + 308 <sup>†</sup>正值|  
 |[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 个字节|-2147483648 到 2147483647 （签名）|  
 |[长](../../../visual-basic/language-reference/data-types/long-data-type.md)（长整型）|<xref:System.Int64>|8 个字节|-9223372036854775808 到 9223372036854775807 (9.2 … E + 18 <sup>†</sup>) （有符号）|  
-|[对象](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object>（类）|在 32 位平台上的 4 个字节<br /><br /> 在 64 位平台上的 8 个字节|任何类型可以存储在类型的变量`Object`|  
+|[对象](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> （类）|在 32 位平台上的 4 个字节<br /><br /> 在 64 位平台上的 8 个字节|任何类型可以存储在类型的变量 `Object`|  
 |[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 个字节|-128 到 127 （签名）|  
 |[短](../../../visual-basic/language-reference/data-types/short-data-type.md)（短整数）|<xref:System.Int16>|2 个字节|-32768 到 32767 （签名）|  
 |[单个](../../../visual-basic/language-reference/data-types/single-data-type.md)（单精度浮点）|<xref:System.Single>|4 个字节|-3.4028235 e + 38 到-1.401298 e-45 <sup>†</sup>负值;<br /><br /> 1.401298 e-45 3.4028235 e + 38 到<sup>†</sup>正值|  
-|[字符串](../../../visual-basic/language-reference/data-types/string-data-type.md)（可变长度）|<xref:System.String>（类）|依赖于实现平台|0 到大约 20 亿 Unicode 字符|  
+|[字符串](../../../visual-basic/language-reference/data-types/string-data-type.md)（可变长度）|<xref:System.String> （类）|依赖于实现平台|0 到大约 20 亿 Unicode 字符|  
 |[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 个字节|0 到 4294967295 （无符号）|  
 |[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 个字节|0 到 18446744073709551615 (1.8 … E + 19 <sup>†</sup>) （无符号）|  
 |[用户定义](../../../visual-basic/language-reference/data-types/user-defined-data-type.md)（结构）|(继承自<xref:System.ValueType>)|依赖于实现平台|结构中的每个成员都有决定通过其数据类型，并独立于其他成员的范围|  
@@ -97,7 +90,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="object-overhead"></a>对象开销  
  `Object`引用任何基本或复合数据类型使用 4 个字节，以及数据类型中包含的数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Strings.StrConv%2A>  
  <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
  [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

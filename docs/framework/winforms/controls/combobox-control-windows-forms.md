@@ -1,13 +1,6 @@
 ---
-title: "ComboBox 控件（Windows 窗体）"
-ms.custom: 
+title: ComboBox 控件（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - drop-down lists [Windows Forms], Windows Forms
 - list controls [Windows Forms], Windows Forms
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c0d8ee3a2c51cf05f0669573170c5e15d4e9346e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a86c904150a0d0321405517ad88dffd0a6e4721
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox 控件（Windows 窗体）
 Windows 窗体`ComboBox`控件用于在下拉组合框中显示数据。 默认情况下，`ComboBox`控件出现在两个部分： 顶部是文本框中，用户可以键入列表项。 第二部分是显示的项，用户可以从中选择一个列表的列表框。  

@@ -1,14 +1,6 @@
 ---
-title: "IAssemblyCache::CreateAssemblyCacheItem 方法"
-ms.custom: 
+title: IAssemblyCache::CreateAssemblyCacheItem 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAssemblyCache.CreateAssemblyCacheItem
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 017a7ba5-aaaf-44e2-9cbe-ceebef259df0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 65431425afb6a666679d29f9c1bbc9691caa0afb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c45257a76127adf2bcf9ab356639d4754d151bf6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>IAssemblyCache::CreateAssemblyCacheItem 方法
 获取一个新的引用[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)对象。  
@@ -58,7 +46,7 @@ HRESULT CreateAssemblyCacheItem (
 -   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0X00000002)  
   
  `pvReserved`  
- [in]留待将来扩展。 `pvReserved`必须是 null 引用。  
+ [in]留待将来扩展。 `pvReserved` 必须是 null 引用。  
   
  `ppAsmItem`  
  [out]返回`IAssemblyCacheItem`指针。  
@@ -66,12 +54,12 @@ HRESULT CreateAssemblyCacheItem (
  `pszAssemblyName`  
  [in，可选]Uncanonicalized、 以逗号分隔`name=value`对。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IAssemblyCache 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  

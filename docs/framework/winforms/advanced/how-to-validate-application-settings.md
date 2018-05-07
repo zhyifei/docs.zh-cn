@@ -1,13 +1,6 @@
 ---
-title: "如何：验证应用程序设置"
-ms.custom: 
+title: 如何：验证应用程序设置
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e12620a5079efaba4faa9101253a3a586965b7e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa8877150d654bf9659dbb34b91436c0ee9ff8b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-validate-application-settings"></a>如何：验证应用程序设置
 本主题演示如何在保留应用程序设置前先验证它们。  
@@ -69,11 +57,11 @@ ms.lasthandoff: 12/22/2017
         MySettings.Default   
         ```  
   
-         或  
+         -或-  
   
     -   如果是 Visual Basic 开发人员并使用项目设计器创建应用程序设置，则可通过使用 [My.Settings Object](~/docs/visual-basic/language-reference/objects/my-settings-object.md) 对象来检索设置。  
   
-         或  
+         -或-  
   
     -   如果由派生自创建你的设置<xref:System.Configuration.ApplicationSettingsBase>直接，你需要手动实例化类。  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  如果你是 C# 开发人员，在窗体或控件的`Load`事件，添加事件处理程序<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>事件。  
   
-     或  
+     -或-  
   
      如果是 Visual Basic 开发人员，则应使用 `WithEvents` 关键字声明 `Settings` 变量。  
   

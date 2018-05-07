@@ -1,23 +1,14 @@
 ---
 title: 此数组被固定或临时锁定 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: adff10d4ae61e45402df64ebaa3baf146371ff9e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e912bd202603d9a0f427418708ad584c7d6203e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>此数组被固定或临时锁定 (Visual Basic)
 此错误具有以下可能的原因：  
@@ -36,5 +27,5 @@ ms.lasthandoff: 10/18/2017
   
 3.  确定锁定`Variant`并更正它。  
   
-## <a name="see-also"></a>另请参阅  
- [阵列](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>请参阅  
+ [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)

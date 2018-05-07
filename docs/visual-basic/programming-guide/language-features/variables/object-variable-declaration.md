@@ -1,13 +1,6 @@
 ---
-title: "对象变量声明 (Visual Basic)"
-ms.custom: 
+title: 对象变量声明 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - early binding [Visual Basic]
 - declarations [Visual Basic], class
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cdca188d778e9884f918d97eba492a29c64af826
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f5f77b81380d997e078a9f52ac4aae6f6e975575
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-declaration-visual-basic"></a>对象变量声明 (Visual Basic)
 你可以使用正常的声明语句来声明对象变量。 对于数据类型中，你指定`Object`(即， [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)) 或更具体的类是要创建对象。  
@@ -134,7 +124,7 @@ Dim anyForm As System.Windows.Forms.Form
   
  基类的所有成员都均可用于派生的类，但派生类的其他成员与基的类不可用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
  [对象变量赋值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
  [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  

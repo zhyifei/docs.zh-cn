@@ -1,23 +1,12 @@
 ---
-title: "查询支持"
-ms.custom: 
+title: 查询支持
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f20e9fbcad31a3924474793d9107d6a3c4aeef27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c46ed5ae2fc2cc2275bfa7251fe5f8fa346c1f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="support-for-queries"></a>查询支持
 SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户可以根据这些属性查询实例。 下面的列表包含这些已知属性的一部分：  
@@ -90,7 +79,7 @@ SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户
 ### <a name="the-servicedeployments-view"></a>ServiceDeployments 视图  
  ServiceDeployments 视图包含下列字段：  
   
-1.  **SiteName**  
+1.  **siteName**  
   
 2.  **RelativeServicePath**  
   
@@ -103,7 +92,7 @@ SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户
 ### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties 视图  
  InstancePromotedProperties 视图包含下列字段。 有关提升的属性的详细信息，请参阅[存储扩展性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)主题。  
   
-1.  **InstanceId**  
+1.  **instanceId**  
   
 2.  **EncodingOption**  
   

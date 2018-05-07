@@ -1,24 +1,12 @@
 ---
-title: ".NET Framework XAML 服务的 XAML 命名空间"
-ms.custom: 
+title: .NET Framework XAML 服务的 XAML 命名空间
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-caps.latest.revision: "3"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4e94f116fa820d80e5e23833c20382591c5d479
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 842cfb31e21c59bb886ccd266d19c40c64557519
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML 服务的 XAML 命名空间
 XAML 命名空间是扩展的 XML 命名空间定义一个概念。 类似于 XML 命名空间，你可以定义 XAML 命名空间使用`xmlns`标记中的属性。 XAML 命名空间还表示 XAML 节点流和其他 XAML 服务 Api 中。 本主题定义 XAML 命名空间概念，并介绍如何 XAML 命名空间可以定义和使用的 XAML 架构上下文和.NET Framework XAML 服务的其他方面。  
@@ -41,9 +29,9 @@ XAML 命名空间是扩展的 XML 命名空间定义一个概念。 类似于 XM
   
  使用的 CLR 命名空间和程序集约定的标识符的最基本形式如下所示：  
   
- `clr-namespace:`*clrnsName* `; assembly=` *程序集*  
+ `clr-namespace:` *clrnsName* `; assembly=` *程序集*  
   
- `clr-namespace:`和`; assembly=`是文本的语法组件。  
+ `clr-namespace:` 和`; assembly=`是文本的语法组件。  
   
  *clrnsName*是标识的 CLR 命名空间的字符串名称。 此字符串名称包括提供有关的 CLR 命名空间和及其与其他 CLR 命名空间的关系的提示的任何内部圆点字符 （.）。  
   
@@ -51,7 +39,7 @@ XAML 命名空间是扩展的 XML 命名空间定义一个概念。 类似于 XM
   
  更完整的 CLR 命名空间和程序集约定定义如下所示：  
   
- `clr-namespace:`*clrnsName* `; assembly=` *程序集名称*  
+ `clr-namespace:` *clrnsName* `; assembly=` *程序集名称*  
   
  *assemblyName*表示作为是合法的任何字符串<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>输入。 此字符串可以包含区域性、 公钥或版本信息 (这些概念的定义中的参考主题定义<xref:System.Reflection.Assembly>)。 COFF 格式和证据 (如使用的其他重载<xref:System.Reflection.Assembly.Load%2A>) 不相关的 XAML 程序集加载目的; 所有加载信息必须都显示为字符串。  
   
@@ -72,7 +60,7 @@ XAML 命名空间是扩展的 XML 命名空间定义一个概念。 类似于 XM
   
  如果你需要用于预先填充 XAML 命名空间信息，请在标记中，不定义你想要使用的 XAML 架构上下文的 XAML 命名空间的情况下可以使用的一种方法是声明中的 XML 命名空间声明<xref:System.Xml.XmlParserContext>为<xref:System.Xml.XmlReader>. 然后使用该<xref:System.Xml.XmlReader>作为输入的 XAML 读取器构造函数，或<xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29?displayProperty=nameWithType>。  
   
- 在.NET Framework XAML 服务中处理的 XAML 命名空间相关的两个其他 API 是属性<xref:System.Windows.Markup.XmlnsDefinitionAttribute>和<xref:System.Windows.Markup.XmlnsPrefixAttribute>。 这些属性应用于程序集。 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>用于 XAML 架构上下文解释包括一个 URI 的任何 XAML 命名空间声明。 <xref:System.Windows.Markup.XmlnsPrefixAttribute>使用发出 XAML，特定 XAML 命名空间就可序列化可预测的前缀的工具。 有关详细信息，请参阅[的自定义类型和库的 XAML-Related CLR 特性](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)。  
+ 在.NET Framework XAML 服务中处理的 XAML 命名空间相关的两个其他 API 是属性<xref:System.Windows.Markup.XmlnsDefinitionAttribute>和<xref:System.Windows.Markup.XmlnsPrefixAttribute>。 这些属性应用于程序集。 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 用于 XAML 架构上下文解释包括一个 URI 的任何 XAML 命名空间声明。 <xref:System.Windows.Markup.XmlnsPrefixAttribute> 使用发出 XAML，特定 XAML 命名空间就可序列化可预测的前缀的工具。 有关详细信息，请参阅[的自定义类型和库的 XAML-Related CLR 特性](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [了解 XAML 节点流结构和概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

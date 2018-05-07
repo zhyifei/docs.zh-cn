@@ -1,28 +1,16 @@
 ---
-title: "x:Arguments 指令"
-ms.custom: 
+title: x:Arguments 指令
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - x:Arguments directive [XAML Services]
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-caps.latest.revision: "12"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb1f5986a0d9f9eb69ade0228925ec06164cee4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0e7f380ec176e80d2422878a2e676d64985d660
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xarguments-directive"></a>x:Arguments 指令
 打包构造参数为非默认构造函数的对象元素声明在 XAML 中，或为工厂方法的对象声明。  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 |`methodName`|应能处理任何工厂方法的名称`x:Arguments`自变量。|  
   
 ## <a name="dependencies"></a>依赖项  
- `x:FactoryMethod`可以修改的作用域和行为其中`x:Arguments`适用。  
+ `x:FactoryMethod` 可以修改的作用域和行为其中`x:Arguments`适用。  
   
  如果没有`x:FactoryMethod`指定，则`x:Arguments`适用于支持的构造函数的备用 （非默认值） 签名。  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  `x:Arguments` XAML 用法不是属性元素用法在典型的意义上，因为指令标记不引用包含对象元素的类型。 这种风格更像其他指令是如`x:Code`其中元素 demarks 标记应解释为不子内容的默认值的范围。 在这种情况下，每个对象元素的 XAML 类型通信自变量类型中，XAML 分析器用于确定哪个特定构造函数的工厂方法签名的信息`x:Arguments`用法正尝试进行引用。  
   
- `x:Arguments`对象元素正在构造必须先完成任何其他属性元素、 内容、 内部文本或对象元素的初始化字符串。 中的对象元素`x:Arguments`可以包括属性和初始化字符串许可的该 XAML 类型和其后备构造函数或工厂方法。 对于对象或自变量中，你可以指定自定义 XAML 类型或 XAML 类型，否则外部默认 XAML 命名空间是通过引用建立的前缀映射。  
+ `x:Arguments` 对象元素正在构造必须先完成任何其他属性元素、 内容、 内部文本或对象元素的初始化字符串。 中的对象元素`x:Arguments`可以包括属性和初始化字符串许可的该 XAML 类型和其后备构造函数或工厂方法。 对于对象或自变量中，你可以指定自定义 XAML 类型或 XAML 类型，否则外部默认 XAML 命名空间是通过引用建立的前缀映射。  
   
  XAML 处理器使用以下准则来确定自变量中的指定`x:Arguments`应该用于构造一个对象。 如果`x:FactoryMethod`信息与进行比较的指定为指定`x:FactoryMethod`(请注意，值`x:FactoryMethod`是方法名称和命名的方法可以重载。 如果`x:FactoryMethod`未指定，则信息进行比较的对象的所有公共构造函数重载的集。 然后，XAML 处理逻辑比较参数的数目，并选择匹配的参数数量的重载。 如果没有匹配项不止一个，则 XAML 处理器应比较基于提供的对象元素的 XAML 类型的参数的类型。 如果没有仍多个匹配项，则 XAML 处理器行为不确定。 如果`x:FactoryMethod`指定，但该方法无法解决，XAML 处理器应引发异常。  
   

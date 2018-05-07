@@ -1,13 +1,6 @@
 ---
-title: "在 GDI+ 中裁切和缩放图像"
-ms.custom: 
+title: 在 GDI+ 中裁切和缩放图像
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bbe7ac4b8c541ea76392f94f538e41816cf5c3f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84e2e74e71c13593cb013849c07a6e904a4d2c14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>在 GDI+ 中裁切和缩放图像
-你可以使用<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>类可以绘制和位置矢量图像和光栅图像。 <xref:System.Drawing.Graphics.DrawImage%2A>是重载的方法，因此有几种方法，你可以向其提供自变量。  
+你可以使用<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>类可以绘制和位置矢量图像和光栅图像。 <xref:System.Drawing.Graphics.DrawImage%2A> 是重载的方法，因此有几种方法，你可以向其提供自变量。  
   
 ## <a name="drawimage-variations"></a>DrawImage 变体  
  一个变体<xref:System.Drawing.Graphics.DrawImage%2A>方法接收<xref:System.Drawing.Bitmap>和<xref:System.Drawing.Rectangle>。 矩形指定绘制操作; 的目标也就是说，它指定在其中绘制图像的矩形。 如果目标矩形的大小不同于原始图像的大小，缩放图像以适合目标矩形。 下面的代码示例演示如何将同一图像绘制三次： 一次没有缩放、 使用扩展，一次，并且一次使用压缩：  

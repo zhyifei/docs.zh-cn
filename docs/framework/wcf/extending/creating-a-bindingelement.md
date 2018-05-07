@@ -1,27 +1,15 @@
 ---
-title: "创建 BindingElement"
-ms.custom: 
+title: 创建 BindingElement
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0184d07210322e6ed04441f7190857cf07205b15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-bindingelement"></a>创建 BindingElement
-绑定和绑定元素（分别扩展 <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> 的对象）是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序模型与通道工厂和通道侦听器相关联的位置。 而无需绑定，使用自定义通道需要在通道级编程中所述[服务通道级编程](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)和[客户端通道级编程](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。 本主题讨论以使用您的通道中支持的最低要求[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，开发<xref:System.ServiceModel.Channels.BindingElement>为你的通道，然后从应用程序的步骤 4 中所述启用使用[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
+绑定和绑定元素 (扩展的对象<xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>和<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>分别) 是 Windows Communication Foundation (WCF) 应用程序模型是与通道工厂和通道侦听器相关联的位置。 而无需绑定，使用自定义通道需要在通道级编程中所述[服务通道级编程](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)和[客户端通道级编程](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。 本主题讨论以使用您的通道中支持的最低要求[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，开发<xref:System.ServiceModel.Channels.BindingElement>为你的通道，然后从应用程序的步骤 4 中所述启用使用[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
   
 ## <a name="overview"></a>概述  
  为您的通道创建 <xref:System.ServiceModel.Channels.BindingElement> 使得开发人员能够在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序中使用该通道。 可以从 <xref:System.ServiceModel.Channels.BindingElement> 类中使用 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 对象，以便将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序连接到通道，而不必获取该通道的精确类型信息。  

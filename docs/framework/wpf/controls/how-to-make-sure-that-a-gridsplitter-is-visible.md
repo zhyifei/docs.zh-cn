@@ -1,34 +1,20 @@
 ---
-title: "如何：确保 GridSplitter 可见"
-ms.custom: 
+title: 如何：确保 GridSplitter 可见
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GridSplitter control [WPF], ensuring visibility of
 ms.assetid: 0a62a964-89c8-48f0-9023-5df721a8cf47
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b7587a093b2b43856a05693bb785a0465211782
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 926df118bfd8e7ab3d1f0c953d0b6debafd59073
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a>如何：确保 GridSplitter 可见
 此示例演示如何确保<xref:System.Windows.Controls.GridSplitter>通过中的其他控件未隐藏控件<xref:System.Windows.Controls.Grid>。  
   
 ## <a name="example"></a>示例  
- <xref:System.Windows.Controls.Panel.Children%2A>的<xref:System.Windows.Controls.Grid>中标记或代码中定义的顺序呈现控件。 <xref:System.Windows.Controls.GridSplitter>如果你没有定义它们中的最后一个元素，可以由其他控件隐藏控件<xref:System.Windows.Controls.Panel.Children%2A>集合或如果你为提供其他控制更高<xref:System.Windows.Controls.Panel.ZIndexProperty>。  
+ <xref:System.Windows.Controls.Panel.Children%2A>的<xref:System.Windows.Controls.Grid>中标记或代码中定义的顺序呈现控件。 <xref:System.Windows.Controls.GridSplitter> 如果你没有定义它们中的最后一个元素，可以由其他控件隐藏控件<xref:System.Windows.Controls.Panel.Children%2A>集合或如果你为提供其他控制更高<xref:System.Windows.Controls.Panel.ZIndexProperty>。  
   
  若要防止隐藏<xref:System.Windows.Controls.GridSplitter>控件，执行下列操作之一。  
   

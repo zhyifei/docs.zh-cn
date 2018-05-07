@@ -1,11 +1,7 @@
 ---
-title: "ExecNotificationQueryWmi 函数 （非托管 API 参考）"
-description: "ExecNotificationQueryWmi 函数执行一个查询来接收事件。"
+title: ExecNotificationQueryWmi 函数 （非托管 API 参考）
+description: ExecNotificationQueryWmi 函数执行一个查询来接收事件。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecNotificationQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6dd0926d2262f8d0aa125b86755017a65a95a7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 函数
 执行查询以接收事件。 调用立即返回，并且它们到达时，调用方可以轮询事件返回的枚举数。 释放返回的枚举数取消查询。  
@@ -63,7 +56,7 @@ HRESULT ExecNotificationQueryWmi (
 `lFlags`   
 [in]影响此函数的行为的以下两个标志的组合。 在中定义这些值*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中。 
 
-| 返回的常量 | “值”  | 描述  |
+| 返回的常量 | 值  | 描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | 标志会导致半同步调用。 如果未设置此标志，则调用将失败。 这是因为事件接收连续，这意味着用户必须轮询返回的枚举数。 无限期地阻止此调用，将无法进行。 |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 该函数返回的只进的枚举器。 通常，只进的枚举器速度更快和使用的内存少于传统枚举器，但它们不允许调用[克隆](clone.md)。 |
@@ -77,7 +70,7 @@ HRESULT ExecNotificationQueryWmi (
 `authLevel`  
 [in]授权级别中。
 
-`impLevel`[in]模拟级别。
+`impLevel` [in]模拟级别。
 
 `pCurrentNamespace`   
 [in]指向的指针[IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx)对象，表示当前的命名空间。
@@ -95,7 +88,7 @@ HRESULT ExecNotificationQueryWmi (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 用户没有权限查看一个或多个函数可以返回的类。 |
 | `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |
@@ -122,12 +115,12 @@ HRESULT ExecNotificationQueryWmi (
 
 如果函数调用失败，你可以通过调用来获取其他错误信息[GetErrorInfo](geterrorinfo.md)函数。
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

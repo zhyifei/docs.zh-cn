@@ -1,24 +1,14 @@
 ---
-title: "发现安全示例"
-ms.custom: 
+title: 发现安全示例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f50334c8477b8823ef1dfb6abcae640e439d5ddd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a701a516a93cf94f76950b7b1b1c7f3a9b41214e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-security-sample"></a>发现安全示例
 Discovery 规范不要求参与发现过程的终结点是安全的。 增强发现消息的安全性可缓解各种类型的攻击（消息更改、拒绝服务、重播、欺骗）。 本示例实现自定义通道，这些通道计算和验证使用精简签名格式（在 WS-Discovery 规范的第 8.2 节中进行了介绍）的消息签名。 本示例支持[2005 Discovery 规范](http://go.microsoft.com/fwlink/?LinkId=177912)和[1.1 版](http://go.microsoft.com/fwlink/?LinkId=179677)。  
@@ -48,7 +38,7 @@ Discovery 规范不要求参与发现过程的终结点是安全的。 增强发
 > [!NOTE]
 >  `PrefixList` 已加入 2008 Discovery 版本协议。  
   
- 为计算签名，示例确定扩展的签名项。 根据 WS-Discovery 规范的要求，使用 `SignedInfo` 命名空间前缀创建 XML 签名 (`ds`)。 发现和寻址命名空间中的正文和所有标头都在签名中进行引用，因此无法对这些内容进行篡改。 每个引用的元素都使用专用规范化 (http://www.w3.org/2001/10/xml-exc-c14n#) 进行转换，然后计算 SHA-1 摘要值 (http://www.w3.org/2000/09/xmldsig#sha1)。 基于所有引用的元素及其摘要值，使用 RSA 算法 (http://www.w3.org/2000/09/xmldsig#rsa-sha1) 计算签名值。  
+ 为计算签名，示例确定扩展的签名项。 根据 WS-Discovery 规范的要求，使用 `SignedInfo` 命名空间前缀创建 XML 签名 (`ds`)。 发现和寻址命名空间中的正文和所有标头都在签名中进行引用，因此无法对这些内容进行篡改。 每个引用的元素转换使用专用规范化 (http://www.w3.org/2001/10/xml-exc-c14n# )，然后计算 sha-1 摘要值和 (http://www.w3.org/2000/09/xmldsig#sha1 )。 基于所有引用的元素及其摘要值，计算签名值使用 RSA 算法 (http://www.w3.org/2000/09/xmldsig#rsa-sha1 )。  
   
  消息使用特定于客户端的证书进行签名。 创建绑定元素时必须指定存储位置、名称和证书主题名称。 精简签名中的 `KeyId` 表示签名令牌的密钥标识符，是签名令牌的主题密钥标识符 (SKI) 或者是（如果 SKI 不存在）签名令牌的公钥的 SHA-1 哈希值。  
   
@@ -82,7 +72,7 @@ Discovery 规范不要求参与发现过程的终结点是安全的。 增强发
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   

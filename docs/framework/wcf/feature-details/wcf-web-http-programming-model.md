@@ -1,38 +1,26 @@
 ---
-title: "WCF Web HTTP 编程模型"
-ms.custom: 
+title: WCF Web HTTP 编程模型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - web services programming model [WCF]
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f008cfe874ae9e38a71eb3cf5d6b2ed4e6cbdf7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e063cdba74af9ee90b41d829a2a8b251a5cc96e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF Web HTTP 编程模型
-开发人员使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 编程模型可以向非 SOAP 终结点公开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务操作。 本节中的主题详细研究此功能。  
+Windows Communication Foundation (WCF) Web HTTP 编程模型允许开发人员公开向非 SOAP 终结点的 WCF 服务操作。 本节中的主题详细研究此功能。  
   
 ## <a name="in-this-section"></a>本节内容  
  [WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- 概述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 编程模型。  
+ 提供 Windows Communication Foundation (WCF) Web HTTP 编程模型的概述。  
   
  [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- 讨论 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 编程模型及其工作方式。  
+ 讨论 Windows Communication Foundation (WCF) Web HTTP 编程模型及其工作原理。  
   
  [如何：创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
  说明如何编写公开非 SOAP 终结点的基本服务。  

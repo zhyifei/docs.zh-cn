@@ -1,24 +1,12 @@
 ---
-title: "如何：表示主键"
-ms.custom: 
+title: 如何：表示主键
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 63c65289-6539-42b2-8493-891c232018fa
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c832b7c54ecbd1f4c4a3bebcbf7f293b9a45e46c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: dae8603a18318f45182c7148b10b8194e67fd017
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-represent-primary-keys"></a>如何：表示主键
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>属性<xref:System.Data.Linq.Mapping.ColumnAttribute>属性可指定属性或字段来表示数据库列的主键。  

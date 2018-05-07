@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic 中属性和变量的差异"
-ms.custom: 
+title: Visual Basic 中属性和变量的差异
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
 - variables [Visual Basic]
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cb30972e2b49a7005749f57c0223b9fa493cde52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 126e4baa2752ba7ccb5e8ff7b06a44839c1d0af2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic 中属性和变量的差异
 变量和属性都表示可以访问的值。 但是，有存储和实现中的差异。  
@@ -52,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  <sup>1</sup>和变量，不同的属性的值可能不直接对应于存储的单个项。 存储可能拆分为部分为方便或安全，或可能会以加密形式存储值。 在这些情况下`Get`过程将汇编这些块或解密存储的值，与`Set`过程会加密的新值或将其拆分到构成的存储。 属性值可能是临时的如一天时间，在这种情况下`Get`过程将及时计算即时每次访问属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性过程](./property-procedures.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
  [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)  

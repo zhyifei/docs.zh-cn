@@ -1,14 +1,6 @@
 ---
 title: 调试 Windows 身份验证错误
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,31 +8,25 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 39c033d45488b827a4aee7439904db8094795db4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d9226324b69e5c27738abb35bb155a43964b9127
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>调试 Windows 身份验证错误
-使用 Windows 验证身份作为安全机制时，安全支持提供程序接口 (SSPI) 将处理安全进程。 当 SSPI 层上发生安全错误时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 会显示这些错误。 本主题提供一组问题以帮助诊断这些错误。  
+使用 Windows 验证身份作为安全机制时，安全支持提供程序接口 (SSPI) 将处理安全进程。 当 SSPI 层上出现安全错误时，会显示这些由 Windows Communication Foundation (WCF)。 本主题提供一组问题以帮助诊断这些错误。  
   
  Kerberos 协议的概述，请参阅[Kerberos 解释](http://go.microsoft.com/fwlink/?LinkID=86946); 有关 SSPI 的概述，，请参阅[SSPI](http://go.microsoft.com/fwlink/?LinkId=88941)。  
   
- 对于 Windows 身份验证，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]通常使用*Negotiate*安全支持提供程序 (SSP)，后者将执行 Kerberos 客户端和服务之间的相互身份验证。 如果 Kerberos 协议不可用，则默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会回退到 NT LAN Manager (NTLM)。 不过，您可以将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 配置为仅使用 Kerberos 协议（且在 Kerberos 不可用时引发异常）。 也可以将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 配置为使用受限制形式的 Kerberos 协议。  
+ 对于 Windows 身份验证，通常使用 WCF *Negotiate*安全支持提供程序 (SSP)，后者将执行 Kerberos 客户端和服务之间的相互身份验证。 如果 Kerberos 协议不可用，默认情况下 WCF 回退到 NT LAN Manager (NTLM)。 但是，你可以配置 WCF 以便仅使用 Kerberos 协议 （从而引发异常，如果 Kerberos 不可用）。 你还可以配置 WCF 使用受限制的形式的 Kerberos 协议。  
   
 ## <a name="debugging-methodology"></a>调试方法  
  基本方法如下所述：  
   
 1.  确定您是否正在使用 Windows 身份验证。 如果您正在使用任何其他方案，则本主题不适用。  
   
-2.  如果您确定正在使用 Windows 身份验证，则确定您的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 配置是使用 Kerberos 定向还是协商。  
+2.  如果您确信您使用 Windows 身份验证，请确定您的 WCF 配置使用 Kerberos 定向还是协商。  
   
 3.  确定了配置是使用 Kerberos 协议还是 NTLM 后，您可以在正确的上下文中理解错误消息。  
   
@@ -75,7 +61,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="kerberos-protocol"></a>Kerberos 协议  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos 协议的 SPN/UPN 问题  
- 在使用 Windows 身份验证并且 SSPI 使用或协商 Kerberos 协议时，客户端终结点使用的 URL 必须包括服务主机在服务 URL 中的完全限定域名。 这假定在其下运行服务的帐户有权访问的计算机添加到 Active Directory 域中，这通常可通过下运行服务时创建的计算机 （默认值） 服务主体名称 (SPN) 密钥网络服务帐户。 如果服务不能访问计算机 SPN 密钥，则必须在客户端的终结点标识中提供在其下运行该服务的帐户的正确 SPN 或用户主体名称 (UPN)。 详细了解如何[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用 SPN 和 UPN，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 在使用 Windows 身份验证并且 SSPI 使用或协商 Kerberos 协议时，客户端终结点使用的 URL 必须包括服务主机在服务 URL 中的完全限定域名。 这假定在其下运行服务的帐户有权访问的计算机添加到 Active Directory 域中，这通常可通过下运行服务时创建的计算机 （默认值） 服务主体名称 (SPN) 密钥网络服务帐户。 如果服务不能访问计算机 SPN 密钥，则必须在客户端的终结点标识中提供在其下运行该服务的帐户的正确 SPN 或用户主体名称 (UPN)。 有关 WCF 与 SPN 和 UPN 的配合方式的详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
  在负载平衡方案（如网络场或网络园）中，常见的做法是为每个应用程序定义唯一帐户，为该帐户分配 SPN，并确保应用程序的所有服务都使用该帐户来运行。  
   
@@ -111,7 +97,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="ntlm-protocol"></a>NTLM 协议  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>协商 SSP 回退到 NTLM，但 NTLM 已被禁用  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 属性设置为 `false`，如果使用 NTLM，将导致 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 竭力引发异常。 请注意，将此属性设置为 `false` 可能不阻止通过网络发送 NTLM 凭据。  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>属性设置为`false`，这将导致 Windows Communication Foundation (WCF) 以使最大努力引发异常，如果使用 NTLM。 请注意，将此属性设置为 `false` 可能不阻止通过网络发送 NTLM 凭据。  
   
  下面演示了如何禁用回退到 NTLM。  
   

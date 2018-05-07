@@ -1,24 +1,12 @@
 ---
-title: "SQL Server 二进制和大值数据"
-ms.custom: 
+title: SQL Server 二进制和大值数据
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5ce85e61ac001ec07c14cebbc8d07e6c031498fc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c0202f6dc17d36fafb28206e17b71fc6d68d88c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server 二进制和大值数据
 SQL Server 提供 `max` 说明符，它可扩展 `varchar`、`nvarchar` 和 `varbinary` 数据类型的存储容量。 `varchar(max)``nvarchar(max)`，和`varbinary(max)`统称为*大型值数据类型*。 您可以使用大值数据类型来存储最大为 2^31-1 个字节的数据。  

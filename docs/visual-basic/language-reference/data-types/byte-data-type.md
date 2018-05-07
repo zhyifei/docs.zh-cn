@@ -1,11 +1,6 @@
 ---
-title: "Byte 数据类型 (Visual Basic)"
+title: Byte 数据类型 (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Byte
 helpviewer_keywords:
@@ -14,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02234afc0dc51a2c1338cdd16d1f97765f64b45e
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 28189ab4ab1a9be9265d1cca020039b5302fb5d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte 数据类型 (Visual Basic)
 包含无符号的 8 位 （1 个字节） 整数，值的范围从 0 到 255 之间。
@@ -44,7 +39,7 @@ ms.lasthandoff: 02/01/2018
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
-从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如:
+从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如：
 
 ```vb
 Dim number As Byte = &H_6A
@@ -60,7 +55,7 @@ Dim number As Byte = &H_6A
 
 -   **扩大转换。** `Byte`数据类型加宽到`Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，或`Double`。 这意味着你可以将转换`Byte`到而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。
   
--   **类型字符。** `Byte`不包含文本类型字符或标识符类型字符。
+-   **类型字符。** `Byte` 不包含文本类型字符或标识符类型字符。
 
 -   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Byte?displayProperty=nameWithType> 结构。
 

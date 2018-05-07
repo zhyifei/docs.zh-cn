@@ -1,24 +1,16 @@
 ---
-title: "Sub 表达式 (Visual Basic)"
+title: Sub 表达式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - lambda expressions [Visual Basic], sub expression
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43e35bd0386bc56478603ec36437981785cc8ffb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 602212e664fa3362742fb1ba0dc033610272d3af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-expression-visual-basic"></a>Sub 表达式 (Visual Basic)
 声明的参数和定义子例程 lambda 表达式的代码。  
@@ -38,8 +30,8 @@ End Sub
 |术语|定义|  
 |---|---|  
 |`parameterlist`|可选。 表示的参数的过程的本地变量名称的列表。 括号必须存在，即使列表为空。 有关详细信息，请参阅[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`statement`|必需。 一条语句。|  
-|`statements`|必需。 语句的列表。|  
+|`statement`|必须的。 一条语句。|  
+|`statements`|必须的。 语句的列表。|  
   
 ## <a name="remarks"></a>备注  
  A *lambda 表达式*是不具有名称一个子例程，并执行一个或多个语句。 你可以任意位置使用 lambda 表达式，可用作委托类型，除外的自变量`RemoveHandler`。 有关委托，而使用与委托的 lambda 表达式的详细信息，请参阅[委托语句](../../../visual-basic/language-reference/statements/delegate-statement.md)和[宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  
@@ -64,7 +56,7 @@ End Sub
   
  [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
  [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
  [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  

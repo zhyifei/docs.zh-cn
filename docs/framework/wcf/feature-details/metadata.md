@@ -1,31 +1,17 @@
 ---
-title: "元数据"
-ms.custom: 
+title: 元数据
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e4b0a724653f5366d6da96f511fac9e62f64816
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ec0ba750a692d6f2c397fd565d855ac97b59073
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata"></a>元数据
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了一个基础结构，用于导出、发布、检索和导入服务元数据。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务使用元数据来描述如何与服务的终结点进行交互，以便工具（如 Svcutil.exe）可以自动生成客户端代码来访问服务。  
+Windows Communication Foundation (WCF) 提供用于导出、 发布、 检索和导入服务元数据的基础结构。 WCF 服务使用元数据来描述如何与服务的终结点进行交互，以便工具，如 Svcutil.exe，可以自动生成用于访问服务的客户端代码。  
   
 ## <a name="in-this-section"></a>本节内容  
  [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
  描述如何导出和导入元数据。  
   
  [发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- 描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何发布元数据。  
+ 介绍 WCF 如何发布元数据。  
   
  [检索元数据](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  描述检索元数据的不同方式。  

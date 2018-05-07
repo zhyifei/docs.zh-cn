@@ -1,12 +1,6 @@
 ---
-title: "参数数组 (Visual Basic)"
-ms.custom: 
+title: 参数数组 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - parameter arrays [Visual Basic], about parameter arrays
 - ParamArray keyword [Visual Basic], parameter arrays
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8ca2b5f02ac4fb3eb613488c8a9852eb2aa4ce5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a91da0d9e16ff11fdd4980588fee64b3e4a603c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameter-arrays-visual-basic"></a>参数数组 (Visual Basic)
 通常情况下，不能调用带多个参数不是过程声明指定的过程。 当你需要自变量数量不确定时，可以声明*参数数组*，这样一个过程来接受参数的值的数组。 不需要知道的参数数组中的元素数，当你定义的过程。 数组大小由每个调用的过程单独确定。  
@@ -64,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbcnProcedures#49](./codesnippet/VisualBasic/parameter-arrays_3.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Information.UBound%2A>  
  [过程](./index.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
@@ -72,5 +63,5 @@ ms.lasthandoff: 11/21/2017
  [按位置和按名称传递自变量](./passing-arguments-by-position-and-by-name.md)  
  [可选参数](./optional-parameters.md)  
  [过程重载](./procedure-overloading.md)  
- [阵列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)

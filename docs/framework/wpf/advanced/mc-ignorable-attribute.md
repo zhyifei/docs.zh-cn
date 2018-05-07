@@ -1,13 +1,6 @@
 ---
-title: "mc:Ignorable 特性"
-ms.custom: 
+title: mc:Ignorable 特性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - mc XML namespace prefix [WPF]
 - mc:Ignorable attribute
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9767b721321b34030a2f276a90c618c658645207
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b8a2ef6e27bc6b25776157e59bef04b883fcb1a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 特性
 指定哪些[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]可能忽略在标记文件中遇到的命名空间前缀[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器。 `mc:Ignorable`属性支持标记兼容性，为自定义命名空间映射和[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]版本控制。  
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  元素或属性的元素名称的前缀部分被视为`mc:Ignorable`不会引发错误时由处理[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器。 如果该属性不能解析为基础类型或编程构造，则忽略该元素。 但是请注意，被忽略的元素仍可能会生成其他分析错误，因为将会不处理该元素的负面影响的其他元素要求。 例如，特定元素的内容模型可能需要一个子元素，但如果指定的子元素已在`mc:Ignorable`前缀和指定的子元素不能被解析为的类型，则[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器可能引发错误。  
   
- `mc:Ignorable`仅适用于命名空间映射为标识符字符串。 `mc:Ignorable`不适用于命名空间映射到指定的程序集[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]命名空间和程序集 （或与程序集的当前可执行文件的默认值）。  
+ `mc:Ignorable` 仅适用于命名空间映射为标识符字符串。 `mc:Ignorable` 不适用于命名空间映射到指定的程序集[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]命名空间和程序集 （或与程序集的当前可执行文件的默认值）。  
   
  如果你要实现[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器，处理器实现必须不会引发分析或处理的任何元素或由标识为前缀限定的属性的类型解析错误`mc:Ignorable`。 但仍然可以引发作为无法加载或处理，如前面的一个子元素示例某元素的间接后果的异常。  
   

@@ -1,31 +1,17 @@
 ---
-title: "DateTimePicker 控件概述（Windows 窗体）"
-ms.custom: 
+title: DateTimePicker 控件概述（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - DateTimePicker
 helpviewer_keywords:
 - DateTimePicker control [Windows Forms], about
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0db5e532a2688d7f213fd42772234b9600192390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf44cdff7da06a27921ce5881199a3a88b1096f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.DateTimePicker>控件允许用户从日期或时间的列表中选择单个项。 当用于表示的日期，它将显示在两个部分： 文本，并单击列表旁的向下箭头时出现的网格中所表示日期的下拉列表。 网格如下所示<xref:System.Windows.Forms.MonthCalendar>控件，可用于选择多个日期。 有关详细信息<xref:System.Windows.Forms.MonthCalendar>控制，请参阅[MonthCalendar 控件概述](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md)。  

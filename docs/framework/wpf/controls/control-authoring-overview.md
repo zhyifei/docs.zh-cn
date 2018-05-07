@@ -1,13 +1,6 @@
 ---
-title: "控件创作概述"
-ms.custom: 
+title: 控件创作概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f9290c249ed85ffc1fe98878daf2c2f0777786f5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a6c2c796819924cdbd15d6eefffe10a607bad9bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-authoring-overview"></a>控件创作概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控件模型的扩展性极大地减少了创建新控件的需要。 但在某些情况下，仍可能需要创建自定义控件。 本主题讨论可最大限度减少在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中创建自定义控件以及其他控件创作模型的需要的功能。 本主题还演示如何创建新控件。  
@@ -83,7 +71,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="deriving-from-frameworkelement"></a>从 FrameworkElement 派生  
  派生自的控件<xref:System.Windows.Controls.UserControl>或<xref:System.Windows.Controls.Control>依赖于组合现有元素。 对于许多情况下，这是一个可接受的解决方案，因为任何对象，它继承自<xref:System.Windows.FrameworkElement>可能处于<xref:System.Windows.Controls.ControlTemplate>。 但是，某些时候，简单的元素组合不能满足控件的外观需要。 对于这些方案，使组件基于<xref:System.Windows.FrameworkElement>是正确的选择。  
   
- 有两种标准方法，用于生成<xref:System.Windows.FrameworkElement>的基于组件： 直接呈现和自定义元素组合。 直接呈现涉及重写<xref:System.Windows.UIElement.OnRender%2A>方法<xref:System.Windows.FrameworkElement>并提供<xref:System.Windows.Media.DrawingContext>显式定义组件视觉对象的操作。 这是使用的方法<xref:System.Windows.Controls.Image>和<xref:System.Windows.Controls.Border>。 自定义元素组合涉及使用类型的对象<xref:System.Windows.Media.Visual>编写你的组件的外观。 有关示例，请参阅[使用 DrawingVisual 对象](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)。 <xref:System.Windows.Controls.Primitives.Track>是一个示例中的控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用自定义元素组合。 在同一控件中，也可以混合使用直接呈现和自定义元素组合。  
+ 有两种标准方法，用于生成<xref:System.Windows.FrameworkElement>的基于组件： 直接呈现和自定义元素组合。 直接呈现涉及重写<xref:System.Windows.UIElement.OnRender%2A>方法<xref:System.Windows.FrameworkElement>并提供<xref:System.Windows.Media.DrawingContext>显式定义组件视觉对象的操作。 这是使用的方法<xref:System.Windows.Controls.Image>和<xref:System.Windows.Controls.Border>。 自定义元素组合涉及使用类型的对象<xref:System.Windows.Media.Visual>编写你的组件的外观。 有关示例，请参阅[使用 DrawingVisual 对象](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)。 <xref:System.Windows.Controls.Primitives.Track> 是一个示例中的控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用自定义元素组合。 在同一控件中，也可以混合使用直接呈现和自定义元素组合。  
   
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>从 FrameworkElement 派生的优点  
  请考虑派生自<xref:System.Windows.FrameworkElement>如果任何适用以下原则：  
@@ -127,7 +115,7 @@ ms.lasthandoff: 01/19/2018
   
 -   定义一种方法<xref:System.Windows.CoerceValueCallback>名为`CoerceValue`。 `CoerceValue` 确保 `Value` 大于或等于 `MinValue` 且小于或等于 `MaxValue`。  
   
--   定义一种方法<xref:System.Windows.PropertyChangedCallback>命名`OnValueChanged`。 `OnValueChanged`创建<xref:System.Windows.RoutedPropertyChangedEventArgs%601>对象并准备引发`ValueChanged`路由的事件。 路由事件在下一节中讨论。  
+-   定义一种方法<xref:System.Windows.PropertyChangedCallback>命名`OnValueChanged`。 `OnValueChanged` 创建<xref:System.Windows.RoutedPropertyChangedEventArgs%601>对象并准备引发`ValueChanged`路由的事件。 路由事件在下一节中讨论。  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -195,7 +183,7 @@ ms.lasthandoff: 01/19/2018
   
 -   实现一对名为`Set`*属性名称*和`Get`*属性名称*的 `public` `static` CLR 方法。 这两种方法应接受从派生的类<xref:System.Windows.DependencyProperty>作为其第一个参数。 `Set`*属性名称*方法还接受其类型与属性的注册数据类型匹配的参数。 `Get`*属性名称* 方法应返回相同类型的值。 如果缺少 `Set`*属性名称*方法，则该属性标记为只读。  
   
--   `Set`*PropertyName*和`Get` *PropertyName*必须直接路由到<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>方法目标依赖对象，分别。 通过调用方法包装器或直接调用目标依赖对象，设计器可以访问附加属性。  
+-   `Set` *PropertyName*和`Get` *PropertyName*必须直接路由到<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>方法目标依赖对象，分别。 通过调用方法包装器或直接调用目标依赖对象，设计器可以访问附加属性。  
   
  有关附加属性的详细信息，请参阅[附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。  
   

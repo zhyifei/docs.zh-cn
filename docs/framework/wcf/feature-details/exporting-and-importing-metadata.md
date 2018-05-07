@@ -1,34 +1,20 @@
 ---
-title: "导出和导入元数据"
-ms.custom: 
+title: 导出和导入元数据
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 497feb80d5930a784022877cfaa6e6c76a3047a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exporting-and-importing-metadata"></a>导出和导入元数据
-在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，导出元数据是一个描述服务终结点并将其映射到一个并行的标准化表示形式的过程，客户端可以使用这种表示形式来了解如何使用服务。 导入服务元数据是一个从服务元数据生成 <xref:System.ServiceModel.Description.ServiceEndpoint> 实例或部分的过程。  
+在 Windows Communication Foundation (WCF) 中，导出元数据是描述服务终结点并将它们投影到客户端可用来了解如何使用服务的并行的标准化表示形式的过程。 导入服务元数据是一个从服务元数据生成 <xref:System.ServiceModel.Description.ServiceEndpoint> 实例或部分的过程。  
   
 ## <a name="exporting-metadata"></a>导出元数据  
- 若要从 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 实例导出元数据，请使用 <xref:System.ServiceModel.Description.MetadataExporter> 抽象类的实现。 <xref:System.ServiceModel.Description.WsdlExporter> 类型是 <xref:System.ServiceModel.Description.MetadataExporter> 所包含的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 抽象类的实现。  
+ 若要从 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 实例导出元数据，请使用 <xref:System.ServiceModel.Description.MetadataExporter> 抽象类的实现。 <xref:System.ServiceModel.Description.WsdlExporter>类型是实现的<xref:System.ServiceModel.Description.MetadataExporter>抽象 WCF 中包含的类。  
   
  <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 类型使用封装在 <xref:System.ServiceModel.Description.MetadataSet> 实例中的附加策略表达式生成 Web 服务描述语言 (WSDL) 元数据。 可以使用 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 实例以迭代方式为 <xref:System.ServiceModel.Description.ContractDescription> 对象和 <xref:System.ServiceModel.Description.ServiceEndpoint> 对象导出元数据。 还可以导出 <xref:System.ServiceModel.Description.ServiceEndpoint> 对象的集合，并将其与特定的服务名称相关联。  
   
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="importing-metadata"></a>导入元数据  
   
 ### <a name="importing-wsdl-documents"></a>导入 WSDL 文档  
- 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中导入服务元数据，请使用 <xref:System.ServiceModel.Description.MetadataImporter> 抽象类的实现。 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 类型是 <xref:System.ServiceModel.Description.MetadataImporter> 所包含的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 抽象类的实现。 <xref:System.ServiceModel.Description.WsdlImporter> 类型使用捆绑在 <xref:System.ServiceModel.Description.MetadataSet> 对象中的附加策略来导入 WSDL 元数据。  
+ 要导入服务元数据在 WCF 中，使用的实现<xref:System.ServiceModel.Description.MetadataImporter>抽象类。 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>类型是实现的<xref:System.ServiceModel.Description.MetadataImporter>抽象 WCF 中包含的类。 <xref:System.ServiceModel.Description.WsdlImporter> 类型使用捆绑在 <xref:System.ServiceModel.Description.MetadataSet> 对象中的附加策略来导入 WSDL 元数据。  
   
  <xref:System.ServiceModel.Description.WsdlImporter> 类型可让您控制如何导入元数据。 可以导入所有终结点、所有绑定或所有协定。 可以导入与特定的 WSDL 服务、绑定或端口类型相关联的所有终结点。 还可以导入特定的 WSDL 端口的终结点、特定的 WSDL 绑定的绑定或特定的 WSDL 端口类型的协定。  
   

@@ -1,14 +1,6 @@
 ---
-title: "如何：将多个事件连接到 Windows 窗体中的单个事件处理程序"
-ms.custom: 
+title: 如何：将多个事件连接到 Windows 窗体中的单个事件处理程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - vb
 helpviewer_keywords:
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfd955b4153c7a2bc54d8b52ff1801541c3a7559
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 527a76376a4c1d5ad051f4768ca2bd42c3548b3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>如何：将多个事件连接到 Windows 窗体中的单个事件处理程序
 在应用程序设计中，你可能会发现多个事件用于单个事件处理程序或具有多个事件执行相同的过程所需。 例如，它通常是功能强大的时间的保护程序具有引发同一事件，因为它们公开相同的功能时，将执行你的窗体上的按钮的菜单命令。 你可以执行此操作通过使用 C# 中的属性窗口的事件视图或使用`Handles`关键字和**类名**和**方法名称**下拉列表框在 Visual Basic 代码编辑器中。  

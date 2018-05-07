@@ -1,32 +1,18 @@
 ---
 title: 如何：使用类创建 Windows Communication Foundation 约定
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 54d5e1328482fc7d0c1ee33918ffae6bf7195db9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 296f500532040aaebf0f6d7d37a7a9aae99a3451
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>如何：使用类创建 Windows Communication Foundation 约定
-创建 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 协定的首选方式是使用接口。 有关详细信息，请参阅[如何： 定义服务协定](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)。 本文介绍另一种方式，即创建一个类，然后直接对该类应用 <xref:System.ServiceModel.ServiceContractAttribute> 特性，并对该类中作为协定一部分的每个方法应用 <xref:System.ServiceModel.OperationContractAttribute> 特性。  
+创建 Windows Communication Foundation (WCF) 协定的首选的方法是使用接口。 有关详细信息，请参阅[如何： 定义服务协定](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)。 本文介绍另一种方式，即创建一个类，然后直接对该类应用 <xref:System.ServiceModel.ServiceContractAttribute> 特性，并对该类中作为协定一部分的每个方法应用 <xref:System.ServiceModel.OperationContractAttribute> 特性。  
   
 > [!WARNING]
 >  `[ServiceContract]` 和 `[ServiceContractAttribute]` 的作用一样。 `[OperationContract]` 和 `[OperationContractAttribute]` 的作用一样。 在每种情况下，前者都是后者的简写。  
@@ -41,7 +27,7 @@ ms.lasthandoff: 04/30/2018
   
 3.  创建该类中的方法。  
   
-4.  对必须作为公共 <xref:System.ServiceModel.OperationContractAttribute> 协定的一部分公开的每个方法应用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 类。  
+4.  应用<xref:System.ServiceModel.OperationContractAttribute>到每个方法都必须作为公共 WCF 协定的一部分进行公开的类。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示定义服务协定的类。  

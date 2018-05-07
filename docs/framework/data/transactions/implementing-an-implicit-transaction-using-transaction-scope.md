@@ -1,26 +1,15 @@
 ---
-title: "使用事务范围实现隐式事务"
-ms.custom: 
+title: 使用事务范围实现隐式事务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b75091739b0ea97b63b35830f4946a78e49ff8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用事务范围实现隐式事务
 <xref:System.Transactions.TransactionScope> 类提供了一种简单方法，使您无需与事务自身进行交互，就可以在参与事务时对代码块进行标记。 事务范围可以自动选择和管理环境事务。 由于 <xref:System.Transactions.TransactionScope> 具有简单易用性和高效性，因此建议您在开发事务应用程序时使用该类。  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="rolling-back-a-transaction"></a>回滚事务  
  如果要回滚事务，则不应在事务范围中调用 <xref:System.Transactions.TransactionScope.Complete%2A> 方法。 例如，可以在该范围中引发异常。 这样，就会回滚该范围所参与的事务。  
   
-##  <a name="ManageTxFlow"></a>管理使用 TransactionScopeOption 的事务流  
+##  <a name="ManageTxFlow"></a> 管理使用 TransactionScopeOption 的事务流  
  可通过调用一个方法来嵌套事务范围，该方法在使用其自己范围的方法中使用 <xref:System.Transactions.TransactionScope>，下面示例中的 `RootMethod` 方法就是前者这样的方法。  
   
 ```csharp  

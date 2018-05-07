@@ -1,13 +1,6 @@
 ---
-title: "优化性能：二维图形和图像处理"
-ms.custom: 
+title: 优化性能：二维图形和图像处理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99fc5e179fe7652868d47d93fbdcabd47bc8cab9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e6b72dae863e89d70ec70c2cb99a5874581e9ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>优化性能：二维图形和图像处理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了多种可按应用程序要求进行优化的二维图形和图像处理功能。 本主题提供有关这些方面性能优化的信息。  
@@ -36,23 +24,23 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>绘图和形状  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供<xref:System.Windows.Media.Drawing>和<xref:System.Windows.Shapes.Shape>对象来表示图形的绘制内容。 但是，<xref:System.Windows.Media.Drawing>对象的更简单构造比<xref:System.Windows.Shapes.Shape>对象，并提供更好的性能特征。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供<xref:System.Windows.Media.Drawing>和<xref:System.Windows.Shapes.Shape>对象来表示图形的绘制内容。 但是，<xref:System.Windows.Media.Drawing>对象的更简单构造比<xref:System.Windows.Shapes.Shape>对象，并提供更好的性能特征。  
   
  A<xref:System.Windows.Shapes.Shape>允许你向屏幕绘制图形形状。 因为它们都派生自<xref:System.Windows.FrameworkElement>类，<xref:System.Windows.Shapes.Shape>对象可使用在面板和大多数控件。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 为图形和绘制服务提供多层访问。 在顶层，<xref:System.Windows.Shapes.Shape>对象是易于使用和提供许多有用的功能，如布局和事件处理。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了许多现成可用的形状对象。 所有的形状对象继承自<xref:System.Windows.Shapes.Shape>类。 可用的形状对象包括<xref:System.Windows.Shapes.Ellipse>， <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，和<xref:System.Windows.Shapes.Rectangle>。  
   
- <xref:System.Windows.Media.Drawing>对象，另一方面，是非派生自<xref:System.Windows.FrameworkElement>类，提供轻量实现呈现形状、 图像和文本。  
+ <xref:System.Windows.Media.Drawing> 对象，另一方面，是非派生自<xref:System.Windows.FrameworkElement>类，提供轻量实现呈现形状、 图像和文本。  
   
  有四种类型的<xref:System.Windows.Media.Drawing>对象：  
   
--   <xref:System.Windows.Media.GeometryDrawing>绘制一个形状。  
+-   <xref:System.Windows.Media.GeometryDrawing> 绘制一个形状。  
   
--   <xref:System.Windows.Media.ImageDrawing>绘制图像。  
+-   <xref:System.Windows.Media.ImageDrawing> 绘制图像。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>绘制文本。  
+-   <xref:System.Windows.Media.GlyphRunDrawing> 绘制文本。  
   
--   <xref:System.Windows.Media.DrawingGroup>绘制其他绘制项。 使用图形组将其他图形合并到单个复合图形。  
+-   <xref:System.Windows.Media.DrawingGroup> 绘制其他绘制项。 使用图形组将其他图形合并到单个复合图形。  
   
  <xref:System.Windows.Media.GeometryDrawing>对象用于呈现几何图形内容。 <xref:System.Windows.Media.Geometry>类和具体的类派生自它，如<xref:System.Windows.Media.CombinedGeometry>， <xref:System.Windows.Media.EllipseGeometry>，和<xref:System.Windows.Media.PathGeometry>、 提供一种呈现二维图形，以及提供命中测试和剪辑支持。 几何对象可用于定义控件的区域或定义应用于图像的剪裁区域等。 几何对象可以是简单区域（例如矩形和圆形），或者是由两个或多个几何对象创建的复合区域。 可以通过组合创建更复杂的几何区域<xref:System.Windows.Media.PathSegment>-派生对象，如<xref:System.Windows.Media.ArcSegment>， <xref:System.Windows.Media.BezierSegment>，和<xref:System.Windows.Media.QuadraticBezierSegment>。  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry 对象  
- <xref:System.Windows.Media.StreamGeometry>对象是轻量替代<xref:System.Windows.Media.PathGeometry>用于创建几何形状。 使用<xref:System.Windows.Media.StreamGeometry>需要来描述复杂的几何图形。 <xref:System.Windows.Media.StreamGeometry>用于处理多个优化<xref:System.Windows.Media.PathGeometry>对象，并执行更好地与使用多个独立相比<xref:System.Windows.Media.PathGeometry>对象。  
+ <xref:System.Windows.Media.StreamGeometry>对象是轻量替代<xref:System.Windows.Media.PathGeometry>用于创建几何形状。 使用<xref:System.Windows.Media.StreamGeometry>需要来描述复杂的几何图形。 <xref:System.Windows.Media.StreamGeometry> 用于处理多个优化<xref:System.Windows.Media.PathGeometry>对象，并执行更好地与使用多个独立相比<xref:System.Windows.Media.PathGeometry>对象。  
   
  下面的示例使用的特性语法创建一个三角形<xref:System.Windows.Media.StreamGeometry>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 -   有关详细信息，请参阅 [图像概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)。  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
- 对任何位图缩放进行动画处理时，默认高质量图像重采样算法有时可能由于消耗过多系统资源导致帧速率下降，从而导致动画明显变慢。 通过设置<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>属性<xref:System.Windows.Media.RenderOptions>对象传递给<xref:System.Windows.Media.BitmapScalingMode.LowQuality>在缩放位图时，可以创建平滑的动画。 <xref:System.Windows.Media.BitmapScalingMode.LowQuality>模式告知[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]呈现引擎在处理图像时从质量优化算法切换到速度优化算法。  
+ 对任何位图缩放进行动画处理时，默认高质量图像重采样算法有时可能由于消耗过多系统资源导致帧速率下降，从而导致动画明显变慢。 通过设置<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>属性<xref:System.Windows.Media.RenderOptions>对象传递给<xref:System.Windows.Media.BitmapScalingMode.LowQuality>在缩放位图时，可以创建平滑的动画。 <xref:System.Windows.Media.BitmapScalingMode.LowQuality> 模式告知[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]呈现引擎在处理图像时从质量优化算法切换到速度优化算法。  
   
  下面的示例演示如何设置<xref:System.Windows.Media.BitmapScalingMode>图像对象。  
   

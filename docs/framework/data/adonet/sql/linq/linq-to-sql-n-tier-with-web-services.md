@@ -1,27 +1,15 @@
 ---
-title: "具有 Web 服务的 LINQ to SQL N 层"
-ms.custom: 
+title: 具有 Web 服务的 LINQ to SQL N 层
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 79b9b1270f99720dec6b6369706f8a2f601d249e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 94b00c5b9a433aa53fecef10d865db76d5577c84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>具有 Web 服务的 LINQ to SQL N 层
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]旨在特别针对在如 Web 服务的松耦合数据访问层 (DAL) 的中间层上使用。 如果表示层为 ASP.NET 网页，则使用 <xref:System.Web.UI.WebControls.LinqDataSource> Web 服务器控件管理用户界面与中间层上的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 之间的数据传输。 如果表示层不是 ASP.NET 页，则中间层和表示层都必须执行一些附加工作以管理数据的序列化和反序列化。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 旨在特别针对在如 Web 服务的松耦合数据访问层 (DAL) 的中间层上使用。 如果表示层为 ASP.NET 网页，则使用 <xref:System.Web.UI.WebControls.LinqDataSource> Web 服务器控件管理用户界面与中间层上的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 之间的数据传输。 如果表示层不是 ASP.NET 页，则中间层和表示层都必须执行一些附加工作以管理数据的序列化和反序列化。  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>在中间层上设置 LINQ to SQL  
  在 Web 服务或 n 层应用程序中，中间层包含数据上下文和实体类。 可以手动创建这些类，或是按照文档中其他部分的说明使用 SQLMetal.exe 或[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]创建。 在设计时，您可以选择使实体类可序列化。 有关详细信息，请参阅[如何： 使实体可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。 也可以选择创建包装要序列化的数据的一组单独类，然后当在 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查询中返回数据时投射到这些可序列化类型中。  

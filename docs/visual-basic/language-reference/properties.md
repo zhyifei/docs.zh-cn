@@ -1,21 +1,14 @@
 ---
 title: 属性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: c995caf9-8d0e-4fb8-ae02-e9e6087d7651
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a38fff09a56d431255b0be3e052b32a5daddf90c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fd1bdb665f4e72ad4c29efa3d1c5459975f0b05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="properties-visual-basic"></a>属性 (Visual Basic)
 此页列出的 Visual Basic 模块成员的属性。 其他成员的特定的 Visual Basic 对象的属性列在[对象](../../visual-basic/language-reference/objects/index.md)。  
@@ -35,6 +28,6 @@ ms.lasthandoff: 11/21/2017
 |<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|返回或设置`String`表示当前时间根据您的系统的一天中的值。|  
 |<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|返回或设置`Date`值，该值包含根据您的系统的当前日期。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)  
  [Visual Basic](../../visual-basic/index.md)

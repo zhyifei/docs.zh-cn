@@ -1,13 +1,6 @@
 ---
-title: "使用标识模型管理声明和授权"
-ms.custom: 
+title: 使用标识模型管理声明和授权
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authorization [WCF]
 - WCF security
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用标识模型管理声明和授权
-授权是确定哪些实体具有更改、查看或其他访问计算机资源权限的过程。 例如，在一个企业中，可能只有经理们才可以访问其员工的文件。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支持两种执行授权处理的机制。 第一种机制使您能够使用现有的公共语言运行库 (CLR) 构造来控制授权。 第二个是称为的基于声明的模型*标识模型*。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用标识模型创建来自传入消息的声明；可以扩展标识模型类以支持自定义授权方案的新声明类型。 本主题概述标识模型功能的主要编程概念，并提供此功能使用的最重要的类的列表。  
+授权是确定哪些实体具有更改、查看或其他访问计算机资源权限的过程。 例如，在一个企业中，可能只有经理们才可以访问其员工的文件。 Windows Communication Foundation (WCF) 执行授权处理支持两种机制。 第一种机制使您能够使用现有的公共语言运行库 (CLR) 构造来控制授权。 第二个是称为的基于声明的模型*标识模型*。 WCF 使用标识模型来创建声明从传入消息;可以扩展标识模型类以支持自定义授权方案的新声明类型。 本主题概述标识模型功能的主要编程概念，并提供此功能使用的最重要的类的列表。  
   
 ## <a name="identity-model-scenarios"></a>标识模型方案  
  以下方案演示标识模型的使用方式。  
@@ -80,7 +68,7 @@ ms.lasthandoff: 12/22/2017
  右  
  对于某个资源拥有的能力。 标识模型 API 定义的权限是 <xref:System.IdentityModel.Claims.Rights> 类的属性。 系统提供的权限的示例有 <xref:System.IdentityModel.Claims.Rights.Identity%2A> 和 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>。  
   
- “值”  
+ 值  
  用以声明权限的信息。  
   
 ## <a name="claims"></a>声明  
@@ -136,7 +124,7 @@ ms.lasthandoff: 12/22/2017
  ![管理声明和授权](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF 和标识模型  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将标识模型基础结构用作执行授权的基础。 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]、<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>类允许你指定*授权*作为服务的一部分的策略。 这种授权策略被称为*外部授权策略*，并且它们可以执行声明处理基于本地策略或者通过与远程服务的交互。 授权管理器中，由表示<xref:System.ServiceModel.ServiceAuthorizationManager>类以及识别各种凭据类型 （令牌） 的授权策略的外部授权策略的计算结果并填充所谓*授权上下文*适合于传入消息的声明。 授权上下文由 <xref:System.IdentityModel.Policy.AuthorizationContext> 类表示。  
+ WCF 使用标识模型基础结构作为基础执行授权。 在 WCF 中，<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>类允许你指定*授权*作为服务的一部分的策略。 这种授权策略被称为*外部授权策略*，并且它们可以执行声明处理基于本地策略或者通过与远程服务的交互。 授权管理器中，由表示<xref:System.ServiceModel.ServiceAuthorizationManager>类以及识别各种凭据类型 （令牌） 的授权策略的外部授权策略的计算结果并填充所谓*授权上下文*适合于传入消息的声明。 授权上下文由 <xref:System.IdentityModel.Policy.AuthorizationContext> 类表示。  
   
 ## <a name="identity-model-programming"></a>标识模型编程  
  下表说明了用于对标识模型扩展进行编程的对象模型 这些类全部存在于 <xref:System.IdentityModel.Policy> 或 <xref:System.IdentityModel.Claims> 命名空间中。  

@@ -1,45 +1,33 @@
 ---
 title: Windows Communication Foundation 安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, programming
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-caps.latest.revision: 21
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b93bfff2cd97e10d9c0dba4373839337f36aacb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: fb48ae39d269f21a7120ecf143dc4c4680efe39d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 安全性
-本节中的主题描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全功能以及如何使用这些功能来帮助确保消息的安全。  
+本部分中的主题介绍 Windows Communication Foundation (WCF) 安全功能以及如何使用它们来帮助确保消息。  
   
  有关 Windows Server AppFabric 和安全性的详细信息，请参阅[Windows Server AppFabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>本节内容  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- 描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的安全功能。  
+ 介绍 WCF 中的安全功能。  
   
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- 描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全中使用的基本术语和概念。  
+ 介绍基本术语和概念在 WCF 安全中使用。  
   
  [常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- 描述可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 配置的方案和拓扑。  
+ 介绍方案和拓扑，你可以使用 WCF 配置。  
   
  [安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  概要介绍会影响安全的 WCF 行为，例如设置凭据。  
@@ -48,7 +36,7 @@ ms.lasthandoff: 04/30/2018
  面向安全的绑定视图，包括演示如何创建自定义安全绑定的主题。  
   
  [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- 描述如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全功能来确保消息的安全。  
+ 描述如何保护消息使用 WCF 安全功能。  
   
  [身份验证](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  演示常见的身份验证任务。  
@@ -60,13 +48,13 @@ ms.lasthandoff: 04/30/2018
  描述联合身份验证的基本知识以及如何创建与联合服务器进行通信的客户端。  
   
  [部分信任](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- 描述如何运行部分受信任的方案以及运行部分受信任的方案时的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 限制。  
+ 描述如何运行部分受信任时运行部分受信任的方案和 WCF 限制。  
   
  [审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  描述如何审核安全事件。  
   
  [安全指导和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- 创建安全的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的准则。  
+ 用于创建安全的 WCF 应用程序的准则。  
   
 ## <a name="reference"></a>参考  
  <xref:System.ServiceModel>  

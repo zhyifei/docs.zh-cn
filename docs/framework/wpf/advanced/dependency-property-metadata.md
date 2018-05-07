@@ -1,29 +1,17 @@
 ---
-title: "依赖项属性元数据"
-ms.custom: 
+title: 依赖项属性元数据
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - APIs [WPF], metadata
 - dependency properties [WPF], metadata
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b5c4ee554e8a0148c7d8d8044735f66778e7117
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0aa1d2962b0bccea7a0901877b29550319aaa3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-metadata"></a>依赖项属性元数据
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统包括一个元数据报告系统，该系统不局限于可以通过反射或常规[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特征报告的关于某个属性的内容。 依赖属性的元数据还可以由定义依赖属性的类来唯一地分配，可以在依赖属性添加到另一个类时进行更改，可以由所有从定义基类继承依赖属性的派生类来明确地重写。  
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="metadata-apis"></a>元数据 API  
  报告使用属性系统的元数据信息的大多数类型是<xref:System.Windows.PropertyMetadata>类。 在向属性系统注册依赖属性时，可以选择指定元数据实例，并且可以为以下附加类型再次指定这些实例：将自身作为所有者添加的类型，或者重写它们从基类依赖属性定义继承的元数据的类型。 (有关注册属性未指定元数据，默认情况下<xref:System.Windows.PropertyMetadata>创建使用该类的默认值。)为返回的已注册的元数据<xref:System.Windows.PropertyMetadata>当调用各种<xref:System.Windows.DependencyProperty.GetMetadata%2A>从依赖项属性获取元数据的重载<xref:System.Windows.DependencyObject>实例。  
   
- <xref:System.Windows.PropertyMetadata>类然后派生自，如的 WPF 框架级别的类的体系结构部门为提供更具体的元数据。 <xref:System.Windows.UIPropertyMetadata>添加动画报告功能，和<xref:System.Windows.FrameworkPropertyMetadata>提供上一节中提到的 WPF 框架级别属性。 依赖项属性都注册后，他们可以注册使用这些<xref:System.Windows.PropertyMetadata>派生类。 检查元数据时，基<xref:System.Windows.PropertyMetadata>可能将类型转换为派生的类，以便你可以检查更具体的属性。  
+ <xref:System.Windows.PropertyMetadata>类然后派生自，如的 WPF 框架级别的类的体系结构部门为提供更具体的元数据。 <xref:System.Windows.UIPropertyMetadata> 添加动画报告功能，和<xref:System.Windows.FrameworkPropertyMetadata>提供上一节中提到的 WPF 框架级别属性。 依赖项属性都注册后，他们可以注册使用这些<xref:System.Windows.PropertyMetadata>派生类。 检查元数据时，基<xref:System.Windows.PropertyMetadata>可能将类型转换为派生的类，以便你可以检查更具体的属性。  
   
 > [!NOTE]
 >  可以在中指定的属性特征<xref:System.Windows.FrameworkPropertyMetadata>有时称为"标志"为此文档中。 当你创建新的元数据实例用于在依赖项属性注册或元数据重写时，指定使用标志枚举这些值<xref:System.Windows.FrameworkPropertyMetadataOptions>，然后提供可能串连到枚举值<xref:System.Windows.FrameworkPropertyMetadata>构造函数。 但是，一旦构造的这些选项特征公开内<xref:System.Windows.FrameworkPropertyMetadata>为一系列的布尔属性，而不是构造的枚举值。 使用布尔属性，可以检查每个条件，而不必为了获得感兴趣的信息而向按标志枚举值应用掩码。 此构造函数使用串联<xref:System.Windows.FrameworkPropertyMetadataOptions>为了使构造函数签名的长度合理的而实际构造元数据显示的离散属性，以使查询更直观的元数据。  
@@ -75,13 +63,13 @@ ms.lasthandoff: 12/22/2017
   
  当你重写元数据时，系统会合并或替换不同的元数据特征。  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>合并。 如果你添加新<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>，该回调将存储在元数据。 如果不指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中重写时，值<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>提升为从元数据中指定的最近上级的引用。  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 合并。 如果你添加新<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>，该回调将存储在元数据。 如果不指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中重写时，值<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>提升为从元数据中指定的最近上级的引用。  
   
 -   实际的属性系统行为<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>是层次结构中的所有元数据所有者的实现是保留，而在于大多数派生的类的回调将首先调用添加到表中，使用属性系统的执行顺序。  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>将被替换。 如果不指定<xref:System.Windows.PropertyMetadata.DefaultValue%2A>中重写时，值<xref:System.Windows.PropertyMetadata.DefaultValue%2A>来自元数据中指定的最近上级。  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 将被替换。 如果不指定<xref:System.Windows.PropertyMetadata.DefaultValue%2A>中重写时，值<xref:System.Windows.PropertyMetadata.DefaultValue%2A>来自元数据中指定的最近上级。  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>实现将被替换。 如果你添加新<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>，该回调将存储在元数据。 如果不指定<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>中重写时，值<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>提升为从元数据中指定的最近上级的引用。  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 实现将被替换。 如果你添加新<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>，该回调将存储在元数据。 如果不指定<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>中重写时，值<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>提升为从元数据中指定的最近上级的引用。  
   
 -   属性的系统行为是仅<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>调用即时元数据中。 没有对其他引用<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>保留层次结构中的实现。  
   

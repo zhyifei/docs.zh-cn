@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 LINQ to SQL 数据源创建数据服务（WCF 数据服务）"
-ms.custom: 
+title: 如何：使用 LINQ to SQL 数据源创建数据服务（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 755df7c86d80214ded4e8c9534f88910a171c7a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5769ff5296d096df41b59104ad0581f0e816c648
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>如何：使用 LINQ to SQL 数据源创建数据服务（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 将实体数据作为数据服务公开。 反射提供程序允许你定义的数据模型，基于任何公开的成员的类，可返回<xref:System.Linq.IQueryable%601>实现。 为了能够更新数据源中的数据，这些类还必须实现 <xref:System.Data.Services.IUpdatable> 接口。 有关详细信息，请参阅[数据服务提供程序](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。 本主题演示如何创建通过使用反射提供程序来访问 Northwind 示例数据库的 LINQ to SQL 类，以及如何创建基于这些数据类的数据服务。  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  名称更改为**Northwind.dbml**。  
   
-4.  单击 **“添加”**。  
+4.  单击 **添加**。  
   
      此时，Northwind.dbml 文件将随即添加到项目中且对象关系设计器（O/R 设计器）将打开。  
   

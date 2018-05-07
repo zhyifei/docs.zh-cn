@@ -1,13 +1,6 @@
 ---
-title: "如何：添加和删除 Windows 窗体 TreeView 控件中的节点"
-ms.custom: 
+title: 如何：添加和删除 Windows 窗体 TreeView 控件中的节点
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b7632f0e89d21d3d82098b21cf17e34847ea3de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2491f4d4c40ea412ee42f8cd99c4c8682baa94a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>如何：添加和删除 Windows 窗体 TreeView 控件中的节点
 Windows 窗体<xref:System.Windows.Forms.TreeView>控件将存储中的顶级节点其<xref:System.Windows.Forms.TreeView.Nodes%2A>集合。 每个<xref:System.Windows.Forms.TreeNode>还具有自己<xref:System.Windows.Forms.TreeNode.Nodes%2A>用于存储及其子节点集合。 这两个集合属性属于类型<xref:System.Windows.Forms.TreeNodeCollection>，该属性提供标准的集合成员，使您可以添加、 删除和重新排列节点层次结构的单个级别节点。  

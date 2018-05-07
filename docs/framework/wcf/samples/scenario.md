@@ -1,27 +1,15 @@
 ---
 title: Scenario2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 816557e0-f676-4731-95c5-b02cbef3d8d7
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94ff7c693824e721b17c79b921f4380dba7d04e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f241bf6d4fb2d5f463b85cadf093ab308015c6a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scenario"></a>方案
-本节包含演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 方案的示例。  
+本节包含演示 Windows Communication Foundation (WCF) 的方案的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [数据绑定方案](../../../../docs/framework/wcf/samples/data-binding-scenarios.md)  
@@ -40,4 +28,4 @@ ms.lasthandoff: 12/22/2017
  演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构使调用方的标识信息从一个服务流到另一个服务。  
   
  [设计模式：基于列表的发布-订阅](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
- 演示作为 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 程序实现的基于列表的发布-订阅模式。
+ 演示基于列表的发布-订阅模式作为 Windows Communication Foundation (WCF) 程序实现。

@@ -1,29 +1,15 @@
 ---
 title: 队列和可靠会话
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dbbaa432f7f1e137fc6cbd47ecd8e24d9eab97c3
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a60f409a0f5c237c372fe3303d67ef979950eab4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-and-reliable-sessions"></a>队列和可靠会话
-队列和可靠会话是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用于实现可靠消息传递的功能。 本节中包含的主题讨论了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可靠消息传递功能。  
+队列和可靠会话是 Windows Communication Foundation (WCF) 功能用于实现可靠消息传递。 本节中所包含的主题讨论 WCF 可靠消息传递功能。  
   
  可靠消息传递是指可靠消息源（称为“源”）如何将消息可靠地传送到可靠的消息目标（称为“目标”）。  
   
@@ -33,7 +19,7 @@ ms.lasthandoff: 04/30/2018
   
 -   源和目标相互分离，这为源和目标提供了独立的故障与恢复，即使源或目标不可用，也可以可靠地传送和传输消息。  
   
- 可靠消息传递经常伴随高延迟成本。 “延迟”是指消息从源到达目标所需要的时间。 因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了以下类型的可靠消息传递：  
+ 可靠消息传递经常伴随高延迟成本。 “延迟”是指消息从源到达目标所需要的时间。 WCF，因此，提供了以下类型的可靠消息传递：  
   
 -   [可靠会话](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)，哪一种产品而无需的高延迟成本的可靠传输  
   
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/30/2018
  可靠会话提供低延迟可靠消息传送。 可靠会话通过任何代理或中介为 SOAP 消息提供的功能相当于 TCP 通过 IP 网桥为数据包提供的功能。 有关可靠会话的详细信息，请参阅[可靠会话](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)。  
   
 ### <a name="queues"></a>队列  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的队列以高延迟为代价提供可靠的消息传送和源与目标之间的分离。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 排队的通信是在消息队列（也称为 MSMQ）之上生成的。  
+ WCF 中的队列提供可靠传送消息和分离的源和目标以高延迟为代价之间。 WCF 排队通信建立在消息队列 (也称为 MSMQ) 之上。  
   
  MSMQ 作为可选项随 Windows 提供，并作为 NT 服务运行。 它捕获代表源的传输队列中要传输的消息，并将消息传递到目标队列。 目标队列代表目标接受消息，待以后目标请求消息时传递。 MSMQ 队列管理器实现可靠的消息传输协议，以使消息不会在传输过程中丢失。 协议可以是本机的，也可以是基于 SOAP 的协议，例如 Soap 可靠消息传递协议 (SRMP)。  
   

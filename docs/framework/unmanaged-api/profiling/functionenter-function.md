@@ -1,14 +1,6 @@
 ---
-title: "FunctionEnter 函数"
-ms.custom: 
+title: FunctionEnter 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - FunctionEnter
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0387d6d5eee1c30cb1137072e2c4600f12479e8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 77de59de8fcf3797237245ce42c7f0eaa96d3d24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="functionenter-function"></a>FunctionEnter 函数
 通知探查器控件传递给函数。  
@@ -65,7 +53,7 @@ void __stdcall FunctionEnter (
   
  此外，`FunctionEnter`函数不能调用进入托管代码或以任何方式导致托管的内存分配。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  

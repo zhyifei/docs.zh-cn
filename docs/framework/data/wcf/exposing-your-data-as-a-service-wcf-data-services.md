@@ -1,33 +1,21 @@
 ---
-title: "将数据公开为服务（WCF 数据服务）"
-ms.custom: 
+title: 将数据公开为服务（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, configuring
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55e0bc058b92540c9b11965854d38e8d124e205c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ab349125419a0589d68ccb821009f8227c942e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>将数据公开为服务（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]与 Visual Studio 使你能够更轻松地定义服务以公开你的数据作为集成[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 创建数据服务公开[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源涉及以下基本步骤：  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 与 Visual Studio 使你能够更轻松地定义服务以公开你的数据作为集成[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 创建数据服务公开[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源涉及以下基本步骤：  
   
-1.  **定义****数据模型**。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]以本机方式支持数据模型在基于[ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)。 有关详细信息，请参阅[如何： 创建数据服务使用 ADO.NET 实体框架数据源](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)。  
+1.  **定义****数据模型**。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 以本机方式支持数据模型在基于[ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)。 有关详细信息，请参阅[如何： 创建数据服务使用 ADO.NET 实体框架数据源](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)。  
   
      [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 还支持基于公共语言运行时 (CLR) 对象的数据模型，这些对象返回 <xref:System.Linq.IQueryable%601> 接口的实例。 通过此功能，您可以在 .NET Framework 中部署基于列表、数组和集合的数据服务。 若要启用针对这些数据结构的创建、更新和删除操作，还必须实现 <xref:System.Data.Services.IUpdatable> 接口。 有关详细信息，请参阅[如何： 创建数据服务使用反射提供程序](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)。  
   

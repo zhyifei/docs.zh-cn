@@ -1,24 +1,12 @@
 ---
-title: "创建使用 UDP 传输的多播应用程序"
-ms.custom: 
+title: 创建使用 UDP 传输的多播应用程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 57c30c8b6b381be931789f3f64cbd26943bb2b34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84b36029416a66ef03768aed7d0c789a41eed8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>创建使用 UDP 传输的多播应用程序
 多播应用程序同时向大量收件人发送小消息，而无需建立点到点连接。 对于此类应用程序而言，速度比可靠性更重要。 换句话说，更重要的是发送及时的数据，而不是确保确实收到任何特定的消息。 现在，WCF 支持使用 <xref:System.ServiceModel.UdpBinding> 编写多播应用程序。 此传输在服务需要将小消息同时发出到大量客户端的方案中非常有用。 股票行情自动收录器应用程序是这类服务的一个示例。  
@@ -102,7 +90,7 @@ while (true)
  此代码将生成股票信息，然后使用服务协定 IStockTicker 发送多播消息，以调用在正确的 UDP 地址上侦听的服务。  
   
 ### <a name="udp-and-reliable-messaging"></a>UDP 和可靠的消息传送  
- UDP 绑定不支持可靠的消息传送，原因在于 UDP 协议的轻型性质。 如果您需要确认某个远程终结点接收到了消息，请使用支持可靠消息传送的传输，如 HTTP 或 TCP。 有关可靠的消息传送的更多信息，请参见 http://go.microsoft.com/fwlink/?LinkId=231830  
+ UDP 绑定不支持可靠的消息传送，原因在于 UDP 协议的轻型性质。 如果您需要确认某个远程终结点接收到了消息，请使用支持可靠消息传送的传输，如 HTTP 或 TCP。 可靠消息传递，请参阅有关详细信息 http://go.microsoft.com/fwlink/?LinkId=231830  
   
 ### <a name="two-way-multicast-messaging"></a>双向多播消息传送  
  尽管多播消息通常是单向的，但 UdpBinding 的确支持请求/答复消息交换。 使用 UDP 传输发送的消息同时包含发件人地址和收件人地址。 使用发件人地址时必须小心，因为它可能在路由过程中被恶意更改。  可以使用下面的代码来检查地址：  

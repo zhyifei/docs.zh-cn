@@ -1,27 +1,15 @@
 ---
-title: "ClearType 注册表设置"
-ms.custom: 
+title: ClearType 注册表设置
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d915af4ee436bb6c661a7b412b0e36702191339a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cacdc47a35bfd197bcac29edc6f7c780d3b8578f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 注册表设置
 本主题提供的概述[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]所使用的注册表设置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>技术概述  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序呈现文本的显示设备使用[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能以提供增强的阅读体验。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 是一种由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 开发的软件技术，可提高现有 LCD（液晶显示器，如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器）上文本的可读性。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 在工作时访问 LCD 屏幕中每个像素的各个垂直色条元素。 有关详细信息[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，请参阅[ClearType 概述](../../../../docs/framework/wpf/advanced/cleartype-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序呈现文本的显示设备使用[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能以提供增强的阅读体验。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 是一种由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 开发的软件技术，可提高现有 LCD（液晶显示器，如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器）上文本的可读性。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 在工作时访问 LCD 屏幕中每个像素的各个垂直色条元素。 有关详细信息[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，请参阅[ClearType 概述](../../../../docs/framework/wpf/advanced/cleartype-overview.md)。  
   
  呈现所使用的文本[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]可以出现在不同的显示设备上查看时明显不同。 例如，监视器的少量实现蓝色、 绿色、 红色顺序中的颜色条带元素而不是更常见的红色、 绿色、 蓝色 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 顺序。  
   
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>注册表设置  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]指定四个注册表设置控制[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 指定四个注册表设置控制[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能：  
   
 |设置|描述|  
 |-------------|-----------------|  
@@ -71,7 +59,7 @@ ms.lasthandoff: 12/22/2017
  ![注册表编辑器中的 ClearType 设置](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序呈现文本中使用和不使用任一两种模式之一[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]。 情况下呈现文本时[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，它称为灰度呈现。  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序呈现文本中使用和不使用任一两种模式之一[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]。 情况下呈现文本时[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，它称为灰度呈现。  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>伽马级别  
@@ -92,7 +80,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="pixel-structure"></a>像素结构  
  像素结构描述构成显示设备的像素的类型。 像素结构定义为三种类型之一：  
   
-|类型|“值”|描述|  
+|类型|值|描述|  
 |----------|-----------|-----------------|  
 |平面|0|显示设备没有像素结构。 这意味着每种颜色的光源均匀分布在像素区域上，称为灰度呈现。 这是标准显示设备的工作方式。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 从不应用于呈现的文本。|  
 |RGB|1|显示设备的像素由三种色条按以下顺序构成：红色、绿色和蓝色。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 应用于呈现的文本。|  

@@ -1,13 +1,6 @@
 ---
-title: "属性更改事件"
-ms.custom: 
+title: 属性更改事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], change events
 - property value changes [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46a11b072731daf420e35bc9c9cfd7d4fced1fe5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac2a44eb92e384851bbe6ac860fd9b46d3377a06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-change-events"></a>属性更改事件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义几个为响应属性值的更改而引发的事件。 该属性通常是依赖项属性。 事件本身有时是路由事件，有时是标准 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 事件。 事件的定义因具体情况而异，因为有些属性更改更适于通过元素树路由，而其他属性更改则通常只与属性发生更改的对象有关。  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  如果您的属性是自定义的依赖项属性，或如果你正在使用派生类具有在其中定义实例化代码，则多更好地跟踪的机制中内置的属性更改[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]属性系统：属性系统回调<xref:System.Windows.CoerceValueCallback>和<xref:System.Windows.PropertyChangedCallback>。 若要深入了解如何使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统进行验证和强制转换，请参阅[依赖属性回调和验证](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)和[自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。  
   
 ### <a name="dependencypropertychanged-events"></a>DependencyPropertyChanged 事件  
- 这些类型包含属性已更改的事件方案的一部分的另一个对是<xref:System.Windows.DependencyPropertyChangedEventArgs>和<xref:System.Windows.DependencyPropertyChangedEventHandler>。 这些属性更改的事件不会路由；它们是标准 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件。 <xref:System.Windows.DependencyPropertyChangedEventArgs>为报告类型，因为它不是派生自的异常事件数据<xref:System.EventArgs>;<xref:System.Windows.DependencyPropertyChangedEventArgs>是一种结构，不是类。  
+ 这些类型包含属性已更改的事件方案的一部分的另一个对是<xref:System.Windows.DependencyPropertyChangedEventArgs>和<xref:System.Windows.DependencyPropertyChangedEventHandler>。 这些属性更改的事件不会路由；它们是标准 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件。 <xref:System.Windows.DependencyPropertyChangedEventArgs> 为报告类型，因为它不是派生自的异常事件数据<xref:System.EventArgs>;<xref:System.Windows.DependencyPropertyChangedEventArgs>是一种结构，不是类。  
   
  使用的事件<xref:System.Windows.DependencyPropertyChangedEventArgs>和<xref:System.Windows.DependencyPropertyChangedEventHandler>相比略有更为常见`RoutedPropertyChanged`事件。 使用这些类型的事件的一个示例是<xref:System.Windows.UIElement.IsMouseCapturedChanged>。  
   

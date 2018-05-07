@@ -1,24 +1,12 @@
 ---
-title: "查询表达式示例 (LINQ to DataSet)"
-ms.custom: 
+title: 查询表达式示例 (LINQ to DataSet)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 01b31debeb71180f4b1c86e6c9e0dfb1251bf807
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7e095d946f3284bae72290c65e7d35aedd4c386b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>查询表达式示例 (LINQ to DataSet)
 本节提供使用标准查询运算符的查询表达式语法的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 编程示例。 <xref:System.Data.DataSet>这些示例中使用填充使用`FillDataSet`方法，指定在[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 有关详细信息，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  

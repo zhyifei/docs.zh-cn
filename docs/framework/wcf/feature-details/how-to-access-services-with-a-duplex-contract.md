@@ -1,38 +1,24 @@
 ---
 title: 如何：使用双工协定访问服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c80980ff5a5b1011c021bcaf0688747178ec5b9b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c0022e6ce3a63c1f497eeee82ca959cec1046cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>如何：使用双工协定访问服务
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的一个功能是可以创建使用双工消息传递模式的服务。 此模式允许服务通过回调与客户端进行通信。 本主题演示在实现回调接口的客户端类中创建 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的步骤。  
+一个功能的 Windows Communication Foundation (WCF) 是创建使用双工消息模式的服务的功能。 此模式允许服务通过回调与客户端进行通信。 本主题说明的客户端类中实现回调接口创建 WCF 客户端的步骤。  
   
  双向绑定向服务公开客户端的 IP 地址。 客户端应使用安全来确保仅连接到自己信任的服务。  
   
- 有关创建基本的教程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务和客户端，请参阅[入门教程](../../../../docs/framework/wcf/getting-started-tutorial.md)。  
+ 创建基本的 WCF 服务和客户端的教程，请参阅[入门教程](../../../../docs/framework/wcf/getting-started-tutorial.md)。  
   
 ### <a name="to-access-a-duplex-service"></a>访问双工服务  
   
@@ -80,7 +66,7 @@ ms.lasthandoff: 04/30/2018
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())  
     ```  
   
-6.  使用需要 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对象的构造函数创建 <xref:System.ServiceModel.InstanceContext> 客户端的一个实例。 该构造函数的第二个参数是配置文件中找到的终结点的名称。  
+6.  创建 WCF 客户端使用需要的构造函数的实例<xref:System.ServiceModel.InstanceContext>对象。 该构造函数的第二个参数是配置文件中找到的终结点的名称。  
   
     ```csharp  
     CalculatorDuplexClient wcfClient =   
@@ -91,7 +77,7 @@ ms.lasthandoff: 04/30/2018
     Dim wcfClient As New CalculatorDuplexClient(site, "default")  
     ```  
   
-7.  根据需要调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的方法。  
+7.  调用 WCF 客户端所需的方法。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示如何创建一个访问双工协定的客户端类。  

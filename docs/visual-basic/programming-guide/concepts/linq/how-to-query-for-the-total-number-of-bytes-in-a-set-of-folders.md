@@ -1,22 +1,12 @@
 ---
-title: "如何： 查询一组文件夹 (LINQ) (Visual Basic 中) 中的字节总数"
-ms.custom: 
+title: 如何： 查询一组文件夹 (LINQ) (Visual Basic 中) 中的字节总数
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b200581f4876400727c63e86e3ccf4a44c67914b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a6babaf019cdac2298aee6eff55581bf35b2e47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>如何： 查询一组文件夹 (LINQ) (Visual Basic 中) 中的字节总数
 此示例演示如何检索由指定文件夹及其所有子文件夹中的所有文件使用的字节总数。  
@@ -83,6 +73,6 @@ End Module
 ## <a name="compiling-the-code"></a>编译代码  
  创建面向.NET Framework 版本 3.5 或更高版本使用对 System.Core.dll 的引用的项目和`Imports`System.Linq 命名空间的语句。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

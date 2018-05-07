@@ -1,13 +1,6 @@
 ---
-title: "焦点概述"
-ms.custom: 
+title: 焦点概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d35b65f88452085e601569b9dcfc62a541a1655f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 620839a0060469604d0affa6637c3cafac0f62c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="focus-overview"></a>焦点概述
 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，有两个与焦点有关的主要概念：键盘焦点和逻辑焦点。  键盘焦点指接收键盘输入的元素，而逻辑焦点指焦点范围中具有焦点的元素。  本概述详细介绍了这些概念。  对于创建具有多个可获取焦点的区域的复杂应用程序来说，理解这些概念之间的区别非常重要。  
@@ -69,11 +57,11 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
  [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
   
- <xref:System.Windows.Input.FocusManager.GetFocusScope%2A>返回指定元素的焦点作用域。  
+ <xref:System.Windows.Input.FocusManager.GetFocusScope%2A> 返回指定元素的焦点作用域。  
   
  中的类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]这是默认情况下的焦点作用域是<xref:System.Windows.Window>， <xref:System.Windows.Controls.MenuItem>， <xref:System.Windows.Controls.ToolBar>，和<xref:System.Windows.Controls.ContextMenu>。  
   
- <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>为指定的焦点作用域中获取的已设定焦点的元素。  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>指定的焦点作用域中设置的已设定焦点的元素。  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>通常用于设置初始具有焦点的元素。  
+ <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A> 为指定的焦点作用域中获取的已设定焦点的元素。  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> 指定的焦点作用域中设置的已设定焦点的元素。  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> 通常用于设置初始具有焦点的元素。  
   
  以下示例在焦点范围上设置焦点元素并获取焦点范围的焦点元素。  
   
@@ -97,20 +85,20 @@ ms.lasthandoff: 12/22/2017
 ## <a name="navigating-focus-programmatically"></a>以编程方式导航焦点  
  其他[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]用于焦点是<xref:System.Windows.UIElement.MoveFocus%2A>和<xref:System.Windows.UIElement.PredictFocus%2A>。  
   
- <xref:System.Windows.FrameworkElement.MoveFocus%2A>将焦点移到应用程序中的下一个元素。  A<xref:System.Windows.Input.TraversalRequest>用于指定的方向。   <xref:System.Windows.Input.FocusNavigationDirection>传递给<xref:System.Windows.UIElement.MoveFocus%2A>指定不同的方向焦点可以移动，例如<xref:System.Windows.Input.FocusNavigationDirection.First>， <xref:System.Windows.Input.FocusNavigationDirection.Last>，<xref:System.Windows.Input.FocusNavigationDirection.Up>和<xref:System.Windows.Input.FocusNavigationDirection.Down>。  
+ <xref:System.Windows.FrameworkElement.MoveFocus%2A> 将焦点移到应用程序中的下一个元素。  A<xref:System.Windows.Input.TraversalRequest>用于指定的方向。   <xref:System.Windows.Input.FocusNavigationDirection>传递给<xref:System.Windows.UIElement.MoveFocus%2A>指定不同的方向焦点可以移动，例如<xref:System.Windows.Input.FocusNavigationDirection.First>， <xref:System.Windows.Input.FocusNavigationDirection.Last>，<xref:System.Windows.Input.FocusNavigationDirection.Up>和<xref:System.Windows.Input.FocusNavigationDirection.Down>。  
   
  下面的示例使用<xref:System.Windows.FrameworkElement.MoveFocus%2A>更改具有焦点的元素。  
   
  [!code-csharp[focussample#FocusSampleMoveFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
  [!code-vb[focussample#FocusSampleMoveFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
   
- <xref:System.Windows.FrameworkElement.PredictFocus%2A>返回要更改焦点时，将接收焦点的对象。  目前，仅<xref:System.Windows.Input.FocusNavigationDirection.Up>， <xref:System.Windows.Input.FocusNavigationDirection.Down>， <xref:System.Windows.Input.FocusNavigationDirection.Left>，和<xref:System.Windows.Input.FocusNavigationDirection.Right>支持<xref:System.Windows.FrameworkElement.PredictFocus%2A>。  
+ <xref:System.Windows.FrameworkElement.PredictFocus%2A> 返回要更改焦点时，将接收焦点的对象。  目前，仅<xref:System.Windows.Input.FocusNavigationDirection.Up>， <xref:System.Windows.Input.FocusNavigationDirection.Down>， <xref:System.Windows.Input.FocusNavigationDirection.Left>，和<xref:System.Windows.Input.FocusNavigationDirection.Right>支持<xref:System.Windows.FrameworkElement.PredictFocus%2A>。  
   
 <a name="Focus_Events"></a>   
 ## <a name="focus-events"></a>焦点事件  
  与键盘焦点相关的事件是<xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>，<xref:System.Windows.Input.Keyboard.GotKeyboardFocus>和<xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>， <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>。  事件指附加事件上<xref:System.Windows.Input.Keyboard>类，但更易于访问作为基元素类上的等效路由事件。  有关事件的详细信息，请参阅[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
   
- <xref:System.Windows.Input.Keyboard.GotKeyboardFocus>当元素获取键盘焦点时引发。  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>当在元素丢失键盘焦点时引发。  如果<xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>事件或<xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent>处理事件和<xref:System.Windows.RoutedEventArgs.Handled%2A>设置为`true`，然后焦点不会更改。  
+ <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> 当元素获取键盘焦点时引发。  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus> 当在元素丢失键盘焦点时引发。  如果<xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>事件或<xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent>处理事件和<xref:System.Windows.RoutedEventArgs.Handled%2A>设置为`true`，然后焦点不会更改。  
   
  下面的示例将附加<xref:System.Windows.UIElement.GotKeyboardFocus>和<xref:System.Windows.UIElement.LostKeyboardFocus>到事件处理程序<xref:System.Windows.Controls.TextBox>。  
   
@@ -126,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
  [!code-vb[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
   
- 与逻辑焦点相关的事件是<xref:System.Windows.UIElement.GotFocus>和<xref:System.Windows.UIElement.LostFocus>。  在中定义这些事件<xref:System.Windows.Input.FocusManager>为附加事件，但<xref:System.Windows.Input.FocusManager>未公开 CLR 事件包装器。  <xref:System.Windows.UIElement>和<xref:System.Windows.ContentElement>更方便地公开这些事件。  
+ 与逻辑焦点相关的事件是<xref:System.Windows.UIElement.GotFocus>和<xref:System.Windows.UIElement.LostFocus>。  在中定义这些事件<xref:System.Windows.Input.FocusManager>为附加事件，但<xref:System.Windows.Input.FocusManager>未公开 CLR 事件包装器。  <xref:System.Windows.UIElement> 和<xref:System.Windows.ContentElement>更方便地公开这些事件。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Input.FocusManager>  

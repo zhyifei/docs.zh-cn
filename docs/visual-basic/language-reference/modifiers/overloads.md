@@ -1,10 +1,6 @@
 ---
 title: Overloads (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Overloads
 - Overloads
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a23a6b91681cbd814ac96464e1c340be99a0ecf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b68c13d192845fc4bedf1b34a40165ccc1a5ff75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 指定某一属性或过程重新声明一个或多个具有相同名称的现有属性或过程。  
@@ -65,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **可选修饰符。** 当在同一个类中定义多个重载属性或过程时，不必使用 `Overloads` 修饰符。 然而，如果在某个声明中使用 `Overloads`，则必须在所有的声明中使用它。  
   
--   **隐藏和重载。** `Overloads`此外使用卷影现有成员，或重载的成员，基类中的设置。 以这种方式使用 `Overloads` 时，应使用与基类成员相同的名称和参数列表来声明属性或方法，并且不提供 `Shadows` 关键字。  
+-   **隐藏和重载。** `Overloads` 此外使用卷影现有成员，或重载的成员，基类中的设置。 以这种方式使用 `Overloads` 时，应使用与基类成员相同的名称和参数列表来声明属性或方法，并且不提供 `Shadows` 关键字。  
   
  如果使用 `Overrides`，编译器将隐式添加 `Overloads`，以便库 API 更轻松地使用 C#。  
   
@@ -79,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
  [过程重载](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
  [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  

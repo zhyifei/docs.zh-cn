@@ -1,24 +1,12 @@
 ---
-title: "Internet 信息服务承载说明"
-ms.custom: 
+title: Internet 信息服务承载说明
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de7dc897aa435d62c04c2e6a3ca82adf3a637a2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d315fa482e423461eab171a19746b6ea792aac5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet 信息服务承载说明
 若要运行由 Internet 信息服务 (IIS) 承载的示例，必须确保 IIS 已正确安装且正在运行。  
@@ -31,7 +19,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  选择**应用程序服务器**从**角色**列表，，然后单击**下一步**两次以显示**选择角色服务**对话框应用程序服务器角色。  
   
-4.  选择**Web 服务器 (IIS)**复选框。 如果系统提示你安装其他角色服务和功能，请单击**添加必需的功能**。 单击**下一步**两次以显示**选择角色服务**为 Web 服务器 (IIS) 角色的对话框。  
+4.  选择**Web 服务器 (IIS)** 复选框。 如果系统提示你安装其他角色服务和功能，请单击**添加必需的功能**。 单击**下一步**两次以显示**选择角色服务**为 Web 服务器 (IIS) 角色的对话框。  
   
 5.  展开**管理工具**，然后展开**IIS 6 管理兼容性**。 选择**IIS 6 脚本工具**。 如果系统提示你安装其他角色服务和功能，请单击**添加必需的角色服务**。 单击 **“下一步”**。  
   
@@ -89,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  选择**应用程序服务器**从**角色**列表，，然后单击**下一步**两次以显示**选择角色服务**对话框应用程序服务器角色。  
   
-4.  选择**Web 服务器 (IIS)**复选框。 如果系统提示你安装其他角色服务和功能，请单击**添加必需的功能**。 单击**下一步**两次以显示**选择角色服务**为 Web 服务器 (IIS) 角色的对话框。  
+4.  选择**Web 服务器 (IIS)** 复选框。 如果系统提示你安装其他角色服务和功能，请单击**添加必需的功能**。 单击**下一步**两次以显示**选择角色服务**为 Web 服务器 (IIS) 角色的对话框。  
   
 5.  展开**管理工具**，然后展开**IIS 6 管理兼容性**。 选择**IIS 6 脚本工具**。 如果系统提示你安装其他角色服务和功能，请单击**添加必需的角色服务**。 单击 **“下一步”**。  
   
@@ -155,7 +143,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  在**添加或删除程序**对话框中，单击**添加/删除 Windows 组件**。  
   
-3.  在**Windows 组件向导**，选择**Internet 信息服务 (IIS)**复选框，并依次**下一步**。  
+3.  在**Windows 组件向导**，选择**Internet 信息服务 (IIS)** 复选框，并依次**下一步**。  
   
 4.  如果**所需的文件**显示对话框中，插入操作系统的安装光盘，浏览至 i386 文件夹，然后单击**确定**。  
   

@@ -1,27 +1,17 @@
 ---
-title: "安全透明的代码"
-ms.custom: 
+title: 安全透明的代码
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97db1cef60af267087e86f86ecd0a77021604642
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a491a87c896c76fa62f1702d1ef0e99fc404607
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-transparent-code"></a>安全透明的代码
 <a name="top"></a>
@@ -52,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  .NET Framework 2.0 版中引入了透明度，用于简化安全模型，使其更易于编写和部署安全库和应用程序。 Microsoft Silverlight 中也使用了透明代码，用于简化部分信任的应用程序的开发。  
   
 > [!NOTE]
->  当开发部分信任的应用程序时，必须知道目标主机的权限要求。 你可以开发使用某些主机不允许的资源的应用程序。 此应用程序编译时不会出错，但将无法加载到托管环境中。 如果已使用 Visual Studio 开发了应用程序，就可以在部分信任的环境中启用调试或在开发环境中启用受限的权限集。 有关详细信息，请参阅[如何： 调试 ClickOnce 应用程序具有受限权限](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)。 为 ClickOnce 应用程序提供的计算权限功能也可用于部分信任的任何应用程序。  
+>  当开发部分信任的应用程序时，必须知道目标主机的权限要求。 你可以开发使用某些主机不允许的资源的应用程序。 此应用程序编译时不会出错，但将无法加载到托管环境中。 如果已使用 Visual Studio 开发了应用程序，就可以在部分信任的环境中启用调试或在开发环境中启用受限的权限集。 有关更多信息，请参见 [如何：使用受限权限对 ClickOnce 应用程序进行调试](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)。 为 ClickOnce 应用程序提供的计算权限功能也可用于部分信任的任何应用程序。  
   
  [返回页首](#top)  
   

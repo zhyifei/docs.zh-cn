@@ -1,30 +1,18 @@
 ---
-title: "如何：配置自定义 WS-Metadata Exchange 绑定"
-ms.custom: 
+title: 如何：配置自定义 WS-Metadata Exchange 绑定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7bfa4ab0696083c78578517748cfdc2e79e001d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0596e91204a2a9dbaed2fdbe85387ec3785fd3db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>如何：配置自定义 WS-Metadata Exchange 绑定
-本主题将说明如何配置自定义 WS-Metadata 交换绑定。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供四种系统定义的元数据绑定，不过，您可以使用所需的任何绑定来发布元数据。 本主题将演示如何使用 `wsHttpBinding` 发布元数据。 此绑定提供了以安全方式公开元数据的选择。 本文中的代码基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
+本主题将说明如何配置自定义 WS-Metadata 交换绑定。 Windows Communication Foundation (WCF) 包含四种系统定义的元数据绑定，但你可以将发布元数据中使用所需的任何绑定。 本主题将演示如何使用 `wsHttpBinding` 发布元数据。 此绑定提供了以安全方式公开元数据的选择。 本文中的代码基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
 ### <a name="using-a-configuration-file"></a>使用配置文件  
   

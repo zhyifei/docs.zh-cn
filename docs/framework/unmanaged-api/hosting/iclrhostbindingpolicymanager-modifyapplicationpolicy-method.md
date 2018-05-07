@@ -1,14 +1,6 @@
 ---
-title: "ICLRHostBindingPolicyManager::ModifyApplicationPolicy 方法"
-ms.custom: 
+title: ICLRHostBindingPolicyManager::ModifyApplicationPolicy 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostBindingPolicyManager.ModifyApplicationPolicy
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 018dc40895a79788a9eef20082d764db0b2265c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a221b286ada97c3c03387556cb30ee6ddd2c453
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy 方法
 修改指定的程序集绑定策略，并创建新版本的策略。  
@@ -79,8 +67,8 @@ HRESULT  ModifyApplicationPolicy (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功修改策略。|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity`或`pwzTargetAssemblyIdentity`是 null 引用。|  
-|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy`对于太小。|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity` 或`pwzTargetAssemblyIdentity`是 null 引用。|  
+|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` 对于太小。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -90,14 +78,14 @@ HRESULT  ModifyApplicationPolicy (
 ## <a name="remarks"></a>备注  
  `ModifyApplicationPolicy`两次调用方法。 第一次调用应提供的 null 值`pbNewApplicationPolicy`参数。 此调用将返回包含必需的值的`pcbNewAppPolicySize`。 第二个调用应提供此值`pcbNewAppPolicySize`，并指向该大小的缓冲区`pbNewApplicationPolicy`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRHostBindingPolicyManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

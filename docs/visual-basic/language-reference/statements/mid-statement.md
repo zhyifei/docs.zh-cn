@@ -1,11 +1,6 @@
 ---
-title: "Mid 语句"
+title: Mid 语句
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.MidB
 - vb.Mid
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 61d812ef91acc65728b04efc9aa99e3975e71d0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 90b805df902dcdfebe85421583dd54e9af04bec9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mid-statement"></a>Mid 语句
 替换指定的数目的中的字符`String`变量与另一个字符串中的字符。  
@@ -39,22 +31,22 @@ Mid( _
   
 ## <a name="parts"></a>部件  
  `Target`  
- 必需。 名称`String`变量以修改。  
+ 必须的。 名称`String`变量以修改。  
   
  `Start`  
- 必需。 `Integer`表达式。 字符中的位置`Target`替换文本的起始位置。 `Start`使用基于 1 的索引。  
+ 必须的。 `Integer` 表达式。 字符中的位置`Target`替换文本的起始位置。 `Start` 使用基于 1 的索引。  
   
  `Length`  
- 可选。 `Integer`表达式。 要替换的字符数。 如果省略，所有的`String`使用。  
+ 可选。 `Integer` 表达式。 要替换的字符数。 如果省略，所有的`String`使用。  
   
  `StringExpression`  
- 必需。 `String`替换的一部分的表达式`Target`。  
+ 必须的。 `String` 替换的一部分的表达式`Target`。  
   
 ## <a name="exceptions"></a>异常  
   
 |异常类型|条件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start`< = 0 或`Length`< 0。|  
+|<xref:System.ArgumentException>|`Start` < = 0 或`Length`< 0。|  
   
 ## <a name="remarks"></a>备注  
  替换的字符数是始终小于或等于的中的字符数`Target`。  
@@ -72,11 +64,11 @@ Mid( _
 ## <a name="requirements"></a>要求  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **模块：**`Strings`  
+ **模块：** `Strings`  
   
- **程序集：**[!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **程序集：** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
  [字符串](../../../visual-basic/programming-guide/language-features/strings/index.md)  
  [Visual Basic 中的字符串简介](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

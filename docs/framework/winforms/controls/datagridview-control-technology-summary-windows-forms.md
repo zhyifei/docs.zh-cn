@@ -1,27 +1,15 @@
 ---
-title: "DataGridView 控件技术摘要（Windows 窗体）"
-ms.custom: 
+title: DataGridView 控件技术摘要（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e074229e4fe344633d277b77b6f7db881c154d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cafd832e7105540ae684dd1feb4b33ab74f72836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView 控件技术摘要（Windows 窗体）
 本主题概述了 `DataGridView` 控件及支持其使用的类的相关信息。  
@@ -63,8 +51,8 @@ ms.lasthandoff: 12/22/2017
 |技术范围|类/接口/配置元素|  
 |---------------------|-------------------------------------------------|  
 |数据绑定|<xref:System.Windows.Forms.BindingSource>|  
-|数据表示|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell>和派生的类<br /><br /> <xref:System.Windows.Forms.DataGridViewRow>和派生的类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn>和派生的类<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|<xref:System.Windows.Forms.DataGridView>扩展性|<xref:System.Windows.Forms.DataGridViewCell>和派生的类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn>和派生的类<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|数据表示|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> 和派生的类<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> 和派生的类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 和派生的类<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
+|<xref:System.Windows.Forms.DataGridView> 扩展性|<xref:System.Windows.Forms.DataGridViewCell> 和派生的类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 和派生的类<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
 ## <a name="whats-new"></a>新增功能  
  <xref:System.Windows.Forms.DataGridView>控件旨在作为有关显示 Windows 窗体的表格数据的完整解决方案。 你应考虑使用<xref:System.Windows.Forms.DataGridView>控件之前其他解决方案中，如<xref:System.Windows.Forms.DataGrid>、 创作新的应用程序时。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  

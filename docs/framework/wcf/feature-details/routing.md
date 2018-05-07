@@ -1,28 +1,16 @@
 ---
-title: "路由"
-ms.custom: 
+title: 路由
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - routing [WCF]
 - WCF [WCF], routing
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-caps.latest.revision: "7"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 638c768e4abd199aa52bc85582305ffaf405fe87
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 108e65f733100cd07e23e6436285463e9138dbcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing"></a>路由
 本节中的主题涵盖路由服务。 路由服务是可配置的普通 SOAP 中介，使用该服务可以配置基于内容的路由、设置协议桥接、处理通信错误以及在运行时动态更新路由逻辑。  

@@ -1,33 +1,21 @@
 ---
 title: ICorProfilerCallback7::ModuleInMemorySymbolsUpdated 方法
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 api_name:
-- ICorProfiler7.ModuleInMemorySymbolsUpdated
+- ICorProfilerCallback7.ModuleInMemorySymbolsUpdated
 api_location:
 - mscorwks.dll
 - corprof.idl
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 898adf043e425c00d6e311e2f67c53ed65cacb33
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 9aa690378a32ffee2def672f02dc8b5582647a5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7::ModuleInMemorySymbolsUpdated 方法
 [仅在 .NET Framework 4.6.1 及更高版本中受支持]  
@@ -43,7 +31,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
 ```  
   
 #### <a name="parameters"></a>参数  
- `moduleId`  
+ [in] `moduleId`  
  已更新其符号流的内存中模块的标识符。  
   
 ## <a name="remarks"></a>备注  
@@ -63,7 +51,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ModuleLoadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)  
  [SetEventMask2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)  
  [ICorProfilerCallback7 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)

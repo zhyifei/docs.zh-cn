@@ -1,12 +1,6 @@
 ---
 title: / 运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb./
 helpviewer_keywords:
@@ -22,14 +16,11 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f221e863725b9aeb0b3fa3219b3a881541e2be0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17eb3eddfae3cf7c818514a2fee20f646876a6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>/ 运算符 (Visual Basic)
 使两个数字相除，返回浮点结果。  
@@ -42,10 +33,10 @@ expression1 / expression2
   
 ## <a name="parts"></a>部件  
  `expression1`  
- 必需。 任何数值表达式。  
+ 必须的。 任何数值表达式。  
   
  `expression2`  
- 必需。 任何数值表达式。  
+ 必须的。 任何数值表达式。  
   
 ## <a name="supported-types"></a>支持的类型  
  所有数值类型，包括未签名和浮点类型和`Decimal`。  
@@ -75,8 +66,8 @@ expression1 / expression2
 |操作数数据类型|行为如果`expression2`为零|  
 |------------------------|---------------------------------------|  
 |浮点 (`Single`或`Double`)|返回无穷大 (<xref:System.Double.PositiveInfinity>或<xref:System.Double.NegativeInfinity>)，或<xref:System.Double.NaN>（而不是数字） 如果`expression1`也为零|  
-|`Decimal`|引发<xref:System.DivideByZeroException>|  
-|整数 （有符号或无符号）|尝试转换回整数类型会引发<xref:System.OverflowException>因为整数类型不能接受<xref:System.Double.PositiveInfinity>， <xref:System.Double.NegativeInfinity>，或<xref:System.Double.NaN>|  
+|`Decimal`|引发 <xref:System.DivideByZeroException>|  
+|整数 （有符号或无符号）|尝试转换回整数类型会引发<xref:System.OverflowException>因为整数类型不能接受<xref:System.Double.PositiveInfinity>， <xref:System.Double.NegativeInfinity>，或 <xref:System.Double.NaN>|  
   
 > [!NOTE]
 >  `/`运算符可以被*重载*，这意味着，一个类或结构可以重新定义其行为时，操作数的类或结构的类型。 如果你的代码使用此运算符对这样的类或结构，请确保你了解其重新定义的行为。 有关详细信息，请参阅[运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
@@ -88,7 +79,7 @@ expression1 / expression2
   
  在前面的示例表达式返回 2.5 和 3.333333 的值。 请注意结果始终是浮点 (`Double`)，即使这两个操作数都是整数常量。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [/ = 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
  [\ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
  [运算符结果的数据类型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)  

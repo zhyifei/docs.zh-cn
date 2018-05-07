@@ -1,11 +1,6 @@
 ---
 title: -warnaserror (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - warnaserror compiler option [Visual Basic]
 - /warnaserror compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ae8ed68045529e626f2788f854d8e6a6933e7e2
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 6c04bff4070b0f1c288c8853e5045fbf670d8e9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 使编译器将视为错误的警告的第一个匹配项。  
@@ -67,7 +62,7 @@ vbc -warnaserror in.vb
 vbc -warnaserror:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [在 Visual Basic 中配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)

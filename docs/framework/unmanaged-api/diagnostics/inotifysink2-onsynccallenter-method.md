@@ -1,14 +1,6 @@
 ---
-title: "INotifySink2::OnSyncCallEnter 方法"
-ms.custom: 
+title: INotifySink2::OnSyncCallEnter 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - INotifySink2.OnSyncCallEnter
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e33265be-c25d-4145-ad02-c3e89d6f26c1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 102a4a24b82c87bed00895dc723b7fca02c20bcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c2c4f15b3fb1bc5b408382589a1c8213ffd246e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter 方法
 输入调用时调用。  
@@ -62,7 +50,7 @@ HRESULT OnSyncCallEnter
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则为 S_OK。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,34 +1,20 @@
 ---
-title: "使用行为配置和扩展运行时"
-ms.custom: 
+title: 使用行为配置和扩展运行时
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2ea157ea1ac73a287ba39c1468e7e9a5781d40a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>使用行为配置和扩展运行时
-通过行为可以修改默认行为和添加自定义扩展以检查和验证服务配置或修改 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务应用程序中的运行时行为。 本主题说明行为接口、如何实现这些接口以及如何以编程方式将它们添加到服务说明（在服务应用程序中）或终结点（在客户端应用程序中）或配置文件中。 有关使用系统提供的行为的详细信息，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)和[指定客户端运行时行为](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  
+行为可用于修改默认行为和添加自定义扩展的检查和验证服务配置或修改 Windows Communication Foundation (WCF) 客户端和服务应用程序中的运行时行为。 本主题说明行为接口、如何实现这些接口以及如何以编程方式将它们添加到服务说明（在服务应用程序中）或终结点（在客户端应用程序中）或配置文件中。 有关使用系统提供的行为的详细信息，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)和[指定客户端运行时行为](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  
   
 ## <a name="behaviors"></a>行为  
- 行为类型将添加到服务或服务终结点说明对象（分别在服务或客户端上），之后，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以使用这些对象创建执行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的运行时。 在运行时构造过程中调用这些行为时，这些行为可以访问运行时属性和方法以修改由协定、绑定和地址构造的运行时。  
+ 行为类型将添加到服务或服务终结点说明对象 (客户端，在服务上分别) 这些对象用于通过 Windows Communication Foundation (WCF) 中创建运行时执行之前[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务或[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端。 在运行时构造过程中调用这些行为时，这些行为可以访问运行时属性和方法以修改由协定、绑定和地址构造的运行时。  
   
 ### <a name="behavior-methods"></a>行为方法  
  所有行为都具有一个 `AddBindingParameters` 方法、一个 `ApplyDispatchBehavior` 方法、一个 `Validate` 方法和一个 `ApplyClientBehavior` 方法，但有一个例外：因为 <xref:System.ServiceModel.Description.IServiceBehavior> 无法在客户端中执行，因此该行为不实现 `ApplyClientBehavior`。  

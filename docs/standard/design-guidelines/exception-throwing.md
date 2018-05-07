@@ -1,30 +1,19 @@
 ---
 title: 异常引发
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - exceptions, throwing
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 47c16ac94054fff193b1f5976fe7f04f10a39ecd
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 7a493e6591d90ce05a652e48807f63fa90764a91
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-throwing"></a>异常引发
 在本部分中所述的异常引发准则需要正确定义的执行失败的含义。 执行失败每当某一成员不能执行其设计目的 （什么成员名称所暗示的）。 例如，如果`OpenFile`方法无法返回到调用方的一个打开的文件句柄，它将被认为执行失败。  

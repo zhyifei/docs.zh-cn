@@ -1,10 +1,6 @@
 ---
-title: "默认键盘和鼠标处理 Windows 窗体 DataGridView 控件中"
+title: 默认键盘和鼠标处理 Windows 窗体 DataGridView 控件中
 ms.date: 02/13/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], mouse handling
 - DataGridView control [Windows Forms], navigation keys
@@ -14,16 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29e8afaefd35951288a4d8f5e5df2e3b5fbc4356
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: b0ed468fe7d38fbeda90d5347338bce14059b730
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>默认键盘和鼠标处理 Windows 窗体 DataGridView 控件中
 
@@ -53,7 +44,7 @@ ms.lasthandoff: 02/22/2018
 |按 CTRL + 箭头|将焦点移到的最远的单元格箭头的方向。|  
 |CTRL + HOME|将焦点移到控件中的第一个单元。|  
 |CTRL + END|将焦点移到控件中的最后一个单元。|  
-|CTRL+PAGE DOWN/UP|向下翻页或向上翻页相同。|  
+|CTRL + PAGE 下移/上|向下翻页或向上翻页相同。|  
 |F2|将当前单元格置于单元格编辑模式，如果<xref:System.Windows.Forms.DataGridView.EditMode%2A>属性值是<xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2>或<xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>。|
 |F3|如果对当前的列进行排序<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>属性值是<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>。 它等同于单击当前的列标题。 自.NET Framework 4.7.2 之后可用。 若要启用此功能，应用程序必须面向.NET Framework 4.7.2 或更高版本或使用 AppContext 交换机的可访问性改进明确选择使用。|  
 |F4|如果当前单元格是<xref:System.Windows.Forms.DataGridViewComboBoxCell>、 将单元格置于编辑模式和显示的下拉列表。|  
@@ -74,7 +65,7 @@ ms.lasthandoff: 02/22/2018
   
 |键或键组合|描述|  
 |----------------------------|-----------------|  
-|SHIFT+SPACEBAR|选择整行或列 （与单击行或列标题相同）。|  
+|SHIFT + 空格键|选择整行或列 （与单击行或列标题相同）。|  
 |导航键 （箭头键，页向上/向下，主页，结束）|如果选择整行或列，则更改为新行或列的当前单元格将所选内容移动到完整的新行或列 （具体取决于所选内容模式中）。|  
   
  如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>设置为`false`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>设置为<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>，通过使用键盘更改为新行或列的当前单元格将所选项移到完整的新行或列。 SHIFT、 CTRL 和 ALT 键不会影响此行为。  

@@ -1,23 +1,16 @@
 ---
-title: "对象没有 &#39; 不支持当前区域设置设置 (Visual Basic)"
+title: 对象没有&#39;t 支持当前区域设置 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID447
 ms.assetid: 580a26bc-479a-4569-9246-10dcf0251bcb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c72dc333cc6bf767238a114a68cd3f2018724b75
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: c31b2cd0c3933a6568e7c80c7f2aee3ec740ecc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="object-doesn39t-support-current-locale-setting-visual-basic"></a>对象没有 &#39; 不支持当前区域设置设置 (Visual Basic)
+# <a name="object-doesn39t-support-current-locale-setting-visual-basic"></a>对象没有&#39;t 支持当前区域设置 (Visual Basic)
 你尝试访问不支持当前项目的区域设置的对象。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  

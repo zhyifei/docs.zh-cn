@@ -1,13 +1,6 @@
 ---
-title: "如何：使用上下文菜单中的拼写检查功能"
-ms.custom: 
+title: 如何：使用上下文菜单中的拼写检查功能
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - reenabling spell checking in a text box [WPF]
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a85426dc526e1e8560f494bcde5247fc394f7bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 966e3adbcb57c30a55d606f6d6b8b51523ee30ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>如何：使用上下文菜单中的拼写检查功能
 默认情况下，当你启用拼写检查的编辑控件中如<xref:System.Windows.Controls.TextBox>或<xref:System.Windows.Controls.RichTextBox>，上下文菜单中使拼写检查的选择。 例如，当用户右击拼错的字，会得到的拼写建议或选项组**全部忽略**。 但是，当你重写默认上下文菜单，其中您自己的自定义上下文菜单，此功能将会丢失，并且你需要编写代码以重新启用上下文菜单中的拼写检查功能。 下面的示例演示如何启用此设置<xref:System.Windows.Controls.TextBox>。  

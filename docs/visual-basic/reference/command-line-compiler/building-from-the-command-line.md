@@ -1,12 +1,6 @@
 ---
 title: 从命令行生成 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - builds [Visual Basic], command-line
 - Visual Basic compiler, about Visual Basic compiler
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9a9dee47f06e4f7d9fc8d237376df7707130921d
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 391e16da86aa741a1b78f35d9afd95688f33c4db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>从命令行生成 (Visual Basic)
 Visual Basic 项目组成一个或多个单独的源代码文件。 在称为编译过程中，这些文件被集中到一个包中，可以为应用程序运行的单个可执行文件。  

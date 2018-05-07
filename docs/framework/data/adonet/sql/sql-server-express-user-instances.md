@@ -1,27 +1,15 @@
 ---
-title: "SQL Server Express 用户实例"
-ms.custom: 
+title: SQL Server Express 用户实例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4b8b795454ab038b9e992c5e1187a0c4dcb46c76
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0af929de17a29d497ce6cf6c8cb055d416ab8761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 用户实例
 Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，只有在使用用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 时该功能才可用。 用户实例是 SQL Server Express 数据库引擎的单独实例，该单独实例由父实例生成。 不是其本地计算机的管理员的用户可以将用户实例附加和连接到 SQL Server Express 数据库。 在每个用户一个实例的基础上，每个实例在单个用户的安全上下文中运行。  
@@ -71,7 +59,7 @@ Initial Catalog=InstanceDB;
 > [!NOTE]
 >  你还可以使用<xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A>和<xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A>属性，以生成连接字符串中的运行时。  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>使用 &#124; DataDirectory &#124;替换字符串  
+### <a name="using-the-124datadirectory124-substitution-string"></a>使用&#124;DataDirectory&#124;替换字符串  
  在 ADO.NET 2.0 中，随着 `AttachDbFileName`（包含在管道符号中）替代字符串的引入，对 `|DataDirectory|` 进行了扩展。 `DataDirectory` 与 `AttachDbFileName` 结合使用可指示数据文件的相对路径，从而允许开发人员创建基于数据源的相对路径（而无需指定完整路径）的连接字符串。  
   
  `DataDirectory` 点的物理位置取决于应用程序的类型。 在此示例中，要附加的 Northwind.mdf 文件位于应用程序的 \app_data 文件夹中。  

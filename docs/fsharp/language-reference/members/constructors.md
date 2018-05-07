@@ -1,17 +1,12 @@
 ---
 title: 构造函数 (F#)
 description: '了解如何定义和使用 F # 中的构造函数来创建和初始化类和结构的对象。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: d9062ae747c37bdc14104658ad0ec7d11f5545f0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1773c111e0398aa83951afe14979d8a4ebc4907f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constructors"></a>构造函数
 

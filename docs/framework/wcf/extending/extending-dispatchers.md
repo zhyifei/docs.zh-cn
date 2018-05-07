@@ -1,33 +1,19 @@
 ---
-title: "扩展调度程序"
-ms.custom: 
+title: 扩展调度程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4240a19401d97cd0636d13a94fd07ad4ef753388
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bc700aefc3b50102dc0a3faabbbcd09c1c8fc4bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-dispatchers"></a>扩展调度程序
 调度程序负责从基础通道拉取传入的消息，将它们翻译成应用程序代码形式的方法调用，并将结果发送回调用方。 调度程序扩展允许您修改此过程。  您可以实现消息或参数检查器，用来检查或修改消息或参数的内容。  您也可以更改将消息路由到操作的方式或提供其他功能。  
   
- 本主题说明如何在 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 服务应用程序中使用 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 和 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 类来修改调度程序的默认执行行为，或在通过通道层发送或检索消息、参数或返回值之前或之后截获或更改它们。 有关等效的客户端运行时消息处理的详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。 若要了解角色，<xref:System.ServiceModel.IExtensibleObject%601>类型播放中访问各种运行时自定义对象之间的共享的状态，请参阅[可扩展对象](../../../../docs/framework/wcf/extending/extensible-objects.md)。  
+ 本主题介绍如何使用<xref:System.ServiceModel.Dispatcher.DispatchRuntime>和<xref:System.ServiceModel.Dispatcher.DispatchOperation>类在 Windows Communication Foundation (WCF) 服务应用程序来修改调度程序的默认执行行为或若要截获或修改消息、 参数或返回之前或之后发送或从通道层检索它们的值。 有关等效的客户端运行时消息处理的详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。 若要了解角色，<xref:System.ServiceModel.IExtensibleObject%601>类型播放中访问各种运行时自定义对象之间的共享的状态，请参阅[可扩展对象](../../../../docs/framework/wcf/extending/extensible-objects.md)。  
   
 ## <a name="dispatchers"></a>调度程序  
  服务模型层执行开发人员的编程模型与基础消息交换（通常称为通道层）之间的转换。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，通道调度程序和终结点调度程序（分别为 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> 和 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>）均为服务组件，负责接受新的通道、接收消息、操作调度和调用以及响应处理。 调度程序对象是接收方对象，但双工服务中的回调协定实现还公开其用于检查、修改或扩展的调度程序对象。  

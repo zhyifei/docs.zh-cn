@@ -1,24 +1,12 @@
 ---
-title: "如何：创建可调用其他工作流服务的工作流服务"
-ms.custom: 
+title: 如何：创建可调用其他工作流服务的工作流服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fda5a7286c3d20c7cdc2093e58bfe3fbdcf1d1c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>如何：创建可调用其他工作流服务的工作流服务
 有时，一个工作流服务必须从另一个工作流服务中获取信息。  本主题演示如何从一个工作流服务调用另一个工作流服务。 本主题中，我们将创建两个工作流服务：一个服务具有可反转输入字符串的方法，另一个服务在反转使用第一个服务的字符串后，将输入字符串转换为大写。  
@@ -77,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-create-the-uppercaser-workflow-service"></a>创建 UpperCaser 工作流服务  
   
-1.  右键单击 NestedServices 项目并选择**添加**，**新项**。 在**工作流**节点中，选择**WCF 工作流服务**，并命名为新服务`UpperCaserService`。 单击 **“添加”**。 此操作应将名为 UpperCaserService.xamlx 的新工作流服务添加到项目中。  
+1.  右键单击 NestedServices 项目并选择**添加**，**新项**。 在**工作流**节点中，选择**WCF 工作流服务**，并命名为新服务`UpperCaserService`。 单击 **添加**。 此操作应将名为 UpperCaserService.xamlx 的新工作流服务添加到项目中。  
   
 2.  在设计器中打开 UpperCaserService.xamlx，删除现有**ReceiveRequest**和`SendReply`活动，然后拖动`ReceiveAndSendReply`到现有的序列活动的活动。  
   
@@ -113,7 +101,7 @@ ms.lasthandoff: 12/22/2017
   
     4.  **TargetType**: NestedServices.StringLibrary  
   
-8.  现在将对已修改的字符串调用第一个服务。 右键单击项目并选择**添加服务引用**。 添加对 http://localhost/NestedServices/StringReverserService.xamlx 上的服务的服务引用，并生成项目以创建自定义活动来访问第一个 Web 服务。  
+8.  现在将对已修改的字符串调用第一个服务。 右键单击项目并选择**添加服务引用**。 添加对在服务的服务引用http://localhost/NestedServices/StringReverserService.xamlx和生成项目以创建自定义活动来访问第一个 Web 服务。  
   
 9. 将新活动的实例之间拖到工作流， **InvokeMethod**活动和**SendReplyToReceive**活动。 将 StringToReverse 变量分配给新活动的 InputString 属性，并将 StringToReturn 变量分配给 StringToReturn 属性。  
   

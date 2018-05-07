@@ -1,28 +1,16 @@
 ---
-title: "关键帧动画概述"
-ms.custom: 
+title: 关键帧动画概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a18e0637b0fea7a1a960b157123da10819b4687
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-frame-animations-overview"></a>关键帧动画概述
 本主题介绍关键帧动画。 通过关键帧动画，可以使用两个以上的目标值进行动画处理，并控制动画的内插方法。  
@@ -290,7 +278,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  解决<xref:System.Windows.Media.Animation.KeyTime>的使用的关键帧的值未指定通过使用声明离其最近已解决的关键帧的关键时间<xref:System.Windows.Media.Animation.KeyTime>值。  
   
-7.  解决剩余<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值。 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>使用<xref:System.Windows.Media.Animation.KeyTime>值的相邻的关键帧来确定其解决的时间。  目的是确保动画速度在此关键帧的解析时间内保持固定不变。  
+7.  解决剩余<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值。 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 使用<xref:System.Windows.Media.Animation.KeyTime>值的相邻的关键帧来确定其解决的时间。  目的是确保动画速度在此关键帧的解析时间内保持固定不变。  
   
 8.  即排序顺序的解决时间 （主键） 和声明 （辅助密钥），顺序中的关键帧，请使用一个稳定排序基于解决的关键帧<xref:System.Windows.Media.Animation.KeyTime>值。  
   

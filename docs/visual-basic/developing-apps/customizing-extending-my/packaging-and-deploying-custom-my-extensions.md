@@ -1,23 +1,16 @@
 ---
-title: "打包和部署自定义 My 扩展 (Visual Basic)"
+title: 打包和部署自定义 My 扩展 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94a9ea977d0add14ae9f0c9a889b008b94610ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 901d0b80a18d2f4d262cc65eb485dcc628bc6a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>打包和部署自定义 My 扩展 (Visual Basic)
 Visual Basic 可以轻松地为你要部署您的自定义`My`通过使用 Visual Studio 模板的命名空间扩展。 如果要为其创建一个项目模板，你`My`扩展是新的项目类型的组成部分，您只能包括您的自定义`My`扩展代码与项目导出模板时。 有关导出项目模板的详细信息，请参阅[如何： 创建项目模板](/visualstudio/ide/how-to-create-project-templates)。  
@@ -59,10 +52,10 @@ Visual Basic 可以轻松地为你要部署您的自定义`My`通过使用 Visua
   
  CustomData 文件包含 <`VBMyExtensionTemplate>`具有属性下, 表中列出的元素。  
   
-|特性|说明|  
+|特性|描述|  
 |---|---|  
-|`ID`|必需。 扩展一个唯一标识符。 如果已将具有此 ID 的扩展添加到项目中，用户将不提示再次添加它。|  
-|`Version`|必需。 在项模板的版本号。|  
+|`ID`|必须的。 扩展一个唯一标识符。 如果已将具有此 ID 的扩展添加到项目中，用户将不提示再次添加它。|  
+|`Version`|必须的。 在项模板的版本号。|  
 |`AssemblyFullName`|可选。 程序集名称。 当此程序集的引用添加到项目中时，将提示用户添加`My`从此项模板的扩展。|  
   
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>添加\<CustomDataSignature > 的.vstemplate 文件的元素  
@@ -101,7 +94,7 @@ Visual Basic 可以轻松地为你要部署您的自定义`My`通过使用 Visua
  若要安装的模板，可以将压缩的文件夹 （.zip 文件） 复制到 Visual Basic 项目模板文件夹 （例如，My Documents\Visual Studio 2008\Templates\Item Templates\Visual 基本）。 或者，你可以将模板发布为 Visual Studio 安装程序 (.vsi) 文件。  
   
 ## <a name="see-also"></a>请参阅  
- [扩展 Visual Basic 中的我 Namespace](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ [扩展 Visual Basic 中的 My 命名空间](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  [扩展 Visual Basic 应用程序模型](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
  [自定义 My 中可用的对象](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
  [My 扩展页，项目设计器](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

@@ -1,12 +1,6 @@
 ---
 title: '- 运算符 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Negate
 - vb.-
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ffb7c96fe95e73dc857a15608df94ed8468f9df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4df8eb3844ed20fd24ca375f77cea46b9c6cee37
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="--operator-visual-basic"></a>- 运算符 (Visual Basic)
 返回两个数值表达式或数值表达式的负值之间的差异。  
@@ -45,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="parts"></a>部件  
  `expression1`  
- 必需。 任何数值表达式。  
+ 必须的。 任何数值表达式。  
   
  `expression2`  
  必填，除非`–`运算符正在计算值为负。 任何数值表达式。  
@@ -75,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
  这些语句执行后`binaryResult`包含 124.45 和`unaryResult`包含 –334.90。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [-= 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md) [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  

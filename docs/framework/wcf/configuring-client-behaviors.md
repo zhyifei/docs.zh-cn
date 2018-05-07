@@ -1,30 +1,18 @@
 ---
-title: "配置客户端行为"
-ms.custom: 
+title: 配置客户端行为
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee79900b52ae0fa58e8fb9a5cbbf50f5a882c295
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 062e726b6f1d6831303e1cc0ae82a434daab860c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-client-behaviors"></a>配置客户端行为
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 通过两种方式配置行为：一是通过引用在客户端应用程序配置文件的 `<behavior>` 节中定义的行为配置，二是在调用应用程序中采用编程方式进行配置。 本主题将介绍这两种方式。  
+Windows Communication Foundation (WCF) 两种方式配置行为： 一是通过引用的行为配置，在中定义`<behavior>`的客户端应用程序配置文件 – 或以编程方式调用中的部分应用程序。 本主题将介绍这两种方式。  
   
  在使用配置文件时，行为配置为配置设置的命名集合。 每个行为配置的名称都必须是唯一的。 在终结点配置的 `behaviorConfiguration` 属性中，此字符串用来将终结点链接到该行为。  
   
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="using-behaviors-programmatically"></a>以编程方式使用行为  
- 也可以通过编程方式配置或插入行为，方法是在打开客户端之前查找 `Behaviors` 客户端对象或客户端通道工厂对象上的相应 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 属性。  
+ 也可以配置，或以编程方式插入行为，通过定位适当`Behaviors`或之前打开客户端的客户端通道工厂对象上的 Windows Communication Foundation (WCF) 客户端对象的属性。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示如何在创建通道对象之前访问从 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 属性返回的 <xref:System.ServiceModel.Description.ServiceEndpoint> 上的 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 属性，从而以编程方式插入行为。  

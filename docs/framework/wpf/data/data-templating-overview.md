@@ -1,13 +1,6 @@
 ---
-title: "数据模板化概述"
-ms.custom: 
+title: 数据模板化概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3f1efefa4d32e3512b0dda6eca237a5e4938bf7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-templating-overview"></a>数据模板化概述
 WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 WPF 控件具有支持自定义数据表示的内置功能。 本主题首先演示了如何定义<xref:System.Windows.DataTemplate>，然后介绍其他数据模板化功能，例如选择了基于自定义逻辑和分层数据的显示的支持的模板。  
@@ -35,7 +23,7 @@ WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 
 ## <a name="prerequisites"></a>系统必备  
  本主题重点介绍数据模板化功能，不介绍数据绑定概念。 有关基本数据绑定概念的信息，请参阅[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
   
- <xref:System.Windows.DataTemplate>是有关数据的表示形式，由 WPF 样式和模板化模型提供的许多功能之一。 有关 WPF 样式和模板化模型，例如如何使用的介绍<xref:System.Windows.Style>若要设置控件的属性，请参阅[样式和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)主题。  
+ <xref:System.Windows.DataTemplate> 是有关数据的表示形式，由 WPF 样式和模板化模型提供的许多功能之一。 有关 WPF 样式和模板化模型，例如如何使用的介绍<xref:System.Windows.Style>若要设置控件的属性，请参阅[样式和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)主题。  
   
  此外，务必了解`Resources`，这是实质上是什么启用对象例如<xref:System.Windows.Style>和<xref:System.Windows.DataTemplate>为了能够重新使用。 有关资源的详细信息，请参阅 [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
   
@@ -144,7 +132,7 @@ WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>DataTemplate 中有哪些内容？  
- 在前面的示例中，我们放置内的触发器<xref:System.Windows.DataTemplate>使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.DataTemplate.Triggers%2A>属性。 <xref:System.Windows.Setter>的触发器设置元素的属性的值 (<xref:System.Windows.Controls.Border>元素)，位于<xref:System.Windows.DataTemplate>。 但是，如果属性，你`Setters`关注不在当前的元素的属性<xref:System.Windows.DataTemplate>，它可能更适合于设置使用的属性<xref:System.Windows.Style>对于就是<xref:System.Windows.Controls.ListBoxItem>类 (如果你正在绑定的控件是<xref:System.Windows.Controls.ListBox>)。 例如，如果你希望你<xref:System.Windows.Trigger>要进行动画处理<xref:System.Windows.UIElement.Opacity%2A>值的项时鼠标指向某一项，定义内的触发器<xref:System.Windows.Controls.ListBoxItem>样式。 有关示例，请参阅[样式设置和模板化示例简介](http://go.microsoft.com/fwlink/?LinkID=160010)。  
+ 在前面的示例中，我们放置内的触发器<xref:System.Windows.DataTemplate>使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.DataTemplate.Triggers%2A> 属性。 <xref:System.Windows.Setter>的触发器设置元素的属性的值 (<xref:System.Windows.Controls.Border>元素)，位于<xref:System.Windows.DataTemplate>。 但是，如果属性，你`Setters`关注不在当前的元素的属性<xref:System.Windows.DataTemplate>，它可能更适合于设置使用的属性<xref:System.Windows.Style>对于就是<xref:System.Windows.Controls.ListBoxItem>类 (如果你正在绑定的控件是<xref:System.Windows.Controls.ListBox>)。 例如，如果你希望你<xref:System.Windows.Trigger>要进行动画处理<xref:System.Windows.UIElement.Opacity%2A>值的项时鼠标指向某一项，定义内的触发器<xref:System.Windows.Controls.ListBoxItem>样式。 有关示例，请参阅[样式设置和模板化示例简介](http://go.microsoft.com/fwlink/?LinkID=160010)。  
   
  一般情况下，请记住，<xref:System.Windows.DataTemplate>被应用到每个生成<xref:System.Windows.Controls.ListBoxItem>(有关如何以及在何处，它实际应用的详细信息，请参阅<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>页。)。 你<xref:System.Windows.DataTemplate>是关心的演示文稿和数据对象的外观。 在大多数情况下，所有其他方面的演示文稿，如哪些项看起来像选择此项时或如何<xref:System.Windows.Controls.ListBox>排列项，不属于的定义中<xref:System.Windows.DataTemplate>。 有关示例，请参阅[对 ItemsControl 进行样式设置和模板化](#DataTemplating_ItemsControl)一节。  
   
@@ -156,7 +144,7 @@ WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 
   
  [!code-xaml[DataTemplatingIntro_snip#ImportantTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#importanttemplate)]  
   
- 请注意此示例使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.FrameworkTemplate.Resources%2A>属性。 资源定义中，部分共享中的元素的<xref:System.Windows.DataTemplate>。  
+ 请注意此示例使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.FrameworkTemplate.Resources%2A> 属性。 资源定义中，部分共享中的元素的<xref:System.Windows.DataTemplate>。  
   
  若要提供逻辑选择哪个<xref:System.Windows.DataTemplate>使用基于`Priority`值的数据对象，创建一个子类<xref:System.Windows.Controls.DataTemplateSelector>，并重写<xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A>方法。 在下面的示例中，<xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A>方法提供逻辑来返回适当的模板的值基于`Priority`属性。 要返回的模板文件位于封装的资源<xref:System.Windows.Window>元素。  
   

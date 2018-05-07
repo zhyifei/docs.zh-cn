@@ -1,13 +1,6 @@
 ---
-title: "如何：定义工具栏按钮的图标"
-ms.custom: 
+title: 如何：定义工具栏按钮的图标
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,22 +13,17 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f7550fdc76cb3a025d8233ec538d38f23f9226a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c396f861307d1c8e722beaf38c6cb914d0630c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>如何：定义工具栏按钮的图标
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
   
- <xref:System.Windows.Forms.ToolBar>按钮就能够自身中显示图标以便于识别用户。 这将通过添加到图像实现[ImageList 组件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)组件并将<xref:System.Windows.Forms.ImageList>组件<xref:System.Windows.Forms.ToolBar>控件。  
+ <xref:System.Windows.Forms.ToolBar> 按钮就能够自身中显示图标以便于识别用户。 这将通过添加到图像实现[ImageList 组件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)组件并将<xref:System.Windows.Forms.ImageList>组件<xref:System.Windows.Forms.ToolBar>控件。  
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>以编程方式设置工具栏按钮的图标  
   

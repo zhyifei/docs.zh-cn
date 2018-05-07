@@ -1,13 +1,6 @@
 ---
-title: "截获触笔输入"
-ms.custom: 
+title: 截获触笔输入
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5fde62e2e1ab17b26c91051f68b7d4225450c60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 813c5f6060b3a59358b286c93a9077debd41a746
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intercepting-input-from-the-stylus"></a>截获触笔输入
 <xref:System.Windows.Input.StylusPlugIns>体系结构提供了用于通过实现低级别的控制的机制<xref:System.Windows.Input.Stylus>输入和数字墨迹创建<xref:System.Windows.Ink.Stroke>对象。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类提供机制来实现自定义行为，并将其应用到来自触笔设备以获得最佳性能的数据的流。  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="architecture"></a>体系结构  
  <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>的演进[StylusInput](http://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409)中所述的 Api[访问和操作笔输入](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)中[Microsoft Windows XP Tablet PC Edition 软件开发工具包 1.7](http://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409)。  
   
- 每个<xref:System.Windows.UIElement>具有<xref:System.Windows.UIElement.StylusPlugIns%2A>属性都<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>。 你可以添加<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>到元素的<xref:System.Windows.UIElement.StylusPlugIns%2A>属性可操作<xref:System.Windows.Input.StylusPoint>生成作为它的数据。 <xref:System.Windows.Input.StylusPoint>数据包含系统数字化器，包括支持的所有属性<xref:System.Windows.Input.StylusPoint.X%2A>和<xref:System.Windows.Input.StylusPoint.Y%2A>点数据，以及<xref:System.Windows.Input.StylusPoint.PressureFactor%2A>数据。  
+ 每个<xref:System.Windows.UIElement>具有<xref:System.Windows.UIElement.StylusPlugIns%2A>属性都<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>。 你可以添加<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>到元素的<xref:System.Windows.UIElement.StylusPlugIns%2A>属性可操作<xref:System.Windows.Input.StylusPoint>生成作为它的数据。 <xref:System.Windows.Input.StylusPoint> 数据包含系统数字化器，包括支持的所有属性<xref:System.Windows.Input.StylusPoint.X%2A>和<xref:System.Windows.Input.StylusPoint.Y%2A>点数据，以及<xref:System.Windows.Input.StylusPoint.PressureFactor%2A>数据。  
   
  你<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>对象直接插入的数据来自流<xref:System.Windows.Input.Stylus>设备时你将添加<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>到<xref:System.Windows.UIElement.StylusPlugIns%2A>属性。 插件添加至顺序<xref:System.Windows.UIElement.StylusPlugIns%2A>集合决定将接收的顺序<xref:System.Windows.Input.StylusPoint>数据。 例如，如果添加筛选器插件，用于限制到特定区域中，输入，然后添加一个插件，写入识别笔势，识别手势插件将接收筛选<xref:System.Windows.Input.StylusPoint>数据。  
   

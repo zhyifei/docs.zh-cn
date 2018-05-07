@@ -1,27 +1,15 @@
 ---
-title: "mc:ProcessContent 特性"
-ms.custom: 
+title: mc:ProcessContent 特性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1fe43e2450c35d976db7a188f854f7864f298afc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e93734b8ab4aefca080736db3a512f272625271
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent 特性
 指定哪些[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]元素仍应具有处理相关的父元素的内容，即使可能忽略的直接父元素[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]由于指定的处理器[mc： 可忽略属性](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md). `mc:ProcessContent`属性支持标记兼容性，为自定义命名空间映射和[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]版本控制。  
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |*ignorablePrefix*|根据 XML 1.0 规范任何有效的前缀字符串。|  
 |*ignorableUri*|任何有效的 URI，指定命名空间中的，根据 XML 1.0 规范。|  
 |*ThisElementCanBeIgnored*|可通过忽略的元素[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]处理器实现，如果基础类型不能解析。|  
-|*[内容]*|*ThisElementCanBeIgnored*标记可忽略。 如果处理器忽略该元素， *[内容]*由处理*对象*。|  
+|*[内容]*|*ThisElementCanBeIgnored*标记可忽略。 如果处理器忽略该元素， *[内容]* 由处理*对象*。|  
   
 ## <a name="remarks"></a>备注  
  默认情况下，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器将忽略中被忽略的元素的内容。 你可以指定的特定元素由`mc:ProcessContent`，和一个[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器将继续处理中被忽略的元素的内容。 此值通常会在内容嵌套在多个标记，至少一个可以忽略，至少一个不是可忽略使用。  

@@ -1,11 +1,6 @@
 ---
-title: "\\ 运算符 (Visual Basic)"
+title: '\ 运算符 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.\
 - '\'
@@ -22,14 +17,11 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 38718b109b4b3865238267039908ea1d51d06229
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef3946e871e1dc248b54932e16f6cae6026da08e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>\ 运算符 (Visual Basic)
 将两个数相除，返回整数结果。  
@@ -42,10 +34,10 @@ expression1 \ expression2
   
 ## <a name="parts"></a>部件  
  `expression1`  
- 必需。 任何数值表达式。  
+ 必须的。 任何数值表达式。  
   
  `expression2`  
- 必需。 任何数值表达式。  
+ 必须的。 任何数值表达式。  
   
 ## <a name="supported-types"></a>支持的类型  
  所有数值类型，包括未签名和浮点类型和`Decimal`。  
@@ -75,7 +67,7 @@ expression1 \ expression2
   
  在前面的示例表达式分别返回 2、 3、 33 和-22 的值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\\= 运算符](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
  [/ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)  
  [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)  

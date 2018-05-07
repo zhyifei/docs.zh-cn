@@ -1,31 +1,17 @@
 ---
 title: 服务标识和身份验证
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5bd550b7408e9db00daf7793cd0a7f1261e21ccf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 21184098f90be3b64cfccd5ab98a1824cee50e48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-identity-and-authentication"></a>服务标识和身份验证
 服务的*终结点标识*是从 Web 服务描述语言 (wsdl) 生成的值。 此值可传播到任何客户端，用于对服务进行身份验证。 在客户端启动与终结点的通信并且服务向客户端验证自己的身份之后，客户端将终结点标识值与终结点身份验证过程返回的实际值进行比较。 如果二者匹配，则客户端确信其已与预期的服务终结点联系。 此功能，以防*网络钓鱼*通过防止客户端重定向到由恶意服务承载的终结点。  
@@ -35,7 +21,7 @@ ms.lasthandoff: 04/30/2018
 > [!NOTE]
 >  在使用 NT LanMan (NTLM) 进行身份验证时，将不检查服务标识，这是因为在 NTLM 下客户端无法对服务器进行身份验证。 在计算机是 Windows 工作组的一部分时，或者在运行不支持的 Kerberos 身份验证的 Windows 早期版本时，将使用 NTLM。  
   
- 当客户端启动安全通道以通过其向服务发送消息时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基础结构对服务进行身份验证，并且只在服务标识与客户端使用的终结点地址中指定的标识匹配时才发送消息。  
+ 当客户端启动安全通道以通过它向服务发送一条消息时，Windows Communication Foundation (WCF) 基础结构进行身份验证服务，并仅发送消息，如果服务标识与终结点中指定的标识相匹配客户端使用的地址。  
   
  标识处理由以下几个阶段组成：  
   
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/30/2018
   
  客户端上的标识处理与服务上的客户端身份验证相似。 直到已经对客户端的凭据进行了身份验证，安全服务才会执行代码。 同样，直到基于事先从服务元数据已知的内容对服务凭据进行了身份验证，客户端才会向服务发送消息。  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A> 类的 <xref:System.ServiceModel.EndpointAddress> 属性表示由客户端调用的服务的标识。 服务在其元数据中发布 <xref:System.ServiceModel.EndpointAddress.Identity%2A>。 当客户端开发人员运行时[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)针对服务终结点，则生成的配置包含的值的服务的<xref:System.ServiceModel.EndpointAddress.Identity%2A>属性。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构（如果已进行安全配置）将验证服务是否处理指定的标识。  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A> 类的 <xref:System.ServiceModel.EndpointAddress> 属性表示由客户端调用的服务的标识。 服务在其元数据中发布 <xref:System.ServiceModel.EndpointAddress.Identity%2A>。 当客户端开发人员运行时[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)针对服务终结点，则生成的配置包含的值的服务的<xref:System.ServiceModel.EndpointAddress.Identity%2A>属性。 WCF 基础结构 （是否使用安全配置） 验证服务拥有指定的标识。  
   
 > [!IMPORTANT]
 >  元数据包含服务的预期标识，因此建议以安全方式公开服务元数据，例如，通过创建服务的 HTTPS 终结点。 有关详细信息，请参阅[如何： 保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
@@ -75,7 +61,7 @@ ms.lasthandoff: 04/30/2018
   
   
 ## <a name="setting-identity-programmatically"></a>以编程方式设置标识  
- 您的服务不必显式指定标识，因为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会自动确定标识。 但是，如果需要，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允许您指定终结点的标识。 下面的代码使用特定的 DNS 标识添加了一个新的服务终结点。  
+ 你的服务不必显式指定标识，因为 WCF 自动确定。 但是，WCF 允许你指定一个标识终结点，如果需要。 下面的代码使用特定的 DNS 标识添加了一个新的服务终结点。  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
@@ -99,13 +85,13 @@ ms.lasthandoff: 04/30/2018
   
  如果配置通道以将消息级或传输级安全套接字层 (SSL) 与用于身份验证的 X.509 证书一起用来进行身份验证，则下面的标识值是有效的：  
   
--   DNS。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 确保在 SSL 握手期间提供的证书包含 DNS 或 `CommonName` (CN) 特性（等于在客户端上的 DNS 标识中指定的值）。 请注意，除了确定服务器证书的有效性之外还执行这些检查。 默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 验证服务器证书是否是由受信任的根证书颁发机构颁发的。  
+-   DNS。 WCF 可确保在 SSL 握手期间提供的证书包含 DNS 或`CommonName`(CN) 属性等于客户端上的 DNS 标识中指定的值。 请注意，除了确定服务器证书的有效性之外还执行这些检查。 默认情况下，WCF 验证服务器证书由受信任的根颁发机构颁发。  
   
--   证书。 在 SSL 握手期间，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 确保远程终结点提供标识中指定的相同证书值。  
+-   证书。 在 SSL 握手期间 WCF 可确保远程终结点提供标识中指定的相同证书值。  
   
 -   证书引用。 与“证书”相同。  
   
--   RSA。 在 SSL 握手期间，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 确保远程终结点提供标识中指定的相同 RSA 密钥。  
+-   RSA。 在 SSL 握手期间 WCF 可确保远程终结点提供标识中指定的相同 RSA 密钥。  
   
  如果服务将消息级或传输级 SSL 与用于身份验证的 Windows 凭据一起用来进行身份验证，并且协商凭据，则下面的标识值是有效的：  
   

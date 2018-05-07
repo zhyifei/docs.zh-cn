@@ -1,10 +1,6 @@
 ---
 title: 将 COM 的程序集打包
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - COM interop, packaging assemblies
@@ -22,14 +18,11 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5c1e3ee38f98eae46c09ec2175f3c9af01288bd2
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-an-assembly-for-com"></a>将 COM 的程序集打包
 COM 开发人员可从其计划纳入应用程序的托管类型相关信息中受益：  
@@ -86,7 +79,7 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
 ## <a name="net-services-installation-tool"></a>.NET 服务安装工具  
  [.NET 服务安装工具 (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) 将托管类添加到 Windows 2000 组件服务，并在单个工具中组合多个任务。 除加载和注册程序集外，Regsvcs.exe 还可将类型库生成、注册和安装到现有 COM+ 1.0 应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)  

@@ -1,32 +1,20 @@
 ---
-title: "Windows Communication Foundation 基础概念"
-ms.custom: 
+title: Windows Communication Foundation 基础概念
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], concepts
 - concepts [WCF]
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-caps.latest.revision: "39"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 651515095a0c9f9e970fff2d77421cfa804fa701
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 44b36fc917ceb30141d7d2235b8bb364d3b998c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 基础概念
-本文档高度概括了 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 体系结构。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建的最简单的版本的教程[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务和客户端，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
+本文档提供 Windows Communication Foundation (WCF) 体系结构的高级视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建的最简单的版本的教程[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务和客户端，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="wcf-fundamentals"></a>WCF 基础知识  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是一个运行库和一组 API，用于创建在服务与客户端之间发送消息的系统。 它使用相同的基础结构和 API 来创建应用程序，这些应用程序可与同一计算机系统上或驻留在另一家公司内并通过 Internet 访问的系统上的其他应用程序进行通信。  

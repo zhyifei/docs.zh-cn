@@ -1,14 +1,6 @@
 ---
 title: 流提供程序（WCF 数据服务）
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 119877802bc6d685cd5b440cedb6ab71b20abf45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 数据服务可公开二进制大型对象数据。 此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。 当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base-64 编码形式返回此二进制数据。 加载和序列化大型二进制数据，这种方式会影响性能，因为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定义用于检索独立于其所属的实体的二进制数据的机制。 这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。  
@@ -93,7 +79,7 @@ ms.lasthandoff: 04/26/2018
  有关如何创建数据服务的常规信息，请参阅[配置数据服务](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>在宿主环境中启用大型二进制数据流  
- 当创建中的数据服务[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 应用程序，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]用于提供 HTTP 协议实现。 默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]限制为仅 65k 字节的 HTTP 消息的大小。 为了使大型二进制数据能够流入或流出数据服务，还必须将 Web 应用程序配置为启用大型二进制文件并使用流进行转换。 为此，请将以下内容添加到应用程序的 Web.config 文件的 `<configuration />` 元素中：  
+ 当在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 应用程序中创建数据服务时，使用 Windows Communication Foundation (WCF) 可提供 HTTP 协议实现。 默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]限制为仅 65k 字节的 HTTP 消息的大小。 为了使大型二进制数据能够流入或流出数据服务，还必须将 Web 应用程序配置为启用大型二进制文件并使用流进行转换。 为此，请将以下内容添加到应用程序的 Web.config 文件的 `<configuration />` 元素中：  
   
   
   

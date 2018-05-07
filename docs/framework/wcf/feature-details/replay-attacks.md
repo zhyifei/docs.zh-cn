@@ -1,34 +1,20 @@
 ---
 title: 重播攻击
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e827c51378b9f75835b9b98280b4995d2cae2fc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3139e0ea094f1f7483261ffd10026815e5d12f31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="replay-attacks"></a>重播攻击
 A*重播攻击*攻击者复制双方之间的消息流并将该到一个或多个方时发生。 除非攻击得到缓解，否则，受到攻击的计算机会将该消息流作为合法消息进行处理，从而导致一系列不良后果，例如重复订购某种产品。  
   
 ## <a name="bindings-may-be-subject-to-reflection-attacks"></a>绑定可能会遭受反射攻击  
- *反射攻击*是重播回发送方的消息，就像它们来自接收方的答复一样。 标准*重放检测*中[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]机制并不自动处理这。  
+ *反射攻击*是重播回发送方的消息，就像它们来自接收方的答复一样。 标准*重放检测*中 Windows Communication Foundation (WCF) 机制不会自动处理这。  
   
- 默认情况下，反射攻击会得到缓解，因为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务模型会将一个已签名的消息 ID 添加到请求消息中，并要求响应消息中具有一个已签名的 `relates-to` 标头。 因此，请求消息无法作为响应进行重播。 在安全的可靠消息 (RM) 方案中，反射攻击会由于以下原因而得到缓解：  
+ 因为 WCF 服务模型将已签名的消息 ID 添加到请求消息和需要一个已签名反射攻击会得到缓解默认情况下`relates-to`响应消息的标头。 因此，请求消息无法作为响应进行重播。 在安全的可靠消息 (RM) 方案中，反射攻击会由于以下原因而得到缓解：  
   
 -   创建序列架构和创建序列响应消息架构是不同的。  
   

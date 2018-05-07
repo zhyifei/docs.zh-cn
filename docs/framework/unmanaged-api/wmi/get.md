@@ -2,10 +2,6 @@
 title: Get 函数 （非托管 API 参考）
 description: Get 函数将检索指定的属性值。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-function"></a>Get 函数
 如果它存在，请检索指定的属性值。
@@ -59,15 +52,15 @@ HRESULT Get (
 `wszName`  
 [in]属性的名称。
 
-`lFlags`[in]保留。 此参数必须为 0。
+`lFlags` [in]保留。 此参数必须为 0。
 
-`pVal`[out]如果该函数将返回成功，包含的值的`wszName`属性。 `pval`自变量分配的正确类型和值限定符。
+`pVal` [out]如果该函数将返回成功，包含的值的`wszName`属性。 `pval`自变量分配的正确类型和值限定符。
 
-`pvtType`[out]如果该函数将返回成功，则包含[CIM 类型的常量](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)，该值指示属性类型。 其值也可以是`null`。 
+`pvtType` [out]如果该函数将返回成功，则包含[CIM 类型的常量](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)，该值指示属性类型。 其值也可以是`null`。 
 
-`plFlavor`[out]如果该函数将返回成功，则接收原点顺的属性的信息。 其值可以是`null`，或定义中的以下 WBEM_FLAVOR_TYPE 常量之一*WbemCli.h*标头文件： 
+`plFlavor` [out]如果该函数将返回成功，则接收原点顺的属性的信息。 其值可以是`null`，或定义中的以下 WBEM_FLAVOR_TYPE 常量之一*WbemCli.h*标头文件： 
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 属性是标准系统属性。 |
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 类： 从父类继承属性。 </br> 实例： 属性，继承自的父类、 时未修改的实例。  |
@@ -77,7 +70,7 @@ HRESULT Get (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 发生了常规错误。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数不是有效的。 |
@@ -93,12 +86,12 @@ HRESULT Get (
 
 `pVal`自变量分配的正确类型和值限定符和 COM [VariantInit](https://msdn.microsoft.com/library/ms221402(v=vs.85).aspx)函数
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

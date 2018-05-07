@@ -1,14 +1,6 @@
 ---
 title: 如何：使用独立的 X.509 证书进行签名和加密
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f6103dd8f680752581a51cba7ba61c83522decc2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>如何：使用独立的 X.509 证书进行签名和加密
-本主题演示如何配置 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 以使用不同的证书在客户端和服务上进行消息签名和加密。  
+本主题演示如何配置 Windows Communication Foundation (WCF) 以使用不同的证书的客户端和服务上进行消息签名和加密。  
   
  若要实现在签名和加密时使用独立的证书，必须创建自定义客户端或服务凭据（或者两者都创建），因为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不提供设置多个客户端或服务证书的 API。 此外，还必须提供安全令牌管理器，以利用多个证书的信息并为指定的密钥用法和消息方向创建相应的安全令牌提供程序。  
   

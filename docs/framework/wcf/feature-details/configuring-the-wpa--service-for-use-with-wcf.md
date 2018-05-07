@@ -1,37 +1,23 @@
 ---
 title: 配置 Windows 进程激活服务以用于 Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 727ad032482829350b5cf88175c34d8ccc7b98b9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3a4d771c3f2d5e7e6ec4fd6a1e229548e063a6d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>配置 Windows 进程激活服务以用于 Windows Communication Foundation
-本主题介绍在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中设置 Windows 进程激活服务（也称为 WAS）使其承载不通过 HTTP 网络协议进行通信的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所需的步骤。 下面的部分略述此配置的步骤：  
+本主题介绍设置 Windows 进程激活服务 (也称为 WAS) 所需的步骤在[!INCLUDE[wv](../../../../includes/wv-md.md)]来承载 Windows Communication Foundation (WCF) 服务不通过 HTTP 进行通信的网络协议。 下面的部分略述此配置的步骤：  
   
--   安装（或确认安装）所需的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 激活组件。  
+-   安装 （或确认安装） 所需的 WCF 激活组件。  
   
 -   创建一个具有要使用的网络协议绑定的 WAS 站点，或者向现有站点添加新协议绑定。  
   
 -   创建一个应用程序以承载服务，并使该应用程序可以使用所需的网络协议。  
   
--   生成一个公开非 HTTP 终结点的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+-   生成 WCF 服务公开非 HTTP 终结点。  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>使用非 HTTP 绑定配置站点  
  若要将非 HTTP 绑定与 WAS 一起使用，必须将站点绑定添加到 WAS 配置。 WAS 的配置存储是 applicationHost.config 文件，该文件位于 %windir%\system32\inetsrv\config 目录中。 此配置存储由 WAS 和 IIS 7.0 共享。  
@@ -107,7 +93,7 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>生成一个将 WAS 用于非 HTTP 激活的 WCF 服务  
  一旦执行的步骤来安装和配置 WAS (请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md))，服务配置为使用 WAS 激活是类似于在 IIS 中配置托管服务。  
   
- 有关生成 WAS 激活的详细说明[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务，请参阅[如何： 承载在 WAS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
+ 有关生成 WAS 激活的 WCF 服务的详细说明，请参阅[如何： 承载在 WAS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [在 Windows Process Activation Service 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  

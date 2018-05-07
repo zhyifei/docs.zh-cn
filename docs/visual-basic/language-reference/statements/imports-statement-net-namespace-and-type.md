@@ -1,11 +1,6 @@
 ---
-title: "Imports 语句（.NET 命名空间和类型）"
+title: Imports 语句（.NET 命名空间和类型）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Imports
 - imports
@@ -21,14 +16,11 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-caps.latest.revision: "40"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 46cc78c2fd039fb56fd4d1b797f2d09cbe95d317
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef569b0ed6428d24d019e00c500e4d4b91c83d49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports 语句（.NET 命名空间和类型）
 使类型名称，而无需命名空间限定引用。  
@@ -46,7 +38,7 @@ Imports [ aliasname = ] namespace.element
 |术语|定义|  
 |---|---|  
 |`aliasname`|可选。 *导入别名*或名称的代码可以指`namespace`而不是完全限定字符串。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`namespace`|必需。 要导入命名空间的完全限定的名称。 可以命名空间的字符串嵌套到任一级别。|  
+|`namespace`|必须的。 要导入命名空间的完全限定的名称。 可以命名空间的字符串嵌套到任一级别。|  
 |`element`|可选。 命名空间中声明编程元素的名称。 可以是任何容器元素。|  
   
 ## <a name="remarks"></a>备注  
@@ -105,7 +97,7 @@ Imports [ aliasname = ] namespace.element
   
  [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)  
  [在 Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
  [引用和 Imports 语句](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  

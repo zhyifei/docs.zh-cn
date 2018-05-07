@@ -1,19 +1,12 @@
 ---
-title: "从 XML 树 (Visual Basic 中) 中移除元素、 特性和节点"
+title: 从 XML 树 (Visual Basic 中) 中移除元素、 特性和节点
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5cf21919-4360-4b49-b29d-58ea3164ac72
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c1662f0cd1461cc00a8859464b8da3ecb8fd9faf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dbc5cfd7bf6e1f1b77dd14a6771c387fac29d062
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>从 XML 树 (Visual Basic 中) 中移除元素、 特性和节点
 可以修改 XML 树，移除元素、属性和其他类型的节点。  
@@ -85,5 +78,5 @@ Console.WriteLine(root)
   
  请注意，第一个孙元素已从 `Child1` 中移除。 所有孙元素都已从 `Child2` 和 `Child3` 中移除。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [修改 XML 树 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

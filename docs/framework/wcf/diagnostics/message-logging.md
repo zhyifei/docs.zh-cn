@@ -1,27 +1,15 @@
 ---
-title: "消息日志记录"
-ms.custom: 
+title: 消息日志记录
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da73af529a20a8d2e3e7df0ebadf2aeee4acbf1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 473ddb3b68f6bb7a13203015a44450a92994a3b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-logging"></a>消息日志记录
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了记录传入和传出消息以便脱机使用的功能。 使用消息日志记录功能，可以查看消息和消息正文是怎样的。 如果希望了解传入了哪些自变量以及接收终结点如何发现以 XML 形式表示的自变量，这种类型的日志记录会特别有用。 此外，通过在接收到消息时记录该消息，您可以诊断格式不正确的消息以及查看消息的到达方式。 您还可以检查所使用的安全令牌、经过加密和签名的部分以及保持不变的部分。  
+Windows Communication Foundation (WCF) 提供了记录传入和传出消息以便脱机使用的功能。 使用消息日志记录功能，可以查看消息和消息正文是怎样的。 如果希望了解传入了哪些自变量以及接收终结点如何发现以 XML 形式表示的自变量，这种类型的日志记录会特别有用。 此外，通过在接收到消息时记录该消息，您可以诊断格式不正确的消息以及查看消息的到达方式。 您还可以检查所使用的安全令牌、经过加密和签名的部分以及保持不变的部分。  
   
 ## <a name="in-this-section"></a>本节内容  
  [消息流概述](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  

@@ -1,13 +1,6 @@
 ---
-title: "如何：在 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中添加或移除项"
-ms.custom: 
+title: 如何：在 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中添加或移除项
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: faf0422db9915806442ab96759d63e15ff98b813
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：在 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中添加或移除项
 项可以添加到 Windows 窗体组合框中，列表框中，或检查在有许多种情况下，列表框中的，因为这些控件可以绑定到各种数据源。 但是，本主题演示的最简单方法，并不需要数据绑定。 显示的项通常是字符串;但是，可以使用任何对象。 在控件中显示的文本是由对象的返回的值`ToString`方法。  
@@ -102,7 +90,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  调用`Remove`或`RemoveAt`方法来删除项。  
   
-     `Remove`有一个参数，指定要删除的项。`RemoveAt` 移除具有指定的索引编号的项。  
+     `Remove` 有一个参数，指定要删除的项。`RemoveAt` 移除具有指定的索引编号的项。  
   
     ```vb  
     ' To remove item with index 0:  

@@ -1,17 +1,12 @@
 ---
 title: 抽象类 (F#)
 description: '了解有关 F # 抽象类，该类将保留未实现的部分或全部成员和表示的一组不同的对象类型的常见功能。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 0d7ca996de89c44a5cfb9197c1b515741a2303df
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c472e9d164ae78bde716bb5102e54f4e698b61b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="abstract-classes"></a>抽象类
 

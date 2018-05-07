@@ -1,33 +1,19 @@
 ---
-title: "终结点地址"
-ms.custom: 
+title: 终结点地址
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - addresses [WCF]
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 46278e35c6966e473f5a800f7e99814efd7b943c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-addresses"></a>终结点地址
-每个终结点都具有与其关联的地址，该地址用于查找和标识终结点。 此地址主要包括指定终结点位置的统一资源标识符 (URI)。 终结点地址在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 编程模型中由 <xref:System.ServiceModel.EndpointAddress> 类表示，该类包含一个可选的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 属性（允许由与一个终结点交换消息的其他终结点对该终结点进行身份验证）和一组可选的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 属性（定义到达服务所需的任何其他 SOAP 头）。 可选头提供其他的更详细寻址信息以标识服务终结点或与之交互。 终结点的地址在网络上表示为 WS-Addressing 终结点引用 (EPR)。  
+每个终结点都具有与其关联的地址，该地址用于查找和标识终结点。 此地址主要包括指定终结点位置的统一资源标识符 (URI)。 在通过 Windows Communication Foundation (WCF) 编程模型中表示的终结点地址<xref:System.ServiceModel.EndpointAddress>类，该类包含一个可选<xref:System.ServiceModel.EndpointAddress.Identity%2A>进行身份验证的其他终结点的终结点的属性，交换消息，以及一组可选<xref:System.ServiceModel.EndpointAddress.Headers%2A>属性，用于定义到达服务所需的任何其他 SOAP 头。 可选头提供其他的更详细寻址信息以标识服务终结点或与之交互。 终结点的地址在网络上表示为 WS-Addressing 终结点引用 (EPR)。  
   
 ## <a name="uri-structure-of-an-address"></a>地址的 URI 结构  
  大多数传输的地址 URI 包含四个部分。 例如，URI 的四个部分http://www.fabrikam.com:322/mathservice.svc/secureEndpoint下面详细列举，如下所示：  
@@ -63,7 +49,7 @@ ms.lasthandoff: 03/19/2018
   
 -   绑定信息：IP 地址、端口、主机头  
   
- IIS 可以为每个站点指定多个绑定，这会导致每个方案有多个基址。 在 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 之前，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持一个方案有多个地址；如果指定了多个地址，则在激活期间引发 <xref:System.ArgumentException>。  
+ IIS 可以为每个站点指定多个绑定，这会导致每个方案有多个基址。 之前[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]，WCF 未不支持多个地址的架构，并且如果它们已指定，则引发<xref:System.ArgumentException>在激活过程。  
   
  通过 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]，Internet 服务提供商可以在同一站点上使用同一方案的不同基址承载多个应用程序。  
   
@@ -111,7 +97,7 @@ ms.lasthandoff: 03/19/2018
  有关详细信息和示例，请参阅[支持多个 IIS 站点绑定](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)和<xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>。  
   
 ## <a name="extending-addressing-in-wcf-services"></a>在 WCF 服务中扩展寻址  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的默认寻址模型使用终结点地址 URI 以达到以下目的：  
+ 默认值寻址的 WCF 服务模型使用终结点地址 URI 出于以下目的：  
   
 -   指定服务侦听地址，即终结点侦听消息的位置，  
   
@@ -150,6 +136,6 @@ ms.lasthandoff: 03/19/2018
   
  在某些方案中，终结点接收抵达基础传输的所有消息，而不仅仅是具有相应 `To` 头的消息。 若要启用这一点，用户可以使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指定终结点地址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

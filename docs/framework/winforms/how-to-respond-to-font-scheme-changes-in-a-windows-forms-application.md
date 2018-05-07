@@ -1,31 +1,17 @@
 ---
-title: "如何：在 Windows 窗体应用程序中响应字体方案更改"
-ms.custom: 
+title: 如何：在 Windows 窗体应用程序中响应字体方案更改
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aac8d56c87ff03b313565a3d04cd3f3cc4e85f72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 455609ea602f450803718f5be34618b087560d21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>如何：在 Windows 窗体应用程序中响应字体方案更改
 在 Windows 操作系统，用户可以更改系统范围的字体设置，以使显示的默认字体放大或缩小。 更改这些字体设置为有视觉障碍并需要更大的类型来读取其屏幕上的文本的用户至关重要。 你可以调整 Windows 窗体应用程序以通过增加或减少的大小的窗体和所有包含的文本的字体方案更改时对这些更改做出响应。 如果你想窗体以动态地适应字体大小的更改，你可以将代码添加到你的窗体。  

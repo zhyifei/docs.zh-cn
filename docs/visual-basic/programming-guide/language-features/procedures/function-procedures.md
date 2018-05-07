@@ -1,13 +1,6 @@
 ---
 title: Function 过程 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Function procedures
 - return values [Visual Basic], function procedures
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 887c930cb757b012542c97d64a57a62882a2eed3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-procedures-visual-basic"></a>Function 过程 (Visual Basic)
 A`Function`过程是一系列 Visual Basic 语句括在`Function`和`End Function`语句。 `Function`过程执行任务，再将控制权返回给调用代码。 当它返回控件时，它还到调用代码返回一个值。  
@@ -92,9 +82,9 @@ End Function
   
  针对调用语法`Function`过程是，如下所示：  
   
- *左值*`=`*functionname* `[(` *argumentlist*  `)]`  
+ *左值*`=`*functionname* `[(` *argumentlist* `)]`  
   
- `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`*表达式*  `) Then`  
+ `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`*表达式* `) Then`  
   
  当调用`Function`过程中，则不需要使用其返回值。 如果不这样做，将执行的函数的所有操作，而将忽略返回值。 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 通常会调用这种方式。  
   

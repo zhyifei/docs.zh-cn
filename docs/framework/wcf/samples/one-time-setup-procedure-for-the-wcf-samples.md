@@ -1,29 +1,15 @@
 ---
 title: Windows Communication Foundation 示例的一次性安装过程
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: 83
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3bf4d70217a8231fe4ddc5b9a15afdfe8f0522e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 示例的一次性安装过程
-大多数 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例均承载于 Internet 信息服务 (IIS) 中，并从公共虚拟目录中运行。 此一次性安装过程在磁盘; 上创建一个文件夹它还将虚拟目录添加到名为的 IIS **ServiceModelSamples**。  
+大多数 Windows Communication Foundation (WCF) 示例均承载于 Internet 信息服务 (IIS)，并从公共虚拟目录运行。 此一次性安装过程在磁盘; 上创建一个文件夹它还将虚拟目录添加到名为的 IIS **ServiceModelSamples**。  
   
  **ServiceModelSamples**虚拟目录用于生成和运行使用 IIS 承载的服务的所有示例。 这是运行示例所需的唯一虚拟目录。 绑定示例将替换以前在此虚拟目录部署的所有服务；只有最近生成的示例将在此虚拟目录中部署并可用。  
   

@@ -1,14 +1,6 @@
 ---
-title: "IAssemblyCacheItem 接口"
-ms.custom: 
+title: IAssemblyCacheItem 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAssemblyCacheItem
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: ccc9387a-9f44-4f4f-bf8f-0ea6d2afa21b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 323b501efbdf309d5e0d595137407dd8289de17a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c6da86ce2d86a6842d2d7d8de860e9a8621bdaf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem 接口
 表示全局程序集缓存中的单个程序集。  
@@ -45,12 +33,12 @@ ms.lasthandoff: 12/22/2017
 |[Commit 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|提交对内存的缓存的程序集引用。|  
 |[CreateStream 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|具有指定的名称和格式创建一个流。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  

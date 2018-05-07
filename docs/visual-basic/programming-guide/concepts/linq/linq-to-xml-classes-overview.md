@@ -1,22 +1,12 @@
 ---
-title: "LINQ to XML 类概述 (Visual Basic)"
-ms.custom: 
+title: LINQ to XML 类概述 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f22f1b7e4f94acda3a9279baf92fbce0840e55ba
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dd9e392c1fec86bfb1fe0e0f8bee0cd0c7919fe4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML 类概述 (Visual Basic)
 本主题提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 命名空间中 <xref:System.Xml.Linq> 类的列表及每个类的简短说明。  
@@ -95,5 +85,5 @@ ms.lasthandoff: 10/18/2017
 ### <a name="xtext-class"></a>XText 类  
  <xref:System.Xml.Linq.XText> 表示一个文本节点。 多数情况下都不必使用此类。 此类主要用于混合内容。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ to XML 编程概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

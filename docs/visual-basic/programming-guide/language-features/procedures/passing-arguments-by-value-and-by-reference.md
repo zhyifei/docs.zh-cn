@@ -1,13 +1,6 @@
 ---
 title: 通过值和通过引用传递自变量 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
 - Visual Basic code, procedures
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f10e0e582e060c1305a9c0fe922620cb4da2c215
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2d333bc873ba055d7a7b53c50fcfeec4cc0f9491
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>通过值和通过引用传递自变量 (Visual Basic)
 在 Visual Basic 中，可以传递了参数给过程*按值*或*通过引用*。 这称为*传递机制*，同时确定过程是否可以修改调用代码中的以该参数基础的编程元素。 过程声明确定每个参数的传递机制，通过指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字。  

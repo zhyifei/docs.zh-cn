@@ -1,24 +1,17 @@
 ---
 title: Delegate 语句
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Delegate
 helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7e79a261f74cbc7aa067af63629e31bedf65d163
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fb9d8b2c2647ba8fd3b7cee4781f1574b6679b0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegate-statement"></a>Delegate 语句
 用于声明委托。 委托是一个引用类型，是指`Shared`方法的类型或实例方法的对象。 可以使用任何具有匹配参数和返回类型的过程来创建此委托类的实例。 然后可以通过将委托实例更高版本调用过程。  
@@ -39,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 |`Shadows`|可选。 指示此委托重新声明并隐藏具有相同名称的编程元素或在基类中的重载元素集。 可以与任何其他类型一起隐藏任何类型的已声明元素。<br /><br /> 隐藏的元素不可在隐藏它的派生类中使用（除了从隐藏元素不可访问的位置）。 例如，如果`Private`元素隐藏一个基类元素，没有访问权限的代码`Private`元素改为访问基类元素。|  
 |`Sub`|可选，但请`Sub`或`Function`必须出现。 将委托作为此过程声明`Sub`不返回值的过程。|  
 |`Function`|可选，但请`Sub`或`Function`必须出现。 将委托作为此过程声明`Function`返回一个值的过程。|  
-|`name`|必需。 委托类型; 名称遵循标准变量命名约定。|  
+|`name`|必须的。 委托类型; 名称遵循标准变量命名约定。|  
 |`typeparamlist`|可选。 此委托的类型参数列表。 用逗号分隔多个类型参数。 （可选），每个类型参数可以声明变体使用`In`和`Out`泛型修饰符。 必须将括[类型列表](../../../visual-basic/language-reference/statements/type-list.md)在括号中，并引入了其与`Of`关键字。|  
 |`parameterlist`|可选。 调用时传递给过程的参数列表。 必须将括[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)在括号中。|  
 |`type`|如果你指定所需`Function`过程。 返回值的数据类型。|  
@@ -70,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AddressOf 运算符](../../../visual-basic/language-reference/operators/addressof-operator.md)  
  [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
  [委托](../../../visual-basic/programming-guide/language-features/delegates/index.md)  

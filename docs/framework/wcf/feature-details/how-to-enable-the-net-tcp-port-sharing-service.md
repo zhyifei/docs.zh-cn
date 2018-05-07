@@ -1,30 +1,18 @@
 ---
-title: "如何：启用 Net.TCP 端口共享服务"
-ms.custom: 
+title: 如何：启用 Net.TCP 端口共享服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b9f1c57f067fa7c8bece3acaf0d51303b31d13bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5a18e11d9fc15f23b5353883a63d838face58a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>如何：启用 Net.TCP 端口共享服务
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用一个名为 Net.TCP 端口共享服务的 Windows 服务，以方便在多个进程之间共享 TCP 端口。 此服务作为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的一部分进行安装，但作为一项安全预防措施，默认情况下不会启用该服务，因此必须在首次使用它之前手动启用。 本主题描述如何使用 Microsoft 管理控制台 (MMC) 管理单元配置 Net TCP 端口共享服务。  
+Windows Communication Foundation (WCF) 使用名为 Net.TCP 端口共享服务的 Windows 服务以方便在多个进程之间共享 TCP 端口。 此服务已安装作为一部分 WCF，但该服务未启用默认情况下，作为安全措施，并且因此必须手动启用在首次使用之前。 本主题描述如何使用 Microsoft 管理控制台 (MMC) 管理单元配置 Net TCP 端口共享服务。  
   
  启用 Net.TCP 端口共享服务并手动启动后，请参阅[如何： 配置 WCF 服务以使用端口共享](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)有关如何配置你的服务以使用此服务的信息。  
   

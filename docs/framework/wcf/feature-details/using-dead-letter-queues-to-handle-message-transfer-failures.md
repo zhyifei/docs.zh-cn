@@ -1,29 +1,15 @@
 ---
 title: 使用死信队列处理消息传输故障
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b70b7a7849ba0927c8ee4a4903aefc27bfa9d0c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>使用死信队列处理消息传输故障
 排队消息可能传送失败。 这些失败的消息将记录在死信队列中。 传送失败可能是由于网络故障、队列已删除、队列已满、身份验证失败或未能准时传送等原因而引起的。  
@@ -32,11 +18,11 @@ ms.lasthandoff: 04/30/2018
   
  通常，应用程序会编写补偿逻辑从死信队列中读取这些消息及失败的原因。 补偿逻辑取决于失败的原因。 例如，当身份验证失败时，您可以更正附有消息的证书，然后重新发送该消息。 如果传送失败的原因在于已达到目标队列的配额，则您可以在认为配额问题已得到解决时重新尝试发送。  
   
- 大多数队列系统都有系统范围的死信队列，其中存储来自该系统的所有失败消息。 消息队列 (MSMQ) 提供两个系统范围的死信队列：事务性系统范围死信队列，用于存储未能传送到事务性队列的消息；非事务性系统范围死信队列，用于存储未能传送到非事务性队列的消息。 如果两个客户端要向两个不同的服务发送消息，从而 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的不同队列将共享要发送的同一个 MSMQ 服务，则系统死信队列中可能会包含混合消息。 这并不总是最佳的。 在某些情况下（如安全），您可能不希望一个客户端从死信队列中读取另一个客户端的消息。 共享死信队列还要求客户端浏览该队列来查找这些客户端所发送的消息，但根据死信队列中的消息数量，这样做的开销可能会极其大。 因此，在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `NetMsmqBinding`，`MsmqIntegrationBinding,`和上的 MSMQ[!INCLUDE[wv](../../../../includes/wv-md.md)]提供自定义死信队列 （有时称为应用程序特定死信队列）。  
+ 大多数队列系统都有系统范围的死信队列，其中存储来自该系统的所有失败消息。 消息队列 (MSMQ) 提供两个系统范围的死信队列：事务性系统范围死信队列，用于存储未能传送到事务性队列的消息；非事务性系统范围死信队列，用于存储未能传送到非事务性队列的消息。 如果两个客户端会将消息发送到两个不同的服务，并且因此 WCF 中的不同队列将共享相同的 MSMQ 服务，以发送，则可以在系统死信队列中包含混合消息。 这并不总是最佳的。 在某些情况下（如安全），您可能不希望一个客户端从死信队列中读取另一个客户端的消息。 共享死信队列还要求客户端浏览该队列来查找这些客户端所发送的消息，但根据死信队列中的消息数量，这样做的开销可能会极其大。 因此，在 WCF`NetMsmqBinding`，`MsmqIntegrationBinding,`和上的 MSMQ[!INCLUDE[wv](../../../../includes/wv-md.md)]提供自定义死信队列 （有时称为应用程序特定死信队列）。  
   
  自定义死信队列在共享同一个 MSMQ 服务来发送消息的各客户端之间提供隔离。  
   
- 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 为所有排队客户端应用程序提供了一个系统范围的死信队列。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为每个排队客户端应用程序都提供了一个死信队列。  
+ 上[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，Windows Communication Foundation (WCF) 提供的所有排队客户端应用程序的系统级死信队列。 上[!INCLUDE[wv](../../../../includes/wv-md.md)]，WCF 针对每个排队客户端应用程序提供了一个死信队列。  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>指定死信队列的用途  
  死信队列位于发送应用程序的队列管理器中。 该队列中存储已过期或者传输/传送失败的消息。  
@@ -48,7 +34,7 @@ ms.lasthandoff: 04/30/2018
 -   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>从死信队列中读取消息  
- 从死信队列中读取消息的应用程序类似于从应用程序队列中进行读取的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，只是存在下列细微差异：  
+ 从死信队列中读取消息的应用程序类似于从应用程序队列，但存在下列细微差异除外读取的 WCF 服务：  
   
 -   若要从系统的事务性死信队列中读取消息，统一资源标识符 (URI) 必须为以下形式：net.msmq://localhost/system$;DeadXact。  
   
@@ -58,7 +44,7 @@ ms.lasthandoff: 04/30/2018
   
  有关如何对地址队列的详细信息，请参阅[服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   
- 接收器上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆栈将该服务正在侦听的各个地址与消息上的地址进行匹配。 如果地址匹配，则调度该消息；否则，不调度该消息。 在从死信队列中进行读取时，这种操作可能会引发问题，原因是死信队列中的消息通常将寻址到该服务而非死信队列服务。 因此，从死信队列中进行读取的服务必须安装一个地址筛选器 `ServiceBehavior`，指示堆栈独立于被寻地址来与队列中的所有消息匹配。 具体而言，您必须将一个带有 `ServiceBehavior` 参数的 <xref:System.ServiceModel.AddressFilterMode.Any> 添加到从死信队列中读取消息的服务中。  
+ 接收方上的 WCF 堆栈匹配消息上的地址侦听服务的地址。 如果地址匹配，则调度该消息；否则，不调度该消息。 在从死信队列中进行读取时，这种操作可能会引发问题，原因是死信队列中的消息通常将寻址到该服务而非死信队列服务。 因此，从死信队列中进行读取的服务必须安装一个地址筛选器 `ServiceBehavior`，指示堆栈独立于被寻地址来与队列中的所有消息匹配。 具体而言，您必须将一个带有 `ServiceBehavior` 参数的 <xref:System.ServiceModel.AddressFilterMode.Any> 添加到从死信队列中读取消息的服务中。  
   
 ## <a name="poison-message-handling-from-the-dead-letter-queue"></a>死信队列中的病毒消息处理  
  病毒消息处理在死信队列中可用，但有一些条件。 因为在从系统的死信队列中进行读取时，您无法从系统队列创建子队列，所以不能将 `ReceiveErrorHandling` 设置为 `Move`。 请注意，如果您正在从自定义死信队列中读取，则可以拥有子队列，因此 `Move` 对于病毒消息为有效处理。  

@@ -1,14 +1,6 @@
 ---
-title: "_EFN_StackTrace 函数"
-ms.custom: 
+title: _EFN_StackTrace 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - _EFN_StackTrace
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: caea7754-867c-4360-a65c-5ced4408fd9d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 905a44ee3187bc920d9342b043383a1500c28985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace 函数
 提供托管堆栈跟踪的文本表示形式以及 `CONTEXT` 记录的数组，其中每项对应非托管代码和托管代码之间的每个转换。  
@@ -86,7 +74,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 -   如果`pTransitionContexts`是不为 null，函数会将其视为数组的长度的结构`puiTransitionContextCount`。 通过给定的结构大小`uiSizeOfContext`，而且的大小必须[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)或`CONTEXT`体系结构。  
   
--   `wszTextOut`是编写采用以下格式：  
+-   `wszTextOut` 是编写采用以下格式：  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -105,12 +93,12 @@ HRESULT CALLBACK _EFN_StackTrace(
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** SOS_Stacktrace.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [调试全局静态函数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

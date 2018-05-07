@@ -1,14 +1,6 @@
 ---
-title: "ICLRHostProtectionManager::SetProtectedCategories 方法"
-ms.custom: 
+title: ICLRHostProtectionManager::SetProtectedCategories 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostProtectionManager.SetProtectedCategories
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fa21dc7b-5da7-440b-b59e-9180e5181f9d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0971e93f02420966d6561c5b7d4dce8b75e222fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6c93566d0909f1dbef46862760d47ede478d51a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a>ICLRHostProtectionManager::SetProtectedCategories 方法
 指定的托管的类型和成员的类别应禁止在部分受信任的代码中运行。  
@@ -54,7 +42,7 @@ HRESULT SetProtectedCategories (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetProtectedCategories`已成功返回。|  
+|S_OK|`SetProtectedCategories` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -64,14 +52,14 @@ HRESULT SetProtectedCategories (
 ## <a name="remarks"></a>备注  
  每个`EApiCategories`值参考了托管的类型和成员的列表。 `EApiCategories`枚举和`SetProtectedCategories`方法直接相关于托管<xref:System.Security.Permissions.HostProtectionAttribute>类，用于将标记公开对应于所描述的类别的功能的托管的类型和成员`EApiCategories`。 有关详细信息，请参阅<xref:System.Security.Permissions.HostProtectionAttribute>和<xref:System.Security.Permissions.HostProtectionResource>枚举，直接对应于`EApiCategories`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Security.Permissions.HostProtectionAttribute>  

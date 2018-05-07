@@ -1,28 +1,14 @@
 ---
-title: "TypeConverters 和 XAML"
-ms.custom: 
+title: TypeConverters 和 XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1b7ee4b3b00a675cfafc884d41079b76656bdf49
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6d41b5ad519302016ed7fa1d6a103af0f4f14d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters 和 XAML
 本主题介绍将从字符串进行的类型转换作为常规 XAML 语言功能的用途。 在.NET Framework 中，<xref:System.ComponentModel.TypeConverter>类用作可作为 XAML 属性用法中的属性值的托管自定义类实现的一部分的某种特定用途。 如果你编写的自定义的类，并且你希望你的类，若要能够用作 XAML 可设置属性值的实例，你可能需要应用<xref:System.ComponentModel.TypeConverterAttribute>到该类，编写自定义<xref:System.ComponentModel.TypeConverter>类，或两者。  
@@ -69,7 +55,7 @@ ms.lasthandoff: 12/22/2017
  需要标记扩展而不是类型转换器的一种常见情况是使对已存在的对象进行引用。 无状态类型转换器最多只能生成新实例，这可能并不理想。 若要深入了解标记扩展，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
 ### <a name="native-type-converters"></a>本机类型转换器  
- 在 XAML 分析器的 WPF 和 .NET XAML 实现中，某些特定类型具有本机类型转换处理，但在传统上可能不会将这些类型视为基元。 这种类型的一个示例是 <xref:System.DateTime>。 这样做的原因基于.NET Framework 体系结构的工作原理： 类型<xref:System.DateTime>mscorlib 除外，在.NET 中最基本的库中定义。 <xref:System.DateTime>不允许使用来自引入依赖关系的另一个程序集的特性进行特性化 (<xref:System.ComponentModel.TypeConverterAttribute>来自系统) 因此无法支持通过特性化的正常类型转换器发现机制。 相反，XAML 分析器具有需要此类本机处理的类型的列表，它可通过与真正基元的处理方式类似的方式来处理这些类型。 (对于<xref:System.DateTime>这涉及调用<xref:System.DateTime.Parse%2A>。)  
+ 在 XAML 分析器的 WPF 和 .NET XAML 实现中，某些特定类型具有本机类型转换处理，但在传统上可能不会将这些类型视为基元。 这种类型的一个示例是 <xref:System.DateTime>。 这样做的原因基于.NET Framework 体系结构的工作原理： 类型<xref:System.DateTime>mscorlib 除外，在.NET 中最基本的库中定义。 <xref:System.DateTime> 不允许使用来自引入依赖关系的另一个程序集的特性进行特性化 (<xref:System.ComponentModel.TypeConverterAttribute>来自系统) 因此无法支持通过特性化的正常类型转换器发现机制。 相反，XAML 分析器具有需要此类本机处理的类型的列表，它可通过与真正基元的处理方式类似的方式来处理这些类型。 (对于<xref:System.DateTime>这涉及调用<xref:System.DateTime.Parse%2A>。)  
   
 <a name="Implementing_a_Type_Converter"></a>   
 ## <a name="implementing-a-type-converter"></a>实现类型转换器  
@@ -77,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="typeconverter"></a>TypeConverter  
  在<xref:System.Windows.Point>以前，给定类的示例<xref:System.Windows.PointConverter>所述。 对于 XAML 的.NET 实现，用于 XAML 用途的所有类型转换器都是从基类派生的类<xref:System.ComponentModel.TypeConverter>。 <xref:System.ComponentModel.TypeConverter>类的.NET Framework 的版本，在 XAML 存在之前中存在; 其原始用法之一是提供在可视化设计器的属性对话框的字符串转换。 对于 XAML 的角色<xref:System.ComponentModel.TypeConverter>展开以包括正在启用分析字符串特性值，并可能恢复到的字符串处理特定对象属性的运行时间的值的转换为字符串和源自字符串转换类的基类作为特性的序列化。  
   
- <xref:System.ComponentModel.TypeConverter>定义四个成员，它们对于针对 XAML 处理用途的字符串之间来回转换是相关：  
+ <xref:System.ComponentModel.TypeConverter> 定义四个成员，它们对于针对 XAML 处理用途的字符串之间来回转换是相关：  
   
 -   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
@@ -125,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="applying-the-typeconverterattribute"></a>应用 TypeConverterAttribute  
  在你的自定义类型转换器要用作操作的顺序由 XAML 处理器的自定义类的类型转换器，必须应用[!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)]<xref:System.ComponentModel.TypeConverterAttribute>于类定义。 通过特性指定的 <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> 必须是自定义类型转换器的类型名。 应用此特性后，当 XAML 处理器处理属性类型使用自定义类类型的值时，它可以输入字符串并返回对象实例。  
   
- 还可以基于每个属性提供类型转换器。 而不是应用[!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)]<xref:System.ComponentModel.TypeConverterAttribute>向类定义，请将其应用于属性定义 (主定义，不`get` / `set`实现)。 属性的类型必须与自定义类型转换器处理的类型匹配。 应用此特性后，当 XAML 处理器处理该属性的值时，它可以处理输入字符串并返回对象实例。 如果选择使用来自 [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] 或某种其他库（在其中无法控制类定义并且无法应用 <xref:System.ComponentModel.TypeConverterAttribute>）的属性类型，则每属性类型转换器方法特别有用。  
+ 还可以基于每个属性提供类型转换器。 而不是应用[!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)]<xref:System.ComponentModel.TypeConverterAttribute>向类定义，请将其应用于属性定义 (主定义，不`get` / `set`实现)。 属性的类型必须与自定义类型转换器处理的类型匹配。 应用此特性后，当 XAML 处理器处理该属性的值时，它可以处理输入字符串并返回对象实例。 每个属性类型转换器方法是特别有用，如果你选择使用的属性类型从 Microsoft.NET Framework 或某种其他库其中无法控制类定义并且无法应用<xref:System.ComponentModel.TypeConverterAttribute>存在。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ComponentModel.TypeConverter>  

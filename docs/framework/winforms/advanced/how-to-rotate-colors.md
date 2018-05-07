@@ -1,13 +1,6 @@
 ---
-title: "如何：旋转颜色"
-ms.custom: 
+title: 如何：旋转颜色
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81b022011bd5613b8e956aa83482d2836508a4f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 258ef9cd5eb8d569b2982614e3087df730a18c57
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-rotate-colors"></a>如何：旋转颜色
 四维颜色空间中的旋转很难直观显示。 我们可以更加轻松地实现旋转同意保持一个固定的颜色组件的可视化效果。 假设我们同意将 alpha 分量固定为 1 （完全不透明）。 然后我们可以可视化三维颜色空间红色、 绿色和蓝色轴与下图中所示。  

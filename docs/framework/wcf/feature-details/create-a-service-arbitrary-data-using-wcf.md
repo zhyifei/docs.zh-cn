@@ -1,27 +1,15 @@
 ---
-title: "如何：使用 WCF REST 编程模型创建接受任意数据的服务"
-ms.custom: 
+title: 如何：使用 WCF REST 编程模型创建接受任意数据的服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 170149f5a6c495b3f22b9fd30f79ecdda87789b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>如何：使用 WCF REST 编程模型创建接受任意数据的服务
-有时，开发人员必须完全控制从服务操作返回数据的方式。 当服务操作必须以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持的格式返回数据时，就需要这样做。 本主题讨论如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 编程模型创建接收任意数据的服务。  
+有时，开发人员必须完全控制从服务操作返回数据的方式。 服务操作必须返回格式的数据不支持 byWCF 时，这种情况。 本主题讨论如何使用 WCF REST 编程模型来创建接收任意数据的服务。  
   
 ### <a name="to-implement-the-service-contract"></a>实现服务协定  
   

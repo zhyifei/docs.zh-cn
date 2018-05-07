@@ -1,12 +1,6 @@
 ---
-title: "如何：使用 LINQ 查找查询结果中的最小值或最大值 (Visual Basic)"
-ms.custom: 
+title: 如何：使用 LINQ 查找查询结果中的最小值或最大值 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - max operator [LINQ in Visual Basic]
 - aggregate operator [LINQ in Visual Basic]
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6a9555a86914f2352bc1a07bd92a839181355c9d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: d074ff135258dbc35b16c698fa6fc8eff0edf0be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>如何：使用 LINQ 查找查询结果中的最小值或最大值 (Visual Basic)
 语言集成查询 (LINQ)，可以轻松地访问数据库信息和执行查询。  
@@ -52,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  在 **“项目”** 菜单上，单击 **“添加新项”**。 选择**LINQ to SQL 类**项模板。  
   
-3.  为 `northwind.dbml` 文件命名。 单击 **“添加”**。 此时，northwind.dbml 文件打开的对象关系设计器 （O/R 设计器）。  
+3.  为 `northwind.dbml` 文件命名。 单击 **添加**。 此时，northwind.dbml 文件打开的对象关系设计器 （O/R 设计器）。  
   
 ### <a name="to-add-tables-to-query-to-the-or-designer"></a>若要添加到 O/R 设计器查询的表  
   

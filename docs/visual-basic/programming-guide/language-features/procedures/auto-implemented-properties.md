@@ -1,12 +1,6 @@
 ---
-title: "自动实现的属性 (Visual Basic)"
-ms.custom: 
+title: 自动实现的属性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AutoProperty
 - vb.AutoImplementedProperty
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 507d91f6176eb8bc3888be6f9843b5ffdd28a08f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc83163a024bd50d3e256b4eb49861669f8c02c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>自动实现的属性 (Visual Basic)
 *自动实现的属性*使你可以快速指定类的属性，而无需编写代码`Get`和`Set`属性。 为自动实现的属性编写代码时，Visual Basic 编译器会自动创建私有字段以存储属性变量，并且会创建关联的 `Get` 和 `Set` 过程。  
@@ -101,7 +92,7 @@ End Class
 ## <a name="expanding-an-auto-implemented-property"></a>扩展自动实现的属性  
  如果需要将自动实现的属性转换为包含 `Get` 或 `Set` 过程的扩展属性，则 Visual Basic 代码编辑器可以为属性自动生成 `Get` 和 `Set` 过程以及 `End Property` 语句。 如果将光标置于后的空白行上，则生成的代码`Property`语句中，键入一个`G`(有关`Get`) 或`S`(有关`Set`)，然后按 enter 键。 在 `Property` 语句末尾按 Enter 时，Visual Basic 代码编辑器会为只读和只写属性自动生成 `Get` 或 `Set` 过程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何： 声明和 Visual Basic 中调用默认属性](./how-to-declare-and-call-a-default-property.md)  
  [如何：声明具有混合访问级别的属性](./how-to-declare-a-property-with-mixed-access-levels.md)  
  [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)  

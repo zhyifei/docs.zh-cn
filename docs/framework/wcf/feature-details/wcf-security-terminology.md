@@ -1,35 +1,23 @@
 ---
 title: WCF 安全术语
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全术语
 在讨论安全时使用的某些术语可能是您所不熟悉的。 本主题提供了一些安全术语的扼要解释，但并不试图提供每个术语的全面文档。  
   
- 有关中的术语的详细信息[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]文档，请参阅[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。  
+ 有关 Windows Communication Foundation (WCF) 文档中的术语的详细信息，请参阅[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。  
   
  Access Control List (ACL) — 访问控制列表 (ACL)  
  适用于某个对象的安全保护的列表。 （对象可以是文件、进程、事件或其他任何具有安全描述符的事物。）ACL 中的条目是访问控制项 (ACE)。 有两种类型的 ACL：自由和系统。  
@@ -189,7 +177,7 @@ ms.lasthandoff: 04/30/2018
  用户帐户名 (有时称为*用户登录名*) 和标识的用户帐户所在的域的域名。 这是登录到 Windows 域的标准用法。 格式： someone@example.com （对于电子邮件地址）。  
   
 > [!NOTE]
->  除了标准 UPN 形式外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还接受以下级形式表示的 UPN，例如 cohowinery.com\someone。  
+>  除了标准 UPN 窗体中，WCF 低级别形式，例如 cohowinery.com\someone 接受 Upn。  
   
  X.509  
  一种国际上认可的证书标准，用于定义证书的必需部分。  

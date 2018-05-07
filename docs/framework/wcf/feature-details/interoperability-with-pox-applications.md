@@ -1,35 +1,21 @@
 ---
 title: 与 POX 应用程序的互操作性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 42f6bbb1a5605bd0a604f5cfe31ce5ea48d9bb10
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7522233723b6b91d5a7b27d3f82ca328e29ce3f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interoperability-with-pox-applications"></a>与 POX 应用程序的互操作性
-"Plain Old XML"(POX) 应用程序通过交换原始 HTTP 消息包含仅 XML 应用程序数据未封入 SOAP 信封内进行通信。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以同时提供使用 POX 消息的服务和客户端。 就服务而言，可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现向客户端（例如，发送和接收 POX 消息的 Web 浏览器和脚本语言）公开终结点的服务。 就客户端而言，可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 编程模型实现与基于 POX 的服务进行通信的客户端。  
+"Plain Old XML"(POX) 应用程序通过交换原始 HTTP 消息包含仅 XML 应用程序数据未封入 SOAP 信封内进行通信。 Windows Communication Foundation (WCF) 可以提供服务和使用 POX 消息的客户端。 在服务上，WCF 可以用于实现向客户端，例如 Web 浏览器公开终结点的服务和发送和接收 POX 消息的脚本语言。 在客户端上的 WCF 编程模型可以用于实现与基于 POX 的服务进行通信的客户端。  
   
 > [!NOTE]
 >  本文档最初是针对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 编写的。  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 具有对处理 POX 应用程序的内置支持。 有关更多信息，请参阅[WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
   
 ## <a name="pox-programming-with-wcf"></a>使用 WCF 进行 POX 编程  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通过使用 POX 消息的 HTTP 通信的服务[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+ 通过使用 POX 消息的 HTTP 通信的 WCF 服务[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
 ```xml  
 <customBinding>  
@@ -46,9 +32,9 @@ ms.lasthandoff: 04/30/2018
   
 -   [ \<TextMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)。  
   
- 标准 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 文本消息编码器被专门配置为使用 <xref:System.ServiceModel.Channels.MessageVersion.None%2A> 值，从而使其可以处理未封装在 SOAP 信封内到达的 XML 消息负载。  
+ WCF 文本消息编码器被专门配置为使用的标准<xref:System.ServiceModel.Channels.MessageVersion.None%2A>值，使其可以处理 XML 消息负载未到达包装在 SOAP 信封中。  
   
- 使用 POX 消息通过 HTTP 进行通信的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端使用类似的绑定（如下面的命令性代码所示）。  
+ 使用 POX 消息通过 HTTP 进行通信的 WCF 客户端使用类似的绑定 （如下面的命令性代码所示）。  
   
 ```  
 private static Binding CreatePoxBinding()  
@@ -63,7 +49,7 @@ private static Binding CreatePoxBinding()
   
  因为 POX 客户端必须显式指定将消息发送到的 URI，所以它们通常必须将 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 配置为手动寻址模式，方法是将该元素的 <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A> 属性设置为 `true`。 这样，应用程序代码就可以对消息进行显式寻址，因此，当应用程序将消息发送到不同的 HTTP URI 时，不必每次都创建一个新的 <xref:System.ServiceModel.ChannelFactory>。  
   
- 因为 POX 消息不使用 SOAP 标头传送重要的协议信息，所以 POX 客户端和服务通常必须操作用于发送或接收消息的基础 HTTP 请求片段。 HTTP 特定的协议信息（例如 HTTP 标头和状态代码）通过以下两个类在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 编程模型中加以表示：  
+ 因为 POX 消息不使用 SOAP 标头传送重要的协议信息，所以 POX 客户端和服务通常必须操作用于发送或接收消息的基础 HTTP 请求片段。 HTTP 特定的协议信息，如 HTTP 标头和状态代码通过两个类 WCF 编程模型中加以表示：  
   
 -   <xref:System.ServiceModel.Channels.HttpRequestMessageProperty>，包含有关 HTTP 请求的信息，例如 HTTP 方法和请求标头。  
   

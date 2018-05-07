@@ -1,14 +1,6 @@
 ---
 title: 'Icorprofilerinfo7:: Readinmemorysymbols'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 api_name:
 - ICorProfilerInfo7.ReadInMemorySymbols
 api_location:
@@ -18,17 +10,13 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5851f73cc899ef21d8a5dcfd8f03617641a6625a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9874c8e567a89fd3977be360666c86406f2cd395
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>Icorprofilerinfo7:: Readinmemorysymbols
 [支持版本：[!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] 及更高版本]  
@@ -69,19 +57,19 @@ HRESULT ReadInMemorySymbols(
  `CORPROF_E_MODULE_IS_DYNAMIC`如果该模块使用创建<xref:System.Reflection.Emit>。  
   
 ## <a name="remarks"></a>备注  
- `ReadInMemorySymbols`方法尝试读取`countSymbolBytes`的数据从偏移量开始`symbolsReadOffset`内存中流中。 将数据复制到`pSymbolBytes`，这应该具有`countSymbolBytes`的可用空间。     `pCountSymbolsBytesRead`包含的实际读取，这可能会更少的字节数比`countSymbolBytes`如果已到达流结尾。  
+ `ReadInMemorySymbols`方法尝试读取`countSymbolBytes`的数据从偏移量开始`symbolsReadOffset`内存中流中。 将数据复制到`pSymbolBytes`，这应该具有`countSymbolBytes`的可用空间。     `pCountSymbolsBytesRead` 包含的实际读取，这可能会更少的字节数比`countSymbolBytes`如果已到达流结尾。  
   
 > [!NOTE]
 >  当前实现不支持 Reflection.Emit。 如果通过使用 Reflection.Emit 创建模块，该方法返回`CORPROF_E_MODULE_IS_DYNAMIC`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICorProfilerInfo7 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

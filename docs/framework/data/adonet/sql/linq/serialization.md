@@ -1,27 +1,15 @@
 ---
 title: Serialization2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 02a8b9bf587f19fec25e629e11c0108e5994e3ba
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cc299e26316b1a3a6fd9b475dcdb8e3911bcf2e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization"></a>序列化
 本主题介绍[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]序列化功能。 下面几段提供了有关在设计时如何在代码生成期间添加序列化以及 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 类的运行时序列化行为的信息。  
@@ -30,7 +18,7 @@ ms.lasthandoff: 01/17/2018
   
 -   在[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]，更改**序列化模式**属性**Unidirectional**。  
   
--   在 SQLMetal 命令行上添加**/serialization**选项。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
+-   在 SQLMetal 命令行上添加 **/serialization**选项。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ## <a name="overview"></a>概述  
  生成的代码[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]默认情况下提供延迟的加载功能。 延迟加载对在中间层以透明方式根据需要加载数据而言非常方便。 但是，它会给序列化过程带来问题，原因是不论是否需要进行延迟加载，序列化程序都会触发延迟加载。 实际上，对对象进行序列化时，会对其在所有出站延迟加载引用下的可传递闭包进行序列化。  

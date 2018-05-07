@@ -1,30 +1,18 @@
 ---
-title: "如何：创建基本 WCF Web HTTP 服务"
-ms.custom: 
+title: 如何：创建基本 WCF Web HTTP 服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d147286fd2f8fe3f4f5e822598a07b51ae6d9791
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>如何：创建基本 WCF Web HTTP 服务
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允许您创建公开 Web 终结点的服务。 Web 终结点通过 XML 或 JSON 发送数据，没有 SOAP 信封。 本主题演示如何公开这类终结点。  
+Windows Communication Foundation (WCF) 允许你创建公开 Web 终结点的服务。 Web 终结点通过 XML 或 JSON 发送数据，没有 SOAP 信封。 本主题演示如何公开这类终结点。  
   
 > [!NOTE]
 >  确保 Web 终结点安全的唯一方式是使用传输安全通过 HTTPS 将其公开。 使用基于消息的安全性时，通常将安全信息放置在 SOAP 标头中，原因是发送到非 SOAP 终结点的信息不包含 SOAP 信封，没有地方放置安全信息，因而必须依赖于传输安全性。  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  如果不添加终结点，则 <xref:System.ServiceModel.Web.WebServiceHost> 自动创建默认终结点。 <xref:System.ServiceModel.Web.WebServiceHost> 还添加 <xref:System.ServiceModel.Description.WebHttpBehavior> 并禁用 HTTP 帮助页和 Web 服务描述语言 (WSDL) GET 功能，因此元数据终结点不会妨碍默认的 HTTP 终结点。  
     >   
-    >  当尝试调用终结点上的操作时，添加 URL 为 "" 的非 SOAP 终结点会导致意外行为。 其原因是终结点的侦听 URI 与帮助页（在浏览到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的基址时显示的页）的 URI 相同。  
+    >  当尝试调用终结点上的操作时，添加 URL 为 "" 的非 SOAP 终结点会导致意外行为。 这样做的原因是终结点 URI 是 （当你浏览到 WCF 服务的基址时显示的页） 中的帮助页的 URI 相同的侦听。  
   
      要防止此类情况发生，可以执行下列操作之一：  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>在 Internet Explorer 中调用映射到 GET 的服务操作  
   
-1.  打开 Internet Explorer 并键入"`http://localhost:8000/EchoWithGet?s=Hello, world!`"，然后按 enter 键。 该 URL 包含服务的基址 ("http://localhost:8000/")、终结点的相对地址 ("")、要调用的服务操作 ("EchoWithGet")、一个问号以及其后通过“and”符号 (&) 分隔的命名参数的列表。  
+1.  打开 Internet Explorer 并键入"`http://localhost:8000/EchoWithGet?s=Hello, world!`"，然后按 enter 键。 URL 包含服务的基址 ("http://localhost:8000/")，终结点的相对地址 ("")，调用 ("EchoWithGet") 和问号的服务操作后跟用与号分隔的命名参数的列表 (&)。  
   
 ### <a name="to-call-service-operations-in-code"></a>在代码中调用服务操作  
   

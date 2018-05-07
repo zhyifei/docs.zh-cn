@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugging::OpenVirtualProcess 方法"
-ms.custom: 
+title: ICLRDebugging::OpenVirtualProcess 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugging.OpenVirtualProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1f71f42f10c3d25714998d1697b20a5ee13e055
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51b5a9ecd85f0d40ac2fe2826cbbe7a56a6228d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 方法
 获取对应于进程中加载了公共语言运行时 (CLR) 模块 ICorDebugProcess 接口。  
@@ -87,7 +75,7 @@ HRESULT OpenVirtualProcess(
 |S_OK|该方法已成功完成。|  
 |E_POINTER|`pDataTarget` 为 `null`。|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)回调返回错误或未提供有效的句柄。|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget`未实现此版本的运行时所需的数据目标接口。|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 未实现此版本的运行时所需的数据目标接口。|  
 |CORDBG_E_NOT_CLR|所指示的模块不是 CLR 模块。 无法检测到 CLR 模块，因为内存损坏、 模块不可用，或的 CLR 版本不比填充码版本更高时，也会返回此 HRESULT。|  
 |CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|此运行时版本不支持此调试的模型。 目前，通过在之前的 CLR 版本不支持的调试模型[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 `pwszVersion`输出参数仍将设置为正确的值后此错误。|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|CLR 版本大于此调试器声明以支持的版本。 `pwszVersion`输出参数仍将设置为正确的值后此错误。|  
@@ -98,14 +86,14 @@ HRESULT OpenVirtualProcess(
   
 ## <a name="remarks"></a>备注  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

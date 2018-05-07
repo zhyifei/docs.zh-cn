@@ -1,11 +1,6 @@
 ---
 title: -主要
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - main compiler option [Visual Basic]
 - /main compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b22b4bb1b6649265eabc02beb6b0145f7c075b27
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 51a527dfddd2b78ac1c0559420298a66eb4b63f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-main"></a>-主要
 指定包含 `Sub Main` 过程的类或模块。  
@@ -30,10 +25,10 @@ ms.lasthandoff: 03/22/2018
   
 ## <a name="arguments"></a>自变量  
  `location`  
- 必须的。 名称的类或模块包含`Sub Main`在程序启动时要调用的过程。 这可能是窗体中**的 main: module**或**-main:namespace.module**。  
+ 必须的。 名称的类或模块包含`Sub Main`在程序启动时要调用的过程。 这可能是窗体中**的 main: module**或 **-main:namespace.module**。  
   
 ## <a name="remarks"></a>备注  
- 在创建可执行文件或 Windows 可执行程序时，请使用此选项。 如果**-主要**省略选项，编译器将搜索有效的共享`Sub Main`所有公共类和模块中。  
+ 在创建可执行文件或 Windows 可执行程序时，请使用此选项。 如果 **-主要**省略选项，编译器将搜索有效的共享`Sub Main`所有公共类和模块中。  
   
  请参阅[Visual Basic 中的 Main 过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)有关的各种形式的讨论`Main`过程。  
   
@@ -58,7 +53,7 @@ ms.lasthandoff: 03/22/2018
 vbc t2.vb t3.vb -main:Test2  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  

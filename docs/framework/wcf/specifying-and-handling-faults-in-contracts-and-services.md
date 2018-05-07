@@ -1,31 +1,17 @@
 ---
 title: 在协定和服务中指定和处理错误
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 00b3687169aa2e5521a3e3348be2a45738e97093
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: fc5fa03b723a35c4748fc16db8946277266e3b0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>在协定和服务中指定和处理错误
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序通过以下方式来处理错误情况：将托管异常对象映射到 SOAP 错误对象，并将 SOAP 错误对象映射到托管异常对象。 本节中的主题讨论如何设计协定以将错误条件作为自定义 SOAP 错误公开、如何作为服务实现的一部分返回这些错误，以及客户端如何捕捉这些错误。  
+Windows Communication Foundation (WCF) 应用程序处理错误情况下，通过将托管的异常对象映射到 SOAP 错误对象，并对托管的异常对象的 SOAP 错误对象。 本节中的主题讨论如何设计协定以将错误条件作为自定义 SOAP 错误公开、如何作为服务实现的一部分返回这些错误，以及客户端如何捕捉这些错误。  
   
 ## <a name="error-handling-overview"></a>错误处理概述  
  在所有托管应用程序中，处理错误由 <xref:System.Exception> 对象表示。 在基于 SOAP 的应用程序（如 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序）中，服务方法使用 SOAP 错误消息来传递处理错误信息。 SOAP 错误是包括在服务操作元数据中的消息类型，因此会创建一个错误协定，客户端可使用该协定来使操作更加可靠或更具交互性。 此外，由于 SOAP 错误在客户端以 XML 格式表示，这是一种任何 SOAP 平台上的客户端都可以使用的具有极好的互操作性的类型系统，可增加 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序的适用范围。  

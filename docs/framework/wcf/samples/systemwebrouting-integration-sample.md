@@ -1,26 +1,12 @@
 ---
-title: "SystemWebRouting 集成示例"
-ms.custom: 
+title: SystemWebRouting 集成示例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
-ms.translationtype: MT
+ms.openlocfilehash: 43785f84cb3852a35f1ed3bd555287842455a89b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting 集成示例
 此示例演示 <xref:System.Web.Routing> 命名空间中承载层与类的集成。 通过 <xref:System.Web.Routing> 命名空间中的类，应用程序可以使用不直接与物理资源对应的 URL。 开发人员使用 Web 路由可以为随后映射回实际 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 HTTP 创建虚拟地址。 如果必须以不使用物理文件或资源的方式承载 WCF 服务，或者必须使用不包含 .html 或 .aspx 这类文件的 URL 访问服务时，这会十分有用。 此示例演示如何利用 <xref:System.Web.Routing.RouteTable> 类创建映射到 global.asax 中定义的运行服务的虚拟 URI。 
@@ -39,7 +25,7 @@ ms.lasthandoff: 02/27/2018
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- 如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+ 如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -51,11 +37,11 @@ ms.lasthandoff: 02/27/2018
   
      出现该示例的目录列表。 请注意，不存在具有 .svc 文件扩展名的文件。  
   
-3.  在地址栏中，添加`movies`到 URL，因此它会读取 http://localhost: [端口] /movies，然后按 enter。  
+3.  在地址栏中，添加`movies`到 URL，因此它会读取http://localhost:[端口] /movies，然后按 enter。  
   
      电影源显示在浏览器中。  
   
-4.  在地址栏中，将 `channels` 添加到 URL，使其显示为 http://localhost:[端口]/channels，然后按 Enter。  
+4.  在地址栏中，添加`channels`到 URL，这就是读取http://localhost:[端口] /channels，然后按 ENTER。  
   
      通道源显示在浏览器中。  
   
@@ -81,11 +67,11 @@ ms.lasthandoff: 02/27/2018
   
 4.  右键单击 Web 应用程序并选择启动应用程序，**管理应用程序**然后**浏览**。  
   
-5.  在地址栏中，将 `movies` 添加到 URL，使其显示为 http://localhost:[端口]/movies，然后按 Enter。  
+5.  在地址栏中，添加`movies`到 URL，这就是读取http://localhost:[端口] /movies，然后按 enter。  
   
      电影源显示在浏览器中。  
   
-6.  在地址栏中，将 `channels` 添加到 URL，使其显示为 http://localhost:[端口]/channels，然后按 Enter。  
+6.  在地址栏中，添加`channels`到 URL，这就是读取http://localhost:[端口] /channels，然后按 ENTER。  
   
      通道源显示在浏览器中。  
   

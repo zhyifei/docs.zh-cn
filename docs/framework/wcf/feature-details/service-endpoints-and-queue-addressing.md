@@ -1,33 +1,19 @@
 ---
 title: 服务终结点和队列寻址
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a2f4807e447482ee790f2ca9a2ab4dbde531b1c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服务终结点和队列寻址
-本主题讨论客户端如何对从队列中读取的服务进行寻址以及服务终结点如何映射到队列。 作为提示，下图演示传统 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 排队应用程序部署。  
+本主题讨论客户端如何对从队列中读取的服务进行寻址以及服务终结点如何映射到队列。 提醒一下下, 图演示传统 Windows Communication Foundation (WCF) 排队应用程序部署。  
   
  ![排队应用程序关系图](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分布式队列图")  
   
- 客户端为了将消息发送到服务，需要确定该消息在目标队列中的地址。 服务为了从队列中读取消息，需要在目标队列中设置它的侦听地址。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的寻址基于统一资源标识符 (URI)，而消息队列 (MSMQ) 队列名称不是基于 URI。 因此，必须了解如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对在 MSMQ 中创建的队列进行寻址。  
+ 客户端为了将消息发送到服务，需要确定该消息在目标队列中的地址。 服务为了从队列中读取消息，需要在目标队列中设置它的侦听地址。 在 WCF 中进行寻址基于统一资源标识符 URI 的时消息队列 (MSMQ) 队列名称不是基于 URI 的。 因此，它是必须了解如何使用 WCF 的 MSMQ 中创建的队列进行寻址。  
   
 ## <a name="msmq-addressing"></a>MSMQ 寻址  
  MSMQ 使用路径和格式名来标识队列。 路径指定一个主机名称和一个 `QueueName`。 可以根据需要在主机名称和 `Private$` 之间添加一个 `QueueName`，以指示不是在 Active Directory 目录服务中发布的专用队列。  
@@ -37,11 +23,11 @@ ms.lasthandoff: 04/30/2018
  有关 MSMQ 路径和格式名的详细信息，请参阅[有关消息队列](http://go.microsoft.com/fwlink/?LinkId=94837)。  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding 和服务寻址  
- 在将消息发送到服务中的目标地址时，将根据用于通信的传输协议选择 URI 中的方案。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的每个传输协议都有唯一的方案。 此方案必须反映用于通信的传输协议的性质。 例如，net.tcp、net.pipe、HTTP 等等。  
+ 在将消息发送到服务中的目标地址时，将根据用于通信的传输协议选择 URI 中的方案。 在 WCF 中的每个传输协议有唯一的方案。 此方案必须反映用于通信的传输协议的性质。 例如，net.tcp、net.pipe、HTTP 等等。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 MSMQ 排队传输协议公开 net.msmq 方案。 使用 net.msmq 方案寻址的任何消息都使用 MSMQ 排队传输协议通道上的 `NetMsmqBinding` 发送。  
+ MSMQ 排队传输在 WCF 公开 net.msmq 方案。 使用 net.msmq 方案寻址的任何消息都使用 MSMQ 排队传输协议通道上的 `NetMsmqBinding` 发送。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的队列寻址基于下面的模式：  
+ WCF 中的队列寻址基于下面的模式：  
   
  net.msmq: / / \<*主机名*> / [专用 /] \<*队列名称*>  
   
@@ -49,7 +35,7 @@ ms.lasthandoff: 04/30/2018
   
 -   \<*主机名*> 是承载目标队列的计算机的名称。  
   
--   [private] 可选。 它在对作为专用队列的目标队列寻址时使用。 若要对公共队列寻址，不能指定 private。 请注意，与 MSMQ 路径不同，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URI 形式中不包含“$”。  
+-   [private] 可选。 它在对作为专用队列的目标队列寻址时使用。 若要对公共队列寻址，不能指定 private。 请注意，与 MSMQ 路径不同中不存在不包含"$"WCF URI 形式。  
   
 -   \<*队列名称*> 是队列的名称。 队列名还可以引用子队列。 因此， \<*队列名称*> = \<*名称的队列*> [;*子 queue 名称*]。  
   
@@ -102,10 +88,10 @@ ms.lasthandoff: 04/30/2018
   
  net.msmq: //localhost/ [专用 /] \<*自定义的死信的队列的名称-*>。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务验证它接收到的消息的目标队列是否都是它正在侦听的特定队列。 如果消息的目标队列与它所在的队列不匹配，服务不会处理该消息。 这存在一个问题：侦听死信队列的服务必须寻址，因为死信队列中的任何消息都需要传递到别处。 若要从死信队列或病毒队列中读取消息，必须使用带有 `ServiceBehavior` 参数的 <xref:System.ServiceModel.AddressFilterMode.Any>。 有关示例，请参阅[死信队列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)。  
+ WCF 服务将验证它接收的所有消息已都发送到它正在侦听的特定队列。 如果消息的目标队列与它所在的队列不匹配，服务不会处理该消息。 这存在一个问题：侦听死信队列的服务必须寻址，因为死信队列中的任何消息都需要传递到别处。 若要从死信队列或病毒队列中读取消息，必须使用带有 `ServiceBehavior` 参数的 <xref:System.ServiceModel.AddressFilterMode.Any>。 有关示例，请参阅[死信队列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)。  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding 和服务寻址  
- `MsmqIntegrationBinding` 用于与传统 MSMQ 应用程序进行通信。 为了便于与现有 MSMQ 应用程序进行互操作，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 仅支持格式名寻址。 因此，使用此绑定发送的消息必须符合 URI 方案。  
+ `MsmqIntegrationBinding` 用于与传统 MSMQ 应用程序进行通信。 为了便于与现有 MSMQ 应用程序间的互操作，WCF 支持仅格式名寻址。 因此，使用此绑定发送的消息必须符合 URI 方案。  
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
@@ -115,7 +101,7 @@ ms.lasthandoff: 04/30/2018
   
  在使用 `MsmqIntegrationBinding` 对 SRMP 进行寻址时，不需要在直接格式名中添加 /msmq/ 来帮助 Internet 信息服务 (IIS) 进行调度。 例如： 当寻址的队列 abc 使用 SRMP 协议，而不是 DIRECT =http://adatum.com/msmq/private$/ abc，则应使用 DIRECT =http://adatum.com/private$/ abc。  
   
- 请注意，对于 `MsmqIntegrationBinding`，不能使用 net.msmq:// 寻址。 因为 `MsmqIntegrationBinding` 支持任意形式的 MSMQ 格式名寻址，所以您可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，该服务使用此绑定来使用 MSMQ 中的多路广播和通讯组列表功能。 一个例外是在使用 `CustomDeadLetterQueue` 时指定 `MsmqIntegrationBinding`。 它必须采用 net.msmq:// 形式，这与使用 `NetMsmqBinding` 进行指定的方式相似。  
+ 请注意，对于 `MsmqIntegrationBinding`，不能使用 net.msmq:// 寻址。 因为`MsmqIntegrationBinding`支持任意形式的 MSMQ 格式名寻址，你可以使用 WCF 服务使用此绑定来使用 MSMQ 中的多路广播和通讯组列表功能。 一个例外是在使用 `CustomDeadLetterQueue` 时指定 `MsmqIntegrationBinding`。 它必须采用 net.msmq:// 形式，这与使用 `NetMsmqBinding` 进行指定的方式相似。  
   
 ## <a name="see-also"></a>请参阅  
  [承载排队应用程序的 Web](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

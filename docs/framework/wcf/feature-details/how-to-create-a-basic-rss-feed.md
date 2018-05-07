@@ -1,32 +1,18 @@
 ---
 title: 如何：创建基本 RSS 源
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a730bb0087ecfa396442dedf48fb64b1ab3ac512
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d5b62d968c38401a19fc9009954450bef210e5a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>如何：创建基本 RSS 源
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允许您创建公开联合源的服务。 本主题讨论如何创建公开 RSS 联合源的联合服务。  
+Windows Communication Foundation (WCF) 允许你创建公开联合源的服务。 本主题讨论如何创建公开 RSS 联合源的联合服务。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>创建基本联合服务  
   

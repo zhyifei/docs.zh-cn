@@ -1,42 +1,28 @@
 ---
 title: WCF Web HTTP 编程模型概述
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-caps.latest.revision: 45
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f617aa68a052b60933db2dc4b2051c910af6b9b9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 2c3498857c7c0e69c3678ba03f94c14f9b6d8e67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 编程模型概述
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WEB HTTP 编程模型提供使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成 WEB HTTP 服务所需的基本元素。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务旨在提供给最大范围的可能客户端（包括 Web 浏览器）访问，并且具有以下独特要求：  
+Windows Communication Foundation (WCF) WEB HTTP 编程模型提供生成与 WCF WEB HTTP 服务所需的基本元素。 WCF WEB HTTP 服务旨在提供给最大范围的可能客户端，包括 Web 浏览器访问，并且具有以下独特要求：  
   
--   **Uri 和 URI 处理**Uri 在 WEB HTTP 服务的设计中扮演着重要作用。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 类来提供 URI 处理功能。  
+-   **Uri 和 URI 处理**Uri 在 WEB HTTP 服务的设计中扮演着重要作用。 WCF WEB HTTP 编程模型使用<xref:System.UriTemplate>和<xref:System.UriTemplateTable>类来提供 URI 处理功能。  
   
--   **支持 GET 和 POST 操作**WEB HTTP 服务还使用 GET 谓词进行数据检索，除了各种调用谓词来进行数据修改和远程调用。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 将服务操作与 GET 和其他 HTTP 谓词（如 PUT、POST 和 DELETE）相关联。  
+-   **支持 GET 和 POST 操作**WEB HTTP 服务还使用 GET 谓词进行数据检索，除了各种调用谓词来进行数据修改和远程调用。 WCF WEB HTTP 编程模型使用<xref:System.ServiceModel.Web.WebGetAttribute>和<xref:System.ServiceModel.Web.WebInvokeAttribute>若要将服务操作与 GET 和其他 HTTP 谓词，如 PUT、 POST 和 DELETE。  
   
--   **多种数据格式**Web 样式服务处理很多种数据以外的 SOAP 消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior> 来支持许多不同的数据格式，包括 XML 文档、JSON 数据对象和二进制内容（例如图像、视频文件或纯文本）的流。  
+-   **多种数据格式**Web 样式服务处理很多种数据以外的 SOAP 消息。 WCF WEB HTTP 编程模型使用<xref:System.ServiceModel.WebHttpBinding>和<xref:System.ServiceModel.Description.WebHttpBehavior>以支持许多不同的数据格式，包括 XML 文档、 JSON 数据对象和二进制内容，例如图像、 视频文件或纯文本的流。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 扩展到覆盖 Web 样式的方案，包括 WEB HTTP 服务、AJAX 和 JSON 服务以及联合 (ATOM/RSS) 源。 AJAX 和 JSON 服务有关的详细信息，请参阅[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。 有关联合的详细信息，请参阅[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。  
+ WCF WEB HTTP 编程模型扩展 WCF 以覆盖 Web 样式的方案，包括 WEB HTTP 服务、 AJAX 和 JSON 服务以及联合 (ATOM/RSS) 源。 AJAX 和 JSON 服务有关的详细信息，请参阅[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。 有关联合的详细信息，请参阅[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。  
   
  对于可从 WEB HTTP 服务返回的数据的类型没有额外的限制。 任何可序列化类型都可以从 WEB HTTP 服务操作返回。 因为 WEB HTTP 服务操作可以通过 Web 浏览器调用，所以对可在 URL 中指定的数据类型有一个限制。 默认情况下支持哪些类型的详细信息请参阅**UriTemplate 查询字符串参数和 Url**下面一节。 通过提供您自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 实现来指定如何将 URL 中指定的参数转换为实际参数类型，可以更改默认行为。 有关详细信息，请参阅<xref:System.ServiceModel.Dispatcher.QueryStringConverter>。  
   
 > [!CAUTION]
->  使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型编写的服务不使用 SOAP 消息。 由于不使用 SOAP，因此无法使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的安全功能。 然而，您可以通过使用 HTTPS 承载服务来使用基于传输的安全性。 有关详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+>  使用 WCF WEB HTTP 编程模型编写的服务不使用 SOAP 消息。 由于不使用 SOAP，因此不能使用由 WCF 提供的安全功能。 然而，您可以通过使用 HTTPS 承载服务来使用基于传输的安全性。 有关 WCF 安全性的详细信息，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
 >  为 IIS 安装 WebDAV 扩展会导致 Web HTTP 服务返回 HTTP 405 错误，因为 WebDAV 扩展试图处理所有 PUT 请求。 若要解决此问题，你可卸载 WebDAV 扩展或为网站禁用 WebDAV 扩展。 有关详细信息，请参阅[IIS 和 WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
@@ -64,12 +50,12 @@ ms.lasthandoff: 04/30/2018
   
 -   `Bind`() 和 `Match`() 互为逆方法，因此可以调用 `Match`( `Bind`( x ) ) 并返回到开始时的相同环境。  
   
- 在很多时候（尤其是在服务器需要基于 URI 将请求调度到某个服务操作时），对于那些可以单独对包含的每个模板进行寻址的数据结构，您需要一直跟踪其中的一组 <xref:System.UriTemplate> 对象。 <xref:System.UriTemplateTable> 表示一组 URI 模板，并在给定的一组模板和候选 URI 中选择最匹配的项。 这与任何特定网络堆栈（包括 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]）不相关，因此可以在任何需要的地方使用。  
+ 在很多时候（尤其是在服务器需要基于 URI 将请求调度到某个服务操作时），对于那些可以单独对包含的每个模板进行寻址的数据结构，您需要一直跟踪其中的一组 <xref:System.UriTemplate> 对象。 <xref:System.UriTemplateTable> 表示一组 URI 模板，并在给定的一组模板和候选 URI 中选择最匹配的项。 这不被关联与任何特定的网络堆栈 （包括 WCF），因此你可以在任何需要的地方使用它。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务模型使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 将服务操作与由 <xref:System.UriTemplate> 描述的一组 URI 相关联。 通过使用 <xref:System.UriTemplate> 或 <xref:System.ServiceModel.Web.WebGetAttribute>，将服务操作与 <xref:System.ServiceModel.Web.WebInvokeAttribute> 相关联。 有关详细信息<xref:System.UriTemplate>和<xref:System.UriTemplateTable>，请参阅[UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ WCF 服务模型使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 将服务操作与由 <xref:System.UriTemplate> 描述的一组 URI 相关联。 通过使用 <xref:System.UriTemplate> 或 <xref:System.ServiceModel.Web.WebGetAttribute>，将服务操作与 <xref:System.ServiceModel.Web.WebInvokeAttribute> 相关联。 有关详细信息<xref:System.UriTemplate>和<xref:System.UriTemplateTable>，请参阅[UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
   
 ## <a name="webget-and-webinvoke-attributes"></a>WebGet 和 WebInvoke 特性  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务除了使用各种调用谓词（例如 HTTP POST、PUT 和 DELETE）之外，还使用检索谓词（例如 HTTP GET）。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型允许服务开发人员使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 控制与其服务操作相关联的 URI 模板和谓词。 可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 来控制各个操作如何绑定到 URI 以及与这些 URI 相关联的 HTTP 方法。 例如，在下面的代码中添加 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute>。  
+ WCF WEB HTTP 服务使用检索谓词 (例如 HTTP GET) 除了各种调用谓词 （例如 HTTP POST、 PUT 和 DELETE）。 WCF WEB HTTP 编程模型允许服务开发人员控制的 URI 模板和与与其服务操作相关联的谓词<xref:System.ServiceModel.Web.WebGetAttribute>和<xref:System.ServiceModel.Web.WebInvokeAttribute>。 可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 来控制各个操作如何绑定到 URI 以及与这些 URI 相关联的 HTTP 方法。 例如，在下面的代码中添加 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute>。  
   
 ```  
 [ServiceContract]  
@@ -109,7 +95,7 @@ interface ICustomer
 }  
 ```  
   
- 若要查看的完整示例[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用的服务[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]WEB HTTP 编程模型，请参阅[如何： 创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ 若要查看使用 WCF WEB HTTP 编程模型的 WCF 服务的完整示例，请参阅[如何： 创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
   
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate 查询字符串参数和 URL  
  可以通过键入与服务操作相关联的 URL 来从 Web 浏览器调用 Web 样式服务。 这些服务操作可以采用查询字符串参数，必须在 URL 内使用字符串格式指定这些参数。 下表演示可以在 URL 内传递的类型和使用的格式。  
@@ -138,7 +124,7 @@ interface ICustomer
 |具有可在类型和字符串表示形式之间来回进行转换的 `TypeConverterAttribute` 的类型。|取决于类型转换器。|  
   
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>格式和 WCF WEB HTTP 编程模型  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型具有一些可以处理许多不同的数据格式的新功能。 在绑定层上，<xref:System.ServiceModel.WebHttpBinding> 可以读取和写入下列不同种类的数据：  
+ WCF WEB HTTP 编程模型具有一些可以处理许多不同的数据格式的新功能。 在绑定层上，<xref:System.ServiceModel.WebHttpBinding> 可以读取和写入下列不同种类的数据：  
   
 -   XML  
   
@@ -146,12 +132,12 @@ interface ICustomer
   
 -   不透明二进制流  
   
- 这意味着 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型可以处理任何类型的数据，但是您可能会对 <xref:System.IO.Stream> 进行编程。  
+ 这意味着 WCF WEB HTTP 编程模型可以处理任何类型的数据，但您可能对编程<xref:System.IO.Stream>。  
   
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 支持 JSON 数据 (AJAX) 和联合源（包括 ATOM 和 RSS）。 有关这些功能的详细信息，请参阅[WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)和[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP 编程模型和安全  
- 由于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型不支持 WS-* 协议，因此保证 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务安全的唯一方式是使用 SSL 通过 HTTPS 公开服务。 有关设置 SSL 与[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[如何在 IIS 中实现 SSL](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ 因为 WCF WEB HTTP 编程模型不支持 WS-* 协议，WCF WEB HTTP 服务安全的唯一方法是使用 SSL 通过 HTTPS 公开服务。 有关设置 SSL 与[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[如何在 IIS 中实现 SSL](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 编程模型疑难解答  
  当使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 调用 WCF WEB HTTP 服务以创建通道时，即使将其他 <xref:System.ServiceModel.Description.WebHttpBehavior> 传递给 <xref:System.ServiceModel.EndpointAddress>，<xref:System.ServiceModel.EndpointAddress> 也会使用配置文件中设置的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>。  

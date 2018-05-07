@@ -1,24 +1,12 @@
 ---
-title: "ADO.NET 中的并行执行"
-ms.custom: 
+title: ADO.NET 中的并行执行
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bdb12ce6f697bbc42052e35c252c9cad6a5e962e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 793a48966192326e2a1273c6ea4b9c9eddda76fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET 中的并行执行
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的并行执行是指在安装了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的多个版本的计算机上以独占方式使用编译的应用程序所针对的版本执行该应用程序的能力。 有关配置通过并行执行的详细信息，请参阅[通过并行执行](../../../../docs/framework/deployment/side-by-side-execution.md)。  
@@ -67,7 +55,7 @@ SELECT * FROM dbo.Customers;
   
  如果您的应用程序依赖于任一 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的行为，则这一更改会影响应用程序的向前和向后兼容性。  
   
- 对于在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的早期版本和更高版本上运行的应用程序，可以编写代码以确保不管在其上运行应用程序的系统的版本如何，应用程序的行为始终相同。 如果要确保某个命令修改所有后续命令的连接状态，建议您使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 来执行该命令。 如果要确保某个命令不修改所有后续命令的连接，建议您在命令中包括用于重置连接状态的命令。 例如:  
+ 对于在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的早期版本和更高版本上运行的应用程序，可以编写代码以确保不管在其上运行应用程序的系统的版本如何，应用程序的行为始终相同。 如果要确保某个命令修改所有后续命令的连接状态，建议您使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 来执行该命令。 如果要确保某个命令不修改所有后续命令的连接，建议您在命令中包括用于重置连接状态的命令。 例如：  
   
 ```  
 SET NOCOUNT ON;  

@@ -1,11 +1,6 @@
 ---
 title: Inherits Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Inherits
 - Inherits
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ae9ba54c3fd1ec3332c9f6260bc19a1293270ad8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 43a8aa4e9e04ee035cb52e9f829de13e5c022217
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 使当前类或接口继承自另一个类或接口组的属性、 变量、 属性、 过程和事件。  
@@ -35,7 +27,7 @@ Inherits basetypenames
   
 |术语|定义|  
 |---|---|  
-|`basetypenames`|必需。 此类派生自的类名称。<br /><br /> - 或 -<br /><br /> 此接口派生的接口名称。 使用逗号分隔多个名称。|  
+|`basetypenames`|必须的。 此类派生自的类名称。<br /><br /> -或-<br /><br /> 此接口派生的接口名称。 使用逗号分隔多个名称。|  
   
 ## <a name="remarks"></a>备注  
  如果使用，`Inherits`语句必须是类或接口定义中的第一个非空、 非注释行。 它应立即遵循`Class`或`Interface`语句。  
@@ -70,7 +62,7 @@ Inherits basetypenames
   
  名为的接口`thisInterface`现在包括中的所有定义<xref:System.IComparable>， <xref:System.IDisposable>，和<xref:System.IFormattable>接口继承的成员分别提供有关特定类型的比较两个对象，释放分配的资源表示作为对象的值和`String`。 一个类以实现`thisInterface`必须实现每个基接口的每个成员。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
  [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
  [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  

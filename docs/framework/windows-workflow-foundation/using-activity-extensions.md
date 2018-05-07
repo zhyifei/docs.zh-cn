@@ -1,30 +1,19 @@
 ---
-title: "使用活动扩展"
-ms.custom: 
+title: 使用活动扩展
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bc2e498a4073f6f0881e011b00de6ac89f4f2fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 32c465ae42a1f0238fab7bba5ea795486db3b562
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-activity-extensions"></a>使用活动扩展
 活动可与工作流应用程序扩展进行交互，这些扩展允许主机提供未在工作流中显式建模的其他功能。  本主题描述如何创建和使用扩展以计算活动的执行次数。  
   
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>使用活动扩展来计算执行次数  
   
-1.  打开 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。 选择**新**，**项目**。 下**Visual C#**节点中，选择**工作流**。  选择**工作流控制台应用程序**从模板列表中。 将项目命名为 `Extensions`。 单击**确定**以创建该项目。  
+1.  打开 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。 选择**新**，**项目**。 下**Visual C#** 节点中，选择**工作流**。  选择**工作流控制台应用程序**从模板列表中。 将项目命名为 `Extensions`。 单击“确定”，创建项目。  
   
 2.  添加`using`的 Program.cs 文件中的语句**System.Collections.Generic**命名空间。  
   

@@ -1,28 +1,14 @@
 ---
-title: "如何：处理 ContextMenuOpening 事件"
-ms.custom: 
+title: 如何：处理 ContextMenuOpening 事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5eec8646a48f94fb9ffdcad14849416732618a06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab4c4867981cd318738b7404d76f2f5932bb9059
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>如何：处理 ContextMenuOpening 事件
 <xref:System.Windows.FrameworkElement.ContextMenuOpening>可以在应用程序，或者调整现有的上下文菜单之前显示或取消本应通过设置中显示的菜单中处理事件<xref:System.Windows.RoutedEventArgs.Handled%2A>属性`true`事件数据中。 设置的典型原因<xref:System.Windows.RoutedEventArgs.Handled%2A>到`true`将菜单完全替换为新数据是在事件<xref:System.Windows.Controls.ContextMenu>对象，这有时需要取消的操作和启动打开一个新。 如果你编写处理程序<xref:System.Windows.FrameworkElement.ContextMenuOpening>事件，你应注意的之间的计时问题<xref:System.Windows.Controls.ContextMenu>控件和服务，它负责打开和一般情况下定位控件的上下文菜单。 本主题展示了一些用于打开方案的各种上下文菜单的代码技术，并阐释了其中计时问题派上用场的情况。  

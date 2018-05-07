@@ -1,29 +1,17 @@
 ---
 title: 工作流安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8acfd0640478cf67309fe53a99707c7d96c5a635
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-security"></a>工作流安全性
-Windows Workflow Foundation (WF) 集成了多种不同的技术，例如 Microsoft SQL Server 和[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]。 如果操作不当，采用这些技术可能会给工作流带来安全问题。  
+Windows Workflow Foundation (WF) 的多个不同的技术，如 Microsoft SQL Server 和 Windows Communication Foundation (WCF) 集成。 如果操作不当，采用这些技术可能会给工作流带来安全问题。  
   
 ## <a name="persistence-security-concerns"></a>持久性安全问题  
   
@@ -49,7 +37,7 @@ Windows Workflow Foundation (WF) 集成了多种不同的技术，例如 Microso
   
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost 的注意事项  
   
--   应确保在工作流中使用的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 终结点的安全。 有关详细信息，请参阅[WCF 安全性概述](http://go.microsoft.com/fwlink/?LinkID=164975)。  
+-   应保护工作流中使用的 Windows Communication Foundation (WCF) 终结点。 有关详细信息，请参阅[WCF 安全性概述](http://go.microsoft.com/fwlink/?LinkID=164975)。  
   
 -   宿主级授权可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 来实现。 请参阅[How To： 为服务创建自定义授权管理器](http://go.microsoft.com/fwlink/?LinkId=192228)有关详细信息。 此外说明了这一点在下面的示例：[工作流服务的安全](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)。  
   

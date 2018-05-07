@@ -1,28 +1,16 @@
 ---
-title: "如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定"
-ms.custom: 
+title: 如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], binding
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4cb803b3f08a2ac9bc2b0cb2dc6da2a72e92a0f7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3acbd17e8e969bb448e6deaf17dec23e44fa3bd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定
 在已向窗体添加控件并确定你的应用程序用户界面后，你可以将控件绑定到数据源，以便在运行时，用户可以更改和保存到应用程序相关的数据。  
@@ -42,7 +30,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  在**属性**窗口：  
   
-    1.  展开**(DataBindings)**节点。  
+    1.  展开 **(DataBindings)** 节点。  
   
     2.  单击箭头旁边<xref:System.Windows.Forms.TextBox.Text%2A>属性。  
   

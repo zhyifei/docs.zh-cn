@@ -1,27 +1,17 @@
 ---
-title: "加载程序 ETW 事件"
-ms.custom: 
+title: 加载程序 ETW 事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebdee4427bd0848e75e58443fefd439acaa27f64
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loader-etw-events"></a>加载程序 ETW 事件
 <a name="top"></a> 这些事件将收集与加载和卸载应用程序域、程序集和模块相关的信息。  
@@ -52,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件信息。  
   
-|Event|事件 ID|说明|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` （为所有应用程序域记录）|156|每当在进程生存期内创建应用程序域时引发。|  
 |`AppDomainUnLoad_V1`|157|每当在进程生存期内销毁应用程序域时引发。|  
@@ -61,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|应用程序域的唯一标识符。|  
 |AppDomainFlags|win:UInt32|0x1：默认域。<br /><br /> 0x2：可执行。<br /><br /> 0x4：应用程序域，位 28-31：共享此域的策略。<br /><br /> 0：一个共享域。|  
@@ -92,7 +82,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |AssemblyID|win:UInt64|程序集的唯一 ID。|  
 |AppDomainID|win:UInt64|此程序集的域的 ID。|  
@@ -116,7 +106,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件信息。  
   
-|Event|事件 ID|说明|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|在进程的生存期内加载模块时引发。|  
 |`ModuleUnload_V2`|153|在进程的生存期内卸载模块时引发。|  
@@ -125,7 +115,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|模块的唯一 ID。|  
 |AssemblyID|win:UInt64|此模块所驻留的程序集的 ID。|  
@@ -171,7 +161,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|标识此模块所属的程序集。|  
 |AssemblyID|win:UInt64|此模块所驻留的程序集的 ID。|  
@@ -196,7 +186,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件信息。  
   
-|Event|事件 ID|说明|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|如果加载的本机映像生成器 (NGen) 映像已使用 IBC 进行优化，并且包含有关 NGen 映像热区的信息，则此事件存在。|  
 |`ModuleRangeDCStart`|160|`ModuleRange` 事件在断开开始时引发。|  
@@ -204,7 +194,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|说明|  
+|字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|如果加载了 CLR 的多个实例，则唯一标识进程中 CLR 的特定实例。|  
 |ModuleID|win:UInt64|标识此模块所属的程序集。|  

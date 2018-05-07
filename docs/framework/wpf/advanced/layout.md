@@ -1,13 +1,6 @@
 ---
-title: "布局"
-ms.custom: 
+title: 布局
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9a5f33ab22779002e85d7a73b29ae74dac81c26
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 00c2b2bcb58e60c1a60d2d360f25089c079c0704
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="layout"></a>布局
 本主题介绍 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 布局系统。 了解布局计算发生的方式和时间对于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中创建用户界面非常重要。  
@@ -97,7 +85,7 @@ ms.lasthandoff: 12/22/2017
   
  首先，本机大小属性<xref:System.Windows.UIElement>进行评估，例如<xref:System.Windows.UIElement.Clip%2A>和<xref:System.Windows.UIElement.Visibility%2A>。 这将生成名为的值`constraintSize`传递给<xref:System.Windows.FrameworkElement.MeasureCore%2A>。  
   
- 其次，在定义的框架属性<xref:System.Windows.FrameworkElement>将进行处理，这将影响的值`constraintSize`。 这些属性通常描述基础的大小调整特征<xref:System.Windows.UIElement>，如其<xref:System.Windows.FrameworkElement.Height%2A>， <xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>，和<xref:System.Windows.FrameworkElement.Style%2A>。 其中每个属性都可以更改显示元素所需的空间。 <xref:System.Windows.FrameworkElement.MeasureOverride%2A>然后通过调用`constraintSize`作为参数。  
+ 其次，在定义的框架属性<xref:System.Windows.FrameworkElement>将进行处理，这将影响的值`constraintSize`。 这些属性通常描述基础的大小调整特征<xref:System.Windows.UIElement>，如其<xref:System.Windows.FrameworkElement.Height%2A>， <xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>，和<xref:System.Windows.FrameworkElement.Style%2A>。 其中每个属性都可以更改显示元素所需的空间。 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 然后通过调用`constraintSize`作为参数。  
   
 > [!NOTE]
 >  属性之间有差异<xref:System.Windows.FrameworkElement.Height%2A>和<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.ActualHeight%2A>和<xref:System.Windows.FrameworkElement.ActualWidth%2A>。 例如，<xref:System.Windows.FrameworkElement.ActualHeight%2A>属性是基于其他高度输入和布局系统的计算的值。 值由布局系统本身，基于实际呈现处理过程中，设置，并可能因此稍微设置值的属性，如<xref:System.Windows.FrameworkElement.Height%2A>，所输入的更改的基础。  
@@ -108,11 +96,11 @@ ms.lasthandoff: 12/22/2017
   
  排列过程开始通过调用<xref:System.Windows.UIElement.Arrange%2A>方法。 在准备阶段中，父<xref:System.Windows.Controls.Panel>元素生成表示子的边界的矩形。 此值传递给<xref:System.Windows.FrameworkElement.ArrangeCore%2A>方法进行处理。  
   
- <xref:System.Windows.FrameworkElement.ArrangeCore%2A>方法评估结果<xref:System.Windows.UIElement.DesiredSize%2A>的子和计算结果可能会影响元素的呈现的大小任何其他边距重叠。 <xref:System.Windows.FrameworkElement.ArrangeCore%2A>生成`arrangeSize`，将传递给<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法<xref:System.Windows.Controls.Panel>作为参数。 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>生成`finalSize`的子级。 最后，<xref:System.Windows.FrameworkElement.ArrangeCore%2A>方法执行最终的求值的偏移量的属性，例如边距和对齐方式，并将子元素放在其布局槽内。 子元素不需要（并且通常不）填充整个分配空间。 然后将控件返回给父级<xref:System.Windows.Controls.Panel>和布局过程已完成。  
+ <xref:System.Windows.FrameworkElement.ArrangeCore%2A>方法评估结果<xref:System.Windows.UIElement.DesiredSize%2A>的子和计算结果可能会影响元素的呈现的大小任何其他边距重叠。 <xref:System.Windows.FrameworkElement.ArrangeCore%2A> 生成`arrangeSize`，将传递给<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法<xref:System.Windows.Controls.Panel>作为参数。 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 生成`finalSize`的子级。 最后，<xref:System.Windows.FrameworkElement.ArrangeCore%2A>方法执行最终的求值的偏移量的属性，例如边距和对齐方式，并将子元素放在其布局槽内。 子元素不需要（并且通常不）填充整个分配空间。 然后将控件返回给父级<xref:System.Windows.Controls.Panel>和布局过程已完成。  
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>面板元素和自定义布局行为  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]包括的一组元素派生自<xref:System.Windows.Controls.Panel>。 这些<xref:System.Windows.Controls.Panel>元素启用许多复杂的布局。 例如，堆叠元素可以轻松地通过使用<xref:System.Windows.Controls.StackPanel>元素，而更复杂且可用的流动布局是可能使用<xref:System.Windows.Controls.Canvas>。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括的一组元素派生自<xref:System.Windows.Controls.Panel>。 这些<xref:System.Windows.Controls.Panel>元素启用许多复杂的布局。 例如，堆叠元素可以轻松地通过使用<xref:System.Windows.Controls.StackPanel>元素，而更复杂且可用的流动布局是可能使用<xref:System.Windows.Controls.Canvas>。  
   
  下表总结了可用的布局<xref:System.Windows.Controls.Panel>元素。  
   
@@ -133,11 +121,11 @@ ms.lasthandoff: 12/22/2017
   
 -   应注意哪些属性值更改会强制执行布局系统的递归更新。  
   
-     如果依赖属性的值可能导致布局系统被初始化，则会使用公共标志对该依赖属性进行标记。 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>和<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>提供有用的提示有关哪些属性值更改会强制执行递归更新由布局系统。 一般情况下，可能会影响元素的边界框的大小的任何属性应具有<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>标志设置为 true。 有关详细信息，请参阅[依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+     如果依赖属性的值可能导致布局系统被初始化，则会使用公共标志对该依赖属性进行标记。 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 和<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>提供有用的提示有关哪些属性值更改会强制执行递归更新由布局系统。 一般情况下，可能会影响元素的边界框的大小的任何属性应具有<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>标志设置为 true。 有关详细信息，请参阅[依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
   
 -   如果可能，请使用<xref:System.Windows.UIElement.RenderTransform%2A>而不是<xref:System.Windows.FrameworkElement.LayoutTransform%2A>。  
   
-     A<xref:System.Windows.FrameworkElement.LayoutTransform%2A>可以是非常有用的方式会影响的内容[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 但是，如果转换的效果没有影响的其他元素的位置，最好使用<xref:System.Windows.UIElement.RenderTransform%2A>相反，因为<xref:System.Windows.UIElement.RenderTransform%2A>不会调用该布局系统。 <xref:System.Windows.FrameworkElement.LayoutTransform%2A>将其转换应用，并强制实施递归布局更新，以便为受影响的元素的新位置。  
+     A<xref:System.Windows.FrameworkElement.LayoutTransform%2A>可以是非常有用的方式会影响的内容[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 但是，如果转换的效果没有影响的其他元素的位置，最好使用<xref:System.Windows.UIElement.RenderTransform%2A>相反，因为<xref:System.Windows.UIElement.RenderTransform%2A>不会调用该布局系统。 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 将其转换应用，并强制实施递归布局更新，以便为受影响的元素的新位置。  
   
 -   避免不必要调用<xref:System.Windows.UIElement.UpdateLayout%2A>。  
   

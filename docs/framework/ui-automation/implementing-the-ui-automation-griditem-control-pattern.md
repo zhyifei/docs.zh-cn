@@ -1,28 +1,19 @@
 ---
-title: "实现 UI 自动化 GridItem 控件模式"
-ms.custom: 
+title: 实现 UI 自动化 GridItem 控件模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, GridItem
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d234ea6f15706a47f6a758528dbe4eda0f3b778a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfe7fb8ab64f148d8ca5af0e419ca60690a1acce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>实现 UI 自动化 GridItem 控件模式
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   合并的单元格将报告其<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>和<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>属性根据其基本定位单元格定义由 UI 自动化提供程序。 通常，它将是最左上方的行或列。  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider>不提供针对如合并或拆分单元格的网格的主动操作。  
+-   <xref:System.Windows.Automation.Provider.IGridItemProvider> 不提供针对如合并或拆分单元格的网格的主动操作。  
   
 -   控制实现<xref:System.Windows.Automation.Provider.IGridItemProvider>通常可以遍历 （即，UI 自动化客户端可以移动到相邻控件） 通过使用键盘。  
   
@@ -48,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-members-for-igriditemprovider"></a>IGridItemProvider 必需的成员  
  实现 <xref:System.Windows.Automation.Provider.IGridItemProvider> 需要以下属性和方法。  
   
-|必需的成员|成员类型|备注|  
+|必需的成员|成员类型|说明|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|属性|无|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|属性|无|  

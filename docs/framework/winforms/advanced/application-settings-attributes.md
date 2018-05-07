@@ -1,28 +1,16 @@
 ---
-title: "应用程序设置特性"
-ms.custom: 
+title: 应用程序设置特性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application settings [Windows Forms], attributes
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2ed0a0393f505d0126508e574b1cd9abe138866
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d52549546bc838d8d38da33b9bb9931488795064
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-attributes"></a>应用程序设置特性
 应用程序设置体系结构提供了许多特性，它们可以应用于应用程序设置包装类或其各个属性。 这些属性是在运行时通过检查应用程序设置基础结构通常专门设置提供程序，以便定制的自定义包装规定的需求的功能。  

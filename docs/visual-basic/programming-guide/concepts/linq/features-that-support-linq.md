@@ -1,25 +1,15 @@
 ---
-title: "支持 LINQ 的 Visual Basic 功能"
-ms.custom: 
+title: 支持 LINQ 的 Visual Basic 功能
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 42465dbb168b7961792aec6b3c2bb7ae8f0a3355
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-features-that-support-linq"></a>支持 LINQ 的 Visual Basic 功能
 名称[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]指在 Visual Basic 支持查询语法和其他语言构造直接在语言中的技术。 与[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，则不需要了解对外部数据源执行查询的新语言。 可以使用 Visual Basic 查询针对关系数据库、 XML 存储区或对象中的数据。 查询功能语言编程到此集成使编译时检查语法错误和类型安全。 此集成还可确保你已经知道你需要知道要在 Visual Basic 中编写丰富、 不同的查询的大部分。  
@@ -75,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbLINQVbFeatures#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_7.vb)]  
   
- 有关详细信息，请参阅[扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
+ 有关详细信息，请参阅[扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。  
   
 ## <a name="lambda-expressions"></a>Lambda 表达式  
  Lambda 表达式是没有名称，用于计算并返回单个值的函数。 不同于命名的函数，可以定义并在同一时间执行 lambda 表达式。 下面的示例显示 4。  
@@ -102,7 +92,7 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息，请参阅 [Lambda 表达式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [语言集成查询 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  [Visual Basic 中的 LINQ 入门](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  

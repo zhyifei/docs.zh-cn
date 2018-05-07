@@ -1,27 +1,17 @@
 ---
-title: "安全可扩展点"
-ms.custom: 
+title: 安全可扩展点
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: eb9038ee6e28cdb5fbf213d56542419e7cdf36c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f68d842b305c37a9e23bf23429c0bfb66a8eae4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-extensibility"></a>安全可扩展点
-本节包含演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中自定义安全的示例。  
+本节包含演示自定义安全中 Windows Communication Foundation (WCF) 的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [持久性已颁发的令牌提供程序](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
@@ -49,7 +39,7 @@ ms.lasthandoff: 12/22/2017
  演示如何实现一个自定义声明授权策略和一个关联的自定义服务授权管理器。  
   
  [自定义令牌](../../../../docs/framework/wcf/samples/custom-token.md)  
- 演示如何将自定义令牌的实现添加到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序中。  
+ 演示如何将添加到 Windows Communication Foundation (WCF) 应用程序自定义令牌的实现。  
   
  [客户端验证](../../../../docs/framework/wcf/samples/client-validation.md)  
  演示如何编写一个客户端终结点行为，用于验证服务终结点以确保可以安全地使用该服务终结点。

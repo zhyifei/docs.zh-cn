@@ -1,23 +1,12 @@
 ---
-title: "WorkflowApplication ReadLine 主机"
-ms.custom: 
+title: WorkflowApplication ReadLine 主机
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8426dd3835f53eeb85711a691c878ce2b877d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine 主机
 此示例是一个泛型 ReadLine 主机。 可以使用包含的 `ReadLine` 活动（或是从通过字符串恢复的书签获取数据的其他类似活动）来加载和运行任何工作流。 `WriteLine` 活动的输出或写入 <xref:System.Activities.Statements.WriteLine.TextWriter%2A> 扩展的任何内容会定向到主机窗口。 当某个实例处于空闲状态时，该实例的可用书签会出现在一个组合框中。 选择书签、输入某些文本和按恢复书签按钮都会继续执行工作流。 也可以取消、中止或终止选择的工作流。 默认情况下持久性处于启用状态 - 您可以关闭主机，然后将其重新打开，实例列表会被那些存储在数据库中的实例所填充。 跟踪可用于将 <xref:System.Activities.WorkflowApplication> 级别事件输出到主机（可以选择在活动级别添加详细跟踪）。  
@@ -66,6 +55,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

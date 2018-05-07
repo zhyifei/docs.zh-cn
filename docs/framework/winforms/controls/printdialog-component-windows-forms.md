@@ -1,13 +1,6 @@
 ---
-title: "PrintDialog 组件（Windows 窗体）"
-ms.custom: 
+title: PrintDialog 组件（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - print options [Windows Forms], PrintDialog component (using designer)
 - PrintDialog component [Windows Forms]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - printing [Windows Forms], PrintDialog component (using designer)
 - printing [Windows Forms], print options
 ms.assetid: 09b54db1-d7c7-42fa-b98a-840e6b80a9ad
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f62b4538b5f91c2f57cab52fa7563680016903a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70ad34c9b899fe2a24c82067610b018ca5282060
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printdialog-component-windows-forms"></a>PrintDialog 组件（Windows 窗体）
 Windows 窗体 `PrintDialog` 组件是一个预先配置的对话框，可用于在基于 Windows 的应用程序中选择打印机、选择要打印的页以及确定其他与打印相关的设置。 将该组件用作选择打印机和打印相关设置的简单解决方案，而不用配置你自己的对话框。 可使用户能够打印文档的很多部分：全部打印、打印指定的页范围或打印选定内容。 利用标准的 Windows 对话框，你可以创建其基本功能可立即为用户所熟悉的应用程序。  

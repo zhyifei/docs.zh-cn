@@ -1,23 +1,16 @@
 ---
-title: "如何：在 DataRepeater 控件中显示未绑定的控件 (Visual Studio)"
+title: 如何：在 DataRepeater 控件中显示未绑定的控件 (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - DataRepeater, adding unbound controls
 - DataRepeater
 - displaying unbound data
 ms.assetid: f234fa40-5a13-4209-930e-7c5f81e86e66
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3e96219f0ea8b8198967e9fa3c6e5afb824352db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 698e518a4ed10ed6cf14ccafc6833b1acf8752db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio"></a>如何：在 DataRepeater 控件中显示未绑定的控件 (Visual Studio)
 除了绑定控件，你可能想要添加到其他控件<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>，如静态标签或图像，它在每个项重复<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。  
@@ -39,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
      请注意该控件具有两个矩形区域。 内部区域是*项模板*; 将每个项中重复添加到模板控件<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件在运行时。 外部区域是*视区*，其中的项将显示; 添加到此区域的控件将不会显示在运行时。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
  [DataRepeater 控件简介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
  [DataRepeater 控件疑难解答](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  

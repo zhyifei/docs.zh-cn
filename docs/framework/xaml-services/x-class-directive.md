@@ -1,13 +1,6 @@
 ---
-title: "x:Class 指令"
-ms.custom: 
+title: x:Class 指令
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:Class
 - xClass
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-caps.latest.revision: "27"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b894a56caa3644bae140e7ec37cf5b55ab093a59
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e6a2379640d2556b553d14d20398a0a14931393
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xclass-directive"></a>x:Class 指令
 配置 XAML 标记编译标记和代码隐藏之间联接分部类。 代码的分部类定义在单独的代码文件中[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]语言中，而在 XAML 编译过程的代码生成由通常创建标记分部类。  
@@ -47,12 +35,12 @@ ms.lasthandoff: 12/22/2017
 |`classname`|必须的。 指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]连接加载的 XAML 和代码隐藏该 xaml 的分部类的名称。|  
   
 ## <a name="dependencies"></a>依赖项  
- `x:Class`仅可以在 XAML 生产的根元素上指定。 `x:Class`在任何具有在 XAML 生产环境中的父对象上无效。 有关详细信息，请参阅[ \[MS-XAML\]部分 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525)。  
+ `x:Class` 仅可以在 XAML 生产的根元素上指定。 `x:Class` 在任何具有在 XAML 生产环境中的父对象上无效。 有关详细信息，请参阅[ \[MS-XAML\]部分 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ## <a name="remarks"></a>备注  
  `namespace`值可能包含其他的点，可以将相关命名空间组织成名称层次结构，这是一种在.NET Framework 编程中的常用技术。 仅字符串中的最后一个点`x:Class`值解释为隔开`namespace`和`classname.`用作类`x:Class`不能为嵌套的类。 不允许嵌套的类，因为确定个点构成的含义`x:Class`是允许嵌套的类的情况下不明确的字符串。  
   
- 在存在的编程模型，可使用`x:Class`，`x:Class`意义上说，它是完全有效，能够不有任何代码隐藏的 XAML 页中是可选的。 但是，该功能与生成操作交互，使用 XAML 的框架的实施方式。 `x:Class`功能也会影响应用程序模型中有以及生成操作中相应的 XAML 指定内容的各种类型的角色。 如果你的 XAML 声明事件处理特性值，或者实例化自定义元素定义的类在代码隐藏类中的位置，你需要提供`x:Class`指令引用 (或[X:subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)) 到相应的代码隐藏的类。  
+ 在存在的编程模型，可使用`x:Class`，`x:Class`意义上说，它是完全有效，能够不有任何代码隐藏的 XAML 页中是可选的。 但是，该功能与生成操作交互，使用 XAML 的框架的实施方式。 `x:Class` 功能也会影响应用程序模型中有以及生成操作中相应的 XAML 指定内容的各种类型的角色。 如果你的 XAML 声明事件处理特性值，或者实例化自定义元素定义的类在代码隐藏类中的位置，你需要提供`x:Class`指令引用 (或[X:subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)) 到相应的代码隐藏的类。  
   
  值`x:Class`指令必须是一个字符串，指定完全限定的名称的类，但不包含任何程序集信息 (等效于<xref:System.Type.FullName%2A?displayProperty=nameWithType>)。 对于简单的应用程序，则可以忽略 CLR 命名空间信息，如果代码隐藏的构建这种方式 （在类级别的代码定义开始）。  
   
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
  对于 Windows Workflow Foundation，`x:Class`命名完全在 XAML 中，构成的自定义活动的类或具有隐藏代码的活动设计器命名 XAML 页面，该分部类。  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight 用法说明  
- `x:Class`适用于 Silverlight 是分开记录。 有关详细信息，请参阅[XAML Namespace （x:）语言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。  
+ `x:Class` 适用于 Silverlight 是分开记录。 有关详细信息，请参阅[XAML Namespace （x:）语言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。  
   
 ## <a name="see-also"></a>请参阅  
  [x:Subclass 指令](../../../docs/framework/xaml-services/x-subclass-directive.md)  

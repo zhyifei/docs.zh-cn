@@ -1,14 +1,6 @@
 ---
-title: "GetPublicKeyToken 方法"
-ms.custom: 
+title: GetPublicKeyToken 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink2.GetPublicKeyToken
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4a16374c-94b0-47b0-9fed-88c2b0cdccd4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 230c98e85bd0aa3bd2f368965b6f7ac028e43df4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94a473d00110c07615ccdfc98bb8944e40dc30e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken 方法
 检索给定的密钥文件或密钥容器的公钥令牌。  
@@ -64,7 +52,7 @@ HRESULT GetPublicKeyToken(
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  需要 alink.h。  
   
 ## <a name="see-also"></a>请参阅  

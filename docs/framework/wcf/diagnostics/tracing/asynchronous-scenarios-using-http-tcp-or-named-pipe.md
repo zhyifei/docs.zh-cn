@@ -1,24 +1,12 @@
 ---
-title: "使用 HTTP、TCP 或命名管道的异步方案"
-ms.custom: 
+title: 使用 HTTP、TCP 或命名管道的异步方案
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76c4c225b333af6d376fa409a05ea5727ede6e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08f70186a59b8717c4441167ee720ba1c20b9dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>使用 HTTP、TCP 或命名管道的异步方案
 本主题描述不同异步请求/答复方案的活动和传输，这些异步方案包含使用 HTTP、TCP 或命名管道的多线程请求。  
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>在使用 HTTP 的任意一端上禁用传播  
  如果`propagateActivity` = `false`任意一侧，ProcessMessage 不指示要传送到哪个 ProcessAction 活动。 因此，将调用一个具有新 ID 的新临时 ProcessAction 活动。 当异步响应与 ServiceModel 代码中的请求匹配时，可从本地上下文中检索活动 ID。 可以传送到具有该 ID 的实际 ProcessAction 活动。  
   
- ![使用 HTTP 和 #47; 的异步方案TCP 和 #47;命名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ ![使用 HTTP 的异步方案&#47;TCP&#47;命名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
   
  图 2. 异步客户端且不执行回调， `propagateActivity` = `false`在任意一侧，HTTP  
   
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  在异步客户端上创建处理操作活动时`propagateActivity` = `false`在调用方或被调用方，和响应消息不包含 Action 标头。  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>在使用 TCP 或命名管道的两端启用传播  
- ![使用 HTTP 和 #47; 的异步方案TCP 和 #47;命名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+ ![使用 HTTP 的异步方案&#47;TCP&#47;命名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
   
  图 3. 异步客户端且不执行回调， `propagateActivity` = `true`双方命名管道 /TCP  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  与图 2，类似如果`propagateActivity` = `false`任意一侧，ProcessMessage 不指示要传送到哪个 ProcessAction 活动。 因此，将调用一个具有新 ID 的新临时 ProcessAction 活动。 当异步响应与 ServiceModel 代码中的请求匹配时，可从本地上下文中检索活动 ID。 可以传送到具有该 ID 的实际 ProcessAction 活动。  
   
- ![使用 HTTP 和 #47; 的异步方案TCP 和 #47;命名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
+ ![使用 HTTP 的异步方案&#47;TCP&#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
   
  图 4。 异步客户端且不执行回调， `propagateActivity` = `false`任意一端使用命名管道 /TCP  
   
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  图 6。 执行回调、并在回调过程之外调用 `endCall` 的异步客户端  
   
 ### <a name="asynchronous-server-with-callback"></a>执行回调的异步服务器  
- ![使用 HTTP 和 #47; 的异步方案TCP 和 #47;名为 &#45;管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
+ ![使用 HTTP 的异步方案&#47;TCP&#47;命名&#45;管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
   
  图 7。 执行回调的异步服务器  
   

@@ -1,34 +1,20 @@
 ---
 title: Web 服务协议互操作性指南
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 1ee8b485d8a46d2599958db2c71f4a6e84875169
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服务协议互操作性指南
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 实现许多 Web 服务协议。 这些协议中有许多都包含大量留给实施者来决定的选项和扩展点。 本主题介绍 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现的 Web 服务协议的列表。 本节中的其他主题介绍每个受支持的协议的实现详细信息。  
+Windows Communication Foundation (WCF) 实现许多 Web 服务协议。 这些协议中有许多都包含大量留给实施者来决定的选项和扩展点。 本主题提供了 WCF 实现的 Web 服务协议的列表。 本节中的其他主题介绍每个受支持的协议的实现详细信息。  
   
 ## <a name="web-services-protocols-implemented-by-wcf"></a>由 WCF 实现的 Web 服务协议  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通过通道提供对 Web 服务 (WS) 基础结构协议的支持，并通过协定功能提供对 Web 服务应用程序协议的支持。 通过 XML 架构描述语言 1.0 (XSD) 和 Web 服务描述语言 (WSDL) 1.1 完成应用程序协议的互操作性。  
+ Web 服务通过协定功能的应用程序协议和 WCF Web 服务 (WS) 基础结构协议通过通道提供支持。 通过 XML 架构描述语言 1.0 (XSD) 和 Web 服务描述语言 (WSDL) 1.1 完成应用程序协议的互操作性。  
   
- 基础结构协议互操作性由 WS-* 规范提供。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道提供支持的 WS-一些\*基础结构协议。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道使用绑定元素进行配置。 下表包含的完整列表的 WS-\*基础结构协议实现的各种[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]绑定元素。  
+ 基础结构协议互操作性由 WS-* 规范提供。 WCF 通道提供支持的 WS-一些\*基础结构协议。 WCF 通道使用绑定元素进行配置。 下表包含的完整列表的 WS-\*由各种 WCF 绑定元素实现的基础结构协议。  
   
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 支持下表中的规范。  
   
@@ -95,17 +81,17 @@ ms.lasthandoff: 03/26/2018
   
 -   [WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [WS-Policy 1.2](http://go.microsoft.com/fwlink/?LinkId=96705)  
+-   [Ws-policy 1.2](http://go.microsoft.com/fwlink/?LinkId=96705)  
   
 -   [Ws-policy 1.5](http://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS-PolicyAttachment 1.2](http://go.microsoft.com/fwlink/?LinkId=96707)  
+-   [Ws-policyattachment 1.2](http://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS-MetadataExchange 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)  
+-   [Ws-metadataexchange 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)  
   
 -   [Ws-transfer Get 进行元数据检索](http://go.microsoft.com/fwlink/?LinkId=96708)  
   
- 另外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中实现了以下互操作性配置文件：  
+ 此外，跨 WCF 实现以下互操作性配置文件：  
   
 -   [基本配置文件 1.1](http://go.microsoft.com/fwlink/?LinkId=69313)  
   
@@ -113,7 +99,7 @@ ms.lasthandoff: 03/26/2018
   
 -   [基本安全配置文件 1.0 工作草案](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统提供的互操作性绑定支持的 Web 服务协议](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
  [消息协议](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
  [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  

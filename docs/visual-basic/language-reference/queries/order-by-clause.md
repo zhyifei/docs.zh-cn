@@ -1,11 +1,6 @@
 ---
-title: "Order By 子句 (Visual Basic)"
+title: Order By 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryOrderBy
 - vb.QueryAscending
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21ee21942b966668a67b14aba72b8f9fc5ee903c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c60156ee81618530b42d5f61dbcac6f59c4f675
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 子句 (Visual Basic)
 指定查询结果的排序顺序。  
@@ -35,7 +27,7 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
 ## <a name="parts"></a>部件  
  `orderExp1`  
- 必需。 一个或多个当前的查询结果中标识字段进行排序的返回的值的方式。 字段名称必须用逗号 （，） 分隔。 你可以标识每个字段，如按升序或降序使用`Ascending`或`Descending`关键字。 如果没有`Ascending`或`Descending`指定关键字，默认的排序顺序为升序。 排序顺序字段优先从左到右。  
+ 必须的。 一个或多个当前的查询结果中标识字段进行排序的返回的值的方式。 字段名称必须用逗号 （，） 分隔。 你可以标识每个字段，如按升序或降序使用`Ascending`或`Descending`关键字。 如果没有`Ascending`或`Descending`指定关键字，默认的排序顺序为升序。 排序顺序字段优先从左到右。  
   
 ## <a name="remarks"></a>备注  
  你可以使用`Order By`子句的查询结果进行排序。 `Order By`子句可以仅对结果进行排序基于当前作用域的范围变量。 例如，`Select`子句引入该作用域在查询表达式中使用新的迭代变量的新作用域。 之前定义的范围变量`Select`在查询中的子句之后不可`Select`子句。 因此，如果你想要按字段不是位于你结果进行排序`Select`子句中，你必须放置`Order By`子句之前`Select`子句。 一个你将需要执行此操作的示例是当你想要对你通过不作为结果的一部分返回的字段的查询进行排序。  
@@ -57,7 +49,7 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [查询](../../../visual-basic/language-reference/queries/queries.md)  
  [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  

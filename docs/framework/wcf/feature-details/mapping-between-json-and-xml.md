@@ -1,35 +1,23 @@
 ---
-title: "JSON 和 XML 之间的映射"
-ms.custom: 
+title: JSON 和 XML 之间的映射
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db34161ad3e2f7d2c9737e6a456b27bd70c5ebfb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON 和 XML 之间的映射
-<xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> 生成的读取器和编写器通过 JavaScript 对象表示法 (JSON) 内容提供 XML API。 JSON 使用 JavaScript 的对象文字子集对数据进行编码。 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序使用 <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> 或 <xref:System.ServiceModel.WebHttpBinding> 发送或接收 JSON 内容时，也使用此工厂生成的读取器和编写器。  
+<xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> 生成的读取器和编写器通过 JavaScript 对象表示法 (JSON) 内容提供 XML API。 JSON 使用 JavaScript 的对象文字子集对数据进行编码。 读取器和此工厂生成的编写时，也使用 JSON 内容正在发送或接收由 Windows Communication Foundation (WCF) 应用程序使用<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>或<xref:System.ServiceModel.WebHttpBinding>。  
   
  使用 JSON 内容进行初始化时，JSON 读取器的行为方式与文本 XML 读取器通过 XML 实例执行的方式相同。 对文本 XML 读取器的调用序列生成某个 XML 实例时，JSON 编写器写出 JSON 内容。 本主题中描述此 XML 实例和 JSON 内容之间的映射以供在高级方案中使用。  
   
- 在内部，由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 处理时，JSON 表示为 XML infoset。 通常，无须关注此内部表示，因为该映射仅仅是逻辑映射：JSON 通常并不物理转换为内存中的 XML 或从 XML 转换为 JSON。 该映射意味着 XML API 用于访问 JSON 内容。  
+ 在内部，JSON 表示为 XML infoset 处理由 WCF 时。 通常，无须关注此内部表示，因为该映射仅仅是逻辑映射：JSON 通常并不物理转换为内存中的 XML 或从 XML 转换为 JSON。 该映射意味着 XML API 用于访问 JSON 内容。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 JSON 时，通常的方案是在适当时由 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 行为或 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 行为自动插入 <xref:System.ServiceModel.Description.WebHttpBehavior>。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 了解 JSON 和 XML infoset 之间的映射，其行为就像它直接处理 JSON 那样。 （通过了解 XML 符合下面的映射，可以将 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 与任何 XML 读取器或编写器一起使用。）  
+ 当 WCF 使用 JSON 时，通常的方案是，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>通过自动插入<xref:System.ServiceModel.Description.WebScriptEnablingBehavior>行为，或通过<xref:System.ServiceModel.Description.WebHttpBehavior>行为在适当的时候。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 了解 JSON 和 XML infoset 之间的映射，其行为就像它直接处理 JSON 那样。 （通过了解 XML 符合下面的映射，可以将 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 与任何 XML 读取器或编写器一起使用。）  
   
- 在高级方案中，可能需要直接访问下面的映射。 希望以自定义方式序列化和反序列化 JSON 而不依赖于 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 时，或者直接为包含 JSON 的消息处理 <xref:System.ServiceModel.Channels.Message> 类型时，会出现这些方案。 JSON-XML 映射也用于消息日志记录。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用消息日志记录功能时，按照下一节中描述的映射，将 JSON 消息记录为 XML。  
+ 在高级方案中，可能需要直接访问下面的映射。 希望以自定义方式序列化和反序列化 JSON 而不依赖于 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 时，或者直接为包含 JSON 的消息处理 <xref:System.ServiceModel.Channels.Message> 类型时，会出现这些方案。 JSON-XML 映射也用于消息日志记录。 当在 WCF 中使用的消息日志记录功能，则将 JSON 消息记录为 XML 按照下一节中描述的映射。  
   
  为阐明映射的概念，下面的示例采用一个 JSON 文档。  
   
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 </root>  
 ```  
   
- 此外，如果示例中的 JSON 消息由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 接收并记录，则在前面的日志中会看到 XML 片段。  
+ 此外，如果在示例中的 JSON 消息是由 WCF 接收，然后记录，你会看到 XML 片段中前面的日志。  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>JSON 和 XML Infoset 之间的映射  
  准确地讲，映射是之间 JSON 中所述[RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) （除非包含某些限制宽松和某些添加其他限制） 和 XML 信息集 （以及不文本 XML） 中所述[XML 信息设置](http://go.microsoft.com/fwlink/?LinkId=98809)。 请参阅本主题的定义*信息项*和 [方括号] 中的字段。  
@@ -105,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
 -   数据协定名称属性（“__type”），将进一步描述。 仅当 JSON 类型属性也存在且其 [正常化值] 为“object”时，此属性才能存在。 此属性由 `DataContractJsonSerializer` 用来保留数据协定类型信息 - 例如，在序列化派生类型和期望基类型的多态情况下。 如果未使用 `DataContractJsonSerializer`，则大多数情况下忽略此属性。  
   
--   [范围内命名空间] 包含“xml”到“http://www.w3.org/XML/1998/namespace”的绑定，如 infoset 规范要求的那样。  
+-   [范围内命名空间] 包含"xml"绑定到"http://www.w3.org/XML/1998/namespace"如 infoset 规范要求的那样。  
   
 -   [子级]、[属性] 和 [范围内命名空间] 不得具有除前面指定的之外的任何项，[命名空间属性] 不得具有成员，但是在读取从 JSON 映射的 XML 时不依赖于这些事实。  
   
@@ -209,7 +197,7 @@ ms.lasthandoff: 12/22/2017
  `{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`  
   
 > [!NOTE]
->  在前面的映射中没有 XML 编码步骤。 因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 仅支持其中密钥名称包含的所有字符都是 XML 元素名称中的有效字符的 JSON 文档。 例如，不支持 JSON 文档 {"<":"a"}，因为 < 不是 XML 元素的有效名称。  
+>  在前面的映射中没有 XML 编码步骤。 因此，WCF 仅支持其中密钥名称中的所有字符都是 XML 元素名称中的有效字符的 JSON 文档。 例如，不支持 JSON 文档 {"<":"a"}，因为 < 不是 XML 元素的有效名称。  
   
  相反的情况（字符在 XML 中有效而在 JSON 中无效）不会导致任何问题，因为上述映射包括 JSON 转义/取消转义步骤。  
   

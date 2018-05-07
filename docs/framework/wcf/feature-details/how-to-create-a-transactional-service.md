@@ -1,26 +1,12 @@
 ---
 title: 如何：创建事务性服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9e39ecd346b5d5fb4113fd17abe9bde715a12aa4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d59c0b96b766f0692c7b84a02deed55e32dc655a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>如何：创建事务性服务
 本示例演示创建事务性服务和使用客户端启动的事务协调服务操作的各个方面。  
@@ -104,7 +90,7 @@ ms.lasthandoff: 04/28/2018
   
 ### <a name="supporting-multiple-transaction-protocols"></a>支持多事务协议  
   
-1.  为了获得最佳性能，您应该对使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 编写的客户端和服务的相关方案使用 OleTransactions 协议。 但是，对于需要与第三方协议堆栈之间具有互操作性的方案，可以使用 WS-AtomicTransaction (WS-AT) 协议。 通过为多个终结点提供特定于协议的恰当绑定，可以将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务配置成同时接受这两种协议，如下面的示例配置所示。  
+1.  为了获得最佳性能，应针对的客户端和服务使用 Windows Communication Foundation (WCF) 编写的方案使用 OleTransactions 协议。 但是，对于需要与第三方协议堆栈之间具有互操作性的方案，可以使用 WS-AtomicTransaction (WS-AT) 协议。 你可以配置 WCF 服务可以通过为多个终结点提供特定于协议的恰当绑定，接受这两种协议，如下面的示例配置中所示。  
   
     ```xml  
     <service name="CalculatorService">  
@@ -139,7 +125,7 @@ ms.lasthandoff: 04/28/2018
   
 ### <a name="controlling-the-completion-of-a-transaction"></a>控制事务的完成  
   
-1.  默认情况下，如果未引发未处理的异常，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 操作会自动完成事务。 使用 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 属性和 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 方法可以修改此行为。 当需要某一操作与另一操作（例如借贷操作）在同一个事务中发生时，可以通过将 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 属性设置为 `false` 来禁用自动完成行为，如下面的 `Debit` 操作示例所示。 在调用 `Debit` 属性设置为 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 的方法前（如操作 `true` 所示）或调用 `Credit1` 方法以将事务显式标记为完成前（如操作 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 所示），`Credit2` 操作使用的事务不会完成。 请注意，所示的两个贷记操作仅供演示，更常见的情况是只使用一个贷记操作。  
+1.  默认情况下，WCF 操作会自动完成事务如果没有引发未处理的异常。 使用 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 属性和 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 方法可以修改此行为。 当需要某一操作与另一操作（例如借贷操作）在同一个事务中发生时，可以通过将 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 属性设置为 `false` 来禁用自动完成行为，如下面的 `Debit` 操作示例所示。 在调用 `Debit` 属性设置为 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 的方法前（如操作 `true` 所示）或调用 `Credit1` 方法以将事务显式标记为完成前（如操作 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 所示），`Credit2` 操作使用的事务不会完成。 请注意，所示的两个贷记操作仅供演示，更常见的情况是只使用一个贷记操作。  
   
     ```  
     [ServiceBehavior]  
@@ -195,7 +181,7 @@ ms.lasthandoff: 04/28/2018
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>控制事务性服务实例的生存期  
   
-1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 属性指定事务完成时是否释放基础服务实例。 由于此属性值默认为 `true`（除非配置了其他值），因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 具有高效且可预见的“实时”激活行为。 在后续事务上调用服务可确保新服务实例不会保留前一个事务的状态。 虽然此行为通常很有用，但有时你可能希望服务实例在事务完成后仍然保持状态。 例如，所需的状态或资源句柄成本昂贵，难以检索或重建时就属于这种情况。 通过将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 属性设置为 `false`，可以实现此目的。 使用该设置时，实例和任何关联状态将可用于后续调用。 使用此设置时，应仔细考虑状态和事务何时清除和完成以及如何清除和完成。 下面的示例演示如何通过对 `runningTotal` 变量保持实例来实现这一目的。  
+1.  WCF 使用<xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>属性指定事务完成时是否释放基础服务实例。 因为这将默认为`true`，除非配置了其他，WCF 展览高效且可预见"-实时"激活行为。 在后续事务上调用服务可确保新服务实例不会保留前一个事务的状态。 虽然此行为通常很有用，但有时你可能希望服务实例在事务完成后仍然保持状态。 例如，所需的状态或资源句柄成本昂贵，难以检索或重建时就属于这种情况。 通过将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 属性设置为 `false`，可以实现此目的。 使用该设置时，实例和任何关联状态将可用于后续调用。 使用此设置时，应仔细考虑状态和事务何时清除和完成以及如何清除和完成。 下面的示例演示如何通过对 `runningTotal` 变量保持实例来实现这一目的。  
   
     ```  
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

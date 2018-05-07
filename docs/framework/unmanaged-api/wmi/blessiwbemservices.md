@@ -1,11 +1,7 @@
 ---
-title: "BlessIWbemServices 函数 （非托管 API 参考）"
-description: "BlessIWbemServices 函数指示用户凭据是否允许访问 IWbemServices 类。"
+title: BlessIWbemServices 函数 （非托管 API 参考）
+description: BlessIWbemServices 函数指示用户凭据是否允许访问 IWbemServices 类。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BlessIWbemServices
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f384e8d045dd7a6f2f864f0991f8caf4a674408b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59cb20f7ccfbd0b8f9d6026c9805468613818130
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices 函数
 指示用户凭据是否允许访问指定[IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx)类。   
@@ -58,17 +51,17 @@ HRESULT BlessIWbemServices (
 `strPassword`  
 [in]与关联的密码`strUser`。
 
-`strAuthority`[in]用户的域名。 请参阅[ConnectServerWmi](connectserverwmi.md)有关详细信息的函数。
+`strAuthority` [in]用户的域名。 请参阅[ConnectServerWmi](connectserverwmi.md)有关详细信息的函数。
 
-`impLevel`[in]模拟级别。
+`impLevel` [in]模拟级别。
 
-`authnLevel`[in]授权级别中。
+`authnLevel` [in]授权级别中。
 
 ## <a name="return-value"></a>返回值
 
 此函数返回以下值中定义*WinError.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | 一个或多个自变量均无效。 |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` 为 `null`。 | 
@@ -76,12 +69,12 @@ HRESULT BlessIWbemServices (
 | `E_OUTOFMEMORY` | 0x80000002 | 内存不足是可用于执行该操作。 | 
 | `S_OK` | 0 | 函数调用成功。 | 
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

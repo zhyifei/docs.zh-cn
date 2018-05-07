@@ -1,32 +1,20 @@
 ---
 title: 匿名客户端的传输安全
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b52a32db1f1ac02f9204198a4cda5d4cb157486
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ad22abe84289cac8f57bebb564ee129bcc2334c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>匿名客户端的传输安全
-此 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 方案使用传输安全 (HTTPS) 确保保密性和完整性。 必须使用安全套接字层 (SSL) 证书对服务器进行身份验证，并且客户端必须信任服务器的证书。 客户端不通过任何机制进行身份验证，因此是匿名的。  
+此 Windows Communication Foundation (WCF) 方案使用传输安全 (HTTPS) 确保保密性和完整性。 必须使用安全套接字层 (SSL) 证书对服务器进行身份验证，并且客户端必须信任服务器的证书。 客户端不通过任何机制进行身份验证，因此是匿名的。  
   
  有关示例应用程序，请参阅[WS 传输安全](../../../../docs/framework/wcf/samples/ws-transport-security.md)。 有关传输安全的详细信息，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
   
@@ -38,7 +26,7 @@ ms.lasthandoff: 04/30/2018
 |--------------------|-----------------|  
 |安全模式|传输|  
 |互操作性|与现有 Web 服务和客户端|  
-|身份验证（服务器）<br /><br /> 身份验证（客户端）|是<br /><br /> 应用程序级（无 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持）|  
+|身份验证（服务器）<br /><br /> 身份验证（客户端）|是<br /><br /> 应用程序级别 （无 WCF 支持）|  
 |完整性|是|  
 |保密性|是|  
 |传输|HTTPS|  

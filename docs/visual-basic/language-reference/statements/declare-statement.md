@@ -1,11 +1,6 @@
 ---
 title: Declare Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Declare
 - vb.Lib
@@ -32,14 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declare-statement"></a>Declare Statement
 声明对外部文件中实现的过程的引用。  
@@ -66,11 +58,11 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`charsetmodifier`|可选。 指定字符集和文件搜索信息。 可以是以下各项之一：<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) （默认值）<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [自动](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|可选，但请`Sub`或`Function`必须出现。 指示外部过程不返回值。|  
 |`Function`|可选，但请`Sub`或`Function`必须出现。 指示外部过程返回一个值。|  
-|`name`|必需。 此外部引用的名称。 有关详细信息，请参阅[声明元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`Lib`|必需。 引入了`Lib`子句，用于标识包含外部过程的外部文件 （DLL 或代码资源）。|  
-|`libname`|必需。 包含声明的过程的文件的名称。|  
+|`name`|必须的。 此外部引用的名称。 有关详细信息，请参阅[声明元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`Lib`|必须的。 引入了`Lib`子句，用于标识包含外部过程的外部文件 （DLL 或代码资源）。|  
+|`libname`|必须的。 包含声明的过程的文件的名称。|  
 |`Alias`|可选。 指示正在声明的过程，不能由中指定的名称在其文件中将标识`name`。 指定在其标识`aliasname`。|  
-|`aliasname`|如果你使用是必需的`Alias`关键字。 标识两种方式之一中的过程的字符串：<br /><br /> 在其文件中，用引号括起来的过程的入口点名称 (`""`)<br /><br /> - 或 -<br /><br /> 数字符号 (`#`) 跟一个整数，指定在其文件中的过程的入口点的序号|  
+|`aliasname`|如果你使用是必需的`Alias`关键字。 标识两种方式之一中的过程的字符串：<br /><br /> 在其文件中，用引号括起来的过程的入口点名称 (`""`)<br /><br /> -或-<br /><br /> 数字符号 (`#`) 跟一个整数，指定在其文件中的过程的入口点的序号|  
 |`parameterlist`|所需如果该过程采用参数。 请参阅[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
 |`returntype`|如果存在`Function`指定和`Option Strict`是`On`。 该过程返回的值的数据类型。|  
   
@@ -125,7 +117,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 -   **字符集。** 你可以指定在`charsetmodifier`如何 Visual Basic 应封送字符串时它调用外部过程。 `Ansi`修饰符将定向 Visual Basic 进行封送处理所有字符串转换为 ANSI 值和`Unicode`修饰符将其封送所有字符串转换为 Unicode 值。 `Auto`修饰符将定向到封送字符串根据.NET Framework 的 Visual Basic 规则基于外部引用`name`，或`aliasname`如果指定。 默认值为 `Ansi`。  
   
-     `charsetmodifier`此外可以指定 Visual Basic 应如何查找其外部文件中的外部过程。 `Ansi`和`Unicode`同时直接 Visual Basic，而无需在搜索过程中修改其名称进行查找。 `Auto`指示 Visual Basic 来确定运行时平台的基本字符集并可能修改外部过程名称，如下所示：  
+     `charsetmodifier` 此外可以指定 Visual Basic 应如何查找其外部文件中的外部过程。 `Ansi` 和`Unicode`同时直接 Visual Basic，而无需在搜索过程中修改其名称进行查找。 `Auto` 指示 Visual Basic 来确定运行时平台的基本字符集并可能修改外部过程名称，如下所示：  
   
     -   在 ANSI 平台，如 Windows 95、 Windows 98 或 Windows Millennium Edition 上首先查找带有任何名称修改的外部过程。 如果失败，外部过程名称末尾追加"A"，并再次查找。  
   
@@ -148,7 +140,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
  [Imports 语句（.NET 命名空间和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
  [AddressOf 运算符](../../../visual-basic/language-reference/operators/addressof-operator.md)  

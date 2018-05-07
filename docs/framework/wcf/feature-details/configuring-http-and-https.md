@@ -1,28 +1,14 @@
 ---
 title: 配置 HTTP 和 HTTPS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-http-and-https"></a>配置 HTTP 和 HTTPS
 WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Internet Information Services (IIS) 或命令行工具可以配置 HTTP/HTTPS 设置。 当某个 WCF 服务承载于 IIS 之下时，可以在 IIS 中配置 HTTP 或 HTTPS 设置（使用 inetmgr.exe 工具）。 如果 WCF 服务是自承载的，则可使用命令行工具配置 HTTP 或 HTTPS 设置。  
@@ -79,7 +65,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
  有关分步说明，请参阅[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
 ## <a name="configuring-the-ip-listen-list"></a>配置 IP 侦听列表  
- 在用户注册一个 URL 之后，HTTP 服务器 API 只绑定到一个 IP 地址和端口。 默认情况下，对于计算机的所有 IP 地址，HTTP 服务器 API 将绑定到所注册的 URL 中的端口。 如果不使用 HTTP 服务器 API 的应用程序先前已经绑定到该 IP 地址和端口的组合，则会引起冲突。 IP 侦听列表允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务与使用计算机的一些 IP 地址的端口的应用程序共存。 如果 IP 侦听列表包含任何项，则 HTTP 服务器 API 只绑定到该列表指定的那些 IP 地址。 修改 IP 侦听列表需要管理特权。  
+ 在用户注册一个 URL 之后，HTTP 服务器 API 只绑定到一个 IP 地址和端口。 默认情况下，对于计算机的所有 IP 地址，HTTP 服务器 API 将绑定到所注册的 URL 中的端口。 如果不使用 HTTP 服务器 API 的应用程序先前已经绑定到该 IP 地址和端口的组合，则会引起冲突。 IP 侦听列表使 WCF 服务能够与使用某些计算机的 IP 地址的端口的应用程序共存。 如果 IP 侦听列表包含任何项，则 HTTP 服务器 API 只绑定到该列表指定的那些 IP 地址。 修改 IP 侦听列表需要管理特权。  
   
 ### <a name="running-windows-xp-or-server-2003"></a>运行 Windows XP 或 Server 2003  
  使用 httpcfg 工具修改 IP 侦听列表，如下面的示例所示。 [Windows 支持工具文档](http://go.microsoft.com/fwlink/?LinkId=94840)说明了 httpcfg.exe 工具的语法。  
@@ -101,7 +87,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  HTTP 服务器 API 具有一些不可通过 HttpCfg 使用的高级配置设置。 这些设置保留在注册表中并应用于在使用 HTTP 服务器 API 的系统上运行的所有应用程序。 有关这些设置的信息，请参阅[用于 IIS 的 Http.sys 注册表设置](http://go.microsoft.com/fwlink/?LinkId=94843)。 大多数用户应该不需要更改这些设置。  
   
 ## <a name="issues-specific-to-windows-xp"></a>Windows XP 特有的问题  
- IIS 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上不支持端口共享。 如果 IIS 正在运行并且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务尝试通过相同端口来使用某个命名空间，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务将无法启动。 IIS 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 均默认设置使用端口 80。 请更改其中一个服务的端口分配或使用 IP 侦听列表将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务分配到 IIS 未使用的网络适配器。 IIS 6.0 和更高版本已经过重新设计，可以使用 HTTP 服务器 API。  
+ IIS 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上不支持端口共享。 如果 IIS 正在运行并且尝试通过相同端口使用命名空间的 WCF 服务，WCF 服务将无法启动。 IIS 和 WCF 均默认设置使用端口 80。 更改其中一个服务的端口分配，或者使用 IP 侦听列表将 WCF 服务分配到 IIS 未使用的网络适配器。 IIS 6.0 和更高版本已经过重新设计，可以使用 HTTP 服务器 API。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.WSDualHttpBinding>  

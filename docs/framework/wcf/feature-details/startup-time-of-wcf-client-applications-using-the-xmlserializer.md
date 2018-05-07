@@ -1,24 +1,12 @@
 ---
-title: "如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间"
-ms.custom: 
+title: 如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2ac51a99db002633aaf80070d8820ce6e3144a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6f61c57998cfc21b66f278a1a2381407ec2c39ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间
 如果服务和客户端应用程序使用可用 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化的数据类型，则会在运行时生成并编译这些数据类型的序列化代码，从而导致启动性能降低。  
@@ -42,9 +30,9 @@ ms.lasthandoff: 12/22/2017
   
      `assemblyPath` 参数指定包含服务协定类型的程序集的路径。 Svcutil.exe 会为已编译的应用程序集的服务协定中使用的所有数据生成序列化代码，该代码可使用 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化。  
   
-     Svcutil.exe 只能生成 C# 序列化代码。 为每个输入程序集生成一个源代码文件。 不能使用**/language**开关更改所生成代码的语言。  
+     Svcutil.exe 只能生成 C# 序列化代码。 为每个输入程序集生成一个源代码文件。 不能使用 **/language**开关更改所生成代码的语言。  
   
-     若要指定从属程序集的路径，请使用**/参考**选项。  
+     若要指定从属程序集的路径，请使用 **/参考**选项。  
   
 4.  通过使用下列选项之一使生成的序列化代码可供你的应用程序使用：  
   
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  生成客户端应用程序。  
   
-4.  使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)创建预生成序列化程序*.cs*使用命令的文件：  
+4.  使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)创建预生成序列化程序 *.cs*使用命令的文件：  
   
     ```  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  

@@ -1,24 +1,14 @@
 ---
-title: "&lt;命名空间&gt;元素 (.NET Native)"
-ms.custom: 
+title: '&lt;命名空间&gt;元素 (.NET Native)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed448ea3af702706b45e27e923ebe540d83de868
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 108c27747e0b823f2315a914f8db3c8711fbb698
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnamespacegt-element-net-native"></a>&lt;命名空间&gt;元素 (.NET Native)
 将运行时反射策略应用到一个指定的命名空间中的所有类型。  
@@ -72,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`<Namespace>`|将运行时反射策略应用到一个父命名空间中的所有类型。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一个类型。|  

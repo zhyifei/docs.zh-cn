@@ -1,33 +1,19 @@
 ---
-title: "如何：使用 Windows Communication Foundation 客户端"
-ms.custom: 
+title: 如何：使用 Windows Communication Foundation 客户端
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0330c386730c6b0436196bb5b85162bc4621c214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>如何：使用 Windows Communication Foundation 客户端
-这是创建基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序所需的六项任务中的最后一项任务。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
+这是创建基本的 Windows Communication Foundation (WCF) 应用程序所需的六项任务的最后一个。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
   
- 在创建并配置了 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 代理后，就可以创建客户端实例，进而编译客户端应用程序并使用它与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务进行通信。 本主题描述实例化和使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端的过程。 此过程执行三项操作：  
+ 一旦创建 Windows Communication Foundation (WCF) 代理并将其配置，可以创建的客户端实例，而且可以编译客户端应用程序，并将其用于与通信[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务。 本主题描述实例化和使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端的过程。 此过程执行三项操作：  
   
 1.  实例化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端。  
   

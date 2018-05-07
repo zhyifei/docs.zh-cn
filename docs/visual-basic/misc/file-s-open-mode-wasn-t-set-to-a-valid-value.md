@@ -1,20 +1,14 @@
 ---
-title: "文件 &#39; s 打开模式不是 &#39; t 为有效的值设置"
+title: 文件&#39;s 打开模式不是&#39;t 为有效的值设置
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0c7c20f9b624059fa8161923f754cd2a89485499
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: be5c44def071577a82a648ee36935b69e5f00f2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>文件 &#39; s 打开模式不是 &#39; t 为有效的值设置
+# <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>文件&#39;s 打开模式不是&#39;t 为有效的值设置
 为文件的打开模式提供的值无效。 下表显示 <xref:Microsoft.VisualBasic.OpenMode> 枚举的有效值。  
   
 |值|模式|  

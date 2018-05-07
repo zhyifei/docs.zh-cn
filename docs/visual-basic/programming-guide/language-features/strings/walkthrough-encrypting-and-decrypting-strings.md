@@ -1,34 +1,24 @@
 ---
-title: "加密和解密在 Visual Basic 中的字符串"
-ms.custom: 
+title: 加密和解密在 Visual Basic 中的字符串
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - encryption [Visual Basic], strings
 - strings [Visual Basic], encrypting
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fd9ec8e7af771db3f042e08c8ab30f6ed5832c2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96e56ab315a739fef9d5499b076a077f5294f39e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>演练：在 Visual Basic 中对字符串进行加密和解密
 本演练演示如何使用<xref:System.Security.Cryptography.DESCryptoServiceProvider>类进行加密和解密使用三重数据加密标准的加密服务提供程序 (CSP) 版本字符串 (<xref:System.Security.Cryptography.TripleDES>) 算法。 第一步是创建一个简单的包装类，封装 3DES 算法，并将加密的数据存储为 base 64 编码的字符串。 然后，该包装用于安全地将私人用户数据存储在可公开访问的文本文件。  
   
  你可以使用加密保护用户的机密信息 （例如，密码） 和以使未经授权的用户的凭据不可读。 这样可防止授权的用户的标识从此被盗用、 用于保护用户的资源，并提供不可否认性。 加密还可以保护不被未经授权的用户的访问的用户的数据。  
   
- 有关详细信息，请参阅[加密服务](../../../../standard/security/cryptographic-services.md)。  
+ 有关更多信息，请参阅[加密服务](../../../../standard/security/cryptographic-services.md)。  
   
 > [!IMPORTANT]
 >  Rijndael （现在称为高级加密标准 [AES]） 和三重数据加密标准 (3DES) 算法提供比 DES 更为安全，因为它们是多个计算密集型操作。 有关详细信息，请参阅 <xref:System.Security.Cryptography.DES> 和 <xref:System.Security.Cryptography.Rijndael>。  
@@ -83,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
      当你测试应用程序时，请注意它将解密数据，是否你提供了错误的密码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Security.Cryptography>  
  <xref:System.Security.Cryptography.DESCryptoServiceProvider>  
  <xref:System.Security.Cryptography.DES>  

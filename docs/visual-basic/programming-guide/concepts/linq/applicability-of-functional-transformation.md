@@ -1,22 +1,12 @@
 ---
-title: "功能转换 (Visual Basic) 的适用性"
-ms.custom: 
+title: 功能转换 (Visual Basic) 的适用性
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 184f40aa5752a620a5a9af1f27efc598251a96c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bdb487ce0de986a1dba36908352a8270cfde2700
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a>功能转换 (Visual Basic) 的适用性
 纯函数转换适用于多种情况。  
@@ -41,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
  再次强调，请记住 Visual Basic 支持命令性和功能的方法，因此你的应用程序的最佳设计可能需要合并使用这两个元素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [介绍纯函数转换 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
  [XML 的功能转换 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
  [重构到纯函数 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

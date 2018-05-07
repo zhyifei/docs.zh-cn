@@ -1,13 +1,6 @@
 ---
-title: "位图类型"
-ms.custom: 
+title: 位图类型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - jpeg files
 - TIFF files
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a79f34daac4238093693947f5fb5e73bb56213d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-bitmaps"></a>位图类型
 位图的像素为单位的矩形数组中指定的每个像素的颜色的位数组。 专用于单个像素的比特数确定可以分配给该像素的颜色数。 例如，如果每个像素都由 4 位，然后给定的像素可以分配 16 种不同颜色之一 (2 ^4 = 16)。 下表显示可以指定数目的 bits 通过分配给表示像素的颜色数的几个示例。  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
  ![位图示例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>图形文件格式  
- 有许多磁盘文件中保存位图的标准格式。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]支持的图形文件以下各段中所述的格式。  
+ 有许多磁盘文件中保存位图的标准格式。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支持的图形文件以下各段中所述的格式。  
   
 ### <a name="bmp"></a>BMP  
  BMP 是标准 Windows 用来存储独立于设备的和独立于应用程序的图像的格式。 文件头中指定的每个像素 （1、 4、 8、 15、 24、 32 或 64） 对于给定的 BMP 文件的位数。 每个像素的 24 位 BMP 文件很常见。 BMP 文件通常未压缩，并且因此，不是非常适合传输跨 Internet。  

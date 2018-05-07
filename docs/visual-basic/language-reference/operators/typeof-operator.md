@@ -1,11 +1,6 @@
 ---
-title: "TypeOf 运算符 (Visual Basic)"
+title: TypeOf 运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - TypeOf
 - vb.TypeOf
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51bd2af7af28aa229fa62770c5b92d31e461333b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe287794423048e993d953c83fc8590a06b7a5e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 运算符 (Visual Basic)
 将对象引用变量与数据类型进行比较。  
@@ -44,10 +36,10 @@ result = TypeOf objectexpression IsNot typename
  返回。 一个 `Boolean` 值。  
   
  `objectexpression`  
- 必需。 计算结果为引用类型的任何表达式。  
+ 必须的。 计算结果为引用类型的任何表达式。  
   
  `typename`  
- 必需。 任何数据类型名。  
+ 必须的。 任何数据类型名。  
   
 ## <a name="remarks"></a>备注  
  `TypeOf` 运算符确定 `objectexpression` 的运行时类型是否与 `typename` 兼容。 兼容性取决于 `typename` 的类型类别。 下表显示如何确定兼容性。  
@@ -58,7 +50,7 @@ result = TypeOf objectexpression IsNot typename
 |结构|`objectexpression` 属于类型 `typename`|  
 |接口|`objectexpression` 实现 `typename` 或继承自实现 `typename` 的类|  
   
- 如果 `objectexpression` 的运行时类型满足兼容性条件，则 `result` 是 `True`。 否则 `result` 是 `False`。  如果 `objectexpression` 为 null，则 `TypeOf`...`Is` 返回 `False`，...`IsNot` 返回 `True`。  
+ 如果 `objectexpression` 的运行时类型满足兼容性条件，则 `result` 是 `True`。 否则 `result` 为 `False`。  如果 `objectexpression` 为 null，则 `TypeOf`...`Is` 返回 `False`，...`IsNot` 返回 `True`。  
   
  `TypeOf` 始终与 `Is` 关键字一起使用来构造 `TypeOf`...`Is` 表达式，或与 `IsNot` 关键字一起使用来构造 `TypeOf`...`IsNot` 表达式。  
   
@@ -69,7 +61,7 @@ result = TypeOf objectexpression IsNot typename
   
  变量 `refInteger` 具有运行时类型 `Integer`。 它与 `Integer` 兼容，但不与 `Double` 兼容。 变量 `refForm` 具有运行时类型 <xref:System.Windows.Forms.Form>。 它与 <xref:System.Windows.Forms.Form> 兼容因为这是其类型，与 <xref:System.Windows.Forms.Control> 兼容因为 <xref:System.Windows.Forms.Form> 继承自 <xref:System.Windows.Forms.Control>，与 <xref:System.ComponentModel.IComponent> 兼容因为 <xref:System.Windows.Forms.Form> 继承自 <xref:System.ComponentModel.Component>（它实现 <xref:System.ComponentModel.IComponent>）。 但是，`refForm` 与 <xref:System.Windows.Forms.Label> 不兼容。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)  
  [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)  
  [在 Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  

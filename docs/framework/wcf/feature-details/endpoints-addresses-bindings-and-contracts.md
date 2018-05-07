@@ -1,33 +1,19 @@
 ---
 title: 终结点：地址、绑定和协定
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 477c23facd846580bac698ce6e61d02e11afe430
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0909d1d10ab8932f27f7ca6cba6207d57fa4f4cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>终结点：地址、绑定和协定
-与所有通信[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]服务是通过*终结点*的服务。 利用终结点，客户端可访问 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务提供的功能。  
+与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点提供客户端访问 WCF 服务提供的功能。  
   
  每个终结点包含四个属性：  
   
@@ -39,12 +25,12 @@ ms.lasthandoff: 04/28/2018
   
 -   一组指定终结点的本地实现细节的行为。  
   
- 本主题讨论此终结点结构并说明其在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对象模型中是如何表示的。  
+ 本主题讨论了此终结点结构并说明如何表示的 WCF 对象模型中。  
   
 ## <a name="the-structure-of-an-endpoint"></a>终结点的结构  
  每个终结点由以下内容组成：  
   
--   地址：地址唯一地标识终结点，并告诉服务的潜在客户其所在的位置。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对象模型中，地址由 <xref:System.ServiceModel.EndpointAddress> 类表示。 一个 <xref:System.ServiceModel.EndpointAddress> 类包含：  
+-   地址：地址唯一地标识终结点，并告诉服务的潜在客户其所在的位置。 通过 WCF 对象模型表示<xref:System.ServiceModel.EndpointAddress>类。 一个 <xref:System.ServiceModel.EndpointAddress> 类包含：  
   
     -   一个表示服务地址的 <xref:System.ServiceModel.EndpointAddress.Uri%2A> 属性。  
   
@@ -60,7 +46,7 @@ ms.lasthandoff: 04/28/2018
   
     -   必需的安全要求（例如，SSL 或 SOAP 消息安全）。  
   
-     有关详细信息，请参阅[WCF 绑定概述](../../../../docs/framework/wcf/bindings-overview.md)。 绑定在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对象模型中由抽象基类 <xref:System.ServiceModel.Channels.Binding> 表示。 大多数情况下，用户可以使用系统提供的绑定之一。 有关详细信息，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。  
+     有关详细信息，请参阅[WCF 绑定概述](../../../../docs/framework/wcf/bindings-overview.md)。 绑定所表示的 WCF 对象模型中由抽象基类<xref:System.ServiceModel.Channels.Binding>。 大多数情况下，用户可以使用系统提供的绑定之一。 有关详细信息，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。  
   
 -   协定：协定概述了终结点向客户端公开的功能。 协定指定：  
   
@@ -74,7 +60,7 @@ ms.lasthandoff: 04/28/2018
   
      有关定义协定的详细信息，请参阅[设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md)。  
   
--   行为：可以使用终结点行为来自定义服务终结点的本地行为。 终结点行为来实现此过程中生成参与[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]运行时。 终结点行为的一个示例是 <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> 属性，可以利用该属性指定与 SOAP 或 Web 服务描述语言 (WSDL) 地址不同的侦听地址。 有关详细信息，请参阅[ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)。  
+-   行为：可以使用终结点行为来自定义服务终结点的本地行为。 终结点行为来实现此过程中生成 WCFruntime 参与。 终结点行为的一个示例是 <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> 属性，可以利用该属性指定与 SOAP 或 Web 服务描述语言 (WSDL) 地址不同的侦听地址。 有关详细信息，请参阅[ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)。  
   
 ## <a name="defining-endpoints"></a>定义终结点  
  可以通过使用代码以强制方式或通过配置以声明方式指定服务的终结点。 有关详细信息，请参阅[如何： 在配置中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)和[如何： 在代码中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)。  
@@ -83,7 +69,7 @@ ms.lasthandoff: 04/28/2018
  本节说明了绑定、终结点和地址的用途，演示了如何配置绑定和终结点，并演示了如何使用 `ClientVia` 行为和 `ListenUri` 属性。  
   
  [地址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
- 描述终结点如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中寻址。  
+ 描述如何终结点都在 WCF 中。  
   
  [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)  
  描述如何使用绑定指定客户端与服务相互通信所需的传输、编码和协议详细信息。  

@@ -1,10 +1,6 @@
 ---
 title: Overridable (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Overridable
 - vb.Overridable
@@ -20,14 +16,11 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f7d5dd33f8591be1b4305e954e55e035882626c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4844bf7f3ecf23335715b950a96be15e54ebc601
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
 指定属性或过程可以覆盖具有相同名称的属性或派生类中的过程。  
@@ -59,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [修饰符](../../../visual-basic/language-reference/modifiers/index.md)  
  [继承的基础知识](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  

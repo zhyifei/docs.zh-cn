@@ -1,29 +1,17 @@
 ---
-title: "依赖项属性值优先级"
-ms.custom: 
+title: 依赖项属性值优先级
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], classes as owners
 - dependency properties [WPF], metadata
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d95cd0545fa4800f159f4e5e0f661cf7bddc6548
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719c39c82b69421477cadf9ae5caf9f9f55b457
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-value-precedence"></a>依赖项属性值优先级
 <a name="introduction"></a> 本主题说明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的工作机制如何影响依赖属性的值，并介绍应用于属性有效值的属性系统的各方面所依据的优先级。  
@@ -117,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="setcurrentvalue"></a>   
 ## <a name="setcurrentvalue"></a>SetCurrentValue  
- <xref:System.Windows.DependencyObject.SetCurrentValue%2A>方法是另一种方法来设置属性，但它不是按优先级顺序。 相反，<xref:System.Windows.DependencyObject.SetCurrentValue%2A>使你能够更改属性的值而不会覆盖以前的值的源。 你可以使用<xref:System.Windows.DependencyObject.SetCurrentValue%2A>任何你想要设置一个值，而无需为本地值的优先级的该值的时间。 例如，如果属性是设置了触发器，然后指定另一个值，通过<xref:System.Windows.DependencyObject.SetCurrentValue%2A>、 属性系统仍遵循触发器并将该属性将更改时触发的操作。 <xref:System.Windows.DependencyObject.SetCurrentValue%2A>可以更改属性的值，而无需授予它具有较高优先级的源。 同样，你可以使用<xref:System.Windows.DependencyObject.SetCurrentValue%2A>若要更改属性的值而不会覆盖绑定。  
+ <xref:System.Windows.DependencyObject.SetCurrentValue%2A>方法是另一种方法来设置属性，但它不是按优先级顺序。 相反，<xref:System.Windows.DependencyObject.SetCurrentValue%2A>使你能够更改属性的值而不会覆盖以前的值的源。 你可以使用<xref:System.Windows.DependencyObject.SetCurrentValue%2A>任何你想要设置一个值，而无需为本地值的优先级的该值的时间。 例如，如果属性是设置了触发器，然后指定另一个值，通过<xref:System.Windows.DependencyObject.SetCurrentValue%2A>、 属性系统仍遵循触发器并将该属性将更改时触发的操作。 <xref:System.Windows.DependencyObject.SetCurrentValue%2A> 可以更改属性的值，而无需授予它具有较高优先级的源。 同样，你可以使用<xref:System.Windows.DependencyObject.SetCurrentValue%2A>若要更改属性的值而不会覆盖绑定。  
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>强制、动画和基值  

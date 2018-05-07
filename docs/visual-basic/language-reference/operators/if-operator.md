@@ -1,11 +1,6 @@
 ---
-title: "If 运算符 (Visual Basic)"
+title: If 运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.IfOperator
 - IfOperator
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2c553da5abf5453ba881671806b976125355c1e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 192309a7ca728feb300e867bf2340e669e9da16c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="if-operator-visual-basic"></a>If 运算符 (Visual Basic)
 使用短路计算有条件地返回两个值之一。 `If`使用三个自变量或两个自变量，可以调用运算符。  
@@ -41,9 +33,9 @@ If( [argument1,] argument2, argument3 )
   
 |术语|定义|  
 |---|---|  
-|`argument1`|必需。 `Boolean`。 确定哪个要计算并返回的其他参数。|  
-|`argument2`|必需。 `Object`。 计算并返回如果`argument1`计算结果为`True`。|  
-|`argument3`|必需。 `Object`。 计算并返回如果`argument1`计算结果为`False`或如果`argument1`是[可以为 Null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`变量计算结果为[执行任何操作](../../../visual-basic/language-reference/nothing.md)。|  
+|`argument1`|必须的。 `Boolean`。 确定哪个要计算并返回的其他参数。|  
+|`argument2`|必须的。 `Object`。 计算并返回如果`argument1`计算结果为`True`。|  
+|`argument3`|必须的。 `Object`。 计算并返回如果`argument1`计算结果为`False`或如果`argument1`是[可以为 Null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`变量计算结果为[执行任何操作](../../../visual-basic/language-reference/nothing.md)。|  
   
  `If`使用三个自变量调用的运算符的工作原理类似`IIf`函数，只不过前者使用短路计算。 `IIf`函数始终在所有三个参数，而`If`具有三个自变量的运算符都要都计算其中只有两个。 第一个`If`自变量的计算，并将结果转换为`Boolean`值，`True`或`False`。 如果值为`True`，`argument2`是计算并返回其值，但`argument3`则不会评估。 如果值`Boolean`表达式是`False`，`argument3`是计算并返回其值，但`argument2`则不会评估。 下面的示例演示如何使用`If`使用三个自变量时：  
   
@@ -60,14 +52,14 @@ If( [argument1,] argument2, argument3 )
   
 |术语|定义|  
 |---|---|  
-|`argument2`|必需。 `Object`。 必须是引用或可以为 null 的类型。 其计算结果为任何内容以外时计算并返回`Nothing`。|  
-|`argument3`|必需。 `Object`。 计算并返回如果`argument2`计算结果为`Nothing`。|  
+|`argument2`|必须的。 `Object`。 必须是引用或可以为 null 的类型。 其计算结果为任何内容以外时计算并返回`Nothing`。|  
+|`argument3`|必须的。 `Object`。 计算并返回如果`argument2`计算结果为`Nothing`。|  
   
  当`Boolean`忽略自变量，第一个参数必须是引用或可以为 null 的类型。 如果第一个自变量的计算结果为`Nothing`，返回第二个参数的值。 在所有其他情况下，返回第一个自变量的值。 下面的示例阐释了这种计算的工作原理。  
   
  [!code-vb[VbVbalrOperators#102](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Interaction.IIf%2A>  
  [可以为 null 的值类型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
  [Nothing](../../../visual-basic/language-reference/nothing.md)

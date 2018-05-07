@@ -1,29 +1,17 @@
 ---
-title: "BindingSource 组件体系结构"
-ms.custom: 
+title: BindingSource 组件体系结构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - BindingSource component [Windows Forms], architecture
 - Windows Forms, data binding
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0334bd7a0bc5ff46c43fd7ee549422d98c35efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 组件体系结构
 与<xref:System.Windows.Forms.BindingSource>组件时，普遍，你可以将所有 Windows 窗体控件都绑定到数据源。  
@@ -57,13 +45,13 @@ ms.lasthandoff: 12/22/2017
   
 -   作为列表的数据源。  
   
--   <xref:System.Windows.Forms.BindingSource>作为<xref:System.ComponentModel.IBindingList>。  
+-   <xref:System.Windows.Forms.BindingSource> 作为<xref:System.ComponentModel.IBindingList>。  
   
 -   创建自定义项。  
   
 -   创建事务性项。  
   
--   <xref:System.Collections.IEnumerable>支持。  
+-   <xref:System.Collections.IEnumerable> 支持。  
   
 -   设计时支持。  
   
@@ -120,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 |空引用 (`Nothing`在 Visual Basic 中) 与<xref:System.Windows.Forms.BindingSource.DataMember%2A>设置|不支持;引发<xref:System.ArgumentException>。|  
 |非列表类型或者"T"类型的对象|一个空<xref:System.ComponentModel.IBindingList>的"T"类型。|  
 |数组实例|<xref:System.ComponentModel.IBindingList>包含数组元素。|  
-|<xref:System.Collections.IEnumerable>实例|<xref:System.ComponentModel.IBindingList>包含<xref:System.Collections.IEnumerable>项|  
+|<xref:System.Collections.IEnumerable> 实例|<xref:System.ComponentModel.IBindingList>包含<xref:System.Collections.IEnumerable>项|  
 |列出"T"的包含类型的实例|<xref:System.ComponentModel.IBindingList>包含"T"类型的实例。|  
   
  此外，<xref:System.Windows.Forms.BindingSource.DataSource%2A>可以设置为其他列表类型，如<xref:System.ComponentModel.IListSource>和<xref:System.ComponentModel.ITypedList>，和<xref:System.Windows.Forms.BindingSource>将适当地处理。 在这种情况下，列表中包含该类型应具有默认构造函数。  
@@ -174,7 +162,7 @@ ms.lasthandoff: 12/22/2017
 |成员|描述|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.BindingSource.Filter%2A> 属性|如果数据源是 <xref:System.ComponentModel.IBindingListView>，则获取或设置用于筛选已查看的行的表达式。|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> 属性|如果数据源是 <xref:System.ComponentModel.IBindingList>，则获取或设置用于排序的列名称并对顺序信息进行排序。<br /><br /> 或<br /><br /> 如果数据源是<xref:System.ComponentModel.IBindingListView>并支持高级排序，则获取用于排序和排序顺序的多个列名称|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A> 属性|如果数据源是 <xref:System.ComponentModel.IBindingList>，则获取或设置用于排序的列名称并对顺序信息进行排序。<br /><br /> -或-<br /><br /> 如果数据源是<xref:System.ComponentModel.IBindingListView>并支持高级排序，则获取用于排序和排序顺序的多个列名称|  
   
 ### <a name="integration-with-bindingnavigator"></a>与 BindingNavigator 的集成  
  你可以使用<xref:System.Windows.Forms.BindingSource>组件将任何 Windows 窗体控件绑定到数据源，但<xref:System.Windows.Forms.BindingNavigator>控件专门用于处理<xref:System.Windows.Forms.BindingSource>组件。 <xref:System.Windows.Forms.BindingNavigator>控件提供用户界面，用于控制<xref:System.Windows.Forms.BindingSource>组件的当前项。 默认情况下，<xref:System.Windows.Forms.BindingNavigator>控件提供对应的导航方法的按钮<xref:System.Windows.Forms.BindingSource>组件。 有关详细信息，请参阅[如何： 使用 Windows 窗体 BindingNavigator 控件导航数据](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)。  

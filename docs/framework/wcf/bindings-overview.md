@@ -1,31 +1,17 @@
 ---
 title: Windows Communication Foundation 绑定概述
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 38661c2ca0e3329f508e2740dfcdf69c0d5e4105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 绑定概述
-绑定是用于指定连接到 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务终结点所必需的通信详细信息的对象。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务中的每个终结点都要求正确指定绑定。 本主题概述了绑定所定义的通信详细信息类型、绑定的元素、[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中包含哪些绑定以及如何为终结点指定绑定。  
+绑定是用于指定所需连接到 Windows Communication Foundation (WCF) 服务的终结点的通信详细信息的对象。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务中的每个终结点都要求正确指定绑定。 本主题概述了绑定所定义的通信详细信息类型、绑定的元素、[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中包含哪些绑定以及如何为终结点指定绑定。  
   
 ## <a name="what-a-binding-defines"></a>绑定所定义的内容  
  绑定中的信息可能非常基本，也可能非常复杂。 最基本的绑定仅指定连接终结点所必需的传输协议（如 HTTP）。 一般来说，绑定包含的有关如何连接到终结点的信息属于以下类别中的一种。  

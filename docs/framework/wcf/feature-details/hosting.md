@@ -1,24 +1,12 @@
 ---
 title: Hosting2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f25f0c9e773bbadd992284adf6c79d77aaa2441c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c6eccc668427e9fedf2d4faf7eb9643815dbabb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting"></a>宿主
 本节中的主题介绍服务承载。 可以承载服务，通过 Internet 信息服务 (IIS)、 Windows 进程激活服务 (WAS)、 Windows Server AppFabric、 Windows 服务，或托管的应用程序-此选项通常称为*自承载*。  
@@ -27,19 +15,19 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="in-this-section"></a>本节内容  
  [在 Internet Information Services 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- 描述如何[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]服务承载于 Internet 信息服务或[Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496)。  
+ 描述如何将 Windows Communication Foundation (WCF) 服务承载于 Internet 信息服务或[Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496)。  
   
  [在 Windows Process Activation Service 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
- 描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务如何承载于 Windows 进程激活服务中。  
+ 描述如何通过 Windows 进程激活服务承载 WCF 服务。  
   
  [在 Windows 服务应用程序中承载](../../../../docs/framework/wcf/feature-details/hosting-in-a-windows-service-application.md)  
- 描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务如何承载于 Windows 服务中。  
+ 描述如何通过 Windows 服务承载 WCF 服务。  
   
  [在托管应用程序中承载](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
- 描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务如何承载于托管应用程序中。  
+ 描述如何在托管的应用程序中承载 WCF 服务。  
   
  [IIS 和 WAS 中的基于配置的激活](../../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
- 描述如何在 IIS 或 WAS 下不使用 .svc 文件承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+ 描述不使用.svc 文件在 IIS 或 WAS 下承载 WCF 服务如何。  
   
  [支持多个 IIS 站点绑定](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
  描述如何使用同一 URI 方案在一个网站上为一个服务指定多个基址。  

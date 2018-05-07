@@ -1,27 +1,15 @@
 ---
-title: "如何：实现向发现代理注册的可检测到的服务"
-ms.custom: 
+title: 如何：实现向发现代理注册的可检测到的服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee99c7c74f0e1e2d287802d46cf4b716cfa3b76d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>如何：实现向发现代理注册的可检测到的服务
-本主题是讨论如何实现发现代理的四个主题中的第二个主题。 在前面的主题中，[如何： 实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，实现发现代理。 在本主题中，您将创建一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，该服务向发现代理发送公告消息（`Hello` 和 `Bye`），从而在发现代理中注册和注销服务自身。  
+本主题是讨论如何实现发现代理的四个主题中的第二个主题。 在前面的主题中，[如何： 实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，实现发现代理。 在本主题中，你将创建将发送公告消息的 WCF 服务 (`Hello`和`Bye`) 向发现代理，从而可以注册和注销自身向发现代理。  
   
 ### <a name="to-define-the-service-contract"></a>定义服务协定  
   

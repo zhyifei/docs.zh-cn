@@ -1,13 +1,6 @@
 ---
-title: "创建具有可自定义外观的控件"
-ms.custom: 
+title: 创建具有可自定义外观的控件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,20 +13,15 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4da96c3e33c6f7827619b408568fbbfe96c50a11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f539e7dbb105591375857122d738fddd87f6776
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>创建具有可自定义外观的控件
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]使你能够创建可以自定义其外观的控件。 例如，你可以更改外观<xref:System.Windows.Controls.CheckBox>超越设置属性即可通过创建新<xref:System.Windows.Controls.ControlTemplate>。 下图显示<xref:System.Windows.Controls.CheckBox>使用默认<xref:System.Windows.Controls.ControlTemplate>和<xref:System.Windows.Controls.CheckBox>使用自定义<xref:System.Windows.Controls.ControlTemplate>。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 使你能够创建可以自定义其外观的控件。 例如，你可以更改外观<xref:System.Windows.Controls.CheckBox>超越设置属性即可通过创建新<xref:System.Windows.Controls.ControlTemplate>。 下图显示<xref:System.Windows.Controls.CheckBox>使用默认<xref:System.Windows.Controls.ControlTemplate>和<xref:System.Windows.Controls.CheckBox>使用自定义<xref:System.Windows.Controls.ControlTemplate>。  
   
  ![一个具有默认控件模板的复选框。] (../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 一个具有默认控件模板的复选框  
@@ -89,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[VSMCustomControl#VisualStructure](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- 可视行为`NumericUpDown`控件是如果它是负数的值是以红色字体。  如果你更改<xref:System.Windows.Controls.TextBlock.Foreground%2A>的<xref:System.Windows.Controls.TextBlock>时在代码`Value`为负，`NumericUpDown`会始终显示为红色的负值。 指定在将控件的可视行为<xref:System.Windows.Controls.ControlTemplate>通过添加<xref:System.Windows.VisualState>对象添加到<xref:System.Windows.Controls.ControlTemplate>。  下面的示例演示<xref:System.Windows.VisualState>对象`Positive`和`Negative`状态。  `Positive`和`Negative`是互斥的 （控件将始终在两个中恰好有一个），因此该示例放入<xref:System.Windows.VisualState>到单个对象<xref:System.Windows.VisualStateGroup>。  当控件将进入`Negative`状态，<xref:System.Windows.Controls.TextBlock.Foreground%2A>的<xref:System.Windows.Controls.TextBlock>变为红色。  当控件处于`Positive`状态，<xref:System.Windows.Controls.TextBlock.Foreground%2A>返回到其原始值。  定义<xref:System.Windows.VisualState>中的对象<xref:System.Windows.Controls.ControlTemplate>中进一步讨论如何[通过创建 ControlTemplate 自定义现有的控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+ 可视行为`NumericUpDown`控件是如果它是负数的值是以红色字体。  如果你更改<xref:System.Windows.Controls.TextBlock.Foreground%2A>的<xref:System.Windows.Controls.TextBlock>时在代码`Value`为负，`NumericUpDown`会始终显示为红色的负值。 指定在将控件的可视行为<xref:System.Windows.Controls.ControlTemplate>通过添加<xref:System.Windows.VisualState>对象添加到<xref:System.Windows.Controls.ControlTemplate>。  下面的示例演示<xref:System.Windows.VisualState>对象`Positive`和`Negative`状态。  `Positive` 和`Negative`是互斥的 （控件将始终在两个中恰好有一个），因此该示例放入<xref:System.Windows.VisualState>到单个对象<xref:System.Windows.VisualStateGroup>。  当控件将进入`Negative`状态，<xref:System.Windows.Controls.TextBlock.Foreground%2A>的<xref:System.Windows.Controls.TextBlock>变为红色。  当控件处于`Positive`状态，<xref:System.Windows.Controls.TextBlock.Foreground%2A>返回到其原始值。  定义<xref:System.Windows.VisualState>中的对象<xref:System.Windows.Controls.ControlTemplate>中进一步讨论如何[通过创建 ControlTemplate 自定义现有的控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
   
 > [!NOTE]
 >  请务必设置<xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType>附加属性的根上<xref:System.Windows.FrameworkElement>的<xref:System.Windows.Controls.ControlTemplate>。  
@@ -212,17 +200,17 @@ ms.lasthandoff: 12/22/2017
   
 -   A<xref:System.Windows.Controls.Primitives.RepeatButton>调用`UpButton`。  
   
--   A<xref:System.Windows.Controls.Primitives.RepeatButton>调用`DownButton.`  
+-   A<xref:System.Windows.Controls.Primitives.RepeatButton>调用 `DownButton.`  
   
  控件可以处于以下状态：  
   
--   在`ValueStates`<xref:System.Windows.VisualStateGroup>  
+-   在 `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Positive`  
   
     -   `Negative`  
   
--   在`FocusStates`<xref:System.Windows.VisualStateGroup>  
+-   在 `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Focused`  
   

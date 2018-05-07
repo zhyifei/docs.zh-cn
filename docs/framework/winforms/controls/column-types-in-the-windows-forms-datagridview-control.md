@@ -1,28 +1,16 @@
 ---
-title: "Windows 窗体 DataGridView 控件中的列类型"
-ms.custom: 
+title: Windows 窗体 DataGridView 控件中的列类型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92c6881fe876bba3fe0224a358a9b12767d53f0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6630323b66265f478151ec80ab8b225c0b653917
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的列类型
 <xref:System.Windows.Forms.DataGridView>控件使用几种列类型来显示其信息，并且使用户能够修改或添加信息。  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  中指定列的单元格值数据类型<xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A>列属性。  
   
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>用于<xref:System.Boolean>和<xref:System.Windows.Forms.CheckState>值。 <xref:System.Boolean>值显示为两个状态或三态复选框，具体取决于值<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>属性。 当列绑定到<xref:System.Windows.Forms.CheckState>值，<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>属性值是`true`默认情况下。  
+ <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>用于<xref:System.Boolean>和<xref:System.Windows.Forms.CheckState>值。 <xref:System.Boolean> 值显示为两个状态或三态复选框，具体取决于值<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>属性。 当列绑定到<xref:System.Windows.Forms.CheckState>值，<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>属性值是`true`默认情况下。  
   
  通常情况下，复选框单元格值旨在用于存储，如任何其他数据，或执行大容量操作。 如果你想要立即当用户单击复选框单元格，你可以处理响应<xref:System.Windows.Forms.DataGridView.CellClick>事件，但此事件发生之前更新单元格的值。 如果在单击时需要的新值，一个选项是计算所需的值将是基于当前值。 另一种方法是立即提交更改并处理<xref:System.Windows.Forms.DataGridView.CellValueChanged>事件以对其做出响应。 若要在单击单元格时，请提交更改，你必须处理<xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged>事件。 在处理程序中，如果当前单元格，复选框单元格调用<xref:System.Windows.Forms.DataGridView.CommitEdit%2A>方法并传入<xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit>值。  
   

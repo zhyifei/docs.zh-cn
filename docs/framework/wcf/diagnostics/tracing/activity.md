@@ -1,30 +1,18 @@
 ---
-title: "活动"
-ms.custom: 
+title: 活动
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity"></a>活动
-本主题介绍 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 跟踪模型中的活动跟踪。 活动是帮助用户缩小故障范围的处理单位。 在同一活动中发生的错误直接相关。 例如，消息解密失败可导致操作失败。 操作失败和消息解密失败的跟踪出现在同一活动中，表明解密错误和请求错误之间直接相关。  
+本主题介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动跟踪。 活动是帮助用户缩小故障范围的处理单位。 在同一活动中发生的错误直接相关。 例如，消息解密失败可导致操作失败。 操作失败和消息解密失败的跟踪出现在同一活动中，表明解密错误和请求错误之间直接相关。  
   
 ## <a name="configuring-activity-tracing"></a>配置活动跟踪  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]提供预定义的活动，用于处理应用程序 (请参阅[活动列表](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 您还可以用编程方式定义活动，以便对用户跟踪进行分组。 有关详细信息，请参阅[发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 提供预定义的活动，用于处理应用程序 (请参阅[活动列表](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 您还可以用编程方式定义活动，以便对用户跟踪进行分组。 有关详细信息，请参阅[发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。  
   
  若要在运行时发出活动跟踪，请对 `ActivityTracing` 跟踪源或其他 `System.ServiceModel` 或自定义跟踪源使用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 设置，如下面的配置代码所示。  
   

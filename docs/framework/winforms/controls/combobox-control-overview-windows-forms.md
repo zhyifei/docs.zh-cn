@@ -1,14 +1,6 @@
 ---
-title: "ComboBox 控件概述（Windows 窗体）"
-ms.custom: 
+title: ComboBox 控件概述（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ComboBox
 helpviewer_keywords:
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 801ebb97c6ee52ce52bbb8f96a07d55e68ca6f1d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c8cd0430e9abaed0ee58e971edf6a9c871da37c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="combobox-control-overview-windows-forms"></a>ComboBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ComboBox>控件用于在下拉组合框中显示数据。 默认情况下，<xref:System.Windows.Forms.ComboBox>控件出现在两个部分： 顶部是文本框中，用户可以键入列表项。 第二部分是显示的项，用户可以从中选择一个列表的列表框。 有关其他样式组合框的详细信息，请参阅[何时使用 Windows 窗体 ComboBox Instead of ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)。  

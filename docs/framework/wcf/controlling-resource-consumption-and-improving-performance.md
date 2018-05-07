@@ -1,32 +1,18 @@
 ---
 title: 控制资源使用并提高性能
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 031261f50a0615efa7227d3655c90c3423e77796
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>控制资源使用并提高性能
-本主题介绍 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 体系结构的不同方面的不同属性，这些属性可控制资源使用并影响性能指标。  
+本主题介绍 Windows Communication Foundation (WCF) 体系结构的不同方面的工作方式与控制资源消耗并影响性能指标的各种属性。  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>WCF 中约束资源使用的属性  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 对某些类型的进程应用约束，以实现安全或性能方面的目的。 这些约束有两种主要形式，即：配额和控制器。 *配额*时达到或超过系统中触发立即异常在某个时间点的限制。 *限制*不立即会导致引发异常的限制。 达到控制器限制时，处理仍将继续进行，但不会超过该控制器值所设置的限制。 这一受限处理可能会在另外某处引发异常，但这取决于具体的应用程序。  
+ Windows Communication Foundation (WCF) 应用的安全或性能的行为的进程的特定类型上的约束。 这些约束有两种主要形式，即：配额和控制器。 *配额*时达到或超过系统中触发立即异常在某个时间点的限制。 *限制*不立即会导致引发异常的限制。 达到控制器限制时，处理仍将继续进行，但不会超过该控制器值所设置的限制。 这一受限处理可能会在另外某处引发异常，但这取决于具体的应用程序。  
   
  除了配额与控制器之间存在区别之外，序列化级别、传输级别以及应用程序级别中也分别存在一些约束属性。 例如，配额 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>（由所有系统提供的传输绑定元素实现）默认情况下设置为 65,536 字节，以阻止恶意客户端通过导致过度的内存使用来对服务发起拒绝服务攻击。 （通常，您可以通过降低这一值来提高性能）。  
   

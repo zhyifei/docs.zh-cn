@@ -1,36 +1,22 @@
 ---
 title: 病毒消息处理
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b860e239d001a03da191d73de2f7b53e7073c7a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="poison-message-handling"></a>病毒消息处理
 A*病毒消息*是一条消息，已超出向应用程序传递尝试最大数量。 当基于队列的应用程序由于错误而无法处理消息时，可能会引起这种情况。 为符合可靠性要求，排队的应用程序是在事务中接收消息的。 中止已接收某个排队消息的事务时，该消息仍会保留在队列中，这样当开始一个新事务时，将对该消息重试操作。 如果导致事务中止的问题未得到更正，则直到超出最大传递尝试次数并导致产生病毒消息时，接收应用程序才会中断接收和中止同一消息的循环。  
   
  消息变为病毒消息的原因有很多。 最常见的是应用程序特定的原因。 例如，如果某个应用程序从队列中读取消息，并执行某些数据库处理，则该应用程序在获取数据库锁时可能会失败，导致中止事务。 因为数据库事务已中止，所以消息仍保留在队列中，这会导致应用程序再次读取消息，并再次尝试获取数据库锁。 如果消息包含无效信息，则也可能变为病毒消息。 例如，采购订单可能包含无效的客户编号。 这种情况下，应用程序可能会自动中止事务，将该消息强制变为病毒消息。  
   
- 有时消息可能无法被调度到应用程序，不过，这种情况比较少见。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 层可能会找到消息的问题所在，例如消息有错误帧、附加到消息的消息凭据无效或操作标头无效。 在上述情况下，应用程序绝不会收到消息；不过，消息仍可能变为病毒消息，可以对其进行手动处理。  
+ 有时消息可能无法被调度到应用程序，不过，这种情况比较少见。 Windows Communication Foundation (WCF) 层可能会找到消息，问题例如消息有错误帧、 附加到它，或无效的 action 标头的消息无效凭据。 在上述情况下，应用程序绝不会收到消息；不过，消息仍可能变为病毒消息，可以对其进行手动处理。  
   
 ## <a name="handling-poison-messages"></a>处理病毒消息  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，病毒消息处理提供了一种机制，使接收应用程序可以处理无法调度到应用程序的消息、或那些虽然调度到了应用程序但是由于应用程序特定原因而无法进行处理的消息。 病毒消息处理是由每个可用排队绑定中的下列属性配置的：  
+ 在 WCF 中，病毒消息处理提供了用于接收的应用程序可以处理的消息无法调度到应用程序或那些虽然调度到应用程序但是而无法处理由于应用程序特定的消息的机制原因。 病毒消息处理是由每个可用排队绑定中的下列属性配置的：  
   
 -   `ReceiveRetryCount`. 一个整数值，指示将某个消息从应用程序队列传递到应用程序的最大重试次数。 默认值为 5。 对于立即重试就可以修复问题（如数据库出现临时死锁）的情况，这个数值已足够了。  
   
@@ -46,7 +32,7 @@ A*病毒消息*是一条消息，已超出向应用程序传递尝试最大数�
   
 -   拒绝。 此选项仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。 选择此选项会指示消息队列 (MSMQ) 将否定确认发送回发送队列管理器，以说明应用程序无法接收该消息。 该消息会放入发送队列管理器的死信队列中。  
   
--   移动。 此选项仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。 选择此选项会将病毒消息移动到病毒消息队列，以供以后由病毒消息处理应用程序进行处理。 病毒消息队列是应用程序队列的子队列。 病毒消息处理应用程序可以是将消息从病毒队列中读取出来的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 病毒队列是应用程序队列的子队列，可以解决作为 net.msmq://\<*计算机名*>/*应用*; poison，其中*计算机名*是队列所驻留的计算机的名称和*应用*是应用程序特定队列的名称。  
+-   移动。 此选项仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。 选择此选项会将病毒消息移动到病毒消息队列，以供以后由病毒消息处理应用程序进行处理。 病毒消息队列是应用程序队列的子队列。 病毒消息处理应用程序可以是从病毒队列中读取消息的 WCF 服务。 病毒队列是应用程序队列的子队列，可以解决作为 net.msmq://\<*计算机名*>/*应用*; poison，其中*计算机名*是队列所驻留的计算机的名称和*应用*是应用程序特定队列的名称。  
   
  下面是对消息尝试传递的最大次数：  
   
@@ -57,20 +43,20 @@ A*病毒消息*是一条消息，已超出向应用程序传递尝试最大数�
 > [!NOTE]
 >  对于成功传递的消息，不会再重试传递。  
   
- 为了跟踪尝试读取消息的次数，[!INCLUDE[wv](../../../../includes/wv-md.md)] 保留了一个持久性消息属性（用于对中止次数进行计数）和一个移动计数属性（用于对消息在应用程序队列和子队列之间移动的次数进行计数）。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道使用上述属性计算接收重试计数和重试周期计数。 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上，中止计数是由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道在内存中维护的，如果应用程序失败，会重置此计数。 另外，在任意时候，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道最多只为 256 条消息保留中止计数。 如果读取了第 257 条消息，则时间最早的消息中止计数会被重置。  
+ 为了跟踪尝试读取消息的次数，[!INCLUDE[wv](../../../../includes/wv-md.md)] 保留了一个持久性消息属性（用于对中止次数进行计数）和一个移动计数属性（用于对消息在应用程序队列和子队列之间移动的次数进行计数）。 WCF 通道使用上述属性计算接收重试计数和重试周期计数。 上[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，中止计数保留在内存中的 WCF 通道，并且如果应用程序失败会重置。 此外，WCF 通道可以保留在任何时候，中止计数在内存中的最多为 256 条消息。 如果读取了第 257 条消息，则时间最早的消息中止计数会被重置。  
   
  中止计数和移动计数属性均可用于通过操作上下文进行的服务操作。 下面的代码示例演示如何访问上述两个属性。  
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供两种标准排队绑定：  
+ WCF 提供了两种标准排队的绑定：  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. 这种 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 绑定适用于执行与其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点之间的基于队列的通信。  
+-   <xref:System.ServiceModel.NetMsmqBinding>。 A[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]绑定适用于执行与其他 WCF 终结点的基于队列的通信。  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 这种绑定适用于与现有消息队列应用程序之间的通信。  
+-   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 这种绑定适用于与现有消息队列应用程序之间的通信。  
   
 > [!NOTE]
->  您可以根据 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的要求更改上述绑定中的属性。 对于接收应用程序来说，整个病毒消息处理机制都是本地的。 处理过程对于发送应用程序是不可见的，除非接收应用程序最终停止接收并将否定确认发送回发送方。 这种情况下，该消息会移动到发送方的死信队列中。  
+>  你可以更改基于您的 WCF 服务的要求这些绑定中的属性。 对于接收应用程序来说，整个病毒消息处理机制都是本地的。 处理过程对于发送应用程序是不可见的，除非接收应用程序最终停止接收并将否定确认发送回发送方。 这种情况下，该消息会移动到发送方的死信队列中。  
   
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>最佳方案：处理 MsmqPoisonMessageException  
  当服务确定某个消息是病毒消息时，排队传输会引发一个 <xref:System.ServiceModel.MsmqPoisonMessageException>，其中包含病毒消息的 `LookupId`。  
@@ -116,7 +102,7 @@ A*病毒消息*是一条消息，已超出向应用程序传递尝试最大数�
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的消息队列支持否定确认，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中的消息队列不支持。 来自接收队列管理器的否定确认会致使发送队列管理器将被拒绝的消息放入死信队列。 因此，在 `ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中不允许 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的消息队列支持用于记录消息传递尝试次数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会在内存中维护中止计数，所以当场中的多个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务读取同一消息时，此属性包含的值可能不精确。  
+-   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的消息队列支持用于记录消息传递尝试次数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 WCF 维护中止计数在内存中，因此很可能由多个场中的 WCF 服务读取同一消息时，此属性可能不包含准确的值。  
   
 ## <a name="see-also"></a>请参阅  
  [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

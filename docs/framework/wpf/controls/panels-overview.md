@@ -1,14 +1,6 @@
 ---
 title: 面板概述
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-caps.latest.revision: 48
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd04413636c7d6182ff01712eecedbbd4ed02761
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 65f5fa9eeffdeb6e7bc869d159b4b33d75fd7570
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panels-overview"></a>面板概述
 <xref:System.Windows.Controls.Panel> 元素是控制元素的呈现的组件，其大小和维度、 其位置和其子内容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供了许多预定义<xref:System.Windows.Controls.Panel>元素，以及能够构造自定义<xref:System.Windows.Controls.Panel>元素。  
@@ -107,7 +93,7 @@ ms.lasthandoff: 04/09/2018
   
 <a name="Panels_overview_Canvas_subsection"></a>   
 ### <a name="canvas"></a>Canvas  
- <xref:System.Windows.Controls.Canvas>元素启用的内容根据绝对定位*x-*和*y-*坐标。 元素可以在唯一位置绘制；或者，如果元素占用了相同坐标，则这些元素在标记中显示的顺序决定它们的绘制顺序。  
+ <xref:System.Windows.Controls.Canvas>元素启用的内容根据绝对定位*x-* 和*y-* 坐标。 元素可以在唯一位置绘制；或者，如果元素占用了相同坐标，则这些元素在标记中显示的顺序决定它们的绘制顺序。  
   
  <xref:System.Windows.Controls.Canvas> 提供的任何最灵活的布局支持<xref:System.Windows.Controls.Panel>。 高度和宽度属性用于定义的区域的画布上，以及内的元素分配相对于父区域的绝对坐标<xref:System.Windows.Controls.Canvas>。 四个附加的属性， <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>， <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>，<xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType>和<xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>，允许对中的对象放置进行精细控制<xref:System.Windows.Controls.Canvas>，开发人员可以放置和排列在屏幕上精确的元素。  
   
@@ -245,7 +231,7 @@ ms.lasthandoff: 04/09/2018
   
  同样，自定义布局行为基于派生类 (如<xref:System.Windows.Controls.Canvas>或<xref:System.Windows.Controls.Grid>) 可以通过重写定义其<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>和<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法。  
   
- 以下代码演示如何创建自定义<xref:System.Windows.Controls.Panel>元素。 此新<xref:System.Windows.Controls.Panel>，定义如下`PlotPanel`，支持通过使用硬编码的子元素的位置*x-*和*y-*坐标。 在此示例中， <xref:System.Windows.Shapes.Rectangle> （未显示） 的元素都位于绘图点 50 (*x*)，到 50 (*y*)。  
+ 以下代码演示如何创建自定义<xref:System.Windows.Controls.Panel>元素。 此新<xref:System.Windows.Controls.Panel>，定义如下`PlotPanel`，支持通过使用硬编码的子元素的位置*x-* 和*y-* 坐标。 在此示例中， <xref:System.Windows.Shapes.Rectangle> （未显示） 的元素都位于绘图点 50 (*x*)，到 50 (*y*)。  
   
  [!code-cpp[PlotPanel#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
@@ -265,7 +251,7 @@ ms.lasthandoff: 04/09/2018
   
  有关创建带有可本地化 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的其他信息，请参阅[使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
  [WPF 布局库示例](http://go.microsoft.com/fwlink/?LinkID=160054)  
  [布局](../../../../docs/framework/wpf/advanced/layout.md)  

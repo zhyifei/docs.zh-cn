@@ -1,31 +1,17 @@
 ---
-title: "Panel 控件概述（Windows 窗体）"
-ms.custom: 
+title: Panel 控件概述（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Panel
 helpviewer_keywords:
 - grouping controls [Windows Forms], Panel control
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a8855c88a0ec60cd0d44d73046e44c9614347d90
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ba766629f923b091459531ce74d28dca4b4ea0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.Panel>控件用于提供其他控件可识别分组。 通常，你可以使用面板函数细分窗体。 例如，你可以指定邮件的选项，如使用哪夜间运输工具订购窗体。 分组在面板中的所有选项为用户提供一个逻辑的视觉提示。 在设计时所有可以轻松地移动控件 — 当您移动<xref:System.Windows.Forms.Panel>控制，所有其所含的控件移动，太。 在一个面板中分组控件可以通过其<xref:System.Windows.Forms.Control.Controls%2A>属性。 此属性返回的集合<xref:System.Windows.Forms.Control>实例，因此你通常需要强制转换控件检索到它的特定类型的这种方式。  

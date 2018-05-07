@@ -1,13 +1,6 @@
 ---
-title: "WPF 中的形状和基本图形概述"
-ms.custom: 
+title: WPF 中的形状和基本图形概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2912215cb8fb0090cef58e0201cc355da1f0bf19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: adbf982da25ff445d277b7c1b5911217d9825c02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中的形状和基本图形概述
 本主题将概述如何绘制与<xref:System.Windows.Shapes.Shape>对象。 A<xref:System.Windows.Shapes.Shape>是一种<xref:System.Windows.UIElement>，使您可以向屏幕绘制形状。 因为它们是用户界面元素，<xref:System.Windows.Shapes.Shape>对象可使用内部<xref:System.Windows.Controls.Panel>元素和大多数控件。  
@@ -38,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="shapes"></a>   
 ## <a name="shape-objects"></a>形状对象  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供了大量准备就绪，可以使用<xref:System.Windows.Shapes.Shape>对象。  所有的形状对象继承自<xref:System.Windows.Shapes.Shape>类。 可用的形状对象包括<xref:System.Windows.Shapes.Ellipse>， <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，和<xref:System.Windows.Shapes.Rectangle>。 <xref:System.Windows.Shapes.Shape>对象共享的以下公共属性。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了大量准备就绪，可以使用<xref:System.Windows.Shapes.Shape>对象。  所有的形状对象继承自<xref:System.Windows.Shapes.Shape>类。 可用的形状对象包括<xref:System.Windows.Shapes.Ellipse>， <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，和<xref:System.Windows.Shapes.Rectangle>。 <xref:System.Windows.Shapes.Shape> 对象共享的以下公共属性。  
   
 -   <xref:System.Windows.Shapes.Shape.Stroke%2A>： 描述如何绘制形状的轮廓。  
   
@@ -83,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="pathgeometry"></a>   
 ### <a name="pathgeometry-and-pathsegments"></a>PathGeometry and PathSegments  
- <xref:System.Windows.Media.PathGeometry>对象由一个或多个组成<xref:System.Windows.Media.PathFigure>对象; 每个<xref:System.Windows.Media.PathFigure>表示不同的"图"或形状。 每个<xref:System.Windows.Media.PathFigure>本身包含一个或多个<xref:System.Windows.Media.PathSegment>对象，每个表示连接的部分图或形状。 段类型包括以下类型： <xref:System.Windows.Media.LineSegment>， <xref:System.Windows.Media.BezierSegment>，和<xref:System.Windows.Media.ArcSegment>。  
+ <xref:System.Windows.Media.PathGeometry> 对象由一个或多个组成<xref:System.Windows.Media.PathFigure>对象; 每个<xref:System.Windows.Media.PathFigure>表示不同的"图"或形状。 每个<xref:System.Windows.Media.PathFigure>本身包含一个或多个<xref:System.Windows.Media.PathSegment>对象，每个表示连接的部分图或形状。 段类型包括以下类型： <xref:System.Windows.Media.LineSegment>， <xref:System.Windows.Media.BezierSegment>，和<xref:System.Windows.Media.ArcSegment>。  
   
  在下面的示例中，<xref:System.Windows.Shapes.Path>用于绘制二次贝塞尔曲线。  
   
@@ -108,7 +96,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  ![Path illustration](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path.PNG "shape_ovw_path")  
   
- <xref:System.Windows.Shapes.Path.Data%2A>属性字符串所指明 M，用于确定路径的起始点的坐标系统中的"moveto"命令以开始<xref:System.Windows.Controls.Canvas>。 <xref:System.Windows.Shapes.Path>数据参数区分大小写。 大写的 M 指示新的当前点的绝对位置。 小写字母 m 指示相对坐标。 第一段是一条三次贝塞尔曲线，该曲线以 (100,200) 开始，至 (400,175) 结束，使用 (100,25) 和 (400,350) 这两个控制点绘制。 此段由中的 C 命令<xref:System.Windows.Shapes.Path.Data%2A>属性字符串。 同样，大写的 C 指示绝对路径；小写的 c 指示相对路径。  
+ <xref:System.Windows.Shapes.Path.Data%2A>属性字符串所指明 M，用于确定路径的起始点的坐标系统中的"moveto"命令以开始<xref:System.Windows.Controls.Canvas>。 <xref:System.Windows.Shapes.Path> 数据参数区分大小写。 大写的 M 指示新的当前点的绝对位置。 小写字母 m 指示相对坐标。 第一段是一条三次贝塞尔曲线，该曲线以 (100,200) 开始，至 (400,175) 结束，使用 (100,25) 和 (400,350) 这两个控制点绘制。 此段由中的 C 命令<xref:System.Windows.Shapes.Path.Data%2A>属性字符串。 同样，大写的 C 指示绝对路径；小写的 c 指示相对路径。  
   
  第二段以绝对水平“lineto”命令 H 开头，它指定绘制一条从前面的子路径的终点 (400,175) 到新终点 (280,175) 的直线。 因为它的水平"线条"命令，指定的值是*x*-协调。  
   
@@ -116,7 +104,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
 <a name="fillpaint"></a>   
 ## <a name="painting-shapes"></a>绘制形状  
- <xref:System.Windows.Media.Brush>对象用于绘制形状的<xref:System.Windows.Shapes.Shape.Stroke%2A>和<xref:System.Windows.Shapes.Shape.Fill%2A>。 在下面的示例、 笔划和填充的<xref:System.Windows.Shapes.Ellipse>指定。 注意画笔属性的有效输入可以是关键字或十六进制颜色值。 有关可用颜色关键字的详细信息，请参阅属性<xref:System.Windows.Media.Colors>类<xref:System.Windows.Media>命名空间。  
+ <xref:System.Windows.Media.Brush> 对象用于绘制形状的<xref:System.Windows.Shapes.Shape.Stroke%2A>和<xref:System.Windows.Shapes.Shape.Fill%2A>。 在下面的示例、 笔划和填充的<xref:System.Windows.Shapes.Ellipse>指定。 注意画笔属性的有效输入可以是关键字或十六进制颜色值。 有关可用颜色关键字的详细信息，请参阅属性<xref:System.Windows.Media.Colors>类<xref:System.Windows.Media>命名空间。  
   
 ```  
 <Canvas Background="LightGray">   
@@ -213,7 +201,7 @@ myPolygon.StrokeThickness = 2;
 ## <a name="transforming-shapes"></a>转换形状  
  <xref:System.Windows.Media.Transform>类提供了一种变换二维平面中的形状。  不同类型的转换包括旋转 (<xref:System.Windows.Media.RotateTransform>)，小数位数 (<xref:System.Windows.Media.ScaleTransform>)、 倾斜 (<xref:System.Windows.Media.SkewTransform>)，和转换 (<xref:System.Windows.Media.TranslateTransform>)。  
   
- 应用于形状的常见转换就是旋转。  若要旋转形状，创建<xref:System.Windows.Media.RotateTransform>并指定其<xref:System.Windows.Media.RotateTransform.Angle%2A>。 <xref:System.Windows.Media.RotateTransform.Angle%2A>的 45 将元素旋转 45 度顺时针旋转; 90 的角度将元素旋转 90 度沿顺时针方向; 等等。 设置<xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>属性，如果你想要控制哪些旋转元素的点。 这些属性值在被转换的元素的坐标空间中表示。 <xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>具有默认值为零。 最后，应用<xref:System.Windows.Media.RotateTransform>到元素。 如果你不想要将影响布局的转换，设置形状的<xref:System.Windows.UIElement.RenderTransform%2A>属性。  
+ 应用于形状的常见转换就是旋转。  若要旋转形状，创建<xref:System.Windows.Media.RotateTransform>并指定其<xref:System.Windows.Media.RotateTransform.Angle%2A>。 <xref:System.Windows.Media.RotateTransform.Angle%2A>的 45 将元素旋转 45 度顺时针旋转; 90 的角度将元素旋转 90 度沿顺时针方向; 等等。 设置<xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>属性，如果你想要控制哪些旋转元素的点。 这些属性值在被转换的元素的坐标空间中表示。 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 和<xref:System.Windows.Media.RotateTransform.CenterY%2A>具有默认值为零。 最后，应用<xref:System.Windows.Media.RotateTransform>到元素。 如果你不想要将影响布局的转换，设置形状的<xref:System.Windows.UIElement.RenderTransform%2A>属性。  
   
  在下面的示例中，<xref:System.Windows.Media.RotateTransform>用于将有关形状的左上角 (0，0) 形状 45 度。  
   

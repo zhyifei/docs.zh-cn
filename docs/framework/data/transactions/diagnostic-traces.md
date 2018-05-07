@@ -1,29 +1,17 @@
 ---
-title: "诊断跟踪"
-ms.custom: 
+title: 诊断跟踪
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2cb16bb2d492caca7957e6d58eadddf9bf1568b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56f79fb9140785188996cc413eca4dd530037ccd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnostic-traces"></a>诊断跟踪
 跟踪是指发布在执行应用程序期间生成的特定消息。 使用跟踪时，必须具有收集和记录所发送消息的机制。 跟踪消息由侦听器来接收。 侦听器的用途是收集、存储和路由跟踪消息。 侦听器会将跟踪输出定向到适当的目标，如日志、窗口或文本文件。  
   
- <xref:System.Diagnostics.DefaultTraceListener> 就是一个这样的侦听器，在启用跟踪后将自动创建并初始化它。 如果要将跟踪输出定向到任何其他源，则必须创建并初始化其他跟踪侦听器。 所创建的侦听器应反映您的具体需要。 例如，您可能需要所有跟踪输出的文本记录。 在这种情况下，可以创建一个侦听器，使其在启用时将所有输出写入一个新的文本文件。 另一方面，您可能只需要在执行应用程序的过程中查看输出。 在这种情况下，可以创建一个侦听器，使其将所有输出定向到一个控制台窗口。 
-          <xref:System.Diagnostics.EventLogTraceListener> 可将跟踪输出定向到事件日志，而 <xref:System.Diagnostics.TextWriterTraceListener> 可将跟踪输出写入流中。  
+ <xref:System.Diagnostics.DefaultTraceListener> 就是一个这样的侦听器，在启用跟踪后将自动创建并初始化它。 如果要将跟踪输出定向到任何其他源，则必须创建并初始化其他跟踪侦听器。 所创建的侦听器应反映您的具体需要。 例如，您可能需要所有跟踪输出的文本记录。 在这种情况下，可以创建一个侦听器，使其在启用时将所有输出写入一个新的文本文件。 另一方面，您可能只需要在执行应用程序的过程中查看输出。 在这种情况下，可以创建一个侦听器，使其将所有输出定向到一个控制台窗口。 <xref:System.Diagnostics.EventLogTraceListener> 可将跟踪输出定向到事件日志，而 <xref:System.Diagnostics.TextWriterTraceListener> 可将跟踪输出写入流中。  
   
 ## <a name="enabling-tracing"></a>启用跟踪  
  若要在事务处理期间启用跟踪，应编辑应用程序的配置文件。 下面是一个示例。  

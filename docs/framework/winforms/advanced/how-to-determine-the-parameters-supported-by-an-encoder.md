@@ -1,31 +1,17 @@
 ---
-title: "如何：确定编码器支持的参数"
-ms.custom: 
+title: 如何：确定编码器支持的参数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3304adc9ab22d12905bd2a6c3739d909387d82cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f7c270c4ae590c070103d51f116158869b678c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>如何：确定编码器支持的参数
 你可以调整图像参数，如质量和压缩级别，但你必须知道给定的图像编码器支持的参数。 <xref:System.Drawing.Image>类提供<xref:System.Drawing.Image.GetEncoderParameterList%2A>方法，以便你能够确定为特定编码器支持哪些映像参数。 你指定编码器使用的 GUID。 <xref:System.Drawing.Image.GetEncoderParameterList%2A>方法返回的数组<xref:System.Drawing.Imaging.EncoderParameter>对象。  

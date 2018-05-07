@@ -1,35 +1,23 @@
 ---
 title: 传输安全概述
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: b697dc6a227c3b2a5646f4fcb11a39fd9d6339ff
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 12b491971a9f3faa57edb1ccf9fb59351ed45f3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-overview"></a>传输安全概述
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的传输安全机制取决于使用的绑定和传输。 例如，当使用 <xref:System.ServiceModel.WSHttpBinding> 类时，传输为 HTTP，保证传输安全的主要机制为 HTTP 上的安全套接字层 (SSL) （通常称为 HTTPS）。 本主题讨论 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 系统提供的绑定中使用的主要传输安全机制。  
+传输安全机制中 Windows Communication Foundation (WCF) 依赖于的绑定和正在使用的传输。 例如，当使用 <xref:System.ServiceModel.WSHttpBinding> 类时，传输为 HTTP，保证传输安全的主要机制为 HTTP 上的安全套接字层 (SSL) （通常称为 HTTPS）。 本主题讨论在 WCF 系统提供绑定中使用的主要传输安全机制。  
   
 > [!NOTE]
->  将 SSL 安全与 .NET Framework 3.5 及更高版本一起使用时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端将同时使用其证书存储区中的中间证书和 SSL 协商期间收到的中间证书，对服务的证书执行证书链验证。 .NET Framework 3.0 仅使用本地证书存储区中安装的中间证书。  
+>  如果 SSL 安全使用.NET Framework 3.5 和更高版本的 WCF 客户端在其证书存储区中使用这两个中间证书，则在 SSL 协商，以执行服务的证书链验证过程中收到的中间证书证书。 .NET Framework 3.0 仅使用本地证书存储区中安装的中间证书。  
   
 > [!WARNING]
 >  当使用传输安全时， <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal`属性可能会被覆盖。 要防止此类情况发生集<!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> -->`PrincipalPermission`为 None。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 是可对服务说明设置的服务行为。  
@@ -75,7 +63,7 @@ ms.lasthandoff: 04/30/2018
  这使服务器可以在 Kerberos 协议失败时使用 NTLM 进行身份验证。 有关配置 IIS 中的详细信息[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[强制 NTLM 身份验证](http://go.microsoft.com/fwlink/?LinkId=88598)。 对于 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，Windows 身份验证包括 NTLM 身份验证。 有关详细信息，请参阅[IIS 7.0 Beta： 在 IIS 7.0 中配置服务器证书](http://go.microsoft.com/fwlink/?LinkID=88595)。  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> 类专用于与实现 WS* 规范的服务进行互操作。 此绑定的传输安全为 HTTP 上的安全套接字层 (SSL)，即 HTTPS。 若要创建使用 SSL 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序，请使用 IIS 承载该应用程序。 或者，如果您要创建自承载的应用程序，请使用 HttpCfg.exe 工具将 X.509 证书绑定到计算机上的特定端口。 端口号作为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的一部分以终结点地址的形式进行指定。 使用传输模式时，终结点地址必须包括 HTTPS 协议，否则运行时将引发异常。 有关详细信息，请参阅[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+ <xref:System.ServiceModel.WSHttpBinding> 类专用于与实现 WS* 规范的服务进行互操作。 此绑定的传输安全为 HTTP 上的安全套接字层 (SSL)，即 HTTPS。 若要创建的 WCF 应用程序使用 SSL，请使用 IIS 承载该应用程序。 或者，如果您要创建自承载的应用程序，请使用 HttpCfg.exe 工具将 X.509 证书绑定到计算机上的特定端口。 端口号指定为形式终结点地址的 WCF 应用程序的一部分。 使用传输模式时，终结点地址必须包括 HTTPS 协议，否则运行时将引发异常。 有关详细信息，请参阅[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  对于客户端身份验证，请将 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 类的 <xref:System.ServiceModel.HttpTransportSecurity> 属性设置为 <xref:System.ServiceModel.HttpClientCredentialType> 枚举值之一。 枚举值与 <xref:System.ServiceModel.BasicHttpBinding> 的客户端凭据类型等同，并由 IIS 服务承载。  
   

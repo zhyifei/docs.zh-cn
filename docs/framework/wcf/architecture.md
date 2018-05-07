@@ -1,31 +1,19 @@
 ---
-title: "Windows Communication Foundation 体系结构"
-ms.custom: 
+title: Windows Communication Foundation 体系结构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], architecture
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1bc7383c5b93203b144c965f06fa7365c864de27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b54c9cd7f4e6bc33dac07d30a86df81668ae13e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 体系结构
-下图说明了 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 体系结构的主要层。  
+如下图所示的 Windows Communication Foundation (WCF) 体系结构的主要层。  
   
 ## <a name="wcf-architecture"></a>WCF 体系结构  
  ![WCF 体系结构](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  

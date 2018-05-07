@@ -1,13 +1,6 @@
 ---
-title: "XAML 语法详述"
-ms.custom: 
+title: XAML 语法详述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML [WPF], namespaces
 - XAML [WPF], parsing of attributes
@@ -36,16 +29,11 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88e66210fd8066e82a11d07ea0cfeb83808d646c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d98141c0ad96ef1bd3958ae8d3166aedde76f535
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义用于描述 XAML 语法的元素的条款。 这些条款本文档中，同时用于 WPF 文档的其余部分具体而言，并为使用 XAML 或通过在 System.Xaml 级别的 XAML 语言支持的基本 XAML 概念的其他框架经常使用。 本主题扩展主题中介绍的基本术语[XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
@@ -134,7 +122,7 @@ ms.lasthandoff: 12/22/2017
 ...  
 ```  
   
- 按标志枚举支持是可在 XAML 中设置的特性很少出现在 WPF 中。 但是，这样的一个枚举是<xref:System.Windows.Media.StyleSimulations>。 例如，可以使用逗号分隔按标志特性语法的备注部分中提供该示例修改<xref:System.Windows.Documents.Glyphs>类;`StyleSimulations = "BoldSimulation"`可能会变得`StyleSimulations = "BoldSimulation,ItalicSimulation"`。 <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType>是另一个属性可以指定多个枚举值的位置。 但是，此属性恰好是一种特殊情况，因为<xref:System.Windows.Input.ModifierKeys>枚举支持其自己的类型转换器。 修饰符的类型转换器使用加号 （+） 作为分隔符，而不是逗号 （，）。 此转换支持更传统的语法来表示在 Microsoft Windows 编程中，如"Ctrl + Alt 键的组合键。  
+ 按标志枚举支持是可在 XAML 中设置的特性很少出现在 WPF 中。 但是，这样的一个枚举是<xref:System.Windows.Media.StyleSimulations>。 例如，可以使用逗号分隔按标志特性语法的备注部分中提供该示例修改<xref:System.Windows.Documents.Glyphs>类;`StyleSimulations = "BoldSimulation"`可能会变得`StyleSimulations = "BoldSimulation,ItalicSimulation"`。 <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType> 是另一个属性可以指定多个枚举值的位置。 但是，此属性恰好是一种特殊情况，因为<xref:System.Windows.Input.ModifierKeys>枚举支持其自己的类型转换器。 修饰符的类型转换器使用加号 （+） 作为分隔符，而不是逗号 （，）。 此转换支持更传统的语法来表示在 Microsoft Windows 编程中，如"Ctrl + Alt 键的组合键。  
   
 ### <a name="properties-and-event-member-name-references"></a>属性和事件成员名称引用  
  当指定特性时，你可以引用任何属性或作为你为包含的对象元素而实例化的 CLR 类型的成员存在的事件。  
@@ -267,7 +255,7 @@ ms.lasthandoff: 12/22/2017
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- 在这里，`StaticResource`标识<xref:System.Windows.StaticResourceExtension>类，用于提供标记扩展实现。 下一步字符串`MyStyle`作为输入用于非默认<xref:System.Windows.StaticResourceExtension>构造函数，从扩展字符串提取的参数声明请求<xref:System.Windows.ResourceKey>。 `MyStyle`应为[X:key](../../../../docs/framework/xaml-services/x-key-directive.md)值<xref:System.Windows.Style>定义为资源。 [否则标记扩展](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)用法要求资源可用于提供<xref:System.Windows.Style>静态资源查找逻辑在加载时通过属性值。  
+ 在这里，`StaticResource`标识<xref:System.Windows.StaticResourceExtension>类，用于提供标记扩展实现。 下一步字符串`MyStyle`作为输入用于非默认<xref:System.Windows.StaticResourceExtension>构造函数，从扩展字符串提取的参数声明请求<xref:System.Windows.ResourceKey>。 `MyStyle` 应为[X:key](../../../../docs/framework/xaml-services/x-key-directive.md)值<xref:System.Windows.Style>定义为资源。 [否则标记扩展](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)用法要求资源可用于提供<xref:System.Windows.Style>静态资源查找逻辑在加载时通过属性值。  
   
  有关标记扩展的详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。 有关标记扩展和其他 XAML 编程在普通的.NET XAML 实现中启用的功能的参考，请参阅[XAML Namespace （x:）语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)。 有关特定于 WPF 的标记扩展，请参阅[WPF XAML 扩展](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)。  
   
@@ -309,13 +297,13 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[XAMLOvwSupport#TypeNameProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
- `Button.Background`很有效，因为该属性的限定的查找<xref:System.Windows.Controls.Button>成功 (<xref:System.Windows.Controls.Control.Background%2A>从控件继承) 和<xref:System.Windows.Controls.Button>对象元素的类或基类。 `Control.Background`很有效，因为<xref:System.Windows.Controls.Control>类实际定义<xref:System.Windows.Controls.Control.Background%2A>和<xref:System.Windows.Controls.Control>是<xref:System.Windows.Controls.Button>基类。  
+ `Button.Background` 很有效，因为该属性的限定的查找<xref:System.Windows.Controls.Button>成功 (<xref:System.Windows.Controls.Control.Background%2A>从控件继承) 和<xref:System.Windows.Controls.Button>对象元素的类或基类。 `Control.Background` 很有效，因为<xref:System.Windows.Controls.Control>类实际定义<xref:System.Windows.Controls.Control.Background%2A>和<xref:System.Windows.Controls.Control>是<xref:System.Windows.Controls.Button>基类。  
   
  但是，以下*typeName*。*memberName*窗体示例不起作用，因此显示为注释：  
   
  [!code-xaml[XAMLOvwSupport#TypeNameBadProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
- <xref:System.Windows.Controls.Label>是另一个派生的类的<xref:System.Windows.Controls.Control>，并且如果已指定`Label.Background`内<xref:System.Windows.Controls.Label>object 元素，这种用法会起作用。 但是，因为<xref:System.Windows.Controls.Label>不是类或基类<xref:System.Windows.Controls.Button>，指定的 XAML 处理器行为是然后处理`Label.Background`为附加属性。 `Label.Background`不是可用的附加的属性，并且这种用法失败。  
+ <xref:System.Windows.Controls.Label> 是另一个派生的类的<xref:System.Windows.Controls.Control>，并且如果已指定`Label.Background`内<xref:System.Windows.Controls.Label>object 元素，这种用法会起作用。 但是，因为<xref:System.Windows.Controls.Label>不是类或基类<xref:System.Windows.Controls.Button>，指定的 XAML 处理器行为是然后处理`Label.Background`为附加属性。 `Label.Background` 不是可用的附加的属性，并且这种用法失败。  
   
 ### <a name="basetypenamemembername-property-elements"></a>baseTypeName.memberName 属性元素  
  如何以类似方式*typeName*。*memberName*格式如何适用于特性语法*基类型名称*。*memberName*语法适用于属性元素语法。 例如，下面的语法适用：  

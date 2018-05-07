@@ -1,24 +1,14 @@
 ---
-title: "如何：使用 WIF 生成声明感知 ASP.NET MVC Web 应用程序"
-ms.custom: 
+title: 如何：使用 WIF 生成声明感知 ASP.NET MVC Web 应用程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 39364f06cec35b1a5417540dfa29b0cac24fbdb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 146724f31e1d09f09f94d102366539dc79ddfe02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>如何：使用 WIF 生成声明感知 ASP.NET MVC Web 应用程序
 ## <a name="applies-to"></a>适用于  
@@ -27,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET® MVC  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  本操作说明提供了创建简单的声明感知 ASP.NET MVC Web 应用程序的详细分步过程。 还提供关于如何测试简单的声明感知 ASP.NET MVC Web 应用程序以确保成功实现基于声明的身份验证的说明。 本操作说明不包括如何创建安全令牌服务 (STS) 的详细说明，且假定你已配置 STS。  
   
 ## <a name="contents"></a>内容  

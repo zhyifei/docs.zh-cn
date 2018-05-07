@@ -1,13 +1,6 @@
 ---
-title: "如何：保存、加载和打印 RichTextBox 内容"
-ms.custom: 
+title: 如何：保存、加载和打印 RichTextBox 内容
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - RichTextBox control [WPF], printing
 - RichTextBox control [WPF], loading
 ms.assetid: ffb113d3-c68a-47ca-8ac0-882283f38326
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 45cd99332ca5ea87bf70c9b881da7daa3705ec25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: df43a5f5cabd664bb8514967456a67ba3699d5a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a>如何：保存、加载和打印 RichTextBox 内容
 下面的示例演示如何将保存的内容<xref:System.Windows.Controls.RichTextBox>到文件，该内容重新加载到<xref:System.Windows.Controls.RichTextBox>，以及如何打印内容。  

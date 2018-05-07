@@ -1,10 +1,6 @@
 ---
 title: MustOverride (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.MustOverride
 - MustOverride
@@ -19,14 +15,11 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a2f7bdba4b01bd307e0c52802509669f772b5eb5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5dabd90d29bc41d017436876af24a67fa87e8e17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
 指定属性或过程中此类未实现，并且必须重写派生类中才可以使用。  
@@ -52,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
  [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
  [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  

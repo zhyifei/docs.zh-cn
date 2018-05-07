@@ -1,14 +1,6 @@
 ---
-title: "ShutdownDbgTransportManager 函数"
-ms.custom: 
+title: ShutdownDbgTransportManager 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ShutdownDbgTransportManager
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6325a782-6862-4346-8e20-d922ca246169
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d3a6731c8873b19768cc723473654652d724d80f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 213ca658e7a84f03b15f97cf07aa1ed7cb39205b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shutdowndbgtransportmanager-function"></a>ShutdownDbgTransportManager 函数
 关闭用于远程目标计算机连接的传输管理器。  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 void InitDbgTransportManager ();  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CoreClrRemoteDebuggingInterfaces.h  

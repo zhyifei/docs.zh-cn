@@ -1,13 +1,6 @@
 ---
-title: "如何：配置本地颁发者"
-ms.custom: 
+title: 如何：配置本地颁发者
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,26 +8,21 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c24b039709a013f210a42d67c744c03489e4cf73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-local-issuer"></a>如何：配置本地颁发者
 本主题说明如何配置客户端以便为已颁发令牌使用本地颁发者。  
   
  当客户端与联合服务通信时，服务端通常指定安全令牌服务的地址，客户端需要该安全令牌服务来颁发客户端用于向联合服务对自己进行身份验证的令牌。 在某些情况下，客户端可能会将配置为使用*本地颁发者*。  
   
- 当联合绑定的颁发者地址为 http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous 或 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 时，`null` 使用本地颁发者。 在这样的情况下，必须使用本地颁发者的地址和要使用的绑定来配置 <xref:System.ServiceModel.Description.ClientCredentials>，这样才能与该颁发者通信。  
+ Windows Communication Foundation (WCF) 使用本地颁发者的情况下，联合绑定的颁发者地址http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous或`null`。 在这样的情况下，必须使用本地颁发者的地址和要使用的绑定来配置 <xref:System.ServiceModel.Description.ClientCredentials>，这样才能与该颁发者通信。  
   
 > [!NOTE]
->  如果<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>属性`ClientCredentials`类设置为`true`，未指定本地颁发者地址，并通过指定的颁发者地址[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或其他联合的绑定是 http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self，http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous，或者是`null`，然后 Windows[!INCLUDE[infocard](../../../../includes/infocard-md.md)]使用颁发者。  
+>  如果<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>属性`ClientCredentials`类设置为`true`，未指定本地颁发者地址，并通过指定的颁发者地址[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或其他联合的绑定是http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self， http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous，或者是`null`，然后 Windows[!INCLUDE[infocard](../../../../includes/infocard-md.md)]使用颁发者。  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>在代码中配置本地颁发者  
   

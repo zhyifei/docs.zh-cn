@@ -1,24 +1,12 @@
 ---
 title: Windows 工作流概述
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 568797259087129ab4fc87a1f3523b0cce88eb4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-overview"></a>Windows 工作流概述
 工作流是一套调用的基本单元*活动*存储为模型，它描述实际进程。 工作流提供了一种方法，用于描述多项短期运行或长期运行的工作之间的执行顺序和依赖关系。 此工作从头到尾地贯穿模型，并且活动可以人工执行或由系统功能执行。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 04/30/2018
   
  上述每个类对表示为负责活动执行的 <xref:System.Activities.ActivityInstance> 的核心活动运行时进行包装。 在一个应用程序域中可以并发运行多个 <xref:System.Activities.ActivityInstance> 对象。  
   
- 上述三个宿主交互对象中的每一个都是从称为工作流程序的活动树中创建的。 使用这些类型或对 <xref:System.Activities.ActivityInstance> 进行包装的自定义宿主，可以在包括控制台应用程序、基于窗体的应用程序、Windows 服务、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 网站和 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务在内的任何 Windows 进程内执行工作流。  
+ 上述三个主机交互对象中的每一个都是从称为工作流程序的活动树中创建的。 使用这些类型或包装的自定义主机<xref:System.Activities.ActivityInstance>，可以包括控制台应用程序，任何 Windows 进程内执行工作流基于窗体的应用程序，Windows 服务、 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web 站点和 Windows Communication Foundation （WCF) 服务。  
   
  ![主机进程中的工作流组件](../../../docs/framework/windows-workflow-foundation/media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 托管进程中的工作流组件  

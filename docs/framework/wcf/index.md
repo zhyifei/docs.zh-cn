@@ -1,25 +1,15 @@
 ---
 title: Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e7ef1702718d24580694a3d0d4c72e41dc314b4
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
-ms.translationtype: MT
+ms.openlocfilehash: f3b8abb2a8e0079dc18624c5ac0408a2738f06b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>用 WCF 开发面向服务的应用程序
 本文档的此节提供有关 Windows Communication Foundation (WCF) 的信息，WCF 是用于构建面向服务的应用程序的统一编程模型。 借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。
@@ -77,7 +67,7 @@ ms.lasthandoff: 02/14/2018
  对 Windows Communication Foundation 的各方面进行说明的示例  
   
  [Windows Communication Foundation 词汇表](../../../docs/framework/wcf/glossary.md)  
- 显示特定于术语的列表 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]  
+ 显示特定于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的术语列表。  
   
  [常规参考](../../../docs/framework/wcf/general-reference.md)  
  本节描述用于配置 Windows Communication Foundation 客户端和服务的元素。  

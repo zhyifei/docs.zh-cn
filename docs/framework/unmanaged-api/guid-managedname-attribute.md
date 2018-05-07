@@ -1,14 +1,6 @@
 ---
-title: "GUID_ManagedName 特性"
-ms.custom: 
+title: GUID_ManagedName 特性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GUID_ManagedName
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 11e18095-e444-47bc-aff6-b887ac5dc01e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 116a9e38b9885f0d0a5afc8f4915b9ce2b50f1dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3bae50f695de81856d4fddcb2af3d1188d896642
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidmanagedname-attribute"></a>GUID_ManagedName 特性
 定义指定的组件对象模型 (COM) 库的管理的命名空间名称的自定义接口属性。  
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
  库管理的命名空间名称。  
   
 ## <a name="definition"></a>定义  
- `GUID_ManagedName`在定义 Cor.h，如下所示：  
+ `GUID_ManagedName` 在定义 Cor.h，如下所示：  
   
 ```  
 // {0F21F359-AB84-41e8-9A78-36D110E6D2F9}  
@@ -78,5 +66,5 @@ library Microsoft_VisualStudio_CommandBars
 }  
 ```  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** Cor.h

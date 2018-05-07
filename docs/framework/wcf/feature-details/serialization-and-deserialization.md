@@ -1,38 +1,24 @@
 ---
 title: 序列化和反序列化
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2343ebe5a2a029ddb40da98d28f5c442aa7b6962
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 754b09b3b90399c242ddbaf968242f969cb27b8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-and-deserialization"></a>序列化和反序列化
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括新序列化引擎 <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 可在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象和 XML 之间进行双向转换。 本主题说明序列化程序的工作原理。  
+Windows Communication Foundation (WCF) 包括新序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 可在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象和 XML 之间进行双向转换。 本主题说明序列化程序的工作原理。  
   
  在对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象进行序列化时，序列化程序了解各种序列化编程模型，包括新的数据协定  模型。 有关支持类型的完整列表，请参阅 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 有关数据协定的介绍，请参阅 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
- 当对 XML 进行反序列化时，序列化程序使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 类。 在某些情况下（例如在使用 <xref:System.Xml.XmlDictionaryReader> 二进制 XML 格式时），序列化程序也支持 <xref:System.Xml.XmlDictionaryWriter> 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 类以使其能够生成优化的 XML。  
+ 当对 XML 进行反序列化时，序列化程序使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 类。 它还支持<xref:System.Xml.XmlDictionaryReader>和<xref:System.Xml.XmlDictionaryWriter>类以使其能够生成优化在某些情况下，例如当使用 WCF 二进制 XML 格式的 XML。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还包括一个伴随序列化程序 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 <xref:System.Runtime.Serialization.NetDataContractSerializer> 与 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 序列化程序类似，因为它也发出 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型名称作为序列化数据的一部分。 当在序列化和反序列化结束阶段共享相同的类型时使用此序列化程序。 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 都派生自公共基类 <xref:System.Runtime.Serialization.XmlObjectSerializer>。  
+ WCF 还包括一个伴随序列化程序， <xref:System.Runtime.Serialization.NetDataContractSerializer>。 <xref:System.Runtime.Serialization.NetDataContractSerializer> 与 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 序列化程序类似，因为它也发出 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型名称作为序列化数据的一部分。 当在序列化和反序列化结束阶段共享相同的类型时使用此序列化程序。 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 都派生自公共基类 <xref:System.Runtime.Serialization.XmlObjectSerializer>。  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> 将包含带小于 20 的十六进制值的控制字符序列化为 XML 实体。 将此类数据发送到 WCF 服务时，这可能会导致非 WCF 客户端问题。  
@@ -128,7 +114,7 @@ ms.lasthandoff: 04/30/2018
   
 -   语义。 有时，一定要记住这一点：两个引用指向的是同一个对象而不是两个相同的对象。  
   
- 有关这些原因，一些 `DataContractSerializer` 构造函数重载具有 `preserveObjectReferences` 参数（默认值为 `false`）。 在将此参数设置为 `true`时，将使用只有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 才可以理解的编码引用的特殊方法。 当设置为 `true`时，XML 代码示例现在如下所示。  
+ 有关这些原因，一些 `DataContractSerializer` 构造函数重载具有 `preserveObjectReferences` 参数（默认值为 `false`）。 当此参数设置为`true`，使用的编码对象引用，唯一 WCF 了解的特殊方法。 当设置为 `true`时，XML 代码示例现在如下所示。  
   
 ```xml  
 <PurchaseOrder ser:id="1">  

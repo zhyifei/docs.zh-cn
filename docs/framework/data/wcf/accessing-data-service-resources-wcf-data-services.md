@@ -1,13 +1,6 @@
 ---
-title: "访问数据服务资源（WCF 数据服务）"
-ms.custom: 
+title: 访问数据服务资源（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, querying
 - getting started, WCF Data Services
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dddbd9cf8e11f09cf1c2dc36db49281d00e97aac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1af991d7db9bfeeb0737e65a0517629f359f4a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>访问数据服务资源（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支持[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以将数据公开为与通过 Uri 进行寻址的资源的源。 这些资源表示的实体关系约定根据[实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)。 在此模型中，实体表示作为应用程序域中数据类型的数据操作单元，如客户、订单、项目和产品。 可以通过使用具象状态传输 (REST) 的语义（尤其是标准 HTTP 谓词 GET、PUT、POST 和 DELETE）访问和更改实体数据。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以将数据公开为与通过 Uri 进行寻址的资源的源。 这些资源表示的实体关系约定根据[实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)。 在此模型中，实体表示作为应用程序域中数据类型的数据操作单元，如客户、订单、项目和产品。 可以通过使用具象状态传输 (REST) 的语义（尤其是标准 HTTP 谓词 GET、PUT、POST 和 DELETE）访问和更改实体数据。  
   
 ## <a name="addressing-resources"></a>处理资源  
  在 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 中，您可以通过使用 URI 对数据模型公开的任何数据进行寻址。 例如，下面的 URI 返回客户实体集，其中包含 Customer 实体类型的所有实例的项的源：  
@@ -66,7 +54,7 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
 ```  
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]此外允许你基于查询表达式的结果的地址资源。 这使得可能基于计算的表达式的资源集进行筛选。 例如，下面的 URI 对资源进行筛选以仅返回指定客户自 1997 年 9 月 22 日起已发货的订单：  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 此外允许你基于查询表达式的结果的地址资源。 这使得可能基于计算的表达式的资源集进行筛选。 例如，下面的 URI 对资源进行筛选以仅返回指定客户自 1997 年 9 月 22 日起已发货的订单：  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
@@ -75,7 +63,7 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$fil
  有关详细信息，请参阅[OData: URI 约定](http://go.microsoft.com/fwlink/?LinkId=185564)。  
   
 ## <a name="system-query-options"></a>系统查询选项  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]定义一组可用于传统的查询对资源执行操作，如筛选、 排序和分页的系统查询选项。 例如，下面的 URI 返回的所有集`Order`和相关`Order_Detail`实体，邮政编码尾号不是`100`:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定义一组可用于传统的查询对资源执行操作，如筛选、 排序和分页的系统查询选项。 例如，下面的 URI 返回的所有集`Order`和相关`Order_Detail`实体，邮政编码尾号不是`100`:  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
@@ -83,7 +71,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
   
  返回源中的各项还按订单的 ShipCity 属性值进行排序。  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支持以下[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]系统查询选项：  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持以下[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]系统查询选项：  
   
 |查询选项|描述|  
 |------------------|-----------------|  
@@ -96,7 +84,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 |`$inlinecount`|请求在源中包括源中返回的实体数的计数。 有关详细信息，请参阅[OData: Inlinecount 系统查询选项 ($inlinecount)](http://go.microsoft.com/fwlink/?LinkId=186975)。|  
   
 ## <a name="addressing-relationships"></a>对关系进行寻址  
- 除了对实体集和实体实例进行寻址[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]还可以表示实体之间的关系的关联进行寻址。 若要创建或更改两个实体实例（例如与 Northwind 示例数据库中指定订单相关的发货方）之间的关系，必须使用此功能。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]支持`$link`运算符来专门解决实体之间的关联。 例如，在 HTTP PUT 请求消息中指定下面的 URI 可将指定订单的发货方更改为新发货方。  
+ 除了对实体集和实体实例进行寻址[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]还可以表示实体之间的关系的关联进行寻址。 若要创建或更改两个实体实例（例如与 Northwind 示例数据库中指定订单相关的发货方）之间的关系，必须使用此功能。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持`$link`运算符来专门解决实体之间的关联。 例如，在 HTTP PUT 请求消息中指定下面的 URI 可将指定订单的发货方更改为新发货方。  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  

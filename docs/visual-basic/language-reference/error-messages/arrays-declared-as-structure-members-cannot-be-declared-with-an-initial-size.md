@@ -1,25 +1,17 @@
 ---
 title: 声明为结构成员的数组不能用初始大小声明
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31043
 - bc31043
 helpviewer_keywords:
 - BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 983154a144a79991c86db5056ad0e0e563a3ba73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0a7424e5dbfadd78c4071ba5b76086b7f6c9b94a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a>声明为结构成员的数组不能用初始大小声明
 初始大小声明一个结构的数组。 无法初始化任何结构元素，并声明的数组大小是一种形式的初始化。  
@@ -43,6 +35,6 @@ ms.lasthandoff: 11/21/2017
     End Sub  
     ```  
   
-## <a name="see-also"></a>另请参阅  
- [阵列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+## <a name="see-also"></a>请参阅  
+ [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [如何：声明结构](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)

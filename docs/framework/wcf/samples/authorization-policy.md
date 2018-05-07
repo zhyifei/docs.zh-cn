@@ -1,24 +1,12 @@
 ---
-title: "授权策略"
-ms.custom: 
+title: 授权策略
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4ba4548e6ea62f408fddf3629eca1318c482f728
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: fc0c147f2f9a57c80edda6144a14f208bde835eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authorization-policy"></a>授权策略
 此示例演示如何实现一个自定义声明授权策略和一个关联的自定义服务授权管理器。 这在服务对服务操作进行基于声明的访问检查，并在进行访问检查之前授予调用方某些权限时很有用。 此示例演示添加声明的过程，以及对最终的声明集进行访问检查的过程。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 默认情况下，对于 `wsHttpBinding` 绑定，使用客户端提供的用户名和密码登录有效的 Windows NT 帐户。 此示例演示如何使用自定义<!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>-->`System.IdentityModel.Selectors.UsernamePasswordValidator`进行身份验证客户端。 此外，此示例还演示使用 X.509 证书对服务进行客户端身份验证。 此示例演示了 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 和 <xref:System.ServiceModel.ServiceAuthorizationManager> 的实现，该实现在它们之间为特定用户授予对服务的特定方法的访问权限。 此示例基于[消息安全用户名称](../../../../docs/framework/wcf/samples/message-security-user-name.md)，但演示了如何执行之前声明转换<xref:System.ServiceModel.ServiceAuthorizationManager>调用。  
@@ -292,9 +280,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>  
 ```  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 为执行访问检查提供了一个丰富的、基于声明的模型。 <xref:System.ServiceModel.ServiceAuthorizationManager> 对象用于执行访问检查，并确定与客户端关联的声明是否满足访问服务方法的必需要求。  
+ Windows Communication Foundation (WCF) 提供丰富的基于声明的模型，用于执行访问检查。 <xref:System.ServiceModel.ServiceAuthorizationManager> 对象用于执行访问检查，并确定与客户端关联的声明是否满足访问服务方法的必需要求。  
   
- 出于演示目的，此示例演示了 <xref:System.ServiceModel.ServiceAuthorizationManager> 的实现，它实现了 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法，以允许用户基于声明类型 http://example.com/claims/allowedoperation（其值为允许调用的操作的操作 URI）来访问方法。  
+ 出于演示目的，此示例演示如何实现<xref:System.ServiceModel.ServiceAuthorizationManager>实现<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>方法以允许用户的访问方法基于声明的类型http://example.com/claims/allowedoperation其值是为该操作的操作 URI允许调用。  
   
 ```  
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager  

@@ -1,26 +1,15 @@
 ---
-title: "使用 CommittableTransaction 执行显式事务"
-ms.custom: 
+title: 使用 CommittableTransaction 执行显式事务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce77ddab23063588e347073de4d4c25e5fbb5a01
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1edcdefeaafbee3cfbc0810a47e64f38f9f97ddc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>使用 CommittableTransaction 执行显式事务
 <xref:System.Transactions.CommittableTransaction> 类为应用程序使用事务提供了一种显式方法，而不是隐式地使用 <xref:System.Transactions.TransactionScope> 类。 对于要跨多个函数调用或多个线程调用使用同一事务的应用程序，前一种类十分有用。 与 <xref:System.Transactions.TransactionScope> 类不同，应用程序编写器需要明确调用 <xref:System.Transactions.CommittableTransaction.Commit%2A> 和 <xref:System.Transactions.Transaction.Rollback%2A> 方法以提交或中止事务。  
@@ -28,8 +17,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="overview-of-the-committabletransaction-class"></a>CommittableTransaction 类概述  
  <xref:System.Transactions.CommittableTransaction> 类是从 <xref:System.Transactions.Transaction> 类派生的，因此它提供了后者所具有的所有功能。 <xref:System.Transactions.Transaction.Rollback%2A> 类上的 <xref:System.Transactions.Transaction> 方法尤其有用，该方法还可用于回滚 <xref:System.Transactions.CommittableTransaction> 对象。  
   
- 
-          <xref:System.Transactions.Transaction> 类与 <xref:System.Transactions.CommittableTransaction> 类似，但前者不提供 `Commit` 方法。 这使您可以将事务对象（或其克隆）传递给其他方法（可能位于其他线程上），同时仍可控制事务的提交时间。 被调用的代码可以在事务中登记并为其投票，但只有 <xref:System.Transactions.CommittableTransaction> 对象的创建者才能提交事务。  
+ <xref:System.Transactions.Transaction> 类与 <xref:System.Transactions.CommittableTransaction> 类似，但前者不提供 `Commit` 方法。 这使您可以将事务对象（或其克隆）传递给其他方法（可能位于其他线程上），同时仍可控制事务的提交时间。 被调用的代码可以在事务中登记并为其投票，但只有 <xref:System.Transactions.CommittableTransaction> 对象的创建者才能提交事务。  
   
  此外，在使用 <xref:System.Transactions.CommittableTransaction> 类时，还应注意以下几点。  
   

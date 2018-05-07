@@ -1,33 +1,21 @@
 ---
-title: "开发人员在重写默认行为中的责任"
-ms.custom: 
+title: 开发人员在重写默认行为中的责任
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7de5dbcad14ebfd253ba99f03a8d77e768f29941
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 90b8eedcc80c330a39efe97b6427beebeca913f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>开发人员在重写默认行为中的责任
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]不会强制以下要求，但如果未满足这些要求，则行为是不确定。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不会强制以下要求，但如果未满足这些要求，则行为是不确定。  
   
--   重写方法不能调用<xref:System.Data.Linq.DataContext.SubmitChanges%2A> 或 <xref:System.Data.Linq.Table%601.Attach%2A>。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]如果重写方法中调用这些方法，将引发异常。  
+-   重写方法不能调用<xref:System.Data.Linq.DataContext.SubmitChanges%2A> 或 <xref:System.Data.Linq.Table%601.Attach%2A>。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如果重写方法中调用这些方法，将引发异常。  
   
 -   重写方法不能用来启动、提交或停止事务。 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 操作以事务的形式执行。 内嵌的事务可能会干扰外层事务。 加载重写方法只能在它们确定 <xref:System.Transactions.Transaction> 中未在执行相应操作后启动事务。  
   
--   重写方法应遵循适用的开放式并发映射。 发生开放式并发冲突时，重写方法应引发 <xref:System.Data.Linq.ChangeConflictException>。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]捕获此异常，以便可以正确处理<xref:System.Data.Linq.DataContext.SubmitChanges%2A>上提供的选项<xref:System.Data.Linq.DataContext.SubmitChanges%2A>。  
+-   重写方法应遵循适用的开放式并发映射。 发生开放式并发冲突时，重写方法应引发 <xref:System.Data.Linq.ChangeConflictException>。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 捕获此异常，以便可以正确处理<xref:System.Data.Linq.DataContext.SubmitChanges%2A>上提供的选项<xref:System.Data.Linq.DataContext.SubmitChanges%2A>。  
   
 -   Create (`Insert`) 和 `Update` 重写方法在相应操作成功完成后应使数据库生成的列的值流回对应的对象成员。  
   

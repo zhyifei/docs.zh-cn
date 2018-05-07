@@ -1,29 +1,17 @@
 ---
 title: HTTP 传输安全
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc284f82f974d9b34ff1cf6732d2ee7b95528c44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-transport-security"></a>HTTP 传输安全
-如果使用 HTTP 作为传输，则由安全套接字层 (SSL) 实现提供安全。 SSL 广泛用于 Internet 中，以便向客户端证明服务的身份，并且随后向通道提供保密性（加密）。 本主题说明 SSL 的工作方式以及 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中是如何实现它的。  
+如果使用 HTTP 作为传输，则由安全套接字层 (SSL) 实现提供安全。 SSL 广泛用于 Internet 中，以便向客户端证明服务的身份，并且随后向通道提供保密性（加密）。 本主题说明 SSL 的工作原理以及它如何实现 Windows Communication Foundation (WCF) 中。  
   
 ## <a name="basic-ssl"></a>基本 SSL  
  SSL 的工作方式可以通过一个典型方案得到最好的说明，在本示例中，该方案为银行的网站。 该网站允许客户使用用户名和密码登录。 在经过身份验证之后，用户可以执行事务，例如查看帐户余额、支付帐单以及将钱从一个帐户转到其他帐户。  
@@ -42,11 +30,11 @@ ms.lasthandoff: 04/30/2018
  每个证书有两个密钥、 私钥和公钥，以及两个名为*交换密钥对*。 简言之，只有证书的所有者知道私钥，而公钥则可以从证书中读取。 这两个密钥都可用来加密和解密摘要、哈希或其他密钥，但它们只能用于相反的操作。 例如，如果客户端使用公钥加密，则只有网站可以使用私钥对消息进行解密。 同样，如果网站使用私钥加密，则客户端可以使用公钥解密。 这可以使客户端确信只与私钥的拥有者交换消息，因为只有使用私钥加密的消息才可以使用公钥进行解密。 而网站可以确信它正在与已经使用公钥加密的客户端交换消息。 然而，这种交换仅对初次握手是安全的，因此在创建实际的对称密钥时要复杂得多。 尽管如此，所有通信都依赖于服务具有有效的 SSL 证书。  
   
 ## <a name="implementing-ssl-with-wcf"></a>使用 WCF 实现 SSL  
- HTTP 传输安全（或 SSL）是在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 外部提供的。 可以使用两种方式之一来实现 SSL；决定因素是承载应用程序的方式：  
+ HTTP 传输安全 （或 SSL） 会向 WCF 外部提供。 可以使用两种方式之一来实现 SSL；决定因素是承载应用程序的方式：  
   
--   如果要使用 Internet 信息服务 (IIS) 作为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 宿主，请使用 IIS 基础结构来设置 SSL 服务。  
+-   如果你使用 Internet 信息服务 (IIS) 作为 WCF 主机，使用 IIS 基础结构设置 SSL 服务。  
   
--   如果要创建自承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序，则可以使用 HttpCfg.exe 工具将 SSL 证书绑定到相应的地址。  
+-   如果要创建自承载的 WCF 应用程序，你可以将 SSL 证书绑定到使用 HttpCfg.exe 工具的地址。  
   
 ### <a name="using-iis-for-transport-security"></a>使用 IIS 实现传输安全  
   
@@ -61,7 +49,7 @@ ms.lasthandoff: 04/30/2018
  若要配置证书以用于[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[Certificates_IIS_SP1_Ops](http://go.microsoft.com/fwlink/?LinkId=88602)。  
   
 ### <a name="using-httpcfg-for-ssl"></a>将 HttpCfg 用于 SSL  
- 如果要创建一个自承载[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]应用程序，下载 HttpCfg.exe 工具，可用在[Windows XP Service Pack 2 支持工具网站](http://go.microsoft.com/fwlink/?LinkId=29002)。  
+ 如果要创建自承载的 WCF 应用程序，下载 HttpCfg.exe 工具，可用在[Windows XP Service Pack 2 支持工具网站](http://go.microsoft.com/fwlink/?LinkId=29002)。  
   
  有关使用 HttpCfg.exe 工具来设置 X.509 证书的端口的详细信息，请参阅[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   

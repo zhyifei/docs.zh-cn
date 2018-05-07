@@ -1,32 +1,18 @@
 ---
 title: 大型数据和流
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e367c11b48e6f4034afb1f42ded3498d748848a7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f58e61ef76173030db49d4911875cc40200e53d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="large-data-and-streaming"></a>大型数据和流
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是基于 XML 的通信基础结构。 因为 XML 数据通常编码中定义的标准文本格式[XML 1.0 规范](http://go.microsoft.com/fwlink/?LinkId=94838)的连接系统开发人员和架构师通常关心发送的消息的网络占用内存的情况 （或大小） 跨网络和基于文本的编码的 XML 又高效传输的二进制数据带来了特殊的挑战。  
+Windows Communication Foundation (WCF) 是基于 XML 的通信基础结构。 因为 XML 数据通常编码中定义的标准文本格式[XML 1.0 规范](http://go.microsoft.com/fwlink/?LinkId=94838)的连接系统开发人员和架构师通常关心发送的消息的网络占用内存的情况 （或大小） 跨网络和基于文本的编码的 XML 又高效传输的二进制数据带来了特殊的挑战。  
   
 ## <a name="basic-considerations"></a>基本考虑事项  
- 为了提供有关 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的下列信息的背景信息，本部分重点介绍有关通常适用于联网系统基础结构的编码、二进制数据和流的一些常规问题和考虑事项。  
+ 若要提供有关 WCF 的以下信息的背景信息，本部分重点介绍一些常规问题和注意事项编码、 二进制数据，并通常流的将应用于联网的系统基础结构。  
   
 ### <a name="encoding-data-text-vs-binary"></a>编码数据：文本与二进制  
  开发人员最常有的顾虑包括：认为与二进制格式相比 XML 的开销非常可观（因为其开始标记和结束标记的重复性），数值的编码可能要大得多（因为它们是以文本值来表示的），并且无法有效地表示二进制数据（因为它们必须进行特殊的编码才能嵌入到文本格式中）。  
@@ -55,7 +41,7 @@ ms.lasthandoff: 04/30/2018
  但是，与 Base64 一样，对于 MIME 格式，MTOM 也有一些必要的开销，这样仅在二进制数据元素的大小超过大约 1 KB 时，才能体现出使用 MTOM 的好处。 由于这一开销，如果二进制负载保持在该阈值之下，则 MTOM 编码的消息可能会大于对二进制数据使用 Base64 编码的消息。 有关详细信息，请参阅本主题中后面的"编码"一节。  
   
 ### <a name="large-data-content"></a>大型数据内容  
- 即使不考虑线路需求量，前面提及的 500 MB 负载也对服务和客户端本身提出了很大的考验。 默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]处理中的消息*缓冲的模式*。 这意味着消息的整个内容在发送前或接收后都存在于内存中。 尽管对于大多数情形来说这是个很好的策略，并且是消息传递功能（如数字签名）和可靠传递所必需的，但是大型消息可能会耗尽系统资源。  
+ 即使不考虑线路需求量，前面提及的 500 MB 负载也对服务和客户端本身提出了很大的考验。 默认情况下，WCF 处理中的消息*缓冲的模式*。 这意味着消息的整个内容在发送前或接收后都存在于内存中。 尽管对于大多数情形来说这是个很好的策略，并且是消息传递功能（如数字签名）和可靠传递所必需的，但是大型消息可能会耗尽系统资源。  
   
  处理大型负载的策略是流。 尽管消息（尤其是以 XML 表示的消息）通常会被认为是相对紧凑的数据包，但消息大小也可能达到 GB 数量级，这样的大小与连续的数据流而不是数据包相仿。 当以流模式而不是缓冲模式传输数据时，发送方会以流的形式将消息正文的内容提供给接收方，并且消息基础结构会不断地将就绪的数据从发送方转发给接收方。  
   
@@ -74,7 +60,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="encodings"></a>编码  
  *编码*定义一组有关如何在网络上显示消息的规则。 *编码器*实现此类编码，并负责，在发送端，启用<xref:System.ServiceModel.Channels.Message>到字节流或可以跨网络发送的字节缓冲区的内存中消息。 在接收方，编码器会将一系列字节转变为内存中的消息。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包括三个编码器，同时也允许您进行编写并插入自己的编码器（如有必要）。  
+ WCF 包括三个编码器，并允许你编写并插入自己的编码器，如有必要。  
   
  每个标准绑定都包括一个预配置编码器，因此默认情况下带 Net* 前缀的绑定使用二进制编码器（通过包括 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 类），而 <xref:System.ServiceModel.BasicHttpBinding> 和 <xref:System.ServiceModel.WSHttpBinding> 类则使用文本消息编码器（通过 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 类）。  
   
@@ -82,7 +68,7 @@ ms.lasthandoff: 04/30/2018
 |-----------------------------|-----------------|  
 |<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|文本消息编码器是所有基于 HTTP 的绑定的默认编码器，并且是最关注互操作性的所有自定义绑定的正确选择。 此编码器读取和编写标准 SOAP 1.1/SOAP 1.2 文本消息，而不会对二进制数据进行任何特殊处理。 如果消息的 <xref:System.ServiceModel.Channels.MessageVersion> 设置为 `None`，则 SOAP 信封包装会从输出中省略，只有消息正文内容会进行序列化。|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM 消息编码器是一个文本编码器，实现对二进制数据的特殊处理，默认情况下在任何标准绑定中都不会使用，因为它是一个严格按具体情况进行优化的实用工具。 只有当二进制数据的量不超过某个阈值时，MTOM 编码才具有优势，如果消息包含的二进制数据超过了这个阈值，则这些数据会外部化到消息信封之后的 MIME 部分。 请参见本节后面部分中的“启用 MTOM”。|  
-|<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|二进制消息编码器是 Net* 绑定的默认编码器，当通信双方都基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时，此编码器始终是正确的选择。 二进制消息编码器使用 .NET 二进制 XML 格式，该格式是 XML 信息集 (Information Sets, Infosets) 的 Microsoft 特定二进制表示法，与等效的 XML 1.0 表示法相比产生的需求量通常较小，并将二进制数据编码为字节流。|  
+|<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|二进制消息编码器是 Net * 绑定和相应的选项的默认编码器，每当通信双方基于 WCF。 二进制消息编码器使用 .NET 二进制 XML 格式，该格式是 XML 信息集 (Information Sets, Infosets) 的 Microsoft 特定二进制表示法，与等效的 XML 1.0 表示法相比产生的需求量通常较小，并将二进制数据编码为字节流。|  
   
  通常，文本消息编码是要求互操作性的任意通信途径的最佳选择，而二进制消息编码则是其他任意通信途径的最佳选择。 通常，对于单个消息而言，二进制消息编码生成的消息大小要小于文本编码，并且在通信会话期间消息大小会逐渐变得更小。 与文本编码不同的是，二进制编码不需要对二进制数据使用特殊处理（例如，使用 Base64），但会将字节表示为字节。  
   
@@ -107,10 +93,10 @@ ms.lasthandoff: 04/30/2018
   
  因为 MTOM 编码器总是会发出 MTOM 编码的 MIME/多部分消息，而与二进制数据是否最终进行外部化无关，所以通常情况下，只有在终结点交换超过 1 KB 二进制数据的消息时，才应对终结点启用 MTOM。 另外，在可能的情况下，应限定设计为与启用 MTOM 的终结点一起使用的服务协定仅指定此类数据传输操作。 相关的控制功能应当位于一个单独的协定中。 这一“仅 MTOM”规则仅适用于通过已启用 MTOM 的终结点发送的消息；MTOM 编码器也可以对传入的非 MTOM 消息进行解码和分析。  
   
- 使用 MTOM 编码器与其他所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能没有冲突。 请注意，可能不是在所有情况下都能遵守此规则，例如，当需要会话支持时。  
+ 使用 MTOM 编码器符合与所有其他 WCF 功能。 请注意，可能不是在所有情况下都能遵守此规则，例如，当需要会话支持时。  
   
 ### <a name="programming-model"></a>编程模型  
- 不论在应用程序中使用三个内置编码器中的哪一个，您在传输二进制数据方面的编程体验都是相同的。 区别在于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何基于数据类型来处理数据。  
+ 不论在应用程序中使用三个内置编码器中的哪一个，您在传输二进制数据方面的编程体验都是相同的。 区别在于 WCF 处理基于其数据类型的数据的方式。  
   
 ```  
 [DataContract]  
@@ -135,12 +121,12 @@ class MyData
 >  您不应在数据协定内使用 <xref:System.IO.Stream?displayProperty=nameWithType> 派生类型。 应使用流模型传输流数据，如下面的“数据的流模式”一节所述。  
   
 ## <a name="streaming-data"></a>数据的流模式  
- 当您有大量的数据要传输时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的流传输模式是整个在内存中缓冲和处理消息的默认行为的一个可行的替代方法。  
+ 你有大量的数据要传输时，WCF 中的流传输模式时，缓冲和处理整个在内存中的消息的默认行为可行的替代方法。  
   
  如上所述，只应对数据无法分段、消息必须以及时的方式传递或者当传输启动时数据尚未完全就绪的大型消息（带文本或二进制内容）启用流模式。  
   
 ### <a name="restrictions"></a>限制  
- 当启用了流模式时，很多 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能都不能使用：  
+ 启用流式处理后，不能使用大量的 WCF 功能：  
   
 -   无法执行消息正文的数字签名，因为它们需要对整个消息内容进行哈希运算。 采用流模式的情况下，当构造和发送消息头时，内容尚未完全就绪，因此无法计算数字签名。  
   
@@ -195,7 +181,7 @@ class MyData
   
  当通过代码实例化绑定时，必须将该绑定（如果您创建自定义绑定，则为传输绑定元素）的 `TransferMode` 属性设置为上面提到的某个值。  
   
- 您可以在不影响功能的情况下在通信双方的任何一方独立地对请求和答复或者同时对两个方向启用流模式。 不过，您应始终认为已传输数据的大小非常大，完全需要在通信链路的两个终结点上均启用流模式。 对于其中一个终结点不是使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]实现的跨平台通信，使用流模式的能力取决于平台的流功能。 另一个极少见的例外可能是一种内存消耗驱动情形，在这种情形下，客户端或服务必须尽量减小其工作集，并且只能提供较小的缓冲区大小。  
+ 您可以在不影响功能的情况下在通信双方的任何一方独立地对请求和答复或者同时对两个方向启用流模式。 不过，您应始终认为已传输数据的大小非常大，完全需要在通信链路的两个终结点上均启用流模式。 对于跨平台的终结点之一不使用实现了 WCF 通信，使用流式处理的能力取决于平台的流式处理功能。 另一个极少见的例外可能是一种内存消耗驱动情形，在这种情形下，客户端或服务必须尽量减小其工作集，并且只能提供较小的缓冲区大小。  
   
 ### <a name="enabling-asynchronous-streaming"></a>启用异步流处理  
  若要启用异步流，请将 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> 终结点行为添加到服务主机，并将其 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> 属性设置为 `true`。 我们还在发送端添加真正异步流处理的能力。 在将消息流式处理到多个客户端的方案中，这可提高服务的可扩展性；其中某些客户端的读取速度较慢，这可能由于网络拥塞或根本无法阅读造成的。 在这些方案中，我们现在不针对每个客户端对服务阻止各个线程。 这确保服务能够处理多得多的客户端，进而提高服务的可扩展性。  
@@ -233,23 +219,23 @@ public class UploadStreamMessage
 }   
 ```  
   
- 当流到达文件尾 (EOF) 时，流传输结束，消息关闭。 当发送消息（返回一个值或调用一个操作）时，您可以传递 <xref:System.IO.FileStream>，随后 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构会从该流中提取所有数据，直到流已完全读取并到达 EOF。 要为不存在此类预置 <xref:System.IO.Stream> 派生类的源传输流数据，请构造这样一个类，用该类覆盖流源，并将其用作参数或返回值。  
+ 当流到达文件尾 (EOF) 时，流传输结束，消息关闭。 当发送消息 （返回一个值，或调用某个操作），您可以传递<xref:System.IO.FileStream>和 WCF 基础结构随后将拉取所有数据从该流直到流已完全读取并到达 EOF。 要为不存在此类预置 <xref:System.IO.Stream> 派生类的源传输流数据，请构造这样一个类，用该类覆盖流源，并将其用作参数或返回值。  
   
- 当接收消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会在 Base64 编码消息正文内容上构造一个流（如果使用 MTOM，则构造相应的 MIME 部分），当读取完内容时流到达 EOF。  
+ 在接收消息，WCF 会构造流通过 Base64 编码的消息正文内容 （或相应的 MIME 部分，如果使用 MTOM） 和读取内容时，流到达 EOF。  
   
- 传输级流还可以与其他任何消息协定类型（参数列表、数据协定参数和显式消息协定）一起工作，但是由于此类型化消息的序列化和反序列化要求由序列化程序进行缓冲，因此不建议使用此类协定变体。  
+ 传输级流还可以与其他任何消息协定类型（参数列表、数据协定自变量和显式消息协定）一起工作，但是由于此类型化消息的序列化和反序列化要求由序列化程序进行缓冲，因此不建议使用此类协定变体。  
   
 ### <a name="special-security-considerations-for-large-data"></a>关于大型数据的特殊安全考虑事项  
  所有绑定都允许你限制传入消息的大小，以阻止拒绝服务攻击。 <xref:System.ServiceModel.BasicHttpBinding>，例如，公开[System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A)属性限制传入消息的大小，因此还限制在最大的访问的内存量处理该消息时。 此单元是以字节为单位设置的，默认值为 65,536 个字节。  
   
- 大型数据流情形所特有的安全威胁会在接收方希望数据以流模式发送时导致数据缓冲，从而促使拒绝服务。 例如，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 始终缓冲消息的 SOAP 头，因此攻击者可能会构造一个完全由头组成的大型恶意消息，以强制缓冲数据。 当启用流模式时，`MaxReceivedMessageSize` 可能设置为一个极其大的值，因为接收方绝预料不到会一次性地在内存中缓冲整个消息。 如果 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 被强制缓冲消息，则可能会发生内存溢出。  
+ 大型数据流情形所特有的安全威胁会在接收方希望数据以流模式发送时导致数据缓冲，从而促使拒绝服务。 例如，WCF 始终缓冲 SOAP 标头的消息，并因此攻击者可能会构造完全由标头以强制缓冲数据组成的大型恶意消息。 当启用流模式时，`MaxReceivedMessageSize` 可能设置为一个极其大的值，因为接收方绝预料不到会一次性地在内存中缓冲整个消息。 如果 WCF 强制缓冲消息，会发生内存溢出。  
   
- 因此，这种情况下仅限制最大传入消息大小是不够的。 要限制 `MaxBufferSize` 缓冲的内存量，必须使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 属性。 进行流处理时，将此属性设置为一个安全值（或保留为默认值）很重要。 例如，假设您的服务必须接收大至 4 GB 的文件，并将其存储在本地磁盘上。 另外，还假设您的内存存在一些约束，一次只能缓冲 64 KB 的数据。 这样，您应该将 `MaxReceivedMessageSize` 设置为 4 GB，将 `MaxBufferSize` 设置为 64 KB。 另外，在您的服务实现中，必须确保仅按 64 KB 大小的块从传入流中读取数据，并且在上一块写入到磁盘并从内存中丢弃之前，不读取下一块。  
+ 因此，这种情况下仅限制最大传入消息大小是不够的。 `MaxBufferSize`约束该 WCF 缓冲区的内存所需的属性。 进行流处理时，将此属性设置为一个安全值（或保留为默认值）很重要。 例如，假设您的服务必须接收大至 4 GB 的文件，并将其存储在本地磁盘上。 另外，还假设您的内存存在一些约束，一次只能缓冲 64 KB 的数据。 这样，您应该将 `MaxReceivedMessageSize` 设置为 4 GB，将 `MaxBufferSize` 设置为 64 KB。 另外，在您的服务实现中，必须确保仅按 64 KB 大小的块从传入流中读取数据，并且在上一块写入到磁盘并从内存中丢弃之前，不读取下一块。  
   
- 另外很重要的一点是，务必了解此配额仅限制由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 执行的缓冲，而无法防止您在自己的服务或客户端实现中执行的任何缓冲。 有关其他安全注意事项的详细信息，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
+ 它还必须了解此配额仅限制由 WCF 完成的缓冲并且不能帮助你抵御往来您自己的服务或客户端实现任何缓冲。 有关其他安全注意事项的详细信息，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
   
 > [!NOTE]
->  使用缓冲传输还是流传输是在终结点本地决定的。 对于 HTTP 传输，传输模式不会通过连接传播，也不会传播到代理服务器和其他中间方。 设置传输模式不会反映在服务接口的说明中。 在对服务生成一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端后，必须为旨在与流传输一起使用的服务编辑配置文件，以设置此模式。 对于 TCP 和命名管道传输协议，该传输模式将作为策略断言传播。  
+>  使用缓冲传输还是流传输是在终结点本地决定的。 对于 HTTP 传输，传输模式不会通过连接传播，也不会传播到代理服务器和其他中间方。 设置传输模式不会反映在服务接口的说明中。 后生成 WCF 客户端到服务，必须编辑服务应使用与流传输模式设置的配置文件。 对于 TCP 和命名管道传输协议，该传输模式将作为策略断言传播。  
   
 ## <a name="see-also"></a>请参阅  
  [如何：启用流式处理](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

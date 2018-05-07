@@ -1,36 +1,22 @@
 ---
 title: 使用证书
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c023b27ace10919c51aa13e2635040d9d5b812b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f5566eacaabb5d3eb5579d015fad8149a2ed4f3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-certificates"></a>使用证书
-对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和证书来完成常见任务。  
+要编制 Windows Communication Foundation (WCF) 安全，X.509 数字证书通常用于对客户端和服务器进行身份验证、 加密和数字签名消息。 本主题简要说明 X.509 数字证书的功能以及如何在 WCF 中, 使用它们，并包括用于解释这些概念进行了深入，或揭示了如何完成使用 WCF 和证书的常见任务的主题的链接。  
   
- 简言之，数字证书是属于*公钥基础结构*(PKI)，这是数字证书、 证书颁发机构和其他注册机构验证和身份验证的有效性的系统使用公钥加密对电子事务所涉及的每一方。 证书颁发机构颁发证书，每个证书都有包含数据，如的字段的一组*主题*（向其颁发证书的实体） 生效日期 （当证书是否有效），颁发者 (颁发证书的实体），和公钥。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，这些属性中的每一个都作为 <xref:System.IdentityModel.Claims.Claim> 进行处理，而每个声明又进一步分为两种类型：标识和权限。 有关 X.509 证书，请查看[X.509 公钥证书](http://go.microsoft.com/fwlink/?LinkId=209952)有关声明和授权的详细信息，请在 WCF 请[管理声明和使用标识模型授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). 有关实施 PKI 的详细信息，请参阅[Windows Server 2008 R2-证书服务](http://go.microsoft.com/fwlink/?LinkId=209949)。  
+ 简言之，数字证书是属于*公钥基础结构*(PKI)，这是数字证书、 证书颁发机构和其他注册机构验证和身份验证的有效性的系统使用公钥加密对电子事务所涉及的每一方。 证书颁发机构颁发证书，每个证书都有包含数据，如的字段的一组*主题*（向其颁发证书的实体） 生效日期 （当证书是否有效），颁发者 (颁发证书的实体），和公钥。 在 WCF 中，上述每个属性处理作为<xref:System.IdentityModel.Claims.Claim>，每个声明又进一步分为两种类型： 标识和权限。 有关 X.509 证书，请查看[X.509 公钥证书](http://go.microsoft.com/fwlink/?LinkId=209952)有关声明和授权的详细信息，请在 WCF 请[管理声明和使用标识模型授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). 有关实施 PKI 的详细信息，请参阅[Windows Server 2008 R2-证书服务](http://go.microsoft.com/fwlink/?LinkId=209949)。  
   
  证书的主要功能是向其他各方验证证书所有者的身份。 证书包含*公钥*的所有者，所有者保留的私钥。 公钥可用来对发送给证书所有者的消息进行加密。 只有所有者才能访问私钥，因此，只有所有者才能解密这些消息。  
   
@@ -46,7 +32,7 @@ ms.lasthandoff: 04/30/2018
   
 -   **当前用户存储区**。 交互式应用程序通常将证书放在此位置，供计算机的当前用户使用。 如果要创建客户端应用程序，通常会将向服务验证用户身份的证书放在此处。  
   
- 这两个存储区进一步分为子存储区。 使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 编程时，最重要的子存储区包括：  
+ 这两个存储区进一步分为子存储区。 其中最重要的当使用 WCF 编程包括：  
   
 -   **受信任的根证书颁发机构**。 使用此存储区中的证书可以创建证书链，通过证书链，可以追溯到此存储区中的证书颁发机构证书。  
   
@@ -99,7 +85,7 @@ ms.lasthandoff: 04/30/2018
  在创建自定义身份验证器时，要重写的最重要方法是 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 方法。 有关自定义身份验证的示例，请参阅[X.509 证书验证程序](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)示例。 有关详细信息，请参阅[自定义凭据和凭据验证](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)。  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>使用 Makecert.exe 生成证书链  
- 证书创建工具 (Makecert.exe) 可以创建 X.509 证书和私钥/公钥对。 可以将私钥保存在磁盘上，然后用它来颁发和签名新证书，从而模拟链状证书的层次结构。 此工具仅在开发服务时用作辅助手段，决不可以用来为实际部署创建证书。 在开发 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，可使用 Makecert.exe 按照下列步骤生成信任链。  
+ 证书创建工具 (Makecert.exe) 可以创建 X.509 证书和私钥/公钥对。 可以将私钥保存在磁盘上，然后用它来颁发和签名新证书，从而模拟链状证书的层次结构。 此工具仅在开发服务时用作辅助手段，决不可以用来为实际部署创建证书。 在开发 WCF 服务，请使用以下步骤来生成使用 Makecert.exe 的信任链。  
   
 #### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>使用 Makecert.exe 生成信任链  
   
@@ -137,7 +123,7 @@ ms.lasthandoff: 04/30/2018
  你还可以通过以下方式设置模式在配置中使用`revocationMode`属性[\<身份验证 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (的[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)) 和[\<身份验证 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (的[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md))。  
   
 ## <a name="the-setcertificate-method"></a>SetCertificate 方法  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，必须经常指定一个或一组证书，供服务或客户端用来对消息进行身份验证、加密或数字签名。 使用表示 X.509 证书的各个类的 `SetCertificate` 方法，可以以编程方式实现这一操作。 下面的类使用 `SetCertificate` 方法指定一个证书。  
+ 在 WCF 中，通常必须指定证书，或将服务设置的证书或客户端是使用来进行身份验证、 加密或数字方式签署一条消息。 使用表示 X.509 证书的各个类的 `SetCertificate` 方法，可以以编程方式实现这一操作。 下面的类使用 `SetCertificate` 方法指定一个证书。  
   
 |类|方法|  
 |-----------|------------|  
@@ -179,9 +165,9 @@ ms.lasthandoff: 04/30/2018
   
  将 X.509 证书映射到表示 Windows 用户帐户的令牌，这一过程视为权限提升，这是因为一旦执行了映射，就可使用 Windows 令牌获得对受保护资源的访问权限。 因此，域策略要求 X.509 证书在映射之前符合其策略。 *SChannel*安全包来强制此要求。  
   
- 使用 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 或更高版本时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以确保证书在映射到 Windows 帐户之前符合域策略。  
+ 使用时[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]或更高版本，WCF 可以确保证书在映射到 Windows 帐户之前符合域策略。  
   
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 第一版中，执行映射无需考虑域策略。 因此，如果启用了映射，而 X.509 证书不满足域策略，则在第一版下运行正常的早期应用程序，可能会失败。  
+ 在第一个版本的 WCF 中，而无需考虑域策略完成映射。 因此，如果启用了映射，而 X.509 证书不满足域策略，则在第一版下运行正常的早期应用程序，可能会失败。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels>  

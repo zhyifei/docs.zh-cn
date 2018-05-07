@@ -2,11 +2,11 @@
 title: '&lt;Baseaddressprefixfilter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 8fffcd02b1c08172b184225f13a1852414cf429a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 9ac0c756f611c877ca689f12e5fe365026924f1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;Baseaddressprefixfilter&gt;
 表示的配置元素，用于指定传递筛选器提供了一种机制，托管在 IIS 中的 Windows Communication Foundation (WCF) 应用程序时可选取适当的 Internet 信息服务 (IIS) 绑定的集合。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  IIS 网站是包含虚拟目录的虚拟应用程序的容器。 可通过一个或多个 IIS 绑定访问站点上的应用程序。 IIS 绑定提供两条信息：绑定协议和绑定信息。 绑定协议（例如 HTTP）定义发生通信所基于的方案，而绑定信息（例如 IP 地址、端口、主机头）包含用于访问站点的数据。  
   
- IIS 支持为每个站点指定多个 IIS 绑定，这会导致每个方案有多个基址。 因为一个站点承载的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务只允许绑定到每个方案的一个基址，所以您可以使用前缀筛选器功能选取所需的承载服务的基址。 根据可选前缀列表筛选器筛选 IIS 提供的传入基址。  
+ IIS 支持为每个站点指定多个 IIS 绑定，这会导致每个方案有多个基址。 由于在一个站点下承载的 WCF 服务允许每个方案到仅一个基址的绑定，可以使用前缀筛选器功能选取所需的基址的托管服务。 根据可选前缀列表筛选器筛选 IIS 提供的传入基址。  
   
  例如，您的站点可包含以下基址。  
   

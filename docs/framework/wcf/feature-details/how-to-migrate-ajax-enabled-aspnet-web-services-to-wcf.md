@@ -1,41 +1,27 @@
 ---
 title: 如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b728e6283a2f038b7e5ef4c535da41f4eb8ebef
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 048408adf8678c243a225a233cb1173c9b7f869f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF
-本主题概述将基本 ASP.NET AJAX 服务迁移到等效的启用了 AJAX 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的过程。 它演示了如何为 ASP.NET AJAX 服务创建在功能上等效的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 版本。 随后可以并行使用这两项服务，也可以用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务替换 ASP.NET AJAX 服务。  
+本主题概述了基本的 ASP.NET AJAX 服务迁移到等效的启用了 AJAX 的 Windows Communication Foundation (WCF) 服务的过程。 它演示如何创建 ASP.NET AJAX 服务的功能上等效 WCF 版本。 然后可以并排比较，使用这两项服务或 WCF 服务可以用于替换 ASP.NET AJAX 服务。  
   
- 将现有的 ASP.NET AJAX 服务迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX 服务具有下列优点：  
+ 迁移现有的 ASP.NET AJAX 的 WCF AJAX 服务的服务为你提供了以下好处：  
   
 -   只需最少的额外配置，即可将 AJAX 服务公开为 SOAP 服务。  
   
--   可以获得 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能（例如跟踪等）所带来的好处。  
+-   你可以从跟踪，如 WCF 功能中获益，依此类推。  
   
  下面的过程假定您正在使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
   
  从本主题概述的过程中得到的代码将在过程后面的示例中提供。  
   
- 有关详细信息公开有关[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务通过支持 AJAX 的终结点，请参阅[如何： 使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主题。  
+ 有关公开通过支持 AJAX 的终结点的 WCF 服务的详细信息，请参阅[如何： 使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主题。  
   
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>创建并测试 ASP.NET Web 服务应用程序  
   
@@ -62,7 +48,7 @@ ms.lasthandoff: 04/30/2018
   
 9. 此响应可确认您现在已拥有一项能正常运行的 ASP.NET AJAX 服务。具体而言，该服务现在已在 Service1.asmx/HelloWorld 处公开了一个响应 HTTP POST 请求并返回 XML 的终结点。  
   
-     现在可以转换此服务以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX 服务了。  
+     现在你已准备好转换此服务以使用 WCF AJAX 服务。  
   
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>创建等效的 WCF AJAX 服务应用程序  
   
@@ -190,11 +176,11 @@ namespace ASPHello
   
  <xref:System.Xml.XmlDocument> 不支持 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 类型，因为此类型不能被 <xref:System.Xml.Serialization.XmlSerializer> 序列化。 可以改用 <xref:System.Xml.Linq.XDocument> 类型或序列化 <xref:System.Xml.XmlDocument.DocumentElement%2A>。  
   
- 如果要升级 ASMX Web 服务并将其并行迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，请避免将两种类型映射到客户端上的同一名称。 如果 <xref:System.Web.Services.WebMethodAttribute> 和 <xref:System.ServiceModel.ServiceContractAttribute> 中使用了同一类型，则这将导致序列化程序中出现异常：  
+ 如果正在升级 ASMX Web 服务，并通过并行迁移到 WCF 服务，避免将两种类型映射到客户端上的相同名称。 如果 <xref:System.Web.Services.WebMethodAttribute> 和 <xref:System.ServiceModel.ServiceContractAttribute> 中使用了同一类型，则这将导致序列化程序中出现异常：  
   
--   如果首先添加 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，则对 ASMX Web 服务调用方法将导致 <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> 中出现异常，因为代理中顺序的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 样式定义优先。  
+-   如果首先添加 WCF 服务，则对 ASMX Web 服务调用方法将导致异常中的<xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29>因为代理中顺序的 WCF 样式定义优先。  
   
--   如果首先添加 ASMX Web 服务，则对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务调用方法将导致 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 中出现异常，因为代理中顺序的 Web 服务样式定义优先。  
+-   如果首先添加 ASMX Web 服务，则将调用 WCF 服务上的方法导致异常中的<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>因为代理中顺序的 Web 服务样式定义优先。  
   
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 和 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 在行为上存在很大差异。 例如，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 将字典表示为键/值对的数组，而 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 则将字典表示为实际的 JSON 对象。 因此，下面是用 ASP.NET AJAX 表示的字典。  
   

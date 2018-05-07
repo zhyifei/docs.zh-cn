@@ -1,20 +1,12 @@
 ---
-title: "“查找私钥”工具 (FindPrivateKey.exe)"
+title: “查找私钥”工具 (FindPrivateKey.exe)
 ms.date: 09/11/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4bdfa1a9e45332e8c2acbbc8cd8a09bd2f927fbc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f156cbb2f4fad8d51e356bd4dee2d72d9397ffb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>“查找私钥”工具 (FindPrivateKey.exe)
 
@@ -40,8 +32,8 @@ FindPrivateKey<storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprin
 
 |选项|描述|
 |------------|-----------------|
-|`/n <`*subjectName*`>`|指定证书的主题名称。|
-|`/t <`*指纹*`>`|指定证书的指纹。 使用 Certmgr.exe 来检索证书的指纹。|
+|`/n <` *subjectName* `>`|指定证书的主题名称。|
+|`/t <` *指纹* `>`|指定证书的指纹。 使用 Certmgr.exe 来检索证书的指纹。|
 |`/f`|只输出文件名。|
 |`/d`|只输出目录。|
 |`/a`|输出绝对文件名。|

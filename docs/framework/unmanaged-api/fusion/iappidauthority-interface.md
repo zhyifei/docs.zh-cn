@@ -1,14 +1,6 @@
 ---
-title: "IAppIdAuthority 接口"
-ms.custom: 
+title: IAppIdAuthority 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAppIdAuthority
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: ec354fa1-1efd-41b0-bc43-b90597b6e253
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c51aac28864cba5f538f7829ba4112b141c9a3c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 819afec2c448e5f396ab54e2dde00c01da310b12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iappidauthority-interface"></a>IAppIdAuthority 接口
 提供用于生成并比较应用程序标识和引用的密钥的方法。  
@@ -58,12 +46,12 @@ ms.lasthandoff: 12/22/2017
 |`IAppIdAuthority::TextToDefinition`|获取到的接口指针`IDefinitionAppId`表示由指定的字符串参数引用的程序集的实例。|  
 |`IAppIdAuthority::TextToReference`|获取到的接口指针`IReferenceAppId`表示由指定的字符串参数引用的程序集的实例。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

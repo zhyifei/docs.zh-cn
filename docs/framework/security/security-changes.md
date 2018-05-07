@@ -1,13 +1,6 @@
 ---
-title: ".NET Framework 中的安全性更改"
-ms.custom: 
+title: .NET Framework 中的安全性更改
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Allow Partially Trusted Callers attribute
 - .NET Framework 4, security changes
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - security-critical code
 - code access security, changes
 ms.assetid: 5e87881c-9c13-4b52-8ad1-e34bb46e8aaa
-caps.latest.revision: "52"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0777b2566337427abd116bb3584bc19e67d34803
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84e80b99ee6d872714180e73354d20770c21e144
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-changes-in-the-net-framework"></a>.NET Framework 中的安全性更改
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中对安全性最重要的更改是强命名。 有关这些更改的说明，请参阅 [Enhanced Strong Naming](../../../docs/framework/app-domains/enhanced-strong-naming.md) 。  

@@ -1,12 +1,6 @@
 ---
 title: Sub 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Sub
 helpviewer_keywords:
@@ -35,14 +29,11 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-caps.latest.revision: 52
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0a2d0d5ffdca857a3a5ca58cd38b0930f254526f
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 9a806f2ec979699f7ccf4012c6477bee11301b0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 语句 (Visual Basic)
 声明名称、 参数和定义的代码`Sub`过程。  
@@ -116,7 +107,7 @@ End Sub
   
 -   `name`  
   
-     必需。 过程的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要创建一个类的构造函数过程，设置的名称`Sub`过程`New`关键字。 有关详细信息，请参阅[对象生存期： 对象的创建和破坏的方式](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
+     必须的。 过程的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要创建一个类的构造函数过程，设置的名称`Sub`过程`New`关键字。 有关详细信息，请参阅[对象生存期： 对象的创建和破坏的方式](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
   
 -   `typeparamlist`  
   
@@ -142,8 +133,8 @@ End Sub
   
     |部件|描述|  
     |---|---|  
-    |`interface`|必需。 此过程所实现的接口的名称包含的类或结构。|  
-    |`definedname`|必需。 在 `interface` 中用于定义过程的名称。|  
+    |`interface`|必须的。 此过程所实现的接口的名称包含的类或结构。|  
+    |`definedname`|必须的。 在 `interface` 中用于定义过程的名称。|  
   
 -   `Handles`  
   
@@ -161,8 +152,8 @@ End Sub
   
     |部件|描述|  
     |---|---|  
-    |`eventvariable`|必需。 声明的类或结构，它引发事件的数据类型的对象变量。|  
-    |`event`|必需。 此过程可处理的事件名称。|  
+    |`eventvariable`|必须的。 声明的类或结构，它引发事件的数据类型的对象变量。|  
+    |`event`|必须的。 此过程可处理的事件名称。|  
   
 -   `statements`  
   
@@ -178,7 +169,7 @@ End Sub
 ## <a name="defining-a-sub-procedure"></a>定义 Sub 过程  
  你可以定义`Sub`只能在模块级别的过程。 Sub 过程的声明上下文，因此，必须类、 结构、 模块或接口，并且不能为源文件、 命名空间、 过程或块。 有关详细信息，请参阅[声明上下文和默认访问级别](declaration-contexts-and-default-access-levels.md)。  
   
- `Sub`过程默认为公共访问。 你可以使用访问修饰符来调整其访问级别。  
+ `Sub` 过程默认为公共访问。 你可以使用访问修饰符来调整其访问级别。  
   
  如果该过程使用`Implements`关键字、 包含的类或结构必须具有`Implements`紧随的语句其`Class`或`Structure`语句。 `Implements`语句必须包含在指定的每个接口`implementslist`。 但是，通过该接口定义的名称`Sub`(在`definedname`) 不一定要与此过程的名称 (在`name`)。  
   
@@ -214,7 +205,7 @@ End Sub
   
  你还可以将标记[Function 语句](function-statement.md)与`Async`修饰符。 `Async`函数可以具有返回类型的<xref:System.Threading.Tasks.Task%601>或<xref:System.Threading.Tasks.Task>。 示例更高版本在本主题演示`Async`具有的返回类型的函数<xref:System.Threading.Tasks.Task%601>。  
   
- `Async``Sub`过程主要使用，用于为事件处理程序，不能返回一个值的位置。 `Async``Sub`无法等待过程，和的调用方`Async``Sub`过程不能捕获异常，`Sub`过程引发。  
+ `Async` `Sub` 过程主要用于事件处理程序，不能返回一个值的位置。 `Async``Sub`无法等待过程，和的调用方`Async``Sub`过程不能捕获异常，`Sub`过程引发。  
   
  `Async`过程不能声明任何[ByRef](../modifiers/byref.md)参数。  
   
@@ -232,7 +223,7 @@ End Sub
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Implements 语句](implements-statement.md)  
  [Function 语句](function-statement.md)  
  [参数列表](parameter-list.md)  

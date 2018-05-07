@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::CallNeedsHostHook 方法"
-ms.custom: 
+title: IHostTaskManager::CallNeedsHostHook 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.CallNeedsHostHook
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b60f1f59-9825-4b57-961f-d2979518e6a7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4774c9f37f73692bf8d9455c51e76aa4c590f925
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 983cad5ed87d0666ed71a805a3b3f7a3c7e7c091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook 方法
 使主机可以指定公共语言运行时 (CLR) 是否可以内联到非托管函数的指定调用。  
@@ -58,7 +46,7 @@ HRESULT CallNeedsHostHook (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`CallNeedsHostHook`已成功返回。|  
+|S_OK|`CallNeedsHostHook` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -66,18 +54,18 @@ HRESULT CallNeedsHostHook (
 |E_FAIL|发生了未知的灾难性错误。 如果某方法返回 E_FAIL，CLR 不再可用进程内。 到托管方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- 为了帮助优化代码执行，CLR 将执行分析每个平台 invoke 调用期间编译以确定是否可以内联调用。 `CallNeedsHostHook`使主机可以通过要求通过挂钩到非托管函数的调用重写该决定。 如果主机需要挂钩，运行时将会不内联调用。  
+ 为了帮助优化代码执行，CLR 将执行分析每个平台 invoke 调用期间编译以确定是否可以内联调用。 `CallNeedsHostHook` 使主机可以通过要求通过挂钩到非托管函数的调用重写该决定。 如果主机需要挂钩，运行时将会不内联调用。  
   
  主机通常会要求挂钩，它必须调整浮点状态，或接收通知调用即将进入主机不能在其中跟踪内存或任何锁的运行时的请求的状态。 当主机需要通过挂钩调用时，运行时通知宿主转换到和从托管代码通过调用[EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)， [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)， [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)，和[ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

@@ -1,13 +1,6 @@
 ---
-title: "Windows 窗体应用程序中的帮助系统"
-ms.custom: 
+title: Windows 窗体应用程序中的帮助系统
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Help [Windows Forms], adding to Windows applications
 - Windows applications [Windows Forms], providing Help systems
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b2f5d067d487bbd5b91576927aee21a9a44fde0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 293e6ecda3d763a4526349ee164d87da62f5e36d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows 窗体应用程序中的帮助系统
 一个最重要的帮助，如应用程序，开发人员可以为用户提供的功能完善的帮助系统。 这是它们将在这里打开时它们迷惑不解。 提供在基于 Windows 的应用程序中的帮助系统可通过使用轻松地完成[HelpProvider 组件](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)。  

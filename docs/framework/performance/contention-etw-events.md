@@ -1,27 +1,17 @@
 ---
-title: "争用 ETW 事件"
-ms.custom: 
+title: 争用 ETW 事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - contention events [.NET Framework]
 - ETW, contention events (CLR)
 ms.assetid: 6933e753-2f2a-425b-ae84-42138c957d76
-caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a09419c208d4ac754eb48da0c8d1b5d93386eb3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3487b67ea49cecfd0da2b5b3f993ea54d562145d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contention-etw-events"></a>争用 ETW 事件
 只要运行时使用的 <xref:System.Threading.Monitor?displayProperty=nameWithType> 锁或本机锁出现争用情况，就会引发争用事件。 一个线程等待的锁被另一线程占有时将发生争用。  
@@ -34,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了事件信息。  
   
-|Event|事件 ID|在发生以下情况时引发|  
+|事件|事件 ID|在发生以下情况时引发|  
 |-----------|--------------|-----------------|  
 |`ContentionStart_V1`|81|争用开始。 此事件不包括线程等待获取锁之前的旋转时间；仅在线程等待获取锁时引发此事件。|  
 |`ContentionStop`|81|争用结束。|  

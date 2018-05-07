@@ -1,29 +1,17 @@
 ---
-title: "预览事件"
-ms.custom: 
+title: 预览事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Preview events [WPF]
 - suppressing events [WPF]
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a258a0e145e9a24e6e87bb511fdbd6166422a656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d6c1ab32cb43730af2f935f4bd4405059994c12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="preview-events"></a>预览事件
 预览事件，也称为隧道事件，是路由的事件的路由的方向从应用程序根的元素，引发事件并报告为事件数据中的源的传输其中。 并非所有事件方案支持或要求预览事件;本主题介绍其中预览事件存在时，应用程序或组件应如何处理它们，情况和采用的情况下可能适合在自定义组件或类中创建预览事件。  

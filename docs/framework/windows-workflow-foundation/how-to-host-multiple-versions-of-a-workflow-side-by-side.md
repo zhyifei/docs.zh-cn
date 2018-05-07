@@ -1,26 +1,15 @@
 ---
-title: "如何：并行承载多个版本的工作流"
-ms.custom: 
+title: 如何：并行承载多个版本的工作流
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae4d3e02b923187b3e0f88a7b18e84094fa584
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fef8523f827ab91729054ee87544879b1f1aa3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>如何：并行承载多个版本的工作流
 `WorkflowIdentity` 为工作流应用程序开发人员提供了一种将名称和版本与工作流定义关联的方法，这种方法还可用于将此信息与持久化工作流实例相关联。 工作流应用程序开发人员可以使用这些标识信息，为一些情景（如并行执行一个工作流定义的多个版本）提供支持，并为其他功能（如动态更新）提供基础。 该教程中的此步骤演示了如何使用 `WorkflowIdentity` 来同时承载多个版本的工作流。  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  入门教程中的每个步骤都依赖于前面的步骤。 如果未完成前面的步骤可以下载从本教程的完整的版本[Windows Workflow Foundation (WF45)-入门教程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
   
-###  <a name="BKMK_BackupCopy"></a>要制作 NumberGuessWorkflowActivities 项目的副本  
+###  <a name="BKMK_BackupCopy"></a> 要制作 NumberGuessWorkflowActivities 项目的副本  
   
 1.  打开**WF45GettingStartedTutorial**中的解决方案[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]如果未打开。  
   
@@ -74,10 +63,10 @@ ms.lasthandoff: 12/22/2017
   
 9. 重新打开**WF45GettingStartedTutorial**中的解决方案[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]。  
   
-###  <a name="BKMK_UpdateWorkflows"></a>更新工作流  
+###  <a name="BKMK_UpdateWorkflows"></a> 更新工作流  
  在本节中，将会更新工作流定义。 将会更新针对用户猜测提供反馈的两个 `WriteLine` 活动，并添加一个新的 `WriteLine` 活动，此活动提供猜测了数字之后有关该游戏的其他信息。  
   
-####  <a name="BKMK_UpdateStateMachine"></a>更新 StateMachine 工作流  
+####  <a name="BKMK_UpdateStateMachine"></a> 更新 StateMachine 工作流  
   
 1.  在**解决方案资源管理器**下**NumberGuessWorkflowActivities**项目中，双击**StateMachineNumberGuessWorkflow.xaml**。  
   
@@ -119,7 +108,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateFlowchart"></a>若要更新的流程图工作流  
+####  <a name="BKMK_UpdateFlowchart"></a> 若要更新的流程图工作流  
   
 1.  在**解决方案资源管理器**下**NumberGuessWorkflowActivities**项目中，双击**FlowchartNumberGuessWorkflow.xaml**。  
   
@@ -155,7 +144,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateSequential"></a>若要更新的顺序工作流  
+####  <a name="BKMK_UpdateSequential"></a> 若要更新的顺序工作流  
   
 1.  在**解决方案资源管理器**下**NumberGuessWorkflowActivities**项目中，双击**SequentialNumberGuessWorkflow.xaml**。  
   
@@ -191,7 +180,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a>若要更新 WorkflowVersionMap 以包括以前的工作流版本  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> 若要更新 WorkflowVersionMap 以包括以前的工作流版本  
   
 1.  双击**WorkflowVersionMap.cs** (或**WorkflowVersionMap.vb**) 下**NumberGuessWorkflowHost**项目以打开它。  
   
@@ -559,7 +548,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>若要生成并运行应用程序  
+###  <a name="BKMK_BuildAndRun"></a> 若要生成并运行应用程序  
   
 1.  按 Ctrl+Shift+B 以生成应用程序，然后按 Ctrl+F5 启动该应用程序。  
   

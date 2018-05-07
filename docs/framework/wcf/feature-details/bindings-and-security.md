@@ -1,45 +1,33 @@
 ---
 title: 绑定与安全
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
 - WCF security
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-security"></a>绑定与安全
-包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的系统提供的绑定提供了一种编写 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的快捷方法。 但有一个例外，就是所有绑定都启用了默认的安全方案。 本主题将帮助你根据安全需要来选择正确的绑定。  
+系统提供的绑定包括与 Windows Communication Foundation (WCF) 提供程序 WCF 应用程序的快速方法。 但有一个例外，就是所有绑定都启用了默认的安全方案。 本主题将帮助你根据安全需要来选择正确的绑定。  
   
- 有关概述[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 有关编程的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用绑定，请参阅[编程 WCF 安全](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
+ WCF 安全的概述，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 有关对 WCF 中使用绑定进行编程的详细信息，请参阅[编程 WCF 安全](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
   
  如果你已选择一个绑定，则可以了解有关在中与安全性相关联的运行时行为的详细信息[安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
   
  部分安全性功能无法用系统提供的绑定进行编程。 使用自定义绑定的更多控制，请参阅[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
   
 ## <a name="security-functions-of-bindings"></a>绑定的安全功能  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含许多由系统提供的绑定，这些绑定可以满足大多数需求。 如果某个特定绑定不能满足要求，你还可以创建自定义绑定。 系统提供的绑定的列表，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。 有关自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ WCF 包含许多系统提供满足大多数需求的绑定。 如果某个特定绑定不能满足要求，你还可以创建自定义绑定。 系统提供的绑定的列表，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。 有关自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的每个绑定都具有两种形式：一种是 API，一种是在配置文件中使用的 XML 元素。 例如， `WSHttpBinding` (API) 具有一个对应[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
+ 在 WCF 中的每个绑定有两种形式： API，在配置文件中使用的 XML 元素。 例如， `WSHttpBinding` (API) 具有一个对应[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
   
  下一节列出了每个绑定的两种形式，并概括了安全功能。  
   
@@ -149,7 +137,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  在代码中，使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>类; 在配置中，使用[ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)。  
   
- 此绑定最适合于创建与非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft 消息队列 (MSMQ) 终结点进行互操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和服务。  
+ 此绑定最适合用于创建具有非-WCF Microsoft 消息队列 MSMQ 终结点的 WCF 客户端和服务进行互操作。  
   
  默认情况下，此绑定使用传输安全性并提供下列安全特征：  
   
@@ -162,7 +150,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  在代码中，使用<xref:System.ServiceModel.NetMsmqBinding>类; 在配置中，使用[ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)。  
   
- 此绑定适合在创建需要 MSMQ 排队消息支持的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时使用。  
+ 当创建需要 MSMQ 的 WCF 服务排队消息支持，此绑定旨在供。  
   
  默认情况下，此绑定使用传输安全性并提供下列安全特征：  
   
@@ -232,7 +220,7 @@ ms.lasthandoff: 04/30/2018
 |----------|-----------------|  
 |无|允许服务与匿名客户端交互。|  
 |Windows|允许在 Windows 凭据的已通过身份验证的上下文中执行 SOAP 消息交换。|  
-|UserName|允许服务要求使用用户名凭据对客户端进行身份验证。 请注意，当安全模式设置为 `TransportWithMessageCredential` 时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持发送密码摘要，也不支持使用密码派生密钥并将这样的密钥用于 Message 模式安全。 因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 强制要求在使用用户名凭据时确保传输的安全性。|  
+|UserName|允许服务要求使用用户名凭据对客户端进行身份验证。 请注意，当安全模式设置为`TransportWithMessageCredential`，WCF 不支持发送密码摘要或派生密钥使用的密码，并使用这样的密钥用于 Message 模式安全。 在这种情况下，WCF 将确保传输的安全性时使用用户名凭据。|  
 |证书|允许服务要求使用证书对客户端进行身份验证。|  
 |IssuedToken|允许服务使用安全令牌服务来提供自定义令牌。|  
   

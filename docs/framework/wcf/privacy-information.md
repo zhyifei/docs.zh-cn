@@ -1,31 +1,19 @@
 ---
-title: "Windows Communication Foundation 隐私信息"
-ms.custom: 
+title: Windows Communication Foundation 隐私信息
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, privacy information
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: e9c4130cd4680d4cd68ca8c6ba36c38b5d065f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
-Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]（版本 3.0）生成应用程序时，应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 不会从您的应用程序将任何信息发送给 Microsoft，除非您或最终用户选择将信息发送给我们。  
+Microsoft 承诺保护最终用户的隐私。 当你生成应用程序使用 Windows Communication Foundation (WCF) 版本 3.0 中，你的应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向你的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 不会从您的应用程序将任何信息发送给 Microsoft，除非您或最终用户选择将信息发送给我们。  
   
 ## <a name="wcf-in-brief"></a>WCF 概述  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是一个分布式消息传递框架，它使用 Microsoft .NET Framework，使开发人员可以生成分布式应用程序。 在两个应用程序之间交换的消息包含标头和正文信息。  
@@ -138,13 +126,13 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  被删除的密钥：  
   
- \- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- 对于 xmlns: wst ="http://schemas.xmlsoap.org/ws/2004/04/trust"和 xmlns: wst ="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \-对于 xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- 对于 xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,13 +140,13 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  被删除的潜在个人信息：  
   
- \-对于 xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- 对于 xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \-有关 xmlns:saml ="urn: oasis： 名称： tc: SAML:1.0:assertion"将删除以下各项以粗体显示 （）：  
+ \- 有关 xmlns:saml ="urn: oasis： 名称： tc: SAML:1.0:assertion"将删除以下各项以粗体显示 （）：  
   
  \<断言  
   
@@ -178,7 +166,7 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  \<AudienceRestrictionCondition>  
   
- \<Audience>[uri]\</Audience>+  
+ \<受众 > [uri]\</Audience > +  
   
  \</AudienceRestrictionCondition>*  
   
@@ -196,7 +184,7 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<Assertion>[assertion]\</Assertion>*  
+ \<断言 > [断言]\</Assertion > *  
   
  [any]*  
   
@@ -206,9 +194,9 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  \<语句 / > *  
   
- \<SubjectStatement>  
+ \<SubjectStatement >  
   
- \<Subject>  
+ \<使用者 >  
   
  `<NameIdentifier`  
   
@@ -224,17 +212,17 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  \<SubjectConfirmation>  
   
- \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
+ \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
   
  \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<ds:KeyInfo >...\</ds:KeyInfo >？  
   
- \</SubjectConfirmation>?  
+ \</ SubjectConfirmation >？  
   
  \</Subject>  
   
- \</SubjectStatement>*  
+ \</ SubjectStatement > *  
   
  -->  
   
@@ -266,9 +254,9 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  />*  
   
- \</AuthenticationStatement>*  
+ \</ AuthenticationStatement > *  
   
- \<AttributeStatement>  
+ \<AttributeStatement >  
   
  [Subject]  
   
@@ -282,9 +270,9 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</Attribute>+  
+ \</ 属性 > +  
   
- \</AttributeStatement>*  
+ \</ AttributeStatement > *  
   
  \<AuthorizationDecisionStatement  
   
@@ -296,13 +284,13 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  [Subject]  
   
- \<Action Namespace="[uri]">[string]\</Action>+  
+ \<操作 Namespace ="[uri]"> [字符串]\</Action > +  
   
  \<证据 >  
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<Assertion>[assertion]\</Assertion>+  
+ \<断言 > [断言]\</Assertion > +  
   
  \</ 证据 >？  
   
@@ -315,7 +303,7 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  对于下列命名空间：  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"（例如，如果没有可用的操作）  
+ xmlns: wst ="http://schemas.xmlsoap.org/ws/2004/04/trust"和 xmlns: wst ="http://schemas.xmlsoap.org/ws/2005/02/trust"（例如，如果没有可用的操作）  
   
  删除那些涉及密钥交换的正文元素的信息：  
   

@@ -1,34 +1,20 @@
 ---
 title: 如何：使用 WCF 终结点交换排队消息
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f44f3a58e0a8283753cb682f25cf2f167450724
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ab6ca46fad8ee1ededef5cc14a9654b79b2e6a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>如何：使用 WCF 终结点交换排队消息
-即使在通信时 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务不可用，队列也能确保客户端和该服务之间的可靠消息传输。 下面的过程演示如何在实现 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时使用标准排队绑定确保客户端和服务间的持久性通信。  
+队列确保可靠消息传递会发生之间客户端和 Windows Communication Foundation (WCF) 服务，即使服务通信时不可用。 下面的过程演示如何实现 WCF 服务时，客户端和服务使用标准之间的持久性通信排队绑定确保。  
   
- 本节介绍如何将 <xref:System.ServiceModel.NetMsmqBinding> 用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务之间的排队通信。  
+ 本部分说明如何使用<xref:System.ServiceModel.NetMsmqBinding>WCF 客户端和 WCF 服务之间的排队通信。  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>在 WCF 服务中使用队列  
   
@@ -54,7 +40,7 @@ ms.lasthandoff: 04/30/2018
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  在指定服务地址并使用标准 <xref:System.ServiceModel.Description.ServiceEndpoint> 绑定的配置中定义 <xref:System.ServiceModel.NetMsmqBinding>。 有关使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]配置，请参阅[配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
+5.  在指定服务地址并使用标准 <xref:System.ServiceModel.Description.ServiceEndpoint> 绑定的配置中定义 <xref:System.ServiceModel.NetMsmqBinding>。 有关使用 WCF 配置的详细信息，请参阅[配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
   
   
@@ -65,7 +51,7 @@ ms.lasthandoff: 04/30/2018
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>为排队服务创建客户端  
   
-1.  下面的示例演示如何运行主机应用程序并使用 Svcutil.exe 工具创建 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端。  
+1.  下面的示例演示如何运行主机应用程序并使用 Svcutil.exe 工具来创建 WCF 客户端。  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -75,7 +61,7 @@ ms.lasthandoff: 04/30/2018
   
   
   
-3.  创建一个事务范围，以写入事务性队列，调用 `SubmitPurchaseOrder` 操作并关闭 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端，如下面的示例所示。  
+3.  创建一个事务范围，以写入事务性队列，调用`SubmitPurchaseOrder`操作并关闭 WCF 客户端，如下面的示例中所示。  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  

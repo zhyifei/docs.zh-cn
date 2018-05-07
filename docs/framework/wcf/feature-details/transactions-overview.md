@@ -1,30 +1,16 @@
 ---
 title: Windows Communication Foundation 事务概述
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF]
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 76edd7cf30d9da06db6e0c2f4624bf9a6d677eca
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 63f3826215f24a4bab6d84709c2f9da6a9c8f4f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation 事务概述
 事务可提供一种分组方法，将一组操作分为单个不可分的执行单元。 事务是指具有下列属性的操作集合：  
@@ -37,11 +23,11 @@ ms.lasthandoff: 04/28/2018
   
 -   持续性。 这意味着一旦提交对托管资源（如数据库记录）的更新，即使出现失败这些更新也会保持持久。  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供一组丰富的功能，使您能够在 Web 服务应用程序中创建分布式事务。  
+ Windows Communication Foundation (WCF) 提供一组丰富的功能，使你可以在 Web 服务应用程序中创建分布式的事务。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现对 WS-AtomicTransaction (WS-AT) 协议的支持，该协议使 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序能够将事务传输到可互操作应用程序中，例如使用第三方技术生成的可互操作 Web 服务。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还实现对 OLE 事务协议的支持，可以在无需互操作功能以便实现事务流式处理的情况下使用该协议。  
+ WCF 实现对 Ws-atomictransaction (WS-AT) 协议，使事务传输到可互操作应用程序，例如使用第三方技术生成的可互操作 Web 服务的 WCF 应用程序的支持。 WCF 还实现对 OLE 事务协议，可在方案中你不需要互操作功能以便启用事务流的支持。  
   
- 您可以使用应用程序配置文件来配置绑定以启用或禁用事务流，以及设置有关绑定的所需事务协定。 此外，你可以使用配置文件在服务级别设置事务超时值。 有关详细信息，请参阅[启用事务流](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)。  
+ 你可以使用应用程序配置文件来配置绑定以启用或禁用事务流，以及设置有关绑定的所需事务协定。 此外，你可以使用配置文件在服务级别设置事务超时值。 有关详细信息，请参阅[启用事务流](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)。  
   
  <xref:System.ServiceModel> 命名空间中的事务属性允许您进行以下操作：  
   

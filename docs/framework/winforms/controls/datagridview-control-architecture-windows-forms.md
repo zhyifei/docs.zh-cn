@@ -1,28 +1,14 @@
 ---
-title: "DataGridView 控件体系结构（Windows 窗体）"
-ms.custom: 
+title: DataGridView 控件体系结构（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3b3e51b87cdd766adcc10aa3f682647b28fbbe4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9fc1707b1691266d1844c411a08e7e8f35514ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView 控件体系结构（Windows 窗体）
 <xref:System.Windows.Forms.DataGridView>控制和及其相关的类旨在作为用于显示和编辑表格数据的灵活、 可扩展系统。 这些类都包含在<xref:System.Windows.Forms?displayProperty=nameWithType>命名空间，和它们的命名为与"DataGridView"前缀。  
@@ -67,9 +53,9 @@ DataGridViewElement 对象模型
  ![DataGridViewCell 对象模型](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")  
 DataGridViewCell 对象模型  
   
- <xref:System.Windows.Forms.DataGridViewCell>类型是一个抽象基类，从中派生所有单元格类型。 <xref:System.Windows.Forms.DataGridViewCell>其派生的类型不是 Windows 窗体控件，但某些主机 Windows 窗体控件。 任何支持的单元格的编辑功能通常由托管控件进行处理。  
+ <xref:System.Windows.Forms.DataGridViewCell>类型是一个抽象基类，从中派生所有单元格类型。 <xref:System.Windows.Forms.DataGridViewCell> 其派生的类型不是 Windows 窗体控件，但某些主机 Windows 窗体控件。 任何支持的单元格的编辑功能通常由托管控件进行处理。  
   
- <xref:System.Windows.Forms.DataGridViewCell>对象不控制它们自己的外观和绘制功能一样作为 Windows 窗体控件。 相反，<xref:System.Windows.Forms.DataGridView>负责的外观及其<xref:System.Windows.Forms.DataGridViewCell>对象。 你可以有明显的影响的外观和行为的单元格通过与进行交互<xref:System.Windows.Forms.DataGridView>控件的属性和事件。 如果有特殊要求的自定义项的功能超出<xref:System.Windows.Forms.DataGridView>控件，可以实现您自己的类派生自<xref:System.Windows.Forms.DataGridViewCell>或其被子类之一。  
+ <xref:System.Windows.Forms.DataGridViewCell> 对象不控制它们自己的外观和绘制功能一样作为 Windows 窗体控件。 相反，<xref:System.Windows.Forms.DataGridView>负责的外观及其<xref:System.Windows.Forms.DataGridViewCell>对象。 你可以有明显的影响的外观和行为的单元格通过与进行交互<xref:System.Windows.Forms.DataGridView>控件的属性和事件。 如果有特殊要求的自定义项的功能超出<xref:System.Windows.Forms.DataGridView>控件，可以实现您自己的类派生自<xref:System.Windows.Forms.DataGridViewCell>或其被子类之一。  
   
  以下列表显示派生自的类<xref:System.Windows.Forms.DataGridViewCell>:  
   
@@ -137,11 +123,11 @@ DataGridView 编辑控件对象模型
   
 |单元格类型|托管的控件|列类型|  
 |---------------|--------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewButtonCell>|不可用|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
+|<xref:System.Windows.Forms.DataGridViewButtonCell>|n/a|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|不可用|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxCell>|<xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|  
 |<xref:System.Windows.Forms.DataGridViewImageCell>|不可用|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
-|<xref:System.Windows.Forms.DataGridViewLinkCell>|不可用|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
+|<xref:System.Windows.Forms.DataGridViewLinkCell>|n/a|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxCell>|<xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|  
   
 ### <a name="datagridviewrow"></a>DataGridViewRow  

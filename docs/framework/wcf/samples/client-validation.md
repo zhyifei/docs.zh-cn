@@ -1,31 +1,19 @@
 ---
-title: "客户端验证"
-ms.custom: 
+title: 客户端验证
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd9c698962bbca04ac05473265d95fc00517b039
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a5c1c5f907a797bff3dff490cbc953879ab69718
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-validation"></a>客户端验证
 服务通常发布元数据以启用客户端代理类型的自动生成和配置。 如果服务不受信任，客户端应用程序应该验证元数据是否符合客户端应用程序有关安全性、事务、服务协定类型等方面的策略。 下面的示例演示如何编写一个客户端终结点行为，用于验证服务终结点以确保可以安全地使用该服务终结点。  
   
  服务公开四个终结点。 第一个终结点使用 WSDualHttpBinding，第二个终结点使用 NTLM 身份验证，第三个终结点启用事务流，第四个终结点使用基于证书的身份验证。  
   
- 客户端使用 <xref:System.ServiceModel.Description.MetadataResolver> 类来检索服务的元数据。 客户端强制实施禁用双工绑定、NTLM 身份验证和使用验证行为的事务流的策略。 对于从服务的元数据导入的每个 <xref:System.ServiceModel.Description.ServiceEndpoint> 实例，客户端应用程序会在尝试使用 `InternetClientValidatorBehavior` 客户端连接到终结点之前，向 <xref:System.ServiceModel.Description.ServiceEndpoint> 添加 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 终结点行为的一个实例。 在调用服务上的任何操作之前，会运行该行为的 `Validate` 方法，并通过引发 `InvalidOperationExceptions` 强制实施客户端的策略。  
+ 客户端使用 <xref:System.ServiceModel.Description.MetadataResolver> 类来检索服务的元数据。 客户端强制实施禁用双工绑定、NTLM 身份验证和使用验证行为的事务流的策略。 每个<xref:System.ServiceModel.Description.ServiceEndpoint>实例从服务的元数据，客户端应用程序导入添加的一个实例`InternetClientValidatorBehavior`到的终结点行为<xref:System.ServiceModel.Description.ServiceEndpoint>然后再尝试使用 Windows Communication Foundation (WCF) 客户端连接到终结点。 在调用服务上的任何操作之前，会运行该行为的 `Validate` 方法，并通过引发 `InvalidOperationExceptions` 强制实施客户端的策略。  
   
 ### <a name="to-build-the-sample"></a>生成示例  
   

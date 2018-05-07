@@ -1,34 +1,24 @@
 ---
-title: "编写第一个 LINQ 查询 (Visual Basic)"
-ms.custom: 
+title: 编写第一个 LINQ 查询 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-caps.latest.revision: "56"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c16bb28189d5525654328da2dc80d868bbe61bf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f426aac5358837563081d2bf9783f6d4fe04d853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>编写第一个 LINQ 查询 (Visual Basic)
 *查询*是一种从数据源检索数据的表达式。 专用的查询语言来表述查询。 随着时间推移，不同的语言已针对开发了不同类型的数据源，例如，用于关系数据库的 SQL 和用于 XML 的 XQuery。 这使得应用程序开发人员，若要了解每种类型的数据源或数据格式受支持的新查询语言的必要条件。  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]通过提供跨各种类型的数据源和格式处理数据的一致模型，来简化这种情况。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，始终会用到对象。 使用相同的基本编码模式来查询和转换 XML 文档中的数据，SQL 数据库、 ADO.NET 数据集和实体、.NET Framework 集合和任何其他源或格式为其[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]提供程序。 本文档介绍的三个阶段的创建和使用基本[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询。  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 通过提供跨各种类型的数据源和格式处理数据的一致模型，来简化这种情况。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，始终会用到对象。 使用相同的基本编码模式来查询和转换 XML 文档中的数据，SQL 数据库、 ADO.NET 数据集和实体、.NET Framework 集合和任何其他源或格式为其[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]提供程序。 本文档介绍的三个阶段的创建和使用基本[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询。  
   
 ## <a name="three-stages-of-a-query-operation"></a>查询操作的三个阶段  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询操作包括以下三个操作：  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询操作包括以下三个操作：  
   
 1.  获取数据源。  
   
@@ -127,7 +117,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  也可能会导致查询执行使用`IEnumerable`如方法<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 入门](getting-started-with-linq.md)  
  [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [标准查询运算符概述 (Visual Basic)](standard-query-operators-overview.md)  

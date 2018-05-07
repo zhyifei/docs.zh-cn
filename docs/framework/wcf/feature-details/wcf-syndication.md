@@ -1,35 +1,21 @@
 ---
-title: "WCF 联合"
-ms.custom: 
+title: WCF 联合
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1f7f5fd65fc298107a66e2049c059f3cc58b3d44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 627de6431c641e48367a97e3f80f3d05d185ab45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-syndication"></a>WCF 联合
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供的支持可以轻松处理 Atom、RSS 或其他自定义格式的联合源，从而允许用户读取和创建这些联合源，还可以将它们公开为服务终结点。 本节中的主题详细描述用于联合的此种编程模型。  
+Windows Communication Foundation (WCF) 提供支持可以轻松处理 Atom、 RSS 或其他自定义格式的联合源与可用于读取和创建它们，以及将它们公开为服务终结点。 本节中的主题详细描述用于联合的此种编程模型。  
   
 ## <a name="in-this-section"></a>本节内容  
  [WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- 概述由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的联合支持。  
+ 提供联合支持 WCF 提供的概述。  
   
  [联合体系结构](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
  描述对象模型中的类和联合的扩展性。  

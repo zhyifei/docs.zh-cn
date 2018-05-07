@@ -1,27 +1,15 @@
 ---
-title: "使用应用程序设置和用户设置"
-ms.custom: 
+title: 使用应用程序设置和用户设置
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - user settings [Windows Forms]
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 310fcad07ce7cf541312ff83e41d7e5fc2643898
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5231ecc9fb3898d60241ea8a53b509daced8a0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-application-settings-and-user-settings"></a>使用应用程序设置和用户设置
 从.NET Framework 2.0 开始，可以创建和访问应用程序执行会话之间保留的值。 这些值称为*设置*。 设置可以表示用户首选项，或者有价值信息的应用程序需要使用。 例如，你可能会创建一系列存储应用程序的配色方案的用户首选项的设置。 或者，你可能会存储指定你的应用程序使用的数据库的连接字符串。 设置允许你同时保留对外部代码，并创建存储的单个用户的首选项的配置文件的应用程序至关重要的信息。  

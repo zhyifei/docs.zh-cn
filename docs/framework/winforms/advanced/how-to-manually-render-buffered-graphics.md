@@ -1,13 +1,6 @@
 ---
-title: "如何：手动呈现缓冲图形"
-ms.custom: 
+title: 如何：手动呈现缓冲图形
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3a5d06da3a398782b0285fb55807df5832cf771
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab0868e31ac8b010c662c04a7670e1ead19cebe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>如何：手动呈现缓冲图形
 如果你正在管理自己的缓冲图形，你将需要能创建和程序图形缓冲区。 你可以通过调用 <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> 方法，在屏幕上创建与绘图图面相关联的 <xref:System.Drawing.BufferedGraphics> 类的实例。 此方法会创建一个与特定呈现图面（如表格或控件）关联的 <xref:System.Drawing.BufferedGraphics> 实例。 在创建 <xref:System.Drawing.BufferedGraphics> 实例后，可以通过 <xref:System.Drawing.BufferedGraphics.Graphics%2A> 属性，将图形绘制到它表示的缓冲区内。 执行所有图形操作之后，可以通过调用 <xref:System.Drawing.BufferedGraphics.Render%2A> 方法将缓冲区的内容复制到屏幕。  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#21)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#21)]  
   
-3.  通过设置 <xref:System.Drawing.BufferedGraphics.Graphics%2A> 属性将图形绘制到图形缓冲区内。 例如:  
+3.  通过设置 <xref:System.Drawing.BufferedGraphics.Graphics%2A> 属性将图形绘制到图形缓冲区内。 例如：  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#22)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#22)]  

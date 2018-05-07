@@ -1,14 +1,6 @@
 ---
-title: "CloseEnum 方法"
-ms.custom: 
+title: CloseEnum 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CloseEnum
 - IALink.CloseEnum
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: aa4a091e-13fe-4264-91de-e12f1c767c87
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89f5b7069af0bfdfd732ed1ab4935771a565a20f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5c3185dc6d488223d5882f543f0c690d82261b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="closeenum-method"></a>CloseEnum 方法
 关闭指定的枚举并释放关联的资源。  
@@ -53,7 +41,7 @@ HRESULT CloseEnum(
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  需要 alink.h  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,14 +1,6 @@
 ---
-title: "Windows 服务应用程序介绍"
-ms.custom: 
+title: Windows 服务应用程序介绍
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ServiceController
 helpviewer_keywords:
@@ -29,17 +21,13 @@ helpviewer_keywords:
 - Win32ShareProcess service type
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-caps.latest.revision: 
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload:
-- dotnet
-ms.openlocfilehash: 613107a13820ad71b854dcba93f21c41f2a5fa5f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0720b90d89e5117cbac15ce7e38a41071f1c13e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 服务应用程序介绍
 Microsoft Windows 服务，以前称为 NT 服务，可以创建长时间运行的可执行应用程序在其自己的 Windows 会话中运行。 这些服务可以自动启动启动计算机后，可以暂停和重新启动，并且没有显示任何用户界面。 这些功能使服务最适用于在服务器上或每当您需要不干扰其他工作的用户可以在同一台计算机上的长时间运行功能。 此外可以在不同于登录的用户的特定用户帐户或默认计算机帐户的安全上下文中运行服务。 有关服务和 Windows 会话的详细信息，请参阅 Windows SDK 文档。  
@@ -86,7 +74,7 @@ Microsoft Windows 服务，以前称为 NT 服务，可以创建长时间运行�
   
  有关详细信息，请参阅<xref:System.ServiceProcess.ServiceController>。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 -   必须在创建服务**Windows 服务**应用程序项目或另一个已启用.NET Framework – 项目创建时生成的.exe 文件，并继承自<xref:System.ServiceProcess.ServiceBase>类。  
   

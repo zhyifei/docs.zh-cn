@@ -1,44 +1,32 @@
 ---
 title: 使用消息安全保护消息
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ebe2526e564ef24d20f1602fd5824b44e2e2bbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-messages-using-message-security"></a>使用消息安全保护消息
-本主题讨论在使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时的 <xref:System.ServiceModel.NetMsmqBinding> 消息安全。  
+本部分讨论 WCF 消息安全性时使用<xref:System.ServiceModel.NetMsmqBinding>。  
   
 > [!NOTE]
 >  在阅读之前通读本主题，建议你阅读[安全性的基础概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
   
- 以下插图提供了使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的排队通信的概念模型。 此图及术语用于说明  
+ 以下插图提供了使用 WCF 的排队通信的概念模型。 此图及术语用于说明  
   
  传输安全概念。  
   
  ![排队应用程序关系图](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分布式队列图")  
   
- 使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发送排队消息时，将以消息队列 (MSMQ) 消息正文的形式附加 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息。 传输安全保护整个 MSMQ 消息，而消息（或 SOAP）安全仅保护 MSMQ 消息正文。  
+ 如果发送排队消息使用 WCF，WCF 消息作为消息队列 (MSMQ) 消息的正文附加。 传输安全保护整个 MSMQ 消息，而消息（或 SOAP）安全仅保护 MSMQ 消息正文。  
   
- 传输安全用于在客户端保护目标队列的消息，与此不同，消息安全的关键概念在于客户端保护接收应用程序（服务）的消息。 这样，在使用消息安全保护 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时，MSMQ 不起任何作用。  
+ 传输安全用于在客户端保护目标队列的消息，与此不同，消息安全的关键概念在于客户端保护接收应用程序（服务）的消息。 在这种情况下，MSMQ 保护使用消息安全的 WCF 消息时不起任何作用。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息安全向与现有安全基础结构（如证书或 Kerberos 协议）集成在一起的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息中添加安全标头。  
+ WCF 消息安全向与现有安全性基础结构，如证书或 Kerberos 协议将集成的 WCF 消息的安全标头。  
   
 ## <a name="message-credential-type"></a>消息凭据类型  
  使用消息安全，服务和客户端可以提供相互进行身份验证的凭据。 可以通过将 <xref:System.ServiceModel.NetMsmqBinding.Security%2A> 模式设置为 `Message` 或 `Both`（即既使用传输安全又使用消息安全）来选择消息安全。  

@@ -1,11 +1,6 @@
 ---
 title: -libpath
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - libpath compiler option [Visual Basic]
 - /libpath compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cff59d9b406045b4522d3a7d6e85528513214635
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: a5044bc0093960fdf6b063450d8d3a57575ff07c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-libpath"></a>-libpath
 指定引用的程序集的位置。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 03/22/2018
   
 |在 Visual Studio 中设置 /libpath 集成开发环境|  
 |---|  
-|1.在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“引用”选项卡。<br />3.单击**引用路径...**按钮。<br />4.在**引用路径**对话框框中，输入中的目录名称**文件夹：**框。<br />5.单击**将文件夹添加**。|  
+|1.在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“引用”选项卡。<br />3.单击**引用路径...** 按钮。<br />4.在**引用路径**对话框框中，输入中的目录名称**文件夹：**框。<br />5.单击**将文件夹添加**。|  
   
 ## <a name="example"></a>示例  
  下面的代码编译`T2.vb`若要创建的.exe 文件。 编译器查找程序集引用中的工作目录、 c： 驱动器的根目录中和 c： 驱动器的新的程序集目录中。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 03/22/2018
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

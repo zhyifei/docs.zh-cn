@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::EnterRuntime 方法"
-ms.custom: 
+title: IHostTaskManager::EnterRuntime 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.EnterRuntime
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1aa7a4b1-636a-4f5e-b834-b406d72f7120
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 70c9e83311fd7427895e1957d3511a45c47434e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a47f51ba32a9dfc16300a8de7c2d4b380a8ba988
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>IHostTaskManager::EnterRuntime 方法
 通知主机的调用非托管方法，如平台调用方法，是执行将控制返回到公共语言运行时 (CLR)。  
@@ -48,7 +36,7 @@ HRESULT EnterRuntime ();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`EnterRuntime`已成功返回。|  
+|S_OK|`EnterRuntime` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -57,19 +45,19 @@ HRESULT EnterRuntime ();
 |E_OUTOFMEMORY|没有足够的内存的可用，无法完成请求的分配。|  
   
 ## <a name="remarks"></a>备注  
- `EnterRuntime`调用以通知主机的非托管的函数，为其以前调用[LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)方法而进行、 已完成执行，并且正在将执行控制权返回给运行时。  
+ `EnterRuntime` 调用以通知主机的非托管的函数，为其以前调用[LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)方法而进行、 已完成执行，并且正在将执行控制权返回给运行时。  
   
 > [!NOTE]
 >  [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)调用以通知主机的非托管的函数，为其以前调用`LeaveRuntime`进行，正在调用非托管代码。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [高级 COM 互操作性](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  

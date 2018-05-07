@@ -1,33 +1,19 @@
 ---
 title: 选择凭据类型
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 756017462ccaf8a555b0634e8a43cfdd3bc63d32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selecting-a-credential-type"></a>选择凭据类型
-*凭据*是数据[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]用于建立声明的标识或功能。 例如，护照就是政府颁发的用以证明国家或地区的公民身份的凭据。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，凭据可以采用多种形式，例如用户名标记和 X.509 证书。 本主题讨论凭据、如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用凭据以及如何为应用程序选择正确的凭据。  
+*凭据*是 Windows Communication Foundation (WCF) 使用建立声明的标识或功能的数据。 例如，护照就是政府颁发的用以证明国家或地区的公民身份的凭据。 在 WCF 中，凭据可以采用多种形式，例如用户名标记和 X.509 证书。 本主题讨论凭据、 如何在 WCF 中，使用它们以及如何选择你的应用程序正确的凭据。  
   
  在许多国家和地区，驾驶执照就是凭据的一个示例。 该执照中包含表示个人身份和能力的数据。 它以持有人照片的形式包含所有权证明。 该执照由受信任的颁发机构颁发，通常是获得许可的政府部门。 该执照采用密封形式且包含一张全息图，表明它未经改动或伪造。  
   
- 提交凭据涉及出示数据以及数据的所有权证明。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同时在传输和消息安全级别支持多种凭据类型。 例如，考虑 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中支持的两种凭据类型：用户名和 (X.509) 证书凭据。  
+ 提交凭据涉及出示数据以及数据的所有权证明。 WCF 支持多种传输和消息安全级别的凭据类型。 例如，考虑两种类型的支持在 WCF 中的凭据： 用户名和 (X.509) 证书凭据。  
   
  对于用户名凭据，用户名表示已声明的标识，密码提供所有权证明。 这种情况下，受信任的颁发机构则是验证用户名和密码的系统。  
   
@@ -41,7 +27,7 @@ ms.lasthandoff: 04/30/2018
 |无|指定客户端不需要提供任何凭据。 这相当于匿名客户端。|  
 |Basic|为客户端指定基本身份验证。 有关其他信息，请参见 RFC2617 —[HTTP 身份验证： 基本和摘要式身份验证](http://go.microsoft.com/fwlink/?LinkID=88313)。|  
 |摘要|为客户端指定摘要式身份验证。 有关其他信息，请参见 RFC2617 —[HTTP 身份验证： 基本和摘要式身份验证](http://go.microsoft.com/fwlink/?LinkID=88313)。|  
-|Ntlm|指定 NT LAN Manager (NTLM) 身份验证。 在由于某种原因无法使用 Kerberos 身份验证时使用。 还可以通过将 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 属性设置为 `false` 来禁止将 NTLM 用作回退身份验证，这将使 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在使用 NTLM 时尽可能引发异常。 请注意，将此属性设置为 `false` 可能不阻止通过网络发送 NTLM 凭据。|  
+|Ntlm|指定 NT LAN Manager (NTLM) 身份验证。 在由于某种原因无法使用 Kerberos 身份验证时使用。 你可以通过设置来禁用它作为回退使用<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>属性`false`，它会导致 WCF 使最大努力引发异常，如果使用 NTLM。 请注意，将此属性设置为 `false` 可能不阻止通过网络发送 NTLM 凭据。|  
 |Windows|指定 Windows 身份验证。 若要在 Windows 域上仅指定 Kerberos 协议，则将 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 属性设置为 `false`（默认值为 `true`）。|  
 |证书|使用 X.509 证书执行客户端身份验证。|  
 |密码|用户必须提供用户名和密码。 使用 Windows 身份验证或其他自定义解决方案验证用户名/密码对。|  
@@ -53,17 +39,17 @@ ms.lasthandoff: 04/30/2018
 |-------------|-----------------|  
 |无|指定客户端不需要提供凭据。 这相当于匿名客户端。|  
 |Windows|允许在使用 Windows 凭据建立的安全上下文中交换 SOAP 消息。|  
-|用户名|允许服务可以要求使用用户名凭据对客户端进行身份验证。 请注意，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不允许对用户名进行任何加密操作，例如生成签名或加密数据。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 确保在使用用户名凭据时确保传输的安全性。|  
+|用户名|允许服务可以要求使用用户名凭据对客户端进行身份验证。 请注意，WCF 不允许与用户名，例如生成签名或加密数据的任何加密操作。 WCF 可确保传输的安全性时使用用户名凭据。|  
 |证书|允许服务可以要求使用 X.509 证书对客户端进行身份验证。|  
 |已颁发的令牌|根据安全策略配置的自定义令牌类型。 默认令牌类型为安全断言标记语言 (SAML)。 令牌由安全令牌服务颁发。 有关详细信息，请参阅[联合身份验证和颁发令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>服务凭据的协商模型  
  *协商*是通过交换凭据建立客户端和服务之间的信任关系的过程。 该过程在客户端和服务之间以迭代方式进行，以便仅公开协商过程下一步所需的信息。 实际上，最终结果是将服务凭据传递给要在后续操作中使用的客户端。  
   
- 但有一个例外，默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中系统提供的绑定在使用消息级安全性时会自动协商服务凭据。 （例外情况为 <xref:System.ServiceModel.BasicHttpBinding>，默认情况下它不会启用安全性。）若要禁用此行为，请参见 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 和 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> 属性。  
+ 有一个例外，默认情况下在 WCF 中系统提供的绑定的服务凭据使用时会自动协商消息级安全性。 （例外情况为 <xref:System.ServiceModel.BasicHttpBinding>，默认情况下它不会启用安全性。）若要禁用此行为，请参见 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 和 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> 属性。  
   
 > [!NOTE]
->  将 SSL 安全与 .NET Framework 3.5 及更高版本一起使用时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端将同时使用其证书存储区中的中间证书和 SSL 协商期间收到的中间证书，对服务的证书执行证书链验证。 .NET Framework 3.0 仅使用本地证书存储区中安装的中间证书。  
+>  WCF 客户端使用 SSL 安全时使用.NET Framework 3.5 及更高版本，使用两个其证书存储区中的中间证书和 SSL 协商期间收到的中间证书来对服务的执行证书链验证证书。 .NET Framework 3.0 仅使用本地证书存储区中安装的中间证书。  
   
 #### <a name="out-of-band-negotiation"></a>带外协商  
  如果禁用自动协商，则在将任何消息发送到服务之前必须向客户端提供服务凭据。 这也称为是*的带*设置。 例如，如果指定的凭据类型为证书，且禁用了自动协商，则客户端必须联系服务所有者以在运行客户端应用程序的计算机上接收和安装证书。 例如，当要严格控制哪些客户端可以访问企业对企业方案中的服务时，可以执行上述操作。 此扩展的带外协商可以在电子邮件，并且 X.509 证书存储在 Windows 证书存储区，使用 Microsoft 管理控制台 (MMC) 证书管理单元中等工具。  
@@ -90,7 +76,7 @@ ms.lasthandoff: 04/30/2018
  如果客户端指定了有效的用户名和密码，则使用该凭据对客户端进行身份验证。 否则，使用当前已登录用户的凭据。  
   
 ### <a name="setting-client-credentials"></a>设置客户端凭据  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，客户端应用程序使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端连接服务。 每个客户端都派生自 <xref:System.ServiceModel.ClientBase%601> 类，且客户端上的 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 属性允许客户端凭据的各种值的规范。  
+ 在 WCF 中，客户端应用程序使用 WCF 客户端连接到服务。 每个客户端都派生自 <xref:System.ServiceModel.ClientBase%601> 类，且客户端上的 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 属性允许客户端凭据的各种值的规范。  
   
 #### <a name="setting-a-certificate"></a>设置证书  
  若要使用 X.509 证书（用于对服务的客户端进行身份验证）配置服务，则使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 类的 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 方法。  
@@ -98,7 +84,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>如何使用客户端凭据对服务的客户端进行身份验证  
  使用 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 属性或 <xref:System.ServiceModel.ChannelFactory.Credentials%2A> 属性提供与服务进行通信所需的客户端凭据信息。 安全通道使用此信息对服务的客户端进行身份验证。 身份验证可通过以下两种模式之一来实现：  
   
--   在使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端实例建立安全上下文以发送第一条消息前，使用一次客户端凭据。 然后，所有的应用程序消息都通过安全上下文受到保护。  
+-   使用 WCF 客户端实例建立安全上下文发送第一条消息之前，将一次使用客户端凭据。 然后，所有的应用程序消息都通过安全上下文受到保护。  
   
 -   客户端凭据用于对发送到服务的每个应用程序消息进行身份验证。 在这种情况下，未在客户端和服务之间建立上下文。  
   
@@ -106,7 +92,7 @@ ms.lasthandoff: 04/30/2018
  使用第一种方法时，已建立的上下文将与客户端标识永久关联。 也就是说，一旦建立了安全上下文，就无法更改与客户端相关联的标识。  
   
 > [!IMPORTANT]
->  无法切换标识时，要格外注意一种情况（即启用建立安全上下文时的默认行为）。 如果创建的服务可以与另一个服务进行通信，则无法更改用于打开第二个服务的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的标识。 如果允许多个客户端使用第一个服务，且该服务访问第二个服务时将模拟客户端，则这将成为问题所在。 如果该服务重新使用所有调用方的相同客户端，则对第二个服务的所有调用都是以第一个调用方的标识进行的，该标识用于打开第二个服务的客户端。 换言之，该服务将第一个客户端的标识用于它的所有客户端以与第二个服务进行通信。 这可以导致特权提升。 如果这不是服务所需的行为，就必须跟踪每个调用方并为每个单独的调用方创建第二个服务的新客户端，并确保该服务仅使用正确调用方的正确客户端与第二个服务进行通信。  
+>  无法切换标识时，要格外注意一种情况（即启用建立安全上下文时的默认行为）。 如果创建第二个服务进行通信的服务，不能更改用于打开第二个服务的 WCF 客户端的标识。 如果允许多个客户端使用第一个服务，且该服务访问第二个服务时将模拟客户端，则这将成为问题所在。 如果该服务重新使用所有调用方的相同客户端，则对第二个服务的所有调用都是以第一个调用方的标识进行的，该标识用于打开第二个服务的客户端。 换言之，该服务将第一个客户端的标识用于它的所有客户端以与第二个服务进行通信。 这可以导致特权提升。 如果这不是服务所需的行为，就必须跟踪每个调用方并为每个单独的调用方创建第二个服务的新客户端，并确保该服务仅使用正确调用方的正确客户端与第二个服务进行通信。  
   
  有关凭据和安全会话的详细信息，请参阅[安全会话的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
   

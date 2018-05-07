@@ -1,28 +1,16 @@
 ---
-title: "如何：在 Windows 窗体 RichTextBox 控件中显示滚动条"
-ms.custom: 
+title: 如何：在 Windows 窗体 RichTextBox 控件中显示滚动条
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - text boxes [Windows Forms], displaying scroll bars
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4645e502544072cbc6268ae07e054ea5450d9c5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5588aad5b2e38716c628947c6e06365e7053eb5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>如何：在 Windows 窗体 RichTextBox 控件中显示滚动条
 默认情况下，Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件根据需要显示水平和垂直滚动条。 有七个可能值<xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>属性<xref:System.Windows.Forms.RichTextBox>控件下, 表所述。  
@@ -33,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  设置<xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>为适当的值的属性<xref:System.Windows.Forms.RichTextBoxScrollBars>枚举。  
   
-    |“值”|描述|  
+    |值|描述|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both>（默认值）|水平或垂直滚动条，或两个，仅当显示的文本超出宽度或的控件长度。|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|永远不会显示任何类型的滚动条。|  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  将 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性设置为适当的值。  
   
-    |“值”|描述|  
+    |值|描述|  
     |-----------|-----------------|  
     |`false`|控件中的文本不自动调整以适应该控件的宽度，所以它将向右滚动，直到到达一个分行符。 如果您在上面选择和 / 或水平滚动条，请使用此值。|  
     |`true`（默认值）|控件中的文本自动调整以适应控件的宽度。 水平滚动条将不会出现。 如果选择垂直滚动条或无、 更高版本，以显示一个或多个段落，请使用此值。|  

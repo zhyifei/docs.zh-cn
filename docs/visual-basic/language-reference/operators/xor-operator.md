@@ -1,12 +1,6 @@
 ---
 title: 异或运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Xor
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b14f11f2df2df9c29e88e9188390cfe245d2cb58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34d317da5d85127e371c2df7229e0f0873972f50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xor-operator-visual-basic"></a>异或运算符 (Visual Basic)
 执行逻辑异或对两个`Boolean`表达式或对两个数值表达式的按位异。  
@@ -40,13 +31,13 @@ result = expression1 Xor expression2
   
 ## <a name="parts"></a>部件  
  `result`  
- 必需。 任何`Boolean`或数值变量。 有关布尔比较，`result`是两个逻辑异或运算 （独占逻辑析取）`Boolean`值。 对于按位运算，`result`是表示按位异或 （独占按位运算） 的两个数值的位模式对数字值。  
+ 必须的。 任何`Boolean`或数值变量。 有关布尔比较，`result`是两个逻辑异或运算 （独占逻辑析取）`Boolean`值。 对于按位运算，`result`是表示按位异或 （独占按位运算） 的两个数值的位模式对数字值。  
   
  `expression1`  
- 必需。 任何`Boolean`或数值表达式。  
+ 必须的。 任何`Boolean`或数值表达式。  
   
  `expression2`  
- 必需。 任何`Boolean`或数值表达式。  
+ 必须的。 任何`Boolean`或数值表达式。  
   
 ## <a name="remarks"></a>备注  
  有关布尔比较，`result`是`True`当且仅当恰好有一个`expression1`和`expression2`计算结果为`True`。 也就是说，当且仅当`expression1`和`expression2`评估为相反`Boolean`值。 下表说明了如何`result`确定。  
@@ -97,7 +88,7 @@ result = expression1 Xor expression2
   
  前面的示例生成结果 2、 12 和 14 中，分别。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [逻辑/按位运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
  [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  

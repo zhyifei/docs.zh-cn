@@ -1,21 +1,12 @@
 ---
-title: "迭代器 (Visual Basic)"
-ms.custom: 
+title: 迭代器 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f02249f7f30d2cd6b43aa75530ace099286c7d7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ecc48ad5bbddc82457a8d6cc8e60ee419fb593fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iterators-visual-basic"></a>迭代器 (Visual Basic)
 迭代器可用于逐步迭代集合，例如列表和数组。  
@@ -50,7 +41,7 @@ End Function
   
  在 Visual Studio 2012 中的 Visual Basic 中引入了迭代器。  
   
- **主题内容**  
+ **在本主题中**  
   
 -   [简单迭代器](#BKMK_SimpleIterator)  
   
@@ -221,7 +212,7 @@ Public Class Zoo
 End Class  
 ```  
   
-##  <a name="BKMK_TryBlocks"></a>Try 块  
+##  <a name="BKMK_TryBlocks"></a> Try 块  
  Visual Basic 将允许`Yield`中的语句`Try`块[重试...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。 A`Try`具有的块`Yield`语句可以有`Catch`阻止，并且可以`Finally`块。  
   
  下面的示例包含`Try`， `Catch`，和`Finally`在迭代器函数中的块。 `Finally`之前执行的迭代器函数中的块`For Each`迭代完成。  
@@ -261,7 +252,7 @@ End Function
   
  如果`For Each`正文 （而不是迭代器方法） 引发异常，`Catch`未执行迭代器函数中的块，但`Finally`执行迭代器函数中的块。 A`Catch`块中嵌套的迭代器函数捕获仅出现在迭代器函数的异常。  
   
-##  <a name="BKMK_AnonymousMethods"></a>匿名方法  
+##  <a name="BKMK_AnonymousMethods"></a> 匿名方法  
  在 Visual Basic 中的匿名函数可以是迭代器函数。 下面的示例阐释了这一点。  
   
 ```vb  
@@ -452,7 +443,7 @@ End Class
   
 -   在迭代器中封装生成列表。 使用迭代器方法，可生成该列表，然后在循环中产出每个结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Collections.Generic>  
  <xref:System.Collections.Generic.IEnumerable%601>  
  [For Each...Next 语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  

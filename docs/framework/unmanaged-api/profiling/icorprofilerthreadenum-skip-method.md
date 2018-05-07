@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerThreadEnum::Skip 方法"
-ms.custom: 
+title: ICorProfilerThreadEnum::Skip 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerThreadEnum.Skip
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: acb8b029-4a96-4ed7-ae3c-310204e5ceea
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c1840722a250dd627a5214700dca95c48aa2e8d2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: af6aab2483f0e92dc20936fe2b01e12590d99ca7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>ICorProfilerThreadEnum::Skip 方法
 从当前位置前移枚举器的光标，以便跳过指定的元素数量。  
@@ -54,20 +42,20 @@ HRESULT Skip (    [in] ULONG celt
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`celt`跳过的元素。|  
+|S_OK|`celt` 跳过的元素。|  
 |S_FALSE|少于`celt`跳过的元素，它指示是没有更多的元素。|  
   
 ## <a name="remarks"></a>备注  
  此枚举器的光标的新位置是 （当前位置） + `celt`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICorProfilerThreadEnum 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  

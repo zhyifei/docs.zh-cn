@@ -1,12 +1,6 @@
 ---
 title: Operator Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.operator
 helpviewer_keywords:
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1b6be45fd0a606f43c14d57f3f8ae0955f256ba6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7fe7929e4b6e61ca3b39be5615e09182f2fe0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-statement"></a>Operator Statement
 声明运算符，操作数，并在类或结构定义运算符过程的代码。  
@@ -52,13 +43,13 @@ End Operator
  可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。  
   
  `Public`  
- 必需。 指示此运算符过程具有[公共](../../../visual-basic/language-reference/modifiers/public.md)访问。  
+ 必须的。 指示此运算符过程具有[公共](../../../visual-basic/language-reference/modifiers/public.md)访问。  
   
  `Overloads`  
  可选。 请参阅[重载](../../../visual-basic/language-reference/modifiers/overloads.md)。  
   
  `Shared`  
- 必需。 指示此运算符过程是[共享](../../../visual-basic/language-reference/modifiers/shared.md)过程。  
+ 必须的。 指示此运算符过程是[共享](../../../visual-basic/language-reference/modifiers/shared.md)过程。  
   
  `Shadows`  
  可选。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
@@ -70,22 +61,22 @@ End Operator
  除非另行指定，所需的转换运算符`Widening`。 指示此运算符过程定义[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)转换。 此帮助页上，请参见"扩大转换和收缩转换"。  
   
  `operatorsymbol`  
- 必需。 符号或运算符的此运算符过程所定义的标识符。  
+ 必须的。 符号或运算符的此运算符过程所定义的标识符。  
   
  `operand1`  
- 必需。 名称和的一元运算符 （包括转换运算符） 的单个操作数或二元运算符的左的操作数的类型。  
+ 必须的。 名称和的一元运算符 （包括转换运算符） 的单个操作数或二元运算符的左的操作数的类型。  
   
  `operand2`  
  所需的二元运算符。 名称和二元运算符的右操作数的类型。  
   
- `operand1`和`operand2`具有以下语法和部件：  
+ `operand1` 和`operand2`具有以下语法和部件：  
   
  `[ ByVal ] operandname [ As operandtype ]`  
   
 |部件|描述|  
 |----------|-----------------|  
 |`ByVal`|可选，但的传递机制必须[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)。|  
-|`operandname`|必需。 表示此操作数的变量的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`operandname`|必须的。 表示此操作数的变量的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
 |`operandtype`|可选除非`Option Strict`是`On`。 此操作数的数据类型。|  
   
  `type`  
@@ -95,10 +86,10 @@ End Operator
  可选。 运算符过程运行的语句块。  
   
  `returnvalue`  
- 必需。 运算符过程返回到调用代码的值。  
+ 必须的。 运算符过程返回到调用代码的值。  
   
  `End` `Operator`  
- 必需。 终止此运算符过程的定义。  
+ 必须的。 终止此运算符过程的定义。  
   
 ## <a name="remarks"></a>备注  
  你可以使用`Operator`只能在类或结构中。 这意味着*声明上下文*运算符不能是源文件、 命名空间、 模块、 接口、 过程或块。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
@@ -174,11 +165,11 @@ End Operator
  如果没有任何可能转换过程可能不成功，或者它可能会导致未经处理的异常，必须将其声明`Narrowing`。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例使用`Operator`语句以定义一个结构，其中包括运算符的过程的轮廓`And`， `Or`， `IsFalse`，和`IsTrue`运算符。 `And`和`Or`每个都采用类型的两个操作数`abc`和返回类型`abc`。 `IsFalse`和`IsTrue`个各自采用单个类型的操作数的`abc`并返回`Boolean`。 这些定义使调用代码以使用`And`， `AndAlso`， `Or`，和`OrElse`类型操作数`abc`。  
+ 下面的代码示例使用`Operator`语句以定义一个结构，其中包括运算符的过程的轮廓`And`， `Or`， `IsFalse`，和`IsTrue`运算符。 `And` 和`Or`每个都采用类型的两个操作数`abc`和返回类型`abc`。 `IsFalse` 和`IsTrue`个各自采用单个类型的操作数的`abc`并返回`Boolean`。 这些定义使调用代码以使用`And`， `AndAlso`， `Or`，和`OrElse`类型操作数`abc`。  
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IsFalse 运算符](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
  [IsTrue 运算符](../../../visual-basic/language-reference/operators/istrue-operator.md)  
  [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  

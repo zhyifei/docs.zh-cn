@@ -1,13 +1,6 @@
 ---
-title: "如何：在三维场景中对照相机位置和方向进行动画处理"
-ms.custom: 
+title: 如何：在三维场景中对照相机位置和方向进行动画处理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], camera position in 3-D scenes
 - camera direction [WPF], animating in 3-D scenes
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - camera position [WPF], animating in 3-D scenes
 - animation [WPF], camera direction in 3-D scenes
 ms.assetid: 480224b7-a5e5-4165-ba7f-ef760ddff94a
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8e80f1032e886d59240b74281c2ed87ad5743a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 429139da809a78474f4f6a082fb6e3c08c72d431
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a>如何：在三维场景中对照相机位置和方向进行动画处理
 下面的示例演示如何进行动画处理的照相机的位置和它所指在三维场景中的方向进行动画处理。 这可通过使用<xref:System.Windows.Media.Animation.Point3DAnimation>和<xref:System.Windows.Media.Animation.Vector3DAnimation>要进行动画处理<xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A>和<xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A>属性分别<xref:System.Windows.Media.Media3D.PerspectiveCamera>。 你可能使用如下动画更改以响应事件的场景观察的视图。  
