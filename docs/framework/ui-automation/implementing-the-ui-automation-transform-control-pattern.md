@@ -1,28 +1,19 @@
 ---
-title: "实现 UI 自动化 Transform 控件模式"
-ms.custom: 
+title: 实现 UI 自动化 Transform 控件模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, Transform
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-caps.latest.revision: "14"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 629428f2f5e30d0b7dee07f270fcf5bacaeb5f30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65c90e8e9f0653181b98645bf453c9d78c14bc15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>实现 UI 自动化 Transform 控件模式
 > [!NOTE]
@@ -48,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-members-for-itransformprovider"></a>ITransformProvider 必需的成员  
  实现 <xref:System.Windows.Automation.Provider.ITransformProvider>需要以下属性和方法。  
   
-|必需的成员|成员类型|备注|  
+|必需的成员|成员类型|说明|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|属性|无|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|属性|无|  

@@ -1,14 +1,6 @@
 ---
-title: "CreateApplicationContext 函数"
-ms.custom: 
+title: CreateApplicationContext 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CreateApplicationContext
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7bf8a141-b2c0-4058-9885-1cef7dcaa811
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89c3181a157ce5162d93d1df14641b393fb3082d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 80012d030d0ea51ab3d150a7fd346b78e29dbde5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext 函数
 此函数支持的.NET Framework 基础结构，不宜在代码中直接使用。  
@@ -53,14 +41,14 @@ HRESULT CreateApplicationContext (
  `ppCtx`  
  [out]指向应用程序上下文的指针。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   
  **库：**作为中为 Fusion.dll 资源包括  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IAssemblyCache 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  

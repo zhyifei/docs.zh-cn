@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEval::CreateValue 方法"
-ms.custom: 
+title: ICorDebugEval::CreateValue 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEval.CreateValue
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9a1c0b47-6f10-4fcb-844a-4ab2d7990140
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64d55a951795cc5efc1bfc624dbe07575be153aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d67784daee055106f104d74d098b9926c6de2ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue 方法
 其初始值为零或 null 创建指定类型的值。  
@@ -61,13 +49,13 @@ HRESULT CreateValue (
  [out]一个表示值的"ICorDebugValue"对象的地址指针。  
   
 ## <a name="remarks"></a>备注  
- `CreateValue`创建`ICorDebugValue`使用函数求值的唯一目的是给定类型的对象。 此值对象可以用于将用户常量作为参数传递。  
+ `CreateValue` 创建`ICorDebugValue`使用函数求值的唯一目的是给定类型的对象。 此值对象可以用于将用户常量作为参数传递。  
   
  如果值的类型为基元类型，其初始值为零或 null。 使用[icordebuggenericvalue:: Setvalue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)设置基元类型的值。  
   
  如果值`elementType`是 ELEMENT_TYPE_CLASS，获取"ICorDebugReferenceValue"(在返回`ppValue`) 表示空对象引用。 此对象可用于向函数求值的对象引用参数传递 null。 无法设置`ICorDebugValue`任何内容; 它始终仍是 null。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

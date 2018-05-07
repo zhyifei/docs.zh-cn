@@ -1,14 +1,6 @@
 ---
-title: "COINITICOR 枚举"
-ms.custom: 
+title: COINITICOR 枚举
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COINITICOR
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 53b02f709bca1edbdad82e0c0efd1c1959e4ebe1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56d90257389941189ff5036ebcb145fd0df17dc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR 枚举
 指定使用的常量[CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)它时初始化公共语言运行时。  
@@ -52,14 +40,14 @@ typedef enum tagCOINITCOR
 |------------|-----------------|  
 |`COINITCOR`|指示的默认初始化模式。|  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：**作为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

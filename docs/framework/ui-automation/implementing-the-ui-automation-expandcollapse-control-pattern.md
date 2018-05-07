@@ -1,28 +1,19 @@
 ---
-title: "实现 UI 自动化 ExpandCollapse 控件模式"
-ms.custom: 
+title: 实现 UI 自动化 ExpandCollapse 控件模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, ExpandCollapse control pattern
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8e956008c6b80e0b2184adcf0a45b70efa21d752
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f593fb09e8c1056c28d351bfdf0218a0161fd9e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>实现 UI 自动化 ExpandCollapse 控件模式
 > [!NOTE]
@@ -59,12 +50,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-members-for-iexpandcollapseprovider"></a>IExpandCollapseProvider 必需的成员  
  实现 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>需要以下属性和方法。  
   
-|必需的成员|成员类型|备注|  
+|必需的成员|成员类型|说明|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|属性|无|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|方法|无|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|方法|无|  
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Event|此控件没有关联的事件；请使用此泛型委托。|  
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|事件|此控件没有关联的事件；请使用此泛型委托。|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>异常  
