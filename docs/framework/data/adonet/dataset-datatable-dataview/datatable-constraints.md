@@ -1,27 +1,15 @@
 ---
-title: "数据表约束"
-ms.custom: 
+title: 数据表约束
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 500dad1699843bae04aea6d5c16a1ccf53bb102a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 95bbba30bc9cd75d1694d7d8062bc9a6e6105084
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatable-constraints"></a>数据表约束
 为了维护数据的完整性，可以使用约束来对 <xref:System.Data.DataTable> 中的数据施加限制。 约束是应用于某列或相关各列的自动规则，它决定了某行的值以某种方式更改时的操作过程。 强制执行约束时`System.Data.DataSet.EnforceConstraints`属性<xref:System.Data.DataSet>是**true**。 有关显示如何设置 `EnforceConstraints` 属性的代码示例，请参见 <xref:System.Data.DataSet.EnforceConstraints%2A> 参考主题。  
@@ -35,8 +23,8 @@ ms.lasthandoff: 01/17/2018
   
 |规则设置|描述|  
 |------------------|-----------------|  
-|**Cascade**|删除或更新相关的行。|  
-|**SetNull**|将值设置到相关行中**DBNull**。|  
+|**级联**|删除或更新相关的行。|  
+|**setNull**|将值设置到相关行中**DBNull**。|  
 |**SetDefault**|将相关行中的值设置为默认值。|  
 |**无**|对相关行不执行任何操作。 这是默认设置。|  
   
@@ -71,7 +59,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
 |规则设置|描述|  
 |------------------|-----------------|  
-|**Cascade**|接受或拒绝对子行的更改。|  
+|**级联**|接受或拒绝对子行的更改。|  
 |**无**|对子行不执行任何操作。 这是默认设置。|  
   
 ### <a name="example"></a>示例  

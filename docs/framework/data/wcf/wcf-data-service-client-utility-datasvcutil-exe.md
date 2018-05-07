@@ -1,28 +1,16 @@
 ---
-title: "WCF 数据服务客户端实用工具 (DataSvcUtil.exe)"
-ms.custom: 
+title: WCF 数据服务客户端实用工具 (DataSvcUtil.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, generating client data classes
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fcbbbe5180acaf943956310d4837a105d8d049d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3206947d06a1736116674b70e469c20f8f4fca86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF 数据服务客户端实用工具 (DataSvcUtil.exe)
 DataSvcUtil.exe 是由提供的命令行工具[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]这样做会消耗[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源，并生成从.NET Framework 客户端应用程序访问数据服务所需的客户端数据服务类。 通过使用以下元数据源，该实用工具可以生成数据类：  
@@ -49,11 +37,11 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |------------|-----------------|  
 |`/dataservicecollection`|指定还生成了将对象绑定到控件所需的代码。|  
 |`/help`<br /><br /> - 或 -<br /><br /> `/?`|显示该工具的命令语法和选项。|  
-|`/in:`*\<文件 >*|指定 .csdl 或 .edmx 文件或该文件所在的目录。|  
-|`/language:`[VB &#124;CSharp]|指定生成的源代码文件的语言。 默认语言为 C#。|  
+|`/in:` *\<文件 >*|指定 .csdl 或 .edmx 文件或该文件所在的目录。|  
+|`/language:`[VB&#124;CSharp]|指定生成的源代码文件的语言。 默认语言为 C#。|  
 |`/nologo`|禁止显示版权信息。|  
-|`/out:`*\<文件 >*|指定包含生成的客户端数据服务类的源代码文件的名称。|  
-|`/uri:`*\<字符串 >*|URI[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源。|  
+|`/out:` *\<文件 >*|指定包含生成的客户端数据服务类的源代码文件的名称。|  
+|`/uri:` *\<字符串 >*|URI[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源。|  
 |`/version:`[1.0&#124;2.0]|指定接受的最高 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 版本。 基于确定版本`DataServiceVersion`返回的数据服务元数据中的 DataService 元素的属性。 有关详细信息，请参阅[数据服务版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。 当指定`/dataservicecollection`参数，则还必须指定`/version:2.0`以启用数据绑定。|  
   
 ## <a name="see-also"></a>请参阅  

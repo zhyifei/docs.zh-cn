@@ -2,11 +2,11 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: f81c71746b6b59a51ee825b44c9e6d9f93eb5fbd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 5498c300ab126bbc4e08cd228e3e7b48e905932e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicehost"></a>@ServiceHost
 将用于生成服务主机的工厂与要承载的服务以及访问或编译 .svc 文件中提供的主机代码所需的其他编程方面相关联。  
@@ -31,7 +31,7 @@ CodeBehind = "CodeBehind"%>
  用于实例化服务主机的服务主机工厂的 CLR 类型名称。 此属性是可选的。 如果未指定，则使用默认的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，这将返回 <xref:System.ServiceModel.ServiceHost> 的实例。  
   
 #### <a name="debug"></a>调试  
- 指示是否应使用调试符号编译的 Windows Communication Foundation (WCF) 服务。 如果应使用调试符号编译 `true` 服务，则为 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]；否则为 `false`。  
+ 指示是否应使用调试符号编译的 Windows Communication Foundation (WCF) 服务。 `true` 如果应使用调试符号; 编译 WCF 服务否则为`false`。  
   
 #### <a name="language"></a>语言  
  指定编译文件 (.svc) 中的所有内联代码时使用的语言。 这些值可以表示 .NET 支持的任何语言，包括 C#、VB 和 JS，这三项分别表示 C#、Visual Basic .NET 和 JScript .NET。 此属性是可选的。  
