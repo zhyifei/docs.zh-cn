@@ -1,25 +1,18 @@
 ---
 title: .NET Framework 入门
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3295d17b0ef4650c38f264dfc785eee7a452be86
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d62ae73c9a2789087785e1fba6b227245ee08a10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 入门
 
@@ -60,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 
 - 如果使用的应用依赖于特定版本的 .NET Framework，则该版本一旦删除，应用就会暂停。
 
-- 一些 .NET Framework 版本是早期版本的就地更新版。 例如，[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 是版本 2.0 的就地更新版，而 .NET Framework 4.7.1 是版本 4, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 和 4.7 的就地更新版。 有关详细信息，请参见 [.NET Framework 版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)。
+- 一些 .NET Framework 版本是早期版本的就地更新版。 例如，[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 是版本 2.0 的就地更新版，而 .NET Framework 4.7.2 是版本 4 到版本 4.7.1 的就地更新版。 有关详细信息，请参见 [.NET Framework 版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)。
 
 在 Windows 8 之前版本的 Windows 上，如果选择删除 .NET Framework，请始终通过“控制面板”的“程序及功能”进行卸载。 请勿手动删除某个版本的 .NET Framework。 在 Windows 8 和更高版本的操作系统上，.NET Framework 是一个操作系统组件，不能单独卸载。
 
@@ -73,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 
 若要开发 .NET Framework 应用或组件，请执行以下操作：
 
-1. 如果未在操作系统上预安装 .NET Framework，请安装应用所面向的 .NET Framework 版本。 最新的生产版本是 .NET Framework 4.7.1，此版本预安装在 Windows 10 Fall 创意者更新上，并可下载到旧版 Windows 操作系统。 有关 .NET Framework 系统要求，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关安装其他版本的 .NET Framework 的信息，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。 其他 .NET Framework 包为带外发布，这意味着这些包在滚动基础上发布，没有任何定期或计划的发布周期。 有关这些包的信息，请参阅 [.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。
+1. 如果未在操作系统上预安装 .NET Framework，请安装应用所面向的 .NET Framework 版本。 最新的生产版本是 .NET Framework 4.7.2，此版本预安装在 Windows 10 2018 年 4 月更新上，并可下载到旧版 Windows 操作系统。 有关 .NET Framework 系统要求，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关安装其他版本的 .NET Framework 的信息，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。 其他 .NET Framework 包为带外发布，这意味着这些包在滚动基础上发布，没有任何定期或计划的发布周期。 有关这些包的信息，请参阅 [.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。
 
 2. 选择要用于开发应用的 .NET Framework 所支持的语言。 大量语言可供选择，包括来自 Microsoft 的 [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 和 C++/CLI。 （一种用于开发 .NET Framework 应用的编程语言，它遵循[公共语言基础结构 (CLI) 规范](http://go.microsoft.com/fwlink/?LinkId=199862)。）
 
