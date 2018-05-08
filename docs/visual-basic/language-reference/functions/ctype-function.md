@@ -1,11 +1,6 @@
 ---
-title: "CType 函数 (Visual Basic)"
+title: CType 函数 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CType
 helpviewer_keywords:
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d804ce75929592675068fdc434a1ba7429fa5373
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7b1c7ae2a0126bf7cd487df4e9a7364c98e1c695
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctype-function-visual-basic"></a>CType 函数 (Visual Basic)
 返回表达式显式转换为指定的数据类型、 对象、 结构、 类或接口的结果。  
@@ -47,7 +39,7 @@ CType(expression, typename)
 >  -   类型转换函数，如`CByte`， `CDbl`，和`CInt`执行向特定的数据类型的转换。 有关详细信息，请参阅[类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)。  
 > -   [DirectCast 运算符](../../../visual-basic/language-reference/operators/directcast-operator.md)或[TryCast 运算符](../../../visual-basic/language-reference/operators/trycast-operator.md)。 这些运算符需要一种类型继承自或实现其他类型。 它们可以提供某种程度上更好的性能比`CType`来回进行转换时`Object`数据类型。  
   
- `CType`是编译的内联，这意味着所计算的表达式过程中进行转换代码。 在某些情况下，代码运行速度更快因为没有过程调用来执行转换。  
+ `CType` 是编译的内联，这意味着所计算的表达式过程中进行转换代码。 在某些情况下，代码运行速度更快因为没有过程调用来执行转换。  
   
  如果未定义转换从`expression`到`typename`(例如，从`Integer`到`Date`)，Visual Basic 显示编译时错误消息。  
   

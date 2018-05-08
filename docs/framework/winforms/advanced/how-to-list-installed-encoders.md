@@ -1,13 +1,6 @@
 ---
-title: "如何：列出已安装的解码器"
-ms.custom: 
+title: 如何：列出已安装的解码器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - image codecs [Windows Forms], listing
 - image encoders [Windows Forms], listing
 ms.assetid: 49e8e4e9-7a67-42d9-86bf-08821cdc282e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ec3ce7d2d933226162664826764c818eacf97afc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1882ce9a140fb325c29411173ba7bde717bd3f98
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-list-installed-encoders"></a>如何：列出已安装的解码器
-你可能想要列出可用的计算机上的图像编码器，以确定是否可以将你的应用程序保存到特定的图像文件格式。 <xref:System.Drawing.Imaging.ImageCodecInfo>类提供<xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A>静态方法，以便你能够确定哪些图像编码器可供使用。 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A>返回的数组<xref:System.Drawing.Imaging.ImageCodecInfo>对象。  
+你可能想要列出可用的计算机上的图像编码器，以确定是否可以将你的应用程序保存到特定的图像文件格式。 <xref:System.Drawing.Imaging.ImageCodecInfo>类提供<xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A>静态方法，以便你能够确定哪些图像编码器可供使用。 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> 返回的数组<xref:System.Drawing.Imaging.ImageCodecInfo>对象。  
   
 ## <a name="example"></a>示例  
  下面的代码示例将输出的已安装的编码器列表和其属性值。  

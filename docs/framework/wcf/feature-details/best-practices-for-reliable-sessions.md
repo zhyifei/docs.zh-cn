@@ -1,24 +1,12 @@
 ---
-title: "可靠会话的最佳做法"
-ms.custom: 
+title: 可靠会话的最佳做法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c022db62103826aa89e9035fd36c050d1f7c0f84
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d9671e7e3124d535b66de8cd8468f76dcb32b10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-reliable-sessions"></a>可靠会话的最佳做法
 
@@ -26,7 +14,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="setting-maxtransferwindowsize"></a>设置 MaxTransferWindowSize
 
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的可靠会话使用传输窗口保存客户端和服务上的消息。 可配置属性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> 指示传输窗口可以保存多少条消息。
+可靠会话中 Windows Communication Foundation (WCF) 使用传输窗口保存客户端和服务上的消息。 可配置属性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> 指示传输窗口可以保存多少条消息。
 
 对于发件人，这表示传输窗口可以保存在等待确认; 时的消息数在接收方，它指示要为服务缓冲的消息数。
 
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 
 *流控制*是一种机制，以确保在发送者和接收者步伐相互、 使用和处理消息，即快速它们正在生成。 客户端和服务上的传输窗口大小可确保发送方和接收方在一个合理的同步窗口中。
 
-我们强烈建议你设置属性<xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A>到`true`当使用可靠会话之间[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端和[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务。
+我们强烈建议你设置属性<xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A>到`true`当使用 WCF 客户端和 WCF 服务之间的可靠会话。
 
 ## <a name="setting-maxpendingchannels"></a>设置 MaxPendingChannels
 

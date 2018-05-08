@@ -1,28 +1,14 @@
 ---
-title: "Windows 窗体应用程序中的用户输入"
-ms.custom: 
+title: Windows 窗体应用程序中的用户输入
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 60135c09f63bd98f753e151c515938cbf13e70ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f1b96ab53b30d045a315b43abd0e38157e26c07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Windows 窗体应用程序中的用户输入
 在 Windows 窗体，用户输入发送到 Windows 消息的窗体中的应用程序。 可重写方法的一系列处理在应用程序窗体中，这些消息，并控制级别。 当这些方法接收鼠标和键盘消息时，因此将引发可以处理以获取信息鼠标或键盘输入的事件。 在许多情况下，Windows 窗体应用程序将能够只需通过处理这些事件处理所有用户输入。 在其他情况下，应用程序可能需要重写处理消息以便由应用程序、 窗体中或控件接收到之前截获某个特定消息的方法之一。  

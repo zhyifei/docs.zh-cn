@@ -1,12 +1,6 @@
 ---
-title: "Function 语句 (Visual Basic)"
+title: Function 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Function
 helpviewer_keywords:
@@ -34,14 +28,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b4a0c33d6d466975ca5dde1bd20ad2e1a9f560e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-statement-visual-basic"></a>Function 语句 (Visual Basic)
 声明名称、 参数和定义的代码`Function`过程。  
@@ -183,7 +174,7 @@ End Function
 ## <a name="defining-a-function"></a>定义函数  
  你可以定义`Function`只能在模块级别的过程。 因此，函数的声明上下文必须是类、 结构、 模块或接口，并且不能为源文件、 命名空间、 过程或块。 有关详细信息，请参阅[声明上下文和默认访问级别](declaration-contexts-and-default-access-levels.md)。  
   
- `Function`过程默认为公共访问。 你可以调整其访问级别有访问修饰符。  
+ `Function` 过程默认为公共访问。 你可以调整其访问级别有访问修饰符。  
   
  A`Function`过程可以声明该过程返回的值的数据类型。 你可以指定任何数据类型或枚举、 结构、 类或接口的名称。 如果没有指定`returntype`参数，该过程返回`Object`。  
   

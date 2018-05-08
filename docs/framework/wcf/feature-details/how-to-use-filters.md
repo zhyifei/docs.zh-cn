@@ -1,26 +1,12 @@
 ---
-title: "如何：使用筛选器"
-ms.custom: 
+title: 如何：使用筛选器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 2c8c5519d31d1d57c1c568599964b97043f806a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-filters"></a>如何：使用筛选器
 本主题概述创建使用多个筛选器的路由配置所需执行的基本步骤。 在本示例中，消息将路由到两个计算器服务实现，即 regularCalc 和 roundingCalc。 这两个实现都支持相同的运算；但其中一个服务在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用服务的舍入版本；如果未表示任何服务首选项，则消息将在这两个服务间执行负载平衡。 这两个服务公开的运算包括：  
@@ -145,7 +131,7 @@ ms.lasthandoff: 03/19/2018
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     如果"http://localhost/routingservice/router/rounding/"开头的地址处收到一条消息，则此筛选器的计算结果为**true**。 由于此配置使用的基址是"http://localhost/routingservice/router"，并且为 roundingEndpoint 指定的地址是"rounding/calculator"，用于与此终结点进行通信的完整地址是"http://localhost/routingservice/路由器/rounding/calculator"，它与此筛选器相匹配。  
+     如果开头的地址处收到一条消息"http://localhost/routingservice/router/rounding/"然后此筛选器的计算结果为**true**。 因为此配置使用的基址是"http://localhost/routingservice/router"，并且为 roundingEndpoint"rounding/calculator"指定地址，用于与此终结点进行通信的完整地址是"http://localhost/routingservice/router/rounding/calculator"，它匹配此筛选器。  
   
     > [!NOTE]
     >  PrefixEndpointAddress 筛选器在执行匹配时不会计算主机名，因为可以使用多种主机名形式引用单个主机，而所有这些主机名可能都是从客户端应用程序引用主机的有效方式。 例如，下面的所有主机名可能引用同一主机：  
@@ -338,5 +324,5 @@ ms.lasthandoff: 03/19/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -1,30 +1,18 @@
 ---
-title: "设置说明"
-ms.custom: 
+title: 设置说明
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 14163ecca60e516f7e88d4e453e8f4addd960340
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 20f6662289384b1a094c34c0c0c986b754a44ad2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-up-instructions"></a>设置说明
-该组主题描述如何设置运行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所需的服务。  
+这组主题描述如何设置运行 Windows Communication Foundation (WCF) 服务所需的服务。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
@@ -55,4 +43,4 @@ ms.lasthandoff: 01/19/2018
  概述安装消息队列的步骤。  
   
 ## <a name="related-sections"></a>相关章节  
- [故障排除提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

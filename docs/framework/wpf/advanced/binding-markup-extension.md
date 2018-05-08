@@ -1,31 +1,17 @@
 ---
-title: "绑定标记扩展"
-ms.custom: 
+title: 绑定标记扩展
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Binding
 helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fc860f52f8fde2aed3cae224c05bbcf08b864d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-markup-extension"></a>绑定标记扩展
 将遵从输入属性值，将数据绑定值，创建一个中间表达式对象，并解释适用于元素以及运行时在其绑定的数据上下文。  
@@ -125,7 +111,7 @@ ms.lasthandoff: 12/22/2017
  本主题未涉及描述在基本级别的数据绑定。 请参阅[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Data.MultiBinding>和<xref:System.Windows.Data.PriorityBinding>不支持[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]扩展语法。 应改用属性元素。 请参阅参考主题<xref:System.Windows.Data.MultiBinding>和<xref:System.Windows.Data.PriorityBinding>。  
+>  <xref:System.Windows.Data.MultiBinding> 和<xref:System.Windows.Data.PriorityBinding>不支持[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]扩展语法。 应改用属性元素。 请参阅参考主题<xref:System.Windows.Data.MultiBinding>和<xref:System.Windows.Data.PriorityBinding>。  
   
  Xaml 的布尔值是区分大小写。 例如，您可以指定`{Binding NotifyOnValidationError=true}`或`{Binding NotifyOnValidationError=True}`。  
   
@@ -133,7 +119,7 @@ ms.lasthandoff: 12/22/2017
   
  `Binding` 是标记扩展。 当要求转义特性值应为非文本值或处理程序名称，并且要求是更具有全局性比在某些类型或属性上特性化的类型转换器，通常会实现标记扩展。 XAML 使用中的所有标记扩展`{`和`}`其属性的语法，这是依据 XAML 处理器识别标记扩展必须处理字符串内容的约定中的字符。 有关详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
- `Binding`是中的异常的标记扩展<xref:System.Windows.Data.Binding>实现 WPF 的 XAML 实现的扩展功能的类还实现多种其他方法和不与 XAML 相关的属性。 其他成员旨在让<xref:System.Windows.Data.Binding>可以解决除了充当 XAML 标记扩展的许多数据绑定方案的更多且独立的类。  
+ `Binding` 是中的异常的标记扩展<xref:System.Windows.Data.Binding>实现 WPF 的 XAML 实现的扩展功能的类还实现多种其他方法和不与 XAML 相关的属性。 其他成员旨在让<xref:System.Windows.Data.Binding>可以解决除了充当 XAML 标记扩展的许多数据绑定方案的更多且独立的类。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.Binding>  

@@ -1,13 +1,6 @@
 ---
-title: "Windows 窗体安全"
-ms.custom: 
+title: Windows 窗体安全
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - designer access security [Windows Forms]
 - permissions [Windows Forms], Windows Forms
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bd9b87fdfa54a6f9bf53e4fa897106257b4c625
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3dc4397319d42760a1886a96377a949da6ae63be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-security"></a>Windows 窗体安全
 Windows 窗体功能是基于代码的 （安全级别设置为代码，无论运行代码的用户） 的安全模型。 这是除了可能已在您的计算机系统中的任何安全架构。 其中可能包括浏览器 （如基于区域的安全在 Internet Explorer 中可用） 或操作系统 （例如 Windows NT 的凭据基于安全性） 中。  

@@ -1,24 +1,12 @@
 ---
-title: "XAML 的集合类型"
-ms.custom: 
+title: XAML 的集合类型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58f8e7c6-9a41-4f25-8551-c042f1315baa
-caps.latest.revision: "2"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b67fec476c95d82b769494d53e50550cad0c719b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5605c97b13503e18e2f698f2a19f715663052b08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>XAML 的集合类型
 本主题介绍如何定义旨在支持一个集合，并以用于实例化作为元素的父对象元素或属性元素的子级的收集项的支持 XAML 语法的类型的属性。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  <xref:System.Collections.IDictionary>接口指示 dicionary 集合。  
   
-3.  <xref:System.Array>表示一个数组，以及数组支持<xref:System.Collections.IList>方法。  
+3.  <xref:System.Array> 表示一个数组，以及数组支持<xref:System.Collections.IList>方法。  
   
  在每个这些集合概念，.NET Framework XAML 服务 XAML 处理器需要调用`Add`集合属性的类型的特定实例上的方法。 或者，在序列化方案中，XAML 处理器生成的每个项列表、 字典或基于每个集合的特定概念"项"数组中找到的离散 XAML 类型实例。 这些是： <xref:System.Collections.IList.Item%2A>;<xref:System.Collections.IDictionary.Item%2A>; 显式<xref:System.Array.System%23Collections%23IList%23Item%2A>为<xref:System.Array>。  
   
@@ -49,8 +37,8 @@ ms.lasthandoff: 12/22/2017
 ## <a name="xaml-type-system-support-and-collections"></a>XAML 类型系统支持和集合  
  超出的分析 XAML 和填充或序列化集合的属性的基本机制，在.NET Framework XAML 服务中实现的 XAML 类型系统包括了一些设计功能，适用于 XAML 中的集合。  
   
-1.  <xref:System.Xaml.XamlType.IsCollection%2A>如果 XAML 类型由提供 XAML 集合支持的类型，，返回 true。  
+1.  <xref:System.Xaml.XamlType.IsCollection%2A> 如果 XAML 类型由提供 XAML 集合支持的类型，，返回 true。  
   
-2.  <xref:System.Xaml.XamlType.IsDictionary%2A>和<xref:System.Xaml.XamlType.IsArray%2A>进一步可以识别的 XAML 类型支持哪些集合模式。 自定义 xaml 处理器基于.NET Framework XAML 服务和 XAML 类型系统，但不是基于现有<xref:System.Xaml.XamlWriter>实现中，了解所使用的集合模式可能有必要才能知道要为调用的方法集合处理。  
+2.  <xref:System.Xaml.XamlType.IsDictionary%2A> 和<xref:System.Xaml.XamlType.IsArray%2A>进一步可以识别的 XAML 类型支持哪些集合模式。 自定义 xaml 处理器基于.NET Framework XAML 服务和 XAML 类型系统，但不是基于现有<xref:System.Xaml.XamlWriter>实现中，了解所使用的集合模式可能有必要才能知道要为调用的方法集合处理。  
   
 3.  每个以前的属性值可能受的重写<xref:System.Xaml.XamlType.LookupCollectionKind%2A>XAML 类型上。

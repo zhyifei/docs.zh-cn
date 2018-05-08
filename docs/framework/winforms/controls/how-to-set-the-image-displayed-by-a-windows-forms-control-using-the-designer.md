@@ -1,13 +1,6 @@
 ---
-title: "如何：使用设计器设置 Windows 窗体控件显示的图像"
-ms.custom: 
+title: 如何：使用设计器设置 Windows 窗体控件显示的图像
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Button control [Windows Forms], images
 - Windows Forms controls, images
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a31209968957a6d1890cae66c17b74769bd05dc9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b3625510028d5941173848849ab915f56260577a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体控件显示的图像
 多个 Windows 窗体控件可以显示图像。 图像可以是说明目的的控件，如按钮表示上的磁盘图标的图标**保存**命令。 或者，该图标可以为以提供所需的外观的控件的背景图像。  
@@ -37,7 +25,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  在**属性**窗口中，选择**映像**或**BackgroundImage**属性的控件，然后单击省略号按钮 （  
   
-     ![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")  
   
      ) 以显示**选择资源**对话框。  
   

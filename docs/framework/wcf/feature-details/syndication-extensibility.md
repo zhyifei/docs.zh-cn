@@ -1,24 +1,12 @@
 ---
-title: "联合扩展性"
-ms.custom: 
+title: 联合扩展性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8182aee9d8a526d995ab1266e5c654f29f4af3d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syndication-extensibility"></a>联合扩展性
 联合 API 是专为提供不限制格式的编程模型而设计的，该编程模型允许将联合内容以各种格式写入到网络中。 抽象数据模型由以下类组成：  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  这些类严格地映射到 Atom 1.0 规范中定义的构造，但有一些名称会不相同。  
   
- 联合协议的一个主要功能是扩展性。 Atom 1.0 和 RSS 2.0 均向规范中未定义的联合源中添加属性和元素。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 联合编程模型提供了以下使用自定义属性和扩展、松散类型访问以及派生新类的方式。  
+ 联合协议的一个主要功能是扩展性。 Atom 1.0 和 RSS 2.0 均向规范中未定义的联合源中添加属性和元素。 Windows Communication Foundation (WCF) 联合编程模型提供了以下使用自定义属性和扩展、 松散类型访问以及派生新类的方式。  
   
 ## <a name="loosely-typed-access"></a>松散类型访问  
  通过派生新类添加扩展的方式需要编写附加代码。 另一种选择是以松散类型方式访问扩展。 联合抽象数据模型中定义的所有类型都包含名为 `AttributeExtensions` 和 `ElementExtensions` 的属性（但有一个例外，<xref:System.ServiceModel.Syndication.SyndicationContent> 具有 `AttributeExtensions` 属性，而不具有 `ElementExtensions` 属性）。 这些属性是未经 `TryParseAttribute` 和 `TryParseElement` 方法分别处理的扩展的集合。 通过对 <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType>、`ElementExtensions`、<xref:System.ServiceModel.Syndication.SyndicationFeed>、<xref:System.ServiceModel.Syndication.SyndicationItem> 和 <xref:System.ServiceModel.Syndication.SyndicationLink> 的 <xref:System.ServiceModel.Syndication.SyndicationPerson> 属性调用 <xref:System.ServiceModel.Syndication.SyndicationCategory>，可以访问这些未处理的扩展。 这组方法将使用指定的名称和命名空间查找所有扩展，将其分别反序列化到 `TExtension` 的实例中，并将其作为 `TExtension` 对象的集合返回。  

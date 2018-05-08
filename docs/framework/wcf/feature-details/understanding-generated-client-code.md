@@ -1,41 +1,27 @@
 ---
 title: 了解生成的客户端代码
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cd3e7f5ac8f129e29ed080cbf510dfe106edfb7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8a28b52d786793308d8609704b564b75f23d95d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-generated-client-code"></a>了解生成的客户端代码
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 可生成用于生成客户端应用程序的客户端代码和客户端应用程序配置文件。 本主题提供了有关标准服务协定方案的生成代码示例的教程。 有关生成使用生成的代码的客户端应用程序的详细信息，请参阅[WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)。  
   
 ## <a name="overview"></a>概述  
- 如果你使用 Visual Studio 生成[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]你的项目的客户端类型，你通常不需要检查生成的客户端代码。 如果您并未使用为您执行相同服务的开发环境，您可以使用 Svcutil.exe 之类的工具来生成客户端代码，然后使用该代码开发客户端应用程序。  
+ 如果你使用 Visual Studio 为你的项目生成 Windows Communication Foundation (WCF) 客户端类型，通常不需要检查生成的客户端代码。 如果您并未使用为您执行相同服务的开发环境，您可以使用 Svcutil.exe 之类的工具来生成客户端代码，然后使用该代码开发客户端应用程序。  
   
  由于 Svcutil.exe 具有许多可以修改生成的类型信息的选项，因此本主题并不对所有方案进行讨论。 但是，以下标准任务涉及查找生成的代码：  
   
 -   标识服务协定接口。  
   
--   标识 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端类。  
+-   确定 WCF 客户端类。  
   
 -   标识数据类型。  
   
@@ -52,14 +38,14 @@ ms.lasthandoff: 04/30/2018
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- 您可以使用生成的服务协定接口和 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 类一起创建 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道对象，使用该通道对象可调用服务操作。 有关详细信息，请参阅[如何： 使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)。  
+ 你可以使用生成的服务协定接口和<xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>类，以创建用来调用服务操作的 WCF 通道对象。 有关详细信息，请参阅[如何： 使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)。  
   
 ### <a name="finding-wcf-client-classes"></a>查找 WCF 客户端类  
- 若要查找实现您要使用的服务协定的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端类，请搜索 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 的扩展名，其中类型参数为您先前查找到的且扩展该接口的服务协定接口。 下面的代码示例演示类型为 <xref:System.ServiceModel.ClientBase%601> 的 `ISampleService`类。  
+ 若要查找实现你想要使用的服务协定的 WCF 客户端类，请搜索的扩展名<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>，其中类型参数是服务协定接口，您先前查找到的且扩展该接口。 下面的代码示例演示类型为 <xref:System.ServiceModel.ClientBase%601> 的 `ISampleService`类。  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- 您可以使用此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端类，方法是创建它的一个新实例并调用它实现的方法。 这些方法调用服务操作，可设计和配置该服务操作以进行交互。 有关详细信息，请参阅[WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)。  
+ 通过创建的新实例并调用它实现的方法，可以使用此 WCF 客户端类。 这些方法调用服务操作，可设计和配置该服务操作以进行交互。 有关详细信息，请参阅[WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)。  
   
 > [!NOTE]
 >  SvcUtil.exe 在生成 WCF 客户端类时会将一个 <xref:System.Diagnostics.DebuggerStepThroughAttribute> 添加到该客户端类，以防止调试器逐步调试该 WCF 客户端类。  

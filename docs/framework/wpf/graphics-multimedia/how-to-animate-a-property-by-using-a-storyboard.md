@@ -1,13 +1,6 @@
 ---
-title: "如何：使用演示图板对属性进行动画处理"
-ms.custom: 
+title: 如何：使用演示图板对属性进行动画处理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - animation [WPF], Storyboards
 - Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba6cb3483c983ddbcd3fac2281fe40aef31301b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e67fb07a05d474999515a678fd72ac6b96953c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>如何：使用演示图板对属性进行动画处理
 此示例演示如何使用<xref:System.Windows.Media.Animation.Storyboard>属性进行动画处理。 若要使用属性进行动画处理<xref:System.Windows.Media.Animation.Storyboard>，创建你想要进行动画处理，并且还创建每个属性动画<xref:System.Windows.Media.Animation.Storyboard>以包含动画。  

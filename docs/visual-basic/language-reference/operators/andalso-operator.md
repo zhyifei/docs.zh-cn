@@ -1,11 +1,6 @@
 ---
-title: "AndAlso 运算符 (Visual Basic)"
+title: AndAlso 运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AndAlso
 - AndAlso
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f92f4ed226c2923c3d95a7b80db3872b7ac33dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 549d14cc35d285ac2e4a02a37dd201cc669c5627
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 运算符 (Visual Basic)
 执行短路逻辑与对两个表达式。  
@@ -38,9 +30,9 @@ result = expression1 AndAlso expression2
   
 |术语|定义|  
 |---|---|  
-|`result`|必需。 任何 `Boolean` 表达式。 结果是`Boolean`比较的两个表达式的结果。|  
-|`expression1`|必需。 任何 `Boolean` 表达式。|  
-|`expression2`|必需。 任何 `Boolean` 表达式。|  
+|`result`|必须的。 任何 `Boolean` 表达式。 结果是`Boolean`比较的两个表达式的结果。|  
+|`expression1`|必须的。 任何 `Boolean` 表达式。|  
+|`expression2`|必须的。 任何 `Boolean` 表达式。|  
   
 ## <a name="remarks"></a>备注  
  逻辑操作称为*短路*如果编译的代码可以绕过根据另一个表达式的结果的一个表达式的计算。 如果计算的第一个表达式的结果确定该操作的最终结果，则不需要计算第二个表达式，因为它不能更改的最终结果。 如果跳过的表达式是复杂，或如果它涉及过程调用，则短路可以提高性能。  
@@ -71,7 +63,7 @@ result = expression1 AndAlso expression2
   
  [!code-vb[VbVbalrOperators#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [逻辑/按位运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
  [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  

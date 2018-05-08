@@ -1,27 +1,15 @@
 ---
-title: "Windows 窗体 DataGridView 控件中的基本格式设置和样式设置"
-ms.custom: 
+title: Windows 窗体 DataGridView 控件中的基本格式设置和样式设置
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], formatting and styling
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fa5c240adaaf6512cfbd6b7bd0796bd0983a530
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d38620c321fb12b9f489fd086e222b7780337ab3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的基本格式设置和样式设置
 `DataGridView`控件，可以轻松定义单元格的基本外观和单元格的值的显示格式。 你可以定义外观和格式设置样式各个单元格、 行和特定列中的单元格或控件中的所有单元格通过设置的属性`DataGridViewCellStyle`通过各种访问的对象`DataGridView`控件属性。 此外，你可以修改这些动态基于通过处理的单元格的值等因素的样式`CellFormatting`事件。  

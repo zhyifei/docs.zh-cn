@@ -1,33 +1,21 @@
 ---
-title: "StatusBar 控件（Windows 窗体）"
-ms.custom: 
+title: StatusBar 控件（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - StatusBar control [Windows Forms]
 - status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 945d9a658dd3d75dd0edb9f4eaca78334ee4d652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 66ec834778bd0eeacea642250c5430be8929b732
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statusbar-control-windows-forms"></a>StatusBar 控件（Windows 窗体）
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStripStatusLabel> 控件取代了 <xref:System.Windows.Forms.StatusBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.StatusBar> 控件以实现向后兼容并供将来使用。  
   
- Windows 窗体 <xref:System.Windows.Forms.StatusBar> 控件在窗体中用作区域，通常显示在窗口底部，应用程序可在此显示各种状态信息。 <xref:System.Windows.Forms.StatusBar>控件可以具有在其上显示的图标来指示状态或一系列表示正在进程; 在动画中的图标的状态栏面板例如，Microsoft Word，该值指示文档正在保存。  
+ Windows 窗体 <xref:System.Windows.Forms.StatusBar> 控件在窗体中用作区域，通常显示在窗口底部，应用程序可在此显示各种状态信息。 <xref:System.Windows.Forms.StatusBar> 控件可以具有在其上显示的图标来指示状态或一系列表示正在进程; 在动画中的图标的状态栏面板例如，Microsoft Word，该值指示文档正在保存。  
   
 ## <a name="in-this-section"></a>本节内容  
  [StatusBar 控件概述](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)  

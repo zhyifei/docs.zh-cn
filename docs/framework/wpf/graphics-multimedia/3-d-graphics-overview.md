@@ -1,13 +1,6 @@
 ---
-title: "三维图形概述"
-ms.custom: 
+title: 三维图形概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58b756c24c1ca7e3f5b6b3f13c314363daf35443
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d44f27ccd82d535436be03092c3864e3155d1d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="3-d-graphics-overview"></a>三维图形概述
 <a name="introduction"></a>通过 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 功能，开发人员可以使用标记和程序代码绘制和转换 3D 图形，并对其进行动画处理。 开发人员可以合并 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 和 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 图形以创建丰富的控件、提供复杂的数据图解，或者增强用户对应用程序界面的体验。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 支持并非旨在提供功能齐全的游戏开发平台。 本主题概述了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 图形系统中的 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 功能。  
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="threed_in_2d"></a>   
 ## <a name="3-d-in-a-2-d-container"></a>2D 容器中的 3D  
- [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]图形中的内容[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]封装在一个元素， <xref:System.Windows.Controls.Viewport3D>，该元素可以参与二维元素结构。 图形系统将<xref:System.Windows.Controls.Viewport3D>作为一个二维的可见元素，如中的许多其他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 <xref:System.Windows.Controls.Viewport3D>为窗口函数-视区-三维场景。 更准确地说，它是 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 场景所投影到的图面。  
+ [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 图形中的内容[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]封装在一个元素， <xref:System.Windows.Controls.Viewport3D>，该元素可以参与二维元素结构。 图形系统将<xref:System.Windows.Controls.Viewport3D>作为一个二维的可见元素，如中的许多其他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 <xref:System.Windows.Controls.Viewport3D> 为窗口函数-视区-三维场景。 更准确地说，它是 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 场景所投影到的图面。  
   
  中的传统[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]应用程序，使用<xref:System.Windows.Controls.Viewport3D>就像另一个容器元素，如网格或画布。  尽管可以使用<xref:System.Windows.Controls.Viewport3D>与其他[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]你在相同的场景关系图中绘制对象，不能内部渗透[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]和[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]对象内<xref:System.Windows.Controls.Viewport3D>。  本主题将重点介绍如何绘制[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]内的图形<xref:System.Windows.Controls.Viewport3D>。  
   
@@ -51,12 +39,12 @@ ms.lasthandoff: 12/22/2017
   
  了解 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 场景如何在 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 图面上表示的另一种方法就是将场景描述为到观察表面上的投影。 <xref:System.Windows.Media.Media3D.ProjectionCamera>允许您指定不同的投影和其属性以更改观察者如何查看[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]模型。 A<xref:System.Windows.Media.Media3D.PerspectiveCamera>指定 foreshortens 场景的投影。  换而言之，<xref:System.Windows.Media.Media3D.PerspectiveCamera>提供消失点透视。  可以指定照相机在场景坐标系中的位置、照相机的方向和视野以及用来定义场景中“向上”方向的矢量。 下图说明了<xref:System.Windows.Media.Media3D.PerspectiveCamera>的投影。  
   
- <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A>和<xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A>属性<xref:System.Windows.Media.Media3D.ProjectionCamera>限制的照相机的投影的范围。 由于照相机可以位于场景中的任何位置，因此照相机实际上可能会位于模型内部或者紧靠模型，这使正确区分对象变得很困难。  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A>使用此选项可以指定从相机超过该值将不绘制对象的最小距离。  相反，<xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A>可指定超出该不将绘制对象，这样可以确保不会在场景中包含对象太远是可以识别的照相机的距离。  
+ <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A>和<xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A>属性<xref:System.Windows.Media.Media3D.ProjectionCamera>限制的照相机的投影的范围。 由于照相机可以位于场景中的任何位置，因此照相机实际上可能会位于模型内部或者紧靠模型，这使正确区分对象变得很困难。  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> 使用此选项可以指定从相机超过该值将不绘制对象的最小距离。  相反，<xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A>可指定超出该不将绘制对象，这样可以确保不会在场景中包含对象太远是可以识别的照相机的距离。  
   
  ![照相机设置](../../../../docs/framework/wpf/graphics-multimedia/media/coordsystem-6.png "CoordSystem 6")  
 照相机位置  
   
- <xref:System.Windows.Media.Media3D.OrthographicCamera>指定的正交投影[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]模型到[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]可视化图面。 与其他照相机一样，它指定位置、观察方向和“向上”方向。 与不同<xref:System.Windows.Media.Media3D.PerspectiveCamera>，但<xref:System.Windows.Media.Media3D.OrthographicCamera>描述不包含透视收缩投影。 换而言之，<xref:System.Windows.Media.Media3D.OrthographicCamera>说明边是并行的而不是一个在相机上的点的边满足这种查看。 下图显示相同的模型，如使用查看<xref:System.Windows.Media.Media3D.PerspectiveCamera>和<xref:System.Windows.Media.Media3D.OrthographicCamera>。  
+ <xref:System.Windows.Media.Media3D.OrthographicCamera> 指定的正交投影[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]模型到[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]可视化图面。 与其他照相机一样，它指定位置、观察方向和“向上”方向。 与不同<xref:System.Windows.Media.Media3D.PerspectiveCamera>，但<xref:System.Windows.Media.Media3D.OrthographicCamera>描述不包含透视收缩投影。 换而言之，<xref:System.Windows.Media.Media3D.OrthographicCamera>说明边是并行的而不是一个在相机上的点的边满足这种查看。 下图显示相同的模型，如使用查看<xref:System.Windows.Media.Media3D.PerspectiveCamera>和<xref:System.Windows.Media.Media3D.OrthographicCamera>。  
   
  ![正射透视投影](../../../../docs/framework/wpf/graphics-multimedia/media/camera-projections4.png "Camera_projections4")  
 透视投影和正投影  
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 <a name="models_meshes"></a>   
 ## <a name="model-and-mesh-primitives"></a>模型和网格基元  
   
- <xref:System.Windows.Media.Media3D.Model3D>是表示泛型的抽象基类[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]对象。 若要生成[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]场景，您需要某些对象，若要查看，而且构成场景关系图的对象派生自<xref:System.Windows.Media.Media3D.Model3D>。 目前，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支持建模与几何图形<xref:System.Windows.Media.Media3D.GeometryModel3D>。 <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>此模型的属性采用网格基元。  
+ <xref:System.Windows.Media.Media3D.Model3D> 是表示泛型的抽象基类[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]对象。 若要生成[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]场景，您需要某些对象，若要查看，而且构成场景关系图的对象派生自<xref:System.Windows.Media.Media3D.Model3D>。 目前，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支持建模与几何图形<xref:System.Windows.Media.Media3D.GeometryModel3D>。 <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>此模型的属性采用网格基元。  
   
  若要生成模型，请首先生成一个基元或网格。 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 基元是一系列构成单个 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 实体的顶点。 大多数 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 系统都提供在最简单的闭合图（由三个顶点定义的三角形）上建模的基元。  由于三角形的三个点在一个平面上，因此可以继续添加三角形，以便对网格这样较为复杂的形状建模。  
   
@@ -81,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
  你可以继续通过指定的值定义模型<xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>和<xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>属性。  为了呈现模型的图面，图形系统需要有关曲面在任何给定三角形上的朝向信息。 图形系统使用此信息来针对该模型进行照明计算：正对光源的图面比偏离光源的图面显得更亮。 尽管 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以使用位置坐标来确定默认的法矢量，但是你还可以指定不同的法矢量来近似计算曲面的外观。  
   
- <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>属性指定的集合<xref:System.Windows.Point>告诉图形系统如何确定如何将纹理绘制到网格的顶点的坐标映射的 s。 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>指定为介于 0 与 1，（含) 之间的值。  与<xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>图形系统可以计算属性，默认纹理坐标，但你可以选择设置不同的纹理坐标，包括对部分重复模式，例如对纹理的映射进行控制。 有关纹理坐标的详细信息，可在后续主题或 Managed Direct3D SDK 中找到。  
+ <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>属性指定的集合<xref:System.Windows.Point>告诉图形系统如何确定如何将纹理绘制到网格的顶点的坐标映射的 s。 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> 指定为介于 0 与 1，（含) 之间的值。  与<xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>图形系统可以计算属性，默认纹理坐标，但你可以选择设置不同的纹理坐标，包括对部分重复模式，例如对纹理的映射进行控制。 有关纹理坐标的详细信息，可在后续主题或 Managed Direct3D SDK 中找到。  
   
  下面的示例演示如何在过程代码中创建立方体模型的一面。 请注意，可以将整个立方体绘制为单个 GeometryModel3D；此示例将该立方体面绘制为一个不同的模型，以便在以后向每个面应用不同的纹理。  
   
@@ -98,11 +86,11 @@ ms.lasthandoff: 12/22/2017
   
  若要定义的模型的面的特征[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.Media.Media3D.Material>抽象类。 Material 的具体子类用来确定模型图面的某些外观特征，每个子类还提供一个可以向其传递 SolidColorBrush、TileBrush 或 VisualBrush 的 Brush 属性。  
   
--   <xref:System.Windows.Media.Media3D.DiffuseMaterial>指定将向该模型应用画笔，就好像该模型已漫射照明。 使用 DiffuseMaterial 与直接针对 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 模型使用画笔非常相似；模型表面不反射光，就好像是自发光一样。  
+-   <xref:System.Windows.Media.Media3D.DiffuseMaterial> 指定将向该模型应用画笔，就好像该模型已漫射照明。 使用 DiffuseMaterial 与直接针对 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 模型使用画笔非常相似；模型表面不反射光，就好像是自发光一样。  
   
--   <xref:System.Windows.Media.Media3D.SpecularMaterial>指定将对模型应用画笔，就像模型的图面是硬或亮，能够反映突出显示。 您可以通过指定的值设置到的纹理将建议此反射质量或"增加亮点，"的程度<xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A>属性。  
+-   <xref:System.Windows.Media.Media3D.SpecularMaterial> 指定将对模型应用画笔，就像模型的图面是硬或亮，能够反映突出显示。 您可以通过指定的值设置到的纹理将建议此反射质量或"增加亮点，"的程度<xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A>属性。  
   
--   <xref:System.Windows.Media.Media3D.EmissiveMaterial>使用此选项可以指定将应用纹理，就像模型所发出的相等的画笔的颜色的光一样。 这不会使模型成为光源；但是它参与阴影设置的方式将不同于用 DiffuseMaterial 或 SpecularMaterial 设置纹理时的情况。  
+-   <xref:System.Windows.Media.Media3D.EmissiveMaterial> 使用此选项可以指定将应用纹理，就像模型所发出的相等的画笔的颜色的光一样。 这不会使模型成为光源；但是它参与阴影设置的方式将不同于用 DiffuseMaterial 或 SpecularMaterial 设置纹理时的情况。  
   
  为了提高性能的背面<xref:System.Windows.Media.Media3D.GeometryModel3D>（这些不视图，因为它们是相机的模型的另一侧） 剔除从场景。  若要指定<xref:System.Windows.Media.Media3D.Material>若要将应用于背面的类似这样一个平面的模型，将设置模型的<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>属性。  
   
@@ -127,7 +115,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Media.Media3D.DirectionalLight>： 像远距离的光源那样照亮。  方向性光源具有<xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A>指定为 Vector3D，但没有指定的位置。  
   
--   <xref:System.Windows.Media.Media3D.PointLight>： 像附近光源那样照亮。 PointLights 具有一个位置并从该位置投射光。 场景中的对象根据对象相对于光源的位置和距离被照亮。 <xref:System.Windows.Media.Media3D.PointLightBase>公开<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>属性，确定超过该模型将不会由光源照亮的距离。 PointLight 还公开了多个衰减属性，这些属性确定光源的亮度如何随距离的增加而减小。 可以为光源的衰减指定恒定、线性或二次内插算法。  
+-   <xref:System.Windows.Media.Media3D.PointLight>： 像附近光源那样照亮。 PointLights 具有一个位置并从该位置投射光。 场景中的对象根据对象相对于光源的位置和距离被照亮。 <xref:System.Windows.Media.Media3D.PointLightBase> 公开<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>属性，确定超过该模型将不会由光源照亮的距离。 PointLight 还公开了多个衰减属性，这些属性确定光源的亮度如何随距离的增加而减小。 可以为光源的衰减指定恒定、线性或二次内插算法。  
   
 -   <xref:System.Windows.Media.Media3D.SpotLight>： 继承自<xref:System.Windows.Media.Media3D.PointLight>。 Spotlights 的照亮方式与 PointLight 类似，但是它既具有位置又具有方向。 这些项目设置的锥形区域采用浅色<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A>和<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>以度为单位指定的属性。  
   

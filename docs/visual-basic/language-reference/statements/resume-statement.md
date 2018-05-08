@@ -1,11 +1,6 @@
 ---
-title: "Resume 语句"
+title: Resume 语句
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Resume
 - vb.ResumeNext
@@ -20,14 +15,11 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3cb4334f302c07c81b6b8a7d0626be08cc69b1ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1d03f631893be51529f29af824de0d684bf43804
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resume-statement"></a>Resume 语句
 错误处理例程完毕后恢复执行。  
@@ -42,7 +34,7 @@ Resume [ Next | line ]
   
 ## <a name="parts"></a>部件  
  `Resume`  
- 必需。 如果错误发生的错误处理程序相同的过程中，将导致错误的语句处继续执行。 如果在调用过程中出错，请在上一次调用不包含错误处理例程的过程的语句处继续执行。  
+ 必须的。 如果错误发生的错误处理程序相同的过程中，将导致错误的语句处继续执行。 如果在调用过程中出错，请在上一次调用不包含错误处理例程的过程的语句处继续执行。  
   
  `Next`  
  可选。 如果在错误处理程序相同的过程中出错，请将紧跟导致错误的语句的语句处继续执行。 如果在调用过程中出错，请紧随上一次调用不包含错误处理例程的过程的语句处继续执行 (或`On Error Resume Next`语句)。  
@@ -69,7 +61,7 @@ Resume [ Next | line ]
   
  **程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
  [Error 语句](../../../visual-basic/language-reference/statements/error-statement.md)  
  [On Error 语句](../../../visual-basic/language-reference/statements/on-error-statement.md)

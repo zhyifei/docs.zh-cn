@@ -1,34 +1,22 @@
 ---
 title: 如何：审核 Windows Communication Foundation 安全事件
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 72eff4af38636577dc9e3b35af1f1155d5ed892c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ad1cf3dd598a2ec76302c48ae36b45fd0310d69d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>如何：审核 Windows Communication Foundation 安全事件
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允许您将安全事件记录到 Windows 事件日志中，可以使用 Windows 事件查看器来查看该事件日志。 本主题说明如何设置应用程序以使其记录安全事件。 有关详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]审核，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
+Windows Communication Foundation (WCF)，可安全事件记录到 Windows 事件日志中，可以使用 Windows 事件查看器查看。 本主题说明如何设置应用程序以使其记录安全事件。 有关 WCF 审核的详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
   
 ### <a name="to-audit-security-events-in-code"></a>通过代码审核安全事件  
   

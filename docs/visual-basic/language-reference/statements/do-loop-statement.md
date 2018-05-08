@@ -1,17 +1,12 @@
 ---
-title: "Do...Loop 语句 (Visual Basic)"
+title: Do...Loop 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Do
 - vb.Loop
 - vb.Until
 helpviewer_keywords:
-- "conditional statements [Visual Basic], Do�Loop"
+- conditional statements [Visual Basic], Do�Loop
 - while statement [Visual Basic], Do...Loop
 - execution [Visual Basic], conditional
 - Do loops
@@ -20,19 +15,16 @@ helpviewer_keywords:
 - instructions, repeating
 - Do statement [Visual Basic]
 - Exit statement [Visual Basic], in Do...Loop statements
-- "loop structures [Visual Basic], Do�Loop statements"
+- loop structures [Visual Basic], Do�Loop statements
 - do-while statements [Visual Basic]
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 79d25dce963f383a84b56ce2c9b600fc2d5a7937
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e12cdc1ae405b877d4d27d1947c98dcb51938ba7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop 语句 (Visual Basic)
 重复时的语句块`Boolean`条件是`True`或直到条件变为`True`。  
@@ -61,14 +53,14 @@ Loop { While | Until } condition
   
 |术语|定义|  
 |---|---|  
-|`Do`|必需。 启动的定义`Do`循环。|  
+|`Do`|必须的。 启动的定义`Do`循环。|  
 |`While`|必选项（除非使用了 `Until`）。 重复循环，直到`condition`是`False`。|  
 |`Until`|必选项（除非使用了 `While`）。 重复循环，直到`condition`是`True`。|  
-|`condition`|可选。 `Boolean`表达式。 如果`condition`是`Nothing`，Visual Basic 会将其视为`False`。|  
+|`condition`|可选。 `Boolean` 表达式。 如果`condition`是`Nothing`，Visual Basic 会将其视为`False`。|  
 |`statements`|可选。 一个或多个语句，它时，或直到，重复`condition`是`True`。|  
 |`Continue Do`|可选。 将控制转移到的下一个迭代`Do`循环。|  
 |`Exit Do`|可选。 将扩展的控制转移`Do`循环。|  
-|`Loop`|必需。 终止的定义`Do`循环。|  
+|`Loop`|必须的。 终止的定义`Do`循环。|  
   
 ## <a name="remarks"></a>备注  
  使用`Do...Loop`结构，当你想要重复语句无限的次数，直到满足条件集。 如果你想要重复执行语句，一定的时间，[为...下一条语句](../../../visual-basic/language-reference/statements/for-next-statement.md)通常是更好的选择。  
@@ -85,9 +77,9 @@ Loop { While | Until } condition
 >  `Do...Loop`结构提供更大的灵活性比[时...结束 While 语句](../../../visual-basic/language-reference/statements/while-end-while-statement.md)因为它允许用户决定是否要结束循环时`condition`停止`True`或当它首先变为`True`。 它还可用于测试`condition`的开头或末尾循环。  
   
 ## <a name="exit-do"></a>退出执行  
- [退出执行](../../../visual-basic/language-reference/statements/exit-statement.md)语句可以提供一种替代方式退出`Do…Loop`。 `Exit Do`立即将控制权转交给后面的语句`Loop`语句。  
+ [退出执行](../../../visual-basic/language-reference/statements/exit-statement.md)语句可以提供一种替代方式退出`Do…Loop`。 `Exit Do` 立即将控制权转交给后面的语句`Loop`语句。  
   
- `Exit Do`通常用于计算某个条件，例如，在之后`If...Then...Else`结构。 你可能想要退出循环，如果检测到的条件，使它不必要或不可能继续循环，如错误的值或终止请求。 一种用途`Exit Do`是测试的条件，可能会导致*无限循环*，即无法运行大型或甚至无限数量的次数的循环。 你可以使用`Exit Do`来退出循环。  
+ `Exit Do` 通常用于计算某个条件，例如，在之后`If...Then...Else`结构。 你可能想要退出循环，如果检测到的条件，使它不必要或不可能继续循环，如错误的值或终止请求。 一种用途`Exit Do`是测试的条件，可能会导致*无限循环*，即无法运行大型或甚至无限数量的次数的循环。 你可以使用`Exit Do`来退出循环。  
   
  可以包含任意数量的`Exit Do`中的任意位置语句`Do…Loop`。  
   
@@ -113,7 +105,7 @@ Loop { While | Until } condition
   
  [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_4.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [循环结构](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
  [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [Boolean 数据类型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  

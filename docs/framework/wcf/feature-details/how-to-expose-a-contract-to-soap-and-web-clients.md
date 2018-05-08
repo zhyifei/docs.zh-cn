@@ -1,30 +1,18 @@
 ---
-title: "如何：向 SOAP 和 Web 客户端公开协定"
-ms.custom: 
+title: 如何：向 SOAP 和 Web 客户端公开协定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f13ba797b0c0e5c8b0d1eef271baf62f920f199
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9a730fe94d1df8c887a2eaf20c1e338bd056ed5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>如何：向 SOAP 和 Web 客户端公开协定
-默认情况下，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使终结点只可用于 SOAP 客户端。 在[如何： 创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)，终结点可用于非 SOAP 客户端。 有时可能需要使相同的协定可以同时作为 Web 终结点和 SOAP 终结点使用。 本主题演示了如何实现此目的的示例。  
+默认情况下，Windows Communication Foundation (WCF) 使终结点仅供 SOAP 客户端。 在[如何： 创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)，终结点可用于非 SOAP 客户端。 有时可能需要使相同的协定可以同时作为 Web 终结点和 SOAP 终结点使用。 本主题演示了如何实现此目的的示例。  
   
 ### <a name="to-define-the-service-contract"></a>定义服务协定  
   
@@ -65,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>在 Internet Explorer 中调用映射到 GET 的服务操作  
   
-1.  打开 Internet Explorer 并键入"`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`"，然后按 enter 键。 该 URL 包含服务的基址 ("http://localhost:8000/")、终结点的相对地址 ("")、要调用的服务操作 ("EchoWithGet")、一个问号以及其后通过“and”符号 (&) 分隔的命名参数的列表。  
+1.  打开 Internet Explorer 并键入"`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`"，然后按 enter 键。 URL 包含服务的基址 ("http://localhost:8000/")，终结点的相对地址 ("")，调用 ("EchoWithGet") 和问号的服务操作后跟用与号分隔的命名参数的列表 (&)。  
   
 ### <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a>使用代码在 Web 终结点上调用服务操作  
   

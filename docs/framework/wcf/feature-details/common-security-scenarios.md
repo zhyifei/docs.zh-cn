@@ -1,28 +1,16 @@
 ---
-title: "常用安全方案"
-ms.custom: 
+title: 常用安全方案
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8881768d66e95ce1391ce1be1663bdc3107a347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fb51ea0624c4fa686e4e99ffb9c30decedfea10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-security-scenarios"></a>常用安全方案
 本节中的主题对众多可能的客户端和服务安全配置进行分类。 配置会随多种因素而变化。 例如，服务或客户端是否位于 Intranet 上，或者安全性是由 Windows 提供还是由传输（如 HTTPS）提供。  
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
  一个公共的、不安全的客户端和服务的示例。  
   
  [不安全的 Intranet 客户端和服务](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- 为了在安全私有网络上向 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序提供信息而开发的一项基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+ 基本的 Windows Communication Foundation (WCF) 服务开发到 WCF 应用程序安全的专用网络上提供的信息。  
   
  [使用基本身份验证的传输安全性](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  应用程序允许客户端使用自定义身份验证进行登录。  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  显示由证书保护的客户端和服务。  
   
  [匿名客户端的消息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- 显示由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息安全保护的客户端和服务。  
+ 显示客户端和服务保护的 WCF 消息安全性。  
   
  [用户名客户端的消息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  客户端是一个 Windows 窗体应用程序，允许客户端使用域用户名和密码登录。  

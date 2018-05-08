@@ -1,30 +1,20 @@
 ---
-title: "用户名客户端的消息安全"
-ms.custom: 
+title: 用户名客户端的消息安全
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: "15"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dfda34c6bf165ebcecfd6d9a3710e785586d6cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bda1bc18e2b5af1365c799c6f2be9d8d220e9ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-user-name-client"></a>用户名客户端的消息安全
-下面的示例演示了一个使用消息级安全进行保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务和客户端。 服务使用 X.509 证书进行身份验证。 客户端使用用户名和密码进行身份验证。  
+下图显示 Windows Communication Foundation (WCF) 服务和客户端使用消息级别安全保护。 服务使用 X.509 证书进行身份验证。 客户端使用用户名和密码进行身份验证。  
   
  有关示例应用程序，请参阅[消息安全用户名称](../../../../docs/framework/wcf/samples/message-security-user-name.md)。  
   
@@ -33,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 |特征|描述|  
 |--------------------|-----------------|  
 |安全模式|消息|  
-|互操作性|仅 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]|  
+|互操作性|Windows Communication Foundation (WCF) 仅|  
 |身份验证（服务器）|初始协商需要服务器身份验证|  
 |身份验证（客户端）|用户名/密码|  
 |完整性|是，使用共享安全上下文|  

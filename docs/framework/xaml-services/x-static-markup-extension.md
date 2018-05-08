@@ -1,13 +1,6 @@
 ---
-title: "x:Static 标记扩展"
-ms.custom: 
+title: x:Static 标记扩展
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - StaticExtension
 - xStatic
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-caps.latest.revision: "25"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 647bfed7b321a949090f6da047f9b8105d335101
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 980bf6a1bdb19afd5c8d3c798d31037ab8cd7086
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 标记扩展
 引用任何静态的按值代码实体中定义[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 遵守法规的方法。 引用的静态属性可用来提供 XAML 中的属性的值。  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
 |||  
 |-|-|  
-|`prefix`|可选。 指映射、 非默认 XAML 命名空间前缀。 `prefix`所示显式使用由于很少引用来自默认 XAML 命名空间的静态属性。 请参阅“备注”。|  
+|`prefix`|可选。 指映射、 非默认 XAML 命名空间前缀。 `prefix` 所示显式使用由于很少引用来自默认 XAML 命名空间的静态属性。 请参阅“备注”。|  
 |`typeName`|必须的。 定义的所需的静态成员的类型的名称。|  
 |`staticMemberName`|必须的。 所需的静态值成员 （常量、 静态属性、 字段或枚举值） 的名称。|  
   
@@ -68,9 +56,9 @@ ms.lasthandoff: 12/22/2017
   
  有两个还从技术上讲可能有其他 XAML 用法。 但是，这些用法并不常见，因为它们是冗长:  
   
- **对象元素语法：** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName``" .../>`  
+ **对象元素语法：** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName` `" .../>`  
   
- **属性具有显式成员属性的初始化字符串的语法：** `<` `object`  ``  `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName``}" .../>`  
+ **与初始化字符串的显式成员属性的特性语法：** `<` `object` `` `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName` `}" .../>`  
   
  在.NET Framework XAML 服务实现中，对此标记扩展的处理由定义<xref:System.Windows.Markup.StaticExtension>类。  
   

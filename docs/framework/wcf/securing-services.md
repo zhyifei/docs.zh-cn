@@ -1,33 +1,21 @@
 ---
 title: 保证服务的安全
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuration [WCF], securing services
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-caps.latest.revision: 28
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: ffc985d528bfdcdd9b62772a8a8ba61823c95e76
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6bdac5a65c51ff08cfa170c1a6e556c3532ee7c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-services"></a>保证服务的安全
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务的安全包含两项基本要求：传输安全和授权。 (第三个要求中, 所述的安全事件的审核[审核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)简言之，传输安全包括身份验证（验证服务和客户端的标识）、保密性（消息加密）和完整性（进行数字签名以检测是否存在篡改）。 授权是控制对资源的访问，例如仅允许特权用户读取文件。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的功能，可以很容易地实现这两项基本要求。  
+Windows Communication Foundation (WCF) 服务的安全包含两项基本要求： 传输安全和授权。 (第三个要求中, 所述的安全事件的审核[审核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)简言之，传输安全包括身份验证（验证服务和客户端的标识）、保密性（消息加密）和完整性（进行数字签名以检测是否存在篡改）。 授权是控制对资源的访问，例如仅允许特权用户读取文件。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的功能，可以很容易地实现这两项基本要求。  
   
  除<xref:System.ServiceModel.BasicHttpBinding>类 (或[ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)配置中的元素)，默认情况下，对所有预定义绑定启用传输安全。 本节中的主题包含两种基本方案：对 Internet 信息服务 (IIS) 上承载的 Intranet 服务实现传输安全和授权，以及对 IIS 上承载的服务实现传输安全和授权。  
   

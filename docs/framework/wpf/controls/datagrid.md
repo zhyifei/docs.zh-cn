@@ -1,13 +1,6 @@
 ---
 title: DataGrid
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid column types [WPF]
 - DataGrid scenarios [WPF]
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: daea7d382d64e768c9ec681e1c2041c4c80c255e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8f267706c1ace02b091329360779711981d01e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid>控制，你可以显示和编辑数据来自许多不同来源，如从 SQL 数据库、 LINQ 查询或任何其他可绑定数据源。 有关详细信息，请参阅[绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Controls.DataGridComboBoxColumn>|<xref:System.Enum>|  
 |<xref:System.Windows.Controls.DataGridHyperlinkColumn>|<xref:System.Uri>|  
   
- <xref:System.Windows.Controls.DataGrid>可以自定义的外观，例如设置单元格字体、 颜色和大小。 <xref:System.Windows.Controls.DataGrid>支持其他 WPF 控件的所有样式和模板化的功能。 <xref:System.Windows.Controls.DataGrid>此外包括默认和自定义行为的编辑、 排序和验证。  
+ <xref:System.Windows.Controls.DataGrid> 可以自定义的外观，例如设置单元格字体、 颜色和大小。 <xref:System.Windows.Controls.DataGrid> 支持其他 WPF 控件的所有样式和模板化的功能。 <xref:System.Windows.Controls.DataGrid> 此外包括默认和自定义行为的编辑、 排序和验证。  
   
  下表列出了一些常见任务的<xref:System.Windows.Controls.DataGrid>和如何完成它们。 通过查看相关的 API，你可以找到详细信息和示例代码。  
   

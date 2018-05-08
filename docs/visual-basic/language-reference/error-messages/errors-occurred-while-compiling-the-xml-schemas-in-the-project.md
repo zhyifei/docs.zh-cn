@@ -1,26 +1,17 @@
 ---
 title: 编译项目中的 XML 架构时发生错误
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc36810
 - vbc36810
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 07233ed1c68f85878ffdd7131f64e30e158dc350
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0cc565809792c619ca9903f9ef9b029b51a8aa17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>编译项目中的 XML 架构时发生错误
 编译该项目中的 XML 架构时发生错误。 因此，XML IntelliSense 不可用。  
@@ -39,6 +30,6 @@ ms.lasthandoff: 11/21/2017
   
 -   如果在 XSD 架构中不标识了任何错误，XML 编译器可能没有足够的信息来提供详细的错误消息。 你可以获取更详细的错误信息，如果你确保.xsd 文件的 XML 命名空间包含在你的项目匹配标识在 Visual Studio 中设置的 XML 架构的 XML 命名空间。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [“错误列表”窗口](/visualstudio/ide/reference/error-list-window)  
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

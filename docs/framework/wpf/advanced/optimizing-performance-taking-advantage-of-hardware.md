@@ -1,13 +1,6 @@
 ---
-title: "优化性能：利用硬件"
-ms.custom: 
+title: 优化性能：利用硬件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], performance
 - hardware rendering pipeline [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55c9482ecb540baab3ddd57ca9350fd7265ac251
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb790da63b4636e3dd6c25ea118075304702acc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>优化性能：利用硬件
 内部体系结构的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有两个呈现管道、 硬件和软件。 本主题提供有关这些呈现管道来帮助你判断你的应用程序的性能优化的信息。  
@@ -34,14 +22,14 @@ ms.lasthandoff: 12/22/2017
  确定的最重要因素之一[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]性能是它是呈现绑定-你需要呈现性能成本就越高的多个像素。 但是，呈现，越可以卸载到[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]，你可以获得更多的性能优势。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序硬件呈现管道充分利用[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]上支持的最少的硬件功能[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]版本 7.0。 支持的硬件可以获得进一步优化[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]版本 7.0 和 PixelShader 2.0 + 功能。  
   
 ## <a name="software-rendering-pipeline"></a>软件呈现管道  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]软件呈现管道完全是 CPU 绑定。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]利用 SSE 和 SSE2 指令设置在 CPU 中实现经过优化的完整功能的软件光栅器。 回退到软件是无缝应用程序功能无法使用硬件呈现管道呈现任何时间。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]软件呈现管道完全是 CPU 绑定。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 利用 SSE 和 SSE2 指令设置在 CPU 中实现经过优化的完整功能的软件光栅器。 回退到软件是无缝应用程序功能无法使用硬件呈现管道呈现任何时间。  
   
  你会遇到的最大的性能问题时呈现在软件模式下相关填充率，指的呈现的像素数。 如果您担心在软件呈现模式下的性能，请尝试最大程度减少在重绘像素的次数。 例如，如果你的应用程序包含一个蓝色背景，然后在其上呈现略微透明的图像，你将呈现所有两次，应用程序中的像素。 因此，它将需要两次长呈现具有比是否只有蓝色背景图像的应用程序。  
   
 ### <a name="graphics-rendering-tiers"></a>图形呈现层  
  它可能很难预测将运行你的应用程序的硬件配置。 但是，你可能想要考虑的设计允许你的应用程序无缝切换功能在不同的硬件上运行时，以便它可以充分利用每个不同的硬件配置。  
   
- 若要实现此目的，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供功能来确定在运行时中的系统的图形功能。 分类为一个三个呈现功能层的视频卡取决于图形功能。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]公开[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，允许应用程序查询呈现功能层。 然后，你的应用程序可在具体取决于支持的硬件的呈现层的运行时执行不同的代码路径。  
+ 若要实现此目的，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供功能来确定在运行时中的系统的图形功能。 分类为一个三个呈现功能层的视频卡取决于图形功能。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 公开[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，允许应用程序查询呈现功能层。 然后，你的应用程序可在具体取决于支持的硬件的呈现层的运行时执行不同的代码路径。  
   
  对呈现层级别影响最大的图形硬件功能包括：  
   

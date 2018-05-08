@@ -1,23 +1,12 @@
 ---
-title: "使用本机活动的自定义复合"
-ms.custom: 
+title: 使用本机活动的自定义复合
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40a042aeaecd63c9932d7919f54a4cb1b026e988
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 78d00a13bdc018946fa20635a47677b1508c1ed1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-composite-using-native-activity"></a>使用本机活动的自定义复合
 此示例演示如何编写一个 <xref:System.Activities.NativeActivity>，该活动安排其他 <xref:System.Activities.Activity> 对象以控制工作流的执行流。 此示例使用两个通用的控制流（Sequence 和 While）来演示如何做到这一点。  
@@ -35,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
  当子级活动完成时，将执行 <xref:System.Activities.CompletionCallback>。 循环将从顶部继续。 与 `Execute` 类似，<xref:System.Activities.CompletionCallback> 采用一个 <xref:System.Activities.NativeActivityContext>，以便实现者能够访问运行时。  
   
- `MyWhile`不同于`MySequence`在于计划一个<xref:System.Activities.Activity>重复，对象和中，它使用<xref:System.Activities.Activity%601>< bool\>名为`Condition`以确定此计划是否应发生。 与 `MySequence` 类似，`MyWhile` 使用 `InternalExecute` 方法来集中其计划逻辑。 计划`Condition` <xref:System.Activities.Activity>< bool\>与<xref:System.Activities.CompletionCallback%601> \<bool > 名为`OnEvaluationCompleted`。 执行完 `Condition` 之后，可以通过此 <xref:System.Activities.CompletionCallback> 在一个名为 `result` 的强类型参数中获得执行结果。 如果结果为 `true`，`MyWhile` 将调用 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>，并传入 `Body`<xref:System.Activities.Activity> 对象和 `InternalExecute` 作为 <xref:System.Activities.CompletionCallback>。 执行完 `Body` 之后，在 `Condition` 中又会再次计划 `InternalExecute`，开始再次循环。 如果 `Condition` 返回 `false`，则 `MyWhile` 的实例会将控制权交回给运行时而不计划 `Body`，运行时会将其移动到 <xref:System.Activities.ActivityInstanceState.Closed> 状态。  
+ `MyWhile` 不同于`MySequence`在于计划一个<xref:System.Activities.Activity>重复，对象和中，它使用<xref:System.Activities.Activity%601>< bool\>名为`Condition`以确定此计划是否应发生。 与 `MySequence` 类似，`MyWhile` 使用 `InternalExecute` 方法来集中其计划逻辑。 计划`Condition` <xref:System.Activities.Activity>< bool\>与<xref:System.Activities.CompletionCallback%601> \<bool > 名为`OnEvaluationCompleted`。 执行完 `Condition` 之后，可以通过此 <xref:System.Activities.CompletionCallback> 在一个名为 `result` 的强类型参数中获得执行结果。 如果结果为 `true`，`MyWhile` 将调用 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>，并传入 `Body`<xref:System.Activities.Activity> 对象和 `InternalExecute` 作为 <xref:System.Activities.CompletionCallback>。 执行完 `Body` 之后，在 `Condition` 中又会再次计划 `InternalExecute`，开始再次循环。 如果 `Condition` 返回 `false`，则 `MyWhile` 的实例会将控制权交回给运行时而不计划 `Body`，运行时会将其移动到 <xref:System.Activities.ActivityInstanceState.Closed> 状态。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -48,6 +37,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\CustomCompositeNativeActivity`

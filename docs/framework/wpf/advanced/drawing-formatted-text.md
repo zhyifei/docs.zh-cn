@@ -1,13 +1,6 @@
 ---
-title: "绘制格式化文本"
-ms.custom: 
+title: 绘制格式化文本
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 978c97b8cae24bff4ebdea8f4e56a940e5907fa6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-formatted-text"></a>绘制格式化文本
 本主题提供的功能的概述<xref:System.Windows.Media.FormattedText>对象。 此对象为在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中绘制文本提供低级别控制。  
@@ -42,11 +30,11 @@ ms.lasthandoff: 01/19/2018
 >  对于从 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 迁移的开发人员，[Win32 迁移](#win32_migration)一节中的表列出了 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 标志和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的近似等效项。  
   
 ### <a name="reasons-for-using-formatted-text"></a>使用格式化文本的原因  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括多个用于在屏幕中绘制文本的控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的如中的简短句子时应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label>可在时极少的文字支持是必需的。 有关详细信息，请参阅 [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括多个用于在屏幕中绘制文本的控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的如中的简短句子时应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 可在时极少的文字支持是必需的。 有关详细信息，请参阅 [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。  
   
  <xref:System.Windows.Media.FormattedText>对象提供了更大的文本格式功能比[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]文本控件，并在你想要将文本用作装饰性元素的情况下可能很有用。 有关详细信息，请参阅下一节[将格式化文本转换为几何图形](#converting_formatted_text)。  
   
- 此外，<xref:System.Windows.Media.FormattedText>对象可用于创建面向文本的<xref:System.Windows.Media.DrawingVisual>-派生的对象。 <xref:System.Windows.Media.DrawingVisual>是用于呈现形状、 图像或文本的轻量绘制类。 有关详细信息，请参阅[使用 DrawingVisuals 执行测试示例](http://go.microsoft.com/fwlink/?LinkID=159994)。  
+ 此外，<xref:System.Windows.Media.FormattedText>对象可用于创建面向文本的<xref:System.Windows.Media.DrawingVisual>-派生的对象。 <xref:System.Windows.Media.DrawingVisual> 是用于呈现形状、 图像或文本的轻量绘制类。 有关详细信息，请参阅[使用 DrawingVisuals 执行测试示例](http://go.microsoft.com/fwlink/?LinkID=159994)。  
   
 ## <a name="using-the-formattedtext-object"></a>使用 FormattedText 对象  
  若要创建带格式的文本，请调用<xref:System.Windows.Media.FormattedText.%23ctor%2A>构造函数来创建<xref:System.Windows.Media.FormattedText>对象。 创建初始格式化文本字符串后，便可应用某一范围的格式样式。  
@@ -127,7 +115,7 @@ ms.lasthandoff: 01/19/2018
 |DT_PREFIXONLY|无|不支持。|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用<xref:System.Windows.Media.FormattedText.TextAlignment%2A>属性值设置为<xref:System.Windows.TextAlignment.Right>。 （仅限 WPF）|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|将 <xref:System.Windows.Media.FormattedText.FlowDirection%2A> 属性设置为 <xref:System.Windows.FlowDirection.RightToLeft>。|  
-|DT_SINGLELINE|无|不要求。 <xref:System.Windows.Media.FormattedText>对象的行为作为单个行控件，除非任一<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>设置属性或文本包含回车符/换行符 (CR/LF)。|  
+|DT_SINGLELINE|无|不要求。 <xref:System.Windows.Media.FormattedText> 对象的行为作为单个行控件，除非任一<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>设置属性或文本包含回车符/换行符 (CR/LF)。|  
 |DT_TABSTOP|无|不支持用户定义的制表位位置。|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|不要求。 上对齐是默认设置。 可以使用定义其他垂直定位值<xref:System.Windows.Media.FormattedText.Height%2A>属性来计算适当[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DrawText y 位置。|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>属性来计算适当[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DrawText y 位置。|  

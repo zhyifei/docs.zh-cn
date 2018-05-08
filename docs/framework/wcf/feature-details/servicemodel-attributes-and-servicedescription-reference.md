@@ -1,36 +1,22 @@
 ---
 title: ServiceModel 属性和 ServiceDescription 引用
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ba8888c2a1bd3c16ab6d216c365870c0df0e499a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc7c36ff7a1c81227f118ee7113be8f7f9eb2e9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 属性和 ServiceDescription 引用
-*说明树*是类型的层次结构 (从开始<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>类)，一起描述服务的每个方面。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用说明树形来生成有效的服务运行时，发布 Web 服务描述语言 (WSDL)、XML 架构定义语言 (XSD) 和有关服务的策略断言（元数据）（客户端可用来连接和使用服务），并生成各种代码和说明树值的配置文件表示形式。  
+*说明树*是类型的层次结构 (从开始<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>类)，一起描述服务的每个方面。 Windows Communication Foundation (WCF) 使用说明树形来生成有效的服务运行时，发布 Web 服务描述语言 (WSDL)、 XML 架构定义语言 (XSD) 和有关服务的客户端可以使用的策略断言 （元数据）连接到和使用服务，并生成各种代码和配置文件表示形式之间的说明树值。  
   
  本主题介绍如何从服务协定获取与协定相关的属性，如何实现这些属性，以及如何将这些属性添加到说明树。 在某些情况下，特性值会转换为行为属性，然后行为会插入到说明树中。 有关如何将说明树值转换成元数据的详细信息，请参阅[ServiceDescription 和 WSDL 引用](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>将操作映射到说明树  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序中，服务协定是由接口（或类）建模的，这些接口（或类）使用属性将接口（或类）及其方法标记为一组操作。 <xref:System.ServiceModel.ServiceHost> 类打开后，所有服务协定和实现都会反映出来，并和配置信息一起合并到说明树中。  
+ WCF 应用程序中服务协定进行建模接口 （或类） 使用属性将接口或类和其方法标记为一组操作。 <xref:System.ServiceModel.ServiceHost> 类打开后，所有服务协定和实现都会反映出来，并和配置信息一起合并到说明树中。  
   
- 有两种类型的操作模型：*参数*模型和*消息协定*模型。 参数模型使用的托管方法不具有由 <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> 类标记的参数或返回值类型。 在这种模型中，开发人员控制参数和返回值的序列化，但 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会生成一些值，用于填充服务及其协定的说明树。  
+ 有两种类型的操作模型：*参数*模型和*消息协定*模型。 参数模型使用的托管方法不具有由 <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> 类标记的参数或返回值类型。 在此模型中，开发人员控制的序列化参数和返回值，但 WCF 生成用于填充服务和其协定的说明树值。  
   
  配置文件中指定的绑定直接加载到 <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType> 属性中。  
   

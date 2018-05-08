@@ -1,24 +1,12 @@
 ---
-title: "使事务流入和流出工作流服务"
-ms.custom: 
+title: 使事务流入和流出工作流服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a38c0c224c93941efa767d142aa7738296a62f15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b3d3e85b626d033c9ab50e93e3ceb3b86058a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>使事务流入和流出工作流服务
 工作流服务和客户端可以参与事务。  对于将成为环境事务一部分的服务操作，将 <xref:System.ServiceModel.Activities.Receive> 活动放到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动内。 由 <xref:System.ServiceModel.Activities.Send> 内的 <xref:System.ServiceModel.Activities.SendReply> 或 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动所做的任何调用也将在环境事务中进行。 工作流客户端应用程序可以通过使用 <xref:System.Activities.Statements.TransactionScope> 活动来创建环境事务，并通过使用该环境事务来调用服务操作。 本主题将指导您创建参与事务的工作流服务和工作流客户端。  
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="implement-the-workflow-service"></a>实现工作流服务  
   
-1.  添加新[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]称为工作流服务`WorkflowService`到`Common`项目。 为此，右击`Common`项目，依次选择**添加**，**新建项...**，选择**工作流**下**已安装的模板**和选择**WCF 工作流服务**。  
+1.  添加新的 WCF 工作流服务，调用`WorkflowService`到`Common`项目。 为此，右击`Common`项目，依次选择**添加**，**新建项...**，选择**工作流**下**已安装的模板**和选择**WCF 工作流服务**。  
   
      ![添加工作流服务](../../../../docs/framework/wcf/feature-details/media/addwfservice.JPG "AddWFService")  
   
@@ -110,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  拖放式<xref:System.ServiceModel.Activities.Receive>中的活动**请求**部分<xref:System.ServiceModel.Activities.TransactedReceiveScope>活动。 设置以下属性：  
   
-    |属性|“值”|  
+    |属性|值|  
     |--------------|-----------|  
     |CanCreateInstance|True（选中复选框）|  
     |OperationName|StartSample|  
@@ -120,13 +108,13 @@ ms.lasthandoff: 12/22/2017
   
      ![添加 Receive 活动](../../../../docs/framework/wcf/feature-details/media/serviceaddreceive.JPG "ServiceAddReceive")  
   
-7.  单击**定义...**中链接<xref:System.ServiceModel.Activities.Receive>活动，然后进行以下设置：  
+7.  单击**定义...** 中链接<xref:System.ServiceModel.Activities.Receive>活动，然后进行以下设置：  
   
      ![设置 Recieve 活动的消息设置](../../../../docs/framework/wcf/feature-details/media/receivemessagesettings.JPG "ReceiveMessageSettings")  
   
 8.  将 <xref:System.Activities.Statements.Sequence> 活动拖放到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 的“正文”部分内。 在 <xref:System.Activities.Statements.Sequence> 活动内，拖放两个 <xref:System.Activities.Statements.WriteLine> 活动并设置 <xref:System.Activities.Statements.WriteLine.Text%2A> 属性，如下表所示。  
   
-    |活动|“值”|  
+    |活动|值|  
     |--------------|-----------|  
     |第一个 WriteLine|"服务： 接收已完成"|  
     |第二个 WriteLine|"Service: Received = " + requestMessage|  
@@ -141,10 +129,10 @@ ms.lasthandoff: 12/22/2017
   
 10. 将 <xref:System.Activities.Statements.Assign> 活动拖放到 `PrintTransactionInfo` 活动后面，然后根据下表设置其属性。  
   
-    |属性|“值”|  
+    |属性|值|  
     |--------------|-----------|  
     |到|replyMessage|  
-    |“值”|"Service: Sending reply."|  
+    |值|"Service: Sending reply."|  
   
 11. 将 <xref:System.Activities.Statements.WriteLine> 活动拖放到 <xref:System.Activities.Statements.Assign> 活动后面，然后将它的 <xref:System.Activities.Statements.WriteLine.Text%2A> 属性设置为 "Service: Begin reply."  
   
@@ -152,7 +140,7 @@ ms.lasthandoff: 12/22/2017
   
      ![添加 Assign 和 WriteLine 后](../../../../docs/framework/wcf/feature-details/media/afteraddingsbrwriteline.JPG "AfterAddingSBRWriteLine")  
   
-12. 右键单击<xref:System.ServiceModel.Activities.Receive>活动，并选择**创建 SendReply**并将其粘贴上次<xref:System.Activities.Statements.WriteLine>活动。 单击**定义...**中链接`SendReplyToReceive`活动，然后进行以下设置。  
+12. 右键单击<xref:System.ServiceModel.Activities.Receive>活动，并选择**创建 SendReply**并将其粘贴上次<xref:System.Activities.Statements.WriteLine>活动。 单击**定义...** 中链接`SendReplyToReceive`活动，然后进行以下设置。  
   
      ![回复消息设置](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
   
@@ -190,7 +178,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  将 <xref:System.ServiceModel.Activities.Send> 活动拖放到 <xref:System.Activities.Statements.Assign> 活动后面，并设置以下属性：  
   
-    |属性|“值”|  
+    |属性|值|  
     |--------------|-----------|  
     |EndpointConfigurationName|workflowServiceEndpoint|  
     |OperationName|StartSample|  
@@ -200,7 +188,7 @@ ms.lasthandoff: 12/22/2017
   
      ![设置 Send 活动属性](../../../../docs/framework/wcf/feature-details/media/clientsendsettings.JPG "ClientSendSettings")  
   
-9. 单击**定义...**链接，然后进行以下设置：  
+9. 单击**定义...** 链接，然后进行以下设置：  
   
      ![发送消息设置的活动](../../../../docs/framework/wcf/feature-details/media/sendmessagesettings.JPG "SendMessageSettings")  
   

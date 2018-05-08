@@ -1,11 +1,6 @@
 ---
-title: "Join 子句 (Visual Basic)"
+title: Join 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryJoinIn
 - vb.QueryJoin
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2bb25c9dac8994e7f975539c1d036f0f0d9d239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2186954ab6536988271629c4feba0a40563bfc3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-visual-basic"></a>Join 子句 (Visual Basic)
 将两个集合合并为单个集合。 联接操作基于匹配键对，使用`Equals`运算符。  
@@ -38,10 +30,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>部件  
  `element`  
- 必需。 一个被联接集合控制变量。  
+ 必须的。 一个被联接集合控制变量。  
   
  `collection`  
- 必需。 集合以与在左侧的标识的集合进行组合`Join`运算符。 A`Join`子句可以嵌套在另一个`Join`子句，或在`Group Join`子句。  
+ 必须的。 集合以与在左侧的标识的集合进行组合`Join`运算符。 A`Join`子句可以嵌套在另一个`Join`子句，或在`Group Join`子句。  
   
  `joinClause`  
  可选。 一个或多个其他`Join`进一步限制查询。  
@@ -50,7 +42,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  可选。 一个或多个其他`Group Join`进一步限制查询。  
   
  `key1` `Equals` `key2`  
- 必需。 标识被联接集合的键。 必须使用`Equals`运算符从被联接集合的键进行比较。 你可以通过使用组合联接条件`And`运算符来标识多个密钥。 `key1`必须从左侧的内容的集合`Join`运算符。 `key2`必须从右侧的集合`Join`运算符。  
+ 必须的。 标识被联接集合的键。 必须使用`Equals`运算符从被联接集合的键进行比较。 你可以通过使用组合联接条件`And`运算符来标识多个密钥。 `key1` 必须从左侧的内容的集合`Join`运算符。 `key2` 必须从右侧的集合`Join`运算符。  
   
  联接条件中使用的密钥可以是包含集合中的多个项的表达式。 但是，每个键的表达式可以包含仅其各自的集合中的项。  
   
@@ -94,7 +86,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `explorer (2424), File Explorer, Priority = 8`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [查询](../../../visual-basic/language-reference/queries/queries.md)  
  [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  

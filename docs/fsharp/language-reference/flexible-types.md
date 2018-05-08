@@ -1,17 +1,12 @@
 ---
 title: 可变类型 (F#)
 description: '了解如何使用 F # 灵活类型批注，这表示参数、 变量或值具有与指定的类型兼容的类型。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: bee2364a6c30b1fbdc09aa0aac2249e3f0c295e8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a54d462d04e4e65680a4612f58da72173f04d1f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flexible-types"></a>可变类型
 

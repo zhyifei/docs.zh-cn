@@ -1,34 +1,22 @@
 ---
 title: 如何：指定通道安全凭据
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>如何：指定通道安全凭据
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务标记允许 COM 应用程序调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 大多数 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务都要求客户端指定用于身份验证和授权的凭据。 当从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，您可以在托管代码或应用程序配置文件中指定这些凭据 当从 COM 应用程序调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，您可以使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口指定凭据。 本主题将介绍使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口指定凭据的各种方法。  
+Windows Communication Foundation (WCF) 服务标记允许 COM 应用程序调用 WCF 服务。 大多数 WCF 服务要求客户端指定用于身份验证和授权的凭据。 当从 WCF 客户端调用 WCF 服务，你可以指定这些凭据，在托管代码或应用程序配置文件中。 在从 COM 应用程序调用 WCF 服务，你可以使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>接口指定凭据。 本主题将介绍使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口指定凭据的各种方法。  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 是一种基于 IDispatch 的接口，在 Visual Studio 环境中使用它将无法获取 IntelliSense 功能。  
   
- 本文将使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中定义的服务[消息安全示例](../../../../docs/framework/wcf/samples/message-security-sample.md)。  
+ 本文将使用定义中的 WCF 服务[消息安全示例](../../../../docs/framework/wcf/samples/message-security-sample.md)。  
   
 ### <a name="to-specify-a-client-certificate"></a>指定客户端证书  
   
@@ -40,7 +28,7 @@ ms.lasthandoff: 03/23/2018
   
 4.  添加`bindingNamespace=``http://Microsoft.ServiceModel.Samples`到服务 App.config 中的终结点标记。  
   
-5.  生成消息安全示例并运行 Service.exe。 使用 Internet Explorer 浏览至服务的 URI (http://localhost:8000/ServiceModelSamples/Service) 以确保服务正在运行。  
+5.  生成消息安全示例并运行 Service.exe。 使用 Internet Explorer 并浏览到服务的 URI (http://localhost:8000/ServiceModelSamples/Service)以确保服务正在运行。  
   
 6.  打开 Visual Basic 6.0 并创建一个新的 Standard .exe 文件。 在窗体中添加一个按钮并双击该按钮，以将以下代码添加到 Click 处理程序中：  
   
@@ -150,7 +138,7 @@ ms.lasthandoff: 03/23/2018
   
      有关用于此方法的参数的更多信息，请参见 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [联合](../../../../docs/framework/wcf/feature-details/federation.md)  
  [如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  [如何：创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  

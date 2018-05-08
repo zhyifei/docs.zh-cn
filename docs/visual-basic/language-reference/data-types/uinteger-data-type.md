@@ -1,11 +1,6 @@
 ---
-title: "UInteger 数据类型"
+title: UInteger 数据类型
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.uinteger
 helpviewer_keywords:
@@ -23,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea6d42a604e5a50fab62644034afc82e089792c7
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: a1c734578abd55270dd6feb9060d02691a6aaf8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uinteger-data-type"></a>UInteger 数据类型
 
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/01/2018
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
 
-从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如:
+从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如：
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -80,7 +75,7 @@ Dim number = &H_0FAC_14D7ui
   
 -   **扩大转换。** `UInteger`数据类型加宽到`Long`， `ULong`， `Decimal`， `Single`，和`Double`。 这意味着你可以将转换`UInteger`到而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。  
   
--   **类型字符。** 附加文本类型字符`UI`到文本将其强制转换到`UInteger`数据类型。 `UInteger`中有任何标识符类型字符。  
+-   **类型字符。** 附加文本类型字符`UI`到文本将其强制转换到`UInteger`数据类型。 `UInteger` 中有任何标识符类型字符。  
   
 -   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.UInt32?displayProperty=nameWithType> 结构。  
   

@@ -1,13 +1,6 @@
 ---
-title: "如何：为路由事件添加类处理"
-ms.custom: 
+title: 如何：为路由事件添加类处理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - task_core_add_class_handling_routed_properties [WPF]
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f0315bbd1d1a5ab2ae08d8bc1810e240cb6a5a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85c3491c9035d807b4c654659a8641121bb5709f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>如何：为路由事件添加类处理
 通过类处理程序或路线中的任何给定节点上的实例处理程序，可以处理路由的事件。 首先，调用和类的实现可以使用取消实例处理的事件，或引入其他事件所拥有的基类的事件的特定行为的类处理。 此示例阐释用来实现类处理程序的两个密切相关的技术。  

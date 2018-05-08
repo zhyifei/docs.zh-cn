@@ -1,25 +1,17 @@
 ---
 title: DataRepeater 控件疑难解答 (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - DataRepeater, troubleshooting
 ms.assetid: c0ab9469-eced-4f52-aa18-4bd8dd4f1a9a
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2d630dbf8601eeddd5ce3ea02696891a1087f71f
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 092bbe89bb73a40dee7161f014d40a581b0ddc06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-the-datarepeater-control-visual-studio"></a>DataRepeater 控件疑难解答 (Visual Studio)
 本主题列出了你正在使用时可能发生的常见问题<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。  
@@ -65,7 +57,7 @@ dataRepeater1.Top = productsBindingNavigator.Height;
   
  通过使用你可以提供你自己的项标头和选择符号<xref:System.Windows.Forms.PictureBox>控制和监视<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>属性<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>中<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>事件<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataRepeater 控件简介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
  [如何：在 DataRepeater 控件中显示绑定数据](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
  [如何：在 DataRepeater 控件中显示未绑定的控件](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  

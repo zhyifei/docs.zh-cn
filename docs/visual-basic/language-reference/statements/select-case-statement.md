@@ -1,11 +1,6 @@
 ---
-title: "Select...Case 语句 (Visual Basic)"
+title: Select...Case 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Select
 - vb.Case
@@ -26,14 +21,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a7527763a05ec32af88c6ba66ef717d839c33154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d24b455d92cbd00b268df26283aab082b7703a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case 语句 (Visual Basic)
 运行的语句，具体取决于表达式的值的多个组之一。  
@@ -53,7 +45,7 @@ End Select
   
 |术语|定义|  
 |---|---|  
-|`testexpression`|必需。 表达式。 计算结果必须为基本数据类型之一 (`Boolean`， `Byte`， `Char`， `Date`， `Double`， `Decimal`， `Integer`， `Long`， `Object`， `SByte`， `Short`，`Single`， `String`， `UInteger`， `ULong`，和`UShort`)。|  
+|`testexpression`|必须的。 表达式。 计算结果必须为基本数据类型之一 (`Boolean`， `Byte`， `Char`， `Date`， `Double`， `Decimal`， `Integer`， `Long`， `Object`， `SByte`， `Short`，`Single`， `String`， `UInteger`， `ULong`，和`UShort`)。|  
 |`expressionlist`|中所需`Case`语句。 表示匹配值的表达式子句的列表`testexpression`。 用逗号分隔多个表达式子句。 每个子句可以采用以下形式之一：<br /><br /> -   *expression1* `To` *expression2*<br />-[ `Is` ]*比较运算符**表达式*<br />-   *表达式*<br /><br /> 使用`To`关键字来指定匹配项的范围的边界值`testexpression`。 值`expression1`必须小于或等于的值`expression2`。<br /><br /> 使用`Is`使用比较运算符关键字 (`=`， `<>`， `<`， `<=`， `>`，或`>=`) 来匹配值的指定限制`testexpression`。 如果`Is`未提供关键字，它将自动插入之前*比较运算符*。<br /><br /> 仅指定窗体`expression`视为一种特殊情况的`Is`形成 where*比较运算符*等号 (`=`)。 此窗体计算为`testexpression`  =  `expression`。<br /><br /> 中的表达式`expressionlist`可以是任何数据类型，它们可以隐式转换为的类型提供`testexpression`适当`comparisonoperator`对与一起使用的两种类型有效。|  
 |`statements`|可选。 一个或多个语句以下`Case`，运行的如果`testexpression`匹配中的任何子句`expressionlist`。|  
 |`elsestatements`|可选。 一个或多个语句以下`Case Else`，运行的如果`testexpression`中的任何子句不匹配`expressionlist`任一种情况`Case`语句。|  
@@ -82,14 +74,14 @@ End Select
   
  如果中的代码内`Case`或`Case Else`语句块不需要运行更多的语句块中，它可以通过使用退出块`Exit Select`语句。 此控件将立即转移到后面的语句`End Select`。  
   
- `Select Case`可以嵌套的构造。 每个嵌套`Select Case`构造必须有匹配`End Select`语句必须完全包含在单个`Case`或`Case Else`语句块的外部`Select Case`构造它嵌套在其中。  
+ `Select Case` 可以嵌套的构造。 每个嵌套`Select Case`构造必须有匹配`End Select`语句必须完全包含在单个`Case`或`Case Else`语句块的外部`Select Case`构造它嵌套在其中。  
   
 ## <a name="example"></a>示例  
  下面的示例使用`Select Case`构造写入变量的值相对应的行`number`。 第二个`Case`语句包含匹配的当前值的值`number`，因此该语句，它将写入"在 6 到 8，非独占"之间运行。  
   
  [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/select-case-statement_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Interaction.Choose%2A>  
  [End 语句](../../../visual-basic/language-reference/statements/end-statement.md)  
  [If...Then...Else 语句](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  

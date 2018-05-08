@@ -1,14 +1,6 @@
 ---
-title: "墨迹入门"
-ms.custom: 
+title: 墨迹入门
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,17 +11,11 @@ helpviewer_keywords:
 - animation [WPF], gradient brush colors
 - brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 74227ebe815e971087569ff39ac0a3479c1b0d14
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 9a1b53d0513eeef377fe8e012a8d5d7ea3f8a984
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-ink"></a>墨迹入门
 将数字墨迹合并到你的应用程序是比以往更容易。 墨迹已从正在实现完全集成到编程的 COM 和 Windows 窗体方法的必然结果发展[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 不需要安装单独的 Sdk 或运行时库。  
@@ -47,7 +33,7 @@ ms.lasthandoff: 03/08/2018
 #### <a name="got-ink"></a>如何获取墨迹？  
  若要启动你的第一个[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支持墨迹应用程序：  
   
-1.  Open Microsoft Visual Studio 2005  
+1.  打开 Microsoft Visual Studio 2005  
   
 2.  创建一个新**Windows 应用程序 (WPF)**  
   

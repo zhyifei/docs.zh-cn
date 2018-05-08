@@ -1,29 +1,15 @@
 ---
 title: 事务协议版本 1.0
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 60867daa7b8519f745c37371604807c51aa1cbb9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d510a74560369a132822e980e7812ca4deff55a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-protocols-version-10"></a>事务协议版本 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 版本 1 实现 WS-Atomic Transaction 和 WS-Coordination 协议的版本 1.0。 有关版本 1.1 的详细信息，请参阅[事务协议](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
+Windows Communication Foundation (WCF) 版本 1 实现 Ws-atomic Transaction 和 Ws-coordination 协议的版本 1.0。 有关版本 1.1 的详细信息，请参阅[事务协议](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
   
 |规范/文档|Link|  
 |-----------------------------|----------|  
@@ -66,7 +52,7 @@ ms.lasthandoff: 04/30/2018
   
 -   应用程序消息。  
   
- 前三种消息类可视为事务管理器消息，本主题后面的“应用程序消息交换”将说明它们的绑定配置。 第四种消息类是应用程序间消息，本主题后面的“消息示例”一节将对它进行说明。 本节说明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对这些类中每个类使用的协议绑定。  
+ 前三种消息类可视为事务管理器消息，本主题后面的“应用程序消息交换”将说明它们的绑定配置。 第四种消息类是应用程序间消息，本主题后面的“消息示例”一节将对它进行说明。 本部分介绍 WCF 的每个这些类使用的协议绑定。  
   
  本文档中使用以下 XML 命名空间和关联的前缀。  
   
@@ -96,12 +82,12 @@ ms.lasthandoff: 04/30/2018
 -   B1112：DNS 必须在系统中每个发送方-接收方对之间都有效，才能使 X.509 主题名称检查成功。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>激活和注册绑定配置  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 要求具有通过 HTTPS 关联的请求/答复双工绑定。 （有关关联的更多信息和请求/答复消息交换模式的说明，请参见 WS-Atomic Transaction，第 8 节。）  
+ WCF 要求通过 HTTPS 与相关的请求/答复双工绑定。 （有关关联的更多信息和请求/答复消息交换模式的说明，请参见 WS-Atomic Transaction，第 8 节。）  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 协议绑定配置  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持通过 HTTPS 发送单向（数据报）消息。 消息中的关联作为实现详细信息保留。  
+ WCF 通过 HTTPS 支持单向 （数据报） 消息。 消息中的关联作为实现详细信息保留。  
   
- B2131: 实现必须支持`wsa:ReferenceParameters`WS 寻址，若要实现的相关中所述[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的 2PC 消息。  
+ B2131: 实现必须支持`wsa:ReferenceParameters`WS 寻址，若要实现的 WCF 的 2PC 消息的相关中所述。  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>事务管理器混合安全绑定  
  这是一个备选 （混合模式） 绑定，它使用传输安全和 Ws-coordination 颁发的令牌模型标识建立目的的组合。  激活和注册是在两个绑定间存在差异的仅有元素。  
@@ -112,7 +98,7 @@ ms.lasthandoff: 04/30/2018
 #### <a name="activation-message-binding-configuration"></a>激活消息绑定配置  
  激活消息通常不参与互操作，因为他们一般出现在应用程序及其本地事务管理器之间。  
   
- B1221:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用双工 HTTPS 绑定 (中所述[消息传送协议](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 激活消息。 请求消息和答复消息是使用 WS-Addressing 2004/08 进行关联的。  
+ B1221: WCF 使用双工 HTTPS 绑定 (中所述[消息传送协议](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 激活消息。 请求消息和答复消息是使用 WS-Addressing 2004/08 进行关联的。  
   
  WS-Atomic Transaction 规范第 8 节更详尽地说明了关联和消息交换模式。  
   
@@ -123,7 +109,7 @@ ms.lasthandoff: 04/30/2018
  一个新`t:IssuedTokens`标头应为附加到传出生成`wscoor:CreateCoordinationContextResponse`消息。  
   
 #### <a name="registration-message-binding-configuration"></a>注册消息绑定配置  
- B1231:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用双工 HTTPS 绑定 (中所述[消息传送协议](../../../../docs/framework/wcf/feature-details/messaging-protocols.md))。 请求消息和答复消息是使用 WS-Addressing 2004/08 进行关联的。  
+ B1231: WCF 使用双工 HTTPS 绑定 (中所述[消息传送协议](../../../../docs/framework/wcf/feature-details/messaging-protocols.md))。 请求消息和答复消息是使用 WS-Addressing 2004/08 进行关联的。  
   
  WS-AtomicTransaction 第 8 节更详尽地说明了关联和消息交换模式。  
   
@@ -132,9 +118,9 @@ ms.lasthandoff: 04/30/2018
  `wsse:Timestamp`必须使用对元素进行签名`SecurityContextToken``STx`颁发。 此签名是拥有与特定事务关联的令牌的证明，用于对登记事务的参与者进行身份验证。 RegistrationResponse 消息通过 HTTPS 发回。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 协议绑定配置  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持通过 HTTPS 发送单向（数据报）消息。 消息中的关联作为实现详细信息保留。  
+ WCF 通过 HTTPS 支持单向 （数据报） 消息。 消息中的关联作为实现详细信息保留。  
   
- B2131: 实现必须支持`wsa:ReferenceParameters`WS 寻址，若要实现的相关中所述[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的 2PC 消息。  
+ B2131: 实现必须支持`wsa:ReferenceParameters`WS 寻址，若要实现的 WCF 的 2PC 消息的相关中所述。  
   
 ## <a name="application-message-exchange"></a>应用程序消息交换  
  只要绑定满足下面的安全要求，应用程序就可以对应用程序间消息随意使用任何特定的绑定：  
@@ -143,9 +129,9 @@ ms.lasthandoff: 04/30/2018
   
 -   R2002：必须提供 `t:IssuedToken` 的完整性和保密性。  
   
- `CoordinationContext` 标头包含 `wscoor:Identifier`。 尽管 `xsd:AnyURI` 的定义允许使用绝对和相对 URI，可是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 仅支持 `wscoor:Identifiers`（它是绝对 URI）。  
+ `CoordinationContext` 标头包含 `wscoor:Identifier`。 尽管的定义`xsd:AnyURI`允许绝对和相对 Uri，使用 WCF 仅支持`wscoor:Identifiers`，它是绝对 Uri。  
   
- 如果 `wscoor:Identifier` 的 `wscoor:CoordinationContext` 是相对 URI，则将从事务性 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务返回错误。  
+ 如果`wscoor:Identifier`的`wscoor:CoordinationContext`是相对的 URI，将从事务性 WCF 服务返回错误。  
   
 ## <a name="message-examples"></a>消息示例  
   

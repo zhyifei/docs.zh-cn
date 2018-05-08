@@ -1,30 +1,18 @@
 ---
-title: "WCF 联合对象模型如何映射到 Atom 和 RSS"
-ms.custom: 
+title: WCF 联合对象模型如何映射到 Atom 和 RSS
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7baf77b4923cff4320d657b3024ab2a286e40c2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 联合对象模型如何映射到 Atom 和 RSS
-开发 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 联合服务时，使用以下类创建源和项：  
+在开发时的 Windows Communication Foundation (WCF) 联合服务，你将创建源和项使用以下类：  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -42,9 +30,9 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- 可以按照为其定义格式化程序的任何联合格式序列化 <xref:System.ServiceModel.Syndication.SyndicationFeed>。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 附带有两个格式化程序：<xref:System.ServiceModel.Syndication.Atom10FeedFormatter> 和 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>。  
+ 可以按照为其定义格式化程序的任何联合格式序列化 <xref:System.ServiceModel.Syndication.SyndicationFeed>。 WCF 配有两个格式化程序：<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>和<xref:System.ServiceModel.Syndication.Rss20FeedFormatter>。  
   
- 与 RSS 2.0 规范相比，围绕 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 的对象模型具有与 Atom 1.0 规范更密切的关系。 这是因为 Atom 1.0 是更为充分的规范，它定义了在 RSS 2.0 规范中不明确的或被忽略的元素。 因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 联合对象模型中的许多项在 RSS 2.0 规范中没有直接表示形式。 按照 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 对象时，使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以将 Atom 特定的数据元素序列化为符合 Atom 规范的命名空间限定扩展元素。 可以通过传递到 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 构造函数的参数对此进行控制。  
+ 与 RSS 2.0 规范相比，围绕 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 的对象模型具有与 Atom 1.0 规范更密切的关系。 这是因为 Atom 1.0 是更为充分的规范，它定义了在 RSS 2.0 规范中不明确的或被忽略的元素。 因此，WCF 联合对象模型中的多个项在 RSS 2.0 规范中已没有直接的表示形式。 在序列化时<xref:System.ServiceModel.Syndication.SyndicationFeed>和<xref:System.ServiceModel.Syndication.SyndicationItem>对象 RSS 2.0，WCF 允许你将 Atom 特定的数据元素序列化为符合 Atom 规范的命名空间限定扩展元素。 可以通过传递到 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 构造函数的参数对此进行控制。  
   
  本主题中的代码示例使用此处定义的两种方法之一进行实际的序列化。  
   

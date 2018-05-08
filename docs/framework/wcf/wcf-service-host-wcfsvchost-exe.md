@@ -1,29 +1,15 @@
 ---
 title: WCF 服务主机 (WcfSvcHost.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1da8d7a08e7887e8ba3fd50a8f809e2ff551a7fd
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: c000ad3ba53f103cb1a24a9a7fbc71049ba707c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服务主机 (WcfSvcHost.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务主机 (WcfSvcHost.exe) 允许您启动 Visual Studio 调试器 (F5) 以自动承载和测试已实现的服务。 然后可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端 (WcfTestClient.exe) 或您自己的客户端来测试服务，以查找并解决任何潜在错误。  
+Windows Communication Foundation (WCF) 服务主机 (WcfSvcHost.exe) 允许您启动 Visual Studio 调试器 (F5) 以自动承载和测试已实现的服务。 然后可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端 (WcfTestClient.exe) 或您自己的客户端来测试服务，以查找并解决任何潜在错误。  
   
 ## <a name="wcf-service-host"></a>WCF 服务主机  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机将枚举 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务项目中的服务、加载项目的配置并为它所找到的每项服务对主机进行实例化。 该工具集成到 Visual Studio 通过[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务模板，并在你开始调试项目时调用。  

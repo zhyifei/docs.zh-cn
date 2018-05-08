@@ -1,14 +1,6 @@
 ---
 title: 如何：创建自定义令牌
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,22 +10,16 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c270b63586809044f1bb3e56841ae8cf590e7bb1
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: eb227075b1a696216e62e851aa8b10c7511ac93f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>如何：创建自定义令牌
 本主题介绍如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 类创建自定义安全令牌，以及如何将其与自定义安全令牌提供程序和身份验证器进行集成。 有关完整的代码示例请参阅[自定义令牌](../../../../docs/framework/wcf/samples/custom-token.md)示例。  
   
- A*安全令牌*是实质上是一个 XML 元素，由[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]安全框架来表示有关 SOAP 消息内发件人的声明。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性为系统提供的身份验证模式提供各种令牌。 包括由 <xref:System.IdentityModel.Tokens.X509SecurityToken> 类表示的 X.509 证书安全令牌，或由 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 类表示的用户名安全令牌。  
+ A*安全令牌*是实质上是 Windows Communication Foundation (WCF) 安全框架用于表示有关 SOAP 消息内发件人的声明的 XML 元素。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性为系统提供的身份验证模式提供各种令牌。 包括由 <xref:System.IdentityModel.Tokens.X509SecurityToken> 类表示的 X.509 证书安全令牌，或由 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 类表示的用户名安全令牌。  
   
  有时，所提供的类型不支持某种身份验证模式或凭据。 这种情况下，必须创建自定义安全令牌来提供 SOAP 消息内部自定义凭据的 XML 表示形式。  
   

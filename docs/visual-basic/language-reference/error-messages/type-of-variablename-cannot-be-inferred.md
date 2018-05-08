@@ -1,28 +1,19 @@
 ---
-title: 类型的 &#39;&lt;variablename&gt;&#39; 无法推断，因为循环边界和步骤变量未扩大到同一类型
+title: 键入的&#39; &lt;variablename&gt; &#39;无法推断，因为循环边界和步骤变量未扩大到同一类型
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30982
 - vbc30982
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 022e29e38a93d2880bbfa250e65a8b95b39ff140
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6fdd9445b5336773d150c643c7bf1ca58a0c87a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>类型的 &#39;&lt;variablename&gt;&#39; 无法推断，因为循环边界和步骤变量未扩大到同一类型
+# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>键入的&#39; &lt;variablename&gt; &#39;无法推断，因为循环边界和步骤变量未扩大到同一类型
 在编写完`For...Next`循环在其中编译器无法推断 for 循环控制变量的数据类型因为满足以下条件：  
   
 -   未在 `As` 子句中指定循环控制变量的数据类型。  
@@ -70,7 +61,7 @@ Dim n = 20
     Next  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
  [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [隐式转换和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  

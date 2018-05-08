@@ -1,23 +1,12 @@
 ---
-title: "持久性数据库架构"
-ms.custom: 
+title: 持久性数据库架构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dc758f85b4f8b0bec5c00979f42d3f7b2ea7b182
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dd49d08e522c842d0f21f176b4d77ac0adb4b47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="persistence-database-schema"></a>持久性数据库架构
 本主题介绍 SQL 工作流实例存储区支持的公共视图。  
@@ -64,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 |ServiceDeploymentId|BigInt|此视图的主键。|  
 |SiteName|Nvarchar(max)|表示包含工作流服务的站点的名称 (例如**Default Web Site**)。|  
 |RelativeServicePath|Nvarchar(max)|表示相对于指向工作流服务的站点的虚拟路径 （例如 **/app1/PurchaseOrderService.svc**)。|  
-|RelativeApplicationPath|Nvarchar(max)|表示相对于指向包含工作流服务的应用程序的站点的虚拟路径 (例如**/app1**)。|  
+|RelativeApplicationPath|Nvarchar(max)|表示相对于指向包含工作流服务的应用程序的站点的虚拟路径 (例如 **/app1**)。|  
 |ServiceName|Nvarchar(max)|表示工作流服务的名称 (例如**PurchaseOrderService**)。|  
 |ServiceNamespace|Nvarchar(max)|表示工作流服务的命名空间 (例如**MyCompany**)。|  
   

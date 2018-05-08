@@ -1,13 +1,6 @@
 ---
-title: "将字体与应用程序一起打包"
-ms.custom: 
+title: 将字体与应用程序一起打包
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3860aff69b0e4e7a3dc624898cc6b1daa0dd092
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 068a85a5fffd9b7463875695a4b494340ef66cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-fonts-with-applications"></a>将字体与应用程序一起打包
 本主题概述如何为包版本，如果有你[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="introduction-to-packaging-fonts"></a>字体打包简介  
  你可以轻松地打包为资源内的字体你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序显示用户界面文本和其他类型的文本基于内容。 字体可以与应用程序的程序集文件分开，也可以嵌入到这些程序集文件中。 还可以创建纯资源字体库，以供应用程序引用。  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]和[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体包含类型标志，fsType，指示字体嵌入许可权限的字体。 但是，这个类型标志仅引用存储在文档中的嵌入字体，而不引用嵌入到应用程序中的字体。 你可以检索通过创建嵌入字体的权限的字体<xref:System.Windows.Media.GlyphTypeface>对象和引用其<xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>属性。 请参阅"OS/2 和 Windows 的度量值"部分的[OpenType 规范](http://www.microsoft.com/typography/otspec/os2.htm)有关 fsType 标志的详细信息。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 和[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体包含类型标志，fsType，指示字体嵌入许可权限的字体。 但是，这个类型标志仅引用存储在文档中的嵌入字体，而不引用嵌入到应用程序中的字体。 你可以检索通过创建嵌入字体的权限的字体<xref:System.Windows.Media.GlyphTypeface>对象和引用其<xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>属性。 请参阅"OS/2 和 Windows 的度量值"部分的[OpenType 规范](http://www.microsoft.com/typography/otspec/os2.htm)有关 fsType 标志的详细信息。  
   
  [Microsoft 版式](http://www.microsoft.com/typography/links/)网站包括可帮助你查找特定字体供应商或字体供应商查找自定义工作的联系信息。  
   

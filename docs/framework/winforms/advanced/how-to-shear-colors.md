@@ -1,13 +1,6 @@
 ---
-title: "如何：修剪颜色"
-ms.custom: 
+title: 如何：修剪颜色
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a32e6c1901f84c276c071402dac641d45566717
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 204f15ce44d5ad688be0ea9ac0fa4a90781b25dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-shear-colors"></a>如何：修剪颜色
 剪切增加或减少量将另一个颜色组件一定比例的颜色组件。 例如，考虑其中红色组件增加了一个半个蓝色分量的值的转换。 在此类转换，（0.2、 0.5，1） 的颜色将变为 （0.7、 0.5，1）。 新的红色组件是 0.2 + (1/2)(1) = 0.7。  

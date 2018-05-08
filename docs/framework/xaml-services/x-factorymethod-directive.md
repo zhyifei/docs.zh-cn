@@ -1,28 +1,16 @@
 ---
-title: "x:FactoryMethod 指令"
-ms.custom: 
+title: x:FactoryMethod 指令
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML. x:FactoryMethod directive [XAML Services]
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-caps.latest.revision: "8"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58349c5440d0062c64346933e48b64de6c4c7b60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75225e624abdd3dc0862a04fae409da48b3f0d1e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod 指令
 指定 XAML 处理器应使用解决其后备类型后初始化对象构造函数以外的方法。  
@@ -61,11 +49,11 @@ ms.lasthandoff: 12/22/2017
   
  工厂方法必须返回可分配给相关对象的实例。 工厂方法应永远不会返回 null。  
   
- `x:Arguments`工厂方法签名的最佳匹配项的原则进行操作。 首先，匹配计算的参数计数。 如果没有为参数计数的多个可能的匹配项，参数类型为则确定计算和最佳匹配。 如果没有仍不明确性评估此阶段完成之后，XAML 处理器行为不确定。  
+ `x:Arguments` 工厂方法签名的最佳匹配项的原则进行操作。 首先，匹配计算的参数计数。 如果没有为参数计数的多个可能的匹配项，参数类型为则确定计算和最佳匹配。 如果没有仍不明确性评估此阶段完成之后，XAML 处理器行为不确定。  
   
- `x:FactoryMethod`元素用法不是属性元素用法在典型的意义上，因为指令标记不引用包含对象元素的类型。 它预计该元素的用法是不如特性用法不太常见。 `x:Arguments`（属性或元素使用） 可用于沿`x:FactoryMethod`元素用法，但这是不专门部分中所示使用情况。  
+ `x:FactoryMethod`元素用法不是属性元素用法在典型的意义上，因为指令标记不引用包含对象元素的类型。 它预计该元素的用法是不如特性用法不太常见。 `x:Arguments` （属性或元素使用） 可用于沿`x:FactoryMethod`元素用法，但这是不专门部分中所示使用情况。  
   
- `x:FactoryMethod`如元素必须位于任何其他属性元素之前，必须位于任何之前`x:Arguments`还提供作为元素，以及必须前面的任何内容/内部文本/初始化文本。  
+ `x:FactoryMethod` 如元素必须位于任何其他属性元素之前，必须位于任何之前`x:Arguments`还提供作为元素，以及必须前面的任何内容/内部文本/初始化文本。  
   
 ## <a name="see-also"></a>请参阅  
  [x:Arguments 指令](../../../docs/framework/xaml-services/x-arguments-directive.md)

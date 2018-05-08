@@ -1,12 +1,6 @@
 ---
 title: + 运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.+
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb0d66db2d777c046ccec69acc1f2069d21baf6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ccf79c700cf852c0febb9c3f3464cbacdd39296e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>+ 运算符 (Visual Basic)
 将两个数相加或返回数值表达式的正数值。 此外可以用于连接两个字符串表达式。  
@@ -40,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
 |术语|定义|  
 |---|---|  
-|`expression1`|必需。 任何数值或字符串的表达式。|  
+|`expression1`|必须的。 任何数值或字符串的表达式。|  
 |`expression2`|必填，除非`+`运算符正在计算值为负。 任何数值或字符串的表达式。|  
   
 ## <a name="result"></a>结果  
@@ -63,26 +54,26 @@ ms.lasthandoff: 11/21/2017
 |表达式的数据类型|由编译器的操作|  
 |---|---|  
 |两个表达式均数值数据类型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，或`Double`)|添加。 结果数据类型为数值类型适用于数据类型的`expression1`和`expression2`。 请参阅中的"整数算法"表[运算符结果的数据类型的](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)。|  
-|这两个表达式均为类型`String`|串联在一起。|  
+|这两个表达式均为类型 `String`|串联在一起。|  
 |一个表达式为数值数据类型，另一个是一个字符串|如果`Option Strict`是`On`，然后将生成编译器错误。<br /><br /> 如果`Option Strict`是`Off`，隐式转换`String`到`Double`和添加。<br /><br /> 如果`String`不能转换为`Double`，然后引发<xref:System.InvalidCastException>异常。|  
 |一个表达式为数值数据类型，而另一种是[执行任何操作](../../../visual-basic/language-reference/nothing.md)|添加，请使用`Nothing`值为零。|  
-|一个表达式是字符串，并且另一种是`Nothing`|连接，与`Nothing`值为""。|  
+|一个表达式是字符串，并且另一种是 `Nothing`|连接，与`Nothing`值为""。|  
   
  如果一个表达式为`Object`表达式，Visual Basic 将采取以下措施。  
   
 |表达式的数据类型|由编译器的操作|  
 |---|---|  
-|`Object`表达式包含的数字值，另一个是数值数据类型|如果`Option Strict`是`On`，然后将生成编译器错误。<br /><br /> 如果`Option Strict`是`Off`，然后添加。|  
-|`Object`表达式包含的数字值，另一个是类型的`String`|如果`Option Strict`是`On`，然后将生成编译器错误。<br /><br /> 如果`Option Strict`是`Off`，隐式转换`String`到`Double`和添加。<br /><br /> 如果`String`不能转换为`Double`，然后引发<xref:System.InvalidCastException>异常。|  
-|`Object`表达式包含一个字符串，另一个是数值数据类型|如果`Option Strict`是`On`，然后将生成编译器错误。<br /><br /> 如果`Option Strict`是`Off`，然后将字符串隐式转换`Object`到`Double`和添加。<br /><br /> 如果字符串`Object`不能转换为`Double`，然后引发<xref:System.InvalidCastException>异常。|  
-|`Object`表达式包含一个字符串，另一个是类型的`String`|如果`Option Strict`是`On`，然后将生成编译器错误。<br /><br /> 如果`Option Strict`是`Off`，隐式转换`Object`到`String`并连接。|  
+|`Object` 表达式包含的数字值，另一个是数值数据类型|如果`Option Strict`是`On`，然后将生成编译器错误。<br /><br /> 如果`Option Strict`是`Off`，然后添加。|  
+|`Object` 表达式包含的数字值，另一个是类型的 `String`|如果`Option Strict`是`On`，然后将生成编译器错误。<br /><br /> 如果`Option Strict`是`Off`，隐式转换`String`到`Double`和添加。<br /><br /> 如果`String`不能转换为`Double`，然后引发<xref:System.InvalidCastException>异常。|  
+|`Object` 表达式包含一个字符串，另一个是数值数据类型|如果`Option Strict`是`On`，然后将生成编译器错误。<br /><br /> 如果`Option Strict`是`Off`，然后将字符串隐式转换`Object`到`Double`和添加。<br /><br /> 如果字符串`Object`不能转换为`Double`，然后引发<xref:System.InvalidCastException>异常。|  
+|`Object` 表达式包含一个字符串，另一个是类型的 `String`|如果`Option Strict`是`On`，然后将生成编译器错误。<br /><br /> 如果`Option Strict`是`Off`，隐式转换`Object`到`String`并连接。|  
   
  如果两个表达式均`Object`表达式，Visual Basic 将采取以下措施 (`Option Strict Off`仅)。  
   
 |表达式的数据类型|由编译器的操作|  
 |---|---|  
 |同时`Object`表达式保留数值|添加。|  
-|同时`Object`表达式均为类型`String`|串联在一起。|  
+|同时`Object`表达式均为类型 `String`|串联在一起。|  
 |一个`Object`表达式包含的数字值和其他包含字符串|将字符串隐式转换`Object`到`Double`和添加。<br /><br /> 如果字符串`Object`不能转换为数字值，然后引发<xref:System.InvalidCastException>异常。|  
   
  如果任一`Object`表达式计算结果为[执行任何操作](../../../visual-basic/language-reference/nothing.md)或<xref:System.DBNull>、`+`运算符会将其视为`String`值为""。  
@@ -116,7 +107,7 @@ ms.lasthandoff: 11/21/2017
   
  若要消除混淆，应使用`&`运算符而不是`+`的串联。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [& 运算符](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
  [串联运算符](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
  [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  

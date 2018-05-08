@@ -1,36 +1,22 @@
 ---
 title: 如何：在托管 Windows 服务中承载 WCF 服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c6c3e057fd07569d462f1bf25d1c283e42024a8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>如何：在托管 Windows 服务中承载 WCF 服务
-本主题概述了创建由 Windows 服务承载的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所需的基本步骤。 此方案可通过托管 Windows 服务承载选项启用，此选项是在没有消息激活的安全环境中在 Internet 信息服务 (IIS) 外部承载的、长时间运行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 服务的生存期改由操作系统控制。 此宿主选项在 Windows 的所有版本中都是可用的。  
+本主题概述了创建由 Windows 服务承载 Windows Communication Foundation (WCF) 服务所需的基本步骤。 此方案是通过启用托管 Windows 服务主机是不是消息激活的安全环境中承载 Internet 信息服务 (IIS) 外部的长时间运行 WCF 服务的选项。 服务的生存期改由操作系统控制。 此宿主选项在 Windows 的所有版本中都是可用的。  
   
- 可以使用 Microsoft 管理控制台 (MMC) 中的 Microsoft.ManagementConsole.SnapIn 管理 Windows 服务，并且可以将其配置为在系统启动时自动启动。 此承载选项包括注册承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务作为托管 Windows 服务的应用程序域，因此服务的进程生存期由 Windows 服务的服务控制管理器 (SCM) 来控制。  
+ 可以使用 Microsoft 管理控制台 (MMC) 中的 Microsoft.ManagementConsole.SnapIn 管理 Windows 服务，并且可以将其配置为在系统启动时自动启动。 此宿主选项包括注册承载 WCF 服务作为托管 Windows 服务，以便为 Windows 服务的服务控制管理器 (SCM) 控制服务的进程生存期的应用程序域 (AppDomain)。  
   
- 服务代码包括服务协定的服务实现、Windows 服务类和安装程序类。 服务实现类 `CalculatorService` 是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 `CalculatorWindowsService` 是 Windows 服务。 要符合 Windows 服务的要求，该类继承自 `ServiceBase` 并实现 `OnStart` 和 `OnStop` 方法。 在 `OnStart` 中，将为 <xref:System.ServiceModel.ServiceHost> 类型创建 `CalculatorService` 并打开它。 在 `OnStop` 中，停止并释放服务。 主机还负责提供服务主机基址，该基址已在应用程序设置中进行设置。 安装程序类继承自 <xref:System.Configuration.Install.Installer>，允许程序通过 Installutil.exe 工具安装为 Windows 服务。  
+ 服务代码包括服务协定的服务实现、Windows 服务类和安装程序类。 服务实现类`CalculatorService`，是一种 WCF 服务。 `CalculatorWindowsService` 是 Windows 服务。 要符合 Windows 服务的要求，该类继承自 `ServiceBase` 并实现 `OnStart` 和 `OnStop` 方法。 在 `OnStart` 中，将为 <xref:System.ServiceModel.ServiceHost> 类型创建 `CalculatorService` 并打开它。 在 `OnStop` 中，停止并释放服务。 主机还负责提供服务主机基址，该基址已在应用程序设置中进行设置。 安装程序类继承自 <xref:System.Configuration.Install.Installer>，允许程序通过 Installutil.exe 工具安装为 Windows 服务。  
   
 ### <a name="construct-the-service-and-provide-the-hosting-code"></a>构造服务并提供宿主代码  
   
@@ -135,7 +121,7 @@ ms.lasthandoff: 04/30/2018
     > [!NOTE]
     >  如果您不使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示，请确保 `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` 目录位于系统路径中。  
   
-     在命令提示符处键入 `services.msc` 以访问服务控制管理器 (SCM)。 Windows 服务应作为“WCFWindowsServiceSample”出现在服务中。 只有在 Windows 服务正在运行的情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务才能响应客户端。 要启动服务，请右键单击它在 SCM 和选择"启动"，或类型**net 启动 WCFWindowsServiceSample**在命令提示符。  
+     在命令提示符处键入 `services.msc` 以访问服务控制管理器 (SCM)。 Windows 服务应作为“WCFWindowsServiceSample”出现在服务中。 如果 Windows 服务正在运行的 WCF 服务才能响应客户端。 要启动服务，请右键单击它在 SCM 和选择"启动"，或类型**net 启动 WCFWindowsServiceSample**在命令提示符。  
   
 3.  如果对服务进行更改，则必须首先停止并卸载服务。 若要停止服务，右键单击该服务在 SCM 中的并选择"停止"，或**类型 net stop WCFWindowsServiceSample**在命令提示符。 请注意，如果停止 Windows 服务然后运行客户端，则在客户端尝试访问该服务时，会发生 <xref:System.ServiceModel.EndpointNotFoundException> 异常。 若要卸载 Windows 服务类型**installutil /u bin\service.exe**在命令提示符。  
   

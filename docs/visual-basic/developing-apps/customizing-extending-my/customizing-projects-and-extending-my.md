@@ -1,28 +1,22 @@
 ---
-title: "利用 Visual Basic 自定义项目并扩展 My 对象"
+title: 利用 Visual Basic 自定义项目并扩展 My 对象
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 397b345239f8707f0129ac14ab426f93372b4010
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 4dfe14f7680ad0c3a302334c07bb17e3e92011b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>利用 Visual Basic 自定义项目并扩展 My 对象
 你可以自定义项目模板，可以提供其他`My`对象。 这样，可轻松其他开发人员查找并使用您的对象。  
   
 ## <a name="in-this-section"></a>本节内容  
- [扩展 Visual Basic 中的我 Namespace](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ [扩展 Visual Basic 中的 My 命名空间](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  描述如何添加自定义成员和值添加到`My`在 Visual Basic 中的命名空间。  
   
  [打包和部署自定义 My 扩展](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
@@ -50,5 +44,5 @@ ms.lasthandoff: 10/22/2017
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
  描述`My`提供属性、 方法和事件的对象与当前的应用程序相关的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 Visual Basic 开发应用程序](../../../visual-basic/developing-apps/index.md)

@@ -1,31 +1,19 @@
 ---
 title: WCF 中使用的安全概念
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-caps.latest.revision: 15
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 74b16698d40747937a89f84f0d958178b42d2e44
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ac76f1742ab72de9f5180d1ea2fcbc668ec2140c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF 中使用的安全概念
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性建立在已在各种安全基础架构中使用并部署的概念之上。  
+Windows Communication Foundation (WCF) 安全是基于已在使用的概念和部署各种安全基础结构中。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持这些基础结构的其中一些，如 HTTP 上的安全套接字层 (SSL) (HTTPS)。 但是，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现了针对 SOAP 编码消息的更新的可互操作安全标准（如 WS-Security），因此已不再仅仅是支持现有安全基础结构。 无论是使用现有机制还是新的可互操作标准，其背后的安全概念都是相同的。 理解现有基础结构以及较新的标准背后的概念对于为应用程序实现最佳安全模型至关重要。  
+ WCF 支持一些这些基础结构，如安全套接字层 (SSL) 通过 HTTP (HTTPS)。 但是，WCF 不再仅仅是支持现有安全基础结构通过实现更高版本的可互操作安全标准 （如 Ws-security) 对 SOAP 编码消息。 无论是使用现有机制还是新的可互操作标准，其背后的安全概念都是相同的。 理解现有基础结构以及较新的标准背后的概念对于为应用程序实现最佳安全模型至关重要。  
   
 ## <a name="introduction-to-security-for-wcf-web-services"></a>WCF Web 服务安全简介  
  Microsoft 模式和实践组编写 WCF 安全指南即可以从此处下载了深入白皮书： [WCF 安全指南](http://go.microsoft.com/fwlink/?LinkId=210210)。 该白皮书介绍了与 Web 服务有关的基本安全概念、关键 WCF 安全概念、Intranet 应用程序方案和 Internet 应用程序方案。  

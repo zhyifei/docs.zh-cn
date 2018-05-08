@@ -1,31 +1,17 @@
 ---
-title: "如何：定义 Windows Communication Foundation 服务协定"
-ms.custom: 
+title: 如何：定义 Windows Communication Foundation 服务协定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - service contracts [WCF], defining
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c69f79d8629acee80a2e59346032e7733ec37dea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 98e0b07f608db4396a5b8f5e25cde243e03390a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>如何：定义 Windows Communication Foundation 服务协定
-这是创建基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序所需的六项任务中的第一项任务。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
+这是创建基本的 Windows Communication Foundation (WCF) 应用程序所需的六项任务的第一个。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
   
  创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务时，第一项任务是定义服务协定。 服务协定指定服务支持的操作。 可以将操作视为一个 Web 服务方法。 通过定义 C++、C# 或 Visual Basic (VB) 接口可创建协定。 接口中的每个方法都对应于特定的服务操作。 每个接口都必须将 <xref:System.ServiceModel.ServiceContractAttribute> 应用于它，而每个操作都必须将 <xref:System.ServiceModel.OperationContractAttribute> 特性应用于它。 如果接口中的一个方法具有 <xref:System.ServiceModel.ServiceContractAttribute> 特性而没有 <xref:System.ServiceModel.OperationContractAttribute> 特性，则服务不公开该方法。  
   
@@ -35,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  打开[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]以管理员身份中右键单击程序**启动**菜单并选择**以管理员身份运行**。  
   
-2.  通过单击创建 WCF 服务库项目**文件**菜单并选择**新建**，**项目**。 在**新项目**对话框中，在对话框的左侧展开**Visual C#**对于 C# 项目或**其他语言**然后**Visual Basic** Visual Basic 项目。 在所选的语言下选择**WCF**并将在对话框的中心部分上显示的项目模板列表。 选择**WCF 服务库**，和类型`GettingStartedLib`中**名称**文本框中和`GettingStarted`中**解决方案名称**对话框底部的文本框。  
+2.  通过单击创建 WCF 服务库项目**文件**菜单并选择**新建**，**项目**。 在**新项目**对话框中，在对话框的左侧展开**Visual C#** 对于 C# 项目或**其他语言**然后**Visual Basic** Visual Basic 项目。 在所选的语言下选择**WCF**并将在对话框的中心部分上显示的项目模板列表。 选择**WCF 服务库**，和类型`GettingStartedLib`中**名称**文本框中和`GettingStarted`中**解决方案名称**对话框底部的文本框。  
   
 3.  Visual Studio 将创建包含以下 3 个文件的项目：IService1.cs（或 IService1.vb）、Service1.cs（或 Service1.vb）和 App.config。IService1 文件包含默认的服务协定。  Service1 文件包含服务协定的默认实现。 App.config 文件包含 Visual Studio WCF 服务主机加载默认服务所需的配置。 有关 WCF 服务主机工具的详细信息，请参阅[WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   

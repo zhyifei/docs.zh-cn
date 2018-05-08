@@ -1,31 +1,17 @@
 ---
-title: "Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异"
-ms.custom: 
+title: Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8f30ad7819a570f0149868502261f986f4dd8c0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d956a72c9413384176c10effefc0307b09744c4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异
-本主题对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 队列功能在 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 与 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 之间的差异做了总结。  
+本主题总结了在 Windows Communication Foundation (WCF) 队列功能之间的差异[!INCLUDE[wv](../../../../includes/wv-md.md)]， [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，和[!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
 ## <a name="application-specific-dead-letter-queue"></a>应用程序特定的死信队列  
  如果接收应用程序未及时读取排队消息，则这些消息可能会无限期保留在队列中。 如果消息的时效性较强则此行为是不适当的。 时效性较强的消息在排队绑定中设置了一个 `TimeToLive` 属性。 此属性指示消息可以在队列中保留多久才会过期。 过期消息将发送到一个称为死信队列的特殊队列中。 消息也可能由于其他原因而在死信队列中终止，如超出队列配额或未通过身份验证。  
@@ -43,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支持否定确认，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 不支持。 来自接收队列管理器的否定确认会致使发送队列管理器将被拒绝的消息放入死信队列。 因此，在 `ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中不允许 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支持用于对消息传递尝试次数进行计数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会在内存中维护中止计数，所以当网络场中的多个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务读取同一条消息时，此属性包含的值可能不准确。  
+-   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支持用于对消息传递尝试次数进行计数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 WCF 维护中止计数在内存中，因此很可能由多个 Web 场中的 WCF 服务读取同一消息时，此属性可能不包含准确的值。  
   
 ## <a name="remote-transactional-read"></a>远程事务性读取  
  [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 MSMQ 支持远程事务性读取。 这允许从队列中进行读取的应用程序与该队列承载在不同的计算机上。 这样可以确保服务场能够从中心队列进行读取，从而增加系统的总体吞吐量。 另外，还可以确保在读取和处理消息时一旦出现故障，事务能够回滚并且消息保留在队列中以供以后处理。  

@@ -1,24 +1,12 @@
 ---
-title: "按正文路由"
-ms.custom: 
+title: 按正文路由
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: defd3a3e9df273739aaf3440fd34fad2cad44cd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9a0c947a1dd7ac2a6c7af74baaa072aae67358c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="route-by-body"></a>按正文路由
 此示例演示如何实现一种使用任何 SOAP 操作接受消息对象的服务。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 该服务实现一个 `Calculate` 操作，此操作接受一个 <xref:System.ServiceModel.Channels.Message> 请求参数并返回一个 <xref:System.ServiceModel.Channels.Message> 响应。  
@@ -28,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 此示例演示基于正文内容的消息调度。 内置的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务模型消息调度机制是基于消息 Actions 的。 不过，有许多现有的 Web 服务使用 Action="" 来定义其所有操作。 不可能基于 WSDL 生成基于 Action 信息调度请求消息的服务。 此示例演示一个基于 WSDL 的服务协定，此 WSDL 包含在该示例包括的 Service.wsdl 中。 服务协定是计算器，类似于在中使用[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 但是，`[OperationContract]` 指定所有操作的 `Action=""`。  
+ 此示例演示基于正文内容的消息调度。 内置的 Windows Communication Foundation (WCF) 服务模型消息调度机制基于消息的操作。 不过，有许多现有的 Web 服务使用 Action="" 来定义其所有操作。 不可能基于 WSDL 生成基于 Action 信息调度请求消息的服务。 此示例演示一个基于 WSDL 的服务协定，此 WSDL 包含在该示例包括的 Service.wsdl 中。 服务协定是计算器，类似于在中使用[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 但是，`[OperationContract]` 指定所有操作的 `Action=""`。  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples"),    
@@ -80,7 +68,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
   

@@ -1,34 +1,20 @@
 ---
-title: "数据协定名称"
-ms.custom: 
+title: 数据协定名称
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18ba9aa1f7af3733acd60924d0aa24ceb1b5126c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-names"></a>数据协定名称
-有时，客户端和服务不共享相同的类型。 它们仍然可以将数据传递给对方，只要数据协定是双方等效的。 [数据协定等效性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)基于数据协定和数据成员名称，并因此提供一种机制，以映射到这些名称的类型和成员。 本主题说明数据协定的命名规则以及创建名称时 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基础结构的默认行为。  
+有时，客户端和服务不共享相同的类型。 它们仍然可以将数据传递给对方，只要数据协定是双方等效的。 [数据协定等效性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)基于数据协定和数据成员名称，并因此提供一种机制，以映射到这些名称的类型和成员。 本主题介绍命名数据协定，以及 Windows Communication Foundation (WCF) 基础结构的默认行为，创建名称时的规则。  
   
 ## <a name="basic-rules"></a>基本规则  
  有关数据协定命名的基本规则包括：  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
 -   数据成员只有名称，而没有命名空间。  
   
--   处理数据协定时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构对于命名空间以及数据协定和数据成员的名称区分大小写。  
+-   当处理数据协定时，WCF 基础结构是命名空间和数据协定和数据成员的名称区分大小写。  
   
 ## <a name="data-contract-namespaces"></a>数据协定命名空间  
  数据协定命名空间采用统一资源标识符 (URI) 的形式。 URI 可以是绝对的，也可以是相对的。 默认情况下，会为特定类型的数据协定分配公共语言运行库 (CLR) 命名空间中该类型的命名空间。  
@@ -45,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  默认情况下，任何给定的 CLR 命名空间 (采用格式*Clr.Namespace*) 映射到命名空间"http://schemas.datacontract.org/2004/07/Clr.Namespace"。 若要重写此默认值，请对整个模块或程序集应用 <xref:System.Runtime.Serialization.ContractNamespaceAttribute> 属性。 或者，若要控制每种类型的数据协定命名空间，请设置 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 属性。  
   
 > [!NOTE]
->  “http://schemas.microsoft.com/2003/10/Serialization”是保留的命名空间，不能用作数据协定命名空间。  
+>  "http://schemas.microsoft.com/2003/10/Serialization"命名空间被保留，并且不能用作数据协定命名空间。  
   
 > [!NOTE]
 >  不能重写包含 `delegate` 声明的数据协定类型中的默认命名空间。  

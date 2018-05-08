@@ -1,10 +1,6 @@
 ---
-title: "类型转换函数 (Visual Basic)"
+title: 类型转换函数 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CUShort
 - vb.csng
@@ -85,14 +81,11 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9222bdb31f4fd7c792d5a50c100067e29e9d537
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-conversion-functions-visual-basic"></a>类型转换函数 (Visual Basic)
 这些函数已编译的内联，这意味着转换代码，计算表达式的代码的一部分。 有时是没有调用的过程，以完成转换，这将提高性能。 每个函数都强制转换为特定数据类型的表达式。  
@@ -120,7 +113,7 @@ CUShort(expression)
   
 ## <a name="part"></a>部件  
  `expression`  
- 必需。 源数据类型的任何表达式。  
+ 必须的。 源数据类型的任何表达式。  
   
 ## <a name="return-value-data-type"></a>返回值的数据类型  
  下表中所示，函数名称将确定它返回的值的数据类型。  
@@ -159,9 +152,9 @@ CUShort(expression)
   
      如果小数部分正好是 0.5，整数转换函数其舍入为接近的偶数整数。 例如，0.5 舍入为 0，1.5 和 2.5 舍入为 2。 这有时称为*银行家舍入法*，，其目的在于补偿时同时添加许多这样的数字可能会累积的偏差。  
   
-     `CInt`和`CLng`与不同<xref:Microsoft.VisualBasic.Conversion.Int%2A>和<xref:Microsoft.VisualBasic.Conversion.Fix%2A>函数，它截断，而不是舍入，大量的小数部分。 此外，`Fix`和`Int`始终返回相同的数据类型的值，当你在通过。  
+     `CInt` 和`CLng`与不同<xref:Microsoft.VisualBasic.Conversion.Int%2A>和<xref:Microsoft.VisualBasic.Conversion.Fix%2A>函数，它截断，而不是舍入，大量的小数部分。 此外，`Fix`和`Int`始终返回相同的数据类型的值，当你在通过。  
   
--   **日期/时间转换。** 使用<xref:Microsoft.VisualBasic.Information.IsDate%2A>函数来确定是否可以将一个值转换为日期和时间。 `CDate`识别的日期文本和时间文本，但不是数值。 要转换 Visual Basic 6.0`Date`值赋给`Date`在 Visual Basic 2005 中的值或更高版本，你可以使用<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType>方法。  
+-   **日期/时间转换。** 使用<xref:Microsoft.VisualBasic.Information.IsDate%2A>函数来确定是否可以将一个值转换为日期和时间。 `CDate` 识别的日期文本和时间文本，但不是数值。 要转换 Visual Basic 6.0`Date`值赋给`Date`在 Visual Basic 2005 中的值或更高版本，你可以使用<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType>方法。  
   
 -   **非特定日期/时间值。** [日期数据类型](../../../visual-basic/language-reference/data-types/date-data-type.md)始终包含日期和时间信息。 为进行类型转换，Visual Basic 将将 1/1/0001 (年 1 月 1 年 1) 对要*中性值*次要非特定值的日期，和 00:00:00 （午夜）。 如果你转换`Date`值为一个字符串，`CStr`不结果字符串中包括非特定值。 例如，如果你转换`#January 1, 0001 9:30:00#`为一个字符串，结果是"9:30:00 AM"; 取消显示的日期信息。 但是，日期信息是仍然存在于原始`Date`值，并可以使用函数如恢复<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>函数。  
   
@@ -194,7 +187,7 @@ CUShort(expression)
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## <a name="cdate-example"></a>CDate 示例  
- 下面的示例使用`CDate`函数将字符串转换为`Date`值。 一般情况下，不建议硬编码的日期和时间作为字符串 （如本示例中所示）。 使用日期文本和时间的文本，如 #Feb 12，&#1969; 和 # 4:45:23 PM #，而是。  
+ 下面的示例使用`CDate`函数将字符串转换为`Date`值。 一般情况下，不建议硬编码的日期和时间作为字符串 （如本示例中所示）。 使用日期文本和时间的文本，如 #Feb 12，1969 # 和 # 4:45:23 PM #，而是。  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
@@ -245,7 +238,7 @@ CUShort(expression)
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- `CStr`始终呈现`Date`采用当前区域设置，例如，标准短格式的值"6/15/2003年 4:35:47 PM"。 但是，`CStr`取消*中性值*1/1/0001 日期和时间的 00:00:00。  
+ `CStr` 始终呈现`Date`采用当前区域设置，例如，标准短格式的值"6/15/2003年 4:35:47 PM"。 但是，`CStr`取消*中性值*1/1/0001 日期和时间的 00:00:00。  
   
  有关详细信息返回的值`CStr`，请参阅[CStr 函数的返回值](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md)。  
   
@@ -264,7 +257,7 @@ CUShort(expression)
   
  [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
  <xref:Microsoft.VisualBasic.Strings.Chr%2A>  

@@ -1,14 +1,6 @@
 ---
 title: 如何：在联合身份验证服务上配置凭据
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 063f4da3ca920f17f77b3cc53f7c5903fc89b8cf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5bfea40a500dc1355b439ae7d949b0d96d3ab08c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>如何：在联合身份验证服务上配置凭据
-在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，创建联合服务涉及以下主要过程：  
+在 Windows Communication Foundation (WCF) 中，创建联合的服务包含以下主要步骤：  
   
 1.  配置 <xref:System.ServiceModel.WSFederationHttpBinding> 或类似的自定义绑定。 有关创建一个相应的绑定的详细信息，请参阅[如何： 创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。  
   

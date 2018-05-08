@@ -1,28 +1,19 @@
 ---
-title: "Windows 窗体中的高 DPI 支持"
-ms.custom: 
+title: Windows 窗体中的高 DPI 支持
 ms.date: 05/16/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - High DPI in Windows Forms
 - Dynamic rescaling in Windows Forms
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a68c9278d4e8092be5c744109e56f7cb52498095
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a085658579c8cd3ba43fd07a7816581e03c3d64a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows 窗体中的高 DPI 支持
 
@@ -70,7 +61,7 @@ ms.lasthandoff: 12/22/2017
    
 - 调用静态<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。
    
-  这应该是你的应用程序入口点中的第一个方法调用。 例如:
+  这应该是你的应用程序入口点中的第一个方法调用。 例如：
    
   ```csharp
   static void Main()

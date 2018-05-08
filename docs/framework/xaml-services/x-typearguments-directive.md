@@ -1,13 +1,6 @@
 ---
-title: "x:TypeArguments 指令"
-ms.custom: 
+title: x:TypeArguments 指令
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:TypeArguments
 - xTypeArguments
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-caps.latest.revision: "18"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94f09bdd3b6ee0b180e30bab0993f0b4e41730ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 指令
 约束类型参数传递给泛型类型的构造函数的泛型。  
@@ -62,13 +50,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ```  
   
 ### <a name="liststring"></a>列表\<字符串 >  
- `<scg:List x:TypeArguments="sys:String" ...>`实例化一个新<xref:System.Collections.Generic.List%601>与<xref:System.String>的类型自变量。  
+ `<scg:List x:TypeArguments="sys:String" ...>` 实例化一个新<xref:System.Collections.Generic.List%601>与<xref:System.String>的类型自变量。  
   
 ### <a name="dictionarystringstring"></a>字典\<字符串、 字符串 >  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`实例化一个新<xref:System.Collections.Generic.Dictionary%602>包含两个<xref:System.String>类型参数。  
+ `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` 实例化一个新<xref:System.Collections.Generic.Dictionary%602>包含两个<xref:System.String>类型参数。  
   
 ### <a name="queuekeyvaluepairstringstring"></a>队列 < KeyValuePair\<String，String >>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`实例化一个新<xref:System.Collections.Generic.Queue%601>具有的约束<xref:System.Collections.Generic.KeyValuePair%602>为内部的约束的类型实参<xref:System.String>和<xref:System.String>。  
+ `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` 实例化一个新<xref:System.Collections.Generic.Queue%601>具有的约束<xref:System.Collections.Generic.KeyValuePair%602>为内部的约束的类型实参<xref:System.String>和<xref:System.String>。  
   
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 和 WPF 泛型 XAML 用法  
  有关 XAML 2006 使用情况和适用于 WPF 应用程序的 XAML，对于将存在以下限制`x:TypeArguments`和从 XAML 通常的泛型类型用法：  
@@ -79,7 +67,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
 -   泛型的根元素 XAML 对象元素还必须声明分部类使用`x:Class`。 即使定义 WPF 生成操作，情况也是如此。  
   
--   `x:TypeArguments`不能引用嵌套的泛型约束。  
+-   `x:TypeArguments` 不能引用嵌套的泛型约束。  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 或没有 WPF 3.0 或 3.5 WPF XAML 2006 依赖项  
  在.NET Framework XAML 服务 XAML 2006 或 XAML 2009，放宽了对泛型的 XAML 用法的 WPF 相关限制。 可以实例化泛型对象元素，在后备类型系统和对象模型可支持的 XAML 标记中任何位置。  

@@ -1,14 +1,6 @@
 ---
-title: "如何：控制文本框文本更新源的时间"
-ms.custom: 
+title: 如何：控制文本框文本更新源的时间
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,23 +9,17 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 00fc64938e6a063ffbda77961f967e08c169ebd7
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 52f3a8d3a5d78a211367722b3042eb50f6ac36d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>如何：控制文本框文本更新源的时间
 本主题介绍如何使用<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>属性控制绑定源更新的计时。 本主题使用<xref:System.Windows.Controls.TextBox>控件作为示例。  
   
 ## <a name="example"></a>示例  
- <xref:System.Windows.Controls.TextBox>。<xref:System.Windows.Controls.TextBox.Text%2A>属性具有一个默认<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>。 这意味着应用程序是否已<xref:System.Windows.Controls.TextBox>与数据绑定<xref:System.Windows.Controls.TextBox>。<xref:System.Windows.Controls.TextBox.Text%2A>属性，你键入的文本<xref:System.Windows.Controls.TextBox>不会更新直到源<xref:System.Windows.Controls.TextBox>失去焦点 （例如，当你单击即可<xref:System.Windows.Controls.TextBox>).  
+ <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> 属性具有一个默认<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>。 这意味着应用程序是否已<xref:System.Windows.Controls.TextBox>与数据绑定<xref:System.Windows.Controls.TextBox>。<xref:System.Windows.Controls.TextBox.Text%2A> 属性，你键入的文本<xref:System.Windows.Controls.TextBox>不会更新直到源<xref:System.Windows.Controls.TextBox>失去焦点 (例如，当单击远离<xref:System.Windows.Controls.TextBox>)。  
   
  如果你想要作为你类型更新的源，设置<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>绑定到的<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>。 在下面的示例中，突出显示的代码行显示`Text`属性<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.TextBlock>绑定到相同的源属性。 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>属性<xref:System.Windows.Controls.TextBox>绑定设置为<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>。  
   

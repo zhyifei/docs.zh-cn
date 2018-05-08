@@ -1,29 +1,17 @@
 ---
-title: "如何：检测鼠标指针何时在 ToolStripItem 上"
-ms.custom: 
+title: 如何：检测鼠标指针何时在 ToolStripItem 上
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - toolbars [Windows Forms], detecting mouse movement
 - ToolStrip control [Windows Forms], detecting mouse movement
 - ToolStripItem class [Windows Forms], detecting mouse movement
 - mouse [Windows Forms], detecting movement on toolbars
 ms.assetid: d38b5082-aba7-4f6c-841b-bd9714e307fd
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b04d0ef38a8946abc43da2672ade0723f5f2446f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15a7562efd9a86a029754610ffd9e77c372d1ac2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem"></a>如何：检测鼠标指针何时在 ToolStripItem 上
 使用以下过程来检测出何时鼠标指针位于<xref:System.Windows.Forms.ToolStripItem>。  

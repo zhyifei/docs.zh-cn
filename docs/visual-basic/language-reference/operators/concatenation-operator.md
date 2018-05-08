@@ -1,12 +1,6 @@
 ---
-title: '&amp;运算符 (Visual Basic)'
+title: '&amp; 运算符 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.&
 helpviewer_keywords:
@@ -16,16 +10,13 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 76c8fc52a518dfe7850a5680b7d4f06f3d09bf73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 28d8cdb22974d77edf055ab9b2c6c767872e6783
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;运算符 (Visual Basic)
+# <a name="amp-operator-visual-basic"></a>&amp; 运算符 (Visual Basic)
 生成两个表达式的字符串串联。  
   
 ## <a name="syntax"></a>语法  
@@ -36,13 +27,13 @@ result = expression1 & expression2
   
 ## <a name="parts"></a>部件  
  `result`  
- 必需。 任何`String`或`Object`变量。  
+ 必须的。 任何`String`或`Object`变量。  
   
  `expression1`  
- 必需。 具有数据类型扩大到任何表达式`String`。  
+ 必须的。 具有数据类型扩大到任何表达式`String`。  
   
  `expression2`  
- 必需。 具有数据类型扩大到任何表达式`String`。  
+ 必须的。 具有数据类型扩大到任何表达式`String`。  
   
 ## <a name="remarks"></a>备注  
  如果数据类型的`expression1`或`expression2`不`String`但扩大到`String`，它将转换为`String`。 如果任一数据类型不会扩大到`String`，编译器将生成错误。  
@@ -60,7 +51,7 @@ result = expression1 & expression2
   
  [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operator_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [&= 运算符](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
  [串联运算符](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
  [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)  
