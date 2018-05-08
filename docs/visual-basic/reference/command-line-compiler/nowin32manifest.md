@@ -1,11 +1,6 @@
 ---
 title: -nowin32manifest (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - /nowin32manifest compiler option [Visual Basic]
 - nowin32manifest compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c0528aae-83b3-4425-99f0-19448e9843e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c539f7833c86215a1b0f8102f9fc46419636bc7
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: ba4abc4a94a4938d54b3c34fbea2a5041a99454f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-nowin32manifest-visual-basic"></a>-nowin32manifest (Visual Basic)
 指示编译器不在可执行文件中嵌入任何应用程序清单。  
@@ -33,6 +28,6 @@ ms.lasthandoff: 03/22/2018
   
  有关创建清单的详细信息，请参阅[-win32manifest (Visual Basic 中)](../../../visual-basic/reference/command-line-compiler/win32manifest.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [“项目设计器”->“应用程序”页 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

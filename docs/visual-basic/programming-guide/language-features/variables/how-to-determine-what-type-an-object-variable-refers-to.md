@@ -1,26 +1,16 @@
 ---
-title: "如何：确定对象变量引用的类型 (Visual Basic)"
-ms.custom: 
+title: 如何：确定对象变量引用的类型 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TypeOf operator [Visual Basic], determining object variable type
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5dd6785ecd48be3f0455de63b9e3f13a485ddbb2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0dfd4ed87b65f536802ae71cbc3de41e1c4f83af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>如何：确定对象变量引用的类型 (Visual Basic)
 对象变量包含指向存储在其他位置的数据的指针。 在运行时可以更改该数据的类型。 在任何时刻，你可以使用<xref:System.Type.GetTypeCode%2A>方法来确定当前的运行时类型，或[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)若要查明当前运行时类型是否与指定的类型兼容。  
@@ -61,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  请注意指定的类型不能为变量或表达式。 它必须已定义的类型，如类、 结构或接口的名称。 这包括内部类型，如`Integer`和`String`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Object.GetType%2A>  
  <xref:System.Type?displayProperty=nameWithType>  
  <xref:System.Type.GetTypeCode%2A>  

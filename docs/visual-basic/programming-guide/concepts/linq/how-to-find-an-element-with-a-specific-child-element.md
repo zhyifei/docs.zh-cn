@@ -1,22 +1,12 @@
 ---
-title: "如何： 查找具有特定的子元素的元素 (Visual Basic)"
-ms.custom: 
+title: 如何： 查找具有特定的子元素的元素 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e6ddb35e954d709548c6b32475f37454015e0a98
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9ebc7fd826e2245cea661b2441fa9989b0aee8b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>如何： 查找具有特定的子元素的元素 (Visual Basic)
 本主题演示如何查找特定元素，该特定元素包含具有特定值的子元素。  
@@ -75,7 +65,7 @@ End Module
 0006  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Linq.XElement.Attribute%2A>  
  <xref:System.Xml.Linq.XContainer.Elements%2A>  
  [基本查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  

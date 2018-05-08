@@ -1,22 +1,12 @@
 ---
-title: "如何： 对多个键 (Visual Basic) 的元素进行排序"
-ms.custom: 
+title: 如何： 对多个键 (Visual Basic) 的元素进行排序
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 145d50aa4515327636b7a649617188a5e24ef556
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 69509eb0bbc28045b71ad44c178d042367f3c03e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>如何： 对多个键 (Visual Basic) 的元素进行排序
 本主题演示如何对多个键进行排序。  
@@ -125,5 +115,5 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基本查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -1,21 +1,14 @@
 ---
 title: 无法使用提供的参数计算速率。
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrFinancial_CannotCalculateRate
 ms.assetid: 17d5c8eb-4716-4b72-977f-a640c02e630d
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bd5d86bf6b4c0be77fa42599e6c8e042190b89f1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 09b9ba853988a9320a75baadc9717af9df2db652
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cannot-calculate-rate-using-the-arguments-provided"></a>无法使用提供的参数计算速率。
 速率计算不包含所需的参数。  
@@ -26,5 +19,5 @@ ms.lasthandoff: 10/18/2017
   
 2.  检查之前对表达式中的变量进行的操作，尤其是那些从其他过程作为参数传递给该过程的操作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [财务摘要](../../visual-basic/language-reference/keywords/financial-summary.md)

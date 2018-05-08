@@ -1,13 +1,6 @@
 ---
 title: Lambda 表达式 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.LambdaFunction
 helpviewer_keywords:
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-caps.latest.revision: 52
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69ac88d295420277e99058d0f80a5ae1c2ce2e39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c45500dc7a1e59a7ac83d43b826ca4cbfca6efb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda 表达式 (Visual Basic)
 A *lambda 表达式*是可以在委托有效的任何地方使用的名称没有函数或子例程。 Lambda 表达式可以是函数或子例程，可以为单行或多行。 可以将值从当前作用域传递到 lambda 表达式中。  
@@ -70,7 +60,7 @@ A *lambda 表达式*是可以在委托有效的任何地方使用的名称没有
   
 -   你可以通过使用指定的 lambda 表达式参数的数据类型`As`可以推断关键字或参数的数据类型。 必须必须推断数据类型或所有具有指定任一所有参数。  
   
--   `Optional`和`Paramarray`不允许使用参数。  
+-   `Optional` 和`Paramarray`不允许使用参数。  
   
 -   不允许泛型参数。  
   
@@ -118,7 +108,7 @@ End Class
   
  有关如何创建和使用异步方法的详细信息，请参阅[使用 Async 和 Await 进行异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
   
-##  <a name="context"></a>上下文  
+##  <a name="context"></a> 上下文  
  Lambda 表达式与在其中定义的范围中共享它的上下文。 它具有相同的访问权限，在编写包含作用域中的任何代码。 这包括访问的成员变量、 函数和订阅， `Me`，以及参数和包含作用域中的局部变量。  
   
  访问的本地变量和参数中包含的作用域可以超出该范围的生存期。 只要引用的 lambda 表达式的委托不能进行垃圾回收，就将保留与原始环境中的变量的访问。 在以下示例中，变量`target`仅针对`makeTheGame`的方法的 lambda 表达式`playTheGame`定义。 请注意，返回的 lambda 表达式中，分配给`takeAGuess`中`Main`，仍有权访问局部变量`target`。  
@@ -127,15 +117,15 @@ End Class
   
  下面的示例演示了广泛的嵌套的 lambda 表达式的访问权限。 从执行返回的 lambda 表达式时`Main`作为`aDel`，它能够访问下列元素：  
   
--   在其中定义类的字段：`aField`  
+-   在其中定义类的字段： `aField`  
   
--   在其中定义类的属性：`aProp`  
+-   在其中定义类的属性： `aProp`  
   
--   方法的一个参数`functionWithNestedLambda`，在其中定义：`level1`  
+-   方法的一个参数`functionWithNestedLambda`，在其中定义： `level1`  
   
--   本地变量的`functionWithNestedLambda`:`localVar`  
+-   本地变量的`functionWithNestedLambda`: `localVar`  
   
--   在其中嵌套的 lambda 表达式的参数：`level2`  
+-   在其中嵌套的 lambda 表达式的参数： `level2`  
   
  [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   
@@ -160,7 +150,7 @@ End Class
   
      [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [委托](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  

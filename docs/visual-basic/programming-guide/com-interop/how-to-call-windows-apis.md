@@ -1,26 +1,17 @@
 ---
-title: "如何：调用 Windows API (Visual Basic)"
-ms.custom: 
+title: 如何：调用 Windows API (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - API calls [Visual Basic]
 - Windows API, calling
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 772db789fba4552a4645d2c6a242ba01944652ee
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: de568c3273d4d040c6566136e5d59e2155b86f8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>如何：调用 Windows API (Visual Basic)
 此示例定义并调用`MessageBox`user32.dll 中的函数然后将字符串传递给它。  
@@ -43,7 +34,7 @@ ms.lasthandoff: 01/19/2018
 -   之前已使用 `CreateType` 创建包含类型。 (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>请参阅  
- [详述平台调用](http://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+ [平台调用详解](http://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
  [平台调用示例](../../../framework/interop/platform-invoke-examples.md)  
  [使用非托管 DLL 函数](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
  [定义一个方法使用反射发出](http://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  

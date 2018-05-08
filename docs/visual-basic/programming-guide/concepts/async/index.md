@@ -1,23 +1,12 @@
 ---
 title: 使用 Async 和 Await 的异步编程 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 18e3abb8d010d3766aa1b1239b3d22cc3cb9b47e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f30dbeafa8fcac0ebfd76496721f1455b20048b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>使用 Async 和 Await 的异步编程 (Visual Basic)
 通过使用异步编程，你可以避免性能瓶颈并增强应用程序的总体响应能力。 但是，编写异步应用程序的传统技术可能比较复杂，使它们难以编写、调试和维护。  
@@ -157,7 +146,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  `Async` 和 `Await` 关键字不会创建其他线程。 因为异步方法不会在其自身线程上运行，因此它不需要多线程。 只有当方法处于活动状态时，该方法将在当前同步上下文中运行并使用线程上的时间。 可以使用 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 将占用大量 CPU 的工作移到后台线程，但是后台线程不会帮助正在等待结果的进程变为可用状态。  
   
- 对于异步编程而言，该基于异步的方法优于几乎每个用例中的现有方法。 具体而言，此方法比 <xref:System.ComponentModel.BackgroundWorker> 更适用于 IO 绑定的操作，因为此代码更简单且无需防止争用条件。 结合 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 使用时，异步编程比 <xref:System.ComponentModel.BackgroundWorker> 更适用于 CPU 绑定的操作，因为异步编程将运行代码的协调细节与 `Task.Run` 传输至线程池的工作区分开来。  
+ 对于异步编程而言，该基于异步的方法优于几乎每个用例中的现有方法。 具体而言，这种方法优于<xref:System.ComponentModel.BackgroundWorker>的 O 绑定的操作，因为代码更简单且无需防止争用条件。 结合 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 使用时，异步编程比 <xref:System.ComponentModel.BackgroundWorker> 更适用于 CPU 绑定的操作，因为异步编程将运行代码的协调细节与 `Task.Run` 传输至线程池的工作区分开来。  
   
 ##  <a name="BKMK_AsyncandAwait"></a>Async 和 Await  
  如果使用 [Async](../../../../visual-basic/language-reference/modifiers/async.md) 修饰符将某种方法指定为异步方法，即启用以下两种功能。  
@@ -251,7 +240,7 @@ Await Task_MethodAsync()
 |[如何：使用 Async 和 Await 并行发出多个 Web 请求 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|演示如何同时开始几个任务。|[异步示例：并行发出多个 Web 请求](http://go.microsoft.com/fwlink/p/?LinkID=254906&clcid=0x409)|  
 |[异步返回类型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)|描述异步方法可返回的类型，并解释每种类型适用于的情况。||  
 |[异步程序中的控制流 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|通过异步程序中的一系列 await 表达式来详细跟踪控制流。|[异步示例：异步程序中的控制流](http://go.microsoft.com/fwlink/p/?LinkID=255285&clcid=0x409)|  
-|[微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)|演示如何将以下功能添加到异步解决方案：<br /><br /> -   [取消一个异步任务或一组任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [在一段时间后取消异步任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [在完成一个异步任务后取消剩余任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [启动多个异步任务并在其完成时进行处理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[异步示例：微调应用程序](http://go.microsoft.com/fwlink/p/?LinkID=255046&clcid=0x409)|  
+|[微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)|演示如何将以下功能添加到异步解决方案：<br /><br /> -   [取消一个异步任务或一组任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [在一段时间后取消异步任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [在完成一个异步任务后取消剩余任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [启动多个异步任务并在其完成时进行处理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/p/?LinkID=255046&clcid=0x409)（异步示例：微调应用程序）|  
 |[在异步应用程序中处理重入 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|演示如何处理有效的异步操作在运行时重启的情况。||  
 |[WhenAny：.NET Framework 和 Windows 运行时之间的桥接](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)|展示了如何桥接 .NET Framework 与 [!INCLUDE[wrt](~/includes/wrt-md.md)]中 IAsyncOperations 的任务类型，以便可以将 <xref:System.Threading.Tasks.Task.WhenAny%2A> 与 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法结合使用。|[异步示例：桥接 .NET 和 Windows 运行时（AsTask 和 WhenAny）](http://go.microsoft.com/fwlink/p/?LinkID=260638)|  
 |异步取消：.NET Framework 和 Windows 运行时之间的桥接|展示了如何桥接 .NET Framework 与 [!INCLUDE[wrt](~/includes/wrt-md.md)]中 IAsyncOperations 的任务类型，以便可以将 <xref:System.Threading.CancellationTokenSource> 与 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法结合使用。|[异步示例：桥接 .NET 和 Windows 运行时（AsTask 和 Cancellation）](http://go.microsoft.com/fwlink/p/?LinkId=263004)|  
@@ -323,6 +312,6 @@ End Class
 ' Length of the downloaded string: 41763.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)  
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)

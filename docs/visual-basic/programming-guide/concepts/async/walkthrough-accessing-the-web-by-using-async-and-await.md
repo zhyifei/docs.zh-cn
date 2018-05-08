@@ -1,22 +1,12 @@
 ---
-title: "演练：使用 Async 和 Await 访问 Web (Visual Basic)"
-ms.custom: 
+title: 演练：使用 Async 和 Await 访问 Web (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: de1219de72be5ddc022d898c904663bf92ca5ab6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7154ea12f2660074e3ad8251b9baaa3eeb3d453c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>演练：使用 Async 和 Await 访问 Web (Visual Basic)
 使用 async/await 功能可以更轻松直观地编写异步程序。 你可以编写类似于同步代码的异步代码，并让编译器处理异步代码通常需要的疑难回调函数和延续。  
@@ -53,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [示例](#BKMK_CompleteCodeExamples)  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  计算机上必须安装 Visual Studio 2012 或更高版本。 有关详细信息，请访问 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkId=235233)。  
   
 ###  <a name="CreateWPFApp"></a> 创建 WPF 应用程序  
@@ -117,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 6.  选择“确定”按钮关闭对话框。  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a>若要添加必要的 Imports 语句  
+###  <a name="ImportsState"></a> 若要添加必要的 Imports 语句  
   
 1.  在**解决方案资源管理器**，打开 MainWindow.xaml.vb，快捷菜单，然后选择**查看代码**。  
   
@@ -682,8 +672,8 @@ Class MainWindow
 End Class  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [异步示例： 访问 Web 演练 （C# 和 Visual Basic）](http://go.microsoft.com/fwlink/?LinkId=255191)  
+## <a name="see-also"></a>请参阅  
+ [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)（异步示例：访问 Web 演练（C# 和 Visual Basic））  
  [Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)  
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
  [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  

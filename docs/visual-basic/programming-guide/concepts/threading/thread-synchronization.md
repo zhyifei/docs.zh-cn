@@ -1,22 +1,12 @@
 ---
-title: "线程同步 (Visual Basic)"
-ms.custom: 
+title: 线程同步 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 643dbb6fdceb4e1cfd074d3a532787562dbfd03b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-synchronization-visual-basic"></a>线程同步 (Visual Basic)
 以下各节中描述的功能和类可用于同步访问多线程应用程序中的资源。  
@@ -63,7 +53,7 @@ End Class
 -   <xref:System.Threading.Monitor>  
   
 ## <a name="monitors"></a>监视器  
- 与 `SyncLock` 关键字类似，监视器可防止多个线程同时执行代码块。 <xref:System.Threading.Monitor.Enter%2A> 方法允许有且只有一个线程继续执行下面的语句；执行线程调用 <xref:System.Threading.Monitor.Exit%2A> 之前，将阻止其他所有线程。 这与使用 `SyncLock` 关键字类似。 例如:   
+ 与 `SyncLock` 关键字类似，监视器可防止多个线程同时执行代码块。 <xref:System.Threading.Monitor.Enter%2A> 方法允许有且只有一个线程继续执行下面的语句；执行线程调用 <xref:System.Threading.Monitor.Exit%2A> 之前，将阻止其他所有线程。 这与使用 `SyncLock` 关键字类似。 例如：  
   
 ```vb  
 SyncLock x  
@@ -138,7 +128,7 @@ End Module
 ## <a name="deadlocks"></a>死锁  
  线程同步在多线程应用程序中非常有用，但是产生 `deadlock` 总是十分危险。一旦产生了死锁，将有多个线程互相等待，从而导致应用程序暂停。 死锁类似于汽车停在十字路口一样，每个人都在等待别人先出发。 因此，避免死锁很重要；关键是要仔细规划。 开始编码之前，通常可以通过绘制多线程应用程序来预测死锁情况。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.Thread>  
  <xref:System.Threading.WaitHandle.WaitOne%2A>  
  <xref:System.Threading.WaitHandle.WaitAny%2A>  

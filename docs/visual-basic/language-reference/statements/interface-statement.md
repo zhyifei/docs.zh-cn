@@ -1,24 +1,17 @@
 ---
 title: Interface 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Interface
 helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9418dc86ac6947ae951cb8fb757aed6e092a6668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4282778db2d95f701cadb8bb98ec8ca982ba663
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-statement-visual-basic"></a>Interface 语句 (Visual Basic)
 声明的接口的名称，并引入了接口包含成员的定义。  
@@ -46,7 +39,7 @@ End Interface
 |`attributelist`|可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
 |`accessmodifier`|可选。 可以是以下各项之一：<br /><br /> -   [公共](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私有](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
 |`Shadows`|可选。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
-|`name`|必需。 此接口的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`name`|必须的。 此接口的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
 |`Of`|可选。 指定这是一个泛型接口。|  
 |`typelist`|如果你使用是必需的[的](../../../visual-basic/language-reference/statements/of-clause.md)关键字。 此接口的类型参数的列表。 （可选），每个类型参数可以声明变体使用`In`和`Out`泛型修饰符。 请参阅[键入列表](../../../visual-basic/language-reference/statements/type-list.md)。|  
 |`Inherits`|可选。 指示此接口继承的属性和另一个接口或接口的成员。 请参阅[Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
@@ -118,7 +111,7 @@ End Interface
   
  请注意，`Property`和`Function`语句不会引入、 结束块`End Property`和`End Function`在界面中。 接口定义仅其成员的签名。 完整`Property`和`Function`块显示的类中实现`thisInterface`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
  [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
  [Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)  

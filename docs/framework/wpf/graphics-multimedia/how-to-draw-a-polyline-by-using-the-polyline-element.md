@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Polyline 元素来绘制折线"
-ms.custom: 
+title: 如何：使用 Polyline 元素来绘制折线
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - connected lines [WPF]
 - polylines [WPF], drawing
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9b0b027aa34b310413fa02e81149292fabb40f79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2abfa29f7aca4bfc8c5f91e36fd974093a98a9e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>如何：使用 Polyline 元素来绘制折线
 此示例演示如何绘制折线，这是一系列连接的直线，通过使用<xref:System.Windows.Shapes.Polyline>元素。  

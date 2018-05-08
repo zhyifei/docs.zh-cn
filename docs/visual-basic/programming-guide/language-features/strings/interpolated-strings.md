@@ -1,17 +1,13 @@
 ---
 title: 内插的字符串 (Visual Basic)
 ms.date: 10/31/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>内插的字符串 （Visual Basic 参考）
 
@@ -61,7 +57,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
    这是字符串解释的最终结果。 出现的所有双大括号（“{{”和“}}”）都转换为单大括号。 
 
-2. 将内插字符串转换为 <xref:System.IFormattable> 变量，使用此变量可通过单个 <xref:System.IFormattable> 实例创建多个包含区域性特定内容的结果字符串。 对于包括诸如各区域性的正确数字和日期格式之类的内容，这种转换很有用。  出现的所有双大括号（“{{”和“}}”）仍保留为双大括号，直至通过显式或隐式调用 <xref:System.Object.ToString> 方法格式化字符串。  包含的所有内插表达式都转换为 {0}、{1} 等等。  
+2. 将内插字符串转换为 <xref:System.IFormattable> 变量，使用此变量可通过单个 <xref:System.IFormattable> 实例创建多个包含区域性特定内容的结果字符串。 对于包括诸如各区域性的正确数字和日期格式之类的内容，这种转换很有用。  出现的所有双大括号（“{{”和“}}”）仍保留为双大括号，直至通过显式或隐式调用 <xref:System.Object.ToString> 方法格式化字符串。  所有包含的内插表达式都转换为{0}， {1}，依次类推。  
 
    以下示例使用反射来显示内插字符串中所创建的 <xref:System.IFormattable> 变量的成员以及字段和属性值。 并将 <xref:System.IFormattable> 变量传递给 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法。
 
@@ -71,17 +67,17 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 3. 转换到相比内, 插字符串的<xref:System.FormattableString>表示复合格式字符串的变量。 例如，检查复合格式字符串及其呈现为结果字符串的方式可能有助于在生成查询时防止注入攻击。 A<xref:System.FormattableString>还包括：
 
-      - A<xref:System.FormattableString.ToString>产生的结果字符串的重载<xref:System.Globalization.CultureInfo.CurrentCulture>。
+      - <xref:System.FormattableString.ToString> 重载，生成 <xref:System.Globalization.CultureInfo.CurrentCulture> 的结果字符串。
       
       - A<xref:System.FormattableString.Invariant%2A>要求方法能够生成的字符串<xref:System.Globalization.CultureInfo.InvariantCulture>。
       
-      - A<xref:System.FormattableString.ToString(System.IFormatProvider)>产生指定的区域性的结果字符串的方法。 
+      - <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法，生成特定区域性的结果字符串。 
   
-    将出现所有双大括号 ("{{"和"}}") 设置格式之前保持为双大括号。  包含的所有内插表达式都转换为 {0}、{1} 等等。  
+    将出现所有双大括号 ("{{"和"}}") 设置格式之前保持为双大括号。  所有包含的内插表达式都转换为{0}， {1}，依次类推。  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
  [Visual Basic 语言参考](index.md)  

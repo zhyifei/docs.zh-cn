@@ -1,26 +1,16 @@
 ---
-title: "如何：确定两个对象是否相关 (Visual Basic)"
-ms.custom: 
+title: 如何：确定两个对象是否相关 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], Visual Basic objects
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7824742459fca355c0043ad8ed20a26330402c05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2041f89ffd954e479046eb85c6dd82de1f8793ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>如何：确定两个对象是否相关 (Visual Basic)
 你可以比较两个对象以确定关系，如果有，从中创建的类之间。 <xref:System.Type.IsInstanceOfType%2A>方法<xref:System.Type?displayProperty=nameWithType>类返回`True`如果指定的类继承自当前类中，或如果当前类型是接口，支持由指定的类。  
@@ -33,7 +23,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  中的自变量列表<xref:System.Type.IsInstanceOfType%2A>，指定的派生类型可能是你认为的对象。  
   
-     <xref:System.Type.IsInstanceOfType%2A>返回`True`如果其自变量类型都继承自<xref:System.Type?displayProperty=nameWithType>对象类型。  
+     <xref:System.Type.IsInstanceOfType%2A> 返回`True`如果其自变量类型都继承自<xref:System.Type?displayProperty=nameWithType>对象类型。  
   
 ## <a name="example"></a>示例  
  下面的示例确定一个对象是否表示从另一个对象的类派生的类。  
@@ -56,7 +46,7 @@ End Class
   
  请注意对的调用中的两个对象变量的意外的位置<xref:System.Type.IsInstanceOfType%2A>。 假定的基类型用于生成<xref:System.Type?displayProperty=nameWithType>类，并且假定的派生的类型的自变量作为传递<xref:System.Type.IsInstanceOfType%2A>方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Object.GetType%2A>  
  <xref:System.Type?displayProperty=nameWithType>  
  <xref:System.Type.IsInstanceOfType%2A>  

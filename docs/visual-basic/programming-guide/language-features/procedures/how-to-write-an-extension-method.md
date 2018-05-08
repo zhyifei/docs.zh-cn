@@ -1,25 +1,16 @@
 ---
-title: "如何：编写扩展方法 (Visual Basic)"
-ms.custom: 
+title: 如何：编写扩展方法 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 65cdabf59886e7457a327ee9cde968a6a73f2280
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e220a025c39757b492be033caeb8924523515804
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>如何：编写扩展方法 (Visual Basic)
 扩展方法使你能够向现有类添加方法。 可以调用扩展方法，就像它是该类的实例。  
@@ -89,7 +80,7 @@ End Module
   
  `Hello!!!!`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
  [扩展方法](./extension-methods.md)  
  [Module 语句](../../../../visual-basic/language-reference/statements/module-statement.md)  

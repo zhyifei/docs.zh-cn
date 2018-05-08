@@ -1,22 +1,12 @@
 ---
-title: "XML (Visual Basic) 的功能转换"
-ms.custom: 
+title: XML (Visual Basic) 的功能转换
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69cd09a017ab7fbf9fc56a6724abb4cc15b3e1cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c268f414d720bb71866c35de367e9f452f02c5ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>XML (Visual Basic) 的功能转换
 本主题讨论用于修改 XML 文档的纯函数转换方法，并将该方法与过程方法进行比较。  
@@ -41,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
  如果源文档具有不规则的结构，则推荐使用 XSLT 工具进行以文档为中心的转换。 但是 LINQ to XML 也可以执行以文档为中心的转换。 有关详细信息，请参阅[如何： 转换 linq to XML 树的 XSLT 样式 (Visual Basic 中) 使用批注](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [介绍纯函数转换 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
  [LINQ to XML 与其他 XML 技术](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)  
  [LINQ to XML 与其他 XML 技术](http://msdn.microsoft.com/library/7ba1eecf-f09a-42de-bc80-22ca5b2e42d3)

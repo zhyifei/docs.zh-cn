@@ -1,12 +1,6 @@
 ---
-title: "可选参数 (Visual Basic)"
-ms.custom: 
+title: 可选参数 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - parameters [Visual Basic], optional
 - Visual Basic code, procedures
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e57023f594cfe4cd79d59cc8541fcf18018de0ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a438455668310769c5267a6d42a2e694bb7b01dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optional-parameters-visual-basic"></a>可选参数 (Visual Basic)
 可以指定过程参数是可选的，并且在调用过程时不必为其提供自变量。 *可选参数*由指示`Optional`过程定义中的关键字。 适用以下规则：  
@@ -43,9 +34,9 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 ```  
   
 ## <a name="calling-procedures-with-optional-parameters"></a>调用带可选参数的过程  
- 调用带可选参数的过程时，可以选择是否提供该变量。 如果不提供，过程将使用为该参数声明的默认值。  
+ 调用带可选参数的过程时，可以选择是否提供该自变量。 如果不提供，过程将使用为该参数声明的默认值。  
   
- 当省略参数列表中的一个或多个可选参数时，使用连续的逗号来标记它们的位置。 下面的调用示例提供了第一个和第四个参数，省略了第二个和第三个：  
+ 当省略自变量列表中的一个或多个可选自变量时，使用连续的逗号来标记它们的位置。 下面的调用示例提供了第一个和第四个自变量，省略了第二个和第三个：  
   
 ```vb  
 Sub name(argument 1, , , argument 4)  
@@ -53,7 +44,7 @@ Sub name(argument 1, , , argument 4)
   
  下面的示例对 `MsgBox` 函数进行多次调用。 `MsgBox` 有一个必需参数和两个可选参数。  
   
- 对 `MsgBox` 的第一个调用将按照 `MsgBox` 定义参数的顺序提供所有三个参数。 第二个调用仅提供必选参数。 第三个和第四个调用分别提供第一个和第三个参数。 第三个调用按位置提供参数，第四个调用按名称提供参数。  
+ 对 `MsgBox` 的第一个调用将按照 `MsgBox` 定义参数的顺序提供所有三个参数。 第二个调用仅提供必选自变量。 第三个和第四个调用分别提供第一个和第三个自变量。 第三个调用按位置提供参数，第四个调用按名称提供参数。  
   
  [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
@@ -67,7 +58,7 @@ Sub name(argument 1, , , argument 4)
 ## <a name="optional-parameters-and-overloading"></a>可选参数和重载  
  定义带可选参数的过程的另一种方法是使用重载。 如果有一个可选参数，可以定义过程的两个重载版本，一个接受此参数，另一个则不带参数。 此方法随可选参数数目的增加而变得更复杂。 然而，这样做的优点是可以完全确定调用程序是否提供了每个可选自变量。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
  [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)  

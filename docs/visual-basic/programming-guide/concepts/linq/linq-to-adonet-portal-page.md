@@ -1,23 +1,12 @@
 ---
 title: LINQ to ADO.NET（门户网站页）
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3a266b23856c05c7b5ea07c9020d29b2797c0036
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1f8985f6fa86ec906b4495fe15f2936af4270e79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET（门户网站页）
 通过 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)]，你可以使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 编程模型针对 [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 中的任何可枚举对象进行查询。  
@@ -25,7 +14,7 @@ ms.lasthandoff: 04/26/2018
 > [!NOTE]
 >  [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] 文档位于 .NET Framework SDK 的 ADO.NET 部分：[LINQ 和 ADO.NET](http://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)。  
   
- 有三种独立的 ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 技术：[!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]。 [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] 提供更丰富的优化查询通过<xref:System.Data.DataSet>，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]可以直接查询 SQL Server 数据库架构和[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]允许您查询[!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)]。  
+ 有三种独立的 ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 技术：[!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]。 [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] 提供针对 <xref:System.Data.DataSet> 的形式多样的优化查询，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 使你可直接查询 SQL Server 数据库架构，而 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] 允许你查询 [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)]。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet> 是 [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 中使用最广泛的组件之一，也是断开连接的编程模型的关键元素，该模型是构建 [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 的基础。 <xref:System.Data.DataSet> 虽然具有突出的优点，但其查询功能也存在限制。  

@@ -1,22 +1,12 @@
 ---
-title: "如何： 从文件 (Visual Basic) 加载 XML"
-ms.custom: 
+title: 如何： 从文件 (Visual Basic) 加载 XML
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7babad6b08b2aa486c2ae92e7ad2485d62ac5d47
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fce4ebee075f5e622de17bd5227dd6e4ae9cccd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-load-xml-from-a-file-visual-basic"></a>如何： 从文件 (Visual Basic) 加载 XML
 本主题演示如何通过使用 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 方法从 URI 加载 XML。  
@@ -57,5 +47,5 @@ Console.WriteLine(booksFromFile)
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

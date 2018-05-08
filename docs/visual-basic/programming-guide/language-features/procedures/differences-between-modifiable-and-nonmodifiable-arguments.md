@@ -1,12 +1,6 @@
 ---
-title: "可修改和不可修改自变量之间的差异 (Visual Basic)"
-ms.custom: 
+title: 可修改和不可修改自变量之间的差异 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedure arguments
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ab108d064f5c6740f80328a9b6db4785334550ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b60d732b260ad0477946e41ece4cd182de541ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>可修改和不可修改自变量之间的差异 (Visual Basic)
 当调用过程时，您通常给它传递了一个或多个自变量。 每个自变量与基础的编程元素相对应。 基本元素和参数本身可以是可修改或不可修改。  
@@ -45,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  被调用的过程可以修改其本地副本的一个不可修改的自变量，但该修改不会影响中调用代码的基础元素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
  [如何：将自变量传递给过程](./how-to-pass-arguments-to-a-procedure.md)  

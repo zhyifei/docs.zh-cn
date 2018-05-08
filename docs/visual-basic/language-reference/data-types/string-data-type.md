@@ -1,11 +1,6 @@
 ---
 title: String 数据类型 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.String
 helpviewer_keywords:
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90f126a5cca36969617446e81a8d13434e39df75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 894638bbe50dad2cae1f74a2f7b7fe006f029d1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-data-type-visual-basic"></a>String 数据类型 (Visual Basic)
 包含从 0 到 65535 之间的值中的无符号的 16 位 （2 个字节） 码位的序列该范围。 每个*代码点*，或字符代码，表示单个 Unicode 字符。 一个字符串可以包含从 0 到二十亿 (2 ^31) Unicode 字符。  
@@ -81,11 +73,11 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **互操作注意事项。** 如果你与不是为.NET Framework 中，编写的组件交互如自动化或 COM 对象，请记住字符串字符具有不同的数据宽度 （8 位） 在其他环境中。 如果你的 8 位字符的字符串自变量传递给此类组件，将其声明为`Byte()`，数组`Byte`元素，而不是`String`在新的 Visual Basic 代码。  
   
--   **类型字符。** 后追加一个标识符类型字符`$`到任何标识符将其强制转换到`String`数据类型。 `String`有没有文本类型字符。 但是，编译器将用引号引起来的文本 (`" "`) 作为`String`。  
+-   **类型字符。** 后追加一个标识符类型字符`$`到任何标识符将其强制转换到`String`数据类型。 `String` 有没有文本类型字符。 但是，编译器将用引号引起来的文本 (`" "`) 作为`String`。  
   
 -   **Framework 类型。** .NET Framework 中的对应类型是<xref:System.String?displayProperty=nameWithType>类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.String?displayProperty=nameWithType>  
  [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [Char 数据类型](../../../visual-basic/language-reference/data-types/char-data-type.md)  

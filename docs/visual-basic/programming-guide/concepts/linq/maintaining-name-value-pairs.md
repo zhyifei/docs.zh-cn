@@ -1,22 +1,12 @@
 ---
-title: "维护名称 / 值对 (Visual Basic)"
-ms.custom: 
+title: 维护名称 / 值对 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e2743b7ce09db2ec2695c04eeef631a33fa2c289
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6d842adb1e21a7744f03f4a7e7fb0785ffb6a119
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a>维护名称/值对 (Visual Basic)
 很多应用程序都必须维护需要保存为名称/值对的信息。 此信息可能是配置信息或全局设置。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含一些方法，能轻松保存一组名称/值对。 可以将这些信息保存为属性，也可以保存为一组子元素。  
@@ -127,7 +117,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
  <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
  [修改 XML 树 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

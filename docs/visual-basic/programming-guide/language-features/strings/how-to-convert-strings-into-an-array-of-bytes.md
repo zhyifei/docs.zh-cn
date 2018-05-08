@@ -1,12 +1,6 @@
 ---
-title: "如何：在 Visual Basic 中将字符串转换为字节数组"
-ms.custom: 
+title: 如何：在 Visual Basic 中将字符串转换为字节数组
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - string conversion [Visual Basic], arrays
 - arrays [Visual Basic], converting strings to
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - examples [Visual Basic], string conversion
 - arrays [Visual Basic], byte arrays
 ms.assetid: f477d35c-a3fc-4a30-b1d4-cd0d353aae1d
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6d527434dc0a61c9c771b42d05c1ee316094e7fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: da4a47b955b91f4bb39ecd7832da30d76e75d553
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a>如何：在 Visual Basic 中将字符串转换为字节数组
 本主题演示如何将字符串转换为字节数组。  
@@ -47,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>： 获取 utf-8 格式的编码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Text.Encoding?displayProperty=nameWithType>  
  <xref:System.Text.Encoding.GetBytes%2A>  
  [如何： 将字节数组转换为 Visual Basic 中的字符串](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)

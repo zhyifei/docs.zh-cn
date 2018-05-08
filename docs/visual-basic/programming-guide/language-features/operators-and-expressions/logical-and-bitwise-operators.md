@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic 中的逻辑运算符和位运算符"
-ms.custom: 
+title: Visual Basic 中的逻辑运算符和位运算符
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - short-circuiting
 - Boolean expressions
@@ -27,14 +21,11 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ba48f722a11e93f82ae99aa407c3096a964e5ddd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 371d28629b39fb2808ca018ea69da3306a31f50c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic 中的逻辑运算符和位运算符
 逻辑运算符比较`Boolean`表达式，并返回`Boolean`结果。 `And`， `Or`， `AndAlso`， `OrElse`，和`Xor`运算符是*二进制*由于它们采用两个操作数，而`Not`运算符是*一元*因为它采用一个操作数。 某些这些运算符还可以执行对整数值的按位逻辑运算。  
@@ -96,14 +87,14 @@ ms.lasthandoff: 11/21/2017
   
 -   结果将被视为小数。 001 的值是 1，二进制表示形式，因此`x`= 1。  
   
- 按位`Or`操作非常相似，只不过 1 分配给结果位，如果一个或两个比较位为 1。 `Xor`如果完全之一 （不是两者） 的比较位是 1，1 赋给结果位。 `Not`采用单个操作数和反转所有位，包括符号位，并将该值赋给结果。 这意味着，对于有符号正数，`Not`始终返回一个负值，而对于负数，`Not`始终返回一个值为正或零值。  
+ 按位`Or`操作非常相似，只不过 1 分配给结果位，如果一个或两个比较位为 1。 `Xor` 如果完全之一 （不是两者） 的比较位是 1，1 赋给结果位。 `Not` 采用单个操作数和反转所有位，包括符号位，并将该值赋给结果。 这意味着，对于有符号正数，`Not`始终返回一个负值，而对于负数，`Not`始终返回一个值为正或零值。  
   
  `AndAlso`和`OrElse`运算符不支持按位运算。  
   
 > [!NOTE]
 >  只能对整型，可以执行按位运算。 按位运算可以继续操作之前，必须为整型转换浮点值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [逻辑/按位运算符 (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
  [布尔表达式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
  [在 Visual Basic 中的算术运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  

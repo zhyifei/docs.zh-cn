@@ -1,22 +1,12 @@
 ---
-title: "如何：查询包含一组指定词语的句子 (LINQ) (Visual Basic)"
-ms.custom: 
+title: 如何：查询包含一组指定词语的句子 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 523b1e681c97e14f1d0e49b82a426b0e0e54fa1e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0b61b75c5f26c48d817b8f51c740cc1758607838
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>如何：查询包含一组指定词语的句子 (LINQ) (Visual Basic)
 此示例演示如何在包含一组指定的词语的每个匹配项的文本文件中查找句子。 尽管此示例中的搜索词数组采用硬编码形式，但它也可在运行时以动态方式进行填充。 在此示例中，查询将返回包含单词“Historically,”、“data,”和“integrated”的句子。  
@@ -74,5 +64,5 @@ End Class
 ## <a name="compiling-the-code"></a>编译代码  
  创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

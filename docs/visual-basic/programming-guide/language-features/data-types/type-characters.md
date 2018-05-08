@@ -1,13 +1,6 @@
 ---
-title: "类型字符 (Visual Basic)"
-ms.custom: 
+title: 类型字符 (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - '&H prefix for hexadecimal values'
 - hexadecimal literals [Visual Basic]
@@ -45,12 +38,11 @@ helpviewer_keywords:
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 author: rpetrusha
 ms.author: ronpet
-ms.manager: wpickett
-ms.openlocfilehash: 20a9a30689fb62a6956987b06470e76eeb42ebab
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 9262c57c5773b947f18fd9e8cf9087bb8e02de7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-characters-visual-basic"></a>键入字符 (Visual Basic)
 
@@ -141,7 +133,7 @@ Dim flags As UShort = &H8000US
 
 在前面的示例中， `counter` -32768，十进制值和`flags`32768 的十进制值。
 
-从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如:
+从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如：
 
 ```vb
 Dim number As Integer = &H_C305_F860

@@ -1,28 +1,19 @@
 ---
-title: '&#39;自定义 &#39;修饰符声明而无需显式委托类型的事件上无效'
+title: '&#39;自定义&#39;修饰符声明而无需显式委托类型的事件上无效'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31122
 - bc31122
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 844bd033ea05e373b04a04f80777af77179c1263
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f08bbbbbac4a01dfbac8d15cf9285c01262618a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39;自定义 &#39;修饰符声明而无需显式委托类型的事件上无效
+# <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39;自定义&#39;修饰符声明而无需显式委托类型的事件上无效
 与不同的非自定义事件，`Custom Event`声明要求`As`子句之后显式指定事件的委托类型的事件名称。  
   
  非自定义事件可以是定义使用`As`子句和显式委托类型，或一个参数列表立即在事件名称。  
@@ -48,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrEventError#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_3.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
  [Delegate 语句](../../../visual-basic/language-reference/statements/delegate-statement.md)  
  [事件](../../../visual-basic/programming-guide/language-features/events/index.md)

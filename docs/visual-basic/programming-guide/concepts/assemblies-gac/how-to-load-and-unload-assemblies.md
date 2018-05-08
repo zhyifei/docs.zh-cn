@@ -1,22 +1,12 @@
 ---
-title: "如何： 加载和卸载程序集 (Visual Basic)"
-ms.custom: 
+title: 如何： 加载和卸载程序集 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bbc84236-04b6-4c1b-9672-52773f65a5dc
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fd52a1094dba16c7e1bcba5bface9e13747cd4f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1cec7a7e15843874b65cf5d2f3a23b8e644a26d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-load-and-unload-assemblies-visual-basic"></a>如何： 加载和卸载程序集 (Visual Basic)
 在生成时自动加载程序所引用的程序集，但也可以在运行时将特定的程序集加载到当前的应用程序域。 有关详细信息，请参阅 [How to: Load Assemblies into an Application Domain](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)（如何：将程序集加载到应用程序域中）。  
@@ -33,7 +23,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  在没有卸载所有包含单个程序集的应用程序域之前，无法卸载此程序集。 使用 <xref:System.AppDomain> 中的 `Unload` 方法卸载应用程序域。 有关详细信息，请参阅 [How to: Unload an Application Domain](../../../../framework/app-domains/how-to-unload-an-application-domain.md)（如何：卸载应用程序域）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编程概念](../../../../visual-basic/programming-guide/concepts/index.md)  
  [程序集和全局程序集缓存 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [如何：将程序集加载到应用程序域中](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

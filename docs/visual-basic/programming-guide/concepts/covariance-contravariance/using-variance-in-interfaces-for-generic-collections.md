@@ -1,22 +1,12 @@
 ---
-title: "泛型集合 (Visual Basic 中) 在接口中使用变体"
-ms.custom: 
+title: 泛型集合 (Visual Basic 中) 在接口中使用变体
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b8944bf8f6377ddc633f81dccd9f379bf176d9f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 860c41e73aa2d45ca1a9adcb3031834545e2fb37
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>泛型集合 (Visual Basic 中) 在接口中使用变体
 协变接口允许其方法返回的派生类型多于接口中指定的派生类型。 逆变接口允许其方法接受派生类型少于接口中指定的类型的参数。  
@@ -118,5 +108,5 @@ Sub Main()
 End Sub  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [泛型接口中的变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

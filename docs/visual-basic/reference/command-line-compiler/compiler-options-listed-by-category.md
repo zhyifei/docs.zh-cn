@@ -1,22 +1,16 @@
 ---
 title: 按类别列出的 Visual Basic 编译器选项
 ms.date: 04/12/2018
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a90c54ae1bb4d89b2fbe0df62730bc55c0ceb64f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 13aeab52cfd43aa8dfd7fda69e2eb9be798473e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>按类别列出的 Visual Basic 编译器选项
 Visual Basic 命令行编译器提供作为编译的程序从 Visual Studio 集成的开发环境 (IDE) 中的替代方法。 下面是 Visual Basic 命令行编译器选项按功能分类排序的列表。  
@@ -45,7 +39,7 @@ Visual Basic 命令行编译器提供作为编译的程序从 Visual Studio 集�
 |选项|目标|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|处理 XML 文件的文档注释。|  
-|[-确定性](../../../visual-basic/reference/command-line-compiler/deterministic.md)|使编译器输出的二进制内容都是相同编译如果输入相同程序集。|
+|[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|如果输入相同，则会导致编译器输出的程序集其二进制内容在整个编译中相同。|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|设置编译器从而以 [!INCLUDE[Compact](~/includes/compact-md.md)] 为目标。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|指定输出目录。|  
 |[/refonly](refonly-compiler-option.md)|输出仅引用程序集。|

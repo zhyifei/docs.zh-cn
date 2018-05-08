@@ -1,24 +1,15 @@
 ---
-title: "&lt;权限&gt;(Visual Basic)"
-ms.custom: 
+title: '&lt;权限&gt;(Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 67e11998e43a43f92c26eb5f7daa488d288823c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4fafebf94be350951672f01f2d17bd00d4bab69a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltpermissiongt-visual-basic"></a>&lt;权限&gt;(Visual Basic)
 指定成员所需的权限。  
@@ -46,5 +37,5 @@ ms.lasthandoff: 10/18/2017
   
  [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/permission_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 注释标记](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

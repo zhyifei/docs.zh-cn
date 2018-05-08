@@ -1,12 +1,6 @@
 ---
-title: "结构和其他编程元素 (Visual Basic)"
-ms.custom: 
+title: 结构和其他编程元素 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - structures [Visual Basic], arrays
 - procedures [Visual Basic], structures as arguments to
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: de343c06ec255d6cb68aa25d733e85385e884769
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7b375c5a45998fc0bd06f7c075f23a30dd377295
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>结构和其他编程元素 (Visual Basic)
 你可以结合使用数组、 对象和过程，以及与每个其他使用结构。 交互使用相同的语法，如单独使用这些元素。  
@@ -130,7 +121,7 @@ allSystems(1).diskDrives(0).type = "Floppy"
   
  结构可以包含其他结构到任意深度。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
  [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  

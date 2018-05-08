@@ -1,12 +1,6 @@
 ---
-title: "如何：控制变量的范围 (Visual Basic)"
-ms.custom: 
+title: 如何：控制变量的范围 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], scope
 - declared elements [Visual Basic], scope
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7284d344e3bf0fdd0f900f2a820d6c8db4a4bf74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6e8d1178398711226b88fee7e6defd5162b91fcb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>如何：控制变量的范围 (Visual Basic)
 通常情况下，变量位于*作用域*，或作为参考，整个声明它的区域可见。 在某些情况下，该变量的*访问级别*可影响其范围。  
@@ -94,7 +85,7 @@ Public strMsg As String
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  变量的范围越窄，它的使用变量越小的恶意代码可以不正确的机会。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
  [在 Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
  [在 Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  

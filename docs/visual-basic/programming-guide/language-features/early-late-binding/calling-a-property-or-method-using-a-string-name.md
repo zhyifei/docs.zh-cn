@@ -1,12 +1,6 @@
 ---
-title: "使用字符串名调用属性或方法 (Visual Basic)"
-ms.custom: 
+title: 使用字符串名调用属性或方法 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - passing operators [Visual Basic]
 - strings [Visual Basic], passing new operators as
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c5974257fb82fe83c66a480225da200c14338898
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 76be426049489bb58e50878822c03fa5cd5cca8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字符串名调用属性或方法 (Visual Basic)
 在大多数情况下，可以在设计时发现的属性和方法的对象，并编写代码来处理它们。 但是，在某些情况下你可能事先不知道有关对象的属性和方法，或者您可能只想启用最终用户可以指定属性或在运行时执行方法的灵活性。  
@@ -54,6 +45,6 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  虽然`CallByName`函数可能在某些情况下有用，您必须权衡的性能影响对其用途-使用`CallByName`来调用过程是比后期绑定调用稍慢。 如果正在调用的函数，重复调用，如循环内,`CallByName`会对性能产生严重。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>  
  [确定对象类型](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)

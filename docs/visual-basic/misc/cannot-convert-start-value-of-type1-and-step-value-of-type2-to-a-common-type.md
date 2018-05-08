@@ -1,23 +1,16 @@
 ---
-title: "无法将转换类型 &#39; 起始的值&lt;type1&gt;&#39; 和的类型 &#39; 步长值&lt;type2&gt;&#39; 为通用类型"
+title: 无法转换类型的起始值&#39; &lt;type1&gt; &#39;和类型的步长值&#39; &lt;type2&gt; &#39;为通用类型
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c2636b2a94bea4a83e35865d73e0eaa2b2afed35
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 91580faa6172abc8d9b4d6d2d3e04293b6ae8245
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>无法将转换类型 &#39; 起始的值&lt;type1&gt;&#39; 和的类型 &#39; 步长值&lt;type2&gt;&#39; 为通用类型
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>无法转换类型的起始值&#39; &lt;type1&gt; &#39;和类型的步长值&#39; &lt;type2&gt; &#39;为通用类型
 指定的 `For...Next` 控制值具有不同的类型，因此无效，其原因是它们不能转换为通用类型。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  

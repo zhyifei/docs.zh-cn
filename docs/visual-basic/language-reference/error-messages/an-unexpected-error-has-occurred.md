@@ -1,22 +1,14 @@
 ---
 title: 发生错误，因为无法获得单个实例启动所需的操作系统资源
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8969303d66e946d5579c6cca592b5701c4ebd632
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 313128d5511ddd0f3b75c58e2c10a74eb967d130
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>发生错误，因为无法获得单个实例启动所需的操作系统资源
 应用程序未能获取所需的操作系统资源。 一些可能导致此问题的原因是：  
@@ -37,7 +29,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  记录发生错误的环境，并与 Microsoft 产品支持服务联系  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [“项目设计器”->“应用程序”页 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
  [调试器基础知识](/visualstudio/debugger/debugger-basics)  
  [与我们交流](/visualstudio/ide/talk-to-us)

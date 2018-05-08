@@ -1,22 +1,14 @@
 ---
 title: 如何：使用 PrintForm 组件打印窗体 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Form [Visual Basic], printing
 ms.assetid: df963bf6-3ee1-49f4-8b2e-1d95d1beb0be
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5edad4f04b98dcf0dfa328f111db5dcb423036e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5f8e620fce2b85d3f3cdb66bf80967f8eb281361
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>如何：使用 PrintForm 组件打印窗体 (Visual Basic)
 通过 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 组件，可以在不使用 <xref:System.Drawing.Printing.PrintDocument> 组件的情况下如实快速打印窗体的图像。 以下过程介绍如何将窗体打印到打印机、打印预览窗口和封装的 PostScript 文件。  
@@ -69,7 +61,7 @@ ms.lasthandoff: 11/21/2017
     PrintForm1.Print()  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintFileName%2A>  
  [如何：打印窗体的工作区](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  

@@ -1,22 +1,12 @@
 ---
-title: "泛型接口 (Visual Basic 中) 中的变体"
-ms.custom: 
+title: 泛型接口 (Visual Basic 中) 中的变体
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d05ccdc97efd5dd193bbbe0d15dd227ec71910d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c18f014897ace71e437bd733ff6fcd1d4d8810dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>泛型接口 (Visual Basic 中) 中的变体
 .NET Framework 4 引入了对多个现有泛型接口的变体支持。 变体支持允许实现这些接口的类进行隐式转换。 下面的接口现在是变体：  
@@ -100,7 +90,7 @@ Dim integers As IEnumerable(Of Integer) = New List(Of Integer)
 Dim listObjects As IEnumerable(Of Object) = New List(Of String)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在泛型集合的接口中使用变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)  
  [创建变体泛型接口 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)  
  [泛型接口](../../../../standard/generics/interfaces.md)  

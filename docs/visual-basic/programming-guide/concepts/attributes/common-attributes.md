@@ -1,22 +1,12 @@
 ---
-title: "公共特性 (Visual Basic)"
-ms.custom: 
+title: 公共特性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9528b7dcfa52c30954929d714bd098eb51886ebd
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-attributes-visual-basic"></a>公共特性 (Visual Basic)
 本主题介绍在 Visual Basic 程序中最常使用的属性。  
@@ -84,7 +74,7 @@ ms.lasthandoff: 12/21/2017
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|定义程序集清单的友好默认别名|  
   
 ##  <a name="Obsolete"></a> Obsolete 特性  
- `Obsolete` 特性将程序实体标记为不再推荐使用。 每次使用标记为过时的实体后，将生成警告或错误，具体取决于该特性的配置方式。 例如:  
+ `Obsolete` 特性将程序实体标记为不再推荐使用。 每次使用标记为过时的实体后，将生成警告或错误，具体取决于该特性的配置方式。 例如：  
   
 ```vb  
 <System.Obsolete("use class B")>   
@@ -231,7 +221,7 @@ End Class
   
  有关调用方信息特性的详细信息，请参阅[调用方信息 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。  
   
-##  <a name="VB"></a>Visual Basic 属性  
+##  <a name="VB"></a> Visual Basic 属性  
  下表列出了特定于 Visual Basic 的特性。  
   
 |特性|目标|  

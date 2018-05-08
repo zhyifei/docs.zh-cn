@@ -1,12 +1,6 @@
 ---
-title: "如何：定义运算符 (Visual Basic)"
-ms.custom: 
+title: 如何：定义运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51921ee38204fd528ed19436806fc9433abbdc5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c759ebf38ab0727aeada218d288b5ac01e3ecd03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>如何：定义运算符 (Visual Basic)
 如果已定义类或结构，则可以定义一个标准的运算符的行为 (如`*`， `<>`，或`And`) 当一个或两个操作数是类或结构的类型。  
@@ -46,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息和示例，请参阅 [Visual Basic 2005 中的运算符重载](http://go.microsoft.com/fwlink/?LinkId=101703)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符过程](./operator-procedures.md)  
  [如何：定义转换运算符](./how-to-define-a-conversion-operator.md)  
  [如何：调用运算符过程](./how-to-call-an-operator-procedure.md)  

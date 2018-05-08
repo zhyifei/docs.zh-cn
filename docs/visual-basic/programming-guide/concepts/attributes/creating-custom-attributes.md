@@ -1,22 +1,12 @@
 ---
-title: "创建自定义特性 (Visual Basic)"
-ms.custom: 
+title: 创建自定义特性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a24553ae4cc2186e805d76ddb37f38c0322aeac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9af0832e04308bf1942fc955afe5a67161096465
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>创建自定义特性 (Visual Basic)
 可通过定义特性类创建自己的自定义特性，特性类是直接或间接派生自 <xref:System.Attribute> 的类，可快速轻松地识别元数据中的特性定义。 假设希望使用编写类型的程序员的姓名来标记该类型。 可能需要定义一个自定义 `Author` 特性类：  
@@ -71,7 +61,7 @@ End Class
 > [!NOTE]
 >  如果特性类包含属性，则该属性必须为读写属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Reflection>  
  [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)  
  [编写自定义特性](../../../../standard/attributes/writing-custom-attributes.md)  

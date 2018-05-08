@@ -1,26 +1,16 @@
 ---
 title: 集合初始值设定项 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CollectionInitializer
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ec0179df50df453d6058a4b910d17561394140d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 20bf9b263a349f327f12d1f3c7753fb9f34436e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-initializers-visual-basic"></a>集合初始值设定项 (Visual Basic)
 集合初始值设定项提供了用于创建集合并在其中填充一组初始值的缩短语法。 若要通过一组已知值（例如，菜单选项或类别列表、一组初始数字值、字符串（如日期或月份名称）或地理位置（如用于验证的州或省/自治区/直辖市列表）静态列表）创建集合，将会发现集合初始值设定项非常有用。  
@@ -85,9 +75,9 @@ ms.lasthandoff: 11/21/2017
 |[如何：创建集合初始值设定项所使用的 Add 扩展方法](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|展示了如何创建 `Add` 扩展方法，以便在集合中填充集合初始值设定项中的值。|  
 |[如何：创建集合初始值设定项所使用的集合](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|展示了如何在实现 `IEnumerable` 的集合类中添加 `Add` 方法，从而启用集合初始值设定项。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [阵列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [对象初始值设定项：命名类型和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)  
  [自动实现的属性](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  

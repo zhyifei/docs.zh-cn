@@ -1,13 +1,6 @@
 ---
 title: Visual Basic 中的隐藏
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], shadowing
 - overriding, and shadowing
@@ -25,14 +18,11 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 489e1786b08085f229f66b2dbc434b96b06d86df
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fde6259b67a8d963ed8c30b87c94029fb2658664
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic 中的隐藏
 当两个编程元素共享相同的名称时，可以隐藏其中一个，或*卷影*，另一个。 在这种情况下，隐藏的元素也无法供引用;相反，当你的代码使用的元素名称时，Visual Basic 编译器将其解析为隐藏的元素。  

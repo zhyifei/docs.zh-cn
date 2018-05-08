@@ -1,29 +1,19 @@
 ---
-title: "演练： 在 Visual Studio (Visual Basic 中) 中嵌入 Microsoft Office 程序集中的类型信息"
-ms.custom: 
+title: 演练： 在 Visual Studio (Visual Basic 中) 中嵌入 Microsoft Office 程序集中的类型信息
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 26e6fee5147e8477c64f7eaf0dc2aeb928c13e15
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a28e95f9c3cfcc2481c8f4f9f83303648df43cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>演练： 在 Visual Studio (Visual Basic 中) 中嵌入 Microsoft Office 程序集中的类型信息
 如果在引用 COM 对象的应用程序中嵌入类型信息，则无需使用主互操作程序集 (PIA)。 此外，利用嵌入的类型信息可实现应用程序的版本独立性。 也就是说，可将程序编写为使用多个 COM 库版本中的类型，而无需使用每个版本的特定 PIA。 对于使用 Microsoft Office 库中对象的应用程序，这是一种常用方案。 通过嵌入类型信息，程序的同一个生成可以使用不同计算机上的不同 Microsoft Office 版本，而无需为 Microsoft Office 的每个版本重新部署该程序或 PIA。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本演练需要如下内容：  
   
 -   安装有 Visual Studio 和 Microsoft Excel 的计算机。  
@@ -118,6 +108,6 @@ ms.lasthandoff: 11/21/2017
   
 5.  验证是否已在示例代码中指定的位置创建了 Excel 工作簿：C:\SampleFolder\SampleWorkbook.xls。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [演练： 在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
  [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)

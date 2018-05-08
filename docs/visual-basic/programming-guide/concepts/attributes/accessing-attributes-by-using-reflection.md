@@ -1,22 +1,12 @@
 ---
-title: "使用反射 (Visual Basic 中) 访问特性"
-ms.custom: 
+title: 使用反射 (Visual Basic 中) 访问特性
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a4397200b5a2aa5f337dd3479b5405c1a9f245a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dca476eef392a2f57d0c66727c53e0e53310d679
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>使用反射 (Visual Basic 中) 访问特性
 你可以定义自定义特性并将其放入源代码中这一事实，在没有检索该信息并对其进行操作的方法的情况下将没有任何价值。 通过使用反射，可以检索通过自定义特性定义的信息。 主要方法是 `GetCustomAttributes`，它返回对象数组，这些对象在运行时等效于源代码特性。 此方法有多个重载版本。 有关详细信息，请参阅<xref:System.Attribute>。  
@@ -108,7 +98,7 @@ Class TestAuthorAttribute
 End Class  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)  

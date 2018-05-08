@@ -1,13 +1,6 @@
 ---
 title: 如何：在 Visual Basic 中声明和调用默认属性
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - defaults [Visual Basic], properties
 - properties [Visual Basic], default
@@ -17,14 +10,11 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9c4f471eba42e47d6bef45a4d38abc0cbd2d32bc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7805ee4dcd4bad0d0624c97ccc25232e9bc31ba4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>如何：在 Visual Basic 中声明和调用默认属性
 A*默认属性*是一个类或结构的属性，你的代码可以访问而无需指定它。 当调用代码对类或结构，但不是属性和上下文允许对属性的访问，Visual Basic 对该类或结构的默认属性解析的访问权限，如果存在。  

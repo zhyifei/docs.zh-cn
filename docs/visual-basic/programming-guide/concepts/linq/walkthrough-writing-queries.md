@@ -1,32 +1,22 @@
 ---
-title: "在 Visual Basic 中编写查询"
-ms.custom: 
+title: 在 Visual Basic 中编写查询
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ [Visual Basic], walkthroughs
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-caps.latest.revision: "70"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e78d93895a86ad9b2456e5ac7c05db83ebf0379d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: beb192f6b136455cb1adcb6cf2616578b63fcebf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>演练：用 Visual Basic 编写查询
 本演练演示如何使用 Visual Basic 语言功能来编写[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查询表达式。 本演练说明如何在列表中的学生对象创建查询、 如何运行查询，以及如何对其进行修改。 查询将包括对象初始值设定项、 本地类型推断、 和匿名类型的多个功能合并。  
   
- 完成此演练后，你将准备好将移到的示例和文档的特定[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]你感兴趣的提供程序。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]提供程序包括[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]， [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]，和[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。  
+ 完成此演练后，你将准备好将移到的示例和文档的特定[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]你感兴趣的提供程序。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序包括[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]， [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]，和[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。  
   
 ## <a name="create-a-project"></a>创建项目  
   

@@ -1,12 +1,6 @@
 ---
 title: Set 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Set
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3b18e6c858e64e78d7ab85fdaafd70e510f7a02f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dbc48d14bac54809e4ddd12c87429bf407169950
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-statement-visual-basic"></a>Set 语句 (Visual Basic)
 声明`Set`用于将值分配给属性的属性过程。  
@@ -54,7 +45,7 @@ End Set
  请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `value`  
- 必需。 参数，其中包含属性的新值。  
+ 必须的。 参数，其中包含属性的新值。  
   
  `datatype`  
  如果存在`Option Strict`是`On`。 数据类型的`value`参数。 指定的数据类型必须是属性的数据类型相同，这`Set`声明语句。  
@@ -63,7 +54,7 @@ End Set
  可选。 运行时的一个或多个语句`Set`调用属性过程。  
   
  `End Set`  
- 必需。 终止的定义`Set`属性过程。  
+ 必须的。 终止的定义`Set`属性过程。  
   
 ## <a name="remarks"></a>备注  
  每个属性必须具有`Set`属性过程除非该属性被标记为`ReadOnly`。 `Set`过程用于设置属性的值。  
@@ -86,7 +77,7 @@ End Set
   
 -   **返回从属性过程。** 当`Set`过程返回到调用代码时，将会继续执行提供了要存储的值的语句。  
   
-     `Set`属性过程可以返回使用[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)或[退出语句](../../../visual-basic/language-reference/statements/exit-statement.md)。  
+     `Set` 属性过程可以返回使用[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)或[退出语句](../../../visual-basic/language-reference/statements/exit-statement.md)。  
   
      `Exit Property`和`Return`语句从属性过程会导致立即退出。 任意数量的`Exit Property`和`Return`语句可以出现的任何位置在过程中，并可混合`Exit Property`和`Return`语句。  
   
@@ -95,7 +86,7 @@ End Set
   
  [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Get 语句](../../../visual-basic/language-reference/statements/get-statement.md)  
  [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  

@@ -1,22 +1,12 @@
 ---
-title: "LINQ Querying2 上启用了数据源"
-ms.custom: 
+title: LINQ Querying2 上启用了数据源
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2a6ec979c4c7ed36a9b9f56b04de762fe4ec7fec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0904d646014fa6a0525e624bc3466dee12b3cc02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>启用数据源以进行 LINQ 查询
 可通过多种方式来扩展 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，以便能够在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式中查询任何数据源。 数据源可以是数据结构、Web 服务、文件系统或数据库等。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式使客户端可以轻松地查询能够进行 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的数据源，因为查询的语法和模式没有更改。 可通过以下方式将 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 扩展到这些数据源：  
@@ -48,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  复杂的 `IQueryable` 提供程序（如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 提供程序）可将完整的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询转换为可表达查询语言（如 SQL）。 与复杂性较低的提供程序相比，复杂的提供程序更为全面，因为它能在查询中处理各种各样的问题。 它还具有开放的类型系统，因而必须包含广泛的基础结构来映射用户定义的类型。 开发复杂的提供程序需要耗费大量的精力。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Linq.IQueryable%601>  
  <xref:System.Collections.Generic.IEnumerable%601>  
  <xref:System.Linq.Enumerable>  

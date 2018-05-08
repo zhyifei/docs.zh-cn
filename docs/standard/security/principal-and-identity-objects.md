@@ -1,13 +1,7 @@
 ---
-title: "主体和标识对象"
-ms.custom: 
+title: 主体和标识对象
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WindowsIdentity objects
 - GenericIdentity objects
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02c8b4b9f46f051e42fb2ae85a39b6ff48ad2f1a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bfc9a08377a281f7325b120a873fc9b27b8ad856
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="principal-and-identity-objects"></a>主体和标识对象
 托管的代码可能会发现标识或通过主体角色<xref:System.Security.Principal.IPrincipal>对象，它包含对引用<xref:System.Security.Principal.IIdentity>对象。 将标识对象和主体对象同用户帐户与组帐户这样常见的概念进行比较，可能会有所帮助。 在大多数网络环境中，用户帐户表示人员或程序，而组帐户表示特定类别的用户及其拥有的权限。 同样，.NET Framework 中的标识对象表示用户，而角色表示成员资格与安全性上下文。 在 .NET Framework 中，主体对象同时封装标识对象和角色。 .NET Framework 应用程序根据主体的标识或角色成员资格（后者更常见）来向主体授予权限。  

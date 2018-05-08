@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic 中的范围"
-ms.custom: 
+title: Visual Basic 中的范围
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module scope [Visual Basic]
 - scope [Visual Basic], levels
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6692379626d787b728d6e92bd447c4a96e6680e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic 中的范围
 *作用域*的已声明的元素是一组的所有代码都可以引用它而无需限定其名称或提供通过[Imports 语句 （.NET Namespace 和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。 元素可在以下级别之一具有作用域：  
@@ -61,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 -   `Do` 和 `Loop`  
   
--   `For`[`Each`] 和`Next`  
+-   `For` [`Each`] 和 `Next`  
   
 -   `If` 和 `End If`  
   
@@ -127,7 +118,7 @@ Public strMsg As String
   
  Namespace 作用域包括嵌套的命名空间。 可从命名空间内的元素也会从任何嵌套在该命名空间的命名空间内提供。  
   
- 如果你的项目不包含任何[Namespace 语句](../../../../visual-basic/language-reference/statements/namespace-statement.md)s，项目中的所有内容是相同的命名空间中。 在这种情况下，可以将命名空间范围看作项目作用域。 `Public`模块、 类或结构中的元素也是可用于任何引用其项目的项目。  
+ 如果你的项目不包含任何[Namespace 语句](../../../../visual-basic/language-reference/statements/namespace-statement.md)s，项目中的所有内容是相同的命名空间中。 在这种情况下，可以将命名空间范围看作项目作用域。 `Public` 模块、 类或结构中的元素也是可用于任何引用其项目的项目。  
   
 ## <a name="choice-of-scope"></a>选择的作用域  
  在声明变量时，你应时需要牢记以下几点选择其作用域。  
@@ -142,7 +133,7 @@ Public strMsg As String
 ### <a name="minimizing-scope"></a>最小化作用域  
  一般情况下，声明的任何变量或常量，时很好的编程做法，应尽可能窄的范围 （块作用域是范围最小）。 这有助于节省内存，并最大程度减少你错误地引用错误的变量的代码的可能性。 同样，你应将变量声明为[静态](../../../../visual-basic/language-reference/modifiers/static.md)仅当有必要在保留其过程调用之间的值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
  [如何：控制变量的范围](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
  [在 Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  

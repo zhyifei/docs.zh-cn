@@ -1,25 +1,16 @@
 ---
 title: 结束&lt;关键字&gt;语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.EndDefinition
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cf0ac1221f8a85a8a43599d9c5ec210884205e5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 8137434bfd8c26144d78b1761b784cdba4894eaf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>结束&lt;关键字&gt;语句 (Visual Basic)
 在后面带有其他关键字，终止引起该关键字的语句块的定义。  
@@ -53,7 +44,7 @@ End With
   
 ## <a name="parts"></a>部件  
  `End`  
- 必需。 终止编程元素的定义。  
+ 必须的。 终止编程元素的定义。  
   
  `AddHandler`  
  必选`AddHandler`访问器是匹配的开始`AddHandler`中自定义语句[Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)。  
@@ -127,7 +118,7 @@ End With
  当跟在数字符号 (`#`)，则`End`关键字终止由相应的指令引入的预处理块。  
   
  `#End`  
- 必需。 终止预处理块的定义。  
+ 必须的。 终止预处理块的定义。  
   
  `#ExternalSource`  
  必选开始是匹配的外部源块[#ExternalSource 指令](../../../visual-basic/language-reference/directives/externalsource-directive.md)。  
@@ -141,5 +132,5 @@ End With
 ## <a name="smart-device-developer-notes"></a>智能设备的开发人员说明  
  `End`不支持语句，而无需其他关键字。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [End 语句](../../../visual-basic/language-reference/statements/end-statement.md)

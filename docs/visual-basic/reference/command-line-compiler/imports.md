@@ -1,23 +1,16 @@
 ---
 title: -导入 (Visual Basic)
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d81e9d2bd55e6e38e337805b950a0b85680d129b
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 330a5e6821c9c76f3503a35a5a5eabf24c686b42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-imports-visual-basic"></a>-导入 (Visual Basic)
 从指定的程序集导入命名空间。  
@@ -48,7 +41,7 @@ ms.lasthandoff: 03/22/2018
   
  [!code-vb[imports example](codesnippet/VisualBasic/imports_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [引用和 Imports 语句](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

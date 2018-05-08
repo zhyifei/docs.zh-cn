@@ -1,24 +1,15 @@
 ---
-title: "Visual Basic 中的条件编译"
-ms.custom: 
+title: Visual Basic 中的条件编译
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 559380dc9baceb2fba4dca782e83f335f1bcd92d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 496df36242c6b43e7e3ec94ce675d11177e8b466
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic 中的条件编译
 在*条件编译*，而其他人将被忽略，将有选择地编译特定程序中的代码块。  
@@ -49,7 +40,7 @@ ms.lasthandoff: 10/22/2017
 |---|---|  
 |**项目设计器**|在项目中的所有文件是公共的|  
 |命令行|传递给命令行编译器的所有文件是公共的|  
-|`#Const`在代码中的语句|专用于在其中声明的文件|  
+|`#Const` 在代码中的语句|专用于在其中声明的文件|  
   
 |在项目设计器中设置常量|  
 |---|  
@@ -57,7 +48,7 @@ ms.lasthandoff: 10/22/2017
   
 |要在命令行处设置常量|  
 |---|  
-|-使用**/d**交换机输入条件编译常数，如以下示例所示：<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     则需要之间没有空间**/d**开关与第一个常数。 有关详细信息，请参阅[/define (Visual Basic 中)](../../../visual-basic/reference/command-line-compiler/define.md)。<br />     命令行声明重写声明进入**项目设计器**，但不是清除它们。 设置参数**项目设计器**后续编译就保持有效。<br />     编写时常量中以及代码本身，没有严格的规则对其位置中，由于其作用域声明它们的整个模块。|  
+|-使用 **/d**交换机输入条件编译常数，如以下示例所示：<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     则需要之间没有空间 **/d**开关与第一个常数。 有关详细信息，请参阅[/define (Visual Basic 中)](../../../visual-basic/reference/command-line-compiler/define.md)。<br />     命令行声明重写声明进入**项目设计器**，但不是清除它们。 设置参数**项目设计器**后续编译就保持有效。<br />     编写时常量中以及代码本身，没有严格的规则对其位置中，由于其作用域声明它们的整个模块。|  
   
 |若要在代码中设置常量|  
 |---|  

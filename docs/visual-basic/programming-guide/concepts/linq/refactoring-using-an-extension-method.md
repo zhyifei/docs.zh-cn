@@ -1,22 +1,12 @@
 ---
-title: "重构使用扩展方法 (Visual Basic)"
-ms.custom: 
+title: 重构使用扩展方法 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3ac7ce4c6a40829582628907bd50321bdda29bb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e613994651ad33b8e9f4aa78c0c2897431246344
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>重构使用扩展方法 (Visual Basic)
 此示例基于前面的示例中，[检索段落 (Visual Basic 中) 的文本](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)，通过重构使用作为扩展方法实现一个纯函数的字符串的串联。  
@@ -252,6 +242,6 @@ StyleName:Code >Hello World<
   
 -   [使用纯函数重构 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [教程： 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
  [重构到纯函数 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -1,12 +1,6 @@
 ---
-title: "如何：释放系统资源 (Visual Basic)"
-ms.custom: 
+title: 如何：释放系统资源 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
 - Visual Basic code, control flow
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5b5c65c9d123c6f481852eb249cb4d479a180c5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cbb66934833da2bd6f0b797944dbb9c4df267cfc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>如何：释放系统资源 (Visual Basic)
 你可以使用`Using`块来确保系统在代码退出块时释放资源。 这很有用，如果你使用的这样做会消耗大量的内存，或其他组件还想要使用的系统资源。  
@@ -52,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
      系统资源，例如文件句柄或 COM 包装器，可以使用此相同技术。 你使用`Using`时你以确保想要保留的资源可供其他组件，均退出之后阻止`Using`块。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Data.SqlClient.SqlConnection>  
  [控制流](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
  [决策结构](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  

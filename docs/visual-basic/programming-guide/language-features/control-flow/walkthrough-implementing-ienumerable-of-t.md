@@ -1,27 +1,17 @@
 ---
 title: 在 Visual Basic 中实现 IEnumerable
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - control flow [Visual Basic]
 - enumerable interfaces
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4645153f9c830bc96b7ec55367f46f09098eb78d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2c2012261f38bccb704fe1a0300d496785e2129c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>演练：在 Visual Basic 中实现 IEnumerable(Of T)
 <xref:System.Collections.Generic.IEnumerable%601>接口由可以一次返回的值的一个项的序列的类实现。 返回的数据一次的一项是不需要将完整的数据集加载到内存中进行处理它的优势。 只需使用足够的内存来从数据加载单个项。 类实现`IEnumerable(T)`接口可以用于`For Each`循环或 LINQ 查询。  

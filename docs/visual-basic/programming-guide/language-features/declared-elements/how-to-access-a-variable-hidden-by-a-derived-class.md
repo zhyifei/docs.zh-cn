@@ -1,12 +1,6 @@
 ---
-title: "如何：访问被派生类隐藏的变量 (Visual Basic)"
-ms.custom: 
+title: 如何：访问被派生类隐藏的变量 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
 - base classes [Visual Basic], accessing elements
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0f94e45fcb0a26b0d59789e101c37aceba219250
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8dd59dff5b8123331237db905432bbb4e94d62ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>如何：访问被派生类隐藏的变量 (Visual Basic)
 当在派生类中的代码访问的变量时，编译器通常将到最接近的可访问版本，即的可访问版本引用解析派生步骤最少向后从访问的类。 如果变量在派生类中定义的则代码通常会访问该定义。  
@@ -57,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="robust-programming"></a>可靠编程  
  要降低引用隐藏的变量的非预期版本的风险，则可以完全限定到隐藏的变量的所有引用。 隐藏引入了多个版本具有相同名称的变量。 当代码语句引用的变量的名称时，编译器将该引用解析的版本取决于因素，如代码语句的位置和限定字符串的状态。 这会增加到了错误版本的该变量引用的风险。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  [在 Visual Basic 中隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
  [隐藏和重写之间的差异](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  

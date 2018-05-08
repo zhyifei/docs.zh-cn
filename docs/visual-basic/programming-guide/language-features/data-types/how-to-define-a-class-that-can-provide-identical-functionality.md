@@ -1,12 +1,6 @@
 ---
-title: "如何：定义可对不同数据类型提供相同功能的类 (Visual Basic)"
-ms.custom: 
+title: 如何：定义可对不同数据类型提供相同功能的类 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
 - type parameters [Visual Basic], defining
@@ -32,14 +26,11 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c8594a23391793e1be3d969f7eacc199cbc6caa9
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 3570a1c851bb8fead33f4cd208489c4ae087a68d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>如何：定义可对不同数据类型提供相同功能的类 (Visual Basic)
 你可以定义这样一个类：你可以通过该类创建可在不同数据类型上提供相同功能的对象。 为此，你可以在定义中指定一个或多个 *类型形参* 。 然后，该类将能够充当使用不同数据类型的对象的模板。 通过这种方式定义的类称为 *泛型类*。  

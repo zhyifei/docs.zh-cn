@@ -1,23 +1,15 @@
 ---
-title: "特性列表 (Visual Basic)"
+title: 特性列表 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: adfb980380bb787280715ca0185950657e174eb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 35d031722a5eddd6adce5e32df62b86c500d305b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attribute-list-visual-basic"></a>特性列表 (Visual Basic)
 指定要应用于声明的编程元素的属性。 用逗号分隔多个属性。 下面是一个属性的语法。  
@@ -33,7 +25,7 @@ ms.lasthandoff: 11/21/2017
  所需的应用的源代码文件开头的属性。 可以是[程序集](../../../visual-basic/language-reference/modifiers/assembly.md)或[模块](../../../visual-basic/language-reference/modifiers/module-keyword.md)。  
   
  `attributename`  
- 必需。 属性的名称。  
+ 必须的。 属性的名称。  
   
  `attributearguments`  
  可选。 此特性的位置自变量的列表。 用逗号分隔多个自变量。  
@@ -63,9 +55,9 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute>指示特性化的过程表示非托管动态链接库 (DLL) 中的入口点。 该属性提供位置自变量作为 DLL 的名称和作为变量初始值设定项的其他信息。  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> 指示特性化的过程表示非托管动态链接库 (DLL) 中的入口点。 该属性提供位置自变量作为 DLL 的名称和作为变量初始值设定项的其他信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
  [Module \<关键字>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
  [属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)  

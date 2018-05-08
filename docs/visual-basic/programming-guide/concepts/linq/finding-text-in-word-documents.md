@@ -1,22 +1,12 @@
 ---
-title: "在 Word 文档 (Visual Basic 中) 中查找文本"
-ms.custom: 
+title: 在 Word 文档 (Visual Basic 中) 中查找文本
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4907aacfae333544448da399f0fd7169a36fc505
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d9f9b0066a1f9b1fbe25c52f5bc23721b9e813c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>在 Word 文档 (Visual Basic 中) 中查找文本
 本主题扩展了以前的查询，以执行一些有用的任务：在文档中查找一个字符串的所有匹配项。  
@@ -316,7 +306,7 @@ StyleName:Code ><
   
 -   [详细信息的 Office Open XML WordprocessingML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [教程： 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
  [使用纯函数重构 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
  [延迟的执行和迟缓计算中 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

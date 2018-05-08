@@ -1,21 +1,12 @@
 ---
-title: "集合 (Visual Basic)"
-ms.custom: 
+title: 集合 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: get-started-article
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d0ea3b45803bc37f35d516260a57db422827f1e1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 563cef59c0e52d41dcdeaa51b5bc4d7b8f9554f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-visual-basic"></a>集合 (Visual Basic)
 对于许多应用程序，你会想要创建和管理相关对象的组。 有两种方法对对象进行分组：通过创建对象的数组，以及通过创建对象的集合。  

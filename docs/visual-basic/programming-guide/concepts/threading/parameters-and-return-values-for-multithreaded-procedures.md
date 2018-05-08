@@ -1,22 +1,12 @@
 ---
-title: "参数和返回值的多线程过程 (Visual Basic)"
-ms.custom: 
+title: 参数和返回值的多线程过程 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cbdce172-7ff6-41a9-bb21-53a7c6f538a5
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 071e0aa916e4b3464c7c0cbff6596cabc6b67906
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 039e9be6f174148995a83c842a442806b9409a3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-visual-basic"></a>参数和返回值的多线程过程 (Visual Basic)
 在多线程应用程序中提供和返回值是很复杂的，因为必须将对某个过程的引用传递给线程类的构造函数，该过程不带参数也不返回值。 下面几节介绍一些提供参数和从不同线程上的过程返回值的简单方法。  
@@ -110,7 +100,7 @@ End Sub
   
  可以通过使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法的可选 `ByVal` 状态对象变量来向线程池线程提供参数并返回值。 线程计时器线程也支持将状态对象用于此目的。 有关线程池和线程计时器的信息，请参阅[线程池 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[线程池](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701)和[线程计时器 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [演练：利用 BackgroundWorker 组件进行多线程处理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)  
  [线程池 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)  
  [线程同步 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)  

@@ -1,28 +1,19 @@
 ---
-title: '&#39;集 &#39;访问器的属性 &#39;&lt;propertyname&gt;&#39; 不可访问'
+title: '&#39;设置&#39;的属性访问器&#39; &lt;propertyname&gt; &#39;不可访问'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31102
 - bc31102
 helpviewer_keywords:
 - BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9256a09b719ad3890e1d7c2cc23ffb0d40eec62f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d047d03755de89d4740482db4845d5db72003ac0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;集 &#39;访问器的属性 &#39;&lt;propertyname&gt;&#39; 不可访问
+# <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;设置&#39;的属性访问器&#39; &lt;propertyname&gt; &#39;不可访问
 语句试图存储属性的值，如果它不具有对该属性的访问`Set`过程。  
   
  如果[Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)标记具有限制性更强的访问权限级别比其[属性语句](../../../visual-basic/language-reference/statements/property-statement.md)，尝试设置的属性值在以下情况可能会失败：  
@@ -41,6 +32,6 @@ ms.lasthandoff: 11/21/2017
   
 -   如果你不能定义属性，对源代码的控制或必须限制`Set`过程访问级别限制性比强属性自身，尝试移动到具有更好地访问的代码区域设置的属性值的语句属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性过程](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
  [如何：声明具有混合访问级别的属性](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)

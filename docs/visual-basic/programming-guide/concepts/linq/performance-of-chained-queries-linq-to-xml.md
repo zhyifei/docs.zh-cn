@@ -1,22 +1,12 @@
 ---
-title: "链接的查询 (LINQ to XML) 的性能 (Visual Basic)"
-ms.custom: 
+title: 链接的查询 (LINQ to XML) 的性能 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 589f2adc-69f9-404d-b9d6-4c28dabea7f7
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 281eb8ea62760507da991ea878270befe458bb38
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d390fc0e45967cd98697320eb6f61a51cb1c19da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>链接的查询 (LINQ to XML) 的性能 (Visual Basic)
 LINQ（以及 LINQ to XML）的一个最重要优点是，链接查询的执行性能与单个更大更复杂的查询一样好。  
@@ -53,5 +43,5 @@ Next
   
  因此，通过 `query2` 执行的迭代与第一个查询源中的项数（即，线形时间）成正比。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [性能 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

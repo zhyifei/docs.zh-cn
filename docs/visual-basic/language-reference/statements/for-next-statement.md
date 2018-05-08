@@ -1,11 +1,6 @@
 ---
-title: "For...Next 语句 (Visual Basic)"
+title: For...Next 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Step
 - vb.Next
@@ -28,14 +23,11 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-caps.latest.revision: "64"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 8c54189499b7d5b52cf93b4a0ae6cc47356bf57e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 语句 (Visual Basic)
 将一组语句重复指定的次数。  
@@ -103,7 +95,7 @@ Next [ counter ]
   
  你可以放置任意数量的`Exit For`中的语句`For`...`Next` 循环。 当使用内嵌套`For`...`Next` 循环，`Exit For`退出最内层的循环，并将控制转移到下一步较高级别的嵌套。  
   
- `Exit For`后你评估一些条件通常使用 (例如，在`If`...`Then`...`Else`结构)。 你可能想要使用`Exit For`在以下情况：  
+ `Exit For` 后你评估一些条件通常使用 (例如，在`If`...`Then`...`Else`结构)。 你可能想要使用`Exit For`在以下情况：  
   
 -   继续循环是不必要或无法完成。 错误的值或终止请求可能要创建此条件。  
   
@@ -132,15 +124,15 @@ Next [ counter ]
   
  默认值`step`为 1。  
   
-###  <a name="BKMK_Counter"></a>计数器自变量  
+###  <a name="BKMK_Counter"></a> 计数器自变量  
  下表指示是否`counter`定义新的本地变量为作用域为整个`For…Next`循环。 此决定取决于是否`datatype`存在以及是否`counter`已定义。  
   
 |是`datatype`存在？|是`counter`已定义？|结果 (是否`counter`定义新的本地变量为作用域为整个`For...Next`循环)|  
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
-|No|是|否，因为`counter`已定义。 如果的作用域`counter`不在本地进行过程： 出现编译时警告。|  
-|No|No|可以。 数据类型，则从推断`start`， `end`，和`step`表达式。 类型推理有关的信息，请参阅[Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[本地类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。|  
+|否|是|否，因为`counter`已定义。 如果的作用域`counter`不在本地进行过程： 出现编译时警告。|  
+|否|否|可以。 数据类型，则从推断`start`， `end`，和`step`表达式。 类型推理有关的信息，请参阅[Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[本地类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。|  
 |是|是|是，但仅当现有`counter`外部过程定义变量。 该变量保持独立。 如果现有的作用域`counter`变量是本地的过程，则发生编译时错误。|  
-|是|No|可以。|  
+|是|否|可以。|  
   
  数据类型`counter`确定的一种迭代中，它必须是以下类型之一：  
   

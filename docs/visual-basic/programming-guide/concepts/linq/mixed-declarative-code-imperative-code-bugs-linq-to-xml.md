@@ -1,22 +1,12 @@
 ---
-title: "混合声明性代码的命令性代码的问题 (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: 混合声明性代码的命令性代码的问题 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2d5d50b5444a9aca429eb5ddb682cd23c468a1e3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 797866514a2f290a98d1a75e92f850e96d28dabd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>混合声明性代码/命令性代码的问题 (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含各种不同的方法，使您能够直接修改 XML 树。 您可以添加元素、删除元素、更改元素的内容、添加属性等等。 中详细介绍了此编程接口[修改 XML 树 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)。 如果循环访问一个轴，例如 <xref:System.Xml.Linq.XContainer.Elements%2A>，而在循环访问该轴时正在修改 XML 树，那么可能会发生一些异常问题。  
@@ -185,5 +175,5 @@ Dim newRoot As XElement = New XElement("Root", _
 Console.WriteLine(newRoot)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

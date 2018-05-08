@@ -1,22 +1,12 @@
 ---
-title: "如何： 创建 C-c + + 联合使用属性 (Visual Basic)"
-ms.custom: 
+title: 如何： 创建 C-c + + 联合使用属性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51d04c573e91a351c48edefebdb3d32fce1d306f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b07168df3fb7ec8195a3f64ef5b1bef0cc16dda2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>如何： 创建 C/c + + 联合使用属性 (Visual Basic)
 通过使用特性，可自定义结构在内存中的布局方式。 例如，可使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 特性在 C/C++ 中创建所谓的联合。  

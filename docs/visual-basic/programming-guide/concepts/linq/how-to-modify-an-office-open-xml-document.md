@@ -1,22 +1,12 @@
 ---
-title: "如何： 修改 Office Open XML 文档 (Visual Basic)"
-ms.custom: 
+title: 如何： 修改 Office Open XML 文档 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0d2f6b9bc7acf7c9108112b61fe8edf70c549cac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 97e754f37580af990b1aaa64f389de5cbce91d60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>如何： 修改 Office Open XML 文档 (Visual Basic)
 本主题显演示一个打开、修改和保存 Office Open XML 文档的示例。  
@@ -152,5 +142,5 @@ End Module
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [高级查询技术 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

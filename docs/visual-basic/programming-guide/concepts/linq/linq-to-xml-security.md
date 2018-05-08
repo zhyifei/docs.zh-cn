@@ -1,22 +1,12 @@
 ---
-title: "LINQ to XML 安全性 (Visual Basic)"
-ms.custom: 
+title: LINQ to XML 安全性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d99b4af2-d447-4a3b-991b-6da0231a8637
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 208703d51aeda92733423fe603500b219e581979
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3f75377502b30b03090bb2a5fe720faf4e12a028
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML 安全性 (Visual Basic)
 本主题说明与 LINQ to XML 相关的安全问题。 此外，它还提供减轻安全隐患的一些指导。  
@@ -108,5 +98,5 @@ ms.lasthandoff: 10/18/2017
   
  某些安全功能是由公共语言运行库 (CLR) 提供的。 例如，不包括私有类的组件无法访问由该类键控的批注。 但是，不能读取批注的组件却可以删除该批注。 这可能用作篡改攻击。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编程指南 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -1,11 +1,6 @@
 ---
-title: "Implements 语句"
+title: Implements 语句
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Implements
 - Implements
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1103305ffbf5425d9a6a6a09695437968642710d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5afc7e4e3a03dfab1288e50e65e5076bdd438f7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implements-statement"></a>Implements 语句
 指定一个或多个接口，或必须在类中实现的接口成员或它在其中出现的结构定义。  
@@ -36,10 +28,10 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>部件  
  `interfacename`  
- 必需。 其属性、 过程和事件都由相应成员中的类或结构实现接口。  
+ 必须的。 其属性、 过程和事件都由相应成员中的类或结构实现接口。  
   
  `interfacemember`  
- 必需。 正在实现的接口的成员。  
+ 必须的。 正在实现的接口的成员。  
   
 ## <a name="remarks"></a>备注  
  接口是集合接口封装的原型表示的成员 （属性、 过程和事件）。 接口包含仅成员; 的声明类和结构实现这些成员。 有关详细信息，请参阅[接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
@@ -62,7 +54,7 @@ Implements interfacename.interfacemember [, ...]
   
  [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
  [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)  
  [接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

@@ -1,11 +1,6 @@
 ---
 title: -verbose
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - verbose compiler option [Visual Basic]
 - -verbose compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0523409e53a8c7ea34de7dcc24b1bce2885a183
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: a5f257fce67d8e348b69404411c12ded785cfd68
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-verbose"></a>-verbose
 使编译器生成详细的状态和错误消息。  
@@ -45,6 +40,6 @@ ms.lasthandoff: 03/22/2018
 vbc -verbose in.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

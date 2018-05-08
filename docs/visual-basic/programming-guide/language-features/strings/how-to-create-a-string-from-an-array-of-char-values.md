@@ -1,24 +1,15 @@
 ---
-title: "如何：从 Char 值的数组创建字符串 (Visual Basic)"
-ms.custom: 
+title: 如何：从 Char 值的数组创建字符串 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 06e5c6923c26f3cb84b38475d6680523853d727d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 104b329011d69e10a2926f31ce5d296759a3cce8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>如何：从 Char 值的数组创建字符串 (Visual Basic)
 此示例创建从单独的字符的字符串"abcd"。  
@@ -34,7 +25,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="robust-programming"></a>可靠编程  
  Null 字符 (等效于`Chr(0)`) 在字符串中导致意外结果时使用的字符串。 Null 字符将包括替换字符串，但在某些情况下将不会显示在 null 字符后面的字符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.String>  
  [Char 数据类型](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
  [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

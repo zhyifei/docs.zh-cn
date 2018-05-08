@@ -1,12 +1,6 @@
 ---
-title: "On Error 语句 (Visual Basic)"
+title: On Error 语句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.OnError
 helpviewer_keywords:
@@ -28,14 +22,11 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: b2e32dcca2e29a178af6dc985da536b47f0ebae6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 语句 (Visual Basic)
 启用错误处理例程，并指定过程; 中的例程的位置此外可以用于禁用错误处理例程。  
@@ -89,16 +80,16 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  请注意，`On Error GoTo`语句捕获所有错误，而不考虑异常类。  
   
 ## <a name="on-error-resume-next"></a>On Error Resume Next  
- `On Error Resume Next`会导致执行继续紧跟导致运行时错误的语句的语句或使用紧随最新的语句调用外过程包含`On Error Resume Next`语句。 此语句允许执行运行时错误时仍继续。 你可以将会出现错误的错误处理例程，而不是将控制转移到过程内的另一个位置。 `On Error Resume Next`语句变为非活动状态时调用另一个过程，因此应执行`On Error Resume Next`中每个语句调用例程，如果你想内联错误处理中该例程。  
+ `On Error Resume Next` 会导致执行继续紧跟导致运行时错误的语句的语句或使用紧随最新的语句调用外过程包含`On Error Resume Next`语句。 此语句允许执行运行时错误时仍继续。 你可以将会出现错误的错误处理例程，而不是将控制转移到过程内的另一个位置。 `On Error Resume Next`语句变为非活动状态时调用另一个过程，因此应执行`On Error Resume Next`中每个语句调用例程，如果你想内联错误处理中该例程。  
   
 > [!NOTE]
 >  `On Error Resume Next`构造可能优于`On Error GoTo`时处理期间对其他对象的访问生成的错误。 检查`Err`与对象的每个交互清楚地了解对象所访问的代码后。 你可以将确定哪些对象放置中的错误代码`Err.Number`，以及哪些对象最初生成错误 (中指定的对象`Err.Source`)。  
   
 ## <a name="on-error-goto-0"></a>On Error GoTo 0  
- `On Error GoTo 0`禁用当前的过程中的错误处理。 它不会作为错误处理代码中，开始指定 0 行，即使过程包含编号为 0 的行。 而无需`On Error GoTo 0`过程退出时，会自动禁用语句，错误处理程序。  
+ `On Error GoTo 0` 禁用当前的过程中的错误处理。 它不会作为错误处理代码中，开始指定 0 行，即使过程包含编号为 0 的行。 而无需`On Error GoTo 0`过程退出时，会自动禁用语句，错误处理程序。  
   
 ## <a name="on-error-goto--1"></a>On Error GoTo-1  
- `On Error GoTo -1`禁用当前的过程中的异常。 即使过程包含编号为-1 的行，它不作为错误处理代码中，开始指定行-1。 而无需`On Error GoTo -1`过程退出时，会自动禁用语句，异常。  
+ `On Error GoTo -1` 禁用当前的过程中的异常。 即使过程包含编号为-1 的行，它不作为错误处理代码中，开始指定行-1。 而无需`On Error GoTo -1`过程退出时，会自动禁用语句，异常。  
   
  若要防止错误处理代码运行时未发生错误，将放置`Exit Sub`， `Exit Function`，或`Exit Property`语句之前的错误处理例程，如以下片段中所示：  
   
@@ -121,7 +112,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)  

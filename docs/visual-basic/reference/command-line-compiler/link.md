@@ -1,11 +1,6 @@
 ---
 title: -链接 (Visual Basic)
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - l compiler option [Visual Basic]
 - EmbedInteropTypes
@@ -16,13 +11,11 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4699e3adfd83a35ee81a5c8838e300adf6ecf667
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 95c528c4d686c44d0d77d1f55833be75ab14f8bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-link-visual-basic"></a>-链接 (Visual Basic)
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
@@ -51,7 +44,7 @@ ms.lasthandoff: 04/27/2018
 > [!NOTE]
 >  在代码中创建嵌入 COM 类型的实例时，必须使用适当的接口创建该实例。 尝试使用组件类创建嵌入 COM 类型的实例会导致错误。  
   
- 若要设置`-link`选项在 Visual Studio 中，添加程序集引用并设置`Embed Interop Types`属性**true**。 `Embed Interop Types` 属性的默认值为 **false**。  
+ 若要在 Visual Studio 中设置 `-link` 选项，请添加程序集引用并将 `Embed Interop Types` 属性设置为“true”。 `Embed Interop Types` 属性的默认值为 **false**。  
   
  如果链接到本身引用了其他 COM 程序集（程序集 B）的 COM 程序集（程序集 A），则在满足以下任一条件时，还必须链接到程序集 B：  
   

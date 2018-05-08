@@ -1,25 +1,15 @@
 ---
-title: "如何：创建固定值变量 (Visual Basic)"
-ms.custom: 
+title: 如何：创建固定值变量 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d1475553e64fef92ec3f3bb7e1b4fbfb357dbec8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d63c254abe6d12c094e0d1252c9721f668947f09
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>如何：创建固定值变量 (Visual Basic)
 不会更改其值的变量的概念可能看起来有点矛盾。 在一些情况下不可行常量时，但它可用于具有固定值的变量。 在这种情况下，你可以定义具有的成员变量[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)关键字。  
@@ -52,6 +42,6 @@ ms.lasthandoff: 11/21/2017
   
      如果你在编译时，不知道值或不能在单个语句中的编译时计算，可以仍将其分配在构造函数中的运行时。 若要执行此操作，您必须声明`ReadOnly`变量在类或结构的级别。 在该类或结构的构造函数，计算变量的固定的值，并在返回从构造函数之前将其分配给变量。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)  
  [Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)
