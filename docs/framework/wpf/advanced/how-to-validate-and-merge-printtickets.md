@@ -1,13 +1,6 @@
 ---
-title: "如何：验证和合并 PrintTicket"
-ms.custom: 
+title: 如何：验证和合并 PrintTicket
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5cf2091d50433bb936b3d4976d1c3eabea73edc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11160d7ec59914afbe501ba731c0c04a85ffc4a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>如何：验证和合并 PrintTicket
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [打印架构](http://go.microsoft.com/fwlink/?LinkId=186397)包括灵活且可扩展<xref:System.Printing.PrintCapabilities>和<xref:System.Printing.PrintTicket>元素。 前者可以详细列举的打印设备的功能，后者用于指定设备应如何使用这些功能来处理的文档、 单个文档或单个页面按特定顺序。  

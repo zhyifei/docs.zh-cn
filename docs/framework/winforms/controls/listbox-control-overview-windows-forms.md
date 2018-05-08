@@ -1,31 +1,17 @@
 ---
-title: "ListBox 控件概述（Windows 窗体）"
-ms.custom: 
+title: ListBox 控件概述（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ListBox
 helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f0eadf9db9a952fdabe77100cb31501be1970e74
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4cb423a6f32778695abeae725da9755b610d209
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ListBox>控件将显示用户可以从中选择一个或多个项的列表。 如果项的总数目超过可以显示的数，滚动条会自动添加到<xref:System.Windows.Forms.ListBox>控件。 当<xref:System.Windows.Forms.ListBox.MultiColumn%2A>属性设置为`true`、 列表框中显示多个列中的项和水平滚动条的显示。 当<xref:System.Windows.Forms.ListBox.MultiColumn%2A>属性设置为`false`、 列表框中显示的单个列中的项和垂直滚动条的显示。 当<xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A>设置为`true`，该滚动条显示而不考虑项的数目。 <xref:System.Windows.Forms.ListBox.SelectionMode%2A>属性确定可以一次选择多少列表项。  

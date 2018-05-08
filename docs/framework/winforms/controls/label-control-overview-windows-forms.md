@@ -1,14 +1,6 @@
 ---
-title: "Label 控件概述（Windows 窗体）"
-ms.custom: 
+title: Label 控件概述（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Label
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - labels
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f68642eb5f996722097976e042006afbf366ae39
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5ad4416703e20a8e00299d496d360e1e84005a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="label-control-overview-windows-forms"></a>Label 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.Label>控件用于显示文本或图像的用户无法编辑。 它们用于标识窗体上的对象-哪些某个控件的说明进行的操作如果单击，例如，或以响应运行时事件或应用程序中的过程中显示信息。 例如，可以使用标签将描述性标题添加到文本框、 列表框、 组合框和等等。 你还可以编写在运行时通过响应事件中的标签显示的文本更改的代码。 例如，如果你的应用程序需要几分钟时间才能处理变更，你可以在标签中显示的处理状态消息。  

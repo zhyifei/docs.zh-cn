@@ -1,28 +1,14 @@
 ---
-title: "定义与 .NET Framework XAML 服务一起使用的自定义类型"
-ms.custom: 
+title: 定义与 .NET Framework XAML 服务一起使用的自定义类型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9edc7baa1a540a71997cf5b1ed010ad5c7960d17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>定义与 .NET Framework XAML 服务一起使用的自定义类型
 当你定义了业务对象的自定义类型或者不在特定框架具有依赖关系的类型时，有一些你可以遵循 xaml 某些最佳实践。 如果您遵循这些做法，.NET Framework XAML 服务和其 XAML 读取器和 XAML 编写器可以发现你的类型的 XAML 特征，并为其提供适当的表示形式，在 XAML 节点流中使用的 XAML 类型系统。 本主题介绍类型定义，成员定义和 CLR 特性化的类型或成员的最佳做法。  
@@ -103,7 +89,7 @@ ms.lasthandoff: 12/22/2017
  请记住，此方法的值是来自 XAML 用法中，通常采用特性形式的输入。 在特性形式必须有值转换器支持文本语法，并且特性上`Get` *PropertyName*访问器。  
   
 ### <a name="attachable-member-stores"></a>可附加成员存储  
- 访问器方法通常是不足够，以提供一种可附加成员值放在对象图，或检索值超出对象图和序列化这些正确。 若要提供此功能，`target`以前的访问器签名中的对象必须能够存储值。 存储机制应与成员是可附加到目标的可附加成员不在成员列表中的可附加成员原则一致。 .NET framework XAML 服务提供实现的一种技术，可附加成员存储通过 Api<xref:System.Xaml.IAttachedPropertyStore>和<xref:System.Xaml.AttachablePropertyServices>。 <xref:System.Xaml.IAttachedPropertyStore>XAML 编写器用于发现的存储实现，并应在为的类型中实现`target`访问器。 静态<xref:System.Xaml.AttachablePropertyServices>Api 访问器中，主体中使用和的可附加成员是指其<xref:System.Xaml.AttachableMemberIdentifier>。  
+ 访问器方法通常是不足够，以提供一种可附加成员值放在对象图，或检索值超出对象图和序列化这些正确。 若要提供此功能，`target`以前的访问器签名中的对象必须能够存储值。 存储机制应与成员是可附加到目标的可附加成员不在成员列表中的可附加成员原则一致。 .NET framework XAML 服务提供实现的一种技术，可附加成员存储通过 Api<xref:System.Xaml.IAttachedPropertyStore>和<xref:System.Xaml.AttachablePropertyServices>。 <xref:System.Xaml.IAttachedPropertyStore> XAML 编写器用于发现的存储实现，并应在为的类型中实现`target`访问器。 静态<xref:System.Xaml.AttachablePropertyServices>Api 访问器中，主体中使用和的可附加成员是指其<xref:System.Xaml.AttachableMemberIdentifier>。  
   
 ## <a name="xaml-related-clr-attributes"></a>与 XAML 相关 CLR 特性  
  正确的归类型、 成员和程序集是重要到报表的.NET Framework XAML 服务 XAML 类型系统信息的顺序。 如果希望你的类型用于直接基于.NET Framework XAML 服务 XAML 读取器和 XAML 编写的 XAML 系统，或如果你定义或使用 XAML 利用框架基于这些 XAML 读取器和 XAML 编写器，这是相关。  

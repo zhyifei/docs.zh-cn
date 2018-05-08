@@ -1,13 +1,6 @@
 ---
-title: "使用嵌套的 Graphics 容器"
-ms.custom: 
+title: 使用嵌套的 Graphics 容器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 512c8903611f025364a1af2cb6cbaaffc8d759eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba6bba84100a0ddcc87894710a6d3099ab0ccff5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nested-graphics-containers"></a>使用嵌套的 Graphics 容器
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供可用于临时替换或增加中的状态的一部分的容器<xref:System.Drawing.Graphics>对象。 通过调用创建容器<xref:System.Drawing.Graphics.BeginContainer%2A>方法<xref:System.Drawing.Graphics>对象。 你可以调用<xref:System.Drawing.Graphics.BeginContainer%2A>重复以形成嵌套的容器。 每次调用<xref:System.Drawing.Graphics.BeginContainer%2A>必须成对使用，通过调用<xref:System.Drawing.Graphics.EndContainer%2A>。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供可用于临时替换或增加中的状态的一部分的容器<xref:System.Drawing.Graphics>对象。 通过调用创建容器<xref:System.Drawing.Graphics.BeginContainer%2A>方法<xref:System.Drawing.Graphics>对象。 你可以调用<xref:System.Drawing.Graphics.BeginContainer%2A>重复以形成嵌套的容器。 每次调用<xref:System.Drawing.Graphics.BeginContainer%2A>必须成对使用，通过调用<xref:System.Drawing.Graphics.EndContainer%2A>。  
   
 ## <a name="transformations-in-nested-containers"></a>嵌套容器中的转换  
  下面的示例创建<xref:System.Drawing.Graphics>对象和在其中容器<xref:System.Drawing.Graphics>对象。 世界变换<xref:System.Drawing.Graphics>对象是在 x 方向翻译 100 单元和 80 单位在 y 方向。 容器的世界转换是 30 度旋转。 这段代码将调用`DrawRectangle(pen, -60, -30, 120, 60)`两次。 首次调用<xref:System.Drawing.Graphics.DrawRectangle%2A>位于容器; 也就是说，调用是对的调用之间<xref:System.Drawing.Graphics.BeginContainer%2A>和<xref:System.Drawing.Graphics.EndContainer%2A>。 第二次调用<xref:System.Drawing.Graphics.DrawRectangle%2A>后调用<xref:System.Drawing.Graphics.EndContainer%2A>。  

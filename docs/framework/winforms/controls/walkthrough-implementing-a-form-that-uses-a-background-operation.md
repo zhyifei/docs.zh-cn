@@ -1,13 +1,6 @@
 ---
-title: "演练：实现一个使用后台操作的窗体"
-ms.custom: 
+title: 演练：实现一个使用后台操作的窗体
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aaee6f1d650e6af57ab05ad56b5578e094ee50ef
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 28b1ac924fb9b6b8cbc09db62ee33c6780bee820
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>演练：实现一个使用后台操作的窗体
 如果某项操作需要很长时间才能完成，且你不希望用户界面 (UI) 停止响应或"挂起，"你可以使用<xref:System.ComponentModel.BackgroundWorker>类以执行此操作在另一个线程上的。  
@@ -178,7 +166,7 @@ ms.lasthandoff: 01/19/2018
  <xref:System.ComponentModel.BackgroundWorker>  
  [托管线程处理的最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)  
  [组件中的多线程处理](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [不在生成中： Visual Basic 中的多线程处理](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [未构造：Visual Basic 中的多线程处理](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [如何：实现使用后台操作的窗体](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
  [演练：在后台运行操作](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
  [BackgroundWorker 组件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

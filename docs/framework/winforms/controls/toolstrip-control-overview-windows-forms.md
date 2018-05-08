@@ -1,14 +1,6 @@
 ---
-title: "ToolStrip 控件概述（Windows 窗体）"
-ms.custom: 
+title: ToolStrip 控件概述（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Toolstrip
 helpviewer_keywords:
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45dab820072b3eb0bcc448ce32251e3ff5a3e622
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3927f180e738541f2f2f8af6d03d281f6a601167
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 控件概述（Windows 窗体）
-Windows 窗体<xref:System.Windows.Forms.ToolStrip>控件及其关联的类提供一种通用框架用于将用户界面元素合并为工具栏、 状态栏和菜单。 <xref:System.Windows.Forms.ToolStrip>控件提供丰富的设计时体验，包括在就地激活和编辑、 自定义布局和漂浮，即对工具栏共享水平或垂直空间的能力。  
+Windows 窗体<xref:System.Windows.Forms.ToolStrip>控件及其关联的类提供一种通用框架用于将用户界面元素合并为工具栏、 状态栏和菜单。 <xref:System.Windows.Forms.ToolStrip> 控件提供丰富的设计时体验，包括在就地激活和编辑、 自定义布局和漂浮，即对工具栏共享水平或垂直空间的能力。  
   
  尽管<xref:System.Windows.Forms.ToolStrip>替换，并将功能添加到在上一版本中，控件<xref:System.Windows.Forms.ToolBar>如果需要保留用于向后兼容性和将来使用。  
   
@@ -59,7 +45,7 @@ Windows 窗体<xref:System.Windows.Forms.ToolStrip>控件及其关联的类提�
   
 ### <a name="important-toolstrip-members"></a>重要 ToolStrip 成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|获取或设置父容器的边缘<xref:System.Windows.Forms.ToolStrip>停靠。|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|获取或设置一个用于指示是否专门由 <xref:System.Windows.Forms.ToolStrip> 类处理拖放和项重新排序操作的值。|  
@@ -75,7 +61,7 @@ Windows 窗体<xref:System.Windows.Forms.ToolStrip>控件及其关联的类提�
   
 ### <a name="important-toolstrip-companion-classes"></a>重要 ToolStrip 伴生类  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|替换并添加了功能<xref:System.Windows.Forms.MainMenu>类。|  
 |<xref:System.Windows.Forms.StatusStrip>|替换并添加了功能<xref:System.Windows.Forms.StatusBar>类。|  

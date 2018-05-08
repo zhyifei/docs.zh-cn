@@ -1,28 +1,16 @@
 ---
-title: "如何：指定绑定的方向"
-ms.custom: 
+title: 如何：指定绑定的方向
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - direction of binding [WPF]
 - binding direction [WPF]
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9944ff214a9dfe12b21e005c4e1998c249bf72b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 100130f3dc099d1cf1f216c841e7e1dc1d083f39
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>如何：指定绑定的方向
 本示例演示如何指定绑定是仅更新绑定目标（目标）属性或绑定源（源）属性，还是同时更新目标属性和源属性。  
@@ -30,15 +18,15 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>示例  
  你使用<xref:System.Windows.Data.Binding.Mode%2A>属性指定绑定的方向。 以下枚举列表显示了可供绑定更新的选项：  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay>当发生更改时的目标属性或源属性更新目标属性。  
+-   <xref:System.Windows.Data.BindingMode.TwoWay> 当发生更改时的目标属性或源属性更新目标属性。  
   
--   <xref:System.Windows.Data.BindingMode.OneWay>仅当源属性更改时，请更新目标属性。  
+-   <xref:System.Windows.Data.BindingMode.OneWay> 仅当源属性更改时，请更新目标属性。  
   
--   <xref:System.Windows.Data.BindingMode.OneTime>仅当应用程序启动时或时，请更新目标属性<xref:System.Windows.FrameworkElement.DataContext%2A>发生了更改。  
+-   <xref:System.Windows.Data.BindingMode.OneTime> 仅当应用程序启动时或时，请更新目标属性<xref:System.Windows.FrameworkElement.DataContext%2A>发生了更改。  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource>目标属性更改时，请更新源属性。  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource> 目标属性更改时，请更新源属性。  
   
--   <xref:System.Windows.Data.BindingMode.Default>默认值将导致<xref:System.Windows.Data.Binding.Mode%2A>要使用的目标属性的值。  
+-   <xref:System.Windows.Data.BindingMode.Default> 默认值将导致<xref:System.Windows.Data.Binding.Mode%2A>要使用的目标属性的值。  
   
  有关详细信息，请参见 <xref:System.Windows.Data.BindingMode> 枚举。  
   

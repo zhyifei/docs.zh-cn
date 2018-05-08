@@ -1,31 +1,19 @@
 ---
-title: "批注"
-ms.custom: 
+title: 批注
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - highlights [WPF]
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 232ad0d7-2264-4bed-aae3-10dfde116a9c
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67f0a1f4a032a5175406dedcf282ed695f58e51e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7696781ec8f77a670f7e2133466bc8068ba18203
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="annotations"></a>批注
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供的文档查看支持批注文档内容的控件。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供的文档查看支持批注文档内容的控件。  
   
 ## <a name="in-this-section"></a>本节内容  
  [批注概述](../../../../docs/framework/wpf/advanced/annotations-overview.md)  

@@ -1,31 +1,17 @@
 ---
-title: "结构化导航概述"
-ms.custom: 
+title: 结构化导航概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9d20fb5b16fbf44bdf8431ae32afee105af7676
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9be4e753a229d97f2caf1d74b3b9b8239b99c694
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structured-navigation-overview"></a>结构化导航概述
 可由承载的内容[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、 <xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>由组成可以通过包来识别的页[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]和导航到超链接。 页面的结构以及导航页面的方式（通过超链接来定义）称为导航拓扑。 此类拓扑适合各种应用程序类型，尤其适合在文档之间导航的应用程序类型。 对于此类应用程序，用户可以从一个页面导航到另一个页面，并且其中任一页面都无需了解另一页面的任何信息。  
@@ -160,7 +146,7 @@ ms.lasthandoff: 12/22/2017
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]  
   
- 在此示例中，如果用户按“取消”按钮，则会向调用页返回 `null` 值。 如果按“确定”按钮，则返回用户提供的字符串值。 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>是`protected``virtual`调用以返回到调用的页的数据的方法。 你的数据需要泛型实例中打包<xref:System.Windows.Navigation.ReturnEventArgs%601>类型，其类型参数指定的类型值<xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A>返回。 这种方式，在声明时<xref:System.Windows.Navigation.PageFunction%601>使用特定类型参数时，即指明<xref:System.Windows.Navigation.PageFunction%601>将返回指定的类型参数的类型的实例。 在此示例中，类型参数和返回值，因此，属于类型<xref:System.String>。  
+ 在此示例中，如果用户按“取消”按钮，则会向调用页返回 `null` 值。 如果按“确定”按钮，则返回用户提供的字符串值。 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 是`protected``virtual`调用以返回到调用的页的数据的方法。 你的数据需要泛型实例中打包<xref:System.Windows.Navigation.ReturnEventArgs%601>类型，其类型参数指定的类型值<xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A>返回。 这种方式，在声明时<xref:System.Windows.Navigation.PageFunction%601>使用特定类型参数时，即指明<xref:System.Windows.Navigation.PageFunction%601>将返回指定的类型参数的类型的实例。 在此示例中，类型参数和返回值，因此，属于类型<xref:System.String>。  
   
  当<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>调用时，调用页需要某种方法来接收的返回值<xref:System.Windows.Navigation.PageFunction%601>。 为此，<xref:System.Windows.Navigation.PageFunction%601>实现<xref:System.Windows.Navigation.PageFunction%601.Return>调用页来处理的事件。 当<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>调用时，<xref:System.Windows.Navigation.PageFunction%601.Return>引发，以便调用页可以向注册<xref:System.Windows.Navigation.PageFunction%601.Return>要接收通知。  
   

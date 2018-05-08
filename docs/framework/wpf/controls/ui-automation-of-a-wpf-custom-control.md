@@ -1,13 +1,6 @@
 ---
-title: "WPF 自定义控件的 UI 自动化"
-ms.custom: 
+title: WPF 自定义控件的 UI 自动化
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d17408d6fa03b267c2a22890d2e17c0441389
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbd19591c260b0ad160339b45fd762e7a87bbc74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF 自定义控件的 UI 自动化
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] 提供了一个通用接口，自动化客户端可使用该接口来检查或操作各种平台和框架的用户界面。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 使质量保证（测试）代码和具有辅助功能的应用程序（如屏幕阅读器）能够检查用户界面元素，以及能够模拟与其他代码中的用户元素进行的用户交互。 有关跨所有平台的 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 的信息，请参阅“辅助功能”。  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  重写<xref:System.Windows.UIElement.OnCreateAutomationPeer%2A>方法为您的自定义控件，以便它返回你的提供程序对象，必须直接或间接派生自<xref:System.Windows.Automation.Peers.AutomationPeer>。  
   
 ### <a name="override-getpattern"></a>重写 GetPattern  
- 自动化对等简化了服务器端 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序的一部分实现，但自定义控件自动化对等仍必须处理模式接口。 非 WPF 提供程序，如对等节点支持控件模式通过提供中接口的实现<xref:System.Windows.Automation.Provider?displayProperty=nameWithType>命名空间，如<xref:System.Windows.Automation.Provider.IInvokeProvider>。 控件模式接口可以由对等本身或其他对象实现。 对等节点的实现<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>返回支持指定的模式的对象。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]代码调用<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>方法并指定<xref:System.Windows.Automation.Peers.PatternInterface>枚举值。 重写<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>应返回实现指定的模式的对象。 如果控件不具有一种模式的自定义实现，则可调用基类型实现<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>检索其实现或 null，如果模式不支持此控件类型。 例如，自定义的 NumericUpDown 控件可以设置为范围内的值以便其[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]对等方将实现<xref:System.Windows.Automation.Provider.IRangeValueProvider>接口。 下面的示例演示如何对等节点的<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>重写方法以响应<xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType>值。  
+ 自动化对等简化了服务器端 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序的一部分实现，但自定义控件自动化对等仍必须处理模式接口。 非 WPF 提供程序，如对等节点支持控件模式通过提供中接口的实现<xref:System.Windows.Automation.Provider?displayProperty=nameWithType>命名空间，如<xref:System.Windows.Automation.Provider.IInvokeProvider>。 控件模式接口可以由对等本身或其他对象实现。 对等节点的实现<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>返回支持指定的模式的对象。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 代码调用<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>方法并指定<xref:System.Windows.Automation.Peers.PatternInterface>枚举值。 重写<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>应返回实现指定的模式的对象。 如果控件不具有一种模式的自定义实现，则可调用基类型实现<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>检索其实现或 null，如果模式不支持此控件类型。 例如，自定义的 NumericUpDown 控件可以设置为范围内的值以便其[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]对等方将实现<xref:System.Windows.Automation.Provider.IRangeValueProvider>接口。 下面的示例演示如何对等节点的<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>重写方法以响应<xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType>值。  
   
  [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
  [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  

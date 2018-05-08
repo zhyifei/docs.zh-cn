@@ -1,28 +1,14 @@
 ---
-title: "可供类型转换器和标记扩展使用的服务上下文"
-ms.custom: 
+title: 可供类型转换器和标记扩展使用的服务上下文
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4a75a5e6c6e6f627606ef5883655b6780e7519bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b68f00724ecd3a3edc64ee1e3dd7d97bffa20a62
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>可供类型转换器和标记扩展使用的服务上下文
 支持类型转换器和标记扩展用法的类型的作者通常必须拥有用法在标记或周围对象图结构中的所在位置的相关上下文信息。 为了能正确实例化所提供的对象或者对对象图中的现有对象进行对象引用，可能需要此信息。 使用.NET Framework XAML 服务时，可能需要的上下文将作为一系列服务接口公开。 类型转换器或标记扩展支持代码可使用从 <xref:System.Xaml.XamlObjectWriter> 或相关类型传递且可用的服务提供程序上下文来查询服务。 可通过一个这样的服务来直接获取 XAML 架构上下文。 本主题介绍如何从值转换器实现访问服务上下文，并且列出了通常可用的服务及其角色。  

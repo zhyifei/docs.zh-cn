@@ -1,28 +1,14 @@
 ---
 title: 演练：使用 XAML 创建按钮
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a05e0af94cc84db117c7b8caf389d084cd4c3fd5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 6d41d0894aa85f342deafb77434771b2c89e4150
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>演练：使用 XAML 创建按钮
 本演练的目的是若要了解如何在 Windows Presentation Foundation (WPF) 应用程序中创建的动画的按钮，供使用。 本演练使用样式和模板来创建自定义的按钮资源允许的代码重用，并从按钮声明的按钮逻辑分离。 本演练完全在编写[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -332,7 +318,7 @@ ms.lasthandoff: 04/30/2018
   
      按 F5 运行应用程序，然后单击一个按钮。 请注意后单击因为它仍然具有焦点的按钮始终保持突出显示。 如果单击另一个按钮时，新建按钮将获得焦点，而最后一个失去它。  
   
-4.  **添加的动画效果**<xref:System.Windows.UIElement.MouseEnter> **和** <xref:System.Windows.UIElement.MouseLeave> **:** 接下来我们将某些动画添加到触发器。   添加以下标记内部的任意位置`ControlTemplate.Triggers`块。  
+4.  **添加的动画效果**<xref:System.Windows.UIElement.MouseEnter> **和** <xref:System.Windows.UIElement.MouseLeave> **:** 接下来我们将某些动画添加到触发器。 添加以下标记内部的任意位置`ControlTemplate.Triggers`块。  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  

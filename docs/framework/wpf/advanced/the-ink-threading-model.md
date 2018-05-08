@@ -1,13 +1,6 @@
 ---
-title: "墨迹线程处理模型"
-ms.custom: 
+title: 墨迹线程处理模型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application user interface thread [WPF]
 - stylus plug-in
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-ink-threading-model"></a>墨迹线程处理模型
 墨迹在 Tablet PC 上的优势之一是，其外观很像编写使用普通的笔和纸。  若要实现此目的，触笔收集以高得多的速度比鼠标将墨迹呈现为用户写入的输入的数据。  应用程序的用户界面 (UI) 线程不收集钢笔数据和呈现墨迹满足需求，因为它可能被阻止。  为了解决此问题，问题[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序时用户会编写墨迹使用两个其他线程。  
@@ -72,11 +60,11 @@ ms.lasthandoff: 12/22/2017
   
  在上图中，以下行为将发生：  
   
-1.  `StylusPlugin1`修改的 x 值和 y。  
+1.  `StylusPlugin1` 修改的 x 值和 y。  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>接收的已修改的触笔点并将它们呈现在动态呈现线程。  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 接收的已修改的触笔点并将它们呈现在动态呈现线程。  
   
-3.  `StylusPlugin2`接收的已修改的触笔点并进一步修改的 x 值和 y。  
+3.  `StylusPlugin2` 接收的已修改的触笔点并进一步修改的 x 值和 y。  
   
 4.  应用程序收集触笔接触点，以及当用户完成描边，静态呈现笔画。  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
  下图说明了笔线程和 UI 线程方面的触笔事件之间的关系<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>。  
   
- ![墨迹线程处理模型 &#40;UI 和 Pen &#41;] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
+ ![墨迹线程处理模型&#40;UI 和 Pen&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
   
 ## <a name="rendering-ink"></a>呈现墨迹  
  用户绘制笔画，如<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>因此墨迹显示为"流"从笔即使 UI 线程忙碌呈现在单独线程上的墨迹。  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>动态呈现线程上生成可视化树，因为它收集触笔接触点。  当用户完成描边，<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>要求应用程序执行下一次呈现时收到通知。  应用程序完成下一步的呈现处理过程后,<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>清理其可视化树。  下图说明了此过程。  
