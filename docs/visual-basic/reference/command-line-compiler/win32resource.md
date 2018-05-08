@@ -1,11 +1,6 @@
 ---
 title: -win32resource
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - -win32resource
 - win32resource
@@ -16,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e210d88d32ac7341ab881ca6ff0e44961469a31
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: ac495e10be2ec1534dc9d9081aef369773d93e17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-win32resource"></a>-win32resource
 在输出文件中插入 Win32 资源文件。  
@@ -52,6 +47,6 @@ ms.lasthandoff: 03/22/2018
 vbc -win32resource:rf.res in.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

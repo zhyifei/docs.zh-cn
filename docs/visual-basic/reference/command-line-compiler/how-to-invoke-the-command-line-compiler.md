@@ -1,26 +1,17 @@
 ---
 title: 如何：调用命令行编译器 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - command-line arguments
 - vbc.exe
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 20239045426e466ba58427bb9794ea7e55b3aa4c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 0b835bb5654574a5aa6f32eede1e942b11e7dcb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>如何：调用命令行编译器 (Visual Basic)
 可以通过在命令行中，也称为 MS-DOS 提示符中键入其可执行文件的名称来调用命令行编译器。 如果从默认的 Windows 命令提示符下进行编译，你必须键入可执行文件的完全限定的路径。 若要重写此默认行为，你可以使用 Visual Studio 命令提示符处，或修改 PATH 环境变量。 同时，可以从任何目录编译通过只需键入编译器的名称。  

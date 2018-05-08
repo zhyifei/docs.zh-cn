@@ -1,25 +1,15 @@
 ---
-title: "如何：使用 LINQ 转换 XML (Visual Basic)"
-ms.custom: 
+title: 如何：使用 LINQ 转换 XML (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cf7c44598558b2c631ff3ef4c2ae0986a49ca2bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 94ad5180c7921a5ace09f9161de5f275475e46d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>如何：使用 LINQ 转换 XML (Visual Basic)
 [XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)方便地从一个源读取的 XML 并将它转换为新的 XML 格式。 你可以利用 LINQ 查询以检索内容后，若要转换，或将现有的文档中的内容更改为新的 XML 格式。  
@@ -164,7 +154,7 @@ ms.lasthandoff: 11/21/2017
     </html>  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)  
  [在 Visual Basic 中操控 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  

@@ -1,25 +1,14 @@
 ---
 title: 如何：创建 XML 文本 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ce1bf763529b436158c2d74811c4938182166f92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e5f8429b3ff02678bf8bf3e9e32bef6eb1a56831
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>如何：创建 XML 文本 (Visual Basic)
 通过使用 XML 文本，可以在代码中直接创建 XML 文档、 片段或元素。 本主题中的示例演示如何创建 XML 元素，具有三个子元素，以及如何创建 XML 文档。  
@@ -62,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
      `</books>`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
  [在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  [XML 元素文本](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  

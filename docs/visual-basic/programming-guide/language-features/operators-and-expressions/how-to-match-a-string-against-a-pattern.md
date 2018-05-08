@@ -1,12 +1,6 @@
 ---
-title: "如何：将字符串与模式相匹配 (Visual Basic)"
-ms.custom: 
+title: 如何：将字符串与模式相匹配 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
 - pattern matching
@@ -19,19 +13,16 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83433bdb41df0ce40d0979f3f44603f10ba1c7d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aef378bfc32d6deff431a2caac1261a6cd7520c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>如何：将字符串与模式相匹配 (Visual Basic)
 如果你想要找出的表达式[字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)满足一种模式，则你可以使用[Like 运算符](../../../../visual-basic/language-reference/operators/like-operator.md)。  
   
- `Like`采用两个操作数。 左的操作数是字符串表达式和右操作数是一个包含要用于匹配的模式字符串。 `Like`返回`Boolean`值，该值指示字符串表达式是否满足模式。  
+ `Like` 采用两个操作数。 左的操作数是字符串表达式和右操作数是一个包含要用于匹配的模式字符串。 `Like` 返回`Boolean`值，该值指示字符串表达式是否满足模式。  
   
  你可以匹配字符串表达式针对特定的字符、 通配符、 字符列表或字符范围中的每个字符。 模式字符串中的规范的位置对应的字符串表达式中要匹配的字符的位置。  
   
@@ -72,7 +63,7 @@ ms.lasthandoff: 11/21/2017
      请注意，此匹配区分大小写。  
   
 ## <a name="matching-empty-strings"></a>匹配空字符串  
- `Like`将序列`[]`为零长度字符串 (`""`)。 你可以使用`[]`来测试是否将整个字符串表达式为空，但不能使用它来测试是否为空字符串表达式中的特定位置。 如果为空的位置是另一种需要对其进行，你可以使用测试`Like`不止一次。  
+ `Like` 将序列`[]`为零长度字符串 (`""`)。 你可以使用`[]`来测试是否将整个字符串表达式为空，但不能使用它来测试是否为空字符串表达式中的特定位置。 如果为空的位置是另一种需要对其进行，你可以使用测试`Like`不止一次。  
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>根据列表的字符或无任何字符的字符串表达式中的字符相匹配  
   
@@ -86,7 +77,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [比较运算符](../../../../visual-basic/language-reference/operators/comparison-operators.md)  
  [运算符和表达式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
  [Like 运算符](../../../../visual-basic/language-reference/operators/like-operator.md)  

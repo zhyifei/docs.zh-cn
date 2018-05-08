@@ -1,22 +1,12 @@
 ---
-title: "多线程处理 BackgroundWorker 组件 (Visual Basic)"
-ms.custom: 
+title: 多线程处理 BackgroundWorker 组件 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07700aa526866729f1ba1a8d846f22ce333c356d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>演练： 利用 BackgroundWorker 组件 (Visual Basic) 的多线程处理
 本演练演示如何创建在文本文件中搜索单词出现次数的多线程 Windows 窗体应用程序。 演示内容包括：  
@@ -72,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  从模板窗口选择“类”，然后在名称字段中输入 `Words.vb`。  
   
-3.  单击 **“添加”**。 随即出现 `Words` 类。  
+3.  单击 **添加**。 随即出现 `Words` 类。  
   
 4.  将下面的代码添加到 `Words` 类中:  
   
@@ -252,7 +242,7 @@ ms.lasthandoff: 11/21/2017
     End Sub  
     ```  
   
-## <a name="testing"></a>测试  
+## <a name="testing"></a>正在测试  
  现在可以测试应用程序以确保其正常运行。  
   
 #### <a name="to-test-the-application"></a>测试应用程序  
@@ -276,7 +266,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="next-steps"></a>后续步骤  
  此应用程序包含一些基本错误处理。 它可检测空白搜索字符串。 可以通过处理其他错误（如超过可以计数的最大字词数或行数）使该程序更加可靠。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [线程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
  [演练： 创作使用 Visual Basic 的一个简单的多线程的组件](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)  
  [如何：订阅和取消订阅事件](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

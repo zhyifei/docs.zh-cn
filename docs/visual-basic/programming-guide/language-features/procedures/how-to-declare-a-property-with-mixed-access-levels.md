@@ -1,12 +1,6 @@
 ---
-title: "如何：声明具有混合访问级别的属性 (Visual Basic)"
-ms.custom: 
+title: 如何：声明具有混合访问级别的属性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - access levels [Visual Basic], properties
 - procedures [Visual Basic], defining
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90fe20303f6f2ed692e54e44ee8cc65897531543
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8d25086fe6f8b5f5300006466ef49782cb065edf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>如何：声明具有混合访问级别的属性 (Visual Basic)
 如果你想`Get`和`Set`要具有不同的访问级别的属性的过程，你可以使用中的更多的权限级别`Property`语句和中限制性更强的级别`Get`或`Set`语句。 当你想要能够获取属性的值的代码的某些部分和某些其他部分的代码将无法更改的值时，可以在属性上使用混合的访问级别。  
@@ -42,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
      在前面的示例中，`Get`过程具有相同`Protected`访问属性本身，而`Set`过程有`Private`访问。 从派生的类`employee`可以读取`salary`值，但只有`employee`类可将其设置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [属性过程](./property-procedures.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  

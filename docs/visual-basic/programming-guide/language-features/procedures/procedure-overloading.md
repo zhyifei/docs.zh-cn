@@ -1,12 +1,6 @@
 ---
-title: "过程重载 (Visual Basic)"
-ms.custom: 
+title: 过程重载 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - signatures
 - Overloads keyword [Visual Basic]
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 65fd5a6763752c616f13891bfa5acabff6115d7c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d1f2c4d8c88922659b3d91ed41d5e760e6e5233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="procedure-overloading-visual-basic"></a>过程重载 (Visual Basic)
 *重载*过程意味着在多个版本，使用相同名称但不同的参数列表中定义它。 重载的目的是定义过程的几个密切相关的版本，而无需将它们按名称区分开来。 通过不同的参数列表来执行此操作。  
@@ -56,13 +47,13 @@ ms.lasthandoff: 11/21/2017
   
 -   **项不是签名的一部分**。 如果不改变签名，不能重载过程。 具体而言，不能通过一个或多个以下各项仅改变重载过程：  
   
-    -   过程修饰符关键字，如`Public`， `Shared`，和`Static`  
+    -   过程修饰符关键字，如`Public`， `Shared`，和 `Static`  
   
     -   参数或类型参数名称  
   
     -   类型参数约束 （针对泛型过程）  
   
-    -   参数修饰符关键字，如`ByRef`和`Optional`  
+    -   参数修饰符关键字，如`ByRef`和 `Optional`  
   
     -   它是否返回一个值  
   
@@ -92,7 +83,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [如何：定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md)  
  [如何：调用重载过程](./how-to-call-an-overloaded-procedure.md)  
