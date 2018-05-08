@@ -1,21 +1,14 @@
 ---
 title: 将旧版整体式 .NET Framework 应用程序迁移到 Windows 容器
 description: 容器化 .NET 应用程序的 .NET 微服务体系结构 | 将旧版整体式 .NET Framework 应用程序迁移到 Windows 容器
-keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c88027156b55829f77357c1fdb1aef01a802b88a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a12012f115629a79734c18c3bc75733ae2fc8195
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>将旧版整体式 .NET Framework 应用程序迁移到 Windows 容器
 
@@ -57,7 +50,7 @@ Catalog.WebForms 应用程序可在 eShopOnContainers GitHub 存储库 (<https:/
 
 ## <a name="application-tour"></a>应用程序教程
 
-可以加载 Catalog.WebForms 解决方案，并将该应用程序作为一个独立的应用程序运行。 在此配置中，而非持久性存储数据库中，该应用程序会使用模拟服务返回数据。 应用程序使用 Autofac (<https://autofac.org/>) 作为控制 (IOC) 容器反转。 使用依赖项注入 (DI)，可以将应用程序配置为使用模拟数据或实时目录数据服务。 （我们很快会详细介绍 DI。）启动代码会从 web.config 文件中读取 useFake 设置，并将 Autofac 容器配置为注入模拟数据服务或实时目录服务。 如果在 web.config 文件中使用设置为“false”的 useFake 运行应用程序，则会看到 Web 窗体应用程序显示目录数据。
+可以加载 Catalog.WebForms 解决方案，并将该应用程序作为一个独立的应用程序运行。 在此配置中，而非持久性存储数据库中，该应用程序会使用模拟服务返回数据。 应用程序使用 Autofac (<https://autofac.org/>) 作为控制反转 (IOC) 容器。 使用依赖项注入 (DI)，可以将应用程序配置为使用模拟数据或实时目录数据服务。 （我们很快会详细介绍 DI。）启动代码会从 web.config 文件中读取 useFake 设置，并将 Autofac 容器配置为注入模拟数据服务或实时目录服务。 如果在 web.config 文件中使用设置为“false”的 useFake 运行应用程序，则会看到 Web 窗体应用程序显示目录数据。
 
 使用过 Web 窗体的人应该会非常熟悉在此应用程序中使用的大多数技术。 但是，目录微服务会引入两项可能比较陌生的技术：之前提到的依赖项注入 (DI) 和与 Web 窗体中的异步数据存储配合使用。
 
