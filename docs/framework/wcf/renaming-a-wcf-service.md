@@ -1,32 +1,18 @@
 ---
 title: 重命名 WCF 服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 14235a65-b1c5-409d-b6cc-a979acd54bbd
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f2ab3d780f85131fc7adf24c5f420bd5fe643d9e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a215523b92757e3bde1dae2e50de22169020e870
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="renaming-a-wcf-service"></a>重命名 WCF 服务
-本主题介绍如何重命名 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务。  
+本主题介绍如何重命名 Windows Communication Foundation (WCF) 服务。  
   
 ## <a name="renaming-a-wcf-service"></a>重命名 WCF 服务  
- 若要在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 模板中重命名服务，请执行以下步骤：  
+ 执行以下步骤以重命名在 Windows Communication Foundation (WCF) 模板中，服务  
   
 -   更改实现该服务的类的名称。  
   

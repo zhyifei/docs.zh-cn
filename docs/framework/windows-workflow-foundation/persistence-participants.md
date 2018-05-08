@@ -1,28 +1,17 @@
 ---
-title: "持久性参与者"
-ms.custom: 
+title: 持久性参与者
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b85acf2e3c4d885988e92948481182b7cf8c32c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f2875ead24e4c072d267a8bb6cddddc7f9b96d86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="persistence-participants"></a>持久性参与者
 持久性参与者可以参与应用程序宿主触发的持久性操作（保存或加载）。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]附带两个抽象类， **PersistenceParticipant**和**PersistenceIOParticipant**，可以用来创建持久性参与者。 持久性参与者派生自这些类之一，它实现所需的方法，然后将该类的实例添加到 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 集合。 应用程序宿主可在持久保存工作流实例时查找此类工作流扩展，并在适当时对持久性参与者调用适当的方法。  
   
- 下面的列表介绍持久性子系统在持久保存（保存）操作的不同阶段执行的任务。 持久性参与者用在第三和第四个阶段。 如果参与者是 IO 参与者（还参与 IO 操作的持久性参与者），则该参与者还将在第六个阶段中使用。  
+ 下面的列表介绍持久性子系统在持久保存（保存）操作的不同阶段执行的任务。 持久性参与者用在第三和第四个阶段。 如果参与者是 I/O 参与者 （还参与 I/O 操作的持久性参与者），该参与者还可用于在第六个阶段。  
   
 1.  收集内置值，包括工作流状态、书签、映射变量和时间戳。  
   
@@ -34,27 +23,27 @@ ms.lasthandoff: 12/22/2017
   
 5.  将工作流持久保存或保存到持久性存储区。  
   
-6.  对所有持久性 IO 参与者调用 <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> 方法。 如果参与者不是 IO 参与者，则跳过此任务。 如果持久性段是事务性的，则在 Transaction.Current 属性中提供事务。  
+6.  调用<xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A>对所有持久性 I/O 参与者的方法。 如果参与者不是 I/O 参与者，则跳过此任务。 如果持久性段是事务性的，则在 Transaction.Current 属性中提供事务。  
   
 7.  等待所有持久性参与者完成。 如果所有参与者在持久保存实例数据时都成功，则提交事务。  
   
- 持久性参与者派生自**PersistenceParticipant**类，可以实现**CollectValues**和**MapValues**方法。 持久性 IO 参与者派生自**PersistenceIOParticipant**类，可以实现**BeginOnSave**除了实现的方法**CollectValues**和**MapValues**方法。  
+ 持久性参与者派生自**PersistenceParticipant**类，可以实现**CollectValues**和**MapValues**方法。 I/O 持久性参与者派生自**PersistenceIOParticipant**类，可以实现**BeginOnSave**除了实现的方法**CollectValues**和**MapValues**方法。  
   
  一个阶段完成之后才开始下一个阶段。 例如，从收集值**所有**第一个阶段中的持久性参与者。 然后，将在第一个阶段中收集的所有值提供给第二个阶段中的所有持久性参与者进行映射。 接下来，将在第一个阶段中收集的和在第二个阶段中映射的所有值提供给第三个阶段中的持久性提供程序，依此类推。  
   
- 下面的列表介绍持久性子系统在加载操作的不同阶段执行的任务。 持久性参与者用在第四个阶段中。 持久性 IO 参与者（还参与 IO 操作的持久性参与者）还在第三个阶段中使用。  
+ 下面的列表介绍持久性子系统在加载操作的不同阶段执行的任务。 持久性参与者用在第四个阶段中。 持久性 I/O 参与者 （还参与 I/O 操作的持久性参与者） 也用在第三个阶段。  
   
 1.  收集已添加到与工作流实例关联的扩展集合中的所有持久性参与者。  
   
 2.  从持久性存储区加载工作流。  
   
-3.  对所有持久性 IO 参与者调用 <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A>，并等待所有持久性参与者完成。 如果持久性段是事务性的，则在 Transaction.Current 中提供事务。  
+3.  调用<xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A>上所有持久性 I/O 参与者并等待所有持久性参与者完成。 如果持久性段是事务性的，则在 Transaction.Current 中提供事务。  
   
 4.  基于从持久性存储区检索的数据将工作流实例加载到内存中。  
   
 5.  对每个持久性参与者调用 <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A>。  
   
- 持久性参与者派生自**PersistenceParticipant**类，可以实现**PublishValues**方法。 持久性 IO 参与者派生自**PersistenceIOParticipant**类，可以实现**BeginOnLoad**除了实现的方法**PublishValues**方法。  
+ 持久性参与者派生自**PersistenceParticipant**类，可以实现**PublishValues**方法。 I/O 持久性参与者派生自**PersistenceIOParticipant**类，可以实现**BeginOnLoad**除了实现的方法**PublishValues**方法。  
   
  在加载工作流实例时，持久性提供程序将在该实例上创建锁。 这避免该实例在多节点方案中被多个主机加载。 如果你尝试加载已被锁定的工作流实例将会看到如下所示异常： 异常"System.ServiceModel.Persistence.InstanceLockException： 请求的操作无法完成，因为锁定的实例00000000-0000-0000-0000-000000000000 无法获取"。 在发生下列情况之一时将会导致该错误：  
   

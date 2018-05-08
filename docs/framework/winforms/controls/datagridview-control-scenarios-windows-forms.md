@@ -1,28 +1,16 @@
 ---
-title: "DataGridView 控件方案（Windows 窗体）"
-ms.custom: 
+title: DataGridView 控件方案（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38e5337f775d98f8729c62b3481c3e839bff2252
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a320b40664e4fe2254109183731db346a5d7d0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView 控件方案（Windows 窗体）
 与<xref:System.Windows.Forms.DataGridView>控件，您可以显示来自各种数据源的表格数据。 有关简单用法，则可以手动填充<xref:System.Windows.Forms.DataGridView>和操作直接通过控件的数据。 通常情况下，但是，你将在外部数据源中存储你的数据并将控件绑定到它通过<xref:System.Windows.Forms.BindingSource>组件。  
@@ -80,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="scenario-key-points"></a>方案关键点  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle>对象使您可以提供颜色、 字体格式设置，和多个级别和控件的各个元素的定位信息。  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle> 对象使您可以提供颜色、 字体格式设置，和多个级别和控件的各个元素的定位信息。  
   
 -   可以层和共享的多个元素，从而允许重用代码的单元格样式。  
   

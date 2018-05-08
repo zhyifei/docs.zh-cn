@@ -1,22 +1,12 @@
 ---
-title: "高级查询技术 (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: 高级查询技术 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 79be877c-fadc-4dfb-9f03-426082b13656
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21a12ba1929b0e8fd24ae9e12404691222e397cf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 67227dddfcf44201ddd7e4adebd06a6022c6f2f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>高级查询技术 (LINQ to XML) (Visual Basic)
 本节提供更多高级 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询技术的示例。  
@@ -34,5 +24,5 @@ ms.lasthandoff: 10/18/2017
 |[如何： 修改 Office Open XML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|演示打开、修改和保存 Office Open XML 文档的代码。|  
 |[如何： 填充 XML 树从文件系统 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|演示从文件系统创建 XML 树的代码。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

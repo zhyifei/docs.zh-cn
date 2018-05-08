@@ -1,32 +1,18 @@
 ---
 title: 使用客户端访问服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1369403b493683f58640047fe042708afc5d5b46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-services-using-a-client"></a>使用客户端访问服务
-客户端应用程序必须创建、配置和使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端或通道对象，以便与服务进行通信。 [WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)主题提供的对象和创建基本的客户端和通道对象和使用它们所涉及的步骤概述。  
+客户端应用程序必须创建、 配置和使用 WCF 客户端或通道对象与服务进行通信。 [WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)主题提供的对象和创建基本的客户端和通道对象和使用它们所涉及的步骤概述。  
   
  本主题提供有关某些客户端应用程序问题以及客户端和通道对象问题的详细信息，根据方案的具体情况，这些信息可能会有用处。  
   
@@ -42,7 +28,7 @@ ms.lasthandoff: 04/30/2018
 -   以交互方式初始化通道。  
   
 ### <a name="channel-and-session-lifetimes"></a>通道和会话生存期  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序包含两个类别的通道：数据报通道和会话通道。  
+ Windows Communication Foundation (WCF) 应用程序包括两种类别的通道、 数据报和会话。  
   
  A*数据报*通道是在其中所有消息都是不相关的通道。 使用数据报通道时，如果输入或输出操作失败，下一个操作通常不会受到影响，并且同一个通道可以重用。 因此，数据报通道通常不会出错。  
   
@@ -79,11 +65,11 @@ ms.lasthandoff: 04/30/2018
  有关使用应用程序级别的错误信息的更完整信息，请参阅[指定和处理在协定和服务中的错误](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 [预期异常](../../../../docs/framework/wcf/samples/expected-exceptions.md)描述预期的异常，并显示如何处理它们。 有关如何开发通道时处理错误的详细信息，请参阅[处理异常和错误](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
   
 ### <a name="client-blocking-and-performance"></a>客户端阻塞和性能  
- 当应用程序同步调用请求-答复操作时，客户端会阻塞，直到接收到返回值或引发异常（例如 <xref:System.TimeoutException?displayProperty=nameWithType>）为止。 此行为与本地行为类似。 当应用程序同步调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象或通道上的操作时，客户端将直到通道层可以向网络写入数据或引发异常时才返回。 虽然单向消息交换模式（通过标记操作来指定，即将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 设置为 `true`）可以使某些客户端更快做出响应，但是根据绑定和已经发送的消息的性质，单向操作也可能阻塞。 单向操作仅与消息交换有关。 有关详细信息，请参阅[单向服务](../../../../docs/framework/wcf/feature-details/one-way-services.md)。  
+ 当应用程序同步调用请求-答复操作时，客户端会阻塞，直到接收到返回值或引发异常（例如 <xref:System.TimeoutException?displayProperty=nameWithType>）为止。 此行为与本地行为类似。 当应用程序以同步方式调用 WCF 客户端对象或通道上的操作时，客户端将不返回直到通道层可以写入数据，到网络或引发异常。 虽然单向消息交换模式（通过标记操作来指定，即将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 设置为 `true`）可以使某些客户端更快做出响应，但是根据绑定和已经发送的消息的性质，单向操作也可能阻塞。 单向操作仅与消息交换有关。 有关详细信息，请参阅[单向服务](../../../../docs/framework/wcf/feature-details/one-way-services.md)。  
   
  无论使用何种消息交换模式，大的数据块都会降低客户端的处理速度。 若要了解如何处理这些问题，请参阅[大型数据和流式处理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   
- 如果应用程序在操作完成过程中必须做更多的工作，则应在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端实现的服务协定接口上创建一个异步方法对。 若要执行此操作的最简单方法是使用`/async`切换[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 有关示例，请参阅[如何： 以异步方式调用服务操作](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
+ 如果操作完成时，你的应用程序必须做更多的工作，则应在 WCF 客户端实现服务协定接口上创建一个异步方法对。 若要执行此操作的最简单方法是使用`/async`切换[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 有关示例，请参阅[如何： 以异步方式调用服务操作](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
  有关提高客户端性能的详细信息，请参阅[中间层客户端应用程序](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。  
   

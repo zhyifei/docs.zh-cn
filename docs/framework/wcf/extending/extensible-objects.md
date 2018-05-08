@@ -1,23 +1,14 @@
 ---
-title: "可扩展对象"
+title: 可扩展对象
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
-ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
-ms.translationtype: MT
+ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensible-objects"></a>可扩展对象
 可扩展对象模式用于使用新功能扩展现有运行时类，或者向对象中添加新状态。 附加到可扩展对象之一的扩展名，在访问附加到公共可扩展对象的共享状态和功能过程的各个不同阶段启用行为，各可扩展对象可以访问该公共扩展对象。  
@@ -57,7 +48,7 @@ where T : IExtensibleObject<T>
  <xref:System.ServiceModel.IExtensionCollection%601> 接口是允许按照其类型检索 <xref:System.ServiceModel.IExtension%601> 的 <xref:System.ServiceModel.IExtension%601> 对象集合。 <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> 返回最近添加的对象，此对象是属于该类型的 <xref:System.ServiceModel.IExtension%601>。  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Windows Communication Foundation 中的可扩展对象  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中包含四个可扩展对象：  
+ 有四个可扩展对象中 Windows Communication Foundation (WCF):  
   
 -   <xref:System.ServiceModel.ServiceHostBase> — 这是服务主机的基类。  此类的扩展名可用于扩展 <xref:System.ServiceModel.ServiceHostBase> 自身的行为，或者用于存储每个服务的状态。  
   

@@ -1,31 +1,19 @@
 ---
-title: "GridView 概述"
-ms.custom: 
+title: GridView 概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GridView view mode [WPF]
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 776897d490b2748e240cf7b9a4ea21364284c4c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gridview-overview"></a>GridView 概述
-<xref:System.Windows.Controls.GridView>视图模式是一种视图模式的<xref:System.Windows.Controls.ListView>控件。 <xref:System.Windows.Controls.GridView>类和支持类让你和你的用户可以查看按钮通常用作交互式列标题的表中的项的集合。 本主题介绍<xref:System.Windows.Controls.GridView>类，并概述了其使用。  
+<xref:System.Windows.Controls.GridView> 视图模式是一种视图模式的<xref:System.Windows.Controls.ListView>控件。 <xref:System.Windows.Controls.GridView>类和支持类让你和你的用户可以查看按钮通常用作交互式列标题的表中的项的集合。 本主题介绍<xref:System.Windows.Controls.GridView>类，并概述了其使用。  
   
   
   
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  ![带样式的 ListView](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
   
- <xref:System.Windows.Controls.GridView>列由表示<xref:System.Windows.Controls.GridViewColumn>对象，可以对其内容自动调整大小。 （可选） 你可以显式设置<xref:System.Windows.Controls.GridViewColumn>为特定的宽度。 可通过拖动列标题之间的手柄重设列的大小。 你可以还可以动态地添加、 删除、 替换和对列重新排序，因为此功能已内置于<xref:System.Windows.Controls.GridView>。 但是，<xref:System.Windows.Controls.GridView>无法直接更新它显示的数据。  
+ <xref:System.Windows.Controls.GridView> 列由表示<xref:System.Windows.Controls.GridViewColumn>对象，可以对其内容自动调整大小。 （可选） 你可以显式设置<xref:System.Windows.Controls.GridViewColumn>为特定的宽度。 可通过拖动列标题之间的手柄重设列的大小。 你可以还可以动态地添加、 删除、 替换和对列重新排序，因为此功能已内置于<xref:System.Windows.Controls.GridView>。 但是，<xref:System.Windows.Controls.GridView>无法直接更新它显示的数据。  
   
  下面的示例演示如何定义<xref:System.Windows.Controls.GridView>显示雇员数据。 在此示例中，<xref:System.Windows.Controls.ListView>定义`EmployeeInfoDataSource`作为<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。 属性定义<xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>绑定<xref:System.Windows.Controls.GridViewColumn>内容到`EmployeeInfoDataSource`数据类别。  
   

@@ -1,14 +1,6 @@
 ---
-title: "CLR 探查器和 Windows 应用商店应用"
-ms.custom: 
+title: CLR 探查器和 Windows 应用商店应用
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 applies_to:
@@ -20,17 +12,13 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 探查器和 Windows 应用商店应用
 本主题讨论你需要考虑时写入诊断工具来分析托管代码中的 Windows 应用商店应用运行。  它还提供了一些指南，可以修改现有的开发工具，以使它们继续正常工作时针对 Windows 应用商店应用运行时。  若要了解此信息，最好是如果你熟悉公共语言运行时分析 API，已在运行 Windows 桌面应用程序，并且你针对正确现在感兴趣修改该工具的诊断工具中使用此 API若要针对 Windows 应用商店应用程序正确运行。  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Intro"></a>   
 ## <a name="introduction"></a>介绍  
- 如果你进行了它过去的介绍性段落，然后你熟悉 CLR 分析 API。  您已经编写了一个诊断工具，也对托管的桌面应用程序有效。  现在你想要执行的操作，以便你工具与托管的 Windows 应用商店应用结合使用。  可能是你已尝试进行此项工作，并已发现它不是简单的任务。  事实上，有大量的可能不太明显到所有的工具开发人员的注意事项。  例如:  
+ 如果你进行了它过去的介绍性段落，然后你熟悉 CLR 分析 API。  您已经编写了一个诊断工具，也对托管的桌面应用程序有效。  现在你想要执行的操作，以便你工具与托管的 Windows 应用商店应用结合使用。  可能是你已尝试进行此项工作，并已发现它不是简单的任务。  事实上，有大量的可能不太明显到所有的工具开发人员的注意事项。  例如：  
   
 -   具有严重降低的权限的上下文中运行 Windows 应用商店应用。  
   
@@ -154,7 +142,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
  **选择 Windows 应用商店应用迁移到配置文件**  
  首先，你将想要要求你探查器用户启动的 Windows 应用商店应用程序。  对于桌面应用，可能会显示文件浏览对话框，然后用户将查找并选择的.exe 文件。  但 Windows 应用商店应用是不同的并使用一个浏览对话框没有任何意义。  相反，它是更好的做法显示用户已安装了该用户就可以从选择的 Windows 应用商店应用的列表。  
   
- 你可以使用[PackageManager 类](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx)生成此列表。  `PackageManager`是可用于桌面应用的 Windows 运行时类和实际上它是*仅*可用于桌面应用。  
+ 你可以使用[PackageManager 类](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx)生成此列表。  `PackageManager` 是可用于桌面应用的 Windows 运行时类和实际上它是*仅*可用于桌面应用。  
   
  假设探查器 UI 编写为 C# yses 中的桌面应用的以下 ode 示例`PackageManager`生成 Windows 应用的列表：  
   
@@ -178,9 +166,9 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
   
  有几个需要正确的项：  
   
--   `packageFullName`可以同时遍历包并抓取确定`package.Id.FullName`。  
+-   `packageFullName` 可以同时遍历包并抓取确定`package.Id.FullName`。  
   
--   `debuggerCommandLine`较之前更有趣的是。  若要将自定义环境块传递给 Windows 应用商店应用，你需要编写你自己，简单的 dummy 调试器。  Windows spawns Windows 应用商店应用程序挂起，然后将调试器附加通过启动与如下在此示例中的命令行调试程序：  
+-   `debuggerCommandLine` 较之前更有趣的是。  若要将自定义环境块传递给 Windows 应用商店应用，你需要编写你自己，简单的 dummy 调试器。  Windows spawns Windows 应用商店应用程序挂起，然后将调试器附加通过启动与如下在此示例中的命令行调试程序：  
   
     ```Output  
     MyDummyDebugger.exe -p 1336 -tid 1424  
@@ -326,7 +314,7 @@ tempDir = appData.TemporaryFolder.Path;
  **通过事件进行通信**  
  如果你想探查器用户界面和探查器 DLL 之间的简单信号语义，可以使用 Windows 应用商店应用以及桌面应用中的事件。  
   
- 从探查器 DLL，只需调用[CreateEventEx](https://msdn.microsoft.com/library/windows/desktop/ms682400\(v=vs.85\).aspx)函数来创建的命名的事件与你喜欢的任何名称。  例如:  
+ 从探查器 DLL，只需调用[CreateEventEx](https://msdn.microsoft.com/library/windows/desktop/ms682400\(v=vs.85\).aspx)函数来创建的命名的事件与你喜欢的任何名称。  例如：  
   
 ```cpp  
 // Profiler DLL in Windows Store app (C++).  
@@ -341,7 +329,7 @@ CreateEventEx(
   
  `AppContainerNamedObjects\<acSid>\MyNamedEvent`  
   
- `<acSid>`为 Windows 应用商店应用的 AppContainer SID。  本主题前面部分介绍了如何循环访问当前用户安装的包。  从该示例代码，你可以获取 packageId。  并从 packageId，可以获取`<acSid>`类似以下的代码：  
+ `<acSid>` 为 Windows 应用商店应用的 AppContainer SID。  本主题前面部分介绍了如何循环访问当前用户安装的包。  从该示例代码，你可以获取 packageId。  并从 packageId，可以获取`<acSid>`类似以下的代码：  
   
 ```csharp  
 IntPtr acPSID;  

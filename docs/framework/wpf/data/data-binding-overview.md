@@ -1,13 +1,6 @@
 ---
-title: "数据绑定概述"
-ms.custom: 
+title: 数据绑定概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-caps.latest.revision: "78"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b58cde738e2584662fa5f9ad90634931674f48b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-overview"></a>数据绑定概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素能够以 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 形式绑定到来自各种数据源的数据。 <xref:System.Windows.Controls.ContentControl>如 s<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.ItemsControl>如 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>具有内置的功能，以便实现灵活的样式设置单个数据项的集合。 可基于数据生成排序、筛选和分组视图。  
@@ -94,11 +82,11 @@ ms.lasthandoff: 12/22/2017
   
  ![数据绑定数据流](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay>绑定会导致更改源属性自动更新目标属性，但不是会对目标属性的更改传播回源属性。 如果绑定的控件为隐式只读，则此类型的绑定适用。 例如，可能绑定到如股票行情自动收录器这样的源，或许目标属性没有用于进行更改的控件接口（如表的数据绑定背景色）。 如果无需监视目标属性的更改，则使用 <xref:System.Windows.Data.BindingMode.OneWay> 绑定模式可避免 <xref:System.Windows.Data.BindingMode.TwoWay> 绑定模式的系统开销。  
+-   <xref:System.Windows.Data.BindingMode.OneWay> 绑定会导致更改源属性自动更新目标属性，但不是会对目标属性的更改传播回源属性。 如果绑定的控件为隐式只读，则此类型的绑定适用。 例如，可能绑定到如股票行情自动收录器这样的源，或许目标属性没有用于进行更改的控件接口（如表的数据绑定背景色）。 如果无需监视目标属性的更改，则使用 <xref:System.Windows.Data.BindingMode.OneWay> 绑定模式可避免 <xref:System.Windows.Data.BindingMode.TwoWay> 绑定模式的系统开销。  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay>绑定会导致更改源属性或自动更新另的目标属性。 此类型的绑定适用于可编辑窗体或其他完整交互式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 方案。 大多数属性默认为<xref:System.Windows.Data.BindingMode.OneWay>绑定，而某些依赖项属性 (通常是用户可编辑控件的属性<xref:System.Windows.Controls.TextBox.Text%2A>属性<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>属性<xref:System.Windows.Controls.CheckBox>) 默认为<xref:System.Windows.Data.BindingMode.TwoWay>绑定。 确定依赖属性绑定在默认情况下是单向还是双向的编程方法是：使用 <xref:System.Windows.DependencyProperty.GetMetadata%2A> 获取属性的属性元数据，然后检查 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> 属性的布尔值。  
+-   <xref:System.Windows.Data.BindingMode.TwoWay> 绑定会导致更改源属性或自动更新另的目标属性。 此类型的绑定适用于可编辑窗体或其他完整交互式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 方案。 大多数属性默认为<xref:System.Windows.Data.BindingMode.OneWay>绑定，而某些依赖项属性 (通常是用户可编辑控件的属性<xref:System.Windows.Controls.TextBox.Text%2A>属性<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>属性<xref:System.Windows.Controls.CheckBox>) 默认为<xref:System.Windows.Data.BindingMode.TwoWay>绑定。 确定依赖属性绑定在默认情况下是单向还是双向的编程方法是：使用 <xref:System.Windows.DependencyProperty.GetMetadata%2A> 获取属性的属性元数据，然后检查 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> 属性的布尔值。  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource>相反<xref:System.Windows.Data.BindingMode.OneWay>绑定; 它的源属性更改时，更新的目标属性。 一个示例方案是只需要从 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 重新计算源值的情况。  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource> 相反<xref:System.Windows.Data.BindingMode.OneWay>绑定; 它的源属性更改时，更新的目标属性。 一个示例方案是只需要从 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 重新计算源值的情况。  
   
 -   未在图中所示是<xref:System.Windows.Data.BindingMode.OneTime>绑定，这将导致产生的源属性来初始化目标属性，但后续更改都不会传播。 这意味着，如果数据上下文发生了更改，或者数据上下文中的对象发生了更改，该更改不会反映在目标属性中。 如果你在适合使用当前状态的快照或数据实际为静态数据的位置使用数据，则此类型的绑定适合。 如果你想使用源属性中的某个值来初始化目标属性，且提前不知道数据上下文，则此类型的绑定也有用。 这是实质上是 <xref:System.Windows.Data.BindingMode.OneWay> 绑定的一种简化形式，它在源值不更改的情况下提供更好的性能。  
   
@@ -125,8 +113,8 @@ ms.lasthandoff: 12/22/2017
 |UpdateSourceTrigger 值|源值何时进行更新|文本框的示例方案|  
 |-------------------------------|----------------------------------------|----------------------------------|  
 |LostFocus (默认为<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>)|当 TextBox 控件失去焦点时|A<xref:System.Windows.Controls.TextBox>验证逻辑与该键相关联 （请参阅数据验证部分）|  
-|PropertyChanged|当键入到<xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox>聊天室窗口中的控件|  
-|Explicit|在应用程序调用<xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox>（仅当用户单击提交按钮时的更新源值） 的可编辑窗体中的控件|  
+|PropertyChanged|当键入到 <xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox> 聊天室窗口中的控件|  
+|Explicit|在应用程序调用 <xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox> （仅当用户单击提交按钮时的更新源值） 的可编辑窗体中的控件|  
   
  有关示例，请参阅[控制文本框文本更新源的时间](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)。  
   
@@ -236,7 +224,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="how-to-implement-collections"></a>如何实现集合  
  你可以枚举任何集合可实现<xref:System.Collections.IEnumerable>接口。 但是，若要设置动态绑定，使插入或删除集合中的更新[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]集合必须实现自动<xref:System.Collections.Specialized.INotifyCollectionChanged>接口。 此接口公开一个事件，只要基础集合发生更改，就应该引发该事件。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供<xref:System.Collections.ObjectModel.ObservableCollection%601>类，它是公开的数据集合的内置实现<xref:System.Collections.Specialized.INotifyCollectionChanged>接口。 请注意，若要完全支持传输来自源对象到目标的数据值，您支持可绑定属性的集合中每个对象还必须实现<xref:System.ComponentModel.INotifyPropertyChanged>接口。 有关详细信息，请参阅[绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供<xref:System.Collections.ObjectModel.ObservableCollection%601>类，它是公开的数据集合的内置实现<xref:System.Collections.Specialized.INotifyCollectionChanged>接口。 请注意，若要完全支持传输来自源对象到目标的数据值，您支持可绑定属性的集合中每个对象还必须实现<xref:System.ComponentModel.INotifyPropertyChanged>接口。 有关详细信息，请参阅[绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
   
  在实施之前你自己的集合，请考虑使用<xref:System.Collections.ObjectModel.ObservableCollection%601>或一个现有集合类，如<xref:System.Collections.Generic.List%601>， <xref:System.Collections.ObjectModel.Collection%601>，和<xref:System.ComponentModel.BindingList%601>，此外还有许多其他。 如果你有高级的方案，并想要实现您自己的集合，请考虑使用<xref:System.Collections.IList>，它提供可通过索引，因此最佳性能单独访问的对象的非泛型集合。  
   
@@ -269,7 +257,7 @@ ms.lasthandoff: 12/22/2017
   
 |源集合类型|集合视图类型|说明|  
 |----------------------------|--------------------------|-----------|  
-|<xref:System.Collections.IEnumerable>|基于内部类型<xref:System.Windows.Data.CollectionView>|无法对项进行分组。|  
+|<xref:System.Collections.IEnumerable>|基于内部类型 <xref:System.Windows.Data.CollectionView>|无法对项进行分组。|  
 |<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|最快。|  
 |<xref:System.ComponentModel.IBindingList>|<xref:System.Windows.Data.BindingListCollectionView>||  
   
@@ -373,7 +361,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[DataBindingLab#DefaultValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
   
- A<xref:System.Windows.Controls.ValidationRule>对象检查属性的值是否有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有以下两个类型的内置<xref:System.Windows.Controls.ValidationRule>对象：  
+ A<xref:System.Windows.Controls.ValidationRule>对象检查属性的值是否有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 具有以下两个类型的内置<xref:System.Windows.Controls.ValidationRule>对象：  
   
 -   A<xref:System.Windows.Controls.ExceptionValidationRule>检查的绑定源属性更新过程中引发的异常。 在以上示例中，`StartPrice` 为整数类型。 当用户输入的值无法转换为整数时，将引发异常，这会导致将绑定标记为无效。 设置的可选语法<xref:System.Windows.Controls.ExceptionValidationRule>显式是设置<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>属性`true`上你<xref:System.Windows.Data.Binding>或<xref:System.Windows.Data.MultiBinding>对象。  
   

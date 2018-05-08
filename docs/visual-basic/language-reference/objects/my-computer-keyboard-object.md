@@ -1,22 +1,14 @@
 ---
 title: My.Computer.Keyboard 对象
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Computer.Keyboard object
 ms.assetid: 78dec9be-4e69-4ede-b9be-2ac34bec2b26
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 56fd59d0048a680bdd476b05144dfdb66f641287
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 70766a88c74bf6f10f432f97f47d94eaa31b9b19
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard 对象
 提供了用于访问键盘当前状态（如当前按下了哪些键）的属性，并提供了用于将击键发送到活动窗口的方法。  
@@ -27,11 +19,11 @@ ms.lasthandoff: 10/18/2017
  有关详细信息，请参阅[访问键盘](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)。  
   
 ## <a name="requirements"></a>要求  
- **Namespace:**<xref:Microsoft.VisualBasic.Devices>  
+ **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **类：**<xref:Microsoft.VisualBasic.Devices.Keyboard>  
+ **类：** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
   
  **程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)

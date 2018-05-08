@@ -1,13 +1,6 @@
 ---
-title: "如何：引用对象的当前实例 (Visual Basic)"
-ms.custom: 
+title: 如何：引用对象的当前实例 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], object
 - objects [Visual Basic], referring to current instance
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 33ea612253b00e12f47258189da4ac7d8d98ade5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1b79f1b6a9768941d6fe966c5b5886ea742f808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>如何：引用对象的当前实例 (Visual Basic)
 *当前实例*对象是当前在其中执行代码的实例。  
@@ -38,9 +28,9 @@ ms.lasthandoff: 11/21/2017
     Me.Close()  
     ```  
   
-     尽管`Me`行为类似对象变量，你不能将其声明或向它分配任何内容。 `Me`始终引用当前实例。  
+     尽管`Me`行为类似对象变量，你不能将其声明或向它分配任何内容。 `Me` 始终引用当前实例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
  [对象变量赋值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
  [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

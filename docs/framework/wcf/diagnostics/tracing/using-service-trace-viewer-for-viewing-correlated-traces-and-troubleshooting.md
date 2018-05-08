@@ -1,30 +1,18 @@
 ---
-title: "使用服务跟踪查看器查看相关跟踪和进行故障诊断"
-ms.custom: 
+title: 使用服务跟踪查看器查看相关跟踪和进行故障诊断
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>使用服务跟踪查看器查看相关跟踪和进行故障诊断
 本主题介绍跟踪数据的格式，如何查看它，以及使用服务跟踪查看器对应用程序进行故障诊断的方法。  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>使用服务跟踪查看器工具  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务跟踪查看器工具可帮助您详细了解 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 侦听器生成的诊断跟踪信息，从而找到错误的根本原因。 该工具提供了一种轻松查看、分组和筛选跟踪的方法，以便可以诊断、修复和验证 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务的问题。 有关使用此工具的详细信息，请参阅[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
+ Windows Communication Foundation (WCF) 服务跟踪查看器工具可帮助您详细了解生成的诊断跟踪[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]侦听器来找到根目录导致的错误。 该工具提供了一种轻松查看、分组和筛选跟踪的方法，以便可以诊断、修复和验证 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务的问题。 有关使用此工具的详细信息，请参阅[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
   
  本主题包含通过运行生成的跟踪快照[跟踪和消息日志记录](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)示例，使用查看时[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 本主题演示如何了解跟踪内容、活动及其关联，以及进行故障诊断时如何分析大量跟踪。  
   

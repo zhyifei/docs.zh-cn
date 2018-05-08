@@ -1,23 +1,12 @@
 ---
-title: "使用 CodeActivity 类的工作流活动创作"
-ms.custom: 
+title: 使用 CodeActivity 类的工作流活动创作
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2daec260c1224cd81280c6bf699b70efc2072588
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a78c4399db0c4d207921544d5faa4da022dd107
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>使用 CodeActivity 类的工作流活动创作
 从 <xref:System.Activities.CodeActivity> 继承而创建的活动可以通过重写 <xref:System.Activities.CodeActivity.Execute%2A> 方法来实现基本的命令性行为。  
@@ -35,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  打开 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  选择**文件**，**新**，，然后**项目**。 选择**Workflow 4.0**下**Visual C#**中**项目类型**窗口中，然后选择**v2010**节点。 选择**活动库**中**模板**窗口。 将新项目命名为 HelloActivity。  
+2.  选择**文件**，**新**，，然后**项目**。 选择**Workflow 4.0**下**Visual C#** 中**项目类型**窗口中，然后选择**v2010**节点。 选择**活动库**中**模板**窗口。 将新项目命名为 HelloActivity。  
   
 3.  右击 HelloActivity 项目中的 Activity1.xaml，然后选择**删除**。  
   

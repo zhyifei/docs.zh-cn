@@ -1,23 +1,12 @@
 ---
-title: "使用 DynamicActivity 在运行时创建活动"
-ms.custom: 
+title: 使用 DynamicActivity 在运行时创建活动
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebbd6e77c2c47754054a81f4b07d3d845cdcac00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0450a56059083f355f3fd71d95c83bf8dd1cf0e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>使用 DynamicActivity 在运行时创建活动
 <xref:System.Activities.DynamicActivity> 是一个带有公共构造函数的具体的密封类。 通过使用活动 DOM，<xref:System.Activities.DynamicActivity> 可用于在运行时组合活动功能。  
@@ -33,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  打开 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  选择**文件**，**新**，**项目**。 选择**Workflow 4.0**下**Visual C#**中**项目类型**窗口中，然后选择**v2010**节点。 选择**顺序工作流控制台应用程序**中**模板**窗口。 将新项目命名为 DynamicActivitySample。  
+2.  选择**文件**，**新**，**项目**。 选择**Workflow 4.0**下**Visual C#** 中**项目类型**窗口中，然后选择**v2010**节点。 选择**顺序工作流控制台应用程序**中**模板**窗口。 将新项目命名为 DynamicActivitySample。  
   
 3.  右击 HelloActivity 项目中的 Workflow1.xaml，然后选择**删除**。  
   
@@ -82,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  打开 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  选择**文件**，**新**，**项目**。 选择**Workflow 4.0**下**Visual C#**中**项目类型**窗口中，然后选择**v2010**节点。 选择**工作流控制台应用程序**中**模板**窗口。 将新项目命名为 DynamicActivitySample。  
+2.  选择**文件**，**新**，**项目**。 选择**Workflow 4.0**下**Visual C#** 中**项目类型**窗口中，然后选择**v2010**节点。 选择**工作流控制台应用程序**中**模板**窗口。 将新项目命名为 DynamicActivitySample。  
   
 3.  在 HelloActivity 项目中打开 Workflow1.xaml。 单击**参数**设计器底部的选项。 创建一个 `In` 类型的新 `TextToWrite` 参数，并将其命名为 `String`。  
   

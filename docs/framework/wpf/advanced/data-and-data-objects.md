@@ -1,13 +1,6 @@
 ---
-title: "数据和数据对象"
-ms.custom: 
+title: 数据和数据对象
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb2354b61a0433981675ba55978f31937212cabc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff596dc7428c9d105a27999f216d33e735e35a22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-and-data-objects"></a>数据和数据对象
 作为拖放操作的一部分传输的数据存储在数据对象。  从概念上讲，数据对象由一个或多个以下对组成：  
@@ -40,14 +28,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="data-objects"></a>数据对象  
  所有数据对象必须都实现<xref:System.Windows.IDataObject>接口，从而提供以下标准组方法，用于启用和帮助进行数据传输。  
   
-|方法|摘要|  
+|方法|总结|  
 |------------|-------------|  
 |<xref:System.Windows.IDataObject.GetData%2A>|检索指定的数据格式中的数据对象。|  
 |<xref:System.Windows.IDataObject.GetDataPresent%2A>|检查以确定是否可在中，或者可以转换为指定的格式数据。|  
 |<xref:System.Windows.IDataObject.GetFormats%2A>|返回此数据对象中的数据存储在中，或可以转换为的格式中的列表。|  
 |<xref:System.Windows.IDataObject.SetData%2A>|将指定的数据存储在此数据对象。|  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供的基本实现<xref:System.Windows.IDataObject>中<xref:System.Windows.DataObject>类。 常用<xref:System.Windows.DataObject>类是足够的许多常用的数据传输方案。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的基本实现<xref:System.Windows.IDataObject>中<xref:System.Windows.DataObject>类。 常用<xref:System.Windows.DataObject>类是足够的许多常用的数据传输方案。  
   
  有几个预定义的格式，如位图、 CSV、 文件、 HTML、 RTF、 字符串、 文本和音频。 有关与提供的预定义的数据格式信息[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，请参阅<xref:System.Windows.DataFormats>类参考主题。  
   
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  查询可用的数据格式的数据对象的代码的更多示例，请参阅[列出数据对象中的数据格式](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)。  查询数据对象是否存在特定的数据格式的示例，请参阅[确定数据格式是否存在数据对象中](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)。  
   
 ### <a name="retrieving-data-from-a-data-object"></a>从数据对象中检索数据  
- 从特定的格式中的数据对象中检索数据只需调用之一<xref:System.Windows.DataObject.GetData%2A>方法并指定所需的数据格式。  之一<xref:System.Windows.DataObject.GetDataPresent%2A>方法可以用于检查是否存在特定的数据格式。  <xref:System.Windows.DataObject.GetData%2A>返回中的数据<xref:System.Object>; 具体取决于数据格式，此对象可以强制转换为特定类型的容器。  
+ 从特定的格式中的数据对象中检索数据只需调用之一<xref:System.Windows.DataObject.GetData%2A>方法并指定所需的数据格式。  之一<xref:System.Windows.DataObject.GetDataPresent%2A>方法可以用于检查是否存在特定的数据格式。  <xref:System.Windows.DataObject.GetData%2A> 返回中的数据<xref:System.Object>; 具体取决于数据格式，此对象可以强制转换为特定类型的容器。  
   
  下面的代码示例使用<xref:System.Windows.DataObject.GetDataPresent%28System.String%29>重载，以检查是否可指定的数据格式 （本机编译或通过自动转换）。 指定的格式是否可用，该示例通过使用检索的数据<xref:System.Windows.DataObject.GetData%28System.String%29>方法。  
   

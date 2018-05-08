@@ -1,13 +1,6 @@
 ---
-title: "用直线和曲线抗锯齿"
-ms.custom: 
+title: 用直线和曲线抗锯齿
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8552f185a93b688555dbcfab3da9d28d9bfde6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ccc75a535d8ef21cc780ae8e20d590631306bdc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>用直线和曲线抗锯齿
-当你使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]绘制线条，提供的起始点和结束点的行，但不是需要在行上提供有关单个像素的任何信息。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]显示驱动程序软件，以确定哪些像素将打开以显示特定显示设备上的行与协同工作。  
+当你使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]绘制线条，提供的起始点和结束点的行，但不是需要在行上提供有关单个像素的任何信息。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 显示驱动程序软件，以确定哪些像素将打开以显示特定显示设备上的行与协同工作。  
   
 ## <a name="aliasing"></a>别名  
  请考虑从点 （4，2） 转到 （16，10） 的点的垂直红线。 假定坐标系统中的左上角有其源的度量单位是像素。 此外假定指向到右侧和 y 轴点的 x 轴下方。 下图显示在彩色背景上绘制的红色行的放大的视图。  

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEval::NewArray 方法"
-ms.custom: 
+title: ICorDebugEval::NewArray 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEval.NewArray
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9116c2ee7edbc39d203728909ce37e963c896fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray 方法
 分配的指定的元素类型和维度的一个新数组。  
@@ -71,7 +59,7 @@ HRESULT NewArray (
 ## <a name="remarks"></a>备注  
  始终在线程当前执行的应用程序域中创建数组。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

@@ -1,22 +1,12 @@
 ---
-title: "形状的 WordprocessingML 文档 (Visual Basic)"
-ms.custom: 
+title: 形状的 WordprocessingML 文档 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5809e8148e7ac426b876ad11948878ee0bfcd016
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 40d1013d5b5c131cc0b83c1b62bff2555ab179a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>形状的 WordprocessingML 文档 (Visual Basic)
 本主题介绍 WordprocessingML 文档的 XML 形状。  
@@ -24,7 +14,7 @@ ms.lasthandoff: 12/14/2017
 ## <a name="microsoft-office-formats"></a>Microsoft Office 格式  
  2007 Microsoft Office 系统的本机文件格式为 Office Open XML（通常称为 Open XML）。 Open XML 是一种基于 XML 的格式（Ecma 标准），当前即将通过 ISO-IEC 标准流程。 Open XML 中用于文字处理文件的标记语言称为 WordprocessingML。 本教程使用 WordprocessingML 源文件作为示例的输入。  
   
- 如果你正在使用 Microsoft Office 2003，可以将文档保存在 Office Open XML 格式，如果你已安装 Microsoft Office 兼容包的 Word、 Excel 和 PowerPoint 2007 文件格式。  
+ 如果使用 Microsoft Office 2003，则在已安装适用于 Word、Excel 和 PowerPoint 2007 文件格式的 Microsoft Office 兼容包的情况下，可以将文档保存为 Office Open XML 格式。  
   
 ## <a name="the-shape-of-wordprocessingml-documents"></a>WordprocessingML 文档的形状  
  首先要了解的是 WordprocessingML 文档的形状。 WordprocessingML 文档包含一个正文元素（称为 `w:body`），该元素包含文档的各个段落。 每个段落包含一个或多个文本域（称为 `w:r`）。 每个文本域包含一个或多个文本块（称为 `w:t`）。  
@@ -103,5 +93,5 @@ End Module
   
  [Office 2003: XML Reference Schemas Download page](http://go.microsoft.com/fwlink/?LinkId=98095)（Office 2003：XML 参考架构下载页）  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [教程： 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

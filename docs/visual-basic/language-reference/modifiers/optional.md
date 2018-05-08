@@ -1,10 +1,6 @@
 ---
 title: Optional (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Optional
 - vb.optional
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3aa01c2c1ae731c8fe00fdee24521760db69e624
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f88020c7407fb9c91e06bc2ee177773171e344fe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 指定调用该过程时，可以省略过程自变量。  
@@ -72,7 +65,7 @@ End Function
   
  [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)  
  [可选参数](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
  [关键字](../../../visual-basic/language-reference/keywords/index.md)

@@ -1,27 +1,15 @@
 ---
-title: "基本资源服务"
-ms.custom: 
+title: 基本资源服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3ec743bbbb6d18d972701c3149179d6f615d1884
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-resource-service"></a>基本资源服务
-此示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 编程模型实现基于 HTTP 的服务，该模型公开支持检索、添加、删除和替换操作的客户集合。 此示例由两个组件组成：一个自承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服务 (Service.cs) 和一个创建服务并对该服务进行调用的控制台应用程序 (program.cs)。  
+此示例演示如何实现基于 HTTP 的服务使用 Windows Communication Foundation (WCF) REST 编程模型公开支持检索客户的集合、 添加、 删除和替换操作。 此示例由两个组件组成：一个自承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服务 (Service.cs) 和一个创建服务并对该服务进行调用的控制台应用程序 (program.cs)。  
   
 ## <a name="sample-details"></a>示例详细信息  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务以面向资源的/REST 方式公开客户集合。 简而言之，这涉及拥有客户集合以及该集合中每个客户的唯一 URI。 该服务支持在集合 URI 上发送 HTTP `GET` 以检索整个集合，并在结合 URI 上发送 HTTP `POST` 以向该集合添加新客户。 另外，单个客户的 URI 上，它还支持 HTTP `GET` 以获取客户详细信息，支持 HTTP `PUT` 以替换该客户的详细信息，并支持 HTTP `DELETE` 以将该客户从集合中移除。 将新客户添加到集合中时，该服务会向其分配一个唯一的 URI，并将该 URI 作为客户详细信息的一部分存储。 此外，该服务还使用响应的位置 HTTP 标头将该 URI 通知客户端。  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   

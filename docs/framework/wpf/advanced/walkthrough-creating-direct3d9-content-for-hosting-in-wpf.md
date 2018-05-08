@@ -1,31 +1,17 @@
 ---
-title: "演练：创建在 WPF 中承载的 Direct3D9 内容"
-ms.custom: 
+title: 演练：创建在 WPF 中承载的 Direct3D9 内容
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1a5d70807541a0a3faf6bc99a3ced42827efd72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f279fb1749be9953e6d09d4b1bd4dd8578d42615
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>演练：创建在 WPF 中承载的 Direct3D9 内容
 本演练演示如何创建适用于 Windows Presentation Foundation (WPF) 应用程序中承载的 Direct3D9 内容。 承载 WPF 应用程序中的 Direct3D9 内容的详细信息，请参阅[WPF 和 Direct3D9 间的互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。  
@@ -68,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
      **D3DContent 属性页**对话框随即打开。  
   
-6.  选择**C/c + +**节点。  
+6.  选择**C/c + +** 节点。  
   
 7.  在**附加包含目录**字段中，指定的位置的 DirectX 包括文件夹。 此文件夹的默认位置为 %ProgramFiles%\Microsoft DirectX SDK (*版本*) \Include。  
   
@@ -89,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  使用解决方案资源管理器，将三个 c + + 类添加到名为以下的项目。  
   
-     `CRenderer`（使用虚拟析构函数）  
+     `CRenderer` （使用虚拟析构函数）  
   
      `CRendererManager`  
   

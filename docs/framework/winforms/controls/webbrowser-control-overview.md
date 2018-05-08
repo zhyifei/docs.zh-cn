@@ -1,31 +1,17 @@
 ---
-title: "WebBrowser 控件概述"
-ms.custom: 
+title: WebBrowser 控件概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - WebBrowser
 helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d2c1ed93769cc91d9622a86ea2d894cea57f5bcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e69b71b3e354101d950d6f7011b13fc7c0de030
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser 控件概述
 <xref:System.Windows.Forms.WebBrowser>控件 WebBrowser ActiveX 控件提供托管的包装。 托管的包装便可以在 Windows 窗体客户端应用程序中显示网页。 你可以使用<xref:System.Windows.Forms.WebBrowser>控件重复中你的应用程序或你的 Internet Explorer Web 浏览功能可以禁用默认 Internet 资源管理器功能和控件用作简单的 HTML 文档查看器。 你可以使用控件以将基于 DHTML 的用户界面元素添加到你的窗体和隐藏它们是否承载在事实<xref:System.Windows.Forms.WebBrowser>控件。 这种方法，可以无缝组合与单个应用程序中的 Windows 窗体控件的 Web 控件。  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  `Document`属性，您还可以调用 Web 页的脚本在客户端应用程序代码中的代码中实现的方法。 若要在脚本代码中访问客户端应用程序代码中，设置`ObjectForScripting`属性。 你指定的对象可以访问你的脚本代码作为`window.external`对象。  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.WebBrowser.Document%2A> 属性|获取一个对象，提供对 HTML 文档对象模型 (DOM) 的当前网页的托管的访问。|  
 |<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>事件|当 Web 页面完成加载时出现。|  

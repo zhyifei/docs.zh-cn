@@ -1,13 +1,6 @@
 ---
-title: "对象变量赋值 (Visual Basic)"
-ms.custom: 
+title: 对象变量赋值 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], object variable assignment
 - object variables [Visual Basic], initializing
@@ -20,14 +13,11 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: eb6b53bebddc1c9cf1b9088e96ded36a5e1c5242
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f20a03c4d9a0e33203629ae066686f4c9f25c105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-assignment-visual-basic"></a>对象变量赋值 (Visual Basic)
 你可以使用普通赋值语句将对象分配给对象变量。 你可以分配对象表达式或[执行任何操作](../../../../visual-basic/language-reference/nothing.md)关键字，如下面的示例演示。  
@@ -40,7 +30,7 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing`意味着没有当前分配给变量对象。  
+ `Nothing` 意味着没有当前分配给变量对象。  
   
 ## <a name="initialization"></a>初始化  
  当你的代码开始运行，你的对象变量将初始化为`Nothing`。 这些声明中包含的初始化被重新初始化为指定的声明语句执行时的值。  
@@ -84,7 +74,7 @@ End Sub
 addStandardText(Me)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
  [对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
  [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  

@@ -1,13 +1,6 @@
 ---
-title: "将路由事件标记为“已处理”和“类处理”"
-ms.custom: 
+title: 将路由事件标记为“已处理”和“类处理”
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tunneling events [WPF]
 - class listeners [WPF]
@@ -24,16 +17,11 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2c9a550e1423acb37da9645d09cdb4ccefcea66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d696c85be0f46c5f08e1770f0d695dbb4d50cb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>将路由事件标记为“已处理”和“类处理”
 路由事件的处理程序可以在事件数据内将事件标记为已处理。 处理事件将有效地缩短路由。 类处理是一个编程概念，受路由事件支持。 类处理程序有机会在类级别使用处理程序处理特定路由事件，在类的任何实例上存在任何实例处理程序之前调用该处理程序。  
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>类处理程序和实例处理程序  
- 路由事件会考虑事件的两种不同类型的侦听器：类侦听器和实例侦听器。 类侦听器存在，因为类型调用了特定<xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ，<xref:System.Windows.EventManager.RegisterClassHandler%2A>，在其静态构造函数，或已重写中的元素的基类的类处理程序虚拟方法。 实例侦听器是特定类实例/元素，其中一个或多个处理程序已附加的、 为该路由事件调用<xref:System.Windows.UIElement.AddHandler%2A>。 现有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]路由的事件拨打<xref:System.Windows.UIElement.AddHandler%2A>作为的一部分[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件包装添加 {} 和删除的事件，这也是如何 {} 实现简单[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]机制将通过属性的事件处理程序附加语法处于启用状态。 因此，即使简单[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]用法最终相当于<xref:System.Windows.UIElement.AddHandler%2A>调用。  
+ 路由事件会考虑事件的两种不同类型的侦听器：类侦听器和实例侦听器。 类侦听器存在，因为类型调用了特定<xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ，<xref:System.Windows.EventManager.RegisterClassHandler%2A>，在其静态构造函数，或已重写中的元素的基类的类处理程序虚拟方法。 实例侦听器是特定类实例/元素，其中一个或多个处理程序已附加的、 为该路由事件调用<xref:System.Windows.UIElement.AddHandler%2A>。 现有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]路由的事件拨打<xref:System.Windows.UIElement.AddHandler%2A>作为的一部分[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件包装添加{}和删除{}的事件，这也是如何实现简单[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的附加机制启用通过特性语法的事件处理程序。 因此，即使简单[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]用法最终相当于<xref:System.Windows.UIElement.AddHandler%2A>调用。  
   
  将检查可视化树内的元素是否有注册的处理程序实现。 可能会在整个路由中以该路由事件的路由策略类型所固有的顺序调用处理程序。 例如，冒泡路由事件将首先调用那些附加到引发该路由事件的同一元素的处理程序。 然后，路由事件“冒泡”到下一父元素，以此类推，直到到达应用程序根元素。  
   
@@ -99,7 +87,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="deliberately-suppressing-input-events-for-control-compositing"></a>有意对控件复合禁止输入事件  
  路由事件的类处理主要是用于输入事件和复合控件。 按照定义，复合控件是由多个实际控件或控件基类组成的。 控件作者通常希望合并每个子组件可能引发的所有可能的输入事件，以便将整个控件报告为单事件源。 某些情况下，控件作者可能希望完全禁止来自组件的事件，或者替换上携带更多信息或者指示更具体行为的组件定义的事件。 对任何组件作者立即可见的规范示例是如何[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Controls.Button>处理最终会解析为直观的事件，所有按钮都有任何鼠标事件：<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
- <xref:System.Windows.Controls.Button>基类 (<xref:System.Windows.Controls.Primitives.ButtonBase>) 派生自<xref:System.Windows.Controls.Control>它又派生自<xref:System.Windows.FrameworkElement>和<xref:System.Windows.UIElement>，和所需控件输入的处理位于该事件基础结构大部分<xref:System.Windows.UIElement>级别。 具体而言，<xref:System.Windows.UIElement>处理常规<xref:System.Windows.Input.Mouse>处理鼠标光标在其边界内的命中测试，并提供最常见的非重复事件的事件按钮操作，如<xref:System.Windows.UIElement.MouseLeftButtonDown>。 <xref:System.Windows.UIElement>此外提供了一个空的虚拟<xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A>为预先注册的类处理程序<xref:System.Windows.UIElement.MouseLeftButtonDown>，和<xref:System.Windows.Controls.Primitives.ButtonBase>将重写它。 同样，<xref:System.Windows.Controls.Primitives.ButtonBase>使用类处理程序<xref:System.Windows.UIElement.MouseLeftButtonUp>。 重写，传递的事件数据，在实现标记，<xref:System.Windows.RoutedEventArgs>实例处理的设置<xref:System.Windows.RoutedEventArgs.Handled%2A>到`true`，以及是否继续沿路由到其他类处理程序的其余部分相同的事件数据和此外为实例处理程序或事件资源库。 此外，<xref:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp%2A>替代接下来会引发<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 大多数侦听器的最终结果将分别为<xref:System.Windows.UIElement.MouseLeftButtonDown>和<xref:System.Windows.UIElement.MouseLeftButtonUp>事件"消失"，而是替换为<xref:System.Windows.Controls.Primitives.ButtonBase.Click>，保存更多意义，因为它从一个 true 按钮以及一些不知道生成此事件的事件复合完全块的按钮或从其他某个元素。  
+ <xref:System.Windows.Controls.Button>基类 (<xref:System.Windows.Controls.Primitives.ButtonBase>) 派生自<xref:System.Windows.Controls.Control>它又派生自<xref:System.Windows.FrameworkElement>和<xref:System.Windows.UIElement>，和所需控件输入的处理位于该事件基础结构大部分<xref:System.Windows.UIElement>级别。 具体而言，<xref:System.Windows.UIElement>处理常规<xref:System.Windows.Input.Mouse>处理鼠标光标在其边界内的命中测试，并提供最常见的非重复事件的事件按钮操作，如<xref:System.Windows.UIElement.MouseLeftButtonDown>。 <xref:System.Windows.UIElement> 此外提供了一个空的虚拟<xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A>为预先注册的类处理程序<xref:System.Windows.UIElement.MouseLeftButtonDown>，和<xref:System.Windows.Controls.Primitives.ButtonBase>将重写它。 同样，<xref:System.Windows.Controls.Primitives.ButtonBase>使用类处理程序<xref:System.Windows.UIElement.MouseLeftButtonUp>。 重写，传递的事件数据，在实现标记，<xref:System.Windows.RoutedEventArgs>实例处理的设置<xref:System.Windows.RoutedEventArgs.Handled%2A>到`true`，以及是否继续沿路由到其他类处理程序的其余部分相同的事件数据和此外为实例处理程序或事件资源库。 此外，<xref:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp%2A>替代接下来会引发<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 大多数侦听器的最终结果将分别为<xref:System.Windows.UIElement.MouseLeftButtonDown>和<xref:System.Windows.UIElement.MouseLeftButtonUp>事件"消失"，而是替换为<xref:System.Windows.Controls.Primitives.ButtonBase.Click>，保存更多意义，因为它从一个 true 按钮以及一些不知道生成此事件的事件复合完全块的按钮或从其他某个元素。  
   
 <a name="WorkingAroundEventSuppressionByControls"></a>   
 ### <a name="working-around-event-suppression-by-controls"></a>通过控件解决事件禁止问题  

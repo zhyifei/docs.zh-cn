@@ -1,27 +1,15 @@
 ---
-title: "传输"
-ms.custom: 
+title: 传输
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83bb76cc46d72f3d368de20669391c3e7f24a0f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transfer"></a>传输
-本主题描述 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 活动跟踪模型中的传输。  
+本主题介绍 Windows Communication Foundation (WCF) 活动跟踪模型中的传输。  
   
 ## <a name="transfer-definition"></a>传输定义  
  活动之间的传输表示终结点内相关活动中的事件之间的因果关系。 当两个活动之间存在控制流（例如方法调用跨越活动边界）时，这两个活动将与传输相关。 在 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中，当通过服务传入字节时，“侦听”活动将转换为“接收字节”活动，消息对象将在“接收字节”活动中创建。 有关端到端跟踪方案和其相应的活动和跟踪设计的列表，请参阅[端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  

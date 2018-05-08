@@ -1,13 +1,6 @@
 ---
-title: "XML 字符实体和 XAML"
-ms.custom: 
+title: XML 字符实体和 XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - '&'
 - '&amp'
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-caps.latest.revision: "23"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b325c931579606f6d1d90eb821766a4110acfd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 字符实体和 XAML
 XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一些特定的字符实体和 XAML 中其他 XML 概念的一般注意事项。  
@@ -47,7 +35,7 @@ XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一
   
  主要的例外是大括号（{ 和 }）在 XAML 中具有意义，因为这些字符通知 XAML 处理器必须将括在大括号中的字符序列解释为标记扩展。 有关标记扩展的详细信息，请参阅 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
   
- 但是，你仍可通过使用特定于 XAML（而非 XML）的转义序列将大括号显示为原义字符。 有关详细信息，请参阅[{} 转义序列的标记扩展](escape-sequence-markup-extension.md)。  
+ 但是，你仍可通过使用特定于 XAML（而非 XML）的转义序列将大括号显示为原义字符。 有关详细信息，请参阅[{}转义序列-标记扩展](escape-sequence-markup-extension.md)。  
   
  请注意，反斜杠 (\\) 作为字符串对其进行处理时不需要转义序列。  
   
@@ -62,7 +50,7 @@ XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一
 |<（小于号字符）|\&lt;|必须用于属性值，但\<可作为元素内容的前提下尽可能接受 > 不跟随其后。|  
 |"（直双引号）|\&quot;|必须用于属性值，但直双引号 (") 可作为元素内容。 请注意，属性值可能括在直单引号 (') 或直双引号 (") 内；首先出现的字符定义属性值的引号，另一个引号则可用作值内部的文字。|  
 |'（直单引号）|\&apos;|必须用于属性值，但直单引号 (') 可作为元素内容。 请注意，属性值可能括在直单引号 (') 或直双引号 (") 内；首先出现的字符定义属性值的引号，另一个引号则可用作值内部的文字。|  
-|（数字字符映射）|&#*[整数]*; 或 & #x*[十六进制]*;|XAML 支持向处于活动状态的编码的数字字符映射。|  
+|（数字字符映射）|&#*[整数]*; 或 & #x *[十六进制]*;|XAML 支持向处于活动状态的编码的数字字符映射。|  
 |（不间断空格）|&\#160;（假定 utf-8 编码）|对于流文档元素或采用文本（如 WPF <xref:System.Windows.Controls.TextBox>）的元素，不间断空格没有超出标记范围进行规范化，甚至是对于 `xml:space="default"` 也是如此。 (有关详细信息，请参阅[在 XAML 中的空白处理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。)|  
   
 <a name="xml_comment_format"></a>   

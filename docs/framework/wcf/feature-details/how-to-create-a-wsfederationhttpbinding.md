@@ -1,14 +1,6 @@
 ---
 title: 如何：创建 WSFederationHttpBinding
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 41fa1e7c0430f4723123b03f04d4fc74f9bfc589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>如何：创建 WSFederationHttpBinding
-在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]、<xref:System.ServiceModel.WSFederationHttpBinding>类 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)配置中) 提供了用于公开联合的服务的机制。 即，服务要求客户端使用安全令牌服务颁发的安全令牌进行身份验证。 本主题演示如何通过代码和配置来设置 <xref:System.ServiceModel.WSFederationHttpBinding>。 绑定一经创建，您就可以设置一个终结点来使用该绑定。  
+在 Windows Communication Foundation (WCF)<xref:System.ServiceModel.WSFederationHttpBinding>类 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)配置中) 提供了用于公开联合的服务的机制。 即，服务要求客户端使用安全令牌服务颁发的安全令牌进行身份验证。 本主题演示如何通过代码和配置来设置 <xref:System.ServiceModel.WSFederationHttpBinding>。 绑定一经创建，您就可以设置一个终结点来使用该绑定。  
   
  基本步骤概述如下：  
   
@@ -38,7 +24,7 @@ ms.lasthandoff: 04/30/2018
     > [!NOTE]
     >  <xref:System.ServiceModel.WSFederationHttpBinding> 还支持 `None` 作为安全模式。 此模式不安全，仅用于调试目的。 如果使用部署的服务终结点<xref:System.ServiceModel.WSFederationHttpBinding>其安全模式设置为与`None`，生成的客户端绑定 (由生成[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)) 是 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 使用的安全模式`None`。  
   
-     与其他系统提供的绑定不同，使用 `WSFederationHttpBinding` 时无需选择客户端凭据类型。 这是因为客户端凭据类型始终为已颁发令牌。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 从指定的颁发者获取一个令牌，并将该令牌提供给服务以对客户端进行身份验证。  
+     与其他系统提供的绑定不同，使用 `WSFederationHttpBinding` 时无需选择客户端凭据类型。 这是因为客户端凭据类型始终为已颁发令牌。 WCF 获取来自指定的颁发者的令牌，并将该令牌向服务验证客户端提供。  
   
 2.  在联合客户端上，将 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> 属性设置为安全令牌服务的 URL。 将 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> 设置为要使用的绑定，以便与安全令牌服务进行通信。  
   
@@ -65,7 +51,7 @@ ms.lasthandoff: 04/30/2018
   
 4.  设置<xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A>属性<xref:System.IdentityModel.Tokens.SecurityKeyType>`SymmetricKey`或。`AsymmetricKey` 所需的方式。  
   
-5.  将 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> 属性设置为适当的值。 如果未不设置任何值，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]默认为"http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1"，指示 SAML 1.1 令牌。  
+5.  将 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> 属性设置为适当的值。 如果未不设置任何值，WCF 将默认为"http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1"，指示 SAML 1.1 令牌。  
   
 6.  如果未指定本地颁发者则在客户端上是必需的；在服务上是可选的。 创建一个包含安全令牌服务的地址和标识信息的 <xref:System.ServiceModel.EndpointAddress>，然后将 <xref:System.ServiceModel.EndpointAddress> 实例分配给 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> 属性。  
   

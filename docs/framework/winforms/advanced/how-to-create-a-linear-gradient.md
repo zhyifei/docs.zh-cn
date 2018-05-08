@@ -1,13 +1,6 @@
 ---
-title: "如何：创建线性渐变"
-ms.custom: 
+title: 如何：创建线性渐变
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33979decf37e9adb29d94a6602a43f992d93aaa1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-linear-gradient"></a>如何：创建线性渐变
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供水平线、 垂线、 对角线和线性渐变。 默认情况下中的线性渐变的颜色均匀地变化。 但是，以便的颜色更改非一致性方式可以自定义线性渐变。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供水平线、 垂线、 对角线和线性渐变。 默认情况下中的线性渐变的颜色均匀地变化。 但是，以便的颜色更改非一致性方式可以自定义线性渐变。  
   
  下面的示例填充线条、 椭圆和一个具有水平线性渐变画笔的矩形。  
   
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  在前面的示例中，颜色组件以线性方式更改当你从 0 的水平坐标移到 200 的水平坐标。 例如，其第一个坐标是介于 0 到 200 之间的中间值的点将具有是介于 0 和 255 之间的中间值蓝色分量。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]允许你调整颜色因某条边的渐变到另的方式。 假设你想要创建一个渐变画笔，它从黑色将更改为红色根据下表。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 允许你调整颜色因某条边的渐变到另的方式。 假设你想要创建一个渐变画笔，它从黑色将更改为红色根据下表。  
   
 |水平坐标|RGB 组件|  
 |---------------------------|--------------------|  

@@ -1,12 +1,6 @@
 ---
-title: "串联运算符 (Visual Basic)"
-ms.custom: 
+title: 串联运算符 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - '& operator [Visual Basic], concatenation'
 - concatenation operators [Visual Basic]
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3a444cca76fbc41807b0c8b69bcbaedbd75c36eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab268e513e6f019ed651c94deb5e423cfcca7587
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>串联运算符 (Visual Basic)
 串联运算符将多个字符串联接为一个字符串。 有两种串联运算符：`+` 和 `&`。 这两种串联运算符都执行基本的串联运算，如下面的示例所示。  
@@ -45,7 +36,7 @@ Dim y As String = "Mic" + "ro" + "soft"
 ## <a name="performance-string-and-stringbuilder"></a>性能：字符串和 StringBuilder  
  如果你对字符串执行大量操作（如串联、删除或替换），则通过 <xref:System.Text.StringBuilder> 命名空间中的 <xref:System.Text> 类可能会提高性能。 该类采用额外指令来创建和初始化 <xref:System.Text.StringBuilder> 对象，并且使用其他指令将其最终值转换为 `String`，但此时你可能会恢复使用 <xref:System.Text.StringBuilder>，因为它的执行速度更快。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
  [在 Visual Basic 中的字符串操作方法的类型](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
  [在 Visual Basic 中的算术运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  

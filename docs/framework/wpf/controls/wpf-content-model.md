@@ -1,13 +1,6 @@
 ---
-title: "WPF 内容模型"
-ms.custom: 
+title: WPF 内容模型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UIElement class [WPF], displaying content
 - content model [WPF], controls
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d708674682ffd7b0d13c9cbe828e28bbc26e260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48e96b04a3459aa18a52624758d5fa2347570fcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-content-model"></a>WPF 内容模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是一个演示平台，提供了许多控件和类似控件的类型，主要用于显示不同类型的内容。 若要确定所要使用的控件或要从其派生的控件，应该了解特定控件可以最佳效果显示的对象类型。  
@@ -122,7 +110,7 @@ ms.lasthandoff: 12/22/2017
  有关如何创建示例<xref:System.Windows.Controls.TabItem>对象，请参阅<xref:System.Windows.Controls.HeaderedContentControl>。  
   
 ### <a name="controls-that-contain-a-collection-of-arbitrary-objects"></a>包含一个任意对象集合的控件  
- <xref:System.Windows.Controls.ItemsControl>类继承自<xref:System.Windows.Controls.Control>并且可以包含多个项，如字符串、 对象或其他元素。 其内容属性为<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>和<xref:System.Windows.Controls.ItemsControl.Items%2A>。 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>通常用于填充<xref:System.Windows.Controls.ItemsControl>与数据收集。 如果您不想要使用集合来填充<xref:System.Windows.Controls.ItemsControl>，你可以使用添加项<xref:System.Windows.Controls.ItemsControl.Items%2A>属性。  
+ <xref:System.Windows.Controls.ItemsControl>类继承自<xref:System.Windows.Controls.Control>并且可以包含多个项，如字符串、 对象或其他元素。 其内容属性为<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>和<xref:System.Windows.Controls.ItemsControl.Items%2A>。 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 通常用于填充<xref:System.Windows.Controls.ItemsControl>与数据收集。 如果您不想要使用集合来填充<xref:System.Windows.Controls.ItemsControl>，你可以使用添加项<xref:System.Windows.Controls.ItemsControl.Items%2A>属性。  
   
  以下控件均继承自<xref:System.Windows.Controls.ItemsControl>并使用其内容模型：  
   
@@ -261,7 +249,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="classes_that_format_text"></a>   
 ## <a name="classes-that-format-your-text"></a>设置文本格式的类  
- <xref:System.Windows.Documents.TextElement>和及其相关的类可用于设置文本格式。 <xref:System.Windows.Documents.TextElement>对象包含和中的文本格式<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>对象。 两种主要类型的<xref:System.Windows.Documents.TextElement>对象<xref:System.Windows.Documents.Block>元素和<xref:System.Windows.Documents.Inline>元素。 A<xref:System.Windows.Documents.Block>元素表示的文本，例如一个段落或列表的块。 <xref:System.Windows.Documents.Inline>元素表示在块中的文本的一部分。 许多<xref:System.Windows.Documents.Inline>类指定向其应用的中文本的格式。 每个<xref:System.Windows.Documents.TextElement>具有其自己的内容模型。 有关详细信息，请参阅 [TextElement 内容模型概述](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)。  
+ <xref:System.Windows.Documents.TextElement> 和及其相关的类可用于设置文本格式。 <xref:System.Windows.Documents.TextElement> 对象包含和中的文本格式<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>对象。 两种主要类型的<xref:System.Windows.Documents.TextElement>对象<xref:System.Windows.Documents.Block>元素和<xref:System.Windows.Documents.Inline>元素。 A<xref:System.Windows.Documents.Block>元素表示的文本，例如一个段落或列表的块。 <xref:System.Windows.Documents.Inline>元素表示在块中的文本的一部分。 许多<xref:System.Windows.Documents.Inline>类指定向其应用的中文本的格式。 每个<xref:System.Windows.Documents.TextElement>具有其自己的内容模型。 有关详细信息，请参阅 [TextElement 内容模型概述](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [高级](../../../../docs/framework/wpf/advanced/index.md)

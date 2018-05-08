@@ -1,13 +1,6 @@
 ---
-title: "WPF 图形呈现疑难解答"
-ms.custom: 
+title: WPF 图形呈现疑难解答
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb9a546ca33b848fbbcbd114951eddc5b000663
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 305af1025abb98950d90f46e75a9f261704a8ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 图形呈现疑难解答
 本主题概述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可视化层。 它注重的角色<xref:System.Windows.Media.Visual>呈现中的支持的类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型。  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 -   全球化  
   
- <xref:System.Windows.Media.Visual>将公开为公共被子类必须派生自抽象类。 下图显示了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中所公开的视觉对象的层次结构。  
+ <xref:System.Windows.Media.Visual> 将公开为公共被子类必须派生自抽象类。 下图显示了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中所公开的视觉对象的层次结构。  
   
  ![从 Visual 对象派生的类的示意图](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
 视觉对象类层次结构  
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
   
  当你创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件，如<xref:System.Windows.Controls.Button>，该控件隐式生成为绘图对象本身的呈现数据。 例如，设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性<xref:System.Windows.Controls.Button>导致要存储的标志符号的呈现表示的控件。  
   
- A<xref:System.Windows.Media.Visual>其内容描述为一个或多个<xref:System.Windows.Media.Drawing>对象中包含<xref:System.Windows.Media.DrawingGroup>。 A<xref:System.Windows.Media.DrawingGroup>还描述不透明蒙板、 转换、 位图效果和应用于其内容的其他操作。 <xref:System.Windows.Media.DrawingGroup>当呈现的内容将操作应用按以下顺序： <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>， <xref:System.Windows.Media.DrawingGroup.Opacity%2A>， <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>， <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>， <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>，，然后<xref:System.Windows.Media.DrawingGroup.Transform%2A>。  
+ A<xref:System.Windows.Media.Visual>其内容描述为一个或多个<xref:System.Windows.Media.Drawing>对象中包含<xref:System.Windows.Media.DrawingGroup>。 A<xref:System.Windows.Media.DrawingGroup>还描述不透明蒙板、 转换、 位图效果和应用于其内容的其他操作。 <xref:System.Windows.Media.DrawingGroup> 当呈现的内容将操作应用按以下顺序： <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>， <xref:System.Windows.Media.DrawingGroup.Opacity%2A>， <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>， <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>， <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>，，然后<xref:System.Windows.Media.DrawingGroup.Transform%2A>。  
   
  下图显示在其中顺序<xref:System.Windows.Media.DrawingGroup>在呈现序列过程中应用操作。  
   

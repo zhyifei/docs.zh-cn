@@ -1,13 +1,6 @@
 ---
-title: "Visual Basic 中的 Main 过程"
-ms.custom: 
+title: Visual Basic 中的 Main 过程
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Main
 helpviewer_keywords:
@@ -15,24 +8,21 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 109bf94eb91292cfca700a9e456c8ab53e83d68f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic 中的 Main 过程
 每个 Visual Basic 应用程序必须包含被调用的过程`Main`。 此过程可用作起始点并对你的应用程序总体控制。 .NET Framework 调用你`Main`过程时它已加载你的应用程序，并已准备好将控件传递给它。 除非你要创建 Windows 窗体应用程序，你必须编写`Main`运行的应用程序在其自己的过程。  
   
- `Main`包含首先运行的代码。 在`Main`，可以确定在程序启动时首先加载的窗体，找出系统上是否已在运行你的应用程序的副本，为你的应用程序，建立一组变量或打开对于应用程序要求的数据库。  
+ `Main` 包含首先运行的代码。 在`Main`，可以确定在程序启动时首先加载的窗体，找出系统上是否已在运行你的应用程序的副本，为你的应用程序，建立一组变量或打开对于应用程序要求的数据库。  
   
 ## <a name="requirements-for-the-main-procedure"></a>主要过程要求  
  在运行其自身 （通常使用扩展名为.exe) 文件必须包含`Main`过程。 （例如具有扩展名为.dll) 的库不运行其自身，并且不需要`Main`过程。 你可以创建不同类型的项目的要求如下所示：  
   
--   控制台应用程序可以独立运行，并且你必须提供至少一个`Main`过程。 。  
+-   控制台应用程序可以独立运行，并且你必须提供至少一个`Main`过程。 .  
   
 -   在上运行其自己的 Windows 窗体应用程序。 但是，Visual Basic 编译器自动生成`Main`过程中此类应用程序，并且你不需要编写一个此类型。  
   
@@ -56,7 +46,7 @@ ms.lasthandoff: 12/21/2017
     End Module  
     ```  
   
--   `Main`此外可以返回`Integer`值，该值为你的程序，操作系统使用与退出代码。 其他程序可以通过检查 Windows ERRORLEVEL 值来测试此代码。 若要返回退出代码，您必须声明`Main`作为`Function`过程而不是`Sub`过程。  
+-   `Main` 此外可以返回`Integer`值，该值为你的程序，操作系统使用与退出代码。 其他程序可以通过检查 Windows ERRORLEVEL 值来测试此代码。 若要返回退出代码，您必须声明`Main`作为`Function`过程而不是`Sub`过程。  
   
     ```  
     Module mainModule  
@@ -73,7 +63,7 @@ ms.lasthandoff: 12/21/2017
     End Module  
     ```  
   
--   `Main`也可以采用`String`作为自变量的数组。 数组中的每个字符串包含用于调用程序的命令行自变量之一。 你可以采取不同的操作，具体取决于它们的值。  
+-   `Main` 也可以采用`String`作为自变量的数组。 数组中的每个字符串包含用于调用程序的命令行自变量之一。 你可以采取不同的操作，具体取决于它们的值。  
   
     ```  
     Module mainModule  

@@ -3,18 +3,12 @@ title: WMI 和性能计数器 （非托管 API 参考）
 description: 总结了.NET Framework WMI 和性能计数器信息的非托管 API。
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
 ms.date: 11/06/2017
-ms.topic: reference
-ms.prod: .net-framework
-ms.devlang: cpp
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7959d6b6b7bafd728db5a579ff1376e686c5b74
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 2007c8aa74e1ccf3c4753343ac633b67a36daeb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) 和性能计数器 （非托管 API 参考）
 
@@ -44,7 +38,7 @@ ms.lasthandoff: 02/01/2018
 | [ExecQueryWmi 函数](execquerywmi.md) | 执行查询以检索对象。 |
 | [FormatFromRawValue 函数](formatfromrawvalue.md) | 基于时间的格式转换是否将转换为指定的格式中，一个原始性能数据值或两个原始性能数据值。 | 
 | [Get 函数](get.md) | 如果它存在，请检索指定的属性值。 |
-| [GetCurrentApartmentType function](getcurrentapartmenttype.md) | 检索在其中执行调用方的单元的类型。 |
+| [GetCurrentApartmentType 函数](getcurrentapartmenttype.md) | 检索在其中执行调用方的单元的类型。 |
 | [GetDemultiplexedStub 函数](getdemultiplexedstub.md) | 创建的对象转发器接收器，以帮助客户端在从 Windows 管理接收异步调用。 |
 | [GetErrorInfo 函数](geterrorinfo.md) | 从以前的函数调用中检索错误信息。 | 
 | [GetMethod 函数](getmethod.md) | 检索有关指定方法的信息。 | 
@@ -54,7 +48,7 @@ ms.lasthandoff: 02/01/2018
 | [GetObjectText 函数](getobjecttext.md) | 用 MOF 语法返回对象的文本呈现。 | 
 | [GetPropertyHandle 函数](getpropertyhandle.md) | 返回一个唯一的句柄，标识属性。 |
 | [GetPropertyOrigin 函数](getpropertyorigin.md) | 确定所声明的属性的类。 |
-| [GetPropertyQualifierSet function](getpropertyqualifierset.md) | 检索为特定的属性设置的限定符。  |
+| [GetPropertyQualifierSet 函数](getpropertyqualifierset.md) | 检索为特定的属性设置的限定符。  |
 | [GetQualifierSet 函数](getqualifierset.md) | 检索为的类实例或类定义设置的限定符。 |
 | [InheritsFrom 函数](inheritsfrom.md) | 确定当前类或实例派生自指定的父类别。 |
 | [Initialize 函数](initialize.md) | 执行 WMI 初始化。 |
@@ -64,13 +58,13 @@ ms.lasthandoff: 02/01/2018
 | [PutClassWmi 函数](putclasswmi.md) | 创建新的类或更新现有。 |
 | [PutInstanceWmi 函数](putinstancewmi.md) | 创建或更新现有类的实例。 实例将写入 WMI 存储库。 |
 | [PutMethod 函数](putmethod.md) | 创建一个方法。 |
-| [QualifierSet_BeginEnumeration function](qualifierset-beginenumeration.md) | 将枚举数对象的限定符重置为枚举的开头。 |
+| [QualifierSet_BeginEnumeration 函数](qualifierset-beginenumeration.md) | 将枚举数对象的限定符重置为枚举的开头。 |
 | [QualifierSet_Delete 函数](qualifierset-delete.md) | 按名称删除指定的限定符。  |
-| [QualifierSet_EndEnumeration function](qualifierset-endenumeration.md) | 终止通过调用开始枚举`QualifierSet_BeginEnumeration`函数。 |
+| [QualifierSet_EndEnumeration 函数](qualifierset-endenumeration.md) | 终止通过调用开始枚举`QualifierSet_BeginEnumeration`函数。 |
 | [QualifierSet_Get 函数](qualifierset-get.md) | 获取指定的命名的限定符。  |
-| [QualifierSet_GetNames function](qualifierset-getnames.md) | 检索所有的限定符或指定限定符可从当前对象或属性的名称。 |
-| [QualifierSet_Next function](qualifierset-next.md) | 检索一个枚举，通过调用启动中的下一步限定符[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函数。 |
-| [QualifierSet_Put function](qualifierset-put.md) | 写入命名的限定符和值。 |
+| [QualifierSet_GetNames 函数](qualifierset-getnames.md) | 检索所有的限定符或指定限定符可从当前对象或属性的名称。 |
+| [QualifierSet_Next 函数](qualifierset-next.md) | 检索一个枚举，通过调用启动中的下一步限定符[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函数。 |
+| [QualifierSet_Put 函数](qualifierset-put.md) | 写入命名的限定符和值。 |
 | [ResetSecurity 函数](resetsecurity.md) | 将提供的模拟令牌分配给当前线程。 |
 | [SetSecurity 函数](setsecurity.md) | 检索与当前线程关联的模拟令牌。 |
 | [SpawnDerivedClass 函数](spawnderivedclass.md) | 从指定的对象创建新派生的类对象。 | 

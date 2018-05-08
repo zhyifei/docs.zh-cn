@@ -1,29 +1,15 @@
 ---
 title: 独立 JSON 序列化
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5a157dfd55e722b3e7be967a26e8d2ff5fd54afe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stand-alone-json-serialization"></a>独立 JSON 序列化
-JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行的 JavaScript 代码而设计的一种数据格式。 它是在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中创建的 ASP.NET AJAX 服务所使用的默认数据格式。  
+JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行的 JavaScript 代码而设计的一种数据格式。 它是创建 Windows Communication Foundation (WCF) 中的 ASP.NET AJAX 服务使用的默认数据格式。  
   
  在未与 ASP.NET 集成的情况下（在此情况下，XML 将是默认格式，但可以选择 JSON）创建 AJAX 服务时，也可以使用此格式。  
   
@@ -87,7 +73,7 @@ JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行�
   
 -   在 JSON 表示中，忽略使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 的任何自定义。  
   
--   词典不能直接用于 JSON。 字典\<字符串、 对象 > 可能不支持在同一方法[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用于其他 JSON 技术中的预期。 例如，在字典中，如果“abc”映射到“xyz”，且“def”映射到 42，则 JSON 表示形式不是 {"abc":"xyz","def":42}，而是 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]。  
+-   词典不能直接用于 JSON。 字典\<字符串、 对象 > 中用于其他 JSON 技术的预期不可能在 WCF 中相同的方式支持。 例如，在字典中，如果“abc”映射到“xyz”，且“def”映射到 42，则 JSON 表示形式不是 {"abc":"xyz","def":42}，而是 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]。  
   
 -   如果想要直接使用 JSON（动态访问键和值，而不预定义严格的协定），您有下面几个选择：  
   
@@ -108,7 +94,7 @@ JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行�
  JSON 类型在反序列化时并不一定要与上面的表匹配。 例如，`Int` 通常映射到 JSON 数字，但只要 JSON 字符串中包含有效的数字，就可以成功地从该字符串反序列化到此类型。 即，如果存在名为“q”的 `Int` 数据成员，则 {"q":42} 和 {"q":"42"} 都是有效的。  
   
 ### <a name="polymorphism"></a>多态性  
- 多态序列化具备在需要基类型时序列化派生类型的能力。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对 JSON 序列化的这种支持方式与对 XML 序列化的支持方式类似。 例如，你可以将序列化为`MyDerivedType`其中`MyBaseType`预期行为，或者将序列化`Int`其中`Object`预期。  
+ 多态序列化具备在需要基类型时序列化派生类型的能力。 这被支持 JSON 序列化的 WCF 相提并论支持 XML 序列化的方式。 例如，你可以将序列化为`MyDerivedType`其中`MyBaseType`预期行为，或者将序列化`Int`其中`Object`预期。  
   
  需要基类型时，反序列化派生类型可能会丢失类型信息，除非反序列化复杂类型。 例如，如果在需要 <xref:System.Uri> 时序列化 <xref:System.Object>，将导致一个 JSON 字符串。 如果随后将此字符串反序列化回 <xref:System.Object>，将返回一个 .NET <xref:System.String>。 反序列化程序并不知道该字符串最初属于 <xref:System.Uri> 类型。 通常情况下，在需要 <xref:System.Object> 时，所有的 JSON 字符串都将反序列化为 .NET 字符串，并且用于序列化 .NET 集合、字典和数组的所有 JSON 数组都将反序列化为 <xref:System.Array> 类型的 .NET <xref:System.Object>，而不考虑实际的原始类型。 JSON 布尔值映射到 .NET <xref:System.Boolean>。 但是，在需要 <xref:System.Object> 时，JSON 数字将反序列化为 .NET <xref:System.Int32>、<xref:System.Decimal> 或 <xref:System.Double>，将根据具体情况自动选择最适合的类型。  
   
@@ -151,7 +137,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  ASP.NET AJAX 客户端 JavaScript 代码会自动将此类字符串转换为 JavaScript `DateTime` 实例。 如果有其他字符串采用了类似的形式，则即使它们不属于 .NET 中的 <xref:System.DateTime> 类型，也会对它们执行转换。  
   
- 如果"/"字符进行转义，才会进行转换 (即 JSON 的形式类似"\\/Date(700000+0500)\\/")，以及由于上述原因[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的 JSON 编码器 (由启用<xref:System.ServiceModel.WebHttpBinding>) 始终会"/"字符。  
+ 如果"/"字符进行转义，才会进行转换 (即 JSON 的形式类似"\\/Date(700000+0500)\\/")，以及此原因 WCF 的 JSON 编码器 (由启用<xref:System.ServiceModel.WebHttpBinding>) 始终会对"/"字符。  
   
 ### <a name="xml-in-json-strings"></a>JSON 字符串中的 XML  
   
@@ -209,7 +195,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 {"x":50,"y":70,"radius":10,"__type":"Circle:#MyApp.Shapes"}  
 ```  
   
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 和 ASP.NET AJAX 客户端页使用的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 始终都会最先发出类型提示。  
+ 这两个<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>使用 WCF 和 ASP.NET AJAX 客户端页始终发出类型提示第一次。  
   
 #### <a name="type-hints-apply-only-to-complex-types"></a>类型提示仅适用于复杂类型  
  对于非复杂类型，无法发出类型提示。 例如，如果操作的返回类型为 <xref:System.Object>，但却返回了 Circle，则 JSON 表示形式可能像前面显示的那样保留了类型信息。 但是，如果返回了 URI，则 JSON 表示形式将是一个字符串，而该字符串原来用于表示 URI 的事实将丢失。 这不仅适用于基元类型，也适用于集合和数组。  

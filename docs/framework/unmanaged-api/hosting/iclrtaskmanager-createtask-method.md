@@ -1,14 +1,6 @@
 ---
-title: "ICLRTaskManager::CreateTask 方法"
-ms.custom: 
+title: ICLRTaskManager::CreateTask 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTaskManager.CreateTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e9e78db6e43397709f913f8f79a617221f98db87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f731e121324793a027c5977a02e1973b0d6fff20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask 方法
 显式请求公共语言运行时 (CLR) 创建新任务。  
@@ -65,19 +53,19 @@ HRESULT CreateTask (
 ## <a name="remarks"></a>备注  
  用户代码创建一个线程通过使用中的类型时，CLR 将创建新任务自动进行初始化，<xref:System.Threading>命名空间，或当增加线程池的大小。 它还会在非托管的代码调用托管函数创建任务。  
   
- `CreateTask`允许宿主发出显式请求 CLR 创建新任务。 例如，主机可以调用此方法来预先初始化数据结构。  
+ `CreateTask` 允许宿主发出显式请求 CLR 创建新任务。 例如，主机可以调用此方法来预先初始化数据结构。  
   
 > [!IMPORTANT]
 >  新的任务返回处于挂起状态和向导仍然保持挂起，直到主机显式调用[ihosttask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

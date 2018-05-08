@@ -1,14 +1,6 @@
 ---
-title: "GetAssemblyRefHash 方法"
-ms.custom: 
+title: GetAssemblyRefHash 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink.GetAssemblyRefHash
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 99ae38025f223d669a428738783676ebc0687554
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ccf60d067af356dda1870a2fb1dcca21966f16a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash 方法
 检索给定的程序集哈希 blob。  
@@ -60,7 +48,7 @@ HRESULT GetAssemblyRefHash(
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  需要 alink.h  
   
 ## <a name="see-also"></a>请参阅  

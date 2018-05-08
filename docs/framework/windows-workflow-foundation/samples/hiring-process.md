@@ -1,29 +1,17 @@
 ---
 title: 招聘流程
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hiring-process"></a>招聘流程
 本示例演示如何使用消息传递活动和作为工作流服务承载的两个工作流来实现业务流程。 这些工作流是 Contoso, Inc 虚构公司的 IT 基础结构的一部分。  
   
- `HiringRequest` 工作流程（实现为 <xref:System.Activities.Statements.Flowchart>）需经组织的多名经理授权。 为了实现此目标，此工作流使用组织中的其他现有服务（对我们而言，是实现为纯 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的收件箱服务和组织数据服务）。  
+ `HiringRequest` 工作流程（实现为 <xref:System.Activities.Statements.Flowchart>）需经组织的多名经理授权。 若要实现此目标，工作流时，可使用其他现有服务 （在本例中，收件箱服务和组织数据服务实现为纯 Windows Communication Foundation (WCF) 服务） 组织中。  
   
  `ResumeRequest` 工作流（实现为 <xref:System.Activities.Statements.Sequence>）在 Contoso 的外部工作机会网站中发布一份招聘启事并管理收到的简历。 一份招聘启事可在外部网站中存在一段固定的时间，直到截止日期到期为止，或直到 Contoso 的某名员工决定删除它为止。  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 04/26/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -111,7 +99,7 @@ ms.lasthandoff: 04/26/2018
 |ContosoHR|包含数据协定、业务对象和储存库类。|  
 |HiringRequestService|包含招聘请求流程工作流的定义。<br /><br /> 此项目实现为控制台应用程序，该应用程序自承载作为服务的工作流（xaml 文件）。|  
 |ResumeRequestService|收集申请者的简历（直到超时到期或有人决定必须停止此流程为止）的工作流服务。<br /><br /> 此项目实现为声明性工作流服务 (xamlx)。|  
-|OrgService|公开组织信息（员工、职位、职位类型和部门）的服务。 可将此服务视为企业资源计划 (ERP) 的公司组织模块。<br /><br /> 此项目实现为公开 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的控制台应用程序。|  
+|OrgService|公开组织信息（员工、职位、职位类型和部门）的服务。 可将此服务视为企业资源计划 (ERP) 的公司组织模块。<br /><br /> 此项目实现为公开 Windows Communication Foundation (WCF) 服务的控制台应用程序。|  
 |InboxService|包含针对员工的可操作任务的收件箱。<br /><br /> 此项目实现为公开 WCF 服务的控制台应用程序。|  
 |InternalClient|与流程交互的 Web 应用程序。 用户可启动、参与和查看其 HiringProcess 工作流。 通过使用此应用程序，用户还可以启动和监视 ResumeRequest 流程。<br /><br /> 此网站实现为 Contoso 的 Intranet 内部网站。 此项目实现为 ASP.NET 网站。|  
 |CareersWebSite|公开 Contoso 的空缺职位的外部网站。 任意可能的申请者都可导航到此网站并提交简历。|  

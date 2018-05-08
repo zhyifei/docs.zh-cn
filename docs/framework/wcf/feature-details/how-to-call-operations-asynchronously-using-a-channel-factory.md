@@ -1,27 +1,15 @@
 ---
-title: "如何：使用通道工厂以异步方式调用操作"
-ms.custom: 
+title: 如何：使用通道工厂以异步方式调用操作
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 216c0d529a15004ea9f7d6f087aeee4bf4f10e56
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 95279f90fbf87d64d96a1ed036449b72416e4f44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>如何：使用通道工厂以异步方式调用操作
 本主题介绍客户端如何在使用基于 <xref:System.ServiceModel.ChannelFactory%601> 的客户端应用程序时以异步方式访问服务操作。 （当使用 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 对象调用服务时，可以使用事件驱动的异步调用模型。 有关详细信息，请参阅[如何： 以异步方式调用服务操作](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。 有关基于事件的异步调用模型的详细信息，请参阅[使用基于事件的异步模式的多线程编程](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)。)  
@@ -53,7 +41,7 @@ ms.lasthandoff: 01/19/2018
      执行该回调函数时，客户端将调用 `End<operation>`（例如 `EndAdd`）以检索结果。  
   
 ## <a name="example"></a>示例  
- 上面过程中的客户端代码使用的服务可实现 `ICalculator` 接口，如下面的代码所示。 在服务端，协定的 `Add` 和 `Subtract` 操作由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 运行库以同步方式调用，即使前面的客户端步骤是在客户端以异步方式调用的也是如此。 在服务端，`Multiply` 和 `Divide` 操作用于在服务端以异步方式调用服务，即使客户端以同步方式调用这两个操作也是如此。 此示例将 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 属性设置为 `true`。 此属性设置与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 异步模式的实现一起，可让运行库以异步方式调用该操作。  
+ 上面过程中的客户端代码使用的服务可实现 `ICalculator` 接口，如下面的代码所示。 在服务端`Add`和`Subtract`协定的操作同步调用多个由 Windows Communication Foundation (WCF) 运行时，即使前面的客户端步骤在客户端上以异步方式调用。 在服务端，`Multiply` 和 `Divide` 操作用于在服务端以异步方式调用服务，即使客户端以同步方式调用这两个操作也是如此。 此示例将 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 属性设置为 `true`。 此属性设置与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 异步模式的实现一起，可让运行库以异步方式调用该操作。  
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  

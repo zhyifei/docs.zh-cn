@@ -1,13 +1,6 @@
 ---
-title: "通过创建 ControlTemplate 自定义现有控件的外观"
-ms.custom: 
+title: 通过创建 ControlTemplate 自定义现有控件的外观
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,19 +12,14 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bbdc79fabf8dbe344baae66d718d79ac6375db7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>通过创建 ControlTemplate 自定义现有控件的外观
-<a name="introduction"></a>A<xref:System.Windows.Controls.ControlTemplate>指定可视结构和控件的可视行为。 你可以提供一个新的 it，从而自定义控件的外观<xref:System.Windows.Controls.ControlTemplate>。 当你创建<xref:System.Windows.Controls.ControlTemplate>，而无需更改其功能替换现有的控件的外观。 例如，你可以使这些按钮在你的应用程序而不是默认的正方形形状，舍入，但仍将引发按钮<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
+<a name="introduction"></a> A<xref:System.Windows.Controls.ControlTemplate>指定可视结构和控件的可视行为。 你可以提供一个新的 it，从而自定义控件的外观<xref:System.Windows.Controls.ControlTemplate>。 当你创建<xref:System.Windows.Controls.ControlTemplate>，而无需更改其功能替换现有的控件的外观。 例如，你可以使这些按钮在你的应用程序而不是默认的正方形形状，舍入，但仍将引发按钮<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
  本主题说明的各个部分<xref:System.Windows.Controls.ControlTemplate>，演示如何创建一个简单<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.Button>，并说明如何了解控件的控件协定，以便您可以自定义其外观。 因为你创建<xref:System.Windows.Controls.ControlTemplate>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，你可以更改控件的外观，而无需编写任何代码。 还可以使用设计器（如 Microsoft Expression Blend）创建自定义控件模板。 本主题说明中的示例[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，自定义的外观<xref:System.Windows.Controls.Button>并列出在主题末尾的完整示例。 有关使用 Expression Blend 的详细信息，请参阅[设置支持模板的控件的样式](http://go.microsoft.com/fwlink/?LinkId=161153)。  
   
@@ -93,7 +81,7 @@ ms.lasthandoff: 12/22/2017
   
  在此示例中，<xref:System.Windows.Controls.Grid>具有其<xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType>属性模板绑定到<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>。 因为<xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType>是绑定的模板，您可以创建使用相同的多个按钮<xref:System.Windows.Controls.ControlTemplate>并设置<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>为每个按钮上的不同值。 如果<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>没有模板绑定中的某个元素的属性<xref:System.Windows.Controls.ControlTemplate>，则设置<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>的按钮对不会影响该按钮的外观。  
   
- 请注意，两个属性的名称不必一样。 在前面的示例中，<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType>属性<xref:System.Windows.Controls.Button>模板绑定到<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>属性<xref:System.Windows.Controls.ContentPresenter>。 这样可以水平放置按钮的内容。 <xref:System.Windows.Controls.ContentPresenter>没有名为的属性`HorizontalContentAlignment`，但<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType>可以绑定到<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>。 在通过模板绑定属性时，请确保目标属性和源属性属于同一类型。  
+ 请注意，两个属性的名称不必一样。 在前面的示例中，<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType>属性<xref:System.Windows.Controls.Button>模板绑定到<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>属性<xref:System.Windows.Controls.ContentPresenter>。 这样可以水平放置按钮的内容。 <xref:System.Windows.Controls.ContentPresenter> 没有名为的属性`HorizontalContentAlignment`，但<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType>可以绑定到<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>。 在通过模板绑定属性时，请确保目标属性和源属性属于同一类型。  
   
  <xref:System.Windows.Controls.Control>类定义控件模板必须用于起在控件上时设置的多个属性。 如何<xref:System.Windows.Controls.ControlTemplate>属性取决于属性的使用。 <xref:System.Windows.Controls.ControlTemplate>必须通过以下方式之一使用属性：  
   
@@ -200,9 +188,9 @@ ms.lasthandoff: 12/22/2017
   
 |限制类型|起始值|目标值|  
 |-------------------------|-------------------|-----------------|  
-|从一个指定状态到另一个指定状态|名称<xref:System.Windows.VisualState>|名称<xref:System.Windows.VisualState>|  
-|从任意状态到指定状态|未设置|名称<xref:System.Windows.VisualState>|  
-|从指定状态到任意状态|名称<xref:System.Windows.VisualState>|未设置|  
+|从一个指定状态到另一个指定状态|名称 <xref:System.Windows.VisualState>|名称 <xref:System.Windows.VisualState>|  
+|从任意状态到指定状态|未设置|名称 <xref:System.Windows.VisualState>|  
+|从指定状态到任意状态|名称 <xref:System.Windows.VisualState>|未设置|  
 |从任意状态到其他任意状态|未设置|未设置|  
   
  你可以有多个<xref:System.Windows.VisualTransition>中的对象<xref:System.Windows.VisualStateGroup>该公式引用相同的状态，但它们会使用上表指定的顺序。 在下面的示例中，有两个<xref:System.Windows.VisualTransition>对象。 当控件转换从`Pressed`状态`MouseOver`状态，<xref:System.Windows.VisualTransition>同时具有<xref:System.Windows.VisualTransition.From%2A>和<xref:System.Windows.VisualTransition.To%2A>设置，则使用。 当控件从非 `Pressed` 的状态转换为 `MouseOver` 状态时，将使用另一种状态。  

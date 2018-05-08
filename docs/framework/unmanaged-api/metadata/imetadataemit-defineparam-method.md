@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataEmit::DefineParam 方法"
-ms.custom: 
+title: IMetaDataEmit::DefineParam 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.DefineParam
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4bf36edfad504f2858a45d5e34891042d8850bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 方法
 使用指定的签名与指定标记引用的方法创建的参数定义并获取该参数定义的标记。  
@@ -67,7 +55,7 @@ HRESULT DefineParam (
  [in]参数的的标志。 这是一个位掩码的`CorParamAttr`值。  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_`  *\** 的常量值。  
+ [in]`ELEMENT_TYPE_` *\** 的常量值。  
   
  `pValue`  
  [in]参数的常量值。  
@@ -81,14 +69,14 @@ HRESULT DefineParam (
 ## <a name="remarks"></a>备注  
  序列值在`ulParamSeq`开头的参数 1。 返回值具有序列号为 0。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：**用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

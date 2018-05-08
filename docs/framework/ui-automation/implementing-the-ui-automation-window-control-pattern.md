@@ -1,28 +1,19 @@
 ---
-title: "实现 UI 自动化 Window 控件模式"
-ms.custom: 
+title: 实现 UI 自动化 Window 控件模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, Window
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3f1b44184f1a241943d9fa9d60a62a703dbaf0d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73a484ea6165b4e38901630730c7ba985a5608ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>实现 UI 自动化 Window 控件模式
 > [!NOTE]
@@ -50,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-members-for-iwindowprovider"></a>IWindowProvider 必需的成员  
  IWindowProvider 接口需要以下属性、方法和事件。  
   
-|必需的成员|成员类型|备注|  
+|必需的成员|成员类型|说明|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|属性|无|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|属性|无|  
@@ -61,8 +52,8 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|无|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|无|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|无|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event|无|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event|无|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|事件|无|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|事件|无|  
 |<xref:System.Windows.Automation.WindowInteractionState>|事件|不保证为 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   

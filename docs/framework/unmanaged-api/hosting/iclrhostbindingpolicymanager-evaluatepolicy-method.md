@@ -1,14 +1,6 @@
 ---
-title: "ICLRHostBindingPolicyManager::EvaluatePolicy 方法"
-ms.custom: 
+title: ICLRHostBindingPolicyManager::EvaluatePolicy 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostBindingPolicyManager.EvaluatePolicy
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3a3a9446-7a4e-4836-9b27-5c536c15993d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14f4db56529fbbb08f8f3d9adde0d4dc7a8ce045
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e37d56a321e6529812045e37c4f1929818b38a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy 方法
 代表主机的计算结果绑定策略。  
@@ -76,7 +64,7 @@ HRESULT EvaluatePolicy (
 |-------------|-----------------|  
 |S_OK|计算已成功完成。|  
 |E_INVALIDARG|请`pwzReferenceIdentity`或`pbApplicationPolicy`为空引用。|  
-|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize`对于太小。|  
+|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize` 对于太小。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -86,14 +74,14 @@ HRESULT EvaluatePolicy (
 ## <a name="remarks"></a>备注  
  `EvaluatePolicy`方法允许宿主影响绑定策略，以维持特定于宿主的程序集版本控制要求。 策略引擎本身仍保留在 CLR 内。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRHostBindingPolicyManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

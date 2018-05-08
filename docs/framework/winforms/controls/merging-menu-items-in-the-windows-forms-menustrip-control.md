@@ -1,27 +1,15 @@
 ---
-title: "在 Windows 窗体 MenuStrip 控件中合并菜单项"
-ms.custom: 
+title: 在 Windows 窗体 MenuStrip 控件中合并菜单项
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd54855f7ee618915fea4fcb8f465cc8c1a68164
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2782ae483d673f8f1eccab10876aca858737260a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>在 Windows 窗体 MenuStrip 控件中合并菜单项
 如果你有多文档界面 (MDI) 应用程序，你可以将菜单项或从子窗体的整个菜单合并到父窗体的菜单中。  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  你可以手动或自动合并菜单项。 菜单项合并在相同的方式针对这两种方法，但合并激活方式不同，如本主题中后面的"手动合并"和"自动合并"节中所述。 在手动和自动合并时，每个合并操作会影响下一步的合并操作。  
   
- <xref:System.Windows.Forms.MenuStrip>合并菜单项移从一个<xref:System.Windows.Forms.ToolStrip>到另一个而不是克隆，因为这种情况<xref:System.Windows.Forms.MainMenu>。  
+ <xref:System.Windows.Forms.MenuStrip> 合并菜单项移从一个<xref:System.Windows.Forms.ToolStrip>到另一个而不是克隆，因为这种情况<xref:System.Windows.Forms.MainMenu>。  
   
 ## <a name="mergeaction-values"></a>MergeAction 值  
  在源中的菜单项上设置的合并操作<xref:System.Windows.Forms.MenuStrip>使用<xref:System.Windows.Forms.MergeAction>属性。  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Forms.MergeAction.Append>|（默认值）将源项添加到目标项的集合的末尾。|激活该程序的某些部分时，请将菜单项添加到菜单的末尾。|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|将源项添加到目标项的集合，通过指定的位置中<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>在源项上设置属性。|激活该程序的某些部分时，请将菜单项添加到中间或菜单的开头。<br /><br /> 如果值<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>相同的两个菜单项，它们将被添加按相反的顺序。 设置<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>适当地保留原始顺序。|  
 |<xref:System.Windows.Forms.MergeAction.Replace>|查找文本匹配项，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>时没有文本匹配找到，，然后将匹配的目标菜单项替换为源菜单项的值。|将替换源菜单项执行不同操作具有相同名称的目标菜单项。|  
-|<xref:System.Windows.Forms.MergeAction.MatchOnly>|查找文本匹配项，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>时没有文本匹配找到，，然后将所有的下拉列表项从源添加到目标的值。|生成的菜单结构，该插入或将菜单项添加到子菜单，或移除子菜单的菜单项。 例如，可以将菜单项从 MDI 子窗体添加到 main <xref:System.Windows.Forms.MenuStrip>**另存为**菜单。<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly>允许你导航菜单结构而不采取任何操作。 它提供了如何评估后续项。|  
+|<xref:System.Windows.Forms.MergeAction.MatchOnly>|查找文本匹配项，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>时没有文本匹配找到，，然后将所有的下拉列表项从源添加到目标的值。|生成的菜单结构，该插入或将菜单项添加到子菜单，或移除子菜单的菜单项。 例如，可以将菜单项从 MDI 子窗体添加到 main <xref:System.Windows.Forms.MenuStrip>**另存为**菜单。<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly> 允许你导航菜单结构而不采取任何操作。 它提供了如何评估后续项。|  
 |<xref:System.Windows.Forms.MergeAction.Remove>|查找文本匹配项，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>值没有文本匹配找到，然后从目标中移除的项。|从目标删除菜单项<xref:System.Windows.Forms.MenuStrip>。|  
   
 ## <a name="manual-merging"></a>手动合并  

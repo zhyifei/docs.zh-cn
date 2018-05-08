@@ -1,13 +1,6 @@
 ---
-title: "流文档概述"
-ms.custom: 
+title: 流文档概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-caps.latest.revision: "39"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0cf8944298af62a512599fc52998a046c66fed9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flow-document-overview"></a>流文档概述
 流文档旨在优化查看和可读性。 流文档根据运行时变量（例如，窗口大小、设备分辨率和可选的用户首选项）来动态调整和重新排列内容，而不是设置为一个预定义的布局。 此外，流文档还提供一些高级文档功能，例如分页和分栏。 本主题概述了流文档及其创建方式。  
@@ -69,13 +57,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="flow-document-types"></a>流文档类型  
  流文档内容的显示和外观依赖于用于托管流内容的对象。 有四个控件支持的流内容查看： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>， <xref:System.Windows.Controls.RichTextBox>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>。 下面简要介绍了这些控件。  
   
- **注意：** <xref:System.Windows.Documents.FlowDocument>不需要直接承载流内容，因此所有这些查看控件使用<xref:System.Windows.Documents.FlowDocument>启用流内容承载。
+ **注意：** <xref:System.Windows.Documents.FlowDocument>不需要直接承载流内容，因此所有这些查看控件使用<xref:System.Windows.Documents.FlowDocument>启用流内容承载。  
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader>包括功能，使用户能够动态各种查看模式，包括单页面 （页上的每一次的） 查看模式，两个--a-次一页 （书本阅读格式） 查看模式和连续滚动 （无界限） 查看模式之间进行选择。 有关这些查看模式的详细信息，请参阅<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。 如果你不需要动态切换不同的查看模式之间的能力<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>提供轻量流内容查看器中使用特定查看模式修复。  
+ <xref:System.Windows.Controls.FlowDocumentReader> 包括功能，使用户能够动态各种查看模式，包括单页面 （页上的每一次的） 查看模式，两个--a-次一页 （书本阅读格式） 查看模式和连续滚动 （无界限） 查看模式之间进行选择。 有关这些查看模式的详细信息，请参阅<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。 如果你不需要动态切换不同的查看模式之间的能力<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>提供轻量流内容查看器中使用特定查看模式修复。  
   
 ### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer 和 FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>显示的内容中页每次查看模式时，尽管<xref:System.Windows.Controls.FlowDocumentScrollViewer>显示连续滚动模式中的内容。 同时<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>固定为特定的查看模式。 与进行比较<xref:System.Windows.Controls.FlowDocumentReader>，其中包括使用户能够动态各种查看模式之间进行选择的功能 (如由<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>枚举)，但代价是多个资源密集型比<xref:System.Windows.Controls.FlowDocumentPageViewer>或<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer> 显示的内容中页每次查看模式时，尽管<xref:System.Windows.Controls.FlowDocumentScrollViewer>显示连续滚动模式中的内容。 同时<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>固定为特定的查看模式。 与进行比较<xref:System.Windows.Controls.FlowDocumentReader>，其中包括使用户能够动态各种查看模式之间进行选择的功能 (如由<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>枚举)，但代价是多个资源密集型比<xref:System.Windows.Controls.FlowDocumentPageViewer>或<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
   
  默认情况下，总是显示垂直滚动条，而水平滚动条则在需要时显示。 默认值用于 UI<xref:System.Windows.Controls.FlowDocumentScrollViewer>不包括工具栏; 但是，<xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A>属性可用来启用内置的工具栏。  
   
@@ -111,7 +99,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="block-derived-classes"></a>Block 派生类  
  **Paragraph**  
   
- <xref:System.Windows.Documents.Paragraph>通常用于内容分组到一个段落。 Paragraph 的最简单且最常见的用途是创建文本段落。  
+ <xref:System.Windows.Documents.Paragraph> 通常用于内容分组到一个段落。 Paragraph 的最简单且最常见的用途是创建文本段落。  
   
  [!code-xaml[FlowOvwSnippets_snip#ParagraphExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ParagraphExample.xaml#paragraphexamplewholepage)]  
   
@@ -122,7 +110,7 @@ ms.lasthandoff: 12/22/2017
   
  **节**  
   
- <xref:System.Windows.Documents.Section>仅用于包含其他<xref:System.Windows.Documents.Block>-派生元素。 它不会向其中包含的元素应用任何默认格式。 但是，任何属性值集上<xref:System.Windows.Documents.Section>适用于及其子元素。 使用节能够以编程方式循环访问其子集合。 <xref:System.Windows.Documents.Section>到类似的方式使用\<DIV > 中 HTML 标记。  
+ <xref:System.Windows.Documents.Section> 仅用于包含其他<xref:System.Windows.Documents.Block>-派生元素。 它不会向其中包含的元素应用任何默认格式。 但是，任何属性值集上<xref:System.Windows.Documents.Section>适用于及其子元素。 使用节能够以编程方式循环访问其子集合。 <xref:System.Windows.Documents.Section> 到类似的方式使用\<DIV > 中 HTML 标记。  
   
  在下面的示例中，三个段落定义下一个<xref:System.Windows.Documents.Section>。 将节<xref:System.Windows.Documents.TextElement.Background%2A>的红色，因此段落的背景色的属性值也为红色。  
   
@@ -133,7 +121,7 @@ ms.lasthandoff: 12/22/2017
   
  **BlockUIContainer**  
   
- <xref:System.Windows.Documents.BlockUIContainer>使<xref:System.Windows.UIElement>元素 (即<xref:System.Windows.Controls.Button>) 能够嵌入到块派生的流内容。 <xref:System.Windows.Documents.InlineUIContainer>（见下文） 用于嵌入<xref:System.Windows.UIElement>内联派生的流内容中的元素。 <xref:System.Windows.Documents.BlockUIContainer>和<xref:System.Windows.Documents.InlineUIContainer>非常重要，因为没有其他方法使用<xref:System.Windows.UIElement>在流内容，除非它包含在这两个元素之一中。  
+ <xref:System.Windows.Documents.BlockUIContainer> 使<xref:System.Windows.UIElement>元素 (即<xref:System.Windows.Controls.Button>) 能够嵌入到块派生的流内容。 <xref:System.Windows.Documents.InlineUIContainer> （见下文） 用于嵌入<xref:System.Windows.UIElement>内联派生的流内容中的元素。 <xref:System.Windows.Documents.BlockUIContainer> 和<xref:System.Windows.Documents.InlineUIContainer>非常重要，因为没有其他方法使用<xref:System.Windows.UIElement>在流内容，除非它包含在这两个元素之一中。  
   
  下面的示例演示如何使用<xref:System.Windows.Documents.BlockUIContainer>元素来承载<xref:System.Windows.UIElement>在流内容中的对象。  
   
@@ -145,7 +133,7 @@ ms.lasthandoff: 12/22/2017
   
  **List**  
   
- <xref:System.Windows.Documents.List>用于创建带项目符号或数值的列表。 设置<xref:System.Windows.Documents.List.MarkerStyle%2A>属性<xref:System.Windows.TextMarkerStyle>枚举值来确定列表的样式。 下例演示了如何创建简单列表。  
+ <xref:System.Windows.Documents.List> 用于创建带项目符号或数值的列表。 设置<xref:System.Windows.Documents.List.MarkerStyle%2A>属性<xref:System.Windows.TextMarkerStyle>枚举值来确定列表的样式。 下例演示了如何创建简单列表。  
   
  [!code-xaml[FlowOvwSnippets_snip#ListExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ListExample.xaml#listexamplewholepage)]  
   
@@ -156,12 +144,12 @@ ms.lasthandoff: 12/22/2017
   
  **Table**  
   
- <xref:System.Windows.Documents.Table>用于创建表。 <xref:System.Windows.Documents.Table>类似于<xref:System.Windows.Controls.Grid>元素，但它具有更多功能并且，因此，需要更大的资源开销。 因为<xref:System.Windows.Controls.Grid>是<xref:System.Windows.UIElement>，除非它包含在无法在流内容中使用它<xref:System.Windows.Documents.BlockUIContainer>或<xref:System.Windows.Documents.InlineUIContainer>。 有关详细信息<xref:System.Windows.Documents.Table>，请参阅[表概述](../../../../docs/framework/wpf/advanced/table-overview.md)。  
+ <xref:System.Windows.Documents.Table> 用于创建表。 <xref:System.Windows.Documents.Table> 类似于<xref:System.Windows.Controls.Grid>元素，但它具有更多功能并且，因此，需要更大的资源开销。 因为<xref:System.Windows.Controls.Grid>是<xref:System.Windows.UIElement>，除非它包含在无法在流内容中使用它<xref:System.Windows.Documents.BlockUIContainer>或<xref:System.Windows.Documents.InlineUIContainer>。 有关详细信息<xref:System.Windows.Documents.Table>，请参阅[表概述](../../../../docs/framework/wpf/advanced/table-overview.md)。  
   
 ### <a name="inline-derived-classes"></a>Inline 派生类  
  **运行**  
   
- <xref:System.Windows.Documents.Run>用于包含无格式的文本。 你所料<xref:System.Windows.Documents.Run>对象进行了广泛在使用流内容。 但是，在标记中，<xref:System.Windows.Documents.Run>元素不需要显式地使用。 <xref:System.Windows.Documents.Run>需要创建或使用代码操作流文档时使用。 例如，在下面第一个标记<xref:System.Windows.Documents.Paragraph>指定<xref:System.Windows.Documents.Run>显式时第二个元素不一样。 这两个段落生成相同的输出。  
+ <xref:System.Windows.Documents.Run> 用于包含无格式的文本。 你所料<xref:System.Windows.Documents.Run>对象进行了广泛在使用流内容。 但是，在标记中，<xref:System.Windows.Documents.Run>元素不需要显式地使用。 <xref:System.Windows.Documents.Run> 需要创建或使用代码操作流文档时使用。 例如，在下面第一个标记<xref:System.Windows.Documents.Paragraph>指定<xref:System.Windows.Documents.Run>显式时第二个元素不一样。 这两个段落生成相同的输出。  
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
@@ -169,7 +157,7 @@ ms.lasthandoff: 12/22/2017
   
  **Span**  
   
- <xref:System.Windows.Documents.Span>组合在一起其他内联内容元素。 中的内容应用没有固有呈现<xref:System.Windows.Documents.Span>元素。 但是，元素继承自<xref:System.Windows.Documents.Span>包括<xref:System.Windows.Documents.Hyperlink>， <xref:System.Windows.Documents.Bold>，<xref:System.Windows.Documents.Italic>和<xref:System.Windows.Documents.Underline>并应用格式设置为文本。  
+ <xref:System.Windows.Documents.Span> 组合在一起其他内联内容元素。 中的内容应用没有固有呈现<xref:System.Windows.Documents.Span>元素。 但是，元素继承自<xref:System.Windows.Documents.Span>包括<xref:System.Windows.Documents.Hyperlink>， <xref:System.Windows.Documents.Bold>，<xref:System.Windows.Documents.Italic>和<xref:System.Windows.Documents.Underline>并应用格式设置为文本。  
   
  下面是一个示例的<xref:System.Windows.Documents.Span>正在使用，以包含内联内容，包括文本，<xref:System.Windows.Documents.Bold>元素，和一个<xref:System.Windows.Controls.Button>。  
   
@@ -181,7 +169,7 @@ ms.lasthandoff: 12/22/2017
   
  **InlineUIContainer**  
   
- <xref:System.Windows.Documents.InlineUIContainer>使<xref:System.Windows.UIElement>元素 (即控件喜欢<xref:System.Windows.Controls.Button>) 能够嵌入到<xref:System.Windows.Documents.Inline>内容元素。 此元素是内联等效于<xref:System.Windows.Documents.BlockUIContainer>上面所述。 下面是使用的示例，<xref:System.Windows.Documents.InlineUIContainer>插入<xref:System.Windows.Controls.Button>中的内联<xref:System.Windows.Documents.Paragraph>。  
+ <xref:System.Windows.Documents.InlineUIContainer> 使<xref:System.Windows.UIElement>元素 (即控件喜欢<xref:System.Windows.Controls.Button>) 能够嵌入到<xref:System.Windows.Documents.Inline>内容元素。 此元素是内联等效于<xref:System.Windows.Documents.BlockUIContainer>上面所述。 下面是使用的示例，<xref:System.Windows.Documents.InlineUIContainer>插入<xref:System.Windows.Controls.Button>中的内联<xref:System.Windows.Documents.Paragraph>。  
   
  [!code-xaml[FlowOvwSnippets_snip#InlineUIContainerExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/InlineUIContainerExample.xaml#inlineuicontainerexamplewholepage)]  
   
@@ -192,7 +180,7 @@ ms.lasthandoff: 12/22/2017
   
  **Figure 和 Floater**  
   
- <xref:System.Windows.Documents.Figure>和<xref:System.Windows.Documents.Floater>用于在流文档中嵌入内容，带有可自定义独立于主内容流的位置属性。 <xref:System.Windows.Documents.Figure>或<xref:System.Windows.Documents.Floater>元素通常用于突出显示或强调部分内容，到主机的支持图像或其他内容中的主要内容流，或用于插入松散相关如播发的内容。  
+ <xref:System.Windows.Documents.Figure> 和<xref:System.Windows.Documents.Floater>用于在流文档中嵌入内容，带有可自定义独立于主内容流的位置属性。 <xref:System.Windows.Documents.Figure> 或<xref:System.Windows.Documents.Floater>元素通常用于突出显示或强调部分内容，到主机的支持图像或其他内容中的主要内容流，或用于插入松散相关如播发的内容。  
   
  下面的示例演示如何嵌入<xref:System.Windows.Documents.Figure>到文本的段落。  
   
@@ -205,7 +193,7 @@ ms.lasthandoff: 12/22/2017
   
  ![屏幕截图：Figure 示例](../../../../docs/framework/wpf/advanced/media/flow-ovw-figure-example.png "Flow_Ovw_Figure_Example")  
   
- <xref:System.Windows.Documents.Figure>和<xref:System.Windows.Documents.Floater>有几个方面存在不同，并且可用于不同的情形。  
+ <xref:System.Windows.Documents.Figure> 和<xref:System.Windows.Documents.Floater>有几个方面存在不同，并且可用于不同的情形。  
   
  **Figure：**  
   
@@ -219,15 +207,15 @@ ms.lasthandoff: 12/22/2017
   
 -   无法定位，可在能够为其提供空间的任何位置呈现。 无法设置的偏移量或定位点<xref:System.Windows.Documents.Floater>。  
   
--   无法调整到多个列： 默认情况下，<xref:System.Windows.Documents.Floater>位于一个列的大小。 它具有<xref:System.Windows.Documents.Floater.Width%2A>属性可设置为绝对像素值，但如果此值大于它将被忽略的一个列宽度并将浮动对象大小为一个列。 你可以调整其到小于一列大小通过设置正确的像素宽度，但大小不是列相关，因此"0.5 倍栏宽"不是有效的表达式<xref:System.Windows.Documents.Floater>宽度。 <xref:System.Windows.Documents.Floater>已将没有高度属性，它是高度不能进行设置，它的高度取决于的内容  
+-   无法调整到多个列： 默认情况下，<xref:System.Windows.Documents.Floater>位于一个列的大小。 它具有<xref:System.Windows.Documents.Floater.Width%2A>属性可设置为绝对像素值，但如果此值大于它将被忽略的一个列宽度并将浮动对象大小为一个列。 你可以调整其到小于一列大小通过设置正确的像素宽度，但大小不是列相关，因此"0.5 倍栏宽"不是有效的表达式<xref:System.Windows.Documents.Floater>宽度。 <xref:System.Windows.Documents.Floater> 已将没有高度属性，它是高度不能进行设置，它的高度取决于的内容  
   
--   <xref:System.Windows.Documents.Floater>对进行分页： 如果在其指定宽度其内容扩展到多个列的高度，浮标会断开，并显示到下一列、 下一个页面，等等。  
+-   <xref:System.Windows.Documents.Floater> 对进行分页： 如果在其指定宽度其内容扩展到多个列的高度，浮标会断开，并显示到下一列、 下一个页面，等等。  
   
- <xref:System.Windows.Documents.Figure>最好将独立内容放想要控制的大小和定位，并确信内容将放在指定的大小。 <xref:System.Windows.Documents.Floater>是要放置自由流动更多内容流动相似的主页面内容，但与它分开的一个好。  
+ <xref:System.Windows.Documents.Figure> 最好将独立内容放想要控制的大小和定位，并确信内容将放在指定的大小。 <xref:System.Windows.Documents.Floater> 是要放置自由流动更多内容流动相似的主页面内容，但与它分开的一个好。  
   
  **LineBreak**  
   
- <xref:System.Windows.Documents.LineBreak>导致换行符在流内容中发生。 以下示例演示了 <xref:System.Windows.Documents.LineBreak> 的用法。  
+ <xref:System.Windows.Documents.LineBreak> 导致换行符在流内容中发生。 以下示例演示了 <xref:System.Windows.Documents.LineBreak> 的用法。  
   
  [!code-xaml[FlowOvwSnippets_snip#LineBreakExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/LineBreakExample.xaml#linebreakexamplewholepage)]  
   
@@ -285,7 +273,7 @@ ms.lasthandoff: 12/22/2017
   
  从上图中可看出，允许的元素的子级不一定由是<xref:System.Windows.Documents.Block>元素或<xref:System.Windows.Documents.Inline>元素。 例如， <xref:System.Windows.Documents.Span> (<xref:System.Windows.Documents.Inline>元素) 只能有<xref:System.Windows.Documents.Inline>子元素，而<xref:System.Windows.Documents.Figure>(还<xref:System.Windows.Documents.Inline>元素) 只能有<xref:System.Windows.Documents.Block>子元素。 因此，关系图可用于快速确定哪些元素可以包含在其他元素中。 例如，让我们使用关系图来确定如何构造的流内容<xref:System.Windows.Controls.RichTextBox>。  
   
- **1.**A<xref:System.Windows.Controls.RichTextBox>必须包含<xref:System.Windows.Documents.FlowDocument>其中反过来必须包含<xref:System.Windows.Documents.Block>-派生对象。 下面是上述关系图中的对应部分。  
+ **1.** A<xref:System.Windows.Controls.RichTextBox>必须包含<xref:System.Windows.Documents.FlowDocument>其中反过来必须包含<xref:System.Windows.Documents.Block>-派生对象。 下面是上述关系图中的对应部分。  
   
  ![关系图：RichTextBox 包含规则](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
@@ -293,7 +281,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
- **2.**根据关系图中，有几个<xref:System.Windows.Documents.Block>元素可供选择包括<xref:System.Windows.Documents.Paragraph>， <xref:System.Windows.Documents.Section>， <xref:System.Windows.Documents.Table>， <xref:System.Windows.Documents.List>，和<xref:System.Windows.Documents.BlockUIContainer>（请参阅上面的块派生的类）。 假设我们想<xref:System.Windows.Documents.Table>。 图中，根据<xref:System.Windows.Documents.Table>包含<xref:System.Windows.Documents.TableRowGroup>包含<xref:System.Windows.Documents.TableRow>元素，其中包含<xref:System.Windows.Documents.TableCell>元素包含<xref:System.Windows.Documents.Block>-派生对象。 下面是为相应的分段<xref:System.Windows.Documents.Table>取自上述关系图。  
+ **2.** 根据关系图中，有几个<xref:System.Windows.Documents.Block>元素可供选择包括<xref:System.Windows.Documents.Paragraph>， <xref:System.Windows.Documents.Section>， <xref:System.Windows.Documents.Table>， <xref:System.Windows.Documents.List>，和<xref:System.Windows.Documents.BlockUIContainer>（请参阅上面的块派生的类）。 假设我们想<xref:System.Windows.Documents.Table>。 图中，根据<xref:System.Windows.Documents.Table>包含<xref:System.Windows.Documents.TableRowGroup>包含<xref:System.Windows.Documents.TableRow>元素，其中包含<xref:System.Windows.Documents.TableCell>元素包含<xref:System.Windows.Documents.Block>-派生对象。 下面是为相应的分段<xref:System.Windows.Documents.Table>取自上述关系图。  
   
  ![关系图：Table 的父/子架构](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
@@ -301,7 +289,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
- **3.**同样，一个或多个<xref:System.Windows.Documents.Block>下都需要所元素<xref:System.Windows.Documents.TableCell>。 为简单起见，在单元格内部放置一些文本。 可以执行此操作使用<xref:System.Windows.Documents.Paragraph>与<xref:System.Windows.Documents.Run>元素。 下面是从显示的关系图中的相应段<xref:System.Windows.Documents.Paragraph>可以<xref:System.Windows.Documents.Inline>元素，而<xref:System.Windows.Documents.Run>(<xref:System.Windows.Documents.Inline>元素) 只能采用纯文本。  
+ **3.** 同样，一个或多个<xref:System.Windows.Documents.Block>下都需要所元素<xref:System.Windows.Documents.TableCell>。 为简单起见，在单元格内部放置一些文本。 可以执行此操作使用<xref:System.Windows.Documents.Paragraph>与<xref:System.Windows.Documents.Run>元素。 下面是从显示的关系图中的相应段<xref:System.Windows.Documents.Paragraph>可以<xref:System.Windows.Documents.Inline>元素，而<xref:System.Windows.Documents.Run>(<xref:System.Windows.Documents.Inline>元素) 只能采用纯文本。  
   
  ![关系图：Paragraph 的父/子架构](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   

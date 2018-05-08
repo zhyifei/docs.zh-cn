@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::BeginThreadAffinity 方法"
-ms.custom: 
+title: IHostTaskManager::BeginThreadAffinity 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.BeginThreadAffinity
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fea3ab88-ce41-4c5a-847b-bb78cd748da6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9c86473fba6447bc97619aeb6a6d7b10472120fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a94797e6279a1f1d419b977c22d73ca41bbafc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagerbeginthreadaffinity-method"></a>IHostTaskManager::BeginThreadAffinity 方法
 通知宿主托管代码正在进入在其中将当前的任务必须不移动到另一个操作系统线程的周期。  
@@ -48,7 +36,7 @@ HRESULT BeginThreadAffinity ();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`BeginThreadAffinity`已成功返回。|  
+|S_OK|`BeginThreadAffinity` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -58,14 +46,14 @@ HRESULT BeginThreadAffinity ();
 ## <a name="remarks"></a>备注  
  CLR 通常调用`IHostTaskManager::BeginThreadAffinity`对的调用的上下文中<xref:System.Threading.Thread.BeginThreadAffinity%2A?displayProperty=nameWithType>。 当前的任务必须不能重新计划进行相应地调用是到[ihosttaskmanager:: Endthreadaffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)。 任务可以切换出去，但当它们切换回时，必须将它们分配到从中它们已切出的同一操作系统线程。嵌套调用`BeginThreadAffinity`没有任何效果，因为调用是指当前任务。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

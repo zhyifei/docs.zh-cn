@@ -1,10 +1,6 @@
 ---
-title: "派生的数学函数 (Visual Basic)"
+title: 派生的数学函数 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - arithmetic operations, derived math functions
 - cosecant function
@@ -25,14 +21,11 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5816fa4c8c384eca116fa1512950a3588c6e3392
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 87faa623f5b145eec8b88e350fce4171125324dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="derived-math-functions-visual-basic"></a>派生的数学函数 (Visual Basic)
 下表显示可以派生自的内部函数的数学函数的非内部的数学函数<xref:System.Math?displayProperty=nameWithType>对象。 你可以通过添加访问内部函数的数学函数`Imports System.Math`向你的文件或项目。  
@@ -60,5 +53,5 @@ ms.lasthandoff: 10/18/2017
 |反双曲余割值 (Acsch(x))|Log((Sign(x) * Sqrt (x \* x + 1) + 1) / x)|  
 |反双曲余切值 (Acoth(x))|日志 ((x + 1) / (x-1)) / 2|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数学函数](../../../visual-basic/language-reference/functions/math-functions.md)

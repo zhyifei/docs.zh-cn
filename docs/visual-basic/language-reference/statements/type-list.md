@@ -1,9 +1,6 @@
 ---
-title: "类型列表 (Visual Basic)"
+title: 类型列表 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - StructureConstraint
 - vb.StructureConstraint
@@ -27,14 +24,11 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 35e72414b236615dc230b654ccfeed290841fb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fbb07154fce27feb257b431c1726446b42fbfe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-list-visual-basic"></a>类型列表 (Visual Basic)
 指定*类型参数*为*泛型*编程元素。 用逗号分隔多个参数。 下面是一个类型参数的语法。  
@@ -50,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 |术语|定义|  
 |---|---|  
 |`genericmodifier`|可选。 可仅在泛型接口和委托。 你可以声明类型协变使用[出](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)关键字或通过使用逆变[中](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)关键字。 请参阅 [协变和逆变](../../programming-guide/concepts/covariance-contravariance/index.md)。|  
-|`typename`|必需。 类型参数的名称。 这是一个占位符，将替换为相应类型参数所提供的定义类型。|  
+|`typename`|必须的。 类型参数的名称。 这是一个占位符，将替换为相应类型参数所提供的定义类型。|  
 |`constraintlist`|可选。 约束可以为提供的数据类型的要求列表`typename`。 如果你有多个约束，则将它们括在大括号中 (`{ }`)，并用逗号分隔。 你必须使用引入此约束列表[作为](../../../visual-basic/language-reference/statements/as-clause.md)关键字。 你使用`As`一次，在列表的开头。|  
   
 ## <a name="remarks"></a>备注  
@@ -97,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
  [New 运算符](../../../visual-basic/language-reference/operators/new-operator.md)  
  [在 Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  

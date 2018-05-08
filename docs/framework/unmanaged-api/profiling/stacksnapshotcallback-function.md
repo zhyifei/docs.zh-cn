@@ -1,14 +1,6 @@
 ---
-title: "StackSnapshotCallback 函数"
-ms.custom: 
+title: StackSnapshotCallback 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StackSnapshotCallback
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: d0f235b2-91fe-4f82-b7d5-e5c64186eea8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 32cf21fb5a76fdec4daa322d53a8eb218ae2f2b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 78fdcb69e73bc7238972d1a6ffb37b5ba91c7953
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback 函数
 探查器提供了有关每个托管的帧和非托管的帧每次运行在堆栈上的堆栈审核，启动的过程信息，以及[icorprofilerinfo2:: Dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法。  
@@ -76,14 +64,14 @@ HRESULT __stdcall StackSnapshotCallback (
   
  `ICorProfilerInfo2::DoStackSnapshot`方法调用`StackSnapshotCallback`函数一次每个托管帧或第一次每次运行的非托管的帧。 如果`StackSnapshotCallback`调用探查器可能对于非托管帧的运行时，使用寄存器上下文 (所引用的`context`参数) 来执行其自己的非托管的堆栈审核。 在此情况下，Win32`CONTEXT`结构表示中的非托管帧运行最近推入镇的 CPU 状态。 尽管 Win32`CONTEXT`结构包括所有寄存器的值，但您应依赖于的堆栈指针寄存器、 帧指针寄存器、 指令指针寄存器和非易失的 （即保留） 的值仅整数寄存器。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [DoStackSnapshot 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  

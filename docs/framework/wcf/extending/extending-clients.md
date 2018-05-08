@@ -1,33 +1,19 @@
 ---
-title: "扩展客户端"
-ms.custom: 
+title: 扩展客户端
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7eea247602d24c545e0de5fa9df50e83aae8ed7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-clients"></a>扩展客户端
 在调用应用程序中，服务模型层负责将应用程序代码中的方法调用转换成出站消息、将它们推送到基础通道、将结果转换回应用程序代码中的返回值和 out 参数并将结果返回到调用方。 服务模型扩展将修改或实现执行或通信行为与功能，包括客户端或调度程序功能、自定义行为、消息和参数截获以及其他扩展功能。  
   
- 本主题说明如何在 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 应用程序中使用 <xref:System.ServiceModel.Dispatcher.ClientOperation> 和 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 类更改 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的默认执行行为，或在发送或从通道层检索消息、参数或返回值之前或之后截获或更改它们。 有关扩展服务运行时的详细信息，请参阅[扩展调度程序](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。 有关修改并将自定义对象插入到客户端运行时的行为的详细信息，请参阅[配置和扩展的运行时带有行为](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
+ 本主题介绍如何使用<xref:System.ServiceModel.Dispatcher.ClientRuntime>和<xref:System.ServiceModel.Dispatcher.ClientOperation>Windows Communication Foundation (WCF) 客户端应用程序，若要修改的默认执行行为中的类[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端截获或修改消息、 参数或返回值之前或之后发送或从通道层检索它们。 有关扩展服务运行时的详细信息，请参阅[扩展调度程序](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。 有关修改并将自定义对象插入到客户端运行时的行为的详细信息，请参阅[配置和扩展的运行时带有行为](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
 ## <a name="clients"></a>客户端  
  在客户端上，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象或客户端通道会将对出站消息和入站消息的方法调用转换为返回到调用应用程序的操作结果。 (有关客户端类型的详细信息，请参阅[WCF 客户端体系结构](../../../../docs/framework/wcf/feature-details/client-architecture.md)。)  

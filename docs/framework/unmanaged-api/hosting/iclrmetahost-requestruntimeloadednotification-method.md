@@ -1,14 +1,6 @@
 ---
-title: "ICLRMetaHost::RequestRuntimeLoadedNotification 方法"
-ms.custom: 
+title: ICLRMetaHost::RequestRuntimeLoadedNotification 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRMetaHost.RequestRuntimeLoadedNotification
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b7866270d8c9234a375401dfd05b504a06ddbf4b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 方法
 提供保证在首次加载，但尚未启动的公共语言运行时 (CLR) 版本时要调用的回调函数。 此方法取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函数。  
@@ -91,23 +79,23 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  如果宿主要加载或导致另一个运行时，才能加载到可重入的方式，`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`提供在回调必须按以下方式使用函数的参数：  
   
--   `pfnCallbackThreadSet`必须由尝试此类负载之前，可能会导致运行时负载的线程调用。  
+-   `pfnCallbackThreadSet` 必须由尝试此类负载之前，可能会导致运行时负载的线程调用。  
   
--   `pfnCallbackThreadUnset`必须调用时该线程将不再导致出现运行时负载 （和从初始回调返回之前）。  
+-   `pfnCallbackThreadUnset` 必须调用时该线程将不再导致出现运行时负载 （和从初始回调返回之前）。  
   
--   `pfnCallbackThreadSet`和`pfnCallbackThreadUnset`都是不可重入。  
+-   `pfnCallbackThreadSet` 和`pfnCallbackThreadUnset`都是不可重入。  
   
 > [!NOTE]
 >  主机应用程序不能调用`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`的范围之外`pCallbackFunction`参数。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
  **库：**作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRMetaHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  

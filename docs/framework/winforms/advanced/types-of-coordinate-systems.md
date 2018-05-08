@@ -1,13 +1,6 @@
 ---
-title: "坐标系类型"
-ms.custom: 
+title: 坐标系类型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff53942cb90721d5411f99b261f90366d039e151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-coordinate-systems"></a>坐标系类型
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]使用三个坐标空间： world、 页和设备。 世界坐标是用于模型对特定图形世界的坐标，将传递到.NET Framework 中的方法的坐标。 页坐标是指由绘图图面，如窗体或控件使用的坐标系统。 设备坐标是由进行绘制，如屏幕或张纸的物理设备的坐标。 进行调用时`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`，传递给点<xref:System.Drawing.Graphics.DrawLine%2A>方法-`(0, 0)`和`(160, 80)`-位于世界坐标空间。 之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以在屏幕上绘制线条、 坐标传递的转换序列。 一个转换，调用的世界变换，将世界坐标转换为的页坐标，并调用页转换，另一个转换将页坐标转换为设备坐标。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 使用三个坐标空间： world、 页和设备。 世界坐标是用于模型对特定图形世界的坐标，将传递到.NET Framework 中的方法的坐标。 页坐标是指由绘图图面，如窗体或控件使用的坐标系统。 设备坐标是由进行绘制，如屏幕或张纸的物理设备的坐标。 进行调用时`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`，传递给点<xref:System.Drawing.Graphics.DrawLine%2A>方法-`(0, 0)`和`(160, 80)`-位于世界坐标空间。 之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以在屏幕上绘制线条、 坐标传递的转换序列。 一个转换，调用的世界变换，将世界坐标转换为的页坐标，并调用页转换，另一个转换将页坐标转换为设备坐标。  
   
 ## <a name="transforms-and-coordinate-systems"></a>转换和坐标系统  
  假设你想要使用的原点在正文中的工作区，而不是左上角的坐标系统。 例如，假设你想要从工作区左边缘的 100 个像素和从客户端区域的顶部 50 像素的原点。 下图显示了这样的坐标系统。  

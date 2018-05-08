@@ -1,13 +1,6 @@
 ---
-title: "缩放 Windows 窗体 DataGridView 控件的最佳做法"
-ms.custom: 
+title: 缩放 Windows 窗体 DataGridView 控件的最佳做法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sharing
 - data grids [Windows Forms], best practices
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91153df539871de571375d7bf6d49d712a0c43b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>缩放 Windows 窗体 DataGridView 控件的最佳做法
 <xref:System.Windows.Forms.DataGridView>控件旨在提供最大可伸缩性。 如果想要显示的数据量大，则应遵循避免使用大量的内存或降低用户界面 (UI) 的响应能力本主题中所述准则。 本主题讨论了以下问题：  
@@ -124,7 +112,7 @@ ms.lasthandoff: 12/22/2017
   
  若要防止行成为非共享行，使用以下准则：  
   
--   避免索引<xref:System.Windows.Forms.DataGridView.Rows%2A>集合或循环访问其与`foreach`循环。 您将通常不必直接访问的行。 <xref:System.Windows.Forms.DataGridView>对行进行操作的方法采用行索引自变量，而不是行实例。 此外，行相关的事件的处理程序接收具有可用于操作而不会导致它们成为非共享行的行的行属性的事件参数对象。  
+-   避免索引<xref:System.Windows.Forms.DataGridView.Rows%2A>集合或循环访问其与`foreach`循环。 您将通常不必直接访问的行。 <xref:System.Windows.Forms.DataGridView> 对行进行操作的方法采用行索引自变量，而不是行实例。 此外，行相关的事件的处理程序接收具有可用于操作而不会导致它们成为非共享行的行的行属性的事件参数对象。  
   
 -   如果你需要访问行对象，请使用<xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType>方法并传入行的实际的索引。 但是，请注意，修改通过此方法检索到一个共享的行对象将修改共享此对象的所有行。 用于新纪录的行不与共享其他行，但是，因此它不会受到影响时修改任何其他行。 另请注意，不同的行表示一个共享行可能有不同的快捷菜单。 若要从共享的行实例检索正确的快捷菜单，使用<xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A>方法并传入行的实际的索引。 如果访问共享的行<xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A>属性相反，它将使用共享的行的索引为-1 并将检索正确的快捷菜单。  
   

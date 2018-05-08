@@ -1,27 +1,17 @@
 ---
-title: "适用于 Visual Studio 2012 的标识和访问工具"
-ms.custom: 
+title: 适用于 Visual Studio 2012 的标识和访问工具
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
-caps.latest.revision: "3"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 079c3798f17f4929124cd5cb027baa5d40a1167a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 107028b89d576b27a2559fd0ae5298c849da2c94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>适用于 Visual Studio 2012 的标识和访问工具
-本主题描述了适用于 Visual Studio 11 的新的标识和访问工具。 可从以下 URL 下载此工具：[http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849)或者直接在扩展管理器中搜索“标识”，直接从 Visual Studio 11 中下载。  
+本主题描述了适用于 Visual Studio 11 的新的标识和访问工具。 你可以从以下 URL 下载此工具： [ http://go.microsoft.com/fwlink/?LinkID=245849 ](http://go.microsoft.com/fwlink/?LinkID=245849)或直接从 Visual Studio 11 通过搜索直接在扩展管理器中的"标识"中。  
   
  适用于 Visual Studio 11 的新的标识和访问工具提供了开发时间大大减少的体验，并具有如下要点：  
   
@@ -29,9 +19,9 @@ ms.lasthandoff: 12/22/2017
   
 -   与一般仅保护性身份验证不同，利用此新工具，您可以指定本地主页领域发现页/控制器（或处理应用程序中的身份验证体验的任何其他终结点），并且 WIF 会将所有未经身份验证的请求配置为转到此处，而不是将其重定向到 STS。  
   
--   此工具包括一项在启动调试会话时运行于您的本地计算机上的测试安全令牌服务 (STS)。 因此，您不再需要创建自定义 STS 项目并对其进行调整即可获得测试应用程序所需的声明。 声明类型和值是可完全自定义的。  
+-   此工具包括一项在启动调试会话时运行于你的本地计算机上的测试安全令牌服务 (STS)。 因此，您不再需要创建自定义 STS 项目并对其进行调整即可获得测试应用程序所需的声明。 声明类型和值是可完全自定义的。  
   
--   您可以通过此工具的 UI 直接修改常见设置，而无需编辑 web.config。  
+-   你可以通过此工具的 UI 直接修改常见设置，而无需编辑 web.config。  
   
 -   您可以在单个屏幕上使用 Active Directory 联合身份验证服务 (AD FS) 2.0（或其他 WS 联合身份验证提供程序）建立联合身份验证。  
   

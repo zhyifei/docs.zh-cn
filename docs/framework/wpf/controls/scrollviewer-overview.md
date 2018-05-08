@@ -1,13 +1,6 @@
 ---
-title: "ScrollViewer 概述"
-ms.custom: 
+title: ScrollViewer 概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7317bade85641d7d055facabcf7103b945609583
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1797f956ec41ba085dee7e1cb11a3129004552b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer 概述
 用户界面中的内容通常比计算机屏幕的显示区域大。 <xref:System.Windows.Controls.ScrollViewer>控件提供能够滚动内容的一种简便方式[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。 本主题介绍<xref:System.Windows.Controls.ScrollViewer>元素，并提供了几个用法示例。  
@@ -45,7 +33,7 @@ ms.lasthandoff: 01/19/2018
 #### <a name="the-iscrollinfo-interface"></a>IScrollInfo 接口  
  <xref:System.Windows.Controls.Primitives.IScrollInfo>接口表示内的主滚动区域<xref:System.Windows.Controls.ScrollViewer>或派生的控件。 滚动属性和方法可以实现该接口所定义<xref:System.Windows.Controls.Panel>需要滚动按逻辑单元，而不一个物理增量的元素。 实例强制转换为<xref:System.Windows.Controls.Primitives.IScrollInfo>到派生<xref:System.Windows.Controls.Panel>，然后使用其滚动方法提供了一种有用的方法，以滚动到下一步的逻辑单元在子集合，而不是像素的增量。 默认情况下，<xref:System.Windows.Controls.ScrollViewer>控件支持按物理单位滚动。  
   
- <xref:System.Windows.Controls.StackPanel>和<xref:System.Windows.Controls.VirtualizingStackPanel>两者都实现<xref:System.Windows.Controls.Primitives.IScrollInfo>和以本机方式支持逻辑滚动。 对于布局控件该本机支持逻辑滚动，你仍可以实现通过包装主机的物理滚动<xref:System.Windows.Controls.Panel>中的元素<xref:System.Windows.Controls.ScrollViewer>和设置<xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A>属性`false`。  
+ <xref:System.Windows.Controls.StackPanel> 和<xref:System.Windows.Controls.VirtualizingStackPanel>两者都实现<xref:System.Windows.Controls.Primitives.IScrollInfo>和以本机方式支持逻辑滚动。 对于布局控件该本机支持逻辑滚动，你仍可以实现通过包装主机的物理滚动<xref:System.Windows.Controls.Panel>中的元素<xref:System.Windows.Controls.ScrollViewer>和设置<xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A>属性`false`。  
   
  下面的代码示例演示如何强制转换的实例<xref:System.Windows.Controls.Primitives.IScrollInfo>到<xref:System.Windows.Controls.StackPanel>和使用内容滚动方法 (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A>和<xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) 由接口定义。  
   
@@ -54,7 +42,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="scrollviewer_markup_syntax_and_sample"></a>   
 ## <a name="defining-and-using-a-scrollviewer-element"></a>定义和使用 ScrollViewer 元素  
- 下面的示例创建<xref:System.Windows.Controls.ScrollViewer>包含一些文本和一个矩形的窗口中。 <xref:System.Windows.Controls.Primitives.ScrollBar>元素出现仅何时需要它们。 当您调整窗口中，<xref:System.Windows.Controls.Primitives.ScrollBar>元素将出现然后消失，由于更新后的值的<xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A>和<xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A>属性。  
+ 下面的示例创建<xref:System.Windows.Controls.ScrollViewer>包含一些文本和一个矩形的窗口中。 <xref:System.Windows.Controls.Primitives.ScrollBar> 元素出现仅何时需要它们。 当您调整窗口中，<xref:System.Windows.Controls.Primitives.ScrollBar>元素将出现然后消失，由于更新后的值的<xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A>和<xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A>属性。  
   
  [!code-cpp[ScrollViewer#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
  [!code-csharp[ScrollViewer#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
@@ -67,7 +55,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="scrollviewer_scroll_vs_paginate"></a>   
 ## <a name="paginating-documents"></a>对文档进行分页  
- 对于文档内容，一种替代滚动的方法是选择支持分页的文档容器。 <xref:System.Windows.Documents.FlowDocument>是的旨在在查看控件中，如托管的文档<xref:System.Windows.Controls.FlowDocumentPageViewer>，跨多个页，从而无需进行滚动支持分页的内容。 <xref:System.Windows.Controls.DocumentViewer>提供了一个解决方案，以便于查看<xref:System.Windows.Documents.FixedDocument>的内容，它使用传统滚动显示之外的显示区域的领域的内容。  
+ 对于文档内容，一种替代滚动的方法是选择支持分页的文档容器。 <xref:System.Windows.Documents.FlowDocument> 是的旨在在查看控件中，如托管的文档<xref:System.Windows.Controls.FlowDocumentPageViewer>，跨多个页，从而无需进行滚动支持分页的内容。 <xref:System.Windows.Controls.DocumentViewer> 提供了一个解决方案，以便于查看<xref:System.Windows.Documents.FixedDocument>的内容，它使用传统滚动显示之外的显示区域的领域的内容。  
   
  有关文档格式和演示选项的其他信息，请参阅 [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。  
   

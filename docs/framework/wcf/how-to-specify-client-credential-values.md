@@ -1,32 +1,18 @@
 ---
 title: 如何：指定客户端凭据值
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 856d33f88b55c35927998b15acc7bbf8ff1e9fe2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e1133194fe925bca4fb79d8adc1975a2063450f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>如何：指定客户端凭据值
-使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]，服务可以指定客户端如何向服务进行身份验证。 例如，服务可以规定客户端使用证书进行身份验证。  
+使用 Windows Communication Foundation (WCF)，服务可以指定客户端向服务进行身份验证。 例如，服务可以规定客户端使用证书进行身份验证。  
   
 ### <a name="to-determine-the-client-credential-type"></a>确定客户端凭据类型  
   

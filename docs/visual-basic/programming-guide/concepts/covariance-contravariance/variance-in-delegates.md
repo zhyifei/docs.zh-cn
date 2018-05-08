@@ -1,22 +1,12 @@
 ---
-title: "委托 (Visual Basic 中) 中的变体"
-ms.custom: 
+title: 委托 (Visual Basic 中) 中的变体
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9fe76a32f76f760497021289ec1c6ce673cec1b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d857f120be0fe810489ba69edb55af9cc0dd6940
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variance-in-delegates-visual-basic"></a>委托 (Visual Basic 中) 中的变体
 .NET framework 3.5 引入了对 C# 和 Visual Basic 中的所有委托中的委托类型的匹配方法签名的方差支持。 这表明不仅可以将具有匹配签名的方法分配给委托，还可以将返回多个派生类型（协变）的方法分配给委托，或者将所接受参数的派生类型（逆变）数目比委托类型指定的数目少的方法分配给委托。 这包括泛型委托和非泛型委托。  
@@ -157,7 +147,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```  
   
 > [!IMPORTANT]
->  `ByRef`在 Visual Basic 中的参数不能标记为变体。  
+>  `ByRef` 在 Visual Basic 中的参数不能标记为变体。  
   
  可以在同一个委托中支持变体和协变，但这只适用于不同类型的参数。 这在下面的示例中显示。  
   
@@ -212,6 +202,6 @@ End Sub
 ## <a name="relaxed-delegate-conversion-in-visual-basic"></a>在 Visual Basic 中的宽松的委托转换  
  宽松的委托转换，能够更灵活地匹配方法签名与委托类型。 例如，它允许你忽略参数规范，将一种方法分配给委托时省略函数返回值。 有关详细信息，请参阅[宽松委托转换](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [泛型](~/docs/standard/generics/index.md)  
  [对 Func 和 Action 泛型委托使用变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

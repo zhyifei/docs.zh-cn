@@ -1,22 +1,12 @@
 ---
-title: "标准查询运算符 (Visual Basic) 的查询表达式语法"
-ms.custom: 
+title: 标准查询运算符 (Visual Basic) 的查询表达式语法
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c68e924b88b312ef17b8bb83de0def21ea621824
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2f0a32ca2e76122aa13e4ad44c4b69838af26cdb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>标准查询运算符 (Visual Basic) 的查询表达式语法
 一些更常用的标准查询运算符包含专用将使它们作为的一部分调用的 Visual Basic 语言关键字语法*查询表达式*。 查询表达式是比基于方法的等效项更具可读性的另一种查询表示形式。 查询表达式子句在编译时被转换为对查询方法的调用。  
@@ -34,7 +24,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Linq.Enumerable.Distinct%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|`Distinct`<br /><br /> (有关详细信息，请参阅[Distinct 子句](../../../../visual-basic/language-reference/queries/distinct-clause.md)。)|  
 |<xref:System.Linq.Enumerable.GroupBy%2A>|`Group … By … Into …`<br /><br /> (有关详细信息，请参阅[组 By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。)|  
 |<xref:System.Linq.Enumerable.GroupJoin%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2C%60%603%7D%29>|`Group Join … In … On …`<br /><br /> (有关详细信息，请参阅[Group Join 子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)。)|  
-|<xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%29>|`From x In …, y In … Where x.a = b.a`<br /><br /> - 或 -<br /><br /> `Join … [As …]In … On …`<br /><br /> (有关详细信息，请参阅[Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)。)|  
+|<xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%29>|`From x In …, y In … Where x.a = b.a`<br /><br /> -或-<br /><br /> `Join … [As …]In … On …`<br /><br /> (有关详细信息，请参阅[Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)。)|  
 |<xref:System.Linq.Enumerable.LongCount%2A>|`Aggregate … In … Into LongCount()`<br /><br /> (有关详细信息，请参阅[Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)。)|  
 |<xref:System.Linq.Enumerable.Max%2A>|`Aggregate … In … Into Max()`<br /><br /> (有关详细信息，请参阅[Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)。)|  
 |<xref:System.Linq.Enumerable.Min%2A>|`Aggregate … In … Into Min()`<br /><br /> (有关详细信息，请参阅[Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)。)|  
@@ -51,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Linq.Enumerable.ThenByDescending%60%602%28System.Linq.IOrderedEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>|`Order By …, … Descending`<br /><br /> (有关详细信息，请参阅[Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)。)|  
 |<xref:System.Linq.Enumerable.Where%2A>|`Where`<br /><br /> (有关详细信息，请参阅[Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)。)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Linq.Enumerable>  
  <xref:System.Linq.Queryable>  
  [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  

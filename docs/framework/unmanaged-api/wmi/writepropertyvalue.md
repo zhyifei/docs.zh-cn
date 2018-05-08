@@ -1,11 +1,7 @@
 ---
-title: "WritePropertyValue 函数 （非托管 API 参考）"
-description: "WritePropertyValue 函数将字节写入属性。"
+title: WritePropertyValue 函数 （非托管 API 参考）
+description: WritePropertyValue 函数将字节写入属性。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - WritePropertyValue
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7221c9e0f1cb49ab0e27130ce69c0527ba903148
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 函数
 将指定的数目的字节写入由属性句柄识别的属性。
@@ -67,7 +60,7 @@ HRESULT WritePropertyValue (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
 |`WBEM_E_TYPE_MISMATCH` | 0x80041005 | 出现类型不匹配。 |
@@ -81,12 +74,12 @@ HRESULT WritePropertyValue (
 
 对于非字符串属性值，`lNumBytes`必须是指定的属性类型的正确的数据大小。 字符串属性值，`lNumBytes`必须是长度以字节为单位，指定的字符串和字符串本身必须为偶数长度以字节为单位，以 null 终止字符开始便遵循。
 
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
 **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

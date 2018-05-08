@@ -1,13 +1,6 @@
 ---
-title: "Alignment、Margin 和 Padding 概述"
-ms.custom: 
+title: Alignment、Margin 和 Padding 概述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d53ec57bdd6126aa1b82e3fa34d01b8907ca169
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70eff35db638c5bfbc9c164dc381e3f58e18957b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Alignment、Margin 和 Padding 概述
 <xref:System.Windows.FrameworkElement>类公开多个用于精确定位子元素的属性。 本主题讨论四个最重要的属性： <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>。 了解这些属性的作用非常重要，因为这些属性是控制元素在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中的位置的基础。  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.HorizontalAlignment.Left>|子元素与父元素的已分配布局空间的左端对齐。|  
 |<xref:System.Windows.HorizontalAlignment.Center>|子元素与父元素的已分配布局空间的中心对齐。|  
 |<xref:System.Windows.HorizontalAlignment.Right>|子元素与父元素的已分配布局空间的右端对齐。|  
-|<xref:System.Windows.HorizontalAlignment.Stretch>（默认值）|拉伸子元素以填充父元素的已分配布局空间。 显式<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值优先。|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> （默认值）|拉伸子元素以填充父元素的已分配布局空间。 显式<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值优先。|  
   
  下面的示例演示如何将应用<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>属性<xref:System.Windows.Controls.Button>元素。 显示每个特性值，以便更好地阐释各种呈现行为。  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.VerticalAlignment.Top>|子元素与父元素的已分配布局空间的顶端对齐。|  
 |<xref:System.Windows.VerticalAlignment.Center>|子元素与父元素的已分配布局空间的中心对齐。|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|子元素与父元素的已分配布局空间的底端对齐。|  
-|<xref:System.Windows.VerticalAlignment.Stretch>（默认值）|拉伸子元素以填充父元素的已分配布局空间。 显式<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值优先。|  
+|<xref:System.Windows.VerticalAlignment.Stretch> （默认值）|拉伸子元素以填充父元素的已分配布局空间。 显式<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值优先。|  
   
  下面的示例演示如何将应用<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>属性<xref:System.Windows.Controls.Button>元素。 显示每个特性值，以便更好地阐释各种呈现行为。 此示例的目的<xref:System.Windows.Controls.Grid>可见的网格线具有元素使用作为父项，以更好地说明每个属性值的布局行为。  
   
@@ -101,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="wcpsdk_layout_amp_margin_properties"></a>   
 ## <a name="understanding-margin-properties"></a>了解 Margin 属性  
- <xref:System.Windows.FrameworkElement.Margin%2A>属性描述元素及其子或对等方之间的距离。 <xref:System.Windows.FrameworkElement.Margin%2A>值可以通过使用类似的语法统一， `Margin="20"`。 使用以下语法，一个统一的<xref:System.Windows.FrameworkElement.Margin%2A>的 20 设备无关的像素将应用于的元素。 <xref:System.Windows.FrameworkElement.Margin%2A>值可以也采用以下形式的四个非重复值，每个值，描述要应用于左侧、 顶部、 右侧和 （按此顺序） 的底部的不同边距如`Margin="0,10,5,25"`。 正确使用<xref:System.Windows.FrameworkElement.Margin%2A>属性使非常精确地控制元素的呈现位置，以及其邻居元素及其子级的呈现位置。  
+ <xref:System.Windows.FrameworkElement.Margin%2A>属性描述元素及其子或对等方之间的距离。 <xref:System.Windows.FrameworkElement.Margin%2A> 值可以通过使用类似的语法统一， `Margin="20"`。 使用以下语法，一个统一的<xref:System.Windows.FrameworkElement.Margin%2A>的 20 设备无关的像素将应用于的元素。 <xref:System.Windows.FrameworkElement.Margin%2A> 值可以也采用以下形式的四个非重复值，每个值，描述要应用于左侧、 顶部、 右侧和 （按此顺序） 的底部的不同边距如`Margin="0,10,5,25"`。 正确使用<xref:System.Windows.FrameworkElement.Margin%2A>属性使非常精确地控制元素的呈现位置，以及其邻居元素及其子级的呈现位置。  
   
 > [!NOTE]
 >  非零边距适用的元素之外的空间<xref:System.Windows.FrameworkElement.ActualWidth%2A>和<xref:System.Windows.FrameworkElement.ActualHeight%2A>。  
@@ -135,7 +123,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="using-alignment-margins-and-padding-in-an-application"></a>在应用程序中使用 Alignment、Margins 和 Padding  
  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A><xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>提供创建复杂的所需的定位控制[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 可利用每个属性的作用来更改子元素定位，以便能够灵活地创建动态应用程序和用户体验。  
   
- 下面的示例演示本主题中详述的各个概念。 在本主题中的第一个示例中找到的基础结构上生成，此示例将添加<xref:System.Windows.Controls.Grid>元素的子级作为<xref:System.Windows.Controls.Border>中第一个示例。 <xref:System.Windows.Controls.Border.Padding%2A>应用于父<xref:System.Windows.Controls.Border>元素。 <xref:System.Windows.Controls.Grid>用于分区三个子之间的空间<xref:System.Windows.Controls.StackPanel>元素。 <xref:System.Windows.Controls.Button>再次使用元素显示的各种效果<xref:System.Windows.FrameworkElement.Margin%2A>和<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>。 <xref:System.Windows.Controls.TextBlock>元素添加到每个<xref:System.Windows.Controls.ColumnDefinition>更好地定义应用于的各种属性<xref:System.Windows.Controls.Button>每列中的元素。  
+ 下面的示例演示本主题中详述的各个概念。 在本主题中的第一个示例中找到的基础结构上生成，此示例将添加<xref:System.Windows.Controls.Grid>元素的子级作为<xref:System.Windows.Controls.Border>中第一个示例。 <xref:System.Windows.Controls.Border.Padding%2A> 应用于父<xref:System.Windows.Controls.Border>元素。 <xref:System.Windows.Controls.Grid>用于分区三个子之间的空间<xref:System.Windows.Controls.StackPanel>元素。 <xref:System.Windows.Controls.Button> 再次使用元素显示的各种效果<xref:System.Windows.FrameworkElement.Margin%2A>和<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>。 <xref:System.Windows.Controls.TextBlock> 元素添加到每个<xref:System.Windows.Controls.ColumnDefinition>更好地定义应用于的各种属性<xref:System.Windows.Controls.Button>每列中的元素。  
   
  [!code-cpp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#4)]
  [!code-csharp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#4)]

@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedReader::Initialize 方法"
-ms.custom: 
+title: ISymUnmanagedReader::Initialize 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedReader.Initialize
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 433cd62f7801d386f3b34b7fc8e95bd1d0c5f765
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d141d23f02b2abc92e3d4455aebe1a4057b6bb85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize 方法
 初始化此读取器将与，以及该模块的文件名称相关联的元数据导入程序接口的符号读取器。  
@@ -70,7 +58,7 @@ HRESULT Initialize (
 ## <a name="remarks"></a>备注  
  你需要只能指定其中一个`filename`或`pIStream`参数，不是两个。 `searchPath` 参数是可选的。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **标头：** CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>请参阅  

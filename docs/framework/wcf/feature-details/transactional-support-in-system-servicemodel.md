@@ -1,31 +1,19 @@
 ---
-title: "System.ServiceModel 中的事务性支持"
-ms.custom: 
+title: System.ServiceModel 中的事务性支持
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e7e54ed3-d1e5-4aa7-a653-1300c6b304eb
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3e01f24af2b6853c7a43377bc0b7f7d338195472
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ee2a3173de97fe8d36b9749f8d47a208459f6c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>System.ServiceModel 中的事务性支持
-本节中的主题描述由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供的事务性功能。  
+本部分中的主题介绍 Windows Communication Foundation (WCF) 提供的事务性功能。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ServiceModel 事务特性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
- 描述两个标准 <xref:System.ServiceModel> 属性，您可以通过这两个属性为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务配置事务的行为。  
+ 介绍这两个标准<xref:System.ServiceModel>使你能够配置 WCF 服务的事务的行为的属性。  
   
  [ServiceModel 事务配置](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)  
  描述可用于为服务启用事务的各种配置设置。  
@@ -34,13 +22,13 @@ ms.lasthandoff: 12/22/2017
  描述如何启用事务流。  
   
  [如何：创建事务性服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-transactional-service.md)  
- 演示如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中创建事务性服务。  
+ 演示如何在 WCF 中创建事务性服务。  
   
  [诊断事务应用程序](../../../../docs/framework/wcf/feature-details/diagnosing-transactional-applications.md)  
- 描述如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的管理和诊断功能来解决事务性应用程序的问题。  
+ 介绍如何使用在 WCF 中的管理和诊断功能，来解决事务性应用程序。  
   
  [比较 COM+ 和 ServiceModel 中的事务](../../../../docs/framework/wcf/feature-details/comparing-transactions-in-com-and-servicemodel.md)  
  描述如何使用由 <xref:System.ServiceModel> 命名空间提供的属性来模拟事务性 COM+ 服务的行为。  
   
  [集成企业服务事务性组件](../../../../docs/framework/wcf/feature-details/integrating-enterprise-services-transactional-components.md)  
- 描述如何将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务与使用企业服务的代码进行集成。
+ 描述如何将您的 WCF 服务与使用企业服务的代码集成。

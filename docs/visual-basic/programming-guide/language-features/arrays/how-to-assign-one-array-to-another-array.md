@@ -1,25 +1,16 @@
 ---
-title: "如何：将一个数组赋给另一个数组 (Visual Basic)"
-ms.custom: 
+title: 如何：将一个数组赋给另一个数组 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0dd2d678bbfdeaa6b12b5b5a4f69d0fbca8c1944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 63c7d187152fcb5ea84378c677aa687f334f63de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>如何：将一个数组赋给另一个数组 (Visual Basic)
 因为数组对象，你可以在赋值语句和其他对象类型一样使用它们。 一个数组变量保留一个指向数据构成的数组元素和的秩和长度的信息，并赋值将复制仅此指针。  
@@ -50,8 +41,8 @@ ms.lasthandoff: 11/21/2017
   
  编译器会报告错误如果违反了上述规则，例如当数据类型不兼容或者数组的秩不相等。 你可以添加到你的代码，以确保赋值前数组是相容处理的错误。 你还可以使用[TryCast 运算符](../../../../visual-basic/language-reference/operators/trycast-operator.md)关键字，如果你想要避免引发异常。  
   
-## <a name="see-also"></a>另请参阅  
- [阵列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+## <a name="see-also"></a>请参阅  
+ [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [数组疑难解答](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
  [Enum 语句](../../../../visual-basic/language-reference/statements/enum-statement.md)  
  [数组转换](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

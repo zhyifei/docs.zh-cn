@@ -1,38 +1,24 @@
 ---
 title: 排队消息处理疑难解答
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 45a3bf82662fcc01b732428d1ca351e4ae8ddca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>排队消息处理疑难解答
-本节包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用队列时出现的常见问题以及疑难解答帮助。  
+本部分包含常见的问题和故障排除有关使用 Windows Communication Foundation (WCF) 中的队列的帮助。  
   
 ## <a name="common-questions"></a>常见问题  
- **问：**我使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Beta 1 并且安装了 MSMQ 修补程序。 现在，是否需要移除此修补程序？  
+ **问：**我使用 WCF Beta 1，我安装了 MSMQ 修补程序。 现在，是否需要移除此修补程序？  
   
- **答：** 可以。 此修补程序不再受支持。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 无需修补程序便可以在 MSMQ 上工作。  
+ **答：** 可以。 此修补程序不再受支持。 WCF 现在无需修补程序适用于 MSMQ。  
   
  **问：**有以下两种 MSMQ 绑定：<xref:System.ServiceModel.NetMsmqBinding>和<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 我应该使用哪一种绑定以及在什么情况下使用？  
   
- **答：**使用<xref:System.ServiceModel.NetMsmqBinding>如果想要将 MSMQ 用作传输用于两个之间的排队通信[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]应用程序。 如果您想要使用现有的 MSMQ 应用程序与新的 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 应用程序进行通信，请使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
+ **答：**使用<xref:System.ServiceModel.NetMsmqBinding>如果想要将 MSMQ 用作传输用于两个 WCF 应用程序之间的排队通信。 使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>如果想要使用现有 MSMQ 应用程序与新的 WCF 应用程序进行通信。  
   
  **问：**我是否必须升级 MSMQ 才能使用<xref:System.ServiceModel.NetMsmqBinding>和`MsmqIntegration`绑定？  
   
@@ -54,7 +40,7 @@ ms.lasthandoff: 04/30/2018
   
  **答：** 可以。  
   
- **问：**我想要将现有 MSMQ 应用程序集成使用 new[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端或服务器。 是否需要升级两端的 MSMQ 基础结构？  
+ **问：**我想要将现有 MSMQ 应用程序集成与新的 WCF 客户端或服务器。 是否需要升级两端的 MSMQ 基础结构？  
   
  **答：** 否。 您不必将任何一端升级到 MSMQ 4.0。  
   
@@ -145,9 +131,9 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **问：**时我可使用公共或专用格式名并将其上打开服务主机[!INCLUDE[wv](../../../../includes/wv-md.md)]，出现错误。 为什么？  
   
- **答：** [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]集成通道上的[!INCLUDE[wv](../../../../includes/wv-md.md)]检查以确定是否子队列可以打开以处理病毒消息的主应用程序队列进行。 子队列名称派生自传递到侦听器的 msmq.formatname URI。 MSMQ 中的子队列名只能是直接格式名。 因此，您会发现以上错误。 将队列 URI 改为直接格式名。  
+ **答：** WCF 集成通道上的[!INCLUDE[wv](../../../../includes/wv-md.md)]检查以确定是否子队列可以打开以处理病毒消息的主应用程序队列进行。 子队列名称派生自传递到侦听器的 msmq.formatname URI。 MSMQ 中的子队列名只能是直接格式名。 因此，您会发现以上错误。 将队列 URI 改为直接格式名。  
   
- **问：**时从 MSMQ 应用程序接收消息，该消息滞留在队列，并不由接收读取[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]应用程序。 为什么？  
+ **问：**时从 MSMQ 应用程序接收消息，该消息滞留在队列，并不由接收 WCF 应用程序读取。 为什么？  
   
  **答：**检查消息是否有正文。 如果消息没有正文，则 MSMQ 集成通道会忽略此消息。 实现向其通知异常的 `IErrorHandler` 并检查跟踪情况。  
   
@@ -193,7 +179,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
  **答：**检查绑定配置。 默认绑定会打开 MSMQ 传输安全以对消息进行签名。 关闭该传输安全。  
   
 ### <a name="remote-transacted-receives"></a>远程事务处理接收  
- **问：**如果我有计算机 A 上的队列和一个[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]读取不从队列中读取的 B （远程事务处理接收方案），消息的计算机上的队列的消息的服务。 跟踪信息指示接收失败，出现消息"无法导入事务。" 若要解决此问题，我该做什么？  
+ **问：**当我计算机 A 上有一个队列，并且不从队列中读取从 B （远程事务处理接收方案），消息的计算机上队列中读取消息的 WCF 服务。 跟踪信息指示接收失败，出现消息"无法导入事务。" 若要解决此问题，我该做什么？  
   
  **答：**有三个可能的原因：  
   
