@@ -18,7 +18,7 @@ ms.lasthandoff: 05/04/2018
   
  <xref:System.Windows.Forms.FlowLayoutPanel> 控件和 <xref:System.Windows.Forms.TableLayoutPanel> 控件提供可用于排列窗体上的控件的直观方式。 两种控件均提供一种自动的可配置能力来控制包含在控件内的子控件的相对位置，并且两种控件均在运行时提供动态布局功能，以便它们可以在父窗体的尺寸更改时重新调整子控件的大小和对其进行重新定位。 布局面板可以嵌套在布局面板内，从而实现复杂的用户界面。  
   
- <xref:System.Windows.Forms.TableLayoutPanel>排列其内容在网格中，提供的功能类似的 html\<表 > 元素。 其单元格排列为行和列，并且这些行和列可具有不同的大小。 有关详细信息，请参阅 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
+ <xref:System.Windows.Forms.TableLayoutPanel>排列其内容在网格中，提供的功能类似的 html\<表 > 元素。 其单元格排列为行和列，并且这些行和列可具有不同的大小。 有关详细信息，请参阅 [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> 以特定的流向排列其内容：水平或垂直。 可从一行到下一行，或从一列到下列进行内容换行。 还可以剪切内容，而不是进行换行。 本演练涉及以下任务：  
   
