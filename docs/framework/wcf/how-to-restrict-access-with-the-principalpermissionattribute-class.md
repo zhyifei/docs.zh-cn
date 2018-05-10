@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: a93726598b31ee57d583aca16012d615e90441f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 38e3c62aaf0e87860732bcb12c61da69b1c4346d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>如何：使用 PrincipalPermissionAttribute 类限制访问
 控制对 Windows 域计算机上的资源的访问是一项基本的安全任务。 例如，应该只有某些用户才能查看敏感数据，例如工资单信息。 本主题解释如何通过要求用户属于某个预定义组来限制对方法的访问。 有关工作示例，请参阅[授权服务操作访问权限](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)。  
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/04/2018
     </behaviors>  
     ```  
   
-     将此值设置为 `UseAspNetRoles` 表示 `Name` 的 `PrincipalPermissionAttribute` 属性将用于执行字符串比较。 在将证书用作客户端凭据时，默认情况下，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 会用一个分号将证书公用名和指纹连接起来，以便为客户端的主标识创建一个唯一的值。 在将 `UseAspNetRoles` 设置为服务上的 `PrincipalPermissionMode` 之后，会将此主标识值与 `Name` 属性值进行比较，以确定用户的访问权限。  
+     将此值设置为 `UseAspNetRoles` 表示 `Name` 的 `PrincipalPermissionAttribute` 属性将用于执行字符串比较。 当为客户端凭据使用证书时，默认情况下 WCF 和连接在一起的证书公用名用一个分号创建的客户端的主标识值是唯一的指纹。 在将 `UseAspNetRoles` 设置为服务上的 `PrincipalPermissionMode` 之后，会将此主标识值与 `Name` 属性值进行比较，以确定用户的访问权限。  
   
      此外，在创建自承载服务时，还可以按照以下代码中的方式在代码中设置 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 属性：  
   

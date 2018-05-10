@@ -2,24 +2,24 @@
 title: Contract2
 ms.date: 03/30/2017
 ms.assetid: 305eeb65-a52f-459e-9aa8-0ef071eade16
-ms.openlocfilehash: d7af8df46fabcb96a8f7015e360ee2617b7273a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b751e3d4fd6eae01e3fcd7500f844427d46524c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contract"></a>协定
 本节包含演示协定中 Windows Communication Foundation (WCF) 的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [数据协定](../../../../docs/framework/wcf/samples/data-contracts.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的数据协定。  
+ 演示在 WCF 中的数据协定。  
   
  [消息协定](../../../../docs/framework/wcf/samples/message-contracts.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的消息协定。  
+ 演示在 WCF 中的消息协定。  
   
  [服务协定](../../../../docs/framework/wcf/samples/service-contracts.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的服务协定。  
+ 演示 WCF 中的服务协定。  
   
  [DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
  演示可如何通过 <xref:System.Runtime.Serialization.DataContractResolver> 类来自定义序列化和反序列化过程。  

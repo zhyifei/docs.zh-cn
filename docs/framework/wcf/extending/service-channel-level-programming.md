@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-level-programming"></a>服务通道级编程
 本主题介绍如何编写 Windows Communication Foundation (WCF) 服务应用程序时无需使用<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>及其关联的对象模型。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
 5.  关闭所有通道对象。  
   
 #### <a name="creating-a-binding"></a>创建绑定  
- 侦听和接收消息的第一步是创建绑定。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 随附几个内置或系统提供的绑定，可以通过实例化这些绑定之一来直接使用它们。 另外，你还可以创建自己的自定义绑定，方法是实例化 CustomBinding 类，这同时也是列表 1 中的代码所执行的操作。  
+ 侦听和接收消息的第一步是创建绑定。 WCF 配有多个的内置或系统提供绑定，可直接通过实例化其中之一。 另外，你还可以创建自己的自定义绑定，方法是实例化 CustomBinding 类，这同时也是列表 1 中的代码所执行的操作。  
   
  下面的代码示例创建了 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 的一个实例，并将 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> 添加到其 Elements 集合（这是用于生成通道堆栈的绑定元素的集合）。 在此示例中，由于元素集合只有 <xref:System.ServiceModel.Channels.HttpTransportBindingElement>，所以生成的通道堆栈仅具有 HTTP 传输通道。  
   

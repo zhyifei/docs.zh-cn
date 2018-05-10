@@ -2,14 +2,14 @@
 title: 服务跟踪查看器工具 (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 215e34a3e7b075463ceeaa15386d3a347ffff064
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服务跟踪查看器工具 (SvcTraceViewer.exe)
-Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助你分析由生成的诊断跟踪[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]。 服务跟踪查看器提供了一种方法，可以轻松地合并、查看和筛选日志中的跟踪消息，以便能够诊断、修复和验证 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务问题。  
+Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助你分析生成的 WCF 的诊断跟踪。 服务跟踪查看器使您能够轻松地合并、 查看和筛选日志中的跟踪消息，以便可以诊断、 修复和验证 WCF 服务问题。  
   
 ## <a name="configuring-tracing"></a>配置跟踪  
  诊断跟踪提供的信息显示了应用程序操作过程中所发生的情况。 顾名思义，您可以从操作来源跟踪操作直至目标，也可以通过中间点进行跟踪。  
@@ -55,7 +55,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
 ### <a name="opening-and-viewing-wcf-trace-files"></a>打开并查看 WCF 跟踪文件  
  服务跟踪查看器支持三种文件类型：  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 跟踪文件 (.svcLog)  
+-   WCF 跟踪文件 (.svcLog)  
   
 -   事件跟踪文件 (.etl)  
   
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
   
 ##### <a name="to-open-a-trace-file"></a>打开跟踪文件  
   
-1.  启动服务跟踪查看器通过使用命令窗口导航到你[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]安装位置 (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin)，然后键入`SvcTraceViewer.exe`。  
+1.  启动服务跟踪查看器通过使用命令窗口导航到 WCF 安装位置 (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin)，然后键入`SvcTraceViewer.exe`。  
   
 > [!NOTE]
 >  服务跟踪查看器工具可与两种文件类型关联：.svclog 和 .stvproj。 在命令行中，可以使用两个参数来注册和注销文件扩展名。  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
 >  建议不要加载大于 200MB 的跟踪日志文件。 如果尝试加载大于此限制的文件，加载过程可能要花很长时间，具体情况取决于计算机资源。 服务跟踪查看器工具可能会长时间没有响应，或者该工具可能会耗尽计算机的内存。 建议配置部分加载以避免这种情况。 有关如何进行此配置的更多信息，请参见“加载大型跟踪文件”一节。  
   
 #### <a name="event-tracing-and-crimson-tracing"></a>事件跟踪和 Crimson 跟踪  
- 查看器的本机格式为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 发出的活动跟踪格式。 对于以其他格式发出的跟踪，必须先进行转换，这样查看器才会显示它们。 目前，除了活动跟踪格式之外，查看器还支持事件跟踪和 crimson 跟踪。  
+ 查看器的本机格式是 WCF 发出的活动跟踪格式。 对于以其他格式发出的跟踪，必须先进行转换，这样查看器才会显示它们。 目前，除了活动跟踪格式之外，查看器还支持事件跟踪和 crimson 跟踪。  
   
  打开不包含活动跟踪的文件时，查看器会尝试转换该文件。 必须为将包含转换后的跟踪数据的文件指定名称和位置。 数据转换完毕，查看器即会显示新文件的内容。  
   
@@ -104,7 +104,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
 -   在**项目**选项卡上，可以将文件添加到项目。  
   
 ### <a name="viewing-wcf-traces"></a>查看 WCF 跟踪  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用活动跟踪格式发出跟踪。 在活动跟踪模型中，各个跟踪按其目的在活动中进行分组。 逻辑控制流在活动之间传输。 例如，在应用程序的生存期中，许多“消息发送活动”会出现和消失。 太查看跟踪、 活动和服务跟踪查看器的用户界面的详细信息，请参阅[使用服务跟踪查看器查看相关跟踪和故障排除](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
+ WCF 发出跟踪使用活动跟踪格式。 在活动跟踪模型中，各个跟踪按其目的在活动中进行分组。 逻辑控制流在活动之间传输。 例如，在应用程序的生存期中，许多“消息发送活动”会出现和消失。 太查看跟踪、 活动和服务跟踪查看器的用户界面的详细信息，请参阅[使用服务跟踪查看器查看相关跟踪和故障排除](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
   
 #### <a name="switching-to-different-views"></a>切换到不同视图  
  服务跟踪查看器提供下列不同的视图。 它们显示为选项卡上查看器中，左窗格中，也可以访问从**视图**菜单。  
@@ -217,7 +217,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
   
 -   筛选器工具栏提供对预定义筛选器和自定义筛选器的访问。 可以通过启用**视图**菜单。  
   
--   查看器的预定义筛选器可用来有选择地对部分 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 跟踪进行筛选。 默认情况下，此筛选器设置为允许所有基础结构跟踪通过。 此筛选器的设置中定义**筛选器选项**下的子菜单**视图**菜单。  
+-   查看器的预定义筛选器可以用于有选择地筛选 WCF 跟踪的部分。 默认情况下，此筛选器设置为允许所有基础结构跟踪通过。 此筛选器的设置中定义**筛选器选项**下的子菜单**视图**菜单。  
   
 -   自定义 XPath 筛选器赋予用户对筛选的完全控制权。 也可以在定义**自定义筛选器**下**视图**菜单。  
   
@@ -237,7 +237,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
  **清除**按钮可重置预定义和自定义的筛选器，以允许所有跟踪通过。  
   
 #### <a name="filter-options"></a>筛选器选项  
- 查看器可以自动从视图中移除 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 跟踪。 它可以有选择地移除由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的特定区域发出的跟踪，例如，从视图中移除与事务相关的跟踪。  
+ 查看器可以自动从视图中移除 WCF 跟踪。 它可以有选择地移除由 WCF 的特定区域发出的跟踪，例如，从视图中移除与事务相关的跟踪。  
   
  此筛选器的设置中定义**筛选器选项**下的子菜单**视图**菜单。  
   
@@ -347,7 +347,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
 -   逐步向后： 使用**活动**菜单上或按"F9"。 你还可以在跟踪窗格中"向上"中使用箭头键。  
   
 > [!NOTE]
->  此操作可能会跳转到其他进程中或者甚至其他计算机上发生的活动，因为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 消息可以传送跨计算机的活动 ID。  
+>  这可能会跳转到发生在不同进程或即使在另一台计算机上的活动因为 WCF 消息可以传送跨计算机的 Id 的活动。  
   
 #### <a name="follow-transfer"></a>追踪传输  
  传输跟踪是跟踪文件中的特殊跟踪。 一个活动可以通过传输跟踪而传输到另一个活动。 例如，"活动 A"可能会将传输到"活动 B"。 在这种情况下，"至： 活动"的名称和传输的"活动 A"图标中没有传输跟踪。 此传输跟踪是两个跟踪之间的链接。 在"活动 B"，也可能在要传输回"活动 A"的活动结束的传输跟踪。 这类似于程序中的函数调用：A 调用 B，然后 B 返回。  
@@ -417,9 +417,9 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
   
 |图标|描述|  
 |----------|-----------------|  
-|![消息日志跟踪](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|“消息日志”跟踪：在消息日志记录功能记录 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 消息时发出的跟踪（如果启用了 `System.ServiceModel.MessageLogging` 跟踪源）。 单击此跟踪可以显示消息。 一条消息有四个可配置的日志记录点：ServiceLevelSendRequest、TransportSend、TransportReceive 和 ServiceLevelReceiveRequest，消息日志跟踪的 `messageSource` 属性中也指明了它们。|  
-|![消息接收时间跟踪](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|“已接收消息”跟踪：收到 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 消息时发出的跟踪（如果在“信息”或“详细”级别启用了 `System.ServiceModel` 跟踪源）。 此跟踪对于在活动中查看消息相关箭头至关重要**Graph**视图。|  
-|![消息已发送跟踪](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|“已发送消息”跟踪：发送 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 消息时发出的跟踪（如果在“信息”或“详细”级别启用了 `System.ServiceModel` 跟踪源）。 此跟踪对于在活动中查看消息相关箭头至关重要**Graph**视图。|  
+|![消息日志跟踪](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|消息日志跟踪： 消息日志记录功能，记录 WCF 消息时发出的跟踪时`System.ServiceModel.MessageLogging`启用跟踪源。 单击此跟踪可以显示消息。 一条消息有四个可配置的日志记录点：ServiceLevelSendRequest、TransportSend、TransportReceive 和 ServiceLevelReceiveRequest，消息日志跟踪的 `messageSource` 属性中也指明了它们。|  
+|![消息接收时间跟踪](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|消息接收时间跟踪： 发出的跟踪时收到 WCF 消息时，如果`System.ServiceModel`信息或详细级别启用跟踪源。 此跟踪对于在活动中查看消息相关箭头至关重要**Graph**视图。|  
+|![消息已发送跟踪](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|消息已发送跟踪： 如果发送 WCF 消息时发出的跟踪`System.ServiceModel`信息或详细级别启用跟踪源。 此跟踪对于在活动中查看消息相关箭头至关重要**Graph**视图。|  
   
 ### <a name="activities"></a>活动  
   
@@ -432,11 +432,11 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
   
 |图标|描述|  
 |----------|-----------------|  
-|![环境活动](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|“环境”活动：可创建、打开或关闭 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 宿主或客户端的活动。 在这些阶段中发生的错误将出现在此活动中。|  
+|![环境活动](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|环境活动： 创建、 打开或关闭 WCF 主机或客户端的活动。 在这些阶段中发生的错误将出现在此活动中。|  
 |![侦听活动](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|“侦听”活动：可对与侦听器相关的跟踪进行记录的活动。 可以在此活动内查看侦听器信息和连接请求。|  
 |![接收字节活动](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|“接收字节”活动：一种活动，可对与在两个终结点之间的连接上接收传入字节相关的所有跟踪进行分组。 在与传播其活动 ID 的传输活动（比如 http.sys）建立关联时，此活动是必需的。 诸如中止等连接错误将出现在此活动中。|  
-|![过程消息活动](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|“处理消息”活动：一种活动，可对与创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 消息相关的跟踪进行分组。 由于包装错误或消息格式不正确而导致的错误将出现在该活动中。 可以在此活动内检测消息头，以确定是否从调用方传播了活动 ID。 如果已传播，则在传输到“处理操作”活动（下一个图标）时，我们还可以为该活动分配传播的活动 ID，以便在调用方和被调用方的跟踪之间建立关联。|  
-|![消息日志跟踪](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|“处理操作”活动：一种活动，可对与两个终结点之间的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 请求相关的所有跟踪进行分组。 如果配置中两个终结点上的 `propagateActivity` 都设置为 `true`，则会将来自两个终结点的所有跟踪合并为一个活动，以便直接关联。 此类活动将包含由于传输或安全处理、延伸到用户代码边界及回退（如果存在响应）而发生的错误。|  
+|![过程消息活动](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|过程消息活动： 与创建 WCF 消息相关的活动的跟踪进行分组。 由于包装错误或消息格式不正确而导致的错误将出现在该活动中。 可以在此活动内检测消息头，以确定是否从调用方传播了活动 ID。 如果已传播，则在传输到“处理操作”活动（下一个图标）时，我们还可以为该活动分配传播的活动 ID，以便在调用方和被调用方的跟踪之间建立关联。|  
+|![消息日志跟踪](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|处理操作活动： 跨两个终结点与 WCF 请求相关的活动的所有跟踪进行都分组。 如果配置中两个终结点上的 `propagateActivity` 都设置为 `true`，则会将来自两个终结点的所有跟踪合并为一个活动，以便直接关联。 此类活动将包含由于传输或安全处理、延伸到用户代码边界及回退（如果存在响应）而发生的错误。|  
 |![过程消息活动](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|“执行用户代码”活动：一种可对用户代码跟踪进行分组以处理请求的活动。|  
   
 ## <a name="troubleshooting"></a>疑难解答  

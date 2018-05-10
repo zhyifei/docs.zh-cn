@@ -2,11 +2,11 @@
 title: 虚拟目录设置说明
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: a6fc8309563e78f919fe1e2009c1f46801c32913
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ff578b69590071ef2135e777b3105e7c226563e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="virtual-directory-setup-instructions"></a>虚拟目录设置说明
 Windows Communication Foundation (WCF) 示例用于共享名为将映射到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 文件夹的 servicemodelsamples 的公共虚拟目录。  
@@ -35,12 +35,12 @@ Windows Communication Foundation (WCF) 示例用于共享名为将映射到 %Sys
 7.  单击 **“确定”**。 现在已为 WCF 示例创建 Web 应用程序。  
   
     > [!NOTE]
-    >  必须仅执行此任务一次，因为所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例都使用相同的 servicemodelsamples Web 应用程序。  
+    >  必须从一次执行此任务，因为所有 WCF 示例使用相同的 servicemodelsamples Web 应用程序。  
   
     > [!NOTE]
     >  在本文档中，术语`virtual directory`和 `Web application`是同义词。  
   
-     除了创建虚拟目录外，您还必须设置虚拟目录的属性，以使 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务能够运行。 有关详细信息，请参见以下内容。  
+     除了创建虚拟目录时，还必须设置其属性以启用 WCF 服务能够运行。 有关详细信息，请参见以下内容。  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>在 IIS 5.1 或 6.0 中创建虚拟目录  
   
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) 示例用于共享名为将映射到 %Sys
   
 4.  在向导中，键入`servicemodelsamples`作为您创建的虚拟目录别名。  
   
-5.  将路径设置为 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。 大多数的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例在生成时都将服务可执行文件复制到此位置。  
+5.  将路径设置为 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。 大多数 WCF 示例在生成后都将服务可执行文件复制到此位置。  
   
 6.  单击 **“下一步”**。  
   
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) 示例用于共享名为将映射到 %Sys
 8.  单击**下一步**，然后单击**完成**以完成向导。  
   
     > [!NOTE]
-    >  必须仅执行此任务一次，因为所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例都使用相同的 servicemodelsamples 虚拟目录。  
+    >  必须从一次执行此任务，因为所有 WCF 示例都使用相同的 servicemodelsamples 虚拟目录。  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>若要设置在 IIS 7.0 中的其他虚拟目录属性或 7.5  
   

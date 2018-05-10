@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc768f5e5086e6eba1ccac9d969eac14e14ceb2f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>如何：创建使用自定义证书验证程序的服务
 本主题介绍如何实现自定义证书验证程序，以及如何配置客户端或服务凭据以使用自定义证书验证程序替换默认证书验证逻辑。  
   
- 如果使用 X.509 证书进行身份验证的客户端或服务，默认情况下的 Windows Communication Foundation (WCF) 就会使用 Windows 证书存储区和加密 API 以验证证书，并以确保它是受信任。 有时，内置证书验证功能并不足够且必须更改。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了一种简单的方法，允许用户添加自定义证书验证程序来更改验证逻辑。 如果指定了自定义证书验证程序，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不使用内置证书验证逻辑，而是依靠自定义验证程序。  
+ 如果使用 X.509 证书进行身份验证的客户端或服务，默认情况下的 Windows Communication Foundation (WCF) 就会使用 Windows 证书存储区和加密 API 以验证证书，并以确保它是受信任。 有时，内置证书验证功能并不足够且必须更改。 WCF 提供了一种通过允许用户添加自定义证书验证程序来更改验证逻辑简便方法。 如果指定了自定义证书验证程序，则 WCF 不使用内置证书验证逻辑，但改为依赖于自定义验证程序。  
   
 ## <a name="procedures"></a>过程  
   

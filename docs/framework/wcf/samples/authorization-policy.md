@@ -2,11 +2,11 @@
 title: 授权策略
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: fc0c147f2f9a57c80edda6144a14f208bde835eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3744afb20c06e1ca85b91dadde6549d87ac89337
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="authorization-policy"></a>授权策略
 此示例演示如何实现一个自定义声明授权策略和一个关联的自定义服务授权管理器。 这在服务对服务操作进行基于声明的访问检查，并在进行访问检查之前授予调用方某些权限时很有用。 此示例演示添加声明的过程，以及对最终的声明集进行访问检查的过程。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 默认情况下，对于 `wsHttpBinding` 绑定，使用客户端提供的用户名和密码登录有效的 Windows NT 帐户。 此示例演示如何使用自定义<!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>-->`System.IdentityModel.Selectors.UsernamePasswordValidator`进行身份验证客户端。 此外，此示例还演示使用 X.509 证书对服务进行客户端身份验证。 此示例演示了 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 和 <xref:System.ServiceModel.ServiceAuthorizationManager> 的实现，该实现在它们之间为特定用户授予对服务的特定方法的访问权限。 此示例基于[消息安全用户名称](../../../../docs/framework/wcf/samples/message-security-user-name.md)，但演示了如何执行之前声明转换<xref:System.ServiceModel.ServiceAuthorizationManager>调用。  
@@ -496,6 +496,6 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 1.  运行完示例后运行示例文件夹中的 Cleanup.bat。 这将从证书存储区中移除服务器和客户端证书。  
   
 > [!NOTE]
->  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+>  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书，请确保清除已安装在 CurrentUser-的服务证书的 WCF 示例 TrustedPeople 存储中。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="see-also"></a>请参阅

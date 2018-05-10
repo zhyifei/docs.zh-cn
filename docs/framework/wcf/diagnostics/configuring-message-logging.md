@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 4c75b0f27e82b8cfe9327a9911d27d4e435ddf81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-message-logging"></a>配置消息日志记录
 本主题描述如何针对不同的方案配置消息日志记录。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/04/2018
   
  对于传出消息，在消息离开用户代码之后和消息进入网络之前，都会立即进行日志记录。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在两个不同级别上记录消息，即服务级别和传输级别。 也记录格式不正确的消息。 这三种类别是互相独立的，可以在配置中单独激活。  
+ WCF 记录在两个不同级别、 服务和传输的消息。 也记录格式不正确的消息。 这三种类别是互相独立的，可以在配置中单独激活。  
   
  可以通过设置 `logMessagesAtServiceLevel` 元素的 `logMalformedMessages`、`logMessagesAtTransportLevel` 和 `messageLogging` 属性来控制日志记录的级别。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 05/04/2018
  在这个层上记录的消息已准备好进行编码以便在网络上传输，或已准备好在经过网络传输后进行解码。 如果已定义筛选器，则仅记录与筛选器相匹配的消息。 否则将记录传输层上的所有消息。 所有基础结构消息都在此层上记录，包括可靠传递消息。 对于经过流处理的消息，则只记录标头。 此外，安全消息在此级别上按加密记录，但使用诸如 HTTPS 的安全传输时除外。  
   
 ### <a name="malformed-level"></a>“格式不正确”级别  
- 格式不正确的消息是在处理的任何阶段被 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆栈所拒绝的消息。 格式错误的消息将被如实记录：已加密（如果是加密的）、带有不适当的 XML 等。 `maxSizeOfMessageToLog` 定义了记录为 CDATA 的消息大小。 默认情况下，`maxSizeOfMessageToLog` 等于 256K。 有关此属性的详细信息，请参阅其他选项部分。  
+ 格式不正确的消息是由 WCF 堆栈情况下在处理的任何阶段被拒绝的消息。 格式错误的消息将被如实记录：已加密（如果是加密的）、带有不适当的 XML 等。 `maxSizeOfMessageToLog` 定义了记录为 CDATA 的消息大小。 默认情况下，`maxSizeOfMessageToLog` 等于 256K。 有关此属性的详细信息，请参阅其他选项部分。  
   
 ### <a name="other-options"></a>其他选项  
  除了日志记录的级别外，用户可以指定以下选项：  

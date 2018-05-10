@@ -2,16 +2,16 @@
 title: 独立诊断源示例
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 730cf011208ea1b57929fff4a1953fd3a935335c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>独立诊断源示例
 此示例演示如何创建 RSS/Atom 联合使用 Windows Communication Foundation (WCF) 源。 它是一个基本的"Hello World"程序显示的对象模型的基础知识以及如何在 Windows Communication Foundation (WCF) 服务上进行设置。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以服务操作的形式建立整合源的模型，这些服务操作返回一个特殊的数据类型：<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的实例可以将源序列化为 RSS 2.0 和 Atom 1.0 格式。 下面的示例代码演示所使用的协定。  
+ WCF 联合源建模为特殊的数据类型返回的服务操作<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的实例可以将源序列化为 RSS 2.0 和 Atom 1.0 格式。 下面的示例代码演示所使用的协定。  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -31,9 +31,9 @@ ms.lasthandoff: 05/04/2018
     }  
 ```  
   
- 使用 `GetProcesses` 属性对 <xref:System.ServiceModel.Web.WebGetAttribute> 操作进行批注，该属性使您能够控制 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何向服务操作发出 HTTP GET 请求并指定所发送消息的格式。  
+ `GetProcesses`操作进行批注<xref:System.ServiceModel.Web.WebGetAttribute>属性，它使你能够控制如何 WCF 发出 HTTP GET 请求服务操作并指定所发送的消息格式。  
   
- 如同任何 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务一样，联合源可以自承载于任何托管应用程序中。 联合服务需要使用特定绑定 (<xref:System.ServiceModel.WebHttpBinding>) 和特定终结点行为 (<xref:System.ServiceModel.Description.WebHttpBehavior>) 才能正常运行。 新的 <xref:System.ServiceModel.Web.WebServiceHost> 类提供了一个方便的 API，用于在不使用特定配置的情况下创建此类终结点。  
+ 与 WCF 服务，联合源可以是自承载于任何托管应用程序。 联合服务需要使用特定绑定 (<xref:System.ServiceModel.WebHttpBinding>) 和特定终结点行为 (<xref:System.ServiceModel.Description.WebHttpBehavior>) 才能正常运行。 新的 <xref:System.ServiceModel.Web.WebServiceHost> 类提供了一个方便的 API，用于在不使用特定配置的情况下创建此类终结点。  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  

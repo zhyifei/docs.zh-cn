@@ -2,11 +2,11 @@
 title: 保护工作流服务
 ms.date: 03/30/2017
 ms.assetid: 53f84ad5-1ed1-4114-8d0d-b12e8a021c6e
-ms.openlocfilehash: ac02b5ffcfc14ea4aab9e8aafd5f6a4cbcdef3b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5dbd724f3a2f8febfc74719584f4d69cbf75b567
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-workflow-services"></a>保护工作流服务
 安全工作流服务示例演示以下过程：  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
  使用 WCF 安全保护客户端和工作流服务（基于声明的授权）之间的通信  
   
 ## <a name="discussion"></a>讨论  
- 此示例演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构来像保护正常的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务一样保护工作流服务。 具体来说，它使用自定义声明进行授权。 在此例中，它将 <xref:System.ServiceModel.WSHttpBinding> 和消息模式安全与 Windows 凭据一起使用。  
+ 此示例演示如何使用 WCF 安全基础结构，就像使用普通的 WCF 服务的工作流服务安全。 具体来说，它使用自定义声明进行授权。 在此例中，它将 <xref:System.ServiceModel.WSHttpBinding> 和消息模式安全与 Windows 凭据一起使用。  
   
  自定义 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> (`CustomNameCheckerPolicy`) 检查客户端的 Windows 用户名中是否存在特定的字符。 如果存在该字符，则它创建声明并将其添加到 <xref:System.IdentityModel.Policy.EvaluationContext>。 通过执行此操作，自定义策略将声明，客户端在用户名中包含该字符。 可以在整个调用的生存期查询此声明。 可以在 `Constants.cs` 中查找该字符。  
   

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 02117b95cbf5a2ee16267a7b991ea9f854b813c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4d4fb3600a25f05865dd56c220e7a8ade246f08
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="designing-and-implementing-services"></a>设计和实现服务
-本部分演示如何定义和实现[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]协定。 服务协定指定终结点与外界通信的内容。 更具体地说，它是有关一组特定消息的声明，这些消息被组织成基本消息交换模式 (MEP)，如请求/答复、单向和双工。 如果说服务协定是一组在逻辑上相关的消息交换，那么服务操作就是单个消息交换。 例如，`Hello` 操作显然必须接受一条消息（以便调用方能够发出问候），并可能返回也可能不返回一条消息（具体取决于操作的礼节性）。  
+本部分演示如何定义和实现 WCF 协定。 服务协定指定终结点与外界通信的内容。 更具体地说，它是有关一组特定消息的声明，这些消息被组织成基本消息交换模式 (MEP)，如请求/答复、单向和双工。 如果说服务协定是一组在逻辑上相关的消息交换，那么服务操作就是单个消息交换。 例如，`Hello` 操作显然必须接受一条消息（以便调用方能够发出问候），并可能返回也可能不返回一条消息（具体取决于操作的礼节性）。  
   
  有关协定和其他核心 Windows Communication Foundation (WCF) 概念的详细信息，请参阅[基本 Windows Communication Foundation 概念](../../../docs/framework/wcf/fundamental-concepts.md)。 本主题重点介绍对服务协定的理解。 有关如何构建使用服务协定使用连接到服务的客户端的详细信息，请参阅[WCF 客户端概述](../../../docs/framework/wcf/wcf-client-overview.md)。  
   
 ## <a name="overview"></a>概述  
- 本主题为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的设计和实现提供高级概念性阐释。 子主题提供有关具体设计和实现内容的更为详细的信息。 在设计和实现 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序之前，建议您：  
+ 本主题提供设计和实现 WCF 服务高级概念性的阐释。 子主题提供有关具体设计和实现内容的更为详细的信息。 在设计和实现 WCF 应用程序时之前, 建议您：  
   
 -   了解什么是服务协定、服务协定的工作原理以及如何创建服务协定。  
   
@@ -45,16 +45,16 @@ ms.lasthandoff: 05/04/2018
   
 4.  有关成功处理消息所必需的通信基础结构的分类声明。 例如，这些详细信息包括建立成功通信是否需要安全以及需要哪些形式的安全。  
   
- 若要表达这种对其他应用程序在许多平台 （包括非 Microsoft 平台） 上的信息，XML 服务协定公开以表示标准 XML 格式，如[Web 服务描述语言](http://go.microsoft.com/fwlink/?LinkId=94952)(WSDL) 和[XML 架构](http://go.microsoft.com/fwlink/?LinkId=94953)(XSD) 等。 许多平台的开发人员都可以使用此公共协定信息创建可与该服务通信的应用程序，既因为开发人员理解规范的语言，又因为这些语言通过描述服务支持的公共形式、格式和协议，支持互操作。 详细了解如何[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]句柄这类的信息，请参阅[元数据](../../../docs/framework/wcf/feature-details/metadata.md)。  
+ 若要表达这种对其他应用程序在许多平台 （包括非 Microsoft 平台） 上的信息，XML 服务协定公开以表示标准 XML 格式，如[Web 服务描述语言](http://go.microsoft.com/fwlink/?LinkId=94952)(WSDL) 和[XML 架构](http://go.microsoft.com/fwlink/?LinkId=94953)(XSD) 等。 许多平台的开发人员都可以使用此公共协定信息创建可与该服务通信的应用程序，既因为开发人员理解规范的语言，又因为这些语言通过描述服务支持的公共形式、格式和协议，支持互操作。 有关 WCF 如何处理这种信息的详细信息，请参阅[元数据](../../../docs/framework/wcf/feature-details/metadata.md)。  
   
- 协定可以用多种方式进行表示，虽然 WSDL 和 XSD 语言非常适合以易于理解的方式描述服务，但这些语言很难直接使用，它们仅用于描述服务，而不能描述服务协定实现。 因此，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序使用托管属性、接口和类来定义服务的结构并实现服务。  
+ 协定可以用多种方式进行表示，虽然 WSDL 和 XSD 语言非常适合以易于理解的方式描述服务，但这些语言很难直接使用，它们仅用于描述服务，而不能描述服务协定实现。 因此，WCF 应用程序使用托管的属性、 接口和类定义服务的结构和实现它。  
   
- 得到的在托管类型中定义的协定可以是*导出*作为元数据 — WSDL 和 XSD-客户端或其他服务实施者需要时。 结果可以得到一个简单的编程模型，可以使用公共元数据向任何客户端应用程序描述该模型。 基础 SOAP 消息的详细信息、传输和安全相关信息等可以留给 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 进行处理，它可以在服务协定类型系统和 XML 类型系统之间自动执行必要的转换。  
+ 得到的在托管类型中定义的协定可以是*导出*作为元数据 — WSDL 和 XSD-客户端或其他服务实施者需要时。 结果可以得到一个简单的编程模型，可以使用公共元数据向任何客户端应用程序描述该模型。 WCF，自动执行必要的转换与其他服务协定类型系统的 XML 类型系统可以在基础 SOAP 消息的传输和安全相关的信息和等等的详细信息。  
   
  有关设计协定的详细信息，请参阅[设计服务协定](../../../docs/framework/wcf/designing-service-contracts.md)。 有关实现协定的详细信息，请参阅[实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
 ### <a name="messages-up-front-and-center"></a>面向消息  
- 如果你习惯于远程过程调用 (RPC) 样式的方法签名（其请求功能的标准形式为向某一方法传递参数，然后从对象或其他类型的代码接收返回值），则使用托管接口、类和方法模拟服务操作简单而直观。 例如，使用托管的语言，如 Visual Basic 和 c + + COM 可以运用 RPC 样式的方面知识程序员方法 （不管是使用对象还是接口） 创建[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务协定，而不会遇到问题RPC 样式分布式对象系统中固有。 面向服务的优势是可以实现松耦合、面向消息的编程，同时保持轻松熟悉的 RPC 编程体验。  
+ 如果你习惯于远程过程调用 (RPC) 样式的方法签名（其请求功能的标准形式为向某一方法传递参数，然后从对象或其他类型的代码接收返回值），则使用托管接口、类和方法模拟服务操作简单而直观。 例如，使用托管的语言，例如 Visual Basic 和 c + + COM 程序员可以运用 RPC 样式方法及其知识 （不管是使用对象还是接口） 来创建 WCF 服务协定而不会遇到中固有的问题RPC 样式分布式对象系统。 面向服务的优势是可以实现松耦合、面向消息的编程，同时保持轻松熟悉的 RPC 编程体验。  
   
  许多程序员感觉使用面向消息的应用程序编程接口更舒服，例如，像 Microsoft MSMQ 这样的消息队列、.NET Framework 中的 <xref:System.Messaging> 命名空间或在 HTTP 请求中发送非结构化 XML。 有关在消息级别进行编程的详细信息，请参阅[使用消息协定](../../../docs/framework/wcf/feature-details/using-message-contracts.md)，[服务通道级编程](../../../docs/framework/wcf/extending/service-channel-level-programming.md)，和[与 POX 应用程序互操作性](../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
   

@@ -2,11 +2,11 @@
 title: 对 COM 客户端使用 WCF 标记
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 79040cd267d354d32b3e957dc70fcc65b09b0fc8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6d47b9c655db932bb9a4243533fbd01bcf25e0df
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>对 COM 客户端使用 WCF 标记
 此示例演示如何使用 Windows Communication Foundation (WCF) 服务标记将 Web 服务集成到基于 COM 的开发环境，如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 本示例由 Windows 脚本宿主客户端 (.vbs)、客户端支持库 (.dll) 和 Internet 信息服务 (IIS) 承载的服务库 (.dll) 组成。 该服务是一个计算器服务，COM 客户端将对服务调用数学运算（加、减、乘和除）。 客户端活动显示在消息框窗口中。  
@@ -99,7 +99,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
   
- 运行示例时，操作响应将显示在 Windows 脚本宿主消息框窗口中。 此示例演示使用类型化标记发出 COM 调用以便与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行通信的 COM 客户端。 虽然在客户端应用程序中使用了 COM，但与服务的通信仅由 Web 服务调用组成。  
+ 运行示例时，操作响应将显示在 Windows 脚本宿主消息框窗口中。 此示例演示使用类型化的标记与 WCF 服务进行通信发出 COM 调用的 COM 客户端。 虽然在客户端应用程序中使用了 COM，但与服务的通信仅由 Web 服务调用组成。  
   
 ## <a name="wsdl-contract"></a>WSDL 协定  
  使用具有 WSDL 协定的标记不需要注册任何客户端库，但必须通过带外机制（如使用浏览器访问服务的 WSDL 终结点）来检索服务的 WSDL 协定。 标记之后可以在执行时访问该协定。  
@@ -135,7 +135,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 -   协定的名称和命名空间。 由于 WSDL 可能包含多个协定，因此需要此标识。  
   
     > [!NOTE]
-    >  默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务会为所使用的每个命名空间生成单独的 WSDL 文件。 这些文件通过使用 WSDL 导入构造连接。 由于标记需要单个 WSDL 定义，因此服务必须使用单个命名空间（如本示例中的演示），或者必须手动合并单独的文件。  
+    >  默认情况下，WCF 服务生成单独的 WSDL 文件，每个命名空间的使用。 这些文件通过使用 WSDL 导入构造连接。 由于标记需要单个 WSDL 定义，因此服务必须使用单个命名空间（如本示例中的演示），或者必须手动合并单独的文件。  
   
  在用服务标记构造代理实例之后，客户端应用程序可以对此代理调用方法，这将生成调用相应服务操作的服务标记基础结构。  
   
@@ -144,7 +144,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
   
- 运行示例时，操作响应将显示在 Windows 脚本宿主消息框窗口中。 此示例演示使用具有 WSDL 协定的标记发出 COM 调用以便与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行通信的 COM 客户端。  
+ 运行示例时，操作响应将显示在 Windows 脚本宿主消息框窗口中。 此示例演示使用具有 WSDL 协定的标记与 WCF 服务进行通信的 COM 调用的 COM 客户端。  
   
 ## <a name="metadata-exchange-contract"></a>元数据交换协定  
  和 WSDL 协定一样，使用具有 MEX 协定的标记不需要注册任何客户端。 服务的协定通过内部使用元数据交换在执行时进行检索。  
@@ -179,7 +179,7 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  
   
- 运行示例时，操作响应将显示在 Windows 脚本宿主消息框窗口中。 此示例演示使用具有 MEX 协定的标记发出 COM 调用以便与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行通信的 COM 客户端。  
+ 运行示例时，操作响应将显示在 Windows 脚本宿主消息框窗口中。 此示例演示使用具有 MEX 协定的标记与 WCF 服务进行通信的 COM 调用的 COM 客户端。  
   
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例  
   

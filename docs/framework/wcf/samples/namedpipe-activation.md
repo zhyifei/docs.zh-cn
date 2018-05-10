@@ -2,11 +2,11 @@
 title: NamedPipe 激活
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a4d6612f8d598be6f02def2526920251e36047f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46b59dab0f67c66ca364d9e880ef519386d0df94
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 激活
 本示例演示如何承载使用 Windows 进程激活服务 (WAS) 的服务以激活通过命名管道进行通信的服务。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)和需要[!INCLUDE[wv](../../../../includes/wv-md.md)]运行。  
@@ -160,7 +160,7 @@ Press <ENTER> to terminate client.
   
 2.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-     此外，必须安装 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 非 HTTP 激活组件：  
+     此外，你必须安装 WCF 非 HTTP 激活组件：  
   
     1.  从**启动**菜单上，选择**控制面板**。  
   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 699ba3efad0c8b98aacfc4b64f2fdf03270478b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf78b679be84efa416d088d5addaaa25a593abf4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-transaction-flow"></a>WS 事务流
 本示例演示客户端协调事务和使用 WS-Atomic 事务或 OleTransactions 协议的事务流的客户端和服务器选项的用法。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务，但操作特性化，用于演示使用`TransactionFlowAttribute`与**TransactionFlowOption**若要确定何种程度事务到启用了流的枚举。 在流事务范围内，请求操作的日志将写入数据库并保存，直到客户端协调事务完成。如果客户端事务没有完成，则 Web 服务事务确保不提交对数据库的相应更新。  
@@ -231,7 +231,7 @@ Press <ENTER> to terminate the service.
     > [!NOTE]
     >  对于跨计算机配置，请按照下面的说明操作来启用分布式事务处理协调器，并使用 Windows SDK 中的 WsatConfig.exe 工具来启用 WCF 事务网络支持。 请参阅[配置 Ws-atomic 事务支持](http://go.microsoft.com/fwlink/?LinkId=190370)有关设置 WsatConfig.exe 的信息。  
   
- 无论是在同一计算机上运行示例，还是在其他计算机上运行示例，都必须配置 Microsoft 分布式事务处理协调器 (MSDTC)，以启用网络事务流并使用 WsatConfig.exe 工具启用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 事务网络支持。  
+ 是否在同一台计算机或不同计算机上运行示例，你必须配置 Microsoft 分布式事务处理协调器 (MSDTC) 以启用网络事务流并使用 WsatConfig.exe 工具来启用 WCF 事务网络支持。  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>配置 Microsoft 分布式事务处理协调器 (MSDTC) 以支持运行示例  
   

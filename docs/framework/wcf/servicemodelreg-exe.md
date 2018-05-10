@@ -2,11 +2,11 @@
 title: ServiceModel 注册工具 (ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: 660bad0b80a80a21936c9c8a5d485fe05b8c8acf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fab1a356cd035ed006bfe90d713e179907e0137
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>ServiceModel 注册工具 (ServiceModelReg.exe)
 利用此命令行工具可以管理 WCF 和 WF 组件在单一计算机上的注册。 在正常情况下，不应使用此工具，因为 WCF 和WF 组件在安装时配置。 但如果您遇到服务激活方面的问题，可以尝试使用此工具注册组件。  
@@ -41,7 +41,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 |`-?`|显示帮助文本|  
   
 ## <a name="fixing-the-fileloadexception-error"></a>修复 FileLoadException 错误  
- 如果计算机上安装了以前版本的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，当您运行 ServiceModelReg 工具注册新安装时，可能会收到 `FileLoadFoundException` 错误。 即使从以前的安装中手动移除了文件（但保留 machine.config 设置不变），也可能发生这种情况。  
+ 如果您的计算机上安装了以前版本的 WCF，可能会收到`FileLoadFoundException`运行 ServiceModelReg 工具注册新安装时出错。 即使从以前的安装中手动移除了文件（但保留 machine.config 设置不变），也可能发生这种情况。  
   
  错误消息类似于以下内容。  
   
@@ -50,7 +50,7 @@ Error: System.IO.FileLoadException: Could not load file or assembly 'System.Serv
 File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'  
 ```  
   
- 从错误消息中，您应注意到早期的客户技术预览 (CTP) 版本安装了 System.ServiceModel 2.0.0.0 版程序集。 而已发布 System.ServiceModel 程序集的当前版本为 3.0.0.0。 因此，当您想要在安装过 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 早期 CTP 版本（但未完全卸载）的计算机上安装 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的正式版本时，会遇到此问题。  
+ 从错误消息中，您应注意到早期的客户技术预览 (CTP) 版本安装了 System.ServiceModel 2.0.0.0 版程序集。 而已发布 System.ServiceModel 程序集的当前版本为 3.0.0.0。 因此，在你想要在其中 WCF 早期 CTP 版本已安装，但未完全卸载的计算机上安装正式的 WCF 发行时遇到此问题。  
   
  ServiceModelReg.exe 无法清除以前的版本项，也无法注册新的版本项。 唯一的解决方法是手动编辑 machine.config。可在以下位置找到此文件。  
   
@@ -58,7 +58,7 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
 %windir%\Microsoft.NET\Framework\v2.0.50727\config\machine.config   
 ```  
   
- 如果在 64 位计算机上运行 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您还应编辑位于此位置的相同文件。  
+ 如果在 64 位计算机上正在运行 WCF，则还应编辑位于此位置的相同文件。  
   
 ```  
 %windir%\Microsoft.NET\Framework64\v2.0.50727\config\machine.config   

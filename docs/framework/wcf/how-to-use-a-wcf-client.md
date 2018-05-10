@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 79431588e27b02a40d5898929f1bdf644c8a79cd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>如何：使用 Windows Communication Foundation 客户端
 这是创建基本的 Windows Communication Foundation (WCF) 应用程序所需的六项任务的最后一个。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
   
- 一旦创建 Windows Communication Foundation (WCF) 代理并将其配置，可以创建的客户端实例，而且可以编译客户端应用程序，并将其用于与通信[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务。 本主题描述实例化和使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端的过程。 此过程执行三项操作：  
+ 创建并配置 Windows Communication Foundation (WCF) 代理后，可以创建的客户端实例和可以编译客户端应用程序，并将其用于与 WCF 服务进行通信。 本主题介绍用于实例化和使用 WCF 客户端的过程。 此过程执行三项操作：  
   
-1.  实例化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端。  
+1.  实例化 WCF 客户端。  
   
 2.  从生成的代理调用服务操作。  
   

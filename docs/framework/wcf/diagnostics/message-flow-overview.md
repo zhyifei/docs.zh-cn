@@ -2,11 +2,11 @@
 title: 消息流概述
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 056737b9d057101568274ab8d24c0c0e2780f93a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aea0ca4c5a8574f6039cd055561ce7da0099841b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-flow-overview"></a>消息流概述
 在包含相互连接的服务的分布式系统中，必须确定服务之间的因果关系。 了解作为请求流的一部分的各种组件对于支持关键方案（如运行状况监视、疑难解答和根源分析）非常重要。 为了在各种服务之间启用跟踪相关性，我们通过以下功能在 .NET Framework 4 中添加了相关支持：  
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  如果尚未启用分析跟踪，则展开**Applications and Services Logs**， **Microsoft**， **Windows**，**应用程序服务器-应用程序**. 选择**视图**，**显示分析和调试日志**。 右键单击**分析**和选择**启用日志**。 将事件查看器保持打开状态，以便查看跟踪。  
   
-3.  打开在中创建示例[入门教程](../../../../docs/framework/wcf/getting-started-tutorial.md)中[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。 请注意，您必须以管理员身份运行 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 才能创建此服务。 如果你有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安装的示例，你可以打开[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，其中包含已完成本教程中创建的项目。  
+3.  打开在中创建示例[入门教程](../../../../docs/framework/wcf/getting-started-tutorial.md)中[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。 请注意，您必须以管理员身份运行 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 才能创建此服务。 如果您有安装 WCF 示例，你可以打开[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，其中包含已完成本教程中创建的项目。  
   
 4.  右键单击**服务**项目，然后选择**添加**，**新项**。 选择**应用程序配置文件**单击**确定**。  
   

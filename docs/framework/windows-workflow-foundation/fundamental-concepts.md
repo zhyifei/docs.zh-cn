@@ -2,11 +2,11 @@
 title: Windows 工作流基础概念
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 8ffa1bd1cdcc0347691032885fb929784045bf8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5306f8616086835373bc52bdd8195564441b8b7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Windows 工作流基础概念
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]的工作流开发中会运用一些开发人员可能还不熟悉的概念。 本主题介绍其中的一些概念以及如何实现这些概念。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/04/2018
  活动通过使用相应的 <xref:System.Activities.ActivityContext> 派生类（例如 <xref:System.Activities.NativeActivityContext> 或 <xref:System.Activities.CodeActivityContext>）获得访问工作流运行时环境的权限。 这些元素使用此类来解析参数和变量，以便安排子活动和实现多种其他用途。  
   
 ## <a name="services"></a>服务  
- 工作流提供一种自然的方式，以便使用消息活动实现和访问松耦合服务。 消息活动是在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的基础上建立的，并且是用于使数据流入和流出工作流的主要机制。 您可将消息活动组合在一起，以便对您想要的任何类型的消息交换模式进行建模。 有关详细信息，请参阅[消息传递活动](../../../docs/framework/wcf/feature-details/messaging-activities.md)。 使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类承载工作流服务。 有关详细信息，请参阅[承载工作流服务概述](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。 有关工作流服务的详细信息请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ 工作流提供一种自然的方式，以便使用消息活动实现和访问松耦合服务。 消息传递活动基于 WCF 和是用于使数据流入和流出工作流的主要机制。 您可将消息活动组合在一起，以便对您想要的任何类型的消息交换模式进行建模。 有关详细信息，请参阅[消息传递活动](../../../docs/framework/wcf/feature-details/messaging-activities.md)。 使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类承载工作流服务。 有关详细信息，请参阅[承载工作流服务概述](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。 有关工作流服务的详细信息请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>持久性、卸载和长时间运行的工作流  
  Windows 工作流通过提供以下功能，简化了创作长时间运行的反应式程序的过程：  

@@ -2,14 +2,14 @@
 title: 带有 WCF 服务的 ASMX 客户端
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 5a0262361eac35ac45c3861deee13133011754ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93a881e486d82183fc42c524f3d83527c649516d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>带有 WCF 服务的 ASMX 客户端
-此示例演示如何创建使用 Windows Communication Foundation (WCF) 服务，然后从非访问服务[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端，如 ASMX 客户端。  
+此示例演示如何创建使用 Windows Communication Foundation (WCF) 服务，然后从非 WCF 客户端，如 ASMX 客户端访问服务。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 将 CLR 类型映射到 XML 表示形式。 <xref:System.Runtime.Serialization.DataContractSerializer> 对某些 XML 表示形式的解释不同于 XmlSerializer。 非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 代理生成器（如 Wsdl.exe）可在使用 XmlSerializer 时生成更适用的接口。 <xref:System.ServiceModel.XmlSerializerFormatAttribute>应用于`ICalculator`接口，以确保使用 XmlSerializer 将 CLR 类型映射到 XML。 服务实现计算并返回相应的结果。  
+ <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 将 CLR 类型映射到 XML 表示形式。 <xref:System.Runtime.Serialization.DataContractSerializer> 对某些 XML 表示形式的解释不同于 XmlSerializer。 在使用 XmlSerializer 时，非 WCF 代理生成器，如 Wsdl.exe，将生成更适用的接口。 <xref:System.ServiceModel.XmlSerializerFormatAttribute>应用于`ICalculator`接口，以确保使用 XmlSerializer 将 CLR 类型映射到 XML。 服务实现计算并返回相应的结果。  
   
  服务公开单一终结点，以便与使用配置文件 (Web.config) 定义的服务进行通信。 终结点由地址、绑定和协定组成。 服务在 Internet 信息服务 (IIS) 主机提供的基地址公开该终结点。 `binding` 属性设置为 basicHttpBinding，它使用 SOAP 1.1（符合 WS-I BasicProfile 1.1）提供 HTTP 通信，如下面的示例配置所示。  
   
@@ -49,7 +49,7 @@ public interface ICalculator
 </services>  
 ```  
   
- ASMX 客户端使用由 Web 服务描述语言 (WSDL) 实用工具 (Wsdl.exe) 生成的类型化代理与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行通信。 该类型化代理包含在 generatedClient.cs 文件中。 WSDL 实用工具为指定的服务检索元数据并生成一个类型化代理，供客户端用来进行通信。 默认情况下，框架不公开任何元数据。 若要公开生成代理所需的元数据，必须添加[ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)并设置其`httpGetEnabled`属性设为`True`下面的配置中所示。  
+ ASMX 客户端与使用由 Web 服务描述语言 (WSDL) 实用工具 (Wsdl.exe) 生成的类型化的代理的 WCF 服务进行通信。 该类型化代理包含在 generatedClient.cs 文件中。 WSDL 实用工具为指定的服务检索元数据并生成一个类型化代理，供客户端用来进行通信。 默认情况下，框架不公开任何元数据。 若要公开生成代理所需的元数据，必须添加[ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)并设置其`httpGetEnabled`属性设为`True`下面的配置中所示。  
   
 ```xml  
 <behaviors>  

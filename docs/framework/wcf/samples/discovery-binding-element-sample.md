@@ -2,20 +2,20 @@
 title: 发现绑定元素示例
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 7dc38acbe91e03f579414294da07bff5cc53cc4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="discovery-binding-element-sample"></a>发现绑定元素示例
 本示例演示如何使用发现客户端绑定元素发现服务。 开发人员使用此功能可以向其现有客户端通道堆栈添加发现客户端通道，从而使编程模型非常直观。 当关联通道打开时，会使用发现解析服务地址。 本示例包含以下项目：  
   
--   **CalculatorService**： 的可检测到[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务。  
+-   **CalculatorService**： 可发现的 WCF 服务。  
   
--   **CalculatorClient**: A[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用 discovery 客户端通道搜索并调用 CalculatorService 的客户端应用程序。  
+-   **CalculatorClient**： 使用发现客户端通道搜索并调用 CalculatorService 的 WCF 客户端应用程序。  
   
--   **DynamicCalculatorClient**: A[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用动态终结点搜索并调用 CalculatorService 的客户端应用程序。  
+-   **DynamicCalculatorClient**： 使用动态终结点搜索并调用 CalculatorService 的 WCF 客户端应用程序。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

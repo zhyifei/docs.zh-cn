@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 09996681b17d324d53c74b727b183f3a457cc664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="guidelines-and-best-practices"></a>指南与最佳做法
 本部分包含用于创建 Windows Communication Foundation (WCF) 应用程序提供指导原则的主题。  
@@ -22,7 +22,7 @@ ms.lasthandoff: 05/04/2018
  说明如何以及何时创建数据协定，使其在更高版本被创建之后不会失效。  
   
  [服务版本控制](../../../docs/framework/wcf/service-versioning.md)  
- 说明如何考虑 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中的版本管理。 服务（及其公开的终结点）部署之后，可能需要进行更改以达到某些需求，例如，满足不断变化的业务需求或 IT 需求，或者解决问题。 每次更改都会引入服务的一个新版本。  
+ 说明如何考虑 WCF 中的版本管理。 服务（及其公开的终结点）部署之后，可能需要进行更改以达到某些需求，例如，满足不断变化的业务需求或 IT 需求，或者解决问题。 每次更改都会引入服务的一个新版本。  
   
  [负载均衡](../../../docs/framework/wcf/load-balancing.md)  
  列出使用网络场实现负载平衡的准则。  

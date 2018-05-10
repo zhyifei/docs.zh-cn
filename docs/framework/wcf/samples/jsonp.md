@@ -2,11 +2,11 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 614b651d02b511927eda3909a40d1382c0842512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9002597ef662c78b6519ab0c04700cddf7ee3714
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="jsonp"></a>JSONP
 本示例演示在 WCF REST 服务中如何支持 JSON with Padding (JSONP)。 JSONP 是通过在当前文档中生成脚本标记来调用跨域脚本时使用的约定。 结果在指定的回调函数中返回。 JSONP 基于这样的标记如`<script src="http://..." >`可以从任何域评估脚本，并在其中可能已定义其他函数范围内计算这些标记检索的脚本。  
@@ -36,7 +36,7 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>  
 ```  
   
- ScriptManager 管理与服务的交互并隐藏手动实现 JSONP 访问的复杂性。 当 `crossDomainScriptAccessEnabled` 设置为 `true` 并且操作的响应格式为 JSON 时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构会检查请求的 URI 以查找回调查询字符串参数，然后使用回调查询字符串参数的值包装 JSON 响应。 在本示例中，网页使用以下 URI 调用 WCF REST 服务。  
+ ScriptManager 管理与服务的交互并隐藏手动实现 JSONP 访问的复杂性。 当`crossDomainScriptAccessEnabled`设置为`true`和操作的响应格式为 JSON，WCF 基础结构将检查回调查询字符串参数的请求的 URI，并包装具有回调查询字符串的值的 JSON 响应参数。 在本示例中，网页使用以下 URI 调用 WCF REST 服务。  
   
 ```  
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0  
@@ -50,7 +50,7 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
  此 JSONP 响应包含 JSON 格式的客户数据（使用网页请求的回调函数名进行包装）。 ScriptManager 将使用脚本标记执行此回调以完成跨域请求，然后将结果传递给 onSuccess 处理程序，该处理程序会传递给 ASP.NET AJAX 代理的 GetCustomer 操作。  
   
- 本示例由两个 ASP.NET Web 应用程序组成：一个应用程序只包含一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，另一个应用程序包含调用该服务的 .aspx 网页。 运行解决方案时，[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 将在不同的端口承载这两个网站，从而创建服务和客户端存在于不同域中的环境。  
+ 本示例由两个 ASP.NET web 应用程序组成： 一个包含仅的 WCF 服务，另一个包含调用该服务的.aspx 网页。 运行解决方案时，[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 将在不同的端口承载这两个网站，从而创建服务和客户端存在于不同域中的环境。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -67,4 +67,4 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 2.  按 f5 键以启动`http://localhost:26648/JSONPClientPage.aspx`浏览器中。  
   
-3.  请注意，在页面加载后，"名称"和"Address"的文本输入会使用值填充。  这些值是在浏览器完成呈现页面后调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务所提供的。
+3.  请注意，在页面加载后，"名称"和"Address"的文本输入会使用值填充。  浏览器完成呈现页面后，这些值所提供的对 WCF 服务的调用。

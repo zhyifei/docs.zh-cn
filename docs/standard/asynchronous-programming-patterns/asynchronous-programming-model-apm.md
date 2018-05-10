@@ -1,12 +1,12 @@
 ---
-title: "异步编程模型 (APM)"
-ms.custom: 
+title: 异步编程模型 (APM)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ending asynchronous operations
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/23/2017
   
  在异步操作完成时不需要阻止的应用程序可使用下列方法之一：  
   
--   轮询操作完成状态，具体操作是定期检查 <xref:System.IAsyncResult.IsCompleted%2A> 属性，并在操作完成时调用 EndOperationName。 有关演示此方法的示例，请参阅 [Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)。  
+-   轮询操作完成状态，具体操作是定期检查 <xref:System.IAsyncResult.IsCompleted%2A> 属性，并在操作完成时调用 EndOperationName。 有关演示此方法的示例，请参阅 [轮询异步操作的状态](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)。  
   
--   使用 <xref:System.AsyncCallback> 委托来指定要在操作完成时调用的方法。 有关演示此方法的示例，请参阅 [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。  
+-   使用 <xref:System.AsyncCallback> 委托来指定要在操作完成时调用的方法。 有关演示此方法的示例，请参阅 [使用 AsyncCallback 委托结束异步操作](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  

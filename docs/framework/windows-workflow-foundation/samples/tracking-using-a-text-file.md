@@ -2,11 +2,11 @@
 title: 使用文本文件跟踪
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: 3ff786836dbf5b10d64702733c92579185ef2f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracking-using-a-text-file"></a>使用文本文件跟踪
 此示例演示如何通过创建自定义跟踪参与者扩展跟踪在 Windows Workflow Foundation (WF)。 跟踪参与者是一些 .NET Framework 类，这些类将接收从运行时发出的跟踪记录。 可以创建一个跟踪参与者以将跟踪事件传输给方案所需的任何目标。 例如，ETW（Windows 事件跟踪）跟踪参与者将作为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的一部分提供。 此示例中的跟踪参与者以 XML 格式将记录写入文本文件。  
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 |类|描述|  
 |-----------|-----------------|  
 |`TextFileTrackingExtensionElement`|<xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 用于定义用来配置文本文件跟踪参与者的配置节。 这将允许用户使用标准 .NET Framework 配置文件来指定日志文件的目标。|  
-|`TextFileTrackingBehavior`|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的行为允许用户将扩展注入运行时。 当服务启动时，此行为会将跟踪参与者添加到服务中。|  
+|`TextFileTrackingBehavior`|WCF 中的行为允许用户将扩展注入运行时。 当服务启动时，此行为会将跟踪参与者添加到服务中。|  
 |`TextFileTrackingParticipant`|一个跟踪参与者，它在运行时接收跟踪参与者并以 XML 的形式将这些参与者存储在日志文件中。|  
   
 ## <a name="behavior-extension-elements-configuration"></a>行为扩展元素配置  

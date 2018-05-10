@@ -2,14 +2,14 @@
 title: 传输：UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 51f445d7f53f70fa206c53835b107da68749e3c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4f69730831ec57efc782a95d7412496aa69a4afb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-udp"></a>传输：UDP
-UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Communication Foundation (WCF) 传输。 此示例介绍了使用通道框架并遵循 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 最佳做法在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中创建自定义传输的推荐过程。 创建自定义传输的步骤如下：  
+UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Communication Foundation (WCF) 传输。 此示例介绍了使用通道框架并遵循 WCF 最佳做法在 WCF 中, 创建自定义传输的推荐的过程。 创建自定义传输的步骤如下：  
   
 1.  决定哪种通道[消息交换模式](#MessageExchangePatterns)（IOutputChannel、 IInputChannel、 IDuplexChannel、 IRequestChannel 或 IReplyChannel） 您的 ChannelFactory 和 ChannelListener 将要支持。 然后确定是否要支持这些接口的会话变体。  
   
@@ -49,7 +49,7 @@ UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Co
 >  对于 UDP 传输，所支持的唯一 MEP 是数据报，因为 UDP 的性质是一个“启动后不管”协议。  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject 和 WCF 对象生存期  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 具有一个通用的状态机，它用于管理用来进行通信的 <xref:System.ServiceModel.Channels.IChannel>、<xref:System.ServiceModel.Channels.IChannelFactory> 和 <xref:System.ServiceModel.Channels.IChannelListener> 等对象的生存期。 这些通信对象可以处于五种状态。 这些状态通过 <xref:System.ServiceModel.CommunicationState> 枚举来表示，如下所示：  
+ WCF 具有用于管理等对象的生命周期的常见状态机<xref:System.ServiceModel.Channels.IChannel>， <xref:System.ServiceModel.Channels.IChannelFactory>，和<xref:System.ServiceModel.Channels.IChannelListener>通信所用的。 这些通信对象可以处于五种状态。 这些状态通过 <xref:System.ServiceModel.CommunicationState> 枚举来表示，如下所示：  
   
 -   已创建：这是 <xref:System.ServiceModel.ICommunicationObject> 在首次实例化后的状态。 在此状态中不会发生输入/输出 (I/O)。  
   
@@ -67,7 +67,7 @@ UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Co
   
 <a name="ChannelAndChannelListener"></a>   
 ## <a name="channel-factory-and-channel-listener"></a>通道工厂和通道侦听器  
- 编写自定义传输的下一步是为客户端通道创建 <xref:System.ServiceModel.Channels.IChannelFactory> 的实现，并为服务通道创建 <xref:System.ServiceModel.Channels.IChannelListener> 的实现。 通道层使用工厂模式构建通道。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为上述过程提供基类帮助器。  
+ 编写自定义传输的下一步是为客户端通道创建 <xref:System.ServiceModel.Channels.IChannelFactory> 的实现，并为服务通道创建 <xref:System.ServiceModel.Channels.IChannelListener> 的实现。 通道层使用工厂模式构建通道。 WCF 为上述过程提供基类帮助器。  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> 类实现 <xref:System.ServiceModel.ICommunicationObject> 并强制执行前面步骤 2 中所述的状态机。 
 
@@ -256,7 +256,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
 -   通过自定义绑定：自定义绑定允许用户根据任意一组绑定元素创建自己的绑定。  
   
--   通过使用系统提供的、包含我们的绑定元素的绑定。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了几个系统定义的绑定，如 `BasicHttpBinding`、`NetTcpBinding` 和 `WsHttpBinding`。 这些绑定中的每个绑定与一个准确定义的配置文件相关联。  
+-   通过使用系统提供的、包含我们的绑定元素的绑定。 WCF 提供了大量的这些系统定义的绑定，如`BasicHttpBinding`， `NetTcpBinding`，和`WsHttpBinding`。 这些绑定中的每个绑定与一个准确定义的配置文件相关联。  
   
  此示例在从 `SampleProfileUdpBinding` 派生的 <xref:System.ServiceModel.Channels.Binding> 中实现配置文件绑定。 `SampleProfileUdpBinding` 中最多包含四个绑定元素：`UdpTransportBindingElement`、`TextMessageEncodingBindingElement CompositeDuplexBindingElement` 和 `ReliableSessionBindingElement`。  
   

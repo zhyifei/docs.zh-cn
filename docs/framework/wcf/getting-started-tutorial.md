@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 4a095e5391f3b532211b82a190c7010f41283e31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64d9fc09d56c417c2226d030ef6f5ee7204c4eb6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="getting-started-tutorial"></a>入门教程
-本部分中包含的主题旨在帮助您快速了解到 Windows Communication Foundation (WCF) 编程体验。 这些主题要根据本主题底部的列表中的顺序完成。 通过学习本教程，您可以初步了解创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务和客户端应用程序所需的步骤。 服务公开一个或多个终结点，其中每个终结点都公开一项或多项服务操作。 *终结点*服务的指定的地址，其中可以找到服务，一个绑定，它包含描述客户端必须如何与该服务，并定义的功能的协定进行通信的信息向其客户端提供服务。  
+本部分中包含的主题旨在帮助您快速了解到 Windows Communication Foundation (WCF) 编程体验。 这些主题要根据本主题底部的列表中的顺序完成。 完成本教程，你初步了解创建 WCF 服务和客户端应用程序所需的步骤。 服务公开一个或多个终结点，其中每个终结点都公开一项或多项服务操作。 *终结点*服务的指定的地址，其中可以找到服务，一个绑定，它包含描述客户端必须如何与该服务，并定义的功能的协定进行通信的信息向其客户端提供服务。  
   
  在完成本教程中的系列主题之后，您将会得到一个正在运行的服务，以及一个可以调用该服务的客户端。 前三个主题描述如何定义服务协定、如何实现服务协定以及如何承载服务。 创建的服务自承载在控制台应用程序中。 服务还可在 Internet Information Services (IIS) 下承载。 有关如何执行此操作的详细信息，请参阅[如何： 承载在 IIS 中的 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。 在代码中配置服务；不过，也可以在配置文件中配置服务。 有关使用配置文件的详细信息请参阅[使用配置文件配置服务](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)。  
   
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：定义服务协定](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- 描述如何使用用户定义的接口创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 协定。 协定定义服务所公开的功能。  
+ 描述如何创建 WCF 协定使用用户定义的接口。 协定定义服务所公开的功能。  
   
  [如何：实现服务协定](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
  描述如何实现服务协定。 一旦定义了某一协定后，必须使用某一服务类实现该协定。  
@@ -39,13 +39,13 @@ ms.lasthandoff: 05/04/2018
  描述如何在代码中配置服务的终结点，以及如何在控制台应用程序内承载服务。 若要激活服务，必须在运行时环境中配置和承载服务。 此环境将创建服务并控制其上下文和生存期。  
   
  [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- 描述如何从 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务检索用于创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理的元数据。 此进程使用 Visual Studio 2011 中的“添加服务引用”功能。  
+ 描述如何检索用于从 WCF 服务创建 WCF 客户端代理的元数据。 此进程使用 Visual Studio 2011 中的“添加服务引用”功能。  
   
  [如何：配置客户端](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
  描述如何配置 WCF 客户端。配置客户端需要指定客户端用于访问服务的终结点。  
   
  [如何：使用客户端](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
- 描述如何使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理调用服务操作。  
+ 描述如何使用 WCF 客户端代理来调用服务操作。  
   
 ## <a name="reference"></a>参考  
  <xref:System.ServiceModel.ServiceContractAttribute>  

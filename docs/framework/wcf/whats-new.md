@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 1d4ac2fe884a3c6696dc70ea2de9967a23fc6605
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 910da1073f0dc787be26d2c87b5bf49b4115aaef
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>什么&#39;s Windows Communication Foundation 4.5 中的新增功能
 本主题讨论到 Windows Communication Foundation (WCF) 的新功能。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 05/04/2018
  为了帮助新的和现有 WCF 服务开发人员配置服务，Visual Studio XML 编辑器现在为属于服务配置文件的每个配置元素及其属性提供了工具提示。  
   
 ## <a name="configuring-wcf-services-in-code"></a>在代码中配置 WCF 服务  
- Windows Communication Foundation (WCF) 允许开发人员配置服务使用配置文件或代码。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 通过 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您还可以使用代码来配置服务。 在早期版本的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]（4.0 及更早版本）中，用代码来配置服务在自承载方案中十分方便，可以在调用 ServiceHost.Open 之前，使用 <xref:System.ServiceModel.ServiceHost> 类配置终结点和行为。 但是，在 Web 承载方案中，您没有访问 <xref:System.ServiceModel.ServiceHost> 类的权限。 若要配置 Web 承载的服务，您需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从 .NET 4.5 起，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供了一种使用代码来配置自承载服务和 Web 承载服务的更方便的方法。 有关详细信息，请参阅[在代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)。  
+ Windows Communication Foundation (WCF) 允许开发人员配置服务使用配置文件或代码。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许你在代码中配置服务。 在早期版本的代码中的 WCF （4.0 及更早版本） 配置服务中十分方便，在自承载方案中，<xref:System.ServiceModel.ServiceHost>类允许你配置终结点和在调用 ServiceHost.Open 之前的行为。 但是，在 Web 承载方案中，您没有访问 <xref:System.ServiceModel.ServiceHost> 类的权限。 若要配置 Web 承载的服务，您需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从.NET 4.5 开始，WCF 提供了更简单的方法来配置自承载和 web 承载服务的代码。 有关详细信息，请参阅[在代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)。  
   
 ## <a name="channelfactory-caching"></a>ChannelFactory 缓存  
  WCF 客户端应用程序使用 <xref:System.ServiceModel.ChannelFactory%601> 类来创建 WCF 服务的通信通道。  创建 <xref:System.ServiceModel.ChannelFactory%601> 实例会带来一定的开销，因为这涉及以下操作：  
@@ -107,7 +107,7 @@ ms.lasthandoff: 05/04/2018
  项目中定义的自定义特定的配置文件中的特性值现在支持 Intellisense，以便快速、准确地使用配置。  
   
 ## <a name="configuration-tooltips"></a>配置工具提示  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 元素和特性目前在 XML 编辑器中具有工具提示，以便更加方便和准确地识别元素或特性的用途。  
+ WCF 元素和属性现在可以更轻松地在 XML 编辑器中，工具提示，并准确地识别元素或属性的用途。  
   
 ## <a name="paste-data-as-classes"></a>将数据作为类进行粘贴  
  在 WCF 项目中，在 XML 中定义的数据类型（在服务中公开的类型）可以粘贴直接到代码页中。 XML 类型将作为 CLR 类型进行粘贴。 请参阅[从 XML 生成数据类型的类](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)有关详细信息。  

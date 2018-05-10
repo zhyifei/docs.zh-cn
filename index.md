@@ -5,11 +5,11 @@ hide_bc: true
 title: .NET 文档
 description: 了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。
 ms.custom: updateeachrelease
-ms.openlocfilehash: 2168e42c9db3c4f6893656d0247a180b7dd290f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fbafb9a5ca939b4ca8bb78d38b66767e3cf6ab9
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/08/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -212,6 +212,26 @@ ms.lasthandoff: 05/04/2018
                                                 <p><a href="/dotnet/visual-basic/getting-started">入门</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Visual Basic 教程</a></p>
                                                 <p><a href="/dotnet/visual-basic/language-reference">Visual Basic 语言参考</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="/dotnet/images/hub/mldotnet.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/dotnet/machine-learning">ML.NET 指南</a></h3>
+                                                <p><a href="/dotnet/machine-learning/tutorials">教程</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources">资源</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources/glossary">术语表</a></p>
+                                                <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -644,6 +664,68 @@ ms.lasthandoff: 05/04/2018
                                                     <h3>Unity</h3>
                                                     <p>了解如何使用 Unity 结合 C# 和 Unity Manual 来构建 2D 和 3D 游戏。
                                                     </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#ml-ai">机器学习和 AI</a>
+                        <ul id="ml-ai" class="cardsC">
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/dotnet/images/hub/swimlane-machine-learning-brain-lightbulb.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <a href="/dotnet/machine-learning">
+                                                    <h3>ML.NET</h3>
+                                                    <p>生成自定义 AI 解决方案并将其集成到 .NET 应用程序。</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/dotnet/images/hub/swimlane-cognitive-services.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <a href="/azure/cognitive-services">
+                                                    <h3>认知服务</h3>
+                                                    <p>为应用、网站和机器人注入智能，从而执行看、听、说和理解操作。</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/dotnet/images/hub/swimlane-azure-machine-learning.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <a href="/azure/machine-learning">
+                                                    <h3>Azure 机器学习</h3>
+                                                    <p>通过不断的试验和模型管理，打造端到端且可缩放的受信任平台，借助该平台可让每个人都能使用 AI。</p>
                                                 </a>
                                             </div>
                                         </div>

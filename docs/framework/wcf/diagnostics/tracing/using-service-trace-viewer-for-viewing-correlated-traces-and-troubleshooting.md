@@ -2,17 +2,17 @@
 title: 使用服务跟踪查看器查看相关跟踪和进行故障诊断
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cfa1ec0e486943d196ec016be87544f17a0114e6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>使用服务跟踪查看器查看相关跟踪和进行故障诊断
 本主题介绍跟踪数据的格式，如何查看它，以及使用服务跟踪查看器对应用程序进行故障诊断的方法。  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>使用服务跟踪查看器工具  
- Windows Communication Foundation (WCF) 服务跟踪查看器工具可帮助您详细了解生成的诊断跟踪[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]侦听器来找到根目录导致的错误。 该工具提供了一种轻松查看、分组和筛选跟踪的方法，以便可以诊断、修复和验证 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务的问题。 有关使用此工具的详细信息，请参阅[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
+ Windows Communication Foundation (WCF) 服务跟踪查看器工具可帮助您详细了解生成的 WCF 侦听器，以找到错误的根本原因的诊断跟踪。 该工具提供了一种方法轻松地查看、 分组和筛选跟踪，以便可以诊断、 修复和验证与 WCF 服务的问题。 有关使用此工具的详细信息，请参阅[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
   
  本主题包含通过运行生成的跟踪快照[跟踪和消息日志记录](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)示例，使用查看时[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 本主题演示如何了解跟踪内容、活动及其关联，以及进行故障诊断时如何分析大量跟踪。  
   
@@ -104,11 +104,11 @@ ms.lasthandoff: 05/04/2018
 ```  
   
 ## <a name="servicemodel-e2e-tracing"></a>ServiceModel E2E 跟踪  
- 使用除 Off 之外的 `System.ServiceModel` 以及 `switchValue` 设置 `ActivityTracing` 跟踪源时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 创建活动和传输以供 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 处理。  
+ 当`System.ServiceModel`跟踪源设置`switchValue`除 Off 之外和`ActivityTracing`，WCF 创建活动和传输 WCF 处理。  
   
  活动是一个逻辑处理单元，将与该处理单元相关的所有跟踪组合在一起。 例如，可以为每个请求定义一个活动。 传输在终结点内的活动之间创建因果关系。 通过传播活动 ID，可以跨终结点使活动相关。 这可以通过设置完成`propagateActivity` = `true`在每个终结点的配置。 活动、传输和传播允许您执行错误关联。 这样，可以更快地找到错误的根本原因。  
   
- 在客户端上，为每个对象模型调用创建一个 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 活动（例如，打开 ChannelFactory、加、除等）。在"进程操作"活动中处理每个操作调用。  
+ 客户端上, 一个 WCF 活动调用都会创建每个对象模型 （例如，打开 ChannelFactory、 添加、 除等。）在"进程操作"活动中处理每个操作调用。  
   
  在以下屏幕截图中，提取从[跟踪和消息日志记录](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)示例左面板中显示的活动创建在客户端过程中，按创建时间排序的列表。 以下是活动的时间顺序列表：  
   
@@ -127,14 +127,14 @@ ms.lasthandoff: 05/04/2018
  我们看到由于 wsHttpBinding 所致的安全基础结构消息。  
   
 > [!NOTE]
->  在 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中，显示最初在单独的活动中处理的响应消息（处理消息），之后通过传输将它们与包括请求消息的对应“处理操作”活动关联。 这发生在基础结构消息和异步请求中，并且归因于以下事实：必须检查消息、读取 activityId 标头以及识别具有该 ID 的现有“处理操作”活动以便与它相关。 对于同步请求，我们将为响应截留这些信息，因此可以知道响应与哪个处理操作相关。  
+>  我们显示最初在单独的活动 （处理消息） 中处理的响应消息在 WCF 中，我们将它们关联到相应的处理操作活动，包括请求消息，通过传输之前。 这发生在基础结构消息和异步请求中，并且归因于以下事实：必须检查消息、读取 activityId 标头以及识别具有该 ID 的现有“处理操作”活动以便与它相关。 对于同步请求，我们将为响应截留这些信息，因此可以知道响应与哪个处理操作相关。  
   
  ![使用跟踪查看器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
 按创建时间列出的 WCF 客户端活动（左面板）及其嵌套活动和跟踪（右上面板）  
   
  在左面板中选择一个活动时，可以在右上面板上看到其嵌套活动和跟踪。 因此，这是左侧活动列表的简化分层视图（基于所选的父活动）。 因为所选处理操作“加”是发出的第一个请求，所以此活动包含“设置安全会话”活动（传输到，再传输回）和对“加”操作实际处理的跟踪。  
   
- 如果双击左面板中的处理操作“加”活动，则可以看到与“加”相关的客户端 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 活动的图形表示。 左侧的第一个活动是根活动 (0000)，它是默认活动。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 在环境活动之外传输。 如果未定义此活动，则 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 在 0000 之外传输。 在这里，第二个活动“处理操作添加”在 0 之外传输。 然后可看到“设置安全会话”。  
+ 如果双击左面板中添加活动的处理操作，我们可以看到的图形表示形式添加到与相关的客户端 WCF 活动。 左侧的第一个活动是根活动 (0000)，它是默认活动。 WCF 将在环境活动之外传输。 如果未定义，WCF 传输 0000 注销。 在这里，第二个活动“处理操作添加”在 0 之外传输。 然后可看到“设置安全会话”。  
   
  ![使用跟踪查看器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
 WCF 客户端活动的图形视图：“环境活动”（此处为 0）、“处理操作”和“设置安全会话”  
@@ -146,7 +146,7 @@ WCF 客户端活动的图形视图：“环境活动”（此处为 0）、“�
   
  在这里，我们加载客户端跟踪仅仅是为了清楚起见，但它们也是在工具中加载，服务跟踪 （收到的请求消息和发送的响应消息） 将出现在同一个活动和`propagateActivity`已设置为`true.`这一点在稍后的图。  
   
- 在服务上，活动模型映射到 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 概念，如下所示：  
+ 在服务上，活动模型映射到 WCF 概念，如下所示：  
   
 1.  构造并打开 ServiceHost（这可能创建几个与主机相关的活动，例如在出于安全性的情况下）。  
   
@@ -154,11 +154,11 @@ WCF 客户端活动的图形视图：“环境活动”（此处为 0）、“�
   
 3.  当侦听器检测到客户端发出的通信请求时，则它将传输到"接收字节"活动，在其中处理从客户端发送的所有字节。 在此活动中，可以看到在客户端-服务交互期间发生的任何连接错误。  
   
-4.  对于每个接收的字节的集合对应一条消息，我们处理这些字节在"进程内消息"活动中，我们在其中创建[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]消息对象。 在此活动中，可看到与错误信封或格式不正确的消息相关的错误。  
+4.  对于每个接收的字节的集合对应一条消息，我们处理这些字节在"进程内消息"活动中，我们在其中创建 WCF 消息对象。 在此活动中，可看到与错误信封或格式不正确的消息相关的错误。  
   
-5.  形成消息后，传输到“处理操作”活动。 如果在客户端和服务上 `propagateActivity` 都设置为 `true`，则此活动具有与客户端中定义的活动相同的 ID，如前所述。 从此阶段开始，我们将受益于跨终结点的直接关联，因为在 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中发出的与请求相关的所有跟踪都位于该同一活动中，包括响应消息的处理。  
+5.  形成消息后，传输到“处理操作”活动。 如果在客户端和服务上 `propagateActivity` 都设置为 `true`，则此活动具有与客户端中定义的活动相同的 ID，如前所述。 从此阶段开始，我们受益于直接关联跨终结点，因为在 WCF 中发出与请求相关的所有跟踪都都位于该同一活动，包括响应消息的处理。  
   
-6.  对于进程外操作，创建用于隔离开来中发出用户代码发出的跟踪的"执行用户代码"活动[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]。 在前面的示例中，"服务发送添加响应"跟踪被发出中的客户端传播的活动不"执行用户代码"活动中，如果适用。  
+6.  对于进程外操作，我们将创建用于隔离以在 WCF 中的用户代码发出的跟踪的"执行用户代码"活动。 在前面的示例中，"服务发送添加响应"跟踪被发出中的客户端传播的活动不"执行用户代码"活动中，如果适用。  
   
  在下图中，左侧的第一个活动是根活动 (0000)，它是默认活动。 接下来的三个活动用于打开 ServiceHost。 第 5 列中的活动是侦听器，剩余的活动（6 到 8）说明消息的 WCF 处理，从字节处理到用户代码激活。  
   

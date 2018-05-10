@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: ddf6ad667eb131ec6fa4f12ed112c57368c43d9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b825ff795f4db9d570420b187b8fedd041ddd3d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>如何：检查或修改参数
-您可以检查或修改 Windows Communication Foundation (WCF) 客户端对象上为单个操作的传入或传出消息或[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务通过实现<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>接口并将其插入到客户端或服务运行时。 通常，操作行为用于为单个操作添加参数检查器；其他行为可以用于在更大范围内提供对运行库的方便访问。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)和[扩展调度程序](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
+您可以检查或修改某个操作上的 Windows Communication Foundation (WCF) 客户端对象或 WCF 服务的通信的传入或传出消息通过实现<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>接口并将其插入到客户端或服务运行时。 通常，操作行为用于为单个操作添加参数检查器；其他行为可以用于在更大范围内提供对运行库的方便访问。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)和[扩展调度程序](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
   
 ### <a name="inspecting-or-modifying-parameters"></a>检查或修改参数  
   

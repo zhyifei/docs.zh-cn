@@ -2,14 +2,14 @@
 title: 如何：检查或修改客户端的消息
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 3cd0cf9dd772cad5e1dc16f61ef55eb3b314858d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cd0f39494006bf51b7c4bb55afcc112ec08aadb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>如何：检查或修改客户端的消息
-通过实现 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 并将其插入客户端运行时，可以检查或修改通过 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 客户端的传入或传出消息。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。 服务上的等效功能为 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 有关完整的代码示例请参阅[消息检查器](../../../../docs/framework/wcf/samples/message-inspectors.md)示例。  
+您可以检查或修改跨 WCF 客户端的传入或传出消息，通过实现<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>并将其插入到客户端运行时。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。 服务上的等效功能为 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 有关完整的代码示例请参阅[消息检查器](../../../../docs/framework/wcf/samples/message-inspectors.md)示例。  
   
 ### <a name="to-inspect-or-modify-messages"></a>检查或修改消息  
   

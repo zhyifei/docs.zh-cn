@@ -2,11 +2,11 @@
 title: 自定义流升级
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-stream-upgrades"></a>自定义流升级
 面向流的传输（如 TCP 和命名管道）对客户端与服务器之间的连续字节流进行操作。 该流通过 <xref:System.IO.Stream> 对象实现。 在流升级中，客户端需要向通道堆栈中添加可选的协议层，并要求通信通道的另一端也执行该操作。 流升级包括使用升级后的对象替换原始 <xref:System.IO.Stream> 对象的过程。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="security-upgrades"></a>安全升级  
  添加安全升级是常规流升级过程的专用版本。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 已为升级流安全提供了两个绑定元素。 传输级安全的配置由 <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> 封装，可以对该两个元素进行配置并将其添加到自定义绑定。 这些绑定元素扩展用于生成客户端和服务器流升级提供程序的 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> 类。 这些绑定元素包含的方法可用于创建专用的安全流升级提供程序类（不是 `public`），因此对于这两种情况，您需要做的只是将绑定元素添加到绑定。  
+ WCF 已为升级流安全提供了两个绑定元素。 传输级安全的配置由 <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> 封装，可以对该两个元素进行配置并将其添加到自定义绑定。 这些绑定元素扩展用于生成客户端和服务器流升级提供程序的 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> 类。 这些绑定元素包含的方法可用于创建专用的安全流升级提供程序类（不是 `public`），因此对于这两种情况，您需要做的只是将绑定元素添加到绑定。  
   
  对于上述两个绑定元素都不满足的安全方案，可从上述发起程序、接受程序和提供程序的基类派生三个与安全相关的 `abstract` 类：  
   

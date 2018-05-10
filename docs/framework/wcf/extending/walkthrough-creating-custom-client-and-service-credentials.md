@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 8c5608276de935f07dca88e343143112b8fdcc20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ba6d2016a36809910561543a531dd4d44aac9b9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>演练：创建自定义客户端和服务凭据
 本主题演示如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用自定义凭据。  
@@ -23,12 +23,12 @@ ms.lasthandoff: 05/04/2018
   
  <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 类都继承自用于定义返回 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 的协定的抽象 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类。  
   
- 有关详细信息，有关凭据类以及它们如何融入[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全体系结构，请参阅[安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ 有关凭据类和如何适应 WCF 安全体系结构的详细信息，请参阅[安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中提供的默认实现支持系统提供的凭据类型并可以创建能够处理这些凭据类型的安全令牌管理器。  
+ WCF 中提供的默认实现支持系统提供的凭据类型，并创建安全令牌管理器能够处理这些凭据类型。  
   
 ## <a name="reasons-to-customize"></a>自定义原因  
- 自定义客户端或服务凭据类有多种原因。 最重要的原因是需要更改与处理系统提供的凭据类型有关的默认 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全行为，特别是由于以下原因：  
+ 自定义客户端或服务凭据类有多种原因。 最重要是需要更改与处理系统提供的凭据类型，特别是由于以下原因有关的默认 WCF 安全行为：  
   
 -   无法使用其他扩展点进行的更改。  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/04/2018
  本主题说明如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用它们。  
   
 ## <a name="first-in-a-series"></a>系列主题中的第一个主题  
- 创建自定义凭据类只是第一步，因为自定义凭据的原因是更改有关凭据配置、安全令牌序列化或身份验证的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 行为。 本节中的其他主题说明如何创建自定义序列化程序和身份验证器。 在这一方面，创建自定义凭据类是系列主题中的第一个主题。 后续操作（创建自定义序列化程序和身份验证器）只有在创建自定义凭据后才能进行。 基于本主题的其他主题包括：  
+ 创建自定义凭据类是仅的第一步，因为自定义凭据的原因是更改有关凭据配置、 安全令牌序列化或身份验证的 WCF 行为。 本节中的其他主题说明如何创建自定义序列化程序和身份验证器。 在这一方面，创建自定义凭据类是系列主题中的第一个主题。 后续操作（创建自定义序列化程序和身份验证器）只有在创建自定义凭据后才能进行。 基于本主题的其他主题包括：  
   
 -   [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  可选。 为新凭据类型添加新方法或新属性。 如果未添加新凭据类型，请跳过此步骤。 下面的示例添加 `CreditCardNumber` 属性。  
   
-3.  重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。 在使用自定义客户端凭据时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构将自动调用此方法。 此方法负责创建和返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类实现的实例。  
+3.  重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。 使用自定义客户端凭据时，WCF 安全基础结构自动调用此方法。 此方法负责创建和返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类实现的实例。  
   
     > [!IMPORTANT]
     >  需要特别注意的是，将重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法以创建自定义安全令牌管理器。 派生自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 的安全令牌管理器必须返回派生自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 的自定义安全令牌提供程序，才能创建实际的安全令牌。 如果不遵循此模式创建安全令牌，则当缓存 <xref:System.ServiceModel.ChannelFactory> 对象（这是 WCF 客户端代理的默认行为）时，您的应用程序可能无法正常工作，从而可能会导致面临特权提升攻击。 自定义凭据对象将作为 <xref:System.ServiceModel.ChannelFactory> 的一部分进行缓存。 然而，在每次调用时都会创建自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager>，只要在 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 中放置了令牌创建逻辑，它就可以缓解安全威胁。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
      [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]  
   
- 前面的过程演示如何从应用程序代码中使用客户端凭据。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 凭据也可以使用应用程序配置文件进行配置。 使用应用程序配置通常比硬编码更可取，因为它允许更改应用程序参数而无需更改源代码、重新编译和重新部署。  
+ 前面的过程演示如何从应用程序代码中使用客户端凭据。 此外可以使用应用程序配置文件配置 WCF 凭据。 使用应用程序配置通常比硬编码更可取，因为它允许更改应用程序参数而无需更改源代码、重新编译和重新部署。  
   
  下一个过程说明如何为配置自定义凭据提供支持。  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
   
- 一旦您具有配置处理程序类，就可以将它集成到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 配置框架中。 这使自定义客户端凭据能够用于客户端终结点行为元素中，如下一个过程所示。  
+ 后配置处理程序类，它可以集成到了 WCF 配置架构。 这使自定义客户端凭据能够用于客户端终结点行为元素中，如下一个过程所示。  
   
 #### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>在应用程序配置中注册和使用自定义客户端凭据配置处理程序  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  可选。 添加新属性以为将要添加的新凭据值提供 API。 如果未添加新凭据值，请跳过此步骤。 下面的示例添加 `AdditionalCertificate` 属性。  
   
-3.  重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。 在使用自定义客户端凭据时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构自动调用此方法。 此方法负责创建和返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类的实现的实例（在下一个过程中说明）。  
+3.  重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。 使用自定义客户端凭据时，WCF 基础结构自动调用此方法。 此方法负责创建和返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类的实现的实例（在下一个过程中说明）。  
   
 4.  可选。 重写 <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> 方法。 只有在将新属性或内部字段添加到自定义客户端凭据实现时，才需要此操作。  
   

@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: e1133194fe925bca4fb79d8adc1975a2063450f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9625400b855492ead12a5a2f1fa74f10164f6cdd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>如何：指定客户端凭据值
 使用 Windows Communication Foundation (WCF)，服务可以指定客户端向服务进行身份验证。 例如，服务可以规定客户端使用证书进行身份验证。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)以从服务生成代码和配置。  
   
-2.  使用生成的代码创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端的实例。  
+2.  创建 WCF 客户端使用生成的代码的实例。  
   
 3.  在客户端类上，将 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 类的 <xref:System.ServiceModel.ClientBase%601> 属性设置为适当的值。 本示例使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 类的 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 方法将该属性设置为 X.509 证书。  
   

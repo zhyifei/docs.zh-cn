@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13d23c0f69c65dd3bd6b2714dd710eb7f97a1c07
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing-and-message-logging"></a>跟踪和消息日志记录
 本示例演示如何启用跟踪和消息日志记录。 生成的跟踪和消息日志使用查看[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
 ## <a name="tracing"></a>跟踪  
- Windows Communication Foundation (WCF) 使用在中定义的跟踪机制<xref:System.Diagnostics>命名空间。 在此跟踪模型中，由应用程序实现的跟踪源生成跟踪数据。 每个源均由名称进行标识。 跟踪使用程序会创建针对要为其检索信息的跟踪源的侦听器。 若要接收跟踪数据，您必须创建针对该跟踪源的侦听器。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，可通过设置服务模型跟踪源 `switchValue` 并将下面的代码添加到服务或客户端的配置文件中来实现此目的：  
+ Windows Communication Foundation (WCF) 使用在中定义的跟踪机制<xref:System.Diagnostics>命名空间。 在此跟踪模型中，由应用程序实现的跟踪源生成跟踪数据。 每个源均由名称进行标识。 跟踪使用程序会创建针对要为其检索信息的跟踪源的侦听器。 若要接收跟踪数据，您必须创建针对该跟踪源的侦听器。 在 WCF 中，可以通过将下面的代码添加到服务的或客户端的配置文件中，通过设置服务模型跟踪源`switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -55,12 +55,12 @@ ms.lasthandoff: 05/04/2018
   
 -   通过传输和传播关联活动。  
   
--   降低 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 跟踪的性能成本（例如，日志文件的磁盘空间成本）。  
+-   降低 （例如，日志文件的磁盘空间成本） 的 WCF 跟踪的性能成本。  
   
  有关用户定义的活动跟踪的详细信息，请参阅[扩展跟踪](../../../../docs/framework/wcf/samples/extending-tracing.md)示例。  
   
 ## <a name="message-logging"></a>消息日志记录  
- 可以在任何 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的客户端和服务上启用消息日志记录。 若要启动消息日志记录，必须将下面的代码添加到客户端或服务：  
+ 可以启用消息日志记录，同时客户端和服务的任何 WCF 应用程序上。 若要启动消息日志记录，必须将下面的代码添加到客户端或服务：  
   
 ```xml  
 <configuration>  

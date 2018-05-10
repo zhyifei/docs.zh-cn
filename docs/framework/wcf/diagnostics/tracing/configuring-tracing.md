@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9603f79992c31ad1af3b6c672b448ab031ba78d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracing"></a>配置跟踪
 本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。  
@@ -25,11 +25,11 @@ ms.lasthandoff: 05/04/2018
   
 -   跟踪功能出现故障时发生的 Windows 错误事件。 请参阅[事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 跟踪建立在 <xref:System.Diagnostics> 之上。 若要使用跟踪，应在配置文件或代码中定义跟踪源。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 为每个 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 程序集定义一个跟踪源。 `System.ServiceModel` 跟踪源是最常见的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 跟踪源，它跨 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 通信堆栈（从进入/离开传输到进入/离开用户代码）记录处理里程碑。 `System.ServiceModel.MessageLogging` 跟踪源记录流过系统的所有消息。  
+ WCF 跟踪生成的顶部<xref:System.Diagnostics>。 若要使用跟踪，应在配置文件或代码中定义跟踪源。 WCF 定义每个 WCF 程序集的跟踪源。 `System.ServiceModel`跟踪源的最常规的 WCF 跟踪源，并跨 WCF 通信堆栈，从进入/离开传输到进入/离开用户代码记录处理里程碑。 `System.ServiceModel.MessageLogging` 跟踪源记录流过系统的所有消息。  
   
- 默认情况下不启用跟踪。 若要激活跟踪，必须创建一个跟踪侦听器并在配置中为选定的跟踪源设置除“Off”以外的跟踪级别；否则，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不会生成任何跟踪。 如果不指定侦听器，则会自动禁用跟踪。 如果定义侦听器，但不指定级别，则默认情况下级别将设置为“Off”，这意味着不会发出任何跟踪。  
+ 默认情况下不启用跟踪。 若要激活跟踪，必须创建一个跟踪侦听器，并在配置; 设置跟踪级别以外"关闭"状态为所选的跟踪源否则，WCF 不生成任何跟踪。 如果不指定侦听器，则会自动禁用跟踪。 如果定义侦听器，但不指定级别，则默认情况下级别将设置为“Off”，这意味着不会发出任何跟踪。  
   
- 如果您使用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 扩展点（如自定义操作调用程序），则应发出自己的跟踪。 这是因为在实现了扩展点的情况下，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不再在默认路径中发出标准跟踪。 如果未通过发出跟踪实现手动跟踪支持，则可能看不到预期跟踪。  
+ 如果你使用 WCF 扩展性点，例如自定义操作调用程序，则应发出自己的跟踪。 这是因为如果实现了扩展点，WCF 不再发出标准跟踪中的默认路径。 如果未通过发出跟踪实现手动跟踪支持，则可能看不到预期跟踪。  
   
  可以通过编辑应用程序的配置文件（对于 Web 承载的应用程序，为 Web.config；对于自承载的应用程序，为 Appname.exe.config）来配置跟踪。 下面的示例演示如何进行这样的编辑。 有关这些设置的详细信息，请参阅"配置跟踪侦听器要使用跟踪的"部分。  
   
@@ -52,12 +52,12 @@ ms.lasthandoff: 05/04/2018
 ```  
   
 > [!NOTE]
->  若要编辑的配置文件[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服务 Visual Studio 中的项目，请右键单击应用程序的配置文件-对于 Web 承载的应用程序，则为 Appname.exe.config 在中的自承载应用程序，为 Web.config **解决方案资源管理器**。 然后选择**编辑 WCF 配置**上下文菜单项。 这将启动[配置编辑器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)，从而使你可以修改配置设置[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服务使用图形用户界面。  
+>  若要编辑配置文件的 Visual Studio 中的 WCF 服务项目，右键单击应用程序的配置文件-对于 Web 承载的应用程序，则为 Appname.exe.config 在中的自承载应用程序，为 Web.config**解决方案资源管理器**. 然后选择**编辑 WCF 配置**上下文菜单项。 这将启动[配置编辑器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)，从而使你可以修改使用图形用户界面的 WCF 服务的配置设置。  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>配置要发出跟踪的跟踪源  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 为每个程序集定义一个跟踪源。 在程序集中生成的跟踪由为该跟踪源定义的侦听器访问。 定义下列跟踪源：  
+ WCF 定义每个程序集的一个跟踪源。 在程序集中生成的跟踪由为该跟踪源定义的侦听器访问。 定义下列跟踪源：  
   
--   System.ServiceModel：每当读取配置、在传输或安全处理中处理消息、在用户代码中调度消息时，记录 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 处理的所有阶段。  
+-   System.ServiceModel： 记录所有阶段的 WCF 处理，每当读取配置、 在传输过程中处理消息或安全处理一条消息调度时在用户代码中，依次类推。  
   
 -   System.ServiceModel.MessageLogging：记录流过系统的所有消息。  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 05/04/2018
  有关创建用户定义的跟踪源的详细信息，请参阅[扩展跟踪](../../../../../docs/framework/wcf/samples/extending-tracing.md)。  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>配置要使用跟踪的跟踪侦听器  
- 在运行时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 向处理数据的侦听器馈送跟踪数据。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 为 <xref:System.Diagnostics> 提供多个预定义的侦听器，这些侦听器用于输出的格式有所不同。 您也可以添加自定义侦听器类型。  
+ 在运行时，WCF 将跟踪数据馈送到处理数据的侦听器。 WCF 提供了几个预定义的侦听器<xref:System.Diagnostics>，其用于输出的格式有所不同。 您也可以添加自定义侦听器类型。  
   
  可以使用 `add` 指定要使用的跟踪侦听器的名称和类型。 在示例配置中，将侦听器命名为 `traceListener` 并添加了标准 .NET Framework 跟踪侦听器 (`System.Diagnostics.XmlWriterTraceListener`) 作为要使用的类型。 可以为每个源添加任意数目的跟踪侦听器。 如果跟踪侦听器发出对文件的跟踪，则您必须在配置文件中指定输出文件的位置和名称。 通过将 `initializeData` 设置为该侦听器的文件名称来完成此操作。 如果不指定文件名，则会基于所用的侦听器类型生成一个随机文件名。 如果使用 <xref:System.Diagnostics.XmlWriterTraceListener>，则会生成不带扩展名的文件名。 如果实现自定义侦听器，则也可以使用此属性来接收除文件名以外的初始化数据。 例如，可以为此属性指定数据库标识符。  
   
@@ -169,13 +169,13 @@ ms.lasthandoff: 05/04/2018
  为 `activityTracing` 属性指定的 `switchValue` 值用于启用活动跟踪，这会在终结点内发出活动边界跟踪和传输跟踪。  
   
 > [!NOTE]
->  如果启用了活动跟踪，则在使用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中的某些扩展功能时，可能会收到 <xref:System.NullReferenceException>。 要解决此问题，请检查应用程序配置文件，并确保跟踪源的 `switchValue` 属性未设置为 `activityTracing`。  
+>  当你在 WCF 中使用的某些扩展功能时，你可能会收到<xref:System.NullReferenceException>启用了活动跟踪。 要解决此问题，请检查应用程序配置文件，并确保跟踪源的 `switchValue` 属性未设置为 `activityTracing`。  
   
  `propagateActivity` 属性指示是否应将活动传播到参与消息交换的其他终结点。 将此值设置为 `true` 后，可以获取由任意两个终结点生成的跟踪文件，然后观察某一终结点上的一组跟踪是如何流向另一终结点上的一组跟踪的。  
   
  有关活动跟踪和传播的详细信息，请参阅[传播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)。  
   
- 同时`propagateActivity`和`ActivityTracing`布尔值均适用于 System.ServiceModel TraceSource。 `ActivityTracing`值也适用于任何跟踪源，包括[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]或用户定义的。  
+ 同时`propagateActivity`和`ActivityTracing`布尔值均适用于 System.ServiceModel TraceSource。 `ActivityTracing`值也适用于任何跟踪源，包括 WCF 或用户定义的。  
   
  不能将 `propagateActivity` 属性与用户定义的跟踪源一起使用。 对于用户代码活动 ID 传播，请确保未设置 ServiceModel `ActivityTracing`，而同时仍将 ServiceModel `propagateActivity` 属性设置为 `true`。  
   

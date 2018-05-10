@@ -2,34 +2,34 @@
 title: WCF Visual Studio 模板
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 873e728b72529fb5153913c44cac0abd77f1f7c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c37974f93f10870b238617bc196b37c6dbb6dd5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 模板
-Windows Communication Foundation (WCF) Visual Studio 模板是预定义的项目和项模板，你可以使用 Visual Studio 中快速生成[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务和周边应用程序。  
+Windows Communication Foundation (WCF) Visual Studio 模板是预定义的项目和项模板在 Visual Studio 中用于快速生成 WCF 服务和周边应用程序。  
   
 ## <a name="using-the-wcf-templates"></a>使用 WCF 模板  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Visual Studio 模板为服务开发提供基本的类结构。 具体地说，这些模板提供服务协定、数据协定、服务实现和配置的基本定义。 可以使用这些模板创建代码交互最少的简单服务以及更高级的服务的构造块。  
+ WCF Visual Studio 模板为服务开发提供基本的类结构。 具体地说，这些模板提供服务协定、数据协定、服务实现和配置的基本定义。 可以使用这些模板创建代码交互最少的简单服务以及更高级的服务的构造块。  
   
 ### <a name="wcf-service-library-project-template"></a>WCF 服务库项目模板  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务库项目模板将显示在新项目对话框在下**Visual C# \WCF**和**Visual Basic\WCF**。  
+ WCF 服务库项目模板将显示在新项目对话框在下**Visual C# \WCF**和**Visual Basic\WCF**。  
   
  当你创建新项目使用**WCF 服务**模板，新项目将自动包括以下三个文件：  
   
--   服务协定文件（IService1.cs 或 IService1.vb）。 服务协定文件是一个应用了 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务属性的接口。 此文件提供简单服务的定义以表明如何定义服务，并且包括基于参数的操作和简单的数据协定示例。 这是创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务项目之后在代码编辑器中显示的默认文件。  
+-   服务协定文件（IService1.cs 或 IService1.vb）。 服务协定文件是 WCF 服务应用了特性，一个接口。 此文件提供简单服务的定义以表明如何定义服务，并且包括基于参数的操作和简单的数据协定示例。 这是创建 WCF 服务项目之后在代码编辑器中显示的默认文件。  
   
 -   服务实现文件（Service1.cs 或 Service1.vb）。 服务实现文件实现服务协定文件中定义的协定。  
   
--   应用程序配置文件 (App.config)。 该配置文件为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务模型的基本元素提供安全的 HTTP 绑定。 它还包括一个服务终结点，并启用了元数据交换。  
+-   应用程序配置文件 (App.config)。 配置文件提供安全的 HTTP 绑定的 WCF 服务模型的基本元素。 它还包括一个服务终结点，并启用了元数据交换。  
   
 > [!NOTE]
 >  Visual Studio 配置为将 App.config 文件识别为项目的配置文件，运行使用时[WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)，这是默认配置。 如果在可执行文件中承载服务库，则由于 DLL 的配置文件无效，必须将配置代码移动到可执行文件的配置文件。  
   
 ### <a name="wcf-service-application-template"></a>WCF 服务应用程序模板  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务应用程序模板将显示在新项目对话框在下**Visual C# \WCF**和**Visual Basic\WCF**。  
+ WCF 服务应用程序模板将显示在新项目对话框在下**Visual C# \WCF**和**Visual Basic\WCF**。  
   
  当你创建新项目使用**WCF Web 应用程序服务**模板，该项目包括以下四个文件：  
   
@@ -44,10 +44,10 @@ Windows Communication Foundation (WCF) Visual Studio 模板是预定义的项目
  此模板将自动创建一个网站（该网站将要部署到虚拟目录），并在该网站中承载服务。  
   
 ### <a name="wcf-web-site-template"></a>WCF 网站模板  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]网站模板将显示在新项目对话框在下**Visual C# \Web Site\WCF 服务**和**Visual Basic\Web Site\WCF 服务**。 这将创建与 WCF 服务应用程序模板相同的文件，但按照它是 ASP.NET 网站来进行组织。 创建 App_Code 和 App_Data 文件夹。  
+ WCF 网站模板将显示在新项目对话框在下**Visual C# \Web Site\WCF 服务**和**Visual Basic\Web Site\WCF 服务**。 这将创建与 WCF 服务应用程序模板相同的文件，但按照它是 ASP.NET 网站来进行组织。 创建 App_Code 和 App_Data 文件夹。  
   
 ### <a name="wcf-service-item-template"></a>WCF 服务项模板  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务项模板是一种要添加的快速方法的自定义模板[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务添加到现有 Visual Studio 项目。  
+ WCF 服务项模板是一种将 WCF 服务添加到现有 Visual Studio 项目的快速方法的自定义模板。  
   
  若要使用此模板，请转到**解决方案资源管理器**窗格中，右键单击你的项目名称，指向**添加**，然后单击**新项**以启动**添加新项**对话框。  
   
@@ -58,12 +58,12 @@ Windows Communication Foundation (WCF) Visual Studio 模板是预定义的项目
  如果现有项目是 Web 项目，则也会创建服务主机文件 (service1.svc)。  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF 服务项目和项模板。  
- 这些模板将创建承载工作流服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务，工作流服务是可像 Web 服务那样被访问的工作流。 XAML 或命令式编程模型具有单独的模板。 通过使用模板，可以创建顺序工作流或状态机工作流。 有关这些类型的工作流的详细信息，请参阅[Windows Workflow Foundation 教程](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97)。 有关创建工作流项目的详细信息，请参阅[创建旧版工作流项目](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。  
+ 这些模板创建 WCF 服务承载工作流服务，这是可以访问与 web 服务类似的工作流。 XAML 或命令式编程模型具有单独的模板。 通过使用模板，可以创建顺序工作流或状态机工作流。 有关这些类型的工作流的详细信息，请参阅[Windows Workflow Foundation 教程](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97)。 有关创建工作流项目的详细信息，请参阅[创建旧版工作流项目](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。  
   
  使用工作流的 XOML 类型代替基于代码的是，visual Studio 设计器时更快地响应。 XOML 工作流是要创建的默认工作流类型。  
   
 ### <a name="wcf-syndication-service-library-template"></a>WCF 联合服务库模板  
- 通过使用此模板，可以将 RSS 或 ATOM 格式的源作为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务公开。 有关详细信息，请参阅[WCF 联合](../../../docs/framework/wcf/feature-details/wcf-syndication.md)。  
+ 此模板可公开作为 WCF 服务的 RSS 或 ATOM 格式的源。 有关详细信息，请参阅[WCF 联合](../../../docs/framework/wcf/feature-details/wcf-syndication.md)。  
   
 #### <a name="changing-the-address-of-the-feed"></a>更改源的地址  
  在执行期间，联合模板使用 Internet Explorer。 当您右键单击你的项目中**解决方案资源管理器**在 Visual Studio 中，选择**属性**，然后选择**调试**选项卡上，你可以查看的默认地址模板。 Internet Explorer 尝试在此地址打开源。  
@@ -71,10 +71,10 @@ Windows Communication Foundation (WCF) Visual Studio 模板是预定义的项目
  如果你更改你的源的地址，你还必须更改中的地址**调试**选项卡。如果不这样做，Internet Explorer 将尝试在默认地址打开源，从而失败。  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>支持 AJAX 的 WCF 服务项模板  
- 此模板将 AJAX 控件作为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务公开。 AJAX 控件的详细信息，请参阅[AJAX 控件文档](http://go.microsoft.com/fwlink/?LinkId=96717)。  
+ 此模板将 AJAX 控件作为 WCF 服务公开。 AJAX 控件的详细信息，请参阅[AJAX 控件文档](http://go.microsoft.com/fwlink/?LinkId=96717)。  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>启用了 Silverlight 的 WCF 服务项模板  
- 该模板创建提供数据给 Silverlight 客户端或前端的 Web 服务。 可以将该模板添加到网站或 Web 应用程序项目中，以创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务，其中包括支持与 Silverlight 客户端进行通信的服务代码和配置。 然后，可以使用**添加服务引用**将服务的客户端代理添加到客户端，并在 Silverlight 客户端和启用了 Silverlight 的 WCF 服务之间交换数据。  
+ 该模板创建提供数据给 Silverlight 客户端或前端的 Web 服务。 可以将模板添加到网站或 Web 应用程序项目，以便创建 WCF 服务，其中包括服务代码和配置支持与 Silverlight 客户端进行通信。 然后，可以使用**添加服务引用**将服务的客户端代理添加到客户端，并在 Silverlight 客户端和启用了 Silverlight 的 WCF 服务之间交换数据。  
   
  若要访问此模板，右键单击中的网站或 Web 应用程序项目**解决方案资源管理器**，单击**添加新项**，然后单击**启用了 Silverlight 的 WCF 服务**。  
   

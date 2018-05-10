@@ -2,11 +2,11 @@
 title: 自定义 WSDL 发布
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b75aa2269d9c21a6f6d7f579d3c0b6f547a92332
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-wsdl-publication"></a>自定义 WSDL 发布
 此示例演示如何：  
@@ -230,7 +230,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- 指定自定义导入程序后，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 元数据系统将该自定义导入程序加载到为实现该目的而创建的任何 <xref:System.ServiceModel.Description.WsdlImporter> 中。 此示例使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 下载元数据，使用经过正确配置的 <xref:System.ServiceModel.Description.WsdlImporter> 通过此示例创建的自定义导入程序导入元数据，并使用 <xref:System.ServiceModel.Description.ServiceContractGenerator> 将修改后的协定信息编译成 Visual Basic 和 C# 客户端代码（可在 Visual Studio 中使用以支持 Intellisense），或者编译成 XML 文档。  
+ 指定自定义导入后 WCF 元数据系统会将自定义导入程序加载到任何<xref:System.ServiceModel.Description.WsdlImporter>创建为该目的。 此示例使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 下载元数据，使用经过正确配置的 <xref:System.ServiceModel.Description.WsdlImporter> 通过此示例创建的自定义导入程序导入元数据，并使用 <xref:System.ServiceModel.Description.ServiceContractGenerator> 将修改后的协定信息编译成 Visual Basic 和 C# 客户端代码（可在 Visual Studio 中使用以支持 Intellisense），或者编译成 XML 文档。  
   
 ```  
 /// From WSDL Documentation:  

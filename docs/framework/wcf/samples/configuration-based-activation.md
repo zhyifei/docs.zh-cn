@@ -2,11 +2,11 @@
 title: 基于配置的激活
 ms.date: 03/30/2017
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
-ms.openlocfilehash: 2829458d40e3efb180699122570b2775a90be9e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ac4edd2a51e4ed8a5c0b7e73d7d1afa31334c33
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuration-based-activation"></a>基于配置的激活
 此示例演示如何激活 Windows Communication Foundation (WCF) 服务，而无需.svc 文件。  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
 ## <a name="sample-details"></a>示例详细信息  
- 在此示例中，客户端是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 测试客户端，并且服务承载在 IIS 中。  
+ 在此示例中，客户端 WCF 测试客户端，并且服务承载在 IIS 中。  
   
 > [!NOTE]
 >  本主题的最后提供了此示例的设置和生成说明。  

@@ -2,30 +2,30 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: ef5de3fc51e43a88adb021b66732492f03d9d912
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="services"></a>服务
 本节包含演示 Windows Communication Foundation (WCF) 服务的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [承载](../../../../docs/framework/wcf/feature-details/hosting.md)  
- 演示承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+ 演示承载 WCF 服务的服务。  
   
  [服务互操作性](../../../../docs/framework/wcf/samples/service-interoperability.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和其他服务技术之间的交互。  
+ 演示 WCF 与其他服务技术之间的交互。  
   
  [行为](../../../../docs/framework/wcf/samples/behaviors.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务行为。  
+ 演示 WCF 服务行为。  
   
  [服务安全性](../../../../docs/framework/wcf/samples/service-security.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务安全。  
+ 演示 WCF 服务安全。  
   
  [WCF 服务的简化配置](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- 演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现和配置典型服务和客户端。  
+ 演示如何实现和配置典型的服务和客户端使用 WCF。  
   
  [标准终结点的使用情况](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
  演示如何在服务配置文件中使用标准终结点。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/04/2018
  演示一个在单个 `ListenUri` 中承载多个终结点的服务。  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- 演示如何使用标头在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 调用中发送额外的信息。  
+ 演示如何将 WCF 呼叫使用标头中的额外信息发送。  
   
  [服务说明](../../../../docs/framework/wcf/samples/service-description.md)  
  演示服务如何在运行时检索其服务说明信息。  

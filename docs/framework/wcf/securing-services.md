@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 6bdac5a65c51ff08cfa170c1a6e556c3532ee7c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 742d9c4360f6b314ac86b2e8d39185f5291f1aff
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-services"></a>保证服务的安全
-Windows Communication Foundation (WCF) 服务的安全包含两项基本要求： 传输安全和授权。 (第三个要求中, 所述的安全事件的审核[审核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)简言之，传输安全包括身份验证（验证服务和客户端的标识）、保密性（消息加密）和完整性（进行数字签名以检测是否存在篡改）。 授权是控制对资源的访问，例如仅允许特权用户读取文件。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的功能，可以很容易地实现这两项基本要求。  
+Windows Communication Foundation (WCF) 服务的安全包含两项基本要求： 传输安全和授权。 (第三个要求中, 所述的安全事件的审核[审核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)简言之，传输安全包括身份验证（验证服务和客户端的标识）、保密性（消息加密）和完整性（进行数字签名以检测是否存在篡改）。 授权是控制对资源的访问，例如仅允许特权用户读取文件。 使用 WCF 的功能，很容易地实现两项基本要求。  
   
  除<xref:System.ServiceModel.BasicHttpBinding>类 (或[ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)配置中的元素)，默认情况下，对所有预定义绑定启用传输安全。 本节中的主题包含两种基本方案：对 Internet 信息服务 (IIS) 上承载的 Intranet 服务实现传输安全和授权，以及对 IIS 上承载的服务实现传输安全和授权。  
   
@@ -36,10 +36,10 @@ Windows Communication Foundation (WCF) 服务的安全包含两项基本要求�
   
  在运行 Windows 的计算机上，可以对目录中的每个文件夹进行保护。 即，您可以选择文件夹，并控制哪些用户可以访问文件，以及这些用户是否可以复制文件、更改文件（在最大特权情况下）、删除文件或向文件夹中添加文件。 这称为访问控制，这种机制称为访问控制列表 (ACL)。 创建 ACL 时，可以为任何一个或多个组以及域中的单个成员分配访问特权。  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 基础结构设计为使用这些 Windows 安全机制。 所以，如果您要创建将在 Intranet 中部署的服务，并且仅限 Windows 域的成员使用该服务的客户端，则可以轻松实现安全。 仅有效用户才可登录到该域。 用户登录后，Kerberos 控制器将允许每个用户与任何其他计算机或应用程序建立安全上下文。 在本地计算机上，可以轻松创建组，并且在保护特定文件夹时，可以使用这些组来分配计算机的访问特权。  
+ WCF 基础结构设计为使用这些 Windows 安全机制。 所以，如果您要创建将在 Intranet 中部署的服务，并且仅限 Windows 域的成员使用该服务的客户端，则可以轻松实现安全。 仅有效用户才可登录到该域。 用户登录后，Kerberos 控制器将允许每个用户与任何其他计算机或应用程序建立安全上下文。 在本地计算机上，可以轻松创建组，并且在保护特定文件夹时，可以使用这些组来分配计算机的访问特权。  
   
 ## <a name="implementing-windows-security-on-intranet-services"></a>在 Intranet 服务上实现 Windows 安全  
- 若要保证 Windows 域上以独占方式运行的应用程序的安全，可以使用 <xref:System.ServiceModel.WSHttpBinding> 或 <xref:System.ServiceModel.NetTcpBinding> 绑定的默认安全设置。 默认情况下，同一个 Windows 域中的任何用户均可访问 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。 由于这些用户已登录到网络，因此他们是受信任的。 服务与客户端之间的消息将会进行加密以保证保密性，并将进行签名以保证完整性。 有关如何创建使用 Windows 安全的服务的详细信息，请参阅[如何： 使用 Windows 凭据来保护服务](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
+ 若要保证 Windows 域上以独占方式运行的应用程序的安全，可以使用 <xref:System.ServiceModel.WSHttpBinding> 或 <xref:System.ServiceModel.NetTcpBinding> 绑定的默认安全设置。 默认情况下，同一 Windows 域上的任何人可以访问 WCF 服务。 由于这些用户已登录到网络，因此他们是受信任的。 服务与客户端之间的消息将会进行加密以保证保密性，并将进行签名以保证完整性。 有关如何创建使用 Windows 安全的服务的详细信息，请参阅[如何： 使用 Windows 凭据来保护服务](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
   
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>使用 PrincipalPermissionAttribute 类进行授权  
  如果需要限制对计算机上的资源的访问，最简单的方法是使用 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 类。 使用此属性，可以限制对服务操作的调用，方法是要求用户必须属于指定的 Windows 组或角色，或者必须是特定用户。 有关详细信息，请参阅[如何： 使用 PrincipalPermissionAttribute 类限制访问](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。  
@@ -48,28 +48,28 @@ Windows Communication Foundation (WCF) 服务的安全包含两项基本要求�
  模拟是可用于控制对资源的访问的另外一种机制。 默认情况下，由 IIS 承载的服务将会在 ASPNET 帐户的标识下运行。 ASPNET 帐户仅可访问其拥有权限的资源。 然而，可以对文件夹设置 ACL 以排除 ASPNET 服务帐户，但允许某些其他标识访问该文件夹。 那么问题将变为，如果不允许 ASPNET 帐户访问该文件夹，如何允许其他用户访问该文件夹。 答案是使用模拟，由此允许服务使用客户端的凭据来访问特殊资源。 另外一个示例是当访问仅某些用户拥有权限的 SQL Server 数据库时的情况。 有关使用模拟的详细信息，请参阅[How to： 模拟客户端在服务上的](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)和[委托和模拟](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ## <a name="security-on-the-internet"></a>Internet 上的安全  
- Internet 上的安全包含与 Intranet 上的安全相同的要求。 服务需要提供其凭据以证明其真实性，客户端需要向服务证明其标识。 在证明了客户端的标识之后，服务可以控制客户端拥有怎样的资源访问权限。 但是，由于 Internet 的特性不同，所提供的凭据与 Windows 域中使用的凭据会有所不同。 Kerberos 控制器可以使用凭据的票证处理域中用户的身份验证，而在 Internet 上，服务和客户端依赖于多种不同方法的任何一种来提供凭据。 但是，本主题的目的是提供一种通用方法，您可以使用该方法创建可以在 Internet 上访问的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。  
+ Internet 上的安全包含与 Intranet 上的安全相同的要求。 服务需要提供其凭据以证明其真实性，客户端需要向服务证明其标识。 在证明了客户端的标识之后，服务可以控制客户端拥有怎样的资源访问权限。 但是，由于 Internet 的特性不同，所提供的凭据与 Windows 域中使用的凭据会有所不同。 Kerberos 控制器可以使用凭据的票证处理域中用户的身份验证，而在 Internet 上，服务和客户端依赖于多种不同方法的任何一种来提供凭据。 但是，本主题的目的是提供通用方法，可用于创建 WCF 服务可以在 Internet 上访问方法。  
   
 ### <a name="using-iis-and-aspnet"></a>使用 IIS 和 ASP.NET  
- Internet 安全的要求和用于解决这些问题的机制并不是什么新鲜事物。 IIS 是 Microsoft 针对 Internet 的 Web 服务器，该服务器具有很多可解决这些问题的安全功能；此外 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 还包括 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务可以使用的安全功能。 若要利用这些安全功能，请在 IIS 上承载 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。  
+ Internet 安全的要求和用于解决这些问题的机制并不是什么新鲜事物。 IIS 是 Microsoft 的用于 Internet 的 Web 服务器和具有很多安全功能，可解决这些问题;此外，[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]包含 WCF 服务可以使用的安全功能。 若要利用这些安全功能，承载在 IIS 上的 WCF 服务。  
   
 #### <a name="using-aspnet-membership-and-role-providers"></a>使用 ASP.NET 成员资格和角色提供程序  
- ASP.NET 包括成员资格和角色提供程序。 提供程序是一个用于对调用方进行身份验证的用户名/密码对数据库，该数据库还允许您指定每个调用方的访问特权。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，可以轻松通过配置来使用预先存在的成员资格和角色提供程序。 有关演示此内容的示例应用程序，请参阅 [Membership and Role Provider](../../../docs/framework/wcf/samples/membership-and-role-provider.md) 示例。  
+ ASP.NET 包括成员资格和角色提供程序。 提供程序是一个用于对调用方进行身份验证的用户名/密码对数据库，该数据库还允许您指定每个调用方的访问特权。 与 WCF 结合使用，可以轻松使用预先存在的成员资格和角色提供程序通过配置。 有关演示此内容的示例应用程序，请参阅 [Membership and Role Provider](../../../docs/framework/wcf/samples/membership-and-role-provider.md) 示例。  
   
 ### <a name="credentials-used-by-iis"></a>IIS 使用的凭据  
  与 Kerberos 控制器支持的 Windows 域不同，Internet 环境并没有一个控制器来管理随时登录的成百上千万的用户， 而是在其凭据中最常采用 X.509 证书（也称为安全套接字层 (SSL) 证书）的形式。 这些证书通常由证书颁发机构 颁发，证书颁发机构可以是担保证书以及将向其颁发证书的人员的真实性的第三方公司。 若要在 Internet 上公开服务，还必须提供这样一个受信任的证书来对服务进行身份验证。  
   
- 此时将出现一个问题，如何才能获取这样的证书呢？ 如果您准备部署服务并购买针对该服务的证书，则获取证书的一种方法是向第三方证书颁发机构（如 Authenticode 或 VeriSign）购买。 但是，如果正处于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的开发阶段，并且尚未准备好购买证书，则可以使用已有的用于创建 X.509 证书的工具和技术来模拟生产部署。 有关详细信息，请参阅[使用证书](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ 此时将出现一个问题，如何才能获取这样的证书呢？ 如果您准备部署服务并购买针对该服务的证书，则获取证书的一种方法是向第三方证书颁发机构（如 Authenticode 或 VeriSign）购买。 但是，如果你是在使用 WCF 开发阶段，并且尚未准备好购买证书，有工具和技术用于创建 X.509 证书可用于模拟生产部署。 有关详细信息，请参阅[使用证书](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
 ## <a name="security-modes"></a>安全模式  
- 对 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 安全编程涉及几个关键决策点。 最基本的一个决策点是选择安全模式 。 两个主要的安全模式是传输模式  和消息模式 。  
+ WCF 安全编程涉及几个关键决策点。 最基本的一个决策点是选择安全模式 。 两个主要的安全模式是传输模式  和消息模式 。  
   
  第三种模式是带有消息凭据的传输模式，它结合了前两种主要模式的语义 。  
   
  安全模式确定如何保证消息的安全，每一种选择都有利有弊，如下所述。 有关设置安全模式的详细信息，请参阅[如何： 将安全模式设置](../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
   
 #### <a name="transport-mode"></a>传输模式  
- 网络与应用程序之间存在多个层。 以下方法之一是*传输*层*，*后者管理终结点之间的消息传输。 对于当前目的，您仅需要了解 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用多个传输协议，其中每一个均可保证消息传输的安全。 (有关传输的详细信息，请参阅[传输](../../../docs/framework/wcf/feature-details/transports.md)。)  
+ 网络与应用程序之间存在多个层。 以下方法之一是*传输*层*，*后者管理终结点之间的消息传输。 对于当前目的，才需要你了解 WCF 使用多个传输协议，其中每个可以保护消息的传输。 (有关传输的详细信息，请参阅[传输](../../../docs/framework/wcf/feature-details/transports.md)。)  
   
  常用的协议是 HTTP，还有 TCP。 这些协议中的每一个都可以通过特定于该协议的一个或多个机制来保证消息传输的安全。 例如，HTTP 协议使用基于 HTTP 的 SSL（通常缩写为“HTTPS”）来保证安全。 因而，当选择传输模式来保证安全时，您要选择使用该协议所指示的机制。 例如，如果您选择 <xref:System.ServiceModel.WSHttpBinding> 类并将其安全模式设置为“传输”，则您要选择基于 HTTP 的 SSL (HTTPS) 作为安全机制。 传输模式的好处在于它比消息模式更为高效，原因是其安全是在相对较低的级别进行集成的。 使用传输模式时，必须根据传输规范实现安全机制，这样消息才能通过传输在各点之间安全流动。  
   
@@ -92,7 +92,7 @@ Windows Communication Foundation (WCF) 服务的安全包含两项基本要求�
  “凭据值”  是服务使用的实际凭据。 一旦指定了凭据类型，则还可能需要为服务配置实际的凭据。 如果您选择的是 Windows（且服务将在 Windows 域中运行），则不用指定实际的凭据值。  
   
 ## <a name="identity"></a>标识  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]中，术语“标识”  对于服务器与客户端具有不同的含义。 简言之，在运行服务时，标识将在通过身份验证后分配到安全上下文。 若要查看实际的标识，请检查 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 类的 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 和 <xref:System.ServiceModel.ServiceSecurityContext> 属性。 有关详细信息，请参阅[如何： 检查安全上下文](../../../docs/framework/wcf/how-to-examine-the-security-context.md)。  
+ 在 WCF 中，术语*标识*具有到服务器和客户端不同的含义。 简言之，在运行服务时，标识将在通过身份验证后分配到安全上下文。 若要查看实际的标识，请检查 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 类的 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 和 <xref:System.ServiceModel.ServiceSecurityContext> 属性。 有关详细信息，请参阅[如何： 检查安全上下文](../../../docs/framework/wcf/how-to-examine-the-security-context.md)。  
   
  而在客户端上，标识用于验证服务。 在设计时，客户端开发人员可以设置[\<标识 >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md)从服务获取的值的元素。 在运行时，客户端将对照服务的实际标识检查元素的值。 如果检查失败，则客户端将终止通信。 如果服务在特定的用户标识下运行，该值可以是用户主体名称 (UPN)；而如果服务在计算机帐户下运行，则该值可以是服务主体名称 (SPN)。 有关详细信息，请参阅[服务标识和身份验证](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。 凭据也可以是证书或者在证书中找到的用于标识该证书的字段。  
   

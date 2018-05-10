@@ -2,11 +2,11 @@
 title: 选择消息交换模式
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 3466be98522eef0ebec6f6613f51566700a7cdb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>选择消息交换模式
 编写自定义传输的第一步是确定哪个*消息交换模式*（或 Mep） 所需的正在开发的通道。 本主题说明可用的选项，并讨论各种不同的需求。 这是通道开发任务列表中所述的第一个任务[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 >  对于 UDP 传输，所支持的唯一 MEP 是数据报，因为 UDP 的性质是一个“启动后不管”协议。  
   
 ## <a name="sessions-and-sessionful-channels"></a>会话和会话通道  
- 在网络世界中，有面向连接的协议（例如 TCP）和无连接的协议（例如 UDP）。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用术语“会话”来表示与连接类似的逻辑抽象。 会话 WCF 协议类似于面向连接的网络协议，而无会话 WCF 协议则类似于无连接的网络协议。  
+ 在网络世界中，有面向连接的协议（例如 TCP）和无连接的协议（例如 UDP）。 WCF 使用术语会话来表示类似于连接的逻辑抽象。 会话 WCF 协议类似于面向连接的网络协议，而无会话 WCF 协议则类似于无连接的网络协议。  
   
  在通道目标模型中，每个逻辑会话都表现为一个会话通道的实例。 因此，由客户端创建并在服务端接受的每个新会话都与每一端的一个新会话通道相对应。 下面的关系图的上部显示无会话通道的结构，下部显示会话通道的结构。  
   

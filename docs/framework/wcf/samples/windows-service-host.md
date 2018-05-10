@@ -5,11 +5,11 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 14fdb278f89f30e0941a88c2c0a40c768717f8bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 06bb17ca174eef069889381460b77f6b50902f70
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-service-host"></a>Windows 服务主机
 此示例演示在托管 Windows 服务中承载的 Windows Communication Foundation (WCF) 服务。 使用中的服务小程序控制 Windows 服务**控制面板**并且可以配置为启动系统重新启动后自动启动。 此示例包含一个客户端程序和一个 Windows 服务程序。 服务作为一个 .exe 程序实现，并包含其自己的主机代码。 在其他承载环境（如 Windows 进程激活服务 (WAS) 或 Internet Information Services (IIS)）中，你没有必要编写承载代码。  
@@ -26,9 +26,9 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WindowsService`  
   
- 生成此服务之后，必须像任何其他 Windows 服务一样使用 Installutil.exe 实用工具安装此服务。 如果要对此服务进行更改，必须首先使用 `installutil /u` 将其卸载。 此示例中随附的 Setup.bat 和 Cleanup.bat 文件是用于安装和启动 Windows 服务的命令，还可用于关闭和卸载 Windows 服务。 只有在 Windows 服务正在运行的情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务才能响应客户端。 如果你通过使用从服务小程序停止 Windows 服务**控制面板**并运行客户端，<xref:System.ServiceModel.EndpointNotFoundException>客户端尝试访问该服务，则会发生异常。 如果重新启动 Windows 服务并重新运行客户端，通信将成功。  
+ 生成此服务之后，必须像任何其他 Windows 服务一样使用 Installutil.exe 实用工具安装此服务。 如果要对此服务进行更改，必须首先使用 `installutil /u` 将其卸载。 此示例中随附的 Setup.bat 和 Cleanup.bat 文件是用于安装和启动 Windows 服务的命令，还可用于关闭和卸载 Windows 服务。 如果 Windows 服务正在运行的 WCF 服务才能响应客户端。 如果你通过使用从服务小程序停止 Windows 服务**控制面板**并运行客户端，<xref:System.ServiceModel.EndpointNotFoundException>客户端尝试访问该服务，则会发生异常。 如果重新启动 Windows 服务并重新运行客户端，通信将成功。  
   
- 服务代码中包括一个安装程序类、一个实现 ICalculator 协定的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务实现类和一个用作运行时主机的 Windows 服务类。 安装程序类继承自 <xref:System.Configuration.Install.Installer>，允许通过 Installutil.exe 工具将程序安装为 NT 服务。 服务实现类 `WcfCalculatorService` 是一个实现基本服务协定的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务在称为 `WindowsCalculatorService` 的 Windows 服务类中承载。 为了符合作为 Windows 服务的要求，该类从 <xref:System.ServiceProcess.ServiceBase> 继承并实现 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 和 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法。 在 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 中，为 <xref:System.ServiceModel.ServiceHost> 类型创建并打开了 `WcfCalculatorService` 对象。 在 <xref:System.ServiceProcess.ServiceBase.OnStop> 中，通过调用 <xref:System.ServiceModel.Channels.CommunicationObject.Close%28System.TimeSpan%29> 对象的 <xref:System.ServiceModel.ServiceHost> 方法关闭了 ServiceHost。 使用配置主机的基址[\<添加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md)元素，它是子节点的[ \<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)，即的子级[ \<主机 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)元素，它是子节点的[\<服务 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)元素。  
+ 服务代码中包括的安装程序类、 实现 ICalculator 协定的 WCF 服务实现类和一个用作运行时主机的 Windows 服务类。 安装程序类继承自 <xref:System.Configuration.Install.Installer>，允许通过 Installutil.exe 工具将程序安装为 NT 服务。 服务实现类`WcfCalculatorService`，是实现基本服务协定的 WCF 服务。 此 WCF 服务承载于一个名为的 Windows 服务类内`WindowsCalculatorService`。 为了符合作为 Windows 服务的要求，该类从 <xref:System.ServiceProcess.ServiceBase> 继承并实现 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 和 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法。 在 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 中，为 <xref:System.ServiceModel.ServiceHost> 类型创建并打开了 `WcfCalculatorService` 对象。 在 <xref:System.ServiceProcess.ServiceBase.OnStop> 中，通过调用 <xref:System.ServiceModel.Channels.CommunicationObject.Close%28System.TimeSpan%29> 对象的 <xref:System.ServiceModel.ServiceHost> 方法关闭了 ServiceHost。 使用配置主机的基址[\<添加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md)元素，它是子节点的[ \<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)，即的子级[ \<主机 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)元素，它是子节点的[\<服务 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)元素。  
   
  定义终结点使用的基址和一个[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。 下面的示例演示了基本地址的配置以及公开 CalculatorService 的终结点。  
   

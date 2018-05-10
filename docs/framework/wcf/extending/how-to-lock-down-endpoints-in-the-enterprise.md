@@ -2,16 +2,16 @@
 title: 如何：在企业中锁定终结点
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: c91faf201c9a7cb0e5dd810059dbaa39b1e8eb05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ec14193bdcc24722ad8e2259781c4c185f3ca3f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>如何：在企业中锁定终结点
 大企业往往要求开发的应用程序符合企业安全策略。 以下主题讨论如何开发和安装客户端的终结点验证程序，它可以用于验证安装在计算机上的所有 Windows Communication Foundation (WCF) 客户端应用程序。  
   
- 在这种情况下，该验证程序的客户端验证程序，因为此终结点行为添加到客户端[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config 文件中的部分。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 仅针对客户端应用程序加载常见的终结点行为，并仅针对服务应用程序加载常见服务行为。 若要为服务应用程序安装此相同验证程序，验证程序必须为服务行为。 有关详细信息，请参阅[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)部分。  
+ 在这种情况下，该验证程序的客户端验证程序，因为此终结点行为添加到客户端[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config 文件中的部分。 WCF 加载仅对客户端应用程序的公共终结点行为，并加载仅对服务应用程序的常见服务行为。 若要为服务应用程序安装此相同验证程序，验证程序必须为服务行为。 有关详细信息，请参阅[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)部分。  
   
 > [!IMPORTANT]
 >  服务或终结点行为未用标记<xref:System.Security.AllowPartiallyTrustedCallersAttribute>特性 (APTCA) 添加到[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)在部分信任中运行的应用程序时，将不会运行配置文件节发生此情况时引发环境和任何异常。 若要强制运行公共行为（如验证程序），必须执行以下任一操作：  

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: ab6e3a99f951d2977a079f49e4aa3eff250ee8d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75657786135fd13222c6c7edd5acfa122cc72e52
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>配置编辑器工具 (SvcConfigEditor.exe)
-Windows Communication Foundation (WCF) 服务配置编辑器 (SvcConfigEditor.exe) 允许管理员和开发人员创建和修改配置设置[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务使用图形用户界面。 利用此工具，您不必直接编辑 XML 配置文件就可管理 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 绑定、行为、服务和诊断的设置。  
+通过 Windows Communication Foundation (WCF) 服务配置编辑器 (SvcConfigEditor.exe)，管理员和开发人员可以使用图形用户界面来创建和修改 WCF 服务的配置设置。 利用此工具，您不必直接编辑 XML 配置文件就可管理 WCF 绑定、行为、服务和诊断的设置。  
   
  在 C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin 文件夹中可以找到服务配置编辑器。  
   
 ## <a name="the-wcf-configuration-editor"></a>WCF 配置编辑器  
- 服务配置编辑器附带了一个向导，该向导可引导您完成配置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务或客户端的所有步骤。 强烈建议您使用向导，而不是直接使用编辑器。  
+ 服务配置编辑器附带了一个向导，该向导可引导您完成配置 WCF 服务或客户端的所有步骤。 强烈建议您使用向导，而不是直接使用编辑器。  
   
- 如果已经有一些符合标准 System.Configuration 架构的配置文件，可通过用户界面管理绑定、行为、服务和诊断的特定设置。 使用服务配置编辑器，可以管理现有 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置文件的设置，以及可执行文件、COM+ 服务和 Web 承载的服务的设置。 用服务配置编辑器打开 Web 承载的服务时，会同时显示服务自己的配置节和从上级节点继承的配置节。  
+ 如果已经有一些符合标准 System.Configuration 架构的配置文件，可通过用户界面管理绑定、行为、服务和诊断的特定设置。 使用服务配置编辑器，可以管理现有 WCF 配置文件及可执行文件、COM+ 服务和 Web 承载的服务的设置。 用服务配置编辑器打开 Web 承载的服务时，会同时显示服务自己的配置节和从上级节点继承的配置节。  
   
- 由于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置设置位于配置文件的 `<system.serviceModel>` 节中，编辑器只会对此元素的内容进行操作，而不会访问同一文件中的其他元素。 可以直接定位到现有配置文件，也可以选择包含服务、虚拟目录或 COM+ 服务的程序集。 编辑器将为该特定服务加载配置文件，并允许用户添加新元素或编辑嵌套在配置文件的 `<system.serviceModel>` 节中的现有元素。  
+ 由于 WCF 配置设置位于配置文件的 `<system.serviceModel>` 节中，编辑器只会对此元素的内容进行操作，而不会访问同一文件中的其他元素。 可以直接定位到现有配置文件，也可以选择包含服务、虚拟目录或 COM+ 服务的程序集。 编辑器将为该特定服务加载配置文件，并允许用户添加新元素或编辑嵌套在配置文件的 `<system.serviceModel>` 节中的现有元素。  
   
  编辑器支持 IntelliSense，并强制遵从架构要求。 可以保证生成的输出符合配置文件的架构，并具有在语法上正确的数据值。 但是，编辑器不保证配置文件在语义上是有效的。 换句话说，编辑器不保证配置文件可与它配置的服务协同工作。  
   
@@ -45,7 +45,7 @@ Windows Communication Foundation (WCF) 服务配置编辑器 (SvcConfigEditor.ex
   
  C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe  
   
- 启动服务配置编辑器后，你可以使用**文件 / 打开**菜单浏览服务或你想要管理的程序集。 可以直接打开配置文件、浏览 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] /COM+ 服务，以及打开 Web 承载的服务的配置文件。  
+ 启动服务配置编辑器后，你可以使用**文件 / 打开**菜单浏览服务或你想要管理的程序集。 可以直接打开配置文件、浏览 WCF /COM+ 服务，以及打开 Web 承载的服务的配置文件。  
   
  服务配置编辑器的用户界面分成以下几个区域：  
   
@@ -57,7 +57,7 @@ Windows Communication Foundation (WCF) 服务配置编辑器 (SvcConfigEditor.ex
   
 ### <a name="opening-a-configuration-file"></a>打开配置文件  
   
-1.  启动服务配置编辑器，通过使用命令窗口导航到你[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]安装位置，然后键入`SvcConfigEditor.exe`。  
+1.  通过使用命令窗口导航到你 WCF 的安装位置，，然后键入启动服务配置编辑器`SvcConfigEditor.exe`。  
   
 2.  从**文件**菜单上，选择**打开**单击你想要管理的文件的类型。  
   
@@ -208,7 +208,7 @@ Windows Communication Foundation (WCF) 服务配置编辑器 (SvcConfigEditor.ex
 3.  选择要编辑的绑定元素扩展。 该元素的设置将出现在右窗格中，可在其中编辑这些设置。  
   
 ### <a name="diagnostics"></a>诊断  
- **诊断**节点可显示在配置文件中的所有诊断设置。 它使您能够开关性能计数器、启用或禁用 Windows Management Instrumentation (WMI)、配置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 跟踪，以及配置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 消息日志记录。 中的设置**诊断**节点对应于 <`system.diagnostics`> 部分中，和`<diagnostics>`主题中`<system.serviceModel>`配置文件中。  
+ **诊断**节点可显示在配置文件中的所有诊断设置。 这样可以打开或关闭性能计数器、 启用或禁用 Windows Management Instrumentation (WMI)、 配置 WCF 跟踪和配置 WCF 消息日志记录。 中的设置**诊断**节点对应于 <`system.diagnostics`> 部分中，和`<diagnostics>`主题中`<system.serviceModel>`配置文件中。  
   
  当你单击**诊断**节点，您可以查看或执行诊断任务**摘要页**中**详细信息窗格**。  
   
@@ -225,18 +225,18 @@ Windows Communication Foundation (WCF) 服务配置编辑器 (SvcConfigEditor.ex
 2.  若要启用 WMI 提供程序，请单击**启用 WMI 提供程序**链接。  
   
 #### <a name="enabling-wcf-tracing"></a>启用 WCF 跟踪  
- 可创建具有标准属性的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 跟踪文件，或者设置自定义的跟踪文件。  
+ 可创建具有标准属性的 WCF 跟踪文件，或者设置自定义的跟踪文件。  
   
 1.  单击**诊断**节点。  
   
 2.  单击**启用跟踪**。  
   
-3.  单击**跟踪级别**链接调整跟踪级别。 有六种跟踪级别：“禁用”、“严重”、“错误”、“警告”、“信息”和“详细”。 **活动跟踪**和**传播活动**选项使您能使用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]活动跟踪功能。  
+3.  单击**跟踪级别**链接调整跟踪级别。 有六种跟踪级别：“禁用”、“严重”、“错误”、“警告”、“信息”和“详细”。 **活动跟踪**和**传播活动**选项使您能使用 WCF 活动跟踪功能。  
   
 4.  单击跟踪侦听器名称指定跟踪文件和选项。  
   
 #### <a name="enabling-wcf-logging"></a>启用 WCF 日志记录  
- 可创建具有标准属性的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 跟踪文件，或者设置自定义的跟踪文件。  
+ 可创建具有标准属性的 WCF 跟踪文件，或者设置自定义的跟踪文件。  
   
 1.  单击**诊断**节点。  
   
@@ -316,7 +316,7 @@ Windows Communication Foundation (WCF) 服务配置编辑器 (SvcConfigEditor.ex
  使用本节，可以通过协议地址方案和可能的绑定之间已定义的映射，来设置不同协议（如 http、tcp、MSMQ 或 net.pipe）的默认绑定类型。 还可以添加对其他协议的新映射。  
   
 #### <a name="extensions"></a>扩展  
- 可注册新的绑定扩展、绑定元素扩展、标准终结点扩展和行为扩展以在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置中使用。 扩展是名称/类型对。 名称定义扩展在配置中的名称，而类型则实现该扩展。 有四种类型的扩展：  
+ 在 WCF 配置中使用，可以注册新的绑定扩展、 绑定元素扩展、 标准终结点扩展和行为扩展。 扩展是名称/类型对。 名称定义扩展在配置中的名称，而类型则实现该扩展。 有四种类型的扩展：  
   
 -   绑定扩展定义整个绑定类型。 示例：`basicHttpBinding`。  
   
@@ -326,7 +326,7 @@ Windows Communication Foundation (WCF) 服务配置编辑器 (SvcConfigEditor.ex
   
 -   行为元素扩展定义行为的元素。 示例：`clientVia`。  
   
- 可像使用同类型的任何其他 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 组件一样使用已在配置中注册的扩展。  
+ 可像使用同类型的任何其他 WCF 组件一样使用已在配置中注册的扩展。  
   
 ##### <a name="adding-a-new-extension"></a>添加新扩展  
  选择高级节点中的某个扩展节点：  
@@ -343,11 +343,11 @@ Windows Communication Foundation (WCF) 服务配置编辑器 (SvcConfigEditor.ex
  本节介绍如何为服务主机环境定义实例化设置。  
   
 ### <a name="creating-a-configuration-file-using-the-wizard"></a>使用向导创建配置文件  
- 创建新配置文件的一种方法是使用“新建服务元素向导”。 该向导查找计算机上已安装的服务类型以及其他与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 兼容的元素（包括 COM+ 和 Web 承载的虚拟目录），并加载它们以方便创建配置。  
+ 创建新配置文件的一种方法是使用“新建服务元素向导”。 该向导查找已安装的服务类型和其他元素符合的计算机上，包括 COM + 和 Web 承载的虚拟目录，WCF，并加载它们以方便创建更简化的配置。  
   
 #### <a name="creating-a-configuration-file"></a>创建配置文件  
   
-1.  启动服务配置编辑器，通过使用命令窗口导航到你[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]安装位置，然后键入`SvcConfigEditor.exe`。  
+1.  通过使用命令窗口导航到你 WCF 的安装位置，，然后键入启动服务配置编辑器`SvcConfigEditor.exe`。  
   
 2.  从**文件**菜单上，选择**打开**单击**可执行文件**， **COM + 服务**，或**WebHosted 服务**，具体取决于你想要创建的配置文件的类型。  
   
@@ -370,7 +370,7 @@ Windows Communication Foundation (WCF) 服务配置编辑器 (SvcConfigEditor.ex
   
 2.  在第一页中，从树中选择 COM+ 应用程序。 如果在树中找不到你的 COM+ 应用程序，请验证它是否已安装在组件服务中，并已在全局程序集缓存 (GAC) 中注册。  
   
-3.  在下一页中，选择要公开哪个（哪些）方法作为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。 默认情况下，COM+ 应用程序中支持的所有方法都将显示并被选中。  
+3.  在下一页中，选择将要哪个（哪些）方法公开为 WCF 服务。 默认情况下，COM+ 应用程序中支持的所有方法都将显示并被选中。  
   
 4.  选择宿主方法。  
   
@@ -390,6 +390,6 @@ Windows Communication Foundation (WCF) 服务配置编辑器 (SvcConfigEditor.ex
     >  也可以直接打开并编辑包含 COM 约定的配置文件。  
   
 ## <a name="security"></a>安全性  
- 不能保证配置编辑器生成的服务配置文件是安全的。 请参阅[安全](../../../docs/framework/wcf/feature-details/security.md)文档以了解如何保护你[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务。  
+ 不能保证配置编辑器生成的服务配置文件是安全的。 请参阅[安全](../../../docs/framework/wcf/feature-details/security.md)文档以了解如何保护您的 WCF 服务。  
   
- 此外，只能使用配置编辑器来读取和写入有效的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置元素。 工具将忽略符合架构的用户定义元素。 工具不会尝试从配置文件中移除这些元素，或确定它们对已知 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 元素的影响。 用户需要负责确定这些元素是否会对应用程序或系统构成威胁。
+ 此外，只能使用配置编辑器来读取和写入有效的 WCF 配置元素。 工具将忽略符合架构的用户定义元素。 工具不会尝试从配置文件中移除这些元素，或确定它们对已知 WCF 元素的影响。 用户需要负责确定这些元素是否会对应用程序或系统构成威胁。

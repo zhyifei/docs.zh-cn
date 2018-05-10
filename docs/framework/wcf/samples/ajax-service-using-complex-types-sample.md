@@ -2,21 +2,21 @@
 title: 使用复杂类型的 AJAX 服务示例
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: e79d382fb6166285fad4eab7a59b17e305c88ed1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c284fbef36ee7f6dda725ba9a3db9b98fb1549ed
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>使用复杂类型的 AJAX 服务示例
 此示例演示如何使用 Windows Communication Foundation (WCF) 创建 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务来创建复杂类型的实例并将它们发送服务和客户端作为 JavaScript 对象表示法 (JSON) 之间。 可以从 Web 浏览器客户端使用 JavaScript 代码来访问 AJAX 服务。 此示例基于[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对 AJAX 的支持经过了优化，以便通过 <xref:System.Web.UI.ScriptManager> 控件与 ASP.NET AJAX 一起使用。 有关使用示例[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]与 ASP.NET AJAX，请参阅[AJAX 示例](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
+ 在 WCF 中的 AJAX 支持进行了优化以用于通过 ASP.NET AJAX<xref:System.Web.UI.ScriptManager>控件。 有关使用 ASP.NET AJAX 的 WCF 示例，请参阅[AJAX 示例](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 以下示例中的服务是不包含 AJAX 特定代码的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 由于未应用 <xref:System.ServiceModel.Web.WebGetAttribute> 属性，因此将使用默认的 HTTP 谓词（“POST”）。 该服务有一个操作 `DoMath`，该操作返回一个名为 `MathResult` 的复杂类型。 该复杂类型是标准的数据协定类型，也不包含特定于 AJAX 的代码。  
+ 下面的示例中的服务是不包含 AJAX 特定代码的 WCF 服务。 由于未应用 <xref:System.ServiceModel.Web.WebGetAttribute> 属性，因此将使用默认的 HTTP 谓词（“POST”）。 该服务有一个操作 `DoMath`，该操作返回一个名为 `MathResult` 的复杂类型。 该复杂类型是标准的数据协定类型，也不包含特定于 AJAX 的代码。  
 
 ```csharp
 [DataContract]  

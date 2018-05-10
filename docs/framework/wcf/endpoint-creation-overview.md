@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 91e5e45d380ec6a8229a7272c841e1a345423c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46ca6294d68537e86a319b55d8c11e3ae0084738
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="endpoint-creation-overview"></a>终结点创建概述
-与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点为客户端提供对 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务所提供的功能的访问权。 本节描述终结点的结构，并概述如何在配置和代码中定义终结点。  
+与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点提供客户端访问 WCF 服务提供的功能。 本节描述终结点的结构，并概述如何在配置和代码中定义终结点。  
   
 ## <a name="the-structure-of-an-endpoint"></a>终结点的结构  
  每个终结点包含一个指示可在何处找到此终结点的地址、一个指定客户端如何与此终结点进行通信的绑定和一个标识可用方法的协定。  
   
--   **地址**。 地址唯一标识终结点并告知潜在客户服务的所在位置。 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 对象模型中，地址由 <xref:System.ServiceModel.EndpointAddress> 地址表示，该地址包含统一资源标识符 (URI) 和地址属性，而地址属性包括标识、一些 Web 服务描述语言 (WSDL) 元素和可选标头的集合。 可选标头提供用于标识终结点或与终结点交互的其他详细寻址信息。 有关详细信息，请参阅[指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
+-   **地址**。 地址唯一标识终结点并告知潜在客户服务的所在位置。 通过 WCF 对象模型表示<xref:System.ServiceModel.EndpointAddress>地址包含统一资源标识符 (URI) 和地址属性包括标识、 一些 Web 服务描述语言 (WSDL) 元素和可选的集合标头。 可选标头提供用于标识终结点或与终结点交互的其他详细寻址信息。 有关详细信息，请参阅[指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
   
 -   **绑定**。 绑定指定如何与终结点进行通信。 绑定指定终结点如何与世界通信，包括使用哪种传输协议（例如，TCP 或 HTTP）、对消息使用何种编码（例如，文本或二进制），以及需要何种安全需求（例如，安全套接字层 [SSL] 或 SOAP 消息安全）。 有关详细信息，请参阅[到配置的服务和客户端使用的绑定](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   

@@ -2,11 +2,11 @@
 title: 导出 WCF 扩展的自定义元数据
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c2ae547f10e96a1fdc16fc428e98145fc81c59d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>导出 WCF 扩展的自定义元数据
 在 Windows Communication Foundation (WCF) 中，元数据导出是描述服务终结点并将它们投影到客户端可用来了解如何使用服务的并行的标准化表示形式的过程。 自定义元数据包含系统提供的元数据导出程序无法导出的 XML 元素。 通常，这包括自定义 WSDL 元素（用于用户定义的行为）、绑定元素和策略断言（与绑定和协定的功能和要求有关）。  
@@ -14,7 +14,7 @@ ms.lasthandoff: 05/04/2018
  本节介绍如何导出自定义 WSDL 或策略断言，而不关注导出过程本身。 有关如何使用导出和导入元数据，无论元数据是否自定义或系统构造的类型的详细信息，请参阅[导出和导入元数据](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
   
 ## <a name="overview"></a>概述  
- 当使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 发布元数据时，会检查 <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>，并为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可用系统提供的属性和绑定提供支持的所有协定和绑定生成 XSD 和 WSDL（包括策略断言）。 但是，自定义行为属性或绑定元素需要获得支持才能正确导出。  
+ 当使用发布元数据时<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>、<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>检查和的所有协定和绑定 WCF 可支持使用系统提供的属性和绑定生成 XSD 和 WSDL （包括策略断言）。 但是，自定义行为属性或绑定元素需要获得支持才能正确导出。  
   
  本节介绍以下内容：  
   

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - credential validation [WCF]
 - credentials [WCF], validation
 ms.assetid: da831bec-e281-4d44-b343-437b5eef688e
-ms.openlocfilehash: 00a49f9746c7073e3abdb353b38a76f6eea099f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9b340c01a9eb4ce4007e93f2b38e292cd6543ba1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-credential-and-credential-validation"></a>自定义凭据和凭据验证
 在 Windows Communication Foundation (WCF) 安全取决于服务和客户端之间的凭据交换。 大多数安全方案均可使用常见的凭据类型来实现，如 Windows (Kerberos)、用户名和密码以及证书。 而本节中的主题针对需要使用新类型的凭据的情况说明如何处理和验证这些新类型。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：创建使用自定义证书验证程序的服务](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- 介绍如何通过从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 类继承来自定义 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 验证。  
+ 说明如何通过从继承自定义 WCF 验证<xref:System.IdentityModel.Selectors.X509CertificateValidator>类。  
   
  [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  演示如何扩展<xref:System.ServiceModel.Description.ClientCredentials>和<xref:System.ServiceModel.Description.ServiceCredentials>类以容纳新凭据类型。 这是介绍如何创建自定义凭据类型的系列主题中的第一个主题。  

@@ -2,11 +2,11 @@
 title: 客户端验证
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: a5c1c5f907a797bff3dff490cbc953879ab69718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e34ca8e1bb14f610e363c02eaeb94b7fa5e27c7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client-validation"></a>客户端验证
 服务通常发布元数据以启用客户端代理类型的自动生成和配置。 如果服务不受信任，客户端应用程序应该验证元数据是否符合客户端应用程序有关安全性、事务、服务协定类型等方面的策略。 下面的示例演示如何编写一个客户端终结点行为，用于验证服务终结点以确保可以安全地使用该服务终结点。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/04/2018
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书，请确保清除已安装在 CurrentUser-的服务证书的 WCF 示例 TrustedPeople 存储中。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="see-also"></a>请参阅  
  [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)

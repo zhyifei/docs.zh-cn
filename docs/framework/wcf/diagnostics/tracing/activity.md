@@ -2,19 +2,19 @@
 title: 活动
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3100d5bb60dc1b11d23b0705f4d6f23a3675ac51
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="activity"></a>活动
 本主题介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动跟踪。 活动是帮助用户缩小故障范围的处理单位。 在同一活动中发生的错误直接相关。 例如，消息解密失败可导致操作失败。 操作失败和消息解密失败的跟踪出现在同一活动中，表明解密错误和请求错误之间直接相关。  
   
 ## <a name="configuring-activity-tracing"></a>配置活动跟踪  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 提供预定义的活动，用于处理应用程序 (请参阅[活动列表](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 您还可以用编程方式定义活动，以便对用户跟踪进行分组。 有关详细信息，请参阅[发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。  
+ WCF 提供了用于处理应用程序的预定义的活动 (请参阅[活动列表](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 您还可以用编程方式定义活动，以便对用户跟踪进行分组。 有关详细信息，请参阅[发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。  
   
- 若要在运行时发出活动跟踪，请对 `ActivityTracing` 跟踪源或其他 `System.ServiceModel` 或自定义跟踪源使用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 设置，如下面的配置代码所示。  
+ 若要在运行时发出活动跟踪，使用`ActivityTracing`设置`System.ServiceModel`跟踪源或其他 WCF 或自定义跟踪源，如下面的配置代码所示。  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
@@ -88,7 +88,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   活动表示一个处理边界，该边界对于系统管理员可能很有意义，或者可以用来实现可支持性。  
   
--   无论是在客户端上还是在服务器上，每个 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 方法都由开始一个新活动、然后（工作完成后）结束该新活动并返回到环境活动来限定。  
+-   每个 WCF 方法，同时在客户端和服务器限制由开始一个新的活动，然后 （工作完成） 后结束该新活动并返回到环境的活动。  
   
 -   长时间运行（正在运行）的活动（例如，侦听连接或等待消息）由相应的开始/停止标记表示。  
   

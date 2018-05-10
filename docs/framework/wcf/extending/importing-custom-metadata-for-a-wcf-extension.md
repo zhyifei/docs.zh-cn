@@ -2,21 +2,21 @@
 title: 导入 WCF 扩展的自定义元数据
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: bb7124cbce3fa38d00446b6568c85fc3136ee180
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99e2bd7c0ce1fd4a8154a0d6d9650487197d98d8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>导入 WCF 扩展的自定义元数据
-在 Windows Communication Foundation (WCF) 中，元数据导入是从其元数据生成服务或其组成部分的抽象表示的过程。 例如，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以从服务的 WSDL 文档导入 <xref:System.ServiceModel.Description.ServiceEndpoint> 实例、<xref:System.ServiceModel.Channels.Binding> 实例或 <xref:System.ServiceModel.Description.ContractDescription> 实例。 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中导入服务元数据，请使用 <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> 抽象类的实现。 派生自 <xref:System.ServiceModel.Description.MetadataImporter> 类的类型实现对导入元数据格式的支持，这些元数据格式利用了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 WS-Policy 导入逻辑。  
+在 Windows Communication Foundation (WCF) 中，元数据导入是从其元数据生成服务或其组成部分的抽象表示的过程。 例如，可以导入 WCF<xref:System.ServiceModel.Description.ServiceEndpoint>情况下，<xref:System.ServiceModel.Channels.Binding>实例或<xref:System.ServiceModel.Description.ContractDescription>实例从 WSDL 文档的服务。 要导入服务元数据在 WCF 中，使用的实现<xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>抽象类。 派生自的类型<xref:System.ServiceModel.Description.MetadataImporter>类实现支持对导入元数据格式利用 WS 策略导入 WCF 中的逻辑。  
   
  自定义元数据包含系统提供的元数据导入程序无法导入的 XML 元素。 通常情况下，这包括自定义 WSDL 扩展和自定义策略断言。  
   
  本节描述如何导入自定义 WSDL 扩展和策略断言。 本节的重点并非导入过程本身。 有关如何使用导出和导入元数据，无论元数据是否自定义或系统支持的类型的详细信息，请参阅[导出和导入元数据](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
   
 ## <a name="overview"></a>概述  
- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 类型是 <xref:System.ServiceModel.Description.MetadataImporter> 所包含的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 抽象类的实现。 <xref:System.ServiceModel.Description.WsdlImporter> 类型可以导入含有附加策略（这些策略捆绑在 <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> 对象中）的 WSDL 元数据。 默认导入程序无法识别的策略断言和 WSDL 扩展会被传送给任何已注册的自定义策略和 WSDL 导入程序，以便进行导入。 通常，导入程序的实现应该能够支持用户定义的绑定元素或修改已导入的协定。  
+ <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>类型是实现的<xref:System.ServiceModel.Description.MetadataImporter>抽象 WCF 中包含的类。 <xref:System.ServiceModel.Description.WsdlImporter> 类型可以导入含有附加策略（这些策略捆绑在 <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> 对象中）的 WSDL 元数据。 默认导入程序无法识别的策略断言和 WSDL 扩展会被传送给任何已注册的自定义策略和 WSDL 导入程序，以便进行导入。 通常，导入程序的实现应该能够支持用户定义的绑定元素或修改已导入的协定。  
   
  本节介绍以下内容：  
   

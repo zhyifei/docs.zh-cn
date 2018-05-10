@@ -2,14 +2,14 @@
 title: 高级筛选器
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-ms.openlocfilehash: 75106bb203391d18c46fdf03d3bb2624ceec834e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: de8577be2d56ec3c942fd8736e350234daf6a35a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-filters"></a>高级筛选器
-此示例演示 Windows Communication Foundation (WCF) 路由服务。 路由服务是一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 组件，使用该组件可方便地在应用程序中包含基于内容的路由器。 此示例采用标准的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 计算器示例，使用路由服务进行通信。 此示例演示如何使用消息筛选器和消息筛选器表定义基于内容的路由逻辑。  
+此示例演示 Windows Communication Foundation (WCF) 路由服务。 路由服务是可以轻松地在你的应用程序中包含基于内容的路由器的 WCF 组件。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。 此示例演示如何使用消息筛选器和消息筛选器表定义基于内容的路由逻辑。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

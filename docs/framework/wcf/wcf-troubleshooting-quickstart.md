@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5a6ea4f3ba121f419d1a8c46fc2534988a93d554
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e752f6f4428d01474d643f1571935cb7d96d41ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑难解答快速入门
 本主题列出了一些客户开发 WCF 客户端和服务时所遇到的已知问题。 如果您遇到的问题不在此列表中，我们建议您为您的服务配置跟踪。 这将生成一个跟踪文件，您可以使用跟踪文件查看器查看它并获取有关服务中可能发生的异常的详细信息。 有关配置跟踪的详细信息，请参阅： [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 有关跟踪文件查看器的详细信息，请参阅： [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -153,7 +153,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>当答复未包含任何数据时，单向操作与请求-答复操作的返回速度似乎基本相同。 发生了什么情况？  
- 指定一个操作为单向只表示操作协定接受输入消息，而不返回输出消息。 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]中，当出站数据已写入网络或引发异常时，所有客户端调用都将返回。 单向操作以相同方式工作，如果找不到服务则它们可以引发；或者如果服务没有准备好从网络接受数据则它们可以阻止。 通常在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]中，这会致单向调用返回到客户端的速度比请求-答复更快；但是，减慢出站数据在网络上的发送速度的任何情况都会降低单向操作以及请求-答复操作的速度。 有关详细信息，请参阅[单向服务](../../../docs/framework/wcf/feature-details/one-way-services.md)和[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
+ 指定一个操作为单向只表示操作协定接受输入消息，而不返回输出消息。 在 WCF 中，所有客户端调用返回时的出站数据已写入到网络或引发异常。 单向操作以相同方式工作，如果找不到服务则它们可以引发；或者如果服务没有准备好从网络接受数据则它们可以阻止。 通常在 WCF 中，这会导致单向调用返回到客户端速度比请求-答复; 更快但是，减慢速度通过网络上发送出站数据的任何情况都会降低速度，这是单向操作以及请求-答复操作。 有关详细信息，请参阅[单向服务](../../../docs/framework/wcf/feature-details/one-way-services.md)和[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>我对我的服务使用的是 X.509 证书，并且获得一个 System.Security.Cryptography.CryptographicException。 发生了什么情况？  
@@ -169,7 +169,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>我正在使用我的跟踪工具之一，并且获得一个 EndpointNotFoundException。 发生了什么情况？  
- 如果使用的跟踪工具不符合系统提供的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 跟踪机制，并且收到一个指示存在地址筛选器不匹配的 <xref:System.ServiceModel.EndpointNotFoundException> ，则需要使用 <xref:System.ServiceModel.Description.ClientViaBehavior> 类将消息定向到跟踪实用工具，并让该实用工具将这些消息重定向到服务地址。 <xref:System.ServiceModel.Description.ClientViaBehavior> 类更改 `Via` 寻址标头，以独立于最终接收方（由 `To` 寻址标头指示）指定下一个网络地址。 但是，执行此操作时请不要更改终结点地址，它用于设立 `To` 值。  
+ 如果你使用不是系统提供 WCF 跟踪机制的跟踪工具，你收到<xref:System.ServiceModel.EndpointNotFoundException>，该值指示没有地址筛选器不匹配，您需要使用<xref:System.ServiceModel.Description.ClientViaBehavior>类，以将消息定向到跟踪实用工具和让该实用工具将这些消息重定向到服务地址。 <xref:System.ServiceModel.Description.ClientViaBehavior> 类更改 `Via` 寻址标头，以独立于最终接收方（由 `To` 寻址标头指示）指定下一个网络地址。 但是，执行此操作时请不要更改终结点地址，它用于设立 `To` 值。  
   
  下面的代码示例演示一个示例客户端配置文件。  
   

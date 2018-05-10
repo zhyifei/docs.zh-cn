@@ -5,22 +5,22 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d2932293536f875d8986d8d49842cddc196ced0f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>如何：创建 Windows Communication Foundation 客户端
 这是创建 Windows Communication Foundation (WCF) 应用程序所需的六项任务的第四个。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
   
- 本主题描述如何检索 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务中的元数据，以及如何使用这些元数据创建可以访问该服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 代理。 通过使用 Visual Studio 提供的“添加服务引用”功能完成此任务。 此工具从服务的 MEX 终结点获取元数据，并以所选语言（默认情况下为 C#）为客户端代理生成托管源代码文件。 除了创建客户端代理外，该工具还会创建或更新客户端配置文件，以使客户端应用程序能够连接至其某个终结点上的服务。  
+ 本主题介绍如何从 WCF 服务中检索元数据并使用它来创建 WCF 代理可以访问该服务。 通过使用 Visual Studio 提供的“添加服务引用”功能完成此任务。 此工具从服务的 MEX 终结点获取元数据，并以所选语言（默认情况下为 C#）为客户端代理生成托管源代码文件。 除了创建客户端代理外，该工具还会创建或更新客户端配置文件，以使客户端应用程序能够连接至其某个终结点上的服务。  
   
 > [!NOTE]
 >  你还可以使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具生成的代理类和配置，而非使用在 Visual Studio 添加服务引用。  
   
 > [!WARNING]
->  当在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中从某个类库项目调用 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 服务时，可以使用添加服务引用功能自动生成代理和关联配置文件。  该类库项目不会使用配置文件。 您需要将生成的配置文件中的设置添加到将调用该类库的可执行文件的 app.config 文件中。  
+>  当从类库项目中调用 WCF 服务时[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]可以使用添加服务引用功能自动生成代理和关联的配置文件。  该类库项目不会使用配置文件。 您需要将生成的配置文件中的设置添加到将调用该类库的可执行文件的 app.config 文件中。  
   
  客户端应用程序使用生成的代理类与服务通信。 中介绍了此过程[如何： 使用客户端](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)。  
   

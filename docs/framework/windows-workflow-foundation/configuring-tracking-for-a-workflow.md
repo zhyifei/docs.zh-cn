@@ -2,11 +2,11 @@
 title: 为工作流配置跟踪
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 70697d82242ab0704dd67129940a6660d300bef9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23a20b014962b74b6408c8b3c9ac6764d4a42d56
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>为工作流配置跟踪
 工作流可以按以下三种方法执行：  
@@ -46,7 +46,7 @@ instance.Extensions.Add(trackingParticipant);
 ```  
   
 ### <a name="configuring-workflow-service-tracking"></a>配置工作流服务跟踪  
- 当工作流承载于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务宿主中时可以将其作为 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 服务公开。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 是基于工作流的服务的指定 .NET ServiceHost 实现。 本节介绍如何为在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中运行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流服务配置跟踪。 通过在 Web.config 文件（对于 Web 承载的服务）或 App.config 文件（对于在独立的应用程序中承载的服务，例如在控制台应用程序中承载的服务）中指定服务行为，或通过使用代码向服务宿主的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中添加与跟踪相关的行为，可以完成上述配置。  
+ 工作流可以作为 WCF 服务中承载时公开<xref:System.ServiceModel.Activities.WorkflowServiceHost>服务主机。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 是基于工作流的服务的指定 .NET ServiceHost 实现。 本节介绍如何为在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中运行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流服务配置跟踪。 通过在 Web.config 文件（对于 Web 承载的服务）或 App.config 文件（对于在独立的应用程序中承载的服务，例如在控制台应用程序中承载的服务）中指定服务行为，或通过使用代码向服务宿主的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中添加与跟踪相关的行为，可以完成上述配置。  
   
  对于 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务，您可以使用配置文件中的 <<xref:System.Activities.Tracking.EtwTrackingParticipant>> 元素添加 `behavior`，如以下示例所示。  
   

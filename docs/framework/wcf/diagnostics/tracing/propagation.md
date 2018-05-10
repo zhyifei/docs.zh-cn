@@ -2,11 +2,11 @@
 title: 传播
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagation"></a>传播
 本主题介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动传播。  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- 活动传播是一项可配置的功能，此功能允许 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 向出站消息添加标头，其中包括 TLS 上的活动 ID。 通过在服务器端的后续跟踪上包括此 ID，可以关联客户端和服务器活动。  
+ 活动传播是一种可配置的功能，会导致 WCF 将标头添加到出站消息，其中包括 TLS 上的活动 ID。 通过在服务器端的后续跟踪上包括此 ID，可以关联客户端和服务器活动。  
   
 ## <a name="propagation-definition"></a>传播定义  
  如果下列所有条件都适用，则活动 M 的 gAId 会传播到活动 N。  

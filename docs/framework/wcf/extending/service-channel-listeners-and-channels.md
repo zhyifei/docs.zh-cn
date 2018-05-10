@@ -2,11 +2,11 @@
 title: 服务：通道侦听器和通道
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
-ms.openlocfilehash: 5f5acff6ca933006707a863ea5ba04cd01cfb93e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eca7061243fa7f006079d19c3eaaf86ba906bca2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-listeners-and-channels"></a>服务：通道侦听器和通道
 共有三种类别的通道对象：通道、通道侦听器和通道工厂。 通道是应用程序和通道堆栈之间的接口。 通道侦听器负责在接收（即侦听）端创建通道，这通常是为了响应新传入的消息或连接。 通道工厂负责在发送端创建通道，以便启动与终结点的通信。  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
  该过程在概念上可建模为每个通道中的一个队列，尽管在具体实现中可能并不实际使用队列。 通道侦听器负责从下面的层或者从网络接收消息，并将收到的消息放入队列。 通道负责从队列中获取消息，并在上面的层请求消息（例如通过对通道调用 `Receive`）时将收到的消息传送到该层。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为上述过程提供基类帮助器。 (本主题中讨论的通道帮助程序类关系图，请参阅[通道模型概述](../../../../docs/framework/wcf/extending/channel-model-overview.md)。)  
+ WCF 为上述过程提供基类帮助器。 (本主题中讨论的通道帮助程序类关系图，请参阅[通道模型概述](../../../../docs/framework/wcf/extending/channel-model-overview.md)。)  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject>类实现<xref:System.ServiceModel.ICommunicationObject>并强制执行的步骤 2 中所述的状态机[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
   

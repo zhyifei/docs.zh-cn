@@ -2,17 +2,17 @@
 title: 查看消息日志
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 56e4fb1ea8c67c35df440a2088034327788f6f15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4fa205b52e3d19d2421d93297b5689422775f719
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="viewing-message-logs"></a>查看消息日志
 本主题描述如何查看消息日志。  
   
 ## <a name="viewing-message-logs-in-the-service-trace-viewer"></a>在服务跟踪查看器中查看消息日志  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 处理消息时，消息会进行转换。 因此，记录的消息只反映记录时的消息内容，而不是网络上的内容。  
+ WCF 处理，消息会进行转换。 因此，记录的消息只反映记录时的消息内容，而不是网络上的内容。  
   
  由于消息日志记录的输出与消息的传输格式无关，因此，消息日志记录始终输出已解码的消息。 如果已正确配置消息日志记录，则记录的所有消息都应采用纯文本格式。 例如，使用二进制消息编码器不会影响已记录消息的格式（纯文本）。  
   

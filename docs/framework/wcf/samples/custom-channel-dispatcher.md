@@ -2,11 +2,11 @@
 title: 自定义通道调度程序
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f7bb67f45c3aa9eb0cb58fa2f30744d5500fab0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-channel-dispatcher"></a>自定义通道调度程序
 此示例演示如何通过直接实现 <xref:System.ServiceModel.ServiceHostBase> 以自定义方式生成通道堆栈，以及如何在 Web 宿主环境中创建自定义通道调度程序。 通道调度程序与 <xref:System.ServiceModel.Channels.IChannelListener> 交互以接受通道并从通道堆栈中检索消息。 此示例还提供一个基本示例，用于演示如何使用 <xref:System.ServiceModel.Activation.VirtualPathExtension> 在 Web 宿主环境中生成通道堆栈。  
@@ -22,13 +22,13 @@ ms.lasthandoff: 05/04/2018
  调度程序首先打开通道侦听器，然后接受单一答复通道。 通过该通道，调度程序开始在一个无限循环中发送消息（请求）。 对于每个请求，它都会创建一条答复消息，并将其发送回客户端。  
   
 ## <a name="creating-a-response-message"></a>创建响应消息  
- 消息处理是在 `MyServiceManager` 类型中实现的。 在 `HandleRequest` 方法中，将首先检查消息的 `Action` 标头以查看是否支持该请求。 一个预定义的 SOAP 操作"http://tempuri.org/HelloWorld/Hello"定义以提供消息筛选。 这类似于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 <xref:System.ServiceModel.ServiceHost> 实现中的服务协定概念。  
+ 消息处理是在 `MyServiceManager` 类型中实现的。 在 `HandleRequest` 方法中，将首先检查消息的 `Action` 标头以查看是否支持该请求。 一个预定义的 SOAP 操作"http://tempuri.org/HelloWorld/Hello"定义以提供消息筛选。 它类似于中的 WCF 实现的服务协定概念<xref:System.ServiceModel.ServiceHost>。  
   
  对于正确的 SOAP 操作情况，此示例将检索请求的消息数据，并生成一个与该请求对应的响应，类似于在 <xref:System.ServiceModel.ServiceHost> 示例中所看到的内容。  
   
  在此示例中，通过返回自定义 HTML 消息对 HTTP-GET 谓词进行了特殊处理，以便您可以通过浏览器来浏览服务，查看是否已正确编译该服务。 如果 SOAP 操作不匹配，则发送回一条错误消息，指示不支持该请求。  
   
- 此示例的客户端是一个常规 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端，它不会假定服务中的任何内容。 这样，该服务专门设计为与您从常规 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.ServiceHost> 实现获取的内容进行匹配。 因此，在客户端上仅需要一个服务协定。  
+ 此示例的客户端是正常的 WCF 客户端，不会接受来自服务的任何内容。 因此，该服务专门设计以匹配你从正常的 WCF 获取<xref:System.ServiceModel.ServiceHost>实现。 因此，在客户端上仅需要一个服务协定。  
   
 ## <a name="using-the-sample"></a>使用示例  
  运行客户端应用程序将直接生成以下输出。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 5ed09947350a284dd7701b37bad93912f79f7e3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2fa8d753d5fb168c14ee71cbbf6de62e0e4aff9e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>如何：使用 Windows 凭据保护服务的安全
 本主题演示如何启用 Windows Communication Foundation (WCF) 服务驻留在 Windows 域中并由同一个域中的客户端上的传输安全。 有关此方案的详细信息，请参阅[使用 Windows 身份验证的传输安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 有关示例应用程序，请参阅[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/04/2018
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>通过代码在客户端中使用绑定  
   
-1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 有关详细信息，请参阅[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承自 <xref:System.ServiceModel.ClientBase%601> 类，这确保了每个客户端都具有与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务通信所需的构造函数、方法和属性。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
+1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 有关详细信息，请参阅[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承自<xref:System.ServiceModel.ClientBase%601>类，这确保每个客户端具有必要的构造函数、 方法和属性与 WCF 服务进行通信。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
   
 2.  在客户端程序的 `Main` 方法的开头插入此过程的代码。  
   

@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
  你可以选择多种方法来限制用于确定新大小的单元格类型。 例如，你可以将控件配置为根据当前限制的行中的值自动调整列宽。 使用此方法，你可以提高处理大量行时的工作效率，尽管在这种情况下，你可能想要使用调整方法（例如， <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> ）在选择时调整大小。  
   
- 有关自动调整大小的详细信息，请参阅 [Sizing Options in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)。  
+ 有关自动调整大小的详细信息，请参阅 [Windows 窗体 DataGridView 控件中的大小调整选项](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)。  
   
  以下代码示例演示了可用于自动调整大小的选项。  
   

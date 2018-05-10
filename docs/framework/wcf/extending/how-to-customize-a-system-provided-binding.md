@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 40efa49836561351dc14c2cb49d906a6d344a5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04b81689d7d625d519a0a9fc8b1fa6df3df16ada
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>如何：自定义系统提供的绑定
 Windows Communication Foundation (WCF) 包括多个的系统提供绑定，允许您配置基础绑定元素的属性的某些但并非所有属性。 本主题演示如何设置绑定元素上的属性以创建自定义绑定。  
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) 包括多个的系统提供绑定，允�
   
  有关创建和扩展自定义绑定的详细信息，请参阅[扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
- 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]所有绑定的都组成*绑定元素*。 每个绑定元素都是从 <xref:System.ServiceModel.Channels.BindingElement> 类派生的。 系统提供的绑定（如 <xref:System.ServiceModel.BasicHttpBinding>）可创建和配置各自的绑定元素。 本主题演示如何访问和更改这些绑定元素的属性，这些属性不会直接在绑定上公开，具体而言，这些属性不会直接在 <xref:System.ServiceModel.BasicHttpBinding> 类上公开。  
+ 在 WCF 中的所有绑定的都组成*绑定元素*。 每个绑定元素都是从 <xref:System.ServiceModel.Channels.BindingElement> 类派生的。 系统提供的绑定（如 <xref:System.ServiceModel.BasicHttpBinding>）可创建和配置各自的绑定元素。 本主题演示如何访问和更改这些绑定元素的属性，这些属性不会直接在绑定上公开，具体而言，这些属性不会直接在 <xref:System.ServiceModel.BasicHttpBinding> 类上公开。  
   
  各个绑定元素都包含在由 <xref:System.ServiceModel.Channels.BindingElementCollection> 类表示的集合中，并按如下顺序添加：事务流、可靠会话、安全、复合双工、单向、流安全、消息编码和传输协议。 请注意，并不是每个绑定中都需要所列的所有绑定元素。 用户定义的绑定元素也可以出现在此绑定元素集合中，但必须按前面所述的相同顺序出现。 例如，用户定义的传输协议必须为绑定元素集合中的最后一个元素。  
   

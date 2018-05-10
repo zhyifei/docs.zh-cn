@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 0f17d6e787a48edd562559f52ac015edf7bc702c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 157e660a8b4d3866b9ab1994c409f82f16ac8359
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="understanding-protection-level"></a>了解保护级别
 在许多不同的类中可以找到 `ProtectionLevel` 属性，例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 类。 此属性控制部分（或整个）消息的保护方式。 本主题介绍 Windows Communication Foundation (WCF) 功能以及它如何工作。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/04/2018
   
 -   `ProtectionLevel`是开发人员可以设置一种方式*最低级别*，绑定必须符合。 在部署了服务时，在配置中指定的实际绑定不一定支持最低级别。 例如，默认情况下，<xref:System.ServiceModel.BasicHttpBinding> 类不提供安全性（尽管可以启用安全性）。 因此，将它与具有任何非 `None` 设置的协定一起使用将导致引发异常。  
   
--   如果服务要求所有消息的最低 `ProtectionLevel` 为 `Sign`，则客户端（可能由非 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 技术创建）可以对所消息进行加密和签名（这高于最低要求）。 在这种情况下，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 将不会引发异常，因为客户端的处理高于最低要求。 但是，请注意，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序（服务或客户端）在可能的情况下不会过度保护消息部分，而是遵循最低级别。 还要注意，当使用 `Transport` 作为安全模式时，传输可能过度保护消息流，因为它在本质上无法以更精细的级别进行保护。  
+-   如果服务要求所需的最低`ProtectionLevel`对于所有消息是`Sign`，客户端 （可能是由非 WCF 技术创建） 可以加密和签名所有消息 （这是多个所需的最小）。 在这种情况下，WCF 将不引发异常，因为完成的多个所需的最低客户端。 但是，请注意，WCF 应用程序 （服务或客户端） 将不过度保护消息部分如果可能，但将符合的最低级别。 还要注意，当使用 `Transport` 作为安全模式时，传输可能过度保护消息流，因为它在本质上无法以更精细的级别进行保护。  
   
 -   如果将 `ProtectionLevel` 显式设置为 `Sign` 或 `EncryptAndSign`，则您必须使用启用安全的绑定，否则将会引发异常。  
   

@@ -2,11 +2,11 @@
 title: 受信任的外观服务
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5a4cfe63f2fc6facbe4ce78d1c0047349e303fd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="trusted-facade-service"></a>受信任的外观服务
 本方案示例演示如何以流从一项服务的调用方的标识信息到另一个使用 Windows Communication Foundation (WCF) 安全基础结构。  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
 -   计算器后端服务  
   
- 外观服务负责验证请求和对调用方进行身份验证。 成功进行身份验证和验证后，服务将使用从周边网络到内部网络的受控通信通道将请求转发到后端服务。 作为所转发请求的一部分，外观服务包含有关调用方标识的信息，这样后端服务可以在其处理过程中使用此信息。 使用消息 `Username` 标头内部的 `Security` 安全令牌传输调用方标识。 示例使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构在 `Security` 标头中传输和提取此信息。  
+ 外观服务负责验证请求和对调用方进行身份验证。 成功进行身份验证和验证后，服务将使用从周边网络到内部网络的受控通信通道将请求转发到后端服务。 作为所转发请求的一部分，外观服务包含有关调用方标识的信息，这样后端服务可以在其处理过程中使用此信息。 使用消息 `Username` 标头内部的 `Security` 安全令牌传输调用方标识。 此示例使用 WCF 安全基础结构传输和提取此信息`Security`标头。  
   
 > [!IMPORTANT]
 >  后端服务委托外观服务对调用方进行身份验证。 因此，后端服务不再对调用方进行身份验证；它使用外观服务在转发的请求中提供的标识信息。 由于此信任关系，后端服务必须对外观服务进行身份验证，以确保转发的消息来自受信任的源（在本例中为外观服务）。  
@@ -110,7 +110,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
   
  [\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)绑定元素负责初始调用方的用户名传输和提取。 [ \<Windowsstreamsecurity 正在 >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)和[ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md)负责对外观和后端服务进行身份验证和消息保护。  
   
- 为了转发请求，外观服务实现必须提供初始调用方的用户名，以便 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构将该用户名放在转发的消息中。 初始调用方的用户名是在外观服务实现中提供的，具体方式为在外观服务用于与后端服务进行通信的客户端代理实例的 `ClientCredentials` 属性中设置该用户名。  
+ 为了转发请求，外观服务实现必须提供初始调用方的用户名，以便该 WCF 安全基础结构可以将此放入转发的消息。 初始调用方的用户名是在外观服务实现中提供的，具体方式为在外观服务用于与后端服务进行通信的客户端代理实例的 `ClientCredentials` 属性中设置该用户名。  
   
  下面的代码演示如何在外观服务上实现 `GetCallerIdentity` 方法。 其他方法使用相同的模式。  
   
@@ -125,9 +125,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 如前面的代码中所示，未针对 `ClientCredentials` 属性设置密码，只设置用户名。 在此例子中，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构创建不含密码的用户名安全令牌，这正是在情况下所要求的。  
+ 如前面的代码中所示，未针对 `ClientCredentials` 属性设置密码，只设置用户名。 WCF 安全基础结构创建不含密码的用户名安全令牌在这种情况下，这正是在此方案中所要求的内容。  
   
- 在后端服务上，必须对用户名安全令牌中包含的信息进行身份验证。 默认情况下， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全机制会尝试使用所提供的密码将用户映射到 Windows 帐户。 在这种情况下，不提供密码且不需要后端服务对用户名进行身份验证，因为外观服务已经执行了身份验证。 为了在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中实现此功能，提供了一个自定义 `UserNamePasswordValidator` ，它只强制在令牌中指定用户名，不执行任何其他身份验证。  
+ 在后端服务上，必须对用户名安全令牌中包含的信息进行身份验证。 默认情况下，WCF 安全尝试将用户映射到 Windows 帐户使用提供的密码。 在这种情况下，不提供密码且不需要后端服务对用户名进行身份验证，因为外观服务已经执行了身份验证。 在 WCF，自定义中实现此功能`UserNamePasswordValidator`提供它只强制用户名令牌中指定，且不执行任何其他身份验证。  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -208,7 +208,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 使用 `ServiceSecurityContext.Current.WindowsIdentity` 属性提取外观服务帐户信息。 为访问有关初始调用方的信息，后端服务使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 属性。 该属性查找类型为 `Identity` 的 `Name`声明。 此声明是由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构根据 `Username` 安全令牌中包含的信息自动生成的。  
+ 使用 `ServiceSecurityContext.Current.WindowsIdentity` 属性提取外观服务帐户信息。 为访问有关初始调用方的信息，后端服务使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 属性。 该属性查找类型为 `Identity` 的 `Name`声明。 此声明由 WCF 安全基础结构根据中包含的信息自动生成`Username`安全令牌。  
   
 ## <a name="running-the-sample"></a>运行示例  
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。 在外观服务和后端服务控制台窗口中按 Enter 可以关闭服务。  

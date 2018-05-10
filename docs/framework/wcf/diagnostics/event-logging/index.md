@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea0e6f3dc66bf40d631077c0dce20ea46f3a6688
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-logging-in-wcf"></a>WCF 中的事件日志记录
 Windows Communication Foundation (WCF) 跟踪 Windows 事件日志中的内部事件。  
   
 ## <a name="viewing-event-logs"></a>查看事件日志  
- 默认情况下自动启用事件日志记录，并且没有禁用它的机制。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 记录的事件可以使用事件查看器来查看。 若要启动此工具，请单击**启动**，单击**控制面板**，双击**管理工具**，然后双击**事件查看器**.  
+ 默认情况下自动启用事件日志记录，并且没有禁用它的机制。 可以使用事件查看器查看由 WCF 记录的事件。 若要启动此工具，请单击**启动**，单击**控制面板**，双击**管理工具**，然后双击**事件查看器**.  
   
 ### <a name="application-event-log"></a>应用程序事件日志  
- **应用程序事件日志**包含由生成的事件的大多数[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]。 大多数项都指示未能为应用程序启用某个功能。 示例包括：  
+ **应用程序事件日志**包含大部分由 WCF 生成的事件。 大多数项都指示未能为应用程序启用某个功能。 示例包括：  
   
--   消息日志记录/跟踪：当跟踪和消息日志记录失败时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 会将事件写入事件日志。 但是，并非每个跟踪故障都会触发事件。 为防止事件日志被跟踪故障完全填满，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 为此类事件实现一个 10 分钟中断周期。 这意味着，如果 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 向事件日志中写入跟踪故障，则至少在 10 分钟内它不会再次进行写入。  
+-   消息日志记录/跟踪： WCF 将事件写入事件日志跟踪和消息日志记录失败时。 但是，并非每个跟踪故障都会触发事件。 若要防止事件日志被跟踪故障完全填满，WCF 实现此类事件 10 分钟中断周期。 这意味着，如果 WCF 在事件日志中写入跟踪故障，它将不会再次至少 10 分钟。  
   
 -   共享侦听器：WCF TCP 端口共享服务在未能启动时将记录一个事件。  
   

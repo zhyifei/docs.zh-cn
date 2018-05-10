@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: abfe502c6b50234037cad786a658edc3d479cc9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 19ba0e585dfdd2ee47781b04a3d1a5bbdba60371
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
 使用配置文件配置 Windows Communication Foundation (WCF) 服务允许你灵活地提供终结点和服务行为数据在部署时而非设计时。 本主题概述了当前可用的主要技术。  
   
- 可使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置技术对 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 服务进行配置。 通常情况下，向承载 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的 Internet 信息服务 (IIS) 网站的 Web.config 文件添加 XML 元素。 通过这些元素，可以逐台计算机更改详细信息，例如终结点地址（用于与服务进行通信的实际地址）。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包括几个系统提供的元素，可用于快速选择服务的最基本的功能。 从 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]开始， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 附带一个新的默认配置模型，该模型简化了 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置要求。 如果您没有为特定服务提供任何 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置，运行时将自动使用一些标准终结点和默认绑定/行为配置您的服务。 实际上，编写配置是 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序编程的主要部分。  
+ WCF 服务是可配置使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]技术的配置。 通常情况下，到承载 WCF 服务的 Internet 信息服务 (IIS) 网站的 Web.config 文件添加 XML 元素。 通过这些元素，可以逐台计算机更改详细信息，例如终结点地址（用于与服务进行通信的实际地址）。 此外，WCF 包括可用于快速选择服务的最基本功能的多个系统提供的元素。 从开始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 附带一个新的默认配置模型，简化了 WCF 配置要求。 如果你不提供针对特定服务的任何 WCF 配置，运行时自动使用一些标准终结点和默认绑定/行为配置你的服务。 在实践中，编写配置是一个较大编程 WCF 应用程序的一部分。  
   
  有关详细信息，请参阅[配置服务的绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 对于一份最常用元素，请参阅[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。 有关默认终结点、 绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 >  在部署并行方案（其中部署了服务的两个不同版本）时，必须指定配置文件中引用的程序集的部分名称。 这是因为配置文件将在服务的所有版本间共享，并可在不同版本的 .NET Framework 下运行。  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration：Web.config 和 App.config  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]的 System.Configuration 配置系统。  
+ WCF 使用的 System.Configuration 配置系统[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。  
   
  配置服务时 Visual Studio 中，使用 Web.config 文件或 App.config 文件指定的设置。 配置文件名称的选择由为服务选择的宿主环境确定。 如果正在使用 IIS 来承载服务，则使用 Web.config 文件。 如果正在使用任何其他宿主环境，则使用 App.config 文件。  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 05/04/2018
  [\<行为 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>如何使用绑定和行为配置  
- 在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，通过在配置中使用引用系统，可以很方便地在终结点之间共享配置。 与绑定相关的配置值在 `bindingConfiguration` 部分的 `<binding>` 元素中进行分组，而不是直接将配置值分配到终结点。 绑定配置是一组命名的绑定设置。 然后，终结点可以通过名称来引用 `bindingConfiguration` 。  
+ WCF 便于在配置中使用的参考系统的终结点之间共享配置。 与绑定相关的配置值在 `bindingConfiguration` 部分的 `<binding>` 元素中进行分组，而不是直接将配置值分配到终结点。 绑定配置是一组命名的绑定设置。 然后，终结点可以通过名称来引用 `bindingConfiguration` 。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

@@ -2,11 +2,11 @@
 title: ASP.NET 客户端中的数据绑定
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: c0f3cbb08f0078bf364ef720635f7afda3257611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8fdebec272fbedf23233e03ba7c6fe2d64cb18cc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 客户端中的数据绑定
 此示例演示如何将绑定由典型的 Windows Communication Foundation (WCF) 服务在 Web 窗体应用程序中的数据。  
@@ -14,11 +14,11 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 本示例演示一个服务，该服务可实现定义“请求-答复”通信模式的协定。 本示例由可从浏览器访问的客户端 Web 窗体应用程序和由 Internet 信息服务 (IIS) 承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务组成。  
+ 本示例演示一个服务，该服务可实现定义“请求-答复”通信模式的协定。 此示例包含的客户端 Web 窗体应用程序可从浏览器和由 Internet 信息服务 (IIS) 承载的 WCF 服务访问。  
   
  该服务实现定义“请求-答复”通信模式的协定。 协定由 `IWeatherService` 接口定义，该接口公开一个名为 `GetWeatherData` 的操作。 此操作接受一个城市数组并返回一个 `WeatherData` 对象数组，这些对象表示城市的预报高温和预报低温。  
   
- 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 客户端 .aspx 页面中，定义了 DataGrid Web 控件，它包含服务返回的数据的图形化表示形式。 .aspx 页面中的代码调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务获取天气数据并将数据返回到 `WeatherData` 对象数组。 DataGrid 通过将它的 `DataSource` 属性设置为该数组来指定从何处获取数据。 数据绑定通过调用 DataGrid 的 `DataBind` 方法发生。 此代码全部包含在。`aspx` 页面的`Page_Load`方法，因此每次用户刷新浏览器页面时，数据更新数据网格中。  
+ 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 客户端 .aspx 页面中，定义了 DataGrid Web 控件，它包含服务返回的数据的图形化表示形式。 .Aspx 页面上的代码调用 WCF 服务获取天气数据并将数据返回到的数组`WeatherData`对象。 DataGrid 通过将它的 `DataSource` 属性设置为该数组来指定从何处获取数据。 数据绑定通过调用 DataGrid 的 `DataBind` 方法发生。 此代码全部包含在。`aspx` 页面的`Page_Load`方法，因此每次用户刷新浏览器页面时，数据更新数据网格中。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   

@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3bcc448b13a185065db1865c64d5ab3c498da1a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 50e9b831430eefc202dd3128502a7f916b96aef6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-security-binding"></a>消息安全绑定
-本节包含演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 Windows 服务中消息安全绑定的示例。  
+本节包含演示在 WCF 中的 Windows 服务中的消息安全绑定的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [匿名消息安全](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  

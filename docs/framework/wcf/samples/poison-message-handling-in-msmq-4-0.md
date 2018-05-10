@@ -2,11 +2,11 @@
 title: MSMQ 4.0 中的病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 25d99e6864b967b498fc53a6f6d78f476f4d938f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0ddab7832e308336d5bfb1c5f75fd13fe63fe72
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的病毒消息处理
 本示例演示如何在服务中执行病毒消息处理。 此示例基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 其中使用到了 `netMsmqBinding`。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -156,7 +156,7 @@ public class OrderProcessorService : IOrderProcessor
 ## <a name="processing-messages-from-the-poison-message-queue"></a>处理病毒消息队列中的消息  
  病毒消息服务从最终病毒消息队列中读取消息并处理这些消息。  
   
- 病毒消息队列中的消息是指发送到正在处理消息的服务的消息，这可能不同于病毒消息服务终结点。 因此，当病毒消息服务从队列中读取消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道层可发现与终结点的不匹配之处，并且不会调度消息。 在这种情况下，消息将发送到订单处理服务，但将由病毒消息服务接收。 如果无论消息是否发送到不同的终结点都要继续接收消息，则我们必须添加 `ServiceBehavior` 来筛选地址，其中匹配标准是要匹配消息发送到的任何服务终结点。 这是成功处理从病毒消息队列中读取的消息所必需的。  
+ 病毒消息队列中的消息是指发送到正在处理消息的服务的消息，这可能不同于病毒消息服务终结点。 因此，当病毒消息服务从队列中读取消息，WCF 通道层终结点中发现不匹配，并且不会调度消息。 在这种情况下，消息将发送到订单处理服务，但将由病毒消息服务接收。 如果无论消息是否发送到不同的终结点都要继续接收消息，则我们必须添加 `ServiceBehavior` 来筛选地址，其中匹配标准是要匹配消息发送到的任何服务终结点。 这是成功处理从病毒消息队列中读取的消息所必需的。  
   
  病毒消息服务实现本身非常类似于服务实现。 它实现协定并处理订单。 代码示例如下所示。  
 

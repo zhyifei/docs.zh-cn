@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b91c8ff5a78ef2b2b2db5ea26ae7a1733a97ffd0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>为 Windows Communication Foundation 服务配置绑定
 创建应用程序时，您经常需要将一些决策交给管理员在部署应用程序后制定。 例如，通常没有办法提前知道服务地址或统一资源标识符 (URI)。 最好允许管理员在创建服务后指定地址，而不是对地址进行硬编码。 这种灵活性是通过配置实现的。  
@@ -39,9 +39,9 @@ ms.lasthandoff: 05/04/2018
   
  例如，指定[ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)元素指示要使用 HTTP 作为传输协议的终结点。 这用于在使用此终结点的服务打开时在运行时连接终结点。  
   
- 有两种绑定：预定义绑定和自定义绑定。 预定义绑定包含在常见方案中使用的元素的有用组合。 预定义绑定的列表类型的[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]提供，请参阅[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。 如果没有任何预定义绑定集合具有服务应用程序所需的功能的正确组合，那么你可以构造自定义绑定来满足应用程序的需求。 有关自定义绑定的详细信息，请参阅[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+ 有两种绑定：预定义绑定和自定义绑定。 预定义绑定包含在常见方案中使用的元素的有用组合。 WCF 提供的预定义的绑定类型的列表，请参阅[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。 如果没有任何预定义绑定集合具有服务应用程序所需的功能的正确组合，那么你可以构造自定义绑定来满足应用程序的需求。 有关自定义绑定的详细信息，请参阅[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
- 下面四个示例说明了用于设置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的最常见绑定配置。  
+ 下面四个示例说明了用于设置 WCF 服务的最常见绑定配置。  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>指定终结点以使用绑定类型  
  第一个示例说明如何指定一个配置了地址、协定和绑定的终结点。  

@@ -2,19 +2,19 @@
 title: WCF 服务发布
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 9f76ab11e9697fc5af5c507d4dc9d944c433c918
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 258c7e65b69648477e58880f35b100a9378dc9c0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF 服务发布
-Windows Communication Foundation (WCF) 服务发布可帮助你从提供的早期开发环境的进展情况[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务主机和[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]到实际将部署到生产应用程序的测试客户端出于测试目的的环境。 在提交最终部署计划之前，你可以使用 Windows Communication Foundation (WCF) 服务发布来验证你[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务是否正确以及是否可以发布。 也可以选择将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库部署到多个不同的目标位置，以进行测试。  
+Windows Communication Foundation (WCF) 服务发布可帮助你从由 WCF 服务主机和 WCF 测试客户端提供到实际将部署到生产环境中以进行测试应用程序的早期开发环境的进展情况。 在提交最终部署计划之前，你可以使用 Windows Communication Foundation (WCF) 服务发布来验证您的 WCF 服务正常运行，以及已准备好发布。 你还可以选择将你的 WCF 服务库部署到用于测试的各种目标位置。  
   
 ## <a name="supported-services-and-target-locations"></a>支持的服务和目标位置  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务发布支持发布基于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库模板集及其对应的项模板创建的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。这些模板包括：  
+ WCF 服务发布支持发布 WCF 服务创建的 WCF 服务库模板以及其对应的项模板，其中包括以下各项：  
   
--   带有项模板的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库模板。  
+-   带有项模板的 WCF 服务库模板。  
   
 -   联合服务库。  
   
@@ -43,31 +43,31 @@ Windows Communication Foundation (WCF) 服务发布可帮助你从提供的早�
   
  你可以使用**发布**指定是否你想要复制程序集、 配置和目标位置，到项目中定义的所有服务的.svc 文件，并覆盖目标位置的现有文件。  
   
- 如果选择将应用程序部署到本地 IIS，则可能会遇到与 IIS 设置有关的错误。 请确保已正确安装 IIS。 你可以键入"超链接"http://localhost" http://localhost"在浏览器并检查是否 IIS 默认页面时将显示。  在某些情况下，此类问题也可能由于 IIS 中的 ASP.NET 或 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 注册不正确导致的。 你可以打开 Visual Studio 命令提示符并运行命令"aspnet_regiis.exe-ir"来解决 ASP.NET 注册问题，或运行命令"ServiceModelReg.exe – ia"来解决 WCF 注册问题。  
+ 如果选择将应用程序部署到本地 IIS，则可能会遇到与 IIS 设置有关的错误。 请确保已正确安装 IIS。 你可以键入"超链接"http://localhost" http://localhost"在浏览器并检查是否 IIS 默认页面时将显示。  此外可能在某些情况下，由在 IIS 中的不正确注册 ASP.NET 或 WCF 上导致问题。 你可以打开 Visual Studio 命令提示符并运行命令"aspnet_regiis.exe-ir"来解决 ASP.NET 注册问题，或运行命令"ServiceModelReg.exe – ia"来解决 WCF 注册问题。  
   
 ## <a name="files-generated-for-publishing"></a>生成的待发布文件  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库可以由 Web 承载之前，该工具生成以下文件：程序集文件、Web.config 文件和 .svc 文件。 这些文件全部复制到目标位置。 然后发布该服务。  
+ WCF 服务库可以由 Web 承载之前，由工具生成以下文件： 程序集文件、 Web.config 文件和.svc 文件。 这些文件全部复制到目标位置。 然后发布该服务。  
   
 ### <a name="assembly-files"></a>程序集文件  
- 使用此工具发布 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务时，首先自动生成该服务，生成完毕后将在服务项目中生成程序集文件。  
+ 在发布的 WCF 服务时使用此工具，首先自动生成服务，并生成完毕后，在服务项目中的程序集文件生成。  
   
 ### <a name="svc-file"></a>.SVC 文件  
- 发布操作为每个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务生成一个 *.svc 文件（无论该文件存在与否），以确保版本有效性。 有两种不同的 svc 文件：一种针对 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库和联合服务库，另一种针对顺序和状态机工作流服务库。 生成\*.svc 文件复制到目标位置中的根文件夹。  
+ 发布操作生成每个 WCF 服务，一个 *.svc 文件，文件是否存在或不是，以确保版本有效性。 有两种不同的 svc 文件： 一个用于 WCF 服务库和联合服务库，另一种针对顺序和状态机工作流服务库。 生成\*.svc 文件复制到目标位置中的根文件夹。  
   
 ### <a name="webconfig-file"></a>Web.config 文件  
  每次将服务项目发布到特定目标位置时，都会创建一个 Web.config 文件。  
   
- 生成的 Web.config 文件包括一些对 Web 承载有用的 Web 节，以及 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库的 App.config 的内容，其中包含以下更改：  
+ 生成的 Web.config 文件包括可用于 Web 托管，并包含以下更改的 WCF 服务库的 App.config 的内容的 Web 节：  
   
 -   排除了基址。  
   
 -   排除了 `<diagnostics>` 元素中的设置以保留目标平台的跟踪设置。  
   
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>将具有非 HTTP 绑定的 WCF 服务发布到 IIS  
- 如果使用的是 IIS 7.0 或更高版本，则可使用非 HTTP 绑定将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务发布到 IIS。 需要进行一些预配置。 有关详细信息，请参阅在主题[在 Windows 进程激活服务中承载](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
+ 如果你使用的是 iis 7.0 或更高版本，可以 WCF 服务发布到 IIS 的非 HTTP 绑定。 需要进行一些预配置。 有关详细信息，请参阅在主题[在 Windows 进程激活服务中承载](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
   
 ## <a name="security"></a>安全性  
- 发布到本地 IIS 需要具有管理员权限，原因是 IIS 要求以 Administrator 帐户身份运行。 如果打开 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务发布的用户不具有管理员权限，则 IIS 将不可用作目标位置。 发布到文件系统或 FTP 站点的工作方式没有管理员权限。  
+ 发布到本地 IIS 需要具有管理员权限，原因是 IIS 要求以 Administrator 帐户身份运行。 如果用户没有管理员权限打开 WCF 服务发布，IIS 不可作为目标位置。 发布到文件系统或 FTP 站点的工作方式没有管理员权限。  
   
 ## <a name="see-also"></a>请参阅  
  [WCF Visual Studio 模板](../../../docs/framework/wcf/wcf-vs-templates.md)  

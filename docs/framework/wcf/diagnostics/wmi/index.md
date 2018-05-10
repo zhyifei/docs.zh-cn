@@ -2,19 +2,19 @@
 title: 使用 Windows Management Instrumentation 进行诊断
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a53fee8bfed9f5a0f5773c9dfcfbaab5f173ddad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b06cc61714b3fdc63086d2b79b087540bece698
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 进行诊断
-Windows Communication Foundation (WCF) 公开在运行时通过服务的检测数据[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]Windows Management Instrumentation (WMI) 提供程序。  
+Windows Communication Foundation (WCF) 公开在运行时通过 WCF Windows Management Instrumentation (WMI) 提供程序服务的检测数据。  
   
 ## <a name="enabling-wmi"></a>启用 WMI  
  WMI 是 Microsoft 基于 Web 的企业管理 (WBEM) 标准的实现。 有关 WMI SDK 的详细信息，请参阅[Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)。 WBEM 是有关应用程序如何向外部管理工具公开管理规范的行业标准。  
   
- WMI 提供程序是一个在运行时通过 WBEM 兼容接口公开规范的组件。 它由一组包含属性/值对的 WMI 对象组成。 这些对可以是多个简单类型。 管理工具可以在运行时通过接口连接至服务。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 公开服务的特性，如地址、绑定、行为和侦听器。  
+ WMI 提供程序是一个在运行时通过 WBEM 兼容接口公开规范的组件。 它由一组包含属性/值对的 WMI 对象组成。 这些对可以是多个简单类型。 管理工具可以在运行时通过接口连接至服务。 WCF 公开的服务，例如地址、 绑定、 行为和侦听器的特性。  
   
  您可以在应用程序的配置文件中激活内置 WMI 提供程序。 通过完成此操作`wmiProviderEnabled`属性[\<诊断 >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)中[ \<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)部分，如下面的示例中所示配置。  
   
@@ -38,18 +38,18 @@ Windows Communication Foundation (WCF) 公开在运行时通过服务的检测�
   
  您应该注意如果没有用于消息日志记录的消息日志记录跟踪侦听器，或者配置文件中没有指定用于跟踪的 `System.ServiceModel` 跟踪侦听器，您所执行的任何更改都将无效，即使已被 WMI 接受的更改也不例外。 正确设置各侦听器的详细信息，请参阅[配置消息日志记录](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)和[配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 应用程序启动时，由配置指定的所有其他跟踪源的跟踪级别均有效，而且不能更改。  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 公开 `GetOperationCounterInstanceName` 方法以编写脚本。 如果您为其提供了一个操作名称，此方法将返回一个性能计数器实例名称。 但是，它不会验证您的输入。 因此，如果您提供了一个不正确的操作名称，将返回不正确的计数器名称。  
+ WCF 公开`GetOperationCounterInstanceName`用于脚本编写的方法。 如果您为其提供了一个操作名称，此方法将返回一个性能计数器实例名称。 但是，它不会验证您的输入。 因此，如果您提供了一个不正确的操作名称，将返回不正确的计数器名称。  
   
- 如果没有在 `OutgoingChannel` 方法中创建目标服务的 `Service` 客户端，则 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 实例的 `Service` 属性将不会计算由某项服务打开以连接至其他服务的通道数量。  
+ `OutgoingChannel`属性`Service`实例不会影响打开服务以连接到另一个服务，如果目标服务 WCF 客户端不会在中创建的通道`Service`方法。  
   
  **警告：** WMI 仅支持<xref:System.TimeSpan>值最多 3 位小数。 例如，如果您的服务将其中一个属性设置为 <xref:System.TimeSpan.MaxValue>，当通过 WMI 查看时，它的值将保留 3 位小数。  
   
 ## <a name="security"></a>安全性  
- 因为 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 提供程序允许在某个环境中发现服务，您应该在为其授予访问权限时特别小心。 如果您放宽了默认的仅管理员访问，就可能允许不完全受信任方访问您的环境中的敏感数据。 特别是，如果您放宽了对远程 WMI 访问的权限，可能会发生洪泛攻击。 如果某个进程被大量 WMI 请求溢满，其性能将有所下降。  
+ 由于 WCF WMI 提供程序的环境中允许的服务发现，你应特别小心授予对其访问权限。 如果您放宽了默认的仅管理员访问，就可能允许不完全受信任方访问您的环境中的敏感数据。 特别是，如果您放宽了对远程 WMI 访问的权限，可能会发生洪泛攻击。 如果某个进程被大量 WMI 请求溢满，其性能将有所下降。  
   
  此外，如果您放宽了对 MOF 文件的访问权限，不完全受信任方可以控制 WMI 的行为并更改加载到 WMI 架构中的对象。 例如，不完全受信任方可以移除字段，这样，管理员将无法看到关键数据，或者未填充或导致异常的字段将添加到文件中。  
   
- 默认情况下，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 提供程序将对管理员授予“执行方法”、“提供程序编写”和“启用帐户”权限，并对 ASP.NET、本地服务和网络服务授予“启用帐户”权限。 尤其是，在非 [!INCLUDE[wv](../../../../../includes/wv-md.md)] 平台中，ASP.NET 帐户对 WMI ServiceModel 命名空间具有读访问权限。 如果您不希望对特定用户组授予这些特权，就应该停用 WMI 提供程序（默认状态为禁用），或者是禁用对特定用户组的访问。  
+ 默认情况下，WCF WMI 提供程序授予"执行方法"、"提供程序写入"和"启用帐户"权限对于管理员，并对 ASP.NET、 本地服务和网络服务"启用帐户"权限。 尤其是，在非 [!INCLUDE[wv](../../../../../includes/wv-md.md)] 平台中，ASP.NET 帐户对 WMI ServiceModel 命名空间具有读访问权限。 如果您不希望对特定用户组授予这些特权，就应该停用 WMI 提供程序（默认状态为禁用），或者是禁用对特定用户组的访问。  
   
  此外，当您尝试通过配置启用 WMI 时，WMI 可能会因用户特权不足而无法启用。 但是，并不会将任何事件写入事件日志用于记录此次失败。  
   
@@ -149,7 +149,7 @@ Whoami /user
  此方法提供了当前用户的 SID，但是此方法不能用于获取任意用户的 SID。 另一个获取 SID 的方法是使用[getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)工具[Windows 2000 资源工具包对于管理任务](http://go.microsoft.com/fwlink/?LinkId=178660)。 此工具比较两个用户（本地用户或域用户）的 SID，其副功能是将两个 SID 显示到命令行。 有关详细信息，请参阅[熟知 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)。  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>访问远程 WMI 对象实例  
- 如果您需要访问远程计算机上的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 实例，就必须对您用于访问的工具启用数据包保密性。 以下部分描述如何通过使用 WMI CIM Studio、Windows Management Instrumentation 测试器以及 .NET SDK 2.0 实现这些目标。  
+ 如果你需要访问远程计算机上的 WCF WMI 实例时，必须启用数据包保密性，您将用于访问的工具。 以下部分描述如何通过使用 WMI CIM Studio、Windows Management Instrumentation 测试器以及 .NET SDK 2.0 实现这些目标。  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
  如果你已安装[WMI 管理工具](http://go.microsoft.com/fwlink/?LinkId=95185)，你可以使用 WMI CIM Studio 访问 WMI 实例。 这些工具位于以下文件夹中  

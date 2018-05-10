@@ -2,18 +2,18 @@
 title: WebContentTypeMapper 示例
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 3b3d53b0fe619c74c5e7f3533194f4b5e7c18a16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 89f13599e23f3e60ae4d9bc973debc436f46c147
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 示例
 此示例演示如何将新内容类型映射到 Windows Communication Foundation (WCF) 消息正文格式。  
   
- <xref:System.ServiceModel.Description.WebHttpEndpoint> 元素可插入 Web 消息编码器，它允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在同一个终结点接收 JSON、XML 或原始二进制消息。 编码器通过查看请求的 HTTP 内容类型来确定消息的正文格式。 本示例介绍 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 类，该类允许用户控制内容类型和正文格式之间的映射。  
+ <xref:System.ServiceModel.Description.WebHttpEndpoint>元素可插入 Web 消息编码器，它允许 WCF 接收 JSON、 XML 或原始二进制消息在同一个终结点。 编码器通过查看请求的 HTTP 内容类型来确定消息的正文格式。 本示例介绍 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 类，该类允许用户控制内容类型和正文格式之间的映射。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为内容类型提供一组默认的映射。 例如，`application/json` 映射到 JSON，`text/xml` 映射到 XML。 未映射到 JSON 或 XML 的任何内容类型都将映射到原始二进制格式。  
+ WCF 提供了内容类型的一组默认映射。 例如，`application/json` 映射到 JSON，`text/xml` 映射到 XML。 未映射到 JSON 或 XML 的任何内容类型都将映射到原始二进制格式。  
   
  在某些方案（例如推送式 API）中，服务开发人员不控制由客户端返回的内容类型。 例如，客户端可以将 JSON 作为 `text/javascript` 而不是 `application/json` 返回。 在这种情况下，服务开发人员必须提供从 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 派生的类型以正确处理给定的内容类型，如下面的示例代码所示。  
   

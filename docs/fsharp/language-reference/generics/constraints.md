@@ -1,17 +1,12 @@
 ---
 title: 约束 (F#)
 description: '了解有关 F # 约束将应用于泛型类型参数在泛型类型或函数中指定的类型自变量的要求。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 65f648d39cf7c3dedf5e558c2ed35337a12efe4a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f0722cafe27a4e2c38dfbf091973edb136cf5228
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constraints"></a>约束
 
@@ -31,7 +26,7 @@ type-parameter-list when constraint1 [ and constraint2]
 |----------|------|-----------|
 |类型约束|*类型参数*:&gt; *类型*|所提供的类型必须等于或派生从指定的类型，或者，如果类型是接口，所提供的类型必须实现接口。|
 |Null 约束|*类型参数*: null|所提供的类型必须支持 null 字面值。 这包括所有.NET 对象类型，但不是 F # 列表、 元组、 函数、 类、 记录或联合类型。|
-|显式成员约束|[（)]*类型参数*[或...或*类型参数*)]: (* 成员签名 *)|在至少其中一个提供的类型自变量必须有一个具有指定的签名; 的成员不能供公共使用。 成员必须要么显式定义为一个显式成员约束的有效目标的类型或隐式类型扩展的一部分。|
+|显式成员约束|[(]*类型参数*[或...或*类型参数*)]: (* 成员签名 *)|在至少其中一个提供的类型自变量必须有一个具有指定的签名; 的成员不能供公共使用。 成员必须要么显式定义为一个显式成员约束的有效目标的类型或隐式类型扩展的一部分。|
 |构造函数约束|*类型参数*: (新： 单位-&gt; )|所提供的类型必须具有默认构造函数。|
 |值类型约束|： 结构|所提供的类型必须是一个.NET 值类型。|
 |引用类型约束|： 不结构|所提供的类型必须是.NET 引用类型。|

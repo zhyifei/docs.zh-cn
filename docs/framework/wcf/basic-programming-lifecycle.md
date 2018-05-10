@@ -1,31 +1,17 @@
 ---
 title: 基本编程生命周期
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ff735a8caf1fbaff636f94eee366b20c33d8f331
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b20167ad776f3524e4516b71e43ab8cdb5c2aea4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="basic-programming-lifecycle"></a>基本编程生命周期
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 可让应用程序通报它们是在同一台计算机上、分布在 Internet 上还是在不同的应用程序平台上。 本主题概述了生成 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序所需的任务。 有关工作示例应用程序，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。  
+Windows Communication Foundation (WCF) 使应用程序通报它们是在同一计算机上分布在 Internet 上还是在不同的应用程序平台上。 本主题概述了生成 WCF 应用程序所需的任务。 有关工作示例应用程序，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。  
   
 ## <a name="the-basic-tasks"></a>基本任务  
  要执行的基本任务依次为：  

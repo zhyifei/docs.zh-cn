@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 99d46b19e744190c50a2ba316fe0f59a8f6cf07b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9f03419c5c924f129b3ec8580ee25693c218715
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>如何：创建自定义客户端标识验证工具
 *标识*功能的 Windows Communication Foundation (WCF) 使客户端能够预先指定服务所需的标识。 无论服务器何时向客户端验证其自身身份，都将检查该标识是否为所需的标识。 (有关标识以及它如何工作的说明，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-implement-the-trygetidentity-method"></a>实现 TryGetIdentity 方法  
   
-1.  实现 <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> 方法，该方法确定客户端是否可返回 <xref:System.ServiceModel.EndpointIdentity> 类的实例。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构首先调用 `TryGetIdentity` 方法的实现来检索消息中的服务标识。 然后，该基础结构使用返回的 `CheckAccess` 和 `EndpointIdentity` 调用 <xref:System.IdentityModel.Policy.AuthorizationContext> 实现。  
+1.  实现 <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> 方法，该方法确定客户端是否可返回 <xref:System.ServiceModel.EndpointIdentity> 类的实例。 WCF 基础结构调用的实现`TryGetIdentity`方法首先从消息中检索服务的标识。 然后，该基础结构使用返回的 `CheckAccess` 和 `EndpointIdentity` 调用 <xref:System.IdentityModel.Policy.AuthorizationContext> 实现。  
   
 2.  在 `TryGetIdentity` 方法中，添加以下代码：  
   

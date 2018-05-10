@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 41936b407dfdb3fecee80b2513b557016cdcfe5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ba554ed23ae039796f51f4a699d368c4a6c0587e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>如何：创建自定义安全令牌身份验证器
 本主题演示如何创建自定义安全令牌身份验证器以及如何将其与自定义安全令牌管理器相集成。 安全令牌身份验证器可验证随传入消息一起提供的安全令牌的内容。 如果验证成功，身份验证器将返回 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 实例的集合，该集合经过计算后可返回一组声明。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- 前面的代码在 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> 方法中返回授权策略的集合。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不提供此接口的公共实现。 下面的过程演示如何针对您自己的需求实现此目的。  
+ 前面的代码在 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> 方法中返回授权策略的集合。 WCF 不提供此接口的公共实现。 下面的过程演示如何针对您自己的需求实现此目的。  
   
 #### <a name="to-create-a-custom-authorization-policy"></a>创建自定义授权策略  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
 3.  实现 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> 只读属性。 此属性需要返回从令牌获取的声明集的颁发者。 此颁发者应该与令牌颁发者负责验证令牌内容的颁发机构相对应。 下面的示例使用了颁发者声明，该声明从前面的过程中创建的自定义安全令牌身份验证器传递给此类。 自定义安全令牌身份验证器使用系统提供的声明集（由 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 属性返回）来表示用户名令牌的颁发者。  
   
-4.  实现 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 方法。 此方法使用基于传入安全令牌内容的声明来填充 <xref:System.IdentityModel.Policy.EvaluationContext> 类的实例（以参数形式传入）。 当此方法完成计算时返回 `true`。 如果该实现依赖于为计算上下文提供附加信息的其他授权策略，则在计算上下文中不存在所要求的信息时，此方法可返回 `false`。 在这种情况下，如果这些授权策略之中至少有一个修改了计算上下文，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在计算为传入消息生成的所有其他授权策略后，将再次调用此方法。  
+4.  实现 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 方法。 此方法使用基于传入安全令牌内容的声明来填充 <xref:System.IdentityModel.Policy.EvaluationContext> 类的实例（以参数形式传入）。 当此方法完成计算时返回 `true`。 如果该实现依赖于为计算上下文提供附加信息的其他授权策略，则在计算上下文中不存在所要求的信息时，此方法可返回 `false`。 在这种情况下，WCF 将计算为传入消息生成，如果这些授权策略中至少一个修改了计算上下文的所有其他授权策略后，再次调用该方法。  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  

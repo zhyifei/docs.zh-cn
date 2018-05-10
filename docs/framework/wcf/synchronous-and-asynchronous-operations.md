@@ -8,23 +8,23 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c464dc79e0f38b72f724fafcef59916d766e2d0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
   
- 许多应用程序都以异步方式调用方法，因为这样允许应用程序在运行方法调用时继续执行有用的工作。 Windows Communication Foundation (WCF) 服务和客户端可以参与两个不同级别的应用程序，它们提供的异步操作调用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]更多的灵活性，以使吞吐量最大化针对平衡的应用程序交互性。  
+ 许多应用程序都以异步方式调用方法，因为这样允许应用程序在运行方法调用时继续执行有用的工作。 Windows Communication Foundation (WCF) 服务和客户端可以参与两个不同级别的应用程序，它们提供更多的灵活性，以最大化针对交互性平衡的吞吐量的 WCF 应用程序的异步操作调用.  
   
 ## <a name="types-of-asynchronous-operations"></a>异步操作的类型  
- 无论参数类型和返回值如何， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中的所有服务协定都使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 特性来指定客户端和服务之间的特殊消息交换模式。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 自动将入站和出站消息路由到相应的服务操作或正在运行的客户端代码。  
+ 所有服务协定在 WCF 中，无论参数类型和返回值如何，WCF 特性用于指定客户端和服务之间的特定消息交换模式。 WCF 自动将入站和出站消息路由到相应的服务操作或正在运行的客户端代码。  
   
  客户端仅拥有为特殊操作指定消息交换模式的服务协定。 客户端可以为开发人员提供他们所选择的任何编程模型，但前提是找到了基础消息交换模式。 因此，只要找到了指定的消息模式，服务也可以按任何方式来实现操作。  
   
- 如果服务协定独立于服务或客户端实现，则可以在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序中实现下列形式的异步执行：  
+ 从服务或客户端实现服务协定的独立性使 WCF 应用程序中的异步执行的以下形式：  
   
 -   客户端可以使用同步消息交换以异步方式调用请求/响应操作。  
   
@@ -147,7 +147,7 @@ Function DoWork(ByVal data As String, ByRef inout As String, _out outonly As out
 >  <xref:System.ServiceModel.OperationContractAttribute> 属性仅适用于 `BeginDoWork` 方法。 所得到的协定具有一个名为 `DoWork` 的 WSDL 操作。  
   
 ### <a name="client-side-asynchronous-invocations"></a>客户端异步调用  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端应用程序可使用之前介绍的三个异步调用模型中的任意一个  
+ WCF 客户端应用程序可以使用前面所述的三个异步调用模型中的任何  
   
  在使用基于任务的模型时，只需使用 await 关键字调用操作，如下面的代码段所示。  
   
@@ -161,9 +161,9 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- 完成此操作后，Svcutil.exe 将生成带有事件基础结构的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端类，该事件基础结构使调用应用程序可以实现和分配事件处理程序，以便接收响应和采取相应的操作。 有关完整示例，请参阅[如何： 以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
+ 完成此操作后，Svcutil.exe 在生成 WCF 客户端类与事件基础结构使调用应用程序中，可以实现和分配事件处理程序接收响应并采取相应的措施。 有关完整示例，请参阅[如何： 以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
- 但是，基于事件的异步模型仅在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中可用。 此外，如果 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 客户端通道是使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 创建的，那么即使在 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 中，也不支持该模型。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端通道对象时，必须使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 对象异步调用操作。 若要使用此方法，指定 **/async**命令选项和[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如下面的示例。  
+ 但是，基于事件的异步模型仅在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中可用。 此外，它不支持甚至是在[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]WCF 客户端通道创建时使用<xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>。 使用 WCF 客户端通道对象，必须使用<xref:System.IAsyncResult?displayProperty=nameWithType>对象以异步方式调用你的操作。 若要使用此方法，指定 **/async**命令选项和[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如下面的示例。  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   

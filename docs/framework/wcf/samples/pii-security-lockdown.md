@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 81fc656784dadf0706e2ae3feda09cd08b886560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec8af8c7df9335774b1f3953f88c2aad438963b6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pii-security-lockdown"></a>PII 安全锁定
 此示例演示如何控制的 Windows Communication Foundation (WCF) 服务的多个与安全相关功能：  
@@ -29,11 +29,11 @@ ms.lasthandoff: 05/04/2018
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>讨论  
- 这些功能中的每种功能都可以单独使用，也可以一起使用来控制服务安全的各个方面。 这不是保证 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务安全的确定性指导。  
+ 这些功能中的每种功能都可以单独使用，也可以一起使用来控制服务安全的各个方面。 这不是权威的 WCF 服务的安全指南。  
   
  .NET Framework 配置文件可以包含敏感信息，如用于连接到数据库的连接字符串。 在 Web 承载的共享方案中，可能需要对服务配置文件中的此信息进行加密，以避免他人无意中查看配置文件中包含的数据。 .NET Framework 2.0 和更高版本可以通过使用 Windows 数据保护应用程序编程接口 (DPAPI) 或 RSA 加密提供程序对配置文件的部分进行加密。 使用 DPAPI 或 RSA 的 aspnet_regiis.exe 可以对配置文件的选择部分进行加密。  
   
- 在 Web 承载的方案中，可以使服务位于其他服务的子目录中。 用于确定配置值的默认语义允许嵌套目录中的配置文件重写父目录中的配置值。 在某些情况下，出于各种原因可能不希望这样做。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务配置支持锁定配置值，这样，在使用重写的配置值运行某一嵌套服务时，嵌套的配置会生成异常。  
+ 在 Web 承载的方案中，可以使服务位于其他服务的子目录中。 用于确定配置值的默认语义允许嵌套目录中的配置文件重写父目录中的配置值。 在某些情况下，出于各种原因可能不希望这样做。 使用运行某一嵌套的服务时，将锁定配置值，以使嵌套的配置生成异常的 WCF 服务配置支持重写配置值。  
   
  此示例演示如何在跟踪和消息日志中控制已知个人身份信息 (PII) 日志记录，如用户名和密码。 默认情况下禁用已知 PII 的日志记录，但在特定情况下，PII 日志记录可能会对应用程序的调试大有帮助。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 此外，此示例还使用跟踪和消息日志记录。 有关详细信息，请参阅[跟踪和消息日志记录](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)示例。  
   

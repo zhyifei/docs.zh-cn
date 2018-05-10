@@ -2,11 +2,11 @@
 title: ASP.NET 缓存集成
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 420ff192caf41a37b6229bf36e32124f3646d69c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 744ecbff8b51565906ff4c619ba8c8aecff123c7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 缓存集成
 此示例演示如何通过 WCF WEB HTTP 编程模型使用 ASP.NET 输出缓存。 请参阅[基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)自承载版本讨论深度中的服务实现此方案的示例。 本主题重点介绍 ASP.NET 输出缓存集成功能。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
   
  在 Service.cs 文件中的示例服务项目中，同时`GetCustomer`和`GetCustomers`操作标记为<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>，它提供缓存配置文件名称"CacheFor60Seconds"。 在服务项目的 Web.config 文件中，缓存配置文件"CacheFor60Seconds"下提供了 <`caching`> 元素的 <`system.web`>。 对于此缓存配置文件的值`duration`属性是"60"，因此与此配置文件关联的响应在 ASP.NET 输出缓存中缓存 60 秒。 此外，对于此缓存配置文件中，`varmByParam`属性设置为"format"具有不同的值是请求`format`查询字符串参数分别缓存其响应。 最后，缓存配置文件的`varyByHeader`属性设置为"Accept"，因此具有不同 Accept 标头值的请求会分别缓存其响应。  
   
- 客户端项目中的 Program.cs 演示如何使用 <xref:System.Net.HttpWebRequest> 编写此类客户端。 请注意，这只是访问 WCF 服务的一种方式。 还可以使用其他 .NET Framework 类（如 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道工厂和 <xref:System.Net.WebClient>）来访问该服务。 SDK 中的其他示例 (如[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例和[自动格式选择](../../../../docs/framework/wcf/samples/automatic-format-selection.md)示例) 演示如何使用这些类以与通信[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务。  
+ 客户端项目中的 Program.cs 演示如何使用 <xref:System.Net.HttpWebRequest> 编写此类客户端。 请注意，这只是访问 WCF 服务的一种方式。 还有可能使用其他.NET Framework 类与 WCF 通道工厂类似访问服务和<xref:System.Net.WebClient>。 SDK 中的其他示例 (如[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例和[自动格式选择](../../../../docs/framework/wcf/samples/automatic-format-selection.md)示例) 演示如何使用这些类与 WCF 服务进行通信。  
   
 ## <a name="to-run-the-sample"></a>运行示例  
  该示例由三个项目组成：  

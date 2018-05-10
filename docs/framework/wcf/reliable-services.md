@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: 02e0b8822c29490462fe74803a34222188afc910
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f98da5db34686e3bf09cc14c42a2ff6b693201f6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reliable-services"></a>可靠服务
-队列和可靠会话是 Windows Communication Foundation (WCF) 功能用于实现可靠消息传递。 本主题说明 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的可靠消息传递功能。  
+队列和可靠会话是 Windows Communication Foundation (WCF) 功能用于实现可靠消息传递。 本主题介绍 WCF 的可靠消息传递功能。  
   
  *可靠消息传递*是指可靠消息源 (称为*源*) 将消息可靠地传送到可靠的消息目标 (称为*目标*)。  
   
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
   
 -   使源和目标相互分离。 即使源或目标不可用，此功能也能为源和目标提供独立的故障与恢复，以及消息的可靠传送和传输。  
   
- 可靠消息传递经常伴随高延迟成本。 *延迟*是到达从源目的地的消息所需要的时间。 因此，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供了以下类型的可靠消息传递：  
+ 可靠消息传递经常伴随高延迟成本。 *延迟*是到达从源目的地的消息所需要的时间。 WCF，因此，提供了以下类型的可靠消息传递：  
   
 -   [可靠会话](../../../docs/framework/wcf/feature-details/reliable-sessions.md)，它提供可靠的传输，而无需的高延迟成本。  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/04/2018
  可靠会话提供低延迟可靠消息传送。 可靠会话通过任何代理或中介为 SOAP 消息提供的功能相当于 TCP 通过 IP 网桥为数据包提供的功能。 有关可靠会话的详细信息，请参阅[可靠会话](../../../docs/framework/wcf/feature-details/reliable-sessions.md)。  
   
 ### <a name="queues"></a>队列  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中的队列以高延迟为代价提供可靠的消息传送和源与目标之间的分离。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 排队的通信建立在消息队列 (MSMQ) 的基础之上。  
+ WCF 中的队列提供可靠传送消息和分离的源和目标以高延迟为代价之间。 WCF 排队通信构建基于消息队列 (MSMQ)。  
   
  MSMQ 作为可选组件随 Windows 提供。 MSMQ 服务作为 Windows 服务运行。 它捕获代表源的传输队列中要传输的消息，并将消息传递到目标队列。 目标队列代表目标接受消息，待以后目标请求消息时传递。 MSMQ 管理器实现可靠消息传递协议，使消息不会在传输中丢失。 此协议可以是本机的，也可以是基于 SOAP 的协议（称为 SOAP 可靠消息传递协议 (SRMP)）。  
   

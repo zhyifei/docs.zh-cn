@@ -2,14 +2,14 @@
 title: 桥接和错误处理
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: f13a55704422e8a958e55c489f6db11108b03c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bridging-and-error-handling"></a>桥接和错误处理
-此示例演示如何桥接客户端和服务使用不同绑定之间的通信使用 Windows Communication Foundation (WCF) 路由服务。 此示例还演示如何将备份服务用于故障转移方案。 路由服务是一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 组件，使用该组件可方便地在应用程序中包含基于内容的路由器。 此示例采用标准的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 计算器示例，用于使用路由服务进行通信。  
+此示例演示如何桥接客户端和服务使用不同绑定之间的通信使用 Windows Communication Foundation (WCF) 路由服务。 此示例还演示如何将备份服务用于故障转移方案。 路由服务是可以轻松地在你的应用程序中包含基于内容的路由器的 WCF 组件。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ddcf6983a7308bc1a615b11e86f17da1302d5085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e8c08fba0e4a74eafab00e75977a9f756c1b1cfa
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>如何：设置安全模式
 Windows Communication Foundation (WCF) 安全有三个存在于大多数预定义绑定的常见安全模式： 传输、 消息和"使用消息凭据的传输"。 另外，还有两种特定于两个绑定的模式：<xref:System.ServiceModel.BasicHttpBinding> 上的“transport-credential only”模式和 <xref:System.ServiceModel.NetMsmqBinding> 上的“Both”模式。 不过，本主题主要讨论三种常见安全模式：<xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message> 和 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
   
  请注意，并非所有预定义绑定都支持所有这些模式。 本主题使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 类来设置模式，并演示如何以编程方式来设置安全模式，如何通过配置来设置安全模式。  
   
- 有关详细信息，请参阅[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../docs/framework/wcf/feature-details/security-overview.md)，[服务的安全](../../../docs/framework/wcf/securing-services.md)，和[保护服务和客户端](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 有关传输模式和消息的详细信息，请参阅[传输安全](../../../docs/framework/wcf/feature-details/transport-security.md)和[消息安全](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
+ 有关详细信息，请参阅 WCF 安全，请参阅[安全概述](../../../docs/framework/wcf/feature-details/security-overview.md)，[服务的安全](../../../docs/framework/wcf/securing-services.md)，和[保护服务和客户端](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 有关传输模式和消息的详细信息，请参阅[传输安全](../../../docs/framework/wcf/feature-details/transport-security.md)和[消息安全](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
   
 ### <a name="to-set-the-security-mode-in-code"></a>在代码中设置安全模式  
   

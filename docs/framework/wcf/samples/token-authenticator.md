@@ -2,11 +2,11 @@
 title: 令牌身份验证器
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-authenticator"></a>令牌身份验证器
 此示例演示如何实现一个自定义令牌身份验证器。 Windows Communication Foundation (WCF) 中的令牌身份验证用于验证消息、 使用的令牌验证它自身一致，并进行身份验证标识与令牌相关联。  
@@ -23,11 +23,11 @@ ms.lasthandoff: 05/04/2018
   
 -   服务器如何使用自定义令牌身份验证器来验证客户端凭据。  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务代码与自定义令牌身份验证器有何关系。  
+-   如何 WCF 服务代码与自定义的令牌身份验证器。  
   
 -   如何使用服务器的 X.509 证书对服务器进行身份验证。  
   
- 此示例还演示在执行自定义令牌身份验证过程之后，如何从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中访问调用方的标识。  
+ 此示例还演示如何调用方的标识可从 WCF 自定义令牌身份验证过程完成后。  
   
  服务会公开单一终结点以便与使用 App.config 配置文件定义的服务进行通信。 终结点由地址、绑定和协定组成。 绑定是在安全模式设置为消息（这是 `wsHttpBinding` 的默认模式）的情况下用标准 `wsHttpBinding` 配置的。 此示例将标准 `wsHttpBinding`设置为使用客户端用户名身份验证。 服务还使用 `serviceCredentials` 行为来配置服务证书。 使用 `securityCredentials` 行为可以指定服务证书。 客户端使用服务证书对服务进行身份验证并提供消息保护。 以下配置引用了在示例设置过程中安装的 localhost 证书，如下面的设置说明中所述。  
   

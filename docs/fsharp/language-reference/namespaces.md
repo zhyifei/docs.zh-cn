@@ -4,7 +4,7 @@ description: '了解如何使用 F # 命名空间，可将代码组织到相关�
 ms.date: 04/24/2017
 ms.openlocfilehash: 81d1648dbdc111984ddeb77d11b2bd81cbca57cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
 ---

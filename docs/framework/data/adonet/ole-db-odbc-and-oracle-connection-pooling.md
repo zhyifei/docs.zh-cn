@@ -2,11 +2,11 @@
 title: OLE DB、ODBC 和 Oracle 连接池
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 2e42b52bb75008fd34f3e4bef1788626d96368bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC 和 Oracle 连接池
 池连接可以显著提高应用程序的性能和可缩放性。 本节介绍用于 OLE DB、ODBC 和 Oracle 的 .NET Framework 数据提供程序的连接池。  
@@ -26,8 +26,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  ODBC .NET Framework 数据提供程序的连接池由用于该连接的 ODBC 驱动程序管理器管理，不受 ODBC .NET Framework 数据提供程序的影响。  
   
  若要启用或禁用连接池，请打开**ODBC 数据源管理器**控制面板的管理工具文件夹中。 **连接池**选项卡允许你指定连接池的每个安装的 ODBC 驱动程序的参数。 请注意，对特定 ODBC 驱动程序所做的更改会影响所有使用该 ODBC 驱动程序的应用程序。  
-  
- 有关 ODBC 连接池的详细信息，请参阅[信息： 经常要求问题有关 ODBC 连接池](http://support.microsoft.com/kb/169470)。  
   
 ## <a name="connection-pooling-for-oracleclient"></a>OracleClient 连接池  
  Oracle .NET Framework 数据提供程序自动为 ADO.NET 客户端应用程序提供连接池。 您也可以提供几个连接字符串修饰符，用于控制连接池的行为（请参见本主题后文的“使用连接字符串关键字控制连接池”）。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 991792b22dbef42e6f244f33f3a82550c02ddeba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c15d201a002ec93ff3a83ce1bba9f94ccb6a7b95
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>如何：在服务上模拟客户端
 模拟客户端上的 Windows Communication Foundation (WCF) 服务使服务可以代表客户端执行操作。 对于受访问控制列表 (ACL) 检查的操作（例如，访问计算机上的目录和文件，或访问 SQL Server 数据库），ACL 检查针对的是客户端用户帐户。 本主题演示一些基本步骤，通过这些步骤，Windows 域中的客户端可以设置客户端模拟级别。 有关此操作的可运行示例，请参阅 [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)。 有关客户端模拟的详细信息，请参阅[委托和模拟](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  通过使用 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)创建服务客户端代码。 有关详细信息，请参阅[使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)。  
   
-2.  创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端后，将 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 类的 <xref:System.ServiceModel.Security.WindowsClientCredential> 属性设置为 <xref:System.Security.Principal.TokenImpersonationLevel> 枚举值之一。  
+2.  创建 WCF 客户端后, 设置<xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>属性<xref:System.ServiceModel.Security.WindowsClientCredential>类之一<xref:System.Security.Principal.TokenImpersonationLevel>枚举值。  
   
     > [!NOTE]
     >  若要使用 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>，则必须使用协商 Kerberos 身份验证（有时称为“多段”  或“多步”  Kerberos）。 有关如何实现这一方案的说明，请参阅[安全性的最佳做法](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)。  

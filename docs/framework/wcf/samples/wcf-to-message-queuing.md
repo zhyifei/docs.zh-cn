@@ -2,11 +2,11 @@
 title: Windows Communication Foundation 到消息队列
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 83c16fc097cc6eca76578730bcad0491b648c5c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0864098a55cbd7b43100bf9e0a1836e749eb2bc9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 到消息队列
 此示例演示如何 Windows Communication Foundation (WCF) 应用程序可以将消息发送到消息队列 (MSMQ) 应用程序。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。 服务和客户端不需要同时运行。  
@@ -95,9 +95,9 @@ Console.WriteLine("Order has been submitted:{0}", po);
 client.Close();  
 ```
 
- 客户端按顺序使用自定义客户端将 MSMQ 消息发送给队列。 由于接收和处理消息的应用程序是 MSMQ 应用程序，而不是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序，因此这两个应用程序之间没有隐式服务协定。 所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。  
+ 客户端按顺序使用自定义客户端将 MSMQ 消息发送给队列。 由于接收和处理消息的应用程序是 MSMQ 应用程序并是 WCF 应用程序，没有隐式服务协定之间两个应用程序。 所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。  
   
- 对于使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 绑定发送消息的所有 `MsmqIntegration` 应用程序而言，自定义客户端在本质上都是相同的。 与其他客户端不同，它不包含一系列服务操作。 它只是一个提交消息操作。  
+ 自定义客户端是实质上是相同的所有 WCF 应用程序使用`MsmqIntegration`绑定发送消息。 与其他客户端不同，它不包含一系列服务操作。 它只是一个提交消息操作。  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  

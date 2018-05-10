@@ -1,26 +1,12 @@
 ---
 title: 入门教程疑难解答
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8bc077b1ef24ecfcb4d37a9ddb8389dc705f68e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 12812bd1ef88eab14a8defed0b71657b0d33c618
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>入门教程疑难解答
 本主题列出使用“入门教程”时最常遇见的问题及其解决方法。  
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="BKMK_q2"></a>   
 ## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>尝试运行服务应用程序： HTTP 无法注册 URL http://+:8000/ServiceModelSamples/Service/。 进程不具有此命名空间的访问权限。  
- 必须使用管理特权来运行承载 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的进程。 如果从 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 内运行服务，则必须以管理员身份运行 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]。 为此，请单击**启动**，右键单击[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]和选择**以管理员身份运行**。 如果从命令行提示符运行服务，则必须按类似方式以管理员身份启动命令行提示符。 单击**启动**，右键单击**命令提示符**和选择**以管理员身份运行**。  
+ 必须使用管理权限运行承载的 WCF 服务的进程。 如果从 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 内运行服务，则必须以管理员身份运行 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]。 为此，请单击**启动**，右键单击[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]和选择**以管理员身份运行**。 如果从命令行提示符运行服务，则必须按类似方式以管理员身份启动命令行提示符。 单击**启动**，右键单击**命令提示符**和选择**以管理员身份运行**。  
   
 <a name="BKMK_q3"></a>   
 ## <a name="attempting-to-use-the-svcutilexe-tool-svcutil-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>尝试使用 Svcutil.exe 工具时出现以下错误：“svcutil”不是内部或外部命令，也不是可操作的程序或批处理文件。  

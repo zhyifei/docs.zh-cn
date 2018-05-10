@@ -2,21 +2,21 @@
 title: 基本资源服务
 ms.date: 03/30/2017
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
-ms.openlocfilehash: 3ec743bbbb6d18d972701c3149179d6f615d1884
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 62b2b863f38647e81468065fd69fc4933afc5b16
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="basic-resource-service"></a>基本资源服务
-此示例演示如何实现基于 HTTP 的服务使用 Windows Communication Foundation (WCF) REST 编程模型公开支持检索客户的集合、 添加、 删除和替换操作。 此示例由两个组件组成：一个自承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服务 (Service.cs) 和一个创建服务并对该服务进行调用的控制台应用程序 (program.cs)。  
+此示例演示如何实现基于 HTTP 的服务使用 Windows Communication Foundation (WCF) REST 编程模型公开支持检索客户的集合、 添加、 删除和替换操作。 此示例由两个组件的自承载的 WCF HTTP 服务 (Service.cs) 和一个控制台应用程序 (program.cs)，创建服务并对其进行调用。  
   
 ## <a name="sample-details"></a>示例详细信息  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务以面向资源的/REST 方式公开客户集合。 简而言之，这涉及拥有客户集合以及该集合中每个客户的唯一 URI。 该服务支持在集合 URI 上发送 HTTP `GET` 以检索整个集合，并在结合 URI 上发送 HTTP `POST` 以向该集合添加新客户。 另外，单个客户的 URI 上，它还支持 HTTP `GET` 以获取客户详细信息，支持 HTTP `PUT` 以替换该客户的详细信息，并支持 HTTP `DELETE` 以将该客户从集合中移除。 将新客户添加到集合中时，该服务会向其分配一个唯一的 URI，并将该 URI 作为客户详细信息的一部分存储。 此外，该服务还使用响应的位置 HTTP 标头将该 URI 通知客户端。  
+ WCF 服务以资源面向/REST 的方式公开客户集合。 简而言之，这涉及拥有客户集合以及该集合中每个客户的唯一 URI。 该服务支持在集合 URI 上发送 HTTP `GET` 以检索整个集合，并在结合 URI 上发送 HTTP `POST` 以向该集合添加新客户。 另外，单个客户的 URI 上，它还支持 HTTP `GET` 以获取客户详细信息，支持 HTTP `PUT` 以替换该客户的详细信息，并支持 HTTP `DELETE` 以将该客户从集合中移除。 将新客户添加到集合中时，该服务会向其分配一个唯一的 URI，并将该 URI 作为客户详细信息的一部分存储。 此外，该服务还使用响应的位置 HTTP 标头将该 URI 通知客户端。  
   
- App.config 文件使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 属性设置为 <xref:System.ServiceModel.Description.WebHttpEndpoint> 的默认 <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> 来配置 `true` 服务。 因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将在 `http://localhost:8000/Customers/help` 上创建一个基于 HTML 的自动帮助页，该帮助页可提供有关如何构造服务的 HTTP 请求以及如何访问服务的 HTTP 响应的信息 – 例如，如何以 XML 和 JSON 表示客户详细信息的示例。  
+ App.config 文件使用 <xref:System.ServiceModel.Description.WebHttpEndpoint> 属性设置为 <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> 的默认 `true` 来配置 WCF 服务。 WCF 结果是，创建一个基于 HTML 的自动帮助页在`http://localhost:8000/Customers/help`，它提供有关如何构造 HTTP 请求的信息服务以及如何访问服务的 HTTP 响应 – 例如，如何的客户详细信息示例以 XML 和 JSON 表示。  
   
- 通过以这种方式公开客户集合（一般来说是任何资源），客户端可以使用 URI 和 HTTP `GET`、`PUT`、`DELETE` 和 `POST` 以一种统一的方式与服务进行交互。 Program.cs 演示如何使用 <xref:System.Net.HttpWebRequest> 来创作这种客户端。 请注意，这只是访问 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 服务的一种方式。 还可以使用其他 .NET Framework 类（如 <xref:System.ServiceModel.ChannelFactory> 和 <xref:System.Net.WebClient>）来访问该服务。 SDK 中的其他示例 (如[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例和[自动格式选择](../../../../docs/framework/wcf/samples/automatic-format-selection.md)示例) 演示如何使用这些类与通信[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务。  
+ 通过以这种方式公开客户集合（一般来说是任何资源），客户端可以使用 URI 和 HTTP `GET`、`PUT`、`DELETE` 和 `POST` 以一种统一的方式与服务进行交互。 Program.cs 演示如何使用 <xref:System.Net.HttpWebRequest> 来创作这种客户端。 请注意，这只是一种方法来访问 WCF REST 服务。 还可以使用其他 .NET Framework 类（如 <xref:System.ServiceModel.ChannelFactory> 和 <xref:System.Net.WebClient>）来访问该服务。 SDK 中的其他示例 (如[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例和[自动格式选择](../../../../docs/framework/wcf/samples/automatic-format-selection.md)示例) 演示如何使用这些类与 WCF 服务进行通信。  
   
  此示例包含一个自承载服务和一个客户端，它们都在一个控制台应用程序内运行。 在控制台应用程序运行时，客户端会对服务进行请求，并将响应中的相关信息写入控制台窗口。  
   

@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 784b0fe3e2b23287d458f9aa4d8276e10dd6ed97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7e2253c527cbb2b6f21b222b1e9691c2ecff01f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>指定终结点地址
 与 Windows Communication Foundation (WCF) 服务的所有通信都都通过其终结点进行。 每个 <xref:System.ServiceModel.Description.ServiceEndpoint> 都包含一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 和一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。 协定指定可用的操作。 绑定指定如何与服务进行通信，而地址指定查找服务的位置。 每个终结点都必须具有一个唯一的地址。 终结点的地址由 <xref:System.ServiceModel.EndpointAddress> 类表示，该类包含一个表示服务地址的统一资源定位符 (URI)，一个表示服务的安全标识的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 和一个可选的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 集合。 可选标头提供用于标识终结点或与终结点交互的更多详细寻址信息。 例如，标头可指示如何处理传入消息，终结点应发送答复消息的位置，或在多个实例可用时应使用哪个服务实例处理来自特定用户的传入消息。  
   
 ## <a name="definition-of-an-endpoint-address"></a>终结点地址的定义  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，<xref:System.ServiceModel.EndpointAddress> 按照 WS-Addressing 标准中的定义建立终结点引用 (EPR) 的模型。  
+ 在 WCF 中，<xref:System.ServiceModel.EndpointAddress>模型 Ws-addressing 标准中定义的终结点引用 (EPR)。  
   
  大多数传输的地址 URI 包含四个部分。 例如，此 URI"http://www.fabrikam.com:322/mathservice.svc/secureEndpoint"包含以下四个部分：  
   
@@ -29,11 +29,11 @@ ms.lasthandoff: 05/04/2018
   
 -   路径：/mathservice.svc/secureEndpoint  
   
- 作为 EPR 模型的一部分，每个终结点引用都可以包含一些添加额外标识信息的引用参数。 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，将这些引用参数建模为 <xref:System.ServiceModel.Channels.AddressHeader> 类的实例。  
+ 作为 EPR 模型的一部分，每个终结点引用都可以包含一些添加额外标识信息的引用参数。 在 WCF 中，这些引用参数建模为的实例<xref:System.ServiceModel.Channels.AddressHeader>类。  
   
  可以通过使用代码以强制方式或通过配置以声明方式指定服务的终结点地址。 在代码中定义终结点通常是不可行的，因为已部署服务的绑定和地址通常与在部署服务时所用的绑定和地址不同。 一般而言，使用配置定义服务终结点比使用代码更为可行。 通过将绑定和寻址信息放置在代码之外，可以在更改这些信息之后不必重新编译和重新部署应用程序。 如果在代码或配置中未指定任何终结点，则运行时在该服务实现的每个协定的每个基地址上添加一个默认终结点。  
   
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，有两种指定服务终结点地址的方式。 可以为每个与服务关联的终结点指定一个绝对地址，也可以为服务的 <xref:System.ServiceModel.ServiceHost> 提供一个基址，然后再为每个与此服务关联的终结点指定一个地址（该地址是相对于此基址定义的）。 可以在配置或代码中使用这两种过程来为服务指定终结点地址。 如果不指定相对地址，则服务会使用基址。 也可以为一个服务指定多个基址，但是对于每个传输协议，每个服务只允许有一个基址。 如果有多个终结点，则会使用不同的绑定来配置每个终结点，它们的地址必须是唯一的。 使用相同绑定但使用不同协定的终结点可以使用相同的地址。  
+ 有两种方法在 WCF 中指定服务的终结点地址。 可以为每个与服务关联的终结点指定一个绝对地址，也可以为服务的 <xref:System.ServiceModel.ServiceHost> 提供一个基址，然后再为每个与此服务关联的终结点指定一个地址（该地址是相对于此基址定义的）。 可以在配置或代码中使用这两种过程来为服务指定终结点地址。 如果不指定相对地址，则服务会使用基址。 也可以为一个服务指定多个基址，但是对于每个传输协议，每个服务只允许有一个基址。 如果有多个终结点，则会使用不同的绑定来配置每个终结点，它们的地址必须是唯一的。 使用相同绑定但使用不同协定的终结点可以使用相同的地址。  
   
  使用 IIS 承载时，您不用自己管理 <xref:System.ServiceModel.ServiceHost> 实例。 在 IIS 中承载时，基址始终为在服务的 .svc 文件中指定的地址。 因此，必须对 IIS 承载的服务终结点使用相对终结点地址。 提供完全限定的终结点地址会在服务的部署过程中导致错误。 有关详细信息，请参阅[部署 Internet Information Services-Hosted 的 WCF 服务](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。  
   

@@ -2,16 +2,16 @@
 title: 基本 AJAX 服务
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: a534e4eda1f95cd33d4429fda23b6187caaf58ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0bb8a2b28ea87cb0c22126540f6cdab604ca5120
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="basic-ajax-service"></a>基本 AJAX 服务
 此示例演示如何使用 Windows Communication Foundation (WCF) 来创建基本的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务 （使用从 Web 浏览器客户端的 JavaScript 代码可以访问的服务）。 该服务使用 <xref:System.ServiceModel.Web.WebGetAttribute> 属性以确保服务响应 HTTP GET 请求并被配置为对响应使用 JavaScript 对象表示法 (JSON) 数据格式。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对 AJAX 的支持经过了优化，以便通过 `ScriptManager` 控件与 ASP.NET AJAX 一起使用。 有关使用示例[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]与 ASP.NET AJAX，请参阅[AJAX 示例](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
+ 在 WCF 中的 AJAX 支持进行了优化以用于通过 ASP.NET AJAX`ScriptManager`控件。 有关使用 ASP.NET AJAX 的 WCF 示例，请参阅[AJAX 示例](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  

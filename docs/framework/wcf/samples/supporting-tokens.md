@@ -2,11 +2,11 @@
 title: 支持令牌
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 4f8cf62220955bef3f341c43b3c615f873387b2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d8ff3cf4d5a060d135cbcf40c043681ce72b6e0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="supporting-tokens"></a>支持令牌
 支持令牌示例演示如何将其他令牌添加到使用 WS-Security 的消息。 该示例除添加用户名安全令牌外，还添加 X.509 二进制安全令牌。 在 WS-Security 消息头中将令牌从客户端传递到服务，部分消息使用与 X.509 安全令牌关联的私钥进行签名，以证明 X.509 证书相对于接收方的所有权。 这可用于当要求有多个与消息关联的声明时对发送方进行身份验证或授权。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -345,7 +345,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```  
   
 ## <a name="running-the-sample"></a>运行示例  
- 运行此示例时，客户端首先提示您为用户名令牌提供用户名和密码。 请确保为系统帐户提供正确值，因为服务上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将用户名令牌中提供的值映射为系统提供的标识。 此后，客户端会显示来自服务的响应。 在客户端窗口中按 Enter 可以关闭客户端。  
+ 运行此示例时，客户端首先提示您为用户名令牌提供用户名和密码。 因为在服务上的 WCF 映射到由系统提供的标识提供用户名令牌中的值，则请务必为你的系统帐户，提供正确的值。 此后，客户端会显示来自服务的响应。 在客户端窗口中按 Enter 可以关闭客户端。  
   
 ## <a name="setup-batch-file"></a>设置批处理文件  
  通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行以 Internet 信息服务 (IIS) 为宿主的应用程序，该应用程序要求基于服务器证书的安全性。 必须修改此批处理文件，以便跨计算机或在非承载情况下工作。  
@@ -464,6 +464,6 @@ iisreset
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
 > [!NOTE]
->  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已跨计算机运行使用证书的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+>  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 WCF 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="see-also"></a>请参阅

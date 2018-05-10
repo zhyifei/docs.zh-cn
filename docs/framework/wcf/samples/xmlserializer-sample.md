@@ -2,14 +2,14 @@
 title: XMLSerializer 示例
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 3d1df93ef0efb7da24a1478f87e10dd18aa10bf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 155719f546491f53ad2587e12d030dd7821b1fd3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer 示例
-此示例演示如何序列化和反序列化与 <xref:System.Xml.Serialization.XmlSerializer> 兼容的类型。 默认的 Windows Communication Foundation (WCF) 格式化程序<xref:System.Runtime.Serialization.DataContractSerializer>类。 当无法使用 <xref:System.Xml.Serialization.XmlSerializer> 类时，可以使用 <xref:System.Runtime.Serialization.DataContractSerializer> 类来序列化和反序列化类型。 当需要精确控制 XML 时通常会发生这种情况 - 例如，如果某个数据必须是一个 XML 属性，而不能是 XML 元素。 此外，为非 <xref:System.Xml.Serialization.XmlSerializer> 服务创建客户端时，常常会自动选择 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
+此示例演示如何序列化和反序列化与 <xref:System.Xml.Serialization.XmlSerializer> 兼容的类型。 默认的 Windows Communication Foundation (WCF) 格式化程序<xref:System.Runtime.Serialization.DataContractSerializer>类。 当无法使用 <xref:System.Xml.Serialization.XmlSerializer> 类时，可以使用 <xref:System.Runtime.Serialization.DataContractSerializer> 类来序列化和反序列化类型。 当需要精确控制 XML 时通常会发生这种情况 - 例如，如果某个数据必须是一个 XML 属性，而不能是 XML 元素。 此外， <xref:System.Xml.Serialization.XmlSerializer> ，常常会自动选择创建非 WCF 服务的客户端时。  
   
  在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。  
   

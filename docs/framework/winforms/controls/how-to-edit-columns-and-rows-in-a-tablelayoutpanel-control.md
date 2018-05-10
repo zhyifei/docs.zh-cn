@@ -18,9 +18,9 @@ ms.lasthandoff: 05/04/2018
 你可以使用集合编辑器的<xref:System.Windows.Forms.TableLayoutPanel>控件，调用**列和行样式**对话框中，若要编辑的行和控件的列。  
   
 > [!NOTE]
->  如果你想要跨多个行或列的控件，设置`RowSpan`和`ColumnSpan`控件上的属性。 有关详细信息，请参阅 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
+>  如果你想要跨多个行或列的控件，设置`RowSpan`和`ColumnSpan`控件上的属性。 有关详细信息，请参阅 [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
 >   
->  如果你想要在单元格中，控件对齐，或者如果想要在单元格中拉伸控件，使用控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性。 有关详细信息，请参阅 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
+>  如果你想要在单元格中，控件对齐，或者如果想要在单元格中拉伸控件，使用控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性。 有关详细信息，请参阅 [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
 >   
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   

@@ -2,11 +2,11 @@
 title: 处理异常和错误
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: a7fb7b5dd5755b9d534d9a96af3db598a44b42b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 494a0665f5bad2c7da3998cf77ced79314ca2f36
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="handling-exceptions-and-faults"></a>处理异常和错误
 异常用来在服务或客户端实现中在本地传达错误， 而错误则用来跨服务边界传达错误，如在服务器与客户端之间传达。 除了错误以外，传输通道也常常使用传输特定的机制来传达传输级错误。 例如，HTTP 传输机制使用状态码（如 404）来传达不存在的终结点 URL（不存在发回错误的终结点）。 本文档由三部分组成，它们为自定义通道的作者提供指南。 第一部分提供关于何时以及如何定义和引发异常的指南。 第二部分提供关于生成和使用错误的指南。 第三部分说明如何提供跟踪信息来帮助自定义通道用户对所运行的应用程序进行疑难解答。  
@@ -15,7 +15,7 @@ ms.lasthandoff: 05/04/2018
  在引发异常时需要牢记两件事情：第一，异常的类型必须允许用户编写能对异常做出适当反应的正确代码。 第二，异常必须为用户提供足够的信息，使用户能了解究竟哪里出现了故障，该故障带来的影响以及如何修复该故障。 以下部分提供关于异常的类型和消息的 Windows Communication Foundation (WCF) 通道指南。 “异常的设计准则”文档中也有关于 .NET 中的异常的一般性指南。  
   
 ### <a name="exception-types"></a>异常类型  
- 由通道引发的所有异常都必须是 <xref:System.TimeoutException?displayProperty=nameWithType>、<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 或者是派生自 <xref:System.ServiceModel.CommunicationException> 的类型 （还可能会引发诸如 <xref:System.ObjectDisposedException> 之类的异常，但这仅仅是为了指示调用代码误用了通道。 如果某个通道的使用正确无误，则它只能引发给定的异常）。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了七个派生自 <xref:System.ServiceModel.CommunicationException> 的异常类型，它们设计为供通道使用。 还存在其他从 <xref:System.ServiceModel.CommunicationException> 派生的异常，这些异常设计用于系统的其他部分。 这些异常类型包括：  
+ 由通道引发的所有异常都必须是 <xref:System.TimeoutException?displayProperty=nameWithType>、<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 或者是派生自 <xref:System.ServiceModel.CommunicationException> 的类型 （还可能会引发诸如 <xref:System.ObjectDisposedException> 之类的异常，但这仅仅是为了指示调用代码误用了通道。 如果某个通道的使用正确无误，则它只能引发给定的异常）。WCF 提供了七个派生自的异常类型<xref:System.ServiceModel.CommunicationException>，它们设计为供通道。 还存在其他从 <xref:System.ServiceModel.CommunicationException> 派生的异常，这些异常设计用于系统的其他部分。 这些异常类型包括：  
   
 |异常类型|含义|内部异常的内容|恢复策略|  
 |--------------------|-------------|-----------------------------|-----------------------|  
@@ -131,7 +131,7 @@ public class FaultConverter
 }  
 ```  
   
- 用来生成自定义错误的每个通道都必须实现 `FaultConverter` 并通过调用 `GetProperty<FaultConverter>` 来返回它。 自定义 `OnTryCreateFaultMessage` 实现必须将异常转换为错误或者将异常委托给内部通道的 `FaultConverter`。 如果该通道是传输通道，则该实现要么必须转换异常，要么必须将异常委托给编码器的 `FaultConverter` 或者委托给 `FaultConverter` 中提供的默认 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 默认的 `FaultConverter` 会转换与 WS-Addressing 和 SOAP 所指定的错误消息相对应的错误。 下面是一个示例 `OnTryCreateFaultMessage` 实现。  
+ 用来生成自定义错误的每个通道都必须实现 `FaultConverter` 并通过调用 `GetProperty<FaultConverter>` 来返回它。 自定义 `OnTryCreateFaultMessage` 实现必须将异常转换为错误或者将异常委托给内部通道的 `FaultConverter`。 如果通道是传输它必须将异常转换，或将委托给编码器的`FaultConverter`或默认值`FaultConverter`WCF 中提供。 默认的 `FaultConverter` 会转换与 WS-Addressing 和 SOAP 所指定的错误消息相对应的错误。 下面是一个示例 `OnTryCreateFaultMessage` 实现。  
   
 ```  
 public override bool OnTryCreateFaultMessage(Exception exception,   
@@ -186,7 +186,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
 3.  针对堆栈中单个层的错误，例如，像 WS-RM 序列号错误之类的错误。  
   
- 类别 1。 的错误通常是 WS-Addressing 和 SOAP 错误。 由 `FaultConverter` 提供的基类 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会转换与 WS-Addressing 和 SOAP 所指定的错误消息相对应的错误，这样您就不必亲自处理对这些异常的转换。  
+ 类别 1。 的错误通常是 WS-Addressing 和 SOAP 错误。 基`FaultConverter`类提供由 WCF 将错误消息相对应的错误指定的 Ws-addressing 和 SOAP 因此你不必处理这些异常的转换自己。  
   
  类别 2。 的错误在以下情况下出现：某个层向消息中添加一个属性，而该消息不完全使用与此层有关的消息信息。 当高层以后请求消息属性进一步处理消息信息时，则可能会检测到错误。 这样的通道应实现以前指定的 `GetProperty`，以使高层可以发回正确的错误。 TransactionMessageProperty 就是这方面的一个示例。 此属性会添加到消息中，而不会完全验证标头中的所有数据（完全验证可能涉及到与分布式事务处理协调器 (DTC) 联系）。  
   
@@ -285,7 +285,7 @@ public override bool OnTryCreateException(
  对于具有不同恢复方案的特定错误条件，请考虑定义 `ProtocolException` 的派生类。  
   
 ### <a name="mustunderstand-processing"></a>MustUnderstand 处理  
- SOAP 定义一个用于指示接收方未理解必需的标头的通用错误。 此错误称为 `mustUnderstand` 错误。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，自定义通道从不生成 `mustUnderstand` 错误， 而是由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dispatcher（位于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通信堆栈的顶部）来查看基础堆栈是否理解了标记为 MustUndestand=true 的所有标头。 如果均未理解，则此时会生成一个 `mustUnderstand` 错误 （用户可以选择关闭此 `mustUnderstand` 处理，并让应用程序接收所有消息头。 在这种情况下，应用程序负责执行 `mustUnderstand` 处理)。所生成的错误包括一个 NotUnderstood 标头，其中包含未理解且 MustUnderstand=true 的所有标头的名称。  
+ SOAP 定义一个用于指示接收方未理解必需的标头的通用错误。 此错误称为 `mustUnderstand` 错误。 在 WCF 中，自定义通道永远不会生成`mustUnderstand`错误。 相反，位于 WCF 通信堆栈的顶部，WCF 调度程序会检查的所有标头的了标记为 MustUndestand = true 基础堆栈是否理解。 如果均未理解，则此时会生成一个 `mustUnderstand` 错误 （用户可以选择关闭此 `mustUnderstand` 处理，并让应用程序接收所有消息头。 在这种情况下，应用程序负责执行 `mustUnderstand` 处理)。所生成的错误包括一个 NotUnderstood 标头，其中包含未理解且 MustUnderstand=true 的所有标头的名称。  
   
  如果协议通道发送一个 MustUnderstand=true 的自定义标头，并收到一个 `mustUnderstand` 错误，则这个协议通道必须确定该错误是否起因它所发送的标头。 `MessageFault` 类有两个可用来执行此操作的成员：  
   
@@ -310,14 +310,14 @@ public class MessageFault
   
 -   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>（要写入的跟踪信息的源）、<xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>（具体侦听器的抽象基类，具体侦听器接收要从 <xref:System.Diagnostics.TraceSource> 跟踪的信息并将其输出到侦听器特定的目标， 例如，<xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪信息输出到 XML 文件中。) 以及 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>（允许应用程序用户控制跟踪的详细级别，通常在配置中指定）。  
   
--   除了的核心组件，你可以使用[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)来查看和搜索[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]跟踪。 该工具专门设计用于由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成且借助于 <xref:System.Diagnostics.XmlWriterTraceListener> 写出的跟踪文件。 下图演示了跟踪中涉及到的各种组件。  
+-   除了的核心组件，你可以使用[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)查看和搜索 WCF 跟踪。 该工具专为跟踪文件生成的 WCF 和写出使用设计<xref:System.Diagnostics.XmlWriterTraceListener>。 下图演示了跟踪中涉及到的各种组件。  
   
  ![处理异常和错误](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   
 ### <a name="tracing-from-a-custom-channel"></a>从自定义通道跟踪  
  自定义通道应写出跟踪消息，以便在无法向正在运行的应用程序附加调试器时帮助诊断问题。 这涉及到两个高级任务：实例化 <xref:System.Diagnostics.TraceSource> 和调用其方法来写入跟踪。  
   
- 在实例化 <xref:System.Diagnostics.TraceSource> 时，所指定的字符串将成为该源的名称。 此名称用来配置（启用/禁用/设置跟踪级别）跟踪源。 此名称还显示在跟踪输出本身当中。 自定义通道应使用唯一的源名称来帮助该跟踪输出的读取器了解跟踪信息的出处。 常见的做法是将正在写入信息的程序集的名称用作跟踪源的名称。 例如，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将 System.ServiceModel 用作从 System.ServiceModel 程序集写入的信息的跟踪源。  
+ 在实例化 <xref:System.Diagnostics.TraceSource> 时，所指定的字符串将成为该源的名称。 此名称用来配置（启用/禁用/设置跟踪级别）跟踪源。 此名称还显示在跟踪输出本身当中。 自定义通道应使用唯一的源名称来帮助该跟踪输出的读取器了解跟踪信息的出处。 常见的做法是将正在写入信息的程序集的名称用作跟踪源的名称。 例如，WCF 用作 System.ServiceModel 跟踪源写入从 System.ServiceModel 程序集的信息。  
   
  有了跟踪源之后，就可以调用它的 <xref:System.Diagnostics.TraceSource.TraceData%2A>、<xref:System.Diagnostics.TraceSource.TraceEvent%2A> 或 <xref:System.Diagnostics.TraceSource.TraceInformation%2A> 方法将跟踪项写入跟踪侦听器。 对于所写入的每个跟踪项，需要将事件归为 <xref:System.Diagnostics.TraceEventType> 中所定义的事件类型之一。 是否将跟踪项输出到侦听器取决于该分类以及配置中的跟踪级别设置。 例如，如果将配置中的跟踪级别设置为 `Warning`，则将允许写入 `Warning`、`Error` 和 `Critical` 跟踪项，但会阻止 Information（信息）和 Verbose（详细）项。 下面的示例关于在 Information（信息）级别实例化跟踪源和写出项：  
   
@@ -402,4 +402,4 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 </E2ETraceEvent>  
 ```  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 跟踪查看器理解上面所演示的 `TraceRecord` 元素的架构，并从其子元素中提取数据，然后将提取的数据以表格形式显示。 在跟踪结构化应用程序数据以帮助 Svctraceviewer.exe 用户读取数据时，通道应使用此架构。
+ WCF 跟踪查看器理解的架构`TraceRecord`如前面所述的元素和从其子元素中提取数据并以表格格式显示。 在跟踪结构化应用程序数据以帮助 Svctraceviewer.exe 用户读取数据时，通道应使用此架构。

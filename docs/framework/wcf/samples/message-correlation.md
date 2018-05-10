@@ -2,11 +2,11 @@
 title: 消息相关性
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 1573cdafafb5861099b275caa888c79d23cafeb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7105c66153625b4a7a2b9a2d61a2ab2821cab2af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-correlation"></a>消息相关性
 此示例演示如何消息队列 (MSMQ) 应用程序可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务以及如何消息也可以在请求/响应方案中的发送方和接收方应用程序之间关联起来。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k  
@@ -64,9 +64,9 @@ public class OrderProcessorService : IOrderProcessor
 }  
 ```
 
- 服务使用自定义客户端 `OrderResponseClient` 将 MSMQ 消息发送到队列。 由于接收和处理消息的应用程序是 MSMQ 应用程序，而不是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序，因此这两个应用程序之间没有隐式服务协定。 所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。  
+ 服务使用自定义客户端 `OrderResponseClient` 将 MSMQ 消息发送到队列。 由于接收和处理消息的应用程序是 MSMQ 应用程序并是 WCF 应用程序，没有隐式服务协定之间两个应用程序。 所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。  
   
- 对于使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 绑定发送消息的所有 `msmqIntegrationBinding` 应用程序而言，自定义代理在本质上都是相同的。 与其他代理不同，它不包含一系列服务操作。 它只是一个提交消息操作。  
+ 自定义代理在本质上的所有 WCF 应用程序使用相同`msmqIntegrationBinding`绑定发送消息。 与其他代理不同，它不包含一系列服务操作。 它只是一个提交消息操作。  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -212,7 +212,7 @@ static void PlaceOrder()
  从中接收订单响应的 MSMQ 队列是在配置文件的 appSettings 节中定义的，如下面的示例配置所示。  
   
 > [!NOTE]
->  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点地址指定 msmq.formatname 方案，并为本地计算机使用“localhost”。 根据 MSMQ 准则，格式正确的格式名称应遵循 URI 中的 msmq.formatname。  
+>  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定 msmq.formatname 方案，并为本地计算机使用"localhost"。 根据 MSMQ 准则，格式正确的格式名称应遵循 URI 中的 msmq.formatname。  
   
 ```xml  
 <appSettings>  

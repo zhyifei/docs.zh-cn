@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>消息日志记录的安全问题
 本主题描述如何防止在消息日志以及由消息日志记录生成的事件中公开敏感数据。  
@@ -16,7 +16,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="security-concerns"></a>安全问题  
   
 ### <a name="logging-sensitive-information"></a>记录敏感信息  
- Windows Communication Foundation (WCF) 不会修改应用程序特定的标头和正文中的任何数据。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也不会跟踪应用程序特定的标题或正文数据中的个人信息。  
+ Windows Communication Foundation (WCF) 不会修改应用程序特定的标头和正文中的任何数据。 WCF 还不会跟踪应用程序特定的标头或正文数据中的个人信息。  
   
  启用消息日志记录后，特定于应用程序的标头中的个人信息（例如查询字符串）以及正文信息（例如信用卡号）会在日志中变为可见。 应用程序部署人员负责对配置和日志文件实施访问控制。 如果您不希望此类信息可见，应当禁用日志记录，或者如果您希望共享日志，则筛选出其中的部分数据。  
   

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebug::Terminate 方法"
-ms.custom: 
+title: ICorDebug::Terminate 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebug.Terminate
 api_location:
@@ -23,23 +15,19 @@ helpviewer_keywords:
 ms.assetid: fffe5616-0896-4426-ab5e-21869b514883
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e416f8ea20bde49a1c1cdb5d61bc4a6bfbce7913
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c2b590e7402bf29ffeb5bd14fc383edae41a04e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate 方法
 终止`ICorDebug`对象。  
   
 > [!NOTE]
->  `Terminate`不应该调用直到[icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)回调已接收的所有正在调试的进程。  
+>  `Terminate` 不应该调用直到[icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)回调已接收的所有正在调试的进程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,16 +36,16 @@ HRESULT Terminate ();
 ```  
   
 ## <a name="remarks"></a>备注  
- `Terminate`时，必须调用`ICorDebug`不再需要对象。  
+ `Terminate` 时，必须调用`ICorDebug`不再需要对象。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

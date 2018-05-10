@@ -2,17 +2,17 @@
 title: 联合示例
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 38581c7003c30038ee1a3438caa96b7f2782a23e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9c2b91f7d8bdf24476c76fcd479b7f2fb44c90f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="federation-sample"></a>联合示例
 本示例演示联合安全。  
   
 ## <a name="sample-details"></a>示例详细信息  
- Windows Communication Foundation (WCF) 提供支持用于部署联合的安全体系结构通过`wsFederationHttpBinding`。 `wsFederationHttpBinding` 提供安全可靠并且可互操作的绑定，该绑定中使用 HTTP 作为请求/回复通信的基础传输机制，并使用文本/XML 作为编码的联网格式。 有关中的联合身份验证的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ Windows Communication Foundation (WCF) 提供支持用于部署联合的安全体系结构通过`wsFederationHttpBinding`。 `wsFederationHttpBinding` 提供安全可靠并且可互操作的绑定，该绑定中使用 HTTP 作为请求/回复通信的基础传输机制，并使用文本/XML 作为编码的联网格式。 有关在 WCF 中的联合身份验证的详细信息，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
  此方案包括 4 个部分：  
   

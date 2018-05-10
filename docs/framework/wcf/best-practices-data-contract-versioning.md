@@ -7,11 +7,11 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：数据协定版本管理
 本主题列出了创建容易随时间而改变的数据协定的最佳做法。 有关数据协定的详细信息，请参阅中的主题[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
  这意味着即使是最常用的版本管理方案（例如添加新的数据成员）也不能通过与给定架构无缝相关的方法实现。 较新版本的数据协定（例如新添数据成员）不会使用旧架构进行验证。  
   
- 但是，有许多方案不需要严格遵从架构。 许多 Web 服务平台（包括 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 和使用 ASP.NET 创建的 XML Web services）默认不执行架构验证，因此允许使用架构未描述过的其他元素。 使用这样的平台工作时，许多版本管理方案更容易实现。  
+ 但是，有许多方案不需要严格遵从架构。 许多 Web 服务平台，包括使用 ASP.NET，创建的 WCF 和 XML Web services 不执行架构验证，默认情况下，并因此允许未描述过架构的额外元素。 使用这样的平台工作时，许多版本管理方案更容易实现。  
   
  因此，存在两套数据协定版本管理准则：一套用于严格架构有效性十分重要的方案；另一套用于严格架构有效性不太重要的方案。  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/04/2018
   
  有关详细信息，请参阅最佳实践：[服务版本控制](../../../docs/framework/wcf/service-versioning.md)。  
   
- 有时，您必须保证应用程序发送的消息严格遵从架构，但不能依赖要严格遵从架构的传入消息。 在这种情况下，存在传入消息中包含某些外来数据的危险。 这些外来值由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 进行存储并返回，因此会导致发送对架构无效的消息。 若要避免此问题，应关闭往返功能。 有两种方法可以实现此目的。  
+ 有时，您必须保证应用程序发送的消息严格遵从架构，但不能依赖要严格遵从架构的传入消息。 在这种情况下，存在传入消息中包含某些外来数据的危险。 这些外来值进行存储，并返回由 WCF，并因此导致架构无效的消息发送。 若要避免此问题，应关闭往返功能。 有两种方法可以实现此目的。  
   
 -   请勿在任何类型上实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。  
   

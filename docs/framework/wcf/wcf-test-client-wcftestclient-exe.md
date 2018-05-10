@@ -2,46 +2,46 @@
 title: WCF 测试客户端 (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: fa06077cef3a53b796b85a1eb84bf0fdfba2f598
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 78be40268b46c4c85ee034db67d67ee0fbf2158f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 测试客户端 (WcfTestClient.exe)
-Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是一个 GUI 工具，使用户可以输入测试参数、 将提交的输入的服务，并查看服务发回的响应。 当与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机结合时，它可以提供完美的服务测试体验。  
+Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是一个 GUI 工具，使用户可以输入测试参数、 将提交的输入的服务，并查看服务发回的响应。 它提供完美的服务测试体验与 WCF 服务主机结合使用时。  
   
- 通常可以找到[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端 (WcfTestClient.exe) 在以下位置： C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE-社区可能是"企业"、"专业"或"社区"之一具体取决于安装的 Visual Studio 的级别。
+ 通常可以在以下位置找到 WCF 测试客户端 (WcfTestClient.exe): C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE-社区可能是"企业"、"专业"或"社区"根据其之一安装 Visual Studio 的级别。
   
 ## <a name="scenarios-for-using-test-client"></a>使用测试客户端的方案  
- 以下各节讨论了使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端简化开发流程的最常见方案。  
+ 以下各节讨论在其中你可以使用 WCF 测试客户端简化开发流程的最常见方案。  
   
 ### <a name="inside-visual-studio"></a>Visual Studio 内部  
   
 #### <a name="wcf-service-host-starts-wcf-test-client-with-a-single-service"></a>WCF 服务主机启动 WCF 测试客户端和一项服务  
- 在创建新的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务项目并按 F5 启动调试器后，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机将开始承载项目中的服务。 然后 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端将会打开，并显示在配置文件中定义的服务终结点列表。 可以测试参数和调用服务，并可以重复此过程以继续测试和验证服务。  
+ 在创建新的 WCF 服务项目并按 F5 启动调试器后，WCF 服务主机将开始承载你的项目中的服务。 然后，WCF 测试客户端打开并显示在配置文件中定义的服务终结点的列表。 可以测试参数和调用服务，并可以重复此过程以继续测试和验证服务。  
   
 #### <a name="wcf-service-host-starts-wcf-test-client-with-multiple-services"></a>WCF 服务主机启动 WCF 测试客户端和多项服务  
- 也可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端来帮助调试包含多项服务的服务项目。 打开 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端时，它将自动循环访问项目服务列表并打开这些服务进行测试。  
+ WCF 测试客户端还可用于帮助调试包含多个服务的服务项目。 当 WCF 测试客户端打开时，它自动循环的项目中的服务的列表，并打开这些用于测试。  
   
 ### <a name="outside-visual-studio"></a>Visual Studio 外部  
- 您还可以在 Visual Studio 外部调用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端 (WcfTestClient.exe)，以测试 Internet 上的任意服务。 若要找到此工具，请转到以下位置：  
+ Visual Studio 以测试 Internet 上的任意服务外，你也可以调用 WCF 测试客户端 (WcfTestClient.exe)。 若要找到此工具，请转到以下位置：  
   
  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\  
   
  若要使用该工具，可以双击此文件名从该位置打开它，也可以从命令行启动它。  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端将任意数目的 URI 作为命令行参数。  这些 URI 是可以测试的服务的 URI。  
+ WCF 测试客户端将任意数目的 Uri 作为命令行自变量。  这些 URI 是可以测试的服务的 URI。  
   
  `wcfTestClient.exe URI1 URI2 …`  
   
- 后[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端窗口打开，请单击**文件**->**添加服务**，并输入你想要打开的服务的终结点地址。  
+ WCF 测试客户端窗口打开后，单击**文件**->**添加服务**，并输入你想要打开的服务的终结点地址。  
   
 ## <a name="wcf-test-client-user-interface"></a>WCF 测试客户端用户界面  
- 可以将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端用于一项或多项服务。  
+ 可以一项或多个服务使用 WCF 测试客户端。  
   
 ### <a name="service-operations"></a>服务操作  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端主窗口的左窗格列出了所有可用的服务及其各自的终结点和操作。  
+ WCF 测试客户端主窗口的左窗格中列出所有可用服务，以及它们各自的终结点和操作。  
   
  双击某个操作后，可以在具有此操作名称的新选项卡内的右窗格中查看其内容。  
   
@@ -69,12 +69,12 @@ Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是�
  如果**启动新的代理**复选框已选中，则为每个启动新的代理**Invoke**、 以前的会话方案终止，和重置服务状态。  
   
 ### <a name="editing-client-configuration"></a>编辑客户端配置  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端主窗口的左窗格列出了客户端配置文件。 双击任何项可以在右窗格中显示文件的内容。  
+ WCF 测试客户端主窗口的左窗格中列出了客户端配置文件。 双击任何项可以在右窗格中显示文件的内容。  
   
 #### <a name="edit-with-service-configuration-editor"></a>使用服务配置编辑器进行编辑  
  右键单击**配置文件**在左窗格中，选择上下文菜单**用 SvcConfigEditor 进行编辑**。 服务配置编辑器启动并显示客户端配置内容。 可以编辑配置，然后将其保存在此工具中。  
   
- 在服务配置编辑器中保存此文件后，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端将显示一条警告消息，通知您该文件已在外部修改，并询问您是否要重新加载它。  
+ 将文件保存在服务配置编辑器后, WCF 测试客户端显示一条警告消息，通知您该文件已在外部修改，并询问您是否要重新加载它。  
   
  如果你选择**是**，"Client.dll.config"选项卡中的配置内容将反映在编辑器中所做的更改。  
   
@@ -84,14 +84,14 @@ Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是�
  如果你想要取消所有更改并还原到默认客户端配置，右键单击**配置文件**在左窗格中，选择上下文菜单**还原到默认配置**。默认配置值将加载并还原"Client.dll.config"选项卡中的内容。  
   
 #### <a name="validate-changes"></a>验证更改  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端中加载已保存的更改时，会对照 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 架构检查配置的有效性。 如果发现错误，将显示一个对话框来给出错误详细信息。  
+ 在 WCF 测试客户端中，正在加载已保存的更改后，配置将检查的针对 WCF 架构的有效性。 如果发现错误，将显示一个对话框来给出错误详细信息。  
   
- 在代理生成、 二进制编译或服务调用，支持编辑 （即，"编辑..."、"还原 …"等） 的菜单项被禁用。 将更新后的配置加载到 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端时还将禁用服务调用。  
+ 在代理生成、 二进制编译或服务调用，支持编辑 （即，"编辑..."、"还原 …"等） 的菜单项被禁用。 加载更新配置为 WCF 测试客户端时，还将禁用服务调用。  
   
 #### <a name="persist-client-configuration"></a>使客户端配置保持不变  
- **工具**->**选项**->**客户端配置**选项卡包含**始终重新生成配置时启动服务**选项，它默认处于启用状态。 该选项指定每次 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端加载服务时，都会基于最新的服务协定和服务 App.config 文件重新生成一个配置文件。  
+ **工具**->**选项**->**客户端配置**选项卡包含**始终重新生成配置时启动服务**选项，它默认处于启用状态。 此选项指定每次 WCF 测试客户端加载服务时，都会重新生成一个基于最新的服务协定和服务 App.config 文件的配置文件。  
   
- 如果你已编辑的客户端配置你[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务并想要始终使用此更新的文件来调试你的服务，你可以取消选中**重新生成**选项。 这样，即使更新服务并重新打开 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端，Client.dll.config 文件将是您先前更新过的配置文件，而不是基于已更新的服务重新生成的文件。  
+ 如果你已编辑的客户端配置为您的 WCF 服务并想要始终使用此更新的文件来调试你的服务，可以取消选中**重新生成**选项。 通过此操作，即使更新服务并重新打开 WCF 测试客户端，Client.dll.config 文件将是你先前更新而不是重新生成一个基于更新的服务。  
   
  但是，您可能需要编辑此配置文件以使其与重新生成的代理一致。 如果由于更新了服务而导致重新生成的代理与配置文件不匹配，则调用该服务时将出错。  
   
@@ -105,35 +105,35 @@ Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是�
 ### <a name="adding-removing-and-refreshing-services"></a>添加、删除和刷新服务  
   
 #### <a name="add-service"></a>添加服务  
- 单击**文件**->**添加服务**将服务添加到[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端。 然后您需要键入要添加的服务的 URI（终结点地址）。 该服务的地址可以是 mex 地址，也可以是 WSDL 地址。  
+ 单击**文件**->**添加服务**将服务添加到 WCF 测试客户端。 然后您需要键入要添加的服务的 URI（终结点地址）。 该服务的地址可以是 mex 地址，也可以是 WSDL 地址。  
   
- 您还可以在 10 个最近添加的服务的终结点的列表**最近维修**子菜单。 如果选择其中一个终结点，指定的服务就会添加到 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端。  
+ 您还可以在 10 个最近添加的服务的终结点的列表**最近维修**子菜单。 如果你选择其中之一，指定的服务添加到 WCF 测试客户端。  
   
  此外可以右击服务树的根**我的服务项目**，然后选择**添加服务**来实现相同的结果。  
   
  在代理生成、二进制编译或服务调用期间，支持添加服务的菜单项被禁用。 服务调用也被禁用。  
   
 #### <a name="remove-service"></a>移除服务  
- 右击要被移除，而选择的服务的服务根目录**删除服务**移除的服务从[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端。  
+ 右击要被移除，而选择的服务的服务根目录**删除服务**从 WCF 测试客户端中移除的服务。  
   
  在代理生成、二进制编译或服务调用期间，支持删除服务的菜单项被禁用。 服务调用也被禁用。  
   
 #### <a name="refresh-service"></a>刷新服务  
- 如果更改时服务[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]运行测试客户端，并且你想要确保[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]为该服务的测试客户端实现是最新，右击该服务的服务根目录，并选择**刷新服务**。 请注意，刷新后服务状态将重置。  
+ 如果当运行 WCF 测试客户端且你想要确保该服务的 WCF 测试客户端实现是最新时，将向服务进行更改，请右键单击该服务，并选择的服务根目录**刷新服务**。 请注意，刷新后服务状态将重置。  
   
  在代理生成、二进制编译或服务调用期间，支持刷新服务的菜单项被禁用。 服务调用也被禁用。  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>测试客户端生成的文件的位置  
- 默认情况下，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端将生成客户端代码和配置文件存储在"%appdata%\Local\temp\Test Client Projects"文件夹中。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端退出后，该文件夹随即删除。 如果在修改配置文件，则[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端和**始终重新生成启动服务时配置**选项处于禁用状态，则修改后的文件复制到"My Documents\Test 下的"Cached Config"文件夹Client Projects Documents\Test Client Projects"使用一个映射 （元数据地址-到-文件名） XML 文件作为索引。  
+ 默认情况下，WCF 测试客户端将生成客户端代码和配置文件存储在"%appdata%\Local\temp\Test Client Projects"文件夹。 WCF 测试客户端退出后，该文件夹随即删除。 如果在 WCF 测试客户端中修改配置文件和**始终重新生成启动服务时配置**选项处于禁用状态，则修改后的文件复制到"My Documents\Test Client Projects 下的"Cached Config"文件夹Documents\Test Client Projects"使用一个映射 （元数据地址-到-文件名） XML 文件作为索引。  
   
- 也可以在命令行启动 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端，使用 `/ProjectPath` 开关指定一个希望用于存储生成的文件的新路径，或者使用 `/RestoreProjectPath` 开关还原默认位置。 语法如下所示：  
+ 你还可以在命令行中，使用启动 WCF 测试客户端`/ProjectPath`开关指定一个用于存储生成的文件，新的所需的路径或者使用`/RestoreProjectPath`开关还原默认位置。 语法如下所示：  
   
  `wcfTestClient.exe /ProjectPath [desired location]`  
   
- 运行此命令并不会打开 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端， 而只会更改文件夹位置。 无论 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端运行与否，都可以运行此命令。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端重新启动时将应用新位置。 在注册表中，或在"%appdata%\Local\temp\Test Client Projects"文件夹的 WcfTestClient.exe.option 文件中，可以保存的位置信息。  
+ 运行此命令不会打开 WCF 测试客户端。 而只会更改文件夹位置。 不管 WCF 测试客户端运行与否，你可以运行此命令。 重新启动 WCF 测试客户端时，将应用新位置。 在注册表中，或在"%appdata%\Local\temp\Test Client Projects"文件夹的 WcfTestClient.exe.option 文件中，可以保存的位置信息。  
   
 ## <a name="features-supported-by-wcf-test-client"></a>WCF 测试客户端支持的功能  
- 下面是 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端支持的功能的列表：  
+ 下面是 WCF 测试客户端支持的功能的列表：  
   
 -   服务调用：请求/响应和单向消息。  
   
@@ -145,7 +145,7 @@ Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是�
   
 -   XML 序列化。  
   
- 下面是 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端不支持的功能的列表：  
+ 下面是 WCF 测试客户端不支持的功能的列表：  
   
 -   类型：<xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message>、<xref:System.Xml.XmlElement>、<xref:System.Xml.XmlAttribute>、<xref:System.Xml.XmlNode>、实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口的类型（包括相关 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 特性）、<xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 类型以及 ADO.NET <xref:System.Data.DataTable> 类型。  
   
@@ -158,11 +158,11 @@ Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是�
 -   绑定：WSFederationbinding、任何上下文绑定和 Https 绑定、WebHttpbinding（Json 响应消息支持）。  
   
 ## <a name="closing-wcf-test-client"></a>关闭 WCF 测试客户端  
- 可以通过以下方式关闭 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端：  
+ 你可以通过以下方式关闭 WCF 测试客户端：  
   
--   上**文件**菜单上，单击**退出**。 或者，在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端主窗口中，单击**关闭**。 这两种操作还关闭[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务自动主机，如果 Visual Studio 调试处理的停止[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端由 Visual Studio 启动。  
+-   上**文件**菜单上，单击**退出**。 或者，在 WCF 测试客户端主窗口中，单击**关闭**。 同时的这些操作还关闭 WCF 服务自动主机，如果由 Visual Studio 启动 WCF 测试客户端停止 Visual Studio 调试过程。  
   
--   右键单击**WCF 服务主机**在通知区域中，然后单击图标**退出。** 这将关闭[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务自动主机和[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端并停止 Visual Studio 调试处理。  
+-   右键单击**WCF 服务主机**在通知区域中，然后单击图标**退出。** 这将关闭 WCF 服务自动主机，WCF 测试客户端，并停止 Visual Studio 调试进程。  
   
 ## <a name="see-also"></a>请参阅  
  [WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

@@ -2,11 +2,11 @@
 title: 使用性能计数器
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2e25551494a433c53832127fdb0a32cb4eccac47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8784b4a481b8313d370aad1d8f265dcb44ab3ed6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-performance-counters"></a>使用性能计数器
 此示例演示如何访问 Windows Communication Foundation (WCF) 性能计数器以及如何创建用户定义的性能计数器。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
   
  也可以执行此任务使用[配置编辑器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。  
   
- 启用性能计数器时，会为该服务启用整套 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 性能计数器。 .NET Framework 自动在三个级别维护性能数据：`ServiceModelService`、`ServiceModelEndpoint` 和 `ServiceModelOperation`。 其中每个级别都有“Calls”（调用）、“Calls per Second”（每秒调用次数）和“Security Calls Not Authorized”（未授权的安全调用次数）等性能计数器。  
+ 启用性能计数器后，为服务启用整套 WCF 性能计数器。 .NET Framework 自动在三个级别维护性能数据：`ServiceModelService`、`ServiceModelEndpoint` 和 `ServiceModelOperation`。 其中每个级别都有“Calls”（调用）、“Calls per Second”（每秒调用次数）和“Security Calls Not Authorized”（未授权的安全调用次数）等性能计数器。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -47,10 +47,10 @@ ms.lasthandoff: 05/04/2018
   
 2.  选择列出的性能计数器并按 Delete 键以移除它们。  
   
-3.  添加[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]通过右键单击关系图窗格中选择的计数器**添加计数器**。 在**添加计数器**对话框中，选择**ServiceModelOperation 3.0.0.0、 ServiceModelEndpoint 3.0.0.0 或 ServiceModelService 3.0.0.0**下拉列表框中的性能对象。 从列表中选择要查看的计数器。  
+3.  通过右键单击关系图窗格中，选择添加 WCF 计数器**添加计数器**。 在**添加计数器**对话框中，选择**ServiceModelOperation 3.0.0.0、 ServiceModelEndpoint 3.0.0.0 或 ServiceModelService 3.0.0.0**下拉列表框中的性能对象。 从列表中选择要查看的计数器。  
   
     > [!NOTE]
-    >  如果计算机中没有正在运行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，则服务没有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 性能计数器。  
+    >  如果没有在计算机上运行的 WCF 服务，则服务没有 WCF 性能计数器。  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>使用配置编辑器来启用计数器  
   

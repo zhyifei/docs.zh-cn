@@ -2,11 +2,11 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: f146e469a323dffa2cdb9b76b6956be97747b2de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0a4c316957a002f7541d230f96299e3f43ef778
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 此示例演示如何创建一个绑定，该绑定用于在使用 HTTP 传输时支持流方案。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  添加配置支持  
   
-     为了通过配置来公开传输，此示例还实现了另外两个类：`WSStreamedHttpBindingConfigurationElement` 和 `WSStreamedHttpBindingSection`。 `WSStreamedHttpBindingSection` 类是一个向 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> 配置系统公开 `WSStreamedHttpBinding` 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 批量实现委托给从 `WSStreamedHttpBindingConfigurationElement` 派生的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 `WSStreamedHttpBindingConfigurationElement` 类具有与 `WSStreamedHttpBinding` 的属性相对应的属性，以及用来将每个配置元素映射到绑定的函数。  
+     为了通过配置来公开传输，此示例还实现了另外两个类：`WSStreamedHttpBindingConfigurationElement` 和 `WSStreamedHttpBindingSection`。 类`WSStreamedHttpBindingSection`是<xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>公开`WSStreamedHttpBinding`到 WCF 配置系统。 批量实现委托给从 `WSStreamedHttpBindingConfigurationElement` 派生的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 `WSStreamedHttpBindingConfigurationElement` 类具有与 `WSStreamedHttpBinding` 的属性相对应的属性，以及用来将每个配置元素映射到绑定的函数。  
   
      可通过将以下节添加到服务的配置文件中来向配置系统注册处理程序。  
   
@@ -133,7 +133,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding 示例客户端  
- 在使用 `WSStreamedHttpBinding` 与服务进行交互时所用的客户端位于客户端子目录中。 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当您尝试访问你的浏览器中的 HTTPS 地址，例如显示一个安全警报https://localhost/servicemodelsamples/service.svc。 为了允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端就地使用测试证书，已向客户端添加了一些附加代码，以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
+ 在使用 `WSStreamedHttpBinding` 与服务进行交互时所用的客户端位于客户端子目录中。 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当您尝试访问你的浏览器中的 HTTPS 地址，例如显示一个安全警报https://localhost/servicemodelsamples/service.svc。 若要允许 WCF 客户端以使用就地测试证书，一些附加代码已添加到客户端以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

@@ -1,34 +1,24 @@
 ---
-title: "可靠安全配置文件"
-ms.custom: 
+title: 可靠安全配置文件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 89a6d5c2e485699a55c77797c34eaca2c9848c40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65523fcc1d08bd48a432e6cf599dfcb73ade8747
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reliable-secure-profile"></a>可靠安全配置文件
-此示例演示如何编写[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[可靠安全配置文件](http://go.microsoft.com/fwlink/?LinkId=178140)(RSP)。 此示例演示如何实现[建立连接](http://go.microsoft.com/fwlink/?LinkId=178141)通道以及可靠消息传递和 （可选） 可由基于 RSP 规范的创建一个可靠的安全绑定的安全通道。  
+此示例演示如何编写 WCF 和[可靠安全配置文件](http://go.microsoft.com/fwlink/?LinkId=178140)(RSP)。 此示例演示如何实现[建立连接](http://go.microsoft.com/fwlink/?LinkId=178141)通道以及可靠消息传递和 （可选） 可由基于 RSP 规范的创建一个可靠的安全绑定的安全通道。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   

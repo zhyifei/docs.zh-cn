@@ -1,40 +1,28 @@
 ---
-title: "生成客户端"
-ms.custom: 
+title: 生成客户端
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - clients [WCF], building
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d50ab37a90df418b031cb8aba5d84f0bbac9a1d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b5661c5aaa08d91c3944c4c108b23b03b012439a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="building-clients"></a>生成客户端
-本节中的主题演示如何创建和使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 客户端。  
+此部分中的主题演示如何创建和使用 Windows Communication Foundation (WCF) 客户端。  
   
 ## <a name="in-this-section"></a>本节内容  
  [WCF 客户端概述](../../../docs/framework/wcf/wcf-client-overview.md)  
- 提供有关 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端及其工作方式的概述。  
+ 提供概述的 WCF 客户端以及它们如何工作。  
   
  [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- 概述创建用于客户端应用程序的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象的基本方法。  
+ 概述了在客户端应用程序中创建使用一个 WCF 客户端对象的基本方法。  
   
  [保护客户端](../../../docs/framework/wcf/securing-clients.md)  
- 说明如何配置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端的安全性。  
+ 描述如何配置 WCF 客户端的安全性。  
   
 ## <a name="reference"></a>参考  
  <xref:System.ServiceModel.ClientBase%601>  

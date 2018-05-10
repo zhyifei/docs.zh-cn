@@ -2,11 +2,11 @@
 title: 传输：UDP 示例上的自定义事务
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: e395300df4cd9917b9662d4bc3b1e8d50d82914d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 911331d5f5120f33a6c442a1eb4b2be2c8269a0e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>传输：UDP 示例上的自定义事务
 此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)中 Windows Communication Foundation (WCF) 示例[传输可扩展性](../../../../docs/framework/wcf/samples/transport-extensibility.md)。 它扩展 UDP 传输示例，以支持自定义事务流并演示 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 属性的用法。  
@@ -47,7 +47,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer` 是一个帮助器方法，包含用于将当前事务的传播程序令牌与消息实体合并，并将合并结果放入缓冲区中的新功能。  
   
- 对于自定义事务流传输，客户端实现必须了解哪些服务操作要求事务流并将此信息传递给 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 还应存在用于将用户事务传递到传输层的机制。 本示例使用“[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息检查器”获取此信息。 此处实现的名为 `TransactionFlowInspector` 的客户端消息检查器执行下列任务：  
+ 对于自定义事务流传输，客户端实现必须了解哪些服务操作要求事务流，并将此信息传递到 WCF。 还应存在用于将用户事务传递到传输层的机制。 此示例使用"WCF 消息检查器"获取此信息。 此处实现的名为 `TransactionFlowInspector` 的客户端消息检查器执行下列任务：  
   
 -   确定对于给定的消息操作，事务是否必须进行流处理（这发生在 `IsTxFlowRequiredForThisOperation()` 中）。  
   

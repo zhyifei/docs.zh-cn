@@ -2,11 +2,11 @@
 title: 文档审批过程
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="document-approval-process"></a>文档审批过程
 此示例演示在一起的许多 Windows Workflow Foundation (WF) 和 Windows Communication Foundation (WCF) 功能的使用。 这些功能一起使用实现一个文档审批过程方案。 客户端应用程序既可提交等待审批的文档，也可批准文档。 有一个审批管理器应用程序，可用于促进客户端之间的通信和强制执行审批过程的规则。 审批过程是一个可执行多种类型的审批的工作流。 存在多个活动来获取个人审批过程、团体审批过程（一定百分比的审批者）和复合审批过程（由团体审批和个人审批按顺序组成）。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  客户端申请成为审批过程系统中的用户。  
   
-2.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端发送到审批管理器应用程序承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+2.  WCF 客户端将发送到审批管理器应用程序承载的 WCF 服务。  
   
 3.  将唯一的用户 ID 返回到客户端。 此时，客户端可参与审批过程。  
   
@@ -47,19 +47,19 @@ ms.lasthandoff: 05/04/2018
   
 10. 客户端可以随时接收审批请求并对其做出响应。  
   
-11. 客户端上承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务可接收来自审批管理器应用程序的审批请求。  
+11. 客户端上承载的 WCF 服务可接收来自审批管理器应用程序的批准请求。  
   
 12. 客户端上将呈现文档信息以供审阅。  
   
 13. 用户可以批准或拒绝文档。  
   
-14. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端用于将审批响应发送回审批管理器应用程序。  
+14. WCF 客户端用于批准将响应发送回审批管理器应用程序。  
   
  从审批管理器应用程序的角度来看，审批过程的工作方式如下：  
   
 1.  客户端请求加入审批过程系统。  
   
-2.  审批管理器上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务接收针对成为审批过程系统的一部分而提出的请求。  
+2.  审批管理器上的 WCF 服务收到的请求成为审批过程系统的一部分。  
   
 3.  为客户端生成唯一的 ID。 将用户信息存储在数据库中。  
   

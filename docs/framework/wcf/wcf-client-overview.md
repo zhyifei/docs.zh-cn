@@ -7,25 +7,25 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 1aa540d084e9b11cc7a355db02047705f55ea4be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03a9580bee6308ef53c7d2bc6e9dbe619c2048f7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-client-overview"></a>WCF 客户端概述
 本部分介绍客户端应用程序执行的操作、 如何配置、 创建和使用 Windows Communication Foundation (WCF) 客户端，以及如何保护客户端应用程序。  
   
 ## <a name="using-wcf-client-objects"></a>使用 WCF 客户端对象  
- 客户端应用程序是使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端与其他应用程序通信的托管应用程序。 若要为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务创建一个客户端应用程序，则需要执行下列步骤：  
+ 客户端应用程序是托管的应用程序使用 WCF 客户端与其他应用程序进行通信。 若要创建客户端的 WCF 服务的应用程序需要以下步骤：  
   
 1.  获取服务终结点的服务协定、绑定以及地址信息。  
   
-2.  使用该信息创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端。  
+2.  创建 WCF 客户端使用该信息。  
   
 3.  调用操作。  
   
-4.  关闭该 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象。  
+4.  关闭 WCF 客户端对象。  
   
  以下部分将讨论上述这些步骤，并简单介绍以下问题：  
   
@@ -40,26 +40,26 @@ ms.lasthandoff: 05/04/2018
 -   使用客户端通道调用服务。  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>获取服务协定、绑定和地址  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，服务和客户端使用托管属性、接口和方法对协定进行建模。 若要连接客户端应用程序中的服务，则需要获取该服务协定的类型信息。 通常情况下，你执行此操作通过使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，该服务，从下载元数据将其转换为托管的源代码文件中您选择的语言，并创建一个客户端可用于配置的应用程序配置文件你[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]客户端对象。 例如，如果您准备创建一个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象来调用 `MyCalculatorService`，并且您知道该服务的元数据已在 `http://computerName/MyCalculatorService/Service.svc?wsdl` 中发布，则下面的代码示例演示如何使用 Svcutil.exe 获取一个包含托管代码中的服务协定的 `ClientCode.vb` 文件。  
+ 在 WCF 中，服务和客户端协定建模使用托管的属性、 接口和方法。 若要连接客户端应用程序中的服务，则需要获取该服务协定的类型信息。 通常情况下，你执行此操作通过使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，该服务，从下载元数据将其转换为托管的源代码文件中您选择的语言，并创建一个客户端可用于配置您的 WCF 客户端对象的应用程序配置文件。 例如，如果想要创建一个 WCF 客户端对象，用于调用`MyCalculatorService`，并且您知道该服务的元数据在发布`http://computerName/MyCalculatorService/Service.svc?wsdl`，下面的代码示例演示如何使用 Svcutil.exe 获取`ClientCode.vb`文件包含在托管代码中的服务协定。  
   
 ```  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   
- 您可以将此协定代码编译为客户端应用程序或另一个程序集，然后，客户端应用程序可以使用该程序集创建一个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象。 可以使用配置文件配置客户端对象以与服务正确连接。  
+ 也可以将此协定代码编译为客户端应用程序或客户端应用程序可以然后使用创建 WCF 客户端对象的另一个程序集。 可以使用配置文件配置客户端对象以与服务正确连接。  
   
  有关此过程的示例，请参阅[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 有关协定的更完整信息，请参阅[协定](../../../docs/framework/wcf/feature-details/contracts.md)。  
   
 ## <a name="create-a-wcf-client-object"></a>创建一个 WCF 客户端对象  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端是表示某个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的一个本地对象，客户端可以使用这种表示形式与远程服务进行通信。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端类型可实现目标服务协定，因此在您创建一个服务协定并配置它之后，就可以直接使用该客户端对象调用服务操作。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]运行时将为方法调入消息、 将它们发送到服务，侦听回复，并返回到这些值[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]用作返回值的客户端对象或`out`或`ref`参数。  
+ WCF 客户端是表示客户端可以使用与远程服务进行通信的窗体中的 WCF 服务的本地对象。 WCF 客户端类型可实现目标服务协定，以便创建一个并将其配置，你可以使用客户端对象直接来调用服务操作。 WCF 运行时将方法调用转换为消息、 将它们发送到服务，侦听回复，并将这些值作为返回值返回给 WCF 客户端对象或`out`或`ref`参数。  
   
- 您还可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端通道对象连接和使用服务。 有关详细信息，请参阅[WCF 客户端体系结构](../../../docs/framework/wcf/feature-details/client-architecture.md)。  
+ 你还可用于 WCF 客户端通道对象连接和使用服务。 有关详细信息，请参阅[WCF 客户端体系结构](../../../docs/framework/wcf/feature-details/client-architecture.md)。  
   
 #### <a name="creating-a-new-wcf-object"></a>创建一个新的 WCF 对象  
  为了演示如何使用 <xref:System.ServiceModel.ClientBase%601> 类，现假设已从服务应用程序生成了下面的简单服务协定。  
   
 > [!NOTE]
->  如果你使用 Visual Studio 来创建你[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]客户端，对象将自动加载到对象浏览器添加到你的项目的服务引用时。  
+>  如果你使用 Visual Studio 创建 WCF 客户端时，对象将自动加载到对象浏览器添加到你的项目的服务引用时。  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
@@ -69,10 +69,10 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  可以通过使用其中一个构造函数将此类创建为一个本地对象，并对该本地对象进行配置，然后使用它连接到 `ISampleService` 类型的服务。  
   
- 建议您首先创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象，然后使用该对象并在一个单独的 try/catch 块内将它关闭。 不应使用`using`语句 (`Using`在 Visual Basic 中) 因为它可以屏蔽处于某些失败模式的异常。 有关详细信息，请参阅以下部分，以及[避免问题与 Using 语句](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
+ 建议，你首先，创建您的 WCF 客户端对象，然后使用它并关闭它在一个 try/catch 块内。 不应使用`using`语句 (`Using`在 Visual Basic 中) 因为它可以屏蔽处于某些失败模式的异常。 有关详细信息，请参阅以下部分，以及[避免问题与 Using 语句](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
   
 ### <a name="contracts-bindings-and-addresses"></a>协定、绑定和地址  
- 在可以创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象之前，必须配置客户端对象。 具体而言，它必须有一个服务*终结点*使用。 终结点由服务协定、绑定和地址组成。 (有关终结点的详细信息，请参阅[终结点： 地址、 绑定和协定](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)。)通常情况下，此信息是否位于[\<终结点 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)客户端应用程序配置文件，例如 Svcutil.exe 工具生成，并创建你的客户端时自动加载中的元素对象。 两种 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端类型都具有使您能够以编程方式指定此信息的重载。  
+ 你可以创建一个 WCF 客户端对象之前，必须配置客户端对象。 具体而言，它必须有一个服务*终结点*使用。 终结点由服务协定、绑定和地址组成。 (有关终结点的详细信息，请参阅[终结点： 地址、 绑定和协定](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)。)通常情况下，此信息是否位于[\<终结点 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)客户端应用程序配置文件，例如 Svcutil.exe 工具生成，并创建你的客户端时自动加载中的元素对象。 这两种 WCF 客户端类型都具有使您能够以编程方式指定此信息的重载。  
   
  例如，上述示例中所使用的 `ISampleService` 的生成的配置文件包含以下终结点信息。  
   
@@ -81,7 +81,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  此配置文件在 `<client>` 元素中指定目标终结点。 有关使用多个目标终结点的详细信息，请参阅<xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType>或<xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType>构造函数。  
   
 ## <a name="calling-operations"></a>调用操作  
- 创建并配置了客户端对象后，请创建一个 try/catch 块，如果该对象是本地对象，则以相同的方式调用操作，然后关闭 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象。 当客户端应用程序调用第一个操作时，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 将自动打开基础通道，并在回收对象时关闭基础通道。 （或者，还可以在调用其他操作之前或之后显式打开和关闭该通道。）  
+ 一旦创建了客户端对象并配置，创建一个 try/catch 块，如果对象是在本地相同方式调用操作并关闭 WCF 客户端对象。 当客户端应用程序调用第一个操作时，WCF 自动打开基础通道，并回收对象时关闭基础通道。 （或者，还可以在调用其他操作之前或之后显式打开和关闭该通道。）  
   
  例如，如果您具有以下服务协定：  
   
@@ -126,7 +126,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- 您可以通过创建一个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象并调用其方法来调用操作，如以下代码示例所示。 请注意，打开、调用和关闭 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象发生在一个 try/catch 块内。 有关详细信息，请参阅[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)和[避免问题与 Using 语句](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
+ 您可以通过创建一个 WCF 客户端对象调用操作并调用其方法中，如下面的代码示例演示了。 请注意打开、 调用和关闭的 WCF 客户端对象在一个 try/catch 块内发生。 有关详细信息，请参阅[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)和[避免问题与 Using 语句](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
@@ -136,7 +136,7 @@ End Interface
 ## <a name="configuring-and-securing-clients"></a>配置和保护客户端  
  若要配置客户端，请首先为客户端或通道对象加载目标终结点信息，通常是从配置文件中加载该信息，但是也可以使用客户端构造函数和属性以编程方式加载。 但是，若要启用特定的客户端行为或实施一些安全方案还需要执行其他配置步骤。  
   
- 例如，服务协定的安全要求已在服务协定接口中声明，并且如果 Svcutil.exe 已创建了一个配置文件，则该文件通常会包含一个能够支持服务安全要求的绑定。 但是在某些情况中，可能需要更多的安全配置，例如配置客户端凭据。 有关安全配置的完整信息[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]客户端，请参阅[保护客户端](../../../docs/framework/wcf/securing-clients.md)。  
+ 例如，服务协定的安全要求已在服务协定接口中声明，并且如果 Svcutil.exe 已创建了一个配置文件，则该文件通常会包含一个能够支持服务安全要求的绑定。 但是在某些情况中，可能需要更多的安全配置，例如配置客户端凭据。 有关 WCF 客户端的安全配置的完整信息，请参阅[保护客户端](../../../docs/framework/wcf/securing-clients.md)。  
   
  此外，在客户端应用程序中还可以启用一些自定义修改，例如自定义运行时行为。 有关如何配置自定义客户端行为的详细信息，请参阅[配置客户端行为](../../../docs/framework/wcf/configuring-client-behaviors.md)。  
   
@@ -147,11 +147,11 @@ End Interface
   
 -   实现一个回调协定类。  
   
--   创建回调协定实现类的一个实例，并使用该实例创建传递给 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> 客户端构造函数的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 对象。  
+-   创建回调协定实现类的实例并使用它来创建<xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>将传递给 WCF 客户端构造函数的对象。  
   
 -   调用操作并处理操作回调。  
   
- 双工 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象除了会公开支持回调所必需的功能（包括回调服务的配置）以外，其他的功能和它们的非双工对应项相同。  
+ 双工 WCF 客户端对象函数，如其非双工对应项，与该异常会公开支持回调，包括回调服务的配置所必需的功能。  
   
  例如，可以通过使用回调类的 <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> 属性 (Attribute) 的属性 (Property)，控制回调对象运行时行为的各个方面。 另一个示例是使用 <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> 类将异常信息返回给调用回调对象的服务。 有关详细信息，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)。 有关完整示例，请参阅[双工](../../../docs/framework/wcf/samples/duplex.md)。  
   
@@ -168,7 +168,7 @@ End Interface
  如何调用操作完全取决于客户端开发人员。 这是因为当在托管代码中表示组成操作的消息时，这些消息可以映射到同步或异步方法中。 因此，如果想要生成异步调用操作的客户端，则可以使用 Svcutil.exe 通过 `/async` 选项生成异步客户端代码。 有关详细信息，请参阅[如何： 以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>使用 WCF 客户端通道调用服务  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端类型扩展 <xref:System.ServiceModel.ClientBase%601>，而其自身派生自 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> 接口，从而可以公开基础通道系统。 可以同时使用目标服务协定和 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 类来调用服务。 有关详细信息，请参阅[WCF 客户端体系结构](../../../docs/framework/wcf/feature-details/client-architecture.md)。  
+ WCF 客户端类型扩展<xref:System.ServiceModel.ClientBase%601>，其自身派生自<xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>接口，从而可以公开基础通道系统。 可以同时使用目标服务协定和 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 类来调用服务。 有关详细信息，请参阅[WCF 客户端体系结构](../../../docs/framework/wcf/feature-details/client-architecture.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

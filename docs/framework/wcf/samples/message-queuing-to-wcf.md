@@ -2,11 +2,11 @@
 title: 到 Windows Communication Foundation 的消息队列
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: c0208de93ad0c903b8a75383b509de57365ac4bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3c16a95b21dcdea941e605f3e25e560b7193b03
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>到 Windows Communication Foundation 的消息队列
 此示例演示如何消息队列 (MSMQ) 应用程序可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -59,7 +59,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
  MSMQ 队列名称在配置文件的 appSettings 节中指定，如以下示例配置所示。  
   
 > [!NOTE]
->  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点地址指定 msmq.formatname 方案，并为本地计算机使用 localhost。 用于每个 MSMQ 格式名寻址指南的队列地址遵从 msmq.formatname 方案。  
+>  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定 msmq.formatname 方案，并为本地计算机使用 localhost。 用于每个 MSMQ 格式名寻址指南的队列地址遵从 msmq.formatname 方案。  
   
 ```xml  
 <appSettings>  

@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df1f2490f8636d52ac75fad2469adadec2a57da
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>重写服务标识以便进行身份验证
 通常情况下不需要设置服务上的标识，因为客户端凭据类型的选择即规定了服务元数据中公开的标识的类型。 例如，下面的配置代码使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素并设置`clientCredentialType`Windows 属性。  
@@ -30,9 +30,9 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  若要使用不带协商的 Windows 凭据类型，服务的用户帐户必须有权访问向 Active Directory 域注册的 SPN。 可以使用下列方式来实现：  
   
--   使用 NetworkService 或 LocalSystem 帐户运行服务。 由于这些帐户有权访问在计算机加入 Active Directory 域时建立的计算机 SPN，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将自动在服务的元数据 (WSDL) 中的服务终结点内生成正确的 SPN 元素。  
+-   使用 NetworkService 或 LocalSystem 帐户运行服务。 因为这些帐户有权访问的计算机在计算机连接 Active Directory 域时建立的 SPN，WCF 将自动在服务的元数据 (WSDL) 中生成服务的终结点内正确的 SPN 元素。  
   
--   使用任意 Active Directory 域帐户运行服务。 在这种情况下，需要为该域帐户建立一个 SPN，这可以使用 Setspn.exe 实用工具来完成。 为服务的帐户创建 SPN 后，配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以通过服务的元数据 (WSDL) 将该 SPN 发布到服务的客户端。 这可以通过为公开的终结点设置终结点标识（借助于应用程序配置文件或代码）来完成。  
+-   使用任意 Active Directory 域帐户运行服务。 在这种情况下，需要为该域帐户建立一个 SPN，这可以使用 Setspn.exe 实用工具来完成。 一旦创建了服务的帐户的 SPN，配置 WCF 将该 SPN 发布到通过其元数据 (WSDL) 的服务的客户端。 这可以通过为公开的终结点设置终结点标识（借助于应用程序配置文件或代码）来完成。  
   
  有关 Spn 的详细信息、 Kerberos 协议和 Active Directory，请参阅[技术补充面向 Windows 的 Kerberos](http://go.microsoft.com/fwlink/?LinkId=88330)。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/04/2018
   
   
 ### <a name="setting-identity-programmatically"></a>以编程方式设置标识  
- 您的服务不必显式指定标识，因为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会自动确定标识。 但是，如果需要，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允许您指定终结点的标识。 下面的代码使用特定的 DNS 标识添加了一个新的服务终结点。  
+ 你的服务不必显式指定标识，因为 WCF 自动确定。 但是，WCF 允许你指定一个标识终结点，如果需要。 下面的代码使用特定的 DNS 标识添加了一个新的服务终结点。  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  

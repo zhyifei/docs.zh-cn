@@ -1,26 +1,12 @@
 ---
 title: MSMQ 激活
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4dc8cc2a3c6d9178f6507c87ae512a8929bd1380
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="msmq-activation"></a>MSMQ 激活
 本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。 此示例使用`netMsmqBinding`和基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。 本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。  
@@ -33,11 +19,11 @@ ms.lasthandoff: 04/27/2018
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  如果此目录不存在，请转到[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]超链接"http://go.microsoft.com/fwlink/?LinkId=150780"\t"_blank"和 Windows Workflow Foundation (WF) 示例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]以下载所有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到 Windows Communication Foundation (WCF) 超链接"http://go.microsoft.com/fwlink/?LinkId=150780"\t"_blank"和 Windows Workflow Foundation (WF) 示例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]下载所有 WCF 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Windows 进程激活服务 (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 新增的进程激活机制，它向使用非 HTTP 协议的应用程序提供了类似 IIS 的功能，这些功能以前只对基于 HTTP 的应用程序可用。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用侦听器适配器接口传递激活请求，该激活请求通过由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的非 HTTP 协议（如 TCP、命名管道和 MSMQ）接收。 用于通过非 HTTP 协议接收请求的功能由 SMSvcHost.exe 中运行的托管 Windows 服务承载。  
+ Windows 进程激活服务 (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 新增的进程激活机制，它向使用非 HTTP 协议的应用程序提供了类似 IIS 的功能，这些功能以前只对基于 HTTP 的应用程序可用。 Windows Communication Foundation (WCF) 使用侦听器适配器接口传递激活请求通过由 WCF，如 TCP、 命名管道和 MSMQ 支持非 HTTP 协议接收请求。 用于通过非 HTTP 协议接收请求的功能由 SMSvcHost.exe 中运行的托管 Windows 服务承载。  
   
  Net.Msmq Listener Adapter 服务 (NetMsmqActivator) 根据队列中的消息激活排队的应用程序。  
   
@@ -97,7 +83,7 @@ public class OrderProcessorService : IOrderProcessor
  MSMQ 队列名称是在配置文件的 appSettings 节中指定的。 服务的终结点是在配置文件的 System.serviceModel 节中定义的。  
   
 > [!NOTE]
->  MSMQ 队列名称和终结点地址使用略有不同的寻址约定。 MSMQ 队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点地址指定一个 net.msmq: 方案，使用“localhost”来表示本地计算机，并在其路径中使用正斜杠。 若要从在远程计算机上承载的队列读取数据，请将“.”和“localhost”替换为远程计算机名称。  
+>  MSMQ 队列名称和终结点地址使用略有不同的寻址约定。 MSMQ 队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定一个 net.msmq： 方案，使用"localhost"来表示本地计算机，并在其路径中使用正斜杠。 若要从在远程计算机上承载的队列读取数据，请将“.”和“localhost”替换为远程计算机名称。  
   
  使用一个以类名作为名称的 .svc 文件来承载 WAS 中的服务代码。  
   
@@ -229,7 +215,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 1.  确保安装了 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，因为 WAS 激活需要它。  
   
-2.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，必须安装 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 非 HTTP 激活组件：  
+2.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，你必须安装 WCF 非 HTTP 激活组件：  
   
     1.  从**启动**菜单上，选择**控制面板**。  
   

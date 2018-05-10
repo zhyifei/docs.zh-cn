@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97a8e9fd8f0e2c906f14556fcdccd7ef0d3c8033
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="system-provided-bindings"></a>系统提供的绑定
 绑定可指定在与终结点通话时所使用的通信机制，并指示如何连接到终结点。 绑定包含以下元素：  
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/04/2018
 >  除非以某种其他方式保护数据，否则决不要将双工协定与不支持安全性或已禁用安全性的绑定一起使用。  
   
 ## <a name="system-provided-bindings"></a>系统提供的绑定  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 附带有以下绑定。  
+ 使用 WCF 附带以下绑定。  
   
 |绑定|配置元素|描述|  
 |-------------|---------------------------|-----------------|  
@@ -40,14 +40,14 @@ ms.lasthandoff: 05/04/2018
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|一个支持 WS-Federation 协议的安全的、可互操作的绑定，使联盟中的组织可以高效地对用户进行身份验证和授权。|  
 |<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding>|为使用 HTTP 或 WebSocket 服务而设计且默认情况下使用二进制编码的绑定。|  
 |<xref:System.ServiceModel.NetHttpsBinding>|\<netHttpsBinding >|为使用 HTTP 或 WebSocket 服务而设计且默认情况下使用二进制编码的安全绑定。|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|一个安全且经过优化的绑定，适用于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序之间跨计算机的通信。|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|一个安全、可靠且经过优化的绑定，适用于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序之间计算机上的通信。|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|一个排队绑定，适用于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序之间的跨计算机的通信。|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|一个安全且经过优化适合于绑定 WCF 应用程序之间跨计算机通信。|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|安全、 可靠且经过优化的绑定，适用于计算机上的 WCF 应用程序之间的通信。|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|一个排队的绑定，适用于 WCF 应用程序之间跨计算机通信。|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|一个支持多计算机安全通信的绑定。|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|一个适合于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序和现有消息队列应用程序之间的跨计算机通信的绑定。|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|一个绑定，适用于 WCF 应用程序和现有消息队列应用程序之间跨计算机通信。|  
 |<xref:System.ServiceModel.BasicHttpContextBinding>|[\<basicHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpcontextbinding.md)|一个绑定，适用于与符合 WS-Basic Profile 且允许使用 HTTP Cookie 交换上下文的 Web 服务进行的通信。|  
-|<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|一个安全且经过优化的绑定，适用于允许使用 SOAP 标头交换上下文的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序之间跨计算机的通信。|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|一个绑定，可用于为通过 HTTP 请求（而不是 SOAP 消息）公开的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Web 服务配置终结点。|  
+|<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|一个安全且经过优化的绑定适合于 WCF 应用程序之间跨计算机通信，它使 SOAP 标头可用于交换上下文。|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|用于为通过而不是 SOAP 消息的 HTTP 请求公开的 WCF Web 服务配置终结点的绑定。|  
 |<xref:System.ServiceModel.WSHttpContextBinding>|[\<wsHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpcontextbinding.md)|一种安全的和 |<xref:System.ServiceModel.UdpBinding>|\<但 udpBinding >|同时向大量客户端发送突然爆发出的简单消息时使用的绑定。|  
   
  下表显示系统提供的每个绑定的功能。 在表列中可找到绑定；在行中列出了功能，在第二个表中描述了这些功能。 下表提供所用绑定缩写的概要。 若要选择绑定，应确定哪列能满足所需的所有行中的功能。  

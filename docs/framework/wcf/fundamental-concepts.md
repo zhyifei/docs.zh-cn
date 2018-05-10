@@ -7,31 +7,31 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 44b36fc917ceb30141d7d2235b8bb364d3b998c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 41bef6bf5a69a51738c6848050972a1a4e01c153
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 基础概念
-本文档提供 Windows Communication Foundation (WCF) 体系结构的高级视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建的最简单的版本的教程[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务和客户端，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
+本文档提供 Windows Communication Foundation (WCF) 体系结构的高级视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建的最简单的 WCF 服务和客户端版本的教程，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="wcf-fundamentals"></a>WCF 基础知识  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是一个运行库和一组 API，用于创建在服务与客户端之间发送消息的系统。 它使用相同的基础结构和 API 来创建应用程序，这些应用程序可与同一计算机系统上或驻留在另一家公司内并通过 Internet 访问的系统上的其他应用程序进行通信。  
+ WCF 是用于创建服务和客户端之间发送消息的系统运行时和一组 Api。 它使用相同的基础结构和 API 来创建应用程序，这些应用程序可与同一计算机系统上或驻留在另一家公司内并通过 Internet 访问的系统上的其他应用程序进行通信。  
   
 ### <a name="messaging-and-endpoints"></a>消息和终结点  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 建立在基于消息的通信这一概念基础之上，可以建模为消息（如 HTTP 请求或消息队列（也称为 MSMQ）消息）的任何内容都可以在编程模型中按照统一方式进行表示。 这样，就可以在不同传输机制间提供一个统一的 API。  
+ WCF 基于可以建模为消息 （例如，HTTP 请求或消息队列 (也称为 MSMQ) 消息） 可以表示以统一的方式在编程模型的概念基于消息的通信和任何内容。 这样，就可以在不同传输机制间提供一个统一的 API。  
   
  模型区分*客户端*，这是应用程序启动的通信，和*服务*，这是等待客户端以与它们进行通信和的响应的应用程序通信。 单个应用程序既可以充当客户端，也可以充当服务。 有关示例，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)和[对等网络](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
   
  消息在终结点之间发送。 *终结点*位置发送或接收消息 （或两者），并且他们会定义所需的消息交换的所有信息。 服务公开一个或多个应用程序终结点（以及零个或更多个基础结构终结点），而客户端生成一个与服务的其中一个终结点兼容的终结点。  
   
- *终结点*介绍基于标准的方式，消息应发送，它们应如何发送，以及消息应如下所示。 服务可以公开此信息作为客户端可以处理以生成适当的元数据[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]客户端和通信*堆栈*。  
+ *终结点*介绍基于标准的方式，消息应发送，它们应如何发送，以及消息应如下所示。 服务可以公开此信息作为客户端可以处理以生成适当的 WCF 客户端和通信的元数据*堆栈*。  
   
 ### <a name="communication-protocols"></a>通信协议  
- 一个必需的通信堆栈的元素是*传输协议*。 可以使用常用传输协议（如 HTTP 和 TCP）通过 Intranet 和 Internet 发送消息。 也可以使用其他支持与消息队列应用程序和对等网络网格上的节点进行通信的传输协议。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的内置扩展点可以添加更多传输机制。  
+ 一个必需的通信堆栈的元素是*传输协议*。 可以使用常用传输协议（如 HTTP 和 TCP）通过 Intranet 和 Internet 发送消息。 也可以使用其他支持与消息队列应用程序和对等网络网格上的节点进行通信的传输协议。 可以使用 WCF 的内置扩展点添加更多传输机制。  
   
- 通信堆栈中的另一个必要元素是指定如何对任意给定消息进行格式化的编码。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供以下类型：  
+ 通信堆栈中的另一个必要元素是指定如何对任意给定消息进行格式化的编码。 WCF 提供了以下编码：  
   
 -   文本编码，一种可互操作的编码。  
   
@@ -39,13 +39,13 @@ ms.lasthandoff: 05/04/2018
   
 -   用于实现高效传输的二进制编码。  
   
- 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的内置扩展点可以添加更多编码机制（如压缩编码）。  
+ 可以使用 WCF 的内置扩展点添加更多编码机制 （例如，压缩编码）。  
   
 ### <a name="message-patterns"></a>消息模式  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持多种消息模式，包括请求-回复、单向和双工通信。 不同传输协议支持不同的消息模式，因而会影响它们所支持的交互类型。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] API 和运行库还能帮助您安全而可靠地发送消息。  
+ WCF 支持多种消息模式，包括请求-答复、 单向和双工通信。 不同传输协议支持不同的消息模式，因而会影响它们所支持的交互类型。 WCF Api 和运行时还帮助您安全可靠地发送消息。  
   
 ## <a name="wcf-terms"></a>WCF 术语  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 文档中使用的其他概念和术语包括：  
+ 其他概念和术语使用 WCF 文档中包括以下内容。  
   
  消息  
  消息是一个独立的数据单元，它可能由几个部分组成，包括消息正文和消息头。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/04/2018
  endpoint（终结点）  
  终结点是用来发送或接收消息（或同时执行这两种操作）的构造。 终结点包括一个定义消息可以发送到的目的地的位置（地址）、一个描述消息应如何发送的通信机制规范（绑定），以及对可以在该位置发送或接收（或同时执行这两种操作）的一组消息的定义（服务协定，用于描述可以发送哪些消息）。  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务作为一个终结点集合对外公开。  
+ WCF 服务作为终结点集合向外界公开。  
   
  application endpoint（应用程序终结点）  
  一个终结点，由应用程序公开并对应于该应用程序实现的服务协定。  
@@ -83,13 +83,13 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  行为是控制服务、终结点、特定操作或客户端的各个运行时方面的要素。 行为按照范围进行分组：常见行为在全局范围内影响所有终结点，服务行为仅影响与服务相关的方面，终结点行为仅影响与终结点相关的属性，操作级行为影响特定操作。 例如，有一种服务行为是遏制，它指定当过多的消息可能超出服务的处理能力时，服务应该如何反应。 另一方面，终结点行为仅控制与终结点相关的方面，如查找安全凭据的方式和位置。  
   
  系统提供的绑定  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包含许多系统提供的绑定。 这些绑定是针对特定方案进行优化的绑定元素的集合。 例如，<xref:System.ServiceModel.WSHttpBinding> 是为了与实现各种 WS* 规范的服务进行互操作而专门设计的。 通过仅提供那些可以正确应用于特定方案的选项，这些预定义的绑定可以节省时间。 如果预定义的绑定不能满足您的要求，则可以创建您自己的自定义绑定。  
+ WCF 包含许多系统提供的绑定。 这些绑定是针对特定方案进行优化的绑定元素的集合。 例如，<xref:System.ServiceModel.WSHttpBinding> 是为了与实现各种 WS* 规范的服务进行互操作而专门设计的。 通过仅提供那些可以正确应用于特定方案的选项，这些预定义的绑定可以节省时间。 如果预定义的绑定不能满足您的要求，则可以创建您自己的自定义绑定。  
   
  配置与编码  
  可以通过代码编写、配置或将两者结合在一起对应用程序进行控制。 配置的优点在于，它使非开发人员（如网络管理员）可以在代码编写完成后直接对客户端和服务参数进行设置，而不必重新进行编译。 使用配置不仅可以设置值（如终结点地址），还可以通过添加终结点、绑定和行为来实施进一步的控制。 通过代码编写，开发人员可以保持对服务或客户端的所有组件的严格控制，而且可以对通过配置完成的所有设置进行检查，并根据需要通过代码进行重写。  
   
  服务操作  
- 服务操作是在服务的代码中定义的过程，用于实现某种操作的功能。 此操作作为一个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端上的方法向客户端公开。 该方法可以返回一个值，并可采用数量可选的参数，或是不采用任何参数且不返回任何响应。 例如，一个实现简单的“Hello”的操作可以用作客户端存在通知，并可以开始一系列操作。  
+ 服务操作是在服务的代码中定义的过程，用于实现某种操作的功能。 此操作作为 WCF 客户端上的方法向客户端公开。 该方法可以返回一个值，并可采用数量可选的自变量，或是不采用任何自变量且不返回任何响应。 例如，一个实现简单的“Hello”的操作可以用作客户端存在通知，并可以开始一系列操作。  
   
  service contract（服务协定）  
  服务协定将多个相关的操作联系在一起，组成单个功能单元。 协定可以定义服务级设置，如服务的命名空间、对应的回调协定以及其他此类设置。 在大多数情况下，协定的定义方法是用所选的编程语言创建一个接口，然后将 <xref:System.ServiceModel.ServiceContractAttribute> 属性应用于该接口。 通过实现该接口，可生成实际的服务代码。  
@@ -119,25 +119,25 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  每个服务都具有一个实例化模型。 有三种实例化模型：“单个”，在这种模型中，由单个 CLR 对象为所有客户端提供服务；“每个调用”，在这种模型中，将创建一个新的 CLR 对象来处理每个客户端调用；“每个会话”，在这种模型中，将创建一组 CLR 对象，并且为每个独立的会话使用一个对象。 实例化模型的选择取决于应用程序需求和服务的预期使用模式。  
   
  client application（客户端应用程序）  
- 客户端应用程序是与一个或多个终结点交换消息的程序。 客户端应用程序通过创建一个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端实例并调用该 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端的方法来开始工作。 需要注意的是，单个应用程序既可以充当客户端，也可以充当服务。  
+ 客户端应用程序是与一个或多个终结点交换消息的程序。 客户端应用程序可通过创建 WCF 客户端的实例和调用该 WCF 客户端的方法来启动。 需要注意的是，单个应用程序既可以充当客户端，也可以充当服务。  
   
  channel（通道）  
  通道是绑定元素的具体实现。 绑定表示配置，而通道是与该配置相关联的实现。 因此，每个绑定元素都有一个相关联的通道。 通道堆叠在一起以形成绑定的具体实现：通道堆栈。  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端  
- WCF 客户端是一个将服务操作作为方法公开的客户端应用程序构造（用您所选的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 编程语言编写，如 Visual Basic 或 Visual C#）。 任何应用程序都可以承载 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端，包括承载服务的应用程序。 因此，可以创建一个包含其他服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端的服务。  
+ WCF client（WCF 客户端）  
+ WCF 客户端是一个将服务操作作为方法公开的客户端应用程序构造（用您所选的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 编程语言编写，如 Visual Basic 或 Visual C#）。 任何应用程序都可以承载 WCF 客户端，包括承载服务的应用程序。 因此，可以创建一个包含其他服务的 WCF 客户端的服务。  
   
- A[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]客户端可以通过使用自动生成[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)并指向正在运行的服务发布的元数据。  
+ 可以通过使用自动生成 WCF 客户端[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)并指向正在运行的服务发布的元数据。  
   
  元数据  
- 服务的元数据描述服务的各种特征，外部实体需要了解这些特征以便与该服务进行通信。 元数据可供[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]客户端和客户端应用程序可用于与服务交互的伴随配置。  
+ 服务的元数据描述服务的各种特征，外部实体需要了解这些特征以便与该服务进行通信。 元数据可供[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)以生成 WCF 客户端和客户端应用程序可用于与服务交互的伴随配置。  
   
  服务所公开的元数据包括 XML 架构文档（用于定义服务的数据协定）和 WSDL 文档（用于描述服务的方法）。  
   
- 启用元数据后，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 通过检查服务及其终结点自动生成服务的元数据。 若要发布服务的元数据，必须显式启用元数据行为。  
+ 启用元数据后，WCF 可通过检查服务及其终结点来自动生成服务的元数据。 若要发布服务的元数据，必须显式启用元数据行为。  
   
  安全性  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中的安全性包括保密性（为防止窃听而进行的消息加密）、完整性（用于检测消息篡改行为的方法）、身份验证（用于验证服务器和客户端的方法）以及授权（资源访问控制）。 通过利用现有安全机制（如 TLS over HTTP，也称为 HTTPS）或通过实现各种 WS-* 安全规范中的一个或多个规范，可以提供这些功能。  
+ 在 WCF 中，包括保密性 （为防止窃听的消息加密）、 完整性 （用于检测消息篡改行为的方法）、 身份验证 （用于验证服务器和客户端方法） 和授权 （控制的访问权限资源）。 通过利用现有安全机制（如 TLS over HTTP，也称为 HTTPS）或通过实现各种 WS-* 安全规范中的一个或多个规范，可以提供这些功能。  
   
  传输安全模式  
  传输安全模式指定由传输层机制（如 HTTPS）提供保密性、完整性和身份验证。 在使用像 HTTPS 这样的传输协议时，此模式的优点在于性能出色，而且由于它在 Internet 上非常流行，因此很容易理解。 其缺点在于，这种安全分别应用于通信路径中的每个跃点，这使得通信容易遭受“中间人”攻击。  
@@ -149,7 +149,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  此模式指定使用传输层来提供消息的保密性、身份验证和完整性，并且每个消息都可以包含消息接收方所要求的多个凭据（声明）。  
   
  WS-*  
- 一组不断增加的、在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中予以实现的 Web 服务 (WS) 规范（如 WS-Security、WS-ReliableMessaging 等）的简写。  
+ 一组不断增加的、在 WCF 中实现的 Web 服务 (WS) 规范（如 WS-Security、WS-ReliableMessaging 等）的简写。  
   
 ## <a name="see-also"></a>请参阅  
  [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

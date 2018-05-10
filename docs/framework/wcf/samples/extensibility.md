@@ -2,11 +2,11 @@
 title: 扩展性
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensibility"></a>扩展性
 本节包含处理自定义扩展性和其他功能的 Windows Communication Foundation (WCF) 的示例。  
@@ -55,10 +55,10 @@ ms.lasthandoff: 05/04/2018
  演示如何使用数据协定代理类自定义诸如序列化、反序列化、架构导出和架构导入之类的过程。  
   
  [扩展对错误处理和错误报告的控制](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
- 演示如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务中使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口对错误处理和错误报告进行扩展控制。  
+ 演示如何对错误处理和 WCF 服务使用中的错误报告进行扩展控制<xref:System.ServiceModel.Dispatcher.IErrorHandler>接口。  
   
  [消息检查器](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  演示如何实现和配置客户端和服务消息检查器。  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
- 演示如何将新内容类型映射到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息正文格式。
+ 演示如何将新的内容类型映射到 WCF 消息正文格式。

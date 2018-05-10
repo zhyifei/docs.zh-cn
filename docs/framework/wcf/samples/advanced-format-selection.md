@@ -2,11 +2,11 @@
 title: 高级格式选择
 ms.date: 03/30/2017
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-ms.openlocfilehash: 2d0e78bc1ec1dcd7e4a22b246f5cc35356f5f986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4913d8dbf69f574aa4f329279bed0d92710512f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-format-selection"></a>高级格式选择
 此示例演示如何扩展 Windows Communication Foundation (WCF) REST 编程模型以支持新的传出响应格式。 此外，本示例使用 T4 模板以 HTML 页的形式返回响应，从而演示如何实现视图样式编程模型。  
@@ -18,7 +18,7 @@ ms.lasthandoff: 05/04/2018
   
  服务返回的响应格式首先由 `format` 查询字符串参数确定，其次由与请求一起提供的 HTTP Accept 标头确定。 如果 `format` 查询字符串参数的值是上面格式中的一种，则以该格式返回响应。 如果不存在 `format` 查询字符串，则服务会遍历来自请求的 Accept 标头元素并返回服务支持的第一个内容类型的格式。  
   
- 需要注意操作的返回类型。 当操作返回的类型不是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时，<xref:System.ServiceModel.Channels.Message> REST 编程模型本身只支持 XML 和 JSON 响应格式。 但是，当使用 <xref:System.ServiceModel.Channels.Message> 作为返回类型时，开发人员可以完全控制应如何格式化消息内容。  
+ 需要注意操作的返回类型。 WCF REST 编程模型本身只支持 XML 和 JSON 响应格式时操作返回的类型以外<xref:System.ServiceModel.Channels.Message>。 但是，当使用 <xref:System.ServiceModel.Channels.Message> 作为返回类型时，开发人员可以完全控制应如何格式化消息内容。  
   
  本示例使用 <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>、<xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> 和 <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> 方法将字符串列表分别序列化为 XML、JSON 和 ATOM 消息。 对于 jpeg 响应格式，使用 <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> 方法并将图像保存到流中。 对于 XHTML 响应，使用 <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> 以及预处理的 T4 模板，该模板由一个 .tt 文件和一个自动生成的 .cs 文件组成。 通过 .tt 文件，开发人员可以采用包含变量和控制结构的模板形式编写响应。 T4 的更多信息，请参阅[通过使用文本模板生成项目](http://go.microsoft.com/fwlink/?LinkId=166023)。  
   

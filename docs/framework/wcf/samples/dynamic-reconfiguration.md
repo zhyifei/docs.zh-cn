@@ -2,14 +2,14 @@
 title: 动态重新配置
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-ms.openlocfilehash: 3783dd79918dc42a5ad6567bb4f3d2d0fe8bc1e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81a2b494c48476e683053e12e58264e756201124
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="dynamic-reconfiguration"></a>动态重新配置
-此示例演示 Windows Communication Foundation (WCF) 路由服务。 路由服务是一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 组件，使用该组件可方便地在应用程序中包含基于内容的路由器。 此示例采用标准的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 计算器示例，用于使用路由服务进行通信。 此示例演示如何在运行时动态重新配置路由服务。  
+此示例演示 Windows Communication Foundation (WCF) 路由服务。 路由服务是可以轻松地在你的应用程序中包含基于内容的路由器的 WCF 组件。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。 此示例演示如何在运行时动态重新配置路由服务。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

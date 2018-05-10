@@ -2,21 +2,21 @@
 title: 客户端
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: 4c44ed4be9a3598ea79355737db678dd7a80a56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd172aefa640853c7ace1d9d7ad3fada73714642
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client"></a>客户端
 本节包含演示 Windows Communication Foundation (WCF) 客户端应用程序的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [客户端互操作性](../../../../docs/framework/wcf/samples/client-interoperability.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 与其他技术之间的互操作性。  
+ 演示 WCF 和其他技术之间的互操作性。  
   
  [地址标头](../../../../docs/framework/wcf/samples/address-headers.md)  
- 演示客户端如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将引用参数传递到服务。  
+ 演示客户端如何向使用 WCF 的服务传递引用参数。  
   
  [通道工厂](../../../../docs/framework/wcf/samples/channel-factory.md)  
  演示客户端应用程序如何使用 <xref:System.ServiceModel.ChannelFactory> 类而不是生成的客户端创建通道。  

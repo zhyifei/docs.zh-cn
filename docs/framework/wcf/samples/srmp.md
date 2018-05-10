@@ -2,11 +2,11 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 5c2079f1aa90821448c88de53d311d064bb6e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c746897666ae78844df35c2989c803d852c3f70e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="srmp"></a>SRMP
 本示例演示如何使用 HTTP 上的消息队列 (MSMQ) 来执行事务处理排队通信。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/04/2018
  若要运行此示例，服务计算机和客户端计算机上除了 MSMQ 外，还必须安装 IIS。  
   
 ## <a name="demonstrates"></a>演示  
- 示例演示如何通过 HTTP 使用 MSMQ 来发送 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 排队消息。 这也称为 SRMP 消息传递。 发送排队消息时，发送方计算机上的 MSMQ 通过 TCP 或 HTTP 传输将消息传送到接收队列管理器。 通过选择 SRMP，用户可以指示选择 HTTP 作为队列传送的传输协议。 SRMP 安全启用 HTTPS。  
+ 此示例演示如何发送 WCF 排队消息通过 HTTP 使用 MSMQ。 这也称为 SRMP 消息传递。 发送排队消息时，发送方计算机上的 MSMQ 通过 TCP 或 HTTP 传输将消息传送到接收队列管理器。 通过选择 SRMP，用户可以指示选择 HTTP 作为队列传送的传输协议。 SRMP 安全启用 HTTPS。  
   
 ## <a name="example"></a>示例  
  示例代码基于事务处理示例。 使用 SRMP 将消息发送到队列和从队列中接收消息的方式与使用本机协议发送和接收消息的方式相同。  

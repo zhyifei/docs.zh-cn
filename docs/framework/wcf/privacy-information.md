@@ -6,34 +6,34 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: e9c4130cd4680d4cd68ca8c6ba36c38b5d065f58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e278b28e5c0015eeab549b04d3870dfa247a57ed
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
-Microsoft 承诺保护最终用户的隐私。 当你生成应用程序使用 Windows Communication Foundation (WCF) 版本 3.0 中，你的应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向你的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 不会从您的应用程序将任何信息发送给 Microsoft，除非您或最终用户选择将信息发送给我们。  
+Microsoft 承诺保护最终用户的隐私。 当你生成应用程序使用 Windows Communication Foundation (WCF) 版本 3.0 中，你的应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向你的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不任何向 Microsoft 发送信息从你的应用程序除非您或最终用户选择将其发送给我们。  
   
 ## <a name="wcf-in-brief"></a>WCF 概述  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是一个分布式消息传递框架，它使用 Microsoft .NET Framework，使开发人员可以生成分布式应用程序。 在两个应用程序之间交换的消息包含标头和正文信息。  
+ WCF 是使用 Microsoft.NET Framework，使开发人员可以构建分布式应用程序的分布式消息传递框架。 在两个应用程序之间交换的消息包含标头和正文信息。  
   
- 标头可能包含消息路由、安全信息、事务和其他信息，具体取决于应用程序所使用的服务。 默认情况下，消息通常要进行加密。 一个例外的情况是使用 `BasicHttpBinding`（它适用于不受保护的旧式 Web 服务）。 作为应用程序设计人员，您负责进行最终设计。 SOAP 正文中的消息包含特定于应用程序的数据；但是，可以通过使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 加密或保密性功能来保护这些数据（例如，应用程序定义的个人信息）的安全。 以下几节将描述可能对隐私造成影响的功能。  
+ 标头可能包含消息路由、安全信息、事务和其他信息，具体取决于应用程序所使用的服务。 默认情况下，消息通常要进行加密。 一个例外的情况是使用 `BasicHttpBinding`（它适用于不受保护的旧式 Web 服务）。 作为应用程序设计人员，您负责进行最终设计。 SOAP 正文中的消息包含特定于应用程序的数据;但是，可以使用 WCF 加密或保密性功能来保护这些数据，例如，应用程序定义的个人信息。 以下几节将描述可能对隐私造成影响的功能。  
   
-## <a name="messaging"></a>消息传送  
- 每个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 消息都具有一个地址标头，该标头指定消息目标以及答复目标。  
+## <a name="messaging"></a>消息  
+ 每个 WCF 消息具有指定的消息目标的地址标头和应从何处答复。  
   
  终结点地址的地址部分是一个标识该终结点的统一资源标识符 (URI)。 该地址可以是网络地址，也可以是逻辑地址。 该地址可能包含计算机名称（主机名、完全限定域名）和一个 IP 地址。 终结点地址还可能包含一个用于进行临时寻址的全局唯一标识符 (GUID) 或 GUID 集合，以便辨别每个地址。 每个消息都包含一个消息 ID，该消息 ID 是 GUID。 此功能遵循 WS-Addressing 引用标准。  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 消息传递层不会向本地计算机写入任何个人信息。 但是，如果服务开发人员创建了公开此类信息的服务（例如，通过在终结点名称中使用个人姓名，或者将个人信息包含在终结点的 Web 服务描述语言中，但不要求客户端使用 https 来访问 WSDL），则消息传递层可能会在网络级传播个人信息。 此外，如果开发人员运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)对公开个人信息，该工具的输出的终结点的工具可能包含该信息和输出文件写入到本地硬盘。  
+ WCF 消息传递层不会写入本地计算机的任何个人信息。 但是，如果服务开发人员创建了公开此类信息的服务（例如，通过在终结点名称中使用个人姓名，或者将个人信息包含在终结点的 Web 服务描述语言中，但不要求客户端使用 https 来访问 WSDL），则消息传递层可能会在网络级传播个人信息。 此外，如果开发人员运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)对公开个人信息，该工具的输出的终结点的工具可能包含该信息和输出文件写入到本地硬盘。  
   
 ## <a name="hosting"></a>宿主  
- 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中的承载功能，应用程序可以按需启动，或者在多个应用程序之间启用端口共享。 可以将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序承载到 Internet 信息服务 (IIS) 中，这与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 相似。  
+ WCF 中的承载功能，应用程序可以按需启动或者多个应用程序之间启用端口共享。 WCF 应用程序可以承载在 Internet 信息服务 (IIS)，类似于[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]。  
   
  承载功能不会在网路上公开任何特定信息，也不会在计算机上保留数据。  
   
 ## <a name="message-security"></a>消息安全  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 安全为消息传递应用程序提供了安全功能。 所提供的安全功能包括身份验证和授权。  
+ WCF 安全提供消息传送应用程序的安全功能。 所提供的安全功能包括身份验证和授权。  
   
  身份验证通过在客户端和服务之间传递凭据来执行。 身份验证可以通过传输级安全实现，也可以通过 SOAP 消息级安全实现，如下所述：  
   
@@ -56,7 +56,7 @@ Microsoft 承诺保护最终用户的隐私。 当你生成应用程序使用 Wi
  审核功能还记录管理员修改消息日志记录的配置（启用或禁用）的时间，因为消息日志记录可能记录标头或正文中特定于应用程序的数据。 对于 [!INCLUDE[wxp](../../../includes/wxp-md.md)]，记录将写入应用程序事件日志。 对于 [!INCLUDE[wv](../../../includes/wv-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]，记录将写入安全事件日志。  
   
 ## <a name="transactions"></a>事务  
- 事务功能向 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序提供事务性服务。  
+ 事务功能提供事务性服务添加到 WCF 应用程序。  
   
  事务传播中使用的事物标头可能包含事务 ID 或登记 ID（这些 ID 都是 GUID）。  
   
@@ -65,34 +65,34 @@ Microsoft 承诺保护最终用户的隐私。 当你生成应用程序使用 Wi
  事务功能实现了 WS-Coordination 和 WS-Atomic 事务标准。  
   
 ## <a name="reliable-sessions"></a>可靠会话  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中的可靠会话在发生传输或中间设备失败时提供消息传送。 甚至在基础传输断开（例如，无线网络上的 TCP 连接断开）或丢失消息（HTTP 代理丢弃传出消息或传入消息）时，它们也会提供“一次性”消息传送。 可靠会话还可以恢复消息重新排序（这可能在多路径路由的情况下发生），从而保留消息的发送顺序。  
+ 在 WCF 中的可靠会话提供消息的传输，传输或中间故障发生时。 甚至在基础传输断开（例如，无线网络上的 TCP 连接断开）或丢失消息（HTTP 代理丢弃传出消息或传入消息）时，它们也会提供“一次性”消息传送。 可靠会话还可以恢复消息重新排序（这可能在多路径路由的情况下发生），从而保留消息的发送顺序。  
   
  可靠会话是使用 WS-ReliableMessaging (WS-RM) 协议来实现的。 可靠会话添加包含会话信息的 WS-RM 标头，这些会话信息用于标识与特定可靠会话关联的所有消息。 每个 WS-RM 会话都有一个 GUID 标识符。  
   
  最终用户的计算机上不会保留任何个人信息。  
   
 ## <a name="queued-channels"></a>排队通道  
- 队列代表接收应用程序存储来自发送应用程序的消息，之后再将这些消息转发给接收应用程序。 队列有助于在某些情况下（例如，接收应用程序是瞬态应用程序）确保消息从发送应用程序传送到接收应用程序。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 通过使用 Microsoft 消息队列 (MSMQ) 作为传输来提供对队列的支持。  
+ 队列代表接收应用程序存储来自发送应用程序的消息，之后再将这些消息转发给接收应用程序。 队列有助于在某些情况下（例如，接收应用程序是瞬态应用程序）确保消息从发送应用程序传送到接收应用程序。 WCF 提供了通过使用 Microsoft 消息队列 (MSMQ) 作为传输协议队列的支持。  
   
  排队通道功能不会向消息中添加标头。 相反，它会创建一个具有适当的消息队列消息属性集的消息队列消息，并调用消息队列方法来将消息放入“消息队列”队列中。 消息队列是一个可选组件，它随 Windows 一起提供。  
   
  排队通道功能不会在最终用户的计算机上保留任何信息，因为它使用消息队列作为队列基础结构。  
   
 ## <a name="com-integration"></a>COM+ 集成  
- 此功能包装了现有的 COM 和 COM+ 功能，以创建与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务兼容的服务。 此功能不使用特定的标头，并且不会在最终用户的计算机上保留数据。  
+ 此功能包装了现有的 COM 和 COM + 功能，以创建与 WCF 服务兼容的服务。 此功能不使用特定的标头，并且不会在最终用户的计算机上保留数据。  
   
 ## <a name="com-service-moniker"></a>COM 服务标记  
- 此功能向标准的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端提供非托管包装。 此功能在网络上没有特定的标头，也不会在计算机上持久保留数据。  
+ 这向标准 WCF 客户端提供的非托管的包装。 此功能在网络上没有特定的标头，也不会在计算机上持久保留数据。  
   
 ## <a name="peer-channel"></a>对等通道  
- 对等通道为开发使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的多方应用程序提供了支持。 多方消息传递发生在网格环境中。 网格由节点可以加入的名称来标识。 对等通道中的每个节点都在用户指定的端口创建一个 TCP 侦听器，并与网格中的其他节点建立连接以确保连接的弹性。 为了与网格中的其他节点进行连接，节点还会与网格中的其他节点交换一些数据，包括侦听器地址和计算机的 IP 地址。 在网格中四处发送的消息可能包含与发送方相关的安全信息，以防止发生消息欺骗和篡改。  
+ 对等通道，可以使用 WCF 的多方应用程序开发。 多方消息传递发生在网格环境中。 网格由节点可以加入的名称来标识。 对等通道中的每个节点都在用户指定的端口创建一个 TCP 侦听器，并与网格中的其他节点建立连接以确保连接的弹性。 为了与网格中的其他节点进行连接，节点还会与网格中的其他节点交换一些数据，包括侦听器地址和计算机的 IP 地址。 在网格中四处发送的消息可能包含与发送方相关的安全信息，以防止发生消息欺骗和篡改。  
   
  最终用户的计算机上不会存储任何个人信息。  
   
 ## <a name="it-professional-experience"></a>IT 专业经验  
   
 ### <a name="tracing"></a>跟踪  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 基础结构的诊断功能记录经过传输和服务模型层的消息，以及与这些消息关联的活动或事件。 默认情况下，此功能被禁用。 使用应用程序的配置文件可以启用此功能，而在运行时使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] WMI 提供程序可以修改跟踪行为。 在启用此功能后，跟踪基础结构会向已配置的侦听器发出包含消息、活动和处理事件的诊断跟踪。 输出的格式和位置由管理员的侦听器配置选择确定，但通常是 XML 格式化文件。 管理员负责设置跟踪文件上的访问控制列表 (ACL)。 具体而言，在由 Windows 激活系统 (WAS) 进行承载时，管理员应确保不是从公共虚拟根目录提供这些文件（如果不需要）。  
+ WCF 基础结构的诊断功能记录经过传输和服务模型层，和的活动和与这些消息关联的事件的消息。 默认情况下，此功能被禁用。 启用使用应用程序的配置文件，并可以在运行时使用 WCF WMI 提供程序来修改跟踪行为。 在启用此功能后，跟踪基础结构会向已配置的侦听器发出包含消息、活动和处理事件的诊断跟踪。 输出的格式和位置由管理员的侦听器配置选择确定，但通常是 XML 格式化文件。 管理员负责设置跟踪文件上的访问控制列表 (ACL)。 具体而言，在由 Windows 激活系统 (WAS) 进行承载时，管理员应确保不是从公共虚拟根目录提供这些文件（如果不需要）。  
   
  有两种类型的跟踪：消息日志记录和服务模型诊断跟踪，下一节将对其进行介绍。 每种类型都通过其自身的跟踪源进行配置，它们分别是 <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 和 <xref:System.ServiceModel>。 这两种日志记录跟踪源都捕获应用程序本地的数据。  
   
@@ -115,14 +115,14 @@ Microsoft 承诺保护最终用户的隐私。 当你生成应用程序使用 Wi
  即使消息在网络上进行了保护和加密，在此层记录的消息也是解密消息。  
   
  格式不正确的消息日志记录  
- 记录 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 基础结构无法理解或处理的消息。  
+ 记录 WCF 基础结构无法理解或处理的消息。  
   
  消息按原样（即，加密或不加密）进行记录。  
   
- 在以解密形式或未加密形式记录消息时，默认情况下，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 会在记录消息之前从消息中删除安全密钥和潜在的个人信息。 下面几节将描述要删除的消息以及删除时间。 计算机管理员和应用程序部署人员都必须执行一定的配置操作来更改默认行为，以便记录密钥和潜在的个人信息。  
+ 所记录的消息时解密或未加密的窗体中，默认情况下，WCF 中删除安全密钥和潜在的个人信息消息中记录之前。 下面几节将描述要删除的消息以及删除时间。 计算机管理员和应用程序部署人员都必须执行一定的配置操作来更改默认行为，以便记录密钥和潜在的个人信息。  
   
 #### <a name="information-removed-from-message-headers-when-logging-decryptedunencrypted-messages"></a>在记录解密/未加密消息时从消息头中删除的信息  
- 在以解密/未加密形式记录消息时，默认情况下，将在记录消息之前从消息头和消息正文中删除安全密钥和潜在的个人信息。 下面的列表显示了 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 将哪些内容视为密钥和潜在的个人信息。  
+ 在以解密/未加密形式记录消息时，默认情况下，将在记录消息之前从消息头和消息正文中删除安全密钥和潜在的个人信息。 以下列表显示 WCF 视为密钥和潜在的个人信息。  
   
  被删除的密钥：  
   
@@ -299,7 +299,7 @@ Microsoft 承诺保护最终用户的隐私。 当你生成应用程序使用 Wi
  \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>在记录解密/未加密消息时从消息正文中删除的信息  
- 如前所述，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 会从所记录的解密/未加密消息的消息头中删除密钥和已知的潜在个人信息。 此外，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还会从以下列表中的正文元素和操作（它们描述了密钥交换过程中涉及的安全消息）的消息正文中删除密钥和已知的潜在个人信息。  
+ 如上文所述，WCF 中删除密钥和记录解密/未加密的消息的消息标头中的已知潜在的个人信息。 此外，WCF 从中删除密钥和已知的潜在的个人信息的正文元素和以下列表中，用于描述密钥交换中涉及的安全消息的操作的消息正文。  
   
  对于下列命名空间：  
   
@@ -356,7 +356,7 @@ Microsoft 承诺保护最终用户的隐私。 当你生成应用程序使用 Wi
  http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend  
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>不会从特定于应用程序的标头和正文数据中删除任何信息  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 不会跟踪特定于应用程序的标头中的个人信息（例如，查询字符串）或正文数据（例如，信用卡号）。  
+ WCF 不跟踪应用程序特定的标头 （例如，查询字符串） 或正文数据 （例如，信用卡号） 中的个人信息。  
   
  启用消息日志记录后，特定于应用程序的标头中的个人信息和正文信息在日志中可见。 同样，应用程序部署人员负责设置配置和日志文件上的 ACL。 如果他不希望让这些信息可见，他还可以禁用日志记录，或者在记录这些信息之后将其从日志文件中筛选掉。  
   
@@ -371,26 +371,26 @@ Microsoft 承诺保护最终用户的隐私。 当你生成应用程序使用 Wi
  对于消息日志记录和跟踪记录，可以配置一个自定义跟踪侦听器，该侦听器可以在网络上发送跟踪和消息（例如，向远程数据库发送）。 应用程序部署人员负责配置自定义侦听器或授权用户执行这一操作。 他还对在远程位置公开的所有个人信息负有责任，并负责将 ACL 正确应用到此位置。  
   
 ### <a name="other-features-for-it-professionals"></a>IT 专业人员的其他作用  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 具有一个 WMI 提供程序，该程序通过 WMI（随 Windows 一起提供）公开 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 基础结构配置信息。 默认情况下，WMI 接口可供管理员使用。  
+ WCF 具有的 WMI 提供程序公开通过 WMI （随 Windows 一起） 的 WCF 基础结构配置信息。 默认情况下，WMI 接口可供管理员使用。  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置使用 .NET Framework 配置机制。 配置文件存储在计算机上。 应用程序开发人员和管理员为应用程序的每个要求创建配置文件和 ACL。 配置文件可以包含终结点地址和指向证书存储区中的证书的链接。 证书可用于提供应用程序数据，以配置应用程序所使用的功能的各种属性。  
+ WCF 配置使用.NET Framework 配置机制。 配置文件存储在计算机上。 应用程序开发人员和管理员为应用程序的每个要求创建配置文件和 ACL。 配置文件可以包含终结点地址和指向证书存储区中的证书的链接。 证书可用于提供应用程序数据，以配置应用程序所使用的功能的各种属性。  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还通过调用 <xref:System.Environment.FailFast%2A> 方法来使用 .NET Framework 进程转储功能。  
+ WCF 还使用.NET Framework 进程转储功能通过调用<xref:System.Environment.FailFast%2A>方法。  
   
 ### <a name="it-pro-tools"></a>IT 专业工具  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还提供了下列 IT 专业工具，这些工具随 Windows SDK 一起提供。  
+ WCF 还提供了以下的 IT 专业工具，随 Windows SDK 中。  
   
 #### <a name="svctraceviewerexe"></a>SvcTraceViewer.exe  
- 该查看器显示 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 跟踪文件。 该查看器显示跟踪中包含的所有信息。  
+ 查看器显示 WCF 跟踪文件。 该查看器显示跟踪中包含的所有信息。  
   
 #### <a name="svcconfigeditorexe"></a>SvcConfigEditor.exe  
- 该编辑器使用户可以创建和编辑 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置文件。 该编辑器显示配置文件中包含的所有信息。 使用文本编辑器可以完成同样的任务。  
+ 编辑器允许用户创建和编辑 WCF 配置文件。 该编辑器显示配置文件中包含的所有信息。 使用文本编辑器可以完成同样的任务。  
   
 #### <a name="servicemodelreg"></a>ServiceModel_Reg  
- 此工具使用户可以管理计算机上的 ServiceModel 安装。 此工具运行时在控制台窗口中显示状态消息，而在进程中，它可能会显示与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 安装的配置有关的信息。  
+ 此工具使用户可以管理计算机上的 ServiceModel 安装。 该工具在控制台窗口中显示状态消息，当它运行，并且在过程中，可能会显示有关 WCF 安装的配置信息。  
   
 #### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig.exe 和 WSATUI.dll  
- 这两种工具使 IT 专业人员可以在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中配置可互操作的 WS-AtomicTransaction 网络支持。 这两种工具显示并使用户可以更改存储在注册表中的最常用 WS-AtomicTransaction 设置的值。  
+ 这些工具使 IT 专业人员在 WCF 中配置可互操作的 Ws-atomictransaction 网络支持。 这两种工具显示并使用户可以更改存储在注册表中的最常用 WS-AtomicTransaction 设置的值。  
   
 ## <a name="cross-cutting-features"></a>横切功能  
  下列功能是横切功能。 即，它们可以用前面的任何功能构成。  

@@ -2,11 +2,11 @@
 title: ASP.NET 兼容性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 35d9362fde21faf4998051e85f66fc4ddfb8b94b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f621a3f13fafee67a015d463898a10aaf9104008
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 兼容性
 此示例演示如何启用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]兼容模式中 Windows Communication Foundation (WCF)。 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容性模式中运行的服务可完全参与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序管道并可利用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能，如文件/URL 授权、会话状态和 <xref:System.Web.HttpContext> 类。 使用 <xref:System.Web.HttpContext> 类可以访问 Cookie、会话和其他 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能。 此模式要求绑定使用 HTTP 传输，且服务本身必须承载于 IIS 中。  
@@ -59,7 +59,7 @@ public interface ICalculatorSession
  服务使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话来存储每个客户端会话的结果。 这使服务可以为跨多个服务调用的每个客户端保持运行结果。  
   
 > [!NOTE]
->  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话状态和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会话截然不同。  请参阅[会话](../../../../docs/framework/wcf/samples/session.md)有关的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]会话。  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话状态和 WCF 会话是截然不同的事物。  请参阅[会话](../../../../docs/framework/wcf/samples/session.md)有关 WCF 会话的详细信息。  
   
  服务直接依赖于 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话状态，并需要 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容性模式才能正常工作。 这些要求是通过应用 `AspNetCompatibilityRequirements` 属性以声明性方式表示的。  
   

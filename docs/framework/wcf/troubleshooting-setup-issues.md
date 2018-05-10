@@ -2,11 +2,11 @@
 title: 安装问题疑难解答
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 806e8a1f45deec5861e3bcc9a9c06a93ce410c1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c750aa4f9a4ec4750aa24ffcd685c9c349a45a7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>安装问题疑难解答
 本主题介绍如何进行故障排除 Windows Communication Foundation (WCF) 设置问题。  
@@ -61,12 +61,12 @@ ms.lasthandoff: 05/04/2018
  [工作流服务注册工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)可以位于 %windir%\Microsoft.NET\framework\v3.5\ 或 %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>安装 .NET Framework 3.5 之后，为 WCF/WF Webhost 正确配置 IIS  
- 如果 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 安装无法配置与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 相关的其他 IIS 配置设置，将会在安装日志中记录错误，然后继续操作。 对运行 WorkflowServices 应用程序的任何尝试都将失败，因为缺少必需的配置设置。 例如，加载 xoml 或规则服务会失败。  
+ 当[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]安装无法配置其他 WCF 相关 IIS 配置设置，它在安装日志中记录错误并继续。 对运行 WorkflowServices 应用程序的任何尝试都将失败，因为缺少必需的配置设置。 例如，加载 xoml 或规则服务会失败。  
   
  解决此问题，使用[工作流服务注册工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)与`/c`交换机以正确的计算机上配置 IIS 脚本映射。 [工作流服务注册工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)可以位于 %windir%\Microsoft.NET\framework\v3.5\ 或 %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>无法从程序集“System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”加载类型“System.ServiceModel.Activation.HttpModule”  
- 如果发生此错误[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]安装，然后[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] HTTP 激活是否已启用。 若要解决该问题，请在 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 命令提示符下运行下面的命令行：  
+ 如果发生此错误[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]安装，然后 WCF HTTP 激活是否已启用。 若要解决该问题，请在 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 命令提示符下运行下面的命令行：  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

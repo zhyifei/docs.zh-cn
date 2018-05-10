@@ -2,11 +2,11 @@
 title: 发出用户代码跟踪
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="emitting-user-code-traces"></a>发出用户代码跟踪
 除了启用跟踪以收集生成 Windows Communication Foundation (WCF) 的检测数据，还可以发出以编程方式在用户代码中的跟踪。 这样，您就可以主动创建检测数据，过后您可以细读这些数据以进行诊断。 本主题讨论如何实现这一目的。  
@@ -65,9 +65,9 @@ Trace.CorrelationManager.ActivityId = oldID;
  如果您将客户端和服务配置文件中的 `propagateActivity` 跟踪源的 `true` 属性设为 `System.ServiceModel`，将在客户端定义的相同活动中发生“加请求”的服务处理。 如果服务定义了自己的活动和转移，服务跟踪将不会出现在由客户端传播的活动中。 相反，它们通过将跟踪转移到其 ID 由客户端传播的活动中出现在关联活动中。  
   
 > [!NOTE]
->  如果在客户端和服务中，`propagateActivity` 属性均设置为 `true`，位于服务操作范围内的环境活动将由 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 设置。  
+>  如果`propagateActivity`属性设置为`true`在客户端和服务上，该服务的操作作用域的环境活动由 WCF 设置。  
   
- 您可以使用下面的代码检查 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 是否已将活动设置在范围内。  
+ 下面的代码可用于检查活动在作用域中的 WCF 设置。  
   
 ```  
 // Check if an activity was set in scope by WCF, if it was   
@@ -135,7 +135,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![使用跟踪查看器发出用户&#45;代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 错误关联的图形视图  
   
- 若要获取之前的跟踪，我们为用户跟踪源设置 `ActivityTracing` 并为 `propagateActivity=true` 跟踪源设置 `System.ServiceModel`。 我们没有为 `ActivityTracing` 跟踪源设置 `System.ServiceModel`，以便实现用户代码活动之间的传播。 （当启用“ServiceModel”活动跟踪时，客户端中定义的活动 ID 将不会传播到服务用户代码；但是，转移会将客户端和服务用户代码活动与中间的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 活动相关联。）  
+ 若要获取之前的跟踪，我们为用户跟踪源设置 `ActivityTracing` 并为 `propagateActivity=true` 跟踪源设置 `System.ServiceModel`。 我们没有为 `ActivityTracing` 跟踪源设置 `System.ServiceModel`，以便实现用户代码活动之间的传播。 （当 ServiceModel 活动跟踪时，客户端中定义的活动 ID 是不会传播到服务用户代码;传输模式，但是，关联将客户端和服务的用户代码活动与中间的 WCF 活动。）  
   
  定义活动和传播活动 ID 使得我们可以对各终结点执行直接错误关联。 这样，我们就可以更快地找到错误的根本原因。  
   

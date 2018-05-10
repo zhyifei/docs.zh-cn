@@ -2,24 +2,24 @@
 title: SOAP 和 HTTP 终结点
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: bf11563b937426c3c1701e7fed79e82e4e4669ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c8a4695dbcaee2f0e7584418fbeac12815fa967
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP 和 HTTP 终结点
-本示例演示如何实现基于 RPC 的服务并将其公开以 SOAP 格式和"Plain Old XML"(POX) 格式使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Web 编程模型。 请参阅[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例有关服务的 HTTP 绑定详细信息。 本示例重点介绍有关使用不同绑定通过 SOAP 和 HTTP 公开相同服务的详细信息。  
+此示例演示如何以实现基于 RPC 的服务并以 SOAP 格式和使用 WCF Web 编程模型的"Plain Old XML"(POX) 格式公开它。 请参阅[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例有关服务的 HTTP 绑定详细信息。 本示例重点介绍有关使用不同绑定通过 SOAP 和 HTTP 公开相同服务的详细信息。  
   
 ## <a name="demonstrates"></a>演示  
- 使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通过 SOAP 和 HTTP 公开 RPC 服务。  
+ 使用 WCF 通过 SOAP 和 HTTP 公开 RPC 服务。  
   
 ## <a name="discussion"></a>讨论  
- 本示例由两个组件组成：一个包含 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 Web 应用程序项目（服务），以及一个使用 SOAP 和 HTTP 绑定调用服务操作的控制台应用程序（客户端）。  
+ 此示例由两个组件组成： 一个包含 WCF 服务和使用 SOAP 和 HTTP 绑定调用服务操作的控制台应用程序 （客户端） 的 Web 应用程序项目 （服务）。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务公开 2 个操作：`GetData` 和 `PutData`，后者回显作为输入传递的字符串。 这些服务操作使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 进行批注。 这些特性控制这些操作的 HTTP 投影。 此外，这些操作使用 <xref:System.ServiceModel.OperationContractAttribute> 进行批注，从而使其可以通过 SOAP 绑定进行公开。 服务的 `PutData` 方法引发 <xref:System.ServiceModel.Web.WebFaultException>，该异常使用 HTTP 状态代码通过 HTTP 发回，通过 SOAP 作为 SOAP 错误发回。  
+ WCF 服务公开 2 个操作 –`GetData`和`PutData`– 后者回显作为输入传递的字符串。 这些服务操作使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 进行批注。 这些特性控制这些操作的 HTTP 投影。 此外，这些操作使用 <xref:System.ServiceModel.OperationContractAttribute> 进行批注，从而使其可以通过 SOAP 绑定进行公开。 服务的 `PutData` 方法引发 <xref:System.ServiceModel.Web.WebFaultException>，该异常使用 HTTP 状态代码通过 HTTP 发回，通过 SOAP 作为 SOAP 错误发回。  
   
- Web.config 文件通过 3 个终结点配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务：  
+ Web.config 文件使用 3 个终结点配置 WCF 服务：  
   
 -   ~/service.svc/mex 终结点，公开服务元数据供基于 SOAP 的客户端访问。  
   

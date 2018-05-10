@@ -2,11 +2,11 @@
 title: 对服务操作失败进行监视
 ms.date: 03/30/2017
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-ms.openlocfilehash: 16ed779f77836fb68cf1edf1e01dbb3c0df01d45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d708b537789c8d0decf75df780300c1e185c4c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="monitoring-service-operation-failures"></a>对服务操作失败进行监视
 如果为应用程序启用了分析跟踪，则可以在事件查看器中轻松地监视服务失败。  本主题演示如何确定服务操作失败的时间，以及如何确定失败的原因。  
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  如果尚未启用分析跟踪，则展开**Applications and Services Logs**， **Microsoft**， **Windows**，**应用程序服务器-应用程序**. 选择**视图**，**显示分析和调试日志**。 右键单击**分析**和选择**启用日志**。 保持事件查看器打开，以便在服务操作失败后可以查看跟踪。  
   
-3.  接下来，打开在中创建的示例[入门教程](../../../../../docs/framework/wcf/getting-started-tutorial.md)中[!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)]请注意，必须运行[!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)]以管理员身份，以便可以创建服务。 如果你有[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]安装的示例，你可以打开[入门](../../../../../docs/framework/wcf/samples/getting-started-sample.md)，其中包含已完成本教程中创建的项目。  
+3.  接下来，打开在中创建的示例[入门教程](../../../../../docs/framework/wcf/getting-started-tutorial.md)中[!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)]请注意，必须运行[!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)]以管理员身份，以便可以创建服务。 如果您有安装 WCF 示例，你可以打开[入门](../../../../../docs/framework/wcf/samples/getting-started-sample.md)，其中包含已完成本教程中创建的项目。  
   
 4.  在服务器项目的 Program.cs 文件中，将以下代码行添加到 `Divide` 类中 `CalculatorService` 方法的开头：  
   

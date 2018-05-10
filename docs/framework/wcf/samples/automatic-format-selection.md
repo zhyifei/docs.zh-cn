@@ -2,11 +2,11 @@
 title: 自动格式选择
 ms.date: 03/30/2017
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-ms.openlocfilehash: 9b9b4da4d5d3bdb3892feb49c033fbe4fc640cb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8c26253bee069bf9bbc009ea219e6c12cab034ef
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="automatic-format-selection"></a>自动格式选择
 此示例演示如何启用自动格式选择 （XML 或 JSON） 通过 Windows Communication Foundation (WCF) REST 编程模型，以及如何在操作代码中显式设置格式。  
@@ -14,9 +14,9 @@ ms.lasthandoff: 05/04/2018
 ## <a name="sample-details"></a>示例详细信息  
  本示例包含一个服务以及向该服务进行请求的客户端代码。 该服务支持一个 HTTP `GET` 操作 (`EchoWithGet`) 和一个 HTTP `POST` 操作 (`EchoWithPost`)。 这两个操作都需要一个字符串，然后在响应中返回字符串。 对于 `GET` 操作，字符串在 URI 查询字符串参数中提供。 对于 `POST` 操作，字符串在请求正文中提供（以 XML 格式序列化）。 利用 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 中新的自动格式选择和命令性格式选择功能，服务能够以 XML 或 JSON 格式返回响应。  
   
- 在本示例中，使用 App.config 文件启用自动格式选择。 在默认的 Web HTTP 终结点上，为 `automaticFormatSelectionEnabled` 特性提供值 `true`。 启用自动格式选择后，给定请求的 HTTP Accept 或 Content-Type 标头，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构会选择最合适的响应格式（XML 或 JSON）。 除了将 `automaticFormatSelectionEnabled` 特性设置为 `true`，开发人员不需要提供任何其他代码或配置便可使用此新功能。 在 Program.cs 中的客户端代码，请求会发送对这两个`GET`和`POST`的 HTTP Accept 标头，指定为"application/xml"或"应用程序/json"服务和服务操作返回的响应相应的格式。  
+ 在本示例中，使用 App.config 文件启用自动格式选择。 在默认的 Web HTTP 终结点上，为 `automaticFormatSelectionEnabled` 特性提供值 `true`。 启用自动格式选择，WCF 基础结构选择最适合响应的格式 （XML 或 JSON） 给定请求的 HTTP Accept 或 Content-type 标头。 除了将 `automaticFormatSelectionEnabled` 特性设置为 `true`，开发人员不需要提供任何其他代码或配置便可使用此新功能。 在 Program.cs 中的客户端代码，请求会发送对这两个`GET`和`POST`的 HTTP Accept 标头，指定为"application/xml"或"应用程序/json"服务和服务操作返回的响应相应的格式。  
   
- 在 `GET` 操作中，还使用了命令性格式选择。 `GET` 操作检查是否存在可选的 `format` 查询字符串参数，如果存在，则在 <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A> 属性上设置响应格式。 以这种方式强制设置响应格式会重写 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构进行的自动格式选择。  
+ 在 `GET` 操作中，还使用了命令性格式选择。 `GET` 操作检查是否存在可选的 `format` 查询字符串参数，如果存在，则在 <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A> 属性上设置响应格式。 强制设置响应格式，以这种方式重写通过 WCF 基础结构的自动格式选择。  
   
  此示例包含一个自承载服务和一个客户端，它们都在一个控制台应用程序内运行。 在控制台应用程序运行时，客户端会对服务进行请求，并将响应中的相关信息写入控制台窗口。  
   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d37163770f2fd192a6fd2a03878b28f0237646
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-user-defined-bindings"></a>创建用户定义的绑定
 有多种方式可以创建系统未提供的绑定：  
@@ -26,9 +26,9 @@ ms.lasthandoff: 05/04/2018
   
  协议绑定元素 – 这些元素表示对消息执行的更高级别的处理步骤。 由这些绑定元素创建的通道和侦听器可以添加、移除或修改消息内容。 给定的绑定可以具有任意数量的协议绑定元素，每一个元素都从 <xref:System.ServiceModel.Channels.BindingElement> 继承。 Windows Communication Foundation (WCF) 包含几种协议绑定元素，包括<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>和<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。  
   
- 编码绑定元素 – 这些元素表示消息与准备用于网络传输的编码之间的转换。 典型的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 绑定正好包括一个编码绑定元素。 编码绑定元素的示例包括 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>、<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 如果未对绑定指定编码绑定元素，则使用默认的编码。 当传输协议是 HTTP 时，默认编码为文本，对于其他传输协议，默认编码为二进制。  
+ 编码绑定元素 – 这些元素表示消息与准备用于网络传输的编码之间的转换。 典型的 WCF 绑定正好包括一个编码绑定元素。 编码绑定元素的示例包括 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>、<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 如果未对绑定指定编码绑定元素，则使用默认的编码。 当传输协议是 HTTP 时，默认编码为文本，对于其他传输协议，默认编码为二进制。  
   
- 传输绑定元素 – 这些元素表示传输协议上编码消息的传输。 典型的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 绑定正好包括一个从 <xref:System.ServiceModel.Channels.TransportBindingElement> 继承的传输绑定元素。 传输绑定元素的示例包括 <xref:System.ServiceModel.Channels.TcpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpTransportBindingElement> 和 <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>。  
+ 传输绑定元素 – 这些元素表示传输协议上编码消息的传输。 典型的 WCF 绑定正好包括一个传输绑定元素，该类继承自<xref:System.ServiceModel.Channels.TransportBindingElement>。 传输绑定元素的示例包括 <xref:System.ServiceModel.Channels.TcpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpTransportBindingElement> 和 <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>。  
   
  创建新的绑定时，添加绑定元素的顺序很重要。 应始终按照以下顺序添加绑定元素：  
   
@@ -41,10 +41,10 @@ ms.lasthandoff: 05/04/2018
 |编码|文本、二进制、MTOM、自定义|是*|  
 |传输|TCP、命名管道、HTTP、HTTPS、MSMQ、自定义|是|  
   
- *由于每个绑定都需要一个编码，因此，如果未指定编码，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会添加一个默认编码。 对于 HTTP 和 HTTPS 传输，默认编码为 Text/XML，对于其他传输，默认编码为二进制。  
+ * 因为如果不指定编码，都需要每个绑定，一个编码，WCF 将添加一个默认编码。 对于 HTTP 和 HTTPS 传输，默认编码为 Text/XML，对于其他传输，默认编码为二进制。  
   
 ## <a name="creating-a-new-binding-element"></a>创建新的绑定元素  
- 除了从 <xref:System.ServiceModel.Channels.BindingElement> 提供的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 派生的类型外，还可以创自己的建绑定元素。 这样，您就可以通过创建自己的、可与堆栈中其他的系统提供的类型组合的 <xref:System.ServiceModel.Channels.BindingElement>，自定义创建绑定堆栈的方式和进入其中的组件。  
+ 除了从中派生的类型<xref:System.ServiceModel.Channels.BindingElement>都提供 wcf，你可以创建自己的绑定元素。 这样，您就可以通过创建自己的、可与堆栈中其他的系统提供的类型组合的 <xref:System.ServiceModel.Channels.BindingElement>，自定义创建绑定堆栈的方式和进入其中的组件。  
   
  例如，如果实现一个 `LoggingBindingElement` 以提供将消息记录到数据库中的能力，则必须将其放置在通道堆栈中传输通道的上方。 在此情况下，应用程序创建一个将 `LoggingBindingElement` 与 `TcpTransportBindingElement` 组合在一起的自定义绑定，如以下示例中所示。  
   
@@ -64,7 +64,7 @@ Binding customBinding = new CustomBinding(
   
  用户定义的绑定至少必须实现 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法和 <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 属性。  
   
- <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法返回一个新的 <xref:System.ServiceModel.Channels.BindingElementCollection>，其中包含绑定的绑定元素。 此集合已经过排序，应首先包含协议绑定元素，接下来是编码绑定元素，再接下来是传输绑定元素。 使用时[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]系统提供的绑定元素，则必须按照排序规则中指定的绑定元素[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。 此集合不得引用在用户定义的绑定类中引用的对象；因此，绑定作者必须在每次调用 `Clone()` 时返回 <xref:System.ServiceModel.Channels.BindingElementCollection> 的 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>。  
+ <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法返回一个新的 <xref:System.ServiceModel.Channels.BindingElementCollection>，其中包含绑定的绑定元素。 此集合已经过排序，应首先包含协议绑定元素，接下来是编码绑定元素，再接下来是传输绑定元素。 当使用 WCF 系统提供的绑定元素，您必须遵循排序规则中指定的绑定元素[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。 此集合不得引用在用户定义的绑定类中引用的对象；因此，绑定作者必须在每次调用 `Clone()` 时返回 <xref:System.ServiceModel.Channels.BindingElementCollection> 的 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>。  
   
  <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 属性表示在绑定上使用的传输协议的 URI 方案。 例如， *WSHttpBinding*和*NetTcpBinding*从各自返回"http"和"net.tcp"<xref:System.ServiceModel.Channels.Binding.Scheme%2A>属性。  
   

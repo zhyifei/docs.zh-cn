@@ -2,21 +2,21 @@
 title: WCF 分析跟踪
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 99b28dcc1cfb32f5f6835eadee1bded14375c216
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e13aa0f7d0dbc48bedad0a9c639695ed038b9303
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析跟踪
-此示例演示如何将您自己的跟踪事件添加到 Windows Communication Foundation (WCF) 将写入到 ETW 中的分析跟踪流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。 跟踪分析是为了便于查看服务，而不会导致较高性能损失。 此示例演示如何使用 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API 来写入与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务集成的事件。  
+此示例演示如何将您自己的跟踪事件添加到 Windows Communication Foundation (WCF) 将写入到 ETW 中的分析跟踪流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。 跟踪分析是为了便于查看服务，而不会导致较高性能损失。 此示例演示如何使用<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api 与 WCF 服务集成的写入事件。  
   
  有关详细信息<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api，请参阅<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>。  
   
  若要了解有关 Windows 中的事件跟踪的详细信息，请参阅[改进调试和性能优化使用 ETW](http://go.microsoft.com/fwlink/?LinkId=166488)。  
   
 ## <a name="disposing-eventprovider"></a>释放 EventProvider  
- 此示例使用 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> 类，该类实现 <xref:System.IDisposable?displayProperty=nameWithType>。 在实现 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的跟踪时，可以针对服务的生存期使用 <xref:System.Diagnostics.Eventing.EventProvider> 的资源。 因此，为了便于阅读，此示例永远不会释放已包装的 <xref:System.Diagnostics.Eventing.EventProvider>。 如果出于某种原因，您的服务具有不同的跟踪需求，并且必须释放此资源，则应根据释放非托管资源的最佳做法来修改此示例。 有关释放非托管的资源的详细信息，请参阅[实现 Dispose 方法](http://go.microsoft.com/fwlink/?LinkId=166436)。  
+ 此示例使用 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> 类，该类实现 <xref:System.IDisposable?displayProperty=nameWithType>。 在实现跟踪的 WCF 服务时，很可能你可能使用<xref:System.Diagnostics.Eventing.EventProvider>的服务的生存期内的资源。 因此，为了便于阅读，此示例永远不会释放已包装的 <xref:System.Diagnostics.Eventing.EventProvider>。 如果出于某种原因，您的服务具有不同的跟踪需求，并且必须释放此资源，则应根据释放非托管资源的最佳做法来修改此示例。 有关释放非托管的资源的详细信息，请参阅[实现 Dispose 方法](http://go.microsoft.com/fwlink/?LinkId=166436)。  
   
 ## <a name="self-hosting-vs-web-hosting"></a>自我承载与Web 承载  
  对于 Web 承载的服务，WCF 的分析跟踪提供了一个名为"HostReference"，用于标识发出这些跟踪的服务的字段。 可扩展的用户跟踪可以参与此模型，此示例演示执行该操作的最佳做法。 Web 宿主引用的格式时管道&#124;实际显示在随后出现的字符字符串可以是以下任何一个：  
@@ -29,10 +29,10 @@ ms.lasthandoff: 05/04/2018
   
      \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
- 对于自承载服务，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的分析跟踪不会填充"HostReference"字段。 此示例中的 `WCFUserEventProvider` 类在由自承载服务使用时，其行为是一致的。  
+ 对于自承载服务，WCF 的分析跟踪不会填充"HostReference"字段。 此示例中的 `WCFUserEventProvider` 类在由自承载服务使用时，其行为是一致的。  
   
 ## <a name="custom-event-details"></a>自定义事件详细信息  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 ETW 事件提供程序清单定义了三个事件，这些事件设计为由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务作者在服务代码内发出。 下表显示了这三个事件的分类。  
+ WCF 的 ETW 事件提供程序清单定义了三个旨在通过 WCF 服务作者从服务代码内发出的事件。 下表显示了这三个事件的分类。  
   
 |事件|描述|事件 ID|  
 |-----------|-----------------|--------------|  
@@ -50,11 +50,11 @@ ms.lasthandoff: 05/04/2018
   
      在 Web 浏览器中，单击**Calculator.svc**。 服务的 WSDL 文档的 URI 应出现在浏览器中。 复制该 URI。  
   
-4.  运行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 测试客户端 (WcfTestClient.exe)。  
+4.  运行 WCF 测试客户端 (WcfTestClient.exe)。  
   
-     [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]测试客户端 (WcfTestClient.exe) 位于\<[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]安装目录 > \Common7\IDE\ WcfTestClient.exe (默认[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]安装目录为 C:\Program Files\Microsoft Visual Studio 10.0)。  
+     WCF 测试客户端 (WcfTestClient.exe) 位于\<[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]安装目录 > \Common7\IDE\ WcfTestClient.exe (默认[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]安装目录为 C:\Program Files\Microsoft Visual Studio 10.0)。  
   
-5.  在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]测试客户端，通过选择添加服务**文件**，，然后**添加服务**。  
+5.  在 WCF 测试客户端，通过选择添加服务**文件**，，然后**添加服务**。  
   
      在输入框中添加终结点地址。  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/04/2018
   
 7.  打开事件查看器应用程序。  
   
-     在调用服务之前，请启动事件查看器并确保事件日志正在侦听从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务发出的跟踪事件。  
+     然后再调用服务，启动事件查看器，并确保事件日志正在侦听从 WCF 服务发出的跟踪事件。  
   
 8.  从**启动**菜单上，选择**管理工具**，，然后**事件查看器**。 启用**分析**和**调试**日志。  
   

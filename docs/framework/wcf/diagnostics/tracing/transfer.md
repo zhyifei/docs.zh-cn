@@ -2,17 +2,17 @@
 title: 传输
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa7535aa393544077a9802b5c3255d6e5f6accda
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transfer"></a>传输
 本主题介绍 Windows Communication Foundation (WCF) 活动跟踪模型中的传输。  
   
 ## <a name="transfer-definition"></a>传输定义  
- 活动之间的传输表示终结点内相关活动中的事件之间的因果关系。 当两个活动之间存在控制流（例如方法调用跨越活动边界）时，这两个活动将与传输相关。 在 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中，当通过服务传入字节时，“侦听”活动将转换为“接收字节”活动，消息对象将在“接收字节”活动中创建。 有关端到端跟踪方案和其相应的活动和跟踪设计的列表，请参阅[端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  
+ 活动之间的传输表示终结点内相关活动中的事件之间的因果关系。 当两个活动之间存在控制流（例如方法调用跨越活动边界）时，这两个活动将与传输相关。 在 WCF 中，在服务上，传入字节时的侦听活动会传输到接收字节活动创建的消息对象的位置。 有关端到端跟踪方案和其相应的活动和跟踪设计的列表，请参阅[端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  
   
  若要发出传输跟踪，请在跟踪源中使用如下配置代码所示的 `ActivityTracing` 设置。  
   

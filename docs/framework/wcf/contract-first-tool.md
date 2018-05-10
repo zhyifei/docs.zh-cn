@@ -2,11 +2,11 @@
 title: 协定优先工具
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f061f4dd37861c1cf3dd0cc8318de9f0f65b90e4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contract-first-tool"></a>协定优先工具
 服务协定往往需要从现有的服务创建。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以使用协定优先工具从现有服务自动创建数据协定类。 要使用协定优先工具，必须本地下载 XML 架构定义 (XSD) 文件；该工具无法通过 HTTP 导入远程数据协定。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/04/2018
  向项目添加上述服务协定，右键单击项目并选择**添加新...**. 从“模板”对话框的 WCF 窗格中选择架构定义，然后将新文件命名为 SampleContract.xsd。 复制上面的代码并粘贴到新文件的代码视图中。  
   
 ## <a name="configuring-contract-first-options"></a>配置协定优先选项  
- 协定优先选项可以在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 项目的“属性”菜单中配置。 若要启用协定优先开发，请选择**XSD 作为类型定义语言**项目属性窗口的 WCF 页中的复选框。  
+ 协定优先选项可以在 WCF 项目中的属性菜单中配置。 若要启用协定优先开发，请选择**XSD 作为类型定义语言**项目属性窗口的 WCF 页中的复选框。  
   
  ![WCF 项目选项显示协定&#45;第一个](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   

@@ -2,11 +2,11 @@
 title: UDP 激活
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 6dd1ee02b51dc969af0ba1bc418b7fb20f6f0ed6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9f7600bff17c015f28c3fb94ed5360561d45c65b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="udp-activation"></a>UDP 激活
 此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例，用于使用 Windows 进程激活服务 (WAS) 支持进程激活。  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 -   通过 UDP 自定义传输接收消息的服务（承载于 WAS 激活的工作进程中）。  
   
 ## <a name="udp-protocol-activator"></a>UDP 协议激活器  
- UDP 协议激活器是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务之间的网桥。 该激活器通过 UDP 协议在传输层提供数据通信。 它主要有两个功能：  
+ UDP 协议激活器是 WCF 客户端和 WCF 服务之间的桥梁。 该激活器通过 UDP 协议在传输层提供数据通信。 它主要有两个功能：  
   
 -   WAS 侦听器适配器 (LA)，它与 WAS 协作激活进程以响应传入消息。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/04/2018
  UDP 协议侦听器是协议激活器内部的模块，它代表虚拟应用程序在 UDP 终结点进行侦听。 它在 `UdpSocketListener` 类中实现。 终结点表示为 `IPEndpoint`，其端口号从站点协议的绑定中提取。  
   
 ### <a name="control-service"></a>控制服务  
- 在此示例中，使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在激活器与 WAS 工作进程之间通信。 驻留在激活器中的服务称为“控制服务”。  
+ 在此示例中，我们可以使用 WCF 激活器和 WAS 工作进程之间进行通信。 驻留在激活器中的服务称为“控制服务”。  
   
 ## <a name="protocol-handlers"></a>协议处理程序  
  侦听器适配器调用 `WebhostOpenListenerChannelInstance` 之后，WAS 进程管理器将启动工作进程（如果尚未启动）。 工作进程内部的应用程序管理器随后使用该 `ListenerChannelId` 的请求加载 UDP 进程协议处理程序 (PPH)。 PPH 反过来调用`IAdphManager`。`StartAppDomainProtocolListenerChannel` 若要启动 UDP AppDomain 协议处理程序 (ADPH)。  

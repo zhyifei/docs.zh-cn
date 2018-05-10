@@ -2,11 +2,11 @@
 title: 客户端：通道工厂和通道
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: c7890f5fafb4e53053c4c393a7c8af584bd7a520
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 91e19c692718ae02e2f125a791904f62fe8401f7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client-channel-factories-and-channels"></a>客户端：通道工厂和通道
 本主题介绍通道工厂和通道的创建。  
@@ -19,7 +19,7 @@ ms.lasthandoff: 05/04/2018
   
  通道工厂在关闭时负责关闭其创建的但尚未关闭的所有通道。 请注意，此处的模型是非对称的，原因是当通道侦听器关闭时，它仅停止接受新通道，而使现有通道保持打开状态以便继续接收消息。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为上述过程提供基类帮助器。 (本主题中讨论的通道帮助程序类关系图，请参阅[通道模型概述](../../../../docs/framework/wcf/extending/channel-model-overview.md)。)  
+ WCF 为上述过程提供基类帮助器。 (本主题中讨论的通道帮助程序类关系图，请参阅[通道模型概述](../../../../docs/framework/wcf/extending/channel-model-overview.md)。)  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject>类实现<xref:System.ServiceModel.ICommunicationObject>并强制执行的步骤 2 中所述的状态机[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
   

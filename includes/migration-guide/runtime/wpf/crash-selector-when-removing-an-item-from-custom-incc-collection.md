@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|详细信息|<code>T:System.InvalidOperationException</code> 会在以下方案中发生：<ul><li><code>T:System.Windows.Controls.Primitives.Selector</code> 的 ItemsSource 是 <code>T:System.Collections.Specialized.INotifyCollectionChanged</code> 自定义实现的集合。</li><li>从集合中删除所选的项。</li><li><code>T:System.Collections.Specialized.NotifyCollectionChangedEventArgs</code> 中 <code>P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.OldStartingIndex</code> = -1（表示未知位置）。</li></ul>异常的调用堆栈开始于 System.Windows.Threading.Dispatcher.VerifyAccess()、System.Windows.DependencyObject.GetValue(DependencyProperty dp)、System.Windows.Controls.Primitives.Selector.GetIsSelected(DependencyObject element)。如果应用程序有不止一个 Dispatcher 线程，则此异常可能在 .Net 4.5 中发生。 在 .Net 4.7 中，异常也可能在有单个 Dispatcher 线程的应用程序中发生。 此问题已在 .Net 4.7.1 中解决。|
-|建议|升级到 .Net 4.7.1。|
+|详细信息|<code>T:System.InvalidOperationException</code> 会在以下方案中发生：<ul><li><code>T:System.Windows.Controls.Primitives.Selector</code> 的 ItemsSource 是 <code>T:System.Collections.Specialized.INotifyCollectionChanged</code> 自定义实现的集合。</li><li>从集合中删除所选的项。</li><li><code>T:System.Collections.Specialized.NotifyCollectionChangedEventArgs</code> 中 <code>P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.OldStartingIndex</code> = -1（表示未知位置）。</li></ul>异常的调用堆栈开始于 System.Windows.Threading.Dispatcher.VerifyAccess()、System.Windows.DependencyObject.GetValue(DependencyProperty dp)、System.Windows.Controls.Primitives.Selector.GetIsSelected(DependencyObject element)。如果应用程序的 Dispatcher 线程不止一个，则 .NET Framework 4.5 中可能发生此异常。 在 .NET Framework 4.7 中，也可能在具有单个 Dispatcher 线程的应用程序中发生该异常。 此问题已在 .NET Framework 4.7.1 中解决。|
+|建议|升级到 .NET Framework 4.7.1。|
 |范围|次要|
 |版本|4.7|
 |类型|运行时|

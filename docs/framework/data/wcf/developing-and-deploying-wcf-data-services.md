@@ -7,11 +7,11 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e02b7317eef8e7124bd5ba9ceef201cddc9bbea1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca0f78239e6e259ec5bd75e9f93af5c3a4b7adf1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>开发和部署 WCF 数据服务
 本主题提供有关开发和部署 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]的信息。 有关更多基本信息[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，请参阅[入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)和[概述](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/04/2018
   
 -   HTTP 检查程序在调试数据服务时会非常有帮助，通过它可以检查请求和响应消息的内容。 可以使用任何可显示原始数据包的网络数据包分析器检查发向数据服务的 HTTP 请求和来自数据服务的响应。  
   
--   与在常规操作过程中相比，在调试数据服务时可能希望获得更多有关来自数据服务的错误的信息。 通过将 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 属性设置为 `true` 并将数据服务类的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 特性的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 属性设置为 `true`，可以从数据服务获取其他错误信息。 有关详细信息，请参阅文章[调试 WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=201868)。 还可以在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中启用跟踪以查看 HTTP 消息层中出现的异常。 有关更多信息，请参见 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。  
+-   与在常规操作过程中相比，在调试数据服务时可能希望获得更多有关来自数据服务的错误的信息。 通过将 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 属性设置为 `true` 并将数据服务类的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 特性的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 属性设置为 `true`，可以从数据服务获取其他错误信息。 有关详细信息，请参阅文章[调试 WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=201868)。 你还可以启用跟踪以查看 HTTP 消息层中出现的异常的 WCF 中。 有关更多信息，请参见 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。  
   
 -   数据服务通常开发为[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序项目，但你还可以创建你为数据服务[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Visual Studio 中的网站项目。 两种项目类型之间的差异的信息，请参阅[NIB: Web 应用程序项目与 Visual Studio 中的网站项目](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5)。  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/04/2018
   
 -   当您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供程序访问 SQL Server 数据库的数据服务时，还可能需要通过数据服务部署传播数据结构和/或数据。 Visual Studio 可以自动创建脚本 (.sql files) 来执行此操作在目标数据库中，并且这些脚本可以包含的 Web 部署包在[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序。 有关详细信息，请参阅[NIB： 如何： 部署数据库与 Web 应用程序项目](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b)。 有关[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]网站上，你可以使用执行此操作**数据库发布向导**Visual Studio 中。 有关详细信息，请参阅 [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)。  
   
--   因为 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包括基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现，您可以使用 Windows Server AppFabric 来监视数据服务（它部署到在 Windows Server 上运行的 IIS）。 有关使用 Windows Server AppFabric 来监视数据服务的详细信息，请参阅文章[与 Windows Server AppFabric 跟踪 WCF 数据服务](http://go.microsoft.com/fwlink/?LinkID=202005)。  
+-   因为[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]包含基本的 WCF 实现，可以使用 Windows Server AppFabric 来监视数据服务部署到运行 Windows Server 上的 IIS。 有关使用 Windows Server AppFabric 来监视数据服务的详细信息，请参阅文章[与 Windows Server AppFabric 跟踪 WCF 数据服务](http://go.microsoft.com/fwlink/?LinkID=202005)。  
   
 ## <a name="see-also"></a>请参阅  
  [承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

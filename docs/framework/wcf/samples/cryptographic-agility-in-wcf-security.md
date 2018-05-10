@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 5fa4c3cf45eb17822effaa9284864274923b2504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40f4f8523d5286911216180846e94ec18e40da1c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>WCF 安全中的加密灵活性
 此示例演示如何在要提供加密的敏捷实现 Windows Communication Foundation (WCF) 客户端和服务中的标准/自定义算法中指定。 该示例由下列项目组成：  
   
  服务  
- 这是自承载[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]实现的服务`ICalculator`接口，并保护终结点使用 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 通过安全会话和可靠会话禁用。 该服务定义一个自定义 `SecurityAlgorithmSuite` 类，以指定要用于消息安全的加密算法。  
+ 这是自承载的 WCF 服务实现`ICalculator`接口，并保护终结点使用 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 通过安全会话和可靠会话禁用。 该服务定义一个自定义 `SecurityAlgorithmSuite` 类，以指定要用于消息安全的加密算法。  
   
  客户端  
- 这是在身份验证成功后访问服务的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端。 该客户端调用由 `ICalculator` 接口公开并由服务实现的操作。 该客户端也定义相同的自定义 `SecurityAlgorithmSuite` 类，以指定要用于消息安全的加密算法。  
+ 这是 WCFclient 身份验证成功后访问该服务。 该客户端调用由 `ICalculator` 接口公开并由服务实现的操作。 该客户端也定义相同的自定义 `SecurityAlgorithmSuite` 类，以指定要用于消息安全的加密算法。  
   
 ### <a name="to-use-this-sample"></a>使用此示例  
   

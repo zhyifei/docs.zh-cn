@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: b54c9cd7f4e6bc33dac07d30a86df81668ae13e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 体系结构
 如下图所示的 Windows Communication Foundation (WCF) 体系结构的主要层。  
@@ -24,7 +24,7 @@ ms.lasthandoff: 05/04/2018
  策略和绑定规定与某一服务进行通信所需的条件。  例如，绑定必须（至少）指定所使用的传输（例如 HTTP 或 TCP）和编码。 策略包括安全要求和其他条件，必须满足这些要求和条件才能与服务进行通信。  
   
 ### <a name="service-runtime"></a>服务运行时  
- 服务运行时层包含仅在服务实际运行期间发生的行为，即该服务的运行时行为。 遏制控制处理的消息数，如果对服务的需求增长到预设限制，该消息数则会发生变化。 错误行为指定服务出现内部错误时应采取的操作，例如控制传递给客户端的信息 （信息过多会向恶意用户提供攻击的机会）。元数据行为控制是否以及如何向外部提供元数据。 实例行为指定可运行的服务实例的数目（例如，singleton 指定只能用单一实例来处理所有消息）。 通过事务行为，可以在失败时回滚已进行事务处理的操作。 调度行为用于控制 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 基础结构处理消息的方式。  
+ 服务运行时层包含仅在服务实际运行期间发生的行为，即该服务的运行时行为。 遏制控制处理的消息数，如果对服务的需求增长到预设限制，该消息数则会发生变化。 错误行为指定服务出现内部错误时应采取的操作，例如控制传递给客户端的信息 （信息过多会向恶意用户提供攻击的机会）。元数据行为控制是否以及如何向外部提供元数据。 实例行为指定可运行的服务实例的数目（例如，singleton 指定只能用单一实例来处理所有消息）。 通过事务行为，可以在失败时回滚已进行事务处理的操作。 调度行为是如何通过 WCF 基础结构处理一条消息的控件。  
   
  通过扩展性功能可以自定义运行时进程。 例如，消息检查功能用于检查消息的各个部分，使用参数筛选功能可以根据作用于消息头的筛选器来执行预设操作。  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="hosting-and-activation"></a>承载和激活  
  服务的最终形式为程序。 与其他程序类似，服务必须在可执行文件中运行。 这称为*自承载*服务。  
   
- 也可以是服务*托管*，或运行外部代理，如 IIS 或 Windows 激活服务 (WAS) 管理的可执行文件。 通过 WAS，可以在运行 WAS 的计算机上部署 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序时自动激活该应用程序。 还可通过可执行文件（.exe 文件）的形式来手动运行服务。 服务也可作为 Windows 服务自动运行。 COM+ 组件也可作为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务承载。  
+ 也可以是服务*托管*，或运行外部代理，如 IIS 或 Windows 激活服务 (WAS) 管理的可执行文件。 是，WCF 应用程序能够运行的计算机上部署时自动激活。 还可通过可执行文件（.exe 文件）的形式来手动运行服务。 服务也可作为 Windows 服务自动运行。 COM + 组件还可作为 WCF 服务承载。  
   
 ## <a name="see-also"></a>请参阅  
  [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

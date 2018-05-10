@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 455900b1ac5d10c02e6b1341e737eb6874c874f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b06cb45d6075c8de1da973a11e2edec6792df304
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-contract-surrogates"></a>数据协定代理项
 数据协定*代理项*是基于数据协定模型而生成一个高级的功能。 在设计上，此功能用于在用户希望更改对类型进行序列化、反序列化或将其设计成元数据的方式时，进行类型自定义和替换。 在以下情况下可以使用代理项：还没有为类型指定数据协定；字段和属性 (Property) 没有用 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute) 进行标记；用户希望动态创建架构变体。  
@@ -133,7 +133,7 @@ ms.lasthandoff: 05/04/2018
  此方法是在开始导出和导入架构时调用的。 此方法返回用在导出/导入架构中的自定义数据类型。 系统会向此方法传递一个 <xref:System.Collections.ObjectModel.Collection%601>（`customDataTypes` 参数），该参数是一个类型集合。 此方法应当向该集合中添加其他已知类型。 已知的自定义数据类型是借助于 <xref:System.Runtime.Serialization.DataContractSerializer> 来启用对自定义数据的序列化和反序列化所必需的。 有关详细信息，请参阅[数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
 ## <a name="implementing-a-surrogate"></a>实现代理项  
- 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用数据协定代理项，必须遵循几个特殊的过程。  
+ 若要使用数据协定代理项在 WCF 中的，你必须执行几个特殊的过程。  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>使用代理项进行序列化和反序列化  
  使用 <xref:System.Runtime.Serialization.DataContractSerializer> 可以通过代理项对数据执行序列化和反序列化。 <xref:System.Runtime.Serialization.DataContractSerializer> 是由 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 创建的。 还必须指定代理项。  
@@ -174,7 +174,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>使用代理项来导出元数据  
- 默认情况下，在从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 导出某个服务的元数据时，需要生成 WSDL 和 XSD 架构。 该代理项需要添加到负责为数据协定类型生成 XSD 架构的组件 <xref:System.Runtime.Serialization.XsdDataContractExporter> 中。 为此，要么使用可实现 <xref:System.ServiceModel.Description.IWsdlExportExtension> 的行为来修改 <xref:System.ServiceModel.Description.WsdlExporter>，要么直接修改用来导出元数据的 <xref:System.ServiceModel.Description.WsdlExporter>。  
+ 从 WCF 服务导出元数据时，默认情况下，需要生成 WSDL 和 XSD 架构。 该代理项需要添加到负责为数据协定类型生成 XSD 架构的组件 <xref:System.Runtime.Serialization.XsdDataContractExporter> 中。 为此，要么使用可实现 <xref:System.ServiceModel.Description.IWsdlExportExtension> 的行为来修改 <xref:System.ServiceModel.Description.WsdlExporter>，要么直接修改用来导出元数据的 <xref:System.ServiceModel.Description.WsdlExporter>。  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>使用代理项来导出元数据  
   

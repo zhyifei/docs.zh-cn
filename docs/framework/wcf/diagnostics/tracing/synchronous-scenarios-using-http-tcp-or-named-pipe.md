@@ -1,24 +1,12 @@
 ---
-title: "使用 HTTP、TCP 或命名管道的同步方案"
-ms.custom: 
+title: 使用 HTTP、TCP 或命名管道的同步方案
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 428e8852c9b1706e88b1688b4a1f2e36c167fe28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11a5d8f43d12d35728c65c7a60ad8a4fa2fc1b3a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>使用 HTTP、TCP 或命名管道的同步方案
 本主题描述不同的同步请求/答复方案的活动和转换，这些同步方案使用单线程客户端以及 HTTP、TCP 或命名管道。 请参阅[使用 HTTP、 TCP 或命名管道的异步方案](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)有关多线程请求的详细信息。  
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="closing-a-service-host"></a>关闭服务主机  
  ServiceHost 的关闭活动 (Z) 是从环境活动中创建的。  
   
- ![使用 HTTP 和 #47; 的同步方案TCP 和 #47;命名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "同步")  
+ ![使用 HTTP 的同步方案&#47;TCP&#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "同步")  
   
  在\<答： 名称 >，`A`是描述在上一个文本和表 3 中的活动的快捷符号。 `Name` 是活动的短名称。  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
  该方案与前一方案的唯一区别是将 SOAP 错误消息作为响应消息返回。 如果`propagateActivity` = `true`，请求消息的活动 ID 添加到 SOAP 错误消息。  
   
 ## <a name="synchronous-one-way-without-errors"></a>不返回错误的同步单向方案  
- 该方案与第一个方案的唯一区别是不向服务器返回任何消息。 对于基于 HTTP 的协议，仍会将状态（有效或错误）返回到客户端。 这是因为 HTTP 是唯一一个具有属于 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 协议堆栈的请求-响应语义的协议。 因为 TCP 处理对于 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 是隐藏的，所以不会将任何确认消息发送到客户端。  
+ 该方案与第一个方案的唯一区别是不向服务器返回任何消息。 对于基于 HTTP 的协议，仍会将状态（有效或错误）返回到客户端。 这是因为 HTTP 是唯一的协议与 WCF 协议堆栈的一部分请求-响应语义。 因为 TCP 处理隐藏的 WCF 中，则会将任何确认消息不发送到客户端。  
   
 ## <a name="synchronous-one-way-with-errors"></a>返回错误的同步单向方案  
  如果在处理消息期间（Q 或后续活动）出现错误，不会将任何通知返回到客户端。 这与“不返回错误的同步单向方案”方案完全相同。 如果希望接收错误消息，则不应使用单向方案。  

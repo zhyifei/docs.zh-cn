@@ -1,36 +1,22 @@
 ---
 title: 地址标头
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1392e06b0148ee24c9591839b58baf45da5109d4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 276649c17a04822eb27eb4e3ed9cbe711b384edc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="address-headers"></a>地址标头
-“地址标头”示例演示客户端如何将引用参数传递给使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的服务。  
+地址标头示例演示客户端如何使用 Windows Communication Foundation (WCF) 服务向传递引用参数。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- WS-Addressing 规范将终结点引用的概念定义为对特定 Web 服务终结点寻址的方式。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，使用 `EndpointAddress` 类对终结点引用建模，`EndpointAddress` 是 `ServiceEndpoint` 类的“地址”字段的类型。  
+ WS-Addressing 规范将终结点引用的概念定义为对特定 Web 服务终结点寻址的方式。 在 WCF 中，终结点引用建模使用`EndpointAddress`类-`EndpointAddress`是一种的地址字段`ServiceEndpoint`类。  
   
- 作为终结点引用模型的一部分，每个引用都可以携带一些可添加额外标识信息的引用参数。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，将这些引用参数建模为 `AddressHeader` 类的实例。  
+ 作为终结点引用模型的一部分，每个引用都可以携带一些可添加额外标识信息的引用参数。 在 WCF 中，这些引用参数建模为的实例`AddressHeader`类。  
   
  在本示例中，客户端将向客户端终结点的 `EndpointAddress` 添加一个引用参数。 服务将查找此引用参数并在其“Hello”服务操作的逻辑中使用此参数的值。  
   
@@ -92,7 +78,7 @@ return "Hello, " + id;
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\AddressHeaders`  
   

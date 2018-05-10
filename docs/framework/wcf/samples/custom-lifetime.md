@@ -2,20 +2,20 @@
 title: 自定义生存期
 ms.date: 03/30/2017
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1d9baa2d6eab476d5c8428208576f341e71fef2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e41c970739b8036730fa601433ce7157e01d7e19
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-lifetime"></a>自定义生存期
-此示例演示如何编写要提供自定义生存期服务共享的 Windows Communication Foundation (WCF) 扩展[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务实例。  
+此示例演示如何编写要提供自定义生存期服务共享的 WCF 服务实例的 Windows Communication Foundation (WCF) 扩展。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
 ## <a name="shared-instancing"></a>共享实例化  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为服务实例提供了多种实例化模式。 本主题中介绍的共享实例化模式提供了一种用于在多个通道之间共享一个服务实例的方法。 客户端可以在本地解析实例的终结点地址，或与该服务中的工厂方法联系，以获取正在运行的实例的终结点地址。 在客户端获取终结点地址后，它就可以创建一个新通道并开始通信。 以下代码段演示客户端应用程序如何向现有服务实例创建一个新通道。  
+ WCF 提供了您的服务实例的多个实例化模式。 本主题中介绍的共享实例化模式提供了一种用于在多个通道之间共享一个服务实例的方法。 客户端可以在本地解析实例的终结点地址，或与该服务中的工厂方法联系，以获取正在运行的实例的终结点地址。 在客户端获取终结点地址后，它就可以创建一个新通道并开始通信。 以下代码段演示客户端应用程序如何向现有服务实例创建一个新通道。  
   
 ```  
 // Create the first channel.  
@@ -34,12 +34,12 @@ ChannelFactory<IEchoService> channelFactory2 =
 IEchoService proxy2 = channelFactory2.CreateChannel();  
 ```  
   
- 与其他实例化模式不同，共享实例化模式拥有一种释放服务实例的独特方式。 当一个实例的所有通道都关闭时，服务 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 运行时将启动一个计时器。 如果在超时值已到之前没有人进行连接，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将释放该实例并认领这些资源。 作为拆卸过程的一部分，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将在释放该实例之前调用所有 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 实现的 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 方法。 如果它们全都返回 `true`，则释放该实例。 否则，<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 实现负责通过回调方法来通知处于空闲状态的 `Dispatcher`。  
+ 与其他实例化模式不同，共享实例化模式拥有一种释放服务实例的独特方式。 当所有通道都关闭的实例时，服务 WCF 运行时将启动一个计时器。 如果在超时到期之前，没有人进行连接，WCF 将释放该实例并认领这些资源。 作为拆卸过程的一部分调用 WCF<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>方法的所有<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>之前，释放实例实现。 如果它们全都返回 `true`，则释放该实例。 否则，<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 实现负责通过回调方法来通知处于空闲状态的 `Dispatcher`。  
   
  默认情况下，<xref:System.ServiceModel.InstanceContext> 的空闲超时值为一分钟。 但是，此示例演示如何使用自定义扩展来对此进行扩展。  
   
 ## <a name="extending-the-instancecontext"></a>扩展 InstanceContext  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，<xref:System.ServiceModel.InstanceContext> 是服务实例和 `Dispatcher` 之间的链接。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允许您通过使用此运行时组件的可扩展对象模式添加新状态或行为，以扩展此组件。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的可扩展对象模式下，可以用新功能来扩展现有的运行库类，或者向对象中添加新的状态功能。 可扩展对象模式中有三个接口：`IExtensibleObject<T>`、`IExtension<T>` 和 `IExtensionCollection<T>`。  
+ 在 WCF 中，<xref:System.ServiceModel.InstanceContext>是服务实例之间的链接和`Dispatcher`。 WCF 允许你通过使用可扩展对象模式添加新状态或行为扩展此运行时组件。 可扩展对象模式用于在 WCF 中可以用来扩展现有运行时类的新功能或将新的状态功能添加到对象。 可扩展对象模式中有三个接口：`IExtensibleObject<T>`、`IExtension<T>` 和 `IExtensionCollection<T>`。  
   
  `IExtensibleObject<T>` 接口由对象实现，以允许进行自定义其功能的扩展。  
   
@@ -80,7 +80,7 @@ class CustomLeaseExtension : IExtension<InstanceContext>, ICustomLease
 }  
 ```  
   
- 当 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 调用 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 实现中的 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 方法时，此调用将路由到 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 的 `CustomLeaseExtension` 方法。 然后，`CustomLeaseExtension` 将检查其私有状态，以查看 <xref:System.ServiceModel.InstanceContext> 是否处于空闲状态。 如果它处于空闲状态，则返回 `true`。 否则，它将针对指定的扩展生存期启动一个计时器。  
+ 当 WCF 时，将调用<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>中的方法<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>实现此调用将路由到<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>方法`CustomLeaseExtension`。 然后，`CustomLeaseExtension` 将检查其私有状态，以查看 <xref:System.ServiceModel.InstanceContext> 是否处于空闲状态。 如果它处于空闲状态，则返回 `true`。 否则，它将针对指定的扩展生存期启动一个计时器。  
   
 ```  
 public bool IsIdle  
@@ -116,7 +116,7 @@ void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
   
  对于转为空闲状态的实例，当有新消息到达时，将无法续订正在运行的计时器。  
   
- 此示例实现 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 以截获对 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 方法的调用，并将这些调用路由到 `CustomLeaseExtension`。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 实现包含在 `CustomLifetimeLease` 类中。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 要释放此服务实例时，将会调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 方法。 但是，在 ServiceBehavior 的 `ISharedSessionInstance` 集合中，只有特定 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 实现的一个实例。 这意味着在 <xref:System.ServiceModel.InstanceContext> 检查 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 方法时，将无法识别关闭的 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>。 因此，此示例使用线程锁定将请求序列化到 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 方法。  
+ 此示例实现 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 以截获对 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 方法的调用，并将这些调用路由到 `CustomLeaseExtension`。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 实现包含在 `CustomLifetimeLease` 类中。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> WCF 将要释放服务实例时调用方法。 但是，在 ServiceBehavior 的 `ISharedSessionInstance` 集合中，只有特定 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 实现的一个实例。 这意味着没有无法知道<xref:System.ServiceModel.InstanceContext>WCF 检查次关闭<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>方法。 因此，此示例使用线程锁定将请求序列化到 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 方法。  
   
 > [!IMPORTANT]
 >  由于序列化可能会严重影响应用程序的性能，因此不推荐使用线程锁定方法。  
@@ -160,7 +160,7 @@ public void NotifyIdle(InstanceContextIdleCallback callback,
   
  在检查 `ICustomLease.IsIdle` 属性之前，需要设置 Callback 属性，否则，`CustomLeaseExtension` 变为空闲状态后就无法通知调度程序。 如果 `ICustomLease.IsIdle` 返回 `true`，则 `isIdle` 私有成员仅在 `CustomLifetimeLease` 中设置为 `true`，并调用该回调方法。 由于该代码持有一个锁，因此其他线程无法更改此私有成员的值。 调度程序下次检查 `ISharedSessionLifetime.IsIdle` 时，它将返回 `true`，并让调度程序释放该实例。  
   
- 由于自定义扩展的基础工作已完成，因此必须将其挂钩到服务模型。 为了将 `CustomLeaseExtension` 实现挂钩到 <xref:System.ServiceModel.InstanceContext>，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> 接口以执行 <xref:System.ServiceModel.InstanceContext> 的引导。 在此示例中，`CustomLeaseInitializer` 类实现此接口，并将 `CustomLeaseExtension` 的一个实例从仅方法初始化添加到 <xref:System.ServiceModel.InstanceContext.Extensions%2A> 集合。 此方法在初始化 <xref:System.ServiceModel.InstanceContext> 时由调度程序调用。  
+ 由于自定义扩展的基础工作已完成，因此必须将其挂钩到服务模型。 挂接`CustomLeaseExtension`实现<xref:System.ServiceModel.InstanceContext>，WCF 提供了<xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer>接口来执行的引导<xref:System.ServiceModel.InstanceContext>。 在此示例中，`CustomLeaseInitializer` 类实现此接口，并将 `CustomLeaseExtension` 的一个实例从仅方法初始化添加到 <xref:System.ServiceModel.InstanceContext.Extensions%2A> 集合。 此方法在初始化 <xref:System.ServiceModel.InstanceContext> 时由调度程序调用。  
   
 ```  
 public void Initialize(InstanceContext instanceContext, Message message)  

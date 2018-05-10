@@ -87,7 +87,6 @@
 ## [如何：控制命名空间前缀 (LINQ to XML)](how-to-control-namespace-prefixes-linq-to-xml.md)
 ## [默认命名空间的范围](scope-of-default-namespaces.md)
 ## [使用全局命名空间 (LINQ to XML)](working-with-global-namespaces-linq-to-xml.md)
-## [命名空间 (LINQ to XML)](namespaces-linq-to-xml.md)
 ## [如何：编写针对命名空间中的 XML 的查询](how-to-write-queries-on-xml-in-namespaces.md)
 
 # [序列化 XML 树](serializing-xml-trees.md)

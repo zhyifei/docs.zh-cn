@@ -2,11 +2,11 @@
 title: 自定义令牌
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 5850f97d6d3a66aacf82ab1cb2338240a75a00fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-token"></a>自定义令牌
 此示例演示如何将添加到 Windows Communication Foundation (WCF) 应用程序自定义令牌的实现。 示例使用 `CreditCardToken` 将客户端的信用卡相关信息安全地传递到服务。 令牌在 WS-Security 消息头中传递，并连同消息正文和其他消息头一起使用对称安全绑定元素进行签名和加密。 当内置令牌不足时可以进行这样的操作。 本示例演示如何向服务提供自定义安全令牌而不必使用某个内置令牌。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
   
 -   服务如何使用和验证自定义安全令牌。  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务代码如何获取有关已接收安全令牌（包括自定义安全令牌）的信息。  
+-   如何 WCF 服务代码可以获取有关已接收的安全令牌包括自定义安全令牌的信息。  
   
 -   如何使用服务器的 X.509 证书保护用于消息加密和签名的对称密钥。  
   
@@ -114,9 +114,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>自定义安全令牌实现  
- 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中启用自定义安全令牌，请创建自定义安全令牌的对象表示形式。 此示例的 `CreditCardToken` 类中有此表示形式。 对象表示形式负责保存所有相关的安全令牌信息并负责提供包含在安全令牌中的安全密钥列表。 在本例中，信用卡安全令牌不包含任何安全密钥。  
+ 若要启用 WCF 中的自定义安全令牌，请创建自定义安全令牌的对象表示。 此示例的 `CreditCardToken` 类中有此表示形式。 对象表示形式负责保存所有相关的安全令牌信息并负责提供包含在安全令牌中的安全密钥列表。 在本例中，信用卡安全令牌不包含任何安全密钥。  
   
- 下一节说明要启用能通过网络传输并由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点使用的自定义令牌所必须执行的操作。  
+ 下一节介绍什么必须做可使得用于通过网络传输的自定义令牌并使用由 WCF 终结点。  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -154,7 +154,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>向消息中写入和从消息中获取自定义信用卡令牌  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的安全令牌序列化程序负责从消息中的 XML 创建安全令牌的对象表示形式和创建 XML 形式的安全令牌。 安全令牌序列化程序还负责其他功能，如读取和写入指向安全令牌的密钥标识符，但本示例只使用与安全令牌相关的功能。 要启用自定义令牌，您必须实现您自己的安全令牌序列化程序。 本示例使用 `CreditCardSecurityTokenSerializer` 类来实现此目的。  
+ 在 WCF 中的安全令牌序列化负责从消息中的 XML 创建安全令牌的对象表示和创建 XML 形式的安全令牌。 安全令牌序列化程序还负责其他功能，如读取和写入指向安全令牌的密钥标识符，但本示例只使用与安全令牌相关的功能。 要启用自定义令牌，您必须实现您自己的安全令牌序列化程序。 本示例使用 `CreditCardSecurityTokenSerializer` 类来实现此目的。  
   
  在服务上，自定义序列化程序读取 XML 形式的自定义令牌并据此创建自定义令牌的对象表示形式。  
   

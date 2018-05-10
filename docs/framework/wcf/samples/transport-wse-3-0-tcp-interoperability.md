@@ -2,14 +2,14 @@
 title: 传输：WSE 3.0 TCP 互操作性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: fb877e6d55214e9a268a88b33a4613ca8df0eb8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8cdd88b354f2e07c84ccfda85c8552d37ca2f519
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>传输：WSE 3.0 TCP 互操作性
-WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自定义 Windows Communication Foundation (WCF) 传输。 还演示如何通过网络，使用通道层的扩展性与已经过部署的现有系统进行交互。 下列步骤演示如何生成此自定义 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 传输：  
+WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自定义 Windows Communication Foundation (WCF) 传输。 还演示如何通过网络，使用通道层的扩展性与已经过部署的现有系统进行交互。 以下步骤显示如何生成此自定义 WCF 传输：  
   
 1.  从 TCP 套接字开始，创建 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的客户端和服务器实现以使用 DIME 组帧来描述消息边界。  
   
@@ -128,7 +128,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- 它由两个测试组成，第一个测试使用从 WSE 3.0 WSDL 生成的代码来设置类型化客户端， 第二个测试通过直接在通道 API 的顶部发送消息来将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同时用作客户端和服务器。  
+ 它由两个测试组成，第一个测试使用从 WSE 3.0 WSDL 生成的代码来设置类型化客户端， 第二个测试使用 WCF 用作客户端和服务器通过直接在通道 Api 顶部发送消息。  
   
  运行此示例时，应生成下面的输出。  
   
@@ -182,7 +182,7 @@ Symbols:
   
     2.  将 StockService 项目设置为启动项目。  
   
-    3.  在 StockService 项目中打开 StockService.cs，并注释掉 `StockService` 类的 [Policy] 属性。 这会禁用该示例中的安全性。 尽管 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以与 WSE 3.0 安全终结点互操作，但是为了使该示例将重点放在自定义 TCP 传输上而禁用了安全性。  
+    3.  在 StockService 项目中打开 StockService.cs，并注释掉 `StockService` 类的 [Policy] 属性。 这会禁用该示例中的安全性。 WCF 可以与 WSE 3.0 安全终结点互操作，而禁用安全性以使该示例将侧重于自定义 TCP 传输。  
   
     4.  按 F5 启动 `TcpSyncStockService`。 该服务将在一个新的控制台窗口中启动。  
   

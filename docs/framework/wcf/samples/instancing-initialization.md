@@ -2,11 +2,11 @@
 title: 实例化初始化
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 75b8d2a2696d5900fd7bffe42dbaf62b9f6ce694
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae01254760219f2b408ef9d9663c4158e2802be8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="instancing-initialization"></a>实例化初始化
 此示例扩展[Pooling](../../../../docs/framework/wcf/samples/pooling.md)示例通过定义一个接口， `IObjectControl`，其中的激活和停用它自定义对象的初始化。 客户端调用向池中返回对象以及不向池中返回对象的方法。  
@@ -15,12 +15,12 @@ ms.lasthandoff: 05/04/2018
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
 ## <a name="extensibility-points"></a>扩展点  
- 创建 Windows Communication Foundation (WCF) 扩展的第一步是决定要使用的扩展点。 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，术语*EndpointDispatcher*指的是一个运行时组件，负责将传入消息转换为用户的服务上的方法调用，并将该方法的返回值传出消息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务为每个终结点创建一个 EndpointDispatcher。  
+ 创建 Windows Communication Foundation (WCF) 扩展的第一步是决定要使用的扩展点。 在 WCF 中，术语*EndpointDispatcher*指负责将传入消息转换为用户的服务上的方法调用，并从该方法的返回值转换为传出消息的运行时组件. WCF 服务创建一个 EndpointDispatcher 每个终结点。  
   
  EndpointDispatcher 使用 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 类提供终结点范围（适用于服务收到或发送的所有消息）的扩展。 通过此类可以自定义控制 EndpointDispatcher 行为的各种属性。 本示例重点介绍 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 属性，该属性指向提供服务类实例的对象。  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，EndpointDispatcher 通过使用实现 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 接口的实例提供程序来创建服务类的实例。 此接口只有两个方法：  
+ 在 WCF 中，EndpointDispatcher 服务类的实例将使用创建的实例提供程序实现<xref:System.ServiceModel.Dispatcher.IInstanceProvider>接口。 此接口只有两个方法：  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>：当消息到达时，Dispatcher 调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法，以创建服务类的实例来处理该消息。 调用此方法的频率由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性决定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性设置为 <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>，则创建服务类的一个新实例来处理到达的每个消息，因此每当有消息到达时，都会调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>。  
   
@@ -153,7 +153,7 @@ if (activeObjectsCount == 0)
   
  本示例使用自定义属性。 构造 <xref:System.ServiceModel.ServiceHost> 后，它检查服务类型定义中使用的属性并将可用行为添加到服务说明的行为集合中。  
   
- <xref:System.ServiceModel.Description.IServiceBehavior>接口有三个方法： <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,`和<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 这些方法在初始化 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时由 <xref:System.ServiceModel.ServiceHost> 调用。 首先调用 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>；它允许检查服务的一致性。 然后调用 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>；只有非常高级的方案才需要此方法。 最后调用 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>，它负责配置运行时。 下面的参数传递给 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>：  
+ <xref:System.ServiceModel.Description.IServiceBehavior>接口有三个方法： <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,`和<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 由 WCF 调用这些方法时<xref:System.ServiceModel.ServiceHost>正在初始化。 首先调用 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>；它允许检查服务的一致性。 然后调用 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>；只有非常高级的方案才需要此方法。 最后调用 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>，它负责配置运行时。 下面的参数传递给 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>：  
   
 -   `Description`：此参数提供整个服务的服务说明。 它可用于检查有关服务的终结点、协定、绑定和其他关联数据的说明数据。  
   
@@ -189,7 +189,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  除了 <xref:System.ServiceModel.Description.IServiceBehavior> 实现外，`ObjectPoolingAttribute` 类有多个可以使用属性参数自定义对象池的成员。 这些成员包括 `MaxSize`、`MinSize`、`Enabled` 和 `CreationTimeout`，用于匹配 .NET 企业服务提供的对象池功能集。  
   
- 通过使用新创建的自定义 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 属性对服务实现进行批注，现在可以将对象池行为添加到 `ObjectPooling` 服务中。  
+ 将对象池行为现在可以添加到 WCF 服务使用新创建的自定义服务实现进行批注`ObjectPooling`属性。  
   
 ```  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      

@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-ms.openlocfilehash: 2588cc0bd70932aa91d300d8ecbe35cd2bcd7d00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b55abe937701f8708643efa2ea4cb62514b3521b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation 终结点
-与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 利用终结点，客户端可访问 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务提供的功能。  
+与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点提供客户端访问 WCF 服务提供的功能。  
   
  有关如何创建一个终结点的概述，请参阅[终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)。 每个终结点包含：  
   
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/04/2018
  描述终结点的结构，并概述如何在配置和代码中定义终结点，以及如何使用运行时提供的默认终结点、绑定和行为。  
   
  [指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- 描述如何通过终结点与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务进行通信。  
+ 描述如何与 WCF 服务的通信发生通过终结点。  
   
  [如何：在配置中创建服务终结点](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  演示如何在配置中创建服务终结点。  

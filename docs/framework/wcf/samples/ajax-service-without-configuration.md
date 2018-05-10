@@ -2,16 +2,16 @@
 title: 无配置的 AJAX 服务
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: 9e3ddd451bffc4135f236164a74fe68a63a243a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 53a0de88d08fbc12cb8861042a50da6503fa5def
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ajax-service-without-configuration"></a>无配置的 AJAX 服务
 此示例演示如何使用 Windows Communication Foundation (WCF) 来创建基本的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务 （你可以通过从 Web 浏览器客户端使用 JavaScript 代码访问的服务） 而不使用任何配置设置。 该服务在 .svc 文件中使用特殊语法来自动启用 AJAX 终结点。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对 AJAX 的支持经过了优化，以便通过 `ScriptManager` 控件与 ASP.NET AJAX 一起使用。 有关使用示例[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]与 ASP.NET AJAX，请参阅[Ajax 示例](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
+ 在 WCF 中的 AJAX 支持进行了优化以用于通过 ASP.NET AJAX`ScriptManager`控件。 有关使用 ASP.NET AJAX 的 WCF 示例，请参阅[Ajax 示例](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  

@@ -2,17 +2,17 @@
 title: Windows Workflow Foundation 功能详细信息
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f9bc81609379414ce022499e20791073d259cdc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能详细信息
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 向 Windows Workflow Foundation 添加了大量功能。 本文档介绍了大量新的功能，并详述了这些功能可用于的方案。  
   
 ## <a name="messaging-activities"></a>消息传递活动  
- 消息传递活动 (<xref:System.ServiceModel.Activities.Receive>， <xref:System.ServiceModel.Activities.SendReply>， <xref:System.ServiceModel.Activities.Send>， <xref:System.ServiceModel.Activities.ReceiveReply>) 用于发送和接收[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]从工作流的消息。  <xref:System.ServiceModel.Activities.Receive> 和<xref:System.ServiceModel.Activities.SendReply>活动用于构成 Windows Communication Foundation (WCF) 服务操作，就像标准一样通过 WSDL 公开[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]web 服务。  <xref:System.ServiceModel.Activities.Send> 和<xref:System.ServiceModel.Activities.ReceiveReply>用于使用类似于 WCF web 服务<xref:System.ServiceModel.ChannelFactory>;**添加服务引用**体验还存在生成预配置的活动的 Workflow Foundation。  
+ 消息传递活动 (<xref:System.ServiceModel.Activities.Receive>， <xref:System.ServiceModel.Activities.SendReply>， <xref:System.ServiceModel.Activities.Send>， <xref:System.ServiceModel.Activities.ReceiveReply>) 用于发送和接收 WCF 消息从工作流。  <xref:System.ServiceModel.Activities.Receive> 和<xref:System.ServiceModel.Activities.SendReply>活动用于构成就像标准 WCF web 服务一样通过 WSDL 公开的 Windows Communication Foundation (WCF) 服务操作。  <xref:System.ServiceModel.Activities.Send> 和<xref:System.ServiceModel.Activities.ReceiveReply>用于使用类似于 WCF web 服务<xref:System.ServiceModel.ChannelFactory>;**添加服务引用**体验还存在生成预配置的活动的 Workflow Foundation。  
   
 ### <a name="getting-started-with-messaging-activities"></a>消息传递活动入门  
   
@@ -34,11 +34,11 @@ ms.lasthandoff: 05/04/2018
  A`BestPriceFinder`服务调用多个航班服务来查找最佳的票证价格为特定的路由。  实施此方案会要求你使用消息活动来接收价格请求、 从后端服务中，检索价格和答复到最佳的价格的价格请求。  它还将要求你使用其他现成的活动来创建用于计算的最佳价格的业务逻辑。  
   
 ## <a name="workflowservicehost"></a>WorkflowServiceHost  
- <xref:System.ServiceModel.WorkflowServiceHost>是现成的工作流主机，可支持多个实例配置中，和[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]消息传送 （尽管工作流无需使用消息传递即可进行承载）。  它还通过一组服务行为集成了持久性、跟踪和实例控件。  就像[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的<xref:System.ServiceModel.ServiceHost>、<xref:System.ServiceModel.WorkflowServiceHost>可以自承载于控制台/WinForms/WPF 应用程序或 Windows 服务或 web 承载 （作为.xamlx 文件） 在 IIS 或 WAS。  
+ <xref:System.ServiceModel.WorkflowServiceHost>是现成的工作流主机，可支持多个实例、 配置和 WCF 消息传递 （虽然工作流无需使用消息传递即可进行承载）。  它还通过一组服务行为集成了持久性、跟踪和实例控件。  就像 WCF 的<xref:System.ServiceModel.ServiceHost>、<xref:System.ServiceModel.WorkflowServiceHost>可以自承载于控制台/WinForms/WPF 应用程序或 Windows 服务或 web 承载 （作为.xamlx 文件） 在 IIS 或 WAS。  
   
 ### <a name="getting-started-with-workflow-service-host"></a>工作流服务主机入门  
   
--   在 Visual Studio 2010 中，创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作流服务应用程序项目：此项目将设置为在 Web 承载环境中使用 <xref:System.ServiceModel.WorkflowServiceHost>。  
+-   在 Visual Studio 2010 中，创建一个 WCF 工作流服务应用程序项目： 此项目还将设置为用于<xref:System.ServiceModel.WorkflowServiceHost>web 宿主环境中存在。  
   
 -   若要承载非消息传递工作流，请添加一个自定义 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>，它将创建基于消息的实例。  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 05/04/2018
  订单处理工作流用于处理新的顺序创建和更新现有的订单，在过程中。  实施此方案需要你来承载工作流中的<xref:System.ServiceModel.WorkflowServiceHost>和使用消息传递活动。  这还将需要基于相关`orderId`以确保对正确的工作流进行更新。  
   
 ## <a name="simplified-configuration"></a>简化配置  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配置架构比较复杂，导致用户难以查找功能。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，我们侧重于帮助 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用户使用以下功能来配置其服务：  
+ WCF 配置架构比较复杂，，为用户提供了许多难以查找功能。 在[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]，我们侧重于帮助 WCF 用户配置其服务具有以下功能：  
   
 -   使用户不需要为每个服务进行显式配置。 如果未配置任何\<服务 > 你的服务，以及你的服务的元素未定义以编程方式任何终结点，则一组终结点将自动添加到你的服务，一个每个服务基址和协定服务实现的。  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/04/2018
   
 -   标准终结点定义了可重用的预配置终结点，这些终结点具有一个或多个终结点属性（地址、绑定和协定）的固定值，并允许定义自定义属性。  
   
--   最后，<xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 允许您对 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端配置进行集中管理，这在应用程序域加载时间后选择或更改配置的方案中很有用。  
+-   最后， <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> ，您可以执行 WCF 客户端配置，在其中选择或在应用程序域加载时间后更改配置的方案中十分有用的集中管理。  
   
 ### <a name="getting-started"></a>入门  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="simplified-configuration-scenarios"></a>简化配置方案  
   
--   一位经验丰富的 ASMX 开发人员希望开始使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]。 但是，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 看起来太复杂了！ 我需要在配置文件中编写哪些信息呢？ 在 .NET 4 中，您甚至可以决定完全不使用配置文件。  
+-   经验丰富的 ASMX 开发人员想要开始使用 WCF。 但是，WCF 看起来太复杂了 ！ 我需要在配置文件中编写哪些信息呢？ 在 .NET 4 中，您甚至可以决定完全不使用配置文件。  
   
 -   现有的一组 WCF 服务难以进行配置和维护。 配置文件具有数千行 XML 代码，操作这些代码会产生很大的风险。 需要获得帮助以减少代码量，来提高可管理性。  
   
@@ -272,7 +272,7 @@ ms.lasthandoff: 05/04/2018
  系统需要提示用户进行输入。 在正常情况下，开发人员将使用类似于 <xref:System.Console.ReadLine%2A> 这样的方法调用来提示用户进行输入。 此设置的问题是，程序会一直等到用户输入后才运行。 在此方案中，需要超时来取消对阻止活动的阻止。 常见的方案会要求在给定持续时间内完成任务。 在阻止活动超时的方案中，Pick 将添加大量值。  
   
 ## <a name="wcf-routing-service"></a>WCF 路由服务  
- 路由服务旨在作为一般的软件路由器，它允许你控制如何[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]消息客户端和服务之间的流。  路由服务可以分离你的客户端从你的服务，这将使您在配置方面的更自由可以支持和灵活性必须考虑如何承载服务时。  在.NET 3.5 中，客户端和服务紧密结合在一起;客户端必须了解的有关的所有服务，它需要进行对话，其中原来所在。 此外，.Net Framework 3.5 中的 WCF 具有以下限制：  
+ 路由服务被旨在作为一般的软件路由器，它使你能够控制 WCFmessages 客户端和服务之间的流动方式。  路由服务可以分离你的客户端从你的服务，这将使您在配置方面的更自由可以支持和灵活性必须考虑如何承载服务时。  在.NET 3.5 中，客户端和服务紧密结合在一起;客户端必须了解的有关的所有服务，它需要进行对话，其中原来所在。 此外，.Net Framework 3.5 中的 WCF 具有以下限制：  
   
 -   错误处理较为复杂，因为必须将此逻辑硬编码到客户端中。  
   
@@ -312,7 +312,7 @@ ms.lasthandoff: 05/04/2018
 -   可以使客户端更为可靠一些，从而防止出现故障或服务不可用的情况。  
   
 ## <a name="wcf-discovery"></a>WCF Discovery  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Discovery 是一种框架技术，允许您将发现机制并入应用程序基础结构中。 利用此技术，您可以使服务可发现，并配置客户端以搜索服务。 不再需要使用终结点对客户端进行硬编码，即可使应用程序的可靠性更高，容错能力更强。 Discovery 是一个用于将自动配置功能构建到应用程序中的最佳平台。  
+ WCF Discovery 是一种框架技术，可用于对应用程序基础结构发现机制并入。 利用此技术，您可以使服务可发现，并配置客户端以搜索服务。 不再需要使用终结点对客户端进行硬编码，即可使应用程序的可靠性更高，容错能力更强。 Discovery 是一个用于将自动配置功能构建到应用程序中的最佳平台。  
   
  该产品是基于 WS-Discovery 标准构建的。 它设计为具有互操作性、可扩展性和通用性。 该产品支持两种操作模式：  
   

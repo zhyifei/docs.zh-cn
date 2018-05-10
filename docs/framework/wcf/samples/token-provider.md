@@ -1,31 +1,21 @@
 ---
-title: "令牌提供程序"
-ms.custom: 
+title: 令牌提供程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-caps.latest.revision: "22"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bd6b0983dcb4a0f7cdbabc5b391cca2000f9d16d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d513ddd41d87da7274f961969d261724b49aab65
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-provider"></a>令牌提供程序
-此示例演示如何实现自定义令牌提供程序。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的令牌提供程序用于为安全性基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 随附有默认凭据管理器令牌提供程序。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还附带了一个 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
+此示例演示如何实现自定义令牌提供程序。 令牌提供程序在 Windows Communication Foundation (WCF) 用于为安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 配有默认凭据管理器令牌提供程序。 WCF 还附带了[!INCLUDE[infocard](../../../../includes/infocard-md.md)]令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
   
 -   存在不能由这些令牌提供程序操作的凭据存储。  
   
--   想要提供自己的自定义传输机制，以便从用户提供详细信息这一刻起到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端框架使用凭据时转换凭据。  
+-   如果你想要提供您自己自定义机制，用于在用户提供详细信息，以便当 WCF 客户端框架使用凭据时转换从点的凭据。  
   
 -   要生成一个自定义令牌。  
   
@@ -118,7 +108,7 @@ ms.lasthandoff: 01/19/2018
 </system.serviceModel>  
 ```  
   
- 下列步骤演示如何开发自定义令牌提供程序并将其与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全框架集成在一起：  
+ 以下步骤演示如何开发自定义令牌提供程序并将其与 WCF 安全框架集成：  
   
 1.  编写自定义令牌提供程序。  
   

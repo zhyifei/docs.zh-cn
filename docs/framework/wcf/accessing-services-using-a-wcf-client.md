@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: d29483995a1fbf7a8c9918db0c3b65f7deac1e44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0bde07dbeb70eaafbde4d90627d245554ad7ca6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 客户端访问服务
-创建服务之后，下一步是创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理。 客户端应用程序使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理与服务进行通信。 客户端应用程序通常导入服务的元数据来生成可用来调用该服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代码。  
+创建服务后下, 一步是创建 WCF 客户端代理。 客户端应用程序使用 WCF 客户端代理与服务通信。 客户端应用程序通常导入服务的元数据生成 WCF 客户端代码可以用于调用服务。  
   
- 创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端的基本步骤包括：  
+ 创建 WCF 客户端的基本步骤如下：  
   
 1.  编译服务代码。  
   
-2.  生成 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理。  
+2.  生成 WCF 客户端代理。  
   
 3.  实例化 WCF 客户端代理。  
   
@@ -39,7 +39,7 @@ Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
 Svcutil.exe <list of WSDL and XSD files on file system>  
 ```  
   
- 结果是一个包含 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代码的代码文件，客户端应用程序可以使用这些客户端代码来调用服务。  
+ 结果是包含客户端应用程序可用于调用服务的 WCF 客户端代码的代码文件。  
   
  您还可以使用该工具生成配置文件。  
   
@@ -79,7 +79,7 @@ Public Interface ICalculator
 End Interface
 ```
   
- ServiceModel 元数据实用工具以及 Visual Studio 中的“添加服务引用”功能生成以下 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端类。 该类从 <xref:System.ServiceModel.ClientBase%601> 泛型类继承，并实现 `ICalculator` 接口。 该工具还生成 `ICalculator` 接口（此处未演示）。  
+ ServiceModel 元数据实用工具以及 Visual Studio 中添加服务引用生成下面的 WCF 客户端类。 该类从 <xref:System.ServiceModel.ClientBase%601> 泛型类继承，并实现 `ICalculator` 接口。 该工具还生成 `ICalculator` 接口（此处未演示）。  
   
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
@@ -147,7 +147,7 @@ End Class
 ```
   
 ## <a name="using-the-wcf-client"></a>使用 WCF 客户端  
- 若要使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端，请创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端的一个实例，然后调用其方法，如下面的代码所示。  
+ 若要使用 WCF 客户端，创建的 WCF 客户端，实例，然后调用其方法，如下面的代码中所示。  
   
 ```csharp
 // Create a client object with the given client endpoint configuration.
@@ -172,7 +172,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ```
   
 ## <a name="debugging-exceptions-thrown-by-a-client"></a>调试客户端引发的异常  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端所引发的许多异常是由服务上的异常所导致的。 以下是这种情况的一些示例：  
+ 由 WCF 客户端引发的许多异常是由服务上异常导致的。 以下是这种情况的一些示例：  
   
 -   <xref:System.Net.Sockets.SocketException>: 现有连接被远程主机强行关闭。  
   

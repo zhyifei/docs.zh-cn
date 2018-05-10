@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: c1e8886ab3d9d90b217ce79078633433458bbe4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ee707ae4e2a7dafeb7cb42d6d56eeece8f23306
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-claim"></a>如何：创建自定义声明
-标识模型基础结构在 Windows Communication Foundation (WCF) 提供一套内置的声明类型和权限的帮助器函数具有用于创建<xref:System.IdentityModel.Claims.Claim>具有这些类型和权限的实例。 这些内置的声明用于对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 默认支持的客户端凭据类型中的信息进行建模。 在许多情况下，这些内置的声明足够满足需要，然而一些应用程序可能需要自定义声明。 声明由声明类型、要应用该声明的资源和在该资源上断言的权限组成。 本主题描述如何创建自定义声明。  
+标识模型基础结构在 Windows Communication Foundation (WCF) 提供一套内置的声明类型和权限的帮助器函数具有用于创建<xref:System.IdentityModel.Claims.Claim>具有这些类型和权限的实例。 这些内置的声明设计为默认情况下在 WCF 支持的客户端凭据类型中找到的模型信息。 在许多情况下，这些内置的声明足够满足需要，然而一些应用程序可能需要自定义声明。 声明由声明类型、要应用该声明的资源和在该资源上断言的权限组成。 本主题描述如何创建自定义声明。  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>创建基于基元数据类型的自定义声明  
   
@@ -20,15 +20,15 @@ ms.lasthandoff: 05/04/2018
   
     1.  确定声明类型的唯一值。  
   
-         声明类型是一个唯一的字符串标识符。 自定义声明的设计者负责确保声明类型所使用的字符串标识符是唯一的。 有关 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定义的声明类型的列表，请参见 <xref:System.IdentityModel.Claims.ClaimTypes> 类。  
+         声明类型是一个唯一的字符串标识符。 自定义声明的设计者负责确保声明类型所使用的字符串标识符是唯一的。 Wcf 定义的声明类型的列表，请参阅<xref:System.IdentityModel.Claims.ClaimTypes>类。  
   
     2.  选择资源的基元数据类型和值。  
   
-         资源是一个对象。 资源的 CLR 类型可以是一个基元类型，例如 <xref:System.String> 或 <xref:System.Int32>，也可以是任何可序列化的类型。 资源的 CLR 类型必须是可序列化的，因为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会在不同时刻将声明序列化。 基元类型是可序列化的类型。  
+         资源是一个对象。 资源的 CLR 类型可以是一个基元类型，例如 <xref:System.String> 或 <xref:System.Int32>，也可以是任何可序列化的类型。 资源的 CLR 类型必须可序列化，因为声明会在序列化不同的时间点由 WCF。 基元类型是可序列化的类型。  
   
-    3.  选择 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定义的一个权限，或者为自定义权限选择一个唯一值。  
+    3.  选择一个权限，由 WCF 或自定义权限的唯一值。  
   
-         权限是一个唯一的字符串标识符。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定义的权限是在 <xref:System.IdentityModel.Claims.Rights> 类中定义的。  
+         权限是一个唯一的字符串标识符。 Wcf 定义的权限定义在<xref:System.IdentityModel.Claims.Rights>类。  
   
          自定义声明的设计者负责确保权限所使用的字符串标识符是唯一的。  
   
@@ -43,11 +43,11 @@ ms.lasthandoff: 05/04/2018
   
     1.  确定声明类型的唯一值。  
   
-         声明类型是一个唯一的字符串标识符。 自定义声明的设计者负责确保声明类型所使用的字符串标识符是唯一的。 有关 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定义的声明类型的列表，请参见 <xref:System.IdentityModel.Claims.ClaimTypes> 类。  
+         声明类型是一个唯一的字符串标识符。 自定义声明的设计者负责确保声明类型所使用的字符串标识符是唯一的。 Wcf 定义的声明类型的列表，请参阅<xref:System.IdentityModel.Claims.ClaimTypes>类。  
   
     2.  为资源选择或定义一个可序列化的非基元类型。  
   
-         资源是一个对象。 资源的 CLR 类型必须是可序列化的，因为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会在不同时刻将声明序列化。 基元类型本身是可序列化的类型。  
+         资源是一个对象。 资源的 CLR 类型必须可序列化，因为声明会在序列化不同的时间点由 WCF。 基元类型本身是可序列化的类型。  
   
          在定义一个新类型时，请将 <xref:System.Runtime.Serialization.DataContractAttribute> 应用于类。 另外，请将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性应用于新类型的需要作为声明的一部分序列化的所有成员。  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 05/04/2018
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)] 
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]        
   
-    3.  选择 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定义的一个权限，或者为自定义权限选择一个唯一值。  
+    3.  选择一个权限，由 WCF 或自定义权限的唯一值。  
   
-         权限是一个唯一的字符串标识符。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定义的权限是在 <xref:System.IdentityModel.Claims.Rights> 类中定义的。  
+         权限是一个唯一的字符串标识符。 Wcf 定义的权限定义在<xref:System.IdentityModel.Claims.Rights>类。  
   
          自定义声明的设计者负责确保权限所使用的字符串标识符是唯一的。  
   

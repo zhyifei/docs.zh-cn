@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |详细信息|从 .NET Framework 4.6 开始，如果 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=name> 或 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=name> 由于缺少已阐明的“已知类型”而无法序列化或反序列化，则会发出异常消息。|
-|建议|应用不应依赖于特定异常消息。 如果应用依赖于此消息，请将其更新以期望新消息或（最好）更改为仅依赖异常类型。|
+|建议|应用不应依赖于特定异常消息。 如果应用依赖于此消息，可选择更新应用以期得到新消息或（最好）将其更改为仅依赖异常类型。|
 |范围|边缘|
 |版本|4.6|
 |类型|运行时|

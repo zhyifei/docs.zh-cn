@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 38035230cf4f5e411f7ec769a169528ada130749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61a81e342a16bd298cbebef2dc733b5ec631839c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服务运行时行为
 在已经设计（[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)）并实现服务协定（[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)）之后，就可以配置服务运行时的操作行为。 本主题讨论系统提供的服务和操作行为，并说明在何处查找更多信息来创建新行为。 尽管有些行为是作为属性应用的，但很多行为是使用应用程序配置文件或以编程方式应用的。 有关配置服务应用程序的详细信息，请参阅[配置服务](../../../docs/framework/wcf/configuring-services.md)。  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 和 <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> 属性是用途最广泛的行为，公开了最常请求的操作功能。 因为它们是属性，所以应将其应用于服务或操作实现。 其他行为（例如，<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>）通常是使用应用程序配置文件进行应用的，但可以以编程方式使用它们。  
   
- 本主题提供 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性的概述，描述行为可以操作的不同范围，并为很多系统提供的不同范围的行为（ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 开发人员可能此感兴趣）提供快速说明。  
+ 本主题提供的概述<xref:System.ServiceModel.ServiceBehaviorAttribute>和<xref:System.ServiceModel.OperationBehaviorAttribute>属性，介绍不同的范围的行为可以操作，并提供的许多系统提供的不同范围，可能有行为的快速说明WCF 开发人员感兴趣。  
   
 ## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute 和 OperationBehaviorAttribute  
  最重要的行为是 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性，可以使用这两个属性来控制以下各项：  
@@ -76,13 +76,13 @@ ms.lasthandoff: 05/04/2018
 ### <a name="service-behaviors"></a>服务行为  
  下面的行为在服务上运行。  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。 应用于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务以指示该服务是否可以在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 兼容模式下运行。  
+-   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。 应用到 WCF 服务以指示是否可以在中运行该服务[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]兼容性模式。  
   
 -   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。 控制服务如何向客户端声明授权。  
   
 -   <xref:System.ServiceModel.Description.ServiceCredentials>。 配置服务凭据。 使用此类可指定服务的凭据，如 X.509 证书。  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>。 启用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的调试和帮助信息功能。  
+-   <xref:System.ServiceModel.Description.ServiceDebugBehavior>。 启用调试和帮助信息功能的 WCF 服务。  
   
 -   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>。 控制服务元数据和相关信息的发布。  
   
@@ -95,13 +95,13 @@ ms.lasthandoff: 05/04/2018
   
 -   <xref:System.ServiceModel.CallbackBehaviorAttribute>。 在双工客户端应用程序中配置回调服务实现。  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>。 启用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 回调对象的服务调试。  
+-   <xref:System.ServiceModel.Description.CallbackDebugBehavior>。 使服务调试 WCF 回调对象。  
   
 -   <xref:System.ServiceModel.Description.ClientCredentials>。 允许用户配置客户端和服务凭据以及服务凭据身份验证设置以便在客户端上使用。  
   
 -   <xref:System.ServiceModel.Description.ClientViaBehavior>。 由客户端使用以指定应为其创建传输通道的统一资源标识符 (URI)。  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>。 指示 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 禁用 `MustUnderstand` 处理。  
+-   <xref:System.ServiceModel.Description.MustUnderstandBehavior>。 指示 WCF 禁用`MustUnderstand`处理。  
   
 -   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>。 指示运行库对通道使用同步接收进程。  
   

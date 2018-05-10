@@ -2,11 +2,11 @@
 title: 自定义多路分解器
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: 76f8d60fdcc1fcba9942a78138e83104dfcd972b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-demux"></a>自定义多路分解器
 此示例演示如何 MSMQ 消息头可以将映射到不同服务操作，以便 Windows Communication Foundation (WCF) 服务使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>并不仅限于使用一个服务操作，如中所示[消息队列 Windows Communication foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)和[Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)示例。  
@@ -108,7 +108,7 @@ public static void Main()
  MSMQ 队列名称是在配置文件的 appSettings 节中指定的。  
   
 > [!NOTE]
->  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点地址指定 msmq.formatname 方案，并为本地计算机使用 localhost。 方案后面是根据 MSMQ 格式名寻址指南正确格式化的队列地址。  
+>  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定 msmq.formatname 方案，并为本地计算机使用 localhost。 方案后面是根据 MSMQ 格式名寻址指南正确格式化的队列地址。  
   
 ```xml  
 <appSettings>  

@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: 7be5ca95732b4ddadf851ccf839e31be3c5b47bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f152146e7483c6b3c162fd81f20f359e6c82123a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="query-execution"></a>查询执行
 在用户创建 LINQ 查询后，该查询将转换为一个命令目录树。 命令目录树是与实体框架兼容的查询表示形式。 然后，针对数据源执行该命令目录树。 在执行查询时，将计算所有查询表达式（即查询的所有组成部分），包括在结果具体化中使用的那些表达式。  
@@ -17,7 +17,10 @@ ms.lasthandoff: 05/03/2018
  执行查询表达式的时间点可能会有所不同。 LINQ 查询始终在循环访问查询变量时执行，而不是在创建查询变量时执行。 这称为*延迟执行*。 您也可以强制立即执行查询，这对于缓存查询结果很有用。 本主题稍后将对此进行介绍。  
   
  当执行 LINQ to Entities 查询时，查询中的有些表达式可能在服务器上执行，而有些部分可能在客户端上本地执行。 表达式的客户端计算发生于在服务器上执行查询之前。 如果在客户端上计算表达式，则该计算的结果将替换查询中的表达式，然后在服务器上执行查询。 由于是在数据源上执行查询，因此数据源配置将覆盖客户端中指定的行为。 例如，null 值处理和数值精度取决于服务器设置。 在查询执行期间在服务器上引发的任何异常都将直接向上传递到客户端。  
-  
+ 
+> [!TIP]
+> 有关方便摘要的查询运算符中表的格式，这让你快速标识运算符的执行行为，请参阅[分类的标准查询运算符按执行方式 (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)。
+
 ## <a name="deferred-query-execution"></a>延迟执行查询  
  在返回一系列值的查询中，查询变量本身从不保存查询结果，它只存储查询命令。 查询的执行将推迟到在 `foreach` 或 `For Each` 循环中循环访问查询变量之后进行。 这称为*延迟执行*; 也就是说，查询执行发生一段时间后查询构造。 这意味着您可以根据需要频繁地执行查询。 例如，当您的数据库由其他应用程序不断更新时，此功能将会很有用。 在您的应用程序中，您可以创建查询以检索最新信息并重复执行查询，每次返回更新的信息。  
   

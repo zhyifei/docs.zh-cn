@@ -2,17 +2,17 @@
 title: 分层配置模型
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: 4debeaf0bfd2558552a7943f3767a4f9b53ce550
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 233a8d4ba36835ab26e0c4a8cd044cf60d497a0b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hierarchical-configuration-model"></a>分层配置模型
 此示例演示如何实现服务配置文件的层次结构。 它还演示如何从层次结构中较高的级别继承绑定、服务行为和终结点行为。  
   
 ## <a name="sample-details"></a>示例详细信息  
- 为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 开发的功能之一是分层配置模型中的改进。 分层配置模型的一个示例是通过 Machine.config -> Rootweb.config -> Web.config 定义的模型。在 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 中，那些在配置层次结构的较高级别中定义的绑定和行为将添加到没有显式配置的服务中。 此示例演示如何通过依赖于在计算机或应用程序级别定义的配置元素来简化服务配置。  
+ WCF 中的开发的功能之一[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]是分层配置模型中的改进。 分层配置模型的一个示例是通过 Machine.config -> Rootweb.config -> Web.config 定义的模型。在 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 中，那些在配置层次结构的较高级别中定义的绑定和行为将添加到没有显式配置的服务中。 此示例演示如何通过依赖于在计算机或应用程序级别定义的配置元素来简化服务配置。  
   
  此示例包含在层次结构的三个级别中定义的九项服务。 `Service1` 位于根目录中。 `Service2` 和 `Service3` 类继承 `Service1` 中的默认元素。 `Service4`、`Service5`、 `Service6` 和 `Service7` 在层次结构的第三层定义，继承 `Service3` 中的默认元素。 最后，`Service10` 和 `Service11` 位于层次结构的第四层。  
   

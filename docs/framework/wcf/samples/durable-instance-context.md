@@ -2,11 +2,11 @@
 title: 持久性实例上下文
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 75516bfa0cf5ac7bfb27eb5ee2c51d04c30bc9a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-instance-context"></a>持久性实例上下文
 此示例演示如何自定义 Windows Communication Foundation (WCF) 运行时以启用持久性实例上下文。 它使用 SQL Server 2005 作为其后备存储（在本例中为 SQL Server 2005 Express）。 但是，它还提供了一种访问自定义存储机制的方法。  
@@ -14,7 +14,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 此示例涉及对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的通道层和服务模型层进行扩展。 因此，有必要先了解基础概念再阅读实现细节。  
+ 此示例涉及扩展通道层和 WCF 服务模型层。 因此，有必要先了解基础概念再阅读实现细节。  
   
  持久性实例上下文在实际方案中相当常见。 例如，购物车应用程序能够在中途暂停购物并在改天继续。 因此，当我们改天访问购物车应用程序时，我们的原始上下文将得以还原。 一定要注意的是，当我们断开连接时，购物车应用程序（在服务器上）不保持购物车实例， 而是将其状态保持在持久性存储介质中，并使用它为还原后的上下文构造新实例。 因此，可为同一个上下文服务的服务实例与上一个实例不同（即，这两个实例的内存地址不同）。  
   
@@ -119,7 +119,7 @@ if (isFirstMessage)
 }  
 ```  
   
- 这些通道实现随后会由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 类和 `DurableInstanceContextBindingElement` 类相应地添加到 `DurableInstanceContextBindingElementSection` 通道运行库中。 请参阅[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)通道绑定元素和绑定元素节有关的更多详细信息的示例文档。  
+ 这些通道实现随后添加到 WCF 通道运行时由`DurableInstanceContextBindingElement`类和`DurableInstanceContextBindingElementSection`正确类。 请参阅[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)通道绑定元素和绑定元素节有关的更多详细信息的示例文档。  
   
 ## <a name="service-model-layer-extensions"></a>服务模型层扩展  
  既然上下文 ID 已经穿过了通道层，可以实现服务行为来自定义实例化了。 在该实例中，存储管理器用来从持久性存储中加载状态或将状态保存到持久性存储中。 如上所述，该实例提供一个将 SQL Server 2005 用作其后备存储的存储管理器。 但是，还可以向该扩展中添加自定义存储机制。 为此，需要声明一个必须由所有的存储管理器实现的公共接口。  
@@ -228,9 +228,9 @@ else
   
  我们已经实现了要在持久性存储中读写实例的必要基础结构， 现在必须采取必要的步骤来更改服务行为。  
   
- 作为此过程的第一步，我们必须保存已通过通道层到达当前 InstanceContext 的上下文 ID。 InstanceContext 是一个运行库组件，它充当 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 调度程序和服务实例之间的链接， 可用来向服务实例提供其他状态和行为。 这是必不可少的，因为在会话通信中，上下文 ID 仅随第一条消息发送。  
+ 作为此过程的第一步，我们必须保存已通过通道层到达当前 InstanceContext 的上下文 ID。 InstanceContext 是充当 WCF 调度程序和服务实例之间的链接的运行时组件。 可用来向服务实例提供其他状态和行为。 这是必不可少的，因为在会话通信中，上下文 ID 仅随第一条消息发送。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允许扩展它的 InstanceContext 运行库组件，方法是使用它的可扩展对象模式来添加新的状态和行为。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的可扩展对象模式下，可以用新功能来扩展现有的运行库类，或者向对象中添加新的状态功能。 可扩展对象模式 IExtensibleObject 中有三个接口\<T >，IExtension\<T >，和 IExtensionCollection\<T >:  
+ WCF 允许扩展它的 InstanceContext 运行时组件方法来添加新的状态和使用的可扩展对象模式的行为。 可扩展对象模式用于在 WCF 中可以用来扩展现有运行时类的新功能或将新的状态功能添加到对象。 可扩展对象模式 IExtensibleObject 中有三个接口\<T >，IExtension\<T >，和 IExtensionCollection\<T >:  
   
 -   IExtensibleObject\<T > 接口由允许进行自定义其功能的扩展对象实现。  
   
@@ -278,7 +278,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  如上所述，上下文 ID 读取自 `Properties` 类的 `Message` 集合并传递到扩展类的构造函数。 这演示了如何以一致的方式在层之间交换信息。  
   
- 下一个重要步骤是重写服务实例的创建过程。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允许使用 IInstanceProvider 接口来实现自定义实例化行为并将它们挂钩到运行库。 这可以通过实现新的 `InstanceProvider` 类来完成。 在构造函数中，可以接受来自实例提供程序的服务类型。 以后，可以使用此服务类型来创建新实例。 在 `GetInstance` 实现中，创建了一个存储管理器实例并查找持久性实例。 如果返回的是 `null`，则会实例化此服务类型的新实例并将其返回到调用方。  
+ 下一个重要步骤是重写服务实例的创建过程。 WCF 允许实现自定义实例化行为并将它们挂钩到运行库使用 IInstanceProvider 接口。 这可以通过实现新的 `InstanceProvider` 类来完成。 在构造函数中，可以接受来自实例提供程序的服务类型。 以后，可以使用此服务类型来创建新实例。 在 `GetInstance` 实现中，创建了一个存储管理器实例并查找持久性实例。 如果返回的是 `null`，则会实例化此服务类型的新实例并将其返回到调用方。  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -349,9 +349,9 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
   
  总之，到目前为止，此示例已经生成了一个针对自定义上下文 ID 交换启用了自定义网络协议的通道，而且还覆盖了默认实例化行为，以便从持久性存储中加载实例。  
   
- 剩下的就是通过某种方法来将服务实例保存到持久性存储中。 如上所述，已经有一个必需的功能来将状态保存在 `IStorageManager` 实现中。 现在，我们必须将该功能与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 运行库集成在一起。 需要另一个适用于服务实现类中的方法的属性。 此属性假设应用于对服务实例的状态进行更改的方法。  
+ 剩下的就是通过某种方法来将服务实例保存到持久性存储中。 如上所述，已经有一个必需的功能来将状态保存在 `IStorageManager` 实现中。 我们现在必须集成这与 WCF 运行时。 需要另一个适用于服务实现类中的方法的属性。 此属性假设应用于对服务实例的状态进行更改的方法。  
   
- `SaveStateAttribute` 类实现了此功能。 它还实现了 `IOperationBehavior` 类以针对每个操作修改 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 运行库。 如果某个方法是用该属性标记的，那么，在构造相应的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时，`ApplyBehavior` 运行库会调用 `DispatchOperation` 方法。 在该方法实现中，有下面的一行代码：  
+ `SaveStateAttribute` 类实现了此功能。 它还实现`IOperationBehavior`类来修改每个操作的 WCF 运行时。 在使用此特性标记方法，WCF 运行时将调用`ApplyBehavior`方法，同时相应`DispatchOperation`正在构建。 在该方法实现中，有下面的一行代码：  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
@@ -373,7 +373,7 @@ return result;
 ```  
   
 ## <a name="using-the-extension"></a>使用扩展  
- 现在，完成了通道层扩展和服务模型层扩展，可以在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序中使用它们了。 服务必须使用自定义绑定将通道添加到通道堆栈中，然后使用相应的属性来标记服务实现类。  
+ 同时完成的通道层和服务模型层扩展，现在可以在 WCF 应用程序中使用它们。 服务必须使用自定义绑定将通道添加到通道堆栈中，然后使用相应的属性来标记服务实现类。  
   
 ```  
 [DurableInstanceContext]  

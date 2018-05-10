@@ -2,11 +2,11 @@
 title: TCP 激活
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 3627307c74604f30c77927067d302baf41b1c536
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9f08864c1d5139160ac25e0733ddcfc1c8557ad9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tcp-activation"></a>TCP 激活
 本示例演示承载一个服务，该服务使用 Windows 进程激活服务 (WAS) 的服务来激活通过 net.tcp 协议通信的服务。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -143,7 +143,7 @@ Press <ENTER> to terminate client.
   
 2.  请确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-     此外，必须安装 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 非 HTTP 激活组件：  
+     此外，你必须安装 WCF 非 HTTP 激活组件：  
   
     1.  从**启动**菜单上，选择**控制面板**。  
   
