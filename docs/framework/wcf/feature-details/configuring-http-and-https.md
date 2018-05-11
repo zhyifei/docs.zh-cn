@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed9c7a444018e7c5e9ac00de82133cce633fac93
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configuring-http-and-https"></a>配置 HTTP 和 HTTPS
 WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Internet Information Services (IIS) 或命令行工具可以配置 HTTP/HTTPS 设置。 当某个 WCF 服务承载于 IIS 之下时，可以在 IIS 中配置 HTTP 或 HTTPS 设置（使用 inetmgr.exe 工具）。 如果 WCF 服务是自承载的，则可使用命令行工具配置 HTTP 或 HTTPS 设置。  
@@ -19,7 +19,7 @@ WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Interne
   
  运行时[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 会自动安装此工具。 运行时[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以下载该工具在[Windows XP Service Pack 2 支持工具](http://go.microsoft.com/fwlink/?LinkId=88606)。 有关详细信息，请参阅[Httpcfg 概述](http://go.microsoft.com/fwlink/?LinkId=88605)。  
   
- 如果运行的是 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或 Windows 7，则可以使用 Netsh.exe 工具配置这些设置。  
+ 运行时[!INCLUDE[wv](../../../../includes/wv-md.md)]或 Windows 7，则使用 Netsh.exe 工具配置这些设置。  
   
 ## <a name="configuring-namespace-reservations"></a>配置命名空间保留  
  命名空间保留将 HTTP URL 命名空间的一部分的权限分配给特定的用户组。 保留提供给这些用户创建用于侦听命名空间的相应部分的服务的权限。 保留是 URL 前缀，这意味着保留涵盖保留路径的所有子路径。 命名空间保留允许以两种方式使用通配符。 HTTP Server API 文档描述[涉及通配符的命名空间声明之间的解析顺序](http://go.microsoft.com/fwlink/?LinkId=94841)。  

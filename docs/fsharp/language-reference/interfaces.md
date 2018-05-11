@@ -2,11 +2,11 @@
 title: 接口 (F#)
 description: '了解如何 F # 接口指定的其他类实现的相关成员集。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 174e30c03cd555d2d9c89c88bd80e06a2cdcef46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ae8a2840ce26814be25f08c3ed02e12df6b7c0
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="interfaces"></a>接口
 
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 ```fsharp
 // Interface declaration:
 [ attributes ]
-type interface-name =
+type [accessibility-modifier] interface-name =
     [ interface ]     [ inherit base-interface-name ...]
     abstract member1 : [ argument-types1 -> ] return-type1
     abstract member2 : [ argument-types2 -> ] return-type2
@@ -42,6 +42,8 @@ let class-name (argument-list) =
 
 ## <a name="remarks"></a>备注
 接口声明类似于类声明，只不过未实现成员。 相反，所有成员都是抽象的由关键字`abstract`。 抽象方法不提供方法体。 但是，可以通过包括单独定义的成员作为连同方法提供的默认实现`default`关键字。 这样相当于在基类中其他.NET 语言中创建的虚拟方法。 可以实现接口的类中重写此类的虚拟方法。
+
+接口的默认可访问性是`public`。
 
 你可以根据需要为每个方法参数提供一个名称使用常规 F # 语法：
 

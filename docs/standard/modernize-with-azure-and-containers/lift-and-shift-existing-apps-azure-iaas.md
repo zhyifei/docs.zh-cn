@@ -1,22 +1,22 @@
 ---
-title: 提升和移动现有应用 Azure IaaS
+title: 提升和移动现有的.NET 应用程序到 Azure IaaS （云基础结构级）
 description: 更新现有的.NET 应用程序与 Azure 云和 Windows 容器。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: b844373d4ea995b553d9a32ea51997fd664064bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: 458b1bd1fc9fc24ce43d0926655fe0767aabc43c
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="lift-and-shift-existing-apps-azure-iaas"></a>提升和移动现有应用 Azure IaaS
+# <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>提升和移动现有的.NET 应用程序到 Azure IaaS （云基础结构级）
 
 > 设想： 作为第一个步骤，以降低本地投资和总成本的硬件和网络维护，只需 rehost 在云中的现有应用程序。
 
 在获取到之前*如何*若要迁移到 Azure 基础结构即服务 (IaaS) 平台的现有应用程序，务必分析原因*为什么*你想要迁移直接到 IaaS在 Azure 中。 在此现代化成熟度级别方案实质上是若要开始使用虚拟机在云中，而不是继续使用最新状态，本地基础结构。
 
-若要分析的另一点是*为什么*可能想要迁移到纯的 IaaS 云，而不是仅仅增加了更高级的 Azure 中的托管的服务。 你需要确定情况下可能首先需要 IaaS。
+若要分析的另一点是*为什么*可能想要迁移到纯的 IaaS 云，而不是仅仅增加了更高级的 Azure 中的托管的服务。 确定情况下可能首先需要 IaaS。
 
 图 2-1 定位现代化成熟度级别中的云基础结构的通用应用程序：
 
@@ -30,17 +30,17 @@ ms.lasthandoff: 05/04/2018
 
 做出决策，以将你的应用程序移到云中后，将更熟悉为什么你可能选择 IaaS 而不是更多高级选项，如 PaaS 只需进行的 IaaS 环境的主要原因。 将移动到类似于你当前的环境，在本地环境提供较低的学习曲线，这样就最快的途径到云。
 
-但是，将最快的路径发送到云中并不意味着，你会获得最大益处，无需你在云中运行的应用程序。 任何组织将获得从云迁移在已引入的云就绪 DevOps 和 PaaS （云进行优化） 的成熟度级别最重要的好处。
+但是，将最快的路径发送到云中并不意味着，你会获得最大益处，无需你在云中运行的应用程序。 任何组织将获得从云迁移已引入的云优化和云本机成熟度级别最重要的好处。
 
-它也具有变得非常明显应用程序是更轻松地更新和重新构建的体系结构将来时它们已在云中，即使在 IaaS 上运行。 此 true 的部分是因为已达到应用程序数据迁移。 已此外，获得技能所需的工作在云中，并对在"云区域性"。 操作进行移位你的组织
+它也具有变得非常明显应用程序是更轻松地实现现代化和将来构建时它们已在云中，即使在 IaaS 上运行。 已达到应用程序数据迁移。 此外，你的组织将已获得所需的工作在云中的技能并做 shift 到运营中"云区域性"。
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>何时将迁移到 PaaS 到而不是 IaaS
 
-下一步的各节讨论主要基于 PaaS 平台和服务的云就绪 DevOps 应用程序。 这些应用为您提供的大多数好处迁移到云。
+下一步的各节讨论云优化应用程序主要基于 PaaS 平台和服务。 这些应用为您提供的大多数好处迁移到云。 
 
-如果你的目标是只需将移到云的现有应用程序，首先，确定现有应用程序将需要进行大量修改，以在 Azure App Service 中运行。 这些应用程序应为第一个候选项。
+如果你的目标是只需将移到云的现有应用程序，首先，确定现有应用程序将不需要进行大量修改，以在 Azure App Service 中运行。 这些应用应是第一个适合云进行优化。 
 
-然后，如果你不希望或仍不能移动到 Windows 容器和/或 Azure Service Fabric 或 Kubernetes 等 orchestrators，尚未，则当你将使用纯 Vm (IaaS)。
+然后，对于应用程序，仍无法将移至 Windows 容器和 PaaS 如 App Service 或 Azure Service Fabric 等 orchestrators 迁移到简单纯 Vm (IaaS)。 
 
 但是，请记住，正确配置、 保护和维护 Vm 需要更多时间和 IT 专业人员相比于在 Azure 中使用 PaaS 服务。 如果你正在考虑 Azure 虚拟机，请确保修补程序、 更新和管理 VM 环境所需的持续不断的维护工作将其考虑到帐户。 Azure 虚拟机是 IaaS。
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/04/2018
 
 - 内置的依赖项的多层应用程序的高置信度发现映射
 
-- 智能向右大小调整到 Azure 虚拟机
+- 到 Azure 虚拟机的智能右大小调整
 
 - 兼容性报告与修正的潜在问题的指南
 

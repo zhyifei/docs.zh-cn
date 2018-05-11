@@ -3,12 +3,12 @@ title: 将关系数据库迁移到 azure
 description: 更新现有的.NET 应用程序与 Azure 云和 Windows 容器 |将关系数据库迁移到 azure
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: efc558115d184ed53a963eab2acdd847a12dbb3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: fe1bf5820c2306beb380749b34d5a56964e016e4
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>将关系数据库迁移到 azure
 
@@ -22,11 +22,11 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>何时将迁移到 Azure SQL 数据库托管实例
 
-在大多数情况下，Azure SQL 数据库托管实例将最好的选择将你的数据迁移到 Azure 时要考虑。 如果您要迁移 SQL Server 数据库，并且需要几乎无需重新设计你的应用程序或对您的数据或数据访问代码进行更改的 100%保障，选择 Azure SQL 数据库的托管实例功能。
+在大多数情况下，Azure SQL 数据库托管实例将最好的选择将你的数据迁移到 Azure 时要考虑。 如果您要迁移 SQL Server 数据库，并且需要几乎无需构建你的应用程序或对您的数据或数据访问代码进行更改的 100%保障，选择 Azure SQL 数据库的托管实例功能。
 
 如果你有其他要求 SQL Server 实例级功能或超出标准的 Azure SQL 数据库 （单个数据库模型） 中提供的功能的隔离要求，azure SQL 数据库托管实例是最佳选项。 此最后一项的最面向 PaaS 的选择，但它不提供与传统的 SQL server 的相同的功能。 迁移可能会出现 frictions。
 
-例如，组织已深层投资实例级 SQL Server 功能受益从迁移到 SQL 托管实例。 实例级 SQL Server 功能的示例包括 SQL 公共语言运行时 (CLR) 集成，SQL Server 代理，以及跨数据库查询。 对这些功能的支持中均不提供标准的 Azure SQL 数据库 （单一数据库模型）。
+例如，组织已深层投资实例级 SQL Server 功能受益从迁移到 SQL 托管实例。 实例级 SQL Server 功能的示例包括 SQL 公共语言运行时 (CLR) 集成，SQL Server 代理，以及跨数据库查询。 对这些功能的支持不是可用标准的 Azure SQL 数据库 （单一数据库模型） 中。
 
 操作在高度管控行业中，且需要维护隔离出于安全考虑，组织还可能受益于选择的 SQL 托管实例模式。
 
@@ -56,9 +56,9 @@ Azure SQL 数据库中的托管的实例具有以下特征：
 
 如前文所述，标准的 Azure SQL 数据库是完全托管的、 关系 DBaaS。 SQL 数据库当前 38 与世界各地的数据中心管理数以百万计的生产数据库。 它支持广泛的应用程序和工作负荷，从管理简单的事务数据，为驱动的数据最密集、 任务关键型应用程序需要在全球范围内的高级的数据处理。
 
-由于其完整的 PaaS 功能，并更好地定价-并最终降低成本-你应该将移到标准的 Azure SQL 数据库作为你": 默认情况下选择"如果你有一个应用程序，该使用基本、 标准 SQL 数据库和任何其他实例功能。 标准的 Azure SQL 数据库中不支持 SQL CLR 集成、 SQL Server 代理和跨数据库查询等的 SQL Server 功能。 仅在 Azure SQL 数据库托管实例模型中提供了这些功能。
+由于其完整的 PaaS 功能，更好地定价-并最终降低成本-你应该将移到标准的 Azure SQL 数据库作为你": 默认情况下选择"如果你有一个应用程序，该使用基本、 标准 SQL 数据库和任何其他实例功能。 标准的 Azure SQL 数据库中不支持 SQL CLR 集成、 SQL Server 代理和跨数据库查询等的 SQL Server 功能。 仅在 Azure SQL 数据库托管实例模型中提供了这些功能。
 
-Azure SQL 数据库是为应用程序开发人员生成的仅智能云数据库服务。 它也是缩放上快速，而无需停机，来帮助你高效地提供多租户应用程序的唯一云数据库服务。 从根本上讲，Azure SQL 数据库会使你更多的时间，以创新，并因此加快了上市时间。 你可以生成安全的应用程序，并使用的语言和平台所需连接到你的 SQL 数据库。
+Azure SQL 数据库是为应用程序开发人员生成的仅智能云数据库服务。 它也是缩放上快速，而无需停机，来帮助你高效地提供多租户应用程序的唯一云数据库服务。 从根本上讲，Azure SQL 数据库会使你更多的时间，以创新，并因此加快了上市时间。 可以生成安全的应用，还可以使用的语言和平台所需连接到你的 SQL 数据库。
 
 Azure SQL 数据库提供以下好处：
 
@@ -76,13 +76,13 @@ Azure SQL 数据库提供以下好处：
 
 - 与 SQL Server 2016，包括混合和迁移的兼容性
 
-标准的 Azure SQL Database 是更接近于 PaaS 比 Azure SQL 数据库托管实例。 你应尝试使用它，如果可能，因为你将从托管云中获取更多好处。 但是，Azure SQL 数据库已从常规的主要区别和本地 SQL Server 实例。 根据现有应用程序的数据库要求和你的企业要求和策略，它可能规划你迁移到云时不是最佳选择。
+标准的 Azure SQL Database 是更接近于 PaaS 比 Azure SQL 数据库托管实例。 更喜欢标准的 Azure SQL 数据库，因为你将从托管云中获取更多好处。 但是，Azure SQL 数据库已从常规的主要区别和本地 SQL Server 实例。 根据现有应用程序的数据库要求和你的企业要求和策略，它可能规划你迁移到云时不是最佳选择。
 
 ## <a name="when-to-move-your-original-rdbms-to-a-vm-iaas"></a>何时将原始 RDBMS 移到虚拟机 (IaaS)
 
 迁移选项之一是将你原始关系数据库管理系统 (RDBMS)，包括 Oracle、 IBM DB2、 MySQL、 PostgreSQL、 或 SQL Server，到在 Azure VM 运行的类似服务器。 如果你的所有需要最快迁移到云中，而最小的更改或不需要更改的现有应用，直接迁移到云中的 IaaS 可能是合理的选项。 它可能不会利用的所有云的优势的最佳方法，但它可能是最快的初始路径。
 
-当前，Microsoft Azure 支持最多[331 不同数据库服务器](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all)作为 IaaS Vm 部署。 其中包括 SQL Server、 Oracle、 MySQL、 PostgreSQL、 和 IBM DB2，等的常用 Rdbms 和如 MongoDB、 Cassandra、 DataStax、 MariaDB 和 Cloudera 的许多其他 NoSQL 数据库。
+当前，Microsoft Azure 支持最多[331 不同数据库服务器](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all)作为 IaaS Vm 部署。 其中包括 SQL Server、 Oracle、 MySQL、 PostgreSQL、 和 IBM DB2，等的常用 RDBMS 和如 MongoDB、 Cassandra、 DataStax、 MariaDB 和 Cloudera 的许多其他 NoSQL 数据库。
 
 > [!NOTE]
 > 尽管移动到 Azure VM RDBMS 可能将你的数据迁移到云 （因为它是 IaaS） 的最快方法，此方法需要大量的投资，在你的 IT 团队 （数据库管理员和 IT 专业人员）。 企业团队需要能够设置和管理高可用性、 灾难恢复和 SQL Server 的修补。 此上下文还需要具有完全管理权限的自定义的环境。
@@ -127,4 +127,4 @@ Azure SQL 数据库提供以下好处：
 
 >[!div class="step-by-step"]
 [上一页](lift-and-shift-existing-apps-azure-iaas.md)
-[下一页](lift-and-shift-existing-apps-devops/index.md)
+[下一页](modernize-existing-apps-to-cloud-optimized/index.md)
