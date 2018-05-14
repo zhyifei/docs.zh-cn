@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  不需要透彻理解的继承，但您可能发现有用来指代[继承的基础知识 (Visual Basic 中)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
   
- 如果要创建在 Web 窗体上使用的自定义控件，请参阅[开发自定义 ASP.NET 服务器控件](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).。  
+ 如果要创建在 Web 窗体上使用的自定义控件，请参阅[开发自定义 ASP.NET 服务器控件](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [演练：使用 Visual Basic 创作复合控件](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
