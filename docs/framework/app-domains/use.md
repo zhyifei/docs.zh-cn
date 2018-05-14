@@ -1,28 +1,18 @@
 ---
-title: "使用应用程序域"
-ms.custom: 
+title: 使用应用程序域
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application domains, about
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eade3728c8a51785214cf3d8de53d8a64a668f1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-application-domains"></a>使用应用程序域
 应用程序域为公共语言运行时提供隔离单元。 它们在进程中创建和运行。 应用程序域通常由运行时主机创建，运行时主机是一种应用程序，负责向进程加载运行时，并在应用程序域内执行用户代码。 运行时主机创建进程和默认应用程序域，并在其中运行托管代码。 运行时主机包括 ASP.NET、Microsoft Internet Explorer 和 Windows Shell。  

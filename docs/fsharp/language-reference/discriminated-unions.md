@@ -2,11 +2,11 @@
 title: 可区分联合 (F#)
 description: '了解如何使用 F # 可区分联合。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7949fd1685ca128f19dd0d0d4aec7236169cd375
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 617c659e26df52819a98294bcbfa081ab82fed03
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="discriminated-unions"></a>可区分联合
 
@@ -16,14 +16,16 @@ ms.lasthandoff: 05/04/2018
 
 ```fsharp
 [ attributes ]
-type type-name =
+type [accessibility-modifier] type-name =
     | case-identifier1 [of [ fieldname1 : ] type1 [ * [ fieldname2 : ] type2 ...]
     | case-identifier2 [of [fieldname3 : ]type3 [ * [ fieldname4 : ]type4 ...]
 ...
 ```
 
 ## <a name="remarks"></a>备注
-可区分的联合类似于其他语言版本，联合类型，但有差异。 作为使用 c + + 中的联合类型或在 Visual Basic 中的变量类型的值中存储的数据不被固定;它可以是几个不同的选项之一。 与联合不同这些其他语言中，但是，每个可能的选项提供*用例标识符*。 用例标识符是各种可能的值可能是此类型的对象; 类型的名称值是可选的。 如果值不存在，这种情况相当于枚举用例。 如果值存在，则每个值可以是单个值的指定的类型或聚合的相同或不同类型的多个字段的元组。 截至 F # 3.1 中，可以为单个字段提供一个名称，但名称是可选的即使在相同情况下的其他字段的名称。
+可区分的联合类似于其他语言版本，联合类型，但有差异。 作为使用 c + + 中的联合类型或在 Visual Basic 中的变量类型的值中存储的数据不被固定;它可以是几个不同的选项之一。 与联合不同这些其他语言中，但是，每个可能的选项提供*用例标识符*。 用例标识符是各种可能的值可能是此类型的对象; 类型的名称值是可选的。 如果值不存在，这种情况相当于枚举用例。 如果值存在，则每个值可以是单个值的指定的类型或聚合的相同或不同类型的多个字段的元组。 可以为单个字段提供一个名称，但名称是可选的即使在相同情况下的其他字段的名称。
+
+可区分联合的辅助功能默认为`public`。
 
 例如，考虑形状类型的以下声明。
 

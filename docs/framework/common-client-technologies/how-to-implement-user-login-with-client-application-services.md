@@ -1,13 +1,6 @@
 ---
-title: "如何：使用客户端应用程序服务来实现用户登录"
-ms.custom: 
+title: 如何：使用客户端应用程序服务来实现用户登录
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - validation [.NET Framework], client application services
 - client application services, authenticate users
 ms.assetid: 5431a671-eb02-4e18-a651-24764fccec9a
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2bf073b6db0a69cfda0c69ae34df0396f5dea35c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b1c5bebb5bd94f0a56dc6da303ef2503ab6dd4f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>如何：使用客户端应用程序服务来实现用户登录
 可以通过现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 配置文件服务，使用客户端应用程序服务来验证用户。 有关如何设置 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 配置文件服务的信息，请参阅[将 Forms 身份验证用于 Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)。  

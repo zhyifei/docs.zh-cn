@@ -1,13 +1,6 @@
 ---
-title: "如何：确定程序集的完全限定的名称"
-ms.custom: 
+title: 如何：确定程序集的完全限定的名称
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 841bec105f171f3450bfc33ee9052ddb85814a5e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 663e7456337a2d9c413b15236e7ba1de33fbfa9b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>如何：确定程序集的完全限定的名称
 若要在全局程序集缓存中查找一个程序集的完全限定名，请使用全局程序集缓存工具 ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md))。 请参阅[如何：查看全局程序集缓存的内容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)。  

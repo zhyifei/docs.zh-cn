@@ -1,13 +1,6 @@
 ---
-title: "公共语言运行时中的类型转发"
-ms.custom: 
+title: 公共语言运行时中的类型转发
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - cpp
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], type forwarding
 - type forwarding
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32dad99e8d5caa7d88fa302a1bea8b83847bfde3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9945b66f9d9fcdfb075bd48f5f56f30f2fdf7712
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>公共语言运行时中的类型转发
 使用类型转发可以将类型移到另一个程序集，而不必重新编译使用原始程序集的应用程序。  

@@ -2,11 +2,11 @@
 title: 签名 (F#)
 description: '了解如何使用 F # 签名文件用于保存有关的公共签名的一组 F # 程序元素，如类型、 命名空间和模块的信息。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 04539a871dda9eedd1495e0e5b1f3f5026bae037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e182a1a0ac7f3f9fab27026e582d83ee737822e
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="signatures"></a>签名
 
@@ -64,6 +64,9 @@ ms.lasthandoff: 05/04/2018
 
 
 - 签名和实现的参数模式（也称为 *arity*）必须一致。
+
+
+- 如果签名文件中的参数名称不同于相应的实现文件中，签名文件中的名称将改为使用，这可能导致调试或分析的问题。 如果你想要此类不匹配项，启用警告 3218 项目文件中的通知或调用编译器时 (请参阅`--warnon`下[编译器选项](compiler-options.md))。
 
 
 下面的代码示例显示具有命名空间、模块、函数值、类型签名以及相应特性的签名文件示例。 它还显示相应的实现文件。

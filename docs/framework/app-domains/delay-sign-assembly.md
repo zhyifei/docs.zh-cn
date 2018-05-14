@@ -1,9 +1,6 @@
 ---
-title: "延迟为程序集签名"
+title: 延迟为程序集签名
 ms.date: 07/31/2017
-ms.prod: .net-framework
-ms.technology: dotnet-bcl
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +12,13 @@ helpviewer_keywords:
 - strong-named assemblies, delaying assembly signing
 - partial assembly signing
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce40f08b8b31ae3a4647e8919b4ea862fc03506f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4457bd6d5efd7404cdba6c5fbdbffa9f9eb62141
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delay-signing-an-assembly"></a>延迟为程序集签名
 组织可以使用严密保护的密钥对，开发人员无法每天对其进行访问。 通常情况下公钥可用，但私钥的访问权限仅限于少数几个人。 开发使用强名称的程序集时，每个引用强名称目标程序集的程序集都包含用于向目标程序集赋予强名称的公钥的标记。 这要求公钥在开发过程中可用。  

@@ -1,29 +1,19 @@
 ---
-title: "创建程序集"
-ms.custom: 
+title: 创建程序集
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
 - single-file assemblies
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2168cbcd19437c1e275da7a01aa0c75ab47600eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8490351b4ab1bb115e4bd7277f43ad22b144a2df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-assemblies"></a>创建程序集
 可以使用 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 等 IDE 或 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的编译器和工具来创建单文件或多文件程序集。 最简单的程序集是具有简单名称并加载到单个应用程序域的单个文件。 此程序集不能被应用程序目录之外的其他程序集引用，并且不执行版本检查。 若要卸载该程序集组成的应用程序，只需删除它所在的目录即可。 对许多开发者来说，拥有这些功能的程序集能够满足他们部署应用程序的所有需要。  

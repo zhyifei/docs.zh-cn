@@ -1,14 +1,6 @@
 ---
 title: 如何：生成单文件程序集
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,17 +13,13 @@ helpviewer_keywords:
 - code modules
 - single-file assemblies
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80fa584a21a3bdfb9392021959d777139daafd04
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 6aa39671da519ebf54dad52638ab940897209517
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>如何：生成单文件程序集
 单文件程序集（最简单的程序集类型）包含类型信息和实现，以及[程序集清单](../../../docs/framework/app-domains/assembly-manifest.md)。 可以使用命令行编译器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 创建单文件程序集。 默认情况下，编译器创建扩展名为 .exe 的程序集文件。  

@@ -2,11 +2,11 @@
 title: 值 (F#)
 description: '了解如何在 F # 中的值为具有特定类型的数量。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 610ff6cfc6d33cd22a175ca928bfb6e9f8974a36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d2874a694d9c39048a28827be858cba499dca87
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="values"></a>值
 
@@ -20,6 +20,7 @@ F# 形式的值是具有特定类型的数量；值可以是整数或浮点数�
 
 值的类型根据定义推断得出。 对于基元类型（例如整数或浮点数），类型由文本的类型确定。 因此，在前面的示例中，编译器将 `b` 的类型推断为 `unsigned int`，而将 `a` 的类型推断为 `int`。 函数值的类型由函数体中的返回值确定。 有关函数值类型的详细信息，请参阅[函数](../functions/index.md)。 有关文本类型的详细信息，请参阅[文本](../literals.md)。
 
+默认情况下，编译器不会发出有关未使用的绑定的诊断。 若要接收这些消息，启用警告 1182年项目文件中或在调用编译器时 (请参阅`--warnon`下[编译器选项](../compiler-options.md))。
 
 ## <a name="why-immutable"></a>为何不可变？
 不可变值是指在程序的整个执行过程中无法更改的值。 如果习惯于使用 C++、Visual Basic 或 C# 之类的语言，可能会惊奇地发现，F# 认为不可变值最为重要，而不是可在程序执行过程中赋予新值的变量。 不可变数据是函数编程中的一个重要元素。 在多线程环境中，可由许多不同线程更改的共享可变变量管理起来很困难。 此外，若使用可变变量，有时很难判断变量在传递到另一个函数时是否可更改。
@@ -35,6 +36,8 @@ F# 不是纯粹的函数语言，但它完全支持函数编程。 使用不可�
 可以使用 `let` 关键字，采用像定义值一样的方式将初始值赋给可变变量。 但区别在于，随后可以使用 `<-` 运算符将新值赋给可变变量，如下例所示。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+
+标记值`mutable`可能自动提升为`'a ref`如果捕获闭包，包括创建闭包，如的窗体`seq`生成器。 如果你想要发生此情况时收到通知，启用警告 3180 项目文件中或在调用编译器时。
     
 ## <a name="related-topics"></a>相关主题
 

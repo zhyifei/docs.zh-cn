@@ -1,13 +1,6 @@
 ---
-title: "应用程序域"
-ms.custom: 
+title: 应用程序域
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - process boundaries for isolation
 - application isolation
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe2d8ea8be2781e747398e18cc99cc6ce6cf6dc5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-domains"></a>应用程序域
 操作系统和运行时环境通常会在应用程序间提供某种形式的隔离。 例如，Windows 使用进程来隔离应用程序。 为确保在一个应用程序中运行的代码不会对其他不相关的应用程序产生不良影响，这种隔离是必需的。  

@@ -2,11 +2,11 @@
 title: 引用单元格 (F#)
 description: '了解如何使您能够创建具有引用语义的可变值的存储位置 F # 引用单元格。'
 ms.date: 05/16/2016
-ms.openlocfilehash: d68726619bdfce5a9ed9bd94d6434427644cd9f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="reference-cells"></a>引用单元格
 
@@ -81,6 +81,9 @@ let ref x = { contents = x }
 >[!NOTE]
 C# 程序员应知道该 ref 的工作方式在 F # 与在 C#。 例如，使用 ref 时传递了参数没有相同的效果在 F # 中 C# 中的一样。
 
+>[!NOTE]
+`mutable` 变量可能自动提升为`'a ref`如果捕获结束; 请参阅[值](values/index.md)。
+
 ## <a name="consuming-c-ref-returns"></a>使用 C#`ref`返回
 
 F # 4.1 开始，你可以使用`ref`返回在 C# 中生成。  此类调用的结果是`byref<_>`指针。
@@ -132,3 +135,5 @@ let f (x: byref<int>) = &x
 [参数和自变量](parameters-and-arguments.md)
 
 [符号和运算符参考](symbol-and-operator-reference/index.md)
+
+[值](values/index.md)
