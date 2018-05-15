@@ -1,37 +1,23 @@
 ---
 title: 对象引用
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fcb34efeb7eed28f85774dc5489b3e56aeac4e6c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 366030cfcbdaa633a1c2f5eb3c9d80bdd7d31ae3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="object-references"></a><span data-ttu-id="32e59-102">对象引用</span><span class="sxs-lookup"><span data-stu-id="32e59-102">Object References</span></span>
-<span data-ttu-id="32e59-103">此示例演示如何在服务器与客户端之间通过引用来传递对象。</span><span class="sxs-lookup"><span data-stu-id="32e59-103">This sample demonstrates how to pass objects by references between server and client.</span></span> <span data-ttu-id="32e59-104">此示例使用模拟*社交网络*。</span><span class="sxs-lookup"><span data-stu-id="32e59-104">The sample uses simulated *social networks*.</span></span> <span data-ttu-id="32e59-105">社会网络由一个 `Person` 类组成，该类包含一个朋友列表，其中每个朋友都是 `Person` 类的一个实例，并有自己的朋友列表。</span><span class="sxs-lookup"><span data-stu-id="32e59-105">A social network consists of a `Person` class that contains a list of friends in which each friend is an instance of the `Person` class, with its own list of friends.</span></span> <span data-ttu-id="32e59-106">这将创建一个对象图。</span><span class="sxs-lookup"><span data-stu-id="32e59-106">This creates a graph of objects.</span></span> <span data-ttu-id="32e59-107">服务在这些社会网络上公开操作。</span><span class="sxs-lookup"><span data-stu-id="32e59-107">The service exposes operations on these social networks.</span></span>  
+# <a name="object-references"></a><span data-ttu-id="1ae75-102">对象引用</span><span class="sxs-lookup"><span data-stu-id="1ae75-102">Object References</span></span>
+<span data-ttu-id="1ae75-103">此示例演示如何在服务器与客户端之间通过引用来传递对象。</span><span class="sxs-lookup"><span data-stu-id="1ae75-103">This sample demonstrates how to pass objects by references between server and client.</span></span> <span data-ttu-id="1ae75-104">此示例使用模拟*社交网络*。</span><span class="sxs-lookup"><span data-stu-id="1ae75-104">The sample uses simulated *social networks*.</span></span> <span data-ttu-id="1ae75-105">社会网络由一个 `Person` 类组成，该类包含一个朋友列表，其中每个朋友都是 `Person` 类的一个实例，并有自己的朋友列表。</span><span class="sxs-lookup"><span data-stu-id="1ae75-105">A social network consists of a `Person` class that contains a list of friends in which each friend is an instance of the `Person` class, with its own list of friends.</span></span> <span data-ttu-id="1ae75-106">这将创建一个对象图。</span><span class="sxs-lookup"><span data-stu-id="1ae75-106">This creates a graph of objects.</span></span> <span data-ttu-id="1ae75-107">服务在这些社会网络上公开操作。</span><span class="sxs-lookup"><span data-stu-id="1ae75-107">The service exposes operations on these social networks.</span></span>  
   
- <span data-ttu-id="32e59-108">在本示例中，服务是由 Internet 信息服务 (IIS) 承载的，客户端是一个控制台应用程序 (.exe)。</span><span class="sxs-lookup"><span data-stu-id="32e59-108">In this sample, the service is hosted by Internet Information Services (IIS) and the client is a console application (.exe).</span></span>  
+ <span data-ttu-id="1ae75-108">在本示例中，服务是由 Internet 信息服务 (IIS) 承载的，客户端是一个控制台应用程序 (.exe)。</span><span class="sxs-lookup"><span data-stu-id="1ae75-108">In this sample, the service is hosted by Internet Information Services (IIS) and the client is a console application (.exe).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="32e59-109">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="32e59-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="1ae75-109">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="1ae75-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
-## <a name="service"></a><span data-ttu-id="32e59-110">服务</span><span class="sxs-lookup"><span data-stu-id="32e59-110">Service</span></span>  
- <span data-ttu-id="32e59-111">`Person` 类应用了 <xref:System.Runtime.Serialization.DataContractAttribute> 属性，<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 字段设置为 `true` 以将其声明为引用类型。</span><span class="sxs-lookup"><span data-stu-id="32e59-111">The `Person` class has the <xref:System.Runtime.Serialization.DataContractAttribute> attribute applied, with the <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> field set to `true` to declare it as a reference type.</span></span> <span data-ttu-id="32e59-112">所有属性 (Property) 都应用了 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="32e59-112">All properties have the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute applied.</span></span>  
+## <a name="service"></a><span data-ttu-id="1ae75-110">服务</span><span class="sxs-lookup"><span data-stu-id="1ae75-110">Service</span></span>  
+ <span data-ttu-id="1ae75-111">`Person` 类应用了 <xref:System.Runtime.Serialization.DataContractAttribute> 属性，<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 字段设置为 `true` 以将其声明为引用类型。</span><span class="sxs-lookup"><span data-stu-id="1ae75-111">The `Person` class has the <xref:System.Runtime.Serialization.DataContractAttribute> attribute applied, with the <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> field set to `true` to declare it as a reference type.</span></span> <span data-ttu-id="1ae75-112">所有属性 (Property) 都应用了 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="1ae75-112">All properties have the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute applied.</span></span>  
   
 ```  
 [DataContract(IsReference=true)]  
@@ -64,7 +50,7 @@ public class Person
 }  
 ```  
   
- <span data-ttu-id="32e59-113">`GetPeopleInNetwork` 操作采用一个 `Person` 类型的参数，并返回网络中的所有人；也就是说，返回 `friends` 列表中的所有人、朋友的朋友等等（没有重复项）。</span><span class="sxs-lookup"><span data-stu-id="32e59-113">The `GetPeopleInNetwork` operation takes a parameter of type `Person` and returns all the people in the network; that is, all the people in the `friends` list, the friend's friends, and so on, without duplicates.</span></span>  
+ <span data-ttu-id="1ae75-113">`GetPeopleInNetwork` 操作采用一个 `Person` 类型的参数，并返回网络中的所有人；也就是说，返回 `friends` 列表中的所有人、朋友的朋友等等（没有重复项）。</span><span class="sxs-lookup"><span data-stu-id="1ae75-113">The `GetPeopleInNetwork` operation takes a parameter of type `Person` and returns all the people in the network; that is, all the people in the `friends` list, the friend's friends, and so on, without duplicates.</span></span>  
   
 ```  
 public List<Person> GetPeopleInNetwork(Person p)  
@@ -76,7 +62,7 @@ public List<Person> GetPeopleInNetwork(Person p)
 }  
 ```  
   
- <span data-ttu-id="32e59-114">`GetMutualFriends` 采用一个 `Person` 类型的参数，返回列表中所有符合以下条件的朋友：在其 `friends` 列表中也包含这个人。</span><span class="sxs-lookup"><span data-stu-id="32e59-114">The `GetMutualFriends` operation takes a parameter of type `Person` and returns all the friends in the list who also have this person in their `friends` list.</span></span>  
+ <span data-ttu-id="1ae75-114">`GetMutualFriends` 采用一个 `Person` 类型的参数，返回列表中所有符合以下条件的朋友：在其 `friends` 列表中也包含这个人。</span><span class="sxs-lookup"><span data-stu-id="1ae75-114">The `GetMutualFriends` operation takes a parameter of type `Person` and returns all the friends in the list who also have this person in their `friends` list.</span></span>  
   
 ```  
 public List<Person> GetMutualFriends(Person p)  
@@ -91,7 +77,7 @@ public List<Person> GetMutualFriends(Person p)
 }  
 ```  
   
- <span data-ttu-id="32e59-115">`GetCommonFriends` 操作采用一个 `Person` 类型的列表。</span><span class="sxs-lookup"><span data-stu-id="32e59-115">The `GetCommonFriends` operation takes a list of type `Person`.</span></span> <span data-ttu-id="32e59-116">该列表应当有两个 `Person` 对象。</span><span class="sxs-lookup"><span data-stu-id="32e59-116">The list is expected to have two `Person` objects in it.</span></span> <span data-ttu-id="32e59-117">该操作返回 `Person` 对象的列表，这些对象位于输入列表中的 `friends` 对象的 `Person` 列表中。</span><span class="sxs-lookup"><span data-stu-id="32e59-117">The operation returns a list of `Person` objects that are in the `friends` lists of both `Person` objects in the input list.</span></span>  
+ <span data-ttu-id="1ae75-115">`GetCommonFriends` 操作采用一个 `Person` 类型的列表。</span><span class="sxs-lookup"><span data-stu-id="1ae75-115">The `GetCommonFriends` operation takes a list of type `Person`.</span></span> <span data-ttu-id="1ae75-116">该列表应当有两个 `Person` 对象。</span><span class="sxs-lookup"><span data-stu-id="1ae75-116">The list is expected to have two `Person` objects in it.</span></span> <span data-ttu-id="1ae75-117">该操作返回 `Person` 对象的列表，这些对象位于输入列表中的 `friends` 对象的 `Person` 列表中。</span><span class="sxs-lookup"><span data-stu-id="1ae75-117">The operation returns a list of `Person` objects that are in the `friends` lists of both `Person` objects in the input list.</span></span>  
   
 ```  
 public List<Person> GetCommonFriends(List<Person> people)  
@@ -104,28 +90,28 @@ public List<Person> GetCommonFriends(List<Person> people)
 }  
 ```  
   
-## <a name="client"></a><span data-ttu-id="32e59-118">客户端</span><span class="sxs-lookup"><span data-stu-id="32e59-118">Client</span></span>  
- <span data-ttu-id="32e59-119">使用创建的客户端代理**添加服务引用**Visual Studio 功能。</span><span class="sxs-lookup"><span data-stu-id="32e59-119">The client proxy is created using the **Add Service Reference** feature of Visual Studio.</span></span>  
+## <a name="client"></a><span data-ttu-id="1ae75-118">客户端</span><span class="sxs-lookup"><span data-stu-id="1ae75-118">Client</span></span>  
+ <span data-ttu-id="1ae75-119">使用创建的客户端代理**添加服务引用**Visual Studio 功能。</span><span class="sxs-lookup"><span data-stu-id="1ae75-119">The client proxy is created using the **Add Service Reference** feature of Visual Studio.</span></span>  
   
- <span data-ttu-id="32e59-120">创建了一个由五个 `Person` 对象组成的社会网络。</span><span class="sxs-lookup"><span data-stu-id="32e59-120">A social network that consists of five `Person` objects is created.</span></span> <span data-ttu-id="32e59-121">客户端在服务中调用三个方法中的每一个。</span><span class="sxs-lookup"><span data-stu-id="32e59-121">The client calls each of the three methods in the service.</span></span>  
+ <span data-ttu-id="1ae75-120">创建了一个由五个 `Person` 对象组成的社会网络。</span><span class="sxs-lookup"><span data-stu-id="1ae75-120">A social network that consists of five `Person` objects is created.</span></span> <span data-ttu-id="1ae75-121">客户端在服务中调用三个方法中的每一个。</span><span class="sxs-lookup"><span data-stu-id="1ae75-121">The client calls each of the three methods in the service.</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="32e59-122">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="32e59-122">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="1ae75-122">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="1ae75-122">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="32e59-123">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="32e59-123">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="1ae75-123">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="1ae75-123">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="32e59-124">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="32e59-124">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="1ae75-124">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="1ae75-124">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="32e59-125">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="32e59-125">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="1ae75-125">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="1ae75-125">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="32e59-126">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="32e59-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="32e59-127">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="32e59-127">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="1ae75-126">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="1ae75-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="1ae75-127">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="1ae75-127">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="32e59-128">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="32e59-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="32e59-129">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="32e59-129">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="1ae75-128">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="1ae75-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="1ae75-129">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="1ae75-129">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
-## <a name="see-also"></a><span data-ttu-id="32e59-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="32e59-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="1ae75-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="1ae75-130">See Also</span></span>  
  <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
- [<span data-ttu-id="32e59-131">可互操作的对象引用</span><span class="sxs-lookup"><span data-stu-id="32e59-131">Interoperable Object References</span></span>](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)
+ [<span data-ttu-id="1ae75-131">可互操作的对象引用</span><span class="sxs-lookup"><span data-stu-id="1ae75-131">Interoperable Object References</span></span>](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

@@ -1,49 +1,35 @@
 ---
 title: 发现绑定元素示例
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 624209221dc8c2745afa6b4db20df6e47c7374f1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="discovery-binding-element-sample"></a><span data-ttu-id="2ae65-102">发现绑定元素示例</span><span class="sxs-lookup"><span data-stu-id="2ae65-102">Discovery Binding Element Sample</span></span>
-<span data-ttu-id="2ae65-103">本示例演示如何使用发现客户端绑定元素发现服务。</span><span class="sxs-lookup"><span data-stu-id="2ae65-103">This sample demonstrates how to use the discovery client binding element to discover a service.</span></span> <span data-ttu-id="2ae65-104">开发人员使用此功能可以向其现有客户端通道堆栈添加发现客户端通道，从而使编程模型非常直观。</span><span class="sxs-lookup"><span data-stu-id="2ae65-104">This feature enables developers to add a discovery client channel to their existing client channel stack, making the programming model very intuitive.</span></span> <span data-ttu-id="2ae65-105">当关联通道打开时，会使用发现解析服务地址。</span><span class="sxs-lookup"><span data-stu-id="2ae65-105">When the associated channel is opened, the address of the service is resolved using discovery.</span></span> <span data-ttu-id="2ae65-106">本示例包含以下项目：</span><span class="sxs-lookup"><span data-stu-id="2ae65-106">This sample consists of the following projects:</span></span>  
+# <a name="discovery-binding-element-sample"></a><span data-ttu-id="13d99-102">发现绑定元素示例</span><span class="sxs-lookup"><span data-stu-id="13d99-102">Discovery Binding Element Sample</span></span>
+<span data-ttu-id="13d99-103">本示例演示如何使用发现客户端绑定元素发现服务。</span><span class="sxs-lookup"><span data-stu-id="13d99-103">This sample demonstrates how to use the discovery client binding element to discover a service.</span></span> <span data-ttu-id="13d99-104">开发人员使用此功能可以向其现有客户端通道堆栈添加发现客户端通道，从而使编程模型非常直观。</span><span class="sxs-lookup"><span data-stu-id="13d99-104">This feature enables developers to add a discovery client channel to their existing client channel stack, making the programming model very intuitive.</span></span> <span data-ttu-id="13d99-105">当关联通道打开时，会使用发现解析服务地址。</span><span class="sxs-lookup"><span data-stu-id="13d99-105">When the associated channel is opened, the address of the service is resolved using discovery.</span></span> <span data-ttu-id="13d99-106">本示例包含以下项目：</span><span class="sxs-lookup"><span data-stu-id="13d99-106">This sample consists of the following projects:</span></span>  
   
--   <span data-ttu-id="2ae65-107">**CalculatorService**： 的可检测到[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务。</span><span class="sxs-lookup"><span data-stu-id="2ae65-107">**CalculatorService**: A discoverable [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
+-   <span data-ttu-id="13d99-107">**CalculatorService**： 可发现的 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="13d99-107">**CalculatorService**: A discoverable WCF service.</span></span>  
   
--   <span data-ttu-id="2ae65-108">**CalculatorClient**: A[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用 discovery 客户端通道搜索并调用 CalculatorService 的客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="2ae65-108">**CalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client application that uses the discovery client channel to search for and call the CalculatorService.</span></span>  
+-   <span data-ttu-id="13d99-108">**CalculatorClient**： 使用发现客户端通道搜索并调用 CalculatorService 的 WCF 客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="13d99-108">**CalculatorClient**: A WCF client application that uses the discovery client channel to search for and call the CalculatorService.</span></span>  
   
--   <span data-ttu-id="2ae65-109">**DynamicCalculatorClient**: A[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用动态终结点搜索并调用 CalculatorService 的客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="2ae65-109">**DynamicCalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client application that uses a dynamic endpoint to search for and call the CalculatorService.</span></span>  
+-   <span data-ttu-id="13d99-109">**DynamicCalculatorClient**： 使用动态终结点搜索并调用 CalculatorService 的 WCF 客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="13d99-109">**DynamicCalculatorClient**: A WCF client application that uses a dynamic endpoint to search for and call the CalculatorService.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="2ae65-110">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="2ae65-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2ae65-111">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="2ae65-111">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="13d99-110">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="13d99-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="13d99-111">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="13d99-111">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="2ae65-112">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="2ae65-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2ae65-113">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="2ae65-113">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="13d99-112">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="13d99-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="13d99-113">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="13d99-113">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryBindingElement`  
   
-## <a name="calculatorservice"></a><span data-ttu-id="2ae65-114">CalculatorService</span><span class="sxs-lookup"><span data-stu-id="2ae65-114">CalculatorService</span></span>  
- <span data-ttu-id="2ae65-115">此项目包含一个实现 `ICalculatorService` 协定的简单计算器服务。</span><span class="sxs-lookup"><span data-stu-id="2ae65-115">This project contains a simple calculator service that implements the `ICalculatorService` contract.</span></span>  
+## <a name="calculatorservice"></a><span data-ttu-id="13d99-114">CalculatorService</span><span class="sxs-lookup"><span data-stu-id="13d99-114">CalculatorService</span></span>  
+ <span data-ttu-id="13d99-115">此项目包含一个实现 `ICalculatorService` 协定的简单计算器服务。</span><span class="sxs-lookup"><span data-stu-id="13d99-115">This project contains a simple calculator service that implements the `ICalculatorService` contract.</span></span>  
   
- <span data-ttu-id="2ae65-116">下面的 App.config 文件用于在服务行为和发现终结点中添加 `<serviceDiscovery>` 行为。</span><span class="sxs-lookup"><span data-stu-id="2ae65-116">The following App.config file is used to add a `<serviceDiscovery>` behavior in the service behaviors as well as the discovery endpoint.</span></span>  
+ <span data-ttu-id="13d99-116">下面的 App.config 文件用于在服务行为和发现终结点中添加 `<serviceDiscovery>` 行为。</span><span class="sxs-lookup"><span data-stu-id="13d99-116">The following App.config file is used to add a `<serviceDiscovery>` behavior in the service behaviors as well as the discovery endpoint.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -64,7 +50,7 @@ ms.lasthandoff: 04/28/2018
   </system.serviceModel>  
 ```  
   
- <span data-ttu-id="2ae65-117">这使得服务及其终结点可发现。</span><span class="sxs-lookup"><span data-stu-id="2ae65-117">This makes the service and its endpoints discoverable.</span></span> <span data-ttu-id="2ae65-118">CalculatorService 是使用 NetTcpBinding 绑定添加一个终结点的自承载服务。</span><span class="sxs-lookup"><span data-stu-id="2ae65-118">The CalculatorService is a self-hosted service that adds one endpoint using the NetTcpBinding binding.</span></span> <span data-ttu-id="2ae65-119">它还向终结点添加 `EndpointDiscoveryBehavior` 并指定范围，如下面的节点中所示。</span><span class="sxs-lookup"><span data-stu-id="2ae65-119">It also adds an `EndpointDiscoveryBehavior` to the endpoint and specifies a scope as shown in the following code.</span></span>  
+ <span data-ttu-id="13d99-117">这使得服务及其终结点可发现。</span><span class="sxs-lookup"><span data-stu-id="13d99-117">This makes the service and its endpoints discoverable.</span></span> <span data-ttu-id="13d99-118">CalculatorService 是使用 NetTcpBinding 绑定添加一个终结点的自承载服务。</span><span class="sxs-lookup"><span data-stu-id="13d99-118">The CalculatorService is a self-hosted service that adds one endpoint using the NetTcpBinding binding.</span></span> <span data-ttu-id="13d99-119">它还向终结点添加 `EndpointDiscoveryBehavior` 并指定范围，如下面的节点中所示。</span><span class="sxs-lookup"><span data-stu-id="13d99-119">It also adds an `EndpointDiscoveryBehavior` to the endpoint and specifies a scope as shown in the following code.</span></span>  
   
 ```  
 // Add a NET.TCP endpoint and add a scope to that endpoint.  
@@ -75,8 +61,8 @@ netTcpEndpoint.Behaviors.Add(netTctEndpointBehavior);
 serviceHost.Open();  
 ```  
   
-## <a name="calculatorclient"></a><span data-ttu-id="2ae65-120">CalculatorClient</span><span class="sxs-lookup"><span data-stu-id="2ae65-120">CalculatorClient</span></span>  
- <span data-ttu-id="2ae65-121">此项目包含一个向 CalculatorService 发送消息的客户端实现。</span><span class="sxs-lookup"><span data-stu-id="2ae65-121">This project contains a client implementation that sends messages to the CalculatorService.</span></span> <span data-ttu-id="2ae65-122">此程序使用 `CreateCustomBindingWithDiscoveryElement()` 方法创建一个使用 Discovery 客户端通道的自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="2ae65-122">This program uses the `CreateCustomBindingWithDiscoveryElement()` method to create a custom binding that uses the Discovery Client Channel.</span></span>  
+## <a name="calculatorclient"></a><span data-ttu-id="13d99-120">CalculatorClient</span><span class="sxs-lookup"><span data-stu-id="13d99-120">CalculatorClient</span></span>  
+ <span data-ttu-id="13d99-121">此项目包含一个向 CalculatorService 发送消息的客户端实现。</span><span class="sxs-lookup"><span data-stu-id="13d99-121">This project contains a client implementation that sends messages to the CalculatorService.</span></span> <span data-ttu-id="13d99-122">此程序使用 `CreateCustomBindingWithDiscoveryElement()` 方法创建一个使用 Discovery 客户端通道的自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="13d99-122">This program uses the `CreateCustomBindingWithDiscoveryElement()` method to create a custom binding that uses the Discovery Client Channel.</span></span>  
   
 ```  
 static CustomBinding CreateCustomBindingWithDiscoveryElement()  
@@ -95,7 +81,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- <span data-ttu-id="2ae65-123"><xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 实例化后，开发人员指定搜索服务时要使用的条件。</span><span class="sxs-lookup"><span data-stu-id="2ae65-123">After the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> is instantiated, the developer specifies the criteria to use when searching for a service.</span></span> <span data-ttu-id="2ae65-124">在本例中，发现查找条件是 `ICalculatorService` 类型。</span><span class="sxs-lookup"><span data-stu-id="2ae65-124">In this case, the discovery find criterion is the `ICalculatorService` type.</span></span> <span data-ttu-id="2ae65-125">此外，开发人员还指定一个 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>，它返回指定要在何处查找服务的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。</span><span class="sxs-lookup"><span data-stu-id="2ae65-125">Additionally, the developer specifies a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> which returns a <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> that specifies where to look for the services.</span></span> <span data-ttu-id="2ae65-126"><xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 返回新的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 实例。</span><span class="sxs-lookup"><span data-stu-id="2ae65-126">The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> returns a new <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instance.</span></span> <span data-ttu-id="2ae65-127">有关详细信息，请参阅[通过 Discovery 客户端通道使用自定义绑定](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md)。</span><span class="sxs-lookup"><span data-stu-id="2ae65-127">For more information, see [Using a Custom Binding with the Discovery Client Channel](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).</span></span>  
+ <span data-ttu-id="13d99-123"><xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 实例化后，开发人员指定搜索服务时要使用的条件。</span><span class="sxs-lookup"><span data-stu-id="13d99-123">After the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> is instantiated, the developer specifies the criteria to use when searching for a service.</span></span> <span data-ttu-id="13d99-124">在本例中，发现查找条件是 `ICalculatorService` 类型。</span><span class="sxs-lookup"><span data-stu-id="13d99-124">In this case, the discovery find criterion is the `ICalculatorService` type.</span></span> <span data-ttu-id="13d99-125">此外，开发人员还指定一个 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>，它返回指定要在何处查找服务的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。</span><span class="sxs-lookup"><span data-stu-id="13d99-125">Additionally, the developer specifies a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> which returns a <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> that specifies where to look for the services.</span></span> <span data-ttu-id="13d99-126"><xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 返回新的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 实例。</span><span class="sxs-lookup"><span data-stu-id="13d99-126">The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> returns a new <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instance.</span></span> <span data-ttu-id="13d99-127">有关详细信息，请参阅[通过 Discovery 客户端通道使用自定义绑定](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md)。</span><span class="sxs-lookup"><span data-stu-id="13d99-127">For more information, see [Using a Custom Binding with the Discovery Client Channel](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).</span></span>  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -110,27 +96,27 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
     }  
 ```  
   
- <span data-ttu-id="2ae65-128">在本例中，客户端使用 Discovery 协议定义的 UDP 多播机制在本地子网上搜索服务。</span><span class="sxs-lookup"><span data-stu-id="2ae65-128">In this case, the client uses the UDP multicast mechanism defined by the Discovery protocol to search for services on the local subnet.</span></span> <span data-ttu-id="2ae65-129">方法的其余部分创建自定义绑定并将 Discovery 绑定元素插入堆栈顶部。</span><span class="sxs-lookup"><span data-stu-id="2ae65-129">The remainder of the method creates a custom binding and inserts the Discovery binding element at the top of the stack.</span></span>  
+ <span data-ttu-id="13d99-128">在本例中，客户端使用 Discovery 协议定义的 UDP 多播机制在本地子网上搜索服务。</span><span class="sxs-lookup"><span data-stu-id="13d99-128">In this case, the client uses the UDP multicast mechanism defined by the Discovery protocol to search for services on the local subnet.</span></span> <span data-ttu-id="13d99-129">方法的其余部分创建自定义绑定并将 Discovery 绑定元素插入堆栈顶部。</span><span class="sxs-lookup"><span data-stu-id="13d99-129">The remainder of the method creates a custom binding and inserts the Discovery binding element at the top of the stack.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2ae65-130"><xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 必须放置在绑定堆栈顶部。</span><span class="sxs-lookup"><span data-stu-id="2ae65-130">The <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> must be placed on the top of the binding stack.</span></span> <span data-ttu-id="2ae65-131"><xref:System.ServiceModel.Channels.BindingElement> 之上的任何 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 都必须确保其创建的通道工厂或通道不使用 `EndpointAddress` 或 `Via` 属性，因为实际地址只能在 Discovery 客户端通道上发现。</span><span class="sxs-lookup"><span data-stu-id="2ae65-131">Any <xref:System.ServiceModel.Channels.BindingElement> on top of <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> must make sure that the channel factory or channel it creates does not use the `EndpointAddress` or `Via` properties, because the actual address is found only at the Discovery client channel.</span></span>  
+>  <span data-ttu-id="13d99-130"><xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 必须放置在绑定堆栈顶部。</span><span class="sxs-lookup"><span data-stu-id="13d99-130">The <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> must be placed on the top of the binding stack.</span></span> <span data-ttu-id="13d99-131"><xref:System.ServiceModel.Channels.BindingElement> 之上的任何 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 都必须确保其创建的通道工厂或通道不使用 `EndpointAddress` 或 `Via` 属性，因为实际地址只能在 Discovery 客户端通道上发现。</span><span class="sxs-lookup"><span data-stu-id="13d99-131">Any <xref:System.ServiceModel.Channels.BindingElement> on top of <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> must make sure that the channel factory or channel it creates does not use the `EndpointAddress` or `Via` properties, because the actual address is found only at the Discovery client channel.</span></span>  
   
- <span data-ttu-id="2ae65-132">接下来，可以通过传入此自定义绑定和终结点地址来实例化 `CalculatorClient`。</span><span class="sxs-lookup"><span data-stu-id="2ae65-132">Next, the `CalculatorClient` can be instantiated by passing in this custom binding as well as an endpoint address.</span></span>  
+ <span data-ttu-id="13d99-132">接下来，可以通过传入此自定义绑定和终结点地址来实例化 `CalculatorClient`。</span><span class="sxs-lookup"><span data-stu-id="13d99-132">Next, the `CalculatorClient` can be instantiated by passing in this custom binding as well as an endpoint address.</span></span>  
   
 ```  
 CalculatorServiceClient client = new CalculatorServiceClient(CreateCustomBindingWithDiscoveryElement(), DiscoveryClientBindingElement.DiscoveryEndpointAddress);  
 ```  
   
- <span data-ttu-id="2ae65-133">在使用发现客户端通道时，将传入先前指定的恒定终结点地址。</span><span class="sxs-lookup"><span data-stu-id="2ae65-133">When using the Discovery Client Channel, the constant endpoint address specified previously is passed in.</span></span> <span data-ttu-id="2ae65-134">现在，在运行时，发现客户端通道查找通过查找条件指定的服务，并与其连接。</span><span class="sxs-lookup"><span data-stu-id="2ae65-134">Now at runtime, the Discovery Client Channel finds the service specified by the find criteria and connects to it.</span></span> <span data-ttu-id="2ae65-135">若要使服务和客户端建立连接，它们必须具有相同的基础绑定堆栈。</span><span class="sxs-lookup"><span data-stu-id="2ae65-135">For the service and the client to establish a connection, they must also have the same underlying binding stack.</span></span>  
+ <span data-ttu-id="13d99-133">在使用发现客户端通道时，将传入先前指定的恒定终结点地址。</span><span class="sxs-lookup"><span data-stu-id="13d99-133">When using the Discovery Client Channel, the constant endpoint address specified previously is passed in.</span></span> <span data-ttu-id="13d99-134">现在，在运行时，发现客户端通道查找通过查找条件指定的服务，并与其连接。</span><span class="sxs-lookup"><span data-stu-id="13d99-134">Now at runtime, the Discovery Client Channel finds the service specified by the find criteria and connects to it.</span></span> <span data-ttu-id="13d99-135">若要使服务和客户端建立连接，它们必须具有相同的基础绑定堆栈。</span><span class="sxs-lookup"><span data-stu-id="13d99-135">For the service and the client to establish a connection, they must also have the same underlying binding stack.</span></span>  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="2ae65-136">使用此示例</span><span class="sxs-lookup"><span data-stu-id="2ae65-136">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="13d99-136">使用此示例</span><span class="sxs-lookup"><span data-stu-id="13d99-136">To use this sample</span></span>  
   
-1.  <span data-ttu-id="2ae65-137">在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中打开解决方案。</span><span class="sxs-lookup"><span data-stu-id="2ae65-137">Open the solution in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
+1.  <span data-ttu-id="13d99-137">在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中打开解决方案。</span><span class="sxs-lookup"><span data-stu-id="13d99-137">Open the solution in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-2.  <span data-ttu-id="2ae65-138">生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="2ae65-138">Build the solution.</span></span>  
+2.  <span data-ttu-id="13d99-138">生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="13d99-138">Build the solution.</span></span>  
   
-3.  <span data-ttu-id="2ae65-139">运行服务应用程序和每个客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="2ae65-139">Run the service application and each of the client applications.</span></span>  
+3.  <span data-ttu-id="13d99-139">运行服务应用程序和每个客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="13d99-139">Run the service application and each of the client applications.</span></span>  
   
-4.  <span data-ttu-id="2ae65-140">观察客户端是否能够在不知道服务地址的情况下找到服务。</span><span class="sxs-lookup"><span data-stu-id="2ae65-140">Observe that the client was able to find the service without knowing its address.</span></span>  
+4.  <span data-ttu-id="13d99-140">观察客户端是否能够在不知道服务地址的情况下找到服务。</span><span class="sxs-lookup"><span data-stu-id="13d99-140">Observe that the client was able to find the service without knowing its address.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ae65-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="2ae65-141">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13d99-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="13d99-141">See Also</span></span>

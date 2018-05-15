@@ -1,13 +1,6 @@
 ---
-title: "如何：更改光标类型"
-ms.custom: 
+title: 如何：更改光标类型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,33 +8,28 @@ helpviewer_keywords:
 - mouse pointer [WPF], cursor type
 - cursor (mouse pointer)
 ms.assetid: 08c945a7-8ab0-4320-acf3-0b4955a344c2
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 31c59f4c90eed00775fc9fceaf872391faa93784
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26fc2584381307612c40b615f169902089d9d1f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-change-the-cursor-type"></a><span data-ttu-id="eb1c4-102">如何：更改光标类型</span><span class="sxs-lookup"><span data-stu-id="eb1c4-102">How to: Change the Cursor Type</span></span>
-<span data-ttu-id="eb1c4-103">此示例演示如何更改<xref:System.Windows.Input.Cursor>鼠标指针的特定元素和应用程序。</span><span class="sxs-lookup"><span data-stu-id="eb1c4-103">This example shows how to change the <xref:System.Windows.Input.Cursor> of the mouse pointer for a specific element and for the application.</span></span>  
+# <a name="how-to-change-the-cursor-type"></a><span data-ttu-id="f4688-102">如何：更改光标类型</span><span class="sxs-lookup"><span data-stu-id="f4688-102">How to: Change the Cursor Type</span></span>
+<span data-ttu-id="f4688-103">此示例演示如何更改<xref:System.Windows.Input.Cursor>鼠标指针的特定元素和应用程序。</span><span class="sxs-lookup"><span data-stu-id="f4688-103">This example shows how to change the <xref:System.Windows.Input.Cursor> of the mouse pointer for a specific element and for the application.</span></span>  
   
- <span data-ttu-id="eb1c4-104">此示例组成[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件和代码隐藏文件。</span><span class="sxs-lookup"><span data-stu-id="eb1c4-104">This example consists of a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file and a code behind file.</span></span>  
+ <span data-ttu-id="f4688-104">此示例组成[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件和代码隐藏文件。</span><span class="sxs-lookup"><span data-stu-id="f4688-104">This example consists of a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file and a code behind file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="eb1c4-105">示例</span><span class="sxs-lookup"><span data-stu-id="eb1c4-105">Example</span></span>  
- <span data-ttu-id="eb1c4-106">创建用户界面，其中包括<xref:System.Windows.Controls.ComboBox>选择所需<xref:System.Windows.Input.Cursor>，一对<xref:System.Windows.Controls.RadioButton>对象以确定是否游标更改适用于仅包含单个元素或适用于整个应用程序，和一个<xref:System.Windows.Controls.Border>这是新光标将应用于的元素。</span><span class="sxs-lookup"><span data-stu-id="eb1c4-106">The user interface is created, which consists of a <xref:System.Windows.Controls.ComboBox> to select the desired <xref:System.Windows.Input.Cursor>, a pair of <xref:System.Windows.Controls.RadioButton> objects to determine if the cursor change applies to only a single element or applies to the entire application, and a <xref:System.Windows.Controls.Border> which is the element that the new cursor is applied to.</span></span>  
+## <a name="example"></a><span data-ttu-id="f4688-105">示例</span><span class="sxs-lookup"><span data-stu-id="f4688-105">Example</span></span>  
+ <span data-ttu-id="f4688-106">创建用户界面，其中包括<xref:System.Windows.Controls.ComboBox>选择所需<xref:System.Windows.Input.Cursor>，一对<xref:System.Windows.Controls.RadioButton>对象以确定是否游标更改适用于仅包含单个元素或适用于整个应用程序，和一个<xref:System.Windows.Controls.Border>这是新光标将应用于的元素。</span><span class="sxs-lookup"><span data-stu-id="f4688-106">The user interface is created, which consists of a <xref:System.Windows.Controls.ComboBox> to select the desired <xref:System.Windows.Input.Cursor>, a pair of <xref:System.Windows.Controls.RadioButton> objects to determine if the cursor change applies to only a single element or applies to the entire application, and a <xref:System.Windows.Controls.Border> which is the element that the new cursor is applied to.</span></span>  
   
  [!code-xaml[cursors#ChangeCursorsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/cursors/CSharp/Window1.xaml#changecursorsxaml)]  
   
- <span data-ttu-id="eb1c4-107">下面的代码隐藏创建<xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>中更改的游标类型时调用事件处理程序<xref:System.Windows.Controls.ComboBox>。</span><span class="sxs-lookup"><span data-stu-id="eb1c4-107">The following code behind creates a <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> event handler which is called when the cursor type is changed in the <xref:System.Windows.Controls.ComboBox>.</span></span>  <span data-ttu-id="eb1c4-108">Switch 语句的筛选器上的游标名称和集<xref:System.Windows.FrameworkElement.Cursor%2A>属性<xref:System.Windows.Controls.Border>名*DisplayArea*。</span><span class="sxs-lookup"><span data-stu-id="eb1c4-108">A switch statement filters on the cursor name and sets the <xref:System.Windows.FrameworkElement.Cursor%2A> property on the <xref:System.Windows.Controls.Border> which is named *DisplayArea*.</span></span>  
+ <span data-ttu-id="f4688-107">下面的代码隐藏创建<xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>中更改的游标类型时调用事件处理程序<xref:System.Windows.Controls.ComboBox>。</span><span class="sxs-lookup"><span data-stu-id="f4688-107">The following code behind creates a <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> event handler which is called when the cursor type is changed in the <xref:System.Windows.Controls.ComboBox>.</span></span>  <span data-ttu-id="f4688-108">Switch 语句的筛选器上的游标名称和集<xref:System.Windows.FrameworkElement.Cursor%2A>属性<xref:System.Windows.Controls.Border>名*DisplayArea*。</span><span class="sxs-lookup"><span data-stu-id="f4688-108">A switch statement filters on the cursor name and sets the <xref:System.Windows.FrameworkElement.Cursor%2A> property on the <xref:System.Windows.Controls.Border> which is named *DisplayArea*.</span></span>  
   
- <span data-ttu-id="eb1c4-109">如果光标更改设置为"整个应用程序"，<xref:System.Windows.Input.Mouse.OverrideCursor%2A>属性设置为<xref:System.Windows.FrameworkElement.Cursor%2A>属性<xref:System.Windows.Controls.Border>控件。</span><span class="sxs-lookup"><span data-stu-id="eb1c4-109">If the cursor change is set to "Entire Application", the <xref:System.Windows.Input.Mouse.OverrideCursor%2A> property is set to the <xref:System.Windows.FrameworkElement.Cursor%2A> property of the <xref:System.Windows.Controls.Border> control.</span></span>  <span data-ttu-id="eb1c4-110">这将强制更改对整个应用程序的光标。</span><span class="sxs-lookup"><span data-stu-id="eb1c4-110">This forces the cursor to change for the whole application.</span></span>  
+ <span data-ttu-id="f4688-109">如果光标更改设置为"整个应用程序"，<xref:System.Windows.Input.Mouse.OverrideCursor%2A>属性设置为<xref:System.Windows.FrameworkElement.Cursor%2A>属性<xref:System.Windows.Controls.Border>控件。</span><span class="sxs-lookup"><span data-stu-id="f4688-109">If the cursor change is set to "Entire Application", the <xref:System.Windows.Input.Mouse.OverrideCursor%2A> property is set to the <xref:System.Windows.FrameworkElement.Cursor%2A> property of the <xref:System.Windows.Controls.Border> control.</span></span>  <span data-ttu-id="f4688-110">这将强制更改对整个应用程序的光标。</span><span class="sxs-lookup"><span data-stu-id="f4688-110">This forces the cursor to change for the whole application.</span></span>  
   
  [!code-csharp[cursors#ChangeCursorsSample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/cursors/CSharp/Window1.xaml.cs#changecursorssample)]
  [!code-vb[cursors#ChangeCursorsSample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/cursors/VisualBasic/Window1.xaml.vb#changecursorssample)]  
   
-## <a name="see-also"></a><span data-ttu-id="eb1c4-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="eb1c4-111">See Also</span></span>  
- [<span data-ttu-id="eb1c4-112">输入概述</span><span class="sxs-lookup"><span data-stu-id="eb1c4-112">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a><span data-ttu-id="f4688-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="f4688-111">See Also</span></span>  
+ [<span data-ttu-id="f4688-112">输入概述</span><span class="sxs-lookup"><span data-stu-id="f4688-112">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)

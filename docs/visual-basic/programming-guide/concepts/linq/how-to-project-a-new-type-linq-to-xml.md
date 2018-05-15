@@ -1,30 +1,20 @@
 ---
-title: "如何： 投影新类型 (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: 如何： 投影新类型 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 73b677e45be1d457d54de01331c93f60348e6bfd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: da45c527ef9943cabf207a0b475a8a2114d5c6d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a><span data-ttu-id="8c16a-102">如何： 投影新类型 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8c16a-102">How to: Project a New Type (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="8c16a-103">本节中的其他示例已演示了一些查询，这些查询以 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>、<xref:System.Collections.Generic.IEnumerable%601> 的 `string` 和 <xref:System.Collections.Generic.IEnumerable%601> 的 `int` 的形式返回结果。</span><span class="sxs-lookup"><span data-stu-id="8c16a-103">Other examples in this section have shown queries that return results as <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> of `string`, and <xref:System.Collections.Generic.IEnumerable%601> of `int`.</span></span> <span data-ttu-id="8c16a-104">这些是常见结果类型，但它们不是对所有情况都适用。</span><span class="sxs-lookup"><span data-stu-id="8c16a-104">These are common result types, but they are not appropriate for every scenario.</span></span> <span data-ttu-id="8c16a-105">在很多情况下，会希望查询返回其他类型的 <xref:System.Collections.Generic.IEnumerable%601>。</span><span class="sxs-lookup"><span data-stu-id="8c16a-105">In many cases you will want your queries to return an <xref:System.Collections.Generic.IEnumerable%601> of some other type.</span></span>  
+# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a><span data-ttu-id="f4f0c-102">如何： 投影新类型 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f4f0c-102">How to: Project a New Type (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="f4f0c-103">本节中的其他示例已演示了一些查询，这些查询以 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>、<xref:System.Collections.Generic.IEnumerable%601> 的 `string` 和 <xref:System.Collections.Generic.IEnumerable%601> 的 `int` 的形式返回结果。</span><span class="sxs-lookup"><span data-stu-id="f4f0c-103">Other examples in this section have shown queries that return results as <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> of `string`, and <xref:System.Collections.Generic.IEnumerable%601> of `int`.</span></span> <span data-ttu-id="f4f0c-104">这些是常见结果类型，但它们不是对所有情况都适用。</span><span class="sxs-lookup"><span data-stu-id="f4f0c-104">These are common result types, but they are not appropriate for every scenario.</span></span> <span data-ttu-id="f4f0c-105">在很多情况下，会希望查询返回其他类型的 <xref:System.Collections.Generic.IEnumerable%601>。</span><span class="sxs-lookup"><span data-stu-id="f4f0c-105">In many cases you will want your queries to return an <xref:System.Collections.Generic.IEnumerable%601> of some other type.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8c16a-106">示例</span><span class="sxs-lookup"><span data-stu-id="8c16a-106">Example</span></span>  
- <span data-ttu-id="8c16a-107">此示例演示如何在 `Select` 子句中实例化对象。</span><span class="sxs-lookup"><span data-stu-id="8c16a-107">This example shows how to instantiate objects in the `Select` clause.</span></span> <span data-ttu-id="8c16a-108">代码首先定义一个具有一个构造函数的新类，然后修改 `Select` 语句，使该表达式成为新类的新实例。</span><span class="sxs-lookup"><span data-stu-id="8c16a-108">The code first defines a new class with a constructor, and then modifies the `Select` statement so that the expression is a new instance of the new class.</span></span>  
+## <a name="example"></a><span data-ttu-id="f4f0c-106">示例</span><span class="sxs-lookup"><span data-stu-id="f4f0c-106">Example</span></span>  
+ <span data-ttu-id="f4f0c-107">此示例演示如何在 `Select` 子句中实例化对象。</span><span class="sxs-lookup"><span data-stu-id="f4f0c-107">This example shows how to instantiate objects in the `Select` clause.</span></span> <span data-ttu-id="f4f0c-108">代码首先定义一个具有一个构造函数的新类，然后修改 `Select` 语句，使该表达式成为新类的新实例。</span><span class="sxs-lookup"><span data-stu-id="f4f0c-108">The code first defines a new class with a constructor, and then modifies the `Select` statement so that the expression is a new instance of the new class.</span></span>  
   
- <span data-ttu-id="8c16a-109">本示例使用以下 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="8c16a-109">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="f4f0c-109">本示例使用以下 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="f4f0c-109">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Public Class NameQty  
@@ -52,14 +42,14 @@ Public Class Program
 End Class  
 ```  
   
- <span data-ttu-id="8c16a-110">此示例使用`M:System.Xml.Linq.XElement.Element`主题中引入的方法[如何： 检索单个子元素 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="8c16a-110">This example uses the `M:System.Xml.Linq.XElement.Element` method that was introduced in the topic [How to: Retrieve a Single Child Element (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md).</span></span> <span data-ttu-id="8c16a-111">还使用强制转换来检索 `M:System.Xml.Linq.XElement.Element` 方法返回的元素值。</span><span class="sxs-lookup"><span data-stu-id="8c16a-111">It also uses casts to retrieve the values of the elements that are returned by the `M:System.Xml.Linq.XElement.Element` method.</span></span>  
+ <span data-ttu-id="f4f0c-110">此示例使用`M:System.Xml.Linq.XElement.Element`主题中引入的方法[如何： 检索单个子元素 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="f4f0c-110">This example uses the `M:System.Xml.Linq.XElement.Element` method that was introduced in the topic [How to: Retrieve a Single Child Element (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md).</span></span> <span data-ttu-id="f4f0c-111">还使用强制转换来检索 `M:System.Xml.Linq.XElement.Element` 方法返回的元素值。</span><span class="sxs-lookup"><span data-stu-id="f4f0c-111">It also uses casts to retrieve the values of the elements that are returned by the `M:System.Xml.Linq.XElement.Element` method.</span></span>  
   
- <span data-ttu-id="8c16a-112">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="8c16a-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="f4f0c-112">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="f4f0c-112">This example produces the following output:</span></span>  
   
 ```  
 Lawnmower:1  
 Baby Monitor:2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8c16a-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8c16a-113">See Also</span></span>  
- [<span data-ttu-id="8c16a-114">投影和转换 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8c16a-114">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="f4f0c-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="f4f0c-113">See Also</span></span>  
+ [<span data-ttu-id="f4f0c-114">投影和转换 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f4f0c-114">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

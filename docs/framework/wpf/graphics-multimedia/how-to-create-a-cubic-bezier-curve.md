@@ -1,50 +1,38 @@
 ---
-title: "如何：创建三次方贝塞尔曲线"
-ms.custom: 
+title: 如何：创建三次方贝塞尔曲线
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - curves [WPF], cubic Bezier
 - Bezier curves [WPF], cubic
 - graphics [WPF], cubic Bezier curves
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9d4e033ef18cfd33635ba34409c4edca87a7e23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6332129179e1934e5a37c7a1a40ef5f46ab669a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-create-a-cubic-bezier-curve"></a><span data-ttu-id="7cf82-102">如何：创建三次方贝塞尔曲线</span><span class="sxs-lookup"><span data-stu-id="7cf82-102">How to: Create a Cubic Bezier Curve</span></span>
-<span data-ttu-id="7cf82-103">此示例演示如何创建三次方贝塞尔曲线。</span><span class="sxs-lookup"><span data-stu-id="7cf82-103">This example shows how to create a cubic Bezier curve.</span></span> <span data-ttu-id="7cf82-104">若要创建三次方贝塞尔曲线，使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.BezierSegment>类。</span><span class="sxs-lookup"><span data-stu-id="7cf82-104">To create a cubic Bezier curve, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.BezierSegment> classes.</span></span>  <span data-ttu-id="7cf82-105">若要显示所生成的几何图形，使用<xref:System.Windows.Shapes.Path>元素，或将它与<xref:System.Windows.Media.GeometryDrawing>或<xref:System.Windows.Media.DrawingContext>。</span><span class="sxs-lookup"><span data-stu-id="7cf82-105">To display the resulting geometry, use a <xref:System.Windows.Shapes.Path> element, or use it with a <xref:System.Windows.Media.GeometryDrawing> or a <xref:System.Windows.Media.DrawingContext>.</span></span> <span data-ttu-id="7cf82-106">在以下示例中，三次方贝塞尔曲线从绘制 （10，100） 到 （300，100）。</span><span class="sxs-lookup"><span data-stu-id="7cf82-106">In the following examples, a cubic Bezier curve is drawn from (10, 100) to (300, 100).</span></span> <span data-ttu-id="7cf82-107">曲线的控制点为 （100，0） 和 （200、 200）。</span><span class="sxs-lookup"><span data-stu-id="7cf82-107">The curve has control points of (100, 0) and (200, 200).</span></span>  
+# <a name="how-to-create-a-cubic-bezier-curve"></a><span data-ttu-id="e0b57-102">如何：创建三次方贝塞尔曲线</span><span class="sxs-lookup"><span data-stu-id="e0b57-102">How to: Create a Cubic Bezier Curve</span></span>
+<span data-ttu-id="e0b57-103">此示例演示如何创建三次方贝塞尔曲线。</span><span class="sxs-lookup"><span data-stu-id="e0b57-103">This example shows how to create a cubic Bezier curve.</span></span> <span data-ttu-id="e0b57-104">若要创建三次方贝塞尔曲线，使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.BezierSegment>类。</span><span class="sxs-lookup"><span data-stu-id="e0b57-104">To create a cubic Bezier curve, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.BezierSegment> classes.</span></span>  <span data-ttu-id="e0b57-105">若要显示所生成的几何图形，使用<xref:System.Windows.Shapes.Path>元素，或将它与<xref:System.Windows.Media.GeometryDrawing>或<xref:System.Windows.Media.DrawingContext>。</span><span class="sxs-lookup"><span data-stu-id="e0b57-105">To display the resulting geometry, use a <xref:System.Windows.Shapes.Path> element, or use it with a <xref:System.Windows.Media.GeometryDrawing> or a <xref:System.Windows.Media.DrawingContext>.</span></span> <span data-ttu-id="e0b57-106">在以下示例中，三次方贝塞尔曲线从绘制 （10，100） 到 （300，100）。</span><span class="sxs-lookup"><span data-stu-id="e0b57-106">In the following examples, a cubic Bezier curve is drawn from (10, 100) to (300, 100).</span></span> <span data-ttu-id="e0b57-107">曲线的控制点为 （100，0） 和 （200、 200）。</span><span class="sxs-lookup"><span data-stu-id="e0b57-107">The curve has control points of (100, 0) and (200, 200).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7cf82-108">示例</span><span class="sxs-lookup"><span data-stu-id="7cf82-108">Example</span></span>  
- <span data-ttu-id="7cf82-109">[xaml]</span><span class="sxs-lookup"><span data-stu-id="7cf82-109">[xaml]</span></span>  
+## <a name="example"></a><span data-ttu-id="e0b57-108">示例</span><span class="sxs-lookup"><span data-stu-id="e0b57-108">Example</span></span>  
+ <span data-ttu-id="e0b57-109">[xaml]</span><span class="sxs-lookup"><span data-stu-id="e0b57-109">[xaml]</span></span>  
   
- <span data-ttu-id="7cf82-110">在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，你可能使用缩写的标记语法来描述的路径。</span><span class="sxs-lookup"><span data-stu-id="7cf82-110">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you may use abbreviated markup syntax to describe a path.</span></span>  
+ <span data-ttu-id="e0b57-110">在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，你可能使用缩写的标记语法来描述的路径。</span><span class="sxs-lookup"><span data-stu-id="e0b57-110">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you may use abbreviated markup syntax to describe a path.</span></span>  
   
  [!code-xaml[GeometrySample#53](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/geometryattributesyntaxexample.xaml#53)]  
   
- <span data-ttu-id="7cf82-111">[xaml]</span><span class="sxs-lookup"><span data-stu-id="7cf82-111">[xaml]</span></span>  
+ <span data-ttu-id="e0b57-111">[xaml]</span><span class="sxs-lookup"><span data-stu-id="e0b57-111">[xaml]</span></span>  
   
- <span data-ttu-id="7cf82-112">在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您还可以绘制使用对象标记的三次方贝塞尔曲线。</span><span class="sxs-lookup"><span data-stu-id="7cf82-112">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can also draw a cubic Bezier curve using object tags.</span></span> <span data-ttu-id="7cf82-113">以下内容等效于之前的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="7cf82-113">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>  
+ <span data-ttu-id="e0b57-112">在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您还可以绘制使用对象标记的三次方贝塞尔曲线。</span><span class="sxs-lookup"><span data-stu-id="e0b57-112">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can also draw a cubic Bezier curve using object tags.</span></span> <span data-ttu-id="e0b57-113">以下内容等效于之前的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="e0b57-113">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>  
   
  [!code-xaml[GeometrySample#33](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#33)]  
   
- <span data-ttu-id="7cf82-114">此示例是更大示例的组成部分；有关完整示例，请参阅[几何图形示例](http://go.microsoft.com/fwlink/?LinkID=159989)。</span><span class="sxs-lookup"><span data-stu-id="7cf82-114">This example is part of larger sample; for the complete sample, see the [Geometries Sample](http://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
+ <span data-ttu-id="e0b57-114">此示例是更大示例的组成部分；有关完整示例，请参阅[几何图形示例](http://go.microsoft.com/fwlink/?LinkID=159989)。</span><span class="sxs-lookup"><span data-stu-id="e0b57-114">This example is part of larger sample; for the complete sample, see the [Geometries Sample](http://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7cf82-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="7cf82-115">See Also</span></span>  
- [<span data-ttu-id="7cf82-116">创建椭圆弧</span><span class="sxs-lookup"><span data-stu-id="7cf82-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [<span data-ttu-id="7cf82-117">在 PathGeometry 中创建 LineSegment</span><span class="sxs-lookup"><span data-stu-id="7cf82-117">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [<span data-ttu-id="7cf82-118">创建三次方贝塞尔曲线</span><span class="sxs-lookup"><span data-stu-id="7cf82-118">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [<span data-ttu-id="7cf82-119">创建二次贝塞尔曲线</span><span class="sxs-lookup"><span data-stu-id="7cf82-119">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)
+## <a name="see-also"></a><span data-ttu-id="e0b57-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="e0b57-115">See Also</span></span>  
+ [<span data-ttu-id="e0b57-116">创建椭圆弧</span><span class="sxs-lookup"><span data-stu-id="e0b57-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
+ [<span data-ttu-id="e0b57-117">在 PathGeometry 中创建 LineSegment</span><span class="sxs-lookup"><span data-stu-id="e0b57-117">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [<span data-ttu-id="e0b57-118">创建三次方贝塞尔曲线</span><span class="sxs-lookup"><span data-stu-id="e0b57-118">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
+ [<span data-ttu-id="e0b57-119">创建二次贝塞尔曲线</span><span class="sxs-lookup"><span data-stu-id="e0b57-119">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)

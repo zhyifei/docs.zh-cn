@@ -1,54 +1,42 @@
 ---
-title: "创建新的 Windows 窗体"
-ms.custom: 
+title: 创建新的 Windows 窗体
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5f2769921241216d60c3ed1bb25edcf238830d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ddceec86938ef5f500c38eb90004dc1f9d11b122
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="creating-a-new-windows-form"></a><span data-ttu-id="41e45-102">创建新的 Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="41e45-102">Creating a New Windows Form</span></span>
-<span data-ttu-id="41e45-103">本主题包含介绍如何创建你的第一个 Windows 窗体应用程序的主题链接。</span><span class="sxs-lookup"><span data-stu-id="41e45-103">This topic contains links to topics that describe how to create your first Windows Forms application.</span></span> <span data-ttu-id="41e45-104">此外，本部分中的主题还将介绍一些基本的词汇和当开始创建 Windows 窗体应用程序时，应该了解的准则。</span><span class="sxs-lookup"><span data-stu-id="41e45-104">Also, the topics in this section introduce some of the basic vocabulary and guidelines that you should understand when you start to create a Windows Forms application.</span></span> <span data-ttu-id="41e45-105">若要了解有关 Windows 窗体应用程序的详细信息，可以使用它们、 事件和处理事件和如何处理来自用户的输入上的控件，请参阅相关的主题列表。</span><span class="sxs-lookup"><span data-stu-id="41e45-105">To learn more about Windows Forms applications, the controls you can use on them, events and handling events, and how to handle input from the user, see the related topic list.</span></span>  
+# <a name="creating-a-new-windows-form"></a><span data-ttu-id="75d23-102">创建新的 Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="75d23-102">Creating a New Windows Form</span></span>
+<span data-ttu-id="75d23-103">本主题包含介绍如何创建你的第一个 Windows 窗体应用程序的主题链接。</span><span class="sxs-lookup"><span data-stu-id="75d23-103">This topic contains links to topics that describe how to create your first Windows Forms application.</span></span> <span data-ttu-id="75d23-104">此外，本部分中的主题还将介绍一些基本的词汇和当开始创建 Windows 窗体应用程序时，应该了解的准则。</span><span class="sxs-lookup"><span data-stu-id="75d23-104">Also, the topics in this section introduce some of the basic vocabulary and guidelines that you should understand when you start to create a Windows Forms application.</span></span> <span data-ttu-id="75d23-105">若要了解有关 Windows 窗体应用程序的详细信息，可以使用它们、 事件和处理事件和如何处理来自用户的输入上的控件，请参阅相关的主题列表。</span><span class="sxs-lookup"><span data-stu-id="75d23-105">To learn more about Windows Forms applications, the controls you can use on them, events and handling events, and how to handle input from the user, see the related topic list.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="41e45-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="41e45-106">In This Section</span></span>  
- <span data-ttu-id="41e45-107">[Windows 窗体坐标](../../../docs/framework/winforms/windows-forms-coordinates.md)。</span><span class="sxs-lookup"><span data-stu-id="41e45-107">[Windows Forms Coordinates](../../../docs/framework/winforms/windows-forms-coordinates.md).</span></span>  
- <span data-ttu-id="41e45-108">描述客户端和屏幕坐标。</span><span class="sxs-lookup"><span data-stu-id="41e45-108">Describes client and screen coordinates.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="75d23-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="75d23-106">In This Section</span></span>  
+ <span data-ttu-id="75d23-107">[Windows 窗体坐标](../../../docs/framework/winforms/windows-forms-coordinates.md)。</span><span class="sxs-lookup"><span data-stu-id="75d23-107">[Windows Forms Coordinates](../../../docs/framework/winforms/windows-forms-coordinates.md).</span></span>  
+ <span data-ttu-id="75d23-108">描述客户端和屏幕坐标。</span><span class="sxs-lookup"><span data-stu-id="75d23-108">Describes client and screen coordinates.</span></span>  
   
- [<span data-ttu-id="41e45-109">如何：通过命令行创建 Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="41e45-109">How to: Create a Windows Forms Application from the Command Line</span></span>](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md)  
- <span data-ttu-id="41e45-110">描述如何创建基本的 Windows 窗体，并从命令行对其进行编译。</span><span class="sxs-lookup"><span data-stu-id="41e45-110">Describes how to create a basic Windows Form and compile it from the command line.</span></span>  
+ [<span data-ttu-id="75d23-109">如何：通过命令行创建 Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="75d23-109">How to: Create a Windows Forms Application from the Command Line</span></span>](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md)  
+ <span data-ttu-id="75d23-110">描述如何创建基本的 Windows 窗体，并从命令行对其进行编译。</span><span class="sxs-lookup"><span data-stu-id="75d23-110">Describes how to create a basic Windows Form and compile it from the command line.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="41e45-111">参考</span><span class="sxs-lookup"><span data-stu-id="41e45-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="75d23-111">参考</span><span class="sxs-lookup"><span data-stu-id="75d23-111">Reference</span></span>  
  <xref:System.Windows.Forms.Form>  
- <span data-ttu-id="41e45-112">描述该类，并包含其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="41e45-112">Describes this class and contains links to all its members.</span></span>  
+ <span data-ttu-id="75d23-112">描述该类，并包含其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="75d23-112">Describes this class and contains links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.Control>  
- <span data-ttu-id="41e45-113">描述该类，并包含其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="41e45-113">Describes this class and contains links to all its members.</span></span>  
+ <span data-ttu-id="75d23-113">描述该类，并包含其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="75d23-113">Describes this class and contains links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="41e45-114">相关章节</span><span class="sxs-lookup"><span data-stu-id="41e45-114">Related Sections</span></span>  
- [<span data-ttu-id="41e45-115">处理用户输入</span><span class="sxs-lookup"><span data-stu-id="41e45-115">Handling User Input</span></span>](../../../docs/framework/winforms/controls/handling-user-input.md)  
- <span data-ttu-id="41e45-116">包含讨论用户输入以及如何在 Windows 窗体应用程序中进行处理的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="41e45-116">Contains links to topics that discuss user input and how to handle it in Windows Forms applications.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="75d23-114">相关章节</span><span class="sxs-lookup"><span data-stu-id="75d23-114">Related Sections</span></span>  
+ [<span data-ttu-id="75d23-115">处理用户输入</span><span class="sxs-lookup"><span data-stu-id="75d23-115">Handling User Input</span></span>](../../../docs/framework/winforms/controls/handling-user-input.md)  
+ <span data-ttu-id="75d23-116">包含讨论用户输入以及如何在 Windows 窗体应用程序中进行处理的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="75d23-116">Contains links to topics that discuss user input and how to handle it in Windows Forms applications.</span></span>  
   
- [<span data-ttu-id="41e45-117">在 Windows 窗体中创建事件处理程序</span><span class="sxs-lookup"><span data-stu-id="41e45-117">Creating Event Handlers in Windows Forms</span></span>](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- <span data-ttu-id="41e45-118">包含介绍如何在 Windows 窗体应用程序中处理事件的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="41e45-118">Contains links to topics that describe how to handle events in Windows Forms applications.</span></span>  
+ [<span data-ttu-id="75d23-117">在 Windows 窗体中创建事件处理程序</span><span class="sxs-lookup"><span data-stu-id="75d23-117">Creating Event Handlers in Windows Forms</span></span>](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ <span data-ttu-id="75d23-118">包含介绍如何在 Windows 窗体应用程序中处理事件的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="75d23-118">Contains links to topics that describe how to handle events in Windows Forms applications.</span></span>  
   
- [<span data-ttu-id="41e45-119">更改 Windows 窗体外观</span><span class="sxs-lookup"><span data-stu-id="41e45-119">Changing the Appearance of Windows Forms</span></span>](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- <span data-ttu-id="41e45-120">包含演示如何更改 Windows 窗体应用程序的外观的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="41e45-120">Contains links to topics that show how to change the appearance of Windows Forms applications.</span></span>  
+ [<span data-ttu-id="75d23-119">更改 Windows 窗体外观</span><span class="sxs-lookup"><span data-stu-id="75d23-119">Changing the Appearance of Windows Forms</span></span>](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ <span data-ttu-id="75d23-120">包含演示如何更改 Windows 窗体应用程序的外观的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="75d23-120">Contains links to topics that show how to change the appearance of Windows Forms applications.</span></span>  
   
- [<span data-ttu-id="41e45-121">按功能列出的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="41e45-121">Windows Forms Controls by Function</span></span>](../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- <span data-ttu-id="41e45-122">包含介绍可以在 Windows 窗体应用程序中使用的控件的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="41e45-122">Contains links to topics that describe the controls you can use in Windows Forms applications.</span></span>
+ [<span data-ttu-id="75d23-121">按功能列出的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="75d23-121">Windows Forms Controls by Function</span></span>](../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ <span data-ttu-id="75d23-122">包含介绍可以在 Windows 窗体应用程序中使用的控件的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="75d23-122">Contains links to topics that describe the controls you can use in Windows Forms applications.</span></span>

@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Visual 绘制区域"
-ms.custom: 
+title: 如何：使用 Visual 绘制区域
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,31 +9,26 @@ helpviewer_keywords:
 - visuals [WPF], painting with
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 183117472cc74c958bdd7f807236eded97610b1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef6774f669e3fc0694ac743bf2b76d78adcf37a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-paint-an-area-with-a-visual"></a><span data-ttu-id="952c0-102">如何：使用 Visual 绘制区域</span><span class="sxs-lookup"><span data-stu-id="952c0-102">How to: Paint an Area with a Visual</span></span>
-<span data-ttu-id="952c0-103">此示例演示如何使用<xref:System.Windows.Media.VisualBrush>类来绘制带有区域<xref:System.Windows.Media.Visual>。</span><span class="sxs-lookup"><span data-stu-id="952c0-103">This example shows how to use the <xref:System.Windows.Media.VisualBrush> class to paint an area with a <xref:System.Windows.Media.Visual>.</span></span>  
+# <a name="how-to-paint-an-area-with-a-visual"></a><span data-ttu-id="d2167-102">如何：使用 Visual 绘制区域</span><span class="sxs-lookup"><span data-stu-id="d2167-102">How to: Paint an Area with a Visual</span></span>
+<span data-ttu-id="d2167-103">此示例演示如何使用<xref:System.Windows.Media.VisualBrush>类来绘制带有区域<xref:System.Windows.Media.Visual>。</span><span class="sxs-lookup"><span data-stu-id="d2167-103">This example shows how to use the <xref:System.Windows.Media.VisualBrush> class to paint an area with a <xref:System.Windows.Media.Visual>.</span></span>  
   
- <span data-ttu-id="952c0-104">在以下示例中，几个控件和一个面板用作一个矩形的背景。</span><span class="sxs-lookup"><span data-stu-id="952c0-104">In the following example, several controls and a panel are used as the background of a rectangle.</span></span>  
+ <span data-ttu-id="d2167-104">在以下示例中，几个控件和一个面板用作一个矩形的背景。</span><span class="sxs-lookup"><span data-stu-id="d2167-104">In the following example, several controls and a panel are used as the background of a rectangle.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="952c0-105">示例</span><span class="sxs-lookup"><span data-stu-id="952c0-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="d2167-105">示例</span><span class="sxs-lookup"><span data-stu-id="d2167-105">Example</span></span>  
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
- <span data-ttu-id="952c0-106">有关详细信息<xref:System.Windows.Media.VisualBrush>和其他示例，请参阅[使用图像、 图形和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)概述。</span><span class="sxs-lookup"><span data-stu-id="952c0-106">For more information about <xref:System.Windows.Media.VisualBrush> and additional examples, see the [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md) overview.</span></span>  
+ <span data-ttu-id="d2167-106">有关详细信息<xref:System.Windows.Media.VisualBrush>和其他示例，请参阅[使用图像、 图形和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)概述。</span><span class="sxs-lookup"><span data-stu-id="d2167-106">For more information about <xref:System.Windows.Media.VisualBrush> and additional examples, see the [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md) overview.</span></span>  
   
- <span data-ttu-id="952c0-107">此代码示例摘自更大的示例为提供<xref:System.Windows.Media.VisualBrush>类。</span><span class="sxs-lookup"><span data-stu-id="952c0-107">This code example is part of a larger example provided for the <xref:System.Windows.Media.VisualBrush> class.</span></span> <span data-ttu-id="952c0-108">有关完整的示例，请参阅[VisualBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160049)。</span><span class="sxs-lookup"><span data-stu-id="952c0-108">For the complete sample, see the [VisualBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160049).</span></span>  
+ <span data-ttu-id="d2167-107">此代码示例摘自更大的示例为提供<xref:System.Windows.Media.VisualBrush>类。</span><span class="sxs-lookup"><span data-stu-id="d2167-107">This code example is part of a larger example provided for the <xref:System.Windows.Media.VisualBrush> class.</span></span> <span data-ttu-id="d2167-108">有关完整的示例，请参阅[VisualBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160049)。</span><span class="sxs-lookup"><span data-stu-id="d2167-108">For the complete sample, see the [VisualBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160049).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="952c0-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="952c0-109">See Also</span></span>  
- [<span data-ttu-id="952c0-110">使用图像、绘图和视觉对象进行绘制</span><span class="sxs-lookup"><span data-stu-id="952c0-110">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a><span data-ttu-id="d2167-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="d2167-109">See Also</span></span>  
+ [<span data-ttu-id="d2167-110">使用图像、绘图和视觉对象进行绘制</span><span class="sxs-lookup"><span data-stu-id="d2167-110">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
