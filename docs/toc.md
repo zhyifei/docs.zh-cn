@@ -1113,7 +1113,7 @@
 # [ML.NET 指南](machine-learning/index.md)
 ## [教程](machine-learning/tutorials/index.md)
 ### [情绪分析（分类）](machine-learning/tutorials/sentiment-analysis.md)
-### [出租车时间预测指标（回归）](machine-learning/tutorials/taxi-fare.md)
+### [出租车票费预测指标（回归）](machine-learning/tutorials/taxi-fare.md)
 ## [资源](machine-learning/resources/index.md)
 ### [机器学习库](machine-learning/resources/glossary.md)
 ### [机器学习基本信息](machine-learning/resources/basics.md)

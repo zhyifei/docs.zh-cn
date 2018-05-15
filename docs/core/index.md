@@ -4,11 +4,11 @@ description: .NET Core 是一种用于创建 Windows、Linux 和 Mac 应用的�
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 7a2548a177f6e62e9c76c336c6e270a139d9fce0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f413e4efa8b33877917330855f4881c3fbf0854
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
@@ -18,9 +18,9 @@ ms.lasthandoff: 05/04/2018
 
 以下特征对 .NET Core 进行了最好的定义：
 
-- **部署灵活：**可以包含在应用或已安装的并行用户或计算机范围中。
-- **跨平台：**可以在 Windows、macOS 和 Linux 上运行；也可移植到其他操作系统。 Microsoft、其他公司和个人提供的[支持的操作系统 (OS)](https://github.com/dotnet/core/blob/master/roadmap.md)、CPU 和应用程序方案会随着时间推移而增多。
-- **命令行工具：**可在命令行中执行所有产品方案。 
+- **部署灵活：** 可以包含在应用或已安装的并行用户或计算机范围中。
+- **跨平台：** 可以在 Windows、macOS 和 Linux 上运行；也可移植到其他操作系统。 Microsoft、其他公司和个人提供的[支持的操作系统 (OS)](https://github.com/dotnet/core/blob/master/roadmap.md)、CPU 和应用程序方案会随着时间推移而增多。
+- **命令行工具：** 可在命令行中执行所有产品方案。 
 - **兼容性：**.NET Core 通过 [.NET 标准](../standard/net-standard.md)与 .NET Framework、Xamarin 和 Mono 兼容。
 - **开放源：**.NET Core 是一个开放源平台，使用 MIT 和 Apache 2 许可证。 文档由 [CC-BY](https://creativecommons.org/licenses/by/4.0/) 许可发行。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
 - **由 Microsoft 支持：**.NET Core 由 Microsoft 依据 [.NET Core 支持](https://www.microsoft.com/net/core/support/)提供支持
@@ -31,14 +31,14 @@ ms.lasthandoff: 05/04/2018
 
 - [.NET 运行时](https://github.com/dotnet/coreclr)：提供类型系统、程序集加载、垃圾回收器、本机互操作和其他基本服务。 
 - 一组 [框架库](https://github.com/dotnet/corefx)：提供基元数据类型、应用编写类型和基本实用程序。 
-- 一组 [SDK 工具](https://github.com/dotnet/cli)和[语言编译器](https://github.com/dotnet/roslyn)：提供基本的开发人员体验，可用于 [.NET Core SDK](sdk.md)。
+- 一组 [SDK 工具](https://github.com/dotnet/cli)和语言编译器（[Roslyn](https://github.com/dotnet/roslyn) 和 [F#](https://github.com/microsoft/visualfsharp)）：提供基本的开发人员体验，可用于 [.NET Core SDK](sdk.md)。
 - “dotnet”应用主机，用于启动 .NET Core 应用。 它选择运行时并托管运行时，提供程序集加载策略来启动应用。 同一主机还可用于以大致相同的方式启动 SDK 工具。
 
 ### <a name="languages"></a>语言
 
 可以使用 C#、Visual Basic 和 F# 语言编写适用于 .NET Core 的应用程序和库。 在 .NET Core 上运行的编译器可以在其运行的任何地方进行 .NET Core 开发。 一般情况下，不会直接使用编译器，但会间接使用 SDK 工具。
 
-C#、Visual Basic 和 F# 编译器以及 .NET Core 工具已集成到或可以集成到多个文本编辑器和 IDE 中，包括 Visual Studio、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)Sublime Text 和 Vim，使 .NET Core 开发可以在钟爱的编码环境和 OS 中进行。 这种集成部分由 [OmniSharp 项目](http://www.omnisharp.net/)的高手提供。
+C#、Visual Basic 和 F# 编译器以及 .NET Core 工具已集成到或可以集成到多个文本编辑器和 IDE 中，包括 Visual Studio、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)Sublime Text 和 Vim，使 .NET Core 开发可以在钟爱的编码环境和 OS 中进行。 这种集成部分由 [OmniSharp 项目](http://www.omnisharp.net/)和 [Ionide](http://ionide.io) 的高手提供。
 
 ### <a name="net-apis-and-compatibility"></a>.NET API 和兼容性
 

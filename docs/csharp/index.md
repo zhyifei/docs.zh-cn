@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 598ddfbe16a1a09326d811b4eafcf87f3ca6e971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d349f8aff5e3d48a2bc738e848d2a251805e260
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="c-guide"></a>C# 指南
 
@@ -43,8 +43,8 @@ C# 指南分为多个部分。 可以按顺序阅读，也可以直接跳到最�
 * [C# 教程](tour-of-csharp/index.md)
   * 此部分概述了 C# 语言。 其中介绍了 C# 程序的构成元素以及此语言的各项功能。 同时演示了所有 C# 语法元素的小示例，并讨论了主要的 C# 语言主题。
 
-* [最新功能](whats-new/index.md)
-  * 此部分介绍了 C# 语言中的新功能。 还介绍了 C# 交互窗口 (C# REPL) 和 .NET 编译器平台 SDK 等新工具。 本部分介绍了该语言的演变方式，以及如何通过新工具提高你的工作效率。
+* [C# 中的新增功能](whats-new/index.md)
+  * 概述了在最新语言版本中添加的新功能以及 C# 语言的历史。
 
 <!--
 * [.NET Compiler Platform SDK](roslyn-sdk/index.md)

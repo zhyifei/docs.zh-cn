@@ -5,11 +5,11 @@ hide_bc: true
 title: .NET 文档
 description: 了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7fbafb9a5ca939b4ca8bb78d38b66767e3cf6ab9
-ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.openlocfilehash: 3a2501d4eb0e40930bb119fb27f9cb630bc2a884
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -231,7 +231,7 @@ ms.lasthandoff: 05/08/2018
                                                 <p><a href="/dotnet/machine-learning/tutorials">教程</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources">资源</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">术语表</a></p>
-                                                <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API</a></p>
+                                                <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API 引用</a></p>
                                             </div>
                                         </div>
                                     </div>

@@ -22,7 +22,7 @@ Visual Studio 扩展开发工作负荷中不会自动选择 .NET Compiler Platfo
 1. 运行“Visual Studio 安装程序” 
 1. 选择“修改” 
 1. 选择“单个组件”选项卡 
-1. 选中“.NET Compiler Platform SDK”框。 将在“编译器、生成工具和运行时”部分最下面找到它。
+1. 选中“.NET Compiler Platform SDK”框。 将在“编译器、生成工具和运行时”部分最上方找到它。
 
 还可使“DGML 编辑器”在可视化工具中显示关系图：
 

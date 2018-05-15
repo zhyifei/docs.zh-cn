@@ -4,6 +4,7 @@
 ### [使用实现 IDisposable 的对象](using-objects.md)
 ## [垃圾回收](index.md)
 ### [垃圾回收的基础知识](fundamentals.md)
+### [大型对象堆](large-object-heap.md)
 ### [垃圾回收和性能](performance.md)
 ### [已引发回收](induced.md)
 ### [延迟模式](latency.md)
