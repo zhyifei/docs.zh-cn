@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugObjectValue::GetManagedCopy 方法"
-ms.custom: 
+title: ICorDebugObjectValue::GetManagedCopy 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugObjectValue.GetManagedCopy
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: 300af43f-b3eb-4ce5-9ead-30dbfc5fbcc3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6a65cf1cbfffdb9abacd987a2417b000a464b527
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0d8dc3afe188e18d0804055f869e5090ebc4224
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugobjectvaluegetmanagedcopy-method"></a><span data-ttu-id="b7891-102">ICorDebugObjectValue::GetManagedCopy 方法</span><span class="sxs-lookup"><span data-stu-id="b7891-102">ICorDebugObjectValue::GetManagedCopy Method</span></span>
-<span data-ttu-id="b7891-103">`GetManagedCopy` 已过时。</span><span class="sxs-lookup"><span data-stu-id="b7891-103">`GetManagedCopy` is obsolete.</span></span> <span data-ttu-id="b7891-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="b7891-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluegetmanagedcopy-method"></a><span data-ttu-id="6819d-102">ICorDebugObjectValue::GetManagedCopy 方法</span><span class="sxs-lookup"><span data-stu-id="6819d-102">ICorDebugObjectValue::GetManagedCopy Method</span></span>
+<span data-ttu-id="6819d-103">`GetManagedCopy` 已过时。</span><span class="sxs-lookup"><span data-stu-id="6819d-103">`GetManagedCopy` is obsolete.</span></span> <span data-ttu-id="6819d-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="6819d-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b7891-105">语法</span><span class="sxs-lookup"><span data-stu-id="b7891-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6819d-105">语法</span><span class="sxs-lookup"><span data-stu-id="6819d-105">Syntax</span></span>  
   
 ```  
 HRESULT GetManagedCopy (  
@@ -46,9 +34,9 @@ HRESULT GetManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="b7891-106">惠?</span><span class="sxs-lookup"><span data-stu-id="b7891-106">Requirements</span></span>  
- <span data-ttu-id="b7891-107">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b7891-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6819d-106">要求</span><span class="sxs-lookup"><span data-stu-id="6819d-106">Requirements</span></span>  
+ <span data-ttu-id="6819d-107">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6819d-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b7891-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="b7891-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6819d-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="6819d-108">See Also</span></span>  
     
  

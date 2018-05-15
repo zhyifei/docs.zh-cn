@@ -1,10 +1,6 @@
 ---
-title: "配置节架构"
+title: 配置节架构
 ms.date: 05/02/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - configuration settings [.NET Framework], custom
 - schema configuration settings
@@ -15,30 +11,28 @@ helpviewer_keywords:
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da9af8fd24f1bf6e6effd411ad37490a4ee08804
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: edd2b2e11b02d69b7bba7c3cc7d8a9a0814e0c51
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="configuration-sections-schema"></a><span data-ttu-id="4d417-102">配置节架构</span><span class="sxs-lookup"><span data-stu-id="4d417-102">Configuration sections schema</span></span>
+# <a name="configuration-sections-schema"></a><span data-ttu-id="feed3-102">配置节架构</span><span class="sxs-lookup"><span data-stu-id="feed3-102">Configuration sections schema</span></span>
 
-<span data-ttu-id="4d417-103">配置节架构包含在配置文件中定义自定义设置的元素。</span><span class="sxs-lookup"><span data-stu-id="4d417-103">The configuration sections schema contains elements that define custom settings in configuration files.</span></span> <span data-ttu-id="4d417-104">有关配置文件和架构的常规信息，请参阅[的.NET Framework 配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)。</span><span class="sxs-lookup"><span data-stu-id="4d417-104">For general information on configuration files and schemas, see [Configuration file schema for the .NET Framework](~/docs/framework/configure-apps/file-schema/index.md).</span></span>
+<span data-ttu-id="feed3-103">配置节架构包含在配置文件中定义自定义设置的元素。</span><span class="sxs-lookup"><span data-stu-id="feed3-103">The configuration sections schema contains elements that define custom settings in configuration files.</span></span> <span data-ttu-id="feed3-104">有关配置文件和架构的常规信息，请参阅[的.NET Framework 配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)。</span><span class="sxs-lookup"><span data-stu-id="feed3-104">For general information on configuration files and schemas, see [Configuration file schema for the .NET Framework](~/docs/framework/configure-apps/file-schema/index.md).</span></span>
 
-<span data-ttu-id="4d417-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="4d417-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="4d417-106">[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="4d417-106">[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
-<span data-ttu-id="4d417-107">[**\<清除 >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) </span><span class="sxs-lookup"><span data-stu-id="4d417-107">[**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) </span></span>  
-<span data-ttu-id="4d417-108">[**\<删除 >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) </span><span class="sxs-lookup"><span data-stu-id="4d417-108">[**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) </span></span>  
-<span data-ttu-id="4d417-109">[**\<部分 >**](~/docs/framework/configure-apps/file-schema/section-element.md) </span><span class="sxs-lookup"><span data-stu-id="4d417-109">[**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) </span></span>  
-[<span data-ttu-id="4d417-110">**\<sectionGroup >**</span><span class="sxs-lookup"><span data-stu-id="4d417-110">**\<sectionGroup>**</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
+<span data-ttu-id="feed3-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="feed3-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="feed3-106">[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="feed3-106">[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
+<span data-ttu-id="feed3-107">[**\<清除 >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) </span><span class="sxs-lookup"><span data-stu-id="feed3-107">[**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) </span></span>  
+<span data-ttu-id="feed3-108">[**\<删除 >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) </span><span class="sxs-lookup"><span data-stu-id="feed3-108">[**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) </span></span>  
+<span data-ttu-id="feed3-109">[**\<部分 >**](~/docs/framework/configure-apps/file-schema/section-element.md) </span><span class="sxs-lookup"><span data-stu-id="feed3-109">[**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) </span></span>  
+[<span data-ttu-id="feed3-110">**\<sectionGroup >**</span><span class="sxs-lookup"><span data-stu-id="feed3-110">**\<sectionGroup>**</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
 
-|     | <span data-ttu-id="4d417-111">描述</span><span class="sxs-lookup"><span data-stu-id="4d417-111">Description</span></span> |
+|     | <span data-ttu-id="feed3-111">描述</span><span class="sxs-lookup"><span data-stu-id="feed3-111">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="4d417-112">**\<清除 >**为 **\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="4d417-112">**\<clear>** for **\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | <span data-ttu-id="4d417-113">清除所有以前定义的节和节组。</span><span class="sxs-lookup"><span data-stu-id="4d417-113">Clears all previously defined sections and section groups.</span></span> |
-| [<span data-ttu-id="4d417-114">**\<clear>**</span><span class="sxs-lookup"><span data-stu-id="4d417-114">**\<clear>**</span></span>](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | <span data-ttu-id="4d417-115">清除所有以前定义的节和节组。</span><span class="sxs-lookup"><span data-stu-id="4d417-115">Clears all previously defined sections and section groups.</span></span> |
-| [<span data-ttu-id="4d417-116">**\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="4d417-116">**\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="4d417-117">包含配置节和命名空间声明。</span><span class="sxs-lookup"><span data-stu-id="4d417-117">Contains configuration section and namespace declarations.</span></span> |
-| [<span data-ttu-id="4d417-118">**\<删除 >**为 **\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="4d417-118">**\<remove>** for **\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | <span data-ttu-id="4d417-119">删除预定义的节或节组。</span><span class="sxs-lookup"><span data-stu-id="4d417-119">Removes a predefined section or section group.</span></span> |
-| [<span data-ttu-id="4d417-120">**\<部分 >**为 **\<configSections >**和 **\<sectionGroup >**</span><span class="sxs-lookup"><span data-stu-id="4d417-120">**\<section>** for **\<configSections>** and **\<sectionGroup>**</span></span>](~/docs/framework/configure-apps/file-schema/section-element.md) | <span data-ttu-id="4d417-121">包含配置节声明。</span><span class="sxs-lookup"><span data-stu-id="4d417-121">Contains a configuration section declaration.</span></span> |
-| [<span data-ttu-id="4d417-122">**\<sectionGroup >**为 **\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="4d417-122">**\<sectionGroup>** for **\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | <span data-ttu-id="4d417-123">定义配置节的命名空间。</span><span class="sxs-lookup"><span data-stu-id="4d417-123">Defines a namespace for configuration sections.</span></span> |
+| [<span data-ttu-id="feed3-112">**\<清除 >** 为 **\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="feed3-112">**\<clear>** for **\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | <span data-ttu-id="feed3-113">清除所有以前定义的节和节组。</span><span class="sxs-lookup"><span data-stu-id="feed3-113">Clears all previously defined sections and section groups.</span></span> |
+| [<span data-ttu-id="feed3-114">**\<clear>**</span><span class="sxs-lookup"><span data-stu-id="feed3-114">**\<clear>**</span></span>](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | <span data-ttu-id="feed3-115">清除所有以前定义的节和节组。</span><span class="sxs-lookup"><span data-stu-id="feed3-115">Clears all previously defined sections and section groups.</span></span> |
+| [<span data-ttu-id="feed3-116">**\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="feed3-116">**\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="feed3-117">包含配置节和命名空间声明。</span><span class="sxs-lookup"><span data-stu-id="feed3-117">Contains configuration section and namespace declarations.</span></span> |
+| [<span data-ttu-id="feed3-118">**\<删除 >** 为 **\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="feed3-118">**\<remove>** for **\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | <span data-ttu-id="feed3-119">删除预定义的节或节组。</span><span class="sxs-lookup"><span data-stu-id="feed3-119">Removes a predefined section or section group.</span></span> |
+| [<span data-ttu-id="feed3-120">**\<部分 >** 为 **\<configSections >** 和 **\<sectionGroup >**</span><span class="sxs-lookup"><span data-stu-id="feed3-120">**\<section>** for **\<configSections>** and **\<sectionGroup>**</span></span>](~/docs/framework/configure-apps/file-schema/section-element.md) | <span data-ttu-id="feed3-121">包含配置节声明。</span><span class="sxs-lookup"><span data-stu-id="feed3-121">Contains a configuration section declaration.</span></span> |
+| [<span data-ttu-id="feed3-122">**\<sectionGroup >** 为 **\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="feed3-122">**\<sectionGroup>** for **\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | <span data-ttu-id="feed3-123">定义配置节的命名空间。</span><span class="sxs-lookup"><span data-stu-id="feed3-123">Defines a namespace for configuration sections.</span></span> |

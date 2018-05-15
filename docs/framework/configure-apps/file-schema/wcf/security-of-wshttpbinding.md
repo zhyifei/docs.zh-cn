@@ -1,35 +1,25 @@
 ---
-title: "&lt;wsHttpBinding&gt; 的 &lt;security&gt;"
-ms.custom: 
+title: '&lt;wsHttpBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-caps.latest.revision: "18"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dda6e48d3d2fec7f3ad6b9dd665e8a1092a47d60
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 836e920ef7c95d4a7a2b752c2f76f29d8c880e7c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltsecuritygt-of-ltwshttpbindinggt"></a><span data-ttu-id="0cc4a-102">&lt;wsHttpBinding&gt; 的 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="0cc4a-102">&lt;security&gt; of &lt;wsHttpBinding&gt;</span></span>
-<span data-ttu-id="0cc4a-103">表示的安全功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-103">Represents the security capabilities of the [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
+# <a name="ltsecuritygt-of-ltwshttpbindinggt"></a><span data-ttu-id="58341-102">&lt;wsHttpBinding&gt; 的 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="58341-102">&lt;security&gt; of &lt;wsHttpBinding&gt;</span></span>
+<span data-ttu-id="58341-103">表示的安全功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="58341-103">Represents the security capabilities of the [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
   
- <span data-ttu-id="0cc4a-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="0cc4a-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="0cc4a-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="0cc4a-105">\<bindings></span></span>  
-<span data-ttu-id="0cc4a-106">\<wsHttpBinding></span><span class="sxs-lookup"><span data-stu-id="0cc4a-106">\<wsHttpBinding></span></span>  
-<span data-ttu-id="0cc4a-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="0cc4a-107">\<binding></span></span>  
-<span data-ttu-id="0cc4a-108">\<security></span><span class="sxs-lookup"><span data-stu-id="0cc4a-108">\<security></span></span>  
+ <span data-ttu-id="58341-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="58341-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="58341-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="58341-105">\<bindings></span></span>  
+<span data-ttu-id="58341-106">\<wsHttpBinding></span><span class="sxs-lookup"><span data-stu-id="58341-106">\<wsHttpBinding></span></span>  
+<span data-ttu-id="58341-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="58341-107">\<binding></span></span>  
+<span data-ttu-id="58341-108">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="58341-108">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0cc4a-109">语法</span><span class="sxs-lookup"><span data-stu-id="0cc4a-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58341-109">语法</span><span class="sxs-lookup"><span data-stu-id="58341-109">Syntax</span></span>  
   
 ```xml  
 <security mode="Message/None/Transport/TransportWithMessageCredential">  
@@ -48,47 +38,47 @@ ms.lasthandoff: 01/19/2018
 </security>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0cc4a-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="0cc4a-110">Attributes and Elements</span></span>  
- <span data-ttu-id="0cc4a-111">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-111">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="58341-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="58341-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="58341-111">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="58341-111">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0cc4a-112">特性</span><span class="sxs-lookup"><span data-stu-id="0cc4a-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="58341-112">特性</span><span class="sxs-lookup"><span data-stu-id="58341-112">Attributes</span></span>  
   
-|<span data-ttu-id="0cc4a-113">特性</span><span class="sxs-lookup"><span data-stu-id="0cc4a-113">Attribute</span></span>|<span data-ttu-id="0cc4a-114">描述</span><span class="sxs-lookup"><span data-stu-id="0cc4a-114">Description</span></span>|  
+|<span data-ttu-id="58341-113">特性</span><span class="sxs-lookup"><span data-stu-id="58341-113">Attribute</span></span>|<span data-ttu-id="58341-114">描述</span><span class="sxs-lookup"><span data-stu-id="58341-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="0cc4a-115">mode</span><span class="sxs-lookup"><span data-stu-id="0cc4a-115">mode</span></span>|<span data-ttu-id="0cc4a-116">-可选。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-116">-   Optional.</span></span> <span data-ttu-id="0cc4a-117">指定所应用的安全类型。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-117">Specifies the type of security that is applied.</span></span> <span data-ttu-id="0cc4a-118">默认值为 `Message`。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-118">The default is `Message`.</span></span><br /><span data-ttu-id="0cc4a-119">-此特性的类型是<xref:System.ServiceModel.SecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-119">-   This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
+|<span data-ttu-id="58341-115">mode</span><span class="sxs-lookup"><span data-stu-id="58341-115">mode</span></span>|<span data-ttu-id="58341-116">-可选。</span><span class="sxs-lookup"><span data-stu-id="58341-116">-   Optional.</span></span> <span data-ttu-id="58341-117">指定所应用的安全类型。</span><span class="sxs-lookup"><span data-stu-id="58341-117">Specifies the type of security that is applied.</span></span> <span data-ttu-id="58341-118">默认值为 `Message`。</span><span class="sxs-lookup"><span data-stu-id="58341-118">The default is `Message`.</span></span><br /><span data-ttu-id="58341-119">-此特性的类型是<xref:System.ServiceModel.SecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="58341-119">-   This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
   
-## <a name="mode-attribute"></a><span data-ttu-id="0cc4a-120">Mode 属性</span><span class="sxs-lookup"><span data-stu-id="0cc4a-120">Mode Attribute</span></span>  
+## <a name="mode-attribute"></a><span data-ttu-id="58341-120">Mode 属性</span><span class="sxs-lookup"><span data-stu-id="58341-120">Mode Attribute</span></span>  
   
-|<span data-ttu-id="0cc4a-121">值</span><span class="sxs-lookup"><span data-stu-id="0cc4a-121">Value</span></span>|<span data-ttu-id="0cc4a-122">描述</span><span class="sxs-lookup"><span data-stu-id="0cc4a-122">Description</span></span>|  
+|<span data-ttu-id="58341-121">值</span><span class="sxs-lookup"><span data-stu-id="58341-121">Value</span></span>|<span data-ttu-id="58341-122">描述</span><span class="sxs-lookup"><span data-stu-id="58341-122">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="0cc4a-123">无</span><span class="sxs-lookup"><span data-stu-id="0cc4a-123">None</span></span>|<span data-ttu-id="0cc4a-124">禁用安全性。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-124">Security is disabled.</span></span>|  
-|<span data-ttu-id="0cc4a-125">传输</span><span class="sxs-lookup"><span data-stu-id="0cc4a-125">Transport</span></span>|<span data-ttu-id="0cc4a-126">使用 HTTPS 提供安全性。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-126">Security is provided using HTTPS.</span></span> <span data-ttu-id="0cc4a-127">此服务需要使用 SSL 证书进行配置。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-127">The service needs to be configured with SSL certificates.</span></span> <span data-ttu-id="0cc4a-128">消息使用 HTTPS 得到了全面保护，客户端使用服务的 SSL 证书对消息进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-128">The message is entirely secured using HTTPS and is authenticated by the client using the service’s SSL certificate.</span></span> <span data-ttu-id="0cc4a-129">客户端身份验证通过`ClientCredentials`</span><span class="sxs-lookup"><span data-stu-id="0cc4a-129">The client authentication is controlled through the `ClientCredentials` attribute.</span></span> <span data-ttu-id="0cc4a-130">[\<传输 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-130">of the [\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).</span></span>|  
-|<span data-ttu-id="0cc4a-131">消息</span><span class="sxs-lookup"><span data-stu-id="0cc4a-131">Message</span></span>|<span data-ttu-id="0cc4a-132">使用 SOAP 消息安全提供安全性。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-132">Security is provided using SOAP message security.</span></span> <span data-ttu-id="0cc4a-133">默认情况下，将对 SOAP 正文进行加密和签名。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-133">By default, the SOAP body is Encrypted and Signed.</span></span> <span data-ttu-id="0cc4a-134">此模式提供了各种各样的功能，例如服务凭据在带外客户端是否可用、要使用的算法组以及通过 Security.Message 属性要应用于消息正文的保护级别。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-134">This mode offers a variety of features, such as whether the service credentials are available at the client out of band, the algorithm suite to use, and what level of protection to apply to the message body through the Security.Message property.</span></span> <span data-ttu-id="0cc4a-135">每个会话将执行一次客户端身份验证，身份验证的结果在会话过程中将被缓存。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-135">Client authentication is performed once per session and the results of authentication are cached for the duration of the session.</span></span>|  
-|<span data-ttu-id="0cc4a-136">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="0cc4a-136">TransportWithMessageCredential</span></span>|<span data-ttu-id="0cc4a-137">在此模式下，HTTPS 将提供完整性、保密性和服务器身份验证，SOAP 消息安全将提供客户端身份验证。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-137">In this mode, HTTPS provides integrity, confidentiality, and server authentication, and SOAP message security provides client authentication.</span></span> <span data-ttu-id="0cc4a-138">默认情况下，每个会话将执行一次客户端身份验证，身份验证的结果在会话过程中将被缓存。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-138">By default, client authentication is performed once per session and the results of authentication are cached for the duration of the session.</span></span>|  
+|<span data-ttu-id="58341-123">无</span><span class="sxs-lookup"><span data-stu-id="58341-123">None</span></span>|<span data-ttu-id="58341-124">禁用安全性。</span><span class="sxs-lookup"><span data-stu-id="58341-124">Security is disabled.</span></span>|  
+|<span data-ttu-id="58341-125">传输</span><span class="sxs-lookup"><span data-stu-id="58341-125">Transport</span></span>|<span data-ttu-id="58341-126">使用 HTTPS 提供安全性。</span><span class="sxs-lookup"><span data-stu-id="58341-126">Security is provided using HTTPS.</span></span> <span data-ttu-id="58341-127">此服务需要使用 SSL 证书进行配置。</span><span class="sxs-lookup"><span data-stu-id="58341-127">The service needs to be configured with SSL certificates.</span></span> <span data-ttu-id="58341-128">消息使用 HTTPS 得到了全面保护，客户端使用服务的 SSL 证书对消息进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="58341-128">The message is entirely secured using HTTPS and is authenticated by the client using the service’s SSL certificate.</span></span> <span data-ttu-id="58341-129">客户端身份验证通过`ClientCredentials`</span><span class="sxs-lookup"><span data-stu-id="58341-129">The client authentication is controlled through the `ClientCredentials` attribute.</span></span> <span data-ttu-id="58341-130">[\<传输 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="58341-130">of the [\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).</span></span>|  
+|<span data-ttu-id="58341-131">消息</span><span class="sxs-lookup"><span data-stu-id="58341-131">Message</span></span>|<span data-ttu-id="58341-132">使用 SOAP 消息安全提供安全性。</span><span class="sxs-lookup"><span data-stu-id="58341-132">Security is provided using SOAP message security.</span></span> <span data-ttu-id="58341-133">默认情况下，将对 SOAP 正文进行加密和签名。</span><span class="sxs-lookup"><span data-stu-id="58341-133">By default, the SOAP body is Encrypted and Signed.</span></span> <span data-ttu-id="58341-134">此模式提供了各种各样的功能，例如服务凭据在带外客户端是否可用、要使用的算法组以及通过 Security.Message 属性要应用于消息正文的保护级别。</span><span class="sxs-lookup"><span data-stu-id="58341-134">This mode offers a variety of features, such as whether the service credentials are available at the client out of band, the algorithm suite to use, and what level of protection to apply to the message body through the Security.Message property.</span></span> <span data-ttu-id="58341-135">每个会话将执行一次客户端身份验证，身份验证的结果在会话过程中将被缓存。</span><span class="sxs-lookup"><span data-stu-id="58341-135">Client authentication is performed once per session and the results of authentication are cached for the duration of the session.</span></span>|  
+|<span data-ttu-id="58341-136">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="58341-136">TransportWithMessageCredential</span></span>|<span data-ttu-id="58341-137">在此模式下，HTTPS 将提供完整性、保密性和服务器身份验证，SOAP 消息安全将提供客户端身份验证。</span><span class="sxs-lookup"><span data-stu-id="58341-137">In this mode, HTTPS provides integrity, confidentiality, and server authentication, and SOAP message security provides client authentication.</span></span> <span data-ttu-id="58341-138">默认情况下，每个会话将执行一次客户端身份验证，身份验证的结果在会话过程中将被缓存。</span><span class="sxs-lookup"><span data-stu-id="58341-138">By default, client authentication is performed once per session and the results of authentication are cached for the duration of the session.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0cc4a-139">子元素</span><span class="sxs-lookup"><span data-stu-id="0cc4a-139">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="58341-139">子元素</span><span class="sxs-lookup"><span data-stu-id="58341-139">Child Elements</span></span>  
   
-|<span data-ttu-id="0cc4a-140">元素</span><span class="sxs-lookup"><span data-stu-id="0cc4a-140">Element</span></span>|<span data-ttu-id="0cc4a-141">描述</span><span class="sxs-lookup"><span data-stu-id="0cc4a-141">Description</span></span>|  
+|<span data-ttu-id="58341-140">元素</span><span class="sxs-lookup"><span data-stu-id="58341-140">Element</span></span>|<span data-ttu-id="58341-141">描述</span><span class="sxs-lookup"><span data-stu-id="58341-141">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0cc4a-142">\<transport></span><span class="sxs-lookup"><span data-stu-id="0cc4a-142">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)|<span data-ttu-id="0cc4a-143">定义传输安全设置。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-143">Defines the transport security settings.</span></span> <span data-ttu-id="0cc4a-144">此元素与 <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> 类型相对应。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-144">This element corresponds to the <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> type.</span></span>|  
-|[<span data-ttu-id="0cc4a-145">\<message></span><span class="sxs-lookup"><span data-stu-id="0cc4a-145">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)|<span data-ttu-id="0cc4a-146">定义消息的安全设置。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-146">Defines the security settings for the message.</span></span> <span data-ttu-id="0cc4a-147">此元素与 <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> 类型相对应。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-147">This element corresponds to the <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> type.</span></span>|  
+|[<span data-ttu-id="58341-142">\<transport></span><span class="sxs-lookup"><span data-stu-id="58341-142">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)|<span data-ttu-id="58341-143">定义传输安全设置。</span><span class="sxs-lookup"><span data-stu-id="58341-143">Defines the transport security settings.</span></span> <span data-ttu-id="58341-144">此元素与 <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> 类型相对应。</span><span class="sxs-lookup"><span data-stu-id="58341-144">This element corresponds to the <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> type.</span></span>|  
+|[<span data-ttu-id="58341-145">\<message></span><span class="sxs-lookup"><span data-stu-id="58341-145">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)|<span data-ttu-id="58341-146">定义消息的安全设置。</span><span class="sxs-lookup"><span data-stu-id="58341-146">Defines the security settings for the message.</span></span> <span data-ttu-id="58341-147">此元素与 <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> 类型相对应。</span><span class="sxs-lookup"><span data-stu-id="58341-147">This element corresponds to the <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> type.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="0cc4a-148">父元素</span><span class="sxs-lookup"><span data-stu-id="0cc4a-148">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="58341-148">父元素</span><span class="sxs-lookup"><span data-stu-id="58341-148">Parent Elements</span></span>  
   
-|<span data-ttu-id="0cc4a-149">元素</span><span class="sxs-lookup"><span data-stu-id="0cc4a-149">Element</span></span>|<span data-ttu-id="0cc4a-150">描述</span><span class="sxs-lookup"><span data-stu-id="0cc4a-150">Description</span></span>|  
+|<span data-ttu-id="58341-149">元素</span><span class="sxs-lookup"><span data-stu-id="58341-149">Element</span></span>|<span data-ttu-id="58341-150">描述</span><span class="sxs-lookup"><span data-stu-id="58341-150">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0cc4a-151">\<wsHttpBinding></span><span class="sxs-lookup"><span data-stu-id="0cc4a-151">\<wsHttpBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|<span data-ttu-id="0cc4a-152">HTTP 传输应用程序的安全绑定。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-152">A secure binding for HTTP transport applications.</span></span>|  
+|[<span data-ttu-id="58341-151">\<wsHttpBinding></span><span class="sxs-lookup"><span data-stu-id="58341-151">\<wsHttpBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|<span data-ttu-id="58341-152">HTTP 传输应用程序的安全绑定。</span><span class="sxs-lookup"><span data-stu-id="58341-152">A secure binding for HTTP transport applications.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0cc4a-153">备注</span><span class="sxs-lookup"><span data-stu-id="0cc4a-153">Remarks</span></span>  
- <span data-ttu-id="0cc4a-154">WSHttpBinding 类专用于与实现 WS-\* 规范的服务进行互操作。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-154">The WSHttpBinding class is designed for interoperation with services that implement WS-\* specifications.</span></span> <span data-ttu-id="0cc4a-155">此绑定的传输安全为 HTTP 上的安全套接字层 (SSL)，即 HTTPS。</span><span class="sxs-lookup"><span data-stu-id="0cc4a-155">The transport security for this binding is Secure Sockets Layer (SSL) over HTTP, or HTTPS.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="58341-153">备注</span><span class="sxs-lookup"><span data-stu-id="58341-153">Remarks</span></span>  
+ <span data-ttu-id="58341-154">WSHttpBinding 类专用于与实现 WS-\* 规范的服务进行互操作。</span><span class="sxs-lookup"><span data-stu-id="58341-154">The WSHttpBinding class is designed for interoperation with services that implement WS-\* specifications.</span></span> <span data-ttu-id="58341-155">此绑定的传输安全为 HTTP 上的安全套接字层 (SSL)，即 HTTPS。</span><span class="sxs-lookup"><span data-stu-id="58341-155">The transport security for this binding is Secure Sockets Layer (SSL) over HTTP, or HTTPS.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0cc4a-156">请参阅</span><span class="sxs-lookup"><span data-stu-id="0cc4a-156">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="58341-156">请参阅</span><span class="sxs-lookup"><span data-stu-id="58341-156">See Also</span></span>  
  <xref:System.ServiceModel.WSHttpSecurity>  
  <xref:System.ServiceModel.WSHttpBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>  
  <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
- [<span data-ttu-id="0cc4a-157">保护服务和客户端的安全</span><span class="sxs-lookup"><span data-stu-id="0cc4a-157">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="0cc4a-158">绑定</span><span class="sxs-lookup"><span data-stu-id="0cc4a-158">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="0cc4a-159">配置系统提供的绑定</span><span class="sxs-lookup"><span data-stu-id="0cc4a-159">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="0cc4a-160">使用绑定来配置 Windows Communication Foundation 服务和客户端</span><span class="sxs-lookup"><span data-stu-id="0cc4a-160">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="0cc4a-161">\<binding></span><span class="sxs-lookup"><span data-stu-id="0cc4a-161">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="58341-157">保护服务和客户端的安全</span><span class="sxs-lookup"><span data-stu-id="58341-157">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="58341-158">绑定</span><span class="sxs-lookup"><span data-stu-id="58341-158">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="58341-159">配置系统提供的绑定</span><span class="sxs-lookup"><span data-stu-id="58341-159">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="58341-160">使用绑定来配置 Windows Communication Foundation 服务和客户端</span><span class="sxs-lookup"><span data-stu-id="58341-160">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="58341-161">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="58341-161">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

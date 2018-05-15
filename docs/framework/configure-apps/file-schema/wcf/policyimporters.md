@@ -1,32 +1,20 @@
 ---
 title: '&lt;policyImporters&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f8267a6f-bc09-4ec1-9b26-9445f137f663
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d7c665a976a2a8bf4b66c63b01c1133f0c41a721
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e63eb7b5c2ceb83becbaa86d04fde80ac1cd17a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltpolicyimportersgt"></a><span data-ttu-id="7661e-102">&lt;policyImporters&gt;</span><span class="sxs-lookup"><span data-stu-id="7661e-102">&lt;policyImporters&gt;</span></span>
-<span data-ttu-id="7661e-103">此配置元素指定用于控制有关绑定的自定义策略断言的导入的所有策略导入程序。</span><span class="sxs-lookup"><span data-stu-id="7661e-103">This configuration element specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span> <span data-ttu-id="7661e-104">每个子元素均为一个 <`policyImporter`>，可用于搜索有关绑定功能的自定义策略断言，并附加一个实现断言所需功能的自定义绑定元素。</span><span class="sxs-lookup"><span data-stu-id="7661e-104">Each child element is a <`policyImporter`> that is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>  
+# <a name="ltpolicyimportersgt"></a><span data-ttu-id="dbc90-102">&lt;policyImporters&gt;</span><span class="sxs-lookup"><span data-stu-id="dbc90-102">&lt;policyImporters&gt;</span></span>
+<span data-ttu-id="dbc90-103">此配置元素指定用于控制有关绑定的自定义策略断言的导入的所有策略导入程序。</span><span class="sxs-lookup"><span data-stu-id="dbc90-103">This configuration element specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span> <span data-ttu-id="dbc90-104">每个子元素均为一个 <`policyImporter`>，可用于搜索有关绑定功能的自定义策略断言，并附加一个实现断言所需功能的自定义绑定元素。</span><span class="sxs-lookup"><span data-stu-id="dbc90-104">Each child element is a <`policyImporter`> that is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7661e-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="7661e-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="dbc90-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="dbc90-105">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.MetadataElement>  
  <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>  
  <xref:System.ServiceModel.Description.MetadataImporter>  
- [<span data-ttu-id="7661e-106">\<policyImporter ></span><span class="sxs-lookup"><span data-stu-id="7661e-106">\<policyImporter></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporter.md)  
- [<span data-ttu-id="7661e-107">WCF 客户端配置</span><span class="sxs-lookup"><span data-stu-id="7661e-107">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [<span data-ttu-id="7661e-108">客户端</span><span class="sxs-lookup"><span data-stu-id="7661e-108">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)
+ [<span data-ttu-id="dbc90-106">\<policyImporter ></span><span class="sxs-lookup"><span data-stu-id="dbc90-106">\<policyImporter></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporter.md)  
+ [<span data-ttu-id="dbc90-107">WCF 客户端配置</span><span class="sxs-lookup"><span data-stu-id="dbc90-107">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ [<span data-ttu-id="dbc90-108">客户端</span><span class="sxs-lookup"><span data-stu-id="dbc90-108">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)

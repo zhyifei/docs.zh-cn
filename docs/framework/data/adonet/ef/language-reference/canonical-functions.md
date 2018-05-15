@@ -1,65 +1,53 @@
 ---
-title: "规范函数"
-ms.custom: 
+title: 规范函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1f676c88691f0ba80ca682d720adf649ab612cfb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fed6e45056e318ec0bf34951097304ef3c98f629
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="canonical-functions"></a><span data-ttu-id="a9f57-102">规范函数</span><span class="sxs-lookup"><span data-stu-id="a9f57-102">Canonical Functions</span></span>
-<span data-ttu-id="a9f57-103">本节讨论所有数据提供程序支持的并可由所有查询技术使用的规范函数。</span><span class="sxs-lookup"><span data-stu-id="a9f57-103">This section discusses canonical functions that are supported by all data providers, and can be used by all querying technologies.</span></span> <span data-ttu-id="a9f57-104">规范函数不能由提供程序扩展。</span><span class="sxs-lookup"><span data-stu-id="a9f57-104">Canonical functions cannot be extended by a provider.</span></span>  
+# <a name="canonical-functions"></a><span data-ttu-id="e0be6-102">规范函数</span><span class="sxs-lookup"><span data-stu-id="e0be6-102">Canonical Functions</span></span>
+<span data-ttu-id="e0be6-103">本节讨论所有数据提供程序支持的并可由所有查询技术使用的规范函数。</span><span class="sxs-lookup"><span data-stu-id="e0be6-103">This section discusses canonical functions that are supported by all data providers, and can be used by all querying technologies.</span></span> <span data-ttu-id="e0be6-104">规范函数不能由提供程序扩展。</span><span class="sxs-lookup"><span data-stu-id="e0be6-104">Canonical functions cannot be extended by a provider.</span></span>  
   
- <span data-ttu-id="a9f57-105">这些规范函数将转换为提供程序的相应数据源功能。</span><span class="sxs-lookup"><span data-stu-id="a9f57-105">These canonical functions will be translated to the corresponding data source functionality for the provider.</span></span> <span data-ttu-id="a9f57-106">这样，就可以用一种在不同数据源间通用的形式表示函数调用。</span><span class="sxs-lookup"><span data-stu-id="a9f57-106">This allows for function invocations expressed in a common form across data sources.</span></span>  
+ <span data-ttu-id="e0be6-105">这些规范函数将转换为提供程序的相应数据源功能。</span><span class="sxs-lookup"><span data-stu-id="e0be6-105">These canonical functions will be translated to the corresponding data source functionality for the provider.</span></span> <span data-ttu-id="e0be6-106">这样，就可以用一种在不同数据源间通用的形式表示函数调用。</span><span class="sxs-lookup"><span data-stu-id="e0be6-106">This allows for function invocations expressed in a common form across data sources.</span></span>  
   
- <span data-ttu-id="a9f57-107">因为这些规范函数独立于数据源，所以会按概念模型中的类型来定义规范函数的参数和返回类型。</span><span class="sxs-lookup"><span data-stu-id="a9f57-107">Because these canonical functions are independent of data sources, argument and return types of canonical functions are defined in terms of types in the conceptual model.</span></span> <span data-ttu-id="a9f57-108">但某些数据源可能不支持概念模型中的所有类型。</span><span class="sxs-lookup"><span data-stu-id="a9f57-108">However, some data sources might not support all types in the conceptual model.</span></span>  
+ <span data-ttu-id="e0be6-107">因为这些规范函数独立于数据源，所以会按概念模型中的类型来定义规范函数的参数和返回类型。</span><span class="sxs-lookup"><span data-stu-id="e0be6-107">Because these canonical functions are independent of data sources, argument and return types of canonical functions are defined in terms of types in the conceptual model.</span></span> <span data-ttu-id="e0be6-108">但某些数据源可能不支持概念模型中的所有类型。</span><span class="sxs-lookup"><span data-stu-id="e0be6-108">However, some data sources might not support all types in the conceptual model.</span></span>  
   
- <span data-ttu-id="a9f57-109">当在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询中使用规范函数时，将在数据源中调用适当的函数。</span><span class="sxs-lookup"><span data-stu-id="a9f57-109">When canonical functions are used in an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query, the appropriate function will be called at the data source.</span></span>  
+ <span data-ttu-id="e0be6-109">当在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询中使用规范函数时，将在数据源中调用适当的函数。</span><span class="sxs-lookup"><span data-stu-id="e0be6-109">When canonical functions are used in an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query, the appropriate function will be called at the data source.</span></span>  
   
- <span data-ttu-id="a9f57-110">所有规范函数都同时显式指定 null 输入行为和错误条件。</span><span class="sxs-lookup"><span data-stu-id="a9f57-110">All canonical functions have both null-input behavior and error conditions explicitly specified.</span></span> <span data-ttu-id="a9f57-111">存储提供程序应遵循此行为，但 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 不强制执行此行为。</span><span class="sxs-lookup"><span data-stu-id="a9f57-111">Store providers should comply with that behavior, but [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] does not enforce this behavior.</span></span>  
+ <span data-ttu-id="e0be6-110">所有规范函数都同时显式指定 null 输入行为和错误条件。</span><span class="sxs-lookup"><span data-stu-id="e0be6-110">All canonical functions have both null-input behavior and error conditions explicitly specified.</span></span> <span data-ttu-id="e0be6-111">存储提供程序应遵循此行为，但 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 不强制执行此行为。</span><span class="sxs-lookup"><span data-stu-id="e0be6-111">Store providers should comply with that behavior, but [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] does not enforce this behavior.</span></span>  
   
- <span data-ttu-id="a9f57-112">对于 LINQ 方案，对 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 所执行的查询涉及将 CLR 方法映射到基础数据源中的方法。</span><span class="sxs-lookup"><span data-stu-id="a9f57-112">For LINQ scenarios, queries against the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] involve mapping CLR methods to methods in the underlying data source.</span></span> <span data-ttu-id="a9f57-113">CLR 方法映射到规范函数，这样，无论数据源如何，特定的方法集都会正确映射。</span><span class="sxs-lookup"><span data-stu-id="a9f57-113">The CLR methods map to canonical functions, so that a specific set of methods will correctly map, regardless of the data source.</span></span>  
+ <span data-ttu-id="e0be6-112">对于 LINQ 方案，对 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 所执行的查询涉及将 CLR 方法映射到基础数据源中的方法。</span><span class="sxs-lookup"><span data-stu-id="e0be6-112">For LINQ scenarios, queries against the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] involve mapping CLR methods to methods in the underlying data source.</span></span> <span data-ttu-id="e0be6-113">CLR 方法映射到规范函数，这样，无论数据源如何，特定的方法集都会正确映射。</span><span class="sxs-lookup"><span data-stu-id="e0be6-113">The CLR methods map to canonical functions, so that a specific set of methods will correctly map, regardless of the data source.</span></span>  
   
-## <a name="canonical-functions-namespace"></a><span data-ttu-id="a9f57-114">规范函数命名空间</span><span class="sxs-lookup"><span data-stu-id="a9f57-114">Canonical Functions Namespace</span></span>  
- <span data-ttu-id="a9f57-115">规范函数的命名空间是 <xref:System.Data.Metadata.Edm>。</span><span class="sxs-lookup"><span data-stu-id="a9f57-115">The namespace for canonical function is <xref:System.Data.Metadata.Edm>.</span></span> <span data-ttu-id="a9f57-116"><xref:System.Data.Metadata.Edm> 命名空间自动包含在所有查询中。</span><span class="sxs-lookup"><span data-stu-id="a9f57-116">The <xref:System.Data.Metadata.Edm> namespace is automatically included in all queries.</span></span> <span data-ttu-id="a9f57-117">但如果导入的另一个命名空间包含与规范函数（在 <xref:System.Data.Metadata.Edm> 命名空间中）同名的函数，则必须指定命名空间。</span><span class="sxs-lookup"><span data-stu-id="a9f57-117">However, if another namespace is imported that contains a function with the same name as a canonical function (in the <xref:System.Data.Metadata.Edm> namespace), you must specify the namespace.</span></span>  
+## <a name="canonical-functions-namespace"></a><span data-ttu-id="e0be6-114">规范函数命名空间</span><span class="sxs-lookup"><span data-stu-id="e0be6-114">Canonical Functions Namespace</span></span>  
+ <span data-ttu-id="e0be6-115">规范函数的命名空间是 <xref:System.Data.Metadata.Edm>。</span><span class="sxs-lookup"><span data-stu-id="e0be6-115">The namespace for canonical function is <xref:System.Data.Metadata.Edm>.</span></span> <span data-ttu-id="e0be6-116"><xref:System.Data.Metadata.Edm> 命名空间自动包含在所有查询中。</span><span class="sxs-lookup"><span data-stu-id="e0be6-116">The <xref:System.Data.Metadata.Edm> namespace is automatically included in all queries.</span></span> <span data-ttu-id="e0be6-117">但如果导入的另一个命名空间包含与规范函数（在 <xref:System.Data.Metadata.Edm> 命名空间中）同名的函数，则必须指定命名空间。</span><span class="sxs-lookup"><span data-stu-id="e0be6-117">However, if another namespace is imported that contains a function with the same name as a canonical function (in the <xref:System.Data.Metadata.Edm> namespace), you must specify the namespace.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a9f57-118">本节内容</span><span class="sxs-lookup"><span data-stu-id="a9f57-118">In This Section</span></span>  
- [<span data-ttu-id="a9f57-119">聚合 Canonical 函数</span><span class="sxs-lookup"><span data-stu-id="a9f57-119">Aggregate Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
- <span data-ttu-id="a9f57-120">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 聚合规范函数。</span><span class="sxs-lookup"><span data-stu-id="a9f57-120">Discusses aggregate [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e0be6-118">本节内容</span><span class="sxs-lookup"><span data-stu-id="e0be6-118">In This Section</span></span>  
+ [<span data-ttu-id="e0be6-119">聚合 Canonical 函数</span><span class="sxs-lookup"><span data-stu-id="e0be6-119">Aggregate Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
+ <span data-ttu-id="e0be6-120">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 聚合规范函数。</span><span class="sxs-lookup"><span data-stu-id="e0be6-120">Discusses aggregate [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
   
- [<span data-ttu-id="a9f57-121">数学 Canonical 函数</span><span class="sxs-lookup"><span data-stu-id="a9f57-121">Math Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
- <span data-ttu-id="a9f57-122">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 数学规范函数。</span><span class="sxs-lookup"><span data-stu-id="a9f57-122">Discusses math [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
+ [<span data-ttu-id="e0be6-121">数学 Canonical 函数</span><span class="sxs-lookup"><span data-stu-id="e0be6-121">Math Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
+ <span data-ttu-id="e0be6-122">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 数学规范函数。</span><span class="sxs-lookup"><span data-stu-id="e0be6-122">Discusses math [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
   
- [<span data-ttu-id="a9f57-123">字符串 Canonical 函数</span><span class="sxs-lookup"><span data-stu-id="a9f57-123">String Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
- <span data-ttu-id="a9f57-124">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 字符串规范函数。</span><span class="sxs-lookup"><span data-stu-id="a9f57-124">Discusses string [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
+ [<span data-ttu-id="e0be6-123">字符串 Canonical 函数</span><span class="sxs-lookup"><span data-stu-id="e0be6-123">String Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
+ <span data-ttu-id="e0be6-124">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 字符串规范函数。</span><span class="sxs-lookup"><span data-stu-id="e0be6-124">Discusses string [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
   
- [<span data-ttu-id="a9f57-125">日期和事件 Canonical 函数</span><span class="sxs-lookup"><span data-stu-id="a9f57-125">Date and Time Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
- <span data-ttu-id="a9f57-126">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 日期和时间规范函数。</span><span class="sxs-lookup"><span data-stu-id="a9f57-126">Discusses date and time [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
+ [<span data-ttu-id="e0be6-125">日期和事件 Canonical 函数</span><span class="sxs-lookup"><span data-stu-id="e0be6-125">Date and Time Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
+ <span data-ttu-id="e0be6-126">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 日期和时间规范函数。</span><span class="sxs-lookup"><span data-stu-id="e0be6-126">Discusses date and time [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
   
- [<span data-ttu-id="a9f57-127">按位 Canonical 函数</span><span class="sxs-lookup"><span data-stu-id="a9f57-127">Bitwise Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
- <span data-ttu-id="a9f57-128">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 按位规范函数。</span><span class="sxs-lookup"><span data-stu-id="a9f57-128">Discusses bitwise [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
+ [<span data-ttu-id="e0be6-127">按位 Canonical 函数</span><span class="sxs-lookup"><span data-stu-id="e0be6-127">Bitwise Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
+ <span data-ttu-id="e0be6-128">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 按位规范函数。</span><span class="sxs-lookup"><span data-stu-id="e0be6-128">Discusses bitwise [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
   
- [<span data-ttu-id="a9f57-129">空间函数</span><span class="sxs-lookup"><span data-stu-id="a9f57-129">Spatial Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
- <span data-ttu-id="a9f57-130">讨论空间 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 规范函数。</span><span class="sxs-lookup"><span data-stu-id="a9f57-130">Discusses Spatial [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
+ [<span data-ttu-id="e0be6-129">空间函数</span><span class="sxs-lookup"><span data-stu-id="e0be6-129">Spatial Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
+ <span data-ttu-id="e0be6-130">讨论空间 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 规范函数。</span><span class="sxs-lookup"><span data-stu-id="e0be6-130">Discusses Spatial [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
   
- [<span data-ttu-id="a9f57-131">其他 Canonical 函数</span><span class="sxs-lookup"><span data-stu-id="a9f57-131">Other Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
- <span data-ttu-id="a9f57-132">讨论未分类为按位、日期/时间、字符串、数字或聚合函数的函数。</span><span class="sxs-lookup"><span data-stu-id="a9f57-132">Discusses functions not classified as bitwise, date/time, string, math, or aggregate.</span></span>  
+ [<span data-ttu-id="e0be6-131">其他 Canonical 函数</span><span class="sxs-lookup"><span data-stu-id="e0be6-131">Other Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
+ <span data-ttu-id="e0be6-132">讨论未分类为按位、日期/时间、字符串、数字或聚合函数的函数。</span><span class="sxs-lookup"><span data-stu-id="e0be6-132">Discusses functions not classified as bitwise, date/time, string, math, or aggregate.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a9f57-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="a9f57-133">See Also</span></span>  
- [<span data-ttu-id="a9f57-134">实体 SQL 概述</span><span class="sxs-lookup"><span data-stu-id="a9f57-134">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [<span data-ttu-id="a9f57-135">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="a9f57-135">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [<span data-ttu-id="a9f57-136">SQL Server 函数映射的规范化概念模型</span><span class="sxs-lookup"><span data-stu-id="a9f57-136">Conceptual Model Canonical to SQL Server Functions Mapping</span></span>](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
- [<span data-ttu-id="a9f57-137">用户定义的函数</span><span class="sxs-lookup"><span data-stu-id="a9f57-137">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="e0be6-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="e0be6-133">See Also</span></span>  
+ [<span data-ttu-id="e0be6-134">实体 SQL 概述</span><span class="sxs-lookup"><span data-stu-id="e0be6-134">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+ [<span data-ttu-id="e0be6-135">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="e0be6-135">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="e0be6-136">SQL Server 函数映射的规范化概念模型</span><span class="sxs-lookup"><span data-stu-id="e0be6-136">Conceptual Model Canonical to SQL Server Functions Mapping</span></span>](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
+ [<span data-ttu-id="e0be6-137">用户定义的函数</span><span class="sxs-lookup"><span data-stu-id="e0be6-137">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

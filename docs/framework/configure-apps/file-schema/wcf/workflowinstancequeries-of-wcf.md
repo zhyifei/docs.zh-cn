@@ -1,62 +1,50 @@
 ---
-title: "WCF 的 &lt;workflowInstanceQueries&gt;"
-ms.custom: 
+title: WCF 的 &lt;workflowInstanceQueries&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f02336dc35083009f601b3c4fb3568585a0beeef
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 02bb0be83158fddf5907465db5a12a4708461ecb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltworkflowinstancequeriesgt-of-wcf"></a><span data-ttu-id="e8377-102">WCF 的 &lt;workflowInstanceQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="e8377-102">&lt;workflowInstanceQueries&gt; of WCF</span></span>
-<span data-ttu-id="e8377-103">表示配置元素的集合，这些配置元素跟踪工作流实例生命周期的更改，例如已开始或已完成的事件。</span><span class="sxs-lookup"><span data-stu-id="e8377-103">Represents a collection of configuration elements that track workflow instance life cycle changes such as a started or completed event.</span></span>  
+# <a name="ltworkflowinstancequeriesgt-of-wcf"></a><span data-ttu-id="78370-102">WCF 的 &lt;workflowInstanceQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="78370-102">&lt;workflowInstanceQueries&gt; of WCF</span></span>
+<span data-ttu-id="78370-103">表示配置元素的集合，这些配置元素跟踪工作流实例生命周期的更改，例如已开始或已完成的事件。</span><span class="sxs-lookup"><span data-stu-id="78370-103">Represents a collection of configuration elements that track workflow instance life cycle changes such as a started or completed event.</span></span>  
   
- <span data-ttu-id="e8377-104">有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="e8377-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
+ <span data-ttu-id="78370-104">有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="78370-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
- <span data-ttu-id="e8377-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="e8377-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="e8377-106">\<tracking></span><span class="sxs-lookup"><span data-stu-id="e8377-106">\<tracking></span></span>  
-<span data-ttu-id="e8377-107">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="e8377-107">\<trackingProfile></span></span>  
-<span data-ttu-id="e8377-108">\<workflow></span><span class="sxs-lookup"><span data-stu-id="e8377-108">\<workflow></span></span>  
-<span data-ttu-id="e8377-109">\<workflowInstanceQueries></span><span class="sxs-lookup"><span data-stu-id="e8377-109">\<workflowInstanceQueries></span></span>  
+ <span data-ttu-id="78370-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="78370-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="78370-106">\<跟踪 ></span><span class="sxs-lookup"><span data-stu-id="78370-106">\<tracking></span></span>  
+<span data-ttu-id="78370-107">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="78370-107">\<trackingProfile></span></span>  
+<span data-ttu-id="78370-108">\<工作流 ></span><span class="sxs-lookup"><span data-stu-id="78370-108">\<workflow></span></span>  
+<span data-ttu-id="78370-109">\<workflowInstanceQueries></span><span class="sxs-lookup"><span data-stu-id="78370-109">\<workflowInstanceQueries></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e8377-110">语法</span><span class="sxs-lookup"><span data-stu-id="e8377-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="78370-110">语法</span><span class="sxs-lookup"><span data-stu-id="78370-110">Syntax</span></span>  
   
 ```xml
 <tracking>   <trackingProfile name="Name">       <workflow>          <workflowInstanceQueries>             <workflowInstanceQuery>                <states>                   <state name="Name"/>                </states>            </workflowInstanceQuery>         </workflowInstanceQueries>       </workflow>   </trackingProfile></tracking>  
 ```
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="e8377-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="e8377-111">Attributes and Elements</span></span>  
- <span data-ttu-id="e8377-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="e8377-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="78370-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="78370-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="78370-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="78370-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="e8377-113">特性</span><span class="sxs-lookup"><span data-stu-id="e8377-113">Attributes</span></span>  
- <span data-ttu-id="e8377-114">无。</span><span class="sxs-lookup"><span data-stu-id="e8377-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="78370-113">特性</span><span class="sxs-lookup"><span data-stu-id="78370-113">Attributes</span></span>  
+ <span data-ttu-id="78370-114">无。</span><span class="sxs-lookup"><span data-stu-id="78370-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="e8377-115">子元素</span><span class="sxs-lookup"><span data-stu-id="e8377-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="78370-115">子元素</span><span class="sxs-lookup"><span data-stu-id="78370-115">Child Elements</span></span>  
   
-|<span data-ttu-id="e8377-116">元素</span><span class="sxs-lookup"><span data-stu-id="e8377-116">Element</span></span>|<span data-ttu-id="e8377-117">描述</span><span class="sxs-lookup"><span data-stu-id="e8377-117">Description</span></span>|  
+|<span data-ttu-id="78370-116">元素</span><span class="sxs-lookup"><span data-stu-id="78370-116">Element</span></span>|<span data-ttu-id="78370-117">描述</span><span class="sxs-lookup"><span data-stu-id="78370-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="e8377-118">\<workflowInstanceQuery></span><span class="sxs-lookup"><span data-stu-id="e8377-118">\<workflowInstanceQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|<span data-ttu-id="e8377-119">一个查询，用于跟踪工作流实例生命周期的更改。</span><span class="sxs-lookup"><span data-stu-id="e8377-119">A query that is used to track workflow instance life cycle changes.</span></span>|  
+|[<span data-ttu-id="78370-118">\<workflowInstanceQuery></span><span class="sxs-lookup"><span data-stu-id="78370-118">\<workflowInstanceQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|<span data-ttu-id="78370-119">一个查询，用于跟踪工作流实例生命周期的更改。</span><span class="sxs-lookup"><span data-stu-id="78370-119">A query that is used to track workflow instance life cycle changes.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="e8377-120">父元素</span><span class="sxs-lookup"><span data-stu-id="e8377-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="78370-120">父元素</span><span class="sxs-lookup"><span data-stu-id="78370-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="e8377-121">元素</span><span class="sxs-lookup"><span data-stu-id="e8377-121">Element</span></span>|<span data-ttu-id="e8377-122">描述</span><span class="sxs-lookup"><span data-stu-id="e8377-122">Description</span></span>|  
+|<span data-ttu-id="78370-121">元素</span><span class="sxs-lookup"><span data-stu-id="78370-121">Element</span></span>|<span data-ttu-id="78370-122">描述</span><span class="sxs-lookup"><span data-stu-id="78370-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="e8377-123">\<workflow></span><span class="sxs-lookup"><span data-stu-id="e8377-123">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="e8377-124">一个配置元素，包含由标识的特定工作流的所有查询[activityDefinitionId](http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx)属性。</span><span class="sxs-lookup"><span data-stu-id="e8377-124">A configuration element that contains all queries for a specific workflow identified by the [activityDefinitionId](http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) property.</span></span>|  
+|[<span data-ttu-id="78370-123">\<工作流 ></span><span class="sxs-lookup"><span data-stu-id="78370-123">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="78370-124">一个配置元素，包含由标识的特定工作流的所有查询[activityDefinitionId](http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx)属性。</span><span class="sxs-lookup"><span data-stu-id="78370-124">A configuration element that contains all queries for a specific workflow identified by the [activityDefinitionId](http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) property.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e8377-125">备注</span><span class="sxs-lookup"><span data-stu-id="e8377-125">Remarks</span></span>  
- <span data-ttu-id="e8377-126"><xref:System.Activities.Tracking.WorkflowInstanceQuery> 用于订阅以下 <xref:System.Activities.Tracking.TrackingRecord> 对象：</span><span class="sxs-lookup"><span data-stu-id="e8377-126">The <xref:System.Activities.Tracking.WorkflowInstanceQuery> is used to subscribe to the following <xref:System.Activities.Tracking.TrackingRecord> objects:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="78370-125">备注</span><span class="sxs-lookup"><span data-stu-id="78370-125">Remarks</span></span>  
+ <span data-ttu-id="78370-126"><xref:System.Activities.Tracking.WorkflowInstanceQuery> 用于订阅以下 <xref:System.Activities.Tracking.TrackingRecord> 对象：</span><span class="sxs-lookup"><span data-stu-id="78370-126">The <xref:System.Activities.Tracking.WorkflowInstanceQuery> is used to subscribe to the following <xref:System.Activities.Tracking.TrackingRecord> objects:</span></span>  
   
 -   <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
   
@@ -68,8 +56,8 @@ ms.lasthandoff: 01/19/2018
   
 -   <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
   
-## <a name="example"></a><span data-ttu-id="e8377-127">示例</span><span class="sxs-lookup"><span data-stu-id="e8377-127">Example</span></span>  
- <span data-ttu-id="e8377-128">下面的配置使用此查询订阅 `Started` 实例状态的工作流实例级跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="e8377-128">The following configuration subscribes to workflow instance-level tracking records for the `Started` instance state using this query.</span></span>  
+## <a name="example"></a><span data-ttu-id="78370-127">示例</span><span class="sxs-lookup"><span data-stu-id="78370-127">Example</span></span>  
+ <span data-ttu-id="78370-128">下面的配置使用此查询订阅 `Started` 实例状态的工作流实例级跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="78370-128">The following configuration subscribes to workflow instance-level tracking records for the `Started` instance state using this query.</span></span>  
   
 ```xml  
 <workflowInstanceQueries>  
@@ -81,8 +69,8 @@ ms.lasthandoff: 01/19/2018
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e8377-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="e8377-129">See Also</span></span>  
- <span data-ttu-id="e8377-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="e8377-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType></span></span>       
- <span data-ttu-id="e8377-131"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="e8377-131"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span></span>       
- [<span data-ttu-id="e8377-132">工作流跟踪</span><span class="sxs-lookup"><span data-stu-id="e8377-132">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="e8377-133">跟踪配置文件</span><span class="sxs-lookup"><span data-stu-id="e8377-133">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="78370-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="78370-129">See Also</span></span>  
+ <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>       
+ <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
+ [<span data-ttu-id="78370-130">工作流跟踪</span><span class="sxs-lookup"><span data-stu-id="78370-130">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="78370-131">跟踪配置文件</span><span class="sxs-lookup"><span data-stu-id="78370-131">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

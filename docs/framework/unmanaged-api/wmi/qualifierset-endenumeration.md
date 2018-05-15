@@ -1,11 +1,7 @@
 ---
-title: "QualifierSet_EndEnumeration 函数 （非托管 API 参考）"
-description: "QualifierSet_EndEnumeration 函数将终止枚举。"
+title: QualifierSet_EndEnumeration 函数 （非托管 API 参考）
+description: QualifierSet_EndEnumeration 函数将终止枚举。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_EndEnumeration
 api_location:
@@ -20,21 +16,18 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d8e6bb24eb471d807af2493f82b6be4f644124f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0e24acdde486f377cc9187aac088ce7a611cd4eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="qualifiersetendenumeration-function"></a><span data-ttu-id="e03e7-103">QualifierSet_EndEnumeration 函数</span><span class="sxs-lookup"><span data-stu-id="e03e7-103">QualifierSet_EndEnumeration function</span></span>
-<span data-ttu-id="e03e7-104">终止通过调用开始枚举[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函数。</span><span class="sxs-lookup"><span data-stu-id="e03e7-104">Terminates the enumeration begun with a call to the [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) function.</span></span>  
+# <a name="qualifiersetendenumeration-function"></a><span data-ttu-id="8ad5c-103">QualifierSet_EndEnumeration 函数</span><span class="sxs-lookup"><span data-stu-id="8ad5c-103">QualifierSet_EndEnumeration function</span></span>
+<span data-ttu-id="8ad5c-104">终止通过调用开始枚举[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函数。</span><span class="sxs-lookup"><span data-stu-id="8ad5c-104">Terminates the enumeration begun with a call to the [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) function.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="e03e7-105">语法</span><span class="sxs-lookup"><span data-stu-id="e03e7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8ad5c-105">语法</span><span class="sxs-lookup"><span data-stu-id="8ad5c-105">Syntax</span></span>  
   
 ```  
 HRESULT QualifierSet_EndEnumeration (
@@ -43,35 +36,35 @@ HRESULT QualifierSet_EndEnumeration (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="e03e7-106">参数</span><span class="sxs-lookup"><span data-stu-id="e03e7-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="8ad5c-106">参数</span><span class="sxs-lookup"><span data-stu-id="8ad5c-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="e03e7-107">[in]未使用此参数。</span><span class="sxs-lookup"><span data-stu-id="e03e7-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="8ad5c-107">[in]未使用此参数。</span><span class="sxs-lookup"><span data-stu-id="8ad5c-107">[in] This parameter is unused.</span></span>
 
 `ptr`   
-<span data-ttu-id="e03e7-108">[in]指向的指针[IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)实例。</span><span class="sxs-lookup"><span data-stu-id="e03e7-108">[in] A pointer to an [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instance.</span></span>
+<span data-ttu-id="8ad5c-108">[in]指向的指针[IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)实例。</span><span class="sxs-lookup"><span data-stu-id="8ad5c-108">[in] A pointer to an [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instance.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="e03e7-109">返回值</span><span class="sxs-lookup"><span data-stu-id="e03e7-109">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="8ad5c-109">返回值</span><span class="sxs-lookup"><span data-stu-id="8ad5c-109">Return value</span></span>
 
-<span data-ttu-id="e03e7-110">此函数返回以下值用定义*WbemCli.h*标头文件，也可以为常量在中定义你的代码：</span><span class="sxs-lookup"><span data-stu-id="e03e7-110">The following value returned by this function is defined in the *WbemCli.h* header file, or you can define it as a constant in your code:</span></span>
+<span data-ttu-id="8ad5c-110">此函数返回以下值用定义*WbemCli.h*标头文件，也可以为常量在中定义你的代码：</span><span class="sxs-lookup"><span data-stu-id="8ad5c-110">The following value returned by this function is defined in the *WbemCli.h* header file, or you can define it as a constant in your code:</span></span>
 
-|<span data-ttu-id="e03e7-111">返回的常量</span><span class="sxs-lookup"><span data-stu-id="e03e7-111">Constant</span></span>  |<span data-ttu-id="e03e7-112">“值”</span><span class="sxs-lookup"><span data-stu-id="e03e7-112">Value</span></span>  |<span data-ttu-id="e03e7-113">描述</span><span class="sxs-lookup"><span data-stu-id="e03e7-113">Description</span></span>  |
+|<span data-ttu-id="8ad5c-111">返回的常量</span><span class="sxs-lookup"><span data-stu-id="8ad5c-111">Constant</span></span>  |<span data-ttu-id="8ad5c-112">值</span><span class="sxs-lookup"><span data-stu-id="8ad5c-112">Value</span></span>  |<span data-ttu-id="8ad5c-113">描述</span><span class="sxs-lookup"><span data-stu-id="8ad5c-113">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="e03e7-114">0</span><span class="sxs-lookup"><span data-stu-id="e03e7-114">0</span></span> | <span data-ttu-id="e03e7-115">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="e03e7-115">The function call was successful.</span></span>  |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="8ad5c-114">0</span><span class="sxs-lookup"><span data-stu-id="8ad5c-114">0</span></span> | <span data-ttu-id="8ad5c-115">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="8ad5c-115">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="e03e7-116">备注</span><span class="sxs-lookup"><span data-stu-id="e03e7-116">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="8ad5c-116">备注</span><span class="sxs-lookup"><span data-stu-id="8ad5c-116">Remarks</span></span>
 
-<span data-ttu-id="e03e7-117">此函数包装对的调用[IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx)方法。</span><span class="sxs-lookup"><span data-stu-id="e03e7-117">This function wraps a call to the [IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="8ad5c-117">此函数包装对的调用[IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx)方法。</span><span class="sxs-lookup"><span data-stu-id="8ad5c-117">This function wraps a call to the [IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx) method.</span></span>
 
-<span data-ttu-id="e03e7-118">此调用是建议，但不是要求。</span><span class="sxs-lookup"><span data-stu-id="e03e7-118">This call is recommended, but not required.</span></span> <span data-ttu-id="e03e7-119">它立即释放枚举与关联的资源。</span><span class="sxs-lookup"><span data-stu-id="e03e7-119">It immediately releases resources associated with the enumeration.</span></span>
+<span data-ttu-id="8ad5c-118">此调用是建议，但不是要求。</span><span class="sxs-lookup"><span data-stu-id="8ad5c-118">This call is recommended, but not required.</span></span> <span data-ttu-id="8ad5c-119">它立即释放枚举与关联的资源。</span><span class="sxs-lookup"><span data-stu-id="8ad5c-119">It immediately releases resources associated with the enumeration.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="e03e7-120">惠?</span><span class="sxs-lookup"><span data-stu-id="e03e7-120">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8ad5c-120">要求</span><span class="sxs-lookup"><span data-stu-id="8ad5c-120">Requirements</span></span>  
 
-<span data-ttu-id="e03e7-121">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e03e7-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="8ad5c-121">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8ad5c-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
-<span data-ttu-id="e03e7-122">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="e03e7-122">**Header:** WMINet_Utils.idl</span></span>  
+<span data-ttu-id="8ad5c-122">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="8ad5c-122">**Header:** WMINet_Utils.idl</span></span>  
   
-<span data-ttu-id="e03e7-123">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="e03e7-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+<span data-ttu-id="8ad5c-123">**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="8ad5c-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e03e7-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="e03e7-124">See also</span></span>  
-[<span data-ttu-id="e03e7-125">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="e03e7-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="8ad5c-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="8ad5c-124">See also</span></span>  
+[<span data-ttu-id="8ad5c-125">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="8ad5c-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

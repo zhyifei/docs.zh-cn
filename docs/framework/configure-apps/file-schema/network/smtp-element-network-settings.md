@@ -1,14 +1,6 @@
 ---
-title: "&lt;smtp&gt;元素 （网络设置）"
-ms.custom: 
+title: '&lt;smtp&gt;元素 （网络设置）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#smtp
@@ -16,27 +8,24 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5b2a3b7eec17fbdd12181c29f610d2b2ad32bd4
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 56912e09d24fc83e93a91cc42b1d96dcc68210f2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltsmtpgt-element-network-settings"></a><span data-ttu-id="29d35-102">&lt;smtp&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="29d35-102">&lt;smtp&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="29d35-103">配置传递格式、 传递方法和发件人发送电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="29d35-103">Configures the delivery format, delivery method, and from address for sending emails.</span></span>  
+# <a name="ltsmtpgt-element-network-settings"></a><span data-ttu-id="b3255-102">&lt;smtp&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="b3255-102">&lt;smtp&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="b3255-103">配置传递格式、 传递方法和发件人发送电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="b3255-103">Configures the delivery format, delivery method, and from address for sending emails.</span></span>  
   
- <span data-ttu-id="29d35-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="29d35-104">\<configuration></span></span>  
-<span data-ttu-id="29d35-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="29d35-105">\<system.net></span></span>  
-<span data-ttu-id="29d35-106">\<mailSettings></span><span class="sxs-lookup"><span data-stu-id="29d35-106">\<mailSettings></span></span>  
-<span data-ttu-id="29d35-107">\<smtp></span><span class="sxs-lookup"><span data-stu-id="29d35-107">\<smtp></span></span>  
+ <span data-ttu-id="b3255-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b3255-104">\<configuration></span></span>  
+<span data-ttu-id="b3255-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="b3255-105">\<system.net></span></span>  
+<span data-ttu-id="b3255-106">\<mailSettings></span><span class="sxs-lookup"><span data-stu-id="b3255-106">\<mailSettings></span></span>  
+<span data-ttu-id="b3255-107">\<smtp></span><span class="sxs-lookup"><span data-stu-id="b3255-107">\<smtp></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="29d35-108">语法</span><span class="sxs-lookup"><span data-stu-id="29d35-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b3255-108">语法</span><span class="sxs-lookup"><span data-stu-id="b3255-108">Syntax</span></span>  
   
 ```xml  
       <smtp  
@@ -48,32 +37,32 @@ ms.lasthandoff: 02/01/2018
       </smtp>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="29d35-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="29d35-109">Attributes and Elements</span></span>  
- <span data-ttu-id="29d35-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="29d35-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b3255-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="b3255-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="b3255-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="b3255-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="29d35-111">特性</span><span class="sxs-lookup"><span data-stu-id="29d35-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b3255-111">特性</span><span class="sxs-lookup"><span data-stu-id="b3255-111">Attributes</span></span>  
   
-|<span data-ttu-id="29d35-112">特性</span><span class="sxs-lookup"><span data-stu-id="29d35-112">Attribute</span></span>|<span data-ttu-id="29d35-113">描述</span><span class="sxs-lookup"><span data-stu-id="29d35-113">Description</span></span>|  
+|<span data-ttu-id="b3255-112">特性</span><span class="sxs-lookup"><span data-stu-id="b3255-112">Attribute</span></span>|<span data-ttu-id="b3255-113">描述</span><span class="sxs-lookup"><span data-stu-id="b3255-113">Description</span></span>|  
 |---------------|-----------------|  
-|`deliveryFormat`|<span data-ttu-id="29d35-114">指定传出电子邮件的传送格式。</span><span class="sxs-lookup"><span data-stu-id="29d35-114">Specifies the delivery format for outgoing emails.</span></span> <span data-ttu-id="29d35-115">可接受的值为 SevenBit 和 International。</span><span class="sxs-lookup"><span data-stu-id="29d35-115">Acceptable values are SevenBit and International.</span></span>|  
-|`deliveryMethod`|<span data-ttu-id="29d35-116">指定电子邮件的传递方法。</span><span class="sxs-lookup"><span data-stu-id="29d35-116">Specifies the delivery method for emails.</span></span> <span data-ttu-id="29d35-117">可接受的值是网络、 pickupDirectoryFromIis 和 specifiedPickupDirectory。</span><span class="sxs-lookup"><span data-stu-id="29d35-117">Acceptable values are network, pickupDirectoryFromIis, and specifiedPickupDirectory.</span></span>|  
-|`from`|<span data-ttu-id="29d35-118">指定发件人的传出电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="29d35-118">Specifies the from address for outgoing emails.</span></span>|  
+|`deliveryFormat`|<span data-ttu-id="b3255-114">指定传出电子邮件的传送格式。</span><span class="sxs-lookup"><span data-stu-id="b3255-114">Specifies the delivery format for outgoing emails.</span></span> <span data-ttu-id="b3255-115">可接受的值为 SevenBit 和 International。</span><span class="sxs-lookup"><span data-stu-id="b3255-115">Acceptable values are SevenBit and International.</span></span>|  
+|`deliveryMethod`|<span data-ttu-id="b3255-116">指定电子邮件的传递方法。</span><span class="sxs-lookup"><span data-stu-id="b3255-116">Specifies the delivery method for emails.</span></span> <span data-ttu-id="b3255-117">可接受的值是网络、 pickupDirectoryFromIis 和 specifiedPickupDirectory。</span><span class="sxs-lookup"><span data-stu-id="b3255-117">Acceptable values are network, pickupDirectoryFromIis, and specifiedPickupDirectory.</span></span>|  
+|`from`|<span data-ttu-id="b3255-118">指定发件人的传出电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="b3255-118">Specifies the from address for outgoing emails.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="29d35-119">子元素</span><span class="sxs-lookup"><span data-stu-id="29d35-119">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b3255-119">子元素</span><span class="sxs-lookup"><span data-stu-id="b3255-119">Child Elements</span></span>  
   
-|<span data-ttu-id="29d35-120">特性</span><span class="sxs-lookup"><span data-stu-id="29d35-120">Attribute</span></span>|<span data-ttu-id="29d35-121">描述</span><span class="sxs-lookup"><span data-stu-id="29d35-121">Description</span></span>|  
+|<span data-ttu-id="b3255-120">特性</span><span class="sxs-lookup"><span data-stu-id="b3255-120">Attribute</span></span>|<span data-ttu-id="b3255-121">描述</span><span class="sxs-lookup"><span data-stu-id="b3255-121">Description</span></span>|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|<span data-ttu-id="29d35-122">配置简单邮件传输协议 (SMTP) 服务器的本地目录。</span><span class="sxs-lookup"><span data-stu-id="29d35-122">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>|  
-|`network`|<span data-ttu-id="29d35-123">配置外部的 SMTP 服务器的网络选项。</span><span class="sxs-lookup"><span data-stu-id="29d35-123">Configures the network options for an external SMTP server.</span></span>|  
+|`specifiedPickupDirectory`|<span data-ttu-id="b3255-122">配置简单邮件传输协议 (SMTP) 服务器的本地目录。</span><span class="sxs-lookup"><span data-stu-id="b3255-122">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>|  
+|`network`|<span data-ttu-id="b3255-123">配置外部的 SMTP 服务器的网络选项。</span><span class="sxs-lookup"><span data-stu-id="b3255-123">Configures the network options for an external SMTP server.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="29d35-124">父元素</span><span class="sxs-lookup"><span data-stu-id="29d35-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b3255-124">父元素</span><span class="sxs-lookup"><span data-stu-id="b3255-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="29d35-125">**元素**</span><span class="sxs-lookup"><span data-stu-id="29d35-125">**Element**</span></span>|<span data-ttu-id="29d35-126">**说明**</span><span class="sxs-lookup"><span data-stu-id="29d35-126">**Description**</span></span>|  
+|<span data-ttu-id="b3255-125">**元素**</span><span class="sxs-lookup"><span data-stu-id="b3255-125">**Element**</span></span>|<span data-ttu-id="b3255-126">**说明**</span><span class="sxs-lookup"><span data-stu-id="b3255-126">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="29d35-127">\<mailSettings> 元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="29d35-127">\<mailSettings> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="29d35-128">配置邮件发送选项。</span><span class="sxs-lookup"><span data-stu-id="29d35-128">Configures mail sending options.</span></span>|  
+|[<span data-ttu-id="b3255-127">\<mailSettings> 元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="b3255-127">\<mailSettings> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="b3255-128">配置邮件发送选项。</span><span class="sxs-lookup"><span data-stu-id="b3255-128">Configures mail sending options.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="29d35-129">示例</span><span class="sxs-lookup"><span data-stu-id="29d35-129">Example</span></span>  
- <span data-ttu-id="29d35-130">下面的示例指定适当的 SMTP 参数，以使用默认网络凭据发送电子邮件。</span><span class="sxs-lookup"><span data-stu-id="29d35-130">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
+## <a name="example"></a><span data-ttu-id="b3255-129">示例</span><span class="sxs-lookup"><span data-stu-id="b3255-129">Example</span></span>  
+ <span data-ttu-id="b3255-130">下面的示例指定适当的 SMTP 参数，以使用默认网络凭据发送电子邮件。</span><span class="sxs-lookup"><span data-stu-id="b3255-130">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -91,9 +80,9 @@ ms.lasthandoff: 02/01/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="29d35-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="29d35-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b3255-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="b3255-131">See Also</span></span>  
  <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
  <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
  <xref:System.Net.Mail.SmtpDeliveryFormat>  
  <xref:System.Net.Mail.SmtpDeliveryMethod>  
- [<span data-ttu-id="29d35-132">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="29d35-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="b3255-132">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="b3255-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

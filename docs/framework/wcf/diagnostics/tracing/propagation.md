@@ -1,49 +1,37 @@
 ---
-title: "传播"
-ms.custom: 
+title: 传播
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17b20b76d4932272c8e2a9e26603dc8483505242
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="propagation"></a><span data-ttu-id="0620e-102">传播</span><span class="sxs-lookup"><span data-stu-id="0620e-102">Propagation</span></span>
-<span data-ttu-id="0620e-103">本主题描述 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 跟踪模型中的活动传播。</span><span class="sxs-lookup"><span data-stu-id="0620e-103">This topic describes activity propagation in the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] tracing model.</span></span>  
+# <a name="propagation"></a><span data-ttu-id="2e20a-102">传播</span><span class="sxs-lookup"><span data-stu-id="2e20a-102">Propagation</span></span>
+<span data-ttu-id="2e20a-103">本主题介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动传播。</span><span class="sxs-lookup"><span data-stu-id="2e20a-103">This topic describes activity propagation in the Windows Communication Foundation (WCF) tracing model.</span></span>  
   
-## <a name="using-propagation-to-correlate-activities-across-endpoints"></a><span data-ttu-id="0620e-104">使用传播关联终结点之间的活动</span><span class="sxs-lookup"><span data-stu-id="0620e-104">Using Propagation to Correlate Activities Across Endpoints</span></span>  
- <span data-ttu-id="0620e-105">传播可向用户提供应用程序终结点之间相同处理单元的错误跟踪的直接关联，如请求。</span><span class="sxs-lookup"><span data-stu-id="0620e-105">Propagation provides the user with direct correlation of error traces for the same unit of processing across application endpoints, for example, a request.</span></span> <span data-ttu-id="0620e-106">在不同终结点为相同处理单元发出的错误将被分组到相同的活动中，甚至跨应用程序域。</span><span class="sxs-lookup"><span data-stu-id="0620e-106">Errors emitted at different endpoints for the same unit of processing are grouped in the same activity, even across application domains.</span></span> <span data-ttu-id="0620e-107">这是通过活动 ID 在消息头中的传播实现的。</span><span class="sxs-lookup"><span data-stu-id="0620e-107">This is done through propagation of the activity ID in the message headers.</span></span> <span data-ttu-id="0620e-108">因此，如果客户端由于服务器内部错误而超时，则这两个错误都会显示在同一活动中以便直接关联。</span><span class="sxs-lookup"><span data-stu-id="0620e-108">Therefore, if a client times out because of an internal error in the server, both errors appear in the same activity for direct correlation.</span></span>  
+## <a name="using-propagation-to-correlate-activities-across-endpoints"></a><span data-ttu-id="2e20a-104">使用传播关联终结点之间的活动</span><span class="sxs-lookup"><span data-stu-id="2e20a-104">Using Propagation to Correlate Activities Across Endpoints</span></span>  
+ <span data-ttu-id="2e20a-105">传播可向用户提供应用程序终结点之间相同处理单元的错误跟踪的直接关联，如请求。</span><span class="sxs-lookup"><span data-stu-id="2e20a-105">Propagation provides the user with direct correlation of error traces for the same unit of processing across application endpoints, for example, a request.</span></span> <span data-ttu-id="2e20a-106">在不同终结点为相同处理单元发出的错误将被分组到相同的活动中，甚至跨应用程序域。</span><span class="sxs-lookup"><span data-stu-id="2e20a-106">Errors emitted at different endpoints for the same unit of processing are grouped in the same activity, even across application domains.</span></span> <span data-ttu-id="2e20a-107">这是通过活动 ID 在消息头中的传播实现的。</span><span class="sxs-lookup"><span data-stu-id="2e20a-107">This is done through propagation of the activity ID in the message headers.</span></span> <span data-ttu-id="2e20a-108">因此，如果客户端由于服务器内部错误而超时，则这两个错误都会显示在同一活动中以便直接关联。</span><span class="sxs-lookup"><span data-stu-id="2e20a-108">Therefore, if a client times out because of an internal error in the server, both errors appear in the same activity for direct correlation.</span></span>  
   
- <span data-ttu-id="0620e-109">为此，可以按前面示例所示使用 `ActivityTracing` 设置。</span><span class="sxs-lookup"><span data-stu-id="0620e-109">To do this, use the `ActivityTracing` setting as demonstrated in the previous example.</span></span> <span data-ttu-id="0620e-110">此外，在所有终结点处设置 `propagateActivity` 跟踪源的 `System.ServiceModel` 属性。</span><span class="sxs-lookup"><span data-stu-id="0620e-110">In addition, set the `propagateActivity` attribute for the `System.ServiceModel` trace source at all endpoints.</span></span>  
+ <span data-ttu-id="2e20a-109">为此，可以按前面示例所示使用 `ActivityTracing` 设置。</span><span class="sxs-lookup"><span data-stu-id="2e20a-109">To do this, use the `ActivityTracing` setting as demonstrated in the previous example.</span></span> <span data-ttu-id="2e20a-110">此外，在所有终结点处设置 `propagateActivity` 跟踪源的 `System.ServiceModel` 属性。</span><span class="sxs-lookup"><span data-stu-id="2e20a-110">In addition, set the `propagateActivity` attribute for the `System.ServiceModel` trace source at all endpoints.</span></span>  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- <span data-ttu-id="0620e-111">活动传播是一项可配置的功能，此功能允许 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 向出站消息添加标头，其中包括 TLS 上的活动 ID。</span><span class="sxs-lookup"><span data-stu-id="0620e-111">Activity propagation is a configurable capability that causes [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] to add a header to outbound messages, which includes the activity ID on the TLS.</span></span> <span data-ttu-id="0620e-112">通过在服务器端的后续跟踪上包括此 ID，可以关联客户端和服务器活动。</span><span class="sxs-lookup"><span data-stu-id="0620e-112">By including this on subsequent traces on the server side, we can correlate client and server activities.</span></span>  
+ <span data-ttu-id="2e20a-111">活动传播是一种可配置的功能，会导致 WCF 将标头添加到出站消息，其中包括 TLS 上的活动 ID。</span><span class="sxs-lookup"><span data-stu-id="2e20a-111">Activity propagation is a configurable capability that causes WCF to add a header to outbound messages, which includes the activity ID on the TLS.</span></span> <span data-ttu-id="2e20a-112">通过在服务器端的后续跟踪上包括此 ID，可以关联客户端和服务器活动。</span><span class="sxs-lookup"><span data-stu-id="2e20a-112">By including this on subsequent traces on the server side, we can correlate client and server activities.</span></span>  
   
-## <a name="propagation-definition"></a><span data-ttu-id="0620e-113">传播定义</span><span class="sxs-lookup"><span data-stu-id="0620e-113">Propagation Definition</span></span>  
- <span data-ttu-id="0620e-114">如果下列所有条件都适用，则活动 M 的 gAId 会传播到活动 N。</span><span class="sxs-lookup"><span data-stu-id="0620e-114">Activity M’s gAId is propagated to activity N if all of the following conditions apply.</span></span>  
+## <a name="propagation-definition"></a><span data-ttu-id="2e20a-113">传播定义</span><span class="sxs-lookup"><span data-stu-id="2e20a-113">Propagation Definition</span></span>  
+ <span data-ttu-id="2e20a-114">如果下列所有条件都适用，则活动 M 的 gAId 会传播到活动 N。</span><span class="sxs-lookup"><span data-stu-id="2e20a-114">Activity M’s gAId is propagated to activity N if all of the following conditions apply.</span></span>  
   
--   <span data-ttu-id="0620e-115">N 是为 M 创建的</span><span class="sxs-lookup"><span data-stu-id="0620e-115">N is created because of M</span></span>  
+-   <span data-ttu-id="2e20a-115">N 是为 M 创建的</span><span class="sxs-lookup"><span data-stu-id="2e20a-115">N is created because of M</span></span>  
   
--   <span data-ttu-id="0620e-116">N 已知 M 的 gAId</span><span class="sxs-lookup"><span data-stu-id="0620e-116">M’s gAId is known to N</span></span>  
+-   <span data-ttu-id="2e20a-116">N 已知 M 的 gAId</span><span class="sxs-lookup"><span data-stu-id="2e20a-116">M’s gAId is known to N</span></span>  
   
--   <span data-ttu-id="0620e-117">N 的 gAId 与 M 的 gAId 相同。</span><span class="sxs-lookup"><span data-stu-id="0620e-117">N's gAId is equal to M’s gAId.</span></span>  
+-   <span data-ttu-id="2e20a-117">N 的 gAId 与 M 的 gAId 相同。</span><span class="sxs-lookup"><span data-stu-id="2e20a-117">N's gAId is equal to M’s gAId.</span></span>  
   
- <span data-ttu-id="0620e-118">gAId 通过 ActivityId 消息头传播，如下面的 XML 架构所示。</span><span class="sxs-lookup"><span data-stu-id="0620e-118">The gAId is propagated through the ActivityId message header, as illustrated in the following XML schema.</span></span>  
+ <span data-ttu-id="2e20a-118">gAId 通过 ActivityId 消息头传播，如下面的 XML 架构所示。</span><span class="sxs-lookup"><span data-stu-id="2e20a-118">The gAId is propagated through the ActivityId message header, as illustrated in the following XML schema.</span></span>  
   
 ```xml  
 <xsd:element name="ActivityId" type="integer" minOccurs="0">  
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 </xsd:element>  
 ```  
   
- <span data-ttu-id="0620e-119">下面是一个消息头示例。</span><span class="sxs-lookup"><span data-stu-id="0620e-119">The following is an example of the message header.</span></span>  
+ <span data-ttu-id="2e20a-119">下面是一个消息头示例。</span><span class="sxs-lookup"><span data-stu-id="2e20a-119">The following is an example of the message header.</span></span>  
   
 ```xml  
 <MessageLogTraceRecord>  
@@ -83,14 +71,14 @@ ms.lasthandoff: 12/22/2017
 </MessageLogTraceRecord>  
 ```  
   
-## <a name="propagation-and-activity-boundaries"></a><span data-ttu-id="0620e-120">传播和活动边界</span><span class="sxs-lookup"><span data-stu-id="0620e-120">Propagation and Activity Boundaries</span></span>  
- <span data-ttu-id="0620e-121">当活动 ID 在终结点之间传播时，消息接收方使用该（传播的）活动 ID 发出开始跟踪和停止跟踪。</span><span class="sxs-lookup"><span data-stu-id="0620e-121">When the activity ID is propagated across endpoints, the message receiver emits a Start and Stop traces with that (propagated) activity ID.</span></span> <span data-ttu-id="0620e-122">因此，每个跟踪源的 gAId 都具有开始和停止跟踪。</span><span class="sxs-lookup"><span data-stu-id="0620e-122">Therefore, there is a Start and Stop trace with that gAId from each trace source.</span></span> <span data-ttu-id="0620e-123">如果终结点位于同一个进程中，且使用相同的跟踪源名称，则会创建多个具有相同 lAId（相同 gAId、相同跟踪源和相同进程）的开始和停止跟踪。</span><span class="sxs-lookup"><span data-stu-id="0620e-123">If the endpoints are in the same process and use the same trace source name, multiple Start and Stop with the same lAId (same gAId, same trace source, same process) are created.</span></span>  
+## <a name="propagation-and-activity-boundaries"></a><span data-ttu-id="2e20a-120">传播和活动边界</span><span class="sxs-lookup"><span data-stu-id="2e20a-120">Propagation and Activity Boundaries</span></span>  
+ <span data-ttu-id="2e20a-121">当活动 ID 在终结点之间传播时，消息接收方使用该（传播的）活动 ID 发出开始跟踪和停止跟踪。</span><span class="sxs-lookup"><span data-stu-id="2e20a-121">When the activity ID is propagated across endpoints, the message receiver emits a Start and Stop traces with that (propagated) activity ID.</span></span> <span data-ttu-id="2e20a-122">因此，每个跟踪源的 gAId 都具有开始和停止跟踪。</span><span class="sxs-lookup"><span data-stu-id="2e20a-122">Therefore, there is a Start and Stop trace with that gAId from each trace source.</span></span> <span data-ttu-id="2e20a-123">如果终结点位于同一个进程中，且使用相同的跟踪源名称，则会创建多个具有相同 lAId（相同 gAId、相同跟踪源和相同进程）的开始和停止跟踪。</span><span class="sxs-lookup"><span data-stu-id="2e20a-123">If the endpoints are in the same process and use the same trace source name, multiple Start and Stop with the same lAId (same gAId, same trace source, same process) are created.</span></span>  
   
-## <a name="synchronization"></a><span data-ttu-id="0620e-124">同步</span><span class="sxs-lookup"><span data-stu-id="0620e-124">Synchronization</span></span>  
- <span data-ttu-id="0620e-125">为了同步不同计算机上运行的各终结点之间的事件，向在消息中传播的 ActivityId 标头中添加了一个 CorrelationId。</span><span class="sxs-lookup"><span data-stu-id="0620e-125">To synchronize events across endpoints that run on different machines, a CorrelationId is added to the ActivityId header that is propagated in messages.</span></span> <span data-ttu-id="0620e-126">工具可使用此 ID 来同步计算机之间具有时钟差的事件。</span><span class="sxs-lookup"><span data-stu-id="0620e-126">Tools can use this ID to synchronize events across machines with clock discrepancy.</span></span> <span data-ttu-id="0620e-127">具体地说，服务跟踪查看器工具可使用此 ID 显示终结点之间的消息流。</span><span class="sxs-lookup"><span data-stu-id="0620e-127">Specifically, the Service Trace Viewer tool uses this ID for showing message flows between endpoints.</span></span>  
+## <a name="synchronization"></a><span data-ttu-id="2e20a-124">同步</span><span class="sxs-lookup"><span data-stu-id="2e20a-124">Synchronization</span></span>  
+ <span data-ttu-id="2e20a-125">为了同步不同计算机上运行的各终结点之间的事件，向在消息中传播的 ActivityId 标头中添加了一个 CorrelationId。</span><span class="sxs-lookup"><span data-stu-id="2e20a-125">To synchronize events across endpoints that run on different machines, a CorrelationId is added to the ActivityId header that is propagated in messages.</span></span> <span data-ttu-id="2e20a-126">工具可使用此 ID 来同步计算机之间具有时钟差的事件。</span><span class="sxs-lookup"><span data-stu-id="2e20a-126">Tools can use this ID to synchronize events across machines with clock discrepancy.</span></span> <span data-ttu-id="2e20a-127">具体地说，服务跟踪查看器工具可使用此 ID 显示终结点之间的消息流。</span><span class="sxs-lookup"><span data-stu-id="2e20a-127">Specifically, the Service Trace Viewer tool uses this ID for showing message flows between endpoints.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0620e-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="0620e-128">See Also</span></span>  
- [<span data-ttu-id="0620e-129">配置跟踪</span><span class="sxs-lookup"><span data-stu-id="0620e-129">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [<span data-ttu-id="0620e-130">使用服务跟踪查看器查看相关跟踪和进行故障排除</span><span class="sxs-lookup"><span data-stu-id="0620e-130">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [<span data-ttu-id="0620e-131">端到端跟踪方案</span><span class="sxs-lookup"><span data-stu-id="0620e-131">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [<span data-ttu-id="0620e-132">服务跟踪查看器工具 (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="0620e-132">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a><span data-ttu-id="2e20a-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="2e20a-128">See Also</span></span>  
+ [<span data-ttu-id="2e20a-129">配置跟踪</span><span class="sxs-lookup"><span data-stu-id="2e20a-129">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [<span data-ttu-id="2e20a-130">使用服务跟踪查看器查看相关跟踪和进行故障排除</span><span class="sxs-lookup"><span data-stu-id="2e20a-130">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [<span data-ttu-id="2e20a-131">端到端跟踪方案</span><span class="sxs-lookup"><span data-stu-id="2e20a-131">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [<span data-ttu-id="2e20a-132">服务跟踪查看器工具 (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="2e20a-132">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

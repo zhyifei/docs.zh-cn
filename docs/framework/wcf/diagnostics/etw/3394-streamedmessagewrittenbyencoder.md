@@ -1,39 +1,27 @@
 ---
 title: 3394 - StreamedMessageWrittenByEncoder
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b3a1a76-e5f7-4421-86cf-d201d724671e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84ae810106cfd5406cebf489be7a17695696c6c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb48518d4cefb55769624769f552efc596915e3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="3394---streamedmessagewrittenbyencoder"></a><span data-ttu-id="16728-102">3394 - StreamedMessageWrittenByEncoder</span><span class="sxs-lookup"><span data-stu-id="16728-102">3394 - StreamedMessageWrittenByEncoder</span></span>
-## <a name="properties"></a><span data-ttu-id="16728-103">属性</span><span class="sxs-lookup"><span data-stu-id="16728-103">Properties</span></span>  
+# <a name="3394---streamedmessagewrittenbyencoder"></a><span data-ttu-id="254cb-102">3394 - StreamedMessageWrittenByEncoder</span><span class="sxs-lookup"><span data-stu-id="254cb-102">3394 - StreamedMessageWrittenByEncoder</span></span>
+## <a name="properties"></a><span data-ttu-id="254cb-103">属性</span><span class="sxs-lookup"><span data-stu-id="254cb-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="16728-104">ID</span><span class="sxs-lookup"><span data-stu-id="16728-104">ID</span></span>|<span data-ttu-id="16728-105">3394</span><span class="sxs-lookup"><span data-stu-id="16728-105">3394</span></span>|  
-|<span data-ttu-id="16728-106">关键字</span><span class="sxs-lookup"><span data-stu-id="16728-106">Keywords</span></span>|<span data-ttu-id="16728-107">通道</span><span class="sxs-lookup"><span data-stu-id="16728-107">Channel</span></span>|  
-|<span data-ttu-id="16728-108">级别</span><span class="sxs-lookup"><span data-stu-id="16728-108">Level</span></span>|<span data-ttu-id="16728-109">信息</span><span class="sxs-lookup"><span data-stu-id="16728-109">Information</span></span>|  
-|<span data-ttu-id="16728-110">通道</span><span class="sxs-lookup"><span data-stu-id="16728-110">Channel</span></span>|<span data-ttu-id="16728-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="16728-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="254cb-104">ID</span><span class="sxs-lookup"><span data-stu-id="254cb-104">ID</span></span>|<span data-ttu-id="254cb-105">3394</span><span class="sxs-lookup"><span data-stu-id="254cb-105">3394</span></span>|  
+|<span data-ttu-id="254cb-106">关键字</span><span class="sxs-lookup"><span data-stu-id="254cb-106">Keywords</span></span>|<span data-ttu-id="254cb-107">通道</span><span class="sxs-lookup"><span data-stu-id="254cb-107">Channel</span></span>|  
+|<span data-ttu-id="254cb-108">级别</span><span class="sxs-lookup"><span data-stu-id="254cb-108">Level</span></span>|<span data-ttu-id="254cb-109">信息</span><span class="sxs-lookup"><span data-stu-id="254cb-109">Information</span></span>|  
+|<span data-ttu-id="254cb-110">通道</span><span class="sxs-lookup"><span data-stu-id="254cb-110">Channel</span></span>|<span data-ttu-id="254cb-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="254cb-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="16728-112">描述</span><span class="sxs-lookup"><span data-stu-id="16728-112">Description</span></span>  
- <span data-ttu-id="16728-113">编码器写入流处理消息时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="16728-113">This event is emitted when the streamed message was written by the encoder.</span></span>  
+## <a name="description"></a><span data-ttu-id="254cb-112">描述</span><span class="sxs-lookup"><span data-stu-id="254cb-112">Description</span></span>  
+ <span data-ttu-id="254cb-113">编码器写入流处理消息时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="254cb-113">This event is emitted when the streamed message was written by the encoder.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="16728-114">消息</span><span class="sxs-lookup"><span data-stu-id="16728-114">Message</span></span>  
- <span data-ttu-id="16728-115">编码器已写入流处理消息。</span><span class="sxs-lookup"><span data-stu-id="16728-115">A streamed message was written by the encoder.</span></span>  
+## <a name="message"></a><span data-ttu-id="254cb-114">消息</span><span class="sxs-lookup"><span data-stu-id="254cb-114">Message</span></span>  
+ <span data-ttu-id="254cb-115">编码器已写入流处理消息。</span><span class="sxs-lookup"><span data-stu-id="254cb-115">A streamed message was written by the encoder.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="16728-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="16728-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="254cb-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="254cb-116">Details</span></span>

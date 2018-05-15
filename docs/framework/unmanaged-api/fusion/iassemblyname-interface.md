@@ -1,14 +1,6 @@
 ---
-title: "IAssemblyName 接口"
-ms.custom: 
+title: IAssemblyName 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAssemblyName
 api_location:
@@ -22,41 +14,37 @@ helpviewer_keywords:
 ms.assetid: f7f8e605-6b67-4151-936f-f04ecd671d90
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 902ad9f67d06306e79666f0e10d85bdb9c65c377
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa12252c4f2a8e710a4a880af103aa324f8118ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="iassemblyname-interface"></a><span data-ttu-id="8b6bc-102">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="8b6bc-102">IAssemblyName Interface</span></span>
-<span data-ttu-id="8b6bc-103">提供用于描述和使用程序集的唯一标识的方法。</span><span class="sxs-lookup"><span data-stu-id="8b6bc-103">Provides methods for describing and working with an assembly's unique identity.</span></span>  
+# <a name="iassemblyname-interface"></a><span data-ttu-id="f6433-102">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="f6433-102">IAssemblyName Interface</span></span>
+<span data-ttu-id="f6433-103">提供用于描述和使用程序集的唯一标识的方法。</span><span class="sxs-lookup"><span data-stu-id="f6433-103">Provides methods for describing and working with an assembly's unique identity.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="8b6bc-104">方法</span><span class="sxs-lookup"><span data-stu-id="8b6bc-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f6433-104">方法</span><span class="sxs-lookup"><span data-stu-id="f6433-104">Methods</span></span>  
   
-|<span data-ttu-id="8b6bc-105">方法</span><span class="sxs-lookup"><span data-stu-id="8b6bc-105">Method</span></span>|<span data-ttu-id="8b6bc-106">描述</span><span class="sxs-lookup"><span data-stu-id="8b6bc-106">Description</span></span>|  
+|<span data-ttu-id="f6433-105">方法</span><span class="sxs-lookup"><span data-stu-id="f6433-105">Method</span></span>|<span data-ttu-id="f6433-106">描述</span><span class="sxs-lookup"><span data-stu-id="f6433-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="8b6bc-107">Clone 方法</span><span class="sxs-lookup"><span data-stu-id="8b6bc-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|<span data-ttu-id="8b6bc-108">创建此的浅表副本`IAssemblyName`对象。</span><span class="sxs-lookup"><span data-stu-id="8b6bc-108">Creates a shallow copy of this `IAssemblyName` object.</span></span>|  
-|[<span data-ttu-id="8b6bc-109">Finalize 方法</span><span class="sxs-lookup"><span data-stu-id="8b6bc-109">Finalize Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|<span data-ttu-id="8b6bc-110">允许此`IAssemblyName`对象以释放资源并执行其他清理操作之前调用其析构函数。</span><span class="sxs-lookup"><span data-stu-id="8b6bc-110">Allows this `IAssemblyName` object to release resources and perform other cleanup operations before its destructor is called.</span></span>|  
-|[<span data-ttu-id="8b6bc-111">GetDisplayName 方法</span><span class="sxs-lookup"><span data-stu-id="8b6bc-111">GetDisplayName Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)|<span data-ttu-id="8b6bc-112">获取此引用的程序集的用户可读名称`IAssemblyName`对象。</span><span class="sxs-lookup"><span data-stu-id="8b6bc-112">Gets the human-readable name of the assembly referenced by this `IAssemblyName` object.</span></span>|  
-|[<span data-ttu-id="8b6bc-113">GetName 方法</span><span class="sxs-lookup"><span data-stu-id="8b6bc-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|<span data-ttu-id="8b6bc-114">获取此引用的程序集的简单、 非加密名称`IAssemblyName`对象。</span><span class="sxs-lookup"><span data-stu-id="8b6bc-114">Gets the simple, unencrypted name of the assembly referenced by this `IAssemblyName` object.</span></span>|  
-|[<span data-ttu-id="8b6bc-115">GetProperty 方法</span><span class="sxs-lookup"><span data-stu-id="8b6bc-115">GetProperty Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getproperty-method.md)|<span data-ttu-id="8b6bc-116">获取一个指针指向由指定引用的属性`PropertyId`。</span><span class="sxs-lookup"><span data-stu-id="8b6bc-116">Gets a pointer to the property referenced by the specified `PropertyId`.</span></span>|  
-|[<span data-ttu-id="8b6bc-117">GetVersion 方法</span><span class="sxs-lookup"><span data-stu-id="8b6bc-117">GetVersion Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getversion-method.md)|<span data-ttu-id="8b6bc-118">获取此引用的程序集的版本信息`IAssemblyName`对象。</span><span class="sxs-lookup"><span data-stu-id="8b6bc-118">Gets the version information for the assembly referenced by this `IAssemblyName` object.</span></span>|  
-|[<span data-ttu-id="8b6bc-119">IsEqual 方法</span><span class="sxs-lookup"><span data-stu-id="8b6bc-119">IsEqual Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|<span data-ttu-id="8b6bc-120">确定指定`IAssemblyName`对象是否等于此`IAssemblyName`、 根据指定的比较标志。</span><span class="sxs-lookup"><span data-stu-id="8b6bc-120">Determines whether a specified `IAssemblyName` object is equal to this `IAssemblyName`, based on the specified comparison flags.</span></span>|  
-|[<span data-ttu-id="8b6bc-121">SetProperty 方法</span><span class="sxs-lookup"><span data-stu-id="8b6bc-121">SetProperty Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|<span data-ttu-id="8b6bc-122">设置指定所引用的属性的值`PropertyId`。</span><span class="sxs-lookup"><span data-stu-id="8b6bc-122">Sets the value of the property referenced by the specified `PropertyId`.</span></span>|  
+|[<span data-ttu-id="f6433-107">Clone 方法</span><span class="sxs-lookup"><span data-stu-id="f6433-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|<span data-ttu-id="f6433-108">创建此的浅表副本`IAssemblyName`对象。</span><span class="sxs-lookup"><span data-stu-id="f6433-108">Creates a shallow copy of this `IAssemblyName` object.</span></span>|  
+|[<span data-ttu-id="f6433-109">Finalize 方法</span><span class="sxs-lookup"><span data-stu-id="f6433-109">Finalize Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|<span data-ttu-id="f6433-110">允许此`IAssemblyName`对象以释放资源并执行其他清理操作之前调用其析构函数。</span><span class="sxs-lookup"><span data-stu-id="f6433-110">Allows this `IAssemblyName` object to release resources and perform other cleanup operations before its destructor is called.</span></span>|  
+|[<span data-ttu-id="f6433-111">GetDisplayName 方法</span><span class="sxs-lookup"><span data-stu-id="f6433-111">GetDisplayName Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)|<span data-ttu-id="f6433-112">获取此引用的程序集的用户可读名称`IAssemblyName`对象。</span><span class="sxs-lookup"><span data-stu-id="f6433-112">Gets the human-readable name of the assembly referenced by this `IAssemblyName` object.</span></span>|  
+|[<span data-ttu-id="f6433-113">GetName 方法</span><span class="sxs-lookup"><span data-stu-id="f6433-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|<span data-ttu-id="f6433-114">获取此引用的程序集的简单、 非加密名称`IAssemblyName`对象。</span><span class="sxs-lookup"><span data-stu-id="f6433-114">Gets the simple, unencrypted name of the assembly referenced by this `IAssemblyName` object.</span></span>|  
+|[<span data-ttu-id="f6433-115">GetProperty 方法</span><span class="sxs-lookup"><span data-stu-id="f6433-115">GetProperty Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getproperty-method.md)|<span data-ttu-id="f6433-116">获取一个指针指向由指定引用的属性`PropertyId`。</span><span class="sxs-lookup"><span data-stu-id="f6433-116">Gets a pointer to the property referenced by the specified `PropertyId`.</span></span>|  
+|[<span data-ttu-id="f6433-117">GetVersion 方法</span><span class="sxs-lookup"><span data-stu-id="f6433-117">GetVersion Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getversion-method.md)|<span data-ttu-id="f6433-118">获取此引用的程序集的版本信息`IAssemblyName`对象。</span><span class="sxs-lookup"><span data-stu-id="f6433-118">Gets the version information for the assembly referenced by this `IAssemblyName` object.</span></span>|  
+|[<span data-ttu-id="f6433-119">IsEqual 方法</span><span class="sxs-lookup"><span data-stu-id="f6433-119">IsEqual Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|<span data-ttu-id="f6433-120">确定指定`IAssemblyName`对象是否等于此`IAssemblyName`、 根据指定的比较标志。</span><span class="sxs-lookup"><span data-stu-id="f6433-120">Determines whether a specified `IAssemblyName` object is equal to this `IAssemblyName`, based on the specified comparison flags.</span></span>|  
+|[<span data-ttu-id="f6433-121">SetProperty 方法</span><span class="sxs-lookup"><span data-stu-id="f6433-121">SetProperty Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|<span data-ttu-id="f6433-122">设置指定所引用的属性的值`PropertyId`。</span><span class="sxs-lookup"><span data-stu-id="f6433-122">Sets the value of the property referenced by the specified `PropertyId`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8b6bc-123">惠?</span><span class="sxs-lookup"><span data-stu-id="8b6bc-123">Requirements</span></span>  
- <span data-ttu-id="8b6bc-124">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8b6bc-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6433-123">要求</span><span class="sxs-lookup"><span data-stu-id="f6433-123">Requirements</span></span>  
+ <span data-ttu-id="f6433-124">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f6433-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8b6bc-125">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="8b6bc-125">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="f6433-125">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="f6433-125">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="8b6bc-126">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b6bc-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f6433-126">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6433-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b6bc-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="8b6bc-127">See Also</span></span>  
- [<span data-ttu-id="8b6bc-128">合成接口</span><span class="sxs-lookup"><span data-stu-id="8b6bc-128">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [<span data-ttu-id="8b6bc-129">IAssemblyEnum 接口</span><span class="sxs-lookup"><span data-stu-id="8b6bc-129">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f6433-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="f6433-127">See Also</span></span>  
+ [<span data-ttu-id="f6433-128">合成接口</span><span class="sxs-lookup"><span data-stu-id="f6433-128">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [<span data-ttu-id="f6433-129">IAssemblyEnum 接口</span><span class="sxs-lookup"><span data-stu-id="f6433-129">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)

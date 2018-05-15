@@ -1,36 +1,25 @@
 ---
 title: '&lt;factorySettings&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 202aad17-1b8b-4c87-ad57-4ca5de18ed35
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ebca545a7d2d9b00a0e9eb82012450785e68fd58
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 36f0b82afa8aa8738d2927dc52e1b00e07e72bb1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltfactorysettingsgt"></a><span data-ttu-id="4205c-102">&lt;factorySettings&gt;</span><span class="sxs-lookup"><span data-stu-id="4205c-102">&lt;factorySettings&gt;</span></span>
-<span data-ttu-id="4205c-103">指定通道工厂缓存的设置。</span><span class="sxs-lookup"><span data-stu-id="4205c-103">Specifies the settings of the channel factory cache.</span></span>  
+# <a name="ltfactorysettingsgt"></a><span data-ttu-id="f4272-102">&lt;factorySettings&gt;</span><span class="sxs-lookup"><span data-stu-id="f4272-102">&lt;factorySettings&gt;</span></span>
+<span data-ttu-id="f4272-103">指定通道工厂缓存的设置。</span><span class="sxs-lookup"><span data-stu-id="f4272-103">Specifies the settings of the channel factory cache.</span></span>  
   
-<span data-ttu-id="4205c-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="4205c-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="4205c-105">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="4205c-105">\<behaviors></span></span>  
-<span data-ttu-id="4205c-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="4205c-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="4205c-107">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="4205c-107">\<behavior></span></span>  
-<span data-ttu-id="4205c-108">\<sendMessageChannelCache ></span><span class="sxs-lookup"><span data-stu-id="4205c-108">\<sendMessageChannelCache></span></span>  
-<span data-ttu-id="4205c-109">\<factorySettings ></span><span class="sxs-lookup"><span data-stu-id="4205c-109">\<factorySettings></span></span>  
+<span data-ttu-id="f4272-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="f4272-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="f4272-105">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="f4272-105">\<behaviors></span></span>  
+<span data-ttu-id="f4272-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="f4272-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="f4272-107">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="f4272-107">\<behavior></span></span>  
+<span data-ttu-id="f4272-108">\<sendMessageChannelCache ></span><span class="sxs-lookup"><span data-stu-id="f4272-108">\<sendMessageChannelCache></span></span>  
+<span data-ttu-id="f4272-109">\<factorySettings ></span><span class="sxs-lookup"><span data-stu-id="f4272-109">\<factorySettings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4205c-110">语法</span><span class="sxs-lookup"><span data-stu-id="4205c-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f4272-110">语法</span><span class="sxs-lookup"><span data-stu-id="f4272-110">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -46,35 +35,35 @@ ms.lasthandoff: 04/30/2018
 </behaviors>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4205c-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="4205c-111">Attributes and Elements</span></span>  
- <span data-ttu-id="4205c-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="4205c-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f4272-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="f4272-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="f4272-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="f4272-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4205c-113">特性</span><span class="sxs-lookup"><span data-stu-id="4205c-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f4272-113">特性</span><span class="sxs-lookup"><span data-stu-id="f4272-113">Attributes</span></span>  
   
-|<span data-ttu-id="4205c-114">特性</span><span class="sxs-lookup"><span data-stu-id="4205c-114">Attribute</span></span>|<span data-ttu-id="4205c-115">描述</span><span class="sxs-lookup"><span data-stu-id="4205c-115">Description</span></span>|  
+|<span data-ttu-id="f4272-114">特性</span><span class="sxs-lookup"><span data-stu-id="f4272-114">Attribute</span></span>|<span data-ttu-id="f4272-115">描述</span><span class="sxs-lookup"><span data-stu-id="f4272-115">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="4205c-116">idleTimeout</span><span class="sxs-lookup"><span data-stu-id="4205c-116">idleTimeout</span></span>|<span data-ttu-id="4205c-117">一个 TimeSpan 值，指定对象在被释放之前可在缓存中保持空闲的最大时间间隔。</span><span class="sxs-lookup"><span data-stu-id="4205c-117">A TimeSpan value that specifies the maximum interval of time for which the object can remain idle in the cache before being disposed.</span></span>|  
-|<span data-ttu-id="4205c-118">leaseTimeout</span><span class="sxs-lookup"><span data-stu-id="4205c-118">leaseTimeout</span></span>|<span data-ttu-id="4205c-119">一个 TimeSpan 值，指定此时间后从缓存移除一个对象的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="4205c-119">A TimeSpan value that specifies  the interval of time after which an object is removed from the cache.</span></span>|  
-|<span data-ttu-id="4205c-120">maxItemsInCache</span><span class="sxs-lookup"><span data-stu-id="4205c-120">maxItemsInCache</span></span>|<span data-ttu-id="4205c-121">一个整数，指定可以位于缓存中的最大对象数。</span><span class="sxs-lookup"><span data-stu-id="4205c-121">An integer that specifies the maximum number of objects that can be in the cache.</span></span>|  
+|<span data-ttu-id="f4272-116">idleTimeout</span><span class="sxs-lookup"><span data-stu-id="f4272-116">idleTimeout</span></span>|<span data-ttu-id="f4272-117">一个 TimeSpan 值，指定对象在被释放之前可在缓存中保持空闲的最大时间间隔。</span><span class="sxs-lookup"><span data-stu-id="f4272-117">A TimeSpan value that specifies the maximum interval of time for which the object can remain idle in the cache before being disposed.</span></span>|  
+|<span data-ttu-id="f4272-118">leaseTimeout</span><span class="sxs-lookup"><span data-stu-id="f4272-118">leaseTimeout</span></span>|<span data-ttu-id="f4272-119">一个 TimeSpan 值，指定此时间后从缓存移除一个对象的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="f4272-119">A TimeSpan value that specifies  the interval of time after which an object is removed from the cache.</span></span>|  
+|<span data-ttu-id="f4272-120">maxItemsInCache</span><span class="sxs-lookup"><span data-stu-id="f4272-120">maxItemsInCache</span></span>|<span data-ttu-id="f4272-121">一个整数，指定可以位于缓存中的最大对象数。</span><span class="sxs-lookup"><span data-stu-id="f4272-121">An integer that specifies the maximum number of objects that can be in the cache.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="4205c-122">子元素</span><span class="sxs-lookup"><span data-stu-id="4205c-122">Child Elements</span></span>  
- <span data-ttu-id="4205c-123">无。</span><span class="sxs-lookup"><span data-stu-id="4205c-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f4272-122">子元素</span><span class="sxs-lookup"><span data-stu-id="f4272-122">Child Elements</span></span>  
+ <span data-ttu-id="f4272-123">无。</span><span class="sxs-lookup"><span data-stu-id="f4272-123">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="4205c-124">父元素</span><span class="sxs-lookup"><span data-stu-id="4205c-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f4272-124">父元素</span><span class="sxs-lookup"><span data-stu-id="f4272-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="4205c-125">元素</span><span class="sxs-lookup"><span data-stu-id="4205c-125">Element</span></span>|<span data-ttu-id="4205c-126">描述</span><span class="sxs-lookup"><span data-stu-id="4205c-126">Description</span></span>|  
+|<span data-ttu-id="f4272-125">元素</span><span class="sxs-lookup"><span data-stu-id="f4272-125">Element</span></span>|<span data-ttu-id="f4272-126">描述</span><span class="sxs-lookup"><span data-stu-id="f4272-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4205c-127">\<sendMessageChannelCache ></span><span class="sxs-lookup"><span data-stu-id="4205c-127">\<sendMessageChannelCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md)|<span data-ttu-id="4205c-128">允许自定义缓存共享级别、 通道工厂缓存的设置和将消息发送到服务终结点使用消息传递活动发送的工作流通道缓存的设置的服务行为。</span><span class="sxs-lookup"><span data-stu-id="4205c-128">A service behavior that enables the customization of the cache sharing levels, the settings of the channel factory cache, and the settings of the channel cache for workflows that send messages to service endpoints using Send messaging activities.</span></span>|  
+|[<span data-ttu-id="f4272-127">\<sendMessageChannelCache ></span><span class="sxs-lookup"><span data-stu-id="f4272-127">\<sendMessageChannelCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md)|<span data-ttu-id="f4272-128">允许自定义缓存共享级别、 通道工厂缓存的设置和将消息发送到服务终结点使用消息传递活动发送的工作流通道缓存的设置的服务行为。</span><span class="sxs-lookup"><span data-stu-id="f4272-128">A service behavior that enables the customization of the cache sharing levels, the settings of the channel factory cache, and the settings of the channel cache for workflows that send messages to service endpoints using Send messaging activities.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4205c-129">备注</span><span class="sxs-lookup"><span data-stu-id="4205c-129">Remarks</span></span>  
- <span data-ttu-id="4205c-130">此服务行为适用于将消息发送给服务终结点的工作流。</span><span class="sxs-lookup"><span data-stu-id="4205c-130">This service behavior is intended for workflows that send messages to service endpoints.</span></span> <span data-ttu-id="4205c-131">这些工作流通常是客户端工作流，但也可以是在 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务。</span><span class="sxs-lookup"><span data-stu-id="4205c-131">These workflows are typically client workflows but could also be workflow services that are hosted in a <xref:System.ServiceModel.WorkflowServiceHost>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f4272-129">备注</span><span class="sxs-lookup"><span data-stu-id="f4272-129">Remarks</span></span>  
+ <span data-ttu-id="f4272-130">此服务行为适用于将消息发送给服务终结点的工作流。</span><span class="sxs-lookup"><span data-stu-id="f4272-130">This service behavior is intended for workflows that send messages to service endpoints.</span></span> <span data-ttu-id="f4272-131">这些工作流通常是客户端工作流，但也可以是在 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务。</span><span class="sxs-lookup"><span data-stu-id="f4272-131">These workflows are typically client workflows but could also be workflow services that are hosted in a <xref:System.ServiceModel.WorkflowServiceHost>.</span></span>  
   
- <span data-ttu-id="4205c-132">默认情况下，在 <xref:System.ServiceModel.WorkflowServiceHost> 承载的工作流中，由 <xref:System.ServiceModel.Activities.Send> 消息传递活动使用的缓存可在 <xref:System.ServiceModel.WorkflowServiceHost> 中的所有工作流实例中共享（主机级缓存）。</span><span class="sxs-lookup"><span data-stu-id="4205c-132">By default, in a workflow hosted by a <xref:System.ServiceModel.WorkflowServiceHost>, the cache used by <xref:System.ServiceModel.Activities.Send> messaging activities is shared across all workflow instances in the <xref:System.ServiceModel.WorkflowServiceHost> (host-level caching).</span></span> <span data-ttu-id="4205c-133">对于未由 <xref:System.ServiceModel.WorkflowServiceHost> 承载的客户端工作流，缓存仅对该工作流实例可用（实例级缓存）。</span><span class="sxs-lookup"><span data-stu-id="4205c-133">For a client workflow that is not hosted by a <xref:System.ServiceModel.WorkflowServiceHost>, the cache is available only to the workflow instance (instance-level caching).</span></span> <span data-ttu-id="4205c-134">对于已在配置中定义了终结点的工作流中的所有 Send 活动，默认情况下为禁用缓存。</span><span class="sxs-lookup"><span data-stu-id="4205c-134">Caching is disabled by default for any send activity in your workflow that has endpoints defined in configuration.</span></span>  
+ <span data-ttu-id="f4272-132">默认情况下，在 <xref:System.ServiceModel.WorkflowServiceHost> 承载的工作流中，由 <xref:System.ServiceModel.Activities.Send> 消息传递活动使用的缓存可在 <xref:System.ServiceModel.WorkflowServiceHost> 中的所有工作流实例中共享（主机级缓存）。</span><span class="sxs-lookup"><span data-stu-id="f4272-132">By default, in a workflow hosted by a <xref:System.ServiceModel.WorkflowServiceHost>, the cache used by <xref:System.ServiceModel.Activities.Send> messaging activities is shared across all workflow instances in the <xref:System.ServiceModel.WorkflowServiceHost> (host-level caching).</span></span> <span data-ttu-id="f4272-133">对于未由 <xref:System.ServiceModel.WorkflowServiceHost> 承载的客户端工作流，缓存仅对该工作流实例可用（实例级缓存）。</span><span class="sxs-lookup"><span data-stu-id="f4272-133">For a client workflow that is not hosted by a <xref:System.ServiceModel.WorkflowServiceHost>, the cache is available only to the workflow instance (instance-level caching).</span></span> <span data-ttu-id="f4272-134">对于已在配置中定义了终结点的工作流中的所有 Send 活动，默认情况下为禁用缓存。</span><span class="sxs-lookup"><span data-stu-id="f4272-134">Caching is disabled by default for any send activity in your workflow that has endpoints defined in configuration.</span></span>  
   
- <span data-ttu-id="4205c-135">有关如何更改默认的缓存共享级别和通道工厂和通道缓存的缓存设置的详细信息，请参阅[更改发送活动的缓存共享级别](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。</span><span class="sxs-lookup"><span data-stu-id="4205c-135">For more information about how to change the default cache sharing levels and cache settings for the channel factory and channel cache, see [Changing the Cache Sharing Levels for Send Activities](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).</span></span>  
+ <span data-ttu-id="f4272-135">有关如何更改默认的缓存共享级别和通道工厂和通道缓存的缓存设置的详细信息，请参阅[更改发送活动的缓存共享级别](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。</span><span class="sxs-lookup"><span data-stu-id="f4272-135">For more information about how to change the default cache sharing levels and cache settings for the channel factory and channel cache, see [Changing the Cache Sharing Levels for Send Activities](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4205c-136">示例</span><span class="sxs-lookup"><span data-stu-id="4205c-136">Example</span></span>  
- <span data-ttu-id="4205c-137">在承载的工作流服务中，可以在应用程序配置文件中指定工厂缓存和通道缓存设置。</span><span class="sxs-lookup"><span data-stu-id="4205c-137">In a hosted workflow service, you can specify the factory cache and channel cache settings in the application configuration file.</span></span> <span data-ttu-id="4205c-138">为此，应添加一个包含工厂和通道缓存的缓存设置的服务行为，并将此服务行为添加到您的服务中。</span><span class="sxs-lookup"><span data-stu-id="4205c-138">To do so, add a service behavior that contains the cache settings for the factory and channel cache and add this service behavior to your service.</span></span> <span data-ttu-id="4205c-139">下面的示例演示配置文件中包含的内容**MyChannelCacheBehavior**使用自定义工厂缓存和通道缓存设置服务行为。</span><span class="sxs-lookup"><span data-stu-id="4205c-139">The following example shows the contents of a configuration file that contains the **MyChannelCacheBehavior**  service behavior with the custom factory cache and channel cache settings.</span></span> <span data-ttu-id="4205c-140">此服务行为添加到服务通过**behaviorConfiguarion**属性。</span><span class="sxs-lookup"><span data-stu-id="4205c-140">This service behavior is added to the service through the **behaviorConfiguarion** attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="f4272-136">示例</span><span class="sxs-lookup"><span data-stu-id="f4272-136">Example</span></span>  
+ <span data-ttu-id="f4272-137">在承载的工作流服务中，可以在应用程序配置文件中指定工厂缓存和通道缓存设置。</span><span class="sxs-lookup"><span data-stu-id="f4272-137">In a hosted workflow service, you can specify the factory cache and channel cache settings in the application configuration file.</span></span> <span data-ttu-id="f4272-138">为此，应添加一个包含工厂和通道缓存的缓存设置的服务行为，并将此服务行为添加到您的服务中。</span><span class="sxs-lookup"><span data-stu-id="f4272-138">To do so, add a service behavior that contains the cache settings for the factory and channel cache and add this service behavior to your service.</span></span> <span data-ttu-id="f4272-139">下面的示例演示配置文件中包含的内容**MyChannelCacheBehavior**使用自定义工厂缓存和通道缓存设置服务行为。</span><span class="sxs-lookup"><span data-stu-id="f4272-139">The following example shows the contents of a configuration file that contains the **MyChannelCacheBehavior**  service behavior with the custom factory cache and channel cache settings.</span></span> <span data-ttu-id="f4272-140">此服务行为添加到服务通过**behaviorConfiguarion**属性。</span><span class="sxs-lookup"><span data-stu-id="f4272-140">This service behavior is added to the service through the **behaviorConfiguarion** attribute.</span></span>  
   
 ```xml  
 <configuration>    
@@ -98,9 +87,9 @@ ms.lasthandoff: 04/30/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4205c-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="4205c-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f4272-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="f4272-141">See Also</span></span>  
  <xref:System.ServiceModel.Activities.SendMessageChannelCache>  
  <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>  
  <xref:System.ServiceModel.Activities.Send>  
  <xref:System.ServiceModel.Activities.ChannelCacheSettings>  
- [<span data-ttu-id="4205c-142">更改发送活动的缓存共享级别</span><span class="sxs-lookup"><span data-stu-id="4205c-142">Changing the Cache Sharing Levels for Send Activities</span></span>](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)
+ [<span data-ttu-id="f4272-142">更改发送活动的缓存共享级别</span><span class="sxs-lookup"><span data-stu-id="f4272-142">Changing the Cache Sharing Levels for Send Activities</span></span>](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)

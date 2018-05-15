@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugModule::GetFunctionFromRVA 方法"
-ms.custom: 
+title: ICorDebugModule::GetFunctionFromRVA 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule.GetFunctionFromRVA
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: f5a34517-2422-484f-be89-2ce0b4bce195
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 13f755198c83990e7dd48333ba2f4e9a57f6ae0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db2f30001e050c1f312613c794388ffaa99d3b17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="cfba6-102">ICorDebugModule::GetFunctionFromRVA 方法</span><span class="sxs-lookup"><span data-stu-id="cfba6-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
-<span data-ttu-id="cfba6-103">此方法不具有在.NET Framework 的当前版本中实现。</span><span class="sxs-lookup"><span data-stu-id="cfba6-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="53279-102">ICorDebugModule::GetFunctionFromRVA 方法</span><span class="sxs-lookup"><span data-stu-id="53279-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
+<span data-ttu-id="53279-103">此方法不具有在.NET Framework 的当前版本中实现。</span><span class="sxs-lookup"><span data-stu-id="53279-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cfba6-104">语法</span><span class="sxs-lookup"><span data-stu-id="cfba6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53279-104">语法</span><span class="sxs-lookup"><span data-stu-id="53279-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionFromRVA(  
@@ -47,9 +35,9 @@ HRESULT GetFunctionFromRVA(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="cfba6-105">惠?</span><span class="sxs-lookup"><span data-stu-id="cfba6-105">Requirements</span></span>  
- <span data-ttu-id="cfba6-106">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cfba6-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="53279-105">要求</span><span class="sxs-lookup"><span data-stu-id="53279-105">Requirements</span></span>  
+ <span data-ttu-id="53279-106">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="53279-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cfba6-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="cfba6-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="53279-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="53279-107">See Also</span></span>  
     
  

@@ -1,29 +1,19 @@
 ---
 title: 异步编程
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-ado
-ms.topic: article
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-caps.latest.revision: 30
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7dbc106b96e4e695108b6178951e3d43078467bc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 29324a07ffdaf99d1b7631ad8e94e773ed509fcc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="asynchronous-programming"></a><span data-ttu-id="716b6-102">异步编程</span><span class="sxs-lookup"><span data-stu-id="716b6-102">Asynchronous Programming</span></span>
+# <a name="asynchronous-programming"></a><span data-ttu-id="def34-102">异步编程</span><span class="sxs-lookup"><span data-stu-id="def34-102">Asynchronous Programming</span></span>
 
-<span data-ttu-id="716b6-103">本主题讨论对中的异步编程的支持[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]for SQL Server (SqlClient) 的数据提供程序包括进行以支持异步编程功能中引入的增强功能[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="716b6-103">This topic discusses support for asynchronous programming in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (SqlClient) including enhancements made to support asynchronous programming functionality that was introduced in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
+<span data-ttu-id="def34-103">本主题讨论对中的异步编程的支持[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]for SQL Server (SqlClient) 的数据提供程序包括进行以支持异步编程功能中引入的增强功能[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="def34-103">This topic discusses support for asynchronous programming in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (SqlClient) including enhancements made to support asynchronous programming functionality that was introduced in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
-## <a name="legacy-asynchronous-programming"></a><span data-ttu-id="716b6-104">旧版异步编程</span><span class="sxs-lookup"><span data-stu-id="716b6-104">Legacy Asynchronous Programming</span></span>  
- <span data-ttu-id="716b6-105">在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 之前，使用 SqlClient 进行的异步编程是通过以下方法和 `Asynchronous Processing=true` 连接属性完成的：</span><span class="sxs-lookup"><span data-stu-id="716b6-105">Prior to [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], asynchronous programming with SqlClient was done with the following methods and the `Asynchronous Processing=true` connection property:</span></span>  
+## <a name="legacy-asynchronous-programming"></a><span data-ttu-id="def34-104">旧版异步编程</span><span class="sxs-lookup"><span data-stu-id="def34-104">Legacy Asynchronous Programming</span></span>  
+ <span data-ttu-id="def34-105">在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 之前，使用 SqlClient 进行的异步编程是通过以下方法和 `Asynchronous Processing=true` 连接属性完成的：</span><span class="sxs-lookup"><span data-stu-id="def34-105">Prior to [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], asynchronous programming with SqlClient was done with the following methods and the `Asynchronous Processing=true` connection property:</span></span>  
   
 1.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>  
   
@@ -31,35 +21,35 @@ ms.lasthandoff: 04/26/2018
   
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
- <span data-ttu-id="716b6-106">[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的 SqlClient 中仍保留了此功能。</span><span class="sxs-lookup"><span data-stu-id="716b6-106">This functionality remains in SqlClient in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
+ <span data-ttu-id="def34-106">[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的 SqlClient 中仍保留了此功能。</span><span class="sxs-lookup"><span data-stu-id="def34-106">This functionality remains in SqlClient in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
- <span data-ttu-id="716b6-107">从 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 开始，这些方法不再需要连接字符串中的 `Asynchronous Processing=true`。</span><span class="sxs-lookup"><span data-stu-id="716b6-107">Beginning in the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], these methods no longer require `Asynchronous Processing=true` in the connection string.</span></span>  
+ <span data-ttu-id="def34-107">从 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 开始，这些方法不再需要连接字符串中的 `Asynchronous Processing=true`。</span><span class="sxs-lookup"><span data-stu-id="def34-107">Beginning in the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], these methods no longer require `Asynchronous Processing=true` in the connection string.</span></span>  
   
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a><span data-ttu-id="716b6-108">[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中增加了异步编程功能</span><span class="sxs-lookup"><span data-stu-id="716b6-108">Asynchronous Programming Features Added in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]</span></span>  
- <span data-ttu-id="716b6-109">该新的异步编程功能提供了一种用于使代码异步的简单技术。</span><span class="sxs-lookup"><span data-stu-id="716b6-109">The new asynchronous programming feature provides a simple technique to make code asynchronous.</span></span>  
+## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a><span data-ttu-id="def34-108">[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中增加了异步编程功能</span><span class="sxs-lookup"><span data-stu-id="def34-108">Asynchronous Programming Features Added in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]</span></span>  
+ <span data-ttu-id="def34-109">该新的异步编程功能提供了一种用于使代码异步的简单技术。</span><span class="sxs-lookup"><span data-stu-id="def34-109">The new asynchronous programming feature provides a simple technique to make code asynchronous.</span></span>  
   
- <span data-ttu-id="716b6-110">有关 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引入的异步编程功能的更多信息，请参见：</span><span class="sxs-lookup"><span data-stu-id="716b6-110">For more information about the asynchronous programming feature that was introduced in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], see:</span></span>  
+ <span data-ttu-id="def34-110">有关 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引入的异步编程功能的更多信息，请参见：</span><span class="sxs-lookup"><span data-stu-id="def34-110">For more information about the asynchronous programming feature that was introduced in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], see:</span></span>  
   
-- [<span data-ttu-id="716b6-111">在 C# 中的异步编程</span><span class="sxs-lookup"><span data-stu-id="716b6-111">Asynchronous programming in C#</span></span>](../../../csharp/async.md)
+- [<span data-ttu-id="def34-111">在 C# 中的异步编程</span><span class="sxs-lookup"><span data-stu-id="def34-111">Asynchronous programming in C#</span></span>](../../../csharp/async.md)
 
-- [<span data-ttu-id="716b6-112">使用 Async 和 Await 的异步编程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="716b6-112">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="def34-112">使用 Async 和 Await 的异步编程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="def34-112">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [<span data-ttu-id="716b6-113">使用.Net 4.5 (第 1 部分) 中 SqlDataReader 的新异步方法</span><span class="sxs-lookup"><span data-stu-id="716b6-113">Using SqlDataReader’s new async methods in .Net 4.5 (Part 1)</span></span>](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [<span data-ttu-id="def34-113">使用.Net 4.5 (第 1 部分) 中 SqlDataReader 的新异步方法</span><span class="sxs-lookup"><span data-stu-id="def34-113">Using SqlDataReader’s new async methods in .Net 4.5 (Part 1)</span></span>](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [<span data-ttu-id="716b6-114">使用.Net 4.5 (第 2 部分) 中 SqlDataReader 的新异步方法</span><span class="sxs-lookup"><span data-stu-id="716b6-114">Using SqlDataReader’s new async methods in .Net 4.5 (Part 2)</span></span>](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [<span data-ttu-id="def34-114">使用.Net 4.5 (第 2 部分) 中 SqlDataReader 的新异步方法</span><span class="sxs-lookup"><span data-stu-id="def34-114">Using SqlDataReader’s new async methods in .Net 4.5 (Part 2)</span></span>](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
  
- <span data-ttu-id="716b6-115">当用户接口无响应或服务器无法扩展时，很可能需要使代码异步程度更高。</span><span class="sxs-lookup"><span data-stu-id="716b6-115">When your user interface is unresponsive or your server does not scale, it is likely that you need your code to be more asynchronous.</span></span>  <span data-ttu-id="716b6-116">以前，编写异步代码涉及安装回调（也称为延续）来表示异步操作完成后发生的逻辑。</span><span class="sxs-lookup"><span data-stu-id="716b6-116">Writing asynchronous code has traditionally involved installing a callback (also called continuation) to express the logic that occurs after the asynchronous operation finishes.</span></span> <span data-ttu-id="716b6-117">这将增加异步代码结构的复杂性（与同步代码相比）。</span><span class="sxs-lookup"><span data-stu-id="716b6-117">This complicates the structure of asynchronous code as compared with synchronous code.</span></span>  
+ <span data-ttu-id="def34-115">当用户接口无响应或服务器无法扩展时，很可能需要使代码异步程度更高。</span><span class="sxs-lookup"><span data-stu-id="def34-115">When your user interface is unresponsive or your server does not scale, it is likely that you need your code to be more asynchronous.</span></span>  <span data-ttu-id="def34-116">以前，编写异步代码涉及安装回调（也称为延续）来表示异步操作完成后发生的逻辑。</span><span class="sxs-lookup"><span data-stu-id="def34-116">Writing asynchronous code has traditionally involved installing a callback (also called continuation) to express the logic that occurs after the asynchronous operation finishes.</span></span> <span data-ttu-id="def34-117">这将增加异步代码结构的复杂性（与同步代码相比）。</span><span class="sxs-lookup"><span data-stu-id="def34-117">This complicates the structure of asynchronous code as compared with synchronous code.</span></span>  
   
- <span data-ttu-id="716b6-118">现在，您可以调用异步方法而无需使用回调，也不需要跨多个方法或 lambda 表达式来拆分代码。</span><span class="sxs-lookup"><span data-stu-id="716b6-118">You can now call into asynchronous methods without using callbacks, and without splitting your code across multiple methods or lambda expressions.</span></span>  
+ <span data-ttu-id="def34-118">现在，您可以调用异步方法而无需使用回调，也不需要跨多个方法或 lambda 表达式来拆分代码。</span><span class="sxs-lookup"><span data-stu-id="def34-118">You can now call into asynchronous methods without using callbacks, and without splitting your code across multiple methods or lambda expressions.</span></span>  
   
- <span data-ttu-id="716b6-119">`async` 修饰符用于指定异步方法。</span><span class="sxs-lookup"><span data-stu-id="716b6-119">The `async` modifier specifies that a method is asynchronous.</span></span> <span data-ttu-id="716b6-120">调用 `async` 方法时，将返回一个任务。</span><span class="sxs-lookup"><span data-stu-id="716b6-120">When calling an `async` method, a task is returned.</span></span> <span data-ttu-id="716b6-121">当`await`运算符应用于一项任务时，当前方法立即退出。</span><span class="sxs-lookup"><span data-stu-id="716b6-121">When the `await` operator is applied to a task, the current method exits immediately.</span></span> <span data-ttu-id="716b6-122">在该任务完成时，执行会在同一方法中恢复。</span><span class="sxs-lookup"><span data-stu-id="716b6-122">When the task finishes, execution resumes in the same method.</span></span>
+ <span data-ttu-id="def34-119">`async` 修饰符用于指定异步方法。</span><span class="sxs-lookup"><span data-stu-id="def34-119">The `async` modifier specifies that a method is asynchronous.</span></span> <span data-ttu-id="def34-120">调用 `async` 方法时，将返回一个任务。</span><span class="sxs-lookup"><span data-stu-id="def34-120">When calling an `async` method, a task is returned.</span></span> <span data-ttu-id="def34-121">当`await`运算符应用于一项任务时，当前方法立即退出。</span><span class="sxs-lookup"><span data-stu-id="def34-121">When the `await` operator is applied to a task, the current method exits immediately.</span></span> <span data-ttu-id="def34-122">在该任务完成时，执行会在同一方法中恢复。</span><span class="sxs-lookup"><span data-stu-id="def34-122">When the task finishes, execution resumes in the same method.</span></span>
   
 > [!WARNING]
->  <span data-ttu-id="716b6-123">如果应用程序还使用 `Context Connection` 连接字符串关键字，则不支持异步调用。</span><span class="sxs-lookup"><span data-stu-id="716b6-123">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>  
+>  <span data-ttu-id="def34-123">如果应用程序还使用 `Context Connection` 连接字符串关键字，则不支持异步调用。</span><span class="sxs-lookup"><span data-stu-id="def34-123">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>  
   
- <span data-ttu-id="716b6-124">调用 `async` 方法不会分配任何附加线程。</span><span class="sxs-lookup"><span data-stu-id="716b6-124">Calling an `async` method does not allocate any additional threads.</span></span> <span data-ttu-id="716b6-125">结束时，它可以简单地使用现有 I/O 完成线程。</span><span class="sxs-lookup"><span data-stu-id="716b6-125">It may use the existing I/O completion thread briefly at the end.</span></span>  
+ <span data-ttu-id="def34-124">调用 `async` 方法不会分配任何附加线程。</span><span class="sxs-lookup"><span data-stu-id="def34-124">Calling an `async` method does not allocate any additional threads.</span></span> <span data-ttu-id="def34-125">结束时，它可以简单地使用现有 I/O 完成线程。</span><span class="sxs-lookup"><span data-stu-id="def34-125">It may use the existing I/O completion thread briefly at the end.</span></span>  
   
- <span data-ttu-id="716b6-126">[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中增加了用于支持异步编程以下方法：</span><span class="sxs-lookup"><span data-stu-id="716b6-126">The following methods were added in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] to support asynchronous programming:</span></span>  
+ <span data-ttu-id="def34-126">[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中增加了用于支持异步编程以下方法：</span><span class="sxs-lookup"><span data-stu-id="def34-126">The following methods were added in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] to support asynchronous programming:</span></span>  
   
 -   <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>  
   
@@ -95,10 +85,10 @@ ms.lasthandoff: 04/26/2018
   
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
- <span data-ttu-id="716b6-127">添加了其他异步成员以支持[SqlClient 流支持](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)。</span><span class="sxs-lookup"><span data-stu-id="716b6-127">Other asynchronous members were added to support [SqlClient Streaming Support](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).</span></span>  
+ <span data-ttu-id="def34-127">添加了其他异步成员以支持[SqlClient 流支持](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)。</span><span class="sxs-lookup"><span data-stu-id="def34-127">Other asynchronous members were added to support [SqlClient Streaming Support](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).</span></span>  
   
-### <a name="synchronous-to-asynchronous-connection-open"></a><span data-ttu-id="716b6-128">同步到异步连接打开</span><span class="sxs-lookup"><span data-stu-id="716b6-128">Synchronous to Asynchronous Connection Open</span></span>  
- <span data-ttu-id="716b6-129">您可以将现有应用程序升级以使用新的异步功能。</span><span class="sxs-lookup"><span data-stu-id="716b6-129">You can upgrade an existing application to use the new asynchronous feature.</span></span> <span data-ttu-id="716b6-130">例如，假设应用程序具有同步连接算法，并在每次 UI 线程连接到数据库时加以阻止，连接后，该应用程序将调用向刚登录的用户之外的其他用户发送信号的存储过程。</span><span class="sxs-lookup"><span data-stu-id="716b6-130">For example, assume an application has a synchronous connection algorithm and blocks the UI thread every time it connects to the database and, once connected, the application calls a stored procedure that signals other users of the one who just signed in.</span></span>  
+### <a name="synchronous-to-asynchronous-connection-open"></a><span data-ttu-id="def34-128">同步到异步连接打开</span><span class="sxs-lookup"><span data-stu-id="def34-128">Synchronous to Asynchronous Connection Open</span></span>  
+ <span data-ttu-id="def34-129">您可以将现有应用程序升级以使用新的异步功能。</span><span class="sxs-lookup"><span data-stu-id="def34-129">You can upgrade an existing application to use the new asynchronous feature.</span></span> <span data-ttu-id="def34-130">例如，假设应用程序具有同步连接算法，并在每次 UI 线程连接到数据库时加以阻止，连接后，该应用程序将调用向刚登录的用户之外的其他用户发送信号的存储过程。</span><span class="sxs-lookup"><span data-stu-id="def34-130">For example, assume an application has a synchronous connection algorithm and blocks the UI thread every time it connects to the database and, once connected, the application calls a stored procedure that signals other users of the one who just signed in.</span></span>  
   
 ```csharp
 using SqlConnection conn = new SqlConnection("…");  
@@ -111,7 +101,7 @@ using SqlConnection conn = new SqlConnection("…");
 }  
 ```  
   
- <span data-ttu-id="716b6-131">转换为使用新异步功能时，该程序看起来与下面类似：</span><span class="sxs-lookup"><span data-stu-id="716b6-131">When converted to use the new asynchronous functionality, the program would look like:</span></span>  
+ <span data-ttu-id="def34-131">转换为使用新异步功能时，该程序看起来与下面类似：</span><span class="sxs-lookup"><span data-stu-id="def34-131">When converted to use the new asynchronous functionality, the program would look like:</span></span>  
   
 ```csharp
 using System;  
@@ -140,8 +130,8 @@ class A {
 }  
 ```  
   
-### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a><span data-ttu-id="716b6-132">在现有应用程序中添加新的异步功能（将旧模式与新模式混合）</span><span class="sxs-lookup"><span data-stu-id="716b6-132">Adding the New Asynchronous Feature in an Existing Application (Mixing Old and New Patterns)</span></span>  
- <span data-ttu-id="716b6-133">也可以在不更改现有异步逻辑的情况下添加新的异步功能 (SqlConnection::OpenAsync)。</span><span class="sxs-lookup"><span data-stu-id="716b6-133">It is also possible to add new asynchronous capability (SqlConnection::OpenAsync) without changing the existing asynchronous logic.</span></span> <span data-ttu-id="716b6-134">例如，如果应用程序当前使用：</span><span class="sxs-lookup"><span data-stu-id="716b6-134">For example, if an application currently uses:</span></span>  
+### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a><span data-ttu-id="def34-132">在现有应用程序中添加新的异步功能（将旧模式与新模式混合）</span><span class="sxs-lookup"><span data-stu-id="def34-132">Adding the New Asynchronous Feature in an Existing Application (Mixing Old and New Patterns)</span></span>  
+ <span data-ttu-id="def34-133">也可以在不更改现有异步逻辑的情况下添加新的异步功能 (SqlConnection::OpenAsync)。</span><span class="sxs-lookup"><span data-stu-id="def34-133">It is also possible to add new asynchronous capability (SqlConnection::OpenAsync) without changing the existing asynchronous logic.</span></span> <span data-ttu-id="def34-134">例如，如果应用程序当前使用：</span><span class="sxs-lookup"><span data-stu-id="def34-134">For example, if an application currently uses:</span></span>  
   
 ```csharp
 AsyncCallback productList = new AsyncCallback(ProductList);  
@@ -151,7 +141,7 @@ SqlCommand cmd = new SqlCommand("SELECT * FROM [Current Product List]", conn);
 IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);  
 ```  
   
- <span data-ttu-id="716b6-135">您可以开始使用新异步模式而不会显著改变现有算法。</span><span class="sxs-lookup"><span data-stu-id="716b6-135">You can begin to use the new asynchronous pattern without substantially changing the existing algorithm.</span></span>  
+ <span data-ttu-id="def34-135">您可以开始使用新异步模式而不会显著改变现有算法。</span><span class="sxs-lookup"><span data-stu-id="def34-135">You can begin to use the new asynchronous pattern without substantially changing the existing algorithm.</span></span>  
   
 ```csharp
 using System;  
@@ -178,10 +168,10 @@ class A {
 }  
 ```  
   
-### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a><span data-ttu-id="716b6-136">使用基本提供程序模型和新的异步功能</span><span class="sxs-lookup"><span data-stu-id="716b6-136">Using the Base Provider Model and the New Asynchronous Feature</span></span>  
- <span data-ttu-id="716b6-137">您可能需要创建一个能够连接到不同数据库并执行查询的工具。</span><span class="sxs-lookup"><span data-stu-id="716b6-137">You may need to create a tool that is able to connect to different databases and execute queries.</span></span> <span data-ttu-id="716b6-138">您可以使用基本提供程序模型和新的异步功能。</span><span class="sxs-lookup"><span data-stu-id="716b6-138">You can use the base provider model and the new asynchronous feature.</span></span>  
+### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a><span data-ttu-id="def34-136">使用基本提供程序模型和新的异步功能</span><span class="sxs-lookup"><span data-stu-id="def34-136">Using the Base Provider Model and the New Asynchronous Feature</span></span>  
+ <span data-ttu-id="def34-137">您可能需要创建一个能够连接到不同数据库并执行查询的工具。</span><span class="sxs-lookup"><span data-stu-id="def34-137">You may need to create a tool that is able to connect to different databases and execute queries.</span></span> <span data-ttu-id="def34-138">您可以使用基本提供程序模型和新的异步功能。</span><span class="sxs-lookup"><span data-stu-id="def34-138">You can use the base provider model and the new asynchronous feature.</span></span>  
   
- <span data-ttu-id="716b6-139">必须在服务器上启用 Microsoft 分布式事务处理控制器 (MSDTC) 以使用分布式事务。</span><span class="sxs-lookup"><span data-stu-id="716b6-139">The Microsoft Distributed Transaction Controller (MSDTC) must be enabled on the server to use distributed transactions.</span></span> <span data-ttu-id="716b6-140">有关如何启用 MSDTC 的信息，请参阅[如何在 Web 服务器上启用 MSDTC](http://msdn.microsoft.com/library/dd327979.aspx)。</span><span class="sxs-lookup"><span data-stu-id="716b6-140">For information on how to enable MSDTC, see [How to Enable MSDTC on a Web Server](http://msdn.microsoft.com/library/dd327979.aspx).</span></span>  
+ <span data-ttu-id="def34-139">必须在服务器上启用 Microsoft 分布式事务处理控制器 (MSDTC) 以使用分布式事务。</span><span class="sxs-lookup"><span data-stu-id="def34-139">The Microsoft Distributed Transaction Controller (MSDTC) must be enabled on the server to use distributed transactions.</span></span> <span data-ttu-id="def34-140">有关如何启用 MSDTC 的信息，请参阅[如何在 Web 服务器上启用 MSDTC](http://msdn.microsoft.com/library/dd327979.aspx)。</span><span class="sxs-lookup"><span data-stu-id="def34-140">For information on how to enable MSDTC, see [How to Enable MSDTC on a Web Server](http://msdn.microsoft.com/library/dd327979.aspx).</span></span>  
   
 ```csharp
 using System;  
@@ -226,7 +216,7 @@ class A {
 }  
 ```  
   
-### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="716b6-141">使用 SQL 事务和新的异步功能</span><span class="sxs-lookup"><span data-stu-id="716b6-141">Using SQL Transactions and the New Asynchronous Feature</span></span>  
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="def34-141">使用 SQL 事务和新的异步功能</span><span class="sxs-lookup"><span data-stu-id="def34-141">Using SQL Transactions and the New Asynchronous Feature</span></span>  
   
 ```csharp
 using System;  
@@ -292,8 +282,8 @@ class Program {
 }  
 ```  
   
-### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="716b6-142">使用 SQL 事务和新的异步功能</span><span class="sxs-lookup"><span data-stu-id="716b6-142">Using SQL Transactions and the New Asynchronous Feature</span></span>  
- <span data-ttu-id="716b6-143">在企业应用程序中，某些情况下，您可能需要添加分布式事务以启用多个数据库服务器之间的事务。</span><span class="sxs-lookup"><span data-stu-id="716b6-143">In an enterprise application, you may need to add distributed transactions in some scenarios, to enable transactions between multiple database servers.</span></span> <span data-ttu-id="716b6-144">您可以使用 System.Transactions 命名空间并登记分布式事务，如下所示：</span><span class="sxs-lookup"><span data-stu-id="716b6-144">You can use the System.Transactions namespace and enlist a distributed transaction, as follows:</span></span>  
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="def34-142">使用 SQL 事务和新的异步功能</span><span class="sxs-lookup"><span data-stu-id="def34-142">Using SQL Transactions and the New Asynchronous Feature</span></span>  
+ <span data-ttu-id="def34-143">在企业应用程序中，某些情况下，您可能需要添加分布式事务以启用多个数据库服务器之间的事务。</span><span class="sxs-lookup"><span data-stu-id="def34-143">In an enterprise application, you may need to add distributed transactions in some scenarios, to enable transactions between multiple database servers.</span></span> <span data-ttu-id="def34-144">您可以使用 System.Transactions 命名空间并登记分布式事务，如下所示：</span><span class="sxs-lookup"><span data-stu-id="def34-144">You can use the System.Transactions namespace and enlist a distributed transaction, as follows:</span></span>  
   
 ```csharp
 using System;  
@@ -353,8 +343,8 @@ class Program {
 }  
 ```  
   
-### <a name="cancelling-an-asynchronous-operation"></a><span data-ttu-id="716b6-145">取消异步操作</span><span class="sxs-lookup"><span data-stu-id="716b6-145">Cancelling an Asynchronous Operation</span></span>  
- <span data-ttu-id="716b6-146">可通过使用 <xref:System.Threading.CancellationToken> 来取消异步请求。</span><span class="sxs-lookup"><span data-stu-id="716b6-146">You can cancel an asynchronous request by using the <xref:System.Threading.CancellationToken>.</span></span>  
+### <a name="cancelling-an-asynchronous-operation"></a><span data-ttu-id="def34-145">取消异步操作</span><span class="sxs-lookup"><span data-stu-id="def34-145">Cancelling an Asynchronous Operation</span></span>  
+ <span data-ttu-id="def34-146">可通过使用 <xref:System.Threading.CancellationToken> 来取消异步请求。</span><span class="sxs-lookup"><span data-stu-id="def34-146">You can cancel an asynchronous request by using the <xref:System.Threading.CancellationToken>.</span></span>  
   
 ```csharp
 using System;  
@@ -393,8 +383,8 @@ namespace Samples {
 }  
 ```  
   
-### <a name="asynchronous-operations-with-sqlbulkcopy"></a><span data-ttu-id="716b6-147">使用 SqlBulkCopy 的异步操作</span><span class="sxs-lookup"><span data-stu-id="716b6-147">Asynchronous Operations with SqlBulkCopy</span></span>  
- <span data-ttu-id="716b6-148">异步功能也添加到了带有 <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> 的 <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="716b6-148">Asynchronous capabilities were also added to <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> with <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.</span></span>  
+### <a name="asynchronous-operations-with-sqlbulkcopy"></a><span data-ttu-id="def34-147">使用 SqlBulkCopy 的异步操作</span><span class="sxs-lookup"><span data-stu-id="def34-147">Asynchronous Operations with SqlBulkCopy</span></span>  
+ <span data-ttu-id="def34-148">异步功能也添加到了带有 <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> 的 <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="def34-148">Asynchronous capabilities were also added to <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> with <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.</span></span>  
   
 ```csharp
 using System;  
@@ -635,11 +625,11 @@ namespace SqlBulkCopyAsyncCodeSample {
 }  
 ```  
   
-## <a name="asynchronously-using-multiple-commands-with-mars"></a><span data-ttu-id="716b6-149">异步使用多个命令与 MARS</span><span class="sxs-lookup"><span data-stu-id="716b6-149">Asynchronously Using Multiple Commands with MARS</span></span>  
- <span data-ttu-id="716b6-150">该示例打开一个连接到**AdventureWorks**数据库。</span><span class="sxs-lookup"><span data-stu-id="716b6-150">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="716b6-151">使用 <xref:System.Data.SqlClient.SqlCommand> 对象创建一个 <xref:System.Data.SqlClient.SqlDataReader> 对象。</span><span class="sxs-lookup"><span data-stu-id="716b6-151">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="716b6-152">在使用该读取器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用来自第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个读取器的 WHERE 子句的输入。</span><span class="sxs-lookup"><span data-stu-id="716b6-152">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>  
+## <a name="asynchronously-using-multiple-commands-with-mars"></a><span data-ttu-id="def34-149">异步使用多个命令与 MARS</span><span class="sxs-lookup"><span data-stu-id="def34-149">Asynchronously Using Multiple Commands with MARS</span></span>  
+ <span data-ttu-id="def34-150">该示例打开一个连接到**AdventureWorks**数据库。</span><span class="sxs-lookup"><span data-stu-id="def34-150">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="def34-151">使用 <xref:System.Data.SqlClient.SqlCommand> 对象创建一个 <xref:System.Data.SqlClient.SqlDataReader> 对象。</span><span class="sxs-lookup"><span data-stu-id="def34-151">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="def34-152">在使用该读取器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用来自第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个读取器的 WHERE 子句的输入。</span><span class="sxs-lookup"><span data-stu-id="def34-152">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="716b6-153">下面的示例使用示例**AdventureWorks**包含与 SQL Server 数据库。</span><span class="sxs-lookup"><span data-stu-id="716b6-153">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="716b6-154">示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。</span><span class="sxs-lookup"><span data-stu-id="716b6-154">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="716b6-155">根据环境的需要修改连接字符串。</span><span class="sxs-lookup"><span data-stu-id="716b6-155">Modify the connection string as necessary for your environment.</span></span>  
+>  <span data-ttu-id="def34-153">下面的示例使用示例**AdventureWorks**包含与 SQL Server 数据库。</span><span class="sxs-lookup"><span data-stu-id="def34-153">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="def34-154">示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。</span><span class="sxs-lookup"><span data-stu-id="def34-154">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="def34-155">根据环境的需要修改连接字符串。</span><span class="sxs-lookup"><span data-stu-id="def34-155">Modify the connection string as necessary for your environment.</span></span>  
   
 ```csharp
 using System;  
@@ -705,13 +695,13 @@ class Class1 {
 }  
 ```  
   
-## <a name="asynchronously-reading-and-updating-data-with-mars"></a><span data-ttu-id="716b6-156">使用 MARS 异步读取和更新数据</span><span class="sxs-lookup"><span data-stu-id="716b6-156">Asynchronously Reading and Updating Data with MARS</span></span>  
- <span data-ttu-id="716b6-157">MARS 允许连接供读取操作以及数据操作语言 (DML) 操作使用，包含多个挂起操作。</span><span class="sxs-lookup"><span data-stu-id="716b6-157">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="716b6-158">通过此功能，应用程序不需要处理连接忙的错误。</span><span class="sxs-lookup"><span data-stu-id="716b6-158">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="716b6-159">此外，MARS 可以取代服务器端游标的用户，后者通常会占用更多资源。</span><span class="sxs-lookup"><span data-stu-id="716b6-159">In addition, MARS can replace the user of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="716b6-160">最后，可以在单个连接上执行多个操作，因为它们可以共享相同的事务上下文，不需要使用**sp_getbindtoken**和**sp_bindsession**系统存储过程。</span><span class="sxs-lookup"><span data-stu-id="716b6-160">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>  
+## <a name="asynchronously-reading-and-updating-data-with-mars"></a><span data-ttu-id="def34-156">使用 MARS 异步读取和更新数据</span><span class="sxs-lookup"><span data-stu-id="def34-156">Asynchronously Reading and Updating Data with MARS</span></span>  
+ <span data-ttu-id="def34-157">MARS 允许连接供读取操作以及数据操作语言 (DML) 操作使用，包含多个挂起操作。</span><span class="sxs-lookup"><span data-stu-id="def34-157">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="def34-158">通过此功能，应用程序不需要处理连接忙的错误。</span><span class="sxs-lookup"><span data-stu-id="def34-158">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="def34-159">此外，MARS 可以取代服务器端游标的用户，后者通常会占用更多资源。</span><span class="sxs-lookup"><span data-stu-id="def34-159">In addition, MARS can replace the user of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="def34-160">最后，可以在单个连接上执行多个操作，因为它们可以共享相同的事务上下文，不需要使用**sp_getbindtoken**和**sp_bindsession**系统存储过程。</span><span class="sxs-lookup"><span data-stu-id="def34-160">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>  
   
- <span data-ttu-id="716b6-161">以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。</span><span class="sxs-lookup"><span data-stu-id="716b6-161">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="716b6-162">第一个命令对象检索信用评级为 5 的供应商列表。</span><span class="sxs-lookup"><span data-stu-id="716b6-162">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="716b6-163">第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。</span><span class="sxs-lookup"><span data-stu-id="716b6-163">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="716b6-164">每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。</span><span class="sxs-lookup"><span data-stu-id="716b6-164">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="716b6-165">执行计算来确定新**OnOrderQty**应为。</span><span class="sxs-lookup"><span data-stu-id="716b6-165">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="716b6-166">第三个命令对象然后用于更新**ProductVendor**使用新值的表。</span><span class="sxs-lookup"><span data-stu-id="716b6-166">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="716b6-167">整个过程在单个事务中进行，在结束时回滚。</span><span class="sxs-lookup"><span data-stu-id="716b6-167">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>  
+ <span data-ttu-id="def34-161">以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。</span><span class="sxs-lookup"><span data-stu-id="def34-161">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="def34-162">第一个命令对象检索信用评级为 5 的供应商列表。</span><span class="sxs-lookup"><span data-stu-id="def34-162">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="def34-163">第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。</span><span class="sxs-lookup"><span data-stu-id="def34-163">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="def34-164">每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。</span><span class="sxs-lookup"><span data-stu-id="def34-164">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="def34-165">执行计算来确定新**OnOrderQty**应为。</span><span class="sxs-lookup"><span data-stu-id="def34-165">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="def34-166">第三个命令对象然后用于更新**ProductVendor**使用新值的表。</span><span class="sxs-lookup"><span data-stu-id="def34-166">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="def34-167">整个过程在单个事务中进行，在结束时回滚。</span><span class="sxs-lookup"><span data-stu-id="def34-167">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="716b6-168">下面的示例使用示例**AdventureWorks**包含与 SQL Server 数据库。</span><span class="sxs-lookup"><span data-stu-id="716b6-168">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="716b6-169">示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。</span><span class="sxs-lookup"><span data-stu-id="716b6-169">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="716b6-170">根据环境的需要修改连接字符串。</span><span class="sxs-lookup"><span data-stu-id="716b6-170">Modify the connection string as necessary for your environment.</span></span>  
+>  <span data-ttu-id="def34-168">下面的示例使用示例**AdventureWorks**包含与 SQL Server 数据库。</span><span class="sxs-lookup"><span data-stu-id="def34-168">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="def34-169">示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。</span><span class="sxs-lookup"><span data-stu-id="def34-169">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="def34-170">根据环境的需要修改连接字符串。</span><span class="sxs-lookup"><span data-stu-id="def34-170">Modify the connection string as necessary for your environment.</span></span>  
   
 ```csharp
 using System;  
@@ -821,5 +811,5 @@ class Program {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="716b6-171">请参阅</span><span class="sxs-lookup"><span data-stu-id="716b6-171">See Also</span></span>  
- [<span data-ttu-id="716b6-172">在 ADO.NET 中检索和修改数据</span><span class="sxs-lookup"><span data-stu-id="716b6-172">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+## <a name="see-also"></a><span data-ttu-id="def34-171">请参阅</span><span class="sxs-lookup"><span data-stu-id="def34-171">See Also</span></span>  
+ [<span data-ttu-id="def34-172">在 ADO.NET 中检索和修改数据</span><span class="sxs-lookup"><span data-stu-id="def34-172">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

@@ -1,32 +1,20 @@
 ---
 title: System.ServiceModel.Activation.WebHostServiceActivated
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fc3e76d8-4057-474d-815f-1f73f9574588
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71acaa96a5ca25b4820a89549611a3ee72d4e241
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26cca86467dca0050a721331c1cf978b032f08c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="systemservicemodelactivationwebhostserviceactivated"></a><span data-ttu-id="9e364-102">System.ServiceModel.Activation.WebHostServiceActivated</span><span class="sxs-lookup"><span data-stu-id="9e364-102">System.ServiceModel.Activation.WebHostServiceActivated</span></span>
-<span data-ttu-id="9e364-103">System.ServiceModel.Activation.WebHostServiceActivated</span><span class="sxs-lookup"><span data-stu-id="9e364-103">System.ServiceModel.Activation.WebHostServiceActivated</span></span>  
+# <a name="systemservicemodelactivationwebhostserviceactivated"></a><span data-ttu-id="9e694-102">System.ServiceModel.Activation.WebHostServiceActivated</span><span class="sxs-lookup"><span data-stu-id="9e694-102">System.ServiceModel.Activation.WebHostServiceActivated</span></span>
+<span data-ttu-id="9e694-103">System.ServiceModel.Activation.WebHostServiceActivated</span><span class="sxs-lookup"><span data-stu-id="9e694-103">System.ServiceModel.Activation.WebHostServiceActivated</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9e364-104">描述</span><span class="sxs-lookup"><span data-stu-id="9e364-104">Description</span></span>  
- <span data-ttu-id="9e364-105">在以 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 作为宿主的服务完全激活并开始侦听消息时发生。</span><span class="sxs-lookup"><span data-stu-id="9e364-105">Occurs when a service that is hosted on Internet Information Services (IIS) or Windows Process Activation Service (WAS) is fully activated and begins listening for messages.</span></span>  
+## <a name="description"></a><span data-ttu-id="9e694-104">描述</span><span class="sxs-lookup"><span data-stu-id="9e694-104">Description</span></span>  
+ <span data-ttu-id="9e694-105">在以 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 作为宿主的服务完全激活并开始侦听消息时发生。</span><span class="sxs-lookup"><span data-stu-id="9e694-105">Occurs when a service that is hosted on Internet Information Services (IIS) or Windows Process Activation Service (WAS) is fully activated and begins listening for messages.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e364-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e364-106">See Also</span></span>  
- [<span data-ttu-id="9e364-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="9e364-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="9e364-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="9e364-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="9e364-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="9e364-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9e694-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e694-106">See Also</span></span>  
+ [<span data-ttu-id="9e694-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="9e694-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9e694-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="9e694-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9e694-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="9e694-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

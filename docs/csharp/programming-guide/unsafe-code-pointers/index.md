@@ -1,10 +1,6 @@
 ---
 title: 不安全代码和指针（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - security [C#], type safety
 - C# language, unsafe code
@@ -14,47 +10,44 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-caps.latest.revision: 24
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 32856461fbc6513509342a3567240de723f1fe8f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b57a6f607dbdbc84c60889a5ce2b1e3c33d7f435
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="unsafe-code-and-pointers-c-programming-guide"></a><span data-ttu-id="4df04-102">不安全代码和指针（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="4df04-102">Unsafe Code and Pointers (C# Programming Guide)</span></span>
-<span data-ttu-id="4df04-103">为了保持类型安全性，默认情况下，C# 不支持指针算法。</span><span class="sxs-lookup"><span data-stu-id="4df04-103">To maintain type safety and security, C# does not support pointer arithmetic, by default.</span></span> <span data-ttu-id="4df04-104">但是，通过使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 关键字，可以定义可在其中使用指针的不安全上下文。</span><span class="sxs-lookup"><span data-stu-id="4df04-104">However, by using the [unsafe](../../../csharp/language-reference/keywords/unsafe.md) keyword, you can define an unsafe context in which pointers can be used.</span></span> <span data-ttu-id="4df04-105">有关指针的详细信息，请参阅主题[指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)。</span><span class="sxs-lookup"><span data-stu-id="4df04-105">For more information about pointers, see the topic [Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).</span></span>  
+# <a name="unsafe-code-and-pointers-c-programming-guide"></a><span data-ttu-id="23cc7-102">不安全代码和指针（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="23cc7-102">Unsafe Code and Pointers (C# Programming Guide)</span></span>
+<span data-ttu-id="23cc7-103">为了保持类型安全性，默认情况下，C# 不支持指针算法。</span><span class="sxs-lookup"><span data-stu-id="23cc7-103">To maintain type safety and security, C# does not support pointer arithmetic, by default.</span></span> <span data-ttu-id="23cc7-104">但是，通过使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 关键字，可以定义可在其中使用指针的不安全上下文。</span><span class="sxs-lookup"><span data-stu-id="23cc7-104">However, by using the [unsafe](../../../csharp/language-reference/keywords/unsafe.md) keyword, you can define an unsafe context in which pointers can be used.</span></span> <span data-ttu-id="23cc7-105">有关指针的详细信息，请参阅主题[指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)。</span><span class="sxs-lookup"><span data-stu-id="23cc7-105">For more information about pointers, see the topic [Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4df04-106">在公共语言运行时 (CLR) 中，不安全代码是指无法验证的代码。</span><span class="sxs-lookup"><span data-stu-id="4df04-106">In the common language runtime (CLR), unsafe code is referred to as unverifiable code.</span></span> <span data-ttu-id="4df04-107">C# 中的不安全代码不一定是危险的；只是 CLR 无法验证该代码的安全性。</span><span class="sxs-lookup"><span data-stu-id="4df04-107">Unsafe code in C# is not necessarily dangerous; it is just code whose safety cannot be verified by the CLR.</span></span> <span data-ttu-id="4df04-108">因此，CLR 将仅执行完全信任的程序集中的不安全代码。</span><span class="sxs-lookup"><span data-stu-id="4df04-108">The CLR will therefore only execute unsafe code if it is in a fully trusted assembly.</span></span> <span data-ttu-id="4df04-109">如果你使用不安全代码，你应该负责确保代码不会引发安全风险或指针错误。</span><span class="sxs-lookup"><span data-stu-id="4df04-109">If you use unsafe code, it is your responsibility to ensure that your code does not introduce security risks or pointer errors.</span></span>  
+>  <span data-ttu-id="23cc7-106">在公共语言运行时 (CLR) 中，不安全代码是指无法验证的代码。</span><span class="sxs-lookup"><span data-stu-id="23cc7-106">In the common language runtime (CLR), unsafe code is referred to as unverifiable code.</span></span> <span data-ttu-id="23cc7-107">C# 中的不安全代码不一定是危险的；只是 CLR 无法验证该代码的安全性。</span><span class="sxs-lookup"><span data-stu-id="23cc7-107">Unsafe code in C# is not necessarily dangerous; it is just code whose safety cannot be verified by the CLR.</span></span> <span data-ttu-id="23cc7-108">因此，CLR 将仅执行完全信任的程序集中的不安全代码。</span><span class="sxs-lookup"><span data-stu-id="23cc7-108">The CLR will therefore only execute unsafe code if it is in a fully trusted assembly.</span></span> <span data-ttu-id="23cc7-109">如果你使用不安全代码，你应该负责确保代码不会引发安全风险或指针错误。</span><span class="sxs-lookup"><span data-stu-id="23cc7-109">If you use unsafe code, it is your responsibility to ensure that your code does not introduce security risks or pointer errors.</span></span>  
   
-## <a name="unsafe-code-overview"></a><span data-ttu-id="4df04-110">不安全代码概述</span><span class="sxs-lookup"><span data-stu-id="4df04-110">Unsafe Code Overview</span></span>  
- <span data-ttu-id="4df04-111">不安全代码具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="4df04-111">Unsafe code has the following properties:</span></span>  
+## <a name="unsafe-code-overview"></a><span data-ttu-id="23cc7-110">不安全代码概述</span><span class="sxs-lookup"><span data-stu-id="23cc7-110">Unsafe Code Overview</span></span>  
+ <span data-ttu-id="23cc7-111">不安全代码具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="23cc7-111">Unsafe code has the following properties:</span></span>  
   
--   <span data-ttu-id="4df04-112">可将方法、类型和代码块定义为不安全。</span><span class="sxs-lookup"><span data-stu-id="4df04-112">Methods, types, and code blocks can be defined as unsafe.</span></span>  
+-   <span data-ttu-id="23cc7-112">可将方法、类型和代码块定义为不安全。</span><span class="sxs-lookup"><span data-stu-id="23cc7-112">Methods, types, and code blocks can be defined as unsafe.</span></span>  
   
--   <span data-ttu-id="4df04-113">在某些情况下，通过移除数组绑定检查，不安全代码可提高应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="4df04-113">In some cases, unsafe code may increase an application's performance by removing array bounds checks.</span></span>  
+-   <span data-ttu-id="23cc7-113">在某些情况下，通过移除数组绑定检查，不安全代码可提高应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="23cc7-113">In some cases, unsafe code may increase an application's performance by removing array bounds checks.</span></span>  
   
--   <span data-ttu-id="4df04-114">调用需要指针的本机函数时，需使用不安全代码。</span><span class="sxs-lookup"><span data-stu-id="4df04-114">Unsafe code is required when you call native functions that require pointers.</span></span>  
+-   <span data-ttu-id="23cc7-114">调用需要指针的本机函数时，需使用不安全代码。</span><span class="sxs-lookup"><span data-stu-id="23cc7-114">Unsafe code is required when you call native functions that require pointers.</span></span>  
   
--   <span data-ttu-id="4df04-115">使用不安全代码将引发安全风险和稳定性风险。</span><span class="sxs-lookup"><span data-stu-id="4df04-115">Using unsafe code introduces security and stability risks.</span></span>  
+-   <span data-ttu-id="23cc7-115">使用不安全代码将引发安全风险和稳定性风险。</span><span class="sxs-lookup"><span data-stu-id="23cc7-115">Using unsafe code introduces security and stability risks.</span></span>  
   
--   <span data-ttu-id="4df04-116">为使 C# 能够编译不安全代码，必须用 [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md) 编译应用程序。</span><span class="sxs-lookup"><span data-stu-id="4df04-116">In order for C# to compile unsafe code, the application must be compiled with [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).</span></span>  
+-   <span data-ttu-id="23cc7-116">为使 C# 能够编译不安全代码，必须用 [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md) 编译应用程序。</span><span class="sxs-lookup"><span data-stu-id="23cc7-116">In order for C# to compile unsafe code, the application must be compiled with [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="4df04-117">相关章节</span><span class="sxs-lookup"><span data-stu-id="4df04-117">Related Sections</span></span>  
- <span data-ttu-id="4df04-118">有关详细信息，请参见:</span><span class="sxs-lookup"><span data-stu-id="4df04-118">For more information, see:</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="23cc7-117">相关章节</span><span class="sxs-lookup"><span data-stu-id="23cc7-117">Related Sections</span></span>  
+ <span data-ttu-id="23cc7-118">有关详细信息，请参见:</span><span class="sxs-lookup"><span data-stu-id="23cc7-118">For more information, see:</span></span>  
   
--   [<span data-ttu-id="4df04-119">指针类型</span><span class="sxs-lookup"><span data-stu-id="4df04-119">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+-   [<span data-ttu-id="23cc7-119">指针类型</span><span class="sxs-lookup"><span data-stu-id="23cc7-119">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
   
--   [<span data-ttu-id="4df04-120">固定大小的缓冲区</span><span class="sxs-lookup"><span data-stu-id="4df04-120">Fixed Size Buffers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
+-   [<span data-ttu-id="23cc7-120">固定大小的缓冲区</span><span class="sxs-lookup"><span data-stu-id="23cc7-120">Fixed Size Buffers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
   
--   [<span data-ttu-id="4df04-121">如何：使用指针复制字节数组</span><span class="sxs-lookup"><span data-stu-id="4df04-121">How to: Use Pointers to Copy an Array of Bytes</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
+-   [<span data-ttu-id="23cc7-121">如何：使用指针复制字节数组</span><span class="sxs-lookup"><span data-stu-id="23cc7-121">How to: Use Pointers to Copy an Array of Bytes</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
   
--   [<span data-ttu-id="4df04-122">unsafe</span><span class="sxs-lookup"><span data-stu-id="4df04-122">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
+-   [<span data-ttu-id="23cc7-122">unsafe</span><span class="sxs-lookup"><span data-stu-id="23cc7-122">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
   
-## <a name="c-language-specification"></a><span data-ttu-id="4df04-123">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="4df04-123">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="23cc7-123">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="23cc7-123">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="4df04-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4df04-124">See Also</span></span>  
- [<span data-ttu-id="4df04-125">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="4df04-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="23cc7-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="23cc7-124">See Also</span></span>  
+ [<span data-ttu-id="23cc7-125">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="23cc7-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)

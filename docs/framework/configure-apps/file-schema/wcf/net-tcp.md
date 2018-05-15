@@ -1,32 +1,20 @@
 ---
 title: '&lt;net.tcp&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 61b799afa1761e59c5cedf5b14eadcaf6fcaada0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 9312d5f7544a794f036f0a623df0d537eb96d145
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltnettcpgt"></a><span data-ttu-id="096f8-102">&lt;net.tcp&gt;</span><span class="sxs-lookup"><span data-stu-id="096f8-102">&lt;net.tcp&gt;</span></span>
-<span data-ttu-id="096f8-103">指定允许多个进程共享同一 TCP 端口的 NET.TCP 端口共享服务的配置设置。</span><span class="sxs-lookup"><span data-stu-id="096f8-103">Specifies configuration settings for the NET.TCP Port Sharing Service, which allows multiple processes to share the same TCP port.</span></span>  
+# <a name="ltnettcpgt"></a><span data-ttu-id="73eaf-102">&lt;net.tcp&gt;</span><span class="sxs-lookup"><span data-stu-id="73eaf-102">&lt;net.tcp&gt;</span></span>
+<span data-ttu-id="73eaf-103">指定允许多个进程共享同一 TCP 端口的 NET.TCP 端口共享服务的配置设置。</span><span class="sxs-lookup"><span data-stu-id="73eaf-103">Specifies configuration settings for the NET.TCP Port Sharing Service, which allows multiple processes to share the same TCP port.</span></span>  
   
- <span data-ttu-id="096f8-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="096f8-104">\<system.serviceModel.activation></span></span>  
-<span data-ttu-id="096f8-105">\<net.tcp></span><span class="sxs-lookup"><span data-stu-id="096f8-105">\<net.tcp></span></span>  
+ <span data-ttu-id="73eaf-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="73eaf-104">\<system.serviceModel.activation></span></span>  
+<span data-ttu-id="73eaf-105">\<net.tcp></span><span class="sxs-lookup"><span data-stu-id="73eaf-105">\<net.tcp></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="096f8-106">语法</span><span class="sxs-lookup"><span data-stu-id="096f8-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="73eaf-106">语法</span><span class="sxs-lookup"><span data-stu-id="73eaf-106">Syntax</span></span>  
   
 ```xml  
 <configuration>  
@@ -53,38 +41,38 @@ ms.lasthandoff: 01/19/2018
 </configuration>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="096f8-107">类型</span><span class="sxs-lookup"><span data-stu-id="096f8-107">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="73eaf-107">类型</span><span class="sxs-lookup"><span data-stu-id="73eaf-107">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="096f8-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="096f8-108">Attributes and Elements</span></span>  
- <span data-ttu-id="096f8-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="096f8-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="73eaf-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="73eaf-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="73eaf-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="73eaf-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="096f8-110">特性</span><span class="sxs-lookup"><span data-stu-id="096f8-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="73eaf-110">特性</span><span class="sxs-lookup"><span data-stu-id="73eaf-110">Attributes</span></span>  
   
-|<span data-ttu-id="096f8-111">特性</span><span class="sxs-lookup"><span data-stu-id="096f8-111">Attribute</span></span>|<span data-ttu-id="096f8-112">描述</span><span class="sxs-lookup"><span data-stu-id="096f8-112">Description</span></span>|  
+|<span data-ttu-id="73eaf-111">特性</span><span class="sxs-lookup"><span data-stu-id="73eaf-111">Attribute</span></span>|<span data-ttu-id="73eaf-112">描述</span><span class="sxs-lookup"><span data-stu-id="73eaf-112">Description</span></span>|  
 |---------------|-----------------|  
-|`listenBacklog`|<span data-ttu-id="096f8-113">一个整数，指定从共享连接接受但仍未调度给 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务的最大未完成连接数。</span><span class="sxs-lookup"><span data-stu-id="096f8-113">An integer that specifies the maximum outstanding connections that are accepted from the shared connection, but are not yet dispatched to [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services.</span></span> <span data-ttu-id="096f8-114">默认值为 10。</span><span class="sxs-lookup"><span data-stu-id="096f8-114">The default is 10.</span></span>|  
-|`maxPendingAccepts`|<span data-ttu-id="096f8-115">一个整数，指定共享服务侦听终结点上的最大未完成并发接受线程数。</span><span class="sxs-lookup"><span data-stu-id="096f8-115">An integer that specifies the maximum outstanding concurrent accepting threads on the listening endpoint for the sharing service.</span></span> <span data-ttu-id="096f8-116">默认值为 2。</span><span class="sxs-lookup"><span data-stu-id="096f8-116">The default is 2.</span></span>|  
-|`MaxPendingConnections`|<span data-ttu-id="096f8-117">侦听器可以拥有的正在等待应用程序接受的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="096f8-117">The maximum number of connections that the listener can have waiting to be accepted by the application.</span></span> <span data-ttu-id="096f8-118">超出此配额值时，新的传入连接会被丢弃而不是等待接受。</span><span class="sxs-lookup"><span data-stu-id="096f8-118">When this quota value is exceeded, new incoming connections are dropped rather than waiting to be accepted.</span></span> <span data-ttu-id="096f8-119">连接功能（如消息安全）可能会使客户端打开多个连接。</span><span class="sxs-lookup"><span data-stu-id="096f8-119">Connection features such as message security can cause a client to open more than one connection.</span></span> <span data-ttu-id="096f8-120">在设置此配额值时，服务管理员应该考虑这些额外的连接。</span><span class="sxs-lookup"><span data-stu-id="096f8-120">Service administrators should account for these additional connections when setting this quota value.</span></span> <span data-ttu-id="096f8-121">默认值为 10。</span><span class="sxs-lookup"><span data-stu-id="096f8-121">The default is 10.</span></span>|  
-|`receiveTimeout`|<span data-ttu-id="096f8-122">`TimeSpan`，它将为读取组帧数据并执行来自基础连接的连接调度指定超时值。</span><span class="sxs-lookup"><span data-stu-id="096f8-122">A `TimeSpan` that specifies the timeout for reading the framing data and performing connection dispatching from the underlining connections.</span></span> <span data-ttu-id="096f8-123">默认值为“00:00:10”。</span><span class="sxs-lookup"><span data-stu-id="096f8-123">The default is "00:00:10".</span></span>|  
-|`teredoEnabled`|<span data-ttu-id="096f8-124">一个布尔值，指示端口共享服务是否使用 Microsoft Teredo 服务代表 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务侦听 TCP 端口。</span><span class="sxs-lookup"><span data-stu-id="096f8-124">A Boolean value that indicates whether the port sharing service uses Microsoft Teredo service to listen on TCP ports on behalf of [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services.</span></span> <span data-ttu-id="096f8-125">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="096f8-125">The default is `false`.</span></span>|  
+|`listenBacklog`|<span data-ttu-id="73eaf-113">一个整数，指定从共享连接接受但仍未调度到 Windows Communication Foundation (WCF) 服务的最大未完成连接。</span><span class="sxs-lookup"><span data-stu-id="73eaf-113">An integer that specifies the maximum outstanding connections that are accepted from the shared connection, but are not yet dispatched to Windows Communication Foundation (WCF) services.</span></span> <span data-ttu-id="73eaf-114">默认值为 10。</span><span class="sxs-lookup"><span data-stu-id="73eaf-114">The default is 10.</span></span>|  
+|`maxPendingAccepts`|<span data-ttu-id="73eaf-115">一个整数，指定共享服务侦听终结点上的最大未完成并发接受线程数。</span><span class="sxs-lookup"><span data-stu-id="73eaf-115">An integer that specifies the maximum outstanding concurrent accepting threads on the listening endpoint for the sharing service.</span></span> <span data-ttu-id="73eaf-116">默认值为 2。</span><span class="sxs-lookup"><span data-stu-id="73eaf-116">The default is 2.</span></span>|  
+|`MaxPendingConnections`|<span data-ttu-id="73eaf-117">侦听器可以拥有的正在等待应用程序接受的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="73eaf-117">The maximum number of connections that the listener can have waiting to be accepted by the application.</span></span> <span data-ttu-id="73eaf-118">超出此配额值时，新的传入连接会被丢弃而不是等待接受。</span><span class="sxs-lookup"><span data-stu-id="73eaf-118">When this quota value is exceeded, new incoming connections are dropped rather than waiting to be accepted.</span></span> <span data-ttu-id="73eaf-119">连接功能（如消息安全）可能会使客户端打开多个连接。</span><span class="sxs-lookup"><span data-stu-id="73eaf-119">Connection features such as message security can cause a client to open more than one connection.</span></span> <span data-ttu-id="73eaf-120">在设置此配额值时，服务管理员应该考虑这些额外的连接。</span><span class="sxs-lookup"><span data-stu-id="73eaf-120">Service administrators should account for these additional connections when setting this quota value.</span></span> <span data-ttu-id="73eaf-121">默认值为 10。</span><span class="sxs-lookup"><span data-stu-id="73eaf-121">The default is 10.</span></span>|  
+|`receiveTimeout`|<span data-ttu-id="73eaf-122">`TimeSpan`，它将为读取组帧数据并执行来自基础连接的连接调度指定超时值。</span><span class="sxs-lookup"><span data-stu-id="73eaf-122">A `TimeSpan` that specifies the timeout for reading the framing data and performing connection dispatching from the underlining connections.</span></span> <span data-ttu-id="73eaf-123">默认值为“00:00:10”。</span><span class="sxs-lookup"><span data-stu-id="73eaf-123">The default is "00:00:10".</span></span>|  
+|`teredoEnabled`|<span data-ttu-id="73eaf-124">一个布尔值，指示端口共享服务是否使用 Microsoft Teredo 服务代表 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务侦听 TCP 端口。</span><span class="sxs-lookup"><span data-stu-id="73eaf-124">A Boolean value that indicates whether the port sharing service uses Microsoft Teredo service to listen on TCP ports on behalf of [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services.</span></span> <span data-ttu-id="73eaf-125">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="73eaf-125">The default is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="096f8-126">子元素</span><span class="sxs-lookup"><span data-stu-id="096f8-126">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="73eaf-126">子元素</span><span class="sxs-lookup"><span data-stu-id="73eaf-126">Child Elements</span></span>  
   
-|<span data-ttu-id="096f8-127">元素</span><span class="sxs-lookup"><span data-stu-id="096f8-127">Element</span></span>|<span data-ttu-id="096f8-128">描述</span><span class="sxs-lookup"><span data-stu-id="096f8-128">Description</span></span>|  
+|<span data-ttu-id="73eaf-127">元素</span><span class="sxs-lookup"><span data-stu-id="73eaf-127">Element</span></span>|<span data-ttu-id="73eaf-128">描述</span><span class="sxs-lookup"><span data-stu-id="73eaf-128">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="096f8-129">\<allowAccounts></span><span class="sxs-lookup"><span data-stu-id="096f8-129">\<allowAccounts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|<span data-ttu-id="096f8-130">一个配置元素集合，这些元素所包含的 `securityIdentifier` 属性用于指定进程的用户帐户，这些进程承载 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务并被授予了对该共享服务的连接访问权限。</span><span class="sxs-lookup"><span data-stu-id="096f8-130">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services, and are granted connection access to the sharing service.</span></span>|  
+|[<span data-ttu-id="73eaf-129">\<allowAccounts></span><span class="sxs-lookup"><span data-stu-id="73eaf-129">\<allowAccounts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|<span data-ttu-id="73eaf-130">一个配置元素集合，这些元素所包含的 `securityIdentifier` 属性用于指定进程的用户帐户，这些进程承载 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务并被授予了对该共享服务的连接访问权限。</span><span class="sxs-lookup"><span data-stu-id="73eaf-130">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services, and are granted connection access to the sharing service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="096f8-131">父元素</span><span class="sxs-lookup"><span data-stu-id="096f8-131">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="73eaf-131">父元素</span><span class="sxs-lookup"><span data-stu-id="73eaf-131">Parent Elements</span></span>  
   
-|<span data-ttu-id="096f8-132">元素</span><span class="sxs-lookup"><span data-stu-id="096f8-132">Element</span></span>|<span data-ttu-id="096f8-133">描述</span><span class="sxs-lookup"><span data-stu-id="096f8-133">Description</span></span>|  
+|<span data-ttu-id="73eaf-132">元素</span><span class="sxs-lookup"><span data-stu-id="73eaf-132">Element</span></span>|<span data-ttu-id="73eaf-133">描述</span><span class="sxs-lookup"><span data-stu-id="73eaf-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="096f8-134">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="096f8-134">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|<span data-ttu-id="096f8-135">包含侦听器进程 SMSvcHost.exe 的配置设置。</span><span class="sxs-lookup"><span data-stu-id="096f8-135">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
+|[<span data-ttu-id="73eaf-134">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="73eaf-134">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|<span data-ttu-id="73eaf-135">包含侦听器进程 SMSvcHost.exe 的配置设置。</span><span class="sxs-lookup"><span data-stu-id="73eaf-135">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="096f8-136">备注</span><span class="sxs-lookup"><span data-stu-id="096f8-136">Remarks</span></span>  
- <span data-ttu-id="096f8-137">端口共享的详细信息，请参阅[Net.TCP 端口共享](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)。</span><span class="sxs-lookup"><span data-stu-id="096f8-137">For more information on port sharing, see [Net.TCP Port Sharing](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded).</span></span> <span data-ttu-id="096f8-138">若要了解如何配置端口共享服务，请参阅[配置 Net.TCP Port Sharing Service](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)。</span><span class="sxs-lookup"><span data-stu-id="096f8-138">To understand how to configure the port sharing service, see [Configuring the Net.TCP Port Sharing Service](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="73eaf-136">备注</span><span class="sxs-lookup"><span data-stu-id="73eaf-136">Remarks</span></span>  
+ <span data-ttu-id="73eaf-137">端口共享的详细信息，请参阅[Net.TCP 端口共享](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)。</span><span class="sxs-lookup"><span data-stu-id="73eaf-137">For more information on port sharing, see [Net.TCP Port Sharing](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded).</span></span> <span data-ttu-id="73eaf-138">若要了解如何配置端口共享服务，请参阅[配置 Net.TCP Port Sharing Service](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)。</span><span class="sxs-lookup"><span data-stu-id="73eaf-138">To understand how to configure the port sharing service, see [Configuring the Net.TCP Port Sharing Service](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="096f8-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="096f8-139">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="73eaf-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="73eaf-139">See Also</span></span>  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [<span data-ttu-id="096f8-140">Net.TCP 端口共享</span><span class="sxs-lookup"><span data-stu-id="096f8-140">Net.TCP Port Sharing</span></span>](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
- [<span data-ttu-id="096f8-141">配置 Net.TCP 端口共享服务</span><span class="sxs-lookup"><span data-stu-id="096f8-141">Configuring the Net.TCP Port Sharing Service</span></span>](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [<span data-ttu-id="73eaf-140">Net.TCP 端口共享</span><span class="sxs-lookup"><span data-stu-id="73eaf-140">Net.TCP Port Sharing</span></span>](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [<span data-ttu-id="73eaf-141">配置 Net.TCP 端口共享服务</span><span class="sxs-lookup"><span data-stu-id="73eaf-141">Configuring the Net.TCP Port Sharing Service</span></span>](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)

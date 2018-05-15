@@ -1,38 +1,26 @@
 ---
-title: "如何：显示变更集"
-ms.custom: 
+title: 如何：显示变更集
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f6de059f56318ed910f4583ba9618a5a20040ec7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c9664c6d32f78f455aa29311f111acaecb5c7905
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-display-a-changeset"></a><span data-ttu-id="f6a89-102">如何：显示变更集</span><span class="sxs-lookup"><span data-stu-id="f6a89-102">How to: Display a ChangeSet</span></span>
-<span data-ttu-id="f6a89-103">可以通过使用 <xref:System.Data.Linq.DataContext> 来查看由 <xref:System.Data.Linq.DataContext.GetChangeSet%2A> 跟踪的更改。</span><span class="sxs-lookup"><span data-stu-id="f6a89-103">You can view changes tracked by a <xref:System.Data.Linq.DataContext> by using <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span></span>  
+# <a name="how-to-display-a-changeset"></a><span data-ttu-id="e59b2-102">如何：显示变更集</span><span class="sxs-lookup"><span data-stu-id="e59b2-102">How to: Display a ChangeSet</span></span>
+<span data-ttu-id="e59b2-103">可以通过使用 <xref:System.Data.Linq.DataContext> 来查看由 <xref:System.Data.Linq.DataContext.GetChangeSet%2A> 跟踪的更改。</span><span class="sxs-lookup"><span data-stu-id="e59b2-103">You can view changes tracked by a <xref:System.Data.Linq.DataContext> by using <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f6a89-104">示例</span><span class="sxs-lookup"><span data-stu-id="f6a89-104">Example</span></span>  
- <span data-ttu-id="f6a89-105">下面的示例检索所在城市为伦敦的客户，将其所在城市更改为巴黎，然后将所做的更改提交回数据库。</span><span class="sxs-lookup"><span data-stu-id="f6a89-105">The following example retrieves customers whose city is London, changes the city to Paris, and submits the changes back to the database.</span></span>  
+## <a name="example"></a><span data-ttu-id="e59b2-104">示例</span><span class="sxs-lookup"><span data-stu-id="e59b2-104">Example</span></span>  
+ <span data-ttu-id="e59b2-105">下面的示例检索所在城市为伦敦的客户，将其所在城市更改为巴黎，然后将所做的更改提交回数据库。</span><span class="sxs-lookup"><span data-stu-id="e59b2-105">The following example retrieves customers whose city is London, changes the city to Paris, and submits the changes back to the database.</span></span>  
   
  [!code-csharp[DLinqDebuggingSupport#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#2)]
  [!code-vb[DLinqDebuggingSupport#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#2)]  
   
- <span data-ttu-id="f6a89-106">执行此代码所得到的输出与如下内容类似。</span><span class="sxs-lookup"><span data-stu-id="f6a89-106">Output from this code appears similar to the following.</span></span> <span data-ttu-id="f6a89-107">请注意，结尾处的摘要显示做了八项更改。</span><span class="sxs-lookup"><span data-stu-id="f6a89-107">Note that the summary at the end shows that eight changes were made.</span></span>  
+ <span data-ttu-id="e59b2-106">执行此代码所得到的输出与如下内容类似。</span><span class="sxs-lookup"><span data-stu-id="e59b2-106">Output from this code appears similar to the following.</span></span> <span data-ttu-id="e59b2-107">请注意，结尾处的摘要显示做了八项更改。</span><span class="sxs-lookup"><span data-stu-id="e59b2-107">Note that the summary at the end shows that eight changes were made.</span></span>  
   
  `CustomerID: AROUT`  
   
@@ -86,5 +74,5 @@ ms.lasthandoff: 01/17/2018
   
  `Total changes: {Added: 0, Removed: 0, Modified: 8}`  
   
-## <a name="see-also"></a><span data-ttu-id="f6a89-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="f6a89-108">See Also</span></span>  
- [<span data-ttu-id="f6a89-109">调试支持</span><span class="sxs-lookup"><span data-stu-id="f6a89-109">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a><span data-ttu-id="e59b2-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="e59b2-108">See Also</span></span>  
+ [<span data-ttu-id="e59b2-109">调试支持</span><span class="sxs-lookup"><span data-stu-id="e59b2-109">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

@@ -1,14 +1,6 @@
 ---
-title: "IAssemblyCache::UninstallAssembly 方法"
-ms.custom: 
+title: IAssemblyCache::UninstallAssembly 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAssemblyCache.UninstallAssembly
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: 973b2c44-8dfc-40c1-9035-10f4846627e9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d34b2793de58721c7d4863855106d4b231bccc54
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6be40ecbb801348ad73fb929741b5a8e8407a7ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="iassemblycacheuninstallassembly-method"></a><span data-ttu-id="52b36-102">IAssemblyCache::UninstallAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="52b36-102">IAssemblyCache::UninstallAssembly Method</span></span>
-<span data-ttu-id="52b36-103">从全局程序集缓存中卸载指定的程序集。</span><span class="sxs-lookup"><span data-stu-id="52b36-103">Uninstalls the specified assembly from the global assembly cache.</span></span>  
+# <a name="iassemblycacheuninstallassembly-method"></a><span data-ttu-id="505b6-102">IAssemblyCache::UninstallAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="505b6-102">IAssemblyCache::UninstallAssembly Method</span></span>
+<span data-ttu-id="505b6-103">从全局程序集缓存中卸载指定的程序集。</span><span class="sxs-lookup"><span data-stu-id="505b6-103">Uninstalls the specified assembly from the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="52b36-104">语法</span><span class="sxs-lookup"><span data-stu-id="52b36-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="505b6-104">语法</span><span class="sxs-lookup"><span data-stu-id="505b6-104">Syntax</span></span>  
   
 ```  
 HRESULT UninstallAssembly (  
@@ -49,37 +37,37 @@ HRESULT UninstallAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="52b36-105">参数</span><span class="sxs-lookup"><span data-stu-id="52b36-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="505b6-105">参数</span><span class="sxs-lookup"><span data-stu-id="505b6-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="52b36-106">[in]在包括中定义的标志。</span><span class="sxs-lookup"><span data-stu-id="52b36-106">[in] Flags defined in Fusion.idl.</span></span>  
+ <span data-ttu-id="505b6-106">[in]在包括中定义的标志。</span><span class="sxs-lookup"><span data-stu-id="505b6-106">[in] Flags defined in Fusion.idl.</span></span>  
   
  `pszAssemblyName`  
- <span data-ttu-id="52b36-107">[in]要卸载的程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="52b36-107">[in] The name of the assembly to uninstall.</span></span>  
+ <span data-ttu-id="505b6-107">[in]要卸载的程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="505b6-107">[in] The name of the assembly to uninstall.</span></span>  
   
  `pRefData`  
- <span data-ttu-id="52b36-108">[in]A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)包含程序集安装数据的结构。</span><span class="sxs-lookup"><span data-stu-id="52b36-108">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure that contains the installation data for the assembly.</span></span>  
+ <span data-ttu-id="505b6-108">[in]A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)包含程序集安装数据的结构。</span><span class="sxs-lookup"><span data-stu-id="505b6-108">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure that contains the installation data for the assembly.</span></span>  
   
  `pulDisposition`  
- <span data-ttu-id="52b36-109">[out，optional]包括中定义的处理值之一。</span><span class="sxs-lookup"><span data-stu-id="52b36-109">[out, optional] One of the disposition values defined in Fusion.idl.</span></span> <span data-ttu-id="52b36-110">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="52b36-110">Possible values include the following:</span></span>  
+ <span data-ttu-id="505b6-109">[out，optional]包括中定义的处理值之一。</span><span class="sxs-lookup"><span data-stu-id="505b6-109">[out, optional] One of the disposition values defined in Fusion.idl.</span></span> <span data-ttu-id="505b6-110">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="505b6-110">Possible values include the following:</span></span>  
   
--   <span data-ttu-id="52b36-111">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)</span><span class="sxs-lookup"><span data-stu-id="52b36-111">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)</span></span>  
+-   <span data-ttu-id="505b6-111">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)</span><span class="sxs-lookup"><span data-stu-id="505b6-111">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)</span></span>  
   
--   <span data-ttu-id="52b36-112">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)</span><span class="sxs-lookup"><span data-stu-id="52b36-112">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)</span></span>  
+-   <span data-ttu-id="505b6-112">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)</span><span class="sxs-lookup"><span data-stu-id="505b6-112">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)</span></span>  
   
--   <span data-ttu-id="52b36-113">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)</span><span class="sxs-lookup"><span data-stu-id="52b36-113">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)</span></span>  
+-   <span data-ttu-id="505b6-113">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)</span><span class="sxs-lookup"><span data-stu-id="505b6-113">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)</span></span>  
   
--   <span data-ttu-id="52b36-114">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)</span><span class="sxs-lookup"><span data-stu-id="52b36-114">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)</span></span>  
+-   <span data-ttu-id="505b6-114">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)</span><span class="sxs-lookup"><span data-stu-id="505b6-114">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)</span></span>  
   
--   <span data-ttu-id="52b36-115">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)</span><span class="sxs-lookup"><span data-stu-id="52b36-115">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)</span></span>  
+-   <span data-ttu-id="505b6-115">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)</span><span class="sxs-lookup"><span data-stu-id="505b6-115">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)</span></span>  
   
--   <span data-ttu-id="52b36-116">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)</span><span class="sxs-lookup"><span data-stu-id="52b36-116">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)</span></span>  
+-   <span data-ttu-id="505b6-116">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)</span><span class="sxs-lookup"><span data-stu-id="505b6-116">IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="52b36-117">惠?</span><span class="sxs-lookup"><span data-stu-id="52b36-117">Requirements</span></span>  
- <span data-ttu-id="52b36-118">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="52b36-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="505b6-117">要求</span><span class="sxs-lookup"><span data-stu-id="505b6-117">Requirements</span></span>  
+ <span data-ttu-id="505b6-118">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="505b6-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="52b36-119">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="52b36-119">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="505b6-119">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="505b6-119">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="52b36-120">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52b36-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="505b6-120">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="505b6-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52b36-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="52b36-121">See Also</span></span>  
- [<span data-ttu-id="52b36-122">IAssemblyCache 接口</span><span class="sxs-lookup"><span data-stu-id="52b36-122">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a><span data-ttu-id="505b6-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="505b6-121">See Also</span></span>  
+ [<span data-ttu-id="505b6-122">IAssemblyCache 接口</span><span class="sxs-lookup"><span data-stu-id="505b6-122">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

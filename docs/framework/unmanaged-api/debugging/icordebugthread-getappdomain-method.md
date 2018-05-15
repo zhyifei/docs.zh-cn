@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugThread::GetAppDomain 方法"
-ms.custom: 
+title: ICorDebugThread::GetAppDomain 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugThread.GetAppDomain
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: 415b3d34-8b35-4b60-a318-140646cc83f8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c235bc0294b967e26766a095b85c5acf0f27cff9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51878f0334afe52608b60ca540e49c86fded148e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugthreadgetappdomain-method"></a><span data-ttu-id="01adf-102">ICorDebugThread::GetAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="01adf-102">ICorDebugThread::GetAppDomain Method</span></span>
-<span data-ttu-id="01adf-103">获取在其中此 ICorDebugThread 当前正在执行的应用程序域的接口指针。</span><span class="sxs-lookup"><span data-stu-id="01adf-103">Gets an interface pointer to the application domain in which this ICorDebugThread is currently executing.</span></span>  
+# <a name="icordebugthreadgetappdomain-method"></a><span data-ttu-id="991a5-102">ICorDebugThread::GetAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="991a5-102">ICorDebugThread::GetAppDomain Method</span></span>
+<span data-ttu-id="991a5-103">获取在其中此 ICorDebugThread 当前正在执行的应用程序域的接口指针。</span><span class="sxs-lookup"><span data-stu-id="991a5-103">Gets an interface pointer to the application domain in which this ICorDebugThread is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01adf-104">语法</span><span class="sxs-lookup"><span data-stu-id="01adf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="991a5-104">语法</span><span class="sxs-lookup"><span data-stu-id="991a5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAppDomain (  
@@ -46,15 +34,15 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="01adf-105">参数</span><span class="sxs-lookup"><span data-stu-id="01adf-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="991a5-105">参数</span><span class="sxs-lookup"><span data-stu-id="991a5-105">Parameters</span></span>  
  `ppAppDomain`  
- <span data-ttu-id="01adf-106">[out]指向表示当前正在其中执行此线程的应用程序域的 ICorDebugAppDomain 对象的指针。</span><span class="sxs-lookup"><span data-stu-id="01adf-106">[out] A pointer to an ICorDebugAppDomain object that represents the application domain in which this thread is currently executing.</span></span>  
+ <span data-ttu-id="991a5-106">[out]指向表示当前正在其中执行此线程的应用程序域的 ICorDebugAppDomain 对象的指针。</span><span class="sxs-lookup"><span data-stu-id="991a5-106">[out] A pointer to an ICorDebugAppDomain object that represents the application domain in which this thread is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01adf-107">惠?</span><span class="sxs-lookup"><span data-stu-id="01adf-107">Requirements</span></span>  
- <span data-ttu-id="01adf-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="01adf-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="991a5-107">要求</span><span class="sxs-lookup"><span data-stu-id="991a5-107">Requirements</span></span>  
+ <span data-ttu-id="991a5-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="991a5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="01adf-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01adf-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="991a5-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="991a5-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="01adf-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01adf-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="991a5-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="991a5-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="01adf-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01adf-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="991a5-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="991a5-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugFrame::GetCode 方法"
-ms.custom: 
+title: ICorDebugFrame::GetCode 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugFrame.GetCode
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: fbaa0794-a031-4015-8beb-2749e47ac340
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a99b652a439a284033f3e7a9ecc46b3599fae00b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15206fbd7724383b1ec6df123790d3171e58e9f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugframegetcode-method"></a><span data-ttu-id="00e7b-102">ICorDebugFrame::GetCode 方法</span><span class="sxs-lookup"><span data-stu-id="00e7b-102">ICorDebugFrame::GetCode Method</span></span>
-<span data-ttu-id="00e7b-103">获取一个指向与此堆栈帧关联的代码。</span><span class="sxs-lookup"><span data-stu-id="00e7b-103">Gets a pointer to the code associated with this stack frame.</span></span>  
+# <a name="icordebugframegetcode-method"></a><span data-ttu-id="9499d-102">ICorDebugFrame::GetCode 方法</span><span class="sxs-lookup"><span data-stu-id="9499d-102">ICorDebugFrame::GetCode Method</span></span>
+<span data-ttu-id="9499d-103">获取一个指向与此堆栈帧关联的代码。</span><span class="sxs-lookup"><span data-stu-id="9499d-103">Gets a pointer to the code associated with this stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="00e7b-104">语法</span><span class="sxs-lookup"><span data-stu-id="00e7b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9499d-104">语法</span><span class="sxs-lookup"><span data-stu-id="9499d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCode (  
@@ -46,15 +34,15 @@ HRESULT GetCode (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="00e7b-105">参数</span><span class="sxs-lookup"><span data-stu-id="00e7b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9499d-105">参数</span><span class="sxs-lookup"><span data-stu-id="9499d-105">Parameters</span></span>  
  `ppCode`  
- <span data-ttu-id="00e7b-106">[out]指向一个 ICorDebugCode 对象，表示与此帧关联的代码的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="00e7b-106">[out] A pointer to the address of an ICorDebugCode object that represents the code associated with this frame.</span></span>  
+ <span data-ttu-id="9499d-106">[out]指向一个 ICorDebugCode 对象，表示与此帧关联的代码的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="9499d-106">[out] A pointer to the address of an ICorDebugCode object that represents the code associated with this frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="00e7b-107">惠?</span><span class="sxs-lookup"><span data-stu-id="00e7b-107">Requirements</span></span>  
- <span data-ttu-id="00e7b-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="00e7b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9499d-107">要求</span><span class="sxs-lookup"><span data-stu-id="9499d-107">Requirements</span></span>  
+ <span data-ttu-id="9499d-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9499d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="00e7b-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="00e7b-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9499d-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9499d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="00e7b-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="00e7b-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9499d-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9499d-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="00e7b-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="00e7b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="9499d-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9499d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

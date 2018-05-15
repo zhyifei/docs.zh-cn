@@ -1,13 +1,6 @@
 ---
-title: "&lt;defaultHttpCachePolicy&gt;元素 （网络设置）"
-ms.custom: 
+title: '&lt;defaultHttpCachePolicy&gt;元素 （网络设置）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultHttpCachePolicy
@@ -15,26 +8,24 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 048d9a373c77e530bd352b3caa0e122b3833a5c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0425711687a2f8b40f2c645e1c478d52b56ad979
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a><span data-ttu-id="9d0b3-102">&lt;defaultHttpCachePolicy&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="9d0b3-102">&lt;defaultHttpCachePolicy&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="9d0b3-103">描述 HTTP 缓存功能是否处于活动状态并描述默认缓存策略。</span><span class="sxs-lookup"><span data-stu-id="9d0b3-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  
+# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a><span data-ttu-id="13c3f-102">&lt;defaultHttpCachePolicy&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="13c3f-102">&lt;defaultHttpCachePolicy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="13c3f-103">描述 HTTP 缓存功能是否处于活动状态并描述默认缓存策略。</span><span class="sxs-lookup"><span data-stu-id="13c3f-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  
   
- <span data-ttu-id="9d0b3-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="9d0b3-104">\<configuration></span></span>  
-<span data-ttu-id="9d0b3-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="9d0b3-105">\<system.net></span></span>  
-<span data-ttu-id="9d0b3-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="9d0b3-106">\<requestCaching></span></span>  
-<span data-ttu-id="9d0b3-107">\<defaultHttpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="9d0b3-107">\<defaultHttpCachePolicy></span></span>  
+ <span data-ttu-id="13c3f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="13c3f-104">\<configuration></span></span>  
+<span data-ttu-id="13c3f-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="13c3f-105">\<system.net></span></span>  
+<span data-ttu-id="13c3f-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="13c3f-106">\<requestCaching></span></span>  
+<span data-ttu-id="13c3f-107">\<defaultHttpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="13c3f-107">\<defaultHttpCachePolicy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9d0b3-108">语法</span><span class="sxs-lookup"><span data-stu-id="9d0b3-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13c3f-108">语法</span><span class="sxs-lookup"><span data-stu-id="13c3f-108">Syntax</span></span>  
   
 ```xml  
 <defaultHttpCachePolicy  
@@ -45,37 +36,37 @@ ms.lasthandoff: 12/22/2017
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9d0b3-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="9d0b3-109">Attributes and Elements</span></span>  
- <span data-ttu-id="9d0b3-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="9d0b3-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="13c3f-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="13c3f-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="13c3f-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="13c3f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9d0b3-111">特性</span><span class="sxs-lookup"><span data-stu-id="9d0b3-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="13c3f-111">特性</span><span class="sxs-lookup"><span data-stu-id="13c3f-111">Attributes</span></span>  
   
-|<span data-ttu-id="9d0b3-112">特性</span><span class="sxs-lookup"><span data-stu-id="9d0b3-112">Attribute</span></span>|<span data-ttu-id="9d0b3-113">描述</span><span class="sxs-lookup"><span data-stu-id="9d0b3-113">Description</span></span>|  
+|<span data-ttu-id="13c3f-112">特性</span><span class="sxs-lookup"><span data-stu-id="13c3f-112">Attribute</span></span>|<span data-ttu-id="13c3f-113">描述</span><span class="sxs-lookup"><span data-stu-id="13c3f-113">Description</span></span>|  
 |---------------|-----------------|  
-|`maximumAge`|<span data-ttu-id="9d0b3-114">将缓存的对象标记为过期之前，请指定最大时间间隔。</span><span class="sxs-lookup"><span data-stu-id="9d0b3-114">Specifies the maximum time interval before a cached object is marked as expired.</span></span>|  
-|`maximumStale`|<span data-ttu-id="9d0b3-115">指定超过计算出的新鲜时间缓存的对象标记为过期之前的最长时间。</span><span class="sxs-lookup"><span data-stu-id="9d0b3-115">Specifies the maximum time past the computed freshness time before a cached object is marked as expired.</span></span>|  
-|`minimumFresh`|<span data-ttu-id="9d0b3-116">指定缓存的对象被视为新鲜的最小时间。</span><span class="sxs-lookup"><span data-stu-id="9d0b3-116">Specifies the minimum time for a cached object to be considered fresh.</span></span>|  
-|`policyLevel`|<span data-ttu-id="9d0b3-117">指定的缓存策略是否自动进行的或是否会绕过缓存。</span><span class="sxs-lookup"><span data-stu-id="9d0b3-117">Specifies whether the caching policy is automatic, or whether the cache is bypassed.</span></span> <span data-ttu-id="9d0b3-118">默认值为 `BypassCache`。</span><span class="sxs-lookup"><span data-stu-id="9d0b3-118">The default value is `BypassCache`.</span></span>|  
+|`maximumAge`|<span data-ttu-id="13c3f-114">将缓存的对象标记为过期之前，请指定最大时间间隔。</span><span class="sxs-lookup"><span data-stu-id="13c3f-114">Specifies the maximum time interval before a cached object is marked as expired.</span></span>|  
+|`maximumStale`|<span data-ttu-id="13c3f-115">指定超过计算出的新鲜时间缓存的对象标记为过期之前的最长时间。</span><span class="sxs-lookup"><span data-stu-id="13c3f-115">Specifies the maximum time past the computed freshness time before a cached object is marked as expired.</span></span>|  
+|`minimumFresh`|<span data-ttu-id="13c3f-116">指定缓存的对象被视为新鲜的最小时间。</span><span class="sxs-lookup"><span data-stu-id="13c3f-116">Specifies the minimum time for a cached object to be considered fresh.</span></span>|  
+|`policyLevel`|<span data-ttu-id="13c3f-117">指定的缓存策略是否自动进行的或是否会绕过缓存。</span><span class="sxs-lookup"><span data-stu-id="13c3f-117">Specifies whether the caching policy is automatic, or whether the cache is bypassed.</span></span> <span data-ttu-id="13c3f-118">默认值为 `BypassCache`。</span><span class="sxs-lookup"><span data-stu-id="13c3f-118">The default value is `BypassCache`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9d0b3-119">子元素</span><span class="sxs-lookup"><span data-stu-id="9d0b3-119">Child Elements</span></span>  
- <span data-ttu-id="9d0b3-120">无</span><span class="sxs-lookup"><span data-stu-id="9d0b3-120">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="13c3f-119">子元素</span><span class="sxs-lookup"><span data-stu-id="13c3f-119">Child Elements</span></span>  
+ <span data-ttu-id="13c3f-120">无</span><span class="sxs-lookup"><span data-stu-id="13c3f-120">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="9d0b3-121">父元素</span><span class="sxs-lookup"><span data-stu-id="9d0b3-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="13c3f-121">父元素</span><span class="sxs-lookup"><span data-stu-id="13c3f-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="9d0b3-122">元素</span><span class="sxs-lookup"><span data-stu-id="9d0b3-122">Element</span></span>|<span data-ttu-id="9d0b3-123">描述</span><span class="sxs-lookup"><span data-stu-id="9d0b3-123">Description</span></span>|  
+|<span data-ttu-id="13c3f-122">元素</span><span class="sxs-lookup"><span data-stu-id="13c3f-122">Element</span></span>|<span data-ttu-id="13c3f-123">描述</span><span class="sxs-lookup"><span data-stu-id="13c3f-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9d0b3-124">requestCaching</span><span class="sxs-lookup"><span data-stu-id="9d0b3-124">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="9d0b3-125">控制网络请求的缓存机制。</span><span class="sxs-lookup"><span data-stu-id="9d0b3-125">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="13c3f-124">requestCaching</span><span class="sxs-lookup"><span data-stu-id="13c3f-124">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="13c3f-125">控制网络请求的缓存机制。</span><span class="sxs-lookup"><span data-stu-id="13c3f-125">Controls the caching mechanism for network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9d0b3-126">备注</span><span class="sxs-lookup"><span data-stu-id="9d0b3-126">Remarks</span></span>  
- <span data-ttu-id="9d0b3-127">值`policyLevel`属性是`BypassCache`或`Default`。</span><span class="sxs-lookup"><span data-stu-id="9d0b3-127">The value for the `policyLevel` attribute is either `BypassCache` or `Default`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="13c3f-126">备注</span><span class="sxs-lookup"><span data-stu-id="13c3f-126">Remarks</span></span>  
+ <span data-ttu-id="13c3f-127">值`policyLevel`属性是`BypassCache`或`Default`。</span><span class="sxs-lookup"><span data-stu-id="13c3f-127">The value for the `policyLevel` attribute is either `BypassCache` or `Default`.</span></span>  
   
- <span data-ttu-id="9d0b3-128">值为`maximumAge`， `maximumStale`，和`minimumFresh`元素是格式为显式的时间间隔*d*。*hh*:*mm*:*ss* （天、 小时、 分钟和秒为单位） 或常量`minValue`或`maxValue`适当。</span><span class="sxs-lookup"><span data-stu-id="9d0b3-128">Values for the `maximumAge`, `maximumStale`, and `minimumFresh` elements are either an explicit time interval with a format of *d*.*hh*:*mm*:*ss* (days, hours, minutes, and seconds), or the constants `minValue` or `maxValue`, as appropriate.</span></span>  
+ <span data-ttu-id="13c3f-128">值为`maximumAge`， `maximumStale`，和`minimumFresh`元素是格式为显式的时间间隔*d*。*hh*:*mm*:*ss* （天、 小时、 分钟和秒为单位） 或常量`minValue`或`maxValue`适当。</span><span class="sxs-lookup"><span data-stu-id="13c3f-128">Values for the `maximumAge`, `maximumStale`, and `minimumFresh` elements are either an explicit time interval with a format of *d*.*hh*:*mm*:*ss* (days, hours, minutes, and seconds), or the constants `minValue` or `maxValue`, as appropriate.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="9d0b3-129">配置文件</span><span class="sxs-lookup"><span data-stu-id="9d0b3-129">Configuration Files</span></span>  
- <span data-ttu-id="9d0b3-130">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="9d0b3-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="13c3f-129">配置文件</span><span class="sxs-lookup"><span data-stu-id="13c3f-129">Configuration Files</span></span>  
+ <span data-ttu-id="13c3f-130">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="13c3f-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9d0b3-131">示例</span><span class="sxs-lookup"><span data-stu-id="9d0b3-131">Example</span></span>  
- <span data-ttu-id="9d0b3-132">下面的示例演示如何指定六个小时，为两天，最长使用期限时间和四个小时的最长过期时间的最小全新时间。</span><span class="sxs-lookup"><span data-stu-id="9d0b3-132">The following example shows how to specify a minimum fresh time of six hours, a maximum age time of two days, and a maximum stale time of four hours.</span></span>  
+## <a name="example"></a><span data-ttu-id="13c3f-131">示例</span><span class="sxs-lookup"><span data-stu-id="13c3f-131">Example</span></span>  
+ <span data-ttu-id="13c3f-132">下面的示例演示如何指定六个小时，为两天，最长使用期限时间和四个小时的最长过期时间的最小全新时间。</span><span class="sxs-lookup"><span data-stu-id="13c3f-132">The following example shows how to specify a minimum fresh time of six hours, a maximum age time of two days, and a maximum stale time of four hours.</span></span>  
   
 ```xml  
 <configuration>  
@@ -91,8 +82,8 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9d0b3-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="9d0b3-133">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="13c3f-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="13c3f-133">See Also</span></span>  
  <xref:System.Net.Cache>  
  <xref:System.Net.WebRequest>  
  <xref:System.Net.Cache.RequestCacheLevel>  
- [<span data-ttu-id="9d0b3-134">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="9d0b3-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="13c3f-134">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="13c3f-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
