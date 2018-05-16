@@ -113,7 +113,7 @@ ms.lasthandoff: 05/10/2018
                                                 <p><a href="/dotnet/core/tutorials">教程</a></p>
                                                 <p><a href="/dotnet/core/porting">从 .NET Framework 移植</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
-                                                <p>EF Core<a href="/ef/core/index"></a></p>
+                                                <p><a href="/ef/core/index">EF CORE</a></p>
                                             </div>
                                         </div>
                                     </div>
