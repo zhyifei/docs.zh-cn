@@ -1,24 +1,17 @@
 ---
 title: struct（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e8a848d5543291ef335e72cb7806158827e865dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5a4863bc93a115d14e791509f99b7b13bee9f68f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="struct-c-reference"></a>struct（C# 参考）
 `struct` 类型是一种值类型，通常用来封装小型相关变量组，例如，矩形的坐标或库存商品的特征。 下面的示例显示了一个简单的结构声明：  
@@ -47,7 +40,7 @@ public struct Book
 ## <a name="c-language-specification"></a>C# 语言规范  
  有关示例，请参阅[使用结构](../../../csharp/programming-guide/classes-and-structs/using-structs.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
@@ -55,6 +48,6 @@ public struct Book
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [类型](../../../csharp/language-reference/keywords/types.md)  
  [值类型](../../../csharp/language-reference/keywords/value-types.md)  
- [类](../../../csharp/language-reference/keywords/class.md)  
- [接口](../../../csharp/language-reference/keywords/interface.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [interface](../../../csharp/language-reference/keywords/interface.md)  
  [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)

@@ -1,28 +1,21 @@
 ---
 title: 使用可以为 null 的类型（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c8a42392bbcd2e53c54ff4c13bf98c048262ae4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>使用可以为 null 的类型（C# 编程指南）
 可以为 null 的类型可表示一个基础类型的所有值，还可以再表示一个 [null](../../../csharp/language-reference/keywords/null.md) 值。 可通过以下两种方式之一声明可为 null 的类型：  
   
  `System.Nullable<T> variable`  
   
- - 或 -  
+ 或  
   
  `T? variable`  
   
@@ -33,7 +26,7 @@ ms.lasthandoff: 11/21/2017
  这种不一致可能会导致额外的编程工作，包括使用更多变量来存储状态信息以及使用特殊值等。 通过使用可为 null 的类型修饰符，C# 能够创建指示未定义值的值类型变量。  
   
 ## <a name="examples-of-nullable-types"></a>可为 null 的类型的示例  
- 任何值类型都可用作可为 null 的类型的基础。 例如:   
+ 任何值类型都可用作可为 null 的类型的基础。 例如:  
   
  [!code-csharp[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_1.cs)]  
   
@@ -57,7 +50,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_3.cs)]  
   
 ## <a name="explicit-conversions"></a>显式转换  
- 可通过显式转换或使用 `Value` 属性将可为 null 的类型转换为常规类型。 例如:   
+ 可通过显式转换或使用 `Value` 属性将可为 null 的类型转换为常规类型。 例如:  
   
  [!code-csharp[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_4.cs)]  
   
@@ -73,7 +66,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_6.cs)]  
   
 ## <a name="operators"></a>运算符  
- 可为 null 的类型还可使用预定义的一元运算符和二元运算符以及任何用于值类型的用户定义的运算符。 如果操作数为 null，则这些运算符将产生一个 null 值；否则，运算符使用所包含的值来计算结果。 例如:   
+ 可为 null 的类型还可使用预定义的一元运算符和二元运算符以及任何用于值类型的用户定义的运算符。 如果操作数为 null，则这些运算符将产生一个 null 值；否则，运算符使用所包含的值来计算结果。 例如:  
   
  [!code-csharp[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_7.cs)]  
   
@@ -88,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_9.cs)]  
   
- 此运算符还可与多个可为 null 的类型一起使用。 例如:   
+ 此运算符还可与多个可为 null 的类型一起使用。 例如:  
   
  [!code-csharp[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_10.cs)]  
   
@@ -103,19 +96,19 @@ ms.lasthandoff: 11/21/2017
   
  下表列出了这些运算符的结果：  
   
-|X|y|x&y|x&#124;y|  
+|X|y|x 和 y|x|y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
-|true|false|false|true|  
+|true|False|false|true|  
 |true|null|null|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|null|false|null|  
+|False|true|False|true|  
+|False|False|False|False|  
+|False|null|False|null|  
 |null|true|null|true|  
-|null|false|false|null|  
+|null|False|False|null|  
 |null|null|null|null|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)  
  [装箱可以为 null 的类型](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  

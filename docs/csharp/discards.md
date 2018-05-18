@@ -1,19 +1,14 @@
 ---
 title: 占位符 - C# 指南
 description: 介绍 C# 对占位符的支持（占位符是未赋值的可丢弃变量），以及占位符的使用方式。
-keywords: .NET,.NET Core
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.openlocfilehash: 94badd78485ee4d3928b170d81a80743bf84102f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9688ea596fa3d534c6c48d5874b04bb257d0dbce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discards---c-guide"></a>占位符 - C# 指南
 

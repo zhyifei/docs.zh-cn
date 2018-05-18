@@ -4,16 +4,11 @@ description: 介绍了如何使用筛选表达式通过 dotnet 测试命令运�
 author: smadala
 ms.author: mairaw
 ms.date: 03/22/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 77ac7ab5a46150bd3654d50e6686087c804b8440
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: caea91e9884dba6bc07a7ef6a99699e43d23399c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="running-selective-unit-tests"></a>运行选择性单元测试
 
@@ -49,7 +44,7 @@ namespace MSTestNamespace
 | ---------- | ------ |
 | `dotnet test --filter Method` | 运行 `FullyQualifiedName` 包含 `Method` 的测试。 在 `vstest 15.1+` 中可用。 |
 | `dotnet test --filter Name~TestMethod1` | 运行名称包含 `TestMethod1` 的测试。 |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTestClass1` | 运行属于类 `MSTestNamespace.UnitTestClass1` 的测试。<br>**注意：**由于 `ClassName` 值应有命名空间，因此 `ClassName=UnitTestClass1` 无效。 |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTestClass1` | 运行属于类 `MSTestNamespace.UnitTestClass1` 的测试。<br>**注意：** 由于 `ClassName` 值应有命名空间，因此 `ClassName=UnitTestClass1` 无效。 |
 | `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTestClass1.TestMethod1` | 运行除 `MSTestNamespace.UnitTestClass1.TestMethod1` 之外的其他所有测试。 |
 | `dotnet test --filter TestCategory=CategoryA` | 运行含 `[TestCategory("CategoryA")]` 批注的测试。 |
 | `dotnet test --filter Priority=3` | 运行含 `[Priority(3)]` 批注的测试。<br>**注意：**`Priority~3` 值无效，因为它不是字符串。 |

@@ -1,13 +1,7 @@
 ---
-title: "元数据和自描述组件"
-ms.custom: 
+title: 元数据和自描述组件
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ac08dcf305e8cc0c1a3be3b8300ed9981e7d84d4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3bc603d90ae4636ac50ab9cbabf7d176309498b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata-and-self-describing-components"></a>元数据和自描述组件
 在过去，以一种语言编写的软件组件（.exe 或 .dll）不能方便地使用以另一种语言编写的软件组件。 在这个问题的解决上，COM 向前迈进了一步。 .NET Framework 允许编译器向所有的模块和程序集发出附加的说明性信息，从而使组件互用更加简单。 这种叫做“元数据”的信息有助于组件无缝交互。  

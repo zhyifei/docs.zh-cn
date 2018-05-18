@@ -1,22 +1,16 @@
 ---
-title: "C# 演练"
+title: C# 演练
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - walkthroughs [C#]
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 92aef08636b7bba3a61367f8a707c82c75f8d3d3
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: aaf57e666faf18010c7f267f96e6958c73e58bcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-walkthroughs"></a>C# 演练
 演练提供有关常见方案的分步说明，这使它们成为了解产品或特定功能部分的良好开端。  
@@ -74,6 +68,6 @@ ms.lasthandoff: 12/09/2017
  [部署示例和演练](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  提供常见部署方案的分步示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../csharp/programming-guide/index.md)  
  [Visual Studio 示例](/visualstudio/ide/visual-studio-samples)

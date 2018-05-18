@@ -1,24 +1,17 @@
 ---
-title: "dynamic（C# 参考）"
+title: dynamic（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - dynamic_CSharpKeyword
 helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e3bf51ab62e195f7a5d1f0641f62380977c731ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59957ce6b2a26c1d24dc1178630eef8551db3340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-c-reference"></a>dynamic（C# 参考）
 在通过 `dynamic` 类型实现的操作中，该类型的作用是绕过编译时类型检查。 改为在运行时解析这些操作。 `dynamic` 类型简化了对 COM API（例如 Office Automation API）、动态 API（例如 IronPython 库）和 HTML 文档对象模型 (DOM) 的访问。  
@@ -66,11 +59,11 @@ obj = obj + 3;
   
  有关详细信息和示例，请参阅[使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>  
  <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
  [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [对象](../../../csharp/language-reference/keywords/object.md)  
+ [object](../../../csharp/language-reference/keywords/object.md)  
  [is](../../../csharp/language-reference/keywords/is.md)  
  [as](../../../csharp/language-reference/keywords/as.md)  
  [typeof](../../../csharp/language-reference/keywords/typeof.md)  

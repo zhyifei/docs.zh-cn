@@ -1,21 +1,14 @@
 ---
 title: 设计微服务应用层和 Web API
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计微服务应用层和 Web API
-keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d623a3bc542e0f044d73f405aa639bef0f6d1ec8
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 77e0556e4b6d9a22cf76a79ec86d744d9009a39f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>设计微服务应用层和 Web API
 

@@ -1,26 +1,15 @@
 ---
-title: "XML 文档对象模型 (DOM)"
-ms.custom: 
+title: XML 文档对象模型 (DOM)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: af9473af6a315feb6b1f0a741525cbf42dd32d1d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23be7e47dbe54d95eb29ef3b3cb169caeee3eff4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-document-object-model-dom"></a>XML 文档对象模型 (DOM)
 XML 文档对象模型 (DOM) 类是 XML 文档的内存中表示形式。 DOM 使您能够以编程方式读取、处理和修改 XML 文档。 虽然 XmlReader 类也读取 XML，但它提供的是非缓存、仅正向的只读访问。 也就是说，使用 XmlReader 无法编辑属性值或元素内容，也无法插入和删除节点。 编辑是 DOM 的主要功能。 XML 数据在内存中表示是常见的结构化方法，尽管实际的 XML 数据在文件中时或从另一个对象传入时以线性方式存储。 以下是 XML 数据。  

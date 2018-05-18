@@ -1,13 +1,7 @@
 ---
 title: .NET Framework 中的数字
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - SIMD
 - System.Numerics.Vectors
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 074ed60a3cbc1949eea4a8d866cdb3bba7c0f196
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: a2a795fb52c123840c1ba7b82f77d6745feba89b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework 中的数字
 .NET Framework 支持标准数值整型和浮点型基元、<xref:System.Numerics.BigInteger>（没有理论上限或下限的整型类型）、<xref:System.Numerics.Complex>（表示复杂数字的类型）和 <xref:System.Numerics> 命名空间中一组启用了 SIMD 的矢量类型。  

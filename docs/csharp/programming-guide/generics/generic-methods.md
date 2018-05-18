@@ -1,21 +1,14 @@
 ---
 title: 泛型方法（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-caps.latest.revision: 27
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 63252dbe4307889f57d35e23eb0575f84358d737
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 04bc59d41eb7883e08138382b396bc737c7f11bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-methods-c-programming-guide"></a>泛型方法（C# 编程指南）
 泛型方法是通过类型参数声明的方法，如下所示：  
@@ -51,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 语言规范  
  有关详细信息，请参阅 [C# 语言规范](../../../csharp/language-reference/language-specification/index.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Collections.Generic>  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  

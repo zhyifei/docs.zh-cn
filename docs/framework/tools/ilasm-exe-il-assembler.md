@@ -1,13 +1,6 @@
 ---
-title: "Ilasm.exe（IL 汇编程序）"
-ms.custom: 
+title: Ilasm.exe（IL 汇编程序）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe（IL 汇编程序）
 
@@ -57,7 +47,7 @@ ilasm [options] filename [[options]filename...]
 |**/arm**|指定高级 RISC 计算机 (ARM) 作为目标处理器。<br /><br /> 如果未指定映像位数，则默认值为 **/32bitpreferred**。|
 |**/base:** `integer`|将 ImageBase 设置为由 NT Optional 标头中的 `integer` 指定的值。 如果在文件指定了 .imagebase IL 指令，则此选项将重写它。|
 |**/clock**|为指定的 .il 源文件测量并报告下列编译时间（以毫秒为单位）：<br /><br /> **总运行时间**：执行后面的所有特定操作所花费的总时间。<br /><br /> **启动**：加载并打开文件。<br /><br /> **发出 MD**：发出元数据。<br /><br /> **定义引用解析**：解析对文件中的定义的引用。<br /><br /> **CEE 文件生成**：在内存中生成文件映像。<br /><br /> **PE 文件写入**：将映像写入 PE 文件。|
-|**/debug**[:**IMPL**|**OPT**]|包括调试信息（局部变量名和参数名以及行号）。 创建 PDB 文件。<br /><br /> 不带任何附加值的**/debug** 禁用 JIT 优化，并使用 PDB 文件中的序列点。<br /><br /> **IMPL** 禁用 JIT 优化，并使用隐式序列点。<br /><br /> **OPT** 启用 JIT 优化，并使用隐式序列点。|
+|**/debug**[:**IMPL**|**OPT**]|包括调试信息（局部变量名和参数名以及行号）。 创建 PDB 文件。<br /><br /> 不带任何附加值的 **/debug** 禁用 JIT 优化，并使用 PDB 文件中的序列点。<br /><br /> **IMPL** 禁用 JIT 优化，并使用隐式序列点。<br /><br /> **OPT** 启用 JIT 优化，并使用隐式序列点。|
 |**/dll**|生成 .dll 文件作为输出。|
 |**/enc:** `file`|从指定的源文件创建“编辑并继续”增量。<br /><br /> 此参数仅可用于教学目的，不支持商业使用。|
 |**/exe**|生成可执行文件作为输出。 这是默认设置。|

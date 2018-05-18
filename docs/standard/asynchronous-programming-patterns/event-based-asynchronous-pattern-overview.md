@@ -1,13 +1,7 @@
 ---
 title: 基于事件的异步模式概述
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,18 +16,11 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: efe136ceb87213c5f9911b24a8a522b29a37b384
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 0f78ae4b6abacea6fd1240a1472e1de0e625a8e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>基于事件的异步模式概述
 那些同时执行多项任务、但仍能响应用户交互的应用程序通常需要实施一种使用多线程的设计方案。 <xref:System.Threading> 命名空间提供了创建高性能多线程应用程序所必需的所有工具，但要想有效地使用这些工具，需要有丰富的使用多线程软件工程的经验。 对于相对简单的多线程应用程序，<xref:System.ComponentModel.BackgroundWorker> 组件提供了一个简单的解决方案。 对于更复杂的异步应用程序，请考虑实现一个符合基于事件的异步模式的类。  
@@ -48,7 +35,7 @@ ms.lasthandoff: 03/26/2018
   
 -   使用熟悉的事件和委托模型与挂起的异步操作通信。 若要详细了解如何使用事件处理程序和委托，请参阅[事件](../../../docs/standard/events/index.md)。  
   
- 支持基于事件的异步模式的类包含一个或多个 MethodNameAsync** 方法。这些方法可能会创建同步版本的镜像，这些同步版本会在当前线程上执行相同的操作。此类还可能包含 MethodNameCompleted****** 事件和 MethodNameAsyncCancel******（或直接是 CancelAsync）方法。  
+ 支持基于事件的异步模式的类包含一个或多个 MethodNameAsync ** 方法。这些方法可能会创建同步版本的镜像，这些同步版本会在当前线程上执行相同的操作。此类还可能包含 MethodNameCompleted ****** 事件和 MethodNameAsyncCancel ******（或直接是 CancelAsync）方法。  
   
  <xref:System.Windows.Forms.PictureBox> 是一个支持基于事件的异步模式的典型组件。 你可以通过调用其 <xref:System.Windows.Forms.PictureBox.Load%2A> 方法来同步下载图像，但是如果图像很大，或者网络连接很慢，应用程序将停止（“挂起”），直到下载操作完成并且对 <xref:System.Windows.Forms.PictureBox.Load%2A> 的调用返回后才会继续执行。  
   
@@ -60,7 +47,7 @@ ms.lasthandoff: 03/26/2018
 >  下载有可能刚好在发出 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 请求时完成，因此 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> 可能没有反映取消请求。 这称为“争用条件”，也是多线程编程中的常见问题。 若要详细了解多线程编程中的问题，请参阅[托管线程最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>基于事件的异步模式的特征  
- 基于事件的异步模式可以采用多种形式，具体取决于某个特定类支持的操作的复杂程度。 最简单的类可能包含一个 MethodNameAsync****** 方法和对应的 MethodNameCompleted****** 事件。 更复杂的类可能包含多个 MethodNameAsync****** 方法（每个方法对应一个 MethodNameCompleted****** 事件），以及这些方法的同步版本。 这些类有选择性地分别支持各种异步方法的取消、进度报告和增量结果。  
+ 基于事件的异步模式可以采用多种形式，具体取决于某个特定类支持的操作的复杂程度。 最简单的类可能包含一个 MethodNameAsync ****** 方法和对应的 MethodNameCompleted ****** 事件。 更复杂的类可能包含多个 MethodNameAsync ****** 方法（每个方法对应一个 MethodNameCompleted ****** 事件），以及这些方法的同步版本。 这些类有选择性地分别支持各种异步方法的取消、进度报告和增量结果。  
   
  异步方法可能还支持多个挂起的调用（多个并发调用），允许你的代码在此方法完成其他挂起的操作之前调用此方法任意多次。 若要正确处理此种情况，需要让你的应用程序能够跟踪各个操作的完成。  
   
@@ -130,7 +117,7 @@ public class AsyncExample
 >  在为你对多调用重载的调用中的 `userState` 提供唯一值时，一定要小心。 如果任务 ID 不唯一，将导致异步类引发 <xref:System.ArgumentException>。  
   
 ### <a name="canceling-pending-operations"></a>取消挂起的操作  
- 我们必须能够在异步操作完成之前随时取消它们，这一点很重要。 实现基于事件的异步模式的类包含 `CancelAsync` 方法（如果只有一个异步方法的话），或 MethodNameAsyncCancel****** 方法（如果有多个异步方法的话）。  
+ 我们必须能够在异步操作完成之前随时取消它们，这一点很重要。 实现基于事件的异步模式的类包含 `CancelAsync` 方法（如果只有一个异步方法的话），或 MethodNameAsyncCancel ****** 方法（如果有多个异步方法的话）。  
   
  允许多个调用采用 `userState` 参数的方法，此类方法可用于跟踪每个任务的生存期。 `CancelAsync` 采用 `userState` 参数，该参数可用于取消特定挂起任务。  
   
@@ -143,7 +130,7 @@ public class AsyncExample
   
  一些类可能会在异步操作继续时报告增量结果。 这些结果将存储在从 <xref:System.ComponentModel.ProgressChangedEventArgs> 派生的类中并显示为此派生类中的属性。 你可以在 `ProgressChanged` 事件的事件处理程序中访问这些结果，就像访问 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 属性一样。 如果有多个异步操作挂起，你可以使用 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> 属性来分辨出哪个操作在报告增量结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ComponentModel.ProgressChangedEventArgs>  
  <xref:System.ComponentModel.BackgroundWorker>  
  <xref:System.ComponentModel.AsyncCompletedEventArgs>  

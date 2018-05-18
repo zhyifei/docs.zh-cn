@@ -4,18 +4,13 @@ description: 了解如何使用 Visual Studio 2017 生成简单的 Visual Basic 
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: devlang-vb
 dev_langs:
 - vb
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: a72af4bc391b39a38018ce1c383a87ab36bd2109
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 63efffbb2c1ab9354f83e9ecc102bc205cdb9360
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 应用程序
 
@@ -71,7 +66,7 @@ ms.lasthandoff: 04/28/2018
 
    此代码在控制台中显示“What is your name?”， 然后等待用户输入字符串并按 Enter 键。 它将此字符串存储到名为 `name` 的变量中。 它还会检索 <xref:System.DateTime.Now?displayProperty=nameWithType> 属性的值（其中包含当前的本地时间），并将此值赋给 `currentDate` 变量。 最后，使用[内插字符串](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)在控制台窗口中显示这些值。
 
-1. 依次选择**“生成”** > **“生成解决方案”**，编译此程序。
+1. 依次选择 **“生成”** > **“生成解决方案”**，编译此程序。
 
 1. 选择工具栏上的绿色箭头、按 F5 或选择“调试” > “启动调试”菜单项，在 Visual Studio 的调试模式下运行程序。 出现提示时，输入名称并按 Enter 键。
 

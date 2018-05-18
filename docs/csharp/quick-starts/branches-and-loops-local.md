@@ -1,19 +1,13 @@
 ---
 title: “分支和循环”教程 - C# 本地快速入门
 description: 在“分支和循环”本快速入门教程中，编写 C# 代码，以研究支持条件分支和循环重复执行语句的语言语法。
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: ea9fb2322202dfa19344e6119e748827535b0739
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 711cc9b40284076d28b5003935bbbbb77dc36664
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="branches-and-loops"></a>分支和循环
 

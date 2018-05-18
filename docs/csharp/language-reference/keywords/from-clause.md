@@ -1,9 +1,6 @@
 ---
-title: "from 子句（C# 参考）"
+title: from 子句（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - from_CSharpKeyword
 - from
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-caps.latest.revision: "27"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f718f50d2b8d6f5c612113414a2106fed37fe0fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 21f7cf15de621bf862dedb82e87177900506a728
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="from-clause-c-reference"></a>from 子句（C# 参考）
 查询表达式必须以 `from` 子句开头。 此外，查询表达式可包含也以 `from` 子句开头的子查询。 `from` 子句指定下列各项：  
@@ -54,6 +48,6 @@ ms.lasthandoff: 11/21/2017
   
  有关使用多个 `from` 子句的联接操作的详细信息，请参阅[如何：执行自定义联接操作](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询关键字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)

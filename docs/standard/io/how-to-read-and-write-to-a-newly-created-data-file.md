@@ -1,13 +1,7 @@
 ---
-title: "如何：对新建的数据文件进行读取和写入"
-ms.custom: 
+title: 如何：对新建的数据文件进行读取和写入
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 04ded71a23ba4cabab0a22e0d66c1084a726d8c8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6b854495a32755b2cbbd0421b1a45458fd2b7863
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>如何：对新建的数据文件进行读取和写入
 <xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader?displayProperty=nameWithType> 类用于写入和读取数据，而不是字符串。 下面的示例演示如何向新的空文件流 `Test.data` 写入数据及从中读取数据。 在当前目录中创建了数据文件之后，也就同时创建了相关的 <xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader> 对象，并且 <xref:System.IO.BinaryWriter> 对象用于向 `Test.data` 写入整数 0 到 10，这会将文件指针置于文件尾。 在将文件指针设置回初始位置后，<xref:System.IO.BinaryReader> 对象会读出指定的内容。  
@@ -55,4 +44,4 @@ ms.lasthandoff: 12/23/2017
  [如何：向文件写入文本](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
  [如何：从字符串中读取字符](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
  [如何：向字符串写入字符](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
- [文件和流 I-O](../../../docs/standard/io/index.md)
+ [文件和流 I/O](../../../docs/standard/io/index.md)

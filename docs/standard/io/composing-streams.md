@@ -1,13 +1,7 @@
 ---
-title: "编写流"
-ms.custom: 
+title: 编写流
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d49661e93675b80bcd579a6cd341b3dc88a688c2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 231bd98b556dafeb69091de4a6770c1462824659
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composing-streams"></a>编写流
 后备存储是磁盘或内存等存储介质。 各个后备存储都实现自己的流，作为 <xref:System.IO.Stream> 类的实现。 每个流类型对给定的后备存储执行字节读取和写入操作。 连接到后备存储的流称为“基流”。 基流的构造函数包含将流连接到后备存储所需的参数。 例如，<xref:System.IO.FileStream> 包含指定路径参数的构造函数，此参数指定了进程如何共享文件等。  

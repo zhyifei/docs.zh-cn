@@ -1,24 +1,17 @@
 ---
 title: override（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - override
 - override_CSharpKeyword
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-caps.latest.revision: 26
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 807fae02ca4e6f616c77877cc8815405baaf8428
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8f692dfdf8bd34ddb62623d86ec3dadd2b8dead3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="override-c-reference"></a>override（C# 参考）
 扩展或修改继承的方法、属性、索引器或事件的抽象或虚拟实现需要 `override` 修饰符。  
@@ -30,7 +23,7 @@ ms.lasthandoff: 11/21/2017
   
  `override` 方法提供从基类继承的成员的新实现。 通过 `override` 声明重写的方法称为重写基方法。 重写基方法必须具有与 `override` 方法相同的签名。 有关继承的信息，请参阅[继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
   
- 不能重写非虚拟方法或静态方法。 重写基方法必须是 `virtual`、`abstract` 或 `override`。  
+ 不能重新非虚方法或静态方法。 重写基方法必须是 `virtual`、`abstract` 或 `override`。  
   
  `override` 声明不能更改 `virtual` 方法的可访问性。 `override` 方法和 `virtual` 方法必须具有相同[级别访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)。  
   
@@ -48,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  

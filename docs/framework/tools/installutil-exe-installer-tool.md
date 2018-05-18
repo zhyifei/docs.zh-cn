@@ -1,14 +1,6 @@
 ---
-title: "Installutil.exe（安装程序工具）"
-ms.custom: 
+title: Installutil.exe（安装程序工具）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - uninstalling server resources
 - removing server resources
@@ -21,17 +13,13 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68bb098cf34839e0587864092d1af302d70eca89
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: ec7e498e0f0634d4f0e104247b430fb591f702ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe（安装程序工具）
 安装程序工具是一个命令行实用工具，你可以通过此工具执行指定程序集中的安装程序组件，从而安装和卸载服务器资源。 此工具与 <xref:System.Configuration.Install> 命名空间中的类配合使用。  
@@ -68,7 +56,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 <a name="cmdline"></a>   
 ## <a name="additional-installer-options"></a>其他安装程序选项  
- 程序集中使用的独立安装程序可识别除[选项](#options)部分列出的选项之外的选项。 要了解有关这些选项的信息，可以在命令行中运行带有程序集路径的 InstallUtil.exe 以及 `/?` 或 `/help` 选项。 要指定这些选项，请将它们与 InstallUtil.exe 可识别的选项一起包含在命令行中。  
+ 程序集中使用的独立安装程序可识别除[“选项”](#options)部分列出的选项之外的选项。 要了解有关这些选项的信息，可以在命令行中运行带有程序集路径的 InstallUtil.exe 以及 `/?` 或 `/help` 选项。 要指定这些选项，请将它们与 InstallUtil.exe 可识别的选项一起包含在命令行中。  
   
 > [!NOTE]
 >  由单独的安装程序组件所支持的选项的帮助文本由 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 属性返回。 已经在命令行中输入的单个选项可通过编程方式从 <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> 属性进行访问。  

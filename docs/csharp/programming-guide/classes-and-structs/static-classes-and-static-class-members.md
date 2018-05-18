@@ -1,9 +1,6 @@
 ---
-title: "静态类和静态类成员（C# 编程指南）"
+title: 静态类和静态类成员（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, static members
 - static members [C#]
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-caps.latest.revision: "49"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b1e7366d8d82ca99a8d779dda1e194dcc8c2ab6e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f3e64d975d2845d8317b37f43c3811af6be03b55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>静态类和静态类成员（C# 编程指南）
 [静态](../../../csharp/language-reference/keywords/static.md)类基本上与非静态类相同，但存在一个差异：静态类无法实例化。 换句话说，无法使用 [new](../../../csharp/language-reference/keywords/new.md) 关键字创建类类型的变量。 由于不存在任何实例变量，因此可以使用类名本身访问静态类的成员。 例如，如果你具有一个静态类，该类名为 `UtilityClass`，并且具有一个名为 `MethodA` 的公共方法，如下面的示例所示：  
@@ -95,6 +89,6 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [static](../../../csharp/language-reference/keywords/static.md)  
  [类](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [类](../../../csharp/language-reference/keywords/class.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  [静态构造函数](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
  [实例构造函数](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)

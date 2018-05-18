@@ -1,21 +1,15 @@
 ---
-title: "nameof（C# 参考）"
+title: nameof（C# 参考）
 ms.date: 06/16/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 95f50f45ec25c1eb3bacaa5051dc0407b11b7c34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8a850633bee26120a12f9d72e9d18b5af131d267
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nameof-c-reference"></a>nameof（C# 参考）
 
@@ -109,7 +103,7 @@ nameof(Method2()) -> error "This expression does not have a name"
   
  因为在语法上参数必须为表达式，因此有很多禁用内容无需列出。  以下内容会产生错误，值得一提：预定义的类型（如 `int` 或 `void`）、可以为 null 的类型（`Point?`）、数组类型（`Customer[,]`）、指针类型 (`Buffer*`)、限定别名 (`A::B`)、未绑定的泛型类型 (`Dictionary<,>`)、预处理符号 (`DEBUG`) 和标签 (`loop:`)。  
   
- 如果需要获取完全限定名，可以将 `typeof` 表达式和 `nameof`结合使用。  例如：
+ 如果需要获取完全限定名，可以将 `typeof` 表达式和 `nameof`结合使用。  例如:
 ```csharp  
 class C {
     void f(int i) {  
@@ -134,7 +128,7 @@ class C {
 ## <a name="language-specifications"></a>语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [typeof](../../../csharp/language-reference/keywords/typeof.md)  

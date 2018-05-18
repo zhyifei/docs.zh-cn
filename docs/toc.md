@@ -285,7 +285,12 @@
 ### [Visual Studio for Mac 入门](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
 ### [Visual Studio Code 和 Ionide 入门](fsharp/get-started/get-started-vscode.md)
 ### [.NET Core CLI 入门](fsharp/get-started/get-started-command-line.md)
-<!--## [Tutorials](fsharp/tutorials/index.md)-->
+
+## [F# 样式指南](fsharp/style-guide/index.md)
+### [F# 格式设置准则](fsharp/style-guide/formatting.md)
+### [F# 编码约定](fsharp/style-guide/conventions.md)
+### [F# 组件设计准则](fsharp/style-guide/component-design-guidelines.md)
+
 ## 教程
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 ### [类型提供程序](fsharp/tutorials/type-providers/index.md)

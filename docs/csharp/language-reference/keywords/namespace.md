@@ -1,9 +1,6 @@
 ---
-title: "命名空间（C# 参考）"
+title: 命名空间（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - namespace_CSharpKeyword
 - namespace
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 76cc1adc21f6cfadc93da58250336705e43e333a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 343cce85dd235532fbe3fc90af0a785f48518db7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespace-c-reference"></a>命名空间（C# 参考）
 `namespace` 关键字用于声明包含一组相关对象的作用域。 可以使用命名空间来组织代码元素并创建全局唯一类型。  
@@ -30,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
 -   另一个命名空间  
   
--   [类](../../../csharp/language-reference/keywords/class.md)  
+-   [class](../../../csharp/language-reference/keywords/class.md)  
   
 -   [接口](../../../csharp/language-reference/keywords/interface.md)  
   
@@ -38,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [enum](../../../csharp/language-reference/keywords/enum.md)  
   
--   [委托](../../../csharp/language-reference/keywords/delegate.md)  
+-   [delegate](../../../csharp/language-reference/keywords/delegate.md)  
   
  无论是否在 C# 源文件中显式声明命名空间，编译器都会添加一个默认命名空间。 此未命名的命名空间（有时被称为全局命名空间）存在于每个文件中。 全局命名空间中的任何标识符都可用于已命名的命名空间。  
   
@@ -65,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  

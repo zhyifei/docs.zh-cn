@@ -1,29 +1,18 @@
 ---
-title: "用户定义的函数和变量"
-ms.custom: 
+title: 用户定义的函数和变量
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b6870861541a063c56f83dcb286d21a5a970d1b1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c2ce474dac44de1ac72811ecd3bc294ba57ce40a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-functions-and-variables"></a>用户定义的函数和变量
 <xref:System.Xml.XPath.XPathNavigator> 类提供了一组方法，用于与 <xref:System.Xml.XPath.XPathDocument> 数据进行交互。 可以通过实现由 XPath 查询表达式使用的扩展函数和变量，对标准 XPath 函数进行补充。 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 方法可以接受从 <xref:System.Xml.Xsl.XsltContext> 派生的用户定义的上下文。 用户定义的函数由自定义上下文解析。  

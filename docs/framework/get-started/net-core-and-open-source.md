@@ -1,24 +1,14 @@
 ---
-title: ".NET 核心和开放源代码"
-ms.custom: 
+title: .NET 核心和开放源代码
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cc41a51a9c85b84f2f5365eb1650ebec37888652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 707e73705e5e96e1b0b92976d22f763afef64929
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-core-and-open-source"></a>.NET 核心和开放源代码
 本主题提供有关 .NET 核心概念的简要概述并展示如何查找更多信息。 若要查找有关 .NET Core 的完整主题列表，请访问 [.NET Core 指南](../../core/index.md)。
@@ -35,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
 -   **开放源代码：**.NET 核心是 [.NET Foundation](http://www.dotnetfoundation.org/) 管理下的很多项目中的一个，并在 [GitHub](https://github.com/) 上提供。  将 .NET 核心作为开放源代码项目促使开发过程更加透明并能提升社区的活跃度及参与度。  
   
--   **灵活部署：**部署应用有两种主要方法：依赖框架的部署或独立部署。 使用依赖框架的部署时，仅安装应用和第三方依赖关系，而应用依赖于存在系统范围版本的 .NET 核心。  使用独立部署时，用于构建应用程序的 .NET 核心版本随应用和第三方依赖关系一同部署，并可与其他版本并行运行。    有关详细信息，请参阅 [.NET 核心应用程序部署](../../core/deploying/index.md)。
+-   **灵活部署：** 部署应用有两种主要方法：依赖框架的部署或独立部署。 使用依赖框架的部署时，仅安装应用和第三方依赖关系，而应用依赖于存在系统范围版本的 .NET 核心。  使用独立部署时，用于构建应用程序的 .NET 核心版本随应用和第三方依赖关系一同部署，并可与其他版本并行运行。    有关详细信息，请参阅 [.NET 核心应用程序部署](../../core/deploying/index.md)。
 
 -   模块化：.NET Core 为模块化，因为它通过 NuGet 以较小的程序集包发布。 与包含了大部分核心功能的大型程序集不同，.NET 核心作为以功能为中心的小型数据包提供。 这为我们提供了更加灵活的开发模型，允许优化应用使其仅包含所需的 NuGet 程序包。 较小的应用图面区域的优势包括：提升安全性、减少维护、提高性能并采用按使用情况付费的模式降低成本。  
   

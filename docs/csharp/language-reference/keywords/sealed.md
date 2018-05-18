@@ -1,24 +1,17 @@
 ---
 title: sealed（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - sealed
 - sealed_CSharpKeyword
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-caps.latest.revision: 30
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8248b451f0431286fdaba3583fc2031eb6cdbcd7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8cfeb77021aaf1b0eb23401be4d5f6fd50a40b03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sealed-c-reference"></a>sealed（C# 参考）
 应用于某个类时，`sealed` 修饰符可阻止其他类继承自该类。 在下面的示例中，类 `B` 继承自类 `A`，但没有类可以继承自类 `B`。  
@@ -68,7 +61,7 @@ sealed class B : A {}
   
 -   派生类可能采用使它们无法再正常工作或按预期工作的方式来修改类的可能性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
@@ -76,5 +69,5 @@ sealed class B : A {}
  [抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
  [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
  [修饰符](../../../csharp/language-reference/keywords/modifiers.md)  
- [替代](../../../csharp/language-reference/keywords/override.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
  [virtual](../../../csharp/language-reference/keywords/virtual.md)

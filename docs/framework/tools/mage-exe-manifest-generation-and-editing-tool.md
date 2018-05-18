@@ -1,27 +1,15 @@
 ---
-title: "Mage.exe（清单生成和编辑工具）"
-ms.custom: 
+title: Mage.exe（清单生成和编辑工具）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-caps.latest.revision: "68"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 405503ac824ccf443d8ada7387d65e55876cb3e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 551173a7ed8d60ca1870159cd7e533720275bd20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe（清单生成和编辑工具）
 清单生成和编辑工具 (Mage.exe) 是一种命令行工具，可以支持创建和编辑应用程序和部署清单。 作为命令行工具，Mage.exe 可以从批处理脚本和其他基于 Windows 的应用程序（包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序）运行。  
@@ -30,7 +18,7 @@ ms.lasthandoff: 12/22/2017
   
  此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
- Mage.exe 和 MageUI.exe 的两个版本作为组件包含在 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 安装程序中。 若要查看版本信息，请运行 MageUI.exe，选择 **“帮助”**并选择 **“关于”**。 本文档描述 Mage.exe 和 MageUI.exe 的 4.0.x.x 版本。  
+ Mage.exe 和 MageUI.exe 的两个版本作为组件包含在 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 安装程序中。 若要查看版本信息，请运行 MageUI.exe，选择 **“帮助”** 并选择 **“关于”**。 本文档描述 Mage.exe 和 MageUI.exe 的 4.0.x.x 版本。  
   
  在命令提示符处，键入以下内容：  
   
@@ -67,7 +55,7 @@ Mage [commands] [commandOptions]
 |**-ip, -IncludeProviderURL**  `url`|true|部署清单。|指示部署清单是否包含由 **-ProviderURL**设置的更新位置值。|  
 |**-i, -Install** `willInstall`|true|部署清单。|指示 ClickOnce 应用程序是否应该安装到本地计算机上，或者该应用程序是否应通过 Web 运行。 安装某个应用程序后，该应用程序将会显示在 Windows 的 **“开始”** 菜单中。 有效值为“true”或“t”以及“false”或“f”。<br /><br /> 如果指定 **-MinVersion** 选项，并且用户安装的版本低于 **-MinVersion** ，则无论向 **-Install**传递何值，该选项都会强制安装应用程序。<br /><br /> 此选项不能与 **-BrowserHosted** 选项一起使用。 尝试为同一清单同时指定这两个选项将会导致错误。|  
 |**-mv，-MinVersion**  `[version]`|由 **-Version** 标志指定的在 ClickOnce 部署清单中列出的版本。|部署清单。|用户可以运行的此应用程序的最低版本。 此标志使得你的应用程序的命名版本成为必需的更新。 如果发布的产品版本存在对重大更改或严重的安全漏洞的更新，则可以使用此标志指定必须安装此更新，而且用户不能继续运行早期版本。<br /><br /> `version` 与 **-Version** 标志的自变量的语义相同。|  
-|**-n, -Name** `nameString`|部署|所有文件类型。|用于标识应用程序的名称。 ClickOnce 将使用此名称在“开始”菜单（如果应用程序配置为自行安装）和“权限提升”对话框中标识应用程序。 **注意：**如果要更新现有的清单，并且未使用此选项指定发布服务器的名称，则 Mage.exe 将使用计算机上定义的组织名称更新清单。 要使用不同的名称，请确保使用此选项，并指定所需的发布服务器名称。|  
+|**-n, -Name** `nameString`|部署|所有文件类型。|用于标识应用程序的名称。 ClickOnce 将使用此名称在“开始”菜单（如果应用程序配置为自行安装）和“权限提升”对话框中标识应用程序。 **注意：** 如果要更新现有的清单，并且未使用此选项指定发布服务器的名称，则 Mage.exe 将使用计算机上定义的组织名称更新清单。 要使用不同的名称，请确保使用此选项，并指定所需的发布服务器名称。|  
 |**-pwd, -Password** `passwd`||所有文件类型。|使用数字证书对清单进行签名时所用的密码。 必须与 **-CertFile** 选项结合使用。|  
 |**-p, Processor** `processorValue`|Msil|应用程序清单。<br /><br /> 部署清单。|可用于运行此分发的微处理器体系结构。 如果你准备的一个或多个安装的程序集已针对特定微处理器进行了预编译，则此值是必需的。 有效值包括 `msil`、 `x86`、 `ia64`和 `amd64`。 `msil` 是 Microsoft 中间语言，这表示所有程序集都与平台无关，并且首次运行应用程序时，公共语言运行时 (CLR) 将会对所有程序集进行实时编译。|  
 |**-pu,** **-ProviderURL** `url`||部署清单。|指定 ClickOnce 要检查是否存在应用程序更新的 URL。|  

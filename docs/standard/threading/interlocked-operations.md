@@ -1,13 +1,7 @@
 ---
-title: "互锁操作"
-ms.custom: 
+title: 互锁操作
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - Interlocked class, about Interlocked class
 - threading [.NET Framework], Interlocked class
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c10c1188820b7a270baa0c51696974f93a8a2990
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 38532228f7a5d07bb1b9fcf7e90d2be53a28b04c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlocked-operations"></a>互锁操作
 <xref:System.Threading.Interlocked> 类中的方法可用于同步对多个线程共享的变量的访问。 如果该变量位于共享内存中，则不同进程的线程都可以使用此机制。 互锁操作是原子的 - 即整个操作是不能由相同变量上的另一个互锁操作中断的单元。 这在抢占式多线程处理操作系统中非常重要，在此类操作系统中，可在从内存地址加载值之后但有机会更改和存储该值之前将线程挂起。  

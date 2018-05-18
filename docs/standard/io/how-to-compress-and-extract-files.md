@@ -1,13 +1,7 @@
 ---
-title: "如何：压缩和解压缩文件"
-ms.custom: 
+title: 如何：压缩和解压缩文件
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 33c9249692998aea8c22ddbf75a5a9b7bdf28708
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f3e535e13fe91e1a5cb9c868428f5edbb9eac03f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-compress-and-extract-files"></a>如何：压缩和解压缩文件
 <xref:System.IO.Compression> 命名空间包含以下类型来对文件和流进行压缩或解压缩。 还可以使用这些类型来读取和修改压缩文件的内容：  
@@ -74,4 +63,4 @@ ms.lasthandoff: 12/23/2017
  <xref:System.IO.Compression.ZipArchiveEntry>  
  <xref:System.IO.Compression.DeflateStream>  
  <xref:System.IO.Compression.GZipStream>  
- [文件和流 I-O](../../../docs/standard/io/index.md)
+ [文件和流 I/O](../../../docs/standard/io/index.md)

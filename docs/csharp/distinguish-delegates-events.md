@@ -1,24 +1,17 @@
 ---
-title: "区别委托和事件"
-description: "了解委托和事件的区别，以及何时使用 .NET Core 的这两种功能。"
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 区别委托和事件
+description: 了解委托和事件的区别，以及何时使用 .NET Core 的这两种功能。
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 3026a0d853cb17dcf05d3b98d814044d743e48dc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2f9c26519d93314f4991829191723df5426b23b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="distinguishing-delegates-and-events"></a>区别委托和事件
 
-[上一页](modern-events.md)
+[上一篇](modern-events.md)
 
 对不熟悉 .NET Core 平台的开发人员而言，在基于 `delegates` 的设计和基于 `events` 的设计之间做出选择是困难的。 这是一个困难的选择，因为这两种语言功能非常相似。 事件甚至是使用委托的语言支持构建的。 
 

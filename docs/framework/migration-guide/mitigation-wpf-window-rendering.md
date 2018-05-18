@@ -1,24 +1,14 @@
 ---
-title: "缓解：WPF 窗口呈现"
-ms.custom: 
+title: 缓解：WPF 窗口呈现
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
-caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 032d07b75b96809ff71c7735a267a7351ad25dda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a91839ff12109b84c563dcd3fabd078f75dad9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mitigation-wpf-window-rendering"></a>缓解：WPF 窗口呈现
 在 Windows 8 及更高版本上运行的 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中，当一个窗口超出多监视器方案中的单个显示屏时，会不经剪辑就呈现整个窗口。  

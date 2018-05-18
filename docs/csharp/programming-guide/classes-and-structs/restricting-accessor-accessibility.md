@@ -1,9 +1,6 @@
 ---
-title: "限制访问器可访问性（C# 编程指南）"
+title: 限制访问器可访问性（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - read-only properties [C#]
 - read-only indexers [C#]
@@ -12,17 +9,14 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-caps.latest.revision: "26"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a4905885323f59d8b8b2654a5331e02054334398
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bf9ead7934630d3974657107ca38e08bbd3bed85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>限制访问器可访问性（C# 编程指南）
-属性或索引器的 [get](../../../csharp/language-reference/keywords/get.md) 和 [set](../../../csharp/language-reference/keywords/set.md) 部分称为访问器。 默认情况下，这些访问器具有相同的可见性或访问级别：其所属属性或索引器的可见性或访问级别。 有关详细信息，请参阅[可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)。 不过，有时限制对其中某个访问器的访问是有益的。 通常是在保持 `get` 访问器可公开访问的情况下，限制 `set` 访问器的可访问性。 例如:   
+属性或索引器的 [get](../../../csharp/language-reference/keywords/get.md) 和 [set](../../../csharp/language-reference/keywords/set.md) 部分称为访问器。 默认情况下，这些访问器具有相同的可见性或访问级别：其所属属性或索引器的可见性或访问级别。 有关详细信息，请参阅[可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)。 不过，有时限制对其中某个访问器的访问是有益的。 通常是在保持 `get` 访问器可公开访问的情况下，限制 `set` 访问器的可访问性。 例如:  
   
  [!code-csharp[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
@@ -40,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 -   访问器的可访问性级别必须比属性或索引器本身的可访问性级别具有更严格的限制。  
   
 ## <a name="access-modifiers-on-overriding-accessors"></a>重写访问器的访问修饰符  
- 重写属性或索引器时，被重写的访问器对重写代码而言必须是可访问的。 此外，属性/索引器和访问器的可访问性级别都必须与相应的被重写属性/索引器和访问器匹配。 例如:   
+ 重写属性或索引器时，被重写的访问器对重写代码而言必须是可访问的。 此外，属性/索引器和访问器的可访问性级别都必须与相应的被重写属性/索引器和访问器匹配。 例如:  
   
  [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   
@@ -68,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
  `Name and ID in the derived class: John, John123`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [索引器](../../../csharp/programming-guide/indexers/index.md)  

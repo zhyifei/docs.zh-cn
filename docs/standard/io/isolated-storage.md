@@ -1,13 +1,7 @@
 ---
-title: "独立存储"
-ms.custom: 
+title: 独立存储
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data storage using isolated storage
 - stores
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0048c1946e5df59340bed211c5dbb81075047260
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7ab12ac28728535c3bc984d6b37d82f5bf371ba2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isolated-storage"></a>独立存储
 <a name="top"></a>对于 [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] 应用，独立存储是一种数据存储机制，它在代码与保存的数据之间定义了标准化的关联方式，从而提供隔离性和安全性。 同时，标准化也提供了其他好处。 管理员可以使用旨在操作独立存储的工具来配置文件存储空间、设置安全策略及删除未使用的数据。 通过独立存储，代码不再需要使用唯一的路径来指定文件系统中的安全位置，同时可以保护数据免遭只具有独立存储访问权限的其他应用程序的损坏。 不再需要指示应用程序的存储区域位置的硬编码信息。  
@@ -177,7 +166,7 @@ ms.lasthandoff: 01/09/2018
 |[如何：在独立存储中查找现有文件和目录](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|演示如何读取独立存储区中的目录结构和文件。|  
 |[如何：在独立存储中读取和写入文件](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|提供一个向独立存储文件写入字符串并将其读取回的示例。|  
 |[如何：在独立存储中删除文件和目录](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|演示如何删除独立存储文件和目录。|  
-|[文件和流 I-O](../../../docs/standard/io/index.md)|解释如何执行同步和异步文件和数据流访问。|  
+|[文件和流 I/O](../../../docs/standard/io/index.md)|解释如何执行同步和异步文件和数据流访问。|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>参考  

@@ -1,20 +1,14 @@
 ---
-title: 特性 - C#
+title: 属性 - C#
 description: 了解特性在 C# 中的工作方式。
-keywords: .NET, .NET Core, C#, 特性
 author: mgroves
-ms.author: wiwagn
 ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: dad02c64d22fe0f127057202c082680f13261d7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-attributes-in-c"></a>在 C# 中使用特性 #
 
@@ -24,7 +18,7 @@ ms.lasthandoff: 10/18/2017
 
 此教程将介绍如何将特性添加到代码中、如何创建和使用你自己的特性，以及如何使用一些内置到 .NET Core 中的特性。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。
 可以在 Windows、Ubuntu Linux、macOS 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 
@@ -90,7 +84,7 @@ ms.lasthandoff: 10/18/2017
 * 构造函数
 * 委托
 * Enum
-* Event
+* 事件
 * 字段
 * 泛型参数
 * 接口
@@ -150,6 +144,6 @@ ms.lasthandoff: 10/18/2017
 
 在上面的代码中，无需使用文本类型 `"Name"` 字符串。 这样既有助于防止出现与拼写错误相关的 bug，也可以让重构/重命名操作变得更加顺畅。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 特性将声明性功能引入 C#。 但它们只是代码形式的元数据，不会自发起作用。

@@ -1,24 +1,17 @@
 ---
 title: unsafe（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - unsafe_CSharpKeyword
 - unsafe
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1fffbe36e39d279b2364b178188381a403c8ff86
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 367a080cf58514b3ffcc30c17d8fe7bb07e0e9ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unsafe-c-reference"></a>unsafe（C# 参考）
 `unsafe` 关键字表示不安全上下文，该上下文是任何涉及指针的操作所必需的。 有关详细信息，请参阅[不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)。  
@@ -38,7 +31,7 @@ ms.lasthandoff: 11/21/2017
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}  
 ```  
   
- 还可以使用不安全块从而能够使用该块内的不安全代码。 例如:   
+ 还可以使用不安全块从而能够使用该块内的不安全代码。 例如:  
   
 ```  
       unsafe  
@@ -55,7 +48,7 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  

@@ -1,31 +1,20 @@
 ---
-title: "如何：编写具有线程局部变量的 Parallel.For 循环"
-ms.custom: 
+title: 如何：编写具有线程局部变量的 Parallel.For 循环
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 004998a8891d92e2d1f805b3353fbe93864dcf1d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a70b8e3d1f56eafc04b97a19a1582d9c664e587d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>如何：编写具有线程局部变量的 Parallel.For 循环
 此示例演示如何使用线程本地变量来存储和检索由 <xref:System.Threading.Tasks.Parallel.For%2A> 循环创建的每个单独任务中的状态。 通过使用线程本地数据，你可以避免将大量的访问同步为共享状态的开销。 在任务的所有迭代完成之前，你将计算和存储值，而不是写入每个迭代上的共享资源。 然后，你可以将最终结果一次性写入共享资源，或将其传递到另一个方法。  

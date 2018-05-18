@@ -1,21 +1,14 @@
 ---
 title: Docker 应用开发工作流
 description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | Docker 应用开发工作流
-keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 73d4ad82ef8c48f57aa4cceceedba862a2c9ffa4
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 2eb205e85300f22108b866e8446d6730d89ae6cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 应用开发工作流
 

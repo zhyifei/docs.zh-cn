@@ -1,23 +1,16 @@
 ---
 title: .NET 可移植性分析器 - .NET
 description: 了解如何使用 .NET 可移植性分析器工具，评估代码在各种 .NET 实现（包括 .NET Core、.NET Standard、UWP 和 Xamarin）间的可移植性。
-keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 07/26/2017
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3d813292a821c2ebfa7b40ee873cf36e71104ebf
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f310e5fe45315dfa41d596c92d9412dc6b3bc125
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 可移植性分析器
 

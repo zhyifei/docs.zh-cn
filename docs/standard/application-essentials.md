@@ -1,28 +1,17 @@
 ---
-title: ".NET Framework 应用程序要点"
-ms.custom: 
+title: .NET Framework 应用程序要点
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f830064c585e1024bdc304c6356327ddc8c059f3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework 应用程序要点
 .NET Framework 文档的此部分提供了有关 .NET Framework 中的基本应用程序开发任务的信息。  
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/23/2017
  [异常](../../docs/standard/exceptions/index.md)  
  描述 .NET Framework 提供的错误处理以及处理异常的基本原则。  
   
- [文件和流 I-O](../../docs/standard/io/index.md)  
+ [文件和流 I/O](../../docs/standard/io/index.md)  
  解释如何执行同步和异步文件和数据流访问以及如何用于独立存储。  
   
  [日期、时间和时区](../../docs/standard/datetime/index.md)  

@@ -1,28 +1,18 @@
 ---
-title: "SOS.dll（SOS 调试扩展）"
-ms.custom: 
+title: SOS.dll（SOS 调试扩展）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - debugging extensions
 - SOS debugging extensions
 - SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
-caps.latest.revision: "55"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e000d0efbd999d228e10a5df8e6368cbf22c5088
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: 608211221d0f6f6a24b85561cd16fb21e15c336b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll（SOS 调试扩展）
 SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) 环境的信息，帮助你在 Visual Studio 和 Windows 调试器 (WinDbg.exe) 中调试托管程序。 此工具需要你启用项目的非托管调试。 SOS.dll 自动随 .NET Framework 一起安装。 若要在 Visual Studio 中使用 SOS.dll，请安装 [Windows 驱动程序工具包 (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。  
@@ -42,7 +32,7 @@ SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) �
 |-------------|-----------------|  
 |**AnalyzeOOM** (**ao**)|显示对垃圾回收堆进行分配请求时发生的最后 OOM 的信息。 （在服务器垃圾回收中，它将在每个垃圾回收堆上显示 OOM（如果有））。|  
 |**BPMD** [**-nofuturemodule**] [\<*module name*> \<*method name*>] [**-md** <`MethodDesc`>] **-list** **-clear** \<*pending breakpoint number*> **-clearall**|在指定模块中的指定方法处创建断点。<br /><br /> 如果尚未加载指定的模块和方法，则此命令将在创建断点之前等待已加载并进行实时 (JIT) 编译的模块的通知。<br /><br /> 可以通过使用 **-list**、**-clear** 和 **-clearall** 选项来管理挂起断点的列表：<br /><br /> 该 **-list** 选项生成所有挂起断点的列表。 如果挂起断点有一个非零模块 ID，则该断点特定于该特定已加载模块中的函数。 如果挂起断点有一个零模块 ID，则该断点适用于尚未加载的模块。<br /><br /> 使用 **-clear** 或 **-clearall** 选项可从该列表中移除挂起断点。|  
-|CLRStack [-a] [-l] [-p] [-n]|仅提供托管代码的堆栈跟踪。<br /><br /> **-p** 选项显示托管函数的自变量。<br /><br /> **-l** 选项显示有关帧中的局部变量的信息。 SOS 调试扩展无法检索本地名称，因此本地名称的输出采用的格式为 \<*local address*> **=** \<*value*>。<br /><br /> **-a**（全部）选项是 **-l** 和 **-p** 组合的快捷方式。<br /><br /> -n 选项禁止显示源文件名和行号。 如果调试器已指定选项 SYMOPT_LOAD_LINES，则 SOS 将查找每个托管帧的符号，如果成功，则将显示对应的源文件名和行号。 可以指定 -n（无行号）参数来禁用此行为。<br /><br /> 在基于 x64 和 IA-64 的平台上，SOS 调试扩展不显示过渡帧。|  
+|**CLRStack** [**-a**] [**-l**] [**-p**] [**-n**]|仅提供托管代码的堆栈跟踪。<br /><br /> **-p** 选项显示托管函数的自变量。<br /><br /> **-l** 选项显示有关帧中的局部变量的信息。 SOS 调试扩展无法检索本地名称，因此本地名称的输出采用的格式为 \<*local address*> **=** \<*value*>。<br /><br /> **-a**（全部）选项是 **-l** 和 **-p** 组合的快捷方式。<br /><br /> **-n** 选项禁止显示源文件名和行号。 如果调试器已指定选项 SYMOPT_LOAD_LINES，则 SOS 将查找每个托管帧的符号，如果成功，则将显示对应的源文件名和行号。 可以指定 **-n**（无行号）参数来禁用此行为。<br /><br /> 在基于 x64 和 IA-64 的平台上，SOS 调试扩展不显示过渡帧。|  
 |**COMState**|列出每个线程的 COM 单元模型和 `Context` 指针（如果可用）。|  
 |**DumpArray** [**-start** \<*startIndex*>] [**-length** \<*length*>] [**-details**] [**-nofields**] \<*array object address*><br /><br /> 或<br /><br /> **DA** [**-start** \<*startIndex*>] [**-length** \<*length*>] [**-detail**] [**-nofields**] *array object address*>|检查数组对象的元素。<br /><br /> **-start** 选项指定开始显示元素的起始索引。<br /><br /> **-length** 选项指定要显示的元素数量。<br /><br /> **-details** 选项使用 **DumpObj** 和 **DumpVC** 格式显示元素的详细信息。<br /><br /> **-nofields** 选项可阻止显示数组。 此选项仅在指定 **-detail** 选项后可用。|  
 |**DumpAssembly** \<*assembly address*>|显示有关程序集的信息。<br /><br /> **DumpAssembly** 命令将列出多个模块（如果存在）。<br /><br /> 可以通过使用 **DumpDomain** 命令获取程序集地址。|  
@@ -57,7 +47,7 @@ SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) �
 |**DumpModule** [**-mt**] \<*Module address*>|显示有关指定地址处的模块的信息。 **-mt** 选项显示模块中定义的类型和模块所引用的类型<br /><br /> 可以使用 **DumpDomain** 或 **DumpAssembly** 命令检索模块的地址。|  
 |**DumpObj** [**-nofields**] \<*object address*><br /><br /> 或<br /><br /> **DO** \<*object address*>|显示有关指定地址处的对象的信息。 **DumpObj** 命令显示对象的字段、`EEClass` 结构信息、方法表和大小。<br /><br /> 可以使用 **DumpStackObjects** 命令检索对象的地址。<br /><br /> 请注意，可以对 `CLASS` 类型的字段运行 **DumpObj** 命令，因为这些字段也是对象。<br /><br /> `-`**nofields** 选项可阻止显示对象的字段，它对 String 这样的对象很有用。|  
 |**DumpRuntimeTypes**|显示垃圾回收器堆中的运行时类型对象并列出其关联的类型名称和方法表。|  
-|DumpStack [-EE] [-n] [`top` stack [`bottom` stac`k`]]|显示堆栈跟踪。<br /><br /> **-EE** 选项使 **DumpStack** 命令仅显示托管函数。 使用 `top` 和 `bottom` 参数可限制 x86 平台上显示的堆栈帧。<br /><br /> -n 选项禁止显示源文件名和行号。 如果调试器已指定选项 SYMOPT_LOAD_LINES，则 SOS 将查找每个托管帧的符号，如果成功，则将显示对应的源文件名和行号。 可以指定 -n（无行号）参数来禁用此行为。<br /><br /> 在 x86 和 x64 平台上，**DumpStack** 命令将创建详细的堆栈跟踪。<br /><br /> 在基于 IA-64 的平台上，**DumpStack** 命令模拟调试器的 **K** 命令。 在基于 IA-64 的平台上，将忽略 `top` 和 `bottom` 参数。|  
+|**DumpStack** [**-EE**] [**-n**] [`top` *stack* [`bottom` *stac*`k`]]|显示堆栈跟踪。<br /><br /> **-EE** 选项使 **DumpStack** 命令仅显示托管函数。 使用 `top` 和 `bottom` 参数可限制 x86 平台上显示的堆栈帧。<br /><br /> **-n** 选项禁止显示源文件名和行号。 如果调试器已指定选项 SYMOPT_LOAD_LINES，则 SOS 将查找每个托管帧的符号，如果成功，则将显示对应的源文件名和行号。 可以指定 **-n**（无行号）参数来禁用此行为。<br /><br /> 在 x86 和 x64 平台上，**DumpStack** 命令将创建详细的堆栈跟踪。<br /><br /> 在基于 IA-64 的平台上，**DumpStack** 命令模拟调试器的 **K** 命令。 在基于 IA-64 的平台上，将忽略 `top` 和 `bottom` 参数。|  
 |**DumpSig** \<*sigaddr*> \<*moduleaddr*>|显示有关指定地址处的 `Sig` 结构的信息。|  
 |**DumpSigElem** \<*sigaddr*> \<*moduleaddr*>|显示签名对象的单个元素。 大多数情况下，应使用 **DumpSig** 查看单个签名对象。 但是，如果签名已在某种程度上被损坏，则可使用 **DumpSigElem** 读取它的有效部分。|  
 |**DumpStackObjects** [**-verify**] [`top` *stack* [`bottom` *stack*]]<br /><br /> 或<br /><br /> **DumpStackObjects** [**-verify**] [`top` *stack* [`bottom` *stack*]]|显示在当前堆栈的边界内找到的所有托管对象。<br /><br /> **-verify** 选项验证对象字段的每个非静态 `CLASS` 字段。<br /><br /> 将 **DumpStackObject** 命令与堆栈跟踪命令（如 **K** 命令和 **CLRStack** 命令）一起使用以确定局部变量和参数的值。|  
@@ -99,7 +89,7 @@ SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) �
 |**Threads** [**-live**] [**-special**]|显示进程中的所有托管线程。<br /><br /> Threads 命令显示调试程序速记 ID、CLR 线程 ID 以及操作系统线程 ID。  此外，**Threads** 命令还会显示“Domain”列、“APT”列和“Exception”列，这三列分别用于指示正在执行某线程的应用程序域、显示 COM 单元模式以及显示该线程中引发的上一个异常。<br /><br /> **-live** 选项显示与活动线程关联的线程。<br /><br />  选项显示由 CLR 创建的所有特殊线程。 特殊线程包括垃圾回收线程（在并发垃圾回收和服务器垃圾回收中）、调试器帮助程序线程、终结器线程、<xref:System.AppDomain> 卸载线程和线程池计时器线程。|  
 |**ThreadState \<** *State value field* **>**|显示线程的状态。 `value` 参数为 **Threads** 报告输出中的 `State` 字段的值。<br /><br /> 示例:<br /><br /> `0:003> !Threads     ThreadCount:      2     UnstartedThread:  0     BackgroundThread: 1     PendingThread:    0     DeadThread:       0     Hosted Runtime:   no                                           PreEmptive   GC Alloc           Lock            ID OSID ThreadOBJ    State     GC       Context       Domain   Count APT Exception        0    1  250 0019b068      a020 Disabled 02349668:02349fe8 0015def0     0 MTA        2    2  944 001a6020      b220 Enabled  00000000:00000000 0015def0     0 MTA (Finalizer)     0:003> !ThreadState b220         Legal to Join         Background         CLR Owns         CoInitialized         In Multi Threaded Apartment`|  
 |**TraverseHeap** [**-xml**] \<*filename*>|以 CLR 探查器能够识别的格式将堆信息写入指定文件。 **-xml** 选项使 **TraverseHeap** 命令将文件格式化为 XML。<br /><br /> 可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=67325)下载 CLR 探查器。|  
-|U [-gcinfo] [-ehinfo] [-n] \<MethodDesc address> &#124; \<Code address>|显示由方法的 `MethodDesc` 结构指针或方法体内的代码地址指定的托管方法的反汇编（带有批注）。 **U** 命令将从开始到结束显示整个方法，并带有将元数据标记转换为名称的批注。<br /><br /> **-gcinfo** 选项使 **U** 命令显示方法的 `GCInfo` 结构。<br /><br /> **-ehinfo** 选项显示方法的异常信息。 也可以使用 **EHInfo** 命令获取此信息。<br /><br /> -n 选项禁止显示源文件名和行号。 如果调试器已指定选项 SYMOPT_LOAD_LINES，则 SOS 将查找每个托管帧的符号，如果成功，则将显示对应的源文件名和行号。 可以指定 -n 选项来禁用此行为。|  
+|**U** [**-gcinfo**] [**-ehinfo**] [**-n**] \<*MethodDesc address*> &#124; \<*Code address*>|显示由方法的 `MethodDesc` 结构指针或方法体内的代码地址指定的托管方法的反汇编（带有批注）。 **U** 命令将从开始到结束显示整个方法，并带有将元数据标记转换为名称的批注。<br /><br /> **-gcinfo** 选项使 **U** 命令显示方法的 `GCInfo` 结构。<br /><br /> **-ehinfo** 选项显示方法的异常信息。 也可以使用 **EHInfo** 命令获取此信息。<br /><br /> **-n** 选项禁止显示源文件名和行号。 如果调试器已指定选项 SYMOPT_LOAD_LINES，则 SOS 将查找每个托管帧的符号，如果成功，则将显示对应的源文件名和行号。 可以指定 **-n** 选项来禁用此行为。|  
 |**VerifyHeap**|检查垃圾回收器堆中是否有损坏迹象，并显示找到的任何错误。<br /><br /> 错误构造的平台调用可能导致堆损坏。|  
 |**VerifyObj** \<*object address*>|检查作为自变量传递的对象是否有损坏迹象。|  
 |**VMMap**|遍历虚拟地址空间并显示应用于每个区域的保护类型。|  

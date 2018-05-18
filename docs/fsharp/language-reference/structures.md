@@ -2,11 +2,11 @@
 title: 结构 (F#)
 description: '了解有关 F # 结构，紧凑对象类型通常比具有少量的数据和简单的行为的类型的类更有效。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 728533e24dcfae219ae5ab3d410389e95fcfaee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57c4148aec1d6a19237d74aa99824ef475c3632e
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="structures"></a>结构
 
@@ -18,13 +18,13 @@ A*结构*是一种紧凑对象类型，可能比具有少量数据且行为简�
 [ attributes ]
 type [accessibility-modifier] type-name =
     struct
-        type-definition-elements
+        type-definition-elements-and-members
     end
 // or
 [ attributes ]
 [<StructAttribute>]
 type [accessibility-modifier] type-name =
-    type-definition-elements
+    type-definition-elements-and-members
 ```
 
 ## <a name="remarks"></a>备注
@@ -32,7 +32,7 @@ type [accessibility-modifier] type-name =
 
 在前面的语法中，将显示两个窗体。 第一个窗体不是轻量级语法，但其仍然经常使用，因为当使用 `struct` 和 `end` 关键字时，你可以忽略第二个窗体中出现的 `StructAttribute` 特性。 你可以将 `StructAttribute` 缩写为 `Struct`。
 
-*类型定义元素*在上述语法中表示成员声明和定义。 结构可以具有构造函数以及可变和不可变字段，并且可以声明成员和接口实现。 有关详细信息，请参阅[成员](members/index.md)。
+*类型的定义的元素的和的成员*在上述语法中表示成员声明和定义。 结构可以具有构造函数以及可变和不可变字段，并且可以声明成员和接口实现。 有关详细信息，请参阅[成员](members/index.md)。
 
 结构不能参与继承、不能包含 `let` 或 `do` 绑定、不能以递归方式包含其自身类型的字段（但可以包含引用其自身类型的引用单元格）。
 

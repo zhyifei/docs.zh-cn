@@ -1,21 +1,12 @@
 ---
-title: "通用属性 (C#)"
-ms.custom: 
+title: 通用属性 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4e0a8912aa60e4c2918bb812963d83fae8d529f1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 771460f8547252448be1b74526ec2babb719c3fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-attributes-c"></a>通用属性 (C#)
 本主题介绍在 C# 程序中最常用的属性。  
@@ -81,7 +72,7 @@ ms.lasthandoff: 12/09/2017
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|定义程序集清单的友好默认别名|  
   
 ##  <a name="Obsolete"></a> Obsolete 特性  
- `Obsolete` 特性将程序实体标记为不再推荐使用。 每次使用标记为过时的实体后，将生成警告或错误，具体取决于该特性的配置方式。 例如：  
+ `Obsolete` 特性将程序实体标记为不再推荐使用。 每次使用标记为过时的实体后，将生成警告或错误，具体取决于该特性的配置方式。 例如:  
   
 ```csharp  
 [System.Obsolete("use class B")]  
@@ -237,7 +228,7 @@ class SampleClass
   
  有关调用方信息特性的详细信息，请参阅[调用方信息 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [C# 编程指南](../../../../csharp/programming-guide/index.md)  

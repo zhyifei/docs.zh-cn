@@ -1,21 +1,14 @@
 ---
-title: "逻辑体系结构与物理体系结构"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 逻辑体系结构与物理体系结构"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 逻辑体系结构与物理体系结构
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 逻辑体系结构与物理体系结构
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b08a5b8fb8f9df8a9a0a821fa85f1f6a94fce2d3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f77123977a50c30150f5a64cc08c3c217b429ac4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>逻辑体系结构与物理体系结构
 

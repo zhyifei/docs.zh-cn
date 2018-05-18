@@ -1,24 +1,17 @@
 ---
-title: "C# 类型和变量 - C# 语言介绍"
-description: "了解如何在 C# 中定义类型和声明变量"
-keywords: ".NET, C#, 类型, 引用类型, 值类型"
-author: BillWagner
-ms.author: wiwagn
+title: C# 类型和变量 - C# 语言介绍
+description: 了解如何在 C# 中定义类型和声明变量
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 1f1031384520b9ed37246361da8bbc1b42addb0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 752ff490ec91919dc54539c3e39f6d0c527d6260
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-and-variables"></a>类型和变量
 
-C# 有两种类型：*值类型*和*引用类型*。 值类型的变量直接包含数据，而引用类型的变量则存储对数据（称为“对象”）的引用。 对于引用类型，两个变量可以引用同一对象；因此，对一个变量执行的运算可能会影响另一个变量引用的对象。 对于值类型，每个变量都有自己的数据副本；因此，对一个变量执行的运算不会影响另一个变量（`ref` 和 `out` 参数变量除外）。
+C# 有两种类型：*值类型*和*引用类型*。 值类型的变量直接包含数据，而引用类型的变量则存储对数据（称为“对象”）的引用。 对于引用类型，两个变量可以引用同一对象；因此，对一个变量执行的运算可能会影响另一个变量引用的对象。 借助值类型，每个变量都有自己的数据副本；因此，对一个变量执行的运算不会影响另一个变量（`ref` 和 `out` 参数变量除外）。
 
 C# 值类型又细分为*简单类型*、*枚举类型*、*结构类型*和*可以为 null 的值类型*。 C# 引用类型又细分为*类类型*、*接口类型*、*数组类型*和*委托类型*。
 
@@ -75,7 +68,7 @@ C# 使用 Unicode 编码处理字符和字符串。 `char` 类型表示 UTF-16 �
 * 浮点
     - `float`：32 位，介于 1.5 × 10<sup>-45</sup> 到 3.4 × 10<sup>38</sup> 之间，7 位精度
     - `double`：64 位，介于 5.0 × 10<sup>-324</sup> 到 1.7 × 10<sup>308</sup> 之间，15 位精度
-* Decimal
+* 十进制
     - `decimal`：128 位，至少介于 -7.9 × 10<sup>-28</sup> 到 7.9 × 10<sup>28</sup> 之间，至少为 28 位精度
     
 C# 程序使用*类型声明*创建新类型。 类型声明指定新类型的名称和成员。 用户可定义以下五种 C# 类型：类类型、结构类型、接口类型、枚举类型和委托类型。

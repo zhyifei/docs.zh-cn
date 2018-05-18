@@ -1,24 +1,17 @@
 ---
 title: sizeof（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - sizeof_CSharpKeyword
 - sizeof
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0148ae8381804ca9286315251582c8ab40778369
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 83038255160ec778c71120566cf8f99092761add
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sizeof-c-reference"></a>sizeof（C# 参考）
 用于获取非托管类型的大小（以字节为单位）。 非托管类型包括下表列出的内置类型以及以下类型：  
@@ -41,7 +34,7 @@ int intSize = sizeof(int);
   
  不能重载 `sizeof` 运算符。 `sizeof` 运算符的返回值是 `int` 类型。 下表列出了一些常量值，这些值对应于以某些内置类型为操作数的 `sizeof` 表达式。  
   
-|Expression|常量值|  
+|表达式|常量值|  
 |----------------|--------------------|  
 |`sizeof(sbyte)`|1|  
 |`sizeof(byte)`|1|  
@@ -65,7 +58,7 @@ int intSize = sizeof(int);
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  

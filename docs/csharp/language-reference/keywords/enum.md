@@ -1,24 +1,17 @@
 ---
-title: "enum（C# 参考）"
+title: enum（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - enum
 - enum_CSharpKeyword
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 36d33387dda68270e0490eaa6c792f95d058651e
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 72feb6ee25070a6930b01b69e0a726041d34b0c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enum-c-reference"></a>enum（C# 参考）
 `enum` 关键字用于声明枚举，一种包含一组被称为枚举数列表的已命名常数的不同类型。  
@@ -98,7 +91,7 @@ int x = (int)Day.Sun;
  [C# 参考](../../../csharp/language-reference/index.md)  
  [枚举类型](../../../csharp/programming-guide/enumeration-types.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md) 
+ [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

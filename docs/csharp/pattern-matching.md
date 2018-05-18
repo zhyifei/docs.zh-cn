@@ -1,19 +1,13 @@
 ---
 title: 模式匹配 - C# 指南
 description: 了解 C# 中的模式匹配表达式
-keywords: .NET、.NET Core、C#
 ms.date: 01/24/2017
-ms.author: wiwagn
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: a0f80fc2c019cefa81506d9dcdeabc57a1e98c2b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pattern-matching"></a>模式匹配 #
 
@@ -51,7 +45,7 @@ ms.lasthandoff: 04/26/2018
 
 模式匹配表达式的语言规则可帮助避免误用匹配表达式的结果。 在上面的示例中，仅当相应的模式匹配表达式具有 `true` 结果时，变量 `s`、`c` 和 `r` 才处于范围内并进行明确赋值。 如果尝试在另一个位置中使用任一变量，则代码会生成编译器错误。
 
-让我们从范围开始，来详细了解一下这两个规则。 变量 `c` 只处于第一个 `if` 语句的 `else` 分支的范围内。 变量 `s` 处于方法 `ComputeArea` 的范围内。 这是因为 `if` 语句的每个分支都为变量建立单独的范围。 但是，`if` 语句本身不会建立范围。 这意味着在 `if` 语句中声明的变量会处于与 `if` 语句相同的范围中（本例中的方法。）此行为并不特定于模式匹配，但却是变量范围以及 `if` 和 `else` 语句的已定义行为。
+让我们从范围开始，来详细了解一下这两个规则。 变量 `c` 只处于第一个 `if` 语句的 `else` 分支的范围内。 变量 `s` 处于方法 `ComputeAreaModernIs` 的范围内。 这是因为 `if` 语句的每个分支都为变量建立单独的范围。 但是，`if` 语句本身不会建立范围。 这意味着在 `if` 语句中声明的变量会处于与 `if` 语句相同的范围中（本例中的方法。）此行为并不特定于模式匹配，但却是变量范围以及 `if` 和 `else` 语句的已定义行为。
 
 由于在 true 时进行明确赋值这一机制，当相应 `if` 语句为 true 时，会对变量 `c` 和 `s` 赋值。
 

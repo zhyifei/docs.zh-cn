@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: e39afea9fe11cdab9e5a6623499a96468aa9d091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="styling-and-templating"></a>样式设置和模板化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 样式设置和模板化是指一套功能（样式、模板、触发器和情节提要），可使开发者和设计者创建极具视觉表现力的效果，并为其产品创建一致的外观。 尽管开发者和/或设计者可以逐个应用程序地广泛自定义外观，但为了实现应用程序内部和之间的外观维护和共享，需要一个强大的样式设置和模板化模型。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供该模型。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
  ![Styled ListView](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
   
- 此简单照片示例使用样式设置和模板化创建极具视觉表现力的用户体验。 此示例还具有两个<xref:System.Windows.Controls.TextBlock>元素和<xref:System.Windows.Controls.ListBox>绑定到的映像列表的控件。 有关完整示例，请参阅[样式设置和模板化示例简介](http://go.microsoft.com/fwlink/?LinkID=160010)。  
+ 此简单照片示例使用样式设置和模板化创建极具视觉表现力的用户体验。 此示例还具有两个<xref:System.Windows.Controls.TextBlock>元素和<xref:System.Windows.Controls.ListBox>绑定到的映像列表的控件。 有关完整示例，请参阅[样式设置和模板化示例简介](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 <a name="styling_basics"></a>   
 ## <a name="style-basics"></a>样式基础知识  

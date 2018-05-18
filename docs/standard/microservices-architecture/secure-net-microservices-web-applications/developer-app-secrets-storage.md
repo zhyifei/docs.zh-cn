@@ -1,21 +1,14 @@
 ---
-title: "在开发过程中安全地存储应用程序机密"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在开发过程中安全地存储应用程序机密"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 在开发过程中安全地存储应用程序机密
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在开发过程中安全地存储应用程序机密
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f70f7c741da9653745e4f542125986c701b5d22d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d8dd2da07104d6461d4eec0cb3fccd61c4db71c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="storing-application-secrets-safely-during-development"></a>在开发过程中安全地存储应用程序机密
 

@@ -1,21 +1,14 @@
 ---
 title: 如何：在结构间实现用户定义的转换（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-caps.latest.revision: 11
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7d86cbd48347e6951f6b6883a385d80d68697c9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 178d9e2f92c5c1989253a16d866052a1fc42c10e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>如何：在结构间实现用户定义的转换（C# 编程指南）
 本示例定义 `RomanNumeral` 和 `BinaryNumeral` 两个结构，并演示二者之间的转换。  
@@ -37,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
      执行从 `BinaryNumeral` 到 `RomanNumeral` 的转换。 由于 `RomanNumeral` 定义了从 `BinaryNumeral` 的隐式转换，所以不需要强制转换。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [转换运算符](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)

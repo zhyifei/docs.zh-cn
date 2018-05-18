@@ -1,22 +1,15 @@
 ---
 title: 内置类型表（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-caps.latest.revision: ''
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d9d1e4945526a862074e73e608185696328946be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7407d18c58dd3d12337c6845627d83f02eaf7fa0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="built-in-types-table-c-reference"></a>内置类型表（C# 参考）
 下表显示内置 C# 类型的关键字，即 <xref:System> 命名空间中预定义类型的别名。  
@@ -57,12 +50,12 @@ Console.WriteLine(myVariable.GetType());
   
  也可使用 [typeof](../../../csharp/language-reference/keywords/typeof.md) 运算符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
  [值类型](../../../csharp/language-reference/keywords/value-types.md)  
  [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)  
  [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
- [动态](../../../csharp/language-reference/keywords/dynamic.md)  
+ [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
  [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)

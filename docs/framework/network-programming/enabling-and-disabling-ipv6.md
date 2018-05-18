@@ -1,23 +1,15 @@
 ---
-title: "启用和禁用 IPv6"
-ms.custom: 
+title: 启用和禁用 IPv6
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 9304487963b3df4a3c2870399c474a431deb43b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b018d646816bda96945a440a890da20b81b1cbbc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-and-disabling-ipv6"></a>启用和禁用 IPv6
 若要使用 IPv6 协议，请确保当前运行的操作系统版本支持 IPv6，并确保正确配置了操作系统和网络类。  
@@ -27,9 +19,9 @@ ms.lasthandoff: 12/22/2017
   
 |支持 IPv6 的操作系统？|支持 IPv6 的网络类？|描述|  
 |-------------------------------------|---------------------------------------|-----------------|  
-|No|No|可以分析 IPv6 地址。|  
-|No|是|可以分析 IPv6 地址。|  
-|是|No|使用未标记为过时的名称解析方法，可以分析并解析 IPv6 地址。|  
+|否|否|可以分析 IPv6 地址。|  
+|否|是|可以分析 IPv6 地址。|  
+|是|否|使用未标记为过时的名称解析方法，可以分析并解析 IPv6 地址。|  
 |是|是|使用所有方法（包含标记为过时的方法），可以分析并解析 IPv6 地址。|  
   
  请注意，要为 System.Net 命名空间中的所有类启用 IPv6 支持，必须修改计算机配置文件或应用程序的配置文件。 应用程序的配置文件优先于计算机配置文件。  

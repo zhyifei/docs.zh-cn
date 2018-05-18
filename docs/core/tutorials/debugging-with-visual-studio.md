@@ -4,17 +4,11 @@ description: 了解如何使用 Visual Studio 2017 调试用 C# 或 Visual Basic
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/15/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 20f84c049236d2d3526901466ab406c40855c269
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3c130c2eebdf79c1db171cb2171aa68dfff728a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 调试 Hello World 应用程序
 
@@ -53,7 +47,7 @@ ms.lasthandoff: 04/28/2018
 
 1. 在“即时窗口”中输入 `date = new DateTime(2016,11,01,11,59,00)`，然后按 Enter 键。
 
-   “即时窗口”窗口显示字符串变量的值和 <xref:System.DateTime> 值的属性。 此外，**“自动”**和**“局部变量”**窗口中也会更新变量值。
+   “即时窗口”窗口显示字符串变量的值和 <xref:System.DateTime> 值的属性。 此外，**“自动”** 和 **“局部变量”** 窗口中也会更新变量值。
 
    ![自动窗口和即时窗口](./media/debugging-with-visual-studio/autosimmediate.png)
 
@@ -183,7 +177,7 @@ ms.lasthandoff: 04/28/2018
 
    ![Visual Studio 窗口](./media/debugging-with-visual-studio/stepinto2.png)
 
-1. 选择“调试” > “单步执行”，或按 F11 键。 Visual Studio 突出显示包含 `name` 变量赋值的语句。 **“自动”**窗口显示 `name` 为 `null`，控制台窗口显示字符串“What is your name?”。
+1. 选择“调试” > “单步执行”，或按 F11 键。 Visual Studio 突出显示包含 `name` 变量赋值的语句。 **“自动”** 窗口显示 `name` 为 `null`，控制台窗口显示字符串“What is your name?”。
 
 1. 在控制台窗口中输入字符串，然后按 Enter，从而响应提示。 控制台无响应，输入的字符串未显示在控制台窗口中，但 <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> 方法将捕获输入。
 
@@ -207,7 +201,7 @@ ms.lasthandoff: 04/28/2018
 
    ![Visual Studio 窗口](./media/debugging-with-visual-studio/vb-stepinto2.png)
 
-1. 选择“调试” > “单步执行”，或按 F11 键。 Visual Studio 突出显示包含 `name` 变量赋值的语句。 **“自动”**窗口显示 `name` 为 `Nothing`，控制台窗口显示字符串“What is your name?”。
+1. 选择“调试” > “单步执行”，或按 F11 键。 Visual Studio 突出显示包含 `name` 变量赋值的语句。 **“自动”** 窗口显示 `name` 为 `Nothing`，控制台窗口显示字符串“What is your name?”。
 
 1. 在控制台窗口中输入字符串，然后按 Enter，从而响应提示。 控制台无响应，输入的字符串未显示在控制台窗口中，但 <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> 方法将捕获输入。
 

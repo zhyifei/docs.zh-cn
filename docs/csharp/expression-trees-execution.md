@@ -1,20 +1,13 @@
 ---
-title: "执行表达式树"
-description: "介绍通过将表达式树转换为可执行的中间语言 (IL) 指令，执行表达式树。"
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 执行表达式树
+description: 介绍通过将表达式树转换为可执行的中间语言 (IL) 指令，执行表达式树。
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: db481c18a79f55b079ec2558b884ce288e2a9933
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 54706cd5d8ebe60bb893bc82f05aecddae370602
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="executing-expression-trees"></a>执行表达式树
 
@@ -121,7 +114,7 @@ private static Func<int, int> CreateBoundResource()
 
 表达式中的代码可能引用其他程序集中的方法或属性。 对表达式进行定义、编译或在调用结果委托时，该程序集必须可访问。 在它不存在的情况下，将遇到 `ReferencedAssemblyNotFoundException`。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 可以编译表示 lambda 表达式的表达式树，以创建可执行的委托。 这提供了一种机制，用于执行表达式树所表示的代码。
 

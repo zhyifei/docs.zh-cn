@@ -2,18 +2,13 @@
 title: 在 Docker 中运行控制台应用程序
 description: 了解如何利用现有 .NET Framework 控制台应用程序并在 Windows Docker 容器中运行该程序。
 author: spboyer
-keywords: .NET, 容器, 控制台, 应用程序
 ms.date: 09/28/2016
-ms.topic: article
-ms.prod: .net-framework
-ms.technology: vs-ide-deployment
-ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 266c439163888962075f804a0f5651a8e7d83151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中运行控制台应用程序
 

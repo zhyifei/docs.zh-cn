@@ -1,12 +1,6 @@
 ---
-title: "Socket 代码示例"
-ms.custom: 
+title: Socket 代码示例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -20,16 +14,14 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: df4a7711f3968616315af757e5f2c48650f9e0f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 963a33975836531290a9471dbf9c727dc53ab557
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="socket-code-examples"></a>Socket 代码示例
 以下代码示例演示如何使用 <xref:System.Net.Sockets.Socket> 类作为客户端连接到远程网络服务，以及如何将它用作服务器以侦听来自远程客户端的连接。  

@@ -1,19 +1,15 @@
 ---
-title: ".NET 安全分析器 - .NET"
-description: "了解如何使用 .NET Framework 分析器包中的.NET 安全分析器来查找和解决安全风险"
-keywords: .NET, .NET Core
+title: .NET 安全分析器 - .NET
+description: 了解如何使用 .NET Framework 分析器包中的.NET 安全分析器来查找和解决安全风险
 author: billwagner
 ms.author: billwagner
 ms.date: 01/25/2018
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.openlocfilehash: 06a387d72d06609182c8894dd874b241a5d7b69c
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 904218c177ea45f82a73b4532ce3230af954aa85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework 分析器
 
@@ -50,7 +46,7 @@ ms.lasthandoff: 02/27/2018
 
 .NET Framework 中有少量不应直接自其派生的类型。 
 
-**类别：**设计
+**类别：** 设计
 
 **严重性：** 警告
 
@@ -60,7 +56,7 @@ ms.lasthandoff: 02/27/2018
 
 捕获损坏状态异常可能会掩盖错误（例如，访问冲突），导致执行状态不一致或使系统更容易遭到攻击者的破坏。 改为捕获并处理更精确的异常类型或重新引发异常
 
-**类别：**安全
+**类别：** 安全
 
 **严重性：** 警告
 
@@ -81,7 +77,7 @@ public class MyItemType
 }
 ```
 
-**类别：**使用情况
+**类别：** 使用情况
 
 **严重性：** 警告
 
@@ -91,7 +87,7 @@ public class MyItemType
 
 在可以序列化的类型中声明了类型不可序列化的实例字段。 必须用 <xref:System.NonSerializedAttribute> 对该字段进行显式标记以修复此警告。
 
-**类别：**使用情况
+**类别：** 使用情况
 
 **严重性：** 警告
 
@@ -101,7 +97,7 @@ public class MyItemType
 
 若要被公共语言运行时识别为可序列化，类型必须用 <xref:System.SerializableAttribute> 特性标记，即使该类型通过实现 <xref:System.Runtime.Serialization.ISerializable> 接口使用自定义序列化例程也是如此。
 
-**类别：**使用情况
+**类别：** 使用情况
 
 **严重性：** 警告
 
@@ -111,7 +107,7 @@ public class MyItemType
 
 如果使用不安全的 <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> 实例或引用外部实体源，分析器可能会接受不受信任的输入并将敏感信息泄露给攻击者。  
 
-**类别：**安全
+**类别：** 安全
 
 **严重性：** 警告
 
@@ -122,7 +118,7 @@ public class MyItemType
 
 随着攻击越来越高级，加密算法会相对退化。 根据加密算法的类型和应用，其加密强度的进一步降低可能会使攻击者读取到加密消息、篡改加密消息、伪造数字签名、篡改经过哈希处理的内容或者破坏基于此算法的所有加密系统。 加密时，请使用 AES 算法（AES-256、AES-192 和 AES-128 都可以）并确保密钥长度大于或等于 128 位。 进行哈希处理时，请使用 SHA-2 系列中的哈希函数，例如 SHA-2 512、SHA-2 384 或 SHA-2 256。
 
-**类别：**安全
+**类别：** 安全
 
 **严重性：** 警告
 
@@ -132,7 +128,7 @@ public class MyItemType
 
 在计算上，攻击可以破坏现有算法。 这使得攻击者可以破坏本应提供的加密保障。 根据加密算法的类型和应用，这可能会使攻击者读取到加密消息、篡改加密消息、伪造数字签名、篡改经过哈希处理的内容或者破坏基于此算法的所有加密系统。 加密时，请使用 AES 算法（AES-256、AES-192 和 AES-128 都可以）并确保密钥长度大于或等于 128 位。 进行哈希处理时，请使用 SHA-2 系列中的哈希函数，例如 SHA512、SHA384 或 SHA256。 进行数字签名时，请使用 RSA 并确保密钥长度大于或等于 2048 位，或使用 ECDSA 并确保密钥长度大于或等于 256 位。
 
-**类别：**安全
+**类别：** 安全
 
 **严重性：** 警告
 

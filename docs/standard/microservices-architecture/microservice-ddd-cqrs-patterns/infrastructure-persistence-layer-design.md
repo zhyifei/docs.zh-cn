@@ -1,21 +1,14 @@
 ---
 title: 设计基础结构持久性层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计基础结构持久性层
-keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 2b15fcaeaa8934caceaeab963123650354abf291
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>设计基础结构持久性层
 
@@ -132,7 +125,7 @@ public interface ISpecification<T>
 
 接下来的部分解释了如何使用 Entity Framework Core 2.0 实现规范模式，以及如何从任何存储库类中使用它。
 
-**重要说明：**规范模式是一种旧模式，可通过多种方式实现，如下面的其他资源中所示。 作为一种模式/概念，旧方法容易理解，但要留心那些未利用现代语言功能（如 Linq 和表达式）的旧实现。
+**重要说明：** 规范模式是一种旧模式，可通过多种方式实现，如下面的其他资源中所示。 作为一种模式/概念，旧方法容易理解，但要留心那些未利用现代语言功能（如 Linq 和表达式）的旧实现。
 
 ## <a name="additional-resources"></a>其他资源
 

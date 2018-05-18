@@ -1,28 +1,19 @@
 ---
-title: "创建 XML 树 (C#)"
-ms.custom: 
+title: 创建 XML 树 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 23b19593774b5a010b453e3fe755e21386afd015
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f9367cd795104020c88c40e820c6af15054e38be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-xml-trees-c"></a>创建 XML 树 (C#)
 最常见的 XML 任务之一是构造 XML 树。 本节介绍多种创建 XML 树的方法。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |[函数构造 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)|提供对 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的功能构造的概述。 功能构造使您能在单条语句中创建全部或部分 XML 树。 本主题演示如何在构造 XML 树时嵌入查询。|  
 |[在 C# 中创建 XML 树 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md)|演示如何在 C# 中创建树。|  
@@ -32,5 +23,5 @@ ms.lasthandoff: 10/18/2017
 |[如何：使用 XSD 进行验证 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|演示如何使用 XSD 验证 XML 树。|  
 |[XElement 和 XDocument 对象的有效内容](../../../../csharp/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects3.md)|描述可以传递给构造函数的有效自变量，以及用于向元素和文档添加内容的方法。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -1,21 +1,14 @@
 ---
 title: 如何：通过指针访问数组元素（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 737c1d7fc0bc0a739de5c0a6cbc5dc09f813133e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92eb7a79c0e7522d1474537aeefbfdb083a11dc2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>如何：通过指针访问数组元素（C# 编程指南）
 在不安全的上下文中，可通过指针元素访问来访问内存中的元素，如下方示例所示：  
@@ -43,11 +36,11 @@ for (int i = 65; i < 123; i++)
 ABCDEFGHIJKLMNOPQRSTUVWXYZ  
 小写字母：  
 abcdefghijklmnopqrstuvwxyz   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
  [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
  [类型](../../../csharp/language-reference/keywords/types.md)  
- [不安全](../../../csharp/language-reference/keywords/unsafe.md)  
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
  [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

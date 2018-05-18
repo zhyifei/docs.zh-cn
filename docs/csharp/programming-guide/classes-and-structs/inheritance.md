@@ -1,9 +1,6 @@
 ---
-title: "继承（C# 编程指南）"
+title: 继承（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: "38"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-c-programming-guide"></a>继承（C# 编程指南）
 
@@ -50,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="interfaces"></a>接口  
  接口是引用类型，有些类似于仅包含抽象成员的抽象基类。 类实现接口时，它必须为接口的所有成员提供实现。 类可以实现多个接口，即使它只能派生自单个直接基类。  
   
- 接口用于为类定义特定功能，这些功能不一定具有“是”关系。 例如，<xref:System.IEquatable%601?displayProperty=nameWithType> 接口可由任何类或结构实现，这些类或结构必须启用客户端代码来确定该类型的两个对象是否等效（但是由该类型定义等效性）。 <xref:System.IEquatable%601> 不表示基类和派生类之间存在的同一种“是”关系（例如，`Mammal` 是 `Animal`）。 有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。  
+ 接口用于为类定义特定功能，这些功能不一定具有“是”关系。 例如，<xref:System.IEquatable%601?displayProperty=nameWithType> 接口可由任何类或结构实现，这些类或构造必须启用客户端代码来确定该类型的两个对象是否等效（但是由该类型定义等效性）。 <xref:System.IEquatable%601> 不表示基类和派生类之间存在的同一种“是”关系（例如，`Mammal` 是 `Animal`）。 有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。  
   
 ## <a name="preventing-further-derivation"></a>防止进一步派生  
  类可以通过将自己或成员声明为[密封](../../../csharp/language-reference/keywords/sealed.md)，来防止其他类继承自它或继承自其任何成员。 有关详细信息，请参阅[抽象类、密封类和类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
@@ -58,8 +52,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="derived-class-hiding-of-base-class-members"></a>基类成员的派生类隐藏  
  派生类可以通过使用相同名称和签名声明成员来隐藏基类成员。 [new](../../../csharp/language-reference/keywords/new.md) 修饰符可以用于显式指示成员不应作为基类成员的重写。 使用 [new](../../../csharp/language-reference/keywords/new.md) 不是必需的，但如果未使用 [new](../../../csharp/language-reference/keywords/new.md)，则会生成编译器警告。 有关详细信息，请参阅[使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)和[了解何时使用 Override 和 New 关键字](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [类](../../../csharp/language-reference/keywords/class.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  [struct](../../../csharp/language-reference/keywords/struct.md)

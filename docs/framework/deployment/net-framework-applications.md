@@ -1,27 +1,17 @@
 ---
-title: "部署 .NET Framework 应用程序"
-ms.custom: 
+title: 部署 .NET Framework 应用程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework]
 - .NET Framework, deploying apps
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
-caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecf0a4544b5417a548c7cc212e26c98bd1891c00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c999b6c391294a05eb7fae1d1f076f1d52b8c5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-net-framework-applications"></a>部署 .NET Framework 应用程序
 本部分 .NET Framework 文档提供了用于部署 .NET Framework 应用程序的基本信息，其中包括用于加载程序集、解析程序集引用和通过本机映像生成改善应用程序性能的指导原则。  

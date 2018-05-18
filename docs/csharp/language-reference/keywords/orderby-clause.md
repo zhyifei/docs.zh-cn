@@ -1,9 +1,6 @@
 ---
-title: "orderby 子句（C# 参考）"
+title: orderby 子句（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - orderby
 - orderby_CSharpKeyword
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-caps.latest.revision: "17"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc688e7ba164dcca71d13b2d79d30f1373c4778e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1fd0036e8bd3c838fe92ca27635cd7638d59ef1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="orderby-clause-c-reference"></a>orderby 子句（C# 参考）
 在查询表达式中，`orderby` 子句可导致返回的序列或子序列（组）以升序或降序排序。 若要执行一个或多个次级排序操作，可以指定多个键。 元素类型的默认比较器执行排序。 默认排序顺序为升序。 还可以指定自定义比较器。 但是，只适用于使用基于方法的语法。 有关详细信息，请参阅[对数据进行排序](../../programming-guide/concepts/linq/sorting-data.md)。  
@@ -36,7 +30,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>备注  
  编译时，`orderby` 子句将转换为对 <xref:System.Linq.Enumerable.OrderBy%2A> 方法的调用。 `orderby` 子句中的多个关键值将转换为 <xref:System.Linq.Enumerable.ThenBy%2A> 方法调用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [查询关键字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)  

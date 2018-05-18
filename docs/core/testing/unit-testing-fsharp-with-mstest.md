@@ -4,17 +4,13 @@ description: 通过使用 dotnet test 和 MSTest 分步生成示例解决方案�
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.topic: conceptual
 dev_langs:
 - fsharp
-ms.prod: dotnet-core
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 803f6607b90014646bc2057b8e829044364025a0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 14e1ac54cb966e0e38c962e92cceb764fd8e9b42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>使用 dotnet test 和 MSTest 在 .NET Core 中进行 F# 库单元测试
 

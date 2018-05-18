@@ -1,21 +1,15 @@
 ---
-title: "交错数组（C# 编程指南）"
+title: 交错数组（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-caps.latest.revision: "24"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f74eaf5334e8e2198f7a058717a4eb2ff0c1e775
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1825e1a731c40a5945060f8085bd612b5d62008
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>交错数组（C# 编程指南）
 交错数组是元素为数组的数组。 交错数组元素的维度和大小可以不同。 交错数组有时称为“数组的数组”。 以下示例说明如何声明、初始化和访问交错数组。  
@@ -30,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
  每个元素都是一维整数数组。 第一个元素是由 5 个整数组成的数组，第二个是由 4 个整数组成的数组，而第三个是由 2 个整数组成的数组。  
   
- 也可使用初始化表达式通过值来填充数组元素，这种情况下不需要数组大小。 例如:   
+ 也可使用初始化表达式通过值来填充数组元素，这种情况下不需要数组大小。 例如:  
   
  [!code-csharp[csProgGuideArrays#21](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_3.cs)]  
   
@@ -67,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Array>  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [数组](../../../csharp/programming-guide/arrays/index.md)  

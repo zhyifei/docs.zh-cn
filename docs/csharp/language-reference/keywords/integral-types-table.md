@@ -1,23 +1,17 @@
 ---
-title: "整数类型表（C# 参考）"
+title: 整型表（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - integral types, C#
 - Visual C#, integral types
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-caps.latest.revision: "9"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 663ea9a64284c25999564eca9ea5ccec861e9662
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d524224f15d7861328cc24b1e4f9a54fcc16ee34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integral-types-table-c-reference"></a>整型表（C# 参考）
 下表显示整型类型的大小和范围，它们构成简单类型的子集。  
@@ -36,12 +30,12 @@ ms.lasthandoff: 11/21/2017
   
  如果由整数文本所表示的值超出了 `ulong` 的范围，则将出现编译错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [浮点型表](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
  [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)  
- [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md) 
+ [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
  [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)

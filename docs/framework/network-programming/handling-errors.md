@@ -1,12 +1,6 @@
 ---
-title: "处理错误"
-ms.custom: 
+title: 处理错误
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -37,16 +31,14 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: c7d9c08e38c2d82381c94e8813ef0312806bd010
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8020a92345ba85a99c0b46b2d4247d677defd054
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-errors"></a>处理错误
 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类都会引发系统异常（如 <xref:System.ArgumentException>）和特定于 Web 的异常（为 <xref:System.Net.WebRequest.GetResponse%2A> 方法所引发的 <xref:System.Net.WebException>）。  
@@ -71,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 |超时|在请求的超时设置内未接收到任何响应。|  
 |TrustFailure|无法验证服务器证书。|  
 |MessageLengthLimitExceeded|从服务器发送请求或接收响应时，接收到的消息超出指定限制。|  
-|待定|内部异步请求处于挂起状态。|  
+|挂起|内部异步请求处于挂起状态。|  
 |PipelineFailure|此值支持 .NET Framework 基础结构，不能在代码中直接使用。|  
 |ProxyNameResolutionFailure|名称解析程序服务无法解析代理主机名。|  
 |UnknownError|出现未知类型的异常。|  

@@ -1,13 +1,7 @@
 ---
-title: "在集合中执行不区分区域性的字符串操作"
-ms.custom: 
+title: 在集合中执行不区分区域性的字符串操作
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - SortedList class, culture-insensitive string operations
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b84f25aa2470104be98b9f3858091c44f40ba6a7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c8972a8e9d73adc60e073a5eab9388260c907b68
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>在集合中执行不区分区域性的字符串操作
 <xref:System.Collections> 命名空间中包含默认提供区域性敏感型行为的类和成员。 <xref:System.Collections.CaseInsensitiveComparer> 和 <xref:System.Collections.CaseInsensitiveHashCodeProvider> 类的默认构造函数使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性初始化新实例。 默认情况下，<xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> 方法的所有重载都会使用 `Thread.CurrentCulture` 属性新建 <xref:System.Collections.Hashtable> 类的实例。 默认情况下，<xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> 方法重载使用 `Thread.CurrentCulture` 执行区域性敏感型排序。 将字符串用作键时，<xref:System.Collections.SortedList> 中的排序和查找可能会受 `Thread.CurrentCulture` 影响。 请按本节提供的用法建议，在 `Collections` 命名空间中的这些类和方法中获取不区分区域性的结果。  

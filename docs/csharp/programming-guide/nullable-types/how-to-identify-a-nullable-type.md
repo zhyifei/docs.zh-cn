@@ -1,21 +1,14 @@
 ---
 title: 如何：标识可以为 null 的类型（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-caps.latest.revision: 7
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 610ed18308df02c5632361cd09ef94330dea598b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f3ac4ebd77fc92a133eb326919d5ba55264ced97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>如何：标识可以为 null 的类型（C# 编程指南）
 可以使用 C# [typeof](../../../csharp/language-reference/keywords/typeof.md) 运算符创建表示可以为 null 的类型的 <xref:System.Type> 对象：  
@@ -52,6 +45,6 @@ static void Main(string[] args)
 if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>)) {…}  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)  
  [装箱可以为 null 的类型](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)

@@ -1,10 +1,6 @@
 ---
 title: 显式数值转换表（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - conversions [C#], explicit numeric
 - numeric conversions [C#], explicit
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e7a366328035b205b93a50ff6d212a06576ee801
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7363df3e4b2449924222745de409fd68349b93de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>显式数值转换表（C# 参考）
 显式数值转换用于使用强制转换表达式将任何数值类型转换为任何其他数值类型，其中不存在任何隐式转换。 下表显示了这些转换。  
@@ -52,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
 -   将 `double` 转换为 `float` 时，`double` 值舍入为最接近的 `float` 值。 如果 `double` 值太小或太大，无法匹配目标类型，结果将为零或无穷大。  
   
--   将 `float` 或 `double` 转换为 `decimal` 时，源值转换为 `decimal` 表示形式，并四舍五入到第 28 位小数后最接近的数（如果需要）。 根据源值的值，可能出现以下结果之一：  
+-   将 `float` 或 `double` 转换为 `decimal` 时，源值转换为 `decimal` 表示形式，并并五入到第 28 位小数后最接近的数（如果需要）。 根据源值的值，可能出现以下结果之一：  
   
     -   如果源值太小，无法表示为 `decimal`，结果则为零。  
   
@@ -62,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  有关显式转换的详细信息，请参阅 C# 语言规范中的显式。 有关如何访问此规范的详细信息，请参阅 [C# 语言规范](../../../csharp/language-reference/language-specification/index.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  

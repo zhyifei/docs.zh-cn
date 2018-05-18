@@ -4,17 +4,11 @@ description: 了解如何扩展命令行接口 (CLI) 工具。
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 11cf9843f5c10ed7114d45a8c6be0ffeff2b6bad
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具扩展性模型
 
@@ -26,15 +20,15 @@ ms.lasthandoff: 04/28/2018
 
 1. [通过基于每个项目的 NuGet 包](#per-project-based-extensibility)
 
-  基于项目的工具包含在项目上下文中，但允许通过还原轻松安装。
+   基于项目的工具包含在项目上下文中，但允许通过还原轻松安装。
 
 2. [通过具有自定义目标的 NuGet 包](#custom-targets)
 
-  通过自定义目标，可使用自定义任务轻松扩展生成过程。
+   通过自定义目标，可使用自定义任务轻松扩展生成过程。
 
 3. [通过系统路径](#path-based-extensibility)
 
-  基于路径的工具非常适合可在一台计算机上使用的常规、跨项目工具。
+   基于路径的工具非常适合可在一台计算机上使用的常规、跨项目工具。
 
 上方列出的三种扩展性机制并不相互排斥。 可以单独使用、同时使用或结合使用。 选择何种机制很大程度上取决于希望通过扩展实现的目标。
 

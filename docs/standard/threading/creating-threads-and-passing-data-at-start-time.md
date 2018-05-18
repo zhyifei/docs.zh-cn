@@ -1,13 +1,7 @@
 ---
-title: "启动时创建线程并传递数据"
-ms.custom: 
+title: 启动时创建线程并传递数据
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - threading [.NET Framework], passing data to threads
 - threading [.NET Framework], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d17ef8a199061f56f00e39fa887e2e64f64427ec
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 96c0c898f103c058c370a0d108568056b1ff8196
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>启动时创建线程并传递数据
 在操作系统进程创建后，操作系统会注入线程，用于执行相应进程中的代码，包括所有原始应用域。 自此时起，可以创建和销毁应用域，而无需创建或销毁任何操作系统线程。 如果要执行的代码是托管代码，可以检索 <xref:System.Threading.Thread> 类型的静态 <xref:System.Threading.Thread.CurrentThread%2A> 属性，以获取在当前应用域中执行的线程的 <xref:System.Threading.Thread> 对象。 本主题介绍了如何创建线程，以及向线程过程传递数据的替换方法。  

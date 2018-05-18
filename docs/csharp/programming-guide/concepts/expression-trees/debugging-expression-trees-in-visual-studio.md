@@ -1,21 +1,12 @@
 ---
-title: "在 Visual Studio 中调试表达式树 (C#)"
-ms.custom: 
+title: 在 Visual Studio 中调试表达式树 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d74df8ba339526e20850cd8b8f1a4b37c20e22ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0b3017f2800a2eb7332028b9cfe6ed9877222087
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>在 Visual Studio 中调试表达式树 (C#)
 可以在调试应用程序时分析表达式树的结构和内容。 若要快速了解表达式树结构，可以使用 `DebugView` 属性，该属性仅在调试模式下可用。 有关调试的详细信息，请参阅[在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)。  
@@ -39,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="examples"></a>示例  
   
-|Expression|`DebugView` 属性|  
+|表达式|`DebugView` 属性|  
 |----------------|--------------------------|  
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int), "num");`|`$num`|  
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int));`|`$var1`|  
@@ -60,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="examples"></a>示例  
   
-|Expression|`DebugView` 属性|  
+|表达式|`DebugView` 属性|  
 |----------------|--------------------------|  
 |`int num = 10; ConstantExpression expr = Expression.Constant(num);`|10|  
 |`double num = 10; ConstantExpression expr = Expression.Constant(num);`|10D|  
@@ -70,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="examples"></a>示例  
   
-|Expression|`DebugView` 属性|  
+|表达式|`DebugView` 属性|  
 |----------------|--------------------------|  
 |`BlockExpression block = Expression.Block(Expression.Constant("test"));`|`.Block() {`<br /><br /> `"test"`<br /><br /> `}`|  
 |`BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("test"));`|`.Block<System.Object>() {`<br /><br /> `"test"`<br /><br /> `}`|  
@@ -82,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="examples"></a>示例  
   
-|Expression|`DebugView` 属性|  
+|表达式|`DebugView` 属性|  
 |----------------|--------------------------|  
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1));`|`.Lambda #Lambda1<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), "SampleLambda", null);`|`.Lambda SampleLambda<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
@@ -96,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="examples"></a>示例  
   
-|Expression|`DebugView` 属性|  
+|表达式|`DebugView` 属性|  
 |----------------|--------------------------|  
 |`LabelTarget target = Expression.Label(typeof(int), "SampleLabel"); BlockExpression block = Expression.Block( Expression.Goto(target, Expression.Constant(0)), Expression.Label(target, Expression.Constant(-1)));`|`.Block() {`<br /><br /> `.Goto SampleLabel { 0 };`<br /><br /> `.Label`<br /><br /> `-1`<br /><br /> `.LabelTarget SampleLabel:`<br /><br /> `}`|  
 |`LabelTarget target = Expression.Label(); BlockExpression block = Expression.Block( Expression.Goto(target5), Expression.Label(target5));`|`.Block() {`<br /><br /> `.Goto #Label1 { };`<br /><br /> `.Label`<br /><br /> `.LabelTarget #Label1:`<br /><br /> `}`|  
@@ -106,12 +97,12 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="examples"></a>示例  
   
-|Expression|`DebugView` 属性|  
+|表达式|`DebugView` 属性|  
 |----------------|--------------------------|  
 |`Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));`|`1 #+ 2`|  
 |`Expression expr = Expression.ConvertChecked( Expression.Constant(10.0), typeof(int));`|`#(System.Int32)10D`|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
  [在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)  
  [创建自定义可视化工具](/visualstudio/debugger/create-custom-visualizers-of-data)

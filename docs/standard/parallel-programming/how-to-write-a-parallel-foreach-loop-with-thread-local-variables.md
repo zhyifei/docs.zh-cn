@@ -1,31 +1,20 @@
 ---
-title: "如何：编写具有线程局部变量的 Parallel.ForEach 循环"
-ms.custom: 
+title: 如何：编写具有线程局部变量的 Parallel.ForEach 循环
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4c65edd8959cbf5f83e3353770f71cad130953d1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4a89b3f25fb3d6e85c666e57f24e68c297c8c29a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>如何：编写具有线程局部变量的 Parallel.ForEach 循环
 下面的示例演示如何编写使用线程本地变量的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 方法。 当 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环执行时，它会将其源集合划分为多个分区。 每个分区都将获得自己的“线程本地”变量的副本。 （术语“线程本地”在此处不太准确，因为在某些情况下两个分区可能在同一线程上运行。）  

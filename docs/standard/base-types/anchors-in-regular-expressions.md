@@ -1,13 +1,7 @@
 ---
-title: "正则表达式中的定位点"
-ms.custom: 
+title: 正则表达式中的定位点
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 648c86c71de3c92825af3cfdd4ac2ca023f5e027
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2cbf0ceb7d5f8e56955f8989e5eb4efba99540bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anchors-in-regular-expressions"></a>正则表达式中的定位点
 <a name="top"></a> 定位点（原子零宽度断言）指定字符串中必须出现匹配的位置。 在搜索表达式中使用定位点时，正则表达式引擎不在字符串中前进或使用字符，它仅在指定位置查找匹配。 例如， `^` 指定必须从行或字符串的开头开始匹配。 因此，正则表达式 `^http:` 仅当 "http:" 出现在行开头时才与之匹配。 下表列出了 .NET 中正则表达式支持的定位点。  
@@ -71,9 +60,9 @@ ms.lasthandoff: 12/23/2017
 |`(\w+\s\w+)`|匹配后跟一个空格再后跟一个或多个单词字符的一个或多个单词字符。 这是第四个捕获组。|  
 |`,`|匹配逗号。|  
 |`\s\d{4}`|匹配后跟四个十进制数字的空格。|  
-|(-`(\d{4}&#124;present))?`|匹配连字符后跟四个十进制数字或字符串“present”的零或一个匹配项。 这是第六个捕获组。 还包括第七个捕获组。|  
+|<code>(-(\d{4}&#124;present))?</code>|匹配连字符后跟四个十进制数字或字符串“present”的零或一个匹配项。 这是第六个捕获组。 还包括第七个捕获组。|  
 |`,?`|匹配逗号的零个或一个匹配项。|  
-|`(\s\d{4}(-(\d{4}&#124;present))?,?)+`|匹配以下内容的一个或多个匹配项：空格、四个十进制数字、连字符后跟四个十进制数字或字符串“present”的零个或一个匹配项以及零个或一个逗号。 这是第五个捕获组。|  
+|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|匹配以下内容的一个或多个匹配项：空格、四个十进制数字、连字符后跟四个十进制数字或字符串“present”的零个或一个匹配项以及零个或一个逗号。 这是第五个捕获组。|  
   
  [返回页首](#top)  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aed418fe5e2c7d8a217f3016655f39c99300d53
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="data-templating-overview"></a>数据模板化概述
 WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 WPF 控件具有支持自定义数据表示的内置功能。 本主题首先演示了如何定义<xref:System.Windows.DataTemplate>，然后介绍其他数据模板化功能，例如选择了基于自定义逻辑和分层数据的显示的支持的模板。  
@@ -132,7 +132,8 @@ WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>DataTemplate 中有哪些内容？  
- 在前面的示例中，我们放置内的触发器<xref:System.Windows.DataTemplate>使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.DataTemplate.Triggers%2A> 属性。 <xref:System.Windows.Setter>的触发器设置元素的属性的值 (<xref:System.Windows.Controls.Border>元素)，位于<xref:System.Windows.DataTemplate>。 但是，如果属性，你`Setters`关注不在当前的元素的属性<xref:System.Windows.DataTemplate>，它可能更适合于设置使用的属性<xref:System.Windows.Style>对于就是<xref:System.Windows.Controls.ListBoxItem>类 (如果你正在绑定的控件是<xref:System.Windows.Controls.ListBox>)。 例如，如果你希望你<xref:System.Windows.Trigger>要进行动画处理<xref:System.Windows.UIElement.Opacity%2A>值的项时鼠标指向某一项，定义内的触发器<xref:System.Windows.Controls.ListBoxItem>样式。 有关示例，请参阅[样式设置和模板化示例简介](http://go.microsoft.com/fwlink/?LinkID=160010)。  
+
+在前面的示例中，我们放置内的触发器<xref:System.Windows.DataTemplate>使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.DataTemplate.Triggers%2A> 属性。 <xref:System.Windows.Setter>的触发器设置元素的属性的值 (<xref:System.Windows.Controls.Border>元素)，位于<xref:System.Windows.DataTemplate>。 但是，如果属性，你`Setters`关注不在当前的元素的属性<xref:System.Windows.DataTemplate>，它可能更适合于设置使用的属性<xref:System.Windows.Style>对于就是<xref:System.Windows.Controls.ListBoxItem>类 (如果你正在绑定的控件是<xref:System.Windows.Controls.ListBox>)。 例如，如果你希望你<xref:System.Windows.Trigger>要进行动画处理<xref:System.Windows.UIElement.Opacity%2A>值的项时鼠标指向某一项，定义内的触发器<xref:System.Windows.Controls.ListBoxItem>样式。 有关示例，请参阅[样式设置和模板化示例简介](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。
   
  一般情况下，请记住，<xref:System.Windows.DataTemplate>被应用到每个生成<xref:System.Windows.Controls.ListBoxItem>(有关如何以及在何处，它实际应用的详细信息，请参阅<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>页。)。 你<xref:System.Windows.DataTemplate>是关心的演示文稿和数据对象的外观。 在大多数情况下，所有其他方面的演示文稿，如哪些项看起来像选择此项时或如何<xref:System.Windows.Controls.ListBox>排列项，不属于的定义中<xref:System.Windows.DataTemplate>。 有关示例，请参阅[对 ItemsControl 进行样式设置和模板化](#DataTemplating_ItemsControl)一节。  
   
@@ -164,9 +165,9 @@ WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 
  使用就地情况下，模板选择器<xref:System.Windows.Controls.ListBox>现在显示，如下所示：  
   
  ![数据模板化示例屏幕快照](../../../../docs/framework/wpf/data/media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
-  
- 这正是此示例要得到的结果。 有关完整示例，请参阅[数据模板化示例简介](http://go.microsoft.com/fwlink/?LinkID=160009)。  
-  
+
+这正是此示例要得到的结果。 有关完整示例，请参阅[数据模板化示例简介](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro)。
+
 <a name="DataTemplating_ItemsControl"></a>   
 ## <a name="styling-and-templating-an-itemscontrol"></a>对 ItemsControl 进行样式设置和模板化  
  即使<xref:System.Windows.Controls.ItemsControl>不是唯一的控件类型，你可以使用<xref:System.Windows.DataTemplate>，它是非常常见的方案将绑定<xref:System.Windows.Controls.ItemsControl>到集合。 在[什么所属 DataTemplate 中](#what_belongs_in_datatemplate)部分所述的定义你<xref:System.Windows.DataTemplate>只应关心数据的表示形式。 才能知道当不适合用于<xref:System.Windows.DataTemplate>务必了解提供的不同样式和模板属性<xref:System.Windows.Controls.ItemsControl>。 以下示例旨在演示上述每个属性的功能。 <xref:System.Windows.Controls.ItemsControl>在此示例将绑定到相同`Tasks`如同前面的示例的集合。 为便于演示，本示例中的样式和模板都进行了内联声明。  

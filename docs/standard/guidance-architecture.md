@@ -1,20 +1,15 @@
 ---
-title: ".NET 体系结构指南"
-description: "了解有关计划、设计和生成 .NET 软件的推荐做法。"
-keywords: "Docker, 微服务, ASP.NET, 容器, 体系结构"
+title: .NET 体系结构指南
+description: 了解有关计划、设计和生成 .NET 软件的推荐做法。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.prod: .net
 ms.technology: dotnet
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 24c02dfec62304293ab574b90c24c1332ce78108
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7d636e842c7ec91949f2557f74ae724def858053
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-architecture-guidance"></a>.NET 体系结构指南
 

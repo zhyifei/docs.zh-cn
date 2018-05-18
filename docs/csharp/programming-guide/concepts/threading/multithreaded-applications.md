@@ -1,21 +1,12 @@
 ---
-title: "多线程应用程序 (C#)"
-ms.custom: 
+title: 多线程应用程序 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b7015cfb-d506-4eac-b2f8-b2caaa9cc977
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 48b056172e3260952155eb40a1a393d86da78344
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ee4d92ae0ad3dadf6568b367522817484cb7337f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multithreaded-applications-c"></a>多线程应用程序 (C#)
 借助 C#，可以编写同时执行多个任务的应用程序。 可在单独的线程上执行可能妨碍其他任务的任务，这些线程是称为多线程处理或自由线程处理的进程。  
@@ -65,7 +56,7 @@ newThread.Abort();
 ### <a name="thread-properties"></a>线程属性  
  线程还包含多个有用的属性，如下表中所示：  
   
-|属性|值|  
+|属性|“值”|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|如果线程处于活动状态，将包含值 `True`。|  
 |<xref:System.Threading.Thread.IsBackground%2A>|获取或设置布尔值，该值指示线程是否为或应为后台线程。 后台线程类似前台线程，但后台线程不会阻止进程停止。 属于某个进程的所有前台线程均停止后，公共语言运行时通过对仍处于活动状态的后台进程调用 <xref:System.Threading.Thread.Abort%2A> 方法来结束进程。|  
@@ -81,7 +72,7 @@ newThread.Abort();
 ## <a name="foreground-and-background-threads"></a>前台和后台线程  
  前台线程可无限制地运行，而后台线程将在最后一个前台线程停止后立即停止。 可以使用 <xref:System.Threading.Thread.IsBackground%2A> 属性来确定或更改线程的后台状态。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.Thread>  
  [线程同步 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
  [多线程过程的参数和返回值 (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)  

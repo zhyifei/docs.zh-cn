@@ -1,13 +1,6 @@
 ---
-title: "Certmgr.exe（证书管理器工具）"
-ms.custom: 
+title: Certmgr.exe（证书管理器工具）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c303a9d91d12305bd8be4e111aaa8d6ac13eb77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96edfd0f94240d51a224f4522573a450ab027330
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe（证书管理器工具）
 证书管理器工具 (Certmgr.exe) 管理证书、证书信任列表 (CTL) 和证书吊销列表 (CRL)。  
@@ -71,7 +61,7 @@ ms.lasthandoff: 12/22/2017
 |**/e** *encodingType*|指定证书编码类型。 默认值为 `X509_ASN_ENCODING`。|  
 |**/f** *dwFlags*|指定存储打开标志。 这是传递到 **CertOpenStore** 的 *dwFlags* 参数。 默认值为 CERT_SYSTEM_STORE_CURRENT_USER。 仅当使用 **/y** 选项时才考虑此选项。|  
 |**/h**[**elp**]|显示该工具的命令语法和选项。|  
-|/n nam|指定要添加、删除或保存的证书的公用名。 此选项只能用于证书，不能用于 CTL 或 CRL。|  
+|**/n** *nam*|指定要添加、删除或保存的证书的公用名。 此选项只能用于证书，不能用于 CTL 或 CRL。|  
 |**/put**|将证书存储中的 X.509 证书、CTL 或 CRL 保存到文件。 文件以 X.509 格式保存。 **/7** 选项可与 **/put** 选项一起使用，以便用 PKCS #7 格式保存文件。 **/put** 选项后面必须有 **/c**、**/CTL** 或 **/CRL**。 **/all** 选项不能与 **/put** 一起使用。|  
 |**/r** *location*|标识系统存储的注册表位置。 仅当指定 **/s** 选项时才考虑此选项。 *location* 必须是以下项之一：<br /><br /> -   `currentUser` 指示证书存储在 HKEY_CURRENT_USER 项下。 这是默认设置。<br />-   `localMachine` 指示证书存储在 HKEY_LOCAL_MACHINE 项下。|  
 |**/s**|指示证书存储是系统存储。 如果未指定此选项，则会将存储视为 **StoreFile**。|  

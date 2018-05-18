@@ -1,9 +1,6 @@
 ---
-title: "强制转换和类型转换（C# 编程指南）"
+title: 强制转换和类型转换（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - type conversion [C#]
 - data type conversion [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-caps.latest.revision: "52"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1361a7f115e2bae4b2d1f6271fa9020706581691
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>强制转换和类型转换（C# 编程指南）
 由于 C# 是在编译时静态类型化的，因此变量在声明后就无法再次声明，或者无法用于存储其他类型的值，除非该类型可以转换为变量的类型。 例如，不存在从整数到任意字符串的转换。 因此，在将 `i` 声明为整数后，无法将字符串“Hello”赋予它，如下面的代码中所示。  

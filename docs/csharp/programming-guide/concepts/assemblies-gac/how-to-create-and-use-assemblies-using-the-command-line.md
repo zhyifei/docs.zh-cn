@@ -1,21 +1,12 @@
 ---
-title: "如何：使用命令行创建和使用程序集 (C#)"
-ms.custom: 
+title: 如何：使用命令行创建和使用程序集 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d59988ec4899b4115d8d0fd7172e0c8ff8802378
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef872992f17eaaeacf451fa10ef792c47445df80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>如何：使用命令行创建和使用程序集 (C#)
 程序集或动态链接库 (DLL) 会在运行时链接到程序。 为了演示如何生成和使用 DLL，请考虑以下方案：  
@@ -130,7 +121,7 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
   
  有关从命令行进行生成的详细信息，请参阅[在命令行上使用 csc.exe 生成](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../../csharp/programming-guide/index.md)  
  [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
  [创建用于容纳 DLL 函数的类](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

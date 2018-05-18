@@ -1,10 +1,6 @@
 ---
 title: switch 关键字（C# 参考）
 ms.date: 03/07/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
 - switch
@@ -16,14 +12,11 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: 47
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6506278edb782f61b83cecfccba3126282c0ecf8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e21700b36437bf9bd60bb4f33e2833819333f1e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="switch-c-reference"></a>switch（C# 参考）
 `switch` 是一个选择语句，它根据与匹配表达式匹配的模式，从候选列表中选择单个开关部分进行执行。 

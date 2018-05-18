@@ -1,26 +1,15 @@
 ---
-title: "XSLT 编译器 (xsltc.exe)"
-ms.custom: 
+title: XSLT 编译器 (xsltc.exe)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 36696617d1e28a370f6b15f15fb39bc816973f15
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: aef49f70f3a60151aa053a1a94a06bc71401531e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 编译器 (xsltc.exe)
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 然后可以将已编译的样式表直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 不能用 xsltc.exe 生成签名的程序集。  
@@ -44,7 +33,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |选项|描述|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|指定下面样式表的类名称。 类名称可以是完全限定的名称。<br /><br /> 类名称默认为样式表的名称。 例如，如果编译样式表 customers.xsl，则默认类名称为 customers。|  
-|`/debug[`+&#124;-`]`|指定是否生成调试信息。<br /><br /> 指定 `+` 或 `/debug` 将导致编译器生成调试信息并将此信息放在程序数据库 (PDB) 文件中。 生成的 PDB 文件的名称为 `assemblyName`.pdb。<br /><br /> 指定 `-`（在不指定 `/debug` 时生效）将导致不创建任何调试信息。 生成发布程序集。 **注意：**在调试模式下编译可能会显著影响 XSLT 性能。|  
+|`/debug[`+&#124;-`]`|指定是否生成调试信息。<br /><br /> 指定 `+` 或 `/debug` 将导致编译器生成调试信息并将此信息放在程序数据库 (PDB) 文件中。 生成的 PDB 文件的名称为 `assemblyName`.pdb。<br /><br /> 指定 `-`（在不指定 `/debug` 时生效）将导致不创建任何调试信息。 生成发布程序集。 **注意：** 在调试模式下编译可能会显著影响 XSLT 性能。|  
 |`/help`|显示该工具的命令语法和选项。|  
 |`/nologo`|禁止显示编译器版权消息。|  
 |`/platform:` `string`|指定程序集可以在其上运行的平台。 下面说明有效的平台值：<br /><br /> `x86` 将程序集编译成可由 32 位、x86 兼容的公共语言运行库运行<br /><br /> `x64` 将程序集编译成可由 64 位公共语言运行库在支持 AMD64 或 EM64T 指令集的计算机上运行。<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 将程序集编译成可由 64 位公共语言运行库在具有 [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 处理器的计算机上运行。<br /><br /> `anycpu` 将程序集编译成可在任何平台上运行。 这是默认设置。|  

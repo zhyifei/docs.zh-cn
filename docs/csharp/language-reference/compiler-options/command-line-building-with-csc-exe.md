@@ -1,21 +1,15 @@
 ---
-title: "使用 csc.exe 实现命令行生成"
+title: 使用 csc.exe 实现命令行生成
 ms.date: 04/19/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5fe7b735977b0cde0bed266815987b773be6bdbe
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3cd49a17991f3d7606b0364a83be2b2e30ba0cce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 实现命令行生成
 通过在命令提示符处键入 C# 编译器的可执行文件名称 (csc.exe)，可调用该编译器。
@@ -24,14 +18,14 @@ ms.lasthandoff: 01/19/2018
 
 如果使用标准命令提示符窗口，则必须调整路径，然后才能从计算机的任意子目录调用 csc.exe。 还必须运行 vsvars32.bat 来设置适当的环境变量以支持命令行生成操作。 有关 vsvars32.bat 的详细信息，包括如何查找和运行它的说明，请参阅[如何：为 Visual Studio 命令行设置环境变量](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
 
-如果你使用的计算机只安装有 [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)]，则可以在**“SDK 命令提示符”**处使用 C# 编译器，该窗口可通过**“Microsoft .NET Framework SDK”**菜单选项打开。
+如果你使用的计算机只安装有 [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)]，则可以在 **“SDK 命令提示符”** 处使用 C# 编译器，该窗口可通过 **“Microsoft .NET Framework SDK”** 菜单选项打开。
 
 也可以使用 MSBuild 以编程方式生成 C# 程序。 有关详细信息，请参阅 [MSBuild](/visualstudio/msbuild/msbuild)。
 
 csc.exe 可执行文件通常位于 Windows 目录下的 Microsoft.NET\Framework\\\<Version> 文件夹中。 根据每台计算机上的具体配置，此位置可能有所不同。 如果计算机上安装了不止一个版本的 .NET Framework，您将发现此文件的多个版本。 有关此类安装的详细信息，请参阅[如何：确定安装的 .NET Framework 版本](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 > [!TIP]
->  使用 Visual Studio IDE 生成项目时，可以在**“输出”**窗口显示**“csc”**命令以及与之关联的编译器选项。 若要显示此信息，请按照[如何：查看、保存和配置生成日志文件](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)中的说明将日志数据的详细级别更改为**“常规”**或**“详细”**。 重新生成项目之后，在**“输出”**窗口中搜索**“csc”**即可找到所调用的 C# 编译器。
+>  使用 Visual Studio IDE 生成项目时，可以在 **“输出”** 窗口显示 **“csc”** 命令以及与之关联的编译器选项。 若要显示此信息，请按照[如何：查看、保存和配置生成日志文件](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)中的说明将日志数据的详细级别更改为 **“常规”** 或 **“详细”**。 重新生成项目之后，在 **“输出”** 窗口中搜索 **“csc”** 即可找到所调用的 C# 编译器。
 
  **在本主题中**
 

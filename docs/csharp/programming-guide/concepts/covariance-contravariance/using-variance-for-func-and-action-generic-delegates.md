@@ -1,21 +1,12 @@
 ---
-title: "对 Func 和 Action 泛型委托使用变体 (C#)"
-ms.custom: 
+title: 对 Func 和 Action 泛型委托使用变体 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1b12a08579f70a07ebb90bfe723209b9f03460e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 297d61d698d9713a8335ffd0aa1d898c950c3e87
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>对 Func 和 Action 泛型委托使用变体 (C#)
 这些示例演示如何使用 `Func` 和 `Action` 泛型委托中的协变和逆变来启用重用方法并为代码中提供更多的灵活性。  
@@ -89,6 +80,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [协变和逆变 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
  [泛型](~/docs/standard/generics/index.md)

@@ -1,21 +1,14 @@
 ---
 title: 上下文关键字（C# 参考）
 ms.date: 03/07/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a6268e09b8063f95aa11fc1563f0b5b5d5d96a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b15b0df5e3f65494a037eed7992c9a16d9b8578
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contextual-keywords-c-reference"></a>上下文关键字（C# 参考）
 上下文关键字用于在代码中提供特定含义，但它不是 C# 中的保留字。 本部分介绍下面这些上下文关键字：  
@@ -31,7 +24,7 @@ ms.lasthandoff: 11/21/2017
 |[partial](../../../csharp/language-reference/keywords/partial-type.md)|在整个同一编译单元内定义分部类、结构和接口。|  
 |[remove](../../../csharp/language-reference/keywords/remove.md)|定义一个自定义事件访问器，客户端代码取消订阅事件时会调用该访问器。|  
 |[set](../../../csharp/language-reference/keywords/set.md)|为属性或索引器定义访问器方法。|  
-|[值](../../../csharp/language-reference/keywords/value.md)|用于设置访问器和添加或删除事件处理程序。|  
+|[value](../../../csharp/language-reference/keywords/value.md)|用于设置访问器和添加或删除事件处理程序。|  
 |[var](../../../csharp/language-reference/keywords/var.md)|使编译器能够确定在方法作用域中声明的变量类型。|  
 |[when](when.md)|指定 `catch` 块的筛选条件或 `switch` 语句的 `case` 标签。|
 |[where](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|将约束添加到泛型声明。 （另请参阅 [where](../../../csharp/language-reference/keywords/where-clause.md)）。|  
@@ -39,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
  C# 3.0 中引入的所有查询关键字也都是上下文相关的。 有关详细信息，请参阅[查询关键字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)

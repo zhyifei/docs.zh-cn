@@ -1,29 +1,18 @@
 ---
-title: "访问 DOM 中的属性"
-ms.custom: 
+title: 访问 DOM 中的属性
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4f134761c4dadcef4692194293c8c99899bb6be2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6b295c94fda22d4a17fb485add13ec67f1e9ae8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-attributes-in-the-dom"></a>访问 DOM 中的属性
 属性是元素的属性，不是元素的子级。 这一区别很重要，因为用来浏览 XML 文档对象模型 (DOM) 的同级、父级和子节点的方法不同。 例如，PreviousSibling 和 NextSibling 方法不用于从元素转到属性，也不用于在属性之间导航。 相反，属性是元素属性，归元素所有，包含 OwnerElement 属性，而不是 parentNode 属性，并且有不同的导航方法。  

@@ -1,20 +1,13 @@
 ---
-title: "查询表达式基础"
-description: "与查询表达式相关的概念介绍"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 查询表达式基础
+description: 与查询表达式相关的概念介绍
 ms.date: 11/30/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 7a1cf9eea4c5d75c6bcb6d2f0d5f68a07e3158d0
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.openlocfilehash: d211b0770bdc69f513e4129c818f96650de63e77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-expression-basics"></a>查询表达式基础
 
@@ -175,7 +168,7 @@ ms.lasthandoff: 11/30/2017
   
  有关详细信息，请参阅[如何：对分组操作执行子查询](perform-a-subquery-on-a-grouping-operation.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../programming-guide/index.md)  
  [LINQ 查询表达式](index.md)  
  [查询关键字 (LINQ)](../language-reference/keywords/query-keywords.md)  

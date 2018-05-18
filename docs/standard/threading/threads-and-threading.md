@@ -1,30 +1,19 @@
 ---
 title: 线程与线程处理
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - multiple threads
 - threading [.NET Framework]
 - threading [.NET Framework], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02c676e3bb6c0dcc9e65858367d13f41adc797e8
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 4380c509a08ebe59f9561a9e6fc596458768917f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threads-and-threading"></a>线程与线程处理
 操作系统使用进程隔开正在执行的不同应用。 线程是操作系统向其分配处理器时间的基本单位，在相应进程内多个线程可以同时执行代码。 每个线程负责维护异常处理程序、计划优先级，以及系统用来保存被排入计划前线程上下文的一组结构。 线程上下文包含线程在其主机进程地址空间中顺畅继续执行所需的全部信息，包括线程的一组 CPU 寄存器和堆栈。  

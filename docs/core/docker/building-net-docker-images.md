@@ -5,18 +5,12 @@ author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.prod: dotnet-core
-ms.technology: dotnet-docker
-ms.devlang: dotnet
 ms.custom: mvc
-manager: wpickett
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: c1983be59b4a961cabd94915852e0cab7811682c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f539efe15ce68a77890538430a170da64ff325e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>为 .NET Core 应用程序生成 Docker 映像
 
@@ -45,11 +39,11 @@ ms.lasthandoff: 04/28/2018
 为什么是三个映像？
 因为在开发、生成和运行容器化应用程序时，具有不同的优先级。
 
-* **开发：**优先级注重循环访问更改的速度以及调试更改的能力。 与更改代码并且快速查看相比，映像的大小是否不是那么重要？
+* **开发：** 优先级注重循环访问更改的速度以及调试更改的能力。 与更改代码并且快速查看相比，映像的大小是否不是那么重要？
 
-* **生成：**此映像包含编译应用所需的所有内容，其中包括编译器和任何其他用于优化二进制文件的依赖项。  可使用生成映像创建置于生产映像中的资产。 生成映像用于持续集成或用于生成环境中。 此方法允许生成代理在生成映像实例中编译和生成应用程序（包括所有必需的依赖项）。 生成代理只需要了解如何运行此 Docker 映像即可。
+* **生成：** 此映像包含编译应用所需的所有内容，其中包括编译器和任何其他用于优化二进制文件的依赖项。  可使用生成映像创建置于生产映像中的资产。 生成映像用于持续集成或用于生成环境中。 此方法允许生成代理在生成映像实例中编译和生成应用程序（包括所有必需的依赖项）。 生成代理只需要了解如何运行此 Docker 映像即可。
 
-* **生产：**部署和启动映像的速度可以有多快？ 此映像很小，因此从 Docker 注册表到 Docker 主机的网络性能得到了优化。 已准备运行内容，以此实现从 Docker 运行到处理结果的最快时间。 Docker 模型中不需要动态代码编译。 放置在此映像中的内容将限制为运行应用程序所需的二进制文件和内容。
+* **生产：** 部署和启动映像的速度可以有多快？ 此映像很小，因此从 Docker 注册表到 Docker 主机的网络性能得到了优化。 已准备运行内容，以此实现从 Docker 运行到处理结果的最快时间。 Docker 模型中不需要动态代码编译。 放置在此映像中的内容将限制为运行应用程序所需的二进制文件和内容。
 
     例如，`dotnet publish` 输出包含：
 

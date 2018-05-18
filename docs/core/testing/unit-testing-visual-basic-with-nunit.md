@@ -3,17 +3,13 @@ title: 使用 dotnet test 和 NUnit 在 .NET Core 中进行 Visual Basic 单元�
 description: 使用 NUnit 分步构建一个 Visual Basic 示例解决方案，在此交互式体验中学习 .NET Core 中的单元测试概念。
 author: rprouse
 ms.date: 12/01/2017
-ms.topic: conceptual
 dev_langs:
 - vb
-ms.prod: dotnet-core
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: b275d1da2c46b1ba8376bf0a77b4dcb8d6f76445
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 552b60dd3937abc413c1b4410213948f3b509526
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>使用 dotnet test 和 NUnit 进行 Visual Basic .NET Core 库的单元测试
 

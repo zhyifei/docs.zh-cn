@@ -1,21 +1,15 @@
 ---
-title: "接口属性（C# 编程指南）"
+title: 接口属性（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-caps.latest.revision: "13"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1da48adf73cccb28d9cff641948db52b40b8c1bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bfa03c7ebe82f3f6a03666d908a5fa9d4e386172
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-properties-c-programming-guide"></a>接口属性（C# 编程指南）
 可以在[接口](../../../csharp/language-reference/keywords/interface.md)上声明属性。 下面是接口索引器访问器的示例：  
@@ -27,7 +21,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="example"></a>示例  
  在此示例中，接口 `IEmployee` 具有读写属性 `Name` 和只读属性 `Counter`。 类 `Employee` 实现 `IEmployee` 接口，并使用这两个属性。 程序读取新员工的姓名以及当前员工数，并显示员工名称和计算的员工数。  
   
- 可以使用属性的完全限定名称，它引用其中声明成员的接口。 例如:   
+ 可以使用属性的完全限定名称，它引用其中声明成员的接口。 例如:  
   
  [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
@@ -55,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
  `Employee name: Hazem Abolrous`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [使用属性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  

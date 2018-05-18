@@ -1,29 +1,18 @@
 ---
-title: "使用 XPathDocument 和 XmlDocument 读取 XML 数据"
-ms.custom: 
+title: 使用 XPathDocument 和 XmlDocument 读取 XML 数据
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9282742669c8e3d8b4a856694c76db834282dbf9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dc8e1b85543fca0281b6433dd5c87c28b37818db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>使用 XPathDocument 和 XmlDocument 读取 XML 数据
 可以通过两种方式读取 <xref:System.Xml.XPath?displayProperty=nameWithType> 命名空间中的 XML 文档。 一种方式是使用只读 <xref:System.Xml.XPath.XPathDocument> 类读取 XML 文档，另一种方式是使用 <xref:System.Xml.XmlDocument> 命名空间中可编辑的 <xref:System.Xml?displayProperty=nameWithType> 类读取 XML 文档。  

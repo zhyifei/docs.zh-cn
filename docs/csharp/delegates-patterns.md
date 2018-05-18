@@ -1,20 +1,13 @@
 ---
-title: "委托的常见模式"
-description: "了解在代码中使用委托避免组件间强耦合的常见模式。"
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 委托的常见模式
+description: 了解在代码中使用委托避免组件间强耦合的常见模式。
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 83214800fb997e9274cacfd1bae85ab07c4515a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-patterns-for-delegates"></a>委托的常见模式
 
@@ -242,4 +235,4 @@ public static void LogMessage(string msg)
 
 记录器类可在不引入重大更改的情况下进行任何数量的增强或更改。 与类相似，无法在没有重大更改的风险下修改公共 API。 但是，因为仅通过委托进行记录器和输出引擎之间的耦合，因此不涉及其他类型（如接口或基类）。 耦合度越小越好。
 
-[下一部分](events-overview.md)
+[下一篇](events-overview.md)

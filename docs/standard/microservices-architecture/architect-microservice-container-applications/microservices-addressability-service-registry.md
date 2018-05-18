@@ -1,21 +1,14 @@
 ---
 title: 微服务可寻址性和服务注册表
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务可寻址性和服务注册表
-keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5770be2a1a6284866dc768a14c7b6ec9525be487
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: cce0b11ca8cb4fe4d97e2f575888254f92543fc3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>微服务可寻址性和服务注册表
 

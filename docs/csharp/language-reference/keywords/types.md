@@ -1,21 +1,15 @@
 ---
-title: "类型（C# 参考）"
+title: 类型（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - types [C#]
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
-caps.latest.revision: "13"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2c7285e237b04c1290391c4bba3e62886dceb83c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d0fe09092b438af90658d599b6a5e63cb62af580
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-c-reference"></a>类型（C# 参考）
 C# 类型化系统包含以下类别：  
@@ -32,9 +26,9 @@ C# 类型化系统包含以下类别：
   
  本部分还介绍了 [void](../../../csharp/language-reference/keywords/void.md)。  
   
- 值类型可为空，即是说它们可以存储其他非值状态。 有关详细信息，请参阅[可以为 Null 的类型](../../../csharp/programming-guide/nullable-types/index.md)。  
+ 值类型可为空，即是说它们可以存储其他非值状态。 有关详细信息，请参阅[可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  

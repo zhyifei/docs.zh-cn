@@ -4,16 +4,11 @@ description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.topic: conceptual
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: d4ee1c9ef66ef61156453786f65d16470d7a5ea2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8958c39ba16cadbfab95e35fa36e8e85ce0a4ab8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -32,7 +27,7 @@ ms.lasthandoff: 04/28/2018
 1. 打开项目：
 
     * 打开 Visual Studio Code。
-    * 依次单击左侧菜单上的“资源管理器”图标和**“打开文件夹”**。
+    * 依次单击左侧菜单上的“资源管理器”图标和 **“打开文件夹”**。
     * 从主菜单中选择“文件” > “打开文件夹”，打开要在其中放置 C# 项目的文件夹，然后单击“选择文件夹”。 在我们的示例中，为项目创建名为“HelloWorld”的文件夹。
 
       ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
@@ -66,7 +61,7 @@ ms.lasthandoff: 04/28/2018
 
     ![打开 Program.cs 文件](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code 会提示添加缺少的资产，以生成和调试应用。 选择**“是”**。 
+2. Visual Studio Code 会提示添加缺少的资产，以生成和调试应用。 选择 **“是”**。 
 
     ![提示添加缺少的资产](media/with-visual-studio-code/missing-assets.png)
 

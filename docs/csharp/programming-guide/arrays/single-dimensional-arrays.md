@@ -1,21 +1,15 @@
 ---
-title: "一维数组（C# 编程指南）"
+title: 一维数组（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-caps.latest.revision: "18"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fed9042ba37164927bb8073bc669fafeb5d40598
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2f5dcb032c5dea764cdd212bbcd02e1640089d96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>一维数组（C# 编程指南）
 可以声明五个整数的一维数组，如以下示例所示：  
@@ -24,12 +18,12 @@ ms.lasthandoff: 11/21/2017
   
  此数组包含从 `array[0]` 到 `array[4]` 的元素。 [new](../../../csharp/language-reference/keywords/new.md) 运算符用于创建数组并将数组元素初始化为其默认值。 在此示例中，所有数组元素都将被初始化为零。  
   
- 可使用相同方式声明存储字符串元素的数组。 例如:   
+ 可使用相同方式声明存储字符串元素的数组。 例如:  
   
  [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
 ## <a name="array-initialization"></a>数组初始化  
- 可以在声明时初始化数组，在这种情况下，无需秩说明符，因为它已由初始化列表中的元素数目提供。 例如:   
+ 可以在声明时初始化数组，在这种情况下，无需秩说明符，因为它已由初始化列表中的元素数目提供。 例如:  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
   
@@ -41,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideArrays#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_5.cs)]  
   
- 可以在不初始化的情况下声明数组变量，但必须使用 `new` 运算符向此变量分配数组。 例如:   
+ 可以在不初始化的情况下声明数组变量，但必须使用 `new` 运算符向此变量分配数组。 例如:  
   
  [!code-csharp[csProgGuideArrays#9](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_6.cs)]  
   
@@ -56,9 +50,9 @@ ms.lasthandoff: 11/21/2017
   
  有关值类型和引用类型的详细信息，请参阅[类型](../../../csharp/language-reference/keywords/types.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Array>  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [阵列](../../../csharp/programming-guide/arrays/index.md)  
+ [数组](../../../csharp/programming-guide/arrays/index.md)  
  [多维数组](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
  [交错数组](../../../csharp/programming-guide/arrays/jagged-arrays.md)

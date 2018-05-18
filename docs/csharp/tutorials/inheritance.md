@@ -1,26 +1,21 @@
 ---
-title: "C# 中的继承"
-description: "了解如何在 C# 库和应用程序中运用继承。"
-keywords: "继承 (C#), 基类, 派生类, 抽象基类"
+title: C# 中的继承
+description: 了解如何在 C# 库和应用程序中运用继承。
 author: rpetrusha
-manager: wpickett
 ms.author: ronpet
 ms.date: 08/16/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 1476425594e55531fdb56de531ee61808dccd7db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承
 
 此教程将介绍 C# 中的继承。 继承是面向对象的编程语言的一项功能，可方便你定义提供特定功能（数据和行为）的基类，并定义继承或重写此功能的派生类。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 阅读此教程的前提是，你已安装 .NET Core。 有关安装说明，请参阅 [.NET Core 安装指南](https://www.microsoft.com/net/core)。 还需要安装代码编辑器。 此教程使用 [Visual Studio Code](https://code.visualstudio.com)，但你可以选择使用任何代码编辑器。
 
@@ -137,7 +132,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 受保护 <xref:System.Object.Finalize%2A> 方法：用于在垃圾回收器回收对象的内存之前释放非托管资源。
 
-- 受保护 <xref:System.Object.MemberwiseClone%2A> 方法：创建当前对象的浅表复制。
+- 受保护 <xref:System.Object.MemberwiseClone%2A> 方法：创建当前对象的卷影克隆。
 
 由于是隐式继承，因此我们可以调用 `SimpleClass` 对象中任何继承的成员，就像它实际上是 `SimpleClass` 类中定义的成员一样。 例如，下面的示例调用 `SimpleClass` 从 <xref:System.Object> 继承而来的 `SimpleClass.ToString` 方法。
 
@@ -185,7 +180,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
   为了最大限度地提高代码重用性并创建合乎逻辑的直观继承层次结构，我们希望确保在 `Publication` 类中只添加所有或大多数出版物通用的数据和功能。 然后，派生类可以实现所表示的特定出版物种类的唯一成员。
 
-- 类层次结构的扩展空间大小。 是否要开发包含三个或多个类的层次结构，而不是仅包含一个基类和一个或多个派生类？ 例如，`Publication` 可以是 `Periodical` 的基类，而后者又是 `Magazine`、`Journal` 和 `Newspaper` 的基类。
+- 类层次结构的扩展空间大小。 是否要开发包含三个或多个类的层次结构，而不是仅包含一个基类和一个或多个派生类？ 例如，`Publication` 可以是 `Periodical` 的基类，同时又是 `Magazine`、`Journal` 和 `Newspaper` 的基类。
 
   在我们的示例中，我们将使用包含 `Publication` 类和一个派生类 `Book` 的简单层次结构。 我们可以将此示例轻松扩展为创建其他许多派生自 `Publication` 的类，如 `Magazine` 和 `Article`。
 

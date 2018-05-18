@@ -1,10 +1,6 @@
 ---
 title: '[] 运算符（C# 参考）'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 03664f5604bb7d7dce9e8ae2ff0ec045c6a203b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 65908bb3bcd8912ef81fc094e5958ae8dc4ae1f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>[] 运算符（C# 参考）
 方括号 (`[]`) 可用于数组、索引器和属性。 还可用于指针。  
@@ -55,11 +48,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 运算符](../../../csharp/language-reference/operators/index.md)  
- [阵列](../../../csharp/programming-guide/arrays/index.md)  
+ [数组](../../../csharp/programming-guide/arrays/index.md)  
  [索引器](../../../csharp/programming-guide/indexers/index.md)  
- [不安全](../../../csharp/language-reference/keywords/unsafe.md)  
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
  [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)

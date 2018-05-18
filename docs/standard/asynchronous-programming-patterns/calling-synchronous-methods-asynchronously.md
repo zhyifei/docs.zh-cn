@@ -1,13 +1,7 @@
 ---
-title: "使用异步方式调用同步方法"
-ms.custom: 
+title: 使用异步方式调用同步方法
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -26,18 +20,13 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e7e6f402d9423a8ae1ee464499f1b794785c2b06
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cbe0178033338754c9e412dfcac993f042d943d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>使用异步方式调用同步方法
 使用 .NET Framework 可以以异步方式调用任何方法。 要实现此操作，请定义一个委托，此委托具有与你要调用的方法相同的签名；公共语言运行时会自动使用适当的签名为此委托定义 `BeginInvoke` 和 `EndInvoke` 方法。  

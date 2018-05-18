@@ -1,20 +1,15 @@
 ---
-title: "Lambda 表达式"
-description: "了解如何使用 Lambda 表达式，它们是可作为参数传递的可执行代码块。"
-keywords: ".NET, .NET Core, lambda 表达式, lambda, 委托"
-ms-author: ronpet
+title: Lambda 表达式
+description: 了解如何使用 Lambda 表达式，它们是可作为参数传递的可执行代码块。
+ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 6395d873c4a04501d25a2edbb1acc0a163dd3e5c
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: e37f0e72ee02915d16509fb2ff48bd114e8ad466
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lambda-expressions"></a>Lambda 表达式 #
 

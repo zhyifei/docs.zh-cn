@@ -1,10 +1,6 @@
 ---
-title: "值类型（C# 参考）"
+title: 值类型（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - cs.valuetypes
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 281b811f2a8a1f2c364405b563f9f103899b492c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fdda6942c6883baaaea5e305a1e699a01e707d2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 值类型包含两个主要类别：  
@@ -36,7 +29,7 @@ ms.lasthandoff: 11/21/2017
   
     -   [浮点类型](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
   
-    -   [小数](../../../csharp/language-reference/keywords/decimal.md)  
+    -   [decimal](../../../csharp/language-reference/keywords/decimal.md)  
   
 -   [bool](../../../csharp/language-reference/keywords/bool.md)  
   
@@ -103,9 +96,9 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  有关 new 运算符的详细信息，请参阅 [new](../../../csharp/language-reference/keywords/new.md)。  
   
- 有关设置数值类型的输出格式的信息，请参阅[设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)。
+ 有关设置数值类型的输出格式的信息，请参阅[设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  

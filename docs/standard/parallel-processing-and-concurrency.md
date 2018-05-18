@@ -2,26 +2,19 @@
 title: .NET 中的并行处理、并发和异步编程
 description: 了解如何使用 .NET 中的并行处理和异步编程功能来提高应用程序的响应速度和运行速度
 ms.date: 04/06/2018
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - parallel processing [.NET]
 - concurrency [.NET]
 - asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e4ee282f226d553a8bca92c1afb184bc181d6bb7
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 896b572ef6a9b285787c39a41c99c8f0209b28cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>.NET 中的并行处理、并发和异步编程
 借助 .NET，可以通过多种方式来编写异步代码，以提高应用程序的用户响应速度；并能编写并行代码，以使用多个执行线程来最大限度地提升用户计算机的性能。  

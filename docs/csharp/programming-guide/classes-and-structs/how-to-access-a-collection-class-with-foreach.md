@@ -1,21 +1,14 @@
 ---
 title: 如何：使用 foreach 访问集合类（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - collection classes [C#], foreach statement
 ms.assetid: a6b9cf5c-6c8d-4223-b12c-288949434493
-caps.latest.revision: 21
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0cf827e958d4dc3b951d17b53effd155356c0ca5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b02b9f4508984e3248cfd8e0cde0c994e1b871ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-collection-class-with-foreach-c-programming-guide"></a>如何：使用 foreach 访问集合类（C# 编程指南）
 下面的代码示例演示如何编写可与 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 结合使用的非泛型集合类。 该示例定义了字符串 tokenizer 类。  
@@ -67,9 +60,9 @@ foreach (int item in f)
   
  省略 <xref:System.Collections.IEnumerable> 和 <xref:System.Collections.IEnumerator> 的缺点是：集合类不再可与其他公共语言运行时语言的 `foreach` 语句或等效语句互操作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Collections.Generic>  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [阵列](../../../csharp/programming-guide/arrays/index.md)  
+ [数组](../../../csharp/programming-guide/arrays/index.md)  
  [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)

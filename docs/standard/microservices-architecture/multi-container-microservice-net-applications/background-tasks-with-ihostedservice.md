@@ -1,21 +1,14 @@
 ---
-title: "使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务"
-description: "用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
+description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d60a4590682b79a9f8ac57afee09884b7edd1f98
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 083d2a8c6a0d1649f8bfb2c21a92fb43381fe9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 
@@ -253,15 +246,15 @@ WebHost.CreateDefaultBuilder(args)
 
 -   **Building a scheduled task in ASP.NET Core/Standard 2.0**（在 ASP.NET Core/Standard 2.0 中构建计划任务） 
 
-    [https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html](https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html)
+    [*https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html*](https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html)
 
 -   **Implementing IHostedService in ASP.NET Core 2.0**（在 ASP.NET Core 2.0 中实现 IHostedService） 
 
-    [https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
+    [*https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice*](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
 
 -   **ASP.NET Core 2.1 托管示例** 
 
-    [https://github.com/aspnet/Hosting/tree/dev/samples/GenericHostSample](https://github.com/aspnet/Hosting/tree/dev/samples/GenericHostSample)
+    [*https://github.com/aspnet/Hosting/tree/dev/samples/GenericHostSample*](https://github.com/aspnet/Hosting/tree/dev/samples/GenericHostSample)
 
 
 

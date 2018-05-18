@@ -1,21 +1,14 @@
 ---
 title: 微服务体系结构中的通信
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务体系结构中的通信
-keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6bf4de57d3431577e6c770a5a83b911f41e5a4fe
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 12899f7ee0f95ccc38d7de152c316442e9bcc8e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服务体系结构中的通信
 

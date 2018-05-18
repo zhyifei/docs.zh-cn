@@ -1,25 +1,19 @@
 ---
-title: "装箱可以为 null 的类型（C# 编程指南）"
+title: 装箱可以为 null 的类型（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - boxing [C#], nullable types
 - unboxing [C#], nullable types
 - nullable types [C#], boxing and unboxing
 ms.assetid: bdb5b626-abc0-405d-8f64-0f0a0bf883a4
-caps.latest.revision: "12"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 29fccba56f6758fdfd407fa1879baa9260b69187
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2c7602bf45f1861d3a32a73824e9fedf0a4d29d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>装箱可以为 null 的类型（C# 编程指南）
-基于可以为 null 的类型的对象仅在其不为 null 时才可装箱。 如果 <xref:System.Nullable%601.HasValue%2A> 为 `false`，则对象引用将分配给 `null` 而不是进行装箱。 例如：  
+基于可以为 null 的类型的对象仅在其不为 null 时才可装箱。 如果 <xref:System.Nullable%601.HasValue%2A> 为 `false`，则对象引用将分配给 `null` 而不是进行装箱。 例如:  
   
 ```csharp  
 bool? b = null;  
@@ -27,7 +21,7 @@ object o = b;
 // Now o is null.  
 ```  
   
- 假如对象为非 null，即如果 <xref:System.Nullable%601.HasValue%2A> 为 `true`，则将发生装箱，但仅装箱可以为 null 的对象所基于的基础类型。 装箱某个可以为 null 的非 null 值类型将装箱该值类型本身，而不是包装该值类型的 <xref:System.Nullable%601?displayProperty=nameWithType>。 例如：  
+ 假如对象为非 null，即如果 <xref:System.Nullable%601.HasValue%2A> 为 `true`，则将发生装箱，但仅装箱可以为 null 的对象所基于的基础类型。 装箱某个可以为 null 的非 null 值类型将装箱该值类型本身，而不是包装该值类型的 <xref:System.Nullable%601?displayProperty=nameWithType>。 例如:  
   
 ```csharp  
 bool? b = false;  
@@ -72,7 +66,7 @@ int? i2 = (int?)iBoxed;
     string str = ic.ToString();  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)  
  [如何：标识可以为 null 的类型](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)

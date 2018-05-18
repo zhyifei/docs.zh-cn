@@ -1,20 +1,13 @@
 ---
-title: "C# 枚举 - C# 语言介绍"
-description: "了解 C# 中的枚举，即离散的已命名常量"
-keywords: .NET, C#
-author: BillWagner
-ms.author: wiwagn
+title: C# 枚举 - C# 语言介绍
+description: 了解 C# 中的枚举，即离散的已命名常量
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7fe2626381cb90e55842e3be17dd450eb73d5a5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enums"></a>枚举
 
@@ -32,7 +25,7 @@ ms.lasthandoff: 10/18/2017
 
 如上面的示例所示，`enum` 成员声明可以包含用于指定成员值的常数表达式。 每个 `enum` 成员的常量值都必须介于 `enum` 的基础类型范围内。 如果 `enum` 成员声明未显式指定值，那么会为成员指定值 0（如果是 `enum` 类型中的首个成员）或原文前一个 `enum` 成员的值加 1。
 
-可使用类型显式转换功能将 `Enum` 值转换成整型值，反之亦然。 例如: 
+可使用类型显式转换功能将 `Enum` 值转换成整型值，反之亦然。 例如:
 
 [!code-csharp[EnumStorage](../../../samples/snippets/csharp/tour/enums/Program.cs#L49-L50)]
 

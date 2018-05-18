@@ -1,29 +1,18 @@
 ---
-title: "更改 XML 文档中的命名空间声明"
-ms.custom: 
+title: 更改 XML 文档中的命名空间声明
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6db78e689b8529ef62a3b42c2cefb6a5b3d3f02f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2fa41e8a4e8f5a15d789ddc81c2b94072c6f16b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>更改 XML 文档中的命名空间声明
 XmlDocument 将命名空间声明和 xmlns 属性公开为文档对象模型的一部分。 这些声明和属性存储在 XmlDocument 中，因此在可以保存文档时暂留这些属性的位置。 更改这些属性对树中现有其他节点的 Name、NamespaceURI 和 Prefix 属性没有影响。 例如，如果加载以下文档，`test` 元素包含 NamespaceURI `123.`  

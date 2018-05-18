@@ -1,20 +1,13 @@
 ---
-title: "对 join 子句的结果进行排序"
-description: "如何对 join 子句的结果进行排序。"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 对 join 子句的结果进行排序
+description: 如何对 join 子句的结果进行排序。
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: a7458901-1201-4c25-b8d9-c04ca52e0eb9
-ms.openlocfilehash: f948c18fb16a4f3ac02945b4a63583f1b01cad40
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f426152e614ed9a9c4aa41d7ba7cb8ddf1cd3063
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-the-results-of-a-join-clause"></a>对 join 子句的结果进行排序
 此示例演示如何对联接运算的结果进行排序。 请注意，排序在联接之后执行。 虽然可以在联接之前将 `orderby` 子句用于一个或多个源序列，不过通常不建议这样做。 某些 LINQ 提供程序可能不会在联接之后保留该排序。  

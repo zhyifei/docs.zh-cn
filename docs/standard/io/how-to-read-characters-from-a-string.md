@@ -1,13 +1,7 @@
 ---
 title: 如何：从字符串中读取字符
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-caps.latest.revision: 13
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c4023d8e801da542414aac1fddaf7aef5bf1e98f
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: c2e128f1011b6daa5c0e8b62252c8adc3175586c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-characters-from-a-string"></a>如何：从字符串中读取字符
 下面的代码示例展示了如何从字符串中异步和同步读取字符。  
@@ -58,4 +47,4 @@ ms.lasthandoff: 04/18/2018
  [如何：从文件读取文本](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
  [如何：向文件写入文本](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
  [如何：向字符串写入字符](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
- [文件和流 I-O](../../../docs/standard/io/index.md)
+ [文件和流 I/O](../../../docs/standard/io/index.md)
