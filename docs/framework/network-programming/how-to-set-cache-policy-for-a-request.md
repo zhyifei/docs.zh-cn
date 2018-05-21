@@ -1,35 +1,26 @@
 ---
-title: "如何为请求设置缓存策略"
-ms.custom: 
+title: 如何为请求设置缓存策略
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ff59bab2963d78425f9b7f4b41bdb679ed8e6f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 98cd64aaab66d69c29c022d770b34bb0efdb4bef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="6552d-102">如何为请求设置缓存策略</span><span class="sxs-lookup"><span data-stu-id="6552d-102">How to: Set Cache Policy for a Request</span></span>
-<span data-ttu-id="6552d-103">以下示例演示如何为请求设置缓存策略。</span><span class="sxs-lookup"><span data-stu-id="6552d-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="6552d-104">示例输入是 URI，例如 http://www.contoso.com/。</span><span class="sxs-lookup"><span data-stu-id="6552d-104">The example input is a URI such as http://www.contoso.com/.</span></span>  
+# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="10534-102">如何为请求设置缓存策略</span><span class="sxs-lookup"><span data-stu-id="10534-102">How to: Set Cache Policy for a Request</span></span>
+<span data-ttu-id="10534-103">以下示例演示如何为请求设置缓存策略。</span><span class="sxs-lookup"><span data-stu-id="10534-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="10534-104">该示例输入是一个 URI，如 http://www.contoso.com/。</span><span class="sxs-lookup"><span data-stu-id="10534-104">The example input is a URI such as http://www.contoso.com/.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6552d-105">示例</span><span class="sxs-lookup"><span data-stu-id="6552d-105">Example</span></span>  
- <span data-ttu-id="6552d-106">以下代码示例创建一个缓存策略，该策略允许从缓存使用请求的资源，前提是该资源在缓存中的存在时间未超过一天。</span><span class="sxs-lookup"><span data-stu-id="6552d-106">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="6552d-107">该示例显示一条消息，指示使用的资源是否来自缓存（例如 `"The response was retrieved from the cache : False."`），然后显示该资源。</span><span class="sxs-lookup"><span data-stu-id="6552d-107">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="6552d-108">可以由客户端和服务器之间的任何缓存实现请求。</span><span class="sxs-lookup"><span data-stu-id="6552d-108">A request can be fulfilled by any cache between the client and server.</span></span>  
+## <a name="example"></a><span data-ttu-id="10534-105">示例</span><span class="sxs-lookup"><span data-stu-id="10534-105">Example</span></span>  
+ <span data-ttu-id="10534-106">以下代码示例创建一个缓存策略，该策略允许从缓存使用请求的资源，前提是该资源在缓存中的存在时间未超过一天。</span><span class="sxs-lookup"><span data-stu-id="10534-106">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="10534-107">该示例显示一条消息，指示使用的资源是否来自缓存（例如 `"The response was retrieved from the cache : False."`），然后显示该资源。</span><span class="sxs-lookup"><span data-stu-id="10534-107">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="10534-108">可以由客户端和服务器之间的任何缓存实现请求。</span><span class="sxs-lookup"><span data-stu-id="10534-108">A request can be fulfilled by any cache between the client and server.</span></span>  
   
 ```csharp  
 using System;  
@@ -116,9 +107,9 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6552d-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="6552d-109">See Also</span></span>  
- [<span data-ttu-id="6552d-110">网络应用程序的缓存管理</span><span class="sxs-lookup"><span data-stu-id="6552d-110">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [<span data-ttu-id="6552d-111">缓存策略</span><span class="sxs-lookup"><span data-stu-id="6552d-111">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
- [<span data-ttu-id="6552d-112">基于位置的缓存策略</span><span class="sxs-lookup"><span data-stu-id="6552d-112">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [<span data-ttu-id="6552d-113">基于时间的缓存策略</span><span class="sxs-lookup"><span data-stu-id="6552d-113">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [<span data-ttu-id="6552d-114">\<requestCaching> 元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="6552d-114">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a><span data-ttu-id="10534-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="10534-109">See Also</span></span>  
+ [<span data-ttu-id="10534-110">网络应用程序的缓存管理</span><span class="sxs-lookup"><span data-stu-id="10534-110">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [<span data-ttu-id="10534-111">缓存策略</span><span class="sxs-lookup"><span data-stu-id="10534-111">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ [<span data-ttu-id="10534-112">基于位置的缓存策略</span><span class="sxs-lookup"><span data-stu-id="10534-112">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [<span data-ttu-id="10534-113">基于时间的缓存策略</span><span class="sxs-lookup"><span data-stu-id="10534-113">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [<span data-ttu-id="10534-114">\<requestCaching> 元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="10534-114">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

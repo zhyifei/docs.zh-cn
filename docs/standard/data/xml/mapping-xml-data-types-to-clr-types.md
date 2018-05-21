@@ -1,36 +1,25 @@
 ---
-title: "将 XML 数据类型映射到 CLR 类型"
-ms.custom: 
+title: 将 XML 数据类型映射到 CLR 类型
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a90e7e58eba3938e8869ed48a118b44f47c2bf4e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d06876b91c72b939768d480e40631a8e85170bc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="7c077-102">将 XML 数据类型映射到 CLR 类型</span><span class="sxs-lookup"><span data-stu-id="7c077-102">Mapping XML Data Types to CLR Types</span></span>
-<span data-ttu-id="7c077-103">下表介绍 XML 数据类型与公共语言运行库 (CLR) 类型之间的默认映射。</span><span class="sxs-lookup"><span data-stu-id="7c077-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  
+# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="266a9-102">将 XML 数据类型映射到 CLR 类型</span><span class="sxs-lookup"><span data-stu-id="266a9-102">Mapping XML Data Types to CLR Types</span></span>
+<span data-ttu-id="266a9-103">下表介绍 XML 数据类型与公共语言运行库 (CLR) 类型之间的默认映射。</span><span class="sxs-lookup"><span data-stu-id="266a9-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  
   
-## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a><span data-ttu-id="7c077-104">下表介绍 XML 数据类型与 CLR 类型的默认映射。</span><span class="sxs-lookup"><span data-stu-id="7c077-104">The following table describes the default mappings of an XML data type to a CLR type.</span></span>  
+## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a><span data-ttu-id="266a9-104">下表介绍 XML 数据类型与 CLR 类型的默认映射。</span><span class="sxs-lookup"><span data-stu-id="266a9-104">The following table describes the default mappings of an XML data type to a CLR type.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="7c077-105">`xs` 和 `xdt` 前缀分别映射到 http://www.w3.org/2001/XMLSchema 和 http://www.w3.org/2003/05/xpath-datatypes 命名空间 URI。</span><span class="sxs-lookup"><span data-stu-id="7c077-105">The `xs` and the `xdt` prefixes are mapped to the http://www.w3.org/2001/XMLSchema and the http://www.w3.org/2003/05/xpath-datatypes namespace URIs respectively.</span></span>  
+>  <span data-ttu-id="266a9-105">`xs` 和 `xdt` 前缀分别映射到 http://www.w3.org/2001/XMLSchema 和 http://www.w3.org/2003/05/xpath-datatypes 命名空间 URI。</span><span class="sxs-lookup"><span data-stu-id="266a9-105">The `xs` and the `xdt` prefixes are mapped to the http://www.w3.org/2001/XMLSchema and the http://www.w3.org/2003/05/xpath-datatypes namespace URIs respectively.</span></span>  
   
-|<span data-ttu-id="7c077-106">XML 类型</span><span class="sxs-lookup"><span data-stu-id="7c077-106">XML Type</span></span>|<span data-ttu-id="7c077-107">CLR 类型</span><span class="sxs-lookup"><span data-stu-id="7c077-107">CLR Type</span></span>|  
+|<span data-ttu-id="266a9-106">XML 类型</span><span class="sxs-lookup"><span data-stu-id="266a9-106">XML Type</span></span>|<span data-ttu-id="266a9-107">CLR 类型</span><span class="sxs-lookup"><span data-stu-id="266a9-107">CLR Type</span></span>|  
 |--------------|--------------|  
 |`xs:anyURI`|<xref:System.Uri>|  
 |`xs:base64Binary`|`Byte[]`|  
@@ -81,13 +70,13 @@ ms.lasthandoff: 12/23/2017
 |`xdt:untypedAtomic`|<xref:System.String>|  
 |`xdt:anyAtomicType`|<xref:System.Object>|  
 |`xs:anySimpleType`|<xref:System.String>|  
-|<span data-ttu-id="7c077-108">文档节点</span><span class="sxs-lookup"><span data-stu-id="7c077-108">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="7c077-109">Element 节点</span><span class="sxs-lookup"><span data-stu-id="7c077-109">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="7c077-110">Attribute 节点</span><span class="sxs-lookup"><span data-stu-id="7c077-110">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="7c077-111">Namespace 节点</span><span class="sxs-lookup"><span data-stu-id="7c077-111">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="7c077-112">Text 节点</span><span class="sxs-lookup"><span data-stu-id="7c077-112">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="7c077-113">Comment 节点</span><span class="sxs-lookup"><span data-stu-id="7c077-113">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="7c077-114">Processing Instruction 节点</span><span class="sxs-lookup"><span data-stu-id="7c077-114">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="266a9-108">文档节点</span><span class="sxs-lookup"><span data-stu-id="266a9-108">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="266a9-109">Element 节点</span><span class="sxs-lookup"><span data-stu-id="266a9-109">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="266a9-110">Attribute 节点</span><span class="sxs-lookup"><span data-stu-id="266a9-110">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="266a9-111">Namespace 节点</span><span class="sxs-lookup"><span data-stu-id="266a9-111">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="266a9-112">Text 节点</span><span class="sxs-lookup"><span data-stu-id="266a9-112">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="266a9-113">Comment 节点</span><span class="sxs-lookup"><span data-stu-id="266a9-113">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="266a9-114">Processing Instruction 节点</span><span class="sxs-lookup"><span data-stu-id="266a9-114">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## <a name="see-also"></a><span data-ttu-id="7c077-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="7c077-115">See Also</span></span>  
- [<span data-ttu-id="7c077-116">System.Xml 类中的类型支持</span><span class="sxs-lookup"><span data-stu-id="7c077-116">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a><span data-ttu-id="266a9-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="266a9-115">See Also</span></span>  
+ [<span data-ttu-id="266a9-116">System.Xml 类中的类型支持</span><span class="sxs-lookup"><span data-stu-id="266a9-116">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

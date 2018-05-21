@@ -1,125 +1,113 @@
 ---
-title: 字符串内插 - C#
-description: 了解 C# 6 中的字符串内插的工作方式
-keywords: .NET, .NET Core, C#, 字符串
-author: mgroves
-ms.author: wiwagn
-ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+title: C# 中的字符串内插
+description: 了解如何在 C# 中使用字符串插值将有格式的表达式结果包括在结果字符串中。
+author: pkulikov
+ms.date: 05/09/2018
+ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/11/2018
 ---
-# <a name="string-interpolation-in-c"></a><span data-ttu-id="f5791-104">C# 中的字符串内插</span><span class="sxs-lookup"><span data-stu-id="f5791-104">String Interpolation in C#</span></span> #
+# <a name="string-interpolation-in-c"></a><span data-ttu-id="70dbc-103">C# 中的字符串内插</span><span class="sxs-lookup"><span data-stu-id="70dbc-103">String interpolation in C#</span></span> #
 
-<span data-ttu-id="f5791-105">借助字符串内插，可以将字符串中的占位符替换成字符串变量的值。</span><span class="sxs-lookup"><span data-stu-id="f5791-105">String Interpolation is the way that placeholders in a string are replaced by the value of a string variable.</span></span> <span data-ttu-id="f5791-106">在低于 C# 6 的版本中，使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 实现字符串内插。</span><span class="sxs-lookup"><span data-stu-id="f5791-106">Before C# 6, the way to do this is with <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="f5791-107">虽然这样做是可行的，但由于要用到编号占位符，因此加大了读取难度且过程更为冗长。</span><span class="sxs-lookup"><span data-stu-id="f5791-107">This works okay, but since it uses numbered placeholders, it can be harder to read and more verbose.</span></span>
+<span data-ttu-id="70dbc-104">本教程演示如何使用[字符串插值](../language-reference/tokens/interpolated.md)设置表达式结果的格式并将其包含仅结果字符串中。</span><span class="sxs-lookup"><span data-stu-id="70dbc-104">This tutorial shows you how to use [string interpolation](../language-reference/tokens/interpolated.md) to format and include expression results in a result string.</span></span> <span data-ttu-id="70dbc-105">以下示例假设阅读者熟悉基础 C# 概念和 .NET 类型格式设置。</span><span class="sxs-lookup"><span data-stu-id="70dbc-105">The examples assume that you are familiar with basic C# concepts and .NET type formatting.</span></span> <span data-ttu-id="70dbc-106">如果不熟悉字符串插值或 .NET 类型格式设置，请先参阅[交互式字符串插值快速入门](../quick-starts/interpolated-strings.yml)。</span><span class="sxs-lookup"><span data-stu-id="70dbc-106">If you are new to string interpolation or .NET type formatting, check out the [interactive string interpolation quickstart](../quick-starts/interpolated-strings.yml) first.</span></span> <span data-ttu-id="70dbc-107">有关 .NET 中设置类型格式的详细信息，请参阅[设置 .NET 中类型的格式](../../standard/base-types/formatting-types.md)主题。</span><span class="sxs-lookup"><span data-stu-id="70dbc-107">For more information about formatting types in .NET, see the [Formatting Types in .NET](../../standard/base-types/formatting-types.md) topic.</span></span>
 
-<span data-ttu-id="f5791-108">其他编程语言一直将字符串内插内置于语言之中。</span><span class="sxs-lookup"><span data-stu-id="f5791-108">Other programming languages have had string interpolation built into the language for a while.</span></span> <span data-ttu-id="f5791-109">例如：在 PHP 中：</span><span class="sxs-lookup"><span data-stu-id="f5791-109">For instance, in PHP:</span></span>
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-```php
-$name = "Jonas";
-echo "My name is $name.";
-// This will output "My name is Jonas."
-```
+## <a name="introduction"></a><span data-ttu-id="70dbc-108">介绍</span><span class="sxs-lookup"><span data-stu-id="70dbc-108">Introduction</span></span>
 
-<span data-ttu-id="f5791-110">在 C# 6 中，我们最终实现了这种样式的字符串内插。</span><span class="sxs-lookup"><span data-stu-id="f5791-110">In C# 6, we finally have that style of string interpolation.</span></span> <span data-ttu-id="f5791-111">可以在字符串前面使用 `$`，以指明应使用变量/表达式替换相应的值。</span><span class="sxs-lookup"><span data-stu-id="f5791-111">You can use a `$` before a string to indicate that it should substitute variables/expressions for their values.</span></span>
+<span data-ttu-id="70dbc-109">[字符串插值](../language-reference/tokens/interpolated.md)功能构建在[复合格式设置](../../standard/base-types/composite-formatting.md)功能的基础之上，提供更具有可读性、更方便的语法，用于将设置了格式的表达式结果包括到结果字符串。</span><span class="sxs-lookup"><span data-stu-id="70dbc-109">The [string interpolation](../language-reference/tokens/interpolated.md) feature is built on top of the [composite formatting](../../standard/base-types/composite-formatting.md) feature and provides a more readable and convenient syntax to include formatted expression results in a result string.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="f5791-112">系统必备</span><span class="sxs-lookup"><span data-stu-id="f5791-112">Prerequisites</span></span>
-<span data-ttu-id="f5791-113">必须将计算机设置为运行 .Net Core。</span><span class="sxs-lookup"><span data-stu-id="f5791-113">You’ll need to set up your machine to run .NET core.</span></span> <span data-ttu-id="f5791-114">有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。</span><span class="sxs-lookup"><span data-stu-id="f5791-114">You can find the installation instructions on the [.NET Core](https://www.microsoft.com/net/core) page.</span></span>
-<span data-ttu-id="f5791-115">可以在 Windows、Ubuntu Linux、macOS 或 Docker 容器中运行此应用程序。</span><span class="sxs-lookup"><span data-stu-id="f5791-115">You can run this application on Windows, Ubuntu Linux, macOS or in a Docker container.</span></span> <span data-ttu-id="f5791-116">必须安装常用的代码编辑器。</span><span class="sxs-lookup"><span data-stu-id="f5791-116">You’ll need to install your favorite code editor.</span></span> <span data-ttu-id="f5791-117">在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。</span><span class="sxs-lookup"><span data-stu-id="f5791-117">The descriptions below use [Visual Studio Code](https://code.visualstudio.com/) which is an open source, cross platform editor.</span></span> <span data-ttu-id="f5791-118">不过，你可以使用习惯使用的任意工具。</span><span class="sxs-lookup"><span data-stu-id="f5791-118">However, you can use whatever tools you are comfortable with.</span></span>
+<span data-ttu-id="70dbc-110">若要将字符串标识为内插字符串，可在该字符串前面加上 `$` 符号。</span><span class="sxs-lookup"><span data-stu-id="70dbc-110">To identify a string literal as an interpolated string, prepend it with the `$` symbol.</span></span> <span data-ttu-id="70dbc-111">可嵌入任何会在内插字符串中返回值的有效 C# 表达式。</span><span class="sxs-lookup"><span data-stu-id="70dbc-111">You can embed any valid C# expression that returns a value in an interpolated string.</span></span> <span data-ttu-id="70dbc-112">在以下示例中，对某个表达式执行计算后，其结果立即转换为一个字符串并包含到结果字符串中：</span><span class="sxs-lookup"><span data-stu-id="70dbc-112">In the following example, as soon as an expression is evaluated, its result is converted into a string and included in a result string:</span></span>
 
-## <a name="create-the-application"></a><span data-ttu-id="f5791-119">创建应用程序</span><span class="sxs-lookup"><span data-stu-id="f5791-119">Create the Application</span></span>
+[!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
-<span data-ttu-id="f5791-120">至此，你已安装所有工具，是时候新建 .NET Core 应用程序了。</span><span class="sxs-lookup"><span data-stu-id="f5791-120">Now that you've installed all the tools, create a new .NET Core application.</span></span> <span data-ttu-id="f5791-121">若要使用命令行生成器，请先创建项目目录（如 `interpolated`），然后在常用的命令行管理程序中执行以下命令：</span><span class="sxs-lookup"><span data-stu-id="f5791-121">To use the command line generator, create a directory for your project, such as `interpolated`, and execute the following command in your favorite shell:</span></span>
+<span data-ttu-id="70dbc-113">如示例所示，通过将表达式用大括号括起来，可将表达式包含到内插字符串中：</span><span class="sxs-lookup"><span data-stu-id="70dbc-113">As the example shows, you include an expression in an interpolated string by enclosing it with braces:</span></span>
 
 ```
-dotnet new console
+{<interpolatedExpression>}
 ```
 
-<span data-ttu-id="f5791-122">此命令创建基本的 .NET Core 项目，其中包含项目文件 interpolated.csproj 和源代码文件 Program.cs。</span><span class="sxs-lookup"><span data-stu-id="f5791-122">This command creates a barebones .NET Core project with a project file, *interpolated.csproj*, and a source code file, *Program.cs*.</span></span> <span data-ttu-id="f5791-123">需要执行 `dotnet restore` 来还原编译此项目所需的依赖项。</span><span class="sxs-lookup"><span data-stu-id="f5791-123">You will need to execute `dotnet restore` to restore the dependencies needed to compile this project.</span></span>
+<span data-ttu-id="70dbc-114">在编译时间，内插字符串通常会转换为一个 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法调用。</span><span class="sxs-lookup"><span data-stu-id="70dbc-114">At compile time, an interpolated string is typically transformed into a <xref:System.String.Format%2A?displayProperty=nameWithType> method call.</span></span> <span data-ttu-id="70dbc-115">这样即可使用[字符串复合格式设置](../../standard/base-types/composite-formatting.md)功能的所有功能，又可将其与内插字符串结合使用。</span><span class="sxs-lookup"><span data-stu-id="70dbc-115">That makes all the capabilities of the [string composite formatting](../../standard/base-types/composite-formatting.md) feature available to you to use with interpolated strings as well.</span></span>
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a><span data-ttu-id="70dbc-116">如何为内插表达式指定格式字符串</span><span class="sxs-lookup"><span data-stu-id="70dbc-116">How to specify a format string for an interpolated expression</span></span>
 
-<span data-ttu-id="f5791-124">若要运行程序，请使用 `dotnet run`。</span><span class="sxs-lookup"><span data-stu-id="f5791-124">To execute the program, use `dotnet run`.</span></span> <span data-ttu-id="f5791-125">此时，应该可以在控制台中看到“Hello, World”输出。</span><span class="sxs-lookup"><span data-stu-id="f5791-125">You should see "Hello, World" output to the console.</span></span>
-
-
-
-## <a name="intro-to-string-interpolation"></a><span data-ttu-id="f5791-126">字符串内插简介</span><span class="sxs-lookup"><span data-stu-id="f5791-126">Intro to String Interpolation</span></span>
-
-<span data-ttu-id="f5791-127">使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 在字符串中指定要被字符串后面的参数替换的“占位符”。</span><span class="sxs-lookup"><span data-stu-id="f5791-127">With <xref:System.String.Format%2A?displayProperty=nameWithType>, you specify "placeholders" in a string that are replaced by the arguments following the string.</span></span> <span data-ttu-id="f5791-128">例如：</span><span class="sxs-lookup"><span data-stu-id="f5791-128">For instance:</span></span>
-
-[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
-
-<span data-ttu-id="f5791-129">上面的代码将输出“My name is Matt Groves”。</span><span class="sxs-lookup"><span data-stu-id="f5791-129">That will output "My name is Matt Groves".</span></span>
-
-<span data-ttu-id="f5791-130">在 C# 6 中，定义内插字符串的方式为，在内插字符串前面添加 `$` 符号，然后直接在字符串中使用变量，而不使用 `String.Format`。</span><span class="sxs-lookup"><span data-stu-id="f5791-130">In C# 6, instead of using `String.Format`, you define an interpolated string by prepending it with the `$` symbol, and then using the variables directly in the string.</span></span> <span data-ttu-id="f5791-131">例如：</span><span class="sxs-lookup"><span data-stu-id="f5791-131">For instance:</span></span>
-
-[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
-
-<span data-ttu-id="f5791-132">不必局限于变量。</span><span class="sxs-lookup"><span data-stu-id="f5791-132">You don't have to use just variables.</span></span> <span data-ttu-id="f5791-133">可以在括号内使用任意表达式。</span><span class="sxs-lookup"><span data-stu-id="f5791-133">You can use any expression within the brackets.</span></span> <span data-ttu-id="f5791-134">例如：</span><span class="sxs-lookup"><span data-stu-id="f5791-134">For instance:</span></span>
-
-[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
-
-<span data-ttu-id="f5791-135">上面的代码将输出：</span><span class="sxs-lookup"><span data-stu-id="f5791-135">Which would output:</span></span>
+<span data-ttu-id="70dbc-117">可通过在内插表达式后接冒号（“:”）和格式字符串来指定受表达式结果类型支持的格式字符串：</span><span class="sxs-lookup"><span data-stu-id="70dbc-117">You specify a format string that is supported by the type of the expression result by following the interpolated expression with a colon (":") and the format string:</span></span>
 
 ```
-This is line number 1
-This is line number 2
-This is line number 3
-This is line number 4
-This is line number 5
+{<interpolatedExpression>:<formatString>}
 ```
 
-## <a name="how-string-interpolation-works"></a><span data-ttu-id="f5791-136">字符串内插的工作方式</span><span class="sxs-lookup"><span data-stu-id="f5791-136">How string interpolation works</span></span>
+<span data-ttu-id="70dbc-118">以下示例演示如何为生成日期和时间或数值结果的表达式指定标准和自定义格式字符串：</span><span class="sxs-lookup"><span data-stu-id="70dbc-118">The following example shows how to specify standard and custom format strings for expressions that produce date and time or numeric results:</span></span>
 
-<span data-ttu-id="f5791-137">在后台，编译器将此类字符串内插语法转换成 `String.Format`。</span><span class="sxs-lookup"><span data-stu-id="f5791-137">Behind the scenes, this string interpolation syntax is translated into `String.Format` by the compiler.</span></span> <span data-ttu-id="f5791-138">因此，可以执行[之前使用 `String.Format` 执行的相同操作](../../standard/base-types/formatting-types.md)。</span><span class="sxs-lookup"><span data-stu-id="f5791-138">So, you can do the [same type of stuff you've done before with `String.Format`](../../standard/base-types/formatting-types.md).</span></span>
+[!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-<span data-ttu-id="f5791-139">例如，可以添加填充和数值格式：</span><span class="sxs-lookup"><span data-stu-id="f5791-139">For instance, you can add padding and numeric formatting:</span></span>
+<span data-ttu-id="70dbc-119">有关详细信息，请参阅[复合格式设置](../../standard/base-types/composite-formatting.md)主题的[格式字符串组件](../../standard/base-types/composite-formatting.md#format-string-component)章节。</span><span class="sxs-lookup"><span data-stu-id="70dbc-119">For more information, see the [Format String Component](../../standard/base-types/composite-formatting.md#format-string-component) section of the [Composite Formatting](../../standard/base-types/composite-formatting.md) topic.</span></span> <span data-ttu-id="70dbc-120">该部分提供主题链接，这些主题介绍 .NET 基类型支持的标准和自定义格式字符串。</span><span class="sxs-lookup"><span data-stu-id="70dbc-120">That section provides links to the topics that describe standard and custom format strings supported by .NET base types.</span></span>
 
-[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a><span data-ttu-id="70dbc-121">如何控制设置了格式的内插表达式的字段宽度和对齐方式</span><span class="sxs-lookup"><span data-stu-id="70dbc-121">How to control the field width and alignment of the formatted interpolated expression</span></span>
 
-<span data-ttu-id="f5791-140">上面的代码将输出如下内容：</span><span class="sxs-lookup"><span data-stu-id="f5791-140">The above would output something like:</span></span>
+<span data-ttu-id="70dbc-122">通过在内插表达式后添加逗号 (",") 和常数表达式来指定设置了格式的表达式结果的最小字段宽度和对齐方式：</span><span class="sxs-lookup"><span data-stu-id="70dbc-122">You specify the minimum field width and the alignment of the formatted expression result by following the interpolated expression with a comma (",") and the constant expression:</span></span>
 
 ```
-998        5,177.67
-999        6,719.30
-1000       9,910.61
-1001       529.34
-1002       1,349.86
-1003       2,660.82
-1004       6,227.77
+{<interpolatedExpression>,<alignment>}
 ```
 
-<span data-ttu-id="f5791-141">如果找不到变量名称，则会生成编译时错误。</span><span class="sxs-lookup"><span data-stu-id="f5791-141">If a variable name is not found, then a compile-time error is generated.</span></span>
+<span data-ttu-id="70dbc-123">如果对齐方式值为正，则设置了格式的表达式结果为右对齐，如果为负，则为左对齐。</span><span class="sxs-lookup"><span data-stu-id="70dbc-123">If the *alignment* value is positive, the formatted expression result is right-aligned; if negative, it's left-aligned.</span></span>
 
-<span data-ttu-id="f5791-142">例如：</span><span class="sxs-lookup"><span data-stu-id="f5791-142">For instance:</span></span>
+<span data-ttu-id="70dbc-124">如果需要同时指定对齐方式和格式字符串，则先从对齐方式组件开始：</span><span class="sxs-lookup"><span data-stu-id="70dbc-124">If you need to specify both alignment and a format string, start with the alignment component:</span></span>
 
-```csharp
-var animal = "fox";
-var localizeMe = $"The {adj} brown {animal} jumped over the lazy {otheranimal}";
-var adj = "quick";
-Console.WriteLine(localizeMe);
+```
+{<interpolatedExpression>,<alignment>:<formatString>}
 ```
 
-<span data-ttu-id="f5791-143">如果这样编译，则会看到以下错误消息：</span><span class="sxs-lookup"><span data-stu-id="f5791-143">If you compile this, you get errors:</span></span>
- 
-* <span data-ttu-id="f5791-144">`Cannot use local variable 'adj' before it is declared` - 直到内插字符串*之后*，`adj` 变量也未声明。</span><span class="sxs-lookup"><span data-stu-id="f5791-144">`Cannot use local variable 'adj' before it is declared` - the `adj` variable wasn't declared until *after* the interpolated string.</span></span>
-* <span data-ttu-id="f5791-145">`The name 'otheranimal' does not exist in the current context` - 从未声明名为“`otheranimal`”的变量</span><span class="sxs-lookup"><span data-stu-id="f5791-145">`The name 'otheranimal' does not exist in the current context` - a variable called `otheranimal` was never even declared</span></span>
+<span data-ttu-id="70dbc-125">以下示例演示如何指定对齐方式并使用管道字符 ("|") 分隔文本字段：</span><span class="sxs-lookup"><span data-stu-id="70dbc-125">The following example shows how to specify alignment and uses pipe characters ("|") to delimit text fields:</span></span>
 
-## <a name="localization-and-internationalization"></a><span data-ttu-id="f5791-146">本地化和国际化</span><span class="sxs-lookup"><span data-stu-id="f5791-146">Localization and Internationalization</span></span>
+[!code-csharp-interactive[alignment example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#3)]
 
-<span data-ttu-id="f5791-147">内插字符串支持 <xref:System.IFormattable?displayProperty=nameWithType> 和 <xref:System.FormattableString?displayProperty=nameWithType>，这对国际化非常有用。</span><span class="sxs-lookup"><span data-stu-id="f5791-147">An interpolated string supports <xref:System.IFormattable?displayProperty=nameWithType> and <xref:System.FormattableString?displayProperty=nameWithType>, which can be useful for internationalization.</span></span>
+<span data-ttu-id="70dbc-126">如示例输出所示，如果已设置格式的表达式结果长度超出指定字段宽度，则忽略对齐方式值。</span><span class="sxs-lookup"><span data-stu-id="70dbc-126">As the example output shows, if the length of the formatted expression result exceeds specified field width, the *alignment* value is ignored.</span></span>
 
-<span data-ttu-id="f5791-148">默认情况下，内插字符串使用当前区域性。</span><span class="sxs-lookup"><span data-stu-id="f5791-148">By default, an interpolated string uses the current culture.</span></span> <span data-ttu-id="f5791-149">若要使用不同的区域性，请将内插字符串强制转换为 `IFormattable`。</span><span class="sxs-lookup"><span data-stu-id="f5791-149">To use a different culture, cast an interpolated string as `IFormattable`.</span></span> <span data-ttu-id="f5791-150">例如：</span><span class="sxs-lookup"><span data-stu-id="f5791-150">For instance:</span></span>
+<span data-ttu-id="70dbc-127">有关详细信息，请参阅[复合格式设置](../../standard/base-types/composite-formatting.md)主题的[对齐方式组件](../../standard/base-types/composite-formatting.md#alignment-component)部分。</span><span class="sxs-lookup"><span data-stu-id="70dbc-127">For more information, see the [Alignment Component](../../standard/base-types/composite-formatting.md#alignment-component) section of the [Composite Formatting](../../standard/base-types/composite-formatting.md) topic.</span></span>
 
-[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a><span data-ttu-id="70dbc-128">如何在内插字符串中使用转义序列</span><span class="sxs-lookup"><span data-stu-id="70dbc-128">How to use escape sequences in an interpolated string</span></span>
 
-## <a name="conclusion"></a><span data-ttu-id="f5791-151">结束语</span><span class="sxs-lookup"><span data-stu-id="f5791-151">Conclusion</span></span> 
+<span data-ttu-id="70dbc-129">内插字符串支持所有可在普通字符串文本中使用的转义序列。</span><span class="sxs-lookup"><span data-stu-id="70dbc-129">Interpolated strings support all escape sequences that can be used in ordinary string literals.</span></span> <span data-ttu-id="70dbc-130">有关详细信息，请参阅[字符串转义序列](../programming-guide/strings/index.md#string-escape-sequences)。</span><span class="sxs-lookup"><span data-stu-id="70dbc-130">For more information, see [String escape sequences](../programming-guide/strings/index.md#string-escape-sequences).</span></span>
 
-<span data-ttu-id="f5791-152">此教程介绍了如何使用 C# 6 的字符串内插功能。</span><span class="sxs-lookup"><span data-stu-id="f5791-152">In this tutorial, you learned how to use string interpolation features of C# 6.</span></span> <span data-ttu-id="f5791-153">它主要是简化了 `String.Format` 简单语句的编写，并在高级用途方面存在一些注意事项。</span><span class="sxs-lookup"><span data-stu-id="f5791-153">It's basically a more concise way of writing simple `String.Format` statements, with some caveats for more advanced uses.</span></span> <span data-ttu-id="f5791-154">有关详细信息，请参阅[字符串内插](../../csharp//language-reference/tokens/interpolated.md)主题。</span><span class="sxs-lookup"><span data-stu-id="f5791-154">For more information, see the [String interpolation](../../csharp//language-reference/tokens/interpolated.md) topic.</span></span>
+<span data-ttu-id="70dbc-131">若要逐字解释转义序列，可使用[逐字](../language-reference/tokens/verbatim.md)字符串文本。</span><span class="sxs-lookup"><span data-stu-id="70dbc-131">To interpret escape sequences literally, use a [verbatim](../language-reference/tokens/verbatim.md) string literal.</span></span> <span data-ttu-id="70dbc-132">逐字内插字符串以 `$` 字符开头，后跟 `@` 字符。</span><span class="sxs-lookup"><span data-stu-id="70dbc-132">A verbatim interpolated string starts with the `$` character followed by the `@` character.</span></span>
+
+<span data-ttu-id="70dbc-133">若要在结果字符串中包含大括号 "{" 或 "}"，请使用两个大括号 "{{" 或 "}}"。</span><span class="sxs-lookup"><span data-stu-id="70dbc-133">To include a brace, "{" or "}", in a result string, use two braces, "{{" or "}}".</span></span> <span data-ttu-id="70dbc-134">有关详细信息，请参阅[复合格式设置](../../standard/base-types/composite-formatting.md)主题的[转义括号](../../standard/base-types/composite-formatting.md#escaping-braces)部分。</span><span class="sxs-lookup"><span data-stu-id="70dbc-134">For more information, see the [Escaping Braces](../../standard/base-types/composite-formatting.md#escaping-braces) section of the [Composite Formatting](../../standard/base-types/composite-formatting.md) topic.</span></span>
+
+<span data-ttu-id="70dbc-135">以下示例演示如何在结果字符串中包含大括号并构造逐字内插字符串：</span><span class="sxs-lookup"><span data-stu-id="70dbc-135">The following example shows how to include braces in a result string and construct a verbatim interpolated string:</span></span>
+
+[!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
+
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a><span data-ttu-id="70dbc-136">如何在内插表达式中使用三元条件运算符 `?:`</span><span class="sxs-lookup"><span data-stu-id="70dbc-136">How to use a ternary conditional operator `?:` in an interpolated expression</span></span>
+
+<span data-ttu-id="70dbc-137">因为冒号 (:) 在具有内插表达式的项中具有特殊含义，为了在表达式中使用[条件运算符](../language-reference/operators/conditional-operator.md)，请将表达式放在括号内，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="70dbc-137">As the colon (":") has special meaning in an item with an interpolated expression, in order to use a [conditional operator](../language-reference/operators/conditional-operator.md) in an expression, enclose it in parentheses, as the following example shows:</span></span>
+
+[!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
+
+## <a name="how-to-create-a-culture-specific-result-string-with-string-interpolation"></a><span data-ttu-id="70dbc-138">如何使用字符串插值创建区域性特定的结果字符串</span><span class="sxs-lookup"><span data-stu-id="70dbc-138">How to create a culture-specific result string with string interpolation</span></span>
+
+<span data-ttu-id="70dbc-139">默认情况下，内插字符串将 <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> 属性定义的当前区域性用于所有格式设置操作。</span><span class="sxs-lookup"><span data-stu-id="70dbc-139">By default, an interpolated string uses the current culture defined by the <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> property for all formatting operations.</span></span> <span data-ttu-id="70dbc-140">使用内插字符串到 <xref:System.FormattableString?displayProperty=nameWithType> 实例的隐式转换，并调用它的 <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法来创建区域性特定的结果字符串。</span><span class="sxs-lookup"><span data-stu-id="70dbc-140">Use implicit conversion of an interpolated string to a <xref:System.FormattableString?displayProperty=nameWithType> instance and call its <xref:System.FormattableString.ToString(System.IFormatProvider)> method to create a culture-specific result string.</span></span> <span data-ttu-id="70dbc-141">下面的示例演示如何执行此操作：</span><span class="sxs-lookup"><span data-stu-id="70dbc-141">The following example shows how to do that:</span></span>
+
+[!code-csharp-interactive[specify different cultures](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#6)]
+
+<span data-ttu-id="70dbc-142">如示例所示，可使用某个 <xref:System.FormattableString> 实例为各种区域性生成多个结果字符串。</span><span class="sxs-lookup"><span data-stu-id="70dbc-142">As the example shows, you can use one <xref:System.FormattableString> instance to generate multiple result strings for various cultures.</span></span>
+
+## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a><span data-ttu-id="70dbc-143">如何使用固定区域性创建结果字符串</span><span class="sxs-lookup"><span data-stu-id="70dbc-143">How to create a result string using the invariant culture</span></span>
+
+<span data-ttu-id="70dbc-144">可配合 <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> 方法使用静态 <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> 方法将内插字符串解析为 <xref:System.Globalization.CultureInfo.InvariantCulture> 的结果字符串。</span><span class="sxs-lookup"><span data-stu-id="70dbc-144">Along with the <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> method, you can use the static <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> method to resolve an interpolated string to a result string for the <xref:System.Globalization.CultureInfo.InvariantCulture>.</span></span> <span data-ttu-id="70dbc-145">下面的示例演示如何执行此操作：</span><span class="sxs-lookup"><span data-stu-id="70dbc-145">The following example shows how to do that:</span></span>
+
+[!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
+
+## <a name="conclusion"></a><span data-ttu-id="70dbc-146">结束语</span><span class="sxs-lookup"><span data-stu-id="70dbc-146">Conclusion</span></span>
+
+<span data-ttu-id="70dbc-147">本教程介绍字符串插值用法的常见方案。</span><span class="sxs-lookup"><span data-stu-id="70dbc-147">This tutorial describes common scenarios of string interpolation usage.</span></span> <span data-ttu-id="70dbc-148">有关字符串插值的详细信息，请参阅[字符串插值](../language-reference/tokens/interpolated.md)主题。</span><span class="sxs-lookup"><span data-stu-id="70dbc-148">For more information about string interpolation, see the [String interpolation](../language-reference/tokens/interpolated.md) topic.</span></span> <span data-ttu-id="70dbc-149">有关 .NET 中设置类型格式的详细信息，请参阅[设置 .NET 中类型的格式](../../standard/base-types/formatting-types.md)和[复合格式设置](../../standard/base-types/composite-formatting.md)主题。</span><span class="sxs-lookup"><span data-stu-id="70dbc-149">For more information about formatting types in .NET, see the [Formatting Types in .NET](../../standard/base-types/formatting-types.md) and [Composite formatting](../../standard/base-types/composite-formatting.md) topics.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="70dbc-150">请参阅</span><span class="sxs-lookup"><span data-stu-id="70dbc-150">See also</span></span>
+
+<xref:System.String.Format%2A?displayProperty=nameWithType>  
+<xref:System.FormattableString?displayProperty=nameWithType>  
+<xref:System.IFormattable?displayProperty=nameWithType>  
+[<span data-ttu-id="70dbc-151">字符串</span><span class="sxs-lookup"><span data-stu-id="70dbc-151">Strings</span></span>](../programming-guide/strings/index.md)  

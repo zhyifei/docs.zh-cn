@@ -1,155 +1,89 @@
 ---
 title: AttributeUsage (C#)
-ms.custom: 
-ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
-ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9351ee10b523145ace1249bf17388da0cdba277
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.date: 04/25/2018
+ms.openlocfilehash: 869e6509e55268767915a783a8652f7f950d7137
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="attributeusage-c"></a><span data-ttu-id="f2288-102">AttributeUsage (C#)</span><span class="sxs-lookup"><span data-stu-id="f2288-102">AttributeUsage (C#)</span></span>
-<span data-ttu-id="f2288-103">确定如何使用自定义特性类。</span><span class="sxs-lookup"><span data-stu-id="f2288-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="f2288-104">`AttributeUsage` 是一个特性，可应用于自定义特性定义，以控制如何应用新特性。</span><span class="sxs-lookup"><span data-stu-id="f2288-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="f2288-105">在显式应用时的默认设置如下：</span><span class="sxs-lookup"><span data-stu-id="f2288-105">The default settings look like this when applied explicitly:</span></span>  
-  
-```csharp  
-[System.AttributeUsage(System.AttributeTargets.All,  
-                   AllowMultiple = false,  
-                   Inherited = true)]  
-class NewAttribute : System.Attribute { }  
-```  
-  
- <span data-ttu-id="f2288-106">在此示例中，`NewAttribute` 类可应用于任何特性的代码实体，但只能对每个实体应用一次。</span><span class="sxs-lookup"><span data-stu-id="f2288-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="f2288-107">当应用于基类时，它由派生类继承。</span><span class="sxs-lookup"><span data-stu-id="f2288-107">It is inherited by derived classes when applied to a base class.</span></span>  
-  
- <span data-ttu-id="f2288-108">`AllowMultiple` 和 `Inherited` 参数是可选的，因而此代码具有相同的效果：</span><span class="sxs-lookup"><span data-stu-id="f2288-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>  
-  
-```csharp  
-[System.AttributeUsage(System.AttributeTargets.All)]  
-class NewAttribute : System.Attribute { }  
-```  
-  
- <span data-ttu-id="f2288-109">第一个 `AttributeUsage` 参数必须是 <xref:System.AttributeTargets> 枚举的一个或多个元素。</span><span class="sxs-lookup"><span data-stu-id="f2288-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="f2288-110">可将多个目标类型与 OR 运算符链接在一起，如下所示：</span><span class="sxs-lookup"><span data-stu-id="f2288-110">Multiple target types can be linked together with the OR operator, like this:</span></span>  
-  
-```csharp  
-using System;  
+# <a name="attributeusage-c"></a><span data-ttu-id="e67fd-102">AttributeUsage (C#)</span><span class="sxs-lookup"><span data-stu-id="e67fd-102">AttributeUsage (C#)</span></span>
 
-[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]  
-class NewPropertyOrFieldAttribute : Attribute { }  
-```  
-  
- <span data-ttu-id="f2288-111">如果 `AllowMultiple` 参数设置为 `true`，则结果特性可多次应用于单个实体，如下所示：</span><span class="sxs-lookup"><span data-stu-id="f2288-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>  
-  
-```csharp  
-using System;  
+<span data-ttu-id="e67fd-103">确定如何使用自定义特性类。</span><span class="sxs-lookup"><span data-stu-id="e67fd-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="e67fd-104"><xref:System.AttributeUsageAttribute> 是应用到自定义特性定义的特性。</span><span class="sxs-lookup"><span data-stu-id="e67fd-104"><xref:System.AttributeUsageAttribute> is an attribute you apply to custom attribute definitions.</span></span> <span data-ttu-id="e67fd-105">`AttributeUsage` 特性帮助控制：</span><span class="sxs-lookup"><span data-stu-id="e67fd-105">The `AttributeUsage` attribute enables you to control:</span></span>
 
-[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]  
-class MultiUseAttr : Attribute { }  
-  
-[MultiUseAttr]  
-[MultiUseAttr]  
-class Class1 { }  
-  
-[MultiUseAttr, MultiUseAttr]  
-class Class2 { }  
-```  
-  
- <span data-ttu-id="f2288-112">在本例中，`MultiUseAttr` 可重复应用，因为 `AllowMultiple` 设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="f2288-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="f2288-113">所显示的两种用于应用多个特性的格式均有效。</span><span class="sxs-lookup"><span data-stu-id="f2288-113">Both formats shown for applying multiple attributes are valid.</span></span>  
-  
- <span data-ttu-id="f2288-114">如果 `Inherited` 设置为 `false`，那么特性不会由派生自已特性化的类的类继承。</span><span class="sxs-lookup"><span data-stu-id="f2288-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="f2288-115">例如: </span><span class="sxs-lookup"><span data-stu-id="f2288-115">For example:</span></span>  
-  
-```csharp  
-using System;  
+- <span data-ttu-id="e67fd-106">可能应用到的具体程序元素特性。</span><span class="sxs-lookup"><span data-stu-id="e67fd-106">Which program elements attribute may be applied to.</span></span> <span data-ttu-id="e67fd-107">除非使用限制，否则特性可能应用到以下任意程序元素：</span><span class="sxs-lookup"><span data-stu-id="e67fd-107">Unless you restrict is usage, an attribute may be applied to any of the following program elements:</span></span>
+  - <span data-ttu-id="e67fd-108">程序集</span><span class="sxs-lookup"><span data-stu-id="e67fd-108">assembly</span></span>
+  - <span data-ttu-id="e67fd-109">name</span><span class="sxs-lookup"><span data-stu-id="e67fd-109">module</span></span>
+  - <span data-ttu-id="e67fd-110">Field — 字段</span><span class="sxs-lookup"><span data-stu-id="e67fd-110">field</span></span>
+  - <span data-ttu-id="e67fd-111">Event — 事件</span><span class="sxs-lookup"><span data-stu-id="e67fd-111">event</span></span>
+  - <span data-ttu-id="e67fd-112">方法</span><span class="sxs-lookup"><span data-stu-id="e67fd-112">method</span></span>
+  - <span data-ttu-id="e67fd-113">param</span><span class="sxs-lookup"><span data-stu-id="e67fd-113">param</span></span>
+  - <span data-ttu-id="e67fd-114">属性</span><span class="sxs-lookup"><span data-stu-id="e67fd-114">property</span></span>
+  - <span data-ttu-id="e67fd-115">return</span><span class="sxs-lookup"><span data-stu-id="e67fd-115">return</span></span>
+  - <span data-ttu-id="e67fd-116">类型</span><span class="sxs-lookup"><span data-stu-id="e67fd-116">type</span></span>
+- <span data-ttu-id="e67fd-117">某特性是否可多次应用于单个程序元素。</span><span class="sxs-lookup"><span data-stu-id="e67fd-117">Whether an attribute can be applied to a single program element multiple times.</span></span>
+- <span data-ttu-id="e67fd-118">特性是否由派生类继承。</span><span class="sxs-lookup"><span data-stu-id="e67fd-118">Whether attributes are inherited by derived classes.</span></span>
 
-[AttributeUsage(AttributeTargets.Class, Inherited = false)]  
-class Attr1 : Attribute { }  
-  
-[Attr1]  
-class BClass { }  
-  
-class DClass : BClass { }  
-```  
-  
- <span data-ttu-id="f2288-116">在本例中，`Attr1` 不会通过继承应用于 `DClass`。</span><span class="sxs-lookup"><span data-stu-id="f2288-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="f2288-117">备注</span><span class="sxs-lookup"><span data-stu-id="f2288-117">Remarks</span></span>  
- <span data-ttu-id="f2288-118">`AttributeUsage` 特性是单次使用的特性 -- 它无法应用于同一个类超过一次。</span><span class="sxs-lookup"><span data-stu-id="f2288-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="f2288-119">`AttributeUsage` 是 <xref:System.AttributeUsageAttribute> 的别名。</span><span class="sxs-lookup"><span data-stu-id="f2288-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>  
-  
- <span data-ttu-id="f2288-120">有关详细信息，请参阅[使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="f2288-120">For more information, see [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="f2288-121">示例</span><span class="sxs-lookup"><span data-stu-id="f2288-121">Example</span></span>  
- <span data-ttu-id="f2288-122">以下示例演示 `Inherited` 和 `AllowMultiple` 参数对 `AttributeUsage` 特性的影响，以及如何枚举应用于类的自定义特性。</span><span class="sxs-lookup"><span data-stu-id="f2288-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>  
-  
-```csharp  
-using System;  
+<span data-ttu-id="e67fd-119">显式应用时，默认设置如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="e67fd-119">The default settings look like the following example when applied explicitly:</span></span>
 
-// Create some custom attributes:  
-[AttributeUsage(System.AttributeTargets.Class, Inherited = false)]  
-class A1 : System.Attribute { }  
-  
-[AttributeUsage(System.AttributeTargets.Class)]  
-class A2 : System.Attribute { }  
-  
-[AttributeUsage(System.AttributeTargets.Class, AllowMultiple = true)]  
-class A3 : System.Attribute { }  
-  
-// Apply custom attributes to classes:  
-[A1, A2]  
-class BaseClass { }  
-  
-[A3, A3]  
-class DerivedClass : BaseClass { }  
-  
-public class TestAttributeUsage  
-{  
-    static void Main()  
-    {  
-        BaseClass b = new BaseClass();  
-        DerivedClass d = new DerivedClass();  
-  
-        // Display custom attributes for each class.  
-        Console.WriteLine("Attributes on Base Class:");  
-        object[] attrs = b.GetType().GetCustomAttributes(true);  
-        foreach (Attribute attr in attrs)  
-        {  
-            Console.WriteLine(attr);  
-        }  
-  
-        Console.WriteLine("Attributes on Derived Class:");  
-        attrs = d.GetType().GetCustomAttributes(true);  
-        foreach (Attribute attr in attrs)  
-        {  
-            Console.WriteLine(attr);  
-        }  
-    }  
-}  
-```  
-  
-## <a name="sample-output"></a><span data-ttu-id="f2288-123">示例输出</span><span class="sxs-lookup"><span data-stu-id="f2288-123">Sample Output</span></span>  
-  
-```  
-Attributes on Base Class:  
-A1  
-A2  
-Attributes on Derived Class:  
-A3  
-A3  
-A2  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="f2288-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f2288-124">See Also</span></span>  
+[!code-csharp[Define a new attribute](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#1)]
+
+<span data-ttu-id="e67fd-120">在此示例中，`NewAttribute` 类可应用于任何受支持的程序元素。</span><span class="sxs-lookup"><span data-stu-id="e67fd-120">In this example, the `NewAttribute` class can be applied to any supported program element.</span></span> <span data-ttu-id="e67fd-121">但是它对每个实体仅能应用一次。</span><span class="sxs-lookup"><span data-stu-id="e67fd-121">But it can be applied only once to each entity.</span></span> <span data-ttu-id="e67fd-122">特性应用于基类时，它由派生类继承。</span><span class="sxs-lookup"><span data-stu-id="e67fd-122">The attribute is inherited by derived classes when applied to a base class.</span></span>
+
+<span data-ttu-id="e67fd-123"><xref:System.AttributeUsageAttribute.AllowMultiple> 和 <xref:System.AttributeUsageAttribute.Inherited> 参数是可选的，因此以下代码具有相同效果：</span><span class="sxs-lookup"><span data-stu-id="e67fd-123">The <xref:System.AttributeUsageAttribute.AllowMultiple> and <xref:System.AttributeUsageAttribute.Inherited> arguments are optional, so the following code has the same effect:</span></span>
+
+[!code-csharp[Omit optional attributes](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#2)]
+
+<span data-ttu-id="e67fd-124">第一个 <xref:System.AttributeUsageAttribute> 参数必须是 <xref:System.AttributeTargets> 枚举的一个或多个元素。</span><span class="sxs-lookup"><span data-stu-id="e67fd-124">The first <xref:System.AttributeUsageAttribute> argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="e67fd-125">可将多个目标类型与 OR 运算符链接在一起，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="e67fd-125">Multiple target types can be linked together with the OR operator, like the following example shows:</span></span>
+
+[!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#1)]
+
+<span data-ttu-id="e67fd-126">从 C# 7.3 开始，特性可应用于自动实现的属性的属性或支持字段。</span><span class="sxs-lookup"><span data-stu-id="e67fd-126">Beginning in C# 7.3, attributes can be applied to either the property or the backing field for an auto-implemented property.</span></span> <span data-ttu-id="e67fd-127">特性应用于属性，除非在特性上指定 `field` 说明符。</span><span class="sxs-lookup"><span data-stu-id="e67fd-127">The attribute applies to the property, unless you specify the `field` specifier on the attribute.</span></span> <span data-ttu-id="e67fd-128">都在以下示例中进行了演示：</span><span class="sxs-lookup"><span data-stu-id="e67fd-128">Both are shown in the following example:</span></span>
+
+[!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#2)]
+
+<span data-ttu-id="e67fd-129">如果 <xref:System.AttributeUsageAttribute.AllowMultiple> 参数为 `true`，那么结果特性可多次应用于单个实体，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="e67fd-129">If the <xref:System.AttributeUsageAttribute.AllowMultiple> argument is `true`, then the resulting attribute can be applied more than once to a single entity, as shown in the following example:</span></span>
+
+[!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/MultiUseAttribute.cs#1)]
+
+<span data-ttu-id="e67fd-130">在本例中，`MultiUseAttribute` 可重复应用，因为 `AllowMultiple` 设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="e67fd-130">In this case, `MultiUseAttribute` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="e67fd-131">所显示的两种用于应用多个特性的格式均有效。</span><span class="sxs-lookup"><span data-stu-id="e67fd-131">Both formats shown for applying multiple attributes are valid.</span></span>
+
+<span data-ttu-id="e67fd-132">如果 <xref:System.AttributeUsageAttribute.Inherited> 为 `false`，那么该特性不是由特性类派生的类继承。</span><span class="sxs-lookup"><span data-stu-id="e67fd-132">If <xref:System.AttributeUsageAttribute.Inherited> is `false`, then the attribute isn't inherited by classes derived from an attributed class.</span></span> <span data-ttu-id="e67fd-133">例如:</span><span class="sxs-lookup"><span data-stu-id="e67fd-133">For example:</span></span>
+
+[!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
+
+<span data-ttu-id="e67fd-134">在本例中，`NonInheritedAttribute` 不会通过继承应用于 `DClass`。</span><span class="sxs-lookup"><span data-stu-id="e67fd-134">In this case `NonInheritedAttribute` isn't applied to `DClass` via inheritance.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="e67fd-135">备注</span><span class="sxs-lookup"><span data-stu-id="e67fd-135">Remarks</span></span>
+
+<span data-ttu-id="e67fd-136">`AttributeUsage` 特性是单次使用的特性 -- 它无法应用于同一个类超过一次。</span><span class="sxs-lookup"><span data-stu-id="e67fd-136">The `AttributeUsage` attribute is a single-use attribute--it can't be applied more than once to the same class.</span></span> <span data-ttu-id="e67fd-137">`AttributeUsage` 是 <xref:System.AttributeUsageAttribute> 的别名。</span><span class="sxs-lookup"><span data-stu-id="e67fd-137">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>
+
+<span data-ttu-id="e67fd-138">有关详细信息，请参阅[使用反射访问特性 (C#)](accessing-attributes-by-using-reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="e67fd-138">For more information, see [Accessing Attributes by Using Reflection (C#)](accessing-attributes-by-using-reflection.md).</span></span>
+
+## <a name="example"></a><span data-ttu-id="e67fd-139">示例</span><span class="sxs-lookup"><span data-stu-id="e67fd-139">Example</span></span>
+
+<span data-ttu-id="e67fd-140">以下示例演示 <xref:System.AttributeUsageAttribute.Inherited> 和 <xref:System.AttributeUsageAttribute.AllowMultiple> 参数对 <xref:System.AttributeUsageAttribute> 特性的影响，以及如何枚举应用于类的自定义特性。</span><span class="sxs-lookup"><span data-stu-id="e67fd-140">The following example demonstrates the effect of the <xref:System.AttributeUsageAttribute.Inherited> and <xref:System.AttributeUsageAttribute.AllowMultiple> arguments to the <xref:System.AttributeUsageAttribute> attribute, and how the custom attributes applied to a class can be enumerated.</span></span>
+
+[!code-csharp[Applying and querying attributes](../../../../../samples/snippets/csharp/attributes/Program.cs#1)]
+
+## <a name="sample-output"></a><span data-ttu-id="e67fd-141">示例输出</span><span class="sxs-lookup"><span data-stu-id="e67fd-141">Sample Output</span></span>
+
+```text
+Attributes on Base Class:
+FirstAttribute
+SecondAttribute
+Attributes on Derived Class:
+ThirdAttribute
+ThirdAttribute
+SecondAttribute
+```
+
+## <a name="see-also"></a><span data-ttu-id="e67fd-142">请参阅</span><span class="sxs-lookup"><span data-stu-id="e67fd-142">See Also</span></span>
  <xref:System.Attribute>  
  <xref:System.Reflection>  
- [<span data-ttu-id="f2288-125">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="f2288-125">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="f2288-126">特性</span><span class="sxs-lookup"><span data-stu-id="f2288-126">Attributes</span></span>](../../../../../docs/standard/attributes/index.md)  
- [<span data-ttu-id="f2288-127">反射 (C#)</span><span class="sxs-lookup"><span data-stu-id="f2288-127">Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/reflection.md)  
- [<span data-ttu-id="f2288-128">特性</span><span class="sxs-lookup"><span data-stu-id="f2288-128">Attributes</span></span>](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [<span data-ttu-id="f2288-129">创建自定义特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="f2288-129">Creating Custom Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [<span data-ttu-id="f2288-130">使用反射访问特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="f2288-130">Accessing Attributes by Using Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ [<span data-ttu-id="e67fd-143">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="e67fd-143">C# Programming Guide</span></span>](../..//index.md)  
+ [<span data-ttu-id="e67fd-144">特性</span><span class="sxs-lookup"><span data-stu-id="e67fd-144">Attributes</span></span>](../../../..//standard/attributes/index.md)  
+ [<span data-ttu-id="e67fd-145">反射 (C#)</span><span class="sxs-lookup"><span data-stu-id="e67fd-145">Reflection (C#)</span></span>](../reflection.md)  
+ [<span data-ttu-id="e67fd-146">特性</span><span class="sxs-lookup"><span data-stu-id="e67fd-146">Attributes</span></span>](index.md)  
+ [<span data-ttu-id="e67fd-147">创建自定义特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="e67fd-147">Creating Custom Attributes (C#)</span></span>](creating-custom-attributes.md)  
+ [<span data-ttu-id="e67fd-148">使用反射访问特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="e67fd-148">Accessing Attributes by Using Reflection (C#)</span></span>](accessing-attributes-by-using-reflection.md)

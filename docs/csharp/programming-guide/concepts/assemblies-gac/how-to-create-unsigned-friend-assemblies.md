@@ -1,30 +1,21 @@
 ---
-title: "如何：创建未签名的友元程序集 (C#)"
-ms.custom: 
+title: 如何：创建未签名的友元程序集 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 854df39394ef10bf2404fb3f762586fb102fba7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 676b9d3c641f45736af50bc2290426e261b591c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a><span data-ttu-id="43f03-102">如何：创建未签名的友元程序集 (C#)</span><span class="sxs-lookup"><span data-stu-id="43f03-102">How to: Create Unsigned Friend Assemblies (C#)</span></span>
-<span data-ttu-id="43f03-103">本示例演示如何将友元程序集和未签名的程序集一起使用。</span><span class="sxs-lookup"><span data-stu-id="43f03-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a><span data-ttu-id="d554a-102">如何：创建未签名的友元程序集 (C#)</span><span class="sxs-lookup"><span data-stu-id="d554a-102">How to: Create Unsigned Friend Assemblies (C#)</span></span>
+<span data-ttu-id="d554a-103">本示例演示如何将友元程序集和未签名的程序集一起使用。</span><span class="sxs-lookup"><span data-stu-id="d554a-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
   
-### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="43f03-104">创建程序集和友元程序集</span><span class="sxs-lookup"><span data-stu-id="43f03-104">To create an assembly and a friend assembly</span></span>  
+### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="d554a-104">创建程序集和友元程序集</span><span class="sxs-lookup"><span data-stu-id="d554a-104">To create an assembly and a friend assembly</span></span>  
   
-1.  <span data-ttu-id="43f03-105">打开命令提示。</span><span class="sxs-lookup"><span data-stu-id="43f03-105">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="d554a-105">打开命令提示。</span><span class="sxs-lookup"><span data-stu-id="d554a-105">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="43f03-106">创建一个名为 `friend_signed_A.` 的 C# 文件，其中包含以下代码。</span><span class="sxs-lookup"><span data-stu-id="43f03-106">Create a C# file named `friend_signed_A.` that contains the following code.</span></span> <span data-ttu-id="43f03-107">该代码使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性将 friend_signed_B 声明为友元程序集。</span><span class="sxs-lookup"><span data-stu-id="43f03-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
+2.  <span data-ttu-id="d554a-106">创建一个名为 `friend_signed_A.` 的 C# 文件，其中包含以下代码。</span><span class="sxs-lookup"><span data-stu-id="d554a-106">Create a C# file named `friend_signed_A.` that contains the following code.</span></span> <span data-ttu-id="d554a-107">该代码使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性将 friend_signed_B 声明为友元程序集。</span><span class="sxs-lookup"><span data-stu-id="d554a-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -54,13 +45,13 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-3.  <span data-ttu-id="43f03-108">使用以下命令编译 friend_signed_A 并为其签名。</span><span class="sxs-lookup"><span data-stu-id="43f03-108">Compile and sign friend_signed_A by using the following command.</span></span>  
+3.  <span data-ttu-id="d554a-108">使用以下命令编译 friend_signed_A 并为其签名。</span><span class="sxs-lookup"><span data-stu-id="d554a-108">Compile and sign friend_signed_A by using the following command.</span></span>  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
     ```  
   
-4.  <span data-ttu-id="43f03-109">创建一个名为 `friend_unsigned_B` 的 C# 文件，其中包含以下代码。</span><span class="sxs-lookup"><span data-stu-id="43f03-109">Create a C# file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="43f03-110">由于 friend_unsigned_A 将 friend_unsigned_B 指定为友元程序集，因此 friend_unsigned_B 中的代码可以访问 friend_unsigned_A 中的 `internal` 类型和成员。</span><span class="sxs-lookup"><span data-stu-id="43f03-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `internal` types and members from friend_unsigned_A.</span></span>  
+4.  <span data-ttu-id="d554a-109">创建一个名为 `friend_unsigned_B` 的 C# 文件，其中包含以下代码。</span><span class="sxs-lookup"><span data-stu-id="d554a-109">Create a C# file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="d554a-110">由于 friend_unsigned_A 将 friend_unsigned_B 指定为友元程序集，因此 friend_unsigned_B 中的代码可以访问 friend_unsigned_A 中的 `internal` 类型和成员。</span><span class="sxs-lookup"><span data-stu-id="d554a-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `internal` types and members from friend_unsigned_A.</span></span>  
   
     ```csharp  
     // friend_unsigned_B.cs  
@@ -83,24 +74,24 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-5.  <span data-ttu-id="43f03-111">使用以下命令编译 friend_signed_B。</span><span class="sxs-lookup"><span data-stu-id="43f03-111">Compile friend_signed_B by using the following command.</span></span>  
+5.  <span data-ttu-id="d554a-111">使用以下命令编译 friend_signed_B。</span><span class="sxs-lookup"><span data-stu-id="d554a-111">Compile friend_signed_B by using the following command.</span></span>  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
     ```  
   
-     <span data-ttu-id="43f03-112">编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。</span><span class="sxs-lookup"><span data-stu-id="43f03-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="43f03-113">必须使用 `/out` 编译器选项显式指定输出程序集（.exe 或 .dll）的名称。</span><span class="sxs-lookup"><span data-stu-id="43f03-113">You must explicitly specify the name of the output assembly (.exe or .dll) by using the `/out` compiler option.</span></span> <span data-ttu-id="43f03-114">有关详细信息，请参阅 [/out（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)。</span><span class="sxs-lookup"><span data-stu-id="43f03-114">For more information, see [/out (C# Compiler Options)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span></span>  
+     <span data-ttu-id="d554a-112">编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。</span><span class="sxs-lookup"><span data-stu-id="d554a-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="d554a-113">必须使用 `/out` 编译器选项显式指定输出程序集（.exe 或 .dll）的名称。</span><span class="sxs-lookup"><span data-stu-id="d554a-113">You must explicitly specify the name of the output assembly (.exe or .dll) by using the `/out` compiler option.</span></span> <span data-ttu-id="d554a-114">有关详细信息，请参阅 [/out（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)。</span><span class="sxs-lookup"><span data-stu-id="d554a-114">For more information, see [/out (C# Compiler Options)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span></span>  
   
-6.  <span data-ttu-id="43f03-115">运行 friend_signed_B.exe 文件。</span><span class="sxs-lookup"><span data-stu-id="43f03-115">Run the friend_signed_B.exe file.</span></span>  
+6.  <span data-ttu-id="d554a-115">运行 friend_signed_B.exe 文件。</span><span class="sxs-lookup"><span data-stu-id="d554a-115">Run the friend_signed_B.exe file.</span></span>  
   
-     <span data-ttu-id="43f03-116">此程序将输出两个字符串：“Class1.Test”和“Class2.Test”。</span><span class="sxs-lookup"><span data-stu-id="43f03-116">The program prints two strings: "Class1.Test" and "Class2.Test".</span></span>  
+     <span data-ttu-id="d554a-116">此程序将输出两个字符串：“Class1.Test”和“Class2.Test”。</span><span class="sxs-lookup"><span data-stu-id="d554a-116">The program prints two strings: "Class1.Test" and "Class2.Test".</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="43f03-117">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="43f03-117">.NET Framework Security</span></span>  
- <span data-ttu-id="43f03-118"><xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 类之间具有相似之处。</span><span class="sxs-lookup"><span data-stu-id="43f03-118">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="43f03-119">主要区别是，<xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全权限来运行一段特定代码，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性控制 `internal` 类型和成员的可见性。</span><span class="sxs-lookup"><span data-stu-id="43f03-119">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` types and members.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="d554a-117">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="d554a-117">.NET Framework Security</span></span>  
+ <span data-ttu-id="d554a-118"><xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 类之间具有相似之处。</span><span class="sxs-lookup"><span data-stu-id="d554a-118">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="d554a-119">主要区别是，<xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全权限来运行一段特定代码，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性控制 `internal` 类型和成员的可见性。</span><span class="sxs-lookup"><span data-stu-id="d554a-119">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` types and members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43f03-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="43f03-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d554a-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="d554a-120">See Also</span></span>  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [<span data-ttu-id="43f03-121">程序集和全局程序集缓存 (C#)</span><span class="sxs-lookup"><span data-stu-id="43f03-121">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [<span data-ttu-id="43f03-122">友元程序集 (C#)</span><span class="sxs-lookup"><span data-stu-id="43f03-122">Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [<span data-ttu-id="43f03-123">如何： 创建签名的友元程序集 (C#)</span><span class="sxs-lookup"><span data-stu-id="43f03-123">How to: Create Signed Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [<span data-ttu-id="43f03-124">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="43f03-124">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
+ [<span data-ttu-id="d554a-121">程序集和全局程序集缓存 (C#)</span><span class="sxs-lookup"><span data-stu-id="d554a-121">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="d554a-122">友元程序集 (C#)</span><span class="sxs-lookup"><span data-stu-id="d554a-122">Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [<span data-ttu-id="d554a-123">如何：创建签名的友元程序集 (C#)</span><span class="sxs-lookup"><span data-stu-id="d554a-123">How to: Create Signed Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+ [<span data-ttu-id="d554a-124">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="d554a-124">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
