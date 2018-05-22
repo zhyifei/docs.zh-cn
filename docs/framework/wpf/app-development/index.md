@@ -12,7 +12,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-development"></a>应用程序开发
-<a name="introduction"></a> Windows Presentation Foundation (WPF) 是一个显示框架，可用于开发以下类型的应用程序：  
+<a name="introduction"></a> Windows Presentation Foundation (WPF) 是一个演示框架，可用于开发以下类型的应用程序： 
   
 -   独立应用程序（传统风格的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 应用程序，这些应用程序作为要安装到客户端计算机并从客户端计算机运行的可执行程序集来生成）。  
   
