@@ -2,11 +2,11 @@
 title: 静态解析的类型参数 (F#)
 description: '了解如何使用 F # 静态解析的类型参数，它将被替换为实际类型在编译时而不是在运行时。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 30a7de0a3bc523ef17c1f89d6f88549069f752f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12c2af4d9df7ae1e5e77efc9413eb8777459a83c
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="statically-resolved-type-parameters"></a>静态解析的类型参数
 
@@ -59,23 +59,25 @@ when (^a or ^b) : (static member ( + ) : ^a * ^b -> ^d) and
 F # 4.1 开始，你还可以指定具体的类型名称静态解析的类型的参数签名中。  在以前版本的语言，类型名称实际上无法由编译器推断，但无法实际指定的签名中。  截至 F # 4.1，还可以在静态解析的类型的参数签名中指定具体的类型名称。 以下是一个示例：
 
 ```fsharp
+let inline konst x _ = x
+
 type CFunctor() = 
-      static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
-      static member inline fmap (f: ^a -> ^b, a: ^a option) =
+    static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
+    static member inline fmap (f: ^a -> ^b, a: ^a option) =
         match a with
         | None -> None
         | Some x -> Some (f x)
 
-      // default implementation of replace
-      static member inline replace< ^a, ^b, ^c, ^d, ^e when ^a :> CFunctor and (^a or ^d): (static member fmap: (^b -> ^c) * ^d -> ^e) > (a, f) =
+    // default implementation of replace
+    static member inline replace< ^a, ^b, ^c, ^d, ^e when ^a :> CFunctor and (^a or ^d): (static member fmap: (^b -> ^c) * ^d -> ^e) > (a, f) =
         ((^a or ^d) : (static member fmap : (^b -> ^c) * ^d -> ^e) (konst a, f))
 
-      // call overridden replace if present
-      static member inline replace< ^a, ^b, ^c when ^b: (static member replace: ^a * ^b -> ^c)>(a: ^a, f: ^b) =
+    // call overridden replace if present
+    static member inline replace< ^a, ^b, ^c when ^b: (static member replace: ^a * ^b -> ^c)>(a: ^a, f: ^b) =
         (^b : (static member replace: ^a * ^b -> ^c) (a, f))
 
 let inline replace_instance< ^a, ^b, ^c, ^d when (^a or ^c): (static member replace: ^b * ^c -> ^d)> (a: ^b, f: ^c) =
-      ((^a or ^c): (static member replace: ^b * ^c -> ^d) (a, f))
+        ((^a or ^c): (static member replace: ^b * ^c -> ^d) (a, f))
 
 // Note the concrete type 'CFunctor' specified in the signature
 let inline replace (a: ^a) (f: ^b): ^a0 when (CFunctor or  ^b): (static member replace: ^a *  ^b ->  ^a0) =

@@ -1,21 +1,14 @@
 ---
-title: "使用作为容器而运行的数据库服务器"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用作为容器而运行的数据库服务器"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 使用作为容器而运行的数据库服务器
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用作为容器而运行的数据库服务器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 70dd3686519fc38ae35910284948ccf95e743ef7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ff6afbe9618df918e0a965fa1202bbb999eee5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>使用作为容器而运行的数据库服务器
 
@@ -54,11 +47,11 @@ eShopOnContainers 应用程序提供在启动时在数据库中设定数据，�
 
 #### <a name="additional-resources"></a>其他资源
 
--   在 Linux、Mac 或 Windows 上运行 SQL Server Docker映像
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+-   **在 Linux、Mac 或 Windows 上运行 SQL Server Docker 映像**
+    [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   使用 sqlcmd 在 Linux 上连接和查询 SQL Server
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+-   **使用 sqlcmd 连接和查询 Linux 上的 SQL Server**
+    [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>在 Web 应用程序启动时设定测试数据
 

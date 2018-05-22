@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 756a18da74ff49cbefaf6a63980302bbcb141713
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d906fc8ada19f22059da44acbd76dd07dacd4801
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 指定一个或多个已声明的编程元素只能在包含其声明的程序集内访问。  
@@ -27,9 +27,10 @@ ms.lasthandoff: 05/04/2018
  `Friend` 访问通常是应用程序的编程元素的首选的级别和`Friend`是默认访问接口、 模块、 类或结构的级别。  
   
  你可以使用`Friend`只能在模块、 接口或命名空间级别。 因此，声明上下文`Friend`元素必须是源文件、 命名空间、 接口、 模块、 类或结构; 它不能是一个过程。  
-  
- 你可以使用`Friend`结合修饰符[受保护](../../../visual-basic/language-reference/modifiers/protected.md)同一声明中的修饰符。 此组合授予同时`Friend`访问和上已声明的元素，这样便可从同一程序集，从其自身的类，以及从派生类中的任何位置访问受保护的访问。 你可以指定`Protected Friend`仅适用于的类的成员。  
-  
+
+> [!NOTE]
+> 你还可以使用[Protected Friend](protected-friend.md)访问修饰符，这样可以从该类，从派生类中，和在其中定义类的同一程序集内访问类成员。 若要限制对中的成员在它的类以及从同一程序集中的派生类的访问，请使用[私有受保护](private-protected.md)访问修饰符。
+
  有关的比较`Friend`以及其他访问修饰符，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 > [!NOTE]
@@ -74,6 +75,8 @@ ms.lasthandoff: 05/04/2018
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [私有受保护](./private-protected.md)   
+ [受保护的友元](./protected-friend.md)   
  [在 Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

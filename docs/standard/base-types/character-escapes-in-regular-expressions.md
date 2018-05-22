@@ -1,13 +1,7 @@
 ---
 title: 正则表达式中的字符转义
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,18 +14,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8a4ec10bfa332c8caafce57385791d8069a7231a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正则表达式中的字符转义
 正则表达式中的反斜杠 (\\) 指示以下值之一：  
@@ -48,7 +37,7 @@ ms.lasthandoff: 03/26/2018
   
 |字符或序列|描述|  
 |---------------------------|-----------------|  
-|除以下字符外的所有字符：<br /><br /> . $ ^ { [ ( &#124; ) * + ? \|中列出的之外的字符**字符或序列**列正则表达式中没有任何特殊含义; 自身匹配。<br /><br /> “字符或序列”列中包括的字符均为特殊的正则表达式语言元素。 若要在正则表达式中匹配这些字符，必须将其转义或纳入[正字符组](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，正则表达式 `\$\d+` 或 `[$]\d+` 匹配“$1200”。|  
+|除以下字符外的所有字符：<br /><br /> . $ ^ { [ ( &#124; ) * + ? \|“字符或序列”列中未包含的字符在正则表达式中没有特殊含义；此类字符与自身匹配。<br /><br /> “字符或序列”列中包括的字符均为特殊的正则表达式语言元素。 若要在正则表达式中匹配这些字符，必须将其转义或纳入[正字符组](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，正则表达式 `\$\d+` 或 `[$]\d+` 匹配“$1200”。|  
 |`\a`|匹配响铃（警报）字符，`\u0007`。|  
 |`\b`|在 `[`character_group`]` 字符类中，匹配退格，`\u0008`。  （请参阅[字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。）在字符类之外，`\b` 是匹配字边界的定位点。 （请参阅[定位标记](../../../docs/standard/base-types/anchors-in-regular-expressions.md)）|  
 |`\t`|匹配制表符，`\u0009`。|  
@@ -79,5 +68,5 @@ ms.lasthandoff: 03/26/2018
 |`(.+)`|一次或多次匹配任何字符。 这是第二个捕获组。|  
 |`\r?\n`|匹配零或一个出现回车符后接新行的次数。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

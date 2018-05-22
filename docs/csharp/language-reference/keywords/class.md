@@ -1,24 +1,17 @@
 ---
 title: class（C# 参考）
 ms.date: 07/18/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - class_CSharpKeyword
 - class
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-caps.latest.revision: 30
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ae4b019ee88b6f331a76c750ab94fc76a3343adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 20968d2f72195db6d16de1b726c6e946b91ffcd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-c-reference"></a>class（C# 参考）
 
@@ -44,7 +37,7 @@ class TestClass
 
 直接在命名空间中声明的、未嵌套在其它类中的类，可以是[公共](../../../csharp/language-reference/keywords/public.md)或[内部](../../../csharp/language-reference/keywords/internal.md)。 默认情况下类为 `internal`。
 
-类成员，包括嵌套的类，可以[公共](../../../csharp/language-reference/keywords/public.md)， `protected internal`，[保护](../../../csharp/language-reference/keywords/protected.md)，[内部](../../../csharp/language-reference/keywords/internal.md)，[私有](../../../csharp/language-reference/keywords/private.md)，或`private protected`. 默认情况下，成员为[私有](../../../csharp/language-reference/keywords/private.md)。
+类成员（包括嵌套的类）可以为[公共](../../../csharp/language-reference/keywords/public.md)、`protected internal`、[受保护](../../../csharp/language-reference/keywords/protected.md)、[内部](../../../csharp/language-reference/keywords/internal.md)、[私有](../../../csharp/language-reference/keywords/private.md)或 `private protected`。 默认情况下，成员为[私有](../../../csharp/language-reference/keywords/private.md)。
 
 有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。
 
@@ -99,7 +92,7 @@ Console.Write(child1.name);   // Error
 ## <a name="c-language-specification"></a>C# 语言规范
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  

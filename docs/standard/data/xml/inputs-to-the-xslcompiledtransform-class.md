@@ -1,35 +1,24 @@
 ---
-title: "XslCompiledTransform 类的输入"
-ms.custom: 
+title: XslCompiledTransform 类的输入
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7aac1e85bdc27c9c8394eadcae841069115b369d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bc909b666b90d8c8825e7dbef33e48b6126bd7c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform 类的输入
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法接受三种输入类型的源文档：实现 <xref:System.Xml.XPath.IXPathNavigable> 接口的对象、读取源文档的 <xref:System.Xml.XmlReader> 对象或字符串 URI。  
   
 > [!NOTE]
->  默认情况下，<xref:System.Xml.Xsl.XslCompiledTransform> 类保留空白。 这符合 W3C XSLT 1.0 建议的第 3.4 节（第 3.4 节，http://www.w3.org/TR/xslt.html#strip）。  
+>  默认情况下，<xref:System.Xml.Xsl.XslCompiledTransform> 类保留空白。 这符合 W3C XSLT 1.0 建议的第 3.4 节（第 3.4 节，http://www.w3.org/TR/xslt.html#strip)）。  
   
 ## <a name="ixpathnavigable-interface"></a>IXPathNavigable 接口  
  <xref:System.Xml.XPath.IXPathNavigable> 接口在 <xref:System.Xml.XmlNode> 和 <xref:System.Xml.XPath.XPathDocument> 类中实现。 这两个类表示 XML 数据的内存中缓存。  

@@ -1,20 +1,16 @@
 ---
-title: "用 ASP.NET 开发 Web 应用程序"
+title: 用 ASP.NET 开发 Web 应用程序
 ms.date: 10/10/2017
-ms.prod: .net-framework
-ms.technology: dotnet-webforms
-ms.topic: article
 helpviewer_keywords:
 - ASP.NET
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-manager: wpickett
-ms.openlocfilehash: c53620bd76fdb0b2e921687e538e99301c2da8e3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7e9fcb15bfb151f5ae8673e6afe4adaf70cb498a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-web-applications-with-aspnet"></a>用 ASP.NET 开发 Web 应用程序
 ASP.NET 是用于创建 Web 应用程序的 .NET Framework 技术。 为了方便起见，提供了下列链接：  

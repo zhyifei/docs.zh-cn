@@ -1,20 +1,13 @@
 ---
-title: "C# 结构 - C# 语言介绍"
-description: "了解 C# 值类型（称为“结构”）的基础知识"
-keywords: ".NET, C#, 结构, 值类型"
-author: BillWagner
-ms.author: wiwagn
+title: C# 结构 - C# 语言介绍
+description: 了解 C# 值类型（称为“结构”）的基础知识
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: fa840d80bba98889f75863db2612f196d78bd3c5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: dac0952e6a55a16ecefec79f9789f9e2d44aada1
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="structs"></a>结构
 
@@ -30,7 +23,7 @@ ms.lasthandoff: 03/15/2018
 
 现在，仅实例化一个对象（即用于数组的对象），`Point` 实例存储内嵌在数组中。
 
-结构构造函数使用 new 运算符进行调用，但这不并表示要分配内存。 结构构造函数只返回结构值本身（通常在堆栈的临时位置中），并在必要时复制此值，而非动态分配对象并返回对此对象的引用。
+结构构造函数使用 `new` 运算符进行调用，但这不并表示要分配内存。 结构构造函数只返回结构值本身（通常在堆栈的临时位置中），并在必要时复制此值，而非动态分配对象并返回对此对象的引用。
 
 借助类，两个变量可以引用同一对象；因此，对一个变量执行的运算可能会影响另一个变量引用的对象。 借助结构，每个变量都有自己的数据副本；因此，对一个变量执行的运算不会影响另一个变量。 例如，以下代码片段生成的输出取决于 Point 是类还是结构。
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811443dbd8e2483f7fc1b0f8c44afb4ebcd9efcf
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="application-domains"></a>应用程序域
 操作系统和运行时环境通常会在应用程序间提供某种形式的隔离。 例如，Windows 使用进程来隔离应用程序。 为确保在一个应用程序中运行的代码不会对其他不相关的应用程序产生不良影响，这种隔离是必需的。  
@@ -74,11 +74,11 @@ ms.lasthandoff: 05/03/2018
   
  有三个选项用于加载非特定于域的程序集：  
   
--   <xref:System.LoaderOptimization> 不以非特定于域的形式加载任何程序集（Mscorlib 除外，它始终以非特定于域的形式加载）。 此设置称作单域，因为它通常用在宿主只运行进程中的单个应用程序时。  
-  
--   <xref:System.LoaderOptimization> 以非特定于域的形式加载所有程序集。 此设置用于以下情况：进程中有多个应用程序域，所有这些应用程序域均运行相同的代码。  
-  
--   <xref:System.LoaderOptimization> 以非特定于域的形式加载强名称程序集（如果它们以及它们的所有依赖项都已在全局程序集缓存中安装）。 其他程序集都将针对它们加载的每个应用程序域分别进行加载和 JIT 编译，从而可以从进程中卸载。 如果您在同一进程中运行多个应用程序，或者如果您有混合的程序集，其中包括许多应用程序域共享的程序集和需要从进程中卸载的程序集，则可以使用此设置。  
+- <xref:System.LoaderOptimization.SingleDomain?displayProperty=nameWithType> 不以非特定于域的形式加载任何程序集（Mscorlib 除外，它始终以非特定于域的形式加载）。 此设置称作单域，因为它通常用在宿主只运行进程中的单个应用程序时。
+
+- <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> 以非特定于域的形式加载所有程序集。 此设置用于以下情况：进程中有多个应用程序域，所有这些应用程序域均运行相同的代码。
+
+- <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> 以非特定于域的形式加载强名称程序集（如果它们以及它们的所有依赖项都已在全局程序集缓存中安装）。 其他程序集都将针对它们加载的每个应用程序域分别进行加载和 JIT 编译，从而可以从进程中卸载。 如果您在同一进程中运行多个应用程序，或者如果您有混合的程序集，其中包括许多应用程序域共享的程序集和需要从进程中卸载的程序集，则可以使用此设置。
   
  以下程序集不能共享 JIT 编译代码：使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 类的 <xref:System.Reflection.Assembly> 方法加载到“加载源”上下文中的程序集，或者使用 <xref:System.Reflection.Assembly.Load%2A> 方法的重载（指定字节数组）从图像加载的程序集。  
   

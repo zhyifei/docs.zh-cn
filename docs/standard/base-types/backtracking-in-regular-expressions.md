@@ -1,13 +1,7 @@
 ---
 title: 正则表达式中的回溯
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,18 +16,13 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>正则表达式中的回溯
 <a name="top"></a> 当正则表达式模式包含可选 [限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)时，会发生回溯，并且正则表达式引擎会返回以前保存的状态，以继续搜索匹配项。 回溯是正则表达式的强大功能的中心；它使得表达式强大、灵活，可以匹配非常复杂的模式。 同时，这种强大功能需要付出一定代价。 通常，回溯是影响正则表达式引擎性能的单个最重要的因素。 幸运的是，开发人员可以控制正则表达式引擎的行为及其使用回溯的方式。 本主题说明回溯的工作方式以及如何对其进行控制。  
@@ -128,7 +117,7 @@ ms.lasthandoff: 03/23/2018
   
 -   它返回到以前保存的匹配 3。 它确定有两个附加的“a”字符可分配给其他捕获的组。 但是，字符串末尾测试失败。 然后，它返回 match3 并尝试在两个附加的捕获组中匹配两个附加的“a”字符。 字符串末尾测试仍失败。 这些失败的匹配需要进行 12 次比较。 到目前为止，总共执行了 25 次比较。  
   
- 输入字符串与正则表达式的比较将以此方式继续，直到正则表达式引擎已尝试所有可能的匹配组合然后得出无匹配的结论。 因为存在嵌套的限定符，这种比较复杂度为 O (2<sup>n</sup>) 或指数操作，其中*n*输入字符串中的字符数。 这意味着在最糟糕的情况下，包含 30 个字符的输入字符串大约需要进行 1,073,741,824 次比较，包含 40 个字符的输入字符串大约需要进行 1,099,511,627,776 次比较。 如果使用上述长度甚至更长的字符串，则正则表达式方法在处理与正则表达式模式不匹配的输入时，会需要超长的时间来完成。  
+ 输入字符串与正则表达式的比较将以此方式继续，直到正则表达式引擎已尝试所有可能的匹配组合然后得出无匹配的结论。 因为存在嵌套的限定符，所以此比较为 O(2<sup>n</sup>) 或指数操作，其中 n 是输入字符串中的字符数。 这意味着在最糟糕的情况下，包含 30 个字符的输入字符串大约需要进行 1,073,741,824 次比较，包含 40 个字符的输入字符串大约需要进行 1,099,511,627,776 次比较。 如果使用上述长度甚至更长的字符串，则正则表达式方法在处理与正则表达式模式不匹配的输入时，会需要超长的时间来完成。  
   
  [返回页首](#top)  
   
@@ -225,7 +214,7 @@ ms.lasthandoff: 03/23/2018
   
  [返回页首](#top)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)  
  [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
  [限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  

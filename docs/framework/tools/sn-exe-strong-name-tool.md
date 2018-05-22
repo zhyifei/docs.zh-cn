@@ -1,13 +1,6 @@
 ---
-title: "Sn.exe（强名称工具）"
-ms.custom: 
+title: Sn.exe（强名称工具）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - public keys, signing files
 - Strong Name tool
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff7036bce069aa24742f7ead7bb0735fed0f3678
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c7e58d14eb29939ea1b91b5bdb75f691f5233d8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe（强名称工具）
 强名称工具 (Sn.exe) 有助于使用[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)对程序集进行签名。 Sn.exe 提供了用于密钥管理、签名生成和签名验证的选项。  
@@ -59,11 +49,11 @@ sn [-quiet][option [parameter(s)]]
 |**-h**|显示该工具的命令语法和选项。|  
 |-i infile container|从指定密钥容器中的 infile 安装密钥对。 密钥容器位于强名称 CSP 中。|  
 |-k [keysize] outfile|生成一个指定大小的新 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 密钥并将其写入指定的文件。  公钥和私钥都会写入该文件。<br /><br /> 如果不指定密钥大小，并且已安装了 Microsoft 增强加密提供程序，则默认情况下生成 1,024 位的密钥；否则，生成 512 位的密钥。<br /><br /> 如果安装了 Microsoft 增强加密提供程序，则 keysize 参数支持 384 位至 16,384 位（增量为 8 位）的密钥长度。  如果安装了 Microsoft 基本加密提供程序，则它支持长度为 384 位至 512 位（增量为 8 位）的密钥。|  
-|-m [y | n]|指定密钥容器是特定于计算机的还是特定于用户的。 如果指定 y，则密钥容器是特定于计算机的。 如果指定 n，则密钥容器是特定于用户的。<br /><br /> 如果既没有指定 y 也没有指定 n，则此选项显示当前设置。|  
+|**-m** [**y** *&#124;* **n**]|指定密钥容器是特定于计算机的还是特定于用户的。 如果指定 y，则密钥容器是特定于计算机的。 如果指定 n，则密钥容器是特定于用户的。<br /><br /> 如果既没有指定 y 也没有指定 n，则此选项显示当前设置。|  
 |-o infile [outfile]|从 infile 中提取公钥并将其存储在 .csv 文件中。 公钥的每一字节都由逗号分隔。 这种格式可以用来在源代码中将对密钥的引用硬编码为已初始化的数组。 如果不指定 outfile，则此选项将输出放到剪贴板上。 注意：此选项不验证输入是否只是公钥。 如果 `infile` 包含带有私钥的密钥对，则会同时提取私钥。|  
 |-p infile outfile [hashalg]|从 infile 中的密钥对中提取公钥，并将其存储在 outfile 中，可选择使用 hashalg 指定的 RSA 算法。 此公钥可用于通过[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 的 /delaysign+ 和 /keyfile 选项，对程序集进行延迟签名。 如果对程序集进行延迟签名，则在编译时只设置公钥，并在文件中为要在以后添加的签名（当私钥已知时）保留空间。|  
 |-pc container outfile [hashalg]|从 container 中的密钥对中提取公钥并将其存储在 outfile 中。 如果使用 hashalg 选项，则使用 RSA 算法提取公钥。|  
-|-Pb [y | n]|指定是否强制执行强名称跳过策略。 如果指定 y，则在将完全信任程序集加载到完全信任 <xref:System.AppDomain> 时，不验证这些程序集的强名称。 如果指定 n，则会验证强名称是否正确，但不会验证是否具有特定强名称。 <xref:System.Security.Permissions.StrongNameIdentityPermission> 对完全信任程序集不起作用。 你必须自己对强名称是否匹配进行检查。<br /><br /> 如果既没有指定 `y` 也没有指定 `n`，则此选项显示当前设置。 默认值为 `y`。 注意：在 64 位计算机上，必须同时在 Sn.exe 的 32 位和 64 位实例中设置此参数。|  
+|**-Pb** [**y** *&#124;* **n**]|指定是否强制执行强名称跳过策略。 如果指定 y，则在将完全信任程序集加载到完全信任 <xref:System.AppDomain> 时，不验证这些程序集的强名称。 如果指定 n，则会验证强名称是否正确，但不会验证是否具有特定强名称。 <xref:System.Security.Permissions.StrongNameIdentityPermission> 对完全信任程序集不起作用。 你必须自己对强名称是否匹配进行检查。<br /><br /> 如果既没有指定 `y` 也没有指定 `n`，则此选项显示当前设置。 默认值为 `y`。 注意：在 64 位计算机上，必须同时在 Sn.exe 的 32 位和 64 位实例中设置此参数。|  
 |-q[uiet]|指定安静模式；取消显示成功消息。|  
 |-R[a] assembly infile|使用 infile 中的密钥对，为先前已签名的程序集或延迟签名的程序集重新签名。<br /><br /> 如果使用了 -Ra，则重新计算程序集中所有文件的哈希值。|  
 |-Rc[a] assembly container|使用 container 中的密钥对，为之前已签名的程序集或延迟签名的程序集重新签名。<br /><br /> 如果使用了 -Rca，则重新计算程序集中所有文件的哈希值。|  

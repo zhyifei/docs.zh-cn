@@ -1,21 +1,14 @@
 ---
-title: "何时为 Docker 容器选择 .NET Framework"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 何时为 Docker 容器选择 .NET Framework"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 何时为 Docker 容器选择 .NET Framework
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 何时为 Docker 容器选择 .NET Framework
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>何时为 Docker 容器选择 .NET Framework
 
@@ -56,16 +49,16 @@ ms.lasthandoff: 03/05/2018
 ### <a name="additional-resources"></a>其他资源
 
 -   **.NET Core 指南**
-    [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
+    [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
 
 -   **从 .NET Framework 移植到 .NET Core**
-    [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
+    [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md)
 
 -   **Docker 上的 .NET Framework 指南**
-    [https://docs.microsoft.com/dotnet/framework/docker/](../../../framework/docker/index.md)
+    [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md)
 
 -   **.NET 组件概述**
-    [https://docs.microsoft.com/dotnet/standard/components](../../components.md)
+    [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
 
 
 

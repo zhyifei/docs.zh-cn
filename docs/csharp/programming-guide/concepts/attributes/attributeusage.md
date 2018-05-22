@@ -1,155 +1,89 @@
 ---
 title: AttributeUsage (C#)
-ms.custom: 
-ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
-ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9351ee10b523145ace1249bf17388da0cdba277
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.date: 04/25/2018
+ms.openlocfilehash: 869e6509e55268767915a783a8652f7f950d7137
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
-确定如何使用自定义特性类。 `AttributeUsage` 是一个特性，可应用于自定义特性定义，以控制如何应用新特性。 在显式应用时的默认设置如下：  
-  
-```csharp  
-[System.AttributeUsage(System.AttributeTargets.All,  
-                   AllowMultiple = false,  
-                   Inherited = true)]  
-class NewAttribute : System.Attribute { }  
-```  
-  
- 在此示例中，`NewAttribute` 类可应用于任何特性的代码实体，但只能对每个实体应用一次。 当应用于基类时，它由派生类继承。  
-  
- `AllowMultiple` 和 `Inherited` 参数是可选的，因而此代码具有相同的效果：  
-  
-```csharp  
-[System.AttributeUsage(System.AttributeTargets.All)]  
-class NewAttribute : System.Attribute { }  
-```  
-  
- 第一个 `AttributeUsage` 参数必须是 <xref:System.AttributeTargets> 枚举的一个或多个元素。 可将多个目标类型与 OR 运算符链接在一起，如下所示：  
-  
-```csharp  
-using System;  
 
-[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]  
-class NewPropertyOrFieldAttribute : Attribute { }  
-```  
-  
- 如果 `AllowMultiple` 参数设置为 `true`，则结果特性可多次应用于单个实体，如下所示：  
-  
-```csharp  
-using System;  
+确定如何使用自定义特性类。 <xref:System.AttributeUsageAttribute> 是应用到自定义特性定义的特性。 `AttributeUsage` 特性帮助控制：
 
-[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]  
-class MultiUseAttr : Attribute { }  
-  
-[MultiUseAttr]  
-[MultiUseAttr]  
-class Class1 { }  
-  
-[MultiUseAttr, MultiUseAttr]  
-class Class2 { }  
-```  
-  
- 在本例中，`MultiUseAttr` 可重复应用，因为 `AllowMultiple` 设置为 `true`。 所显示的两种用于应用多个特性的格式均有效。  
-  
- 如果 `Inherited` 设置为 `false`，那么特性不会由派生自已特性化的类的类继承。 例如:   
-  
-```csharp  
-using System;  
+- 可能应用到的具体程序元素特性。 除非使用限制，否则特性可能应用到以下任意程序元素：
+  - 程序集
+  - name
+  - Field — 字段
+  - Event — 事件
+  - 方法
+  - param
+  - 属性
+  - return
+  - 类型
+- 某特性是否可多次应用于单个程序元素。
+- 特性是否由派生类继承。
 
-[AttributeUsage(AttributeTargets.Class, Inherited = false)]  
-class Attr1 : Attribute { }  
-  
-[Attr1]  
-class BClass { }  
-  
-class DClass : BClass { }  
-```  
-  
- 在本例中，`Attr1` 不会通过继承应用于 `DClass`。  
-  
-## <a name="remarks"></a>备注  
- `AttributeUsage` 特性是单次使用的特性 -- 它无法应用于同一个类超过一次。 `AttributeUsage` 是 <xref:System.AttributeUsageAttribute> 的别名。  
-  
- 有关详细信息，请参阅[使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。  
-  
-## <a name="example"></a>示例  
- 以下示例演示 `Inherited` 和 `AllowMultiple` 参数对 `AttributeUsage` 特性的影响，以及如何枚举应用于类的自定义特性。  
-  
-```csharp  
-using System;  
+显式应用时，默认设置如以下示例所示：
 
-// Create some custom attributes:  
-[AttributeUsage(System.AttributeTargets.Class, Inherited = false)]  
-class A1 : System.Attribute { }  
-  
-[AttributeUsage(System.AttributeTargets.Class)]  
-class A2 : System.Attribute { }  
-  
-[AttributeUsage(System.AttributeTargets.Class, AllowMultiple = true)]  
-class A3 : System.Attribute { }  
-  
-// Apply custom attributes to classes:  
-[A1, A2]  
-class BaseClass { }  
-  
-[A3, A3]  
-class DerivedClass : BaseClass { }  
-  
-public class TestAttributeUsage  
-{  
-    static void Main()  
-    {  
-        BaseClass b = new BaseClass();  
-        DerivedClass d = new DerivedClass();  
-  
-        // Display custom attributes for each class.  
-        Console.WriteLine("Attributes on Base Class:");  
-        object[] attrs = b.GetType().GetCustomAttributes(true);  
-        foreach (Attribute attr in attrs)  
-        {  
-            Console.WriteLine(attr);  
-        }  
-  
-        Console.WriteLine("Attributes on Derived Class:");  
-        attrs = d.GetType().GetCustomAttributes(true);  
-        foreach (Attribute attr in attrs)  
-        {  
-            Console.WriteLine(attr);  
-        }  
-    }  
-}  
-```  
-  
-## <a name="sample-output"></a>示例输出  
-  
-```  
-Attributes on Base Class:  
-A1  
-A2  
-Attributes on Derived Class:  
-A3  
-A3  
-A2  
-```  
-  
-## <a name="see-also"></a>另请参阅  
+[!code-csharp[Define a new attribute](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#1)]
+
+在此示例中，`NewAttribute` 类可应用于任何受支持的程序元素。 但是它对每个实体仅能应用一次。 特性应用于基类时，它由派生类继承。
+
+<xref:System.AttributeUsageAttribute.AllowMultiple> 和 <xref:System.AttributeUsageAttribute.Inherited> 参数是可选的，因此以下代码具有相同效果：
+
+[!code-csharp[Omit optional attributes](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#2)]
+
+第一个 <xref:System.AttributeUsageAttribute> 参数必须是 <xref:System.AttributeTargets> 枚举的一个或多个元素。 可将多个目标类型与 OR 运算符链接在一起，如下例所示：
+
+[!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#1)]
+
+从 C# 7.3 开始，特性可应用于自动实现的属性的属性或支持字段。 特性应用于属性，除非在特性上指定 `field` 说明符。 都在以下示例中进行了演示：
+
+[!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#2)]
+
+如果 <xref:System.AttributeUsageAttribute.AllowMultiple> 参数为 `true`，那么结果特性可多次应用于单个实体，如以下示例所示：
+
+[!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/MultiUseAttribute.cs#1)]
+
+在本例中，`MultiUseAttribute` 可重复应用，因为 `AllowMultiple` 设置为 `true`。 所显示的两种用于应用多个特性的格式均有效。
+
+如果 <xref:System.AttributeUsageAttribute.Inherited> 为 `false`，那么该特性不是由特性类派生的类继承。 例如:
+
+[!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
+
+在本例中，`NonInheritedAttribute` 不会通过继承应用于 `DClass`。
+
+## <a name="remarks"></a>备注
+
+`AttributeUsage` 特性是单次使用的特性 -- 它无法应用于同一个类超过一次。 `AttributeUsage` 是 <xref:System.AttributeUsageAttribute> 的别名。
+
+有关详细信息，请参阅[使用反射访问特性 (C#)](accessing-attributes-by-using-reflection.md)。
+
+## <a name="example"></a>示例
+
+以下示例演示 <xref:System.AttributeUsageAttribute.Inherited> 和 <xref:System.AttributeUsageAttribute.AllowMultiple> 参数对 <xref:System.AttributeUsageAttribute> 特性的影响，以及如何枚举应用于类的自定义特性。
+
+[!code-csharp[Applying and querying attributes](../../../../../samples/snippets/csharp/attributes/Program.cs#1)]
+
+## <a name="sample-output"></a>示例输出
+
+```text
+Attributes on Base Class:
+FirstAttribute
+SecondAttribute
+Attributes on Derived Class:
+ThirdAttribute
+ThirdAttribute
+SecondAttribute
+```
+
+## <a name="see-also"></a>请参阅
  <xref:System.Attribute>  
  <xref:System.Reflection>  
- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
- [特性](../../../../../docs/standard/attributes/index.md)  
- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [特性](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [创建自定义特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ [C# 编程指南](../..//index.md)  
+ [特性](../../../..//standard/attributes/index.md)  
+ [反射 (C#)](../reflection.md)  
+ [特性](index.md)  
+ [创建自定义特性 (C#)](creating-custom-attributes.md)  
+ [使用反射访问特性 (C#)](accessing-attributes-by-using-reflection.md)

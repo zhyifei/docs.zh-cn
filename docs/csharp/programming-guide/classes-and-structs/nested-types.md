@@ -1,24 +1,17 @@
 ---
 title: 嵌套类型（C# 编程指南）
 ms.date: 07/10/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-caps.latest.revision: 13
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ab13c68b638062ab89c90dbfc51b51b8d72d3bde
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 57356fbf4bff218932d1f1b4c62532f10c175757
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nested-types-c-programming-guide"></a>嵌套类型（C# 编程指南）
-在[类](../../../csharp/language-reference/keywords/class.md)或[构造](../../../csharp/language-reference/keywords/struct.md)中定义的类型称为嵌套类型。 例如:   
+在[类](../../../csharp/language-reference/keywords/class.md)或[构造](../../../csharp/language-reference/keywords/struct.md)中定义的类型称为嵌套类型。 例如:  
   
 [!code-csharp[csProgGuideObjects#68](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_1.cs)]  
   
@@ -26,9 +19,9 @@ ms.lasthandoff: 11/21/2017
 
 还可指定[访问修饰符](../../language-reference/keywords/access-modifiers.md)来定义嵌套类型的可访问性，如下所示：
 
-- 嵌套类型的**类**可以是[公共](../../../csharp/language-reference/keywords/public.md)，[保护](../../../csharp/language-reference/keywords/protected.md)，[内部](../../../csharp/language-reference/keywords/internal.md)，[受保护内部](../../../csharp/language-reference/keywords/protected-internal.md)，[私有](../../../csharp/language-reference/keywords/private.md)或[私有受保护](../../../csharp/language-reference/keywords/private-protected.md)。 
+- “类”的嵌套类型可以是 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)、[private](../../../csharp/language-reference/keywords/private.md) 或 [private protected](../../../csharp/language-reference/keywords/private-protected.md)。 
 
-   但是，定义`protected`，`protected internal`或`private protected`嵌套类内的[密封类](../../language-reference/keywords/sealed.md)将生成编译器警告[CS0628](../../misc/cs0628.md)，"新的保护的成员声明为密封类中。"
+   但是，在[密封类](../../language-reference/keywords/sealed.md)中定义 `protected`、`protected internal` 或 `private protected` 嵌套类将产生编译器警告 [CS0628](../../misc/cs0628.md)“封闭类汇中声明了新的受保护成员”。
   
 - 构造的嵌套类型可以是 [public](../../../csharp/language-reference/keywords/public.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 [private](../../../csharp/language-reference/keywords/private.md)。
   
@@ -36,7 +29,7 @@ ms.lasthandoff: 11/21/2017
   
 [!code-csharp[csProgGuideObjects#69](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_2.cs)]  
   
- 嵌套类型（或内部类型）可访问包含类型（或外部类型）。 若要访问包含类型，请将其作为参数传递给嵌套类型的构造函数。 例如:   
+ 嵌套类型（或内部类型）可访问包含类型（或外部类型）。 若要访问包含类型，请将其作为参数传递给嵌套类型的构造函数。 例如:  
   
  [!code-csharp[csProgGuideObjects#70](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_3.cs)]  
   
@@ -46,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideObjects#71](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_4.cs)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  

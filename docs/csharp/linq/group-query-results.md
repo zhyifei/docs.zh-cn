@@ -1,20 +1,13 @@
 ---
-title: "对查询结果进行分组"
-description: "如何对结果进行分组。"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 对查询结果进行分组
+description: 如何对结果进行分组。
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: ca68cf96a2c27bbd1999d5445c14fc93e8e2566c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7808bfdd86dd23882d0722b87b1e013a84141e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-query-results"></a>对查询结果进行分组
 
@@ -81,5 +74,5 @@ ms.lasthandoff: 11/21/2017
  [group 子句](../language-reference/keywords/group-clause.md)  
  [匿名类型](../programming-guide/classes-and-structs/anonymous-types.md)  
  [对分组操作执行子查询](perform-a-subquery-on-a-grouping-operation.md)  
- [创建嵌套的组](create-a-nested-group.md)  
+ [创建嵌套组](create-a-nested-group.md)  
  [数据分组](../programming-guide/concepts/linq/grouping-data.md)

@@ -1,19 +1,14 @@
 ---
 title: 监视容器化应用程序服务
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 26854e9efc4d7e43d5896c30a1c5ce0801045f45
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 3877767117d8292644782fc07df6667931688be2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="monitor-containerized-application-services"></a>监视容器化应用程序服务
 
@@ -101,4 +96,4 @@ Application Insights 和 Operations Management Suite 专注于监视活动;但�
 **详细信息** 若要查找有关安装和配置 Docker 容器中的解决方案[Operations Management Suite](http://microsoft.com/oms)，请转到<https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>。
 
 >[!div class="step-by-step"]
-[以前](管理-生产-docker-environments.md) [下一步] (.../key-takeaways/index.md)
+[以前] (manage-production-docker-environments.md) [下一步] (.../key-takeaways/index.md)

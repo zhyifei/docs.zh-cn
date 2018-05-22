@@ -3,11 +3,11 @@ title: F# 指南
 description: '本指南提供有关 F # 中，在.NET 运行的函数编程语言的各种学习资料的概述。'
 author: jackfoxy
 ms.date: 03/19/2018
-ms.openlocfilehash: 393214a5da7445d8ee3dced844da8592f4ca6d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb829e904c006467e1470752b4fe8757ca694b05
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="f-guide"></a>F# 指南
 
@@ -49,6 +49,8 @@ F # 即将其核心的工作效率。 对 F # 的工具支持是无处不在和�
 [要开始使用 F # 使用.NET 核心 CLI](get-started/get-started-command-line.md)如果你想要使用命令行工具。
 
 [F # 和 Xamarin 入门](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)移动使用 F # 的编程。
+
+[用于 Azure 笔记本的 F #](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)是一个教程，帮助您了解可用的托管 Jupyter 笔记本中的 F #。
 
 ## <a name="references"></a>参考资料
 

@@ -1,19 +1,14 @@
 ---
 title: Docker 应用程序中的状态和数据
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a9f0750dbcffd051e9dae7d9f4f74b921e30af29
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: b27be902779c7e22a568c679362851f745ea494d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据
 
@@ -55,4 +50,4 @@ A[数据卷容器](https://docs.docker.com/v1.8/userguide/dockervolumes/)是对�
 
 
 >[!div class="step-by-step"]
-[以前](整体-applications.md) [下一步] (soa applications.md)
+[以前] (monolithic-applications.md) [下一步] (soa-applications.md)

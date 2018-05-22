@@ -1,21 +1,12 @@
 ---
-title: "演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)"
-ms.custom: 
+title: 演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5b07b940d6287de0caf41c7d15f3036ad4041ad0
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 90bb523e3eb42cea2cd0a9d1e753e4d9b9873c0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)
 如果嵌入强命名托管程序集中的类型信息，则可以对应用程序中的类型进行松耦合，以实现版本独立性。 也就是说，可以将程序编写为使用多个托管库版本中的类型，而不必对每个版本重新编译程序。  
@@ -68,7 +59,7 @@ ms.lasthandoff: 12/14/2017
   
 4.  右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。 单击“生成”选项卡。将输出路径设置为开发计算机上的有效位置，例如 `C:\TypeEquivalenceSample`。 本演练的后续步骤中也将使用此位置。  
   
-5.  在编辑项目属性期间，单击“签名”选项卡。选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“<新建…>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击“确定”。  
+5.  在编辑项目属性期间，单击“签名”选项卡。选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“<新建…>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击 **“确定”**。  
   
 6.  打开 ISampleInterface.cs 文件。 将以下代码添加到 ISampleInterface 类文件，以创建 ISampleInterface 接口。  
   
@@ -116,7 +107,7 @@ ms.lasthandoff: 12/14/2017
   
 4.  右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。 单击“生成”选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。  
   
-5.  在编辑项目属性期间，单击“签名”选项卡。选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“<新建…>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击“确定”。  
+5.  在编辑项目属性期间，单击“签名”选项卡。选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“<新建…>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击 **“确定”**。  
   
 6.  右键单击 TypeEquivalenceRuntime 项目，然后单击“添加引用”。 单击“浏览”选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件并单击“确定”。  
   
@@ -240,7 +231,7 @@ ms.lasthandoff: 12/14/2017
   
 6.  在文件资源管理器中，打开输出路径文件夹（如 C:\TypeEquivalenceSample）。 双击 TypeEquivalenceClient.exe 运行该程序。 程序将反映 TypeEquivalenceRuntime 程序集的未经重新编译的新版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [/link（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
  [C# 编程指南](../../../../csharp/programming-guide/index.md)  
  [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)  

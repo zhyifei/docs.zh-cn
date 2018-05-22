@@ -1,11 +1,7 @@
 ---
-title: ".NET Framework 中辅助功能的新增功能"
+title: .NET Framework 中辅助功能的新增功能
 ms.custom: updateeachrelease
-ms.date: 10/13/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 dev_langs:
 - csharp
 - vb
@@ -13,20 +9,28 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5f17550bc0cc4919f00dc93c8e92d258b38c4f76
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: 7fe7e15e482028b9988d7e560b98be19b6c07427
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 中辅助功能的新增功能
 
 .NET Framework 旨在让用户更轻松地使用应用程序。 辅助功能使应用程序能够为辅助技术用户提供最佳体验。 从 .NET Framework 4.7.1 开始，.NET Framework 包括大量辅助功能改进，使开发人员能够创建易于访问的应用程序。 
 
-对于面向 .NET Framework 4.7.1 或更高版本的应用程序，新的辅助功能默认情况下处于启用状态。 此外，对于面向 .NET Framework 早期版本，但在 .NET Framework 4.7.1 或更高版本上运行的应用程序，可通过将以下开关添加到应用程序配置文件 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 部分中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素来选择取消旧辅助功能行为（因而选择使用 .NET Framework 4.7.1 中的辅助功能改进）。 
+## <a name="accessibility-switches"></a>辅助功能开关
+
+如果应用面向 .NET Framework 4.7 或更低版本，但是在 .NET Framework 4.7.1 或更高版本上运行，可以将应用配置为选择使用辅助功能。 如果应用面向 .NET Framework 4.7.1 或更高版本，还可以将应用配置为使用旧版功能（且不使用辅助功能）。 包括辅助功能的每个 .NET Framework 版本都有一个特定于版本的辅助开关，请将它添加到应用程序配置文件 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 部分中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素。 以下是受支持的开关：
+
+|版本|开关|
+|---|---|
+|.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
+|.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
+
+### <a name="taking-advantage-of-accessibility-enhancements"></a>利用辅助功能改进
+
+对于面向 .NET Framework 4.7.1 或更高版本的应用程序，新的辅助功能默认情况下处于启用状态。 此外，对于面向 .NET Framework 早期版本，但在 .NET Framework 4.7.1 或更高版本上运行的应用程序，可通过将开关添加到应用程序配置文件 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 部分中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素并将其值设为 `false` 来选择弃用旧辅助功能行为（因而利用辅助功能改进）。 以下代码演示如何选择使用 .NET Framework 4.7.1 中引入的辅助功能改进：
 
 ```xml
 <runtime>
@@ -35,23 +39,117 @@ ms.lasthandoff: 03/16/2018
 </runtime>
 ```
 
-同样，对于面向 .NET Framework 4.7.1 或更高版本的应用程序，可通过将以下开关添加到应用程序配置文件 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 部分中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 来禁用辅助功能。 
+如果选择使用更高的 .NET Framework 版本中的辅助功能，还必须显式选择使用更低 .NET Framework 版本的功能。 将应用配置为利用 .NET Framework 4.7.1 和 4.7.2 中的辅助功能改进需要以下 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素：
 
 ```xml
 <runtime>
     <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
-    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=true" />
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
 </runtime>
 ```
+
+### <a name="restoring-legacy-behavior"></a>还原旧行为
+
+对于面向 .NET Framework 4.7.1 或更高版本的应用程序，可通过将开关添加到应用程序配置文件 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 部分中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素并将其值设为 `true` 来禁用辅助功能。 例如，以下配置选择弃用 .NET Framework 4.7.2 中引入的辅助功能：  
+
+```xml
+<runtime>
+    <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures.2=true" />
+</runtime>
+```
+
+## <a name="whats-new-in-accessibility-in-the-net-framework-472"></a>.NET Framework 4.7.2 中辅助功能的新增功能
+
+.NET Framework 4.7.2 在以下几个领域新增了辅助功能：
+
+- [Windows 窗体](#winforms472)
+
+- [Windows Presentation Foundation (WPF)](#wpf472)
+
+<a name="winforms472"></a>
+### <a name="windows-forms"></a>Windows 窗体
+
+**高对比度主题中的 OS 定义的颜色**
+
+自 .NET Framework 4.7.2 起，Windows 窗体使用高对比度主题中的操作系统定义的颜色。 这会影响以下控件：
+
+- <xref:System.Windows.Forms.ToolStripDropDownButton> 控件的下拉箭头。
+
+- <xref:System.Windows.Forms.ButtonBase.FlatStyle> 设为 <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> 或 <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType> 的 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.RadioButton> 和 <xref:System.Windows.Forms.CheckBox> 控件。 以前，所选文本和背景颜色对比度低，难以阅读。
+
+- <xref:System.Windows.Forms.Control.Enabled> 属性设为 `false` 的 <xref:System.Windows.Forms.GroupBox> 中所包含的控件。
+ 
+- 在高对比度模式下，<xref:System.Windows.Forms.ToolStripButton>、<xref:System.Windows.Forms.ToolStripComboBox> 和 <xref:System.Windows.Forms.ToolStripDropDownButton> 控件的亮度对比度提高。
+
+- <xref:System.Windows.Forms.DataGridViewLinkCell> 的 <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> 属性。
+
+**讲述人改进**
+
+自 .NET Framework 4.7.2 起，讲述人支持在以下几个方面改进：
+
+- 它在公布 <xref:System.Windows.Forms.ToolStripMenuItem> 的文本时会公布 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> 属性的值。 
+
+- 当 <xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Enabled> 属性设置为 `false` 时，它会有所指示。
+
+- 当 <xref:System.Windows.Forms.ListView.CheckBoxes?displayProperty=nameWithType> 属性设置为 `true` 时，它会针对复选框的状态给出反馈。
+
+- 讲述人扫描模式焦点顺序与 ClickOnce 下载对话框窗口中控件的视觉顺序一致。
+
+**DataGridView 改进**
+
+自 .NET Framework 4.7.2 起，<xref:System.Windows.Forms.DataGridView> 控件引入了以下辅助功能改进：
+
+- 可以使用键盘对行进行排序。 用户可使用 F3 按当前列排序。
+
+- 若 <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType> 设置为 <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType>，当用户按 Tab 键遍历当前行中的单元格时，列标题将更改颜色来指示当前列。
+
+- <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> 的 <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> 属性返回正确的父控件。
+
+**改进了视觉提示**
+
+- 具有空 <xref:System.Windows.Forms.ButtonBase.Text> 属性的 <xref:System.Windows.Forms.RadioButton> 和 <xref:System.Windows.Forms.CheckBox> 控件在接收到焦点时会显示焦点指示器。
+
+**改进了属性网格支持**
+
+- 现在，仅在 PropertyGrid 元素启用时，<xref:System.Windows.Forms.PropertyGrid> 控件子元素才会为 <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> 属性返回 `true`。
+
+- 仅在用户可更改 PropertyGrid 元素时，<xref:System.Windows.Forms.PropertyGrid> 控件子元素才会为 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> 属性返回 `false`。
+
+**改进了的键盘导航**
+
+- <xref:System.Windows.Forms.ToolStripButton> 控件允许在焦点包含在 <xref:System.Windows.Forms.ToolStripPanel>（其 <xref:System.Windows.Forms.ToolStripPanel.TabStop> 属性设置为 `true`）中时进行聚焦
+
+<a name="wpf472"></a>
+### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+
+**对复选框和单选按钮控件的更改**
+
+在 .NET Framework 4.7.1 和更低版本中，WPF <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> 和 <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> 控件不一致且在经典和高对比度主题中具有不正确的焦点视觉对象。  控件没有内容集时会出现这些问题。  这会使得主题间的转换变得混乱且难以看到焦点视觉对象。
+
+现在，在 .NET Framework 4.7.2 中，主题间的这些视觉对象更加一致，并且在经典和高对比度主题中更轻松可见。
+
+**在 WPF 应用程序中托管的 WinForms 控件**
+
+对于 .NET Framework 4.7.1 和更低版本中的 WPF 应用程序托管的 WinForms 控件，如果该层中的第一个或最后一个控件是 WPF <xref:System.Windows.Forms.Integration.ElementHost> 控件，那么用户不能按 Tab 退出 WinForms 层。 现在，在 .NET Framework 4.7.2 中，用户能够按 Tab 退出 WinForms 层。
+
+但是，依赖于永不转义 WinForms 层的焦点的自动化应用程序不再会按预期工作。
 
 ## <a name="whats-new-in-accessibility-in-the-net-framework-471"></a>.NET Framework 4.7.1 中辅助功能的新增功能
 
 .NET Framework 4.7.1 在以下几个领域新增了辅助功能：
 
-- [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
+- [Windows Presentation Foundation (WPF)](#wpf471)
 
-- [Windows 窗体](#windows-forms-accessibility-improvements)
+- [Windows 窗体](#winforms471)
 
+- [ASP.NET Web 控件](#aspnet471)
+
+- [.NET SDK 工具](#tools471)
+
+- [Windows Workflow Foundation (WF) 工作流设计器](#wf471)
+
+<a name="wpf471"></a>
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
 **屏幕阅读器改进**
@@ -64,7 +162,7 @@ ms.lasthandoff: 03/16/2018
  
 - 从 .NET Framework 4.7.1 开始，屏幕阅读器读出可编辑 <xref:System.Windows.Controls.ComboBox> 的名称。
 
-- 在 .NET Framework 4.7 及更低版本中，<xref:System.Windows.Controls.PasswordBox> 控件被宣称为“视图中没有任何项”或有其他错误行为。 此问题已在 .NET Framework 4.7.1 及更高版本中解决。     
+- 在 .NET Framework 4.7 及更低版本中，<xref:System.Windows.Controls.PasswordBox> 控件被宣称为“视图中没有任何项”或有其他错误行为。 此问题已在 .NET Framework 4.7.1 及更高版本中解决。
 
 **UIAutomation LiveRegion 支持**
 
@@ -192,6 +290,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 有关 .NET Framework 4.7.1 中 WPF 辅助功能改进的详细信息，请参阅 [WPF 辅助功能改进](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)。
 
+<a name="winforms471"></a>
 ## <a name="windows-forms-accessibility-improvements"></a>Windows 窗体辅助功能改进
 
 在 .NET Framework 4.7.1 中，Windows 窗体 (WinForms) 包括以下几个方面的辅助功能改进。
@@ -257,6 +356,89 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - 更好地报告控件类型。
 - 改进了讲述人行为。
  
+<a name="aspnet471"></a>
+## <a name="aspnet-web-controls"></a>ASP.NET Web 控件
+
+自 .NET Framework 4.7.1 和 Visual Studio 2017 15.3 起，ASP.NET 改进了 ASP.NET Web 控件与 Visual Studio 中的辅助功能技术配合使用的方式。 包括以下更改：
+
+- 在以下控件中实现缺失 UI 的辅助功能模式：例如“详细信息视图”向导中的“添加字段”对话框或“ListView”向导的“配置 ListView”对话框。
+
+- 改善在高对比度模式下（如“数据页导航字段编辑器”）的显示。
+
+- 改善以下控件的键盘导航体验：例如 DataPager 控件的“编辑页导航字段”向导中的“字段”对话框、“配置 ObjectContext”对话框或“配置数据源”向导的“配置数据选择”对话框。
+
+<a name="tools471"></a>
+## <a name="net-sdk-tools"></a>.NET SDK 工具
+
+[配置编辑器工具 (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) 和[服务跟踪查看器工具 (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 通过修复各种辅助功能问题得到改进。 其中大多数都是一些小问题，如未定义名称或未正确实现某些 UI 自动化模式。 虽然许多用户不会意识到这些小问题的重要性，但使用屏幕阅读器等辅助技术的客户会发现这些 SDK 工具更易于访问。 
+
+这些改进更改了某些旧行为，例如键盘焦点顺序。
+
+<a name="wf471"></a>
+## <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) 工作流设计器
+
+工作流设计器中的辅助功能更改包括：
+
+- 某些控件中 Tab 键顺序更改为从左到右以及从上到下：
+
+  - 设置 <xref:System.ServiceModel.Activities.InitializeCorrelation> 活动相关数据的初始化相关窗口。
+
+  - <xref:System.ServiceModel.Activities.Receive>、<xref:System.ServiceModel.Activities.Send>、<xref:System.ServiceModel.Activities.SendReply> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 活动的内容定义窗口。
+
+- 通过键盘可以使用更多功能：
+
+  - 编辑活动的属性时，属性组在第一次聚焦时可以通过键盘折叠。
+
+  - 警告图标可以通过键盘访问。
+
+  - “属性”窗口的“更多属性”按钮可以通过键盘访问。
+
+  - 键盘用户可以访问工作流设计器“参数”和“变量”窗格的标题项。
+
+- 提升了聚焦项的可见性，例如当：
+
+  - 将行添加到工作流设计器和活动设计器使用的数据网格。
+
+  - 在 <xref:System.ServiceModel.Activities.ReceiveReply> 和 <xref:System.ServiceModel.Activities.SendReply> 活动中按 Tab 键切换字段。
+
+  - 设置变量或自变量的默认值
+
+- 屏幕读取器现在可以正确识别：
+
+  - 工作流设计器中设置的断点。
+
+  - <xref:System.Activities.Statements.FlowSwitch%601>、<xref:System.Activities.Statements.FlowDecision> 和 <xref:System.ServiceModel.Activities.CorrelationScope> 活动。
+  - <xref:System.ServiceModel.Activities.Receive> 活动的内容。
+
+  - <xref:System.Activities.Statements.InvokeMethod> 活动的目标类型。
+
+  - <xref:System.Activities.Statements.TryCatch> 活动中的“异常”组合框和“最终”部分。
+
+  - 消息传递活动（<xref:System.ServiceModel.Activities.Receive>、<xref:System.ServiceModel.Activities.Send>、<xref:System.ServiceModel.Activities.SendReply> 和 <xref:System.ServiceModel.Activities.ReceiveReply>）中的“消息类型”组合框、“添加相关初始化表达式”窗口中的拆分器、“内容定义”窗口和“CorrelatesOn 定义”窗口。
+
+  - 状态机转换和转换目标。
+
+  - <xref:System.Activities.Statements.FlowDecision> 活动上的注释和连接器。
+
+  - 活动的上下文（右键单击）菜单。
+
+  - 属性值编辑器、“清除搜索”按钮、“按类别”和“按字母顺序”排序按钮以及属性网格中的“表达式编辑器”对话框。
+
+  - 工作流设计器中的缩放百分比。
+
+  - <xref:System.Activities.Statements.Parallel> 和 <xref:System.Activities.Statements.Pick> 活动中的分隔符。
+
+  - <xref:System.Activities.Statements.InvokeDelegate> 活动。
+
+  - 字典活动（`Microsoft.Activities.AddToDictionary<TKey,TValue>`、`Microsoft.Activities.RemoveFromDictionary<TKey,TValue>` 等）的“选择类型”窗口。
+
+  - “浏览和选择 .NET 类型”窗口。
+
+  - 工作流设计器中的痕迹导航。
+
+- 选择高对比度主题的用户将看到工作流设计器及其控件可见性的许多改进，例如元素间更好的对比度和焦点元素更明显的选择框。
+
 ## <a name="see-also"></a>请参阅
-[.NET Framework 的新增功能](whats-new.md)   
+
+[.NET Framework 的新增功能](whats-new.md)
  

@@ -1,19 +1,14 @@
 ---
 title: 在生产环境中运行由和基于微服务的应用程序
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 1ba71a02c1f800fd65462b0df9a435af87c9a37f
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 47685bfd8dca50c5e93be7574ea6ef30a49cbede
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生产环境中运行由和基于微服务的应用程序
 
@@ -39,4 +34,4 @@ Orchestration 是广泛的术语，表示与容器计划、 群集管理和可�
 
 
 >[!div class="step-by-step"]
-[以前](index.md) [下一步] (管理-生产-docker-environments.md)
+[以前] (index.md) [下一步] (管理-生产-docker-environments.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6d12740333d869b2fd43914437a6f5b5f62f843
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0f831426762ddcb21e4c1c1191e20435a13deb
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 <a name="introduction"></a>本文总结了以下版本的 .NET Framework 中的主要新功能和改进：  
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/04/2018
 
 可以在 Windows 10、Windows 8.1、Windows 7 SP1 和对应的服务器平台（版本不低于 Windows Server 2008 R2 SP1）上安装 .NET Framework 4.7.2。 可以使用 Web 安装程序或脱机安装程序来安装 .NET Framework 4.7.2。 适用于大多数用户的建议方法是使用 Web 安装程序。
 
-可以通过安装 [.NET Framework 4.7.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=863261)，在 Visual Studio 2012 或更高版本中定位 .NET Framework 4.7.2。 
+可以通过安装 [.NET Framework 4.7.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=874338)，在 Visual Studio 2012 或更高版本中定位 .NET Framework 4.7.2。 
 
 ### <a name="whats-new-in-the-net-framework-472"></a>.NET Framework 4.7.2 中的新增功能
 

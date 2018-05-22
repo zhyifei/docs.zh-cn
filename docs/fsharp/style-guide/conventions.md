@@ -2,11 +2,11 @@
 title: 'F # 编码约定'
 description: '在编写 F # 代码时，了解一般指导原则和惯例。'
 ms.date: 05/14/2018
-ms.openlocfilehash: 4db1e2b4fef97fc060f717a080cd762f9fe08ee0
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: d1f47f821887dabcdbc5d9406e90213fe8fafda5
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="f-coding-conventions"></a>F # 编码约定
 
@@ -108,12 +108,11 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Core.Printf
 open Microsoft.FSharp.Compiler
 open Microsoft.FSharp.Compiler.AbstractIL
+open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.IL
 open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.Internal
 open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
 
@@ -123,24 +122,23 @@ open Microsoft.FSharp.Compiler.CompileOps
 open Microsoft.FSharp.Compiler.CompileOptions
 open Microsoft.FSharp.Compiler.Driver
 open Microsoft.FSharp.Compiler.ErrorLogger
+open Microsoft.FSharp.Compiler.Infos
+open Microsoft.FSharp.Compiler.InfoReader
+open Microsoft.FSharp.Compiler.Lexhelp
+open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Lib
+open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.PrettyNaming
 open Microsoft.FSharp.Compiler.Parser
 open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Tast
 open Microsoft.FSharp.Compiler.Tastops
 open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.TypeChecker
 open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
 
 open Internal.Utilities
 open Internal.Utilities.Collections
-open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 ```
 
 请注意，一个分行符将分开的拓扑图层，每个层正在排序进行排序之后。 这完全不会意外地隐藏值的情况下组织代码。
@@ -154,7 +152,9 @@ open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 module MyApi =
     let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
-    let dep3 = Random().Next() // Random is not thread-safe
+
+    let private r = Random()
+    let dep3() = r.Next() // Problematic if multiple threads use this
 
     let function1 arg = doStuffWith dep1 dep2 dep3 arg
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
@@ -162,7 +162,9 @@ module MyApi =
 
 这通常是个好主意原因有多种：
 
-首先，它使用 API 自身依赖于共享状态。 例如，多个调用的线程可能会尝试访问`dep3`值 （和它不是线程安全）。 其次，它会应用程序配置推送到基本代码本身。 这将很难维护的更大的基本代码。
+首先，应用程序配置被推入到与基本代码`dep1`和`dep2`。 这是难以维护在更大的基本代码。
+
+第二个、 静态初始化的数据不应包含不是线程安全，如果你的组件将本身使用多个线程的值。 这通过清楚地违反了`dep3`。
 
 最后，初始化模块将编译到一个静态构造函数为整个编译单元。 如果该模块中的 let 绑定值初始化发生任何错误时，表现为`TypeInitializationException`，然后缓存应用程序的整个生存期内。 这可能很难诊断。 通常没有内部异常，则可以尝试以解释的但如果没有，则没有的根本原因无法区分。
 
@@ -318,7 +320,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 ## <a name="partial-application-and-point-free-programming"></a>部分应用和免点编程
 
-F # 点释放样式，支持部分应用，从而对程序的各种方法。 这可以对在模块或事物的实现代码重用有用，但通常不是以公开公开。 一般情况下，点释放编程不是本身，并可以添加一个巨大的认知障碍的用户不深陷样式。 F # 中的点释放编程 basic 训练有素数学知识的人，但可能很困难的尚不熟悉 lambda 微积分的用户。
+F # 点释放样式，支持部分应用，从而对程序的各种方法。 这可以对在模块或事物的实现代码重用有用，但通常不是以公开公开。 一般情况下，点释放编程不是本身，并可以添加一个巨大的认知障碍的用户不深陷样式。
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>不要使用部分应用和扩充中公共 Api
 

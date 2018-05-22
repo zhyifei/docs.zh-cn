@@ -1,12 +1,6 @@
 ---
-title: "使用安全套接字层"
-ms.custom: 
+title: 使用安全套接字层
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,24 +15,21 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 31c8a3d22e6a7fa074eae18de8f9b2a9903457c1
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
-ms.translationtype: MT
+ms.openlocfilehash: 2baedaa445f81e3e204f7414c5142232755581ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-secure-sockets-layer"></a>使用安全套接字层
 <xref:System.Net> 类使用安全套接字层 (SSL) 为若干网络协议加密连接。  
   
  对于 HTTP 连接，<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类使用 SSL 与支持 SSL 的 Web 主机进行通信。 根据为其给定的 URI，<xref:System.Net.WebRequest> 类决定是否使用 SSL。 如果 URI 以“https:”开头，则使用 SSL；如果 URI 以“http:”开头，则使用未加密的连接。  
   
- 若要将 SSL 用于文件传输协议 (FTP)，请在调用 <xref:System.Net.FtpWebRequest.GetResponse> 前将 <xref:System.Net.FtpWebRequest.EnableSsl> 属性设置为 true。 同样，若要使用 SSL 与简单邮件传输协议 (SMTP)，设置<xref:System.Net.Mail.SmtpClient.EnableSsl>为之前发送电子邮件的 true 属性。  
+ 若要将 SSL 用于文件传输协议 (FTP)，请在调用 <xref:System.Net.FtpWebRequest.GetResponse> 前将 <xref:System.Net.FtpWebRequest.EnableSsl> 属性设置为 true。 同样，要将 SSL 用于简单邮件传输协议 (SMTP)，请在发送电子邮件前将 <xref:System.Net.Mail.SmtpClient.EnableSsl> 属性设置为 true。  
   
  <xref:System.Net.Security.SslStream> 类为 SSL 提供基于流的抽象，并且提供多种配置 SSL 握手的方法。  
   

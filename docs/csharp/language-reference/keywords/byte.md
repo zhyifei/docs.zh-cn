@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 71af48f1cbfa82bafdd4888f0985cd88d44976b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ac913bd0d1bd178211ad26a720a80e22877c961
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="byte-c-reference"></a>byte（C# 参考）
 
@@ -45,27 +45,27 @@ ms.lasthandoff: 05/04/2018
   
  不可将大存储大小的非文本数字类型隐式转换为 `byte`。 有关整型类型存储大小的详细信息，请参阅[整型类型表](../../../csharp/language-reference/keywords/integral-types-table.md)。 以下面两个 `byte` 变量 `x` 和 `y` 为例：  
   
-```  
+```csharp  
 byte x = 10, y = 20;  
 ```  
   
  以下赋值语句将产生一个编译器错误，原因是赋值运算符右侧的算术表达式在默认情况下的计算结果为 `int` 类型。  
   
-```  
+```csharp  
 // Error: conversion from int to byte:  
 byte z = x + y;  
 ```  
   
  若要解决此问题，请使用强制转换：  
   
-```  
+```csharp  
 // OK: explicit conversion:  
 byte z = (byte)(x + y);  
 ```  
   
  但是，在目标变量具有相同或更大的存储大小时，也可以使用下列语句：  
   
-```  
+```csharp  
 int x = 10, y = 20;  
 int m = x + y;  
 long n = x + y;  
@@ -73,7 +73,7 @@ long n = x + y;
   
  此外，不存在从浮点类型到 `byte` 类型的隐式转换。 例如，除非使用显式强制转换，否则以下语句将生成编译器错误：  
   
-```  
+```csharp  
 // Error: no implicit conversion from double:  
 byte x = 3.0;   
 // OK: explicit conversion:  
@@ -82,14 +82,14 @@ byte y = (byte)3.0;
   
  在调用重载方法时，必须使用转换。 以下面使用 `byte` 和 [int](../../../csharp/language-reference/keywords/int.md) 参数的重载方法为例：  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(byte b) {}  
 ```  
   
  使用 `byte` 强制转换可保证调用正确的类型，例如：  
   
-```  
+```csharp  
 // Calling the method with the int parameter:  
 SampleMethod(5);  
 // Calling the method with the byte parameter:  

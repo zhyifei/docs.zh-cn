@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c6071e7a3c3bfcc96c57ecb34632a911835685fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f8a2f192dc319ad806aeef4bfbaeecc44b07a3
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="readonly-c-reference"></a>readonly（C# 参考）
 `readonly` 关键字是一个可在字段上使用的修饰符。 当字段声明包括 `readonly` 修饰符时，该声明引入的字段赋值只能作为声明的一部分出现，或者出现在同一类的构造函数中。  
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
   
 -   在声明中初始化变量时，例如：  
   
-    ```  
+    ```csharp  
     public readonly int y = 5;  
     ```  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/04/2018
           
           `readonly` 字段可以在声明或构造函数中初始化。 因此，根据所使用的构造函数，`readonly` 字段可能具有不同的值。 另外，虽然 `const` 字段是编译时常量，但 `readonly` 字段可用于运行时常量，如下面的示例所示：   
   
-```  
+```csharp  
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;  
 ```  
   

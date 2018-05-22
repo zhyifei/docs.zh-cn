@@ -1,19 +1,14 @@
 ---
 title: Docker 应用程序的外部循环 DevOps 工作流中的步骤
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7a85f42969a3bc1476367203415eb6898641e33a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 198313c260b36d3f3025606e73e220c361a7ebb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 应用程序的外部循环 DevOps 工作流中的步骤
 
@@ -238,4 +233,4 @@ Mesosphere DC/OS: <https://mesosphere.com/product/>
 仅当时监视和诊断中的 DevOps 领域的 100%被监视的进程和由开发团队针对测试或 beta 环境执行的分析。 通过执行负载测试或只需通过监视 beta 或 QA 环境，beta 测试人员要新版本，则是完成此操作。
 
 >[!div class="step-by-step"]
-[以前](index.md) [下一步] (.../run-manage-monitor-docker-environments/index.md)
+[以前] (index.md) [下一步] (.../run-manage-monitor-docker-environments/index.md)

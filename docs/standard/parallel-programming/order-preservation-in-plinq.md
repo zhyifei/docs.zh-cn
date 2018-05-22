@@ -1,31 +1,20 @@
 ---
-title: "PLINQ 中的顺序保留"
-ms.custom: 
+title: PLINQ 中的顺序保留
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 164dce7c58e1ce44972e0e390e4f0bf2be8de548
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b98fdcd425ae62aca0149df5136c28edc023bf0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ 中的顺序保留
 在 PLINQ 中，目标是在保持正确性的同时，最大限度地提升性能。 虽然查询应尽可能快地运行，但仍应生成正确结果。 在某些情况下，为了满足正确性要求，必须暂留源序列的顺序；不过，顺序暂留的计算成本可能非常高。 因此，默认情况下，PLINQ 不暂留源序列的顺序。 在这方面，PLINQ 类似于 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]，但与确实暂留顺序的 LINQ to Objects 不同。  
@@ -114,7 +103,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|有序比较|无序比较|  
 |<xref:System.Linq.ParallelEnumerable.Single%2A>|不适用|不适用|  
 |<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|不适用|不适用|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|跳过前 n 个元素|跳过任意 n 个元素|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|跳过第一个 n 元素|跳过所有 n 元素|  
 |<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|有序结果。|非确定性。 以当前任意顺序执行 SkipWhile|  
 |<xref:System.Linq.ParallelEnumerable.Sum%2A>|非关联或非交换操作的非确定性输出|非关联或非交换操作的非确定性输出|  
 |<xref:System.Linq.ParallelEnumerable.Take%2A>|获取前 `n` 个元素|获取任意 `n` 个元素|  

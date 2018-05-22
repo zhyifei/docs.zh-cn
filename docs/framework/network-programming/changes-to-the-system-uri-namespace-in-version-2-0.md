@@ -1,23 +1,15 @@
 ---
-title: "对 2.0 版中的 System.Uri 命名空间的更改"
-ms.custom: 
+title: 对 2.0 版中的 System.Uri 命名空间的更改
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3ebf74fbe7f2e207af8bf861efece58026148e2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 169454edd04bfdb55affcc2be12140f42dd2f7ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>对 2.0 版中的 System.Uri 命名空间的更改
 对 <xref:System.Uri?displayProperty=nameWithType> 类进行了少量更改。 这些更改修复了不正确的行为、提高了可用性、增强了安全性。  
@@ -65,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 -   URI `file:///path` 不再转换为 file://path。  
   
--   现在，“#”被识别为主机名终止符。 即“http://consoto.com#fragment”现转换为“http://contoso.com/#fragment”。  
+-   现在，“#”被识别为主机名终止符。 即，“http://consoto.com#fragment”现在转换为“http://contoso.com/#fragment”。  
   
 -   结合基 URI 与片段时的 bug 已修复。  
   

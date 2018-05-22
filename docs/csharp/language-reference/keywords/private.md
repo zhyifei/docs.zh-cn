@@ -1,33 +1,26 @@
 ---
 title: private（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - private_CSharpKeyword
 - private
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-caps.latest.revision: 17
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d9cc8f86166888b47a758e200182d319c68ca6d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89bc23e91bf693f0a95b75dffe2399cb7e865b50
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="private-c-reference"></a>private（C# 参考）
 `private` 关键字是一个成员访问修饰符。 
    
- > 本页介绍如何`private`访问。 `private`关键字也是属于[ `private protected` ](./private-protected.md)访问修饰符。
+ > 本页涵盖 `private` 访问。 `private` 关键字也是 [`private protected`](./private-protected.md) 访问修饰符的一部分。
   
 私有访问是允许的最低访问级别。 私有成员只有在声明它们的类和结构体中才是可访问的，如以下示例所示：  
   
-```  
+```csharp  
 class Employee  
 {  
     private int i;  
@@ -49,13 +42,13 @@ class Employee
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
  [访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)  
  [可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)  
  [修饰符](../../../csharp/language-reference/keywords/modifiers.md)  
- [公用](../../../csharp/language-reference/keywords/public.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
  [受保护](../../../csharp/language-reference/keywords/protected.md)  
- [内部](../../../csharp/language-reference/keywords/internal.md)
+ [internal](../../../csharp/language-reference/keywords/internal.md)

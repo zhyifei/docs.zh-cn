@@ -1,23 +1,16 @@
 ---
-title: "运算符（C# 编程指南）"
+title: 运算符（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 267022b8c6b7f8faf301cae1a62f4dfaa8249f96
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
 在 C# 中，运算符  是应用于表达式或语句中的一个或多个操作数  的程序元素。 接受一个操作数的运算符称为`++`一元 `new`运算符，例如递增运算符 ( *) 或* 。 接受两个操作数的运算符称为`+`二元`-`运算符，例如算术运算符（`*`、`/`、 *、* ）。 条件运算符`?:`接受三个操作数，是 C# 中唯一的三元运算符。  
@@ -58,7 +51,7 @@ ms.lasthandoff: 03/16/2018
 |[checked](../../../csharp/language-reference/keywords/checked.md)(x)|在已检查的上下文中计算表达式|  
 |[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)|在未检查的上下文中计算表达式|  
 |[default](../../../csharp/language-reference/keywords/default.md) (T)|获取类型 T 的默认值|  
-|[delegate](../../../csharp/language-reference/keywords/delegate.md) {}|匿名函数（匿名方法）|  
+|[委托](../../../csharp/language-reference/keywords/delegate.md) {}|匿名函数（匿名方法）|  
   
  **一元运算符**  
   

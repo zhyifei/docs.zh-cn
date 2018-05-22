@@ -1,19 +1,14 @@
 ---
 title: 管理生产 Docker 环境
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3165289b71d009d029bfbe5d185d13597eb8c029
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 5ecf1fbc164ff4170951894abc071908f45178d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manage-production-docker-environments"></a>管理生产 Docker 环境
 
@@ -50,4 +45,4 @@ ms.lasthandoff: 04/18/2018
 
 
 >[!div class="step-by-step"]
-[以前](run-microservices-based-applications-in-production.md) [下一步] (监视器-容器化的应用程序-services.md)
+[以前] (run-microservices-based-applications-in-production.md) [下一步] (monitor-containerized-application-services.md)

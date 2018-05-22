@@ -1,21 +1,14 @@
 ---
 title: using 指令（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 02c50b1e7a54d776985b60570c898e7d0739c44c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-directive-c-reference"></a>using 指令（C# 参考）
 `using` 指令有三种用途：  
@@ -64,9 +57,9 @@ class Program
   
  创建 `using` 指令，以便在命名空间中使用类型而不必指定命名空间。 `using` 指令不为你提供对嵌套在指定命名空间中的任何命名空间的访问权限。  
   
- 命名空间分为两类：用户定义的命名空间和系统定义的命名空间。 用户定义的命名空间是在代码中定义的命名空间。 系统定义的命名空间的列表，请参阅[.NET Framework 类库概述](../../../standard/class-library-overview.md)。  
+ 命名空间分为两类：用户定义的命名空间和系统定义的命名空间。 用户定义的命名空间是在代码中定义的命名空间。 有关系统定义的命名空间的列表，请参阅 [.NET Framework 类库概述](../../../standard/class-library-overview.md)。  
   
- 有关引用其他程序集中的方法的示例，请参阅[创建和使用程序集使用命令行](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
+ 有关在其他程序集中引用方法的示例，请参阅[使用命令行创建和使用程序集](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
 ## <a name="example-1"></a>示例 1  
   
@@ -85,7 +78,7 @@ class Program
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [使用命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md)  

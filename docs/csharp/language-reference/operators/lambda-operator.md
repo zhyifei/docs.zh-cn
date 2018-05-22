@@ -1,33 +1,27 @@
 ---
 title: =&gt; 运算符（C# 参考）
 ms.date: 10/02/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 44cb0485aefa8b0ab10a00ae0525180020ce436d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d1565e262fbd3ebcee2d1576a2a0c8ed3ba8ce38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gt-operator-c-reference"></a>=&gt; 运算符（C# 参考）
 
-`=>`运算符可在 C# 中的两种方式：
+在 C# 中，`=>` 运算符有两种用法：
 
-- 作为[lambda 运算符](#lamba-operator)中[lambda 表达式](../../lambda-expressions.md)，它将与 lambda 体分隔输入的变量。
+- 作为 [Lambda 表达式](../../lambda-expressions.md)中的 [lambda 运算符](#lamba-operator)，它可将输入变量从 lambda 体中隔离出来。
  
-- 在[表达式主体定义](#expression-body-definition)，它将成员名称与成员的实现分隔开。 
+- 在[表达式主体定义](#expression-body-definition)中，它可将成员名称从成员实现中隔离出来。 
 
-## <a name="lambda-operator"></a>Lambda 运算符
+## <a name="lambda-operator"></a>lambda 运算符
 
 `=>` 标记称作 lambda 运算符。 该标记在 Lambda 表达式中用来将左侧的输入变量与右侧的 lambda 体分离。 Lambda 表达式是类似于匿名方法的内联表达式，但更加灵活；在以方法语法表示的 LINQ 查询中广泛使用了 Lambda 表达式。 有关详细信息，请参阅 [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
@@ -90,22 +84,22 @@ static void Main(string[] args)
 ```  
 ## <a name="expression-body-definition"></a>表达式主体定义
 
-表达式主体定义提供高度压缩，可读的窗体中的成员的实现。 它具有以下常规语法：
+表达式主体定义可采用非常简洁的可读形式提供成员的实现。 它具有以下常规语法：
 
 ```csharp
 member => expression;
 ```
-其中“expression”是有效的表达式。 请注意，*表达式*可以是*语句表达式*仅当成员的返回类型是`void`，或如果该成员是一个构造函数或终结器。
+其中“expression”是有效的表达式。 请注意，仅当成员的返回类型是 `void` 时，或者成员是构造函数或终结器时，表达式才可能是语句表达式。
 
-从 C# 6 支持的方法和属性 get 语句的表达式主体定义。 表达式主体定义构造函数，终结器，设置属性的语句，并且支持从 C# 7 开始的索引器。
+自 C# 6 起支持方法和属性 Get 语句的表达式主体定义。 自 C# 7 起支持构造函数、终结器、属性 Set 语句和索引器的表达式主体定义。
 
-以下是表达式主体定义`Person.ToString`方法：
+以下是用于 `Person.ToString` 方法的表达式主体定义：
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-它是以下方法定义的速记版：
+它是以下方法定义的简写版：
 
 ```csharp
 public override string ToString()
@@ -113,10 +107,10 @@ public override string ToString()
    return $"{fname} {lname}".Trim();
 }
 ```
-有关更多详细信息表达式主体定义，请参阅[表达式正文成员](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)。
+有关表达式主体定义的详细信息，请参阅 [Expression-Bodied 成员](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)。
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [C# 参考](../../../csharp/language-reference/index.md)   
 [C# 编程指南](../../../csharp/programming-guide/index.md)   
 [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-[表达式正文成员](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)。
+[Expression-bodied 成员](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).

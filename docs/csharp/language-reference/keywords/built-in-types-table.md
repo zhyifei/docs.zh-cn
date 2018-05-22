@@ -5,11 +5,11 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 7407d18c58dd3d12337c6845627d83f02eaf7fa0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 120347e5bff7f0d6c7120af0cb250936ca39ea16
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="built-in-types-table-c-reference"></a>内置类型表（C# 参考）
 下表显示内置 C# 类型的关键字，即 <xref:System> 命名空间中预定义类型的别名。  
@@ -37,14 +37,14 @@ ms.lasthandoff: 05/04/2018
   
  C# 类型关键字及其别名可互换。 例如，可通过使用以下任意一个声明来声明整型变量：  
   
-```  
+```csharp  
 int x = 123;  
 System.Int32 x = 123;  
 ```  
   
  要显示任何 C# 类型的实际类型，请使用系统方法 `GetType()`。 例如，如下语句显示表示 `myVariable` 类型的系统别名：  
   
-```  
+```csharp  
 Console.WriteLine(myVariable.GetType());  
 ```  
   

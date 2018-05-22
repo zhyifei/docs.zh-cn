@@ -1,13 +1,6 @@
 ---
-title: "Tlbexp.exe（类型库导出程序）"
-ms.custom: 
+title: Tlbexp.exe（类型库导出程序）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - exporting type library [.NET Framework]
 - exporter tool [.NET Framework]
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47710b81de79a9dfbb6bddd39035be2986350b0e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3fa942af6558c16431cd716e3dd1ea1271fabab6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe（类型库导出程序）
 类型库导出程序生成一个类型库，该类型库描述公共语言运行时程序集中定义的类型。  
@@ -63,7 +53,7 @@ tlbexp assemblyName [options]
 |**/?**|显示该工具的命令语法和选项。|  
   
 > [!NOTE]
->  Tlbexp.exe 的命令行选项不区分大小写，并可以按任何顺序提供。 只需指定足够的选项来唯一标识它。 例如，/n 等效于 /nologo，而 /o: outfile.tlb 等效于 /out: outfile.tlb。  
+>  Tlbexp.exe 的命令行选项不区分大小写，并可以按任何顺序提供。 只需指定足够的选项来唯一标识它。 例如，/n 等效于 /nologo，/o: outfile.tlb 等效于 /out: outfile.tlb。  
   
 ## <a name="remarks"></a>备注  
  Tlbexp.exe 生成一个类型库，该类型库包含程序集中定义的类型的定义。 应用程序（如 Visual Basic 6.0）可以使用生成的类型库来绑定到程序集中定义的 .NET 类型。  

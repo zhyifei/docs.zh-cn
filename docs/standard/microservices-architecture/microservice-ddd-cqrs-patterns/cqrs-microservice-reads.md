@@ -1,21 +1,14 @@
 ---
-title: "在 CQRS 微服务中实现读取/查询"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在 CQRS 微服务中实现读取/查询"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 在 CQRS 微服务中实现读取/查询
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在 CQRS 微服务中实现读取/查询
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/02/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ca9bcefb317d2b3c7c225b773918ca4a2484cb8f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8eca01acc2308097d1684be8bdb0f07edd86832f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服务中实现读取/查询
 
@@ -198,11 +191,11 @@ public class OrderSummary
 
 -   **Julie Lerman.数据点 - Dapper、Entity Framework 和混合应用（MSDN Mag. 文章）**
 
-    https://msdn.microsoft.com/magazine/mt703432.aspx
+    *https://msdn.microsoft.com/magazine/mt703432.aspx*
 
 -   **使用 Swagger 的 ASP.NET Core Web API 帮助页**
 
-    https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio
+    *https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio*
 
 >[!div class="step-by-step"]
 [上一篇] (eshoponcontainers-cqrs-ddd-microservice.md) [下一篇] (ddd-oriented-microservice.md)

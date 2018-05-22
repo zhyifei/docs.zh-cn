@@ -1,12 +1,6 @@
 ---
-title: "Internet 协议版本 6"
-ms.custom: 
+title: Internet 协议版本 6
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - IPv6, improvements
 - IPv4
@@ -14,16 +8,14 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 333fbb452cb1f24b5e62d1106eff4560b26267b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 995bc2075a7df5c9a37cc68e812f62c9de2e53c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-protocol-version-6"></a>Internet 协议版本 6
 Internet 协议版本 6 (IPv6) 是 Internet 的网络层的标准协议新套件。 IPv6 旨在解决当前版本的 Internet 协议套件（称作 IPv4）存在的许多问题，包括地址消耗、安全性、自动配置和扩展性等问题。 IPv6 扩展了 Internet 的功能以启用新型应用程序，包括对等和移动应用程序。 以下是当前 IPv4 协议的主要问题：  
@@ -55,7 +47,7 @@ Internet 协议版本 6 (IPv6) 是 Internet 的网络层的标准协议新套件
  有关详细信息，请参阅 [IPv6 寻址](../../../docs/framework/network-programming/ipv6-addressing.md)、[IPv6 路由](../../../docs/framework/network-programming/ipv6-routing.md)、[IPv6 自动配置](../../../docs/framework/network-programming/ipv6-auto-configuration.md)、[启用和禁用 IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) 以及[如何：修改计算机配置文件以启用 IPv6 支持](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。  
   
 ## <a name="references"></a>参考资料  
- 以下是可以在 Internet 工程任务组站点（[http://www.ietf.org](http://www.ietf.org/)）找到的精选 RFC 文档：  
+ 以下是可以在 Internet 工程任务组站点 ([http://www.ietf.org](http://www.ietf.org/)) 找到的精选 RFC 文档：  
   
 -   RFC 1287，面向未来的 Internet 体系结构。  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: a3cb2490247a6e9fdb51b73d405173d29263393c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6c2bae39764e78fad2510bbc8937b0ac790bef5
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隐式类型的局部变量（C# 编程指南）
 可声明局部变量而无需提供显式类型。 `var` 关键字指示编译器通过初始化语句右侧的表达式推断变量的类型。 推断类型可以是内置类型、匿名类型、用户定义类型或 .NET Framework 类库中定义的类型。 有关如何使用 `var` 初始化数组的详细信息，请参阅[隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
@@ -26,19 +26,19 @@ ms.lasthandoff: 05/04/2018
   
 -   在 [for](../../../csharp/language-reference/keywords/for.md) 初始化语句中。  
   
-    ```  
+    ```csharp  
     for(var x = 1; x < 10; x++)  
     ```  
   
 -   在 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 初始化语句中。  
   
-    ```  
+    ```csharp  
     foreach(var item in list){...}  
     ```  
   
 -   在 [using](../../../csharp/language-reference/keywords/using-statement.md) 域间中。  
   
-    ```  
+    ```csharp  
     using (var file = new StreamReader("C:\\myfile.txt")) {...}  
     ```  
   

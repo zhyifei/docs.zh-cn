@@ -1,21 +1,14 @@
 ---
-title: "处理部分失败的策略"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 处理部分失败的策略"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 处理部分失败的策略
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 处理部分失败的策略
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0b5fdb03e4b0d0c2d4e8aa8a897fd46d56707f11
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: f1b2b59af96bf28035eeb32eb15eaa4105677cf4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>处理部分失败的策略
 
@@ -35,17 +28,17 @@ ms.lasthandoff: 03/05/2018
 
 ## <a name="additional-resources"></a>其他资源
 
--   恢复模式
-    [https://docs.microsoft.com/azure/architecture/patterns/category/resiliency](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
+-   **复原模式**
+    [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
--   添加恢复和优化性能
-    [https://msdn.microsoft.com/library/jj591574.aspx](https://msdn.microsoft.com/library/jj591574.aspx)
+-   **添加恢复和优化性能**
+    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
 -   **Bulkhead。** GitHub 存储库。 使用 Polly 策略的实现。\
-    [https://github.com/App-vNext/Polly/wiki/Bulkhead](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+    [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   为 Azure 设计可恢复的应用程序
-    [https://docs.microsoft.com/azure/architecture/resiliency/](https://docs.microsoft.com/azure/architecture/resiliency/)
+-   **为 Azure 设计恢复应用程序**
+    [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
 -   **瞬时故障处理**
     <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>

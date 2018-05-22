@@ -1,26 +1,15 @@
 ---
-title: "推断简单类型的规则"
-ms.custom: 
+title: 推断简单类型的规则
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: d265d9247d00a20770d401d62fd1e065e2ef1627
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rules-for-inferring-simple-types"></a>推断简单类型的规则
 描述 <xref:System.Xml.Schema.XmlSchemaInference> 类如何推断属性和元素的数据类型。  
@@ -45,16 +34,16 @@ ms.lasthandoff: 03/19/2018
 |unsignedInt|范围在 0 到 4294967295 之间的整数。|  
 |long|范围在 -9223372036854775808 到 9223372036854775807 之间的整数。|  
 |unsignedLong|范围在 0 到 18446744073709551615 之间的整数。|  
-|integer|可能使用“-”前缀的有穷位数字。|  
+|整数|可能使用“-”前缀的有穷位数字。|  
 |decimal|精度为 0 到 28 位的数值。|  
 |float|可以依次后接“E”或“e”和表示指数的整数值的十进制数。 十进制值的范围可以在 -16777216 到 16777216 之间。 指数值的范围可以在 -149 到 104 之间。<br /><br /> float 允许表示无穷值和非数值的特殊值。 特殊的浮点型值有：0、-0、INF、-INF、NaN。|  
 |double|与 float 相同，只是十进制值的范围可以在 -9007199254740992 到 9007199254740992 之间，指数值的范围可以在 –1075 到 970 之间。<br /><br /> double 允许表示无穷值和非数值的特殊值。 特殊的浮点型值有：0、-0、INF、-INF、NaN。|  
-|duration|W3C duration 格式。|  
+|持续时间|W3C duration 格式。|  
 |dateTime|W3C dateTime 格式。|  
 |时间|W3C time 格式。|  
 |date|年份值限制在 0001 到 9999 之间。|  
 |gYearMonth|W3C 公历月份和年份的格式。|  
-|string|一个或多个 Unicode 字符。|  
+|字符串|一个或多个 Unicode 字符。|  
   
 ## <a name="type-promotion"></a>类型提升  
  <xref:System.Xml.Schema.XmlSchemaInference> 类一次检查一个属性和元素的值。 在遇到值时，将推断限制性最强的无符号类型。 如果已推断了某个属性或元素的类型，在遇到与当前推断类型不匹配的新值时，推断类型将提升为新类型，以便适用于当前推断类型和新值。 <xref:System.Xml.Schema.XmlSchemaInference> 类在提升推断类型时会考虑以前的值。  
@@ -75,7 +64,7 @@ ms.lasthandoff: 03/19/2018
   
  在遇到第一个 `attr2` 值时，根据值 `attr2`，`unsignedByte` 的类型推断为 `0`。 在遇到第二个 `attr2` 时，根据当前推断类型 `string` 和当前值 `unsignedByte`，类型提升为 `true`，因为 <xref:System.Xml.Schema.XmlSchemaInference> 类在提升推断类型时会考虑以前的值。 但是，如果在同一个 XML 文档中遇到 `attr2` 的两个实例，而不是如上所述在两个不同的 XML 文档中，`attr2` 将推断为 `boolean`。  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>忽略来自特性http://www.w3.org/2001/XMLSchema-instanceNamespace  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>从 http://www.w3.org/2001/XMLSchema-instance 命名空间忽略的属性  
  在架构引用过程中忽略下列架构定义属性。  
   
 |特性|描述|  
@@ -85,7 +74,7 @@ ms.lasthandoff: 03/19/2018
 |`xsi:schemaLocation`|如果遇到 `xsi:schemaLocation`，将忽略。|  
 |`xsi:noNamespaceSchemaLocation`|如果遇到 `xsi:noNamespaceSchemaLocation`，将忽略。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
  [从 XML 文档推断架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
  [推断架构节点类型和结构的规则](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

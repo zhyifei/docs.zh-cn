@@ -8,11 +8,11 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 1930d6c50c176ae1765bdb41af2c7484fb908328
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6a7083e1c0cf0dc5c076a69dee15fc39e234d53
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>如何：声明和使用读/写属性（C# 编程指南）
 属性提供了公共数据成员的便利性，且不会产生未受保护、不可控制和未经验证地访问对象的数据的风险。 这通过访问器实现：从基础数据成员中赋值和检索值的特殊方法。 [set](../../../csharp/language-reference/keywords/set.md) 访问器可分配数据成员，[get](../../../csharp/language-reference/keywords/get.md) 访问器检索数据成员值。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
  如果将单独的 `set` 和 `get` 方法用于模型属性，则等效的代码可能如下所示：  
   
-```  
+```csharp  
 person.SetAge(person.GetAge() + 1);   
 ```  
   

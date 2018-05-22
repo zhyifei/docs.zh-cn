@@ -9,13 +9,13 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  nextTutorialHref: list-collection
+  nextTutorialHref: list-collection.yml
   nextTutorialTitle: C# 中的集合
-  ms.openlocfilehash: 03d46a90033d480046b63bdec3c4c83ab39c2f56
-  ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+  ms.openlocfilehash: ac9c8488c787b1dc9b4fb60b18834d328faa4e83
+  ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 04/18/2018
+  ms.lasthandoff: 05/10/2018
 items:
 - durationInMinutes: 2
   content: >
@@ -95,4 +95,4 @@ items:
     > [!NOTE]
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
-- content: "已完成“字符串内插”快速入门教程。 \n\n你可继续在自己的本地开发环境中学习这些教程。 请先了解[本地开发](local-environment.md)基础知识，再选择一个快速入门教程。 可以再次尝试本快速入门，也可以直接学习下一个快速入门教程，亦可以重新开始学习 [C# 中的数字](numbers-in-csharp-local.md)快速入门教程。\n\n可在 C# 参考的[字符串内插](../language-reference/tokens/interpolated.md)主题中了解有关字符串内插的详细信息。"
+- content: "已完成“字符串内插”快速入门教程。 \n\n你可继续在自己的本地开发环境中学习这些教程。 请先了解[本地开发](local-environment.md)基础知识，再选择一个快速入门教程。 可以再次尝试本快速入门，也可以直接学习下一个快速入门教程，亦可以重新开始学习 [C# 中的数字](numbers-in-csharp-local.md)快速入门教程。\n\n有关详细信息，请参阅[字符串内插](../language-reference/tokens/interpolated.md)主题和 [C# 中的字符串内插](../tutorials/string-interpolation.md)教程。"

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fdda6942c6883baaaea5e305a1e699a01e707d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49043a9fe9eabbb54176a0106007ef0d26ed795f
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 值类型包含两个主要类别：  
@@ -56,31 +56,31 @@ ms.lasthandoff: 05/04/2018
 ## <a name="initializing-value-types"></a>初始化值类型  
  在使用 C# 中的本地变量之前，必须对其进行初始化。 例如，可以声明未初始化的本地变量，如以下示例所示：  
   
-```  
+```csharp  
 int myInt;  
 ```  
   
  在未初始化之前，无法使用。 可以使用以下语句将其初始化：  
   
-```  
+```csharp  
 myInt = new int();  // Invoke default constructor for int type.  
 ```  
   
  此语句等效于以下语句：  
   
-```  
+```csharp  
 myInt = 0;         // Assign an initial value, 0 in this example.  
 ```  
   
  当然，可以在同一语句中进行声明和初始化，如以下示例所示：  
   
-```  
+```csharp  
 int myInt = new int();  
 ```  
   
  - 或 -  
   
-```  
+```csharp  
 int myInt = 0;  
 ```  
   
@@ -88,7 +88,7 @@ int myInt = 0;
   
  对于用户定义类型，请使用 [new](../../../csharp/language-reference/keywords/new.md) 调用默认构造函数。 例如，以下语句调用 `Point` 结构的默认构造函数：  
   
-```  
+```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
 ```  
   

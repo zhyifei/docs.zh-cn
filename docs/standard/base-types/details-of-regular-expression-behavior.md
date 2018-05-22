@@ -1,13 +1,7 @@
 ---
-title: "正则表达式行为的详细信息"
-ms.custom: 
+title: 正则表达式行为的详细信息
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: bc4d8fdc39153f227e8344ea1da52a0dba2688d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>正则表达式行为的详细信息
 .NET Framework 正则表达式引擎是回溯正则表达式匹配程序，其中包含传统的非确定性有限自动机 (NFA) 引擎（如 Perl、Python、Emacs 和 Tcl 所使用的引擎）。 这使它有别于速度更快、但是限制更多的纯正则表达式确定性有限自动机 (DFA) 引擎（如 awk、egrep 或 lex 中的引擎）。 这也使它有别于标准化、但速度较慢的 POSIX NFA。 下面的部分介绍了正则表达式引擎的三种类型，并解释了为何要在 .NET Framework 中使用传统 NFA 引擎实现正则表达式。  
@@ -48,7 +37,7 @@ ms.lasthandoff: 02/27/2018
   
  .NET Framework 正则表达式引擎的其他功能包括下面这些：  
   
--   惰性量符：`??`、`*?`、`+?`、`{`n`,`m`}?`。 这些构造会指示回溯引擎首先搜索最小数量的重复项。 相反，普通贪婪限定符会尝试首先匹配最大数量的重复项。 以下示例演示了两者之间的差异。 正则表达式匹配以数字结尾的句子，捕获组旨在提取该数字。 正则表达式 `.+(\d+)\.` 包含贪婪限定符 `.+`，这使正则表达式引擎仅捕获数字的最后一位数。 相反，正则表达式 `.+?(\d+)\.` 包含惰性限定符 `.+?`，这使正则表达式引擎捕获整个数字。  
+-   惰性限定符：`??`、`*?`、`+?`、`{`n`,`m`}?`。 这些构造会指示回溯引擎首先搜索最小数量的重复项。 相反，普通贪婪限定符会尝试首先匹配最大数量的重复项。 以下示例演示了两者之间的差异。 正则表达式匹配以数字结尾的句子，捕获组旨在提取该数字。 正则表达式 `.+(\d+)\.` 包含贪婪限定符 `.+`，这使正则表达式引擎仅捕获数字的最后一位数。 相反，正则表达式 `.+?(\d+)\.` 包含惰性限定符 `.+?`，这使正则表达式引擎捕获整个数字。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  

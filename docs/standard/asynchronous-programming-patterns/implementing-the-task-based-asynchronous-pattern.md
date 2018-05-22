@@ -1,10 +1,6 @@
 ---
-title: "实现基于任务的异步模式"
+title: 实现基于任务的异步模式
 ms.date: 06/14/2017
-ms.prod: .net
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +11,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 238f164fec78fe5e6dae9e7880fabc0a386bf399
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ed73e8d7279d5371c305e7bd29c08ac00f6a329
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>实现基于任务的异步模式
 可使用以下三种方式实现基于任务的异步模式 (TAP)：使用 Visual Studio 中的 C# 和 Visual Basic 编译器、手动实现或编译器和手动方法相结合。 以下各节详细地讨论了每一种方法。 可以使用 TAP 模式实现计算密集型和 I/O 密集型异步操作。 [工作负载](#workloads)部分介绍了各种类型的操作。
@@ -51,7 +42,7 @@ ms.lasthandoff: 12/23/2017
  这种委托有用的另一种情况是：你在实施快速路径优化并想返回缓存的任务时。
 
 ## <a name="workloads"></a>工作负载
-你可将计算密集型和 I/O 密集型异步操作作为 TAP 方法实现。 但是，当 TAP 方法从库中公开地公开时，应仅向涉及 I/O 密集型操作的工作负载提供这种方法（它们也可能涉及计算，但不是应仅仅是计算）。 如果是纯粹的计算密集型方法，应只公开为同步实现。 然后，使用它的代码可能会选择是将同步方法调用包装到任务中以将工作卸载到另一线程，还是实现并行。 如果方法是 IO 密集型，应只公开为异步实现。
+你可将计算密集型和 I/O 密集型异步操作作为 TAP 方法实现。 但是，当 TAP 方法从库中公开地公开时，应仅向涉及 I/O 密集型操作的工作负载提供这种方法（它们也可能涉及计算，但不是应仅仅是计算）。 如果是纯粹的计算密集型方法，应只公开为同步实现。 然后，使用它的代码可能会选择是将同步方法调用包装到任务中以将工作卸载到另一线程，还是实现并行。 如果方法是 I/O 密集型，应只公开为异步实现。
 
 ### <a name="compute-bound-tasks"></a>计算密集型任务
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类非常适合表示计算密集型操作。 默认情况下，它利用 <xref:System.Threading.ThreadPool> 类中的特殊支持来提供有效的执行，还对执行异步计算的时间、地点和方式提供重要控制。

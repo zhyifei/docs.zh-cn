@@ -1,29 +1,22 @@
 ---
 title: protected（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - protected
 - protected_CSharpKeyword
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 18278ed28f899d9030d6056eca9bbe83ebec04c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a3115fe82b452f52ee75cf222302ece0fc67b330
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="protected-c-reference"></a>protected（C# 参考）
 `protected` 关键字是一个成员访问修饰符。 
 
- > 本页介绍如何`protected`访问。 `protected`关键字也是属于[ `protected internal` ](./protected-internal.md)和[ `private protected` ](./private-protected.md)访问修饰符。 
+ > 本页涵盖 `protected` 访问。 `protected` 关键字也属于 [`protected internal`](./protected-internal.md) 和 [`private protected`](./private-protected.md) 访问修饰符。 
 
 受保护成员在其所在的类中可由派生类实例访问。 
 
@@ -52,14 +45,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
  [访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)  
  [可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)  
  [修饰符](../../../csharp/language-reference/keywords/modifiers.md)  
- [公用](../../../csharp/language-reference/keywords/public.md)  
- [专用](../../../csharp/language-reference/keywords/private.md)  
- [内部](../../../csharp/language-reference/keywords/internal.md)  
- [Internal virtual 关键字的安全问题](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)  
+ [Internal Virtual 关键字的安全问题](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))

@@ -1,21 +1,14 @@
 ---
-title: "在域模型层中设计验证"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在域模型层中设计验证"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 在域模型层中设计验证
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在域模型层中设计验证
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e7a111ce20039f8c87d3c3d63efdeaf38a4e1e96
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ce3cb0c79cbd492224ce1d4ecb25cd02062f11cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>在域模型层中设计验证
 
@@ -115,26 +108,26 @@ public class Product : Entity
 
 ## <a name="additional-resources"></a>其他资源
 
--   **Rachel Appel。ASP.NET Core MVC 中模型验证简介**
-    [https://docs.microsoft.com/aspnet/core/mvc/models/validation](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
+-   **Rachel Appel。ASP.NET Core MVC 模型验证简介**
+    [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
 
 -   **Rick Anderson。添加验证**
     [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
--   **Martin Fowler。在验证中使用通知替换引发异常**
-    [https://martinfowler.com/articles/replaceThrowWithNotification.html](https://martinfowler.com/articles/replaceThrowWithNotification.html)
+-   **Martin Fowler。在验证中将引发异常替换为通知**
+    [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
 -   **规范和通知模式**
-    [https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
+    [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
 
--   **Lev Gorodinski.Validation in Domain-Driven Design (DDD)**
-    （域驱动设计 (DDD) 中的验证）[*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
+-   **Lev Gorodinski.域驱动设计 (DDD) 中的验证**
+    [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
--   **Colin Jack。Domain Model Validation**（域模型验证）
-    [http://colinjack.blogspot.com/2008/03/domain-model-validation.html](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+-   **Colin Jack。域模型验证**
+    [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
--   **Jimmy Bogard。DDD 世界中的验证**
-    [https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
+-   **Jimmy Bogard。DDD 中的验证**
+    [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
 
 >[!div class="step-by-step"]

@@ -1,16 +1,16 @@
 ---
 title: Const 语句 (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5842e284eaa858e7a66160060123edc21858a3a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="const-statement-visual-basic"></a>Const 语句 (Visual Basic)
 用于声明和定义一个或多个常量。  
@@ -27,7 +27,7 @@ Const constantlist
  可选。 在此语句中声明的适用于所有常量的属性列表。 请参阅[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)中命令的尖括号 ("`<`"和"`>`")。  
   
  `accessmodifier`  
- 可选。 用于指定哪些代码可以访问这些常量。 可以是[公共](../../../visual-basic/language-reference/modifiers/public.md)，[受保护](../../../visual-basic/language-reference/modifiers/protected.md)，[友元](../../../visual-basic/language-reference/modifiers/friend.md)， `Protected Friend`，或[私有](../../../visual-basic/language-reference/modifiers/private.md)。  
+ 可选。 用于指定哪些代码可以访问这些常量。 可以是[公共](../../../visual-basic/language-reference/modifiers/public.md)，[受保护](../../../visual-basic/language-reference/modifiers/protected.md)，[友元](../../../visual-basic/language-reference/modifiers/friend.md)， [Protected Friend](../modifiers/protected-friend.md)，[私有](../../../visual-basic/language-reference/modifiers/private.md)，或[私有受保护](../../language-reference/modifiers/private-protected.md)。
   
  `Shadows`  
  可选。 用于重新声明并隐藏基类中的编程元素。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。  

@@ -1,11 +1,6 @@
 ---
-title: "My.Resources 对象"
+title: My.Resources 对象
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.Resources
 - My.Resources.MyResources.ResourceManager
@@ -13,14 +8,11 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96e5b909d9945ed631cebe07e4cfc7d5dc2e019f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 9fd23cb119ff9148a45d32ec70ccc4dad08ab876
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myresources-object"></a>My.Resources 对象
 提供用于访问应用程序的资源的属性和类。  
@@ -35,7 +27,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="properties"></a>属性  
  属性`My.Resources`对象提供对应用程序的资源的只读访问。 若要添加或删除资源，使用**项目设计器**。 你可以访问通过添加资源**项目设计器**使用`My.Resources.``resourceName`。  
   
- 你还可以添加或移除通过选择你的项目中的资源文件**解决方案资源管理器**并单击**添加新项**或**添加现有项**从**项目**菜单。 你可以访问通过使用这种方式添加的资源`My.Resources.``resourceFileName`。`resourceName`。  
+ 你还可以添加或移除通过选择你的项目中的资源文件**解决方案资源管理器**并单击**添加新项**或**添加现有项**从**项目**菜单。 你可以访问通过使用这种方式添加的资源`My.Resources.``resourceFileName`、`resourceName`。  
   
  每个资源具有名称、 类别和值，并且这些资源设置确定要访问该资源的属性中的显示方式`My.Resources`对象。 在中添加的资源**项目设计器**:  
   
@@ -51,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |**图像**|<xref:System.Drawing.Bitmap>|  
 |**图标**|<xref:System.Drawing.Icon>|  
 |**音频**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream>类派生自<xref:System.IO.Stream>类，以便它可使用的方法来以流，如<xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>方法。|  
-|**文件**|-   [字符串](../../../visual-basic/language-reference/data-types/string-data-type.md)的文本文件。<br />-   <xref:System.Drawing.Bitmap>用于图像文件。<br />-   <xref:System.Drawing.Icon>图标文件。<br />-   <xref:System.IO.UnmanagedMemoryStream>声音文件。|  
+|**文件**|-   [字符串](../../../visual-basic/language-reference/data-types/string-data-type.md)的文本文件。<br />-   <xref:System.Drawing.Bitmap> 用于图像文件。<br />-   <xref:System.Drawing.Icon> 图标文件。<br />-   <xref:System.IO.UnmanagedMemoryStream> 声音文件。|  
 |**其他**|由设计器中的信息确定**类型**列。|  
   
 ## <a name="classes"></a>类  

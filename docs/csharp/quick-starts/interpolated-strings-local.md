@@ -4,16 +4,12 @@ description: 本快速入门教程介绍了如何使用 C# 字符串内插功能
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7ef904e30475d2cc0584f2baf56bc33a68e172d4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="string-interpolation"></a>字符串内插
 
@@ -173,4 +169,4 @@ Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.3
 
 你可继续在自己的开发环境中学习[列表集合](arrays-and-collections.md)快速入门教程。
 
-可在 C# 参考的[字符串内插](../language-reference/tokens/interpolated.md)主题中了解有关字符串内插的详细信息。
+有关详细信息，请参阅[字符串内插](../language-reference/tokens/interpolated.md)主题和 [C# 中的字符串内插](../tutorials/string-interpolation.md)教程。

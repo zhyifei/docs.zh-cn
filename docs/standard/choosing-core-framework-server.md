@@ -4,11 +4,11 @@ description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 03/15/2018
-ms.openlocfilehash: 1bed9bd2ed709907323123ad6658bbf0503ff1fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5626c6c1687fe0b8d558df8772fc69c32981787c
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -93,8 +93,6 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 * WCF 服务的实现。 虽然 [WCF 客户端库](https://github.com/dotnet/wcf)可从 .NET Core 使用 WCF 服务，WCF 服务器实现目前只在 .NET Framework 上可用。 这种情况虽然不属于 .NET Core 当前计划，但将来会考虑这点。
 
 * 工作流相关的服务：Windows Workflow Foundation (WF)、工作流服务（WCF + 单个服务中的 WF）和 WCF 数据服务（以前称为“ADO.NET 数据服务”）仅在 .NET Framework 上可用。  尚未计划将 WF/WCF+WF/WCF Data Services 引入 .NET Core。
-
-* Windows Presentation Foundation (WPF) 和 Windows 窗体：WPF 和 Windows 窗体应用程序仅在 .NET Framework 上可用。 没有将其移植到 .NET Core 的计划。
 
 * 语言支持：.NET Core 目前支持 Visual Basic 和 F#，但不是所有项目类型都支持。 有关支持的项目模板列表，请参阅 [dotnet new 的模板选项](../core/tools/dotnet-new.md#arguments)。
 

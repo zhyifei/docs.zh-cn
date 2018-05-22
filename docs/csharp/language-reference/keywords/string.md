@@ -10,11 +10,11 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: 748016682db6e02cadbfb8c767391a18d48e1286
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f92a44283e59bd80421758a63b40bc5289c3628b
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="string-c-reference"></a>string（C# 参考）
 `string` 类型表示零个或多个 Unicode 字符的序列。 `string` 是 <xref:System.String> 在 .NET 中的别名。  
@@ -62,7 +62,7 @@ char x = str[2];  // x = 's';
   
  字符串文本可包含任何字符文本。 包括转义序列。 下面的示例使用转义序列 `\\` 表示反斜杠，使用 `\u0066` 表示字母 f，以及使用 `\n` 表示换行符。  
   
-```  
+```csharp  
 string a = "\\\u0066\n";  
 Console.WriteLine(a);  
 ```  

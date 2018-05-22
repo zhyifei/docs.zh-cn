@@ -1,32 +1,23 @@
 ---
-title: "如何为请求设置缓存策略"
-ms.custom: 
+title: 如何为请求设置缓存策略
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ff59bab2963d78425f9b7f4b41bdb679ed8e6f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 98cd64aaab66d69c29c022d770b34bb0efdb4bef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>如何为请求设置缓存策略
-以下示例演示如何为请求设置缓存策略。 示例输入是 URI，例如 http://www.contoso.com/。  
+以下示例演示如何为请求设置缓存策略。 该示例输入是一个 URI，如 http://www.contoso.com/。  
   
 ## <a name="example"></a>示例  
  以下代码示例创建一个缓存策略，该策略允许从缓存使用请求的资源，前提是该资源在缓存中的存在时间未超过一天。 该示例显示一条消息，指示使用的资源是否来自缓存（例如 `"The response was retrieved from the cache : False."`），然后显示该资源。 可以由客户端和服务器之间的任何缓存实现请求。  

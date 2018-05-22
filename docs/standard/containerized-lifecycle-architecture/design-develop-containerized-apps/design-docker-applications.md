@@ -1,19 +1,14 @@
 ---
 title: Docker 应用程序设计
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 951169a6b7c458872f5c90a8845826b675671101
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 6525e5f80ebb0551e4f85904a467d862aa4133ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="design-docker-applications"></a>Docker 应用程序设计
 
@@ -23,4 +18,4 @@ Chapter 1 引入了有关容器和 Docker 的基本概念。 该信息是信息�
 
 
 >[!div class="step-by-step"]
-[以前](index.md) [下一步] (常见的容器-设计-principles.md)
+[以前] (index.md) [下一步] (common-container-design-principles.md)

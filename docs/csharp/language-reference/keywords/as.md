@@ -8,11 +8,11 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: 6ea5346119259d70ac1a42f3f72a8b2746b8f536
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 092c30a858df7baeb35bdf28bae53802fb0916d4
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="as-c-reference"></a>as（C# 参考）
 可以使用 `as` 运算符在符合的引用类型或[可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)之间执行某些类型的转换。 以下代码显示一个示例。  
@@ -22,13 +22,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>备注  
  `as` 运算符类似于转换运算。 但是，如果无法进行转换，则 `as` 会返回 `null`，而不是引发异常。 请看下面的示例：  
   
-```  
+```csharp  
 expression as type  
 ```  
   
  该代码等效于以下表达式，但 `expression` 变量仅进行一次计算。  
   
-```  
+```csharp  
 expression is type ? (type)expression : (type)null  
 ```  
   

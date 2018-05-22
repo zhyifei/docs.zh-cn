@@ -1,10 +1,7 @@
 ---
-title: ".NET Framework 的版本兼容性"
+title: .NET Framework 的版本兼容性
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - .NET Framework, version compatibility
 - .NET Framework 4.5, compatibility with earlier versions
@@ -12,13 +9,11 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 45bb0174bd4c757b6e51621f36b25eb5f4354c94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本兼容性
 向后兼容性表示为某个平台的特定版本开发的应用程序将在该平台的更高版本上运行。 .NET Framework 尝试最大程度地支持向后兼容性：为某个版本的 .NET Framework 编写的源代码应在更高版本的 .NET Framework 上编译，而在某个版本的 .NET Framework 上运行的二进制文件的行为方式应与其在更高版本的 .NET Framework 上的行为方式相同。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  实际上，.NET Framework 中看似无关紧要的更改和编程技术上的更改会损坏此兼容性。 例如，.NET Framework 4.5 中的性能改进会公开早期版本中未出现的争用条件。 同样，使用 .NET Framework 程序集的硬编码路径，执行与特定版本的 .NET Framework 的相等比较，以及使用反射获取私有字段的值都不是向后兼容的做法。 此外，每个版本的 .NET Framework 都包含 Bug 修复和可能影响某些应用程序和组件的兼容性的安全相关更改。  
   
- 如果应用和组件在 .NET Framework 4.5（包括其单点版本，即 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2、4.7 或 4.7.1）上未按预期运行，请使用以下清单：  
+ 如果应用和组件在 .NET Framework 4.5（包括其单点版本，即 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2）上未按预期运行，请使用以下核对清单：  
   
 -  如果应用开发为在从 .NET Framework 4.0 开始的任何 .NET Framework 版本上运行，请参阅 [.NET Framework 中的应用程序兼容性](application-compatibility.md)，生成目标 .NET Framework 版本与运行应用的版本之间的更改列表。  
 
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
 -   如果确定 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的更改损坏了应用，请检查[运行时设置架构](../../../docs/framework/configure-apps/file-schema/runtime/index.md)，确定是否能在应用的配置文件中使用运行时设置来还原以前的行为。  
   
--   如果遇到未记录的问题，请记录 [Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=154815) Bug，然后以电子邮件的形式将 Bug 号发送到 [netfxcf@microsoft.com](mailto:netfxcf@microsoft.com)。  
+-   如果遇到未记录的问题，请在[适用于 .NET 的开发人员社区网站](https://developercommunity.visualstudio.com/spaces/61/index.html)上新开一个问题，或者在 [Microsoft/dotnet GitHub 存储库](https://github.com/microsoft/dotnet/issues)中新开一个问题。
   
 ## <a name="compatibility-and-side-by-side-execution"></a>兼容性和并行执行  
  如果找不到解决问题的适当方法，请记住，.NET Framework 4.5（或其中一个单点版本）是与版本 1.1、2.0 和 3.5 并行运行的，并且是取代版本 4 的就地更新。 对于以版本 1.1、2.0 和 3.5 为目标的应用程序，你可以在目标计算机上安装适当的 .NET Framework 版本以在其最佳环境中运行该应用程序。 有关并行执行的详细信息，请参阅[并行执行](../../../docs/framework/deployment/side-by-side-execution.md)。  

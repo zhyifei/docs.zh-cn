@@ -1,24 +1,17 @@
 ---
-title: "abstract（C# 参考）"
+title: abstract（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - abstract
 - abstract_CSharpKeyword
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9c6dbb03a05ff1c86752983d130691ce23e341d7
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 78212365c4183d31bcd5f1b1628c3443d48909a8
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="abstract-c-reference"></a>abstract（C# 参考）
 `abstract` 修饰符指示被修改内容的实现已丢失或不完整。 abstract 修饰符可用于类、方法、属性、索引和事件。 在类声明中使用 `abstract` 修饰符以指示某个类仅旨在作为其他类的基类。 标记为 abstract 的成员，或包含在抽象类中的成员，都必须由派生自抽象类的类来实现。  

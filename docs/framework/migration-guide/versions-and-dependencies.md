@@ -1,24 +1,17 @@
 ---
-title: ".NET Framework 版本和依赖关系"
+title: .NET Framework 版本和依赖关系
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b6c5699fdcf68e99cd3049cf3150e44d14f4e614
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 05099f67ecefe914516ba0ca62ae67060a087b8e
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和依赖关系
 每个版本的 .NET framework 都包含公共语言运行时 (CLR)、基类库和其他托管库。 本主题按版本介绍了 .NET Framework 的关键功能，提供了有关基础 CLR 版本和相关开发环境的信息，并标识了 Windows 操作系统所安装的版本。  
@@ -36,7 +29,8 @@ ms.lasthandoff: 02/19/2018
   
 |.NET Framework 版本|CLR 版本|功能|包含在 Visual Studio 版本中|✓ 包括在内<br />+ 可在其上安装<br />Windows|✓ 包括在内<br />+ 可在其上安装<br />Windows Server|确定已安装的 .NET 版本|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
-|4.7.1|4|- 支持 .NET Standard 2.0。<br/> - 支持配置生成器，允许在运行时创建配置文件。<br/> - 运行时功能检查，使你能够确定运行时环境中是否支持预定义的功能。<br/> - 可序列化值元组。<br/> - 垃圾回收性能改进。<br/> - 支持可移植的 PDB。<br/> - 对 <xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> 的 SHA-2 支持。<br/> - 支持使用 <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType> 方法分析 ASP.NET cookie。<br/> - 支持针对 ASP.NET 窗体身份验证凭据的 SHA-2 哈希处理。<br/> - 针对应用开发者的大量辅助功能改进；请参阅 [.NET Framework 中辅助功能的新增功能](../whats-new/whats-new-in-accessibility.md)。| | ✓  10 Fall Creators Update <br/> <br/> + 10 创意者更新 <br/> + 10 周年更新 <br/> + 8.1 <br/> +7| + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461308（Windows 10 创意者更新） <br/> - 461310（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)） 
+|4.7.2|4|- 大量的加密改进。<br/> - 提高了解压缩 ZIP 存档时的性能。<br/> - 集合类中的其他 API。<br/> - Web 窗体中的依赖项注入支持。<br/> - ASP.NET 中同站点 cookie 支持。<br/> - 其他 <xref:System.Net.Http.HttpClientHandler> 属性的实现。<br/> - 对 Azure Active Directory 通用身份验证和多重身份验证的 SQLClient 支持。<br/> - 基于 enclave 的 Always Encrypted 的 SqlClient 支持。<br/> - WPF 中对由源发现 ResourceDictionaries 的支持、对发现 ResourceDictionaries 所有者的支持、对 StaticResource 引用的支持。<br/> - 对使用 ClickOnce 部署 Windows 窗体的 HDPI 感知应用程序、WPF 和 Visual Studio Tools for Office (VSTO) 的支持。<br/> - 大量辅助功能改进；请参阅 [.NET Framework 中辅助功能的新增功能](../whats-new/whats-new-in-accessibility.md)。| |✓  2018 年 4 月 10 日更新 <br/><br/> + 10 Fall Creators Update <br/> <br/> + 10 创意者更新 <br/> + 10 周年更新 <br/> + 8.1 <br/> +7 | + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461808（Windows 2018 年 4 月 10 日更新） <br/> - 461814（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|
+|4.7.1|4|- 支持 .NET Standard 2.0。<br/> - 支持配置生成器，允许在运行时创建配置文件。<br/> - 运行时功能检查，使你能够确定运行时环境中是否支持预定义的功能。<br/> - 可序列化值元组。<br/> - 垃圾回收性能改进。<br/> - 支持可移植的 PDB。<br/> - 对 <xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> 的 SHA-2 支持。<br/> - 支持使用 <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType> 方法分析 ASP.NET cookie。<br/> - 支持针对 ASP.NET 窗体身份验证凭据的 SHA-2 哈希处理。<br/> - 针对应用开发者的大量辅助功能改进；请参阅 [.NET Framework 中辅助功能的新增功能](../whats-new/whats-new-in-accessibility.md)。| | ✓  10 Fall Creators Update <br/> <br/> + 10 创意者更新 <br/> + 10 周年更新 <br/> + 8.1 <br/> +7| + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461308（Windows 10 创意者更新） <br/> - 461310（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）| 
 |4.7|4|- 支持由操作系统提供的 TLS 支持级别。<br/> - 能够为 TLS1.1 或 TLS1.2 配置默认的消息安全设置。 <br /> - 提高了 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 的可靠性。 <br /> - 提高了 WCF 应用程序序列化和反序列化的可靠性。 <br /> - 能够扩展 ASP.NET 对象缓存。 <br /> - 支持基于 `WM_POINTER` Windows 消息（而不是 WPF 应用程序的 Windows Ink 服务平台 (WISP)）的触控/触笔堆叠。 <br /> - 使用窗口的打印文档包 API 在 WPF 应用程序中进行打印。<br /> - 增强了对 Windows 窗体应用程序（在 Windows 10 创意者更新上运行）的高 DPI 和多监视器支持。 | | ✓  10 创意者更新 <br/> <br/> + 10 周年更新 <br/> + 8.1 <br/> +7| + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 460798（Windows 10 创意者更新） <br/> - 460805（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)） |  
 |4.6.2|4|-   加密增强功能，包括对包含 FIS 186-3 DSA 的 X509 证书的支持、对持久化密钥对称加密的支持、对 SHA-2 哈希的 <xref:System.Security.Cryptography.Xml.SignedXml> 支持，提高了 ECDiffieHellman 密钥派生例程输入的清晰度。<br />-  对于 Windows Presentation Foundation (WPF) 应用，支持屏幕键盘和按监视器 DPI 感知。<br />-   对 TLS 1.1 和 TLS 1.2 协议的 ClickOnce 支持。<br />-   支持将 Windows 窗体和 WPF 应用转换为 UWP 应用。||✓  10 周年更新<br /><br /> + 10 十一月更新 <br/> + 10 <br/> + 8.1<br />+ 7|✓  2016<br /><br /> + 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|使用 `Release` DWORD：<br /><br /> -   394802（Windows 10 周年更新）<br />-   394806（所有其他操作系统版本）<br /><br /> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|  
 |4.6.1|4|-   对包含 ECDSA 的 X509 证书的支持<br />-   对 ADO.NET 中的硬件保护密钥的始终加密支持<br />-   WPF 中的拼写检查改进<br />-   [更多...](../../../docs/framework/whats-new/index.md)||✓  10 November Update<br /><br /> + 10<br />+ 8.1<br />+ 8<br />+ 7|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|使用 `Release` DWORD：<br /><br /> -   394254（Windows 10 十一月更新）<br />-   394271（所有其他操作系统版本）<br /><br /> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|  

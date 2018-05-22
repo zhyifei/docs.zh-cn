@@ -8,11 +8,11 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: ce0834874f9c5b4c5154a798492600d6ac45a4c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d22e57d097edb0fe52b604e9c6431e167c410f0b
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-operator-c-reference"></a>|| 运算符（C# 参考）
 条件 OR 运算符 (`||`) 执行其 `bool` 操作数的逻辑 OR。 如果第一个操作数的计算结果为 `true`，则不计算第二个操作数。 如果第一个操作数的计算结果为 `false`，则第二个运算符决定 OR 表达式整体的计算结果是 `true` 还是 `false`。  
@@ -20,13 +20,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>备注  
  操作  
   
-```  
+```csharp  
 x || y  
 ```  
   
  对应于该操作  
   
-```  
+```csharp  
 x | y  
 ```  
   

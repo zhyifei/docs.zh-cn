@@ -1,21 +1,14 @@
 ---
-title: "关于 .NET 微服务和 Web 应用中的授权"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 关于 .NET 微服务和 Web 应用中的授权"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 关于 .NET 微服务和 Web 应用中的授权
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 关于 .NET 微服务和 Web 应用中的授权
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6cd7be9bc8216aecf85f99a76e859b411a8735b0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2ea56f5a28d115fc5d91a98604b82565c8bf5c78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>关于 .NET 微服务和 Web 应用中的授权
 
@@ -120,16 +113,16 @@ ASP.NET Core [授权文档](https://docs.asp.net/en/latest/security/authorizatio
 ## <a name="additional-resources"></a>其他资源
 
 -   **ASP.NET Core 身份验证**
-    [https://docs.microsoft.com/aspnet/core/security/authentication/identity](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
+    [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
 
--   **ASP.NET Core 身份验证**
-    [https://docs.microsoft.com/aspnet/core/security/authorization/introduction](https://docs.microsoft.com/aspnet/core/security/authorization/introduction)
+-   **ASP.NET Core 授权**
+    [*https://docs.microsoft.com/aspnet/core/security/authorization/introduction*](https://docs.microsoft.com/aspnet/core/security/authorization/introduction)
 
--   **基于角色的身份验证**
-    [https://docs.microsoft.com/aspnet/core/security/authorization/roles](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
+-   **基于角色的授权**
+    [*https://docs.microsoft.com/aspnet/core/security/authorization/roles*](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
 
--   **基于策略的自定义身份验证**
-    [https://docs.microsoft.com/aspnet/core/security/authorization/policies](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
+-   **基于自定义策略的授权**
+    [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
 
 
 

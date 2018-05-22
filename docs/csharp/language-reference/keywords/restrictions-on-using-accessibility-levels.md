@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: bbe358822e885e5ddaba4cb9d982e89cefe1921e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd2f9b11523aac1cb720559db44aa36029d52ddb
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>可访问性级别的使用限制（C# 参考）
 在声明中指定类型时，检查类型的可访问性级别是否依赖于成员或其他类型的可访问性级别。 例如，直接基类必须至少具有与派生类相同的可访问性。 以下声明会导致编译器错误，因为基类 `BaseClass` 的可访问性低于 `MyClass`：  
   
-```  
+```csharp  
 class BaseClass {...}  
 public class MyClass: BaseClass {...} // Error  
 ```  
@@ -37,7 +37,7 @@ public class MyClass: BaseClass {...} // Error
 ## <a name="example"></a>示例  
  下面的示例包含不同类型的错误声明。 每个声明后的注释指示预期编译器错误。  
   
-```  
+```csharp  
 // Restrictions on Using Accessibility Levels  
 // CS0052 expected as well as CS0053, CS0056, and CS0057  
 // To make the program work, change access level of both class B  

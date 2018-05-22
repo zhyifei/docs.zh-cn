@@ -1,12 +1,6 @@
 ---
 title: HTTP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - protocols, HTTP
 - sending data, HTTP
@@ -19,19 +13,17 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f72a77e19d04c0dd55887628033f7c975ac3ff25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ed61a8addd204320560c773e917613c52e56bff4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http"></a>HTTP
-.NET Framework 提供全面的支持对 HTTP 协议，可使所有 Internet 流量，大多数与<xref:System.Net.HttpWebRequest>和<xref:System.Net.HttpWebResponse>类。 这些类派生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，默认情况下将被返回，无论静态方法 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 遇到以“http”还是“https”开头的 URI。 大多数情况下，WebRequest 和 WebResponse 类提供发出请求的所有必需项，但如果需要访问作为属性公开的特定于 HTTP 的功能，可以将这些类转换为 HttpWebRequest 或 HttpWebResponse 类型。  
+.NET Framework 使用 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.HttpWebResponse> 类提供对 HTTP 协议的全面支持，这构成所有 Internet 通信的主体。 这些类派生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，默认情况下将被返回，无论静态方法 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 遇到以“http”还是“https”开头的 URI。 大多数情况下，WebRequest 和 WebResponse 类提供发出请求的所有必需项，但如果需要访问作为属性公开的特定于 HTTP 的功能，可以将这些类转换为 HttpWebRequest 或 HttpWebResponse 类型。  
   
  HttpWebRequest 和 HttpWebResponse 封装标准 HTTP 请求和响应事务，并提供对通用 HTTP 标头的访问。 这些类还支持大多数 HTTP 1.1 功能，包括管道、在区块中发送和接收数据、身份验证、预身份验证、加密、代理支持、服务器证书验证和连接管理。 自定义标头和未通过属性提供的标头可以存储在 Headers 属性并通过该属性进行访问。  
   

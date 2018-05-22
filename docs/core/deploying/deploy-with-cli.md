@@ -4,16 +4,11 @@ description: 了解如何使用命令行接口 (CLI) 工具部署 .NET Core 应�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 21e824e6092b0d30e0499ff05c5471a291c8d269
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令行接口 (CLI) 工具部署 .NET Core 应用
 
@@ -63,11 +58,15 @@ ms.lasthandoff: 04/28/2018
       ```
    这将创建一个应用的发行版（而不是调试版）。 生成的文件位于名为“发布”的目录中，该目录位于项目的 bin 目录的子目录中。
 
-与应用程序的文件一起，发布过程将发出包含应用调试信息的程序数据库 (.pdb) 文件。 该文件主要用于调试异常。 可以选择不将其与应用程序的文件一起分布。 但是，如果要调试应用的发布版本，则应保存该文件。
+   与应用程序的文件一起，发布过程将发出包含应用调试信息的程序数据库 (.pdb) 文件。 该文件主要用于调试异常。 可以选择不将其与应用程序的文件一起分布。 但是，如果要调试应用的发布版本，则应保存该文件。
 
-可以采用任何喜欢的方式部署完整的应用程序文件集。 例如，可以使用简单的 `copy` 命令将其打包为 Zip 文件，或者使用选择的安装包进行部署。 安装成功后，用户可通过使用 `dotnet` 命令或提供应用程序文件名（如 `dotnet fdd.dll`）来执行应用程序。
+   可以采用任何喜欢的方式部署完整的应用程序文件集。 例如，可以使用简单的 `copy` 命令将其打包为 Zip 文件，或者使用选择的安装包进行部署。
 
-除应用程序二进制文件外，安装程序还应捆绑共享框架安装程序，或在安装应用程序的过程中将其作为先决条件进行检查。  安装共享框架需要管理员/根访问权限。
+1. 运行你的应用
+
+   安装成功后，用户可通过使用 `dotnet` 命令或提供应用程序文件名（如 `dotnet fdd.dll`）来执行应用程序。
+
+   除应用程序二进制文件外，安装程序还应捆绑共享框架安装程序，或在安装应用程序的过程中将其作为先决条件进行检查。  安装共享框架需要管理员/根访问权限。
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>包含第三方依赖项的依赖框架的部署
 

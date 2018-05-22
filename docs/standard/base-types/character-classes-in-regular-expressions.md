@@ -1,13 +1,7 @@
 ---
 title: 正则表达式中的字符类
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 58
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 538aa21712f1e2290fb009c24774059098c60c1e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 241bc9756118cd2db15356dcc2c724a24c84d0fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
 <a name="Top"></a>一个字符类定义一组字符，其中的任一字符均可出现在输入字符串中以便成功匹配。 .NET 中的正则表达式语言支持以下字符类：  
@@ -220,7 +209,7 @@ ms.lasthandoff: 04/18/2018
  [返回页首](#Top)  
   
 <a name="NegativeCategoryOrBlock"></a>   
-## <a name="negative-unicode-category-or-unicode-block-p"></a>负 Unicode 类别或 Unicode 块：\P {}  
+## <a name="negative-unicode-category-or-unicode-block-p"></a>负 Unicode 类别或 Unicode 块：\P{}  
  Unicode 标准为每个常规类别分配一个字符。 例如，特定字符可以是大写字母（由 `Lu` 类别表示），十进制数字（`Nd` 类别）、数学符号（`Sm` 类别）或段落分隔符（`Zl` 类别）。 Unicode 标准中的特定字符集也占据连续码位的特定区域或块。 例如，可在 \u0000 和 \u007F 之间找到基本拉丁字符集，并可在 \u0600 和 \u06FF 之间找到阿拉伯语字符集。  
   
  正则表达式构造  

@@ -1,19 +1,14 @@
 ---
 title: SOA 应用程序
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5f60ff2fb1567d08b9e51e14ce5660a8e42f54aa
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 37313c4eb437b6b7a362456a7d1ee3b3aecb6020
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="soa-applications"></a>SOA 应用程序
 
@@ -25,4 +20,4 @@ SOA 是的使用过度的术语，意味着要对不同的人是许多不同的�
 
 
 >[!div class="step-by-step"]
-[以前](state-and-data-in-docker-applications.md) [下一步] (安排-高的可伸缩性-availability.md)
+[以前] (state-and-data-in-docker-applications.md) [下一步] (orchestrate-high-scalability-availability.md)

@@ -1,20 +1,13 @@
 ---
-title: "使用 XML 注释来记录代码"
-description: "了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。"
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 使用 XML 注释来记录代码
+description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 02/14/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 709ef2ba2202e69ba35834789ad6e743a0f6b719
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1284f179c7debb323ea3bbd302df1f02bf8b31b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 注释来记录代码
 
@@ -25,7 +18,7 @@ XML 文档注释是一种特殊注释，添加在任何用户定义的类型或�
 
 可通过执行下列操作之一在编译时生成 XML 文件：
 
-- 如果要使用 .NET Core 从命令行开发应用程序，可以将 [DocumentationFile 元素](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)添加到 .csproj 项目文件的 `<PropertyGroup>` 部分。 下面的示例生成具有相同的根文件名与程序集的项目目录中的 XML 文件：
+- 如果要使用 .NET Core 从命令行开发应用程序，可以将 [DocumentationFile 元素](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)添加到 .csproj 项目文件的 `<PropertyGroup>` 部分。 下面的示例使用与程序集相同的根文件夹名在项目目录中生成 XML 文件：
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -41,7 +34,7 @@ XML 文档注释是一种特殊注释，添加在任何用户定义的类型或�
 
 - 如果是从命令行编译 .NET Framework 应用程序，编译时请添加 [/doc 编译器选项](language-reference/compiler-options/doc-compiler-option.md)。  
 
-XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 例如: 
+XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 例如:
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 

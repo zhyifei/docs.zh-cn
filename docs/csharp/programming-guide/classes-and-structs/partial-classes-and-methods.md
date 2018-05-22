@@ -6,11 +6,11 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 97d0f23177fae68792034c33366e57a445d62217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d257846821f14a377c505099e38971dd5d8a297a
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>分部类和方法（C# 编程指南）
 可以将[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)、[接口](../../../csharp/language-reference/keywords/interface.md)或方法的定义拆分到两个或更多个源文件中。 每个源文件包含类型或方法定义的一部分，编译应用程序时将把所有部分组合起来。  
@@ -131,7 +131,7 @@ ms.lasthandoff: 05/04/2018
   
  分部方法声明由两个部分组成：定义和实现。 它们可以位于分部类的不同部分中，也可以位于同一部分中。 如果不存在实现声明，则编译器会优化定义声明和对方法的所有调用。  
   
-```  
+```csharp  
 // Definition in file1.cs  
 partial void onNameChanged();  
   

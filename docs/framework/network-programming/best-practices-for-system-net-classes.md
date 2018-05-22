@@ -1,12 +1,6 @@
 ---
-title: "System.Net 类的最佳实践"
-ms.custom: 
+title: System.Net 类的最佳实践
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - sending data, best practices
 - requesting data from Internet, best practices
@@ -16,22 +10,19 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90722abbdb4568be115c0ac77007d5f18984df6f
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
-ms.translationtype: MT
+ms.openlocfilehash: c74f9d0534675d07c87d3edbcf8434cd98f6c621
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net 类的最佳实践
 以下建议有助于你充分利用 <xref:System.Net> 中包含的类：  
   
--   传输层安全 (TLS) 的最佳做法，请参阅[传输层安全 (TLS) 的最佳做法与.NET Framework](tls.md)。
+-   对于传输层安全性 (TLS) 最佳做法，请参阅 [.NET Framework 中的传输层安全性 (TLS) 最佳做法](tls.md)。
 
 -   要转换到子代类，请尽可能使用 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，而不是使用类。 使用 WebRequest 和 WebResponse 的应用程序，无需大范围修改代码，便可充分利用新的 Internet 协议。  
   
@@ -43,5 +34,5 @@ ms.lasthandoff: 03/20/2018
   
 -   若要访问需要凭据的站点，请使用 <xref:System.Net.CredentialCache> 类创建凭据缓存，而非为每个站点提供请求。 使用 CredentialCache 类可搜索缓存，查找符合请求的合适凭据，如此，你便无需基于 URL 创建和提供凭据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)

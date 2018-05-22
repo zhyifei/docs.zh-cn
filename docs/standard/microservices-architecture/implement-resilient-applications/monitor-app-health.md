@@ -1,21 +1,14 @@
 ---
-title: "运行状况监视"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 运行状况监视"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 运行状况监视
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 运行状况监视
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 81c4fc7662212bb3c6586a590d87e731220b7b7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="health-monitoring"></a>运行状况监视
 
@@ -27,7 +20,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="implementing-health-checks-in-aspnet-core-services"></a>在 ASP.NET Core 服务中实现运行状况检查
 
-部署 ASP.NET Core 微服务或 Web 应用程序时，可以使用 ASP.NET 团队中名为 `HealthChecks` 的库。 可在此 [GitHub 存储库](https://github.com/dotnet-architecture/HealthChecks)中找到早期版本。
+部署 ASP.NET Core 微服务或 Web 应用程序时，可以使用 ASP.NET 团队中名为 `HealthChecks` 的带外库（非正式属于 ASP.NETCore 的部分）。 可在此 [GitHub 存储库](https://github.com/dotnet-architecture/HealthChecks)中找到。
 
 该库使用方便，并提供了一些功能，可以用于验证应用程序（如 SQL Server 数据库或远程 API）所需的任何特定外部资源是否正常工作。 使用该库时，还可以确定资源正常运行的定义，稍后将会介绍。
 
@@ -37,7 +30,7 @@ ms.lasthandoff: 03/19/2018
 
 可以查看 HealthChecks 库在 eShopOnContainers 示例应用程序中的使用情况。 首先，需要定义每个微服务的正常运行状况的必备条件。 在该示例应用程序中，如果可通过 HTTP 访问微服务 API 并且可以使用与其相关的 SQL Server 数据库，则该微服务的处于正常运行状态。
 
-之后，可以将 HealthChecks 库作为 NuGet 包进行安装。 但截至本文撰写时，解决方案还需下载并编译代码。 克隆的代码在https://github.com/dotnet-architecture/HealthChecks的以下文件夹复制到你的解决方案：
+之后，可以将 HealthChecks 库作为 NuGet 包进行安装。 但截至本文撰写时，解决方案还需下载并编译代码。 克隆 https://github.com/dotnet-architecture/HealthChecks 中可用的代码，并将以下文件夹复制到解决方案：
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
@@ -190,12 +183,12 @@ eShopOnContainers 示例包含一个网页，该网页显示了示例运行状�
 
 ## <a name="additional-resources"></a>其他资源
 
--   **ASP.NET 核心 HealthChecks** （早期发行版） [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
+-   **ASP.NET Core HealthChecks**（早期版本）[*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
 -   **Service Fabric 运行状况监视简介**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure 的 Application Insights**
+-   **Azure Application Insights**
     [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**

@@ -1,24 +1,17 @@
 ---
-title: "System.Delegate 和“delegate”关键字"
-description: "详细介绍 .NET Framework 中支持委托的类以及这些类映射到“delegate”关键字的方式。"
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: System.Delegate 和 `delegate` 关键字
+description: 详细介绍 .NET Framework 中支持委托的类以及这些类映射到“delegate”关键字的方式。
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 关键字
 
-[上一部分](delegates-overview.md)
+[上一篇](delegates-overview.md)
 
 本文介绍 .NET Framework 中支持委托的类以及这些类映射到 `delegate` 关键字的方式。
 
@@ -120,7 +113,7 @@ Sort() 示例通常将单个目标方法附加到委托。 但是，委托对象
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>委托和 MulticastDelegate 类
 
-上面介绍的语言支持可提供在使用委托时通常需要的功能和支持。 这些功能基于.NET 核心 framework 中的两个类：<xref:System.Delegate>和<xref:System.MulticastDelegate>。
+上面介绍的语言支持可提供在使用委托时通常需要的功能和支持。 这些功能采用 .NET Core Framework 中的两个类进行构建：<xref:System.Delegate> 和 <xref:System.MulticastDelegate>。
 
 `System.Delegate` 类及其单个直接其子类 `System.MulticastDelegate` 可提供框架支持，以便创建委托、将方法注册为委托目标以及调用注册为委托目标的所有方法。 
 

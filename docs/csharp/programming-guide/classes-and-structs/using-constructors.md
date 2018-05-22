@@ -1,21 +1,14 @@
 ---
 title: 使用构造函数（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-caps.latest.revision: 26
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eb9fcd1e4090da300de17c7fd808669ba51767c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fe6f10e3842c0c0aac4b2669f8ca367fa8c3be2
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用构造函数（C# 编程指南）
 创建[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)时，将会调用其构造函数。 构造函数与该类或结构具有相同名称，并且通常初始化新对象的数据成员。  
@@ -36,7 +29,7 @@ ms.lasthandoff: 11/21/2017
   
  [结构](../../../csharp/language-reference/keywords/struct.md)类型的构造函数与类的构造函数类似，但是 `structs` 不能包含显式默认构造函数，因为编译器将自动提供一个显式默认构造函数。 此构造函数会将 `struct` 中的每个字段初始化为默认值。 有关详细信息，请参阅[默认值表](../../../csharp/language-reference/keywords/default-values-table.md)。 但是，只有使用 `new` 实例化 `struct` 时，才会调用此默认构造函数。 例如，下面的代码使用 <xref:System.Int32> 的默认构造函数，因此可确保整数已初始化：  
   
-```  
+```csharp  
 int i = new int();  
 Console.WriteLine(i);  
 ```  
@@ -59,7 +52,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  因此不需要调用值类型的默认构造函数。  
   
- 两个类和 `structs` 都可以定义带参数的构造函数。 必须通过 `new` 语句或 [base](../../../csharp/language-reference/keywords/base.md) 语句调用带参数的构造函数。 类和 `structs` 还可以定义多个构造函数，并且二者均不需要定义默认构造函数。 例如:   
+ 两个类和 `structs` 都可以定义带参数的构造函数。 必须通过 `new` 语句或 [base](../../../csharp/language-reference/keywords/base.md) 语句调用带参数的构造函数。 类和 `structs` 还可以定义多个构造函数，并且二者均不需要定义默认构造函数。 例如:  
   
  [!code-csharp[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
   
@@ -67,7 +60,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_4.cs)]  
   
- 构造函数可以使用 `base` 关键字调用基类的构造函数。 例如:   
+ 构造函数可以使用 `base` 关键字调用基类的构造函数。 例如:  
   
  [!code-csharp[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_5.cs)]  
   
@@ -89,14 +82,14 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
   
- 构造函数可以将标记为[公共](../../../csharp/language-reference/keywords/public.md)，[私有](../../../csharp/language-reference/keywords/private.md)，[保护](../../../csharp/language-reference/keywords/protected.md)，[内部](../../../csharp/language-reference/keywords/internal.md)，[受保护内部](../../../csharp/language-reference/keywords/protected-internal.md)或[私有受保护](../../../csharp/language-reference/keywords/private-protected.md)。 这些访问修饰符定义类的用户构造该类的方式。 有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 可以将构造函数标记为[public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[protected internal](../../../csharp/language-reference/keywords/protected-internal.md) 或 [private protected](../../../csharp/language-reference/keywords/private-protected.md)。 这些访问修饰符定义类的用户构造该类的方式。 有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
  可使用 [static](../../../csharp/language-reference/keywords/static.md) 关键字将构造函数声明为静态构造函数。 在访问任何静态字段之前，都将自动调用静态构造函数，它们通常用于初始化静态类成员。 有关详细信息，请参阅[静态构造函数](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  

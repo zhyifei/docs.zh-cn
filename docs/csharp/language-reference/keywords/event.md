@@ -1,10 +1,6 @@
 ---
 title: event（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - event
 - remove
@@ -13,14 +9,11 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-caps.latest.revision: 28
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f7e7f9f96714f8988eb91d77c63cc4f017d040f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b58e06c87ebf601daf231c83993ebe512f51ecd9
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="event-c-reference"></a>event（C# 参考）
 `event` 关键字用于声明发布服务器类中的事件。  
@@ -28,11 +21,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="example"></a>示例  
  下面的示例演示如何声明和引发使用 <xref:System.EventHandler> 作为基础委托类型的事件。 有关演示如何使用泛型 <xref:System.EventHandler%601> 委托类型以及如何订阅事件并创建事件处理程序方法的完整的代码示例，请参阅[如何：发布符合 .NET Framework 准则的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。  
   
- [!code-csharp[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
   
  事件是一种特殊的多播委托，仅可以从声明事件的类或结构（发布服务器类）中对其进行调用。 如果其他类或结构订阅该事件，则在发布服务器类引发该事件时，将调用其事件处理程序方法。 有关详细信息和代码示例，请参阅[事件](../../../csharp/programming-guide/events/index.md)和[委托](../../../csharp/programming-guide/delegates/index.md)。  
   
- 可以将事件标记为[公共](../../../csharp/language-reference/keywords/public.md)，[私有](../../../csharp/language-reference/keywords/private.md)，[保护](../../../csharp/language-reference/keywords/protected.md)，[内部](../../../csharp/language-reference/keywords/internal.md)，[受保护内部](../../../csharp/language-reference/keywords/protected-internal.md)或[私有受保护](../../../csharp/language-reference/keywords/private-protected.md)。 这些访问修饰符定义该类的用户访问该事件的方式。 有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 可以将事件标记为[public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[protected internal](../../../csharp/language-reference/keywords/protected-internal.md) 或 [private protected](../../../csharp/language-reference/keywords/private-protected.md)。 这些访问修饰符定义该类的用户访问该事件的方式。 有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
 ## <a name="keywords-and-events"></a>关键字和事件  
  下列关键字应用于事件。  
@@ -51,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  

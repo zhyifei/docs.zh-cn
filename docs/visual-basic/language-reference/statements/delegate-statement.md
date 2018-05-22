@@ -7,11 +7,11 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: fb9d8b2c2647ba8fd3b7cee4781f1574b6679b0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3965dc2d71ec9356cdb38d5ddcd4e00f9259951a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="delegate-statement"></a>Delegate 语句
 用于声明委托。 委托是一个引用类型，是指`Shared`方法的类型或实例方法的对象。 可以使用任何具有匹配参数和返回类型的过程来创建此委托类的实例。 然后可以通过将委托实例更高版本调用过程。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
 |术语|定义|  
 |---|---|  
 |`attrlist`|可选。 适用于此委托属性的列表。 用逗号分隔多个属性。 必须将括[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)中命令的尖括号 ("`<`"和"`>`")。|  
-|`accessmodifier`|可选。 指定哪些代码可以访问该委托。 可以是以下各项之一：<br /><br /> -   [公共](../../../visual-basic/language-reference/modifiers/public.md)。 任何可以访问的元素的声明的委托的代码可以访问它。<br />-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)。 该委托的类或派生的类中的唯一代码可以访问它。<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)。 只有相同程序集内的代码可以访问该委托。<br />-   [私有](../../../visual-basic/language-reference/modifiers/private.md)。 只有在元素声明委托的代码可以访问它。<br /><br /> 你可以指定`Protected Friend`若要从在该委托的类、 派生的类中或同一程序集中的代码进行访问。|  
+|`accessmodifier`|可选。 指定哪些代码可以访问该委托。 可以是以下各项之一：<br /><br /> - [公共](../../../visual-basic/language-reference/modifiers/public.md)。 任何可以访问的元素的声明的委托的代码可以访问它。<br />-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)。 该委托的类或派生的类中的唯一代码可以访问它。<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)。 只有相同程序集内的代码可以访问该委托。<br />- [私有](../../../visual-basic/language-reference/modifiers/private.md)。 只有在元素声明委托的代码可以访问它。<br /><br /> - [受保护的友元](../../language-reference/modifiers/protected-friend.md)只有在委托的类、 派生的类中或同一程序集中的代码才能访问该委托。 <br />- [私有受保护](../../language-reference/modifiers/private-protected.md)只有在委托的类或同一程序集中的派生类中的代码可以访问委托。 |  
 |`Shadows`|可选。 指示此委托重新声明并隐藏具有相同名称的编程元素或在基类中的重载元素集。 可以与任何其他类型一起隐藏任何类型的已声明元素。<br /><br /> 隐藏的元素不可在隐藏它的派生类中使用（除了从隐藏元素不可访问的位置）。 例如，如果`Private`元素隐藏一个基类元素，没有访问权限的代码`Private`元素改为访问基类元素。|  
 |`Sub`|可选，但请`Sub`或`Function`必须出现。 将委托作为此过程声明`Sub`不返回值的过程。|  
 |`Function`|可选，但请`Sub`或`Function`必须出现。 将委托作为此过程声明`Function`返回一个值的过程。|  

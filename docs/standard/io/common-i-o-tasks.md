@@ -1,31 +1,20 @@
 ---
-title: "常见 I-O 任务"
-ms.custom: 
+title: 通用 I/O 任务
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: be291265d59dca5d1f555f8a98a3d0c79235f3c3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bf0caa0513881d5a1096478d8b29fc708ac3d3ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-io-tasks"></a>通用 I/O 任务
-<xref:System.IO> 命名空间提供若干个类，通过这些类可以对文件、目录和流执行各种操作（如读取和写入）。 有关详细信息，请参阅[文件和流 I-O](../../../docs/standard/io/index.md)。  
+<xref:System.IO> 命名空间提供若干个类，通过这些类可以对文件、目录和流执行各种操作（如读取和写入）。 有关详细信息，请参阅[文件和流 I/O](../../../docs/standard/io/index.md)。  
   
 ## <a name="common-file-tasks"></a>通用文件任务  
   
@@ -64,6 +53,6 @@ ms.lasthandoff: 12/23/2017
 |确定目录是否存在|<xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType> 方法|  
   
 ## <a name="see-also"></a>请参阅  
- [文件和流 I-O](../../../docs/standard/io/index.md)  
+ [文件和流 I/O](../../../docs/standard/io/index.md)  
  [撰写流](../../../docs/standard/io/composing-streams.md)  
  [异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)

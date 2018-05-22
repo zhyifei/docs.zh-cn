@@ -1,9 +1,6 @@
 ---
-title: "安装和卸载 .NET Framework 受阻疑难解答"
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+title: 安装和卸载 .NET Framework 受阻疑难解答
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
 helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
@@ -11,13 +8,11 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7ccac79516966a6da51d2b590cd22409f0703576
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d33c77dc051017610be48d7212a003fcccb1a204
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>安装和卸载 .NET Framework 受阻疑难解答
 
@@ -30,17 +25,17 @@ ms.lasthandoff: 12/22/2017
 
 可以确定系统上安装了哪些版本的 .NET Framework。 请参阅[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)获取详细信息。
 
-在此表中，4.5.x 指 .NET Framework 4.5 及其单点版本 4.5.1 和 4.5.2，4.6.x 指 .NET Framework 4.6 及其单点版本 4.6.1 和 4.6.2，4.7.x 指 .NET Framework 4.7 及其单点版本 4.7.1。
+在此表中，4.5.x 指 .NET Framework 4.5 及其单点版本 4.5.1 和 4.5.2，4.6.x 指 .NET Framework 4.6 及其单点版本 4.6.1 和 4.6.2，4.7.x 指 .NET Framework 4.7 及其单点版本 4.7.1 和 4.7.2。
 
 |阻止消息|了解更多信息或解决此问题|  
 |----------------------|--------------------------------------------------|  
 |卸载 Microsoft .NET Framework 可能会导致某些应用程序无法正常工作。|通常，你不应卸载计算机上安装的 .NET Framework 的任何版本，因为你使用的应用程序可能取决于 .NET Framework 的特定版本。 有关详细信息，请参阅*入门*指南中的[面向用户的 .NET Framework](../../../docs/framework/get-started/index.md#ForUsers)。|  
-|此计算机上已安装 .NET Framework 4.5*.x*/4.6*.x*/4.7 (ENU) 或更高版本。|无需执行任何操作。<br /><br /> 要确定系统上安装了哪些版本的 .NET Framework，请参阅[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。|  
+|此计算机上已安装 .NET Framework 4.5.x/4.6.x/4.7.x (ENU) 或更高版本。|无需执行任何操作。<br /><br /> 要确定系统上安装了哪些版本的 .NET Framework，请参阅[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。|  
 |.NET Framework 4.5.x/4.6.x/4.7.x (语言) 需要 .NET Framework 4.5.x/4.6.x/4.7.x。 请从下载中心安装 .NET Framework 4.5.x/4.6.x/4.7.x 并重新运行安装程序。|你必须先安装 .NET Framework 指定版本的英文版，然后再安装语言包。 有关详细信息，请参阅安装指南中有关[安装语言包](../../../docs/framework/install/guide-for-developers.md#to-install-language-packs)一节。|  
 |无法安装 .NET Framework 4.5.x/4.6.x/4.7.x。 你的计算机上的其他应用程序与此程序不兼容。<br /><br /> 或<br /><br /> 你的计算机上的其他应用程序与此程序不兼容。|导致出现此消息的最可能的原因是安装了 .NET Framework 的预览版或 RC 版。 卸载预览版或 RC 版，然后重新运行安装程序。|  
-|无法使用此包卸载 .NET Framework 4.5*.x*/4.6*.x*/4.7。 若要从计算机中卸载 .NET Framework 4.5*.x*/4.6*.x*，请转到“控制面板”，然后依次选择“程序和功能”、“查看已安装的更新”、“Microsoft Windows (KB2828152) 的更新”和“卸载”。|你正在安装的程序包不会卸载 .NET Framework 的预览版或 RC 版。<br /><br /> 从“控制面板”卸载预览版或 RC 版。|  
+|无法使用此程序包卸载 .NET Framework 4.5.x/4.6.x/4.7.x。 若要从计算机中卸载 .NET Framework 4.5.x/4.6.x/4.7.x，请转到“控制面板”，然后依次选择“程序和功能”、“查看已安装的更新”、“Microsoft Windows (KB2828152) 的更新”和“卸载”。|你正在安装的程序包不会卸载 .NET Framework 的预览版或 RC 版。<br /><br /> 从“控制面板”卸载预览版或 RC 版。|  
 |无法卸载 .NET Framework 4.5.x/4.6.x/4.7.x。 计算机上的其他应用程序依赖于此程序。|通常，你不应该从计算机卸载 .NET Framework 的任何版本，因为你使用的应用程序可能基于 .NET Framework 的特定版本。 有关详细信息，请参阅*入门*指南中的[面向用户的 .NET Framework](../../../docs/framework/get-started/index.md#ForUsers)。|  
-|.NET Framework 4.5.x/4.6.x/4.7.x 可再发行组件不适用于此操作系统。 请从 Microsoft 下载中心下载适合你的操作系统的 .NET Framework 4.5.x/4.6.x/4.7.x。|可能是因为尝试在不受支持的平台上安装 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2、4.7 或 4.7.1，也可能是因为已选择的安装程序包不包含适用于所有受支持操作系统的组件。 使用脱机安装程序（[适用于 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=309493)、[4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)、[4.6](http://go.microsoft.com/fwlink/p/?LinkId=528233)、[4.6.1](http://go.microsoft.com/fwlink/p/?LinkId=671744)、[4.6.2](http://go.microsoft.com/fwlink/p/?LinkId=780604)、[4.7](http://go.microsoft.com/fwlink/p/?LinkId=825306) 或 [4.7.1](http://go.microsoft.com/fwlink/p/?LinkId=852090)）再次运行安装。 有关详细信息，请参阅适用于受支持操作系统的[安装指南](../../../docs/framework/install/guide-for-developers.md)和[系统需求](../../../docs/framework/get-started/system-requirements.md)。|  
+|.NET Framework 4.5.x/4.6.x/4.7.x 可再发行组件不适用于此操作系统。 请从 Microsoft 下载中心下载适合你的操作系统的 .NET Framework 4.5.x/4.6.x/4.7.x。|可能是因为尝试在不受支持的平台上安装 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2，也可能是因为已选择的安装程序包不包含适用于所有受支持操作系统的组件。 使用适用于 [4.7.1](http://go.microsoft.com/fwlink/p/?LinkId=852090) 或 [4.7.2](http://go.microsoft.com/fwlink/p/?LinkId=863265) 的脱机安装程序（[适用于 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=309493)、[4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)、[4.6](http://go.microsoft.com/fwlink/p/?LinkId=528233)、[4.6.1](http://go.microsoft.com/fwlink/p/?LinkId=671744)、[4.6.2](http://go.microsoft.com/fwlink/p/?LinkId=780604)、[4.7](http://go.microsoft.com/fwlink/p/?LinkId=825306)）再次运行安装。 有关详细信息，请参阅适用于受支持操作系统的[安装指南](../../../docs/framework/install/guide-for-developers.md)和[系统需求](../../../docs/framework/get-started/system-requirements.md)。|  
 |安装本产品之前需要先安装 KB\<*编号*> 所对应的更新。|.NET Framework 安装需要在安装 .NET Framework 之前先安装 KB 更新。 安装此更新，然后再次开始 .NET Framework 安装。<br /><br /> 例如，在 Windows 8.1、Windows RT 8.1 和 Windows Server 2012 R2 上安装更新版本的 .NET Framework 需要先安装 [KB 2919355](https://support.microsoft.com/kb/2919355) 所对应的更新。|  
 |你的计算机当前正在运行 Windows Server 2008 操作系统的服务器核心安装。 .NET Framework 4.5.*x* 需要操作系统的更高版本。 请安装 Windows Server 2008 R2 SP1 或更高版本并重新运行 .NET Framework 4.5.*x* 安装程序。|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 和 4.5.2 在带有 Windows Server 2008 R2 SP1 或更高版本的服务器核心角色中受支持。 请参阅[系统需求](../../../docs/framework/get-started/system-requirements.md)。|  
 |你没有足够的权限为此计算机的所有用户完成此操作。 以管理员身份登录并重新运行“安装程序”。|若要安装 .NET Framework，你必须是计算机的管理员。|  
@@ -75,9 +70,9 @@ ms.lasthandoff: 12/22/2017
 
    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers
 
-1. 在“名称”列中查找 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7 或 4.7.1 下载名称（具体取决于要安装的版本），然后删除这些项。 有关下载名称，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md) 一文。
+1. 在“名称”列中查找 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 下载名称（具体取决于要安装的版本），然后删除这些项。 有关下载名称，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md) 一文。
 
-1. 重新运行版本 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7 或 4.7.1 的 .NET Framework 安装程序。
+1. 重新运行版本 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 的 .NET Framework 安装程序。
 
 ## <a name="see-also"></a>请参阅
 

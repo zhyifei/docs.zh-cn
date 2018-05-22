@@ -1,8 +1,6 @@
 ---
-title: "网络编程的.NET Framework 中的安全性"
+title: 网络编程中的安全性 - .NET Framework
 ms.date: 03/14/2018
-ms.prod: .net-framework
-ms.topic: article
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -17,13 +15,11 @@ ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2dd4133c31cf0595c06485a76490d78d469a0d38
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
-ms.translationtype: MT
+ms.openlocfilehash: a684fd1a7ce8cce52e00511b114cb4905ed0a42b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-in-network-programming"></a>网络编程中的安全性
 
@@ -31,8 +27,8 @@ ms.lasthandoff: 03/16/2018
   
 ## <a name="in-this-section"></a>本节内容
 
-[传输层安全 (TLS) 的.NET Framework 的最佳方法](tls.md)  
-介绍使用.NET Framwork TLS 最佳做法。
+[.NET Framework 中的传输层安全性 (TLS) 最佳做法](tls.md)  
+介绍 .NET Framework 的 TLS 最佳做法。
  
 [使用安全套接字层](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
 介绍如何使用安全套接字层 (SSL) 连接。  

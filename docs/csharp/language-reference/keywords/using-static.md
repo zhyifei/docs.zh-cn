@@ -1,20 +1,16 @@
 ---
 title: using static 指令（C# 参考）
 ms.date: 03/10/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5838bede475cf2ad1b72518770241e86206a06bb
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: c9b7508c6e751f83fdc16a700ad68aa7de36e497
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-static-directive-c-reference"></a>using static 指令（C# 参考）
 
@@ -52,7 +48,7 @@ using static <fully-qualified-type-name>
 
 [!code-csharp[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
-在此示例中，`using static` 指令也已经应用于 <xref:System.Double> 类型。 这可能使其可以调用<xref:System.Double.TryParse(System.String,System.Double@)>方法，而指定的类型名称。 但是，如此创建的代码可读性较差，因为这样有必要检查 `using static` 语句，以确定所调用的数值类型的 `TryParse` 方法。
+在此示例中，`using static` 指令也已经应用于 <xref:System.Double> 类型。 这使得在未指定类型名称情况下调用 <xref:System.Double.TryParse(System.String,System.Double@)> 方法成为可能。 但是，如此创建的代码可读性较差，因为这样有必要检查 `using static` 语句，以确定所调用的数值类型的 `TryParse` 方法。
 
 ## <a name="see-also"></a>请参阅
 

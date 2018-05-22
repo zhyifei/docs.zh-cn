@@ -7,20 +7,23 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: d7935cf691d961591ff5e3d2a290afb88de9165a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40b64b8d2b6306d458b7a9cc657c5b7dc4270eb2
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 指定的一个或多个已声明的编程元素都可以访问只能从在其声明上下文中，包括从文件内包含的任何类型。  
   
 ## <a name="remarks"></a>备注  
  如果编程元素表示专有的功能，或包含机密数据，你通常想要尽可能严格限制对其的访问。 允许模块、 类或结构，它定义其进行访问，从而实现的最大限制。 若要限制到这种方式中的元素的访问，可将其与声明`Private`。  
-  
+
+> [!NOTE]
+> 你还可以使用[私有受保护](private-protected.md)使成员可访问从该类中以及从位于其包含的程序集的派生类的访问修饰符。
+
 ## <a name="rules"></a>规则  
-  
+
 -   **声明上下文。** 只能在模块级别使用 `Private`。 这意味着的声明上下文`Private`元素必须是模块、 类或结构，并且不能是源文件、 命名空间、 接口或过程。  
   
 ## <a name="behavior"></a>行为  
@@ -59,7 +62,8 @@ ms.lasthandoff: 05/04/2018
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [在 Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [私有受保护](./private-protected.md)   
+ [受保护的友元](./protected-friend.md)[访问 Visual Basic 中的级别    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

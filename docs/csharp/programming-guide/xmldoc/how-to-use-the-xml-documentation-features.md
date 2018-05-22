@@ -1,21 +1,15 @@
 ---
-title: "如何：使用 XML 文档功能（C# 编程指南）"
+title: 如何：使用 XML 文档功能（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eb647a275a5cd5fac2316706591440d9792861b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c7e30d23868959145e8941057f1c633fe6e374e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>如何：使用 XML 文档功能（C# 编程指南）
 下面的示例提供对某个已存档类型的基本概述。  
@@ -34,7 +28,7 @@ ms.lasthandoff: 11/21/2017
  **\<summary>**  
  **Class level summary documentation goes here.\</summary>**  
  **\<remarks>**  
- **较长的注释可以与类型或成员相关联**  
+ **Longer comments can be associated with a type or member**  
  **through the remarks tag\</remarks>**  
  **\</member>**  
  **\<member name="F:SomeClass.m_Name">**  
@@ -42,14 +36,14 @@ ms.lasthandoff: 11/21/2017
  **Store for the name property\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.#ctor">**  
- **\<摘要 > 类构造函数。 \< /摘要 >**  
+ **\<summary>The class constructor.\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeMethod(System.String)">**  
  **\<summary>**  
  **Description for SomeMethod.\</summary>**  
  **\<param name="s"> Parameter description for s goes here\</param>**  
  **\<seealso cref="T:System.String">**  
- **可以使用任何标记上的 cref 特性来引用类型或成员**  
+ **You can use the cref attribute on any tag to reference a type or member**  
  **and the compiler will check that the reference exists. \</seealso>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeOtherMethod">**  
@@ -97,7 +91,7 @@ ms.lasthandoff: 11/21/2017
         > [!NOTE]
         >  XML 文件不提供有关该类型和成员的完整信息（例如，它不包含任何类型信息）。 若要获取有关类型或成员的完整信息，必须将文档文件与对实际类型或成员的反射一起使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [/doc （C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

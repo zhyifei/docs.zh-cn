@@ -1,21 +1,14 @@
 ---
-title: "在生产时使用 Azure Key Vault 保护机密"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在生产时使用 Azure Key Vault 保护机密"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 在生产时使用 Azure Key Vault 保护机密
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在生产时使用 Azure Key Vault 保护机密
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cb289c7361362c225eac8b9898bac276c4b623b4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ad5686909c29eba5916cbcc4b7115a16108a004
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>在生产时使用 Azure Key Vault 保护机密
 
@@ -65,20 +58,20 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
 
 ## <a name="additional-resources"></a>其他资源
 
--   **使用 Azure Key Vault 来保护应用程序机密**
-    [https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
+-   **使用 Azure Key Vault 保护应用程序密码**
+    [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
 
--   **在开发期间安全存储应用机密**
-    [https://docs.microsoft.com/aspnet/core/security/app-secrets](https://docs.microsoft.com/aspnet/core/security/app-secrets)
+-   **在开发期间安全存储应用密码**
+    [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)
 
 -   **配置数据保护**
-    [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
 
--   **密钥管理以及生存期**
-    [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
+-   **密钥管理和生存期**
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
 -   **Microsoft.Extensions.Configuration.DockerSecrets.** GitHub 存储库。
-    [https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
+    [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
 
 >[!div class="step-by-step"]
 [上一页] (developer-app-secrets-storage.md) [下一页] (../key-takeaways.md)

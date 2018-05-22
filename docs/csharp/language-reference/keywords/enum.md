@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 72feb6ee25070a6930b01b69e0a726041d34b0c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9714277f87095b709e37b582cd3435374d9a1555
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="enum-c-reference"></a>enum（C# 参考）
 `enum` 关键字用于声明枚举，一种包含一组被称为枚举数列表的已命名常数的不同类型。  
@@ -20,13 +20,13 @@ ms.lasthandoff: 05/04/2018
   
  默认情况下，第一个枚举数具有值 0，并且每个连续枚举数的值将增加 1。 例如，在以下枚举中， `Sat` 的值为 `0`， `Sun` 的值为 `1`， `Mon` 的值为 `2`，依次类推。  
   
-```  
+```csharp  
 enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  枚举数可以使用初始值设定项来替代默认值，如下面的示例中所示。  
   
-```  
+```csharp  
 enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -34,7 +34,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  每个枚举类型都有一个基础类型，该基础类型可以是除 [char](../../../csharp/language-reference/keywords/char.md) 外的任何整型类型。 枚举元素的默认基础类型是 [int](../../../csharp/language-reference/keywords/int.md)。若要声明另一整型的枚举（如 [byte](../../../csharp/language-reference/keywords/byte.md)），则请在后跟该类型的标识符后使用冒号，如以下示例所示。  
   
-```  
+```csharp  
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -49,7 +49,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  基础类型指定为每个枚举数分配多少存储空间。 但要将 `enum` 类型转换为整型，则必须使用显示转换。 例如，以下语句通过使用转换将 `Sun` 转换为 [，从而将枚举数](../../../csharp/language-reference/keywords/int.md) 赋值为 `enum` int `int`类型的变量。  
   
-```  
+```csharp  
 int x = (int)Day.Sun;  
 ```  
   

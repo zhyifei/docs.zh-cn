@@ -1,21 +1,14 @@
 ---
-title: "通用指南"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 通用指南"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 通用指南
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 通用指南
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-guidance"></a>通用指南
 
@@ -45,11 +38,11 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="additional-resources"></a>其他资源
 
--   **e-book: Modernize existing .NET Framework applications with Azure and Windows Containers**（电子书：使用 Azure 和 Windows 容器更新现有 .NET Framework 应用程序）
-    [https://aka.ms/liftandshiftwithcontainersebook](https://aka.ms/liftandshiftwithcontainersebook)
+-   **电子书：使用 Azure 和 Windows 容器更新现有 .NET Framework 应用程序**
+    [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
 
--   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers**（示例应用：使用 Windows 容器更新旧的 ASP.NET web 应用）
-    [https://aka.ms/eshopmodernizing](https://aka.ms/eshopmodernizing)
+-   **示例应用：使用 Windows 容器更新旧的 ASP.NET web 应用**
+    [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
 
 
 >[!div class="step-by-step"]

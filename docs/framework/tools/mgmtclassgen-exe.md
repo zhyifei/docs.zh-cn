@@ -1,13 +1,6 @@
 ---
-title: "Mgmtclassgen.exe（管理强类型类生成器）"
-ms.custom: 
+title: Mgmtclassgen.exe（管理强类型类生成器）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 05ab4874d025eff3eb1aba6b7a336f562159b6ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 282d6376b434121ed6d59297be2ce36ce361c589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe（管理强类型类生成器）
 利用管理强类型类生成器工具，你可以为指定的 Windows Management Instrumentation (WMI) 类快速生成早期绑定的托管类。 生成的类简化了访问 WMI 类的实例所必须编写的代码。  
@@ -47,7 +37,7 @@ WMIClass [options]
 |------------|-----------------|  
 |/l language|指定用于生成早期绑定的托管类的语言。 可以指定 CS（C#；默认）、VB (Visual Basic)、MC (C++) 或 JS (JScript) 作为语言参数。|  
 |/m machine|指定要连接到的计算机，WMI 类驻留在该计算机中。 默认为本地计算机。|  
-|/n path|指定包含 WMI 类的 WMI 命名空间的路径。 如果没有指定该选项，则该工具为默认 Root\cimv2 命名空间中的 WMIClass 生成代码。|  
+|**/n**  *path*|指定包含 WMI 类的 WMI 命名空间的路径。 如果没有指定该选项，则该工具为默认 Root\cimv2 命名空间中的 WMIClass 生成代码。|  
 |/o classnamespace|指定在其中生成托管代码类的 .NET 命名空间。 如果没有指定该选项，则该工具使用 WMI 命名空间和架构前缀生成命名空间。 架构前缀是下划线字符前面的类名的一部分。 例如，对于 Root\cimv2 命名空间中的 Win32_OperatingSystem 类，该工具会在 ROOT.CIMV2.Win32 中生成类。|  
 |/p filepath|指定用于保存已生成代码的文件的路径。 如果没有指定该选项，则该工具将在当前目录中创建文件。 它使用 WMIClass 参数为类和在其中生成类的文件命名。 类名和文件名与 WMIClass 的名称相同。 如果 WMIClass 包含下划线字符，则该工具使用下划线字符后面的类名那部分。 例如，如果 WMIClass 名称采用 Win32_LogicalDisk 格式，则生成的类和文件名为“logicaldisk”。 如果文件已存在，则该工具会覆盖现有文件。|  
 |/pw password|指定登录到由 /m 选项指定的计算机时使用的密码。|  

@@ -3,11 +3,11 @@ title: 委托的常见模式
 description: 了解在代码中使用委托避免组件间强耦合的常见模式。
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9762841656aa362589d01ed011407aeedfe4a20
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="common-patterns-for-delegates"></a>委托的常见模式
 
@@ -27,7 +27,7 @@ var smallNumbers = numbers.Where(n => n < 10);
 Where 方法的原型是：
 
 ```csharp
-public static IEnumerable<TSource> Where<in TSource> (IEnumerable<TSource> source, Func<TSource, bool> predicate);
+public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> source, Func<TSource, bool> predicate);
 ```
 
 此示例重复使用所有方法，这些方法都为 LINQ 的一部分。 它们都依赖于管理特定查询的代码委托。 此 API 设计模式功能强大，需要学习和理解。

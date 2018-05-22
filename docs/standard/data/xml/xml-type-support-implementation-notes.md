@@ -1,26 +1,15 @@
 ---
-title: "XML 类型支持实现说明"
-ms.custom: 
+title: XML 类型支持实现说明
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 4d2d6f2932e1afeb7369c32a43ca48f55fade2e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 类型支持实现说明
 本主题介绍一些要注意的实现细节。  
@@ -37,14 +26,14 @@ ms.lasthandoff: 03/19/2018
  下文介绍 CLR 类型和 XML 数据类型之间可能发生的某些不匹配情况以及如何处理这些情况。  
   
 > [!NOTE]
->  `xs`前缀映射到http://www.w3.org/2001/XMLSchema和命名空间 URI。  
+>  `xs` 前缀映射到 http://www.w3.org/2001/XMLSchema 和命名空间 URL。  
   
 ### <a name="systemtimespan-and-xsduration"></a>System.TimeSpan 和 xs:duration  
  `xs:duration` 类型进行部分排序，因为存在某些不同但是等效的持续时间值。 这意味着对于 `xs:duration` 类型，1 个月 (P1M) 之类的值少于 32 天 (P32D)，多于 27 天 (P27D)，等效于 28、29 或 30 天。  
   
  <xref:System.TimeSpan> 类不支持此部分排序。 而是为 1 年和 1 个月选取特定的天数；分别为 365 天和 30 天。  
   
- 有关详细信息`xs:duration`类型，请参阅 W3C XML 架构第 2 部分： 数据类型建议在http://www.w3.org/TR/xmlschema-2/。  
+ 有关 `xs:duration` 类型的详细信息，请参见 http://www.w3.org/TR/xmlschema-2/ 的“W3C XML 架构第 2 部分：数据类型建议”。  
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time、公历数据类型和 System.DateTime  
  `xs:time` 值映射到 <xref:System.DateTime> 对象时，<xref:System.DateTime.MinValue> 字段用于将 <xref:System.DateTime> 对象的日期属性（例如 <xref:System.DateTime.Year%2A>、<xref:System.DateTime.Month%2A> 和 <xref:System.DateTime.Day%2A>）初始化为 <xref:System.DateTime> 可能的最小值。  
@@ -57,5 +46,5 @@ ms.lasthandoff: 03/19/2018
 ### <a name="xsanyuri-and-systemuri"></a>xs:anyURI 和 System.Uri  
  表示相对 URI 的 `xs:anyURI` 的实例映射到 <xref:System.Uri> 时，<xref:System.Uri> 对象没有基 URI。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

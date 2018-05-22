@@ -1,21 +1,12 @@
 ---
-title: "LINQ to XML 概述 (C#)"
-ms.custom: 
+title: LINQ to XML 概述 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1c66e87ecc72bf711dfda33cd7c0ea35f126c1e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 318c5494134fd1dd3ac2adbf538d693ad4a5dbf8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 概述 (C#)
 在很多环境中，XML 已广泛采用为格式化数据的方式。 例如，在 Web 上，在配置文件、Microsoft Office Word 文件以及数据库中，都可以看到 XML。  
@@ -72,7 +63,7 @@ select item;
 -   使用这些功能的组合，可将 XML 树从一种形状转换为另一种形状。  
   
 ## <a name="creating-xml-trees"></a>创建 XML 树  
- 使用的编程明显的优势之一[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]是很容易创建 XML 树。 例如，若要创建一个小型 XML 树，可以编写以下代码：  
+ 使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 编程的一个明显优势是易于创建 XML 树。 例如，若要创建一个小型 XML 树，可以编写以下代码：  
   
 ```csharp  
 XElement contacts =  
@@ -95,6 +86,6 @@ new XElement("Contacts",
   
  有关详细信息，请参阅[创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Linq>  
  [入门 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

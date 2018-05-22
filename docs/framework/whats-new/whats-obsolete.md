@@ -1,10 +1,7 @@
 ---
-title: ".NET Framework 类库中过时的内容"
+title: .NET Framework 类库中过时的内容
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
@@ -12,13 +9,11 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework 类库中过时的内容
 .NET Framework 随时间推移而变化。 每个新版本都添加了提供新功能的新类型和类型成员。 现有类型和成员也会随着时间推移而变化。 例如，某些类型变得不太重要，因为它们支持的技术由新技术所替代，而某些方法由更方便或功能更全面的方法所取代。  
@@ -26,7 +21,7 @@ ms.lasthandoff: 12/22/2017
  .NET Framework 和公共语言运行时会努力支持向后兼容（允许使用一个版本的 .NET Framework 开发的应用程序在下一版本的 .NET Framework 上运行）。 这便难以仅仅删除类型或类型成员。 相反，.NET Framework 通过将类型或类型成员标记为已过时或已弃用，来指示应不再使用它。 弃用某个类型或成员涉及对它进行标记，以便开发人员知道它将消失，从而有时间来响应其删除。 但是，使用该类型或成员的现有代码会继续在新版本的 .NET Framework 中运行。  
   
 > [!NOTE]
->  术语*“已过时”*和*“已弃用”*在应用于 .NET Framework 的类型和成员时含义相同。  
+>  术语 *“已过时”* 和 *“已弃用”* 在应用于 .NET Framework 的类型和成员时含义相同。  
   
 ## <a name="the-obsoleteattribute-attribute"></a>ObsoleteAttribute 特性  
  .NET Framework 通过使用 <xref:System.ObsoleteAttribute> 特性标记类型或类型成员来指示它已过时。 将该特性应用于某个类型或成员指示该类型或成员会在将来某个版本的 .NET Framework 中删除，但不会破坏使用该成员的已编译代码。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 |.NET Framework 版本|`version` 字符串|
 |-|-|  
-|4.7（包括 4.7.1）|v4.0|  
+|4.7（包括 4.7.1 和 4.7.2）|v4.0|  
 |4.6（包括 4.6.1 和 4.6.2）|v4.0|  
 |4.5（包括 4.5.1 和 4.5.2）|v4.0|  
 |4|v4.0|  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 |1.1|v1.1.4322|  
 |1.0|v1.0.3705|  
   
-## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a>.NET Framework 4.5 和 4.6 的过时列表  
+## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>.NET Framework 4.5 和更高版本的过时列表  
  [过时类型](../../../docs/framework/whats-new/obsolete-types.md)  
   
  [过时成员](../../../docs/framework/whats-new/obsolete-members.md)  

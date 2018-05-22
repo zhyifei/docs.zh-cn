@@ -1,21 +1,14 @@
 ---
 title: 测试 ASP.NET Core 服务和 Web 应用
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 测试 ASP.NET Core 服务和 web 应用
-keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: b3aa0d50ba3ab64440ef51201d611177fea78ce4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>测试 ASP.NET Core 服务和 Web 应用
 
@@ -102,17 +95,17 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Steve Smith.测试控制器**（ASP.NET 核） [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith.测试控制器** (ASP.NET Core)[*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith.集成测试**（ASP.NET 核） [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
+-   **Steve Smith.集成测试** (ASP.NET Core)[*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
 
--   **.NET Core 使用 dotnet 测试中的单元测试**
+-   **使用 dotnet 测试在 .NET Core 中进行单元测试**
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**。 官方网站。
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **单元测试基础知识。**
+-   **单元测试基本信息**
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
 -   **Moq**。 GitHub 存储库。

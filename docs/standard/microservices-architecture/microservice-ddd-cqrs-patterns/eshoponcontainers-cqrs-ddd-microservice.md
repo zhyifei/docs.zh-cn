@@ -1,21 +1,14 @@
 ---
-title: "在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 63e61a93aa2a162d7b48e0d423dab99dcea9d020
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
 
@@ -48,7 +41,7 @@ eShopOnContainers 引用应用程序处的订单微服务设计基于 CQRS 原�
 ####  <a name="additional-resources"></a>其他资源
 
 -   **Martin Fowler。CQRS**
-    [https://martinfowler.com/bliki/CQRS.html](https://martinfowler.com/bliki/CQRS.html)
+    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
 -   **Greg Young.CQS 与CQRS**
     [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
@@ -56,16 +49,16 @@ eShopOnContainers 引用应用程序处的订单微服务设计基于 CQRS 原�
 -   **Greg Young.CQRS 文档**
     [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Greg Young.CQRS, Task Based UIs and Event Sourcing**（CQRS、基于任务的 UI 和事件源）
+-   **Greg Young.CQRS、基于任务的 UI 和事件源**
     [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **Udi Dahan.Clarified CQRS**（CQRS 说明）
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+-   **Udi Dahan.Clarified CQRS**（明确的 CQRS）
+    [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 -   **CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Event-Sourcing (ES)**（事件源 (ES)）
+-   **事件源 (ES)**
     [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 

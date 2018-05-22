@@ -1,21 +1,14 @@
 ---
 title: 设计面向微服务的应用程序
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计面向微服务的应用程序
-keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: a5107e979dc2101380cf848dc574033caf750fd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-a-microservice-oriented-application"></a>设计面向微服务的应用程序
 
@@ -85,7 +78,7 @@ ms.lasthandoff: 03/26/2018
 
 -   基于异步事件的通信。 这种类型通过事件总线发生，以跨微服务传播更新或与外部应用程序集成。 可使用 RabbitMQ 等消息中转站基础结构技术或使用 Azure 服务总线、NServiceBus、MassTransit 或 Brighter 等较高级别服务总线实现此事件总线。
 
-此应用程序以容器形式，作为一组微服务部署。 客户端应用可以与这些容器通信以及在微服务之间进行通信。 如前文所述，此初始体系结构使用直接的客户端到微服务通信体系结构，这意味着客户端应用程序可以直接发出对每个微服务的请求。 每个微服务拥有一个公共终结点，如 https://servicename.applicationname.companyname。 如果需要，每个微服务可以使用不同的 TCP 端口。 在生产中，该 URL 将映射到微服务的负载均衡器，它会将请求分布到可用的微服务实例。
+此应用程序以容器形式，作为一组微服务部署。 客户端应用可以与这些容器通信以及在微服务之间进行通信。 如前文所述，此初始体系结构使用直接的客户端到微服务通信体系结构，这意味着客户端应用程序可以直接发出对每个微服务的请求。 每个微服务都具有一个公共终结点，如 https://servicename.applicationname.companyname。 如果需要，每个微服务可以使用不同的 TCP 端口。 在生产中，该 URL 将映射到微服务的负载均衡器，它会将请求分布到可用的微服务实例。
 
 **eShopOnContainers 中的 API 网关和直接通信。** 如本指南的体系结构部分中所述，直接的客户端到微服务通信体系结构可能在你创建大型、复杂的基于微服务的应用程序时具有缺陷。 但它对于小型应用程序（如 eShopOnContainers 应用程序）已经足够有效，其目的是专注于较简单的入门级的基于 Docker 容器的应用程序，而我们也不希望创建可影响微服务的开发自主性的整体式 API 网关。
 
@@ -104,7 +97,7 @@ ms.lasthandoff: 03/26/2018
 
 ### <a name="additional-resources"></a>其他资源
 
--   **eShopOnContainers GitHub 存储库。引用应用程序源代码**
+-   **eShopOnContainers GitHub 存储库。适用于引用应用程序的源代码**
     *https://aka.ms/eShopOnContainers/*
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>基于微服务的解决方案的优点

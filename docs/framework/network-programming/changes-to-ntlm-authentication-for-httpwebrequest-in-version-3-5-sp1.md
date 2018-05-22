@@ -1,23 +1,15 @@
 ---
-title: "3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改"
-ms.custom: 
+title: 3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 239834a732fe3bc1cb3e8e7f1d126d26c210d1f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f5affc15607ddae76ec90a90928cb42fa0ad49e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改
 在 .NET Framework 版本 3.5 SP1 及以上版本中做出了安全性更改，这些更改影响以下类处理集成式 Windows 身份验证的方式：<xref:System.Net.HttpWebRequest>、 <xref:System.Net.HttpListener>、 <xref:System.Net.Security.NegotiateStream>以及 System.Net 命名空间中的相关类。 这些更改会影响使用这些类来发出 Web 请求和接收响应的应用程序，这些应用程序使用基于 NTLM 的集成式 Windows 身份验证。 此更改会影响配置为使用集成式 Windows 身份验证的 Web 服务器和客户端应用程序。  
