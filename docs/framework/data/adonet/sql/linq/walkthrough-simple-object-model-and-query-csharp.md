@@ -114,7 +114,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-create-a-simple-query"></a>创建简单查询  
   
--   将下面的代码键入或粘贴到 `Main` 声明后面的 `Table<Customer>` 方法中。  
+-   将下面的代码键入或粘贴到 `Main` 方法中的 `Table<Customer>` 声明后面。  
   
      [!code-csharp[DLinqWalk1ACS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#5)]  
   
