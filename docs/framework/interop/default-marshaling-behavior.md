@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed306098852e93d43a4055fd1d9b8cf97a01766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
@@ -345,7 +345,7 @@ interface _Graphics {
 }  
 ```  
   
- 当通过 COM 接口进行封送处理时，使用用于封送值和封送对平台调用的调用的引用的规则。 例如，当 `Point` 值类型的实例从 .NET Framework 传递到 COM 时，则由值传递 `Point`。 如果 `Point` 值类型由引用传递，则在堆栈上传递指向 `Point` 的指针。 互操作封送拆收器不支持任一方向更高级别的间接寻址 (Point \*\*)。  
+ 当通过 COM 接口进行封送处理时，使用用于封送值和封送对平台调用的调用的引用的规则。 例如，当 `Point` 值类型的实例从 .NET Framework 传递到 COM 时，则由值传递 `Point`。 如果 `Point` 值类型由引用传递，则在堆栈上传递指向 `Point` 的指针。 互操作封送处理程序不支持更高级别的间接寻址 (**点** \* \*) 的两个方向。  
   
 > [!NOTE]
 >  将 <xref:System.Runtime.InteropServices.LayoutKind> 枚举值设置为显式的结构无法用于 COM 互操作，因为导出的类型库不能表达显式布局。  

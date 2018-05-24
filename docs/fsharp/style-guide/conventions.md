@@ -2,11 +2,11 @@
 title: 'F # 编码约定'
 description: '在编写 F # 代码时，了解一般指导原则和惯例。'
 ms.date: 05/14/2018
-ms.openlocfilehash: d1f47f821887dabcdbc5d9406e90213fe8fafda5
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: f3d16f735ddc1901aeaa5ebb39e2fa2b70a3d836
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-coding-conventions"></a>F # 编码约定
 
@@ -91,7 +91,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 在 F # 中，声明的顺序非常重要，包括`open`语句。 这是与 C# 中，其中的效果`using`和`using static`无关的文件中的这些语句的顺序。
 
-在 F # 中，因为打开到作用域中的元素可以隐藏其他人已存在。 这意味着该重新排序`open`语句可以更改代码的含义。 因此，通常不建议分类进行排序 （或 pseudorandomly），以免生成不同的行为，你预期的。
+在 F # 中，打开到作用域中的元素可以隐藏其他人已存在。 这意味着该重新排序`open`语句无法更改代码的含义。 因此，任何任意排序的所有`open`语句 （例如，根据） 通常不建议，以免生成不同的行为，你预期的。
 
 相反，我们建议您进行排序它们[拓扑结构上](https://en.wikipedia.org/wiki/Topological_sorting); 即，排序你`open`中的顺序的语句_层_定义你的系统。 也可以考虑不同的拓扑图层内的排序字母数字。
 

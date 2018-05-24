@@ -4,15 +4,15 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: aa6720430a1d93d7eacb098962c09efad09a179f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58500cf2caa1446af6b663f1b765c0be92309f1d
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 参数修饰符（C# 参考）
 
-`in` 关键字通过引用传递参数。 它类似于 [ref](ref.md) 或 [out](out-parameter-modifier.md) 关键字，只是通过调用的方法不能修改 `in` 参数，而可以修改 `ref` 参数，同时 `out` 参数必须由调用方修改，并且在调用上下文中可观测这些修改。
+`in` 关键字通过引用传递参数。 它类似于 [ref](ref.md) 或 [out](out-parameter-modifier.md) 关键字，不同之处在于 `in` 参数无法通过调用的方法进行修改。 而 `ref` 参数是可以修改的，`out` 参数必须由调用方修改，且这些修改可以在调用上下文中观测到。
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -49,7 +49,7 @@ class InOverloads
 
 通过理解使用 `in` 参数的动机，可以理解使用按值方法和使用 `in` 参数方法的重载决策规则。 定义使用 `in` 参数的方法是一项潜在的性能优化。 某些 `struct` 类型参数可能很大，在紧凑的循环或关键代码路径中调用方法时，复制这些结构的成本就很高。 方法声明 `in` 参数以指定参数可能按引用安全传递，因为所调用的方法不修改该参数的状态。 按引用传递这些参数可以避免（可能产生的）高昂的复制成本。 
 
-通常可以选择在调用站点的参数上指定 `in`。 按值传递参数和使用 `in` 修饰符按引用传递参数这两种方法并没有语义差异。 可以在调用站点选择 `in` 修饰符，因为你不需要指出参数值可能会改变。 在调用站点显式添加 `in` 修饰符以确保参数是按引用传递，而不是按值传递。 显式使用 `in` 有两个效果：
+为调用站点上的参数指定 `in` 通常为可选。 按值传递参数和使用 `in` 修饰符按引用传递参数这两种方法并没有语义差异。 可以在调用站点选择 `in` 修饰符，因为你不需要指出参数值可能会改变。 在调用站点显式添加 `in` 修饰符以确保参数是按引用传递，而不是按值传递。 显式使用 `in` 有以下两个效果：
 
 首先，在调用站点指定 `in` 会强制编译器选择使用匹配的 `in` 参数定义的方法。 否则，如果两种方法唯一的区别在于是否存在 `in`，则按值重载的匹配度会更高。
 

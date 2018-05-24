@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a3352b9f929382c7d5b7d0c62ef4022560caf371
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f02ae84544a60a992177332d528dd7970f84bf3f
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-by-category"></a>按类别列出的 C# 编译器选项
 下列编译器选项按类别排序。 关于按字母顺序排列的列表，请参阅[按字母顺序列出的 C# 编译器选项](listed-alphabetically.md)。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/04/2018
 |[-codepage](codepage-compiler-option.md)|指定要用于编译中所有源代码文件的代码页。|  
 |[-help](help-compiler-option.md)|列出到 stdout 的编译器选项。|  
 |[-highentropyva](highentropyva-compiler-option.md)|指定可执行文件支持地址空间布局随机化 (ASLR)。|  
-|[-langversion](langversion-compiler-option.md)|指定语言版本模式：默认、ISO-1、ISO-2、3、4、5、6、7、7.1 或最新 |  
+|[-langversion](langversion-compiler-option.md)|指定语言版本：默认、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或最新 |  
 |[-main](main-compiler-option.md)|指定 Main 方法的位置。|  
 |[-noconfig](noconfig-compiler-option.md)|指示编译器不使用 csc.rsp 进行编译。|  
 |[-nologo](nologo-compiler-option.md)|禁止显示编译器横幅信息。|  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cac4d5bde9ec617a1877a0605dc6dbab67ddf7f
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 语句 (Visual Basic)
 声明枚举，并定义其成员的值。  
@@ -49,8 +49,10 @@ End Enum
   
     -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
-     你可以指定`Protected``Friend`以允许从中枚举的类、 派生的类中或同一程序集中的代码的访问。  
-  
+    - [受保护的友元](../../language-reference/modifiers/protected-friend.md)
+    
+    - [私有受保护](../../language-reference/modifiers/private-protected.md)
+
 -   `Shadows`  
   
      可选。 指定此枚举重新声明并隐藏具有相同名称的编程元素或在基类中的重载元素集。 你可以指定[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)仅限于在枚举本身，不在它的任何成员。  

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f18a369157c1e37411a3c8d8b6dfcce99bc347c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>标记扩展和 WPF XAML
 本主题介绍 XAML 的标记扩展概念，包括其语法规则、用途以及作为其基础的类对象模型。 标记扩展是 XAML 语言以及 XAML 服务的 .NET 实现的常规功能。 本主题专门详细讨论用于 WPF XAML 的标记扩展。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/04/2018
   
 -   `RelativeSource` 提供的源信息<xref:System.Windows.Data.Binding>，可以导航在运行时对象树中的多个可能存在的关系。 对于在多用途模板中创建的绑定，或在未充分了解周围的对象树的情况下以代码创建的绑定，此标记扩展为其提供专用源。 有关详细信息，请参阅 [RelativeSource 标记扩展](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)。  
   
--   `TemplateBinding` 使控件模板能够使用模板化属性的值，这些属性来自于将使用该模板的类的对象模型定义属性。 换言之，模板定义中的属性可访问仅在应用了模板之后才存在的上下文。 有关详细信息，请参阅 [TemplateBinding 标记扩展](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)。 有关 `TemplateBinding` 的实际使用的详细信息，请参阅[使用 ControlTemplates 设置样式示例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
+-   `TemplateBinding` 使控件模板能够使用模板化属性的值，这些属性来自于将使用该模板的类的对象模型定义属性。 换言之，模板定义中的属性可访问仅在应用了模板之后才存在的上下文。 有关详细信息，请参阅 [TemplateBinding 标记扩展](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)。 有关 `TemplateBinding` 的实际使用的详细信息，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 -   `ColorConvertedBitmap` 支持相对高级的映像方案。 有关详细信息，请参阅 [ColorConvertedBitmap 标记扩展](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)。  
   

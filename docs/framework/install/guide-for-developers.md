@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 157ff544df95740a96cf74fdc740feed7acde7ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4242845933beff012c4dcd3dc4f9a21c8bcf9e89
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="install-the-net-framework-for-developers"></a>安装面向开发人员的 .NET Framework
 
@@ -36,13 +36,13 @@ ms.lasthandoff: 05/04/2018
   
 |.NET Framework 版本|开发人员安装|可再发行组件安装|平台支持|  
 |----------------------------|----------------------------|----------------------------------|----------------------|  
-|**4.7.2**|[.NET Framework 4.7.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=863261)|[下载中心 4.7.2 Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[下载中心 4.7.2 脱机安装程序](http://go.microsoft.com/fwlink/?LinkId=863265)|包含于： <br/>Windows 10 2018 年 4 月更新<br /><br /> 可以安装于：<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 1709 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
+|**4.7.2**|[.NET Framework 4.7.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=874338)|[下载中心 4.7.2 Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[下载中心 4.7.2 脱机安装程序](http://go.microsoft.com/fwlink/?LinkId=863265)|包含于： <br/>Windows 10 2018 年 4 月更新<br /><br /> 可以安装于：<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 1709 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
 |**4.7.1**|[.NET Framework 4.7.1 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=852107)|包含于： <br/>Windows 10 Fall Creators Update<br/>Windows Server 版本 1709<br /><br /> 可以安装于：<br/> Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2016 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
 |**4.7**|[.NET Framework 4.7 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=825303)|包含于： <br/>Windows 10 创意者更新<br /><br /> 可以安装于：<br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2016 和更低版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
 |**4.6.2**|[.NET Framework 4.6.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=780617)|[4.6.2 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [4.6.2 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=780601)|包含于： <br /> Windows 10 周年更新<br /><br /> 可以安装于：<br /> Windows 10 November Update <br/> Windows 10 <br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
 |**4.6.1**|[.NET Framework 4.6.1 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=690706)|[4.6.1 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [4.6.1 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=671744)|可以安装于：<br /> Windows 10 <br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
 |**4.6**|包含于 [!INCLUDE[vs_dev14](../../../includes/vs-dev14-md.md)]。 有关详细信息，请参阅[欢迎使用 Visual Studio 2015](http://msdn.microsoft.com/library/dd831853\(v=vs.140\).aspx)。<br /><br /> [Microsoft .NET Framework 4.6 目标包](http://go.microsoft.com/fwlink/?LinkId=528261)|[4.6 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [4.6 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=528233)|包含于： <br /> Windows 10 <br />[!INCLUDE[vs_dev14](../../../includes/vs-dev14-md.md)]<br /><br /> 还可以安装于：<br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|  
-|**4.5.2**|[Microsoft .NET Framework 4.5.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> 适用于 [Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=325532)、Visual Studio 2012 或其他 IDE|[4.5.2 Web 安装程序下载页](http://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [4.5.2 脱机安装程序下载页](http://go.microsoft.com/fwlink/p/?LinkId=397706)|可以安装于：<br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|  
+|**4.5.2**|[Microsoft .NET Framework 4.5.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> 适用于 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.2 Web 安装程序下载页](http://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [4.5.2 脱机安装程序下载页](http://go.microsoft.com/fwlink/p/?LinkId=397706)|可以安装于：<br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|  
 |**4.5.1**|[Microsoft .NET Framework 4.5.1 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> 适用于 Visual Studio 2012 或其他 IDE|[4.5.1 Web 安装程序下载页](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 脱机安装程序下载页](http://go.microsoft.com/fwlink/p/?LinkId=310159)|包含于：<br /> [!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=325532)<br /><br /> 还可以安装于：<br /> [!INCLUDE[win8](../../../includes/win8-md.md)] 和更早版本<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 和更早版本<br />（有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|  
 |**4.5**|包含于 Visual Studio 2012 中<br /><br /> 也可作为 [Windows 8 SDK](http://msdn.microsoft.com/windows/hardware/hh852363) 的一部分提供|[4.5 Web 安装程序下载页](http://go.microsoft.com/fwlink/p/?LinkId=245484)|包含于： <br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> Visual Studio 2012<br /><br /> 还可以安装于：<br /> Windows 7 和更早版本<br /> Windows Server 2008 SP2 和更早版本<br />（有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|  
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/04/2018
 
 .NET Framework 4.5.1 或 4.5.2 开发人员工具包、.NET Framework 4.6 目标包以及 .NET Framework 4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 开发人员工具包提供特定 .NET Framework 版本的引用程序集、语言包和 IntelliSense 文件，以供在集成开发环境（如 Visual Studio）中使用。  如果你使用的是 Visual Studio，则在你创建新项目时，开发人员包或目标包也将向目标选择添加 .NET Framework 的已安装版本。  选择以下选项之一：  
 
-- [Microsoft .NET Framework 4.7.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=863261)
+- [Microsoft .NET Framework 4.7.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=874338)
 
 - [Microsoft .NET Framework 4.7.1 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=852105)
 

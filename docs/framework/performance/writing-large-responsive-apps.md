@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 51b4758690257b999cce51f3e80fd263a6d5e275
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 本文提供用于改进大型 .NET Framework 应用或处理大量数据（如文件或数据库）的应用的性能的提示。 这些提示来自在托管代码中重写的 C# 和 Visual Basic 编译器，并且本文包括来自 C# 编译器的几个真实示例。  
@@ -433,7 +433,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- 此代码将 `cachedResult` 的类型更改为 `Task<SyntaxTree>` 并且使用一个 `async` 保存来自 `GetSyntaxTreeAsync()` 原始代码的帮助程序函数。  如果 `GetSyntaxTreeAsync()` 不为 null，它现在使用 [null 合并运算符](~/docs/csharp/language-reference/operators/null-conditional-operator.md)来返回 `cachedResult`。  如果 `cachedResult` 为 null，则 `GetSyntaxTreeAsync()` 调用 `GetSyntaxTreeUncachedAsync()` 并且缓存结果。  请注意，`GetSyntaxTreeAsync()` 不会像代码通常所做的那样等待对 `GetSyntaxTreeUncachedAsync()` 的调用。  不使用 await 意味着当 `GetSyntaxTreeUncachedAsync()` 返回它的 <xref:System.Threading.Tasks.Task> 对象时，`GetSyntaxTreeAsync()` 立即返回 <xref:System.Threading.Tasks.Task>。  现在，缓存的结果是 <xref:System.Threading.Tasks.Task>，因此不存在用于返回缓存结果的分配。  
+ 此代码将 `cachedResult` 的类型更改为 `Task<SyntaxTree>` 并且使用一个 `async` 保存来自 `GetSyntaxTreeAsync()` 原始代码的帮助程序函数。  如果 `GetSyntaxTreeAsync()` 不为 null，它现在使用 [null 合并运算符](../../csharp/language-reference/operators/null-coalescing-operator.md)来返回 `cachedResult`。  如果 `cachedResult` 为 null，则 `GetSyntaxTreeAsync()` 调用 `GetSyntaxTreeUncachedAsync()` 并且缓存结果。  请注意，`GetSyntaxTreeAsync()` 不会像代码通常所做的那样等待对 `GetSyntaxTreeUncachedAsync()` 的调用。  不使用 await 意味着当 `GetSyntaxTreeUncachedAsync()` 返回它的 <xref:System.Threading.Tasks.Task> 对象时，`GetSyntaxTreeAsync()` 立即返回 <xref:System.Threading.Tasks.Task>。  现在，缓存的结果是 <xref:System.Threading.Tasks.Task>，因此不存在用于返回缓存结果的分配。  
   
 ### <a name="additional-considerations"></a>其他注意事项  
  以下是有关大型应用或处理大量数据的应用中潜在问题的几个要点。  

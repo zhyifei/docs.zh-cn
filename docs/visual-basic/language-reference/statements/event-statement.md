@@ -1,6 +1,6 @@
 ---
 title: Event 语句
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59dc8e7b01612af0e4c8f6c1018269580284c46
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="event-statement"></a>Event 语句
 声明用户定义的事件。  
@@ -58,7 +58,7 @@ End Event
 |部件|描述|  
 |---|---|  
 |`attrlist`|可选。 应用于此事件的特性列表。 用逗号分隔多个属性。 必须将括[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)中命令的尖括号 ("`<`"和"`>`")。|  
-|`accessmodifier`|可选。 指定哪些代码可以访问事件。 可以是以下各项之一：<br /><br /> -   [公共](../../../visual-basic/language-reference/modifiers/public.md)— 可以访问声明它的元素的任何代码都可以访问它。<br />-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)— 只有其类或派生的类中的代码可以访问它。<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)— 只有相同程序集中的代码可以访问它。<br />-   [私有](../../../visual-basic/language-reference/modifiers/private.md)— 只有声明它的元素中的代码可以访问它。<br /><br /> 可以指定 `Protected Friend` 以便可以从事件的类、派生类或相同程序集中的代码进行访问。|  
+|`accessmodifier`|可选。 指定哪些代码可以访问事件。 可以是以下各项之一：<br /><br /> -   [公共](../../../visual-basic/language-reference/modifiers/public.md)— 可以访问声明它的元素的任何代码都可以访问它。<br />-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)— 只有其类或派生的类中的代码可以访问它。<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)— 只有相同程序集中的代码可以访问它。<br />-   [私有](../../../visual-basic/language-reference/modifiers/private.md)— 只有声明它的元素中的代码可以访问它。<br /> -   [受保护的友元](../../language-reference/modifiers/protected-friend.md)-只有在事件的类、 派生的类中或同一程序集代码可以访问它。 <br />- [私有受保护](../../language-reference/modifiers/private-protected.md)-只有在事件的类或同一程序集中的派生的类中的代码可以访问它。|  
 |`Shared`|可选。 指定此事件不与类或结构的特定实例关联。|  
 |`Shadows`|可选。 指示此事件重新声明并隐藏基类中具有相同名称的编程元素（或重载元素集）。 可以与任何其他类型一起隐藏任何类型的已声明元素。<br /><br /> 隐藏的元素不可在隐藏它的派生类中使用（除了从隐藏元素不可访问的位置）。 例如，如果 `Private` 元素隐藏一个基类元素，则无权访问 `Private` 元素的代码会改为访问该基类元素。|  
 |`eventname`|必须的。 事件的名称；遵循标准变量命名约定。|  

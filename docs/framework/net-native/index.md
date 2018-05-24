@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ecc707bb07d6d17ae4115b483cc8f52083f3933
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6900bca2bd94f52ea5603c752681163cde52ce19
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiling-apps-with-net-native"></a>使用 .NET Native 编译引用
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 是包含在 Visual Studio 2015 和更高版本的预编译技术用于生成和部署 Windows 应用程序。 它自动将以托管代码（C# 或 Visual Basic）编写并面向 .NET Framework 和 Windows 10 的发布版本的应用编译为本机代码。  
@@ -78,7 +78,4 @@ ms.lasthandoff: 05/04/2018
   
 -   [将 Windows 应用商店应用迁移到 .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)  
   
--   [.NET Native 一般疑难解答](../../../docs/framework/net-native/net-native-general-troubleshooting.md)  
-  
-## <a name="see-also"></a>请参阅  
- [.NET Native 常见问题](http://msdn.microsoft.com/vstudio/dn642499.aspx)
+-   [.NET Native 一般疑难解答](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

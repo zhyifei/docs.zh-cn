@@ -1,19 +1,14 @@
 ---
 title: Docker 容器、映像和注册表
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8ba0cd3323467e07a33ffd4083e390d57fdce7ff
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 43b76f738fa4b7c89423a5b9fac7ef91f40880c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和注册表
 
@@ -38,4 +33,4 @@ ms.lasthandoff: 04/18/2018
 -   在映像和所选部署环境之间，希望网络延迟保持最低。 例如，如果你的生产环境是 Azure，你可能想要在 Azure 容器注册表中存储映像，以便将降至最低网络延迟。 同样，如果生产环境是在本地，便需要使本地 Docker 信任的注册表在相同的本地网络中可用。
 
 >[!div class="step-by-step"]
-[以前](docker-terminology.md) [下一步] (Docker-应用程序的生命周期/index.md)
+[以前] (docker-terminology.md) [下一步] (Docker-application-lifecycle/index.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: b95101d2f8e12f7c6fee5b410e7801f9d890182d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca70f0c8237a5d9cc4ad9e0bb8c1947c871ce064
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>处理 XML 文件（C# 编程指南）
 编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 （有关如何标记代码的信息，请参阅[文档注释的建议标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)。）ID 字符串唯一标识构造。 处理 XML 文件的程序可以使用 ID 字符串来标识文档应用于的相应 .NET Framework 元数据/反射项目。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/04/2018
   
     -   ELEMENT_TYPE_PTR 表示为修改类型之后的“*”。  
   
-    -   ELEMENT_TYPE_BYREF 表示为修改类型之后的“@”。  
+    -   ELEMENT_TYPE_BYREF 表示为修改类型之后的“\@”。  
   
     -   ELEMENT_TYPE_PINNED 表示为修改类型之后的“^”。 C# 编译器不会生成此类型。  
   

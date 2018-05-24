@@ -1,19 +1,14 @@
 ---
 title: 常见容器设计原则
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6a289cdafc88abe8629638a84eff184829362e16
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: c67986b1deb504f2b05f2903a263bf1a91f70b08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-container-design-principles"></a>常见容器设计原则
 
@@ -27,4 +22,4 @@ ms.lasthandoff: 04/18/2018
 
 
 >[!div class="step-by-step"]
-[以前](设计-docker-applications.md) [下一步] (整体 applications.md)
+[以前] (design-docker-applications.md) [下一步] (monolithic-applications.md)

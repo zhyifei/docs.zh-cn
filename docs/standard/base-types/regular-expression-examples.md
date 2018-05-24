@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fb58f8e7a1fef711de28534fbe53dfc9d7084ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee4d884a0efbeb6e57ed727396bf3bcb39979774
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="regular-expression-examples"></a>正则表达式示例
 此部分包含说明如何在常见应用程序中使用正则表达式的代码示例。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/04/2018
  收录了从字符串中剥离无效的非字母数字字符的示例。  
   
  [如何：确认字符串是否是有效的电子邮件地址格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
- 提供一个示例，您可用它来验证一个字符串是否是有效的电子邮件格式。  
+ 提供验证一个字符串是否为有效的电子邮件格式的示例。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Text.RegularExpressions>  

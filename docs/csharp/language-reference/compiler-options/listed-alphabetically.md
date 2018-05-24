@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f0c9e0ff5881695cc9426610056677d6053376a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1198249afe6933342aea1a05515e6766603ab147
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>按字母顺序列出的 C# 编译器选项
 下列编译器选项按字母顺序排序。 有关按类别排序的列表，请参 [按类别列出的 C# 编译器选项](listed-by-category.md)。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/04/2018
 |-incremental|启用增量编译 [已过时]。|  
 |[-keycontainer](keycontainer-compiler-option.md)|指定强名称密钥容器。|  
 |[-keyfile](keyfile-compiler-option.md)|指定强名称密钥文件。|  
-|[-langversion:\<string>](langversion-compiler-option.md)|指定语言版本模式：默认、ISO-1、ISO-2、3、4、5、6、7、7.1 或最新 |  
+|[-langversion:\<string>](langversion-compiler-option.md)|指定语言版本：默认、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或最新 |  
 |[/lib](lib-compiler-option.md)|指定要在其中搜索引用的附加目录。|  
 |[-link](link-compiler-option.md)|使指定程序集中的 COM 类型信息对项目可用。|  
 |[-linkresource](linkresource-compiler-option.md)|将指定的资源链接到此程序集。|  

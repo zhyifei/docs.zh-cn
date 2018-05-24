@@ -2,11 +2,11 @@
 title: 'F # 组件设计准则'
 description: '了解有关编写 F # 组件消耗旨在由其他调用方的准则。'
 ms.date: 05/14/2018
-ms.openlocfilehash: 7859baac76be01b2cfbdc8602b6cc417cfe5106f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7e71710b1bc2fe3e8d7a5a091513a1432650dc04
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-component-design-guidelines"></a>F # 组件设计准则
 
@@ -483,7 +483,7 @@ type MultiMap<'Key,'Value> = Map<'Key,'Value list>
 
 在设计时用于其他.NET 语言使用的库，请务必遵守[.NET 库设计准则](../../standard/design-guidelines/index.md)。 在此文档中，这些库都标记为香草.NET 库，而不是 F #-面向使用 F # 库构造不受限制。 设计香草.NET 库意味着通过最小化使用 F # 提供熟悉且惯用 Api 与.NET Framework 的其余部分一致的公共 API 中的特定构造。 规则将在以下各节中介绍。
 
-### <a name="namespace-and-type-sesign-for-libraries-for-use-from-other-net-languages"></a>Namespace 和类型 sesign （用于从其他.NET 语言中使用的库）
+### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Namespace 和类型的设计，（对于从其他.NET 语言中使用的库）
 
 #### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>适用于你的组件的公共 API 的.NET 命名约定
 

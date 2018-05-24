@@ -2,46 +2,52 @@
 title: 索引属性 (F#)
 description: '了解有关 F # 索引属性，这些属性提供对已排序的数据类似数组的访问。'
 ms.date: 05/16/2016
-ms.openlocfilehash: b3945c7fc22977373b601856036178e890abc13e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 503cef9693cfe5e13d4e2d19a721d65bff1ce749
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="indexed-properties"></a>索引属性
 
-*索引属性*提供对类似数组的访问的属性排序数据。
+*索引属性*提供对类似数组的访问的属性排序数据。 它们分为三种形式：
+
+* `Item`
+* `Ordinal`
+* `Cardinal`
+
+F # 成员必须具有名称以提供类似于数组的访问这三个名称之一。 `IndexerName` 用于表示任何以下三个选项：
 
 
 ## <a name="syntax"></a>语法
 
 ```fsharp
 // Indexed property that has both get and set defined.
-member self-identifier.PropertyName
+member self-identifier.IndexerName
     with get(index-variable) =
         get-function-body
     and set index-variablesvalue-variables =
         set-function-body
 
 // Indexed property that has get only.
-member self-identifier.PropertyName(index-variable) =
+member self-identifier.IndexerName(index-variable) =
     get-function-body
 
 // Alternative syntax for indexed property with get only
-member self-identifier.PropertyName
+member self-identifier.IndexerName
     with get(index-variables) =
         get-function-body
 
 // Indexed property that has set only.
-member self-identifier.PropertyName
+member self-identifier.IndexerName
     with set index-variablesvalue-variables = 
         set-function-body
 ```
 
 ## <a name="remarks"></a>备注
-前面的语法中的三个窗体演示如何定义同时具有的索引的属性`get`和`set`方法，具有`get`方法仅，或具有`set`仅限方法。 此外可以将两者结合使用仅限获取和集仅，所示的语法所示的语法，并生成具有 get 和 set 的属性。 此后一种形式，可将不同的可访问性修饰符和属性放在 get 和 set 方法。
+前面的语法中的窗体演示如何定义同时具有的索引的属性`get`和`set`方法，具有`get`方法仅，或具有`set`仅限方法。 此外可以将两者结合使用仅限获取和集仅，所示的语法所示的语法，并生成具有 get 和 set 的属性。 此后一种形式，可将不同的可访问性修饰符和属性放在 get 和 set 方法。
 
-当*PropertyName*是`Item`，编译器将视为默认索引属性的属性。 A*默认索引属性*是一个属性，可以访问的对象实例上使用类似于数组的语法。 例如，如果`obj`是定义此属性，语法的类型的对象`obj.[index]`用于访问属性。
+当*IndexerName*是`Item`，编译器将视为默认索引属性的属性。 A*默认索引属性*是一个属性，可以访问的对象实例上使用类似于数组的语法。 例如，如果`obj`是定义此属性，语法的类型的对象`obj.[index]`用于访问属性。
 
 用于访问非默认索引属性的语法是提供属性和在括号中的索引的名称。 例如，如果该属性是`Ordinal`，你编写`obj.Ordinal(index)`来访问它。
 

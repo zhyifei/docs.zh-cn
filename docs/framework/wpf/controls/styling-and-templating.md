@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 9c2c38020bb57a008d0948a360a5b2cbe401089d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="styling-and-templating"></a>样式设置和模板化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 样式设置和模板化是指一套功能（样式、模板、触发器和情节提要），可使开发者和设计者创建极具视觉表现力的效果，并为其产品创建一致的外观。 尽管开发者和/或设计者可以逐个应用程序地广泛自定义外观，但为了实现应用程序内部和之间的外观维护和共享，需要一个强大的样式设置和模板化模型。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供该模型。  
@@ -28,10 +28,8 @@ ms.lasthandoff: 05/15/2018
   
  本概述侧重于应用程序的样式设置和模板化方面，不讨论任何数据绑定概念。 有关数据绑定的信息，请参阅[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
   
- 此外，了解资源很重要，正是这些资源使样式和模板能够重复使用。 有关资源的详细信息，请参阅 [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
-  
- 
-  
+ 此外，了解资源很重要，正是这些资源使样式和模板能够重复使用。 有关资源的详细信息，请参阅 [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。
+
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>样式设置和模板化示例  
  本概述中使用的代码示例基于下图中所示的简单照片示例：  
@@ -183,9 +181,9 @@ ms.lasthandoff: 05/15/2018
   
  可以将资源字典定义为个别文件，这些文件支持跨多个应用程序重复使用主题。 还可以通过定义多个资源字典来创建可交换的主题，这些资源字典以不同的值提供相同类型的资源。 在应用程序级别上重新定义这些样式或其他资源是设计应用程序外观的推荐方法。  
   
- 若要共享一组的资源，跨应用程序，包括样式和模板，可以创建[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件，并定义<xref:System.Windows.ResourceDictionary>。 例如，看一看下图，它显示[使用 ControlTemplates 设置样式示例](http://go.microsoft.com/fwlink/?LinkID=160041)的一部分：  
-  
- ![控件模板示例](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
+ 若要共享一组的资源，跨应用程序，包括样式和模板，可以创建[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件，并定义<xref:System.Windows.ResourceDictionary>。 例如，看一看下图，它显示[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)的一部分：
+
+![控件模板示例](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
   
  如果查看示例中的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件，将注意到这些文件都具有以下内容：  
   

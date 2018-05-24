@@ -231,8 +231,8 @@
 ### [元组](csharp/tuples.md)
 ### [解构元组和其他类型](csharp/deconstruct.md)
 ### [接口](csharp/programming-guide/interfaces/index.md)
-#### [方法](csharp/methods.md)
-#### [Lambda 表达式](csharp/lambda-expressions.md)
+### [方法](csharp/methods.md)
+### [Lambda 表达式](csharp/lambda-expressions.md)
 ### [属性](csharp/properties.md)
 ### [索引器](csharp/indexers.md)
 ### [放弃](csharp/discards.md)
@@ -287,7 +287,7 @@
 ### [.NET Core CLI 入门](fsharp/get-started/get-started-command-line.md)
 
 ## [F# 样式指南](fsharp/style-guide/index.md)
-### [F# 格式设置准则](fsharp/style-guide/formatting.md)
+### [F# 代码格式设置准则](fsharp/style-guide/formatting.md)
 ### [F# 编码约定](fsharp/style-guide/conventions.md)
 ### [F# 组件设计准则](fsharp/style-guide/component-design-guidelines.md)
 

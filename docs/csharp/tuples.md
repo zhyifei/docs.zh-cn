@@ -1,19 +1,19 @@
 ---
-title: 元组 - C# 指南
+title: 元组类型 - C# 指南
 description: 了解 C# 中的未命名元组类型和命名元组类型
-ms.date: 11/23/2016
+ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: a5240c47dce695759c6e9b76b506077772b58aeb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ef8d89f62a30d3d64f7377972e31d9c4d93d41e
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="c-tuple-types"></a>C# 元组类型 #
 
-C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的语法，基于元素数量（称为“基数”）和元素类型的转换规则，以及一致的副本和赋值规则。 但另一方面，元组不支持一些与继承相关的面向对象的语法。 [C# 7.0 中的新增功能](whats-new/csharp-7.md#tuples)主题中的“元组”一节对其进行了概述。
+C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的语法，基于元素数量（称为“基数”）和元素类型的转换规则，以及一致的副本、相等测试和赋值规则。 但另一方面，元组不支持一些与继承相关的面向对象的语法。 [C# 7.0 中的新增功能](whats-new/csharp-7.md#tuples)文章中的“元组”一节对其进行了概述。
 
-在本主题中，将了解用于控制 C# 7.0 及更高版本中的元组的语言规则、这些规则的各种用法，以及有关如何使用元组的初步指导。
+在本文中，你将了解用于控制 C# 7.0 及更高版本中的元组的语言规则、这些规则的各种用法，以及有关如何使用元组的初步指导。
 
 > [!NOTE]
 > 新的元组功能需要 <xref:System.ValueTuple> 类型。
@@ -25,7 +25,7 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 .NET Framework 已具有泛型 `Tuple` 类。 但这些类有两个主要限制。 其一，`Tuple` 类将其属性命名为 `Item1`、`Item2` 等。 这些名称未承载任何语义信息。 使用这些 `Tuple` 类型无法表达各属性的含义。 通过新的语言功能，可对元组中的各元素进行声明并为其赋予有意义的语义名称。
 
-其二，`Tuple` 类是引用类型。 使用任一 `Tuple` 类型即意味着分配对象。 在热路径中，这可能会对应用程序性能产生明显的影响。 因此，元组的语言支持使用新的 `ValueTuple` 结构。
+`Tuple` 类因其引用类型会导致更多性能问题。 使用任一 `Tuple` 类型即意味着分配对象。 在热路径中，分配许多小型对象可能会对应用程序性能产生明显的影响。 因此，元组的语言支持使用新的 `ValueTuple` 结构。
 
 为避免这些缺陷，可创建 `class` 或 `struct` 来承载多个元素。 但这样做不仅加大了工作量，还掩盖了你的设计意图。 创建 `struct` 或 `class` 意味着定义一个具有数据和行为的类型。 很多时候，你其实只是想存储单个对象中的多个值而已。
 
@@ -36,7 +36,7 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 ## <a name="named-and-unnamed-tuples"></a>命名元组和未命名元组
 
-`ValueTuple` 结构将字段命名为 `Item1`、`Item2`、`Item3` 等等，与现有 `Tuple` 类型中定义的属性类似。
+`ValueTuple` 结构具有名为 `Item1`、`Item2`、`Item3` 等的字段，与现有 `Tuple` 类型中定义的属性类似。
 这些名称是可用于*未命名元组*的唯一名称。 如果不为元组提供任何备用字段名称，即表示创建了一个未命名元组：
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
@@ -50,7 +50,7 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 [!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#02_NamedTuple "Named tuple")]
 
-这些同义词由编译器和语言处理，因此，你可以高效地使用命名元组。 IDE 和编辑器可以使用 Roslyn API 读取这些语义名称。 这样一来，就可以在同一程序集中的任何位置通过这些语义名称引用命名元组的元素。 编译器在生成已编译的输出时，会将已定义的名称替换为 `Item*` 等效项。 已编译的 Microsoft 中间语言 (MSIL) 不包括为这些元素赋予的名称。
+这些同义词由编译器和语言处理，因此，你可以高效地使用命名元组。 IDE 和编辑器可以使用 Roslyn API 读取这些语义名称。 可以在同一程序集中的任何位置通过这些语义名称引用命名元组的元素。 编译器在生成已编译的输出时，会将已定义的名称替换为 `Item*` 等效项。 已编译的 Microsoft 中间语言 (MSIL) 不包括为这些元素赋予的名称。
 
 从 C# 7.1 开始，元组的字段名称可能会通过用于初始化此元组的变量提供。 这称为[元组投影初始值设定项](#tuple-projection-initializers)。 以下代码用于创建名为 `accumulation` 的元祖，包含元素 `count`（整数）和 `sum`（双精度）。
 
@@ -70,13 +70,13 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-对于任何未提供显式名称的字段，将投影适用的隐式名称。 请注意，不要求提供显式或隐式语义名称。 以下初始化表达式将具有字段名称 `Item1`，其值为 `42` 和 `StringContent`（值为“The answer to everything”）：
+对于任何未提供显式名称的字段，将投影适用的隐式名称。 不要求提供显式或隐式语义名称。 以下初始化表达式具有字段名称 `Item1`其值为 `42`和 `StringContent`（其值为“The answer to everything”）：
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
 在以下两种情况下，不会将候选字段名称投影到元组字段：
 
-1. 候选名称是保留元组名称时。 示例有 `Item3`、`ToString` 或 `Rest`。
+1. 候选名称是保留元组名称时。 示例包括 `Item3`、`ToString`、 或 `Rest`。
 1. 候选名称重复了另一元组的显式或隐式字段名称时。
 
 这两个条件可避免多义性。 如果这些名称已用作元组中某字段的字段名称，它们将导致多义。 这两个条件都不会导致编译时错误。 但不会向没有投影名称的元素投影语义名称。  以下示例说明了这两个条件：
@@ -85,16 +85,39 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 这些情况不会导致编译器错误，因为当元组字段名称投影不可用时，它将成为使用 C# 7.0 编写的代码的一项重大改变。
 
+## <a name="equality-and-tuples"></a>相等和元组
+
+从 C# 7.3 开始，元组类型支持 `==` 和 `!=` 运算符。 这些运算符按顺序将左边参数的每个成员与右边参数的每个成员进行比较。 这些比较将发生短路。 只要有一对不相等，`==` 运算符即停止计算成员。 只要有一对相等，`!=` 运算符即停止计算成员。 以下代码示例使用 `==`，但比较规则均适用于 `!=`。 以下代码示例演示两对整数的相等比较：
+
+[!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+
+有几条规则，可使元祖相等测试更方便。 如果其中一个元祖是可以为空值的元祖，则元祖相等将执行[提升转换](/dotnet/csharp/language-reference/language-specification/conversions.md#lifted-conversion-operators)，如以下代码中所示：
+
+[!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+
+元祖相等还将对这两个元祖的每个成员执行隐式转换。 这些转换包括提升转换、扩大转换或其他隐式转换。 以下示例演示整数 2 元祖可以与较长的 2 元祖进行比较，因为进行了从整数元祖到较长元祖的隐式转换：
+
+[!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+
+元祖成员名称不参与相等测试。 但是，如果其中一个操作数是含有显式名称的元组文本，则当这些名称与其他操作数的名称不匹配时，编译器将生成警告 CS8383。
+在两个操作数都为元祖文本的情况下，警告位于右侧操作数，如以下示例中所述：
+
+[!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+
+最后，元祖可能包含嵌套元祖。 元祖相等通过嵌套元祖比较每个操作数的“形状”，如以下示例中所示：
+
+[!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+
 ## <a name="assignment-and-tuples"></a>赋值和元组
 
-该语言支持某些元组类型之间的赋值，这些类型具有相同元素数，且对于每个元素的类型具有相同的隐式转换数。 对于其他转换，不考虑进行赋值。 让我们看一下元组类型之间允许的赋值类型。
+语言支持在具有相同元素数量的元祖类型之间赋值，其中每个右侧元素都可被隐式转换为相应的左侧元素。 对于其他转换，不考虑进行赋值。 让我们看一下元组类型之间允许的赋值类型。
 
 注意以下示例中使用的这些变量：
 
 [!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/tuples/program.cs#03_VariableCreation "Variable creation")]
 
 前两个变量（`unnamed` 和 `anonymous`）没有为元素提供语义名称。 字段名称为 `Item1` 和 `Item2`。
-后两个变量（`named` 和 `differentName`）为元素提供了语义名称。 请注意，这两个元组具有不同的元素名称。
+后两个变量（`named` 和 `differentName`）为元素提供了语义名称。 这两个元组具有不同的元素名称。
 
 这四个元组具有相同数量的元素（称为“基数”），这些元素的类型也完全一样。 因此可进行以下赋值：
 
@@ -121,16 +144,14 @@ named = differentShape;
 > 这些示例计算得出未修正的样本标准差。
 > 与 `Average` 扩展方法一样，修正后的样本标准差公式将与平均数之差的平方的总和除以 (N-1)，而不是 N。 有关这些标准差公式之间的区别的更多详细信息，请查看统计信息文本。
 
-此方法采用教科书上的标准差公式。 它会生成正确的答案，但实施起来非常低效。 此方法对数列进行两次计算：一次生成平均数，一次生成与平均数之差的平方的平均数。
+前面的代码采用教科书上的标准差公式。 它会生成正确的答案，但实施起来非常低效。 此方法对数列进行两次计算：一次生成平均数，一次生成与平均数之差的平方的平均数。
 （请记住，LINQ 查询进行迟缓计算，因此，在计算与平均数的差以及这些差的平均数时只需计算一次。）
 
 有一个计算标准差的备用公式，它只对数列计算一次。  此计算公式在计算数列时生成两个值：数列中所有项的总和，以及每个平方值的总和：
 
 [!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
 
-此版本虽然只对序列进行一次枚举。 但其代码不可重复使用。 到后面，你会发现许多不同的统计计算会用到数列项数、数列总和以及数列平方和。 让我们重构此方法，编写一个可生成这三个值的实用方法。
-
-元组发挥作用的时候到了。 
+此版本虽然只对序列进行一次枚举。 但其代码不可重复使用。 到后面，你会发现许多不同的统计计算会用到数列项数、数列总和以及数列平方和。 让我们重构此方法，编写一个可生成这三个值的实用方法。 所有这三个值都可以作为一个元祖返回。
 
 让我们更新此方法，以便将在计算过程中得出的三个值存储在一个元组中。 以下是更新后的版本：
 
@@ -140,7 +161,7 @@ named = differentShape;
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
-如果你想手动进行一些快速编辑，该语言可提供更多选项供你使用。 首先，可以使用 `var` 声明来初始化 `ComputeSumAndSumOfSquares` 方法调用的元组结果。 此外，还可以在 `ComputeSumAndSumOfSquares` 方法内创建三个离散变量。 最终版本如下：
+如果你想手动进行一些快速编辑，该语言可提供更多选项供你使用。 首先，可以使用 `var` 声明来初始化 `ComputeSumAndSumOfSquares` 方法调用的元组结果。 此外，还可以在 `ComputeSumAndSumOfSquares` 方法内创建三个离散变量。 下面的代码演示了最终版本：
 
 [!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
 
@@ -168,10 +189,10 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 }
 ```
 
-必须将此元组的字段命名为 `Item1`、`Item2` 和 `Item3`。
+此元祖的字段被命名为 `Item1`、`Item2` 和 `Item3`。
 建议为从方法返回的元组的元素提供语义名称。
 
-还有一种非常适合使用元组的场合就是创作 LINQ 查询，其最终结果是一个包含所选对象的部分而非全部属性的投影。
+元祖另一个常见的用途是在你创作 LINQ 查询时。 最终投影的结果通常包含被选中的对象的某些（而不是全部）属性。
 
 传统做法是将查询结果投影成一个匿名类型的对象序列。 这种做法存在很多限制，主要是因为匿名类型无法在方法的返回类型中方便地命名。 也可以将 `object` 或 `dynamic` 用作结果类型，但这种备用方法会产生高昂的性能成本。
 
@@ -205,7 +226,7 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 (double sum, var sumOfSquares, var count) = ComputeSumAndSumOfSquares(sequence);
 ```
 
-请注意，即使元组中的每个字段都具有相同的类型，也不能在括号外使用特定类型。
+即使元组中的每个字段都具有相同的类型，也不能在括号外使用特定类型。
 
 也可以使用现有声明析构元组：
 
@@ -222,7 +243,7 @@ public class Point
 > [!WARNING]
 >  不能混合现有声明和括号内的声明。 例如，不允许以下内容：`(var x, y) = MyMethod();`。 这将产生错误 CS8184，因为 x 在括号内声明，且 y 以前在其他位置声明。
 
-### <a name="deconstructing-user-defined-types"></a>析构用户定义的类型
+### <a name="deconstructing-user-defined-types"></a>析构用户定义类型
 
 如上所示，可以析构任何元组类型。 也可以对任何用户定义的类型（类、结构甚至接口）轻松启用析构。
 
@@ -247,6 +268,16 @@ public class Point
 在某个类或类层次结构中定义多个 `Deconstruct` 方法时应非常小心。 具有相同数量的 `out` 参数的多个 `Deconstruct` 方法很快就会产生歧义。 调用方可能无法轻松调用所需的 `Deconstruct` 方法。
 
 在此示例中，发生有歧义的调用的几率很小，因为用于 `Person` 的 `Deconstruct` 方法有两个输出参数，而用于 `Student` 的 `Deconstruct` 方法有三个输出参数。
+
+析构运算符不参与测试相等。 下面的示例生成编译器错误 CS0019：
+
+```csharp
+Person p = new Person("Althea", "Goodwin");
+if (("Althea", "Goodwin") == p)
+    Console.WriteLine(p);
+```
+
+`Deconstruct` 方法无法将 `Person` 对象 `p` 转换为包含两个字符串的元祖，但它在相等测试上下文中不适用。
 
 ## <a name="conclusion"></a>结束语 
 

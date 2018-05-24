@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 808e25315b0010fd55112f2ed237485c3d0c40d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="classes-c-programming-guide"></a>类（C# 编程指南）
 *类*属于构造，使用类，可以通过组合其他类型的变量、方法和事件创建自己的自定义类型。 类好比是蓝图。 它定义类型的数据和行为。 如果类未声明为静态，客户端代码可以创建它的实例。 这些实例是分配给变量的对象。 类实例会一直保留在内存中，直到对它的所有引用都不在作用域范围之内。 超出范围时，CLR 将对其进行标记，以便用于垃圾回收。 如果类声明为[静态](../../../csharp/language-reference/keywords/static.md)，便无法创建实例，并且客户端代码只能通过类本身来访问它。 有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
@@ -83,10 +83,9 @@ MyClass mc2 = mc;
   
  类定义可以在不同的源文件之间分割。 有关详细信息，请参阅[分部类和方法](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)。  
   
-## <a name="description"></a>描述  
- 下例定义了一个公共类，该类包含一个字段、一个方法和一个名为构造函数的特殊方法。 有关详细信息，请参阅[构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)。 然后使用 `new` 关键字实例化该类。  
-  
 ## <a name="example"></a>示例  
+ 以下示例定义了一个公共类，该类包含一个[自动实现的属性](auto-implemented-properties.md)、一个方法和一个名为构造函数的特殊方法。 有关详细信息，请参阅[属性](properties.md)、[方法](methods.md)和[构造函数](constructors.md)主题。 然后使用 `new` 关键字实例化类的实例。  
+  
  [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   
 ## <a name="c-language-specification"></a>C# 语言规范  

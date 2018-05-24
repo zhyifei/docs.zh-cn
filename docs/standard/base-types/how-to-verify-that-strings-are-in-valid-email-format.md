@@ -20,14 +20,17 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何：确认字符串是有效的电子邮件格式
 下面的示例使用正则表达式来验证一个字符串是否为有效的电子邮件格式。  
+
+> [!NOTE]
+>  我们建议使用 <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> 类来检查字符串是否使用了有效的电子邮件地址格式。 若要执行此操作，请将电子邮件地址字符串传递到 <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType> 类构造函数，如果字符串含有无法识别的格式，则该函数将引发 <xref:System.FormatException>。  
   
 ## <a name="example"></a>示例  
  该示例定义 `IsValidEmail` 方法，如果字符串包含有效的电子邮件地址，则该方法返回 `true` ，否则返回 `false` ，但不采取其他任何操作。  
@@ -67,9 +70,6 @@ ms.lasthandoff: 05/04/2018
 |<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|如果 @ 后面的字符不是左括号，匹配一个字母数字字符（A-Z、a-z 或 0-9 中的某个值），后跟零个或多个连字符，再后跟零个或一个字母数字字符（A-Z、a-z 或 0-9 中的某个值），再后跟一个句点。 此模式可以重复一次或多次，并且必须后跟顶级域名。|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|顶级域名必须以字母数字字符（a-z、A-Z 和 0-9）开始和结束。 它还可以包括从零到 22 个字母数字或连字符的 ASCII 字符。|  
 |`$`|在字符串的结尾结束匹配。|  
-  
-> [!NOTE]
->  你可以使用 <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> 类，而不使用正则表达式来验证电子邮件地址。 若要确定电子邮件地址是否有效，将该电子邮件地址传递到 <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType> 类构造函数。  
   
 ## <a name="compiling-the-code"></a>编译代码  
  `IsValidEmail` 方法和 `DomainMapper` 方法可以包括在正则表达式实用工具方法库中，或者作为私有静态或实例方法包括在应用程序类中。  

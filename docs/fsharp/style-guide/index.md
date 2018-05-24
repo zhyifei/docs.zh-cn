@@ -2,11 +2,11 @@
 title: 'F # 样式指南'
 description: '了解良好的 F # 代码的五个原则。'
 ms.date: 05/14/2018
-ms.openlocfilehash: 317fc2c101449b0500a54dd9fea3d426757af5cd
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 6d8c1336ca991040a8f6e13290d209cb3b70054d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-style-guide"></a>F # 样式指南
 
@@ -40,8 +40,8 @@ ms.lasthandoff: 05/15/2018
 
 ## <a name="next-steps"></a>后续步骤
 
-[F # 格式设置准则](formatting.md)指南提供有关如何设置代码格式，使它易于阅读。
+[F # 代码格式设置准则](formatting.md)指南提供有关如何设置代码格式，使它易于阅读。
 
 [F # 编码约定](conventions.md)提供有关 F # 编程习语有助于长期维护更大的 F # 的基本代码的指导。
 
-[F # 组件设计准则](component-design-guidelines.md)是一套全面的创作 F # 组件，如库的指南。
+[F # 组件设计准则](component-design-guidelines.md)提供了创作 F # 组件，如库的指南。

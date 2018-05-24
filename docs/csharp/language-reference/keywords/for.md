@@ -7,25 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 9d7ab9e37be61384c33833381f44257169c81c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c099411499c6ca8396c55955bdc634e48caf621
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="for-c-reference"></a>for（C# 参考）
-通过使用 `for` 循环，可以重复运行一个语句或语句块，直到指定的表达式的计算结果为 `false` 为止。 这种类型的循环可用于循环访问数组，以及事先知道循环要在其中进行循环访问的次数的其他应用程序。  
+
+通过使用 `for` 循环，可以重复运行一个语句或语句块，直到指定的表达式的计算结果为 `false` 为止。 这种类型的循环可用于循环访问数组，以及事先知道循环要在其中进行循环访问的次数的其他应用程序。
   
-## <a name="example"></a>示例  
- 在下面的示例中，`i` 的值被写入控制台，并在循环的每次迭代过程中递增 1。  
+## <a name="example"></a>示例
+
+在下面的示例中，`i` 的值被写入控制台，并在循环的每次迭代过程中递增 1：
   
- [!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
+[!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]
   
- 上一示例中的 `for` 语句执行以下操作。  
+上一示例中的 [for 语句](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)执行以下操作：
   
-1.  首先，建立变量 `i` 的初始值。 无论循环重复多少次，此步骤都只发生一次。 可以将此初始化视为发生在循环过程之外。  
+1.  首先，建立变量 `i` 的初始值。 无论循环重复多少次，此步骤都只发生一次。 可以将此初始化视为发生在循环过程之外。
   
-2.  若要计算条件 (`i <= 5`)，请将 `i` 的值与 5 相比较。  
+2.  若要计算条件 (`i <= 5`)，请将 `i` 的值与 5 相比较。
   
     -   如果 `i` 小于或等于 5，则条件的计算结果为 `true`，并将发生以下操作。  
   
@@ -37,16 +39,18 @@ ms.lasthandoff: 05/04/2018
   
     -   如果 `i` 大于 5，则条件的计算结果为 `false`，并退出循环。  
   
- 请注意，如果 `i` 的初始值大于 5，则循环主体一次都不会运行。  
+请注意，如果 `i` 的初始值大于 5，则循环主体一次都不会运行。
+
+## <a name="sections-of-a-for-statement"></a>语句部分
   
- 每个 `for` 语句都定义初始化表达式、条件和迭代器部分。 这些部分通常确定循环进行循环访问的次数。  
+每个 [for 语句](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)都定义初始化表达式、条件和迭代器部分。 这些部分通常确定循环进行循环访问的次数。  
   
 ```csharp  
 for (initializer; condition; iterator)  
     body  
 ```  
   
- 这些部分可实现以下目的。  
+这些部分可实现以下目的：
   
 -   初始化表达式部分设置初始条件。 输入循环前，此部分中的语句仅运行一次。 此部分仅可包含以下两个选项之一。  
   
@@ -86,29 +90,34 @@ for (initializer; condition; iterator)
   
      可以使用关键字 [break](../../../csharp/language-reference/keywords/break.md) 中断 `for` 循环，或者可以使用关键字 [continue](../../../csharp/language-reference/keywords/continue.md) 继续执行到下一次迭代。 还可以使用 [goto](../../../csharp/language-reference/keywords/goto.md)、[return](../../../csharp/language-reference/keywords/return.md) 或 [throw](../../../csharp/language-reference/keywords/throw.md) 语句退出任何循环。  
   
- 本主题中的第一个示例显示了一种最典型的 `for` 循环，它为各部分做出了以下选择。  
+本主题中的第一个示例显示了一种最典型的 `for` 循环，它为各部分做出了以下选择：
   
 -   初始化表达式声明并初始化本地循环变量 `i`，用于维护循环的迭代计数。  
   
 -   条件将针对已知的最终值 5 检查循环变量的值。  
   
--   迭代器部分使用后缀递增语句 `i++`，来计算循环的每次迭代。  
+-   迭代器部分使用后缀递增语句 `i++`，来计算循环的每次迭代。
+
+## <a name="more-examples"></a>更多示例
   
- 下面的示例阐释了几种不太常见的选择：为初始化表达式部分中的外部循环变量赋值、同时在初始化表达式部分和迭代器部分中调用 `Console.WriteLine` 方法，以及更改迭代器部分中的两个变量的值。  
+下面的示例阐释了几种不太常见的选择：为初始化表达式部分中的外部循环变量赋值、同时在初始化表达式部分和迭代器部分中调用 `Console.WriteLine` 方法，以及更改迭代器部分中的两个变量的值。
   
- [!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+[!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
   
- 定义 `for` 语句的所有表达式都是可选的。 例如，以下语句创建一个无限循环。  
+定义 `for` 语句的所有表达式都是可选的。 例如，以下语句创建一个无限循环：
   
- [!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
+[!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
- [for 语句 (C++)](/cpp/cpp/for-statement-cpp)  
- [迭代语句](../../../csharp/language-reference/keywords/iteration-statements.md)
+## <a name="see-also"></a>请参阅
+
+[for 语句（C# 语言规范）](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
+[C# 参考](../../../csharp/language-reference/index.md)  
+[C# 编程指南](../../../csharp/programming-guide/index.md)  
+[C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+[for 语句 (C++)](/cpp/cpp/for-statement-cpp)  
+[迭代语句](../../../csharp/language-reference/keywords/iteration-statements.md)
