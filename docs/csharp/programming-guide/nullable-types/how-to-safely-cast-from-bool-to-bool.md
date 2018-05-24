@@ -5,16 +5,16 @@ helpviewer_keywords:
 - casting [C#], nullable types
 - nullable types [C#], casting bool? to bool
 ms.assetid: e06e4274-a443-422d-8ef1-9dbf9df55237
-ms.openlocfilehash: 18f44018621182427199dee56146f29b8d3068f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e04e34abd477730f9dd01486ec6bddcde4943edc
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>如何：安全地将 bool? 强制转换为 bool（C# 编程指南）
 可以为 null 的类型 `bool?` 可包含三个不同的值：`true`、`false` 和 `null`。 因此，`bool?` 类型不能用于条件语句，例如与 `if`、`for` 或 `while` 等一起使用。 例如，下面的代码会导致编译器错误。  
   
-```  
+```csharp  
 bool? b = null;  
 if (b) // Error CS0266.  
 {  
@@ -45,4 +45,4 @@ if((bool)test) //now this cast is safe
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [文本关键字](../../../csharp/language-reference/keywords/literal-keywords.md)  
  [可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)  
- [??运算符](../../../csharp/language-reference/operators/null-conditional-operator.md)
+ [??运算符](../../../csharp/language-reference/operators/null-coalescing-operator.md)

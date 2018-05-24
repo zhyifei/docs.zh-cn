@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 1bfbe5257123438751592695f23fe24aeb7ccc2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68e7daac63a5f7d9bd1f48adfdee973bd695a13e
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="-operator-c-reference"></a>?: 运算符（C# 参考）
 条件运算符 (`?:`) 通常被称为三元条件运算符，根据 Boolean 表达式的值返回两个值之一。 下面是条件运算符的语法。  
@@ -55,5 +55,5 @@ classify = (input > 0) ? "positive" : "negative";
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 运算符](../../../csharp/language-reference/operators/index.md)  
  [if-else](../../../csharp/language-reference/keywords/if-else.md)  
- [?. 和 ? 运算符](../../../csharp/language-reference/operators/null-conditional-operators.md)  
- [??运算符](../../../csharp/language-reference/operators/null-conditional-operator.md)
+ [?. 和 ?[] 运算符](../../../csharp/language-reference/operators/null-conditional-operators.md)  
+ [??运算符](../../../csharp/language-reference/operators/null-coalescing-operator.md)

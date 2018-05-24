@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: a305daee2349341527b529c7556cc6fa84cc9fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0affaf3691d2392c9f8d7502204d0122f2ea428
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="c-compiler-options"></a>C# 编译器选项
 编译器生成可执行 (.exe) 文件、动态链接库 (.dll) 或者代码模块 (.netmodule)。  
@@ -24,16 +24,16 @@ ms.lasthandoff: 05/04/2018
  在 Visual Studio 中，可在 Web.config 文件中设置编译器选项。 有关详细信息，请参阅 [\<compiler> 元素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+ [在命令行上使用 csc.exe 生成](command-line-building-with-csc-exe.md)  
  介绍了如何通过命令行生成 Visual C# 应用程序。  
   
- [如何：为 Visual Studio 命令行设置环境变量](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+ [如何：为 Visual Studio 命令行设置环境变量](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  介绍了运行 vsvars32.bat 启用命令行生成的步骤。  
   
- [按类别列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [按类别列出的 C# 编译器选项](listed-by-category.md)  
  分类列出了编译器选项。  
   
- [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [按字母顺序列出的 C# 编译器选项](listed-alphabetically.md)  
  按字母顺序列出了编译器选项。  
   
 ## <a name="related-sections"></a>相关章节  

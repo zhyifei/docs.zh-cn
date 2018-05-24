@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
 在 C# 中，运算符  是应用于表达式或语句中的一个或多个操作数  的程序元素。 接受一个操作数的运算符称为`++`一元 `new`运算符，例如递增运算符 ( *) 或* 。 接受两个操作数的运算符称为`+`二元`-`运算符，例如算术运算符（`*`、`/`、 *、* ）。 条件运算符`?:`接受三个操作数，是 C# 中唯一的三元运算符。  
@@ -114,7 +114,7 @@ ms.lasthandoff: 05/04/2018
 |逻辑“或”|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整型按位“或”，布尔型逻辑“或”|  
 |条件“与”|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|仅当 x 为 True 时计算 y|  
 |条件“或”|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|仅当 x 为 False 时计算 y|  
-|null 合并|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) y|如果 x 为 Null，则计算结果为 y，否则计算结果为 x|  
+|null 合并|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|如果 x 为 Null，则计算结果为 y，否则计算结果为 x|  
 |条件运算|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|如果 x 为 True，则计算结果为 y；如果 x 为 False 则计算结果为 z|  
   
  **赋值和匿名运算符**  

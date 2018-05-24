@@ -1,6 +1,6 @@
 ---
 title: Winres.exe（Windows 窗体资源编辑器）
-ms.date: 05/21/2018
+ms.date: 03/30/2017
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -12,20 +12,17 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14e90916261250452c1f07e66a46bee400da0428
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 69ba816e5b7cf05ef094153b7ff044d573ac1760
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe（Windows 窗体资源编辑器）
 Windows 窗体资源编辑器 Winres.exe 是一种可视布局工具，可以帮助本地化专家对窗体使用的 Windows 窗体用户界面 (UI) 资源进行本地化。 利用可视设计环境（如 Microsoft Visual Studio），可以创建用作 Winres.exe 的输入的 .resx 或 .resources 文件。 有关在 .NET Framework 应用程序中部署资源的信息，请参阅[桌面应用中的资源](../../../docs/framework/resources/index.md)。  
   
  此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
-
-> [!IMPORTANT]
-> 仅应加载和使用来自信任的源的 .resx 文件。 ResX 文件可包含可执行代码，从安全角度来看，应将其视为可执行文件 (.exe)。
-
+  
  在命令提示符处，键入以下内容：  
   
 ## <a name="syntax"></a>语法  

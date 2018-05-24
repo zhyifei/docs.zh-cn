@@ -6,11 +6,11 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 1d6487f4136b5a3f8bfc2e1721ae268e06f5ba98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>类型参数的约束（C# 编程指南）
 
@@ -18,7 +18,7 @@ ms.lasthandoff: 05/04/2018
 
 |约束|描述|
 |----------------|-----------------|
-|`where T: struct`|类型参数必须是值类型。 可以指定除 <xref:System.Nullable> 以外的任何值类型。 有关详细信息，请参阅[使用可以为 null 的类型](../nullable-types/using-nullable-types.md)。|
+|`where T : struct`|类型参数必须是值类型。 可以指定除 <xref:System.Nullable> 以外的任何值类型。 有关详细信息，请参阅[使用可以为 null 的类型](../nullable-types/using-nullable-types.md)。|
 |`where T : class`|类型参数必须是引用类型。 此约束还应用于任何类、接口、委托或数组类型。|
 |`where T : unmanaged`|类型参数不能是引用类型，并且任何嵌套级别均不能包含任何引用类型成员。|
 |`where T : new()`|类型参数必须具有公共无参数构造函数。 与其他约束一起使用时，`new()` 约束必须最后指定。|
