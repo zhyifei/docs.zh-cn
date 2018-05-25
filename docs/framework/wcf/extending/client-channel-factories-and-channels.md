@@ -2,11 +2,11 @@
 title: 客户端：通道工厂和通道
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 91e19c692718ae02e2f125a791904f62fe8401f7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a42042eaf9a8bc5461f680e3cf8dc5fcc78cebb5
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="client-channel-factories-and-channels"></a>客户端：通道工厂和通道
 本主题介绍通道工厂和通道的创建。  
@@ -23,11 +23,11 @@ ms.lasthandoff: 05/07/2018
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject>类实现<xref:System.ServiceModel.ICommunicationObject>并强制执行的步骤 2 中所述的状态机[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
   
--   '<xref:System.ServiceModel.Channels.ChannelManagerBase>类实现<xref:System.ServiceModel.Channels.CommunicationObject>并提供的统一的基类<xref:System.ServiceModel.Channels.ChannelFactoryBase?displayProperty=nameWithType>和<xref:System.ServiceModel.Channels.ChannelListenerBase?displayProperty=nameWithType>。 <xref:System.ServiceModel.Channels.ChannelManagerBase> 类与 <xref:System.ServiceModel.Channels.ChannelBase>（用来实现 <xref:System.ServiceModel.Channels.IChannel> 的基类）结合使用。  
+-   <xref:System.ServiceModel.Channels.ChannelManagerBase> 类实现 <xref:System.ServiceModel.Channels.CommunicationObject> 并为 <xref:System.ServiceModel.Channels.ChannelFactoryBase?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.ChannelListenerBase?displayProperty=nameWithType> 提供统一的基类。 <xref:System.ServiceModel.Channels.ChannelManagerBase> 类与 <xref:System.ServiceModel.Channels.ChannelBase>（用来实现 <xref:System.ServiceModel.Channels.IChannel> 的基类）结合使用。
   
--   '<xref:System.ServiceModel.Channels.ChannelFactoryBase>类实现<xref:System.ServiceModel.Channels.ChannelManagerBase>和<xref:System.ServiceModel.Channels.IChannelFactory>，并将整合`CreateChannel`成一个重载`OnCreateChannel`抽象方法。  
+-   <xref:System.ServiceModel.Channels.ChannelFactoryBase>类实现<xref:System.ServiceModel.Channels.ChannelManagerBase>和<xref:System.ServiceModel.Channels.IChannelFactory>，并将整合`CreateChannel`成一个重载`OnCreateChannel`抽象方法。
   
--   '<xref:System.ServiceModel.Channels.ChannelListenerBase>类实现<xref:System.ServiceModel.Channels.IChannelListener>。 它负责执行基本状态管理。  
+-   <xref:System.ServiceModel.Channels.ChannelListenerBase> 类实现 <xref:System.ServiceModel.Channels.IChannelListener>。 它负责执行基本状态管理。 
   
  以下讨论基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
   

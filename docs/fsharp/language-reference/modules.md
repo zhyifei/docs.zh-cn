@@ -2,11 +2,11 @@
 title: 模块 (F#)
 description: '了解如何 F # 模块是 F # 代码，例如值、 类型和函数值，F # 程序中的分组。'
 ms.date: 04/24/2017
-ms.openlocfilehash: ddb6a0762171f8acc94f0ba0cf29c4b6b3e4990e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 9a1416321e392f7a06551b4a7e3429e3a2d023bd
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="modules"></a>模块
 
@@ -131,6 +131,6 @@ module rec RecursiveModule =
 
 ## <a name="see-also"></a>请参阅
 
-[F # 语言参考](index.md)
-[命名空间](namespaces.md)
-[F # RFC FS-1009-允许通过在文件内的较大作用域的互相引用的类型和模块](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+[F# 语言参考](index.md)  
+[命名空间](namespaces.md)  
+[F # RFC FS-1009-允许通过在文件内的较大作用域的互相引用的类型和模块](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  
