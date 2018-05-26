@@ -2,11 +2,11 @@
 title: 记录 (F#)
 description: '了解如何对 F # 记录表示已命名的值，并且可选择带有成员的简单聚合。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 5bd1f76937bf5839b7da5cae7dea578747ec9b99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffb853ee11ff8cacb45dadf6ef14a4f29400aad4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="records"></a>记录
 
@@ -16,15 +16,15 @@ ms.lasthandoff: 05/04/2018
 
 ```fsharp
 [ attributes ]
-type [accessibility-modifier] typename = {
-    [ mutable ] label1 : type1;
-    [ mutable ] label2 : type2;
-    ...
-}
+type [accessibility-modifier] typename =
+    { [ mutable ] label1 : type1;
+      [ mutable ] label2 : type2;
+      ... }
     [ member-list ]
 ```
 
 ## <a name="remarks"></a>备注
+
 在上述语法中， *typename*是记录类型的名称*label1*和*label2*是名称的值，称为*标签*，和*type1*和*type2*是这些值的类型。 *成员列表中*是类型的成员的可选列表。  你可以使用`[<Struct>]`属性来创建结构记录而不是这是引用类型的记录。
 
 以下是一些示例。
@@ -48,6 +48,7 @@ type [accessibility-modifier] typename = {
 可以定义与类类型的记录类型的方法。
 
 ## <a name="creating-records-by-using-record-expressions"></a>通过使用记录表达式创建记录
+
 可以通过使用记录中定义的标签来初始化记录。 表达式可完成此称为*记录表达式*。 使用括号来括住记录表达式，并使用分号作为分隔符。
 
 下面的示例演示如何创建一条记录。
@@ -77,20 +78,19 @@ type [accessibility-modifier] typename = {
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
 type MyRecord =
-{
-    field1 : int
-    field2 : int
-}
+    { Field1 : int
+      Field2 : int }
 
-let defaultRecord1 = { field1 = 0; field2 = 0 }
-let defaultRecord2 = { field1 = 1; field2 = 25 }
+let defaultRecord1 = { Field1 = 0; Field2 = 0 }
+let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 
 // Use the with keyword to populate only a few chosen fields
 // and leave the rest with default values.
-let rr3 = { defaultRecord1 with field2 = 42 }
+let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
 ## <a name="pattern-matching-with-records"></a>使用记录的模式匹配
+
 记录可以与模式匹配一起使用。 可以显式指定一些字段，并为变量的匹配项时将分配其他字段中提供。 下面的代码示例阐释了这一点。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
@@ -104,17 +104,25 @@ Point is at (10.000000, 0.000000, -1.000000).
 ```
 
 ## <a name="differences-between-records-and-classes"></a>记录和类之间的差异
+
 因为它们会自动公开为属性，并且它们是用于创建和复制的记录，记录的字段与类不同。 记录构造也不同于类构造。 在记录类型，不能定义构造函数。 相反，本主题中所述的构造语法适用。 类具有构造函数参数、 字段和属性之间没有直接关系。
 
 与联合和结构类型，类似记录具有结构上相等语义。 类具有引用相等性语义。 下面的代码示例展示了此操作。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
+此代码的输出如下所示：
+
+```
+The records are equal.
+```
+
 如果您编写与类相同的代码，两个类对象则不相等，因为两个值表示堆上的两个对象，并仅地址进行比较 (除非类类型替代`System.Object.Equals`方法)。
 
 如果你需要引用记录是否相等，则将属性添加`[<ReferenceEquality>]`记录上方。
 
 ## <a name="see-also"></a>请参阅
+
 [F# 类型](fsharp-types.md)
 
 [类](classes.md)
