@@ -47,7 +47,6 @@
 ## [对象和集合初始值设定项](object-and-collection-initializers.md)
 ### [如何：使用对象初始值设定项初始化对象](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [如何：使用集合初始值设定项初始化字典](how-to-initialize-a-dictionary-with-a-collection-initializer.md)
-## [如何：使用 foreach 访问集合类](how-to-access-a-collection-class-with-foreach.md)
 ## [嵌套类型](nested-types.md)
 ## [分部类和方法](partial-classes-and-methods.md)
 ## [匿名类型](anonymous-types.md)
