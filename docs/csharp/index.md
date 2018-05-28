@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 4d349f8aff5e3d48a2bc738e848d2a251805e260
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 15c10d8891e87ab241104e6aa760c221e8b9e249
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="c-guide"></a>C# 指南
 
@@ -61,7 +61,7 @@ C# 指南分为多个部分。 可以按顺序阅读，也可以直接跳到最�
   * 此部分收录了 C# 语言参考资料。 此类资料有助于你了解 C# 语法和语义。 它还包含关于以下内容的参资料：类型、运算符、特性、预处理器指令、编译器开关、编译器错误和编译器警告。
 
 * [C# 语言规范](../csharp/language-reference/language-specification/index.md)
-  * 指向 C# 规范的最新版本（Microsoft Word 格式）的链接。
+  * 指向最新版 C# 语言规范的链接。
 
 ## <a name="see-also"></a>请参阅
 

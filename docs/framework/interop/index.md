@@ -1,5 +1,5 @@
 ---
-title: 与非托管代码交互操作
+title: 与非托管代码进行交互操作
 ms.date: 01/17/2018
 helpviewer_keywords:
 - unmanaged code, interoperation
@@ -14,11 +14,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 583cfb6e3a5145c6c0dfc82ec9ff64c6d87414ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
 ---
-# <a name="interoperating-with-unmanaged-code"></a>与非托管代码交互操作
+# <a name="interoperating-with-unmanaged-code"></a>与非托管代码进行交互操作
 
 .NET Framework 提升与 COM 组件、COM+ 服务、外部类型库和许多操作系统服务的交互。 托管和非托管对象模型之间的数据类型、方法签名和错误处理机制有所不同。 要简化 .NET Framework 组件和非托管代码之间的互操作并简化迁移路径，公共语言运行时需对客户端和服务器隐藏这些对象模型中的差异。
 
@@ -42,19 +42,19 @@ ms.lasthandoff: 05/04/2018
 描述异常和 HRESULT 之间的映射。
 
 [COM 包装](com-wrappers.md)  
-描述由 COM 互操作提供的包装。
+介绍 COM 互操作提供的包装器。
 
 [类型等效性和嵌入的互操作类型](type-equivalence-and-embedded-interop-types.md)  
-描述如何将 COM 类型的类型信息嵌入在程序集中，以及公共语言运行时确定的嵌入 COM 类型等效性的方式。
+介绍如何在程序集中嵌入 COM 类型的类型信息，以及公共语言运行时如何确定嵌入的 COM 类型的等效性。
 
 [如何：使用 Tlbimp.exe 生成主互操作程序集](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
-介绍如何生成使用的主互操作程序集*Tlbimp.exe* （类型库导入程序）。
+介绍如何使用 Tlbimp.exe （类型库导入程序）生成主要互操作程序集。
 
 [如何：注册主互操作程序集](how-to-register-primary-interop-assemblies.md)  
-描述如何注册主互操作程序集，然后才能在你的项目中引用它们。
+介绍如何注册主互操作程序集，然后才能在项目中引用它们。
 
 [免注册 COM 互操作](registration-free-com-interop.md)  
-描述如何 COM 互操作可以激活组件，而无需使用 Windows 注册表。
+介绍 COM 互操作如何在不使用 Windows 注册表的情况下激活组件。
 
 [如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活](configure-net-framework-based-com-components-for-reg.md)  
-描述如何创建一个应用程序清单以及如何创建和嵌入组件清单。
+介绍如何创建应用程序清单以及如何创建并嵌入组件清单。

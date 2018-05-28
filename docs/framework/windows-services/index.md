@@ -14,38 +14,38 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: af6e4bf7697b3139f6809295737fdd0d90b7f013
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-windows-service-applications"></a>开发 Windows 服务应用程序
-使用 Microsoft Visual Studio 或 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK，你可以轻松创建服务通过创建作为服务安装的应用程序。 此类型的应用程序称为 Windows 服务。 使用框架功能，可以创建服务、 安装它们，并启动、 停止和以其他方式控制其行为。  
+使用 Microsoft Visual Studio 或 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK，可以通过创建作为服务安装的应用程序来轻松创建服务。 这种类型的应用程序称为 Windows 服务。 借助框架功能，可以创建、安装服务，启动、停止服务并及控制服务的行为。  
   
 > [!WARNING]
->  Visual Studio 2010 中未包括 c + + 的 Windows 服务模板。 若要创建 Windows 服务，你可以在 Visual C# 或 Visual Basic，无法与现有的 c + + 代码，如果需要互操作，在托管代码中创建服务，或可以通过在本机 c + + 创建 Windows 服务[ATL 项目向导](/cpp/atl/reference/atl-project-wizard).  
+>  C++ 的 Windows 服务模板未包含在 Visual Studio 2010 中。 要创建 Windows 服务，可以在 Visual C# 或 Visual Basic 的托管代码中创建服务（如有必要，该服务可与现有 C++ 代码进行互操作），也可以使用 [ATL 项目向导](/cpp/atl/reference/atl-project-wizard)在本机 C++ 中创建 Windows 服务。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- 概述介绍 Windows 服务应用程序，一种服务，以及服务应用程序与其他常见的项目类型的区别的生存期。  
+ 提供 Windows 服务应用程序、服务生存期以及服务应用程序与其他常见项目类型的区别的概述。  
   
  [演练：在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- 提供 Visual Basic 和 Visual C# 中创建服务的一个示例。  
+ 提供在 Visual Basic 和 Visual C# 中创建服务的示例。  
   
  [服务应用程序编程体系结构](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- 说明在服务编程中使用的语言元素。  
+ 介绍服务编程中使用的语言元素。  
   
  [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- 介绍创建和配置使用 Windows 服务项目模板的 Windows 服务的过程。  
+ 介绍使用 Windows 服务项目模板创建和配置 Windows 服务的过程。  
   
 ## <a name="related-sections"></a>相关章节  
  <xref:System.ServiceProcess.ServiceBase>  
- 描述的主要功能<xref:System.ServiceProcess.ServiceBase>类，该类用于创建服务。  
+ 介绍用于创建服务的 <xref:System.ServiceProcess.ServiceBase> 类的主要功能。  
   
  <xref:System.ServiceProcess.ServiceProcessInstaller>  
- 介绍的功能<xref:System.ServiceProcess.ServiceProcessInstaller>类，该类用于连同<xref:System.ServiceProcess.ServiceInstaller>类用于安装和卸载你的服务。  
+ 介绍 <xref:System.ServiceProcess.ServiceProcessInstaller> 类的功能，该类与 <xref:System.ServiceProcess.ServiceInstaller> 类一起用于安装和卸载服务。  
   
  <xref:System.ServiceProcess.ServiceInstaller>  
- 介绍的功能<xref:System.ServiceProcess.ServiceInstaller>类，该类用于连同<xref:System.ServiceProcess.ServiceProcessInstaller>类用于安装和卸载你的服务。  
+ 介绍 <xref:System.ServiceProcess.ServiceInstaller> 类的功能，该类与 <xref:System.ServiceProcess.ServiceProcessInstaller> 类一起用于安装和卸载服务。  
   
  [NIB 从模板创建项目](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
- 描述项目中这一章以及如何选择它们之间使用的类型。
+ 介绍本章中使用的项目类型以及如何从中进行选择。
