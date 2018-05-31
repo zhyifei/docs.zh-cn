@@ -1,13 +1,6 @@
 ---
-title: "疑难解答： 服务应用程序赢得 &#39; 无法安装"
-ms.custom: 
+title: 疑难解答：服务应用程序无法安装
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - troubleshooting service applications
 - services, troubleshooting
@@ -16,24 +9,22 @@ helpviewer_keywords:
 - troubleshooting NT services
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
-caps.latest.revision: "8"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 43c973d83d2d1b614cf0ce49ba8d4af24123b47e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1f3e5674f9a52627efdc24d6c70c0ab16dcdbbbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509655"
 ---
-# <a name="troubleshooting-service-application-won39t-install"></a><span data-ttu-id="89d2a-102">疑难解答： 服务应用程序赢得 &#39; 无法安装</span><span class="sxs-lookup"><span data-stu-id="89d2a-102">Troubleshooting: Service Application Won&#39;t Install</span></span>
-<span data-ttu-id="89d2a-103">如果服务应用程序将无法正确安装，请检查以确保<xref:System.ServiceProcess.ServiceBase.ServiceName%2A>为服务类的属性设置为相同的值，该服务的安装程序中所示。</span><span class="sxs-lookup"><span data-stu-id="89d2a-103">If your service application will not install correctly, check to make sure that the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property for the service class is set to the same value as is shown in the installer for that service.</span></span> <span data-ttu-id="89d2a-104">值必须是为了使你的服务以正确安装两个实例中相同。</span><span class="sxs-lookup"><span data-stu-id="89d2a-104">The value must be the same in both instances in order for your service to install correctly.</span></span>  
+# <a name="troubleshooting-service-application-won39t-install"></a><span data-ttu-id="24cbc-102">疑难解答：服务应用程序无法安装</span><span class="sxs-lookup"><span data-stu-id="24cbc-102">Troubleshooting: Service Application Won&#39;t Install</span></span>
+<span data-ttu-id="24cbc-103">如果服务应用程序无法正确安装，请检查以确保服务类的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性设置为与该服务安装程序中显示的值相同的值。</span><span class="sxs-lookup"><span data-stu-id="24cbc-103">If your service application will not install correctly, check to make sure that the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property for the service class is set to the same value as is shown in the installer for that service.</span></span> <span data-ttu-id="24cbc-104">两个实例中的值必须相同才能正确安装服务。</span><span class="sxs-lookup"><span data-stu-id="24cbc-104">The value must be the same in both instances in order for your service to install correctly.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="89d2a-105">你还可以查看安装日志，以在安装过程中获得反馈。</span><span class="sxs-lookup"><span data-stu-id="89d2a-105">You can also look at the installation logs to get feedback on the installation process.</span></span>  
+>  <span data-ttu-id="24cbc-105">还可以查看安装日志以获取有关安装进程的反馈。</span><span class="sxs-lookup"><span data-stu-id="24cbc-105">You can also look at the installation logs to get feedback on the installation process.</span></span>  
   
- <span data-ttu-id="89d2a-106">你还应检查来确定是否有另一个服务具有相同的名称已安装。</span><span class="sxs-lookup"><span data-stu-id="89d2a-106">You should also check to determine whether you have another service with the same name already installed.</span></span> <span data-ttu-id="89d2a-107">服务名称必须唯一，安装才能成功。</span><span class="sxs-lookup"><span data-stu-id="89d2a-107">Service names must be unique for installation to succeed.</span></span>  
+ <span data-ttu-id="24cbc-106">还应该检查以确定是否已安装具有相同名称的其他服务。</span><span class="sxs-lookup"><span data-stu-id="24cbc-106">You should also check to determine whether you have another service with the same name already installed.</span></span> <span data-ttu-id="24cbc-107">服务名称必须唯一，安装才能成功。</span><span class="sxs-lookup"><span data-stu-id="24cbc-107">Service names must be unique for installation to succeed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89d2a-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="89d2a-108">See Also</span></span>  
- [<span data-ttu-id="89d2a-109">Windows 服务应用程序介绍</span><span class="sxs-lookup"><span data-stu-id="89d2a-109">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+## <a name="see-also"></a><span data-ttu-id="24cbc-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="24cbc-108">See Also</span></span>  
+ [<span data-ttu-id="24cbc-109">Windows 服务应用程序介绍</span><span class="sxs-lookup"><span data-stu-id="24cbc-109">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

@@ -1,6 +1,6 @@
 ---
 title: foreach，in（C# 参考）
-ms.date: 10/11/2017
+ms.date: 05/24/2018
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,61 +9,44 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: c0b1481988a2e3199fc6d06ca30cb5194ab2f44c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: b6b7dc0a4d3970ddfbbb6635ccebbbd5b75671e4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549370"
 ---
-# <a name="foreach-in-c-reference"></a><span data-ttu-id="dd792-102">foreach，in（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="dd792-102">foreach, in (C# Reference)</span></span>
+# <a name="foreach-in-c-reference"></a><span data-ttu-id="423bf-102">foreach，in（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="423bf-102">foreach, in (C# Reference)</span></span>
 
-<span data-ttu-id="dd792-103">`foreach` 语句针对实现 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 接口的数组或集合中的每个元素重复一组嵌入语句。</span><span class="sxs-lookup"><span data-stu-id="dd792-103">The `foreach` statement repeats a group of embedded statements for each element in an array or an object collection that implements the <xref:System.Collections.IEnumerable?displayProperty=nameWithType> or <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interface.</span></span> <span data-ttu-id="dd792-104">[foreach 语句](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)用于循环访问集合以获取所需信息，但不能用于添加或删除源集合中的项，以避免不可预知的副作用。</span><span class="sxs-lookup"><span data-stu-id="dd792-104">The [foreach statement](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement) is used to iterate through the collection to get the information that you want, but can not be used to add or remove items from the source collection to avoid unpredictable side effects.</span></span> <span data-ttu-id="dd792-105">如果需要添加或删除源集合中的项，请使用 [for](for.md) 循环。</span><span class="sxs-lookup"><span data-stu-id="dd792-105">If you need to add or remove items from the source collection, use a [for](for.md) loop.</span></span>
-  
- <span data-ttu-id="dd792-106">为数组或集合中的每个元素继续执行嵌入的语句。</span><span class="sxs-lookup"><span data-stu-id="dd792-106">The embedded statements continue to execute for each element in the array or collection.</span></span> <span data-ttu-id="dd792-107">为集合中的所有元素完成迭代后，控制将传递给 `foreach` 块之后的下一语句。</span><span class="sxs-lookup"><span data-stu-id="dd792-107">After the iteration has been completed for all the elements in the collection, control is transferred to the next statement following the `foreach` block.</span></span>
-  
- <span data-ttu-id="dd792-108">在 `foreach` 块中的任何点上，可以使用[中断](break.md)关键字中断该循环，或者可以使用[继续](continue.md)关键字单步执行到循环中的下一次迭代。</span><span class="sxs-lookup"><span data-stu-id="dd792-108">At any point within the `foreach` block, you can break out of the loop by using the [break](break.md) keyword, or step to the next iteration in the loop by using the [continue](continue.md) keyword.</span></span>
+<span data-ttu-id="423bf-103">`foreach` 语句为类型实例中实现 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 接口的每个元素执行语句或语句块。</span><span class="sxs-lookup"><span data-stu-id="423bf-103">The `foreach` statement executes a statement or a block of statements for each element in an instance of the type that implements the <xref:System.Collections.IEnumerable?displayProperty=nameWithType> or <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interface.</span></span> <span data-ttu-id="423bf-104">`foreach` 语句不局限于这些类型，它可应用于满足以下条件的任何类型的实例：</span><span class="sxs-lookup"><span data-stu-id="423bf-104">The `foreach` statement is not limited to those types and can be applied to an instance of any type that satisfies the following conditions:</span></span>
 
- <span data-ttu-id="dd792-109">`foreach` 循环还可以通过 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 语句退出。</span><span class="sxs-lookup"><span data-stu-id="dd792-109">A `foreach` loop can also be exited by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
+- <span data-ttu-id="423bf-105">具有公共无参数 `GetEnumerator` 方法，其返回类型为类、结构或接口类型。</span><span class="sxs-lookup"><span data-stu-id="423bf-105">has the public parameterless `GetEnumerator` method whose return type is either class, struct, or interface type,</span></span>
+- <span data-ttu-id="423bf-106">`GetEnumerator` 方法的返回类型具有公共 `Current` 属性和公共无参数 `MoveNext` 方法（其返回类型为 <xref:System.Boolean>）。</span><span class="sxs-lookup"><span data-stu-id="423bf-106">the return type of the `GetEnumerator` method has the public `Current` property and the public parameterless `MoveNext` method whose return type is <xref:System.Boolean>.</span></span>
 
- <span data-ttu-id="dd792-110">有关 `foreach` 关键字和代码示例的详细信息，请参阅下列主题：</span><span class="sxs-lookup"><span data-stu-id="dd792-110">For more information about the `foreach` keyword and code samples, see the following topics:</span></span>  
+<span data-ttu-id="423bf-107">在 `foreach` 语句块中的任何点上，可以使用 [break](break.md) 关键字中断循环，或者可以使用 [continue](continue.md) 关键字继续执行到循环中的下一次迭代。</span><span class="sxs-lookup"><span data-stu-id="423bf-107">At any point within the `foreach` statement block, you can break out of the loop by using the [break](break.md) keyword, or step to the next iteration in the loop by using the [continue](continue.md) keyword.</span></span> <span data-ttu-id="423bf-108">还可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 语句退出 `foreach` 循环。</span><span class="sxs-lookup"><span data-stu-id="423bf-108">You also can exit a `foreach` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
 
- [<span data-ttu-id="dd792-111">对数组使用 foreach</span><span class="sxs-lookup"><span data-stu-id="dd792-111">Using foreach with Arrays</span></span>](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+## <a name="examples"></a><span data-ttu-id="423bf-109">示例</span><span class="sxs-lookup"><span data-stu-id="423bf-109">Examples</span></span>
 
- [<span data-ttu-id="dd792-112">如何：使用 foreach 访问集合类</span><span class="sxs-lookup"><span data-stu-id="dd792-112">How to: Access a Collection Class with foreach</span></span>](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-## <a name="example"></a><span data-ttu-id="dd792-113">示例</span><span class="sxs-lookup"><span data-stu-id="dd792-113">Example</span></span>
+<span data-ttu-id="423bf-110">以下示例介绍 `foreach` 语句的使用，其中包含实现 <xref:System.Collections.Generic.IEnumerable%601> 接口的 <xref:System.Collections.Generic.List%601> 类型的实例：</span><span class="sxs-lookup"><span data-stu-id="423bf-110">The following example shows usage of the `foreach` statement with an instance of the <xref:System.Collections.Generic.List%601> type that implements the <xref:System.Collections.Generic.IEnumerable%601> interface:</span></span>
 
-<span data-ttu-id="dd792-114">下面的代码演示了三个示例：</span><span class="sxs-lookup"><span data-stu-id="dd792-114">The following code shows three examples:</span></span>
+[!code-csharp-interactive[list example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#1)]
 
-> [!TIP]
-> <span data-ttu-id="dd792-115">可以修改这些示例来测试语法，尝试与所需用例更相近的不同用法。</span><span class="sxs-lookup"><span data-stu-id="dd792-115">You can modify the examples to experiment with the syntax and try different usages that are more similar to your use case.</span></span> <span data-ttu-id="dd792-116">按“运行”以运行该代码，然后编辑并再按一次“运行”。</span><span class="sxs-lookup"><span data-stu-id="dd792-116">Press "Run" to run the code, then edit and press "Run" again.</span></span>
+<span data-ttu-id="423bf-111">下一个示例使用 `foreach` 语句，其中包含 <xref:System.Span%601?displayProperty=nameWithType> 类型的实例，该实例不实现任何接口：</span><span class="sxs-lookup"><span data-stu-id="423bf-111">The next example uses the `foreach` statement with an instance of the <xref:System.Span%601?displayProperty=nameWithType> type, which doesn't implement any interfaces:</span></span>
 
--   <span data-ttu-id="dd792-117">显示整数数组内容的典型 `foreach` 循环</span><span class="sxs-lookup"><span data-stu-id="dd792-117">a typical `foreach` loop that displays the contents of an array of integers</span></span>
+[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L12-L26)]
-
--   <span data-ttu-id="dd792-118">执行相同操作的 [for](../../../csharp/language-reference/keywords/for.md) 循环</span><span class="sxs-lookup"><span data-stu-id="dd792-118">a [for](../../../csharp/language-reference/keywords/for.md) loop that does the same thing</span></span>
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L31-L46)]
-
--   <span data-ttu-id="dd792-119">维护数组中元素数计数的 `foreach` 循环</span><span class="sxs-lookup"><span data-stu-id="dd792-119">a `foreach` loop that maintains a count of the number of elements in the array</span></span>
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L51-L69)]
- 
-## <a name="c-language-specification"></a><span data-ttu-id="dd792-120">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="dd792-120">C# Language Specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="423bf-112">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="423bf-112">C# Language Specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="dd792-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="dd792-121">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="423bf-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="423bf-113">See also</span></span>
 
-[<span data-ttu-id="dd792-122">foreach 语句（C# 语言规范）</span><span class="sxs-lookup"><span data-stu-id="dd792-122">The foreach statement (C# language specification)</span></span>](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
-
-[<span data-ttu-id="dd792-123">C# 参考</span><span class="sxs-lookup"><span data-stu-id="dd792-123">C# Reference</span></span>](../index.md)
-
-[<span data-ttu-id="dd792-124">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="dd792-124">C# Programming Guide</span></span>](../../programming-guide/index.md)
-
-[<span data-ttu-id="dd792-125">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="dd792-125">C# Keywords</span></span>](index.md)
-
-[<span data-ttu-id="dd792-126">迭代语句</span><span class="sxs-lookup"><span data-stu-id="dd792-126">Iteration Statements</span></span>](iteration-statements.md)
-
-[<span data-ttu-id="dd792-127">for</span><span class="sxs-lookup"><span data-stu-id="dd792-127">for</span></span>](for.md)
+[<span data-ttu-id="423bf-114">foreach 语句（C# 语言规范）</span><span class="sxs-lookup"><span data-stu-id="423bf-114">The foreach statement (C# language specification)</span></span>](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)  
+[<span data-ttu-id="423bf-115">对数组使用 foreach</span><span class="sxs-lookup"><span data-stu-id="423bf-115">Using foreach with Arrays</span></span>](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+[<span data-ttu-id="423bf-116">for</span><span class="sxs-lookup"><span data-stu-id="423bf-116">for</span></span>](for.md)  
+[<span data-ttu-id="423bf-117">迭代语句</span><span class="sxs-lookup"><span data-stu-id="423bf-117">Iteration Statements</span></span>](iteration-statements.md)  
+[<span data-ttu-id="423bf-118">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="423bf-118">C# Keywords</span></span>](index.md)  
+[<span data-ttu-id="423bf-119">C# 参考</span><span class="sxs-lookup"><span data-stu-id="423bf-119">C# Reference</span></span>](../index.md)  
+[<span data-ttu-id="423bf-120">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="423bf-120">C# Programming Guide</span></span>](../../programming-guide/index.md)  
