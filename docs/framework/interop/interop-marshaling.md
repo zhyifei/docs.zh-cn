@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1995c367039591c086054a086f2107e4a88ecefb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395364"
 ---
 # <a name="interop-marshaling"></a>互操作封送处理
 <a name="top"></a> 互操作封送处理控制调用期间，通过方法自变量和返回值在托管内存和非托管内存之间传递数据的方式。 互操作封送处理是由公共语言运行时的封送处理服务执行的运行时活动。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="com-clients-and-managed-servers"></a>COM 客户端和托管服务器  
  具有由 [Regasm.exe（程序集注册工具）](../tools/regasm-exe-assembly-registration-tool.md) 注册的类型库的导出的托管服务器有一个设置为 `Both` 的 `ThreadingModel` 注册表项。 此值指示服务器可以在单线程单元 (STA) 或多线程单元 (MTA) 中激活。 服务器对象在与其调用方相同的单元中创建，如下表所示。  
   
-|COM 客户端|.NET 服务器|封送要求|  
+|COM 客户端|.NET 服务器|封送需求|  
 |----------------|-----------------|-----------------------------|  
 |STA|`Both` 将变成 STA。|相同单元封送。|  
 |MTA|`Both` 将变成 MTA。|相同单元封送。|  
@@ -74,9 +75,9 @@ ms.lasthandoff: 05/04/2018
 ### <a name="managed-clients-and-com-servers"></a>托管客户端和 COM 服务器  
  托管客户端单元的默认设置为 MTA；但是，.NET 客户端的应用程序类型可以更改默认设置。 例如，[!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 客户端单元设置为 STA。 可以使用 <xref:System.STAThreadAttribute?displayProperty=nameWithType>、<xref:System.MTAThreadAttribute?displayProperty=nameWithType>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 属性或 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> 属性检查并更改托管客户端的单元设置。  
   
- 组件的作者设置 COM 服务器的线程关联。 下表显示 .NET 客户端和 COM 服务器的单元设置的组合。 同时还显示得到的针对这些组合的封送要求。  
+ 组件的作者设置 COM 服务器的线程关联。 下表显示 .NET 客户端和 COM 服务器的单元设置的组合。 同时还显示得到的针对这些组合的封送需求。  
   
-|.NET 客户端|COM 服务器|封送要求|  
+|.NET 客户端|COM 服务器|封送需求|  
 |-----------------|----------------|-----------------------------|  
 |MTA（默认值）|MTA<br /><br /> STA|互操作封送处理。<br /><br /> 互操作封送处理和 COM 封送处理。|  
 |STA|MTA<br /><br /> STA|互操作封送处理和 COM 封送处理。<br /><br /> 互操作封送处理。|  
@@ -101,7 +102,7 @@ ms.lasthandoff: 05/04/2018
   
 <a name="marshaling_remote_calls"></a>   
 ## <a name="marshaling-remote-calls"></a>封送远程调用  
- 与跨单元封送一样，只要对象驻留在不同的进程中，托管代码和非托管代码之间的每个调用就都涉及 COM 封送处理。 例如：  
+ 与跨单元封送一样，只要对象驻留在不同的进程中，托管代码和非托管代码之间的每个调用就都涉及 COM 封送处理。 例如:  
   
 -   调用远程主机上的托管服务器的 COM 客户端使用分布式 COM (DCOM)。  
   
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/04/2018
  ![SOAP 或 TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
 跨使用 SOAP 或 TcpChannel 类的防火墙的远程调用  
   
- 某些非托管的调用可以为通过 SOAP 传递，如维护的组件和 COM 之间的调用。  
+ 某些非托管调用可以通过 SOAP 传递，如服务组件和 COM 之间的调用。  
   
  [返回页首](#top)  
   

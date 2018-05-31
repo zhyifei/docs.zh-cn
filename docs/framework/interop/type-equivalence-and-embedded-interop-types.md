@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e3eeba609349bb9d5b7c68e15e0e0e6ff3f1b7ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390928"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>类型等效性和嵌入的互操作类型
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/04/2018
 
 - 类型具有相同标识，如下节所述。
 
-- 中所述，这两种类型是否符合类型等效的条件，[标记 COM 类型为类型等效](#marking-com-types-for-type-equivalence)部分。
+- 两种类型都符合类型等效性，如[针对类型等效性标记 COM 类型](#marking-com-types-for-type-equivalence)部分所述。
 
 ### <a name="type-identity"></a>类型标识
 
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 
 - 对于结构、枚举和委托，使用包含程序集的 <xref:System.Runtime.InteropServices.GuidAttribute> 而不使用 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> 属性，使用 <xref:System.Type.FullName%2A?displayProperty=nameWithType> 属性而不使用 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> 属性。
 
-### <a name="marking-com-types-for-type-equivalence"></a>将标记为类型等效的 COM 类型
+### <a name="marking-com-types-for-type-equivalence"></a>针对类型等效性标记 COM 类型
 
  可通过两种方式将类型标记为符合类型等效性：
 

@@ -1,5 +1,5 @@
 ---
-title: 疑难解答： 服务应用程序赢得&#39;t 安装
+title: 疑难解答：服务应用程序无法安装
 ms.date: 03/30/2017
 helpviewer_keywords:
 - troubleshooting service applications
@@ -13,17 +13,18 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 1f3e5674f9a52627efdc24d6c70c0ab16dcdbbbd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509655"
 ---
-# <a name="troubleshooting-service-application-won39t-install"></a>疑难解答： 服务应用程序赢得&#39;t 安装
-如果服务应用程序将无法正确安装，请检查以确保<xref:System.ServiceProcess.ServiceBase.ServiceName%2A>为服务类的属性设置为相同的值，该服务的安装程序中所示。 值必须是为了使你的服务以正确安装两个实例中相同。  
+# <a name="troubleshooting-service-application-won39t-install"></a>疑难解答：服务应用程序无法安装
+如果服务应用程序无法正确安装，请检查以确保服务类的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性设置为与该服务安装程序中显示的值相同的值。 两个实例中的值必须相同才能正确安装服务。  
   
 > [!NOTE]
->  你还可以查看安装日志，以在安装过程中获得反馈。  
+>  还可以查看安装日志以获取有关安装进程的反馈。  
   
- 你还应检查来确定是否有另一个服务具有相同的名称已安装。 服务名称必须唯一，安装才能成功。  
+ 还应该检查以确定是否已安装具有相同名称的其他服务。 服务名称必须唯一，安装才能成功。  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

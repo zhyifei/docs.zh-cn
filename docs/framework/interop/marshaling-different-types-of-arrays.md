@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed2a4b91608306021ce510098eaf044520cbb089
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391451"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送处理不同类型的数组
 数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。 尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。 此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。 有关其他详细信息，请参阅[复制和固定](copying-and-pinning.md)。  
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/04/2018
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100))是一个自定义的非托管的库，包含之前列出的函数、 两个结构变量，实现**MYPOINT**和**MYPERSON**。 此结构包含以下元素：  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) 是一个自定义的非托管库，它包含之前列出的函数、两个结构变量（MYPOINT 和 MYPERSON）的实现。 此结构包含以下元素：  
   
 ```  
 typedef struct _MYPOINT  

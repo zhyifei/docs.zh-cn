@@ -5,69 +5,73 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 6c7e30d23868959145e8941057f1c633fe6e374e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f1f51040033cf25f7f1aefb04d249e6e028ca3
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472771"
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>如何：使用 XML 文档功能（C# 编程指南）
 下面的示例提供对某个已存档类型的基本概述。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
-  
- **// This .xml file was generated with the previous code sample.**  
-**\<?xml version="1.0"?>**  
-**\<doc>**  
- **\<assembly>**  
- **\<name>xmlsample\</name>**  
- **\</assembly>**  
- **\<members>**  
- **\<member name="T:SomeClass">**  
- **\<summary>**  
- **Class level summary documentation goes here.\</summary>**  
- **\<remarks>**  
- **Longer comments can be associated with a type or member**  
- **through the remarks tag\</remarks>**  
- **\</member>**  
- **\<member name="F:SomeClass.m_Name">**  
- **\<summary>**  
- **Store for the name property\</summary>**  
- **\</member>**  
- **\<member name="M:SomeClass.#ctor">**  
- **\<summary>The class constructor.\</summary>**  
- **\</member>**  
- **\<member name="M:SomeClass.SomeMethod(System.String)">**  
- **\<summary>**  
- **Description for SomeMethod.\</summary>**  
- **\<param name="s"> Parameter description for s goes here\</param>**  
- **\<seealso cref="T:System.String">**  
- **You can use the cref attribute on any tag to reference a type or member**  
- **and the compiler will check that the reference exists. \</seealso>**  
- **\</member>**  
- **\<member name="M:SomeClass.SomeOtherMethod">**  
- **\<summary>**  
- **Some other method. \</summary>**  
- **\<returns>**  
- **Return results are described through the returns tag.\</returns>**  
- **\<seealso cref="M:SomeClass.SomeMethod(System.String)">**  
- **Notice the use of the cref attribute to reference a specific method \</seealso>**  
- **\</member>**  
- **\<member name="M:SomeClass.Main(System.String[])">**  
- **\<summary>**  
- **The entry point for the application.**  
- **\</summary>**  
- **\<param name="args"> A list of command line arguments\</param>**  
- **\</member>**  
- **\<member name="P:SomeClass.Name">**  
- **\<summary>**  
- **Name property \</summary>**  
- **\<value>**  
- **A value tag is used to describe the property value\</value>**  
- **\</member>**  
- **\</members>**  
-**\</doc>**   
+
+该示例生成一个包含以下内容的 .xml 文件：
+
+```xml  
+<?xml version="1.0"?>  
+<doc>  
+ <assembly>  
+ <name>xmlsample</name>  
+ </assembly>  
+ <members>  
+ <member name="T:SomeClass">  
+ <summary>  
+ Class level summary documentation goes here.</summary>  
+ <remarks>  
+ Longer comments can be associated with a type or member  
+ through the remarks tag</remarks>  
+ </member>  
+ <member name="F:SomeClass.m_Name">  
+ <summary>  
+ Store for the name property</summary>  
+ </member>  
+ <member name="M:SomeClass.#ctor">  
+ <summary>The class constructor.</summary>  
+ </member>  
+ <member name="M:SomeClass.SomeMethod(System.String)">  
+ <summary>  
+ Description for SomeMethod.</summary>  
+ <param name="s"> Parameter description for s goes here</param>  
+ <seealso cref="T:System.String">  
+ You can use the cref attribute on any tag to reference a type or member  
+ and the compiler will check that the reference exists. </seealso>  
+ </member>  
+ <member name="M:SomeClass.SomeOtherMethod">  
+ <summary>  
+ Some other method. </summary>  
+ <returns>  
+ Return results are described through the returns tag.</returns>  
+ <seealso cref="M:SomeClass.SomeMethod(System.String)">  
+ Notice the use of the cref attribute to reference a specific method </seealso>  
+ </member>  
+ <member name="M:SomeClass.Main(System.String[])">  
+ <summary>  
+ The entry point for the application.  
+ </summary>  
+ <param name="args"> A list of command line arguments</param>  
+ </member>  
+ <member name="P:SomeClass.Name">  
+ <summary>  
+ Name property </summary>  
+ <value>A value tag is used to describe the property value</value>  
+ </member>  
+ </members>  
+</doc>   
+```
+
 ## <a name="compiling-the-code"></a>编译代码  
  若要编译该示例，请键入以下命令行：  
   
@@ -80,7 +84,7 @@ ms.lasthandoff: 05/04/2018
   
 -   文档必须是格式正确的 XML。 如果 XML 格式不正确，则会生成警告，并且文档文件将包含一条注释，指出遇到错误。  
   
--   开发人员可以随意创建自己的标记集。 有建议的标记集（请参阅“更多参考资料”部分）。 部分建议标记具有特殊含义：  
+-   开发人员可以随意创建自己的标记集。 推荐的标记集（请参阅[建议的文档注释标记](recommended-tags-for-documentation-comments.md)）。 部分建议标记具有特殊含义：  
   
     -   \<param> 标记用于描述参数。 如果使用，编译器将验证该参数是否存在，以及文档是否描述了所有参数。 如果验证失败，编译器会发出警告。  
   

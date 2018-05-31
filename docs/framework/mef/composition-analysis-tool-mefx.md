@@ -10,16 +10,17 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392572"
 ---
 # <a name="composition-analysis-tool-mefx"></a>结构分析工具 (Mefx)
 组合分析工具 (Mefx) 是一款命令行应用程序，用于分析包含 Managed Extensibility Framework (MEF) 部件的库 (.dll) 和应用程序 (.exe) 文件。 Mefx 的主要用途是为开发人员提供一种无需向应用程序本身添加繁琐的跟踪代码即可诊断其 MEF 应用程序中组合失败情况的方法。 它还可用于帮助你了解第三方所提供库中的部件。 本主题介绍如何使用 Mefx，并提供其语法参考。  
   
 <a name="getting_mefx"></a>   
 ## <a name="getting-mefx"></a>获取 Mefx  
- 在 GitHub 上提供 Mefx 了[Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0)。 只需下载并解压缩该工具。  
+ 可在 GitHub 的 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0) 上获取 Mefx。 只需下载并解压缩该工具。  
   
 <a name="basic_syntax"></a>   
 ## <a name="basic-syntax"></a>基本语法  
@@ -116,7 +117,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
 >  在大多数情况下，Mefx 将能够诊断级联失败的根源。 但是，在以编程方式将部件添加到容器的情况下，在涉及层次结构容器的情况下，或者在涉及自定义 `ExportProvider` 实现的情况下，Mefx 将不能诊断原因。 一般情况下，因尽可能避免前面所述的各种情况，因为失败原因通常很难诊断。  
   
 <a name="white_lists"></a>   
-## <a name="white-lists"></a>允许列表  
+## <a name="white-lists"></a>白名单  
  使用 `/whitelist` 选项可以指定一个文本文件，其中列出预期将被拒绝的部件。 意外的拒绝则将被标记出来。 在分析不完整的库或分析缺少某些依赖关系的子库时，这将很有帮助。 `/whitelist` 选项可应用于 `/rejected` 或 `/causes` 操作。  
   
  请考虑名为 test.txt 且包含文本“ClassLibrary1.ChainOne”的文件。 如果在前面的示例中将 `/rejected` 操作用于 `/whitelist` 选项，它将生成以下输出：  

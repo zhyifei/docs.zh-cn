@@ -7,11 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 24d0f1366a8e4309bbfb5b548af7407de50eaf76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1733f3fc66d79dafb9bc6f983773f043be6c1006
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483468"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 测试 .NET Core 类库
 
@@ -24,12 +25,12 @@ ms.lasthandoff: 05/04/2018
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. 在“解决方案资源管理器”中，打开“ClassLibraryProjects”解决方案节点的上下文菜单，再依次选择“添加” > “新项目”。
 
-1. 在“添加新项目”对话框中，选择“Visual C#”节点。 然后，依次选择“.NET Core”节点和“单元测试项目(.NET Core)”项目模板。 在“名称”文本框中，输入项目名称“StringLibraryTest”。 选择“确定”，创建单元测试项目。
+1. 在“添加新项目”对话框中，选择“Visual C#”节点。 然后，依次选择“.NET Core”节点和“MSTest 测试项目(.NET Core)”项目模板。 在“名称”文本框中，输入项目名称“StringLibraryTest”。 选择“确定”，创建单元测试项目。
 
    ![“添加新项目”对话框](./media/testing-library-with-visual-studio/testproject.png)
 
    > [!NOTE]  
-   > 除了单元测试项目之外，还可以使用 Visual Studio 为 .NET Core 创建 xUnit 测试项目。
+   > 除了 MSTest 测试项目之外，还可以使用 Visual Studio 为 .NET Core 创建 xUnit 测试项目。
 
 1. 此时，Visual Studio 会创建项目，并在代码窗口中打开 UnitTest1.cs 文件。
 
@@ -53,12 +54,12 @@ ms.lasthandoff: 05/04/2018
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
 1. 在“解决方案资源管理器”中，打开“ClassLibraryProjects”解决方案节点的上下文菜单，再依次选择“添加” > “新项目”。
 
-1. 在“添加新项目”对话框中，选择“Visual Basic”节点。 然后，依次选择“.NET Core”节点和“单元测试项目(.NET Core)”项目模板。 在“名称”文本框中，输入项目名称“StringLibraryTest”。 选择“确定”，创建单元测试项目。
+1. 在“添加新项目”对话框中，选择“Visual Basic”节点。 然后，依次选择“.NET Core”节点和“MSTest 测试项目(.NET Core)”项目模板。 在“名称”文本框中，输入项目名称“StringLibraryTest”。 选择“确定”，创建单元测试项目。
 
    ![“添加新项目”对话框](./media/testing-library-with-visual-studio/vb-testproject.png)
 
    > [!NOTE]  
-   > 除了单元测试项目之外，还可以使用 Visual Studio 为 .NET Core 创建 xUnit 测试项目。
+   > 除了 MSTest 测试项目之外，还可以使用 Visual Studio 为 .NET Core 创建 xUnit 测试项目。
 
 1. 此时，Visual Studio 会创建项目，并在代码窗口中打开 UnitTest1.vb 文件。
 

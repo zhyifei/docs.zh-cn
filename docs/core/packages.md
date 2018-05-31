@@ -4,11 +4,12 @@ description: 了解包、元包和框架的术语。
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 915ccadbb4d2cca50fd1caa53d90aa05d83d9378
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472797"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>包、元包和框架
 
@@ -96,9 +97,10 @@ ms.lasthandoff: 05/04/2018
 
 其次，是这个双向关系中的资产选择。 包可以包含多个框架的资产。 对于一组包和/或元包的引用，框架需要决定它应选择哪些资产，例如，是 `net46` 还是 `netstandard1.3`。 选择正确的资产很重要。 例如，`net46` 资产可能并不与 .NET Framework 4.0 或 .NET Core 1.0 兼容。
 
-![基于包的框架组合](./media/packages/package-framework.png)
 
-可以在上图中看到这种关系。 *API* 选择框架作为目标并定义了框架。 而*框架*用于*资产选择*。 *资产*实现了 API。
+可以在下图中看到这种关系。 *API* 选择框架作为目标并定义了框架。 而*框架*用于*资产选择*。 *资产*实现了 API。
+
+![基于包的框架组合](./media/packages/package-framework.png)
 
 在 .Net Core 基础之上，基于包的框架主要有两个：
 

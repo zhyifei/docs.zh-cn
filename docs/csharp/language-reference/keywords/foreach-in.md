@@ -1,6 +1,6 @@
 ---
 title: foreach，in（C# 参考）
-ms.date: 10/11/2017
+ms.date: 05/24/2018
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,61 +9,44 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: c0b1481988a2e3199fc6d06ca30cb5194ab2f44c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: b6b7dc0a4d3970ddfbbb6635ccebbbd5b75671e4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549370"
 ---
 # <a name="foreach-in-c-reference"></a>foreach，in（C# 参考）
 
-`foreach` 语句针对实现 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 接口的数组或集合中的每个元素重复一组嵌入语句。 [foreach 语句](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)用于循环访问集合以获取所需信息，但不能用于添加或删除源集合中的项，以避免不可预知的副作用。 如果需要添加或删除源集合中的项，请使用 [for](for.md) 循环。
-  
- 为数组或集合中的每个元素继续执行嵌入的语句。 为集合中的所有元素完成迭代后，控制将传递给 `foreach` 块之后的下一语句。
-  
- 在 `foreach` 块中的任何点上，可以使用[中断](break.md)关键字中断该循环，或者可以使用[继续](continue.md)关键字单步执行到循环中的下一次迭代。
+`foreach` 语句为类型实例中实现 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 接口的每个元素执行语句或语句块。 `foreach` 语句不局限于这些类型，它可应用于满足以下条件的任何类型的实例：
 
- `foreach` 循环还可以通过 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 语句退出。
+- 具有公共无参数 `GetEnumerator` 方法，其返回类型为类、结构或接口类型。
+- `GetEnumerator` 方法的返回类型具有公共 `Current` 属性和公共无参数 `MoveNext` 方法（其返回类型为 <xref:System.Boolean>）。
 
- 有关 `foreach` 关键字和代码示例的详细信息，请参阅下列主题：  
+在 `foreach` 语句块中的任何点上，可以使用 [break](break.md) 关键字中断循环，或者可以使用 [continue](continue.md) 关键字继续执行到循环中的下一次迭代。 还可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 语句退出 `foreach` 循环。
 
- [对数组使用 foreach](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+## <a name="examples"></a>示例
 
- [如何：使用 foreach 访问集合类](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-## <a name="example"></a>示例
+以下示例介绍 `foreach` 语句的使用，其中包含实现 <xref:System.Collections.Generic.IEnumerable%601> 接口的 <xref:System.Collections.Generic.List%601> 类型的实例：
 
-下面的代码演示了三个示例：
+[!code-csharp-interactive[list example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#1)]
 
-> [!TIP]
-> 可以修改这些示例来测试语法，尝试与所需用例更相近的不同用法。 按“运行”以运行该代码，然后编辑并再按一次“运行”。
+下一个示例使用 `foreach` 语句，其中包含 <xref:System.Span%601?displayProperty=nameWithType> 类型的实例，该实例不实现任何接口：
 
--   显示整数数组内容的典型 `foreach` 循环
+[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L12-L26)]
-
--   执行相同操作的 [for](../../../csharp/language-reference/keywords/for.md) 循环
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L31-L46)]
-
--   维护数组中元素数计数的 `foreach` 循环
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L51-L69)]
- 
 ## <a name="c-language-specification"></a>C# 语言规范
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-[foreach 语句（C# 语言规范）](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
-
-[C# 参考](../index.md)
-
-[C# 编程指南](../../programming-guide/index.md)
-
-[C# 关键字](index.md)
-
-[迭代语句](iteration-statements.md)
-
-[for](for.md)
+[foreach 语句（C# 语言规范）](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)  
+[对数组使用 foreach](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+[for](for.md)  
+[迭代语句](iteration-statements.md)  
+[C# 关键字](index.md)  
+[C# 参考](../index.md)  
+[C# 编程指南](../../programming-guide/index.md)  

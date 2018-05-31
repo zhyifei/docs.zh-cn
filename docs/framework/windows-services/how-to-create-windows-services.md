@@ -1,30 +1,21 @@
 ---
-title: "如何：创建 Windows 服务"
-ms.custom: 
+title: 如何：创建 Windows 服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-caps.latest.revision: "18"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517857"
 ---
 # <a name="how-to-create-windows-services"></a>如何：创建 Windows 服务
-当你创建服务时，你可以使用 Visual Studio 项目模板中，名**Windows 服务**。 通过引用适当的类和命名空间、为服务设置来自基类的继承和替代你可能想要替代的几个方法，此模板自动为你完成了许多工作。  
+创建服务时，可使用名为“Windows 服务”的 Visual Studio 项目模板。 通过引用适当的类和命名空间、为服务设置来自基类的继承和替代你可能想要替代的几个方法，此模板自动为你完成了许多工作。  
   
 > [!WARNING]
 >  Visual Studio 的速成版中未提供 Windows 服务项目模板。  
@@ -39,14 +30,14 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-create-a-windows-service-application"></a>要创建 Windows 服务应用程序  
   
-1.  创建**Windows 服务**项目。  
+1.  创建“Windows 服务”项目。  
   
     > [!NOTE]
-    >  有关不使用模板的情况下编写服务的说明，请参阅[如何： 编写服务以编程方式](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)。  
+    >  有关不使用模板编写服务的说明，请参阅[如何：以编程方式编写服务](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)。  
   
-2.  在**属性**窗口中，设置<xref:System.ServiceProcess.ServiceBase.ServiceName%2A>为你的服务的属性。  
+2.  在“属性”窗口中，为服务设置 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性。  
   
-     ![设置 ServiceName 属性。] (../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
+     ![设置 ServiceName 属性。](../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
   
     > [!NOTE]
     >  <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性的值必须始终与记录在安装程序类中的名称相匹配。 如果更改此属性，你还必须更新安装程序类的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性。  
@@ -58,19 +49,19 @@ ms.lasthandoff: 12/22/2017
     |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` 表示服务将接受请求停止运行；`false` 将阻止服务被停止。|  
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` 表示当服务所在的计算机关机时服务需要接受通知，启用它来调用 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 过程。|  
     |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` 表示服务将接受请求暂停或恢复运行；`false` 将阻止服务被暂停或恢复。|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True`若要指示服务可处理的计算机的电源状态; 的更改通知`false`以防止该服务正在通知这些更改。|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` 将在你的服务执行操作时向应用程序事件日志写入信息条目；`false` 将禁用该功能。 有关详细信息，请参阅[How to： 日志信息关于服务](../../../docs/framework/windows-services/how-to-log-information-about-services.md)。 **注意：**默认情况下，<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>设置为`true`。|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` 表示服务可处理计算机电源状态更改的通知；`false` 将阻止向服务通知这些更改。|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` 将在你的服务执行操作时向应用程序事件日志写入信息条目；`false` 将禁用该功能。 有关详细信息，请参阅[如何：记录关于服务的信息](../../../docs/framework/windows-services/how-to-log-information-about-services.md). 注意：默认情况下，将 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 设置为 `true`。|  
   
     > [!NOTE]
-    >  当<xref:System.ServiceProcess.ServiceBase.CanStop%2A>或<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>设置为`false`、**服务控制管理器**将禁用相应的菜单选项，来停止、 暂停或继续服务。  
+    >  当 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 或 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 设置为 `false` 时，“服务控制管理器”将禁用相应的菜单选项来停止、暂停或继续该服务。  
   
 4.  访问代码编辑器，并填写你想要对 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 过程的处理。  
   
 5.  替代你想要定义功能的任何其他方法。  
   
-6.  添加服务应用程序所必需的安装程序。 有关详细信息，请参阅[如何： 添加到你的服务应用程序的安装程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+6.  添加服务应用程序所必需的安装程序。 有关详细信息，请参阅[如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
-7.  通过选择生成你的项目**生成解决方案**从**生成**菜单。  
+7.  通过从“生成”菜单选择“生成解决方案”来生成项目。  
   
     > [!NOTE]
     >  不要通过按 F5 来运行你的项目 — 你无法通过这种方式运行服务项目。  

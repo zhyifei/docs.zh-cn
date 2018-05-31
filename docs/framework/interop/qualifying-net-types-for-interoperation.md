@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: baa5b9f250fe7117838f936b09b050ba500b7209
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389039"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>为互操作限定 .NET 类型
 若要向 COM 应用程序公开程序集中的类型，请考虑 COM 互操作在设计时的需求。 如果符合以下准则，托管类型（类、接口、结构和枚举）将与 COM 类型无缝集成：  
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/04/2018
   
      尽管 COM 互操作提供了一种机制，用于自动生成包含类的所有成员及其基类成员的接口，但最好还是提供显式接口。 自动生成的接口称为类接口。 有关指南，请参阅[类接口简介](com-callable-wrapper.md#introducing-the-class-interface)。  
   
-     可以使用 Visual Basic、 C# 和 c + + 将接口定义合并在代码中，而无需使用接口定义语言 (IDL) 或它的等效项。 有关语法的详细信息，请参见语言文档。  
+     可以使用 Visual Basic、C# 和 C++ 将接口定义合并在代码中，而无需使用接口定义语言 (IDL) 或其等效语言。 有关语法的详细信息，请参见语言文档。  
   
 -   托管的类型必须是公共的。  
   

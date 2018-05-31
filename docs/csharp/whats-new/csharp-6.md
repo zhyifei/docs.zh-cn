@@ -3,11 +3,12 @@ title: C# 6 中的新增功能 - C# 指南
 description: 了解 C# 版本 6 中的新增功能
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 00aeb3ed940acfca748a1a9eb876fd0133baf6c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458000"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 中的新增功能
 
@@ -351,7 +352,7 @@ C# 5 对于可放置 `await` 表达式的位置有若干限制。
 
 此功能意味着，可以使用与多个版本中已有的序列容器语法类似的语法初始化关联容器。
 
-### <a name="extension-add-methods-in-collection-initializers"></a>集合初始值设定项中的扩展 `Add` 方法
+## <a name="extension-add-methods-in-collection-initializers"></a>集合初始值设定项中的扩展 `Add` 方法
 
 使集合初始化更容易的另一个功能是对 `Add` 方法使用扩展方法。 添加此功能的目的是进行 Visual Basic 的奇偶校验。 
 
@@ -370,10 +371,7 @@ C# 5 对于可放置 `await` 表达式的位置有若干限制。
 
 [!code-csharp[ExtensionAdd](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAdd)]
 
-你对此功能执行的操作是通过创建扩展方法，将把项添加到集合的任何方法映射到一个名为 `Add` 方法： 
-
-[!code-csharp[Enrollment](../../../samples/snippets/csharp/new-in-6/enrollment.cs#Enrollment)]
-[!code-csharp[ExtensionAddSample](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAddSample)]
+你对此功能执行的操作是通过创建扩展方法，将把项添加到集合的任何方法映射到一个名为 `Add` 方法。
 
 ## <a name="improved-overload-resolution"></a>改进了重载解析
 

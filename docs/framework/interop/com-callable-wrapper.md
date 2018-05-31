@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21f7b0d56a788b4161fb7e99899b4dd15a434152
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394961"
 ---
 # <a name="com-callable-wrapper"></a>COM 可调用包装
 COM 客户端调用 .NET 对象时，公共语言运行时将创建托管对象和该对象的 COM 可调用包装器 (CCW)。 无法直接引用 .NET 对象，COM 客户端使用 CCW 作为托管对象的代理。  
@@ -38,12 +39,12 @@ COM 客户端调用 .NET 对象时，公共语言运行时将创建托管对象�
   
 ## <a name="simulating-com-interfaces"></a>模拟 COM 接口
 
-CCW 公开所有公共、 COM 可见接口、 数据类型和返回值对 COM 客户端与基于接口的交互的 COM 的强制一致的方式。 对于 COM 客户端而言，调用 .NET Framework 对象上的方法与调用 COM 对象上的方法相同。  
+CCW 公开所有公共的 COM 可见接口和数据类型，并以与 COM 对基于接口的交互的强制一致的方式向 COM 客户端返回值。 对于 COM 客户端而言，调用 .NET Framework 对象上的方法与调用 COM 对象上的方法相同。  
   
  若要创建这一无缝的方法，CCW 生成传统 COM 接口，如 IUnknown 和 IDispatch。 如下图所示，CCW 保持对其包装的 .NET 对象的单一引用。 COM 客户端和 .NET 对象通过代理和 CCW 的存根构造进行相互交互。  
   
  ![COM 接口](./media/ccwwithinterfaces.gif "ccwwithinterfaces")  
-COM 接口和 COM 可调用包装  
+COM 接口和 COM 可调用包装器  
   
  除公开由托管环境中的类显式实现的接口外，.NET Framework 代表对象提供对下表中列出的 COM 接口的实现。 .NET 类可以通过提供其自身对这些接口的实现而替代默认行为。 但是，运行时始终提供 IUnknown 和 IDispatch 接口的实现。  
   
@@ -60,15 +61,15 @@ COM 接口和 COM 可调用包装
   
 |接口|描述|  
 |---------------|-----------------|  
-|(\_*Classname*) 类接口|该接口由运行时公开但未显式定义，它公开托管对象上显式公开的所有公共接口、方法、属性和字段。|  
+|(\_classname) 类接口|该接口由运行时公开但未显式定义，它公开托管对象上显式公开的所有公共接口、方法、属性和字段。|  
 |**IConnectionPoint** 和 **IconnectionPointContainer**|以基于委托的事件（用于注册事件订阅服务器的接口）为源的对象的接口。|  
 |**IdispatchEx**|如果类实现 IExpando，则为由运行时提供的接口。 IDispatchEx 接口是 IDispatch 接口的扩展，与 IDispatch 不同，它可枚举、添加、删除和以区分大小的方式调用成员。|  
 |**IEnumVARIANT**|集合类型类的接口，如果类实现 IEnumerable，则该接口将枚举集合中的对象。|  
   
 ## <a name="introducing-the-class-interface"></a>类接口简介  
- 类接口，未在托管代码中显式定义，是公开 .NET 对象中显式公开的所有公共方法、属性、字段和事件的接口。 此接口可以是双重接口或仅支持调度的接口。 类接口接收 .NET 类本身的名称（前面带下划线）。 例如，对于类 Mammal，类接口是\_Mammal。  
+ 类接口，未在托管代码中显式定义，是公开 .NET 对象中显式公开的所有公共方法、属性、字段和事件的接口。 此接口可以是双重接口或仅支持调度的接口。 类接口接收 .NET 类本身的名称（前面带下划线）。 例如，对于类 Mammal，类接口为 \_Mammal。  
   
- 对于派生类，类接口也公开基类的所有公共方法、属性和字段。 派生类还公开各基类的类接口。 例如，如果类 Mammal 扩展类 MammalSuperclass，后者本身扩展 System.Object，对 COM 客户端.NET 对象公开三个类接口名为\_Mammal， \_MammalSuperclass，和\_对象。  
+ 对于派生类，类接口也公开基类的所有公共方法、属性和字段。 派生类还公开各基类的类接口。 例如，如果类 Mammal 扩展类 MammalSuperclass（MammalSuperclass 类本身扩展 System.Object），则 .NET 对象向 COM 客户端公开名为 \_Mammal、\_MammalSuperclass 和 \_Object 的三个类接口。  
   
  例如，请考虑以下 .NET 类：  
   
@@ -147,7 +148,7 @@ public class LoanApp : IExplicit {
   
  ClassInterfaceType.None 值防止类元数据导出到类型库时生成类接口。 在前面的示例中，COM 客户端只能通过 `IExplicit` 接口访问 `LoanApp` 类。  
   
-### <a name="avoid-caching-dispatch-identifiers-dispids"></a>避免缓存调度标识符 (Dispid)
+### <a name="avoid-caching-dispatch-identifiers-dispids"></a>避免缓存调度标识符 (DispId)
  对于脚本化客户端、Microsoft Visual Basic 6.0 客户端或不缓存接口成员的 DispId 的任何后期绑定客户端，可接受使用类接口。 DispId 标识接口成员，以启用后期绑定。  
   
  对于类接口，基于接口中成员的位置生成 DispId。 如果更改了成员顺序并将类导出到类型库中，则将改变类接口中生成的 DispId。  

@@ -4,11 +4,12 @@ description: 支持的 Linux 版本和 .NET Core 依赖项，用于在 Linux 计
 author: jralexander
 ms.author: johalex
 ms.date: 05/08/2018
-ms.openlocfilehash: 41656bf8f18c2b66c35f0a65e4af0949db4464f9
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 4890f682ee2d0b55dc5059d8f1d3091def07a8a5
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483497"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先决条件
 
@@ -65,29 +66,36 @@ ms.lasthandoff: 05/10/2018
 
 Ubuntu 发行版本需要安装以下库：
 
-* libunwind8
 * liblttng-ust0
 * libcurl3
 * libssl1.0.0
-* libuuid1
 * libkrb5-3
 * zlib1g
 * libicu52（针对 14.x）
 * libicu55（针对 16.x）
 * libicu57（针对 17.x）
+* libicu60（针对 18.x）
+
+对于 .NET Core 2.1 之前的版本，还需要以下依赖项：
+
+* libunwind8
+* libuuid1
 
 ### <a name="centos"></a>CentOS
 
 CentOS 发行版本需要安装以下库：
 
-* libunwind
 * lttng-ust
 * libcurl
 * openssl-libs
-* libuuid
 * krb5-libs
 * libicu
 * zlib
+
+对于 .NET Core 2.1 之前的版本，还需要以下依赖项：
+
+* libunwind
+* libuuid
 
 有关依赖项的详细信息，请参阅[独立式 Linux 应用程序](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)。
 

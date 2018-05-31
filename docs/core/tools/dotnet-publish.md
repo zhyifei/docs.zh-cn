@@ -4,11 +4,12 @@ description: dotnet publish 命令可将 .NET Core 项目发布到目录。
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.openlocfilehash: f4c422eab20f5fe2d1b0c09133953f22a539474e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e7ce5ce1240f03f53f6e120dfce53d15917425f
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472625"
 ---
 # <a name="dotnet-publish"></a>dotnet 发布
 
@@ -89,8 +90,8 @@ dotnet publish [-h|--help]
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 *./bin/[configuration]/[framework]/* 或对于独立部署，将默认为 *./bin/[configuration]/[framework]/[runtime]*。
-如果提供了相对路径，则生成的输出目录与项目文件位置相关，而与当前工作目录不相关。
+指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 ./bin/[configuration]/[framework]/publish/ 或对于独立部署，将默认为 ./bin/[configuration]/[framework]/[runtime]/publish/。
+如果路径是相对的，则生成的输出目录与项目文件位置相关，而与当前工作目录不相关。
 
 `--self-contained`
 
@@ -128,8 +129,8 @@ dotnet publish [-h|--help]
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 *./bin/[configuration]/[framework]/* 或对于独立部署，将默认为 *./bin/[configuration]/[framework]/[runtime]*。
-如果提供了相对路径，则生成的输出目录与项目文件位置相关，而与当前工作目录不相关。
+指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 ./bin/[configuration]/[framework]/publish/ 或对于独立部署，将默认为 ./bin/[configuration]/[framework]/[runtime]/publish/。
+如果路径是相对的，则生成的输出目录与项目文件位置相关，而与当前工作目录不相关。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 

@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94377fb2079689e7b6af2c94fa24ca2214a5c729
 ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312178"
 ---
 # <a name="default-marshaling-for-objects"></a>对象的默认封送处理
 可将类型化为 <xref:System.Object?displayProperty=nameWithType> 的参数和字段作为下列任一类型向非托管代码公开：  
@@ -168,7 +169,7 @@ struct ObjectHolder {
 |<xref:System.String?displayProperty=nameWithType>|VT_BSTR|  
 |<xref:System.IntPtr?displayProperty=nameWithType>|VT_INT|  
 |<xref:System.UIntPtr?displayProperty=nameWithType>|VT_UINT|  
-|<xref:System.Array?displayProperty=nameWithType>|VT_ARRAY|  
+|<xref:System.Array?displayProperty=nameWithType>|**VT_ARRAY**|  
   
  以下代码示例使用前一示例中定义的 `MarshalObject` 接口，演示如何将各种类型的变体传递给 COM 服务器。  
   
@@ -247,7 +248,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |TypeCode.String|VT_BSTR|  
 |不支持。|VT_INT|  
 |不支持。|VT_UINT|  
-|不支持。|VT_ARRAY|  
+|不支持。|**VT_ARRAY**|  
 |不支持。|VT_RECORD|  
 |不支持。|VT_CY|  
 |不支持。|VT_VARIANT|  
@@ -281,7 +282,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |VT_BSTR|<xref:System.String?displayProperty=nameWithType>|  
 |VT_INT|<xref:System.Int32?displayProperty=nameWithType>|  
 |VT_UINT|<xref:System.UInt32?displayProperty=nameWithType>|  
-|VT_ARRAY | VT_****\*|<xref:System.Array?displayProperty=nameWithType>|  
+|**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|  
 |VT_CY|<xref:System.Decimal?displayProperty=nameWithType>|  
 |VT_RECORD|对应装箱的值类型。|  
 |VT_VARIANT|不支持。|  

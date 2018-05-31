@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
 ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457377"
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
@@ -43,7 +44,7 @@ BSTR MethodOne (BSTR b) {
  运行时始终使用 CoTaskMemFree 方法来释放内存。 如果正在使用的内存未通过 **CoTaskMemAlloc** 方法分配，则必须使用 **IntPtr** 并通过适当的方法手动释放内存。 同样，可在永不应释放内存的情况下避免自动释放内存，例如，从 kernel32.dll（它将指针返回内核内存）使用 GetCommandLine 函数时。 有关手动释放内存的详细信息，请参阅[缓冲区示例](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100))。  
   
 ## <a name="default-marshaling-for-classes"></a>类的默认封送处理  
- 类仅能由 COM 互操作封送，并总是作为接口封送。 在某些情况下用来将该类封送的接口称为类接口。 有关重写具有所选的接口的类接口的信息，请参阅[类接口简介](com-callable-wrapper.md#introducing-the-class-interface)。  
+ 类仅能由 COM 互操作封送，并总是作为接口封送。 在某些情况下用来将该类封送的接口称为类接口。 有关使用所选接口替代类接口的信息，请参阅[类接口简介](com-callable-wrapper.md#introducing-the-class-interface)。  
   
 ### <a name="passing-classes-to-com"></a>向 COM 传递类  
  当托管类传递给 COM 时，互操作封送拆收器自动使用 COM 代理包装类，并将由代理所生成的类接口传递到 COM 方法调用。 然后，代理委托对类接口的所有调用返回托管对象。 代理还公开其他不由类显式实现的接口。 代理代表类自动实现接口，如 IUnknown 和 IDispatch。  
@@ -345,7 +346,7 @@ interface _Graphics {
 }  
 ```  
   
- 当通过 COM 接口进行封送处理时，使用用于封送值和封送对平台调用的调用的引用的规则。 例如，当 `Point` 值类型的实例从 .NET Framework 传递到 COM 时，则由值传递 `Point`。 如果 `Point` 值类型由引用传递，则在堆栈上传递指向 `Point` 的指针。 互操作封送处理程序不支持更高级别的间接寻址 (**点** \* \*) 的两个方向。  
+ 当通过 COM 接口进行封送处理时，使用用于封送值和封送对平台调用的调用的引用的规则。 例如，当 `Point` 值类型的实例从 .NET Framework 传递到 COM 时，则由值传递 `Point`。 如果 `Point` 值类型由引用传递，则在堆栈上传递指向 `Point` 的指针。 互操作封送拆收器不支持任一方向更高级别的间接寻址 (Point \*\*)。  
   
 > [!NOTE]
 >  将 <xref:System.Runtime.InteropServices.LayoutKind> 枚举值设置为显式的结构无法用于 COM 互操作，因为导出的类型库不能表达显式布局。  

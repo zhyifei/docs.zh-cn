@@ -3,11 +3,12 @@ title: “分支和循环”教程 - C# 本地快速入门
 description: 在“分支和循环”本快速入门教程中，编写 C# 代码，以研究支持条件分支和循环重复执行语句的语言语法。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 711cc9b40284076d28b5003935bbbbb77dc36664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a25ea7f266405a017f6f4576659195b2ac1afbf4
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457899"
 ---
 # <a name="branches-and-loops"></a>分支和循环
 
@@ -39,7 +40,7 @@ int b = 3;
 再次键入 `dotnet run`。 由于答案小于 10，因此什么也没有打印出来。 要测试的条件为 false。 没有任何可供执行的代码，因为仅为 `if` 语句编写了一个可能分支，即 true 分支。
 
 > [!TIP]
-> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 仔细查看错误输出和生成错误的代码。 Compler 错误通常可帮助你找出问题。
+> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 仔细查看错误输出和生成错误的代码。 编译器错误通常可帮助你找出问题。
 
 第一个示例展示了 `if` 和布尔类型的用途。 布尔变量可以包含下列两个值之一：`true` 或 `false`。 C# 为布尔变量定义了特殊类型 `bool`。 `if` 语句检查 `bool` 的值。 如果值为 `true`，执行 `if` 后面的语句。 否则，跳过上述语句。
 

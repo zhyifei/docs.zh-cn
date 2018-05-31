@@ -12,9 +12,10 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520508"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>演练：在组件设计器中创建 Windows 服务应用程序
 本文演示了如何在 Visual Studio 中创建向事件日志中写入消息的简单 Windows 服务应用程序。 下面是创建和使用你的服务所执行的基本步骤：  
@@ -68,11 +69,11 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-add-custom-event-log-functionality-to-your-service"></a>将自定义事件日志功能添加到服务中  
   
-1.  在 **“解决方案资源管理器”**中，打开 **MyNewService.cs** 或 **MyNewService.vb**的上下文菜单，然后选择 **“查看设计器”**。  
+1.  在 **“解决方案资源管理器”** 中，打开 **MyNewService.cs** 或 **MyNewService.vb**的上下文菜单，然后选择 **“查看设计器”**。  
   
-2.  从 **工具箱** 的 **“组件”**部分，将 <xref:System.Diagnostics.EventLog> 组件拖动到设计器中。  
+2.  从 **工具箱** 的 **“组件”** 部分，将 <xref:System.Diagnostics.EventLog> 组件拖动到设计器中。  
   
-3.  在 **“解决方案资源管理器”**中，打开 **MyNewService.cs** 或 **MyNewService.vb**的上下文菜单，然后选择 **“查看代码”**。  
+3.  在 **“解决方案资源管理器”** 中，打开 **MyNewService.cs** 或 **MyNewService.vb**的上下文菜单，然后选择 **“查看代码”**。  
   
 4.  在 **类中添加“eventLog”**`MyNewService` 对象的声明，位置紧随声明 `components` 变量的行后：  
   
@@ -91,7 +92,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
      [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]  
   
-     服务应用程序设计为长时间运行的，所以它通常轮询或监视系统中的情况。 监视是在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中设置的。 但是， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 实际上不进行监视。 服务的操作开始之后， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法必须返回到操作系统。 它不能始终循环或阻止。 若要设置简单的轮询机制，可以使用<xref:System.Timers.Timer?displayProperty=nameWithType>，如下所示的组件： 在<xref:System.ServiceProcess.ServiceBase.OnStart%2A>方法，该组件上，设置参数，然后设置<xref:System.Timers.Timer.Enabled%2A>属性`true`。 计时器定期在你的代码中引发事件，此时你的服务可以进行监视。 你可以使用以下代码来执行该操作：  
+     服务应用程序设计为长时间运行的，所以它通常轮询或监视系统中的情况。 监视是在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中设置的。 但是， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 实际上不进行监视。 服务的操作开始之后， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法必须返回到操作系统。 它不能始终循环或阻止。 若要设置简单的轮询机制，可以使用 <xref:System.Timers.Timer?displayProperty=nameWithType> 组件，如下所示：在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中，在组件上设置参数，然后将 <xref:System.Timers.Timer.Enabled%2A> 属性设置为 `true`。 计时器定期在你的代码中引发事件，此时你的服务可以进行监视。 你可以使用以下代码来执行该操作：  
   
     ```csharp  
     // Set up a timer to trigger every minute.  
@@ -108,7 +109,7 @@ ms.lasthandoff: 05/04/2018
     AddHandler timer.Elapsed, AddressOf Me.OnTimer  
     timer.Start()  
     ```  
-     将成员变量添加到类。 它将包含要写入到事件日志中的下一步事件的标识符。
+     向类添加一个成员变量。 它将包含要写入事件日志的下一个事件的标识符。
 
     ```csharp
     private int eventId = 1;
@@ -278,7 +279,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-create-the-installers-for-your-service"></a>为服务创建安装程序  
   
-1.  在 **“解决方案资源管理器”**中，打开 **MyNewService.cs** 或 **MyNewService.vb**的上下文菜单，然后选择 **“查看设计器”**。  
+1.  在 **“解决方案资源管理器”** 中，打开 **MyNewService.cs** 或 **MyNewService.vb**的上下文菜单，然后选择 **“查看设计器”**。  
   
 2.  单击设计器的背景以选择服务本身，而不是它的任何内容。  
   
@@ -286,7 +287,7 @@ ms.lasthandoff: 05/04/2018
   
      默认情况下，向你的项目添加一个包含两个安装程序的组件类。 将该组件命名为 **ProjectInstaller**，它包含的安装程序分别是服务的安装程序和服务关联进程的安装程序。  
   
-4.  在 **ProjectInstaller** 的 **“设计”**视图中，选择 **serviceInstaller1** （对于 Visual C# 项目）或 **ServiceInstaller1** （对于 Visual Basic 项目）。  
+4.  在 **ProjectInstaller** 的 **“设计”** 视图中，选择 **serviceInstaller1** （对于 Visual C# 项目）或 **ServiceInstaller1** （对于 Visual Basic 项目）。  
   
 5.  在“属性”  窗口中，确保 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 属性已设置为 **MyNewService**。  
   
@@ -296,7 +297,7 @@ ms.lasthandoff: 05/04/2018
   
 8.  将 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 属性设置为 <xref:System.ServiceProcess.ServiceStartMode.Automatic>。  
   
-     ![为 Windows 服务的安装程序属性](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")  
+     ![Windows 服务的安装程序属性](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")  
   
 9. 在设计器中，选择 **serviceProcessInstaller1** （对于 Visual C# 项目）或 **ServiceProcessInstaller1** （对于 Visual Basic 项目）。 将 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 属性设置为 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>。 这将使得在本地服务帐户上安装和运行该服务。  
   
@@ -405,7 +406,7 @@ End Sub
   
 #### <a name="to-build-your-service-project"></a>生成服务项目  
   
-1.  在 **“解决方案资源管理器”**中，打开项目的上下文菜单，然后选择 **“属性”**。 出现项目的属性页面。  
+1.  在 **“解决方案资源管理器”** 中，打开项目的上下文菜单，然后选择 **“属性”**。 出现项目的属性页面。  
   
 2.  在应用程序选项卡上，在 **“启动对象”** 列表中，选择 **MyNewService.Program**。  
   
@@ -429,7 +430,7 @@ End Sub
   
      如果服务成功安装，installutil.exe 将报告成功。 如果系统找不到 InstallUtil.exe,请确保它存在于你的计算机上。 此工具随 .NET Framework 安装到了 `%WINDIR%\Microsoft.NET\Framework[64]\`*framework_version*文件夹。 例如，32 位版本的 .NET Framework 4、4.5、4.5.1 和 4.5.2 的默认路径为 `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`。  
   
-     如果 installutil.exe 进程报告失败，请查看安装日志以找出原因。 默认情况下，该日志与服务可执行文件位于同一文件夹中。 如果安装可能会失败<xref:System.ComponentModel.RunInstallerAttribute>类上不存在`ProjectInstaller`类，否则该属性未设置为`true`，否则`ProjectInstaller`类不是`public`。  
+     如果 installutil.exe 进程报告失败，请查看安装日志以找出原因。 默认情况下，该日志与服务可执行文件位于同一文件夹中。 如果 `ProjectInstaller` 类上不存在 <xref:System.ComponentModel.RunInstallerAttribute> 类，或者该属性未设置为 `true`，或者 `ProjectInstaller` 类不是 `public`，则安装可能失败。  
   
      有关更多信息，请参见 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
@@ -442,7 +443,7 @@ End Sub
   
      你应该会看见 **MyNewService** 列于 **“服务”** 窗口中。  
   
-     ![在服务窗口中的 MyNewService。] (../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG "WindowsServices_ServicesWindow")  
+     ![“服务”窗口中的 MyNewService。](../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG "WindowsServices_ServicesWindow")  
   
 2.  在 **“服务”** 窗口中，打开你的服务的快捷菜，然后选择 **“启动”**。  
   
@@ -456,7 +457,7 @@ End Sub
   
 2.  找到 **MyNewLog** （或 **MyLogFile1**，如果你使用了可选步骤来添加命令行参数）列表并将它展开。 你会看到你的服务执行的两个操作（启动和停止）的条目。  
   
-     ![使用事件查看器以查看事件日志条目。] (../../../docs/framework/windows-services/media/windowsservices-eventviewer.PNG "WindowsServices_EventViewer")  
+     ![使用事件查看器查看事件日志条目。](../../../docs/framework/windows-services/media/windowsservices-eventviewer.PNG "WindowsServices_EventViewer")  
   
 <a name="BK_Uninstall"></a>   
 ## <a name="uninstalling-a-windows-service"></a>卸载 Windwos 服务  

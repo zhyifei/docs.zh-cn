@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b05ac1016710109110c3ff9d0d318a71fe0827f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393145"
 ---
 # <a name="default-marshaling-for-arrays"></a>数组的默认封送处理
 在完全由托管代码组成的应用程序中，公共语言运行时将数组类型作为 In/Out 参数传递。 而互操作封送拆收器默认将数组作为 In 参数传递。  
@@ -41,9 +42,9 @@ ms.lasthandoff: 05/04/2018
   
 |托管数组类型|元素类型|级别|下限|签名表示法|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|ELEMENT_TYPE_ARRAY|由类型指定。|由秩指定。|由界限视情况指定。|*类型* **[** *n*，*m* **]**|  
+|ELEMENT_TYPE_ARRAY|由类型指定。|由秩指定。|由界限视情况指定。|type [ n,m ]|  
 |ELEMENT_TYPE_CLASS|未知|未知|未知|**System.Array**|  
-|ELEMENT_TYPE_SZARRAY|由类型指定。|1|0|*类型* **[** *n* **]**|  
+|ELEMENT_TYPE_SZARRAY|由类型指定。|1|0|type [ n ]|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>非托管数组  
@@ -130,7 +131,7 @@ void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- 虽然可将 size_is 或 length_is 属性应用于接口定义语言 (IDL) 源中的数组，以便将大小传达给客户端，但是 Microsoft 接口定义语言 (MIDL) 编译器不会将该信息传送到类型库。 如果不知道大小，互操作封送处理服务就无法封送数组元素。 因此，将变长数组作为引用参数导入。 例如：  
+ 虽然可将 size_is 或 length_is 属性应用于接口定义语言 (IDL) 源中的数组，以便将大小传达给客户端，但是 Microsoft 接口定义语言 (MIDL) 编译器不会将该信息传送到类型库。 如果不知道大小，互操作封送处理服务就无法封送数组元素。 因此，将变长数组作为引用参数导入。 例如:  
   
  非托管的签名  
   
@@ -170,7 +171,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   将数组大小定义为常数。 例如：  
+-   将数组大小定义为常数。 例如:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -202,7 +203,7 @@ void New3(ref String ar);
  在与含有 LPSTR 或 LPWSTR 的结构数组相关的 OLE 自动化中，存在一项限制。  因此，必须将 String 字段作为 UnmanagedType.BSTR 封送。 否则，将引发异常。  
   
 ### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
- 将包含 ELEMENT_TYPE_SZARRAY 参数（一维数组）的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为给定类型的 SAFEARRAY。 同样的转换规则也适用于数组元素类型。 自动将托管数组的内容从托管内存复制到 SAFEARRAY 中。 例如：  
+ 将包含 ELEMENT_TYPE_SZARRAY 参数（一维数组）的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为给定类型的 SAFEARRAY。 同样的转换规则也适用于数组元素类型。 自动将托管数组的内容从托管内存复制到 SAFEARRAY 中。 例如:  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -225,7 +226,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  安全数组的秩始终为 1，下限始终为 0。 大小在运行时由所传递的托管数组的大小确定。  
   
- 还可以通过使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将数组作为 C 样式数组封送。 例如：  
+ 还可以通过使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将数组作为 C 样式数组封送。 例如:  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -260,7 +261,7 @@ HRESULT New(LPStr ar[]);
  虽然封送拆收器具有封送数组所需的长度信息，但通常会将数组长度作为单独的参数传递，以便将长度传达给被调用方。  
   
 ### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
- 将包含 ELEMENT_TYPE_ARRAY 参数的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为给定类型的 SAFEARRAY。 自动将托管数组的内容从托管内存复制到 SAFEARRAY 中。 例如：  
+ 将包含 ELEMENT_TYPE_ARRAY 参数的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为给定类型的 SAFEARRAY。 自动将托管数组的内容从托管内存复制到 SAFEARRAY 中。 例如:  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -283,7 +284,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  安全数组的秩、大小和界限在运行时由托管数组的特征确定。  
   
- 还可以通过应用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将数组作为 C 样式数组封送。 例如：  
+ 还可以通过应用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将数组作为 C 样式数组封送。 例如:  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -323,7 +324,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- 将包含 <xref:System.Array?displayProperty=nameWithType> 参数的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为 _Array 接口。 只能通过 _Array 接口的方法和属性访问托管数组的内容。 还可通过使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 System.Array 作为 SAFEARRAY 封送。 作为安全数组封送时，将数组元素视作变体封送。 例如：  
+ 将包含 <xref:System.Array?displayProperty=nameWithType> 参数的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为 _Array 接口。 只能通过 _Array 接口的方法和属性访问托管数组的内容。 还可通过使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 System.Array 作为 SAFEARRAY 封送。 作为安全数组封送时，将数组元素视作变体封送。 例如:  
   
 #### <a name="managed-signature"></a>托管的签名  
   

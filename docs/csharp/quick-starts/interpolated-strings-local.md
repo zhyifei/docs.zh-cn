@@ -5,11 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 80b7a2c39094f1101e714b47f0e77f0a7c4907f2
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472758"
 ---
 # <a name="string-interpolation"></a>字符串内插
 
@@ -48,13 +49,13 @@ Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 
 上一节使用了字符串内插将一个字符串插入到了另一字符串中。 不过，内插字符串表达式的结果可以是任何数据类型。 下面让我们在内插字符串中添加多种数据类型的值。
 
-在以下示例中，首先定义一个具有 `Name` [属性](../properties.md)和 `ToString` 方法的自定义数据类型 `Vegetable`。 客户端代码可以使用该方法来获取 `Vegetable` 实例的字符串表示形式。 在本示例中，`Vegetable.ToString` 方法返回在 `Vegetable` 构造函数处初始化的 `Name` 属性的值：
+在以下示例中，首先定义一个具有 `Name` [属性](../properties.md)和 `ToString` [方法](../methods.md)的[类](../programming-guide/classes-and-structs/classes.md)数据类型 `Vegetable`，它可以[替代](../language-reference/keywords/override.md) <xref:System.Object.ToString?displayProperty=nameWithType> 方法的行为。 [`public` 访问修饰符](../language-reference/keywords/public.md)使该方法可用于任何客户端代码以获取 `Vegetable` 实例的字符串表示形式。 在本示例中，`Vegetable.ToString` 方法返回在 `Vegetable` [构造函数](../programming-guide/classes-and-structs/constructors.md)处初始化的 `Name` 属性的值：
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-通过 `new` 关键字并为构造函数 `Vegetable` 提供一个名称参数来创建 `Vegetable` 类型的实例：
+然后，通过使用 [`new` 关键字](../language-reference/keywords/new-operator.md)并为构造函数 `Vegetable` 提供一个名称参数来创建 `Vegetable` 类的实例：
 
 ```csharp
 var item = new Vegetable("eggplant");
@@ -93,7 +94,7 @@ public class Program
 
 - 如果内插表达式的计算结果为 `null`，则会使用一个空字符串（"" 或 <xref:System.String.Empty?displayProperty=nameWithType>）。
 
-- 如果内插表达式的计算结果不是 `null`，通常会调用结果类型的 `ToString` 方法。 可以通过更新 `Vegetable.ToString` 方法的实现来进行测试。 甚至不用实现 `ToString` 方法，因为每个 C# 数据类型都有一些此方法的实现。 可通过注释掉示例中 `Vegetable.ToString` 方法的定义（在它前面添加注释符号 `//` 即可）来进行测试。 在输出中，字符串“eggplant”被替换为完全限定的类型名称（本示例中为“Vegetable”），这是 <xref:System.Object.ToString?displayProperty=nameWithType> 方法的默认行为。 对于枚举类型的 `ToString` 方法，其默认行为是返回在枚举定义处使用的值的字符串表示形式。
+- 如果内插表达式的计算结果不是 `null`，通常会调用结果类型的 `ToString` 方法。 可以通过更新 `Vegetable.ToString` 方法的实现来进行测试。 你甚至不用实现 `ToString` 方法，因为每个类型都有一些此方法的实现。 可通过注释掉示例中 `Vegetable.ToString` 方法的定义（在它前面添加注释符号 `//` 即可）来进行测试。 在输出中，字符串“eggplant”被替换为完全限定的类型名称（本示例中为“Vegetable”），这是 <xref:System.Object.ToString?displayProperty=nameWithType> 方法的默认行为。 对于枚举值的 `ToString` 方法，其默认行为是返回该值的字符串表示形式。
 
 在此示例的输出中，日期过于精确（eggplant 的价格不会以秒为单位变化），且价格值没有标明货币单位。 下一节将介绍如何通过控制表达式结果的字符串表示形式来解决这些问题。
 

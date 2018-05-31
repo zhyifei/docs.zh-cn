@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 744ce1f2810eee025f071cafaa71e473b6ed4c50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392848"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 基于 .NET Framework 的组件的免注册激活略复杂于 COM 组件的免注册激活。 安装需要两个清单：  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     有关清单元素和其属性的信息，请参阅[应用程序清单](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx)。  
+     有关清单元素及其属性的信息，请参阅[应用程序清单](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx)。  
   
 3.  标识清单的所有者。 以下示例中，`myComApp` 版本 1 拥有清单文件。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/04/2018
   
 5.  保存并命名清单文件。 应用程序清单的名称是程序集可执行文件的名称后加 .manifest 扩展名。 例如，myComApp.exe 的应用程序清单文件名称是 myComApp.exe.manifest。  
   
- 可在与 COM 应用程序相同的目录中安装应用程序清单。 或者，可将其作为资源添加到应用程序的 .exe 文件。 有关其他信息，有关详细信息，请参阅[有关的并行程序集](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx)。  
+ 可在与 COM 应用程序相同的目录中安装应用程序清单。 或者，可将其作为资源添加到应用程序的 .exe 文件。 有关其他信息，请参阅[关于并行程序集](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx)。  
   
 #### <a name="to-create-a-component-manifest"></a>创建组件清单  
   
@@ -173,6 +174,6 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="see-also"></a>请参阅  
  [免注册 COM 互操作](registration-free-com-interop.md)  
- [免注册 COM 互操作要求](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
- [将 COM 组件配置为免注册激活](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  
+ [免注册 COM 互操作的要求](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))  
+ [将 COM 组件配置为免注册激活](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))  
  [基于 .NET 组件的免注册激活：演练](https://msdn.microsoft.com/library/ms973915.aspx)

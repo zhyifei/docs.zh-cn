@@ -17,14 +17,15 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3166d6c95532706781188da0c56ebf9022038a50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388373"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用非托管 DLL 函数
 平台调用是一项服务，使托管代码能够调用动态链接库 (DLL) 中实现的非托管函数，例如 Win32 API 中的非托管函数。 此服务定位并调用导出的函数，并根据需要跨交互操作边界封送其自变量（整数、字符串、数组、结构等）。  
   
- 本部分介绍了与使用非托管的 DLL 函数关联的任务，并提供有关平台的详细信息调用。 除了以下任务，还提供了一般注意事项以及包含其他信息和示例的链接。  
+ 本部分介绍了与使用非托管 DLL 函数相关的任务，并提供有关平台调用的详细信息。 除了以下任务，还提供了一般注意事项以及包含其他信息和示例的链接。  
   
 #### <a name="to-consume-exported-dll-functions"></a>若要使用导出的 DLL 函数  
   

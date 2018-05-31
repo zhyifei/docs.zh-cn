@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32ee3babe054d55a45cc8826843252dba6aa2be7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390245"
 ---
 # <a name="registration-free-com-interop"></a>免注册 COM 互操作
 免注册 COM 互操作在不使用 Windows 注册表来存储程序集信息的情况下激活组件。 不是在部署过程中在计算机上注册组件，而是在设计时创建包含有关绑定和激活信息的 Win32 样式清单文件。 正是这些清单文件（而不是注册表项）指导对象的激活。  
@@ -44,11 +45,11 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>将 COM 组件配置为免注册激活  
   
-1.  要使 COM 组件参与免注册激活，必需将其作为并行程序集进行部署。 并行程序集是非托管程序集。  有关详细信息，请参阅[使用通过并行集](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)。  
+1.  要使 COM 组件参与免注册激活，必需将其作为并行程序集进行部署。 并行程序集是非托管程序集。  有关详细信息，请参阅[使用并行程序集](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)。  
   
      要使用 COM 并行程序集，基于 .NET 的应用程序的开发人员必须提供一个包含绑定和激活信息的应用程序清单。 Windows XP 操作系统内置对非托管并行程序集的支持。 当要激活的组件不在注册表中时，操作系统支持的 COM 运行时将扫描应用程序清单以查找激活信息。  
   
-     Windows XP 上安装的 COM 组件可以选择进行免注册激活。 将通过并行程序集添加到应用程序的详细说明，请参阅[使用通过并行集](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)。  
+     Windows XP 上安装的 COM 组件可以选择进行免注册激活。 有关向应用程序添加并行程序集的详细说明，请参阅[使用并行程序集](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)。  
   
     > [!NOTE]
     >  并行执行是一项 .NET Framework 功能，它使得多个版本的运行时，以及使用同一个运行时版本的多个版本的应用程序和组件，能够在同一台计算机上同时运行。 并行执行和并行程序集是提供并行功能的两种不同机制。  

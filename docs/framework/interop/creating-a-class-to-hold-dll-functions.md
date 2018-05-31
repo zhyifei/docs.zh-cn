@@ -14,16 +14,17 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 09088d1ac0a8312ee5832a5f3bc0547e6654de93
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387057"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>创建用于容纳 DLL 函数的类
 将常用的 DLL 函数包装在托管类中，这是封装平台功能的一种有效方式。 虽然不必在每种情形下都这样做，但由于定义 DLL 函数相当麻烦且容易出错，所以提供类包装器非常简便。 如果使用 Visual Basic 或 C# 进行编程，必须在一个类或 Visual Basic 模块中声明 DLL 函数。  
   
  在一个类中，为每个要调用的 DLL 函数定义静态方法。 定义中可以包括附加信息，例如传递方法参数使用的字符集或调用约定；如果省略这些信息，则选择默认设置。 有关声明选项及其默认设置的完整列表，请参阅[在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)。  
   
- 包装之后，你可以在类上调用方法，如任何其他类上调用静态方法。 平台调用自动处理基础导出函数。  
+ 包装之后，就可按照调用任何其他类上的静态方法的方式来调用该类上的方法。 平台调用自动处理基础导出函数。  
   
  为平台调用设计托管类时，应考虑类和 DLL 函数之间的关系。 例如，你可以：  
   

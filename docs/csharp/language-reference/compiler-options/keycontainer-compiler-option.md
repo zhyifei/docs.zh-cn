@@ -1,6 +1,6 @@
 ---
 title: -keycontainer（C# 编译器选项）
-ms.date: 07/20/2015
+ms.date: 05/16/2018
 f1_keywords:
 - /keycontainer
 helpviewer_keywords:
@@ -8,11 +8,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: edb50dafa376abe55fbeeb312ca5bb8f34c83e7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a7b378cad7a1df9249fcbefa28bb9aa9a6a3da4
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472563"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer（C# 编译器选项）
 指定加密密钥容器的名称。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/04/2018
  强名称密钥容器的名称。  
   
 ## <a name="remarks"></a>备注  
- 使用 -keycontainer 选项时，通过将来自所指定容器的公钥插入到程序集清单并且用私钥签名最终程序集，编译器可创建可共享的组件。 若要生成密钥文件，请在命令行键入 sn-k `file`。 sn-i 将密钥对安装到容器中。  
+ 当使用“-keycontainer”选项时，编译器将创建一个可共享的组件。 编译器在程序集清单中插入指定容器的公钥，然后使用私钥对最终的程序集进行签名。 若要生成密钥文件，请在命令行键入 `sn -k file`。 `sn -i` 将密钥对安装到容器中。 编译器在 CoreCLR 上运行时，不支持此选项。 在生成 CoreCLR 时对程序集进行签名，请使用 [-keyfile](keyfile-compiler-option.md) 选项。
   
  如果使用 [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 进行编译，当使用 [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) 将此模块编译到程序集时，密钥文件的名称将保存在模块中，且会并入程序集。  
   
@@ -45,5 +46,5 @@ ms.lasthandoff: 05/04/2018
  可通过 <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A> 以编程方式访问此编译器选项。  
   
 ## <a name="see-also"></a>请参阅  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+ [C# 编译器 -keyfile 选项](keyfile-compiler-option.md) [C# 编译器选项](index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

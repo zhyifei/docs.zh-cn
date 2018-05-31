@@ -2,14 +2,18 @@
 title: private protected（C# 参考）
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: ee36cc713dd5fdb90ae20ef992f8e75eca09597d
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 0d511f55f44511590fbe92a98cef118e0cb482e2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457246"
 ---
 # <a name="private-protected-c-reference"></a>private protected（C# 参考）
 `private protected` 关键字组合是一种成员访问修饰符。 仅派生自包含类的类型可访问私有受保护成员，但仅能在其包含程序集中访问。 有关 `private protected` 和其他访问修饰符的比较，请参阅[可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)。 
+
+> [!NOTE]
+> `private protected` 访问修饰符在 C# 版本 7.2 及更高版本中有效。
    
 ## <a name="example"></a>示例  
  仅当变量的静态类型是派生类类型时，可从派生的类型访问基类的私有受保护成员（在其包含程序集中访问）。 以下面的代码段为例：  

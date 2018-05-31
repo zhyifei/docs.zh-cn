@@ -5,11 +5,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: ca70f0c8237a5d9cc4ad9e0bb8c1947c871ce064
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 659562864ad323162f15351aa960c2a54164c77d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458055"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>处理 XML 文件（C# 编程指南）
 编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 （有关如何标记代码的信息，请参阅[文档注释的建议标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)。）ID 字符串唯一标识构造。 处理 XML 文件的程序可以使用 ID 字符串来标识文档应用于的相应 .NET Framework 元数据/反射项目。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/19/2018
   
     -   内部类型（例如，ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF 和 ELEMENT_TYPE_VOID）表示为对应的完整类型的完全限定名称。 例如，System.Int32 或 System.TypedReference。  
   
-    -   ELEMENT_TYPE_PTR 表示为修改类型之后的“*”。  
+    -   ELEMENT_TYPE_PTR 表示为修改类型之后的“\*”。  
   
     -   ELEMENT_TYPE_BYREF 表示为修改类型之后的“\@”。  
   
@@ -68,11 +69,11 @@ ms.lasthandoff: 05/19/2018
   
 -   仅适用于转换运算符（op_Implicit 和 op_Explicit），该方法的返回值被编码为“~”，后面是返回类型，如上面的编码所示。  
   
--   对于泛型类型，类型名称后跟反勾号，然后是指示泛型类型参数数量的一个数字。  例如，应用于对象的  
+-   对于泛型类型，类型名称后跟反引号，然后是指示泛型类型参数数量的一个数字。 例如:
   
      ``<member name="T:SampleClass`2">`` 是定义为 `public class SampleClass<T, U>` 的类型的标记。  
   
-     对于将泛型类型用作参数的方法，泛型类型参数被指定为前面加上反勾号的数字（例如 \`0,`1）。  每个数字表示该类型的泛型参数的从零开始的数组表示法。  
+     对于将泛型类型用作参数的方法，泛型类型参数被指定为前面加上反引号的数字（例如 \`0、\`1）。 每个数字表示该类型的泛型参数的从零开始的数组表示法。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何为类及其成员生成 ID 字符串：  
