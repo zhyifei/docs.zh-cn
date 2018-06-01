@@ -4,11 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 8db9f37e4fa8df63060982857d457c9e1ce90f60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4adbdd7099dfc1c5ef13d5bbb4370ae2f14aba1e
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696775"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 应用的开发环境
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 > 若要下载 Visual Studio 代码，请转到<https://code.visualstudio.com/download>。
 
-若要下载适用于 Mac 和 Windows 的 Docker，请转到<http://www.docker.com/products/docker>。
+若要下载适用于 Mac 和 Windows 的 Docker，请转到<https://www.docker.com/products/docker>。
 
 ### <a name="visual-studio-with-docker-tools"></a>使用 Docker 工具的 visual Studio
 
@@ -37,15 +38,10 @@ ms.lasthandoff: 05/04/2018
 你可以开发 Docker 应用程序和与大多数现代语言的 Microsoft 工具。 下面是一个初始的列表，但并不局限于它：
 
 -   .NET core 和 ASP.NET Core
-
 -   Node.js
-
 -   Golang
-
 -   Java
-
 -   Ruby
-
 -   Python
 
 基本上，你可以使用支持的 Linux 或 Windows 中的 Docker 任何现代语言。

@@ -2,11 +2,12 @@
 title: 表达式树 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: ac37dd63041ba0a0a8ee08651fe62334c3c30049
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: babee41f7df48f270d0c56cb2af91e463407d5c1
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696934"
 ---
 # <a name="expression-trees-visual-basic"></a>表达式树 (Visual Basic)
 表达式树以树形数据结构表示代码，其中每一个节点都是一种表达式，比如方法调用和 `x < y` 这样的二元运算等。  
@@ -84,7 +85,7 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-有关详细信息，请参阅[在 Visual Studio 2010 中使用表达式树生成动态方法](http://go.microsoft.com/fwlink/p/?LinkId=169513)，该方法也适用于 Visual Studio 的更高版本。
+有关详细信息，请参阅[在 Visual Studio 2010 中使用表达式树生成动态方法](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010)，该方法也适用于 Visual Studio 的更高版本。
   
 ## <a name="parsing-expression-trees"></a>解析表达式树  
  下列代码示例展示如何分解表示 Lambda 表达式 `Function(num) num < 5` 的表达式树。  

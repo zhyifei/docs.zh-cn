@@ -7,18 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f5566eacaabb5d3eb5579d015fad8149a2ed4f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 62bf3ce4bc7a0ff8109ec34fba77dd854c7679b8
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697113"
 ---
 # <a name="working-with-certificates"></a>使用证书
 要编制 Windows Communication Foundation (WCF) 安全，X.509 数字证书通常用于对客户端和服务器进行身份验证、 加密和数字签名消息。 本主题简要说明 X.509 数字证书的功能以及如何在 WCF 中, 使用它们，并包括用于解释这些概念进行了深入，或揭示了如何完成使用 WCF 和证书的常见任务的主题的链接。  
   
- 简言之，数字证书是属于*公钥基础结构*(PKI)，这是数字证书、 证书颁发机构和其他注册机构验证和身份验证的有效性的系统使用公钥加密对电子事务所涉及的每一方。 证书颁发机构颁发证书，每个证书都有包含数据，如的字段的一组*主题*（向其颁发证书的实体） 生效日期 （当证书是否有效），颁发者 (颁发证书的实体），和公钥。 在 WCF 中，上述每个属性处理作为<xref:System.IdentityModel.Claims.Claim>，每个声明又进一步分为两种类型： 标识和权限。 有关 X.509 证书，请查看[X.509 公钥证书](http://go.microsoft.com/fwlink/?LinkId=209952)有关声明和授权的详细信息，请在 WCF 请[管理声明和使用标识模型授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). 有关实施 PKI 的详细信息，请参阅[Windows Server 2008 R2-证书服务](http://go.microsoft.com/fwlink/?LinkId=209949)。  
+ 简言之，数字证书是属于*公钥基础结构*(PKI)，这是数字证书、 证书颁发机构和其他注册机构验证和身份验证的有效性的系统使用公钥加密对电子事务所涉及的每一方。 证书颁发机构颁发证书，每个证书都有包含数据，如的字段的一组*主题*（向其颁发证书的实体） 生效日期 （当证书是否有效），颁发者 (颁发证书的实体），和公钥。 在 WCF 中，上述每个属性处理作为<xref:System.IdentityModel.Claims.Claim>，每个声明又进一步分为两种类型： 标识和权限。 有关 X.509 证书，请查看[X.509 公钥证书](http://go.microsoft.com/fwlink/?LinkId=209952)。 有关声明和 WCF 中的授权的详细信息请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。 有关实施 PKI 的详细信息，请参阅[Windows Server 2008 R2-证书服务](http://go.microsoft.com/fwlink/?LinkId=209949)。  
   
- 证书的主要功能是向其他各方验证证书所有者的身份。 证书包含*公钥*的所有者，所有者保留的私钥。 公钥可用来对发送给证书所有者的消息进行加密。 只有所有者才能访问私钥，因此，只有所有者才能解密这些消息。  
+ 证书的主要功能是所有者的向其他人证书的标识进行身份验证。 证书包含*公钥*的所有者，所有者保留的私钥。 公钥可用来对发送给证书所有者的消息进行加密。 只有所有者才能访问私钥，因此，只有所有者才能解密这些消息。  
   
  证书必须由证书颁发机构（通常是第三方证书颁发机构）颁发。 在 Windows 域中，包括一个证书颁发机构，可以用来向域中的计算机颁发证书。  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="chain-trust-and-certificate-authorities"></a>链信任和证书颁发机构  
  证书是在某种层次结构中创建的，其中每个证书都链接到颁发该证书的 CA。 该链接指向 CA 的证书。 CA 的证书又链接到颁发原始 CA 证书的 CA。 这一过程不断重复，直至到达根 CA 的证书。 根 CA 的证书将以继承方式受到信任。  
   
- 数字证书用于对实体进行身份验证利用此层次结构，也称为*信任链*。 你可以查看通过双击任何证书，再单击 MMC 管理单元中使用的任何证书链**证书路径**选项卡。有关导入的证书颁发机构证书链的详细信息，请参阅[如何： 指定证书颁发机构证书链用于验证签名](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
+ 数字证书用于对实体进行身份验证通过依赖此层次结构，也称为*信任链*。 你可以查看通过双击任何证书，再单击 MMC 管理单元中使用的任何证书链**证书路径**选项卡。有关导入的证书颁发机构证书链的详细信息，请参阅[如何： 指定证书颁发机构证书链用于验证签名](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
   
 > [!NOTE]
 >  通过将颁发机构的证书放入受信任的根颁发机构证书存储区中，可以向任何颁发机构指定受信任的根颁发机构。  
