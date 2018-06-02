@@ -1,40 +1,31 @@
 ---
-title: "异步程序 (Visual Basic 中) 中的控制流"
-ms.custom: 
+title: 异步程序 (Visual Basic 中) 中的控制流
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 28d5d087b48e4c816cbe3a84966346be6cda772e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a6783373f4b556694fd79401546665b09f55919d
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728500"
 ---
-# <a name="control-flow-in-async-programs-visual-basic"></a><span data-ttu-id="e6cb2-102">异步程序 (Visual Basic 中) 中的控制流</span><span class="sxs-lookup"><span data-stu-id="e6cb2-102">Control Flow in Async Programs (Visual Basic)</span></span>
-<span data-ttu-id="e6cb2-103">可以使用 `Async` 和 `Await` 关键字更加轻松地编写和维护异步程序。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-103">You can write and maintain asynchronous programs more easily by using the `Async` and `Await` keywords.</span></span> <span data-ttu-id="e6cb2-104">但是，如果不了解程序的运行方式，结果可能会让你大吃一惊。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-104">However, the results might surprise you if you don't understand how your program operates.</span></span> <span data-ttu-id="e6cb2-105">此主题通过一个简单的异步程序跟踪控制流，以显示控制从一种方法移动到另一种方法的情况，以及每次所传输的信息。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-105">This topic traces the flow of control through a simple async program to show you when control moves from one method to another and what information is transferred each time.</span></span>  
+# <a name="control-flow-in-async-programs-visual-basic"></a><span data-ttu-id="69b41-102">异步程序 (Visual Basic 中) 中的控制流</span><span class="sxs-lookup"><span data-stu-id="69b41-102">Control Flow in Async Programs (Visual Basic)</span></span>
+<span data-ttu-id="69b41-103">可以使用 `Async` 和 `Await` 关键字更加轻松地编写和维护异步程序。</span><span class="sxs-lookup"><span data-stu-id="69b41-103">You can write and maintain asynchronous programs more easily by using the `Async` and `Await` keywords.</span></span> <span data-ttu-id="69b41-104">但是，如果不了解程序的运行方式，结果可能会让你大吃一惊。</span><span class="sxs-lookup"><span data-stu-id="69b41-104">However, the results might surprise you if you don't understand how your program operates.</span></span> <span data-ttu-id="69b41-105">此主题通过一个简单的异步程序跟踪控制流，以显示控制从一种方法移动到另一种方法的情况，以及每次所传输的信息。</span><span class="sxs-lookup"><span data-stu-id="69b41-105">This topic traces the flow of control through a simple async program to show you when control moves from one method to another and what information is transferred each time.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e6cb2-106">`Async` 和 `Await` 关键字是在 Visual Studio 2012 中引入的。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-106">The `Async` and `Await` keywords were introduced in Visual Studio 2012.</span></span>  
+>  <span data-ttu-id="69b41-106">`Async` 和 `Await` 关键字是在 Visual Studio 2012 中引入的。</span><span class="sxs-lookup"><span data-stu-id="69b41-106">The `Async` and `Await` keywords were introduced in Visual Studio 2012.</span></span>  
   
- <span data-ttu-id="e6cb2-107">一般情况下，将包含与异步代码的方法的标记[异步](../../../../visual-basic/language-reference/modifiers/async.md)修饰符。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-107">In general, you mark methods that contain asynchronous code with the [Async](../../../../visual-basic/language-reference/modifiers/async.md) modifier.</span></span> <span data-ttu-id="e6cb2-108">在使用异步修饰符标记方法，你可以使用[Await (Visual Basic 中)](../../../../visual-basic/language-reference/operators/await-operator.md)运算符来指定位置暂停方法等待完成异步调用过程。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-108">In a method that's marked with an async modifier, you can use an [Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md) operator to specify where the method pauses to wait for a called asynchronous process to complete.</span></span> <span data-ttu-id="e6cb2-109">有关详细信息，请参阅[使用 Async 和 Await (Visual Basic 中) 的异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-109">For more information, see [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).</span></span>  
+ <span data-ttu-id="69b41-107">一般情况下，将包含与异步代码的方法的标记[异步](../../../../visual-basic/language-reference/modifiers/async.md)修饰符。</span><span class="sxs-lookup"><span data-stu-id="69b41-107">In general, you mark methods that contain asynchronous code with the [Async](../../../../visual-basic/language-reference/modifiers/async.md) modifier.</span></span> <span data-ttu-id="69b41-108">在使用异步修饰符标记方法，你可以使用[Await (Visual Basic 中)](../../../../visual-basic/language-reference/operators/await-operator.md)运算符来指定位置暂停方法等待完成异步调用过程。</span><span class="sxs-lookup"><span data-stu-id="69b41-108">In a method that's marked with an async modifier, you can use an [Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md) operator to specify where the method pauses to wait for a called asynchronous process to complete.</span></span> <span data-ttu-id="69b41-109">有关详细信息，请参阅[使用 Async 和 Await (Visual Basic 中) 的异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。</span><span class="sxs-lookup"><span data-stu-id="69b41-109">For more information, see [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).</span></span>  
   
- <span data-ttu-id="e6cb2-110">下面的示例使用异步方法以字符串的形式下载指定网站的内容，并显示该字符串的长度。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-110">The following example uses async methods to download the contents of a specified website as a string and to display the length of the string.</span></span> <span data-ttu-id="e6cb2-111">此示例包含以下两种方法。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-111">The example contains the following two methods.</span></span>  
+ <span data-ttu-id="69b41-110">下面的示例使用异步方法以字符串的形式下载指定网站的内容，并显示该字符串的长度。</span><span class="sxs-lookup"><span data-stu-id="69b41-110">The following example uses async methods to download the contents of a specified website as a string and to display the length of the string.</span></span> <span data-ttu-id="69b41-111">此示例包含以下两种方法。</span><span class="sxs-lookup"><span data-stu-id="69b41-111">The example contains the following two methods.</span></span>  
   
--   <span data-ttu-id="e6cb2-112">`startButton_Click`，它调用 `AccessTheWebAsync` 并显示结果。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-112">`startButton_Click`, which calls `AccessTheWebAsync` and displays the result.</span></span>  
+-   <span data-ttu-id="69b41-112">`startButton_Click`，它调用 `AccessTheWebAsync` 并显示结果。</span><span class="sxs-lookup"><span data-stu-id="69b41-112">`startButton_Click`, which calls `AccessTheWebAsync` and displays the result.</span></span>  
   
--   <span data-ttu-id="e6cb2-113">`AccessTheWebAsync`，它以字符串的形式下载网站的内容，并返回该字符串的长度。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-113">`AccessTheWebAsync`, which downloads the contents of a website as a string and returns the length of the string.</span></span> <span data-ttu-id="e6cb2-114">`AccessTheWebAsync` 使用异步 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 来下载内容。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-114">`AccessTheWebAsync` uses an asynchronous <xref:System.Net.Http.HttpClient> method, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, to download the contents.</span></span>  
+-   <span data-ttu-id="69b41-113">`AccessTheWebAsync`，它以字符串的形式下载网站的内容，并返回该字符串的长度。</span><span class="sxs-lookup"><span data-stu-id="69b41-113">`AccessTheWebAsync`, which downloads the contents of a website as a string and returns the length of the string.</span></span> <span data-ttu-id="69b41-114">`AccessTheWebAsync` 使用异步 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 来下载内容。</span><span class="sxs-lookup"><span data-stu-id="69b41-114">`AccessTheWebAsync` uses an asynchronous <xref:System.Net.Http.HttpClient> method, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, to download the contents.</span></span>  
   
- <span data-ttu-id="e6cb2-115">编号的显示行显示在整个程序的策略点处，以帮助你了解程序的运行方式和说明被标记的每个点处发生的情况。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-115">Numbered display lines appear at strategic points throughout the program to help you understand how the program runs and to explain what happens at each point that is marked.</span></span> <span data-ttu-id="e6cb2-116">显示行标记为“1”到“6”。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-116">The display lines are labeled "ONE" through "SIX."</span></span> <span data-ttu-id="e6cb2-117">该标签表示程序到达这些代码行的顺序。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-117">The labels represent the order in which the program reaches these lines of code.</span></span>  
+ <span data-ttu-id="69b41-115">编号的显示行显示在整个程序的策略点处，以帮助你了解程序的运行方式和说明被标记的每个点处发生的情况。</span><span class="sxs-lookup"><span data-stu-id="69b41-115">Numbered display lines appear at strategic points throughout the program to help you understand how the program runs and to explain what happens at each point that is marked.</span></span> <span data-ttu-id="69b41-116">显示行标记为“1”到“6”。</span><span class="sxs-lookup"><span data-stu-id="69b41-116">The display lines are labeled "ONE" through "SIX."</span></span> <span data-ttu-id="69b41-117">该标签表示程序到达这些代码行的顺序。</span><span class="sxs-lookup"><span data-stu-id="69b41-117">The labels represent the order in which the program reaches these lines of code.</span></span>  
   
- <span data-ttu-id="e6cb2-118">下面的代码显示该程序的概要。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-118">The following code shows an outline of the program.</span></span>  
+ <span data-ttu-id="69b41-118">下面的代码显示该程序的概要。</span><span class="sxs-lookup"><span data-stu-id="69b41-118">The following code shows an outline of the program.</span></span>  
   
 ```vb  
 Class MainWindow  
@@ -70,7 +61,7 @@ Class MainWindow
 End Class  
 ```  
   
- <span data-ttu-id="e6cb2-119">每个标记位置（“1”到“6”）显示有关该程序的当前状态的信息。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-119">Each of the labeled locations, "ONE" through "SIX," displays information about the current state of the program.</span></span> <span data-ttu-id="e6cb2-120">将生成以下输出。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-120">The following output is produced.</span></span>  
+ <span data-ttu-id="69b41-119">每个标记位置（“1”到“6”）显示有关该程序的当前状态的信息。</span><span class="sxs-lookup"><span data-stu-id="69b41-119">Each of the labeled locations, "ONE" through "SIX," displays information about the current state of the program.</span></span> <span data-ttu-id="69b41-120">将生成以下输出。</span><span class="sxs-lookup"><span data-stu-id="69b41-120">The following output is produced.</span></span>  
   
 ```  
 ONE:   Entering startButton_Click.  
@@ -100,43 +91,43 @@ SIX:   Back in startButton_Click.
 Length of the downloaded string: 33946.  
 ```  
   
-## <a name="set-up-the-program"></a><span data-ttu-id="e6cb2-121">设置程序</span><span class="sxs-lookup"><span data-stu-id="e6cb2-121">Set Up the Program</span></span>  
- <span data-ttu-id="e6cb2-122">可以从 MSDN 下载本主题使用的代码，也可以自行生成该代码。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-122">You can download the code that this topic uses from MSDN, or you can build it yourself.</span></span>  
+## <a name="set-up-the-program"></a><span data-ttu-id="69b41-121">设置程序</span><span class="sxs-lookup"><span data-stu-id="69b41-121">Set Up the Program</span></span>  
+ <span data-ttu-id="69b41-122">可以从 MSDN 下载本主题使用的代码，也可以自行生成该代码。</span><span class="sxs-lookup"><span data-stu-id="69b41-122">You can download the code that this topic uses from MSDN, or you can build it yourself.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e6cb2-123">若要运行该示例，必须具有 Visual Studio 2012 或更高版本和.NET Framework 4.5 或更高版本安装在计算机上。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-123">To run the example, you must have Visual Studio 2012 or newer and  the .NET Framework 4.5 or newer installed on your computer.</span></span>  
+>  <span data-ttu-id="69b41-123">若要运行该示例，必须具有 Visual Studio 2012 或更高版本和.NET Framework 4.5 或更高版本安装在计算机上。</span><span class="sxs-lookup"><span data-stu-id="69b41-123">To run the example, you must have Visual Studio 2012 or newer and  the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-### <a name="download-the-program"></a><span data-ttu-id="e6cb2-124">下载程序</span><span class="sxs-lookup"><span data-stu-id="e6cb2-124">Download the Program</span></span>  
- <span data-ttu-id="e6cb2-125">可以从[异步示例：异步程序中的控制流](http://go.microsoft.com/fwlink/?LinkId=255285)中下载此主题的应用程序。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-125">You can download the application for this topic from [Async Sample: Control Flow in Async Programs](http://go.microsoft.com/fwlink/?LinkId=255285).</span></span> <span data-ttu-id="e6cb2-126">以下步骤将打开并运行该程序。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-126">The following steps open and run the program.</span></span>  
+### <a name="download-the-program"></a><span data-ttu-id="69b41-124">下载程序</span><span class="sxs-lookup"><span data-stu-id="69b41-124">Download the Program</span></span>  
+ <span data-ttu-id="69b41-125">可以从[异步示例：异步程序中的控制流](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)中下载此主题的应用程序。</span><span class="sxs-lookup"><span data-stu-id="69b41-125">You can download the application for this topic from [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0).</span></span> <span data-ttu-id="69b41-126">以下步骤将打开并运行该程序。</span><span class="sxs-lookup"><span data-stu-id="69b41-126">The following steps open and run the program.</span></span>  
   
-1.  <span data-ttu-id="e6cb2-127">解压缩下载的文件，然后启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-127">Unzip the downloaded file, and then start Visual Studio.</span></span>  
+1.  <span data-ttu-id="69b41-127">解压缩下载的文件，然后启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="69b41-127">Unzip the downloaded file, and then start Visual Studio.</span></span>  
   
-2.  <span data-ttu-id="e6cb2-128">在菜单栏上，依次选择 **“文件”**、 **“打开”**和 **“项目/解决方案”**。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-128">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
+2.  <span data-ttu-id="69b41-128">在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。</span><span class="sxs-lookup"><span data-stu-id="69b41-128">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
   
-3.  <span data-ttu-id="e6cb2-129">导航到保存已解压缩的示例代码的文件夹，打开解决方案 (.sln) 文件，然后选择 F5 键以生成并运行项目。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-129">Navigate to the folder that holds the unzipped sample code, open the solution (.sln) file, and then choose the F5 key to build and run the project.</span></span>  
+3.  <span data-ttu-id="69b41-129">导航到保存已解压缩的示例代码的文件夹，打开解决方案 (.sln) 文件，然后选择 F5 键以生成并运行项目。</span><span class="sxs-lookup"><span data-stu-id="69b41-129">Navigate to the folder that holds the unzipped sample code, open the solution (.sln) file, and then choose the F5 key to build and run the project.</span></span>  
   
-### <a name="build-the-program-yourself"></a><span data-ttu-id="e6cb2-130">您自行生成程序</span><span class="sxs-lookup"><span data-stu-id="e6cb2-130">Build the Program Yourself</span></span>  
- <span data-ttu-id="e6cb2-131">以下 Windows Presentation Foundation (WPF) 项目包含本主题的代码示例。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-131">The following Windows Presentation Foundation (WPF) project contains the code example for this topic.</span></span>  
+### <a name="build-the-program-yourself"></a><span data-ttu-id="69b41-130">您自行生成程序</span><span class="sxs-lookup"><span data-stu-id="69b41-130">Build the Program Yourself</span></span>  
+ <span data-ttu-id="69b41-131">以下 Windows Presentation Foundation (WPF) 项目包含本主题的代码示例。</span><span class="sxs-lookup"><span data-stu-id="69b41-131">The following Windows Presentation Foundation (WPF) project contains the code example for this topic.</span></span>  
   
- <span data-ttu-id="e6cb2-132">若要运行项目，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="e6cb2-132">To run the project, perform the following steps:</span></span>  
+ <span data-ttu-id="69b41-132">若要运行项目，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="69b41-132">To run the project, perform the following steps:</span></span>  
   
-1.  <span data-ttu-id="e6cb2-133">启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-133">Start Visual Studio.</span></span>  
+1.  <span data-ttu-id="69b41-133">启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="69b41-133">Start Visual Studio.</span></span>  
   
-2.  <span data-ttu-id="e6cb2-134">在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-134">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
+2.  <span data-ttu-id="69b41-134">在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。</span><span class="sxs-lookup"><span data-stu-id="69b41-134">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
   
-     <span data-ttu-id="e6cb2-135">**“新建项目”** 对话框随即打开。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-135">The **New Project** dialog box opens.</span></span>  
+     <span data-ttu-id="69b41-135">**“新建项目”** 对话框随即打开。</span><span class="sxs-lookup"><span data-stu-id="69b41-135">The **New Project** dialog box opens.</span></span>  
   
-3.  <span data-ttu-id="e6cb2-136">在**已安装的模板**窗格中，选择**Visual Basic**，然后选择**WPF 应用程序**从项目类型列表。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-136">In the **Installed Templates** pane, choose **Visual Basic**, and then choose **WPF Application** from the list of project types.</span></span>  
+3.  <span data-ttu-id="69b41-136">在**已安装的模板**窗格中，选择**Visual Basic**，然后选择**WPF 应用程序**从项目类型列表。</span><span class="sxs-lookup"><span data-stu-id="69b41-136">In the **Installed Templates** pane, choose **Visual Basic**, and then choose **WPF Application** from the list of project types.</span></span>  
   
-4.  <span data-ttu-id="e6cb2-137">输入 `AsyncTracer` 作为项目名称，然后选择“确定”按钮。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-137">Enter `AsyncTracer` as the name of the project, and then choose the **OK** button.</span></span>  
+4.  <span data-ttu-id="69b41-137">输入 `AsyncTracer` 作为项目名称，然后选择“确定”按钮。</span><span class="sxs-lookup"><span data-stu-id="69b41-137">Enter `AsyncTracer` as the name of the project, and then choose the **OK** button.</span></span>  
   
-     <span data-ttu-id="e6cb2-138">新项目将出现在“解决方案资源管理器”中。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-138">The new project appears in **Solution Explorer**.</span></span>  
+     <span data-ttu-id="69b41-138">新项目将出现在“解决方案资源管理器”中。</span><span class="sxs-lookup"><span data-stu-id="69b41-138">The new project appears in **Solution Explorer**.</span></span>  
   
-5.  <span data-ttu-id="e6cb2-139">在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-139">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
+5.  <span data-ttu-id="69b41-139">在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。</span><span class="sxs-lookup"><span data-stu-id="69b41-139">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
-     <span data-ttu-id="e6cb2-140">如果此选项卡不可见，则在“解决方案资源管理器”中，打开 MainWindow.xaml 的快捷菜单，然后选择“查看代码”。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-140">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>  
+     <span data-ttu-id="69b41-140">如果此选项卡不可见，则在“解决方案资源管理器”中，打开 MainWindow.xaml 的快捷菜单，然后选择“查看代码”。</span><span class="sxs-lookup"><span data-stu-id="69b41-140">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>  
   
-6.  <span data-ttu-id="e6cb2-141">在 MainWindow.xaml 的“XAML”视图中，将代码替换为以下代码。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-141">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>  
+6.  <span data-ttu-id="69b41-141">在 MainWindow.xaml 的“XAML”视图中，将代码替换为以下代码。</span><span class="sxs-lookup"><span data-stu-id="69b41-141">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>  
   
     ```vb  
     <Window  
@@ -152,13 +143,13 @@ Length of the downloaded string: 33946.
     </Window>  
     ```  
   
-     <span data-ttu-id="e6cb2-142">MainWindow.xaml 的“设计”视图中将显示一个简单的窗口，其中包含一个文本框和一个按钮。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-142">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>  
+     <span data-ttu-id="69b41-142">MainWindow.xaml 的“设计”视图中将显示一个简单的窗口，其中包含一个文本框和一个按钮。</span><span class="sxs-lookup"><span data-stu-id="69b41-142">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>  
   
-7.  <span data-ttu-id="e6cb2-143">对 <xref:System.Net.Http> 添加引用。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-143">Add a reference for <xref:System.Net.Http>.</span></span>  
+7.  <span data-ttu-id="69b41-143">对 <xref:System.Net.Http> 添加引用。</span><span class="sxs-lookup"><span data-stu-id="69b41-143">Add a reference for <xref:System.Net.Http>.</span></span>  
   
-8.  <span data-ttu-id="e6cb2-144">在**解决方案资源管理器**，打开 MainWindow.xaml.vb，快捷菜单，然后选择**查看代码**。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-144">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.</span></span>  
+8.  <span data-ttu-id="69b41-144">在**解决方案资源管理器**，打开 MainWindow.xaml.vb，快捷菜单，然后选择**查看代码**。</span><span class="sxs-lookup"><span data-stu-id="69b41-144">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.</span></span>  
   
-9. <span data-ttu-id="e6cb2-145">在 MainWindow.xaml.vb，替换为以下代码中替换代码。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-145">In MainWindow.xaml.vb , replace the code with the following code.</span></span>  
+9. <span data-ttu-id="69b41-145">在 MainWindow.xaml.vb，替换为以下代码中替换代码。</span><span class="sxs-lookup"><span data-stu-id="69b41-145">In MainWindow.xaml.vb , replace the code with the following code.</span></span>  
   
     ```vb  
     ' Add an Imports statement and a reference for System.Net.Http.  
@@ -223,9 +214,9 @@ Length of the downloaded string: 33946.
     End Class  
     ```  
   
-10. <span data-ttu-id="e6cb2-146">按 F5 键以运行程序，然后选择 **“启动”** 按钮。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-146">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
+10. <span data-ttu-id="69b41-146">按 F5 键以运行程序，然后选择 **“启动”** 按钮。</span><span class="sxs-lookup"><span data-stu-id="69b41-146">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-     <span data-ttu-id="e6cb2-147">应出现以下输出。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-147">The following output should appear.</span></span>  
+     <span data-ttu-id="69b41-147">应出现以下输出。</span><span class="sxs-lookup"><span data-stu-id="69b41-147">The following output should appear.</span></span>  
   
     ```  
     ONE:   Entering startButton_Click.  
@@ -255,27 +246,27 @@ Length of the downloaded string: 33946.
     Length of the downloaded string: 33946.  
     ```  
   
-## <a name="trace-the-program"></a><span data-ttu-id="e6cb2-148">跟踪程序</span><span class="sxs-lookup"><span data-stu-id="e6cb2-148">Trace the Program</span></span>  
+## <a name="trace-the-program"></a><span data-ttu-id="69b41-148">跟踪程序</span><span class="sxs-lookup"><span data-stu-id="69b41-148">Trace the Program</span></span>  
   
-### <a name="steps-one-and-two"></a><span data-ttu-id="e6cb2-149">步骤 1 和步骤 2</span><span class="sxs-lookup"><span data-stu-id="e6cb2-149">Steps ONE and TWO</span></span>  
- <span data-ttu-id="e6cb2-150">在 `startButton_Click` 调用 `AccessTheWebAsync` 及 `AccessTheWebAsync` 调用异步 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 时，前两个显示行会跟踪路径。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-150">The first two display lines trace the path as `startButton_Click` calls `AccessTheWebAsync`, and `AccessTheWebAsync` calls the asynchronous <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.</span></span> <span data-ttu-id="e6cb2-151">下图概述了从方法到方法的调用。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-151">The following image outlines the calls from method to method.</span></span>  
+### <a name="steps-one-and-two"></a><span data-ttu-id="69b41-149">步骤 1 和步骤 2</span><span class="sxs-lookup"><span data-stu-id="69b41-149">Steps ONE and TWO</span></span>  
+ <span data-ttu-id="69b41-150">在 `startButton_Click` 调用 `AccessTheWebAsync` 及 `AccessTheWebAsync` 调用异步 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 时，前两个显示行会跟踪路径。</span><span class="sxs-lookup"><span data-stu-id="69b41-150">The first two display lines trace the path as `startButton_Click` calls `AccessTheWebAsync`, and `AccessTheWebAsync` calls the asynchronous <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.</span></span> <span data-ttu-id="69b41-151">下图概述了从方法到方法的调用。</span><span class="sxs-lookup"><span data-stu-id="69b41-151">The following image outlines the calls from method to method.</span></span>  
   
- <span data-ttu-id="e6cb2-152">![步骤 1 和步骤 2](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")</span><span class="sxs-lookup"><span data-stu-id="e6cb2-152">![Steps ONE and TWO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")</span></span>  
+ <span data-ttu-id="69b41-152">![步骤 1 和步骤 2](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")</span><span class="sxs-lookup"><span data-stu-id="69b41-152">![Steps ONE and TWO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")</span></span>  
   
- <span data-ttu-id="e6cb2-153">`AccessTheWebAsync` 和 `client.GetStringAsync` 的返回类型都是 <xref:System.Threading.Tasks.Task%601>。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-153">The return type of both `AccessTheWebAsync` and `client.GetStringAsync` is <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="e6cb2-154">对于 `AccessTheWebAsync`，TResult 是一个整数。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-154">For `AccessTheWebAsync`, TResult is an integer.</span></span> <span data-ttu-id="e6cb2-155">对于 `GetStringAsync`，TResult 是一个字符串。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-155">For `GetStringAsync`, TResult is a string.</span></span> <span data-ttu-id="e6cb2-156">有关异步方法的返回类型的详细信息，请参阅[异步返回类型 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-156">For more information about async method return types, see [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span></span>  
+ <span data-ttu-id="69b41-153">`AccessTheWebAsync` 和 `client.GetStringAsync` 的返回类型都是 <xref:System.Threading.Tasks.Task%601>。</span><span class="sxs-lookup"><span data-stu-id="69b41-153">The return type of both `AccessTheWebAsync` and `client.GetStringAsync` is <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="69b41-154">对于 `AccessTheWebAsync`，TResult 是一个整数。</span><span class="sxs-lookup"><span data-stu-id="69b41-154">For `AccessTheWebAsync`, TResult is an integer.</span></span> <span data-ttu-id="69b41-155">对于 `GetStringAsync`，TResult 是一个字符串。</span><span class="sxs-lookup"><span data-stu-id="69b41-155">For `GetStringAsync`, TResult is a string.</span></span> <span data-ttu-id="69b41-156">有关异步方法的返回类型的详细信息，请参阅[异步返回类型 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。</span><span class="sxs-lookup"><span data-stu-id="69b41-156">For more information about async method return types, see [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span></span>  
   
- <span data-ttu-id="e6cb2-157">在控制切换回调用方时，任务返回异步方法将返回一个任务实例。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-157">A task-returning async method returns a task instance when control shifts back to the caller.</span></span> <span data-ttu-id="e6cb2-158">在调用的方法中遇到 `Await` 运算符或在调用的方法结束时，控制会从异步方法返回其调用方。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-158">Control returns from an async method to its caller either when an `Await` operator is encountered in the called method or when the called method ends.</span></span> <span data-ttu-id="e6cb2-159">标记为“3”到“6”的显示行将跟踪过程的这一部分。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-159">The display lines that are labeled "THREE" through "SIX" trace this part of the process.</span></span>  
+ <span data-ttu-id="69b41-157">在控制切换回调用方时，任务返回异步方法将返回一个任务实例。</span><span class="sxs-lookup"><span data-stu-id="69b41-157">A task-returning async method returns a task instance when control shifts back to the caller.</span></span> <span data-ttu-id="69b41-158">在调用的方法中遇到 `Await` 运算符或在调用的方法结束时，控制会从异步方法返回其调用方。</span><span class="sxs-lookup"><span data-stu-id="69b41-158">Control returns from an async method to its caller either when an `Await` operator is encountered in the called method or when the called method ends.</span></span> <span data-ttu-id="69b41-159">标记为“3”到“6”的显示行将跟踪过程的这一部分。</span><span class="sxs-lookup"><span data-stu-id="69b41-159">The display lines that are labeled "THREE" through "SIX" trace this part of the process.</span></span>  
   
-### <a name="step-three"></a><span data-ttu-id="e6cb2-160">步骤 3</span><span class="sxs-lookup"><span data-stu-id="e6cb2-160">Step THREE</span></span>  
- <span data-ttu-id="e6cb2-161">在 `AccessTheWebAsync` 中，调用异步方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 以下载目标网页的内容。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-161">In `AccessTheWebAsync`, the asynchronous method <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> is called to download the contents of the target webpage.</span></span> <span data-ttu-id="e6cb2-162">返回 `client.GetStringAsync` 时，控制将从 `client.GetStringAsync` 返回到 `AccessTheWebAsync`。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-162">Control returns from `client.GetStringAsync` to `AccessTheWebAsync` when `client.GetStringAsync` returns.</span></span>  
+### <a name="step-three"></a><span data-ttu-id="69b41-160">步骤 3</span><span class="sxs-lookup"><span data-stu-id="69b41-160">Step THREE</span></span>  
+ <span data-ttu-id="69b41-161">在 `AccessTheWebAsync` 中，调用异步方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 以下载目标网页的内容。</span><span class="sxs-lookup"><span data-stu-id="69b41-161">In `AccessTheWebAsync`, the asynchronous method <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> is called to download the contents of the target webpage.</span></span> <span data-ttu-id="69b41-162">返回 `client.GetStringAsync` 时，控制将从 `client.GetStringAsync` 返回到 `AccessTheWebAsync`。</span><span class="sxs-lookup"><span data-stu-id="69b41-162">Control returns from `client.GetStringAsync` to `AccessTheWebAsync` when `client.GetStringAsync` returns.</span></span>  
   
- <span data-ttu-id="e6cb2-163">`client.GetStringAsync` 方法将返回分配给 `AccessTheWebAsync` 中的 `getStringTask` 变量的字符串任务。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-163">The `client.GetStringAsync` method returns a task of string that’s assigned to the `getStringTask` variable in `AccessTheWebAsync`.</span></span> <span data-ttu-id="e6cb2-164">该示例程序中的以下行说明了对 `client.GetStringAsync` 的调用和赋值。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-164">The following line in the example program shows the call to `client.GetStringAsync` and the assignment.</span></span>  
+ <span data-ttu-id="69b41-163">`client.GetStringAsync` 方法将返回分配给 `AccessTheWebAsync` 中的 `getStringTask` 变量的字符串任务。</span><span class="sxs-lookup"><span data-stu-id="69b41-163">The `client.GetStringAsync` method returns a task of string that’s assigned to the `getStringTask` variable in `AccessTheWebAsync`.</span></span> <span data-ttu-id="69b41-164">该示例程序中的以下行说明了对 `client.GetStringAsync` 的调用和赋值。</span><span class="sxs-lookup"><span data-stu-id="69b41-164">The following line in the example program shows the call to `client.GetStringAsync` and the assignment.</span></span>  
   
 ```vb  
 Dim getStringTask As Task(Of String) = client.GetStringAsync("http://msdn.microsoft.com")  
 ```  
   
- <span data-ttu-id="e6cb2-165">可以将任务视为 `client.GetStringAsync` 的一个承诺，用于最终生成实际字符串。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-165">You can think of the task as a promise by `client.GetStringAsync` to produce an actual string eventually.</span></span> <span data-ttu-id="e6cb2-166">同时，如果 `AccessTheWebAsync` 有要执行的工作，且该工作不依赖于 `client.GetStringAsync` 中承诺的字符串，则可在 `client.GetStringAsync` 等待时继续此工作。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-166">In the meantime, if `AccessTheWebAsync` has work to do that doesn't depend on the promised string from `client.GetStringAsync`, that work can continue while  `client.GetStringAsync` waits.</span></span> <span data-ttu-id="e6cb2-167">在示例中，以下标记为“3”的输出行表示执行独立工作的机会</span><span class="sxs-lookup"><span data-stu-id="e6cb2-167">In the example, the following lines of output, which are labeled "THREE," represent the opportunity to do independent work</span></span>  
+ <span data-ttu-id="69b41-165">可以将任务视为 `client.GetStringAsync` 的一个承诺，用于最终生成实际字符串。</span><span class="sxs-lookup"><span data-stu-id="69b41-165">You can think of the task as a promise by `client.GetStringAsync` to produce an actual string eventually.</span></span> <span data-ttu-id="69b41-166">同时，如果 `AccessTheWebAsync` 有要执行的工作，且该工作不依赖于 `client.GetStringAsync` 中承诺的字符串，则可在 `client.GetStringAsync` 等待时继续此工作。</span><span class="sxs-lookup"><span data-stu-id="69b41-166">In the meantime, if `AccessTheWebAsync` has work to do that doesn't depend on the promised string from `client.GetStringAsync`, that work can continue while  `client.GetStringAsync` waits.</span></span> <span data-ttu-id="69b41-167">在示例中，以下标记为“3”的输出行表示执行独立工作的机会</span><span class="sxs-lookup"><span data-stu-id="69b41-167">In the example, the following lines of output, which are labeled "THREE," represent the opportunity to do independent work</span></span>  
   
 ```  
 THREE: Back in AccessTheWebAsync.  
@@ -283,33 +274,33 @@ THREE: Back in AccessTheWebAsync.
            About to await getStringTask & return a Task<int> to startButton_Click.  
 ```  
   
- <span data-ttu-id="e6cb2-168">当 `getStringTask` 处于等待状态时，下面的语句将暂停 `AccessTheWebAsync` 中的进度。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-168">The following statement suspends progress in `AccessTheWebAsync` when `getStringTask` is awaited.</span></span>  
+ <span data-ttu-id="69b41-168">当 `getStringTask` 处于等待状态时，下面的语句将暂停 `AccessTheWebAsync` 中的进度。</span><span class="sxs-lookup"><span data-stu-id="69b41-168">The following statement suspends progress in `AccessTheWebAsync` when `getStringTask` is awaited.</span></span>  
   
 ```vb  
 Dim urlContents As String = Await getStringTask  
 ```  
   
- <span data-ttu-id="e6cb2-169">下图显示了从控制流`client.GetStringAsync`到分配给的`getStringTask`和从创建`getStringTask`到 Await 运算符的应用程序。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-169">The following image shows the flow of control from `client.GetStringAsync` to the assignment to `getStringTask` and from the creation of `getStringTask` to the application of an Await operator.</span></span>  
+ <span data-ttu-id="69b41-169">下图显示了从控制流`client.GetStringAsync`到分配给的`getStringTask`和从创建`getStringTask`到 Await 运算符的应用程序。</span><span class="sxs-lookup"><span data-stu-id="69b41-169">The following image shows the flow of control from `client.GetStringAsync` to the assignment to `getStringTask` and from the creation of `getStringTask` to the application of an Await operator.</span></span>  
   
- <span data-ttu-id="e6cb2-170">![步骤 3](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")</span><span class="sxs-lookup"><span data-stu-id="e6cb2-170">![Step THREE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")</span></span>  
+ <span data-ttu-id="69b41-170">![步骤 3](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")</span><span class="sxs-lookup"><span data-stu-id="69b41-170">![Step THREE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")</span></span>  
   
- <span data-ttu-id="e6cb2-171">Await 表达式将暂停 `AccessTheWebAsync`，直到返回 `client.GetStringAsync`。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-171">The await expression suspends `AccessTheWebAsync` until `client.GetStringAsync` returns.</span></span> <span data-ttu-id="e6cb2-172">同时，控件返回至 `AccessTheWebAsync` 的调用方 `startButton_Click`。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-172">In the meantime, control returns to the caller of `AccessTheWebAsync`, `startButton_Click`.</span></span>  
+ <span data-ttu-id="69b41-171">Await 表达式将暂停 `AccessTheWebAsync`，直到返回 `client.GetStringAsync`。</span><span class="sxs-lookup"><span data-stu-id="69b41-171">The await expression suspends `AccessTheWebAsync` until `client.GetStringAsync` returns.</span></span> <span data-ttu-id="69b41-172">同时，控件返回至 `AccessTheWebAsync` 的调用方 `startButton_Click`。</span><span class="sxs-lookup"><span data-stu-id="69b41-172">In the meantime, control returns to the caller of `AccessTheWebAsync`, `startButton_Click`.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e6cb2-173">通常情况下，应立即等待对异步方法的调用。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-173">Typically, you await the call to an asynchronous method immediately.</span></span> <span data-ttu-id="e6cb2-174">例如，以下赋值可以替换前面创建的代码，然后等待 `getStringTask`：`Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`</span><span class="sxs-lookup"><span data-stu-id="e6cb2-174">For example, the following assignment could replace the previous code that creates and then awaits `getStringTask`: `Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`</span></span>  
+>  <span data-ttu-id="69b41-173">通常情况下，应立即等待对异步方法的调用。</span><span class="sxs-lookup"><span data-stu-id="69b41-173">Typically, you await the call to an asynchronous method immediately.</span></span> <span data-ttu-id="69b41-174">例如，以下赋值可以替换前面创建的代码，然后等待 `getStringTask`：`Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`</span><span class="sxs-lookup"><span data-stu-id="69b41-174">For example, the following assignment could replace the previous code that creates and then awaits `getStringTask`: `Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`</span></span>  
 >   
->  <span data-ttu-id="e6cb2-175">在本主题中，稍后将应用 await 运算符，以容纳通过程序标记控制流的输出行。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-175">In this topic, the await operator is applied later to accommodate the output lines that mark the flow of control through the program.</span></span>  
+>  <span data-ttu-id="69b41-175">在本主题中，稍后将应用 await 运算符，以容纳通过程序标记控制流的输出行。</span><span class="sxs-lookup"><span data-stu-id="69b41-175">In this topic, the await operator is applied later to accommodate the output lines that mark the flow of control through the program.</span></span>  
   
-### <a name="step-four"></a><span data-ttu-id="e6cb2-176">步骤 4</span><span class="sxs-lookup"><span data-stu-id="e6cb2-176">Step FOUR</span></span>  
- <span data-ttu-id="e6cb2-177">`AccessTheWebAsync` 的声明的返回类型是 `Task(Of Integer)`。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-177">The declared return type of `AccessTheWebAsync` is `Task(Of Integer)`.</span></span> <span data-ttu-id="e6cb2-178">因此，当 `AccessTheWebAsync` 处于挂起状态时，它会将整数任务返回到 `startButton_Click`。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-178">Therefore, when `AccessTheWebAsync` is suspended, it returns a task of integer to `startButton_Click`.</span></span> <span data-ttu-id="e6cb2-179">应该了解返回的任务不是 `getStringTask`。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-179">You should understand that the returned task isn’t `getStringTask`.</span></span> <span data-ttu-id="e6cb2-180">返回的任务是一个新的整数任务，它表示挂起的方法 `AccessTheWebAsync` 中仍需完成的任务。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-180">The returned task is a new task of integer that represents what remains to be done in the suspended method, `AccessTheWebAsync`.</span></span> <span data-ttu-id="e6cb2-181">该任务是 `AccessTheWebAsync` 中的一个承诺，当任务完成时，将生成一个整数。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-181">The task is a promise from `AccessTheWebAsync` to produce an integer when the task is complete.</span></span>  
+### <a name="step-four"></a><span data-ttu-id="69b41-176">步骤 4</span><span class="sxs-lookup"><span data-stu-id="69b41-176">Step FOUR</span></span>  
+ <span data-ttu-id="69b41-177">`AccessTheWebAsync` 的声明的返回类型是 `Task(Of Integer)`。</span><span class="sxs-lookup"><span data-stu-id="69b41-177">The declared return type of `AccessTheWebAsync` is `Task(Of Integer)`.</span></span> <span data-ttu-id="69b41-178">因此，当 `AccessTheWebAsync` 处于挂起状态时，它会将整数任务返回到 `startButton_Click`。</span><span class="sxs-lookup"><span data-stu-id="69b41-178">Therefore, when `AccessTheWebAsync` is suspended, it returns a task of integer to `startButton_Click`.</span></span> <span data-ttu-id="69b41-179">应该了解返回的任务不是 `getStringTask`。</span><span class="sxs-lookup"><span data-stu-id="69b41-179">You should understand that the returned task isn’t `getStringTask`.</span></span> <span data-ttu-id="69b41-180">返回的任务是一个新的整数任务，它表示挂起的方法 `AccessTheWebAsync` 中仍需完成的任务。</span><span class="sxs-lookup"><span data-stu-id="69b41-180">The returned task is a new task of integer that represents what remains to be done in the suspended method, `AccessTheWebAsync`.</span></span> <span data-ttu-id="69b41-181">该任务是 `AccessTheWebAsync` 中的一个承诺，当任务完成时，将生成一个整数。</span><span class="sxs-lookup"><span data-stu-id="69b41-181">The task is a promise from `AccessTheWebAsync` to produce an integer when the task is complete.</span></span>  
   
- <span data-ttu-id="e6cb2-182">下列语句将此任务分配给 `getLengthTask` 变量。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-182">The following statement assigns this task to the `getLengthTask` variable.</span></span>  
+ <span data-ttu-id="69b41-182">下列语句将此任务分配给 `getLengthTask` 变量。</span><span class="sxs-lookup"><span data-stu-id="69b41-182">The following statement assigns this task to the `getLengthTask` variable.</span></span>  
   
 ```vb  
 Dim getLengthTask As Task(Of Integer) = AccessTheWebAsync()  
 ```  
   
- <span data-ttu-id="e6cb2-183">如 `AccessTheWebAsync` 中一样，`startButton_Click` 可以继续执行不依赖于异步任务 (`getLengthTask`) 的结果的工作，直到该任务处于等待状态。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-183">As in `AccessTheWebAsync`, `startButton_Click` can continue with work that doesn’t depend on the results of the asynchronous task (`getLengthTask`) until the task is awaited.</span></span> <span data-ttu-id="e6cb2-184">下面的输出行表示该工作。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-184">The following output lines represent that work.</span></span>  
+ <span data-ttu-id="69b41-183">如 `AccessTheWebAsync` 中一样，`startButton_Click` 可以继续执行不依赖于异步任务 (`getLengthTask`) 的结果的工作，直到该任务处于等待状态。</span><span class="sxs-lookup"><span data-stu-id="69b41-183">As in `AccessTheWebAsync`, `startButton_Click` can continue with work that doesn’t depend on the results of the asynchronous task (`getLengthTask`) until the task is awaited.</span></span> <span data-ttu-id="69b41-184">下面的输出行表示该工作。</span><span class="sxs-lookup"><span data-stu-id="69b41-184">The following output lines represent that work.</span></span>  
   
 ```  
 FOUR:  Back in startButton_Click.  
@@ -317,18 +308,18 @@ FOUR:  Back in startButton_Click.
            About to await getLengthTask -- no caller to return to.  
 ```  
   
- <span data-ttu-id="e6cb2-185">当 `getLengthTask` 处于等待状态时，`startButton_Click` 中的进度将挂起。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-185">Progress in `startButton_Click` is suspended when `getLengthTask` is awaited.</span></span> <span data-ttu-id="e6cb2-186">下面的赋值语句将挂起 `startButton_Click`，直到完成 `AccessTheWebAsync`。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-186">The following assignment statement suspends `startButton_Click` until `AccessTheWebAsync` is complete.</span></span>  
+ <span data-ttu-id="69b41-185">当 `getLengthTask` 处于等待状态时，`startButton_Click` 中的进度将挂起。</span><span class="sxs-lookup"><span data-stu-id="69b41-185">Progress in `startButton_Click` is suspended when `getLengthTask` is awaited.</span></span> <span data-ttu-id="69b41-186">下面的赋值语句将挂起 `startButton_Click`，直到完成 `AccessTheWebAsync`。</span><span class="sxs-lookup"><span data-stu-id="69b41-186">The following assignment statement suspends `startButton_Click` until `AccessTheWebAsync` is complete.</span></span>  
   
 ```vb  
 Dim contentLength As Integer = Await getLengthTask  
 ```  
   
- <span data-ttu-id="e6cb2-187">下图中的箭头显示控制流，该控制流从 `AccessTheWebAsync` 中的 await 表达式到 `getLengthTask` 的赋值值，后跟 `startButton_Click` 中的正常处理，直到 `getLengthTask` 处于等待状态。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-187">In the following illustration, the arrows show the flow of control from the await expression in `AccessTheWebAsync` to the assignment of a value to `getLengthTask`, followed by normal processing in `startButton_Click` until `getLengthTask` is awaited.</span></span>  
+ <span data-ttu-id="69b41-187">下图中的箭头显示控制流，该控制流从 `AccessTheWebAsync` 中的 await 表达式到 `getLengthTask` 的赋值值，后跟 `startButton_Click` 中的正常处理，直到 `getLengthTask` 处于等待状态。</span><span class="sxs-lookup"><span data-stu-id="69b41-187">In the following illustration, the arrows show the flow of control from the await expression in `AccessTheWebAsync` to the assignment of a value to `getLengthTask`, followed by normal processing in `startButton_Click` until `getLengthTask` is awaited.</span></span>  
   
- <span data-ttu-id="e6cb2-188">![步骤 4](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")</span><span class="sxs-lookup"><span data-stu-id="e6cb2-188">![Step FOUR](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")</span></span>  
+ <span data-ttu-id="69b41-188">![步骤 4](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")</span><span class="sxs-lookup"><span data-stu-id="69b41-188">![Step FOUR](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")</span></span>  
   
-### <a name="step-five"></a><span data-ttu-id="e6cb2-189">步骤 5</span><span class="sxs-lookup"><span data-stu-id="e6cb2-189">Step FIVE</span></span>  
- <span data-ttu-id="e6cb2-190">当 `client.GetStringAsync` 指示它已完成时，`AccessTheWebAsync` 中的处理将从挂起状态释放，且可以继续通过 await 语句。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-190">When `client.GetStringAsync` signals that it’s complete, processing in `AccessTheWebAsync` is released from suspension and can continue past the await statement.</span></span> <span data-ttu-id="e6cb2-191">下面的输出行表示继续处理。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-191">The following lines of output represent the resumption of processing.</span></span>  
+### <a name="step-five"></a><span data-ttu-id="69b41-189">步骤 5</span><span class="sxs-lookup"><span data-stu-id="69b41-189">Step FIVE</span></span>  
+ <span data-ttu-id="69b41-190">当 `client.GetStringAsync` 指示它已完成时，`AccessTheWebAsync` 中的处理将从挂起状态释放，且可以继续通过 await 语句。</span><span class="sxs-lookup"><span data-stu-id="69b41-190">When `client.GetStringAsync` signals that it’s complete, processing in `AccessTheWebAsync` is released from suspension and can continue past the await statement.</span></span> <span data-ttu-id="69b41-191">下面的输出行表示继续处理。</span><span class="sxs-lookup"><span data-stu-id="69b41-191">The following lines of output represent the resumption of processing.</span></span>  
   
 ```  
 FIVE:  Back in AccessTheWebAsync.  
@@ -337,18 +328,18 @@ FIVE:  Back in AccessTheWebAsync.
            Exiting from AccessTheWebAsync.  
 ```  
   
- <span data-ttu-id="e6cb2-192">return 语句 `urlContents.Length` 的操作数存储于 `AccessTheWebAsync` 返回的任务中。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-192">The operand of the return statement, `urlContents.Length`, is stored in the task that  `AccessTheWebAsync` returns.</span></span> <span data-ttu-id="e6cb2-193">Await 表达式从 `startButton_Click` 中的 `getLengthTask` 检索该值。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-193">The await expression retrieves that value from `getLengthTask` in `startButton_Click`.</span></span>  
+ <span data-ttu-id="69b41-192">return 语句 `urlContents.Length` 的操作数存储于 `AccessTheWebAsync` 返回的任务中。</span><span class="sxs-lookup"><span data-stu-id="69b41-192">The operand of the return statement, `urlContents.Length`, is stored in the task that  `AccessTheWebAsync` returns.</span></span> <span data-ttu-id="69b41-193">Await 表达式从 `startButton_Click` 中的 `getLengthTask` 检索该值。</span><span class="sxs-lookup"><span data-stu-id="69b41-193">The await expression retrieves that value from `getLengthTask` in `startButton_Click`.</span></span>  
   
- <span data-ttu-id="e6cb2-194">下图显示了完成 `client.GetStringAsync`（和 `getStringTask`）后控制的转移。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-194">The following image shows the transfer of control after `client.GetStringAsync` (and `getStringTask`) are complete.</span></span>  
+ <span data-ttu-id="69b41-194">下图显示了完成 `client.GetStringAsync`（和 `getStringTask`）后控制的转移。</span><span class="sxs-lookup"><span data-stu-id="69b41-194">The following image shows the transfer of control after `client.GetStringAsync` (and `getStringTask`) are complete.</span></span>  
   
- <span data-ttu-id="e6cb2-195">![步骤 5](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")</span><span class="sxs-lookup"><span data-stu-id="e6cb2-195">![Step FIVE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")</span></span>  
+ <span data-ttu-id="69b41-195">![步骤 5](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")</span><span class="sxs-lookup"><span data-stu-id="69b41-195">![Step FIVE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")</span></span>  
   
- <span data-ttu-id="e6cb2-196">`AccessTheWebAsync` 将一直运行直到完成，且控制将返回到 `startButton_Click`，它正在等待完成。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-196">`AccessTheWebAsync` runs to completion, and control returns to `startButton_Click`, which is awaiting the completion.</span></span>  
+ <span data-ttu-id="69b41-196">`AccessTheWebAsync` 将一直运行直到完成，且控制将返回到 `startButton_Click`，它正在等待完成。</span><span class="sxs-lookup"><span data-stu-id="69b41-196">`AccessTheWebAsync` runs to completion, and control returns to `startButton_Click`, which is awaiting the completion.</span></span>  
   
-### <a name="step-six"></a><span data-ttu-id="e6cb2-197">步骤 6</span><span class="sxs-lookup"><span data-stu-id="e6cb2-197">Step SIX</span></span>  
- <span data-ttu-id="e6cb2-198">当 `AccessTheWebAsync` 指示它已完成时，处理可以继续通过 `startButton_Async` 中的 await 语句。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-198">When `AccessTheWebAsync` signals that it’s complete, processing can continue past the await statement in `startButton_Async`.</span></span> <span data-ttu-id="e6cb2-199">事实上，该程序没有更多可执行的操作。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-199">In fact, the program has nothing more to do.</span></span>  
+### <a name="step-six"></a><span data-ttu-id="69b41-197">步骤 6</span><span class="sxs-lookup"><span data-stu-id="69b41-197">Step SIX</span></span>  
+ <span data-ttu-id="69b41-198">当 `AccessTheWebAsync` 指示它已完成时，处理可以继续通过 `startButton_Async` 中的 await 语句。</span><span class="sxs-lookup"><span data-stu-id="69b41-198">When `AccessTheWebAsync` signals that it’s complete, processing can continue past the await statement in `startButton_Async`.</span></span> <span data-ttu-id="69b41-199">事实上，该程序没有更多可执行的操作。</span><span class="sxs-lookup"><span data-stu-id="69b41-199">In fact, the program has nothing more to do.</span></span>  
   
- <span data-ttu-id="e6cb2-200">下面的输出行表示 `startButton_Async` 中处理的恢复：</span><span class="sxs-lookup"><span data-stu-id="e6cb2-200">The following lines of output represent the resumption of processing in `startButton_Async`:</span></span>  
+ <span data-ttu-id="69b41-200">下面的输出行表示 `startButton_Async` 中处理的恢复：</span><span class="sxs-lookup"><span data-stu-id="69b41-200">The following lines of output represent the resumption of processing in `startButton_Async`:</span></span>  
   
 ```  
 SIX:   Back in startButton_Click.  
@@ -357,18 +348,18 @@ SIX:   Back in startButton_Click.
            About to display contentLength and exit.  
 ```  
   
- <span data-ttu-id="e6cb2-201">Await 表达式从 `getLengthTask` 中检索为 `AccessTheWebAsync` 中 return 语句的操作数的整数值。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-201">The await expression retrieves from `getLengthTask` the integer value that’s the operand of the return statement in `AccessTheWebAsync`.</span></span> <span data-ttu-id="e6cb2-202">下面的语句将该值赋给 `contentLength` 变量。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-202">The following statement assigns that value to the `contentLength` variable.</span></span>  
+ <span data-ttu-id="69b41-201">Await 表达式从 `getLengthTask` 中检索为 `AccessTheWebAsync` 中 return 语句的操作数的整数值。</span><span class="sxs-lookup"><span data-stu-id="69b41-201">The await expression retrieves from `getLengthTask` the integer value that’s the operand of the return statement in `AccessTheWebAsync`.</span></span> <span data-ttu-id="69b41-202">下面的语句将该值赋给 `contentLength` 变量。</span><span class="sxs-lookup"><span data-stu-id="69b41-202">The following statement assigns that value to the `contentLength` variable.</span></span>  
   
 ```vb  
 Dim contentLength As Integer = Await getLengthTask  
 ```  
   
- <span data-ttu-id="e6cb2-203">下图显示从 `AccessTheWebAsync` 到 `startButton_Click` 的控制的返回。</span><span class="sxs-lookup"><span data-stu-id="e6cb2-203">The following image shows the return of control from `AccessTheWebAsync` to `startButton_Click`.</span></span>  
+ <span data-ttu-id="69b41-203">下图显示从 `AccessTheWebAsync` 到 `startButton_Click` 的控制的返回。</span><span class="sxs-lookup"><span data-stu-id="69b41-203">The following image shows the return of control from `AccessTheWebAsync` to `startButton_Click`.</span></span>  
   
- <span data-ttu-id="e6cb2-204">![步骤 6](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")</span><span class="sxs-lookup"><span data-stu-id="e6cb2-204">![Step SIX](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")</span></span>  
+ <span data-ttu-id="69b41-204">![步骤 6](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")</span><span class="sxs-lookup"><span data-stu-id="69b41-204">![Step SIX](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e6cb2-205">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e6cb2-205">See Also</span></span>  
- [<span data-ttu-id="e6cb2-206">使用 Async 和 Await 的异步编程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e6cb2-206">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [<span data-ttu-id="e6cb2-207">异步返回类型 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e6cb2-207">Async Return Types (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [<span data-ttu-id="e6cb2-208">演练：使用 Async 和 Await 访问 Web (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e6cb2-208">Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- <span data-ttu-id="e6cb2-209">[Async Sample: Control Flow in Async Programs (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)（异步示例：异步程序中的控制流（C# 和 Visual Basic））</span><span class="sxs-lookup"><span data-stu-id="e6cb2-209">[Async Sample: Control Flow in Async Programs (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)</span></span>
+## <a name="see-also"></a><span data-ttu-id="69b41-205">请参阅</span><span class="sxs-lookup"><span data-stu-id="69b41-205">See Also</span></span>  
+ [<span data-ttu-id="69b41-206">使用 Async 和 Await 的异步编程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69b41-206">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [<span data-ttu-id="69b41-207">异步返回类型 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69b41-207">Async Return Types (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
+ [<span data-ttu-id="69b41-208">演练：使用 Async 和 Await 访问 Web (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69b41-208">Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ <span data-ttu-id="69b41-209">[Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)（异步示例：异步程序中的控制流（C# 和 Visual Basic））</span><span class="sxs-lookup"><span data-stu-id="69b41-209">[Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)</span></span>
