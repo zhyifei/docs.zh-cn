@@ -2,11 +2,12 @@
 title: '要开始使用 Visual Studio 中的 F #'
 description: '了解如何使用 Visual Studio 中使用 F #。'
 ms.date: 02/13/2017
-ms.openlocfilehash: d392e3a93d5b13206f654e35a266e9d9569942fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22fbe8086ec133605e1d9b4b28e524fe2ed8ac28
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728529"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>要开始使用 Visual Studio 中的 F #
 
@@ -71,58 +72,6 @@ val square: x:int -> int
 ```
 
 祝贺你！  你在 Visual Studio 中创建第一个 F # 项目、 编写 F # 函数打印调用该函数的结果并运行项目以查看部分结果。
-
-## <a name="using-f-interactive"></a>使用 F # Interactive
-
-最佳功能的 Visual F # 工具在 Visual Studio 中的一个是 F # 交互式窗口。  它允许您通过代码发送到的进程可以在此调用该代码，并以交互方式查看结果。
-
-若要开始使用它，突出显示`square`你代码中定义的函数。  接下来，保存**Alt**键，然后按**Enter**。  这在 F # 交互式窗口中执行代码。  你应看到 F # 交互式窗口中它的以下一起显示：
-
-```
->
-
-val square : x:int -> int
-
->
-```
-
-下面的示例演示的相同函数签名`square`函数，你此前看到当悬停在该函数。  因为`square`是现在在 F # Interactive 的过程中定义，则可以调用它时使用不同的值：
-
-```
-> square 12;;
-val it : int = 144
->square 13;;
-val it : int = 169
-```
-
-此程序执行的函数，请将结果绑定到的新名称`it`，并显示类型和值`it`。  请注意，必须终止与每个行`;;`。  这是如何 F # Interactive 知道函数调用完成时。  你还可以在 F # Interactive 中定义新的函数：
-
-```
-> let isOdd x = x % 2 <> 0;;
-
-val isOdd : x:int -> bool
-
-> isOdd 12;;
-val it : bool = false
-```
-
-上述定义了一个新的函数， `isOdd`，此方法采用`int`和检查，以查看它是否是奇数 ！ 你可以调用此函数可看到它使用不同的输入返回。  你可以调用函数调用中的函数：
-
-```
-> isOdd (square 15);;
-val it : bool = true
-```
-
-你还可以使用[管道进运算符](../language-reference/symbol-and-operator-reference/index.md)管线值传输到两个函数：
-
-```
-> 15 |> square |> isOdd;;
-val it : bool = true
-```
-
-管道进运算符，和的详细信息，详见更高版本的教程。
-
-这是仅一下如何使用 F # Interactive。 若要了解详细信息，请查看[使用 F # 进行交互式编程](../tutorials/fsharp-interactive/index.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -2,11 +2,12 @@
 title: 如何： 并行发起多个 Web 请求，使用 Async 和 Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 1b98a0f29409fa49af1c9c8f7c91f2170981f7cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728438"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>如何： 并行发起多个 Web 请求，使用 Async 和 Await (Visual Basic)
 在 async 方法中，任务在创建后即启动。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)运算符应用于方法中的点在任务完成之前无法继续处理任务。 通常任务被创建后即等待，如下面的示例所示。  
@@ -39,7 +40,7 @@ Dim result = Await myTask
   
  在同一时间启动多个任务的另一个示例，请参阅[如何： 扩展异步演练使用 task.whenall (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
   
- 可以从[开发人员代码示例](http://go.microsoft.com/fwlink/?LinkId=254906)下载此示例的代码。  
+ 可以从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)下载此示例的代码。  
   
 ### <a name="to-set-up-the-project"></a>设置项目  
   
