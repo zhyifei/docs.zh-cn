@@ -1,12 +1,6 @@
 ---
-title: "异步服务器套接字示例"
-ms.custom: 
+title: 异步服务器套接字示例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +9,18 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 57922a9f0ca431a2e2f070f34670d6f7f6d76635
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9b770101e4295ea0c254905dd31f0e57527346fa
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728396"
 ---
-# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="8f7d4-102">异步服务器套接字示例</span><span class="sxs-lookup"><span data-stu-id="8f7d4-102">Asynchronous Server Socket Example</span></span>
-<span data-ttu-id="8f7d4-103">以下示例程序创建从客户端接收连接请求的服务器。</span><span class="sxs-lookup"><span data-stu-id="8f7d4-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="8f7d4-104">该服务器是使用异步套接字构建的，因此在等待客户端的连接时，不会挂起服务器应用程序的执行。</span><span class="sxs-lookup"><span data-stu-id="8f7d4-104">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="8f7d4-105">应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。</span><span class="sxs-lookup"><span data-stu-id="8f7d4-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="8f7d4-106">来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。</span><span class="sxs-lookup"><span data-stu-id="8f7d4-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="314ea-102">异步服务器套接字示例</span><span class="sxs-lookup"><span data-stu-id="314ea-102">Asynchronous Server Socket Example</span></span>
+<span data-ttu-id="314ea-103">以下示例程序创建从客户端接收连接请求的服务器。</span><span class="sxs-lookup"><span data-stu-id="314ea-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="314ea-104">该服务器是使用异步套接字构建的，因此在等待客户端的连接时，不会挂起服务器应用程序的执行。</span><span class="sxs-lookup"><span data-stu-id="314ea-104">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="314ea-105">应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。</span><span class="sxs-lookup"><span data-stu-id="314ea-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="314ea-106">来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。</span><span class="sxs-lookup"><span data-stu-id="314ea-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -59,9 +52,6 @@ Public Class AsynchronousSocketListener
     ' echo that data back to the connected client.  
     ' It then disconnects from the client and waits for another client.   
     Public Shared Sub Main()  
-        ' Data buffer for incoming data.  
-        Dim bytes() As Byte = New [Byte](1023) {}  
-  
         ' Establish the local endpoint for the socket.  
         Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
@@ -181,9 +171,6 @@ public class AsynchronousSocketListener {
     }  
   
     public static void StartListening() {  
-        // Data buffer for incoming data.  
-        byte[] bytes = new Byte[1024];  
-  
         // Establish the local endpoint for the socket.  
         // The DNS name of the computer  
         // running the listener is "host.contoso.com".  
@@ -252,7 +239,7 @@ public class AsynchronousSocketListener {
         if (bytesRead > 0) {  
             // There  might be more data, so store the data received so far.  
             state.sb.Append(Encoding.ASCII.GetString(  
-                state.buffer,0,bytesRead));  
+                state.buffer, 0, bytesRead));  
   
             // Check for end-of-file tag. If it is not there, read   
             // more data.  
@@ -305,7 +292,7 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8f7d4-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="8f7d4-107">See Also</span></span>  
- [<span data-ttu-id="8f7d4-108">异步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="8f7d4-108">Asynchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
- [<span data-ttu-id="8f7d4-109">使用异步服务器套接字</span><span class="sxs-lookup"><span data-stu-id="8f7d4-109">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [<span data-ttu-id="8f7d4-110">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="8f7d4-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="314ea-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="314ea-107">See Also</span></span>  
+ [<span data-ttu-id="314ea-108">异步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="314ea-108">Asynchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
+ [<span data-ttu-id="314ea-109">使用异步服务器套接字</span><span class="sxs-lookup"><span data-stu-id="314ea-109">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [<span data-ttu-id="314ea-110">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="314ea-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
