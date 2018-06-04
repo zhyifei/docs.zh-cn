@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9df41a404c091bb76490d762b55580c36cf33f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728675"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>正则表达式示例：扫描 HREF
 下面的示例搜索输入字符串并显示所有 href="…" 的值和它们在字符串中的位置。  
@@ -43,9 +44,9 @@ ms.lasthandoff: 05/04/2018
 |`\s*`|匹配零个或多个空白字符。|  
 |`=`|匹配等于号。|  
 |`\s*`|匹配零个或多个空白字符。|  
-|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|匹配以下项之一，而不将结果分配到捕获组：<br /> <ul><li><p>一个引号或单引号，后跟零个或多个引号或单引号以外的任意字符，然后再后跟一个引号或单引号。 名为 `1` 的组包含在此模式。</p></li><li><p>一个或多个非空格字符。 名为 `1` 的组包含在此模式。</p></li></ul>|  
+|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|匹配以下项之一，而不将结果分配到捕获组：<br /> <ul><li><p>一个引号或单引号，后跟零个或多个引号或单引号以外的任意字符，然后再后跟一个引号或单引号。 名为 `1` 的组包含在此模式。</p></li><li><p>一个或多个非空格字符。 名为 `1` 的组包含在此模式。</p></li></ul>|  
 |`(?<1>[^"']*)`|将零个或多个引号或单引号以外的任意字符分配给名为 `1` 的捕获组。|  
-|`"(?<1>\S+)`|将一个或多个非空白字符分配给名为 `1` 的捕获组。|  
+|`(?<1>\S+)`|将一个或多个非空白字符分配给名为 `1` 的捕获组。|  
   
 ## <a name="match-result-class"></a>匹配结果类  
  搜索结果存储在 <xref:System.Text.RegularExpressions.Match> 类中，此类可访问搜索提取的所有子字符串。 它还会记住搜索的字符串和使用的正则表达式，因此可以调用 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法，从上一次搜索结束的位置开始执行另一次搜索。  
