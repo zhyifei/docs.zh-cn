@@ -4,17 +4,18 @@ description: 了解有关 Windows 兼容性包以及如何使用它将现有 .NE
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.openlocfilehash: 6b25a2d5c197a6c9b0a7ead18370870ddc091e1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51b96d7828285964c1b0cbb835b8eb5ed92c47d6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566168"
 ---
 # <a name="using-the-windows-compatibility-pack"></a>使用 Windows 兼容性包
 
 开发人员在将其现有代码移植到 .NET Core 时遇到的最常见问题之一是他们依赖于仅存在于 .NET Framework 中的 API 和技术。 Windows 兼容性包将提供其中许多技术，使针对现有代码生成 .NET Core 应用程序以及 .NET Standard 库变得更为可行。
 
-此包是 [.NET Standard 2.0 的逻辑扩展](../whats-new/index.md#api-changes-and-library-support)，显著增加了 API 集和现有代码编译，而几乎无需进行任何修改。 但为了信守 .NET Standard 的承诺（“它是一组所有 .NET 实现都提供的 API”），这不包括无法跨所有平台工作的技术，如注册表、Windows Management Instrumentation (WMI) 或反射发出 API。
+此包是 [.NET Standard 2.0 的逻辑扩展](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)，显著增加了 API 集和现有代码编译，而几乎无需进行任何修改。 但为了信守 .NET Standard 的承诺（“它是一组所有 .NET 实现都提供的 API”），这不包括无法跨所有平台工作的技术，如注册表、Windows Management Instrumentation (WMI) 或反射发出 API。
 
 Windows 兼容性包 位于 .NET Standard 顶部，提供对仅用于 Windows 的技术的访问权限。 它对于第一步想要移动到 .NET Core 但仍计划停留在 Windows 上的客户尤其有用。 在这种情况下，无法使用仅限 Windows 的技术只会造成迁移障碍，没有任何体系结构优势。
 

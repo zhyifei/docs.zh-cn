@@ -2,11 +2,12 @@
 title: C# 7.2 中的新增功能
 description: C# 7.2 中的新增功能概述。
 ms.date: 08/16/2017
-ms.openlocfilehash: b813bf5b38ef17986b21e928c9c86e583174c7d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a74afd7f073daa46328d60149e2dd90207420a80
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566184"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 中的新增功能
 
@@ -15,7 +16,7 @@ C# 7.2 又是一个单点版本，它增添了大量有用的功能。
 
 其余功能很微小，但值得拥有。
 
-C# 7.2 使用[语言版本选择](csharp-7-1.md#language-version-selection)配置元素来选择编译器语言版本。
+C# 7.2 使用[语言版本选择](../language-reference/configure-language-version.md)配置元素来选择编译器语言版本。
 
 此版本中新增的语言功能包括：
 

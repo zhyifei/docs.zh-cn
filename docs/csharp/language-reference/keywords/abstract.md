@@ -7,11 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 78212365c4183d31bcd5f1b1628c3443d48909a8
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 1da11548e95a2eedb8a16cf27807ff59daeb2bc5
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566119"
 ---
 # <a name="abstract-c-reference"></a>abstract（C# 参考）
 `abstract` 修饰符指示被修改内容的实现已丢失或不完整。 abstract 修饰符可用于类、方法、属性、索引和事件。 在类声明中使用 `abstract` 修饰符以指示某个类仅旨在作为其他类的基类。 标记为 abstract 的成员，或包含在抽象类中的成员，都必须由派生自抽象类的类来实现。  
@@ -19,7 +20,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="example"></a>示例  
  在此示例中，类 `Square` 必须提供 `Area` 的实现，因为它派生自 `ShapesClass`：  
   
- [!code-csharp[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
   
  抽象类具有以下功能：  
   
@@ -61,12 +62,12 @@ ms.lasthandoff: 05/10/2018
   
  实现接口的抽象类有可能将接口方法映射到抽象方法上。 例如:  
   
- [!code-csharp[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
+[!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
 ## <a name="example"></a>示例  
  在此示例中，类 `DerivedClass` 派生自抽象类 `BaseClass`。 抽象类包含抽象方法 `AbstractMethod`，以及两个抽象属性 `X` 和 `Y`。  
   
- [!code-csharp[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
+[!code-csharp[csrefKeywordsModifiers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#3)]
   
  在前面的示例中，如果你尝试通过使用如下语句来实例化抽象类：  
   

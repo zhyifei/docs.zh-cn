@@ -3,12 +3,13 @@ title: dotnet add package 命令 - .NET Core CLI
 description: “dotnet add package”命令可便于添加对项目的 NuGet 包引用。
 author: mairaw
 ms.author: mairaw
-ms.date: 08/11/2017
-ms.openlocfilehash: fd3704bbb941835421d78e19f196fa52b3767c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 31dda9dbb101238b3a33d8b0d9a17765744480e0
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696294"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>摘要
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
 ## <a name="description"></a>描述
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
 
 例如，将 `Newtonsoft.Json` 添加到 ToDo.csproj 后的输出如以下示例所示：
 
-```
+```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
@@ -62,10 +63,6 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 
 打印出有关命令的简短帮助。
 
-`-v|--version <VERSION>`
-
-包的版本。
-
 `-f|--framework <FRAMEWORK>`
 
 仅在以特定[框架](../../standard/frameworks.md)为目标时添加包引用。
@@ -74,13 +71,17 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 
 在不执行还原预览和兼容性检查的情况下添加包引用。
 
+`--package-directory <PACKAGE_DIRECTORY>`
+
+将包还原到指定的目录。
+
 `-s|--source <SOURCE>`
 
 使用还原操作期间的特定 NuGet 包源。
 
-`--package-directory <PACKAGE_DIRECTORY>`
+`-v|--version <VERSION>`
 
-将包还原到指定的目录。
+包的版本。
 
 ## <a name="examples"></a>示例
 
