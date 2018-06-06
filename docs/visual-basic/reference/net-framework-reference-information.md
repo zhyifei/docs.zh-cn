@@ -6,11 +6,12 @@ helpviewer_keywords:
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: 969aed5e98c0017f34d57d3999292c10163b4385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a949fa6554316ebd2b4abd90e512f4a8496f874
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805407"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>.NET Framework 参考信息 (Visual Basic)
 本主题提供指向有关如何使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]类库。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 05/04/2018
  [.NET Framework 示例](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
  提供指向演示.NET Framework 技术的示例应用程序。  
   
- [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ [.NET API 浏览器](../../../api/index.md)  
  提供语法、 代码示例和.NET Framework 命名空间中每个类的相关的信息。
