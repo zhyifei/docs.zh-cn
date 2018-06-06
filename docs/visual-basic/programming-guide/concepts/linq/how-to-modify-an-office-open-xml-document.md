@@ -2,16 +2,17 @@
 title: 如何： 修改 Office Open XML 文档 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 97e754f37580af990b1aaa64f389de5cbce91d60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d4ecdf89606190eed16b5374a5e43421d1260b7
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753388"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>如何： 修改 Office Open XML 文档 (Visual Basic)
 本主题显演示一个打开、修改和保存 Office Open XML 文档的示例。  
   
- 有关 Office Open XML 的详细信息，请参阅 [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573)。  
+ 有关 Office Open XML 的详细信息，请参阅[Eric 空白博客](http://www.ericwhite.com)。  
   
 ## <a name="example"></a>示例  
  本示例查找文档中的第一个段落元素。 示例从段落中检索文本，然后删除段落中的所有文本域。 它创建一个由第一个段落已转换为大写的文本构成的新文本域。 然后将已更改的 XML 序列化为 Open XML 包并关闭该包。  
