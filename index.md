@@ -5,11 +5,12 @@ hide_bc: true
 title: .NET 文档
 description: 了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3a2501d4eb0e40930bb119fb27f9cb630bc2a884
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: f5967e21fcda580635dd53f976e2e5dabc0fbce8
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
+ms.locfileid: "34058884"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -113,7 +114,7 @@ ms.lasthandoff: 05/10/2018
                                                 <p><a href="/dotnet/core/tutorials">教程</a></p>
                                                 <p><a href="/dotnet/core/porting">从 .NET Framework 移植</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
-                                                <p>EF Core<a href="/ef/core/index"></a></p>
+                                                <p><a href="/ef/core/index">EF Core</a></p>
                                             </div>
                                         </div>
                                     </div>
