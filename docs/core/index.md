@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956250"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
@@ -127,7 +128,7 @@ Windows 和 Unix 实现大小相似。 Windows 具有较大的实现，因为 Co
 
 .NET Core 和 .NET Framework 的主要差异在于： 
 
-- **应用模型** -- .NET Core 不支持所有 .NET Framework 应用模型，某种程度上是因为其中许多模型都是基于 Windows 技术，如 WPF（基于 DirectX 生成）。 但 .NET Core 和 .NET Framework 两者都支持控制台和 ASP.NET Core 应用模型。 
+- **应用模型** -- .NET Core 不支持所有 .NET Framework 应用模型，某种程度上是因为其中许多模型都是基于 Windows 技术，如 WPF（基于 DirectX 生成）。  但 .NET Core 和 .NET Framework 两者都支持控制台和 ASP.NET Core 应用模型。 
 - **API** -- .NET Core 包含很多与 .NET Framework 相同，但数量较少的 API，并且具有不同的组成要素（程序集名称不同；关键用例中的类型形状不同）。 目前，这些差异通常都需要更改，以将源移植到 .NET Core。 .NET Core 实现 [.NET 标准](../standard/net-standard.md) API，随着时间的推移，将包含更多 .NET Framework BCL API。
 - **子系统** -- .NET Core 实现 .NET Framework 中子系统的子级，目的是实现更简单的实现和编程模型。 例如，不支持代码访问安全性 (CAS)，但支持反射。
 - **平台** -- .NET Framework 支持 Windows 和 Windows Server，而 NET Core 还支持 macOS 和 Linux。
