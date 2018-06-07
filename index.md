@@ -10,6 +10,7 @@ ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34058884"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -113,7 +114,7 @@ ms.lasthandoff: 05/11/2018
                                                 <p><a href="/dotnet/core/tutorials">教程</a></p>
                                                 <p><a href="/dotnet/core/porting">从 .NET Framework 移植</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
-                                                <p>EF Core<a href="/ef/core/index"></a></p>
+                                                <p><a href="/ef/core/index">EF Core</a></p>
                                             </div>
                                         </div>
                                     </div>
