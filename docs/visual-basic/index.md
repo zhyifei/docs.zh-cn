@@ -6,11 +6,12 @@ helpviewer_keywords:
 - Visual Basic
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1c9aa868636181a8dd4e59e61d3ed82c89c217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03c9c118104f6fe3196d0a4bb13d28a6a122d859
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805537"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic 指南
 
@@ -51,5 +52,5 @@ Visual Basic 用于高效生成类型安全和面向对象的应用程序。 Vis
  [Visual Studio 开发入门](/visualstudio/ide/get-started-developing-with-visual-studio)  
  提供帮助你了解 Visual Studio 基本知识的链接。  
   
- [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ [.NET API 浏览器](../../api/index.md)  
  介绍由 Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SKD 中包含的类、接口和值类型组成的库。
