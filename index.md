@@ -5,12 +5,12 @@ hide_bc: true
 title: .NET 文档
 description: 了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5967e21fcda580635dd53f976e2e5dabc0fbce8
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 25f01910ba6f004cafbe8b981e4a986791044ded
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058884"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826979"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -393,13 +393,13 @@ ms.locfileid: "34058884"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/azure/cloud-services/cloud-services-dotnet-get-started">
-                                                    <h3>Azure 云服务和 ASP.NET</h3>
-                                                    <p>了解如何在 Azure 中配置、监视和缩放云服务。</p>
+                                                <a href="/azure/storage/">
+                                                    <h3>Azure 存储</h3>
+                                                    <p>了解 Azure 存储，并了解如何使用 Azure Blob、表格、队列和文件创建应用程序。</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -419,25 +419,6 @@ ms.locfileid: "34058884"
                                                 <a href="/dotnet/fsharp/using-fsharp-on-azure">
                                                     <h3>在 Azure 上使用 F#</h3>
                                                     <p>了解如何在 F# 使用各种 Azure 服务，例如 Azure 存储、云服务和 Azure Functions。</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/azure/storage/">
-                                                    <h3>Azure 存储</h3>
-                                                    <p>了解 Azure 存储，并了解如何使用 Azure Blob、表格、队列和文件创建应用程序。</p>
                                                 </a>
                                             </div>
                                         </div>
