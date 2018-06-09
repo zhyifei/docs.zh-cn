@@ -15,11 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 907d5dcaae8f6e09902c2b3548d5ba8ac9a2b077
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251163"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>标记扩展和 WPF XAML
 本主题介绍 XAML 的标记扩展概念，包括其语法规则、用途以及作为其基础的类对象模型。 标记扩展是 XAML 语言以及 XAML 服务的 .NET 实现的常规功能。 本主题专门详细讨论用于 WPF XAML 的标记扩展。  
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/23/2018
 -   如果各个分隔的标记不包含任何等号，则每个标记都将被视为构造函数参数。 必须按该签名所期望的类型和该签名所期望的适当顺序给出每个构造函数参数。  
   
     > [!NOTE]
-    >  XAML 处理器必须调用与对的数量这一参数计数匹配的构造函数。 出于此原因，如果要实现自定义标记扩展，请不要提供具有相同参数计数的多个参数。 如果多个标记扩展构造函数路径具有相同的参数计数，则不会定义 XAML 处理器的行为方式，但应预计到如果这种情况存在于标记扩展类型定义中，则会允许 XAML 处理器引发有关使用情况的异常。  
+    >  XAML 处理器必须调用与对的数量这一参数计数匹配的构造函数。 因此，如果你要实现自定义标记扩展，不需提供多个构造函数具有相同数量的自变量。 如果多个标记扩展构造函数路径具有相同的参数计数，则不会定义 XAML 处理器的行为方式，但应预计到如果这种情况存在于标记扩展类型定义中，则会允许 XAML 处理器引发有关使用情况的异常。  
   
 -   如果各个分隔的标记包含等号，则 XAML 处理器会首先为标记扩展调用默认构造函数。 之后，每个“名称=值”对会解释为标记扩展上存在的属性名称以及赋给该属性的值。  
   

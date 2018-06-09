@@ -2,11 +2,12 @@
 title: 'F # 代码格式设置准则'
 description: '了解有关格式设置 F # 代码的准则。'
 ms.date: 05/14/2018
-ms.openlocfilehash: 1433b6891a6a0ddcdc082c141365ae54fa40c27b
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 6c8e4059fd4bf1e7450118a6df02609217c4f4db
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231498"
 ---
 # <a name="f-code-formatting-guidelines"></a>F # 代码格式设置准则
 
@@ -29,6 +30,177 @@ F # 默认使用有意义的空白。 以下准则旨在提供指导如何能够
 **我们建议每个缩进 4 个空格。**
 
 也就是说，缩进的程序是主观一回事。 变体是确定，但应遵循的第一个规则是*缩进的一致性*。 选择广为接受的缩进样式，并在你的基本代码整个系统地使用它。
+
+## <a name="formatting-blank-lines"></a>格式设置的空行
+
+* 单独顶级函数和类定义替换为两个空白的行。
+* 类中的方法定义由一个空行分隔。
+* 可能 （尽量少） 使用额外的空白的行到单独的组相关的函数。 多个相关 one-liners （例如，虚拟实现一组） 之间，可以忽略空行。
+* 使用空白的行在函数中，谨慎，以指示逻辑部分。
+
+## <a name="formatting-comments"></a>格式设置的注释
+
+通常选择多个双斜线注释而 ML 样式块注释。
+
+```fsharp
+// Prefer this style of comments when you want
+// to express written ideas on multiple lines.
+
+(*
+    ML-style comments are fine, but not a .NET-ism.
+    They are useful when needing to modify multi-line comments, though.
+*)
+```
+
+内联注释应的首字母大写。
+
+```fsharp
+let f x = x + 1 // Increment by one.
+```
+
+## <a name="naming-conventions"></a>命名约定
+
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>使用驼峰匹配类绑定、 表达式绑定和绑定模式值和函数
+
+是很常见，并且接受的 F # 要使用样式驼峰匹配的所有名称绑定为本地变量或在模式匹配和函数定义中。
+
+```fsharp
+// OK
+let addIAndJ i j = i + j
+
+// Bad
+let addIAndJ I J = I+J
+
+// Bad
+let AddIAndJ i j = i + j
+```
+
+类中的本地绑定函数还应使用驼峰匹配。
+
+```fsharp
+type MyClass() =
+
+    let doSomething () =
+
+    let firstResult = ...
+
+    let secondResult = ...
+
+    member x.Result = doSomething()
+```
+
+### <a name="use-camelcase-for-module-bound-public-functions"></a>驼峰匹配用于绑定到模块的公共函数
+
+当模块绑定函数是一个公共 API 的一部分时，它应使用驼峰匹配：
+
+```fsharp
+module MyAPI =
+    let publicFunctionOne param1 param2 param2 = ...
+
+    let publicFunctionTwo param1 param2 param3 = ...
+```
+
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>驼峰匹配用于内部和私有模块绑定值和函数
+
+对于专用模块绑定值，其中包括使用驼峰匹配：
+
+* 在脚本中的即席函数
+
+* 组成的模块或类型的内部实现的值
+
+```fsharp
+let emailMyBossTheLatestResults =
+    ...
+```
+
+### <a name="use-camelcase-for-parameters"></a>对参数使用驼峰匹配
+
+所有参数应都使用驼峰匹配根据.NET 命名约定。
+
+```fsharp
+module MyModule =
+    let myFunction paramOne paramTwo = ...
+
+type MyClass() =
+    member this.MyMethod(paramOne, paramTwo) = ...
+```
+
+### <a name="use-pascalcase-for-modules"></a>用于模块的 PascalCase
+
+（顶级、 内部、 私有、 嵌套） 的所有模块都应都使用 PascalCase。
+
+```fsharp
+module MyTopLevelModule
+
+module Helpers =
+    module private SuperHelpers =
+        ...
+
+    ...
+```
+
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>PascalCase 用于类型声明、 成员和标签
+
+类、 接口、 结构、 枚举、 委托、 记录和可区分的联合所有的命名应当与 PascalCase。 类型和记录和可区分的联合的标签中的成员还应使用 PascalCase。
+
+```fsharp
+type IMyInterface =
+    abstract Something: int
+
+type MyClass() =
+    member this.MyMethod(x, y) = x + y
+
+type MyRecord = { IntVal: int; StringVal: string }
+
+type SchoolPerson =
+    | Professor
+    | Student
+    | Advisor
+    | Administrator
+```
+
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>PascalCase 用于构造固有的.NET
+
+命名空间、 异常、 事件和项目 /`.dll`名称还应使用 PascalCase。 不仅这会使感觉到使用者更自然的其他.NET 语言的消耗，也是与.NET，则可能会遇到的命名约定保持一致。
+
+### <a name="avoid-underscores-in-names"></a>避免在名称中的下划线
+
+从历史上看，某些 F # 库具有名称中使用下划线。 但是，这不再广泛接受，部分原因是因为它与.NET 命名约定冲突。 也就是说，某些 F # 程序员出于历史原因，很大程度，部分使用下划线，容差和遵循十分重要。 但是，请注意，该样式通常并的其他用户可以选择要使用它。
+
+一些例外情况包括与互操作性本机组件下划线很常见。
+
+### <a name="use-standard-f-operators"></a>使用标准 F # 运算符
+
+以下运算符在 F # 标准库中定义和应使用而不是定义等效项。 建议使用这些运算符，如往往会使代码更具可读性且惯例。 具有背景的 OCaml 或其他功能的编程语言的开发人员可能会习惯于不同的惯例。 以下列表总结了建议的 F # 运算符。
+
+```fsharp
+x |> f // Forward pipeline
+f >> g // Forward composition
+x |> ignore // Discard away a value
+x + y // Overloaded addition (including string concatenation)
+x - y // Overloaded subtraction
+x * y // Overloaded multiplication
+x / y // Overloaded division
+x % y // Overloaded modulus
+x && y // Lazy/short-cut "and"
+x || y // Lazy/short-cut "or"
+x <<< y // Bitwise left shift
+x >>> y // Bitwise right shift
+x ||| y // Bitwise or, also for working with “flags” enumeration
+x &&& y // Bitwise and, also for working with “flags” enumeration
+x ^^^ y // Bitwise xor, also for working with “flags” enumeration
+```
+
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>前缀语法用于泛型 (`Foo<T>`) 优先于后缀语法 (`T Foo`)
+
+F # 继承的命名的泛型类型的两个后缀 ML 样式 (例如， `int list`) 以及.NET 样式的前缀 (例如， `list<int>`)。 更喜欢的.NET 样式，四种特定类型除外：
+
+1. F # 列出，对于使用后缀形式：`int list`而非`list<int>`。
+2. 对于 F # 选项，使用的后缀形式：`int option`而非`option<int>`。
+3. 对于 F # 数组，使用语法名称`int[]`而非`int array`或`array<int>`。
+4. 对于引用单元格使用`int ref`而非`ref<int>`或`Ref<int>`。
+
+对于所有其他类型，使用的前缀形式。
 
 ## <a name="formatting-discriminated-union-declarations"></a>格式设置可区分联合声明
 
@@ -198,7 +370,7 @@ else e4
 
 ### <a name="pattern-matching-constructs"></a>模式匹配的构造
 
-使用`|`对于无缩进的匹配项的每个子句。 如果表达式是短，你可以使用单个行。
+使用`|`对于无缩进的匹配项的每个子句。 如果表达式是短，可以考虑使用单个行，如果每一子表达式也非常简单。
 
 ```fsharp
 // OK
@@ -212,9 +384,6 @@ match l with
     | { him = x; her = "Posh" } :: tail -> _
     | _ :: tail -> findDavid tail
     | [] -> failwith "Couldn't find David"
-
-// OK
-match l with [] -> false | _ :: _ -> true
 ```
 
 如果模式匹配箭头右侧表达式而言太大，则将其移到下一行中的缩进一个步骤`match` / `|`。
@@ -291,20 +460,23 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-匿名函数参数可以是在下一步的行上或与无关联`fun`参数行上：
+相同的准则将 lambda 表达式应用于函数自变量。 如果 lambda 表达式，主体的主体可以有另一个行，缩进一个作用域
 
 ```fsharp
-// OK
 let printListWithOffset a list1 =
-    List.iter (fun elem ->
-        printfn "%d" (a + elem)) list1
+    List.iter
+        (fun elem -> printfn "%d" (a + elem))
+        list1
 
-// OK, but prefer previous
+// OK if lambda body is long enough
 let printListWithOffset a list1 =
-    List.iter (
-        fun elem ->
-            printfn "%d" (a + elem)) list1
+    List.iter
+        (fun elem ->
+            printfn "%d" (a + elem))
+        list1
 ```
+
+但是，如果 lambda 表达式的主体是多个行，请考虑将其分解为单独的函数而不具有向函数应用作为单个参数的多行构造。
 
 ### <a name="formatting-infix-operators"></a>格式设置的中缀运算符
 
@@ -402,162 +574,3 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
-
-## <a name="formatting-blank-lines"></a>格式设置的空行
-
-* 单独顶级函数和类定义替换为两个空白的行。
-* 类中的方法定义由一个空行分隔。
-* 可能 （尽量少） 使用额外的空白的行到单独的组相关的函数。 多个相关 one-liners （例如，虚拟实现一组） 之间，可以忽略空行。
-* 使用空白的行在函数中，谨慎，以指示逻辑部分。
-
-## <a name="formatting-comments"></a>格式设置的注释
-
-通常选择多个双斜线注释而 ML 样式块注释。
-
-```fsharp
-// Prefer this style of comments when you want
-// to express written ideas on multiple lines.
-
-(*
-    Generally avoid these kinds of comments.
-*)
-```
-
-内联注释应的首字母大写。
-
-```fsharp
-let f x = x + 1 // Increment by one.
-```
-
-## <a name="naming-conventions"></a>命名约定
-
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>使用驼峰匹配类绑定、 表达式绑定和绑定模式值和函数
-
-是很常见，并且接受的 F # 要使用样式驼峰匹配的所有名称绑定为本地变量或在模式匹配和函数定义中。
-
-```fsharp
-// OK
-let addIAndJ i j = i + j
-
-// Bad
-let addIAndJ I J = I+J
-
-// Bad
-let AddIAndJ i j = i + j
-```
-
-类中的本地绑定函数还应使用驼峰匹配。
-
-```fsharp
-type MyClass() =
-
-    let doSomething () =
-
-    let firstResult = ...
-
-    let secondResult = ...
-
-    member x.Result = doSomething()
-```
-
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>驼峰匹配用于内部和私有模块绑定值和函数
-
-对于专用模块绑定值，其中包括使用驼峰匹配：
-
-* 在脚本中的即席函数
-
-* 组成的模块或类型的内部实现的值
-
-```fsharp
-let emailMyBossTheLatestResults =
-    ...
-```
-
-### <a name="use-camelcase-for-parameters"></a>对参数使用驼峰匹配
-
-所有参数应都使用驼峰匹配根据.NET 命名约定。
-
-```fsharp
-module MyModule =
-    let myFunction paramOne paramTwo = ...
-
-type MyClass() =
-    member this.MyMethod(paramOne, paramTwo) = ...
-```
-
-### <a name="use-pascalcase-for-modules"></a>用于模块的 PascalCase
-
-（顶级、 内部、 私有、 嵌套） 的所有模块都应都使用 PascalCase。
-
-```fsharp
-module MyTopLevelModule
-
-module Helpers =
-    module private SuperHelpers =
-        ...
-
-    ...
-```
-
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>PascalCase 用于类型声明、 成员和标签
-
-类、 接口、 结构、 枚举、 委托、 记录和可区分的联合所有的命名应当与 PascalCase。 类型和记录和可区分的联合的标签中的成员还应使用 PascalCase。
-
-```fsharp
-type IMyInterface =
-    abstract Something: int
-
-type MyClass() =
-    member this.MyMethod(x, y) = x + y
-
-type MyRecord = { IntVal: int; StringVal: string }
-
-type SchoolPerson =
-    | Professor
-    | Student
-    | Advisor
-    | Administrator
-```
-
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>PascalCase 用于构造固有的.NET
-
-命名空间、 异常、 事件和项目 /`.dll`名称还应使用 PascalCase。 不仅这会使感觉到使用者更自然的其他.NET 语言的消耗，也是与.NET，则可能会遇到的命名约定保持一致。
-
-### <a name="avoid-underscores-in-names"></a>避免在名称中的下划线
-
-从历史上看，某些 F # 库具有名称中使用下划线。 但是，这不再广泛接受，部分原因是因为它与.NET 命名约定冲突。 也就是说，某些 F # 程序员出于历史原因，很大程度，部分使用下划线，容差和遵循十分重要。 但是，请注意，该样式通常并的其他用户可以选择要使用它。
-
-一些例外情况包括与互操作性本机组件下划线很常见。
-
-### <a name="use-standard-f-operators"></a>使用标准 F # 运算符
-
-以下运算符在 F # 标准库中定义和应使用而不是定义等效项。 建议使用这些运算符，如往往会使代码更具可读性且惯例。 具有背景的 OCaml 或其他功能的编程语言的开发人员可能会习惯于不同的惯例。 以下列表总结了建议的 F # 运算符。
-
-```fsharp
-x |> f // Forward pipeline
-f >> g // Forward composition
-x |> ignore // Throwing away a value
-x + y // Overloaded addition (including string concatenation)
-x - y // Overloaded subtraction
-x * y // Overloaded multiplication
-x / y // Overloaded division
-x % y // Overloaded modulus
-x && y // Lazy/short-cut "and"
-x || y // Lazy/short-cut "or"
-x <<< y // Bitwise left shift
-x >>> y // Bitwise right shift
-x ||| y // Bitwise or, also for working with “flags” enumeration
-x &&& y // Bitwise and, also for working with “flags” enumeration
-x ^^^ y // Bitwise xor, also for working with “flags” enumeration
-```
-
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>前缀语法用于泛型 (`Foo<T>`) 优先于后缀语法 (`T Foo`)
-
-F # 继承的命名的泛型类型的两个后缀 ML 样式 (例如， `int list`) 以及.NET 样式的前缀 (例如， `list<int>`)。 更喜欢的.NET 样式，四种特定类型除外：
-
-1. F # 列出，对于使用后缀形式：`int list`而非`list<int>`。
-2. 对于 F # 选项，使用的后缀形式：`int option`而非`option<int>`。
-3. 对于 F # 数组，使用语法名称`int[]`而非`int array`或`array<int>`。
-4. 对于引用单元格使用`int ref`而非`ref<int>`或`Ref<int>`。
-
-对于所有其他类型，使用的前缀形式。
