@@ -3,11 +3,12 @@ title: System.Delegate 和 `delegate` 关键字
 description: 详细介绍 .NET Framework 中支持委托的类以及这些类映射到“delegate”关键字的方式。
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827295"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 关键字
 
@@ -77,10 +78,8 @@ int result = comparator(left, right);
 假设要按长度对字符串列表进行排序。 比较函数可能如下所示：
 
 ```csharp
-private static int CompareLength(string left, string right)
-{
-    return left.Length.CompareTo(right.Length);
-}
+private static int CompareLength(string left, string right) =>
+    left.Length.CompareTo(right.Length);
 ```
 
 方法声明为私有方法。 这没有什么不对。 你可能不希望此方法是公共接口的一部分。 它仍可以在附加到委托时用作比较方法。 调用代码会将此方法附加到委托对象的目标列表，并且可以通过该委托访问它。
