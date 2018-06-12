@@ -17,9 +17,9 @@ ms.lasthandoff: 05/04/2018
 
 [!code-csharp[WithoutDeconstruction](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple1.cs)]
 
-从对象检索多个字段值和属性值可能同样麻烦：必须按成员逐个将字段值或属性值赋给一个变量。 
+从对象检索多个字段值和属性值可能同样麻烦：必须按成员逐个将字段值或属性值赋给一个变量。
 
-从 C# 7.0 开始，用户可从元组中检索多个元素，或在单个析构操作中从对象检索多个字段值、属性值和计算值。 析构元组时，将其元素分配给各个变量。 析构对象时，将选定值分配给各个变量。 
+从 C# 7.0 开始，用户可从元组中检索多个元素，或在单个析构操作中从对象检索多个字段值、属性值和计算值。 析构元组时，将其元素分配给各个变量。 析构对象时，将选定值分配给各个变量。
 
 ## <a name="deconstructing-a-tuple"></a>析构元组
 
@@ -36,10 +36,10 @@ var (name, address, city, zip) = contact.GetAddressInfo();
     [!code-csharp[Deconstruction-Explicit](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple2.cs#1)]
 
 - 可使用 `var` 关键字，以便 C# 推断每个变量的类型。 将 `var` 关键字放在括号外。 以下示例在析构由 `QueryCityData` 方法返回的 3 元组时使用类型推理。
- 
+
     [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
 
-    还可在括号内将 `var` 关键字单独与任一或全部变量声明结合使用。 
+    还可在括号内将 `var` 关键字单独与任一或全部变量声明结合使用。
 
     [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
 
@@ -59,13 +59,13 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 析构元组时，通常只需要关注某些元素的值。 从 C# 7.0 开始，便可利用 C# 对弃元的支持，弃元是一种仅能写入的变量，且其值将被忽略。 在赋值中，通过下划线字符 (\_) 指定弃元。 可弃元任意数量的值，且均由单个弃元  `_` 表示。
 
-以下示例演示了对元组使用弃元时的用法。 `QueryCityDataForYears` 方法返回一个 6 元组，包含城市名称、城市面积、一个年份、该年份的城市人口、另一个年份及该年份的城市人口。 该示例显示了两个年份之间人口的变化。 对于元组提供的数据，我们不关注城市面积，并在一开始就知道城市名称和两个日期。 因此，我们只关注存储在元组中的两个人口数量值，可将其余值作为弃元处理。    
+以下示例演示了对元组使用弃元时的用法。 `QueryCityDataForYears` 方法返回一个 6 元组，包含城市名称、城市面积、一个年份、该年份的城市人口、另一个年份及该年份的城市人口。 该示例显示了两个年份之间人口的变化。 对于元组提供的数据，我们不关注城市面积，并在一开始就知道城市名称和两个日期。 因此，我们只关注存储在元组中的两个人口数量值，可将其余值作为弃元处理。
 
 [!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 ### <a name="deconstructing-user-defined-types"></a>析构用户定义类型
 
-非元组类型不提供对放弃的内置支持。 但是，用户作为类、结构或接口的创建者，可通过实现一个或多个 `Deconstruct` 方法来析构该类型的实例。 该方法返回 void，且要析构的每个值由方法签名中的 [out](language-reference/keywords/out-parameter-modifier.md) 参数指示。 例如，下面的 `Person` 类的 `Deconstruct` 方法返回名字、中间名和姓氏：
+非元组类型不提供对弃元的内置支持。 但是，用户作为类、结构或接口的创建者，可通过实现一个或多个 `Deconstruct` 方法来析构该类型的实例。 该方法返回 void，且要析构的每个值由方法签名中的 [out](language-reference/keywords/out-parameter-modifier.md) 参数指示。 例如，下面的 `Person` 类的 `Deconstruct` 方法返回名字、中间名和姓氏：
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 
@@ -81,7 +81,7 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
-因为可重载 `Deconstruct` 方法来反映通常从对象中提取的数据组，所以应使用独特明确的签名来定义 `Deconstruct` 方法。 如果有多个 `Deconstruct` 方法具有相同数量的 `out` 参数，或具有相同数量和类型的 `out` 参数且顺序不同，则可能会造成混淆。 
+因为可重载 `Deconstruct` 方法来反映通常从对象中提取的数据组，所以应使用独特明确的签名来定义 `Deconstruct` 方法。 如果有多个 `Deconstruct` 方法具有相同数量的 `out` 参数，或具有相同数量和类型的 `out` 参数且顺序不同，则可能会造成混淆。
 
 以下示例中的重载 `Deconstruct` 方法演示一种混淆的可能性。 第一个重载按该顺序返回 `Person` 对象的名字、中间名、姓氏和年龄。 第二个重载仅将姓名信息与年收入一起返回，但名字、中间名和姓氏的顺序不同。 这使得在析构 `Person` 实例时容易混淆参数的顺序。
 
@@ -97,12 +97,12 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 ## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a>使用扩展方法析构用户定义的类型
 
-如果没有创建类、结构或接口，仍可通过实现一个或多个 `Deconstruct` [扩展方法](programming-guide/classes-and-structs/extension-methods.md)来析构该类型的对象，以返回所需值。 
+如果没有创建类、结构或接口，仍可通过实现一个或多个 `Deconstruct` [扩展方法](programming-guide/classes-and-structs/extension-methods.md)来析构该类型的对象，以返回所需值。
 
 以下示例为 <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> 类定义了两个 `Deconstruct` 扩展方法。 第一个方法返回一组值，指示属性的特征，包括其类型、是静态还是实例、是否为只读，以及是否已编制索引。 第二个方法指示属性的可访问性。 因为 get 和 set 访问器的可访问性可能不同，所以布尔值指示属性是否具有单独的 get 和 set 访问器，如果是，则指示它们是否具有相同的可访问性。 如果只有一个访问器，或者 get 和 set 访问器具有相同的可访问性，则 `access` 变量指示整个属性的可访问性。 否则，get 和 set 访问器的可访问性由 `getAccess` 和 `setAccess` 变量所指示的可访问性来指示。
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
- 
+
 ## <a name="see-also"></a>请参阅
-[放弃](discards.md)   
-[元组](tuples.md)  
+[弃元](discards.md)
+[元组](tuples.md)
