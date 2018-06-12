@@ -8,6 +8,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34235972"
 ---
 # <a name="c-tuple-types"></a>C# 元组类型 #
 
@@ -52,7 +53,7 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 这些同义词由编译器和语言处理，因此，你可以高效地使用命名元组。 IDE 和编辑器可以使用 Roslyn API 读取这些语义名称。 可以在同一程序集中的任何位置通过这些语义名称引用命名元组的元素。 编译器在生成已编译的输出时，会将已定义的名称替换为 `Item*` 等效项。 已编译的 Microsoft 中间语言 (MSIL) 不包括为这些元素赋予的名称。
 
-从 C# 7.1 开始，元组的字段名称可能会通过用于初始化此元组的变量提供。 这称为[元组投影初始值设定项](#tuple-projection-initializers)。 以下代码用于创建名为 `accumulation` 的元祖，包含元素 `count`（整数）和 `sum`（双精度）。
+从 C# 7.1 开始，元组的字段名称可能会通过用于初始化此元组的变量提供。 这称为[元组投影初始值设定项](#tuple-projection-initializers)。 以下代码用于创建名为 `accumulation` 的元组，包含元素 `count`（整数）和 `sum`（双精度）。
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -91,26 +92,26 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-有几条规则，可使元祖相等测试更方便。 如果其中一个元祖是可以为空值的元祖，则元祖相等将执行[提升转换](/dotnet/csharp/language-reference/language-specification/conversions.md#lifted-conversion-operators)，如以下代码中所示：
+有几条规则，可使元组相等测试更方便。 如果其中一个元组是可以为空值的元组，则元组相等将执行[提升转换](/dotnet/csharp/language-reference/language-specification/conversions.md#lifted-conversion-operators)，如以下代码中所示：
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
-元祖相等还将对这两个元祖的每个成员执行隐式转换。 这些转换包括提升转换、扩大转换或其他隐式转换。 以下示例演示整数 2 元祖可以与较长的 2 元祖进行比较，因为进行了从整数元祖到较长元祖的隐式转换：
+元组相等还将对这两个元组的每个成员执行隐式转换。 这些转换包括提升转换、扩大转换或其他隐式转换。 以下示例演示整数 2 元组可以与较长的 2 元组进行比较，因为进行了从整数元组到较长元组的隐式转换：
 
 [!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
-元祖成员名称不参与相等测试。 但是，如果其中一个操作数是含有显式名称的元组文本，则当这些名称与其他操作数的名称不匹配时，编译器将生成警告 CS8383。
-在两个操作数都为元祖文本的情况下，警告位于右侧操作数，如以下示例中所述：
+元组成员名称不参与相等测试。 但是，如果其中一个操作数是含有显式名称的元组文本，则当这些名称与其他操作数的名称不匹配时，编译器将生成警告 CS8383。
+在两个操作数都为元组文本的情况下，警告位于右侧操作数，如以下示例中所述：
 
 [!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
-最后，元祖可能包含嵌套元祖。 元祖相等通过嵌套元祖比较每个操作数的“形状”，如以下示例中所示：
+最后，元组可能包含嵌套元组。 元组相等通过嵌套元组比较每个操作数的“形状”，如以下示例中所示：
 
 [!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
 
 ## <a name="assignment-and-tuples"></a>赋值和元组
 
-语言支持在具有相同元素数量的元祖类型之间赋值，其中每个右侧元素都可被隐式转换为相应的左侧元素。 对于其他转换，不考虑进行赋值。 让我们看一下元组类型之间允许的赋值类型。
+语言支持在具有相同元素数量的元组类型之间赋值，其中每个右侧元素都可被隐式转换为相应的左侧元素。 对于其他转换，不考虑进行赋值。 让我们看一下元组类型之间允许的赋值类型。
 
 注意以下示例中使用的这些变量：
 
@@ -151,7 +152,7 @@ named = differentShape;
 
 [!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
 
-此版本虽然只对序列进行一次枚举。 但其代码不可重复使用。 到后面，你会发现许多不同的统计计算会用到数列项数、数列总和以及数列平方和。 让我们重构此方法，编写一个可生成这三个值的实用方法。 所有这三个值都可以作为一个元祖返回。
+此版本虽然只对序列进行一次枚举。 但其代码不可重复使用。 到后面，你会发现许多不同的统计计算会用到数列项数、数列总和以及数列平方和。 让我们重构此方法，编写一个可生成这三个值的实用方法。 所有这三个值都可以作为一个元组返回。
 
 让我们更新此方法，以便将在计算过程中得出的三个值存储在一个元组中。 以下是更新后的版本：
 
@@ -189,10 +190,10 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 }
 ```
 
-此元祖的字段被命名为 `Item1`、`Item2` 和 `Item3`。
+此元组的字段被命名为 `Item1`、`Item2` 和 `Item3`。
 建议为从方法返回的元组的元素提供语义名称。
 
-元祖另一个常见的用途是在你创作 LINQ 查询时。 最终投影的结果通常包含被选中的对象的某些（而不是全部）属性。
+元组另一个常见的用途是在你创作 LINQ 查询时。 最终投影的结果通常包含被选中的对象的某些（而不是全部）属性。
 
 传统做法是将查询结果投影成一个匿名类型的对象序列。 这种做法存在很多限制，主要是因为匿名类型无法在方法的返回类型中方便地命名。 也可以将 `object` 或 `dynamic` 用作结果类型，但这种备用方法会产生高昂的性能成本。
 
@@ -277,7 +278,7 @@ if (("Althea", "Goodwin") == p)
     Console.WriteLine(p);
 ```
 
-`Deconstruct` 方法无法将 `Person` 对象 `p` 转换为包含两个字符串的元祖，但它在相等测试上下文中不适用。
+`Deconstruct` 方法无法将 `Person` 对象 `p` 转换为包含两个字符串的元组，但它在相等测试上下文中不适用。
 
 ## <a name="conclusion"></a>结束语 
 
