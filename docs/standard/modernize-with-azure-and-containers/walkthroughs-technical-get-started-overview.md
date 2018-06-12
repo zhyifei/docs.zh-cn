@@ -68,7 +68,7 @@ ms.locfileid: "34027384"
 
 ![ASP.NET MVC 和 ASP.NET Web 窗体应用程序 （现有/旧技术）](./media/image5-2.png)
 
-依赖项在 ASP.NET 4.x 或更早版本 （不管是针对 MVC 或 Web 窗体） 意味着除非通过使用 ASP.NET 核心 MVC 完全重新编写的代码，这些应用程序不会运行在.NET Core 上。 
+依赖项在 ASP.NET 4.x 或更早版本 （不管是针对 MVC 或 Web 窗体） 意味着除非通过使用 ASP.NET Core MVC 完全重新编写的代码，这些应用程序不会运行在.NET Core 上。 
 
 ### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>方案 2: WCF 服务和 WinForms 客户端应用程序 （3 层应用程序）
 

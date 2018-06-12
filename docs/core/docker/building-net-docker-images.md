@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 在本教程中可学习：
 
 > [!div class="checklist"]
-> * 了解 Microsoft.NET 核心 Docker 映像
+> * 了解 Microsoft.NET Core Docker 映像
  
 > * 获取用于 dockerize 的 ASP.NET Core 示例应用程序
 

@@ -9,13 +9,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33562032"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>要开始使用 F # 使用.NET 核心 CLI
+# <a name="get-started-with-f-with-the-net-core-cli"></a>要开始使用 F # 使用.NET Core CLI
 
-本文介绍如何你可以开始使用 F # 在任何操作系统上 （Windows、 macOS 或 Linux） 使用.NET 核心 CLI。 它将经历生成使用由一个控制台应用程序的类库的多项目解决方案。
+本文介绍如何你可以开始使用 F # 在任何操作系统上 （Windows、 macOS 或 Linux） 使用.NET Core CLI。 它将经历生成使用由一个控制台应用程序的类库的多项目解决方案。
 
 ## <a name="prerequisites"></a>系统必备
 
-若要开始，你必须安装[.NET Core 1.0 或更高版本的 SDK](https://www.microsoft.com/net/download/)。 没有无需卸载以前版本的.NET 核心 SDK，因为它支持通过并行安装。
+若要开始，你必须安装[.NET Core 1.0 或更高版本的 SDK](https://www.microsoft.com/net/download/)。 没有无需卸载以前版本的.NET Core SDK，因为它支持通过并行安装。
 
 本文假定你知道如何使用命令行和具有首选的文本编辑器。 如果还没有使用它， [Visual Studio Code](https://code.visualstudio.com)是作为文本编辑器中进行 F # 实用的选项。 若要获取出色的功能，例如 IntelliSense、 更好语法突出显示，和的详细信息，你可以下载[Ionide 扩展](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)。
 

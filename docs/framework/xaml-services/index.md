@@ -13,7 +13,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-services"></a>XAML 服务
-本主题介绍的技术集称为.NET Framework XAML 服务的功能。 服务和 Api 所述的大部分都位于引入 System.Xaml 的应用，这是程序集的程序集[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].NET 核心程序集。 服务包括读取器和编写器，架构类和架构支持的工厂，特性化的类、 XAML 语言内部函数支持和其他 XAML 语言功能。  
+本主题介绍的技术集称为.NET Framework XAML 服务的功能。 服务和 Api 所述的大部分都位于引入 System.Xaml 的应用，这是程序集的程序集[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].NET Core 程序集。 服务包括读取器和编写器，架构类和架构支持的工厂，特性化的类、 XAML 语言内部函数支持和其他 XAML 语言功能。  
   
 ## <a name="about-this-documentation"></a>有关此文档  
  .NET Framework XAML 服务的概念性文档假定你有以前经验 XAML 语言以及如何它可能会将应用到一个特定的框架，例如[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 Windows Workflow Foundation 或特定的技术功能区域中，例如生成自定义项中的功能<xref:Microsoft.Build.Framework.XamlTypes>。 本文档不会尝试解释为标记语言、 XAML 语法术语或其他介绍性材料的 XAML 的基础知识。 相反，本文档重点介绍专门在 System.Xaml 程序集库中使用已启用.NET Framework XAML 服务。 这些 Api 的大部分都是为 XAML 语言集成和可扩展性的方案。 这可能包括以下任一项：  

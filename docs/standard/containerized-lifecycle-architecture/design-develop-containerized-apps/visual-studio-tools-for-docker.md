@@ -33,7 +33,7 @@ ms.locfileid: "33569286"
 
 Visual Studio Tools for Docker 提供一致的方法来开发和验证本地 Docker 容器的 Linux Linux Docker 主机或 VM 或你直接在 Windows 上的 Windows 容器中。
 
-如果你使用单个容器，需要开始第一件事是开启 Docker 支持在.NET 核心项目。 为此，右键单击项目文件，在图 4-25 中所示。
+如果你使用单个容器，需要开始第一件事是开启 Docker 支持在.NET Core 项目。 为此，右键单击项目文件，在图 4-25 中所示。
 
 ![https://i1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/image/file/205468/1/add-docker-support.png](./media/image31.png)
 

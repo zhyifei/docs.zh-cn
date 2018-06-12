@@ -152,7 +152,7 @@ Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平�
 
 请参阅 [.NET 指南](index.md)
 
-## <a name="net-core"></a>.NET 核心 
+## <a name="net-core"></a>.NET Core 
 
 一种跨平台、高性能的开放源 .NET 实现。 包括 Core 公共语言运行时 (CoreCLR)、Core AOT 运行时（正在开发的 CoreRT）、Core 基类库和 Core SDK。
 

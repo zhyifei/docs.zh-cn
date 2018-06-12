@@ -35,7 +35,7 @@ ms.locfileid: "33574802"
 
 Microsoft 积极开发和维护的主要 .NET 实现有 4 个：.NET Core、.NET Framework、Mono 和 UWP。
 
-### <a name="net-core"></a>.NET 核心
+### <a name="net-core"></a>.NET Core
 
 .NET Core 是 .NET 的跨平台实现，专用于处理大规模的服务器和云工作负荷。 可在 Windows、macOS 和 Linux 上运行。 它实现 .NET Standard，因此面向 .NET Standard 的代码都可在 .NET Core 上运行。 ASP.NET Core 在 .NET Core 上运行。 
 

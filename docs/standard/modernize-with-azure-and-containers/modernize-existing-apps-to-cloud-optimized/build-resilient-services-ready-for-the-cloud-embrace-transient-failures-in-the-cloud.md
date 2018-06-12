@@ -37,7 +37,7 @@ ms.locfileid: "33957927"
 
 实现访问数据库时，具体取决于你使用的，.NET 版本的弹性通信时它可以是简单 (例如， [Entity Framework 6 或更高版本](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)，它是只需配置数据库连接）。 或者，你可能需要使用类似的其他库[暂时性故障处理应用程序块](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)（对于早期版本的.NET），或甚至实现你自己的库。
 
-实现 HTTP 重试次数和断路器时，.NET 的推荐方法是使用[Polly](https://github.com/App-vNext/Polly)库，后者面向.NET Framework 4.0、.NET Framework 4.5 和.NET 标准 1.1，包括.NET 核心的支持。
+实现 HTTP 重试次数和断路器时，.NET 的推荐方法是使用[Polly](https://github.com/App-vNext/Polly)库，后者面向.NET Framework 4.0、.NET Framework 4.5 和.NET 标准 1.1，包括.NET Core 的支持。
 
 若要了解如何实现用于处理部分故障在云中的策略，请参阅以下引用。
 

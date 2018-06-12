@@ -63,7 +63,7 @@ Microsoft 对 .NET 存储库的打算是要有细化和集中存储库，表示�
 
 ### <a name="common-docker-development-scenarios"></a>常见的 Docker 开发方案
 
-#### <a name="net-core"></a>.NET 核心
+#### <a name="net-core"></a>.NET Core
 
 **.NET Core 资源**
 
