@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765433"
 ---
 # <a name="adonet"></a><span data-ttu-id="f963d-102">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f963d-102">ADO.NET</span></span>
 <span data-ttu-id="f963d-103">ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。</span><span class="sxs-lookup"><span data-stu-id="f963d-103">ADO.NET is a set of classes that expose data access services for .NET Framework programmers.</span></span> <span data-ttu-id="f963d-104">ADO.NET 为创建分布式数据共享应用程序提供了一组丰富的组件。</span><span class="sxs-lookup"><span data-stu-id="f963d-104">ADO.NET provides a rich set of components for creating distributed, data-sharing applications.</span></span> <span data-ttu-id="f963d-105">它提供了对关系数据、XML 和应用程序数据的访问，因此是 .NET Framework 中不可缺少的一部分。</span><span class="sxs-lookup"><span data-stu-id="f963d-105">It is an integral part of the .NET Framework, providing access to relational, XML, and application data.</span></span> <span data-ttu-id="f963d-106">ADO.NET 支持多种开发需求，包括创建由应用程序、工具、语言或 Internet 浏览器使用的前端数据库客户端和中间层业务对象。</span><span class="sxs-lookup"><span data-stu-id="f963d-106">ADO.NET supports a variety of development needs, including the creation of front-end database clients and middle-tier business objects used by applications, tools, languages, or Internet browsers.</span></span>  

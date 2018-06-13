@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753139"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a><span data-ttu-id="ab988-102">&lt;netNamedPipeBinding&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="ab988-102">&lt;transport&gt; of &lt;netNamedPipeBinding&gt;</span></span>
 <span data-ttu-id="ab988-103">定义命名管道的传输安全设置。</span><span class="sxs-lookup"><span data-stu-id="ab988-103">Defines the transport security settings for a named pipe.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753347"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a><span data-ttu-id="f2488-102">在服务组件中使用全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="f2488-102">Using Serviced Components with the Global Assembly Cache</span></span>
 <span data-ttu-id="f2488-103">服务组件（托管代码 COM+ 组件）应置于全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="f2488-103">Serviced components (managed code COM+ components) should be put in the Global Assembly Cache.</span></span> <span data-ttu-id="f2488-104">在有些方案中，公共语言运行时和 COM+ 服务能够处理不在全局程序集缓存中的服务组件，而在有些方案中则不能。</span><span class="sxs-lookup"><span data-stu-id="f2488-104">In some scenarios, the Common Language Runtime and COM+ Services can handle serviced components that are not in the Global Assembly Cache; in other scenarios, they cannot.</span></span> <span data-ttu-id="f2488-105">以下方案对此进行了说明：</span><span class="sxs-lookup"><span data-stu-id="f2488-105">The following scenarios illustrate this:</span></span>  

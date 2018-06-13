@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753256"
 ---
 # <a name="ltsynchronousreceivegt-element"></a><span data-ttu-id="ceb67-102">&lt;synchronousReceive&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="ceb67-102">&lt;synchronousReceive&gt; element</span></span>
 <span data-ttu-id="ceb67-103">此配置元素用于指定服务或客户端应用程序中用来接收消息的运行时行为。</span><span class="sxs-lookup"><span data-stu-id="ceb67-103">This configuration element is used to specify run-time behavior for receiving messages in either a service or client application.</span></span> <span data-ttu-id="ceb67-104">它不具有任何属性或子元素。</span><span class="sxs-lookup"><span data-stu-id="ceb67-104">It does not have any attributes or child elements.</span></span>  

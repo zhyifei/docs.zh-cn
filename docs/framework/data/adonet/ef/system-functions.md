@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765719"
 ---
 # <a name="system-functions"></a><span data-ttu-id="99a91-102">系统函数</span><span class="sxs-lookup"><span data-stu-id="99a91-102">System Functions</span></span>
 <span data-ttu-id="99a91-103">SQL Server .NET Framework 数据提供程序 (SqlClient) 提供以下系统函数：</span><span class="sxs-lookup"><span data-stu-id="99a91-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides the following system functions:</span></span>  

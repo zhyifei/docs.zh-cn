@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766876"
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilder"></a><span data-ttu-id="4a634-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span><span class="sxs-lookup"><span data-stu-id="4a634-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span></span>
 <span data-ttu-id="4a634-103">使用此类创建和配置为工作流活动提供数据的 <xref:System.Activities.ActivityBuilder> 对象。</span><span class="sxs-lookup"><span data-stu-id="4a634-103">Use this class to create and configure a <xref:System.Activities.ActivityBuilder> object that provides data for a workflow activity.</span></span>  

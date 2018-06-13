@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766980"
 ---
 # <a name="connection-strings"></a><span data-ttu-id="98407-102">连接字符串</span><span class="sxs-lookup"><span data-stu-id="98407-102">Connection Strings</span></span>
 <span data-ttu-id="98407-103">连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。</span><span class="sxs-lookup"><span data-stu-id="98407-103">A connection string contains initialization information that is passed as a parameter from a data provider to a data source.</span></span> <span data-ttu-id="98407-104">其语法取决于数据提供程序，并且会在试图打开连接的过程中对连接字符串进行分析。</span><span class="sxs-lookup"><span data-stu-id="98407-104">The syntax depends on the data provider, and the connection string is parsed during the attempt to open a connection.</span></span> <span data-ttu-id="98407-105">实体框架使用的连接字符串包含用于连接到支持实体框架的基础 ADO.NET 数据提供程序的信息。</span><span class="sxs-lookup"><span data-stu-id="98407-105">Connection strings used by the Entity Framework contain information used to connect to the underlying ADO.NET data provider that supports the Entity Framework.</span></span> <span data-ttu-id="98407-106">它们还包含有关所需的模型和映射文件的信息。</span><span class="sxs-lookup"><span data-stu-id="98407-106">They also contain information about the required model and mapping files.</span></span>  

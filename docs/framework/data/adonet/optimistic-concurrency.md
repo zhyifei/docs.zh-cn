@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766223"
 ---
 # <a name="optimistic-concurrency"></a><span data-ttu-id="5fc9f-102">开放式并发</span><span class="sxs-lookup"><span data-stu-id="5fc9f-102">Optimistic Concurrency</span></span>
 <span data-ttu-id="5fc9f-103">在多用户环境中，有两种用于更新数据库中数据的模型：开放式并发和保守式并发。</span><span class="sxs-lookup"><span data-stu-id="5fc9f-103">In a multiuser environment, there are two models for updating data in a database: optimistic concurrency and pessimistic concurrency.</span></span> <span data-ttu-id="5fc9f-104">设计 <xref:System.Data.DataSet> 对象的目的是为了促进将开放式并发用于长时间运行的活动，例如对数据进行远程处理以及与数据进行交互时。</span><span class="sxs-lookup"><span data-stu-id="5fc9f-104">The <xref:System.Data.DataSet> object is designed to encourage the use of optimistic concurrency for long-running activities, such as remoting data and interacting with data.</span></span>  

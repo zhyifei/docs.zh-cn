@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765602"
 ---
 # <a name="row-entity-sql"></a><span data-ttu-id="3bc44-102">ROW (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="3bc44-102">ROW (Entity SQL)</span></span>
 <span data-ttu-id="3bc44-103">从一个或多个值构造结构上类型化的匿名记录。</span><span class="sxs-lookup"><span data-stu-id="3bc44-103">Constructs anonymous, structurally typed records from one or more values.</span></span>  

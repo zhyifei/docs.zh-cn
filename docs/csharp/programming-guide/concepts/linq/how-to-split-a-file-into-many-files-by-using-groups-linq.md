@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326968"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="6ba51-102">如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="6ba51-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
 <span data-ttu-id="6ba51-103">此示例演示一种进行以下操作的方法：合并两个文件的内容，然后创建一组以新方式整理数据的新文件。</span><span class="sxs-lookup"><span data-stu-id="6ba51-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  

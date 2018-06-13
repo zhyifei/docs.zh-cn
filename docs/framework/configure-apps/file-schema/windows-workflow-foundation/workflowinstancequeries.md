@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755586"
 ---
 # <a name="ltworkflowinstancequeriesgt"></a><span data-ttu-id="17a88-102">&lt;workflowInstanceQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="17a88-102">&lt;workflowInstanceQueries&gt;</span></span>
 <span data-ttu-id="17a88-103">表示配置元素的集合，这些配置元素跟踪工作流实例生命周期的更改，例如已开始或已完成的事件。</span><span class="sxs-lookup"><span data-stu-id="17a88-103">Represents a collection of configuration elements that track workflow instance life cycle changes such as a started or completed event.</span></span>  

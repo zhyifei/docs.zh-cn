@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332850"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a><span data-ttu-id="f8870-102">如何：将字符串转换为数字（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="f8870-102">How to: Convert a String to a Number (C# Programming Guide)</span></span>
 <span data-ttu-id="f8870-103">可以使用 <xref:System.Convert> 类中的方法或使用各种数值类型（int、long、float 等）中的 `TryParse` 方法将[字符串](../../../csharp/language-reference/keywords/string.md)转换为数字。</span><span class="sxs-lookup"><span data-stu-id="f8870-103">You can convert a [string](../../../csharp/language-reference/keywords/string.md) to a number by using methods in the <xref:System.Convert> class or by using the `TryParse` method found on the various numeric types (int, long, float, etc.).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751449"
 ---
 # <a name="ltserviceauthorizationgt-element"></a><span data-ttu-id="37b95-102">&lt;serviceAuthorization&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="37b95-102">&lt;serviceAuthorization&gt; element</span></span>
 <span data-ttu-id="37b95-103">指定用于授予服务操作访问权限的设置。</span><span class="sxs-lookup"><span data-stu-id="37b95-103">Specifies settings that authorize access to service operations</span></span>  

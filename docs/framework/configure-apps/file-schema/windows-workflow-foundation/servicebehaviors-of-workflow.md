@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766902"
 ---
 # <a name="ltservicebehaviorsgt-of-workflow"></a><span data-ttu-id="f9697-102">工作流的 &lt;serviceBehaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="f9697-102">&lt;serviceBehaviors&gt; of workflow</span></span>
 <span data-ttu-id="f9697-103">此配置节描述为特定服务定义的所有行为。</span><span class="sxs-lookup"><span data-stu-id="f9697-103">This configuration section represents all the behaviors defined for a specific service.</span></span>  
