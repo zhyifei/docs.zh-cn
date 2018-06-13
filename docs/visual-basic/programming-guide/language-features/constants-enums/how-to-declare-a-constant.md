@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649732"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>如何：声明常量 (Visual Basic)
 你使用`Const`语句以声明常量，并将其值设置。 通过声明一个常量，你将有意义的名称分配给一个值。 一旦声明一个常数，它无法修改或分配一个新值。  
