@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759837"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a><span data-ttu-id="a75c0-102">XML 架构约束和关系</span><span class="sxs-lookup"><span data-stu-id="a75c0-102">XML Schema Constraints and Relationships</span></span>
 <span data-ttu-id="a75c0-103">在 XML 架构定义语言 (XSD) 架构中，你可以指定约束 (唯一的键和 keyref 约束) 和关系 (使用**msdata: relationship**批注)。</span><span class="sxs-lookup"><span data-stu-id="a75c0-103">In an XML Schema definition language (XSD) schema, you can specify constraints (unique, key, and keyref constraints) and relationships (using the **msdata:Relationship** annotation).</span></span> <span data-ttu-id="a75c0-104">本主题说明如何解释在 XML 架构中指定的约束和关系，以生成 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="a75c0-104">This topic explains how the constraints and relationships specified in an XML Schema are interpreted to generate the <xref:System.Data.DataSet>.</span></span>  

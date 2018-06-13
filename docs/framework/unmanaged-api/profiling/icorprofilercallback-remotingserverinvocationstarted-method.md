@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: de2a831e310ac7f770200a70cb793bc19645e31d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451593"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a><span data-ttu-id="b50cc-102">ICorProfilerCallback::RemotingServerInvocationStarted 方法</span><span class="sxs-lookup"><span data-stu-id="b50cc-102">ICorProfilerCallback::RemotingServerInvocationStarted Method</span></span>
 <span data-ttu-id="b50cc-103">通知探查器进程正在调用的远程方法调用请求响应中的方法。</span><span class="sxs-lookup"><span data-stu-id="b50cc-103">Notifies the profiler that the process is invoking a method in response to a remote method invocation request.</span></span>  

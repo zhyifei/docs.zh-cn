@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33466884"
 ---
 # <a name="5004---dcdeserializewithsurrogatestop"></a><span data-ttu-id="9e2e0-102">5004 - DCDeserializeWithSurrogateStop</span><span class="sxs-lookup"><span data-stu-id="9e2e0-102">5004 - DCDeserializeWithSurrogateStop</span></span>
 ## <a name="properties"></a><span data-ttu-id="9e2e0-103">属性</span><span class="sxs-lookup"><span data-stu-id="9e2e0-103">Properties</span></span>  

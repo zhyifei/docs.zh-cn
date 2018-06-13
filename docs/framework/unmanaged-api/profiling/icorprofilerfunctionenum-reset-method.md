@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b0bf1bb990f8a4fb798c88db0552bd4583cb5905
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453999"
 ---
 # <a name="icorprofilerfunctionenumreset-method"></a><span data-ttu-id="9ed7b-102">ICorProfilerFunctionEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="9ed7b-102">ICorProfilerFunctionEnum::Reset Method</span></span>
 <span data-ttu-id="9ed7b-103">将枚举器的光标移动到序列的起始位置。</span><span class="sxs-lookup"><span data-stu-id="9ed7b-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  

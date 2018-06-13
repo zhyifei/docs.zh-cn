@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a51d88af20b3abbbe2f80134473ec1ba1b7a4b17
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454543"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a><span data-ttu-id="64a69-102">ICorProfilerInfo3::GetThreadStaticAddress2 方法</span><span class="sxs-lookup"><span data-stu-id="64a69-102">ICorProfilerInfo3::GetThreadStaticAddress2 Method</span></span>
 <span data-ttu-id="64a69-103">获取指定线程和应用程序域范围内的指定线程静态字段的地址。</span><span class="sxs-lookup"><span data-stu-id="64a69-103">Gets the address of the specified thread-static field that is in the scope of the specified thread and application domain.</span></span>  

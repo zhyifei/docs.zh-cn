@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571405"
 ---
 # <a name="xml-type-support-implementation-notes"></a><span data-ttu-id="35a5e-102">XML 类型支持实现说明</span><span class="sxs-lookup"><span data-stu-id="35a5e-102">XML Type Support Implementation Notes</span></span>
 <span data-ttu-id="35a5e-103">本主题介绍一些要注意的实现细节。</span><span class="sxs-lookup"><span data-stu-id="35a5e-103">This topic describes some implementation details that you want to be aware of.</span></span>  

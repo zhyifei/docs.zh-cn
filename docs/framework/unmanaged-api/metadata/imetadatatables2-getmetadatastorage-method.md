@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33064fe8292eb7a8079d2f68bcdea767d306be6f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452314"
 ---
 # <a name="imetadatatables2getmetadatastorage-method"></a><span data-ttu-id="6e083-102">IMetaDataTables2::GetMetaDataStorage 方法</span><span class="sxs-lookup"><span data-stu-id="6e083-102">IMetaDataTables2::GetMetaDataStorage Method</span></span>
 <span data-ttu-id="6e083-103">获取的大小和存储在指定的节中的元数据的内容。</span><span class="sxs-lookup"><span data-stu-id="6e083-103">Gets the size and contents of the metadata stored in the specified section.</span></span>  

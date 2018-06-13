@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578679"
 ---
 # <a name="strategies-for-handling-partial-failure"></a><span data-ttu-id="1b345-103">处理部分失败的策略</span><span class="sxs-lookup"><span data-stu-id="1b345-103">Strategies for handling partial failure</span></span>
 

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 89c7b0fe0f3ade3f57aa50b100bc9b4ecc904a17
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451992"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a><span data-ttu-id="b1fa4-102">ICorProfilerCallback::JITCachedFunctionSearchFinished 方法</span><span class="sxs-lookup"><span data-stu-id="b1fa4-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Method</span></span>
 <span data-ttu-id="b1fa4-103">通知探查器搜索已完成以前使用本机映像生成器 (NGen.exe) 编译的函数。</span><span class="sxs-lookup"><span data-stu-id="b1fa4-103">Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398269"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a><span data-ttu-id="07585-102">.NET Framework 的版本兼容性</span><span class="sxs-lookup"><span data-stu-id="07585-102">Version Compatibility in the .NET Framework</span></span>
 <span data-ttu-id="07585-103">向后兼容性表示为某个平台的特定版本开发的应用程序将在该平台的更高版本上运行。</span><span class="sxs-lookup"><span data-stu-id="07585-103">Backward compatibility means that an app that was developed for a particular version of a platform will run on later versions of that platform.</span></span> <span data-ttu-id="07585-104">.NET Framework 尝试最大程度地支持向后兼容性：为某个版本的 .NET Framework 编写的源代码应在更高版本的 .NET Framework 上编译，而在某个版本的 .NET Framework 上运行的二进制文件的行为方式应与其在更高版本的 .NET Framework 上的行为方式相同。</span><span class="sxs-lookup"><span data-stu-id="07585-104">The .NET Framework tries to maximize backward compatibility: Source code written for one version of the .NET Framework should compile on later versions of the .NET Framework, and binaries that run on one version of the .NET Framework should behave identically on later versions of the .NET Framework.</span></span>  

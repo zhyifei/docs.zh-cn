@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761865"
 ---
 # <a name="lt-less-than-or-equal-to-entity-sql"></a><span data-ttu-id="62848-102">&lt;=（小于或等于）(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="62848-102">&lt;= (Less Than or Equal To) (Entity SQL)</span></span>
 <span data-ttu-id="62848-103">比较两个表达式以确定左侧表达式的值是否小于或等于右侧表达式的值。</span><span class="sxs-lookup"><span data-stu-id="62848-103">Compares two expressions to determine whether the left expression has a value less than or equal to the right expression.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573115"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a><span data-ttu-id="a638f-102">集合内的比较和排序</span><span class="sxs-lookup"><span data-stu-id="a638f-102">Comparisons and Sorts Within Collections</span></span>
 <span data-ttu-id="a638f-103"><xref:System.Collections> 类在管理集合所涉及的几乎所有进程中执行比较，无论是搜索待删除的元素或返回键值对的值。</span><span class="sxs-lookup"><span data-stu-id="a638f-103">The <xref:System.Collections> classes perform comparisons in almost all the processes involved in managing collections, whether searching for the element to remove or returning the value of a key-and-value pair.</span></span>  

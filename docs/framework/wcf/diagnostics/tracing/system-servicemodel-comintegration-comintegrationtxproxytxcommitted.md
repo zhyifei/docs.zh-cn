@@ -1,32 +1,21 @@
 ---
 title: System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f9f5d2aa-04db-4d4d-b802-3bf5d4626e59
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ced79d4614c71df26833e8dba24dfdfff5e57e17
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cde5c24fe03221090f7d8229c7266a4b37094087
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33480111"
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationtxproxytxcommitted"></a><span data-ttu-id="89658-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span><span class="sxs-lookup"><span data-stu-id="89658-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span></span>
-<span data-ttu-id="89658-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span><span class="sxs-lookup"><span data-stu-id="89658-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationtxproxytxcommitted"></a><span data-ttu-id="5c956-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span><span class="sxs-lookup"><span data-stu-id="5c956-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span></span>
+<span data-ttu-id="5c956-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span><span class="sxs-lookup"><span data-stu-id="5c956-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxCommitted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="89658-104">描述</span><span class="sxs-lookup"><span data-stu-id="89658-104">Description</span></span>  
- <span data-ttu-id="89658-105">ComPlus：事务已提交。</span><span class="sxs-lookup"><span data-stu-id="89658-105">ComPlus: Transaction committed.</span></span>  
+## <a name="description"></a><span data-ttu-id="5c956-104">描述</span><span class="sxs-lookup"><span data-stu-id="5c956-104">Description</span></span>  
+ <span data-ttu-id="5c956-105">ComPlus：事务已提交。</span><span class="sxs-lookup"><span data-stu-id="5c956-105">ComPlus: Transaction committed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89658-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="89658-106">See Also</span></span>  
- [<span data-ttu-id="89658-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="89658-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="89658-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="89658-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="89658-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="89658-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="5c956-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="5c956-106">See Also</span></span>  
+ [<span data-ttu-id="5c956-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="5c956-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="5c956-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="5c956-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5c956-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="5c956-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

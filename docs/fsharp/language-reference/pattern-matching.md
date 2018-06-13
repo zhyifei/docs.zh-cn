@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566189"
 ---
 # <a name="pattern-matching"></a><span data-ttu-id="a43d4-103">模式匹配</span><span class="sxs-lookup"><span data-stu-id="a43d4-103">Pattern Matching</span></span>
 

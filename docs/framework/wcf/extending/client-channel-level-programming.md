@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486500"
 ---
 # <a name="client-channel-level-programming"></a><span data-ttu-id="e2680-102">客户端通道级编程</span><span class="sxs-lookup"><span data-stu-id="e2680-102">Client Channel-Level Programming</span></span>
 <span data-ttu-id="e2680-103">本主题介绍如何编写的 Windows Communication Foundation (WCF) 客户端应用时无需使用<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>类和其关联的对象模型。</span><span class="sxs-lookup"><span data-stu-id="e2680-103">This topic describes how to write a Windows Communication Foundation (WCF) client application without using the <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> class and its associated object model.</span></span>  
