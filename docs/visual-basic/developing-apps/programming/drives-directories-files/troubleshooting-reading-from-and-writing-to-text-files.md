@@ -1,12 +1,6 @@
 ---
-title: "疑难解答：读取和写入文本文件 (Visual Basic)"
-ms.custom: 
+title: 疑难解答：读取和写入文本文件 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - troubleshooting file I/O
 - writing text to files [Visual Basic], troubleshooting
@@ -15,32 +9,30 @@ helpviewer_keywords:
 - writing to files [Visual Basic], troubleshooting
 - reading text files [Visual Basic], troubleshooting
 ms.assetid: a8e9b44d-facb-4718-8c0f-466537171182
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e836f79cd05dbaa180cc7bf5413ce57004e3500b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5650298da99f8bc9a25c7d7ceea11a8a5bf968fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587519"
 ---
-# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a><span data-ttu-id="a9b3d-102">疑难解答：读取和写入文本文件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9b3d-102">Troubleshooting: reading from and writing to text files (Visual Basic)</span></span>
-<span data-ttu-id="a9b3d-103">本主题讨论处理文本文件时遇到的常见问题，并针对每个问题提供建议解决方法。</span><span class="sxs-lookup"><span data-stu-id="a9b3d-103">This topic discusses common problems encountered when working with text files and suggests an approach to each.</span></span>  
+# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a><span data-ttu-id="acfae-102">疑难解答：读取和写入文本文件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="acfae-102">Troubleshooting: reading from and writing to text files (Visual Basic)</span></span>
+<span data-ttu-id="acfae-103">本主题讨论处理文本文件时遇到的常见问题，并针对每个问题提供建议解决方法。</span><span class="sxs-lookup"><span data-stu-id="acfae-103">This topic discusses common problems encountered when working with text files and suggests an approach to each.</span></span>  
   
-## <a name="common-problems"></a><span data-ttu-id="a9b3d-104">常见问题</span><span class="sxs-lookup"><span data-stu-id="a9b3d-104">Common problems</span></span>  
- <span data-ttu-id="a9b3d-105">处理文本文件时遇到的最常见问题包括安全异常、文件编码和无效路径。</span><span class="sxs-lookup"><span data-stu-id="a9b3d-105">The most common issues encountered when working with text files include security exceptions, file encodings, or invalid paths.</span></span>  
+## <a name="common-problems"></a><span data-ttu-id="acfae-104">常见问题</span><span class="sxs-lookup"><span data-stu-id="acfae-104">Common problems</span></span>  
+ <span data-ttu-id="acfae-105">处理文本文件时遇到的最常见问题包括安全异常、文件编码和无效路径。</span><span class="sxs-lookup"><span data-stu-id="acfae-105">The most common issues encountered when working with text files include security exceptions, file encodings, or invalid paths.</span></span>  
   
-### <a name="security-exceptions"></a><span data-ttu-id="a9b3d-106">安全异常</span><span class="sxs-lookup"><span data-stu-id="a9b3d-106">Security exceptions</span></span>  
- <span data-ttu-id="a9b3d-107">安全错误发生时引发 <xref:System.Security.SecurityException>。</span><span class="sxs-lookup"><span data-stu-id="a9b3d-107">A <xref:System.Security.SecurityException> is thrown when a security error occurs.</span></span> <span data-ttu-id="a9b3d-108">这通常是由用户缺少必要权限导致的，通过添加权限或者在独立存储中处理文件可以解决该问题。</span><span class="sxs-lookup"><span data-stu-id="a9b3d-108">This is often a result of the user lacking necessary permissions, which may be solved by adding permissions or working with files in isolated storage.</span></span>  
+### <a name="security-exceptions"></a><span data-ttu-id="acfae-106">安全异常</span><span class="sxs-lookup"><span data-stu-id="acfae-106">Security exceptions</span></span>  
+ <span data-ttu-id="acfae-107">安全错误发生时引发 <xref:System.Security.SecurityException>。</span><span class="sxs-lookup"><span data-stu-id="acfae-107">A <xref:System.Security.SecurityException> is thrown when a security error occurs.</span></span> <span data-ttu-id="acfae-108">这通常是由用户缺少必要权限导致的，通过添加权限或者在独立存储中处理文件可以解决该问题。</span><span class="sxs-lookup"><span data-stu-id="acfae-108">This is often a result of the user lacking necessary permissions, which may be solved by adding permissions or working with files in isolated storage.</span></span>  
   
-### <a name="file-encodings"></a><span data-ttu-id="a9b3d-109">文件编码</span><span class="sxs-lookup"><span data-stu-id="a9b3d-109">File encodings</span></span>  
- <span data-ttu-id="a9b3d-110">文件编码也称为字符编码，用于指定在处理文本时如何表示字符。</span><span class="sxs-lookup"><span data-stu-id="a9b3d-110">File encodings, also known as character encodings, specify how to represent characters when text processing.</span></span> <span data-ttu-id="a9b3d-111">文本文件中的意外字符可能是由于不正确的编码导致的。</span><span class="sxs-lookup"><span data-stu-id="a9b3d-111">Unexpected characters in a text file may result from incorrect encoding.</span></span> <span data-ttu-id="a9b3d-112">对于大多数文件，一种编码可能优于另一种编码主要取决于它能处理或不能处理哪些语言字符，不过通常首选的是 Unicode。</span><span class="sxs-lookup"><span data-stu-id="a9b3d-112">For most files, one encoding may be preferable over another in terms of which language characters it can or cannot handle, although Unicode is usually preferred.</span></span> <span data-ttu-id="a9b3d-113">有关详细信息，请参阅[文件编码](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)和 <xref:System.Text.Encoding>。</span><span class="sxs-lookup"><span data-stu-id="a9b3d-113">For more information, see [File Encodings](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) and <xref:System.Text.Encoding>.</span></span>  
+### <a name="file-encodings"></a><span data-ttu-id="acfae-109">文件编码</span><span class="sxs-lookup"><span data-stu-id="acfae-109">File encodings</span></span>  
+ <span data-ttu-id="acfae-110">文件编码也称为字符编码，用于指定在处理文本时如何表示字符。</span><span class="sxs-lookup"><span data-stu-id="acfae-110">File encodings, also known as character encodings, specify how to represent characters when text processing.</span></span> <span data-ttu-id="acfae-111">文本文件中的意外字符可能是由于不正确的编码导致的。</span><span class="sxs-lookup"><span data-stu-id="acfae-111">Unexpected characters in a text file may result from incorrect encoding.</span></span> <span data-ttu-id="acfae-112">对于大多数文件，一种编码可能优于另一种编码主要取决于它能处理或不能处理哪些语言字符，不过通常首选的是 Unicode。</span><span class="sxs-lookup"><span data-stu-id="acfae-112">For most files, one encoding may be preferable over another in terms of which language characters it can or cannot handle, although Unicode is usually preferred.</span></span> <span data-ttu-id="acfae-113">有关详细信息，请参阅[文件编码](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)和 <xref:System.Text.Encoding>。</span><span class="sxs-lookup"><span data-stu-id="acfae-113">For more information, see [File Encodings](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) and <xref:System.Text.Encoding>.</span></span>  
   
-### <a name="incorrect-paths"></a><span data-ttu-id="a9b3d-114">错误路径</span><span class="sxs-lookup"><span data-stu-id="a9b3d-114">Incorrect paths</span></span>  
- <span data-ttu-id="a9b3d-115">分析文件路径尤其是相对路径时，很容易提供错误的数据。</span><span class="sxs-lookup"><span data-stu-id="a9b3d-115">When parsing file paths, particularly relative paths, it is easy to supply the wrong data.</span></span> <span data-ttu-id="a9b3d-116">请确保提供正确的路径，这样可以纠正许多问题。</span><span class="sxs-lookup"><span data-stu-id="a9b3d-116">Many problems can be corrected by making sure you are supplying the correct path.</span></span> <span data-ttu-id="a9b3d-117">有关详细信息，请参阅[如何：分析文件路径](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)。</span><span class="sxs-lookup"><span data-stu-id="a9b3d-117">For more information, see [How to: Parse File Paths](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md).</span></span>  
+### <a name="incorrect-paths"></a><span data-ttu-id="acfae-114">错误路径</span><span class="sxs-lookup"><span data-stu-id="acfae-114">Incorrect paths</span></span>  
+ <span data-ttu-id="acfae-115">分析文件路径尤其是相对路径时，很容易提供错误的数据。</span><span class="sxs-lookup"><span data-stu-id="acfae-115">When parsing file paths, particularly relative paths, it is easy to supply the wrong data.</span></span> <span data-ttu-id="acfae-116">请确保提供正确的路径，这样可以纠正许多问题。</span><span class="sxs-lookup"><span data-stu-id="acfae-116">Many problems can be corrected by making sure you are supplying the correct path.</span></span> <span data-ttu-id="acfae-117">有关详细信息，请参阅[如何：分析文件路径](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)。</span><span class="sxs-lookup"><span data-stu-id="acfae-117">For more information, see [How to: Parse File Paths](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a9b3d-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="a9b3d-118">See also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="acfae-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="acfae-118">See also</span></span>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- [<span data-ttu-id="a9b3d-119">从文件读取</span><span class="sxs-lookup"><span data-stu-id="a9b3d-119">Reading from Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- [<span data-ttu-id="a9b3d-120">写入文件</span><span class="sxs-lookup"><span data-stu-id="a9b3d-120">Writing to Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- [<span data-ttu-id="a9b3d-121">使用 TextFieldParser 对象分析文本文件</span><span class="sxs-lookup"><span data-stu-id="a9b3d-121">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+ [<span data-ttu-id="acfae-119">从文件读取</span><span class="sxs-lookup"><span data-stu-id="acfae-119">Reading from Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [<span data-ttu-id="acfae-120">写入文件</span><span class="sxs-lookup"><span data-stu-id="acfae-120">Writing to Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [<span data-ttu-id="acfae-121">使用 TextFieldParser 对象分析文本文件</span><span class="sxs-lookup"><span data-stu-id="acfae-121">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

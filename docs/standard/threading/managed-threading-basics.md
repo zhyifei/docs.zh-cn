@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586508"
 ---
 # <a name="managed-threading-basics"></a><span data-ttu-id="856d8-102">托管线程处理基本知识</span><span class="sxs-lookup"><span data-stu-id="856d8-102">Managed Threading Basics</span></span>
 <span data-ttu-id="856d8-103">本节的前五个主题有助于确定何时使用托管线程，并介绍一些基本功能。</span><span class="sxs-lookup"><span data-stu-id="856d8-103">The first five topics of this section are designed to help you determine when to use managed threading, and to explain some basic features.</span></span> <span data-ttu-id="856d8-104">若要了解提供附加功能的类，请参阅[线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)和[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。</span><span class="sxs-lookup"><span data-stu-id="856d8-104">For information on classes that provide additional features, see [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) and [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md).</span></span>  

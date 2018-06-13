@@ -1,14 +1,6 @@
 ---
-title: "CorDebugExceptionCallbackType 枚举"
-ms.custom: 
+title: CorDebugExceptionCallbackType 枚举
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorDebugExceptionCallbackType
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4efc969395e30dcc237d2ad99c9bc67ee30f4278
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2fc0919a7c05bfcbfb4b54dd0b618564f019f3fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407815"
 ---
-# <a name="cordebugexceptioncallbacktype-enumeration"></a><span data-ttu-id="b0be9-102">CorDebugExceptionCallbackType 枚举</span><span class="sxs-lookup"><span data-stu-id="b0be9-102">CorDebugExceptionCallbackType Enumeration</span></span>
-<span data-ttu-id="b0be9-103">指示的回调中所做的类型[icordebugmanagedcallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。</span><span class="sxs-lookup"><span data-stu-id="b0be9-103">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
+# <a name="cordebugexceptioncallbacktype-enumeration"></a><span data-ttu-id="551ac-102">CorDebugExceptionCallbackType 枚举</span><span class="sxs-lookup"><span data-stu-id="551ac-102">CorDebugExceptionCallbackType Enumeration</span></span>
+<span data-ttu-id="551ac-103">指示的回调中所做的类型[icordebugmanagedcallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。</span><span class="sxs-lookup"><span data-stu-id="551ac-103">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0be9-104">语法</span><span class="sxs-lookup"><span data-stu-id="b0be9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="551ac-104">语法</span><span class="sxs-lookup"><span data-stu-id="551ac-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugExceptionCallbackType {  
@@ -48,23 +37,23 @@ typedef enum CorDebugExceptionCallbackType {
 } CorDebugExceptionCallbackType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b0be9-105">成员</span><span class="sxs-lookup"><span data-stu-id="b0be9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="551ac-105">成员</span><span class="sxs-lookup"><span data-stu-id="551ac-105">Members</span></span>  
   
-|<span data-ttu-id="b0be9-106">成员</span><span class="sxs-lookup"><span data-stu-id="b0be9-106">Member</span></span>|<span data-ttu-id="b0be9-107">描述</span><span class="sxs-lookup"><span data-stu-id="b0be9-107">Description</span></span>|  
+|<span data-ttu-id="551ac-106">成员</span><span class="sxs-lookup"><span data-stu-id="551ac-106">Member</span></span>|<span data-ttu-id="551ac-107">描述</span><span class="sxs-lookup"><span data-stu-id="551ac-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="b0be9-108">引发了异常。</span><span class="sxs-lookup"><span data-stu-id="b0be9-108">An exception was thrown.</span></span>|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="b0be9-109">异常终结进程进入用户代码。</span><span class="sxs-lookup"><span data-stu-id="b0be9-109">The exception windup process entered user code.</span></span>|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="b0be9-110">异常终结进程发现`catch`块中，在用户代码。</span><span class="sxs-lookup"><span data-stu-id="b0be9-110">The exception windup process found a `catch` block in user code.</span></span>|  
-|`DEBUG_EXCEPTION_UNHANDLED`|<span data-ttu-id="b0be9-111">未处理异常。</span><span class="sxs-lookup"><span data-stu-id="b0be9-111">The exception was not handled.</span></span>|  
+|`DEBUG_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="551ac-108">引发了异常。</span><span class="sxs-lookup"><span data-stu-id="551ac-108">An exception was thrown.</span></span>|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="551ac-109">异常终结进程进入用户代码。</span><span class="sxs-lookup"><span data-stu-id="551ac-109">The exception windup process entered user code.</span></span>|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="551ac-110">异常终结进程发现`catch`块中，在用户代码。</span><span class="sxs-lookup"><span data-stu-id="551ac-110">The exception windup process found a `catch` block in user code.</span></span>|  
+|`DEBUG_EXCEPTION_UNHANDLED`|<span data-ttu-id="551ac-111">未处理异常。</span><span class="sxs-lookup"><span data-stu-id="551ac-111">The exception was not handled.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b0be9-112">惠?</span><span class="sxs-lookup"><span data-stu-id="b0be9-112">Requirements</span></span>  
- <span data-ttu-id="b0be9-113">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b0be9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="551ac-112">要求</span><span class="sxs-lookup"><span data-stu-id="551ac-112">Requirements</span></span>  
+ <span data-ttu-id="551ac-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="551ac-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0be9-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b0be9-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="551ac-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="551ac-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b0be9-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0be9-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="551ac-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="551ac-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b0be9-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0be9-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="551ac-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="551ac-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0be9-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="b0be9-117">See Also</span></span>  
- [<span data-ttu-id="b0be9-118">调试枚举</span><span class="sxs-lookup"><span data-stu-id="b0be9-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="551ac-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="551ac-117">See Also</span></span>  
+ [<span data-ttu-id="551ac-118">调试枚举</span><span class="sxs-lookup"><span data-stu-id="551ac-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

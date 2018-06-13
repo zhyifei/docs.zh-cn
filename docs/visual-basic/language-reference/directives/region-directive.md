@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588430"
 ---
 # <a name="region-directive"></a><span data-ttu-id="629d4-102">#Region 指令</span><span class="sxs-lookup"><span data-stu-id="629d4-102">#Region Directive</span></span>
 <span data-ttu-id="629d4-103">折叠并隐藏 Visual Basic 文件中的代码段。</span><span class="sxs-lookup"><span data-stu-id="629d4-103">Collapses and hides sections of code in Visual Basic files.</span></span>  

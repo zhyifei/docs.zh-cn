@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767045"
 ---
 # <a name="using-annotation-in-queries"></a><span data-ttu-id="95377-102">在查询中使用批注</span><span class="sxs-lookup"><span data-stu-id="95377-102">Using Annotation in Queries</span></span>
 <span data-ttu-id="95377-103">通过批注，可以使用可在生成时后配置的某个值任意标记跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="95377-103">Annotations allow you to arbitrarily tag tracking records with a value that can be configured after build time.</span></span> <span data-ttu-id="95377-104">例如，你可能希望多个跟踪记录各多个工作流标记使用"Mail Server"= ="Mail Server1"。</span><span class="sxs-lookup"><span data-stu-id="95377-104">For example, you might want several tracking records across several workflows to be tagged with "Mail Server" == "Mail Server1".</span></span> <span data-ttu-id="95377-105">这样便于在以后查询跟踪记录时查找带有此标记的所有记录。</span><span class="sxs-lookup"><span data-stu-id="95377-105">This makes it easy to find all records with this tag when querying tracking records later.</span></span>  

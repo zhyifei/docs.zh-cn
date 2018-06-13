@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589665"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a><span data-ttu-id="eb35c-102">如何：在 Visual Basic 中将文本写入“我的文档”目录中的文件</span><span class="sxs-lookup"><span data-stu-id="eb35c-102">How to: Write Text to Files in the My Documents Directory in Visual Basic</span></span>
 <span data-ttu-id="eb35c-103">`My.Computer.FileSystem.SpecialDirectories` 对象允许用户访问特殊目录，如 MyDocuments 目录。</span><span class="sxs-lookup"><span data-stu-id="eb35c-103">The `My.Computer.FileSystem.SpecialDirectories` object allows you to access special directories, such as the **MyDocuments** directory.</span></span>  
