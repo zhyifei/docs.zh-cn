@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579322"
 ---
 # <a name="metadata-and-self-describing-components"></a>元数据和自描述组件
 在过去，以一种语言编写的软件组件（.exe 或 .dll）不能方便地使用以另一种语言编写的软件组件。 在这个问题的解决上，COM 向前迈进了一步。 .NET Framework 允许编译器向所有的模块和程序集发出附加的说明性信息，从而使组件互用更加简单。 这种叫做“元数据”的信息有助于组件无缝交互。  

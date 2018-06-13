@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580983"
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>如何： 确定是否可序列化的标准.NET 对象
 

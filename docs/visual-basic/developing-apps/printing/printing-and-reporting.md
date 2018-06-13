@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582787"
 ---
 # <a name="printing-and-reporting-visual-basic"></a>打印和报告 (Visual Basic)
 Visual Basic 提供了有关打印和报告的几个选项。 以下主题提供的概述和指向与打印和报告相关的相关文档。  

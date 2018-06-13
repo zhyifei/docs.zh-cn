@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595953"
 ---
 # <a name="mycomputerclock-object"></a>My.Computer.Clock 对象
 提供了用于从系统时钟访问当前本地时间和协调世界时（相当于格林威治标准时间）的属性。  

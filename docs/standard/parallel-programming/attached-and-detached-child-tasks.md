@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590759"
 ---
 # <a name="attached-and-detached-child-tasks"></a>已附加和已分离的子任务
 子任务（或嵌套任务）是在另一个任务（称为“父任务”）的用户委托中创建的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 实例。 可以分离或附加子任务。 分离的子任务是独立于父级而执行的任务。 附加的子任务是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建的嵌套任务，父级不显式或默认禁止附加任务。 一个任务可以创建任意数量的附加和分离子任务，这仅受系统资源限制。  

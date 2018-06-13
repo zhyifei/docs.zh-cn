@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578035"
 ---
 # <a name="general-naming-conventions"></a>通用命名约定
 本部分介绍通用命名约定与 word 选择相关指导说明了如何避免使用特定于语言的名称使用缩写和首字母缩写词和建议。  

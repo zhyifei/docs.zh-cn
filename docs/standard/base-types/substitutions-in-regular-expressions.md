@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579413"
 ---
 # <a name="substitutions-in-regular-expressions"></a>正则表达式中的替代
 <a name="Top"></a> 替换是只能在替换模式中识别的语言元素。 它们使用正则表达式模式定义全部或部分用于替换输入字符串中的匹配文本的文本。 替换模式可以包含一个或多个替换以及本文字符。 提供替换模式以将拥有 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 参数的 `replacement` 方法重载至 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法。 该方法将匹配的模式替换为 `replacement` 参数定义的模式。  

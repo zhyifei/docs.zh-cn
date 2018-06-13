@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583300"
 ---
 # <a name="file-access-with-visual-basic"></a>使用 Visual Basic 访问文件
 `My.Computer.FileSystem` 对象提供用于处理文件和文件夹的工具。 它的属性、方法和事件使你可以创建、复制、移动、调查以及删除文件和文件夹。 `My.Computer.FileSystem` 提供的性能比 Visual Basic 为后向兼容性提供的旧版功能（`FileOpen`、`FileClose`、`Input`、`InputString`、`LineInput` 等）的性能更好。  

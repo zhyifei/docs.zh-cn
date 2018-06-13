@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580934"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>如何：在 PLINQ 中指定执行模式
 此示例展示了如何强制 PLINQ 规避默认启发，同时并行执行查询，无论查询的形状如何。  

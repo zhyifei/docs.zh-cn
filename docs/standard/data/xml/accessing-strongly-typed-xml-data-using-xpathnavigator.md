@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578104"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 访问强类型 XML 数据
 作为 XPath 2.0 数据模型的实例，<xref:System.Xml.XPath.XPathNavigator> 类可以包含映射到公共语言运行库 (CLR) 类型的强类型数据。 根据 XPath 2.0 数据模型，只有元素和属性可以包含强类型数据。 <xref:System.Xml.XPath.XPathNavigator> 类提供将 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的数据作为强类型数据访问的机制，以及将一种数据类型转换为另一种数据类型的机制。  
