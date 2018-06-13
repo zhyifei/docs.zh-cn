@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cfd7ee890a7f2c3ea8cd3de9fbe830575c0ca10c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402769"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a><span data-ttu-id="24e86-102">ICorDebugAppDomain::EnumerateBreakpoints 方法</span><span class="sxs-lookup"><span data-stu-id="24e86-102">ICorDebugAppDomain::EnumerateBreakpoints Method</span></span>
 <span data-ttu-id="24e86-103">应用程序域中获取所有活动断点的枚举数。</span><span class="sxs-lookup"><span data-stu-id="24e86-103">Gets an enumerator for all active breakpoints in the application domain.</span></span>  

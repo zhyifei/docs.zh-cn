@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556050"
 ---
 # <a name="geometries"></a><span data-ttu-id="57f6d-102">几何图形</span><span class="sxs-lookup"><span data-stu-id="57f6d-102">Geometries</span></span>
 <span data-ttu-id="57f6d-103"><xref:System.Windows.Media.Geometry> 是一个通用的类，用于呈现[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]图形，命中测试对象，并定义剪辑区域</span><span class="sxs-lookup"><span data-stu-id="57f6d-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395448"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a><span data-ttu-id="993df-102">对等网络方案</span><span class="sxs-lookup"><span data-stu-id="993df-102">Peer-to-Peer Networking Scenarios</span></span>
 <span data-ttu-id="993df-103">对等网络实现或改进以下方案：</span><span class="sxs-lookup"><span data-stu-id="993df-103">Peer-to-peer networking enables or enhances the following scenarios:</span></span>  

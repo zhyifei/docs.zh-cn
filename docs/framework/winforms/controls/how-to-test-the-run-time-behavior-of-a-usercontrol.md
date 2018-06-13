@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539600"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a><span data-ttu-id="bcaf4-102">如何：测试 UserControl 的运行时行为</span><span class="sxs-lookup"><span data-stu-id="bcaf4-102">How to: Test the Run-Time Behavior of a UserControl</span></span>
 <span data-ttu-id="bcaf4-103">当开发<xref:System.Windows.Forms.UserControl>，你需要测试其运行时行为。</span><span class="sxs-lookup"><span data-stu-id="bcaf4-103">When you develop a <xref:System.Windows.Forms.UserControl>, you need to test its run-time behavior.</span></span> <span data-ttu-id="bcaf4-104">你可以创建单独的基于 Windows 的应用程序项目并将你窗体控件的测试，但此过程来说很不方便。</span><span class="sxs-lookup"><span data-stu-id="bcaf4-104">You can create a separate Windows-based application project and place your control on a test form, but this procedure is inconvenient.</span></span> <span data-ttu-id="bcaf4-105">更快、 更轻松的方法是使用**UserControl 测试容器**Visual Studio 提供的。</span><span class="sxs-lookup"><span data-stu-id="bcaf4-105">A faster and easier way is to use the **UserControl Test Container** provided by Visual Studio.</span></span> <span data-ttu-id="bcaf4-106">此测试容器启动直接从 Windows 控件库项目。</span><span class="sxs-lookup"><span data-stu-id="bcaf4-106">This test container starts directly from your Windows control library project.</span></span>  

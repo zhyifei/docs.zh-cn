@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555797"
 ---
 # <a name="listview-how-to-topics"></a><span data-ttu-id="1c5f9-102">ListView 帮助主题</span><span class="sxs-lookup"><span data-stu-id="1c5f9-102">ListView How-to Topics</span></span>
 <span data-ttu-id="1c5f9-103">本部分中的主题介绍如何使用<xref:System.Windows.Controls.ListView>控件来显示组的数据项。</span><span class="sxs-lookup"><span data-stu-id="1c5f9-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListView> control to display a set of data items.</span></span>  

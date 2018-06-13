@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538856"
 ---
 # <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="fc6ec-102">如何：设置 Windows 窗体 DataGridView 控件中的数据格式</span><span class="sxs-lookup"><span data-stu-id="fc6ec-102">How to: Format Data in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="fc6ec-103">以下过程演示了使用的单元格值的基本格式设置<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>属性<xref:System.Windows.Forms.DataGridView>控件和控件中的特定列。</span><span class="sxs-lookup"><span data-stu-id="fc6ec-103">The following procedures demonstrate basic formatting of cell values using the <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> property of a <xref:System.Windows.Forms.DataGridView> control and of specific columns in a control.</span></span> <span data-ttu-id="fc6ec-104">有关高级的数据格式设置信息，请参阅[如何： 在 Windows 窗体 DataGridView 控件中自定义数据格式](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="fc6ec-104">For information about advanced data formatting, see [How to: Customize Data Formatting in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545334"
 ---
 # <a name="ienumrawinputdevicclone"></a><span data-ttu-id="70d74-102">IEnumRAWINPUTDEVIC:Clone</span><span class="sxs-lookup"><span data-stu-id="70d74-102">IEnumRAWINPUTDEVIC:Clone</span></span>
 <span data-ttu-id="70d74-103">创建一个与当权枚举器相同状态的原始输入设备枚举器，以循环访问相同的列表。</span><span class="sxs-lookup"><span data-stu-id="70d74-103">Creates another raw input device enumerator with the same state as the current enumerator to iterate over the same list.</span></span>  

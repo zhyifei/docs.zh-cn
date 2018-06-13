@@ -1,13 +1,6 @@
 ---
 title: gcUnmanagedToManaged MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MDAs (managed debugging assistants), garbage collection
 - GC unmanaged to managed
@@ -19,36 +12,34 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - unmanaged to managed garbage collection
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3bc02f12a49ef65614114a056f9263f9ef7f5322
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dfaa77adef7cdc21b1ad8abaca1439361a33d4b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386621"
 ---
-# <a name="gcunmanagedtomanaged-mda"></a><span data-ttu-id="2896e-102">gcUnmanagedToManaged MDA</span><span class="sxs-lookup"><span data-stu-id="2896e-102">gcUnmanagedToManaged MDA</span></span>
-<span data-ttu-id="2896e-103">每当一个线程从托管代码转换到非托管代码，`gcUnmanagedToManaged` 托管调试助手 (MDA) 就会导致垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="2896e-103">The `gcUnmanagedToManaged` managed debugging assistant (MDA) causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  
+# <a name="gcunmanagedtomanaged-mda"></a><span data-ttu-id="fb6ce-102">gcUnmanagedToManaged MDA</span><span class="sxs-lookup"><span data-stu-id="fb6ce-102">gcUnmanagedToManaged MDA</span></span>
+<span data-ttu-id="fb6ce-103">每当一个线程从托管代码转换到非托管代码，`gcUnmanagedToManaged` 托管调试助手 (MDA) 就会导致垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="fb6ce-103">The `gcUnmanagedToManaged` managed debugging assistant (MDA) causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="2896e-104">症状</span><span class="sxs-lookup"><span data-stu-id="2896e-104">Symptoms</span></span>  
- <span data-ttu-id="2896e-105">使用 COM 和平台调用来运行非托管用户组件的应用程序在 CLR 中导致了一个非确定性的访问冲突。</span><span class="sxs-lookup"><span data-stu-id="2896e-105">An application running unmanaged user components using COM and platform invoke is causing a nondeterministic access violation in the CLR.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="fb6ce-104">症状</span><span class="sxs-lookup"><span data-stu-id="fb6ce-104">Symptoms</span></span>  
+ <span data-ttu-id="fb6ce-105">使用 COM 和平台调用来运行非托管用户组件的应用程序在 CLR 中导致了一个非确定性的访问冲突。</span><span class="sxs-lookup"><span data-stu-id="fb6ce-105">An application running unmanaged user components using COM and platform invoke is causing a nondeterministic access violation in the CLR.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="2896e-106">原因</span><span class="sxs-lookup"><span data-stu-id="2896e-106">Cause</span></span>  
- <span data-ttu-id="2896e-107">如果一个应用程序运行非托管用户组件，则这些组件可能损坏了已垃圾回收的堆。</span><span class="sxs-lookup"><span data-stu-id="2896e-107">If an application is running unmanaged user components, then those components might have corrupted the garbage-collected heap.</span></span> <span data-ttu-id="2896e-108">在垃圾回收器尝试审核对象图时，这会在 CLR 中导致访问冲突。</span><span class="sxs-lookup"><span data-stu-id="2896e-108">This causes an access violation in the CLR when the garbage collector tries to walk the object graph.</span></span>  
+## <a name="cause"></a><span data-ttu-id="fb6ce-106">原因</span><span class="sxs-lookup"><span data-stu-id="fb6ce-106">Cause</span></span>  
+ <span data-ttu-id="fb6ce-107">如果一个应用程序运行非托管用户组件，则这些组件可能损坏了已垃圾回收的堆。</span><span class="sxs-lookup"><span data-stu-id="fb6ce-107">If an application is running unmanaged user components, then those components might have corrupted the garbage-collected heap.</span></span> <span data-ttu-id="fb6ce-108">在垃圾回收器尝试审核对象图时，这会在 CLR 中导致访问冲突。</span><span class="sxs-lookup"><span data-stu-id="fb6ce-108">This causes an access violation in the CLR when the garbage collector tries to walk the object graph.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="2896e-109">解决方法</span><span class="sxs-lookup"><span data-stu-id="2896e-109">Resolution</span></span>  
- <span data-ttu-id="2896e-110">通过在每次托管转换之前强制垃圾回收来启用此助手，可以减少从非托管组件损坏已垃圾回收的堆到发生访问冲突之间的时间。</span><span class="sxs-lookup"><span data-stu-id="2896e-110">Enabling this assistant reduces the time between when the unmanaged component corrupts the garbage-collected heap and when the access violation happens by forcing a garbage collection to occur before every managed transition.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="fb6ce-109">解决方法</span><span class="sxs-lookup"><span data-stu-id="fb6ce-109">Resolution</span></span>  
+ <span data-ttu-id="fb6ce-110">通过在每次托管转换之前强制垃圾回收来启用此助手，可以减少从非托管组件损坏已垃圾回收的堆到发生访问冲突之间的时间。</span><span class="sxs-lookup"><span data-stu-id="fb6ce-110">Enabling this assistant reduces the time between when the unmanaged component corrupts the garbage-collected heap and when the access violation happens by forcing a garbage collection to occur before every managed transition.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="2896e-111">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="2896e-111">Effect on the Runtime</span></span>  
- <span data-ttu-id="2896e-112">导致每当发生从非托管代码到托管代码的线程转换时都进行垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="2896e-112">Causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="fb6ce-111">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="fb6ce-111">Effect on the Runtime</span></span>  
+ <span data-ttu-id="fb6ce-112">导致每当发生从非托管代码到托管代码的线程转换时都进行垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="fb6ce-112">Causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="2896e-113">输出</span><span class="sxs-lookup"><span data-stu-id="2896e-113">Output</span></span>  
- <span data-ttu-id="2896e-114">此 MDA 不会产生任何输出。</span><span class="sxs-lookup"><span data-stu-id="2896e-114">This MDA produces no output.</span></span>  
+## <a name="output"></a><span data-ttu-id="fb6ce-113">输出</span><span class="sxs-lookup"><span data-stu-id="fb6ce-113">Output</span></span>  
+ <span data-ttu-id="fb6ce-114">此 MDA 不会产生任何输出。</span><span class="sxs-lookup"><span data-stu-id="fb6ce-114">This MDA produces no output.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="2896e-115">配置</span><span class="sxs-lookup"><span data-stu-id="2896e-115">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="fb6ce-115">配置</span><span class="sxs-lookup"><span data-stu-id="fb6ce-115">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -58,8 +49,8 @@ ms.lasthandoff: 12/22/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2896e-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="2896e-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fb6ce-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="fb6ce-116">See Also</span></span>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="2896e-117">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="2896e-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="2896e-118">gcManagedToUnmanaged</span><span class="sxs-lookup"><span data-stu-id="2896e-118">gcManagedToUnmanaged</span></span>](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
- [<span data-ttu-id="2896e-119">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="2896e-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+ [<span data-ttu-id="fb6ce-117">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="fb6ce-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="fb6ce-118">gcManagedToUnmanaged</span><span class="sxs-lookup"><span data-stu-id="fb6ce-118">gcManagedToUnmanaged</span></span>](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
+ [<span data-ttu-id="fb6ce-119">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="fb6ce-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

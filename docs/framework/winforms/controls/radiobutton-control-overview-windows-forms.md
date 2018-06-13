@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540069"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a><span data-ttu-id="fb677-102">RadioButton 控件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="fb677-102">RadioButton Control Overview (Windows Forms)</span></span>
 <span data-ttu-id="fb677-103">Windows 窗体<xref:System.Windows.Forms.RadioButton>控件向用户显示一组两个或多个互相排斥的选择。</span><span class="sxs-lookup"><span data-stu-id="fb677-103">Windows Forms <xref:System.Windows.Forms.RadioButton> controls present a set of two or more mutually exclusive choices to the user.</span></span> <span data-ttu-id="fb677-104">尽管单选按钮和复选框可能看起来作用类似，但还有一项重大差异： 当用户选择一个单选按钮时，不能也选择同一组中的其他单选按钮。</span><span class="sxs-lookup"><span data-stu-id="fb677-104">While radio buttons and check boxes may appear to function similarly, there is an important difference: when a user selects a radio button, the other radio buttons in the same group cannot be selected as well.</span></span> <span data-ttu-id="fb677-105">与此相反，可以选择任意数量的复选框。</span><span class="sxs-lookup"><span data-stu-id="fb677-105">In contrast, any number of check boxes can be selected.</span></span> <span data-ttu-id="fb677-106">定义单选按钮组将告诉用户:"这是一组选项，您可以从中选择一个且只有一个。"</span><span class="sxs-lookup"><span data-stu-id="fb677-106">Defining a radio button group tells the user, "Here is a set of choices from which you can choose one and only one."</span></span>  

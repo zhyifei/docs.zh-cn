@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539745"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a><span data-ttu-id="a8e31-102">用于列出选项的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="a8e31-102">Windows Forms Controls Used to List Options</span></span>
 <span data-ttu-id="a8e31-103">如果你想要为用户提供的选项可供选择的列表，你可以将各种控件添加到 Windows 窗体。</span><span class="sxs-lookup"><span data-stu-id="a8e31-103">You can add a variety of controls to a Windows Form if you want to provide users with a list of options to choose from.</span></span> <span data-ttu-id="a8e31-104">具体取决于多少你想要限制用户的输入，你可以添加<xref:System.Windows.Forms.ListBox>控件，<xref:System.Windows.Forms.ComboBox>控件，或<xref:System.Windows.Forms.CheckedListBox>控件。</span><span class="sxs-lookup"><span data-stu-id="a8e31-104">Depending on how much you want to restrict your users' input, you can add a <xref:System.Windows.Forms.ListBox> control, a <xref:System.Windows.Forms.ComboBox> control, or a <xref:System.Windows.Forms.CheckedListBox> control.</span></span> <span data-ttu-id="a8e31-105">使用以下链接来确定哪种控件最适合你的需求。</span><span class="sxs-lookup"><span data-stu-id="a8e31-105">Use the following links to determine which control best suits your needs.</span></span>  
