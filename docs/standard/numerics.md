@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588692"
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework 中的数字
 .NET Framework 支持标准数值整型和浮点型基元、<xref:System.Numerics.BigInteger>（没有理论上限或下限的整型类型）、<xref:System.Numerics.Complex>（表示复杂数字的类型）和 <xref:System.Numerics> 命名空间中一组启用了 SIMD 的矢量类型。  

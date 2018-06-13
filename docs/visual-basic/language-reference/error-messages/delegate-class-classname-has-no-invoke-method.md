@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588825"
 ---
 # <a name="delegate-class-39ltclassnamegt39-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>委托类&#39; &lt;classname&gt; &#39;有没有 Invoke 方法，因此此类型的表达式不能为方法调用的目标
 调用`Invoke`通过委托已失败，因为`Invoke`上委托类未实现。  

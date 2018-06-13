@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767045"
 ---
 # <a name="using-annotation-in-queries"></a>在查询中使用批注
 通过批注，可以使用可在生成时后配置的某个值任意标记跟踪记录。 例如，你可能希望多个跟踪记录各多个工作流标记使用"Mail Server"= ="Mail Server1"。 这样便于在以后查询跟踪记录时查找带有此标记的所有记录。  

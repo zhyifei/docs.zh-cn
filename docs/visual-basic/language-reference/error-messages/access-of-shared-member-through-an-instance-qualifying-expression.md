@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588978"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>通过实例访问共享成员；将不计算限定表达式
 使用类或结构的一个实例变量访问`Shared`变量、 属性、 过程或在该类或结构中定义的事件。 如果使用实例变量访问的类或结构，例如常量或枚举，或一个嵌套的类或结构的隐式共享的成员，也会发生此警告。  

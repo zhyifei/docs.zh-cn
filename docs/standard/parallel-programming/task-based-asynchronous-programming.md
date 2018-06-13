@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592584"
 ---
 # <a name="task-based-asynchronous-programming"></a>基于任务的异步编程
 任务并行库 (TPL) 以“任务”的概念为基础，后者表示异步操作。 在某些方面，任务类似于线程或 <xref:System.Threading.ThreadPool> 工作项，但是抽象级别更高。 术语“任务并行”是指一个或多个独立的任务同时运行。 任务提供两个主要好处：  

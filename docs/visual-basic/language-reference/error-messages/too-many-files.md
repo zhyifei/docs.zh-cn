@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593962"
 ---
 # <a name="too-many-files"></a>文件太多
 更多的文件已创建的根目录中比操作系统允许的值，或打开多个文件中指定的数字超出**文件 =** 在你配置中设置。SYS 文件。  

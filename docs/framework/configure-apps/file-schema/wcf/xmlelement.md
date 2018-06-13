@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767643"
 ---
 # <a name="ltxmlelementgt"></a>&lt;XmlElement&gt;
 指定一个 XML 元素，请求令牌时，该元素在消息正文中发送到安全令牌服务。  

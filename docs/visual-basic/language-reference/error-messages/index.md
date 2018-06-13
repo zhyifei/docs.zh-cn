@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590129"
 ---
 # <a name="error-messages-visual-basic"></a>错误消息 (Visual Basic)
 编写、编译或运行 Visual Basic 应用程序时，可能会生成以下类型的错误：  

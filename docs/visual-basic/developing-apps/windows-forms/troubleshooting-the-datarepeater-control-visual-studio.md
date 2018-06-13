@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591893"
 ---
 # <a name="troubleshooting-the-datarepeater-control-visual-studio"></a>DataRepeater 控件疑难解答 (Visual Studio)
 本主题列出了你正在使用时可能发生的常见问题<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593572"
 ---
 # <a name="39sub-main39-was-not-found-in-39ltnamegt39"></a>&#39;Sub Main&#39;中未找到&#39;&lt;名称&gt;&#39;
 缺少 `Sub Main` 或为其指定了错误的位置。  

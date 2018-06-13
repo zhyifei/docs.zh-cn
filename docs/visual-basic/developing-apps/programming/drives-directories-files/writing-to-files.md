@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588114"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>写入文件 (Visual Basic)
 本部分介绍了如何执行涉及写入文件的任务。  
