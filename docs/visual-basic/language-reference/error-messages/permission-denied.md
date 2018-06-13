@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595990"
 ---
 # <a name="permission-denied-visual-basic"></a>权限被拒绝 (Visual Basic)
 试图写入写保护的磁盘或访问锁定的文件。  

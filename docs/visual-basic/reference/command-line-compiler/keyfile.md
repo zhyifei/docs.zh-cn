@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653476"
 ---
 # <a name="-keyfile"></a>-keyfile
 指定包含密钥或密钥对的文件从而为程序集赋予强名称。  

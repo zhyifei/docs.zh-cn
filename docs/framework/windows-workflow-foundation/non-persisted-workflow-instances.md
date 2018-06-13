@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516745"
 ---
 # <a name="non-persisted-workflow-instances"></a>非持久工作流实例
 在创建工作流的新实例（该实例在 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 中保留其状态）时，服务主机将在实例存储中为该服务实例创建一个项。 随后，当第一次持久化工作流实例时，<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 将存储当前实例状态。 如果工作流承载于 Windows 进程激活服务中，则服务部署数据也将在第一次持久化实例时写入实例存储中。  

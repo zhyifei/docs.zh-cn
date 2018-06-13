@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656251"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名类型 (Visual Basic)
 Visual Basic 支持匿名类型，使你可以创建对象，而无需编写数据类型的类定义。 此时，编译器将为你生成类。 类具有没有可用的名称，直接继承自<xref:System.Object>，并包含在声明对象指定的属性。 由于未指定数据类型的名称，因此将它称为*匿名类型*。  

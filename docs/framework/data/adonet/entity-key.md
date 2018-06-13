@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764991"
 ---
 # <a name="entity-key"></a>实体键
 *实体键*是[属性](../../../../docs/framework/data/adonet/property.md)或一组属性的[实体类型](../../../../docs/framework/data/adonet/entity-type.md)，用于确定标识。 构成实体键的属性是在设计时选择的。 实体键属性的值必须唯一地标识实体类型实例中的[实体集](../../../../docs/framework/data/adonet/entity-set.md)在运行时。 在选择构成实体键的属性时应确保实例在实体集中的唯一性。  

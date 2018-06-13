@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590668"
 ---
 # <a name="user-defined-data-type"></a>用户定义的数据类型
 在您定义的格式中包含数据。 `Structure`语句定义的格式。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602783"
 ---
 # <a name="statements-visual-basic"></a>语句 (Visual Basic)
 本节中的主题包含 Visual Basic 声明表和可执行语句表，以及应用于许多语句的重要列表。  

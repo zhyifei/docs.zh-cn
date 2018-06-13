@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cac4ddc33bcaf07d615fd186a63d96b1f4f6464c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417727"
 ---
 # <a name="icordebugheapsegmentenum-interface"></a>ICorDebugHeapSegmentEnum 接口
 提供针对托管堆的内存区域的枚举器。 此接口是 ICorDebugEnum 接口的子类。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
  `ICorDebugHeapSegmentEnum`集合对象枚举可能包含托管的对象的所有内存区域，但它无法保障托管的对象实际驻留在这些区域中。 它可能包括有关空或保留的内存区域的信息。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

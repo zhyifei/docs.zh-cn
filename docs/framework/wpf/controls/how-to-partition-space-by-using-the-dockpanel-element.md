@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553879"
 ---
 # <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>如何：使用 DockPanel 元素对空间进行分区
 下面的示例创建一个简单[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]framework 使用<xref:System.Windows.Controls.DockPanel>元素。 <xref:System.Windows.Controls.DockPanel>分区到其子元素可用空间。  

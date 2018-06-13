@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541224"
 ---
 # <a name="varieties-of-custom-controls"></a>各种自定义控件
 使用 .NET Framework 可以开发和实现新的控件。 可以通过继承来扩展熟悉的用户控件和现有控件的功能。 还可以编写自定义控件，这些控件执行自己的绘制。  

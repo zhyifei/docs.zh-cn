@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757861"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>将关键 XML 架构 (XSD) 约束映射到数据集约束
 在架构中，你可以指定元素的键约束或属性使用**密钥**元素。 对其指定键约束的元素或属性必须在任何架构实例中都具有唯一值，并且不能具有空值。  

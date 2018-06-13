@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544186"
 ---
 # <a name="how-to-handle-a-loaded-event"></a>如何：处理 Loaded 事件
 此示例演示如何处理<xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType>事件，并处理该事件的相应方案。 该处理程序创建<xref:System.Windows.Controls.Button>加载页面时。  

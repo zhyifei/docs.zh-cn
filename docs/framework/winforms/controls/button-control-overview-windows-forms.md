@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526017"
 ---
 # <a name="button-control-overview-windows-forms"></a>Button 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.Button> 控件允许用户通过单击来执行某项操作。 单击该按钮时，看上去它像是被按下并释放。 无论何时用户单击按钮，<xref:System.Windows.Forms.Control.Click>调用事件处理程序。 你将代码放置在<xref:System.Windows.Forms.Control.Click>事件处理程序来执行你选择的任何操作。  

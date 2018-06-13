@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560358"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>如何：使用 StreamGeometry 创建形状
 <xref:System.Windows.Media.StreamGeometry> 是轻量替代<xref:System.Windows.Media.PathGeometry>用于创建几何形状。 使用<xref:System.Windows.Media.StreamGeometry>需要来描述复杂的几何图形，但不是希望支持数据绑定、 动画或修改的开销。 例如，由于其效率，<xref:System.Windows.Media.StreamGeometry>类是一个不错的选择，用于描述装饰器。  

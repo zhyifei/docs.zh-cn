@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531009"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>如何：确定 Windows 窗体 CheckedListBox 控件中的选定项
 当 Windows 窗体中呈现数据<xref:System.Windows.Forms.CheckedListBox>控件，你可以可以循环访问集合中存储<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>属性或列表使用单步调试<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法来确定选中了哪些项。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法采用项索引号作为其自变量并返回`true`或`false`。 与你所料，<xref:System.Windows.Forms.ListBox.SelectedItems%2A>和<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>属性不用于确定选中了哪些项; 它们来确定哪些项将突出显示。  

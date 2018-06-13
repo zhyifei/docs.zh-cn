@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591320"
 ---
 # <a name="threading-objects-and-features"></a>线程处理对象和功能
 .NET Framework 提供许多对象，有助于你创建和管理多线程应用程序。 托管线程通过 <xref:System.Threading.Thread> 类表示。 <xref:System.Threading.ThreadPool> 类可以轻松创建和管理多线程后台任务。 <xref:System.ComponentModel.BackgroundWorker> 类执行的任务和与用户界面交互的任务相同。 <xref:System.Threading.Timer> 类可在指定的时间间隔内执行后台任务。  

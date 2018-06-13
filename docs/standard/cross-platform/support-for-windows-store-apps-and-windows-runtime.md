@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579283"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework 对 Windows 应用商店应用程序和 Windows 运行时的支持情况
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 支持基于 [!INCLUDE[wrt](../../../includes/wrt-md.md)]的许多软件开发方案。 这些方案分为三类：  

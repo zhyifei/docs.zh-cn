@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523950"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>如何：手动管理缓冲图形
 对于更高级的双缓冲方案，你可以使用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]类来实现您自己双缓冲的逻辑。 类负责分配和管理各自的图形缓冲区是<xref:System.Drawing.BufferedGraphicsContext>类。 每个应用程序具有自己的默认<xref:System.Drawing.BufferedGraphicsContext>，管理所有默认双缓冲为该应用程序。 你可以通过调用检索到此实例的引用<xref:System.Drawing.BufferedGraphicsManager.Current%2A>。  

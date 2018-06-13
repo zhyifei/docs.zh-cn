@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593634"
 ---
 # <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>&#39;&lt;name1&gt; &#39;不明确，从命名空间或类型导入&#39; &lt;name2&gt;&#39;
 你提供的名称不明确，因此与另一个名称冲突。 Visual Basic 编译器没有任何冲突解决规则;你必须自己区分名称。  

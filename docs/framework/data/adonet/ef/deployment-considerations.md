@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761254"
 ---
 # <a name="deployment-considerations-entity-framework"></a>部署注意事项（实体框架）
 本主题提供有关部署使用 ADO.NET 实体框架进行数据访问的应用程序的信息。 有关实体框架的详细信息，请参阅[入门](../../../../../docs/framework/data/adonet/ef/getting-started.md)。  

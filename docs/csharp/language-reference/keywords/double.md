@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172511"
 ---
 # <a name="double-c-reference"></a>double（C# 参考）
 `double` 关键字表示存储 64 位浮点值的简单类型。 下表显示了 `double` 类型的精度和大致范围。  

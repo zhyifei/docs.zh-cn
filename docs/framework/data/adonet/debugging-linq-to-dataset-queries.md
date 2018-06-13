@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760110"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>调试 LINQ to DataSet 查询
 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 支持 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 代码的调试。 但是，有一些差异调试[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]代码和非-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]托管代码。 大多数调试功能都适用于[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]语句，其中包括单步执行、 设置断点，以及查看调试器窗口中显示的结果。 而且，延迟查询执行一些在调试时应考虑的副作用[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]代码，并有一些限制使用编辑并继续。 本主题讨论调试方面的问题，该调试对于与非 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 托管代码对比的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 来说是唯一的。  

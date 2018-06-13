@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594466"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a>嵌套的函数没有与委托兼容的签名&#39; &lt;delegatename&gt;&#39;
 Lambda 表达式具有已分配给委托具有不兼容的签名。 例如，在下面的代码中，委托`Del`具有两个整数参数。  

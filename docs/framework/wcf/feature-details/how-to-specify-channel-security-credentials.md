@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496846"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>如何：指定通道安全凭据
 Windows Communication Foundation (WCF) 服务标记允许 COM 应用程序调用 WCF 服务。 大多数 WCF 服务要求客户端指定用于身份验证和授权的凭据。 当从 WCF 客户端调用 WCF 服务，你可以指定这些凭据，在托管代码或应用程序配置文件中。 在从 COM 应用程序调用 WCF 服务，你可以使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>接口指定凭据。 本主题将介绍使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口指定凭据的各种方法。  

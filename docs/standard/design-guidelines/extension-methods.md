@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574512"
 ---
 # <a name="extension-methods"></a>扩展方法
 扩展方法是允许使用实例方法调用语法来调用静态方法的语言功能。 这些方法必须采用至少一个参数，它表示的方法是在上运行的实例。  

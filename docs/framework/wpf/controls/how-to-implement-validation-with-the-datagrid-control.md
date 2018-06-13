@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557870"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>如何：用 DataGrid 控件实现验证
 <xref:System.Windows.Controls.DataGrid>控制，你可以执行的单元格和行级别的验证。 与单元格级别验证时用户更新的值验证绑定的数据对象的各个属性。 与行级别验证用户提交更改的行时验证整个数据对象。 也可以为验证错误，提供自定义的可视反馈，或使用默认的视觉反馈，<xref:System.Windows.Controls.DataGrid>控件提供。  

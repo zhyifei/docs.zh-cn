@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652111"
 ---
 # <a name="object-variable-values-visual-basic"></a>对象变量值 (Visual Basic)
 变量[Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)可以指任何类型的数据。 在中存储的值`Object`变量被保存别处在内存中，而变量本身的数据指针。  

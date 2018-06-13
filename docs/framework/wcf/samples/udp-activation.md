@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810026"
 ---
 # <a name="udp-activation"></a>UDP 激活
 此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例，用于使用 Windows 进程激活服务 (WAS) 支持进程激活。  

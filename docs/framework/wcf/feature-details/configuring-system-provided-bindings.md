@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496833"
 ---
 # <a name="configuring-system-provided-bindings"></a>配置系统提供的绑定
 绑定可指定在与终结点通话时所使用的通信机制，并指示如何连接到终结点。 绑定包含的元素的定义方式的 Windows Communication Foundation (WCF) 通道进行分层以提供所需的通信功能。 绑定包含三种类型的元素：  

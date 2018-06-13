@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604064"
 ---
 # <a name="attribute-list-visual-basic"></a>特性列表 (Visual Basic)
 指定要应用于声明的编程元素的属性。 用逗号分隔多个属性。 下面是一个属性的语法。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15206fbd7724383b1ec6df123790d3171e58e9f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411913"
 ---
 # <a name="icordebugframegetcode-method"></a>ICorDebugFrame::GetCode 方法
 获取一个指向与此堆栈帧关联的代码。  
@@ -39,7 +40,7 @@ HRESULT GetCode (
  [out]指向一个 ICorDebugCode 对象，表示与此帧关联的代码的地址的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

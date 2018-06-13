@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587591"
 ---
 # <a name="39isnot39-operand-of-type-39typename39-can-only-be-compared-to-39nothing39-because-39typename39-is-a-nullable-type"></a>&#39;IsNot&#39;类型的操作数&#39;typename&#39;仅可以相比&#39;执行任何操作&#39;，这是因为&#39;typename&#39;为 null 的类型
 声明为可以为 null 的变量进行了比较表达式以外`Nothing`使用`IsNot`运算符。  

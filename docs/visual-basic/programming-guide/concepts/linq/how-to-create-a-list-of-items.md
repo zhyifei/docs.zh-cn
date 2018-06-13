@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642803"
 ---
 # <a name="how-to-create-a-list-of-items"></a>如何：创建项列表
 本主题中的代码定义一个 `Student` 类，并创建该类的实例列表。 列表旨在支持主题[演练： 在 Visual Basic 中编写查询](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)。 它还可以用于需要对象列表的任何应用程序。 代码使用对象初始值设定项定义学生列表中的项。  

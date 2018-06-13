@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357746"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>生成数据服务客户端库（WCF 数据服务）
 数据服务实现[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可以返回描述公开的数据模型的服务元数据文档[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源。 有关详细信息，请参阅[OData： 服务元数据文档](http://go.microsoft.com/fwlink/?LinkId=186070)。 你可以使用**添加服务引用**对话框在 Visual Studio 中添加对引用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于服务。 当你使用此工具以添加对返回的元数据的引用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]送入在客户端项目，请执行下列操作：  

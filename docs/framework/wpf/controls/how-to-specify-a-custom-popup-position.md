@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551734"
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>如何：指定自定义 Popup 位置
 此示例演示如何指定一个自定义职位<xref:System.Windows.Controls.Primitives.Popup>控制<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性设置为<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。  

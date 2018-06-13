@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516408"
 ---
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>调整大小和 Windows 窗体的比例
 本主题提供有关调整 Windows 窗体大小的信息的链接。  

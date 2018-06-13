@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653398"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 指定如何进行字符串比较。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中设置-optioncompare  
   
-1.  在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。   
+1.  在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。   
   
 2.  单击“编译”选项卡。  
   

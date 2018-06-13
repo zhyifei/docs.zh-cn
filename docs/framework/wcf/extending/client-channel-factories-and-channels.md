@@ -7,6 +7,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483549"
 ---
 # <a name="client-channel-factories-and-channels"></a>客户端：通道工厂和通道
 本主题介绍通道工厂和通道的创建。  

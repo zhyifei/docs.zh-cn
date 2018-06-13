@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495419"
 ---
 # <a name="exporting-and-importing-metadata"></a>导出和导入元数据
 在 Windows Communication Foundation (WCF) 中，导出元数据是描述服务终结点并将它们投影到客户端可用来了解如何使用服务的并行的标准化表示形式的过程。 导入服务元数据是一个从服务元数据生成 <xref:System.ServiceModel.Description.ServiceEndpoint> 实例或部分的过程。  

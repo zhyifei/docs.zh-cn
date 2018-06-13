@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514763"
 ---
 # <a name="properties-vs-arguments"></a>属性与。自变量
 可使用多个选项将数据传入活动中。 除使用 <xref:System.Activities.InArgument> 之外，还可以使用标准 CLR 属性或公共 <xref:System.Activities.ActivityAction> 属性开发接收数据的活动。 本主题讨论如何选择适当的方法类型。  

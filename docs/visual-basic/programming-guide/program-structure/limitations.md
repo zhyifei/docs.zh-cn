@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649924"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 限制
 早期版本的 Visual Basic 强制执行在代码中，如的变量名，在模块和模块大小允许的变量数的长度的边界。 在 Visual Basic.NET 中，这些限制都放宽了，为你提供更大的自由度中编写和排列你的代码。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218054"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 实现命令行生成
 通过在命令提示符处键入 C# 编译器的可执行文件名称 (csc.exe)，可调用该编译器。

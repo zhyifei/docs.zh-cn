@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649602"
 ---
 # <a name="value-comparisons-visual-basic"></a>值的比较 (Visual Basic)
 比较运算符可以用于构造比较数值变量的值的表达式。 这些表达式返回`Boolean`值基于比较是否为 true 或 false。 此类表达式的示例如下所示。  

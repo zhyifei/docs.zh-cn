@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528728"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>如何：使用设计器用 Windows 窗体 ListView 控件添加和移除项
 将项添加到 Windows 窗体的过程<xref:System.Windows.Forms.ListView>控件包含主要的指定项并将属性分配给它。 可以在任何时候完成添加或删除列表项。  

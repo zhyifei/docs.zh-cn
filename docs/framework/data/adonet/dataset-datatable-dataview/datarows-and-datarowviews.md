@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762866"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow 和 DataRowView
 <xref:System.Data.DataView> 公开 <xref:System.Data.DataRowView> 对象的可枚举集合。 **DataRowView**对象将值公开为按名称或序号引用基础表中的列编制索引的对象数组。 你可以访问<xref:System.Data.DataRow>公开**DataRowView**使用<xref:System.Data.DataRowView.Row%2A>属性**DataRowView**。  

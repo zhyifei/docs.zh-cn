@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538299"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>如何：使用 ToolStripControlHost 包装 Windows 窗体控件
 <xref:System.Windows.Forms.ToolStripControlHost> 旨在通过使用 <xref:System.Windows.Forms.ToolStripControlHost> 构造函数或扩展 <xref:System.Windows.Forms.ToolStripControlHost> 本身启用任意 Windows 窗体控件的托管。 通过扩展 <xref:System.Windows.Forms.ToolStripControlHost> 并实现公开控件常用属性和方法的属性和方法，可轻松包装控件。 还可以公开控件在 <xref:System.Windows.Forms.ToolStripControlHost> 级别的事件。  

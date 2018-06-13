@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566777"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>使用纯色和渐变进行绘制概述
 本主题介绍如何使用<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.LinearGradientBrush>，和<xref:System.Windows.Media.RadialGradientBrush>要纯色、 线性渐变与径向渐变绘制的对象。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/04/2018
   
  ![A diagonal linear gradient](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diaglgradient-nolabel.jpg "wcpsdk_graphicsmm_diaglgradient_nolabel")  
   
- **注意：**此主题中的渐变示例使用默认坐标系来设置起点和终点。 默认坐标系与范围框相关：0 表示范围框为 0%，1 表示范围框为 100%。 你可以通过设置来更改此坐标系<xref:System.Windows.Media.GradientBrush.MappingMode%2A>属性值<xref:System.Windows.Media.BrushMappingMode.Absolute>。 绝对坐标系与范围框无关。 值直接在本地空间中解释。  
+ **注意：** 此主题中的渐变示例使用默认坐标系来设置起点和终点。 默认坐标系与范围框相关：0 表示范围框为 0%，1 表示范围框为 100%。 你可以通过设置来更改此坐标系<xref:System.Windows.Media.GradientBrush.MappingMode%2A>属性值<xref:System.Windows.Media.BrushMappingMode.Absolute>。 绝对坐标系与范围框无关。 值直接在本地空间中解释。  
   
  <xref:System.Windows.Media.GradientStop>是渐变画笔的基本构造块。  渐变停止点指定<xref:System.Windows.Media.GradientStop.Color%2A>在<xref:System.Windows.Media.GradientStop.Offset%2A>沿渐变轴。  
   

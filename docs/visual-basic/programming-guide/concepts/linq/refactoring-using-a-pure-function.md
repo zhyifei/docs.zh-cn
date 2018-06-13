@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645010"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>重构使用纯函数 (Visual Basic)
 下面的示例重构前面的示例中，[重构使用扩展方法 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)，则应在此示例中，代码以查找个段落的文本变为纯的静态方法使用纯函数`ParagraphText`.  

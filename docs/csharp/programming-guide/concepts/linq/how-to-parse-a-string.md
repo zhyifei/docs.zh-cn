@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320139"
 ---
 # <a name="how-to-parse-a-string-c"></a>如何：分析字符串 (C#)
 本主题演示如何分析字符串，以在 C# 中创建 XML 树。  

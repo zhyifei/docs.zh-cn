@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269394"
 ---
 # <a name="error-c-reference"></a>#error（C# 参考）
 `#error` 可从代码中的特定位置生成错误。 例如:  

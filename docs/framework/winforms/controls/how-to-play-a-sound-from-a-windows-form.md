@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533515"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>如何：从 Windows 窗体播放声音
 本示例在运行时播放给定路径中的声音。  

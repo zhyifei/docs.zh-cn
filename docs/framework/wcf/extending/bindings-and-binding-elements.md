@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804620"
 ---
 # <a name="bindings-and-binding-elements"></a>绑定和绑定元素
 绑定是特殊配置元素，调用组成的集合*绑定元素*、 其计算由服务运行时每当客户端或正在构建服务终结点。 绑定内绑定元素的类型和顺序确定了终结点的通道堆栈中协议和传输通道的选择和堆叠顺序。  

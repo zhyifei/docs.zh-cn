@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556999"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>如何：在数据集合视图中的对象之间导航
 视图允许相同的数据集合，以查看不同的方式，具体取决于排序、 筛选或分组。 视图还提供一个当前记录指针概念，以及启用移动指针。 此示例演示如何获取当前对象，以及在使用中提供的功能数据集合中的对象中导航<xref:System.Windows.Data.CollectionView>类。  

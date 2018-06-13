@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522354"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>如何：缩放时使用插值模式控制图像质量
 内插模式<xref:System.Drawing.Graphics>对象影响方式[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]刻度 （拉伸和收缩） 映像。 <xref:System.Drawing.Drawing2D.InterpolationMode>枚举定义多个内插模式，其中一些都显示在下面的列表：  

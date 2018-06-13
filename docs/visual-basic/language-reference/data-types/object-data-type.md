@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591609"
 ---
 # <a name="object-data-type"></a>Object Data Type
 包含引用的对象的地址。 你可以将任何引用类型 （字符串、 数组、 类或接口） 分配给`Object`变量。 `Object`变量也可以指任何值类型的数据 (数字， `Boolean`， `Char`， `Date`，结构或枚举)。  

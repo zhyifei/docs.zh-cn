@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213254"
 ---
 # <a name="-utf8output-c-compiler-options"></a>-utf8output（C# 编译器选项）
 -utf8output 选项使用 UTF-8 编码来显示编译器输出。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522091"
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>如何：对区域使用剪辑
 属性之一<xref:System.Drawing.Graphics>类是剪辑区域。 通过完成的所有绘图给定<xref:System.Drawing.Graphics>对象被限制为的剪辑区域<xref:System.Drawing.Graphics>对象。 你可以通过调用设置的剪辑区域<xref:System.Drawing.Graphics.SetClip%2A>方法。  

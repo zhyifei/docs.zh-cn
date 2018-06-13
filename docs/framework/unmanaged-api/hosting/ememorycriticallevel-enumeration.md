@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acf4f3f582e417c5e7b814622986427f996796ce
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432518"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel 枚举
 包含值，用于指示失败的影响，如果特定内存分配已请求但不能满足。  
@@ -47,7 +48,7 @@ typedef enum {
  在中定义的内存分配方法[IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)和[IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)接口需要此类型的参数。 根据失败的严重性，主机可以决定是否立即失败分配请求，或等待，直到可以满足。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   

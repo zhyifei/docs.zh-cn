@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578191"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>开发全球通用应用程序的最佳做法
 本节描述在开发全球通用的应用程序时应遵循的最佳做法。  

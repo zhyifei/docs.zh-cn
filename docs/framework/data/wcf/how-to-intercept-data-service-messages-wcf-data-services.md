@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355755"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>如何：截获数据服务消息（WCF 数据服务）
 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以截获请求消息，以便可以向操作添加自定义逻辑。 若要截获消息，请在数据服务中使用专门特性化的方法。 有关详细信息，请参阅[拦截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)。  

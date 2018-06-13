@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548465"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 对象概述
 本主题介绍如何有效地使用和创建<xref:System.Windows.Freezable>对象，提供可以帮助提高应用程序性能的特殊功能。 可冻结的对象的示例包括画笔、 笔、 转换、 几何图形和动画。  

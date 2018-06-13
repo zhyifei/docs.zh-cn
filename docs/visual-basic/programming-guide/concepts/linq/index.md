@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645962"
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>语言集成查询 (LINQ) (Visual Basic)
 LINQ 是一组功能，扩展了针对 Visual Basic 语言语法的强大的查询功能。 LINQ 引入了标准易学的数据查询和更新模式，并且该方法可扩展用于支持任何类型的数据存储。  .NET Framework 包括 LINQ 提供程序程序集，后者支持将 LINQ 与 .NET Framework 集合、SQL Server 数据库、ADO.NET 数据集和 XML 文档结合使用。  

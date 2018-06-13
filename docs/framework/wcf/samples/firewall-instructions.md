@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506752"
 ---
 # <a name="firewall-instructions"></a>防火墙说明
 必须启用多个端口或在防火墙中的程序，以便 Windows Communication Foundation (WCF) 示例才能运行。 其中许多示例使用范围 8000-8003 中的端口和端口 9000 进行通信。 防火墙默认情况下会打开，阻止对这些端口进行访问。 若要针对这些示例启用防火墙，请完成以下过程之一，具体情况取决于您的需求和安全环境：  

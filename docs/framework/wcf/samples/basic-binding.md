@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498937"
 ---
 # <a name="basic-binding"></a>基本绑定
 本节包含演示如何使用终结点元素的绑定特性的基本示例。  

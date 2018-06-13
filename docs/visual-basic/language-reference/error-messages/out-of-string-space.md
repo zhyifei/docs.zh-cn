@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594441"
 ---
 # <a name="out-of-string-space-visual-basic"></a>字符串空间不足 (Visual Basic)
 借助 Visual Basic 中，你可以使用非常大的字符串。 但是，其他程序以及使用您的字符串的方式的要求仍可以导致此错误。  

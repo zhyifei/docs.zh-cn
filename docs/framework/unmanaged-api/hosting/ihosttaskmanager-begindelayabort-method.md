@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65bb59efa9d38fa32baa38eb239103f5cfa8be86
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441911"
 ---
 # <a name="ihosttaskmanagerbegindelayabort-method"></a>IHostTaskManager::BeginDelayAbort 方法
 通知宿主托管代码正在进入不能在其中中止当前任务的周期。  
@@ -48,11 +49,11 @@ HRESULT BeginDelayAbort ();
  主机必须中止当前的任务，直到`EndDelayAbort`调用。 如果再次调用`BeginDelayAbort`对的干预调用，不建立`EndDelayAbort`，主机应返回从 E_UNEXPECTED `BeginDelayAbort`，并且应采取任何操作。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

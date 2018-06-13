@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326945"
 ---
 # <a name="equality-operations-c"></a>相等运算 (C#)
 两个序列，其相应元素相等且具有被视为相等的相同数量的元素。  

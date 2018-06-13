@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652878"
 ---
 # <a name="delegates-visual-basic"></a>委托 (Visual Basic)
 委托是引用方法的对象。 有时亦称为*类型安全函数指针*，因为它们与其他编程语言中使用的函数指针类似。 但与函数指针不同 Visual Basic 委托是基于类的引用类型<xref:System.Delegate?displayProperty=nameWithType>。 委托既可以引用共享方法（无需特定类实例即可调用的方法），也可以引用实例方法。  

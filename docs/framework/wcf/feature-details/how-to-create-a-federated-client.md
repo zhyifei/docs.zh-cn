@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496966"
 ---
 # <a name="how-to-create-a-federated-client"></a>如何：创建联合客户端
 在 Windows Communication Foundation (WCF) 中，创建的客户端*联合服务*包括三个主要步骤：  

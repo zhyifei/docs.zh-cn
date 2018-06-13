@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390131"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile 是 .NET Framework 的子集，它随 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 及早期版本一起提供并针对客户端应用程序进行了优化。 .NET Framework 是适用于 Windows、Windows Phone 和 Microsoft Azure 的开发平台，它提供了托管应用执行环境和 .NET Framework 类库。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 和早期版本提供了两个部署选项：完整的 .NET Framework 和 Client Profile。 Client Profile 启用了比完整的 .NET Framework 更快的部署和更小的应用安装包。  

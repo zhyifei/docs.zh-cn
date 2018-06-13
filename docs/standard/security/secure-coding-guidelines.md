@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588156"
 ---
 # <a name="secure-coding-guidelines"></a>代码安全维护指南
 基于证据的安全性和代码访问安全性提供非常强大的显式机制来实现安全。 大多数应用程序代码就可以使用由 .NET Framework 实现的基础结构。 在某些情况下，需要额外的应用程序特定的安全性，或通过扩展安全系统或通过使用全新临时方法构建。  

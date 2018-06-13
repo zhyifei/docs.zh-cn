@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495868"
 ---
 # <a name="debugging-windows-authentication-errors"></a>调试 Windows 身份验证错误
 使用 Windows 验证身份作为安全机制时，安全支持提供程序接口 (SSPI) 将处理安全进程。 当 SSPI 层上出现安全错误时，会显示这些由 Windows Communication Foundation (WCF)。 本主题提供一组问题以帮助诊断这些错误。  

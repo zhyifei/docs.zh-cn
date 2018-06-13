@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605428"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>运算符结果的数据类型 (Visual Basic)
 Visual Basic 确定基于操作数的数据类型的操作的结果数据类型。 在某些情况下这可能是更大的范围比两个操作数的数据类型。  

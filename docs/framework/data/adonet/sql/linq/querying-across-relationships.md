@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360460"
 ---
 # <a name="querying-across-relationships"></a>跨关系查询
 您的类定义中对其他对象或其他对象的集合的直接引用相当于数据库中的外键关系。 您可以通过使用点表示法在查询时利用这些关系来访问关系属性以及从一个对象定位到另一个对象。 这些访问操作会转换成用等效的 SQL 表示的更为复杂的联接或关联子查询。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643804"
 ---
 # <a name="variance-in-delegates-visual-basic"></a>委托 (Visual Basic 中) 中的变体
 .NET framework 3.5 引入了对 C# 和 Visual Basic 中的所有委托中的委托类型的匹配方法签名的方差支持。 这表明不仅可以将具有匹配签名的方法分配给委托，还可以将返回多个派生类型（协变）的方法分配给委托，或者将所接受参数的派生类型（逆变）数目比委托类型指定的数目少的方法分配给委托。 这包括泛型委托和非泛型委托。  

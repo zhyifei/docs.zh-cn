@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267363"
 ---
 # <a name="selection-statements-c-reference"></a>选择语句（C# 参考）
 选择语句会导致基于特定条件是否为 `true` 而将程序控件转移给特定的流。  

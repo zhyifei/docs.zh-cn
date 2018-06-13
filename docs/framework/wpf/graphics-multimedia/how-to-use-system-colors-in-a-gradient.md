@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562175"
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>如何：在渐变中使用系统颜色
 若要在渐变中使用系统颜色，请使用 *\<SystemColor >* 颜色和 *\<SystemColor >* ColorKey 的静态属性的<xref:System.Windows.SystemColors>类来获取对颜色，引用其中 *\<SystemColor >* 是所需的系统颜色的名称。 使用 *\<SystemColor >* ColorKey 属性时你想要创建的动态引用，随着系统主题更改而自动更新。 否则，请使用 *\<SystemColor >* 颜色属性。  

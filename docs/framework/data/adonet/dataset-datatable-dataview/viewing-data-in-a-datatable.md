@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761241"
 ---
 # <a name="viewing-data-in-a-datatable"></a>查看数据表中的数据
 你可以访问的内容<xref:System.Data.DataTable>使用**行**和**列**的集合**DataTable**。 你还可以使用<xref:System.Data.DataTable.Select%2A>方法以返回中的数据的子集**DataTable**根据包括搜索条件的条件，排序顺序和行状态。 此外，你可以使用<xref:System.Data.DataRowCollection.Find%2A>方法**DataRowCollection**搜索使用的主键值的特定行时。  

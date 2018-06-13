@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583414"
 ---
 # <a name="expression-too-complex"></a>表达式过于复杂
 浮点表达式包含太多嵌套子表达式。  

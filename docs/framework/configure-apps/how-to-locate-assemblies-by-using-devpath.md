@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755456"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>如何：使用 DEVPATH 查找程序集
 开发人员可能想要确保它们在构建共享程序集与多个应用程序一起正常运行。 而不是不断地将全局程序集缓存中的程序集放置在开发周期中，开发人员可以创建一个 DEVPATH 环境变量，指向程序集的生成输出目录。  

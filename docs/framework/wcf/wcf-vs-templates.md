@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810013"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 模板
 Windows Communication Foundation (WCF) Visual Studio 模板是预定义的项目和项模板在 Visual Studio 中用于快速生成 WCF 服务和周边应用程序。  

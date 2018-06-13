@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521480"
 ---
 # <a name="how-to-create-thumbnail-images"></a>如何：创建缩略图像
 缩略图是映像的缩小版本。 你可以通过调用创建缩略图<xref:System.Drawing.Image.GetThumbnailImage%2A>方法<xref:System.Drawing.Image>对象。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596959"
 ---
 # <a name="mycomputernetwork-object"></a>My.Computer.Network 对象
 提供属性、 事件和在计算机连接的网络进行交互的方法。  

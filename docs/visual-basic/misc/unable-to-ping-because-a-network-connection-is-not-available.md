@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640399"
 ---
 # <a name="unable-to-ping-because-a-network-connection-is-not-available"></a>由于网络连接不可用，无法使用 ping 命令
 无法执行此操作，因为网络连接不可用。  

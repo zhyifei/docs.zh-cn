@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593228"
 ---
 # <a name="39region39-and-39end-region39-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a>&#39;#Region&#39;和&#39;#End 区域&#39;语句不是在方法体/多行 lambda 内无效
 `#Region`块必须声明类、 模块或命名空间级别。 可折叠区域可以包含一个或多个过程，但它无法开头或结尾在过程内。  

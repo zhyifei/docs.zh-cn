@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578269"
 ---
 # <a name="parameter-design"></a>参数设计
 本部分参数的设计方案，包括有关检查的自变量的指南的各节提供全面的指南。 此外，你应参考中所述的指导原则[命名参数](../../../docs/standard/design-guidelines/naming-parameters.md)。  

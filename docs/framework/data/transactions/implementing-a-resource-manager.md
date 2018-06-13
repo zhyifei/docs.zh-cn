@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363258"
 ---
 # <a name="implementing-a-resource-manager"></a>实现资源管理器
 事务中使用的每个资源都由资源管理器进行管理，而后者的操作则由事务管理器进行协调。 资源管理器与事务管理器协调工作，为应用程序提供了原子性和隔离性的保证。 例如，Microsoft SQL Server、持久消息队列、内存中的哈希表都是资源管理器。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639371"
 ---
 # <a name="39redim39-preserve-operand-cannot-be-nothing"></a>&#39;ReDim&#39;保留操作数不能为 Nothing
 `ReDim` 语句尝试使用 `Preserve` 关键字来更改不是最后一个维度的数组的维度，但未为其操作数提供有效的值。  

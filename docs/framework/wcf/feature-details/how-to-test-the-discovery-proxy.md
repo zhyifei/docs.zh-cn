@@ -1,27 +1,16 @@
 ---
-title: "如何：测试发现代理"
-ms.custom: 
+title: 如何：测试发现代理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e6494a96f5e7e3a420c8443eff767b0e86d3bc25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 35edbd03e912ae2d9c491afb28dee1c4a3055d14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491217"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>如何：测试发现代理
-本主题是演示如何实现发现代理的四个主题中的第四个。 在前面的主题中，[如何： 实现的客户端应用程序使用发现代理查找服务](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)，你实现[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端应用程序使用发现代理查找服务，然后调用服务。 本主题说明如何验证发现代理、服务以及客户端应用程序是否按预期方式工作。  
+本主题是演示如何实现发现代理的四个主题中的第四个。 在前面的主题中，[如何： 实现的客户端应用程序使用发现代理查找服务](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)，实现的 WCF 客户端应用程序使用发现代理查找服务，然后调用该服务。 本主题说明如何验证发现代理、服务以及客户端应用程序是否按预期方式工作。  
   
 ### <a name="run-the-discovery-proxy"></a>运行发现代理  
   

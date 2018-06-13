@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518987"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+ 中的画笔和实心形状
 闭合的形状，如矩形或椭圆由概述和内部组成。 使用钢笔绘制轮廓和使用画笔填充其内部。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了几个画笔类填充的闭合形状的内部： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。 这些类都继承自<xref:System.Drawing.Brush>类。 下图显示用纯色画笔填充的矩形和椭圆用阴影画笔填充。  

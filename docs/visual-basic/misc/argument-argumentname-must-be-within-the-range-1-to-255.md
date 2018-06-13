@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601853"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-within-the-range-1-to-255"></a>自变量&#39; &lt;argumentname&gt; &#39;必须在 1 到 255 的范围内
 参数无效，因为它超出了 0 到 255 的范围。  

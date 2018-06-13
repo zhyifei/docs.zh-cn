@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492295"
 ---
 # <a name="metadata"></a>元数据
 Windows Communication Foundation (WCF) 提供用于导出、 发布、 检索和导入服务元数据的基础结构。 WCF 服务使用元数据来描述如何与服务的终结点进行交互，以便工具，如 Svcutil.exe，可以自动生成用于访问服务的客户端代码。  

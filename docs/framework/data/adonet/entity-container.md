@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764036"
 ---
 # <a name="entity-container"></a>Entity Container — 实体容器
 *实体容器*是的逻辑分组的[实体集](../../../../docs/framework/data/adonet/entity-set.md)，[关联集](../../../../docs/framework/data/adonet/association-set.md)，和[函数导入](../../../../docs/framework/data/adonet/model-declared-function.md)。  

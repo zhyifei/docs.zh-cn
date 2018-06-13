@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541919"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的双向功能概述
 与其他任何开发平台，不同[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有支持的双向内容快速开发的许多功能，例如，混合的左到右和向右键都处于同一文档的数据。 同时，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]创建的用户的需要双向功能，如阿拉伯语和希伯来语用户了绝佳的体验。  

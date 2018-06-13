@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763971"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 将特定基类型的对象视为指定派生类型的对象。  

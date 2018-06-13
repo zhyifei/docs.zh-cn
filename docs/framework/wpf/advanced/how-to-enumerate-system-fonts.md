@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543750"
 ---
 # <a name="how-to-enumerate-system-fonts"></a>如何：枚举系统字体
 ## <a name="example"></a>示例  

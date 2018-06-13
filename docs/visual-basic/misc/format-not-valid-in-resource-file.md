@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636127"
 ---
 # <a name="format-not-valid-in-resource-file"></a>资源文件中的格式无效
 你的项目中的资源文件不符合 Windows 资源文件的标准格式或资源文件和 Visual Basic 项目的不匹配。  

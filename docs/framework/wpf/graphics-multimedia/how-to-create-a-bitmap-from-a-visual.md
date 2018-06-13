@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559761"
 ---
 # <a name="how-to-create-a-bitmap-from-a-visual"></a>如何：从 Visual 创建位图
 此示例演示了如何创建从位图<xref:System.Windows.Media.Visual>。 A<xref:System.Windows.Media.DrawingVisual>呈现使用<xref:System.Windows.Media.FormattedText>。 <xref:System.Windows.Media.Visual>将呈现到<xref:System.Windows.Media.Imaging.RenderTargetBitmap>创建给定的文本的位图。  

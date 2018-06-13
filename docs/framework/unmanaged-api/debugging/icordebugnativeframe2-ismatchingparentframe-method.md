@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 39c0ea69a0922f5e0d25c98c21ec17a872b2f421
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418865"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame 方法
 确定是否为指定的框架为当前帧的父级。  
@@ -56,7 +57,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
  `IsMatchingParentFrame` 返回`true`框架对象传递给该方法是否在其调用方法帧对象的父级。 如果你在不是为指定框架的子级的帧上调用方法时，它将返回错误。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

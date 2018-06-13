@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549706"
 ---
 # <a name="application-management-overview"></a>应用程序管理概述
 所有应用程序都可能会共享一组适用于实现和管理应用程序的常见功能。 本主题提供中的功能的概述<xref:System.Windows.Application>用于创建和管理应用程序的类。  

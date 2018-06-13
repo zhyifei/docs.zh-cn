@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545472"
 ---
 # <a name="how-to-rotate-ink"></a>如何：旋转墨迹
 ## <a name="example"></a>示例  

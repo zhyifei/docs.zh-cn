@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534578"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>如何：从 Control 类继承
 如果你想要创建使用 Windows 窗体上的完全自定义控件，应从继承<xref:System.Windows.Forms.Control>类。 时从继承<xref:System.Windows.Forms.Control>类要求你执行详细的规划和实现，它还提供的选项的最大范围。 从继承时<xref:System.Windows.Forms.Control>，继承使控件能够运行的最基本功能。 中的固有功能<xref:System.Windows.Forms.Control>类处理通过键盘和鼠标的用户输入，定义的边界和控件大小，提供 windows 句柄，并提供消息处理和安全性。 它没有纳入任何绘图功能（这里指的是控件的图形界面的实际呈现），也没有纳入任何特定的用户交互功能。 必须通过自定义代码提供所有的这些功能。  

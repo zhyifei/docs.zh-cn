@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519205"
 ---
 # <a name="custom-composite-using-native-activity"></a>使用本机活动的自定义复合
 此示例演示如何编写一个 <xref:System.Activities.NativeActivity>，该活动安排其他 <xref:System.Activities.Activity> 对象以控制工作流的执行流。 此示例使用两个通用的控制流（Sequence 和 While）来演示如何做到这一点。  

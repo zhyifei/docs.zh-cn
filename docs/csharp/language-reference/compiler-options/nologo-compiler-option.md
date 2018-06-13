@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213635"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo（C# 编译器选项）
 -nologo 选项可在编译器启动时取消显式登录版权标志并在编译期间取消显示信息性消息。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644337"
 ---
 # <a name="filtering-data-visual-basic"></a>筛选数据 (Visual Basic)
 筛选是指将结果集限制为仅包含满足指定条件的元素的操作。 它也称为选定内容。  

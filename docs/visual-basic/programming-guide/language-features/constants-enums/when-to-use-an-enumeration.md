@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647300"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>何时使用枚举 (Visual Basic)
 枚举提供轻松使用成组的相关的常数。 一个枚举，枚举，或`Enum`，是一组值的符号名称。 枚举将被视为数据类型，并可用于创建使用变量和属性集使用的常数。  

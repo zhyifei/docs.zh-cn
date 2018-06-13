@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572705"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>使用 XPath 导航选择节点
 XML 文档对象模型 (DOM) 包含的方法使您可以使用 XML 路径语言 (XPath) 浏览功能查询 DOM 中的信息。 可以使用 XPath 查找单个特定节点，或查找与某个条件匹配的所有节点。  

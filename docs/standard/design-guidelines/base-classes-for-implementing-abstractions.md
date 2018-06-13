@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571503"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>用于实现抽象的基类
 严格地说，一个类成为基类，当另一个类派生自它时。 但是，对于本部分中，基类是主要用于提供公共抽象或重复使用某些其他类的默认实现但继承的类。 继承层次结构，在层次结构的根的抽象和一些自定义实现底部之间的中间通常位于基类，这些类。  

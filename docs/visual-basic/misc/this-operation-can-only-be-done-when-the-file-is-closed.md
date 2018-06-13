@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640275"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a>此操作仅可在文件关闭时完成。
 当文件打开时，已尝试执行仅可在文件关闭时执行的操作。  

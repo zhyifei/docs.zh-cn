@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645257"
 ---
 # <a name="introduction-to-pure-functional-transformations-visual-basic"></a>介绍纯函数转换 (Visual Basic)
 本节介绍函数转换，包括基本概念和支持的语言构造。 本节对面向对象的编程方法与函数转换编程方法进行了对比，并针对如何转换到后者提供了一些建议。 尽管可以在很多编程方案中都使用函数转换，但此处使用 XML 转换作为具体示例。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494010"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>根据服务元数据生成 WCF 客户端
 本主题介绍如何使用 Svcutil.exe 中的各种开关，根据元数据文档生成客户端。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541802"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows 窗体中的用户输入验证
 当用户输入到你的应用程序的数据时，你可能想要验证数据有效，然后再应用程序将使用它。 你可能需要某些文本字段不为零长度、 字段将转为电话号码或其他类型的数据格式正确，或字符串不包含任何不安全的字符，无法用于危及安全的数据库。 Windows 窗体提供了几种方法来验证你的应用程序中输入。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/04/2018
  当使用数据绑定时，你的控件中的数据与同步数据源执行期间<xref:System.Windows.Forms.Control.Validating>事件。 如果你取消<xref:System.Windows.Forms.Control.Validating>事件，不会与数据源同步数据。  
   
 > [!IMPORTANT]
->  如果你有之后发生的自定义验证<xref:System.Windows.Forms.Control.Validating>事件，它将不会影响的数据绑定。 例如，如果具有代码<xref:System.Windows.Forms.Control.Validated>尝试取消数据绑定的事件，仍将发生数据绑定。 在此情况下，若要执行中的验证<xref:System.Windows.Forms.Control.Validated>事件，更改控件的**数据源更新模式**属性 (**(Databindings) 下**\\**（高级）**) 从**OnValidation**到**从不**，并添加*控件*`.DataBindings["`*\<YOURFIELD >* `"].WriteValue()`到你的验证代码。  
+>  如果你有之后发生的自定义验证<xref:System.Windows.Forms.Control.Validating>事件，它将不会影响的数据绑定。 例如，如果具有代码<xref:System.Windows.Forms.Control.Validated>尝试取消数据绑定的事件，仍将发生数据绑定。 在此情况下，若要执行中的验证<xref:System.Windows.Forms.Control.Validated>事件，更改控件的**数据源更新模式**属性 (**(Databindings) 下**\\ **（高级）**) 从**OnValidation**到**从不**，并添加*控件*`.DataBindings["`*\<YOURFIELD >* `"].WriteValue()`到你的验证代码。  
   
 ### <a name="implicit-and-explicit-validation"></a>隐式和显式验证  
  因此何时控件的数据验证？ 这是由您决定，开发人员。 你可以使用隐式或显式验证，具体取决于你的应用程序的需求。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523285"
 ---
 # <a name="how-to-fill-a-shape-with-an-image-texture"></a>如何：用图像纹理填充形状
 可以通过用纹理填充的闭合的形状<xref:System.Drawing.Image>类和<xref:System.Drawing.TextureBrush>类。  

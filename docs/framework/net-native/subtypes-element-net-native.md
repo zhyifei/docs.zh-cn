@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397983"
 ---
 # <a name="ltsubtypesgt-element-net-native"></a>&lt;子类型&gt;元素 (.NET Native)
 将运行时策略应用到从包含类型继承的所有类。  

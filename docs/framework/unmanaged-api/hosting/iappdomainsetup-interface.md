@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cbcbc446eabcfcbc28c830f8860bde726c8eb6e3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434763"
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup 接口
 提供的属性，使该主机可配置<xref:System.AppDomain?displayProperty=nameWithType>类型之前调用[icorruntimehost:: Createdomainex](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)方法来创建它。  
@@ -46,11 +47,11 @@ ms.lasthandoff: 05/04/2018
  `IAppDomainSetup` 表示可以添加到的程序集绑定信息<xref:System.AppDomain>之前创建的实例。 例如，主机可以设置<xref:System.AppDomainSetup.ApplicationBase%2A>属性建立公共语言运行时 (CLR) 来探测程序根目录的托管程序集。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

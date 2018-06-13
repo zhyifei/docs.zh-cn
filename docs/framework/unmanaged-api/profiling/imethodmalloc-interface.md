@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b11cf0fadc9142ee291115cf9f0d84e6429834fb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455112"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc 接口
 提供的方法来为新的 Microsoft 中间语言 (MSIL) 函数主体分配内存。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
  每个分配器是特定于模块的并确保函数体将模块的基正偏移量的位置。 上面的模块的基的内存会宝贵，所以用于仅为函数主体分配内存分配器。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

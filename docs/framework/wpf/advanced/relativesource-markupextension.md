@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548261"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
 指定属性<xref:System.Windows.Data.RelativeSource>绑定源，要在中使用[绑定标记扩展](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)，或在设置时<xref:System.Windows.Data.Binding.RelativeSource%2A>属性<xref:System.Windows.Data.Binding>建立在 XAML 中的元素。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595041"
 ---
 # <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>无法从密钥文件中创建具有强名称程序集&#39; &lt;filename&gt;&#39;:&lt;错误&gt;
 无法从指定的密钥文件中创建的强名称程序集。  

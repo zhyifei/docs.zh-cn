@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358363"
 ---
 # <a name="data-encryption-in-sql-server"></a>SQL Server 中的数据加密
 SQL Server 提供了使用证书、非对称密钥或对称密钥对数据进行加密和解密的功能。 它在一个内部证书存储中管理所有这些证书或密钥。 该存储使用加密层次结构，可在层次结构中的上一层级别保护证书和密钥。 SQL Server 的此功能区域称为“机密存储”。  

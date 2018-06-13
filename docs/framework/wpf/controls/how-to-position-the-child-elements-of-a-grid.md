@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552139"
 ---
 # <a name="how-to-position-the-child-elements-of-a-grid"></a>如何：定位网格的子元素
 此示例演示如何使用 get 和 set 定义的方法<xref:System.Windows.Controls.Grid>来定位子元素。  

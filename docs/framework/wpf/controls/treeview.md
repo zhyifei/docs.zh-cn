@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556248"
 ---
 # <a name="treeview"></a>TreeView
 <xref:System.Windows.Controls.TreeView>控件显示的层次结构中使用可折叠的节点的信息。  

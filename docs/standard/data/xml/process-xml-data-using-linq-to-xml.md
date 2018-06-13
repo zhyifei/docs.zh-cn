@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568740"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>使用 LINQ to XML 处理 XML 数据
 LINQ to XML 是 .NET Framework 3.5 版中用于处理 XML 数据的新模型。 LINQ to XML 允许开发人员对 XML 数据执行任何需要的操作：查询、修改、创建、保存，和序列化 XML 文档。 真正的优势在于查询和创建功能。  

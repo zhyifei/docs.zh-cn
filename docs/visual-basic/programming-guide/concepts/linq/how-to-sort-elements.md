@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642085"
 ---
 # <a name="how-to-sort-elements-visual-basic"></a>如何： 对元素 (Visual Basic) 进行排序
 本示例演示如何编写对查询结果进行排序的查询。  

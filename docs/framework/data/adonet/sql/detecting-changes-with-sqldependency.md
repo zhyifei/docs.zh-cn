@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360185"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>使用 SqlDependency 检测更改
 <xref:System.Data.SqlClient.SqlDependency> 对象可以与 <xref:System.Data.SqlClient.SqlCommand> 关联，以便检测查询结果何时与最初检索的结果不同。 也可以向 `OnChange` 事件分配一个委托，当关联命令的结果更改时，将会触发该委托。 在执行命令前，必须将 <xref:System.Data.SqlClient.SqlDependency> 与该命令关联。 也可以使用 `HasChanges` 的 <xref:System.Data.SqlClient.SqlDependency> 属性来确定自从首次检索数据以来查询结果是否已经更改。  

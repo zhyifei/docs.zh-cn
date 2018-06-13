@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559960"
 ---
 # <a name="how-to-transform-points-and-vectors"></a>如何：变换点和向量
 此示例演示如何使用<xref:System.Windows.Media.Matrix>转换<xref:System.Windows.Point>和<xref:System.Windows.Vector>对象。  

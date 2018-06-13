@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552914"
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a>如何：保存、加载和打印 RichTextBox 内容
 下面的示例演示如何将保存的内容<xref:System.Windows.Controls.RichTextBox>到文件，该内容重新加载到<xref:System.Windows.Controls.RichTextBox>，以及如何打印内容。  

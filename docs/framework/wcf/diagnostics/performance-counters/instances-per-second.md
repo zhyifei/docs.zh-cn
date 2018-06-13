@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471863"
 ---
 # <a name="instances-per-second"></a>每秒实例数
 计数器名称：Instances Created Per Second（每秒创建的实例数）。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538736"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>如何：从现有 Windows 窗体控件继承
 如果想要扩展现有控件的功能，可以通过继承创建一个派生自现有控件的控件。 从现有控件继承时，将继承该控件的的所有功能和可视属性。 例如，如果您已创建继承自一个控件<xref:System.Windows.Forms.Button>，新控件将如下 act 完全像和一个标准<xref:System.Windows.Forms.Button>控件。 然后可以通过实现自定义方法和属性来扩展或修改新控件的功能。 在某些控件中，你还可以更改继承的控件的可视外观通过重写其<xref:System.Windows.Forms.Control.OnPaint%2A>方法。  

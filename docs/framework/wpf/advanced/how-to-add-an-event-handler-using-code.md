@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542618"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>如何：使用代码添加事件处理程序
 此示例演示如何使用代码将事件处理程序添加到元素。  

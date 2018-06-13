@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398282"
 ---
 # <a name="sockets"></a>套接字
 <xref:System.Net.Sockets> 命名空间包含 Windows 套接字接口的托管实现。 <xref:System.Net> 命名空间中的所有其他网络访问类均建立在套接字的此实现之上。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521451"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>如何：在设计时更改现有设置的值
 你可以使用 Visual Studio 项目中编辑现有设置的值。  

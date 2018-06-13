@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638562"
 ---
 # <a name="field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-39readonly39"></a>字段&#39; &lt;fieldname&gt; &#39;类型的&#39; &lt;typename&gt; &#39;是&#39;ReadOnly&#39;
 试图向到声明为 `ReadOnly`的字段进行写入。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809165"
 ---
 # <a name="endpoint-creation-overview"></a>终结点创建概述
 与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点提供客户端访问 WCF 服务提供的功能。 本节描述终结点的结构，并概述如何在配置和代码中定义终结点。  

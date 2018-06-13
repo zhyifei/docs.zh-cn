@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585471"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>无法将匿名类型转换为表达式树，因为它包含用于初始化另一个字段的字段
 当匿名类型的一个属性用于初始化匿名类型的另一个属性时，编译器不接受的匿名为表达式树的转换。 例如，在下面的代码中，`Prop1`是声明的初始化列表中，然后用作的初始值`Prop2`。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518497"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>活动定义范围和可见性
 正如对象的范围和可见性一样，活动定义范围和可见性是其他对象或活动访问此活动成员的能力。 通过以下实现来执行活动定义：  

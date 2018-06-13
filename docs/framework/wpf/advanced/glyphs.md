@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543061"
 ---
 # <a name="glyphs"></a>标志符号
 标志符号是字符的要在屏幕上绘制的低级表示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 对于想要截获并保存在格式化后的文本的客户提供直接访问权限的标志符号。  

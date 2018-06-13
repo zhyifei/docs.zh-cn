@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513196"
 ---
 # <a name="instance-completion-action"></a>实例完成操作
 **实例完成操作**SQL 工作流实例存储的属性，可以指定是否删除数据和元数据的工作流实例是从持久性数据库在实例完成之后。 此属性允许的值为**DeleteAll**和**DeleteNothing**。 以下列表对这两个选项进行了说明：  

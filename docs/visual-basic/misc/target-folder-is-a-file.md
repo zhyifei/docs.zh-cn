@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640601"
 ---
 # <a name="target-folder-is-a-file"></a>目标文件夹是一个文件
 在尝试执行与文件夹相关的操作时指定了文件。  

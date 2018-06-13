@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496147"
 ---
 # <a name="routing-scenarios"></a>路由方案
 尽管路由服务可高度自定义，但是，如果要从头开始创建新配置，设计高效的路由逻辑很富有挑战性。  然而，大多数路由服务配置都遵循一些常见方案。 虽然这些方案可能并不直接适用于特定配置，但是了解如何配置路由服务以处理这些方案有助于您了解路由服务。  

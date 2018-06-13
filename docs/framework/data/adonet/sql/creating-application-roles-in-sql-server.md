@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362522"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>在 SQL Server 中创建应用程序角色
 应用程序角色可提供对应用程序（而不是数据库角色或用户）分配权限的方法。 用户可以连接到数据库、激活应用程序角色以及采用授予应用程序的权限。 授予应用程序角色的权限在连接期间有效。  

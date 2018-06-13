@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529229"
 ---
 # <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>演练：处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误
 处理来自基础数据存储区的错误是为数据输入应用程序的必需的功能。 Windows 窗体<xref:System.Windows.Forms.DataGridView>控件轻松这通过公开<xref:System.Windows.Forms.DataGridView.DataError>事件，当数据存储区检测到违反了约束或违反的业务规则时引发。  

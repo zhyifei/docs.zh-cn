@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512036"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Windows Workflow Foundation 数据模型
 Windows Workflow Foundation 数据模型包含三个概念：变量、参数和表达式。 变量表示数据存储区，参数表示流入和流出活动的数据。 使用可引用变量的表达式来绑定（赋值）自变量。  

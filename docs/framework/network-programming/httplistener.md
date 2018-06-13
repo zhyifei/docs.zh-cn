@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393447"
 ---
 # <a name="httplistener"></a>HttpListener
 <xref:System.Net.HttpListener> 类提供一个可通过编程方式控制的 HTTP 协议侦听器。 侦听器在 <xref:System.Net.HttpListener> 对象的生存期内处于活动状态，在你的应用程序中运行。  

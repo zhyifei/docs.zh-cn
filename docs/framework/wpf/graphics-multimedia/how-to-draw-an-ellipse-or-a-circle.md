@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559361"
 ---
 # <a name="how-to-draw-an-ellipse-or-a-circle"></a>如何：绘制椭圆或圆
 此示例演示如何使用绘制椭圆形和圆形<xref:System.Windows.Shapes.Ellipse>元素。 若要绘制一个椭圆，创建<xref:System.Windows.Shapes.Ellipse>元素并指定其<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>。 使用其<xref:System.Windows.Shapes.Shape.Fill%2A>属性指定<xref:System.Windows.Media.Brush>用于绘制椭圆的内部。 使用其<xref:System.Windows.Shapes.Shape.Stroke%2A>属性指定<xref:System.Windows.Media.Brush>用于绘制椭圆的边框。 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>属性指定的椭圆的边框粗细。  

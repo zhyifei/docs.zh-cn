@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538803"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer 类
 `SoundPlayer` 类使你能够轻松地将声音纳入应用程序。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535992"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>TrackBar 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.TrackBar>（有时也称为"滑块"控件） 的控件用于浏览大量的信息或用于直观地调整数值设置。 <xref:System.Windows.Forms.TrackBar>控件具有两个部分： 滚动块，也称为滑块和刻度线。 滚动块是可以进行调整的一部分。 其位置对应于<xref:System.Windows.Forms.TrackBar.Value%2A>属性。 刻度线是定期间距的可视指示器。 Trackbar 指定和可以水平或垂直对齐的增量移动。 例如，可能会使用跟踪条以控制系统的光标闪烁速率或鼠标速度。  

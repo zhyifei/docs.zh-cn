@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599058"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>按功能列出的运算符 (Visual Basic)
 请参阅下面列出，类别之一，或打开帮助目录中的内容，以查看 Visual Basic 运算符按字母顺序列出的此部分。  

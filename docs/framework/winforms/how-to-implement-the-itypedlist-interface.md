@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538058"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>如何：实现 ITypedList 接口
 实现<xref:System.ComponentModel.ITypedList>界面，以启用可绑定列表的架构发现。  

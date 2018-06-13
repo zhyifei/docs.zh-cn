@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541052"
 ---
 # <a name="creating-an-ink-input-control"></a>创建墨迹输入控件
 你可以创建自定义控件的动态和静态呈现墨迹。 也就是说，呈现墨迹，为用户绘制笔画，导致墨迹以显示"流"从触笔和之后显示墨迹添加到该控件，是指通过触笔从剪贴板、 粘贴或从文件加载的方式。 若要动态呈现墨迹，控件必须使用<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。 若要以静态方式呈现墨迹，必须重写触笔事件方法 (<xref:System.Windows.UIElement.OnStylusDown%2A>， <xref:System.Windows.UIElement.OnStylusMove%2A>，和<xref:System.Windows.UIElement.OnStylusUp%2A>) 来收集<xref:System.Windows.Input.StylusPoint>数据，创建描边，并将其添加到<xref:System.Windows.Controls.InkPresenter>（呈现在控件上的墨迹）。  

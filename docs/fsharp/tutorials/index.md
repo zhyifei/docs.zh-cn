@@ -5,6 +5,7 @@ ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/18/2017
+ms.locfileid: "25726534"
 ---
 # <a name="f-tutorials"></a>F# 教程
 

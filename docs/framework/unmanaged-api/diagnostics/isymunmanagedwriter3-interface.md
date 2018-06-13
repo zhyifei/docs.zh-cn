@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c1315d54e93769772772d536e9688c754a96c67c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429389"
 ---
 # <a name="isymunmanagedwriter3-interface"></a>ISymUnmanagedWriter3 接口
 表示符号编写器，并提供方法来定义文档、 序列点、 词法作用域和变量。 此接口扩展[ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)接口。  

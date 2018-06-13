@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271024"
 ---
 # <a name="-operator-c-reference"></a>. 运算符（C# 参考）
 点运算符 (`.`) 用于成员访问。 点运算符指定类型或命名空间的成员。 例如，点运算符用于访问 .NET Framework 类库中的特定方法：  

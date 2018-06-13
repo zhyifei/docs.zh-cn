@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648159"
 ---
 # <a name="validating-strings-in-visual-basic"></a>验证字符串 (Visual Basic)
 本部分讨论如何验证在 Visual Basic 中的字符串。  

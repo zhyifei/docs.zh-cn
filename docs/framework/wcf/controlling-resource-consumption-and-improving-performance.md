@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805520"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>控制资源使用并提高性能
 本主题介绍 Windows Communication Foundation (WCF) 体系结构的不同方面的工作方式与控制资源消耗并影响性能指标的各种属性。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488619"
 ---
 # <a name="ws-metadataexchange-bindings"></a>WS-MetadataExchange 绑定
 本主题说明如何为各种传输构造默认的元数据交换绑定。  

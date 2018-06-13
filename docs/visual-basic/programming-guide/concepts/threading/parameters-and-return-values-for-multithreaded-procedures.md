@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648094"
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-visual-basic"></a>参数和返回值的多线程过程 (Visual Basic)
 在多线程应用程序中提供和返回值是很复杂的，因为必须将对某个过程的引用传递给线程类的构造函数，该过程不带参数也不返回值。 下面几节介绍一些提供参数和从不同线程上的过程返回值的简单方法。  

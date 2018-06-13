@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514996"
 ---
 # <a name="cancellation-handler-on-compensable-activity"></a>可补偿活动上的取消处理程序
 此示例演示如何对 <xref:System.Activities.Statements.CompensableActivity> 使用取消处理程序。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603842"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 运算符 (Visual Basic)
 返回<xref:System.Type>指定类型的对象。 <xref:System.Type>对象提供了有关如其属性、 方法和事件类型的信息。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559847"
 ---
 # <a name="how-to-seek-a-clock-synchronously"></a>如何：同步定位时钟
 使用<xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A>方法要查找的特定点时钟同步。 下面的示例演示<xref:System.Windows.Media.Animation.ClockController.Seek%2A>和<xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A>方法<xref:System.Windows.Media.Animation.ClockController>。  

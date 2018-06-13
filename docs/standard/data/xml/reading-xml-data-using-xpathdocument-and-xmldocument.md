@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575461"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>使用 XPathDocument 和 XmlDocument 读取 XML 数据
 可以通过两种方式读取 <xref:System.Xml.XPath?displayProperty=nameWithType> 命名空间中的 XML 文档。 一种方式是使用只读 <xref:System.Xml.XPath.XPathDocument> 类读取 XML 文档，另一种方式是使用 <xref:System.Xml.XmlDocument> 命名空间中可编辑的 <xref:System.Xml?displayProperty=nameWithType> 类读取 XML 文档。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648403"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>如何：从属性获取值 (Visual Basic)
 通过将属性名称包含在表达式中检索属性的值。  

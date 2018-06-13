@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573550"
 ---
 # <a name="member-overloading"></a>成员重载
 重载的成员表示上的相同类型的不同仅在数量或类型参数，但具有相同的名称创建两个或多个成员。 例如，如下所示，`WriteLine`方法重载：  

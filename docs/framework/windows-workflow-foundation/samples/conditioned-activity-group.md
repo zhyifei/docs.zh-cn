@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514060"
 ---
 # <a name="conditioned-activity-group"></a>条件活动组
 此示例演示一个旅行预订应用程序。 <xref:System.Workflow.Activities.ConditionedActivityGroup> (CAG) 有两个代码活动：Car 活动和 Airline 活动。 在 `SimpleCAGWorkflow` 构造函数中，已用所需旅行预订的类型填充了“travelNeedType”ArrayList 对象。 通过注释掉其中一个或全部两个 `travelNeeds.Add` 语句，将会相应地修改 CAG 行为。 Car 和 Airline 活动在它们的 <xref:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty> 条件中都填充有 <xref:System.Workflow.Activities.CodeCondition>。 只有当 `travelNeeds` 集合具有 `TravelNeeds.Car` 项时，Car 活动才会执行，并且，只有当 `travelNeeds` 集合具有 `TravelNeeds.Airline` 项时，Airline 活动才会执行。  

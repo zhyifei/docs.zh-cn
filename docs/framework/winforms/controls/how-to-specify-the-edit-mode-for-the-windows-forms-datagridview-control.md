@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536268"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>如何：指定 Windows 窗体 DataGridView 控件的编辑模式
 默认情况下，用户可以编辑的当前内容<xref:System.Windows.Forms.DataGridView>文本框单元格中通过键入它，或按 f2 键。 这将单元格置于编辑模式为如果满足所有以下条件：  

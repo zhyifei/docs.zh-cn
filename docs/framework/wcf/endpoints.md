@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803389"
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation 终结点
 与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点提供客户端访问 WCF 服务提供的功能。  

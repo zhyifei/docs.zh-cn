@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804828"
 ---
 # <a name="message-queueing-integration"></a>消息队列集成
 本节包含演示消息队列和 Windows Communication Foundation (WCF) 之间的集成的示例。  

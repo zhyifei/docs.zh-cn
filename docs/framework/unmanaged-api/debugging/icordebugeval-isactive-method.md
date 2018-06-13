@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2fe29b3e35d2fbd42fac2d9ec1d1c594abe1239c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411153"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive 方法
 获取一个值，该值指示当前正在执行此 ICorDebugEval 对象。  
@@ -39,7 +40,7 @@ HRESULT IsActive (
  [out]指向一个值，指示此评估是否处于活动状态的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

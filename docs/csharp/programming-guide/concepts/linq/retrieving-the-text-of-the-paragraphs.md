@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327153"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>检索段落的文本 (C#)
 此示例以上一个示例[检索段落及其样式 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md) 为基础。 这个新示例将每个段落的文本作为字符串进行检索。  

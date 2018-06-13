@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766031"
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令目录树的形状
 SQL 生成模块负责生成基于给定输入查询命令目录树表达式的后端特定 SQL 查询。 本节讨论查询命令目录树的特征、属性和结构。  

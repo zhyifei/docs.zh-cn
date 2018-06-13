@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458102"
 ---
 # <a name="configuring-client-behaviors"></a>配置客户端行为
 Windows Communication Foundation (WCF) 两种方式配置行为： 一是通过引用的行为配置，在中定义`<behavior>`的客户端应用程序配置文件 – 或以编程方式调用中的部分应用程序。 本主题将介绍这两种方式。  

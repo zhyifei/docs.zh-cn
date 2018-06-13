@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353652"
 ---
 # <a name="communicating-with-the-database"></a>与数据库通信
 本节中的主题介绍有关如何建立和维护与数据库的通信的一些基本方面。  

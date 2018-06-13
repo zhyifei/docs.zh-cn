@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806778"
 ---
 # <a name="using-the-wcf-development-tools"></a>使用 WCF 开发工具
 本部分介绍可帮助您开发 WCFservice 的 Visual Studio 开发工具。  

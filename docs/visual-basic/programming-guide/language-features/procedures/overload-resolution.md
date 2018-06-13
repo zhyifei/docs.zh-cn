@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653424"
 ---
 # <a name="overload-resolution-visual-basic"></a>重载决策 (Visual Basic)
 当 Visual Basic 编译器遇到对多个重载版本中定义的过程的调用时，编译器必须确定哪个要调用的重载。 这是通过执行以下步骤：  

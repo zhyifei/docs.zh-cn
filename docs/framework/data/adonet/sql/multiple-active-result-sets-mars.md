@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358419"
 ---
 # <a name="multiple-active-result-sets-mars"></a>多个活动结果集 (MARS)
 多活动结果集 (MARS) 是一项允许对单个连接执行多个批处理的功能。 在以前的版本中，在单个连接上一次只能执行一个批处理。 使用 MARS 执行多个批处理并不意味着同时执行操作。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 008514e3637a980f3722d0c9896a17be33d54c31
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431683"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 函数
 返回加载到进程公共语言运行时 (CLR) 的安装目录。 安装目录是完全限定，例如，"c:\windows\microsoft.net\framework\v1.0.3705"。  
@@ -54,7 +55,7 @@ HRESULT GetCORSystemDirectory (
 >  不要在运行版本 4 的 CLR 的进程中使用此函数。 如果在计算机上安装的 CLR 早期版本，此函数将返回该版本的安装目录。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   

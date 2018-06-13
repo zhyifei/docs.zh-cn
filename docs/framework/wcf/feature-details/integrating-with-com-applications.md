@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491837"
 ---
 # <a name="integrating-with-com-applications"></a>与 COM 应用程序集成
 Windows Communication Foundation (WCF) 服务可以直接集成到现有的代码使用 WCF 服务标记。 服务标记可以在众多基于 COM 的开发环境（如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0）中使用。  

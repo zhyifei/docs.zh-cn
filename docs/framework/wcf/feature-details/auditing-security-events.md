@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496020"
 ---
 # <a name="auditing-security-events"></a>审核安全事件
 创建 Windows Communication Foundation (WCF) 的应用程序可以利用审核功能来记录安全事件 （成功、 失败，或两者）。 这些事件被写入 Windows 系统事件日志，并且可以使用事件查看器进行检查。  

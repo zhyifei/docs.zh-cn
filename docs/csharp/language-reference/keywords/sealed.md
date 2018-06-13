@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172118"
 ---
 # <a name="sealed-c-reference"></a>sealed（C# 参考）
 应用于某个类时，`sealed` 修饰符可阻止其他类继承自该类。 在下面的示例中，类 `B` 继承自类 `A`，但没有类可以继承自类 `B`。  

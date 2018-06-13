@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273963"
 ---
 # <a name="new-modifier-c-reference"></a>new 修饰符（C# 参考）
 在用作声明修饰符时，`new` 关键字可以显式隐藏从基类继承的成员。 隐藏继承的成员时，该成员的派生版本将替换基类版本。 虽然可以不使用 `new` 修饰符来隐藏成员，但将收到编译器警告。 如果使用 `new` 来显式隐藏成员，将禁止此警告。  

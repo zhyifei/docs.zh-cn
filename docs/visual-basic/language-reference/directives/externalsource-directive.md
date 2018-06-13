@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586586"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource 指令
 指示代码的源代码的特定行和源的外部文本之间的映射。  

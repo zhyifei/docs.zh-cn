@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566803"
 ---
 # <a name="xclass-directive"></a>x:Class 指令
 配置 XAML 标记编译标记和代码隐藏之间联接分部类。 代码的分部类定义在单独的代码文件中[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]语言中，而在 XAML 编译过程的代码生成由通常创建标记分部类。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359928"
 ---
 # <a name="creating-the-object-model"></a>创建对象模型
 您可以从现有数据库中创建对象模型并以该模型的默认状态使用它。 您还可以自定义该模型的许多方面及其行为。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544740"
 ---
 # <a name="how-to-detect-when-the-enter-key-pressed"></a>如何：检测何时按下 Enter 键
 此示例演示如何检测何时<xref:System.Windows.Input.Key.Enter>键盘上按下键。  

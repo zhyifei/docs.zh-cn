@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649108"
 ---
 # <a name="object-variables-in-visual-basic"></a>Visual Basic 中的对象变量
 除了直接存储值，变量还可以引用的对象。 出于相同原因向变量分配任何值，可以向变量分配一个对象：  

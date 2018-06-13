@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637512"
 ---
 # <a name="drive-39ltdrivenamegt39-not-found"></a>驱动器&#39; &lt;drivename&gt; &#39;找不到
 无法找到该驱动器。 已失去网络连接，或是尝试访问的驱动器处于脱机状态或不存在。  

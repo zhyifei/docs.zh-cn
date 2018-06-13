@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288796"
 ---
 # <a name="---operator-c-reference"></a>-- 运算符（C# 参考）
 减量运算符 (`--`) 按 1 递减其操作数。 减量运算符可以在其操作数之前或之后出现：`--variable` 和 `variable--`。 第一种形式是前缀递减操作。 操作的结果是操作数递减“后”的值。 第二种形式是后缀递减操作。 操作的结果是操作数递减“前”的值。  

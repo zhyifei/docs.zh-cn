@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594590"
 ---
 # <a name="myapplicationinfo-object"></a>My.Application.Info 对象
 提供用于获取有关应用程序，如版本号、 描述、 加载的程序集和等等的信息的属性。  

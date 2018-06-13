@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363513"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Oracle 的 .NET Framework 数据提供程序的系统需求
 Oracle .NET Framework 数据提供程序需要 Microsoft 数据访问组件 (MDAC) 2.6 版或更高版本。 建议使用 MDAC 2.8 SP1。  

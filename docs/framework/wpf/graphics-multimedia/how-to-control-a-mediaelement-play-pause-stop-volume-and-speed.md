@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561386"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>如何：控制 MediaElement（播放、暂停、停止、音量和速度）
 下面的示例演示如何控制播放的媒体使用<xref:System.Windows.Controls.MediaElement>。 该示例创建简单的媒体播放，您可以播放、 暂停、 停止，并跳过在媒体中的来回以及调整卷和速度比。  

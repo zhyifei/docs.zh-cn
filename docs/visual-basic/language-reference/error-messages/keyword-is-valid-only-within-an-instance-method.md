@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586355"
 ---
 # <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39;&lt;关键字&gt;&#39;只能在实例方法内有效
 `Me`， `MyClass`，和`MyBase`关键字引用特定的类实例。 你无法使用其内部共享`Function`或`Sub`过程。  

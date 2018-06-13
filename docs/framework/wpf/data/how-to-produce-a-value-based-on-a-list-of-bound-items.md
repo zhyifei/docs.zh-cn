@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556830"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>如何：根据绑定项列表生成值
 <xref:System.Windows.Data.MultiBinding> 可以将绑定目标属性绑定到源属性的列表，然后应用逻辑，从而生成使用给定的输入值。 此示例演示如何使用<xref:System.Windows.Data.MultiBinding>。  

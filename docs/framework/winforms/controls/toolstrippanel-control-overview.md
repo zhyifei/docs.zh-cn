@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538485"
 ---
 # <a name="toolstrippanel-control-overview"></a>ToolStripPanel 控件概述
 A<xref:System.Windows.Forms.ToolStripPanel>单个区域提供用于定位和漂浮<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，和<xref:System.Windows.Forms.StatusStrip>控件。 多个<xref:System.Windows.Forms.ToolStrip>控件堆栈垂直或水平，具体取决于<xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A>的<xref:System.Windows.Forms.ToolStripPanel>。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653012"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic 中的条件编译
 在*条件编译*，而其他人将被忽略，将有选择地编译特定程序中的代码块。  

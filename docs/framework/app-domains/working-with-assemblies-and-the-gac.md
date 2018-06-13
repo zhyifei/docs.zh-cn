@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744299"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用程序集和全局程序集缓存
 如果需要在几个应用程序间共享程序集，可将其安装到全局程序集缓存中。 安装了公共语言运行时的每台计算机均具有此计算机范围的代码缓存。 全局程序集缓存中存储专门指定给由计算机中若干应用程序共享的程序集。 程序集必须具有强名称才可安装到全局程序集缓存中。  

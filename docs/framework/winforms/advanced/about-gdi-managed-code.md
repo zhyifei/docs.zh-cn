@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518808"
 ---
 # <a name="about-gdi-managed-code"></a>关于 GDI+ 托管代码
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是 Windows 操作系统提供二维矢量图形、图像处理和版式的部分。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 在 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]（早期的 Windows 版本包含的图形设备接口）的基础上进行了改进，添加了新功能和优化了现有功能。  

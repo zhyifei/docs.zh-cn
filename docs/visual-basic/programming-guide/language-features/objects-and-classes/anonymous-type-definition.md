@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649615"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>匿名类型定义 (Visual Basic)
 在响应的匿名类型的实例声明时，编译器将创建包含类型的指定的属性的新类定义。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543369"
 ---
 # <a name="element-tree-and-serialization-how-to-topics"></a>元素树和序列化帮助主题
 本部分中的主题介绍如何使用 WPF 元素树。  

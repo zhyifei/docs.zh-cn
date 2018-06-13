@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573418"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries"></a>如何：添加或移除访问控制列表项
 若要向文件添加或从文件删除访问控制列表 (ACL) 条目，则必须从文件或目录获取 <xref:System.Security.AccessControl.FileSecurity> 或 <xref:System.Security.AccessControl.DirectorySecurity> 对象并对其进行修改，然后应用回文件或目录。  

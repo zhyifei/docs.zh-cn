@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570375"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>为 DOM 中的元素创建新属性
 新建属性不同于创建其他节点类型，因为属性不是节点，而是元素节点的属性，包含在与元素关联的 XmlAttributeCollection 中。 有多种方法可创建属性并将其附加到元素：  

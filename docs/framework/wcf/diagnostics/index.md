@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810000"
 ---
 # <a name="administration-and-diagnostics"></a>管理和诊断
 Windows Communication Foundation (WCF) 提供一组丰富的功能，可帮助你监视应用程序的生命周期的不同阶段。 例如，您可以在部署时使用配置来设置服务和客户端。 WCF 包含大量性能计数器，可帮助您衡量应用程序的性能。 WCF 还公开在运行时通过 WCF Windows Management Instrumentation (WMI) 提供程序服务的检测数据。 当应用程序出现错误或者开始错误操作时，可使用事件日志来了解是否有重大事件发生。 此外，还可以使用消息日志记录和跟踪来从头至尾查看应用程序中发生了哪些事件。 这些功能有助于开发人员和 IT 专业人员不正常时解决 WCF 应用程序。  

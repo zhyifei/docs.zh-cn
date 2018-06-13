@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557683"
 ---
 # <a name="data-binding-how-to-topics"></a>数据绑定帮助主题
 本部分中的主题介绍如何使用数据绑定来从各种数据源在公共语言运行时 (CLR) 对象和 XML 的形式将元素绑定到数据。  

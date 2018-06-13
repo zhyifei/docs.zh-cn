@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557597"
 ---
 # <a name="menu-overview"></a>菜单概述
 <xref:System.Windows.Controls.Menu>类使您可以组织与命令和分层顺序的事件处理程序关联的元素。 每个<xref:System.Windows.Controls.Menu>元素包含一套<xref:System.Windows.Controls.MenuItem>元素。  

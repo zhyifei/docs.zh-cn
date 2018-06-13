@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543714"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>如何：重写依赖属性的元数据
 此示例演示如何重写默认依赖项属性的元数据来自于继承的类，通过调用<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>方法并提供特定类型的元数据。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588075"
 ---
 # <a name="end-of-statement-expected"></a>需要语句结束
 语句语法上完成，但是完成该语句的元素后面有一个附加的编程元素。 需要在每个语句的末尾行结束符。

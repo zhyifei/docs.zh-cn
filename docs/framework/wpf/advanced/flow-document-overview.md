@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549732"
 ---
 # <a name="flow-document-overview"></a>流文档概述
 流文档旨在优化查看和可读性。 流文档根据运行时变量（例如，窗口大小、设备分辨率和可选的用户首选项）来动态调整和重新排列内容，而不是设置为一个预定义的布局。 此外，流文档还提供一些高级文档功能，例如分页和分栏。 本主题概述了流文档及其创建方式。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="richtextbox"></a>RichTextBox  
  你使用<xref:System.Windows.Controls.RichTextBox>如果想要允许用户编辑流内容。 例如，如果你想要创建一个编辑器，允许用户处理以下操作： 表、 斜体和粗体格式等，将使用<xref:System.Windows.Controls.RichTextBox>。 请参阅[RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)有关详细信息。  
   
- **注意：**内部的流内容<xref:System.Windows.Controls.RichTextBox>的行为与其他控件中包含的流内容完全一样。 例如，有中的没有列<xref:System.Windows.Controls.RichTextBox>和因此没有自动调整大小行为。 此外，例如搜索、 查看模式、 页面导航和缩放的流内容通常内置的功能将不可用内<xref:System.Windows.Controls.RichTextBox>。  
+ **注意：** 内部的流内容<xref:System.Windows.Controls.RichTextBox>的行为与其他控件中包含的流内容完全一样。 例如，有中的没有列<xref:System.Windows.Controls.RichTextBox>和因此没有自动调整大小行为。 此外，例如搜索、 查看模式、 页面导航和缩放的流内容通常内置的功能将不可用内<xref:System.Windows.Controls.RichTextBox>。  
   
 <a name="creating_flow_content"></a>   
 ## <a name="creating-flow-content"></a>创建流内容  
@@ -153,7 +154,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
- **注意：**从[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]、<xref:System.Windows.Documents.Run.Text%2A>属性<xref:System.Windows.Documents.Run>对象是依赖项属性。 你可以将绑定<xref:System.Windows.Documents.Run.Text%2A>属性到数据源，如<xref:System.Windows.Controls.TextBlock>。 <xref:System.Windows.Documents.Run.Text%2A>属性完全支持单向绑定。 <xref:System.Windows.Documents.Run.Text%2A>属性还支持双向绑定，除<xref:System.Windows.Controls.RichTextBox>。 有关示例，请参见 <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>。  
+ **注意：** 从[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]、<xref:System.Windows.Documents.Run.Text%2A>属性<xref:System.Windows.Documents.Run>对象是依赖项属性。 你可以将绑定<xref:System.Windows.Documents.Run.Text%2A>属性到数据源，如<xref:System.Windows.Controls.TextBlock>。 <xref:System.Windows.Documents.Run.Text%2A>属性完全支持单向绑定。 <xref:System.Windows.Documents.Run.Text%2A>属性还支持双向绑定，除<xref:System.Windows.Controls.RichTextBox>。 有关示例，请参见 <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>。  
   
  **Span**  
   
@@ -263,7 +264,7 @@ ms.lasthandoff: 05/04/2018
   
  流元素是否使用<xref:System.Windows.Documents.InlineCollection>（内联） 或<xref:System.Windows.Documents.BlockCollection>（块） 来包含它的子元素取决于哪种类型的子元素 (<xref:System.Windows.Documents.Block>或<xref:System.Windows.Documents.Inline>) 可包含由父级。 下一节中的内容架构中概述了流内容元素的包容规则。  
   
- **注意：**没有一种类型的集合用于流内容<xref:System.Windows.Documents.ListItemCollection>，但此集合仅适用于<xref:System.Windows.Documents.List>。 此外，有几个集合与使用<xref:System.Windows.Documents.Table>。 请参阅[表概述](../../../../docs/framework/wpf/advanced/table-overview.md)有关详细信息。  
+ **注意：** 没有一种类型的集合用于流内容<xref:System.Windows.Documents.ListItemCollection>，但此集合仅适用于<xref:System.Windows.Documents.List>。 此外，有几个集合与使用<xref:System.Windows.Documents.Table>。 请参阅[表概述](../../../../docs/framework/wpf/advanced/table-overview.md)有关详细信息。  
   
 <a name="content_schema"></a>   
 ## <a name="content-schema"></a>内容架构  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650785"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 指定此模块所属程序集的名称。  

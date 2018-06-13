@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808834"
 ---
 # <a name="securing-services"></a>保证服务的安全
 Windows Communication Foundation (WCF) 服务的安全包含两项基本要求： 传输安全和授权。 (第三个要求中, 所述的安全事件的审核[审核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)简言之，传输安全包括身份验证（验证服务和客户端的标识）、保密性（消息加密）和完整性（进行数字签名以检测是否存在篡改）。 授权是控制对资源的访问，例如仅允许特权用户读取文件。 使用 WCF 的功能，很容易地实现两项基本要求。  
@@ -69,7 +70,7 @@ Windows Communication Foundation (WCF) 服务的安全包含两项基本要求�
  安全模式确定如何保证消息的安全，每一种选择都有利有弊，如下所述。 有关设置安全模式的详细信息，请参阅[如何： 将安全模式设置](../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
   
 #### <a name="transport-mode"></a>传输模式  
- 网络与应用程序之间存在多个层。 以下方法之一是*传输*层*，*后者管理终结点之间的消息传输。 对于当前目的，才需要你了解 WCF 使用多个传输协议，其中每个可以保护消息的传输。 (有关传输的详细信息，请参阅[传输](../../../docs/framework/wcf/feature-details/transports.md)。)  
+ 网络与应用程序之间存在多个层。 以下方法之一是*传输*层 *，* 后者管理终结点之间的消息传输。 对于当前目的，才需要你了解 WCF 使用多个传输协议，其中每个可以保护消息的传输。 (有关传输的详细信息，请参阅[传输](../../../docs/framework/wcf/feature-details/transports.md)。)  
   
  常用的协议是 HTTP，还有 TCP。 这些协议中的每一个都可以通过特定于该协议的一个或多个机制来保证消息传输的安全。 例如，HTTP 协议使用基于 HTTP 的 SSL（通常缩写为“HTTPS”）来保证安全。 因而，当选择传输模式来保证安全时，您要选择使用该协议所指示的机制。 例如，如果您选择 <xref:System.ServiceModel.WSHttpBinding> 类并将其安全模式设置为“传输”，则您要选择基于 HTTP 的 SSL (HTTPS) 作为安全机制。 传输模式的好处在于它比消息模式更为高效，原因是其安全是在相对较低的级别进行集成的。 使用传输模式时，必须根据传输规范实现安全机制，这样消息才能通过传输在各点之间安全流动。  
   

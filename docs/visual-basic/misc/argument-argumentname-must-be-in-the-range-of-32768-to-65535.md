@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600735"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-in-the-range-of--32768-to-65535"></a>自变量&#39; &lt;argumentname&gt; &#39;必须在-32768 到 65535 的范围内
 参数的值不在 -32,768 到 65,535 的允许范围内。  

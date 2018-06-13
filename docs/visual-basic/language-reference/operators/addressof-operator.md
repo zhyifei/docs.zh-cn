@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597782"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 运算符 (Visual Basic)
 创建引用特定过程的过程委托实例。  

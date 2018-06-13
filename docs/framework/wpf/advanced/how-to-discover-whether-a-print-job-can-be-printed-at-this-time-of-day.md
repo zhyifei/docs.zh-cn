@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548030"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>如何：确定此时是否可以打印一项打印作业
 打印队列并不总是可用的一天 24 小时。 它们具有开始和结束时间属性，可设置为使它们在每天的某些时间不可用。 例如，此功能可以用于保留以供在下午 5 点后的特定部门专用打印机。 该部门都使用不同队列维护比其他部门打印机。 将设置为其他部门队列来下午 5 点以后将不可用，尽管可将队列的支持的部门设置为始终保持可用。  

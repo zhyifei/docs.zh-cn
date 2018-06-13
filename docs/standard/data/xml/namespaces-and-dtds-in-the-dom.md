@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568675"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM 中的命名空间和 DTD
 文档类型定义 (DTD) 使命名空间支持变得很复杂。 例如，在下面的 XML 中，默认属性的名称中包含冒号。  

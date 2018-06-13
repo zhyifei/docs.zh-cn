@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639228"
 ---
 # <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a>此系统不包含对 SimplifiedChinese 区域设置的支持
 你正尝试使用 `VbStrConv.SimplifiedChinese` 枚举成员，但你的系统不支持简体中文区域设置。  

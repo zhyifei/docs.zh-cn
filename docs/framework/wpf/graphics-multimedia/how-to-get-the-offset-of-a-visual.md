@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561844"
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a>如何：获取 Visual 的偏移量
 这些示例演示如何检索相对于其父级，或任何祖先或后代的视觉对象的偏移量的值。  

@@ -1,28 +1,19 @@
 ---
-title: "分析接口"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
+title: 分析接口
+ms.date: 04/10/2018
 helpviewer_keywords:
 - unmanaged interfaces [.NET Framework], profiling
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-caps.latest.revision: "31"
-author: mairaw
-ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f8c2a5ce5e1231c55f598e48d14bec896a4b5f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462047"
 ---
 # <a name="profiling-interfaces"></a>分析接口
 本节描述允许对公共语言运行时 (CLR) 正在执行的程序进行分析的非托管接口。  
@@ -54,7 +45,13 @@ ms.lasthandoff: 12/22/2017
   
  [ICorProfilerCallback7 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
  提供公共语言运行时用于通知探查器已更新与内存中模块关联的符号流的回调方法。  
-  
+
+[ICorProfilerCallback8 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
+提供公共语言运行时用于通知探查器启动并完成动态方法的 JIT 编译的回调方法。
+
+[ICorProfilerCallback9 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
+提供用于通知探查器将动态方法是垃圾回收并随后卸载公共语言运行时的回调方法。
+
  [ICorProfilerFunctionControl 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
  提供允许代码探查器与 CLR 进行通信的方法，从而在重新编译特定方法时控制 JIT 探查器应生成代码的方式。  
   

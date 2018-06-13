@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806456"
 ---
 # <a name="wcf-service-publishing"></a>WCF 服务发布
 Windows Communication Foundation (WCF) 服务发布可帮助你从由 WCF 服务主机和 WCF 测试客户端提供到实际将部署到生产环境中以进行测试应用程序的早期开发环境的进展情况。 在提交最终部署计划之前，你可以使用 Windows Communication Foundation (WCF) 服务发布来验证您的 WCF 服务正常运行，以及已准备好发布。 你还可以选择将你的 WCF 服务库部署到用于测试的各种目标位置。  

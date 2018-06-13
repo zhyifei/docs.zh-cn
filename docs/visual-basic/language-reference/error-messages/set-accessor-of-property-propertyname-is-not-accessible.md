@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595847"
 ---
 # <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;设置&#39;的属性访问器&#39; &lt;propertyname&gt; &#39;不可访问
 语句试图存储属性的值，如果它不具有对该属性的访问`Set`过程。  

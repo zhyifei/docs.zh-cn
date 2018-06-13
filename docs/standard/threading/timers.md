@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584952"
 ---
 # <a name="timers"></a>计时器
 计时器是一种轻型对象，可便于指定要在指定时间调用的委托。 线程池中的线程执行等待操作。  

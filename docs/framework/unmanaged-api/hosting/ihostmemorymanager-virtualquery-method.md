@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 68a9d6ad7470ffaf1143a4a8e3134f20edb9e3c5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439213"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery 方法
 用作相应的 Win32 函数的逻辑包装。 Win32 实现`VirtualQuery`检索有关调用进程虚拟地址空间中的页面范围的信息。  
@@ -68,11 +69,11 @@ HRESULT VirtualQuery (
 >  操作系统的实现`VirtualQuery`不会产生死锁，并可以与在用户代码中挂起的随机线程运行到完成。 实现此方法的托管的版本时，请使用非常小心地。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

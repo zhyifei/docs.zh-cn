@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527542"
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>如何：获取和设置 Windows 窗体 DataGridView 控件中的当前单元格
 与交互<xref:System.Windows.Forms.DataGridView>通常需要你以编程方式发现哪个单元格当前处于活动状态。 你可能还需要更改当前单元格。 你可以执行这些任务与<xref:System.Windows.Forms.DataGridView.CurrentCell%2A>属性。  

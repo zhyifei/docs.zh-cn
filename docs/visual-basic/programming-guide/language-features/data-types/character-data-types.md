@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647383"
 ---
 # <a name="character-data-types-visual-basic"></a>字符数据类型 (Visual Basic)
 Visual Basic 提供*字符数据类型*来处理可打印和可显示的字符。 尽管它们都使用 Unicode 字符，处理`Char`包含单个字符，而`String`包含的字符数量不确定。  

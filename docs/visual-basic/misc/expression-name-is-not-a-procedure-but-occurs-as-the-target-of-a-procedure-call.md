@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637607"
 ---
 # <a name="expression-39ltnamegt39-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a>表达式&#39;&lt;名称&gt;&#39;不是一个过程，但作为过程调用的目标出现
 你已使过程调用成为了一个非过程的表达式。  

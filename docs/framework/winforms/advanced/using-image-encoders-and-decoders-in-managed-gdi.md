@@ -1,32 +1,21 @@
 ---
-title: "在托管 GDI+ 中使用图像编码器和解码器"
-ms.custom: 
+title: 在托管 GDI+ 中使用图像编码器和解码器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - image encoders [Windows Forms], using
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 084e8ff21e308cc20b633719dd31809b96b3c79a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2e51587209cb4df41ea1fd18ce5c2088ee07a2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524496"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>在托管 GDI+ 中使用图像编码器和解码器
 <xref:System.Drawing>命名空间提供<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>类用于存储和操作图像。 通过使用中的图像编码器[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，你可以将映像从内存写入到磁盘。 通过使用中的图像解码器[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，可以将映像从磁盘加载到内存。 编码器中的数据转换<xref:System.Drawing.Image>或<xref:System.Drawing.Bitmap>为指定的磁盘文件格式的对象。 解码器中的磁盘文件，以便所需的格式的数据转换<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>对象。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]具有内置编码器和解码器支持以下文件类型：  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 具有内置编码器和解码器支持以下文件类型：  
   
 -   BMP  
   
@@ -38,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 -   TIFF  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]此外具有内置的解码器支持以下文件类型：  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 此外具有内置的解码器支持以下文件类型：  
   
 -   WMF  
   

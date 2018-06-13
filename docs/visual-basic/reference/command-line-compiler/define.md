@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656095"
 ---
 # <a name="-define-visual-basic"></a>-定义 (Visual Basic)
 定义条件编译器常数。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
   
 |在 Visual Studio 集成开发环境中设置/定义|  
 |---|  
-|1.在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“编译”选项卡。<br />3.单击 **“高级”**。<br />4.修改中的值**自定义常量**框。|  
+|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“编译”选项卡。<br />3.单击 **“高级”**。<br />4.修改中的值**自定义常量**框。|  
   
 ## <a name="example"></a>示例  
  下面的代码定义并使用两个条件编译器常数。  

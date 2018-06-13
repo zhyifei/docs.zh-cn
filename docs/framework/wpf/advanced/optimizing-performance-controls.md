@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549258"
 ---
 # <a name="optimizing-performance-controls"></a>优化性能：控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包含大多数 Windows 应用程序中使用的许多常见用户界面 (UI) 组件。 本主题包含提高 UI 性能的技术。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
   
 <a name="Container"></a>   
 ## <a name="container-recycling"></a>容器回收  
- UI 虚拟化在.NET Framework 3.5 SP1 for 继承的控件中添加一种优化<xref:System.Windows.Controls.ItemsControl>是*容器回收、*这还可提高滚动的性能。  当<xref:System.Windows.Controls.ItemsControl>填充使用 UI 虚拟化，它会创建每个项，滚动到视图中销毁的滚动出视野每个项的项容器的项容器。 *容器回收*使控件能够重复使用不同的数据项，将现有项容器以便项容器不不断地创建和销毁当用户滚动<xref:System.Windows.Controls.ItemsControl>。 你可以选择启用项回收通过设置<xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A>附加到属性<xref:System.Windows.Controls.VirtualizationMode.Recycling>。  
+ UI 虚拟化在.NET Framework 3.5 SP1 for 继承的控件中添加一种优化<xref:System.Windows.Controls.ItemsControl>是*容器回收、* 这还可提高滚动的性能。  当<xref:System.Windows.Controls.ItemsControl>填充使用 UI 虚拟化，它会创建每个项，滚动到视图中销毁的滚动出视野每个项的项容器的项容器。 *容器回收*使控件能够重复使用不同的数据项，将现有项容器以便项容器不不断地创建和销毁当用户滚动<xref:System.Windows.Controls.ItemsControl>。 你可以选择启用项回收通过设置<xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A>附加到属性<xref:System.Windows.Controls.VirtualizationMode.Recycling>。  
   
  任何<xref:System.Windows.Controls.ItemsControl>虚拟化可以使用容器回收该支持。  有关如何启用容器回收上的示例<xref:System.Windows.Controls.ListBox>，请参阅[提高 ListBox 的滚动性能](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)。  
   

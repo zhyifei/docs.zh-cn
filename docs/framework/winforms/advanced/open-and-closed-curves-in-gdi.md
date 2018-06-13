@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527143"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>GDI+ 中的开放曲线和闭合曲线
 下图显示两条曲线： 一个打开和一条闭合。  

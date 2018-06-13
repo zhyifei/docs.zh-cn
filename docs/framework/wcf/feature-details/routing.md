@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494931"
 ---
 # <a name="routing"></a>路由
 本节中的主题涵盖路由服务。 路由服务是可配置的普通 SOAP 中介，使用该服务可以配置基于内容的路由、设置协议桥接、处理通信错误以及在运行时动态更新路由逻辑。  

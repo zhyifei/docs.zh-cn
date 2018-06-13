@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543766"
 ---
 # <a name="how-to-use-flowdocument-column-separating-attributes"></a>如何：使用 FlowDocument 列分隔特性
 此示例演示如何使用的列分隔功能<xref:System.Windows.Documents.FlowDocument>。  

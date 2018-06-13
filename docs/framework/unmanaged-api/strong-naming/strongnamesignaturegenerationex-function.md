@@ -1,14 +1,6 @@
 ---
-title: "StrongNameSignatureGenerationEx 函数"
-ms.custom: 
+title: StrongNameSignatureGenerationEx 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureGenerationEx
 api_location:
@@ -22,17 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9a75469e-aa49-4e32-ad48-3bafd5202f09
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4f68befd145649e6d8921e160d302cdb81000a9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8ac2dd50b26137ee4cf06f0545f1f8cf1bfabf80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461638"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx 函数
 为指定的程序集中，根据指定的标志生成的强名称签名。  
@@ -81,12 +70,12 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in]一个或多个以下值：  
   
--   `SN_SIGN_ALL_FILES`(0x00000001)-重新计算所有链接的模块的哈希值。  
+-   `SN_SIGN_ALL_FILES` (0x00000001)-重新计算所有链接的模块的哈希值。  
   
--   `SN_TEST_SIGN`(0x00000002) — 程序集进行测试签名。  
+-   `SN_TEST_SIGN` (0x00000002) — 程序集进行测试签名。  
   
 ## <a name="return-value"></a>返回值  
- `true`在成功完成;否则为`false`。  
+ `true` 在成功完成;否则为`false`。  
   
 ## <a name="remarks"></a>备注  
  指定为空`wszFilePath`来计算而无需创建签名的签名的大小。  
@@ -99,14 +88,14 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
  如果`StrongNameSignatureGenerationEx`函数未成功完成，请调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数可检索的最后一个生成的错误。  
   
-## <a name="requirements"></a>惠?  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** StrongName.h  
   
- **库：**作为 MsCorEE.dll 中的资源  
+ **库：** 作为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [StrongNameSignatureGenerationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)  

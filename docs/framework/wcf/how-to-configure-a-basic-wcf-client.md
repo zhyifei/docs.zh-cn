@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499270"
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>如何：配置基本 Windows Communication Foundation 客户端
 这是创建基本的 Windows Communication Foundation (WCF) 应用程序所需的六项任务的第五个。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  

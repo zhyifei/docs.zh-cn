@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e945930a9a668d0a1c1e4c26bf3add9cc574c261
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461423"
 ---
 # <a name="next-function"></a>下一步函数
 检索到的调用开始枚举中的下一步属性[BeginEnumeration](beginenumeration.md)。  
@@ -95,7 +96,7 @@ HRESULT Next (
 | `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 类： 属性所属的派生类。 </br> 实例： 实例; 修改的属性也就是说，已提供的值，或限定符已添加或修改。 |
 
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

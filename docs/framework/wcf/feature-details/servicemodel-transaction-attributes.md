@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500826"
 ---
 # <a name="servicemodel-transaction-attributes"></a>ServiceModel 事务属性
 Windows Communication Foundation (WCF) 上提供以下三个标准<xref:System.ServiceModel>使你能够配置 WCF 服务的事务的行为的属性：  

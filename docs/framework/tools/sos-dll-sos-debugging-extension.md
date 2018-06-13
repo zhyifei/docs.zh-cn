@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409901"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll（SOS 调试扩展）
 SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) 环境的信息，帮助你在 Visual Studio 和 Windows 调试器 (WinDbg.exe) 中调试托管程序。 此工具需要你启用项目的非托管调试。 SOS.dll 自动随 .NET Framework 一起安装。 若要在 Visual Studio 中使用 SOS.dll，请安装 [Windows 驱动程序工具包 (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。  

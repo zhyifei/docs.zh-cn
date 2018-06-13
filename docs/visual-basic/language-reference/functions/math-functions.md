@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604531"
 ---
 # <a name="math-functions-visual-basic"></a>数学函数 (Visual Basic)
 方法<xref:System.Math?displayProperty=nameWithType>类提供三角函数、 对数函数和其他通用数学函数。  

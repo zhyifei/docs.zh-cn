@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544617"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>如何：使用网格进行自动布局
 本示例介绍如何通过自动布局方法使用网格来创建可本地化的应用程序。  

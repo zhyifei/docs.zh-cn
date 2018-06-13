@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582732"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>如何：编写具有线程局部变量的 Parallel.ForEach 循环
 下面的示例演示如何编写使用线程本地变量的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 方法。 当 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环执行时，它会将其源集合划分为多个分区。 每个分区都将获得自己的“线程本地”变量的副本。 （术语“线程本地”在此处不太准确，因为在某些情况下两个分区可能在同一线程上运行。）  

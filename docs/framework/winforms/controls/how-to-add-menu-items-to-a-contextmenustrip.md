@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524620"
 ---
 # <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>如何：向 ContextMenuStrip 添加菜单项
 可以将一个菜单项或多个项添加到的一次<xref:System.Windows.Forms.ContextMenuStrip>。  

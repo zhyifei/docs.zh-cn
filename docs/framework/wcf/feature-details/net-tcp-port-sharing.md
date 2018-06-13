@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497147"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 端口共享
 Windows Communication Foundation (WCF) 提供高性能通信的一个新的基于 TCP 的网络协议 (net.tcp://)。 WCF 还引入了新的系统组件使得 net.tcp 端口可以在多个用户进程之间共享 Net.TCP 端口共享服务。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526004"
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>如何：使用 Windows 窗体 DateTimePicker 控件以自定义格式显示日期
 Windows 窗体<xref:System.Windows.Forms.DateTimePicker>控件使您可以灵活地设置日期和时间控件中的显示格式。 <xref:System.Windows.Forms.DateTimePicker.Format%2A>属性允许你选择从预定义的格式，列入<xref:System.Windows.Forms.DateTimePickerFormat>。 如果这些都足以满足你的用途，则可以创建使用格式字符中列出你自己的格式样式<xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>。  

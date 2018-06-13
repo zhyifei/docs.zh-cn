@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560772"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>如何：使用视频绘制区域
 此示例演示如何使用媒体绘制区域。 绘制带有媒体的区域的一种方法是使用<xref:System.Windows.Controls.MediaElement>连同<xref:System.Windows.Media.VisualBrush>。 使用<xref:System.Windows.Controls.MediaElement>加载和播放媒体，并使用它来设置<xref:System.Windows.Media.VisualBrush.Visual%2A>属性<xref:System.Windows.Media.VisualBrush>。 然后，可以使用<xref:System.Windows.Media.VisualBrush>来绘制带有加载媒体的区域。  

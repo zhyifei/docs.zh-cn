@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586619"
 ---
 # <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a>默认属性&#39; &lt;propertyname1&gt; &#39;与默认属性冲突&#39; &lt;propertyname2&gt; &#39;中&#39; &lt;classname&gt; &#39;，因此应声明为&#39;阴影&#39;
 使用与基类中定义的属性相同的名称声明属性。 在此情况下，此类中的属性应隐藏基类属性。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560525"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>如何：向对象应用多个变换
 此示例演示如何使用<xref:System.Windows.Media.TransformGroup>到两个或多个组<xref:System.Windows.Media.Transform>对象合并为一个合成<xref:System.Windows.Media.Transform>。  

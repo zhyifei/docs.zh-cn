@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541815"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件
 某些应用程序需要这样一个窗体，该窗体的布局可在窗体重新调整大小或在内容更改大小时对自身进行排列。 当你需要动态布局并且不希望在代码中显式处理 <xref:System.Windows.Forms.Control.Layout> 事件时，请考虑使用布局面板。  
@@ -124,7 +125,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  在“工具箱” <xref:System.Windows.Forms.Button>**中，双击**控件图标。 请注意，在将出现一个新的按钮控件<xref:System.Windows.Forms.TableLayoutPanel>控件的第一个单元格。  
   
-3.  在 **“工具箱”**中再双击几个控件。 请注意，新控件会相继出现在<xref:System.Windows.Forms.TableLayoutPanel>控件的未占用的单元格。 另请注意，<xref:System.Windows.Forms.TableLayoutPanel>控件扩展以容纳新控件，如果没有打开的单元格可用。  
+3.  在 **“工具箱”** 中再双击几个控件。 请注意，新控件会相继出现在<xref:System.Windows.Forms.TableLayoutPanel>控件的未占用的单元格。 另请注意，<xref:System.Windows.Forms.TableLayoutPanel>控件扩展以容纳新控件，如果没有打开的单元格可用。  
   
 ## <a name="automatic-handling-of-overflows"></a>自动处理溢出  
  当插入控件添加到<xref:System.Windows.Forms.TableLayoutPanel>控件，可能会耗尽空单元格为新控件。 <xref:System.Windows.Forms.TableLayoutPanel>控件处理这种情况下自动通过增加单元格的数目。  

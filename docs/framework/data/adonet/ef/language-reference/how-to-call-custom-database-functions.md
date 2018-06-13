@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762840"
 ---
 # <a name="how-to-call-custom-database-functions"></a>如何：调用自定义数据库函数
 本主题介绍如何从 LINQ to Entities 查询中调用在数据库中定义的自定义函数。  

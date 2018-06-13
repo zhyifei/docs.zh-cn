@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393089"
 ---
 # <a name="ltgenericparametergt-element-net-native"></a>&lt;泛型参数&gt;元素 (.NET Native)
 将策略应用到一个泛型类型或方法的参数类型。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656147"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic 中的逻辑运算符和位运算符
 逻辑运算符比较`Boolean`表达式，并返回`Boolean`结果。 `And`， `Or`， `AndAlso`， `OrElse`，和`Xor`运算符是*二进制*由于它们采用两个操作数，而`Not`运算符是*一元*因为它采用一个操作数。 某些这些运算符还可以执行对整数值的按位逻辑运算。  

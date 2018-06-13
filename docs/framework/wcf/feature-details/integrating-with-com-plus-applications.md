@@ -1,13 +1,6 @@
 ---
-title: "与 COM+ 应用程序集成"
-ms.custom: 
+title: 与 COM+ 应用程序集成
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF, reusing code
 - Windows Communication Foundation, reusing code
@@ -16,29 +9,25 @@ helpviewer_keywords:
 - COM+ [WCF]
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1a29b28608c9ca16dd5a2023bd3d9e135618d753
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d321d1585b04a8a22ecc138ceef11630229b1054
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490492"
 ---
 # <a name="integrating-with-com-applications"></a>与 COM+ 应用程序集成
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了用于创建分布式应用程序的丰富环境。 如果您对 COM+ 中承载的基于组件的应用程序逻辑有大量的投入，则可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 来扩展现有的逻辑，而不必重新编写逻辑。 本节中的主题描述如何将 COM+ 与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 一起使用。  
+Windows Communication Foundation (WCF) 提供用于创建分布式应用程序的丰富环境。 如果 COM + 中承载的基于组件的应用程序逻辑有大量的投资，你可以使用 WCF 来扩展你现有的逻辑，而不是无需重写它。 本部分中的主题介绍如何在 wcf 中使用 COM +。  
   
 ## <a name="in-this-section"></a>本节内容  
  [与 COM+ 应用程序集成的概述](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
  概述何时以及如何集成 COM+ 组件。  
   
  [如何：使用 COM+ 服务模型配置工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
- 介绍如何使用 COM+ 服务模块配置命令行工具 (ComSvcConfig.exe) 来配置需要公开为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的应用程序接口。  
+ 说明如何使用 COM + 服务模型配置命令行工具 (ComSvcConfig.exe) 来配置你想作为 WCF 服务公开的应用程序接口。  
   
  [如何：配置 COM+ 服务设置](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
- 介绍如何将 COM+ 对象配置为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+ 说明如何将 COM + 对象配置为 WCF 服务。  
   
  [如何：部署 COM+ 集成应用程序](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
  介绍如何移动 COM+ 集成应用程序。  

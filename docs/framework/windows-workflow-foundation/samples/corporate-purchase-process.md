@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520037"
 ---
 # <a name="corporate-purchase-process"></a>企业采购过程
 此示例演示如何使用自动最佳建议书选择来创建基于购买过程的非常基本的征求建议书 (RFP)。 它将 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、<xref:System.Activities.Statements.ForEach%601> 和一个自定义活动组合在一起来创建一个表示该过程的工作流。  
@@ -126,7 +127,7 @@ ms.lasthandoff: 05/04/2018
 |窗体|描述|  
 |-|-|  
 |NewRfp|创建和提交新的征求建议书。|  
-|ShowProposals|显示所有活动的和已完成的征求建议书。 **注意：**可能需要单击**刷新**UI 以查看屏幕中的更改后创建或修改征求建议书中的按钮。|  
+|ShowProposals|显示所有活动的和已完成的征求建议书。 **注意：** 可能需要单击**刷新**UI 以查看屏幕中的更改后创建或修改征求建议书中的按钮。|  
 |SubmitProposal|从具体的征求建议书中获取来自供应商的建议。 此窗口仅由供应商使用。|  
 |ViewRfp|显示有关征求建议书的所有信息（收到的建议书、日期、值和其他信息）。 此窗口仅供征求建议书的创建者使用。|  
   

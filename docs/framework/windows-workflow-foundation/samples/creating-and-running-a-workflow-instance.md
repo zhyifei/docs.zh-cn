@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513681"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>创建和运行工作流实例
 此示例演示如何运行工作流实例。 它演示如何以同步方式和异步方式执行这一操作。  

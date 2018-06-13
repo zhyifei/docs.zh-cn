@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335947"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>查找默认段落样式 (C#)
 在 WordprocessingML 文档中操作信息教程中的第一项任务是在文档中查找默认段落样式。  

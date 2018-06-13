@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493177"
 ---
 # <a name="context-exchange-protocol"></a>上下文交换协议
 本部分介绍 Windows Communication Foundation (WCF) 版本.NET Framework 版本 3.5 中引入的上下文交换协议。 此协议允许客户端通道接受某个服务提供的上下文，并将其应用于通过相同客户端通道实例发送的针对该服务的所有后续请求。 上下文交换协议的实现可以使用以下两个机制之一在服务器和客户端之间传播上下文：HTTP Cookie 或 SOAP 标头。  

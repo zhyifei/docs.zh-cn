@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286024"
 ---
 # <a name="-operator-c-reference"></a>[] 运算符（C# 参考）
 方括号 (`[]`) 可用于数组、索引器和属性。 还可用于指针。  

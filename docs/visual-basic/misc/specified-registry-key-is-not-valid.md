@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639443"
 ---
 # <a name="specified-registry-key-is-not-valid-because-it-contains-two-or-more-consecutive-backslashes"></a>指定的注册表项无效，因为它包含两个或更多连续反斜杠
 使用一个路径指定的注册表项包含两个或更多连续反斜杠。 这可能是由于将多个字符串组合成路径并意外包含了过多反斜杠。  

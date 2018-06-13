@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569944"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>使用 XmlSchemaCollection 进行 XDR 验证
 如果验证所依据的 XML 数据缩减 (XDR) 架构存储在 XmlSchemaCollection 中，此架构与添加到集合时指定的命名空间 URI 相关联。 XmlValidatingReader 将 XML 文档中的命名空间 URI 映射到集合中与此 URI 对应的架构。  

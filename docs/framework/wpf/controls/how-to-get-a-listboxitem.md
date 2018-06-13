@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552722"
 ---
 # <a name="how-to-get-a-listboxitem"></a>如何：获取 ListBoxItem
 如果您需要先获取特定<xref:System.Windows.Controls.ListBoxItem>中的特定索引处<xref:System.Windows.Controls.ListBox>，你可以使用<xref:System.Windows.Controls.ItemContainerGenerator>。  

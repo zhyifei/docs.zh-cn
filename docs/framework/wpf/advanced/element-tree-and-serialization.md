@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542856"
 ---
 # <a name="element-tree-and-serialization"></a>元素树和序列化
 WPF 编程元素彼此之间通常以某种形式的树关系存在。 例如，XAML 中创建的应用程序 UI 可概念化为一个对象树。 可进一步将元素树分为两个离散但有时会并行的树：逻辑树和可视化树。 WPF 中的序列化涉及保存这两个树和应用程序的状态并将状态写入文件（可能以 XAML 形式）。  

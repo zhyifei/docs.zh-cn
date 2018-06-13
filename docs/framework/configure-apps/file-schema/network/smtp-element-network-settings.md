@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741888"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;smtp&gt;元素 （网络设置）
 配置传递格式、 传递方法和发件人发送电子邮件地址。  

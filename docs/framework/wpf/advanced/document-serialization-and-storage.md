@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546671"
 ---
 # <a name="document-serialization-and-storage"></a>文档序列化和存储
 Microsoft.NET Framework 提供了一个功能强大的环境，用于创建和显示高质量的文档。  支持固定文档和流文档以及高级的增强的功能查看控件，结合强大的二维和三维图形功能到新级别的质量和用户体验的.NET Framework 应用程序。  能够灵活地管理内存中文档的表示形式是.NET Framework 的一个主要功能和能够高效保存和加载数据存储区中的文档是几乎每个应用程序的需要。  将文档从内部的内存中表示形式转换为外部数据存储的过程称为序列化。  反之，读取数据存储并重新创建原始内存中实例的过程则称为反序列化。  

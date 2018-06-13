@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509029"
 ---
 # <a name="wcf-discovery-object-model"></a>WCF Discovery 对象模型
 WCF Discovery 由一组类型组成，通过这些类型提供的统一编程模型，您可以编写在运行时可发现的服务以及查找并使用这些服务的客户端。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363388"
 ---
 # <a name="polling-in-console-applications"></a>在控制台应用程序中轮询
 ADO.NET 中的异步操作使你可以在一个线程上启动需要很长时间的数据库操作，同时在另一个线程上执行其他任务。 但是，在大多数方案中，最终将到达一个临界点，此时，应用程序在数据库操作完成后才应继续。 在这种情况下，可以轮询异步操作，确定操作是否已完成。  

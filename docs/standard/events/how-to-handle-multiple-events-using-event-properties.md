@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572861"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>如何：使用事件属性处理多个事件
 若要使用事件属性，请在引发事件的类中定义事件属性，然后在处理事件的类中设置事件属性的委托。 若要在类中实现多个事件属性，此类必须在内部存储和维护为每个事件定义的委托。 典型的方法是实现通过事件键索引的委托集合。  

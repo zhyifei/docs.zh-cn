@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561457"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>如何：在演示图板启动后对其进行控制
 此示例演示如何使用代码添加到控件<xref:System.Windows.Media.Animation.Storyboard>它启动后。 若要控制在情节提要[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用<xref:System.Windows.Trigger>和<xref:System.Windows.TriggerAction>对象; 例如，请参阅[使用事件触发器，以控制 a 情节提要后它将开始](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
   
  在下面的示例中，几种情节提要方法用于以交互方式控制情节提要。  
   
- **注意：**若要查看的控制使用具有触发器情节提要示例[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，请参阅[使用事件触发器，以控制 a 情节提要后它将开始](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)。  
+ **注意：** 若要查看的控制使用具有触发器情节提要示例[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，请参阅[使用事件触发器，以控制 a 情节提要后它将开始](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]

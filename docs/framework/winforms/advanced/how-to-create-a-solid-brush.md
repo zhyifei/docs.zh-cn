@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520742"
 ---
 # <a name="how-to-create-a-solid-brush"></a>如何：创建实心画笔
 此示例将创建<xref:System.Drawing.SolidBrush>对象，可以由用于<xref:System.Drawing.Graphics>用于填充形状的对象。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803762"
 ---
 # <a name="monitoring-service-operation-failures"></a>对服务操作失败进行监视
 如果为应用程序启用了分析跟踪，则可以在事件查看器中轻松地监视服务失败。  本主题演示如何确定服务操作失败的时间，以及如何确定失败的原因。  

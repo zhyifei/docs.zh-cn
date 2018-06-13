@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568012"
 ---
 # <a name="copying-document-fragments"></a>复制文档片段
 可以先创建 XmlDocumentFragment 节点，再在它下面添加节点。 如果使用 InsertNode 方法插入 XmlDocumentFragment，不会复制 XmlDocumentFragment 节点，但会在 XML 文档对象模型 (DOM) 中插入它的子节点。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764133"
 ---
 # <a name="entity-set"></a>实体集
 *实体集*是的逻辑容器的实例[实体类型](../../../../docs/framework/data/adonet/entity-type.md)和从该实体类型派生的任何类型的实例。 (有关派生类型的信息，请参阅[实体数据模型： 继承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)。)实体类型与实体集之间的关系类似于关系数据库中行与表之间的关系：与行类似，实体类型描述了数据结构，而与表类似，实体集包含了给定结构的实例。 实体集不是一种数据建模构造，它没有描述数据结构。 相反，实体集提供了一种承载或存储环境构造（例如公共语言运行库或 SQL Server 数据库）来分组实体类型实例，以便可以将它们映射到某个数据存储区。  

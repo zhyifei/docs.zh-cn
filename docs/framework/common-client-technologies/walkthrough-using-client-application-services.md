@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745365"
 ---
 # <a name="walkthrough-using-client-application-services"></a>演练：使用客户端应用程序服务
 本主题介绍如何创建使用客户端应用程序服务对用户进行身份验证并检索用户角色和设置的 Windows 应用程序。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  在 **“服务”** 选项卡上，选择 **“启用客户端应用程序服务”**。  
   
-7.  确保选择 **“使用 Forms 身份验证”** ，然后将 **“身份验证服务位置”**、 **“角色服务位置”**和 **“Web 设置服务位置”** 设置为 `http://localhost:55555/AppServices`。  
+7.  确保选择 **“使用 Forms 身份验证”** ，然后将 **“身份验证服务位置”**、 **“角色服务位置”** 和 **“Web 设置服务位置”** 设置为 `http://localhost:55555/AppServices`。  
   
 8.  对于 Visual Basic，在“应用程序”选项卡上，将“身份验证模式”设置为“由应用程序定义”。  
   
@@ -85,9 +86,9 @@ ms.lasthandoff: 05/03/2018
      一个新 ASP.NET Web 服务应用程序项目随即添加到解决方案中，并且 Service1.asmx.vb 或 Service1.asmx.cs 文件会出现在编辑器中。  
   
     > [!NOTE]
-    >  此示例中不使用 Service1.asmx.vb 或 Service1.asmx.cs 文件。 如果要使工作环境整洁，可以关闭它，并从 **“解决方案资源管理器”**中删除。  
+    >  此示例中不使用 Service1.asmx.vb 或 Service1.asmx.cs 文件。 如果要使工作环境整洁，可以关闭它，并从 **“解决方案资源管理器”** 中删除。  
   
-5.  在 **“解决方案资源管理器”**中，选择 AppServices 项目，然后在 **“项目”** 菜单上，选择 **“AppServices 属性”**。  
+5.  在 **“解决方案资源管理器”** 中，选择 AppServices 项目，然后在 **“项目”** 菜单上，选择 **“AppServices 属性”**。  
   
      项目设计器随即出现。  
   
@@ -97,7 +98,7 @@ ms.lasthandoff: 05/03/2018
   
 8.  保存所有文件。  
   
-9. 在 **“解决方案资源管理器”**中，打开 Web.config 并找到 `<system.web>` 开始标记。  
+9. 在 **“解决方案资源管理器”** 中，打开 Web.config 并找到 `<system.web>` 开始标记。  
   
 10. 在 `<system.web>` 标记之前添加以下代码：  
   
@@ -138,7 +139,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-configure-membership-and-roles"></a>配置成员资格和角色  
   
-1.  在 **“解决方案资源管理器”**中，选择 AppServices 项目，然后在 **“项目”** 菜单上，选择 **“ASP.NET 配置”**。  
+1.  在 **“解决方案资源管理器”** 中，选择 AppServices 项目，然后在 **“项目”** 菜单上，选择 **“ASP.NET 配置”**。  
   
      **“ASP.NET 网站管理工具”** 随即出现。  
   
@@ -221,7 +222,7 @@ ms.lasthandoff: 05/03/2018
   
 19. 对 **“manager”** 用户单击 **“编辑角色”** ，然后选择 **“manager”** 角色。  
   
-20. 关闭承载 **“网站管理工具”**的浏览器窗口。  
+20. 关闭承载 **“网站管理工具”** 的浏览器窗口。  
   
 21. 如果一个消息框出现，询问是否要重载修改后的 Web.config 文件，请单击 **“是”**。  
   
@@ -243,7 +244,7 @@ ms.lasthandoff: 05/03/2018
      [!code-csharp[ClientApplicationServices#001](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#001)]
      [!code-vb[ClientApplicationServices#001](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#001)]  
   
-4.  在 **“解决方案资源管理器”**中，双击 Form1 以显示设计器。  
+4.  在 **“解决方案资源管理器”** 中，双击 Form1 以显示设计器。  
   
 5.  在设计器中，双击窗体图面，以生成名为 <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType> 的 `Form1_Load`事件处理程序。  
   
@@ -272,7 +273,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-configure-your-application-to-use-a-credentials-provider"></a>将应用程序配置为使用凭据提供程序  
   
-1.  在 **“解决方案资源管理器”**中，选择 ClientAppServicesDemo 项目，然后在 **“项目”** 菜单上，选择 **“ClientAppServicesDemo 属性”**。  
+1.  在 **“解决方案资源管理器”** 中，选择 ClientAppServicesDemo 项目，然后在 **“项目”** 菜单上，选择 **“ClientAppServicesDemo 属性”**。  
   
      项目设计器随即出现。  
   
@@ -305,7 +306,7 @@ ms.lasthandoff: 05/03/2018
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>在 Visual Basic 中创建一个登录对话框作为凭据提供程序  
   
-1.  在 **“解决方案资源管理器”**中，选择 ClientAppServicesDemo 项目，然后在 **“项目”** 菜单上，选择 **“添加新项”**。  
+1.  在 **“解决方案资源管理器”** 中，选择 ClientAppServicesDemo 项目，然后在 **“项目”** 菜单上，选择 **“添加新项”**。  
   
 2.  在 **“添加新项”** 对话框中，选择 **“登录窗体”** 模板，将项 **“名称”** 更改为 `Login.vb`，然后单击 **“添加”**。  
   
@@ -337,7 +338,7 @@ ms.lasthandoff: 05/03/2018
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-c"></a>在 C# 中创建一个登录对话框作为凭据提供程序  
   
-1.  在 **“解决方案资源管理器”**中，选择 ClientAppServicesDemo 项目，然后在 **“项目”** 菜单上，选择 **“添加类”**。  
+1.  在 **“解决方案资源管理器”** 中，选择 ClientAppServicesDemo 项目，然后在 **“项目”** 菜单上，选择 **“添加类”**。  
   
 2.  在 **“添加新项”** 对话框中，将 **“名称”** 更改为 `Login.cs`，然后单击 **“添加”**。  
   
@@ -399,7 +400,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  通过检查任务栏的通知区域来确保 **“ASP.NET Web Development Server”** 仍在运行。 如果已停止了该服务器，请重新启动应用程序（这会自动启动服务器），然后关闭登录对话框。  
   
-2.  在 **“解决方案资源管理器”**中，选择 ClientAppServicesDemo 项目，然后在 **“项目”** 菜单上，选择 **“ClientAppServicesDemo 属性”**。  
+2.  在 **“解决方案资源管理器”** 中，选择 ClientAppServicesDemo 项目，然后在 **“项目”** 菜单上，选择 **“ClientAppServicesDemo 属性”**。  
   
      项目设计器随即出现。  
   

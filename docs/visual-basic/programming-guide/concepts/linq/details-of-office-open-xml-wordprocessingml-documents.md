@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641191"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>详细信息的 Office Open XML WordprocessingML 文档 (Visual Basic)
 本节提供有关 Office Open XML WordprocessingML 文档详情的信息。 它演示 Open XML 文档的文档和样式部分的示例。  

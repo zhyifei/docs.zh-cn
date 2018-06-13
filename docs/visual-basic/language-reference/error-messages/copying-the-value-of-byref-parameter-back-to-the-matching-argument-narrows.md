@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591802"
 ---
 # <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>值复制&#39;ByRef&#39;参数&#39; &lt;parametername&gt; &#39;回匹配的自变量类型从收缩&#39; &lt;typename1&gt; &#39;为类型&#39; &lt;typename2&gt;&#39;
 调用过程时使用的自变量扩大到相应的参数类型，并从参数到自变量转换为收缩转换。  

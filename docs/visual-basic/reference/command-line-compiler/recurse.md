@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652417"
 ---
 # <a name="-recurse"></a>-recurse
 编译源代码文件的指定的目录或项目目录的所有子目录中。  

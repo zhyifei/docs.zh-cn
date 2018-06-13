@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561022"
 ---
 # <a name="how-to-apply-a-transform-to-a-bitmapimage"></a>如何：向 BitmapImage 应用变换
 此示例演示如何将应用<xref:System.Windows.Media.Transform>到<xref:System.Windows.Media.Imaging.BitmapImage>。  

@@ -1,14 +1,6 @@
 ---
-title: "CorDeclSecurity 枚举"
-ms.custom: 
+title: CorDeclSecurity 枚举
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorDeclSecurity
 api_location:
@@ -22,17 +14,14 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 30fd7ca2cf7962c6cadb43d4d8e3031b59292463
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7512795e678f66c97185a499e602e99f51188117
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443019"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity 枚举
 指定可以使用声明性安全执行的安全操作。  
@@ -93,12 +82,12 @@ typedef enum CorDeclSecurity {
 |`dclDemandChoice`|保留。|  
 |`dclMaximumValue`|保留。|  
   
-## <a name="requirements"></a>惠?  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321647"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>如何：修改 Office Open XML 文档 (C#)
 本主题显演示一个打开、修改和保存 Office Open XML 文档的示例。  

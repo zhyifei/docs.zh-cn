@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550873"
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>如何：自定义滑块上的刻度
 此示例演示如何创建<xref:System.Windows.Controls.Slider>具有刻度线控件。  

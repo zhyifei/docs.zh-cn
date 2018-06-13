@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651474"
 ---
 # <a name="declared-element-names-visual-basic"></a>已声明的元素名称 (Visual Basic)
 每个声明的元素有一个名称，也称为*标识符*，即来引用它的代码使用。  

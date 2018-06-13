@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501090"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 和策略
 本主题介绍 Windows Communication Foundation (WCF) WSDL 1.1、 Ws-policy 和 Ws-policyattachment 实现详细信息，以及其他 Ws-policy 断言和 WSDL 1.1 扩展引入的 WCF。  

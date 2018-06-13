@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633298"
 ---
 # <a name="visual-basic-compiler-messages"></a>Visual Basic 编译器消息
 本部分包含 Visual Basic 错误消息出现的编译时间。

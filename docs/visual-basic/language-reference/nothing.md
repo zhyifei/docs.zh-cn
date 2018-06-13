@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603985"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 表示任何数据类型的默认的值。 对于引用类型，默认值是`null`引用。 对于值类型，默认值取决于是否可以为 null 的值类型。  

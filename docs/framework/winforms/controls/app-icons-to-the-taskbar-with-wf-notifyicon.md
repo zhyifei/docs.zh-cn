@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525408"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>如何：使用 Windows 窗体 NotifyIcon 组件向任务栏添加应用程序图标
 Windows 窗体<xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态通知区域中显示的一个图标。 若要在状态区域中显示多个图标，你必须有多个<xref:System.Windows.Forms.NotifyIcon>窗体上的组件。 若要设置控件显示的图标，使用<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 也可以编写代码<xref:System.Windows.Forms.NotifyIcon.DoubleClick>事件处理程序，使该出现当用户双击的图标。 例如，你可以制作来配置由图标表示的后台进程的用户显示一个对话框。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388903"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>在 .NET Framework 4.5 安装期间减少系统重新启动
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序使用[重启管理器](http://go.microsoft.com/fwlink/?LinkId=231425)来防止安装期间可能出现的系统重启。 如果应用安装程序安装了 .NET Framework，则此程序可通过使用重启管理器来利用此功能。 有关详细信息，请参阅[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  

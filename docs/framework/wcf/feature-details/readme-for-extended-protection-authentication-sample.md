@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495075"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>扩展保护身份验证示例自述文件
 扩展的保护是一种安全计划以防止拦截中 (MITM) 攻击，攻击者 （"--拦截"） 会截获客户端的凭据，并使用它们来访问客户端的目标服务器上的安全资源。  

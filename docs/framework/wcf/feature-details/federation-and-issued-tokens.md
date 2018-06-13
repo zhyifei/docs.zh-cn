@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491570"
 ---
 # <a name="federation-and-issued-tokens"></a>联合令牌与颁发的令牌
 使用 Windows Communication Foundation (WCF) 中，你可以创建与实现 WS-联合身份验证和 Ws-trust 规范的服务进行安全通信的客户端。 这些规范使用 XML、SOAP 和 Web 服务描述语言 (WSDL) 来提供用来跨不同的信任领域进行身份验证和授权的机制。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457470"
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>如何：安全地将 bool? 强制转换为 bool（C# 编程指南）
 可以为 null 的类型 `bool?` 可包含三个不同的值：`true`、`false` 和 `null`。 因此，`bool?` 类型不能用于条件语句，例如与 `if`、`for` 或 `while` 等一起使用。 例如，下面的代码会导致编译器错误。  

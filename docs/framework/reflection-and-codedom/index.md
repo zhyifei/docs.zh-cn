@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398815"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>.NET Framework 中的动态编程
 本节文档提供有关在 .NET Framework 中动态编程的信息。  

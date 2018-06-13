@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507521"
 ---
 # <a name="transacted-msmq-binding"></a>已经过事务处理的 MSMQ 绑定
 本示例演示如何使用消息队列 (MSMQ) 执行已经过事务处理的排队通信。  

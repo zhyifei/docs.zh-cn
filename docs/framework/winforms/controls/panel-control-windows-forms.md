@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536717"
 ---
 # <a name="panel-control-windows-forms"></a>Panel 控件（Windows 窗体）
 Windows 窗体`Panel`控件用于提供其他控件可识别分组。 通常，你可以使用面板函数细分窗体。 `Panel`控件是类似于<xref:System.Windows.Forms.GroupBox>控制; 但是，仅`Panel`控件可以具有滚动条仅和<xref:System.Windows.Forms.GroupBox>控件显示的标题。  

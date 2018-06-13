@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514136"
 ---
 # <a name="correlated-calculator"></a>相关计算器
 此示例演示如何基于消息中的参数，将设计器中的消息传递活动（<xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply>）与基于内容的相关性一起使用。 在此方案中，计算器的操作在一个并行的队列中。 在将第一条消息发送到工作流时，将创建一个实例和一个相关性（基于 `CalculatorId`），后续的具有相同 `CalculatorId` 的消息将被调度到该实例，直到调用 Reset 操作。 客户端作为一个 WPF 应用程序实现，它使用基于代码的客户端代理与服务通信。  

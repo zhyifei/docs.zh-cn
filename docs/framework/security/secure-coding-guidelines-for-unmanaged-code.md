@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408136"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>托管代码的安全编码指南
 有些库代码需要调入非托管代码（如本机代码 API（如 Win32））。 因为这意味着超出托管代码的安全外围，所以需要适当小心。 如果你的代码在安全性方面是非特定的，你的代码和调用它的任何代码都必须具有非托管代码权限（指定了<xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ）。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548346"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>演练：创建您的第一个触控应用程序
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 允许应用程序响应触摸屏。 例如，你可以通过使用一个与应用程序交互或多个手指触摸式设备，如本演练中创建的应用程序使用户能够移动，请触摸屏上调整大小，或通过使用触摸旋转单个对象。  

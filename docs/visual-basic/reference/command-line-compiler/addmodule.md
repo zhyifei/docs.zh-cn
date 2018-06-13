@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656001"
 ---
 # <a name="-addmodule"></a>-addmodule
 使编译器让指定文件中的所有类型信息可供当前正在编译的项目使用。  

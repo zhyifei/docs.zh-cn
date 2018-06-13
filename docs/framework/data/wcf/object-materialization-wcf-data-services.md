@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365457"
 ---
 # <a name="object-materialization-wcf-data-services"></a>对象具体化（WCF 数据服务）
 当你使用**添加服务引用**对话框来使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]在基于.NET Framework 的客户端应用程序中的源，等效的数据类生成每个实体类型中公开源的数据模型。 有关详细信息，请参阅[生成数据服务客户端库](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。 查询返回的实体数据将具体化为所生成的客户端数据服务类之一的实例。 合并选项和标识解析的被跟踪的对象有关的信息，请参阅[管理数据服务上下文](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。  

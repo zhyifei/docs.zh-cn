@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2735355097a1f3f581b3a4bc74f08d8f2ebf3bd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430375"
 ---
 # <a name="idefinitionappid-interface"></a>IDefinitionAppId 接口
 表示在当前范围内定义应用程序的代码的唯一标识符。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
 |`IDefinitionAppId::put_SubscriptionId`|设置与此订阅的令牌标识符`IDefinitionAppId`到指定的字符串值的对象。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461976"
 ---
 # <a name="getnames-function"></a>GetNames 函数
 检索的子集或所有对象的属性的名称。 
@@ -104,7 +105,7 @@ HRESULT GetNames (
 函数始终分配一个新`SAFEARRAY`如果它返回`WBEM_S_NO_ERROR`，和`pstrNames`始终设置为指向它。 如果没有属性与指定筛选器匹配，则返回的数组可以有 0 个元素。 如果该函数返回值以外`WBM_S_NO_ERROR`，新`SAFEARRAY`结构，则不返回。
  
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

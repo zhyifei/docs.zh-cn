@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638416"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a>注册表项&#39; &lt;keyname&gt; &#39;无法创建
 无法创建指定的注册表项，可能是因为没有足够的安全权限。  

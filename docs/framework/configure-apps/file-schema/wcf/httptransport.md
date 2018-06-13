@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362868"
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 为自定义绑定指定用于传输 SOAP 消息的 HTTP 传输。  

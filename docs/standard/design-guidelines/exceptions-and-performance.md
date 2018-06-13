@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575331"
 ---
 # <a name="exceptions-and-performance"></a>异常和性能
 与异常相关的一个常见问题是，如果使用异常来进行例行失败的代码，实现的性能将无法接受。 这是一个有效的问题。 在成员引发了异常，其性能可能会极大地速度较慢。 但是，很可能来实现良好性能时严格符合禁止使用错误代码的异常指导原则。 本节中所述的两种模式建议执行此操作的方法。  

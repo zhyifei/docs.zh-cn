@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490063"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>如何：创建类或结构的基本数据协定
 本主题演示使用类或结构创建数据协定的基本步骤。 有关数据协定和如何使用它们的详细信息，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  

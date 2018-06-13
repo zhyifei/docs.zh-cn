@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650434"
 ---
 # <a name="composite-data-types-visual-basic"></a>复合数据类型 (Visual Basic)
 除了基本数据类型 Visual Basic 提供，也可以组合不同的类型创建的项目*复合数据类型*如结构、 数组和类。 基本类型和其他复合类型，你可以构建复合数据类型。 例如，可以与数组成员中定义的结构元素的数组或结构。  

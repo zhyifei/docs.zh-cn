@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603267"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>算术运算符 (Visual Basic)
 以下是定义在 Visual Basic 中的算术运算符。  

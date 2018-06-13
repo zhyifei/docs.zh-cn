@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489591"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>预期采用 Windows Communication Foundation：便于以后集成
 如果你现在使用 ASP.NET，并预期在将来使用 WCF，本主题提供指导可确保新的 ASP.NET Web 服务，将很好地与 WCF 应用程序一起正常工作。  

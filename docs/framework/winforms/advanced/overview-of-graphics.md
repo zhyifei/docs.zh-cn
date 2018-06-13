@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523538"
 ---
 # <a name="overview-of-graphics"></a>图形概述
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是窗体的 Microsoft Windows 操作系统子系统应用程序编程接口 (API)。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 负责在屏幕和打印机上显示信息。 顾名思义，[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 的后续，后者是包含在 Windows 早期版本中的图形设备接口。  

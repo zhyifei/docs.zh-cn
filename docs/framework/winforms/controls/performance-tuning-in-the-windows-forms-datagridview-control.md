@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536977"
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的性能优化
 在使用大量的数据，`DataGridView`控件可以使用大量的内存开销，除非谨慎使用。 上内存有限的客户端，你可以避免此开销的一些通过避免功能，具有高内存成本。 你还可以管理的部分或全部数据维护和检索任务自己使用的虚拟模式以便自定义你的方案的内存使用量。  

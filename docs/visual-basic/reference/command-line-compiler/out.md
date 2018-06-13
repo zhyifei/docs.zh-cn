@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655884"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
 指定输出文件的名称。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
   
 |若要设置-出在 Visual Studio 集成的开发环境|  
 |---|  
-|1.在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“应用程序”  选项卡。<br />3.修改中的值**程序集名称**框。|  
+|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“应用程序”  选项卡。<br />3.修改中的值**程序集名称**框。|  
   
 ## <a name="example"></a>示例  
  下面的代码编译`T2.vb`并创建输出文件`T2.exe`。  

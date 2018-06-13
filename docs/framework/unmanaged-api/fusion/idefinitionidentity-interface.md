@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 401c23e44cc473d0a27a82a00343852693cb0f2e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429340"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity 接口
 表示在当前范围内定义应用程序的代码的唯一签名。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
 |`IDefinitionIdentity::SetAttribute`|设置为指定的值指定的命名空间中具有指定的名称的属性。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   

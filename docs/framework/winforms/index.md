@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542244"
 ---
 # <a name="windows-forms"></a>Windows 窗体
 因为窗体是应用程序的基本单位，有必要思考一下它们的功能和设计。 窗体最终成为白板，作为开发成员，你要用控件进行增强以创建用户界面，并借助代码操纵数据。 为此，Visual Studio 为您提供的集成的开发环境 (IDE) 可帮助编写代码，以及丰富的控件集编写的[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。 通过使用代码补充这些控件的功能，你可轻松并快速开发所需要的解决方案。  

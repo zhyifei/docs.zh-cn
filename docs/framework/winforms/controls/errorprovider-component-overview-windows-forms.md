@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528881"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider 组件概述（Windows 窗体）
 Windows 窗体[ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)组件用来验证窗体或控件上的用户输入。 它通常是与验证窗体上的用户输入或显示在数据集中的错误结合使用。 错误提供程序是更好的选择，比在消息框中，显示一条错误消息，因为后关闭消息框，则错误消息不再可见。 <xref:System.Windows.Forms.ErrorProvider>组件显示错误图标 (![ErrorProvider 图标](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) 相关的控件，如文本框; 当用户鼠标指针悬停旁边显示错误图标，工具提示，显示错误消息字符串。  

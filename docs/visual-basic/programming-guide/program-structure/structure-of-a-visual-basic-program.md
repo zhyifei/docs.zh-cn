@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654825"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程序的结构
 Visual Basic 程序是从标准构建基块构建。 A*解决方案*由一个或多个项目组成。 A*项目*又可以包含一个或多个程序集。 每个*程序集*从一个或多个源代码文件编译。 A*源文件*提供定义和实现的类、 结构、 模块和接口，最终包含了所有代码。  

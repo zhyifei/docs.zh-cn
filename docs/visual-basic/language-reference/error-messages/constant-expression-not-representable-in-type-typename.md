@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585764"
 ---
 # <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a>无法在类型中表示的常量表达式&#39; &lt;typename&gt;&#39;
 你尝试评估一个常数，而不能适应目标类型，通常是因为它溢出范围。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803941"
 ---
 # <a name="automatic-format-selection"></a>自动格式选择
 此示例演示如何启用自动格式选择 （XML 或 JSON） 通过 Windows Communication Foundation (WCF) REST 编程模型，以及如何在操作代码中显式设置格式。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543688"
 ---
 # <a name="how-to-recognize-application-gestures"></a>如何：识别应用程序操作
 下面的示例演示埃墨迹，当用户进行<xref:System.Windows.Ink.ApplicationGesture.ScratchOut>笔势上<xref:System.Windows.Controls.InkCanvas>。 此示例假定<xref:System.Windows.Controls.InkCanvas>、 调用`inkCanvas1`，XAML 文件中声明。  

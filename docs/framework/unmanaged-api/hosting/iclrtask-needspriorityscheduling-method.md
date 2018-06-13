@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 36403abcae4d4e691fe6362e61cf7fa979ec7f5e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435733"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>ICLRTask::NeedsPriorityScheduling 方法
 获取一个值，该值指示当前任务，正被切换出，是否需要将标记为高优先级以便重新计划。  
@@ -53,11 +54,11 @@ HRESULT NeedsPriorityScheduling (
  在其中的任务是接近垃圾回收器收集的情况下，CLR 设置的值`pbNeedsPriorityScheduling`到`true`，，该值指示优先级较高重新安排。 这允许主机快速重新计划任务，从而将出现延迟，在垃圾回收的可能性降至最低并使主机和运行时能够共同协作来节省内存资源。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

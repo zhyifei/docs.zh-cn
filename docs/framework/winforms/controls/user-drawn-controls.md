@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542192"
 ---
 # <a name="user-drawn-controls"></a>用户描述的控件
 .NET Framework 可为你提供的功能能够轻松地开发你自己的控件。 你可以创建一个用户控件，它是一组由代码绑定在一起的标准控件，或可以向上设计您自己的控件从零开始。 你甚至可以使用继承创建继承自现有控件的控件并将添加到其固有的功能。 无论你使用何种方法.NET Framework 提供了用于绘制自定义图形界面为你创建的任何控件的功能。  

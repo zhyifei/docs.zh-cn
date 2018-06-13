@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504314"
 ---
 # <a name="services-and-transactions"></a>服务和事务
 Windows Communication Foundation (WCF) 应用程序可以启动将事务从客户端中的，并协调服务操作中的事务。 客户端可以启动事务和调用多个服务操作，并可确保服务操作作为一个单元提交或回滚。  

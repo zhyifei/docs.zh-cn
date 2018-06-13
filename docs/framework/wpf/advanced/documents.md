@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542959"
 ---
 # <a name="documents"></a>文档
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一组功能丰富的组件，使用这些组件，开发人员能够生成具有高级文档功能和提供更好阅读体验的应用程序。 除增强功能和质量外，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 还针对文档打包、安全性和存储提供简单的管理服务。  

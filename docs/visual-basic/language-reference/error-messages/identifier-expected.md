@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586125"
 ---
 # <a name="identifier-expected"></a>应输入标识符
 不是可识别的已声明的元素名称的编程元素出现在上下文需要的元素名称的位置。 一个可能原因是以外的某处指定了一个属性语句开头。  

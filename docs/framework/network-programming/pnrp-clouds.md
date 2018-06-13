@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393837"
 ---
 # <a name="pnrp-clouds"></a>PNRP 云
 PNRP“云”表示通过网络相互通信的一组节点。 术语“云”与“对等网格”和“对等图”同义。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523118"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>如何：在形状中平铺图像
 就像磁贴可以彼此以覆盖层相邻放置，可以将矩形映像彼此相邻放置于填充 （磁贴） 形状。 若要磁贴形状的内部，使用纹理画笔。 构造时<xref:System.Drawing.TextureBrush>对象，将传递给构造函数的自变量之一为<xref:System.Drawing.Image>对象。 当你使用的纹理画笔绘制形状的内部时，形状填充使用此映像的重复副本。  

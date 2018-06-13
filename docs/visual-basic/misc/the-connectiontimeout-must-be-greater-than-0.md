@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640525"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout 必须大于 0
 上载和下载文件，当[My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network)，必须指定`connectionTimeout`大于`0`。  

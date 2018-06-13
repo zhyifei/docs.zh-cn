@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570515"
 ---
 # <a name="changing-case-in-net"></a>更改 .NET 中的大小写
 如果编写可接受用户输入的应用程序，永远无法确定用户以哪种大小写输入数据。 通常，你希望字符串统一采用大写或小写，尤其是在用户界面显示时。 下表介绍 3 种更改大小写的方法： 前两个方法提供可接受区域性的重载。  

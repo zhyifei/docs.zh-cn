@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804142"
 ---
 # <a name="configuring-wcf-services-in-code"></a>在代码中配置 WCF 服务
 Windows Communication Foundation (WCF) 允许开发人员配置服务使用配置文件或代码。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许你在代码中配置服务。 在早期版本的代码中的 WCF （4.0 及更早版本） 配置服务中十分方便，在自承载方案中，<xref:System.ServiceModel.ServiceHost>类允许你配置终结点和在调用 ServiceHost.Open 之前的行为。 但是，在 Web 承载方案中，您不具备针对 <xref:System.ServiceModel.ServiceHost> 类的直接访问权限。 若要配置 Web 承载的服务，您需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从.NET 4.5 开始，WCF 提供了更简单的方法来配置自承载和 web 承载服务的代码。  

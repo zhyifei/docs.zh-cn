@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591997"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>使用属性控制 XML 序列化
 使用属性可以控制对象的 XML 序列化，还可以利用同一组类创建其他 XML 流。 有关创建其他 XML 流的详细信息，请参见[如何：指定 XML 流的替代元素名称](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。  

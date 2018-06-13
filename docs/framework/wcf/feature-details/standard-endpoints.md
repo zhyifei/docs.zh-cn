@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500592"
 ---
 # <a name="standard-endpoints"></a>标准终结点
 通过指定地址、绑定和协定来定义终结点。 终结点上可以设置的其他参数包括行为配置、标头和侦听 URI。  对于特定类型的终结点，这些值不会更改。 例如，元数据交换终结点始终使用 <xref:System.ServiceModel.Description.IMetadataExchange> 协定， 其他终结点（如 <xref:System.ServiceModel.Description.WebHttpEndpoint>）始终需要指定的终结点行为。 通过为常用终结点属性设置默认值可以提高终结点的可用性。 开发人员可以通过标准终结点定义具有默认值的终结点，或者定义一个或多个终结点属性不会更改的终结点。  这些终结点的优点是，可以使用此类终结点而无需指定静态性质的信息。 标准终结点可供基础结构终结点和应用程序终结点使用。  

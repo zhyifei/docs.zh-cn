@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567570"
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework 应用程序要点
 .NET Framework 文档的此部分提供了有关 .NET Framework 中的基本应用程序开发任务的信息。  

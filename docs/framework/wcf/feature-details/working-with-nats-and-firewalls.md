@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508098"
 ---
 # <a name="working-with-nats-and-firewalls"></a>使用 NAT 和防火墙
 网络连接的客户端和服务器通常不具有用于进行通信的直接和开放的路径。 数据包在终结点计算机和网络中的中间计算机上进行筛选、路由、分析和转换。 网络地址转换 (NAT) 和防火墙是可以参与网络通信的中间应用程序的常见示例。  

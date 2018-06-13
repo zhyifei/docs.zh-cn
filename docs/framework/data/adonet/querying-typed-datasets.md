@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353480"
 ---
 # <a name="querying-typed-datasets"></a>查询类型化数据集
 如果在应用程序设计时已知 <xref:System.Data.DataSet> 的架构，则建议在使用 <xref:System.Data.DataSet> 时使用类型化 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。 类型化 <xref:System.Data.DataSet> 是从 <xref:System.Data.DataSet> 中派生的类。 因此，它继承 <xref:System.Data.DataSet> 的所有方法、事件和属性。 此外，类型化 <xref:System.Data.DataSet> 还提供强类型方法、事件和属性。 这意味着可以按名称而不使用基于集合的方法来访问表和列。 这可使查询更简单、更具可读性。 有关详细信息，请参阅[类型化数据集](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)。  

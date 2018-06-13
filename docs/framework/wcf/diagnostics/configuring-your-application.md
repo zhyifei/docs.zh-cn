@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803645"
 ---
 # <a name="configuring-your-application"></a>配置应用程序
 Windows Communication Foundation (WCF) 使用.NET 配置系统，并允许你在计算机和应用程序范围配置服务。  

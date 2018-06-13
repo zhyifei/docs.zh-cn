@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509069"
 ---
 # <a name="security-considerations-for-data"></a>数据的安全考虑事项
 在处理数据在 Windows Communication Foundation (WCF)，你必须考虑许多种类的威胁。 下表列出了与数据处理相关的最重要的威胁类。 WCF 提供了缓解这些威胁的工具。  

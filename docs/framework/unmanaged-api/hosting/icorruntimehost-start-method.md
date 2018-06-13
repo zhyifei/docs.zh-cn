@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 96e8d80e2dff88aa5a589f864278b4a4e9cc76ef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437009"
 ---
 # <a name="icorruntimehoststart-method"></a>ICorRuntimeHost::Start 方法
 启动公共语言运行时 (CLR)。  
@@ -45,11 +46,11 @@ HRESULT Start ();
  它通常是不需要调用`Start`方法，因为 CLR 将运行托管的代码在第一个请求时自动启动。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** 1.0、 1.1  
   

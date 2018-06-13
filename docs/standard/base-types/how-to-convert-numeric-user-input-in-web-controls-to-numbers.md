@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571909"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>如何：将用户在 Web 控件中输入的数值转换为数字
 由于世界各地的人都可以查看网页，因此用户能够在 <xref:System.Web.UI.WebControls.TextBox> 控件中以几乎无限种格式输入数字数据。 所以，请务必确定网页用户的区域设置和区域性。 分析用户输入后，可以应用用户的区域设置和区域性定义的格式设置约定。  

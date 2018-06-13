@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520339"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>如何：创建自定义活动设计器
 通常实现自定义活动设计器，以便其相关活动可与其他活动（这些活动的设计器可与它们一起放置到设计图面上）组合在一起。 此功能要求自定义活动设计器提供可在其中放置任意活动的"放置区"以及用于管理得到的设计图面上的元素集合的方法。 本主题介绍如何创建一个包含上述放置区的自定义活动设计器，以及如何创建一个可提供管理设计器元素集合所需的编辑功能的自定义活动设计器。  

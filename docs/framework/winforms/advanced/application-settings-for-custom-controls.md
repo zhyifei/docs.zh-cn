@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518559"
 ---
 # <a name="application-settings-for-custom-controls"></a>自定义控件的应用程序设置
 你必须完成某些任务，以使保存应用程序设置，当第三方应用程序中承载的控件的功能的自定义控件。  

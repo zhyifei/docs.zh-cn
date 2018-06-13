@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552670"
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a>如何：使用 CheckBox 创建 ListViewItem
 此示例演示如何显示一列的<xref:System.Windows.Controls.CheckBox>中控制<xref:System.Windows.Controls.ListView>使用控件<xref:System.Windows.Controls.GridView>。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653580"
 ---
 # <a name="-utf8output-visual-basic"></a>-utf8output (Visual Basic)
 显示使用 UTF-8 编码的编译器输出。  

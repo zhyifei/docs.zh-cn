@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365055"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>应用程序方案（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用于公开和使用数据作为支持的方案的核心集[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 本主题提供与这些方案相关的主题的链接。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506685"
 ---
 # <a name="transaction-protocols-version-10"></a>事务协议版本 1.0
 Windows Communication Foundation (WCF) 版本 1 实现 Ws-atomic Transaction 和 Ws-coordination 协议的版本 1.0。 有关版本 1.1 的详细信息，请参阅[事务协议](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  

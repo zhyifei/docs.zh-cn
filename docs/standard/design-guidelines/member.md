@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571392"
 ---
 # <a name="member-design-guidelines"></a>成员设计准则
 方法、 属性、 事件、 构造函数和字段统称作为成员。 成员最终是依据 framework 功能公开给最终用户的 framework 的手段。  

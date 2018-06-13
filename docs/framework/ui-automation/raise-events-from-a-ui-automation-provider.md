@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404896"
 ---
 # <a name="raise-events-from-a-ui-automation-provider"></a>从 UI 自动化提供程序中引发事件
 > [!NOTE]

@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86be3e7edb7149ed42dd053156de0f649f1480b4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423710"
 ---
 # <a name="debugging-unmanaged-api-reference"></a>调试（非托管 API 参考）
 调试 API 允许调试器对在公共语言运行时 (CLR) 环境中运行的代码进行调试。 要调试的代码可以是 CLR 支持的任何类型的代码。  

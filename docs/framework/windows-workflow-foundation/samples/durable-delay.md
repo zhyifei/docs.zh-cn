@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516017"
 ---
 # <a name="durable-delay"></a>持久延迟
 此示例演示如何使用持久延迟，在持久延迟过程中，将把工作流保留到持久性设备。 示例工作流包含发送到控制台并由延迟分隔的两个消息。 触发延迟时，工作流会卸载，并在重新加载到内存中之前，在工作流实例存储中等待 5 秒。  

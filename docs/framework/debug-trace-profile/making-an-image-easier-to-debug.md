@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391041"
 ---
 # <a name="making-an-image-easier-to-debug"></a>令映像更易于调试
 编译非托管代码时，可以通过设置 IDE 开关或命令线选项来配置可执行映像进行调试。 例如，可以使用 Visual C++ 中的 /Zi 命令行选项，使其发出调试符号文件（文件扩展名为 .pdb）。 同样，/Od 命令行选项告知编译器禁用优化。 所产生的代码运行速度更慢，但更易于调试，这很必要。  

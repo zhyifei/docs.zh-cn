@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559521"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>如何：创建三维场景
 此示例演示如何创建看起来像平面纸已转动的一个三维对象。 A<xref:System.Windows.Controls.Viewport3D>以下组件以及用于创建此简单的三维场景：  

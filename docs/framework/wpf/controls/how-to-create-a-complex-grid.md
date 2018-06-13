@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553590"
 ---
 # <a name="how-to-create-a-complex-grid"></a>如何：创建复杂网格
 此示例演示如何使用<xref:System.Windows.Controls.Grid>创建如下所示的每月的日历的布局。  

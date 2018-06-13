@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 331065d4aae82c66b9ebd82e99427501c3ba8a98
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435950"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum 枚举
 指示在托管线程记录事件时写入事件日志的描述性消息的严重级别。  
@@ -67,7 +68,7 @@ typedef enum LoggingLevelEnum {
  公共语言运行时 (CLR) 调用[icordebugmanagedcallback:: Logmessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)方法，以通知调试器托管的线程记录事件。 CLR 中传递的值`LoggingLevelEnum`枚举，以指示托管的线程已写入到事件日志消息的严重性级别。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1aea8cb4c180477fdd763a8af2f251db2d37d066
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436632"
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop 方法
 停止执行当前进程的运行时中的代码。  
@@ -48,11 +49,11 @@ HRESULT Stop ();
 >  调用了`Stop`，CLR 不能重新初始化到同一进程。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** 1.0、 1.1  
   

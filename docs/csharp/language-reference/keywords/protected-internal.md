@@ -7,6 +7,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172236"
 ---
 # <a name="protected-internal-c-reference"></a>受保护的内部成员（C# 参考）
 `protected internal` 关键字组合是一种成员访问修饰符。 可从当前程序集或派生自包含类的类型访问受保护的内部成员。 有关 `protected internal` 和其他访问修饰符的比较，请参阅[可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)。 

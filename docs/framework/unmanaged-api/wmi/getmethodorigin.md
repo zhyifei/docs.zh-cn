@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 35e56494d0082db970afce21da8e63a597f0a535
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458144"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin 函数
 确定在其中声明了方法的类。
@@ -71,7 +72,7 @@ HRESULT GetMethodOrigin (
 `pstrClassName`参数必须指向有效`BSTR`因为这是调用该函数之前`out`参数; 此函数返回之后，会释放指针。
 
 ## <a name="requirements"></a>要求  
-**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651072"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>如何：强制通过值传递自变量 (Visual Basic)
 过程声明确定的传递机制。 如果在声明参数[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 期望通过引用传递相应的自变量。 这允许更改基础中调用代码的自变量的编程元素的值的过程。 如果你想要防止此类更改基础元素，则可以重写`ByRef`过程中的传递机制调用的自变量名称括在括号中。 除了括号之外的自变量列表的调用中，则这些括号。  

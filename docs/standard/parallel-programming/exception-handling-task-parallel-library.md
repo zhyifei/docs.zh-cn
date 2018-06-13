@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591291"
 ---
 # <a name="exception-handling-task-parallel-library"></a>异常处理（任务并行库）
 由在任务内部运行的用户代码引发的未处理异常会传播回调用线程，但本主题稍后部分介绍的某些情况除外。 如果使用静态或实例 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 或 <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` 方法之一，异常会传播，异常处理方法为将调用封闭到 `try`/`catch` 语句中。 如果任务是所附加子任务的父级，或在等待多个任务，那么可能会引发多个异常。  

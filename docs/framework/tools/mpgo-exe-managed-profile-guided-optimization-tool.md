@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410015"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe（按托管配置文件优化工具）
 托管配置文件引导式优化工具 (Mpgo.exe) 是一种命令行工具，使用常见的最终用户方案优化由[本机映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 创建的本机映像程序集。 利用此工具，你可运行生成配置文件数据的培训方案。 [本机映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 使用此数据优化其生成的本机映像应用程序程序集。 培训方案是应用程序预期用法的一种试运行。 Mpgo.exe 适用于 Visual Studio Ultimate 2012 及更高版本。 从 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 开始，你还可以使用 Mpgo.exe 优化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用。  

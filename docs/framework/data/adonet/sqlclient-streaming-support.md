@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364731"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 流支持
 SQL Server 和应用程序之间的流支持 (中的新增功能[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) 服务器 （文档、 图像和媒体文件） 上支持将非结构化的数据。 SQL Server 数据库可以存储二进制大型对象 (Blob)，但检索 BLOB 会使用大量的内存。  

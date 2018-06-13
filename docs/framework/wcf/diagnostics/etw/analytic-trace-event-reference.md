@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808632"
 ---
 # <a name="analytic-trace-event-reference"></a>分析跟踪事件参考
 下表定义事件级别、 标识符和与 WCF 分析跟踪关联的消息。  

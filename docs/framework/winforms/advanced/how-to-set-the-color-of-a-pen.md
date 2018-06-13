@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522377"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>如何：设置钢笔颜色
 此示例将更改预先存在的颜色<xref:System.Drawing.Pen>对象  

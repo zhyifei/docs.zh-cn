@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647331"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>其他数据类型 (Visual Basic)
 Visual Basic 提供不是针对数字或字符的几种数据类型。 相反，它们处理专用数据如是/否值、 日期/时间值和对象地址。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572205"
 ---
 # <a name="types-of-xml-nodes"></a>XML 节点类型
 当将 XML 文档作为节点树读入内存时，这些节点的节点类型在创建节点时确定。 XML 文档对象模型 (DOM) 具有多种节点类型，这些类型由万维网联合会 (W3C) 确定并在 1.1.1 节“The DOM Structure Model”中列出。 下表列出了节点类型、分配给该节点类型的对象以及每种节点类型的简短说明。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809646"
 ---
 # <a name="service-channel-listeners-and-channels"></a>服务：通道侦听器和通道
 共有三种类别的通道对象：通道、通道侦听器和通道工厂。 通道是应用程序和通道堆栈之间的接口。 通道侦听器负责在接收（即侦听）端创建通道，这通常是为了响应新传入的消息或连接。 通道工厂负责在发送端创建通道，以便启动与终结点的通信。  

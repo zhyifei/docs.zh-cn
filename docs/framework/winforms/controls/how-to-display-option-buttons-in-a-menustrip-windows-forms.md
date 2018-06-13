@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538023"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>如何：在 MenuStrip 中显示选项按钮（Windows 窗体）
 选项按钮，也称为单选按钮，很相似，只不过用户可以选择仅一次一个地选中复选框。 尽管在默认<xref:System.Windows.Forms.ToolStripMenuItem>类未提供选项按钮行为，但该类提供自定义后实现选项按钮行为中的菜单项的复选框行为<xref:System.Windows.Forms.MenuStrip>控件。  

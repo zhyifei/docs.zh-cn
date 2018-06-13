@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ebe2cf95f5637e6924b85c2389f1c59679580298
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449165"
 ---
 # <a name="corelementtype-enumeration1"></a>CorElementType Enumeration1
 指定公共语言运行时<xref:System.Type>、 类型修饰符，或者有关元数据类型签名中类型的信息。  
@@ -138,7 +139,7 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT <`mdTypeRef`或`mdTypeDef`元数据令牌 >|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   

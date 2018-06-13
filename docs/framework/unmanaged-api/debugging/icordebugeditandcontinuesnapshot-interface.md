@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 27bec505df1db4ccbba862e81d9407d11245d449
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412368"
 ---
 # <a name="icordebugeditandcontinuesnapshot-interface1"></a>ICorDebugEditAndContinueSnapshot 接口 1
 `ICorDebugEditAndContinueSnapshot` 已过时。 不要使用此接口。  

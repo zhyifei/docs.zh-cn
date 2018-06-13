@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552865"
 ---
 # <a name="contextmenu-overview"></a>ContextMenu 概述
 <xref:System.Windows.Controls.ContextMenu>类表示一个元素，通过使用特定于上下文的公开功能<xref:System.Windows.Controls.Menu>。 通常情况下，用户公开<xref:System.Windows.Controls.ContextMenu>中[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]通过右键单击鼠标按钮。 本主题介绍<xref:System.Windows.Controls.ContextMenu>元素，并提供如何使用在示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和代码。  

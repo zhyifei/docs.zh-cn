@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561831"
 ---
 # <a name="xuid-directive"></a>x:Uid 指令
 为标记元素提供的唯一标识符。 在许多情况下，由 XAML 本地化过程和工具使用此唯一标识符。  

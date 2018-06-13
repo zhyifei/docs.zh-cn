@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492718"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>如何：创建要求会话的服务
 会话在两个或更多终结点之间创建一个共享状态，从而启用一些有用的功能，例如回调、多跳安全性以及客户端和服务实例之间的关联。 有关 Windows Communication Foundation (WCF) 应用程序中的会话的详细信息，请参阅[使用会话](../../../../docs/framework/wcf/using-sessions.md)。  

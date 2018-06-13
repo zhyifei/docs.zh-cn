@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514047"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>如何：对实例数据属性进行反序列化
 在有些情况下，用户或工作流管理员可能需要手动检查持久保存的工作流实例的状态。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供一个有关 Instances 表的视图，公开以下四列：  

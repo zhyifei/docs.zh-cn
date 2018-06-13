@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543980"
 ---
 # <a name="how-to-animate-the-size-of-a-frameworkelement"></a>如何：对 FrameworkElement 的大小进行动画处理
 要进行动画处理的大小<xref:System.Windows.FrameworkElement>，你可以对其<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>属性或使用经过动画处理的<xref:System.Windows.Media.ScaleTransform>。  

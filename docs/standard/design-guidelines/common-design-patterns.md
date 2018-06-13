@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570328"
 ---
 # <a name="common-design-patterns"></a>常见设计模式
 有很多书籍软件模式、 模式语言和寻址模式非常广泛使用者的 antipatterns 上。 因此，这一章提供准则和相关的一组非常有限的.NET Framework Api 的设计中经常使用的模式的讨论。  

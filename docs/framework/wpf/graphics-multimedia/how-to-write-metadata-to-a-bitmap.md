@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559411"
 ---
 # <a name="how-to-write-metadata-to-a-bitmap"></a>如何：向位图中写入元数据
 此示例演示如何将元数据写入到使用元数据的查询语言的位图。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742018"
 ---
 # <a name="full-code-listings"></a>完整代码清单
 本主题包含适用于使用[操作和惯性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)处理器的应用程序的完整代码清单。  

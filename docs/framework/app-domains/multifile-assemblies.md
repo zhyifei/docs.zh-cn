@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742505"
 ---
 # <a name="multifile-assemblies"></a>多文件程序集
 可以使用命令行编译器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 和 Visual C++，创建多文件程序集。 程序集中的一个文件必须包含程序集清单。 启动应用程序的程序集还必须包含入口点，如 Main 或 WinMain 方法。  

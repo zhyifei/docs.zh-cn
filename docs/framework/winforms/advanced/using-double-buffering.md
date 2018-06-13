@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523905"
 ---
 # <a name="using-double-buffering"></a>使用双缓冲
 可以使用双缓冲图形来减少闪烁包含复杂的绘制操作的应用程序中。 .NET Framework 包含双缓冲的内置支持，或者你可以管理并手动呈现图形。  

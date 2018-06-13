@@ -10,13 +10,14 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758615"
 ---
 # <a name="datatable-edits"></a>数据表编辑
 当您在 <xref:System.Data.DataRow> 中更改列值时，所做更改会立即置于行的当前状态中。 <xref:System.Data.DataRowState>然后将设置为**已修改**，并接受或拒绝使用更改<xref:System.Data.DataRow.AcceptChanges%2A>或<xref:System.Data.DataRow.RejectChanges%2A>方法**DataRow**。 **DataRow**还提供了可用于进行编辑时挂起的行状态的三种方法。 这三个方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
   
  当您修改列中的值**DataRow**直接， **DataRow**管理使用的列的值**当前**，**默认**，和**原始**行版本。 除了这些行版本中， **BeginEdit**， **EndEdit**，和**CancelEdit**方法使用第四个行版本：**建议**。 有关行版本的详细信息，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
   
- **建议**行版本在通过调用开始编辑操作过程中存在**BeginEdit**和用于结束通过使用**EndEdit**或**CancelEdit，**或通过调用**AcceptChanges**或**RejectChanges**。  
+ **建议**行版本在通过调用开始编辑操作过程中存在**BeginEdit**和用于结束通过使用**EndEdit**或**CancelEdit，** 或通过调用**AcceptChanges**或**RejectChanges**。  
   
  在编辑操作时，你可以将验证逻辑应用于各列通过评估来评估**ProposedValue**中**ColumnChanged**事件**DataTable**。 **ColumnChanged**事件保存**DataColumnChangeEventArgs** ，保留的引用，到正在更改的列和**ProposedValue**。 计算了建议值后，可以对其进行修改或取消编辑。 当编辑结束时，行移出**建议**状态。  
   

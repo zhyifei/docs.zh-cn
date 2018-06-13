@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580752"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>创建加密方案
 可结合使用 .NET Framework 的加密组件来创建不同的方案，以加密和解密数据。  

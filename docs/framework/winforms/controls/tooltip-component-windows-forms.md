@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538778"
 ---
 # <a name="tooltip-component-windows-forms"></a>ToolTip 组件（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.ToolTip> 组件在用户指向控件时显示文本。 ToolTip 可与任何控件关联。 此控件的一个用法示例：为了节省窗体上的空间，可在按钮上显示一个小图标，并使用 ToolTip 来解释按钮功能。  

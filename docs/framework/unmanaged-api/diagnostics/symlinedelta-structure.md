@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 77cd8b7d791d11f6d40386f4747c60cd4832521a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428089"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA 结构
 提供有关方法的结果编辑已移动到符号处理程序信息。  

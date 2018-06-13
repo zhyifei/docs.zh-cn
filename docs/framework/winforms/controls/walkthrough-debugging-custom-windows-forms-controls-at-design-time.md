@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542033"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>演练：设计时调试自定义 Windows 窗体控件
 当你创建自定义控件时，你通常会发现它需调试其设计时行为。 这是如果自定义设计器创作的自定义控件尤其如此。 有关详细信息，请参阅[演练： 创建 Windows 窗体控件，采用利用的 Visual Studio 设计时功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580921"
 ---
 # <a name="using-tpl-with-other-asynchronous-patterns"></a>将 TPL 用于其他异步模式
 可采用多种方式将任务并行库用于传统的 .NET Framework 异步编程模式。  

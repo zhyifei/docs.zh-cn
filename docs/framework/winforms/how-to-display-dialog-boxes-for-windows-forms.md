@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537419"
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>如何：显示 Windows 窗体的对话框
 与应用程序中显示的任何其他形式相同的方式显示一个对话框。 运行应用程序时，启动窗体将自动加载。 若要使第二个窗体或应用程序中显示的对话框中，编写代码以加载并显示它。 同样，若要使窗体或对话框框中消失，编写代码以卸载或隐藏它。  

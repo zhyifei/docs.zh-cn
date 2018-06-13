@@ -86,6 +86,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605077"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>类型转换函数 (Visual Basic)
 这些函数已编译的内联，这意味着转换代码，计算表达式的代码的一部分。 有时是没有调用的过程，以完成转换，这将提高性能。 每个函数都强制转换为特定数据类型的表达式。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555985"
 ---
 # <a name="how-to-implement-property-change-notification"></a>如何：实现属性更改通知
 若要支持<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay>绑定，从而使你的绑定目标属性，以便自动反映绑定源 （例如具有预览窗格中，当用户编辑窗体时自动更新），动态更改您的类需要提供相应的属性更改通知。 此示例演示如何创建一个类以实现<xref:System.ComponentModel.INotifyPropertyChanged>。  

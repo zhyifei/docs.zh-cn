@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bada01e910397adcf0fe59286d90774a0ab24ffa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439871"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>IHostMemoryManager::VirtualProtect 方法
 用作相应的 Win32 函数的逻辑包装。 Win32 实现`VirtualProtect`更改调用进程的虚拟地址空间中的提交页面区域上的保护。  
@@ -65,11 +66,11 @@ HRESULT VirtualProtect (
  此实现的`VirtualProtect`返回 HRESULT 值，而 Win32 实现返回一个非零值以指示成功和零值以指示失败。 有关详细信息，请参阅 Windows 平台文档。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

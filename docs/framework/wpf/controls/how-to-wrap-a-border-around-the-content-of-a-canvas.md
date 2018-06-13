@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551786"
 ---
 # <a name="how-to-wrap-a-border-around-the-content-of-a-canvas"></a>如何：在画布内容的周围绘制边框
 此示例演示如何包装<xref:System.Windows.Controls.Canvas>具有元素<xref:System.Windows.Controls.Border>。  

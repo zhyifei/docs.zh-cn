@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545293"
 ---
 # <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a>如何： 处理表&#39;s 列通过列属性
 此示例演示一些较常见的操作，可以对表的列执行<xref:System.Windows.Documents.Table.Columns%2A>属性。  

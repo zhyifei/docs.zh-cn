@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358607"
 ---
 # <a name="oracle-sequences"></a>Oracle 序列
 用于 Oracle 的 .NET Framework 数据提供程序支持在使用 <xref:System.Data.OracleClient.OracleDataAdapter> 执行插入后检索服务器生成的 Oracle 序列键值。  

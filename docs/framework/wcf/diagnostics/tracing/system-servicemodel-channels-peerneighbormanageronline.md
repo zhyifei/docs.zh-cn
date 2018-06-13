@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478343"
 ---
 # <a name="systemservicemodelchannelspeerneighbormanageronline"></a>System.ServiceModel.Channels.PeerNeighborManagerOnline
 PeerNode 现在处于联机状态，指示存在一个或多个已连接的邻居。  

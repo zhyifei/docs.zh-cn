@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591737"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>常量和枚举 (Visual Basic)
 Visual Basic 提供许多预定义的常量和枚举的开发人员。 常数存储中保持不变的应用程序的执行中的值。 枚举提供了使用相关常量集以及将常量值与名称相关联的一个便捷方法。  

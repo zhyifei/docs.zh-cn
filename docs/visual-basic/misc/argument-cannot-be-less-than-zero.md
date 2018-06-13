@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599878"
 ---
 # <a name="argument-cannot-be-less-than-zero"></a>参数不能小于零
 提供了一个小于零的值，但参数不能小于零。  

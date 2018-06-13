@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533681"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>如何：对 Windows 窗体上的对象分层
 当你创建复杂的用户界面，或使用多个文档界面 (MDI) 窗体时，你通常需要进行分层控件和子窗体上来创建更复杂的用户界面 (UI)。 若要移动并跟踪控件和 windows 组的上下文中的可操作其 z 顺序。 *Z 顺序*是沿窗体的 z 轴 （深度） 窗体上控件的可视化分层。 在 z 顺序的顶层窗口重叠所有其他窗口之上。 所有其他 windows 重叠窗口底部的 z 顺序。  

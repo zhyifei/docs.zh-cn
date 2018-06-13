@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219240"
 ---
 # <a name="float-c-reference"></a>float（C# 参考）
 `float` 关键字表示存储 32 位浮点值的简单类型。 下表显示了 `float` 类型的精度和大致范围。  

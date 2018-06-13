@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cc63a0a42c1da11daa5d38ecce505296a893616b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453923"
 ---
 # <a name="icorprofilercallback3-interface"></a>ICorProfilerCallback3 接口
 提供公共语言运行时 (CLR) 用于通信的回叫方法附加和分离探查器的状态信息。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

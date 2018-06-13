@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582130"
 ---
 # <a name="security-and-race-conditions"></a>安全和争用条件
 需要关注的另一个方面是争用条件被利用的安全漏洞的可能性。 有几种方法可能是在其中。 请按照下面的副主题概述了一些开发人员必须避免主要缺陷。  

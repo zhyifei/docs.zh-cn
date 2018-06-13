@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529423"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>在 Windows 窗体 DataGridView 控件中显示数据
 `DataGridView`控件用于显示不同的外部数据源中的数据。 或者，你可以向控件添加行和列并手动将其填充数据。  

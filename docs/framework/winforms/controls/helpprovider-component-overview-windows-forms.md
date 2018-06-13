@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528614"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 组件概述（Windows 窗体）
 Windows 窗体[HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)组件用于将 HTML Help 1.x 帮助文件 （HTML Help Workshop 生成的.chm 文件或.htm 文件） 与 Windows 应用程序相关联。 你可以提供各种不同的方式的帮助：  

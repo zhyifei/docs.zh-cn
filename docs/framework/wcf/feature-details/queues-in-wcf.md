@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496583"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的队列
 本部分中的主题讨论对队列的 Windows Communication Foundation (WCF) 支持。 WCF 提供对队列利用 Microsoft 消息队列 （以前称为 MSMQ） 作为传输协议的支持，并支持以下方案：  

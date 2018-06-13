@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492539"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>如何：将元数据导入服务终结点
 本主题说明如何将元数据导入到服务终结点的集合和使用中定义的服务[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 本主题演示如何创建从服务中导入元数据的客户端应用程序，以及之后如何对该服务调用 `Add` 方法。  

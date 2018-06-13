@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360473"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>单表查询 (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 查询适用于实现的数据源<xref:System.Collections.Generic.IEnumerable%601>接口或<xref:System.Linq.IQueryable%601>接口。 <xref:System.Data.DataTable> 类不实现任何一个接口，所以如果要使用 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 作为<xref:System.Data.DataTable> 查询的 `From` 子句中的源，则必须调用 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 方法。  

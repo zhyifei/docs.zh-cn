@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651500"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic 中属性和变量的差异
 变量和属性都表示可以访问的值。 但是，有存储和实现中的差异。  

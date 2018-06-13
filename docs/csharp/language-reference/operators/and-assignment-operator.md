@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172043"
 ---
 # <a name="amp-operator-c-reference"></a>&amp;= 运算符（C# 参考）
 AND 赋值运算符。  

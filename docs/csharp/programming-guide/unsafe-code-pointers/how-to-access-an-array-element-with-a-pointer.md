@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332034"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>如何：通过指针访问数组元素（C# 编程指南）
 在不安全的上下文中，可通过指针元素访问来访问内存中的元素，如下方示例所示：  

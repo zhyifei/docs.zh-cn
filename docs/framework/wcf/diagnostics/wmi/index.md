@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805936"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 进行诊断
 Windows Communication Foundation (WCF) 公开在运行时通过 WCF Windows Management Instrumentation (WMI) 提供程序服务的检测数据。  
@@ -156,7 +157,7 @@ Whoami /user
   
  **%windir%\Program Files\WMI 工具\\**  
   
-1.  在**连接到命名空间：**窗口中，键入**root\ServiceModel**单击**确定。**  
+1.  在**连接到命名空间：** 窗口中，键入**root\ServiceModel**单击**确定。**  
   
 2.  在**WMI CIM Studio 登录**窗口中，单击**选项 >>** 按钮展开该窗口。 选择**数据包隐私**为**身份验证级别**，然后单击**确定**。  
   

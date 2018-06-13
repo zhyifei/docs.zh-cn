@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809259"
 ---
 # <a name="analytic-tracing-with-etw"></a>使用 ETW 进行分析跟踪
 Windows Communication Foundation (WCF) 分析跟踪提供了一个方法来捕获的 WCF 服务执行期间的诊断信息。 WCF 堆栈，以便在生产环境中的 WCF 服务的故障排除中的关键点处发出的 WCF 分析跟踪事件。 WCF 服务的分析跟踪最小对性能有影响的产品服务器承载[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]WCF 服务，因为这些事件可以非常高效地发送到 Windows 事件跟踪 (ETW) 会话。  

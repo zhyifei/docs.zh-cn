@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635901"
 ---
 # <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>文件&#39;s 打开模式不是&#39;t 为有效的值设置
 为文件的打开模式提供的值无效。 下表显示 <xref:Microsoft.VisualBasic.OpenMode> 枚举的有效值。  

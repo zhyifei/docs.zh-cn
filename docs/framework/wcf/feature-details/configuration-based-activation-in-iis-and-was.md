@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488938"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS 和 WAS 中的基于配置的激活
 通常当承载于 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 的 Windows Communication Foundation (WCF) 服务时，你必须提供.svc 文件。 .svc 文件包含该服务的名称以及可选的自定义服务主机工厂。 此附加文件将增加可管理性开销。 基于配置的激活功能不要求具有 .svc 文件，因此不会有相关开销。  

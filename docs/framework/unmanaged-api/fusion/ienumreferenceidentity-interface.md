@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ebc9fe36955bac8b93ec95e9a55fc8ac1197d9a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429116"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity 接口
 用作的集合的枚举数`IReferenceIdentity`对象。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
 |`IEnumReferenceIdentity::Skip`|将指令指针向前移动指定数量的元素，从当前位置开始。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   

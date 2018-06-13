@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531246"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>如何：在托管 HTML 文档对象模型中更改元素的样式
 你可以使用 HTML 中的样式来控制文档及其元素的外观。 <xref:System.Windows.Forms.HtmlDocument> 和<xref:System.Windows.Forms.HtmlElement>支持<xref:System.Windows.Forms.HtmlElement.Style%2A>采用以下格式的样式字符串的属性：  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530907"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>如何：将数据绑定到 MaskedTextBox 控件
 你可以将数据绑定到<xref:System.Windows.Forms.MaskedTextBox>控制就像可以向任何其他 Windows 窗体控件。 但是，如果在数据库中数据的格式与掩码定义所需的格式不匹配，你将需要重新设置数据格式。 下面的过程演示如何执行此操作使用<xref:System.Windows.Forms.Binding.Format>和<xref:System.Windows.Forms.Binding.Parse>的事件<xref:System.Windows.Forms.Binding>类来显示单独的电话号码和电话作为单个可编辑字段的扩展数据库字段。  

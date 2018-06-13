@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804194"
 ---
 # <a name="message-encoder-extensibility"></a>消息编码器扩展性
 本节包含演示自定义消息编码的示例。  

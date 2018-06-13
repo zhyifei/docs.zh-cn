@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517681"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Alpha 混合线条和填充
 在[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，一种颜色为具有各 8 位 alpha、 红色、 绿色和蓝色的 32 位值。 Alpha 值指示颜色的透明度-向其颜色与背景色混合的范围。 Alpha 值范围为 0 到 255，其中 0 表示完全透明的颜色和 255 表示完全不透明的颜色。  

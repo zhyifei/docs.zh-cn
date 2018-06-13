@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551695"
 ---
 # <a name="button"></a>Button
 A<xref:System.Windows.Controls.Button>控件响应用户输入从鼠标、 键盘、 触笔或其他输入的设备和引发<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 A<xref:System.Windows.Controls.Button>是一个基本[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]组件，它可以包含简单内容，例如文本，并还可以包含复杂内容，如图像和<xref:System.Windows.Controls.Panel>控件。  

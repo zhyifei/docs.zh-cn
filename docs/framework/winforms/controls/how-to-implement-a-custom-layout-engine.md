@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531292"
 ---
 # <a name="how-to-implement-a-custom-layout-engine"></a>如何：实现自定义布局引擎
 下面的代码示例演示如何创建可执行简单的流布局的自定义布局引擎。 它实现一个名为的面板控件`DemoFlowPanel`，值将覆盖<xref:System.Windows.Forms.Control.LayoutEngine%2A>属性来提供的一个实例`DemoFlowLayout`类。  

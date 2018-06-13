@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603517"
 ---
 # <a name="return-statement-visual-basic"></a>Return 语句 (Visual Basic)
 将控制权返回给调用的代码`Function`， `Sub`， `Get`， `Set`，或`Operator`过程。  

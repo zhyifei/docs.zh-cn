@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516547"
 ---
 # <a name="workflow-hosting-options"></a>工作流托管选项
 大多数 Windows Workflow Foundation (WF) 示例使用控制台应用程序中承载的工作流，但这并非现实世界工作流的一个现实的方案。 实际业务应用程序中的工作流将会承载在恒定进程中 — 或是由开发人员编写的 Windows 服务，或是诸如 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 或 AppFabric 之类的服务器应用程序。 这些方法之间的区别如下。  

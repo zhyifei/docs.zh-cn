@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552891"
 ---
 # <a name="progressbar"></a>ProgressBar
 A<xref:System.Windows.Controls.ProgressBar>指示操作的进度。 <xref:System.Windows.Controls.ProgressBar>控件包含窗口的系统突出显示颜色填充操作进度。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360421"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server 中的批量复制操作
 Microsoft SQL Server 包括一个名为的常用命令行实用工具**bcp**为快速批量将大型文件复制到 SQL Server 数据库中表或视图。 使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类可以编写提供类似功能的托管代码解决方案。 还可以通过其他方式将数据加载到 SQL Server 表中（例如 INSERT 语句），但是 <xref:System.Data.SqlClient.SqlBulkCopy> 提供的性能要明显优于这些方式。  

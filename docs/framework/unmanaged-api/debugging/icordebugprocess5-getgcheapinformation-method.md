@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f8824ce004cac8bc2ad675c83dc6b5f167f183e6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421042"
 ---
 # <a name="icordebugprocess5getgcheapinformation-method"></a>ICorDebugProcess5::GetGCHeapInformation 方法
 提供有关垃圾回收堆，包括它是否是当前可枚举的常规信息。  
@@ -42,7 +43,7 @@ HRESULT GetGCHeapInformation(
  `ICorDebugProcess5::GetGCHeapInformation`枚举堆之前，必须先调用方法或单个堆的区域，以确保垃圾回收结构在进程中当前有效。 正在集合时，不能将遍历垃圾回收堆。 否则，在枚举可能捕获无效的垃圾回收结构。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

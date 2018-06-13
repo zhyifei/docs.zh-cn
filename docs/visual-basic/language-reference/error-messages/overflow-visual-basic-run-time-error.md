@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594170"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>溢出（Visual Basic 运行时错误）
 当你尝试赋值，则超出分配的目标的限制时，将导致溢出。  

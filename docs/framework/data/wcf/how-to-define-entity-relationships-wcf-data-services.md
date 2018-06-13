@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363987"
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>如何：定义实体关系（WCF 数据服务）
 在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中添加新实体时，不会自动定义新实体和相关实体之间的任何关系。 可创建和更改实体实例之间的关系，以及让客户端库在数据服务中反映这些更改。 有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  

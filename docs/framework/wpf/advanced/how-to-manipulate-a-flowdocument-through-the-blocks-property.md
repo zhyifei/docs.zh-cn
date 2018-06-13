@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544058"
 ---
 # <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a>如何：通过 Blocks 属性操作 FlowDocument
 这些示例演示一些较常见的操作，可以对执行<xref:System.Windows.Documents.FlowDocument>通过<xref:System.Windows.Documents.FlowDocument.Blocks%2A>属性。  

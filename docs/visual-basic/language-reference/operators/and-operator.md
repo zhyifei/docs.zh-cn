@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604635"
 ---
 # <a name="and-operator-visual-basic"></a>And 运算符 (Visual Basic)
 对两个执行逻辑与`Boolean`表达式或对两个数值表达式位与运算。  

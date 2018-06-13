@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462411"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 函数
 执行查询以接收事件。 调用立即返回，并且它们到达时，调用方可以轮询事件返回的枚举数。 释放返回的枚举数取消查询。  
@@ -116,7 +117,7 @@ HRESULT ExecNotificationQueryWmi (
 如果函数调用失败，你可以通过调用来获取其他错误信息[GetErrorInfo](geterrorinfo.md)函数。
 
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

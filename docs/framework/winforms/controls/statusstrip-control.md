@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534489"
 ---
 # <a name="statusstrip-control"></a>StatusStrip 控件
 Windows 窗体 `StatusStrip` 控件在窗体中用作区域，通常显示在窗口底部，应用程序可在此显示各种状态信息。 `StatusStrip` 控件上通常具有 `ToolStripStatusLabel` 控件（用于显示文本或图标以指示状态）或 <xref:System.Windows.Forms.ToolStripProgressBar>（用于以图形方式显示进程的完成状态）。  

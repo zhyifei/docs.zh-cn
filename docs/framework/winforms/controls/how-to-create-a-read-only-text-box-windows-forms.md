@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530141"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>如何：创建只读文本框（Windows 窗体）
 可以将可编辑的 Windows 窗体文本框转换为只读的控件。 例如，在文本框中可能会显示一个值，通常编辑，但可能不是由于应用程序的状态的当前。  

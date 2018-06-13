@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560846"
 ---
 # <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a>如何：将 BitmapSource 转换为索引像素格式
 此示例演示如何将转换<xref:System.Windows.Media.Imaging.BitmapSource>到索引的像素格式。  

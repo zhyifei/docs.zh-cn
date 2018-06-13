@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 34186ee8825c0981ec095cf855c76ff5f800907d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432349"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity 接口
 用作的集合的枚举数`IDefinitionIdentity`对象。  
@@ -60,7 +61,7 @@ IEnumDefinitionIdentity : IUnknown {
 |`IEnumDefinitionIdentity::Skip`|将指令指针向前移动指定数量的元素，从当前位置开始。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5835da6ee20673c2662f1166d304a45ca3e9daeb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405315"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>CorDebugJITCompilerFlags 枚举
 包含影响托管的实时 (JIT) 编译器的行为的值。  
@@ -46,7 +47,7 @@ typedef enum CorDebugJITCompilerFlags {
 |`CORDEBUG_JIT_ENABLE_ENC`|指定编译器应跟踪编译数据，禁用优化，并启用编辑并继续技术。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

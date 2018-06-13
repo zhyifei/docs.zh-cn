@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550093"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>如何：跨应用程序会话保持和还原应用程序范围的属性
 此示例演示如何保留应用程序作用域属性，当应用程序关闭时和还原应用程序作用域属性当应用程序下一次启动后如何。  

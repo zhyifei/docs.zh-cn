@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573034"
 ---
 # <a name="interface-design"></a>接口设计
 尽管大多数 Api 最佳使用类和结构进行建模，有一些情况下在其中更合适或接口的唯一选择。  

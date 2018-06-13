@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805036"
 ---
 # <a name="message-security-binding"></a>消息安全绑定
 本节包含演示在 WCF 中的 Windows 服务中的消息安全绑定的示例。  

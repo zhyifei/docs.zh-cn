@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538807"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>如何：在 Windows 窗体上创建简单绑定控件
 与*简单绑定*，你可以在控件中显示单个数据元素，如从数据集表中列的值。 可以将控件的任何属性的简单绑定到数据值。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/04/2018
   
      最常绑定的属性将显示下 **(DataBindings)** 属性。 例如，在大多数控件，**文本**最经常绑定属性。  
   
-4.  如果属性你想要绑定不是一个经常绑定的属性，单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 在**（高级）**框，以显示**格式设置和高级绑定**对话框中的完整列表与该控件的属性。  
+4.  如果属性你想要绑定不是一个经常绑定的属性，单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 在 **（高级）** 框，以显示**格式设置和高级绑定**对话框中的完整列表与该控件的属性。  
   
 5.  选择你想要将绑定并单击下的下拉箭头的属性**绑定**。  
   

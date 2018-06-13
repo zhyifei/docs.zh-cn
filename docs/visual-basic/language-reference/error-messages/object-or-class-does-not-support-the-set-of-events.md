@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593199"
 ---
 # <a name="object-or-class-does-not-support-the-set-of-events"></a>对象或类不支持事件集
 尝试使用`WithEvents`变量替换为指定的事件集的事件源不能工作的组件。 例如，你想要接收的事件的对象，然后创建另一个对象`Implements`的第一个对象。 虽然你可能认为无法实现的对象接收的事件，但这并不总是这种情况。 `Implements` 仅实现的接口方法和属性。 `WithEvents` 不支持私有`UserControls`，因为类型信息所需引发`ObjectEvent`在运行时不可用。  

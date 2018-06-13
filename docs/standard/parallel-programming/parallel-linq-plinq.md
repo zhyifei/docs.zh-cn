@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581376"
 ---
 # <a name="parallel-linq-plinq"></a>并行 LINQ (PLINQ)
 并行 LINQ (PLINQ) 是 LINQ to Objects 的并行实现。 PLINQ 将整套 LINQ 标准查询运算符实现为 <xref:System.Linq> 命名空间的扩展方法，并提供适用于并行操作的其他运算符。 PLINQ 将 LINQ 语法的简洁和可靠性与并行编程的强大功能结合在一起。 就像面向任务并行库的代码一样，PLINQ 查询会根据主计算机的能力按比例调整并发程度。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393940"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net 类的最佳实践
 以下建议有助于你充分利用 <xref:System.Net> 中包含的类：  

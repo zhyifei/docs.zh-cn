@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363925"
 ---
 # <a name="performing-recovery"></a>执行恢复
 资源管理器通过在资源失败之后重新登记事务参与者来促进事务中的持久登记的解决。  

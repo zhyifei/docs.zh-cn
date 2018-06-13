@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587327"
 ---
 # <a name="39lteventnamegt39-is-an-event-and-cannot-be-called-directly"></a>&#39;&lt;eventname&gt; &#39;是一种事件，并且不能直接调用
 <`eventname`> 是一种事件，并因此不能直接调用。 使用`RaiseEvent`语句以引发一个事件。  

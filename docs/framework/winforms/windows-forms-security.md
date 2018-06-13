@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542222"
 ---
 # <a name="windows-forms-security"></a>Windows 窗体安全
 Windows 窗体功能是基于代码的 （安全级别设置为代码，无论运行代码的用户） 的安全模型。 这是除了可能已在您的计算机系统中的任何安全架构。 其中可能包括浏览器 （如基于区域的安全在 Internet Explorer 中可用） 或操作系统 （例如 Windows NT 的凭据基于安全性） 中。  

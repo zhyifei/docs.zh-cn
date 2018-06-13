@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493886"
 ---
 # <a name="message-security-in-wcf"></a>WCF 中的消息安全
 Windows Communication Foundation (WCF) 有两种主要模式用于提供安全性 (`Transport`和`Message`) 和第三个模式 (`TransportWithMessageCredential`) 结合了这两者。 本主题讨论消息安全和使用它的原因。  

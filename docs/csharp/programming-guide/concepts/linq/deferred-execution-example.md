@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335921"
 ---
 # <a name="deferred-execution-example-c"></a>延迟执行示例 (C#)
 本主题演示延迟执行和迟缓计算如何影响 LINQ to XML 查询的执行。  

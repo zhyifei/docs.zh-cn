@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541572"
 ---
 # <a name="windows-forms-controls-by-function"></a>根据功能列出的 Windows 窗体控件
 Windows 窗体提供控件和执行的许多功能的组件。 下表列出的 Windows 窗体控件和组件根据常规函数。 此外，多个控件存在时，具有相同的功能，推荐的控件都列出它取代的控件有关的备注。 在随后的一个单独的表中，使用它们的建议替换项列出被取代的控件。  

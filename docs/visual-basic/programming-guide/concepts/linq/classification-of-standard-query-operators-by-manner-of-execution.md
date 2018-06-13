@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644000"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>按执行 (Visual Basic) 方式的标准查询运算符的分类
 标准查询运算符方法的 LINQ to Objects 实现主要通过两种方法之一执行：立即执行和延迟执行。 使用延迟执行的查询运算符可以进一步分为两种类别：流式处理和非流式处理。 如果你了解不同查询运算符的执行方式，则有助于理解从给定查询中获得的结果。 如果数据源是不断变化的，或者如果你要在另一个查询的基础上构建查询，这种帮助尤其明显。 本主题根据标准查询运算符的执行方式对其进行分类。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598419"
 ---
 # <a name="39lttypenamegt39-cannot-inherit-from-lttypegt-39ltbasetypenamegt39-because-it-expands-the-access-of-the-base-lttypegt-outside-the-assembly"></a>&#39;&lt;typename&gt; &#39;不能继承自&lt;类型&gt; &#39;&lt;基类型名称&gt;&#39;扩展基访问权限，因此&lt;类型&gt;程序集外部
 类或接口继承自的基类或接口，但是具有限制性较弱的访问级别。  

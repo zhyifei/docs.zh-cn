@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396102"
 ---
 # <a name="thread-pool-etw-events"></a>线程池 ETW 事件
 <a name="top"></a> 这些事件收集有关工作线程和 I/O 线程的信息。  

@@ -1,28 +1,15 @@
 ---
-title: "如何：使用 MMC 管理单元查看证书"
-ms.custom: 
+title: 如何：使用 MMC 管理单元查看证书
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 582eaef518e10acb4c4c356226ce0be24d1b4c35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d924121b9d9fa267fa7d1ada13c9dc5f5bf1523d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493345"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>如何：使用 MMC 管理单元查看证书
 凭据的一种常见类型是 X.509 证书。 在创建安全服务或客户端时，可以通过使用如 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 这样的方法来指定使用证书作为客户端或服务凭据。 该方法需要多个参数，如存储证书的存储位置和搜索证书时使用的值。 下面的过程演示如何检查计算机上的存储以查找相应的证书。 查找证书指纹的示例，请参阅[如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
@@ -35,11 +22,11 @@ ms.lasthandoff: 12/22/2017
   
 3.  上**文件**菜单上，单击**添加/删除管理单元中**。  
   
-4.  单击 **“添加”**。  
+4.  单击 **添加**。  
   
 5.  在**添加独立管理单元中**对话框中，选择**证书**。  
   
-6.  单击 **“添加”**。  
+6.  单击 **添加**。  
   
 7.  在**证书管理单元**对话框中，选择**计算机帐户**单击**下一步**。 或者，您可以选择**我的用户帐户**或**服务帐户**。 如果您不是计算机的管理员，则您只能管理您的用户帐户的证书。  
   
@@ -49,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 10. 上**添加/删除管理单元中**对话框中，单击**确定**。  
   
-11. 在**控制台根节点**窗口中，单击**证书 （本地计算机）**以查看证书存储的计算机。  
+11. 在**控制台根节点**窗口中，单击**证书 （本地计算机）** 以查看证书存储的计算机。  
   
 12. 可选。 若要查看您的帐户证书，请重复步骤 3 到步骤 6。 在步骤 7，而不是选择**计算机帐户**，单击**我的用户帐户**并重复执行步骤 8 到 10。  
   

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572091"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform 类的输出选项
 本主题讨论可用的 XSLT 输出选项。 可以在样式表中指定输出选项，或在 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法上指定输出选项。  

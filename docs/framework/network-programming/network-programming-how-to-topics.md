@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395351"
 ---
 # <a name="network-programming-how-to-topics"></a>网络编程操作说明主题
 以下列表包含指向网络编程概念文档中操作说明主题的链接。  

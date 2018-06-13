@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558052"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>通过创建 ControlTemplate 自定义现有控件的外观
 <a name="introduction"></a> A<xref:System.Windows.Controls.ControlTemplate>指定可视结构和控件的可视行为。 你可以提供一个新的 it，从而自定义控件的外观<xref:System.Windows.Controls.ControlTemplate>。 当你创建<xref:System.Windows.Controls.ControlTemplate>，而无需更改其功能替换现有的控件的外观。 例如，你可以使这些按钮在你的应用程序而不是默认的正方形形状，舍入，但仍将引发按钮<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583833"
 ---
 # <a name="bad-dll-calling-convention"></a>错误的 DLL 调用约定
 自变量传递给动态链接库 (DLL) 必须完全匹配所需要的例程。 调用约定处理数量、 类型和参数的顺序。 程序可能在错误的类型或数量的参数被传递的 DLL 中调用例程。  

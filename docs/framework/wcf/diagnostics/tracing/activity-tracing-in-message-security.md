@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474852"
 ---
 # <a name="activity-tracing-in-message-security"></a>消息安全中的活动跟踪
 本主题描述用于安全处理的活动跟踪，这些活动跟踪发生在以下三个阶段。  

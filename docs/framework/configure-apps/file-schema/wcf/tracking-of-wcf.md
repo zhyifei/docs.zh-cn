@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749314"
 ---
 # <a name="lttrackinggt-of-wcf"></a>WCF 的 &lt;tracking&gt;
 表示一个配置节，用于定义工作流服务的跟踪设置。  

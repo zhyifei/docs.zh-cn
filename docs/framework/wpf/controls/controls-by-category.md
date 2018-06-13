@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551994"
 ---
 # <a name="controls-by-category"></a>按类别分类的控件
 Windows Presentation Foundation (WPF) 控件可以进行逻辑分组为几个类别。 可以使用这些类别来为方案选择适当的控件，从而有助于查看具有相同用法模式或功能的控件。  

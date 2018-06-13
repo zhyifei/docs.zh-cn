@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353827"
 ---
 # <a name="count-the-number-of-elements-in-a-sequence"></a>对序列中元素的数目进行计数
 使用 <xref:System.Linq.Enumerable.Count%2A> 运算符可计算序列中的元素数目。  

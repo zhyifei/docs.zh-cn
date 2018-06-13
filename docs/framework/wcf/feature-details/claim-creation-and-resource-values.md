@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488047"
 ---
 # <a name="claim-creation-and-resource-values"></a>声明创建和资源值
 <xref:System.IdentityModel.Claims.Claim> 类提供了多种创建内置声明类型的实例的方法。 在这些方法中，以下方法不对提供的资源执行语义或格式检查：  

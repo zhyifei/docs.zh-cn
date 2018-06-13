@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580791"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>如何：使用 PLINQ 循环访问文件目录
 此示例展示了两种简单方法，以对文件目录平行执行操作。 第一个查询使用 <xref:System.IO.Directory.GetFiles%2A> 方法，在数组中填充目录和所有子目录中的文件名。 在整个数组填充完成前，此方法不会返回数组，所以可能会在操作开始时引入延迟。 不过，在填充数组后，PLINQ 可以非常快速地并行处理数组。  

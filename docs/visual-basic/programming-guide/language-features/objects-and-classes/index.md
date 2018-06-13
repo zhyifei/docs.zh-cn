@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655858"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的对象和类
 *对象*结合了可以视为一个单元的代码和数据。 对象可以是应用程序的一部分（如控件或窗体）， 也可以是整个应用程序。

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6236d6b5349a9c2a528a85559c0cbc02c8da381
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401711"
 ---
 # <a name="icordebugassemblygetcodebase-method"></a>ICorDebugAssembly::GetCodeBase 方法
 .NET Framework 的当前版本中未实现此方法。  

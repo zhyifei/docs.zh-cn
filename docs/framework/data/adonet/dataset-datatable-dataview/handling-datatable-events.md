@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760224"
 ---
 # <a name="handling-datatable-events"></a>处理数据表事件
 <xref:System.Data.DataTable> 对象提供一系列可以由应用程序处理的事件。 下表描述了 `DataTable` 事件。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651461"
 ---
 # <a name="array-conversions-visual-basic"></a>数组转换 (Visual Basic)
 可以将数组类型转换为另一个数组类型，但必须满足以下条件：  

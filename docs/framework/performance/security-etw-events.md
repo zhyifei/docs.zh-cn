@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395507"
 ---
 # <a name="security-etw-events"></a>安全 ETW 事件
 <a name="top"></a> 在强名称验证和验证码验证期间会引发安全事件。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541136"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows 窗体控件开发基础知识
 Windows 窗体控件是直接或间接派生自的类<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 以下列表描述用于开发 Windows 窗体控件的常见方案：  

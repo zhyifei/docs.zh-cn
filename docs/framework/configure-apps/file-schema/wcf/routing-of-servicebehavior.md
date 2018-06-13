@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750747"
 ---
 # <a name="ltroutinggt-of-ltservicebehaviorgt"></a>&lt;serviceBehavior&gt; 的 &lt;routing&gt;
 提供对路由服务的运行时访问以允许对路由配置进行动态修改。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599770"
 ---
 # <a name="add-failed-duplicate-key-value-supplied"></a>添加失败。 提供了重复的键值
 `Add` 操作失败，因为该键值等同于另一个键值。 键值必须是唯一的。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a810f3a25dc90ddb234c70ca3fa5130039350136
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438816"
 ---
 # <a name="ihostiocompletionmanagersetmaxthreads-method"></a>IHostIoCompletionManager::SetMaxThreads 方法
 将最大主机分配的线程数设置为服务输入/输出请求。  
@@ -54,11 +55,11 @@ HRESULT SetMaxThreads (
  `SetMaxThreads` CLR 提供了机会设置线程可供 I/O 端口上的服务请求的最大数目。 诸如实现、 性能或可伸缩性之类的原因，主机可能需要对的线程池大小的独有控制。 主机不为此，需要实现`SetMaxThreads`。 在这种情况下，主机应通过此方法返回 E_NOTIMPL。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

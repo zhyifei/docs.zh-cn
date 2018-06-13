@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528333"
 ---
 # <a name="vector-graphics-overview"></a>向量图形概述
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 坐标系统上绘制线条、 矩形和其他形状。 你可以选择使用不同的坐标系统，但默认坐标系统有原点左上角 x 轴指向右和向下 y 轴。 默认坐标系统中单位是度量的像素。  

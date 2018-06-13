@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595168"
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>无法发出程序集：&lt;错误消息&gt;
 Visual Basic 编译器使用创建程序集的发出阶段中报告错误链接器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。  

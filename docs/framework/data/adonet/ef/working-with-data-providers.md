@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765690"
 ---
 # <a name="working-with-data-providers"></a>使用数据提供程序
 本节中的主题介绍的服务和提供程序将对概念模型执行的查询转换为对实体框架所支持的数据源执行的本机查询。  

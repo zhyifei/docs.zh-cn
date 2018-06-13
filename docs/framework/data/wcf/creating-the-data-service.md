@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362830"
 ---
 # <a name="creating-the-data-service"></a>创建数据服务
 在此任务中，你将创建使用示例数据服务[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公开[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]基于 Northwind 示例数据库的源。 此任务涉及以下几个基本步骤：  

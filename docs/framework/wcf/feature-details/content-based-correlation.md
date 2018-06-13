@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494210"
 ---
 # <a name="content-based-correlation"></a>基于内容的相关性
 当工作流服务与客户端和其他服务通信时，交换的消息中通常包含一些数据，用于以唯一方式使消息和特定实例相关。 基于内容的相关使用消息中的此数据（如客户编号或订单 ID）将消息路由到正确的工作流实例。 本主题说明如何在工作流中使用基于内容的相关。  

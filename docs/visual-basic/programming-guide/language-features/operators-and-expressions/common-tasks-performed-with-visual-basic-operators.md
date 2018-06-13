@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654721"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>使用 Visual Basic 运算符执行的常规任务
 运算符执行许多常见的任务涉及一个或多个表达式调用*操作数*。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656160"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>隐式转换和显式转换 (Visual Basic)
 *隐式转换*不需要任何特殊的语法的源代码中。 在下面的示例中，Visual Basic 将隐式转换的值`k`为单精度浮点值之前将其分配给`q`。  

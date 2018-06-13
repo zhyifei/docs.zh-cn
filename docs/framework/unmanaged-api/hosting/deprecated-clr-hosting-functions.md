@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d86f9b4903663604094895f6747b1407ff98c990
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435859"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>弃用的 CLR 承载函数
 本部分介绍的托管 API 的早期版本使用的非托管全局静态函数。  

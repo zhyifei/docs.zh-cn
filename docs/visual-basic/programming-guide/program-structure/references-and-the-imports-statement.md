@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651845"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>引用和 Imports 语句 (Visual Basic)
 你可以向外部对象提供你的项目通过选择**添加引用**命令**项目**菜单。 在 Visual Basic 中的引用可以指向程序集，它们是与类似类型库但包含的详细信息。  

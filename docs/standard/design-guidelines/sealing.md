@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573730"
 ---
 # <a name="sealing"></a>密封
 面向对象的框架的功能之一是开发人员可以扩展和采用 framework designer 意料之外的方法来自定义它们。 这是设计的两个电源和可扩展的危险。 当您设计您的框架时，它是，因此，若要为扩展性仔细设计，当需要它时，以及限制扩展性危险时非常重要。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522010"
 ---
 # <a name="how-to-join-lines"></a>如何：联接线条
 线条联接是由其端点相交或重叠的两个行构成的常见区域。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供三种线条联接样式： 斜接、 凹凸效果，和舍入。 线段联接样式是的一个属性<xref:System.Drawing.Pen>类。 当指定的行联接样式<xref:System.Drawing.Pen>对象，联接样式，将应用于任何中所有连接的直线<xref:System.Drawing.Drawing2D.GraphicsPath>使用该笔绘制的对象。  

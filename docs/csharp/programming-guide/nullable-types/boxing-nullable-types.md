@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334751"
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>装箱可以为 null 的类型（C# 编程指南）
 基于可以为 null 的类型的对象仅在其不为 null 时才可装箱。 如果 <xref:System.Nullable%601.HasValue%2A> 为 `false`，则对象引用将分配给 `null` 而不是进行装箱。 例如:  

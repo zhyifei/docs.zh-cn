@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572978"
 ---
 # <a name="framework-design-guidelines"></a>框架设计准则
 本部分提供有关设计的库扩展且使用.NET Framework 进行交互的准则。 目的是帮助确保通过提供用于开发的编程语言无关的统一编程模型的 API 一致性和易于使用的库设计器。 我们建议你遵循这些设计准则，开发的类和扩展.NET Framework 的组件时。 不一致的库设计产生负面影响开发人员工作效率，并且不鼓励采用。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803590"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation 绑定
 绑定可指定 Windows Communication Foundation (WCF) 服务终结点与其他终结点的通信方式。 绑定最起码必须指定要使用的传输（如 HTTP 或 TCP）。 你还可以通过绑定来设置其他特征，如安全和事务支持。  

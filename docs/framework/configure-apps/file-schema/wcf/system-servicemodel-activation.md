@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748836"
 ---
 # <a name="ltsystemservicemodelactivationgt"></a>&lt;system.serviceModel.activation&gt;
 此配置节描述了 SMSvcHost.exe 工具的配置设置。 配置元素可在 SMSvcHost.exe.config 文件中配置。 具体地说，它包括计算机中所有必须配置的设置。  

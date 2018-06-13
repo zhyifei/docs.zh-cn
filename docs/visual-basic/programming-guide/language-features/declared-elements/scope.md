@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656290"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic 中的范围
 *作用域*的已声明的元素是一组的所有代码都可以引用它而无需限定其名称或提供通过[Imports 语句 （.NET Namespace 和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。 元素可在以下级别之一具有作用域：  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507569"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet 信息服务承载说明
 若要运行由 Internet 信息服务 (IIS) 承载的示例，必须确保 IIS 已正确安装且正在运行。  
@@ -131,7 +132,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  从**管理您的服务器**，单击**添加或删除角色**，然后单击**下一步**。  
   
-2.  选择**应用程序服务器 （IIS，ASP.NET）**从**服务器角色**列表，，然后单击**下一步**。  
+2.  选择**应用程序服务器 （IIS，ASP.NET）** 从**服务器角色**列表，，然后单击**下一步**。  
   
 3.  选择**启用 ASP.NET**复选框，并依次**下一步**。  
   

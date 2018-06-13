@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649199"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>如何：访问 XML 子元素 (Visual Basic)
 此示例演示如何使用子轴属性来访问某个 XML 元素中具有指定的名称的所有 XML 子元素。 具体而言，它使用<xref:System.Xml.Linq.XElement.Value%2A>属性集合中获取的第一个元素的值`name`子轴属性返回。 `name`子轴属性可获取名为的所有子元素`phone`中`contact`对象。 此示例还使用`phone`子轴属性来访问名为的所有子元素`phone`中包含`contact`对象。  

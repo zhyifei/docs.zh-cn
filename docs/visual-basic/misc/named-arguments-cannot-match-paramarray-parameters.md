@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636612"
 ---
 # <a name="named-arguments-cannot-match-paramarray-parameters"></a>命名参数无法匹配 ParamArray 参数
 必须通过值传递参数数组。  

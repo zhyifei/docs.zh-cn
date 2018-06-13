@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516300"
 ---
 # <a name="durable-delay-in-xamlx"></a>XAMLX 中的持久延迟
 此示例演示如何使用持久延迟，在持久延迟过程中，将把工作流保留到持久性设备。  

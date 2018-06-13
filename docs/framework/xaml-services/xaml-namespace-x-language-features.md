@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562210"
 ---
 # <a name="xaml-namespace-x-language-features"></a>XAML 命名空间 (x:) 语言功能
 ## <a name="in-this-section"></a>本节内容  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533723"
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>如何：调整 Windows 窗体标签控件大小以适应其内容
 Windows 窗体<xref:System.Windows.Forms.Label>控件均可以是单行或多行，并且它可以为固定大小，或可以自动调整自身大小以适应其标题。 <xref:System.Windows.Forms.Label.AutoSize%2A>属性可帮助你调整控件大小以适应更大或更小的标题，即如果标题将更改在运行时特别有用的大小。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579751"
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 实现微服务应用层
 

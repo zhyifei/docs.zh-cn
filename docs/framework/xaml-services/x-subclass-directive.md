@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566413"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass 指令
 修改 XAML 标记编译行为时`x:Class`还提供。 而不是创建分部类，其中基于`x:Class`，提供`x:Class`作为中间类，创建然后预计提供的派生的类基于`x:Class`。  

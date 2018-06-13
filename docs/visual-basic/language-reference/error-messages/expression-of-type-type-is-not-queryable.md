@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589004"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a>类型的表达式&lt;类型&gt;不可查询
 类型的表达式\<类型 > 不可查询。 请确保不缺少 LINQ 提供程序的程序集引用和/或命名空间导入。  

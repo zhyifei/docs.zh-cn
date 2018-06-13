@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508183"
 ---
 # <a name="service-identity-and-authentication"></a>服务标识和身份验证
 服务的*终结点标识*是从 Web 服务描述语言 (wsdl) 生成的值。 此值可传播到任何客户端，用于对服务进行身份验证。 在客户端启动与终结点的通信并且服务向客户端验证自己的身份之后，客户端将终结点标识值与终结点身份验证过程返回的实际值进行比较。 如果二者匹配，则客户端确信其已与预期的服务终结点联系。 此功能，以防*网络钓鱼*通过防止客户端重定向到由恶意服务承载的终结点。  

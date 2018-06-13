@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280086"
 ---
 # <a name="using-directive-c-reference"></a>using 指令（C# 参考）
 `using` 指令有三种用途：  

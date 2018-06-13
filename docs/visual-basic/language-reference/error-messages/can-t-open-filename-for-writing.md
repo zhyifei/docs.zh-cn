@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586531"
 ---
 # <a name="can39t-open-39ltfilenamegt39-for-writing"></a>可以&#39;t 打开&#39; &lt;filename&gt; &#39;以进行写入
 指定的文件无法打开以进行写入，可能因为已打开。  

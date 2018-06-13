@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597355"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
 指定过程参数是一个指定类型的元素的可选数组。 `ParamArray` 可以仅在参数列表的最后一个参数上使用。  

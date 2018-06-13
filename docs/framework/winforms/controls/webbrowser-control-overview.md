@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540987"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser 控件概述
 <xref:System.Windows.Forms.WebBrowser>控件 WebBrowser ActiveX 控件提供托管的包装。 托管的包装便可以在 Windows 窗体客户端应用程序中显示网页。 你可以使用<xref:System.Windows.Forms.WebBrowser>控件重复中你的应用程序或你的 Internet Explorer Web 浏览功能可以禁用默认 Internet 资源管理器功能和控件用作简单的 HTML 文档查看器。 你可以使用控件以将基于 DHTML 的用户界面元素添加到你的窗体和隐藏它们是否承载在事实<xref:System.Windows.Forms.WebBrowser>控件。 这种方法，可以无缝组合与单个应用程序中的 Windows 窗体控件的 Web 控件。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399589"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe（全局程序集缓存工具）
 全局程序集缓存工具使你可以查看和操作全局程序集缓存和下载缓存的内容。  

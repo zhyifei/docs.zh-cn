@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806177"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>如何：使用独立的 X.509 证书进行签名和加密
 本主题演示如何配置 Windows Communication Foundation (WCF) 以使用不同的证书的客户端和服务上进行消息签名和加密。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588062"
 ---
 # <a name="const-directive"></a>#Const 指令
 适用于 Visual Basic 中定义条件编译器常数。  

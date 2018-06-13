@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540091"
 ---
 # <a name="events-overview-windows-forms"></a>事件概述（Windows 窗体）
 事件是可以通过代码响应或“处理”的操作。 事件可由用户操作（例如单击鼠标或按某个键）、程序代码或系统生成。  

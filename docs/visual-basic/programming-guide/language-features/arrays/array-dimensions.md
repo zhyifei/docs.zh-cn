@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651751"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 A*维度*是在其中您可以改变数组的元素的规范方向。 保存总销量，每月的每一天的数组具有一个维度 （每月天数）。 保存总销量由部门的每一天的月份的数组具有两个维度 （部门数和每月天数）。 调用的维数的数组具有其*级别*。  

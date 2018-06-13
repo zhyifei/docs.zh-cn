@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6a36f9b54ce7ac6a0a5a22b33a4d07150a96f40b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452538"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 函数
 通知探查器正在将控件传递给函数，并提供一个句柄，可以传递给[icorprofilerinfo3:: Getfunctionenter3info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)检索堆栈帧和函数自变量。  
@@ -56,7 +57,7 @@ void __stdcall FunctionEnter3WithInfo(
  `FunctionEnter3WithInfo`函数不得调入托管代码或以任何方式导致托管的内存分配。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
   

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269163"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc（C# 参考）
 在不安全代码上下文中使用 `stackalloc` 关键字在堆栈上分配内存块。

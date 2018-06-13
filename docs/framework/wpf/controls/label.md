@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553723"
 ---
 # <a name="label"></a>Label
 <xref:System.Windows.Controls.Label> 控件通常提供中的信息[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  从历史上看，<xref:System.Windows.Controls.Label>具有包含纯文本，但是，由于<xref:System.Windows.Controls.Label>附带[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]是<xref:System.Windows.Controls.ContentControl>，它可以包含文本或<xref:System.Windows.UIElement>。  

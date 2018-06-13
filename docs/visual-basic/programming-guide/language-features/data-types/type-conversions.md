@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647173"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic 中的类型转换
 值从一种数据类型更改为另一种类型的过程称为*转换*。 转换都是*扩大*或*收缩*，取决于涉及的类型的数据容量。 它们也是*隐式*或*显式*，具体的源代码中的语法取决于。  

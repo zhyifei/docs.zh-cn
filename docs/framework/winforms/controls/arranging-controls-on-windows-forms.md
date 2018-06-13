@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527308"
 ---
 # <a name="arranging-controls-on-windows-forms"></a>排列 Windows 窗体上的控件
 通过在窗体上以各种方式放置和操作控件，可以为用户创建直观且实用的用户界面。  

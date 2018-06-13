@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498005"
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF Web HTTP 编程模型
 Windows Communication Foundation (WCF) Web HTTP 编程模型允许开发人员公开向非 SOAP 终结点的 WCF 服务操作。 本节中的主题详细研究此功能。  

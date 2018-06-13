@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806908"
 ---
 # <a name="virtual-directory-setup-instructions"></a>虚拟目录设置说明
 Windows Communication Foundation (WCF) 示例用于共享名为将映射到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 文件夹的 servicemodelsamples 的公共虚拟目录。  
@@ -109,7 +110,7 @@ Windows Communication Foundation (WCF) 示例用于共享名为将映射到 %Sys
   
 8.  单击**立即查找**。 此操作将用与本地计算机关联的对象填充搜索结果。  
   
-9. 查找**IIS_IUSRS**中的条目**名称 （相对可分辨名称）**列。 选择该条目并单击**确定**关闭搜索结果窗口。  
+9. 查找**IIS_IUSRS**中的条目**名称 （相对可分辨名称）** 列。 选择该条目并单击**确定**关闭搜索结果窗口。  
   
 10. 单击**确定**关闭**选择用户或组**窗口。  
   

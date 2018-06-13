@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759018"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter 数据表和 DataColumn 映射
 A **DataAdapter**包含零个或多集合<xref:System.Data.Common.DataTableMapping>对象在其**TableMappings**属性。 A **DataTableMapping**提供从针对数据源，查询返回的数据之间的主映射和<xref:System.Data.DataTable>。 **DataTableMapping**名称可以代替了传递**DataTable**名称到**填充**方法**DataAdapter**。 下面的示例创建**DataTableMapping**名为**AuthorsMapping**为**作者**表。  
@@ -77,7 +78,7 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 > [!NOTE]
->  如果没有为列映射提供源列名称或者没有为表映射提供源表名称，则将自动生成默认名称。 如果为列映射提供没有源列，则列映射提供递增的默认名称的**SourceColumn** *N，*开头**SourceColumn1**。 如果为表映射提供没有源表名称，则表映射提供递增的默认名称的**SourceTable** *N*，第一页为**SourceTable1**。  
+>  如果没有为列映射提供源列名称或者没有为表映射提供源表名称，则将自动生成默认名称。 如果为列映射提供没有源列，则列映射提供递增的默认名称的**SourceColumn** *N，* 开头**SourceColumn1**。 如果为表映射提供没有源表名称，则表映射提供递增的默认名称的**SourceTable** *N*，第一页为**SourceTable1**。  
   
 > [!NOTE]
 >  我们建议你避免的命名约定**SourceColumn** *N*为列映射，或**SourceTable** *N*表映射，因为所提供的名称可能与中的现有默认列映射名称冲突**ColumnMappingCollection**或中的表映射名称**DataTableMappingCollection**. 如果提供的名称已经存在，将引发异常。  

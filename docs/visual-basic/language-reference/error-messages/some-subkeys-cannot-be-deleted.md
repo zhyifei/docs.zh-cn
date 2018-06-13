@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594788"
 ---
 # <a name="some-subkeys-cannot-be-deleted"></a>无法删除某些子项
 尝试删除注册表项，但操作失败，因为无法删除某些子项。 通常这是由于缺少权限。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 56a9b97f37240e385dbd1788bafea62578d687a7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457862"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 函数
 返回有关指定的类型库的信息通过检查其[TLIBATTR](https://msdn.microsoft.com/library/ms221376\(v=vs.85\).aspx)结构。  
@@ -63,7 +64,7 @@ HRESULT GetTypeLibInfo(
  如果任何参数为 null，则该函数将返回`HRESULT`的`E_POINTER`。 否则，它将返回 `S_OK`。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** TlbRef.h  
   

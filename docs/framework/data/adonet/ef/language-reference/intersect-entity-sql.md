@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761527"
 ---
 # <a name="intersect-entity-sql"></a>INTERSECT (Entity SQL)
 返回 INTERSECT 操作数左右两边的两个查询表达式均返回的所有非重复值的集合。 所有表达式都必须与 `expression`一样属于同一类型或属于公共基类型或派生类型。  

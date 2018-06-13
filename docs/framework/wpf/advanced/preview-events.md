@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546131"
 ---
 # <a name="preview-events"></a>预览事件
 预览事件，也称为隧道事件，是路由的事件的路由的方向从应用程序根的元素，引发事件并报告为事件数据中的源的传输其中。 并非所有事件方案支持或要求预览事件;本主题介绍其中预览事件存在时，应用程序或组件应如何处理它们，情况和采用的情况下可能适合在自定义组件或类中创建预览事件。  

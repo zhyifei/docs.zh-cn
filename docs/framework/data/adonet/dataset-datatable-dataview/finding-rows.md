@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760877"
 ---
 # <a name="finding-rows"></a>查找行
 可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法，根据排序关键字值搜索行。 中值的区分大小写的搜索**查找**和**FindRows**方法由**CaseSensitive**基础属性<xref:System.Data.DataTable>。 搜索值必须完全匹配现有排序关键字值才能返回结果。  

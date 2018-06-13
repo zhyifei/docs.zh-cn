@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360695"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>如何：将信息作为只读信息检索
 当您不打算更改数据时，您可以通过设法产生只读结果来提高查询性能。  

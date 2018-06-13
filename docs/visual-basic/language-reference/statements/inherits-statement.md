@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604336"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 使当前类或接口继承自另一个类或接口组的属性、 变量、 属性、 过程和事件。  

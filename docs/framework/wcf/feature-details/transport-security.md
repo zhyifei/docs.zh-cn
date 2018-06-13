@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498210"
 ---
 # <a name="transport-security"></a>传输安全
 传输安全中 Windows Communication Foundation (WCF) 取决于所选的绑定。 绑定所实现的传输决定实际的安全机制。 本节中的主题说明所实现的机制及其选项。  

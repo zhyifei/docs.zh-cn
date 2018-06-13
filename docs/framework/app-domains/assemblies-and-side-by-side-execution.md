@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752138"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>程序集和并行执行
 并行执行是在同一台计算机上存储和执行应用程序或组件的多个版本的能力。 这意味着在同一台计算机上可以同时有运行时的多个版本，并且可以有使用其中某个运行时版本的应用程序和组件的多个版本。 并行执行使您能够更多地控制应用程序绑定到的组件版本和应用程序使用的运行时版本。  

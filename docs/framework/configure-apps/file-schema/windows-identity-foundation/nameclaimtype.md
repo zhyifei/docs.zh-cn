@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755092"
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 设置指定的声明类型<xref:System.Security.Principal.IIdentity.Name%2A>属性。 声明类型用于搜索<xref:System.Security.Claims.Claim>的集合中<xref:System.Security.Claims.ClaimsIdentity>返回的对象<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>此令牌处理程序方法。 然后，将匹配声明的值设置为的名称<xref:System.Security.Principal.IIdentity>生成从此令牌处理程序。  

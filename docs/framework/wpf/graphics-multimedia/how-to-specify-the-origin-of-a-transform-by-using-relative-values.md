@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561402"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>如何：使用相对值指定变换原点
 此示例演示如何使用相对的值来指定的源的<xref:System.Windows.UIElement.RenderTransform%2A>，可应用于<xref:System.Windows.FrameworkElement>。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549167"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>演练：本地化混合应用程序
 本演练演示如何以本地化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的元素[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-基于混合应用程序。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/04/2018
   
 8.  在解决方案资源管理器，右键单击**LocalizingWpfInWf**单击**卸载项目**。  
   
-     项目名称标记为**（不可用）**。  
+     项目名称标记为 **（不可用）**。  
   
 9. 右键单击**LocalizingWpfInWf**，然后单击**编辑 LocalizingWpfInWf.csproj**。  
   

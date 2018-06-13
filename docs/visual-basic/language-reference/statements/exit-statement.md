@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605272"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit 语句 (Visual Basic)
 退出的过程或块，并立即将控制权转交给过程调用或块定义后面的语句。  

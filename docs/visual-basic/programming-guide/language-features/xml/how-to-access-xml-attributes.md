@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649027"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>如何：访问 XML 特性 (Visual Basic)
 此示例演示如何使用特性轴属性按名称访问在一个 XML 元素的 XML 属性。 具体而言，它使用`type`特性轴属性来访问命名的属性`type`中`phone`对象。  

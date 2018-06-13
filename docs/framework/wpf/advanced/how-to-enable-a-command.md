@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545277"
 ---
 # <a name="how-to-enable-a-command"></a>如何：启用命令
 下面的示例演示如何使用命令在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  该示例演示如何将相关联<xref:System.Windows.Input.RoutedCommand>到<xref:System.Windows.Controls.Button>，创建<xref:System.Windows.Input.CommandBinding>，并创建的事件处理程序实现<xref:System.Windows.Input.RoutedCommand>。  有关命令的详细信息，请参阅[命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)。  

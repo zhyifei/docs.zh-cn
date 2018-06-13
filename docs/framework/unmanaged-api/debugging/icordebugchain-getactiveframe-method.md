@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a104d4d3cc74a6c1cb343818c9b0b3e8978b97df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402794"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>ICorDebugChain::GetActiveFrame 方法
 获取活动 (即，最新) 链上的帧。  
@@ -44,7 +45,7 @@ HRESULT GetActiveFrame (
  如果活动帧不可用，则调用将成功和`ppFrame`将为 null。 活动帧将不可用为链由于 CHAIN_ENTER_UNMANAGED，启动和为启动 CHAIN_CLASS_INIT 由于某些链。 请参阅 CorDebugChainReason 枚举。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

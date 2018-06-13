@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 06601b1aa675dd9ecf023a9f83d881ba1591ac52
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454468"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>ICorProfilerInfo::ForceGC 方法
 强制进行垃圾回收在公共语言运行时 (CLR) 内执行。  
@@ -36,7 +37,7 @@ HRESULT ForceGC();
  `ForceGC`必须只从线程的从未运行托管的代码和其堆栈上没有任何探查器回调调用方法。 最方便的实现是创建一个单独的线程调用的探查器内部`ForceGC`时发出信号。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

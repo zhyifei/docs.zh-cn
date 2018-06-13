@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650210"
 ---
 # <a name="recursive-procedures-visual-basic"></a>递归过程 (Visual Basic)
 A*递归*过程是指调用自身。 一般情况下，这不是编写 Visual Basic 代码的最有效方法。  

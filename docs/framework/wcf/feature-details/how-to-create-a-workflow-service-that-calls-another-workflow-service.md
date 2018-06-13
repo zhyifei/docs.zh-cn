@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497186"
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>如何：创建可调用其他工作流服务的工作流服务
 有时，一个工作流服务必须从另一个工作流服务中获取信息。  本主题演示如何从一个工作流服务调用另一个工作流服务。 本主题中，我们将创建两个工作流服务：一个服务具有可反转输入字符串的方法，另一个服务在反转使用第一个服务的字符串后，将输入字符串转换为大写。  

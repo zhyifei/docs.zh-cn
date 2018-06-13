@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526290"
 ---
 # <a name="how-to-validate-application-settings"></a>如何：验证应用程序设置
 本主题演示如何在保留应用程序设置前先验证它们。  

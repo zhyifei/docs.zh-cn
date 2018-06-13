@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644841"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>示例 XML 文件：合并的采购订单
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件是一组来自多家公司、具有不同形状的采购订单。 每家公司的采购订单位于单独的命名空间中。  

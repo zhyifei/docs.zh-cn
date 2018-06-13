@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539820"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>将设计器与 Windows 窗体 DataGridView 控件结合使用
 Visual Studio 提供了有关的设计器支持`DataGridView`使您可以执行许多设置任务而无需编写代码的控件。 这些任务包括的绑定到修改列的数据源控件用于显示数据，并调整的外观和基本行为的控件。  

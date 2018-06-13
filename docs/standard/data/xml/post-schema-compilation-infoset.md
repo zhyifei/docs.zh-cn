@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569624"
 ---
 # <a name="post-schema-compilation-infoset"></a>后架构编译信息集
 [万维网联合会 (W3C) XML 架构建议](https://www.w3.org/XML/Schema)介绍了必须公开的架构验证前和架构编译后信息集。 XML 架构对象模型 (SOM) 在调用 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法之前或之后查看此信息集。  

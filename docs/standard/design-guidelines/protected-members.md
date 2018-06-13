@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571073"
 ---
 # <a name="protected-members"></a>受保护的成员
 受保护的成员本身不提供任何可扩展性，但它们可以使通过子类化的扩展性功能更强大。 它们可以用于公开高级自定义选项，而不必要地并发的主要公共接口。  

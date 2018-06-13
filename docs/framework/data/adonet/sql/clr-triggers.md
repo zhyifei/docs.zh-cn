@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352859"
 ---
 # <a name="clr-triggers"></a>CLR 触发器
 触发器是在语言事件执行时自动运行的一种特殊类型的存储过程。 因为 Microsoft SQL Server 与 .NET Framework 公共语言运行库 (CLR) 相集成，所以您可以使用任何 .NET Framework 语言创建 CLR 触发器。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565358"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 内部 XAML 类型
 可实现的 XAML 生产中的 XML 数据岛的放置。 中的 XML 元素`x:XData`好像它们是充当默认 XAML 命名空间的一部分或任何其他 XAML 命名空间不应由 XAML 处理器处理。 `x:XData` 可以包含任意格式正确的 XML。  

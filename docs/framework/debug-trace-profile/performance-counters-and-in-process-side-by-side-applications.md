@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392013"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>性能计数器和进程内并行应用程序
 使用性能监视器 (Perfmon.exe) 有可能在每个运行时基础上区分性能计数器。 本主题介绍启用此功能所需的注册表更改。  

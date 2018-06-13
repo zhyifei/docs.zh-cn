@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489393"
 ---
 # <a name="hosting"></a>宿主
 本节中的主题介绍服务承载。 可以承载服务，通过 Internet 信息服务 (IIS)、 Windows 进程激活服务 (WAS)、 Windows Server AppFabric、 Windows 服务，或托管的应用程序-此选项通常称为*自承载*。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647828"
 ---
 # <a name="thread-pooling-visual-basic"></a>线程池 (Visual Basic)
 线程池是可用于在后台执行多种任务的线程集合。 (请参阅[线程处理 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/threading/index.md)有关背景信息。)这使主线程可以自由地异步执行其他任务。  

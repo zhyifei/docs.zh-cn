@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597143"
 ---
 # <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>键入的&#39; &lt;variablename&gt; &#39;无法推断，因为循环边界和步骤变量未扩大到同一类型
 在编写完`For...Next`循环在其中编译器无法推断 for 循环控制变量的数据类型因为满足以下条件：  

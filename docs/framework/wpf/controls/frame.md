@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552040"
 ---
 # <a name="frame"></a>Frame
 <xref:System.Windows.Controls.Frame>控件支持在内容中的内容导航。 <xref:System.Windows.Controls.Frame> 可以通过类似的根元素承载<xref:System.Windows.Window>， <xref:System.Windows.Navigation.NavigationWindow>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Controls.UserControl>， <xref:System.Windows.Documents.FlowDocument>，或作为一个安全岛属于根元素的内容树中。  

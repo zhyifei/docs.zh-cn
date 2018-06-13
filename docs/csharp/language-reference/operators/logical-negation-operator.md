@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273918"
 ---
 # <a name="-operator-c-reference"></a>! 运算符（C# 参考）
 逻辑非运算符 (`!`) 是一种否定其操作数的一元运算符。 它针对 `bool` 定义，当且仅当其操作数为 `false` 时返回 `true`。  

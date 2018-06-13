@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758149"
 ---
 # <a name="connection-events"></a>连接事件
 所有.NET Framework 数据提供程序具有**连接**有从数据源中检索信息性消息，或以确定是否可以使用的两个事件的对象的状态**连接**具有更改。 下表说明的事件**连接**对象。  

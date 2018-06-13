@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533430"
 ---
 # <a name="how-to-use-toolstrippanels-for-mdi"></a>如何：在 MDI 中使用 ToolStripPanel
 <xref:System.Windows.Forms.ToolStripPanel> 通过使用 <xref:System.Windows.Forms.ToolStripPanel.Join%2A> 方法为多文档界面 (MDI) 应用程序提供了灵活性。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354234"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>如何：处理查询中的复合键
 有些运算符只能带一个自变量。 如果你的自变量必须包含数据库中的多个列，则你必须创建一个匿名类型来表示这种组合。  

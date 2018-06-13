@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511925"
 ---
 # <a name="connection-string-and-connection-string-name"></a>连接字符串和连接字符串名称
 **连接字符串**属性指定 SQL 工作流实例存储应使用以连接到持久性数据库的连接字符串。 此参数为可选参数。 **连接字符串名称**属性指定 SQL 工作流实例存储应使用以连接到持久性数据库的已命名的连接字符串的名称。 此参数为可选参数。 你应指定连接字符串名称属性或连接字符串属性的值，如果你不想要使用默认命名连接字符串的 SQL 工作流实例存储区**DefaultSqlWorkflowInstanceStoreConnectionString**.

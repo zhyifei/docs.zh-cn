@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803687"
 ---
 # <a name="basic-programming-lifecycle"></a>基本编程生命周期
 Windows Communication Foundation (WCF) 使应用程序通报它们是在同一计算机上分布在 Internet 上还是在不同的应用程序平台上。 本主题概述了生成 WCF 应用程序所需的任务。 有关工作示例应用程序，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560872"
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>如何：绘制带有线性渐变的区域
 此示例演示如何使用<xref:System.Windows.Media.LinearGradientBrush>类，以使用线性渐变绘制区域。 在下面的示例中，<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>用黄色从过渡到红色以蓝色和浅绿色对角线方向线性渐变绘制。  

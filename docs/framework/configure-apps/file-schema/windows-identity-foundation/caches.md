@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755209"
 ---
 # <a name="ltcachesgt"></a>&lt;缓存&gt;
 注册用于会话令牌和令牌重放检测的缓存。  

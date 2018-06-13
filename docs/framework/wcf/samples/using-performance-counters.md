@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807314"
 ---
 # <a name="using-performance-counters"></a>使用性能计数器
 此示例演示如何访问 Windows Communication Foundation (WCF) 性能计数器以及如何创建用户定义的性能计数器。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/07/2018
   
 ### <a name="to-view-performance-data"></a>查看性能数据  
   
-1.  通过单击启动性能监视器工具**启动**，**运行...**，输入`perfmon`单击**确定，**或者从控制面板中，选择**管理工具**双击**性能**。  
+1.  通过单击启动性能监视器工具**启动**，**运行...**，输入`perfmon`单击**确定，** 或者从控制面板中，选择**管理工具**双击**性能**。  
   
     > [!NOTE]
     >  在示例代码运行之前无法添加计数器。  

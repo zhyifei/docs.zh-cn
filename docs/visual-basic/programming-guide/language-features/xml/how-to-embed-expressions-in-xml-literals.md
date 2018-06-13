@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652264"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>如何：在 XML 文本中嵌入表达式 (Visual Basic)
 可以将 XML 文本与嵌入的表达式来创建 XML 文档、 片段中或包含在运行时创建的内容的元素结合起来。 下面的示例演示如何使用嵌入式的表达式可以在运行时填充元素内容、 属性和元素名称。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410450"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 和 WSTrustChannel
 如果已熟悉 Windows Communication Foundation (WCF)，便知道 WCF 客户端已可感知联合。 通过使用 <xref:System.ServiceModel.WSFederationHttpBinding> 或相似的自定义绑定配置 WCF 客户端，便可对服务启用联合身份验证。  

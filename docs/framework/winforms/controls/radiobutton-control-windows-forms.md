@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534962"
 ---
 # <a name="radiobutton-control-windows-forms"></a>RadioButton 控件（Windows 窗体）
 Windows 窗体`RadioButton`控件向用户显示一组两个或多个互相排斥的选择。 尽管单选按钮和复选框可能看起来作用类似，但还有一项重大差异： 当用户选择一个单选按钮时，不能也选择同一组中的其他单选按钮。  

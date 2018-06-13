@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397710"
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>如何使用 WebRequest 类请求数据
 以下过程描述从服务器请求资源（如 Web 页或文件）所需的步骤。 资源必须由 URI 标识。  

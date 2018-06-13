@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491925"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>如何：创建双工协定
 本主题演示了创建使用双工（双向）协定的方法所需的基本步骤。 双工协定使得客户端和服务器可以独立地相互通信，这样双方都可以启动对另一方的呼叫。 双工协定是可用于 Windows Communication Foundation (WCF) 服务的三种消息模式之一。 另外两种消息模式是单向模式和请求-答复模式。 双工协定由客户端和服务器之间的两个单向协定组成，并且不需要方法调用是相关的。 当服务必须向客户端查询更多信息或在客户端上显式引发事件时，使用这种协定。 有关创建双工协定的客户端应用程序的详细信息，请参阅[如何： 使用双工协定访问服务](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。 有关工作示例，请参阅[双工](../../../../docs/framework/wcf/samples/duplex.md)示例。  

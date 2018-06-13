@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591416"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 数据类型 (Visual Basic)
 

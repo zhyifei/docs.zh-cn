@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7d280cd20b8ff76efe977983e3e9f6da32990c8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413954"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip 方法
 将光标向前移动在枚举中指定数目的项。  
@@ -39,7 +40,7 @@ HRESULT Skip (
  [in]向前移动光标所依据的项的数目。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

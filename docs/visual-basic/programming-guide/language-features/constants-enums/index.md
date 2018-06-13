@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646378"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic 中的常量和枚举
 常量是使用有意义的名称代替不会发生更改的值的方法。 顾名思义，常量存储在应用程序的执行过程中保持不变的值。 可以使用常量提供有意义的名称（而非数字），提高代码的可读性。  

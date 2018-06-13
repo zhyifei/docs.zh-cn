@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494109"
 ---
 # <a name="hosting-in-internet-information-services"></a>在 Internet 信息服务中承载
 承载 Windows Communication Foundation (WCF) 服务的一个选项是在 Internet 信息服务 (IIS) 应用程序内。 此承载模型与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 ASP.NET Web 服务 (ASMX) 使用的模型类似。  

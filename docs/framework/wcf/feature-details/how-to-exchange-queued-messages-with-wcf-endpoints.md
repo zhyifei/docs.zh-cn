@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494652"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>如何：使用 WCF 终结点交换排队消息
 队列确保可靠消息传递会发生之间客户端和 Windows Communication Foundation (WCF) 服务，即使服务通信时不可用。 下面的过程演示如何实现 WCF 服务时，客户端和服务使用标准之间的持久性通信排队绑定确保。  

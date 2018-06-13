@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471464"
 ---
 # <a name="queue-dropped-messages-per-second"></a>每秒丢弃的排队消息数
 计数器名称：Queued Messages Dropped Per Second（每秒丢弃的排队消息数）。  

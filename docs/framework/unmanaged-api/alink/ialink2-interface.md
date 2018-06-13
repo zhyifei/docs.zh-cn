@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ddc2f50b42ba8adf7aa5f4d7fa0dc68469e7344
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408456"
 ---
 # <a name="ialink2-interface"></a>IALink2 接口
 补充[IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)通过声明如运行较新的元数据接口的方法[IMetaDataEmit2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)。 此外，IALink2 声明通过原始 IALink 接口提供其他使用灵活的方法。  

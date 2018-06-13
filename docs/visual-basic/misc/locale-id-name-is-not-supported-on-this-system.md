@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636495"
 ---
 # <a name="locale-id-39ltnamegt39-is-not-supported-on-this-system"></a>区域设置 ID &#39;&lt;名称&gt;&#39;不支持此系统上
 你尝试使用 `VbStrConv`，但你的系统不支持指定的区域设置。  

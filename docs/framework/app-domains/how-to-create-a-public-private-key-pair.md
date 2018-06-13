@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741745"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>如何：创建公钥/私钥对
 若要使用强名称为程序集签名，必须具有公钥/私钥对。 这一对加密的公钥和私钥用于在编译过程中创建强名称程序集。 可以使用[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 创建密钥对。 密钥对文件通常具有 .snk 扩展名。  

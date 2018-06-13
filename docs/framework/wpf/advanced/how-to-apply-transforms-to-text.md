@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544917"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>如何：向文本应用变换
 应用变换可以改变应用程序中文本的显示。 下面的示例使用不同类型的呈现转换来影响中的文本显示<xref:System.Windows.Controls.TextBlock>控件。  

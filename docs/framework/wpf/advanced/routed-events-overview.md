@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549758"
 ---
 # <a name="routed-events-overview"></a>路由事件概述
 本主题描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主题定义路由事件术语、描述路由事件如何通过元素树来路由、概述如何处理路由事件，并介绍如何创建你自己的自定义路由事件。
@@ -57,14 +58,14 @@ ms.lasthandoff: 05/04/2018
   
  **控件的撰写和封装：**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的各个控件都有一个丰富的内容模型。 例如，你可以在其中放置内的映像<xref:System.Windows.Controls.Button>，这会有效地扩展按钮的可视化树。 但是，添加的映像必须不中断的命中测试行为导致一个按钮，以响应<xref:System.Windows.Controls.Primitives.ButtonBase.Click>其内容，即使用户单击从技术上讲映像的一部分的像素。  
   
- **单一处理程序附加点：**在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 中，必须多次附加同一个处理程序，才能处理从多个元素引发的事件。 借助路由事件，可以只附加该处理程序一次（如上例中所示），并在必要时使用处理程序逻辑来确定该事件的源位置。 例如，这可以是前面显示的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的处理程序：  
+ **单一处理程序附加点：** 在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 中，必须多次附加同一个处理程序，才能处理从多个元素引发的事件。 借助路由事件，可以只附加该处理程序一次（如上例中所示），并在必要时使用处理程序逻辑来确定该事件的源位置。 例如，这可以是前面显示的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的处理程序：  
   
  [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
  [!code-vb[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
   
- **类处理：**路由事件允许使用由类定义的静态处理程序。 此类处理程序能够抢在任何附加的实例处理程序之前处理事件。  
+ **类处理：** 路由事件允许使用由类定义的静态处理程序。 此类处理程序能够抢在任何附加的实例处理程序之前处理事件。  
   
- **引用事件，而不反射：**某些代码和标记技术需要能标识特定事件的方法。 路由的事件创建<xref:System.Windows.RoutedEvent>字段作为标识符，它提供一种可靠的事件标识技术，不需要静态或运行时反射。  
+ **引用事件，而不反射：** 某些代码和标记技术需要能标识特定事件的方法。 路由的事件创建<xref:System.Windows.RoutedEvent>字段作为标识符，它提供一种可靠的事件标识技术，不需要静态或运行时反射。  
   
 ### <a name="how-routed-events-are-implemented"></a>路由事件的实现方式  
  路由的事件是[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]由的实例支持的事件<xref:System.Windows.RoutedEvent>类并注册[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系统。 <xref:System.Windows.RoutedEvent>从注册中获取的实例通常保留为`public` `static` `readonly`字段成员的类的注册，并因此"拥有"的路由的事件。 与同名 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件（有时称为“包装器”事件）的连接是通过替代 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件的 `add` 和 `remove` 实现来完成的。 通常，`add` 和 `remove` 保留为隐式默认值，该默认值使用特定于语言的相应事件语法来添加和删除该事件的处理程序。 路由的事件后备和连接机制是从概念上讲类似于依赖项属性的是如何[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]由支持的属性<xref:System.Windows.DependencyProperty>类并注册[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]属性系统。  
@@ -85,11 +86,11 @@ ms.lasthandoff: 05/04/2018
 ## <a name="routing-strategies"></a>路由策略  
  路由事件使用以下三种路由策略之一：  
   
--   **浮升：**调用事件源上的事件处理程序。 路由事件随后会路由到后续的父级元素，直到到达元素树的根。 大多数路由事件都使用浮升路由策略。 浮升路由事件通常用于报告来自不同控件或其他 UI 元素的输入或状态变化。  
+-   **浮升：** 调用事件源上的事件处理程序。 路由事件随后会路由到后续的父级元素，直到到达元素树的根。 大多数路由事件都使用浮升路由策略。 浮升路由事件通常用于报告来自不同控件或其他 UI 元素的输入或状态变化。  
   
--   **直接：**只有源元素本身才有机会调用处理程序以进行响应。 这与 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 用于事件的“路由”相似。 但是，与标准不同[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件，直接路由的事件支持类处理 （类处理下一节中说明），并且可以用于通过<xref:System.Windows.EventSetter>和<xref:System.Windows.EventTrigger>。  
+-   **直接：** 只有源元素本身才有机会调用处理程序以进行响应。 这与 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 用于事件的“路由”相似。 但是，与标准不同[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件，直接路由的事件支持类处理 （类处理下一节中说明），并且可以用于通过<xref:System.Windows.EventSetter>和<xref:System.Windows.EventTrigger>。  
   
--   **隧道：**最初将调用元素树的根处的事件处理程序。 随后，路由事件将朝着路由事件的源节点元素（即引发路由事件的元素）方向，沿路由线路传播到后续的子元素。 合成控件的过程中通常会使用或处理隧道路由事件，通过这种方式，可以有意地禁止复合部件中的事件，或者将其替换为特定于整个控件的事件。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的输入事件通常是以隧道/浮升对实现的。 隧道事件有时又称作预览事件，这是由该对所使用的命名约定决定的。  
+-   **隧道：** 最初将调用元素树的根处的事件处理程序。 随后，路由事件将朝着路由事件的源节点元素（即引发路由事件的元素）方向，沿路由线路传播到后续的子元素。 合成控件的过程中通常会使用或处理隧道路由事件，通过这种方式，可以有意地禁止复合部件中的事件，或者将其替换为特定于整个控件的事件。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的输入事件通常是以隧道/浮升对实现的。 隧道事件有时又称作预览事件，这是由该对所使用的命名约定决定的。  
   
 <a name="why_use"></a>   
 ## <a name="why-use-routed-events"></a>为什么使用路由事件？  

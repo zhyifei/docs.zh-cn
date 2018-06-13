@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584587"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>自动化操作期间未找到文件名或类名 (Visual Basic)
 指定的文件名或对的调用中的类的名称`GetObject`找不到函数。  

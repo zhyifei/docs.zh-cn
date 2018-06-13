@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513970"
 ---
 # <a name="migration"></a>迁移
 本节包含演示如何迁移使用编写的 Windows Workflow Foundation (WF) 内容的示例[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]到[!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]。  

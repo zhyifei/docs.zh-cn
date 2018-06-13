@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522390"
 ---
 # <a name="how-to-rotate-colors"></a>如何：旋转颜色
 四维颜色空间中的旋转很难直观显示。 我们可以更加轻松地实现旋转同意保持一个固定的颜色组件的可视化效果。 假设我们同意将 alpha 分量固定为 1 （完全不透明）。 然后我们可以可视化三维颜色空间红色、 绿色和蓝色轴与下图中所示。  

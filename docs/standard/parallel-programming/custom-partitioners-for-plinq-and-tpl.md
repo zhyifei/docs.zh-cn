@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592361"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ 和 TPL 的自定义分区程序
 若要并行执行对数据源的操作，关键步骤之一是，将数据源分区成多个部分，以供多个线程同时访问。 PLINQ 和任务并行库 (TPL) 提供了默认分区程序，在用户编写并行查询或 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环时透明运行。 对于更高级的方案，可以插入自己的分区程序。  

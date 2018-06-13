@@ -1,14 +1,6 @@
 ---
-title: "CorAssemblyFlags 枚举"
-ms.custom: 
+title: CorAssemblyFlags 枚举
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorAssemblyFlags
 api_location:
@@ -22,17 +14,14 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 059d896842c285bb071a25990ae9178c34ab802a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9d6ec37bbd8750c27a41b5f18180c7726cdcd483
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442823"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 枚举
 包含一些值，用于描述应用于程序集编译的元数据。  
@@ -89,12 +78,12 @@ typedef enum CorAssemblyFlags {
 |`afContentType_Default`|指示默认内容类型。|  
 |`afContentType_WindowsRuntime`|指示[!INCLUDE[wrt](../../../../includes/wrt-md.md)]内容类型。|  
   
-## <a name="requirements"></a>惠?  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

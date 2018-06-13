@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556843"
 ---
 # <a name="graphics"></a>图形
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供的集成支持多媒体、 矢量图形、 动画和内容的组合，因此可以方便开发人员可以构建感兴趣的用户界面和内容。  

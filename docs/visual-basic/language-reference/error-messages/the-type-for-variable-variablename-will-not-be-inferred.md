@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594278"
 ---
 # <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>变量的类型&#39; &lt;variablename&gt; &#39;将不无法推断，因为它绑定到封闭范围中的字段
 变量的类型\<variablename > 绑定到封闭范围中的字段，因此将不会推断。 可更改的名称\<variablename >，或使用完全限定的名称 （例如，Me.variablename 或 MyBase.variablename）。  

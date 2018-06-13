@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400024"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe（CorFlags 转换工具）
 利用 CorFlags 转换工具，你配置可移植可执行映像标头的 CorFlags 部分。  

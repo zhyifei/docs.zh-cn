@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592088"
 ---
 # <a name="serialization-guidelines"></a>序列化准则
 本文档列出了在设计要序列化的 API 时要考虑的准则。  

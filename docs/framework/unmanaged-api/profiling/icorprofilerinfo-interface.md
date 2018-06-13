@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: da5a041e8a18420b4cf9962e4315683be8857711
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462265"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo 接口
 提供代码探查器与公共语言运行时 (CLR)，以控制事件监视及请求信息进行通信的方法。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/04/2018
  CLR 通过，通过探查器的实现[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)、`ICorProfilerInfo`至在初始化过程中每个代码探查器的接口。 然后，代码探查器可以调用的方法`ICorProfilerInfo`接口来获取有关正在 CLR 控件下执行的托管代码的信息。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

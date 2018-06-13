@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561067"
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>如何：使用演示图板对属性进行动画处理
 此示例演示如何使用<xref:System.Windows.Media.Animation.Storyboard>属性进行动画处理。 若要使用属性进行动画处理<xref:System.Windows.Media.Animation.Storyboard>，创建你想要进行动画处理，并且还创建每个属性动画<xref:System.Windows.Media.Animation.Storyboard>以包含动画。  

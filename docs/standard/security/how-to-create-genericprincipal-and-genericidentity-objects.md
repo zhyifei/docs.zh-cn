@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581773"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>如何：创建 GenericPrincipal 和 GenericIdentity 对象
 你可以使用<xref:System.Security.Principal.GenericIdentity>结合类<xref:System.Security.Principal.GenericPrincipal>类，以创建独立的 Windows 域存在授权方案。  

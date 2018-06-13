@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 02eaaa1c3336b6e99b8c8deabb944e292e35a2a7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425166"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>ISymUnmanagedENCUpdate::UpdateSymbolStore2 方法
 允许编译器忽略未修改的程序数据库 (PDB) 流中的函数，提供行信息满足的要求。 可使用旧的 PDB 行信息以及该函数中的所有行的一个增量确定正确的行信息。  

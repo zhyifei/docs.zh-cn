@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359707"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 用户定义的函数
 用户定义函数是可以使用参数、执行计算或其他操作并返回结果的例程。 您可以使用任何 Microsoft .NET Framework 编程语言（如 Microsoft Visual Basic .NET 或 Microsoft Visual C#）编写用户定义函数。  

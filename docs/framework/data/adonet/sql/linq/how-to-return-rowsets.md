@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361132"
 ---
 # <a name="how-to-return-rowsets"></a>如何：返回行集
 此示例从数据库中返回行集合，并包含用于筛选结果的输入参数。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542885"
 ---
 # <a name="how-to-override-the-logical-tree"></a>如何：重写逻辑树
 尽管在大多数情况下不必重写逻辑树，但资深的控件创作者可选择执行此操作。  

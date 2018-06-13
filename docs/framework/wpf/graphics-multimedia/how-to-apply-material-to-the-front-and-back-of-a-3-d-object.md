@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559727"
 ---
 # <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>如何：向三维对象的正面和背面应用 Material
 下面的示例演示如何将应用<xref:System.Windows.Media.Media3D.Material>到前面和后面一个三维对象，并对要显示对象的两侧的对象进行动画处理。 <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>属性<xref:System.Windows.Media.Media3D.GeometryModel3D>用于将应用一个红色<xref:System.Windows.Media.Brush>到对象的前端和<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>属性<xref:System.Windows.Media.Media3D.GeometryModel3D>用于应用蓝色<xref:System.Windows.Media.Brush>到后端的对象。 下面的代码显示的材料到对象的应用程序：  

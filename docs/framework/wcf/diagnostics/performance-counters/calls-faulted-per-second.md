@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471336"
 ---
 # <a name="calls-faulted-per-second"></a>Calls Faulted Per Second（每秒出错的调用次数）
 计数器名称：Calls Faulted Per Second（每秒出错的调用次数）  

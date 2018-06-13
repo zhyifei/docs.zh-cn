@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494051"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService 内部：客户端注册
 网格中的每个节点都通过 `Register` 函数，将自己的终结点信息发布到解析程序服务。 解析程序服务将此信息存储为注册记录。 此记录包含节点的唯一标识符 (RegistrationID) 和终结点信息 (PeerNodeAddress)。  

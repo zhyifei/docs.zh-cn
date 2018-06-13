@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323883"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>如何：查找具有特定子元素的元素 (C#)
 本主题演示如何查找特定元素，该特定元素包含具有特定值的子元素。  

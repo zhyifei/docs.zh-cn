@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521402"
 ---
 # <a name="how-to-draw-a-sequence-of-b233zier-splines"></a>如何： 绘制序列的 B&#233;zier 样条
 你可以使用<xref:System.Drawing.Graphics.DrawBeziers%2A>方法<xref:System.Drawing.Graphics>类绘制一系列连接贝塞尔样条。  

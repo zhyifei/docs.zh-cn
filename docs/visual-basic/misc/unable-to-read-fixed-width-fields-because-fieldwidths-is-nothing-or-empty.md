@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641048"
 ---
 # <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a>无法读取固定宽度的字段，因为 FieldWidths 为 Nothing 或为空
 `TextFieldParser` 无法读取固定宽度的字段，因为 `FieldWidths` 属性被设置为 `Nothing` 或空。  

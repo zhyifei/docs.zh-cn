@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542270"
 ---
 # <a name="how-to-open-files-using-the-openfiledialog-component"></a>如何：使用 OpenFileDialog 组件打开文件
 <xref:System.Windows.Forms.OpenFileDialog>组件，用户可以浏览他们的计算机或网络上的任何计算机的文件夹并选择一个或多个要打开的文件。 对话框返回用户在对话框中所选的文件路径和名称。  

@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugManager 接口"
-ms.custom: 
+title: ICLRDebugManager 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugManager
 api_location:
@@ -22,17 +14,14 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e712f22156e96cfc58e9c1a835077ba21ecd184
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d123177bf9f1b5eee1a2ba4d9b7f2042ddc07aa2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434934"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager 接口
 提供使主机可将一组任务标识符和友好名称与相关联的方法。  
@@ -50,21 +39,21 @@ ms.lasthandoff: 12/22/2017
 |[SetSymbolReadingPolicy 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|设置用于读取程序数据库 (PDB) 文件的策略。 策略将确定调用堆栈中是否包括行号和文件有关的信息。|  
   
 ## <a name="remarks"></a>备注  
- 在调试方案中，宿主可能需要对任务进行分组根据其自己的编程逻辑。 例如，分组将允许开发人员以查看开发人员 Api，而不是在进程中运行的每项任务所需的任务。 `ICLRDebugManager`允许宿主实现这种分组。  
+ 在调试方案中，宿主可能需要对任务进行分组根据其自己的编程逻辑。 例如，分组将允许开发人员以查看开发人员 Api，而不是在进程中运行的每项任务所需的任务。 `ICLRDebugManager` 允许宿主实现这种分组。  
   
 > [!IMPORTANT]
 >  三个`ICLRDebugManager`方法， `BeginConnection`，`SetConnectionTasks`和`EndConnection`，依赖于彼此。 在给定的顺序，以便按预期方式工作，必须调用它们。  
   
  分组的标识符和主机分配给分组的友好名称具有对公共语言运行时 (CLR) 没有意义。 CLR 仅将信息传递给该调试器。  
   
-## <a name="requirements"></a>惠?  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

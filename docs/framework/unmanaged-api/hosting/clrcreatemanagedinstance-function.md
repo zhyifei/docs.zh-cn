@@ -21,9 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a375ea586bacc2d3dafe53d493a7467730fae889
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432316"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance 函数
 创建指定的托管类型的实例。  
@@ -54,7 +55,7 @@ STDAPI ClrCreateManagedInstance (
  公共语言运行时应已加载到进程中。 例如，可以通过调用加载它[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函数之前`ClrCreateManagedInstance`调用函数。 如果未加载运行时，`ClrCreateManagedInstance`首次尝试加载的运行时的 v1.0.3705。 如果该操作失败，它尝试加载运行时的最新版本。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   

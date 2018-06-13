@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5164e85ecc97de99dcc493c2ba5efa8fc3468471
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443175"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 结构
 提供有关的详细信息`Event_MDAFired`触发的托管调试助手 (MDA) 创建的事件。  
@@ -53,11 +54,11 @@ typedef struct _MDAInfo {
  若要激活 Mda，并激活 MDA 时接收通知，可以选择主机。 这样，主机有机会将重写默认行为以及中止引发事件，以防止损坏的处理状态的托管的线程。 有关使用 Mda 的详细信息，请参阅[使用托管调试助手诊断错误](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.idl  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

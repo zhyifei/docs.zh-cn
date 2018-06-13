@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 564f3b1cdfab2a3020b6bb5ac8d9af03c6532c8b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459666"
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 方法
 [在.NET Framework 4.6 和更高版本中受支持]  
@@ -72,7 +73,7 @@ Simple.Add(int a, int b)
  但是因为`Fancy.AddTwice`具有已内联`Simple.Add`，它将继续像以前那样具有相同的行为。 若要解决这种限制，调用方具有在其中进行搜索的所有方法的所有模块中内联`Simple.Add`并用`ICorProfilerInfo5::RequestRejit`上的每个这些方法。 重新编译方法时，它们将具有新的行为`Simple.Add`而不是这一旧行为。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

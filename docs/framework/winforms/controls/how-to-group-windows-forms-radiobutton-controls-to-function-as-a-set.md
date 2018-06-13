@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534488"
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>如何：按功能分组 Windows 窗体 RadioButton 控件
 Windows 窗体<xref:System.Windows.Forms.RadioButton>控制机制旨在让用户在两个或多个设置，其中只有一个可以分配给过程或对象之间进行选择。 例如，一组<xref:System.Windows.Forms.RadioButton>控件可能会显示一个选择的包的订单的承运人，但会使用承运人之一。 因此只有一个<xref:System.Windows.Forms.RadioButton>一次可以选择，即使它是功能组的一部分。  

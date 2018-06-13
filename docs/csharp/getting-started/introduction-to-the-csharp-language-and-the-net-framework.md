@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217280"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 语言和 .NET Framework 介绍
 C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 上运行的各种安全可靠的应用程序。 C# 可用于创建 Windows 客户端应用程序、XML Web service、分布式组件、客户端服务器应用程序、数据库应用程序等。 Visual C# 提供高级代码编辑器、方便使用的用户界面设计器、集成调试器和其他许多工具，以便你可以更轻松地开发基于 C# 语言和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的应用程序。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803749"
 ---
 # <a name="reliable-services"></a>可靠服务
 队列和可靠会话是 Windows Communication Foundation (WCF) 功能用于实现可靠消息传递。 本主题介绍 WCF 的可靠消息传递功能。  

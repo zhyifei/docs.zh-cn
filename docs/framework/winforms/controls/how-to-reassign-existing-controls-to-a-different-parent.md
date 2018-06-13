@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533830"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>如何：将现有的控件重新分配给不同的父控件
 可以将你窗体中的控件分配到新容器控件。  

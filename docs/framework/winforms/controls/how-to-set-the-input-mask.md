@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537036"
 ---
 # <a name="how-to-set-the-input-mask"></a>如何：设置输入掩码
 掩码的文本框控件为增强的文本框控件支持的声明性语法，用于接受或拒绝用户输入。 通过设置掩码属性，可以指定允许用户输入，而无需编写任何自定义验证逻辑应用程序中。 有关详细信息，请参阅备注部分的<xref:System.Windows.Forms.MaskedTextBox>类。  

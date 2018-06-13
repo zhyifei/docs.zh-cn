@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573169"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>如何：使用匿名管道进行本地进程间通信
 匿名管道在本地计算机上提供进程间通信。 它们提供的功能比命名管道少，但所需要的系统开销也少。 使用匿名管道，可以在本地计算机上更轻松地进行进程间通信。 不能使用匿名管道进行网络通信。  

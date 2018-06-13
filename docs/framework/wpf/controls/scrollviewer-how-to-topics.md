@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555343"
 ---
 # <a name="scrollviewer-how-to-topics"></a>ScrollViewer 帮助主题
 此部分中的主题演示如何使用<xref:System.Windows.Controls.ScrollViewer>元素以在你的应用程序中创建可滚动区域。  

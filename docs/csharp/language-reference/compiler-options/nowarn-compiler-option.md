@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215480"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn（C# 编译器选项）
 使用 -nowarn 选项可以禁止编译器显示一个或多个警告。 使用逗号分隔多个警告编号。  

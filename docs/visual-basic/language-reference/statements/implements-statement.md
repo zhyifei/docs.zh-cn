@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604206"
 ---
 # <a name="implements-statement"></a>Implements 语句
 指定一个或多个接口，或必须在类中实现的接口成员或它在其中出现的结构定义。  

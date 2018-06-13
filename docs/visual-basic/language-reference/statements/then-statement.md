@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598393"
 ---
 # <a name="then-statement"></a>Then 语句
 引入会编译或经过测试的条件为 true 时执行的语句块。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553801"
 ---
 # <a name="how-to-crop-an-image"></a>如何：裁剪图像
 此示例演示如何裁剪图像使用<xref:System.Windows.Media.Imaging.CroppedBitmap>。  

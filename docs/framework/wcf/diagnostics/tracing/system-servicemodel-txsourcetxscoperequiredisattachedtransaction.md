@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482933"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredisattachedtransaction"></a>System.ServiceModel.TxSourceTxScopeRequiredIsAttachedTransaction
 从 InstanceContext 事务收到了指定操作的指定事务。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639397"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>在自定义日志名称中，只有前八个字符是有意义的
 在检查事件日志名称的唯一性时，仅考虑前八个字符。 当事件日志共享前八个字符时，则可能会导致冲突。  

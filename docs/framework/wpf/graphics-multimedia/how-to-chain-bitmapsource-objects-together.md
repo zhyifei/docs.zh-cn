@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558860"
 ---
 # <a name="how-to-chain-bitmapsource-objects-together"></a>如何：将多个 BitmapSource 对象链在一起
 此示例演示如何通过链接，图像源到应用各种效果多个<xref:System.Windows.Media.Imaging.BitmapSource>一起派生的对象。  

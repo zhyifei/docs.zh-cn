@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599747"
 ---
 # <a name="ltcodegt-visual-basic"></a>&lt;代码&gt;(Visual Basic)
 指示该文本是多行代码。  

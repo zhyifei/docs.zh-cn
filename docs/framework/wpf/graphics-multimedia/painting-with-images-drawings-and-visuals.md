@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566907"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>使用图像、图形和视觉对象进行绘制
 本主题介绍如何使用<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>对象来绘制的图像的区域<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。  

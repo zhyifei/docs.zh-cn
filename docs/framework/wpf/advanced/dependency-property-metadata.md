@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541692"
 ---
 # <a name="dependency-property-metadata"></a>依赖项属性元数据
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统包括一个元数据报告系统，该系统不局限于可以通过反射或常规[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特征报告的关于某个属性的内容。 依赖属性的元数据还可以由定义依赖属性的类来唯一地分配，可以在依赖属性添加到另一个类时进行更改，可以由所有从定义基类继承依赖属性的派生类来明确地重写。  

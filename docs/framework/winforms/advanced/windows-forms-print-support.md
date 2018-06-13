@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528549"
 ---
 # <a name="windows-forms-print-support"></a>Windows 窗体打印支持
 在 Windows 窗体中的打印主要由使用[PrintDocument 组件](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)组件，使用户能够打印，和[PrintPreviewDialog 控件](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)控件， [PrintDialog组件](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)和[PageSetupDialog 组件](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)组件以向熟悉 Windows 操作系统的用户提供熟悉的图形界面。  

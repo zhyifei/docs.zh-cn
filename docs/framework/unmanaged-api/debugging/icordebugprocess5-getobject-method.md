@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4fa6a8c4989b6bc7027a585f098e0aedf17fee01
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417279"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject 方法
 将转换为"ICorDebugObjectValue"对象的对象地址。  
@@ -46,7 +47,7 @@ HRESULT GetObject(
  如果`addr`不指向有效的托管对象，`GetObject`方法返回`E_FAIL`。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

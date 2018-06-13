@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497524"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF 中的安全注意事项
 本部分中的主题列出了各种与安全相关项设计 Windows Communication Foundation (WCF) 应用程序时需要考虑。  

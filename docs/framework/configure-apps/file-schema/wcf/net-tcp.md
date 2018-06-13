@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349878"
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 指定允许多个进程共享同一 TCP 端口的 NET.TCP 端口共享服务的配置设置。  

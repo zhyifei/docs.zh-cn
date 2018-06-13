@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648562"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>如何：调用扩展方法 (Visual Basic)
 扩展方法使你能够向现有类添加方法。 声明数据并扩展方法置于范围后，你可以调用它类似于它所扩展的类型的实例方法。 有关如何编写扩展方法的详细信息，请参阅[如何： 编写扩展方法](./how-to-write-an-extension-method.md)。  

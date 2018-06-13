@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599839"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 `Key`关键字允许您指定的属性的匿名类型的行为。 仅属性你指派为键属性参与的匿名类型实例或计算的哈希代码值之间的相等性测试。 无法更改的键属性的值。  

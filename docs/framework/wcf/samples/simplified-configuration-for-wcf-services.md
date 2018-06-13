@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502259"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服务的简化配置
 此示例演示如何实现和配置典型的服务和客户端使用 Windows Communication Foundation (WCF)。 此示例是所有其他基本技术示例的基础。  

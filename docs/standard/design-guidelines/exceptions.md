@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570578"
 ---
 # <a name="design-guidelines-for-exceptions"></a>异常设计准则
 异常处理有很多优于基于返回值的错误报告。 设计良好的框架可帮助应用程序开发人员实现的异常的优点。 本部分讨论的异常的好处，并显示有关高效使用它们的准则。  

@@ -1,14 +1,6 @@
 ---
-title: "ASSEMBLY_INFO 结构"
-ms.custom: 
+title: ASSEMBLY_INFO 结构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ASSEMBLY_INFO
 api_location:
@@ -22,17 +14,14 @@ helpviewer_keywords:
 ms.assetid: b3cbb47c-457f-4083-8895-49562ca99ab8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 215d80c3d207c2f50cfbd74386915b0467692b57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9ed65181abab58117d539d23fcfeffe71ac19388
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430565"
 ---
 # <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO 结构
 包含有关在全局程序集缓存中注册程序集的信息。  
@@ -59,12 +48,12 @@ typedef struct _ASSEMBLY_INFO {
 |`pszCurrentAssemblyPathBuf`|指向包含清单的文件的当前路径的字符串缓冲区的指针。 该路径必须以 null 字符结尾。|  
 |`cchBuf`|宽字符，包括 null 终止符，数，`pszCurrentAssemblyPathBuf`包含。|  
   
-## <a name="requirements"></a>惠?  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [合成结构](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  

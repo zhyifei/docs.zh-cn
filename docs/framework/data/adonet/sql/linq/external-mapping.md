@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365210"
 ---
 # <a name="external-mapping"></a>外部映射
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持*外部映射*，依据你使用单独的 XML 文件指定数据库的数据模型和对象模型之间的映射的进程。 使用外部映射文件具有以下优点：  

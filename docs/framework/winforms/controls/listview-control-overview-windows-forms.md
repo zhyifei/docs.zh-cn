@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540668"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.ListView> 控件显示带图标的项列表。 你可以使用列表视图创建类似 Windows 资源管理器右窗格的用户界面。 在控件有四种视图模式： 视图、 SmallIcon、 列表和详细信息。  

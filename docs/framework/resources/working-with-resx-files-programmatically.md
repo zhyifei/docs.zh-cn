@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398828"
 ---
 # <a name="working-with-resx-files-programmatically"></a>以编程方式使用 .resx 文件
 由于 XML 资源 (.resx) 文件必须由定义完善的 XML 组成，这些 XML 的标头必须遵循特定架构（后跟名称/值对的数据），因此你会发现手动创建这些文件很容易出错。 作为一种替代方法，可以使用 .NET Framework 类库中的类型和成员以编程方式创建 .resx 文件。 你还可以使用 .NET Framework 类库来检索存储在 .resx 文件中的资源。 本主题说明如何使用 <xref:System.Resources> 命名空间的类型和成员来操作 .resx 文件。  

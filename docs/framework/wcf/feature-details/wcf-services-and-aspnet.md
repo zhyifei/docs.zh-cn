@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506158"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF 服务和 ASP.NET
 本主题讨论托管 Windows Communication Foundation (WCF) 服务的并行使用 ASP.NET 和在 ASP.NET 兼容模式中承载它们。  

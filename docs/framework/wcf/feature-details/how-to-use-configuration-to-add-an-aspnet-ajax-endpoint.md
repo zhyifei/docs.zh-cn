@@ -1,37 +1,24 @@
 ---
 title: 如何：使用配置来添加 ASP.NET AJAX 终结点
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 28051dbed626dc0073a38e72f2cdc21ea108a32e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f14b441ead7c701aa4f794370fc5f54ad3b4a4e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494997"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>如何：使用配置来添加 ASP.NET AJAX 终结点
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允许您创建一个服务来提供一个支持 ASP.NET AJAX 的终结点，并且可以从客户端 Web 站点上的 JavaScript 中调用该终结点。 若要创建这样的终结点，可以使用配置文件（与使用所有其他 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 终结点一样），或使用不要求任何配置元素的方法。 本主题演示配置方法。  
+Windows Communication Foundation (WCF) 允许你创建可使支持 ASP.NET AJAX 的终结点可用，可以从 JavaScript 中调用客户端 Web 站点上的服务。 若要创建这样的终结点，你可以与使用所有其他 Windows Communication Foundation (WCF) 终结点，使用配置文件，或使用的方法，不需要任何配置元素。 本主题演示配置方法。  
   
- 配置要使用的终结点包含的过程，可让服务终结点才能支持 ASP.NET AJAX 的一部分<xref:System.ServiceModel.WebHttpBinding>，并将添加[ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)终结点行为。 配置终结点后，实现和承载服务的步骤与任何 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务使用的步骤类似。 有关工作示例，请参阅[AJAX 服务使用 HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。  
+ 配置要使用的终结点包含的过程，可让服务终结点才能支持 ASP.NET AJAX 的一部分<xref:System.ServiceModel.WebHttpBinding>，并将添加[ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)终结点行为。 后配置终结点，实现和承载服务的步骤将类似于所使用的任何 WCF 服务。 有关工作示例，请参阅[AJAX 服务使用 HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。  
   
  有关如何配置 ASP.NET AJAX 终结点而不使用配置的详细信息，请参阅[如何： 添加 ASP.NET AJAX 终结点而不使用配置](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)。  
   
 ### <a name="to-create-a-basic-wcf-service"></a>创建基本 WCF 服务  
   
-1.  通过用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 属性标记的接口定义基本 <xref:System.ServiceModel.ServiceContractAttribute> 服务协定。 用 <xref:System.ServiceModel.OperationContractAttribute> 标记每个操作。 确保设置 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 属性。  
+1.  使用与标记的接口定义基本的 WCF 服务约定<xref:System.ServiceModel.ServiceContractAttribute>属性。 用 <xref:System.ServiceModel.OperationContractAttribute> 标记每个操作。 确保设置 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 属性。  
   
     ```  
     [ServiceContract(Namespace = "MyService")]  

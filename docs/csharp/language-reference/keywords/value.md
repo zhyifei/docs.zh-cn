@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265267"
 ---
 # <a name="value-c-reference"></a>value（C# 参考）
 上下文关键字 `value` 用在普通属性声明的 set 访问器中。 此关键字类似于方法的输入参数。 关键字 `value` 引用客户端代码尝试分配给属性的值。 在以下示例中，`MyDerivedClass` 有一个名为 `Name` 的属性，该属性使用 `value` 参数向支持字段 `name` 分配新字符串。 从客户端代码的角度来看，该操作写作一个简单的赋值语句。  

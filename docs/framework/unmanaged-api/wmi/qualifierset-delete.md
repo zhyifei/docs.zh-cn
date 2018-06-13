@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0e96ba458edfe7261fd5857b7bcb8486f4a6636
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460040"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete 函数
 按名称删除指定的限定符。  
@@ -67,7 +68,7 @@ HRESULT QualifierSet_Delete (
 由于限定符传播规则，而特定限定符可能已继承自另一个对象和仅在当前类或实例中重写。 在这种情况下，`QualifierSet_Delete`方法将限定符重置为其原始的继承值。 函数将在此情况下返回状态代码`WBEM_S_RESET_TO_DEFAULT`。
 
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

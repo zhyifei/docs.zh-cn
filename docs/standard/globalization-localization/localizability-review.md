@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576124"
 ---
 # <a name="localizability-review"></a>本地化评审
 本地化分析检查是全球通用应用程序开发中的一个中间步骤。 它验证全球化应用程序是否已准备好进行本地化，以及是否能够识别需要特别处理的所有代码或所有用户界面元素。 此步骤还有助于确保本地化过程不会将任何功能缺陷引入应用程序。 一旦本地化分析检查提出的所有问题都得到解决，就意味着可以对应用程序进行本地化了。 如果本地化分析检查详尽彻底，则在本地化过程中应该不需要修改任何源代码。  

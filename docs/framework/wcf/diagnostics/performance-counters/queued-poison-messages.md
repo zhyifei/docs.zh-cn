@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470271"
 ---
 # <a name="queued-poison-messages"></a>Queued Poison Messages（已排队的病毒消息数）
 计数器名称：Queued Poison Messages（已排队的病毒消息数）。  

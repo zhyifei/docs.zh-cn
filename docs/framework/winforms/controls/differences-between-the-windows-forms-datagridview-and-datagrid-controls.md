@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528703"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别
 <xref:System.Windows.Forms.DataGridView>控件是一个新控件，替换<xref:System.Windows.Forms.DataGrid>控件。 <xref:System.Windows.Forms.DataGridView>控件提供了许多的基本和高级功能，中缺少<xref:System.Windows.Forms.DataGrid>控件。 此外的体系结构<xref:System.Windows.Forms.DataGridView>控件，可以更轻松地扩展和自定义比<xref:System.Windows.Forms.DataGrid>控件。  

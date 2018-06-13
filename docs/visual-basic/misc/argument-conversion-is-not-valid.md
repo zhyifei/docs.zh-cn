@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596832"
 ---
 # <a name="argument-39conversion39-is-not-valid"></a>自变量&#39;转换&#39;无效
 `VbStrConv` 枚举的值无效，可能因为它小于零。 枚举值必须大于或等于零。  

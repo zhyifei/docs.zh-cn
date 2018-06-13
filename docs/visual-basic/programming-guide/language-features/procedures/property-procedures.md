@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656081"
 ---
 # <a name="property-procedures-visual-basic"></a>Property 过程 (Visual Basic)
 属性过程是一系列操作模块、 类或结构上的自定义属性的 Visual Basic 语句。 属性过程也称为是*属性访问器*。  

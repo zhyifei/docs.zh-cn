@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395422"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>如何为请求设置缓存策略
 以下示例演示如何为请求设置缓存策略。 该示例输入是一个 URI，如 http://www.contoso.com/。  

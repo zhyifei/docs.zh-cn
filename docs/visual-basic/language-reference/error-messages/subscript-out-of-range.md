@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594262"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>下标超出范围 (Visual Basic)
 数组下标无效，因为它超出了允许的范围。 维度的最低下标值始终是 0，而最高的下标值由`GetUpperBound`该维度的方法。  

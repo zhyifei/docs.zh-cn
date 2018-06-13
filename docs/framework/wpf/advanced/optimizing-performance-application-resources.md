@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546590"
 ---
 # <a name="optimizing-performance-application-resources"></a>优化性能：应用程序资源
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 允许你共享应用程序资源，以便你可以跨类似类型的元素支持一个一致的外观或行为。 本主题提供了一些建议在此区域中，可帮助你提高你的应用程序的性能。  

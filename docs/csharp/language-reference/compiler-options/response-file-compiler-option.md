@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215064"
 ---
 # <a name="-c-compiler-options"></a>@（C# 编译器选项）
 通过 @ 选项，可以指定包含编译器选项和要编译的源代码文件的文件。  

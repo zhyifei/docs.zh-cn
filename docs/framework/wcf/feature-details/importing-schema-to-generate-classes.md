@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497034"
 ---
 # <a name="importing-schema-to-generate-classes"></a>导入架构以生成类
 若要从使用 Windows Communication Foundation (WCF) 可用架构中生成类，请使用<xref:System.Runtime.Serialization.XsdDataContractImporter>类。 本主题描述该过程和变体。  

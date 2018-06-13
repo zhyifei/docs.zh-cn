@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362023"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>如何：使用项目数据源绑定数据（WCF 数据服务）
 可以创建基于 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端应用程序中生成的数据对象的数据源。 当使用添加到数据服务的引用**添加服务引用**对话框中，以及生成的客户端数据类创建项目数据源。 将为数据服务公开的每个实体集各创建一个数据源。 你可以创建显示通过将这些数据源项从服务中的数据的窗体**数据源**窗口拖到设计器。 这些项将成为绑定到该数据源的控件。 在执行期间，此数据源绑定到的某个实例<xref:System.Data.Services.Client.DataServiceCollection%601>类，该类以向数据服务由查询返回的对象进行填充。 有关详细信息，请参阅[数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。  

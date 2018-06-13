@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640524"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>如何：使用 ActiveX 控件 (Visual Basic)
 ActiveX 控件是 COM 组件或可以插入到网页或其他应用程序来重用他人编写的打包的功能的对象。 你可以使用 Visual Basic 6.0 和早期版本开发的 ActiveX 控件以将功能添加到**工具箱**的 Visual Studio。  

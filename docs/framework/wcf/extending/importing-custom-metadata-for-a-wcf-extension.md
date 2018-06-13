@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806856"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>导入 WCF 扩展的自定义元数据
 在 Windows Communication Foundation (WCF) 中，元数据导入是从其元数据生成服务或其组成部分的抽象表示的过程。 例如，可以导入 WCF<xref:System.ServiceModel.Description.ServiceEndpoint>情况下，<xref:System.ServiceModel.Channels.Binding>实例或<xref:System.ServiceModel.Description.ContractDescription>实例从 WSDL 文档的服务。 要导入服务元数据在 WCF 中，使用的实现<xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>抽象类。 派生自的类型<xref:System.ServiceModel.Description.MetadataImporter>类实现支持对导入元数据格式利用 WS 策略导入 WCF 中的逻辑。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655109"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>演练：处理事件 (Visual Basic)
 这是演示如何使用事件的两个主题的第二个。 第一个主题，[演练： 声明和引发事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，演示如何声明和引发事件。 本部分使用的窗体和该演练中的类以显示如何处理事件发生时。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>若要创建一个对象，并分配对它的引用  
   
-1.  选择**（Form1 事件）**从左侧的下拉列表中**代码编辑器**。  
+1.  选择 **（Form1 事件）** 从左侧的下拉列表中**代码编辑器**。  
   
 2.  选择`Load`从右侧下拉列表中的事件。 **代码编辑器**打开`Form1_Load`事件过程。  
   

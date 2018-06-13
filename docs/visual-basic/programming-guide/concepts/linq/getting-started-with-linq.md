@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643466"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 入门
 本部分包含概述、 示例和将帮助你了解和使用 Visual Basic 和语言集成查询 (LINQ) 的背景信息。  

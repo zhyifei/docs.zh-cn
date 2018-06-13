@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744156"
 ---
 # <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;删除&gt;schemeSettings （Uri 设置） 的元素
 删除一个方案名称方案设置。  

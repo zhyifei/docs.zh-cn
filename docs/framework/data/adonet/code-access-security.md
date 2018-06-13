@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759317"
 ---
 # <a name="code-access-security-and-adonet"></a>代码访问安全性和 ADO.NET
 .NET Framework 提供基于角色的安全性和代码访问安全性 (CAS)，这两种安全性都可以通过公共语言运行库 (CLR) 提供的公共基础结构实现。 对于非托管代码，大多数应用程序都可以使用用户或主体权限执行。 因此，当拥有提升权限的用户运行恶意软件或包含错误的软件时，计算机系统可能会受到损坏并危及私有数据。  
@@ -70,8 +71,8 @@ ms.lasthandoff: 05/03/2018
 |-----------------------------------|-----------------|  
 |`Action`|获取或设置安全性操作。 从 <xref:System.Security.Permissions.SecurityAttribute> 继承。|  
 |`AllowBlankPassword`|启用或禁用连接字符串中空白密码。 有效值为 `true`（启用空白密码的使用）和 `false`（禁用空白密码的使用）。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
-|`ConnectionString`|标识允许的连接字符串。 可标识多个连接字符串。 **注意：**连接字符串中不包括用户 ID 或密码。 此版本中，不能使用 .NET Framework 配置工具更改连接字符串限制。 <br /><br /> 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
-|`KeyRestrictions`|标识允许或不允许的连接字符串参数。 在窗体中标识了连接字符串参数*\<参数名称 > =*。 可指定多个参数，并用分号 (;) 进行分隔。 **注意：**如果不指定`KeyRestrictions`，但您设置`KeyRestrictionBehavior`属性`AllowOnly`或`PreventUsage`，允许使用任何其他连接字符串参数。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
+|`ConnectionString`|标识允许的连接字符串。 可标识多个连接字符串。 **注意：** 连接字符串中不包括用户 ID 或密码。 此版本中，不能使用 .NET Framework 配置工具更改连接字符串限制。 <br /><br /> 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
+|`KeyRestrictions`|标识允许或不允许的连接字符串参数。 在窗体中标识了连接字符串参数*\<参数名称 > =*。 可指定多个参数，并用分号 (;) 进行分隔。 **注意：** 如果不指定`KeyRestrictions`，但您设置`KeyRestrictionBehavior`属性`AllowOnly`或`PreventUsage`，允许使用任何其他连接字符串参数。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
 |`KeyRestrictionBehavior`|将连接字符串参数标识为唯一允许的附加参数 (`AllowOnly`)，或标识不允许的附加参数 (`PreventUsage`)。 默认为 `AllowOnly`。 从 <xref:System.Data.Common.DBDataPermissionAttribute> 继承。|  
 |`TypeID`|在派生类中实现此属性时获取唯一标识符。 从 <xref:System.Attribute> 继承。|  
 |`Unrestricted`|表明是否声明对该资源的无限制权限。 从 <xref:System.Security.Permissions.SecurityAttribute> 继承。|  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 732bc9d38ca0d6c2dc3f30603a722b7370034b80
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408185"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE 结构
 包含有关要进行垃圾回收的对象的信息。  
@@ -63,7 +64,7 @@ typedef struct _COR_GC_REFERENCE {
 -   `Size`。 如果`type`是`CorGCREferenceType.CorHandleStrongSizedByref`，此字段是垃圾回收器为其计算对象根的对象树的最后一个大小。 请注意，此计算不一定最新。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

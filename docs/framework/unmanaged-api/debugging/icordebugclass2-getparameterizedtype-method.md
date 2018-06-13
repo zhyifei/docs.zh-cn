@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a5b3a28c7250a16e78e199bceff7c9e64517319
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408208"
 ---
 # <a name="icordebugclass2getparameterizedtype-method"></a>ICorDebugClass2::GetParameterizedType 方法
 获取此类的类型声明。  
@@ -63,7 +64,7 @@ HRESULT GetParameterizedType (
  引入`ICorDebugType`对象来表示一种类型的运行时概念产生连锁反应在整个 API。 以前所用的函数`ICorDebugClass`或`ICorDebugClass2`对象或者甚至`CorElementType`值现在普遍采用`ICorDebugType`对象。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570403"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>程序集和 DLL 的名称
 程序集是部署和托管的代码程序的标识的单元。 程序集可以跨一个或多个文件，尽管通常程序集进行一对一映射 DLL。 因此，本部分介绍了唯一 DLL 命名约定，然后可以映射到程序集命名约定。  

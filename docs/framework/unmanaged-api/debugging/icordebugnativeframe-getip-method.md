@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7d17ac4230296674381c87851377fcb535837ad3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416814"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP 方法
 获取本机代码偏移量为当前设置的指令指针的位置。  
@@ -42,7 +43,7 @@ HRESULT GetIP (
  如果此"ICorDebugNativeFrame"表示的堆栈帧处于活动状态，偏移量是要执行的下一个指令的地址。 如果此堆栈帧不处于活动状态的偏移量是堆栈帧重新激活时要执行的下一个指令的地址。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

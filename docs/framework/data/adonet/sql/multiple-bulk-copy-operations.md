@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358125"
 ---
 # <a name="multiple-bulk-copy-operations"></a>多个批量复制操作
 可以使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类的单个实例执行多次批量复制操作。 如果复制 （例如，目标表的名称） 之间更改操作参数，你必须先更新这些对任何的任何后续调用**WriteToServer**方法，如下面的示例中所示。 除非显式更改，否则，所有属性值都将与给定实例的上一次批量复制操作相同。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808233"
 ---
 # <a name="extending-dispatchers"></a>扩展调度程序
 调度程序负责从基础通道拉取传入的消息，将它们翻译成应用程序代码形式的方法调用，并将结果发送回调用方。 调度程序扩展允许您修改此过程。  您可以实现消息或参数检查器，用来检查或修改消息或参数的内容。  您也可以更改将消息路由到操作的方式或提供其他功能。  

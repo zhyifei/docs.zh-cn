@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637061"
 ---
 # <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>无法转换类型的起始值&#39; &lt;type1&gt; &#39;和类型的步长值&#39; &lt;type2&gt; &#39;为通用类型
 指定的 `For...Next` 控制值具有不同的类型，因此无效，其原因是它们不能转换为通用类型。  

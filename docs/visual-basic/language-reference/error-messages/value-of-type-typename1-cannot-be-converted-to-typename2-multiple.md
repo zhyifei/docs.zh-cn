@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603686"
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>类型的值&#39; &lt;typename1&gt; &#39;不能转换为&#39; &lt;typename2&gt; &#39; （多个文件引用）
 类型的值\<typename1 > 不能转换为\<typename2 >。 类型不匹配可能是由于混合对的文件引用\<h 1 > 项目中\<projectname1 > 对的文件引用与\<h 2 > 项目中\<项目名称 2> >。 如果两个程序集完全相同，请尝试更换这些引用，以确保两个引用都来自相同的位置。  

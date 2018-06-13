@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563792"
 ---
 # <a name="xshared-attribute"></a>x:Shared 特性
 当设置为`false`，修改 WPF 资源检索行为，以便对特性化的资源的请求创建的每个请求而不是共享同一个实例的所有请求的新实例。  

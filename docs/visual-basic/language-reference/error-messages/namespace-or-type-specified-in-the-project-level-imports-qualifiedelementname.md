@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595808"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace 或类型中的项目级导入指定&#39; &lt;qualifiedelementname&gt; &#39;不&#39;t 包含任何公共成员，或者找不到
 Namespace 或类型中的项目级导入的指定\<qualifiedelementname > 不包含任何公共成员，或无法找到。 请确保命名空间或类型定义，并且包含至少一个公共成员。 请确保该别名名称不包含其他别名。  

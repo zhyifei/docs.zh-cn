@@ -1,29 +1,16 @@
 ---
 title: 创建 .NET Framework 客户端应用程序（WCF 数据服务快速入门）
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0bdbb88cc3070c68c540a09ab0d6ce41f790d1c3
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 09981a7aee2db24d8464bbc7412b82a57ec8115b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365350"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>创建 .NET Framework 客户端应用程序（WCF 数据服务快速入门）
 这是最后一项任务[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]快速入门。 在此任务中，你将添加到解决方案的控制台应用程序，添加对的引用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]到此新客户端应用程序，然后访问馈送[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]来自客户端应用程序通过使用生成的客户端数据服务类和客户端的源库。  

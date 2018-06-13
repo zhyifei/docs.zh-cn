@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604167"
 ---
 # <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>无法加载类的信息&#39;&lt;类名&gt;&#39;
 到不可用的类，已引用。  

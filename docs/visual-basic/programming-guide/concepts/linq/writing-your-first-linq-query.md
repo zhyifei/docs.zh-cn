@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654880"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>编写第一个 LINQ 查询 (Visual Basic)
 *查询*是一种从数据源检索数据的表达式。 专用的查询语言来表述查询。 随着时间推移，不同的语言已针对开发了不同类型的数据源，例如，用于关系数据库的 SQL 和用于 XML 的 XQuery。 这使得应用程序开发人员，若要了解每种类型的数据源或数据格式受支持的新查询语言的必要条件。  

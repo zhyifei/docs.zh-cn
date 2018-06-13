@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569374"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>XPath 查询识别的节点类型
 XPath 查询识别的节点类型与文档对象模型 (DOM) 中的节点类型不同。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338606"
 ---
 # <a name="thread-synchronization-c"></a>线程同步 (C#)
 以下各节中描述的功能和类可用于同步访问多线程应用程序中的资源。  

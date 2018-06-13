@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758121"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：创建发行者策略
 程序集的供应商可以状态应用程序应使用通过包括发布服务器策略文件与已升级的程序集的程序集的较新版本。 发布服务器策略文件指定程序集重定向和基本代码设置，并为应用程序配置文件使用相同的格式。 发布服务器策略文件编译成程序集和放入全局程序集缓存。  

@@ -1,13 +1,6 @@
 ---
-title: "在 GDI+ 中绘制、定位和克隆图像"
-ms.custom: 
+title: 在 GDI+ 中绘制、定位和克隆图像
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,12 @@ helpviewer_keywords:
 - GDI+, cloning images
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bbff4023a51687539472ac3e040b125f2f92fc28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ff502884874e21e8f34acb2f15db4c651a0a273
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521646"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>在 GDI+ 中绘制、定位和克隆图像
 你可以使用<xref:System.Drawing.Bitmap>类来加载和显示光栅图像，并且你可以使用<xref:System.Drawing.Imaging.Metafile>类来加载和显示矢量图像。 <xref:System.Drawing.Bitmap>和<xref:System.Drawing.Imaging.Metafile>类都继承自<xref:System.Drawing.Image>类。 若要显示矢量图像，你需要的实例<xref:System.Drawing.Graphics>类和一个<xref:System.Drawing.Imaging.Metafile>。 若要显示为光栅图像，你需要的实例<xref:System.Drawing.Graphics>类和一个<xref:System.Drawing.Bitmap>。 实例<xref:System.Drawing.Graphics>类提供<xref:System.Drawing.Graphics.DrawImage%2A>方法，用于接收<xref:System.Drawing.Imaging.Metafile>或<xref:System.Drawing.Bitmap>作为自变量。  

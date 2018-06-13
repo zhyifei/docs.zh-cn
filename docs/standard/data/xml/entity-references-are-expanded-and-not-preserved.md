@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569525"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>扩展但不保留实体引用
 如果实体引用进行扩展且替换为它表示的文本，将不创建 XmlEntityReference 节点。 相反，将分析实体声明，并复制通过声明内容创建的节点以取代 XmlEntityReference。 因此，`&publisher;` 示例不保存 `&publisher;`，而是创建 XmlText 节点。  

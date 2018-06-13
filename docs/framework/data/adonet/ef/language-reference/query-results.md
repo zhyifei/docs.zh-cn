@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762317"
 ---
 # <a name="query-results"></a>查询结果
 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询在转换为命令目录树执行之后，通常以下列形式之一返回查询结果：  

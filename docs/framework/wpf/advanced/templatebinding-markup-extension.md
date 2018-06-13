@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546915"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 标记扩展
 连接某一控件模板中的属性值，使之成为模板化控件上另一个属性的值。  

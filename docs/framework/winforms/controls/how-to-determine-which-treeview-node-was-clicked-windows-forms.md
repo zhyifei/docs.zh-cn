@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530622"
 ---
 # <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>如何：确定被单击的 TreeView 节点（Windows 窗体）
 使用 Windows 窗体时<xref:System.Windows.Forms.TreeView>控件，一项常见任务是确定哪个节点被单击，并做出相应响应。  

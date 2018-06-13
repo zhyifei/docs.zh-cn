@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591608"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 数据类型 (Visual Basic)
 保存有符号表示 96 位 （12 个字节） 整数变量 10 的幂缩放的数字的 128 位 （16 个字节） 值。 缩放因子指定数字的小数点; 右侧数它的范围介于 0 到 28。 小数位数为 0 （没有小数位），最大可能值为 + 79228162514264337593543950335 / (+ /-7.9228162514264337593543950335E + 28)。 带 28 个小数的最大值是 + /-7.9228162514264337593543950335，和的最小的非零值为 + /-0.0000000000000000000000000001 （+ /-1E-28)。  

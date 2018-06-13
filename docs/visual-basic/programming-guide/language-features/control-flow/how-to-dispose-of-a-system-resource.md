@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647226"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>如何：释放系统资源 (Visual Basic)
 你可以使用`Using`块来确保系统在代码退出块时释放资源。 这很有用，如果你使用的这样做会消耗大量的内存，或其他组件还想要使用的系统资源。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804708"
 ---
 # <a name="significant-traces"></a>重要跟踪
 本主题列出了一些主要跟踪发出通过 Windows Communication Foundation (WCF)。  

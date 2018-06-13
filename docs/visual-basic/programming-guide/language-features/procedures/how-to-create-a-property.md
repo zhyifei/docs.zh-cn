@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656238"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>如何：创建属性 (Visual Basic)
 括起属性定义之间`Property`语句和`End Property`语句。 在此定义您定义`Get`过程中，`Set`过程中，和/或文件名。 该属性的所有代码均位于这些过程内。  

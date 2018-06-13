@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557779"
 ---
 # <a name="treeview-overview"></a>TreeView 概述
 <xref:System.Windows.Controls.TreeView>控件提供了如何通过使用可折叠节点在层次结构中显示信息。 本主题介绍<xref:System.Windows.Controls.TreeView>和<xref:System.Windows.Controls.TreeViewItem>控件，并提供了其使用的简单示例。  

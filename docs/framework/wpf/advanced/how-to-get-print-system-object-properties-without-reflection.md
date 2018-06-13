@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544724"
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>如何：在不使用反射的情况下获得打印系统对象属性
 使用反射对象上列举的属性 （以及这些属性的类型） 会降低应用程序性能。 <xref:System.Printing.IndexedProperties>命名空间提供一种方式获取此信息与使用反射。  

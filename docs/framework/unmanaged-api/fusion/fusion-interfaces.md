@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434888"
 ---
 # <a name="fusion-interfaces"></a>合成接口
 本部分描述合成 API 使用来访问应用程序的资源的属性并查找这些应用程序资源的正确版本的非托管的接口。  

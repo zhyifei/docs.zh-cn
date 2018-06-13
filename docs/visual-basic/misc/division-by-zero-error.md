@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636750"
 ---
 # <a name="division-by-zero-visual-basic-error"></a>除数为零（Visual Basic 错误）
 用作除数的表达式的值为零。  

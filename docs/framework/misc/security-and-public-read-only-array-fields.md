@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392624"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>安全和公共只读数组字段
 切勿使用托管库的公共的只读数组字段来定义的边界行为或应用程序的安全，因为可以修改只读公共数组字段。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648380"
 ---
 # <a name="constants-overview-visual-basic"></a>常量概述 (Visual Basic)
 常量是有意义的名称发生的数字或字符串不会更改。 常量存储的名称可以看出，保持不变的应用程序的执行中值。 你可以大幅提高代码的可读性和更加轻松地使用常量的维护。 在包含重新出现的值的代码中使用它们，或这取决于一些很难记住或没有明显意义的数字。  

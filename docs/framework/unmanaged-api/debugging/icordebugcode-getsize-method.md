@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7c5d42aa7053c1138808775a16d820d5fef3b095
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410814"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize 方法
 获取的大小，以字节为单位表示此"icor 调试代码"的二进制代码。  
@@ -39,7 +40,7 @@ HRESULT GetSize (
  [out]指向以字节为单位的二进制文件的大小的指针代码此`ICorDebugCode`对象所表示。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

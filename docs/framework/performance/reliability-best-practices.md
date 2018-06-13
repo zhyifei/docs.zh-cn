@@ -45,6 +45,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397762"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳做法
 以下可靠性规则是面向 SQL Server 的；但是，它们也适用于任何基于主机的服务器应用程序。 对 SQL Server 等服务器而言，不泄露资源且不会遭遇停机是极其重要的。  然而，这不能通过为改变对象状态的每个方法写入退出代码来实现。  目标不在于编写出将结合退出代码从每个位置的错误进行恢复的 100% 可靠的托管代码。  那将是一项艰巨的任务，并且成功的可能性较小。  公共语言运行时 (CLR) 无法轻松地向托管代码提供足够强大的保证以使编写出完美的代码成为可行的做法。  请注意，不同于 ASP.NET，SQL Server 仅使用一个进程，在没有将数据库关闭相当长的一段时间的情况下，此进程是无法被回收的。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560898"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>如何：使用 Drawing 绘制区域
 本示例演示如何使用 Drawing 绘制一个区域。 若要绘制带有绘制的区域，请使用<xref:System.Windows.Media.DrawingBrush>和一个或多个<xref:System.Windows.Media.Drawing>对象。   下面的示例使用<xref:System.Windows.Media.DrawingBrush>来绘制具有两个椭圆的绘图的对象。  

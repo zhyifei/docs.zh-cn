@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea8a74633d3e950f6cf7ba87c00a9efa45206545
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459559"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey 函数
 确保客户端密钥具有正确的安全性。  
@@ -40,7 +41,7 @@ LONG VerifyClientKey();
 如果函数失败，返回值是一个非零错误代码中定义*WinError.h*。
 
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.def  
   

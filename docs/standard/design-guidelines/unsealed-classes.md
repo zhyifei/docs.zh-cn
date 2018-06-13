@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571656"
 ---
 # <a name="unsealed-classes"></a>未密封类
 密封的类不能被继承，并会阻止扩展性。 与此相反，可以从继承的类称为未密封的类。  

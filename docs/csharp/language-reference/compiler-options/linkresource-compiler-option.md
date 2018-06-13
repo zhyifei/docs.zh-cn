@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219175"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C# 编译器选项)
 在输出文件中创建指向 .NET Framework 资源的链接。 不会在输出文件中添加资源文件。 这不同于会在输出文件中嵌入资源文件的 [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) 选项。  

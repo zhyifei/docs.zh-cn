@@ -1,14 +1,6 @@
 ---
-title: "COR_PRF_SUSPEND_REASON 枚举"
-ms.custom: 
+title: COR_PRF_SUSPEND_REASON 枚举
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_PRF_SUSPEND_REASON
 api_location:
@@ -22,17 +14,14 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 713360b3cdc30ce7bca3e0df115016d66e59b0df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2f4382c7fa85008de9e67ad21c467402bae4ac90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451277"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON 枚举
 指示运行时挂起的原因。  
@@ -67,14 +56,14 @@ typedef enum {
 ## <a name="remarks"></a>备注  
  非托管代码中的所有运行时线程可以继续运行，直到它们尝试重新输入运行时，此时它们也会挂起，直到运行时恢复。 这也适用于输入运行时的新线程。 运行时中的所有线程立即挂起; 如果它们是在可中断的代码中，连接，或者需要挂起时它们到达可中断的代码。  
   
-## <a name="requirements"></a>惠?  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

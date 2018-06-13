@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577081"
 ---
 # <a name="resolving-external-resources"></a>解析外部资源
 XmlDocument 类使用 XmlDocument 的 XmlResolver 属性，定位没有在 XML 数据中内联的资源，如外部文档类型定义 (DTD)、实体和架构。 这些项可以位于网络或本地驱动器上，并通过统一资源标识符 (URI) 进行标识。 这样一来，XmlDocument 可以解析文档中的 EntityReference 节点，并根据外部 DTD 或架构验证文档。  

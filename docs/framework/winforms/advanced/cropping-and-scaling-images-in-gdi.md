@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521549"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>在 GDI+ 中裁切和缩放图像
 你可以使用<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>类可以绘制和位置矢量图像和光栅图像。 <xref:System.Drawing.Graphics.DrawImage%2A> 是重载的方法，因此有几种方法，你可以向其提供自变量。  

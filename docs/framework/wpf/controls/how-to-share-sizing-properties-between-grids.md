@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550860"
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a>如何：在网格之间共享大小调整属性
 此示例演示如何共享列的大小调整数据和行之间<xref:System.Windows.Controls.Grid>元素，以便保留大小调整保持一致。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534740"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>如何：将控件锁定到 Windows 窗体
 设计 Windows 应用程序的用户界面 (UI)，便可锁定控件后它们正确定位，以便不会无意中移动，或调整其大小设置其他属性时。  

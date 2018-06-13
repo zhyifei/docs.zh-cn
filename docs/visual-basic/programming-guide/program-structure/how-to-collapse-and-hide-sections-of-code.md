@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650850"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>如何：折叠和隐藏代码节 (Visual Basic)
 `#Region`指令，可折叠并隐藏 Visual Basic 文件中的代码段。 `#Region`指令允许你使用 Visual Studio 代码编辑器时指定的一段代码，你可以展开或折叠。 有选择地隐藏代码的能力使你的文件更易于管理并且更易读。 有关详细信息，请参阅[大纲显示](/visualstudio/ide/outlining)。  

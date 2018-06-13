@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594908"
 ---
 # <a name="overflow-visual-basic-error"></a>溢出（Visual Basic 错误）
 文本表示的值超出了正在分配的数据类型的限制。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488470"
 ---
 # <a name="configuring-workflowservicehost"></a>配置 WorkflowServiceHost
 本部分包含一组简短"如何"主题，简要介绍如何配置的不同功能<xref:System.ServiceModel.Activities.WorkflowServiceHost>配置中的类。 这些主题涵盖特定工作流服务的配置，所有其他配置的实现方式与常规的 WCF 服务相同。  
