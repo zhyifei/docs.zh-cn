@@ -7,6 +7,7 @@ ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33840884"
 ---
 # <a name="keyword-reference"></a><span data-ttu-id="b41d3-103">关键字参考</span><span class="sxs-lookup"><span data-stu-id="b41d3-103">Keyword Reference</span></span>
 

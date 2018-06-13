@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596959"
 ---
 # <a name="mycomputernetwork-object"></a><span data-ttu-id="23fe0-102">My.Computer.Network 对象</span><span class="sxs-lookup"><span data-stu-id="23fe0-102">My.Computer.Network Object</span></span>
 <span data-ttu-id="23fe0-103">提供属性、 事件和在计算机连接的网络进行交互的方法。</span><span class="sxs-lookup"><span data-stu-id="23fe0-103">Provides a property, event, and methods for interacting with the network to which the computer is connected.</span></span>  

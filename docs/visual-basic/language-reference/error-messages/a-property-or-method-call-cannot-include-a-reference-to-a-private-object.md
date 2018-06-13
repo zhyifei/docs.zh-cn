@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583820"
 ---
 # <a name="a-property-or-method-call-cannot-include-a-reference-to-a-private-object-either-as-an-argument-or-as-a-return-value"></a><span data-ttu-id="e5159-102">无论是作为参数还是作为返回值，属性或方法调用都不能包括对私有对象的引用</span><span class="sxs-lookup"><span data-stu-id="e5159-102">A property or method call cannot include a reference to a private object, either as an argument or as a return value</span></span>
 <span data-ttu-id="e5159-103">此错误的可能原因包括：</span><span class="sxs-lookup"><span data-stu-id="e5159-103">Among the possible causes of this error are:</span></span>  

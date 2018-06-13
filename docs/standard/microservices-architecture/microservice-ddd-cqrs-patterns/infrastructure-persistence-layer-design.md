@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578907"
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a><span data-ttu-id="af588-103">设计基础结构持久性层</span><span class="sxs-lookup"><span data-stu-id="af588-103">Designing the infrastructure persistence layer</span></span>
 

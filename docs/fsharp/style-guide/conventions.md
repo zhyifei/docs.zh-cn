@@ -7,6 +7,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457977"
 ---
 # <a name="f-coding-conventions"></a><span data-ttu-id="0d223-103">F # 编码约定</span><span class="sxs-lookup"><span data-stu-id="0d223-103">F# coding conventions</span></span>
 

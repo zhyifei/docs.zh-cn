@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584841"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a><span data-ttu-id="62c93-102">如何：在 Visual Basic 中创建文件</span><span class="sxs-lookup"><span data-stu-id="62c93-102">How to: Create a File in Visual Basic</span></span>
 <span data-ttu-id="62c93-103">此示例使用 <xref:System.IO.File> 类中的 <xref:System.IO.File.Create%2A> 方法在指定的路径中创建一个空文本文件。</span><span class="sxs-lookup"><span data-stu-id="62c93-103">This example creates an empty text file at the specified path using the <xref:System.IO.File.Create%2A> method in the <xref:System.IO.File> class.</span></span>  

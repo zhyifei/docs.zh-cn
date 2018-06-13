@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583911"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a><span data-ttu-id="35593-102">如何：侦听具有等待句柄的取消请求</span><span class="sxs-lookup"><span data-stu-id="35593-102">How to: Listen for Cancellation Requests That Have Wait Handles</span></span>
 <span data-ttu-id="35593-103">如果方法在等待事件收到信号时受阻止，既无法检查取消令牌的值，也无法及时响应。</span><span class="sxs-lookup"><span data-stu-id="35593-103">If a method is blocked while it is waiting for an event to be signaled, it cannot check the value of the cancellation token and respond in a timely manner.</span></span> <span data-ttu-id="35593-104">第一个示例展示了如何在使用 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 等不本机支持统一取消框架的事件时解决此问题。</span><span class="sxs-lookup"><span data-stu-id="35593-104">The first example shows how to solve this problem when you are working with events such as <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> that do not natively support the unified cancellation framework.</span></span> <span data-ttu-id="35593-105">第二个示例展示了一种更简化的方法，即使用确实支持统一取消的 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="35593-105">The second example shows a more streamlined approach that uses <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, which does support unified cancellation.</span></span>  

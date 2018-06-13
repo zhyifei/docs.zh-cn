@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584272"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a><span data-ttu-id="1c913-102">如何：取消 PLINQ 查询</span><span class="sxs-lookup"><span data-stu-id="1c913-102">How to: Cancel a PLINQ Query</span></span>
 <span data-ttu-id="1c913-103">下面的示例展示了取消 PLINQ 查询的两种方法。</span><span class="sxs-lookup"><span data-stu-id="1c913-103">The following examples show two ways to cancel a PLINQ query.</span></span> <span data-ttu-id="1c913-104">第一个示例展示了如何取消主要由数据遍历组成的查询。</span><span class="sxs-lookup"><span data-stu-id="1c913-104">The first example shows how to cancel a query that consists mostly of data traversal.</span></span> <span data-ttu-id="1c913-105">第二个示例展示了如何取消包含计算成本很高的用户函数的查询。</span><span class="sxs-lookup"><span data-stu-id="1c913-105">The second example shows how to cancel a query that contains a user function that is computationally expensive.</span></span>  

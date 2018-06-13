@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582218"
 ---
 # <a name="parallel-programming-in-net"></a><span data-ttu-id="7e275-102">.NET 中的并行编程</span><span class="sxs-lookup"><span data-stu-id="7e275-102">Parallel Programming in .NET</span></span>
 
