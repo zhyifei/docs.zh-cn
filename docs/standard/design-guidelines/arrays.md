@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570382"
 ---
 # <a name="arrays"></a><span data-ttu-id="f17f9-102">数组</span><span class="sxs-lookup"><span data-stu-id="f17f9-102">Arrays</span></span>
 <span data-ttu-id="f17f9-103">**✓ 执行**喜欢使用通过公共 Api 中的数组的集合。</span><span class="sxs-lookup"><span data-stu-id="f17f9-103">**✓ DO** prefer using collections over arrays in public APIs.</span></span> <span data-ttu-id="f17f9-104">[集合](../../../docs/standard/design-guidelines/guidelines-for-collections.md)部分提供有关如何选择之间集合和数组的详细信息。</span><span class="sxs-lookup"><span data-stu-id="f17f9-104">The [Collections](../../../docs/standard/design-guidelines/guidelines-for-collections.md) section provides details about how to choose between collections and arrays.</span></span>  

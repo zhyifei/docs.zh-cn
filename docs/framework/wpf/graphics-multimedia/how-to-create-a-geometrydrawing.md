@@ -1,47 +1,36 @@
 ---
-title: "如何：创建 GeometryDrawing"
-ms.custom: 
+title: 如何：创建 GeometryDrawing
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - shapes [WPF], renderable
 - renderable shapes [WPF]
 - graphics [WPF], GeometryDrawing class
 - classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 31417a3eeee2c1e61674c43558c2799705797c35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 713cecd10bfa62494c50c96cb8cbece69f7e5660
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560655"
 ---
-# <a name="how-to-create-a-geometrydrawing"></a><span data-ttu-id="0beb7-102">如何：创建 GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="0beb7-102">How to: Create a GeometryDrawing</span></span>
-<span data-ttu-id="0beb7-103">此示例演示如何创建和显示<xref:System.Windows.Media.GeometryDrawing>。</span><span class="sxs-lookup"><span data-stu-id="0beb7-103">This example shows how to create and display a <xref:System.Windows.Media.GeometryDrawing>.</span></span> <span data-ttu-id="0beb7-104">A<xref:System.Windows.Media.GeometryDrawing>使您能够创建具有填充和边框的形状，通过将相关联<xref:System.Windows.Media.Pen>和<xref:System.Windows.Media.Brush>与<xref:System.Windows.Media.Geometry>。</span><span class="sxs-lookup"><span data-stu-id="0beb7-104">A <xref:System.Windows.Media.GeometryDrawing> enables you to create shape with a fill and an outline by associating a <xref:System.Windows.Media.Pen> and a <xref:System.Windows.Media.Brush> with a <xref:System.Windows.Media.Geometry>.</span></span> <span data-ttu-id="0beb7-105"><xref:System.Windows.Media.GeometryDrawing.Geometry%2A>描述形状的结构<xref:System.Windows.Media.GeometryDrawing.Brush%2A>描述形状的填充和<xref:System.Windows.Media.GeometryDrawing.Pen%2A>描述形状的轮廓。</span><span class="sxs-lookup"><span data-stu-id="0beb7-105">The <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> describes the shape's structure, the <xref:System.Windows.Media.GeometryDrawing.Brush%2A> describes the shape's fill, and the <xref:System.Windows.Media.GeometryDrawing.Pen%2A> describes the shape's outline.</span></span>  
+# <a name="how-to-create-a-geometrydrawing"></a><span data-ttu-id="aa80b-102">如何：创建 GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="aa80b-102">How to: Create a GeometryDrawing</span></span>
+<span data-ttu-id="aa80b-103">此示例演示如何创建和显示<xref:System.Windows.Media.GeometryDrawing>。</span><span class="sxs-lookup"><span data-stu-id="aa80b-103">This example shows how to create and display a <xref:System.Windows.Media.GeometryDrawing>.</span></span> <span data-ttu-id="aa80b-104">A<xref:System.Windows.Media.GeometryDrawing>使您能够创建具有填充和边框的形状，通过将相关联<xref:System.Windows.Media.Pen>和<xref:System.Windows.Media.Brush>与<xref:System.Windows.Media.Geometry>。</span><span class="sxs-lookup"><span data-stu-id="aa80b-104">A <xref:System.Windows.Media.GeometryDrawing> enables you to create shape with a fill and an outline by associating a <xref:System.Windows.Media.Pen> and a <xref:System.Windows.Media.Brush> with a <xref:System.Windows.Media.Geometry>.</span></span> <span data-ttu-id="aa80b-105"><xref:System.Windows.Media.GeometryDrawing.Geometry%2A>描述形状的结构<xref:System.Windows.Media.GeometryDrawing.Brush%2A>描述形状的填充和<xref:System.Windows.Media.GeometryDrawing.Pen%2A>描述形状的轮廓。</span><span class="sxs-lookup"><span data-stu-id="aa80b-105">The <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> describes the shape's structure, the <xref:System.Windows.Media.GeometryDrawing.Brush%2A> describes the shape's fill, and the <xref:System.Windows.Media.GeometryDrawing.Pen%2A> describes the shape's outline.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0beb7-106">示例</span><span class="sxs-lookup"><span data-stu-id="0beb7-106">Example</span></span>  
- <span data-ttu-id="0beb7-107">下面的示例使用<xref:System.Windows.Media.GeometryDrawing>来呈现形状。</span><span class="sxs-lookup"><span data-stu-id="0beb7-107">The following example uses a <xref:System.Windows.Media.GeometryDrawing> to render a shape.</span></span> <span data-ttu-id="0beb7-108">描述形状<xref:System.Windows.Media.GeometryGroup>和两个<xref:System.Windows.Media.EllipseGeometry>对象。</span><span class="sxs-lookup"><span data-stu-id="0beb7-108">The shape is described by a <xref:System.Windows.Media.GeometryGroup> and two <xref:System.Windows.Media.EllipseGeometry> objects.</span></span> <span data-ttu-id="0beb7-109">形状内部上色与<xref:System.Windows.Media.LinearGradientBrush>和以绘制其轮廓<xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>。</span><span class="sxs-lookup"><span data-stu-id="0beb7-109">The shape's interior is painted with a <xref:System.Windows.Media.LinearGradientBrush> and its outline is drawn with a <xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>.</span></span> <span data-ttu-id="0beb7-110"><xref:System.Windows.Media.GeometryDrawing>使用显示<xref:System.Windows.Media.ImageDrawing>和<xref:System.Windows.Controls.Image>元素。</span><span class="sxs-lookup"><span data-stu-id="0beb7-110">The <xref:System.Windows.Media.GeometryDrawing> is displayed using an <xref:System.Windows.Media.ImageDrawing> and an <xref:System.Windows.Controls.Image> element.</span></span>  
+## <a name="example"></a><span data-ttu-id="aa80b-106">示例</span><span class="sxs-lookup"><span data-stu-id="aa80b-106">Example</span></span>  
+ <span data-ttu-id="aa80b-107">下面的示例使用<xref:System.Windows.Media.GeometryDrawing>来呈现形状。</span><span class="sxs-lookup"><span data-stu-id="aa80b-107">The following example uses a <xref:System.Windows.Media.GeometryDrawing> to render a shape.</span></span> <span data-ttu-id="aa80b-108">描述形状<xref:System.Windows.Media.GeometryGroup>和两个<xref:System.Windows.Media.EllipseGeometry>对象。</span><span class="sxs-lookup"><span data-stu-id="aa80b-108">The shape is described by a <xref:System.Windows.Media.GeometryGroup> and two <xref:System.Windows.Media.EllipseGeometry> objects.</span></span> <span data-ttu-id="aa80b-109">形状内部上色与<xref:System.Windows.Media.LinearGradientBrush>和以绘制其轮廓<xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>。</span><span class="sxs-lookup"><span data-stu-id="aa80b-109">The shape's interior is painted with a <xref:System.Windows.Media.LinearGradientBrush> and its outline is drawn with a <xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>.</span></span> <span data-ttu-id="aa80b-110"><xref:System.Windows.Media.GeometryDrawing>使用显示<xref:System.Windows.Media.ImageDrawing>和<xref:System.Windows.Controls.Image>元素。</span><span class="sxs-lookup"><span data-stu-id="aa80b-110">The <xref:System.Windows.Media.GeometryDrawing> is displayed using an <xref:System.Windows.Media.ImageDrawing> and an <xref:System.Windows.Controls.Image> element.</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#GeometryDrawingExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/GeometryDrawingExample.cs#geometrydrawingexamplewholepage)]
  [!code-xaml[DrawingMiscSnippets_snip#GeometryDrawingExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GeometryDrawingExample.xaml#geometrydrawingexamplewholepage)]  
   
- <span data-ttu-id="0beb7-111">下图显示得到的<xref:System.Windows.Media.GeometryDrawing>。</span><span class="sxs-lookup"><span data-stu-id="0beb7-111">The following illustration shows the resulting <xref:System.Windows.Media.GeometryDrawing>.</span></span>  
+ <span data-ttu-id="aa80b-111">下图显示得到的<xref:System.Windows.Media.GeometryDrawing>。</span><span class="sxs-lookup"><span data-stu-id="aa80b-111">The following illustration shows the resulting <xref:System.Windows.Media.GeometryDrawing>.</span></span>  
   
- <span data-ttu-id="0beb7-112">![两个椭圆的 GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")</span><span class="sxs-lookup"><span data-stu-id="0beb7-112">![A GeometryDrawing of two ellipses](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")</span></span>  
+ <span data-ttu-id="aa80b-112">![两个椭圆的 GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")</span><span class="sxs-lookup"><span data-stu-id="aa80b-112">![A GeometryDrawing of two ellipses](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")</span></span>  
   
- <span data-ttu-id="0beb7-113">若要创建更复杂的绘图，你可以将多个图形对象组合到单个复合绘制使用<xref:System.Windows.Media.DrawingGroup>。</span><span class="sxs-lookup"><span data-stu-id="0beb7-113">To create more complex drawings, you can combine multiple drawing objects into a single composite drawing using a <xref:System.Windows.Media.DrawingGroup>.</span></span>  
+ <span data-ttu-id="aa80b-113">若要创建更复杂的绘图，你可以将多个图形对象组合到单个复合绘制使用<xref:System.Windows.Media.DrawingGroup>。</span><span class="sxs-lookup"><span data-stu-id="aa80b-113">To create more complex drawings, you can combine multiple drawing objects into a single composite drawing using a <xref:System.Windows.Media.DrawingGroup>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0beb7-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="0beb7-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="aa80b-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="aa80b-114">See Also</span></span>  
  <xref:System.Windows.Media.DrawingGroup>  
- [<span data-ttu-id="0beb7-115">Drawing 对象概述</span><span class="sxs-lookup"><span data-stu-id="0beb7-115">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [<span data-ttu-id="0beb7-116">Geometry 概述</span><span class="sxs-lookup"><span data-stu-id="0beb7-116">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [<span data-ttu-id="0beb7-117">创建复合绘图</span><span class="sxs-lookup"><span data-stu-id="0beb7-117">Create a Composite Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)
+ [<span data-ttu-id="aa80b-115">Drawing 对象概述</span><span class="sxs-lookup"><span data-stu-id="aa80b-115">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [<span data-ttu-id="aa80b-116">Geometry 概述</span><span class="sxs-lookup"><span data-stu-id="aa80b-116">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [<span data-ttu-id="aa80b-117">创建复合绘图</span><span class="sxs-lookup"><span data-stu-id="aa80b-117">Create a Composite Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)

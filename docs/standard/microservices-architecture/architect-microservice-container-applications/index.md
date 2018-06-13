@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573641"
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a><span data-ttu-id="7a749-103">构建基于容器和微服务的应用程序</span><span class="sxs-lookup"><span data-stu-id="7a749-103">Architecting Container- and Microservice-Based Applications</span></span>
 

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760097"
 ---
 # <a name="modifying-dataviews"></a><span data-ttu-id="f98e4-102">修改 DataView</span><span class="sxs-lookup"><span data-stu-id="f98e4-102">Modifying DataViews</span></span>
 <span data-ttu-id="f98e4-103">可以使用 <xref:System.Data.DataView> 在基础表中添加、删除或修改数据行。</span><span class="sxs-lookup"><span data-stu-id="f98e4-103">You can use the <xref:System.Data.DataView> to add, delete, or modify rows of data in the underlying table.</span></span> <span data-ttu-id="f98e4-104">能够使用**DataView**修改基础表中的数据通过设置三个布尔值属性之一控制**DataView**。</span><span class="sxs-lookup"><span data-stu-id="f98e4-104">The ability to use the **DataView** to modify data in the underlying table is controlled by setting one of three Boolean properties of the **DataView**.</span></span> <span data-ttu-id="f98e4-105">这三个属性是 <xref:System.Data.DataView.AllowNew%2A>、<xref:System.Data.DataView.AllowEdit%2A> 和 <xref:System.Data.DataView.AllowDelete%2A>。</span><span class="sxs-lookup"><span data-stu-id="f98e4-105">These properties are <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A>, and <xref:System.Data.DataView.AllowDelete%2A>.</span></span> <span data-ttu-id="f98e4-106">它们将设置为**true**默认情况下。</span><span class="sxs-lookup"><span data-stu-id="f98e4-106">They are set to **true** by default.</span></span>  

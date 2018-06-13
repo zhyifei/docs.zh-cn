@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759408"
 ---
 # <a name="row-states-and-row-versions"></a><span data-ttu-id="e508a-102">行状态和行版本</span><span class="sxs-lookup"><span data-stu-id="e508a-102">Row States and Row Versions</span></span>
 <span data-ttu-id="e508a-103">ADO.NET 用行状态和行版本管理表中的行。</span><span class="sxs-lookup"><span data-stu-id="e508a-103">ADO.NET manages rows in tables using row states and versions.</span></span> <span data-ttu-id="e508a-104">行状态指示行的状态；行版本在修改行中存储的值时维护各个阶段的值，包括当前值、原始值和默认值。</span><span class="sxs-lookup"><span data-stu-id="e508a-104">A row state indicates the status of a row; row versions maintain the values stored in a row as it is modified, including current, original, and default values.</span></span> <span data-ttu-id="e508a-105">例如，在修改了行中的某列后，该行的行状态将为 `Modified`，并且有两个行版本：`Current`（包含行的当前值）和 `Original`（包含列修改前行的值）。</span><span class="sxs-lookup"><span data-stu-id="e508a-105">For example, after you have made a modification to a column in a row, the row will have a row state of `Modified`, and two row versions: `Current`, which contains the current row values, and `Original`, which contains the row values before the column was modified.</span></span>  

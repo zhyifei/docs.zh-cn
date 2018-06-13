@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758576"
 ---
 # <a name="ltissuertokenresolvergt"></a><span data-ttu-id="f5bb1-102">&lt;issuerTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="f5bb1-102">&lt;issuerTokenResolver&gt;</span></span>
 <span data-ttu-id="f5bb1-103">注册的颁发者令牌解析程序由标记处理程序集合中的处理程序。</span><span class="sxs-lookup"><span data-stu-id="f5bb1-103">Registers the issuer token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="f5bb1-104">颁发者令牌解析程序用于解析在传入令牌和消息签名的令牌。</span><span class="sxs-lookup"><span data-stu-id="f5bb1-104">The issuer token resolver is used to resolve the signing token on incoming tokens and messages.</span></span>  

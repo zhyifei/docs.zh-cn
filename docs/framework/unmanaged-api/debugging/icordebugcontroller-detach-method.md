@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cad8b305de580ce7cf4876939b95cc05d0fd11f5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411478"
 ---
 # <a name="icordebugcontrollerdetach-method"></a><span data-ttu-id="e3a1b-102">ICorDebugController::Detach 方法</span><span class="sxs-lookup"><span data-stu-id="e3a1b-102">ICorDebugController::Detach Method</span></span>
 <span data-ttu-id="e3a1b-103">从分离调试器进程或应用程序域。</span><span class="sxs-lookup"><span data-stu-id="e3a1b-103">Detaches the debugger from the process or application domain.</span></span>  

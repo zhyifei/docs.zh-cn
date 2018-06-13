@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15206fbd7724383b1ec6df123790d3171e58e9f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411913"
 ---
 # <a name="icordebugframegetcode-method"></a><span data-ttu-id="9499d-102">ICorDebugFrame::GetCode 方法</span><span class="sxs-lookup"><span data-stu-id="9499d-102">ICorDebugFrame::GetCode Method</span></span>
 <span data-ttu-id="9499d-103">获取一个指向与此堆栈帧关联的代码。</span><span class="sxs-lookup"><span data-stu-id="9499d-103">Gets a pointer to the code associated with this stack frame.</span></span>  

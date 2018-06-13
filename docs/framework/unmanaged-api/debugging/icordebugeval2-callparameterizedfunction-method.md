@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77d9ec0cf1cbca63382e7f29de85c2f9566dc2bb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416161"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a><span data-ttu-id="bf335-102">ICorDebugEval2::CallParameterizedFunction 方法</span><span class="sxs-lookup"><span data-stu-id="bf335-102">ICorDebugEval2::CallParameterizedFunction Method</span></span>
 <span data-ttu-id="bf335-103">设置指定 ICorDebugFunction，可以嵌套在其构造函数采用类调用<xref:System.Type>参数或可以本身采取<xref:System.Type>参数。</span><span class="sxs-lookup"><span data-stu-id="bf335-103">Sets up a call to the specified ICorDebugFunction, which can be nested inside a class whose constructor takes <xref:System.Type> parameters, or can itself take <xref:System.Type> parameters.</span></span>  
