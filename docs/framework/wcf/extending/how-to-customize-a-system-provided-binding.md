@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803662"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>如何：自定义系统提供的绑定
 Windows Communication Foundation (WCF) 包括多个的系统提供绑定，允许您配置基础绑定元素的属性的某些但并非所有属性。 本主题演示如何设置绑定元素上的属性以创建自定义绑定。  

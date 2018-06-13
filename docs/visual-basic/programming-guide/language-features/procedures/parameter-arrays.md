@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652372"
 ---
 # <a name="parameter-arrays-visual-basic"></a>参数数组 (Visual Basic)
 通常情况下，不能调用带多个参数不是过程声明指定的过程。 当你需要自变量数量不确定时，可以声明*参数数组*，这样一个过程来接受参数的值的数组。 不需要知道的参数数组中的元素数，当你定义的过程。 数组大小由每个调用的过程单独确定。  

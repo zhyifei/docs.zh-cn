@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804974"
 ---
 # <a name="conceptual-overview"></a>概念概述
 本主题总结了有关 Windows Communication Foundation (WCF) 消息传递系统和支持其使用的类信息。  

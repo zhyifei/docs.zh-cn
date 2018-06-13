@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804181"
 ---
 # <a name="wcf-system-requirements"></a>WCF 系统需求
 Windows Communication Foundation (WCF) 是用于创建分布式应用程序的通信基础结构。 下面列出了启用 WCF 运行的要求。  

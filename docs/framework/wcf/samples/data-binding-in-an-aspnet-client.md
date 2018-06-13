@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804987"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 客户端中的数据绑定
 此示例演示如何将绑定由典型的 Windows Communication Foundation (WCF) 服务在 Web 窗体应用程序中的数据。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646534"
 ---
 # <a name="visual-basic-programming-guide"></a>Visual Basic 编程指南
 与任何现代编程语言一样，Visual Basic 支持许多通用编程构造和语言元素。 本指南介绍使用 Visual Basic 编程的所有主要元素。  
