@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552947"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>如何：检测 TextBox 中的文本何时更改
 此示例演示使用一种方法<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>事件来执行方法时中的文本<xref:System.Windows.Controls.TextBox>控制已更改。  
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/04/2018
   
  会调用事件处理程序时的内容<xref:System.Windows.Controls.TextBox>由用户或以编程方式更改控制。  
   
- **注意：**时将激发此事件<xref:System.Windows.Controls.TextBox>创建控件并将其最初会填充文本。  
+ **注意：** 时将激发此事件<xref:System.Windows.Controls.TextBox>创建控件并将其最初会填充文本。  
   
 ## <a name="example"></a>示例  
  在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，它定义你<xref:System.Windows.Controls.TextBox>控制，指定<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>带值相匹配的事件处理程序方法名称的属性。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
  会调用事件处理程序时的内容<xref:System.Windows.Controls.TextBox>由用户或以编程方式更改控制。  
   
- **注意：**时将激发此事件<xref:System.Windows.Controls.TextBox>创建控件并将其最初会填充文本。  
+ **注意：** 时将激发此事件<xref:System.Windows.Controls.TextBox>创建控件并将其最初会填充文本。  
   
  注释  
   

@@ -36,6 +36,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392315"
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>使用托管调试助手诊断错误
 托管调试助手 (MDA) 是调试辅助程序，它与公共语言运行时 (CLR) 一起工作以提供关于运行时状态的信息。 这些助手可生成关于你无法通过其他方式捕获的运行时事件的信息性消息。 可以使用 MDA 隔离在托管代码和非托管代码之间转换时发生的、难以发现的应用程序 Bug。 可通过向 Windows 注册表添加注册表项或设置环境变量，启用或禁用所有的 MDA。 可使用应用程序配置设置来启用特定的 MDA。 可以在应用程序的配置文件中为某些单独的 MDA 设置其他配置设置。 由于将在加载运行时后分析这些配置文件，因此必须在托管应用程序启动之前启用 MDA。 不能为已经启动的应用程序启用 MDA。  

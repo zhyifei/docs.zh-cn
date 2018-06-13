@@ -1,13 +1,6 @@
 ---
-title: "安全透明的代码，级别 1"
-ms.custom: 
+title: 安全透明的代码，级别 1
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transparent
 - SecurityTreatAsSafeAttribute
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-caps.latest.revision: "32"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd4655524c74175d03191cbf7065177c10e3ddda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 252611f3aab138ab7344f1afe6eefb0fe2f5ea24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393732"
 ---
 # <a name="security-transparent-code-level-1"></a>安全透明的代码，级别 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -74,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|只允许在程序集级别上应用。 将程序集中的所有类型和成员都标识为安全透明。 程序集不能包含任何安全关键代码。|  
 |<xref:System.Security.SecurityCriticalAttribute>|不带 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 属性在程序集级别使用时，默认将程序集中的所有代码都标识为安全透明的代码，但会指出程序集可能包含安全关键代码。<br /><br /> 在类级别使用时，将类或方法标识为安全关键，但不会如此标识类的成员。 若要使所有成员都成为安全关键成员，请将 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 属性设置为 <xref:System.Security.SecurityCriticalScope.Everything>。<br /><br /> 在成员级别使用时，特性仅应用于相应的成员。<br /><br /> 标识为安全关键的类或成员可以执行特权提升。 **重要说明：** 1 级透明度中安全关键类型和成员被视为安全可靠关键当从程序集外部调用时。 应该通过针对完全信任的链接要求来保护安全关键类型和成员，以避免未经授权的特权提升。|  
-|<xref:System.Security.SecuritySafeCriticalAttribute>|标识可以由程序集中的安全透明代码访问的安全关键代码。 否则，安全透明的代码将不能访问同一程序集中的私有或内部安全关键成员。 执行此操作将影响安全关键代码，并且可能会引起意外的特权提升。 安全可靠关键代码应该经过严格的安全审核。 **注意：**安全可靠关键类型和成员必须验证调用方的权限，以确定调用方是否有权访问受保护的资源。|  
+|<xref:System.Security.SecuritySafeCriticalAttribute>|标识可以由程序集中的安全透明代码访问的安全关键代码。 否则，安全透明的代码将不能访问同一程序集中的私有或内部安全关键成员。 执行此操作将影响安全关键代码，并且可能会引起意外的特权提升。 安全可靠关键代码应该经过严格的安全审核。 **注意：** 安全可靠关键类型和成员必须验证调用方的权限，以确定调用方是否有权访问受保护的资源。|  
   
  <xref:System.Security.SecuritySafeCriticalAttribute> 特性使得安全透明的代码可以访问同一程序集中的安全关键成员。 将程序集中的安全透明代码和安全关键代码视为两个程序集中的代码。 安全透明的代码将不能查看安全关键代码的私有或内部成员。 此外，通常会对安全关键代码进行审核，以核查对其公共接口的访问权限。 你不希望可在程序集外访问私有或内部状态，而希望将该状态保持隔离。 <xref:System.Security.SecuritySafeCriticalAttribute> 特性可在安全透明代码和安全关键代码之间保持状态隔离，同时允许在必要时替代该隔离。 安全透明的代码不能访问私有或内部安全关键代码，除非这些成员已标记有 <xref:System.Security.SecuritySafeCriticalAttribute>. 在应用 <xref:System.Security.SecuritySafeCriticalAttribute> 之前，将该成员视为公共公开的成员对其进行审核。  
   

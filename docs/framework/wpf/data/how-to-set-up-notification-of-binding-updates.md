@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555829"
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a>如何：设置绑定更新的通知
 本示例演示如何设置在绑定的绑定目标（目标）或绑定源（源）属性更新时收到通知。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 194dcec6ea484e9cd2d3a17093c1eceb16c8f6c9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440211"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager 接口
 提供允许公共语言运行时 (CLR) 与主机提供的 I/O 完成端口进行交互的方法。  
@@ -45,11 +46,11 @@ ms.lasthandoff: 05/04/2018
  `IHostIoCompletionManager` 对应于`ICLRIoCompletionManager`由 CLR 实现接口。 CLR 调用的方法`IHostIoCompletionManager`将句柄绑定到主机提供，并且宿主调用的方法的端口`ICLRIoCompletionManager`报告 I/O 请求的完成。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

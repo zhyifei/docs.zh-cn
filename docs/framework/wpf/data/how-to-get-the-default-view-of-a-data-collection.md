@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557168"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>如何：获取数据集合的默认视图
 视图允许相同的数据集合，以查看不同的方式，具体取决于排序、 筛选或分组条件。 每个集合具有一个共享的默认视图中，它作为实际绑定源用来在绑定指定为其源集合。 此示例演示如何获取集合的默认视图。  

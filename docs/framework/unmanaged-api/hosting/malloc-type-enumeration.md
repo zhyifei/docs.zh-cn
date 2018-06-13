@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c5e970a1677b1e43821cce9985e32ebd0726686
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442535"
 ---
 # <a name="malloctype-enumeration"></a>MALLOC_TYPE 枚举
 包含指定的内存的分配时的特征的值。  
@@ -42,7 +43,7 @@ typedef enum {
 |`MALLOC_THREADSAFE`|分配的内存是线程安全的。 也就是说，可以通过而不进行任何同步多个线程访问内存。<br /><br /> 如果未设置此标志，则必须序列化对象上的调用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   

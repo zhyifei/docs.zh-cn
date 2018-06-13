@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396813"
 ---
 # <a name="deriving-from-webrequest"></a>从 WebRequest 派生
 <xref:System.Net.WebRequest> 类是一个抽象基类，可为创建适合 .NET Framework 可插入协议模型的协议特定的请求处理程序提供基本方法和属性。 使用 WebRequest 类的应用程序可使用任何支持的协议请求数据，而无需指定所使用的协议。  

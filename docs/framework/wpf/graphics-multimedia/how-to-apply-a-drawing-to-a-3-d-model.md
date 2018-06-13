@@ -10,13 +10,14 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559052"
 ---
 # <a name="how-to-apply-a-drawing-to-a-3-d-model"></a>如何：向三维模型应用绘图
 此示例演示如何使用<xref:System.Windows.Media.DrawingBrush>作为<xref:System.Windows.Media.Media3D.Material>应用于[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]模型。  
   
  下面的代码定义<xref:System.Windows.Media.DrawingGroup>作为内容<xref:System.Windows.Media.DrawingBrush>。  <xref:System.Windows.Media.DrawingBrush>被设置为<xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A>属性<xref:System.Windows.Media.Media3D.DiffuseMaterial>应用于[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]平面。  
   
- **注意：**通常是需要定义复杂的对象和类似如下绘图的值作为可重复使用和简化你的代码的资源。 请参阅[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)有关详细信息。  
+ **注意：** 通常是需要定义复杂的对象和类似如下绘图的值作为可重复使用和简化你的代码的资源。 请参阅[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)有关详细信息。  
   
  [!code-xaml[3DGallery_snip#ApplyDrawingToMaterialInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialinline1)]  
   

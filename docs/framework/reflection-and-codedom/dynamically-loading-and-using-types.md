@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397970"
 ---
 # <a name="dynamically-loading-and-using-types"></a>动态加载和使用类型
 反射提供语言编译器（如 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 和 JScript）为实现隐式后期绑定所使用的基础结构。 声明与唯一指定的类型相对应，绑定是查找声明（即实现）的过程。 运行时（而非编译时）发生此进程就称为后期绑定。 使用 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 能够在代码中使用隐式后期绑定；Visual Basic 编译器会调用一种帮助程序方法，该方法使用反射来获取对象类型。 传递给帮助程序方法的参数会导致在运行时调用相应方法。 这些参数是在其上调用方法的实例（对象）、被调用方法的名称（字符串）和传递给被调用方法的参数（对象数组）。  

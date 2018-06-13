@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561041"
 ---
 # <a name="how-to-draw-a-rectangle"></a>如何：绘制矩形
 此示例演示如何使用绘制矩形<xref:System.Windows.Shapes.Rectangle>元素。  

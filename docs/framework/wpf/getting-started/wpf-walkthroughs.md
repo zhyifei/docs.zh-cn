@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557883"
 ---
 # <a name="wpf-walkthroughs"></a>WPF 演练
 演练提供有关常见方案的分步说明。 这使得它们成为了着手学习产品或特定功能区域的理想地点。  
