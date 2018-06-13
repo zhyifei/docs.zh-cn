@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457378"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a><span data-ttu-id="b4138-102">Windows 系统上的大型对象堆</span><span class="sxs-lookup"><span data-stu-id="b4138-102">The large object heap on Windows systems</span></span>
 

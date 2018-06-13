@@ -13,6 +13,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312022"
 ---
 # <a name="get-started-with-the-net-framework"></a><span data-ttu-id="2d695-102">.NET Framework 入门</span><span class="sxs-lookup"><span data-stu-id="2d695-102">Get started with the .NET Framework</span></span>
 

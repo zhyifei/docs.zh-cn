@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598360"
 ---
 # <a name="ltreturnsgt-visual-basic"></a><span data-ttu-id="5ac28-102">&lt;返回&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ac28-102">&lt;returns&gt; (Visual Basic)</span></span>
 <span data-ttu-id="5ac28-103">指定的属性或函数的返回值。</span><span class="sxs-lookup"><span data-stu-id="5ac28-103">Specifies the return value of the property or function.</span></span>  

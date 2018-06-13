@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595285"
 ---
 # <a name="assembly-visual-basic"></a><span data-ttu-id="ad770-102">程序集 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad770-102">Assembly (Visual Basic)</span></span>
 <span data-ttu-id="ad770-103">指定源文件开头特性应用于整个程序集。</span><span class="sxs-lookup"><span data-stu-id="ad770-103">Specifies that an attribute at the beginning of a source file applies to the entire assembly.</span></span>  

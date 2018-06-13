@@ -33,6 +33,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234119"
 ---
 # <a name="function-statement-visual-basic"></a><span data-ttu-id="6d7d3-102">Function 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6d7d3-102">Function Statement (Visual Basic)</span></span>
 <span data-ttu-id="6d7d3-103">声明名称、 参数和定义的代码`Function`过程。</span><span class="sxs-lookup"><span data-stu-id="6d7d3-103">Declares the name, parameters, and code that define a `Function` procedure.</span></span>  

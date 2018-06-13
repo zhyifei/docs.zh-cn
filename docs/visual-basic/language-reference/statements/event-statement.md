@@ -23,6 +23,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233933"
 ---
 # <a name="event-statement"></a><span data-ttu-id="47b80-102">Event 语句</span><span class="sxs-lookup"><span data-stu-id="47b80-102">Event Statement</span></span>
 <span data-ttu-id="47b80-103">声明用户定义的事件。</span><span class="sxs-lookup"><span data-stu-id="47b80-103">Declares a user-defined event.</span></span>  

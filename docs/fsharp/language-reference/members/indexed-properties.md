@@ -7,6 +7,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235936"
 ---
 # <a name="indexed-properties"></a><span data-ttu-id="1a529-103">索引属性</span><span class="sxs-lookup"><span data-stu-id="1a529-103">Indexed Properties</span></span>
 
