@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546154"
 ---
 # <a name="resources-how-to-topics"></a><span data-ttu-id="abbbb-102">资源帮助主题</span><span class="sxs-lookup"><span data-stu-id="abbbb-102">Resources How-to Topics</span></span>
 <span data-ttu-id="abbbb-103">本部分中的主题介绍如何使用 Windows Presentation Foundation (WPF) 资源。</span><span class="sxs-lookup"><span data-stu-id="abbbb-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  

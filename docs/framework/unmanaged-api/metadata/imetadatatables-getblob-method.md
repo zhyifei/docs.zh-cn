@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 743fb1c77e2dd74487a7498be25ea23b4919032a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447293"
 ---
 # <a name="imetadatatablesgetblob-method"></a><span data-ttu-id="17da5-102">IMetaDataTables::GetBlob 方法</span><span class="sxs-lookup"><span data-stu-id="17da5-102">IMetaDataTables::GetBlob Method</span></span>
 <span data-ttu-id="17da5-103">获取一个指向二进制大型对象 (BLOB) 指定的列索引处。</span><span class="sxs-lookup"><span data-stu-id="17da5-103">Gets a pointer to the binary large object (BLOB) at the specified column index.</span></span>  

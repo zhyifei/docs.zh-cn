@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548810"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a><span data-ttu-id="9fb4d-102">在 Win32 和 WPF 之间共享消息循环</span><span class="sxs-lookup"><span data-stu-id="9fb4d-102">Sharing Message Loops Between Win32 and WPF</span></span>
 <span data-ttu-id="9fb4d-103">本主题介绍如何实现与互操作的消息循环[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，通过使用现有消息中的循环公开<xref:System.Windows.Threading.Dispatcher>或通过创建单独的消息循环上[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]侧的互操作代码。</span><span class="sxs-lookup"><span data-stu-id="9fb4d-103">This topic describes how to implement a message loop for interoperation with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], either by using existing message loop exposure in <xref:System.Windows.Threading.Dispatcher> or by creating a separate message loop on the [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] side of your interoperation code.</span></span>  
