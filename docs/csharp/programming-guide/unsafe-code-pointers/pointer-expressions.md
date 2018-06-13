@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330328"
 ---
 # <a name="pointer-expressions-c-programming-guide"></a>指针表达式（C# 编程指南）
 本部分讨论下列指针表达式：  

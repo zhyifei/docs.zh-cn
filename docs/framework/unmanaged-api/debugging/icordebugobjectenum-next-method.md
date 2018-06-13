@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 59b37c30df6467439d04e367e13b0fc4ffff0ec6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422941"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next 方法
 从当前位置开始在枚举中获取指定数目的对象的相对虚拟地址 (Rva)。  
@@ -48,7 +49,7 @@ HRESULT Next (
  [out]对实际返回的对象的数量的指针。 此值可能为 null 如果`celt`是之一。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

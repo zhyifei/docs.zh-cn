@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763262"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>将数据集和 XmlDataDocument 同步
 本节演示订单处理过程中的一个步骤，该步骤使用与 <xref:System.Data.DataSet> 同步的强类型 <xref:System.Xml.XmlDataDocument>。 下面的示例中创建**数据集**使用最小化架构相匹配仅源 XML 文档的一部分。 示例使用**XmlDataDocument**保留源 XML 文档的失真，启用**数据集**要用于公开 XML 文档的子集。  
