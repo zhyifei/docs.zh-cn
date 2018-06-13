@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554356"
 ---
 # <a name="viewbox"></a><span data-ttu-id="5b582-102">Viewbox</span><span class="sxs-lookup"><span data-stu-id="5b582-102">Viewbox</span></span>
 <span data-ttu-id="5b582-103"><xref:System.Windows.Controls.Viewbox>控件用于拉伸或缩放的子元素。</span><span class="sxs-lookup"><span data-stu-id="5b582-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  

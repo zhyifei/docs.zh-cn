@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugObjectValue::GetContext 方法"
-ms.custom: 
+title: ICorDebugObjectValue::GetContext 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugObjectValue.GetContext
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 40594774-5105-4187-a06b-4e7f50bada3c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6c3802cd300204ca52a261a4e88aaf0ab242a456
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 61e8a8d1a923a52b678771f79122e5ab36a99706
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415310"
 ---
-# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="f8086-102">ICorDebugObjectValue::GetContext 方法</span><span class="sxs-lookup"><span data-stu-id="f8086-102">ICorDebugObjectValue::GetContext Method</span></span>
-<span data-ttu-id="f8086-103">`GetContext`此版本的.NET Framework 中未实现。</span><span class="sxs-lookup"><span data-stu-id="f8086-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
+# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="d0c81-102">ICorDebugObjectValue::GetContext 方法</span><span class="sxs-lookup"><span data-stu-id="d0c81-102">ICorDebugObjectValue::GetContext Method</span></span>
+<span data-ttu-id="d0c81-103">`GetContext` 此版本的.NET Framework 中未实现。</span><span class="sxs-lookup"><span data-stu-id="d0c81-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8086-104">语法</span><span class="sxs-lookup"><span data-stu-id="f8086-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0c81-104">语法</span><span class="sxs-lookup"><span data-stu-id="d0c81-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContext (  
@@ -46,9 +35,9 @@ HRESULT GetContext (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="f8086-105">惠?</span><span class="sxs-lookup"><span data-stu-id="f8086-105">Requirements</span></span>  
- <span data-ttu-id="f8086-106">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f8086-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0c81-105">要求</span><span class="sxs-lookup"><span data-stu-id="d0c81-105">Requirements</span></span>  
+ <span data-ttu-id="d0c81-106">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d0c81-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8086-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="f8086-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d0c81-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="d0c81-107">See Also</span></span>  
     
  

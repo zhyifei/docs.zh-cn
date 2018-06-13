@@ -1,27 +1,19 @@
 ---
-title: "如何：按扩展名对文件进行分组 (LINQ) (C#)"
-ms.custom: 
+title: 如何：按扩展名对文件进行分组 (LINQ) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 71bee94ad5aec6cc7aaef480f72f4220716a2cd9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4b2200799a7623bf9d47540f922798f5161be1bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319288"
 ---
-# <a name="how-to-group-files-by-extension-linq-c"></a><span data-ttu-id="e3572-102">如何：按扩展名对文件进行分组 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="e3572-102">How to: Group Files by Extension (LINQ) (C#)</span></span>
-<span data-ttu-id="e3572-103">本示例演示如何使用 LINQ 来执行高级分组和对文件或文件夹列表执行排序操作。</span><span class="sxs-lookup"><span data-stu-id="e3572-103">This example shows how LINQ can be used to perform advanced grouping and sorting operations on lists of files or folders.</span></span> <span data-ttu-id="e3572-104">它还演示如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法在控制台窗口中对输出进行分页。</span><span class="sxs-lookup"><span data-stu-id="e3572-104">It also shows how to page output in the console window by using the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods.</span></span>  
+# <a name="how-to-group-files-by-extension-linq-c"></a><span data-ttu-id="e21fd-102">如何：按扩展名对文件进行分组 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="e21fd-102">How to: Group Files by Extension (LINQ) (C#)</span></span>
+<span data-ttu-id="e21fd-103">本示例演示如何使用 LINQ 来执行高级分组和对文件或文件夹列表执行排序操作。</span><span class="sxs-lookup"><span data-stu-id="e21fd-103">This example shows how LINQ can be used to perform advanced grouping and sorting operations on lists of files or folders.</span></span> <span data-ttu-id="e21fd-104">它还演示如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法在控制台窗口中对输出进行分页。</span><span class="sxs-lookup"><span data-stu-id="e21fd-104">It also shows how to page output in the console window by using the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e3572-105">示例</span><span class="sxs-lookup"><span data-stu-id="e3572-105">Example</span></span>  
- <span data-ttu-id="e3572-106">下面的查询演示如何按文件扩展名对指定的目录树的内容进行分组。</span><span class="sxs-lookup"><span data-stu-id="e3572-106">The following query shows how to group the contents of a specified directory tree by the file name extension.</span></span>  
+## <a name="example"></a><span data-ttu-id="e21fd-105">示例</span><span class="sxs-lookup"><span data-stu-id="e21fd-105">Example</span></span>  
+ <span data-ttu-id="e21fd-106">下面的查询演示如何按文件扩展名对指定的目录树的内容进行分组。</span><span class="sxs-lookup"><span data-stu-id="e21fd-106">The following query shows how to group the contents of a specified directory tree by the file name extension.</span></span>  
   
 ```csharp  
 class GroupByExtension  
@@ -110,11 +102,11 @@ class GroupByExtension
 }  
 ```  
   
- <span data-ttu-id="e3572-107">此程序的输出可能很长，具体取决于本地文件系统的详细信息和 `startFolder` 的设置。</span><span class="sxs-lookup"><span data-stu-id="e3572-107">The output from this program can be long, depending on the details of the local file system and what the `startFolder` is set to.</span></span> <span data-ttu-id="e3572-108">为了能够查看所有结果，此示例演示如何对结果进行分页。</span><span class="sxs-lookup"><span data-stu-id="e3572-108">To enable viewing of all results, this example shows how to page through results.</span></span> <span data-ttu-id="e3572-109">相同的方法适用于 Windows 和 Web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="e3572-109">The same techniques can be applied to Windows and Web applications.</span></span> <span data-ttu-id="e3572-110">请注意，由于代码对组中的项进行分页，因此需要使用 `foreach` 循环。</span><span class="sxs-lookup"><span data-stu-id="e3572-110">Notice that because the code pages the items in a group, a nested `foreach` loop is required.</span></span> <span data-ttu-id="e3572-111">此外，还有一些其他逻辑用于计算列表中的当前位置，以及使用户能够停止分页并退出程序。</span><span class="sxs-lookup"><span data-stu-id="e3572-111">There is also some additional logic to compute the current position in the list, and to enable the user to stop paging and exit the program.</span></span> <span data-ttu-id="e3572-112">在此特定情况下，根据原始查询的缓存结果运行分页查询。</span><span class="sxs-lookup"><span data-stu-id="e3572-112">In this particular case, the paging query is run against the cached results from the original query.</span></span> <span data-ttu-id="e3572-113">在其他上下文中，如 LINQ to SQL，则不需要此类缓存。</span><span class="sxs-lookup"><span data-stu-id="e3572-113">In other contexts, such as LINQ to SQL, such caching is not required.</span></span>  
+ <span data-ttu-id="e21fd-107">此程序的输出可能很长，具体取决于本地文件系统的详细信息和 `startFolder` 的设置。</span><span class="sxs-lookup"><span data-stu-id="e21fd-107">The output from this program can be long, depending on the details of the local file system and what the `startFolder` is set to.</span></span> <span data-ttu-id="e21fd-108">为了能够查看所有结果，此示例演示如何对结果进行分页。</span><span class="sxs-lookup"><span data-stu-id="e21fd-108">To enable viewing of all results, this example shows how to page through results.</span></span> <span data-ttu-id="e21fd-109">相同的方法适用于 Windows 和 Web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="e21fd-109">The same techniques can be applied to Windows and Web applications.</span></span> <span data-ttu-id="e21fd-110">请注意，由于代码对组中的项进行分页，因此需要使用 `foreach` 循环。</span><span class="sxs-lookup"><span data-stu-id="e21fd-110">Notice that because the code pages the items in a group, a nested `foreach` loop is required.</span></span> <span data-ttu-id="e21fd-111">此外，还有一些其他逻辑用于计算列表中的当前位置，以及使用户能够停止分页并退出程序。</span><span class="sxs-lookup"><span data-stu-id="e21fd-111">There is also some additional logic to compute the current position in the list, and to enable the user to stop paging and exit the program.</span></span> <span data-ttu-id="e21fd-112">在此特定情况下，根据原始查询的缓存结果运行分页查询。</span><span class="sxs-lookup"><span data-stu-id="e21fd-112">In this particular case, the paging query is run against the cached results from the original query.</span></span> <span data-ttu-id="e21fd-113">在其他上下文中，如 LINQ to SQL，则不需要此类缓存。</span><span class="sxs-lookup"><span data-stu-id="e21fd-113">In other contexts, such as LINQ to SQL, such caching is not required.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="e3572-114">编译代码</span><span class="sxs-lookup"><span data-stu-id="e3572-114">Compiling the Code</span></span>  
- <span data-ttu-id="e3572-115">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="e3572-115">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to   System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="e21fd-114">编译代码</span><span class="sxs-lookup"><span data-stu-id="e21fd-114">Compiling the Code</span></span>  
+ <span data-ttu-id="e21fd-115">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="e21fd-115">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to   System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e3572-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e3572-116">See Also</span></span>  
- [<span data-ttu-id="e3572-117">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="e3572-117">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
- [<span data-ttu-id="e3572-118">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="e3572-118">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="e21fd-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="e21fd-116">See Also</span></span>  
+ [<span data-ttu-id="e21fd-117">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="e21fd-117">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [<span data-ttu-id="e21fd-118">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="e21fd-118">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

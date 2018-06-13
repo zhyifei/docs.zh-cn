@@ -1,10 +1,6 @@
 ---
 title: Mod 运算符 (Visual Basic)
 ms.date: 04/24/2018
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Mod
 helpviewer_keywords:
@@ -18,39 +14,40 @@ helpviewer_keywords:
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf0889cbea609b4555581fbf67cd0cba1ea889d0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5120823f4e001fc3aff71f267176311e2465597a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604843"
 ---
-# <a name="mod-operator-visual-basic"></a><span data-ttu-id="0f8b2-102">Mod 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f8b2-102">Mod operator (Visual Basic)</span></span>
-<span data-ttu-id="0f8b2-103">使两个数字相除，仅返回余数。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-103">Divides two numbers and returns only the remainder.</span></span>  
+# <a name="mod-operator-visual-basic"></a><span data-ttu-id="1f824-102">Mod 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1f824-102">Mod operator (Visual Basic)</span></span>
+<span data-ttu-id="1f824-103">使两个数字相除，仅返回余数。</span><span class="sxs-lookup"><span data-stu-id="1f824-103">Divides two numbers and returns only the remainder.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0f8b2-104">语法</span><span class="sxs-lookup"><span data-stu-id="0f8b2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1f824-104">语法</span><span class="sxs-lookup"><span data-stu-id="1f824-104">Syntax</span></span>  
   
 ```  
 number1 Mod number2  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="0f8b2-105">部件</span><span class="sxs-lookup"><span data-stu-id="0f8b2-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="1f824-105">部件</span><span class="sxs-lookup"><span data-stu-id="1f824-105">Parts</span></span>  
  `number1`  
- <span data-ttu-id="0f8b2-106">必须的。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-106">Required.</span></span> <span data-ttu-id="0f8b2-107">任何数值表达式。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-107">Any numeric expression.</span></span>  
+ <span data-ttu-id="1f824-106">必须的。</span><span class="sxs-lookup"><span data-stu-id="1f824-106">Required.</span></span> <span data-ttu-id="1f824-107">任何数值表达式。</span><span class="sxs-lookup"><span data-stu-id="1f824-107">Any numeric expression.</span></span>  
   
  `number2`  
- <span data-ttu-id="0f8b2-108">必须的。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-108">Required.</span></span> <span data-ttu-id="0f8b2-109">任何数值表达式。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-109">Any numeric expression.</span></span>  
+ <span data-ttu-id="1f824-108">必须的。</span><span class="sxs-lookup"><span data-stu-id="1f824-108">Required.</span></span> <span data-ttu-id="1f824-109">任何数值表达式。</span><span class="sxs-lookup"><span data-stu-id="1f824-109">Any numeric expression.</span></span>  
   
-## <a name="supported-types"></a><span data-ttu-id="0f8b2-110">支持的类型</span><span class="sxs-lookup"><span data-stu-id="0f8b2-110">Supported types</span></span>  
- <span data-ttu-id="0f8b2-111">所有数值类型。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-111">All numeric types.</span></span> <span data-ttu-id="0f8b2-112">这包括的无符号和浮点类型和`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-112">This includes the unsigned and floating-point types and `Decimal`.</span></span>  
+## <a name="supported-types"></a><span data-ttu-id="1f824-110">支持的类型</span><span class="sxs-lookup"><span data-stu-id="1f824-110">Supported types</span></span>  
+ <span data-ttu-id="1f824-111">所有数值类型。</span><span class="sxs-lookup"><span data-stu-id="1f824-111">All numeric types.</span></span> <span data-ttu-id="1f824-112">这包括的无符号和浮点类型和`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="1f824-112">This includes the unsigned and floating-point types and `Decimal`.</span></span>  
   
-## <a name="result"></a><span data-ttu-id="0f8b2-113">结果</span><span class="sxs-lookup"><span data-stu-id="0f8b2-113">Result</span></span>
+## <a name="result"></a><span data-ttu-id="1f824-113">结果</span><span class="sxs-lookup"><span data-stu-id="1f824-113">Result</span></span>
 
-<span data-ttu-id="0f8b2-114">结果是后的余数`number1`除以`number2`。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-114">The result is the remainder after `number1` is divided by `number2`.</span></span> <span data-ttu-id="0f8b2-115">例如，表达式`14 Mod 4`计算结果为 2。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-115">For example, the expression `14 Mod 4` evaluates to 2.</span></span>  
+<span data-ttu-id="1f824-114">结果是后的余数`number1`除以`number2`。</span><span class="sxs-lookup"><span data-stu-id="1f824-114">The result is the remainder after `number1` is divided by `number2`.</span></span> <span data-ttu-id="1f824-115">例如，表达式`14 Mod 4`计算结果为 2。</span><span class="sxs-lookup"><span data-stu-id="1f824-115">For example, the expression `14 Mod 4` evaluates to 2.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="0f8b2-116">之间有差异*余数*和*取模*在数学中，使用不同的结果为负数。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-116">There is a difference between *remainder* and *modulus* in mathematics, with different results for negative numbers.</span></span> <span data-ttu-id="0f8b2-117">`Mod`运算符在 Visual Basic 中，.NET Framework`op_Modulus`运算符和基础 rem<xref:System.Reflection.Emit.OpCodes.Rem>所有执行余数运算的 IL 指令。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-117">The `Mod` operator in Visual Basic, the .NET Framework `op_Modulus` operator, and the underlying [rem]<xref:System.Reflection.Emit.OpCodes.Rem> IL instruction all perform a remainder operation.</span></span>
+> <span data-ttu-id="1f824-116">之间有差异*余数*和*取模*在数学中，使用不同的结果为负数。</span><span class="sxs-lookup"><span data-stu-id="1f824-116">There is a difference between *remainder* and *modulus* in mathematics, with different results for negative numbers.</span></span> <span data-ttu-id="1f824-117">`Mod`运算符在 Visual Basic 中，.NET Framework`op_Modulus`运算符和基础 rem<xref:System.Reflection.Emit.OpCodes.Rem>所有执行余数运算的 IL 指令。</span><span class="sxs-lookup"><span data-stu-id="1f824-117">The `Mod` operator in Visual Basic, the .NET Framework `op_Modulus` operator, and the underlying [rem]<xref:System.Reflection.Emit.OpCodes.Rem> IL instruction all perform a remainder operation.</span></span>
 
-<span data-ttu-id="0f8b2-118">结果`Mod`操作保留除数的符号`number1`，因此，它可能是正数或负数。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-118">The result of a `Mod` operation retains the sign of the dividend, `number1`, and so it may be positive or negative.</span></span> <span data-ttu-id="0f8b2-119">结果始终处于范围内 (-`number2`， `number2`)、 独占。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-119">The result is always in the range (-`number2`, `number2`), exclusive.</span></span> <span data-ttu-id="0f8b2-120">例如：</span><span class="sxs-lookup"><span data-stu-id="0f8b2-120">For example:</span></span>
+<span data-ttu-id="1f824-118">结果`Mod`操作保留除数的符号`number1`，因此，它可能是正数或负数。</span><span class="sxs-lookup"><span data-stu-id="1f824-118">The result of a `Mod` operation retains the sign of the dividend, `number1`, and so it may be positive or negative.</span></span> <span data-ttu-id="1f824-119">结果始终处于范围内 (-`number2`， `number2`)、 独占。</span><span class="sxs-lookup"><span data-stu-id="1f824-119">The result is always in the range (-`number2`, `number2`), exclusive.</span></span> <span data-ttu-id="1f824-120">例如：</span><span class="sxs-lookup"><span data-stu-id="1f824-120">For example:</span></span>
 
 ```vb
 Public Module Example
@@ -68,49 +65,49 @@ End Module
 '      -8 Mod -3 = -2
 ```
 
-## <a name="remarks"></a><span data-ttu-id="0f8b2-121">备注</span><span class="sxs-lookup"><span data-stu-id="0f8b2-121">Remarks</span></span>  
- <span data-ttu-id="0f8b2-122">如果任一`number1`或`number2`为浮点值，则返回除法运算的浮点余数。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-122">If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned.</span></span> <span data-ttu-id="0f8b2-123">结果的数据类型是可保存的数据类型的除法运算的结果的所有可能值的最小数据类型`number1`和`number2`。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-123">The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1f824-121">备注</span><span class="sxs-lookup"><span data-stu-id="1f824-121">Remarks</span></span>  
+ <span data-ttu-id="1f824-122">如果任一`number1`或`number2`为浮点值，则返回除法运算的浮点余数。</span><span class="sxs-lookup"><span data-stu-id="1f824-122">If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned.</span></span> <span data-ttu-id="1f824-123">结果的数据类型是可保存的数据类型的除法运算的结果的所有可能值的最小数据类型`number1`和`number2`。</span><span class="sxs-lookup"><span data-stu-id="1f824-123">The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.</span></span>  
   
- <span data-ttu-id="0f8b2-124">如果`number1`或`number2`计算结果为[执行任何操作](../../../visual-basic/language-reference/nothing.md)，它将被视为零。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-124">If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.</span></span>  
+ <span data-ttu-id="1f824-124">如果`number1`或`number2`计算结果为[执行任何操作](../../../visual-basic/language-reference/nothing.md)，它将被视为零。</span><span class="sxs-lookup"><span data-stu-id="1f824-124">If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.</span></span>  
   
- <span data-ttu-id="0f8b2-125">相关的运算符如下所示：</span><span class="sxs-lookup"><span data-stu-id="0f8b2-125">Related operators include the following:</span></span>  
+ <span data-ttu-id="1f824-125">相关的运算符如下所示：</span><span class="sxs-lookup"><span data-stu-id="1f824-125">Related operators include the following:</span></span>  
   
--   <span data-ttu-id="0f8b2-126">[\ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)返回除法结果的整数商。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-126">The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division.</span></span> <span data-ttu-id="0f8b2-127">例如，表达式`14 \ 4`计算结果为 3。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-127">For example, the expression `14 \ 4` evaluates to 3.</span></span>  
+-   <span data-ttu-id="1f824-126">[\ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)返回除法结果的整数商。</span><span class="sxs-lookup"><span data-stu-id="1f824-126">The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division.</span></span> <span data-ttu-id="1f824-127">例如，表达式`14 \ 4`计算结果为 3。</span><span class="sxs-lookup"><span data-stu-id="1f824-127">For example, the expression `14 \ 4` evaluates to 3.</span></span>  
   
--   <span data-ttu-id="0f8b2-128">[/ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)返回完整的商，包括其余部分中的，作为浮点数。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-128">The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number.</span></span> <span data-ttu-id="0f8b2-129">例如，表达式`14 / 4`计算结果为 3.5。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-129">For example, the expression `14 / 4` evaluates to 3.5.</span></span>  
+-   <span data-ttu-id="1f824-128">[/ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)返回完整的商，包括其余部分中的，作为浮点数。</span><span class="sxs-lookup"><span data-stu-id="1f824-128">The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number.</span></span> <span data-ttu-id="1f824-129">例如，表达式`14 / 4`计算结果为 3.5。</span><span class="sxs-lookup"><span data-stu-id="1f824-129">For example, the expression `14 / 4` evaluates to 3.5.</span></span>  
   
-## <a name="attempted-division-by-zero"></a><span data-ttu-id="0f8b2-130">尝试的除数为零</span><span class="sxs-lookup"><span data-stu-id="0f8b2-130">Attempted division by zero</span></span>  
- <span data-ttu-id="0f8b2-131">如果`number2`的计算结果为零的行为`Mod`运算符取决于操作数的数据类型。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-131">If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands.</span></span> <span data-ttu-id="0f8b2-132">整数除法引发<xref:System.DivideByZeroException>异常。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-132">An integral division throws a <xref:System.DivideByZeroException> exception.</span></span> <span data-ttu-id="0f8b2-133">浮点除法运算返回<xref:System.Double.NaN>。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-133">A floating-point division returns <xref:System.Double.NaN>.</span></span>  
+## <a name="attempted-division-by-zero"></a><span data-ttu-id="1f824-130">尝试的除数为零</span><span class="sxs-lookup"><span data-stu-id="1f824-130">Attempted division by zero</span></span>  
+ <span data-ttu-id="1f824-131">如果`number2`的计算结果为零的行为`Mod`运算符取决于操作数的数据类型。</span><span class="sxs-lookup"><span data-stu-id="1f824-131">If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands.</span></span> <span data-ttu-id="1f824-132">整数除法引发<xref:System.DivideByZeroException>异常。</span><span class="sxs-lookup"><span data-stu-id="1f824-132">An integral division throws a <xref:System.DivideByZeroException> exception.</span></span> <span data-ttu-id="1f824-133">浮点除法运算返回<xref:System.Double.NaN>。</span><span class="sxs-lookup"><span data-stu-id="1f824-133">A floating-point division returns <xref:System.Double.NaN>.</span></span>  
   
-## <a name="equivalent-formula"></a><span data-ttu-id="0f8b2-134">等效的公式</span><span class="sxs-lookup"><span data-stu-id="0f8b2-134">Equivalent formula</span></span>  
- <span data-ttu-id="0f8b2-135">表达式`a Mod b`等效于任一以下公式：</span><span class="sxs-lookup"><span data-stu-id="0f8b2-135">The expression `a Mod b` is equivalent to either of the following formulas:</span></span>  
+## <a name="equivalent-formula"></a><span data-ttu-id="1f824-134">等效的公式</span><span class="sxs-lookup"><span data-stu-id="1f824-134">Equivalent formula</span></span>  
+ <span data-ttu-id="1f824-135">表达式`a Mod b`等效于任一以下公式：</span><span class="sxs-lookup"><span data-stu-id="1f824-135">The expression `a Mod b` is equivalent to either of the following formulas:</span></span>  
   
  `a - (b * (a \ b))`  
   
  `a - (b * Fix(a / b))`  
   
-## <a name="floating-point-imprecision"></a><span data-ttu-id="0f8b2-136">浮点不精确性</span><span class="sxs-lookup"><span data-stu-id="0f8b2-136">Floating-point imprecision</span></span>  
- <span data-ttu-id="0f8b2-137">在使用浮点数，请记得在内存中不一定有精确的十进制表示形式。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-137">When you work with floating-point numbers, remember that they do not always have a precise decimal representation in memory.</span></span> <span data-ttu-id="0f8b2-138">这可能导致意外的结果从某些操作，如值比较和`Mod`运算符。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-138">This can lead to unexpected results from certain operations, such as value comparison and the `Mod` operator.</span></span> <span data-ttu-id="0f8b2-139">有关详细信息，请参阅[故障排除数据类型](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-139">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>  
+## <a name="floating-point-imprecision"></a><span data-ttu-id="1f824-136">浮点不精确性</span><span class="sxs-lookup"><span data-stu-id="1f824-136">Floating-point imprecision</span></span>  
+ <span data-ttu-id="1f824-137">在使用浮点数，请记得在内存中不一定有精确的十进制表示形式。</span><span class="sxs-lookup"><span data-stu-id="1f824-137">When you work with floating-point numbers, remember that they do not always have a precise decimal representation in memory.</span></span> <span data-ttu-id="1f824-138">这可能导致意外的结果从某些操作，如值比较和`Mod`运算符。</span><span class="sxs-lookup"><span data-stu-id="1f824-138">This can lead to unexpected results from certain operations, such as value comparison and the `Mod` operator.</span></span> <span data-ttu-id="1f824-139">有关详细信息，请参阅[故障排除数据类型](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。</span><span class="sxs-lookup"><span data-stu-id="1f824-139">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>  
   
-## <a name="overloading"></a><span data-ttu-id="0f8b2-140">重载</span><span class="sxs-lookup"><span data-stu-id="0f8b2-140">Overloading</span></span>  
- <span data-ttu-id="0f8b2-141">`Mod`运算符可以被*重载*，这意味着某个类或结构可以重新定义其行为。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-141">The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior.</span></span> <span data-ttu-id="0f8b2-142">如果你的代码适用`Mod`到类或结构，其中包含此类重载的实例，请确保你已了解其重新定义的行为。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-142">If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="0f8b2-143">有关详细信息，请参阅[运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-143">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
+## <a name="overloading"></a><span data-ttu-id="1f824-140">重载</span><span class="sxs-lookup"><span data-stu-id="1f824-140">Overloading</span></span>  
+ <span data-ttu-id="1f824-141">`Mod`运算符可以被*重载*，这意味着某个类或结构可以重新定义其行为。</span><span class="sxs-lookup"><span data-stu-id="1f824-141">The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior.</span></span> <span data-ttu-id="1f824-142">如果你的代码适用`Mod`到类或结构，其中包含此类重载的实例，请确保你已了解其重新定义的行为。</span><span class="sxs-lookup"><span data-stu-id="1f824-142">If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="1f824-143">有关详细信息，请参阅[运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="1f824-143">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0f8b2-144">示例</span><span class="sxs-lookup"><span data-stu-id="0f8b2-144">Example</span></span>  
- <span data-ttu-id="0f8b2-145">下面的示例使用`Mod`运算符将两个数相除，并只返回余数。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-145">The following example uses the `Mod` operator to divide two numbers and return only the remainder.</span></span> <span data-ttu-id="0f8b2-146">如果一个数是浮点数，结果将是一个表示余数的浮点数。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-146">If either number is a floating-point number, the result is a floating-point number that represents the remainder.</span></span>  
+## <a name="example"></a><span data-ttu-id="1f824-144">示例</span><span class="sxs-lookup"><span data-stu-id="1f824-144">Example</span></span>  
+ <span data-ttu-id="1f824-145">下面的示例使用`Mod`运算符将两个数相除，并只返回余数。</span><span class="sxs-lookup"><span data-stu-id="1f824-145">The following example uses the `Mod` operator to divide two numbers and return only the remainder.</span></span> <span data-ttu-id="1f824-146">如果一个数是浮点数，结果将是一个表示余数的浮点数。</span><span class="sxs-lookup"><span data-stu-id="1f824-146">If either number is a floating-point number, the result is a floating-point number that represents the remainder.</span></span>  
   
  [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
   
-## <a name="example"></a><span data-ttu-id="0f8b2-147">示例</span><span class="sxs-lookup"><span data-stu-id="0f8b2-147">Example</span></span>  
- <span data-ttu-id="0f8b2-148">下面的示例演示了潜在的浮点操作数不精确性。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-148">The following example demonstrates the potential imprecision of floating-point operands.</span></span> <span data-ttu-id="0f8b2-149">在第一个语句中，操作数都是`Double`，和 0.2 是存储的值是为 0.20000000000000001 的无限期重复二进制小数。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-149">In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001.</span></span> <span data-ttu-id="0f8b2-150">在第二个语句中，文本类型字符`D`强制的两个操作数`Decimal`，，0.2 具有精确的表示形式。</span><span class="sxs-lookup"><span data-stu-id="0f8b2-150">In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.</span></span>  
+## <a name="example"></a><span data-ttu-id="1f824-147">示例</span><span class="sxs-lookup"><span data-stu-id="1f824-147">Example</span></span>  
+ <span data-ttu-id="1f824-148">下面的示例演示了潜在的浮点操作数不精确性。</span><span class="sxs-lookup"><span data-stu-id="1f824-148">The following example demonstrates the potential imprecision of floating-point operands.</span></span> <span data-ttu-id="1f824-149">在第一个语句中，操作数都是`Double`，和 0.2 是存储的值是为 0.20000000000000001 的无限期重复二进制小数。</span><span class="sxs-lookup"><span data-stu-id="1f824-149">In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001.</span></span> <span data-ttu-id="1f824-150">在第二个语句中，文本类型字符`D`强制的两个操作数`Decimal`，，0.2 具有精确的表示形式。</span><span class="sxs-lookup"><span data-stu-id="1f824-150">In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.</span></span>  
   
  [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="0f8b2-151">请参阅</span><span class="sxs-lookup"><span data-stu-id="0f8b2-151">See also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="1f824-151">请参阅</span><span class="sxs-lookup"><span data-stu-id="1f824-151">See also</span></span>  
  <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
  <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
- [<span data-ttu-id="0f8b2-152">算术运算符</span><span class="sxs-lookup"><span data-stu-id="0f8b2-152">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [<span data-ttu-id="0f8b2-153">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="0f8b2-153">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [<span data-ttu-id="0f8b2-154">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="0f8b2-154">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [<span data-ttu-id="0f8b2-155">数据类型疑难解答</span><span class="sxs-lookup"><span data-stu-id="0f8b2-155">Troubleshooting Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [<span data-ttu-id="0f8b2-156">在 Visual Basic 中的算术运算符</span><span class="sxs-lookup"><span data-stu-id="0f8b2-156">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [<span data-ttu-id="0f8b2-157">\ 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f8b2-157">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+ [<span data-ttu-id="1f824-152">算术运算符</span><span class="sxs-lookup"><span data-stu-id="1f824-152">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [<span data-ttu-id="1f824-153">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="1f824-153">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="1f824-154">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="1f824-154">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="1f824-155">数据类型疑难解答</span><span class="sxs-lookup"><span data-stu-id="1f824-155">Troubleshooting Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="1f824-156">在 Visual Basic 中的算术运算符</span><span class="sxs-lookup"><span data-stu-id="1f824-156">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
+ [<span data-ttu-id="1f824-157">\ 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1f824-157">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)

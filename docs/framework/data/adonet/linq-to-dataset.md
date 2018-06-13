@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764848"
 ---
 # <a name="linq-to-dataset"></a><span data-ttu-id="dfff9-102">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="dfff9-102">LINQ to DataSet</span></span>
 <span data-ttu-id="dfff9-103">使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可以更快更容易地查询在 <xref:System.Data.DataSet> 对象中缓存的数据。</span><span class="sxs-lookup"><span data-stu-id="dfff9-103">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] makes it easier and faster to query over data cached in a <xref:System.Data.DataSet> object.</span></span> <span data-ttu-id="dfff9-104">具体而言，通过使开发人员能够使用编程语言本身而不是通过使用单独的查询语言来编写查询，[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可以简化查询。</span><span class="sxs-lookup"><span data-stu-id="dfff9-104">Specifically, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] simplifies querying by enabling developers to write queries from the programming language itself, instead of by using a separate query language.</span></span> <span data-ttu-id="dfff9-105">这是非常适合 Visual Studio 开发人员，他们现在可以充分利用编译时语法检查、 静态类型和提供的 Visual Studio 在查询中的 IntelliSense 支持。</span><span class="sxs-lookup"><span data-stu-id="dfff9-105">This is especially useful for Visual Studio developers, who can now take advantage of the compile-time syntax checking, static typing, and IntelliSense support provided by the Visual Studio in their queries.</span></span>  

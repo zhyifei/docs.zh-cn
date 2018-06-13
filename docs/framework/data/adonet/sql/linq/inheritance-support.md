@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359557"
 ---
 # <a name="inheritance-support"></a><span data-ttu-id="ec851-102">层次结构支持</span><span class="sxs-lookup"><span data-stu-id="ec851-102">Inheritance Support</span></span>
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="ec851-103"> 支持*单表映射*。</span><span class="sxs-lookup"><span data-stu-id="ec851-103"> supports *single-table mapping*.</span></span> <span data-ttu-id="ec851-104">换言之，整个继承层次结构存储在单个数据库表中。</span><span class="sxs-lookup"><span data-stu-id="ec851-104">In other words, a complete inheritance hierarchy is stored in a single database table.</span></span> <span data-ttu-id="ec851-105">该表包含整个层次结构的所有可能数据列的平展联合。</span><span class="sxs-lookup"><span data-stu-id="ec851-105">The table contains the flattened union of all possible data columns for the whole hierarchy.</span></span> <span data-ttu-id="ec851-106">（联合是将两个表组合成一个表的结果，组合后的表包含任一原始表中存在的行。）每行中不适用于该行所表示的实例类型的列为 null。</span><span class="sxs-lookup"><span data-stu-id="ec851-106">(A union is the result of combining two tables into one table that has the rows that were present in either of the original tables.) Each row has nulls in the columns that do not apply to the type of the instance represented by the row.</span></span>  

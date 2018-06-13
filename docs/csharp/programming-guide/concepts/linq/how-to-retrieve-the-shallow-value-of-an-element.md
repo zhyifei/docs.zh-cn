@@ -1,31 +1,23 @@
 ---
-title: "如何：检索元素的浅值 (C#)"
-ms.custom: 
+title: 如何：检索元素的浅值 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5dcbe3faa457a4880a85f5827d0e5c4808b6a44b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 47c7cdd118a14070ea3a005bda88b55cc7075185
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325937"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a><span data-ttu-id="65efb-102">如何：检索元素的浅值 (C#)</span><span class="sxs-lookup"><span data-stu-id="65efb-102">How to: Retrieve the Shallow Value of an Element (C#)</span></span>
-<span data-ttu-id="65efb-103">本主题说明如何获取元素的浅值。</span><span class="sxs-lookup"><span data-stu-id="65efb-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="65efb-104">浅值只是特定元素的值，与深值相反，包括串联成一个单一字符串的所有子元素的值。</span><span class="sxs-lookup"><span data-stu-id="65efb-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a><span data-ttu-id="6b6e1-102">如何：检索元素的浅值 (C#)</span><span class="sxs-lookup"><span data-stu-id="6b6e1-102">How to: Retrieve the Shallow Value of an Element (C#)</span></span>
+<span data-ttu-id="6b6e1-103">本主题说明如何获取元素的浅值。</span><span class="sxs-lookup"><span data-stu-id="6b6e1-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="6b6e1-104">浅值只是特定元素的值，与深值相反，包括串联成一个单一字符串的所有子元素的值。</span><span class="sxs-lookup"><span data-stu-id="6b6e1-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  
   
- <span data-ttu-id="65efb-105">使用强制转换或 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性检索元素值时，您可以检索深值。</span><span class="sxs-lookup"><span data-stu-id="65efb-105">When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value.</span></span> <span data-ttu-id="65efb-106">要检索浅值，您可以使用 `ShallowValue` 扩展方法，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="65efb-106">To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the follwing example.</span></span> <span data-ttu-id="65efb-107">当根据内容选择元素时，检索浅值十分有用。</span><span class="sxs-lookup"><span data-stu-id="65efb-107">Retrieving the shallow value is useful when you want to select elements based on their content.</span></span>  
+ <span data-ttu-id="6b6e1-105">使用强制转换或 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性检索元素值时，您可以检索深值。</span><span class="sxs-lookup"><span data-stu-id="6b6e1-105">When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value.</span></span> <span data-ttu-id="6b6e1-106">要检索浅值，您可以使用 `ShallowValue` 扩展方法，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="6b6e1-106">To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the follwing example.</span></span> <span data-ttu-id="6b6e1-107">当根据内容选择元素时，检索浅值十分有用。</span><span class="sxs-lookup"><span data-stu-id="6b6e1-107">Retrieving the shallow value is useful when you want to select elements based on their content.</span></span>  
   
- <span data-ttu-id="65efb-108">下面的示例声明了检索元素浅值的扩展方法。</span><span class="sxs-lookup"><span data-stu-id="65efb-108">The following example declares an extension method that retrieves the shallow value of an element.</span></span> <span data-ttu-id="65efb-109">然后在查询中使用该扩展方法列出包含计算得出的值的所有元素。</span><span class="sxs-lookup"><span data-stu-id="65efb-109">It then uses the extension method in a query to list all elements that contain a calculated value.</span></span>  
+ <span data-ttu-id="6b6e1-108">下面的示例声明了检索元素浅值的扩展方法。</span><span class="sxs-lookup"><span data-stu-id="6b6e1-108">The following example declares an extension method that retrieves the shallow value of an element.</span></span> <span data-ttu-id="6b6e1-109">然后在查询中使用该扩展方法列出包含计算得出的值的所有元素。</span><span class="sxs-lookup"><span data-stu-id="6b6e1-109">It then uses the extension method in a query to list all elements that contain a calculated value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="65efb-110">示例</span><span class="sxs-lookup"><span data-stu-id="65efb-110">Example</span></span>  
- <span data-ttu-id="65efb-111">下面的文本文件 Report.xml 是此示例的源。</span><span class="sxs-lookup"><span data-stu-id="65efb-111">The following text file, Report.xml, is the source for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="6b6e1-110">示例</span><span class="sxs-lookup"><span data-stu-id="6b6e1-110">Example</span></span>  
+ <span data-ttu-id="6b6e1-111">下面的文本文件 Report.xml 是此示例的源。</span><span class="sxs-lookup"><span data-stu-id="6b6e1-111">The following text file, Report.xml, is the source for this example.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -78,7 +70,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="65efb-112">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="65efb-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="6b6e1-112">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="6b6e1-112">This example produces the following output:</span></span>  
   
 ```  
 Column  Name="CustomerId"   =Customer.CustomerId.Heading  
@@ -87,5 +79,5 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="65efb-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="65efb-113">See Also</span></span>  
- [<span data-ttu-id="65efb-114">LINQ to XML 轴 (C#)</span><span class="sxs-lookup"><span data-stu-id="65efb-114">LINQ to XML Axes (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="6b6e1-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="6b6e1-113">See Also</span></span>  
+ [<span data-ttu-id="6b6e1-114">LINQ to XML 轴 (C#)</span><span class="sxs-lookup"><span data-stu-id="6b6e1-114">LINQ to XML Axes (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353281"
 ---
 # <a name="programming-guide-linq-to-dataset"></a><span data-ttu-id="3082c-102">编程指南 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="3082c-102">Programming Guide (LINQ to DataSet)</span></span>
 <span data-ttu-id="3082c-103">本节提供有关使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 进行编程的概念性信息和示例。</span><span class="sxs-lookup"><span data-stu-id="3082c-103">This section provides conceptual information and examples for programming with [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  

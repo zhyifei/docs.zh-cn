@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766655"
 ---
 # <a name="modification-sql-generation"></a><span data-ttu-id="b7953-102">修改 SQL 生成</span><span class="sxs-lookup"><span data-stu-id="b7953-102">Modification SQL Generation</span></span>
 <span data-ttu-id="b7953-103">本节讨论如何开发用于（符合 SQL:1999 的数据库）提供程序的修改 SQL 生成模块。</span><span class="sxs-lookup"><span data-stu-id="b7953-103">This section discusses how to develop a modification SQL generation module for your (SQL:1999-compliant database) provider.</span></span> <span data-ttu-id="b7953-104">此模块负责将修改命令目录树转换成适当的 SQL INSERT、UPDATE 或 DELETE 语句。</span><span class="sxs-lookup"><span data-stu-id="b7953-104">This module is responsible for translating a modification command tree into the appropriate SQL INSERT, UPDATE or DELETE statements.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766941"
 ---
 # <a name="lttransportconfigurationtypesgt"></a><span data-ttu-id="e581e-102">&lt;transportConfigurationTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="e581e-102">&lt;transportConfigurationTypes&gt;</span></span>
 <span data-ttu-id="e581e-103">表示一个配置元素集合，这些元素标识了特定传输的类型。</span><span class="sxs-lookup"><span data-stu-id="e581e-103">Represents a collection of configuration elements that identify the type of a particular transport.</span></span> <span data-ttu-id="e581e-104">这可以用于添加自定义 WAS 协议。</span><span class="sxs-lookup"><span data-stu-id="e581e-104">This can be used to add custom WAS protocols.</span></span>  

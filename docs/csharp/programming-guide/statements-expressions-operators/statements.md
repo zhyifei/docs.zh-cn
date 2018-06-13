@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339522"
 ---
 # <a name="statements-c-programming-guide"></a><span data-ttu-id="2465c-102">语句（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="2465c-102">Statements (C# Programming Guide)</span></span>
 <span data-ttu-id="2465c-103">程序执行的操作采用语句表达。</span><span class="sxs-lookup"><span data-stu-id="2465c-103">The actions that a program takes are expressed in statements.</span></span> <span data-ttu-id="2465c-104">常见操作包括声明变量、赋值、调用方法、循环访问集合，以及根据给定条件分支到一个或另一个代码块。</span><span class="sxs-lookup"><span data-stu-id="2465c-104">Common actions include declaring variables, assigning values, calling methods, looping through collections, and branching to one or another block of code, depending on a given condition.</span></span> <span data-ttu-id="2465c-105">语句在程序中的执行顺序称为“控制流”或“执行流”。</span><span class="sxs-lookup"><span data-stu-id="2465c-105">The order in which statements are executed in a program is called the flow of control or flow of execution.</span></span> <span data-ttu-id="2465c-106">根据程序对运行时所收到的输入的响应，在程序每次运行时控制流可能有所不同。</span><span class="sxs-lookup"><span data-stu-id="2465c-106">The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time.</span></span>  

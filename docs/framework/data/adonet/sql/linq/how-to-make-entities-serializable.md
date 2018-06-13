@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354941"
 ---
 # <a name="how-to-make-entities-serializable"></a><span data-ttu-id="16c79-102">如何：使实体可序列化</span><span class="sxs-lookup"><span data-stu-id="16c79-102">How to: Make Entities Serializable</span></span>
 <span data-ttu-id="16c79-103">当你生成代码时，可以使实体可序列化。</span><span class="sxs-lookup"><span data-stu-id="16c79-103">You can make entities serializable when you generate your code.</span></span> <span data-ttu-id="16c79-104">实体类使用 <xref:System.Runtime.Serialization.DataContractAttribute> 属性修饰，列使用 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性修饰。</span><span class="sxs-lookup"><span data-stu-id="16c79-104">Entity classes are decorated with the <xref:System.Runtime.Serialization.DataContractAttribute> attribute, and columns with the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute.</span></span>  
