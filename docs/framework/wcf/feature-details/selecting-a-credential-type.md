@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508470"
 ---
 # <a name="selecting-a-credential-type"></a><span data-ttu-id="576c9-102">选择凭据类型</span><span class="sxs-lookup"><span data-stu-id="576c9-102">Selecting a Credential Type</span></span>
 <span data-ttu-id="576c9-103">*凭据*是 Windows Communication Foundation (WCF) 使用建立声明的标识或功能的数据。</span><span class="sxs-lookup"><span data-stu-id="576c9-103">*Credentials* are the data Windows Communication Foundation (WCF) uses to establish either a claimed identity or capabilities.</span></span> <span data-ttu-id="576c9-104">例如，护照就是政府颁发的用以证明国家或地区的公民身份的凭据。</span><span class="sxs-lookup"><span data-stu-id="576c9-104">For example, a passport is a credential a government issues to prove citizenship in a country or region.</span></span> <span data-ttu-id="576c9-105">在 WCF 中，凭据可以采用多种形式，例如用户名标记和 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="576c9-105">In WCF, credentials can take many forms, such as user name tokens and X.509 certificates.</span></span> <span data-ttu-id="576c9-106">本主题讨论凭据、 如何在 WCF 中，使用它们以及如何选择你的应用程序正确的凭据。</span><span class="sxs-lookup"><span data-stu-id="576c9-106">This topic discusses credentials, how they are used in WCF, and how to select the right credential for your application.</span></span>  

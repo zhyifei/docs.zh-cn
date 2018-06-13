@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747481"
 ---
 # <a name="ltbaseaddressesgt"></a><span data-ttu-id="3333e-102">&lt;基址&gt;</span><span class="sxs-lookup"><span data-stu-id="3333e-102">&lt;baseAddresses&gt;</span></span>
 <span data-ttu-id="3333e-103">表示一个 `baseAddress` 元素集合，这些元素是自承载环境中服务主机的基址。</span><span class="sxs-lookup"><span data-stu-id="3333e-103">Represents a collection of `baseAddress` elements, which are base addresses for a service host in a self-hosted environment.</span></span> <span data-ttu-id="3333e-104">如果存在基址，则可以使用相对于基址的地址配置终结点。</span><span class="sxs-lookup"><span data-stu-id="3333e-104">If a base address is present, endpoints can be configured with addresses relative to the base address.</span></span>  

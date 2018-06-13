@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745586"
 ---
 # <a name="ltthreaduseallcpugroupsgt-element"></a><span data-ttu-id="41d89-102">&lt;Thread_UseAllCpuGroups&gt;元素</span><span class="sxs-lookup"><span data-stu-id="41d89-102">&lt;Thread_UseAllCpuGroups&gt; Element</span></span>
 <span data-ttu-id="41d89-103">指定运行时是否跨所有 CPU 组分发托管的线程。</span><span class="sxs-lookup"><span data-stu-id="41d89-103">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>  

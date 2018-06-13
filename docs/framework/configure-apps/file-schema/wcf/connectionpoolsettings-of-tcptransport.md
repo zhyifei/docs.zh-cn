@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753074"
 ---
 # <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a><span data-ttu-id="bb4a1-102">&lt;tcpTransport&gt; 的 &lt;connectionPoolSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="bb4a1-102">&lt;connectionPoolSettings&gt; of &lt;tcpTransport&gt;</span></span>
 <span data-ttu-id="bb4a1-103">指定 TCP 传输的其他连接池设置。</span><span class="sxs-lookup"><span data-stu-id="bb4a1-103">Specifies additional connection pool settings for a TCP transport.</span></span>  

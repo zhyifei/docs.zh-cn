@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745170"
 ---
 # <a name="ltetwenablegt-element"></a><span data-ttu-id="3f14f-102">&lt;etwEnable&gt;元素</span><span class="sxs-lookup"><span data-stu-id="3f14f-102">&lt;etwEnable&gt; Element</span></span>
 <span data-ttu-id="3f14f-103">指定是否为公共语言运行时事件启用 Windows 事件跟踪 (ETW)。</span><span class="sxs-lookup"><span data-stu-id="3f14f-103">Specifies whether to enable event tracing for Windows (ETW) for common language runtime events.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745570"
 ---
 # <a name="ltsharedlistenersgt-element"></a><span data-ttu-id="eb29f-102">&lt;sharedListeners&gt;元素</span><span class="sxs-lookup"><span data-stu-id="eb29f-102">&lt;sharedListeners&gt; Element</span></span>
 <span data-ttu-id="eb29f-103">包含任何源或跟踪元素可以引用的侦听器。</span><span class="sxs-lookup"><span data-stu-id="eb29f-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="eb29f-104">上述侦听器默认情况下，不接收任何跟踪并不能在运行时检索这些侦听器。</span><span class="sxs-lookup"><span data-stu-id="eb29f-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="eb29f-105">标识为共享的侦听器可以按名称添加到源或跟踪侦听器。</span><span class="sxs-lookup"><span data-stu-id="eb29f-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  

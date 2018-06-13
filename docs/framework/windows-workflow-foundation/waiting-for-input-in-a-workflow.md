@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513659"
 ---
 # <a name="waiting-for-input-in-a-workflow"></a><span data-ttu-id="d71df-102">在工作流中等待输入</span><span class="sxs-lookup"><span data-stu-id="d71df-102">Waiting for Input in a Workflow</span></span>
 <span data-ttu-id="d71df-103">本节中的主题讨论如何使用书签和消息传递活动。</span><span class="sxs-lookup"><span data-stu-id="d71df-103">The topics in this section discuss how to use bookmarks and messaging activities.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753685"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a><span data-ttu-id="6d8e3-102">编译器和语言提供程序设置架构</span><span class="sxs-lookup"><span data-stu-id="6d8e3-102">Compiler and Language Provider Settings Schema</span></span>
 <span data-ttu-id="6d8e3-103">编译器和语言提供程序设置指定可用语言提供程序的编译器配置元素。</span><span class="sxs-lookup"><span data-stu-id="6d8e3-103">Compiler and language provider settings specify compiler configuration elements for available language providers.</span></span> <span data-ttu-id="6d8e3-104">每个编译器配置元素指定代码提供程序类型名称、编译器参数、支持语言名称以及支持的文件扩展名。</span><span class="sxs-lookup"><span data-stu-id="6d8e3-104">Each compiler configuration element specifies the code provider type name, compiler parameters, supported language names, and supported file extensions.</span></span>  

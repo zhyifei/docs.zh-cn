@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513808"
 ---
 # <a name="designing-and-implementing-custom-activities"></a><span data-ttu-id="91705-102">设计和实现自定义活动</span><span class="sxs-lookup"><span data-stu-id="91705-102">Designing and Implementing Custom Activities</span></span>
 <span data-ttu-id="91705-103">[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中自定义活动的创建途径有二：或是将系统提供的活动组装成组合活动，或是创建派生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 或 <xref:System.Activities.NativeActivity> 的新类型。</span><span class="sxs-lookup"><span data-stu-id="91705-103">Custom activities in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] are created by either assembling system-provided activities into composite activities or by creating new types that derive from <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, or <xref:System.Activities.NativeActivity>.</span></span> <span data-ttu-id="91705-104">本节介绍如何使用任一方法来创建自定义活动。</span><span class="sxs-lookup"><span data-stu-id="91705-104">This section describes how to create custom activities with either method.</span></span>  

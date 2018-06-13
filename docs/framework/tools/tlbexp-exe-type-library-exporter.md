@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408813"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a><span data-ttu-id="f21c7-102">Tlbexp.exe（类型库导出程序）</span><span class="sxs-lookup"><span data-stu-id="f21c7-102">Tlbexp.exe (Type Library Exporter)</span></span>
 <span data-ttu-id="f21c7-103">类型库导出程序生成一个类型库，该类型库描述公共语言运行时程序集中定义的类型。</span><span class="sxs-lookup"><span data-stu-id="f21c7-103">The Type Library Exporter generates a type library that describes the types defined in a common language runtime assembly.</span></span>  

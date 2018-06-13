@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407022"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a><span data-ttu-id="ae351-102">UI 自动化文本模式帮助主题</span><span class="sxs-lookup"><span data-stu-id="ae351-102">UI Automation Text Pattern-How-to Topics</span></span>
 > [!NOTE]

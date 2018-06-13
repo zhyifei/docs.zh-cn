@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745050"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a><span data-ttu-id="8276c-102">&lt;筛选器&gt;元素&lt;添加&gt;为&lt;sharedListeners&gt;</span><span class="sxs-lookup"><span data-stu-id="8276c-102">&lt;filter&gt; Element for &lt;add&gt; for &lt;sharedListeners&gt;</span></span>
 <span data-ttu-id="8276c-103">将筛选器添加到 `sharedListeners` 集合中的侦听器。</span><span class="sxs-lookup"><span data-stu-id="8276c-103">Adds a filter to a listener in the `sharedListeners` collection.</span></span>  

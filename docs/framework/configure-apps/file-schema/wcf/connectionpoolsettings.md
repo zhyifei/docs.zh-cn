@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748147"
 ---
 # <a name="ltconnectionpoolsettingsgt"></a><span data-ttu-id="751ab-102">&lt;connectionPoolSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="751ab-102">&lt;connectionPoolSettings&gt;</span></span>
 <span data-ttu-id="751ab-103">指定命名管道绑定的其他连接池设置。</span><span class="sxs-lookup"><span data-stu-id="751ab-103">Specifies additional connection pool settings for a Named Pipe binding.</span></span>  

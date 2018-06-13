@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 381fdecfb2cb194cd1eb00a5b55db6fb89eeebbc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413912"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a><span data-ttu-id="64555-102">ICorDebugManagedCallback::Breakpoint 方法</span><span class="sxs-lookup"><span data-stu-id="64555-102">ICorDebugManagedCallback::Breakpoint Method</span></span>
 <span data-ttu-id="64555-103">遇到断点时，请通知调试器。</span><span class="sxs-lookup"><span data-stu-id="64555-103">Notifies the debugger when a breakpoint is encountered.</span></span>  

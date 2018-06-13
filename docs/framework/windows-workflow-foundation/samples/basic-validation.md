@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514076"
 ---
 # <a name="basic-validation"></a><span data-ttu-id="48f36-102">基本验证</span><span class="sxs-lookup"><span data-stu-id="48f36-102">Basic Validation</span></span>
 <span data-ttu-id="48f36-103">此示例包含 `CreateProduct` 活动，该活动验证它的 `Cost` 参数是否小于或等于它的 `Price` 参数。</span><span class="sxs-lookup"><span data-stu-id="48f36-103">This sample consists of an activity, `CreateProduct`, which validates that its `Cost` argument is smaller than or equal to its `Price` argument.</span></span>  

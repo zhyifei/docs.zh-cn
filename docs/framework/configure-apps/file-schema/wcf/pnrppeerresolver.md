@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747975"
 ---
 # <a name="ltpnrppeerresolvergt"></a><span data-ttu-id="ddac6-102">&lt;pnrpPeerResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="ddac6-102">&lt;pnrpPeerResolver&gt;</span></span>
 <span data-ttu-id="ddac6-103">指定要将 PNRP（对等名称解析协议）解析程序用作解析程序。</span><span class="sxs-lookup"><span data-stu-id="ddac6-103">Specifies that the PNRP (Peer Name Resolution Protocol) resolver is to be used as a resolver.</span></span> <span data-ttu-id="ddac6-104">此元素是可选的，因为 PNRP 是默认解析程序。</span><span class="sxs-lookup"><span data-stu-id="ddac6-104">This element is optional because PNRP is the default resolver.</span></span>  

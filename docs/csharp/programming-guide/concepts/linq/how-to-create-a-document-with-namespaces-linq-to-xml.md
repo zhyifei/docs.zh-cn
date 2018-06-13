@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330686"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a><span data-ttu-id="c1260-102">如何：使用命名空间创建文档 (C#) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c1260-102">How to: Create a Document with Namespaces (C#) (LINQ to XML)</span></span>
 <span data-ttu-id="c1260-103">本主题演示如何创建包含命名空间的文档。</span><span class="sxs-lookup"><span data-stu-id="c1260-103">This topic shows how to create documents with namespaces.</span></span>  

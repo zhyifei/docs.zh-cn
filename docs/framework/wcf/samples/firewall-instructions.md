@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506752"
 ---
 # <a name="firewall-instructions"></a><span data-ttu-id="e785f-102">防火墙说明</span><span class="sxs-lookup"><span data-stu-id="e785f-102">Firewall Instructions</span></span>
 <span data-ttu-id="e785f-103">必须启用多个端口或在防火墙中的程序，以便 Windows Communication Foundation (WCF) 示例才能运行。</span><span class="sxs-lookup"><span data-stu-id="e785f-103">You must enable several ports or programs in the firewall so that the Windows Communication Foundation (WCF) samples can function.</span></span> <span data-ttu-id="e785f-104">其中许多示例使用范围 8000-8003 中的端口和端口 9000 进行通信。</span><span class="sxs-lookup"><span data-stu-id="e785f-104">Many of the samples communicate by using ports in the range 8000-8003, and port 9000.</span></span> <span data-ttu-id="e785f-105">防火墙默认情况下会打开，阻止对这些端口进行访问。</span><span class="sxs-lookup"><span data-stu-id="e785f-105">The firewall is turned on by default and prevents access to these ports.</span></span> <span data-ttu-id="e785f-106">若要针对这些示例启用防火墙，请完成以下过程之一，具体情况取决于您的需求和安全环境：</span><span class="sxs-lookup"><span data-stu-id="e785f-106">To enable the firewall for the samples, complete one of the following procedures, depending on your requirements and security environment:</span></span>  

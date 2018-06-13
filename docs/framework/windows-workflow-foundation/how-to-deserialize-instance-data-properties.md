@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514047"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="16792-102">如何：对实例数据属性进行反序列化</span><span class="sxs-lookup"><span data-stu-id="16792-102">How to: Deserialize Instance Data Properties</span></span>
 <span data-ttu-id="16792-103">在有些情况下，用户或工作流管理员可能需要手动检查持久保存的工作流实例的状态。</span><span class="sxs-lookup"><span data-stu-id="16792-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="16792-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供一个有关 Instances 表的视图，公开以下四列：</span><span class="sxs-lookup"><span data-stu-id="16792-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  
