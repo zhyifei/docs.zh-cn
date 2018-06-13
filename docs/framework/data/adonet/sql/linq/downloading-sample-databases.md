@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359671"
 ---
 # <a name="downloading-sample-databases"></a>下载示例数据库
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的许多示例和演练都使用 Northwind 示例数据库和 SQL Server Express Edition。 您可以从 Microsoft 下载网站免费下载这些产品。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358464"
 ---
 # <a name="object-identity"></a>对象标识
 运行库中的对象具有唯一标识。 引用同一对象的两个变量实际上是引用此对象的同一实例。 因为这一事实，您通过一个变量做出更改后，立即就可以通过另一个变量看到这些更改。  

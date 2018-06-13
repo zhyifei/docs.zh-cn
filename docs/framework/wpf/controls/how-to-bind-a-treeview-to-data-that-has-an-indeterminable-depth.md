@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554364"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>如何：将 TreeView 绑定到深度无法确定的数据
 可能有的时候你想要将绑定<xref:System.Windows.Controls.TreeView>到数据源不已知其深度。  这会时发生数据具有递归性质，例如文件系统，其中文件夹可以包含文件夹或公司的组织结构，其中员工的直接下属作为其他员工。  

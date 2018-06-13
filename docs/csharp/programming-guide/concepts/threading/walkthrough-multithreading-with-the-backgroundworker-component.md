@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339363"
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>演练：利用 BackgroundWorker 组件进行多线程处理 (C#)
 本演练演示如何创建在文本文件中搜索单词出现次数的多线程 Windows 窗体应用程序。 演示内容包括：  
