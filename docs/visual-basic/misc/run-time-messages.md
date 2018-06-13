@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644454"
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 运行时消息
 本部分包含发生在运行时的 Visual Basic 错误消息。  

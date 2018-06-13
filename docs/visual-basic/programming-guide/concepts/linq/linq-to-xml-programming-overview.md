@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645689"
 ---
 # <a name="linq-to-xml-programming-overview-visual-basic"></a>LINQ to XML 编程概述 (Visual Basic)
 这些主题提供有关 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 类的高级概述信息，以及有关三个最重要类的详细信息。  

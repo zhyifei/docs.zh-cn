@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640178"
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a>无法读取分隔字段，因为分隔符为 Nothing 或空
 无法从文件读取 `TextFieldParser` ，因为 `Delimiters` 属性设置为 `Nothing` 或为空。  
