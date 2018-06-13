@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393697"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>如何：配置应用程序以支持 .NET Framework 4 或 4.5
 托管公共语言运行时 (CLR) 的所有应用程序都必须启动（或*激活*）CLR，才能运行托管代码。 通常，.NET Framework 应用程序在生成它的 CLR 版本上运行，但您可以使用应用程序配置文件（有时称为 app.config 文件）来更改桌面应用程序的此行为。 但是，您不能使用应用程序配置文件来更改 Windows 应用商店应用或 Windows Phone 应用程序的默认激活行为。 本文说明如何使桌面应用程序能够在 .NET Framework 的其他版本上运行，并提供了如何定位版本 4 或 4.5 的示例。  

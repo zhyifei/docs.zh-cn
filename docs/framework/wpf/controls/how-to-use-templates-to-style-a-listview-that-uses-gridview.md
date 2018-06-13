@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553827"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>如何：使用模板创建使用 GridView 的 ListView 的样式
 此示例演示如何使用<xref:System.Windows.DataTemplate>和<xref:System.Windows.Style>对象来指定的外观<xref:System.Windows.Controls.ListView>使用控件<xref:System.Windows.Controls.GridView>视图模式。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540350"
 ---
 # <a name="collection-type-dependency-properties"></a>集合类型依赖项属性
 本主题就如何实现属性类型为集合类型的依赖属性提供相应指导和建议模式。  

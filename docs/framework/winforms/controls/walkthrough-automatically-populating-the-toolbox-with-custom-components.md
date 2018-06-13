@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540041"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>演练：使用自定义组件自动填充工具箱
 如果你的组件定义的那样当前打开的解决方案中的项目中，它们将会自动出现在**工具箱**，而需要你执行任何操作。 你可以手动填充**工具箱**与通过使用你自定义组件[选择工具箱项对话框 (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)，但**工具箱**采用帐户你的解决方案中的项的生成包含所有以下特征的输出结果：  

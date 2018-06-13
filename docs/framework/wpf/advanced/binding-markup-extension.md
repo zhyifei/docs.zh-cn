@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541880"
 ---
 # <a name="binding-markup-extension"></a>绑定标记扩展
 将遵从输入属性值，将数据绑定值，创建一个中间表达式对象，并解释适用于元素以及运行时在其绑定的数据上下文。  

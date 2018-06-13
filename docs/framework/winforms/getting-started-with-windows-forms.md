@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538960"
 ---
 # <a name="getting-started-with-windows-forms"></a>Windows 窗体入门
 使用 Windows 窗体，你可以创建功能强大的基于 Windows 的应用程序。 以下主题介绍深入如何利用 Windows 窗体以显示数据、 处理用户输入，并轻松而又增强安全地部署应用程序。  

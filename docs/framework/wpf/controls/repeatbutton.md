@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555001"
 ---
 # <a name="repeatbutton"></a>RepeatButton
 <xref:System.Windows.Controls.Primitives.RepeatButton>类似于<xref:System.Windows.Controls.Button>。 但是，<xref:System.Windows.Controls.Primitives.RepeatButton>元素，可以控制何时以及如何<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件发生。  

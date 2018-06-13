@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401149"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>UI 自动化规范和社区承诺
 UI 自动化提供以编程方式访问大多数用户界面 (UI) 元素在桌面上，使辅助技术产品，如屏幕读取器向最终用户提供有关 UI 的信息并通过标准输入以外的其他方式操作用户界面.  
