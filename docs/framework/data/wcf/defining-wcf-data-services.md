@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356621"
 ---
 # <a name="defining-wcf-data-services"></a>定义 WCF 数据服务
 本部分介绍如何创建和配置[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]来公开数据作为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 有关创建数据服务所需的基本步骤的详细信息，请参阅[公开数据作为一种服务恢复](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)。  
