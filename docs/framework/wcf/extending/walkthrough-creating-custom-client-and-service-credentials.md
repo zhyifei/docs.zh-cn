@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808479"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a><span data-ttu-id="ee05d-102">演练：创建自定义客户端和服务凭据</span><span class="sxs-lookup"><span data-stu-id="ee05d-102">Walkthrough: Creating Custom Client and Service Credentials</span></span>
 <span data-ttu-id="ee05d-103">本主题演示如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用自定义凭据。</span><span class="sxs-lookup"><span data-stu-id="ee05d-103">This topic shows how to implement custom client and service credentials and how to use custom credentials from application code.</span></span>  

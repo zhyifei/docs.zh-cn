@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650850"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a><span data-ttu-id="804ff-102">如何：折叠和隐藏代码节 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="804ff-102">How to: Collapse and Hide Sections of Code (Visual Basic)</span></span>
 <span data-ttu-id="804ff-103">`#Region`指令，可折叠并隐藏 Visual Basic 文件中的代码段。</span><span class="sxs-lookup"><span data-stu-id="804ff-103">The `#Region` directive enables you to collapse and hide sections of code in Visual Basic files.</span></span> <span data-ttu-id="804ff-104">`#Region`指令允许你使用 Visual Studio 代码编辑器时指定的一段代码，你可以展开或折叠。</span><span class="sxs-lookup"><span data-stu-id="804ff-104">The `#Region` directive lets you specify a block of code that you can expand or collapse when using the Visual Studio code editor.</span></span> <span data-ttu-id="804ff-105">有选择地隐藏代码的能力使你的文件更易于管理并且更易读。</span><span class="sxs-lookup"><span data-stu-id="804ff-105">The ability to hide code selectively makes your files more manageable and easier to read.</span></span> <span data-ttu-id="804ff-106">有关详细信息，请参阅[大纲显示](/visualstudio/ide/outlining)。</span><span class="sxs-lookup"><span data-stu-id="804ff-106">For more information, see [Outlining](/visualstudio/ide/outlining).</span></span>  

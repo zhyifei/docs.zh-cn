@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803448"
 ---
 # <a name="custom-credential-and-credential-validation"></a><span data-ttu-id="f6f71-102">自定义凭据和凭据验证</span><span class="sxs-lookup"><span data-stu-id="f6f71-102">Custom Credential and Credential Validation</span></span>
 <span data-ttu-id="f6f71-103">在 Windows Communication Foundation (WCF) 安全取决于服务和客户端之间的凭据交换。</span><span class="sxs-lookup"><span data-stu-id="f6f71-103">Security in Windows Communication Foundation (WCF) is based on the exchange of credentials between services and clients.</span></span> <span data-ttu-id="f6f71-104">大多数安全方案均可使用常见的凭据类型来实现，如 Windows (Kerberos)、用户名和密码以及证书。</span><span class="sxs-lookup"><span data-stu-id="f6f71-104">Most security scenarios can be satisfied using common credential types, such as Windows (Kerberos), username and passwords, and certificates.</span></span> <span data-ttu-id="f6f71-105">而本节中的主题针对需要使用新类型的凭据的情况说明如何处理和验证这些新类型。</span><span class="sxs-lookup"><span data-stu-id="f6f71-105">However, if a new type of credential is required, the topics in this section explain how to handle and validate new types.</span></span>  

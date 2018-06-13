@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806534"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a><span data-ttu-id="268d9-102">如何：在企业中锁定终结点</span><span class="sxs-lookup"><span data-stu-id="268d9-102">How to: Lock Down Endpoints in the Enterprise</span></span>
 <span data-ttu-id="268d9-103">大企业往往要求开发的应用程序符合企业安全策略。</span><span class="sxs-lookup"><span data-stu-id="268d9-103">Large enterprises often require that applications are developed in compliance with enterprise security policies.</span></span> <span data-ttu-id="268d9-104">以下主题讨论如何开发和安装客户端的终结点验证程序，它可以用于验证安装在计算机上的所有 Windows Communication Foundation (WCF) 客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="268d9-104">The following topic discusses how to develop and install a client endpoint validator that can be used to validate all Windows Communication Foundation (WCF) client applications installed on computers.</span></span>  

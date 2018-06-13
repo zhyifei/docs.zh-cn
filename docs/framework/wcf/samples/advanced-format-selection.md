@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805585"
 ---
 # <a name="advanced-format-selection"></a><span data-ttu-id="40ef4-102">高级格式选择</span><span class="sxs-lookup"><span data-stu-id="40ef4-102">Advanced Format Selection</span></span>
 <span data-ttu-id="40ef4-103">此示例演示如何扩展 Windows Communication Foundation (WCF) REST 编程模型以支持新的传出响应格式。</span><span class="sxs-lookup"><span data-stu-id="40ef4-103">This sample demonstrates how to extend the Windows Communication Foundation (WCF) REST programming model to support new outgoing response formats.</span></span> <span data-ttu-id="40ef4-104">此外，本示例使用 T4 模板以 HTML 页的形式返回响应，从而演示如何实现视图样式编程模型。</span><span class="sxs-lookup"><span data-stu-id="40ef4-104">In addition, the sample uses a T4 Template to return the response as an XHTML page, demonstrating how a view-style programming model can be implemented.</span></span>  

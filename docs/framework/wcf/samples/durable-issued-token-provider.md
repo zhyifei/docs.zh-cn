@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807546"
 ---
 # <a name="durable-issued-token-provider"></a><span data-ttu-id="921f4-102">持久性已颁发令牌提供程序</span><span class="sxs-lookup"><span data-stu-id="921f4-102">Durable Issued Token Provider</span></span>
 <span data-ttu-id="921f4-103">此示例演示如何实现一个自定义客户端已颁发令牌提供程序。</span><span class="sxs-lookup"><span data-stu-id="921f4-103">This sample demonstrates how to implement a custom client issued token provider.</span></span>  

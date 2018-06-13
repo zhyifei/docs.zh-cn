@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810104"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a><span data-ttu-id="89284-102">使用 WCF 客户端访问服务</span><span class="sxs-lookup"><span data-stu-id="89284-102">Accessing Services Using a WCF Client</span></span>
 <span data-ttu-id="89284-103">创建服务后下, 一步是创建 WCF 客户端代理。</span><span class="sxs-lookup"><span data-stu-id="89284-103">After you create a service, the next step is to create a WCF client proxy.</span></span> <span data-ttu-id="89284-104">客户端应用程序使用 WCF 客户端代理与服务通信。</span><span class="sxs-lookup"><span data-stu-id="89284-104">A client application uses the WCF client proxy to communicate with the service.</span></span> <span data-ttu-id="89284-105">客户端应用程序通常导入服务的元数据生成 WCF 客户端代码可以用于调用服务。</span><span class="sxs-lookup"><span data-stu-id="89284-105">Client applications usually import a service's metadata to generate WCF client code that can be used to invoke the service.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808505"
 ---
 # <a name="simplified-configuration"></a><span data-ttu-id="a1b78-102">简化配置</span><span class="sxs-lookup"><span data-stu-id="a1b78-102">Simplified Configuration</span></span>
 <span data-ttu-id="a1b78-103">配置 Windows Communication Foundation (WCF) 服务可以是一个复杂的任务。</span><span class="sxs-lookup"><span data-stu-id="a1b78-103">Configuring Windows Communication Foundation (WCF) services can be a complex task.</span></span> <span data-ttu-id="a1b78-104">该任务涉及多个不同选项，并且有时会很难确定需要哪些设置。</span><span class="sxs-lookup"><span data-stu-id="a1b78-104">There are many different options and it is not always easy to determine what settings are required.</span></span> <span data-ttu-id="a1b78-105">虽然配置文件提高灵活性的 WCF 服务，它们也是许多难以发现的问题的源。</span><span class="sxs-lookup"><span data-stu-id="a1b78-105">While configuration files increase the flexibility of WCF services, they also are the source for many hard to find problems.</span></span> [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="a1b78-106">解决了这些问题，并向用户提供了一种减小服务配置大小和降低复杂性的方法。</span><span class="sxs-lookup"><span data-stu-id="a1b78-106"> addresses these problems and provides a way to reduce the size and complexity of service configuration.</span></span>  

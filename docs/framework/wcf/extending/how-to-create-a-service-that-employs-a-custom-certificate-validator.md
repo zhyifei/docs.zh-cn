@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808138"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a><span data-ttu-id="fa7eb-102">如何：创建使用自定义证书验证程序的服务</span><span class="sxs-lookup"><span data-stu-id="fa7eb-102">How to: Create a Service that Employs a Custom Certificate Validator</span></span>
 <span data-ttu-id="fa7eb-103">本主题介绍如何实现自定义证书验证程序，以及如何配置客户端或服务凭据以使用自定义证书验证程序替换默认证书验证逻辑。</span><span class="sxs-lookup"><span data-stu-id="fa7eb-103">This topic shows how to implement a custom certificate validator and how to configure client or service credentials to replace the default certificate validation logic with the custom certificate validator.</span></span>  

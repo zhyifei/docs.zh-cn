@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808957"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a><span data-ttu-id="be439-102">如何：创建自定义安全令牌提供程序</span><span class="sxs-lookup"><span data-stu-id="be439-102">How to: Create a Custom Security Token Provider</span></span>
 <span data-ttu-id="be439-103">本主题介绍如何使用自定义安全令牌提供程序来创建新令牌类型，以及如何将该提供程序与自定义安全令牌管理器集成。</span><span class="sxs-lookup"><span data-stu-id="be439-103">This topic shows how to create new token types with a custom security token provider and how to integrate the provider with a custom security token manager.</span></span>  

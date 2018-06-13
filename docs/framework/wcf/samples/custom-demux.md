@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805559"
 ---
 # <a name="custom-demux"></a><span data-ttu-id="13685-102">自定义多路分解器</span><span class="sxs-lookup"><span data-stu-id="13685-102">Custom Demux</span></span>
 <span data-ttu-id="13685-103">此示例演示如何 MSMQ 消息头可以将映射到不同服务操作，以便 Windows Communication Foundation (WCF) 服务使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>并不仅限于使用一个服务操作，如中所示[消息队列 Windows Communication foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)和[Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)示例。</span><span class="sxs-lookup"><span data-stu-id="13685-103">This sample demonstrates how MSMQ message headers can be mapped to different service operations so that Windows Communication Foundation (WCF) services that use <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> are not limited to using one service operation as demonstrated in the [Message Queuing to Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) and [Windows Communication Foundation to Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) samples.</span></span>  

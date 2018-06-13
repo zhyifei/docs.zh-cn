@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806203"
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a><span data-ttu-id="5bf30-102">使用 ServiceHostFactory 扩展宿主</span><span class="sxs-lookup"><span data-stu-id="5bf30-102">Extending Hosting Using ServiceHostFactory</span></span>
 <span data-ttu-id="5bf30-103">标准<xref:System.ServiceModel.ServiceHost>用于托管服务中 Windows Communication Foundation (WCF) API 是 WCF 体系结构中的一个扩展点。</span><span class="sxs-lookup"><span data-stu-id="5bf30-103">The standard <xref:System.ServiceModel.ServiceHost> API for hosting services in Windows Communication Foundation (WCF) is an extensibility point in the WCF architecture.</span></span> <span data-ttu-id="5bf30-104">在打开服务之前，用户可以从 <xref:System.ServiceModel.ServiceHost> 派生各自的宿主类，通常是重写 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> 以使用 <xref:System.ServiceModel.Description.ServiceDescription> 来以强制方式添加默认终结点或修改行为。</span><span class="sxs-lookup"><span data-stu-id="5bf30-104">Users can derive their own host classes from <xref:System.ServiceModel.ServiceHost>, usually to override <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> to use <xref:System.ServiceModel.Description.ServiceDescription> to add default endpoints imperatively or modify behaviors, prior to opening the service.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808587"
 ---
 # <a name="using-sessions"></a><span data-ttu-id="50e0a-102">使用会话</span><span class="sxs-lookup"><span data-stu-id="50e0a-102">Using Sessions</span></span>
 <span data-ttu-id="50e0a-103">Windows Communication Foundation (WCF) 应用程序中*会话*将一组消息关联起来形成对话。</span><span class="sxs-lookup"><span data-stu-id="50e0a-103">In Windows Communication Foundation (WCF) applications, a *session* correlates a group of messages into a conversation.</span></span> <span data-ttu-id="50e0a-104">WCF 会话是不同于中提供的会话对象[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]应用程序，支持不同的行为，并且以不同的方式进行控制。</span><span class="sxs-lookup"><span data-stu-id="50e0a-104">WCF sessions are different than the session object available in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications, support different behaviors, and are controlled in different ways.</span></span> <span data-ttu-id="50e0a-105">本主题介绍在 WCF 中启用会话的功能的应用程序以及如何使用它们。</span><span class="sxs-lookup"><span data-stu-id="50e0a-105">This topic describes the features that sessions enable in WCF applications and how to use them.</span></span>  

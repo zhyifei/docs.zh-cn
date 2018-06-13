@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805163"
 ---
 # <a name="wcf-performance-counters"></a><span data-ttu-id="de10e-102">WCF 性能计数器</span><span class="sxs-lookup"><span data-stu-id="de10e-102">WCF Performance Counters</span></span>
 <span data-ttu-id="de10e-103">Windows Communication Foundation (WCF) 包括大量性能计数器，可帮助您衡量应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="de10e-103">Windows Communication Foundation (WCF) includes a large set of performance counters to help you gauge your application's performance.</span></span>  

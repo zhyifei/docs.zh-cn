@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803663"
 ---
 # <a name="guidelines-and-best-practices"></a><span data-ttu-id="eb911-102">指南与最佳做法</span><span class="sxs-lookup"><span data-stu-id="eb911-102">Guidelines and Best Practices</span></span>
 <span data-ttu-id="eb911-103">本部分包含用于创建 Windows Communication Foundation (WCF) 应用程序提供指导原则的主题。</span><span class="sxs-lookup"><span data-stu-id="eb911-103">This section contains topics that provide guidelines for creating Windows Communication Foundation (WCF) applications.</span></span>  

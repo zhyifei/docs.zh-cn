@@ -1,32 +1,23 @@
 ---
-title: "如何： 使用复杂筛选 (Visual Basic) 编写查询"
-ms.custom: 
+title: 如何： 使用复杂筛选 (Visual Basic) 编写查询
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 15ed0dcf87ad05b1da984aca494d28c1b19eb685
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 500cd9cdc62252eff3addc26006c4ce815ae1b4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645858"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a><span data-ttu-id="dc009-102">如何： 使用复杂筛选 (Visual Basic) 编写查询</span><span class="sxs-lookup"><span data-stu-id="dc009-102">How to: Write Queries with Complex Filtering (Visual Basic)</span></span>
-<span data-ttu-id="dc009-103">有时，您需要编写使用复杂筛选器的 LINQ to XML 查询。</span><span class="sxs-lookup"><span data-stu-id="dc009-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="dc009-104">例如，您可能必须查找其子元素具有特定名称和值的所有元素。</span><span class="sxs-lookup"><span data-stu-id="dc009-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="dc009-105">本主题提供一个编写使用复杂筛选的查询的示例。</span><span class="sxs-lookup"><span data-stu-id="dc009-105">This topic gives an example of writing a query with complex filtering.</span></span>  
+# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a><span data-ttu-id="825ce-102">如何： 使用复杂筛选 (Visual Basic) 编写查询</span><span class="sxs-lookup"><span data-stu-id="825ce-102">How to: Write Queries with Complex Filtering (Visual Basic)</span></span>
+<span data-ttu-id="825ce-103">有时，您需要编写使用复杂筛选器的 LINQ to XML 查询。</span><span class="sxs-lookup"><span data-stu-id="825ce-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="825ce-104">例如，您可能必须查找其子元素具有特定名称和值的所有元素。</span><span class="sxs-lookup"><span data-stu-id="825ce-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="825ce-105">本主题提供一个编写使用复杂筛选的查询的示例。</span><span class="sxs-lookup"><span data-stu-id="825ce-105">This topic gives an example of writing a query with complex filtering.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dc009-106">示例</span><span class="sxs-lookup"><span data-stu-id="dc009-106">Example</span></span>  
- <span data-ttu-id="dc009-107">本示例演示如何查找具有 `PurchaseOrder` 属性等于“Shipping”的子 `Address` 元素和等于“NY”的子 `Type` 元素的所有 `State` 元素。</span><span class="sxs-lookup"><span data-stu-id="dc009-107">This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY".</span></span> <span data-ttu-id="dc009-108">示例在 `Where` 子句中使用嵌套查询，如果集合中有任何元素，则 `Any` 运算符返回 `True`。</span><span class="sxs-lookup"><span data-stu-id="dc009-108">It uses a nested query in the `Where` clause, and the `Any` operator returns `True` if the collection has any elements in it.</span></span>  
+## <a name="example"></a><span data-ttu-id="825ce-106">示例</span><span class="sxs-lookup"><span data-stu-id="825ce-106">Example</span></span>  
+ <span data-ttu-id="825ce-107">本示例演示如何查找具有 `PurchaseOrder` 属性等于“Shipping”的子 `Address` 元素和等于“NY”的子 `Type` 元素的所有 `State` 元素。</span><span class="sxs-lookup"><span data-stu-id="825ce-107">This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY".</span></span> <span data-ttu-id="825ce-108">示例在 `Where` 子句中使用嵌套查询，如果集合中有任何元素，则 `Any` 运算符返回 `True`。</span><span class="sxs-lookup"><span data-stu-id="825ce-108">It uses a nested query in the `Where` clause, and the `Any` operator returns `True` if the collection has any elements in it.</span></span>  
   
- <span data-ttu-id="dc009-109">本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="dc009-109">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="825ce-109">本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="825ce-109">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="dc009-110">有关详细信息`Any`运算符，请参阅[限定符操作 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="dc009-110">For more information about the `Any` operator, see [Quantifier Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).</span></span>  
+ <span data-ttu-id="825ce-110">有关详细信息`Any`运算符，请参阅[限定符操作 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="825ce-110">For more information about the `Any` operator, see [Quantifier Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -45,16 +36,16 @@ For Each el As XElement In purchaseOrders
 Next  
 ```  
   
- <span data-ttu-id="dc009-111">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="dc009-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="825ce-111">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="825ce-111">This code produces the following output:</span></span>  
   
 ```  
 99505  
 ```  
   
-## <a name="example"></a><span data-ttu-id="dc009-112">示例</span><span class="sxs-lookup"><span data-stu-id="dc009-112">Example</span></span>  
- <span data-ttu-id="dc009-113">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="dc009-113">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="dc009-114">有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="dc009-114">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="825ce-112">示例</span><span class="sxs-lookup"><span data-stu-id="825ce-112">Example</span></span>  
+ <span data-ttu-id="825ce-113">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="825ce-113">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="825ce-114">有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="825ce-114">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="dc009-115">本示例使用以下 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="dc009-115">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="825ce-115">本示例使用以下 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="825ce-115">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -79,18 +70,18 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="dc009-116">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="dc009-116">This code produces the following output:</span></span>  
+ <span data-ttu-id="825ce-116">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="825ce-116">This code produces the following output:</span></span>  
   
 ```  
 99505  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dc009-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="dc009-117">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="825ce-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="825ce-117">See Also</span></span>  
  <xref:System.Xml.Linq.XElement.Attribute%2A>  
  <xref:System.Xml.Linq.XContainer.Elements%2A>  
- [<span data-ttu-id="dc009-118">基本查询 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc009-118">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [<span data-ttu-id="dc009-119">XML 子轴属性</span><span class="sxs-lookup"><span data-stu-id="dc009-119">XML Child Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
- [<span data-ttu-id="dc009-120">XML 特性轴属性</span><span class="sxs-lookup"><span data-stu-id="dc009-120">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)  
- [<span data-ttu-id="dc009-121">XML 值属性</span><span class="sxs-lookup"><span data-stu-id="dc009-121">XML Value Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)  
- [<span data-ttu-id="dc009-122">投影运算 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc009-122">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
- [<span data-ttu-id="dc009-123">限定符操作 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc009-123">Quantifier Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+ [<span data-ttu-id="825ce-118">基本查询 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="825ce-118">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+ [<span data-ttu-id="825ce-119">XML 子轴属性</span><span class="sxs-lookup"><span data-stu-id="825ce-119">XML Child Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
+ [<span data-ttu-id="825ce-120">XML 特性轴属性</span><span class="sxs-lookup"><span data-stu-id="825ce-120">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)  
+ [<span data-ttu-id="825ce-121">XML 值属性</span><span class="sxs-lookup"><span data-stu-id="825ce-121">XML Value Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)  
+ [<span data-ttu-id="825ce-122">投影运算 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="825ce-122">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
+ [<span data-ttu-id="825ce-123">限定符操作 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="825ce-123">Quantifier Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808233"
 ---
 # <a name="extending-dispatchers"></a><span data-ttu-id="1d634-102">扩展调度程序</span><span class="sxs-lookup"><span data-stu-id="1d634-102">Extending Dispatchers</span></span>
 <span data-ttu-id="1d634-103">调度程序负责从基础通道拉取传入的消息，将它们翻译成应用程序代码形式的方法调用，并将结果发送回调用方。</span><span class="sxs-lookup"><span data-stu-id="1d634-103">Dispatchers are responsible for pulling incoming messages out of the underlying channels, translating them into method invocations in application code, and sending the results back to the caller.</span></span> <span data-ttu-id="1d634-104">调度程序扩展允许您修改此过程。</span><span class="sxs-lookup"><span data-stu-id="1d634-104">Dispatcher extensions allow you to modify this processing.</span></span>  <span data-ttu-id="1d634-105">您可以实现消息或参数检查器，用来检查或修改消息或参数的内容。</span><span class="sxs-lookup"><span data-stu-id="1d634-105">You can implement message or parameter inspectors that inspect or modify the contents of messages or parameters.</span></span>  <span data-ttu-id="1d634-106">您也可以更改将消息路由到操作的方式或提供其他功能。</span><span class="sxs-lookup"><span data-stu-id="1d634-106">You can change the way messages are routed to operations or provide some other functionality.</span></span>  

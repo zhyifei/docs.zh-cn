@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803749"
 ---
 # <a name="reliable-services"></a><span data-ttu-id="9cdc4-102">可靠服务</span><span class="sxs-lookup"><span data-stu-id="9cdc4-102">Reliable Services</span></span>
 <span data-ttu-id="9cdc4-103">队列和可靠会话是 Windows Communication Foundation (WCF) 功能用于实现可靠消息传递。</span><span class="sxs-lookup"><span data-stu-id="9cdc4-103">Queues and reliable sessions are the Windows Communication Foundation (WCF) features that implement reliable messaging.</span></span> <span data-ttu-id="9cdc4-104">本主题介绍 WCF 的可靠消息传递功能。</span><span class="sxs-lookup"><span data-stu-id="9cdc4-104">This topic explains the reliable messaging features of WCF.</span></span>  

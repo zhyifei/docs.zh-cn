@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804399"
 ---
 # <a name="aspnetrouteintegration"></a><span data-ttu-id="2ea44-102">AspNetRouteIntegration</span><span class="sxs-lookup"><span data-stu-id="2ea44-102">AspNetRouteIntegration</span></span>
 <span data-ttu-id="2ea44-103">此示例演示如何承载使用 ASP.NET 路由的 Windows Communication Foundation (WCF) REST 服务。</span><span class="sxs-lookup"><span data-stu-id="2ea44-103">This sample demonstrates how to host a Windows Communication Foundation (WCF) REST service using ASP.NET routes.</span></span> <span data-ttu-id="2ea44-104">[基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)示例演示了这种情况下的自承载的版本，并讨论深度中的服务实现。</span><span class="sxs-lookup"><span data-stu-id="2ea44-104">The [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample shows a self-hosted version of this scenario and discusses the service implementation in depth.</span></span> <span data-ttu-id="2ea44-105">本主题重点介绍 ASP.NET 集成功能。</span><span class="sxs-lookup"><span data-stu-id="2ea44-105">This topic focuses on the ASP.NET integration feature.</span></span> <span data-ttu-id="2ea44-106">有关 ASP.NET 路由的详细信息，请参阅<xref:System.Web.Routing>。</span><span class="sxs-lookup"><span data-stu-id="2ea44-106">For more information about ASP.NET Routing, see <xref:System.Web.Routing>.</span></span>  

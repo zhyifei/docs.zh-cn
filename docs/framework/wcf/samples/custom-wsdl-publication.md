@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807874"
 ---
 # <a name="custom-wsdl-publication"></a><span data-ttu-id="f992c-102">自定义 WSDL 发布</span><span class="sxs-lookup"><span data-stu-id="f992c-102">Custom WSDL Publication</span></span>
 <span data-ttu-id="f992c-103">此示例演示如何：</span><span class="sxs-lookup"><span data-stu-id="f992c-103">This sample demonstrates how to:</span></span>  

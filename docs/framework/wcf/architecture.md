@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804217"
 ---
 # <a name="windows-communication-foundation-architecture"></a><span data-ttu-id="0de9a-102">Windows Communication Foundation 体系结构</span><span class="sxs-lookup"><span data-stu-id="0de9a-102">Windows Communication Foundation Architecture</span></span>
 <span data-ttu-id="0de9a-103">如下图所示的 Windows Communication Foundation (WCF) 体系结构的主要层。</span><span class="sxs-lookup"><span data-stu-id="0de9a-103">The following graphic illustrates the major layers of the Windows Communication Foundation (WCF) architecture.</span></span>  

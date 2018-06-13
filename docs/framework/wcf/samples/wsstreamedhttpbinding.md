@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807171"
 ---
 # <a name="wsstreamedhttpbinding"></a><span data-ttu-id="0bb28-102">WSStreamedHttpBinding</span><span class="sxs-lookup"><span data-stu-id="0bb28-102">WSStreamedHttpBinding</span></span>
 <span data-ttu-id="0bb28-103">此示例演示如何创建一个绑定，该绑定用于在使用 HTTP 传输时支持流方案。</span><span class="sxs-lookup"><span data-stu-id="0bb28-103">The sample demonstrates how to create a binding that is designed to support streaming scenarios when the HTTP transport is used.</span></span>  

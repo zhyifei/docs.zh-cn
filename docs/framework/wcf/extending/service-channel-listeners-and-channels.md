@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809646"
 ---
 # <a name="service-channel-listeners-and-channels"></a><span data-ttu-id="5d5fc-102">服务：通道侦听器和通道</span><span class="sxs-lookup"><span data-stu-id="5d5fc-102">Service: Channel Listeners and Channels</span></span>
 <span data-ttu-id="5d5fc-103">共有三种类别的通道对象：通道、通道侦听器和通道工厂。</span><span class="sxs-lookup"><span data-stu-id="5d5fc-103">There are three categories of channel objects: channels, channel listeners and channel factories.</span></span> <span data-ttu-id="5d5fc-104">通道是应用程序和通道堆栈之间的接口。</span><span class="sxs-lookup"><span data-stu-id="5d5fc-104">Channels are the interface between the application and the channel stack.</span></span> <span data-ttu-id="5d5fc-105">通道侦听器负责在接收（即侦听）端创建通道，这通常是为了响应新传入的消息或连接。</span><span class="sxs-lookup"><span data-stu-id="5d5fc-105">Channel listeners are responsible for creating channels on the receive (or listen) side, typically in response to a new incoming message or connection.</span></span> <span data-ttu-id="5d5fc-106">通道工厂负责在发送端创建通道，以便启动与终结点的通信。</span><span class="sxs-lookup"><span data-stu-id="5d5fc-106">Channel factories are responsible for creating channels on the send side to initiate communication with an endpoint.</span></span>  

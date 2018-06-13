@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806053"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a><span data-ttu-id="3aa16-102">为 Windows Communication Foundation 服务配置绑定</span><span class="sxs-lookup"><span data-stu-id="3aa16-102">Configuring Bindings for Windows Communication Foundation Services</span></span>
 <span data-ttu-id="3aa16-103">创建应用程序时，您经常需要将一些决策交给管理员在部署应用程序后制定。</span><span class="sxs-lookup"><span data-stu-id="3aa16-103">When creating an application, you often want to defer decisions to the administrator after the deployment of the application.</span></span> <span data-ttu-id="3aa16-104">例如，通常没有办法提前知道服务地址或统一资源标识符 (URI)。</span><span class="sxs-lookup"><span data-stu-id="3aa16-104">For example, there is often no way of knowing in advance what a service address, or Uniform Resource Identifier (URI), will be.</span></span> <span data-ttu-id="3aa16-105">最好允许管理员在创建服务后指定地址，而不是对地址进行硬编码。</span><span class="sxs-lookup"><span data-stu-id="3aa16-105">Instead of hard-coding an address, it is preferable to allow an administrator to do so after creating a service.</span></span> <span data-ttu-id="3aa16-106">这种灵活性是通过配置实现的。</span><span class="sxs-lookup"><span data-stu-id="3aa16-106">This flexibility is accomplished through configuration.</span></span>  

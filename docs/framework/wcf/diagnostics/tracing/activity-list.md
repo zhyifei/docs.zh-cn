@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809753"
 ---
 # <a name="activity-list"></a><span data-ttu-id="1e564-102">活动列表</span><span class="sxs-lookup"><span data-stu-id="1e564-102">Activity List</span></span>
 <span data-ttu-id="1e564-103">本主题列出所有定义的 Windows Communication Foundation (WCF) 的活动。</span><span class="sxs-lookup"><span data-stu-id="1e564-103">This topic lists all the activities defined by Windows Communication Foundation (WCF).</span></span>  

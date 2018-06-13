@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805663"
 ---
 # <a name="discovery-binding-element-sample"></a><span data-ttu-id="13d99-102">发现绑定元素示例</span><span class="sxs-lookup"><span data-stu-id="13d99-102">Discovery Binding Element Sample</span></span>
 <span data-ttu-id="13d99-103">本示例演示如何使用发现客户端绑定元素发现服务。</span><span class="sxs-lookup"><span data-stu-id="13d99-103">This sample demonstrates how to use the discovery client binding element to discover a service.</span></span> <span data-ttu-id="13d99-104">开发人员使用此功能可以向其现有客户端通道堆栈添加发现客户端通道，从而使编程模型非常直观。</span><span class="sxs-lookup"><span data-stu-id="13d99-104">This feature enables developers to add a discovery client channel to their existing client channel stack, making the programming model very intuitive.</span></span> <span data-ttu-id="13d99-105">当关联通道打开时，会使用发现解析服务地址。</span><span class="sxs-lookup"><span data-stu-id="13d99-105">When the associated channel is opened, the address of the service is resolved using discovery.</span></span> <span data-ttu-id="13d99-106">本示例包含以下项目：</span><span class="sxs-lookup"><span data-stu-id="13d99-106">This sample consists of the following projects:</span></span>  

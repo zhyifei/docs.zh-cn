@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809857"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a><span data-ttu-id="c6c0d-102">Windows Workflow Foundation 功能详细信息</span><span class="sxs-lookup"><span data-stu-id="c6c0d-102">Windows Workflow Foundation Feature Specifics</span></span>
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]<span data-ttu-id="c6c0d-103"> 向 Windows Workflow Foundation 添加了大量功能。</span><span class="sxs-lookup"><span data-stu-id="c6c0d-103"> adds a number of features to Windows Workflow Foundation.</span></span> <span data-ttu-id="c6c0d-104">本文档介绍了大量新的功能，并详述了这些功能可用于的方案。</span><span class="sxs-lookup"><span data-stu-id="c6c0d-104">This document describes a number of the new features, and gives details about scenarios in which they may be useful.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805884"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a><span data-ttu-id="a4334-102">选择消息交换模式</span><span class="sxs-lookup"><span data-stu-id="a4334-102">Choosing a Message Exchange Pattern</span></span>
 <span data-ttu-id="a4334-103">编写自定义传输的第一步是确定哪个*消息交换模式*（或 Mep） 所需的正在开发的通道。</span><span class="sxs-lookup"><span data-stu-id="a4334-103">The first step in writing a custom transport is to decide which *message exchange patterns* (or MEPs) are required for the channel you are developing.</span></span> <span data-ttu-id="a4334-104">本主题说明可用的选项，并讨论各种不同的需求。</span><span class="sxs-lookup"><span data-stu-id="a4334-104">This topic describes the options available and discusses the various requirements.</span></span> <span data-ttu-id="a4334-105">这是通道开发任务列表中所述的第一个任务[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。</span><span class="sxs-lookup"><span data-stu-id="a4334-105">This is the first task in the channel development task list described in [Developing Channels](../../../../docs/framework/wcf/extending/developing-channels.md).</span></span>  

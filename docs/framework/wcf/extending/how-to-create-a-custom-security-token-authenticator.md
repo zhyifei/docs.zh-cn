@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809383"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a><span data-ttu-id="a4309-102">如何：创建自定义安全令牌身份验证器</span><span class="sxs-lookup"><span data-stu-id="a4309-102">How to: Create a Custom Security Token Authenticator</span></span>
 <span data-ttu-id="a4309-103">本主题演示如何创建自定义安全令牌身份验证器以及如何将其与自定义安全令牌管理器相集成。</span><span class="sxs-lookup"><span data-stu-id="a4309-103">This topic shows how to create a custom security token authenticator and how to integrate it with a custom security token manager.</span></span> <span data-ttu-id="a4309-104">安全令牌身份验证器可验证随传入消息一起提供的安全令牌的内容。</span><span class="sxs-lookup"><span data-stu-id="a4309-104">A security token authenticator validates the content of a security token provided with an incoming message.</span></span> <span data-ttu-id="a4309-105">如果验证成功，身份验证器将返回 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 实例的集合，该集合经过计算后可返回一组声明。</span><span class="sxs-lookup"><span data-stu-id="a4309-105">If the validation succeeds, the authenticator returns a collection of <xref:System.IdentityModel.Policy.IAuthorizationPolicy> instances that, when evaluated, returns a set of claims.</span></span>  

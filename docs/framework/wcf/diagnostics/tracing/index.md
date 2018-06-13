@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809311"
 ---
 # <a name="tracing"></a><span data-ttu-id="e5cc3-102">跟踪</span><span class="sxs-lookup"><span data-stu-id="e5cc3-102">Tracing</span></span>
 <span data-ttu-id="e5cc3-103">Windows Communication Foundation (WCF) 为错误监视和分析提供应用程序检测和诊断数据。</span><span class="sxs-lookup"><span data-stu-id="e5cc3-103">Windows Communication Foundation (WCF) provides application instrumentation and diagnostic data for fault monitoring and analysis.</span></span> <span data-ttu-id="e5cc3-104">您可以使用跟踪代替调试器来了解应用程序的运行行为，或者为什么出错。</span><span class="sxs-lookup"><span data-stu-id="e5cc3-104">You can use tracing instead of a debugger to understand how an application is behaving, or why it faults.</span></span> <span data-ttu-id="e5cc3-105">您还可以在组件之间关联错误和处理，以提供端对端体验。</span><span class="sxs-lookup"><span data-stu-id="e5cc3-105">You can also correlate faults and processing across components to provide an end-to-end experience.</span></span>  

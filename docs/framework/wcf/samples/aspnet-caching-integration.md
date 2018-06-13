@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805403"
 ---
 # <a name="aspnet-caching-integration"></a><span data-ttu-id="254fb-102">ASP.NET 缓存集成</span><span class="sxs-lookup"><span data-stu-id="254fb-102">ASP.NET Caching Integration</span></span>
 <span data-ttu-id="254fb-103">此示例演示如何通过 WCF WEB HTTP 编程模型使用 ASP.NET 输出缓存。</span><span class="sxs-lookup"><span data-stu-id="254fb-103">This sample demonstrates how to utilize the ASP.NET output cache with the WCF WEB HTTP programming model.</span></span> <span data-ttu-id="254fb-104">请参阅[基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)自承载版本讨论深度中的服务实现此方案的示例。</span><span class="sxs-lookup"><span data-stu-id="254fb-104">Please see the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample for a self-hosted version of this scenario that discusses the service implementation in depth.</span></span> <span data-ttu-id="254fb-105">本主题重点介绍 ASP.NET 输出缓存集成功能。</span><span class="sxs-lookup"><span data-stu-id="254fb-105">This topic focuses on the ASP.NET output cache integration feature.</span></span>  

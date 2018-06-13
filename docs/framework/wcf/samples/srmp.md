@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805494"
 ---
 # <a name="srmp"></a><span data-ttu-id="f97de-102">SRMP</span><span class="sxs-lookup"><span data-stu-id="f97de-102">SRMP</span></span>
 <span data-ttu-id="f97de-103">本示例演示如何使用 HTTP 上的消息队列 (MSMQ) 来执行事务处理排队通信。</span><span class="sxs-lookup"><span data-stu-id="f97de-103">This sample demonstrates how to perform transacted queued communication by using Message Queuing (MSMQ) over HTTP.</span></span>  

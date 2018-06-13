@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806737"
 ---
 # <a name="creating-user-defined-bindings"></a><span data-ttu-id="40b32-102">创建用户定义的绑定</span><span class="sxs-lookup"><span data-stu-id="40b32-102">Creating User-Defined Bindings</span></span>
 <span data-ttu-id="40b32-103">有多种方式可以创建系统未提供的绑定：</span><span class="sxs-lookup"><span data-stu-id="40b32-103">There are several ways to create bindings not provided by the system:</span></span>  

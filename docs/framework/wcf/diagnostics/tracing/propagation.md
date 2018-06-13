@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803232"
 ---
 # <a name="propagation"></a><span data-ttu-id="2e20a-102">传播</span><span class="sxs-lookup"><span data-stu-id="2e20a-102">Propagation</span></span>
 <span data-ttu-id="2e20a-103">本主题介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动传播。</span><span class="sxs-lookup"><span data-stu-id="2e20a-103">This topic describes activity propagation in the Windows Communication Foundation (WCF) tracing model.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807223"
 ---
 # <a name="httpcookiesession"></a><span data-ttu-id="2adf0-102">HttpCookieSession</span><span class="sxs-lookup"><span data-stu-id="2adf0-102">HttpCookieSession</span></span>
 <span data-ttu-id="2adf0-103">此示例演示如何生成自定义协议通道，以便使用 HTTP Cookie 进行会话管理。</span><span class="sxs-lookup"><span data-stu-id="2adf0-103">This sample demonstrates how to build a custom protocol channel to use HTTP cookies for session management.</span></span> <span data-ttu-id="2adf0-104">此通道功能，让 WCF 客户端和 ASMX 服务之间或 Windows Communication Foundation (WCF) 服务和 ASMX 客户端之间通信。</span><span class="sxs-lookup"><span data-stu-id="2adf0-104">This channel enables communication between Windows Communication Foundation (WCF) services and ASMX clients or between WCF clients and ASMX services.</span></span>  

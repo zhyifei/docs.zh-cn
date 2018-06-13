@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808281"
 ---
 # <a name="client-validation"></a><span data-ttu-id="a6db3-102">客户端验证</span><span class="sxs-lookup"><span data-stu-id="a6db3-102">Client Validation</span></span>
 <span data-ttu-id="a6db3-103">服务通常发布元数据以启用客户端代理类型的自动生成和配置。</span><span class="sxs-lookup"><span data-stu-id="a6db3-103">Services frequently publish metadata to enable automatic generation and configuration of client proxy types.</span></span> <span data-ttu-id="a6db3-104">如果服务不受信任，客户端应用程序应该验证元数据是否符合客户端应用程序有关安全性、事务、服务协定类型等方面的策略。</span><span class="sxs-lookup"><span data-stu-id="a6db3-104">When the service is not trusted, client applications should validate that the metadata conforms to the client application's policy regarding security, transactions, the type of service contract and so on.</span></span> <span data-ttu-id="a6db3-105">下面的示例演示如何编写一个客户端终结点行为，用于验证服务终结点以确保可以安全地使用该服务终结点。</span><span class="sxs-lookup"><span data-stu-id="a6db3-105">The following sample demonstrates how to write a client endpoint behavior that validates the service endpoint to ensure that service endpoint is safe to use.</span></span>  

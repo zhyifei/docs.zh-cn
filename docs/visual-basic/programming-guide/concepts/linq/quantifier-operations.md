@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645825"
 ---
 # <a name="quantifier-operations-visual-basic"></a><span data-ttu-id="aa436-102">限定符操作 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa436-102">Quantifier Operations (Visual Basic)</span></span>
 <span data-ttu-id="aa436-103">限定符运算返回一个 <xref:System.Boolean> 值，该值指示序列中是否有一些元素满足条件或是否所有元素都满足条件。</span><span class="sxs-lookup"><span data-stu-id="aa436-103">Quantifier operations return a <xref:System.Boolean> value that indicates whether some or all of the elements in a sequence satisfy a condition.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806586"
 ---
 # <a name="message-correlation"></a><span data-ttu-id="b1435-102">消息相关性</span><span class="sxs-lookup"><span data-stu-id="b1435-102">Message Correlation</span></span>
 <span data-ttu-id="b1435-103">此示例演示如何消息队列 (MSMQ) 应用程序可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务以及如何消息也可以在请求/响应方案中的发送方和接收方应用程序之间关联起来。</span><span class="sxs-lookup"><span data-stu-id="b1435-103">This sample demonstrates how a Message Queuing (MSMQ) application can send an MSMQ message to a Windows Communication Foundation (WCF) service and how messages can be correlated between sender and receiver applications in a request/response scenario.</span></span> <span data-ttu-id="b1435-104">此示例使用 msmqIntegrationBinding 绑定。</span><span class="sxs-lookup"><span data-stu-id="b1435-104">This sample uses the msmqIntegrationBinding binding.</span></span> <span data-ttu-id="b1435-105">这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。</span><span class="sxs-lookup"><span data-stu-id="b1435-105">The service in this case is a self-hosted console application to allow you to observe the service that receives queued messages.</span></span> <span data-ttu-id="b1435-106">k</span><span class="sxs-lookup"><span data-stu-id="b1435-106">k</span></span>  

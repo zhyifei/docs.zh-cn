@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457925"
 ---
 # <a name="operators-c-programming-guide"></a><span data-ttu-id="75c5c-102">运算符（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="75c5c-102">Operators (C# Programming Guide)</span></span>
 <span data-ttu-id="75c5c-103">在 C# 中，运算符  是应用于表达式或语句中的一个或多个操作数  的程序元素。</span><span class="sxs-lookup"><span data-stu-id="75c5c-103">In C#, an *operator* is a program element that is applied to one or more *operands* in an expression or statement.</span></span> <span data-ttu-id="75c5c-104">接受一个操作数的运算符称为`++`一元 `new`运算符，例如递增运算符 ( *) 或* 。</span><span class="sxs-lookup"><span data-stu-id="75c5c-104">Operators that take one operand, such as the increment operator (`++`) or `new`, are referred to as *unary* operators.</span></span> <span data-ttu-id="75c5c-105">接受两个操作数的运算符称为`+`二元`-`运算符，例如算术运算符（`*`、`/`、 *、* ）。</span><span class="sxs-lookup"><span data-stu-id="75c5c-105">Operators that take two operands, such as arithmetic operators (`+`,`-`,`*`,`/`), are referred to as *binary* operators.</span></span> <span data-ttu-id="75c5c-106">条件运算符`?:`接受三个操作数，是 C# 中唯一的三元运算符。</span><span class="sxs-lookup"><span data-stu-id="75c5c-106">One operator, the conditional operator (`?:`), takes three operands and is the sole ternary operator in C#.</span></span>  

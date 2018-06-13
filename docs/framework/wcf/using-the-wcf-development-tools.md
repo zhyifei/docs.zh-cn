@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806778"
 ---
 # <a name="using-the-wcf-development-tools"></a><span data-ttu-id="ebc7f-102">使用 WCF 开发工具</span><span class="sxs-lookup"><span data-stu-id="ebc7f-102">Using the WCF Development Tools</span></span>
 <span data-ttu-id="ebc7f-103">本部分介绍可帮助您开发 WCFservice 的 Visual Studio 开发工具。</span><span class="sxs-lookup"><span data-stu-id="ebc7f-103">This section describes the Visual Studio development tools that can assist you in developing your WCFservice.</span></span>  

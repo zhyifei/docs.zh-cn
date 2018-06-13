@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806573"
 ---
 # <a name="configuration-channel-factory"></a><span data-ttu-id="cc191-102">配置通道工厂</span><span class="sxs-lookup"><span data-stu-id="cc191-102">Configuration Channel Factory</span></span>
 <span data-ttu-id="cc191-103">此示例介绍 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 的用法。</span><span class="sxs-lookup"><span data-stu-id="cc191-103">This sample covers the usage of the <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>.</span></span> <span data-ttu-id="cc191-104"><xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>允许 WCF 客户端配置的集中管理。</span><span class="sxs-lookup"><span data-stu-id="cc191-104">The <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> allows central management of WCF client configuration.</span></span> <span data-ttu-id="cc191-105">这可能在应用程序域加载时间之后选择或更改配置的方案中也非常有用。</span><span class="sxs-lookup"><span data-stu-id="cc191-105">This can also be useful in scenarios in which configuration is selected or changed after the application domain load time.</span></span>  

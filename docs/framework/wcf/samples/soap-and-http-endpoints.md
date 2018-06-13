@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809513"
 ---
 # <a name="soap-and-http-endpoints"></a><span data-ttu-id="e1a3d-102">SOAP 和 HTTP 终结点</span><span class="sxs-lookup"><span data-stu-id="e1a3d-102">SOAP and HTTP Endpoints</span></span>
 <span data-ttu-id="e1a3d-103">此示例演示如何以实现基于 RPC 的服务并以 SOAP 格式和使用 WCF Web 编程模型的"Plain Old XML"(POX) 格式公开它。</span><span class="sxs-lookup"><span data-stu-id="e1a3d-103">This sample demonstrates how to implement an RPC-based service and expose it in the SOAP format and the "Plain Old XML" (POX) format using the WCF Web Programming model.</span></span> <span data-ttu-id="e1a3d-104">请参阅[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例有关服务的 HTTP 绑定详细信息。</span><span class="sxs-lookup"><span data-stu-id="e1a3d-104">See the [Basic HTTP Service](../../../../docs/framework/wcf/samples/basic-http-service.md) sample for more details about the HTTP binding for the service.</span></span> <span data-ttu-id="e1a3d-105">本示例重点介绍有关使用不同绑定通过 SOAP 和 HTTP 公开相同服务的详细信息。</span><span class="sxs-lookup"><span data-stu-id="e1a3d-105">This sample focuses on the details that pertain to exposing the same service over SOAP and HTTP using different bindings.</span></span>  

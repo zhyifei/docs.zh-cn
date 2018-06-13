@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809789"
 ---
 # <a name="message-flow-overview"></a><span data-ttu-id="309ce-102">消息流概述</span><span class="sxs-lookup"><span data-stu-id="309ce-102">Message Flow Overview</span></span>
 <span data-ttu-id="309ce-103">在包含相互连接的服务的分布式系统中，必须确定服务之间的因果关系。</span><span class="sxs-lookup"><span data-stu-id="309ce-103">In a distributed system containing interconnected services, it is necessary to determine causal relationships between the services.</span></span> <span data-ttu-id="309ce-104">了解作为请求流的一部分的各种组件对于支持关键方案（如运行状况监视、疑难解答和根源分析）非常重要。</span><span class="sxs-lookup"><span data-stu-id="309ce-104">It is important to understand the various components that were part of a request flow to support critical scenarios such as health monitoring, troubleshooting, and root cause analysis.</span></span> <span data-ttu-id="309ce-105">为了在各种服务之间启用跟踪相关性，我们通过以下功能在 .NET Framework 4 中添加了相关支持：</span><span class="sxs-lookup"><span data-stu-id="309ce-105">To enable the correlation of traces between various services, in the .NET Framework 4 we added support through the following features:</span></span>  

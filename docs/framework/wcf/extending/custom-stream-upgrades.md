@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806027"
 ---
 # <a name="custom-stream-upgrades"></a><span data-ttu-id="a4ec4-102">自定义流升级</span><span class="sxs-lookup"><span data-stu-id="a4ec4-102">Custom Stream Upgrades</span></span>
 <span data-ttu-id="a4ec4-103">面向流的传输（如 TCP 和命名管道）对客户端与服务器之间的连续字节流进行操作。</span><span class="sxs-lookup"><span data-stu-id="a4ec4-103">Stream-oriented transports such as TCP and Named Pipes operate on a continuous stream of bytes between the client and server.</span></span> <span data-ttu-id="a4ec4-104">该流通过 <xref:System.IO.Stream> 对象实现。</span><span class="sxs-lookup"><span data-stu-id="a4ec4-104">This stream is realized by a  <xref:System.IO.Stream> object.</span></span> <span data-ttu-id="a4ec4-105">在流升级中，客户端需要向通道堆栈中添加可选的协议层，并要求通信通道的另一端也执行该操作。</span><span class="sxs-lookup"><span data-stu-id="a4ec4-105">In a stream upgrade, the client wants to add an optional protocol layer to the channel stack, and asks the other end of the communication channel to do so.</span></span> <span data-ttu-id="a4ec4-106">流升级包括使用升级后的对象替换原始 <xref:System.IO.Stream> 对象的过程。</span><span class="sxs-lookup"><span data-stu-id="a4ec4-106">The stream upgrade consists in replacing the original <xref:System.IO.Stream> object with an upgraded one.</span></span>  

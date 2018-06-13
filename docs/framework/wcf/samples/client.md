@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809087"
 ---
 # <a name="client"></a><span data-ttu-id="b3a5a-102">客户端</span><span class="sxs-lookup"><span data-stu-id="b3a5a-102">Client</span></span>
 <span data-ttu-id="b3a5a-103">本节包含演示 Windows Communication Foundation (WCF) 客户端应用程序的示例。</span><span class="sxs-lookup"><span data-stu-id="b3a5a-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) client applications.</span></span>  

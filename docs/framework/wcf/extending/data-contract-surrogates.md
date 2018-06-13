@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809464"
 ---
 # <a name="data-contract-surrogates"></a><span data-ttu-id="66134-102">数据协定代理项</span><span class="sxs-lookup"><span data-stu-id="66134-102">Data Contract Surrogates</span></span>
 <span data-ttu-id="66134-103">数据协定*代理项*是基于数据协定模型而生成一个高级的功能。</span><span class="sxs-lookup"><span data-stu-id="66134-103">The data contract *surrogate* is an advanced feature built upon the Data Contract model.</span></span> <span data-ttu-id="66134-104">在设计上，此功能用于在用户希望更改对类型进行序列化、反序列化或将其设计成元数据的方式时，进行类型自定义和替换。</span><span class="sxs-lookup"><span data-stu-id="66134-104">This feature is designed to be used for type customization and substitution in situations where users want to change how a type is serialized, deserialized or projected into metadata.</span></span> <span data-ttu-id="66134-105">在以下情况下可以使用代理项：还没有为类型指定数据协定；字段和属性 (Property) 没有用 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute) 进行标记；用户希望动态创建架构变体。</span><span class="sxs-lookup"><span data-stu-id="66134-105">Some scenarios where a surrogate may be used is when a data contract has not been specified for the type, fields and properties are not marked with the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute or users wish to dynamically create schema variations.</span></span>  

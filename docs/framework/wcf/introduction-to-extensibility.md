@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804428"
 ---
 # <a name="introduction-to-extensibility"></a><span data-ttu-id="e6d14-102">扩展性介绍</span><span class="sxs-lookup"><span data-stu-id="e6d14-102">Introduction to Extensibility</span></span>
 <span data-ttu-id="e6d14-103">Windows Communication Foundation (WCF) 应用程序模型设计用于解决任何分布式应用程序的通信要求更大一部分。</span><span class="sxs-lookup"><span data-stu-id="e6d14-103">The Windows Communication Foundation (WCF) application model is designed to solve the greater part of the communication requirements of any distributed application.</span></span> <span data-ttu-id="e6d14-104">但是，总是会存在一些默认应用程序模型和系统提供的实现不支持的情况。</span><span class="sxs-lookup"><span data-stu-id="e6d14-104">But there are always scenarios that the default application model and system-provided implementations do not support.</span></span> <span data-ttu-id="e6d14-105">WCF 扩展性模型旨在支持自定义方案，使您能够修改在每个级别，即使到替换整个应用程序模型的点的系统行为。</span><span class="sxs-lookup"><span data-stu-id="e6d14-105">The WCF extensibility model is intended to support custom scenarios by enabling you to modify system behavior at every level, even to the point of replacing the entire application model.</span></span> <span data-ttu-id="e6d14-106">本主题概述各个扩展范围并指出关于每个范围的更多信息。</span><span class="sxs-lookup"><span data-stu-id="e6d14-106">This topic outlines the various areas of extension and points to more information about each.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806625"
 ---
 # <a name="hierarchical-configuration-model"></a><span data-ttu-id="69ede-102">分层配置模型</span><span class="sxs-lookup"><span data-stu-id="69ede-102">Hierarchical Configuration Model</span></span>
 <span data-ttu-id="69ede-103">此示例演示如何实现服务配置文件的层次结构。</span><span class="sxs-lookup"><span data-stu-id="69ede-103">This sample demonstrates how to implement a hierarchy of configuration files for services.</span></span> <span data-ttu-id="69ede-104">它还演示如何从层次结构中较高的级别继承绑定、服务行为和终结点行为。</span><span class="sxs-lookup"><span data-stu-id="69ede-104">It also shows how bindings, service behaviors, and endpoint behaviors are inherited from higher levels in the hierarchy.</span></span>  

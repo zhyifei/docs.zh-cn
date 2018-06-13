@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809500"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a><span data-ttu-id="2095c-102">MSMQ 4.0 中的病毒消息处理</span><span class="sxs-lookup"><span data-stu-id="2095c-102">Poison Message Handling in MSMQ 4.0</span></span>
 <span data-ttu-id="2095c-103">本示例演示如何在服务中执行病毒消息处理。</span><span class="sxs-lookup"><span data-stu-id="2095c-103">This sample demonstrates how to perform poison message handling in a service.</span></span> <span data-ttu-id="2095c-104">此示例基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。</span><span class="sxs-lookup"><span data-stu-id="2095c-104">This sample is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="2095c-105">其中使用到了 `netMsmqBinding`。</span><span class="sxs-lookup"><span data-stu-id="2095c-105">This sample uses the `netMsmqBinding`.</span></span> <span data-ttu-id="2095c-106">此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。</span><span class="sxs-lookup"><span data-stu-id="2095c-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

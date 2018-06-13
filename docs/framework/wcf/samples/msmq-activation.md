@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808125"
 ---
 # <a name="msmq-activation"></a><span data-ttu-id="527fb-102">MSMQ 激活</span><span class="sxs-lookup"><span data-stu-id="527fb-102">MSMQ Activation</span></span>
 <span data-ttu-id="527fb-103">本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。</span><span class="sxs-lookup"><span data-stu-id="527fb-103">This sample demonstrates how to host applications in Windows Process Activation Service (WAS) that are read from a message queue.</span></span> <span data-ttu-id="527fb-104">此示例使用`netMsmqBinding`和基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。</span><span class="sxs-lookup"><span data-stu-id="527fb-104">This sample uses the `netMsmqBinding` and is based on the [Two-Way Communication](../../../../docs/framework/wcf/samples/two-way-communication.md) sample.</span></span> <span data-ttu-id="527fb-105">本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。</span><span class="sxs-lookup"><span data-stu-id="527fb-105">The service in this case is a Web-hosted application and the client is self-hosted and outputs to the console to observe the status of purchase orders submitted.</span></span>  

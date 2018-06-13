@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804566"
 ---
 # <a name="jsonp"></a><span data-ttu-id="716b2-102">JSONP</span><span class="sxs-lookup"><span data-stu-id="716b2-102">JSONP</span></span>
 <span data-ttu-id="716b2-103">本示例演示在 WCF REST 服务中如何支持 JSON with Padding (JSONP)。</span><span class="sxs-lookup"><span data-stu-id="716b2-103">This sample demonstrates how to support JSON with Padding (JSONP) in WCF REST services.</span></span> <span data-ttu-id="716b2-104">JSONP 是通过在当前文档中生成脚本标记来调用跨域脚本时使用的约定。</span><span class="sxs-lookup"><span data-stu-id="716b2-104">JSONP is a convention used to invoke cross-domain scripts by generating script tags in the current document.</span></span> <span data-ttu-id="716b2-105">结果在指定的回调函数中返回。</span><span class="sxs-lookup"><span data-stu-id="716b2-105">The result is returned in a specified callback function.</span></span> <span data-ttu-id="716b2-106">JSONP 基于这样的标记如`<script src="http://..." >`可以从任何域评估脚本，并在其中可能已定义其他函数范围内计算这些标记检索的脚本。</span><span class="sxs-lookup"><span data-stu-id="716b2-106">JSONP is based on the idea that tags such as `<script src="http://..." >` can evaluate scripts from any domain and the script retrieved by those tags is evaluated within a scope in which other functions may already be defined.</span></span>  

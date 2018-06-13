@@ -15,6 +15,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809711"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a><span data-ttu-id="5d9e8-102">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="5d9e8-102">Walkthrough: My first WPF desktop application</span></span>
 

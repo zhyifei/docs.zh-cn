@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803363"
 ---
 # <a name="channels-extensibility"></a><span data-ttu-id="2ab84-102">通道扩展性</span><span class="sxs-lookup"><span data-stu-id="2ab84-102">Channels Extensibility</span></span>
 <span data-ttu-id="2ab84-103">本节包含演示自定义通道的示例。</span><span class="sxs-lookup"><span data-stu-id="2ab84-103">This section contains samples that demonstrate custom channels.</span></span>  

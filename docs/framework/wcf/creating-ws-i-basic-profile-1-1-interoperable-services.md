@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804934"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a><span data-ttu-id="517c2-102">创建 WS-I 基本配置文件 1.1 可互操作服务</span><span class="sxs-lookup"><span data-stu-id="517c2-102">Creating WS-I Basic Profile 1.1 Interoperable Services</span></span>
 <span data-ttu-id="517c2-103">若要配置 WCF 服务终结点进行互操作与[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]Web 服务客户端：</span><span class="sxs-lookup"><span data-stu-id="517c2-103">To configure a WCF service endpoint to be interoperable with [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web service clients:</span></span>  

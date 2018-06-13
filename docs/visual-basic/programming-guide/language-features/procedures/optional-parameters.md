@@ -1,12 +1,6 @@
 ---
-title: "可选参数 (Visual Basic)"
-ms.custom: 
+title: 可选参数 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - parameters [Visual Basic], optional
 - Visual Basic code, procedures
@@ -18,61 +12,59 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e57023f594cfe4cd79d59cc8541fcf18018de0ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a438455668310769c5267a6d42a2e694bb7b01dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651604"
 ---
-# <a name="optional-parameters-visual-basic"></a><span data-ttu-id="82b15-102">可选参数 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="82b15-102">Optional Parameters (Visual Basic)</span></span>
-<span data-ttu-id="82b15-103">可以指定过程参数是可选的，并且在调用过程时不必为其提供自变量。</span><span class="sxs-lookup"><span data-stu-id="82b15-103">You can specify that a procedure parameter is optional and no argument has to be supplied for it when the procedure is called.</span></span> <span data-ttu-id="82b15-104">*可选参数*由指示`Optional`过程定义中的关键字。</span><span class="sxs-lookup"><span data-stu-id="82b15-104">*Optional parameters* are indicated by the `Optional` keyword in the procedure definition.</span></span> <span data-ttu-id="82b15-105">适用以下规则：</span><span class="sxs-lookup"><span data-stu-id="82b15-105">The following rules apply:</span></span>  
+# <a name="optional-parameters-visual-basic"></a><span data-ttu-id="a6e72-102">可选参数 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a6e72-102">Optional Parameters (Visual Basic)</span></span>
+<span data-ttu-id="a6e72-103">可以指定过程参数是可选的，并且在调用过程时不必为其提供自变量。</span><span class="sxs-lookup"><span data-stu-id="a6e72-103">You can specify that a procedure parameter is optional and no argument has to be supplied for it when the procedure is called.</span></span> <span data-ttu-id="a6e72-104">*可选参数*由指示`Optional`过程定义中的关键字。</span><span class="sxs-lookup"><span data-stu-id="a6e72-104">*Optional parameters* are indicated by the `Optional` keyword in the procedure definition.</span></span> <span data-ttu-id="a6e72-105">适用以下规则：</span><span class="sxs-lookup"><span data-stu-id="a6e72-105">The following rules apply:</span></span>  
   
--   <span data-ttu-id="82b15-106">过程定义中的每个可选参数都必须指定默认值。</span><span class="sxs-lookup"><span data-stu-id="82b15-106">Every optional parameter in the procedure definition must specify a default value.</span></span>  
+-   <span data-ttu-id="a6e72-106">过程定义中的每个可选参数都必须指定默认值。</span><span class="sxs-lookup"><span data-stu-id="a6e72-106">Every optional parameter in the procedure definition must specify a default value.</span></span>  
   
--   <span data-ttu-id="82b15-107">可选参数的默认值必须是一个常数表达式。</span><span class="sxs-lookup"><span data-stu-id="82b15-107">The default value for an optional parameter must be a constant expression.</span></span>  
+-   <span data-ttu-id="a6e72-107">可选参数的默认值必须是一个常数表达式。</span><span class="sxs-lookup"><span data-stu-id="a6e72-107">The default value for an optional parameter must be a constant expression.</span></span>  
   
--   <span data-ttu-id="82b15-108">过程定义中跟在可选参数后的每个参数也都必须是可选的。</span><span class="sxs-lookup"><span data-stu-id="82b15-108">Every parameter following an optional parameter in the procedure definition must also be optional.</span></span>  
+-   <span data-ttu-id="a6e72-108">过程定义中跟在可选参数后的每个参数也都必须是可选的。</span><span class="sxs-lookup"><span data-stu-id="a6e72-108">Every parameter following an optional parameter in the procedure definition must also be optional.</span></span>  
   
- <span data-ttu-id="82b15-109">下面的语法显示带可选参数的过程声明：</span><span class="sxs-lookup"><span data-stu-id="82b15-109">The following syntax shows a procedure declaration with an optional parameter:</span></span>  
+ <span data-ttu-id="a6e72-109">下面的语法显示带可选参数的过程声明：</span><span class="sxs-lookup"><span data-stu-id="a6e72-109">The following syntax shows a procedure declaration with an optional parameter:</span></span>  
   
 ```vb  
 Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 = defaultvalue)  
 ```  
   
-## <a name="calling-procedures-with-optional-parameters"></a><span data-ttu-id="82b15-110">调用带可选参数的过程</span><span class="sxs-lookup"><span data-stu-id="82b15-110">Calling Procedures with Optional Parameters</span></span>  
- <span data-ttu-id="82b15-111">调用带可选参数的过程时，可以选择是否提供该变量。</span><span class="sxs-lookup"><span data-stu-id="82b15-111">When you call a procedure with an optional parameter, you can choose whether to supply the argument.</span></span> <span data-ttu-id="82b15-112">如果不提供，过程将使用为该参数声明的默认值。</span><span class="sxs-lookup"><span data-stu-id="82b15-112">If you do not, the procedure uses the default value declared for that parameter.</span></span>  
+## <a name="calling-procedures-with-optional-parameters"></a><span data-ttu-id="a6e72-110">调用带可选参数的过程</span><span class="sxs-lookup"><span data-stu-id="a6e72-110">Calling Procedures with Optional Parameters</span></span>  
+ <span data-ttu-id="a6e72-111">调用带可选参数的过程时，可以选择是否提供该自变量。</span><span class="sxs-lookup"><span data-stu-id="a6e72-111">When you call a procedure with an optional parameter, you can choose whether to supply the argument.</span></span> <span data-ttu-id="a6e72-112">如果不提供，过程将使用为该参数声明的默认值。</span><span class="sxs-lookup"><span data-stu-id="a6e72-112">If you do not, the procedure uses the default value declared for that parameter.</span></span>  
   
- <span data-ttu-id="82b15-113">当省略参数列表中的一个或多个可选参数时，使用连续的逗号来标记它们的位置。</span><span class="sxs-lookup"><span data-stu-id="82b15-113">When you omit one or more optional arguments in the argument list, you use successive commas to mark their positions.</span></span> <span data-ttu-id="82b15-114">下面的调用示例提供了第一个和第四个参数，省略了第二个和第三个：</span><span class="sxs-lookup"><span data-stu-id="82b15-114">The following example call supplies the first and fourth arguments but not the second or third:</span></span>  
+ <span data-ttu-id="a6e72-113">当省略自变量列表中的一个或多个可选自变量时，使用连续的逗号来标记它们的位置。</span><span class="sxs-lookup"><span data-stu-id="a6e72-113">When you omit one or more optional arguments in the argument list, you use successive commas to mark their positions.</span></span> <span data-ttu-id="a6e72-114">下面的调用示例提供了第一个和第四个自变量，省略了第二个和第三个：</span><span class="sxs-lookup"><span data-stu-id="a6e72-114">The following example call supplies the first and fourth arguments but not the second or third:</span></span>  
   
 ```vb  
 Sub name(argument 1, , , argument 4)  
 ```  
   
- <span data-ttu-id="82b15-115">下面的示例对 `MsgBox` 函数进行多次调用。</span><span class="sxs-lookup"><span data-stu-id="82b15-115">The following example makes several calls to the `MsgBox` function.</span></span> <span data-ttu-id="82b15-116">`MsgBox` 有一个必需参数和两个可选参数。</span><span class="sxs-lookup"><span data-stu-id="82b15-116">`MsgBox` has one required parameter and two optional parameters.</span></span>  
+ <span data-ttu-id="a6e72-115">下面的示例对 `MsgBox` 函数进行多次调用。</span><span class="sxs-lookup"><span data-stu-id="a6e72-115">The following example makes several calls to the `MsgBox` function.</span></span> <span data-ttu-id="a6e72-116">`MsgBox` 有一个必需参数和两个可选参数。</span><span class="sxs-lookup"><span data-stu-id="a6e72-116">`MsgBox` has one required parameter and two optional parameters.</span></span>  
   
- <span data-ttu-id="82b15-117">对 `MsgBox` 的第一个调用将按照 `MsgBox` 定义参数的顺序提供所有三个参数。</span><span class="sxs-lookup"><span data-stu-id="82b15-117">The first call to `MsgBox` supplies all three arguments in the order that `MsgBox` defines them.</span></span> <span data-ttu-id="82b15-118">第二个调用仅提供必选参数。</span><span class="sxs-lookup"><span data-stu-id="82b15-118">The second call supplies only the required argument.</span></span> <span data-ttu-id="82b15-119">第三个和第四个调用分别提供第一个和第三个参数。</span><span class="sxs-lookup"><span data-stu-id="82b15-119">The third and fourth calls supply the first and third arguments.</span></span> <span data-ttu-id="82b15-120">第三个调用按位置提供参数，第四个调用按名称提供参数。</span><span class="sxs-lookup"><span data-stu-id="82b15-120">The third call does this by position, and the fourth call does it by name.</span></span>  
+ <span data-ttu-id="a6e72-117">对 `MsgBox` 的第一个调用将按照 `MsgBox` 定义参数的顺序提供所有三个参数。</span><span class="sxs-lookup"><span data-stu-id="a6e72-117">The first call to `MsgBox` supplies all three arguments in the order that `MsgBox` defines them.</span></span> <span data-ttu-id="a6e72-118">第二个调用仅提供必选自变量。</span><span class="sxs-lookup"><span data-stu-id="a6e72-118">The second call supplies only the required argument.</span></span> <span data-ttu-id="a6e72-119">第三个和第四个调用分别提供第一个和第三个自变量。</span><span class="sxs-lookup"><span data-stu-id="a6e72-119">The third and fourth calls supply the first and third arguments.</span></span> <span data-ttu-id="a6e72-120">第三个调用按位置提供参数，第四个调用按名称提供参数。</span><span class="sxs-lookup"><span data-stu-id="a6e72-120">The third call does this by position, and the fourth call does it by name.</span></span>  
   
  [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
-## <a name="determining-whether-an-optional-argument-is-present"></a><span data-ttu-id="82b15-121">确定可选自变量是否存在</span><span class="sxs-lookup"><span data-stu-id="82b15-121">Determining Whether an Optional Argument Is Present</span></span>  
- <span data-ttu-id="82b15-122">过程在运行时无法检测到给定的参数是否已被省略，或者调用代码是否已显式提供默认值。</span><span class="sxs-lookup"><span data-stu-id="82b15-122">A procedure cannot detect at run time whether a given argument has been omitted or the calling code has explicitly supplied the default value.</span></span> <span data-ttu-id="82b15-123">如果需要弄清楚这一点，可以设置一个不可能的值作为默认值。</span><span class="sxs-lookup"><span data-stu-id="82b15-123">If you need to make this distinction, you can set an unlikely value as the default.</span></span> <span data-ttu-id="82b15-124">下面的过程定义可选参数`office`，并测试其默认值，`QJZ`以查看它已在调用中被省略：</span><span class="sxs-lookup"><span data-stu-id="82b15-124">The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:</span></span>  
+## <a name="determining-whether-an-optional-argument-is-present"></a><span data-ttu-id="a6e72-121">确定可选自变量是否存在</span><span class="sxs-lookup"><span data-stu-id="a6e72-121">Determining Whether an Optional Argument Is Present</span></span>  
+ <span data-ttu-id="a6e72-122">过程在运行时无法检测到给定的参数是否已被省略，或者调用代码是否已显式提供默认值。</span><span class="sxs-lookup"><span data-stu-id="a6e72-122">A procedure cannot detect at run time whether a given argument has been omitted or the calling code has explicitly supplied the default value.</span></span> <span data-ttu-id="a6e72-123">如果需要弄清楚这一点，可以设置一个不可能的值作为默认值。</span><span class="sxs-lookup"><span data-stu-id="a6e72-123">If you need to make this distinction, you can set an unlikely value as the default.</span></span> <span data-ttu-id="a6e72-124">下面的过程定义可选参数`office`，并测试其默认值，`QJZ`以查看它已在调用中被省略：</span><span class="sxs-lookup"><span data-stu-id="a6e72-124">The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:</span></span>  
   
  [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
   
- <span data-ttu-id="82b15-125">如果可选参数是像 `String` 这样的引用类型，只要它不是该变量所预期的值，就可以使用 `Nothing` 作为默认值。</span><span class="sxs-lookup"><span data-stu-id="82b15-125">If the optional parameter is a reference type such as a `String`, you can use `Nothing` as the default value, provided this is not an expected value for the argument.</span></span>  
+ <span data-ttu-id="a6e72-125">如果可选参数是像 `String` 这样的引用类型，只要它不是该变量所预期的值，就可以使用 `Nothing` 作为默认值。</span><span class="sxs-lookup"><span data-stu-id="a6e72-125">If the optional parameter is a reference type such as a `String`, you can use `Nothing` as the default value, provided this is not an expected value for the argument.</span></span>  
   
-## <a name="optional-parameters-and-overloading"></a><span data-ttu-id="82b15-126">可选参数和重载</span><span class="sxs-lookup"><span data-stu-id="82b15-126">Optional Parameters and Overloading</span></span>  
- <span data-ttu-id="82b15-127">定义带可选参数的过程的另一种方法是使用重载。</span><span class="sxs-lookup"><span data-stu-id="82b15-127">Another way to define a procedure with optional parameters is to use overloading.</span></span> <span data-ttu-id="82b15-128">如果有一个可选参数，可以定义过程的两个重载版本，一个接受此参数，另一个则不带参数。</span><span class="sxs-lookup"><span data-stu-id="82b15-128">If you have one optional parameter, you can define two overloaded versions of the procedure, one accepting the parameter and one without it.</span></span> <span data-ttu-id="82b15-129">此方法随可选参数数目的增加而变得更复杂。</span><span class="sxs-lookup"><span data-stu-id="82b15-129">This approach becomes more complicated as the number of optional parameters increases.</span></span> <span data-ttu-id="82b15-130">然而，这样做的优点是可以完全确定调用程序是否提供了每个可选自变量。</span><span class="sxs-lookup"><span data-stu-id="82b15-130">However, its advantage is that you can be absolutely sure whether the calling program supplied each optional argument.</span></span>  
+## <a name="optional-parameters-and-overloading"></a><span data-ttu-id="a6e72-126">可选参数和重载</span><span class="sxs-lookup"><span data-stu-id="a6e72-126">Optional Parameters and Overloading</span></span>  
+ <span data-ttu-id="a6e72-127">定义带可选参数的过程的另一种方法是使用重载。</span><span class="sxs-lookup"><span data-stu-id="a6e72-127">Another way to define a procedure with optional parameters is to use overloading.</span></span> <span data-ttu-id="a6e72-128">如果有一个可选参数，可以定义过程的两个重载版本，一个接受此参数，另一个则不带参数。</span><span class="sxs-lookup"><span data-stu-id="a6e72-128">If you have one optional parameter, you can define two overloaded versions of the procedure, one accepting the parameter and one without it.</span></span> <span data-ttu-id="a6e72-129">此方法随可选参数数目的增加而变得更复杂。</span><span class="sxs-lookup"><span data-stu-id="a6e72-129">This approach becomes more complicated as the number of optional parameters increases.</span></span> <span data-ttu-id="a6e72-130">然而，这样做的优点是可以完全确定调用程序是否提供了每个可选自变量。</span><span class="sxs-lookup"><span data-stu-id="a6e72-130">However, its advantage is that you can be absolutely sure whether the calling program supplied each optional argument.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82b15-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="82b15-131">See Also</span></span>  
- [<span data-ttu-id="82b15-132">过程</span><span class="sxs-lookup"><span data-stu-id="82b15-132">Procedures</span></span>](./index.md)  
- [<span data-ttu-id="82b15-133">过程参数和自变量</span><span class="sxs-lookup"><span data-stu-id="82b15-133">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
- [<span data-ttu-id="82b15-134">按值和按引用传递自变量</span><span class="sxs-lookup"><span data-stu-id="82b15-134">Passing Arguments by Value and by Reference</span></span>](./passing-arguments-by-value-and-by-reference.md)  
- [<span data-ttu-id="82b15-135">按位置和按名称传递自变量</span><span class="sxs-lookup"><span data-stu-id="82b15-135">Passing Arguments by Position and by Name</span></span>](./passing-arguments-by-position-and-by-name.md)  
- [<span data-ttu-id="82b15-136">参数数组</span><span class="sxs-lookup"><span data-stu-id="82b15-136">Parameter Arrays</span></span>](./parameter-arrays.md)  
- [<span data-ttu-id="82b15-137">过程重载</span><span class="sxs-lookup"><span data-stu-id="82b15-137">Procedure Overloading</span></span>](./procedure-overloading.md)  
- [<span data-ttu-id="82b15-138">Optional</span><span class="sxs-lookup"><span data-stu-id="82b15-138">Optional</span></span>](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [<span data-ttu-id="82b15-139">ParamArray</span><span class="sxs-lookup"><span data-stu-id="82b15-139">ParamArray</span></span>](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a><span data-ttu-id="a6e72-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="a6e72-131">See Also</span></span>  
+ [<span data-ttu-id="a6e72-132">过程</span><span class="sxs-lookup"><span data-stu-id="a6e72-132">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="a6e72-133">过程参数和自变量</span><span class="sxs-lookup"><span data-stu-id="a6e72-133">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="a6e72-134">按值和按引用传递自变量</span><span class="sxs-lookup"><span data-stu-id="a6e72-134">Passing Arguments by Value and by Reference</span></span>](./passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="a6e72-135">按位置和按名称传递自变量</span><span class="sxs-lookup"><span data-stu-id="a6e72-135">Passing Arguments by Position and by Name</span></span>](./passing-arguments-by-position-and-by-name.md)  
+ [<span data-ttu-id="a6e72-136">参数数组</span><span class="sxs-lookup"><span data-stu-id="a6e72-136">Parameter Arrays</span></span>](./parameter-arrays.md)  
+ [<span data-ttu-id="a6e72-137">过程重载</span><span class="sxs-lookup"><span data-stu-id="a6e72-137">Procedure Overloading</span></span>](./procedure-overloading.md)  
+ [<span data-ttu-id="a6e72-138">Optional</span><span class="sxs-lookup"><span data-stu-id="a6e72-138">Optional</span></span>](../../../../visual-basic/language-reference/modifiers/optional.md)  
+ [<span data-ttu-id="a6e72-139">ParamArray</span><span class="sxs-lookup"><span data-stu-id="a6e72-139">ParamArray</span></span>](../../../../visual-basic/language-reference/modifiers/paramarray.md)

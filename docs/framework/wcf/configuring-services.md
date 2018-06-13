@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803275"
 ---
 # <a name="configuring-services"></a><span data-ttu-id="394b4-102">正在配置服务</span><span class="sxs-lookup"><span data-stu-id="394b4-102">Configuring Services</span></span>
 <span data-ttu-id="394b4-103">在设计和实现服务协定后，即可配置服务。</span><span class="sxs-lookup"><span data-stu-id="394b4-103">Once you have designed and implemented your service contract, you are ready to configure your service.</span></span> <span data-ttu-id="394b4-104">在其中可以定义和自定义如何向客户端公开服务，包括指定可以找到服务的地址、服务用于发送和接收消息的传输和消息编码，以及服务需要的安全类型。</span><span class="sxs-lookup"><span data-stu-id="394b4-104">This is where you define and customize how your service is exposed to clients, including specifying the address where it can be found, the transport and message encoding it uses to send and receive messages, and the type of security it requires.</span></span>  

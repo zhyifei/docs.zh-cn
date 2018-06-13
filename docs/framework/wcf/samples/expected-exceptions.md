@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805819"
 ---
 # <a name="expected-exceptions"></a><span data-ttu-id="52ca3-102">预期异常</span><span class="sxs-lookup"><span data-stu-id="52ca3-102">Expected Exceptions</span></span>
 <span data-ttu-id="52ca3-103">此示例演示如何在使用类型化客户端时捕获预期异常。</span><span class="sxs-lookup"><span data-stu-id="52ca3-103">This sample demonstrates how to catch expected exceptions when using a typed client.</span></span> <span data-ttu-id="52ca3-104">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。</span><span class="sxs-lookup"><span data-stu-id="52ca3-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="52ca3-105">在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。</span><span class="sxs-lookup"><span data-stu-id="52ca3-105">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
