@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586573"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>启动时创建线程并传递数据
 在操作系统进程创建后，操作系统会注入线程，用于执行相应进程中的代码，包括所有原始应用域。 自此时起，可以创建和销毁应用域，而无需创建或销毁任何操作系统线程。 如果要执行的代码是托管代码，可以检索 <xref:System.Threading.Thread> 类型的静态 <xref:System.Threading.Thread.CurrentThread%2A> 属性，以获取在当前应用域中执行的线程的 <xref:System.Threading.Thread> 对象。 本主题介绍了如何创建线程，以及向线程过程传递数据的替换方法。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638472"
 ---
 # <a name="cannot-calculate-rate-using-the-arguments-provided"></a>无法使用提供的参数计算速率。
 速率计算不包含所需的参数。  
