@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560120"
 ---
 # <a name="how-to-encode-and-decode-a-wdp-image"></a><span data-ttu-id="8de67-102">如何：编码和解码 WDP 图像</span><span class="sxs-lookup"><span data-stu-id="8de67-102">How to: Encode and Decode a WDP Image</span></span>
 <span data-ttu-id="8de67-103">下面的示例演示如何进行解码，并进行编码[!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]映像使用特定<xref:System.Windows.Media.Imaging.WmpBitmapDecoder>和<xref:System.Windows.Media.Imaging.WmpBitmapEncoder>对象。</span><span class="sxs-lookup"><span data-stu-id="8de67-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] image using the specific <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> and <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> objects.</span></span>  

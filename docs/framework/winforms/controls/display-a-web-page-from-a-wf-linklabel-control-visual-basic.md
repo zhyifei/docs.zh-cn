@@ -1,14 +1,6 @@
 ---
-title: "如何：通过 Windows 窗体 LinkLabel 控件显示网页 (Visual Basic)"
-ms.custom: 
+title: 如何：通过 Windows 窗体 LinkLabel 控件显示网页 (Visual Basic)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - vb
 f1_keywords:
@@ -20,22 +12,17 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ba5ba3b29bab148087e0f8b80b3f1c43aa74e761
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9964c8d333ea87dd995ec9111acc1a8ac1e79b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524178"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="a128b-102">如何：通过 Windows 窗体 LinkLabel 控件显示网页 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a128b-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
-<span data-ttu-id="a128b-103">此示例在默认浏览器中显示网页，用户单击 Windows 窗体时<xref:System.Windows.Forms.LinkLabel>控件。</span><span class="sxs-lookup"><span data-stu-id="a128b-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="e814a-102">如何：通过 Windows 窗体 LinkLabel 控件显示网页 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e814a-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
+<span data-ttu-id="e814a-103">此示例在默认浏览器中显示网页，用户单击 Windows 窗体时<xref:System.Windows.Forms.LinkLabel>控件。</span><span class="sxs-lookup"><span data-stu-id="e814a-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a128b-104">示例</span><span class="sxs-lookup"><span data-stu-id="a128b-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e814a-104">示例</span><span class="sxs-lookup"><span data-stu-id="e814a-104">Example</span></span>  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -50,18 +37,18 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a128b-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="a128b-105">Compiling the Code</span></span>  
- <span data-ttu-id="a128b-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="a128b-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="e814a-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="e814a-105">Compiling the Code</span></span>  
+ <span data-ttu-id="e814a-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="e814a-106">This example requires:</span></span>  
   
--   <span data-ttu-id="a128b-107">名为 Windows 窗体`Form1`。</span><span class="sxs-lookup"><span data-stu-id="a128b-107">A Windows Form named `Form1`.</span></span>  
+-   <span data-ttu-id="e814a-107">名为 Windows 窗体`Form1`。</span><span class="sxs-lookup"><span data-stu-id="e814a-107">A Windows Form named `Form1`.</span></span>  
   
--   <span data-ttu-id="a128b-108">名为 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控件。</span><span class="sxs-lookup"><span data-stu-id="a128b-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
+-   <span data-ttu-id="e814a-108">名为 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控件。</span><span class="sxs-lookup"><span data-stu-id="e814a-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
   
--   <span data-ttu-id="a128b-109">有效的 Internet 连接。</span><span class="sxs-lookup"><span data-stu-id="a128b-109">An active Internet connection.</span></span>  
+-   <span data-ttu-id="e814a-109">有效的 Internet 连接。</span><span class="sxs-lookup"><span data-stu-id="e814a-109">An active Internet connection.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="a128b-110">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="a128b-110">.NET Framework Security</span></span>  
- <span data-ttu-id="a128b-111">调用<xref:System.Diagnostics.Process.Start%2A>方法要求完全信任。</span><span class="sxs-lookup"><span data-stu-id="a128b-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="a128b-112">有关详细信息，请参阅<xref:System.Security.SecurityException>。</span><span class="sxs-lookup"><span data-stu-id="a128b-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="e814a-110">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="e814a-110">.NET Framework Security</span></span>  
+ <span data-ttu-id="e814a-111">调用<xref:System.Diagnostics.Process.Start%2A>方法要求完全信任。</span><span class="sxs-lookup"><span data-stu-id="e814a-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="e814a-112">有关详细信息，请参阅<xref:System.Security.SecurityException>。</span><span class="sxs-lookup"><span data-stu-id="e814a-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a128b-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="a128b-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e814a-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="e814a-113">See Also</span></span>  
  <xref:System.Windows.Forms.LinkLabel>  
- [<span data-ttu-id="a128b-114">LinkLabel 控件</span><span class="sxs-lookup"><span data-stu-id="a128b-114">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+ [<span data-ttu-id="e814a-114">LinkLabel 控件</span><span class="sxs-lookup"><span data-stu-id="e814a-114">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

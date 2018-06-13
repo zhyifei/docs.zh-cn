@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577095"
 ---
 # <a name="how-to-write-text-to-a-file"></a><span data-ttu-id="88052-102">如何：向文件写入文本</span><span class="sxs-lookup"><span data-stu-id="88052-102">How to: Write Text to a File</span></span>
 <span data-ttu-id="88052-103">本主题展示了针对 .NET Framework 应用程序或 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用将文本写入文件的几种不同的方式。</span><span class="sxs-lookup"><span data-stu-id="88052-103">This topic shows different ways you can write text to a file for .NET Framework applications or [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span> <span data-ttu-id="88052-104">下面的类和方法通常用于将文本写入文件：</span><span class="sxs-lookup"><span data-stu-id="88052-104">The following classes and methods are typically used to write text to a file:</span></span>  

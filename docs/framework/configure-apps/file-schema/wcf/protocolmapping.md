@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748901"
 ---
 # <a name="ltprotocolmappinggt"></a><span data-ttu-id="9b993-102">&lt;protocolMapping&gt;</span><span class="sxs-lookup"><span data-stu-id="9b993-102">&lt;protocolMapping&gt;</span></span>
 <span data-ttu-id="9b993-103">表示一个配置节，用于定义一组的传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 WCF 绑定之间的默认协议映射。</span><span class="sxs-lookup"><span data-stu-id="9b993-103">Represents a configuration section for defining a set of default protocol mapping between transport protocol schemes (e.g., http, net.tcp, net.pipe, etc.) and WCF bindings.</span></span> <span data-ttu-id="9b993-104">当在运行时创建默认终结点，Windows Communication Foundation (WCF) 配置的映射查找并确定要用于特定的绑定基于地址。</span><span class="sxs-lookup"><span data-stu-id="9b993-104">When creating default endpoints at runtime, Windows Communication Foundation (WCF) looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  

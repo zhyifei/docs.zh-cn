@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758537"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a><span data-ttu-id="4f2f5-102">将数据表添加到数据集中</span><span class="sxs-lookup"><span data-stu-id="4f2f5-102">Adding a DataTable to a DataSet</span></span>
 <span data-ttu-id="4f2f5-103">ADO.NET 使您能够创建 <xref:System.Data.DataTable> 对象并将其添加到现有 <xref:System.Data.DataSet> 中。</span><span class="sxs-lookup"><span data-stu-id="4f2f5-103">ADO.NET enables you to create <xref:System.Data.DataTable> objects and add them to an existing <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="4f2f5-104">可以使用 <xref:System.Data.DataTable> 和 <xref:System.Data.DataTable.PrimaryKey%2A> 属性为 <xref:System.Data.DataColumn.Unique%2A> 设置约束信息。</span><span class="sxs-lookup"><span data-stu-id="4f2f5-104">You can set constraint information for a <xref:System.Data.DataTable> by using the <xref:System.Data.DataTable.PrimaryKey%2A> and <xref:System.Data.DataColumn.Unique%2A> properties.</span></span>  

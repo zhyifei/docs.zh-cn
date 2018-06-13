@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556817"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a><span data-ttu-id="88adb-102">如何：指定绑定的方向</span><span class="sxs-lookup"><span data-stu-id="88adb-102">How to: Specify the Direction of the Binding</span></span>
 <span data-ttu-id="88adb-103">本示例演示如何指定绑定是仅更新绑定目标（目标）属性或绑定源（源）属性，还是同时更新目标属性和源属性。</span><span class="sxs-lookup"><span data-stu-id="88adb-103">This example shows how to specify whether the binding updates only the binding target (target) property, the binding source (source) property, or both the target property and the source property.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561694"
 ---
 # <a name="images"></a><span data-ttu-id="74a47-102">图像</span><span class="sxs-lookup"><span data-stu-id="74a47-102">Images</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="74a47-103"> 提供对多种图像格式、高保真图像呈现以及编解码器扩展性的内置支持。</span><span class="sxs-lookup"><span data-stu-id="74a47-103"> provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576251"
 ---
 # <a name="saving-and-restoring-time-zones"></a><span data-ttu-id="db5b5-102">保存和还原时区</span><span class="sxs-lookup"><span data-stu-id="db5b5-102">Saving and restoring time zones</span></span>
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742609"
 ---
 # <a name="network-settings-schema"></a><span data-ttu-id="16257-102">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="16257-102">Network Settings Schema</span></span>
 <span data-ttu-id="16257-103">网络设置指定 .NET Framework 与 Internet 的连接方式。</span><span class="sxs-lookup"><span data-stu-id="16257-103">Network settings specify how the .NET Framework connects to the Internet.</span></span> <span data-ttu-id="16257-104">下表描述 [\<system.Net> 元素（网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)下每个子配置元素的功能。</span><span class="sxs-lookup"><span data-stu-id="16257-104">The following table describes the function of each child configuration element under the [\<system.Net> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).</span></span>  

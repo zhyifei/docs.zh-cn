@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517973"
 ---
 # <a name="dynamic-arguments"></a><span data-ttu-id="3a038-102">动态自变量</span><span class="sxs-lookup"><span data-stu-id="3a038-102">Dynamic Arguments</span></span>
 <span data-ttu-id="3a038-103">此示例演示如何实现由活动使用方而不是活动作者为其定义自变量的活动。</span><span class="sxs-lookup"><span data-stu-id="3a038-103">This sample demonstrates how to implement an activity for which the arguments are defined by the activity consumer rather than the activity author.</span></span> <span data-ttu-id="3a038-104">此示例是通过重写运行时构造活动元数据的方式来做到这一点的。</span><span class="sxs-lookup"><span data-stu-id="3a038-104">It does this by overriding the way the runtime constructs the activity’s metadata.</span></span>  

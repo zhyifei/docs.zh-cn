@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560914"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a><span data-ttu-id="8d997-102">如何：对 Visual 中的几何图形进行命中测试</span><span class="sxs-lookup"><span data-stu-id="8d997-102">How to: Hit Test Geometry in a Visual</span></span>
 <span data-ttu-id="8d997-103">此示例演示如何在一个或多个组成的视觉对象上执行命中的测试<xref:System.Windows.Media.Geometry>对象。</span><span class="sxs-lookup"><span data-stu-id="8d997-103">This example shows how to perform a hit test on a visual object that is composed of one or more <xref:System.Windows.Media.Geometry> objects.</span></span>  

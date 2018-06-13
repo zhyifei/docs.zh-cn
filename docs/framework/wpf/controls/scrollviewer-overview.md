@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557922"
 ---
 # <a name="scrollviewer-overview"></a><span data-ttu-id="245e5-102">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="245e5-102">ScrollViewer Overview</span></span>
 <span data-ttu-id="245e5-103">用户界面中的内容通常比计算机屏幕的显示区域大。</span><span class="sxs-lookup"><span data-stu-id="245e5-103">Content within a user interface is often larger than a computer screen's display area.</span></span> <span data-ttu-id="245e5-104"><xref:System.Windows.Controls.ScrollViewer>控件提供能够滚动内容的一种简便方式[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。</span><span class="sxs-lookup"><span data-stu-id="245e5-104">The <xref:System.Windows.Controls.ScrollViewer> control provides a convenient way to enable scrolling of content in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="245e5-105">本主题介绍<xref:System.Windows.Controls.ScrollViewer>元素，并提供了几个用法示例。</span><span class="sxs-lookup"><span data-stu-id="245e5-105">This topic introduces the <xref:System.Windows.Controls.ScrollViewer> element and provides several usage examples.</span></span>  

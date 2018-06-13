@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760877"
 ---
 # <a name="finding-rows"></a><span data-ttu-id="1881b-102">查找行</span><span class="sxs-lookup"><span data-stu-id="1881b-102">Finding Rows</span></span>
 <span data-ttu-id="1881b-103">可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法，根据排序关键字值搜索行。</span><span class="sxs-lookup"><span data-stu-id="1881b-103">You can search for rows according to their sort key values by using the <xref:System.Data.DataView.Find%2A> and <xref:System.Data.DataView.FindRows%2A> methods of the <xref:System.Data.DataView>.</span></span> <span data-ttu-id="1881b-104">中值的区分大小写的搜索**查找**和**FindRows**方法由**CaseSensitive**基础属性<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="1881b-104">The case sensitivity of search values in the **Find** and **FindRows** methods is determined by the **CaseSensitive** property of the underlying <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="1881b-105">搜索值必须完全匹配现有排序关键字值才能返回结果。</span><span class="sxs-lookup"><span data-stu-id="1881b-105">Search values must match existing sort key values in their entirety in order to return a result.</span></span>  
