@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 417c40f1b0e1ba1b9f7eb39d26da236b5bb691b2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451914"
 ---
 # <a name="metadata-unions"></a>元数据联合
 本节描述元数据 API 使用的非托管联合。  

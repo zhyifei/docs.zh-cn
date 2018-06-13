@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573628"
 ---
 # <a name="events-and-callbacks"></a>事件和回调
 回调是允许回调到通过委托的用户代码的框架的扩展点。 这些委托通常通过方法的参数传递到框架。  

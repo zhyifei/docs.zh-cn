@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572770"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>如何：从字符串中读取字符
 下面的代码示例展示了如何从字符串中异步和同步读取字符。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577082"
 ---
 # <a name="property-design"></a>属性设计
 虽然从技术上讲非常类似于方法属性，但它们是在其使用情况方面有很大差异。 它们应被视为智能字段。 它们具有字段，调用语法和方法的灵活性。  

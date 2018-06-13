@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571379"
 ---
 # <a name="designing-for-extensibility"></a>扩展性设计
 一个重要方面的设计一个框架时，必须确保已仔细考虑框架的扩展性。 这需要了解的成本和收益与各种扩展性机制。 本章可帮助你确定哪个扩展性机制 — 子类化、 事件、 虚拟成员、 回调和等等 — 能够最好地满足您的框架的要求。  

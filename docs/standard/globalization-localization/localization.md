@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573908"
 ---
 # <a name="localization"></a>本地化
 本地化是针对应用支持的每个区域性，将应用资源转换为本地化版本的过程。 只有在完成[可本地化评审](../../../docs/standard/globalization-localization/localizability-review.md)步骤，以验证全球化应用是否做好本地化准备后，才应继续执行本地化步骤。  

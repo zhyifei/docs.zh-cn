@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::GetNameFromToken 方法"
-ms.custom: 
+title: IMetaDataImport::GetNameFromToken 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.GetNameFromToken
 api_location:
@@ -23,17 +15,14 @@ helpviewer_keywords:
 ms.assetid: 32114ecf-8916-4ab2-a201-179c017344f1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: baa0c0e78f7912561b432effd2bf5503e0f06ae7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a39eac88537d47535844d1f05e0741cc94142f0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447248"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>IMetaDataImport::GetNameFromToken 方法
 获取指定的元数据标记所引用的对象的 UTF-8 名称。 此方法已过时。  
@@ -57,12 +46,12 @@ HRESULT GetNameFromToken (
 ## <a name="remarks"></a>备注  
  `GetNameFromToken` 已过时。 作为替代方法，调用方法，以获取的令牌需要，如的特定类型的属性`GetFieldProps`字段或`GetMethodProps`方法。  
   
-## <a name="requirements"></a>惠?  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：**作为 MsCorEE.dll 中的资源  
+ **库：** 作为 MsCorEE.dll 中的资源  
   
  **.NET framework 版本：** 1.0  
   

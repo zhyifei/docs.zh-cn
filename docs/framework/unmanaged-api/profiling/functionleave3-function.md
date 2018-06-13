@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 14f4f16a73c50de2d23804f77bca180f4e9827b5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453917"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 函数
 通知探查器，未从函数返回控件。  
@@ -51,7 +52,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
  `FunctionLeave3`函数不得调入托管代码或以任何方式导致托管的内存分配。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
   
