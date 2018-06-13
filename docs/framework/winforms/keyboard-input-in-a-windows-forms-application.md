@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537068"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Windows 窗体应用程序中的键盘输入
 Windows 窗体包括可用于响应特定按键，然后还提供了供你截获、 修改和使用按键操作在应用程序窗体中，和控制级别的方法的标准键盘事件。  

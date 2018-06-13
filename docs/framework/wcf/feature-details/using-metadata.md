@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497940"
 ---
 # <a name="using-metadata"></a>使用元数据
 服务元数据包含计算机可读的服务说明。 服务元数据包括服务终结点、绑定、约定、操作和消息的说明。 服务元数据有多种用途，包括自动生成使用服务的客户端、实现服务说明和动态更新客户端的绑定。  

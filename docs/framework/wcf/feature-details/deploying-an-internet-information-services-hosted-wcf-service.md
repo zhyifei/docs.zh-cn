@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496375"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署承载于 Internet 信息服务中的 WCF 服务
 开发和部署承载在 Internet 信息服务 (IIS) 的 Windows Communication Foundation (WCF) 服务包含以下任务：  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/04/2018
   
  安装过程[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]如果 IIS 已存在，则在计算机上，自动向 IIS 注册 WCF。 如果之后安装 IIS [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]，向 IIS 注册 WCF 所需的一个额外的步骤和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。 根据您的操作系统，可以按如下所述执行此操作：  
   
--   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]Windows 7 和[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]： 使用[ServiceModel 注册工具 (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md)工具向 IIS 注册 WCF： 若要使用此工具，键入**ServiceModelReg.exe /i /x** Visual Studio 中命令提示符。 打开此命令提示符，方法是单击“开始”按钮、选择 **“所有程序”**, **“Microsoft Visual Studio 2012”**, **“Visual Studio 工具”**和 **“Visual Studio 命令提示符”**。  
+-   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]Windows 7 和[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]： 使用[ServiceModel 注册工具 (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md)工具向 IIS 注册 WCF： 若要使用此工具，键入**ServiceModelReg.exe /i /x** Visual Studio 中命令提示符。 打开此命令提示符，方法是单击“开始”按钮、选择 **“所有程序”**, **“Microsoft Visual Studio 2012”**, **“Visual Studio 工具”** 和 **“Visual Studio 命令提示符”**。  
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)]：安装 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]的 Windows Communication Foundation Activation Components 子组件。 为此，请在控制面板中，单击**添加或删除程序**然后**添加\/删除 Windows 组件**。 这将激活 **“Windows 组件向导”**。  
   

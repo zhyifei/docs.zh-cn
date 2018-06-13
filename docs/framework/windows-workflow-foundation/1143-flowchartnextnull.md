@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33510714"
 ---
 # <a name="1143---flowchartnextnull"></a>1143 - FlowchartNextNull
 ## <a name="properties"></a>属性  

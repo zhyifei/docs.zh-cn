@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499136"
 ---
 # <a name="streaming-message-transfer"></a>流消息传输
 Windows Communication Foundation (WCF) 传输来传输消息支持两种模式：  

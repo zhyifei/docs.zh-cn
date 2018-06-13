@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537715"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>如何：拉伸 ToolStripTextBox 以填充 ToolStrip 的其余宽度（Windows 窗体）
 当你将设置<xref:System.Windows.Forms.ToolStrip.Stretch%2A>属性<xref:System.Windows.Forms.ToolStrip>控制转移到`true`，控件填充其容器端到端，并调整其大小调整大小时其容器。 在此配置中，你可能发现它可以在控件中，如拉伸项<xref:System.Windows.Forms.ToolStripTextBox>、 以填充可用空间和在调整大小时控件时调整大小。 此拉伸很有用，例如，如果你想要实现的外观和行为类似于在 Microsoft® Internet Explorer 的地址栏。  

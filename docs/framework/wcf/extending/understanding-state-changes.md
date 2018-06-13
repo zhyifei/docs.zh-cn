@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496658"
 ---
 # <a name="understanding-state-changes"></a>了解状态更改
 本节讨论的内容包括通道具有的状态和转换、用于结构通道状态的类型以及实现它们的方式。  

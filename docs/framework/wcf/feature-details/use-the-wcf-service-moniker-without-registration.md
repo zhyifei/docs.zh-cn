@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497966"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>如何：使用未注册的 Windows Communication Foundation 服务标记
 若要连接到并与 Windows Communication Foundation (WCF) 服务进行通信，WCF 客户端应用程序必须拥有服务地址、 绑定配置和服务协定的详细信息。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497628"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF 中使用的安全概念
 Windows Communication Foundation (WCF) 安全是基于已在使用的概念和部署各种安全基础结构中。  

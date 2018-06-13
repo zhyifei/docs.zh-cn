@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497511"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>对 JSON 和其他数据传输格式的支持
 JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用于在客户端浏览器和支持 AJAX（异步 JavaScript 和 XML）的 Web 服务之间快速交换少量数据。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538150"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>事件处理程序概述（Windows 窗体）
 事件处理程序是与该事件绑定的方法。 当引发事件时，将执行在事件处理程序内的代码。 每个事件处理程序提供了两个参数，可用于正确处理该事件。 下面的示例演示的事件处理程序<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件。  

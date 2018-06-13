@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498626"
 ---
 # <a name="tampering"></a>篡改
 *篡改*是一种更改消息或在传递邮件，并为以外它的本来目的使用更改后的消息的行为。  

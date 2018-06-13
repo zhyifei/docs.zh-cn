@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497953"
 ---
 # <a name="wcf-discovery"></a>WCF Discovery
 Windows Communication Foundation (WCF) 提供支持，以使服务能够在运行时检测到使用 WS 发现协议以互操作方式。 WCF 服务可以公告其可用性，到使用多播的消息的网络或发现代理服务器。 客户端应用程序可以搜索网络或发现代理服务器来查找满足一组条件的服务。 本节中的主题分别概述和详细介绍了此功能的编程模型。  

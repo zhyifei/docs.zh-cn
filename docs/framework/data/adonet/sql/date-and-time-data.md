@@ -1,29 +1,16 @@
 ---
-title: "日期和时间数据"
-ms.custom: 
+title: 日期和时间数据
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354863"
 ---
 # <a name="date-and-time-data"></a>日期和时间数据
 SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 新的数据类型包括单独的日期和时间类型以及具有更大范围、更高精度和更强时区感知能力的扩展数据类型。 从 .NET Framework 3.5 Service Pack (SP) 1 开始，适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 完全支持 SQL Server 2008 数据库引擎的所有新功能。 您必须安装 .NET Framework 3.5 SP1（或更高版本）才能将这些新功能与 SqlClient 一起使用。  
@@ -44,7 +31,7 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
 |`date`|`date` 数据类型的范围从 01 年 1 月 1 日到 9999 年 12 月 31 日，精度为 1 天。 默认值为 1900 年 1月 1日。 存储大小为 3 字节。|  
 |`time`|`time` 数据类型仅存储时间值，并且采用 24 小时制。 `time` 数据类型的范围从 00:00:00.0000000 到 23:59:59.9999999，精确到 100 毫微秒。 默认值为 00:00:00.0000000（午夜）。 `time` 数据类型支持用户定义的小数秒精度，存储大小根据指定的精度在 3 字节到 6 字节之间变化。|  
 |`datetime2`|`datetime2` 数据类型将 `date` 和 `time` 数据类型的范围和精度组合成单个数据类型。<br /><br /> 默认值和字符串格式与 `date` 和 `time` 数据类型中定义的相同。|  
-|`datetimeoffset`|`datetimeoffset` 数据类型具有 `datetime2` 的所有功能，并附加了时区偏移量。 时区偏移量表示为 [+ &#124;-] hh: mm。 HH 是范围从 00 到 14 的 2 位数，表示时区偏移量的小时数。 MM 是范围从 00 到 59 的 2 位数，表示时区偏移量的附加分钟数。 时间格式支持的精度为 100 毫微秒。 必需的 + 或 - 符号指示在 UTC（通用协调时间或格林尼治标准时间）中是加上还是减去时区偏移量以获取本地时间。|  
+|`datetimeoffset`|`datetimeoffset` 数据类型具有 `datetime2` 的所有功能，并附加了时区偏移量。 时区偏移量表示为 [+&#124;-] hh: mm。 HH 是范围从 00 到 14 的 2 位数，表示时区偏移量的小时数。 MM 是范围从 00 到 59 的 2 位数，表示时区偏移量的附加分钟数。 时间格式支持的精度为 100 毫微秒。 必需的 + 或 - 符号指示在 UTC（通用协调时间或格林尼治标准时间）中是加上还是减去时区偏移量以获取本地时间。|  
   
 > [!NOTE]
 >  有关使用 `Type System Version` 关键字的更多信息，请参见 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
@@ -250,7 +237,7 @@ command.Parameters.AddWithValue( _
 |-----------|-----------------|  
 |[日期和时间数据类型和函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=98360)|概述所有 Transact-SQL 日期和时间数据类型和函数。|  
 |[使用日期和时间数据](http://go.microsoft.com/fwlink/?LinkId=98361)|提供有关日期和时间数据类型和函数的信息及相应的用法示例。|  
-|[Data Types (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|介绍 SQL Server 2008 中的系统数据类型。|  
+|[数据类型 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|介绍 SQL Server 2008 中的系统数据类型。|  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  

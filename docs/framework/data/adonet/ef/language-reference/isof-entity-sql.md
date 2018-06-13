@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762135"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 确定表达式的类型是否为指定类型或指定类型的某个子类型。  

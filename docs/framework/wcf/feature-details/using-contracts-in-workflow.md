@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498298"
 ---
 # <a name="using-contracts-in-workflow"></a>在工作流中使用协定
 当实现服务时，您可以定义一些协定来描述此服务及其收发的数据。 数据表示为数据协定和消息协定;WCF 和工作流服务的服务说明的一部分使用数据协定和消息协定定义。 服务自身以 WSDL 形式公开元数据，以便描述服务的操作。 在 WCF 中，服务协定和操作协定定义其支持的服务和操作。 但在工作流服务中，这些协定属于业务流程自身，它们由称为协定推理的过程在元数据中公开。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496995"
 ---
 # <a name="diagnosing-transactional-applications"></a>诊断事务应用程序
 本主题介绍如何使用 Windows Communication Foundation (WCF) 管理和诊断功能来解决事务应用程序。  

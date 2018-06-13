@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498480"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 错误处理
 Windows Communication Foundation (WCF) Web HTTP 错误处理可用于从指定 HTTP 状态代码和返回使用相同的格式与操作 （例如，XML 或 JSON） 的错误详细信息的 WCF Web HTTP 服务返回的错误。  

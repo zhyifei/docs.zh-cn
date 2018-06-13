@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501244"
 ---
 # <a name="syndication-extensibility-samples"></a>联合扩展性示例
 本节包含演示自定义联合中 Windows Communication Foundation (WCF) 的示例。  

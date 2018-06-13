@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213943"
 ---
 # <a name="conversion-keywords-c-reference"></a>转换关键字（C# 参考）
 本部分介绍类型转换中使用的关键字：  
