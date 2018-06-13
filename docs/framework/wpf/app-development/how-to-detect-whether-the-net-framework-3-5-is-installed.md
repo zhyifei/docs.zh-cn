@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546037"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>如何： 检测是否安装了.NET Framework 3.5
 管理员可以将部署目标的系统上的 Windows Presentation Foundation (WPF) 应用程序之前[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，它们必须首先确认[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]运行时就存在。 本主题提供了编写的脚本的 HTML/JavaScript 中，管理员可以用于确定是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]系统上存在。  

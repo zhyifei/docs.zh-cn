@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546983"
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>如何：检测是否已安装 Firefox 的 WPF 插件
 Windows Presentation Foundation (WPF) 插件 Firefox 使[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]和松散的 XAML 文件中 Mozilla Firefox 浏览器运行。 本主题提供了用 HTML 和 JavaScript，管理员可以使用以确定是否安装了插件 Firefox WPF 编写的脚本。  

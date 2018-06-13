@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532501"
 ---
 # <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>如何：使用 Windows 窗体 ListView 控件在列中显示子项
 Windows 窗体<xref:System.Windows.Forms.ListView>控件可以显示的附加文本或子项的详细信息视图中每个项。 第一列显示项文本，如雇员编号。 第二、 第三个和后续列显示第一、 第二，并随后的关联子项。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545102"
 ---
 # <a name="how-to-retrieve-data-in-a-particular-data-format"></a>如何：以特定数据格式检索数据
 下面的示例演示如何从指定的格式中的数据对象中检索数据。  

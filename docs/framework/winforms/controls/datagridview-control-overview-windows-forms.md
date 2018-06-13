@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529959"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView 控件概述（Windows 窗体）
 > [!NOTE]
