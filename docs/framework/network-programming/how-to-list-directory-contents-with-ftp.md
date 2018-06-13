@@ -1,28 +1,21 @@
 ---
-title: "如何：使用 FTP 列出目录内容"
-ms.custom: 
+title: 如何：使用 FTP 列出目录内容
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
-caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b3c0a5090709999ee5ab17e857bb5334d6982954
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 12351b06dc7d03971f9ce70f36110b8b6d672fd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394574"
 ---
-# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="fcddc-102">如何：使用 FTP 列出目录内容</span><span class="sxs-lookup"><span data-stu-id="fcddc-102">How to: List Directory Contents with FTP</span></span>
-<span data-ttu-id="fcddc-103">此示例演示如何列出 FTP 服务器的目录内容。</span><span class="sxs-lookup"><span data-stu-id="fcddc-103">This sample shows how to list the directory contents of an FTP server.</span></span>  
+# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="6e7df-102">如何：使用 FTP 列出目录内容</span><span class="sxs-lookup"><span data-stu-id="6e7df-102">How to: List Directory Contents with FTP</span></span>
+<span data-ttu-id="6e7df-103">此示例演示如何列出 FTP 服务器的目录内容。</span><span class="sxs-lookup"><span data-stu-id="6e7df-103">This sample shows how to list the directory contents of an FTP server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fcddc-104">示例</span><span class="sxs-lookup"><span data-stu-id="fcddc-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="6e7df-104">示例</span><span class="sxs-lookup"><span data-stu-id="6e7df-104">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -58,11 +51,11 @@ namespace Examples.System.Net
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="fcddc-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="fcddc-105">Compiling the Code</span></span>  
- <span data-ttu-id="fcddc-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="fcddc-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="6e7df-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="6e7df-105">Compiling the Code</span></span>  
+ <span data-ttu-id="6e7df-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="6e7df-106">This example requires:</span></span>  
   
--   <span data-ttu-id="fcddc-107">引用 System.Net 命名空间。</span><span class="sxs-lookup"><span data-stu-id="fcddc-107">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="6e7df-107">引用 System.Net 命名空间。</span><span class="sxs-lookup"><span data-stu-id="6e7df-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="fcddc-108">可靠编程</span><span class="sxs-lookup"><span data-stu-id="fcddc-108">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="6e7df-108">可靠编程</span><span class="sxs-lookup"><span data-stu-id="6e7df-108">Robust Programming</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="fcddc-109">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="fcddc-109">.NET Framework Security</span></span>
+## <a name="net-framework-security"></a><span data-ttu-id="6e7df-109">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="6e7df-109">.NET Framework Security</span></span>

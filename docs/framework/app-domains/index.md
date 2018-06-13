@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742427"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a><span data-ttu-id="a2860-102">使用应用程序域和程序集编程</span><span class="sxs-lookup"><span data-stu-id="a2860-102">Programming with Application Domains and Assemblies</span></span>
 <span data-ttu-id="a2860-103">Microsoft Internet Explorer、ASP.NET 和 Windows Shell 等主机将公共语言运行时加载到进程中，在相应进程中创建[应用程序域](../../../docs/framework/app-domains/application-domains.md)，然后在 .NET Framework 应用程序运行时加载并执行相应应用程序域中的用户代码。</span><span class="sxs-lookup"><span data-stu-id="a2860-103">Hosts such as Microsoft Internet Explorer, ASP.NET, and the Windows shell load the common language runtime into a process, create an [application domain](../../../docs/framework/app-domains/application-domains.md) in that process, and then load and execute user code in that application domain when running a .NET Framework application.</span></span> <span data-ttu-id="a2860-104">在大多数情况下，不必担心创建应用程序域和将程序集加载到这些域中，因为运行时主机会执行这些任务。</span><span class="sxs-lookup"><span data-stu-id="a2860-104">In most cases, you do not have to worry about creating application domains and loading assemblies into them because the runtime host performs those tasks.</span></span>  

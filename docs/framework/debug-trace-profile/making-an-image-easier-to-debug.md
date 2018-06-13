@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391041"
 ---
 # <a name="making-an-image-easier-to-debug"></a><span data-ttu-id="d39c0-102">令映像更易于调试</span><span class="sxs-lookup"><span data-stu-id="d39c0-102">Making an Image Easier to Debug</span></span>
 <span data-ttu-id="d39c0-103">编译非托管代码时，可以通过设置 IDE 开关或命令线选项来配置可执行映像进行调试。</span><span class="sxs-lookup"><span data-stu-id="d39c0-103">When compiling unmanaged code, you can configure an executable image for debugging by setting IDE switches or command-line options.</span></span> <span data-ttu-id="d39c0-104">例如，可以使用 Visual C++ 中的 /Zi 命令行选项，使其发出调试符号文件（文件扩展名为 .pdb）。</span><span class="sxs-lookup"><span data-stu-id="d39c0-104">For example, you can use the /**Zi** command-line option in Visual C++ to ask it to emit debug symbol files (file extension .pdb).</span></span> <span data-ttu-id="d39c0-105">同样，/Od 命令行选项告知编译器禁用优化。</span><span class="sxs-lookup"><span data-stu-id="d39c0-105">Similarly, the /**Od** command-line option tells the compiler to disable optimization.</span></span> <span data-ttu-id="d39c0-106">所产生的代码运行速度更慢，但更易于调试，这很必要。</span><span class="sxs-lookup"><span data-stu-id="d39c0-106">The resulting code runs more slowly, but is easier to debug, should this be necessary.</span></span>  

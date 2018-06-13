@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396524"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a><span data-ttu-id="23731-102">部署 .NET Framework 和应用程序</span><span class="sxs-lookup"><span data-stu-id="23731-102">Deploying the .NET Framework and Applications</span></span>
 <span data-ttu-id="23731-103">本文有助于你开始部署应用程序的 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="23731-103">This article helps you get started deploying the .NET Framework with your application.</span></span> <span data-ttu-id="23731-104">大部分信息都是供开发人员、OEM 和企业管理人员使用的。</span><span class="sxs-lookup"><span data-stu-id="23731-104">Most of the information is intended for developers, OEMs, and enterprise administrators.</span></span> <span data-ttu-id="23731-105">想在其自己的计算机上安装 .NET Framework 的用户应阅读[安装 .NET Framework](~/docs/framework/install/index.md)。</span><span class="sxs-lookup"><span data-stu-id="23731-105">Users who want to install the .NET Framework on their computers should read [Installing the .NET Framework](~/docs/framework/install/index.md).</span></span>  
