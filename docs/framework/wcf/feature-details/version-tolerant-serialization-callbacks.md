@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497927"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a><span data-ttu-id="51810-102">版本容错序列化回调</span><span class="sxs-lookup"><span data-stu-id="51810-102">Version-Tolerant Serialization Callbacks</span></span>
 <span data-ttu-id="51810-103">数据协定编程模型充分支持 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 类所支持的版本容错序列化回调方法。</span><span class="sxs-lookup"><span data-stu-id="51810-103">The data contract programming model fully supports the version-tolerant serialization callback methods that the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> and <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> classes support.</span></span>  

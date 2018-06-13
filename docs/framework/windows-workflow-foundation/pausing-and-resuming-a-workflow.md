@@ -1,29 +1,19 @@
 ---
-title: "暂停和继续工作流"
-ms.custom: 
+title: 暂停和继续工作流
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e51235105e9d2cdb1cad3847fb00ad5604061564
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99455f117e5e8591750565452c3c40b74bf45ba1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513479"
 ---
-# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="c8a39-102">暂停和继续工作流</span><span class="sxs-lookup"><span data-stu-id="c8a39-102">Pausing and Resuming a Workflow</span></span>
-<span data-ttu-id="c8a39-103">工作流将暂停并恢复以响应书签和阻止活动（如 <xref:System.Activities.Statements.Delay>），但也可使用持久性来显式暂停、卸载和恢复工作流。</span><span class="sxs-lookup"><span data-stu-id="c8a39-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
+# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="13516-102">暂停和继续工作流</span><span class="sxs-lookup"><span data-stu-id="13516-102">Pausing and Resuming a Workflow</span></span>
+<span data-ttu-id="13516-103">工作流将暂停并恢复以响应书签和阻止活动（如 <xref:System.Activities.Statements.Delay>），但也可使用持久性来显式暂停、卸载和恢复工作流。</span><span class="sxs-lookup"><span data-stu-id="13516-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
   
-## <a name="pausing-a-workflow"></a><span data-ttu-id="c8a39-104">暂停工作流</span><span class="sxs-lookup"><span data-stu-id="c8a39-104">Pausing a Workflow</span></span>  
- <span data-ttu-id="c8a39-105">若要暂停工作流，请使用 <xref:System.Activities.WorkflowApplication.Unload%2A>。</span><span class="sxs-lookup"><span data-stu-id="c8a39-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="c8a39-106">此方法请求保留和卸载工作流，并将在工作流未在 30 秒内卸载时引发 <xref:System.TimeoutException>。</span><span class="sxs-lookup"><span data-stu-id="c8a39-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
+## <a name="pausing-a-workflow"></a><span data-ttu-id="13516-104">暂停工作流</span><span class="sxs-lookup"><span data-stu-id="13516-104">Pausing a Workflow</span></span>  
+ <span data-ttu-id="13516-105">若要暂停工作流，请使用 <xref:System.Activities.WorkflowApplication.Unload%2A>。</span><span class="sxs-lookup"><span data-stu-id="13516-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="13516-106">此方法请求保留和卸载工作流，并将在工作流未在 30 秒内卸载时引发 <xref:System.TimeoutException>。</span><span class="sxs-lookup"><span data-stu-id="13516-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
   
 ```csharp  
 try  
@@ -37,8 +27,8 @@ catch (TimeoutException e)
 }  
 ```  
   
-## <a name="resuming-a-workflow"></a><span data-ttu-id="c8a39-107">恢复工作流</span><span class="sxs-lookup"><span data-stu-id="c8a39-107">Resuming a Workflow</span></span>  
- <span data-ttu-id="c8a39-108">若要恢复之前已暂停且已卸载的工作流，请使用 <xref:System.Activities.WorkflowApplication.Load%2A>。</span><span class="sxs-lookup"><span data-stu-id="c8a39-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="c8a39-109">此方法会将工作流从持久性存储加载到内存中。</span><span class="sxs-lookup"><span data-stu-id="c8a39-109">This method loads a workflow from a persistence store into memory.</span></span>  
+## <a name="resuming-a-workflow"></a><span data-ttu-id="13516-107">恢复工作流</span><span class="sxs-lookup"><span data-stu-id="13516-107">Resuming a Workflow</span></span>  
+ <span data-ttu-id="13516-108">若要恢复之前已暂停且已卸载的工作流，请使用 <xref:System.Activities.WorkflowApplication.Load%2A>。</span><span class="sxs-lookup"><span data-stu-id="13516-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="13516-109">此方法会将工作流从持久性存储加载到内存中。</span><span class="sxs-lookup"><span data-stu-id="13516-109">This method loads a workflow from a persistence store into memory.</span></span>  
   
 ```csharp  
 WorkflowApplication application = new WorkflowApplication(activity);  
@@ -46,8 +36,8 @@ application.InstanceStore = instanceStore;
 application.Load(id);  
 ```  
   
-## <a name="example"></a><span data-ttu-id="c8a39-110">示例</span><span class="sxs-lookup"><span data-stu-id="c8a39-110">Example</span></span>  
- <span data-ttu-id="c8a39-111">下面的代码示例演示如何使用持久性来暂停和恢复工作流。</span><span class="sxs-lookup"><span data-stu-id="c8a39-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
+## <a name="example"></a><span data-ttu-id="13516-110">示例</span><span class="sxs-lookup"><span data-stu-id="13516-110">Example</span></span>  
+ <span data-ttu-id="13516-111">下面的代码示例演示如何使用持久性来暂停和恢复工作流。</span><span class="sxs-lookup"><span data-stu-id="13516-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
   
 ```csharp  
 static string bkName = "bkName";  

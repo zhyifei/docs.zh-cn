@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac34fbca56c8a0f00ee3a7e0f898b8ee03287b11
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412280"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a><span data-ttu-id="a5662-102">ICorDebugFunction::GetILCode 方法</span><span class="sxs-lookup"><span data-stu-id="a5662-102">ICorDebugFunction::GetILCode Method</span></span>
 <span data-ttu-id="a5662-103">获取表示与此 ICorDebugFunction 对象关联的 Microsoft 中间语言 (MSIL) 代码的 ICorDebugCode 实例。</span><span class="sxs-lookup"><span data-stu-id="a5662-103">Gets the ICorDebugCode instance that represents the Microsoft intermediate language (MSIL) code associated with this ICorDebugFunction object.</span></span>  

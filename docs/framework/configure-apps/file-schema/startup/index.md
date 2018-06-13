@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745092"
 ---
 # <a name="startup-settings-schema"></a><span data-ttu-id="5d0dc-102">启动设置架构</span><span class="sxs-lookup"><span data-stu-id="5d0dc-102">Startup Settings Schema</span></span>
 <span data-ttu-id="5d0dc-103">启动设置会指定应运行应用程序的公共语言运行时的版本。</span><span class="sxs-lookup"><span data-stu-id="5d0dc-103">Startup settings specify the version of the common language runtime that should run the application.</span></span>  

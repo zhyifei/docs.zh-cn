@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744962"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a><span data-ttu-id="b63ab-102">&lt;assemblyIdentity&gt;元素&lt;运行时&gt;</span><span class="sxs-lookup"><span data-stu-id="b63ab-102">&lt;assemblyIdentity&gt; Element for &lt;runtime&gt;</span></span>
 <span data-ttu-id="b63ab-103">包含有关程序集的标识信息。</span><span class="sxs-lookup"><span data-stu-id="b63ab-103">Contains identifying information about the assembly.</span></span>  

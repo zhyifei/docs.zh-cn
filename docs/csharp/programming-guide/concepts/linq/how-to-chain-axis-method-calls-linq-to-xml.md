@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333771"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a><span data-ttu-id="162ac-102">如何：链接轴方法调用 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="162ac-102">How to: Chain Axis Method Calls (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="162ac-103">一个在代码中常用的模式是调用轴方法，然后调用一个扩展方法轴。</span><span class="sxs-lookup"><span data-stu-id="162ac-103">A common pattern that you will use in your code is to call an axis method, then call one of the extension method axes.</span></span>  

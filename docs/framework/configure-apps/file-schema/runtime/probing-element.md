@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744998"
 ---
 # <a name="ltprobinggt-element"></a><span data-ttu-id="80913-102">&lt;探测&gt;元素</span><span class="sxs-lookup"><span data-stu-id="80913-102">&lt;probing&gt; Element</span></span>
 <span data-ttu-id="80913-103">指定应用程序基公共语言运行时，在加载程序集时要搜索子目录。</span><span class="sxs-lookup"><span data-stu-id="80913-103">Specifies application base subdirectories for the common language runtime to search when loading assemblies.</span></span>  

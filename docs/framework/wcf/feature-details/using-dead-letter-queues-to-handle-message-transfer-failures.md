@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504076"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a><span data-ttu-id="54e6b-102">使用死信队列处理消息传输故障</span><span class="sxs-lookup"><span data-stu-id="54e6b-102">Using Dead-Letter Queues to Handle Message Transfer Failures</span></span>
 <span data-ttu-id="54e6b-103">排队消息可能传送失败。</span><span class="sxs-lookup"><span data-stu-id="54e6b-103">Queued messages can fail delivery.</span></span> <span data-ttu-id="54e6b-104">这些失败的消息将记录在死信队列中。</span><span class="sxs-lookup"><span data-stu-id="54e6b-104">These failed messages are recorded in a dead-letter queue.</span></span> <span data-ttu-id="54e6b-105">传送失败可能是由于网络故障、队列已删除、队列已满、身份验证失败或未能准时传送等原因而引起的。</span><span class="sxs-lookup"><span data-stu-id="54e6b-105">The failed delivery can be caused by reasons such as network failures, a deleted queue, a full queue, authentication failure, or a failure to deliver on time.</span></span>  
