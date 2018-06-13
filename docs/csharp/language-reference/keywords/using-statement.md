@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285738"
 ---
 # <a name="using-statement-c-reference"></a>using 语句（C# 参考）
 提供可确保正确使用 <xref:System.IDisposable> 对象的方便语法。  
