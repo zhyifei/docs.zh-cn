@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b395bc4d199738b309be74868243b61f924878c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431228"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a><span data-ttu-id="091f8-102">CorMarkThreadInThreadPool 函数</span><span class="sxs-lookup"><span data-stu-id="091f8-102">CorMarkThreadInThreadPool Function</span></span>
 <span data-ttu-id="091f8-103">将标记为托管代码的执行当前正在执行的线程池线程。</span><span class="sxs-lookup"><span data-stu-id="091f8-103">Marks the currently executing thread-pool thread for the execution of managed code.</span></span> <span data-ttu-id="091f8-104">从.NET Framework 2.0 版开始，此函数不起作用。</span><span class="sxs-lookup"><span data-stu-id="091f8-104">Starting with the .NET Framework version 2.0, this function has no effect.</span></span> <span data-ttu-id="091f8-105">它不是必需的并且可以在代码中删除。此函数已弃用中[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="091f8-105">It is not required, and can be removed from your code.This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  

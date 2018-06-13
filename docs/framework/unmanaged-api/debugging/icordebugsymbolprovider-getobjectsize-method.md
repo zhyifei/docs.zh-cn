@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1da526ac133604fa43081f86988459c4238517c9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421498"
 ---
 # <a name="icordebugsymbolprovidergetobjectsize-method"></a><span data-ttu-id="b3351-102">ICorDebugSymbolProvider::GetObjectSize 方法</span><span class="sxs-lookup"><span data-stu-id="b3351-102">ICorDebugSymbolProvider::GetObjectSize Method</span></span>
 <span data-ttu-id="b3351-103">基于对象的 Typespec 签名返回对象的大小。</span><span class="sxs-lookup"><span data-stu-id="b3351-103">Returns the object size for an object based on its typespec signature.</span></span>  

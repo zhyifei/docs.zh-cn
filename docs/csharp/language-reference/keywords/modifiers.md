@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272677"
 ---
 # <a name="modifiers-c-reference"></a><span data-ttu-id="86822-102">修饰符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="86822-102">Modifiers (C# Reference)</span></span>
 <span data-ttu-id="86822-103">修饰符用于修改类型和类型成员的声明。</span><span class="sxs-lookup"><span data-stu-id="86822-103">Modifiers are used to modify declarations of types and type members.</span></span> <span data-ttu-id="86822-104">本节介绍 C# 修饰符。</span><span class="sxs-lookup"><span data-stu-id="86822-104">This section introduces the C# modifiers.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746392"
 ---
 # <a name="ltprovideroptiongt-element"></a><span data-ttu-id="9eff5-102">&lt;providerOption&gt;元素</span><span class="sxs-lookup"><span data-stu-id="9eff5-102">&lt;providerOption&gt; Element</span></span>
 <span data-ttu-id="9eff5-103">指定语言提供程序的编译器版本属性。</span><span class="sxs-lookup"><span data-stu-id="9eff5-103">Specifies the compiler version attributes for a language provider.</span></span>  

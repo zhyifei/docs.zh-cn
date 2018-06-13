@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d4b5f94bdbb7319cef14c8b86f8ea995df7ff21
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424477"
 ---
 # <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="8a807-102">ISymUnmanagedDispose::Destroy 方法</span><span class="sxs-lookup"><span data-stu-id="8a807-102">ISymUnmanagedDispose::Destroy Method</span></span>
 <span data-ttu-id="8a807-103">导致要释放所有内部引用，并在任何后续方法调用返回失败的基础对象。</span><span class="sxs-lookup"><span data-stu-id="8a807-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  

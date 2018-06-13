@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5304496da992b44c171ca3c6ffa3fffa35d6f9cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425361"
 ---
 # <a name="ibindingdisplay-interface"></a><span data-ttu-id="30565-102">IBindingDisplay 接口</span><span class="sxs-lookup"><span data-stu-id="30565-102">IBindingDisplay Interface</span></span>
 <span data-ttu-id="30565-103">提供用于显示当前运行的应用程序有关的绑定信息的方法。</span><span class="sxs-lookup"><span data-stu-id="30565-103">Provides methods that display current binding information about the running application.</span></span>  

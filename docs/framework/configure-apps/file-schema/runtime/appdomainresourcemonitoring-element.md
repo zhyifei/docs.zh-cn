@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743571"
 ---
 # <a name="ltappdomainresourcemonitoringgt-element"></a><span data-ttu-id="ec8d1-102">&lt;appDomainResourceMonitoring&gt;元素</span><span class="sxs-lookup"><span data-stu-id="ec8d1-102">&lt;appDomainResourceMonitoring&gt; Element</span></span>
 <span data-ttu-id="ec8d1-103">指示运行时在过程的生命周期过程中收集所有应用程序域的统计数据。</span><span class="sxs-lookup"><span data-stu-id="ec8d1-103">Instructs the runtime to collect statistics on all application domains in the process for the life of the process.</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1da1d368725ab0a2334080c1caa7d4e25f5f3bab
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431118"
 ---
 # <a name="ebindpolicylevels-enumeration"></a><span data-ttu-id="ea3e8-102">EBindPolicyLevels 枚举</span><span class="sxs-lookup"><span data-stu-id="ea3e8-102">EBindPolicyLevels Enumeration</span></span>
 <span data-ttu-id="ea3e8-103">提供一些标志以指定在哪个应用或修改的程序集策略级别。</span><span class="sxs-lookup"><span data-stu-id="ea3e8-103">Provides flags to specify the level at which to apply or modify assembly policy.</span></span>  

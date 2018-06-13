@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748745"
 ---
 # <a name="ltaddgt-of-ltdefaultportsgt"></a><span data-ttu-id="053d2-102">&lt;defaultPorts&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="053d2-102">&lt;add&gt; of &lt;defaultPorts&gt;</span></span>
 <span data-ttu-id="053d2-103">客户端应用程序侦听的默认通信终结点。</span><span class="sxs-lookup"><span data-stu-id="053d2-103">A default communications endpoint that the client application listens to.</span></span>  

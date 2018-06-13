@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0b57d04a8a49371872c679a331b5ae9c45dce797
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433068"
 ---
 # <a name="getversionfromprocess-function"></a><span data-ttu-id="71380-102">GetVersionFromProcess 函数</span><span class="sxs-lookup"><span data-stu-id="71380-102">GetVersionFromProcess Function</span></span>
 <span data-ttu-id="71380-103">获取与指定的进程句柄关联公共语言运行时 (CLR) 的版本号。</span><span class="sxs-lookup"><span data-stu-id="71380-103">Gets the version number of the common language runtime (CLR) that is associated with the specified process handle.</span></span>  

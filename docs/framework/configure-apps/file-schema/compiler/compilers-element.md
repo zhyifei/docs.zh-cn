@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742986"
 ---
 # <a name="ltcompilersgt-element"></a><span data-ttu-id="01cbd-102">&lt;编译器&gt;元素</span><span class="sxs-lookup"><span data-stu-id="01cbd-102">&lt;compilers&gt; Element</span></span>
 <span data-ttu-id="01cbd-103">编译器配置元素的容器；包含零个或多个 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 元素。</span><span class="sxs-lookup"><span data-stu-id="01cbd-103">Container for compiler configuration elements; contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span>  

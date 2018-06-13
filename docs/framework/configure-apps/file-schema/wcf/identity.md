@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749161"
 ---
 # <a name="ltidentitygt"></a><span data-ttu-id="3d54c-102">&lt;identity&gt;</span><span class="sxs-lookup"><span data-stu-id="3d54c-102">&lt;identity&gt;</span></span>
 <span data-ttu-id="3d54c-103">标识元素允许客户端开发人员在设计时指定服务的期望标识。</span><span class="sxs-lookup"><span data-stu-id="3d54c-103">The identity element allows a client developer to specify at design time the expected identity of the service.</span></span> <span data-ttu-id="3d54c-104">在客户端和服务之间的握手过程中，Windows Communication Foundation (WCF) 基础结构将确保预期的服务匹配此元素的值的标识，因此可以进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="3d54c-104">In the handshake process between the client and service, the Windows Communication Foundation (WCF) infrastructure will ensure that the identity of the expected service matches the values of this element, and thus can be authenticated.</span></span> <span data-ttu-id="3d54c-105">有关详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。</span><span class="sxs-lookup"><span data-stu-id="3d54c-105">For more information, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  

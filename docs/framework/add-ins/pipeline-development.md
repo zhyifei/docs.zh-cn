@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744572"
 ---
 # <a name="pipeline-development"></a><span data-ttu-id="9078f-102">管线开发</span><span class="sxs-lookup"><span data-stu-id="9078f-102">Pipeline Development</span></span>
 <span data-ttu-id="9078f-103">外接程序管线是主机应用程序和其外接程序必须使用才能相互之间进行通信的管道段的路径。</span><span class="sxs-lookup"><span data-stu-id="9078f-103">The add-in pipeline is the path of pipeline segments that the host application and its add-in must use to communicate with each other.</span></span>  

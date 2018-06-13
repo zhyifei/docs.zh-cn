@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745404"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="56e4a-102">&lt;claimTypeRequirements&gt; 的 &lt;add&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="56e4a-102">&lt;add&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="56e4a-103">指定希望出现在联合凭据中的必选和可选的声明类型。</span><span class="sxs-lookup"><span data-stu-id="56e4a-103">Specifies the types of required and optional claims expected to appear in the federated credential.</span></span> <span data-ttu-id="56e4a-104">例如，服务规定有关传入凭据的要求，传入凭据必须具有某组声明类型。</span><span class="sxs-lookup"><span data-stu-id="56e4a-104">For example, services state the requirements on incoming credentials, which must possess a certain set of claim types.</span></span>  

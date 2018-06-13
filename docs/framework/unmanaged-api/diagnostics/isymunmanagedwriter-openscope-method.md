@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6aad2df19ec5563d8d48b0c286ab888a727c21ac
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428155"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a><span data-ttu-id="dc7c6-102">ISymUnmanagedWriter::OpenScope 方法</span><span class="sxs-lookup"><span data-stu-id="dc7c6-102">ISymUnmanagedWriter::OpenScope Method</span></span>
 <span data-ttu-id="dc7c6-103">在当前方法中打开新的词法范围。</span><span class="sxs-lookup"><span data-stu-id="dc7c6-103">Opens a new lexical scope in the current method.</span></span> <span data-ttu-id="dc7c6-104">作用域成为新的当前范围和推送到堆栈的作用域。</span><span class="sxs-lookup"><span data-stu-id="dc7c6-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="dc7c6-105">作用域必须形成一个层次结构。</span><span class="sxs-lookup"><span data-stu-id="dc7c6-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="dc7c6-106">同级不允许重叠。</span><span class="sxs-lookup"><span data-stu-id="dc7c6-106">Siblings are not allowed to overlap.</span></span>  

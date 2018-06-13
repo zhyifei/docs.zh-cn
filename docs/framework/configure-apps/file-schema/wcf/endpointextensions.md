@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752346"
 ---
 # <a name="ltendpointextensionsgt"></a><span data-ttu-id="59de4-102">&lt;endpointExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="59de4-102">&lt;endpointExtensions&gt;</span></span>
 <span data-ttu-id="59de4-103">此节在计算机或应用程序配置文件的扩展节中注册新的标准终结点。</span><span class="sxs-lookup"><span data-stu-id="59de4-103">This section registers a new standard endpoint in the extensions section in a machine or application configuration file.</span></span> <span data-ttu-id="59de4-104">您可以向此集合添加标准终结点，具体方法为：使用 `add` 关键字，然后将元素的 `type` 特性设置为终结点类型，并将 `name` 特性设置为标准终结点的名称。</span><span class="sxs-lookup"><span data-stu-id="59de4-104">You can add a standard endpoint to this collection by using the `add` keyword, and setting the `type` attribute of the element to the endpoint type, as well as the `name` attribute to the name of the standard endpoint.</span></span>  

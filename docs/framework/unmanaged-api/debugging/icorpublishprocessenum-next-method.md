@@ -1,14 +1,6 @@
 ---
-title: "ICorPublishProcessEnum::Next 方法"
-ms.custom: 
+title: ICorPublishProcessEnum::Next 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorPublishProcessEnum.Next
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 6c399f37-1e38-4ca1-b70d-8ae41f7228b7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fb9c2914bffbf1b767b8a293bc06311fddacb176
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 19a10a527c37d93d00bec799fdaa12bb0ad3fdbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423866"
 ---
-# <a name="icorpublishprocessenumnext-method"></a><span data-ttu-id="a0f27-102">ICorPublishProcessEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="a0f27-102">ICorPublishProcessEnum::Next Method</span></span>
-<span data-ttu-id="a0f27-103">从开始在当前光标位置处的集合获取指定的数目的进程。</span><span class="sxs-lookup"><span data-stu-id="a0f27-103">Gets the specified number of processes from the collection, starting at the current cursor position.</span></span>  
+# <a name="icorpublishprocessenumnext-method"></a><span data-ttu-id="da8af-102">ICorPublishProcessEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="da8af-102">ICorPublishProcessEnum::Next Method</span></span>
+<span data-ttu-id="da8af-103">从开始在当前光标位置处的集合获取指定的数目的进程。</span><span class="sxs-lookup"><span data-stu-id="da8af-103">Gets the specified number of processes from the collection, starting at the current cursor position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0f27-104">语法</span><span class="sxs-lookup"><span data-stu-id="a0f27-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da8af-104">语法</span><span class="sxs-lookup"><span data-stu-id="da8af-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -49,24 +38,24 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a0f27-105">参数</span><span class="sxs-lookup"><span data-stu-id="a0f27-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="da8af-105">参数</span><span class="sxs-lookup"><span data-stu-id="da8af-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="a0f27-106">[in]要检索的进程数。</span><span class="sxs-lookup"><span data-stu-id="a0f27-106">[in] The number of processes to be retrieved.</span></span>  
+ <span data-ttu-id="da8af-106">[in]要检索的进程数。</span><span class="sxs-lookup"><span data-stu-id="da8af-106">[in] The number of processes to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="a0f27-107">[out]检索到的数组的指针[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)对象，其中每个表示的进程。</span><span class="sxs-lookup"><span data-stu-id="a0f27-107">[out] A pointer to the array of retrieved [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) objects, each of which represents a process.</span></span>  
+ <span data-ttu-id="da8af-107">[out]检索到的数组的指针[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)对象，其中每个表示的进程。</span><span class="sxs-lookup"><span data-stu-id="da8af-107">[out] A pointer to the array of retrieved [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) objects, each of which represents a process.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="a0f27-108">[out]指向实际返回的进程数。</span><span class="sxs-lookup"><span data-stu-id="a0f27-108">[out] Pointer to the number of processes actually returned.</span></span> <span data-ttu-id="a0f27-109">此值可能为 null 如果`celt`是之一。</span><span class="sxs-lookup"><span data-stu-id="a0f27-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="da8af-108">[out]指向实际返回的进程数。</span><span class="sxs-lookup"><span data-stu-id="da8af-108">[out] Pointer to the number of processes actually returned.</span></span> <span data-ttu-id="da8af-109">此值可能为 null 如果`celt`是之一。</span><span class="sxs-lookup"><span data-stu-id="da8af-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0f27-110">惠?</span><span class="sxs-lookup"><span data-stu-id="a0f27-110">Requirements</span></span>  
- <span data-ttu-id="a0f27-111">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a0f27-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da8af-110">要求</span><span class="sxs-lookup"><span data-stu-id="da8af-110">Requirements</span></span>  
+ <span data-ttu-id="da8af-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="da8af-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0f27-112">**标头：** CorPub.idl、 CorPub.h</span><span class="sxs-lookup"><span data-stu-id="a0f27-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="da8af-112">**标头：** CorPub.idl、 CorPub.h</span><span class="sxs-lookup"><span data-stu-id="da8af-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="a0f27-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a0f27-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="da8af-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="da8af-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a0f27-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0f27-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="da8af-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da8af-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0f27-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="a0f27-115">See Also</span></span>  
- [<span data-ttu-id="a0f27-116">ICorPublishProcessEnum 接口</span><span class="sxs-lookup"><span data-stu-id="a0f27-116">ICorPublishProcessEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="da8af-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="da8af-115">See Also</span></span>  
+ [<span data-ttu-id="da8af-116">ICorPublishProcessEnum 接口</span><span class="sxs-lookup"><span data-stu-id="da8af-116">ICorPublishProcessEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)

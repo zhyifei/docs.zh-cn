@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744325"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a><span data-ttu-id="8101c-102">公共语言运行时中的程序集</span><span class="sxs-lookup"><span data-stu-id="8101c-102">Assemblies in the Common Language Runtime</span></span>
 <span data-ttu-id="8101c-103">程序集是 .NET Framework 应用程序的构造块；它们形成了部署、版本控制、重复使用、激活范围和安全权限的基本单元。</span><span class="sxs-lookup"><span data-stu-id="8101c-103">Assemblies are the building blocks of .NET Framework applications; they form the fundamental unit of deployment, version control, reuse, activation scoping, and security permissions.</span></span> <span data-ttu-id="8101c-104">程序集是为协同工作而生成的类型和资源的集合，这些类型和资源构成了一个逻辑功能单元。</span><span class="sxs-lookup"><span data-stu-id="8101c-104">An assembly is a collection of types and resources that are built to work together and form a logical unit of functionality.</span></span> <span data-ttu-id="8101c-105">程序集向公共语言运行时提供了解类型实现所需要的信息。</span><span class="sxs-lookup"><span data-stu-id="8101c-105">An assembly provides the common language runtime with the information it needs to be aware of type implementations.</span></span> <span data-ttu-id="8101c-106">对于运行时，类型不存在于程序集上下文之外。</span><span class="sxs-lookup"><span data-stu-id="8101c-106">To the runtime, a type does not exist outside the context of an assembly.</span></span>  

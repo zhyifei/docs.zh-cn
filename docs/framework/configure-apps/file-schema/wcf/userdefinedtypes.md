@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767630"
 ---
 # <a name="ltuserdefinedtypesgt"></a><span data-ttu-id="6ac66-102">&lt;userDefinedTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="6ac66-102">&lt;userDefinedTypes&gt;</span></span>
 <span data-ttu-id="6ac66-103">本节包含 `userDefinedType` 元素的集合。</span><span class="sxs-lookup"><span data-stu-id="6ac66-103">This section contains a collection of `userDefinedType` elements.</span></span>  

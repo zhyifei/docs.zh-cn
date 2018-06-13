@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742567"
 ---
 # <a name="ltidngt-element-uri-settings"></a><span data-ttu-id="15531-102">&lt;idn&gt;元素 （Uri 设置）</span><span class="sxs-lookup"><span data-stu-id="15531-102">&lt;idn&gt; Element (Uri Settings)</span></span>
 <span data-ttu-id="15531-103">指定是否国际化域名 (IDN) 分析将应用于域的名称。</span><span class="sxs-lookup"><span data-stu-id="15531-103">Specifies if Internationalized Domain Name (IDN) parsing is applied to a domain name.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747520"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a><span data-ttu-id="b628a-102">&lt;AppContextSwitchOverrides&gt;元素</span><span class="sxs-lookup"><span data-stu-id="b628a-102">&lt;AppContextSwitchOverrides&gt; Element</span></span>
 <span data-ttu-id="b628a-103">定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。</span><span class="sxs-lookup"><span data-stu-id="b628a-103">Defines one or more switches used by the <xref:System.AppContext> class to provide an opt-out mechanism for new functionality.</span></span>  

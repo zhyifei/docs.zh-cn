@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a78616ea1dccdf82c4e00d23d2ff630c98cb4e38
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431898"
 ---
 # <a name="isymunmanagedreader-interface"></a><span data-ttu-id="3dc87-102">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="3dc87-102">ISymUnmanagedReader Interface</span></span>
 <span data-ttu-id="3dc87-103">表示提供对文档、 方法和符号存储区内的变量的访问的符号读取器。</span><span class="sxs-lookup"><span data-stu-id="3dc87-103">Represents a symbol reader that provides access to documents, methods, and variables within a symbol store.</span></span>  

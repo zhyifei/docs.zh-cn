@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: faefff879142d66c4c596f1b30a25e349a4014b9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421796"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a><span data-ttu-id="3c756-102">ICorDebugManagedCallback2::Exception 方法</span><span class="sxs-lookup"><span data-stu-id="3c756-102">ICorDebugManagedCallback2::Exception Method</span></span>
 <span data-ttu-id="3c756-103">通知调试器搜索异常处理程序已开始。</span><span class="sxs-lookup"><span data-stu-id="3c756-103">Notifies the debugger that a search for an exception handler has started.</span></span>  

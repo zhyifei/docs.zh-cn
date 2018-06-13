@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748511"
 ---
 # <a name="ltcancelrequestedquerygt-of-wcf"></a><span data-ttu-id="0f664-102">WCF 的 &lt;cancelRequestedQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="0f664-102">&lt;cancelRequestedQuery&gt; of WCF</span></span>
 <span data-ttu-id="0f664-103">表示一个查询，该查询用于跟踪父活动取消子活动的请求。</span><span class="sxs-lookup"><span data-stu-id="0f664-103">Represents a query that is used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="0f664-104">跟踪参与者需要用此查询来订阅取消请求记录对象。</span><span class="sxs-lookup"><span data-stu-id="0f664-104">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747302"
 ---
 # <a name="ltdiagnosticsgt"></a><span data-ttu-id="d8836-102">&lt;诊断&gt;</span><span class="sxs-lookup"><span data-stu-id="d8836-102">&lt;diagnostics&gt;</span></span>
 <span data-ttu-id="d8836-103">`diagnostics` 元素定义管理员可以用来进行运行时检查和控制的设置。</span><span class="sxs-lookup"><span data-stu-id="d8836-103">The `diagnostics` element defines settings that can be used by an administrator for run-time inspection and control.</span></span>  

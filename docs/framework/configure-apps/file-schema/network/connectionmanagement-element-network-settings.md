@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742817"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a><span data-ttu-id="b97f0-102">&lt;connectionManagement&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="b97f0-102">&lt;connectionManagement&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="b97f0-103">指定到网络主机的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="b97f0-103">Specifies the maximum number of connections to a network host.</span></span>  

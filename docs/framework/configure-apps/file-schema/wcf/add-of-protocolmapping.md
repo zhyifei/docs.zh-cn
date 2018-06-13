@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349005"
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a><span data-ttu-id="dcd68-102">&lt;protocolMapping&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="dcd68-102">&lt;add&gt; of &lt;protocolMapping&gt;</span></span>
 <span data-ttu-id="dcd68-103">表示传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 Windows Communication Foundation (WCF) 绑定之间的默认协议映射。</span><span class="sxs-lookup"><span data-stu-id="dcd68-103">Represents a default protocol mapping between a transport protocol scheme (e.g., http, net.tcp, net.pipe, etc.) and a Windows Communication Foundation (WCF) binding.</span></span> <span data-ttu-id="dcd68-104">当在运行时创建默认终结点，WCF 查看配置的映射，并确定要用于特定的绑定基于的地址。</span><span class="sxs-lookup"><span data-stu-id="dcd68-104">When creating default endpoints at runtime, WCF looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  

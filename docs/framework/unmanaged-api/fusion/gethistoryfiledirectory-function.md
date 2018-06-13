@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bba40acf7bfd20897ece4de285fe7a9175be83e0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431758"
 ---
 # <a name="gethistoryfiledirectory-function"></a><span data-ttu-id="2a7b5-102">GetHistoryFileDirectory 函数</span><span class="sxs-lookup"><span data-stu-id="2a7b5-102">GetHistoryFileDirectory Function</span></span>
 <span data-ttu-id="2a7b5-103">检索应用程序历史记录目录的路径。</span><span class="sxs-lookup"><span data-stu-id="2a7b5-103">Retrieves the path of the application history directory.</span></span>  
