@@ -1,14 +1,6 @@
 ---
-title: "ICLRAssemblyIdentityManager 接口"
-ms.custom: 
+title: ICLRAssemblyIdentityManager 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRAssemblyIdentityManager
 api_location:
@@ -22,46 +14,43 @@ helpviewer_keywords:
 ms.assetid: 6a81c6fe-cc22-4062-ae27-d6eeee03a7b9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 168c67eb701d7dfc461553cfe32ed43dcea5e844
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f3a58a9ec4ed9514e748ed6c8c21a404feed9560
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435662"
 ---
-# <a name="iclrassemblyidentitymanager-interface"></a><span data-ttu-id="4e7f8-102">ICLRAssemblyIdentityManager 接口</span><span class="sxs-lookup"><span data-stu-id="4e7f8-102">ICLRAssemblyIdentityManager Interface</span></span>
-<span data-ttu-id="4e7f8-103">提供用于支持在主机和公共语言运行时 (CLR) 有关程序集之间的通信方法。</span><span class="sxs-lookup"><span data-stu-id="4e7f8-103">Provides methods that support communication between the host and the common language runtime (CLR) about assemblies.</span></span>  
+# <a name="iclrassemblyidentitymanager-interface"></a><span data-ttu-id="876e0-102">ICLRAssemblyIdentityManager 接口</span><span class="sxs-lookup"><span data-stu-id="876e0-102">ICLRAssemblyIdentityManager Interface</span></span>
+<span data-ttu-id="876e0-103">提供用于支持在主机和公共语言运行时 (CLR) 有关程序集之间的通信方法。</span><span class="sxs-lookup"><span data-stu-id="876e0-103">Provides methods that support communication between the host and the common language runtime (CLR) about assemblies.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="4e7f8-104">方法</span><span class="sxs-lookup"><span data-stu-id="4e7f8-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="876e0-104">方法</span><span class="sxs-lookup"><span data-stu-id="876e0-104">Methods</span></span>  
   
-|<span data-ttu-id="4e7f8-105">方法</span><span class="sxs-lookup"><span data-stu-id="4e7f8-105">Method</span></span>|<span data-ttu-id="4e7f8-106">描述</span><span class="sxs-lookup"><span data-stu-id="4e7f8-106">Description</span></span>|  
+|<span data-ttu-id="876e0-105">方法</span><span class="sxs-lookup"><span data-stu-id="876e0-105">Method</span></span>|<span data-ttu-id="876e0-106">描述</span><span class="sxs-lookup"><span data-stu-id="876e0-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="4e7f8-107">GetBindingIdentityFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="4e7f8-107">GetBindingIdentityFromFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromfile-method.md)|<span data-ttu-id="4e7f8-108">获取在指定的文件路径的程序集的绑定数据的程序集标识。</span><span class="sxs-lookup"><span data-stu-id="4e7f8-108">Gets the assembly identity binding data for the assembly at the specified file path.</span></span>|  
-|[<span data-ttu-id="4e7f8-109">GetBindingIdentityFromStream 方法</span><span class="sxs-lookup"><span data-stu-id="4e7f8-109">GetBindingIdentityFromStream Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromstream-method.md)|<span data-ttu-id="4e7f8-110">获取指定的流中的程序集的规范的程序集标识数据。</span><span class="sxs-lookup"><span data-stu-id="4e7f8-110">Gets the canonical assembly identity data for the assembly in the specified stream.</span></span>|  
-|[<span data-ttu-id="4e7f8-111">GetCLRAssemblyReferenceList 方法</span><span class="sxs-lookup"><span data-stu-id="4e7f8-111">GetCLRAssemblyReferenceList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md)|<span data-ttu-id="4e7f8-112">获取[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)从提供的列表的部分程序集标识的实例。</span><span class="sxs-lookup"><span data-stu-id="4e7f8-112">Gets an [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) instance from the supplied list of partial assembly identities.</span></span>|  
-|[<span data-ttu-id="4e7f8-113">GetProbingAssembliesFromReference 方法</span><span class="sxs-lookup"><span data-stu-id="4e7f8-113">GetProbingAssembliesFromReference Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md)|<span data-ttu-id="4e7f8-114">获取[ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)具有指定标识程序集引用的程序集标识的枚举数。</span><span class="sxs-lookup"><span data-stu-id="4e7f8-114">Gets an [ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md) enumerator for the assembly identities referenced by the assembly with the specified identity.</span></span>|  
-|[<span data-ttu-id="4e7f8-115">GetReferencedAssembliesFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="4e7f8-115">GetReferencedAssembliesFromFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md)|<span data-ttu-id="4e7f8-116">获取[ICLRReferenceAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md)实例，其中包含由在指定的文件路径的程序集引用的程序集的列表。</span><span class="sxs-lookup"><span data-stu-id="4e7f8-116">Gets an [ICLRReferenceAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md) instance that contains a list of assemblies referenced by the assembly at the specified file path.</span></span>|  
-|[<span data-ttu-id="4e7f8-117">GetReferencedAssembliesFromStream 方法</span><span class="sxs-lookup"><span data-stu-id="4e7f8-117">GetReferencedAssembliesFromStream Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getreferencedassembliesfromstream-method.md)|<span data-ttu-id="4e7f8-118">获取一个指向`ICLRReferenceAssemblyEnum`对象，其中包含指定的流中的程序集引用的程序集的程序集标识数据。</span><span class="sxs-lookup"><span data-stu-id="4e7f8-118">Gets a pointer to an `ICLRReferenceAssemblyEnum` object that contains assembly identity data for the assemblies referenced by the assembly in the specified stream.</span></span>|  
-|[<span data-ttu-id="4e7f8-119">IsStronglyNamed 方法</span><span class="sxs-lookup"><span data-stu-id="4e7f8-119">IsStronglyNamed Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-isstronglynamed-method.md)|<span data-ttu-id="4e7f8-120">获取一个值，该值指示指定的程序集具有强名称。</span><span class="sxs-lookup"><span data-stu-id="4e7f8-120">Gets a value that indicates whether the specified assembly is strongly named.</span></span>|  
+|[<span data-ttu-id="876e0-107">GetBindingIdentityFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="876e0-107">GetBindingIdentityFromFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromfile-method.md)|<span data-ttu-id="876e0-108">获取在指定的文件路径的程序集的绑定数据的程序集标识。</span><span class="sxs-lookup"><span data-stu-id="876e0-108">Gets the assembly identity binding data for the assembly at the specified file path.</span></span>|  
+|[<span data-ttu-id="876e0-109">GetBindingIdentityFromStream 方法</span><span class="sxs-lookup"><span data-stu-id="876e0-109">GetBindingIdentityFromStream Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromstream-method.md)|<span data-ttu-id="876e0-110">获取指定的流中的程序集的规范的程序集标识数据。</span><span class="sxs-lookup"><span data-stu-id="876e0-110">Gets the canonical assembly identity data for the assembly in the specified stream.</span></span>|  
+|[<span data-ttu-id="876e0-111">GetCLRAssemblyReferenceList 方法</span><span class="sxs-lookup"><span data-stu-id="876e0-111">GetCLRAssemblyReferenceList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md)|<span data-ttu-id="876e0-112">获取[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)从提供的列表的部分程序集标识的实例。</span><span class="sxs-lookup"><span data-stu-id="876e0-112">Gets an [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) instance from the supplied list of partial assembly identities.</span></span>|  
+|[<span data-ttu-id="876e0-113">GetProbingAssembliesFromReference 方法</span><span class="sxs-lookup"><span data-stu-id="876e0-113">GetProbingAssembliesFromReference Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md)|<span data-ttu-id="876e0-114">获取[ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)具有指定标识程序集引用的程序集标识的枚举数。</span><span class="sxs-lookup"><span data-stu-id="876e0-114">Gets an [ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md) enumerator for the assembly identities referenced by the assembly with the specified identity.</span></span>|  
+|[<span data-ttu-id="876e0-115">GetReferencedAssembliesFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="876e0-115">GetReferencedAssembliesFromFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md)|<span data-ttu-id="876e0-116">获取[ICLRReferenceAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md)实例，其中包含由在指定的文件路径的程序集引用的程序集的列表。</span><span class="sxs-lookup"><span data-stu-id="876e0-116">Gets an [ICLRReferenceAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md) instance that contains a list of assemblies referenced by the assembly at the specified file path.</span></span>|  
+|[<span data-ttu-id="876e0-117">GetReferencedAssembliesFromStream 方法</span><span class="sxs-lookup"><span data-stu-id="876e0-117">GetReferencedAssembliesFromStream Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getreferencedassembliesfromstream-method.md)|<span data-ttu-id="876e0-118">获取一个指向`ICLRReferenceAssemblyEnum`对象，其中包含指定的流中的程序集引用的程序集的程序集标识数据。</span><span class="sxs-lookup"><span data-stu-id="876e0-118">Gets a pointer to an `ICLRReferenceAssemblyEnum` object that contains assembly identity data for the assemblies referenced by the assembly in the specified stream.</span></span>|  
+|[<span data-ttu-id="876e0-119">IsStronglyNamed 方法</span><span class="sxs-lookup"><span data-stu-id="876e0-119">IsStronglyNamed Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-isstronglynamed-method.md)|<span data-ttu-id="876e0-120">获取一个值，该值指示指定的程序集具有强名称。</span><span class="sxs-lookup"><span data-stu-id="876e0-120">Gets a value that indicates whether the specified assembly is strongly named.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4e7f8-121">备注</span><span class="sxs-lookup"><span data-stu-id="4e7f8-121">Remarks</span></span>  
- <span data-ttu-id="4e7f8-122">使用`ICLRAssemblyIdentityManager`来获取的实例`ICLRAssemblyReferenceList`以及枚举程序集标识。</span><span class="sxs-lookup"><span data-stu-id="4e7f8-122">Use `ICLRAssemblyIdentityManager` to get instances of `ICLRAssemblyReferenceList` and to enumerate assembly identities.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="876e0-121">备注</span><span class="sxs-lookup"><span data-stu-id="876e0-121">Remarks</span></span>  
+ <span data-ttu-id="876e0-122">使用`ICLRAssemblyIdentityManager`来获取的实例`ICLRAssemblyReferenceList`以及枚举程序集标识。</span><span class="sxs-lookup"><span data-stu-id="876e0-122">Use `ICLRAssemblyIdentityManager` to get instances of `ICLRAssemblyReferenceList` and to enumerate assembly identities.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4e7f8-123">惠?</span><span class="sxs-lookup"><span data-stu-id="4e7f8-123">Requirements</span></span>  
- <span data-ttu-id="4e7f8-124">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4e7f8-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="876e0-123">要求</span><span class="sxs-lookup"><span data-stu-id="876e0-123">Requirements</span></span>  
+ <span data-ttu-id="876e0-124">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="876e0-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4e7f8-125">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4e7f8-125">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="876e0-125">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="876e0-125">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4e7f8-126">**库：**作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="4e7f8-126">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="876e0-126">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="876e0-126">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4e7f8-127">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4e7f8-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="876e0-127">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="876e0-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4e7f8-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e7f8-128">See Also</span></span>  
- [<span data-ttu-id="4e7f8-129">ICLRAssemblyReferenceList 接口</span><span class="sxs-lookup"><span data-stu-id="4e7f8-129">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [<span data-ttu-id="4e7f8-130">ICLRProbingAssemblyEnum 接口</span><span class="sxs-lookup"><span data-stu-id="4e7f8-130">ICLRProbingAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)  
- [<span data-ttu-id="4e7f8-131">承载接口</span><span class="sxs-lookup"><span data-stu-id="4e7f8-131">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="876e0-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="876e0-128">See Also</span></span>  
+ [<span data-ttu-id="876e0-129">ICLRAssemblyReferenceList 接口</span><span class="sxs-lookup"><span data-stu-id="876e0-129">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
+ [<span data-ttu-id="876e0-130">ICLRProbingAssemblyEnum 接口</span><span class="sxs-lookup"><span data-stu-id="876e0-130">ICLRProbingAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)  
+ [<span data-ttu-id="876e0-131">承载接口</span><span class="sxs-lookup"><span data-stu-id="876e0-131">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

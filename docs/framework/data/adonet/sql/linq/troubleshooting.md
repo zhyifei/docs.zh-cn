@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364819"
 ---
 # <a name="troubleshooting"></a><span data-ttu-id="7a383-102">疑难解答</span><span class="sxs-lookup"><span data-stu-id="7a383-102">Troubleshooting</span></span>
 <span data-ttu-id="7a383-103">下面的信息揭示您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序中可能遇到的一些问题，并提供建议以避免这些问题或减少这些问题的影响。</span><span class="sxs-lookup"><span data-stu-id="7a383-103">The following information exposes some issues you might encounter in your [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications, and provides suggestions to avoid or otherwise reduce the effect of these issues.</span></span>  

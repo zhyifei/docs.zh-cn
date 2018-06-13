@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362719"
 ---
 # <a name="large-udts"></a><span data-ttu-id="c87ae-102">大型 UDT</span><span class="sxs-lookup"><span data-stu-id="c87ae-102">Large UDTs</span></span>
 <span data-ttu-id="c87ae-103">通过用户定义类型 (UDT)，开发人员可通过在 SQL Server 数据库中存储公共语言运行时 (CLR) 对象来扩展服务器的标量类型系统。</span><span class="sxs-lookup"><span data-stu-id="c87ae-103">User-defined types (UDTs) allow a developer to extend the server's scalar type system by storing common language runtime (CLR) objects in a SQL Server database.</span></span> <span data-ttu-id="c87ae-104">UDT 可以包含多个元素并可具有多种行为，与传统别名数据类型不同，它们由单一 SQL Server 系统数据类型组成。</span><span class="sxs-lookup"><span data-stu-id="c87ae-104">UDTs can contain multiple elements and can have behaviors, unlike the traditional alias data types, which consist of a single SQL Server system data type.</span></span>  

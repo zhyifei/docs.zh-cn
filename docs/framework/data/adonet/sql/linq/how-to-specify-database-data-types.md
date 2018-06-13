@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360662"
 ---
 # <a name="how-to-specify-database-data-types"></a><span data-ttu-id="20ec7-102">如何：指定数据库数据类型</span><span class="sxs-lookup"><span data-stu-id="20ec7-102">How to: Specify Database Data Types</span></span>
 <span data-ttu-id="20ec7-103">使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>属性<xref:System.Data.Linq.Mapping.ColumnAttribute>特性来指定定义 T-SQL 表声明中的列的确切文本。</span><span class="sxs-lookup"><span data-stu-id="20ec7-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> property on a <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to specify the exact text that defines the column in a T-SQL table declaration.</span></span>  

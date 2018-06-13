@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df2747b7cce112e61c6fb99cdb91dc0d56047b9e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432555"
 ---
 # <a name="iclrruntimehoststart-method"></a><span data-ttu-id="ec617-102">ICLRRuntimeHost::Start 方法</span><span class="sxs-lookup"><span data-stu-id="ec617-102">ICLRRuntimeHost::Start Method</span></span>
 <span data-ttu-id="ec617-103">到另一进程初始化公共语言运行时 (CLR)。</span><span class="sxs-lookup"><span data-stu-id="ec617-103">Initializes the common language runtime (CLR) into a process.</span></span>  

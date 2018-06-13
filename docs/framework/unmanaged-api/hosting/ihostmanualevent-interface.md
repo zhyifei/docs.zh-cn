@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 53aaf4c23861666962e5567a6cf9eb9fffc6292f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438751"
 ---
 # <a name="ihostmanualevent-interface"></a><span data-ttu-id="dbd8f-102">IHostManualEvent 接口</span><span class="sxs-lookup"><span data-stu-id="dbd8f-102">IHostManualEvent Interface</span></span>
 <span data-ttu-id="dbd8f-103">提供的表示形式的手动重置事件主机的实现。</span><span class="sxs-lookup"><span data-stu-id="dbd8f-103">Provides the host's implementation of a representation of a manual reset event.</span></span>  

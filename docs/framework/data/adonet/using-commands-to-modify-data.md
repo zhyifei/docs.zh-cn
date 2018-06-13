@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365039"
 ---
 # <a name="using-commands-to-modify-data"></a><span data-ttu-id="b4e84-102">使用命令修改数据</span><span class="sxs-lookup"><span data-stu-id="b4e84-102">Using Commands to Modify Data</span></span>
 <span data-ttu-id="b4e84-103">使用 .NET Framework 数据提供程序，您可以执行存储过程或数据定义语言语句（如 CREATE TABLE 和 ALTER COLUMN）来对数据库或编录执行架构处理。</span><span class="sxs-lookup"><span data-stu-id="b4e84-103">Using a .NET Framework data provider, you can execute stored procedures or data definition language statements (for example, CREATE TABLE and ALTER COLUMN) to perform schema manipulation on a database or catalog.</span></span> <span data-ttu-id="b4e84-104">这些命令不返回行，像查询一样，因此**命令**对象提供**ExecuteNonQuery**处理它们。</span><span class="sxs-lookup"><span data-stu-id="b4e84-104">These commands do not return rows as a query would, so the **Command** object provides an **ExecuteNonQuery** to process them.</span></span>  

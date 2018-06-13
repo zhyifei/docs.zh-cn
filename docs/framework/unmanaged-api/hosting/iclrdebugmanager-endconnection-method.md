@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugManager::EndConnection 方法"
-ms.custom: 
+title: ICLRDebugManager::EndConnection 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugManager.EndConnection
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 89dc7363-2f29-4eb2-8f23-fccdda6a76a6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 210226b697eb3dffe574bd842ca31e83948891a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c58ce0389c77b6534cbbf37fe985f89c187065df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435820"
 ---
-# <a name="iclrdebugmanagerendconnection-method"></a><span data-ttu-id="0698c-102">ICLRDebugManager::EndConnection 方法</span><span class="sxs-lookup"><span data-stu-id="0698c-102">ICLRDebugManager::EndConnection Method</span></span>
-<span data-ttu-id="0698c-103">删除的任务列表和标识符和友好名称之间的关联。</span><span class="sxs-lookup"><span data-stu-id="0698c-103">Removes the association between a list of tasks and an identifier and a friendly name.</span></span>  
+# <a name="iclrdebugmanagerendconnection-method"></a><span data-ttu-id="f243c-102">ICLRDebugManager::EndConnection 方法</span><span class="sxs-lookup"><span data-stu-id="f243c-102">ICLRDebugManager::EndConnection Method</span></span>
+<span data-ttu-id="f243c-103">删除的任务列表和标识符和友好名称之间的关联。</span><span class="sxs-lookup"><span data-stu-id="f243c-103">Removes the association between a list of tasks and an identifier and a friendly name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0698c-104">语法</span><span class="sxs-lookup"><span data-stu-id="0698c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f243c-104">语法</span><span class="sxs-lookup"><span data-stu-id="f243c-104">Syntax</span></span>  
   
 ```  
 HRESULT EndConnection (  
@@ -46,40 +35,40 @@ HRESULT EndConnection (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0698c-105">参数</span><span class="sxs-lookup"><span data-stu-id="0698c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f243c-105">参数</span><span class="sxs-lookup"><span data-stu-id="f243c-105">Parameters</span></span>  
  `dwConnectionId`  
- <span data-ttu-id="0698c-106">[in]连接和关联的公共语言运行时 (CLR) 任务列表的特定于宿主的标识符。</span><span class="sxs-lookup"><span data-stu-id="0698c-106">[in] The host-specific identifier for the connection and the associated list of common language runtime (CLR) tasks.</span></span>  
+ <span data-ttu-id="f243c-106">[in]连接和关联的公共语言运行时 (CLR) 任务列表的特定于宿主的标识符。</span><span class="sxs-lookup"><span data-stu-id="f243c-106">[in] The host-specific identifier for the connection and the associated list of common language runtime (CLR) tasks.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0698c-107">返回值</span><span class="sxs-lookup"><span data-stu-id="0698c-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f243c-107">返回值</span><span class="sxs-lookup"><span data-stu-id="f243c-107">Return Value</span></span>  
   
-|<span data-ttu-id="0698c-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0698c-108">HRESULT</span></span>|<span data-ttu-id="0698c-109">描述</span><span class="sxs-lookup"><span data-stu-id="0698c-109">Description</span></span>|  
+|<span data-ttu-id="f243c-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f243c-108">HRESULT</span></span>|<span data-ttu-id="f243c-109">描述</span><span class="sxs-lookup"><span data-stu-id="f243c-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="0698c-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="0698c-110">S_OK</span></span>|<span data-ttu-id="0698c-111">`EndConnection`已成功返回。</span><span class="sxs-lookup"><span data-stu-id="0698c-111">`EndConnection` returned successfully.</span></span>|  
-|<span data-ttu-id="0698c-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="0698c-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="0698c-113">CLR 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="0698c-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="0698c-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="0698c-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="0698c-115">调用操作已超时。</span><span class="sxs-lookup"><span data-stu-id="0698c-115">The call timed out.</span></span>|  
-|<span data-ttu-id="0698c-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="0698c-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="0698c-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="0698c-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="0698c-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="0698c-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="0698c-119">事件已被取消时被阻塞的线程，或者纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="0698c-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="0698c-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="0698c-120">E_FAIL</span></span>|<span data-ttu-id="0698c-121">出现未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="0698c-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="0698c-122">方法返回 E_FAIL 后，CLR 不再进程内中使用。</span><span class="sxs-lookup"><span data-stu-id="0698c-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="0698c-123">到托管方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="0698c-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="0698c-124">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="0698c-124">E_INVALIDARG</span></span>|<span data-ttu-id="0698c-125">[BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)永远不会使用调用`dwConnectionId`，或`dwConnectionId`为零。</span><span class="sxs-lookup"><span data-stu-id="0698c-125">[BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) was never called using `dwConnectionId`, or `dwConnectionId` was zero.</span></span>|  
+|<span data-ttu-id="f243c-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="f243c-110">S_OK</span></span>|<span data-ttu-id="f243c-111">`EndConnection` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="f243c-111">`EndConnection` returned successfully.</span></span>|  
+|<span data-ttu-id="f243c-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="f243c-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="f243c-113">CLR 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="f243c-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="f243c-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="f243c-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="f243c-115">调用操作已超时。</span><span class="sxs-lookup"><span data-stu-id="f243c-115">The call timed out.</span></span>|  
+|<span data-ttu-id="f243c-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="f243c-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="f243c-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="f243c-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="f243c-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="f243c-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="f243c-119">事件已被取消时被阻塞的线程，或者纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="f243c-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="f243c-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f243c-120">E_FAIL</span></span>|<span data-ttu-id="f243c-121">出现未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="f243c-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="f243c-122">方法返回 E_FAIL 后，CLR 不再进程内中使用。</span><span class="sxs-lookup"><span data-stu-id="f243c-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="f243c-123">到托管方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="f243c-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="f243c-124">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="f243c-124">E_INVALIDARG</span></span>|<span data-ttu-id="f243c-125">[BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)永远不会使用调用`dwConnectionId`，或`dwConnectionId`为零。</span><span class="sxs-lookup"><span data-stu-id="f243c-125">[BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) was never called using `dwConnectionId`, or `dwConnectionId` was zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0698c-126">备注</span><span class="sxs-lookup"><span data-stu-id="0698c-126">Remarks</span></span>  
- <span data-ttu-id="0698c-127">[ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)提供三种方法， `BeginConnection`， [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)，和`EndConnection`，将任务列表标识符和友好名称与相关联。</span><span class="sxs-lookup"><span data-stu-id="0698c-127">[ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) provides three methods, `BeginConnection`, [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md), and `EndConnection`, for associating task lists with identifiers and friendly names.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f243c-126">备注</span><span class="sxs-lookup"><span data-stu-id="f243c-126">Remarks</span></span>  
+ <span data-ttu-id="f243c-127">[ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)提供三种方法， `BeginConnection`， [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)，和`EndConnection`，将任务列表标识符和友好名称与相关联。</span><span class="sxs-lookup"><span data-stu-id="f243c-127">[ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) provides three methods, `BeginConnection`, [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md), and `EndConnection`, for associating task lists with identifiers and friendly names.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="0698c-128">必须按特定顺序为每一组任务调用这三种方法。</span><span class="sxs-lookup"><span data-stu-id="0698c-128">These three methods must be called in a specific order for each set of tasks.</span></span> <span data-ttu-id="0698c-129">`BeginConnection`都会首先调用来建立新连接。</span><span class="sxs-lookup"><span data-stu-id="0698c-129">`BeginConnection` is called first to establish a new connection.</span></span> <span data-ttu-id="0698c-130">`SetConnectionTasks`调用下一步可提供的任务与该连接关联集。</span><span class="sxs-lookup"><span data-stu-id="0698c-130">`SetConnectionTasks` is called next to provide the set of tasks to be associated with that connection.</span></span> <span data-ttu-id="0698c-131">`EndConnection`调用上一次可删除任务列表的标识符和友好名称之间的关联。但是，可以嵌套不同连接的调用。</span><span class="sxs-lookup"><span data-stu-id="0698c-131">`EndConnection` is called last to remove the association between the task list and the identifier and friendly name.However, calls for different connections can be nested.</span></span>  
+>  <span data-ttu-id="f243c-128">必须按特定顺序为每一组任务调用这三种方法。</span><span class="sxs-lookup"><span data-stu-id="f243c-128">These three methods must be called in a specific order for each set of tasks.</span></span> <span data-ttu-id="f243c-129">`BeginConnection` 都会首先调用来建立新连接。</span><span class="sxs-lookup"><span data-stu-id="f243c-129">`BeginConnection` is called first to establish a new connection.</span></span> <span data-ttu-id="f243c-130">`SetConnectionTasks` 调用下一步可提供的任务与该连接关联集。</span><span class="sxs-lookup"><span data-stu-id="f243c-130">`SetConnectionTasks` is called next to provide the set of tasks to be associated with that connection.</span></span> <span data-ttu-id="f243c-131">`EndConnection` 调用上一次可删除任务列表的标识符和友好名称之间的关联。但是，可以嵌套不同连接的调用。</span><span class="sxs-lookup"><span data-stu-id="f243c-131">`EndConnection` is called last to remove the association between the task list and the identifier and friendly name.However, calls for different connections can be nested.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0698c-132">惠?</span><span class="sxs-lookup"><span data-stu-id="0698c-132">Requirements</span></span>  
- <span data-ttu-id="0698c-133">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0698c-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f243c-132">要求</span><span class="sxs-lookup"><span data-stu-id="f243c-132">Requirements</span></span>  
+ <span data-ttu-id="f243c-133">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f243c-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0698c-134">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0698c-134">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f243c-134">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f243c-134">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0698c-135">**库：**作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="0698c-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f243c-135">**库：** 作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="f243c-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0698c-136">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0698c-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f243c-136">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f243c-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0698c-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="0698c-137">See Also</span></span>  
- [<span data-ttu-id="0698c-138">ICLRControl 接口</span><span class="sxs-lookup"><span data-stu-id="0698c-138">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [<span data-ttu-id="0698c-139">ICLRDebugManager 接口</span><span class="sxs-lookup"><span data-stu-id="0698c-139">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
- [<span data-ttu-id="0698c-140">BeginConnection 方法</span><span class="sxs-lookup"><span data-stu-id="0698c-140">BeginConnection Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)  
- [<span data-ttu-id="0698c-141">SetConnectionTasks 方法</span><span class="sxs-lookup"><span data-stu-id="0698c-141">SetConnectionTasks Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)  
- [<span data-ttu-id="0698c-142">IHostControl 接口</span><span class="sxs-lookup"><span data-stu-id="0698c-142">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f243c-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="f243c-137">See Also</span></span>  
+ [<span data-ttu-id="f243c-138">ICLRControl 接口</span><span class="sxs-lookup"><span data-stu-id="f243c-138">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [<span data-ttu-id="f243c-139">ICLRDebugManager 接口</span><span class="sxs-lookup"><span data-stu-id="f243c-139">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
+ [<span data-ttu-id="f243c-140">BeginConnection 方法</span><span class="sxs-lookup"><span data-stu-id="f243c-140">BeginConnection Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)  
+ [<span data-ttu-id="f243c-141">SetConnectionTasks 方法</span><span class="sxs-lookup"><span data-stu-id="f243c-141">SetConnectionTasks Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)  
+ [<span data-ttu-id="f243c-142">IHostControl 接口</span><span class="sxs-lookup"><span data-stu-id="f243c-142">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

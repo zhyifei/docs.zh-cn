@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542046"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a><span data-ttu-id="43cf6-102">ToolStrip 控件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="43cf6-102">ToolStrip Control Overview (Windows Forms)</span></span>
 <span data-ttu-id="43cf6-103">Windows 窗体<xref:System.Windows.Forms.ToolStrip>控件及其关联的类提供一种通用框架用于将用户界面元素合并为工具栏、 状态栏和菜单。</span><span class="sxs-lookup"><span data-stu-id="43cf6-103">The Windows Forms <xref:System.Windows.Forms.ToolStrip> control and its associated classes provide a common framework for combining user interface elements into toolbars, status bars, and menus.</span></span> <span data-ttu-id="43cf6-104"><xref:System.Windows.Forms.ToolStrip> 控件提供丰富的设计时体验，包括在就地激活和编辑、 自定义布局和漂浮，即对工具栏共享水平或垂直空间的能力。</span><span class="sxs-lookup"><span data-stu-id="43cf6-104"><xref:System.Windows.Forms.ToolStrip> controls offer a rich design-time experience that includes in-place activation and editing, custom layout, and rafting, which is the ability of toolbars to share horizontal or vertical space.</span></span>  

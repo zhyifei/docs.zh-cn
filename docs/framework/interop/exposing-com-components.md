@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388217"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a><span data-ttu-id="d3e17-102">向 .NET Framework 公开 COM 组件</span><span class="sxs-lookup"><span data-stu-id="d3e17-102">Exposing COM Components to the .NET Framework</span></span>
 <span data-ttu-id="d3e17-103">本部分概述向托管代码公开现有 COM 组件所需的步骤。</span><span class="sxs-lookup"><span data-stu-id="d3e17-103">This section summarizes the process needed to expose an existing COM component to managed code.</span></span> <span data-ttu-id="d3e17-104">有关编写与 .NET Framework 紧密集成的 COM 服务器的详细信息，请参阅[互操作的设计注意事项](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="d3e17-104">For details about writing COM servers that tightly integrate with the .NET Framework, see [Design Considerations for Interoperation](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100)).</span></span>

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f9852034f6d8208bdaa9b424f689adc374bae2d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443669"
 ---
 # <a name="ihostthreadpoolmanagersetminthreads-method"></a><span data-ttu-id="1104c-102">IHostThreadPoolManager::SetMinThreads 方法</span><span class="sxs-lookup"><span data-stu-id="1104c-102">IHostThreadPoolManager::SetMinThreads Method</span></span>
 <span data-ttu-id="1104c-103">预期的请求中设置的最小主机必须维护的空闲线程数。</span><span class="sxs-lookup"><span data-stu-id="1104c-103">Sets the minimum number of idle threads that the host must maintain in anticipation of requests.</span></span>  

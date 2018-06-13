@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364485"
 ---
 # <a name="unsupported-functionality"></a><span data-ttu-id="9cbb9-102">不支持的功能</span><span class="sxs-lookup"><span data-stu-id="9cbb9-102">Unsupported Functionality</span></span>
 <span data-ttu-id="9cbb9-103">在 LINQ to SQL 中，无法通过转换现有的公共语言运行库 (CLR) 和 .NET Framework 构造公开以下 SQL 功能：</span><span class="sxs-lookup"><span data-stu-id="9cbb9-103">In LINQ to SQL, the following SQL functionality cannot be exposed through translation of existing common language runtime (CLR) and .NET Framework constructs:</span></span>  

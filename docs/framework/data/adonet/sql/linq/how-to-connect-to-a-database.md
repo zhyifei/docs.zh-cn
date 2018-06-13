@@ -1,54 +1,43 @@
 ---
-title: "如何：连接到数据库"
-ms.custom: 
+title: 如何：连接到数据库
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a5447ce64803405668a2d486c7b3071b5ff923cb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 924fe4fadd5dae9907fca61a556506db1e583669
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362072"
 ---
-# <a name="how-to-connect-to-a-database"></a><span data-ttu-id="1d7f9-102">如何：连接到数据库</span><span class="sxs-lookup"><span data-stu-id="1d7f9-102">How to: Connect to a Database</span></span>
-<span data-ttu-id="1d7f9-103"><xref:System.Data.Linq.DataContext> 是用来连接到数据库、从中检索对象以及将更改提交回数据库的主要渠道。</span><span class="sxs-lookup"><span data-stu-id="1d7f9-103">The <xref:System.Data.Linq.DataContext> is the main conduit by which you connect to a database, retrieve objects from it, and submit changes back to it.</span></span> <span data-ttu-id="1d7f9-104">使用 <xref:System.Data.Linq.DataContext> 时就像使用 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection> 一样。</span><span class="sxs-lookup"><span data-stu-id="1d7f9-104">You use the <xref:System.Data.Linq.DataContext> just as you would use an [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection>.</span></span> <span data-ttu-id="1d7f9-105">事实上，<xref:System.Data.Linq.DataContext> 是用您提供的连接或连接字符串初始化的。</span><span class="sxs-lookup"><span data-stu-id="1d7f9-105">In fact, the <xref:System.Data.Linq.DataContext> is initialized with a connection or connection string that you supply.</span></span> <span data-ttu-id="1d7f9-106">有关详细信息，请参阅[DataContext 方法 （O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)。</span><span class="sxs-lookup"><span data-stu-id="1d7f9-106">For more information, see [DataContext Methods (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).</span></span>  
+# <a name="how-to-connect-to-a-database"></a><span data-ttu-id="3e369-102">如何：连接到数据库</span><span class="sxs-lookup"><span data-stu-id="3e369-102">How to: Connect to a Database</span></span>
+<span data-ttu-id="3e369-103"><xref:System.Data.Linq.DataContext> 是用来连接到数据库、从中检索对象以及将更改提交回数据库的主要渠道。</span><span class="sxs-lookup"><span data-stu-id="3e369-103">The <xref:System.Data.Linq.DataContext> is the main conduit by which you connect to a database, retrieve objects from it, and submit changes back to it.</span></span> <span data-ttu-id="3e369-104">使用 <xref:System.Data.Linq.DataContext> 时就像使用 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection> 一样。</span><span class="sxs-lookup"><span data-stu-id="3e369-104">You use the <xref:System.Data.Linq.DataContext> just as you would use an [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection>.</span></span> <span data-ttu-id="3e369-105">事实上，<xref:System.Data.Linq.DataContext> 是用您提供的连接或连接字符串初始化的。</span><span class="sxs-lookup"><span data-stu-id="3e369-105">In fact, the <xref:System.Data.Linq.DataContext> is initialized with a connection or connection string that you supply.</span></span> <span data-ttu-id="3e369-106">有关详细信息，请参阅[DataContext 方法 （O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)。</span><span class="sxs-lookup"><span data-stu-id="3e369-106">For more information, see [DataContext Methods (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).</span></span>  
   
- <span data-ttu-id="1d7f9-107"><xref:System.Data.Linq.DataContext> 的用途是将您对对象的请求转换成要对数据库执行的 SQL 查询，然后将查询结果汇编成对象。</span><span class="sxs-lookup"><span data-stu-id="1d7f9-107">The purpose of the <xref:System.Data.Linq.DataContext> is to translate your requests for objects into SQL queries to be made against the database, and then to assemble objects out of the results.</span></span> <span data-ttu-id="1d7f9-108"><xref:System.Data.Linq.DataContext> 通过实现与标准查询运算符（如 [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] 和 `Where`）相同的运算符模式来实现 `Select`。</span><span class="sxs-lookup"><span data-stu-id="1d7f9-108">The <xref:System.Data.Linq.DataContext> enables [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] by implementing the same operator pattern as the Standard Query Operators, such as `Where` and `Select`.</span></span>  
+ <span data-ttu-id="3e369-107"><xref:System.Data.Linq.DataContext> 的用途是将您对对象的请求转换成要对数据库执行的 SQL 查询，然后将查询结果汇编成对象。</span><span class="sxs-lookup"><span data-stu-id="3e369-107">The purpose of the <xref:System.Data.Linq.DataContext> is to translate your requests for objects into SQL queries to be made against the database, and then to assemble objects out of the results.</span></span> <span data-ttu-id="3e369-108"><xref:System.Data.Linq.DataContext> 通过实现与标准查询运算符（如 [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] 和 `Where`）相同的运算符模式来实现 `Select`。</span><span class="sxs-lookup"><span data-stu-id="3e369-108">The <xref:System.Data.Linq.DataContext> enables [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] by implementing the same operator pattern as the Standard Query Operators, such as `Where` and `Select`.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="1d7f9-109">维护安全连接最为重要。</span><span class="sxs-lookup"><span data-stu-id="1d7f9-109">Maintaining a secure connection is of the highest importance.</span></span> <span data-ttu-id="1d7f9-110">有关详细信息，请参阅[LINQ to SQL 中的安全](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。</span><span class="sxs-lookup"><span data-stu-id="1d7f9-110">For more information, see [Security in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).</span></span>  
+>  <span data-ttu-id="3e369-109">维护安全连接最为重要。</span><span class="sxs-lookup"><span data-stu-id="3e369-109">Maintaining a secure connection is of the highest importance.</span></span> <span data-ttu-id="3e369-110">有关详细信息，请参阅[LINQ to SQL 中的安全](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。</span><span class="sxs-lookup"><span data-stu-id="3e369-110">For more information, see [Security in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1d7f9-111">示例</span><span class="sxs-lookup"><span data-stu-id="1d7f9-111">Example</span></span>  
- <span data-ttu-id="1d7f9-112">在下面的示例中，使用 <xref:System.Data.Linq.DataContext> 连接到 Northwind 示例数据库并检索所在城市为伦敦的客户行。</span><span class="sxs-lookup"><span data-stu-id="1d7f9-112">In the following example, the <xref:System.Data.Linq.DataContext> is used to connect to the Northwind sample database and to retrieve rows of customers whose city is London.</span></span>  
+## <a name="example"></a><span data-ttu-id="3e369-111">示例</span><span class="sxs-lookup"><span data-stu-id="3e369-111">Example</span></span>  
+ <span data-ttu-id="3e369-112">在下面的示例中，使用 <xref:System.Data.Linq.DataContext> 连接到 Northwind 示例数据库并检索所在城市为伦敦的客户行。</span><span class="sxs-lookup"><span data-stu-id="3e369-112">In the following example, the <xref:System.Data.Linq.DataContext> is used to connect to the Northwind sample database and to retrieve rows of customers whose city is London.</span></span>  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#1)]
  [!code-vb[DLinqCommunicatingWithDatabase#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#1)]  
   
- <span data-ttu-id="1d7f9-113">每个数据库表表示为一个可借助 `Table` 方法（通过使用实体类来标识它）使用的 <xref:System.Data.Linq.DataContext.GetTable%2A> 集合。</span><span class="sxs-lookup"><span data-stu-id="1d7f9-113">Each database table is represented as a `Table` collection available by way of the <xref:System.Data.Linq.DataContext.GetTable%2A> method, by using the entity class to identify it.</span></span>  
+ <span data-ttu-id="3e369-113">每个数据库表表示为一个可借助 `Table` 方法（通过使用实体类来标识它）使用的 <xref:System.Data.Linq.DataContext.GetTable%2A> 集合。</span><span class="sxs-lookup"><span data-stu-id="3e369-113">Each database table is represented as a `Table` collection available by way of the <xref:System.Data.Linq.DataContext.GetTable%2A> method, by using the entity class to identify it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1d7f9-114">示例</span><span class="sxs-lookup"><span data-stu-id="1d7f9-114">Example</span></span>  
- <span data-ttu-id="1d7f9-115">最佳的做法是声明一个强类型化的 <xref:System.Data.Linq.DataContext>，而不是依靠基本 <xref:System.Data.Linq.DataContext> 类和 <xref:System.Data.Linq.DataContext.GetTable%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="1d7f9-115">Best practice is to declare a strongly typed <xref:System.Data.Linq.DataContext> instead of relying on the basic <xref:System.Data.Linq.DataContext> class and the <xref:System.Data.Linq.DataContext.GetTable%2A> method.</span></span> <span data-ttu-id="1d7f9-116">强类型化的 <xref:System.Data.Linq.DataContext> 将所有 `Table` 集合声明为上下文的成员，如下例中所示。</span><span class="sxs-lookup"><span data-stu-id="1d7f9-116">A strongly typed <xref:System.Data.Linq.DataContext> declares all `Table` collections as members of the context, as in the following example.</span></span>  
+## <a name="example"></a><span data-ttu-id="3e369-114">示例</span><span class="sxs-lookup"><span data-stu-id="3e369-114">Example</span></span>  
+ <span data-ttu-id="3e369-115">最佳的做法是声明一个强类型化的 <xref:System.Data.Linq.DataContext>，而不是依靠基本 <xref:System.Data.Linq.DataContext> 类和 <xref:System.Data.Linq.DataContext.GetTable%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="3e369-115">Best practice is to declare a strongly typed <xref:System.Data.Linq.DataContext> instead of relying on the basic <xref:System.Data.Linq.DataContext> class and the <xref:System.Data.Linq.DataContext.GetTable%2A> method.</span></span> <span data-ttu-id="3e369-116">强类型化的 <xref:System.Data.Linq.DataContext> 将所有 `Table` 集合声明为上下文的成员，如下例中所示。</span><span class="sxs-lookup"><span data-stu-id="3e369-116">A strongly typed <xref:System.Data.Linq.DataContext> declares all `Table` collections as members of the context, as in the following example.</span></span>  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#2)]
  [!code-vb[DLinqCommunicatingWithDatabase#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#2)]  
   
- <span data-ttu-id="1d7f9-117">然后您就可以更加简单地将对来自伦敦的客户的查询表达成：</span><span class="sxs-lookup"><span data-stu-id="1d7f9-117">You can then express the query for customers from London more simply as:</span></span>  
+ <span data-ttu-id="3e369-117">然后您就可以更加简单地将对来自伦敦的客户的查询表达成：</span><span class="sxs-lookup"><span data-stu-id="3e369-117">You can then express the query for customers from London more simply as:</span></span>  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#5)]
  [!code-vb[DLinqCommunicatingWithDatabase#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a><span data-ttu-id="1d7f9-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="1d7f9-118">See Also</span></span>  
- [<span data-ttu-id="1d7f9-119">与数据库通信</span><span class="sxs-lookup"><span data-stu-id="1d7f9-119">Communicating with the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)
+## <a name="see-also"></a><span data-ttu-id="3e369-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="3e369-118">See Also</span></span>  
+ [<span data-ttu-id="3e369-119">与数据库通信</span><span class="sxs-lookup"><span data-stu-id="3e369-119">Communicating with the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)

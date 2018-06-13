@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435636"
 ---
 # <a name="clr-hosting-interfaces"></a><span data-ttu-id="6e0e1-102">CLR 承载接口</span><span class="sxs-lookup"><span data-stu-id="6e0e1-102">CLR Hosting Interfaces</span></span>
 <span data-ttu-id="6e0e1-103">本部分描述的接口以及非托管主机可用于将公共语言运行时 (CLR) 集成到其应用程序。</span><span class="sxs-lookup"><span data-stu-id="6e0e1-103">This section describes the interfaces that unmanaged hosts can use to integrate the common language runtime (CLR) into their applications.</span></span> <span data-ttu-id="6e0e1-104">信息适用于.NET Framework 2.0 版和更高版本。</span><span class="sxs-lookup"><span data-stu-id="6e0e1-104">The information pertains to the .NET Framework version 2.0 and later versions.</span></span> <span data-ttu-id="6e0e1-105">这些接口使主机能够控制运行时比版本 1.0 和 1.1 中，可能更多方面，并提供 CLR 和主机的执行模型之间更紧密地集成。</span><span class="sxs-lookup"><span data-stu-id="6e0e1-105">These interfaces enable the host to control many more aspects of the runtime than was possible in versions 1.0 and 1.1, and provide much tighter integration between the CLR and the host's execution model.</span></span>  

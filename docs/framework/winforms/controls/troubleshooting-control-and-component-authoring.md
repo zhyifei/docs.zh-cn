@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540974"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a><span data-ttu-id="67bdf-102">控件和组件创作疑难解答</span><span class="sxs-lookup"><span data-stu-id="67bdf-102">Troubleshooting Control and Component Authoring</span></span>
 <span data-ttu-id="67bdf-103">本主题列出了开发组件和控件时遇到的常见问题。</span><span class="sxs-lookup"><span data-stu-id="67bdf-103">This topic lists the following common problems that arise when developing components and controls.</span></span> <span data-ttu-id="67bdf-104">有关详细信息，请参阅[使用组件编程](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)。</span><span class="sxs-lookup"><span data-stu-id="67bdf-104">For more information, see [Programming with Components](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).</span></span>  

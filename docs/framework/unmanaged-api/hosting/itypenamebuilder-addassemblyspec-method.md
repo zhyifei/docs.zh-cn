@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4019f180ad97e170bf5b0e3f2e92185a3b35ff38
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440237"
 ---
 # <a name="itypenamebuilderaddassemblyspec-method"></a><span data-ttu-id="e8fca-102">ITypeNameBuilder::AddAssemblySpec 方法</span><span class="sxs-lookup"><span data-stu-id="e8fca-102">ITypeNameBuilder::AddAssemblySpec Method</span></span>
 <span data-ttu-id="e8fca-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="e8fca-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

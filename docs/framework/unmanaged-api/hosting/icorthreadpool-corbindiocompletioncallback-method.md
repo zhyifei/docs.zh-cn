@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ca1e594250c5447e6a2313843095010739a0cadb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436645"
 ---
 # <a name="icorthreadpoolcorbindiocompletioncallback-method"></a><span data-ttu-id="8740f-102">ICorThreadpool::CorBindIoCompletionCallback 方法</span><span class="sxs-lookup"><span data-stu-id="8740f-102">ICorThreadpool::CorBindIoCompletionCallback Method</span></span>
 <span data-ttu-id="8740f-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="8740f-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

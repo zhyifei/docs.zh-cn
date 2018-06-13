@@ -1,32 +1,21 @@
 ---
-title: "执行目录操作"
-ms.custom: 
+title: 执行目录操作
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b5ac8d5522b599eb1d426314eda1d7d9e406da90
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c1d8b9dd579cae7f4868058343c034caf17c5fff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362059"
 ---
-# <a name="performing-catalog-operations"></a><span data-ttu-id="42ba2-102">执行目录操作</span><span class="sxs-lookup"><span data-stu-id="42ba2-102">Performing Catalog Operations</span></span>
-<span data-ttu-id="42ba2-103">若要执行命令来修改数据库或目录，如 CREATE TABLE 或 CREATE PROCEDURE 语句中，创建**命令**对象使用相应的 SQL 语句和**连接**对象。</span><span class="sxs-lookup"><span data-stu-id="42ba2-103">To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object.</span></span> <span data-ttu-id="42ba2-104">执行该命令与**ExecuteNonQuery**方法**命令**对象。</span><span class="sxs-lookup"><span data-stu-id="42ba2-104">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
+# <a name="performing-catalog-operations"></a><span data-ttu-id="df573-102">执行目录操作</span><span class="sxs-lookup"><span data-stu-id="df573-102">Performing Catalog Operations</span></span>
+<span data-ttu-id="df573-103">若要执行命令来修改数据库或目录，如 CREATE TABLE 或 CREATE PROCEDURE 语句中，创建**命令**对象使用相应的 SQL 语句和**连接**对象。</span><span class="sxs-lookup"><span data-stu-id="df573-103">To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object.</span></span> <span data-ttu-id="df573-104">执行该命令与**ExecuteNonQuery**方法**命令**对象。</span><span class="sxs-lookup"><span data-stu-id="df573-104">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
   
- <span data-ttu-id="42ba2-105">以下代码示例在 Microsoft SQL Server 数据库中创建一个存储过程。</span><span class="sxs-lookup"><span data-stu-id="42ba2-105">The following code example creates a stored procedure in a Microsoft SQL Server database.</span></span>  
+ <span data-ttu-id="df573-105">以下代码示例在 Microsoft SQL Server 数据库中创建一个存储过程。</span><span class="sxs-lookup"><span data-stu-id="df573-105">The following code example creates a stored procedure in a Microsoft SQL Server database.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -56,7 +45,7 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="42ba2-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="42ba2-106">See Also</span></span>  
- [<span data-ttu-id="42ba2-107">使用命令修改数据</span><span class="sxs-lookup"><span data-stu-id="42ba2-107">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [<span data-ttu-id="42ba2-108">命令和参数</span><span class="sxs-lookup"><span data-stu-id="42ba2-108">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [<span data-ttu-id="42ba2-109">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="42ba2-109">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="df573-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="df573-106">See Also</span></span>  
+ [<span data-ttu-id="df573-107">使用命令修改数据</span><span class="sxs-lookup"><span data-stu-id="df573-107">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [<span data-ttu-id="df573-108">命令和参数</span><span class="sxs-lookup"><span data-stu-id="df573-108">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [<span data-ttu-id="df573-109">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="df573-109">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

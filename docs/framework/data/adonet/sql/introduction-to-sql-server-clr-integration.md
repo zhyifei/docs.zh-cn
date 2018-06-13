@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365574"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a><span data-ttu-id="ddb90-102">SQL Server CLR 集成简介</span><span class="sxs-lookup"><span data-stu-id="ddb90-102">Introduction to SQL Server CLR Integration</span></span>
 <span data-ttu-id="ddb90-103">公共语言运行库 (CLR) 是 Microsoft .NET Framework 的核心，为所有 .NET Framework 代码提供执行环境。</span><span class="sxs-lookup"><span data-stu-id="ddb90-103">The common language runtime (CLR) is the heart of the Microsoft .NET Framework and provides the execution environment for all .NET Framework code.</span></span> <span data-ttu-id="ddb90-104">在 CLR 中运行的代码称为托管代码。</span><span class="sxs-lookup"><span data-stu-id="ddb90-104">Code that runs within the CLR is referred to as managed code.</span></span> <span data-ttu-id="ddb90-105">CLR 提供执行程序所需的各种函数和服务，包括实时 (JIT) 编译、分配和管理内存、强制类型安全性、异常处理、线程管理和安全性。</span><span class="sxs-lookup"><span data-stu-id="ddb90-105">The CLR provides various functions and services required for program execution, including just-in-time (JIT) compilation, allocating and managing memory, enforcing type safety, exception handling, thread management, and security.</span></span>  

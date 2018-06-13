@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365600"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a><span data-ttu-id="a5012-102">在事务中将资源登记为参与者</span><span class="sxs-lookup"><span data-stu-id="a5012-102">Enlisting Resources as Participants in a Transaction</span></span>
 <span data-ttu-id="a5012-103">参与事务的每个资源都由资源管理器进行管理，而后者的操作则由事务管理器进行协调。</span><span class="sxs-lookup"><span data-stu-id="a5012-103">Each resource participating in a transaction is managed by a resource manager, whose actions are coordinated by a transaction manager.</span></span> <span data-ttu-id="a5012-104">这一协调通过通知来执行，这些通知会提供给已通过事务管理器在事务中登记的订户。</span><span class="sxs-lookup"><span data-stu-id="a5012-104">The coordination is done through notifications given to subscribers who have enlisted in a transaction through the transaction manager.</span></span>  

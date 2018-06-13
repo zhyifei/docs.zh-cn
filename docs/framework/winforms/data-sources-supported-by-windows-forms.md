@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541172"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a><span data-ttu-id="f1040-102">Windows 窗体支持的数据源</span><span class="sxs-lookup"><span data-stu-id="f1040-102">Data Sources Supported by Windows Forms</span></span>
 <span data-ttu-id="f1040-103">传统上，数据绑定具有内使用应用程序以利用在数据库中存储的数据。</span><span class="sxs-lookup"><span data-stu-id="f1040-103">Traditionally, data binding has been used within applications to take advantage of data stored in databases.</span></span> <span data-ttu-id="f1040-104">使用 Windows 窗体数据绑定，你可以在访问数据时从数据库以及其他结构，如数组和集合中的数据处理程序，但前提是已满足某些最低要求。</span><span class="sxs-lookup"><span data-stu-id="f1040-104">With Windows Forms data binding, you can access data from databases as well as data in other structures, such as arrays and collections, so long as certain minimum requirements have been met.</span></span>  

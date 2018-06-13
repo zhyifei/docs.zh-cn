@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365184"
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a><span data-ttu-id="3b177-102">&lt;baseAddressPrefixFilter&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="3b177-102">&lt;add&gt; of &lt;baseAddressPrefixFilter&gt;</span></span>
 <span data-ttu-id="3b177-103">表示一个配置元素，指定传递筛选器，它提供一种机制，承载在 IIS 中的 Windows Communication Foundation (WCF) 应用程序时可选取适当的 Internet 信息服务 (IIS) 绑定。</span><span class="sxs-lookup"><span data-stu-id="3b177-103">Represents a configuration element that specifies a pass-through filter, which provides a mechanism to pick the appropriate Internet Information Services (IIS) bindings when hosting a Windows Communication Foundation (WCF) application in IIS.</span></span>  

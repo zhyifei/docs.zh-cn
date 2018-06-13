@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543281"
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a><span data-ttu-id="35499-102">如何：以编程方式将元素插入文本</span><span class="sxs-lookup"><span data-stu-id="35499-102">How to: Insert an Element Into Text Programmatically</span></span>
 <span data-ttu-id="35499-103">下面的示例演示如何使用两个<xref:System.Windows.Documents.TextPointer>对象来指定要应用文本内的范围<xref:System.Windows.Documents.Span>到的元素。</span><span class="sxs-lookup"><span data-stu-id="35499-103">The following example shows how to use two <xref:System.Windows.Documents.TextPointer> objects to specify a range within text to apply a <xref:System.Windows.Documents.Span> element to.</span></span>  

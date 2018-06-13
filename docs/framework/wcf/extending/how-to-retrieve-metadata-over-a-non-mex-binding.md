@@ -1,33 +1,20 @@
 ---
 title: 如何：通过非 MEX 绑定检索元数据
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b469a08ad9759a2d5213f13256ec2def96107acc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488083"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="1a395-102">如何：通过非 MEX 绑定检索元数据</span><span class="sxs-lookup"><span data-stu-id="1a395-102">How to: Retrieve Metadata Over a non-MEX Binding</span></span>
-<span data-ttu-id="1a395-103">本主题介绍如何通过非 MEX 绑定从 MEX 终结点检索元数据。</span><span class="sxs-lookup"><span data-stu-id="1a395-103">This topic describes how to retrieve metadata from a MEX endpoint over a non-MEX binding.</span></span> <span data-ttu-id="1a395-104">在此示例代码基于[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例。</span><span class="sxs-lookup"><span data-stu-id="1a395-104">The code in this sample is based on the [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) sample.</span></span>  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="6accf-102">如何：通过非 MEX 绑定检索元数据</span><span class="sxs-lookup"><span data-stu-id="6accf-102">How to: Retrieve Metadata Over a non-MEX Binding</span></span>
+<span data-ttu-id="6accf-103">本主题介绍如何通过非 MEX 绑定从 MEX 终结点检索元数据。</span><span class="sxs-lookup"><span data-stu-id="6accf-103">This topic describes how to retrieve metadata from a MEX endpoint over a non-MEX binding.</span></span> <span data-ttu-id="6accf-104">在此示例代码基于[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例。</span><span class="sxs-lookup"><span data-stu-id="6accf-104">The code in this sample is based on the [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) sample.</span></span>  
   
-### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="1a395-105">通过非 MEX 绑定检索元数据</span><span class="sxs-lookup"><span data-stu-id="1a395-105">To retrieve metadata over a non-MEX binding</span></span>  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="6accf-105">通过非 MEX 绑定检索元数据</span><span class="sxs-lookup"><span data-stu-id="6accf-105">To retrieve metadata over a non-MEX binding</span></span>  
   
-1.  <span data-ttu-id="1a395-106">确定由 MEX 终结点使用的绑定。</span><span class="sxs-lookup"><span data-stu-id="1a395-106">Determine the binding used by the MEX endpoint.</span></span> <span data-ttu-id="1a395-107">对于 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，可以通过访问服务的配置文件来确定 MEX 绑定。</span><span class="sxs-lookup"><span data-stu-id="1a395-107">For [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services, you can determine the MEX binding by accessing the service's configuration file.</span></span> <span data-ttu-id="1a395-108">在本例中，MEX 绑定在以下服务配置中定义。</span><span class="sxs-lookup"><span data-stu-id="1a395-108">In this case, the MEX binding is defined in the following service configuration.</span></span>  
+1.  <span data-ttu-id="6accf-106">确定由 MEX 终结点使用的绑定。</span><span class="sxs-lookup"><span data-stu-id="6accf-106">Determine the binding used by the MEX endpoint.</span></span> <span data-ttu-id="6accf-107">对于 Windows Communication Foundation (WCF) 服务，可以通过访问服务的配置文件来确定 MEX 绑定。</span><span class="sxs-lookup"><span data-stu-id="6accf-107">For Windows Communication Foundation (WCF) services, you can determine the MEX binding by accessing the service's configuration file.</span></span> <span data-ttu-id="6accf-108">在本例中，MEX 绑定在以下服务配置中定义。</span><span class="sxs-lookup"><span data-stu-id="6accf-108">In this case, the MEX binding is defined in the following service configuration.</span></span>  
   
     ```xml  
     <services>  
@@ -61,7 +48,7 @@ ms.lasthandoff: 04/30/2018
      </bindings>  
     ```  
   
-2.  <span data-ttu-id="1a395-109">在客户端配置文件中，配置同样的自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="1a395-109">In the client configuration file, configure the same custom binding.</span></span> <span data-ttu-id="1a395-110">在该配置文件中，客户端还定义了一个 `clientCredentials` 行为以提供证书，用于在请求 MEX 终结点中的元数据时对服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="1a395-110">Here the client also defines a `clientCredentials` behavior to provide a certificate to use to authenticate to the service when requesting metadata from the MEX endpoint.</span></span> <span data-ttu-id="1a395-111">在使用 Svcutil.exe 通过自定义绑定请求元数据时，应向 Svcutil.exe 的配置文件 (Svcutil.exe.config) 中添加 MEX 终结点配置，并且终结点配置的名称应与 MEX 终结点地址的 URI 架构匹配，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="1a395-111">When using Svcutil.exe to request metadata over a custom binding, you should add the MEX endpoint configuration to the configuration file for Svcutil.exe (Svcutil.exe.config), and the name of the endpoint configuration should match the URI scheme of the address of the MEX endpoint, as shown in the following code.</span></span>  
+2.  <span data-ttu-id="6accf-109">在客户端配置文件中，配置同样的自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="6accf-109">In the client configuration file, configure the same custom binding.</span></span> <span data-ttu-id="6accf-110">在该配置文件中，客户端还定义了一个 `clientCredentials` 行为以提供证书，用于在请求 MEX 终结点中的元数据时对服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="6accf-110">Here the client also defines a `clientCredentials` behavior to provide a certificate to use to authenticate to the service when requesting metadata from the MEX endpoint.</span></span> <span data-ttu-id="6accf-111">在使用 Svcutil.exe 通过自定义绑定请求元数据时，应向 Svcutil.exe 的配置文件 (Svcutil.exe.config) 中添加 MEX 终结点配置，并且终结点配置的名称应与 MEX 终结点地址的 URI 架构匹配，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="6accf-111">When using Svcutil.exe to request metadata over a custom binding, you should add the MEX endpoint configuration to the configuration file for Svcutil.exe (Svcutil.exe.config), and the name of the endpoint configuration should match the URI scheme of the address of the MEX endpoint, as shown in the following code.</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -96,7 +83,7 @@ ms.lasthandoff: 04/30/2018
     </system.serviceModel>  
     ```  
   
-3.  <span data-ttu-id="1a395-112">创建一个 `MetadataExchangeClient` 并调用 `GetMetadata`。</span><span class="sxs-lookup"><span data-stu-id="1a395-112">Create a `MetadataExchangeClient` and call `GetMetadata`.</span></span> <span data-ttu-id="1a395-113">有两种方法可以完成此操作：在配置中指定自定义绑定，或在代码中指定自定义绑定，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="1a395-113">There are two ways to do this: you can specify the custom binding in configuration, or you can specify the custom binding in code, as shown in the following example.</span></span>  
+3.  <span data-ttu-id="6accf-112">创建一个 `MetadataExchangeClient` 并调用 `GetMetadata`。</span><span class="sxs-lookup"><span data-stu-id="6accf-112">Create a `MetadataExchangeClient` and call `GetMetadata`.</span></span> <span data-ttu-id="6accf-113">有两种方法可以完成此操作：在配置中指定自定义绑定，或在代码中指定自定义绑定，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="6accf-113">There are two ways to do this: you can specify the custom binding in configuration, or you can specify the custom binding in code, as shown in the following example.</span></span>  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -127,14 +114,14 @@ ms.lasthandoff: 04/30/2018
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4.  <span data-ttu-id="1a395-114">创建 `WsdlImporter` 并调用 `ImportAllEndpoints`，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="1a395-114">Create a `WsdlImporter` and call `ImportAllEndpoints`, as shown in the following code.</span></span>  
+4.  <span data-ttu-id="6accf-114">创建 `WsdlImporter` 并调用 `ImportAllEndpoints`，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="6accf-114">Create a `WsdlImporter` and call `ImportAllEndpoints`, as shown in the following code.</span></span>  
   
     ```  
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  <span data-ttu-id="1a395-115">此时，您拥有服务终结点的集合。</span><span class="sxs-lookup"><span data-stu-id="1a395-115">At this point, you have a collection of service endpoints.</span></span> <span data-ttu-id="1a395-116">有关导入元数据的详细信息，请参阅[如何： 导入到服务终结点的元数据](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。</span><span class="sxs-lookup"><span data-stu-id="1a395-116">For more information about importing metadata, see [How to: Import Metadata into Service Endpoints](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).</span></span>  
+5.  <span data-ttu-id="6accf-115">此时，您拥有服务终结点的集合。</span><span class="sxs-lookup"><span data-stu-id="6accf-115">At this point, you have a collection of service endpoints.</span></span> <span data-ttu-id="6accf-116">有关导入元数据的详细信息，请参阅[如何： 导入到服务终结点的元数据](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。</span><span class="sxs-lookup"><span data-stu-id="6accf-116">For more information about importing metadata, see [How to: Import Metadata into Service Endpoints](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1a395-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="1a395-117">See Also</span></span>  
- [<span data-ttu-id="1a395-118">元数据</span><span class="sxs-lookup"><span data-stu-id="1a395-118">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a><span data-ttu-id="6accf-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="6accf-117">See Also</span></span>  
+ [<span data-ttu-id="6accf-118">元数据</span><span class="sxs-lookup"><span data-stu-id="6accf-118">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)

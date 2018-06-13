@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364956"
 ---
 # <a name="security-linq-to-dataset"></a><span data-ttu-id="34916-102">安全性 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="34916-102">Security (LINQ to DataSet)</span></span>
 <span data-ttu-id="34916-103">本主题讨论 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中的安全性问题。</span><span class="sxs-lookup"><span data-stu-id="34916-103">This topic discusses security issues in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  

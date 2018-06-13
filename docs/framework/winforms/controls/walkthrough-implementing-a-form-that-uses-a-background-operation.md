@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542075"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a><span data-ttu-id="42b05-102">演练：实现一个使用后台操作的窗体</span><span class="sxs-lookup"><span data-stu-id="42b05-102">Walkthrough: Implementing a Form That Uses a Background Operation</span></span>
 <span data-ttu-id="42b05-103">如果某项操作需要很长时间才能完成，且你不希望用户界面 (UI) 停止响应或"挂起，"你可以使用<xref:System.ComponentModel.BackgroundWorker>类以执行此操作在另一个线程上的。</span><span class="sxs-lookup"><span data-stu-id="42b05-103">If you have an operation that will take a long time to complete, and you do not want your user interface (UI) to stop responding or "hang," you can use the <xref:System.ComponentModel.BackgroundWorker> class to execute the operation on another thread.</span></span>  

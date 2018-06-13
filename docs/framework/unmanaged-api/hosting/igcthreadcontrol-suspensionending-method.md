@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0986645a8ce4076c27f39f2ae8004ef20bb4bdb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437747"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a><span data-ttu-id="64e15-102">IGCThreadControl::SuspensionEnding 方法</span><span class="sxs-lookup"><span data-stu-id="64e15-102">IGCThreadControl::SuspensionEnding Method</span></span>
 <span data-ttu-id="64e15-103">通知主机运行时正在恢复后垃圾回收或其他挂起的线程。</span><span class="sxs-lookup"><span data-stu-id="64e15-103">Notifies the host that the runtime is resuming threads after a garbage collection or other suspension.</span></span>  
