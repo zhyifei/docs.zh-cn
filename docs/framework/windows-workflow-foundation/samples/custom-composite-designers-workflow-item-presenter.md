@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517113"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>自定义复合设计器 — 工作流项演示器
 <xref:System.Activities.Presentation.WorkflowItemPresenter>是 WF 设计器编程模型，可以创建可在其中放置任意活动的"放置区"中的一个重要类型。 此示例演示如何生成呈现这样一个"放置区。"的活动设计器  

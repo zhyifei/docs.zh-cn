@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634911"
 ---
 # <a name="no-files-found-matching-39ltfilenamegt39"></a>找不到文件匹配&#39; &lt;filename&gt;&#39;
 文件名不正确，或文件不存在。  

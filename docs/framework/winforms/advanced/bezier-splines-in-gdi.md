@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517568"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier GDI + 中样条
 贝塞尔样条是由四个点指定的曲线： 两个终结点 （p1 和 p2） 和两个控点 （c1 和 c2）。 曲线开始于 p1 和 p2 结束。 曲线不会遍历控点，但控制点的作用像磁铁一样，在某些方向上拉拽曲线和影响曲线弯曲的方式。 下图显示其终结点和控制点的贝塞尔曲线。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ab8ed5c4fa3dc0ed77c1948aa6c1b940ecc25c14
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421446"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote 接口
 提供启动托管调试器或将其附加到远程目标进程的能力。  
@@ -68,7 +69,7 @@ interface ICorDebugRemote : IUnknown
  目前，仅为调试在远程 Macintosh 计算机运行的基于 Silverlight 的应用程序目标支持此功能。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

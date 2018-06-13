@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516722"
 ---
 # <a name="collection-activities-in-wf"></a>WF 中的集合活动
 集合活动用于使用工作流中的集合对象。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]包含多个系统提供的活动，用于在集合中添加和移除项、测试集合中是否存在某个项以及清除集合。 `ExistsInCollection` 和`RemoveFromCollection`具有<xref:System.Activities.OutArgument%601>类型的<xref:System.Boolean>，它指示结果。  
