@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321472"
 ---
 # <a name="ltpermissiongt-c-programming-guide"></a><span data-ttu-id="fc4ff-102">&lt;permission&gt;（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="fc4ff-102">&lt;permission&gt; (C# Programming Guide)</span></span>
 ## <a name="syntax"></a><span data-ttu-id="fc4ff-103">语法</span><span class="sxs-lookup"><span data-stu-id="fc4ff-103">Syntax</span></span>  

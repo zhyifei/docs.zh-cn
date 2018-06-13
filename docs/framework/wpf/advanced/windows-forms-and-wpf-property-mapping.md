@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549537"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a><span data-ttu-id="f6f3f-102">Windows 窗体和 WPF 属性映射</span><span class="sxs-lookup"><span data-stu-id="f6f3f-102">Windows Forms and WPF Property Mapping</span></span>
 <span data-ttu-id="f6f3f-103">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]技术具有两个相似但不同属性模型。</span><span class="sxs-lookup"><span data-stu-id="f6f3f-103">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] and [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] technologies have two similar but different property models.</span></span> <span data-ttu-id="f6f3f-104">*属性映射*支持两种体系结构之间进行互操作，并提供以下功能：</span><span class="sxs-lookup"><span data-stu-id="f6f3f-104">*Property mapping* supports interoperation between the two architectures and provides the following capabilities:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326643"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a><span data-ttu-id="12a12-102">使用 XSLT 转换 XML 树 (C#)</span><span class="sxs-lookup"><span data-stu-id="12a12-102">Using XSLT to Transform an XML Tree (C#)</span></span>
 <span data-ttu-id="12a12-103">可以创建 XML 树，从 XML 树创建 <xref:System.Xml.XmlReader>，创建新文档，然后创建 <xref:System.Xml.XmlWriter>，以写入新文档。</span><span class="sxs-lookup"><span data-stu-id="12a12-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="12a12-104">然后，您可以调用 XSLT 转换，并可以将 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 传递到转换中。</span><span class="sxs-lookup"><span data-stu-id="12a12-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="12a12-105">在转换成功完成后，使用转换的结果，填充新的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="12a12-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>  

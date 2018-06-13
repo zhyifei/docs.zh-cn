@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757965"
 ---
 # <a name="ltbehaviorgt-of-ltservicebehaviorsgt-of-workflow"></a><span data-ttu-id="c88a6-102">工作流的 &lt;serviceBehaviors&gt; 的 &lt;behavior&gt;</span><span class="sxs-lookup"><span data-stu-id="c88a6-102">&lt;behavior&gt; of &lt;serviceBehaviors&gt; of workflow</span></span>
 <span data-ttu-id="c88a6-103">**行为**元素包含服务行为的设置的集合。</span><span class="sxs-lookup"><span data-stu-id="c88a6-103">The **behavior** element contains a collection of settings for the behavior of a service.</span></span> <span data-ttu-id="c88a6-104">每个行为按其**名称**。</span><span class="sxs-lookup"><span data-stu-id="c88a6-104">Each behavior is indexed by its **name**.</span></span> <span data-ttu-id="c88a6-105">服务可以将链接到通过此名称使用每个行为**behaviorConfiguration**属性[\<终结点 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="c88a6-105">Services can link to each behavior through this name using the **behaviorConfiguration**attribute of the [\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element.</span></span> <span data-ttu-id="c88a6-106">这样，终结点可以共享公共行为配置而不用重新定义设置。</span><span class="sxs-lookup"><span data-stu-id="c88a6-106">This allows endpoints to share common behavior configurations without redefining the settings.</span></span>  

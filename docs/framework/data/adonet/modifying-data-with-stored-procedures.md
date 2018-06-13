@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758148"
 ---
 # <a name="modifying-data-with-stored-procedures"></a><span data-ttu-id="1d40d-102">使用存储过程修改数据</span><span class="sxs-lookup"><span data-stu-id="1d40d-102">Modifying Data with Stored Procedures</span></span>
 <span data-ttu-id="1d40d-103">存储过程可以接受数据作为输入参数并可以返回数据作为输出参数、结果集或返回值。</span><span class="sxs-lookup"><span data-stu-id="1d40d-103">Stored procedures can accept data as input parameters and can return data as output parameters, result sets, or return values.</span></span> <span data-ttu-id="1d40d-104">下面的示例演示 ADO.NET 如何发送和接收输入参数、输出参数及返回值。</span><span class="sxs-lookup"><span data-stu-id="1d40d-104">The sample below illustrates how ADO.NET sends and receives input parameters, output parameters, and return values.</span></span> <span data-ttu-id="1d40d-105">该示例将一条新记录插入到一个表中，该表中的主键列为 SQL Server 数据库中的标识列。</span><span class="sxs-lookup"><span data-stu-id="1d40d-105">The example inserts a new record into a table where the primary key column is an identity column in a SQL Server database.</span></span>  

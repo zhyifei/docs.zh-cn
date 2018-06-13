@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285738"
 ---
 # <a name="using-statement-c-reference"></a><span data-ttu-id="0294d-102">using 语句（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="0294d-102">using Statement (C# Reference)</span></span>
 <span data-ttu-id="0294d-103">提供可确保正确使用 <xref:System.IDisposable> 对象的方便语法。</span><span class="sxs-lookup"><span data-stu-id="0294d-103">Provides a convenient syntax that ensures the correct use of <xref:System.IDisposable> objects.</span></span>  

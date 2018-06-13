@@ -1,32 +1,24 @@
 ---
-title: "如何：修改表达式树 (C#)"
-ms.custom: 
+title: 如何：修改表达式树 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4db0abec0df2bc4a17dca0ed1ee88b8a38b8ca8a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3a43e2365475644d5081ced7bfec11e1a2b5121e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329837"
 ---
-# <a name="how-to-modify-expression-trees-c"></a><span data-ttu-id="1d805-102">如何：修改表达式树 (C#)</span><span class="sxs-lookup"><span data-stu-id="1d805-102">How to: Modify Expression Trees (C#)</span></span>
-<span data-ttu-id="1d805-103">本主题演示如何修改表达式树。</span><span class="sxs-lookup"><span data-stu-id="1d805-103">This topic shows you how to modify an expression tree.</span></span> <span data-ttu-id="1d805-104">表达式树是不可变的，这意味着不能直接对它们进行修改。</span><span class="sxs-lookup"><span data-stu-id="1d805-104">Expression trees are immutable, which means that they cannot be modified directly.</span></span> <span data-ttu-id="1d805-105">若要更改表达式树，必须创建现有表达式树的副本，创建此副本后，进行必要的更改。</span><span class="sxs-lookup"><span data-stu-id="1d805-105">To change an expression tree, you must create a copy of an existing expression tree and when you create the copy, make the required changes.</span></span> <span data-ttu-id="1d805-106">可以使用 <xref:System.Linq.Expressions.ExpressionVisitor> 类遍历现有表达式树，以及复制它访问的每个节点。</span><span class="sxs-lookup"><span data-stu-id="1d805-106">You can use the <xref:System.Linq.Expressions.ExpressionVisitor> class to traverse an existing expression tree and to copy each node that it visits.</span></span>  
+# <a name="how-to-modify-expression-trees-c"></a><span data-ttu-id="dedd8-102">如何：修改表达式树 (C#)</span><span class="sxs-lookup"><span data-stu-id="dedd8-102">How to: Modify Expression Trees (C#)</span></span>
+<span data-ttu-id="dedd8-103">本主题演示如何修改表达式树。</span><span class="sxs-lookup"><span data-stu-id="dedd8-103">This topic shows you how to modify an expression tree.</span></span> <span data-ttu-id="dedd8-104">表达式树是不可变的，这意味着不能直接对它们进行修改。</span><span class="sxs-lookup"><span data-stu-id="dedd8-104">Expression trees are immutable, which means that they cannot be modified directly.</span></span> <span data-ttu-id="dedd8-105">若要更改表达式树，必须创建现有表达式树的副本，创建此副本后，进行必要的更改。</span><span class="sxs-lookup"><span data-stu-id="dedd8-105">To change an expression tree, you must create a copy of an existing expression tree and when you create the copy, make the required changes.</span></span> <span data-ttu-id="dedd8-106">可以使用 <xref:System.Linq.Expressions.ExpressionVisitor> 类遍历现有表达式树，以及复制它访问的每个节点。</span><span class="sxs-lookup"><span data-stu-id="dedd8-106">You can use the <xref:System.Linq.Expressions.ExpressionVisitor> class to traverse an existing expression tree and to copy each node that it visits.</span></span>  
   
-### <a name="to-modify-an-expression-tree"></a><span data-ttu-id="1d805-107">修改表达式树</span><span class="sxs-lookup"><span data-stu-id="1d805-107">To modify an expression tree</span></span>  
+### <a name="to-modify-an-expression-tree"></a><span data-ttu-id="dedd8-107">修改表达式树</span><span class="sxs-lookup"><span data-stu-id="dedd8-107">To modify an expression tree</span></span>  
   
-1.  <span data-ttu-id="1d805-108">创建新的**控制台应用程序**项目。</span><span class="sxs-lookup"><span data-stu-id="1d805-108">Create a new **Console Application** project.</span></span>  
+1.  <span data-ttu-id="dedd8-108">创建新的**控制台应用程序**项目。</span><span class="sxs-lookup"><span data-stu-id="dedd8-108">Create a new **Console Application** project.</span></span>  
   
-2.  <span data-ttu-id="1d805-109">为 `System.Linq.Expressions` 命名空间的文件添加 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="1d805-109">Add a `using` directive to the file for the `System.Linq.Expressions` namespace.</span></span>  
+2.  <span data-ttu-id="dedd8-109">为 `System.Linq.Expressions` 命名空间的文件添加 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="dedd8-109">Add a `using` directive to the file for the `System.Linq.Expressions` namespace.</span></span>  
   
-3.  <span data-ttu-id="1d805-110">向项目中添加 `AndAlsoModifier` 类。</span><span class="sxs-lookup"><span data-stu-id="1d805-110">Add the `AndAlsoModifier` class to your project.</span></span>  
+3.  <span data-ttu-id="dedd8-110">向项目中添加 `AndAlsoModifier` 类。</span><span class="sxs-lookup"><span data-stu-id="dedd8-110">Add the `AndAlsoModifier` class to your project.</span></span>  
   
     ```csharp  
     public class AndAlsoModifier : ExpressionVisitor  
@@ -52,11 +44,11 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-     <span data-ttu-id="1d805-111">此类继承 <xref:System.Linq.Expressions.ExpressionVisitor> 类，并且专用于修改表示条件 `AND` 运算的表达式。</span><span class="sxs-lookup"><span data-stu-id="1d805-111">This class inherits the <xref:System.Linq.Expressions.ExpressionVisitor> class and is specialized to modify expressions that represent conditional `AND` operations.</span></span> <span data-ttu-id="1d805-112">它将运算从条件 `AND` 更改为条件 `OR`。</span><span class="sxs-lookup"><span data-stu-id="1d805-112">It changes these operations from a conditional `AND` to a conditional `OR`.</span></span> <span data-ttu-id="1d805-113">若要执行此操作，此类替代基类型的 <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> 方法，因为条件 `AND` 表达式表示为二进制表达式。</span><span class="sxs-lookup"><span data-stu-id="1d805-113">To do this, the class overrides the <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> method of the base type, because conditional `AND` expressions are represented as binary expressions.</span></span> <span data-ttu-id="1d805-114">在 `VisitBinary` 方法中，如果传递给它的表达式表示条件 `AND` 操作，那么代码将构造一个新的表达式，此表达式包含条件 `OR` 运算符，而不是条件 `AND` 运算符。</span><span class="sxs-lookup"><span data-stu-id="1d805-114">In the `VisitBinary` method, if the expression that is passed to it represents a conditional `AND` operation, the code constructs a new expression that contains the conditional `OR` operator instead of the conditional `AND` operator.</span></span> <span data-ttu-id="1d805-115">如果传递给 `VisitBinary` 的表达式不表示条件 `AND` 运算，那么此方法遵从基类实现。</span><span class="sxs-lookup"><span data-stu-id="1d805-115">If the expression that is passed to `VisitBinary` does not represent a conditional `AND` operation, the method defers to the base class implementation.</span></span> <span data-ttu-id="1d805-116">基类方法构造类似于所传递的表达式树的节点，但是这些节点将子树替换为访问者以递归方式生成的表达式树。</span><span class="sxs-lookup"><span data-stu-id="1d805-116">The base class methods construct nodes that are like the expression trees that are passed in, but the nodes have their sub trees replaced with the expression trees that are produced recursively by the visitor.</span></span>  
+     <span data-ttu-id="dedd8-111">此类继承 <xref:System.Linq.Expressions.ExpressionVisitor> 类，并且专用于修改表示条件 `AND` 运算的表达式。</span><span class="sxs-lookup"><span data-stu-id="dedd8-111">This class inherits the <xref:System.Linq.Expressions.ExpressionVisitor> class and is specialized to modify expressions that represent conditional `AND` operations.</span></span> <span data-ttu-id="dedd8-112">它将运算从条件 `AND` 更改为条件 `OR`。</span><span class="sxs-lookup"><span data-stu-id="dedd8-112">It changes these operations from a conditional `AND` to a conditional `OR`.</span></span> <span data-ttu-id="dedd8-113">若要执行此操作，此类替代基类型的 <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> 方法，因为条件 `AND` 表达式表示为二进制表达式。</span><span class="sxs-lookup"><span data-stu-id="dedd8-113">To do this, the class overrides the <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> method of the base type, because conditional `AND` expressions are represented as binary expressions.</span></span> <span data-ttu-id="dedd8-114">在 `VisitBinary` 方法中，如果传递给它的表达式表示条件 `AND` 操作，那么代码将构造一个新的表达式，此表达式包含条件 `OR` 运算符，而不是条件 `AND` 运算符。</span><span class="sxs-lookup"><span data-stu-id="dedd8-114">In the `VisitBinary` method, if the expression that is passed to it represents a conditional `AND` operation, the code constructs a new expression that contains the conditional `OR` operator instead of the conditional `AND` operator.</span></span> <span data-ttu-id="dedd8-115">如果传递给 `VisitBinary` 的表达式不表示条件 `AND` 运算，那么此方法遵从基类实现。</span><span class="sxs-lookup"><span data-stu-id="dedd8-115">If the expression that is passed to `VisitBinary` does not represent a conditional `AND` operation, the method defers to the base class implementation.</span></span> <span data-ttu-id="dedd8-116">基类方法构造类似于所传递的表达式树的节点，但是这些节点将子树替换为访问者以递归方式生成的表达式树。</span><span class="sxs-lookup"><span data-stu-id="dedd8-116">The base class methods construct nodes that are like the expression trees that are passed in, but the nodes have their sub trees replaced with the expression trees that are produced recursively by the visitor.</span></span>  
   
-4.  <span data-ttu-id="1d805-117">为 `System.Linq.Expressions` 命名空间的文件添加 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="1d805-117">Add a `using` directive to the file for the `System.Linq.Expressions` namespace.</span></span>  
+4.  <span data-ttu-id="dedd8-117">为 `System.Linq.Expressions` 命名空间的文件添加 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="dedd8-117">Add a `using` directive to the file for the `System.Linq.Expressions` namespace.</span></span>  
   
-5.  <span data-ttu-id="1d805-118">向 Program.cs 文件中的 `Main` 方法添加代码以创建表达式树，并将其传递给将对其进行修改的方法。</span><span class="sxs-lookup"><span data-stu-id="1d805-118">Add code to the `Main` method in the Program.cs file to create an expression tree and pass it to the method that will modify it.</span></span>  
+5.  <span data-ttu-id="dedd8-118">向 Program.cs 文件中的 `Main` 方法添加代码以创建表达式树，并将其传递给将对其进行修改的方法。</span><span class="sxs-lookup"><span data-stu-id="dedd8-118">Add code to the `Main` method in the Program.cs file to create an expression tree and pass it to the method that will modify it.</span></span>  
   
     ```csharp  
     Expression<Func<string, bool>> expr = name => name.Length > 10 && name.StartsWith("G");  
@@ -74,10 +66,10 @@ ms.lasthandoff: 11/21/2017
     */  
     ```  
   
-     <span data-ttu-id="1d805-119">此代码创建的表达式中包含条件 `AND` 运算。</span><span class="sxs-lookup"><span data-stu-id="1d805-119">The code creates an expression that contains a conditional `AND` operation.</span></span> <span data-ttu-id="1d805-120">然后，此代码创建 `AndAlsoModifier` 类的实例，并将表达式传递给此类的 `Modify` 方法。</span><span class="sxs-lookup"><span data-stu-id="1d805-120">It then creates an instance of the `AndAlsoModifier` class and passes the expression to the `Modify` method of this class.</span></span> <span data-ttu-id="1d805-121">输出原始以及修改后的表达式树以显示更改。</span><span class="sxs-lookup"><span data-stu-id="1d805-121">Both the original and the modified expression trees are outputted to show the change.</span></span>  
+     <span data-ttu-id="dedd8-119">此代码创建的表达式中包含条件 `AND` 运算。</span><span class="sxs-lookup"><span data-stu-id="dedd8-119">The code creates an expression that contains a conditional `AND` operation.</span></span> <span data-ttu-id="dedd8-120">然后，此代码创建 `AndAlsoModifier` 类的实例，并将表达式传递给此类的 `Modify` 方法。</span><span class="sxs-lookup"><span data-stu-id="dedd8-120">It then creates an instance of the `AndAlsoModifier` class and passes the expression to the `Modify` method of this class.</span></span> <span data-ttu-id="dedd8-121">输出原始以及修改后的表达式树以显示更改。</span><span class="sxs-lookup"><span data-stu-id="dedd8-121">Both the original and the modified expression trees are outputted to show the change.</span></span>  
   
-6.  <span data-ttu-id="1d805-122">编译并运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="1d805-122">Compile and run the application.</span></span>  
+6.  <span data-ttu-id="dedd8-122">编译并运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="dedd8-122">Compile and run the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d805-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1d805-123">See Also</span></span>  
- [<span data-ttu-id="1d805-124">如何： 执行表达式树 (C#)</span><span class="sxs-lookup"><span data-stu-id="1d805-124">How to: Execute Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [<span data-ttu-id="1d805-125">表达式树 (C#)</span><span class="sxs-lookup"><span data-stu-id="1d805-125">Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+## <a name="see-also"></a><span data-ttu-id="dedd8-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="dedd8-123">See Also</span></span>  
+ [<span data-ttu-id="dedd8-124">如何：执行表达式树 (C#)</span><span class="sxs-lookup"><span data-stu-id="dedd8-124">How to: Execute Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+ [<span data-ttu-id="dedd8-125">表达式树 (C#)</span><span class="sxs-lookup"><span data-stu-id="dedd8-125">Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
