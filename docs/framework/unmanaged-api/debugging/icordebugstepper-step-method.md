@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c2d282e27ec5068fa6fe7f58ba95458fdc219972
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419219"
 ---
 # <a name="icordebugstepperstep-method"></a><span data-ttu-id="e87df-102">ICorDebugStepper::Step 方法</span><span class="sxs-lookup"><span data-stu-id="e87df-102">ICorDebugStepper::Step Method</span></span>
 <span data-ttu-id="e87df-103">导致到单步执行其包含的线程，以及 （可选） 为此 ICorDebugStepper 继续单步执行通过该线程中调用的函数。</span><span class="sxs-lookup"><span data-stu-id="e87df-103">Causes this ICorDebugStepper to single-step through its containing thread, and optionally, to continue single-stepping through functions that are called within the thread.</span></span>  

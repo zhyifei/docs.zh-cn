@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516573"
 ---
 # <a name="rangeenumeration-activity"></a><span data-ttu-id="7a2b3-102">RangeEnumeration 活动</span><span class="sxs-lookup"><span data-stu-id="7a2b3-102">RangeEnumeration Activity</span></span>
 <span data-ttu-id="7a2b3-103">此示例演示如何创建一个用于循环访问数字集合的自定义活动。下表详细描述了此示例中包含的主要文件。</span><span class="sxs-lookup"><span data-stu-id="7a2b3-103">This sample demonstrates how to create a custom activity that iterates over a collection of numbers.The following table details the main files included in the sample.</span></span>  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522212"
 ---
 # <a name="how-to-create-a-shaped-windows-form"></a><span data-ttu-id="79e82-102">如何：创建特定形状的 Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="79e82-102">How to: Create a Shaped Windows Form</span></span>
 <span data-ttu-id="79e82-103">此示例使窗体调整大小时处理该窗体是椭圆形状。</span><span class="sxs-lookup"><span data-stu-id="79e82-103">This example gives a form an elliptical shape that resizes with the form.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518572"
 ---
 # <a name="using-a-custom-expression-editor"></a><span data-ttu-id="12976-102">使用自定义表达式编辑器</span><span class="sxs-lookup"><span data-stu-id="12976-102">Using a Custom Expression Editor</span></span>
 <span data-ttu-id="12976-103">可以实现自定义表达式编辑器，以提供更丰富或更简单的表达式编辑体验。</span><span class="sxs-lookup"><span data-stu-id="12976-103">A custom expression editor can be implemented to provide a richer or simpler expression editing experience.</span></span> <span data-ttu-id="12976-104">在以下几种情况下，您可能需要使用自定义表达式编辑器：</span><span class="sxs-lookup"><span data-stu-id="12976-104">There are several scenarios in which you might want to use a custom expression editor:</span></span>  

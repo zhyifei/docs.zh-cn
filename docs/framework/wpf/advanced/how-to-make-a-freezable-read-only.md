@@ -1,56 +1,43 @@
 ---
-title: "如何：使 Freezable 成为只读"
-ms.custom: 
+title: 如何：使 Freezable 成为只读
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aa6d3f7109e8258dff0a07556bc8572f6071c961
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: be3abd74a71fc711cd9f4bf6796b7d55017355ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543427"
 ---
-# <a name="how-to-make-a-freezable-read-only"></a><span data-ttu-id="d418a-102">如何：使 Freezable 成为只读</span><span class="sxs-lookup"><span data-stu-id="d418a-102">How to: Make a Freezable Read-Only</span></span>
-<span data-ttu-id="d418a-103">此示例演示如何使<xref:System.Windows.Freezable>只读通过调用其<xref:System.Windows.Freezable.Freeze%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="d418a-103">This example shows how to make a <xref:System.Windows.Freezable> read-only by calling its <xref:System.Windows.Freezable.Freeze%2A> method.</span></span>  
+# <a name="how-to-make-a-freezable-read-only"></a><span data-ttu-id="51671-102">如何：使 Freezable 成为只读</span><span class="sxs-lookup"><span data-stu-id="51671-102">How to: Make a Freezable Read-Only</span></span>
+<span data-ttu-id="51671-103">此示例演示如何使<xref:System.Windows.Freezable>只读通过调用其<xref:System.Windows.Freezable.Freeze%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="51671-103">This example shows how to make a <xref:System.Windows.Freezable> read-only by calling its <xref:System.Windows.Freezable.Freeze%2A> method.</span></span>  
   
- <span data-ttu-id="d418a-104">不能冻结<xref:System.Windows.Freezable>对象如果以下情况中的任何一个为`true`有关对象：</span><span class="sxs-lookup"><span data-stu-id="d418a-104">You cannot freeze a <xref:System.Windows.Freezable> object if any one of the following conditions is `true` about the object:</span></span>  
+ <span data-ttu-id="51671-104">不能冻结<xref:System.Windows.Freezable>对象如果以下情况中的任何一个为`true`有关对象：</span><span class="sxs-lookup"><span data-stu-id="51671-104">You cannot freeze a <xref:System.Windows.Freezable> object if any one of the following conditions is `true` about the object:</span></span>  
   
--   <span data-ttu-id="d418a-105">它具有经过动画处理或数据绑定属性。</span><span class="sxs-lookup"><span data-stu-id="d418a-105">It has animated or data bound properties.</span></span>  
+-   <span data-ttu-id="51671-105">它具有经过动画处理或数据绑定属性。</span><span class="sxs-lookup"><span data-stu-id="51671-105">It has animated or data bound properties.</span></span>  
   
--   <span data-ttu-id="d418a-106">它具有由动态资源设置的属性。</span><span class="sxs-lookup"><span data-stu-id="d418a-106">It has properties that are set by a dynamic resource.</span></span> <span data-ttu-id="d418a-107">有关动态资源的详细信息，请参阅[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。</span><span class="sxs-lookup"><span data-stu-id="d418a-107">For more information about dynamic resources, see the [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  
+-   <span data-ttu-id="51671-106">它具有由动态资源设置的属性。</span><span class="sxs-lookup"><span data-stu-id="51671-106">It has properties that are set by a dynamic resource.</span></span> <span data-ttu-id="51671-107">有关动态资源的详细信息，请参阅[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。</span><span class="sxs-lookup"><span data-stu-id="51671-107">For more information about dynamic resources, see the [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  
   
--   <span data-ttu-id="d418a-108">它包含<xref:System.Windows.Freezable>无法冻结的子对象。</span><span class="sxs-lookup"><span data-stu-id="d418a-108">It contains <xref:System.Windows.Freezable> sub-objects that cannot be frozen.</span></span>  
+-   <span data-ttu-id="51671-108">它包含<xref:System.Windows.Freezable>无法冻结的子对象。</span><span class="sxs-lookup"><span data-stu-id="51671-108">It contains <xref:System.Windows.Freezable> sub-objects that cannot be frozen.</span></span>  
   
- <span data-ttu-id="d418a-109">如果这些条件是`false`为你<xref:System.Windows.Freezable>对象，并且您不想要对其进行修改，请考虑冻结它以获得性能优势。</span><span class="sxs-lookup"><span data-stu-id="d418a-109">If these conditions are `false` for your <xref:System.Windows.Freezable> object and you do not intend to modify it, consider freezing it to gain performance benefits.</span></span>  
+ <span data-ttu-id="51671-109">如果这些条件是`false`为你<xref:System.Windows.Freezable>对象，并且您不想要对其进行修改，请考虑冻结它以获得性能优势。</span><span class="sxs-lookup"><span data-stu-id="51671-109">If these conditions are `false` for your <xref:System.Windows.Freezable> object and you do not intend to modify it, consider freezing it to gain performance benefits.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d418a-110">示例</span><span class="sxs-lookup"><span data-stu-id="d418a-110">Example</span></span>  
- <span data-ttu-id="d418a-111">下面的示例会冻结<xref:System.Windows.Media.SolidColorBrush>，这是一种<xref:System.Windows.Freezable>对象。</span><span class="sxs-lookup"><span data-stu-id="d418a-111">The following example freezes a <xref:System.Windows.Media.SolidColorBrush>, which is a type of <xref:System.Windows.Freezable> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="51671-110">示例</span><span class="sxs-lookup"><span data-stu-id="51671-110">Example</span></span>  
+ <span data-ttu-id="51671-111">下面的示例会冻结<xref:System.Windows.Media.SolidColorBrush>，这是一种<xref:System.Windows.Freezable>对象。</span><span class="sxs-lookup"><span data-stu-id="51671-111">The following example freezes a <xref:System.Windows.Media.SolidColorBrush>, which is a type of <xref:System.Windows.Freezable> object.</span></span>  
   
  [!code-csharp[freezablesample_procedural#FreezeExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#freezeexample1)]
  [!code-vb[freezablesample_procedural#FreezeExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#freezeexample1)]  
   
- <span data-ttu-id="d418a-112">有关详细信息<xref:System.Windows.Freezable>对象，请参阅[可冻结对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="d418a-112">For more information about <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span></span>  
+ <span data-ttu-id="51671-112">有关详细信息<xref:System.Windows.Freezable>对象，请参阅[可冻结对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="51671-112">For more information about <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d418a-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="d418a-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="51671-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="51671-113">See Also</span></span>  
  <xref:System.Windows.Freezable>  
  <xref:System.Windows.Freezable.CanFreeze%2A>  
  <xref:System.Windows.Freezable.Freeze%2A>  
- [<span data-ttu-id="d418a-114">Freezable 对象概述</span><span class="sxs-lookup"><span data-stu-id="d418a-114">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [<span data-ttu-id="d418a-115">帮助主题</span><span class="sxs-lookup"><span data-stu-id="d418a-115">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+ [<span data-ttu-id="51671-114">Freezable 对象概述</span><span class="sxs-lookup"><span data-stu-id="51671-114">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="51671-115">帮助主题</span><span class="sxs-lookup"><span data-stu-id="51671-115">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535726"
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="60116-102">如何：设置 Windows 窗体 DataGridView 控件中列的排序模式</span><span class="sxs-lookup"><span data-stu-id="60116-102">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="60116-103">在<xref:System.Windows.Forms.DataGridView>控件，文本框列使用自动排序默认情况下，而其他列类型不会自动排序。</span><span class="sxs-lookup"><span data-stu-id="60116-103">In the <xref:System.Windows.Forms.DataGridView> control, text box columns use automatic sorting by default, while other column types are not sorted automatically.</span></span> <span data-ttu-id="60116-104">有时想要覆盖这些默认值。</span><span class="sxs-lookup"><span data-stu-id="60116-104">Sometimes you will want to override these defaults.</span></span> <span data-ttu-id="60116-105">例如，可以显示图像以代替文本、 数字或枚举单元格的值。</span><span class="sxs-lookup"><span data-stu-id="60116-105">For example, you can display images in place of text, numbers, or enumeration cell values.</span></span> <span data-ttu-id="60116-106">映像不能进行排序，而它们表示的基础值可以进行排序。</span><span class="sxs-lookup"><span data-stu-id="60116-106">While the images cannot be sorted, the underlying values that they represent can be sorted.</span></span>  

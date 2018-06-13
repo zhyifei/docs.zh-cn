@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a1bd85e8cde2b05d5f1ba0075fb761d73907373a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420074"
 ---
 # <a name="icordebugvalueenum-interface1"></a><span data-ttu-id="85ffc-102">ICorDebugValueEnum 接口 1</span><span class="sxs-lookup"><span data-stu-id="85ffc-102">ICorDebugValueEnum Interface1</span></span>
 <span data-ttu-id="85ffc-103">实现"ICorDebugEnum"方法，并枚举"ICorDebugValue"数组。</span><span class="sxs-lookup"><span data-stu-id="85ffc-103">Implements "ICorDebugEnum" methods and enumerates "ICorDebugValue" arrays.</span></span>  

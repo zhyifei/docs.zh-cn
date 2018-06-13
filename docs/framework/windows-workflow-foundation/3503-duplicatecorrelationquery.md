@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511395"
 ---
 # <a name="3503---duplicatecorrelationquery"></a><span data-ttu-id="f87d2-102">3503 - DuplicateCorrelationQuery</span><span class="sxs-lookup"><span data-stu-id="f87d2-102">3503 - DuplicateCorrelationQuery</span></span>
 ## <a name="properties"></a><span data-ttu-id="f87d2-103">属性</span><span class="sxs-lookup"><span data-stu-id="f87d2-103">Properties</span></span>  

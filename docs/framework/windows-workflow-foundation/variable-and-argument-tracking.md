@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516979"
 ---
 # <a name="variable-and-argument-tracking"></a><span data-ttu-id="71919-102">变量和自变量跟踪</span><span class="sxs-lookup"><span data-stu-id="71919-102">Variable and Argument Tracking</span></span>
 <span data-ttu-id="71919-103">当跟踪工作流的执行时，提取数据往往很有用。</span><span class="sxs-lookup"><span data-stu-id="71919-103">When tracking the execution of a workflow, it is often useful to extract data.</span></span> <span data-ttu-id="71919-104">这在访问跟踪记录后续执行时可提供其他上下文。</span><span class="sxs-lookup"><span data-stu-id="71919-104">This provides additional context when accessing a tracking record post execution.</span></span> <span data-ttu-id="71919-105">在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，您可以使用跟踪在工作流的任意活动范围内提取所有可见变量或参数。</span><span class="sxs-lookup"><span data-stu-id="71919-105">In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], you can extract any visible variable or argument within the scope of any activity in a workflow using tracking.</span></span> <span data-ttu-id="71919-106">跟踪配置文件简化了对数据的提取。</span><span class="sxs-lookup"><span data-stu-id="71919-106">Tracking profiles make it easy to extract data.</span></span>  

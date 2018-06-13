@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514445"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a><span data-ttu-id="64af0-102">.NET Framework 类库中过时的内容</span><span class="sxs-lookup"><span data-stu-id="64af0-102">What&#39;s Obsolete in the .NET Framework Class Library</span></span>
 <span data-ttu-id="64af0-103">.NET Framework 随时间推移而变化。</span><span class="sxs-lookup"><span data-stu-id="64af0-103">The .NET Framework changes over time.</span></span> <span data-ttu-id="64af0-104">每个新版本都添加了提供新功能的新类型和类型成员。</span><span class="sxs-lookup"><span data-stu-id="64af0-104">Each new version adds new types and type members that provide new functionality.</span></span> <span data-ttu-id="64af0-105">现有类型和成员也会随着时间推移而变化。</span><span class="sxs-lookup"><span data-stu-id="64af0-105">Existing types and their members also change over time.</span></span> <span data-ttu-id="64af0-106">例如，某些类型变得不太重要，因为它们支持的技术由新技术所替代，而某些方法由更方便或功能更全面的方法所取代。</span><span class="sxs-lookup"><span data-stu-id="64af0-106">For example, some types become less important as the technology they support is replaced by a new technology, and some methods are superseded by newer methods that are either more convenient or more full-featured.</span></span>  

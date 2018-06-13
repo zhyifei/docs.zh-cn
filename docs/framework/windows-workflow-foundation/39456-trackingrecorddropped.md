@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33510700"
 ---
 # <a name="39456---trackingrecorddropped"></a><span data-ttu-id="a758d-102">39456 - TrackingRecordDropped</span><span class="sxs-lookup"><span data-stu-id="a758d-102">39456 - TrackingRecordDropped</span></span>
 ## <a name="properties"></a><span data-ttu-id="a758d-103">属性</span><span class="sxs-lookup"><span data-stu-id="a758d-103">Properties</span></span>  

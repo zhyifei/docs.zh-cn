@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516121"
 ---
 # <a name="sending-and-handling-faults"></a><span data-ttu-id="c6639-102">发送和处理错误</span><span class="sxs-lookup"><span data-stu-id="c6639-102">Sending and Handling Faults</span></span>
 <span data-ttu-id="c6639-103">此示例演示如何使用 <xref:System.ServiceModel.Activities.SendReply> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 消息传递活动来发送和接收预期的和意外的错误。</span><span class="sxs-lookup"><span data-stu-id="c6639-103">This sample demonstrates how to use the <xref:System.ServiceModel.Activities.SendReply> and <xref:System.ServiceModel.Activities.ReceiveReply> messaging activities to send and receive expected and unexpected faults.</span></span> <span data-ttu-id="c6639-104">在此方案中，第一个客户端请求导致已包含在其 <xref:System.ServiceModel.Activities.Send.KnownTypes%2A> 集合中的预期错误。</span><span class="sxs-lookup"><span data-stu-id="c6639-104">In this scenario, the first client request results in an expected fault that has been included in its <xref:System.ServiceModel.Activities.Send.KnownTypes%2A> collection.</span></span> <span data-ttu-id="c6639-105">在最终请求成功之前，接下来的几个客户端请求会导致接收意外错误。</span><span class="sxs-lookup"><span data-stu-id="c6639-105">The next few client requests result in receiving unexpected faults, before the final request succeeds.</span></span>  

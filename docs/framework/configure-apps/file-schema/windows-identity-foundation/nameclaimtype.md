@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755092"
 ---
 # <a name="ltnameclaimtypegt"></a><span data-ttu-id="6e90b-102">&lt;nameClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="6e90b-102">&lt;nameClaimType&gt;</span></span>
 <span data-ttu-id="6e90b-103">设置指定的声明类型<xref:System.Security.Principal.IIdentity.Name%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="6e90b-103">Sets the claim type that specifies the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="6e90b-104">声明类型用于搜索<xref:System.Security.Claims.Claim>的集合中<xref:System.Security.Claims.ClaimsIdentity>返回的对象<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>此令牌处理程序方法。</span><span class="sxs-lookup"><span data-stu-id="6e90b-104">The claim type is used to search for a <xref:System.Security.Claims.Claim> in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of this token handler.</span></span> <span data-ttu-id="6e90b-105">然后，将匹配声明的值设置为的名称<xref:System.Security.Principal.IIdentity>生成从此令牌处理程序。</span><span class="sxs-lookup"><span data-stu-id="6e90b-105">The value of the matching claim is then set as the name of the <xref:System.Security.Principal.IIdentity> generated from this token handler.</span></span>  
