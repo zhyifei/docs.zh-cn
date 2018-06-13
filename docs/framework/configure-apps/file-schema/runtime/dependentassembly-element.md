@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744907"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt;元素
 封装每个程序集的绑定策略和程序集位置。 使用一个`dependentAssembly`每个程序集的元素。  

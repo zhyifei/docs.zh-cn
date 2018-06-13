@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336705"
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a>XML 的纯功能转换 (C#)
 本节提供 XML 的函数转换教程。 它包括使用函数转换所必须理解的主要概念和语言构造的说明以及使用函数转换来操作 XML 文档的示例。 虽然本教程提供 LINQ to XML 代码示例，但所有基础概念也适用于其他 LINQ 技术。  

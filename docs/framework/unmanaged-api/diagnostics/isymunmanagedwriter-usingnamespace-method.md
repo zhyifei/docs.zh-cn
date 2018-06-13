@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a5ff52a95fd6ebaec05439cbc702d5513d0cc78
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427764"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace 方法
 指定当前打开的词法范围内，使用给定的完全限定的命名空间名称。 将在所有作用域都继承自当前打开的范围内使用命名空间。 关闭当前作用域也将停止使用此命名空间。  

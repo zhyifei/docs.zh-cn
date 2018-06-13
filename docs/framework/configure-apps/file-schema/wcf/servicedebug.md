@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352241"
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
 指定 Windows Communication Foundation (WCF) 服务的调试和帮助信息的功能。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 |httpsHelpPageBindingConfiguration|一个字符串，指定在 `httpsHelpPageBinding` 特性中指定的绑定的名称，此名称引用此绑定的其他配置信息。 必须在 `<bindings>` 节中定义相同的名称。|  
 |httpsHelpPageEnabled|一个布尔值，用于控制是否 WCF 发布 HTML 帮助页在指定的地址`httpsHelpPageUrl`属性。 默认值为 `true`。<br /><br /> 可以将此属性设置为 `false` 以禁止发布对于 HTML 浏览器可见的 HTML 帮助页。<br /><br /> 若要确保在 `httpsHelpPageUrl` 属性控制的位置发布 HTML 帮助页，必须将此属性设置为 `true`。 另外，还必须满足以下条件之一：<br /><br /> -`httpsHelpPageUrl`属性是支持 HTTPS 协议方案的绝对地址。<br />-没有支持 HTTPS 协议方案的服务的基址。<br /><br /> 尽管为 `httpsHelpPageUrl` 属性指定不支持 HTTPS 协议方案的绝对地址会引发异常，但不满足前面两个条件的任何其他方案都不会引发异常，也不会发布 HTML 帮助页。|  
 |httpsHelpPageUrl|一个 URI，指定在使用 HTML 浏览器查看终结点时，用户所见自定义 HTML 帮助文件的基于 HTTPS 的相对或绝对 URL。<br /><br /> 可以使用此属性启用自定义 HTML 帮助文件，例如，从 HTML 浏览器通过 HTTPS/Get 请求返回的帮助文件。 HTML 帮助文件位置的解析方式如下：<br /><br /> -如果此属性的值是相对地址，则 HTML 帮助文件的位置是支持 HTTPS 请求的服务基址加上此属性的值。<br />-如果此属性的值是绝对地址并支持 HTTPS 请求，则 HTML 帮助文件的位置是此属性的值。<br />-如果此属性的值是绝对地址但不支持 HTTPS 请求，将引发异常。<br /><br /> 此属性是仅当`httpHelpPageEnabled`属性是`true`。|  
-|includeExceptionDetailInFaults|一个值，指定是否在返回给客户端的 SOAP 错误详细信息中包含托管异常信息以供调试。 默认值为 `false`。<br /><br /> 如果将此属性设置为 `true`，则可以将托管异常信息流到客户端以便进行调试，还可以为在 Web 浏览器中浏览该服务的用户发布 HTML 信息文件。 **注意：**返回托管的异常信息返回给客户端可能会带来安全风险。 这是因为，异常详细信息公开了有关内部服务实现的信息，这些信息可能被未经授权的客户端使用。|  
+|includeExceptionDetailInFaults|一个值，指定是否在返回给客户端的 SOAP 错误详细信息中包含托管异常信息以供调试。 默认值为 `false`。<br /><br /> 如果将此属性设置为 `true`，则可以将托管异常信息流到客户端以便进行调试，还可以为在 Web 浏览器中浏览该服务的用户发布 HTML 信息文件。 **注意：** 返回托管的异常信息返回给客户端可能会带来安全风险。 这是因为，异常详细信息公开了有关内部服务实现的信息，这些信息可能被未经授权的客户端使用。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  

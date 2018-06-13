@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498538"
 ---
 # <a name="security-considerations-with-metadata"></a>元数据的安全注意事项
 在使用 Windows Communication Foundation (WCF) 中的元数据功能，请考虑发布、 检索和使用服务元数据的安全隐患。  

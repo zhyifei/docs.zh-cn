@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336916"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>使用可以为 null 的类型（C# 编程指南）
 可以为 null 的类型可表示一个基础类型的所有值，还可以再表示一个 [null](../../../csharp/language-reference/keywords/null.md) 值。 可通过以下两种方式之一声明可为 null 的类型：  

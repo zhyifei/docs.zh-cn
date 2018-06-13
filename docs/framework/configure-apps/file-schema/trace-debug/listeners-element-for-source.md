@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746834"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;侦听器&gt;元素&lt;源&gt;
 添加或删除侦听器中的<xref:System.Diagnostics.TraceSource.Listeners%2A>集合<xref:System.Diagnostics.TraceSource>。 侦听器将定向到适当的目标，如日志、 窗口或文本文件的跟踪输出。  

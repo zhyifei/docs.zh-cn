@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744507"
 ---
 # <a name="creating-the-gamepiece-class"></a>创建 GamePiece 类
 GamePiece 类封装加载 Microsoft XNA 游戏块图像、跟踪与游戏块相关的鼠标状态、捕获鼠标、提供操作和惯性处理以及在游戏块达到视区限制时提供弹跳功能所需的所有功能。  

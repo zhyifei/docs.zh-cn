@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275621"
 ---
 # <a name="linq-in-c"></a>C# 中的 LINQ
 此部分包含提供有关 LINQ 的详细信息的主题链接。  

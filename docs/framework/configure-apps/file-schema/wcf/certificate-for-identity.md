@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749278"
 ---
 # <a name="ltcertificategt-for-ltidentitygt"></a>&lt;identity&gt; 的 &lt;certificate&gt;
 指定用于向客户端验证服务器的 X.509 证书。  
