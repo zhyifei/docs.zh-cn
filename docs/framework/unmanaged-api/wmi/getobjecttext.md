@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459634"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 函数
 返回对象的文本呈现中的托管对象格式 (MOF) 语法。
@@ -77,7 +78,7 @@ HRESULT GetObjectText (
 `pstrObjectText` 必须是指向`null`函数调用时，它必须不指向是之前调用方法有效，因为将会释放指针的字符串。
 
 ## <a name="requirements"></a>要求  
-**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

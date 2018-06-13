@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597391"
 ---
 # <a name="in-clause-visual-basic"></a>In 子句 (Visual Basic)
 指定循环变量是中遍历的组`For Each`循环中，或指定查询中的集合`From`， `Join`，或`Group Join`子句。  

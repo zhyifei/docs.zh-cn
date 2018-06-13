@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553892"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>如何：更改 ListView 中列的水平对齐方式
 默认情况下，每个列中的内容<xref:System.Windows.Controls.ListViewItem>是左对齐。 你可以通过提供更改每个列的对齐方式<xref:System.Windows.DataTemplate>和设置<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>中元素的属性上<xref:System.Windows.DataTemplate>。 本主题说明如何<xref:System.Windows.Controls.ListView>对齐其内容默认情况下和如何更改中的一列的对齐方式<xref:System.Windows.Controls.ListView>。  

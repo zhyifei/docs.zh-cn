@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596728"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>移位运算符 (Visual Basic)
 以下是在 Visual Basic 中定义的位 shift 运算符。  

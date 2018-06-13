@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582195"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>获取有关计算机的信息 (Visual Basic)
 `My.Computer.Info` 对象提供了一些属性，可用于获取有关计算机内存、已加载的程序集、名称以及操作系统的信息。  

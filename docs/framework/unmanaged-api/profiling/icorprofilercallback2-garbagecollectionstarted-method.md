@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a447dca98e5010163d5cc5f4f3da4333f4cdf7d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455265"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted 方法
 通知垃圾回收已启动代码探查器。  
@@ -53,7 +54,7 @@ HRESULT GarbageCollectionStarted(
  它是安全的探查器检查在其原始位置中的对象`GarbageCollectionStarted`回调。 垃圾回收器将从返回后开始移动对象`GarbageCollectionStarted`。 探查器从此回调返回后，探查器应考虑为无效，直至其收到的所有对象 Id`ICorProfilerCallback2::GarbageCollectionFinished`回调。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588774"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>后期绑定解决方案；可能会发生运行时错误
 一个对象分配给变量声明为[Object 数据类型](../../../visual-basic/language-reference/data-types/object-data-type.md)。  

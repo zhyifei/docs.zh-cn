@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bebee019595143d25e950719ad62d9e10b76a3e9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418901"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName 方法
 获取模块的文件名。  
@@ -50,7 +51,7 @@ HRESULT GetName(
  `GetName`方法返回，则为 S_OK HRESULT，如果模块的文件名称与磁盘上的名称相匹配。 `GetName` 如果名称为虚构，例如对于动态或内存中的模块，请返回一个 S_FALSE HRESULT。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

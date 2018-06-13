@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbaba00e029729fff5ad478a50134ff1e1858c0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443444"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo 结构
 提供有关引用的模块和包含它的程序集的详细的信息。  
@@ -47,11 +48,11 @@ typedef struct _ModuleBindInfo {
  `ModuleBindInfo` 作为参数传递给传递`IHostAssemblyStore::ProvideModule`。 主机提供的唯一标识符`dwAppDomainId`公共语言运行时 (CLR)。 调用了[ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)方法返回时，运行时使用标识符来确定是否的内容`IStream`已映射。 如果是这样，则运行时将加载现有的副本，而不是无需重新映射流。 运行时将此标识符还用作查找键从调用返回的流的`IHostAssemblyStore::ProvideAssembly`方法。 因此，该标识符必须是唯一的模块的请求与程序集请求。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.idl  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

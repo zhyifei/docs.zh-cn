@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493037"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>如何：使用 X.509 证书保证服务的安全
 保护具有 X.509 证书的服务是大多数绑定中 Windows Communication Foundation (WCF) 使用的基本技术。 本主题演练使用 X.509 证书配置自承载服务的步骤。  

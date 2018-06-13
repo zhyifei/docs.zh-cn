@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2ce139669c0a31301f3eecdef4b4d61f83d5e4e1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458934"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx 函数
 获取一个值，该值在提供的路径的程序集清单是否包含强名称签名。  
@@ -55,11 +56,11 @@ BOOLEAN StrongNameSignatureVerificationEx (
  `StrongNameSignatureVerificationEx` 提供了类似于一功能[StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)函数。 但是，第二个输入参数和输出参数为`StrongNameSignatureVerificationEx`属于类型`BOOLEAN`而不是`DWORD`。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** StrongName.h  
   
- **库：**作为 mscoree.dll 中的资源  
+ **库：** 作为 mscoree.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
