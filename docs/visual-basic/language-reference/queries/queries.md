@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604778"
 ---
 # <a name="queries-visual-basic"></a><span data-ttu-id="3703e-102">查询 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3703e-102">Queries (Visual Basic)</span></span>
 <span data-ttu-id="3703e-103">Visual Basic 使你能够创建[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]在代码中的表达式。</span><span class="sxs-lookup"><span data-stu-id="3703e-103">Visual Basic enables you to create [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  

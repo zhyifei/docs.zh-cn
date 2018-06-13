@@ -1,39 +1,30 @@
 ---
-title: "如何： 加载和卸载程序集 (Visual Basic)"
-ms.custom: 
+title: 如何： 加载和卸载程序集 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bbc84236-04b6-4c1b-9672-52773f65a5dc
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fd52a1094dba16c7e1bcba5bface9e13747cd4f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1cec7a7e15843874b65cf5d2f3a23b8e644a26d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640565"
 ---
-# <a name="how-to-load-and-unload-assemblies-visual-basic"></a><span data-ttu-id="0f6bc-102">如何： 加载和卸载程序集 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f6bc-102">How to: Load and Unload Assemblies (Visual Basic)</span></span>
-<span data-ttu-id="0f6bc-103">在生成时自动加载程序所引用的程序集，但也可以在运行时将特定的程序集加载到当前的应用程序域。</span><span class="sxs-lookup"><span data-stu-id="0f6bc-103">The assemblies referenced by your program will automatically be loaded at build time, but it is also possible to load specific assemblies into the current application domain at runtime.</span></span> <span data-ttu-id="0f6bc-104">有关详细信息，请参阅 [How to: Load Assemblies into an Application Domain](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)（如何：将程序集加载到应用程序域中）。</span><span class="sxs-lookup"><span data-stu-id="0f6bc-104">For more information, see [How to: Load Assemblies into an Application Domain](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).</span></span>  
+# <a name="how-to-load-and-unload-assemblies-visual-basic"></a><span data-ttu-id="c43a3-102">如何： 加载和卸载程序集 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c43a3-102">How to: Load and Unload Assemblies (Visual Basic)</span></span>
+<span data-ttu-id="c43a3-103">在生成时自动加载程序所引用的程序集，但也可以在运行时将特定的程序集加载到当前的应用程序域。</span><span class="sxs-lookup"><span data-stu-id="c43a3-103">The assemblies referenced by your program will automatically be loaded at build time, but it is also possible to load specific assemblies into the current application domain at runtime.</span></span> <span data-ttu-id="c43a3-104">有关详细信息，请参阅 [How to: Load Assemblies into an Application Domain](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)（如何：将程序集加载到应用程序域中）。</span><span class="sxs-lookup"><span data-stu-id="c43a3-104">For more information, see [How to: Load Assemblies into an Application Domain](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).</span></span>  
   
- <span data-ttu-id="0f6bc-105">在没有卸载所有包含单个程序集的应用程序域之前，无法卸载此程序集。</span><span class="sxs-lookup"><span data-stu-id="0f6bc-105">There is no way to unload an individual assembly without unloading all of the application domains that contain it.</span></span> <span data-ttu-id="0f6bc-106">即使程序集不在范围之内，在卸载包含它的所有应用程序域之前，实际的程序集文件都将保持加载状态。</span><span class="sxs-lookup"><span data-stu-id="0f6bc-106">Even if the assembly goes out of scope, the actual assembly file will remain loaded until all application domains that contain it are unloaded.</span></span>  
+ <span data-ttu-id="c43a3-105">在没有卸载所有包含单个程序集的应用程序域之前，无法卸载此程序集。</span><span class="sxs-lookup"><span data-stu-id="c43a3-105">There is no way to unload an individual assembly without unloading all of the application domains that contain it.</span></span> <span data-ttu-id="c43a3-106">即使程序集不在范围之内，在卸载包含它的所有应用程序域之前，实际的程序集文件都将保持加载状态。</span><span class="sxs-lookup"><span data-stu-id="c43a3-106">Even if the assembly goes out of scope, the actual assembly file will remain loaded until all application domains that contain it are unloaded.</span></span>  
   
- <span data-ttu-id="0f6bc-107">如果想要卸载某些程序集而不是其他程序集，请考虑创建一个新的应用程序域，在此域中执行代码，然后卸载此应用程序域。</span><span class="sxs-lookup"><span data-stu-id="0f6bc-107">If you want to unload some assemblies but not others, consider creating a new application domain, executing the code inside that domain, and then unloading that application domain.</span></span> <span data-ttu-id="0f6bc-108">有关详细信息，请参阅 [How to: Unload an Application Domain](../../../../framework/app-domains/how-to-unload-an-application-domain.md)（如何：卸载应用程序域）。</span><span class="sxs-lookup"><span data-stu-id="0f6bc-108">For more information, see [How to: Unload an Application Domain](../../../../framework/app-domains/how-to-unload-an-application-domain.md).</span></span>  
+ <span data-ttu-id="c43a3-107">如果想要卸载某些程序集而不是其他程序集，请考虑创建一个新的应用程序域，在此域中执行代码，然后卸载此应用程序域。</span><span class="sxs-lookup"><span data-stu-id="c43a3-107">If you want to unload some assemblies but not others, consider creating a new application domain, executing the code inside that domain, and then unloading that application domain.</span></span> <span data-ttu-id="c43a3-108">有关详细信息，请参阅 [How to: Unload an Application Domain](../../../../framework/app-domains/how-to-unload-an-application-domain.md)（如何：卸载应用程序域）。</span><span class="sxs-lookup"><span data-stu-id="c43a3-108">For more information, see [How to: Unload an Application Domain](../../../../framework/app-domains/how-to-unload-an-application-domain.md).</span></span>  
   
-### <a name="to-load-an-assembly-into-an-application-domain"></a><span data-ttu-id="0f6bc-109">将程序集加载到应用程序域中</span><span class="sxs-lookup"><span data-stu-id="0f6bc-109">To load an assembly into an application domain</span></span>  
+### <a name="to-load-an-assembly-into-an-application-domain"></a><span data-ttu-id="c43a3-109">将程序集加载到应用程序域中</span><span class="sxs-lookup"><span data-stu-id="c43a3-109">To load an assembly into an application domain</span></span>  
   
-1.  <span data-ttu-id="0f6bc-110">使用 <xref:System.AppDomain> 和 <xref:System.Reflection> 类中包含的几种加载方法中的一种。</span><span class="sxs-lookup"><span data-stu-id="0f6bc-110">Use one of the several load methods contained in the classes <xref:System.AppDomain> and <xref:System.Reflection>.</span></span> <span data-ttu-id="0f6bc-111">有关详细信息，请参阅 [How to: Load Assemblies into an Application Domain](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)（如何：将程序集加载到应用程序域中）。</span><span class="sxs-lookup"><span data-stu-id="0f6bc-111">For more information, see [How to: Load Assemblies into an Application Domain](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).</span></span>  
+1.  <span data-ttu-id="c43a3-110">使用 <xref:System.AppDomain> 和 <xref:System.Reflection> 类中包含的几种加载方法中的一种。</span><span class="sxs-lookup"><span data-stu-id="c43a3-110">Use one of the several load methods contained in the classes <xref:System.AppDomain> and <xref:System.Reflection>.</span></span> <span data-ttu-id="c43a3-111">有关详细信息，请参阅 [How to: Load Assemblies into an Application Domain](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)（如何：将程序集加载到应用程序域中）。</span><span class="sxs-lookup"><span data-stu-id="c43a3-111">For more information, see [How to: Load Assemblies into an Application Domain](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).</span></span>  
   
-### <a name="to-unload-an-application-domain"></a><span data-ttu-id="0f6bc-112">卸载应用程序域</span><span class="sxs-lookup"><span data-stu-id="0f6bc-112">To unload an application domain</span></span>  
+### <a name="to-unload-an-application-domain"></a><span data-ttu-id="c43a3-112">卸载应用程序域</span><span class="sxs-lookup"><span data-stu-id="c43a3-112">To unload an application domain</span></span>  
   
-1.  <span data-ttu-id="0f6bc-113">在没有卸载所有包含单个程序集的应用程序域之前，无法卸载此程序集。</span><span class="sxs-lookup"><span data-stu-id="0f6bc-113">There is no way to unload an individual assembly without unloading all of the application domains that contain it.</span></span> <span data-ttu-id="0f6bc-114">使用 <xref:System.AppDomain> 中的 `Unload` 方法卸载应用程序域。</span><span class="sxs-lookup"><span data-stu-id="0f6bc-114">Use the `Unload` method from <xref:System.AppDomain> to unload the application domains.</span></span> <span data-ttu-id="0f6bc-115">有关详细信息，请参阅 [How to: Unload an Application Domain](../../../../framework/app-domains/how-to-unload-an-application-domain.md)（如何：卸载应用程序域）。</span><span class="sxs-lookup"><span data-stu-id="0f6bc-115">For more information, see [How to: Unload an Application Domain](../../../../framework/app-domains/how-to-unload-an-application-domain.md).</span></span>  
+1.  <span data-ttu-id="c43a3-113">在没有卸载所有包含单个程序集的应用程序域之前，无法卸载此程序集。</span><span class="sxs-lookup"><span data-stu-id="c43a3-113">There is no way to unload an individual assembly without unloading all of the application domains that contain it.</span></span> <span data-ttu-id="c43a3-114">使用 <xref:System.AppDomain> 中的 `Unload` 方法卸载应用程序域。</span><span class="sxs-lookup"><span data-stu-id="c43a3-114">Use the `Unload` method from <xref:System.AppDomain> to unload the application domains.</span></span> <span data-ttu-id="c43a3-115">有关详细信息，请参阅 [How to: Unload an Application Domain](../../../../framework/app-domains/how-to-unload-an-application-domain.md)（如何：卸载应用程序域）。</span><span class="sxs-lookup"><span data-stu-id="c43a3-115">For more information, see [How to: Unload an Application Domain](../../../../framework/app-domains/how-to-unload-an-application-domain.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0f6bc-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0f6bc-116">See Also</span></span>  
- [<span data-ttu-id="0f6bc-117">编程概念</span><span class="sxs-lookup"><span data-stu-id="0f6bc-117">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)  
- [<span data-ttu-id="0f6bc-118">程序集和全局程序集缓存 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f6bc-118">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [<span data-ttu-id="0f6bc-119">如何：将程序集加载到应用程序域中</span><span class="sxs-lookup"><span data-stu-id="0f6bc-119">How to: Load Assemblies into an Application Domain</span></span>](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)
+## <a name="see-also"></a><span data-ttu-id="c43a3-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="c43a3-116">See Also</span></span>  
+ [<span data-ttu-id="c43a3-117">编程概念</span><span class="sxs-lookup"><span data-stu-id="c43a3-117">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)  
+ [<span data-ttu-id="c43a3-118">程序集和全局程序集缓存 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c43a3-118">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="c43a3-119">如何：将程序集加载到应用程序域中</span><span class="sxs-lookup"><span data-stu-id="c43a3-119">How to: Load Assemblies into an Application Domain</span></span>](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)
