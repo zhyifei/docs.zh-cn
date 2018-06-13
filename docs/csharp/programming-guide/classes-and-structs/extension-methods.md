@@ -11,6 +11,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172602"
 ---
 # <a name="extension-methods-c-programming-guide"></a><span data-ttu-id="ebe77-102">扩展方法（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="ebe77-102">Extension Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="ebe77-103">扩展方法使你能够向现有类型“添加”方法，而无需创建新的派生类型、重新编译或以其他方式修改原始类型。</span><span class="sxs-lookup"><span data-stu-id="ebe77-103">Extension methods enable you to "add" methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type.</span></span> <span data-ttu-id="ebe77-104">扩展方法是一种特殊的静态方法，但可以像扩展类型上的实例方法一样进行调用。</span><span class="sxs-lookup"><span data-stu-id="ebe77-104">Extension methods are a special kind of static method, but they are called as if they were instance methods on the extended type.</span></span> <span data-ttu-id="ebe77-105">对于用 C#、F# 和 Visual Basic 编写的客户端代码，调用扩展方法与调用在类型中实际定义的方法没有明显区别。</span><span class="sxs-lookup"><span data-stu-id="ebe77-105">For client code written in C#, F# and Visual Basic, there is no apparent difference between calling an extension method and the methods that are actually defined in a type.</span></span>  

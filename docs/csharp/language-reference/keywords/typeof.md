@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171936"
 ---
 # <a name="typeof-c-reference"></a><span data-ttu-id="818a2-102">typeof（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="818a2-102">typeof (C# Reference)</span></span>
 <span data-ttu-id="818a2-103">用于为类型获取 `System.Type` 对象。</span><span class="sxs-lookup"><span data-stu-id="818a2-103">Used to obtain the `System.Type` object for a type.</span></span> <span data-ttu-id="818a2-104">`typeof` 表达式采用以下格式：</span><span class="sxs-lookup"><span data-stu-id="818a2-104">A `typeof` expression takes the following form:</span></span>  

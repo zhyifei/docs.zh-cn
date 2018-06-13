@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9812fa4248533ccb898c98082e42e288c091f776
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420579"
 ---
 # <a name="icordebugtypeenumnext-method"></a><span data-ttu-id="f8d07-102">ICorDebugTypeEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="f8d07-102">ICorDebugTypeEnum::Next Method</span></span>
 <span data-ttu-id="f8d07-103">获取由指定的"ICorDebugType"实例数`celt`从枚举中的当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="f8d07-103">Gets the number of "ICorDebugType" instances specified by `celt` from the enumeration, starting at the current position.</span></span>  

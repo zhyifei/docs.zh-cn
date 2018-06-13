@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403765"
 ---
 # <a name="return-properties-from-a-ui-automation-provider"></a><span data-ttu-id="f148e-102">从 UI 自动化提供程序返回属性</span><span class="sxs-lookup"><span data-stu-id="f148e-102">Return Properties from a UI Automation Provider</span></span>
 > [!NOTE]

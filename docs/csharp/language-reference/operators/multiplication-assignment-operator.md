@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171545"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="a2957-102">\*= 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="a2957-102">\*= Operator (C# Reference)</span></span>
 <span data-ttu-id="a2957-103">二进制乘法赋值运算符。</span><span class="sxs-lookup"><span data-stu-id="a2957-103">The binary multiplication assignment operator.</span></span>  

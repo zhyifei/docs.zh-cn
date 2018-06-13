@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563792"
 ---
 # <a name="xshared-attribute"></a><span data-ttu-id="89af3-102">x:Shared 特性</span><span class="sxs-lookup"><span data-stu-id="89af3-102">x:Shared Attribute</span></span>
 <span data-ttu-id="89af3-103">当设置为`false`，修改 WPF 资源检索行为，以便对特性化的资源的请求创建的每个请求而不是共享同一个实例的所有请求的新实例。</span><span class="sxs-lookup"><span data-stu-id="89af3-103">When set to `false`, modifies WPF resource-retrieval behavior so that requests for the attributed resource create a new instance for each request instead of sharing the same instance for all requests.</span></span>  

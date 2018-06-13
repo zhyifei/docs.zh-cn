@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561886"
 ---
 # <a name="xamlname-grammar"></a><span data-ttu-id="44b27-102">XamlName 语法</span><span class="sxs-lookup"><span data-stu-id="44b27-102">XamlName Grammar</span></span>
 <span data-ttu-id="44b27-103">XamlName 语法是 XAML 语言规范 [MS-XAML]，这将为方便起见在此处重现中定义特定语法。</span><span class="sxs-lookup"><span data-stu-id="44b27-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573021"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a><span data-ttu-id="0fece-102">抽象（抽象类型和接口）</span><span class="sxs-lookup"><span data-stu-id="0fece-102">Abstractions (Abstract Types and Interfaces)</span></span>
 <span data-ttu-id="0fece-103">一种抽象是描述的协定，但不提供完整实现的协定的类型。</span><span class="sxs-lookup"><span data-stu-id="0fece-103">An abstraction is a type that describes a contract but does not provide a full implementation of the contract.</span></span> <span data-ttu-id="0fece-104">通常作为抽象类或接口，实现的抽象，而且随附一组明确定义的参考文档描述实现协定的类型所需的语义。</span><span class="sxs-lookup"><span data-stu-id="0fece-104">Abstractions are usually implemented as abstract classes or interfaces, and they come with a well-defined set of reference documentation describing the required semantics of the types implementing the contract.</span></span> <span data-ttu-id="0fece-105">.NET Framework 中最重要的抽象的一些包括<xref:System.IO.Stream>， <xref:System.Collections.Generic.IEnumerable%601>，和<xref:System.Object>。</span><span class="sxs-lookup"><span data-stu-id="0fece-105">Some of the most important abstractions in the .NET Framework include <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, and <xref:System.Object>.</span></span>  

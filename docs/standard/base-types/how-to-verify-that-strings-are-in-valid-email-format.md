@@ -25,6 +25,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172319"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a><span data-ttu-id="16ff7-102">如何：确认字符串是有效的电子邮件格式</span><span class="sxs-lookup"><span data-stu-id="16ff7-102">How to: Verify that Strings Are in Valid Email Format</span></span>
 <span data-ttu-id="16ff7-103">下面的示例使用正则表达式来验证一个字符串是否为有效的电子邮件格式。</span><span class="sxs-lookup"><span data-stu-id="16ff7-103">The following example uses a regular expression to verify that a string is in valid email format.</span></span>  

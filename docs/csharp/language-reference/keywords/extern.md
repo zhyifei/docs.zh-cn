@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172288"
 ---
 # <a name="extern-c-reference"></a><span data-ttu-id="47688-102">extern（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="47688-102">extern (C# Reference)</span></span>
 <span data-ttu-id="47688-103">`extern` 修饰符用于声明在外部实现的方法。</span><span class="sxs-lookup"><span data-stu-id="47688-103">The `extern` modifier is used to declare a method that is implemented externally.</span></span> <span data-ttu-id="47688-104">`extern` 修饰符的常见用法是在使用 Interop 服务调入非托管代码时与 `DllImport` 特性一起使用。</span><span class="sxs-lookup"><span data-stu-id="47688-104">A common use of the `extern` modifier is with the `DllImport` attribute when you are using Interop services to call into unmanaged code.</span></span> <span data-ttu-id="47688-105">在这种情况下，还必须将方法声明为 `static`，如下面的示例所示：</span><span class="sxs-lookup"><span data-stu-id="47688-105">In this case, the method must also be declared as `static`, as shown in the following example:</span></span>  

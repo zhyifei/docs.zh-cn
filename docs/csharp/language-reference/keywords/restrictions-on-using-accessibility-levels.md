@@ -9,6 +9,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172404"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a><span data-ttu-id="23c49-102">可访问性级别的使用限制（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="23c49-102">Restrictions on Using Accessibility Levels (C# Reference)</span></span>
 <span data-ttu-id="23c49-103">在声明中指定类型时，检查类型的可访问性级别是否依赖于成员或其他类型的可访问性级别。</span><span class="sxs-lookup"><span data-stu-id="23c49-103">When you specify a type in a declaration, check whether the accessibility level of the type is dependent on the accessibility level of a member or of another type.</span></span> <span data-ttu-id="23c49-104">例如，直接基类必须至少具有与派生类相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="23c49-104">For example, the direct base class must be at least as accessible as the derived class.</span></span> <span data-ttu-id="23c49-105">以下声明会导致编译器错误，因为基类 `BaseClass` 的可访问性低于 `MyClass`：</span><span class="sxs-lookup"><span data-stu-id="23c49-105">The following declarations cause a compiler error because the base class `BaseClass` is less accessible than `MyClass`:</span></span>  

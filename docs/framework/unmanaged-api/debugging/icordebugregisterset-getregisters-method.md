@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: deaeb4e244a4f9c1e8582d9bea26c2ae5cfde818
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421345"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a><span data-ttu-id="874de-102">ICorDebugRegisterSet::GetRegisters 方法</span><span class="sxs-lookup"><span data-stu-id="874de-102">ICorDebugRegisterSet::GetRegisters Method</span></span>
 <span data-ttu-id="874de-103">（在计算机上当前正在执行代码） 中获取的每个寄存器的值指定的位掩码。</span><span class="sxs-lookup"><span data-stu-id="874de-103">Gets the value of each register (on the computer that is currently executing code) that is specified by the bit mask.</span></span>  

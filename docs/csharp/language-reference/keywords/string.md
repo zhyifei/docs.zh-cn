@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172157"
 ---
 # <a name="string-c-reference"></a><span data-ttu-id="1183c-102">string（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="1183c-102">string (C# Reference)</span></span>
 <span data-ttu-id="1183c-103">`string` 类型表示零个或多个 Unicode 字符的序列。</span><span class="sxs-lookup"><span data-stu-id="1183c-103">The `string` type represents a sequence of zero or more Unicode characters.</span></span> <span data-ttu-id="1183c-104">`string` 是 <xref:System.String> 在 .NET 中的别名。</span><span class="sxs-lookup"><span data-stu-id="1183c-104">`string` is an alias for <xref:System.String> in .NET.</span></span>  
