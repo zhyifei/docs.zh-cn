@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758862"
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>如何：在 Visual Studio 中创建 LINQ to DataSet 项目
 不同类型的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 项目需要某些导入的命名空间 (Visual Basic) 或 `using` 指令 (C#) 和引用。 最低要求是对 System.Core.dll 的引用和针对 `using` 的 <xref:System.Linq> 指令。 默认情况下，如果创建一个新的 [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] 项目，这些都可以自动提供。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 还需要对 System.Data.dll 和 System.Data.DataSetExtensions.dll 的引用以及 `Imports` (Visual Basic) 或 `using` (C#) 指令。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  对于 Visual Basic 项目中，单击**项目**菜单，，然后单击**属性**。  
   
-    1.  在**编译**属性页中，单击**高级编译选项**，然后选择中的.NET Framework 3.5**目标 Framework （所有配置）**下拉列表。  
+    1.  在**编译**属性页中，单击**高级编译选项**，然后选择中的.NET Framework 3.5**目标 Framework （所有配置）** 下拉列表。  
   
 4.  上**项目**菜单上，单击**添加引用**，单击 **.NET**选项卡上，向下滚动到**System.Core**，请单击它，，然后单击**确定**。  
   

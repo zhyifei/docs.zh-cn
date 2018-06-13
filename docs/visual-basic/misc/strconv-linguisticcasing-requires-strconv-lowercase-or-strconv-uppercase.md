@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639579"
 ---
 # <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a>&#39;StrConv.LinguisticCasing&#39;需要&#39;StrConv.LowerCase&#39;或&#39;StrConv.UpperCase&#39;
 你尝试使用 `StrConv.LinguisticCasing`，这只在与 `StrConv.LowerCase` 或 `StrConv.UpperCase`结合使用时才有效。  

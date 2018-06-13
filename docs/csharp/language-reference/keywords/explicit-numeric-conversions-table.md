@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218379"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>显式数值转换表（C# 参考）
 显式数值转换用于使用强制转换表达式将任何数值类型转换为任何其他数值类型，其中不存在任何隐式转换。 下表显示了这些转换。  

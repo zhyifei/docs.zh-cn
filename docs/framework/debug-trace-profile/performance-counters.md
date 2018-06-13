@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394415"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的性能计数器
 本主题提供可在[性能监视器](http://technet.microsoft.com/library/cc749249.aspx)中找到的性能计数器列表。  

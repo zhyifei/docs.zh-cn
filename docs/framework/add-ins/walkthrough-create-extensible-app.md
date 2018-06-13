@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744819"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>演练：创建可扩展的应用程序
 本演练介绍如何创建用于执行简单的计算器功能的外接程序的管道。 它并不演示实际方案;相反，它演示了管道以及如何外接程序可以提供主机服务的基本功能。  

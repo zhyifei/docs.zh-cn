@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542748"
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a>如何：确定 Freezable 是否处于冻结状态
 此示例演示如何确定是否<xref:System.Windows.Freezable>对象被冻结。 如果你尝试修改冻结<xref:System.Windows.Freezable>对象，它将引发<xref:System.InvalidOperationException>。 若要避免发生此异常，请使用<xref:System.Windows.Freezable.IsFrozen%2A>属性<xref:System.Windows.Freezable>对象以确定是否已被冻结。  

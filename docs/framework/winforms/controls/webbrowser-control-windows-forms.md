@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538588"
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser 控件（Windows 窗体）
 Windows 窗体`WebBrowser`的控件承载网页并提供 Web 浏览到你的应用程序的功能。  

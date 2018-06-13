@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: caeb60c33580f7171a6959c3046cf7312868851b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420549"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains 方法
 获取包含此 ICorDebugThread 对象中的所有堆栈链的 ICorDebugChainEnum 枚举的接口指针。  
@@ -52,7 +53,7 @@ HRESULT EnumerateChains (
  调试器可能需要重新排列为逻辑调用堆栈的所有线程的物理调用堆栈。 这将涉及对所有线程的链通过其调用方/被调用方关系进行排序和重新分组。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

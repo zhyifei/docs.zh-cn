@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565006"
 ---
 # <a name="xarray-markup-extension"></a>x:Array 标记扩展
 提供对 XAML 中通过标记扩展的对象数组的常规支持。 这对应于`x:ArrayExtension`[MS-XAML] 中的 XAML 类型。  

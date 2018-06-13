@@ -16,13 +16,14 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759265"
 ---
 # <a name="redirecting-assembly-versions"></a>重定向程序集版本
 你可以将编译时绑定引用重定向到 .NET Framework 程序集、第三方程序集或你自己的应用的程序集。 你还可以重定向应用，以通过多种方式使用不同版本的程序集：通过发布服务器策略、通过应用配置文件或通过计算机配置文件。 本文讨论了程序集绑定在 .NET Framework 中的工作原理以及如何对其进行配置。  
   
 <a name="BKMK_Assemblyunificationanddefaultbinding"></a>   
 ## <a name="assembly-unification-and-default-binding"></a>程序集统一和默认绑定  
- 到 .NET Framework 程序集的绑定有时会通过称为 *“程序集统一”*的过程进行重定向。 .NET Framework 包括一个公共语言运行时版本和构成类型库的约二十个 .NET Framework 程序集。 运行时将这些 .NET Framework 程序集视为单个单元。 默认情况下，当启动应用时，由运行时运行的所有对代码中的类型的引用都将定向到具有与进程中加载的运行时相同的版本号的 .NET Framework 程序集。 此模型发生的重定向是运行时的默认行为。  
+ 到 .NET Framework 程序集的绑定有时会通过称为 *“程序集统一”* 的过程进行重定向。 .NET Framework 包括一个公共语言运行时版本和构成类型库的约二十个 .NET Framework 程序集。 运行时将这些 .NET Framework 程序集视为单个单元。 默认情况下，当启动应用时，由运行时运行的所有对代码中的类型的引用都将定向到具有与进程中加载的运行时相同的版本号的 .NET Framework 程序集。 此模型发生的重定向是运行时的默认行为。  
   
  例如，如果你的应用引用 System.XML 命名空间中的类型并使用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]生成，则它包含对 System.XML 程序集（随附运行时版本 4.5）的静态引用。 如果想要重定向绑定引用，以指向 System.XML 程序集（随附 .NET Framework 4），你可以将重定向信息放在应用配置文件中。 统一的 .NET Framework 程序集的配置文件中的绑定重定向将取消该程序集的统一。  
   
