@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cbcd3ae758add4beec24959314d2cf806c2a2b3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435688"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a><span data-ttu-id="d5038-102">ICLRGCManager::SetGCStartupLimits 方法</span><span class="sxs-lookup"><span data-stu-id="d5038-102">ICLRGCManager::SetGCStartupLimits Method</span></span>
 <span data-ttu-id="d5038-103">设置的垃圾回收段的大小和第 0 代垃圾回收系统的最大大小。</span><span class="sxs-lookup"><span data-stu-id="d5038-103">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span>  

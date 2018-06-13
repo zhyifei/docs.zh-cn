@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538778"
 ---
 # <a name="tooltip-component-windows-forms"></a><span data-ttu-id="c011b-102">ToolTip 组件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="c011b-102">ToolTip Component (Windows Forms)</span></span>
 <span data-ttu-id="c011b-103">Windows 窗体 <xref:System.Windows.Forms.ToolTip> 组件在用户指向控件时显示文本。</span><span class="sxs-lookup"><span data-stu-id="c011b-103">The Windows Forms <xref:System.Windows.Forms.ToolTip> component displays text when the user points at controls.</span></span> <span data-ttu-id="c011b-104">ToolTip 可与任何控件关联。</span><span class="sxs-lookup"><span data-stu-id="c011b-104">A ToolTip can be associated with any control.</span></span> <span data-ttu-id="c011b-105">此控件的一个用法示例：为了节省窗体上的空间，可在按钮上显示一个小图标，并使用 ToolTip 来解释按钮功能。</span><span class="sxs-lookup"><span data-stu-id="c011b-105">An example use of this control: In order to save space on a form, you can display a small icon on a button and use a ToolTip to explain the button's function.</span></span>  

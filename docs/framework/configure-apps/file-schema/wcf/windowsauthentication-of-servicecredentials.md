@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767539"
 ---
 # <a name="ltwindowsauthenticationgt-of-ltservicecredentialsgt"></a><span data-ttu-id="8afaf-102">&lt;serviceCredentials&gt; 的 &lt;windowsAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="8afaf-102">&lt;windowsAuthentication&gt; of &lt;serviceCredentials&gt;</span></span>
 <span data-ttu-id="8afaf-103">指定 Windows 服务凭据的设置。</span><span class="sxs-lookup"><span data-stu-id="8afaf-103">Specifies the settings of a Windows service credential.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751345"
 ---
 # <a name="ltmsmqtransportgt"></a><span data-ttu-id="15e61-102">&lt;msmqTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="15e61-102">&lt;msmqTransport&gt;</span></span>
 <span data-ttu-id="15e61-103">使通道在被包括到自定义绑定中时通过 MSMQ 传输来传送消息。</span><span class="sxs-lookup"><span data-stu-id="15e61-103">Causes a channel to transfers messages on the MSMQ transport when it is included in a custom binding.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767149"
 ---
 # <a name="net-framework-data-providers"></a><span data-ttu-id="0ca10-102">.NET Framework 数据提供程序</span><span class="sxs-lookup"><span data-stu-id="0ca10-102">.NET Framework Data Providers</span></span>
 <span data-ttu-id="0ca10-103">[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序用于连接到数据库、执行命令和检索结果。</span><span class="sxs-lookup"><span data-stu-id="0ca10-103">A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] data provider is used for connecting to a database, executing commands, and retrieving results.</span></span> <span data-ttu-id="0ca10-104">这些结果将被直接处理，放置在 <xref:System.Data.DataSet> 中以便根据需要向用户公开、与多个源中的数据组合，或在层之间进行远程处理。</span><span class="sxs-lookup"><span data-stu-id="0ca10-104">Those results are either processed directly, placed in a <xref:System.Data.DataSet> in order to be exposed to the user as needed, combined with data from multiple sources, or remoted between tiers.</span></span> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]<span data-ttu-id="0ca10-105"> 数据提供程序是轻量的，它在数据源和代码之间创建最小的分层，并在不降低功能性的情况下提高性能。</span><span class="sxs-lookup"><span data-stu-id="0ca10-105"> data providers are lightweight, creating a minimal layer between the data source and code, increasing performance without sacrificing functionality.</span></span>  

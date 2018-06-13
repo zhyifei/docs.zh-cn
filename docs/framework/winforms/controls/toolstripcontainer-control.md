@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538843"
 ---
 # <a name="toolstripcontainer-control"></a><span data-ttu-id="42f54-102">ToolStripContainer 控件</span><span class="sxs-lookup"><span data-stu-id="42f54-102">ToolStripContainer Control</span></span>
 <span data-ttu-id="42f54-103"><xref:System.Windows.Forms.ToolStrip> 控件通过使用 <xref:System.Windows.Forms.ToolStripContainer> 而具有内置漂浮功能（停靠时在工具区域中共享水平或垂直空间）。</span><span class="sxs-lookup"><span data-stu-id="42f54-103"><xref:System.Windows.Forms.ToolStrip> controls feature built-in rafting (sharing of horizontal or vertical space within the tool area when docked) by using the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>  

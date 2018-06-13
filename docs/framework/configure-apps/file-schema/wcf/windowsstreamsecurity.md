@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755105"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a><span data-ttu-id="51313-102">&lt;windowsstreamsecurity 正在&gt;</span><span class="sxs-lookup"><span data-stu-id="51313-102">&lt;windowsStreamSecurity&gt;</span></span>
 <span data-ttu-id="51313-103">指定自定义绑定的 Windows 流安全设置。</span><span class="sxs-lookup"><span data-stu-id="51313-103">Specify Windows stream security settings of the custom binding.</span></span>  

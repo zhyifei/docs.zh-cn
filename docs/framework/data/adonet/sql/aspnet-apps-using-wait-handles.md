@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356458"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a><span data-ttu-id="f3fdf-102">使用等待句柄的 ASP.NET 应用程序</span><span class="sxs-lookup"><span data-stu-id="f3fdf-102">ASP.NET Applications Using Wait Handles</span></span>
 <span data-ttu-id="f3fdf-103">在您的应用程序一次只处理一个异步操作时，用于处理异步操作的回调和轮询模型十分有用。</span><span class="sxs-lookup"><span data-stu-id="f3fdf-103">The callback and polling models for handling asynchronous operations are useful when your application is processing only one asynchronous operation at a time.</span></span> <span data-ttu-id="f3fdf-104">等待模型提供了一种更灵活的方式来处理多个异步操作。</span><span class="sxs-lookup"><span data-stu-id="f3fdf-104">The Wait models provide a more flexible way of processing multiple asynchronous operations.</span></span> <span data-ttu-id="f3fdf-105">有两种等待模型，是根据用于实现它们的 <xref:System.Threading.WaitHandle> 方法命名的：等待（任何）模型和等待（所有）模型。</span><span class="sxs-lookup"><span data-stu-id="f3fdf-105">There are two Wait models, named for the <xref:System.Threading.WaitHandle> methods used to implement them: the Wait (Any) model and the Wait (All) model.</span></span>  

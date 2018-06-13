@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764211"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a><span data-ttu-id="ad8ae-102">Null 文本和类型推理 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="ad8ae-102">Null Literals and Type Inference (Entity SQL)</span></span>
 <span data-ttu-id="ad8ae-103">Null 文本与 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 类型系统中的任何类型都兼容。</span><span class="sxs-lookup"><span data-stu-id="ad8ae-103">Null literals are compatible with any type in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] type system.</span></span> <span data-ttu-id="ad8ae-104">但是，为了正确进行 Null 文本类型推理，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 对何处可以使用 Null 文本实施某些约束。</span><span class="sxs-lookup"><span data-stu-id="ad8ae-104">However, for the type of a null literal to be inferred correctly, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] imposes certain constraints on where a null literal can be used.</span></span>  

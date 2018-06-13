@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393979"
 ---
 # <a name="cache-policy"></a><span data-ttu-id="688b4-102">缓存策略</span><span class="sxs-lookup"><span data-stu-id="688b4-102">Cache Policy</span></span>
 <span data-ttu-id="688b4-103">缓存策略定义规则，这些规则用于确定使用已请求资源的缓存副本是否可以满足请求。</span><span class="sxs-lookup"><span data-stu-id="688b4-103">A cache policy defines rules that are used to determine whether a request can be satisfied using a cached copy of the requested resource.</span></span> <span data-ttu-id="688b4-104">尽管应用程序为新鲜度指定客户端缓存要求，但有效的缓存策略是由客户端缓存要求、服务器的内容有效期限要求以及服务器的重新验证要求确定的。</span><span class="sxs-lookup"><span data-stu-id="688b4-104">Applications specify client cache requirements for freshness, but the effective cache policy is determined by the client cache requirements, the server's content expiration requirements, and the server's revalidation requirements.</span></span> <span data-ttu-id="688b4-105">客户端缓存策略和服务器要求的交互始终会造成最保守的缓存策略，有助于确保将最新鲜的内容返回给客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="688b4-105">The interaction of client cache policy and server requirements always results in the most conservative cache policy, to help ensure that the freshest content is returned to the client application.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539395"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a><span data-ttu-id="1c5f5-102">Windows 窗体中的拖放功能</span><span class="sxs-lookup"><span data-stu-id="1c5f5-102">Drag-and-Drop Functionality in Windows Forms</span></span>
 <span data-ttu-id="1c5f5-103">Windows 窗体包含一组实现拖放行为的方法、事件和类。</span><span class="sxs-lookup"><span data-stu-id="1c5f5-103">Windows Forms includes a set of methods, events, and classes that implement drag-and-drop behavior.</span></span> <span data-ttu-id="1c5f5-104">本主题概述了 Windows 窗体对拖放功能的支持。</span><span class="sxs-lookup"><span data-stu-id="1c5f5-104">This topic provides an overview of the drag-and-drop support in Windows Forms.</span></span>  <span data-ttu-id="1c5f5-105">另请参阅[拖放操作和剪贴板支持](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="1c5f5-105">Also see [Drag-and-Drop Operations and Clipboard Support](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).</span></span>  

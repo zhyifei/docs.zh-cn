@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e29c9c246649229900beba2fcc9ab482071ae46
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400661"
 ---
 # <a name="createalink-function"></a><span data-ttu-id="6c6d2-102">CreateALink 函数</span><span class="sxs-lookup"><span data-stu-id="6c6d2-102">CreateALink Function</span></span>
 <span data-ttu-id="6c6d2-103">创建的程序集链接器实例并设置为指定接口的指针。</span><span class="sxs-lookup"><span data-stu-id="6c6d2-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  

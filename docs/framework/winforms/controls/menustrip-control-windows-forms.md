@@ -1,95 +1,84 @@
 ---
-title: "MenuStrip 控件（Windows 窗体）"
-ms.custom: 
+title: MenuStrip 控件（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efa19aa185dac2d3eb821d2d7c29b02cbb0d1a65
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb4ea812318e5a7df6a1bffefa5d47bf2c929f2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540185"
 ---
-# <a name="menustrip-control-windows-forms"></a><span data-ttu-id="fcd19-102">MenuStrip 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="fcd19-102">MenuStrip Control (Windows Forms)</span></span>
-<span data-ttu-id="fcd19-103">此控件组应用程序对其执行命令并使其易访问。</span><span class="sxs-lookup"><span data-stu-id="fcd19-103">This control groups application commands and makes them easily accessible.</span></span>  
+# <a name="menustrip-control-windows-forms"></a><span data-ttu-id="d3bc2-102">MenuStrip 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="d3bc2-102">MenuStrip Control (Windows Forms)</span></span>
+<span data-ttu-id="d3bc2-103">此控件组应用程序对其执行命令并使其易访问。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-103">This control groups application commands and makes them easily accessible.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fcd19-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="fcd19-104">In This Section</span></span>  
- [<span data-ttu-id="fcd19-105">MenuStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="fcd19-105">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
- <span data-ttu-id="fcd19-106">说明控件是什么及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="fcd19-106">Explains what the control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d3bc2-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="d3bc2-104">In This Section</span></span>  
+ [<span data-ttu-id="d3bc2-105">MenuStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="d3bc2-105">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
+ <span data-ttu-id="d3bc2-106">说明控件是什么及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-106">Explains what the control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="fcd19-107">如何：向 ToolStripMenuItem 添加增强功能</span><span class="sxs-lookup"><span data-stu-id="fcd19-107">How to: Add Enhancements to ToolStripMenuItems</span></span>](../../../../docs/framework/winforms/controls/how-to-add-enhancements-to-toolstripmenuitems.md)  
- <span data-ttu-id="fcd19-108">描述如何向将菜单和菜单命令添加复选标记、图像、快捷键、访问密钥和分隔条。</span><span class="sxs-lookup"><span data-stu-id="fcd19-108">Describes how to add check marks, images, shortcut keys, access keys, and separator bars to menus and menu commands.</span></span>  
+ [<span data-ttu-id="d3bc2-107">如何：向 ToolStripMenuItem 添加增强功能</span><span class="sxs-lookup"><span data-stu-id="d3bc2-107">How to: Add Enhancements to ToolStripMenuItems</span></span>](../../../../docs/framework/winforms/controls/how-to-add-enhancements-to-toolstripmenuitems.md)  
+ <span data-ttu-id="d3bc2-108">描述如何向将菜单和菜单命令添加复选标记、图像、快捷键、访问密钥和分隔条。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-108">Describes how to add check marks, images, shortcut keys, access keys, and separator bars to menus and menu commands.</span></span>  
   
- [<span data-ttu-id="fcd19-109">如何：将 MenuStrip 追加到 MDI 父窗口</span><span class="sxs-lookup"><span data-stu-id="fcd19-109">How to: Append a MenuStrip to an MDI Parent Window</span></span>](../../../../docs/framework/winforms/controls/how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
- <span data-ttu-id="fcd19-110">描述如何设置多个属性以将多文档界面 (MDI) 子菜单附加到 MDI 父菜单。</span><span class="sxs-lookup"><span data-stu-id="fcd19-110">Describes how to set several properties to append the multiple-document interface (MDI) child menu to the MDI parent menu.</span></span>  
+ [<span data-ttu-id="d3bc2-109">如何：将 MenuStrip 追加到 MDI 父窗口</span><span class="sxs-lookup"><span data-stu-id="d3bc2-109">How to: Append a MenuStrip to an MDI Parent Window</span></span>](../../../../docs/framework/winforms/controls/how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
+ <span data-ttu-id="d3bc2-110">描述如何设置多个属性以将多文档界面 (MDI) 子菜单附加到 MDI 父菜单。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-110">Describes how to set several properties to append the multiple-document interface (MDI) child menu to the MDI parent menu.</span></span>  
   
- [<span data-ttu-id="fcd19-111">如何：使用 MenuStrip 创建 MDI 窗口列表</span><span class="sxs-lookup"><span data-stu-id="fcd19-111">How to: Create an MDI Window List with MenuStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
- <span data-ttu-id="fcd19-112">演示如何在父窗口菜单中创建所有活动子窗体的列表。</span><span class="sxs-lookup"><span data-stu-id="fcd19-112">Demonstrates how to create a list of all the active child forms on the parent's Window menu.</span></span>  
+ [<span data-ttu-id="d3bc2-111">如何：使用 MenuStrip 创建 MDI 窗口列表</span><span class="sxs-lookup"><span data-stu-id="d3bc2-111">How to: Create an MDI Window List with MenuStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
+ <span data-ttu-id="d3bc2-112">演示如何在父窗口菜单中创建所有活动子窗体的列表。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-112">Demonstrates how to create a list of all the active child forms on the parent's Window menu.</span></span>  
   
- [<span data-ttu-id="fcd19-113">如何：禁用 ToolStripMenuItem</span><span class="sxs-lookup"><span data-stu-id="fcd19-113">How to: Disable ToolStripMenuItems</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)  
- <span data-ttu-id="fcd19-114">描述如何禁用整个菜单和各个菜单命令。</span><span class="sxs-lookup"><span data-stu-id="fcd19-114">Describes how to disable both entire menus and individual menu commands.</span></span>  
+ [<span data-ttu-id="d3bc2-113">如何：禁用 ToolStripMenuItem</span><span class="sxs-lookup"><span data-stu-id="d3bc2-113">How to: Disable ToolStripMenuItems</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)  
+ <span data-ttu-id="d3bc2-114">描述如何禁用整个菜单和各个菜单命令。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-114">Describes how to disable both entire menus and individual menu commands.</span></span>  
   
- [<span data-ttu-id="fcd19-115">如何：隐藏 ToolStripMenuItem</span><span class="sxs-lookup"><span data-stu-id="fcd19-115">How to: Hide ToolStripMenuItems</span></span>](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
- <span data-ttu-id="fcd19-116">描述如何隐藏整个菜单和各个菜单命令。</span><span class="sxs-lookup"><span data-stu-id="fcd19-116">Describes how to hide both entire menus and individual menu commands.</span></span>  
+ [<span data-ttu-id="d3bc2-115">如何：隐藏 ToolStripMenuItem</span><span class="sxs-lookup"><span data-stu-id="d3bc2-115">How to: Hide ToolStripMenuItems</span></span>](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
+ <span data-ttu-id="d3bc2-116">描述如何隐藏整个菜单和各个菜单命令。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-116">Describes how to hide both entire menus and individual menu commands.</span></span>  
   
- [<span data-ttu-id="fcd19-117">如何：将 MenuStrip 插入 MDI 下拉菜单</span><span class="sxs-lookup"><span data-stu-id="fcd19-117">How to: Insert a MenuStrip into an MDI Drop-Down Menu</span></span>](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
- <span data-ttu-id="fcd19-118">描述如何设置多个属性以将 MDI 子菜单中的一组菜单项插入 MDI 父菜单的下拉部分。</span><span class="sxs-lookup"><span data-stu-id="fcd19-118">Describes how to set several properties to insert a group of menu items from the MDI child menu into the drop-down part of the MDI parent menu.</span></span>  
+ [<span data-ttu-id="d3bc2-117">如何：将 MenuStrip 插入 MDI 下拉菜单</span><span class="sxs-lookup"><span data-stu-id="d3bc2-117">How to: Insert a MenuStrip into an MDI Drop-Down Menu</span></span>](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
+ <span data-ttu-id="d3bc2-118">描述如何设置多个属性以将 MDI 子菜单中的一组菜单项插入 MDI 父菜单的下拉部分。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-118">Describes how to set several properties to insert a group of menu items from the MDI child menu into the drop-down part of the MDI parent menu.</span></span>  
   
- [<span data-ttu-id="fcd19-119">如何：从 MDI 下拉菜单中删除 ToolStripMenuItem</span><span class="sxs-lookup"><span data-stu-id="fcd19-119">How to: Remove a ToolStripMenuItem from an MDI Drop-Down Menu</span></span>](../../../../docs/framework/winforms/controls/how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
- <span data-ttu-id="fcd19-120">描述如何设置多个属性以从 MDI 父菜单下拉部分移除菜单项。</span><span class="sxs-lookup"><span data-stu-id="fcd19-120">Describes how to set several properties to remove a menu item from the drop-down part of the MDI parent menu.</span></span>  
+ [<span data-ttu-id="d3bc2-119">如何：从 MDI 下拉菜单中删除 ToolStripMenuItem</span><span class="sxs-lookup"><span data-stu-id="d3bc2-119">How to: Remove a ToolStripMenuItem from an MDI Drop-Down Menu</span></span>](../../../../docs/framework/winforms/controls/how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
+ <span data-ttu-id="d3bc2-120">描述如何设置多个属性以从 MDI 父菜单下拉部分移除菜单项。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-120">Describes how to set several properties to remove a menu item from the drop-down part of the MDI parent menu.</span></span>  
   
- [<span data-ttu-id="fcd19-121">如何：配置 MenuStrip 选中边距和图像边距</span><span class="sxs-lookup"><span data-stu-id="fcd19-121">How to: Configure MenuStrip Check Margins and Image Margins</span></span>](../../../../docs/framework/winforms/controls/how-to-configure-menustrip-check-margins-and-image-margins.md)  
- <span data-ttu-id="fcd19-122">描述如何通过以各种方式设置选中边距和图像边距属性来自定义 <xref:System.Windows.Forms.MenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="fcd19-122">Describes how to customize a <xref:System.Windows.Forms.MenuStrip> by setting check and image margin properties in various ways.</span></span>  
+ [<span data-ttu-id="d3bc2-121">如何：配置 MenuStrip 选中边距和图像边距</span><span class="sxs-lookup"><span data-stu-id="d3bc2-121">How to: Configure MenuStrip Check Margins and Image Margins</span></span>](../../../../docs/framework/winforms/controls/how-to-configure-menustrip-check-margins-and-image-margins.md)  
+ <span data-ttu-id="d3bc2-122">描述如何通过以各种方式设置选中边距和图像边距属性来自定义 <xref:System.Windows.Forms.MenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-122">Describes how to customize a <xref:System.Windows.Forms.MenuStrip> by setting check and image margin properties in various ways.</span></span>  
   
- [<span data-ttu-id="fcd19-123">如何：向窗体提供标准菜单项</span><span class="sxs-lookup"><span data-stu-id="fcd19-123">How to: Provide Standard Menu Items to a Form</span></span>](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)  
- <span data-ttu-id="fcd19-124">描述如何使用 <xref:System.Windows.Forms.MenuStrip> 控件创建带有标准菜单的窗体。</span><span class="sxs-lookup"><span data-stu-id="fcd19-124">Describes how to use a <xref:System.Windows.Forms.MenuStrip> control to create a form with a standard menu.</span></span>  
+ [<span data-ttu-id="d3bc2-123">如何：向窗体提供标准菜单项</span><span class="sxs-lookup"><span data-stu-id="d3bc2-123">How to: Provide Standard Menu Items to a Form</span></span>](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)  
+ <span data-ttu-id="d3bc2-124">描述如何使用 <xref:System.Windows.Forms.MenuStrip> 控件创建带有标准菜单的窗体。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-124">Describes how to use a <xref:System.Windows.Forms.MenuStrip> control to create a form with a standard menu.</span></span>  
   
- [<span data-ttu-id="fcd19-125">如何：在 MenuStrip 中显示选项按钮</span><span class="sxs-lookup"><span data-stu-id="fcd19-125">How to: Display Option Buttons in a MenuStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
- <span data-ttu-id="fcd19-126">描述如何在 <xref:System.Windows.Forms.ToolStripMenuItem> 中实现选项按钮（或单选按钮）行为。</span><span class="sxs-lookup"><span data-stu-id="fcd19-126">Describes how to implement option-button (or radio-button) behavior in a <xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
+ [<span data-ttu-id="d3bc2-125">如何：在 MenuStrip 中显示选项按钮</span><span class="sxs-lookup"><span data-stu-id="d3bc2-125">How to: Display Option Buttons in a MenuStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
+ <span data-ttu-id="d3bc2-126">描述如何在 <xref:System.Windows.Forms.ToolStripMenuItem> 中实现选项按钮（或单选按钮）行为。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-126">Describes how to implement option-button (or radio-button) behavior in a <xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
- [<span data-ttu-id="fcd19-127">在 Windows 窗体 MenuStrip 控件中合并菜单项</span><span class="sxs-lookup"><span data-stu-id="fcd19-127">Merging Menu Items in the Windows Forms MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/merging-menu-items-in-the-windows-forms-menustrip-control.md)  
- <span data-ttu-id="fcd19-128">描述菜单合并的一般概念和方法。</span><span class="sxs-lookup"><span data-stu-id="fcd19-128">Describes general concepts and methods for menu merging.</span></span>  
+ [<span data-ttu-id="d3bc2-127">在 Windows 窗体 MenuStrip 控件中合并菜单项</span><span class="sxs-lookup"><span data-stu-id="d3bc2-127">Merging Menu Items in the Windows Forms MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/merging-menu-items-in-the-windows-forms-menustrip-control.md)  
+ <span data-ttu-id="d3bc2-128">描述菜单合并的一般概念和方法。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-128">Describes general concepts and methods for menu merging.</span></span>  
   
- [<span data-ttu-id="fcd19-129">如何：为 MDI 应用程序设置自动菜单合并</span><span class="sxs-lookup"><span data-stu-id="fcd19-129">How to: Set Up Automatic Menu Merging for MDI Applications</span></span>](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
- <span data-ttu-id="fcd19-130">描述如何在运行时自动合并菜单项。</span><span class="sxs-lookup"><span data-stu-id="fcd19-130">Describes how to merge menu items automatically at run time.</span></span>  
+ [<span data-ttu-id="d3bc2-129">如何：为 MDI 应用程序设置自动菜单合并</span><span class="sxs-lookup"><span data-stu-id="d3bc2-129">How to: Set Up Automatic Menu Merging for MDI Applications</span></span>](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
+ <span data-ttu-id="d3bc2-130">描述如何在运行时自动合并菜单项。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-130">Describes how to merge menu items automatically at run time.</span></span>  
   
--   <span data-ttu-id="fcd19-131">[MenuStrip 项集合编辑器](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="fcd19-131">[MenuStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="d3bc2-131">[MenuStrip 项集合编辑器](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="d3bc2-131">[MenuStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="fcd19-132">[如何：复制 ToolStripMenuItem](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="fcd19-132">[How to: Copy ToolStripMenuItems](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="d3bc2-132">[如何：复制 ToolStripMenuItem](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="d3bc2-132">[How to: Copy ToolStripMenuItems](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="fcd19-133">[如何：使用设计器隐藏 ToolStripMenuItem](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="fcd19-133">[How to: Hide ToolStripMenuItems Using the Designer](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="d3bc2-133">[如何：使用设计器隐藏 ToolStripMenuItem](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="d3bc2-133">[How to: Hide ToolStripMenuItems Using the Designer](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="fcd19-134">[如何：使用设计器禁用 ToolStripMenuItem](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="fcd19-134">[How to: Disable ToolStripMenuItems Using the Designer](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="d3bc2-134">[如何：使用设计器禁用 ToolStripMenuItem](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="d3bc2-134">[How to: Disable ToolStripMenuItems Using the Designer](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="fcd19-135">[如何：移动 ToolStripMenuItem](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="fcd19-135">[How to: Move ToolStripMenuItems](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="d3bc2-135">[如何：移动 ToolStripMenuItem](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="d3bc2-135">[How to: Move ToolStripMenuItems](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="fcd19-136">[演练：向窗体提供标准菜单项](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="fcd19-136">[Walkthrough: Providing Standard Menu Items to a Form](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="d3bc2-136">[演练：向窗体提供标准菜单项](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="d3bc2-136">[Walkthrough: Providing Standard Menu Items to a Form](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="fcd19-137">[MenuStrip 任务对话框](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="fcd19-137">[MenuStrip Tasks Dialog Box](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="d3bc2-137">[MenuStrip 任务对话框](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="d3bc2-137">[MenuStrip Tasks Dialog Box](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="fcd19-138">参考</span><span class="sxs-lookup"><span data-stu-id="fcd19-138">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d3bc2-138">参考</span><span class="sxs-lookup"><span data-stu-id="d3bc2-138">Reference</span></span>  
  <xref:System.Windows.Forms.MenuStrip>  
- <span data-ttu-id="fcd19-139">描述 <xref:System.Windows.Forms.MenuStrip> 类的功能，它为窗体提供菜单系统。</span><span class="sxs-lookup"><span data-stu-id="fcd19-139">Describes the features of the <xref:System.Windows.Forms.MenuStrip> class, which provides a menu system for a form.</span></span>  
+ <span data-ttu-id="d3bc2-139">描述 <xref:System.Windows.Forms.MenuStrip> 类的功能，它为窗体提供菜单系统。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-139">Describes the features of the <xref:System.Windows.Forms.MenuStrip> class, which provides a menu system for a form.</span></span>  
   
  <xref:System.Windows.Forms.ContextMenuStrip>  
- <span data-ttu-id="fcd19-140">描述 <xref:System.Windows.Forms.ContextMenuStrip> 的功能，它表示快捷菜单。</span><span class="sxs-lookup"><span data-stu-id="fcd19-140">Describes the features of the <xref:System.Windows.Forms.ContextMenuStrip>, which represents a shortcut menu.</span></span>  
+ <span data-ttu-id="d3bc2-140">描述 <xref:System.Windows.Forms.ContextMenuStrip> 的功能，它表示快捷菜单。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-140">Describes the features of the <xref:System.Windows.Forms.ContextMenuStrip>, which represents a shortcut menu.</span></span>  
   
  <xref:System.Windows.Forms.ToolStripMenuItem>  
- <span data-ttu-id="fcd19-141">描述 <xref:System.Windows.Forms.ToolStripMenuItem> 类的功能，它表示 <xref:System.Windows.Forms.MenuStrip> 或 <xref:System.Windows.Forms.ContextMenuStrip> 上显示的可选选项。</span><span class="sxs-lookup"><span data-stu-id="fcd19-141">Describes the features of the <xref:System.Windows.Forms.ToolStripMenuItem> class, which represents a selectable option displayed on a <xref:System.Windows.Forms.MenuStrip> or <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+ <span data-ttu-id="d3bc2-141">描述 <xref:System.Windows.Forms.ToolStripMenuItem> 类的功能，它表示 <xref:System.Windows.Forms.MenuStrip> 或 <xref:System.Windows.Forms.ContextMenuStrip> 上显示的可选选项。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-141">Describes the features of the <xref:System.Windows.Forms.ToolStripMenuItem> class, which represents a selectable option displayed on a <xref:System.Windows.Forms.MenuStrip> or <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="fcd19-142">相关章节</span><span class="sxs-lookup"><span data-stu-id="fcd19-142">Related Sections</span></span>  
- [<span data-ttu-id="fcd19-143">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="fcd19-143">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="fcd19-144">提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。</span><span class="sxs-lookup"><span data-stu-id="fcd19-144">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d3bc2-142">相关章节</span><span class="sxs-lookup"><span data-stu-id="d3bc2-142">Related Sections</span></span>  
+ [<span data-ttu-id="d3bc2-143">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="d3bc2-143">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="d3bc2-144">提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。</span><span class="sxs-lookup"><span data-stu-id="d3bc2-144">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

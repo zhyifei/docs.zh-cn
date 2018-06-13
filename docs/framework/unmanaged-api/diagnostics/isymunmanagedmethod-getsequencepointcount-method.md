@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c1a9ef59cfe63ba745e6f5eba3ba2c3f3f983886
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425387"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a><span data-ttu-id="e264d-102">ISymUnmanagedMethod::GetSequencePointCount 方法</span><span class="sxs-lookup"><span data-stu-id="e264d-102">ISymUnmanagedMethod::GetSequencePointCount Method</span></span>
 <span data-ttu-id="e264d-103">获取在此方法内的序列点的计数。</span><span class="sxs-lookup"><span data-stu-id="e264d-103">Gets the count of sequence points within this method.</span></span>  
