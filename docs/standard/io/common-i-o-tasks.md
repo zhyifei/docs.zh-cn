@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577650"
 ---
 # <a name="common-io-tasks"></a><span data-ttu-id="5585b-102">通用 I/O 任务</span><span class="sxs-lookup"><span data-stu-id="5585b-102">Common I/O Tasks</span></span>
 <span data-ttu-id="5585b-103"><xref:System.IO> 命名空间提供若干个类，通过这些类可以对文件、目录和流执行各种操作（如读取和写入）。</span><span class="sxs-lookup"><span data-stu-id="5585b-103">The <xref:System.IO> namespace provides several classes that allow for various actions, such as reading and writing, to be performed on files, directories, and streams.</span></span> <span data-ttu-id="5585b-104">有关详细信息，请参阅[文件和流 I/O](../../../docs/standard/io/index.md)。</span><span class="sxs-lookup"><span data-stu-id="5585b-104">For more information, see [File and Stream I/O](../../../docs/standard/io/index.md).</span></span>  

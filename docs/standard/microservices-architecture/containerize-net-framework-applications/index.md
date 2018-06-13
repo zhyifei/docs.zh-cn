@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578828"
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a><span data-ttu-id="726ed-103">将旧版整体式 .NET Framework 应用程序迁移到 Windows 容器</span><span class="sxs-lookup"><span data-stu-id="726ed-103">Migrating Legacy Monolithic .NET Framework Applications to Windows Containers</span></span>
 

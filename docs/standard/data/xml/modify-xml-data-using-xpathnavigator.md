@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579114"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a><span data-ttu-id="67912-102">使用 XPathNavigator 修改 XML 数据</span><span class="sxs-lookup"><span data-stu-id="67912-102">Modify XML Data using XPathNavigator</span></span>
 <span data-ttu-id="67912-103"><xref:System.Xml.XPath.XPathNavigator> 类提供一组方法用于修改 XML 文档中的节点和值。</span><span class="sxs-lookup"><span data-stu-id="67912-103">The <xref:System.Xml.XPath.XPathNavigator> class provides a set of methods used to modify nodes and values in an XML document.</span></span> <span data-ttu-id="67912-104">要使用这些方法，<xref:System.Xml.XPath.XPathNavigator> 对象必须可编辑，即其 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 属性必须为 `true`。</span><span class="sxs-lookup"><span data-stu-id="67912-104">In order to use these methods, the <xref:System.Xml.XPath.XPathNavigator> object must be editable, that is, its <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> property must be `true`.</span></span>  

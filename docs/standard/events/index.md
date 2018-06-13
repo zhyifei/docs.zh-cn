@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578579"
 ---
 # <a name="handling-and-raising-events"></a><span data-ttu-id="c2f6c-102">处理和引发事件</span><span class="sxs-lookup"><span data-stu-id="c2f6c-102">Handling and Raising Events</span></span>
 <span data-ttu-id="c2f6c-103">.NET Framework 中的事件基于委托模型。</span><span class="sxs-lookup"><span data-stu-id="c2f6c-103">Events in the .NET Framework are based on the delegate model.</span></span> <span data-ttu-id="c2f6c-104">委托模型遵守观察者设计模式，使订阅者能够向提供方注册并接收相关通知。</span><span class="sxs-lookup"><span data-stu-id="c2f6c-104">The delegate model follows the observer design pattern, which enables a subscriber to register with, and receive notifications from, a provider.</span></span> <span data-ttu-id="c2f6c-105">事件发送方推送事件发生的通知，事件接收器接收该通知并定义对它的响应。</span><span class="sxs-lookup"><span data-stu-id="c2f6c-105">An event sender pushes a notification that an event has happened, and an event receiver receives that notification and defines a response to it.</span></span> <span data-ttu-id="c2f6c-106">本文介绍委托模型的主要组件、如何在应用程序中使用事件以及如何在你的代码中实现事件。</span><span class="sxs-lookup"><span data-stu-id="c2f6c-106">This article describes the major components of the delegate model, how to consume events in applications, and how to implement events in your code.</span></span>  

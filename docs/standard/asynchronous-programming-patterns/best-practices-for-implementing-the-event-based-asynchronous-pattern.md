@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578416"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a><span data-ttu-id="e5ba4-102">实现基于事件的异步模式的最佳做法</span><span class="sxs-lookup"><span data-stu-id="e5ba4-102">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>
 <span data-ttu-id="e5ba4-103">基于事件的异步模式提供了一种在类中使用熟悉的事件和委托语义公开异步行为的有效方法。</span><span class="sxs-lookup"><span data-stu-id="e5ba4-103">The Event-based Asynchronous Pattern provides you with an effective way to expose asynchronous behavior in classes, with familiar event and delegate semantics.</span></span> <span data-ttu-id="e5ba4-104">若要实现基于事件的异步模式，你需要遵循某些特定的行为要求。</span><span class="sxs-lookup"><span data-stu-id="e5ba4-104">To implement Event-based Asynchronous Pattern, you need to follow some specific behavioral requirements.</span></span> <span data-ttu-id="e5ba4-105">以下部分描述了在你实现遵循基于事件的异步模式的类时应该考虑的要求和准则。</span><span class="sxs-lookup"><span data-stu-id="e5ba4-105">The following sections describe requirements and guidelines you should consider when you implement a class that follows the Event-based Asynchronous Pattern.</span></span>  

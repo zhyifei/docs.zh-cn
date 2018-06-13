@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580492"
 ---
 # <a name="how-to-implement-a-partitioner-for-static-partitioning"></a><span data-ttu-id="98ae9-102">如何：实现静态分区的分区程序</span><span class="sxs-lookup"><span data-stu-id="98ae9-102">How to: Implement a Partitioner for Static Partitioning</span></span>
 <span data-ttu-id="98ae9-103">下面的示例展示了一种为执行静态分区的 PLINQ 实现简单自定义分区程序的方法。</span><span class="sxs-lookup"><span data-stu-id="98ae9-103">The following example shows one way to implement a simple custom partitioner for PLINQ that performs static partitioning.</span></span> <span data-ttu-id="98ae9-104">由于分区程序不支持动态分区，因此无法通过 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 使用它。</span><span class="sxs-lookup"><span data-stu-id="98ae9-104">Because the partitioner does not support dynamic partitions, it is not consumable from <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="98ae9-105">对于每个元素需要越来越多处理时间的数据源，此分区程序可能会让速度提升（与默认范围分区程序相比）。</span><span class="sxs-lookup"><span data-stu-id="98ae9-105">This particular partitioner might provide speedup over the default range partitioner for data sources for which each element requires an increasing amount of processing time.</span></span>  

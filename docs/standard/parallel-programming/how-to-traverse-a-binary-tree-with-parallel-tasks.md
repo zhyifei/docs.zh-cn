@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580359"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a><span data-ttu-id="a9ad8-102">如何：使用并行任务遍历二叉树</span><span class="sxs-lookup"><span data-stu-id="a9ad8-102">How to: Traverse a Binary Tree with Parallel Tasks</span></span>
 <span data-ttu-id="a9ad8-103">下面的示例展示了两种使用并行任务遍历树数据结构的方式。</span><span class="sxs-lookup"><span data-stu-id="a9ad8-103">The following example shows two ways in which parallel tasks can be used to traverse a tree data structure.</span></span> <span data-ttu-id="a9ad8-104">树创建本身是留给大家练练手的。</span><span class="sxs-lookup"><span data-stu-id="a9ad8-104">The creation of the tree itself is left as an exercise.</span></span>  

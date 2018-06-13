@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580892"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a><span data-ttu-id="c35f9-102">如何：实现制造者-使用者数据流模式</span><span class="sxs-lookup"><span data-stu-id="c35f9-102">How to: Implement a Producer-Consumer Dataflow Pattern</span></span>
 <span data-ttu-id="c35f9-103">本文档描述如何使用 TPL 数据流库实现制造者-使用者模式。</span><span class="sxs-lookup"><span data-stu-id="c35f9-103">This document describes how to use the TPL Dataflow Library to implement a producer-consumer pattern.</span></span> <span data-ttu-id="c35f9-104">在此模式下，制造者向消息块发送消息，使用者从该块读取消息。</span><span class="sxs-lookup"><span data-stu-id="c35f9-104">In this pattern, the *producer* sends messages to a message block, and the *consumer* reads messages from that block.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584191"
 ---
 # <a name="developing-applications-with-visual-basic"></a><span data-ttu-id="0f04e-102">使用 Visual Basic 开发应用程序</span><span class="sxs-lookup"><span data-stu-id="0f04e-102">Developing Applications with Visual Basic</span></span>
 <span data-ttu-id="0f04e-103">本节介绍有关 Visual Basic 语言的概念文档。</span><span class="sxs-lookup"><span data-stu-id="0f04e-103">This section covers conceptual documentation for the Visual Basic language.</span></span>  

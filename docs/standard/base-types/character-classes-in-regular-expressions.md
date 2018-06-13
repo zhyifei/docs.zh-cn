@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579686"
 ---
 # <a name="character-classes-in-regular-expressions"></a><span data-ttu-id="b661b-102">正则表达式中的字符类</span><span class="sxs-lookup"><span data-stu-id="b661b-102">Character Classes in Regular Expressions</span></span>
 <a name="Top"></a><span data-ttu-id="b661b-103">一个字符类定义一组字符，其中的任一字符均可出现在输入字符串中以便成功匹配。</span><span class="sxs-lookup"><span data-stu-id="b661b-103">A character class defines a set of characters, any one of which can occur in an input string for a match to succeed.</span></span> <span data-ttu-id="b661b-104">.NET 中的正则表达式语言支持以下字符类：</span><span class="sxs-lookup"><span data-stu-id="b661b-104">The regular expression language in .NET supports the following character classes:</span></span>  
