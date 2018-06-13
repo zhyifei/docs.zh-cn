@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233907"
 ---
 # <a name="interface-statement-visual-basic"></a><span data-ttu-id="09027-102">Interface 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="09027-102">Interface Statement (Visual Basic)</span></span>
 <span data-ttu-id="09027-103">声明的接口的名称，并引入了接口包含成员的定义。</span><span class="sxs-lookup"><span data-stu-id="09027-103">Declares the name of an interface and introduces the definitions of the members that the interface comprises.</span></span>  

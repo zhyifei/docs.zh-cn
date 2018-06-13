@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172511"
 ---
 # <a name="double-c-reference"></a><span data-ttu-id="e72a6-102">double（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="e72a6-102">double (C# Reference)</span></span>
 <span data-ttu-id="e72a6-103">`double` 关键字表示存储 64 位浮点值的简单类型。</span><span class="sxs-lookup"><span data-stu-id="e72a6-103">The `double` keyword signifies a simple type that stores 64-bit floating-point values.</span></span> <span data-ttu-id="e72a6-104">下表显示了 `double` 类型的精度和大致范围。</span><span class="sxs-lookup"><span data-stu-id="e72a6-104">The following table shows the precision and approximate range for the `double` type.</span></span>  

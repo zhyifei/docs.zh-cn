@@ -10,6 +10,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172001"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a><span data-ttu-id="34a5c-102">隐式类型的局部变量（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="34a5c-102">Implicitly Typed Local Variables (C# Programming Guide)</span></span>
 <span data-ttu-id="34a5c-103">可声明局部变量而无需提供显式类型。</span><span class="sxs-lookup"><span data-stu-id="34a5c-103">Local variables can be declared without giving an explicit type.</span></span> <span data-ttu-id="34a5c-104">`var` 关键字指示编译器通过初始化语句右侧的表达式推断变量的类型。</span><span class="sxs-lookup"><span data-stu-id="34a5c-104">The `var` keyword instructs the compiler to infer the type of the variable from the expression on the right side of the initialization statement.</span></span> <span data-ttu-id="34a5c-105">推断类型可以是内置类型、匿名类型、用户定义类型或 .NET Framework 类库中定义的类型。</span><span class="sxs-lookup"><span data-stu-id="34a5c-105">The inferred type may be a built-in type, an anonymous type, a user-defined type, or a type defined in the .NET Framework class library.</span></span> <span data-ttu-id="34a5c-106">有关如何使用 `var` 初始化数组的详细信息，请参阅[隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。</span><span class="sxs-lookup"><span data-stu-id="34a5c-106">For more information about how to initialize arrays with `var`, see [Implicitly Typed Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).</span></span>  

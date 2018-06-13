@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34311983"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a><span data-ttu-id="259b2-103">Windows 上 .NET Core 的先决条件</span><span class="sxs-lookup"><span data-stu-id="259b2-103">Prerequisites for .NET Core on Windows</span></span>
 

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172223"
 ---
 # <a name="enum-c-reference"></a><span data-ttu-id="6e675-102">enum（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="6e675-102">enum (C# Reference)</span></span>
 <span data-ttu-id="6e675-103">`enum` 关键字用于声明枚举，一种包含一组被称为枚举数列表的已命名常数的不同类型。</span><span class="sxs-lookup"><span data-stu-id="6e675-103">The `enum` keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list.</span></span>  

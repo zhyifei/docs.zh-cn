@@ -9,6 +9,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172312"
 ---
 # <a name="using-constructors-c-programming-guide"></a><span data-ttu-id="0d293-102">使用构造函数（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="0d293-102">Using Constructors (C# Programming Guide)</span></span>
 <span data-ttu-id="0d293-103">创建[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)时，将会调用其构造函数。</span><span class="sxs-lookup"><span data-stu-id="0d293-103">When a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md) is created, its constructor is called.</span></span> <span data-ttu-id="0d293-104">构造函数与该类或结构具有相同名称，并且通常初始化新对象的数据成员。</span><span class="sxs-lookup"><span data-stu-id="0d293-104">Constructors have the same name as the class or struct, and they usually initialize the data members of the new object.</span></span>  

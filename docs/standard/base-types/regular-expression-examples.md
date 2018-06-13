@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172498"
 ---
 # <a name="regular-expression-examples"></a><span data-ttu-id="17227-102">正则表达式示例</span><span class="sxs-lookup"><span data-stu-id="17227-102">Regular Expression Examples</span></span>
 <span data-ttu-id="17227-103">此部分包含说明如何在常见应用程序中使用正则表达式的代码示例。</span><span class="sxs-lookup"><span data-stu-id="17227-103">This section contains code examples that illustrate the use of regular expressions in common applications.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654104"
 ---
 # <a name="other-control-structures-visual-basic"></a><span data-ttu-id="f24c2-102">其他控件结构 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f24c2-102">Other Control Structures (Visual Basic)</span></span>
 <span data-ttu-id="f24c2-103">Visual Basic 提供帮助你的控制结构释放资源，或减少你需要重复操作的对象引用的次数。</span><span class="sxs-lookup"><span data-stu-id="f24c2-103">Visual Basic provides control structures that help you dispose of a resource or reduce the number of times you have to repeat an object reference.</span></span>  

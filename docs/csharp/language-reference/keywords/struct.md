@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172144"
 ---
 # <a name="struct-c-reference"></a><span data-ttu-id="90a36-102">struct（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="90a36-102">struct (C# Reference)</span></span>
 <span data-ttu-id="90a36-103">`struct` 类型是一种值类型，通常用来封装小型相关变量组，例如，矩形的坐标或库存商品的特征。</span><span class="sxs-lookup"><span data-stu-id="90a36-103">A `struct` type is a value type that is typically used to encapsulate small groups of related variables, such as the coordinates of a rectangle or the characteristics of an item in an inventory.</span></span> <span data-ttu-id="90a36-104">下面的示例显示了一个简单的结构声明：</span><span class="sxs-lookup"><span data-stu-id="90a36-104">The following example shows a simple struct declaration:</span></span>  

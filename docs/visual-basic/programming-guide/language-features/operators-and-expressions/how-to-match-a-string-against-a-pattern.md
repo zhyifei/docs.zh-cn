@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655207"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a><span data-ttu-id="9ea7e-102">如何：将字符串与模式相匹配 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9ea7e-102">How to: Match a String against a Pattern (Visual Basic)</span></span>
 <span data-ttu-id="9ea7e-103">如果你想要找出的表达式[字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)满足一种模式，则你可以使用[Like 运算符](../../../../visual-basic/language-reference/operators/like-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="9ea7e-103">If you want to find out if an expression of the [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfies a pattern, then you can use the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).</span></span>  
