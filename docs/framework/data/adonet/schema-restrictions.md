@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357252"
 ---
 # <a name="schema-restrictions"></a>架构限制
 第二个可选参数**GetSchema**方法是返回用于限制的架构信息量的限制，以及将其传递到**GetSchema**作为一个字符串数组的方法. 在数组中的位置确定可以传递的值，这等效于限制数。  

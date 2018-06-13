@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556025"
 ---
 # <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>如何：将光标置于 TextBox 控件中的文本的开头或末尾
 此示例演示如何将光标置于的开头或末尾的文本内容<xref:System.Windows.Controls.TextBox>控件。  

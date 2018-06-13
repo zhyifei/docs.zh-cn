@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351753"
 ---
 # <a name="servicepointmanagersservicepointtable-field"></a>ServicePointManager.s\_ServicePointTable 字段
 
@@ -37,6 +38,6 @@ private static Hashtable s_ServicePointTable
 
 **Namespace:** <xref:System.Net>
 
-**程序集：**系统 （在 System.dll)
+**程序集：** 系统 （在 System.dll)
 
-**.NET framework 版本：**自 2.0 之后可用。
+**.NET framework 版本：** 自 2.0 之后可用。

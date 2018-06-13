@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554802"
 ---
 # <a name="clocks-how-to-topics"></a>时钟帮助主题
 以下主题介绍如何使用<xref:System.Windows.Media.Animation.Clock>对象来维护计时的状态信息<xref:System.Windows.Media.Animation.Timeline>。  

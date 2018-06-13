@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357856"
 ---
 # <a name="batching-operations-wcf-data-services"></a>批处理操作（WCF 数据服务）
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]支持对请求的批处理[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于服务。 有关详细信息，请参阅[OData： 批处理](http://go.microsoft.com/fwlink/?LinkId=186075)。 在[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，使用每个操作<xref:System.Data.Services.Client.DataServiceContext>，如执行查询或保存更改，在单独的请求发送到数据服务中的结果。 为保持操作集的合理范围，可以显式定义操作批。 这将确保批处理中的所有操作发送到单个 HTTP 请求中的数据服务，使服务器能够处理这些操作以原子方式，并减少到数据服务的往返次数。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352176"
 ---
 # <a name="numeric-and-comparison-operators"></a>数值和比较运算符
 算术运算符和比较运算符在公共语言运行库 (CLR) 中按预期方式工作，但有以下几点例外：  

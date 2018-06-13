@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526635"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>如何：使用设计器创建含有标准项的基本 Windows 窗体 ToolStrip
 下面的过程演示如何创建<xref:System.Windows.Forms.ToolStrip>并添加七个<xref:System.Windows.Forms.ToolStripButton>表示典型任务的控件。  

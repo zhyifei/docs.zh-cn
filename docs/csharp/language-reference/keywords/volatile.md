@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272579"
 ---
 # <a name="volatile-c-reference"></a>volatile（C# 参考）
 `volatile` 关键字指示一个字段可以由多个同时执行的线程修改。 声明为 `volatile` 的字段不受编译器优化（假定由单个线程访问）的限制。 这样可以确保该字段在任何时间呈现的都是最新的值。  
