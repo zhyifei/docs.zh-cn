@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333771"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>如何：链接轴方法调用 (LINQ to XML) (C#)
 一个在代码中常用的模式是调用轴方法，然后调用一个扩展方法轴。  

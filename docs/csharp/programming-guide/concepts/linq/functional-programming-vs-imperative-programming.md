@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334894"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>函数编程与命令式编程 (C#)
 本主题对函数编程和更传统的命令性（过程性）编程进行比较。  

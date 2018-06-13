@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513352"
 ---
 # <a name="windows-workflow-foundation-glossary-for-net-framework-45"></a>针对 .NET Framework 4.5 的 Windows Workflow Foundation 词汇表
 Windows Workflow Foundation 文档中使用了以下术语。  

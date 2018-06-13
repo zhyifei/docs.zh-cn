@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498340"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 事务配置
 Windows Communication Foundation (WCF) 提供了配置的服务的事务的三个属性： `transactionFlow`， `transactionProtocol`，和`transactionTimeout`。  

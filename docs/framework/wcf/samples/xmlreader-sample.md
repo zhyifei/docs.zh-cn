@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506883"
 ---
 # <a name="xmlreader-sample"></a>XmlReader 示例
 XmlReader 示例演示如何使用 <xref:System.Xml.XmlReader> 处理消息正文。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，该类可实现计算器服务。 示例中还添加了一个服务操作 `Sum`，它接受包含要加在一起的值数组的消息。 该服务使用 <xref:System.Xml.XmlReader> 读取消息。  

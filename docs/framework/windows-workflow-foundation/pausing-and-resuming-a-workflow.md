@@ -1,23 +1,13 @@
 ---
-title: "暂停和继续工作流"
-ms.custom: 
+title: 暂停和继续工作流
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e51235105e9d2cdb1cad3847fb00ad5604061564
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99455f117e5e8591750565452c3c40b74bf45ba1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513479"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>暂停和继续工作流
 工作流将暂停并恢复以响应书签和阻止活动（如 <xref:System.Activities.Statements.Delay>），但也可使用持久性来显式暂停、卸载和恢复工作流。  
