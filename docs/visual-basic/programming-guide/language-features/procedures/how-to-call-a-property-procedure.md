@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654812"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a><span data-ttu-id="524b2-102">如何：调用 Property 过程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="524b2-102">How to: Call a Property Procedure (Visual Basic)</span></span>
 <span data-ttu-id="524b2-103">通过将值存储在属性中或检索其值调用 property 过程。</span><span class="sxs-lookup"><span data-stu-id="524b2-103">You call a property procedure by storing a value in the property or retrieving its value.</span></span> <span data-ttu-id="524b2-104">访问的属性相同的方式访问的变量。</span><span class="sxs-lookup"><span data-stu-id="524b2-104">You access a property the same way you access a variable.</span></span>  

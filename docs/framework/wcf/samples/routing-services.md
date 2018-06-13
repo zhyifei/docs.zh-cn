@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809987"
 ---
 # <a name="routing-services"></a><span data-ttu-id="554a5-102">路由服务</span><span class="sxs-lookup"><span data-stu-id="554a5-102">Routing Services</span></span>
 <span data-ttu-id="554a5-103">本节包含演示如何使用 Windows Communication Foundation (WCF) 路由器的示例。</span><span class="sxs-lookup"><span data-stu-id="554a5-103">This section includes samples that demonstrate how to use the Windows Communication Foundation (WCF) Router.</span></span>  

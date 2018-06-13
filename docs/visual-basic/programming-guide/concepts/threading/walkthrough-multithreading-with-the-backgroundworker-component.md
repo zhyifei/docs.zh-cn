@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654286"
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a><span data-ttu-id="82944-102">演练： 利用 BackgroundWorker 组件 (Visual Basic) 的多线程处理</span><span class="sxs-lookup"><span data-stu-id="82944-102">Walkthrough: Multithreading with the BackgroundWorker Component (Visual Basic)</span></span>
 <span data-ttu-id="82944-103">本演练演示如何创建在文本文件中搜索单词出现次数的多线程 Windows 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="82944-103">This walkthrough demonstrates how to create a multithreaded Windows Forms application that searches a text file for occurrences of a word.</span></span> <span data-ttu-id="82944-104">演示内容包括：</span><span class="sxs-lookup"><span data-stu-id="82944-104">It demonstrates:</span></span>  

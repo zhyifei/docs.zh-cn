@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958007"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a><span data-ttu-id="a6275-103">选择容器基于应用程序的 Azure 计算平台</span><span class="sxs-lookup"><span data-stu-id="a6275-103">Choosing Azure compute platforms for container-based applications</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806791"
 ---
 # <a name="custom-service-host"></a><span data-ttu-id="6a36a-102">自定义服务主机</span><span class="sxs-lookup"><span data-stu-id="6a36a-102">Custom Service Host</span></span>
 <span data-ttu-id="6a36a-103">本示例演示如何使用 <xref:System.ServiceModel.ServiceHost> 类的自定义派生来改变服务的运行时行为。</span><span class="sxs-lookup"><span data-stu-id="6a36a-103">This sample demonstrates how to use a custom derivative of the <xref:System.ServiceModel.ServiceHost> class to alter the run-time behavior of a service.</span></span> <span data-ttu-id="6a36a-104">此方法为通过通用方式配置大量服务提供了一个可重用的替代方法。</span><span class="sxs-lookup"><span data-stu-id="6a36a-104">This approach provides a reusable alternative to configuring a large number of services in a common way.</span></span> <span data-ttu-id="6a36a-105">此示例还演示如何使用 <xref:System.ServiceModel.Activation.ServiceHostFactory> 类在 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 承载环境中使用自定义 ServiceHost。</span><span class="sxs-lookup"><span data-stu-id="6a36a-105">The sample also demonstrates how to use the <xref:System.ServiceModel.Activation.ServiceHostFactory> class to use a custom ServiceHost in the Internet Information Services (IIS) or Windows Process Activation Service (WAS) hosting environment.</span></span>  

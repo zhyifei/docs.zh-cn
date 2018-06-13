@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809883"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a><span data-ttu-id="1740f-102">控制 WCF 服务主机的自动启动</span><span class="sxs-lookup"><span data-stu-id="1740f-102">Controlling Auto-launching of WCF Service Host</span></span>
 <span data-ttu-id="1740f-103">在调试包含多个项目的同一个 Visual Studio 解决方案中另一个项目时，你可以控制为 WCF 服务库项目中，Windows Communication Foundation (WCF) 服务主机 (WcfSvcHost.exe) 的自动启动功能。</span><span class="sxs-lookup"><span data-stu-id="1740f-103">You can control the auto-launching capability of Windows Communication Foundation (WCF) Service Host (WcfSvcHost.exe) for a WCF Service Library project, when you debug another project in the same Visual Studio solution containing multiple projects.</span></span>  

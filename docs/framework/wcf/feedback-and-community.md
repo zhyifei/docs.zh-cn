@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810156"
 ---
 # <a name="feedback-and-community"></a><span data-ttu-id="b13f6-102">反馈和社区</span><span class="sxs-lookup"><span data-stu-id="b13f6-102">Feedback and Community</span></span>
 <span data-ttu-id="b13f6-103">我们非常感谢你的评论和关注有关 Windows Communication Foundation (WCF) 或[!INCLUDE[infocard](../../../includes/infocard-md.md)]文档。</span><span class="sxs-lookup"><span data-stu-id="b13f6-103">We appreciate your comments and concerns about the Windows Communication Foundation (WCF) or [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentation.</span></span> <span data-ttu-id="b13f6-104">在 SDK 中的每个页面底部都有一句“将有关此主题的意见发送给 Microsoft”。</span><span class="sxs-lookup"><span data-stu-id="b13f6-104">On the bottom of every page in the SDK is the sentence "Send comments about this topic to Microsoft."</span></span> <span data-ttu-id="b13f6-105">点击“注释”链接可发送有关特定主题的观点或建议。</span><span class="sxs-lookup"><span data-stu-id="b13f6-105">Click the "comments" link to send your views or suggestions about the specific topic.</span></span>  

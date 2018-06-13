@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807363"
 ---
 # <a name="configuring-tracing"></a><span data-ttu-id="e7a6d-102">配置跟踪</span><span class="sxs-lookup"><span data-stu-id="e7a6d-102">Configuring Tracing</span></span>
 <span data-ttu-id="e7a6d-103">本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。</span><span class="sxs-lookup"><span data-stu-id="e7a6d-103">This topic describes how you can enable tracing, configure trace sources to emit traces and set trace levels, set activity tracing and propagation to support end-to-end trace correlation, and set trace listeners to access traces.</span></span>  

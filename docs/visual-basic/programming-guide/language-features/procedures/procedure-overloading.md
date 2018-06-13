@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653909"
 ---
 # <a name="procedure-overloading-visual-basic"></a><span data-ttu-id="ecab7-102">过程重载 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ecab7-102">Procedure Overloading (Visual Basic)</span></span>
 <span data-ttu-id="ecab7-103">*重载*过程意味着在多个版本，使用相同名称但不同的参数列表中定义它。</span><span class="sxs-lookup"><span data-stu-id="ecab7-103">*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists.</span></span> <span data-ttu-id="ecab7-104">重载的目的是定义过程的几个密切相关的版本，而无需将它们按名称区分开来。</span><span class="sxs-lookup"><span data-stu-id="ecab7-104">The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.</span></span> <span data-ttu-id="ecab7-105">通过不同的参数列表来执行此操作。</span><span class="sxs-lookup"><span data-stu-id="ecab7-105">You do this by varying the parameter list.</span></span>  

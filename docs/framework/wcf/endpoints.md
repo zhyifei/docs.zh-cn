@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803389"
 ---
 # <a name="windows-communication-foundation-endpoints"></a><span data-ttu-id="b0b77-102">Windows Communication Foundation 终结点</span><span class="sxs-lookup"><span data-stu-id="b0b77-102">Windows Communication Foundation Endpoints</span></span>
 <span data-ttu-id="b0b77-103">与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。</span><span class="sxs-lookup"><span data-stu-id="b0b77-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="b0b77-104">终结点提供客户端访问 WCF 服务提供的功能。</span><span class="sxs-lookup"><span data-stu-id="b0b77-104">Endpoints provide clients access to the functionality that a WCF service offers.</span></span>  

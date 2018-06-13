@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804471"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a><span data-ttu-id="922a3-102">如何：创建自定义客户端标识验证工具</span><span class="sxs-lookup"><span data-stu-id="922a3-102">How to: Create a Custom Client Identity Verifier</span></span>
 <span data-ttu-id="922a3-103">*标识*功能的 Windows Communication Foundation (WCF) 使客户端能够预先指定服务所需的标识。</span><span class="sxs-lookup"><span data-stu-id="922a3-103">The *identity* feature of Windows Communication Foundation (WCF) enables a client to specify in advance the expected identity of the service.</span></span> <span data-ttu-id="922a3-104">无论服务器何时向客户端验证其自身身份，都将检查该标识是否为所需的标识。</span><span class="sxs-lookup"><span data-stu-id="922a3-104">Whenever a server authenticates itself to the client, the identity is checked against the expected identity.</span></span> <span data-ttu-id="922a3-105">(有关标识以及它如何工作的说明，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)</span><span class="sxs-lookup"><span data-stu-id="922a3-105">(For an explanation of identity and how it works, see [Service Identity and Authentication](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)</span></span>  

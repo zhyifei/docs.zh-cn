@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808762"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a><span data-ttu-id="2035d-102">如何：控制投影的类型 (C#)</span><span class="sxs-lookup"><span data-stu-id="2035d-102">How to: Control the Type of a Projection (C#)</span></span>
 <span data-ttu-id="2035d-103">投影是一个过程，这一过程包括：获取一组数据，筛选这些数据，更改数据形状，甚至更改数据的类型。</span><span class="sxs-lookup"><span data-stu-id="2035d-103">Projection is the process of taking one set of data, filtering it, changing its shape, and even changing its type.</span></span> <span data-ttu-id="2035d-104">大多数查询表达式都可执行投影。</span><span class="sxs-lookup"><span data-stu-id="2035d-104">Most query expressions perform projections.</span></span> <span data-ttu-id="2035d-105">本节中介绍的大多数查询表达式的计算结果都是 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，不过，可以控制投影的类型从而创建其他类型的集合。</span><span class="sxs-lookup"><span data-stu-id="2035d-105">Most of the query expressions shown in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can control the type of the projection to create collections of other types.</span></span> <span data-ttu-id="2035d-106">本主题演示如何执行此操作。</span><span class="sxs-lookup"><span data-stu-id="2035d-106">This topic shows how to do this.</span></span>  
