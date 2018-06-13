@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560464"
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>如何：使用 LineGeometry 创建线条
 此示例演示如何使用<xref:System.Windows.Media.LineGeometry>类描述一个行。 A<xref:System.Windows.Media.LineGeometry>定义的其起点和终点。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557571"
 ---
 # <a name="popup-overview"></a>Popup 概述
 <xref:System.Windows.Controls.Primitives.Popup>控件提供了如何通过当前的应用程序窗口相对于指定的元素或屏幕坐标浮动的单独窗口中显示内容。 本主题介绍<xref:System.Windows.Controls.Primitives.Popup>控件并提供有关其使用情况信息。  

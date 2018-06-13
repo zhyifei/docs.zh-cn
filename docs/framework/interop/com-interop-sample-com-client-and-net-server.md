@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389550"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>COM 互操作示例：COM 客户端和 .NET 服务器
 此示例演示 [COM 客户端](#cpconcominteropsamplecomclientnetserveranchor1) 和执行抵押计算的 [.NET 服务器](#cpconcominteropsamplecomclientnetserveranchor2)的互操作。 在本示例中，客户端创建并调用托管 `Loan` 类的实例，将四个参数（其中一个等于零）传递给该实例，并显示计算结果。 本示例中的代码例子将贯穿本节。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759889"
 ---
 # <a name="entity-framework-overview"></a>实体框架概述
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是 ADO.NET 中的一套支持开发面向数据的软件应用程序的技术。 面向数据的应用程序的架构师和开发人员曾为实现两个迥然不同的目标费尽心机： 他们必须为要解决的业务问题的实体、关系和逻辑构建模型，还必须处理用于存储和检索数据的数据引擎。 数据可能跨多个各有不同协议的存储系统；甚至使用单个存储系统的应用程序也必须在存储系统的需求与编写高效且容易维护的应用程序代码之间取得平衡。  

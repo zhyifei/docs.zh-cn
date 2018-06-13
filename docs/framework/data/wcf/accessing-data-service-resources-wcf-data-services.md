@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365324"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>访问数据服务资源（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以将数据公开为与通过 Uri 进行寻址的资源的源。 这些资源表示的实体关系约定根据[实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)。 在此模型中，实体表示作为应用程序域中数据类型的数据操作单元，如客户、订单、项目和产品。 可以通过使用具象状态传输 (REST) 的语义（尤其是标准 HTTP 谓词 GET、PUT、POST 和 DELETE）访问和更改实体数据。  

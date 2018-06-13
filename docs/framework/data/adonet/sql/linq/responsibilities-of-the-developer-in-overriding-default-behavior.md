@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365249"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>开发人员在重写默认行为中的责任
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不会强制以下要求，但如果未满足这些要求，则行为是不确定。  

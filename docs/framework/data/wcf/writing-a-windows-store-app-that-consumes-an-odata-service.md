@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365782"
 ---
 # <a name="writing-a-windows-store-app-that-consumes-an-odata-service"></a>编写使用 OData 服务的 Windows 应用商店应用程序
 Windows 8 引入了新的应用程序类型： Windows 应用商店应用。 Windows 应用商店应用程序具有全新的外观，可在各种设备上运行并在 Windows 应用商店中有售。 本主题说明如何编写使用 OData 服务（特别是 NetFlix Catalog OData 服务）的 Windows 应用商店应用程序。 有关 Windows 应用商店应用的详细信息，请阅读[Windows 应用商店应用入门](http://msdn.microsoft.com/library/windows/apps/br211386.aspx)。  

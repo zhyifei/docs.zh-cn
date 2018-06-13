@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574941"
 ---
 # <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a>实现使用指数退避算法的自定义 HTTP 调用重试
 

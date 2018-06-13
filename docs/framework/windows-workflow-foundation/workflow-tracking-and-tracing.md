@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520011"
 ---
 # <a name="workflow-tracking-and-tracing"></a>工作流跟踪
 Windows 工作流跟踪是专为查看工作流执行情况而设计的一个 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 功能。 它提供一个跟踪基础结构，用于跟踪工作流实例的执行。 WF 跟踪基础结构透明地检测工作流以发出反应执行期间关键事件的记录。 默认情况下，任何 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流都可以使用此功能。 不需要对 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]工作流进行任何更改即可进行跟踪。 只需确定要接收的跟踪数据量。 工作流实例开始或完成之后，会发出其处理跟踪记录。 跟踪还可以提取与工作流变量关联的相关业务数据。 例如，如果工作流表示一个订单处理系统，则可以提取 <xref:System.Activities.Tracking.TrackingRecord> 对象以及订单 ID。 一般来讲，启用 WF 跟踪便于访问工作流执行的诊断数据或业务分析数据。  

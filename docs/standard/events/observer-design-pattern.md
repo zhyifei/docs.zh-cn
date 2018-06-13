@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578103"
 ---
 # <a name="observer-design-pattern"></a>观察程序设计模式
 观察程序设计模式使订阅者能够从提供程序注册并接收通知。 它适用于需要基于推送的通知的任何方案。 此模式定义提供程序（亦称为“使用者”或“可观察对象”），以及零个、一个或多个观察程序。 观察程序注册提供程序，并且每当预定义的条件、事件或状态发生更改时，该提供程序会通过调用其方法之一来自动通知所有观察程序。 在此方法调用中，该提供程序还可向观察程序提供当前状态信息。 在 .NET Framework 中，通过实现泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和 <xref:System.IObserver%601?displayProperty=nameWithType> 接口来应用观察程序设计模式。 泛型类型参数表示提供通知信息的类型。  

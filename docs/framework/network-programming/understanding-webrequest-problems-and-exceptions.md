@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398061"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>了解 WebRequest 问题和异常
 <xref:System.Net.WebRequest> 及其派生类（<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest> 和 <xref:System.Net.FileWebRequest>）引发异常以指示异常状态。 有时这些问题的解决方法并不明显。  

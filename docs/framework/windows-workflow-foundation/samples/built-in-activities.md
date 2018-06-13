@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519308"
 ---
 # <a name="built-in-activities"></a>内置活动
 本节包含演示内置的 Windows Workflow Foundation (WF) 活动的示例。  

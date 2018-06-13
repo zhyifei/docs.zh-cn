@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362157"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>如何：验证 DBML 和外部映射文件
 您修改的外部映射文件和 .dbml 文件必须通过其各自架构定义的验证。 本主题提供的步骤的 Visual Studio 用户来实现验证过程。  

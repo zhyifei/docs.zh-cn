@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557675"
 ---
 # <a name="gridview-overview"></a>GridView 概述
 <xref:System.Windows.Controls.GridView> 视图模式是一种视图模式的<xref:System.Windows.Controls.ListView>控件。 <xref:System.Windows.Controls.GridView>类和支持类让你和你的用户可以查看按钮通常用作交互式列标题的表中的项的集合。 本主题介绍<xref:System.Windows.Controls.GridView>类，并概述了其使用。  
