@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529586"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a><span data-ttu-id="87e1e-102">如何：使用设计器向选项卡页添加控件</span><span class="sxs-lookup"><span data-stu-id="87e1e-102">How to: Add a Control to a Tab Page Using the Designer</span></span>
 <span data-ttu-id="87e1e-103">Windows 窗体使用<xref:System.Windows.Forms.TabControl>是组织方式显示其他控件。</span><span class="sxs-lookup"><span data-stu-id="87e1e-103">The use of the Windows Forms <xref:System.Windows.Forms.TabControl> is to display other controls in an organized fashion.</span></span> <span data-ttu-id="87e1e-104">可以使用这些说明要显示的图片上的选项卡页的主要部分。</span><span class="sxs-lookup"><span data-stu-id="87e1e-104">You can use these instructions to display a picture on the main part of a tab page.</span></span> <span data-ttu-id="87e1e-105">有关将图标添加到选项卡页的标签部分的信息，请参阅[如何： 更改 Windows 窗体 TabControl 的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)。</span><span class="sxs-lookup"><span data-stu-id="87e1e-105">For information about adding an icon to the label part of a tab page, see [How to: Change the Appearance of the Windows Forms TabControl](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).</span></span>  

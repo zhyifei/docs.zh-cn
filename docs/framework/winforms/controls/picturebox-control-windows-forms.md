@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535205"
 ---
 # <a name="picturebox-control-windows-forms"></a><span data-ttu-id="2603a-102">PictureBox 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="2603a-102">PictureBox Control (Windows Forms)</span></span>
 <span data-ttu-id="2603a-103">Windows 窗体`PictureBox`控件用于显示位图、 GIF、 JPEG、 图元文件或图标格式的图形。</span><span class="sxs-lookup"><span data-stu-id="2603a-103">The Windows Forms `PictureBox` control is used to display graphics in bitmap, GIF, JPEG, metafile, or icon format.</span></span>  

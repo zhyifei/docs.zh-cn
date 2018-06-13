@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537763"
 ---
 # <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a><span data-ttu-id="9f81f-102">何时使用 Windows 窗体 ComboBox 而非 ListBox</span><span class="sxs-lookup"><span data-stu-id="9f81f-102">When to Use a Windows Forms ComboBox Instead of a ListBox</span></span>
 <span data-ttu-id="9f81f-103"><xref:System.Windows.Forms.ComboBox>和<xref:System.Windows.Forms.ListBox>控件具有类似的行为，并在某些情况下可能是可互换。</span><span class="sxs-lookup"><span data-stu-id="9f81f-103">The <xref:System.Windows.Forms.ComboBox> and the <xref:System.Windows.Forms.ListBox> controls have similar behaviors, and in some cases may be interchangeable.</span></span> <span data-ttu-id="9f81f-104">有的次，但是，当一个或另一个是更适合于任务。</span><span class="sxs-lookup"><span data-stu-id="9f81f-104">There are times, however, when one or the other is more appropriate to a task.</span></span>  

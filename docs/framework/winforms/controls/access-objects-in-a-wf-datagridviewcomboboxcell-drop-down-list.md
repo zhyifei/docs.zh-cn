@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529397"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a><span data-ttu-id="cae61-102">如何：访问 Windows 窗体 DataGridViewComboBoxCell 下拉列表中的对象</span><span class="sxs-lookup"><span data-stu-id="cae61-102">How to: Access Objects in a Windows Forms DataGridViewComboBoxCell Drop-Down List</span></span>
 <span data-ttu-id="cae61-103">如<xref:System.Windows.Forms.ComboBox>控件，<xref:System.Windows.Forms.DataGridViewComboBoxColumn>和<xref:System.Windows.Forms.DataGridViewComboBoxCell>类型使你能够将任意对象添加到他们的下拉列表。</span><span class="sxs-lookup"><span data-stu-id="cae61-103">Like the <xref:System.Windows.Forms.ComboBox> control, the <xref:System.Windows.Forms.DataGridViewComboBoxColumn> and <xref:System.Windows.Forms.DataGridViewComboBoxCell> types enable you to add arbitrary objects to their drop-down lists.</span></span> <span data-ttu-id="cae61-104">使用此功能，可以表示下拉列表中的复杂状态，而无需在一个单独的集合中存储相应的对象。</span><span class="sxs-lookup"><span data-stu-id="cae61-104">With this feature, you can represent complex states in a drop-down list without having to store corresponding objects in a separate collection.</span></span>  

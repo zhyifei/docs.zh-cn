@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527756"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a><span data-ttu-id="e86f7-102">如何：使用“继承选择器”对话框继承窗体</span><span class="sxs-lookup"><span data-stu-id="e86f7-102">How to: Inherit Forms Using the Inheritance Picker Dialog Box</span></span>
 <span data-ttu-id="e86f7-103">继承窗体或其他对象最简单的方法是使用“继承选择器”对话框。</span><span class="sxs-lookup"><span data-stu-id="e86f7-103">The easiest way to inherit a form or other object is to use the **Inheritance Picker** dialog box.</span></span> <span data-ttu-id="e86f7-104">通过该对话框，可以充分利用在其他解决方案中创建的代码或用户界面 (UI)。</span><span class="sxs-lookup"><span data-stu-id="e86f7-104">With it, you can take advantage of code or user interfaces (UI) you have already created in other solutions.</span></span>  

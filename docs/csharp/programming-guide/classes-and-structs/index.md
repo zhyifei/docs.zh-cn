@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327354"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a><span data-ttu-id="2c776-103">类和结构（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="2c776-103">Classes and Structs (C# Programming Guide)</span></span>
 <span data-ttu-id="2c776-104">类和结构是 .NET Framework 通用类型系统的两种基本构造。</span><span class="sxs-lookup"><span data-stu-id="2c776-104">Classes and structs are two of the basic constructs of the common type system in the .NET Framework.</span></span> <span data-ttu-id="2c776-105">每种本质上都是一种数据结构，其中封装了同属一个逻辑单元的一组数据和行为。</span><span class="sxs-lookup"><span data-stu-id="2c776-105">Each is essentially a data structure that encapsulates a set of data and behaviors that belong together as a logical unit.</span></span> <span data-ttu-id="2c776-106">数据和行为是类或结构的*成员*，包括方法、属性和事件等（此主题稍后将具体列举）。</span><span class="sxs-lookup"><span data-stu-id="2c776-106">The data and behaviors are the *members* of the class or struct, and they include its methods, properties, and events, and so on, as listed later in this topic.</span></span>  

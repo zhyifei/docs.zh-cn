@@ -1,74 +1,63 @@
 ---
-title: "使用 .NET Framework 开发自定义 Windows 窗体控件"
-ms.custom: 
+title: 使用 .NET Framework 开发自定义 Windows 窗体控件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d2f15dc4bb3bd4a6d1163823509f0f2c2bf2c11a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 935358664f93b6428b9153a9bcbed862aeee07ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528663"
 ---
-# <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a><span data-ttu-id="92d48-102">使用 .NET Framework 开发自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="92d48-102">Developing Custom Windows Forms Controls with the .NET Framework</span></span>
-<span data-ttu-id="92d48-103">Windows 窗体控件是可以重用的组件，可以封装用户界面功能并用于客户端基于 Windows 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="92d48-103">Windows Forms controls are reusable components that encapsulate user interface functionality and are used in client-side Windows-based applications.</span></span> <span data-ttu-id="92d48-104">Windows 窗体不仅可以提供许多易用的控件，而且还可以提供用于开发你自己的控件的基础结构。</span><span class="sxs-lookup"><span data-stu-id="92d48-104">Not only does Windows Forms provide many ready-to-use controls, it also provides the infrastructure for developing your own controls.</span></span> <span data-ttu-id="92d48-105">你可以组合现有的控件、扩展现有的控件或创作你自己的自定义控件。</span><span class="sxs-lookup"><span data-stu-id="92d48-105">You can combine existing controls, extend existing controls, or author your own custom controls.</span></span> <span data-ttu-id="92d48-106">本节介绍了背景信息和示例，有助于你开发 Windows 窗体控件。</span><span class="sxs-lookup"><span data-stu-id="92d48-106">This section provides background information and samples to help you develop Windows Forms controls.</span></span>  
+# <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a><span data-ttu-id="1b4ec-102">使用 .NET Framework 开发自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="1b4ec-102">Developing Custom Windows Forms Controls with the .NET Framework</span></span>
+<span data-ttu-id="1b4ec-103">Windows 窗体控件是可以重用的组件，可以封装用户界面功能并用于客户端基于 Windows 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-103">Windows Forms controls are reusable components that encapsulate user interface functionality and are used in client-side Windows-based applications.</span></span> <span data-ttu-id="1b4ec-104">Windows 窗体不仅可以提供许多易用的控件，而且还可以提供用于开发你自己的控件的基础结构。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-104">Not only does Windows Forms provide many ready-to-use controls, it also provides the infrastructure for developing your own controls.</span></span> <span data-ttu-id="1b4ec-105">你可以组合现有的控件、扩展现有的控件或创作你自己的自定义控件。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-105">You can combine existing controls, extend existing controls, or author your own custom controls.</span></span> <span data-ttu-id="1b4ec-106">本节介绍了背景信息和示例，有助于你开发 Windows 窗体控件。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-106">This section provides background information and samples to help you develop Windows Forms controls.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="92d48-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="92d48-107">In This Section</span></span>  
- [<span data-ttu-id="92d48-108">在 Windows 窗体中使用控件的概述</span><span class="sxs-lookup"><span data-stu-id="92d48-108">Overview of Using Controls in Windows Forms</span></span>](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
- <span data-ttu-id="92d48-109">突出显示使用 Windows 窗体应用程序中的控件的重要元素。</span><span class="sxs-lookup"><span data-stu-id="92d48-109">Highlights the essential elements of using controls in Windows Forms applications.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="1b4ec-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="1b4ec-107">In This Section</span></span>  
+ [<span data-ttu-id="1b4ec-108">在 Windows 窗体中使用控件的概述</span><span class="sxs-lookup"><span data-stu-id="1b4ec-108">Overview of Using Controls in Windows Forms</span></span>](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
+ <span data-ttu-id="1b4ec-109">突出显示使用 Windows 窗体应用程序中的控件的重要元素。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-109">Highlights the essential elements of using controls in Windows Forms applications.</span></span>  
   
- [<span data-ttu-id="92d48-110">各种自定义控件</span><span class="sxs-lookup"><span data-stu-id="92d48-110">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- <span data-ttu-id="92d48-111">描述你可以使用 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间创作的不同类型的自定义控件。</span><span class="sxs-lookup"><span data-stu-id="92d48-111">Describes the different kinds of custom controls you can author with the <xref:System.Windows.Forms?displayProperty=nameWithType> namespace.</span></span>  
+ [<span data-ttu-id="1b4ec-110">各种自定义控件</span><span class="sxs-lookup"><span data-stu-id="1b4ec-110">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ <span data-ttu-id="1b4ec-111">描述你可以使用 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间创作的不同类型的自定义控件。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-111">Describes the different kinds of custom controls you can author with the <xref:System.Windows.Forms?displayProperty=nameWithType> namespace.</span></span>  
   
- [<span data-ttu-id="92d48-112">Windows 窗体控件开发基础知识</span><span class="sxs-lookup"><span data-stu-id="92d48-112">Windows Forms Control Development Basics</span></span>](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)  
- <span data-ttu-id="92d48-113">讨论开发 Windows 窗体控件的前几个步骤。</span><span class="sxs-lookup"><span data-stu-id="92d48-113">Discusses the first steps in developing a Windows Forms control.</span></span>  
+ [<span data-ttu-id="1b4ec-112">Windows 窗体控件开发基础知识</span><span class="sxs-lookup"><span data-stu-id="1b4ec-112">Windows Forms Control Development Basics</span></span>](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)  
+ <span data-ttu-id="1b4ec-113">讨论开发 Windows 窗体控件的前几个步骤。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-113">Discusses the first steps in developing a Windows Forms control.</span></span>  
   
- [<span data-ttu-id="92d48-114">Windows 窗体控件中的属性</span><span class="sxs-lookup"><span data-stu-id="92d48-114">Properties in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- <span data-ttu-id="92d48-115">演示如何将属性添加到 Windows 窗体控件。</span><span class="sxs-lookup"><span data-stu-id="92d48-115">Shows how to add to properties to Windows Forms controls.</span></span>  
+ [<span data-ttu-id="1b4ec-114">Windows 窗体控件中的属性</span><span class="sxs-lookup"><span data-stu-id="1b4ec-114">Properties in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ <span data-ttu-id="1b4ec-115">演示如何将属性添加到 Windows 窗体控件。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-115">Shows how to add to properties to Windows Forms controls.</span></span>  
   
- [<span data-ttu-id="92d48-116">Windows 窗体控件中的事件</span><span class="sxs-lookup"><span data-stu-id="92d48-116">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
- <span data-ttu-id="92d48-117">演示如何处理和定义 Windows 窗体控件中的事件。</span><span class="sxs-lookup"><span data-stu-id="92d48-117">Shows how to handle and define events in Windows Forms controls.</span></span>  
+ [<span data-ttu-id="1b4ec-116">Windows 窗体控件中的事件</span><span class="sxs-lookup"><span data-stu-id="1b4ec-116">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ <span data-ttu-id="1b4ec-117">演示如何处理和定义 Windows 窗体控件中的事件。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-117">Shows how to handle and define events in Windows Forms controls.</span></span>  
   
- [<span data-ttu-id="92d48-118">Windows 窗体控件中的特性</span><span class="sxs-lookup"><span data-stu-id="92d48-118">Attributes in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
- <span data-ttu-id="92d48-119">描述你可以应用到自定义控件和组件的属性或其他成员的特性。</span><span class="sxs-lookup"><span data-stu-id="92d48-119">Describes the attributes you can apply to properties or other members of your custom controls and components.</span></span>  
+ [<span data-ttu-id="1b4ec-118">Windows 窗体控件中的特性</span><span class="sxs-lookup"><span data-stu-id="1b4ec-118">Attributes in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ <span data-ttu-id="1b4ec-119">描述你可以应用到自定义控件和组件的属性或其他成员的特性。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-119">Describes the attributes you can apply to properties or other members of your custom controls and components.</span></span>  
   
- [<span data-ttu-id="92d48-120">自定义控件的绘制和呈现</span><span class="sxs-lookup"><span data-stu-id="92d48-120">Custom Control Painting and Rendering</span></span>](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)  
- <span data-ttu-id="92d48-121">演示如何自定义控件的外观。</span><span class="sxs-lookup"><span data-stu-id="92d48-121">Shows how to customize the appearance of your controls.</span></span>  
+ [<span data-ttu-id="1b4ec-120">自定义控件的绘制和呈现</span><span class="sxs-lookup"><span data-stu-id="1b4ec-120">Custom Control Painting and Rendering</span></span>](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)  
+ <span data-ttu-id="1b4ec-121">演示如何自定义控件的外观。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-121">Shows how to customize the appearance of your controls.</span></span>  
   
- [<span data-ttu-id="92d48-122">Windows 窗体控件的布局</span><span class="sxs-lookup"><span data-stu-id="92d48-122">Layout in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/layout-in-windows-forms-controls.md)  
- <span data-ttu-id="92d48-123">演示如何创建控件和窗体的复杂布局。</span><span class="sxs-lookup"><span data-stu-id="92d48-123">Shows how to create sophisticated layouts for your controls and forms.</span></span>  
+ [<span data-ttu-id="1b4ec-122">Windows 窗体控件的布局</span><span class="sxs-lookup"><span data-stu-id="1b4ec-122">Layout in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/layout-in-windows-forms-controls.md)  
+ <span data-ttu-id="1b4ec-123">演示如何创建控件和窗体的复杂布局。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-123">Shows how to create sophisticated layouts for your controls and forms.</span></span>  
   
- [<span data-ttu-id="92d48-124">Windows 窗体控件中的多线程处理</span><span class="sxs-lookup"><span data-stu-id="92d48-124">Multithreading in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/multithreading-in-windows-forms-controls.md)  
- <span data-ttu-id="92d48-125">演示如何实现多线程控件。</span><span class="sxs-lookup"><span data-stu-id="92d48-125">Shows how to implement multithreaded controls.</span></span>  
+ [<span data-ttu-id="1b4ec-124">Windows 窗体控件中的多线程处理</span><span class="sxs-lookup"><span data-stu-id="1b4ec-124">Multithreading in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/multithreading-in-windows-forms-controls.md)  
+ <span data-ttu-id="1b4ec-125">演示如何实现多线程控件。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-125">Shows how to implement multithreaded controls.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="92d48-126">参考</span><span class="sxs-lookup"><span data-stu-id="92d48-126">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1b4ec-126">参考</span><span class="sxs-lookup"><span data-stu-id="1b4ec-126">Reference</span></span>  
  <xref:System.Windows.Forms.Control?displayProperty=nameWithType>  
- <span data-ttu-id="92d48-127">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="92d48-127">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="1b4ec-127">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-127">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>  
- <span data-ttu-id="92d48-128">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="92d48-128">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="1b4ec-128">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-128">Describes this class and has links to all of its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="92d48-129">相关章节</span><span class="sxs-lookup"><span data-stu-id="92d48-129">Related Sections</span></span>  
- [<span data-ttu-id="92d48-130">组件的设计时特性</span><span class="sxs-lookup"><span data-stu-id="92d48-130">Design-Time Attributes for Components</span></span>](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
- <span data-ttu-id="92d48-131">将列出的元数据特性应用到组件和控件，以便在设计时正确显示在可视化设计器中。</span><span class="sxs-lookup"><span data-stu-id="92d48-131">Lists metadata attributes to apply to components and controls so that they are displayed correctly at design time in visual designers.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="1b4ec-129">相关章节</span><span class="sxs-lookup"><span data-stu-id="1b4ec-129">Related Sections</span></span>  
+ [<span data-ttu-id="1b4ec-130">组件的设计时特性</span><span class="sxs-lookup"><span data-stu-id="1b4ec-130">Design-Time Attributes for Components</span></span>](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ <span data-ttu-id="1b4ec-131">将列出的元数据特性应用到组件和控件，以便在设计时正确显示在可视化设计器中。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-131">Lists metadata attributes to apply to components and controls so that they are displayed correctly at design time in visual designers.</span></span>  
   
- [<span data-ttu-id="92d48-132">扩展设计时支持</span><span class="sxs-lookup"><span data-stu-id="92d48-132">Extending Design-Time Support</span></span>](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- <span data-ttu-id="92d48-133">描述如何实现提供设计时支持的类，例如编辑器和设计器。</span><span class="sxs-lookup"><span data-stu-id="92d48-133">Describes how to implement classes such as editors and designers that provide design-time support.</span></span>  
+ [<span data-ttu-id="1b4ec-132">扩展设计时支持</span><span class="sxs-lookup"><span data-stu-id="1b4ec-132">Extending Design-Time Support</span></span>](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ <span data-ttu-id="1b4ec-133">描述如何实现提供设计时支持的类，例如编辑器和设计器。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-133">Describes how to implement classes such as editors and designers that provide design-time support.</span></span>  
   
- [<span data-ttu-id="92d48-134">如何：授予组件和控件许可权限</span><span class="sxs-lookup"><span data-stu-id="92d48-134">How to: License Components and Controls</span></span>](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
- <span data-ttu-id="92d48-135">描述如何实现授予控件或组件许可权限。</span><span class="sxs-lookup"><span data-stu-id="92d48-135">Describes how to implement licensing in your control or component.</span></span>  
+ [<span data-ttu-id="1b4ec-134">如何：授予组件和控件许可权限</span><span class="sxs-lookup"><span data-stu-id="1b4ec-134">How to: License Components and Controls</span></span>](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
+ <span data-ttu-id="1b4ec-135">描述如何实现授予控件或组件许可权限。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-135">Describes how to implement licensing in your control or component.</span></span>  
   
- <span data-ttu-id="92d48-136">另请参阅[设计时开发 Windows 窗体控件](http://msdn.microsoft.com/library/w29y3h59\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="92d48-136">Also see [Developing Windows Forms Controls at Design Time](http://msdn.microsoft.com/library/w29y3h59\(v=vs.110\)).</span></span>
+ <span data-ttu-id="1b4ec-136">另请参阅[设计时开发 Windows 窗体控件](http://msdn.microsoft.com/library/w29y3h59\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="1b4ec-136">Also see [Developing Windows Forms Controls at Design Time](http://msdn.microsoft.com/library/w29y3h59\(v=vs.110\)).</span></span>

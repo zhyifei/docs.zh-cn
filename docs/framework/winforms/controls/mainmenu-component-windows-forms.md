@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532225"
 ---
 # <a name="mainmenu-component-windows-forms"></a><span data-ttu-id="60e07-102">MainMenu 组件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="60e07-102">MainMenu Component (Windows Forms)</span></span>
 > [!NOTE]

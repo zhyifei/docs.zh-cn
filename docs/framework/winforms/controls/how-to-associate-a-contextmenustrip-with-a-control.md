@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526405"
 ---
 # <a name="how-to-associate-a-contextmenustrip-with-a-control"></a><span data-ttu-id="5b462-102">如何：将 ContextMenuStrip 与控件关联</span><span class="sxs-lookup"><span data-stu-id="5b462-102">How to: Associate a ContextMenuStrip with a Control</span></span>
 <span data-ttu-id="5b462-103">创建控件和快捷菜单后，使用以下过程在用户右键单击控件时显示给定的快捷菜单。</span><span class="sxs-lookup"><span data-stu-id="5b462-103">After creating your controls and shortcut menus, use the following procedures to display a given shortcut menu when the user right-clicks the control.</span></span> <span data-ttu-id="5b462-104">这些过程将 <xref:System.Windows.Forms.ContextMenuStrip> 与 Windows 窗体和 <xref:System.Windows.Forms.ToolStrip> 控件相关联。</span><span class="sxs-lookup"><span data-stu-id="5b462-104">These procedures associate a <xref:System.Windows.Forms.ContextMenuStrip> with a Windows Form and with a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  

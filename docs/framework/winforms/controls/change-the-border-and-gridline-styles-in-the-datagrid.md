@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528744"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="abe2a-102">如何：更改 Windows 窗体 DataGridView 控件中的边框和网格线的样式</span><span class="sxs-lookup"><span data-stu-id="abe2a-102">How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="abe2a-103">与<xref:System.Windows.Forms.DataGridView>控件，你可以自定义控件的边框和网格线以改进用户体验的外观。</span><span class="sxs-lookup"><span data-stu-id="abe2a-103">With the <xref:System.Windows.Forms.DataGridView> control, you can customize the appearance of the control's border and gridlines to improve the user experience.</span></span> <span data-ttu-id="abe2a-104">你可以修改网格线颜色和除了在控件内的单元格的边框样式的控件边框样式。</span><span class="sxs-lookup"><span data-stu-id="abe2a-104">You can modify the gridline color and the control border style in addition to the border styles for the cells within the control.</span></span> <span data-ttu-id="abe2a-105">你还可以应用不同的单元格普通单元格、 行标题单元格和列标题单元格的边框样式。</span><span class="sxs-lookup"><span data-stu-id="abe2a-105">You can also apply different cell border styles for ordinary cells, row header cells, and column header cells.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534828"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a><span data-ttu-id="2a190-102">如何：在字符串中放置引号（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="2a190-102">How to: Put Quotation Marks in a String (Windows Forms)</span></span>
 <span data-ttu-id="2a190-103">有时可能需要将引号（“”）放入文本字符串中。</span><span class="sxs-lookup"><span data-stu-id="2a190-103">Sometimes you might want to place quotation marks (" ") in a string of text.</span></span> <span data-ttu-id="2a190-104">例如：</span><span class="sxs-lookup"><span data-stu-id="2a190-104">For example:</span></span>  

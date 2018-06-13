@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529374"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="f3a1f-102">如何：为 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件创建查找表</span><span class="sxs-lookup"><span data-stu-id="f3a1f-102">How to: Create a Lookup Table for a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
 <span data-ttu-id="f3a1f-103">有时，在 Windows 窗体上以用户友好格式显示数据，但存储数据时使用对程序而言更有意义的格式会很有帮助。</span><span class="sxs-lookup"><span data-stu-id="f3a1f-103">Sometimes it is useful to display data in a user-friendly format on a Windows Form, but store the data in a format that is more meaningful to your program.</span></span> <span data-ttu-id="f3a1f-104">例如，食品订单窗体可能按列表框中的名称显示菜单项。</span><span class="sxs-lookup"><span data-stu-id="f3a1f-104">For example, an order form for food might display the menu items by name in a list box.</span></span> <span data-ttu-id="f3a1f-105">但是，记录订单的数据表将包含代表该食品的唯一 ID 号。</span><span class="sxs-lookup"><span data-stu-id="f3a1f-105">However, the data table recording the order would contain the unique ID numbers representing the food.</span></span> <span data-ttu-id="f3a1f-106">下表显示如何存储和显示食品订单窗体数据的示例。</span><span class="sxs-lookup"><span data-stu-id="f3a1f-106">The following tables show an example of how to store and display order-form data for food.</span></span>  
