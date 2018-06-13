@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504963"
 ---
 # <a name="unwrapped-messages"></a><span data-ttu-id="0cf7b-102">未包装的消息</span><span class="sxs-lookup"><span data-stu-id="0cf7b-102">Unwrapped Messages</span></span>
 <span data-ttu-id="0cf7b-103">此示例演示未包装的消息。</span><span class="sxs-lookup"><span data-stu-id="0cf7b-103">This sample demonstrates unwrapped messages.</span></span> <span data-ttu-id="0cf7b-104">默认情况下，消息正文的格式设置为对服务操作的参数进行包装。</span><span class="sxs-lookup"><span data-stu-id="0cf7b-104">By default, the message body is formatted such that the parameters to a service operation are wrapped.</span></span> <span data-ttu-id="0cf7b-105">下面的示例演示一个包装模式下的对 `Add` 服务的 `ICalculator` 请求消息。</span><span class="sxs-lookup"><span data-stu-id="0cf7b-105">The following sample shows an `Add` request message to the `ICalculator` service in wrapped mode.</span></span>  

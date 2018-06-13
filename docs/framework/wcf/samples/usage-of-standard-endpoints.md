@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506488"
 ---
 # <a name="usage-of-standard-endpoints"></a><span data-ttu-id="b54f9-102">标准终结点的用法</span><span class="sxs-lookup"><span data-stu-id="b54f9-102">Usage of Standard Endpoints</span></span>
 <span data-ttu-id="b54f9-103">此示例演示如何在服务配置文件中使用标准终结点。</span><span class="sxs-lookup"><span data-stu-id="b54f9-103">This sample demonstrates how to use standard endpoints in service configuration files.</span></span> <span data-ttu-id="b54f9-104">通过标准终结点，用户可以使用单个属性来描述地址、绑定和协定组合以及与其关联的附加属性，从而简化终结点定义。</span><span class="sxs-lookup"><span data-stu-id="b54f9-104">A standard endpoint allows the user to simplify endpoint definitions by using a single property to describe an address, binding and contract combination with additional properties associated to it.</span></span> <span data-ttu-id="b54f9-105">此示例演示如何定义和实现自定义标准终结点，以及如何在终结点中定义特定属性。</span><span class="sxs-lookup"><span data-stu-id="b54f9-105">This sample demonstrates how to define and implement a custom standard endpoint and how to define specific properties in the endpoint.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547874"
 ---
 # <a name="the-ink-threading-model"></a><span data-ttu-id="e945d-102">墨迹线程处理模型</span><span class="sxs-lookup"><span data-stu-id="e945d-102">The Ink Threading Model</span></span>
 <span data-ttu-id="e945d-103">墨迹在 Tablet PC 上的优势之一是，其外观很像编写使用普通的笔和纸。</span><span class="sxs-lookup"><span data-stu-id="e945d-103">One of the benefits of ink on a Tablet PC is that it feels a lot like writing with a regular pen and paper.</span></span>  <span data-ttu-id="e945d-104">若要实现此目的，触笔收集以高得多的速度比鼠标将墨迹呈现为用户写入的输入的数据。</span><span class="sxs-lookup"><span data-stu-id="e945d-104">To accomplish this, the tablet pen collects input data at a much higher rate than a mouse does and renders the ink as the user writes.</span></span>  <span data-ttu-id="e945d-105">应用程序的用户界面 (UI) 线程不收集钢笔数据和呈现墨迹满足需求，因为它可能被阻止。</span><span class="sxs-lookup"><span data-stu-id="e945d-105">The application's user interface (UI) thread is not sufficient for collecting pen data and rendering ink, because it can become blocked.</span></span>  <span data-ttu-id="e945d-106">为了解决此问题，问题[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序时用户会编写墨迹使用两个其他线程。</span><span class="sxs-lookup"><span data-stu-id="e945d-106">To solve this, a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application uses two additional threads when a user writes ink.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538150"
 ---
 # <a name="event-handlers-overview-windows-forms"></a><span data-ttu-id="7a022-102">事件处理程序概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="7a022-102">Event Handlers Overview (Windows Forms)</span></span>
 <span data-ttu-id="7a022-103">事件处理程序是与该事件绑定的方法。</span><span class="sxs-lookup"><span data-stu-id="7a022-103">An event handler is a method that is bound to an event.</span></span> <span data-ttu-id="7a022-104">当引发事件时，将执行在事件处理程序内的代码。</span><span class="sxs-lookup"><span data-stu-id="7a022-104">When the event is raised, the code within the event handler is executed.</span></span> <span data-ttu-id="7a022-105">每个事件处理程序提供了两个参数，可用于正确处理该事件。</span><span class="sxs-lookup"><span data-stu-id="7a022-105">Each event handler provides two parameters that allow you to handle the event properly.</span></span> <span data-ttu-id="7a022-106">下面的示例演示的事件处理程序<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="7a022-106">The following example shows an event handler for a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event.</span></span>  

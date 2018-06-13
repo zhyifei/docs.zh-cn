@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500947"
 ---
 # <a name="wcf-web-http-service-help-page"></a><span data-ttu-id="93463-102">WCF Web HTTP 服务帮助页</span><span class="sxs-lookup"><span data-stu-id="93463-102">WCF Web HTTP Service Help Page</span></span>
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<span data-ttu-id="93463-103">提供了 WCF WEB HTTP 服务的自动帮助页。</span><span class="sxs-lookup"><span data-stu-id="93463-103"> provides an automatic help page for WCF WEB HTTP services.</span></span> <span data-ttu-id="93463-104">此帮助页列出了每个操作的说明、请求和响应格式以及架构。</span><span class="sxs-lookup"><span data-stu-id="93463-104">This help page lists a description of each operation, request and response formats, and schemas.</span></span> <span data-ttu-id="93463-105">默认情况下关闭此功能。</span><span class="sxs-lookup"><span data-stu-id="93463-105">This functionality is turned off by default.</span></span> <span data-ttu-id="93463-106">当用户浏览到 WCF WEB HTTP 服务和追加"/ 帮助"到 URL，例如末尾http://localhost:8000/Customers/Help，如同显示以下帮助页。</span><span class="sxs-lookup"><span data-stu-id="93463-106">When a user browses to a WCF WEB HTTP service and appends "/Help" on to the end of the URL, for example http://localhost:8000/Customers/Help, a help page like the following is displayed.</span></span>  

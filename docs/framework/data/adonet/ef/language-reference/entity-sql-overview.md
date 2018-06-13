@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760734"
 ---
 # <a name="entity-sql-overview"></a><span data-ttu-id="76a9c-102">Entity SQL 概述</span><span class="sxs-lookup"><span data-stu-id="76a9c-102">Entity SQL Overview</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="76a9c-103"> 是一种类似于 SQL 的语言，用于在[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]中查询概念模型。</span><span class="sxs-lookup"><span data-stu-id="76a9c-103"> is a SQL-like language that enables you to query conceptual models in the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="76a9c-104">概念模型表示为实体和关系，数据和[!INCLUDE[esql](../../../../../../includes/esql-md.md)]允许您查询这些实体和关系可为已使用 SQL 的人熟悉的格式。</span><span class="sxs-lookup"><span data-stu-id="76a9c-104">Conceptual models represent data as entities and relationships, and [!INCLUDE[esql](../../../../../../includes/esql-md.md)] allows you to query those entities and relationships in a format that is familiar to those who have used SQL.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746652"
 ---
 # <a name="ltpersistenceprovidergt"></a><span data-ttu-id="15661-102">&lt;persistenceProvider&gt;</span><span class="sxs-lookup"><span data-stu-id="15661-102">&lt;persistenceProvider&gt;</span></span>
 <span data-ttu-id="15661-103">指定要使用的持久性提供程序实现的类型以及用于持久性操作的超时值。</span><span class="sxs-lookup"><span data-stu-id="15661-103">Specifies the type of the persistence provider implementation to use, as well as the time-out to use for persistence operations.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500664"
 ---
 # <a name="custom-binding-imperative"></a><span data-ttu-id="d41d2-102">自定义绑定命令</span><span class="sxs-lookup"><span data-stu-id="d41d2-102">Custom Binding Imperative</span></span>
 <span data-ttu-id="d41d2-103">此示例演示如何编写命令性代码来定义和使用自定义绑定而不使用配置文件或 Windows Communication Foundation (WCF) 生成客户端。</span><span class="sxs-lookup"><span data-stu-id="d41d2-103">The sample demonstrates how to write imperative code to define and use custom bindings without using a configuration file or a Windows Communication Foundation (WCF) generated client.</span></span> <span data-ttu-id="d41d2-104">本示例将 HTTP 传输提供的功能与可靠会话通道结合在一起，用于创建基于 HTTP 的可靠绑定。</span><span class="sxs-lookup"><span data-stu-id="d41d2-104">This sample combines the features provided by the HTTP transport and the reliable session channel to create a reliable HTTP-based binding.</span></span> <span data-ttu-id="d41d2-105">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。</span><span class="sxs-lookup"><span data-stu-id="d41d2-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  

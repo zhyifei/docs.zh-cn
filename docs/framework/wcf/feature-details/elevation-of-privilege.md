@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496189"
 ---
 # <a name="elevation-of-privilege"></a><span data-ttu-id="84e93-102">特权提升</span><span class="sxs-lookup"><span data-stu-id="84e93-102">Elevation of Privilege</span></span>
 <span data-ttu-id="84e93-103">*特权提升*源于使攻击者授权权限超出最初授予的权限。</span><span class="sxs-lookup"><span data-stu-id="84e93-103">*Elevation of privilege* results from giving an attacker authorization permissions beyond those initially granted.</span></span> <span data-ttu-id="84e93-104">例如，具有“只读”权限特权集的攻击者以某种方式将该特权集升级为包括“读取和写入”。</span><span class="sxs-lookup"><span data-stu-id="84e93-104">For example, an attacker with a privilege set of "read only" permissions somehow elevates the set to include "read and write."</span></span>  

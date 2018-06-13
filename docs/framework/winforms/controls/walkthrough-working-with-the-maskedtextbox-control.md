@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538436"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a><span data-ttu-id="e5a94-102">演练：使用 MaskedTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="e5a94-102">Walkthrough: Working with the MaskedTextBox Control</span></span>
 <span data-ttu-id="e5a94-103">本演练涉及以下任务：</span><span class="sxs-lookup"><span data-stu-id="e5a94-103">Tasks illustrated in this walkthrough include:</span></span>  

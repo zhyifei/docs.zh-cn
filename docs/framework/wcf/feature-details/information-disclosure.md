@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495978"
 ---
 # <a name="information-disclosure"></a><span data-ttu-id="3ae76-102">信息泄露</span><span class="sxs-lookup"><span data-stu-id="3ae76-102">Information Disclosure</span></span>
 <span data-ttu-id="3ae76-103">信息泄露会使攻击者获得有价值的系统相关信息。</span><span class="sxs-lookup"><span data-stu-id="3ae76-103">Information disclosure enables an attacker to gain valuable information about a system.</span></span> <span data-ttu-id="3ae76-104">因此，应始终考虑到您正在泄露何种信息以及恶意用户是否可能使用这些信息。</span><span class="sxs-lookup"><span data-stu-id="3ae76-104">Therefore, always consider what information you are revealing and whether it can be used by a malicious user.</span></span> <span data-ttu-id="3ae76-105">下面列出了可能的信息泄露攻击并针对每种攻击提供了缓解措施。</span><span class="sxs-lookup"><span data-stu-id="3ae76-105">The following lists possible information disclosure attacks and provides mitigations for each.</span></span>  

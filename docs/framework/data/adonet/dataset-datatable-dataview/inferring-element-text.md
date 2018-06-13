@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762710"
 ---
 # <a name="inferring-element-text"></a><span data-ttu-id="fe95d-102">推断元素文本</span><span class="sxs-lookup"><span data-stu-id="fe95d-102">Inferring Element Text</span></span>
 <span data-ttu-id="fe95d-103">如果元素包含文本但不包含任何子元素被推断为表如 （具有属性的元素） 或重复的元素名称的新列**TableName_Text**将添加到为该元素推断的表。</span><span class="sxs-lookup"><span data-stu-id="fe95d-103">If an element contains text and has no child elements to be inferred as tables (such as elements with attributes or repeated elements), a new column with the name **TableName_Text** will be added to the table that is inferred for the element.</span></span> <span data-ttu-id="fe95d-104">该元素中包含的文本将添加到此表中的一行，并存储在新列中。</span><span class="sxs-lookup"><span data-stu-id="fe95d-104">The text contained in the element will be added to a row in the table and stored in the new column.</span></span> <span data-ttu-id="fe95d-105">**ColumnMapping**新列的属性将设置为**MappingType.SimpleContent**。</span><span class="sxs-lookup"><span data-stu-id="fe95d-105">The **ColumnMapping** property of the new column will be set to **MappingType.SimpleContent**.</span></span>  

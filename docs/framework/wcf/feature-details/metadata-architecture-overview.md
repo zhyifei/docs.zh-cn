@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496888"
 ---
 # <a name="metadata-architecture-overview"></a><span data-ttu-id="fede3-102">元数据体系结构概述</span><span class="sxs-lookup"><span data-stu-id="fede3-102">Metadata Architecture Overview</span></span>
 <span data-ttu-id="fede3-103">Windows Communication Foundation (WCF) 提供用于导出、 发布、 检索和导入服务元数据的丰富基础结构。</span><span class="sxs-lookup"><span data-stu-id="fede3-103">Windows Communication Foundation (WCF) provides a rich infrastructure for exporting, publishing, retrieving, and importing service metadata.</span></span> <span data-ttu-id="fede3-104">WCF 服务使用元数据来描述如何与服务的终结点进行交互，以便工具，如 Svcutil.exe，可以自动生成用于访问服务的客户端代码。</span><span class="sxs-lookup"><span data-stu-id="fede3-104">WCF services use metadata to describe how to interact with the service's endpoints so that tools, such as Svcutil.exe, can automatically generate client code for accessing the service.</span></span>  

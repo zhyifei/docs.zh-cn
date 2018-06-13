@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503893"
 ---
 # <a name="avoiding-problems-with-the-using-statement"></a><span data-ttu-id="10842-102">避免出现与 Using 语句有关的问题</span><span class="sxs-lookup"><span data-stu-id="10842-102">Avoiding Problems with the Using Statement</span></span>
 <span data-ttu-id="10842-103">本示例演示在使用类型化客户端时，不应使用 C# 的“using”语句自动清除资源。</span><span class="sxs-lookup"><span data-stu-id="10842-103">This sample demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.</span></span> <span data-ttu-id="10842-104">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。</span><span class="sxs-lookup"><span data-stu-id="10842-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="10842-105">在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。</span><span class="sxs-lookup"><span data-stu-id="10842-105">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  

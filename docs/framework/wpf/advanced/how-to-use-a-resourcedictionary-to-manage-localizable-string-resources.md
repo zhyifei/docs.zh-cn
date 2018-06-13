@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544493"
 ---
 # <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a><span data-ttu-id="c58d6-102">如何：使用 ResourceDictionary 来管理可本地化的字符串资源</span><span class="sxs-lookup"><span data-stu-id="c58d6-102">How to: Use a ResourceDictionary to Manage Localizable String Resources</span></span>
 <span data-ttu-id="c58d6-103">此示例演示如何使用<xref:System.Windows.ResourceDictionary>到 Windows Presentation Foundation (WPF) 应用程序的包可本地化的字符串资源。</span><span class="sxs-lookup"><span data-stu-id="c58d6-103">This example shows how to use a <xref:System.Windows.ResourceDictionary> to package localizable string resources for Windows Presentation Foundation (WPF) applications.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758927"
 ---
 # <a name="ole-db-data-type-mappings"></a><span data-ttu-id="f1d91-102">OLE DB 数据类型映射</span><span class="sxs-lookup"><span data-stu-id="f1d91-102">OLE DB Data Type Mappings</span></span>
 <span data-ttu-id="f1d91-103">下表显示了针对适用于 ADO 和 OLE DB 的 .NET Framework 数据提供程序 ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 中的数据类型推断出的 <xref:System.Data.OleDb> 类型。</span><span class="sxs-lookup"><span data-stu-id="f1d91-103">The following table shows the inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type for data types from the .NET Framework Data Provider for ADO and OLE DB (<xref:System.Data.OleDb>).</span></span> <span data-ttu-id="f1d91-104">另外，还列出了 <xref:System.Data.OleDb.OleDbDataReader> 的类型化访问器方法。</span><span class="sxs-lookup"><span data-stu-id="f1d91-104">The typed accessor methods for the <xref:System.Data.OleDb.OleDbDataReader> are also listed.</span></span>  

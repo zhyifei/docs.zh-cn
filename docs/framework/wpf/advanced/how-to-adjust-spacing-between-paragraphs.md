@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542943"
 ---
 # <a name="how-to-adjust-spacing-between-paragraphs"></a><span data-ttu-id="81a93-102">如何：调整段落间的间距</span><span class="sxs-lookup"><span data-stu-id="81a93-102">How to: Adjust Spacing Between Paragraphs</span></span>
 <span data-ttu-id="81a93-103">此示例演示如何调整或消除在流内容中的段落之间的间距。</span><span class="sxs-lookup"><span data-stu-id="81a93-103">This example shows how to adjust or eliminate spacing between paragraphs in flow content.</span></span>  

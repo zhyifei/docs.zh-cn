@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500973"
 ---
 # <a name="wcf-and-net-framework-client-profile"></a><span data-ttu-id="e6c72-102">WCF and .NET Framework Client Profile</span><span class="sxs-lookup"><span data-stu-id="e6c72-102">WCF and .NET Framework Client Profile</span></span>
 [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)]<span data-ttu-id="e6c72-103"> 是完整 .Net Framework 的轻量版本，供不需要整个框架的客户端使用。</span><span class="sxs-lookup"><span data-stu-id="e6c72-103"> is a lightweight version of the full .Net Framework designed for clients that don’t need the entire framework.</span></span> <span data-ttu-id="e6c72-104">客户端框架并不支持 Windows Communication Foundation 的全部功能。</span><span class="sxs-lookup"><span data-stu-id="e6c72-104">Not all of Windows Communication Foundation is supported by the client framework.</span></span>  

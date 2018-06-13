@@ -1,31 +1,23 @@
 ---
-title: "在泛型集合的接口中使用变体 (C#)"
-ms.custom: 
+title: 在泛型集合的接口中使用变体 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: be04b5c07eaf80058153a6e3866d405f48cea4e4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7f1c44ecc831a7eb35541a432bc776c512bd10a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340458"
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-c"></a><span data-ttu-id="d508c-102">在泛型集合的接口中使用变体 (C#)</span><span class="sxs-lookup"><span data-stu-id="d508c-102">Using Variance in Interfaces for Generic Collections (C#)</span></span>
-<span data-ttu-id="d508c-103">协变接口允许其方法返回的派生类型多于接口中指定的派生类型。</span><span class="sxs-lookup"><span data-stu-id="d508c-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="d508c-104">逆变接口允许其方法接受派生类型少于接口中指定的类型的参数。</span><span class="sxs-lookup"><span data-stu-id="d508c-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>  
+# <a name="using-variance-in-interfaces-for-generic-collections-c"></a><span data-ttu-id="a4113-102">在泛型集合的接口中使用变体 (C#)</span><span class="sxs-lookup"><span data-stu-id="a4113-102">Using Variance in Interfaces for Generic Collections (C#)</span></span>
+<span data-ttu-id="a4113-103">协变接口允许其方法返回的派生类型多于接口中指定的派生类型。</span><span class="sxs-lookup"><span data-stu-id="a4113-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="a4113-104">逆变接口允许其方法接受派生类型少于接口中指定的类型的参数。</span><span class="sxs-lookup"><span data-stu-id="a4113-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>  
   
- <span data-ttu-id="d508c-105">在.NET Framework 4 中，多个现有接口已变为协变和逆变接口。</span><span class="sxs-lookup"><span data-stu-id="d508c-105">In .NET Framework 4, several existing interfaces became covariant and contravariant.</span></span> <span data-ttu-id="d508c-106">包括 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.IComparable%601>。</span><span class="sxs-lookup"><span data-stu-id="d508c-106">These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>.</span></span> <span data-ttu-id="d508c-107">这使你可将对基类型的泛型集合进行操作的那些方法重用于派生类型的集合。</span><span class="sxs-lookup"><span data-stu-id="d508c-107">This enables you to reuse methods that operate with generic collections of base types for collections of derived types.</span></span>  
+ <span data-ttu-id="a4113-105">在.NET Framework 4 中，多个现有接口已变为协变和逆变接口。</span><span class="sxs-lookup"><span data-stu-id="a4113-105">In .NET Framework 4, several existing interfaces became covariant and contravariant.</span></span> <span data-ttu-id="a4113-106">包括 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.IComparable%601>。</span><span class="sxs-lookup"><span data-stu-id="a4113-106">These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>.</span></span> <span data-ttu-id="a4113-107">这使你可将对基类型的泛型集合进行操作的那些方法重用于派生类型的集合。</span><span class="sxs-lookup"><span data-stu-id="a4113-107">This enables you to reuse methods that operate with generic collections of base types for collections of derived types.</span></span>  
   
- <span data-ttu-id="d508c-108">有关 .NET Framework 中变体接口的列表，请参阅[泛型接口中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。</span><span class="sxs-lookup"><span data-stu-id="d508c-108">For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span></span>  
+ <span data-ttu-id="a4113-108">有关 .NET Framework 中变体接口的列表，请参阅[泛型接口中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。</span><span class="sxs-lookup"><span data-stu-id="a4113-108">For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span></span>  
   
-## <a name="converting-generic-collections"></a><span data-ttu-id="d508c-109">转换泛型集合</span><span class="sxs-lookup"><span data-stu-id="d508c-109">Converting Generic Collections</span></span>  
- <span data-ttu-id="d508c-110">下例阐释了 <xref:System.Collections.Generic.IEnumerable%601> 接口中的协变支持的益处。</span><span class="sxs-lookup"><span data-stu-id="d508c-110">The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="d508c-111">`PrintFullName` 方法接受 `IEnumerable<Person>` 类型的集合作为参数。</span><span class="sxs-lookup"><span data-stu-id="d508c-111">The `PrintFullName` method accepts a collection of the `IEnumerable<Person>` type as a parameter.</span></span> <span data-ttu-id="d508c-112">但可将该方法重用于 `IEnumerable<Employee>` 类型的集合，因为 `Employee` 继承 `Person`。</span><span class="sxs-lookup"><span data-stu-id="d508c-112">However, you can reuse it for a collection of the `IEnumerable<Employee>` type because `Employee` inherits `Person`.</span></span>  
+## <a name="converting-generic-collections"></a><span data-ttu-id="a4113-109">转换泛型集合</span><span class="sxs-lookup"><span data-stu-id="a4113-109">Converting Generic Collections</span></span>  
+ <span data-ttu-id="a4113-110">下例阐释了 <xref:System.Collections.Generic.IEnumerable%601> 接口中的协变支持的益处。</span><span class="sxs-lookup"><span data-stu-id="a4113-110">The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="a4113-111">`PrintFullName` 方法接受 `IEnumerable<Person>` 类型的集合作为参数。</span><span class="sxs-lookup"><span data-stu-id="a4113-111">The `PrintFullName` method accepts a collection of the `IEnumerable<Person>` type as a parameter.</span></span> <span data-ttu-id="a4113-112">但可将该方法重用于 `IEnumerable<Employee>` 类型的集合，因为 `Employee` 继承 `Person`。</span><span class="sxs-lookup"><span data-stu-id="a4113-112">However, you can reuse it for a collection of the `IEnumerable<Employee>` type because `Employee` inherits `Person`.</span></span>  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -62,8 +54,8 @@ class Program
 }  
 ```  
   
-## <a name="comparing-generic-collections"></a><span data-ttu-id="d508c-113">比较泛型集合</span><span class="sxs-lookup"><span data-stu-id="d508c-113">Comparing Generic Collections</span></span>  
- <span data-ttu-id="d508c-114">下例阐释了 <xref:System.Collections.Generic.IComparer%601> 接口中的逆变支持的益处。</span><span class="sxs-lookup"><span data-stu-id="d508c-114">The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface.</span></span> <span data-ttu-id="d508c-115">`PersonComparer` 类实现 `IComparer<Person>` 接口。</span><span class="sxs-lookup"><span data-stu-id="d508c-115">The `PersonComparer` class implements the `IComparer<Person>` interface.</span></span> <span data-ttu-id="d508c-116">但可以重用此类来比较 `Employee` 类型的对象序列，因为 `Employee` 继承 `Person`。</span><span class="sxs-lookup"><span data-stu-id="d508c-116">However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.</span></span>  
+## <a name="comparing-generic-collections"></a><span data-ttu-id="a4113-113">比较泛型集合</span><span class="sxs-lookup"><span data-stu-id="a4113-113">Comparing Generic Collections</span></span>  
+ <span data-ttu-id="a4113-114">下例阐释了 <xref:System.Collections.Generic.IComparer%601> 接口中的逆变支持的益处。</span><span class="sxs-lookup"><span data-stu-id="a4113-114">The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface.</span></span> <span data-ttu-id="a4113-115">`PersonComparer` 类实现 `IComparer<Person>` 接口。</span><span class="sxs-lookup"><span data-stu-id="a4113-115">The `PersonComparer` class implements the `IComparer<Person>` interface.</span></span> <span data-ttu-id="a4113-116">但可以重用此类来比较 `Employee` 类型的对象序列，因为 `Employee` 继承 `Person`。</span><span class="sxs-lookup"><span data-stu-id="a4113-116">However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.</span></span>  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -121,5 +113,5 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d508c-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="d508c-117">See Also</span></span>  
- [<span data-ttu-id="d508c-118">泛型接口中的变体 (C#)</span><span class="sxs-lookup"><span data-stu-id="d508c-118">Variance in Generic Interfaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="a4113-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="a4113-117">See Also</span></span>  
+ [<span data-ttu-id="a4113-118">泛型接口中的变体 (C#)</span><span class="sxs-lookup"><span data-stu-id="a4113-118">Variance in Generic Interfaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507024"
 ---
 # <a name="custom-binding-security"></a><span data-ttu-id="e15ac-102">自定义绑定安全性</span><span class="sxs-lookup"><span data-stu-id="e15ac-102">Custom Binding Security</span></span>
 <span data-ttu-id="e15ac-103">本示例演示如何使用自定义绑定配置安全性。</span><span class="sxs-lookup"><span data-stu-id="e15ac-103">This sample demonstrates how to configure security by using a custom binding.</span></span> <span data-ttu-id="e15ac-104">并演示如何使用自定义绑定实现消息级安全性和安全传输。</span><span class="sxs-lookup"><span data-stu-id="e15ac-104">It shows how to use a custom binding to enable message-level security together with a secure transport.</span></span> <span data-ttu-id="e15ac-105">如果在客户端和服务之间传输消息时需要进行安全的传输，同时消息必须在消息级别上保持安全，这非常有用。</span><span class="sxs-lookup"><span data-stu-id="e15ac-105">This is useful when a secure transport is required to transmit the messages between client and service and simultaneously the messages must be secure on the message level.</span></span> <span data-ttu-id="e15ac-106">系统提供的绑定不支持此配置。</span><span class="sxs-lookup"><span data-stu-id="e15ac-106">This configuration is not supported by system-provided bindings.</span></span>  

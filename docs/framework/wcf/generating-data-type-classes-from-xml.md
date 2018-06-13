@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498662"
 ---
 # <a name="generating-data-type-classes-from-xml"></a><span data-ttu-id="caa1b-102">从 XML 生成数据类型类</span><span class="sxs-lookup"><span data-stu-id="caa1b-102">Generating Data Type Classes from XML</span></span>
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<span data-ttu-id="caa1b-103"> 包括用于从 XML 生成数据类型类的新功能。</span><span class="sxs-lookup"><span data-stu-id="caa1b-103"> includes a new feature to generate data type classes from XML.</span></span> <span data-ttu-id="caa1b-104">本主题介绍如何为.NET 博客 RSS 源自动生成数据类型。</span><span class="sxs-lookup"><span data-stu-id="caa1b-104">This topic describes how to automatically generate data types for the .NET Blog RSS feed.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537068"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a><span data-ttu-id="6b0b3-102">Windows 窗体应用程序中的键盘输入</span><span class="sxs-lookup"><span data-stu-id="6b0b3-102">Keyboard Input in a Windows Forms Application</span></span>
 <span data-ttu-id="6b0b3-103">Windows 窗体包括可用于响应特定按键，然后还提供了供你截获、 修改和使用按键操作在应用程序窗体中，和控制级别的方法的标准键盘事件。</span><span class="sxs-lookup"><span data-stu-id="6b0b3-103">Windows Forms includes standard keyboard events that allow you to respond to specific key presses, and also provides ways for you to intercept, modify, and consume key presses at the application, form, and control level.</span></span>  

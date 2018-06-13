@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765420"
 ---
 # <a name="odbc-data-type-mappings"></a><span data-ttu-id="81e3c-102">ODBC 数据类型映射</span><span class="sxs-lookup"><span data-stu-id="81e3c-102">ODBC Data Type Mappings</span></span>
 <span data-ttu-id="81e3c-103">下表显示了针对适用于 ADO 的 .NET Framework 数据提供程序 ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 中的数据类型推断出的 <xref:System.Data.Odbc> 类型。</span><span class="sxs-lookup"><span data-stu-id="81e3c-103">The following table shows the inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type for data types from the .NET Framework Data Provider for ODBC (<xref:System.Data.Odbc>).</span></span> <span data-ttu-id="81e3c-104">另外，还列出了 <xref:System.Data.Odbc.OdbcDataReader> 的类型化访问器方法。</span><span class="sxs-lookup"><span data-stu-id="81e3c-104">The typed accessor methods for the <xref:System.Data.Odbc.OdbcDataReader> are also listed.</span></span>  

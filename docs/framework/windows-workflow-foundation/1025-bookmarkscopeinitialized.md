@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509582"
 ---
 # <a name="1025---bookmarkscopeinitialized"></a><span data-ttu-id="d0c6b-102">1025 - BookmarkScopeInitialized</span><span class="sxs-lookup"><span data-stu-id="d0c6b-102">1025 - BookmarkScopeInitialized</span></span>
 ## <a name="properties"></a><span data-ttu-id="d0c6b-103">属性</span><span class="sxs-lookup"><span data-stu-id="d0c6b-103">Properties</span></span>  

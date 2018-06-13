@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505044"
 ---
 # <a name="web-hosting-a-queued-application"></a><span data-ttu-id="4e310-102">承载排队应用程序的 Web</span><span class="sxs-lookup"><span data-stu-id="4e310-102">Web Hosting a Queued Application</span></span>
 <span data-ttu-id="4e310-103">Windows 进程激活服务 (WAS) 管理激活和生存期，包含该主机 Windows Communication Foundation (WCF) 服务的应用程序的辅助进程。</span><span class="sxs-lookup"><span data-stu-id="4e310-103">The Windows Process Activation Service (WAS) manages the activation and lifetime of the worker processes that contain applications that host Windows Communication Foundation (WCF) services.</span></span> <span data-ttu-id="4e310-104">WAS 进程模型通过移除对 HTTP 的依赖性使 HTTP 服务器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 进程模型通用化。</span><span class="sxs-lookup"><span data-stu-id="4e310-104">The WAS process model generalizes the [!INCLUDE[iis601](../../../../includes/iis601-md.md)] process model for the HTTP server by removing the dependency on HTTP.</span></span> <span data-ttu-id="4e310-105">这使 WCF 服务能够使用 HTTP 和非 HTTP 协议，如 net.msmq 和 msmq.formatname，在宿主环境支持基于消息的激活并提供承载大量的某一给定计算机上的应用程序的能力。</span><span class="sxs-lookup"><span data-stu-id="4e310-105">This allows WCF services to use both HTTP and non-HTTP protocols, such as net.msmq and msmq.formatname, in a hosting environment that supports message-based activation and offers the ability to host a large number of applications on a given computer.</span></span>  

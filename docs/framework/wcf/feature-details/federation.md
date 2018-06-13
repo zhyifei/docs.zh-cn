@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496743"
 ---
 # <a name="federation"></a><span data-ttu-id="ee6d9-102">联合</span><span class="sxs-lookup"><span data-stu-id="ee6d9-102">Federation</span></span>
 <span data-ttu-id="ee6d9-103">本主题概要介绍联合安全概念。</span><span class="sxs-lookup"><span data-stu-id="ee6d9-103">This topic provides a brief overview of the concept of federated security.</span></span> <span data-ttu-id="ee6d9-104">它还描述对部署联合的安全体系结构的 Windows Communication Foundation (WCF) 支持。</span><span class="sxs-lookup"><span data-stu-id="ee6d9-104">It also describes Windows Communication Foundation (WCF) support for deploying federated security architectures.</span></span> <span data-ttu-id="ee6d9-105">有关演示联合身份验证的示例应用，请参阅[联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="ee6d9-105">For a sample application that demonstrates federation, see [Federation Sample](../../../../docs/framework/wcf/samples/federation-sample.md).</span></span>  

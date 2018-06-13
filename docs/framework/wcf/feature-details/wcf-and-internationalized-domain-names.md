@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498031"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a><span data-ttu-id="7e9f6-102">WCF 和国际化域名</span><span class="sxs-lookup"><span data-stu-id="7e9f6-102">WCF and Internationalized Domain Names</span></span>
 <span data-ttu-id="7e9f6-103">添加了允许使用带有国际化域名 (IDN) 的 WCF 服务的支持。</span><span class="sxs-lookup"><span data-stu-id="7e9f6-103">Support has been added to allow for WCF services with Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="7e9f6-104">国际化域名称是包含非 ASCII 字符的域名。</span><span class="sxs-lookup"><span data-stu-id="7e9f6-104">An internationalized domain name is a domain name that contains non-ASCII characters.</span></span> <span data-ttu-id="7e9f6-105">这种支持包括能够承载具有 IDN 名称的 WCF 服务以及 WCF 客户端，以便与具有 IDN 名称的 Web 服务进行对话。</span><span class="sxs-lookup"><span data-stu-id="7e9f6-105">This support includes both the ability to host a WCF service with an IDN name and a WCF client to talk to a web service with an IDN name.</span></span>  

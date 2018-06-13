@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497008"
 ---
 # <a name="queues-overview"></a><span data-ttu-id="ad042-102">队列概述</span><span class="sxs-lookup"><span data-stu-id="ad042-102">Queues Overview</span></span>
 <span data-ttu-id="ad042-103">本节介绍与排队通信相关的一般概念和核心概念。</span><span class="sxs-lookup"><span data-stu-id="ad042-103">This section introduces the general and core concepts behind queued communication.</span></span> <span data-ttu-id="ad042-104">后续部分将详细介绍如何在 Windows Communication Foundation (WCF) 显示此处所述的队列概念。</span><span class="sxs-lookup"><span data-stu-id="ad042-104">Subsequent sections go into details about how the queuing concepts described here are manifested in Windows Communication Foundation (WCF).</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536675"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a><span data-ttu-id="5a109-102">TabControl 控件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="5a109-102">TabControl Control Overview (Windows Forms)</span></span>
 <span data-ttu-id="5a109-103">Windows 窗体 <xref:System.Windows.Forms.TabControl> 显示多个选项卡，就像笔记本中的分隔线或档案柜中一组文件夹的标签。</span><span class="sxs-lookup"><span data-stu-id="5a109-103">The Windows Forms <xref:System.Windows.Forms.TabControl> displays multiple tabs, like dividers in a notebook or labels in a set of folders in a filing cabinet.</span></span> <span data-ttu-id="5a109-104">选项卡可以包含图片和其他控件。</span><span class="sxs-lookup"><span data-stu-id="5a109-104">The tabs can contain pictures and other controls.</span></span> <span data-ttu-id="5a109-105">你可以使用选项卡控件生成出现 Windows 操作系统，如控件面板显示属性中的许多位置多页对话框中的类型。</span><span class="sxs-lookup"><span data-stu-id="5a109-105">You can use the tab control to produce the kind of multiple-page dialog box that appears many places in the Windows operating system, such as the Control Panel Display Properties.</span></span> <span data-ttu-id="5a109-106">此外，<xref:System.Windows.Forms.TabControl>可用来创建用于设置一组相关属性的属性页。</span><span class="sxs-lookup"><span data-stu-id="5a109-106">Additionally, the <xref:System.Windows.Forms.TabControl> can be used to create property pages, which are used to set a group of related properties.</span></span>  

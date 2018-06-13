@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501528"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a><span data-ttu-id="d6741-102">如何：设置 ProtectionLevel 属性</span><span class="sxs-lookup"><span data-stu-id="d6741-102">How to: Set the ProtectionLevel Property</span></span>
 <span data-ttu-id="d6741-103">通过应用相应的属性 (Attribute) 并设置该属性 (Property) 可设置保护级别。</span><span class="sxs-lookup"><span data-stu-id="d6741-103">You can set the protection level by applying an appropriate attribute and setting the property.</span></span> <span data-ttu-id="d6741-104">可在服务级设置保护以影响每条消息的所有部分，或者可以从方法到消息部分逐级递增地设置保护。</span><span class="sxs-lookup"><span data-stu-id="d6741-104">You can set protection at the service level to affect all parts of every message, or you can set protection at increasingly granular levels, from methods to message parts.</span></span> <span data-ttu-id="d6741-105">有关详细信息`ProtectionLevel`属性，请参阅[了解保护级别](../../../docs/framework/wcf/understanding-protection-level.md)。</span><span class="sxs-lookup"><span data-stu-id="d6741-105">For more information about the `ProtectionLevel` property, see [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md).</span></span>  

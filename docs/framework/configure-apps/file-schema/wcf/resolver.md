@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749018"
 ---
 # <a name="ltresolvergt"></a><span data-ttu-id="463b3-102">&lt;resolver&gt;</span><span class="sxs-lookup"><span data-stu-id="463b3-102">&lt;resolver&gt;</span></span>
 <span data-ttu-id="463b3-103">指定对等解析程序，对等解析程序用于将对等网格 ID 解析为一组对等节点地址，这些地址表示参与网格的若干节点。</span><span class="sxs-lookup"><span data-stu-id="463b3-103">Specifies a peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>  

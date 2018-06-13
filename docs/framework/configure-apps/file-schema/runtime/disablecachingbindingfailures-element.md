@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745674"
 ---
 # <a name="ltdisablecachingbindingfailuresgt-element"></a><span data-ttu-id="5940f-102">&lt;disableCachingBindingFailures&gt;元素</span><span class="sxs-lookup"><span data-stu-id="5940f-102">&lt;disableCachingBindingFailures&gt; Element</span></span>
 <span data-ttu-id="5940f-103">指定是否禁用缓存绑定故障的发生是因为通过探测找不到程序集。</span><span class="sxs-lookup"><span data-stu-id="5940f-103">Specifies whether to disable the caching of binding failures that occur because the assembly was not found by probing.</span></span>  

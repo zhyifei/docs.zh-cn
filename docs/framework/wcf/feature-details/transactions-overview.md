@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498551"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a><span data-ttu-id="8c65c-102">Windows Communication Foundation 事务概述</span><span class="sxs-lookup"><span data-stu-id="8c65c-102">Windows Communication Foundation Transactions Overview</span></span>
 <span data-ttu-id="8c65c-103">事务可提供一种分组方法，将一组操作分为单个不可分的执行单元。</span><span class="sxs-lookup"><span data-stu-id="8c65c-103">Transactions provide a way to group a set of actions or operations into a single indivisible unit of execution.</span></span> <span data-ttu-id="8c65c-104">事务是指具有下列属性的操作集合：</span><span class="sxs-lookup"><span data-stu-id="8c65c-104">A transaction is a collection of operations with the following properties:</span></span>  

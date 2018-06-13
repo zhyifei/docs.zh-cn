@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499306"
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="5427c-102">如何：实现 Windows Communication Foundation 服务协定</span><span class="sxs-lookup"><span data-stu-id="5427c-102">How to: Implement a Windows Communication Foundation Service Contract</span></span>
 <span data-ttu-id="5427c-103">这是创建基本的 Windows Communication Foundation (WCF) 服务和客户端可以调用服务所需的六项任务的第二个。</span><span class="sxs-lookup"><span data-stu-id="5427c-103">This is the second of six tasks required to create a basic Windows Communication Foundation (WCF) service and a client that can call the service.</span></span> <span data-ttu-id="5427c-104">所有六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。</span><span class="sxs-lookup"><span data-stu-id="5427c-104">For an overview of all six tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  

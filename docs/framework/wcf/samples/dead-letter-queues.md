@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507976"
 ---
 # <a name="dead-letter-queues"></a><span data-ttu-id="95974-102">死信队列</span><span class="sxs-lookup"><span data-stu-id="95974-102">Dead Letter Queues</span></span>
 <span data-ttu-id="95974-103">本示例演示如何处理传递失败的消息。</span><span class="sxs-lookup"><span data-stu-id="95974-103">This sample demonstrates how to handle and process messages that have failed delivery.</span></span> <span data-ttu-id="95974-104">它基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。</span><span class="sxs-lookup"><span data-stu-id="95974-104">It is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="95974-105">本示例使用 `netMsmqBinding` 绑定。</span><span class="sxs-lookup"><span data-stu-id="95974-105">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="95974-106">此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。</span><span class="sxs-lookup"><span data-stu-id="95974-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

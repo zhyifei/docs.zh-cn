@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747354"
 ---
 # <a name="ltfaultpropagationquerygt-of-wcf"></a><span data-ttu-id="6f104-102">WCF 的 &lt;faultPropagationQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="6f104-102">&lt;faultPropagationQuery&gt; of WCF</span></span>
 <span data-ttu-id="6f104-103">表示一个用于跟踪在活动中发生的错误的处理的查询。</span><span class="sxs-lookup"><span data-stu-id="6f104-103">Represents a query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="6f104-104">每次 FaultHandler 处理错误时，都会发生此事件。</span><span class="sxs-lookup"><span data-stu-id="6f104-104">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="6f104-105">应使用此类查询来跟踪对在活动中出现的错误进行的处理。</span><span class="sxs-lookup"><span data-stu-id="6f104-105">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="6f104-106">跟踪参与者需要用此查询来订阅错误传播记录。</span><span class="sxs-lookup"><span data-stu-id="6f104-106">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>  

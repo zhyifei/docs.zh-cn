@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762135"
 ---
 # <a name="isof-entity-sql"></a><span data-ttu-id="3656d-102">ISOF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="3656d-102">ISOF (Entity SQL)</span></span>
 <span data-ttu-id="3656d-103">确定表达式的类型是否为指定类型或指定类型的某个子类型。</span><span class="sxs-lookup"><span data-stu-id="3656d-103">Determines whether the type of an expression is of the specified type or one of its subtypes.</span></span>  

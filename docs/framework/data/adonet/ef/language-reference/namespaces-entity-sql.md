@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763636"
 ---
 # <a name="namespaces-entity-sql"></a><span data-ttu-id="e5cd5-102">命名空间 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e5cd5-102">Namespaces (Entity SQL)</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="e5cd5-103"> 引入命名空间以避免全局标识符（如类型名称、实体集、函数等）出现名称冲突。</span><span class="sxs-lookup"><span data-stu-id="e5cd5-103"> introduces namespaces to avoid name conflicts for global identifiers such as type names, entity sets, functions, and so on.</span></span> <span data-ttu-id="e5cd5-104">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的命名空间支持与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 中的命名空间支持类似。</span><span class="sxs-lookup"><span data-stu-id="e5cd5-104">The namespace support in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is similar to the namespace support in the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>  

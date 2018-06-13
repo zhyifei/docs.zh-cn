@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535497"
 ---
 # <a name="timer-component-overview-windows-forms"></a><span data-ttu-id="66163-102">Timer 组件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="66163-102">Timer Component Overview (Windows Forms)</span></span>
 <span data-ttu-id="66163-103">Windows 窗体 <xref:System.Windows.Forms.Timer> 是一种按固定事件间隔引发事件的组件。</span><span class="sxs-lookup"><span data-stu-id="66163-103">The Windows Forms <xref:System.Windows.Forms.Timer> is a component that raises an event at regular intervals.</span></span> <span data-ttu-id="66163-104">此组件专为 Windows 窗体环境设计。</span><span class="sxs-lookup"><span data-stu-id="66163-104">This component is designed for a Windows Forms environment.</span></span> <span data-ttu-id="66163-105">如果需要适合服务器环境的计时器，请参阅[基于服务器的计时器介绍](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。</span><span class="sxs-lookup"><span data-stu-id="66163-105">If you need a timer that is suitable for a server environment, see [Introduction to Server-Based Timers](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).</span></span>  

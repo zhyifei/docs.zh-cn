@@ -1,35 +1,24 @@
 ---
 title: OperationContextScope
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 29dab29e6f2e8317d0403ab384fceb2b44b972c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3dd9c8e83b0840ff68b060889421d60b734d964
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505139"
 ---
-# <a name="operationcontextscope"></a><span data-ttu-id="d2a8f-102">OperationContextScope</span><span class="sxs-lookup"><span data-stu-id="d2a8f-102">OperationContextScope</span></span>
-<span data-ttu-id="d2a8f-103">OperationContextScope 示例演示如何使用头在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 调用中发送额外的信息。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-103">The OperationContextScope sample demonstrates how to send extra information on a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] call using headers.</span></span> <span data-ttu-id="d2a8f-104">在此示例中，服务器和客户端都是控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-104">In this sample, both the server and client are console applications.</span></span>  
+# <a name="operationcontextscope"></a><span data-ttu-id="5d2b4-102">OperationContextScope</span><span class="sxs-lookup"><span data-stu-id="5d2b4-102">OperationContextScope</span></span>
+<span data-ttu-id="5d2b4-103">OperationContextScope 示例演示如何发送 Windows Communication Foundation (WCF) 调用使用标头上的额外信息。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-103">The OperationContextScope sample demonstrates how to send extra information on a Windows Communication Foundation (WCF) call using headers.</span></span> <span data-ttu-id="5d2b4-104">在此示例中，服务器和客户端都是控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-104">In this sample, both the server and client are console applications.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d2a8f-105">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="5d2b4-105">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="d2a8f-106">此示例演示客户端如何使用 <xref:System.ServiceModel.Channels.MessageHeader> 以 <xref:System.ServiceModel.OperationContextScope> 的方式发送额外的信息。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-106">The sample demonstrates how a client can send additional information as a <xref:System.ServiceModel.Channels.MessageHeader> using <xref:System.ServiceModel.OperationContextScope>.</span></span> <span data-ttu-id="d2a8f-107"><xref:System.ServiceModel.OperationContextScope> 对象是通过将其范围设置为通道来创建的。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-107">An <xref:System.ServiceModel.OperationContextScope> object is created by scoping it to a channel.</span></span> <span data-ttu-id="d2a8f-108">必须转换为远程服务的头可以添加到 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> 集合中。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-108">Headers that must be translated to the remote service can be added to the <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> collection.</span></span> <span data-ttu-id="d2a8f-109">可以通过访问 <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> 在服务上检索添加到此集合中的头。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-109">Headers added to this collection can be retrieved on the service by accessing <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>.</span></span> <span data-ttu-id="d2a8f-110">它的调用是在多个通道进行的，添加到客户端的头然后将只应用于用来创建 <xref:System.ServiceModel.OperationContextScope> 的通道。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-110">Its calls are made on multiple channels and then the headers added to the client only apply to the channel that was used to create the <xref:System.ServiceModel.OperationContextScope>.</span></span>  
+ <span data-ttu-id="5d2b4-106">此示例演示客户端如何使用 <xref:System.ServiceModel.Channels.MessageHeader> 以 <xref:System.ServiceModel.OperationContextScope> 的方式发送额外的信息。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-106">The sample demonstrates how a client can send additional information as a <xref:System.ServiceModel.Channels.MessageHeader> using <xref:System.ServiceModel.OperationContextScope>.</span></span> <span data-ttu-id="5d2b4-107"><xref:System.ServiceModel.OperationContextScope> 对象是通过将其范围设置为通道来创建的。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-107">An <xref:System.ServiceModel.OperationContextScope> object is created by scoping it to a channel.</span></span> <span data-ttu-id="5d2b4-108">必须转换为远程服务的头可以添加到 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> 集合中。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-108">Headers that must be translated to the remote service can be added to the <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> collection.</span></span> <span data-ttu-id="5d2b4-109">可以通过访问 <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> 在服务上检索添加到此集合中的头。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-109">Headers added to this collection can be retrieved on the service by accessing <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>.</span></span> <span data-ttu-id="5d2b4-110">它的调用是在多个通道进行的，添加到客户端的头然后将只应用于用来创建 <xref:System.ServiceModel.OperationContextScope> 的通道。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-110">Its calls are made on multiple channels and then the headers added to the client only apply to the channel that was used to create the <xref:System.ServiceModel.OperationContextScope>.</span></span>  
   
-## <a name="messageheaderreader"></a><span data-ttu-id="d2a8f-111">MessageHeaderReader</span><span class="sxs-lookup"><span data-stu-id="d2a8f-111">MessageHeaderReader</span></span>  
- <span data-ttu-id="d2a8f-112">这是从客户端接收消息，并尝试在 <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> 集合中查找头的示例服务。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-112">This is the sample service that receives a message from the client and tries to look up the header in the <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> collection.</span></span> <span data-ttu-id="d2a8f-113">客户端传递在头中发送的 GUID，服务则检索自定义头，如果存在自定义头，则将其与客户端作为自变量传递的 GUID 进行比较。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-113">The client passes the GUID that it sent in the header and the service retrieves the custom header and, if present, compares it with the GUID passed as the argument by the client.</span></span>  
+## <a name="messageheaderreader"></a><span data-ttu-id="5d2b4-111">MessageHeaderReader</span><span class="sxs-lookup"><span data-stu-id="5d2b4-111">MessageHeaderReader</span></span>  
+ <span data-ttu-id="5d2b4-112">这是从客户端接收消息，并尝试在 <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> 集合中查找头的示例服务。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-112">This is the sample service that receives a message from the client and tries to look up the header in the <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> collection.</span></span> <span data-ttu-id="5d2b4-113">客户端传递在头中发送的 GUID，服务则检索自定义头，如果存在自定义头，则将其与客户端作为自变量传递的 GUID 进行比较。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-113">The client passes the GUID that it sent in the header and the service retrieves the custom header and, if present, compares it with the GUID passed as the argument by the client.</span></span>  
   
 ```  
 public bool RetrieveHeader(string guid)  
@@ -65,8 +54,8 @@ public bool RetrieveHeader(string guid)
 }  
 ```  
   
-## <a name="messageheaderclient"></a><span data-ttu-id="d2a8f-114">MessageHeaderClient</span><span class="sxs-lookup"><span data-stu-id="d2a8f-114">MessageHeaderClient</span></span>  
- <span data-ttu-id="d2a8f-115">这是使用生成的代理的客户端实现[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)与远程服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-115">This is the client implementation that uses the proxy generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to communicate with the remote service.</span></span> <span data-ttu-id="d2a8f-116">它首先创建 `MessageHeaderReaderClient` 的两个代理对象。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-116">It first creates two proxy objects of `MessageHeaderReaderClient`.</span></span>  
+## <a name="messageheaderclient"></a><span data-ttu-id="5d2b4-114">MessageHeaderClient</span><span class="sxs-lookup"><span data-stu-id="5d2b4-114">MessageHeaderClient</span></span>  
+ <span data-ttu-id="5d2b4-115">这是使用生成的代理的客户端实现[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)与远程服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-115">This is the client implementation that uses the proxy generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to communicate with the remote service.</span></span> <span data-ttu-id="5d2b4-116">它首先创建 `MessageHeaderReaderClient` 的两个代理对象。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-116">It first creates two proxy objects of `MessageHeaderReaderClient`.</span></span>  
   
 ```  
 //Create two clients to the remote service.  
@@ -74,7 +63,7 @@ MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
 ```  
   
- <span data-ttu-id="d2a8f-117">客户端然后创建 OperationContextScope 并将其范围设置为 `client1`。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-117">Client then creates an OperationContextScope and scopes it to `client1`.</span></span> <span data-ttu-id="d2a8f-118">它将 <xref:System.ServiceModel.Channels.MessageHeader> 添加到 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> 中，并在两个客户端上都进行一次调用。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-118">It adds a <xref:System.ServiceModel.Channels.MessageHeader> to <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> and invokes one call on both clients.</span></span> <span data-ttu-id="d2a8f-119">它可确保仅在发送时的标头`client1`而不是在`client2`通过检查返回值从`RetrieveHeader`调用。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-119">It ensures that the header is sent only on `client1` and not on `client2` by checking the return value from the `RetrieveHeader` call.</span></span>  
+ <span data-ttu-id="5d2b4-117">客户端然后创建 OperationContextScope 并将其范围设置为 `client1`。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-117">Client then creates an OperationContextScope and scopes it to `client1`.</span></span> <span data-ttu-id="5d2b4-118">它将 <xref:System.ServiceModel.Channels.MessageHeader> 添加到 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> 中，并在两个客户端上都进行一次调用。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-118">It adds a <xref:System.ServiceModel.Channels.MessageHeader> to <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> and invokes one call on both clients.</span></span> <span data-ttu-id="5d2b4-119">它可确保仅在发送时的标头`client1`而不是在`client2`通过检查返回值从`RetrieveHeader`调用。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-119">It ensures that the header is sent only on `client1` and not on `client2` by checking the return value from the `RetrieveHeader` call.</span></span>  
   
 ```  
 using (new OperationContextScope(client1.InnerChannel))  
@@ -101,7 +90,7 @@ using (new OperationContextScope(client1.InnerChannel))
 }  
 ```  
   
- <span data-ttu-id="d2a8f-120">此示例是自承载的。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-120">This sample is self-hosted.</span></span> <span data-ttu-id="d2a8f-121">下面提供了运行示例的示例输出：</span><span class="sxs-lookup"><span data-stu-id="d2a8f-121">The following sample output from running the sample is provided:</span></span>  
+ <span data-ttu-id="5d2b4-120">此示例是自承载的。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-120">This sample is self-hosted.</span></span> <span data-ttu-id="5d2b4-121">下面提供了运行示例的示例输出：</span><span class="sxs-lookup"><span data-stu-id="5d2b4-121">The following sample output from running the sample is provided:</span></span>  
   
 ```  
 Prompt> Service.exe  
@@ -124,21 +113,21 @@ Did server retrieve the header? : Actual: False, Expected: False
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="d2a8f-122">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="d2a8f-122">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="5d2b4-122">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="5d2b4-122">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="d2a8f-123">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-123">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="5d2b4-123">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-123">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="d2a8f-124">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-124">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="5d2b4-124">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-124">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="d2a8f-125">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-125">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="5d2b4-125">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-125">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="d2a8f-126">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="d2a8f-127">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="d2a8f-127">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="5d2b4-126">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="5d2b4-127">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="5d2b4-127">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="d2a8f-128">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="d2a8f-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d2a8f-129">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="d2a8f-129">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="5d2b4-128">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="5d2b4-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5d2b4-129">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="5d2b4-129">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  
   
-## <a name="see-also"></a><span data-ttu-id="d2a8f-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="d2a8f-130">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d2b4-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="5d2b4-130">See Also</span></span>
