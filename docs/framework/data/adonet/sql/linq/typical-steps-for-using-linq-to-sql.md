@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364770"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a><span data-ttu-id="eb341-102">使用 LINQ to SQL 的典型步骤</span><span class="sxs-lookup"><span data-stu-id="eb341-102">Typical Steps for Using LINQ to SQL</span></span>
 <span data-ttu-id="eb341-103">若要实现 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序，请按照本主题后面部分说明的步骤操作。</span><span class="sxs-lookup"><span data-stu-id="eb341-103">To implement a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] application, you follow the steps described later in this topic.</span></span> <span data-ttu-id="eb341-104">请注意，很多步骤是可选的。</span><span class="sxs-lookup"><span data-stu-id="eb341-104">Note that many steps are optional.</span></span> <span data-ttu-id="eb341-105">您可以以对象模型的默认状态使用它，这种可能性很高。</span><span class="sxs-lookup"><span data-stu-id="eb341-105">It is very possible that you can use your object model in its default state.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218379"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a><span data-ttu-id="40fcf-102">显式数值转换表（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="40fcf-102">Explicit Numeric Conversions Table (C# Reference)</span></span>
 <span data-ttu-id="40fcf-103">显式数值转换用于使用强制转换表达式将任何数值类型转换为任何其他数值类型，其中不存在任何隐式转换。</span><span class="sxs-lookup"><span data-stu-id="40fcf-103">Explicit numeric conversion is used to convert any numeric type to any other numeric type, for which there is no implicit conversion, by using a cast expression.</span></span> <span data-ttu-id="40fcf-104">下表显示了这些转换。</span><span class="sxs-lookup"><span data-stu-id="40fcf-104">The following table shows these conversions.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389247"
 ---
 # <a name="net-core-and-open-source"></a><span data-ttu-id="a8348-102">.NET 核心和开放源代码</span><span class="sxs-lookup"><span data-stu-id="a8348-102">.NET Core and Open-Source</span></span>
 <span data-ttu-id="a8348-103">本主题提供有关 .NET 核心概念的简要概述并展示如何查找更多信息。</span><span class="sxs-lookup"><span data-stu-id="a8348-103">This topic provides a brief overview  of what .NET Core is and shows how you can find more information.</span></span> <span data-ttu-id="a8348-104">若要查找有关 .NET Core 的完整主题列表，请访问 [.NET Core 指南](../../core/index.md)。</span><span class="sxs-lookup"><span data-stu-id="a8348-104">To find the complete list of topics for .NET Core, visit the [.NET Core Guide](../../core/index.md).</span></span>

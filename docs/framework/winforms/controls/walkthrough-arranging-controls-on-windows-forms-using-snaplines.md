@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541585"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a><span data-ttu-id="ff2b3-102">演练：使用对齐线在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="ff2b3-102">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>
 <span data-ttu-id="ff2b3-103">在窗体上精确地放置控件对于许多应用程序而言是高优先级。</span><span class="sxs-lookup"><span data-stu-id="ff2b3-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="ff2b3-104">Windows 窗体设计器为你提供许多布局工具实现此目的。</span><span class="sxs-lookup"><span data-stu-id="ff2b3-104">The Windows Forms Designer gives you many layout tools to accomplish this.</span></span> <span data-ttu-id="ff2b3-105">最重要之一是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。</span><span class="sxs-lookup"><span data-stu-id="ff2b3-105">One of the most important is the <xref:System.Windows.Forms.Design.Behavior.SnapLine> feature.</span></span>  

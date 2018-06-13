@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540314"
 ---
 # <a name="data-and-data-objects"></a><span data-ttu-id="95fc3-102">数据和数据对象</span><span class="sxs-lookup"><span data-stu-id="95fc3-102">Data and Data Objects</span></span>
 <span data-ttu-id="95fc3-103">作为拖放操作的一部分传输的数据存储在数据对象。</span><span class="sxs-lookup"><span data-stu-id="95fc3-103">Data that is transferred as part of a drag-and-drop operation is stored in a data object.</span></span>  <span data-ttu-id="95fc3-104">从概念上讲，数据对象由一个或多个以下对组成：</span><span class="sxs-lookup"><span data-stu-id="95fc3-104">Conceptually, a data object consists of one or more of the following pairs:</span></span>  

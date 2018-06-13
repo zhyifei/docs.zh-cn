@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396385"
 ---
 # <a name="introducing-pluggable-protocols"></a><span data-ttu-id="f0cd7-102">可插入协议简介</span><span class="sxs-lookup"><span data-stu-id="f0cd7-102">Introducing Pluggable Protocols</span></span>
 <span data-ttu-id="f0cd7-103">Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且托管的实现，可以快速、轻松地将其集成到应用程序中。</span><span class="sxs-lookup"><span data-stu-id="f0cd7-103">The Microsoft .NET Framework provides a layered, extensible, and managed implementation of Internet services that can be integrated quickly and easily into your applications.</span></span> <span data-ttu-id="f0cd7-104"><xref:System.Net> 和 <xref:System.Net.Sockets> 命名空间的 Internet 访问类可用于实现基于 Web 和基于 Internet 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="f0cd7-104">The Internet access classes in the <xref:System.Net> and <xref:System.Net.Sockets> namespaces can be used to implement both Web-based and Internet-based applications.</span></span>  

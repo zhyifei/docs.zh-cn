@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9de77f942a1b89b0ab11ef71229e491a5305cafc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420747"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a><span data-ttu-id="51d67-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue 方法</span><span class="sxs-lookup"><span data-stu-id="51d67-102">ICorDebugNativeFrame::GetLocalDoubleRegisterValue Method</span></span>
 <span data-ttu-id="51d67-103">获取自变量或此本机帧的两个指定寄存器中存储的本地变量的值。</span><span class="sxs-lookup"><span data-stu-id="51d67-103">Gets the value of an argument or local variable that is stored in the two specified registers for this native frame.</span></span>  

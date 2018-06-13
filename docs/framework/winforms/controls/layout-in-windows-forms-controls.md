@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535836"
 ---
 # <a name="layout-in-windows-forms-controls"></a><span data-ttu-id="0dc01-102">Windows 窗体控件的布局</span><span class="sxs-lookup"><span data-stu-id="0dc01-102">Layout in Windows Forms Controls</span></span>
 <span data-ttu-id="0dc01-103">在窗体上精确地放置控件对于许多应用程序而言是高优先级。</span><span class="sxs-lookup"><span data-stu-id="0dc01-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="0dc01-104"><xref:System.Windows.Forms?displayProperty=nameWithType>命名空间为你提供许多布局工具实现此目的。</span><span class="sxs-lookup"><span data-stu-id="0dc01-104">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace gives you many layout tools to accomplish this.</span></span>  

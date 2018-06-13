@@ -20,6 +20,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744312"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a><span data-ttu-id="a1f50-102">如何：生成单文件程序集</span><span class="sxs-lookup"><span data-stu-id="a1f50-102">How to: Build a Single-File Assembly</span></span>
 <span data-ttu-id="a1f50-103">单文件程序集（最简单的程序集类型）包含类型信息和实现，以及[程序集清单](../../../docs/framework/app-domains/assembly-manifest.md)。</span><span class="sxs-lookup"><span data-stu-id="a1f50-103">A single-file assembly, which is the simplest type of assembly, contains type information and implementation, as well as the [assembly manifest](../../../docs/framework/app-domains/assembly-manifest.md).</span></span> <span data-ttu-id="a1f50-104">可以使用命令行编译器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 创建单文件程序集。</span><span class="sxs-lookup"><span data-stu-id="a1f50-104">You can use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] to create a single-file assembly.</span></span> <span data-ttu-id="a1f50-105">默认情况下，编译器创建扩展名为 .exe 的程序集文件。</span><span class="sxs-lookup"><span data-stu-id="a1f50-105">By default, the compiler creates an assembly file with an .exe extension.</span></span>  

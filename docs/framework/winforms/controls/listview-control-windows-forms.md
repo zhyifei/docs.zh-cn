@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539684"
 ---
 # <a name="listview-control-windows-forms"></a><span data-ttu-id="dfccc-102">ListView 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="dfccc-102">ListView Control (Windows Forms)</span></span>
 <span data-ttu-id="dfccc-103">Windows 窗体 `ListView` 控件显示带图标的项列表。</span><span class="sxs-lookup"><span data-stu-id="dfccc-103">The Windows Forms `ListView` control displays a list of items with icons.</span></span> <span data-ttu-id="dfccc-104">你可以使用列表视图创建类似 Windows 资源管理器右窗格的用户界面。</span><span class="sxs-lookup"><span data-stu-id="dfccc-104">You can use a list view to create a user interface like the right pane of Windows Explorer.</span></span>  

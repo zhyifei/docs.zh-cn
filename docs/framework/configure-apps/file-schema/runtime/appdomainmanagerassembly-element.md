@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744845"
 ---
 # <a name="ltappdomainmanagerassemblygt-element"></a><span data-ttu-id="923d9-102">&lt;appDomainManagerAssembly&gt;元素</span><span class="sxs-lookup"><span data-stu-id="923d9-102">&lt;appDomainManagerAssembly&gt; Element</span></span>
 <span data-ttu-id="923d9-103">指定为过程中的默认应用程序域提供应用程序域管理器的程序集。</span><span class="sxs-lookup"><span data-stu-id="923d9-103">Specifies the assembly that provides the application domain manager for the default application domain in the process.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759265"
 ---
 # <a name="redirecting-assembly-versions"></a><span data-ttu-id="2ff02-102">重定向程序集版本</span><span class="sxs-lookup"><span data-stu-id="2ff02-102">Redirecting Assembly Versions</span></span>
 <span data-ttu-id="2ff02-103">你可以将编译时绑定引用重定向到 .NET Framework 程序集、第三方程序集或你自己的应用的程序集。</span><span class="sxs-lookup"><span data-stu-id="2ff02-103">You can redirect compile-time binding references to .NET Framework assemblies, third-party assemblies, or your own app's assemblies.</span></span> <span data-ttu-id="2ff02-104">你还可以重定向应用，以通过多种方式使用不同版本的程序集：通过发布服务器策略、通过应用配置文件或通过计算机配置文件。</span><span class="sxs-lookup"><span data-stu-id="2ff02-104">You can redirect your app to use a different version of an assembly in a number of ways: through publisher policy, through an app configuration file; or through the machine configuration file.</span></span> <span data-ttu-id="2ff02-105">本文讨论了程序集绑定在 .NET Framework 中的工作原理以及如何对其进行配置。</span><span class="sxs-lookup"><span data-stu-id="2ff02-105">This article discusses how assembly binding works in the .NET Framework and how it can be configured.</span></span>  

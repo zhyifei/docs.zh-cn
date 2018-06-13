@@ -21,9 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c09b70b5afb0561d32e55dd89df6cac083abc068
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422011"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a><span data-ttu-id="7fb30-102">ICoreClrDebugTarget::EnumProcesses 方法</span><span class="sxs-lookup"><span data-stu-id="7fb30-102">ICoreClrDebugTarget::EnumProcesses Method</span></span>
 <span data-ttu-id="7fb30-103">枚举远程计算机上运行的进程。</span><span class="sxs-lookup"><span data-stu-id="7fb30-103">Enumerates the processes that are running on a remote computer.</span></span>  

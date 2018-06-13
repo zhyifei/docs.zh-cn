@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743428"
 ---
 # <a name="ltrequestcachinggt-element-network-settings"></a><span data-ttu-id="0cb65-102">&lt;requestCaching&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="0cb65-102">&lt;requestCaching&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="0cb65-103">控制网络请求的缓存机制。</span><span class="sxs-lookup"><span data-stu-id="0cb65-103">Controls the caching mechanism for network requests.</span></span>  

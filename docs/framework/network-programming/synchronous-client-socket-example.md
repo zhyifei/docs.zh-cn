@@ -1,12 +1,6 @@
 ---
-title: "同步客户端套接字示例"
-ms.custom: 
+title: 同步客户端套接字示例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +9,18 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: be6c48f240290e2571bfc605bc9c3a84f59aa8e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2931e1ee9644952f2f643941e2076a7e2d5762db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393112"
 ---
-# <a name="synchronous-client-socket-example"></a><span data-ttu-id="40df9-102">同步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="40df9-102">Synchronous Client Socket Example</span></span>
-<span data-ttu-id="40df9-103">以下示例程序创建连接到服务器的客户端。</span><span class="sxs-lookup"><span data-stu-id="40df9-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="40df9-104">客户端使用同步套接字构建，因此，将暂停执行客户端应用程序，直到服务器返回响应。</span><span class="sxs-lookup"><span data-stu-id="40df9-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="40df9-105">应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="40df9-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="synchronous-client-socket-example"></a><span data-ttu-id="4e421-102">同步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="4e421-102">Synchronous Client Socket Example</span></span>
+<span data-ttu-id="4e421-103">以下示例程序创建连接到服务器的客户端。</span><span class="sxs-lookup"><span data-stu-id="4e421-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="4e421-104">客户端使用同步套接字构建，因此，将暂停执行客户端应用程序，直到服务器返回响应。</span><span class="sxs-lookup"><span data-stu-id="4e421-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="4e421-105">应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="4e421-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -145,7 +138,7 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="40df9-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="40df9-106">See Also</span></span>  
- [<span data-ttu-id="40df9-107">同步服务器套接字示例</span><span class="sxs-lookup"><span data-stu-id="40df9-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- [<span data-ttu-id="40df9-108">使用同步客户端套接字</span><span class="sxs-lookup"><span data-stu-id="40df9-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [<span data-ttu-id="40df9-109">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="40df9-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="4e421-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e421-106">See Also</span></span>  
+ [<span data-ttu-id="4e421-107">同步服务器套接字示例</span><span class="sxs-lookup"><span data-stu-id="4e421-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
+ [<span data-ttu-id="4e421-108">使用同步客户端套接字</span><span class="sxs-lookup"><span data-stu-id="4e421-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [<span data-ttu-id="4e421-109">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="4e421-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

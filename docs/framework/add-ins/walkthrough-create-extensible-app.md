@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744819"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a><span data-ttu-id="b6b4f-102">演练：创建可扩展的应用程序</span><span class="sxs-lookup"><span data-stu-id="b6b4f-102">Walkthrough: Creating an Extensible Application</span></span>
 <span data-ttu-id="b6b4f-103">本演练介绍如何创建用于执行简单的计算器功能的外接程序的管道。</span><span class="sxs-lookup"><span data-stu-id="b6b4f-103">This walkthrough describes how to create a pipeline for an add-in that performs simple calculator functions.</span></span> <span data-ttu-id="b6b4f-104">它并不演示实际方案;相反，它演示了管道以及如何外接程序可以提供主机服务的基本功能。</span><span class="sxs-lookup"><span data-stu-id="b6b4f-104">It does not demonstrate a real-world scenario; rather, it demonstrates the basic functionality of a pipeline and how an add-in can provide services for a host.</span></span>  

@@ -1,32 +1,23 @@
 ---
-title: "如何： 查找 Namespace (XPATH-LINQ to XML) 中的元素 (Visual Basic)"
-ms.custom: 
+title: 如何： 查找 Namespace (XPATH-LINQ to XML) 中的元素 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 257d4c37f849bbc50aac6b9cb4531d1084163db2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 417ff63408ea640bbbd5cc4863193e769a2ec444
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641022"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="5bb71-102">如何： 查找 Namespace (XPATH-LINQ to XML) 中的元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5bb71-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="5bb71-103">XPath 表达式可以在特定命名空间中查找节点。</span><span class="sxs-lookup"><span data-stu-id="5bb71-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="5bb71-104">XPath 表达式使用命名空间前缀来指定命名空间。</span><span class="sxs-lookup"><span data-stu-id="5bb71-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="5bb71-105">若要分析包含命名空间前缀的 XPath 表达式，必须向实现 <xref:System.Xml.IXmlNamespaceResolver> 的 XPath 方法传递一个对象。</span><span class="sxs-lookup"><span data-stu-id="5bb71-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="5bb71-106">本示例使用 <xref:System.Xml.XmlNamespaceManager>。</span><span class="sxs-lookup"><span data-stu-id="5bb71-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="89d26-102">如何： 查找 Namespace (XPATH-LINQ to XML) 中的元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89d26-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="89d26-103">XPath 表达式可以在特定命名空间中查找节点。</span><span class="sxs-lookup"><span data-stu-id="89d26-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="89d26-104">XPath 表达式使用命名空间前缀来指定命名空间。</span><span class="sxs-lookup"><span data-stu-id="89d26-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="89d26-105">若要分析包含命名空间前缀的 XPath 表达式，必须向实现 <xref:System.Xml.IXmlNamespaceResolver> 的 XPath 方法传递一个对象。</span><span class="sxs-lookup"><span data-stu-id="89d26-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="89d26-106">本示例使用 <xref:System.Xml.XmlNamespaceManager>。</span><span class="sxs-lookup"><span data-stu-id="89d26-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
   
- <span data-ttu-id="5bb71-107">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="5bb71-107">The XPath expression is:</span></span>  
+ <span data-ttu-id="89d26-107">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="89d26-107">The XPath expression is:</span></span>  
   
  `./aw:*`  
   
-## <a name="example"></a><span data-ttu-id="5bb71-108">示例</span><span class="sxs-lookup"><span data-stu-id="5bb71-108">Example</span></span>  
- <span data-ttu-id="5bb71-109">下面的示例读取包含两个命名空间的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="5bb71-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="5bb71-110">它使用 <xref:System.Xml.XmlReader> 来读取 XML 文档。</span><span class="sxs-lookup"><span data-stu-id="5bb71-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="5bb71-111">然后获取 <xref:System.Xml.XmlNameTable> 中的 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlNamespaceManager> 中的 <xref:System.Xml.XmlNameTable>。</span><span class="sxs-lookup"><span data-stu-id="5bb71-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="5bb71-112">示例在选择元素时使用 <xref:System.Xml.XmlNamespaceManager>。</span><span class="sxs-lookup"><span data-stu-id="5bb71-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="89d26-108">示例</span><span class="sxs-lookup"><span data-stu-id="89d26-108">Example</span></span>  
+ <span data-ttu-id="89d26-109">下面的示例读取包含两个命名空间的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="89d26-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="89d26-110">它使用 <xref:System.Xml.XmlReader> 来读取 XML 文档。</span><span class="sxs-lookup"><span data-stu-id="89d26-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="89d26-111">然后获取 <xref:System.Xml.XmlNameTable> 中的 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlNamespaceManager> 中的 <xref:System.Xml.XmlNameTable>。</span><span class="sxs-lookup"><span data-stu-id="89d26-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="89d26-112">示例在选择元素时使用 <xref:System.Xml.XmlNamespaceManager>。</span><span class="sxs-lookup"><span data-stu-id="89d26-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
   
 ```vb  
 Dim reader As XmlReader = _  
@@ -54,7 +45,7 @@ For Each el As XElement In list2
 Next  
 ```  
   
- <span data-ttu-id="5bb71-113">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="5bb71-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="89d26-113">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="89d26-113">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -89,5 +80,5 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5bb71-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5bb71-114">See Also</span></span>  
- [<span data-ttu-id="5bb71-115">LINQ to XML 针对 XPath 用户 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5bb71-115">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="89d26-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="89d26-114">See Also</span></span>  
+ [<span data-ttu-id="89d26-115">LINQ to XML 针对 XPath 用户 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89d26-115">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

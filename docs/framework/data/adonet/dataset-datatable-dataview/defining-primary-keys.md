@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757575"
 ---
 # <a name="defining-primary-keys"></a><span data-ttu-id="664d6-102">定义主键</span><span class="sxs-lookup"><span data-stu-id="664d6-102">Defining Primary Keys</span></span>
 <span data-ttu-id="664d6-103">数据库表通常都有一列或一组列，用于唯一地标识表中的每一行。</span><span class="sxs-lookup"><span data-stu-id="664d6-103">A database table commonly has a column or group of columns that uniquely identifies each row in the table.</span></span> <span data-ttu-id="664d6-104">这种具有标识作用的列或列组称为主键。</span><span class="sxs-lookup"><span data-stu-id="664d6-104">This identifying column or group of columns is called the primary key.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362180"
 ---
 # <a name="data-types-and-functions"></a><span data-ttu-id="a9bc2-102">数据类型和函数</span><span class="sxs-lookup"><span data-stu-id="a9bc2-102">Data Types and Functions</span></span>
 <span data-ttu-id="a9bc2-103">下表列出的主题介绍了对公共语言运行库 (CLR) 的成员、构造和强制转换的 LINQ to SQL 支持。</span><span class="sxs-lookup"><span data-stu-id="a9bc2-103">The topics listed in the following table describe LINQ to SQL support for members, constructs, and casts of the common language runtime (CLR).</span></span> <span data-ttu-id="a9bc2-104">受支持的成员和构造可以在 LINQ to SQL 查询中使用。</span><span class="sxs-lookup"><span data-stu-id="a9bc2-104">Supported members and constructs are available to use in your LINQ to SQL queries.</span></span>  

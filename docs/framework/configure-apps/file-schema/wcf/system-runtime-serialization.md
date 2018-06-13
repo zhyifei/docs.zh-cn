@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748495"
 ---
 # <a name="ltsystemruntimeserializationgt"></a><span data-ttu-id="34fa2-102">&lt;system.runtime.serialization&gt;</span><span class="sxs-lookup"><span data-stu-id="34fa2-102">&lt;system.runtime.serialization&gt;</span></span>
 <span data-ttu-id="34fa2-103">表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。</span><span class="sxs-lookup"><span data-stu-id="34fa2-103">Represents the root element for the <xref:System.Runtime.Serialization> namespace section and contains elements for setting options of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753022"
 ---
 # <a name="ltpolicyimportergt"></a><span data-ttu-id="0f426-102">&lt;policyImporter&gt;</span><span class="sxs-lookup"><span data-stu-id="0f426-102">&lt;policyImporter&gt;</span></span>
 <span data-ttu-id="0f426-103">指定一个策略导入程序，用于控制有关绑定的自定义策略断言的导入。</span><span class="sxs-lookup"><span data-stu-id="0f426-103">Specifies a policy importer that controls the import of custom policy assertions about bindings.</span></span>  

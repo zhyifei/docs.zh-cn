@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391028"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a><span data-ttu-id="98756-102">并行执行的组件的创建指南</span><span class="sxs-lookup"><span data-stu-id="98756-102">Guidelines for Creating Components for Side-by-Side Execution</span></span>
 <span data-ttu-id="98756-103">创建适用于并行执行的托管应用程序或组件时，请遵循下列一般性准则：</span><span class="sxs-lookup"><span data-stu-id="98756-103">Follow these general guidelines to create managed applications or components designed for side-by-side execution:</span></span>  

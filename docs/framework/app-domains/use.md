@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742466"
 ---
 # <a name="using-application-domains"></a><span data-ttu-id="f45df-102">使用应用程序域</span><span class="sxs-lookup"><span data-stu-id="f45df-102">Using Application Domains</span></span>
 <span data-ttu-id="f45df-103">应用程序域为公共语言运行时提供隔离单元。</span><span class="sxs-lookup"><span data-stu-id="f45df-103">Application domains provide a unit of isolation for the common language runtime.</span></span> <span data-ttu-id="f45df-104">它们在进程中创建和运行。</span><span class="sxs-lookup"><span data-stu-id="f45df-104">They are created and run inside a process.</span></span> <span data-ttu-id="f45df-105">应用程序域通常由运行时主机创建，运行时主机是一种应用程序，负责向进程加载运行时，并在应用程序域内执行用户代码。</span><span class="sxs-lookup"><span data-stu-id="f45df-105">Application domains are usually created by a runtime host, which is an application responsible for loading the runtime into a process and executing user code within an application domain.</span></span> <span data-ttu-id="f45df-106">运行时主机创建进程和默认应用程序域，并在其中运行托管代码。</span><span class="sxs-lookup"><span data-stu-id="f45df-106">The runtime host creates a process and a default application domain, and runs managed code inside it.</span></span> <span data-ttu-id="f45df-107">运行时主机包括 ASP.NET、Microsoft Internet Explorer 和 Windows Shell。</span><span class="sxs-lookup"><span data-stu-id="f45df-107">Runtime hosts include ASP.NET, Microsoft Internet Explorer, and the Windows shell.</span></span>  

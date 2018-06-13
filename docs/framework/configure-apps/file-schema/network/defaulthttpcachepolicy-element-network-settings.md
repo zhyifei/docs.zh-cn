@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741836"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a><span data-ttu-id="13c3f-102">&lt;defaultHttpCachePolicy&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="13c3f-102">&lt;defaultHttpCachePolicy&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="13c3f-103">描述 HTTP 缓存功能是否处于活动状态并描述默认缓存策略。</span><span class="sxs-lookup"><span data-stu-id="13c3f-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  

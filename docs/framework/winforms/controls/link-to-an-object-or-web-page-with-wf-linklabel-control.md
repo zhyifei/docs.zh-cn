@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539628"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a><span data-ttu-id="6c117-102">如何：使用 Windows 窗体 LinkLabel 控件链接到对象或网页</span><span class="sxs-lookup"><span data-stu-id="6c117-102">How to: Link to an Object or Web Page with the Windows Forms LinkLabel Control</span></span>
 <span data-ttu-id="6c117-103">Windows 窗体<xref:System.Windows.Forms.LinkLabel>控制可以在你的窗体上创建 Web 样式的链接。</span><span class="sxs-lookup"><span data-stu-id="6c117-103">The Windows Forms <xref:System.Windows.Forms.LinkLabel> control allows you to create Web-style links on your form.</span></span> <span data-ttu-id="6c117-104">单击该链接后，你可以更改其颜色来表示访问链接。</span><span class="sxs-lookup"><span data-stu-id="6c117-104">When the link is clicked, you can change its color to indicate the link has been visited.</span></span> <span data-ttu-id="6c117-105">将颜色更改的详细信息，请参阅[如何： 更改 Windows 窗体 LinkLabel 控件的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)。</span><span class="sxs-lookup"><span data-stu-id="6c117-105">For more information on changing the color, see [How to: Change the Appearance of the Windows Forms LinkLabel Control](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).</span></span>  

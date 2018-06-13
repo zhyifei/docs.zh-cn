@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fe54aed47d240be37ab9dbc5381235c4e962f1f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440309"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a><span data-ttu-id="97852-102">IHostMemoryManager::VirtualAlloc 方法</span><span class="sxs-lookup"><span data-stu-id="97852-102">IHostMemoryManager::VirtualAlloc Method</span></span>
 <span data-ttu-id="97852-103">用作相应的 Win32 函数的逻辑包装。</span><span class="sxs-lookup"><span data-stu-id="97852-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="97852-104">Win32 实现`VirtualAlloc`保留或提交调用进程虚拟地址空间中的页面的区域。</span><span class="sxs-lookup"><span data-stu-id="97852-104">The Win32 implementation of `VirtualAlloc` reserves or commits a region of pages in the virtual address space of the calling process.</span></span>  

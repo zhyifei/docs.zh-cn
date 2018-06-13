@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 015116e96a2fa534ecf26845c5926ddfa179df0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440877"
 ---
 # <a name="typenamefactory-coclass"></a><span data-ttu-id="ac8cb-102">TypeNameFactory 组件类</span><span class="sxs-lookup"><span data-stu-id="ac8cb-102">TypeNameFactory Coclass</span></span>
 <span data-ttu-id="ac8cb-103">提供用于管理析构的类型名称的接口。</span><span class="sxs-lookup"><span data-stu-id="ac8cb-103">Provides an interface for managing the deconstruction of a type name.</span></span>  

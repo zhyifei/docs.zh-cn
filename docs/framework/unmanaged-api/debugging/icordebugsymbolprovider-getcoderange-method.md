@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f60ba1c68e95363a59c5a1d217756664f63e5256
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420119"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a><span data-ttu-id="332d7-102">ICorDebugSymbolProvider::GetCodeRange 方法</span><span class="sxs-lookup"><span data-stu-id="332d7-102">ICorDebugSymbolProvider::GetCodeRange Method</span></span>
 <span data-ttu-id="332d7-103">给定方法的相对虚拟地址 (RVA)，获取该方法的起始地址和大小。</span><span class="sxs-lookup"><span data-stu-id="332d7-103">Gets the method start address and size given a relative virtual address (RVA) in a method.</span></span>  

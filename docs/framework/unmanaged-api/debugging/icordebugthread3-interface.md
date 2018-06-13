@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c9cb9217282af53d9788190844e4e52d5405ee2a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422771"
 ---
 # <a name="icordebugthread3-interface"></a><span data-ttu-id="44ea4-102">ICorDebugThread3 接口</span><span class="sxs-lookup"><span data-stu-id="44ea4-102">ICorDebugThread3 Interface</span></span>
 <span data-ttu-id="44ea4-103">提供的入口点[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)和相应接口。</span><span class="sxs-lookup"><span data-stu-id="44ea4-103">Provides the entry point to the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) and corresponding interfaces.</span></span>  
