@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33463459"
 ---
 # <a name="3340---pipeconnectionacceptstart"></a><span data-ttu-id="7d391-102">3340 - PipeConnectionAcceptStart</span><span class="sxs-lookup"><span data-stu-id="7d391-102">3340 - PipeConnectionAcceptStart</span></span>
 ## <a name="properties"></a><span data-ttu-id="7d391-103">属性</span><span class="sxs-lookup"><span data-stu-id="7d391-103">Properties</span></span>  

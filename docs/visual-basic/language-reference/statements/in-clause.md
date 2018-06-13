@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597391"
 ---
 # <a name="in-clause-visual-basic"></a><span data-ttu-id="103ef-102">In 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="103ef-102">In Clause (Visual Basic)</span></span>
 <span data-ttu-id="103ef-103">指定循环变量是中遍历的组`For Each`循环中，或指定查询中的集合`From`， `Join`，或`Group Join`子句。</span><span class="sxs-lookup"><span data-stu-id="103ef-103">Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.</span></span>  

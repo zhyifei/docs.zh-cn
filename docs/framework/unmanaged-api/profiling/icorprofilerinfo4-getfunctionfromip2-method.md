@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c4fe3eec4940b57001b7734c581076388f8ba0c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456981"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a><span data-ttu-id="a5584-102">ICorProfilerInfo4::GetFunctionFromIP2 方法</span><span class="sxs-lookup"><span data-stu-id="a5584-102">ICorProfilerInfo4::GetFunctionFromIP2 Method</span></span>
 <span data-ttu-id="a5584-103">将托管的代码指令指针映射到函数的 JIT 重新编译版本。</span><span class="sxs-lookup"><span data-stu-id="a5584-103">Maps a managed code instruction pointer to the JIT-recompiled version of a function.</span></span>  

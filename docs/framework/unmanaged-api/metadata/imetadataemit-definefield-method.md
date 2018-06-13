@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446569"
 ---
 # <a name="imetadataemitdefinefield-method"></a><span data-ttu-id="f6292-102">IMetaDataEmit::DefineField 方法</span><span class="sxs-lookup"><span data-stu-id="f6292-102">IMetaDataEmit::DefineField Method</span></span>
 <span data-ttu-id="f6292-103">使用指定的元数据签名中，创建一个字段的定义并获取指向该字段定义的标记。</span><span class="sxs-lookup"><span data-stu-id="f6292-103">Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.</span></span>  

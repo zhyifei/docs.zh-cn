@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2491b700e8fac512f0d782a42e30ae3114e93c3f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455536"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a><span data-ttu-id="d0788-102">ICorProfilerInfo::GetModuleMetaData 方法</span><span class="sxs-lookup"><span data-stu-id="d0788-102">ICorProfilerInfo::GetModuleMetaData Method</span></span>
 <span data-ttu-id="d0788-103">获取映射到指定的模块的元数据接口实例。</span><span class="sxs-lookup"><span data-stu-id="d0788-103">Gets a metadata interface instance that maps to the specified module.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579491"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a><span data-ttu-id="6d201-102">使用基于任务的异步模式</span><span class="sxs-lookup"><span data-stu-id="6d201-102">Consuming the Task-based Asynchronous Pattern</span></span>
 <span data-ttu-id="6d201-103">使用基于任务的异步模式 (TAP) 处理异步操作时，可以使用回叫实现等待，而不会阻塞。</span><span class="sxs-lookup"><span data-stu-id="6d201-103">When you use the Task-based Asynchronous Pattern (TAP) to work with asynchronous operations, you can use callbacks to achieve waiting without blocking.</span></span>  <span data-ttu-id="6d201-104">对于任务，这可通过 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 等方法实现。</span><span class="sxs-lookup"><span data-stu-id="6d201-104">For tasks, this is achieved through methods such as <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6d201-105">通过允许在正常控制流中等待异步操纵，基于语言的异步支持可隐藏回叫，并且编译器生成的代码可提供此相同 API 级别的支持。</span><span class="sxs-lookup"><span data-stu-id="6d201-105">Language-based asynchronous support hides callbacks by allowing asynchronous operations to be awaited within normal control flow, and compiler-generated code provides this same API-level support.</span></span>  

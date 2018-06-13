@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541224"
 ---
 # <a name="varieties-of-custom-controls"></a><span data-ttu-id="8faf5-102">各种自定义控件</span><span class="sxs-lookup"><span data-stu-id="8faf5-102">Varieties of Custom Controls</span></span>
 <span data-ttu-id="8faf5-103">使用 .NET Framework 可以开发和实现新的控件。</span><span class="sxs-lookup"><span data-stu-id="8faf5-103">With the .NET Framework, you can develop and implement new controls.</span></span> <span data-ttu-id="8faf5-104">可以通过继承来扩展熟悉的用户控件和现有控件的功能。</span><span class="sxs-lookup"><span data-stu-id="8faf5-104">You can extend the functionality of the familiar user control as well as existing controls through inheritance.</span></span> <span data-ttu-id="8faf5-105">还可以编写自定义控件，这些控件执行自己的绘制。</span><span class="sxs-lookup"><span data-stu-id="8faf5-105">You can also write custom controls that perform their own painting.</span></span>  

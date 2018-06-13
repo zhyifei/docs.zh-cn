@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6057593362e75044a9b2db32ad5dafe439a551d2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451137"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a><span data-ttu-id="02c6e-102">ICorProfilerCallback::ExceptionCLRCatcherExecute 方法</span><span class="sxs-lookup"><span data-stu-id="02c6e-102">ICorProfilerCallback::ExceptionCLRCatcherExecute Method</span></span>
 <span data-ttu-id="02c6e-103">时调用`catch`阻止异常在公共语言运行时 (CLR) 自身内执行的。</span><span class="sxs-lookup"><span data-stu-id="02c6e-103">Called when a `catch` block for an exception is executed inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="02c6e-104">此方法是.NET Framework 2.0 版中过时。</span><span class="sxs-lookup"><span data-stu-id="02c6e-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  

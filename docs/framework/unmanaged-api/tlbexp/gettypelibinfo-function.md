@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 56a9b97f37240e385dbd1788bafea62578d687a7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457862"
 ---
 # <a name="gettypelibinfo-function"></a><span data-ttu-id="feb5c-102">GetTypeLibInfo 函数</span><span class="sxs-lookup"><span data-stu-id="feb5c-102">GetTypeLibInfo Function</span></span>
 <span data-ttu-id="feb5c-103">返回有关指定的类型库的信息通过检查其[TLIBATTR](https://msdn.microsoft.com/library/ms221376\(v=vs.85\).aspx)结构。</span><span class="sxs-lookup"><span data-stu-id="feb5c-103">Returns information about the specified type library by examining its [TLIBATTR](https://msdn.microsoft.com/library/ms221376\(v=vs.85\).aspx) structure.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0735e4c59ba609ed87d61aca737c4f8a4dab757a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453481"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a><span data-ttu-id="1fae0-102">ICorProfilerCallback::ManagedToUnmanagedTransition 方法</span><span class="sxs-lookup"><span data-stu-id="1fae0-102">ICorProfilerCallback::ManagedToUnmanagedTransition Method</span></span>
 <span data-ttu-id="1fae0-103">通知探查器从托管代码转换到非托管代码已发生。</span><span class="sxs-lookup"><span data-stu-id="1fae0-103">Notifies the profiler that a transition from managed code to unmanaged code has occurred.</span></span>  

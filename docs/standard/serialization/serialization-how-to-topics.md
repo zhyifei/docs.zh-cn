@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581363"
 ---
 # <a name="serialization-how-to-topics"></a><span data-ttu-id="6eefd-102">序列化帮助主题</span><span class="sxs-lookup"><span data-stu-id="6eefd-102">Serialization How-to Topics</span></span>
 <span data-ttu-id="6eefd-103">下面的列表包含的链接指向有关序列化的概念文档中的“如何”主题。</span><span class="sxs-lookup"><span data-stu-id="6eefd-103">The following list includes links to the How-to topics found in the conceptual documentation for serialization.</span></span>  

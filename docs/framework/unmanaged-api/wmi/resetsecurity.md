@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 31e42b9e39ddb43025e18888572c394d742e38cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457901"
 ---
 # <a name="resetsecurity-function"></a><span data-ttu-id="c682c-103">ResetSecurity 函数</span><span class="sxs-lookup"><span data-stu-id="c682c-103">ResetSecurity function</span></span>
 <span data-ttu-id="c682c-104">将提供的模拟令牌分配给当前线程。</span><span class="sxs-lookup"><span data-stu-id="c682c-104">Assigns the supplied impersonation token to the current thread.</span></span>   

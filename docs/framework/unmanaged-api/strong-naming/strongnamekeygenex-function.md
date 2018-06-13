@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5e65e962d099e944fe243b3acc0a7c25a3bb960c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458665"
 ---
 # <a name="strongnamekeygenex-function"></a><span data-ttu-id="273b4-102">StrongNameKeyGenEx 函数</span><span class="sxs-lookup"><span data-stu-id="273b4-102">StrongNameKeyGenEx Function</span></span>
 <span data-ttu-id="273b4-103">生成与指定的密钥大小，供强名称使用新的公钥/私钥密钥对。</span><span class="sxs-lookup"><span data-stu-id="273b4-103">Generates a new public/private key pair with the specified key size, for strong name use.</span></span>  

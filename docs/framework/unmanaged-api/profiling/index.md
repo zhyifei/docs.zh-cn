@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 581f42dc83622712dbb30ef556a481388bafe259
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455567"
 ---
 # <a name="profiling-unmanaged-api-reference"></a><span data-ttu-id="82f93-102">分析（非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="82f93-102">Profiling (Unmanaged API Reference)</span></span>
 <span data-ttu-id="82f93-103">分析 API 允许探查器公共语言运行时 (CLR) 监视程序的执行。</span><span class="sxs-lookup"><span data-stu-id="82f93-103">The profiling API enables a profiler to monitor a program's execution by the common language runtime (CLR).</span></span>  

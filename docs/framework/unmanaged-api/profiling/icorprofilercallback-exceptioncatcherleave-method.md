@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5ea53e02cc20964a43bc4784b4354d429e238295
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450851"
 ---
 # <a name="icorprofilercallbackexceptioncatcherleave-method"></a><span data-ttu-id="c9952-102">ICorProfilerCallback::ExceptionCatcherLeave 方法</span><span class="sxs-lookup"><span data-stu-id="c9952-102">ICorProfilerCallback::ExceptionCatcherLeave Method</span></span>
 <span data-ttu-id="c9952-103">通知探查器将控制权传递超出相应`catch`块。</span><span class="sxs-lookup"><span data-stu-id="c9952-103">Notifies the profiler that control is being passed out of the appropriate `catch` block.</span></span>  

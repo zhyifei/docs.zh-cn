@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540958"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="6f2d9-102">演练：验证 Windows 窗体 DataGridView 控件中的数据</span><span class="sxs-lookup"><span data-stu-id="6f2d9-102">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="6f2d9-103">时向用户显示数据条目功能，你经常需要验证你的窗体中输入的数据。</span><span class="sxs-lookup"><span data-stu-id="6f2d9-103">When you display data entry functionality to users, you frequently have to validate the data entered into your form.</span></span> <span data-ttu-id="6f2d9-104"><xref:System.Windows.Forms.DataGridView>类提供了一种简便方式提交到数据存储区数据之前执行验证。</span><span class="sxs-lookup"><span data-stu-id="6f2d9-104">The <xref:System.Windows.Forms.DataGridView> class provides a convenient way to perform validation before data is committed to the data store.</span></span> <span data-ttu-id="6f2d9-105">你可以通过处理在验证数据<xref:System.Windows.Forms.DataGridView.CellValidating>事件，由引发<xref:System.Windows.Forms.DataGridView>当前单元格的更改时。</span><span class="sxs-lookup"><span data-stu-id="6f2d9-105">You can validate data by handling the <xref:System.Windows.Forms.DataGridView.CellValidating> event, which is raised by the <xref:System.Windows.Forms.DataGridView> when the current cell changes.</span></span>  

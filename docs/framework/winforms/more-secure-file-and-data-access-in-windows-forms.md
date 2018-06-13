@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541893"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a><span data-ttu-id="86646-102">Windows 窗体中更加安全的文件和数据访问</span><span class="sxs-lookup"><span data-stu-id="86646-102">More Secure File and Data Access in Windows Forms</span></span>
 <span data-ttu-id="86646-103">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用权限帮助保护资源和数据。</span><span class="sxs-lookup"><span data-stu-id="86646-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uses permissions to help protect resources and data.</span></span> <span data-ttu-id="86646-104">你的应用程序可以读取或写入数据的位置取决于授予该应用程序的权限。</span><span class="sxs-lookup"><span data-stu-id="86646-104">Where your application can read or write data depends on the permissions granted to the application.</span></span> <span data-ttu-id="86646-105">在部分信任环境中运行应用程序时，可能不具有对数据的访问权限，或可能必须更改访问数据的方式。</span><span class="sxs-lookup"><span data-stu-id="86646-105">When your application runs in a partial trust environment, you might not have access to your data or you might have to change the way you access the data.</span></span>  
