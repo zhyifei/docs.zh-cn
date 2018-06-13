@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752191"
 ---
 # <a name="setting-assembly-attributes"></a>设置程序集特性
 程序集特性是提供程序集相关信息的值。 特性分为以下几组信息：  
