@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461472"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet 函数
 检索为特定的属性设置的限定符。
@@ -76,7 +77,7 @@ HRESULT GetPropertyQualifierSet (
 由于系统属性具有不到限定符，该函数将返回`WBEM_E_SYSTEM_PROPERTY`如果你尝试获取[IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)系统属性的指针。
 
 ## <a name="requirements"></a>要求  
-**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599972"
 ---
 # <a name="properties-visual-basic"></a>属性 (Visual Basic)
 此页列出的 Visual Basic 模块成员的属性。 其他成员的特定的 Visual Basic 对象的属性列在[对象](../../visual-basic/language-reference/objects/index.md)。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234673"
 ---
 # <a name="delegate-statement"></a>Delegate 语句
 用于声明委托。 委托是一个引用类型，是指`Shared`方法的类型或实例方法的对象。 可以使用任何具有匹配参数和返回类型的过程来创建此委托类的实例。 然后可以通过将委托实例更高版本调用过程。  
