@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275836"
 ---
 # <a name="-operator-c-reference"></a>* 运算符（C# 参考）
 乘法运算符 (`*`) 计算操作数的乘积。 所有数值类型都具有预定义的乘法运算符。  

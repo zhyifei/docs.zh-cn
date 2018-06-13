@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557220"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>如何：控制文本框文本更新源的时间
 本主题介绍如何使用<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>属性控制绑定源更新的计时。 本主题使用<xref:System.Windows.Controls.TextBox>控件作为示例。  

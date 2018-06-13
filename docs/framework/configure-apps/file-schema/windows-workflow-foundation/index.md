@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352484"
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Windows Workflow Foundation 配置架构
 Windows Workflow Foundation (WF) 配置元素，可以配置工作流应用程序。 对于工作流应用程序，除配置其他内容外，还可以配置跟踪。 有关跟踪的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。 对于工作流服务，你还可以使用 Windows Communication Foundation (WCF) 配置元素。 有关 WCF 的详细信息，请参阅[WCF 配置架构](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  

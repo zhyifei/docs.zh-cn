@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743090"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>应用程序域和程序集帮助主题
 以下各节包含使用应用程序域和程序集进行编程的相关概念性文档中的所有操作说明主题链接。  

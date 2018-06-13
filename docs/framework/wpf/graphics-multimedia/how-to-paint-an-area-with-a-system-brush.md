@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561142"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>如何：使用系统画笔绘制区域
 <xref:System.Windows.SystemColors>类提供了访问系统画笔和颜色，如<xref:System.Windows.SystemColors.ControlBrush%2A>， <xref:System.Windows.SystemColors.ControlBrushKey%2A>，和<xref:System.Windows.SystemColors.DesktopBrush%2A>。 系统画笔是<xref:System.Windows.Media.SolidColorBrush>使用指定的系统颜色绘制区域的对象。 系统画笔总是生成纯色填充，它不能用于创建渐变。  

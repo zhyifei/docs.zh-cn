@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266684"
 ---
 # <a name="partial-type-c-reference"></a>分部（类型）（C# 参考）
 通过分部类型可以定义要拆分到多个文件中的类、结构或接口。  

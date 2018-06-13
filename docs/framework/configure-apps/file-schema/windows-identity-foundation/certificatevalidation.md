@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756054"
 ---
 # <a name="ltcertificatevalidationgt"></a>&lt;certificateValidation&gt;
 控制令牌处理程序用来验证证书的设置。 如果使用自己的验证程序配置特定的处理程序，则将重写这些设置。  

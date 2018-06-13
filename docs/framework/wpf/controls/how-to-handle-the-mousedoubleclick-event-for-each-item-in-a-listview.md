@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553841"
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>如何：处理 ListView 中每一项的 MouseDoubleClick 事件
 若要处理的事件中的项<xref:System.Windows.Controls.ListView>，你需要将事件处理程序添加到每<xref:System.Windows.Controls.ListViewItem>。 当<xref:System.Windows.Controls.ListView>绑定到数据源，你无需显式创建<xref:System.Windows.Controls.ListViewItem>，但你可以通过添加处理每个项的事件<xref:System.Windows.EventSetter>为的样式<xref:System.Windows.Controls.ListViewItem>。  

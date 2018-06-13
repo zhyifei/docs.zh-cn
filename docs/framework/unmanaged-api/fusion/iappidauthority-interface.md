@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 819afec2c448e5f396ab54e2dde00c01da310b12
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433745"
 ---
 # <a name="iappidauthority-interface"></a>IAppIdAuthority 接口
 提供用于生成并比较应用程序标识和引用的密钥的方法。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
 |`IAppIdAuthority::TextToReference`|获取到的接口指针`IReferenceAppId`表示由指定的字符串参数引用的程序集的实例。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   
