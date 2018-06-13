@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a96f2b21e524f03ea3290be268244eaceeb5c7f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408172"
 ---
 # <a name="icordebugarrayvalue-interface1"></a>ICorDebugArrayValue 接口 1
 ICorDebugHeapValue 表示一维或多维数组的一个子类。  
@@ -45,7 +46,7 @@ ICorDebugHeapValue 表示一维或多维数组的一个子类。
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
