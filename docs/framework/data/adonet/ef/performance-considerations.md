@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766808"
 ---
 # <a name="performance-considerations-entity-framework"></a>性能注意事项（实体框架）
 本主题介绍 ADO.NET 实体框架的性能特征，并提供一些注意事项帮助改善实体框架应用程序的性能。  
