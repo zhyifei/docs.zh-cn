@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604544"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 指定的一个或多个已声明的编程元素与类或结构在大型，而不使用的类或结构的特定实例关联。  

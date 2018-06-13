@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c7d62b1b6031f6ebdd5327626f42de38b18b3fa7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452044"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated 方法
 通知探查器在堆的内存已分配对象。  
@@ -45,7 +46,7 @@ HRESULT ObjectAllocated(
  `ObjectedAllocated`方法不会为从堆栈或非托管的内存中分配的调用。 `classId`参数可以引用尚未加载的托管代码中的类。 探查器会收到为该类的类负载回调后立即`ObjectAllocated`回调。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

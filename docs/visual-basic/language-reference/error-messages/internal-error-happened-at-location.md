@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586164"
 ---
 # <a name="internal-error-happened-at-ltlocationgt"></a>在发生内部错误&lt;位置&gt;
 发生了内部错误。 发生时所在的行包含在错误消息。  

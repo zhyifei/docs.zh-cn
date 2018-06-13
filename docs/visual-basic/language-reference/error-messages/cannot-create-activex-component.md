@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585952"
 ---
 # <a name="cannot-create-activex-component"></a>无法创建 ActiveX 组件
 尝试在设计时将 ActiveX 控件放在窗体上，或者尝试将包含 ActiveX 控件的窗体添加到项目中，但注册表中未能找到关联信息。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591685"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的托管和非托管线程处理
 所有线程的管理都是通过 <xref:System.Threading.Thread> 类完成的，包括由公共语言运行时创建的线程以及在运行时以外创建并进入托管环境以执行代码的线程。 运行时监视其进程中曾经在托管执行环境中执行过代码的所有线程。 它不跟踪任何其他线程。 线程可以通过 COM 互操作（原因是运行时将托管对象作为 COM 对象向非托管领域公开）、COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) 函数和平台调用进入托管执行环境。  

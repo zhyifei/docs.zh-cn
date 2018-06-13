@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603972"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct 子句 (Visual Basic)
 限制当前的范围变量，以消除后续查询子句中的重复值的值。  

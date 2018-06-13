@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591015"
 ---
 # <a name="datarepeater-control-visual-studio"></a>DataRepeater 控件 (Visual Studio)
 Visual Basic Power Pack <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件是一个可滚动的控件容器，用于显示重复数据，例如数据库表中的行。 当你需要对数据布局具有更多控制权限时，可用它替代 <xref:System.Windows.Forms.DataGridView> 控件。  

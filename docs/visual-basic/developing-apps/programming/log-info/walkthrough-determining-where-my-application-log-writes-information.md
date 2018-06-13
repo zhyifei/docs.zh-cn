@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590928"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>演练：确定 My.Application.Log 写入信息的位置 (Visual Basic)
 `My.Application.Log` 对象可以将信息写入多个日志侦听器。 日志侦听器由计算机的配置文件配置，并且可以通过应用程序的配置文件重写。 本主题介绍默认设置以及如何确定应用程序的设置。  

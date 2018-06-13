@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590021"
 ---
 # <a name="mutexes"></a>Mutexes
 <xref:System.Threading.Mutex> 对象可用于提供对资源的独占访问权限。 虽然 <xref:System.Threading.Mutex> 类使用的系统资源比 <xref:System.Threading.Monitor> 类更多，但它可以跨应用域边界进行封送，可用于多个等待操作以及同步不同进程中的线程。 有关托管同步机制的比较，请参阅[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  

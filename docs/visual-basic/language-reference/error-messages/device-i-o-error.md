@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585523"
 ---
 # <a name="device-io-error"></a>设备 I/O 错误
 输入或输出出错程序已使用例如打印机或磁盘驱动器的设备。  

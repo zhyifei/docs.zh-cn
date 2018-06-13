@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581750"
 ---
 # <a name="security-and-user-input"></a>安全性和用户输入
 用户数据是指任何种类的输入（来自 Web 请求或 URL 的数据、对 Microsoft Windows 窗体应用程序控件输入的数据等等），它可能会对代码产生负面影响，因为这些数据通常直接用作参数来调用其他代码。 这种情况类似于恶意代码使用奇特参数调用你的代码，因而必须采取同样的防范措施。 用户输入实际上更难以保证安全性，因为没有堆栈帧来跟踪可能不受信任的数据的存在。  

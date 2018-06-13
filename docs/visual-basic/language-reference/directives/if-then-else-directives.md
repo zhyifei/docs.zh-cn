@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591076"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else 指令
 有条件地编译选定的 Visual Basic 代码块。  

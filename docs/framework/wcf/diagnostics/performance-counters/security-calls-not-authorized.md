@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472568"
 ---
 # <a name="security-calls-not-authorized"></a>Security Calls Not Authorized（未授权的安全调用次数）
 计数器名称：Security Calls Not Authorized（未授权的安全调用次数）。  

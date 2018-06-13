@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589455"
 ---
 # <a name="first-statement-of-this-39sub-new39-must-be-a-call-to-39mybasenew39-or-39myclassnew39-no-accessible-constructor-without-parameters"></a>此第一个语句&#39;Sub New&#39;必须是对调用&#39;MyBase.New&#39;或&#39;MyClass.New&#39; （不带参数没有可访问构造函数）
 此 Sub New 的第一个语句必须是对 MyBase.New 或 MyClass.New 的调用，因为基类的\<基名称 > 的\<derivedname > 没有可访问 Sub New 可调用不带任何参数。  
