@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595181"
 ---
 # <a name="type-39lttypenamegt39-is-not-defined"></a>类型&#39; &lt;typename&gt; &#39;未定义
 该语句已对尚未定义的类型引用。 你可以定义一种类型的声明语句中诸如`Enum`， `Structure`， `Class`，或`Interface`。  

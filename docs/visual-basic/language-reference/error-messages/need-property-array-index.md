@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594775"
 ---
 # <a name="need-property-array-index"></a>需要属性数组索引
 该属性值由数组而不是由单个值组成。 没有为尝试访问的属性数组指定索引。  

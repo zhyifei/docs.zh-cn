@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595782"
 ---
 # <a name="access-denied-to-39ltnamegt39"></a>拒绝访问&#39;&lt;名称&gt;&#39;
 因为计算机安全权限不足，设备、文件或磁盘不可访问。  
