@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651095"
 ---
 # <a name="creating-xml-in-visual-basic"></a>在 Visual Basic 中创建 XML
 Visual Basic 使你能够使用*XML 文本*直接在代码中。 XML 文本语法表示[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象，也是如此类似于 XML 1.0 语法。 这样会更容易，以编程方式创建 XML 元素、 文档和片段，因为你的代码具有相同的结构与最终的 XML。  

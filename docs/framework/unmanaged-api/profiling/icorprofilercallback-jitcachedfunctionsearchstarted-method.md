@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d97b40412b6999000a601b72904a03edf2acd08
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454026"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted 方法
 通知探查器以前使用本机映像生成器 (NGen.exe) 编译的函数已开始搜索。  
@@ -51,7 +52,7 @@ HRESULT JITCachedFunctionSearchStarted(
  在探查器收到重复的回调，它必须由引用的值会设置`pbUseCachedFunction`为相同的值的所有重复的回调。 也就是说，当`JITCachedFunctionSearchStarted`多次调用了具有相同`functionId`值，探查器必须响应相同每次。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
