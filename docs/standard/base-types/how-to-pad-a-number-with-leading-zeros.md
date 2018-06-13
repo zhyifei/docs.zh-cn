@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569767"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a><span data-ttu-id="24e1a-102">如何：用前导零填充数字</span><span class="sxs-lookup"><span data-stu-id="24e1a-102">How to: Pad a Number with Leading Zeros</span></span>
 <span data-ttu-id="24e1a-103">通过结合使用“D”[标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)和精度说明符，将前导零添加到整数。</span><span class="sxs-lookup"><span data-stu-id="24e1a-103">You can add leading zeros to an integer by using the "D" [standard numeric format string](../../../docs/standard/base-types/standard-numeric-format-strings.md) with a precision specifier.</span></span> <span data-ttu-id="24e1a-104">你可以通过使用[自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)，将前导零添加到整数和浮点数。</span><span class="sxs-lookup"><span data-stu-id="24e1a-104">You can add leading zeros to both integer and floating-point numbers by using a [custom numeric format string](../../../docs/standard/base-types/custom-numeric-format-strings.md).</span></span> <span data-ttu-id="24e1a-105">本主题介绍如何通过这两种方法用前导零填充数字。</span><span class="sxs-lookup"><span data-stu-id="24e1a-105">This topic shows how to use both methods to pad a number with leading zeros.</span></span>  

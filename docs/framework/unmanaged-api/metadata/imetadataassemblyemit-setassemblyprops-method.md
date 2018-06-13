@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6f8132296035e9ddcdcad76d93ed05358beb0b81
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448228"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a><span data-ttu-id="ea161-102">IMetaDataAssemblyEmit::SetAssemblyProps 方法</span><span class="sxs-lookup"><span data-stu-id="ea161-102">IMetaDataAssemblyEmit::SetAssemblyProps Method</span></span>
 <span data-ttu-id="ea161-103">修改指定的 `Assembly` 元数据结构。</span><span class="sxs-lookup"><span data-stu-id="ea161-103">Modifies the specified `Assembly` metadata structure.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743948"
 ---
 # <a name="shadow-copying-assemblies"></a><span data-ttu-id="03ab0-102">卷影复制程序集</span><span class="sxs-lookup"><span data-stu-id="03ab0-102">Shadow Copying Assemblies</span></span>
 <span data-ttu-id="03ab0-103">借助卷影复制，无需卸载应用程序域就可更新用于此应用程序域的程序集。</span><span class="sxs-lookup"><span data-stu-id="03ab0-103">Shadow copying enables assemblies that are used in an application domain to be updated without unloading the application domain.</span></span> <span data-ttu-id="03ab0-104">这对必须连续可用的应用程序（如 ASP.NET 网站）特别有用。</span><span class="sxs-lookup"><span data-stu-id="03ab0-104">This is particularly useful for applications that must be available continuously, such as ASP.NET sites.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743155"
 ---
 # <a name="connectionmwritelist-field"></a><span data-ttu-id="44353-102">Connection.m\_WriteList 字段</span><span class="sxs-lookup"><span data-stu-id="44353-102">Connection.m\_WriteList Field</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515505"
 ---
 # <a name="using-a-custom-activity"></a><span data-ttu-id="f8808-102">使用自定义活动</span><span class="sxs-lookup"><span data-stu-id="f8808-102">Using a custom activity</span></span>
 <span data-ttu-id="f8808-103">派生自 <xref:System.Activities.Activity> 或其子类的活动可以组合到更大的工作流中，或以代码直接创建。</span><span class="sxs-lookup"><span data-stu-id="f8808-103">Activities that derive from <xref:System.Activities.Activity> or its subclasses can be composed into larger workflows, or created directly in code.</span></span> <span data-ttu-id="f8808-104">此主题说明如何使用工作流中以代码或通过设计器创建的自定义活动。</span><span class="sxs-lookup"><span data-stu-id="f8808-104">This topic describes how to use custom activities in workflows created either in code or in the designer.</span></span>  

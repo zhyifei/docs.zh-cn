@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743311"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a><span data-ttu-id="8d435-102">如何：引用具有强名称的程序集</span><span class="sxs-lookup"><span data-stu-id="8d435-102">How to: Reference a Strong-Named Assembly</span></span>
 <span data-ttu-id="8d435-103">引用强名称程序集中的类型或资源的过程通常是透明的。</span><span class="sxs-lookup"><span data-stu-id="8d435-103">The process for referencing types or resources in a strong-named assembly is usually transparent.</span></span> <span data-ttu-id="8d435-104">可在编译时（早期绑定）或在运行时进行引用。</span><span class="sxs-lookup"><span data-stu-id="8d435-104">You can make the reference either at compile time (early binding) or at run time.</span></span>  

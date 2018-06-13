@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741888"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a><span data-ttu-id="b3255-102">&lt;smtp&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="b3255-102">&lt;smtp&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="b3255-103">配置传递格式、 传递方法和发件人发送电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="b3255-103">Configures the delivery format, delivery method, and from address for sending emails.</span></span>  

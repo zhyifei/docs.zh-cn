@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557116"
 ---
 # <a name="adorners-overview"></a><span data-ttu-id="6ee39-102">装饰器概述</span><span class="sxs-lookup"><span data-stu-id="6ee39-102">Adorners Overview</span></span>
 <span data-ttu-id="6ee39-103">装饰器是一种特殊类型的<xref:System.Windows.FrameworkElement>，可用来向用户提供可视提示。</span><span class="sxs-lookup"><span data-stu-id="6ee39-103">Adorners are a special type of <xref:System.Windows.FrameworkElement>, used to provide visual cues to a user.</span></span> <span data-ttu-id="6ee39-104">装饰器有很多用途，可用来向元素添加功能句柄，或者提供有关某个控件的状态信息。</span><span class="sxs-lookup"><span data-stu-id="6ee39-104">Among other uses, Adorners can be used to add functional handles to elements or provide state information about a control.</span></span>  

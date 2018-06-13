@@ -1,36 +1,26 @@
 ---
-title: "创建新实体引用"
-ms.custom: 
+title: 创建新实体引用
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 76093fbe7095c2aae7caa69147f6181c292ca734
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0fefea6f8dfd74dfd31c7c07a158e4935ab0e02c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568441"
 ---
-# <a name="creating-new-entity-references"></a><span data-ttu-id="58c3c-102">创建新实体引用</span><span class="sxs-lookup"><span data-stu-id="58c3c-102">Creating New Entity References</span></span>
-<span data-ttu-id="58c3c-103">CreateEntityReference 方法新建 XmlEntityReference 节点。</span><span class="sxs-lookup"><span data-stu-id="58c3c-103">The **CreateEntityReference** method creates a new **XmlEntityReference** node.</span></span> <span data-ttu-id="58c3c-104">XML 文档对象模型 (DOM) 查看是否已声明了引用的实体名称。</span><span class="sxs-lookup"><span data-stu-id="58c3c-104">The XML Document Object Model (DOM) looks to see if the entity name being referenced has already been declared.</span></span> <span data-ttu-id="58c3c-105">如果已声明，从实体声明节点复制 XmlEntityReference 节点的子节点。</span><span class="sxs-lookup"><span data-stu-id="58c3c-105">If it has, the child nodes of **XmlEntityReference** node are copied from the entity declaration node.</span></span> <span data-ttu-id="58c3c-106">如果没有匹配的实体声明，则附加一个空的文本节点作为实体引用节点的唯一子级。</span><span class="sxs-lookup"><span data-stu-id="58c3c-106">If there is no entity declaration that matches, an empty text node is attached as the only child of the entity reference node.</span></span> <span data-ttu-id="58c3c-107">由于 XmlEntityReference 节点的子节点是其他节点的副本，因此这些子节点是只读的，无法修改。</span><span class="sxs-lookup"><span data-stu-id="58c3c-107">Because the child nodes of the **XmlEntityReference** node are copies of other nodes, these child nodes are read-only and cannot be modified.</span></span>  
+# <a name="creating-new-entity-references"></a><span data-ttu-id="0d511-102">创建新实体引用</span><span class="sxs-lookup"><span data-stu-id="0d511-102">Creating New Entity References</span></span>
+<span data-ttu-id="0d511-103">CreateEntityReference 方法新建 XmlEntityReference 节点。</span><span class="sxs-lookup"><span data-stu-id="0d511-103">The **CreateEntityReference** method creates a new **XmlEntityReference** node.</span></span> <span data-ttu-id="0d511-104">XML 文档对象模型 (DOM) 查看是否已声明了引用的实体名称。</span><span class="sxs-lookup"><span data-stu-id="0d511-104">The XML Document Object Model (DOM) looks to see if the entity name being referenced has already been declared.</span></span> <span data-ttu-id="0d511-105">如果已声明，从实体声明节点复制 XmlEntityReference 节点的子节点。</span><span class="sxs-lookup"><span data-stu-id="0d511-105">If it has, the child nodes of **XmlEntityReference** node are copied from the entity declaration node.</span></span> <span data-ttu-id="0d511-106">如果没有匹配的实体声明，则附加一个空的文本节点作为实体引用节点的唯一子级。</span><span class="sxs-lookup"><span data-stu-id="0d511-106">If there is no entity declaration that matches, an empty text node is attached as the only child of the entity reference node.</span></span> <span data-ttu-id="0d511-107">由于 XmlEntityReference 节点的子节点是其他节点的副本，因此这些子节点是只读的，无法修改。</span><span class="sxs-lookup"><span data-stu-id="0d511-107">Because the child nodes of the **XmlEntityReference** node are copies of other nodes, these child nodes are read-only and cannot be modified.</span></span>  
   
- <span data-ttu-id="58c3c-108">当复制节点时，在实体引用所处的范围内可能存在一个命名空间。</span><span class="sxs-lookup"><span data-stu-id="58c3c-108">When the nodes are copied, there may be a namespace in scope at the point of the entity reference.</span></span> <span data-ttu-id="58c3c-109">此命名空间影响生成的任何元素或属性节点的配置。</span><span class="sxs-lookup"><span data-stu-id="58c3c-109">This namespace affects the configuration of any element or attribute nodes generated.</span></span>  
+ <span data-ttu-id="0d511-108">当复制节点时，在实体引用所处的范围内可能存在一个命名空间。</span><span class="sxs-lookup"><span data-stu-id="0d511-108">When the nodes are copied, there may be a namespace in scope at the point of the entity reference.</span></span> <span data-ttu-id="0d511-109">此命名空间影响生成的任何元素或属性节点的配置。</span><span class="sxs-lookup"><span data-stu-id="0d511-109">This namespace affects the configuration of any element or attribute nodes generated.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="58c3c-110">仅当将 EntityReference 节点插入文档时，DOM 才将子节点添加到 EntityReference。</span><span class="sxs-lookup"><span data-stu-id="58c3c-110">The DOM adds child nodes to the **EntityReference** only when you insert the **EntityReference** node to the document.</span></span> <span data-ttu-id="58c3c-111">新建的 EntityReference 节点没有子节点。</span><span class="sxs-lookup"><span data-stu-id="58c3c-111">Newly created **EntityReference** nodes have no child nodes.</span></span>  
+>  <span data-ttu-id="0d511-110">仅当将 EntityReference 节点插入文档时，DOM 才将子节点添加到 EntityReference。</span><span class="sxs-lookup"><span data-stu-id="0d511-110">The DOM adds child nodes to the **EntityReference** only when you insert the **EntityReference** node to the document.</span></span> <span data-ttu-id="0d511-111">新建的 EntityReference 节点没有子节点。</span><span class="sxs-lookup"><span data-stu-id="0d511-111">Newly created **EntityReference** nodes have no child nodes.</span></span>  
   
- <span data-ttu-id="58c3c-112">尽管 XmlDataDocument 是 XmlDocument 的派生类，但 XmlDataDocument 不支持创建实体引用。</span><span class="sxs-lookup"><span data-stu-id="58c3c-112">Even though the **XmlDataDocument** is a derived class of the **XmlDocument**, the **XmlDataDocument** does not support the creation of entity references.</span></span> <span data-ttu-id="58c3c-113">这是因为 EntityReference 子级是只读的。</span><span class="sxs-lookup"><span data-stu-id="58c3c-113">This is because **EntityReference** children are read-only.</span></span> <span data-ttu-id="58c3c-114">EntityReference 节点的子级可以跨越多个区域。</span><span class="sxs-lookup"><span data-stu-id="58c3c-114">The children of an **EntityReference** node can span more than one region.</span></span> <span data-ttu-id="58c3c-115">在这种情况下，行中与包含 EntityReference 一部分的区域关联的部分是只读的。</span><span class="sxs-lookup"><span data-stu-id="58c3c-115">In this case, part of a row associated with the region that contains a part of an **EntityReference** will be read-only.</span></span>  
+ <span data-ttu-id="0d511-112">尽管 XmlDataDocument 是 XmlDocument 的派生类，但 XmlDataDocument 不支持创建实体引用。</span><span class="sxs-lookup"><span data-stu-id="0d511-112">Even though the **XmlDataDocument** is a derived class of the **XmlDocument**, the **XmlDataDocument** does not support the creation of entity references.</span></span> <span data-ttu-id="0d511-113">这是因为 EntityReference 子级是只读的。</span><span class="sxs-lookup"><span data-stu-id="0d511-113">This is because **EntityReference** children are read-only.</span></span> <span data-ttu-id="0d511-114">EntityReference 节点的子级可以跨越多个区域。</span><span class="sxs-lookup"><span data-stu-id="0d511-114">The children of an **EntityReference** node can span more than one region.</span></span> <span data-ttu-id="0d511-115">在这种情况下，行中与包含 EntityReference 一部分的区域关联的部分是只读的。</span><span class="sxs-lookup"><span data-stu-id="0d511-115">In this case, part of a row associated with the region that contains a part of an **EntityReference** will be read-only.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58c3c-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="58c3c-116">See Also</span></span>  
- [<span data-ttu-id="58c3c-117">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="58c3c-117">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="0d511-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="0d511-116">See Also</span></span>  
+ [<span data-ttu-id="0d511-117">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="0d511-117">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
