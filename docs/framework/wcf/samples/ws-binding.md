@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804909"
 ---
 # <a name="ws-binding"></a>WS 绑定
 本节包含演示 Windows Communication Foundation (WCF) 中的 Windows 服务绑定的示例。  

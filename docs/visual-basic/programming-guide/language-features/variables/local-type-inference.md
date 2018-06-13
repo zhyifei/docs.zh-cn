@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655318"
 ---
 # <a name="local-type-inference-visual-basic"></a>局部类型推理 (Visual Basic)
 Visual Basic 编译器使用*类型推理*来确定未声明的本地变量的数据类型`As`子句。 编译器推断出从初始化表达式的类型变量的类型。 这使您可以无需显式声明类型，声明变量，如下面的示例中所示。 由于声明，同时`num1`和`num2`强类型为整数。  

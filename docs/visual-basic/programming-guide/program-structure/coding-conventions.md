@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655356"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 编码约定
 Microsoft 开发示例和文档，请遵循本主题中的准则。 如果您按照相同的编码约定，你可能会获得以下好处：  

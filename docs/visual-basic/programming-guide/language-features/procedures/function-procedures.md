@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655530"
 ---
 # <a name="function-procedures-visual-basic"></a>Function 过程 (Visual Basic)
 A`Function`过程是一系列 Visual Basic 语句括在`Function`和`End Function`语句。 `Function`过程执行任务，再将控制权返回给调用代码。 当它返回控件时，它还到调用代码返回一个值。  
