@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745482"
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a><span data-ttu-id="99d4f-102">&lt;UseSmallInternalThreadStacks&gt;元素</span><span class="sxs-lookup"><span data-stu-id="99d4f-102">&lt;UseSmallInternalThreadStacks&gt; Element</span></span>
 <span data-ttu-id="99d4f-103">请求公共语言运行时 (CLR) 减少内存使用通过指定显式的堆栈大小，创建某些它在内部使用，而不是使用默认堆栈大小适用于这些线程的线程时。</span><span class="sxs-lookup"><span data-stu-id="99d4f-103">Requests that the common language runtime (CLR) reduce memory use by specifying explicit stack sizes when it creates certain threads that it uses internally, instead of using the default stack size for those threads.</span></span>  

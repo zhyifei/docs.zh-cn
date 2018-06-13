@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766993"
 ---
 # <a name="queries-in-linq-to-entities"></a><span data-ttu-id="5140d-102">LINQ to Entities 中的查询</span><span class="sxs-lookup"><span data-stu-id="5140d-102">Queries in LINQ to Entities</span></span>
 <span data-ttu-id="5140d-103">查询是一种从数据源检索数据的表达式。</span><span class="sxs-lookup"><span data-stu-id="5140d-103">A query is an expression that retrieves data from a data source.</span></span> <span data-ttu-id="5140d-104">查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。</span><span class="sxs-lookup"><span data-stu-id="5140d-104">Queries are usually expressed in a specialized query language, such as SQL for relational databases and XQuery for XML.</span></span> <span data-ttu-id="5140d-105">因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。</span><span class="sxs-lookup"><span data-stu-id="5140d-105">Therefore, developers have had to learn a new query language for each type of data source or data format that they query.</span></span> <span data-ttu-id="5140d-106">语言集成查询 (LINQ) 为跨各种数据源和格式处理数据提供了一种更简单的、一致的模型。</span><span class="sxs-lookup"><span data-stu-id="5140d-106">Language-Integrated Query (LINQ) offers a simpler, consistent model for working with data across various kinds of data sources and formats.</span></span> <span data-ttu-id="5140d-107">在 LINQ 查询中，您始终可以使用编程对象。</span><span class="sxs-lookup"><span data-stu-id="5140d-107">In a LINQ query, you always work with programming objects.</span></span>  

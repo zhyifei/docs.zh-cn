@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757211"
 ---
 # <a name="connection-strings-in-adonet"></a><span data-ttu-id="392f1-102">在 ADO.NET 中的连接字符串</span><span class="sxs-lookup"><span data-stu-id="392f1-102">Connection Strings in ADO.NET</span></span>
 <span data-ttu-id="392f1-103">.NET Framework 2.0 引入了用于处理连接字符串的新功能（包括将新的关键字引入到连接字符串生成器类），这将有助于在运行时创建有效的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="392f1-103">The .NET Framework 2.0 introduced new capabilities for working with connection strings, including the introduction of new keywords to the connection string builder classes, which facilitate creating valid connection strings at run time.</span></span>  

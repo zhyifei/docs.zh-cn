@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744611"
 ---
 # <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a><span data-ttu-id="07b23-102">&lt;legacyCorruptedStateExceptionsPolicy&gt;元素</span><span class="sxs-lookup"><span data-stu-id="07b23-102">&lt;legacyCorruptedStateExceptionsPolicy&gt; Element</span></span>
 <span data-ttu-id="07b23-103">指定公共语言运行时是否允许托管的代码获取访问冲突和其他损坏的状态异常。</span><span class="sxs-lookup"><span data-stu-id="07b23-103">Specifies whether the common language runtime allows managed code to catch access violations and other corrupted state exceptions.</span></span>  

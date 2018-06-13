@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558823"
 ---
 # <a name="how-to-encode-and-decode-a-png-image"></a><span data-ttu-id="5f05b-102">如何：编码和解码 PNG 图像</span><span class="sxs-lookup"><span data-stu-id="5f05b-102">How to: Encode and Decode a PNG Image</span></span>
 <span data-ttu-id="5f05b-103">下面的示例演示如何进行解码，并进行编码[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]映像使用特定<xref:System.Windows.Media.Imaging.PngBitmapDecoder>和<xref:System.Windows.Media.Imaging.PngBitmapEncoder>对象。</span><span class="sxs-lookup"><span data-stu-id="5f05b-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] image using the specific <xref:System.Windows.Media.Imaging.PngBitmapDecoder> and <xref:System.Windows.Media.Imaging.PngBitmapEncoder> objects.</span></span>  

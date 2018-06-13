@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755157"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a><span data-ttu-id="f7a41-102">&lt;system.web&gt;元素 （Web 设置）</span><span class="sxs-lookup"><span data-stu-id="f7a41-102">&lt;system.web&gt; Element (Web Settings)</span></span>
 <span data-ttu-id="f7a41-103">包含有关如何在 ASP.NET 承载层管理进程范围的行为的信息。</span><span class="sxs-lookup"><span data-stu-id="f7a41-103">Contains information about how the ASP.NET hosting layer manages process-wide behavior.</span></span>  

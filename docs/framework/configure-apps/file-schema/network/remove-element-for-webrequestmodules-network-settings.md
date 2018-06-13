@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743022"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="28e63-102">&lt;删除&gt;webRequestModules （网络设置） 的元素</span><span class="sxs-lookup"><span data-stu-id="28e63-102">&lt;remove&gt; Element for webRequestModules (Network Settings)</span></span>
 <span data-ttu-id="28e63-103">从应用程序中删除自定义的 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="28e63-103">Removes a custom Web request module from the application.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760328"
 ---
 # <a name="using-xml-in-a-dataset"></a><span data-ttu-id="128f3-102">在数据集中使用 XML</span><span class="sxs-lookup"><span data-stu-id="128f3-102">Using XML in a DataSet</span></span>
 <span data-ttu-id="128f3-103">通过 ADO.NET，您可以从 XML 流或文档填充 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="128f3-103">With ADO.NET you can fill a <xref:System.Data.DataSet> from an XML stream or document.</span></span> <span data-ttu-id="128f3-104">可以使用 XML 流或文档向 <xref:System.Data.DataSet> 提供数据和/或架构信息。</span><span class="sxs-lookup"><span data-stu-id="128f3-104">You can use the XML stream or document to supply to the <xref:System.Data.DataSet> either data, schema information, or both.</span></span> <span data-ttu-id="128f3-105">从 XML 流或文档中提供的信息可以与已存在于 <xref:System.Data.DataSet> 中的现有数据或架构信息进行组合。</span><span class="sxs-lookup"><span data-stu-id="128f3-105">The information supplied from the XML stream or document can be combined with existing data or schema information already present in the <xref:System.Data.DataSet>.</span></span>  

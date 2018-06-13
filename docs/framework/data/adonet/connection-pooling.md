@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755521"
 ---
 # <a name="connection-pooling"></a><span data-ttu-id="95171-102">连接池</span><span class="sxs-lookup"><span data-stu-id="95171-102">Connection Pooling</span></span>
 <span data-ttu-id="95171-103">连接到数据源可能需要很长时间。</span><span class="sxs-lookup"><span data-stu-id="95171-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="95171-104">打开连接的成本降到最低，ADO.NET 使用称为的优化方法*连接池*，其中重复打开和关闭连接的成本降至最低。</span><span class="sxs-lookup"><span data-stu-id="95171-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="95171-105">.NET Framework 数据提供程序处理连接池的方式有所不同。</span><span class="sxs-lookup"><span data-stu-id="95171-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534488"
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a><span data-ttu-id="250fa-102">如何：按功能分组 Windows 窗体 RadioButton 控件</span><span class="sxs-lookup"><span data-stu-id="250fa-102">How to: Group Windows Forms RadioButton Controls to Function as a Set</span></span>
 <span data-ttu-id="250fa-103">Windows 窗体<xref:System.Windows.Forms.RadioButton>控制机制旨在让用户在两个或多个设置，其中只有一个可以分配给过程或对象之间进行选择。</span><span class="sxs-lookup"><span data-stu-id="250fa-103">Windows Forms <xref:System.Windows.Forms.RadioButton> controls are designed to give users a choice among two or more settings, of which only one can be assigned to a procedure or object.</span></span> <span data-ttu-id="250fa-104">例如，一组<xref:System.Windows.Forms.RadioButton>控件可能会显示一个选择的包的订单的承运人，但会使用承运人之一。</span><span class="sxs-lookup"><span data-stu-id="250fa-104">For example, a group of <xref:System.Windows.Forms.RadioButton> controls may display a choice of package carriers for an order, but only one of the carriers will be used.</span></span> <span data-ttu-id="250fa-105">因此只有一个<xref:System.Windows.Forms.RadioButton>一次可以选择，即使它是功能组的一部分。</span><span class="sxs-lookup"><span data-stu-id="250fa-105">Therefore only one <xref:System.Windows.Forms.RadioButton> at a time can be selected, even if it is a part of a functional group.</span></span>  

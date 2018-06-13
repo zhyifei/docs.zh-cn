@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752567"
 ---
 # <a name="ltsourcegt-element"></a><span data-ttu-id="89bb8-102">&lt;源&gt;元素</span><span class="sxs-lookup"><span data-stu-id="89bb8-102">&lt;source&gt; Element</span></span>
 <span data-ttu-id="89bb8-103">指定用于启动跟踪消息的跟踪源。</span><span class="sxs-lookup"><span data-stu-id="89bb8-103">Specifies a trace source that initiates tracing messages.</span></span>  

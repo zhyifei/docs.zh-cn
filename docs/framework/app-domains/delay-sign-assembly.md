@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743984"
 ---
 # <a name="delay-signing-an-assembly"></a><span data-ttu-id="74622-102">延迟为程序集签名</span><span class="sxs-lookup"><span data-stu-id="74622-102">Delay Signing an Assembly</span></span>
 <span data-ttu-id="74622-103">组织可以使用严密保护的密钥对，开发人员无法每天对其进行访问。</span><span class="sxs-lookup"><span data-stu-id="74622-103">An organization can have a closely guarded key pair that developers do not have access to on a daily basis.</span></span> <span data-ttu-id="74622-104">通常情况下公钥可用，但私钥的访问权限仅限于少数几个人。</span><span class="sxs-lookup"><span data-stu-id="74622-104">The public key is often available, but access to the private key is restricted to only a few individuals.</span></span> <span data-ttu-id="74622-105">开发使用强名称的程序集时，每个引用强名称目标程序集的程序集都包含用于向目标程序集赋予强名称的公钥的标记。</span><span class="sxs-lookup"><span data-stu-id="74622-105">When developing assemblies with strong names, each assembly that references the strong-named target assembly contains the token of the public key used to give the target assembly a strong name.</span></span> <span data-ttu-id="74622-106">这要求公钥在开发过程中可用。</span><span class="sxs-lookup"><span data-stu-id="74622-106">This requires that the public key be available during the development process.</span></span>  

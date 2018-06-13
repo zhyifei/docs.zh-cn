@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748963"
 ---
 # <a name="ltserviceauthenticationmanagergt"></a><span data-ttu-id="ce7f6-102">&lt;serviceAuthenticationManager&gt;</span><span class="sxs-lookup"><span data-stu-id="ce7f6-102">&lt;serviceAuthenticationManager&gt;</span></span>
 <span data-ttu-id="ce7f6-103">提供一个工作流配置元素，该元素在服务级别建立传输、消息或发起方的有效性。</span><span class="sxs-lookup"><span data-stu-id="ce7f6-103">Provides a workflow configuration element that establishes at the service level the validity of a transmission, message, or originator..</span></span>  

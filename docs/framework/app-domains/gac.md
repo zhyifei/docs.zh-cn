@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751969"
 ---
 # <a name="global-assembly-cache"></a><span data-ttu-id="578bb-102">全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="578bb-102">Global Assembly Cache</span></span>
 <span data-ttu-id="578bb-103">安装了公共语言运行时的每台计算机均具有计算机范围的代码缓存，称为全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="578bb-103">Each computer where the Common Language Runtime is installed has a machine-wide code cache called the Global Assembly Cache.</span></span> <span data-ttu-id="578bb-104">全局程序集缓存中存储专门指定给由计算机中若干应用程序共享的程序集。</span><span class="sxs-lookup"><span data-stu-id="578bb-104">The Global Assembly Cache stores assemblies specifically designated to be shared by several applications on the computer.</span></span>  

@@ -1,78 +1,67 @@
 ---
-title: "Windows 窗体控件中的特性"
-ms.custom: 
+title: Windows 窗体控件中的特性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - attributes [Windows Forms]
 - attributes [Windows Forms], data binding properties
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13aad22dca249147e3037bcef6da755c264021db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e06836e53a69394ad899bedc8e545dbff9b9c29d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525773"
 ---
-# <a name="attributes-in-windows-forms-controls"></a><span data-ttu-id="86237-102">Windows 窗体控件中的特性</span><span class="sxs-lookup"><span data-stu-id="86237-102">Attributes in Windows Forms Controls</span></span>
-<span data-ttu-id="86237-103">.NET Framework 提供了多种可应用于自定义控件和组件的成员的特性。</span><span class="sxs-lookup"><span data-stu-id="86237-103">The .NET Framework provides a variety of attributes you can apply to the members of your custom controls and components.</span></span> <span data-ttu-id="86237-104">其中的一些特性会影响类的运行时行为，另一些会影响设计时行为。</span><span class="sxs-lookup"><span data-stu-id="86237-104">Some of these attributes affect the run-time behavior of a class, and others affect the design-time behavior.</span></span>  
+# <a name="attributes-in-windows-forms-controls"></a><span data-ttu-id="e06c3-102">Windows 窗体控件中的特性</span><span class="sxs-lookup"><span data-stu-id="e06c3-102">Attributes in Windows Forms Controls</span></span>
+<span data-ttu-id="e06c3-103">.NET Framework 提供了多种可应用于自定义控件和组件的成员的特性。</span><span class="sxs-lookup"><span data-stu-id="e06c3-103">The .NET Framework provides a variety of attributes you can apply to the members of your custom controls and components.</span></span> <span data-ttu-id="e06c3-104">其中的一些特性会影响类的运行时行为，另一些会影响设计时行为。</span><span class="sxs-lookup"><span data-stu-id="e06c3-104">Some of these attributes affect the run-time behavior of a class, and others affect the design-time behavior.</span></span>  
   
-## <a name="attributes-for-control-and-component-properties"></a><span data-ttu-id="86237-105">控件和组件属性的特性</span><span class="sxs-lookup"><span data-stu-id="86237-105">Attributes for Control and Component Properties</span></span>  
- <span data-ttu-id="86237-106">下表显示了可应用于自定义控件和组件的属性或其他成员的特性。</span><span class="sxs-lookup"><span data-stu-id="86237-106">The following table shows the attributes you can apply to properties or other members of your custom controls and components.</span></span> <span data-ttu-id="86237-107">请参阅[如何：在 Windows 窗体控件中应用特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)，获取一个使用了其中许多特性的示例。</span><span class="sxs-lookup"><span data-stu-id="86237-107">For an example that uses many of these attributes, see [How to: Apply Attributes in Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).</span></span>  
+## <a name="attributes-for-control-and-component-properties"></a><span data-ttu-id="e06c3-105">控件和组件属性的特性</span><span class="sxs-lookup"><span data-stu-id="e06c3-105">Attributes for Control and Component Properties</span></span>  
+ <span data-ttu-id="e06c3-106">下表显示了可应用于自定义控件和组件的属性或其他成员的特性。</span><span class="sxs-lookup"><span data-stu-id="e06c3-106">The following table shows the attributes you can apply to properties or other members of your custom controls and components.</span></span> <span data-ttu-id="e06c3-107">请参阅[如何：在 Windows 窗体控件中应用特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)，获取一个使用了其中许多特性的示例。</span><span class="sxs-lookup"><span data-stu-id="e06c3-107">For an example that uses many of these attributes, see [How to: Apply Attributes in Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).</span></span>  
   
-|<span data-ttu-id="86237-108">特性</span><span class="sxs-lookup"><span data-stu-id="86237-108">Attribute</span></span>|<span data-ttu-id="86237-109">描述</span><span class="sxs-lookup"><span data-stu-id="86237-109">Description</span></span>|  
+|<span data-ttu-id="e06c3-108">特性</span><span class="sxs-lookup"><span data-stu-id="e06c3-108">Attribute</span></span>|<span data-ttu-id="e06c3-109">描述</span><span class="sxs-lookup"><span data-stu-id="e06c3-109">Description</span></span>|  
 |---------------|-----------------|  
-|<xref:System.ComponentModel.AmbientValueAttribute>|<span data-ttu-id="86237-110">指定要传递给属性的值，以使该属性从另一个源中获取其值。</span><span class="sxs-lookup"><span data-stu-id="86237-110">Specifies the value to pass to a property to cause the property to get its value from another source.</span></span> <span data-ttu-id="86237-111">这称为“环境”。</span><span class="sxs-lookup"><span data-stu-id="86237-111">This is known as *ambience*.</span></span>|  
-|<xref:System.ComponentModel.BrowsableAttribute>|<span data-ttu-id="86237-112">指定属性或事件是否应在“属性”窗口中显示。</span><span class="sxs-lookup"><span data-stu-id="86237-112">Specifies whether a property or event should be displayed in a **Properties** window.</span></span>|  
-|<xref:System.ComponentModel.CategoryAttribute>|<span data-ttu-id="86237-113">指定要在其中进行分组的属性或事件时显示在类别的名称<xref:System.Windows.Forms.PropertyGrid>控件设置为<xref:System.Windows.Forms.PropertySort.Categorized>模式。</span><span class="sxs-lookup"><span data-stu-id="86237-113">Specifies the name of the category in which to group the property or event when displayed in a <xref:System.Windows.Forms.PropertyGrid> control set to <xref:System.Windows.Forms.PropertySort.Categorized> mode.</span></span>|  
-|<xref:System.ComponentModel.DefaultValueAttribute>|<span data-ttu-id="86237-114">指定属性的默认值。</span><span class="sxs-lookup"><span data-stu-id="86237-114">Specifies the default value for a property.</span></span>|  
-|<xref:System.ComponentModel.DescriptionAttribute>|<span data-ttu-id="86237-115">指定属性或事件的说明。</span><span class="sxs-lookup"><span data-stu-id="86237-115">Specifies a description for a property or event.</span></span>|  
-|<xref:System.ComponentModel.DisplayNameAttribute>|<span data-ttu-id="86237-116">为属性、事件或不采用参数的 `public``void` 方法指定显示名称。</span><span class="sxs-lookup"><span data-stu-id="86237-116">Specifies the display name for a property, event, or `public``void` method that takes no arguments.</span></span>|  
-|<xref:System.ComponentModel.EditorAttribute>|<span data-ttu-id="86237-117">指定用于更改属性的编辑器。</span><span class="sxs-lookup"><span data-stu-id="86237-117">Specifies the editor to use to change a property.</span></span>|  
-|<xref:System.ComponentModel.EditorBrowsableAttribute>|<span data-ttu-id="86237-118">指定可在编辑器中查看的属性或方法。</span><span class="sxs-lookup"><span data-stu-id="86237-118">Specifies that a property or method is viewable in an editor.</span></span>|  
-|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|<span data-ttu-id="86237-119">指定类或成员的上下文关键字。</span><span class="sxs-lookup"><span data-stu-id="86237-119">Specifies the context keyword for a class or member.</span></span>|  
-|<xref:System.ComponentModel.LocalizableAttribute>|<span data-ttu-id="86237-120">指定是否应本地化某一属性。</span><span class="sxs-lookup"><span data-stu-id="86237-120">Specifies whether a property should be localized.</span></span>|  
-|<xref:System.ComponentModel.PasswordPropertyTextAttribute>|<span data-ttu-id="86237-121">指示对象的文本表示形式被星号等字符隐匿。</span><span class="sxs-lookup"><span data-stu-id="86237-121">Indicates that an object's text representation is obscured by characters such as asterisks.</span></span>|  
-|<xref:System.ComponentModel.ReadOnlyAttribute>|<span data-ttu-id="86237-122">指定此特性绑定到的属性在设计时是只读还是可读/写。</span><span class="sxs-lookup"><span data-stu-id="86237-122">Specifies whether the property this attribute is bound to is read-only or read/write at design time.</span></span>|  
-|<xref:System.ComponentModel.RefreshPropertiesAttribute>|<span data-ttu-id="86237-123">指示关联的属性值更改时应刷新属性网格。</span><span class="sxs-lookup"><span data-stu-id="86237-123">Indicates that the property grid should refresh when the associated property value changes.</span></span>|  
-|<xref:System.ComponentModel.TypeConverterAttribute>|<span data-ttu-id="86237-124">指定对于此属性绑定到的对象要使用哪种类型作为转换器。</span><span class="sxs-lookup"><span data-stu-id="86237-124">Specifies what type to use as a converter for the object this attribute is bound to.</span></span>|  
+|<xref:System.ComponentModel.AmbientValueAttribute>|<span data-ttu-id="e06c3-110">指定要传递给属性的值，以使该属性从另一个源中获取其值。</span><span class="sxs-lookup"><span data-stu-id="e06c3-110">Specifies the value to pass to a property to cause the property to get its value from another source.</span></span> <span data-ttu-id="e06c3-111">这称为“环境”。</span><span class="sxs-lookup"><span data-stu-id="e06c3-111">This is known as *ambience*.</span></span>|  
+|<xref:System.ComponentModel.BrowsableAttribute>|<span data-ttu-id="e06c3-112">指定属性或事件是否应在“属性”窗口中显示。</span><span class="sxs-lookup"><span data-stu-id="e06c3-112">Specifies whether a property or event should be displayed in a **Properties** window.</span></span>|  
+|<xref:System.ComponentModel.CategoryAttribute>|<span data-ttu-id="e06c3-113">指定要在其中进行分组的属性或事件时显示在类别的名称<xref:System.Windows.Forms.PropertyGrid>控件设置为<xref:System.Windows.Forms.PropertySort.Categorized>模式。</span><span class="sxs-lookup"><span data-stu-id="e06c3-113">Specifies the name of the category in which to group the property or event when displayed in a <xref:System.Windows.Forms.PropertyGrid> control set to <xref:System.Windows.Forms.PropertySort.Categorized> mode.</span></span>|  
+|<xref:System.ComponentModel.DefaultValueAttribute>|<span data-ttu-id="e06c3-114">指定属性的默认值。</span><span class="sxs-lookup"><span data-stu-id="e06c3-114">Specifies the default value for a property.</span></span>|  
+|<xref:System.ComponentModel.DescriptionAttribute>|<span data-ttu-id="e06c3-115">指定属性或事件的说明。</span><span class="sxs-lookup"><span data-stu-id="e06c3-115">Specifies a description for a property or event.</span></span>|  
+|<xref:System.ComponentModel.DisplayNameAttribute>|<span data-ttu-id="e06c3-116">为属性、事件或不采用参数的 `public``void` 方法指定显示名称。</span><span class="sxs-lookup"><span data-stu-id="e06c3-116">Specifies the display name for a property, event, or `public``void` method that takes no arguments.</span></span>|  
+|<xref:System.ComponentModel.EditorAttribute>|<span data-ttu-id="e06c3-117">指定用于更改属性的编辑器。</span><span class="sxs-lookup"><span data-stu-id="e06c3-117">Specifies the editor to use to change a property.</span></span>|  
+|<xref:System.ComponentModel.EditorBrowsableAttribute>|<span data-ttu-id="e06c3-118">指定可在编辑器中查看的属性或方法。</span><span class="sxs-lookup"><span data-stu-id="e06c3-118">Specifies that a property or method is viewable in an editor.</span></span>|  
+|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|<span data-ttu-id="e06c3-119">指定类或成员的上下文关键字。</span><span class="sxs-lookup"><span data-stu-id="e06c3-119">Specifies the context keyword for a class or member.</span></span>|  
+|<xref:System.ComponentModel.LocalizableAttribute>|<span data-ttu-id="e06c3-120">指定是否应本地化某一属性。</span><span class="sxs-lookup"><span data-stu-id="e06c3-120">Specifies whether a property should be localized.</span></span>|  
+|<xref:System.ComponentModel.PasswordPropertyTextAttribute>|<span data-ttu-id="e06c3-121">指示对象的文本表示形式被星号等字符隐匿。</span><span class="sxs-lookup"><span data-stu-id="e06c3-121">Indicates that an object's text representation is obscured by characters such as asterisks.</span></span>|  
+|<xref:System.ComponentModel.ReadOnlyAttribute>|<span data-ttu-id="e06c3-122">指定此特性绑定到的属性在设计时是只读还是可读/写。</span><span class="sxs-lookup"><span data-stu-id="e06c3-122">Specifies whether the property this attribute is bound to is read-only or read/write at design time.</span></span>|  
+|<xref:System.ComponentModel.RefreshPropertiesAttribute>|<span data-ttu-id="e06c3-123">指示关联的属性值更改时应刷新属性网格。</span><span class="sxs-lookup"><span data-stu-id="e06c3-123">Indicates that the property grid should refresh when the associated property value changes.</span></span>|  
+|<xref:System.ComponentModel.TypeConverterAttribute>|<span data-ttu-id="e06c3-124">指定对于此属性绑定到的对象要使用哪种类型作为转换器。</span><span class="sxs-lookup"><span data-stu-id="e06c3-124">Specifies what type to use as a converter for the object this attribute is bound to.</span></span>|  
   
-## <a name="attributes-for-data-binding-properties"></a><span data-ttu-id="86237-125">数据绑定属性的特性</span><span class="sxs-lookup"><span data-stu-id="86237-125">Attributes for Data Binding Properties</span></span>  
- <span data-ttu-id="86237-126">下表显示了可用于指定自定义控件和组件如何与数据绑定之间进行交互的特性。</span><span class="sxs-lookup"><span data-stu-id="86237-126">The following table shows the attributes you can apply to specify how your custom controls and components interact with data binding.</span></span>  
+## <a name="attributes-for-data-binding-properties"></a><span data-ttu-id="e06c3-125">数据绑定属性的特性</span><span class="sxs-lookup"><span data-stu-id="e06c3-125">Attributes for Data Binding Properties</span></span>  
+ <span data-ttu-id="e06c3-126">下表显示了可用于指定自定义控件和组件如何与数据绑定之间进行交互的特性。</span><span class="sxs-lookup"><span data-stu-id="e06c3-126">The following table shows the attributes you can apply to specify how your custom controls and components interact with data binding.</span></span>  
   
-|<span data-ttu-id="86237-127">特性</span><span class="sxs-lookup"><span data-stu-id="86237-127">Attribute</span></span>|<span data-ttu-id="86237-128">描述</span><span class="sxs-lookup"><span data-stu-id="86237-128">Description</span></span>|  
+|<span data-ttu-id="e06c3-127">特性</span><span class="sxs-lookup"><span data-stu-id="e06c3-127">Attribute</span></span>|<span data-ttu-id="e06c3-128">描述</span><span class="sxs-lookup"><span data-stu-id="e06c3-128">Description</span></span>|  
 |---------------|-----------------|  
-|<xref:System.ComponentModel.BindableAttribute>|<span data-ttu-id="86237-129">指定属性是否通常用于绑定。</span><span class="sxs-lookup"><span data-stu-id="86237-129">Specifies whether a property is typically used for binding.</span></span>|  
-|<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|<span data-ttu-id="86237-130">指定组件的数据源和数据成员属性。</span><span class="sxs-lookup"><span data-stu-id="86237-130">Specifies the data source and data member properties for a component.</span></span>|  
-|<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|<span data-ttu-id="86237-131">指定组件的默认绑定属性。</span><span class="sxs-lookup"><span data-stu-id="86237-131">Specifies the default binding property for a component.</span></span>|  
-|<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|<span data-ttu-id="86237-132">指定组件的数据源和数据成员属性。</span><span class="sxs-lookup"><span data-stu-id="86237-132">Specifies the data source and data member properties for a component.</span></span>|  
-|<xref:System.ComponentModel.AttributeProviderAttribute>|<span data-ttu-id="86237-133">启用特性重定向。</span><span class="sxs-lookup"><span data-stu-id="86237-133">Enables attribute redirection.</span></span>|  
+|<xref:System.ComponentModel.BindableAttribute>|<span data-ttu-id="e06c3-129">指定属性是否通常用于绑定。</span><span class="sxs-lookup"><span data-stu-id="e06c3-129">Specifies whether a property is typically used for binding.</span></span>|  
+|<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|<span data-ttu-id="e06c3-130">指定组件的数据源和数据成员属性。</span><span class="sxs-lookup"><span data-stu-id="e06c3-130">Specifies the data source and data member properties for a component.</span></span>|  
+|<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|<span data-ttu-id="e06c3-131">指定组件的默认绑定属性。</span><span class="sxs-lookup"><span data-stu-id="e06c3-131">Specifies the default binding property for a component.</span></span>|  
+|<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|<span data-ttu-id="e06c3-132">指定组件的数据源和数据成员属性。</span><span class="sxs-lookup"><span data-stu-id="e06c3-132">Specifies the data source and data member properties for a component.</span></span>|  
+|<xref:System.ComponentModel.AttributeProviderAttribute>|<span data-ttu-id="e06c3-133">启用特性重定向。</span><span class="sxs-lookup"><span data-stu-id="e06c3-133">Enables attribute redirection.</span></span>|  
   
-## <a name="attributes-for-classes"></a><span data-ttu-id="86237-134">类的特性</span><span class="sxs-lookup"><span data-stu-id="86237-134">Attributes for Classes</span></span>  
- <span data-ttu-id="86237-135">下表显示了可用于在设计时指定自定义控件和组件的行为的特性。</span><span class="sxs-lookup"><span data-stu-id="86237-135">The following table shows the attributes you can apply to specify the behavior of your custom controls and components at design time.</span></span>  
+## <a name="attributes-for-classes"></a><span data-ttu-id="e06c3-134">类的特性</span><span class="sxs-lookup"><span data-stu-id="e06c3-134">Attributes for Classes</span></span>  
+ <span data-ttu-id="e06c3-135">下表显示了可用于在设计时指定自定义控件和组件的行为的特性。</span><span class="sxs-lookup"><span data-stu-id="e06c3-135">The following table shows the attributes you can apply to specify the behavior of your custom controls and components at design time.</span></span>  
   
-|<span data-ttu-id="86237-136">特性</span><span class="sxs-lookup"><span data-stu-id="86237-136">Attribute</span></span>|<span data-ttu-id="86237-137">描述</span><span class="sxs-lookup"><span data-stu-id="86237-137">Description</span></span>|  
+|<span data-ttu-id="e06c3-136">特性</span><span class="sxs-lookup"><span data-stu-id="e06c3-136">Attribute</span></span>|<span data-ttu-id="e06c3-137">描述</span><span class="sxs-lookup"><span data-stu-id="e06c3-137">Description</span></span>|  
 |---------------|-----------------|  
-|<xref:System.ComponentModel.DefaultEventAttribute>|<span data-ttu-id="86237-138">指定组件的默认事件。</span><span class="sxs-lookup"><span data-stu-id="86237-138">Specifies the default event for a component.</span></span>|  
-|<xref:System.ComponentModel.DefaultPropertyAttribute>|<span data-ttu-id="86237-139">指定组件的默认属性。</span><span class="sxs-lookup"><span data-stu-id="86237-139">Specifies the default property for a component.</span></span>|  
-|<xref:System.ComponentModel.DesignerAttribute>|<span data-ttu-id="86237-140">指定用于为组件实现设计时服务的类。</span><span class="sxs-lookup"><span data-stu-id="86237-140">Specifies the class used to implement design-time services for a component.</span></span>|  
-|<xref:System.ComponentModel.DesignerCategoryAttribute>|<span data-ttu-id="86237-141">指定类设计器属于某一类别。</span><span class="sxs-lookup"><span data-stu-id="86237-141">Specifies that the designer for a class belongs to a certain category.</span></span>|  
-|<xref:System.ComponentModel.ToolboxItemAttribute>|<span data-ttu-id="86237-142">表示工具箱项的特性。</span><span class="sxs-lookup"><span data-stu-id="86237-142">Represents an attribute of a toolbox item.</span></span>|  
-|<xref:System.ComponentModel.ToolboxItemFilterAttribute>|<span data-ttu-id="86237-143">指定要用于工具箱项的筛选器字符串和筛选器类型。</span><span class="sxs-lookup"><span data-stu-id="86237-143">Specifies the filter string and filter type to use for a Toolbox item.</span></span>|  
+|<xref:System.ComponentModel.DefaultEventAttribute>|<span data-ttu-id="e06c3-138">指定组件的默认事件。</span><span class="sxs-lookup"><span data-stu-id="e06c3-138">Specifies the default event for a component.</span></span>|  
+|<xref:System.ComponentModel.DefaultPropertyAttribute>|<span data-ttu-id="e06c3-139">指定组件的默认属性。</span><span class="sxs-lookup"><span data-stu-id="e06c3-139">Specifies the default property for a component.</span></span>|  
+|<xref:System.ComponentModel.DesignerAttribute>|<span data-ttu-id="e06c3-140">指定用于为组件实现设计时服务的类。</span><span class="sxs-lookup"><span data-stu-id="e06c3-140">Specifies the class used to implement design-time services for a component.</span></span>|  
+|<xref:System.ComponentModel.DesignerCategoryAttribute>|<span data-ttu-id="e06c3-141">指定类设计器属于某一类别。</span><span class="sxs-lookup"><span data-stu-id="e06c3-141">Specifies that the designer for a class belongs to a certain category.</span></span>|  
+|<xref:System.ComponentModel.ToolboxItemAttribute>|<span data-ttu-id="e06c3-142">表示工具箱项的特性。</span><span class="sxs-lookup"><span data-stu-id="e06c3-142">Represents an attribute of a toolbox item.</span></span>|  
+|<xref:System.ComponentModel.ToolboxItemFilterAttribute>|<span data-ttu-id="e06c3-143">指定要用于工具箱项的筛选器字符串和筛选器类型。</span><span class="sxs-lookup"><span data-stu-id="e06c3-143">Specifies the filter string and filter type to use for a Toolbox item.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="86237-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="86237-144">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e06c3-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="e06c3-144">See Also</span></span>  
  <xref:System.Attribute>  
- [<span data-ttu-id="86237-145">如何：在 Windows 窗体控件中应用特性</span><span class="sxs-lookup"><span data-stu-id="86237-145">How to: Apply Attributes in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
- [<span data-ttu-id="86237-146">扩展设计时支持</span><span class="sxs-lookup"><span data-stu-id="86237-146">Extending Design-Time Support</span></span>](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [<span data-ttu-id="86237-147">使用 .NET Framework 开发自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="86237-147">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+ [<span data-ttu-id="e06c3-145">如何：在 Windows 窗体控件中应用特性</span><span class="sxs-lookup"><span data-stu-id="e06c3-145">How to: Apply Attributes in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
+ [<span data-ttu-id="e06c3-146">扩展设计时支持</span><span class="sxs-lookup"><span data-stu-id="e06c3-146">Extending Design-Time Support</span></span>](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [<span data-ttu-id="e06c3-147">使用 .NET Framework 开发自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="e06c3-147">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

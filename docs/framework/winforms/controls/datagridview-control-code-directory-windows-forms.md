@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529310"
 ---
 # <a name="datagridview-control-code-directory-windows-forms"></a><span data-ttu-id="1f24c-102">DataGridView 控件代码目录（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="1f24c-102">DataGridView Control Code Directory (Windows Forms)</span></span>
 <span data-ttu-id="1f24c-103">本主题提供指向<xref:System.Windows.Forms.DataGridView>的相关文档中提供的代码示例。</span><span class="sxs-lookup"><span data-stu-id="1f24c-103">This topic provides links to <xref:System.Windows.Forms.DataGridView>-related code examples available in the documentation.</span></span>  

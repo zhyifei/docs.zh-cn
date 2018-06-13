@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744650"
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a><span data-ttu-id="df876-102">&lt;namedCaches&gt;元素 （缓存设置）</span><span class="sxs-lookup"><span data-stu-id="df876-102">&lt;namedCaches&gt; Element (Cache Settings)</span></span>
 <span data-ttu-id="df876-103">指定的配置设置的命名集合<xref:System.Runtime.Caching.MemoryCache>实例。</span><span class="sxs-lookup"><span data-stu-id="df876-103">Specifies a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span> <span data-ttu-id="df876-104"><xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>属性引用的配置设置的集合从一个或多个`namedCaches`配置文件的元素。</span><span class="sxs-lookup"><span data-stu-id="df876-104">The <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> property references the collection of configuration settings from one or more `namedCaches` elements of the configuration file.</span></span>  

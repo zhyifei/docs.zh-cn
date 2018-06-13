@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759707"
 ---
 # <a name="datatables"></a><span data-ttu-id="2d27d-102">DataTables</span><span class="sxs-lookup"><span data-stu-id="2d27d-102">DataTables</span></span>
 <span data-ttu-id="2d27d-103"><xref:System.Data.DataSet> 由表、关系和约束的集合组成。</span><span class="sxs-lookup"><span data-stu-id="2d27d-103">A <xref:System.Data.DataSet> is made up of a collection of tables, relationships, and constraints.</span></span> <span data-ttu-id="2d27d-104">在 ADO.NET 中，<xref:System.Data.DataTable>对象用于表示中的表**数据集**。</span><span class="sxs-lookup"><span data-stu-id="2d27d-104">In ADO.NET, <xref:System.Data.DataTable> objects are used to represent the tables in a **DataSet**.</span></span> <span data-ttu-id="2d27d-105">A **DataTable**表示内存中关系数据; 的一个表的数据是本地的。基于网络的应用程序它驻留，但可以从数据源，例如 Microsoft SQL Server 使用填充**DataAdapter**详细信息，请参阅[填充数据集从 DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).</span><span class="sxs-lookup"><span data-stu-id="2d27d-105">A **DataTable** represents one table of in-memory relational data; the data is local to the .NET-based application in which it resides, but can be populated from a data source such as Microsoft SQL Server using a **DataAdapter** For more information, see [Populating a DataSet from a DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).</span></span>  

@@ -1,45 +1,34 @@
 ---
-title: "Windows 窗体辅助功能"
-ms.custom: 
+title: Windows 窗体辅助功能
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 23a3f168-ebc0-4f23-9efc-799109aa4a2d
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 70eb72b8755b24e0ee91c2a77b562984422b0c99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 813507fbb5fcffebfa2430f28245f37b82f3e3f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524649"
 ---
-# <a name="windows-forms-accessibility"></a><span data-ttu-id="d811c-102">Windows 窗体辅助功能</span><span class="sxs-lookup"><span data-stu-id="d811c-102">Windows Forms Accessibility</span></span>
-<span data-ttu-id="d811c-103">Windows 窗体的辅助功能允许你向广大用户提供你的应用程序。</span><span class="sxs-lookup"><span data-stu-id="d811c-103">The accessibility functionality of Windows Forms allows you to make your application available to a wide variety of users.</span></span>  
+# <a name="windows-forms-accessibility"></a><span data-ttu-id="6530f-102">Windows 窗体辅助功能</span><span class="sxs-lookup"><span data-stu-id="6530f-102">Windows Forms Accessibility</span></span>
+<span data-ttu-id="6530f-103">Windows 窗体的辅助功能允许你向广大用户提供你的应用程序。</span><span class="sxs-lookup"><span data-stu-id="6530f-103">The accessibility functionality of Windows Forms allows you to make your application available to a wide variety of users.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d811c-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="d811c-104">In This Section</span></span>  
- [<span data-ttu-id="d811c-105">演练：创建基于 Windows 的可访问应用程序</span><span class="sxs-lookup"><span data-stu-id="d811c-105">Walkthrough: Creating an Accessible Windows-based Application</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)  
- <span data-ttu-id="d811c-106">描述所有应支持的功能以增强辅助功能。</span><span class="sxs-lookup"><span data-stu-id="d811c-106">Describes all of the features you should support to increase accessibility.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="6530f-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="6530f-104">In This Section</span></span>  
+ [<span data-ttu-id="6530f-105">演练：创建基于 Windows 的可访问应用程序</span><span class="sxs-lookup"><span data-stu-id="6530f-105">Walkthrough: Creating an Accessible Windows-based Application</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)  
+ <span data-ttu-id="6530f-106">描述所有应支持的功能以增强辅助功能。</span><span class="sxs-lookup"><span data-stu-id="6530f-106">Describes all of the features you should support to increase accessibility.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="d811c-107">参考</span><span class="sxs-lookup"><span data-stu-id="d811c-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6530f-107">参考</span><span class="sxs-lookup"><span data-stu-id="6530f-107">Reference</span></span>  
  <xref:Accessibility>  
- <span data-ttu-id="d811c-108">包含大量与辅助功能相关的类的命名空间。</span><span class="sxs-lookup"><span data-stu-id="d811c-108">A namespace containing a number of classes related to accessibility.</span></span>  
+ <span data-ttu-id="6530f-108">包含大量与辅助功能相关的类的命名空间。</span><span class="sxs-lookup"><span data-stu-id="6530f-108">A namespace containing a number of classes related to accessibility.</span></span>  
   
  <xref:System.Windows.Forms.AccessibleObject>  
- <span data-ttu-id="d811c-109">提供辅助功能应用程序用于为残障用户调整应用程序的用户界面 (UI) 的信息。</span><span class="sxs-lookup"><span data-stu-id="d811c-109">Provides information that accessibility applications use to adjust an application's user interface (UI) for users with impairments.</span></span>  
+ <span data-ttu-id="6530f-109">提供辅助功能应用程序用于为残障用户调整应用程序的用户界面 (UI) 的信息。</span><span class="sxs-lookup"><span data-stu-id="6530f-109">Provides information that accessibility applications use to adjust an application's user interface (UI) for users with impairments.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="d811c-110">相关章节</span><span class="sxs-lookup"><span data-stu-id="d811c-110">Related Sections</span></span>  
- [<span data-ttu-id="d811c-111">提供 Windows 窗体控件的辅助功能信息</span><span class="sxs-lookup"><span data-stu-id="d811c-111">Providing Accessibility Information for Controls on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
- <span data-ttu-id="d811c-112">介绍如何提供 Windows 窗体控件可用于帮助残障用户的信息。</span><span class="sxs-lookup"><span data-stu-id="d811c-112">Describes how to supply information that Windows Forms controls can use to assist users with impairments.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="6530f-110">相关章节</span><span class="sxs-lookup"><span data-stu-id="6530f-110">Related Sections</span></span>  
+ [<span data-ttu-id="6530f-111">提供 Windows 窗体控件的辅助功能信息</span><span class="sxs-lookup"><span data-stu-id="6530f-111">Providing Accessibility Information for Controls on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
+ <span data-ttu-id="6530f-112">介绍如何提供 Windows 窗体控件可用于帮助残障用户的信息。</span><span class="sxs-lookup"><span data-stu-id="6530f-112">Describes how to supply information that Windows Forms controls can use to assist users with impairments.</span></span>  
   
- [<span data-ttu-id="d811c-113">Windows 窗体中的自动缩放</span><span class="sxs-lookup"><span data-stu-id="d811c-113">Automatic Scaling in Windows Forms</span></span>](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
- <span data-ttu-id="d811c-114">描述如何使 Windows 窗体应用程序对系统字体大小的变化做出反应。</span><span class="sxs-lookup"><span data-stu-id="d811c-114">Describes how to make your Windows Forms application react to changes in the system font size.</span></span>
+ [<span data-ttu-id="6530f-113">Windows 窗体中的自动缩放</span><span class="sxs-lookup"><span data-stu-id="6530f-113">Automatic Scaling in Windows Forms</span></span>](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
+ <span data-ttu-id="6530f-114">描述如何使 Windows 窗体应用程序对系统字体大小的变化做出反应。</span><span class="sxs-lookup"><span data-stu-id="6530f-114">Describes how to make your Windows Forms application react to changes in the system font size.</span></span>

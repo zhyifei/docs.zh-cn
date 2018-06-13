@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759863"
 ---
 # <a name="adonet-architecture"></a><span data-ttu-id="06530-102">ADO.NET 体系结构</span><span class="sxs-lookup"><span data-stu-id="06530-102">ADO.NET Architecture</span></span>
 <span data-ttu-id="06530-103">以前，数据处理主要依赖于基于连接的双层模型。</span><span class="sxs-lookup"><span data-stu-id="06530-103">Data processing has traditionally relied primarily on a connection-based, two-tier model.</span></span> <span data-ttu-id="06530-104">随着数据处理越来越多地使用多层体系结构，程序员正在向断开方法转换，以便为他们的应用程序提供更好的可伸缩性。</span><span class="sxs-lookup"><span data-stu-id="06530-104">As data processing increasingly uses multi-tier architectures, programmers are switching to a disconnected approach to provide better scalability for their applications.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752723"
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="30dd6-102">&lt;清除&gt;webRequestModules （网络设置） 的元素</span><span class="sxs-lookup"><span data-stu-id="30dd6-102">&lt;clear&gt; Element for webRequestModules (Network Settings)</span></span>
 <span data-ttu-id="30dd6-103">从应用程序中删除所有已注册的 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="30dd6-103">Removes all registered Web request modules from the application.</span></span>  

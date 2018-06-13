@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757432"
 ---
 # <a name="association-end"></a><span data-ttu-id="60817-102">关联端</span><span class="sxs-lookup"><span data-stu-id="60817-102">association end</span></span>
 <span data-ttu-id="60817-103">*关联端*标识[实体类型](../../../../docs/framework/data/adonet/entity-type.md)的一个 end[关联](../../../../docs/framework/data/adonet/association-type.md)以及在该末尾关联类型可以存在的实例的实体数。</span><span class="sxs-lookup"><span data-stu-id="60817-103">An *association end* identifies the [entity type](../../../../docs/framework/data/adonet/entity-type.md) on one end of an [association](../../../../docs/framework/data/adonet/association-type.md) and the number of entity type instances that can exist at that end of an association.</span></span> <span data-ttu-id="60817-104">关联端定义为关联的一部分；关联必须正好有两个关联端。</span><span class="sxs-lookup"><span data-stu-id="60817-104">Association ends are defined as part of an association; an association must have exactly two association ends.</span></span> <span data-ttu-id="60817-105">[导航属性](../../../../docs/framework/data/adonet/navigation-property.md)允许从一个关联端导航到其他。</span><span class="sxs-lookup"><span data-stu-id="60817-105">[Navigation properties](../../../../docs/framework/data/adonet/navigation-property.md) allow for navigation from one association end to the other.</span></span>  

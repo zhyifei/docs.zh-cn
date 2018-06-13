@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758264"
 ---
 # <a name="specifying-an-assembly39s-location"></a><span data-ttu-id="4ac28-102">指定程序集&#39;s 位置</span><span class="sxs-lookup"><span data-stu-id="4ac28-102">Specifying an Assembly&#39;s Location</span></span>
 <span data-ttu-id="4ac28-103">有两种方法来指定程序集的位置：</span><span class="sxs-lookup"><span data-stu-id="4ac28-103">There are two ways to specify an assembly's location:</span></span>  

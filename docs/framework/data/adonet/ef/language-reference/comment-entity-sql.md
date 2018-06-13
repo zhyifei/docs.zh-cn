@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764159"
 ---
 # <a name="---comment-entity-sql"></a><span data-ttu-id="52eb9-102">--（注释）(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="52eb9-102">-- (Comment) (Entity SQL)</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="52eb9-103"> 查询可以包含注释。</span><span class="sxs-lookup"><span data-stu-id="52eb9-103"> queries can contain comments.</span></span> <span data-ttu-id="52eb9-104">注释行以两个短划线 (`--`) 开头。</span><span class="sxs-lookup"><span data-stu-id="52eb9-104">Two dashes (`--`) start a comment line.</span></span>  

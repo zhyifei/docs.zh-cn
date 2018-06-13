@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746792"
 ---
 # <a name="ltnamedpipetransportgt"></a><span data-ttu-id="39798-102">&lt;namedPipeTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="39798-102">&lt;namedPipeTransport&gt;</span></span>
 <span data-ttu-id="39798-103">定义传输，使通道在被包括到自定义绑定中时使用命名管道来传输消息。</span><span class="sxs-lookup"><span data-stu-id="39798-103">Defines a transport that causes a channel to transfer messages using named pipes when it is included in a custom binding.</span></span>  

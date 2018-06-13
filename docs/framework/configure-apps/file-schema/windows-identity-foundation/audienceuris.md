@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755989"
 ---
 # <a name="ltaudienceurisgt"></a><span data-ttu-id="abaaf-102">&lt;audienceUris&gt;</span><span class="sxs-lookup"><span data-stu-id="abaaf-102">&lt;audienceUris&gt;</span></span>
 <span data-ttu-id="abaaf-103">指定是可接受的信赖方 (RP) 标识符的 Uri 的集。</span><span class="sxs-lookup"><span data-stu-id="abaaf-103">Specifies the set of URIs that are acceptable identifiers of the relying party (RP).</span></span> <span data-ttu-id="abaaf-104">除非允许的受众 Uri 之一划分作用域，将不会接受令牌。</span><span class="sxs-lookup"><span data-stu-id="abaaf-104">Tokens will not be accepted unless they are scoped for one of the allowed audience URIs.</span></span>  

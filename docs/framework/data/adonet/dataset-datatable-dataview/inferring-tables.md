@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757822"
 ---
 # <a name="inferring-tables"></a><span data-ttu-id="085e5-102">推断表</span><span class="sxs-lookup"><span data-stu-id="085e5-102">Inferring Tables</span></span>
 <span data-ttu-id="085e5-103">当从 XML 文档推断 <xref:System.Data.DataSet> 的架构时，ADO.NET 首先会确定哪些 XML 元素表示表。</span><span class="sxs-lookup"><span data-stu-id="085e5-103">When inferring a schema for a <xref:System.Data.DataSet> from an XML document, ADO.NET first determines which XML elements represent tables.</span></span> <span data-ttu-id="085e5-104">以下 XML 结构导致表以获取**数据集**架构：</span><span class="sxs-lookup"><span data-stu-id="085e5-104">The following XML structures result in a table for the **DataSet** schema:</span></span>  

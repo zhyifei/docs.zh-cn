@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767305"
 ---
 # <a name="ltbehaviorsgt-of-workflow"></a><span data-ttu-id="04acf-102">工作流的 &lt;behaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="04acf-102">&lt;behaviors&gt; of workflow</span></span>
 <span data-ttu-id="04acf-103">此元素包含**serviceBehaviors**集合。</span><span class="sxs-lookup"><span data-stu-id="04acf-103">This element contains the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="04acf-104">集合中的每个元素定义工作流服务所使用的行为元素。</span><span class="sxs-lookup"><span data-stu-id="04acf-104">Each element in the collection defines behavior elements consumed by workflow services.</span></span> <span data-ttu-id="04acf-105">每个行为元素由其唯一标识**名称**属性。</span><span class="sxs-lookup"><span data-stu-id="04acf-105">Each behavior element is identified by its unique **name** attribute.</span></span>  

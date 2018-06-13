@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555779"
 ---
 # <a name="menu"></a><span data-ttu-id="2050d-102">菜单</span><span class="sxs-lookup"><span data-stu-id="2050d-102">Menu</span></span>
 <span data-ttu-id="2050d-103">A<xref:System.Windows.Controls.Menu>是允许的命令或事件处理程序与关联的元素的分层组织的控件。</span><span class="sxs-lookup"><span data-stu-id="2050d-103">A <xref:System.Windows.Controls.Menu> is a control that allows hierarchical organization of elements associated with commands or event handlers.</span></span> <span data-ttu-id="2050d-104">每个<xref:System.Windows.Controls.Menu>可以包含多个<xref:System.Windows.Controls.MenuItem>控件。</span><span class="sxs-lookup"><span data-stu-id="2050d-104">Each <xref:System.Windows.Controls.Menu> can contain multiple <xref:System.Windows.Controls.MenuItem> controls.</span></span> <span data-ttu-id="2050d-105">每个<xref:System.Windows.Controls.MenuItem>可以调用命令或调用`Click`事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="2050d-105">Each <xref:System.Windows.Controls.MenuItem> can invoke a command or invoke a `Click` event handler.</span></span> <span data-ttu-id="2050d-106">A<xref:System.Windows.Controls.MenuItem>还可以有多个<xref:System.Windows.Controls.MenuItem>元素作为子级，构成子菜单。</span><span class="sxs-lookup"><span data-stu-id="2050d-106">A <xref:System.Windows.Controls.MenuItem> can also have multiple <xref:System.Windows.Controls.MenuItem> elements as children, forming a submenu.</span></span>  

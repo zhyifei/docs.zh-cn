@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563115"
 ---
 # <a name="xtype-markup-extension"></a><span data-ttu-id="2d1ca-102">x:Type 标记扩展</span><span class="sxs-lookup"><span data-stu-id="2d1ca-102">x:Type Markup Extension</span></span>
 <span data-ttu-id="2d1ca-103">提供 CLR<xref:System.Type>是指定的 XAML 类型的基础类型的对象。</span><span class="sxs-lookup"><span data-stu-id="2d1ca-103">Supplies the CLR <xref:System.Type> object that is the underlying type for a specified XAML type.</span></span>  

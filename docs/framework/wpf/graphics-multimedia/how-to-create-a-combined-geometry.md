@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561116"
 ---
 # <a name="how-to-create-a-combined-geometry"></a><span data-ttu-id="f6f70-102">如何：创建组合的几何图形</span><span class="sxs-lookup"><span data-stu-id="f6f70-102">How to: Create a Combined Geometry</span></span>
 <span data-ttu-id="f6f70-103">此示例演示如何组合几何图形。</span><span class="sxs-lookup"><span data-stu-id="f6f70-103">This example shows how to combine geometries.</span></span> <span data-ttu-id="f6f70-104">若要合并两个几何图形，使用<xref:System.Windows.Media.CombinedGeometry>对象。</span><span class="sxs-lookup"><span data-stu-id="f6f70-104">To combine two geometries, use a <xref:System.Windows.Media.CombinedGeometry> object.</span></span> <span data-ttu-id="f6f70-105">设置其<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>和<xref:System.Windows.Media.CombinedGeometry.Geometry2%2A>具有两个几何图形合并，并设置属性<xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A>属性，确定如何几何图形将组合在一起，到`Union`， `Intersect`， `Exclude`，或`Xor`.</span><span class="sxs-lookup"><span data-stu-id="f6f70-105">Set its <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> and <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> properties  with the two geometries to combine, and set the <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> property, which determines how the geometries will be combined together, to `Union`, `Intersect`, `Exclude`, or `Xor`.</span></span>  

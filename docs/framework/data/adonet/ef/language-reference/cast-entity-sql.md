@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761436"
 ---
 # <a name="cast-entity-sql"></a><span data-ttu-id="b1152-102">CAST (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="b1152-102">CAST (Entity SQL)</span></span>
 <span data-ttu-id="b1152-103">将一种数据类型的表达式转换为另一种数据类型的表达式。</span><span class="sxs-lookup"><span data-stu-id="b1152-103">Converts an expression of one data type to another.</span></span>  

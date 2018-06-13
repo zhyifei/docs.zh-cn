@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753230"
 ---
 # <a name="ltclientcredentialsgt"></a><span data-ttu-id="0edd3-102">&lt;clientCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="0edd3-102">&lt;clientCredentials&gt;</span></span>
 <span data-ttu-id="0edd3-103">指定用于向服务验证客户端身份的凭据。</span><span class="sxs-lookup"><span data-stu-id="0edd3-103">Specifies the credentials used to authenticate the client to a service.</span></span>  

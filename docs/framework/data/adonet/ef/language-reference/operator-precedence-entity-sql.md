@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764013"
 ---
 # <a name="operator-precedence-entity-sql"></a><span data-ttu-id="4e2ed-102">运算符优先级 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="4e2ed-102">Operator Precedence (Entity SQL)</span></span>
 <span data-ttu-id="4e2ed-103">当[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查询有多个运算符，运算符优先级确定执行的操作序列。</span><span class="sxs-lookup"><span data-stu-id="4e2ed-103">When an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query has multiple operators, operator precedence determines the sequence in which the operations are performed.</span></span> <span data-ttu-id="4e2ed-104">执行顺序可能对查询结果有明显的影响。</span><span class="sxs-lookup"><span data-stu-id="4e2ed-104">The order of execution can significantly affect the query result.</span></span>  

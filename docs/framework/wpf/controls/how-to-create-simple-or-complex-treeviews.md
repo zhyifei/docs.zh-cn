@@ -1,45 +1,34 @@
 ---
-title: "如何：创建简单或复杂的 TreeView"
-ms.custom: 
+title: 如何：创建简单或复杂的 TreeView
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TreeView control [WPF], creating
 - Control class [WPF], TreeView [WPF], creating
 ms.assetid: 1defbb78-b8e7-4c0e-b650-576453ac828d
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3a7e87295a50f901be0c7028bb2d6025b51c248c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54e9218ea1460a0c29d8b9d7b9c740c18ac7ab24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552993"
 ---
-# <a name="how-to-create-simple-or-complex-treeviews"></a><span data-ttu-id="9bfa7-102">如何：创建简单或复杂的 TreeView</span><span class="sxs-lookup"><span data-stu-id="9bfa7-102">How to: Create Simple or Complex TreeViews</span></span>
-<span data-ttu-id="9bfa7-103">此示例演示如何创建简单或复杂<xref:System.Windows.Controls.TreeView>控件。</span><span class="sxs-lookup"><span data-stu-id="9bfa7-103">This example shows how to create simple or complex <xref:System.Windows.Controls.TreeView> controls.</span></span>  
+# <a name="how-to-create-simple-or-complex-treeviews"></a><span data-ttu-id="27807-102">如何：创建简单或复杂的 TreeView</span><span class="sxs-lookup"><span data-stu-id="27807-102">How to: Create Simple or Complex TreeViews</span></span>
+<span data-ttu-id="27807-103">此示例演示如何创建简单或复杂<xref:System.Windows.Controls.TreeView>控件。</span><span class="sxs-lookup"><span data-stu-id="27807-103">This example shows how to create simple or complex <xref:System.Windows.Controls.TreeView> controls.</span></span>  
   
- <span data-ttu-id="9bfa7-104">A<xref:System.Windows.Controls.TreeView>包含的层次结构<xref:System.Windows.Controls.TreeViewItem>控件，可以包含简单文本字符串和也更复杂的内容，如<xref:System.Windows.Controls.Button>控件或<xref:System.Windows.Controls.StackPanel>与嵌入的内容。</span><span class="sxs-lookup"><span data-stu-id="9bfa7-104">A <xref:System.Windows.Controls.TreeView> consists of a hierarchy of <xref:System.Windows.Controls.TreeViewItem> controls, which can contain simple text strings and also more complex content, such as <xref:System.Windows.Controls.Button> controls or a <xref:System.Windows.Controls.StackPanel> with embedded content.</span></span> <span data-ttu-id="9bfa7-105">你可以显式定义<xref:System.Windows.Controls.TreeView>内容或数据源可以提供内容。</span><span class="sxs-lookup"><span data-stu-id="9bfa7-105">You can explicitly define the <xref:System.Windows.Controls.TreeView> content or a data source can provide the content.</span></span> <span data-ttu-id="9bfa7-106">本主题提供这些概念的示例。</span><span class="sxs-lookup"><span data-stu-id="9bfa7-106">This topic provides examples of these concepts.</span></span>  
+ <span data-ttu-id="27807-104">A<xref:System.Windows.Controls.TreeView>包含的层次结构<xref:System.Windows.Controls.TreeViewItem>控件，可以包含简单文本字符串和也更复杂的内容，如<xref:System.Windows.Controls.Button>控件或<xref:System.Windows.Controls.StackPanel>与嵌入的内容。</span><span class="sxs-lookup"><span data-stu-id="27807-104">A <xref:System.Windows.Controls.TreeView> consists of a hierarchy of <xref:System.Windows.Controls.TreeViewItem> controls, which can contain simple text strings and also more complex content, such as <xref:System.Windows.Controls.Button> controls or a <xref:System.Windows.Controls.StackPanel> with embedded content.</span></span> <span data-ttu-id="27807-105">你可以显式定义<xref:System.Windows.Controls.TreeView>内容或数据源可以提供内容。</span><span class="sxs-lookup"><span data-stu-id="27807-105">You can explicitly define the <xref:System.Windows.Controls.TreeView> content or a data source can provide the content.</span></span> <span data-ttu-id="27807-106">本主题提供这些概念的示例。</span><span class="sxs-lookup"><span data-stu-id="27807-106">This topic provides examples of these concepts.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9bfa7-107">示例</span><span class="sxs-lookup"><span data-stu-id="9bfa7-107">Example</span></span>  
- <span data-ttu-id="9bfa7-108"><xref:System.Windows.Controls.HeaderedItemsControl.Header%2A>属性<xref:System.Windows.Controls.TreeViewItem>包含内容的<xref:System.Windows.Controls.TreeView>显示该项。</span><span class="sxs-lookup"><span data-stu-id="9bfa7-108">The <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> property of the <xref:System.Windows.Controls.TreeViewItem> contains the content that the <xref:System.Windows.Controls.TreeView> displays for that item.</span></span> <span data-ttu-id="9bfa7-109">A<xref:System.Windows.Controls.TreeViewItem>还可以<xref:System.Windows.Controls.TreeViewItem>控件为及其子元素，并且您可以使用定义这些子元素<xref:System.Windows.Controls.ItemsControl.Items%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="9bfa7-109">A <xref:System.Windows.Controls.TreeViewItem> can also have <xref:System.Windows.Controls.TreeViewItem> controls as its child elements and you can define these child elements by using the <xref:System.Windows.Controls.ItemsControl.Items%2A> property.</span></span>  
+## <a name="example"></a><span data-ttu-id="27807-107">示例</span><span class="sxs-lookup"><span data-stu-id="27807-107">Example</span></span>  
+ <span data-ttu-id="27807-108"><xref:System.Windows.Controls.HeaderedItemsControl.Header%2A>属性<xref:System.Windows.Controls.TreeViewItem>包含内容的<xref:System.Windows.Controls.TreeView>显示该项。</span><span class="sxs-lookup"><span data-stu-id="27807-108">The <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> property of the <xref:System.Windows.Controls.TreeViewItem> contains the content that the <xref:System.Windows.Controls.TreeView> displays for that item.</span></span> <span data-ttu-id="27807-109">A<xref:System.Windows.Controls.TreeViewItem>还可以<xref:System.Windows.Controls.TreeViewItem>控件为及其子元素，并且您可以使用定义这些子元素<xref:System.Windows.Controls.ItemsControl.Items%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="27807-109">A <xref:System.Windows.Controls.TreeViewItem> can also have <xref:System.Windows.Controls.TreeViewItem> controls as its child elements and you can define these child elements by using the <xref:System.Windows.Controls.ItemsControl.Items%2A> property.</span></span>  
   
- <span data-ttu-id="9bfa7-110">下面的示例演示如何显式定义<xref:System.Windows.Controls.TreeViewItem>内容通过设置<xref:System.Windows.Controls.HeaderedItemsControl.Header%2A>为文本字符串的属性。</span><span class="sxs-lookup"><span data-stu-id="9bfa7-110">The following example shows how to explicitly define <xref:System.Windows.Controls.TreeViewItem> content by setting the <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> property to a text string.</span></span>  
+ <span data-ttu-id="27807-110">下面的示例演示如何显式定义<xref:System.Windows.Controls.TreeViewItem>内容通过设置<xref:System.Windows.Controls.HeaderedItemsControl.Header%2A>为文本字符串的属性。</span><span class="sxs-lookup"><span data-stu-id="27807-110">The following example shows how to explicitly define <xref:System.Windows.Controls.TreeViewItem> content by setting the <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> property to a text string.</span></span>  
   
  [!code-xaml[TreeViewSimple#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#1)]  
   
- <span data-ttu-id="9bfa7-111">下面的示例演示如何定义的子元素<xref:System.Windows.Controls.TreeViewItem>通过定义<xref:System.Windows.Controls.ItemsControl.Items%2A>都<xref:System.Windows.Controls.Button>控件。</span><span class="sxs-lookup"><span data-stu-id="9bfa7-111">The following example show how to define child elements of a <xref:System.Windows.Controls.TreeViewItem> by defining <xref:System.Windows.Controls.ItemsControl.Items%2A> that are <xref:System.Windows.Controls.Button> controls.</span></span>  
+ <span data-ttu-id="27807-111">下面的示例演示如何定义的子元素<xref:System.Windows.Controls.TreeViewItem>通过定义<xref:System.Windows.Controls.ItemsControl.Items%2A>都<xref:System.Windows.Controls.Button>控件。</span><span class="sxs-lookup"><span data-stu-id="27807-111">The following example show how to define child elements of a <xref:System.Windows.Controls.TreeViewItem> by defining <xref:System.Windows.Controls.ItemsControl.Items%2A> that are <xref:System.Windows.Controls.Button> controls.</span></span>  
   
  [!code-xaml[TreeViewSimple#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#3)]  
   
- <span data-ttu-id="9bfa7-112">下面的示例演示如何创建<xref:System.Windows.Controls.TreeView>其中<xref:System.Windows.Data.XmlDataProvider>提供<xref:System.Windows.Controls.TreeViewItem>内容和<xref:System.Windows.HierarchicalDataTemplate>定义内容的外观。</span><span class="sxs-lookup"><span data-stu-id="9bfa7-112">The following example shows how to create a <xref:System.Windows.Controls.TreeView> where an <xref:System.Windows.Data.XmlDataProvider> provides <xref:System.Windows.Controls.TreeViewItem> content and a <xref:System.Windows.HierarchicalDataTemplate> defines the appearance of the content.</span></span>  
+ <span data-ttu-id="27807-112">下面的示例演示如何创建<xref:System.Windows.Controls.TreeView>其中<xref:System.Windows.Data.XmlDataProvider>提供<xref:System.Windows.Controls.TreeViewItem>内容和<xref:System.Windows.HierarchicalDataTemplate>定义内容的外观。</span><span class="sxs-lookup"><span data-stu-id="27807-112">The following example shows how to create a <xref:System.Windows.Controls.TreeView> where an <xref:System.Windows.Data.XmlDataProvider> provides <xref:System.Windows.Controls.TreeViewItem> content and a <xref:System.Windows.HierarchicalDataTemplate> defines the appearance of the content.</span></span>  
   
  [!code-xaml[TreeViewSimple#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#6)]  
   
@@ -47,12 +36,12 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[TreeViewSimple#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#5)]  
   
- <span data-ttu-id="9bfa7-113">下面的示例演示如何创建<xref:System.Windows.Controls.TreeView>其中<xref:System.Windows.Controls.TreeViewItem>内容包含<xref:System.Windows.Controls.DockPanel>嵌入了内容的控件。</span><span class="sxs-lookup"><span data-stu-id="9bfa7-113">The following example shows how to create a <xref:System.Windows.Controls.TreeView> where the <xref:System.Windows.Controls.TreeViewItem> content contains <xref:System.Windows.Controls.DockPanel> controls that have embedded content.</span></span>  
+ <span data-ttu-id="27807-113">下面的示例演示如何创建<xref:System.Windows.Controls.TreeView>其中<xref:System.Windows.Controls.TreeViewItem>内容包含<xref:System.Windows.Controls.DockPanel>嵌入了内容的控件。</span><span class="sxs-lookup"><span data-stu-id="27807-113">The following example shows how to create a <xref:System.Windows.Controls.TreeView> where the <xref:System.Windows.Controls.TreeViewItem> content contains <xref:System.Windows.Controls.DockPanel> controls that have embedded content.</span></span>  
   
  [!code-xaml[TreeViewSimple#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#9)]  
   
-## <a name="see-also"></a><span data-ttu-id="9bfa7-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="9bfa7-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="27807-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="27807-114">See Also</span></span>  
  <xref:System.Windows.Controls.TreeView>  
  <xref:System.Windows.Controls.TreeViewItem>  
- [<span data-ttu-id="9bfa7-115">TreeView 概述</span><span class="sxs-lookup"><span data-stu-id="9bfa7-115">TreeView Overview</span></span>](../../../../docs/framework/wpf/controls/treeview-overview.md)  
- [<span data-ttu-id="9bfa7-116">帮助主题</span><span class="sxs-lookup"><span data-stu-id="9bfa7-116">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)
+ [<span data-ttu-id="27807-115">TreeView 概述</span><span class="sxs-lookup"><span data-stu-id="27807-115">TreeView Overview</span></span>](../../../../docs/framework/wpf/controls/treeview-overview.md)  
+ [<span data-ttu-id="27807-116">帮助主题</span><span class="sxs-lookup"><span data-stu-id="27807-116">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754985"
 ---
 # <a name="ltsessiontokenrequirementgt"></a><span data-ttu-id="29d39-102">&lt;sessionTokenRequirement&gt;</span><span class="sxs-lookup"><span data-stu-id="29d39-102">&lt;sessionTokenRequirement&gt;</span></span>
 <span data-ttu-id="29d39-103">提供有关配置<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>类或派生的类。</span><span class="sxs-lookup"><span data-stu-id="29d39-103">Provides configuration for the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class or derived classes.</span></span>  

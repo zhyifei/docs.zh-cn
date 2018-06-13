@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758641"
 ---
 # <a name="ltworkflowgt"></a><span data-ttu-id="e5d32-102">&lt;工作流&gt;</span><span class="sxs-lookup"><span data-stu-id="e5d32-102">&lt;workflow&gt;</span></span>
 <span data-ttu-id="e5d32-103">一个配置元素，包含由标识的特定工作流的所有查询**超链接"http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx"ctivityDefinitionId**属性。</span><span class="sxs-lookup"><span data-stu-id="e5d32-103">A configuration element that contains all queries for a specific workflow identified by the **a HYPERLINK "http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId** property.</span></span>  

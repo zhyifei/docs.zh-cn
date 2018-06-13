@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749577"
 ---
 # <a name="ltbehaviorextensionsgt"></a><span data-ttu-id="ebd25-102">&lt;behaviorExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="ebd25-102">&lt;behaviorExtensions&gt;</span></span>
 <span data-ttu-id="ebd25-103">用户可以使用行为扩展来创建用户定义的行为元素。</span><span class="sxs-lookup"><span data-stu-id="ebd25-103">Behavior extensions enable the user to create user-defined behavior elements.</span></span> <span data-ttu-id="ebd25-104">这些元素可与标准的 Windows Communication Foundation (WCF) 行为元素一起使用。</span><span class="sxs-lookup"><span data-stu-id="ebd25-104">These elements can be used alongside the standard Windows Communication Foundation (WCF) behavior elements.</span></span> <span data-ttu-id="ebd25-105">`behaviorExtensions` 节定义了元素，使其可用于配置中。</span><span class="sxs-lookup"><span data-stu-id="ebd25-105">The `behaviorExtensions` section defines the element such that it can be used in configuration.</span></span> <span data-ttu-id="ebd25-106">下面是一个典型的行为扩展示例。</span><span class="sxs-lookup"><span data-stu-id="ebd25-106">Here is an example of a typical behavior extension.</span></span>  

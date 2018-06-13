@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755599"
 ---
 # <a name="ltcustomcookiehandlergt"></a><span data-ttu-id="ffa1f-102">&lt;customCookieHandler&gt;</span><span class="sxs-lookup"><span data-stu-id="ffa1f-102">&lt;customCookieHandler&gt;</span></span>
 <span data-ttu-id="ffa1f-103">设置自定义 cookie 处理程序类型。</span><span class="sxs-lookup"><span data-stu-id="ffa1f-103">Sets the custom cookie handler type.</span></span> <span data-ttu-id="ffa1f-104">此元素仅可呈现如果`mode`属性`<cookieHandler>`元素是"自定义"。</span><span class="sxs-lookup"><span data-stu-id="ffa1f-104">This element may only be present if the `mode` attribute of the `<cookieHandler>` element is "Custom".</span></span> <span data-ttu-id="ffa1f-105">自定义的类型必须派生自<xref:System.IdentityModel.Services.CookieHandler>类。</span><span class="sxs-lookup"><span data-stu-id="ffa1f-105">The custom type must be derived from the <xref:System.IdentityModel.Services.CookieHandler> class.</span></span>  

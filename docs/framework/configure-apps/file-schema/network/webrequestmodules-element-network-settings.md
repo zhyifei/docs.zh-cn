@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742687"
 ---
 # <a name="ltwebrequestmodulesgt-element-network-settings"></a><span data-ttu-id="2b331-102">&lt;webRequestModules&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="2b331-102">&lt;webRequestModules&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="2b331-103">指定要用于从网络主机请求信息的模块。</span><span class="sxs-lookup"><span data-stu-id="2b331-103">Specifies modules to use to request information from network hosts.</span></span>  

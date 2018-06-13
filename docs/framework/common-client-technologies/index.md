@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753490"
 ---
 # <a name="common-client-technologies-in-the-net-framework"></a><span data-ttu-id="b68b5-102">.NET Framework 中常用的客户端技术</span><span class="sxs-lookup"><span data-stu-id="b68b5-102">Common Client Technologies in the .NET Framework</span></span>
 <span data-ttu-id="b68b5-103">本节描述可在客户端应用程序中使用的各种技术。</span><span class="sxs-lookup"><span data-stu-id="b68b5-103">This section describes different technologies that you can use in your client applications.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760084"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="ca0db-102">指定无嵌套的元素之间的关系</span><span class="sxs-lookup"><span data-stu-id="ca0db-102">Specify Relations Between Elements with No Nesting</span></span>
 <span data-ttu-id="ca0db-103">当元素不嵌套时，将不创建任何隐式关系。</span><span class="sxs-lookup"><span data-stu-id="ca0db-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="ca0db-104">但是，可以显式指定不使用嵌套的元素之间的关系**msdata: relationship**批注。</span><span class="sxs-lookup"><span data-stu-id="ca0db-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752450"
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a><span data-ttu-id="e331e-102">&lt;issuerChannelBehaviors&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="e331e-102">&lt;add&gt; of &lt;issuerChannelBehaviors&gt;</span></span>
 <span data-ttu-id="e331e-103">添加在与 STS 进行通信时要使用的终结点行为。</span><span class="sxs-lookup"><span data-stu-id="e331e-103">Adds an endpoint behavior to be used when communicating with an STS.</span></span>  

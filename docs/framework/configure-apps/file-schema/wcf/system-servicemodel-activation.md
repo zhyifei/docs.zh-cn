@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748836"
 ---
 # <a name="ltsystemservicemodelactivationgt"></a><span data-ttu-id="ec5e8-102">&lt;system.serviceModel.activation&gt;</span><span class="sxs-lookup"><span data-stu-id="ec5e8-102">&lt;system.serviceModel.activation&gt;</span></span>
 <span data-ttu-id="ec5e8-103">此配置节描述了 SMSvcHost.exe 工具的配置设置。</span><span class="sxs-lookup"><span data-stu-id="ec5e8-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="ec5e8-104">配置元素可在 SMSvcHost.exe.config 文件中配置。</span><span class="sxs-lookup"><span data-stu-id="ec5e8-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="ec5e8-105">具体地说，它包括计算机中所有必须配置的设置。</span><span class="sxs-lookup"><span data-stu-id="ec5e8-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  

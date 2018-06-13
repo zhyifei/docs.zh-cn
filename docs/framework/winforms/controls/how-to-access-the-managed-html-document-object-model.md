@@ -1,13 +1,6 @@
 ---
-title: "如何：访问托管 HTML 文档对象模型"
-ms.custom: 
+title: 如何：访问托管 HTML 文档对象模型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,46 +8,42 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83ee8c5e0cd578a0eb821a35a27c5ff0072e5533
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 175a29322fe2af13992e267b3fc3308b70212272
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527656"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a><span data-ttu-id="77752-102">如何：访问托管 HTML 文档对象模型</span><span class="sxs-lookup"><span data-stu-id="77752-102">How to: Access the Managed HTML Document Object Model</span></span>
-<span data-ttu-id="77752-103">可以从两种类型的应用程序访问托管 HTML 文档对象模型 (DOM)：</span><span class="sxs-lookup"><span data-stu-id="77752-103">You can access the managed HTML Document Object Model (DOM) from two types of applications:</span></span>  
+# <a name="how-to-access-the-managed-html-document-object-model"></a><span data-ttu-id="d7357-102">如何：访问托管 HTML 文档对象模型</span><span class="sxs-lookup"><span data-stu-id="d7357-102">How to: Access the Managed HTML Document Object Model</span></span>
+<span data-ttu-id="d7357-103">可以从两种类型的应用程序访问托管 HTML 文档对象模型 (DOM)：</span><span class="sxs-lookup"><span data-stu-id="d7357-103">You can access the managed HTML Document Object Model (DOM) from two types of applications:</span></span>  
   
--   <span data-ttu-id="77752-104">承载了托管 <xref:System.Windows.Forms.WebBrowser> 控件的 Windows 窗体应用程序 (.exe)。</span><span class="sxs-lookup"><span data-stu-id="77752-104">A Windows Forms application (.exe) that hosted the managed <xref:System.Windows.Forms.WebBrowser> control.</span></span> <span data-ttu-id="77752-105">这两种技术互相补充，<xref:System.Windows.Forms.WebBrowser> 控件向用户显示页面，HTML DOM 表示文档的逻辑结构。</span><span class="sxs-lookup"><span data-stu-id="77752-105">These two technologies complement one another, with the <xref:System.Windows.Forms.WebBrowser> control displaying the page to the user and the HTML DOM representing the document's logical structure.</span></span>  
+-   <span data-ttu-id="d7357-104">承载了托管 <xref:System.Windows.Forms.WebBrowser> 控件的 Windows 窗体应用程序 (.exe)。</span><span class="sxs-lookup"><span data-stu-id="d7357-104">A Windows Forms application (.exe) that hosted the managed <xref:System.Windows.Forms.WebBrowser> control.</span></span> <span data-ttu-id="d7357-105">这两种技术互相补充，<xref:System.Windows.Forms.WebBrowser> 控件向用户显示页面，HTML DOM 表示文档的逻辑结构。</span><span class="sxs-lookup"><span data-stu-id="d7357-105">These two technologies complement one another, with the <xref:System.Windows.Forms.WebBrowser> control displaying the page to the user and the HTML DOM representing the document's logical structure.</span></span>  
   
--   <span data-ttu-id="77752-106">在 Internet Explorer 内托管的 Windows 窗体 <xref:System.Windows.Forms.UserControl>。</span><span class="sxs-lookup"><span data-stu-id="77752-106">A Windows Forms <xref:System.Windows.Forms.UserControl> hosted within Internet Explorer.</span></span> <span data-ttu-id="77752-107">你可以访问表示托管你的 <xref:System.Windows.Forms.UserControl> 的页面的 HTML DOM，以更改文档结构或打开模式对话框（还有很多其他可能的操作）。</span><span class="sxs-lookup"><span data-stu-id="77752-107">You can access the HTML DOM representing the page on which your <xref:System.Windows.Forms.UserControl> is hosted in order to change the document's structure or open modal dialog boxes, among many other possibilities.</span></span>  
+-   <span data-ttu-id="d7357-106">在 Internet Explorer 内托管的 Windows 窗体 <xref:System.Windows.Forms.UserControl>。</span><span class="sxs-lookup"><span data-stu-id="d7357-106">A Windows Forms <xref:System.Windows.Forms.UserControl> hosted within Internet Explorer.</span></span> <span data-ttu-id="d7357-107">你可以访问表示托管你的 <xref:System.Windows.Forms.UserControl> 的页面的 HTML DOM，以更改文档结构或打开模式对话框（还有很多其他可能的操作）。</span><span class="sxs-lookup"><span data-stu-id="d7357-107">You can access the HTML DOM representing the page on which your <xref:System.Windows.Forms.UserControl> is hosted in order to change the document's structure or open modal dialog boxes, among many other possibilities.</span></span>  
   
-### <a name="to-access-dom-from-a-windows-forms-application"></a><span data-ttu-id="77752-108">从 Windows 窗体应用程序访问 DOM</span><span class="sxs-lookup"><span data-stu-id="77752-108">To access DOM from a Windows Forms application</span></span>  
+### <a name="to-access-dom-from-a-windows-forms-application"></a><span data-ttu-id="d7357-108">从 Windows 窗体应用程序访问 DOM</span><span class="sxs-lookup"><span data-stu-id="d7357-108">To access DOM from a Windows Forms application</span></span>  
   
-1.  <span data-ttu-id="77752-109">在 Windows 窗体应用程序内部托管 <xref:System.Windows.Forms.WebBrowser> 控件，并监视 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 事件。</span><span class="sxs-lookup"><span data-stu-id="77752-109">Host a <xref:System.Windows.Forms.WebBrowser> control within your Windows Forms application and monitor for the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="77752-110">有关托管控件和监视事件的详细信息，请参阅[事件](../../../../docs/standard/events/index.md)。</span><span class="sxs-lookup"><span data-stu-id="77752-110">For details on hosting controls and monitoring for events, see [Events](../../../../docs/standard/events/index.md).</span></span>  
+1.  <span data-ttu-id="d7357-109">在 Windows 窗体应用程序内部托管 <xref:System.Windows.Forms.WebBrowser> 控件，并监视 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 事件。</span><span class="sxs-lookup"><span data-stu-id="d7357-109">Host a <xref:System.Windows.Forms.WebBrowser> control within your Windows Forms application and monitor for the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="d7357-110">有关托管控件和监视事件的详细信息，请参阅[事件](../../../../docs/standard/events/index.md)。</span><span class="sxs-lookup"><span data-stu-id="d7357-110">For details on hosting controls and monitoring for events, see [Events](../../../../docs/standard/events/index.md).</span></span>  
   
-2.  <span data-ttu-id="77752-111">通过访问 <xref:System.Windows.Forms.HtmlDocument> 控件的 <xref:System.Windows.Forms.WebBrowser.Document%2A> 属性，从 <xref:System.Windows.Forms.WebBrowser> 中检索当前页。</span><span class="sxs-lookup"><span data-stu-id="77752-111">Retrieve the <xref:System.Windows.Forms.HtmlDocument> for the current page by accessing the <xref:System.Windows.Forms.WebBrowser.Document%2A> property of the <xref:System.Windows.Forms.WebBrowser> control.</span></span>  
+2.  <span data-ttu-id="d7357-111">通过访问 <xref:System.Windows.Forms.HtmlDocument> 控件的 <xref:System.Windows.Forms.WebBrowser.Document%2A> 属性，从 <xref:System.Windows.Forms.WebBrowser> 中检索当前页。</span><span class="sxs-lookup"><span data-stu-id="d7357-111">Retrieve the <xref:System.Windows.Forms.HtmlDocument> for the current page by accessing the <xref:System.Windows.Forms.WebBrowser.Document%2A> property of the <xref:System.Windows.Forms.WebBrowser> control.</span></span>  
 
-### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a><span data-ttu-id="77752-112">从在 Internet Explorer 中托管的 UserControl 访问 DOM</span><span class="sxs-lookup"><span data-stu-id="77752-112">To access DOM from a UserControl hosted in Internet Explorer</span></span>  
+### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a><span data-ttu-id="d7357-112">从在 Internet Explorer 中托管的 UserControl 访问 DOM</span><span class="sxs-lookup"><span data-stu-id="d7357-112">To access DOM from a UserControl hosted in Internet Explorer</span></span>  
   
-1.  <span data-ttu-id="77752-113">从 <xref:System.Windows.Forms.UserControl> 类创建你自己的自定义派生类。</span><span class="sxs-lookup"><span data-stu-id="77752-113">Create your own custom derived class of the <xref:System.Windows.Forms.UserControl> class.</span></span> <span data-ttu-id="77752-114">有关详细信息，请参阅[如何：创作复合控件](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="77752-114">For more information, see [How to: Author Composite Controls](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md).</span></span>  
+1.  <span data-ttu-id="d7357-113">从 <xref:System.Windows.Forms.UserControl> 类创建你自己的自定义派生类。</span><span class="sxs-lookup"><span data-stu-id="d7357-113">Create your own custom derived class of the <xref:System.Windows.Forms.UserControl> class.</span></span> <span data-ttu-id="d7357-114">有关详细信息，请参阅[如何：创作复合控件](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="d7357-114">For more information, see [How to: Author Composite Controls](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md).</span></span>  
   
-2.  <span data-ttu-id="77752-115">将以下代码放置在你的 <xref:System.Windows.Forms.UserControl> 的 Load 事件处理程序中：</span><span class="sxs-lookup"><span data-stu-id="77752-115">Place the following code inside of your Load event handler for your <xref:System.Windows.Forms.UserControl>:</span></span>  
+2.  <span data-ttu-id="d7357-115">将以下代码放置在你的 <xref:System.Windows.Forms.UserControl> 的 Load 事件处理程序中：</span><span class="sxs-lookup"><span data-stu-id="d7357-115">Place the following code inside of your Load event handler for your <xref:System.Windows.Forms.UserControl>:</span></span>  
   
  [!code-csharp[AccessHTMLDOMControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/AccessHTMLDOMControl/cs/UserControl1.cs#1)]
  [!code-vb[AccessHTMLDOMControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/AccessHTMLDOMControl/vb/UserControl1.vb#1)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="77752-116">可靠编程</span><span class="sxs-lookup"><span data-stu-id="77752-116">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="d7357-116">可靠编程</span><span class="sxs-lookup"><span data-stu-id="d7357-116">Robust Programming</span></span>  
   
-1.  <span data-ttu-id="77752-117">通过 <xref:System.Windows.Forms.WebBrowser> 控件使用 DOM 时，总是应等到 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 事件发生之后，再尝试访问 <xref:System.Windows.Forms.WebBrowser.Document%2A> 控件的 <xref:System.Windows.Forms.WebBrowser> 属性。</span><span class="sxs-lookup"><span data-stu-id="77752-117">When using the DOM through the <xref:System.Windows.Forms.WebBrowser> control, you should always wait until the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event occurs before attempting to access the <xref:System.Windows.Forms.WebBrowser.Document%2A> property of the <xref:System.Windows.Forms.WebBrowser> control.</span></span> <span data-ttu-id="77752-118">加载整个文档之后会引发 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 事件；如果你在此之前用过 DOM，则有导致应用程序中出现运行时异常的风险。</span><span class="sxs-lookup"><span data-stu-id="77752-118">The <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event is raised after the entire document has loaded; if you use the DOM before then, you risk causing a run-time exception in your application.</span></span>  
+1.  <span data-ttu-id="d7357-117">通过 <xref:System.Windows.Forms.WebBrowser> 控件使用 DOM 时，总是应等到 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 事件发生之后，再尝试访问 <xref:System.Windows.Forms.WebBrowser.Document%2A> 控件的 <xref:System.Windows.Forms.WebBrowser> 属性。</span><span class="sxs-lookup"><span data-stu-id="d7357-117">When using the DOM through the <xref:System.Windows.Forms.WebBrowser> control, you should always wait until the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event occurs before attempting to access the <xref:System.Windows.Forms.WebBrowser.Document%2A> property of the <xref:System.Windows.Forms.WebBrowser> control.</span></span> <span data-ttu-id="d7357-118">加载整个文档之后会引发 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 事件；如果你在此之前用过 DOM，则有导致应用程序中出现运行时异常的风险。</span><span class="sxs-lookup"><span data-stu-id="d7357-118">The <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event is raised after the entire document has loaded; if you use the DOM before then, you risk causing a run-time exception in your application.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="77752-119">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="77752-119">.NET Framework Security</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="d7357-119">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="d7357-119">.NET Framework Security</span></span>  
   
-1.  <span data-ttu-id="77752-120">你的应用程序或 <xref:System.Windows.Forms.UserControl> 将需要完全信任，才能访问托管 HTML DOM。</span><span class="sxs-lookup"><span data-stu-id="77752-120">Your application or <xref:System.Windows.Forms.UserControl> will require full trust in order to access the managed HTML DOM.</span></span> <span data-ttu-id="77752-121">如果使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 部署 Windows 窗体应用程序，则可使用“权限提升”或“受信任的应用程序部署”来请求完全信任；有关详细信息，请参阅[保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。</span><span class="sxs-lookup"><span data-stu-id="77752-121">If you are deploying a Windows Forms application using [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], you can request full trust using either Permission Elevation or Trusted Application Deployment; see [Securing ClickOnce Applications](/visualstudio/deployment/securing-clickonce-applications) for details.</span></span>  
+1.  <span data-ttu-id="d7357-120">你的应用程序或 <xref:System.Windows.Forms.UserControl> 将需要完全信任，才能访问托管 HTML DOM。</span><span class="sxs-lookup"><span data-stu-id="d7357-120">Your application or <xref:System.Windows.Forms.UserControl> will require full trust in order to access the managed HTML DOM.</span></span> <span data-ttu-id="d7357-121">如果使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 部署 Windows 窗体应用程序，则可使用“权限提升”或“受信任的应用程序部署”来请求完全信任；有关详细信息，请参阅[保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。</span><span class="sxs-lookup"><span data-stu-id="d7357-121">If you are deploying a Windows Forms application using [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], you can request full trust using either Permission Elevation or Trusted Application Deployment; see [Securing ClickOnce Applications](/visualstudio/deployment/securing-clickonce-applications) for details.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77752-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="77752-122">See Also</span></span>  
- [<span data-ttu-id="77752-123">使用托管 HTML 文档对象模型</span><span class="sxs-lookup"><span data-stu-id="77752-123">Using the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a><span data-ttu-id="d7357-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="d7357-122">See Also</span></span>  
+ [<span data-ttu-id="d7357-123">使用托管 HTML 文档对象模型</span><span class="sxs-lookup"><span data-stu-id="d7357-123">Using the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

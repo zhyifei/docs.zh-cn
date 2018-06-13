@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743909"
 ---
 # <a name="assembly-location"></a><span data-ttu-id="e3112-102">程序集位置</span><span class="sxs-lookup"><span data-stu-id="e3112-102">Assembly Location</span></span>
 <span data-ttu-id="e3112-103">程序集的位置决定公共语言运行时是否可以在引用该程序集时找到它，也可以决定是否可与其他程序集共享该程序集。</span><span class="sxs-lookup"><span data-stu-id="e3112-103">An assembly's location determines whether the common language runtime can locate it when referenced, and can also determine whether the assembly can be shared with other assemblies.</span></span> <span data-ttu-id="e3112-104">可以在以下位置部署程序集：</span><span class="sxs-lookup"><span data-stu-id="e3112-104">You can deploy an assembly in the following locations:</span></span>  

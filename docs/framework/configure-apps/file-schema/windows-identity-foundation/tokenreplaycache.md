@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755118"
 ---
 # <a name="lttokenreplaycachegt"></a><span data-ttu-id="6570b-102">&lt;tokenReplayCache&gt;</span><span class="sxs-lookup"><span data-stu-id="6570b-102">&lt;tokenReplayCache&gt;</span></span>
 <span data-ttu-id="6570b-103">使用的服务或安全令牌处理程序集合中注册的令牌重放缓存。</span><span class="sxs-lookup"><span data-stu-id="6570b-103">Registers a token replay cache with a service or a security token handler collection.</span></span>  

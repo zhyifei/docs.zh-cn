@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556026"
 ---
 # <a name="drawings"></a><span data-ttu-id="99dd1-102">绘图</span><span class="sxs-lookup"><span data-stu-id="99dd1-102">Drawings</span></span>
 <span data-ttu-id="99dd1-103"><xref:System.Windows.Media.Drawing> 对象用于有效地绘制形状、 图像或文本。</span><span class="sxs-lookup"><span data-stu-id="99dd1-103"><xref:System.Windows.Media.Drawing> objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="99dd1-104">绘图时绘制与使用<xref:System.Windows.Media.DrawingBrush>或编程与<xref:System.Windows.Media.Visual>对象。</span><span class="sxs-lookup"><span data-stu-id="99dd1-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
