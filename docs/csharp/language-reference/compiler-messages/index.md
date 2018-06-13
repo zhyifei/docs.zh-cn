@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213194"
 ---
 # <a name="c-compiler-errors"></a><span data-ttu-id="9aa6d-102">C# 编译器错误</span><span class="sxs-lookup"><span data-stu-id="9aa6d-102">C# Compiler Errors</span></span>
 <span data-ttu-id="9aa6d-103">一些 C# 编译器错误有对应的主题，其中介绍了导致错误生成的原因，在某些情况下还介绍了错误修复方法。</span><span class="sxs-lookup"><span data-stu-id="9aa6d-103">Some C# compiler errors have corresponding topics that explain why the error is generated, and, in some cases, how to fix the error.</span></span> <span data-ttu-id="9aa6d-104">请执行下列操作之一，查看是否有特定错误消息的相关帮助资料。</span><span class="sxs-lookup"><span data-stu-id="9aa6d-104">Use one of the following steps to see whether help is available for a particular error message.</span></span>  

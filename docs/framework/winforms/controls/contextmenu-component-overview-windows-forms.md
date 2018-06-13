@@ -1,14 +1,6 @@
 ---
-title: "ContextMenu 组件概述（Windows 窗体）"
-ms.custom: 
+title: ContextMenu 组件概述（Windows 窗体）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ContextMenu
 helpviewer_keywords:
@@ -16,30 +8,25 @@ helpviewer_keywords:
 - context menus [Windows Forms], ContextMenu component
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 49d6398f-d3c4-4679-84fa-1de07b68b05e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0db67e8da97f380c3bb2eb9aab951628c4b6487
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d548815533e8f9bb37ad00129a5ae526612ea08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526118"
 ---
-# <a name="contextmenu-component-overview-windows-forms"></a><span data-ttu-id="c87b7-102">ContextMenu 组件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="c87b7-102">ContextMenu Component Overview (Windows Forms)</span></span>
+# <a name="contextmenu-component-overview-windows-forms"></a><span data-ttu-id="126b0-102">ContextMenu 组件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="126b0-102">ContextMenu Component Overview (Windows Forms)</span></span>
 > [!IMPORTANT]
->  <span data-ttu-id="c87b7-103">尽管<xref:System.Windows.Forms.MenuStrip>和<xref:System.Windows.Forms.ContextMenuStrip>替换，并将功能添加到<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>的早期版本中，控件<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>如果你选择将保留用于向后兼容性和将来使用。</span><span class="sxs-lookup"><span data-stu-id="c87b7-103">Although <xref:System.Windows.Forms.MenuStrip> and <xref:System.Windows.Forms.ContextMenuStrip> replace and add functionality to the <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> controls of previous versions, <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> are retained for both backward compatibility and future use if you choose.</span></span>  
+>  <span data-ttu-id="126b0-103">尽管<xref:System.Windows.Forms.MenuStrip>和<xref:System.Windows.Forms.ContextMenuStrip>替换，并将功能添加到<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>的早期版本中，控件<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>如果你选择将保留用于向后兼容性和将来使用。</span><span class="sxs-lookup"><span data-stu-id="126b0-103">Although <xref:System.Windows.Forms.MenuStrip> and <xref:System.Windows.Forms.ContextMenuStrip> replace and add functionality to the <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> controls of previous versions, <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> are retained for both backward compatibility and future use if you choose.</span></span>  
   
- <span data-ttu-id="c87b7-104">在 Windows 窗体<xref:System.Windows.Forms.ContextMenu>组件，你可以为用户提供了与所选对象的常用命令可以轻松进行访问的快捷菜单。</span><span class="sxs-lookup"><span data-stu-id="c87b7-104">With the Windows Forms <xref:System.Windows.Forms.ContextMenu> component, you can provide users with an easily accessible shortcut menu of frequently used commands that are associated with the selected object.</span></span> <span data-ttu-id="c87b7-105">快捷菜单中的项通常是从应用程序中的其他位置出现的主菜单项的子集。</span><span class="sxs-lookup"><span data-stu-id="c87b7-105">The items in a shortcut menu are frequently a subset of the items from main menus that appear elsewhere in the application.</span></span> <span data-ttu-id="c87b7-106">用户通常可通过快捷菜单上单击鼠标右键。</span><span class="sxs-lookup"><span data-stu-id="c87b7-106">A user can typically access a shortcut menu by right-clicking the mouse.</span></span> <span data-ttu-id="c87b7-107">Windows 窗体上快捷菜单都与控件关联。</span><span class="sxs-lookup"><span data-stu-id="c87b7-107">On Windows Forms, shortcut menus are associated with controls.</span></span>  
+ <span data-ttu-id="126b0-104">在 Windows 窗体<xref:System.Windows.Forms.ContextMenu>组件，你可以为用户提供了与所选对象的常用命令可以轻松进行访问的快捷菜单。</span><span class="sxs-lookup"><span data-stu-id="126b0-104">With the Windows Forms <xref:System.Windows.Forms.ContextMenu> component, you can provide users with an easily accessible shortcut menu of frequently used commands that are associated with the selected object.</span></span> <span data-ttu-id="126b0-105">快捷菜单中的项通常是从应用程序中的其他位置出现的主菜单项的子集。</span><span class="sxs-lookup"><span data-stu-id="126b0-105">The items in a shortcut menu are frequently a subset of the items from main menus that appear elsewhere in the application.</span></span> <span data-ttu-id="126b0-106">用户通常可通过快捷菜单上单击鼠标右键。</span><span class="sxs-lookup"><span data-stu-id="126b0-106">A user can typically access a shortcut menu by right-clicking the mouse.</span></span> <span data-ttu-id="126b0-107">Windows 窗体上快捷菜单都与控件关联。</span><span class="sxs-lookup"><span data-stu-id="126b0-107">On Windows Forms, shortcut menus are associated with controls.</span></span>  
   
-## <a name="key-properties"></a><span data-ttu-id="c87b7-108">键属性</span><span class="sxs-lookup"><span data-stu-id="c87b7-108">Key Properties</span></span>  
- <span data-ttu-id="c87b7-109">你可以与控件关联的快捷菜单，通过设置控件的<xref:System.Windows.Forms.Control.ContextMenu%2A>属性<xref:System.Windows.Forms.ContextMenu>组件。</span><span class="sxs-lookup"><span data-stu-id="c87b7-109">You can associate a shortcut menu with a control by setting the control's <xref:System.Windows.Forms.Control.ContextMenu%2A> property to the <xref:System.Windows.Forms.ContextMenu> component.</span></span> <span data-ttu-id="c87b7-110">单个的快捷菜单可能与多个控件，但每个控件可以有一个快捷菜单。</span><span class="sxs-lookup"><span data-stu-id="c87b7-110">A single shortcut menu can be associated with multiple controls, but each control can have only one shortcut menu.</span></span>  
+## <a name="key-properties"></a><span data-ttu-id="126b0-108">键属性</span><span class="sxs-lookup"><span data-stu-id="126b0-108">Key Properties</span></span>  
+ <span data-ttu-id="126b0-109">你可以与控件关联的快捷菜单，通过设置控件的<xref:System.Windows.Forms.Control.ContextMenu%2A>属性<xref:System.Windows.Forms.ContextMenu>组件。</span><span class="sxs-lookup"><span data-stu-id="126b0-109">You can associate a shortcut menu with a control by setting the control's <xref:System.Windows.Forms.Control.ContextMenu%2A> property to the <xref:System.Windows.Forms.ContextMenu> component.</span></span> <span data-ttu-id="126b0-110">单个的快捷菜单可能与多个控件，但每个控件可以有一个快捷菜单。</span><span class="sxs-lookup"><span data-stu-id="126b0-110">A single shortcut menu can be associated with multiple controls, but each control can have only one shortcut menu.</span></span>  
   
- <span data-ttu-id="c87b7-111">键属性的<xref:System.Windows.Forms.ContextMenu>组件是<xref:System.Windows.Forms.Menu.MenuItems%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c87b7-111">The key property of the <xref:System.Windows.Forms.ContextMenu> component is the <xref:System.Windows.Forms.Menu.MenuItems%2A> property.</span></span> <span data-ttu-id="c87b7-112">您可以通过以编程方式创建添加菜单项<xref:System.Windows.Forms.MenuItem>对象并将它们添加到<xref:System.Windows.Forms.Menu.MenuItemCollection>的快捷菜单。</span><span class="sxs-lookup"><span data-stu-id="c87b7-112">You can add menu items by programmatically creating <xref:System.Windows.Forms.MenuItem> objects and adding them to the <xref:System.Windows.Forms.Menu.MenuItemCollection> of the shortcut menu.</span></span> <span data-ttu-id="c87b7-113">因为快捷菜单中的项通常取自其他菜单，你将最常将项添加到快捷菜单将其复制。</span><span class="sxs-lookup"><span data-stu-id="c87b7-113">Because the items in a shortcut menu are usually drawn from other menus, you will most frequently add items to a shortcut menu by copying them.</span></span>  
+ <span data-ttu-id="126b0-111">键属性的<xref:System.Windows.Forms.ContextMenu>组件是<xref:System.Windows.Forms.Menu.MenuItems%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="126b0-111">The key property of the <xref:System.Windows.Forms.ContextMenu> component is the <xref:System.Windows.Forms.Menu.MenuItems%2A> property.</span></span> <span data-ttu-id="126b0-112">您可以通过以编程方式创建添加菜单项<xref:System.Windows.Forms.MenuItem>对象并将它们添加到<xref:System.Windows.Forms.Menu.MenuItemCollection>的快捷菜单。</span><span class="sxs-lookup"><span data-stu-id="126b0-112">You can add menu items by programmatically creating <xref:System.Windows.Forms.MenuItem> objects and adding them to the <xref:System.Windows.Forms.Menu.MenuItemCollection> of the shortcut menu.</span></span> <span data-ttu-id="126b0-113">因为快捷菜单中的项通常取自其他菜单，你将最常将项添加到快捷菜单将其复制。</span><span class="sxs-lookup"><span data-stu-id="126b0-113">Because the items in a shortcut menu are usually drawn from other menus, you will most frequently add items to a shortcut menu by copying them.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c87b7-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="c87b7-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="126b0-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="126b0-114">See Also</span></span>  
  <xref:System.Windows.Forms.ContextMenu>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>

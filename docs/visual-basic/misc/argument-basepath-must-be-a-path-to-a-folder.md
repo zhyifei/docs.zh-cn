@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602062"
 ---
 # <a name="argument-basepath-must-be-a-path-to-a-folder"></a><span data-ttu-id="5be13-102">参数 BasePath 必须是一个文件夹的路径</span><span class="sxs-lookup"><span data-stu-id="5be13-102">Argument BasePath must be a path to a folder</span></span>
 <span data-ttu-id="5be13-103">参数 `BasePath` 必须包含文件夹的路径。</span><span class="sxs-lookup"><span data-stu-id="5be13-103">The argument `BasePath` must consist of a path to a folder.</span></span> <span data-ttu-id="5be13-104">你可能会错误地解析字符串，并提供一个未被识别为有效路径的值。</span><span class="sxs-lookup"><span data-stu-id="5be13-104">You may be parsing a string incorrectly and supplying a value that is not recognized as a valid path.</span></span>  

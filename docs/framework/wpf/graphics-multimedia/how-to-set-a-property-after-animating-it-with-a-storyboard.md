@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562254"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a><span data-ttu-id="994d0-102">如何：在使用演示图板对属性进行动画处理后设置该属性</span><span class="sxs-lookup"><span data-stu-id="994d0-102">How to: Set a Property After Animating It with a Storyboard</span></span>
 <span data-ttu-id="994d0-103">在某些情况下，它可能显示，你不能更改属性的值后进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="994d0-103">In some cases, it might appear that you can't change the value of a property after it has been animated.</span></span>  

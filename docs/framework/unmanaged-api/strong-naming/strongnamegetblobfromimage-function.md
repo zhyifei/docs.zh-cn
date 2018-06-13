@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9d562aef58c1e3b5bbbe690b54eb08384052c657
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456770"
 ---
 # <a name="strongnamegetblobfromimage-function"></a><span data-ttu-id="04190-102">StrongNameGetBlobFromImage 函数</span><span class="sxs-lookup"><span data-stu-id="04190-102">StrongNameGetBlobFromImage Function</span></span>
 <span data-ttu-id="04190-103">获取位于指定的内存地址处的二进制表示形式的程序集映像。</span><span class="sxs-lookup"><span data-stu-id="04190-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  

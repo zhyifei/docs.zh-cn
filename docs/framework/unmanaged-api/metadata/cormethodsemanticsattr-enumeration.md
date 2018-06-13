@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: de467c98dfa7ad3eac69502f2afe311b301e1ec5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444804"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a><span data-ttu-id="30af7-102">CorMethodSemanticsAttr 枚举</span><span class="sxs-lookup"><span data-stu-id="30af7-102">CorMethodSemanticsAttr Enumeration</span></span>
 <span data-ttu-id="30af7-103">包含一些值，用于描述方法和关联属性或事件之间的关系。</span><span class="sxs-lookup"><span data-stu-id="30af7-103">Contains values that describe the relationship between a method and an associated property or event.</span></span>  

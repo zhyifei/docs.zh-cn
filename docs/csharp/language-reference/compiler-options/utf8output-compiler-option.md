@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213254"
 ---
 # <a name="-utf8output-c-compiler-options"></a><span data-ttu-id="8ccb8-102">-utf8output（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="8ccb8-102">-utf8output (C# Compiler Options)</span></span>
 <span data-ttu-id="8ccb8-103">-utf8output 选项使用 UTF-8 编码来显示编译器输出。</span><span class="sxs-lookup"><span data-stu-id="8ccb8-103">The **-utf8output** option displays compiler output using UTF-8 encoding.</span></span>  

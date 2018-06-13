@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529816"
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a><span data-ttu-id="e9f20-102">演练：设计时更改承载的 WPF 元素的属性</span><span class="sxs-lookup"><span data-stu-id="e9f20-102">Walkthrough: Changing Properties of a Hosted WPF Element at Design Time</span></span>
 <span data-ttu-id="e9f20-103">本演练展示了如何更改 Windows 窗体上承载的 Windows Presentation Foundation (WPF) 控件的属性值。</span><span class="sxs-lookup"><span data-stu-id="e9f20-103">This walkthrough shows you how to change property values of a Windows Presentation Foundation (WPF) control hosted on a Windows Form.</span></span>  

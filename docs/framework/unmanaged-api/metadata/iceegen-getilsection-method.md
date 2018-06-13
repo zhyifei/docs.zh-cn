@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6025b5914d4e96d10d83fc47a6baea7aa09605d6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445139"
 ---
 # <a name="iceegengetilsection-method"></a><span data-ttu-id="de68b-102">ICeeGen::GetIlSection 方法</span><span class="sxs-lookup"><span data-stu-id="de68b-102">ICeeGen::GetIlSection Method</span></span>
 <span data-ttu-id="de68b-103">获取由指定的句柄引用的基的中间语言代码的节。</span><span class="sxs-lookup"><span data-stu-id="de68b-103">Gets the section of the intermediate language code base referenced by the specified handle.</span></span>  

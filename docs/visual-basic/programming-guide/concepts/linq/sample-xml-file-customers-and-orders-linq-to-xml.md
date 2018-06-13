@@ -1,31 +1,22 @@
 ---
-title: "示例 XML 文件：客户和订单 (LINQ to XML)"
-ms.custom: 
+title: 示例 XML 文件：客户和订单 (LINQ to XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ed319807-c432-4f8e-9694-dad4c7648310
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6cd8ba100335b4a523c2b99c04f5df3cf348762b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 564347d2203390fbf5c609bd7d0a8b2ab885d87b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647740"
 ---
-# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a><span data-ttu-id="8dfcb-102">示例 XML 文件：客户和订单 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8dfcb-102">Sample XML File: Customers and Orders (LINQ to XML)</span></span>
-<span data-ttu-id="8dfcb-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="8dfcb-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8dfcb-104">此文件包含客户和订单。</span><span class="sxs-lookup"><span data-stu-id="8dfcb-104">This file contains customers and orders.</span></span>  
+# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a><span data-ttu-id="456bd-102">示例 XML 文件：客户和订单 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="456bd-102">Sample XML File: Customers and Orders (LINQ to XML)</span></span>
+<span data-ttu-id="456bd-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="456bd-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="456bd-104">此文件包含客户和订单。</span><span class="sxs-lookup"><span data-stu-id="456bd-104">This file contains customers and orders.</span></span>  
   
- <span data-ttu-id="8dfcb-105">主题[示例 XSD 文件：客户和订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)包含一个可用于验证此文档的 XSD。</span><span class="sxs-lookup"><span data-stu-id="8dfcb-105">The topic [Sample XSD File: Customers and Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) contains an XSD that can be used to validate this document.</span></span> <span data-ttu-id="8dfcb-106">它使用 XSD 的 `xs:key` 和 `xs:keyref` 功能，将 `CustomerID` 元素的 `Customer` 属性设置为键，并在每个 `CustomerID` 元素的 `Order` 元素和每个 `CustomerID` 元素的 `Customer` 属性之间建立关系。</span><span class="sxs-lookup"><span data-stu-id="8dfcb-106">It uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
+ <span data-ttu-id="456bd-105">主题[示例 XSD 文件：客户和订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)包含一个可用于验证此文档的 XSD。</span><span class="sxs-lookup"><span data-stu-id="456bd-105">The topic [Sample XSD File: Customers and Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) contains an XSD that can be used to validate this document.</span></span> <span data-ttu-id="456bd-106">它使用 XSD 的 `xs:key` 和 `xs:keyref` 功能，将 `CustomerID` 元素的 `Customer` 属性设置为键，并在每个 `CustomerID` 元素的 `Order` 元素和每个 `CustomerID` 元素的 `Customer` 属性之间建立关系。</span><span class="sxs-lookup"><span data-stu-id="456bd-106">It uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
   
- <span data-ttu-id="8dfcb-107">有关编写 LINQ 查询，利用此关系使用的示例`Join`子句，请参阅[如何： 联接两个集合 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="8dfcb-107">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="456bd-107">有关编写 LINQ 查询，利用此关系使用的示例`Join`子句，请参阅[如何： 联接两个集合 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="456bd-107">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span></span>  
   
-## <a name="customersordersxml"></a><span data-ttu-id="8dfcb-108">CustomersOrders.xml</span><span class="sxs-lookup"><span data-stu-id="8dfcb-108">CustomersOrders.xml</span></span>  
+## <a name="customersordersxml"></a><span data-ttu-id="456bd-108">CustomersOrders.xml</span><span class="sxs-lookup"><span data-stu-id="456bd-108">CustomersOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -443,5 +434,5 @@ ms.lasthandoff: 10/18/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8dfcb-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="8dfcb-109">See Also</span></span>  
- [<span data-ttu-id="8dfcb-110">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8dfcb-110">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="456bd-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="456bd-109">See Also</span></span>  
+ [<span data-ttu-id="456bd-110">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="456bd-110">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

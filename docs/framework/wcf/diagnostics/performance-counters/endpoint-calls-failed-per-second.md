@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473489"
 ---
 # <a name="endpoint-calls-failed-per-second"></a><span data-ttu-id="de55d-102">终结点：Calls Failed Per Second（每秒失败的调用次数）</span><span class="sxs-lookup"><span data-stu-id="de55d-102">Endpoint: Calls Failed Per Second</span></span>
 <span data-ttu-id="de55d-103">计数器名称：Calls Failed Per Second（每秒失败的调用次数）。</span><span class="sxs-lookup"><span data-stu-id="de55d-103">Counter Name: Calls Failed Per Second.</span></span>  

@@ -1,31 +1,22 @@
 ---
-title: "如何： 使用线程池 (Visual Basic)"
-ms.custom: 
+title: 如何： 使用线程池 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 90a0bb24-39f8-41f5-a217-b52a7d4fed0b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 42a4120900203eb7eb5ad8463fba4491636882b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a61defc2e40662d7fdadb40693e757fa559adb6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648146"
 ---
-# <a name="how-to-use-a-thread-pool-visual-basic"></a><span data-ttu-id="3e5e9-102">如何： 使用线程池 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3e5e9-102">How to: Use a Thread Pool (Visual Basic)</span></span>
-<span data-ttu-id="3e5e9-103">*线程池*是一种多线程处理形式，处理过程中将任务添加到队列，然后在创建线程后自动启动这些任务。</span><span class="sxs-lookup"><span data-stu-id="3e5e9-103">*Thread pooling* is a form of multithreading in which tasks are added to a queue and automatically started when threads are created.</span></span> <span data-ttu-id="3e5e9-104">有关详细信息，请参阅[线程池 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)。</span><span class="sxs-lookup"><span data-stu-id="3e5e9-104">For more information, see [Thread Pooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).</span></span>  
+# <a name="how-to-use-a-thread-pool-visual-basic"></a><span data-ttu-id="12451-102">如何： 使用线程池 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="12451-102">How to: Use a Thread Pool (Visual Basic)</span></span>
+<span data-ttu-id="12451-103">*线程池*是一种多线程处理形式，处理过程中将任务添加到队列，然后在创建线程后自动启动这些任务。</span><span class="sxs-lookup"><span data-stu-id="12451-103">*Thread pooling* is a form of multithreading in which tasks are added to a queue and automatically started when threads are created.</span></span> <span data-ttu-id="12451-104">有关详细信息，请参阅[线程池 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)。</span><span class="sxs-lookup"><span data-stu-id="12451-104">For more information, see [Thread Pooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).</span></span>  
   
- <span data-ttu-id="3e5e9-105">下面的示例使用 .NET Framework 线程池为介于 20 和 40 之间的十个数字计算 `Fibonacci` 结果。</span><span class="sxs-lookup"><span data-stu-id="3e5e9-105">The following example uses the .NET Framework thread pool to calculate the `Fibonacci` result for ten numbers between 20 and 40.</span></span> <span data-ttu-id="3e5e9-106">每个 `Fibonacci` 结果都由 `Fibonacci` 类表示，该类提供一个名为 `ThreadPoolCallback` 的方法，用于执行计算。</span><span class="sxs-lookup"><span data-stu-id="3e5e9-106">Each `Fibonacci` result is represented by the `Fibonacci` class, which provides a method named `ThreadPoolCallback` that performs the calculation.</span></span> <span data-ttu-id="3e5e9-107">创建表示每个 `Fibonacci` 值的对象，并将 `ThreadPoolCallback` 方法传递给 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>，它分配池中的一个可用线程来执行此方法。</span><span class="sxs-lookup"><span data-stu-id="3e5e9-107">An object that represents each `Fibonacci` value is created, and the `ThreadPoolCallback` method is passed to <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, which assigns an available thread in the pool to execute the method.</span></span>  
+ <span data-ttu-id="12451-105">下面的示例使用 .NET Framework 线程池为介于 20 和 40 之间的十个数字计算 `Fibonacci` 结果。</span><span class="sxs-lookup"><span data-stu-id="12451-105">The following example uses the .NET Framework thread pool to calculate the `Fibonacci` result for ten numbers between 20 and 40.</span></span> <span data-ttu-id="12451-106">每个 `Fibonacci` 结果都由 `Fibonacci` 类表示，该类提供一个名为 `ThreadPoolCallback` 的方法，用于执行计算。</span><span class="sxs-lookup"><span data-stu-id="12451-106">Each `Fibonacci` result is represented by the `Fibonacci` class, which provides a method named `ThreadPoolCallback` that performs the calculation.</span></span> <span data-ttu-id="12451-107">创建表示每个 `Fibonacci` 值的对象，并将 `ThreadPoolCallback` 方法传递给 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>，它分配池中的一个可用线程来执行此方法。</span><span class="sxs-lookup"><span data-stu-id="12451-107">An object that represents each `Fibonacci` value is created, and the `ThreadPoolCallback` method is passed to <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, which assigns an available thread in the pool to execute the method.</span></span>  
   
- <span data-ttu-id="3e5e9-108">由于为每个 `Fibonacci` 对象都提供了一个半随机值来进行计算，而且每个线程都将争用处理器时间，因此无法提前知道十个结果全部计算出来所需的时间。</span><span class="sxs-lookup"><span data-stu-id="3e5e9-108">Because each `Fibonacci` object is given a semi-random value to compute, and because each thread will be competing for processor time, you cannot know in advance how long it will take for all ten results to be calculated.</span></span> <span data-ttu-id="3e5e9-109">这就是在构造期间为每个 `Fibonacci` 对象传递 <xref:System.Threading.ManualResetEvent> 类的一个实例的原因。</span><span class="sxs-lookup"><span data-stu-id="3e5e9-109">That is why each `Fibonacci` object is passed an instance of the <xref:System.Threading.ManualResetEvent> class during construction.</span></span> <span data-ttu-id="3e5e9-110">当计算完成时，每个对象都通知提供的事件对象，从而使主线程使用 <xref:System.Threading.WaitHandle.WaitAll%2A> 阻止执行，直到十个 `Fibonacci` 对象全部计算出结果为止。</span><span class="sxs-lookup"><span data-stu-id="3e5e9-110">Each object signals the provided event object when its calculation is complete, which allows the primary thread to block execution with <xref:System.Threading.WaitHandle.WaitAll%2A> until all ten `Fibonacci` objects have calculated a result.</span></span> <span data-ttu-id="3e5e9-111">然后 `Main` 方法会显示每个 `Fibonacci` 结果。</span><span class="sxs-lookup"><span data-stu-id="3e5e9-111">The `Main` method then displays each `Fibonacci` result.</span></span>  
+ <span data-ttu-id="12451-108">由于为每个 `Fibonacci` 对象都提供了一个半随机值来进行计算，而且每个线程都将争用处理器时间，因此无法提前知道十个结果全部计算出来所需的时间。</span><span class="sxs-lookup"><span data-stu-id="12451-108">Because each `Fibonacci` object is given a semi-random value to compute, and because each thread will be competing for processor time, you cannot know in advance how long it will take for all ten results to be calculated.</span></span> <span data-ttu-id="12451-109">这就是在构造期间为每个 `Fibonacci` 对象传递 <xref:System.Threading.ManualResetEvent> 类的一个实例的原因。</span><span class="sxs-lookup"><span data-stu-id="12451-109">That is why each `Fibonacci` object is passed an instance of the <xref:System.Threading.ManualResetEvent> class during construction.</span></span> <span data-ttu-id="12451-110">当计算完成时，每个对象都通知提供的事件对象，从而使主线程使用 <xref:System.Threading.WaitHandle.WaitAll%2A> 阻止执行，直到十个 `Fibonacci` 对象全部计算出结果为止。</span><span class="sxs-lookup"><span data-stu-id="12451-110">Each object signals the provided event object when its calculation is complete, which allows the primary thread to block execution with <xref:System.Threading.WaitHandle.WaitAll%2A> until all ten `Fibonacci` objects have calculated a result.</span></span> <span data-ttu-id="12451-111">然后 `Main` 方法会显示每个 `Fibonacci` 结果。</span><span class="sxs-lookup"><span data-stu-id="12451-111">The `Main` method then displays each `Fibonacci` result.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3e5e9-112">示例</span><span class="sxs-lookup"><span data-stu-id="3e5e9-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="12451-112">示例</span><span class="sxs-lookup"><span data-stu-id="12451-112">Example</span></span>  
   
 ```vb  
 Imports System.Threading  
@@ -105,7 +96,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="3e5e9-113">下面是一个输出示例。</span><span class="sxs-lookup"><span data-stu-id="3e5e9-113">Following is an example of the output.</span></span>  
+ <span data-ttu-id="12451-113">下面是一个输出示例。</span><span class="sxs-lookup"><span data-stu-id="12451-113">Following is an example of the output.</span></span>  
   
 ```  
 launching 10 tasks...  
@@ -142,7 +133,7 @@ Fibonacci(21) = 10946
 Fibonacci(27) = 196418  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3e5e9-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3e5e9-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="12451-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="12451-114">See Also</span></span>  
  <xref:System.Threading.Mutex>  
  <xref:System.Threading.WaitHandle.WaitAll%2A>  
  <xref:System.Threading.ManualResetEvent>  
@@ -151,6 +142,6 @@ Fibonacci(27) = 196418
  <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
  <xref:System.Threading.ManualResetEvent>  
  <xref:System.Threading.Monitor>  
- [<span data-ttu-id="3e5e9-115">线程池 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3e5e9-115">Thread Pooling (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)  
- [<span data-ttu-id="3e5e9-116">线程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3e5e9-116">Threading (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
- [<span data-ttu-id="3e5e9-117">安全性</span><span class="sxs-lookup"><span data-stu-id="3e5e9-117">Security</span></span>](../../../../standard/security/index.md)
+ [<span data-ttu-id="12451-115">线程池 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="12451-115">Thread Pooling (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)  
+ [<span data-ttu-id="12451-116">线程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="12451-116">Threading (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [<span data-ttu-id="12451-117">安全性</span><span class="sxs-lookup"><span data-stu-id="12451-117">Security</span></span>](../../../../standard/security/index.md)

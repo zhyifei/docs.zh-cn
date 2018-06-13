@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 78dde5c50666333c02c8c1a9a167e17af3f40341
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454336"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a><span data-ttu-id="03d6b-102">ICorProfilerCallback::ObjectsAllocatedByClass 方法</span><span class="sxs-lookup"><span data-stu-id="03d6b-102">ICorProfilerCallback::ObjectsAllocatedByClass Method</span></span>
 <span data-ttu-id="03d6b-103">通知探查器有关的最新的垃圾回收后，创建的每个指定的类的实例数。</span><span class="sxs-lookup"><span data-stu-id="03d6b-103">Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.</span></span>  

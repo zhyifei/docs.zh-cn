@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605298"
 ---
 # <a name="option-compare-statement"></a><span data-ttu-id="4b990-102">Option Compare 语句</span><span class="sxs-lookup"><span data-stu-id="4b990-102">Option Compare Statement</span></span>
 <span data-ttu-id="4b990-103">声明比较字符串数据时要使用的默认比较方法。</span><span class="sxs-lookup"><span data-stu-id="4b990-103">Declares the default comparison method to use when comparing string data.</span></span>  

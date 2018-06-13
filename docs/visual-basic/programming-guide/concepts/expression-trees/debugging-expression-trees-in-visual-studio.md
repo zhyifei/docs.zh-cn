@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644233"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a><span data-ttu-id="f9e89-102">调试 Visual Studio (Visual Basic 中) 中的表达式树</span><span class="sxs-lookup"><span data-stu-id="f9e89-102">Debugging Expression Trees in Visual Studio (Visual Basic)</span></span>
 <span data-ttu-id="f9e89-103">可以在调试应用程序时分析表达式树的结构和内容。</span><span class="sxs-lookup"><span data-stu-id="f9e89-103">You can analyze the structure and content of expression trees when you debug your applications.</span></span> <span data-ttu-id="f9e89-104">若要快速了解表达式树结构，可以使用 `DebugView` 属性，该属性仅在调试模式下可用。</span><span class="sxs-lookup"><span data-stu-id="f9e89-104">To get a quick overview of the expression tree structure, you can use the `DebugView` property, which is available only in debug mode.</span></span> <span data-ttu-id="f9e89-105">有关调试的详细信息，请参阅[在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)。</span><span class="sxs-lookup"><span data-stu-id="f9e89-105">For more information about debugging, see [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).</span></span>  
