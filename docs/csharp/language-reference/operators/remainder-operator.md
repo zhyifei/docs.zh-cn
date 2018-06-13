@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271062"
 ---
 # <a name="-operator-c-reference"></a>% 运算符（C# 参考）
 余数运算符 (`%`) 计算第一个操作数除以第二个操作数后的余数。 所有数值类型都已预定义余数运算符。 

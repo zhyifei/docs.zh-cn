@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286170"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt; 运算符（C# 参考）
 左移运算符 (`<<`) 将第一个操作数向左移动第二个操作数指定的位数。 第二个操作数的类型必须为 [int](../../../csharp/language-reference/keywords/int.md) 或预定义隐式数值转换为 `int` 的类型。  

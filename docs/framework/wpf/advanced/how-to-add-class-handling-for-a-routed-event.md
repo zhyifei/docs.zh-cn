@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545358"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>如何：为路由事件添加类处理
 通过类处理程序或路线中的任何给定节点上的实例处理程序，可以处理路由的事件。 首先，调用和类的实现可以使用取消实例处理的事件，或引入其他事件所拥有的基类的事件的特定行为的类处理。 此示例阐释用来实现类处理程序的两个密切相关的技术。  

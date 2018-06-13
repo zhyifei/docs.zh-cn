@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218743"
 ---
 # <a name="-out-c-compiler-options"></a>-out（C# 编译器选项）
 -out 选项指定输出文件的名称。  

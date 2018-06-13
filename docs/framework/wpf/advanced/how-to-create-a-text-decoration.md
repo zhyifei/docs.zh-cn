@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545404"
 ---
 # <a name="how-to-create-a-text-decoration"></a>如何：创建文本修饰
 A<xref:System.Windows.TextDecoration>对象是你可以将其添加到文本的视觉装饰。 文本修饰的四种类型： 下划线、 基线、 删除线和上划线。 下面的示例显示相对于文本的文本修饰的位置。  

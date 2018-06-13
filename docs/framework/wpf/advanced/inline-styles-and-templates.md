@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545874"
 ---
 # <a name="inline-styles-and-templates"></a>内联样式和模板
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供<xref:System.Windows.Style>对象和模板对象 (<xref:System.Windows.FrameworkTemplate>子类) 作为在资源中定义的元素的可视外观的方法，以便它们可以使用多次。 为此中的属性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]它们采用类型<xref:System.Windows.Style>和<xref:System.Windows.FrameworkTemplate>几乎总是建立了对现有样式和模板的资源引用而不是内联定义新的。  

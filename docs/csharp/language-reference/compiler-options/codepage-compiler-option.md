@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216920"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage（C# 编译器选项）
 如果所需页不是系统的当前默认代码页，则此选项指定编译期间要使用的代码页。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525878"
 ---
 # <a name="events-in-windows-forms-controls"></a>Windows 窗体控件中的事件
 Windows 窗体控件继承来自多个六十事件<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 其中包括<xref:System.Windows.Forms.Control.Paint>事件，这会导致要绘制的控件，如显示一个窗口，与相关的事件<xref:System.Windows.Forms.Control.Resize>和<xref:System.Windows.Forms.Control.Layout>事件和低级别的鼠标和键盘事件。 某些低级别事件合成通过<xref:System.Windows.Forms.Control>到语义事件<xref:System.Windows.Forms.Control.Click>和<xref:System.Windows.Forms.Control.DoubleClick>。 有关继承的事件的详细信息，请参阅<xref:System.Windows.Forms.Control>。  

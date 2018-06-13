@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327354"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>类和结构（C# 编程指南）
 类和结构是 .NET Framework 通用类型系统的两种基本构造。 每种本质上都是一种数据结构，其中封装了同属一个逻辑单元的一组数据和行为。 数据和行为是类或结构的*成员*，包括方法、属性和事件等（此主题稍后将具体列举）。  

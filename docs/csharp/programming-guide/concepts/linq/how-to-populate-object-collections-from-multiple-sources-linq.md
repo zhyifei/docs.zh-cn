@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323347"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>如何：从多个源填充对象集合 (LINQ) (C#)
 本示例演示如何将来自不同源的数据合并到一系列新的类型。  

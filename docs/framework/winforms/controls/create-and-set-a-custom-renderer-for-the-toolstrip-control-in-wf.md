@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527169"
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>如何：在 Windows 窗体中为 ToolStrip 控件创建和设置自定义呈现器
 <xref:System.Windows.Forms.ToolStrip> 控件向主题和样式轻松支持。 你可以通过设置实现完全自定义外观和行为 （外观和感觉）<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>属性或<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>到自定义呈现器的属性。  

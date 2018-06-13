@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528744"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>如何：更改 Windows 窗体 DataGridView 控件中的边框和网格线的样式
 与<xref:System.Windows.Forms.DataGridView>控件，你可以自定义控件的边框和网格线以改进用户体验的外观。 你可以修改网格线颜色和除了在控件内的单元格的边框样式的控件边框样式。 你还可以应用不同的单元格普通单元格、 行标题单元格和列标题单元格的边框样式。  

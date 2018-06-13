@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218737"
 ---
 # <a name="if-else-c-reference"></a>if-else（C# 参考）
 `if` 语句基于 `Boolean` 表达式的值来识别运行哪个语句。 在下面的示例中， `Boolean` 变量 `result` 已被设置为 `true` ，然后被签入到了 `if` 语句。 输出为 `The condition is true`。  

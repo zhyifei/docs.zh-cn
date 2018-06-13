@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527695"
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>如何：为 Windows 窗体 DataGridView 控件中的单个单元格添加工具提示
 默认情况下，工具提示用于显示的值<xref:System.Windows.Forms.DataGridView>太小而无法显示其完整内容的单元格。 你可以重写此行为，但是，若要设置的各个单元格的工具提示文本值。 这很有用，可以显示用户有关的其他信息单元格或者向用户提供的单元格内容的备用说明。 例如，如果你有行显示状态图标，你可能想要提供使用工具提示的文本说明。  

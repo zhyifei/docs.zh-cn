@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216001"
 ---
 # <a name="add-c-reference"></a>add（C# 参考）
 `add` 上下文关键字用于定义一个在客户端代码订阅你的[事件](../../../csharp/language-reference/keywords/event.md)时调用的自定义事件访问器。 如果提供自定义 `add` 访问器，还必须提供 [remove](../../../csharp/language-reference/keywords/remove.md) 访问器。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526362"
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog 组件（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.FontDialog> 组件是一个预配置的对话框。 相同**字体**公开的 Windows 操作系统的对话框。 继承自该组件<xref:System.Windows.Forms.CommonDialog>类。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527557"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定
 在已向窗体添加控件并确定你的应用程序用户界面后，你可以将控件绑定到数据源，以便在运行时，用户可以更改和保存到应用程序相关的数据。  

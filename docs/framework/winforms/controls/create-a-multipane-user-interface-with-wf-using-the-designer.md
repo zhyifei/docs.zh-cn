@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529854"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>如何：使用设计器用 Windows 窗体创建多窗格用户界面
 在下面的过程中，将创建多窗格用户界面类似于在 Microsoft Outlook 中与使用**文件夹**列表中，**消息**窗格中，和一个**预览**窗格。 这种安排主要通过停靠处理该窗体控件。  

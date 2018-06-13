@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218171"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference（C# 编译器选项）
 -reference 选项使编译器将指定文件中的[公共](../../../csharp/language-reference/keywords/public.md)类型信息导入当前项目，从而使你可从指定的程序集文件中引用元数据。  
