@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492282"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a><span data-ttu-id="c44f1-102">在配置文件中配置发现</span><span class="sxs-lookup"><span data-stu-id="c44f1-102">Configuring Discovery in a Configuration File</span></span>
 <span data-ttu-id="c44f1-103">发现功能主要采用四组配置设置。</span><span class="sxs-lookup"><span data-stu-id="c44f1-103">There are four major groups of configuration settings used in discovery.</span></span> <span data-ttu-id="c44f1-104">本主题将简要介绍其中的每组设置，并用示例演示如何配置这些设置。</span><span class="sxs-lookup"><span data-stu-id="c44f1-104">This topic will briefly describe each and show examples of how to configure them.</span></span> <span data-ttu-id="c44f1-105">本主题每一部分后面都将提供一个链接，以便于您获取有关各个方面的更详尽的文档。</span><span class="sxs-lookup"><span data-stu-id="c44f1-105">Following each section will be a link to more in-depth documentation about each area.</span></span>  
