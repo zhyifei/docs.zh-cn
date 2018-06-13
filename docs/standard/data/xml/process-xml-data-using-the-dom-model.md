@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570340"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a><span data-ttu-id="1c544-102">使用 DOM 模型处理 XML 数据</span><span class="sxs-lookup"><span data-stu-id="1c544-102">Process XML Data Using the DOM Model</span></span>
 <span data-ttu-id="1c544-103">XML 文档对象模型 (DOM) 将 XML 数据作为一组标准的对象对待，用于处理内存中的 XML 数据。</span><span class="sxs-lookup"><span data-stu-id="1c544-103">The XML Document Object Model (DOM) treats XML data as a standard set of objects and is used to process XML data in memory.</span></span> <span data-ttu-id="1c544-104">`System.Xml` 命名空间提供 XML 文档、片断、节点或节点集的编程表示形式。</span><span class="sxs-lookup"><span data-stu-id="1c544-104">The `System.Xml` namespace provides a programmatic representation of XML documents, fragments, nodes, or node-sets.</span></span> <span data-ttu-id="1c544-105">基于万维网联合会 (W3C) DOM 级别 1 核心和 DOM 级别 2 核心建议。</span><span class="sxs-lookup"><span data-stu-id="1c544-105">It is based on the World Wide Web Consortium (W3C) DOM Level 1 Core and the DOM Level 2 Core recommendations.</span></span>  

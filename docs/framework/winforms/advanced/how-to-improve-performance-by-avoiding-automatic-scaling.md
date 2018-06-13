@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523037"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a><span data-ttu-id="2c2c7-102">如何：通过避免自动缩放改善性能</span><span class="sxs-lookup"><span data-stu-id="2c2c7-102">How to: Improve Performance by Avoiding Automatic Scaling</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="2c2c7-103"> 在绘制时，这会降低性能，可能自动缩放图像。</span><span class="sxs-lookup"><span data-stu-id="2c2c7-103"> may automatically scale an image as you draw it, which would decrease performance.</span></span> <span data-ttu-id="2c2c7-104">或者，你可以控制将传递到目标矩形的尺寸缩放图像<xref:System.Drawing.Graphics.DrawImage%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="2c2c7-104">Alternatively, you can control the scaling of the image by passing the dimensions of the destination rectangle to the <xref:System.Drawing.Graphics.DrawImage%2A> method.</span></span>  

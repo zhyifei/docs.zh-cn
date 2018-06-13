@@ -1,11 +1,7 @@
 ---
-title: "GetDemultiplexedStub 函数 （非托管 API 参考）"
-description: "GetDemultiplexedStub 函数将创建的对象转发器接收器，以帮助客户端在从 Windows 管理接收异步调用。"
+title: GetDemultiplexedStub 函数 （非托管 API 参考）
+description: GetDemultiplexedStub 函数将创建的对象转发器接收器，以帮助客户端在从 Windows 管理接收异步调用。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetDemultiplexedStub
 api_location:
@@ -20,21 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f53ee18345347f506a404a22bf5bfea6af037463
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 6b195d3a512c537ca409bd2039add9e69abaf4df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456357"
 ---
-# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="4cfad-103">GetDemultiplexedStub function</span><span class="sxs-lookup"><span data-stu-id="4cfad-103">GetDemultiplexedStub function</span></span>
-<span data-ttu-id="4cfad-104">创建的对象转发器接收器，以帮助客户端在从 Windows 管理接收异步调用。</span><span class="sxs-lookup"><span data-stu-id="4cfad-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="c0bf4-103">GetDemultiplexedStub 函数</span><span class="sxs-lookup"><span data-stu-id="c0bf4-103">GetDemultiplexedStub function</span></span>
+<span data-ttu-id="c0bf4-104">创建的对象转发器接收器，以帮助客户端在从 Windows 管理接收异步调用。</span><span class="sxs-lookup"><span data-stu-id="c0bf4-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="4cfad-105">语法</span><span class="sxs-lookup"><span data-stu-id="4cfad-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0bf4-105">语法</span><span class="sxs-lookup"><span data-stu-id="c0bf4-105">Syntax</span></span>  
   
 ```  
 HRESULT GetDemultiplexedStub (
@@ -44,29 +38,29 @@ HRESULT GetDemultiplexedStub (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="4cfad-106">参数</span><span class="sxs-lookup"><span data-stu-id="4cfad-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="c0bf4-106">参数</span><span class="sxs-lookup"><span data-stu-id="c0bf4-106">Parameters</span></span>
 
 `pObject`  
-<span data-ttu-id="4cfad-107">[in]指向客户端的过程中实现的[IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx)。</span><span class="sxs-lookup"><span data-stu-id="4cfad-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx).</span></span>
+<span data-ttu-id="c0bf4-107">[in]指向客户端的过程中实现的[IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx)。</span><span class="sxs-lookup"><span data-stu-id="c0bf4-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx).</span></span>
 
 `isLocal`  
-<span data-ttu-id="4cfad-108">[in]一个标志，指示该事件是否本地 (`true`); 否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="4cfad-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
+<span data-ttu-id="c0bf4-108">[in]一个标志，指示该事件是否本地 (`true`); 否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="c0bf4-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
 
 `ppObject`  
-<span data-ttu-id="4cfad-109">[out]对象的转发器接收器有助于客户端在从 Windows 管理接收异步调用。</span><span class="sxs-lookup"><span data-stu-id="4cfad-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+<span data-ttu-id="c0bf4-109">[out]对象的转发器接收器有助于客户端在从 Windows 管理接收异步调用。</span><span class="sxs-lookup"><span data-stu-id="c0bf4-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="4cfad-110">返回值</span><span class="sxs-lookup"><span data-stu-id="4cfad-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="c0bf4-110">返回值</span><span class="sxs-lookup"><span data-stu-id="c0bf4-110">Return value</span></span>
 
-<span data-ttu-id="4cfad-111">如果函数成功，则返回值是`S_OK`(0)。</span><span class="sxs-lookup"><span data-stu-id="4cfad-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
+<span data-ttu-id="c0bf4-111">如果函数成功，则返回值是`S_OK`(0)。</span><span class="sxs-lookup"><span data-stu-id="c0bf4-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
 
-<span data-ttu-id="4cfad-112">如果函数失败，返回值将为非零错误代码。</span><span class="sxs-lookup"><span data-stu-id="4cfad-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="4cfad-113">若要获得扩展的错误信息，调用[GetErrorInfo](geterrorinfo.md)函数。</span><span class="sxs-lookup"><span data-stu-id="4cfad-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="c0bf4-112">如果函数失败，返回值将为非零错误代码。</span><span class="sxs-lookup"><span data-stu-id="c0bf4-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="c0bf4-113">若要获得扩展的错误信息，调用[GetErrorInfo](geterrorinfo.md)函数。</span><span class="sxs-lookup"><span data-stu-id="c0bf4-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
     
-## <a name="requirements"></a><span data-ttu-id="4cfad-114">惠?</span><span class="sxs-lookup"><span data-stu-id="4cfad-114">Requirements</span></span>  
- <span data-ttu-id="4cfad-115">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4cfad-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c0bf4-114">要求</span><span class="sxs-lookup"><span data-stu-id="c0bf4-114">Requirements</span></span>  
+ <span data-ttu-id="c0bf4-115">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c0bf4-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4cfad-116">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="4cfad-116">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="c0bf4-116">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="c0bf4-116">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="4cfad-117">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="4cfad-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="c0bf4-117">**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="c0bf4-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4cfad-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="4cfad-118">See also</span></span>  
-[<span data-ttu-id="4cfad-119">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="4cfad-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="c0bf4-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="c0bf4-118">See also</span></span>  
+[<span data-ttu-id="c0bf4-119">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="c0bf4-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

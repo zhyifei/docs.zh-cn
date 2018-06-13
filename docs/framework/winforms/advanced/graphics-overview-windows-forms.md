@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521750"
 ---
 # <a name="graphics-overview-windows-forms"></a><span data-ttu-id="daa1e-102">图形概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="daa1e-102">Graphics Overview (Windows Forms)</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="daa1e-103"> 是一个图形设备接口，使程序员编写独立于设备的应用程序。</span><span class="sxs-lookup"><span data-stu-id="daa1e-103"> is a Graphics Device Interface that enables programmers to write device-independent applications.</span></span> <span data-ttu-id="daa1e-104">所提供的服务[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]通过一套托管类公开。</span><span class="sxs-lookup"><span data-stu-id="daa1e-104">The services of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] are exposed through a set of managed classes.</span></span>  
