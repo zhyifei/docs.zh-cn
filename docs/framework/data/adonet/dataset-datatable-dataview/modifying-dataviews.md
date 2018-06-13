@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760097"
 ---
 # <a name="modifying-dataviews"></a>修改 DataView
 可以使用 <xref:System.Data.DataView> 在基础表中添加、删除或修改数据行。 能够使用**DataView**修改基础表中的数据通过设置三个布尔值属性之一控制**DataView**。 这三个属性是 <xref:System.Data.DataView.AllowNew%2A>、<xref:System.Data.DataView.AllowEdit%2A> 和 <xref:System.Data.DataView.AllowDelete%2A>。 它们将设置为**true**默认情况下。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560158"
 ---
 # <a name="how-to-encode-a-visual-to-an-image-file"></a>如何：将 Visual 编码为图像文件
 此示例演示如何进行编码<xref:System.Windows.Media.Visual>对象插入图像文件使用<xref:System.Windows.Media.Imaging.RenderTargetBitmap>和<xref:System.Windows.Media.Imaging.PngBitmapEncoder>。  

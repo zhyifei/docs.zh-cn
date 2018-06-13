@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568620"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>按索引检索已排序节点
 万维网联合会 (W3C) XML 文档对象模型 (DOM) 还描述了 NodeList，它能够处理已排序节点列表（与 XmlNamedNodeMap 处理的未排序集相对）。 NodeList 在 Microsoft .NET Framework 中称为 XmlNodeList。 返回 XmlNodeList 的方法和属性包括：  
