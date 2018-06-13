@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597342"
 ---
 # <a name="mycomputer-object"></a>My.Computer 对象
 提供了用于操控计算机组件（如音频、时钟、键盘、文件系统等）的属性。  

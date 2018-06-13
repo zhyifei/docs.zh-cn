@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591854"
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>打包和部署自定义 My 扩展 (Visual Basic)
 Visual Basic 可以轻松地为你要部署您的自定义`My`通过使用 Visual Studio 模板的命名空间扩展。 如果要为其创建一个项目模板，你`My`扩展是新的项目类型的组成部分，您只能包括您的自定义`My`扩展代码与项目导出模板时。 有关导出项目模板的详细信息，请参阅[如何： 创建项目模板](/visualstudio/ide/how-to-create-project-templates)。  

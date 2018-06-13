@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570518"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>对 msxsl:node-set() 函数的支持
 `msxsl:node-set` 函数使您能够将结果树片段转换成节点集。 生成的节点集总是包含单个节点并且是树的根节点。  

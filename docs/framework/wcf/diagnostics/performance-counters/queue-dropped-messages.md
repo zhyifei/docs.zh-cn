@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473066"
 ---
 # <a name="queue-dropped-messages"></a>Queue Dropped Messages（队列丢弃的消息数）
 计数器名称：Queued Messages Dropped（已丢弃的排队消息数）。  

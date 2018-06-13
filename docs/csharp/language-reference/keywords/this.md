@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172030"
 ---
 # <a name="this-c-reference"></a>this（C# 参考）
 `this` 关键字指代类的当前实例，还可用作扩展方法的第一个参数的修饰符。  
