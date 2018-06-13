@@ -1,24 +1,13 @@
 ---
-title: "事件常规参考"
-ms.custom: 
+title: 事件常规参考
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c77b8029-64f4-48c6-a67a-2999f417495d
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1ed77cd4c41293241f85b83bb26728f4b293d05a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a75b1002c404d3eafd68354b2c7057d0ad8f2ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471349"
 ---
-# <a name="events-general-reference"></a><span data-ttu-id="38380-102">事件常规参考</span><span class="sxs-lookup"><span data-stu-id="38380-102">Events General Reference</span></span>
-<span data-ttu-id="38380-103">本节列出了 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 发出的所有事件。</span><span class="sxs-lookup"><span data-stu-id="38380-103">This section lists all the events that are emitted by [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span></span>
+# <a name="events-general-reference"></a><span data-ttu-id="ee669-102">事件常规参考</span><span class="sxs-lookup"><span data-stu-id="ee669-102">Events General Reference</span></span>
+<span data-ttu-id="ee669-103">本部分列出发出通过 Windows Communication Foundation (WCF) 的所有事件。</span><span class="sxs-lookup"><span data-stu-id="ee669-103">This section lists all the events that are emitted by Windows Communication Foundation (WCF).</span></span>

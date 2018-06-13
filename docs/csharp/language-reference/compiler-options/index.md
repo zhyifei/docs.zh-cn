@@ -15,6 +15,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472511"
 ---
 # <a name="c-compiler-options"></a><span data-ttu-id="99818-102">C# 编译器选项</span><span class="sxs-lookup"><span data-stu-id="99818-102">C# Compiler Options</span></span>
 <span data-ttu-id="99818-103">编译器生成可执行 (.exe) 文件、动态链接库 (.dll) 或者代码模块 (.netmodule)。</span><span class="sxs-lookup"><span data-stu-id="99818-103">The compiler produces executable (.exe) files, dynamic-link libraries (.dll), or code modules (.netmodule).</span></span>  

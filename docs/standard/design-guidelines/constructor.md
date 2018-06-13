@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575552"
 ---
 # <a name="constructor-design"></a><span data-ttu-id="fd85e-102">构造函数设计</span><span class="sxs-lookup"><span data-stu-id="fd85e-102">Constructor Design</span></span>
 <span data-ttu-id="fd85e-103">有两种类型的构造函数： 键入构造函数和实例构造函数。</span><span class="sxs-lookup"><span data-stu-id="fd85e-103">There are two kinds of constructors: type constructors and instance constructors.</span></span>  

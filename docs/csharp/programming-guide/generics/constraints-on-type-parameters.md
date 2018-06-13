@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457352"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a><span data-ttu-id="a530f-102">类型参数的约束（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="a530f-102">Constraints on type parameters (C# Programming Guide)</span></span>
 

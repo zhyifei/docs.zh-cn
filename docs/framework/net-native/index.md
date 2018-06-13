@@ -15,6 +15,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457302"
 ---
 # <a name="compiling-apps-with-net-native"></a><span data-ttu-id="ce93a-102">使用 .NET Native 编译引用</span><span class="sxs-lookup"><span data-stu-id="ce93a-102">Compiling Apps with .NET Native</span></span>
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]<span data-ttu-id="ce93a-103"> 是包含在 Visual Studio 2015 和更高版本的预编译技术用于生成和部署 Windows 应用程序。</span><span class="sxs-lookup"><span data-stu-id="ce93a-103"> is a precompilation technology for building and deploying Windows apps that is included with Visual Studio 2015 and later versions.</span></span> <span data-ttu-id="ce93a-104">它自动将以托管代码（C# 或 Visual Basic）编写并面向 .NET Framework 和 Windows 10 的发布版本的应用编译为本机代码。</span><span class="sxs-lookup"><span data-stu-id="ce93a-104">It automatically compiles the release version of apps that are written in managed code (C# or Visual Basic) and that target the .NET Framework and Windows 10 to native code.</span></span>  

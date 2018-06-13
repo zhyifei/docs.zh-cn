@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575819"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a><span data-ttu-id="c6679-102">如何：定义和使用自定义数值格式提供程序</span><span class="sxs-lookup"><span data-stu-id="c6679-102">How to: Define and Use Custom Numeric Format Providers</span></span>
 <span data-ttu-id="c6679-103">借助 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，可以全面控制数值的字符串表示形式。</span><span class="sxs-lookup"><span data-stu-id="c6679-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gives you extensive control over the string representation of numeric values.</span></span> <span data-ttu-id="c6679-104">它支持用于自定义数值格式的以下功能：</span><span class="sxs-lookup"><span data-stu-id="c6679-104">It supports the following features for customizing the format of numeric values:</span></span>  

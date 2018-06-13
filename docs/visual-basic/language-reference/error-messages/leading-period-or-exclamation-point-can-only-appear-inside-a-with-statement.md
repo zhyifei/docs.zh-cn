@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589442"
 ---
 # <a name="leading-3939-or-3939-can-only-appear-inside-a-39with39-statement"></a><span data-ttu-id="9629a-102">前导&#39;。&#39;或&#39;！&#39;只能出现在&#39;与&#39;语句</span><span class="sxs-lookup"><span data-stu-id="9629a-102">Leading &#39;.&#39; or &#39;!&#39; can only appear inside a &#39;With&#39; statement</span></span>
 <span data-ttu-id="9629a-103">句点 （.） 或感叹号 （！） 不内部`With`块没有左侧的表达式时出现。</span><span class="sxs-lookup"><span data-stu-id="9629a-103">A period (.) or exclamation point (!) that is not inside a `With` block occurs without an expression on the left.</span></span> <span data-ttu-id="9629a-104">成员访问 (`.`) 和字典成员访问 (`!`) 需要一个表达式来指定包含该成员的元素。</span><span class="sxs-lookup"><span data-stu-id="9629a-104">Member access (`.`) and dictionary member access (`!`) require an expression specifying the element that contains the member.</span></span> <span data-ttu-id="9629a-105">这必须紧靠的左边的访问器或作为目标的`With`包含成员访问的块。</span><span class="sxs-lookup"><span data-stu-id="9629a-105">This must appear immediately to the left of the accessor or as the target of a `With` block containing the member access.</span></span>  

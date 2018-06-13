@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3ace4a3103231f776d4e2b034f8e18ce861ee97
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461008"
 ---
 # <a name="strongnamegetpublickey-function"></a><span data-ttu-id="29a9a-102">StrongNameGetPublicKey 函数</span><span class="sxs-lookup"><span data-stu-id="29a9a-102">StrongNameGetPublicKey Function</span></span>
 <span data-ttu-id="29a9a-103">获取从私钥/公钥对的公钥。</span><span class="sxs-lookup"><span data-stu-id="29a9a-103">Gets the public key from a private/public key pair.</span></span> <span data-ttu-id="29a9a-104">可以提供的密钥对，为加密服务提供商 (CSP) 中的密钥容器名称或原始字节的集合。</span><span class="sxs-lookup"><span data-stu-id="29a9a-104">The key pair can be supplied either as a key container name within a cryptographic service provider (CSP) or as a raw collection of bytes.</span></span>  

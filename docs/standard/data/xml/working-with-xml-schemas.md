@@ -1,51 +1,41 @@
 ---
-title: "使用 XML 架构"
-ms.custom: 
+title: 使用 XML 架构
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bbbcc70c-bf9a-4f6a-af72-1bab5384a187
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6cba66a0d8291592b082898d20ca780c8067401e
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 83fddd00f44b184fa066f6c47b90b01fac7ef7bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570648"
 ---
-# <a name="working-with-xml-schemas"></a><span data-ttu-id="6ab11-102">使用 XML 架构</span><span class="sxs-lookup"><span data-stu-id="6ab11-102">Working with XML Schemas</span></span>
-<span data-ttu-id="6ab11-103">要定义 XML 文档的结构及其元素关系、数据类型和内容约束，请使用文档类型定义 (DTD) 或 XML 架构定义语言 (XSD) 架构。</span><span class="sxs-lookup"><span data-stu-id="6ab11-103">To define the structure of an XML document, as well as its element relationships, data types, and content constraints, you use a document type definition (DTD) or XML Schema definition language (XSD) schema.</span></span> <span data-ttu-id="6ab11-104">尽管 XML 文档如果符合万维网联合会 (W3C) 可扩展标记语言 (XML) 1.0 建议定义的所有语法要求，就被认为格式正确，但是，除非其格式正确并且符合其 DTD 或架构定义的约束，否则，不会认为该文档有效。</span><span class="sxs-lookup"><span data-stu-id="6ab11-104">Although an XML document is considered to be well-formed if it meets all the syntactical requirements defined by the World Wide Web Consortium (W3C) Extensible Markup Language (XML) 1.0 Recommendation, it is not considered valid unless it is both well-formed and conforms to the constraints defined by its DTD or schema.</span></span> <span data-ttu-id="6ab11-105">因此，尽管所有有效 XML 文档的格式都是正确的，但是并非所有格式正确的 XML 文档都有效。</span><span class="sxs-lookup"><span data-stu-id="6ab11-105">Therefore, although all valid XML documents are well-formed, not all well-formed XML documents are valid.</span></span>  
+# <a name="working-with-xml-schemas"></a><span data-ttu-id="877c3-102">使用 XML 架构</span><span class="sxs-lookup"><span data-stu-id="877c3-102">Working with XML Schemas</span></span>
+<span data-ttu-id="877c3-103">要定义 XML 文档的结构及其元素关系、数据类型和内容约束，请使用文档类型定义 (DTD) 或 XML 架构定义语言 (XSD) 架构。</span><span class="sxs-lookup"><span data-stu-id="877c3-103">To define the structure of an XML document, as well as its element relationships, data types, and content constraints, you use a document type definition (DTD) or XML Schema definition language (XSD) schema.</span></span> <span data-ttu-id="877c3-104">尽管 XML 文档如果符合万维网联合会 (W3C) 可扩展标记语言 (XML) 1.0 建议定义的所有语法要求，就被认为格式正确，但是，除非其格式正确并且符合其 DTD 或架构定义的约束，否则，不会认为该文档有效。</span><span class="sxs-lookup"><span data-stu-id="877c3-104">Although an XML document is considered to be well-formed if it meets all the syntactical requirements defined by the World Wide Web Consortium (W3C) Extensible Markup Language (XML) 1.0 Recommendation, it is not considered valid unless it is both well-formed and conforms to the constraints defined by its DTD or schema.</span></span> <span data-ttu-id="877c3-105">因此，尽管所有有效 XML 文档的格式都是正确的，但是并非所有格式正确的 XML 文档都有效。</span><span class="sxs-lookup"><span data-stu-id="877c3-105">Therefore, although all valid XML documents are well-formed, not all well-formed XML documents are valid.</span></span>  
   
- <span data-ttu-id="6ab11-106">若要详细了解 XML，请参阅 [W3C XML 1.0 建议](https://www.w3.org/TR/REC-xml/)。</span><span class="sxs-lookup"><span data-stu-id="6ab11-106">For more information about XML, see the [W3C XML 1.0 Recommendation](https://www.w3.org/TR/REC-xml/).</span></span> <span data-ttu-id="6ab11-107">若要详细了解 XML 架构，请参阅 [W3C XML 架构第 1 部分：结构建议](https://www.w3.org/TR/xmlschema-1/)和 [W3C XML 架构第 2 部分：数据类型建议](https://www.w3.org/TR/xmlschema-2/)中提供的建议。</span><span class="sxs-lookup"><span data-stu-id="6ab11-107">For more information about XML Schema, see the [W3C XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/) and the [W3C XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/) recommendations.</span></span>  
+ <span data-ttu-id="877c3-106">若要详细了解 XML，请参阅 [W3C XML 1.0 建议](https://www.w3.org/TR/REC-xml/)。</span><span class="sxs-lookup"><span data-stu-id="877c3-106">For more information about XML, see the [W3C XML 1.0 Recommendation](https://www.w3.org/TR/REC-xml/).</span></span> <span data-ttu-id="877c3-107">若要详细了解 XML 架构，请参阅 [W3C XML 架构第 1 部分：结构建议](https://www.w3.org/TR/xmlschema-1/)和 [W3C XML 架构第 2 部分：数据类型建议](https://www.w3.org/TR/xmlschema-2/)中提供的建议。</span><span class="sxs-lookup"><span data-stu-id="877c3-107">For more information about XML Schema, see the [W3C XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/) and the [W3C XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/) recommendations.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6ab11-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="6ab11-108">In This Section</span></span>  
- [<span data-ttu-id="6ab11-109">XML 架构对象模型 (SOM)</span><span class="sxs-lookup"><span data-stu-id="6ab11-109">XML Schema Object Model (SOM)</span></span>](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- <span data-ttu-id="6ab11-110">讨论 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的架构对象模型 (SOM)，SOM 提供一组类，用于从文件读取架构定义语言 (XSD) 架构或通过编程创建内存中架构。</span><span class="sxs-lookup"><span data-stu-id="6ab11-110">Discusses the Schema Object Model (SOM) in the <xref:System.Xml.Schema?displayProperty=nameWithType> namespace that provides a set of classes that allows you to read a Schema definition language (XSD) schema from a file or programmatically create a schema in-memory.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="877c3-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="877c3-108">In This Section</span></span>  
+ [<span data-ttu-id="877c3-109">XML 架构对象模型 (SOM)</span><span class="sxs-lookup"><span data-stu-id="877c3-109">XML Schema Object Model (SOM)</span></span>](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+ <span data-ttu-id="877c3-110">讨论 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的架构对象模型 (SOM)，SOM 提供一组类，用于从文件读取架构定义语言 (XSD) 架构或通过编程创建内存中架构。</span><span class="sxs-lookup"><span data-stu-id="877c3-110">Discusses the Schema Object Model (SOM) in the <xref:System.Xml.Schema?displayProperty=nameWithType> namespace that provides a set of classes that allows you to read a Schema definition language (XSD) schema from a file or programmatically create a schema in-memory.</span></span>  
   
- [<span data-ttu-id="6ab11-111">用于编译架构的 XmlSchemaSet</span><span class="sxs-lookup"><span data-stu-id="6ab11-111">XmlSchemaSet for Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- <span data-ttu-id="6ab11-112">讨论 <xref:System.Xml.Schema.XmlSchemaSet> 类，该类是可以存储和验证 XSD 架构的缓存。</span><span class="sxs-lookup"><span data-stu-id="6ab11-112">Discusses the <xref:System.Xml.Schema.XmlSchemaSet> class that is a cache where XSD schemas can be stored and validated.</span></span>  
+ [<span data-ttu-id="877c3-111">用于编译架构的 XmlSchemaSet</span><span class="sxs-lookup"><span data-stu-id="877c3-111">XmlSchemaSet for Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ <span data-ttu-id="877c3-112">讨论 <xref:System.Xml.Schema.XmlSchemaSet> 类，该类是可以存储和验证 XSD 架构的缓存。</span><span class="sxs-lookup"><span data-stu-id="877c3-112">Discusses the <xref:System.Xml.Schema.XmlSchemaSet> class that is a cache where XSD schemas can be stored and validated.</span></span>  
   
- [<span data-ttu-id="6ab11-113">XmlSchemaValidator 基于推送的验证</span><span class="sxs-lookup"><span data-stu-id="6ab11-113">XmlSchemaValidator Push-Based Validation</span></span>](../../../../docs/standard/data/xml/xmlschemavalidator-push-based-validation.md)  
- <span data-ttu-id="6ab11-114">讨论 <xref:System.Xml.Schema.XmlSchemaValidator> 类，该类提供了一种高效、高性能的机制，通过基于推送的方式针对 XSD 架构验证 XML 数据。</span><span class="sxs-lookup"><span data-stu-id="6ab11-114">Discusses the <xref:System.Xml.Schema.XmlSchemaValidator> class that provides an efficient, high-performance mechanism to validate XML data against XSD schemas in a push-based manner.</span></span>  
+ [<span data-ttu-id="877c3-113">XmlSchemaValidator 基于推送的验证</span><span class="sxs-lookup"><span data-stu-id="877c3-113">XmlSchemaValidator Push-Based Validation</span></span>](../../../../docs/standard/data/xml/xmlschemavalidator-push-based-validation.md)  
+ <span data-ttu-id="877c3-114">讨论 <xref:System.Xml.Schema.XmlSchemaValidator> 类，该类提供了一种高效、高性能的机制，通过基于推送的方式针对 XSD 架构验证 XML 数据。</span><span class="sxs-lookup"><span data-stu-id="877c3-114">Discusses the <xref:System.Xml.Schema.XmlSchemaValidator> class that provides an efficient, high-performance mechanism to validate XML data against XSD schemas in a push-based manner.</span></span>  
   
- [<span data-ttu-id="6ab11-115">推断 XML 架构</span><span class="sxs-lookup"><span data-stu-id="6ab11-115">Inferring an XML Schema</span></span>](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- <span data-ttu-id="6ab11-116">讨论如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 类从 XML 文档的结构推断 XSD 架构。</span><span class="sxs-lookup"><span data-stu-id="6ab11-116">Discusses how to use the <xref:System.Xml.Schema.XmlSchemaInference> class to infer an XSD schema from the structure of an XML document.</span></span>  
+ [<span data-ttu-id="877c3-115">推断 XML 架构</span><span class="sxs-lookup"><span data-stu-id="877c3-115">Inferring an XML Schema</span></span>](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+ <span data-ttu-id="877c3-116">讨论如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 类从 XML 文档的结构推断 XSD 架构。</span><span class="sxs-lookup"><span data-stu-id="877c3-116">Discusses how to use the <xref:System.Xml.Schema.XmlSchemaInference> class to infer an XSD schema from the structure of an XML document.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="6ab11-117">参考</span><span class="sxs-lookup"><span data-stu-id="6ab11-117">Reference</span></span>  
- <span data-ttu-id="6ab11-118"><xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader></span><span class="sxs-lookup"><span data-stu-id="6ab11-118"><xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader></span></span>  
+## <a name="reference"></a><span data-ttu-id="877c3-117">参考</span><span class="sxs-lookup"><span data-stu-id="877c3-117">Reference</span></span>  
+ <span data-ttu-id="877c3-118"><xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader></span><span class="sxs-lookup"><span data-stu-id="877c3-118"><xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader></span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="6ab11-119">相关章节</span><span class="sxs-lookup"><span data-stu-id="6ab11-119">Related Sections</span></span>  
- [<span data-ttu-id="6ab11-120">在 DOM 中验证 XML 文档</span><span class="sxs-lookup"><span data-stu-id="6ab11-120">Validating an XML Document in the DOM</span></span>](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md)  
- <span data-ttu-id="6ab11-121">讨论如何在文档对象模型 (DOM) 中验证 XML。</span><span class="sxs-lookup"><span data-stu-id="6ab11-121">Discusses how to validate the XML in the Document Object Model (DOM).</span></span> <span data-ttu-id="6ab11-122">可以在 XML 加载到 DOM 中时进行验证，也可以在 DOM 中验证以前未经过验证的 XML 文档。</span><span class="sxs-lookup"><span data-stu-id="6ab11-122">You can validate the XML as it is loaded into the DOM, or validate a previously unvalidated XML document in the DOM.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="877c3-119">相关章节</span><span class="sxs-lookup"><span data-stu-id="877c3-119">Related Sections</span></span>  
+ [<span data-ttu-id="877c3-120">在 DOM 中验证 XML 文档</span><span class="sxs-lookup"><span data-stu-id="877c3-120">Validating an XML Document in the DOM</span></span>](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md)  
+ <span data-ttu-id="877c3-121">讨论如何在文档对象模型 (DOM) 中验证 XML。</span><span class="sxs-lookup"><span data-stu-id="877c3-121">Discusses how to validate the XML in the Document Object Model (DOM).</span></span> <span data-ttu-id="877c3-122">可以在 XML 加载到 DOM 中时进行验证，也可以在 DOM 中验证以前未经过验证的 XML 文档。</span><span class="sxs-lookup"><span data-stu-id="877c3-122">You can validate the XML as it is loaded into the DOM, or validate a previously unvalidated XML document in the DOM.</span></span>  
   
- [<span data-ttu-id="6ab11-123">使用 XPathNavigator 验证架构</span><span class="sxs-lookup"><span data-stu-id="6ab11-123">Schema Validation using XPathNavigator</span></span>](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
- <span data-ttu-id="6ab11-124">讨论如何验证使用 <xref:System.Xml.XPath.XPathNavigator> 类浏览和编辑的 XML。</span><span class="sxs-lookup"><span data-stu-id="6ab11-124">Discusses how to validate XML being navigated and edited using the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>
+ [<span data-ttu-id="877c3-123">使用 XPathNavigator 验证架构</span><span class="sxs-lookup"><span data-stu-id="877c3-123">Schema Validation using XPathNavigator</span></span>](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
+ <span data-ttu-id="877c3-124">讨论如何验证使用 <xref:System.Xml.XPath.XPathNavigator> 类浏览和编辑的 XML。</span><span class="sxs-lookup"><span data-stu-id="877c3-124">Discusses how to validate XML being navigated and edited using the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>
