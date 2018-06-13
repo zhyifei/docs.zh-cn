@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764627"
 ---
 # <a name="-member-access-entity-sql"></a>. （成员访问）(Entity SQL)
 点运算符 （.） 是[!INCLUDE[esql](../../../../../../includes/esql-md.md)]成员访问运算符。 使用成员访问运算符可生成结构化概念模型类型实例的属性或字段的值。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503306"
 ---
 # <a name="circular-tracing"></a>循环跟踪
 此示例演示如何实现循环缓冲区跟踪侦听器。 生产服务的一个常见方案是，拥有可以长时间使用的服务，并在较低级别启用跟踪日志记录。 这些服务占用大量磁盘空间。 在对某个服务进行疑难解答时，跟踪日志中的最新数据与解决问题相关。 此示例演示如何实现一个循环缓冲区跟踪侦听器，在该侦听器中，磁盘上仅保留最新的跟踪数据，最多可以保存可配置的数据量。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)和包括自定义跟踪侦听器。  

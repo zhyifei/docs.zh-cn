@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506462"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP 端口共享示例
 TCP/IP 协议使用一个称为端口的 16 位数字来区分与在同一台计算机上运行的多个网络应用程序的连接。 如果某个应用程序正在侦听一个端口，则此端口的所有 TCP 通信将转至该应用程序。 其他应用程序无法同时侦听此端口。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507344"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 和 WSDL 引用
 本主题介绍与 Windows Communication Foundation (WCF) 如何映射 Web 服务描述语言 (WSDL) 文档<xref:System.ServiceModel.Description.ServiceDescription>实例。  

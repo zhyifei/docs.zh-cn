@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760240"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>从 XML 加载数据集架构信息
 架构<xref:System.Data.DataSet>（其表、 列、 关系和约束） 可以定义，以编程方式创建的**填充**或**FillSchema**方法<xref:System.Data.Common.DataAdapter>，或从加载XML 文档。 若要加载**数据集**架构信息从 XML 文档，你可以使用**ReadXmlSchema**或**InferXmlSchema**方法**数据集**. **ReadXmlSchema**允许你加载或推断**数据集**文档包含 XML 架构定义语言 (XSD) 架构或包含内联 XML 架构的 XML 文档中的架构信息。 **InferXmlSchema**可以推断 XML 文档中的架构时忽略某些你指定的 XML 命名空间。  

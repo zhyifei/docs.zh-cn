@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588101"
 ---
 # <a name="how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio"></a>如何：在 DataRepeater 控件中显示未绑定的控件 (Visual Studio)
 除了绑定控件，你可能想要添加到其他控件<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>，如静态标签或图像，它在每个项重复<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。  

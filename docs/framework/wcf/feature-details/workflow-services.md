@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499188"
 ---
 # <a name="workflow-services"></a>工作流服务
 使用 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，您可以在 XAML 中以声明方式充分描述基于工作流的服务。 您完全可以在 XAML 中定义实现服务的工作流并描述服务所公开的终结点。 本节中的主题详细描述支持以声明方式编写服务的编程模型。  

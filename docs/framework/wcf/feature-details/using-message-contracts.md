@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508574"
 ---
 # <a name="using-message-contracts"></a>使用消息约定
 通常在生成 Windows Communication Foundation (WCF) 应用程序时，开发人员将密切注意数据结构和序列化问题，无需自己考虑在其中执行数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 (有关详细信息，请参阅[指定服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  

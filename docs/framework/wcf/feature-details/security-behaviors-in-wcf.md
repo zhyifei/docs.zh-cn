@@ -1,29 +1,18 @@
 ---
 title: WCF 中的安全行为
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: bb10d98eb96213029ae43533935312c6f1cf09c7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57bd34c72e98091c4a429d683a0da4ce2d3967c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508639"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全行为
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的行为在服务级别或终结点级别修改运行时行为。 (有关详细信息，有关各种行为一般情况下，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全行为*允许控制凭据、 身份验证、 授权和审核日志。 可以通过编程或通过配置来使用行为。 本主题重点讨论如何配置下列与安全功能相关的行为：  
+在 Windows Communication Foundation (WCF) 行为修改运行时行为在服务级别或终结点级别。 (有关详细信息，有关各种行为一般情况下，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全行为*允许控制凭据、 身份验证、 授权和审核日志。 可以通过编程或通过配置来使用行为。 本主题重点讨论如何配置下列与安全功能相关的行为：  
   
 -   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。  
   
@@ -140,7 +129,7 @@ ms.lasthandoff: 04/30/2018
  指定默认的安全令牌服务地址。 使用此时<xref:System.ServiceModel.WSFederationHttpBinding>不提供的 URL 的安全令牌服务，或者联合绑定的颁发者地址为http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous或`null`。 在这些情况下，必须使用本地颁发机构的地址和用来与该颁发机构进行通信的绑定来配置 <xref:System.ServiceModel.Description.ClientCredentials>。  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
- 使用[ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)添加[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]与安全令牌服务通信时使用的客户端行为。 定义中的客户端行为[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)部分。 若要使用定义的行为，将添加 <`add`> 元素`<issuerChannelBehaviors>`具有两个属性的元素。 将 `issuerAddress` 设置为安全令牌服务的 URL，将 `behaviorConfiguration` 特性设置为已定义终结点行为的名称，如下面的示例所示。  
+ 使用[ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)添加与安全令牌服务通信时使用的 WCF 客户端行为。 定义中的客户端行为[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)部分。 若要使用定义的行为，将添加 <`add`> 元素`<issuerChannelBehaviors>`具有两个属性的元素。 将 `issuerAddress` 设置为安全令牌服务的 URL，将 `behaviorConfiguration` 特性设置为已定义终结点行为的名称，如下面的示例所示。  
   
 ```xml  
 <clientCredentials>  

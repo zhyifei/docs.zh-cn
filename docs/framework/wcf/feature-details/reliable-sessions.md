@@ -1,13 +1,6 @@
 ---
-title: "可靠会话"
-ms.custom: 
+title: 可靠会话
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Windows Communication Foundation, sessions and instances
 - WCF, sessions and instances
@@ -16,24 +9,20 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 396c76cbdb8eada881a5c87edfc2500dcdab3ad4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497160"
 ---
 # <a name="reliable-sessions"></a>可靠会话
 
-本节介绍什么[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]可靠会话是，它有何，如何及何时使用它，哪些绑定配置支持它，以及有关最佳实践。 下表汇总了有关本节中要点和相关主题的详细信息。
+此部分描述哪些 Windows Communication Foundation (WCF) 可靠会话，它的用途，如何以及何时使用它，哪些绑定配置支持它，以及有关最佳实践。 下表汇总了有关本节中要点和相关主题的详细信息。
 
-可靠会话[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]提供 featrues 确保终结点之间发送的消息跨 SOAP 或传输媒介传输，而与发送这些相同的顺序传递一次和 （可选）。
+可靠会话 WCF 提供了 featrues 确保终结点之间发送的消息跨 SOAP 或传输媒介传输，而与发送这些相同的顺序传递一次和 （可选）。
 
-若要将可靠会话与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序一起使用，请使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中默认情况下支持可靠会话或作为一个选项的系统提供绑定之一，或者创建自己的支持会话的自定义绑定。
+若要与 WCF 应用程序使用可靠会话，请使用 WCF 中默认情况下或作为一个选项，支持可靠会话的系统提供绑定之一，或创建自己的自定义绑定支持会话。
 
 ## <a name="in-this-section"></a>本节内容
 

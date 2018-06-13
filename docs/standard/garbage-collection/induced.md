@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575858"
 ---
 # <a name="induced-collections"></a>被动回收
 在大多数情况下，垃圾回收器可以确定执行回收的最佳时间，应让其独立运行。 在某些不常见的情况下，强制回收可以提高应用程序的性能。 在这种情况下，可以使用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法强制执行垃圾回收，从而诱导垃圾回收。  

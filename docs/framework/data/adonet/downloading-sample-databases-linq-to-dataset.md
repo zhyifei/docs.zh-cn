@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763048"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>下载示例数据库 (LINQ to DataSet)
 示例和演练[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]文档使用 AdventureWorks 示例数据库。 您可以从 Microsoft 下载站点免费下载此产品。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 文档中的示例和演练使用 SQL Server 作为数据存储区。 免费提供的 SQL Server Express Edition 也可代替 SQL Server 用作数据存储区。  

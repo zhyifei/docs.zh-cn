@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762606"
 ---
 # <a name="gt-greater-than-entity-sql"></a>&gt;（大于）(Entity SQL)
 比较两个表达式以确定左侧表达式的值是否大于右侧表达式的值。  

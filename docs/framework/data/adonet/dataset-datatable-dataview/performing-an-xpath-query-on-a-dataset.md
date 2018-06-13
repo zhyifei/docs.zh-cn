@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762405"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>对数据集执行 XPath 查询
 同步之间的关系<xref:System.Data.DataSet>和<xref:System.Xml.XmlDataDocument>让你可以使用 XML 访问的服务，例如 XML 路径语言 (XPath) 查询， **XmlDataDocument**和可以执行某些功能比访问更方便地**数据集**直接。 例如，而不是使用**选择**方法<xref:System.Data.DataTable>来导航到其他表中的关系**数据集**，你可以对执行 XPath 查询**XmlDataDocument**与同步**数据集**，若要获取的窗体中的 XML 元素的列表<xref:System.Xml.XmlNodeList>。 中的节点**XmlNodeList**、 强制转换为<xref:System.Xml.XmlElement>节点，则传递给**GetRowFromElement**方法**XmlDataDocument**，则返回匹配<xref:System.Data.DataRow>对中同步的表的行的引用**数据集**。  
