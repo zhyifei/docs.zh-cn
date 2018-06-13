@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647756"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>有效使用数据类型 (Visual Basic)
 未声明的变量和数据类型未声明的变量分配`Object`数据类型。 这使得可以轻松快速，编写程序，但它可能会导致它们执行速度更慢。  

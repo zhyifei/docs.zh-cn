@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653541"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>如何：创建 Lambda 表达式 (Visual Basic)
 A *lambda 表达式*是函数或子例程的不具有名称。 一个委托类型有效的任何地方，可以使用 lambda 表达式。  

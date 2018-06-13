@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649781"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>如何：计算数值 (Visual Basic)
 您可以计算通过数值表达式使用的数字值。 A*数值表达式*会包含文本、 常量和变量表示数字值的表达式并处理这些值的运算符。  

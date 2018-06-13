@@ -9,19 +9,20 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958007"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>选择容器基于应用程序的 Azure 计算平台
 
 在阅读了前面的部分后，您已经注意到，Azure 将是提供多项选择打开云。 您可以使用最适合你的需求，但是，它还显示有关你容器化应用程序应使用何种产品/技术问题。
 
-作为*： 默认情况下*建议，以下是本指南中建议的主要条件：
+作为 *： 默认情况下*建议，以下是本指南中建议的主要条件：
 
-  - **单个整体应用：**选择 Azure App Service
-  - **N 层应用程序：**选择 orchestrators 如 Azure Kubernetes 服务 (AKS)、 Service Fabric (SF) 或应用程序服务，如果你有一个或几个后端服务
-  - **Linux 微服务：**选择 AKS/Kubernetes
-  - **Windows 微服务：**选择 Service Fabric
-  - **无服务器函数和事件处理程序：**选择 Azure 函数
-  - **大规模批处理：**选择 Azure 批处理
+  - **单个整体应用：** 选择 Azure App Service
+  - **N 层应用程序：** 选择 orchestrators 如 Azure Kubernetes 服务 (AKS)、 Service Fabric (SF) 或应用程序服务，如果你有一个或几个后端服务
+  - **Linux 微服务：** 选择 AKS/Kubernetes
+  - **Windows 微服务：** 选择 Service Fabric
+  - **无服务器函数和事件处理程序：** 选择 Azure 函数
+  - **大规模批处理：** 选择 Azure 批处理
 
 但是，此建议应采取的 salt，捏合与该产品的选择将依赖于特定应用程序的需求和特征。 即使最初它们可能看起来类似的类型，并非所有应用程序都是相同的。
 

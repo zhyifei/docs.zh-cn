@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641352"
 ---
 # <a name="path-39ltpathnamegt39-not-found"></a>路径&#39;&lt;路径名&gt;&#39;找不到
 操作系统找不到在文件访问或磁盘访问操作期间指定的路径。 文件的路径必须包括查找文件时必须遍历的驱动器规格、目录和子目录。 路径可以是相对路径或绝对路径。  

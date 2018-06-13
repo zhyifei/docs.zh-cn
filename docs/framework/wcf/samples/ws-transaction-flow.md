@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807210"
 ---
 # <a name="ws-transaction-flow"></a>WS 事务流
 本示例演示客户端协调事务和使用 WS-Atomic 事务或 OleTransactions 协议的事务流的客户端和服务器选项的用法。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务，但操作特性化，用于演示使用`TransactionFlowAttribute`与**TransactionFlowOption**若要确定何种程度事务到启用了流的枚举。 在流事务范围内，请求操作的日志将写入数据库并保存，直到客户端协调事务完成。如果客户端事务没有完成，则 Web 服务事务确保不提交对数据库的相应更新。  

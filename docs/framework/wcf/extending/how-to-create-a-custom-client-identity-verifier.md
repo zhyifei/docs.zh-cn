@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804471"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>如何：创建自定义客户端标识验证工具
 *标识*功能的 Windows Communication Foundation (WCF) 使客户端能够预先指定服务所需的标识。 无论服务器何时向客户端验证其自身身份，都将检查该标识是否为所需的标识。 (有关标识以及它如何工作的说明，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)  

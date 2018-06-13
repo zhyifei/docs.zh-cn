@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649807"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>如何：定义一个过程的多个版本 (Visual Basic)
 你可以通过多个版本中定义的过程*重载*它在每个版本中使用的相同名称但不同的参数列表。 重载的目的是定义过程的几个密切相关的版本，而无需将它们按名称区分开来。  
