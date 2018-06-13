@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636648"
 ---
 # <a name="file-already-exists"></a>文件已存在
 以现有文件的名称命名新文件或使用 **另存为** 命令以已存在的名称保存当前加载的项目时，会出现此错误。  

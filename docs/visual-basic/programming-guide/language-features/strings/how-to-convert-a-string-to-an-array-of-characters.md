@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648614"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>如何：在 Visual Basic 中将字符串转换为字符数组
 有时很有用具有了解你的字符串和这些字符在字符串中，如当你需要分析字符串的位置中的字符的数据。 此示例演示如何获取数组的字符字符串中通过调用字符串的<xref:System.String.ToCharArray%2A>方法。  

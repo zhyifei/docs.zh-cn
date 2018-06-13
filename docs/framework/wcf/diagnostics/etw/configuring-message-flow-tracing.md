@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804841"
 ---
 # <a name="configuring-message-flow-tracing"></a>配置消息流跟踪
 启用 Windows Communication Foundation (WCF) 活动跟踪后，端到端活动 Id 分配给整个 WCF 堆栈的逻辑活动。 在 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 中，此功能现在具备性能更高的版本。它与 Windows 事件跟踪 (ETW) 一起使用，称为消息流跟踪。 启用此功能时，端对端活动 ID 取自（如果为空，则分配到）传入消息，并传播到在通道解码消息之后发出的所有跟踪事件。 客户通过此功能，可以在解码来自不同服务的跟踪日志后重新构造消息流。  

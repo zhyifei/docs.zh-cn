@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807978"
 ---
 # <a name="tracing-and-message-logging"></a>跟踪和消息日志记录
 本示例演示如何启用跟踪和消息日志记录。 生成的跟踪和消息日志使用查看[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  

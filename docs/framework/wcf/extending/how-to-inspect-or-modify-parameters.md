@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809948"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>如何：检查或修改参数
 您可以检查或修改某个操作上的 Windows Communication Foundation (WCF) 客户端对象或 WCF 服务的通信的传入或传出消息通过实现<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>接口并将其插入到客户端或服务运行时。 通常，操作行为用于为单个操作添加参数检查器；其他行为可以用于在更大范围内提供对运行库的方便访问。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)和[扩展调度程序](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  

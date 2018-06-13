@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653658"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>示例编译命令行 (Visual Basic)
 作为编译 Visual Basic 程序从 Visual Studio 中的替代方法，你可以从命令行以生成可执行文件 (.exe) 文件或动态链接库 (.dll) 文件进行编译。  
