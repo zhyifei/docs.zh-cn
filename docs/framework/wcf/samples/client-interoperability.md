@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803435"
 ---
 # <a name="client-interoperability"></a>客户端互操作性
 本节包含演示 Windows Communication Foundation (WCF) 和其他技术之间的互操作性的示例。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808587"
 ---
 # <a name="using-sessions"></a>使用会话
 Windows Communication Foundation (WCF) 应用程序中*会话*将一组消息关联起来形成对话。 WCF 会话是不同于中提供的会话对象[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]应用程序，支持不同的行为，并且以不同的方式进行控制。 本主题介绍在 WCF 中启用会话的功能的应用程序以及如何使用它们。  

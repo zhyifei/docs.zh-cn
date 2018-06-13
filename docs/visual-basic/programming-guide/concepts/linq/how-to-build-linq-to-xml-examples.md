@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641212"
 ---
 # <a name="how-to-build-linq-to-xml-examples-visual-basic"></a>如何： 生成 LINQ to XML 示例 (Visual Basic)
 本文档中的各代码段和示例使用多个命名空间中的类和类型。 在编译 Visual Basic 代码时，您需要提供相应的 `Imports` 语句。  

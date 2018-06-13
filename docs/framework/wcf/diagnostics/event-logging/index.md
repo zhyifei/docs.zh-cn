@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804933"
 ---
 # <a name="event-logging-in-wcf"></a>WCF 中的事件日志记录
 Windows Communication Foundation (WCF) 跟踪 Windows 事件日志中的内部事件。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806365"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 到消息队列
 此示例演示如何 Windows Communication Foundation (WCF) 应用程序可以将消息发送到消息队列 (MSMQ) 应用程序。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。 服务和客户端不需要同时运行。  

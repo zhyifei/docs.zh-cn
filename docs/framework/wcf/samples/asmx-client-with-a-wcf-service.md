@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805124"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>带有 WCF 服务的 ASMX 客户端
 此示例演示如何创建使用 Windows Communication Foundation (WCF) 服务，然后从非 WCF 客户端，如 ASMX 客户端访问服务。  

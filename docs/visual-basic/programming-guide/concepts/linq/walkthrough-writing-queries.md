@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655871"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>演练：用 Visual Basic 编写查询
 本演练演示如何使用 Visual Basic 语言功能来编写[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查询表达式。 本演练说明如何在列表中的学生对象创建查询、 如何运行查询，以及如何对其进行修改。 查询将包括对象初始值设定项、 本地类型推断、 和匿名类型的多个功能合并。  

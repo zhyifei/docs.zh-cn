@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809776"
 ---
 # <a name="understanding-protection-level"></a>了解保护级别
 在许多不同的类中可以找到 `ProtectionLevel` 属性，例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 类。 此属性控制部分（或整个）消息的保护方式。 本主题介绍 Windows Communication Foundation (WCF) 功能以及它如何工作。  

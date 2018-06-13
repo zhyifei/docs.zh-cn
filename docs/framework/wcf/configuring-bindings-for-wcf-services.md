@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806053"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>为 Windows Communication Foundation 服务配置绑定
 创建应用程序时，您经常需要将一些决策交给管理员在部署应用程序后制定。 例如，通常没有办法提前知道服务地址或统一资源标识符 (URI)。 最好允许管理员在创建服务后指定地址，而不是对地址进行硬编码。 这种灵活性是通过配置实现的。  

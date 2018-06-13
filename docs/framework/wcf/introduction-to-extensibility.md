@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804428"
 ---
 # <a name="introduction-to-extensibility"></a>扩展性介绍
 Windows Communication Foundation (WCF) 应用程序模型设计用于解决任何分布式应用程序的通信要求更大一部分。 但是，总是会存在一些默认应用程序模型和系统提供的实现不支持的情况。 WCF 扩展性模型旨在支持自定义方案，使您能够修改在每个级别，即使到替换整个应用程序模型的点的系统行为。 本主题概述各个扩展范围并指出关于每个范围的更多信息。  

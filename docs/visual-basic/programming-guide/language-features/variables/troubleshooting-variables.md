@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655690"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>变量疑难解答 (Visual Basic)
 此页列出了一些使用 Visual Basic 中的变量时可能发生的常见问题。  

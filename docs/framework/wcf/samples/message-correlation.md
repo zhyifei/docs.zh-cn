@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806586"
 ---
 # <a name="message-correlation"></a>消息相关性
 此示例演示如何消息队列 (MSMQ) 应用程序可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务以及如何消息也可以在请求/响应方案中的发送方和接收方应用程序之间关联起来。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k  

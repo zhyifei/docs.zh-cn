@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803535"
 ---
 # <a name="extending-encoders-and-serializers"></a>扩展编码器和序列化程序
 本部分中的主题介绍如何扩展 Windows Communication Foundation (WCF) 序列化系统。  

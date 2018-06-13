@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803232"
 ---
 # <a name="propagation"></a>传播
 本主题介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动传播。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804126"
 ---
 # <a name="security-concerns-for-message-logging"></a>消息日志记录的安全问题
 本主题描述如何防止在消息日志以及由消息日志记录生成的事件中公开敏感数据。  

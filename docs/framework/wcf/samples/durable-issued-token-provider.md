@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807546"
 ---
 # <a name="durable-issued-token-provider"></a>持久性已颁发令牌提供程序
 此示例演示如何实现一个自定义客户端已颁发令牌提供程序。  

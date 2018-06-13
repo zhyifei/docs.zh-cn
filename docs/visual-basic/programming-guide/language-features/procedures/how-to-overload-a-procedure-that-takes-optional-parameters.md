@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652891"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>如何：重载带有可选参数的过程 (Visual Basic)
 如果过程有一个或多个[可选](../../../../visual-basic/language-reference/modifiers/optional.md)参数，不能定义匹配任何其隐式重载的重载的版本。 有关详细信息，请参见"隐式重载为可选参数"[中重载过程注意事项](./considerations-in-overloading-procedures.md)。  
