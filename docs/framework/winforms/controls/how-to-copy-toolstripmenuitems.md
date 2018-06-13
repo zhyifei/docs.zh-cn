@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530476"
 ---
 # <a name="how-to-copy-toolstripmenuitems"></a>如何：复制 ToolStripMenuItem
 在设计时，你可以将整个顶级菜单及其子菜单项复制到 <xref:System.Windows.Forms.MenuStrip>上的其他位置。 还可以复制顶级菜单之间的单个菜单项或在菜单中更改菜单项的位置。  

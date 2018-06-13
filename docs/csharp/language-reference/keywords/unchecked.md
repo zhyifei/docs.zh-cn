@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267975"
 ---
 # <a name="unchecked-c-reference"></a>unchecked（C# 参考）
 `unchecked` 关键字用于取消整型类型的算术运算和转换的溢出检查。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265215"
 ---
 # <a name="jump-statements-c-reference"></a>跳转语句（C# 参考）
 使用跳转语句执行分支，这将立即转移程序控制。 跳转语句中使用下列关键字：  

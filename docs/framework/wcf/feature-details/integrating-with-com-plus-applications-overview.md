@@ -1,32 +1,19 @@
 ---
 title: 与 COM+ 应用程序集成的概述
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 155365c72fd3f5915db12104f45a500f3176f67b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496320"
 ---
 # <a name="integrating-with-com-applications-overview"></a>与 COM+ 应用程序集成的概述
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了用于创建分布式应用程序的丰富环境。 如果您使用的是 COM+ 中承载的基于组件的应用程序逻辑，则可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 来扩展现有逻辑，而不必重写它。 最常见的情形是通过 Web 服务来公开现有 COM+ 或企业服务业务逻辑。  
+Windows Communication Foundation (WCF) 提供用于创建分布式应用程序的丰富环境。 如果你已使用 COM + 中承载的基于组件的应用程序逻辑，你可以使用 WCF 来扩展你现有的逻辑，而不是无需重写它。 最常见的情形是通过 Web 服务来公开现有 COM+ 或企业服务业务逻辑。  
   
  在 COM+ 组件上的接口作为 Web 服务公开时，这些服务的规范和协定取决于在应用程序初始化时执行的自动映射。 下面的列表演示此映射的概念模型：  
   
@@ -84,7 +71,7 @@ ms.lasthandoff: 04/30/2018
  在客户端应用程序内，可以使用 <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> 对象上的方法将对象传入服务，同样也可以用于检索对象。  
   
 > [!NOTE]
->  由于序列化方法的惯例和平台特定的特性，这最适合于在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务之间使用。  
+>  由于序列化方法的自定义和特定于平台的性质，这是最适合使用 WCF 客户端和 WCF 服务之间。  
   
 ## <a name="selecting-the-hosting-mode"></a>选择宿主模式  
  COM+ 可以通过以下宿主模式之一来公开 Web 服务：  
@@ -95,18 +82,18 @@ ms.lasthandoff: 04/30/2018
   
 -   Web 承载  
   
-     Web 服务承载于 Web 服务器工作进程中。 此模式不要求 COM+ 在接收初始请求时处于活动状态。 如果在接收该请求时应用程序处于非活动状态，则在处理该请求之前会自动激活它。 此模式也对服务器应用程序同时提供 Web 服务和 DCOM 访问，但会导致 Web 服务请求产生进程跃点。 这通常要求客户端启用模拟。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，可以通过 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 类的 <xref:System.ServiceModel.Security.WindowsClientCredential> 属性来完成该操作，该属性可作为泛型 <xref:System.ServiceModel.ChannelFactory%601> 类的属性以及 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> 枚举值来访问。  
+     Web 服务承载于 Web 服务器工作进程中。 此模式不要求 COM+ 在接收初始请求时处于活动状态。 如果在接收该请求时应用程序处于非活动状态，则在处理该请求之前会自动激活它。 此模式也对服务器应用程序同时提供 Web 服务和 DCOM 访问，但会导致 Web 服务请求产生进程跃点。 这通常要求客户端启用模拟。 在 WCF 中，这可通过<xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>属性<xref:System.ServiceModel.Security.WindowsClientCredential>类，该类作为泛型的属性访问<xref:System.ServiceModel.ChannelFactory%601>类，以及<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>枚举值。  
   
 -   进程内 Web 承载  
   
      Web 服务和 COM+ 应用程序逻辑承载于 Web 服务器工作进程中。 这样可以自动激活 Web 承载模式，而不会导致 Web 服务请求产生进程跃点。 其缺点在于无法通过 DCOM 访问服务器应用程序。  
   
 ### <a name="security-considerations"></a>安全注意事项  
- 与其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务类似，已公开服务的安全设置是通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道的配置设置来管理的。 不会强制执行传统的 DCOM 安全设置，如 DCOM 计算机范围内的权限设置。 若要强制执行 COM+ 应用程序角色，必须为组件启用“组件级别访问检查”授权。  
+ 如其他 WCF 服务，通过 WCF 通道的配置设置进行管理所公开的服务的安全设置。 不会强制执行传统的 DCOM 安全设置，如 DCOM 计算机范围内的权限设置。 若要强制执行 COM+ 应用程序角色，必须为组件启用“组件级别访问检查”授权。  
   
  使用非安全绑定可能会致使通信被篡改或信息泄漏。 为防止发生此类情况，建议您使用安全绑定。  
   
- 对于 COM+ 承载模式和 Web 承载模式，客户端应用程序必须允许服务器进程模拟客户端用户。 此操作可通过在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端中将模拟级别设置为 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> 来完成。  
+ 对于 COM+ 承载模式和 Web 承载模式，客户端应用程序必须允许服务器进程模拟客户端用户。 这通过将模拟级别到设置可以在 WCF 客户端<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>。  
   
  通过 Internet 信息服务 (IIS) 或使用 HTTP 传输的 Windows 进程激活服务 (WAS)，Httpcfg.exe 工具可用于保留传输终结点地址。 在其他配置中，务必防止非法服务充当既定的服务，这一点相当重要。 若要防止非法服务在所需终结点启动，可以将合法服务配置为作为 NT 服务来运行。 这样，合法服务就可以先于任何非法服务来声明终结点地址。  
   

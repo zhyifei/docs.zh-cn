@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656053"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>对象变量赋值 (Visual Basic)
 你可以使用普通赋值语句将对象分配给对象变量。 你可以分配对象表达式或[执行任何操作](../../../../visual-basic/language-reference/nothing.md)关键字，如下面的示例演示。  
