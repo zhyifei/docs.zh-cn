@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493125"
 ---
 # <a name="client-configuration"></a><span data-ttu-id="77638-102">客户端配置</span><span class="sxs-lookup"><span data-stu-id="77638-102">Client Configuration</span></span>
 <span data-ttu-id="77638-103">Windows Communication Foundation (WCF) 客户端配置可用于指定地址、 绑定、 行为和协定，客户端终结点，哪些客户端用于连接到服务终结点的"ABC"属性。</span><span class="sxs-lookup"><span data-stu-id="77638-103">You can use the Windows Communication Foundation (WCF) client configuration to specify the address, binding, behavior, and contract, the "ABC" properties of the client endpoint, which clients use to connect to service endpoints.</span></span> <span data-ttu-id="77638-104">[\<客户端 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)元素具有[\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)其属性用于配置终结点的 abc 属性的元素。</span><span class="sxs-lookup"><span data-stu-id="77638-104">The [\<client>](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) element has an [\<endpoint>](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) element whose attributes are used to configure the endpoint ABCs.</span></span> <span data-ttu-id="77638-105">这些属性将在本主题的“配置终结点”一节中讨论。</span><span class="sxs-lookup"><span data-stu-id="77638-105">These attributes are discussed in the "Configuring Endpoints" section of this topic.</span></span>  

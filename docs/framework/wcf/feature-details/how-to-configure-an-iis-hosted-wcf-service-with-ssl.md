@@ -1,79 +1,68 @@
 ---
-title: "如何：使用 SSL 配置承载 IIS 的 WCF 服务"
-ms.custom: 
+title: 如何：使用 SSL 配置承载 IIS 的 WCF 服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b16ca5b4cfe615eedd9e532b12f61394806829bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e739eb47611e5b73e7f1d62191a5aa61ad77abe2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493477"
 ---
-# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a><span data-ttu-id="fccf6-102">如何：使用 SSL 配置承载 IIS 的 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="fccf6-102">How to: Configure an IIS-hosted WCF service with SSL</span></span>
-<span data-ttu-id="fccf6-103">本主题介绍如何设置 IIS 承载的 WCF 服务以使用 HTTP 传输安全性。</span><span class="sxs-lookup"><span data-stu-id="fccf6-103">This topic describes how to set up an IIS-hosted WCF service to use HTTP transport security.</span></span> <span data-ttu-id="fccf6-104">HTTP 传输安全性要求 SSL 证书以便向 IIS 注册。</span><span class="sxs-lookup"><span data-stu-id="fccf6-104">HTTP transport security requires an SSL certificate to be registered with IIS.</span></span> <span data-ttu-id="fccf6-105">如果您没有 SSL 证书，则可以使用 IIS 生成测试证书。</span><span class="sxs-lookup"><span data-stu-id="fccf6-105">If you do not have an SSL certificate you can use IIS to generate a test certificate.</span></span> <span data-ttu-id="fccf6-106">接下来，您必须将一个 SSL 绑定添加到网站，并且配置该网站的身份验证属性。</span><span class="sxs-lookup"><span data-stu-id="fccf6-106">Next you must add an SSL binding to the web site and configure the web site’s authentication properties.</span></span> <span data-ttu-id="fccf6-107">最后，您需要配置 WCF 服务以使用 HTTPS。</span><span class="sxs-lookup"><span data-stu-id="fccf6-107">Finally you need to configure the WCF service to use HTTPS.</span></span>  
+# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a><span data-ttu-id="64831-102">如何：使用 SSL 配置承载 IIS 的 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="64831-102">How to: Configure an IIS-hosted WCF service with SSL</span></span>
+<span data-ttu-id="64831-103">本主题介绍如何设置 IIS 承载的 WCF 服务以使用 HTTP 传输安全性。</span><span class="sxs-lookup"><span data-stu-id="64831-103">This topic describes how to set up an IIS-hosted WCF service to use HTTP transport security.</span></span> <span data-ttu-id="64831-104">HTTP 传输安全性要求 SSL 证书以便向 IIS 注册。</span><span class="sxs-lookup"><span data-stu-id="64831-104">HTTP transport security requires an SSL certificate to be registered with IIS.</span></span> <span data-ttu-id="64831-105">如果您没有 SSL 证书，则可以使用 IIS 生成测试证书。</span><span class="sxs-lookup"><span data-stu-id="64831-105">If you do not have an SSL certificate you can use IIS to generate a test certificate.</span></span> <span data-ttu-id="64831-106">接下来，您必须将一个 SSL 绑定添加到网站，并且配置该网站的身份验证属性。</span><span class="sxs-lookup"><span data-stu-id="64831-106">Next you must add an SSL binding to the web site and configure the web site’s authentication properties.</span></span> <span data-ttu-id="64831-107">最后，您需要配置 WCF 服务以使用 HTTPS。</span><span class="sxs-lookup"><span data-stu-id="64831-107">Finally you need to configure the WCF service to use HTTPS.</span></span>  
   
-### <a name="creating-a-self-signed-certificate"></a><span data-ttu-id="fccf6-108">创建自签名证书</span><span class="sxs-lookup"><span data-stu-id="fccf6-108">Creating a Self-Signed Certificate</span></span>  
+### <a name="creating-a-self-signed-certificate"></a><span data-ttu-id="64831-108">创建自签名证书</span><span class="sxs-lookup"><span data-stu-id="64831-108">Creating a Self-Signed Certificate</span></span>  
   
-1.  <span data-ttu-id="fccf6-109">打开 Internet 信息服务管理器 (inetmgr.exe)，在左侧树视图中选择您的计算机名称。</span><span class="sxs-lookup"><span data-stu-id="fccf6-109">Open Internet Information Services Manager (inetmgr.exe), and select your computer name in the left-hand tree view.</span></span> <span data-ttu-id="fccf6-110">在屏幕的右侧选择“服务器证书”</span><span class="sxs-lookup"><span data-stu-id="fccf6-110">On the right-hand side of the screen select Server Certificates</span></span>  
+1.  <span data-ttu-id="64831-109">打开 Internet 信息服务管理器 (inetmgr.exe)，在左侧树视图中选择您的计算机名称。</span><span class="sxs-lookup"><span data-stu-id="64831-109">Open Internet Information Services Manager (inetmgr.exe), and select your computer name in the left-hand tree view.</span></span> <span data-ttu-id="64831-110">在屏幕的右侧选择“服务器证书”</span><span class="sxs-lookup"><span data-stu-id="64831-110">On the right-hand side of the screen select Server Certificates</span></span>  
   
-     <span data-ttu-id="fccf6-111">![IIS 管理器主页屏幕](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span><span class="sxs-lookup"><span data-stu-id="fccf6-111">![IIS Manager Home Screen](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span></span>  
+     <span data-ttu-id="64831-111">![IIS 管理器主页屏幕](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span><span class="sxs-lookup"><span data-stu-id="64831-111">![IIS Manager Home Screen](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span></span>  
   
-2.  <span data-ttu-id="fccf6-112">在服务器证书窗口中单击**创建自签名证书...**</span><span class="sxs-lookup"><span data-stu-id="fccf6-112">In the Server Certificates window click the **Create Self-Signed Certificate….**</span></span> <span data-ttu-id="fccf6-113">链接。</span><span class="sxs-lookup"><span data-stu-id="fccf6-113">Link.</span></span>  
+2.  <span data-ttu-id="64831-112">在服务器证书窗口中单击**创建自签名证书...**</span><span class="sxs-lookup"><span data-stu-id="64831-112">In the Server Certificates window click the **Create Self-Signed Certificate….**</span></span> <span data-ttu-id="64831-113">链接。</span><span class="sxs-lookup"><span data-stu-id="64831-113">Link.</span></span>  
   
-     <span data-ttu-id="fccf6-114">![创建自 &#45; 签名证书与 IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span><span class="sxs-lookup"><span data-stu-id="fccf6-114">![Creating a self&#45;signed certificate with IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span></span>  
+     <span data-ttu-id="64831-114">![创建自&#45;签名证书与 IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span><span class="sxs-lookup"><span data-stu-id="64831-114">![Creating a self&#45;signed certificate with IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span></span>  
   
-3.  <span data-ttu-id="fccf6-115">输入的自签名证书的友好名称，然后单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="fccf6-115">Enter a friendly name for the self-signed certificate and click **OK**.</span></span>  
+3.  <span data-ttu-id="64831-115">输入的自签名证书的友好名称，然后单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="64831-115">Enter a friendly name for the self-signed certificate and click **OK**.</span></span>  
   
-     <span data-ttu-id="fccf6-116">![创建自助 &#45;签名证书对话框](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span><span class="sxs-lookup"><span data-stu-id="fccf6-116">![Create Self&#45;Signed Certificate Dialog](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span></span>  
+     <span data-ttu-id="64831-116">![创建自助&#45;签名证书对话框](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span><span class="sxs-lookup"><span data-stu-id="64831-116">![Create Self&#45;Signed Certificate Dialog](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span></span>  
   
-     <span data-ttu-id="fccf6-117">新创建的自签名的证书的详细信息现在显示在**服务器证书**窗口。</span><span class="sxs-lookup"><span data-stu-id="fccf6-117">The newly created self-signed certificate details are now shown in the **Server Certificates** window.</span></span>  
+     <span data-ttu-id="64831-117">新创建的自签名的证书的详细信息现在显示在**服务器证书**窗口。</span><span class="sxs-lookup"><span data-stu-id="64831-117">The newly created self-signed certificate details are now shown in the **Server Certificates** window.</span></span>  
   
-     <span data-ttu-id="fccf6-118">![服务器证书窗口](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span><span class="sxs-lookup"><span data-stu-id="fccf6-118">![Server Certificate Window](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span></span>  
+     <span data-ttu-id="64831-118">![服务器证书窗口](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span><span class="sxs-lookup"><span data-stu-id="64831-118">![Server Certificate Window](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span></span>  
   
-     <span data-ttu-id="fccf6-119">生成的证书将安装在“受信任的根证书颁发机构”存储区中。</span><span class="sxs-lookup"><span data-stu-id="fccf6-119">The generated certificate is installed in the Trusted Root Certification Authorities store.</span></span>  
+     <span data-ttu-id="64831-119">生成的证书将安装在“受信任的根证书颁发机构”存储区中。</span><span class="sxs-lookup"><span data-stu-id="64831-119">The generated certificate is installed in the Trusted Root Certification Authorities store.</span></span>  
   
-### <a name="add-ssl-binding"></a><span data-ttu-id="fccf6-120">添加 SSL 绑定</span><span class="sxs-lookup"><span data-stu-id="fccf6-120">Add SSL Binding</span></span>  
+### <a name="add-ssl-binding"></a><span data-ttu-id="64831-120">添加 SSL 绑定</span><span class="sxs-lookup"><span data-stu-id="64831-120">Add SSL Binding</span></span>  
   
-1.  <span data-ttu-id="fccf6-121">仍在 Internet 信息服务管理器中，展开**站点**文件夹，然后**Default Web Site**在屏幕左侧的树视图中的文件夹。</span><span class="sxs-lookup"><span data-stu-id="fccf6-121">Still in Internet Information Services Manager, expand the **Sites** folder and then the **Default Web Site** folder in the tree view on the left-hand side of the screen.</span></span>  
+1.  <span data-ttu-id="64831-121">仍在 Internet 信息服务管理器中，展开**站点**文件夹，然后**Default Web Site**在屏幕左侧的树视图中的文件夹。</span><span class="sxs-lookup"><span data-stu-id="64831-121">Still in Internet Information Services Manager, expand the **Sites** folder and then the **Default Web Site** folder in the tree view on the left-hand side of the screen.</span></span>  
   
-2.  <span data-ttu-id="fccf6-122">单击**绑定...**</span><span class="sxs-lookup"><span data-stu-id="fccf6-122">Click the **Bindings….**</span></span> <span data-ttu-id="fccf6-123">在链接**操作**窗口的右上部分中的部分。</span><span class="sxs-lookup"><span data-stu-id="fccf6-123">Link in the **Actions** section in the upper right hand portion of the window.</span></span>  
+2.  <span data-ttu-id="64831-122">单击**绑定...**</span><span class="sxs-lookup"><span data-stu-id="64831-122">Click the **Bindings….**</span></span> <span data-ttu-id="64831-123">在链接**操作**窗口的右上部分中的部分。</span><span class="sxs-lookup"><span data-stu-id="64831-123">Link in the **Actions** section in the upper right hand portion of the window.</span></span>  
   
-     <span data-ttu-id="fccf6-124">![添加 SSL 绑定](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span><span class="sxs-lookup"><span data-stu-id="fccf6-124">![Adding an SSL binding](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span></span>  
+     <span data-ttu-id="64831-124">![添加 SSL 绑定](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span><span class="sxs-lookup"><span data-stu-id="64831-124">![Adding an SSL binding](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span></span>  
   
-3.  <span data-ttu-id="fccf6-125">在站点绑定窗口中单击**添加**按钮。</span><span class="sxs-lookup"><span data-stu-id="fccf6-125">In the Site Bindings window click the **Add** button.</span></span>  
+3.  <span data-ttu-id="64831-125">在站点绑定窗口中单击**添加**按钮。</span><span class="sxs-lookup"><span data-stu-id="64831-125">In the Site Bindings window click the **Add** button.</span></span>  
   
-     <span data-ttu-id="fccf6-126">![站点绑定对话框](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span><span class="sxs-lookup"><span data-stu-id="fccf6-126">![Site Bindings Dialog](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span></span>  
+     <span data-ttu-id="64831-126">![站点绑定对话框](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span><span class="sxs-lookup"><span data-stu-id="64831-126">![Site Bindings Dialog](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span></span>  
   
-4.  <span data-ttu-id="fccf6-127">在**添加网站绑定**对话框中，选择的类型和刚刚的自签名证书的友好名称创建。</span><span class="sxs-lookup"><span data-stu-id="fccf6-127">In the **Add Site Binding** dialog, select https for the type and the friendly name of the self-signed certificate you just created.</span></span>  
+4.  <span data-ttu-id="64831-127">在**添加网站绑定**对话框中，选择的类型和刚刚的自签名证书的友好名称创建。</span><span class="sxs-lookup"><span data-stu-id="64831-127">In the **Add Site Binding** dialog, select https for the type and the friendly name of the self-signed certificate you just created.</span></span>  
   
-     <span data-ttu-id="fccf6-128">![站点绑定示例](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span><span class="sxs-lookup"><span data-stu-id="fccf6-128">![Site binding example](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span></span>  
+     <span data-ttu-id="64831-128">![站点绑定示例](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span><span class="sxs-lookup"><span data-stu-id="64831-128">![Site binding example](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span></span>  
   
-### <a name="configure-virtual-directory-for-ssl"></a><span data-ttu-id="fccf6-129">配置 SSL 的虚拟目录</span><span class="sxs-lookup"><span data-stu-id="fccf6-129">Configure Virtual Directory for SSL</span></span>  
+### <a name="configure-virtual-directory-for-ssl"></a><span data-ttu-id="64831-129">配置 SSL 的虚拟目录</span><span class="sxs-lookup"><span data-stu-id="64831-129">Configure Virtual Directory for SSL</span></span>  
   
-1.  <span data-ttu-id="fccf6-130">仍在 Internet 信息服务管理器中，选择包含您 WCF 安全服务的虚拟目录。</span><span class="sxs-lookup"><span data-stu-id="fccf6-130">Still in Internet Information Services Manager, select the virtual directory that contains your WCF secure service.</span></span>  
+1.  <span data-ttu-id="64831-130">仍在 Internet 信息服务管理器中，选择包含您 WCF 安全服务的虚拟目录。</span><span class="sxs-lookup"><span data-stu-id="64831-130">Still in Internet Information Services Manager, select the virtual directory that contains your WCF secure service.</span></span>  
   
-2.  <span data-ttu-id="fccf6-131">在窗口的中心窗格中，选择**SSL 设置**IIS 部分中。</span><span class="sxs-lookup"><span data-stu-id="fccf6-131">In the center pane of the window, select **SSL Settings** in the IIS section.</span></span>  
+2.  <span data-ttu-id="64831-131">在窗口的中心窗格中，选择**SSL 设置**IIS 部分中。</span><span class="sxs-lookup"><span data-stu-id="64831-131">In the center pane of the window, select **SSL Settings** in the IIS section.</span></span>  
   
-     <span data-ttu-id="fccf6-132">![虚拟目录的 SSL 设置](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span><span class="sxs-lookup"><span data-stu-id="fccf6-132">![SSL Settings for virtual directory](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span></span>  
+     <span data-ttu-id="64831-132">![虚拟目录的 SSL 设置](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span><span class="sxs-lookup"><span data-stu-id="64831-132">![SSL Settings for virtual directory](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span></span>  
   
-3.  <span data-ttu-id="fccf6-133">在 SSL 设置窗格中，选择**要求 SSL**复选框，然后单击**应用**中链接**操作**屏幕的右侧部分。</span><span class="sxs-lookup"><span data-stu-id="fccf6-133">In the SSL Settings pane, select the **Require SSL** checkbox and click the **Apply** link in the **Actions** section on the right hand side of the screen.</span></span>  
+3.  <span data-ttu-id="64831-133">在 SSL 设置窗格中，选择**要求 SSL**复选框，然后单击**应用**中链接**操作**屏幕的右侧部分。</span><span class="sxs-lookup"><span data-stu-id="64831-133">In the SSL Settings pane, select the **Require SSL** checkbox and click the **Apply** link in the **Actions** section on the right hand side of the screen.</span></span>  
   
-     <span data-ttu-id="fccf6-134">![虚拟目录 SSL 设置](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span><span class="sxs-lookup"><span data-stu-id="fccf6-134">![Virtual directory SSL settings](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span></span>  
+     <span data-ttu-id="64831-134">![虚拟目录 SSL 设置](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span><span class="sxs-lookup"><span data-stu-id="64831-134">![Virtual directory SSL settings](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span></span>  
   
-### <a name="configure-wcf-service-for-http-transport-security"></a><span data-ttu-id="fccf6-135">为 HTTP 传输安全配置 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="fccf6-135">Configure WCF Service for HTTP Transport Security</span></span>  
+### <a name="configure-wcf-service-for-http-transport-security"></a><span data-ttu-id="64831-135">为 HTTP 传输安全配置 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="64831-135">Configure WCF Service for HTTP Transport Security</span></span>  
   
-1.  <span data-ttu-id="fccf6-136">在 WCF 服务的 web.config 中，配置 HTTP 绑定以便使用传输安全，如下面的 XML 中所示。</span><span class="sxs-lookup"><span data-stu-id="fccf6-136">In the WCF service’s web.config configure the HTTP binding to use transport security as shown in the following XML.</span></span>  
+1.  <span data-ttu-id="64831-136">在 WCF 服务的 web.config 中，配置 HTTP 绑定以便使用传输安全，如下面的 XML 中所示。</span><span class="sxs-lookup"><span data-stu-id="64831-136">In the WCF service’s web.config configure the HTTP binding to use transport security as shown in the following XML.</span></span>  
   
     ```xml  
     <bindings>  
@@ -87,7 +76,7 @@ ms.lasthandoff: 12/22/2017
     </bindings>  
     ```  
   
-2.  <span data-ttu-id="fccf6-137">指定您的服务和服务终结点，如下面的 XML 中所示。</span><span class="sxs-lookup"><span data-stu-id="fccf6-137">Specify your service and service endpoint as shown in the following XML.</span></span>  
+2.  <span data-ttu-id="64831-137">指定您的服务和服务终结点，如下面的 XML 中所示。</span><span class="sxs-lookup"><span data-stu-id="64831-137">Specify your service and service endpoint as shown in the following XML.</span></span>  
   
     ```xml  
     <services>  
@@ -104,8 +93,8 @@ ms.lasthandoff: 12/22/2017
     </services>  
     ```  
   
-## <a name="example"></a><span data-ttu-id="fccf6-138">示例</span><span class="sxs-lookup"><span data-stu-id="fccf6-138">Example</span></span>  
- <span data-ttu-id="fccf6-139">以下是使用 HTTP 传输安全的 WCF 服务的 web.config 文件的完整示例</span><span class="sxs-lookup"><span data-stu-id="fccf6-139">The following is a complete example of a web.config file for a WCF service using HTTP transport security</span></span>  
+## <a name="example"></a><span data-ttu-id="64831-138">示例</span><span class="sxs-lookup"><span data-stu-id="64831-138">Example</span></span>  
+ <span data-ttu-id="64831-139">以下是使用 HTTP 传输安全的 WCF 服务的 web.config 文件的完整示例</span><span class="sxs-lookup"><span data-stu-id="64831-139">The following is a complete example of a web.config file for a WCF service using HTTP transport security</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -155,8 +144,8 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fccf6-140">请参阅</span><span class="sxs-lookup"><span data-stu-id="fccf6-140">See Also</span></span>  
- [<span data-ttu-id="fccf6-141">在 Internet Information Services 中承载</span><span class="sxs-lookup"><span data-stu-id="fccf6-141">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [<span data-ttu-id="fccf6-142">Internet 信息服务承载说明</span><span class="sxs-lookup"><span data-stu-id="fccf6-142">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [<span data-ttu-id="fccf6-143">Internet Information Services 承载最佳做法</span><span class="sxs-lookup"><span data-stu-id="fccf6-143">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [<span data-ttu-id="fccf6-144">使用内联代码的 IIS 承载</span><span class="sxs-lookup"><span data-stu-id="fccf6-144">IIS Hosting Using Inline Code</span></span>](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+## <a name="see-also"></a><span data-ttu-id="64831-140">请参阅</span><span class="sxs-lookup"><span data-stu-id="64831-140">See Also</span></span>  
+ [<span data-ttu-id="64831-141">在 Internet Information Services 中承载</span><span class="sxs-lookup"><span data-stu-id="64831-141">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [<span data-ttu-id="64831-142">Internet 信息服务承载说明</span><span class="sxs-lookup"><span data-stu-id="64831-142">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [<span data-ttu-id="64831-143">Internet Information Services 承载最佳做法</span><span class="sxs-lookup"><span data-stu-id="64831-143">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [<span data-ttu-id="64831-144">使用内联代码的 IIS 承载</span><span class="sxs-lookup"><span data-stu-id="64831-144">IIS Hosting Using Inline Code</span></span>](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491525"
 ---
 # <a name="peer-nodes"></a><span data-ttu-id="9dd69-102">对等节点</span><span class="sxs-lookup"><span data-stu-id="9dd69-102">Peer Nodes</span></span>
 <span data-ttu-id="9dd69-103">PeerNode 是对等通道网格中的单个终结点。</span><span class="sxs-lookup"><span data-stu-id="9dd69-103">A PeerNode is a single endpoint in a Peer Channel mesh.</span></span> <span data-ttu-id="9dd69-104">一个应用程序可以具有加入不同网格的多个对等节点。</span><span class="sxs-lookup"><span data-stu-id="9dd69-104">An application can have multiple peer nodes that participate in different meshes.</span></span> <span data-ttu-id="9dd69-105">例如，对等聊天应用程序可以是两个独立网格的一部分：一个网格用于与中学的朋友聊天；另一个网格用于与工作同事聊天。</span><span class="sxs-lookup"><span data-stu-id="9dd69-105">For instance, a peer-to-peer chat application can be part of two separate meshes: one mesh for chatting with high school friends; and another for chatting with work colleagues.</span></span>  

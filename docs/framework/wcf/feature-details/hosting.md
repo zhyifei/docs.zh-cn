@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489393"
 ---
 # <a name="hosting"></a><span data-ttu-id="1b466-102">宿主</span><span class="sxs-lookup"><span data-stu-id="1b466-102">Hosting</span></span>
 <span data-ttu-id="1b466-103">本节中的主题介绍服务承载。</span><span class="sxs-lookup"><span data-stu-id="1b466-103">The topics in the section describe service hosting.</span></span> <span data-ttu-id="1b466-104">可以承载服务，通过 Internet 信息服务 (IIS)、 Windows 进程激活服务 (WAS)、 Windows Server AppFabric、 Windows 服务，或托管的应用程序-此选项通常称为*自承载*。</span><span class="sxs-lookup"><span data-stu-id="1b466-104">A service can be hosted by Internet Information Services (IIS), Windows Process Activation Service (WAS), Windows Server AppFabric, a Windows service, or by a managed application—this option is often referred to as *self hosting*.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493391"
 ---
 # <a name="integrating-with-com-applications-overview"></a><span data-ttu-id="c455b-102">COM 应用程序集成概述</span><span class="sxs-lookup"><span data-stu-id="c455b-102">Integrating with COM Applications Overview</span></span>
 <span data-ttu-id="c455b-103">Windows Communication Foundation (WCF) 提供了托管的代码开发人员，使用用于创建连接的应用程序的丰富环境。</span><span class="sxs-lookup"><span data-stu-id="c455b-103">Windows Communication Foundation (WCF) provides the managed code developer with a rich environment for creating connected applications.</span></span> <span data-ttu-id="c455b-104">但是，如果你基于 COM 的非托管代码中有大量的投资，并且不想进行迁移，可以仍集成 WCF Web 服务直接合并到现有的代码使用 WCF 服务标记。</span><span class="sxs-lookup"><span data-stu-id="c455b-104">However, if you have a substantial investment in unmanaged COM-based code and do not want to migrate, you can still integrate WCF Web services directly into your existing code by using the WCF service moniker.</span></span> <span data-ttu-id="c455b-105">服务标记可以在众多基于 COM 的开发环境（如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0）中使用。</span><span class="sxs-lookup"><span data-stu-id="c455b-105">The service moniker can be used from a wide range of COM-based development environments, such as Office VBA, Visual Basic 6.0, or Visual C++ 6.0.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492243"
 ---
 # <a name="intranet-unsecured-client-and-service"></a><span data-ttu-id="6d440-102">不安全的 Intranet 客户端和服务</span><span class="sxs-lookup"><span data-stu-id="6d440-102">Intranet Unsecured Client and Service</span></span>
 <span data-ttu-id="6d440-103">下图描绘了开发到 WCF 应用程序安全的专用网络上提供的信息的简单 Windows Communication Foundation (WCF) 服务。</span><span class="sxs-lookup"><span data-stu-id="6d440-103">The following illustration depicts a simple Windows Communication Foundation (WCF) service developed to provide information on a secure private network to a WCF application.</span></span> <span data-ttu-id="6d440-104">因为数据重要性较低、 网络预期本质上是安全的或通过下面 WCF 基础结构层提供安全，则不需要安全。</span><span class="sxs-lookup"><span data-stu-id="6d440-104">Security is not required because the data is of low importance, the network is expected to be inherently secure, or security is provided by a layer below the WCF infrastructure.</span></span>  

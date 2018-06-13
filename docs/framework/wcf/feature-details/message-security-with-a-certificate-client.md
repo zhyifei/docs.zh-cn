@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494688"
 ---
 # <a name="message-security-with-a-certificate-client"></a><span data-ttu-id="ab19d-102">使用证书客户端的消息安全</span><span class="sxs-lookup"><span data-stu-id="ab19d-102">Message Security with a Certificate Client</span></span>
 <span data-ttu-id="ab19d-103">下面的方案演示 Windows Communication Foundation (WCF) 客户端和服务使用消息安全模式保护。</span><span class="sxs-lookup"><span data-stu-id="ab19d-103">The following scenario shows a Windows Communication Foundation (WCF) client and service secured using message security mode.</span></span> <span data-ttu-id="ab19d-104">使用证书对客户端和服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="ab19d-104">Both the client and the service are authenticated with certificates.</span></span> <span data-ttu-id="ab19d-105">有关详细信息，请参阅[分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。</span><span class="sxs-lookup"><span data-stu-id="ab19d-105">For more information, see [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).</span></span>  

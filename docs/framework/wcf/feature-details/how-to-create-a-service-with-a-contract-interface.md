@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489789"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a><span data-ttu-id="ecaf5-102">如何：使用协定接口创建服务</span><span class="sxs-lookup"><span data-stu-id="ecaf5-102">How to: Create a Service with a Contract Interface</span></span>
 <span data-ttu-id="ecaf5-103">创建 Windows Communication Foundation (WCF) 协定的首选的方法是使用接口。</span><span class="sxs-lookup"><span data-stu-id="ecaf5-103">The preferred way to create a Windows Communication Foundation (WCF) contract is by using an interface.</span></span> <span data-ttu-id="ecaf5-104">此协定指定访问服务提供的操作所必需的消息的集合和结构。</span><span class="sxs-lookup"><span data-stu-id="ecaf5-104">This contract specifies the collection and structure of messages required to access the operations the service offers.</span></span> <span data-ttu-id="ecaf5-105">此接口通过将 <xref:System.ServiceModel.ServiceContractAttribute> 类应用到该接口并将 <xref:System.ServiceModel.OperationContractAttribute> 类应用到要公开的方法来定义输入和输出类型。</span><span class="sxs-lookup"><span data-stu-id="ecaf5-105">This interface defines the input and output types by applying the <xref:System.ServiceModel.ServiceContractAttribute> class to the interface and the <xref:System.ServiceModel.OperationContractAttribute> class to the methods that you want to expose.</span></span>  

@@ -1,31 +1,20 @@
 ---
-title: "如何：使用单向和请求-答复协定访问 WCF 服务"
-ms.custom: 
+title: 如何：使用单向和请求-答复协定访问 WCF 服务
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ae2153ef7246194774535fd399d03dd109a221a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494317"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a><span data-ttu-id="ed9b0-102">如何：使用单向和请求-答复协定访问 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="ed9b0-102">How to: Access WCF Services with One-Way and Request-Reply Contracts</span></span>
-<span data-ttu-id="ed9b0-103">下面的过程描述了如何访问一个 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，该服务定义一个单向协定和一个请求-答复协定，并且未使用双工通信模式。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-103">The following procedures describe how to access a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service that defines a one-way contract and a request-reply contract and that does not use the duplex communication pattern.</span></span>  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a><span data-ttu-id="f3dd6-102">如何：使用单向和请求-答复协定访问 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="f3dd6-102">How to: Access WCF Services with One-Way and Request-Reply Contracts</span></span>
+<span data-ttu-id="f3dd6-103">下面的过程介绍如何访问 Windows Communication Foundation (WCF) 服务，它定义一个单向协定和请求-答复协定，并且不使用双工通信模式。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-103">The following procedures describe how to access a Windows Communication Foundation (WCF) service that defines a one-way contract and a request-reply contract and that does not use the duplex communication pattern.</span></span>  
   
-### <a name="to-define-the-service"></a><span data-ttu-id="ed9b0-104">定义服务</span><span class="sxs-lookup"><span data-stu-id="ed9b0-104">To define the service</span></span>  
+### <a name="to-define-the-service"></a><span data-ttu-id="f3dd6-104">定义服务</span><span class="sxs-lookup"><span data-stu-id="f3dd6-104">To define the service</span></span>  
   
-1.  <span data-ttu-id="ed9b0-105">声明服务协定。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-105">Declare the service contract.</span></span> <span data-ttu-id="ed9b0-106">要成为单向的操作必须在 `IsOneWay` 中将 `true` 设置为 <xref:System.ServiceModel.OperationContractAttribute>。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-106">The operations that are to be one-way must have `IsOneWay` set to `true` within the <xref:System.ServiceModel.OperationContractAttribute>.</span></span> <span data-ttu-id="ed9b0-107">下面的代码声明具有 `IOneWayCalculator`、`Add`、`Subtract` 和 `Multiply` 的单向操作的 `Divide` 协定。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-107">The following code declares the `IOneWayCalculator` contract that has one-way operations for `Add`, `Subtract`, `Multiply`, and `Divide`.</span></span> <span data-ttu-id="ed9b0-108">它还定义称为 `SayHello` 的请求响应操作。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-108">It also defines a request response operation called `SayHello`.</span></span>  
+1.  <span data-ttu-id="f3dd6-105">声明服务协定。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-105">Declare the service contract.</span></span> <span data-ttu-id="f3dd6-106">要成为单向的操作必须在 `IsOneWay` 中将 `true` 设置为 <xref:System.ServiceModel.OperationContractAttribute>。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-106">The operations that are to be one-way must have `IsOneWay` set to `true` within the <xref:System.ServiceModel.OperationContractAttribute>.</span></span> <span data-ttu-id="f3dd6-107">下面的代码声明具有 `IOneWayCalculator`、`Add`、`Subtract` 和 `Multiply` 的单向操作的 `Divide` 协定。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-107">The following code declares the `IOneWayCalculator` contract that has one-way operations for `Add`, `Subtract`, `Multiply`, and `Divide`.</span></span> <span data-ttu-id="f3dd6-108">它还定义称为 `SayHello` 的请求响应操作。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-108">It also defines a request response operation called `SayHello`.</span></span>  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -44,7 +33,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-2.  <span data-ttu-id="ed9b0-109">实现服务协定。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-109">Implement the service contract.</span></span> <span data-ttu-id="ed9b0-110">下面的代码实现 `IOnewayCalculator` 接口。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-110">The following code implements the `IOnewayCalculator` interface.</span></span>  
+2.  <span data-ttu-id="f3dd6-109">实现服务协定。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-109">Implement the service contract.</span></span> <span data-ttu-id="f3dd6-110">下面的代码实现 `IOnewayCalculator` 接口。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-110">The following code implements the `IOnewayCalculator` interface.</span></span>  
   
     ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -82,7 +71,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-3.  <span data-ttu-id="ed9b0-111">在控制台应用程序中承载服务。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-111">Host the service in a console application.</span></span> <span data-ttu-id="ed9b0-112">下面的代码演示如何承载服务。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-112">The following code shows how to host the service.</span></span>  
+3.  <span data-ttu-id="f3dd6-111">在控制台应用程序中承载服务。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-111">Host the service in a console application.</span></span> <span data-ttu-id="f3dd6-112">下面的代码演示如何承载服务。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-112">The following code shows how to host the service.</span></span>  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -118,9 +107,9 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-### <a name="to-access-the-service"></a><span data-ttu-id="ed9b0-113">访问服务</span><span class="sxs-lookup"><span data-stu-id="ed9b0-113">To access the service</span></span>  
+### <a name="to-access-the-service"></a><span data-ttu-id="f3dd6-113">访问服务</span><span class="sxs-lookup"><span data-stu-id="f3dd6-113">To access the service</span></span>  
   
-1.  <span data-ttu-id="ed9b0-114">运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用元数据交换终结点地址创建使用下面的命令行的服务的客户端类： `Svcutil http://localhost:8000/Service` [ServiceModel元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成一组接口和类，如下面的示例代码中所示。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-114">Run the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) using the metadata exchange endpoint address to create the client class for the service using the following command line: `Svcutil http://localhost:8000/Service` The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generates a set of interfaces and classes, as shown in the following sample code.</span></span>  
+1.  <span data-ttu-id="f3dd6-114">运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用元数据交换终结点地址创建使用下面的命令行的服务的客户端类： `Svcutil http://localhost:8000/Service` [ServiceModel元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成一组接口和类，如下面的示例代码中所示。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-114">Run the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) using the metadata exchange endpoint address to create the client class for the service using the following command line: `Svcutil http://localhost:8000/Service` The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generates a set of interfaces and classes, as shown in the following sample code.</span></span>  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -205,9 +194,9 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-     <span data-ttu-id="ed9b0-115">请注意，在 `IOneWayCalculator` 接口中，单向服务操作已将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 属性设置为 `true`，请求-答复服务操作已将属性设置为默认值 `false`。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-115">Notice in the `IOneWayCalculator` interface that the one-way service operations have the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> attribute set to `true` and the request-reply service operation has the attribute set to the default value, `false`.</span></span> <span data-ttu-id="ed9b0-116">此外，请注意 `OneWayCalculatorClient` 类。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-116">Also notice the `OneWayCalculatorClient` class.</span></span> <span data-ttu-id="ed9b0-117">这是将用于调用服务的类。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-117">This is the class that you will use to call the service.</span></span>  
+     <span data-ttu-id="f3dd6-115">请注意，在 `IOneWayCalculator` 接口中，单向服务操作已将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 属性设置为 `true`，请求-答复服务操作已将属性设置为默认值 `false`。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-115">Notice in the `IOneWayCalculator` interface that the one-way service operations have the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> attribute set to `true` and the request-reply service operation has the attribute set to the default value, `false`.</span></span> <span data-ttu-id="f3dd6-116">此外，请注意 `OneWayCalculatorClient` 类。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-116">Also notice the `OneWayCalculatorClient` class.</span></span> <span data-ttu-id="f3dd6-117">这是将用于调用服务的类。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-117">This is the class that you will use to call the service.</span></span>  
   
-2.  <span data-ttu-id="ed9b0-118">创建客户端对象。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-118">Create the client object.</span></span>  
+2.  <span data-ttu-id="f3dd6-118">创建客户端对象。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-118">Create the client object.</span></span>  
   
     ```csharp  
     // Create a client  
@@ -216,7 +205,7 @@ ms.lasthandoff: 12/22/2017
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
     ```  
   
-3.  <span data-ttu-id="ed9b0-119">调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-119">Call service operations.</span></span>  
+3.  <span data-ttu-id="f3dd6-119">调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-119">Call service operations.</span></span>  
   
     ```csharp  
     // Call the Add service operation.  
@@ -250,15 +239,15 @@ ms.lasthandoff: 12/22/2017
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4.  <span data-ttu-id="ed9b0-120">关闭客户端，以便关闭连接并清理资源。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-120">Close the client to close connections and clean up resources.</span></span>  
+4.  <span data-ttu-id="f3dd6-120">关闭客户端，以便关闭连接并清理资源。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-120">Close the client to close connections and clean up resources.</span></span>  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
     client.Close();  
     ```  
   
-## <a name="example"></a><span data-ttu-id="ed9b0-121">示例</span><span class="sxs-lookup"><span data-stu-id="ed9b0-121">Example</span></span>  
- <span data-ttu-id="ed9b0-122">下面列出了本主题中使用的完整代码。</span><span class="sxs-lookup"><span data-stu-id="ed9b0-122">The following is a complete listing of the code used  in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="f3dd6-121">示例</span><span class="sxs-lookup"><span data-stu-id="f3dd6-121">Example</span></span>  
+ <span data-ttu-id="f3dd6-122">下面列出了本主题中使用的完整代码。</span><span class="sxs-lookup"><span data-stu-id="f3dd6-122">The following is a complete listing of the code used  in this topic.</span></span>  
   
 ```csharp  
 // Service.cs  
@@ -411,5 +400,5 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ed9b0-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="ed9b0-123">See Also</span></span>  
- [<span data-ttu-id="ed9b0-124">单向服务</span><span class="sxs-lookup"><span data-stu-id="ed9b0-124">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a><span data-ttu-id="f3dd6-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="f3dd6-123">See Also</span></span>  
+ [<span data-ttu-id="f3dd6-124">单向服务</span><span class="sxs-lookup"><span data-stu-id="f3dd6-124">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)

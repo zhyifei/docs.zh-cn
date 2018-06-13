@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490371"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a><span data-ttu-id="c92b5-102">如何：配置 WCF 服务以便与 ASP.NET Web 服务客户端进行互操作</span><span class="sxs-lookup"><span data-stu-id="c92b5-102">How to: Configure WCF Service to Interoperate with ASP.NET Web Service Clients</span></span>
 <span data-ttu-id="c92b5-103">若要配置 Windows Communication Foundation (WCF) 服务终结点进行互操作与[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服务客户端，请使用<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>用作服务终结点的绑定类型的类型。</span><span class="sxs-lookup"><span data-stu-id="c92b5-103">To configure a Windows Communication Foundation (WCF) service endpoint to be interoperable with [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web service clients, use the <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> type as the binding type for your service endpoint.</span></span>  

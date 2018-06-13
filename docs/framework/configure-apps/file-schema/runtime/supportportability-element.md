@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754101"
 ---
 # <a name="ltsupportportabilitygt-element"></a><span data-ttu-id="b45f6-102">&lt;supportPortability&gt;元素</span><span class="sxs-lookup"><span data-stu-id="b45f6-102">&lt;supportPortability&gt; Element</span></span>
 <span data-ttu-id="b45f6-103">通过禁用将程序集视为等效于应用程序可移植性用途的默认行为来指定应用程序可以在两种不同的 .NET Framework 实现中引用同一程序集。</span><span class="sxs-lookup"><span data-stu-id="b45f6-103">Specifies that an application can reference the same assembly in two different implementations of the .NET Framework, by disabling the default behavior that treats the assemblies as equivalent for application portability purposes.</span></span>  

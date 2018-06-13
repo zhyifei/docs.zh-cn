@@ -1,85 +1,74 @@
 ---
-title: "如何：创建使用 HTTPS 的自定义可靠会话绑定"
-ms.custom: 
+title: 如何：创建使用 HTTPS 的自定义可靠会话绑定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56b54b5d49fcd307821211e7db858299f9f446d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3699593f783fff1227ec51194956e0cc8577dd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492757"
 ---
-# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a><span data-ttu-id="60636-102">如何：创建使用 HTTPS 的自定义可靠会话绑定</span><span class="sxs-lookup"><span data-stu-id="60636-102">How to: Create a Custom Reliable Session Binding with HTTPS</span></span>
+# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a><span data-ttu-id="52d0c-102">如何：创建使用 HTTPS 的自定义可靠会话绑定</span><span class="sxs-lookup"><span data-stu-id="52d0c-102">How to: Create a Custom Reliable Session Binding with HTTPS</span></span>
 
-<span data-ttu-id="60636-103">本主题演示如何对可靠会话使用安全套接字层 (SSL) 传输安全。</span><span class="sxs-lookup"><span data-stu-id="60636-103">This topic demonstrates the use of Secure Sockets Layer (SSL) transport security with reliable sessions.</span></span> <span data-ttu-id="60636-104">若要通过 HTTPS 使用可靠会话，必须创建使用可靠会话和 HTTPS 传输协议的自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="60636-104">To use a reliable session over HTTPS, you must create a custom binding that uses a reliable session and the HTTPS transport.</span></span> <span data-ttu-id="60636-105">使用代码以强制方式或配置文件中以声明方式启用可靠会话。</span><span class="sxs-lookup"><span data-stu-id="60636-105">You enable the reliable session either imperatively by using code or declaratively in the configuration file.</span></span> <span data-ttu-id="60636-106">此过程使用客户端和服务配置文件来启用可靠会话和[  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)元素。</span><span class="sxs-lookup"><span data-stu-id="60636-106">This procedure uses the client and service configuration files to enable the reliable session and the [**\<httpsTransport>**](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) element.</span></span>
+<span data-ttu-id="52d0c-103">本主题演示如何对可靠会话使用安全套接字层 (SSL) 传输安全。</span><span class="sxs-lookup"><span data-stu-id="52d0c-103">This topic demonstrates the use of Secure Sockets Layer (SSL) transport security with reliable sessions.</span></span> <span data-ttu-id="52d0c-104">若要通过 HTTPS 使用可靠会话，必须创建使用可靠会话和 HTTPS 传输协议的自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="52d0c-104">To use a reliable session over HTTPS, you must create a custom binding that uses a reliable session and the HTTPS transport.</span></span> <span data-ttu-id="52d0c-105">使用代码以强制方式或配置文件中以声明方式启用可靠会话。</span><span class="sxs-lookup"><span data-stu-id="52d0c-105">You enable the reliable session either imperatively by using code or declaratively in the configuration file.</span></span> <span data-ttu-id="52d0c-106">此过程使用客户端和服务配置文件来启用可靠会话和[  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)元素。</span><span class="sxs-lookup"><span data-stu-id="52d0c-106">This procedure uses the client and service configuration files to enable the reliable session and the [**\<httpsTransport>**](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) element.</span></span>
 
-<span data-ttu-id="60636-107">此过程的关键部分是， **\<终结点 >**配置元素包含`bindingConfiguration`引用一个名为的自定义绑定配置的属性`reliableSessionOverHttps`。</span><span class="sxs-lookup"><span data-stu-id="60636-107">The key part of this procedure is that the **\<endpoint>** configuration element contain a `bindingConfiguration` attribute that references a custom binding configuration named `reliableSessionOverHttps`.</span></span> <span data-ttu-id="60636-108">[ **\<绑定 >** ](../../../../docs/framework/misc/binding.md)配置元素将引用此名称来指定通过包括使用可靠会话和 HTTPS 传输 **\<reliableSession >**和 **\<httpsTransport >**元素。</span><span class="sxs-lookup"><span data-stu-id="60636-108">The [**\<binding>**](../../../../docs/framework/misc/binding.md) configuration element references this name to specify that a reliable session and the HTTPS transport are used by including **\<reliableSession>** and **\<httpsTransport>** elements.</span></span>
+<span data-ttu-id="52d0c-107">此过程的关键部分是， **\<终结点 >** 配置元素包含`bindingConfiguration`引用一个名为的自定义绑定配置的属性`reliableSessionOverHttps`。</span><span class="sxs-lookup"><span data-stu-id="52d0c-107">The key part of this procedure is that the **\<endpoint>** configuration element contain a `bindingConfiguration` attribute that references a custom binding configuration named `reliableSessionOverHttps`.</span></span> <span data-ttu-id="52d0c-108">[ **\<绑定 >** ](../../../../docs/framework/misc/binding.md)配置元素将引用此名称来指定通过包括使用可靠会话和 HTTPS 传输 **\<reliableSession >** 和 **\<httpsTransport >** 元素。</span><span class="sxs-lookup"><span data-stu-id="52d0c-108">The [**\<binding>**](../../../../docs/framework/misc/binding.md) configuration element references this name to specify that a reliable session and the HTTPS transport are used by including **\<reliableSession>** and **\<httpsTransport>** elements.</span></span>
 
-<span data-ttu-id="60636-109">此示例中的源副本，请参阅[自定义绑定可靠会话通过 HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)。</span><span class="sxs-lookup"><span data-stu-id="60636-109">For the source copy of this example, see [Custom Binding Reliable Session over HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md).</span></span>
+<span data-ttu-id="52d0c-109">此示例中的源副本，请参阅[自定义绑定可靠会话通过 HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)。</span><span class="sxs-lookup"><span data-stu-id="52d0c-109">For the source copy of this example, see [Custom Binding Reliable Session over HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md).</span></span>
 
-### <a name="configure-the-service-with-a-custombinding-to-use-a-reliable-session-with-https"></a><span data-ttu-id="60636-110">服务使用 CustomBinding 配置以使用可靠会话与 HTTPS 一起使用</span><span class="sxs-lookup"><span data-stu-id="60636-110">Configure the service with a CustomBinding to use a reliable session with HTTPS</span></span>
+### <a name="configure-the-service-with-a-custombinding-to-use-a-reliable-session-with-https"></a><span data-ttu-id="52d0c-110">服务使用 CustomBinding 配置以使用可靠会话与 HTTPS 一起使用</span><span class="sxs-lookup"><span data-stu-id="52d0c-110">Configure the service with a CustomBinding to use a reliable session with HTTPS</span></span>
 
-1. <span data-ttu-id="60636-111">为该类型的服务定义服务协定。</span><span class="sxs-lookup"><span data-stu-id="60636-111">Define a service contract for the type of service.</span></span>
+1. <span data-ttu-id="52d0c-111">为该类型的服务定义服务协定。</span><span class="sxs-lookup"><span data-stu-id="52d0c-111">Define a service contract for the type of service.</span></span>
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1121)]
 
-1. <span data-ttu-id="60636-112">在服务类中实现该服务协定。</span><span class="sxs-lookup"><span data-stu-id="60636-112">Implement the service contract in a service class.</span></span> <span data-ttu-id="60636-113">请注意，该服务的实现内部未指定地址或绑定信息。</span><span class="sxs-lookup"><span data-stu-id="60636-113">Note that the address or binding information isn't specified inside the implementation of the service.</span></span> <span data-ttu-id="60636-114">你无需编写代码来从配置文件中检索的地址或绑定信息。</span><span class="sxs-lookup"><span data-stu-id="60636-114">You aren't required to write code to retrieve the address or binding information from the configuration file.</span></span>
+1. <span data-ttu-id="52d0c-112">在服务类中实现该服务协定。</span><span class="sxs-lookup"><span data-stu-id="52d0c-112">Implement the service contract in a service class.</span></span> <span data-ttu-id="52d0c-113">请注意，该服务的实现内部未指定地址或绑定信息。</span><span class="sxs-lookup"><span data-stu-id="52d0c-113">Note that the address or binding information isn't specified inside the implementation of the service.</span></span> <span data-ttu-id="52d0c-114">你无需编写代码来从配置文件中检索的地址或绑定信息。</span><span class="sxs-lookup"><span data-stu-id="52d0c-114">You aren't required to write code to retrieve the address or binding information from the configuration file.</span></span>
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]
 
-1. <span data-ttu-id="60636-115">创建*Web.config*文件来配置的终结点`CalculatorService`名为的自定义绑定`reliableSessionOverHttps`，它使用可靠会话和 HTTPS 传输协议。</span><span class="sxs-lookup"><span data-stu-id="60636-115">Create a *Web.config* file to configure an endpoint for the `CalculatorService` with a custom binding named `reliableSessionOverHttps` that uses a reliable session and the HTTPS transport.</span></span>
+1. <span data-ttu-id="52d0c-115">创建*Web.config*文件来配置的终结点`CalculatorService`名为的自定义绑定`reliableSessionOverHttps`，它使用可靠会话和 HTTPS 传输协议。</span><span class="sxs-lookup"><span data-stu-id="52d0c-115">Create a *Web.config* file to configure an endpoint for the `CalculatorService` with a custom binding named `reliableSessionOverHttps` that uses a reliable session and the HTTPS transport.</span></span>
 
    [!code-xml[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]
 
-1. <span data-ttu-id="60636-116">创建*Service.svc*包含行的文件：</span><span class="sxs-lookup"><span data-stu-id="60636-116">Create a *Service.svc* file that contains the line:</span></span>
+1. <span data-ttu-id="52d0c-116">创建*Service.svc*包含行的文件：</span><span class="sxs-lookup"><span data-stu-id="52d0c-116">Create a *Service.svc* file that contains the line:</span></span>
 
    ```
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1. <span data-ttu-id="60636-117">位置*Service.svc* Internet 信息服务 (IIS) 虚拟目录中的文件。</span><span class="sxs-lookup"><span data-stu-id="60636-117">Place the *Service.svc* file in your Internet Information Services (IIS) virtual directory.</span></span>
+1. <span data-ttu-id="52d0c-117">位置*Service.svc* Internet 信息服务 (IIS) 虚拟目录中的文件。</span><span class="sxs-lookup"><span data-stu-id="52d0c-117">Place the *Service.svc* file in your Internet Information Services (IIS) virtual directory.</span></span>
 
-### <a name="configure-the-client-with-a-custombinding-to-use-a-reliable-session-with-https"></a><span data-ttu-id="60636-118">客户端使用 CustomBinding 配置以使用可靠会话与 HTTPS 一起使用</span><span class="sxs-lookup"><span data-stu-id="60636-118">Configure the client with a CustomBinding to use a reliable session with HTTPS</span></span>
+### <a name="configure-the-client-with-a-custombinding-to-use-a-reliable-session-with-https"></a><span data-ttu-id="52d0c-118">客户端使用 CustomBinding 配置以使用可靠会话与 HTTPS 一起使用</span><span class="sxs-lookup"><span data-stu-id="52d0c-118">Configure the client with a CustomBinding to use a reliable session with HTTPS</span></span>
 
-1. <span data-ttu-id="60636-119">使用[ServiceModel 元数据实用工具 (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从命令行根据服务元数据生成代码。</span><span class="sxs-lookup"><span data-stu-id="60636-119">Use the [ServiceModel Metadata Utility Tool (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from the command line to generate code from service metadata.</span></span>
+1. <span data-ttu-id="52d0c-119">使用[ServiceModel 元数据实用工具 (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从命令行根据服务元数据生成代码。</span><span class="sxs-lookup"><span data-stu-id="52d0c-119">Use the [ServiceModel Metadata Utility Tool (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from the command line to generate code from service metadata.</span></span>
 
    ```console
    Svcutil.exe <Metadata Exchange (MEX) address or HTTP GET address>
    ```
 
-1. <span data-ttu-id="60636-120">生成的客户端包含`ICalculator`定义了客户端实现必须满足的服务协定的接口。</span><span class="sxs-lookup"><span data-stu-id="60636-120">The client that's generated contains the `ICalculator` interface that defines the service contract that the client implementation must satisfy.</span></span>
+1. <span data-ttu-id="52d0c-120">生成的客户端包含`ICalculator`定义了客户端实现必须满足的服务协定的接口。</span><span class="sxs-lookup"><span data-stu-id="52d0c-120">The client that's generated contains the `ICalculator` interface that defines the service contract that the client implementation must satisfy.</span></span>
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1221)]
 
-1. <span data-ttu-id="60636-121">生成的客户端应用程序还包含 `ClientCalculator` 的实现。</span><span class="sxs-lookup"><span data-stu-id="60636-121">The generated client application also contains the implementation of the `ClientCalculator`.</span></span> <span data-ttu-id="60636-122">请注意，该服务的实现内部未指定地址和绑定信息。</span><span class="sxs-lookup"><span data-stu-id="60636-122">Note that the address and binding information isn't specified inside the implementation of the service.</span></span> <span data-ttu-id="60636-123">你无需编写代码来从配置文件中检索的地址和绑定信息。</span><span class="sxs-lookup"><span data-stu-id="60636-123">You aren't required to write code to retrieve the address and binding information from the configuration file.</span></span>
+1. <span data-ttu-id="52d0c-121">生成的客户端应用程序还包含 `ClientCalculator` 的实现。</span><span class="sxs-lookup"><span data-stu-id="52d0c-121">The generated client application also contains the implementation of the `ClientCalculator`.</span></span> <span data-ttu-id="52d0c-122">请注意，该服务的实现内部未指定地址和绑定信息。</span><span class="sxs-lookup"><span data-stu-id="52d0c-122">Note that the address and binding information isn't specified inside the implementation of the service.</span></span> <span data-ttu-id="52d0c-123">你无需编写代码来从配置文件中检索的地址和绑定信息。</span><span class="sxs-lookup"><span data-stu-id="52d0c-123">You aren't required to write code to retrieve the address and binding information from the configuration file.</span></span>
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1222)]
 
-1. <span data-ttu-id="60636-124">配置一个名为的自定义绑定`reliableSessionOverHttps`以使用 HTTPS 传输和可靠会话。</span><span class="sxs-lookup"><span data-stu-id="60636-124">Configure a custom binding named `reliableSessionOverHttps` to use the HTTPS transport and reliable sessions.</span></span>
+1. <span data-ttu-id="52d0c-124">配置一个名为的自定义绑定`reliableSessionOverHttps`以使用 HTTPS 传输和可靠会话。</span><span class="sxs-lookup"><span data-stu-id="52d0c-124">Configure a custom binding named `reliableSessionOverHttps` to use the HTTPS transport and reliable sessions.</span></span>
 
    [!code-xml[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]
 
-1. <span data-ttu-id="60636-125">在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="60636-125">Create an instance of the `ClientCalculator` in an application and then call the service operations.</span></span>
+1. <span data-ttu-id="52d0c-125">在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="52d0c-125">Create an instance of the `ClientCalculator` in an application and then call the service operations.</span></span>
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1223)]
 
-1. <span data-ttu-id="60636-126">编译并运行客户端。</span><span class="sxs-lookup"><span data-stu-id="60636-126">Compile and run the client.</span></span>  
+1. <span data-ttu-id="52d0c-126">编译并运行客户端。</span><span class="sxs-lookup"><span data-stu-id="52d0c-126">Compile and run the client.</span></span>  
 
-## <a name="net-framework-security"></a><span data-ttu-id="60636-127">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="60636-127">.NET Framework security</span></span>
+## <a name="net-framework-security"></a><span data-ttu-id="52d0c-127">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="52d0c-127">.NET Framework security</span></span>
 
-<span data-ttu-id="60636-128">因为此示例中使用的证书是使用创建的测试证书*Makecert.exe*，当你尝试访问 HTTPS 地址，例如时，将出现安全警报`https://localhost/servicemodelsamples/service.svc`，从你的浏览器。</span><span class="sxs-lookup"><span data-stu-id="60636-128">Because the certificate used in this sample is a test certificate created with *Makecert.exe*, a security alert appears when you try to access an HTTPS address, such as `https://localhost/servicemodelsamples/service.svc`, from your browser.</span></span>
+<span data-ttu-id="52d0c-128">因为此示例中使用的证书是使用创建的测试证书*Makecert.exe*，当你尝试访问 HTTPS 地址，例如时，将出现安全警报`https://localhost/servicemodelsamples/service.svc`，从你的浏览器。</span><span class="sxs-lookup"><span data-stu-id="52d0c-128">Because the certificate used in this sample is a test certificate created with *Makecert.exe*, a security alert appears when you try to access an HTTPS address, such as `https://localhost/servicemodelsamples/service.svc`, from your browser.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="60636-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="60636-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52d0c-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="52d0c-129">See also</span></span>
 
-[<span data-ttu-id="60636-130">可靠会话</span><span class="sxs-lookup"><span data-stu-id="60636-130">Reliable Sessions</span></span>](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+[<span data-ttu-id="52d0c-130">可靠会话</span><span class="sxs-lookup"><span data-stu-id="52d0c-130">Reliable Sessions</span></span>](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

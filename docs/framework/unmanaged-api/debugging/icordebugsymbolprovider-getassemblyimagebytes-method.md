@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7975ca3da16be10285e618752981249602371c43
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418586"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a><span data-ttu-id="9a256-102">ICorDebugSymbolProvider::GetAssemblyImageBytes 方法</span><span class="sxs-lookup"><span data-stu-id="9a256-102">ICorDebugSymbolProvider::GetAssemblyImageBytes Method</span></span>
 <span data-ttu-id="9a256-103">给定合并程序集的相对虚拟地址 (RVA)，读取合并程序集中的数据。</span><span class="sxs-lookup"><span data-stu-id="9a256-103">Reads data from a merged assembly given a relative virtual address (RVA) in the merged assembly.</span></span>  

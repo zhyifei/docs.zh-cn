@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491019"
 ---
 # <a name="peer-channel-concepts"></a><span data-ttu-id="2445c-102">对等通道概念</span><span class="sxs-lookup"><span data-stu-id="2445c-102">Peer Channel Concepts</span></span>
 <span data-ttu-id="2445c-103">本部分简要介绍构成 Windows Communication Foundation (WCF) 对等通道的概念。</span><span class="sxs-lookup"><span data-stu-id="2445c-103">This section briefly explains the concepts that make up the Windows Communication Foundation (WCF) Peer Channel.</span></span>  

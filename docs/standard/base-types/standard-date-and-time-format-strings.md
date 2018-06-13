@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579803"
 ---
 # <a name="standard-date-and-time-format-strings"></a><span data-ttu-id="05ff3-102">标准日期和时间格式字符串</span><span class="sxs-lookup"><span data-stu-id="05ff3-102">Standard Date and Time Format Strings</span></span>
 <span data-ttu-id="05ff3-103">标准日期和时间格式字符串使用单个格式说明符来定义日期和时间值的文本表示形式。</span><span class="sxs-lookup"><span data-stu-id="05ff3-103">A standard date and time format string uses a single format specifier to define the text representation of a date and time value.</span></span> <span data-ttu-id="05ff3-104">包含一个以上字符（包括空白）的任何日期和时间格式字符串都会被解释为自定义日期和时间格式字符串；有关更多信息，请参见[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。</span><span class="sxs-lookup"><span data-stu-id="05ff3-104">Any date and time format string that contains more than one character, including white space, is interpreted as a custom date and time format string; for more information, see [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).</span></span> <span data-ttu-id="05ff3-105">可通过两种方式使用标准或自定义格式字符串：</span><span class="sxs-lookup"><span data-stu-id="05ff3-105">A standard or custom format string can be used in two ways:</span></span>  

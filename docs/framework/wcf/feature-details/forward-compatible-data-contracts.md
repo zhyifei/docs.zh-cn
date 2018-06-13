@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492201"
 ---
 # <a name="forward-compatible-data-contracts"></a><span data-ttu-id="1ec2f-102">向前兼容的数据协定</span><span class="sxs-lookup"><span data-stu-id="1ec2f-102">Forward-Compatible Data Contracts</span></span>
 <span data-ttu-id="1ec2f-103">一项功能的 Windows Communication Foundation (WCF) 是数据协定系统的协定可以随时间发展，在不间断的方式。</span><span class="sxs-lookup"><span data-stu-id="1ec2f-103">A feature of the Windows Communication Foundation (WCF) data contract system is that contracts can evolve over time in nonbreaking ways.</span></span> <span data-ttu-id="1ec2f-104">也就是说，具有旧版本数据协定的客户端可以与具有相同数据协定的新版本的服务进行通信，或者具有新版本数据协定的客户端可以与相同数据协定的旧版本进行通信。</span><span class="sxs-lookup"><span data-stu-id="1ec2f-104">That is, a client with an older version of a data contract can communicate with a service with a newer version of the same data contract, or a client with a newer version of a data contract can communicate with an older version of the same data contract.</span></span> <span data-ttu-id="1ec2f-105">有关详细信息，请参阅[最佳做法： 数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。</span><span class="sxs-lookup"><span data-stu-id="1ec2f-105">For more information, see [Best Practices: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).</span></span>  

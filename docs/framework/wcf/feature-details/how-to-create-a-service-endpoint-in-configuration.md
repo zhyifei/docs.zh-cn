@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490222"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a><span data-ttu-id="f16c4-102">如何：在配置中创建服务终结点</span><span class="sxs-lookup"><span data-stu-id="f16c4-102">How to: Create a Service Endpoint in Configuration</span></span>
 <span data-ttu-id="f16c4-103">终结点提供有权访问 Windows Communication Foundation (WCF) 服务提供的功能的客户端。</span><span class="sxs-lookup"><span data-stu-id="f16c4-103">Endpoints provide clients with access to the functionality a Windows Communication Foundation (WCF) service offers.</span></span> <span data-ttu-id="f16c4-104">您可以通过使用相对和绝对终结点地址的组合来定义一个或多个终结点，或者如果您未定义任何服务终结点，则默认情况下运行时为您提供一些终结点。</span><span class="sxs-lookup"><span data-stu-id="f16c4-104">You can define one or more endpoints for a service by using a combination of relative and absolute endpoint addresses, or if you do not define any service endpoints, the runtime provides some by default for you.</span></span> <span data-ttu-id="f16c4-105">本主题演示如何使用同时包含相对和绝对地址的配置文件来添加终结点。</span><span class="sxs-lookup"><span data-stu-id="f16c4-105">This topic shows how to add endpoints using a configuration file that contain both relative and absolute addresses.</span></span>  

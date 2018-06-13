@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491850"
 ---
 # <a name="claims-and-tokens"></a><span data-ttu-id="0a0aa-102">声明和令牌</span><span class="sxs-lookup"><span data-stu-id="0a0aa-102">Claims and Tokens</span></span>
 <span data-ttu-id="0a0aa-103">本主题介绍从它支持的默认令牌创建 Windows Communication Foundation (WCF) 的各种声明类型。</span><span class="sxs-lookup"><span data-stu-id="0a0aa-103">This topic describes the various claim types that Windows Communication Foundation (WCF) creates from the default tokens that it supports.</span></span>  

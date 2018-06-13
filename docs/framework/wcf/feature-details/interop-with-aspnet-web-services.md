@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494291"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a><span data-ttu-id="35dc3-102">与 ASP.NET Web 服务的互操作性</span><span class="sxs-lookup"><span data-stu-id="35dc3-102">Interoperability with ASP.NET Web Services</span></span>
 <span data-ttu-id="35dc3-103">之间的互操作性[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服务和 Windows Communication Foundation (WCF) Web 服务可以通过确保使用这两种技术实现的服务符合 WS-基本配置文件 1.1 规范。</span><span class="sxs-lookup"><span data-stu-id="35dc3-103">Interoperability between [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web services and Windows Communication Foundation (WCF) Web services can be achieved by ensuring that services implemented using both technologies conform to the WS-I Basic Profile 1.1 specification.</span></span> [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]<span data-ttu-id="35dc3-104"> Web 服务符合 WS-Basic Profile 1.1 进行互操作与 WCF 客户端通过使用 WCF 系统提供的绑定， <xref:System.ServiceModel.BasicHttpBinding>。</span><span class="sxs-lookup"><span data-stu-id="35dc3-104"> Web services that conform to WS-I Basic Profile 1.1 are interoperable with WCF clients by using WCF system-provided binding, <xref:System.ServiceModel.BasicHttpBinding>.</span></span>  

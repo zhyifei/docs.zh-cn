@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495478"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a><span data-ttu-id="d79e8-102">如何：以编程方式向 WCF 服务和客户端添加可检测性</span><span class="sxs-lookup"><span data-stu-id="d79e8-102">How to: Programmatically Add Discoverability to a WCF Service and Client</span></span>
 <span data-ttu-id="d79e8-103">本主题说明如何使 Windows Communication Foundation (WCF) 服务可发现。</span><span class="sxs-lookup"><span data-stu-id="d79e8-103">This topic explains how to make a Windows Communication Foundation (WCF) service discoverable.</span></span> <span data-ttu-id="d79e8-104">它基于[自承载](http://go.microsoft.com/fwlink/?LinkId=145523)示例。</span><span class="sxs-lookup"><span data-stu-id="d79e8-104">It is based on the [Self-Host](http://go.microsoft.com/fwlink/?LinkId=145523) sample.</span></span>  

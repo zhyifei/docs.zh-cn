@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582478"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a><span data-ttu-id="374dc-102">XML 架构定义工具和 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="374dc-102">The XML Schema Definition Tool and XML Serialization</span></span>
 <span data-ttu-id="374dc-103">XML 架构定义工具（[XML 架构定义工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)）是作为 Windows® 软件开发工具包 (SDK) 的一部分随 .NET Framework 工具一起安装的。</span><span class="sxs-lookup"><span data-stu-id="374dc-103">The XML Schema Definition tool ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) is installed along with the .NET Framework tools as part of the Windows® Software Development Kit (SDK).</span></span> <span data-ttu-id="374dc-104">该工具主要有下面两个用途：</span><span class="sxs-lookup"><span data-stu-id="374dc-104">The tool is designed primarily for two purposes:</span></span>  

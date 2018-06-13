@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495757"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a><span data-ttu-id="c6f29-102">Internet 信息服务承载最佳实践</span><span class="sxs-lookup"><span data-stu-id="c6f29-102">Internet Information Services Hosting Best Practices</span></span>
 <span data-ttu-id="c6f29-103">本主题概述承载 Windows Communication Foundation (WCF) 服务的一些最佳做法。</span><span class="sxs-lookup"><span data-stu-id="c6f29-103">This topic outlines some best practices for hosting Windows Communication Foundation (WCF) services.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491038"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a><span data-ttu-id="938ea-102">如何：将服务标记用于 WSDL 协定</span><span class="sxs-lookup"><span data-stu-id="938ea-102">How to: Use a Service Moniker with WSDL Contracts</span></span>
 <span data-ttu-id="938ea-103">在某些情况下，您可能希望具有完全自包含的 COM 互操作客户端。</span><span class="sxs-lookup"><span data-stu-id="938ea-103">There are situations when you may want to have a completely self-contained COM Interop client.</span></span> <span data-ttu-id="938ea-104">您要调用的服务可能不会公开 MEX 终结点，而 WCF 客户端 DLL 可能不会为 COM 互操作注册。</span><span class="sxs-lookup"><span data-stu-id="938ea-104">The service you want to call may not expose a MEX endpoint, and the WCF client DLL may not be registered for COM interop.</span></span> <span data-ttu-id="938ea-105">在这些情况下，您可以创建用于描述该服务的 WSDL 文件，并将该文件传递到 WCF 服务标记中。</span><span class="sxs-lookup"><span data-stu-id="938ea-105">In these cases, you can create a WSDL file that describes the service and pass it into the WCF service moniker.</span></span> <span data-ttu-id="938ea-106">本主题描述如何使用 WCF WSDL 标记调用 WCF 入门示例。</span><span class="sxs-lookup"><span data-stu-id="938ea-106">This topic describes how to call the Getting Started WCF sample using a WCF WSDL moniker.</span></span>  
