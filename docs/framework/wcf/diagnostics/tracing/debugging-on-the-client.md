@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808999"
 ---
 # <a name="debugging-on-the-client"></a><span data-ttu-id="8a144-102">在客户端上调试</span><span class="sxs-lookup"><span data-stu-id="8a144-102">Debugging on the Client</span></span>
 <span data-ttu-id="8a144-103">若要使用户更轻松地编写您的 WCF 服务的客户端应用程序，你可以添加[ \<serviceDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)服务为你的服务配置文件的行为。</span><span class="sxs-lookup"><span data-stu-id="8a144-103">To make it easier for users to write client applications for your WCF service, you can add the [\<serviceDebug>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) service behavior to the configuration file of your service.</span></span> <span data-ttu-id="8a144-104">此行为可用于发布帮助页，以及在返回到客户端的 SOAP 错误的详细信息中返回托管异常信息。</span><span class="sxs-lookup"><span data-stu-id="8a144-104">This behavior can be used to publish help pages, and return managed exception information in the details of SOAP faults returned to the client.</span></span>

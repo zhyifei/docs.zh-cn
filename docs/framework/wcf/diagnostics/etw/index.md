@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809259"
 ---
 # <a name="analytic-tracing-with-etw"></a><span data-ttu-id="7a787-102">使用 ETW 进行分析跟踪</span><span class="sxs-lookup"><span data-stu-id="7a787-102">Analytic Tracing with ETW</span></span>
 <span data-ttu-id="7a787-103">Windows Communication Foundation (WCF) 分析跟踪提供了一个方法来捕获的 WCF 服务执行期间的诊断信息。</span><span class="sxs-lookup"><span data-stu-id="7a787-103">Windows Communication Foundation (WCF) analytic tracing offers a way to capture diagnostic information during the execution of a WCF service.</span></span> <span data-ttu-id="7a787-104">WCF 堆栈，以便在生产环境中的 WCF 服务的故障排除中的关键点处发出的 WCF 分析跟踪事件。</span><span class="sxs-lookup"><span data-stu-id="7a787-104">WCF analytic tracing events are emitted at key points in the WCF stack to allow troubleshooting of WCF services in a production environment.</span></span> <span data-ttu-id="7a787-105">WCF 服务的分析跟踪最小对性能有影响的产品服务器承载[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]WCF 服务，因为这些事件可以非常高效地发送到 Windows 事件跟踪 (ETW) 会话。</span><span class="sxs-lookup"><span data-stu-id="7a787-105">Analytic tracing for WCF services has minimal impact on the performance of a product server that hosts [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] WCF services as these events are very efficiently emitted to an Event Tracing for Windows (ETW) session.</span></span>  

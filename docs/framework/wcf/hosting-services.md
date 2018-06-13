@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807848"
 ---
 # <a name="hosting-services"></a><span data-ttu-id="e4a18-102">承载服务</span><span class="sxs-lookup"><span data-stu-id="e4a18-102">Hosting Services</span></span>
 <span data-ttu-id="e4a18-103">要变为活动状态，服务必须承载于创建它并控制它的上下文和生存期的运行时环境中。</span><span class="sxs-lookup"><span data-stu-id="e4a18-103">To become active, a service must be hosted within a run-time environment that creates it and controls its context and lifetime.</span></span> <span data-ttu-id="e4a18-104">Windows Communication Foundation (WCF) 服务设计为支持托管代码的任意 Windows 进程中运行。</span><span class="sxs-lookup"><span data-stu-id="e4a18-104">Windows Communication Foundation (WCF) services are designed to run in any Windows process that supports managed code.</span></span>  

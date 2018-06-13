@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809360"
 ---
 # <a name="contract"></a><span data-ttu-id="6c207-102">协定</span><span class="sxs-lookup"><span data-stu-id="6c207-102">Contract</span></span>
 <span data-ttu-id="6c207-103">本节包含演示协定中 Windows Communication Foundation (WCF) 的示例。</span><span class="sxs-lookup"><span data-stu-id="6c207-103">This section contains samples that demonstrate contracts in Windows Communication Foundation (WCF).</span></span>  

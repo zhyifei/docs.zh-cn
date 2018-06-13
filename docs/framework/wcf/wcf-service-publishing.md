@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806456"
 ---
 # <a name="wcf-service-publishing"></a><span data-ttu-id="e3c0b-102">WCF 服务发布</span><span class="sxs-lookup"><span data-stu-id="e3c0b-102">WCF Service Publishing</span></span>
 <span data-ttu-id="e3c0b-103">Windows Communication Foundation (WCF) 服务发布可帮助你从由 WCF 服务主机和 WCF 测试客户端提供到实际将部署到生产环境中以进行测试应用程序的早期开发环境的进展情况。</span><span class="sxs-lookup"><span data-stu-id="e3c0b-103">Windows Communication Foundation (WCF) Service Publishing assists you in progressing from the early development environment provided by WCF Service Host and WCF Test Client to actually deploying the application to a production environment for testing purposes.</span></span> <span data-ttu-id="e3c0b-104">在提交最终部署计划之前，你可以使用 Windows Communication Foundation (WCF) 服务发布来验证您的 WCF 服务正常运行，以及已准备好发布。</span><span class="sxs-lookup"><span data-stu-id="e3c0b-104">Before you commit to a final deployment plan, you can use Windows Communication Foundation (WCF) Service Publishing to verify that your WCF service performs correctly and is ready to be published.</span></span> <span data-ttu-id="e3c0b-105">你还可以选择将你的 WCF 服务库部署到用于测试的各种目标位置。</span><span class="sxs-lookup"><span data-stu-id="e3c0b-105">You can also choose to deploy your WCF service libraries to various target locations for testing.</span></span>  

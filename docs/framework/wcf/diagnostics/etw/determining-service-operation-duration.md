@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804958"
 ---
 # <a name="determining-service-operation-duration"></a><span data-ttu-id="c9d7d-102">确定服务操作持续时间</span><span class="sxs-lookup"><span data-stu-id="c9d7d-102">Determining service operation duration</span></span>
 <span data-ttu-id="c9d7d-103">如果 Windows Communication Foundation (WCF) 应用程序中启用了分析跟踪，就可以轻松地通过检查事件日志来确定服务操作的执行持续时间。</span><span class="sxs-lookup"><span data-stu-id="c9d7d-103">If analytic tracing is enabled in a Windows Communication Foundation (WCF) application, the duration of execution for a service operation can easily be determined by examining the event log.</span></span>  <span data-ttu-id="c9d7d-104">本主题演示如何确定完成服务操作所需的时间量。</span><span class="sxs-lookup"><span data-stu-id="c9d7d-104">This topic demonstrates how to determine the amount of time a service operation takes to complete.</span></span>  

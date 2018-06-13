@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809802"
 ---
 # <a name="hosting"></a><span data-ttu-id="01f4a-102">宿主</span><span class="sxs-lookup"><span data-stu-id="01f4a-102">Hosting</span></span>
 <span data-ttu-id="01f4a-103">本节包含演示承载 Windows Communication Foundation (WCF) 服务的服务的示例。</span><span class="sxs-lookup"><span data-stu-id="01f4a-103">This section contains samples that demonstrate hosting Windows Communication Foundation (WCF) services.</span></span>  

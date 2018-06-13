@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805611"
 ---
 # <a name="advanced-filters"></a><span data-ttu-id="ce69c-102">高级筛选器</span><span class="sxs-lookup"><span data-stu-id="ce69c-102">Advanced Filters</span></span>
 <span data-ttu-id="ce69c-103">此示例演示 Windows Communication Foundation (WCF) 路由服务。</span><span class="sxs-lookup"><span data-stu-id="ce69c-103">This sample demonstrates a Windows Communication Foundation (WCF) routing service.</span></span> <span data-ttu-id="ce69c-104">路由服务是可以轻松地在你的应用程序中包含基于内容的路由器的 WCF 组件。</span><span class="sxs-lookup"><span data-stu-id="ce69c-104">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="ce69c-105">此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="ce69c-105">This sample adapts the standard WCF Calculator sample to communicate using the routing service.</span></span> <span data-ttu-id="ce69c-106">此示例演示如何使用消息筛选器和消息筛选器表定义基于内容的路由逻辑。</span><span class="sxs-lookup"><span data-stu-id="ce69c-106">This sample shows how to define content-based routing logic through the use of message filters and message filter tables.</span></span>  

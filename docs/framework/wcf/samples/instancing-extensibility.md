@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804585"
 ---
 # <a name="instancing-extensibility"></a><span data-ttu-id="7097d-102">实例化扩展性</span><span class="sxs-lookup"><span data-stu-id="7097d-102">Instancing Extensibility</span></span>
 <span data-ttu-id="7097d-103">本节包含演示自定义实例化的示例。</span><span class="sxs-lookup"><span data-stu-id="7097d-103">This section contains samples that demonstrate custom instancing.</span></span>  

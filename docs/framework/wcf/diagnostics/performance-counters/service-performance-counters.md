@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810182"
 ---
 # <a name="service-performance-counters"></a><span data-ttu-id="c1a2a-102">服务性能计数器</span><span class="sxs-lookup"><span data-stu-id="c1a2a-102">Service Performance Counters</span></span>
 <span data-ttu-id="c1a2a-103">服务性能计数器将服务行为作为整体来进行衡量，可用于诊断服务整体性能。</span><span class="sxs-lookup"><span data-stu-id="c1a2a-103">Service performance counters measure the service behavior as a whole and can be used to diagnose the performance of the whole service.</span></span> <span data-ttu-id="c1a2a-104">如果使用性能监视器 (Perfmon.exe) 查看，可以在 `ServiceModelService 4.0.0.0` 性能对象下找到服务性能计数器。</span><span class="sxs-lookup"><span data-stu-id="c1a2a-104">They can be found under the `ServiceModelService 4.0.0.0` performance object when viewing with Performance Monitor (Perfmon.exe).</span></span> <span data-ttu-id="c1a2a-105">使用以下模式命名计数器实例：</span><span class="sxs-lookup"><span data-stu-id="c1a2a-105">The instances are named using the following pattern:</span></span>  

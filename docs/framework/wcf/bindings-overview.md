@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805689"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a><span data-ttu-id="d5522-102">Windows Communication Foundation 绑定概述</span><span class="sxs-lookup"><span data-stu-id="d5522-102">Windows Communication Foundation Bindings Overview</span></span>
 <span data-ttu-id="d5522-103">绑定是用于指定所需连接到 Windows Communication Foundation (WCF) 服务的终结点的通信详细信息的对象。</span><span class="sxs-lookup"><span data-stu-id="d5522-103">Bindings are objects that are used to specify the communication details that are required to connect to the endpoint of a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="d5522-104">WCF 服务中的每个终结点需要正确指定的绑定。</span><span class="sxs-lookup"><span data-stu-id="d5522-104">Each endpoint in a WCF service requires a binding to be well-specified.</span></span> <span data-ttu-id="d5522-105">本主题概述了通信详细信息的绑定所定义的绑定、 在 WCF 中，包含哪些绑定和如何为终结点指定绑定元素的类型。</span><span class="sxs-lookup"><span data-stu-id="d5522-105">This topic outlines the types of communication details that the bindings define, the elements of a binding, what bindings are included in WCF, and how a binding can be specified for an endpoint.</span></span>  

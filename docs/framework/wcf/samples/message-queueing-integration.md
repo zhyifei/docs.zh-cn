@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804828"
 ---
 # <a name="message-queueing-integration"></a><span data-ttu-id="84815-102">消息队列集成</span><span class="sxs-lookup"><span data-stu-id="84815-102">Message Queueing Integration</span></span>
 <span data-ttu-id="84815-103">本节包含演示消息队列和 Windows Communication Foundation (WCF) 之间的集成的示例。</span><span class="sxs-lookup"><span data-stu-id="84815-103">This section contains samples that demonstrate integration between Message Queuing and Windows Communication Foundation (WCF).</span></span>  

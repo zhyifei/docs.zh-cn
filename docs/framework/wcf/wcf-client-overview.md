@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808427"
 ---
 # <a name="wcf-client-overview"></a><span data-ttu-id="fd0ee-102">WCF 客户端概述</span><span class="sxs-lookup"><span data-stu-id="fd0ee-102">WCF Client Overview</span></span>
 <span data-ttu-id="fd0ee-103">本部分介绍客户端应用程序执行的操作、 如何配置、 创建和使用 Windows Communication Foundation (WCF) 客户端，以及如何保护客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="fd0ee-103">This section describes what client applications do, how to configure, create, and use a Windows Communication Foundation (WCF) client, and how to secure client applications.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804974"
 ---
 # <a name="conceptual-overview"></a><span data-ttu-id="e8ddd-102">概念概述</span><span class="sxs-lookup"><span data-stu-id="e8ddd-102">Conceptual Overview</span></span>
 <span data-ttu-id="e8ddd-103">本主题总结了有关 Windows Communication Foundation (WCF) 消息传递系统和支持其使用的类信息。</span><span class="sxs-lookup"><span data-stu-id="e8ddd-103">This topic summarizes information about the Windows Communication Foundation (WCF) messaging system and the classes that support its use.</span></span>  

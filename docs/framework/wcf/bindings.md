@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803590"
 ---
 # <a name="windows-communication-foundation-bindings"></a><span data-ttu-id="8ef22-102">Windows Communication Foundation 绑定</span><span class="sxs-lookup"><span data-stu-id="8ef22-102">Windows Communication Foundation Bindings</span></span>
 <span data-ttu-id="8ef22-103">绑定可指定 Windows Communication Foundation (WCF) 服务终结点与其他终结点的通信方式。</span><span class="sxs-lookup"><span data-stu-id="8ef22-103">Bindings specify how a Windows Communication Foundation (WCF) service endpoint communicates with other endpoints.</span></span> <span data-ttu-id="8ef22-104">绑定最起码必须指定要使用的传输（如 HTTP 或 TCP）。</span><span class="sxs-lookup"><span data-stu-id="8ef22-104">At its most basic, a binding must specify the transport (for example, HTTP or TCP) to use.</span></span> <span data-ttu-id="8ef22-105">你还可以通过绑定来设置其他特征，如安全和事务支持。</span><span class="sxs-lookup"><span data-stu-id="8ef22-105">You can also set other characteristics, such as security and transaction support, through bindings.</span></span>  

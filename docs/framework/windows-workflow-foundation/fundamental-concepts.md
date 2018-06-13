@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805988"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a><span data-ttu-id="9bd92-102">Windows 工作流基础概念</span><span class="sxs-lookup"><span data-stu-id="9bd92-102">Fundamental Windows Workflow Concepts</span></span>
 <span data-ttu-id="9bd92-103">[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]的工作流开发中会运用一些开发人员可能还不熟悉的概念。</span><span class="sxs-lookup"><span data-stu-id="9bd92-103">Workflow development in the [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] uses concepts that may be new to some developers.</span></span> <span data-ttu-id="9bd92-104">本主题介绍其中的一些概念以及如何实现这些概念。</span><span class="sxs-lookup"><span data-stu-id="9bd92-104">This topic describes some of the concepts and how they are implemented.</span></span>  

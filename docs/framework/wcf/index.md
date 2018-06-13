@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804266"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a><span data-ttu-id="b8539-102">用 WCF 开发面向服务的应用程序</span><span class="sxs-lookup"><span data-stu-id="b8539-102">Developing Service-Oriented Applications with WCF</span></span>
 <span data-ttu-id="b8539-103">本文档的此节提供有关 Windows Communication Foundation (WCF) 的信息，WCF 是用于构建面向服务的应用程序的统一编程模型。</span><span class="sxs-lookup"><span data-stu-id="b8539-103">This section of the documentation provides information about Windows Communication Foundation (WCF), which is a unified programming model for building service-oriented applications.</span></span> <span data-ttu-id="b8539-104">借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。</span><span class="sxs-lookup"><span data-stu-id="b8539-104">It enables developers to build secure, reliable, transacted solutions that integrate across platforms and interoperate with existing investments.</span></span>

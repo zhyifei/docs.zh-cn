@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810375"
 ---
 # <a name="dynamic-reconfiguration"></a><span data-ttu-id="e7702-102">动态重新配置</span><span class="sxs-lookup"><span data-stu-id="e7702-102">Dynamic Reconfiguration</span></span>
 <span data-ttu-id="e7702-103">此示例演示 Windows Communication Foundation (WCF) 路由服务。</span><span class="sxs-lookup"><span data-stu-id="e7702-103">This sample demonstrates the Windows Communication Foundation (WCF) routing service.</span></span> <span data-ttu-id="e7702-104">路由服务是可以轻松地在你的应用程序中包含基于内容的路由器的 WCF 组件。</span><span class="sxs-lookup"><span data-stu-id="e7702-104">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="e7702-105">此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="e7702-105">This sample adapts the standard WCF Calculator Sample to communicate using the routing service.</span></span> <span data-ttu-id="e7702-106">此示例演示如何在运行时动态重新配置路由服务。</span><span class="sxs-lookup"><span data-stu-id="e7702-106">This sample shows how the routing service can be dynamically reconfigured during runtime.</span></span>  

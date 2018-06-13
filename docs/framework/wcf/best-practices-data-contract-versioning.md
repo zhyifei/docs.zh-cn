@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808531"
 ---
 # <a name="best-practices-data-contract-versioning"></a><span data-ttu-id="a24aa-102">最佳做法：数据协定版本管理</span><span class="sxs-lookup"><span data-stu-id="a24aa-102">Best Practices: Data Contract Versioning</span></span>
 <span data-ttu-id="a24aa-103">本主题列出了创建容易随时间而改变的数据协定的最佳做法。</span><span class="sxs-lookup"><span data-stu-id="a24aa-103">This topic lists the best practices for creating data contracts that can evolve easily over time.</span></span> <span data-ttu-id="a24aa-104">有关数据协定的详细信息，请参阅中的主题[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。</span><span class="sxs-lookup"><span data-stu-id="a24aa-104">For more information about data contracts, see the topics in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span></span>  

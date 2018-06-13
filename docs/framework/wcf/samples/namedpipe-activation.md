@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806378"
 ---
 # <a name="namedpipe-activation"></a><span data-ttu-id="c6463-102">NamedPipe 激活</span><span class="sxs-lookup"><span data-stu-id="c6463-102">NamedPipe Activation</span></span>
 <span data-ttu-id="c6463-103">本示例演示如何承载使用 Windows 进程激活服务 (WAS) 的服务以激活通过命名管道进行通信的服务。</span><span class="sxs-lookup"><span data-stu-id="c6463-103">This sample demonstrates hosting a service that uses Windows Process Activation Service (WAS) to activate a service that communicates over names pipes.</span></span> <span data-ttu-id="c6463-104">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)和需要[!INCLUDE[wv](../../../../includes/wv-md.md)]运行。</span><span class="sxs-lookup"><span data-stu-id="c6463-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and requires [!INCLUDE[wv](../../../../includes/wv-md.md)] to run.</span></span>  
