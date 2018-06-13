@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533710"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a><span data-ttu-id="a7ccc-102">如何：为应用程序设置 ToolStrip 呈现程序</span><span class="sxs-lookup"><span data-stu-id="a7ccc-102">How to: Set the ToolStrip Renderer for an Application</span></span>
 <span data-ttu-id="a7ccc-103">可以单独自定义 <xref:System.Windows.Forms.ToolStrip> 控件的外观，或应用程序中所有 <xref:System.Windows.Forms.ToolStrip> 控件的外观。</span><span class="sxs-lookup"><span data-stu-id="a7ccc-103">You can customize the appearance of your <xref:System.Windows.Forms.ToolStrip> controls individually or for all the <xref:System.Windows.Forms.ToolStrip> controls in your application.</span></span>  

@@ -1,74 +1,68 @@
 ---
 title: static（C# 参考）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - static
 - static_CSharpKeyword
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-caps.latest.revision: 26
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c47f4a19843039c27ef9f1602581d1004fb8fd76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b7e2981c8832d6ac1744c102d5bde55bbe25c256
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33287262"
 ---
-# <a name="static-c-reference"></a><span data-ttu-id="32e08-102">static（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="32e08-102">static (C# Reference)</span></span>
-<span data-ttu-id="32e08-103">使用 `static` 修饰符可声明属于类型本身而不是属于特定对象的静态成员。</span><span class="sxs-lookup"><span data-stu-id="32e08-103">Use the `static` modifier to declare a static member, which belongs to the type itself rather than to a specific object.</span></span> <span data-ttu-id="32e08-104">`static` 修饰符可用于类、字段、方法、属性、运算符、事件和构造函数，但不能用于索引器、终结器或类以外的类型。</span><span class="sxs-lookup"><span data-stu-id="32e08-104">The `static` modifier can be used with classes, fields, methods, properties, operators, events, and constructors, but it cannot be used with indexers, finalizers, or types other than classes.</span></span> <span data-ttu-id="32e08-105">有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。</span><span class="sxs-lookup"><span data-stu-id="32e08-105">For more information, see [Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
+# <a name="static-c-reference"></a><span data-ttu-id="904f9-102">static（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="904f9-102">static (C# Reference)</span></span>
+<span data-ttu-id="904f9-103">使用 `static` 修饰符可声明属于类型本身而不是属于特定对象的静态成员。</span><span class="sxs-lookup"><span data-stu-id="904f9-103">Use the `static` modifier to declare a static member, which belongs to the type itself rather than to a specific object.</span></span> <span data-ttu-id="904f9-104">`static` 修饰符可用于类、字段、方法、属性、运算符、事件和构造函数，但不能用于索引器、终结器或类以外的类型。</span><span class="sxs-lookup"><span data-stu-id="904f9-104">The `static` modifier can be used with classes, fields, methods, properties, operators, events, and constructors, but it cannot be used with indexers, finalizers, or types other than classes.</span></span> <span data-ttu-id="904f9-105">有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。</span><span class="sxs-lookup"><span data-stu-id="904f9-105">For more information, see [Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="32e08-106">示例</span><span class="sxs-lookup"><span data-stu-id="32e08-106">Example</span></span>  
- <span data-ttu-id="32e08-107">下面的类声明为 `static` 并且只含 `static` 方法：</span><span class="sxs-lookup"><span data-stu-id="32e08-107">The following class is declared as `static` and contains only `static` methods:</span></span>  
+## <a name="example"></a><span data-ttu-id="904f9-106">示例</span><span class="sxs-lookup"><span data-stu-id="904f9-106">Example</span></span>  
+ <span data-ttu-id="904f9-107">下面的类声明为 `static` 并且只含 `static` 方法：</span><span class="sxs-lookup"><span data-stu-id="904f9-107">The following class is declared as `static` and contains only `static` methods:</span></span>  
   
  [!code-csharp[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_1.cs)]  
   
- <span data-ttu-id="32e08-108">常量或类型声明是隐式的静态成员。</span><span class="sxs-lookup"><span data-stu-id="32e08-108">A constant or type declaration is implicitly a static member.</span></span>  
+ <span data-ttu-id="904f9-108">常量或类型声明是隐式的静态成员。</span><span class="sxs-lookup"><span data-stu-id="904f9-108">A constant or type declaration is implicitly a static member.</span></span>  
   
- <span data-ttu-id="32e08-109">不能通过实例引用静态成员。</span><span class="sxs-lookup"><span data-stu-id="32e08-109">A static member cannot be referenced through an instance.</span></span> <span data-ttu-id="32e08-110">然而，可以通过类型名称引用它。</span><span class="sxs-lookup"><span data-stu-id="32e08-110">Instead, it is referenced through the type name.</span></span> <span data-ttu-id="32e08-111">例如，请考虑以下类：</span><span class="sxs-lookup"><span data-stu-id="32e08-111">For example, consider the following class:</span></span>  
+ <span data-ttu-id="904f9-109">不能通过实例引用静态成员。</span><span class="sxs-lookup"><span data-stu-id="904f9-109">A static member cannot be referenced through an instance.</span></span> <span data-ttu-id="904f9-110">然而，可以通过类型名称引用它。</span><span class="sxs-lookup"><span data-stu-id="904f9-110">Instead, it is referenced through the type name.</span></span> <span data-ttu-id="904f9-111">例如，请考虑以下类：</span><span class="sxs-lookup"><span data-stu-id="904f9-111">For example, consider the following class:</span></span>  
   
  [!code-csharp[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_2.cs)]  
   
- <span data-ttu-id="32e08-112">若要引用静态成员 `x`，除非可从相同范围访问该成员，否则请使用完全限定的名称 `MyBaseC.MyStruct.x`：</span><span class="sxs-lookup"><span data-stu-id="32e08-112">To refer to the static member `x`, use the fully qualified name, `MyBaseC.MyStruct.x`, unless the member is accessible from the same scope:</span></span>  
+ <span data-ttu-id="904f9-112">若要引用静态成员 `x`，除非可从相同范围访问该成员，否则请使用完全限定的名称 `MyBaseC.MyStruct.x`：</span><span class="sxs-lookup"><span data-stu-id="904f9-112">To refer to the static member `x`, use the fully qualified name, `MyBaseC.MyStruct.x`, unless the member is accessible from the same scope:</span></span>  
   
 ```csharp  
 Console.WriteLine(MyBaseC.MyStruct.x);  
 ```  
   
- <span data-ttu-id="32e08-113">尽管类的实例包含该类的所有实例字段的单独副本，但每个静态字段只有一个副本。</span><span class="sxs-lookup"><span data-stu-id="32e08-113">While an instance of a class contains a separate copy of all instance fields of the class, there is only one copy of each static field.</span></span>  
+ <span data-ttu-id="904f9-113">尽管类的实例包含该类的所有实例字段的单独副本，但每个静态字段只有一个副本。</span><span class="sxs-lookup"><span data-stu-id="904f9-113">While an instance of a class contains a separate copy of all instance fields of the class, there is only one copy of each static field.</span></span>  
   
- <span data-ttu-id="32e08-114">不可以使用 [this](../../../csharp/language-reference/keywords/this.md) 引用静态方法或属性访问器。</span><span class="sxs-lookup"><span data-stu-id="32e08-114">It is not possible to use [this](../../../csharp/language-reference/keywords/this.md) to reference static methods or property accessors.</span></span>  
+ <span data-ttu-id="904f9-114">不可以使用 [this](../../../csharp/language-reference/keywords/this.md) 引用静态方法或属性访问器。</span><span class="sxs-lookup"><span data-stu-id="904f9-114">It is not possible to use [this](../../../csharp/language-reference/keywords/this.md) to reference static methods or property accessors.</span></span>  
   
- <span data-ttu-id="32e08-115">如果 `static` 关键字应用于类，则类的所有成员都必须是静态的。</span><span class="sxs-lookup"><span data-stu-id="32e08-115">If the `static` keyword is applied to a class, all the members of the class must be static.</span></span>  
+ <span data-ttu-id="904f9-115">如果 `static` 关键字应用于类，则类的所有成员都必须是静态的。</span><span class="sxs-lookup"><span data-stu-id="904f9-115">If the `static` keyword is applied to a class, all the members of the class must be static.</span></span>  
   
- <span data-ttu-id="32e08-116">类和静态类可以包含静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="32e08-116">Classes and static classes may have static constructors.</span></span> <span data-ttu-id="32e08-117">在程序开始和实例化类之间的某个时刻调用静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="32e08-117">Static constructors are called at some point between when the program starts and the class is instantiated.</span></span>  
+ <span data-ttu-id="904f9-116">类和静态类可以包含静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="904f9-116">Classes and static classes may have static constructors.</span></span> <span data-ttu-id="904f9-117">在程序开始和实例化类之间的某个时刻调用静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="904f9-117">Static constructors are called at some point between when the program starts and the class is instantiated.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="32e08-118">`static` 关键字比用于 C++ 中时受到的限制更多。</span><span class="sxs-lookup"><span data-stu-id="32e08-118">The `static` keyword has more limited uses than in C++.</span></span> <span data-ttu-id="32e08-119">若要与 C++ 关键字进行比较，请参阅 [Storage classes (C++)](/cpp/cpp/storage-classes-cpp#static)（存储类 (C++)）。</span><span class="sxs-lookup"><span data-stu-id="32e08-119">To compare with the C++ keyword, see [Storage classes (C++)](/cpp/cpp/storage-classes-cpp#static).</span></span>
+>  <span data-ttu-id="904f9-118">`static` 关键字比用于 C++ 中时受到的限制更多。</span><span class="sxs-lookup"><span data-stu-id="904f9-118">The `static` keyword has more limited uses than in C++.</span></span> <span data-ttu-id="904f9-119">若要与 C++ 关键字进行比较，请参阅 [Storage classes (C++)](/cpp/cpp/storage-classes-cpp#static)（存储类 (C++)）。</span><span class="sxs-lookup"><span data-stu-id="904f9-119">To compare with the C++ keyword, see [Storage classes (C++)](/cpp/cpp/storage-classes-cpp#static).</span></span>
   
- <span data-ttu-id="32e08-120">若要演示静态成员，请考虑表示公司员工的类。</span><span class="sxs-lookup"><span data-stu-id="32e08-120">To demonstrate static members, consider a class that represents a company employee.</span></span> <span data-ttu-id="32e08-121">假定此类包含计数员工的方法和存储员工人数的字段。</span><span class="sxs-lookup"><span data-stu-id="32e08-121">Assume that the class contains a method to count employees and a field to store the number of employees.</span></span> <span data-ttu-id="32e08-122">方法和字段均不属于任何实例员工。</span><span class="sxs-lookup"><span data-stu-id="32e08-122">Both the method and the field do not belong to any instance employee.</span></span> <span data-ttu-id="32e08-123">而属于公司类。</span><span class="sxs-lookup"><span data-stu-id="32e08-123">Instead they belong to the company class.</span></span> <span data-ttu-id="32e08-124">因此，它们应声明为类的静态成员。</span><span class="sxs-lookup"><span data-stu-id="32e08-124">Therefore, they should be declared as static members of the class.</span></span>  
+ <span data-ttu-id="904f9-120">若要演示静态成员，请考虑表示公司员工的类。</span><span class="sxs-lookup"><span data-stu-id="904f9-120">To demonstrate static members, consider a class that represents a company employee.</span></span> <span data-ttu-id="904f9-121">假定此类包含计数员工的方法和存储员工人数的字段。</span><span class="sxs-lookup"><span data-stu-id="904f9-121">Assume that the class contains a method to count employees and a field to store the number of employees.</span></span> <span data-ttu-id="904f9-122">方法和字段均不属于任何实例员工。</span><span class="sxs-lookup"><span data-stu-id="904f9-122">Both the method and the field do not belong to any instance employee.</span></span> <span data-ttu-id="904f9-123">而属于公司类。</span><span class="sxs-lookup"><span data-stu-id="904f9-123">Instead they belong to the company class.</span></span> <span data-ttu-id="904f9-124">因此，它们应声明为类的静态成员。</span><span class="sxs-lookup"><span data-stu-id="904f9-124">Therefore, they should be declared as static members of the class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="32e08-125">示例</span><span class="sxs-lookup"><span data-stu-id="32e08-125">Example</span></span>  
- <span data-ttu-id="32e08-126">此示例读取新员工的姓名和 ID，员工计数器按 1 递增，并显示新员工信息和新员工人数。</span><span class="sxs-lookup"><span data-stu-id="32e08-126">This example reads the name and ID of a new employee, increments the employee counter by one, and displays the information for the new employee and the new number of employees.</span></span> <span data-ttu-id="32e08-127">为简单起见，此程序从键盘读取员工的当前人数。</span><span class="sxs-lookup"><span data-stu-id="32e08-127">For simplicity, this program reads the current number of employees from the keyboard.</span></span> <span data-ttu-id="32e08-128">在实际应用程序中，应从文件读取该信息。</span><span class="sxs-lookup"><span data-stu-id="32e08-128">In a real application, this information should be read from a file.</span></span>  
+## <a name="example"></a><span data-ttu-id="904f9-125">示例</span><span class="sxs-lookup"><span data-stu-id="904f9-125">Example</span></span>  
+ <span data-ttu-id="904f9-126">此示例读取新员工的姓名和 ID，员工计数器按 1 递增，并显示新员工信息和新员工人数。</span><span class="sxs-lookup"><span data-stu-id="904f9-126">This example reads the name and ID of a new employee, increments the employee counter by one, and displays the information for the new employee and the new number of employees.</span></span> <span data-ttu-id="904f9-127">为简单起见，此程序从键盘读取员工的当前人数。</span><span class="sxs-lookup"><span data-stu-id="904f9-127">For simplicity, this program reads the current number of employees from the keyboard.</span></span> <span data-ttu-id="904f9-128">在实际应用程序中，应从文件读取该信息。</span><span class="sxs-lookup"><span data-stu-id="904f9-128">In a real application, this information should be read from a file.</span></span>  
   
  [!code-csharp[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_3.cs)]  
   
-## <a name="example"></a><span data-ttu-id="32e08-129">示例</span><span class="sxs-lookup"><span data-stu-id="32e08-129">Example</span></span>  
- <span data-ttu-id="32e08-130">此示例显示，尽管可以使用尚未声明的其他静态字段来初始化某个静态字段，但除非向该静态字段显式分配值，否则不会定义该结果。</span><span class="sxs-lookup"><span data-stu-id="32e08-130">This example shows that although you can initialize a static field by using another static field not yet declared, the results will be undefined until you explicitly assign a value to the static field.</span></span>  
+## <a name="example"></a><span data-ttu-id="904f9-129">示例</span><span class="sxs-lookup"><span data-stu-id="904f9-129">Example</span></span>  
+ <span data-ttu-id="904f9-130">此示例显示，尽管可以使用尚未声明的其他静态字段来初始化某个静态字段，但除非向该静态字段显式分配值，否则不会定义该结果。</span><span class="sxs-lookup"><span data-stu-id="904f9-130">This example shows that although you can initialize a static field by using another static field not yet declared, the results will be undefined until you explicitly assign a value to the static field.</span></span>  
   
  [!code-csharp[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_4.cs)]  
   
-## <a name="c-language-specification"></a><span data-ttu-id="32e08-131">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="32e08-131">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="904f9-131">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="904f9-131">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="32e08-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="32e08-132">See Also</span></span>  
- [<span data-ttu-id="32e08-133">C# 参考</span><span class="sxs-lookup"><span data-stu-id="32e08-133">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="32e08-134">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="32e08-134">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="32e08-135">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="32e08-135">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="32e08-136">修饰符</span><span class="sxs-lookup"><span data-stu-id="32e08-136">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
- [<span data-ttu-id="32e08-137">静态类和静态类成员</span><span class="sxs-lookup"><span data-stu-id="32e08-137">Static Classes and Static Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+## <a name="see-also"></a><span data-ttu-id="904f9-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="904f9-132">See Also</span></span>  
+ [<span data-ttu-id="904f9-133">C# 参考</span><span class="sxs-lookup"><span data-stu-id="904f9-133">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="904f9-134">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="904f9-134">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="904f9-135">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="904f9-135">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="904f9-136">修饰符</span><span class="sxs-lookup"><span data-stu-id="904f9-136">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
+ [<span data-ttu-id="904f9-137">静态类和静态类成员</span><span class="sxs-lookup"><span data-stu-id="904f9-137">Static Classes and Static Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

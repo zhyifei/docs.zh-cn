@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549404"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a><span data-ttu-id="cac9f-102">将路由事件标记为“已处理”和“类处理”</span><span class="sxs-lookup"><span data-stu-id="cac9f-102">Marking Routed Events as Handled, and Class Handling</span></span>
 <span data-ttu-id="cac9f-103">路由事件的处理程序可以在事件数据内将事件标记为已处理。</span><span class="sxs-lookup"><span data-stu-id="cac9f-103">Handlers for a routed event can mark the event handled within the event data.</span></span> <span data-ttu-id="cac9f-104">处理事件将有效地缩短路由。</span><span class="sxs-lookup"><span data-stu-id="cac9f-104">Handling the event will effectively shorten the route.</span></span> <span data-ttu-id="cac9f-105">类处理是一个编程概念，受路由事件支持。</span><span class="sxs-lookup"><span data-stu-id="cac9f-105">Class handling is a programming concept that is supported by routed events.</span></span> <span data-ttu-id="cac9f-106">类处理程序有机会在类级别使用处理程序处理特定路由事件，在类的任何实例上存在任何实例处理程序之前调用该处理程序。</span><span class="sxs-lookup"><span data-stu-id="cac9f-106">A class handler has the opportunity to handle a particular routed event at a class level with a handler that is invoked before any instance handler on any instance of the class.</span></span>  

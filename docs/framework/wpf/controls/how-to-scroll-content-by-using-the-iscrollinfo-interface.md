@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552878"
 ---
 # <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a><span data-ttu-id="98f50-102">如何：使用 IScrollInfo 接口来滚动内容</span><span class="sxs-lookup"><span data-stu-id="98f50-102">How to: Scroll Content by Using the IScrollInfo Interface</span></span>
 <span data-ttu-id="98f50-103">此示例演示如何通过使用滚动内容<xref:System.Windows.Controls.Primitives.IScrollInfo>接口。</span><span class="sxs-lookup"><span data-stu-id="98f50-103">This example shows how to scroll content by using the <xref:System.Windows.Controls.Primitives.IScrollInfo> interface.</span></span>  

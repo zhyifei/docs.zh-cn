@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524395"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a><span data-ttu-id="5116d-102">FlowLayoutPanel 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="5116d-102">FlowLayoutPanel Control (Windows Forms)</span></span>
 <span data-ttu-id="5116d-103">`FlowLayoutPanel` 控件沿水平或纵排方向排列其内容。</span><span class="sxs-lookup"><span data-stu-id="5116d-103">The `FlowLayoutPanel` control arranges its contents in a horizontal or vertical flow direction.</span></span> <span data-ttu-id="5116d-104">可从一行到下一行，或从一列到下列进行内容换行。</span><span class="sxs-lookup"><span data-stu-id="5116d-104">Its contents can be wrapped from one row to the next, or from one column to the next.</span></span> <span data-ttu-id="5116d-105">还可以剪切内容，而不是进行换行。</span><span class="sxs-lookup"><span data-stu-id="5116d-105">Alternately, its contents can be clipped instead of wrapped.</span></span>  

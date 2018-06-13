@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549719"
 ---
 # <a name="xaml-overview-wpf"></a><span data-ttu-id="d039c-102">XAML 概述 (WPF)</span><span class="sxs-lookup"><span data-stu-id="d039c-102">XAML Overview (WPF)</span></span>
 <span data-ttu-id="d039c-103">本主题介绍 XAML 语言的功能，并演示如何使用 XAML 编写 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序。</span><span class="sxs-lookup"><span data-stu-id="d039c-103">This topic describes the features of the XAML language and demonstrates how you can use XAML to write [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="d039c-104">本主题专门介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现的 XAML。</span><span class="sxs-lookup"><span data-stu-id="d039c-104">This topic specifically describes XAML as implemented by [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="d039c-105">XAML 本身是一个比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 大的语言概念。</span><span class="sxs-lookup"><span data-stu-id="d039c-105">XAML itself is a larger language concept than [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
