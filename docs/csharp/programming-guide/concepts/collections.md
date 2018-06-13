@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549615"
 ---
 # <a name="collections-c"></a><span data-ttu-id="05c00-102">集合 (C#)</span><span class="sxs-lookup"><span data-stu-id="05c00-102">Collections (C#)</span></span>
 <span data-ttu-id="05c00-103">对于许多应用程序，你会想要创建和管理相关对象的组。</span><span class="sxs-lookup"><span data-stu-id="05c00-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="05c00-104">有两种方法对对象进行分组：通过创建对象的数组，以及通过创建对象的集合。</span><span class="sxs-lookup"><span data-stu-id="05c00-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  

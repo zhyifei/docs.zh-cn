@@ -17,6 +17,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472576"
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a><span data-ttu-id="99073-102">Winres.exe（Windows 窗体资源编辑器）</span><span class="sxs-lookup"><span data-stu-id="99073-102">Winres.exe (Windows Forms Resource Editor)</span></span>
 <span data-ttu-id="99073-103">Windows 窗体资源编辑器 Winres.exe 是一种可视布局工具，可以帮助本地化专家对窗体使用的 Windows 窗体用户界面 (UI) 资源进行本地化。</span><span class="sxs-lookup"><span data-stu-id="99073-103">The Windows Forms Resource Editor, Winres.exe, is a visual layout tool that helps localization experts localize Windows Forms user interface (UI) resources used by forms.</span></span> <span data-ttu-id="99073-104">利用可视设计环境（如 Microsoft Visual Studio），可以创建用作 Winres.exe 的输入的 .resx 或 .resources 文件。</span><span class="sxs-lookup"><span data-stu-id="99073-104">The .resx or .resources files that are used as input to Winres.exe can be created using a visual design environment such as Microsoft Visual Studio.</span></span> <span data-ttu-id="99073-105">有关在 .NET Framework 应用程序中部署资源的信息，请参阅[桌面应用中的资源](../../../docs/framework/resources/index.md)。</span><span class="sxs-lookup"><span data-stu-id="99073-105">For information on deploying resources in .NET Framework applications, see [Resources in Desktop Apps](../../../docs/framework/resources/index.md).</span></span>  
