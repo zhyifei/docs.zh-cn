@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313496"
 ---
 # <a name="arrays-c-programming-guide"></a><span data-ttu-id="63385-102">数组（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="63385-102">Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="63385-103">可以将同一类型的多个变量存储在一个数组数据结构中。</span><span class="sxs-lookup"><span data-stu-id="63385-103">You can store multiple variables of the same type in an array data structure.</span></span> <span data-ttu-id="63385-104">通过指定数组的元素类型来声明数组。</span><span class="sxs-lookup"><span data-stu-id="63385-104">You declare an array by specifying the type of its elements.</span></span>  

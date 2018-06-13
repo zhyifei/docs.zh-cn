@@ -1,54 +1,46 @@
 ---
 title: LINQ to Objects (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 089db6be5163b9da34dae89229abeb9ca7144e76
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dce90ce78668b3732db31dee6d0a233c4d39557f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323493"
 ---
-# <a name="linq-to-objects-c"></a><span data-ttu-id="91dd4-102">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="91dd4-102">LINQ to Objects (C#)</span></span>
-<span data-ttu-id="91dd4-103">术语“LINQ to Objects”指直接将 LINQ 查询与任何 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 集合一起使用，而不使用中间 LINQ 提供程序或 API，例如 [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) 或 [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)。</span><span class="sxs-lookup"><span data-stu-id="91dd4-103">The term "LINQ to Objects" refers to the use of LINQ queries with any <xref:System.Collections.IEnumerable> or <xref:System.Collections.Generic.IEnumerable%601> collection directly, without the use of an intermediate LINQ provider or API such as [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) or [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).</span></span> <span data-ttu-id="91dd4-104">可以使用 LINQ 来查询任何可枚举的集合，例如 <xref:System.Collections.Generic.List%601>、<xref:System.Array> 或 <xref:System.Collections.Generic.Dictionary%602>。</span><span class="sxs-lookup"><span data-stu-id="91dd4-104">You can use LINQ to query any enumerable collections such as <xref:System.Collections.Generic.List%601>, <xref:System.Array>, or <xref:System.Collections.Generic.Dictionary%602>.</span></span> <span data-ttu-id="91dd4-105">该集合可以是用户定义的集合，也可以是由 .NET Framework API 返回的集合。</span><span class="sxs-lookup"><span data-stu-id="91dd4-105">The collection may be user-defined or may be returned by a .NET Framework API.</span></span>  
+# <a name="linq-to-objects-c"></a><span data-ttu-id="15817-102">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="15817-102">LINQ to Objects (C#)</span></span>
+<span data-ttu-id="15817-103">术语“LINQ to Objects”指直接将 LINQ 查询与任何 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 集合一起使用，而不使用中间 LINQ 提供程序或 API，例如 [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) 或 [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)。</span><span class="sxs-lookup"><span data-stu-id="15817-103">The term "LINQ to Objects" refers to the use of LINQ queries with any <xref:System.Collections.IEnumerable> or <xref:System.Collections.Generic.IEnumerable%601> collection directly, without the use of an intermediate LINQ provider or API such as [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) or [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).</span></span> <span data-ttu-id="15817-104">可以使用 LINQ 来查询任何可枚举的集合，例如 <xref:System.Collections.Generic.List%601>、<xref:System.Array> 或 <xref:System.Collections.Generic.Dictionary%602>。</span><span class="sxs-lookup"><span data-stu-id="15817-104">You can use LINQ to query any enumerable collections such as <xref:System.Collections.Generic.List%601>, <xref:System.Array>, or <xref:System.Collections.Generic.Dictionary%602>.</span></span> <span data-ttu-id="15817-105">该集合可以是用户定义的集合，也可以是由 .NET Framework API 返回的集合。</span><span class="sxs-lookup"><span data-stu-id="15817-105">The collection may be user-defined or may be returned by a .NET Framework API.</span></span>  
   
- <span data-ttu-id="91dd4-106">从根本上说，“LINQ to Objects”表示一种新的处理集合的方法。</span><span class="sxs-lookup"><span data-stu-id="91dd4-106">In a basic sense, LINQ to Objects represents a new approach to collections.</span></span> <span data-ttu-id="91dd4-107">采用旧方法，必须编写指定如何从集合检索数据的复杂的 `foreach` 循环。</span><span class="sxs-lookup"><span data-stu-id="91dd4-107">In the old way, you had to write complex `foreach` loops that specified how to retrieve data from a collection.</span></span> <span data-ttu-id="91dd4-108">而采用 LINQ 方法，只需编写描述要检索的内容的声明性代码。</span><span class="sxs-lookup"><span data-stu-id="91dd4-108">In the LINQ approach, you write declarative code that describes what you want to retrieve.</span></span>  
+ <span data-ttu-id="15817-106">从根本上说，“LINQ to Objects”表示一种新的处理集合的方法。</span><span class="sxs-lookup"><span data-stu-id="15817-106">In a basic sense, LINQ to Objects represents a new approach to collections.</span></span> <span data-ttu-id="15817-107">采用旧方法，必须编写指定如何从集合检索数据的复杂的 `foreach` 循环。</span><span class="sxs-lookup"><span data-stu-id="15817-107">In the old way, you had to write complex `foreach` loops that specified how to retrieve data from a collection.</span></span> <span data-ttu-id="15817-108">而采用 LINQ 方法，只需编写描述要检索的内容的声明性代码。</span><span class="sxs-lookup"><span data-stu-id="15817-108">In the LINQ approach, you write declarative code that describes what you want to retrieve.</span></span>  
   
- <span data-ttu-id="91dd4-109">此外，LINQ 查询与传统 `foreach` 循环相比具有三大优势：</span><span class="sxs-lookup"><span data-stu-id="91dd4-109">In addition, LINQ queries offer three main advantages over traditional `foreach` loops:</span></span>  
+ <span data-ttu-id="15817-109">此外，LINQ 查询与传统 `foreach` 循环相比具有三大优势：</span><span class="sxs-lookup"><span data-stu-id="15817-109">In addition, LINQ queries offer three main advantages over traditional `foreach` loops:</span></span>  
   
-1.  <span data-ttu-id="91dd4-110">它们更简明、更易读，尤其在筛选多个条件时。</span><span class="sxs-lookup"><span data-stu-id="91dd4-110">They are more concise and readable, especially when filtering multiple conditions.</span></span>  
+1.  <span data-ttu-id="15817-110">它们更简明、更易读，尤其在筛选多个条件时。</span><span class="sxs-lookup"><span data-stu-id="15817-110">They are more concise and readable, especially when filtering multiple conditions.</span></span>  
   
-2.  <span data-ttu-id="91dd4-111">它们使用最少的应用程序代码提供强大的筛选、排序和分组功能。</span><span class="sxs-lookup"><span data-stu-id="91dd4-111">They provide powerful filtering, ordering, and grouping capabilities with a minimum of application code.</span></span>  
+2.  <span data-ttu-id="15817-111">它们使用最少的应用程序代码提供强大的筛选、排序和分组功能。</span><span class="sxs-lookup"><span data-stu-id="15817-111">They provide powerful filtering, ordering, and grouping capabilities with a minimum of application code.</span></span>  
   
-3.  <span data-ttu-id="91dd4-112">无需修改或只需做很小的修改即可将它们移植到其他数据源。</span><span class="sxs-lookup"><span data-stu-id="91dd4-112">They can be ported to other data sources with little or no modification.</span></span>  
+3.  <span data-ttu-id="15817-112">无需修改或只需做很小的修改即可将它们移植到其他数据源。</span><span class="sxs-lookup"><span data-stu-id="15817-112">They can be ported to other data sources with little or no modification.</span></span>  
   
- <span data-ttu-id="91dd4-113">通常，对数据执行的操作越复杂，就越能体会到 LINQ 相较于传统迭代技术的优势。</span><span class="sxs-lookup"><span data-stu-id="91dd4-113">In general, the more complex the operation you want to perform on the data, the more benefit you will realize by using LINQ instead of traditional iteration techniques.</span></span>  
+ <span data-ttu-id="15817-113">通常，对数据执行的操作越复杂，就越能体会到 LINQ 相较于传统迭代技术的优势。</span><span class="sxs-lookup"><span data-stu-id="15817-113">In general, the more complex the operation you want to perform on the data, the more benefit you will realize by using LINQ instead of traditional iteration techniques.</span></span>  
   
- <span data-ttu-id="91dd4-114">本节的目的是使用一些精选示例来演示 LINQ 方法。</span><span class="sxs-lookup"><span data-stu-id="91dd4-114">The purpose of this section is to demonstrate the LINQ approach with some select examples.</span></span> <span data-ttu-id="91dd4-115">并不打算详尽说明。</span><span class="sxs-lookup"><span data-stu-id="91dd4-115">It is not intended to be exhaustive.</span></span>  
+ <span data-ttu-id="15817-114">本节的目的是使用一些精选示例来演示 LINQ 方法。</span><span class="sxs-lookup"><span data-stu-id="15817-114">The purpose of this section is to demonstrate the LINQ approach with some select examples.</span></span> <span data-ttu-id="15817-115">并不打算详尽说明。</span><span class="sxs-lookup"><span data-stu-id="15817-115">It is not intended to be exhaustive.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="91dd4-116">本节内容</span><span class="sxs-lookup"><span data-stu-id="91dd4-116">In This Section</span></span>  
- [<span data-ttu-id="91dd4-117">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="91dd4-117">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- <span data-ttu-id="91dd4-118">阐释如何使用 LINQ 来查询和转换字符串和字符串集合。</span><span class="sxs-lookup"><span data-stu-id="91dd4-118">Explains how LINQ can be used to query and transform strings and collections of strings.</span></span> <span data-ttu-id="91dd4-119">还包括指向演示这些原则的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="91dd4-119">Also includes links to topics that demonstrate these principles.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="15817-116">本节内容</span><span class="sxs-lookup"><span data-stu-id="15817-116">In This Section</span></span>  
+ [<span data-ttu-id="15817-117">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="15817-117">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ <span data-ttu-id="15817-118">阐释如何使用 LINQ 来查询和转换字符串和字符串集合。</span><span class="sxs-lookup"><span data-stu-id="15817-118">Explains how LINQ can be used to query and transform strings and collections of strings.</span></span> <span data-ttu-id="15817-119">还包括指向演示这些原则的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="15817-119">Also includes links to topics that demonstrate these principles.</span></span>  
   
- [<span data-ttu-id="91dd4-120">LINQ 和反射 (C#)</span><span class="sxs-lookup"><span data-stu-id="91dd4-120">LINQ and Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-reflection.md)  
- <span data-ttu-id="91dd4-121">指向演示 LINQ 如何使用反射的示例的链接。</span><span class="sxs-lookup"><span data-stu-id="91dd4-121">Links to a sample that demonstrates how LINQ uses reflection.</span></span>  
+ [<span data-ttu-id="15817-120">LINQ 和反射 (C#)</span><span class="sxs-lookup"><span data-stu-id="15817-120">LINQ and Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-reflection.md)  
+ <span data-ttu-id="15817-121">指向演示 LINQ 如何使用反射的示例的链接。</span><span class="sxs-lookup"><span data-stu-id="15817-121">Links to a sample that demonstrates how LINQ uses reflection.</span></span>  
   
- [<span data-ttu-id="91dd4-122">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="91dd4-122">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
- <span data-ttu-id="91dd4-123">阐释如何使用 LINQ 来与文件系统进行交互。</span><span class="sxs-lookup"><span data-stu-id="91dd4-123">Explains how LINQ can be used to interact with file systems.</span></span> <span data-ttu-id="91dd4-124">还包括指向演示这些概念的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="91dd4-124">Also includes links to topics that demonstrate these concepts.</span></span>  
+ [<span data-ttu-id="15817-122">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="15817-122">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+ <span data-ttu-id="15817-123">阐释如何使用 LINQ 来与文件系统进行交互。</span><span class="sxs-lookup"><span data-stu-id="15817-123">Explains how LINQ can be used to interact with file systems.</span></span> <span data-ttu-id="15817-124">还包括指向演示这些概念的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="15817-124">Also includes links to topics that demonstrate these concepts.</span></span>  
   
- [<span data-ttu-id="91dd4-125">如何：使用 LINQ 查询 ArrayList (C#)</span><span class="sxs-lookup"><span data-stu-id="91dd4-125">How to: Query an ArrayList with LINQ (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
- <span data-ttu-id="91dd4-126">演示如何使用 C# 查询 ArrayList。</span><span class="sxs-lookup"><span data-stu-id="91dd4-126">Demonstrates how to query an ArrayList in C#.</span></span>  
+ [<span data-ttu-id="15817-125">如何：使用 LINQ 查询 ArrayList (C#)</span><span class="sxs-lookup"><span data-stu-id="15817-125">How to: Query an ArrayList with LINQ (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ <span data-ttu-id="15817-126">演示如何使用 C# 查询 ArrayList。</span><span class="sxs-lookup"><span data-stu-id="15817-126">Demonstrates how to query an ArrayList in C#.</span></span>  
   
- [<span data-ttu-id="91dd4-127">如何：为 LINQ 查询添加自定义方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="91dd4-127">How to: Add Custom Methods for LINQ Queries (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
- <span data-ttu-id="91dd4-128">阐释如何通过向 <xref:System.Collections.Generic.IEnumerable%601> 接口中添加扩展方法来扩展可用于 LINQ 查询的方法集。</span><span class="sxs-lookup"><span data-stu-id="91dd4-128">Explains how to extend the set of methods that you can use for LINQ queries by adding extension methods to the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span>  
+ [<span data-ttu-id="15817-127">如何：为 LINQ 查询添加自定义方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="15817-127">How to: Add Custom Methods for LINQ Queries (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ <span data-ttu-id="15817-128">阐释如何通过向 <xref:System.Collections.Generic.IEnumerable%601> 接口中添加扩展方法来扩展可用于 LINQ 查询的方法集。</span><span class="sxs-lookup"><span data-stu-id="15817-128">Explains how to extend the set of methods that you can use for LINQ queries by adding extension methods to the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span>  
   
- [<span data-ttu-id="91dd4-129">语言集成查询 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="91dd4-129">Language-Integrated Query (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/index.md)  
- <span data-ttu-id="91dd4-130">提供指向阐释 LINQ 并提供执行查询的代码示例的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="91dd4-130">Provides links to topics that explain LINQ and provide examples of code that perform queries.</span></span>
+ [<span data-ttu-id="15817-129">语言集成查询 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="15817-129">Language-Integrated Query (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ <span data-ttu-id="15817-130">提供指向阐释 LINQ 并提供执行查询的代码示例的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="15817-130">Provides links to topics that explain LINQ and provide examples of code that perform queries.</span></span>

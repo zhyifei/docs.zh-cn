@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320919"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a><span data-ttu-id="b4664-102">程序集和全局程序集缓存 (C#)</span><span class="sxs-lookup"><span data-stu-id="b4664-102">Assemblies and the Global Assembly Cache (C#)</span></span>
 <span data-ttu-id="b4664-103">程序集构成了 .NET 应用程序的部署、版本控制、重用、激活范围和安全权限的基本单元。</span><span class="sxs-lookup"><span data-stu-id="b4664-103">Assemblies form the fundamental unit of deployment, version control, reuse, activation scoping, and security permissions for a .NET-based application.</span></span> <span data-ttu-id="b4664-104">作为 .NET Framework 的构建基块，程序集采用可执行文件 (.exe) 或动态链接库文件 (.dll) 的形式。</span><span class="sxs-lookup"><span data-stu-id="b4664-104">Assemblies take the form of an executable (.exe) file or dynamic link library (.dll) file, and are the building blocks of the .NET Framework.</span></span> <span data-ttu-id="b4664-105">它们向公共语言运行时提供了注意类型实现代码所需的信息。</span><span class="sxs-lookup"><span data-stu-id="b4664-105">They provide the common language runtime with the information it needs to be aware of type implementations.</span></span> <span data-ttu-id="b4664-106">可以将程序集视为一组构成功能逻辑单元并旨在配合使用的类型和资源。</span><span class="sxs-lookup"><span data-stu-id="b4664-106">You can think of an assembly as a collection of types and resources that form a logical unit of functionality and are built to work together.</span></span>  

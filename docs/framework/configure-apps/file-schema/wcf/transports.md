@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755326"
 ---
 # <a name="transports"></a><span data-ttu-id="e7467-102">传输</span><span class="sxs-lookup"><span data-stu-id="e7467-102">Transports</span></span>
 <span data-ttu-id="e7467-103">传输层是通道堆栈的最低层。</span><span class="sxs-lookup"><span data-stu-id="e7467-103">The transport layer is at the lowest level of the channel stack.</span></span> <span data-ttu-id="e7467-104">使用 Windows Communication Foundation (WCF) 中的主要传输是 HTTP、 HTTPS、 TCP 和命名管道。</span><span class="sxs-lookup"><span data-stu-id="e7467-104">The main transports used in Windows Communication Foundation (WCF) are HTTP, HTTPS, TCP, and Named Pipes.</span></span> <span data-ttu-id="e7467-105">本节列出了可用以配置不同类型的传输的所有配置元素。</span><span class="sxs-lookup"><span data-stu-id="e7467-105">This section lists all the configuration elements that allow you to configure different types of transports.</span></span>  

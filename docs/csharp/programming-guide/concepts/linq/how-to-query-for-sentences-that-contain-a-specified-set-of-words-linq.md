@@ -1,26 +1,18 @@
 ---
-title: "如何：查询包含一组指定词语的句子 (LINQ) (C#)"
-ms.custom: 
+title: 如何：查询包含一组指定词语的句子 (LINQ) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: befc93a21388a87fdfd2416349b1310e82378f18
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 736078ccf97ba3e61748932c3e48fb436b2c5564
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319879"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a><span data-ttu-id="8b464-102">如何：查询包含一组指定词语的句子 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="8b464-102">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (C#)</span></span>
-<span data-ttu-id="8b464-103">此示例演示如何在包含一组指定的词语的每个匹配项的文本文件中查找句子。</span><span class="sxs-lookup"><span data-stu-id="8b464-103">This example shows how to find sentences in a text file that contain matches for each of a specified set of words.</span></span> <span data-ttu-id="8b464-104">尽管此示例中的搜索词数组采用硬编码形式，但它也可在运行时以动态方式进行填充。</span><span class="sxs-lookup"><span data-stu-id="8b464-104">Although the array of search terms is hard-coded in this example, it could also be populated dynamically at runtime.</span></span> <span data-ttu-id="8b464-105">在此示例中，查询将返回包含单词“Historically,”、“data,”和“integrated”的句子。</span><span class="sxs-lookup"><span data-stu-id="8b464-105">In this example, the query returns the sentences that contain the words "Historically," "data," and "integrated."</span></span>  
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a><span data-ttu-id="2b13a-102">如何：查询包含一组指定词语的句子 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="2b13a-102">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (C#)</span></span>
+<span data-ttu-id="2b13a-103">此示例演示如何在包含一组指定的词语的每个匹配项的文本文件中查找句子。</span><span class="sxs-lookup"><span data-stu-id="2b13a-103">This example shows how to find sentences in a text file that contain matches for each of a specified set of words.</span></span> <span data-ttu-id="2b13a-104">尽管此示例中的搜索词数组采用硬编码形式，但它也可在运行时以动态方式进行填充。</span><span class="sxs-lookup"><span data-stu-id="2b13a-104">Although the array of search terms is hard-coded in this example, it could also be populated dynamically at runtime.</span></span> <span data-ttu-id="2b13a-105">在此示例中，查询将返回包含单词“Historically,”、“data,”和“integrated”的句子。</span><span class="sxs-lookup"><span data-stu-id="2b13a-105">In this example, the query returns the sentences that contain the words "Historically," "data," and "integrated."</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8b464-106">示例</span><span class="sxs-lookup"><span data-stu-id="8b464-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2b13a-106">示例</span><span class="sxs-lookup"><span data-stu-id="2b13a-106">Example</span></span>  
   
 ```csharp  
 class FindSentences  
@@ -70,12 +62,12 @@ Historically, the world of data and the world of objects have not been well inte
 */  
 ```  
   
- <span data-ttu-id="8b464-107">查询运行时首先将文本拆分成句子，然后将句子拆分成包含每个单词的字符串数组。</span><span class="sxs-lookup"><span data-stu-id="8b464-107">The query works by first splitting the text into sentences, and then splitting the sentences into an array of strings that hold each word.</span></span> <span data-ttu-id="8b464-108">对于每个数组，<xref:System.Linq.Enumerable.Distinct%2A> 方法将删除所有重复字词，然后查询将对字词数组和 `wordsToMatch` 数组执行 <xref:System.Linq.Enumerable.Intersect%2A> 操作。</span><span class="sxs-lookup"><span data-stu-id="8b464-108">For each of these arrays, the <xref:System.Linq.Enumerable.Distinct%2A> method removes all duplicate words, and then the query performs an <xref:System.Linq.Enumerable.Intersect%2A> operation on the word array and the `wordsToMatch` array.</span></span> <span data-ttu-id="8b464-109">如果相交数与 `wordsToMatch` 数组的计数相同，将在单词中找到所有单词并返回原始句子。</span><span class="sxs-lookup"><span data-stu-id="8b464-109">If the count of the intersection is the same as the count of the `wordsToMatch` array, all words were found in the words and the original sentence is returned.</span></span>  
+ <span data-ttu-id="2b13a-107">查询运行时首先将文本拆分成句子，然后将句子拆分成包含每个单词的字符串数组。</span><span class="sxs-lookup"><span data-stu-id="2b13a-107">The query works by first splitting the text into sentences, and then splitting the sentences into an array of strings that hold each word.</span></span> <span data-ttu-id="2b13a-108">对于每个数组，<xref:System.Linq.Enumerable.Distinct%2A> 方法将删除所有重复字词，然后查询将对字词数组和 `wordsToMatch` 数组执行 <xref:System.Linq.Enumerable.Intersect%2A> 操作。</span><span class="sxs-lookup"><span data-stu-id="2b13a-108">For each of these arrays, the <xref:System.Linq.Enumerable.Distinct%2A> method removes all duplicate words, and then the query performs an <xref:System.Linq.Enumerable.Intersect%2A> operation on the word array and the `wordsToMatch` array.</span></span> <span data-ttu-id="2b13a-109">如果相交数与 `wordsToMatch` 数组的计数相同，将在单词中找到所有单词并返回原始句子。</span><span class="sxs-lookup"><span data-stu-id="2b13a-109">If the count of the intersection is the same as the count of the `wordsToMatch` array, all words were found in the words and the original sentence is returned.</span></span>  
   
- <span data-ttu-id="8b464-110">在对 <xref:System.String.Split%2A> 的调用中，使用标点符号作为分隔符，以从字符串中删除标点符号。</span><span class="sxs-lookup"><span data-stu-id="8b464-110">In the call to <xref:System.String.Split%2A>, the punctuation marks are used as separators in order to remove them from the string.</span></span> <span data-ttu-id="8b464-111">如果你没有不这样做，则假如你有一个字符串 “Historically,”，该字符串不会与 `wordsToMatch` 数组中的“Historically”匹配。</span><span class="sxs-lookup"><span data-stu-id="8b464-111">If you did not do this, for example you could have a string "Historically," that would not match "Historically" in the `wordsToMatch` array.</span></span> <span data-ttu-id="8b464-112">根据在源文本中找到的标点类型，可能需要使用其他分隔符。</span><span class="sxs-lookup"><span data-stu-id="8b464-112">You may have to use additional separators, depending on the types of punctuation found in the source text.</span></span>  
+ <span data-ttu-id="2b13a-110">在对 <xref:System.String.Split%2A> 的调用中，使用标点符号作为分隔符，以从字符串中删除标点符号。</span><span class="sxs-lookup"><span data-stu-id="2b13a-110">In the call to <xref:System.String.Split%2A>, the punctuation marks are used as separators in order to remove them from the string.</span></span> <span data-ttu-id="2b13a-111">如果你没有不这样做，则假如你有一个字符串 “Historically,”，该字符串不会与 `wordsToMatch` 数组中的“Historically”匹配。</span><span class="sxs-lookup"><span data-stu-id="2b13a-111">If you did not do this, for example you could have a string "Historically," that would not match "Historically" in the `wordsToMatch` array.</span></span> <span data-ttu-id="2b13a-112">根据在源文本中找到的标点类型，可能需要使用其他分隔符。</span><span class="sxs-lookup"><span data-stu-id="2b13a-112">You may have to use additional separators, depending on the types of punctuation found in the source text.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="8b464-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="8b464-113">Compiling the Code</span></span>  
- <span data-ttu-id="8b464-114">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="8b464-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2b13a-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="2b13a-113">Compiling the Code</span></span>  
+ <span data-ttu-id="2b13a-114">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="2b13a-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b464-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="8b464-115">See Also</span></span>  
- [<span data-ttu-id="8b464-116">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="8b464-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="2b13a-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="2b13a-115">See Also</span></span>  
+ [<span data-ttu-id="2b13a-116">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="2b13a-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

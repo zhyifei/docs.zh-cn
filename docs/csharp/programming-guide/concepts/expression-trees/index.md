@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326493"
 ---
 # <a name="expression-trees-c"></a><span data-ttu-id="bc082-102">表达式树 (C#)</span><span class="sxs-lookup"><span data-stu-id="bc082-102">Expression Trees (C#)</span></span>
 <span data-ttu-id="bc082-103">表达式树以树形数据结构表示代码，其中每一个节点都是一种表达式，比如方法调用和 `x < y` 这样的二元运算等。</span><span class="sxs-lookup"><span data-stu-id="bc082-103">Expression trees represent code in a tree-like data structure, where each node is an expression, for example, a method call or a binary operation such as `x < y`.</span></span>  

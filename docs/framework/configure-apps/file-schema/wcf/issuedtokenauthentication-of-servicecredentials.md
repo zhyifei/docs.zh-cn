@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749964"
 ---
 # <a name="ltissuedtokenauthenticationgt-of-ltservicecredentialsgt"></a><span data-ttu-id="dfe07-102">&lt;serviceCredentials&gt; 的 &lt;issuedTokenAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="dfe07-102">&lt;issuedTokenAuthentication&gt; of &lt;serviceCredentials&gt;</span></span>
 <span data-ttu-id="dfe07-103">指定作为服务凭据颁发的自定义令牌。</span><span class="sxs-lookup"><span data-stu-id="dfe07-103">Specifies a custom token issued as a service credential.</span></span>  

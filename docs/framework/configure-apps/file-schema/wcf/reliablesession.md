@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751436"
 ---
 # <a name="ltreliablesessiongt"></a><span data-ttu-id="18ab1-102">&lt;reliableSession&gt;</span><span class="sxs-lookup"><span data-stu-id="18ab1-102">&lt;reliableSession&gt;</span></span>
 <span data-ttu-id="18ab1-103">定义 WS-ReliableMessaging 的设置。</span><span class="sxs-lookup"><span data-stu-id="18ab1-103">Defines setting for WS-Reliable Messaging.</span></span> <span data-ttu-id="18ab1-104">如果将该元素添加到自定义绑定，则生成的通道可支持一次性传递保证。</span><span class="sxs-lookup"><span data-stu-id="18ab1-104">When this element is added to a custom binding, the resulting channel can support exactly-once delivery assurances.</span></span>  

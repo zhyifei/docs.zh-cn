@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314322"
 ---
 # <a name="fields-c-programming-guide"></a><span data-ttu-id="979eb-102">字段（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="979eb-102">Fields (C# Programming Guide)</span></span>
 <span data-ttu-id="979eb-103">字段是在[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)中直接声明的任意类型的变量。</span><span class="sxs-lookup"><span data-stu-id="979eb-103">A *field* is a variable of any type that is declared directly in a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md).</span></span> <span data-ttu-id="979eb-104">字段是其包含类型的成员。</span><span class="sxs-lookup"><span data-stu-id="979eb-104">Fields are *members* of their containing type.</span></span>  

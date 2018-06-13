@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320224"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-c"></a><span data-ttu-id="5b3e4-102">如何：查找具有特定元素名称的后代 (C#)</span><span class="sxs-lookup"><span data-stu-id="5b3e4-102">How to: Find Descendants with a Specific Element Name (C#)</span></span>
 <span data-ttu-id="5b3e4-103">有时，您想要查找所有具有特定名称的子代。</span><span class="sxs-lookup"><span data-stu-id="5b3e4-103">Sometimes you want to find all descendants with a particular name.</span></span> <span data-ttu-id="5b3e4-104">可以编写代码用于循环访问所有子代，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴更简单。</span><span class="sxs-lookup"><span data-stu-id="5b3e4-104">You could write code to iterate through all of the descendants, but it is easier to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  

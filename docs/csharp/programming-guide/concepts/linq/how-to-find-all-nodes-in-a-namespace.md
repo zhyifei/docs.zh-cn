@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317773"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="27ced-102">如何：查找命名空间中的所有节点 (C#)</span><span class="sxs-lookup"><span data-stu-id="27ced-102">How to: Find All Nodes in a Namespace (C#)</span></span>
 <span data-ttu-id="27ced-103">您可以对每个元素或属性的命名空间进行筛选，以便查找该特定命名空间中的所有节点。</span><span class="sxs-lookup"><span data-stu-id="27ced-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
