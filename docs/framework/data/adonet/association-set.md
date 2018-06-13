@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756990"
 ---
 # <a name="association-set"></a><span data-ttu-id="81bde-102">Association Set — 关联集</span><span class="sxs-lookup"><span data-stu-id="81bde-102">association set</span></span>
 <span data-ttu-id="81bde-103">*关联集*是的逻辑容器[关联](../../../../docs/framework/data/adonet/association-type.md)相同类型的实例。</span><span class="sxs-lookup"><span data-stu-id="81bde-103">An *association set* is a logical container for [association](../../../../docs/framework/data/adonet/association-type.md) instances of the same type.</span></span> <span data-ttu-id="81bde-104">关联集不是一种数据建模构造，也就是说，它没有描述数据结构或关系。</span><span class="sxs-lookup"><span data-stu-id="81bde-104">An association set is not a data modeling construct; that is, it does not describe the structure of data or relationships.</span></span> <span data-ttu-id="81bde-105">相反，关联集提供了一种承载或存储环境构造（例如公共语言运行库或 SQL Server 数据库）来分组关联实例，以便可以将它们映射到某个数据存储区。</span><span class="sxs-lookup"><span data-stu-id="81bde-105">Instead, an association set provides a construct for a hosting or storage environment (such as the common language runtime or a SQL Server database) to group association instances so that they can be mapped to a data store.</span></span>  

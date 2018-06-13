@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495663"
 ---
 # <a name="error-handling"></a><span data-ttu-id="a9daa-102">错误处理</span><span class="sxs-lookup"><span data-stu-id="a9daa-102">Error handling</span></span>
 ## <a name="error-handling-in-windows-communication-foundation"></a><span data-ttu-id="a9daa-103">Windows Communication Foundation 中的错误处理</span><span class="sxs-lookup"><span data-stu-id="a9daa-103">Error Handling in Windows Communication Foundation</span></span>  

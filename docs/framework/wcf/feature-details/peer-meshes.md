@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493332"
 ---
 # <a name="peer-meshes"></a><span data-ttu-id="9a883-102">对等网格</span><span class="sxs-lookup"><span data-stu-id="9a883-102">Peer Meshes</span></span>
 <span data-ttu-id="9a883-103">A*网格*是彼此之间可以相互通信并由唯一的网格 ID 标识的对等节点的命名的集合 （一个互连图）</span><span class="sxs-lookup"><span data-stu-id="9a883-103">A *mesh* is a named collection (an interconnected graph) of peer nodes that can communicate among themselves and that are identified by a unique mesh ID.</span></span> <span data-ttu-id="9a883-104">每个节点都与其他多个节点相连接。</span><span class="sxs-lookup"><span data-stu-id="9a883-104">Each node is connected to multiple other nodes.</span></span> <span data-ttu-id="9a883-105">在连接良好的网格中，任何两个节点之间都存在一条路径，网格最远端的节点之间的跃点也相对较少，并且即使失去某些节点或连接，网格也会保持连接。网格中的活动节点会发布自己的含有相应网格 ID 的终结点信息，以便其他对等节点可以找到它们。</span><span class="sxs-lookup"><span data-stu-id="9a883-105">In a well-connected mesh, there is a path between any two nodes, with relatively few hops between the nodes on the furthest edges of the mesh, and the mesh will remain connected even if some nodes or connections drop out. Active nodes in the mesh publish their endpoint information with a corresponding mesh ID so that other peers can find them.</span></span>  

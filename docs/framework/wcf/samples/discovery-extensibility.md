@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499566"
 ---
 # <a name="discovery-extensibility"></a><span data-ttu-id="35ffa-102">发现扩展性</span><span class="sxs-lookup"><span data-stu-id="35ffa-102">Discovery Extensibility</span></span>
 <span data-ttu-id="35ffa-103">本部分中的示例演示如何扩展 Windows Communication Foundation (WCF) 发现功能。</span><span class="sxs-lookup"><span data-stu-id="35ffa-103">The sample in this section show how to extend the Windows Communication Foundation (WCF) discovery feature.</span></span>  
