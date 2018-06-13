@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563410"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod 指令
 指定 XAML 处理器应使用解决其后备类型后初始化对象构造函数以外的方法。  

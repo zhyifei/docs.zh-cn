@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741823"
 ---
 # <a name="assembly-contents"></a>程序集内容
 通常，静态程序集可能由以下四个元素组成：  

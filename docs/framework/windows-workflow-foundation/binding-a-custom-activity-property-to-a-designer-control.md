@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513544"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>将自定义活动属性绑定到设计器控件
 将文本框设计器控件与活动自变量绑定非常简单；但将复杂设计器控件（如组合框）与活动自变量绑定则可能非常困难。 本主题讨论如何将活动参数与自定义活动设计器上的组合框控件绑定。  

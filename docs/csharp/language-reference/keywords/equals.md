@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216158"
 ---
 # <a name="equals-c-reference"></a>equals（C# 参考）
 `equals` 上下文关键字用于在查询表达式的 `join` 子句中比较两个序列的元素。 有关详细信息，请参阅 [join 子句](../../../csharp/language-reference/keywords/join-clause.md)。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603946"
 ---
 # <a name="of-clause-visual-basic"></a>Of 子句 (Visual Basic)
 引入了`Of`子句，用于标识*类型参数*上*泛型*类、 结构、 接口、 委托或过程。 泛型类型的信息，请参阅[Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。  

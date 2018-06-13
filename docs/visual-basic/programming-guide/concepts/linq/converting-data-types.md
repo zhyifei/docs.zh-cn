@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643740"
 ---
 # <a name="converting-data-types-visual-basic"></a>转换数据类型 (Visual Basic)
 转换方法可更改输入对象的类型。  

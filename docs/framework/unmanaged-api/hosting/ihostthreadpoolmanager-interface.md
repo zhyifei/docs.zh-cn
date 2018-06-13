@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92097cdf735630f3537296f188bd83ea8162add2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441120"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager 接口
 提供启用公共语言运行时 (CLR) 若要配置线程池以及排队到线程池工作项的方法。  
@@ -40,11 +41,11 @@ ms.lasthandoff: 05/04/2018
  主机不需要使用对的调用中指定的值配置线程池`SetMaxThreads`和`SetMinThreads`方法。 在这种情况下，主机应从这些方法返回 E_NOTIMPL 的 HRESULT 值。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

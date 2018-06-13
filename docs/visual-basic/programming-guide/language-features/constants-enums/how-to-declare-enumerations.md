@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650798"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>如何：声明枚举 (Visual Basic)
 创建一个包含枚举`Enum`声明部分中的类或模块的语句。 不能声明枚举的方法内。 若要指定适当的访问级别，使用`Private`， `Protected`， `Friend`，或`Public`。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219269"
 ---
 # <a name="floating-point-types-table-c-reference"></a>浮点型表（C# 参考）
 下表显示了浮点类型的精度和大致范围。  
