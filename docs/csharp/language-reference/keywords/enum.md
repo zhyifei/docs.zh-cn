@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172223"
 ---
 # <a name="enum-c-reference"></a>enum（C# 参考）
 `enum` 关键字用于声明枚举，一种包含一组被称为枚举数列表的已命名常数的不同类型。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650817"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>宽松委托转换 (Visual Basic)
 宽松的委托转换，可将订阅和函数分配给委托或处理程序，即使在它们的签名不相同。 因此，绑定到委托将与已允许的方法调用绑定保持一致。  

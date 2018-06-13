@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652865"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>如何：创建 XML 文本 (Visual Basic)
 通过使用 XML 文本，可以在代码中直接创建 XML 文档、 片段或元素。 本主题中的示例演示如何创建 XML 元素，具有三个子元素，以及如何创建 XML 文档。  

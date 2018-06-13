@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651539"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>如何：创建新变量 (Visual Basic)
 创建的变量[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。  

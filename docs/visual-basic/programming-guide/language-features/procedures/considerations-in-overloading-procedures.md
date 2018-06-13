@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654325"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>重载过程注意事项 (Visual Basic)
 重载过程，你必须使用不同*签名*为每个重载版本。 这通常意味着每个版本，必须指定不同的参数列表。 有关详细信息，请参阅"不同的签名"[过程重载](./procedure-overloading.md)。  

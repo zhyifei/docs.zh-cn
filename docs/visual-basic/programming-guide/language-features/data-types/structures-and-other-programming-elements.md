@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652020"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>结构和其他编程元素 (Visual Basic)
 你可以结合使用数组、 对象和过程，以及与每个其他使用结构。 交互使用相同的语法，如单独使用这些元素。  

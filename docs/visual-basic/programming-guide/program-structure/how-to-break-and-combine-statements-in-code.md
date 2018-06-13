@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651013"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>如何：在代码中拆分和合并语句 (Visual Basic)
 当编写代码时，你有时可能会创建一些冗长需要水平滚动在代码编辑器中的语句。 尽管这不会影响的方式代码运行，这使得困难为你或任何其他人阅读代码，因为在监视器上显示。 在这种情况下，你应考虑将单个长语句拆分为多个行。  

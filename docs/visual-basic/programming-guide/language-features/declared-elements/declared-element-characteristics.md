@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650889"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>已声明元素的特性 (Visual Basic)
 A*特征*的已声明元素都是会影响代码如何能与它交互该元素的一个方面。 每个声明的元素具有一个或多个与之关联的以下特征：  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652147"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic 中的 Main 过程
 每个 Visual Basic 应用程序必须包含被调用的过程`Main`。 此过程可用作起始点并对你的应用程序总体控制。 .NET Framework 调用你`Main`过程时它已加载你的应用程序，并已准备好将控件传递给它。 除非你要创建 Windows 窗体应用程序，你必须编写`Main`运行的应用程序在其自己的过程。  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650343"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>如何：定义可对不同数据类型提供相同功能的类 (Visual Basic)
 你可以定义这样一个类：你可以通过该类创建可在不同数据类型上提供相同功能的对象。 为此，你可以在定义中指定一个或多个 *类型形参* 。 然后，该类将能够充当使用不同数据类型的对象的模板。 通过这种方式定义的类称为 *泛型类*。  

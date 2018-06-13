@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651108"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>如何：为过程定义参数 (Visual Basic)
 A*参数*允许调用代码将值传递给过程时它将调用它。 声明一个过程的每个参数相同的方式声明变量，指定其名称和数据类型。 你还指定的传递机制，以及是否是可选参数。  

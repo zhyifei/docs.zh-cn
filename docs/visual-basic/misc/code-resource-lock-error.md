@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635601"
 ---
 # <a name="code-resource-lock-error"></a>代码资源锁错误
 调用了代码资源中的过程。 找到了代码资源，但在尝试锁定资源时，可能是因为资源正在使用而出错。  

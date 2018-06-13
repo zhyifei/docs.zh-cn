@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652677"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>如何：在 Visual Basic 中调用事件处理程序
 *事件*是匹配项或操作-例如鼠标单击或信用额度超出-，识别被某程序组件，并为其编写代码以响应。 *事件处理程序*是为响应事件而编写的代码。  
