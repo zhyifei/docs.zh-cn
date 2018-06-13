@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750110"
 ---
 # <a name="lthttpstransportgt"></a><span data-ttu-id="30593-102">&lt;httpsTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="30593-102">&lt;httpsTransport&gt;</span></span>
 <span data-ttu-id="30593-103">为自定义绑定指定用于传输 SOAP 消息的 HTTP 传输。</span><span class="sxs-lookup"><span data-stu-id="30593-103">Specifies an HTTP transport for transmitting SOAP messages for a custom binding.</span></span>  

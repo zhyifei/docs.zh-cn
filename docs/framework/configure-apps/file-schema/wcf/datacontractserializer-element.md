@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752762"
 ---
 # <a name="ltdatacontractserializergt"></a><span data-ttu-id="52c12-102">&lt;DataContractSerializer&gt;</span><span class="sxs-lookup"><span data-stu-id="52c12-102">&lt;dataContractSerializer&gt;</span></span>
 <span data-ttu-id="52c12-103">包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。</span><span class="sxs-lookup"><span data-stu-id="52c12-103">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="52c12-104">此元素出现在两个不同的层次结构中。</span><span class="sxs-lookup"><span data-stu-id="52c12-104">This element occurs in two different hierarchies.</span></span> <span data-ttu-id="52c12-105">这两个层次结构分别在下面的“架构层次结构”一节和“备注”一节中列出。</span><span class="sxs-lookup"><span data-stu-id="52c12-105">One is listed the following Schema Hierarchy section and the other is listed in the Remarks section.</span></span>  

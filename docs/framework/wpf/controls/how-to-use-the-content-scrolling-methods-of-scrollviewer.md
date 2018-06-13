@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552761"
 ---
 # <a name="how-to-use-the-content-scrolling-methods-of-scrollviewer"></a><span data-ttu-id="45d82-102">如何：使用 ScrollViewer 的内容滚动方法</span><span class="sxs-lookup"><span data-stu-id="45d82-102">How to: Use the Content-Scrolling Methods of ScrollViewer</span></span>
 <span data-ttu-id="45d82-103">此示例演示如何使用的滚动方法<xref:System.Windows.Controls.ScrollViewer>元素。</span><span class="sxs-lookup"><span data-stu-id="45d82-103">This example shows how to use the scrolling methods of the <xref:System.Windows.Controls.ScrollViewer> element.</span></span> <span data-ttu-id="45d82-104">这些方法提供了增量滚动的内容，行或页上，在<xref:System.Windows.Controls.ScrollViewer>。</span><span class="sxs-lookup"><span data-stu-id="45d82-104">These methods provide incremental scrolling of content, either by line or by page, in a <xref:System.Windows.Controls.ScrollViewer>.</span></span>  

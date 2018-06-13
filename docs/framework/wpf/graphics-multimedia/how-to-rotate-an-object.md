@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561936"
 ---
 # <a name="how-to-rotate-an-object"></a><span data-ttu-id="061b5-102">如何：旋转对象</span><span class="sxs-lookup"><span data-stu-id="061b5-102">How to: Rotate an Object</span></span>
 <span data-ttu-id="061b5-103">此示例演示如何旋转对象。</span><span class="sxs-lookup"><span data-stu-id="061b5-103">This example shows how to rotate an object.</span></span> <span data-ttu-id="061b5-104">此示例首先创建<xref:System.Windows.Media.RotateTransform>，然后指定其<xref:System.Windows.Media.RotateTransform.Angle%2A>以度为单位。</span><span class="sxs-lookup"><span data-stu-id="061b5-104">The example first creates a <xref:System.Windows.Media.RotateTransform> and then specifies its <xref:System.Windows.Media.RotateTransform.Angle%2A> in degrees.</span></span>  

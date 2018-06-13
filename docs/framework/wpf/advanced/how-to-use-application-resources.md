@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544152"
 ---
 # <a name="how-to-use-application-resources"></a><span data-ttu-id="f14f5-102">如何：使用应用程序资源</span><span class="sxs-lookup"><span data-stu-id="f14f5-102">How to: Use Application Resources</span></span>
 <span data-ttu-id="f14f5-103">本示例演示如何使用应用程序资源。</span><span class="sxs-lookup"><span data-stu-id="f14f5-103">This example shows how to use application resources.</span></span>  

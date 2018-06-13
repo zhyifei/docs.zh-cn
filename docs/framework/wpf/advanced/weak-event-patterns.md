@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549342"
 ---
 # <a name="weak-event-patterns"></a><span data-ttu-id="36bfc-102">弱事件模式</span><span class="sxs-lookup"><span data-stu-id="36bfc-102">Weak Event Patterns</span></span>
 <span data-ttu-id="36bfc-103">在应用程序，很可能不会被附加到事件源的处理程序破坏与附加到源的处理程序的侦听器对象结合使用。</span><span class="sxs-lookup"><span data-stu-id="36bfc-103">In applications, it is possible that handlers that are attached to event sources will not be destroyed in coordination with the listener object that attached the handler to the source.</span></span> <span data-ttu-id="36bfc-104">这种情况下可能会导致内存泄漏。</span><span class="sxs-lookup"><span data-stu-id="36bfc-104">This situation can lead to memory leaks.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="36bfc-105"> 引入了一种设计模式，可以用于解决此问题，通过专用管理器类的特定事件并在该事件的侦听器上实现接口。</span><span class="sxs-lookup"><span data-stu-id="36bfc-105"> introduces a design pattern that can be used to address this issue, by providing a dedicated manager class for particular events and implementing an interface on listeners for that event.</span></span> <span data-ttu-id="36bfc-106">此设计模式中被称为*弱事件模式*。</span><span class="sxs-lookup"><span data-stu-id="36bfc-106">This design pattern is known as the *weak event pattern*.</span></span>  

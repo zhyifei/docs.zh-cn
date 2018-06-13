@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748859"
 ---
 # <a name="ltscopedcertificatesgt-element"></a><span data-ttu-id="9937d-102">&lt;scopedCertificates&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="9937d-102">&lt;scopedCertificates&gt; Element</span></span>
 <span data-ttu-id="9937d-103">表示特定服务为身份验证提供的 X.509（作用域）证书的集合。</span><span class="sxs-lookup"><span data-stu-id="9937d-103">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span> <span data-ttu-id="9937d-104">此集合通常用于指定联合方案中安全令牌服务的服务证书。</span><span class="sxs-lookup"><span data-stu-id="9937d-104">This collection is typically used to specify the service certificates for Security Token Services in a federated scenario.</span></span>  

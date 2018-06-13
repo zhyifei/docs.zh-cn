@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545540"
 ---
 # <a name="how-to-stop-a-page-from-loading"></a><span data-ttu-id="e070e-102">如何： 停止加载页</span><span class="sxs-lookup"><span data-stu-id="e070e-102">How to: Stop a Page from Loading</span></span>
 <span data-ttu-id="e070e-103">此示例演示如何调用<xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A>方法来完成下载之前停止对内容的导航。</span><span class="sxs-lookup"><span data-stu-id="e070e-103">This example shows how to call the <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> method to stop navigation to content before it has finished being downloaded.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549586"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a><span data-ttu-id="fae73-102">如何：创建作为 UI 的外接程序</span><span class="sxs-lookup"><span data-stu-id="fae73-102">How to: Create an Add-In That Is a UI</span></span>
 <span data-ttu-id="fae73-103">此示例演示如何为 Windows Presentation Foundation (WPF) 由承载的外接程序创建[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]独立的应用程序。</span><span class="sxs-lookup"><span data-stu-id="fae73-103">This example shows how to create an add-in that is a Windows Presentation Foundation (WPF) which is hosted by a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] standalone application.</span></span>  

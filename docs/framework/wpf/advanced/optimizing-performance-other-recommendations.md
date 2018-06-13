@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547230"
 ---
 # <a name="optimizing-performance-other-recommendations"></a><span data-ttu-id="c6283-102">优化性能：其他建议</span><span class="sxs-lookup"><span data-stu-id="c6283-102">Optimizing Performance: Other Recommendations</span></span>
 <a name="introduction"></a><span data-ttu-id="c6283-103">本主题提供[优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)这一节中各主题内容之外的性能改进建议。</span><span class="sxs-lookup"><span data-stu-id="c6283-103">This topic provides performance recommendations in addition to the ones covered by the topics in the [Optimizing WPF Application Performance](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) section.</span></span>  

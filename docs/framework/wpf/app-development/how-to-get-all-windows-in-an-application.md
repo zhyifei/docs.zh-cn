@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545485"
 ---
 # <a name="how-to-get-all-windows-in-an-application"></a><span data-ttu-id="9e45b-102">如何： 获取所有 Windows 应用程序中</span><span class="sxs-lookup"><span data-stu-id="9e45b-102">How to: Get all Windows in an Application</span></span>
 <span data-ttu-id="9e45b-103">此示例演示如何获取所有<xref:System.Windows.Window>应用程序中的对象。</span><span class="sxs-lookup"><span data-stu-id="9e45b-103">This example shows how to get all <xref:System.Windows.Window> objects in an application.</span></span>  

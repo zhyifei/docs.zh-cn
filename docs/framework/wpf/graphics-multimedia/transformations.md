@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561909"
 ---
 # <a name="transformations"></a><span data-ttu-id="fd3a0-102">转换</span><span class="sxs-lookup"><span data-stu-id="fd3a0-102">Transformations</span></span>
 <span data-ttu-id="fd3a0-103">转换用于旋转、 缩放、 转换或扭曲<xref:System.Windows.FrameworkElement>对象。</span><span class="sxs-lookup"><span data-stu-id="fd3a0-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  

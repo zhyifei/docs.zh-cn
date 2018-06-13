@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544098"
 ---
 # <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="307da-102">高级 (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="307da-102">Advanced (Windows Presentation Foundation)</span></span>
 <span data-ttu-id="307da-103">本节介绍 WPF 中的部分高级区域。</span><span class="sxs-lookup"><span data-stu-id="307da-103">This section describes some of the advanced areas in WPF.</span></span>  
