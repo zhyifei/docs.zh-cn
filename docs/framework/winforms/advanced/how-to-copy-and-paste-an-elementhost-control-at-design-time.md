@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524846"
 ---
 # <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>如何：在设计时复制并粘贴 ElementHost 控件
 此过程演示如何复制 Windows 窗体上的 Windows Presentation Foundation (WPF) 控件。  

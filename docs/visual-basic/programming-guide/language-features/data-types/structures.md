@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647252"
 ---
 # <a name="structures-visual-basic"></a>结构 (Visual Basic)
 A*结构*是用户定义支持的类型 (UDT) 的 Visual Basic 早期版本的泛化。 字段中，除了结构可以公开属性、 方法和事件。 结构可以实现一个或多个接口，而您可以声明的每个字段的单独的访问级别。  

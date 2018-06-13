@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335830"
 ---
 # <a name="threading-c"></a>线程处理 (C#)
 通过线程处理，C# 程序可执行并行处理，让你可一次执行多个操作。 例如，可使用线程处理来监视来自用户的输入、执行后台任务和处理并行输入流。  

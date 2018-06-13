@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646547"
 ---
 # <a name="control-flow-in-visual-basic"></a>控制流 (Visual Basic)
 程序可以按从头到尾的顺序执行所有语句，而不受管制。 只需使用这种单向控制流，即可编写一些非常简单的程序。 然而，任何一种编程语言的大部分功能性和实用性都是源自能否更改控制语句和循环的执行顺序。  

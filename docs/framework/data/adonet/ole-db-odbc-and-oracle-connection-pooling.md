@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803119"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC 和 Oracle 连接池
 池连接可以显著提高应用程序的性能和可缩放性。 本节介绍用于 OLE DB、ODBC 和 Oracle 的 .NET Framework 数据提供程序的连接池。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648494"
 ---
 # <a name="structure-variables-visual-basic"></a>结构变量 (Visual Basic)
 一旦你已创建一个结构，你可以将过程级别和模块级变量声明该类型。 例如，可以创建一个有关计算机系统该记录的信息。 下面的示例演示这一操作。  

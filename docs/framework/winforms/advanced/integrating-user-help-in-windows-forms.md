@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527218"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>在 Windows 窗体中集成用户帮助
 生成基于 Windows 的应用程序的一个必要的但经常被忽略，方面是帮助系统中，因为这是用户转混淆次协助的地方。 Windows 窗体支持两种不同类型的帮助，每个提供的[HelpProvider 组件](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)。 第一个涉及用户指向的 HTML 或 HTML 帮助 1 的帮助文件。*x*或更高版本格式。 第二个可以显示简要的"这是什么"-键入单独的控件; 上的帮助这是在对话框上特别有用。 可以在同一个窗体上使用两种类型的帮助。  

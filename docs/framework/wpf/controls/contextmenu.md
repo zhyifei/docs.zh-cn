@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550119"
 ---
 # <a name="contextmenu"></a>ContextMenu
 <xref:System.Windows.Controls.ContextMenu>允许控件显示<xref:System.Windows.Controls.Menu>特定于控件的上下文。 通常情况下，<xref:System.Windows.Controls.ContextMenu>中公开[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]通过鼠标右键按钮或键盘的菜单按钮。  

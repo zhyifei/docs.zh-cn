@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525747"
 ---
 # <a name="backgroundworker-component"></a>BackgroundWorker 组件
 `BackgroundWorker`组件使你的窗体或控件异步运行操作。  

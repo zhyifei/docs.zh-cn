@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548488"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>如何：验证和合并 PrintTicket
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [打印架构](http://go.microsoft.com/fwlink/?LinkId=186397)包括灵活且可扩展<xref:System.Printing.PrintCapabilities>和<xref:System.Printing.PrintTicket>元素。 前者可以详细列举的打印设备的功能，后者用于指定设备应如何使用这些功能来处理的文档、 单个文档或单个页面按特定顺序。  

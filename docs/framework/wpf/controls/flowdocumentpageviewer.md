@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551219"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
 <xref:System.Windows.Controls.FlowDocumentPageViewer>控件用于查看<xref:System.Windows.Documents.FlowDocument>每页基础上的内容。 与之相反<xref:System.Windows.Controls.FlowDocumentScrollViewer>，哪些显示<xref:System.Windows.Documents.FlowDocument>滚动查看器中的内容。  

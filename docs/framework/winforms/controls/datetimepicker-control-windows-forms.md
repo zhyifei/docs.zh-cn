@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526538"
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker 控件（Windows 窗体）
 Windows 窗体`DateTimePicker`控件允许用户从日期或时间的列表中选择单个项。 当用于表示的日期，它将显示在两个部分： 文本，并单击列表旁的向下箭头时出现的网格中所表示日期的下拉列表。  

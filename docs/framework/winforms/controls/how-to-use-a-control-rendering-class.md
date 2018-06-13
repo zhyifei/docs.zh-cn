@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534100"
 ---
 # <a name="how-to-use-a-control-rendering-class"></a>如何：使用控件呈现类
 此示例演示如何使用<xref:System.Windows.Forms.ComboBoxRenderer>类以呈现的下拉箭头的组合框控件。 此示例由组成<xref:System.Windows.Forms.Control.OnPaint%2A>简单的自定义控件的方法。 <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType>属性用于确定在应用程序窗口的工作区中是否启用了可视样式。 如果视觉样式处于活动状态，则<xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType>方法将呈现的下拉箭头以视觉样式; 否则为<xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType>方法将呈现的经典 Windows 样式中的下拉箭头。  

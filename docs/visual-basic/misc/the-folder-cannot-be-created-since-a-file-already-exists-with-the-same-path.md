@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642059"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>无法创建该文件夹，因为存在具有相同路径的文件
 尝试创建一个目录，但已存在具有该路径的文件。 这可能是由于不正确地分析路径所导致，特别是使用相对路径时。  
