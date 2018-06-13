@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388051"
 ---
 # <a name="pinvokestackimbalance-mda"></a>pInvokeStackImbalance MDA
 给定 <xref:System.Runtime.InteropServices.DllImportAttribute> 属性中指定的调用约定以及托管签名中的参数声明，当 CLR 检测到平台 invoke 调用之后的堆栈深度与预期堆栈深度不匹配时，激活 `pInvokeStackImbalance` 托管调试助手 (MDA)。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361567"
 ---
 # <a name="boolean-data-types"></a>Boolean 数据类型
 布尔运算符在公共语言运行库 (CLR) 中按预期方式工作，但其短路行为不会进行转换。 例如，Visual Basic `AndAlso` 运算符在行为上类似于 `And` 运算符。 C# `&&` 运算符在行为上类似于 `&` 运算符。  

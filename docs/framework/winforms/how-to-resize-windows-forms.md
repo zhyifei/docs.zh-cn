@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540379"
 ---
 # <a name="how-to-resize-windows-forms"></a>如何：调整 Windows 窗体的大小
 可使用多种方式指定 Windows 窗体的大小。 可以通过设置 <xref:System.Windows.Forms.Form.Size%2A> 属性的新值，或单独调整 <xref:System.Windows.Forms.Control.Height%2A> 或 <xref:System.Windows.Forms.Control.Width%2A> 属性，以编程方式更改窗体的高度和宽度。 如果使用 Visual Studio，你可以更改使用 Windows 窗体设计器的大小。 另请参阅[如何： 使用设计器调整 Windows 窗体](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\))。  

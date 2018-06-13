@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362813"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>在单阶段和多阶段中提交事务
 事务中所使用的每个资源都由资源管理器 (RM) 进行管理，而资源管理器的操作则由事务管理器 (TM) 进行协调。 [作为参与者在事务中登记资源](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)主题讨论如何在事务中登记资源 （或多个资源）。 本主题讨论如何在已登记的资源之间协调事务提交。  

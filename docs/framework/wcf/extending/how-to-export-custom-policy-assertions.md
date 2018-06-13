@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488213"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>如何：导出自定义策略断言
 策略断言说明服务终结点的功能和需求。 服务应用程序可以在服务元数据中使用自定义策略断言，来将终结点、绑定或协定自定义信息传递到客户端应用程序。 可以使用 Windows Communication Foundation (WCF) 导出 WSDL 终结点、 操作或消息主题，具体的功能和通信的需求取决于绑定中附加的策略表达式中的断言。  

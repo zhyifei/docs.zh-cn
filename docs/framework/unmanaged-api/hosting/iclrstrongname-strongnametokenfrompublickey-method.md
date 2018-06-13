@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 587e2086a03e9c9ba57ae3b68de841f12543404e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435603"
 ---
 # <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a>ICLRStrongName::StrongNameTokenFromPublicKey 方法
 获取令牌表示的公共密钥。 强名称标记是公钥的缩写形式。  
@@ -57,11 +58,11 @@ HRESULT StrongNameTokenFromPublicKey (
  强名称标记是公钥的用于存储在元数据中的密钥信息时节省空间的缩写形式。 具体而言，强名称令牌将用于程序集引用来引用依赖程序集。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
- **库：**作为 mscoree.dll 中的资源  
+ **库：** 作为 mscoree.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

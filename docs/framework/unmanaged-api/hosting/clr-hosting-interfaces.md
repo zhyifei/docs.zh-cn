@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435636"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR 承载接口
 本部分描述的接口以及非托管主机可用于将公共语言运行时 (CLR) 集成到其应用程序。 信息适用于.NET Framework 2.0 版和更高版本。 这些接口使主机能够控制运行时比版本 1.0 和 1.1 中，可能更多方面，并提供 CLR 和主机的执行模型之间更紧密地集成。  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540974"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>控件和组件创作疑难解答
 本主题列出了开发组件和控件时遇到的常见问题。 有关详细信息，请参阅[使用组件编程](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)。  

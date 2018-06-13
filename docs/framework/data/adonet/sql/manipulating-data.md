@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363109"
 ---
 # <a name="manipulating-data"></a>操作数据
 在引入多个活动结果集 (MARS) 之前，开发人员必须使用多个连接或服务器端游标来解决某些方案。 此外，如果在事务情况下使用多个连接，绑定的连接 (使用**sp_getbindtoken**和**sp_bindsession**) 需要。 以下方案显示如何使用启用 MARS 的连接来取代多个连接。  

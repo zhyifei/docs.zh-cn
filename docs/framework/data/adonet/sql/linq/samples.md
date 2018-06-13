@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360167"
 ---
 # <a name="samples"></a>示例
 本主题提供包含 Visual Basic 和 C# 解决方案的链接[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]示例代码。  

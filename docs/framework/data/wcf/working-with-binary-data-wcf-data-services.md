@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365366"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>处理二进制数据（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，你可以检索和更新从二进制数据[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送通过以下方式之一：  

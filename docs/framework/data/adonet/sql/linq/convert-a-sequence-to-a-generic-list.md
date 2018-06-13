@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361797"
 ---
 # <a name="convert-a-sequence-to-a-generic-list"></a>将某一序列转换为泛型列表
 使用 <xref:System.Linq.Enumerable.ToList%2A> 可从序列创建泛型列表。  

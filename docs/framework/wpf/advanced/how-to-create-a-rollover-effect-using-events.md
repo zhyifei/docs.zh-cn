@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543005"
 ---
 # <a name="how-to-create-a-rollover-effect-using-events"></a>如何：使用事件创建翻转效果
 此示例演示如何根据鼠标指针进入和离开元素占用的区域更改元素的颜色。  

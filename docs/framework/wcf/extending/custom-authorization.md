@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487852"
 ---
 # <a name="custom-authorization"></a>自定义授权
 授权是控制对资源和任务的访问的过程。 本节中的主题可帮助您创建和实现不同的声明类型或策略。  

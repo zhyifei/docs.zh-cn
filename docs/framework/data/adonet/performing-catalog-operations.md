@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362059"
 ---
 # <a name="performing-catalog-operations"></a>执行目录操作
 若要执行命令来修改数据库或目录，如 CREATE TABLE 或 CREATE PROCEDURE 语句中，创建**命令**对象使用相应的 SQL 语句和**连接**对象。 执行该命令与**ExecuteNonQuery**方法**命令**对象。  

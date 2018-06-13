@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365392"
 ---
 # <a name="quickstart-wcf-data-services"></a>快速入门（WCF 数据服务）
 本快速入门教程可帮助你熟悉[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]通过一系列支持中的主题的任务[入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)。  

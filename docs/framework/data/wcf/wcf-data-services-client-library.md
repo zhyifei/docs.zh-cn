@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365509"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF 数据服务客户端库
 如果任一应用程序可发送 HTTP 请求并处理数据服务返回的 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 源，则该应用程序可与基于[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的数据服务进行交互。 通过这种互操作性，您可以从启用 Web 的诸多应用程序访问基于 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的服务。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包括客户端库会提供更丰富的编程体验，使用时[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]馈送从.NET Framework 或基于 Silverlight 的应用程序。  

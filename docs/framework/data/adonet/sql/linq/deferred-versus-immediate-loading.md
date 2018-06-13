@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360345"
 ---
 # <a name="deferred-versus-immediate-loading"></a>推迟加载与即时加载
 查询某对象时，实际上您只检索请求的对象。 *相关*不会自动获取对象在同一时间。 (有关详细信息，请参阅[跨关系查询](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)。)您无法看到相关对象尚未加载这一事实，原因是尝试访问它们时将产生检索它们的请求。  

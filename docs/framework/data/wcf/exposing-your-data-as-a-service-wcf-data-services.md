@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363559"
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>将数据公开为服务（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 与 Visual Studio 使你能够更轻松地定义服务以公开你的数据作为集成[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 创建数据服务公开[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源涉及以下基本步骤：  

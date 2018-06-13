@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361069"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>在 SQL Server 中对存储过程签名
  数字签名是用签名人的私钥加密的数据摘要。 该私钥可确保数字签名对于其持有者或所有者是唯一的。 你可以注册的存储的过程、 （除外内联表值函数） 的函数、 触发器和程序集。  

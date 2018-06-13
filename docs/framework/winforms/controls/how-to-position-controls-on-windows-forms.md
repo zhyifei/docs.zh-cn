@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538707"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>如何：在 Windows 窗体上定位控件
 若要放置控件，请使用 Windows 窗体设计器中，或指定<xref:System.Windows.Forms.Control.Location%2A>属性。  

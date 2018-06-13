@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363281"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>使用单阶段提交和可提升的单阶段通知进行优化
 本主题描述 <xref:System.Transactions> 基础结构所提供的用于优化性能的机制。  

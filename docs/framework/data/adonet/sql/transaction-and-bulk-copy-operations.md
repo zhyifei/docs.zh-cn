@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365337"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>事务和批量复制操作
 批量复制操作可以作为独立的操作执行，也可以作为多步事务的一部分执行。 后一种方式使您可以在同一事务中执行多个批量复制操作并执行其他数据库操作（例如插入、更新和删除），同时仍能够提交或回滚整个事务。  

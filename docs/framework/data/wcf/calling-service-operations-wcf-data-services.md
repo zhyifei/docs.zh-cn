@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364851"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>调用服务操作（WCF 数据服务）
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 定义数据服务的服务操作。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]允许您将这类操作定义为数据服务的方法。 与其他数据服务资源一样，这些服务操作也通过 URI 进行寻址。 服务操作可以返回实体类型的集合、单个实体类型实例的集合和基元类型（如整数和字符串）的集合。 服务操作还可以返回 `null`（在 Visual Basic 中为 `Nothing`）。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库可以用于访问支持 HTTP GET 请求的服务操作。 这些种类的服务操作定义为应用了 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 有关详细信息，请参阅[服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。  
