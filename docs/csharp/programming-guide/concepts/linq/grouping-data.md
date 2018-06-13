@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327432"
 ---
 # <a name="grouping-data-c"></a>对数据分组 (C#)
 分组是指将数据分到不同的组，使每组中的元素拥有公共的属性。  

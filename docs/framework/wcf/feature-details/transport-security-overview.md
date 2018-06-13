@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507092"
 ---
 # <a name="transport-security-overview"></a>传输安全概述
 传输安全机制中 Windows Communication Foundation (WCF) 依赖于的绑定和正在使用的传输。 例如，当使用 <xref:System.ServiceModel.WSHttpBinding> 类时，传输为 HTTP，保证传输安全的主要机制为 HTTP 上的安全套接字层 (SSL) （通常称为 HTTPS）。 本主题讨论在 WCF 系统提供绑定中使用的主要传输安全机制。  

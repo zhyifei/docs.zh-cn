@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 991e333c53101a2be2a8a19d3960c3d0879619be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409927"
 ---
 # <a name="debugging-interfaces"></a>调试接口
 本节描述进行程序调试处理的非托管接口，所调试的程序在公共语言运行时 (CLR) 中执行。  

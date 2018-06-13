@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508495"
 ---
 # <a name="service-transaction-behavior"></a>服务事务行为
 此示例演示客户端协调事务的用法，以及为了控制服务事务行为而对 ServiceBehaviorAttribute 和 OperationBehaviorAttribute 进行的设置。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，实现计算器服务，但会扩展，以维护数据库表和某一字段的计算器操作汇总了有状态中执行的操作的服务器日志。 持久写入服务器日志表依赖于客户端协调事务的结果 - 如果客户端事务未完成，Web 服务事务可以确保不会提交对数据库的更新。  

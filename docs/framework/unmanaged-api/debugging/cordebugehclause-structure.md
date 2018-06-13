@@ -1,14 +1,6 @@
 ---
-title: "CorDebugEHClause 结构"
-ms.custom: 
+title: CorDebugEHClause 结构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 dev_langs:
 - cpp
 api_name:
@@ -20,17 +12,14 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 97428837d78c246915381b51fb5005a68518b7bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 40820a805310786eeb0effd7c5284c1a70a6e70b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407595"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 结构
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -57,8 +46,7 @@ typedef struct _CorDebugEHClause {
 |------------|-----------------|  
 |`Flags`|描述 EH 子句中的异常信息的位字段。 有关详细信息，请参阅“备注”部分。|  
 |`TryOffset`|方法主体开头的 `try` 块的偏移量（以字节为单位）。|  
-|`TryLength`|
-          `try` 块的长度（以字节为单位）。|  
+|`TryLength`|`try` 块的长度（以字节为单位）。|  
 |`HandlerOffset`|此 `try` 块的处理程序的位置。|  
 |`HandlerLength`|处理程序代码的大小（以字节为单位）。|  
 |`ClassToken`|基于类型的异常处理程序的元数据标记。|  
@@ -78,14 +66,14 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FINALLY`|0x00000002|`finally` 子句。|  
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Fault 子句（仅当引发异常时才调用的 `finally` 子句）。|  
   
-## <a name="requirements"></a>惠?  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [GetEHClauses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  

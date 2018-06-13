@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410411"
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 场
 使用 Windows Identity Foundation (WIF) 保护 Web 场中部署的信赖方 (RP) 应用程序的资源时，必须采取特定的步骤确保 WIF 能处理场中不同计算机上运行的信赖方应用程序实例的令牌。 处理过程包括验证会话令牌签名、加密和解密会话令牌、缓存会话令牌以及检测重播的安全令牌。  

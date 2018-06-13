@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508691"
 ---
 # <a name="wcf-simplification-features"></a>WCF 简化功能
 本主题讨论可使编写 WCF 应用程序更简单的新功能。  

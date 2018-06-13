@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512380"
 ---
 # <a name="error-handling-activities-in-wf"></a>WF 中的错误处理活动
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供多个系统提供的活动，用于实现错误处理和恢复。 有关详细信息，请参阅[异常](../../../docs/framework/windows-workflow-foundation/exceptions.md)。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ff378602fc7338263ef49aee6802d2138bab9d2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413167"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject 方法
 分配新的对象实例并调用的指定构造函数方法。  
@@ -49,7 +50,7 @@ HRESULT NewObject (
  [in]ICorDebugValue 对象数组，其中每个表示一个自变量传递给构造函数。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506527"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>设计模式：基于列表的发布-订阅
 本示例演示作为 Windows Communication Foundation (WCF) 程序实现的基于列表的发布-订阅模式。  

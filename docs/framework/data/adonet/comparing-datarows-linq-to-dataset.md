@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756275"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>比较 DataRow (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 定义多种用于比较源元素的集合运算符以查看它们是否相等。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 提供下面的集合运算符：  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507708"
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
 由于各种原因，Windows Communication Foundation (WCF) 不支持某些特定安全方案。 例如， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 没有实现 SSPI 或 Kerberos 身份验证协议，并因此 WCF 不支持在该平台上使用 Windows 身份验证来运行服务。 运行 Windows XP Home Edition 下的 WCF 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。  

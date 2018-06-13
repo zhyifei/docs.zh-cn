@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513300"
 ---
 # <a name="rehosting-the-workflow-designer"></a>重新承载工作流设计器
 为了创建、修改和监视工作流，可以将 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 重新承载于 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 之外的环境中。  

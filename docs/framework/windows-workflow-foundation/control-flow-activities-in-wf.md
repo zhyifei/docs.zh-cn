@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512994"
 ---
 # <a name="control-flow-activities-in-wf"></a>WF 中的控制流活动
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供用于控制工作流中执行流的多个活动。 某些这些活动 (如`Switch`和`If`) 实现与编程环境，如 Visual C# 中，同时其他类似的流控制结构 (如`Pick`) 建立新编程结构的模型。  
