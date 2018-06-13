@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 194184f6ddafa1341fbb731ba51e9635ea66ffa3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450497"
 ---
 # <a name="metadata-unmanaged-api-reference"></a>元数据（非托管 API 参考）
 元数据 API 使客户端（如编译器）可以生成或访问组件的元数据，而无需公共语言运行时 (CLR) 加载类型。  

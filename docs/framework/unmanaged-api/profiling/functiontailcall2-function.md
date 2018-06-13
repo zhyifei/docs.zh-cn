@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a515c2622f81c666523aa012fa1e34e5251c074
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452476"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 函数
 当前正在执行的函数，即将执行尾调用给另一个函数，并提供有关堆栈帧的信息，请通知探查器。  
@@ -65,7 +66,7 @@ void __stdcall FunctionTailcall2 (
  此外，`FunctionTailcall2`函数不能调用进入托管代码或以任何方式导致托管的内存分配。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
   

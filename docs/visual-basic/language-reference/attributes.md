@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583362"
 ---
 # <a name="attributes-visual-basic"></a>特性 (Visual Basic)
 Visual Basic 提供允许对象与非托管代码交互操作的多个属性和一个属性，它使无模块名称需访问模块成员。 下表列出了 Visual Basic 使用的属性。  

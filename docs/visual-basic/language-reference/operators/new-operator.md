@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603634"
 ---
 # <a name="new-operator-visual-basic"></a>New 运算符 (Visual Basic)
 引入了`New`子句创建一个新的对象实例，指定类型参数的构造函数约束或标识`Sub`作为类构造函数的过程。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575383"
 ---
 # <a name="event-design"></a>事件设计
 事件是回调 （允许框架，以调入用户代码的构造） 的最常用的形式。 其他回调机制包括采用委托、 虚拟成员和基于接口的插件的成员。从可用性研究的数据指示的大部分开发人员更喜欢使用事件，与它们使用的其他回调机制。 事件可以很好地与 Visual Studio 和许多语言集成。  

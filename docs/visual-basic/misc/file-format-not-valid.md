@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637369"
 ---
 # <a name="file-format-not-valid"></a>文件格式无效
 要么你尝试将一个文件加载到组件中，但是文件中的数据格式与该组件不兼容，要么你尝试将组件数据保存到文件中，但是数据格式与文件格式不兼容。  

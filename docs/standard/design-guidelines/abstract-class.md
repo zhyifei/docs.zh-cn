@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570528"
 ---
 # <a name="abstract-class-design"></a>抽象类设计
 **X 不**在抽象类型中定义公共或受保护内部构造函数。  

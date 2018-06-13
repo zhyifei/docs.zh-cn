@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d5dcb089074b52fc87a0bb83c7e062e7ef07b46
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450396"
 ---
 # <a name="corprfgcrootflags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS 枚举
 指示垃圾回收根的属性。  
@@ -49,7 +50,7 @@ typedef enum {
  `COR_PRF_GC_ROOT_FLAGS` 是提供特殊的根的附加信息的位掩码。 但是，并非所有根都是特殊的。 例如，某些根不是弱引用，已固定，或引用计数的内部指针。 对于这种根有要传达的标志。 因此，使用此枚举中，如的方法[icorprofilercallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)方法，发送 0 标志的位掩码，指示所有标志处于关闭状态。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

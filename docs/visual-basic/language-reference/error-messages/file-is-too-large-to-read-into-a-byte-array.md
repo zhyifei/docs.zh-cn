@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585920"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a>文件太大，无法读取到字节数组中
 您试图从中读取的字节数组到文件的大小超过 4 GB。 `My.Computer.FileSystem.ReadAllBytes`方法无法读取的文件超过此大小。  

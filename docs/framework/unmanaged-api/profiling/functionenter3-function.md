@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 466b90f814d267fb289b2804beccd58fc442e341
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451875"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 函数
 通知探查器控件传递给函数。  
@@ -47,7 +48,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 -   在退出时，你必须通过弹出已推送由其调用方的所有参数由还原堆栈。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
   
