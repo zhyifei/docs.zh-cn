@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576574"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>将字符串转换为 .NET Framework 数据类型
 若要将字符串转换为 .NET Framework 数据类型，请使用满足应用要求的 XmlConvert 方法。 有关 XmlConvert 类提供的所有转换方法的列表，请参阅 <xref:System.Xml.XmlConvert>。  

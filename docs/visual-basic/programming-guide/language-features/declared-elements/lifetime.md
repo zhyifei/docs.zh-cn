@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654224"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic 中的生存期
 *生存期*的已声明的元素是的时间段期间它是可供使用。 变量是具有生存期的唯一元素。 为此，编译器将过程参数和函数返回值视为变量的特殊情况。 变量的生存期表示在此期间它可以存放一个值的时间。 其值可以更改在其生存期内，但它始终包含一些值。  

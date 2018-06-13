@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577210"
 ---
 # <a name="editing-xml-schemas"></a>编辑 XML 架构
 编辑 XML 架构是架构对象模型 (SOM) 最重要的功能之一。 SOM 的所有前架构编译属性均可以用于更改 XML 架构中的现有值。 然后，可以重新编译 XML 架构以反映更改。  

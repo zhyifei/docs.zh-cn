@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652085"
 ---
 # <a name="-imports-visual-basic"></a>-导入 (Visual Basic)
 从指定的程序集导入命名空间。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   
 |设置/在 Visual Studio 集成的开发环境中导入|  
 |---|  
-|1.在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“引用”选项卡。<br />3.旁边的框中输入命名空间名称**添加用户导入**按钮。<br />4.单击**添加用户导入**按钮。|  
+|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“引用”选项卡。<br />3.旁边的框中输入命名空间名称**添加用户导入**按钮。<br />4.单击**添加用户导入**按钮。|  
   
 ## <a name="example"></a>示例  
  下面的代码编译时`/imports:system.globalization`指定。 否则，成功编译要求任一`Imports System.Globalization`语句在源代码文件中，开始将包括或属性完全限定为`System.Globalization.CultureInfo.CurrentCulture.Name`。 

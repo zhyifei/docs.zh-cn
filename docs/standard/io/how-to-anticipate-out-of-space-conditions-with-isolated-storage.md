@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575575"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>如何：预见独立存储中的空间不足条件
 使用独立存储的代码受[配额](../../../docs/standard/io/isolated-storage.md#quotas)限制，配额指定了独立存储文件和目录所在数据隔离舱的大小上限。 该配额由安全策略定义，管理员可以对其进行配置。 如果尝试写入数据时超过了所允许的最大大小，将引发 <xref:System.IO.IsolatedStorage.IsolatedStorageException> 异常并使操作失败。 这有助于防止恶意的拒绝服务攻击，此类攻击可能会导致应用因为数据存储已满而拒绝请求。  

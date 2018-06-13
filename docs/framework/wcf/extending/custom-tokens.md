@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485358"
 ---
 # <a name="custom-tokens"></a>自定义令牌
 虽然 Windows Communication Foundation (WCF) 以本机方式支持 X.509 证书、 安全上下文令牌、 Kerberos 票证和用户名令牌作为凭据，但它的灵活程度足以使您可以使用您自己的自定义凭据。  
