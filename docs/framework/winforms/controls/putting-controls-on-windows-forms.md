@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536213"
 ---
 # <a name="putting-controls-on-windows-forms"></a><span data-ttu-id="d32ba-102">将控件放在 Windows 窗体上</span><span class="sxs-lookup"><span data-stu-id="d32ba-102">Putting Controls on Windows Forms</span></span>
 <span data-ttu-id="d32ba-103">有多种可以根据你的应用程序的需要放在 Windows 窗体的控件。</span><span class="sxs-lookup"><span data-stu-id="d32ba-103">There are a wide variety of controls that you can put on Windows Forms, depending on the needs of your application.</span></span>  

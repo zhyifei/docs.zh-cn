@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531935"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a><span data-ttu-id="9c5d6-102">如何：将 Windows 窗体按钮指定为“接受”按钮</span><span class="sxs-lookup"><span data-stu-id="9c5d6-102">How to: Designate a Windows Forms Button as the Accept Button</span></span>
 <span data-ttu-id="9c5d6-103">在任何 Windows 窗体中，你可以指定<xref:System.Windows.Forms.Button>控件接受按钮，也称为默认按钮。</span><span class="sxs-lookup"><span data-stu-id="9c5d6-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the accept button, also known as the default button.</span></span> <span data-ttu-id="9c5d6-104">每当用户按 ENTER 键，无论哪个窗体上的其他控件具有焦点单击默认按钮。</span><span class="sxs-lookup"><span data-stu-id="9c5d6-104">Whenever the user presses the ENTER key, the default button is clicked regardless of which other control on the form has the focus.</span></span>  

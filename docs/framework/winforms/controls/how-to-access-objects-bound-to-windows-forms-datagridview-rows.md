@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529670"
 ---
 # <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a><span data-ttu-id="5ff0c-102">如何：访问绑定到 Windows 窗体 DataGridView 行的对象</span><span class="sxs-lookup"><span data-stu-id="5ff0c-102">How to: Access Objects Bound to Windows Forms DataGridView Rows</span></span>
 <span data-ttu-id="5ff0c-103">有时，显示业务对象集合中存储的信息表很有用。</span><span class="sxs-lookup"><span data-stu-id="5ff0c-103">Sometimes it is useful to display a table of information stored in a collection of business objects.</span></span> <span data-ttu-id="5ff0c-104">将 <xref:System.Windows.Forms.DataGridView> 控件绑定到此类集合时，每个公共属性都将在它自己的列中显示，除非该属性已用 <xref:System.ComponentModel.BrowsableAttribute> 标记为不可浏览。</span><span class="sxs-lookup"><span data-stu-id="5ff0c-104">When you bind a <xref:System.Windows.Forms.DataGridView> control to such a collection, each public property is displayed in its own column unless the property has been marked non-browsable with a <xref:System.ComponentModel.BrowsableAttribute>.</span></span> <span data-ttu-id="5ff0c-105">例如，`Customer` 对象的集合包含“姓名”和“地址”等列。</span><span class="sxs-lookup"><span data-stu-id="5ff0c-105">For example, a collection of `Customer` objects would have columns such as **Name** and **Address**.</span></span>  
