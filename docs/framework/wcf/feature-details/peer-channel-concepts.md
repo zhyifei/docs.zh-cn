@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491019"
 ---
 # <a name="peer-channel-concepts"></a>对等通道概念
 本部分简要介绍构成 Windows Communication Foundation (WCF) 对等通道的概念。  

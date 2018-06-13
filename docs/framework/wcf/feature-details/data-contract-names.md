@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494265"
 ---
 # <a name="data-contract-names"></a>数据协定名称
 有时，客户端和服务不共享相同的类型。 它们仍然可以将数据传递给对方，只要数据协定是双方等效的。 [数据协定等效性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)基于数据协定和数据成员名称，并因此提供一种机制，以映射到这些名称的类型和成员。 本主题介绍命名数据协定，以及 Windows Communication Foundation (WCF) 基础结构的默认行为，创建名称时的规则。  

@@ -1,27 +1,16 @@
 ---
-title: "如何：实现使用发现代理查找服务的客户端应用程序"
-ms.custom: 
+title: 如何：实现使用发现代理查找服务的客户端应用程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82b38d684d6a8de66d569c6fe09813f8ee1bea6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489692"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>如何：实现使用发现代理查找服务的客户端应用程序
-本主题是讨论如何实现发现代理的三个主题中的第三个。 在前面的主题中，[如何： 实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)，你实现[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]向发现代理注册自身的服务。 在本主题中，您将创建一个使用发现代理查找 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端。  
+本主题是讨论如何实现发现代理的三个主题中的第三个。 在前面的主题中，[如何： 实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)，实现向发现代理注册自身的 WCF 服务。 在本主题中，你将创建使用发现代理查找 WCF 服务的 WCF 客户端。  
   
 ### <a name="implement-the-client"></a>实现客户端  
   

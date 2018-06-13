@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 692ac4ef4fe8ea64c6a63dc2f02cc04244a842c3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432516"
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority 接口
 管理代码对象的标识键。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/04/2018
 |`IIdentityAuthority::TextToReference`|获取到的接口指针`IReferenceIdentity`实例生成从指定格式字符串。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   

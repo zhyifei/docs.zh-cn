@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493309"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>如何：注册和配置服务标记
 在使用之前在 COM 应用程序中的 Windows Communication Foundation (WCF) 服务名字对象具有类型化协定，你必须向 COM 注册所需的特性化的类型并使用所需的绑定配置的 COM 应用程序和标记配置。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489750"
 ---
 # <a name="custom-filters"></a>自定义筛选器
 借助自定义筛选器，您可以定义无法通过系统提供的消息筛选器实现的匹配逻辑。 例如，您可以创建这样的自定义筛选器：该筛选器散列特定的消息元素，然后检查元素值以确定该筛选器应返回 true 还是 false。  

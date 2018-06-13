@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490830"
 ---
 # <a name="performance-considerations"></a>性能注意事项
 在生成应用程序时，性能注意事项始终是非常重要的。 本节包含与性能和安全相关的项。  

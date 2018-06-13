@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268115"
 ---
 # <a name="null-c-reference"></a>null（C# 参考）
 `null` 关键字是表示不引用任何对象的空引用的文字值。 `null` 是引用类型变量的默认值。 普通值类型不能为 null。 但是，C# 2.0 引入了可以为 null 的值类型。 请参阅[可以为 Null 的类型](../../../csharp/programming-guide/nullable-types/index.md)。  

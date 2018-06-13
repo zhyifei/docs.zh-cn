@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493592"
 ---
 # <a name="how-to-error-handling"></a>如何：错误处理
 本主题概述了创建采用错误处理的路由配置所需要的基本步骤。 在本示例中，消息路由到目标终结点。 如果消息因网络或通信相关故障 (<xref:System.ServiceModel.CommunicationException>) 而无法传递，则会将消息重新发送到备用终结点。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495127"
 ---
 # <a name="message-security-with-a-user-name-client"></a>用户名客户端的消息安全
 下图显示 Windows Communication Foundation (WCF) 服务和客户端使用消息级别安全保护。 服务使用 X.509 证书进行身份验证。 客户端使用用户名和密码进行身份验证。  

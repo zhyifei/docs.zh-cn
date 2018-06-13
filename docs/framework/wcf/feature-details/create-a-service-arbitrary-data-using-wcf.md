@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494158"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>如何：使用 WCF REST 编程模型创建接受任意数据的服务
 有时，开发人员必须完全控制从服务操作返回数据的方式。 服务操作必须返回格式的数据不支持 byWCF 时，这种情况。 本主题讨论如何使用 WCF REST 编程模型来创建接收任意数据的服务。  
