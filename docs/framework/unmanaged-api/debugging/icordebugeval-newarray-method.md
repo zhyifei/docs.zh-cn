@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413935"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray 方法
 分配的指定的元素类型和维度的一个新数组。  
@@ -60,7 +61,7 @@ HRESULT NewArray (
  始终在线程当前执行的应用程序域中创建数组。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

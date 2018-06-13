@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f6c20a69894c95086dbd813601ac8811ab4f337
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429219"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>弃用的 CLR 承载接口和组件类
 本部分描述的接口以及非托管主机可以使用公共语言运行时 (CLR) 集成的.NET Framework 版本 1.0 和 1.1 到其应用程序。 这些接口提供的主机配置和运行时加载到进程的方法。  

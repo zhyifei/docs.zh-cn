@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488642"
 ---
 # <a name="comparing-transactions-in-com-and-servicemodel"></a>比较 COM+ 和 ServiceModel 中的事务
 本主题讨论如何模拟事务性 COM + 服务使用 Windows Communication Foundation (WCF) 属性的行为<xref:System.ServiceModel>命名空间提供。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509139"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 元数据实用工具 (Svcutil.exe)
 ServiceModel 元数据实用工具用于依据元数据文档生成服务模型代码，以及依据服务模型代码生成元数据文档。  
@@ -85,10 +86,10 @@ ServiceModel 元数据实用工具用于依据元数据文档生成服务模型�
 |/excludeType:\<type>|指定要从引用的协定类型中排除的完全限定或程序集限定类型名称。<br /><br /> 从单独的 DLL 中将此开关与 `/r` 一起使用时，将引用 XSD 类的全名。<br /><br /> 缩写形式：`/et`|  
 |/importXmlTypes|配置数据协定序列化程序，以便将非数据协定类型作为 IXmlSerializable 类型导入。|  
 |/internal|生成标记为内部的类。 默认设置：只生成公共类。<br /><br /> 缩写形式：`/i`|  
-|/language:\<语言 >|指定要用于代码生成的编程语言。 您应提供在 Machine.config 文件中注册的语言名称，或继承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 的类的完全限定名称。<br /><br /> 值：c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 默认设置：csharp<br /><br /> 缩写形式： `/l` **注意：**此开关只支持 c + + 时 Visual Studio 2005 SP1 附带的代码提供程序。|  
+|/language:\<语言 >|指定要用于代码生成的编程语言。 您应提供在 Machine.config 文件中注册的语言名称，或继承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 的类的完全限定名称。<br /><br /> 值：c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 默认设置：csharp<br /><br /> 缩写形式： `/l` **注意：** 此开关只支持 c + + 时 Visual Studio 2005 SP1 附带的代码提供程序。|  
 |/mergeConfig|将生成的配置合并到现有文件中，而不是覆盖现有文件。|  
 |/messageContract|生成消息协定类型。<br /><br /> 缩写形式：`/mc`|  
-|/namespace:\<字符串、 字符串 >|指定从 WSDL 或 XML 架构 targetNamespace 到 CLR 命名空间的映射。 使用\*为 targetNamespace 映射所有 Targetnamespace，而不显式映射到该 CLR 命名空间。<br /><br /> 为了确保消息协定名称与操作名称不冲突，您应使用 `::` 限定类型引用，或确保名称是唯一的。<br /><br /> 默认设置：派生自数据协定架构文档的目标命名空间。 默认命名空间用于所有其他生成的类型。<br /><br /> 缩写形式： `/n` **注意：**生成时要使用 XmlSerializer 类型，支持仅单个命名空间映射。 所有生成的类型将存在于默认命名空间或通过指定的命名空间 *。|  
+|/namespace:\<字符串、 字符串 >|指定从 WSDL 或 XML 架构 targetNamespace 到 CLR 命名空间的映射。 使用\*为 targetNamespace 映射所有 Targetnamespace，而不显式映射到该 CLR 命名空间。<br /><br /> 为了确保消息协定名称与操作名称不冲突，您应使用 `::` 限定类型引用，或确保名称是唯一的。<br /><br /> 默认设置：派生自数据协定架构文档的目标命名空间。 默认命名空间用于所有其他生成的类型。<br /><br /> 缩写形式： `/n` **注意：** 生成时要使用 XmlSerializer 类型，支持仅单个命名空间映射。 所有生成的类型将存在于默认命名空间或通过指定的命名空间 *。|  
 |/noConfig|不生成配置文件。|  
 |/noStdLib|不引用标准库。<br /><br /> 默认设置：引用 Mscorlib.dll 和 System.servicemodel.dll。|  
 |/out:\<文件 >|为生成的代码指定文件名。<br /><br /> 默认设置：派生自某个架构的 WSDL 定义名称、WSDL 服务名称或目标命名空间。<br /><br /> 缩写形式：`/o`|  

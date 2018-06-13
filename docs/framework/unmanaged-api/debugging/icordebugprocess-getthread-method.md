@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 008f945b5301894261ce1529cbd915dd614b919d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418950"
 ---
 # <a name="icordebugprocessgetthread-method"></a>ICorDebugProcess::GetThread 方法
 获取此进程的线程。 具有指定的操作系统 (OS) 线程 id。  
@@ -42,7 +43,7 @@ HRESULT GetThread(
  [out]指向一个 ICorDebugThread 对象，表示线程的地址的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

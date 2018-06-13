@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 682d6684b6c86485530b9e5283d843f3b2eb7e46
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413798"
 ---
 # <a name="icordebugevalabort-method"></a>ICorDebugEval::Abort 方法
 中止当前正在执行此 ICorDebugEval 对象计算。  
@@ -36,7 +37,7 @@ HRESULT Abort ();
  如果评估嵌套的并且它不是最新，`Abort`方法可能会失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

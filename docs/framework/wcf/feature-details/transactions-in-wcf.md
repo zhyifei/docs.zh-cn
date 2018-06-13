@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498165"
 ---
 # <a name="transactions-in-wcf"></a>WCF 中的事务
 Windows Communication Foundation (WCF) 事务功能允许多个组件同时参与数据操作。 本节中的主题详细研究此功能。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498018"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 集成
 承载 Windows Communication Foundation (WCF) 服务在 Internet 信息服务 (IIS) 时你将一个.svc 文件放在该虚拟目录。 此 .svc 文件指定所用的服务主机工厂以及实现服务的类。 向服务发出请求时你的.svc 文件在 URI 中指定，例如： http://contoso.com/EmployeeServce.svc。 对于编写 REST 服务的程序员，此类型的 URI 并非最佳选择。 REST 服务的 URI 指定了特定资源，通常没有任何扩展。 <xref:System.Web.Routing>集成功能可用于承载响应无扩展的 Uri 的 WCF REST 服务。 有关路由，请参阅详细信息[ASP.NET 路由](http://go.microsoft.com/fwlink/?LinkId=184660)和[AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)示例。  

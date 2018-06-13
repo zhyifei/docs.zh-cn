@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 025aeb564743b6ae08a11d7922f0e8b641220929
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424685"
 ---
 # <a name="inotifysource2-interface"></a>INotifySource2 接口
 声明用于设置通知筛选器的方法。  

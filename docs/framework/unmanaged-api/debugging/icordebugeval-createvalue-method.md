@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d67784daee055106f104d74d098b9926c6de2ec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417107"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue 方法
 其初始值为零或 null 创建指定类型的值。  
@@ -56,7 +57,7 @@ HRESULT CreateValue (
  如果值`elementType`是 ELEMENT_TYPE_CLASS，获取"ICorDebugReferenceValue"(在返回`ppValue`) 表示空对象引用。 此对象可用于向函数求值的对象引用参数传递 null。 无法设置`ICorDebugValue`任何内容; 它始终仍是 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537598"
 ---
 # <a name="windows-forms-controls"></a>Windows 窗体控件
 设计和修改 Windows 窗体应用程序的用户界面时，需要添加、对齐和定位控件。 控件是窗体对象内包含的对象。 每种类型的控件都有自己的一组属性、方法和事件，使其适用于特定用途。 可以在设计器中控制控件，并将代码编写为在运行时动态添加控件。  

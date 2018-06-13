@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6cd5dbc27376f8cd391f9ecc006c04d9a3a1eea8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419739"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next 方法
 获取指定的数量的 ICorDebugProcess 实例的枚举，从当前位置开始。  
@@ -48,7 +49,7 @@ HRESULT Next (
  [out]指向数`ICorDebugProcess`实际返回的实例。 此值可能为 null 如果`celt`是之一。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

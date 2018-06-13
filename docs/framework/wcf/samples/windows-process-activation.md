@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501515"
 ---
 # <a name="windows-process-activation"></a>Windows 进程激活
 本节包含演示通过网络协议激活服务的示例。  

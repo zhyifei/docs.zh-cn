@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550902"
 ---
 # <a name="documentviewer"></a>DocumentViewer
 <xref:System.Windows.Controls.DocumentViewer>控件用于查看<xref:System.Windows.Documents.FixedDocument>内容 (如[!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)]文档) 中的分页的格式。  

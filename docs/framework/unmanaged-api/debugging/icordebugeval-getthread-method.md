@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e64bc173717c3121d6c2b101f734ee325a0ced53
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413753"
 ---
 # <a name="icordebugevalgetthread-method"></a>ICorDebugEval::GetThread 方法
 获取在其中此评估正在执行，或将执行的线程。  
@@ -39,7 +40,7 @@ HRESULT GetThread (
  [out]指向一个 ICorDebugThread 对象，表示线程的地址的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
