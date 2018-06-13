@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b3536184fa7798ac8eabe851221ec692c126460b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424009"
 ---
 # <a name="icorpublishenum-interface"></a><span data-ttu-id="fe031-102">ICorPublishEnum 接口</span><span class="sxs-lookup"><span data-stu-id="fe031-102">ICorPublishEnum Interface</span></span>
 <span data-ttu-id="fe031-103">在发布有关进程和应用程序域的信息中使用的枚举数作为抽象的基接口。</span><span class="sxs-lookup"><span data-stu-id="fe031-103">Serves as the abstract base interface for the enumerators that are used in the publishing of information about processes and application domains.</span></span>  

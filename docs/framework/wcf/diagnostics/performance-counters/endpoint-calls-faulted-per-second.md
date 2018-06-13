@@ -1,36 +1,25 @@
 ---
-title: "终结点：Calls Faulted Per Second（每秒出错的调用次数）"
-ms.custom: 
+title: 终结点：Calls Faulted Per Second（每秒出错的调用次数）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 842270d6e570767c25c414307be941f24b01dd07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 927f5370237b2502899d61f0b8d4bd79c8e00ea8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472539"
 ---
-# <a name="endpoint-calls-faulted-per-second"></a><span data-ttu-id="0d351-102">终结点：Calls Faulted Per Second（每秒出错的调用次数）</span><span class="sxs-lookup"><span data-stu-id="0d351-102">Endpoint: Calls Faulted Per Second</span></span>
-<span data-ttu-id="0d351-103">计数器名称：Calls Faulted Per Second（每秒出错的调用次数）。</span><span class="sxs-lookup"><span data-stu-id="0d351-103">Counter Name: Calls Faulted Per Second.</span></span>  
+# <a name="endpoint-calls-faulted-per-second"></a><span data-ttu-id="5afff-102">终结点：Calls Faulted Per Second（每秒出错的调用次数）</span><span class="sxs-lookup"><span data-stu-id="5afff-102">Endpoint: Calls Faulted Per Second</span></span>
+<span data-ttu-id="5afff-103">计数器名称：Calls Faulted Per Second（每秒出错的调用次数）。</span><span class="sxs-lookup"><span data-stu-id="5afff-103">Counter Name: Calls Faulted Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0d351-104">描述</span><span class="sxs-lookup"><span data-stu-id="0d351-104">Description</span></span>  
- <span data-ttu-id="0d351-105">一秒内向此终结点返回了错误的调用的数目。</span><span class="sxs-lookup"><span data-stu-id="0d351-105">Number of calls that have returned faults to this endpoint in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="5afff-104">描述</span><span class="sxs-lookup"><span data-stu-id="5afff-104">Description</span></span>  
+ <span data-ttu-id="5afff-105">一秒内向此终结点返回了错误的调用的数目。</span><span class="sxs-lookup"><span data-stu-id="5afff-105">Number of calls that have returned faults to this endpoint in a second.</span></span>  
   
- <span data-ttu-id="0d351-106">此计数器为性能计数器类型[PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值。</span><span class="sxs-lookup"><span data-stu-id="0d351-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="5afff-106">此计数器为性能计数器类型[PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值。</span><span class="sxs-lookup"><span data-stu-id="5afff-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="0d351-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="0d351-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
+ <span data-ttu-id="5afff-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="5afff-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
   
- <span data-ttu-id="0d351-108">在 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 应用程序中，服务方法使用 SOAP 错误消息来传递处理错误信息。</span><span class="sxs-lookup"><span data-stu-id="0d351-108">In [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] applications, service methods communicate processing error information using SOAP fault messages.</span></span> <span data-ttu-id="0d351-109">SOAP 错误是包括在服务操作元数据中的消息类型，因此会创建一个错误协定，客户端可使用该协定来使执行更加可靠或更具交互性。</span><span class="sxs-lookup"><span data-stu-id="0d351-109">SOAP faults are message types that are included in the metadata for a service operation and therefore create a fault contract that clients can use to make their execution more robust or interactive.</span></span> <span data-ttu-id="0d351-110">由于 SOAP 错误在客户端以 XML 格式表示，因此具有高度的互操作性。</span><span class="sxs-lookup"><span data-stu-id="0d351-110">Since SOAP faults are expressed to clients in XML form, they are highly interoperable.</span></span>  
+ <span data-ttu-id="5afff-108">Windows Communication Foundation (WCF) 应用程序中服务方法来传递处理错误信息使用 SOAP 错误消息。</span><span class="sxs-lookup"><span data-stu-id="5afff-108">In Windows Communication Foundation (WCF) applications, service methods communicate processing error information using SOAP fault messages.</span></span> <span data-ttu-id="5afff-109">SOAP 错误是包括在服务操作元数据中的消息类型，因此会创建一个错误协定，客户端可使用该协定来使执行更加可靠或更具交互性。</span><span class="sxs-lookup"><span data-stu-id="5afff-109">SOAP faults are message types that are included in the metadata for a service operation and therefore create a fault contract that clients can use to make their execution more robust or interactive.</span></span> <span data-ttu-id="5afff-110">由于 SOAP 错误在客户端以 XML 格式表示，因此具有高度的互操作性。</span><span class="sxs-lookup"><span data-stu-id="5afff-110">Since SOAP faults are expressed to clients in XML form, they are highly interoperable.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0d351-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="0d351-111">See Also</span></span>  
- [<span data-ttu-id="0d351-112">在协定和服务中指定并处理错误</span><span class="sxs-lookup"><span data-stu-id="0d351-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a><span data-ttu-id="5afff-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="5afff-111">See Also</span></span>  
+ [<span data-ttu-id="5afff-112">在协定和服务中指定并处理错误</span><span class="sxs-lookup"><span data-stu-id="5afff-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

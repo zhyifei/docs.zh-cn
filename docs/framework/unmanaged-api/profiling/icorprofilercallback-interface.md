@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 96c8c9de7a6b26c9a00a0ffaf4fb50c08a80d5a1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461612"
 ---
 # <a name="icorprofilercallback-interface"></a><span data-ttu-id="00f05-102">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="00f05-102">ICorProfilerCallback Interface</span></span>
 <span data-ttu-id="00f05-103">提供公共语言运行时 (CLR) 用于探查器已订阅的事件发生时通知代码探查器的方法。</span><span class="sxs-lookup"><span data-stu-id="00f05-103">Provides methods that are used by the common language runtime (CLR) to notify a code profiler when the events to which the profiler has subscribed occur.</span></span>  

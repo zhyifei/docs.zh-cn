@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 48617022940d889abedb9a9d25f04782371c4a5f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451940"
 ---
 # <a name="corprfmoduleflags-enumeration"></a><span data-ttu-id="a891d-102">COR_PRF_MODULE_FLAGS 枚举</span><span class="sxs-lookup"><span data-stu-id="a891d-102">COR_PRF_MODULE_FLAGS Enumeration</span></span>
 <span data-ttu-id="a891d-103">指定模块的属性。</span><span class="sxs-lookup"><span data-stu-id="a891d-103">Specifies the properties of a module.</span></span>  

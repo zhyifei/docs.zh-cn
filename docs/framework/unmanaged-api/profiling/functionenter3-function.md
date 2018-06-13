@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 466b90f814d267fb289b2804beccd58fc442e341
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451875"
 ---
 # <a name="functionenter3-function"></a><span data-ttu-id="c3dd7-102">FunctionEnter3 函数</span><span class="sxs-lookup"><span data-stu-id="c3dd7-102">FunctionEnter3 Function</span></span>
 <span data-ttu-id="c3dd7-103">通知探查器控件传递给函数。</span><span class="sxs-lookup"><span data-stu-id="c3dd7-103">Notifies the profiler that control is being passed to a function.</span></span>  

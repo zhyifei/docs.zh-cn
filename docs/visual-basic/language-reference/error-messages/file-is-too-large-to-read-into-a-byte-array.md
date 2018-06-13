@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585920"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a><span data-ttu-id="b283b-102">文件太大，无法读取到字节数组中</span><span class="sxs-lookup"><span data-stu-id="b283b-102">File is too large to read into a byte array</span></span>
 <span data-ttu-id="b283b-103">您试图从中读取的字节数组到文件的大小超过 4 GB。</span><span class="sxs-lookup"><span data-stu-id="b283b-103">The size of the file you are attempting to read into a byte array exceeds 4 GB.</span></span> <span data-ttu-id="b283b-104">`My.Computer.FileSystem.ReadAllBytes`方法无法读取的文件超过此大小。</span><span class="sxs-lookup"><span data-stu-id="b283b-104">The `My.Computer.FileSystem.ReadAllBytes` method cannot read a file that exceeds this size.</span></span>  

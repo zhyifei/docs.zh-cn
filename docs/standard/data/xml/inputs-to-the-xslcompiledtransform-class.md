@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572835"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a><span data-ttu-id="e0df5-102">XslCompiledTransform 类的输入</span><span class="sxs-lookup"><span data-stu-id="e0df5-102">Inputs to the XslCompiledTransform Class</span></span>
 <span data-ttu-id="e0df5-103"><xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法接受三种输入类型的源文档：实现 <xref:System.Xml.XPath.IXPathNavigable> 接口的对象、读取源文档的 <xref:System.Xml.XmlReader> 对象或字符串 URI。</span><span class="sxs-lookup"><span data-stu-id="e0df5-103">The <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method accepts three input types for the source document: an object that implements the <xref:System.Xml.XPath.IXPathNavigable> interface, an <xref:System.Xml.XmlReader> object that reads the source document, or a string URI.</span></span>  

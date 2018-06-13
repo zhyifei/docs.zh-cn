@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605090"
 ---
 # <a name="on-error-statement-visual-basic"></a><span data-ttu-id="92a2a-102">On Error 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="92a2a-102">On Error Statement (Visual Basic)</span></span>
 <span data-ttu-id="92a2a-103">启用错误处理例程，并指定过程; 中的例程的位置此外可以用于禁用错误处理例程。</span><span class="sxs-lookup"><span data-stu-id="92a2a-103">Enables an error-handling routine and specifies the location of the routine within a procedure; can also be used to disable an error-handling routine.</span></span>  

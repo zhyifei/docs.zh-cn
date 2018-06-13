@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575383"
 ---
 # <a name="event-design"></a><span data-ttu-id="265ed-102">事件设计</span><span class="sxs-lookup"><span data-stu-id="265ed-102">Event Design</span></span>
 <span data-ttu-id="265ed-103">事件是回调 （允许框架，以调入用户代码的构造） 的最常用的形式。</span><span class="sxs-lookup"><span data-stu-id="265ed-103">Events are the most commonly used form of callbacks (constructs that allow the framework to call into user code).</span></span> <span data-ttu-id="265ed-104">其他回调机制包括采用委托、 虚拟成员和基于接口的插件的成员。从可用性研究的数据指示的大部分开发人员更喜欢使用事件，与它们使用的其他回调机制。</span><span class="sxs-lookup"><span data-stu-id="265ed-104">Other callback mechanisms include members taking delegates, virtual members, and interface-based plug-ins. Data from usability studies indicate that the majority of developers are more comfortable using events than they are using the other callback mechanisms.</span></span> <span data-ttu-id="265ed-105">事件可以很好地与 Visual Studio 和许多语言集成。</span><span class="sxs-lookup"><span data-stu-id="265ed-105">Events are nicely integrated with Visual Studio and many languages.</span></span>  

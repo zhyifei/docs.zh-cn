@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6169d00065fad57b7ce346ab9029f242eff5498a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451436"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a><span data-ttu-id="71b77-102">ICorProfilerCallback::ExceptionUnwindFunctionEnter 方法</span><span class="sxs-lookup"><span data-stu-id="71b77-102">ICorProfilerCallback::ExceptionUnwindFunctionEnter Method</span></span>
 <span data-ttu-id="71b77-103">通知探查器的异常处理在展开阶段已开始展开一个函数。</span><span class="sxs-lookup"><span data-stu-id="71b77-103">Notifies the profiler that the unwind phase of exception handling has begun to unwind a function.</span></span>  

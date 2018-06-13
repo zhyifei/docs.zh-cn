@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586407"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a><span data-ttu-id="5a308-102">如何：在 Visual Basic 中重命名文件</span><span class="sxs-lookup"><span data-stu-id="5a308-102">How to: Rename a File in Visual Basic</span></span>
 <span data-ttu-id="5a308-103">使用 `My.Computer.FileSystem` 对象的 `RenameFile` 方法可通过提供当前位置、文件名和新文件名来重命名文件。</span><span class="sxs-lookup"><span data-stu-id="5a308-103">Use the `RenameFile` method of the `My.Computer.FileSystem` object to rename a file by supplying the current location, file name, and the new file name.</span></span> <span data-ttu-id="5a308-104">此方法不能用于移动文件；使用 `MoveFile` 方法可移动并重命名文件。</span><span class="sxs-lookup"><span data-stu-id="5a308-104">This method cannot be used to move a file; use the `MoveFile` method to move and rename the file.</span></span>  

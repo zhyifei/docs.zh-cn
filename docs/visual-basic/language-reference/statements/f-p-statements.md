@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603816"
 ---
 # <a name="f-p-statements"></a><span data-ttu-id="f0414-102">F-P 语句</span><span class="sxs-lookup"><span data-stu-id="f0414-102">F-P Statements</span></span>
 <span data-ttu-id="f0414-103">下表包含 Visual Basic 语言语句的列表。</span><span class="sxs-lookup"><span data-stu-id="f0414-103">The following table contains a listing of Visual Basic language statements.</span></span>  

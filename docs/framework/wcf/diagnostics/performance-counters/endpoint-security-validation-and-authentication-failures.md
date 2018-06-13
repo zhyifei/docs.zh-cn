@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471802"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures"></a><span data-ttu-id="ca7d6-102">终结点：Security Validation and Authentication Failures（安全验证和身份验证失败次数）</span><span class="sxs-lookup"><span data-stu-id="ca7d6-102">Endpoint: Security Validation and Authentication Failures</span></span>
 <span data-ttu-id="ca7d6-103">计数器名称：Security Validation and Authentication Failures（安全验证和身份验证失败次数）</span><span class="sxs-lookup"><span data-stu-id="ca7d6-103">Counter name: Security Validation and Authentication Failures</span></span>  

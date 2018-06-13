@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3fc25f76ef0f848fc29ffbed12b653d1c59c1f2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423879"
 ---
 # <a name="icorpublishprocessismanaged-method"></a><span data-ttu-id="dfa37-102">ICorPublishProcess::IsManaged 方法</span><span class="sxs-lookup"><span data-stu-id="dfa37-102">ICorPublishProcess::IsManaged Method</span></span>
 <span data-ttu-id="dfa37-103">获取一个值，该值指示由此是否引用的进程[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)已知具有托管代码。</span><span class="sxs-lookup"><span data-stu-id="dfa37-103">Gets a value that indicates whether the process referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) is known to have managed code.</span></span>  

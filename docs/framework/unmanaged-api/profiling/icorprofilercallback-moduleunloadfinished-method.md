@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5a4637ac7466a575c94f8244168576c4a5542689
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452083"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a><span data-ttu-id="f9fc6-102">ICorProfilerCallback::ModuleUnloadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="f9fc6-102">ICorProfilerCallback::ModuleUnloadFinished Method</span></span>
 <span data-ttu-id="f9fc6-103">通知探查器已完成某个模块的卸载。</span><span class="sxs-lookup"><span data-stu-id="f9fc6-103">Notifies the profiler that a module has finished unloading.</span></span>  
