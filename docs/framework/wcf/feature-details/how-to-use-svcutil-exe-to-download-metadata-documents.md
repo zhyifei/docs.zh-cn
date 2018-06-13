@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492393"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>如何：使用 Svcutil.exe 下载元数据文档
 您可以使用 Svcutil.exe 从正在运行的服务中下载元数据并将元数据保存到本地文件。 对于 HTTP 和 HTTPS URL 方案，Svcutil.exe 会尝试使用 Ws-metadataexchange 检索元数据和[XML Web 服务发现](http://go.microsoft.com/fwlink/?LinkId=94950)。 对于所有其他 URL 架构，Svcutil.exe 仅使用 WS-MetadataExchange。  

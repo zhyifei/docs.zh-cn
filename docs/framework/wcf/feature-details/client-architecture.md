@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494086"
 ---
 # <a name="client-architecture"></a>客户端体系结构
 应用程序使用 Windows Communication Foundation (WCF) 客户端对象来调用服务操作。 本主题讨论 WCF 客户端对象、 WCF 客户端通道，以及它们与基础通道体系结构关系。 WCF 客户端对象的基本概述，请参阅[WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)。 有关通道层的详细信息，请参阅[扩展通道层](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。  

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756314"
 ---
 # <a name="ltargumentgt"></a>&lt;自变量&gt;
 一个配置元素，表示与某一活动状态查询关联的参数。  

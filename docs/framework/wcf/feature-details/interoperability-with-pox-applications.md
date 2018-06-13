@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494194"
 ---
 # <a name="interoperability-with-pox-applications"></a>与 POX 应用程序的互操作性
 "Plain Old XML"(POX) 应用程序通过交换原始 HTTP 消息包含仅 XML 应用程序数据未封入 SOAP 信封内进行通信。 Windows Communication Foundation (WCF) 可以提供服务和使用 POX 消息的客户端。 在服务上，WCF 可以用于实现向客户端，例如 Web 浏览器公开终结点的服务和发送和接收 POX 消息的脚本语言。 在客户端上的 WCF 编程模型可以用于实现与基于 POX 的服务进行通信的客户端。  

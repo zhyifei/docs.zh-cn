@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493277"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>如何：创建基本 RSS 源
 Windows Communication Foundation (WCF) 允许你创建公开联合源的服务。 本主题讨论如何创建公开 RSS 联合源的联合服务。  

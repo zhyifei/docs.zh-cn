@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494776"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 客户端的消息安全
 此方案显示了 Windows Communication Foundation (WCF) 客户端和服务器保护的消息安全模式。 客户端和服务使用 Windows 凭据进行身份验证。  
