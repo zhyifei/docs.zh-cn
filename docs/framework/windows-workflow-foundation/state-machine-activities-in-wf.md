@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515764"
 ---
 # <a name="state-machine-activities-in-wf"></a>WF 中的状态机活动
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供几个系统提供的活动和用于创建状态机工作流的活动设计器。  

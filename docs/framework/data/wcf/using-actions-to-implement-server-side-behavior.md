@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365236"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用操作来实现服务器端行为
 OData 操作提供了用于实现这样一种行为方法，即该行为将作用于从 OData 服务检索的资源。  例如，请考虑将一部数字电影作为资源，您可能需要完成许多事情：签出、评级/注释或签入。 这些是用于管理数字电影的 WCF 数据服务可能实现的所有动作示例。 动作在 OData 响应中描述，而此响应包含对其调用此动作的资源。 当用户请求表示数字电影的资源时，从 WCF 数据服务返回的响应将包含有关可用于该资源的动作的信息。 动作的可用性可能取决于数据服务或资源的状态。 例如，一旦数字电影已被签出，其他用户就无法签出。 客户只需指定 URL 即可调用动作。 例如http://MyServer/MovieService.svc/Movies(6)标识特定的数字电影和http://MyServer/MovieService.svc/Movies(6)/Checkout将调用对这部特定电影的操作。 动作使您能够公开服务模型，但不必公开数据模型。 继续探讨此电影服务示例，您可能希望允许用户对电影评级，但不能直接将评级数据公开为资源。 您可以实现评级动作，以使用户能够对电影评级，但不能直接将评级数据作为资源进行访问。  

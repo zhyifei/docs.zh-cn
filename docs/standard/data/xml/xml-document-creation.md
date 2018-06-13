@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572783"
 ---
 # <a name="xml-document-creation"></a>创建 XML 文档
 有两种创建 XML 文档的方法。 一种方法是，创建不含参数的 XmlDocument。 另一种方法是，创建 XmlDocument，并向它传递 XmlNameTable 参数。 下面的示例展示了如何不使用任何参数新建空 XmlDocument。  

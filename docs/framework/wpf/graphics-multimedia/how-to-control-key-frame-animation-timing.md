@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562282"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>如何：控制关键帧动画的计时
 此示例演示如何控制的关键帧动画中的关键帧的计时。 像其他动画关键帧动画具有<xref:System.Windows.Media.Animation.Timeline.Duration%2A>属性。 除了指定动画的持续时间，你需要指定该持续时间的哪个部分分配给每个其关键帧。 若要分配的时间，则指定<xref:System.Windows.Media.Animation.KeyTime>动画中每个关键帧的。  

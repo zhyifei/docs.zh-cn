@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567840"
 ---
 # <a name="performing-formatting-operations"></a>执行格式设置操作
 以下主题提供用于执行特定格式设置操作的分步说明。  

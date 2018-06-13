@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562240"
 ---
 # <a name="xreference-markup-extension"></a>x:Reference 标记扩展
 在 XAML 标记中其他位置声明的实例的引用。 引用所引用的元素`x:Name`。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568519"
 ---
 # <a name="node-collections-in-namednodemaps-and-nodelists"></a>NamedNodeMap 和 NodeList 中的节点集合
 可以检索节点集并将其放在已排序或未排序的集合中。 将节点集放在未排序的集合中时，万维网联合会 (W3C) 将此节点集称为 NamedNodeMap；在这种类型的集合中可以按名称或索引检索数据。 将节点集放入已排序的集合中时，W3C 将其称为 NodeList；可以按从零开始的索引检索数据。 NamedNodeMap 和 NodeList 由 W3C 描述。 NamedNodeMap 在 Microsoft .NET Framework 中的实现为 XmlNamedNodeMap，而 NodeList 由 XmlNodeList 实现。  

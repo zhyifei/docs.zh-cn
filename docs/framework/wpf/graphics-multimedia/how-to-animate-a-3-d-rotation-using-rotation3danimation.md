@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557194"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-rotation3danimation"></a>如何：使用 Rotation3DAnimation 对三维旋转进行动画处理
 下面的示例演示如何使旋转时它"松动"使用一个三维对象<xref:System.Windows.Media.Animation.Rotation3DAnimation>要进行动画处理<xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A>属性<xref:System.Windows.Media.Media3D.RotateTransform3D>应用于三维对象的对象。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557611"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a>如何：使用关键帧对三维旋转进行动画处理
 在下面的示例中，<xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames>用于使旋转时进行动画处理的旋转轴，从而导致"也许"三维对象。 此动画使用以下关键帧：  

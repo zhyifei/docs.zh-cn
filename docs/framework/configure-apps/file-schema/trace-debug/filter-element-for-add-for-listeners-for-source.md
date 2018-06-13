@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745769"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;筛选器&gt;元素&lt;添加&gt;为&lt;侦听器&gt;为&lt;源&gt;
 将筛选器添加到跟踪源的 `Listeners` 集合中的侦听器。  
