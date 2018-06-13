@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325404"
 ---
 # <a name="interface-properties-c-programming-guide"></a>接口属性（C# 编程指南）
 可以在[接口](../../../csharp/language-reference/keywords/interface.md)上声明属性。 下面是接口索引器访问器的示例：  

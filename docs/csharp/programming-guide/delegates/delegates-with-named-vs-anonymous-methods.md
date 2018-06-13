@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330760"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>带有命名方法的委托与匿名方法（C# 编程指南）
 [委托](../../../csharp/language-reference/keywords/delegate.md)可以与命名方法相关联。 使用命名方法实例化委托时，该方法作为参数传递，例如：  

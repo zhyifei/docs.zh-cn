@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318082"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>如何：查找具有特定属性的元素 (XPath-LINQ to XML) (C#)
 有时需要查找具有特定属性的所有元素。 您并不关心属性的内容， 而是根据属性是否存在进行选择。  

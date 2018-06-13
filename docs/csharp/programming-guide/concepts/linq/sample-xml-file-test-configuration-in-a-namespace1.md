@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333048"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>示例 XML 文件：测试命名空间中的配置
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 这是一个测试配置文件。 该 XML 在某个命名空间中。  

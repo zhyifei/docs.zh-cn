@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547249"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>优化性能：利用硬件
 内部体系结构的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有两个呈现管道、 硬件和软件。 本主题提供有关这些呈现管道来帮助你判断你的应用程序的性能优化的信息。  

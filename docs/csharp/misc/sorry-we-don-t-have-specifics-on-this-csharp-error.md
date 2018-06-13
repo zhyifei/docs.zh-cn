@@ -884,9 +884,10 @@ helpviewer_keywords:
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314065"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>抱歉，我们不&#39;t 对此 C# 错误的详细信息
 很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可以咨询其他开发人员，使用以下论坛之一：  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326327"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  

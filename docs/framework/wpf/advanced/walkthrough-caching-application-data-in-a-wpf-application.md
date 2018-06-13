@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548894"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>演练：在 WPF 应用程序中缓存应用程序数据
 缓存可以将数据存储在内存中以便快速访问。 当再次访问数据时，应用程序可以从改为从原始源检索该缓存获取数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。  
@@ -96,7 +97,7 @@ ms.lasthandoff: 05/04/2018
   
      **高级编译器设置**对话框随即显示。  
   
-4.  在**目标 framework （所有配置）**列表中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (不要选择[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)  
+4.  在**目标 framework （所有配置）** 列表中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (不要选择[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)  
   
 5.  单击 **“确定”**。  
   
@@ -295,7 +296,7 @@ ms.lasthandoff: 05/04/2018
   
      在消息框中将显示文本文件中的缓存的内容。 请注意该文件上的时间戳。  
   
-3.  关闭消息框，然后单击**获取缓存**再次**。**  
+3.  关闭消息框，然后单击**获取缓存**再次 **。**  
   
      时间戳保持不变。 这将指示显示缓存的内容。  
   
@@ -305,7 +306,7 @@ ms.lasthandoff: 05/04/2018
   
 5.  在文本编辑器中，打开您创建的文本文件。 不进行任何更改。  
   
-6.  关闭消息框，然后单击**获取缓存**再次**。**  
+6.  关闭消息框，然后单击**获取缓存**再次 **。**  
   
      再次注意时间戳。  
   

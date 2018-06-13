@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326113"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>如何：根据属性进行筛选 (XPath-LINQ to XML) (C#)
 本主题演示如何获取具有指定名称、并具有一个带指定值的属性的子代元素。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755326"
 ---
 # <a name="transports"></a>传输
 传输层是通道堆栈的最低层。 使用 Windows Communication Foundation (WCF) 中的主要传输是 HTTP、 HTTPS、 TCP 和命名管道。 本节列出了可用以配置不同类型的传输的所有配置元素。  
