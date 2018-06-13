@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363795"
 ---
 # <a name="interceptors-wcf-data-services"></a><span data-ttu-id="a7d9d-102">拦截器（WCF 数据服务）</span><span class="sxs-lookup"><span data-stu-id="a7d9d-102">Interceptors (WCF Data Services)</span></span>
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="a7d9d-103"> 可让应用程序，以便您可以给某项操作添加自定义逻辑截获请求消息。</span><span class="sxs-lookup"><span data-stu-id="a7d9d-103"> enables an application to intercept request messages so that you can add custom logic to an operation.</span></span> <span data-ttu-id="a7d9d-104">你可以使用此自定义逻辑来验证传入消息中的数据。</span><span class="sxs-lookup"><span data-stu-id="a7d9d-104">You can use this custom logic to validate data in incoming messages.</span></span> <span data-ttu-id="a7d9d-105">还可以使用它进一步限制查询请求的范围，以便基于每个请求插入自定义授权策略。</span><span class="sxs-lookup"><span data-stu-id="a7d9d-105">You can also use it to further restrict the scope of a query request, such as to insert a custom authorization policy on a per request basis.</span></span>  

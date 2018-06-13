@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526483"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a><span data-ttu-id="81897-102">如何：创建用于绘制的 Graphics 对象</span><span class="sxs-lookup"><span data-stu-id="81897-102">How to: Create Graphics Objects for Drawing</span></span>
 <span data-ttu-id="81897-103">您可以绘制线条和形状之前，呈现文本，或显示和操作与图像[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，你需要创建<xref:System.Drawing.Graphics>对象。</span><span class="sxs-lookup"><span data-stu-id="81897-103">Before you can draw lines and shapes, render text, or display and manipulate images with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you need to create a <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="81897-104"><xref:System.Drawing.Graphics>对象所表示[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]绘图图面，并且是用于创建图形映像的对象。</span><span class="sxs-lookup"><span data-stu-id="81897-104">The <xref:System.Drawing.Graphics> object represents a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] drawing surface, and is the object that is used to create graphical images.</span></span>  

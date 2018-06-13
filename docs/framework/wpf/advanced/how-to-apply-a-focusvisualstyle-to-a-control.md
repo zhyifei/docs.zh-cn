@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543727"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a><span data-ttu-id="bd0be-102">如何：对控件应用 FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="bd0be-102">How to: Apply a FocusVisualStyle to a Control</span></span>
 <span data-ttu-id="bd0be-103">此示例演示如何在资源中创建焦点视觉样式并将样式应用到控件中，使用<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="bd0be-103">This example shows you how to create a focus visual style in resources and apply the style to a control, using the <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> property.</span></span>  

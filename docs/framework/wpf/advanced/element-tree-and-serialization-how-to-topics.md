@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543369"
 ---
 # <a name="element-tree-and-serialization-how-to-topics"></a><span data-ttu-id="99837-102">元素树和序列化帮助主题</span><span class="sxs-lookup"><span data-stu-id="99837-102">Element Tree and Serialization How-to Topics</span></span>
 <span data-ttu-id="99837-103">本部分中的主题介绍如何使用 WPF 元素树。</span><span class="sxs-lookup"><span data-stu-id="99837-103">The topics in this section describe how to use the WPF element tree.</span></span>  

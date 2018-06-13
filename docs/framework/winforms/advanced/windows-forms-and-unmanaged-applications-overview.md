@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528627"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a><span data-ttu-id="2ec5d-102">Windows 窗体和非托管应用程序概述</span><span class="sxs-lookup"><span data-stu-id="2ec5d-102">Windows Forms and Unmanaged Applications Overview</span></span>
 <span data-ttu-id="2ec5d-103">Windows 窗体应用程序和控件可以与非托管应用程序进行互操作，但有一些需要注意的问题。</span><span class="sxs-lookup"><span data-stu-id="2ec5d-103">Windows Forms applications and controls can interoperate with unmanaged applications, with some caveats.</span></span> <span data-ttu-id="2ec5d-104">以下各节将介绍 Windows 窗体应用程序和控件支持和不支持的方案和配置。</span><span class="sxs-lookup"><span data-stu-id="2ec5d-104">The following sections describe the scenarios and configurations that Windows Forms applications and controls support and those that they do not support.</span></span>  

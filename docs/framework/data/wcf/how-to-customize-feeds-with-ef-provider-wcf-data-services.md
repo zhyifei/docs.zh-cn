@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359473"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a><span data-ttu-id="f5b85-102">如何：使用实体框架提供程序自定义源（WCF 数据服务）</span><span class="sxs-lookup"><span data-stu-id="f5b85-102">How to: Customize Feeds with the Entity Framework Provider (WCF Data Services)</span></span>
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="f5b85-103"> 使您可以在数据服务响应中自定义 Atom 序列化，以便可以将实体属性映射到在 AtomPub 协议中定义的未使用的元素。</span><span class="sxs-lookup"><span data-stu-id="f5b85-103"> enables you to customize the Atom serialization in a data service response so that properties of an entity may be mapped to unused elements that are defined in the AtomPub protocol.</span></span> <span data-ttu-id="f5b85-104">本主题演示如何使用实体框架提供程序为 .edmx 文件中定义的数据模型中的实体类型定义映射特性。</span><span class="sxs-lookup"><span data-stu-id="f5b85-104">This topic shows how to define mapping attributes for the entity types in a data model that is defined in an .edmx file by using the Entity Framework provider.</span></span> <span data-ttu-id="f5b85-105">有关详细信息，请参阅[源的自定义](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="f5b85-105">For more information, see [Feed Customization](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).</span></span>  

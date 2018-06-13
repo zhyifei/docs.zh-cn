@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363462"
 ---
 # <a name="diagnostic-traces"></a><span data-ttu-id="b5241-102">诊断跟踪</span><span class="sxs-lookup"><span data-stu-id="b5241-102">Diagnostic Traces</span></span>
 <span data-ttu-id="b5241-103">跟踪是指发布在执行应用程序期间生成的特定消息。</span><span class="sxs-lookup"><span data-stu-id="b5241-103">Traces are the publishing of specific messages that are generated during application execution.</span></span> <span data-ttu-id="b5241-104">使用跟踪时，必须具有收集和记录所发送消息的机制。</span><span class="sxs-lookup"><span data-stu-id="b5241-104">When using tracing, you must have a mechanism for collecting and recording the messages that are sent.</span></span> <span data-ttu-id="b5241-105">跟踪消息由侦听器来接收。</span><span class="sxs-lookup"><span data-stu-id="b5241-105">Trace messages are received by listeners.</span></span> <span data-ttu-id="b5241-106">侦听器的用途是收集、存储和路由跟踪消息。</span><span class="sxs-lookup"><span data-stu-id="b5241-106">The purpose of a listener is to collect, store, and route tracing messages.</span></span> <span data-ttu-id="b5241-107">侦听器会将跟踪输出定向到适当的目标，如日志、窗口或文本文件。</span><span class="sxs-lookup"><span data-stu-id="b5241-107">Listeners direct the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  

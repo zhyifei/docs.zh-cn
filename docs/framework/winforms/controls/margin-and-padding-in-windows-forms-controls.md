@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534409"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a><span data-ttu-id="035ef-102">Windows 窗体控件中的边距和填充</span><span class="sxs-lookup"><span data-stu-id="035ef-102">Margin and Padding in Windows Forms Controls</span></span>
 <span data-ttu-id="035ef-103">在窗体上精确地放置控件对于许多应用程序而言是高优先级。</span><span class="sxs-lookup"><span data-stu-id="035ef-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="035ef-104"><xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间给你提供许多布局功能来实现此目的。</span><span class="sxs-lookup"><span data-stu-id="035ef-104">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace gives you many layout features to accomplish this.</span></span> <span data-ttu-id="035ef-105">其中两个最重要的功能是 <xref:System.Windows.Forms.Control.Margin%2A> 和 <xref:System.Windows.Forms.Control.Padding%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="035ef-105">Two of the most important are the <xref:System.Windows.Forms.Control.Margin%2A> and <xref:System.Windows.Forms.Control.Padding%2A> properties.</span></span>  
