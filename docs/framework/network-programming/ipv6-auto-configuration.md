@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393424"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 自动配置
 IPv6 的一个重要目标是支持节点即插即用。 也就是说，可以将节点插入 IPv6 网络，让其自动进行配置，无需任何人为干预。  
