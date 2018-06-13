@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749720"
 ---
 # <a name="ltshadowcopyverifybytimestampgt-element"></a><span data-ttu-id="757bd-102">&lt;shadowCopyVerifyByTimestamp&gt;元素</span><span class="sxs-lookup"><span data-stu-id="757bd-102">&lt;shadowCopyVerifyByTimestamp&gt; Element</span></span>
 <span data-ttu-id="757bd-103">指定卷影复制是否使用 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 中引入的默认启动行为，或恢复到 .NET Framework 的早期版本的启动行为。</span><span class="sxs-lookup"><span data-stu-id="757bd-103">Specifies whether shadow copying uses the default startup behavior introduced in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], or reverts to the startup behavior of earlier versions of the .NET Framework.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760929"
 ---
 # <a name="canonical-functions"></a><span data-ttu-id="e0be6-102">规范函数</span><span class="sxs-lookup"><span data-stu-id="e0be6-102">Canonical Functions</span></span>
 <span data-ttu-id="e0be6-103">本节讨论所有数据提供程序支持的并可由所有查询技术使用的规范函数。</span><span class="sxs-lookup"><span data-stu-id="e0be6-103">This section discusses canonical functions that are supported by all data providers, and can be used by all querying technologies.</span></span> <span data-ttu-id="e0be6-104">规范函数不能由提供程序扩展。</span><span class="sxs-lookup"><span data-stu-id="e0be6-104">Canonical functions cannot be extended by a provider.</span></span>  

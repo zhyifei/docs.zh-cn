@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750682"
 ---
 # <a name="ltmessagelogginggt"></a><span data-ttu-id="d5dfd-102">&lt;messageLogging&gt;</span><span class="sxs-lookup"><span data-stu-id="d5dfd-102">&lt;messageLogging&gt;</span></span>
 <span data-ttu-id="d5dfd-103">该元素定义 Windows Communication Foundation (WCF) 的消息日志记录功能的设置。</span><span class="sxs-lookup"><span data-stu-id="d5dfd-103">This element defines the settings for the message-logging capabilities of Windows Communication Foundation (WCF).</span></span>  

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757718"
 ---
 # <a name="ltsendmessagechannelcachegt"></a><span data-ttu-id="2f44b-102">&lt;sendMessageChannelCache&gt;</span><span class="sxs-lookup"><span data-stu-id="2f44b-102">&lt;sendMessageChannelCache&gt;</span></span>
 <span data-ttu-id="2f44b-103">允许自定义缓存共享级别、 通道工厂缓存的设置和将消息发送到服务终结点使用消息传递活动发送的工作流通道缓存的设置的服务行为。</span><span class="sxs-lookup"><span data-stu-id="2f44b-103">A service behavior that enables the customization of the cache sharing levels, the settings of the channel factory cache, and the settings of the channel cache for workflows that send messages to service endpoints using Send messaging activities.</span></span>  
