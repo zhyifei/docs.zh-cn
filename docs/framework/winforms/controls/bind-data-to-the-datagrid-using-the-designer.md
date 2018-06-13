@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528991"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器将数据绑定到 Windows 窗体的 DataGridView 控件
 你可以使用设计器连接<xref:System.Windows.Forms.DataGridView>控件添加到数据源的多个不同的类型，包括数据库、 业务对象或 Web 服务。 当将控件绑定到数据源使用设计器中时，控件将自动绑定到<xref:System.Windows.Forms.BindingSource>表示数据源的组件。 此外，会在控件中自动生成列以匹配数据源提供的架构信息。  

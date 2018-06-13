@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532310"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>如何：在 Windows 窗体上停靠控件
 你可以将控件停靠到窗体的边缘，或使它们填充控件的容器 （窗体或容器控件）。 例如，Windows 资源管理器停靠其<xref:System.Windows.Forms.TreeView>窗口左侧的控件并将其<xref:System.Windows.Forms.ListView>窗口的右侧的控件。 使用<xref:System.Windows.Forms.Control.Dock%2A>所有可见的 Windows 窗体控件来定义停靠模式的属性。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/04/2018
   
      显示一个编辑器，其中显示框的边缘和窗体的中心表示一系列。  
   
-3.  单击表示你要将控件停靠的窗体的边缘的按钮。 若要填充的控件的窗体或容器控件的内容，单击中心框。 单击**（无）**禁用停靠。  
+3.  单击表示你要将控件停靠的窗体的边缘的按钮。 若要填充的控件的窗体或容器控件的内容，单击中心框。 单击 **（无）** 禁用停靠。  
   
      控件自动调整大小以适合的停靠边缘的边界。  
   

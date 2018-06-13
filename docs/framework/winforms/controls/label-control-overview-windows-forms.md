@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536297"
 ---
 # <a name="label-control-overview-windows-forms"></a>Label 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.Label>控件用于显示文本或图像的用户无法编辑。 它们用于标识窗体上的对象-哪些某个控件的说明进行的操作如果单击，例如，或以响应运行时事件或应用程序中的过程中显示信息。 例如，可以使用标签将描述性标题添加到文本框、 列表框、 组合框和等等。 你还可以编写在运行时通过响应事件中的标签显示的文本更改的代码。 例如，如果你的应用程序需要几分钟时间才能处理变更，你可以在标签中显示的处理状态消息。  

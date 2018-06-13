@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537516"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>如何：为控件提供工具箱位图
 如果你想要为您的控件的特殊图标将出现在**工具箱**，你可以通过使用指定的特定映像<xref:System.Drawing.ToolboxBitmapAttribute>。 此类是一个特性，是一种可以附加到其他类上的特殊类。 有关特性的详细信息，请参阅[不在生成中： Visual Basic 中的特性概述](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f)适用于 Visual Basic 和[属性](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)对于 Visual C#。  

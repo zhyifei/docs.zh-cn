@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517236"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>如何：创建自定义持久性参与者
 下列过程包含持久性参与者的创建步骤。 请参阅[参与持久性](http://go.microsoft.com/fwlink/?LinkID=177735)示例和[存储扩展性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)示例实现的持久性参与者的主题。  

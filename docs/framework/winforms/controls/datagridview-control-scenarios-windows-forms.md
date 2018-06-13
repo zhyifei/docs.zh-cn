@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529033"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView 控件方案（Windows 窗体）
 与<xref:System.Windows.Forms.DataGridView>控件，您可以显示来自各种数据源的表格数据。 有关简单用法，则可以手动填充<xref:System.Windows.Forms.DataGridView>和操作直接通过控件的数据。 通常情况下，但是，你将在外部数据源中存储你的数据并将控件绑定到它通过<xref:System.Windows.Forms.BindingSource>组件。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534633"
 ---
 # <a name="splitter-control-windows-forms"></a>Splitter 控件（Windows 窗体）
 Windows 窗体`Splitter`控制用于在运行时调整停靠的控件的大小。 `Splitter`控件常用于在与具有数据要呈现，如 Windows 资源管理器，其数据窗格包含不同的宽度的信息在不同时间的长度可变的控件的窗体上。  

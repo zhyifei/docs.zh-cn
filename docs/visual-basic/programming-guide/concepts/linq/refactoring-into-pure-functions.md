@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654251"
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>重构到纯函数 (Visual Basic)
 纯函数转换的一个重要方面是学习如何使用纯函数重构代码。  

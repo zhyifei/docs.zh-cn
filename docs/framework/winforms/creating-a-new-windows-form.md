@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537776"
 ---
 # <a name="creating-a-new-windows-form"></a>创建新的 Windows 窗体
 本主题包含介绍如何创建你的第一个 Windows 窗体应用程序的主题链接。 此外，本部分中的主题还将介绍一些基本的词汇和当开始创建 Windows 窗体应用程序时，应该了解的准则。 若要了解有关 Windows 窗体应用程序的详细信息，可以使用它们、 事件和处理事件和如何处理来自用户的输入上的控件，请参阅相关的主题列表。  

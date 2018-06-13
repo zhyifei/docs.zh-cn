@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534903"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>如何：移动 ToolStripMenuItem
 在设计时，你可以将整个顶级菜单及其菜单项到其他位置<xref:System.Windows.Forms.MenuStrip>。 你还可以顶级菜单之间移动的单个菜单项或更改的菜单中的菜单项的位置。  

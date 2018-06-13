@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515699"
 ---
 # <a name="basic-activity-composition"></a>基本活动组合
 此示例演示如何编写自定义活动和系统提供的活动来生成更多自定义活动。  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535264"
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon 组件（Windows 窗体）
 Windows 窗体`NotifyIcon`组件显示图标在任务栏的状态通知区域中进程在后台运行，否则不会具有的用户界面。 例如，可通过单击任务栏的状态通知区域中的图标访问的病毒防护程序。  

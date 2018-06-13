@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc6c9079b6f233946fa38979800e28097e849f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428584"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>合成（非托管 API 参考）
 合成 API 使运行时主机访问应用程序的资源的属性，以便查找这些应用程序资源的正确版本。  

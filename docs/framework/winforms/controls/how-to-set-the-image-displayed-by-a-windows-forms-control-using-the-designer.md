@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532780"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体控件显示的图像
 多个 Windows 窗体控件可以显示图像。 图像可以是说明目的的控件，如按钮表示上的磁盘图标的图标**保存**命令。 或者，该图标可以为以提供所需的外观的控件的背景图像。  

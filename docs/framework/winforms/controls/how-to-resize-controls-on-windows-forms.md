@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533921"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>如何：调整 Windows 窗体上控件的大小
 你可以调整单个控件的大小和如调整大小相同或不同类型的多个控件<xref:System.Windows.Forms.Button>和<xref:System.Windows.Forms.GroupBox>控件。  

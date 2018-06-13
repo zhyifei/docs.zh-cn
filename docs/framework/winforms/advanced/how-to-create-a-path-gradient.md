@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529156"
 ---
 # <a name="how-to-create-a-path-gradient"></a>如何：创建路径渐变
 <xref:System.Drawing.Drawing2D.PathGradientBrush>类允许您自定义用渐变颜色填充形状的方式。 例如，你可以指定路径的中心的一种颜色和路径的边界的另一种颜色。 此外可以为每个几个点沿边界路径的指定单独的颜色。  

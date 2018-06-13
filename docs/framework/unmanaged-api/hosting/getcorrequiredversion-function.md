@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 637ff0fca74dc123a3f7a47dcc3fdeded8d884ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430042"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion 函数
 获取所需的公共语言运行时 (CLR) 版本数。  
@@ -48,7 +49,7 @@ HRESULT GetCORRequiredVersion (
  [out]返回在缓冲区中的字节数。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   

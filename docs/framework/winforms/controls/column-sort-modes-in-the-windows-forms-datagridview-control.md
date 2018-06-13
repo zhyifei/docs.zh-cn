@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529683"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的列排序模式
 <xref:System.Windows.Forms.DataGridView> 列具有三种排序模式。 通过指定每个列的排序模式<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>属性的列，可以将设置为以下项之一<xref:System.Windows.Forms.DataGridViewColumnSortMode>枚举值。  

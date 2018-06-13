@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535020"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>如何：设置所有 Windows 窗体的网格选项
 你会使用在 Visual Studio 开发环境中工作，您可以在 Windows 窗体设计器中设置所有窗体和项目，你使用的首选项。  

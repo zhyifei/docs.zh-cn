@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527769"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的数据格式设置
 <xref:System.Windows.Forms.DataGridView>控件提供单元格的值的父列显示的数据类型之间的自动转换。 文本框列，例如，显示的日期、 时间、 号和枚举值的字符串表示形式，并将用户输入的字符串值转换为数据存储所需的类型。  

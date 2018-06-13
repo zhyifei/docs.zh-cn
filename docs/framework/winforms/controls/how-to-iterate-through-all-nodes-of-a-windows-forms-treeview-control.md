@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532751"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>如何：循环访问 Windows 窗体 TreeView 控件的所有节点
 有时很有用，若要检查 Windows 窗体中的每个节点<xref:System.Windows.Forms.TreeView>为了执行某些计算基于节点值的控件。 使用循环访问每个树集合中每个节点的递归过程（C# 和 C++ 中为递归方法）可完成此操作。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 638ee0d02cb33b3a929d0ee43968c3ff34757ef2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432578"
 ---
 # <a name="icatalogservicesautodone-method"></a>ICatalogServices::Autodone 方法
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  

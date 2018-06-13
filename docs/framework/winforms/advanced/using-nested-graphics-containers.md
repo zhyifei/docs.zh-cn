@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529056"
 ---
 # <a name="using-nested-graphics-containers"></a>使用嵌套的 Graphics 容器
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供可用于临时替换或增加中的状态的一部分的容器<xref:System.Drawing.Graphics>对象。 通过调用创建容器<xref:System.Drawing.Graphics.BeginContainer%2A>方法<xref:System.Drawing.Graphics>对象。 你可以调用<xref:System.Drawing.Graphics.BeginContainer%2A>重复以形成嵌套的容器。 每次调用<xref:System.Drawing.Graphics.BeginContainer%2A>必须成对使用，通过调用<xref:System.Drawing.Graphics.EndContainer%2A>。  
