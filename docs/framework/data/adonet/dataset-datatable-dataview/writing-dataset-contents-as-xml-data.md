@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761904"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a><span data-ttu-id="99fee-102">写入数据集内容作为 XML 数据</span><span class="sxs-lookup"><span data-stu-id="99fee-102">Writing DataSet Contents as XML Data</span></span>
 <span data-ttu-id="99fee-103">在 ADO.NET 中可以编写 <xref:System.Data.DataSet> 的 XML 表示形式（包含或不包含其架构）。</span><span class="sxs-lookup"><span data-stu-id="99fee-103">In ADO.NET you can write an XML representation of a <xref:System.Data.DataSet>, with or without its schema.</span></span> <span data-ttu-id="99fee-104">如果架构信息以内联形式包含在 XML 表示形式中，则使用 XML 架构定义语言 (XSD) 来编写。</span><span class="sxs-lookup"><span data-stu-id="99fee-104">If schema information is included inline with the XML, it is written using the XML Schema definition language (XSD).</span></span> <span data-ttu-id="99fee-105">架构包含 <xref:System.Data.DataSet> 的表定义以及关系和约束定义。</span><span class="sxs-lookup"><span data-stu-id="99fee-105">The schema contains the table definitions of the <xref:System.Data.DataSet> as well as the relation and constraint definitions.</span></span>  

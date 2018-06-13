@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750133"
 ---
 # <a name="ltextensionsgt-section"></a><span data-ttu-id="a0924-102">&lt;extensions&gt; 节</span><span class="sxs-lookup"><span data-stu-id="a0924-102">&lt;extensions&gt; section</span></span>
 <span data-ttu-id="a0924-103">此配置节包含一个扩展集合，这些扩展使用户能够创建扩展的用户定义绑定、行为和其他方面。</span><span class="sxs-lookup"><span data-stu-id="a0924-103">This configuration section contains a collection of extensions, which enable the user to create user-defined bindings, behaviors, and other aspects of extensions.</span></span>  

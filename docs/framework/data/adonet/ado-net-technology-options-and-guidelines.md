@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758212"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a><span data-ttu-id="d72cc-102">ADO.NET 技术选项和准则</span><span class="sxs-lookup"><span data-stu-id="d72cc-102">ADO.NET Technology Options and Guidelines</span></span>
 <span data-ttu-id="d72cc-103">ADO.NET 数据平台是一种多版本策略，通过使开发人员能够针对概念性实体数据模型进行编程，减少其所需的编码和维护工作量。</span><span class="sxs-lookup"><span data-stu-id="d72cc-103">The ADO.NET Data Platform is a multi-release strategy to decrease the amount of coding and maintenance required for developers by enabling them to program against conceptual entity data models.</span></span> <span data-ttu-id="d72cc-104">此平台包括 ADO.NET 实体框架和相关技术。</span><span class="sxs-lookup"><span data-stu-id="d72cc-104">This platform includes the ADO.NET Entity Framework and related technologies.</span></span>  

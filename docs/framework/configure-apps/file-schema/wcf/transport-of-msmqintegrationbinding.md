@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750643"
 ---
 # <a name="lttransportgt-of-ltmsmqintegrationbindinggt"></a><span data-ttu-id="c66ab-102">&lt;msmqIntegrationBinding&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="c66ab-102">&lt;transport&gt; of &lt;msmqIntegrationBinding&gt;</span></span>
 <span data-ttu-id="c66ab-103">定义消息队列集成传输的安全设置。</span><span class="sxs-lookup"><span data-stu-id="c66ab-103">Defines the security settings for the Message Queuing integration transport.</span></span>  

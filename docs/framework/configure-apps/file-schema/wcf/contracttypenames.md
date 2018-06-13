@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752915"
 ---
 # <a name="ltcontracttypenamesgt"></a><span data-ttu-id="26710-102">&lt;contractTypeNames&gt;</span><span class="sxs-lookup"><span data-stu-id="26710-102">&lt;contractTypeNames&gt;</span></span>
 <span data-ttu-id="26710-103">一个指定协定类型名称列表的配置节，这些名称是所搜索服务的协定名称以及搜索服务时通常采用的条件。</span><span class="sxs-lookup"><span data-stu-id="26710-103">A configuration section that specifies a list of contract type names, which are the contract names of the services being searched for, and the criteria typically used when searching for a service.</span></span> <span data-ttu-id="26710-104">如果指定多个协定名称，则只有与全部协定都匹配的服务终结点才会进行答复。</span><span class="sxs-lookup"><span data-stu-id="26710-104">If more than one contract name is specified, only service endpoints matching ALL contracts will reply.</span></span> <span data-ttu-id="26710-105">请注意，在 Windows Communication Foundation (WCF) 中，终结点只能支持一个协定。</span><span class="sxs-lookup"><span data-stu-id="26710-105">Note that in Windows Communication Foundation (WCF), an endpoint can only support one contract.</span></span>  

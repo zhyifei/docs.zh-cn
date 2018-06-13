@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756548"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a><span data-ttu-id="d3f6f-102">将 XSLT 转换应用于 DataSet</span><span class="sxs-lookup"><span data-stu-id="d3f6f-102">Applying an XSLT Transform to a DataSet</span></span>
 <span data-ttu-id="d3f6f-103">**WriteXml**方法<xref:System.Data.DataSet>使您能够写入的内容**数据集**以 XML 数据形式。</span><span class="sxs-lookup"><span data-stu-id="d3f6f-103">The **WriteXml** method of the <xref:System.Data.DataSet> enables you to write the contents of a **DataSet** as XML data.</span></span> <span data-ttu-id="d3f6f-104">随后的一项常见任务是使用 XSL 转换 (XSLT) 将该 XML 转换为另一种格式。</span><span class="sxs-lookup"><span data-stu-id="d3f6f-104">A common task is to then transform that XML to another format using XSL transformations (XSLT).</span></span> <span data-ttu-id="d3f6f-105">但是，同步**数据集**与<xref:System.Xml.XmlDataDocument>，可以将 XSLT 样式表应用到的内容**数据集**而无需首先编写的内容**数据集**以 XML 数据**WriteXml**。</span><span class="sxs-lookup"><span data-stu-id="d3f6f-105">However, synchronizing a **DataSet** with an <xref:System.Xml.XmlDataDocument> enables you to apply an XSLT stylesheet to the contents of a **DataSet** without having to first write the contents of the **DataSet** as XML data using **WriteXml**.</span></span>  

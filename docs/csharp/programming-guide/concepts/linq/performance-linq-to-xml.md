@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329217"
 ---
 # <a name="performance-linq-to-xml-c"></a><span data-ttu-id="0ef84-102">性能 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="0ef84-102">Performance (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="0ef84-103">本节提供有关 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的性能（尤其是函数构造和查询的性能）信息。</span><span class="sxs-lookup"><span data-stu-id="0ef84-103">This section provides information about performance in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], specifically the performance of functional construction and queries.</span></span>  

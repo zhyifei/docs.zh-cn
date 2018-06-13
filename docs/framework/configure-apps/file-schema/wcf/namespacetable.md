@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748875"
 ---
 # <a name="ltnamespacetablegt"></a><span data-ttu-id="4fb3f-102">&lt;namespaceTable&gt;</span><span class="sxs-lookup"><span data-stu-id="4fb3f-102">&lt;namespaceTable&gt;</span></span>
 

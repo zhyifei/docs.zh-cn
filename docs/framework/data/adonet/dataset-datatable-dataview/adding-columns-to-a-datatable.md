@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760461"
 ---
 # <a name="adding-columns-to-a-datatable"></a><span data-ttu-id="43b05-102">向数据表添加列</span><span class="sxs-lookup"><span data-stu-id="43b05-102">Adding Columns to a DataTable</span></span>
 <span data-ttu-id="43b05-103">A<xref:System.Data.DataTable>包含一套<xref:System.Data.DataColumn>所引用的对象**列**的表的属性。</span><span class="sxs-lookup"><span data-stu-id="43b05-103">A <xref:System.Data.DataTable> contains a collection of <xref:System.Data.DataColumn> objects referenced by the **Columns** property of the table.</span></span> <span data-ttu-id="43b05-104">这个列的集合与任何约束一起定义表的架构（即结构）。</span><span class="sxs-lookup"><span data-stu-id="43b05-104">This collection of columns, along with any constraints, defines the schema, or structure, of the table.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749109"
 ---
 # <a name="ltlocalissuergt"></a><span data-ttu-id="0f2be-102">&lt;localIssuer&gt;</span><span class="sxs-lookup"><span data-stu-id="0f2be-102">&lt;localIssuer&gt;</span></span>
 <span data-ttu-id="0f2be-103">指定要用于颁发安全令牌的本地颁发者的地址和绑定。</span><span class="sxs-lookup"><span data-stu-id="0f2be-103">Specifies the address and binding of the local issuer to be used to obtain a security token.</span></span>  

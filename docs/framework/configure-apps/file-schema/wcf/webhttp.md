@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767487"
 ---
 # <a name="ltwebhttpgt"></a><span data-ttu-id="fab26-102">&lt;webHttp&gt;</span><span class="sxs-lookup"><span data-stu-id="fab26-102">&lt;webHttp&gt;</span></span>
 <span data-ttu-id="fab26-103">此元素通过配置指定终结点上的 <xref:System.ServiceModel.Description.WebHttpBehavior>。</span><span class="sxs-lookup"><span data-stu-id="fab26-103">This element specifies the <xref:System.ServiceModel.Description.WebHttpBehavior> on an endpoint through configuration.</span></span> <span data-ttu-id="fab26-104">此行为与结合使用时， [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)标准绑定，可使 Windows Communication Foundation (WCF) 服务的 Web 编程模型。</span><span class="sxs-lookup"><span data-stu-id="fab26-104">This behavior, when used in conjunction with the [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) standard binding, enables the Web programming model for a Windows Communication Foundation (WCF) service.</span></span>  

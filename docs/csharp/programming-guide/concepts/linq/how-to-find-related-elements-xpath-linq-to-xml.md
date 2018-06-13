@@ -1,35 +1,27 @@
 ---
-title: "如何：查找相关元素 (XPath-LINQ to XML) (C#)"
-ms.custom: 
+title: 如何：查找相关元素 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3b128c8aa801c445e5e8cd2b4aab4e55f22b086c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e5367c1b47f24dd269f5055f692c657ecd748b63
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330650"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="85ea9-102">如何：查找相关元素 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="85ea9-102">How to: Find Related Elements (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="85ea9-103">本主题演示如何在由其他元素的值所引用的属性上获取元素选择。</span><span class="sxs-lookup"><span data-stu-id="85ea9-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="c7354-102">如何：查找相关元素 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="c7354-102">How to: Find Related Elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="c7354-103">本主题演示如何在由其他元素的值所引用的属性上获取元素选择。</span><span class="sxs-lookup"><span data-stu-id="c7354-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
   
- <span data-ttu-id="85ea9-104">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="85ea9-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="c7354-104">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="c7354-104">The XPath expression is:</span></span>  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
-## <a name="example"></a><span data-ttu-id="85ea9-105">示例</span><span class="sxs-lookup"><span data-stu-id="85ea9-105">Example</span></span>  
- <span data-ttu-id="85ea9-106">本示例查找第 12 个 `Order` 元素，然后查找该订单的客户。</span><span class="sxs-lookup"><span data-stu-id="85ea9-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
+## <a name="example"></a><span data-ttu-id="c7354-105">示例</span><span class="sxs-lookup"><span data-stu-id="c7354-105">Example</span></span>  
+ <span data-ttu-id="c7354-106">本示例查找第 12 个 `Order` 元素，然后查找该订单的客户。</span><span class="sxs-lookup"><span data-stu-id="c7354-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
   
- <span data-ttu-id="85ea9-107">注意，在 .Net 中，对列表的索引是从零开始的。</span><span class="sxs-lookup"><span data-stu-id="85ea9-107">Note that indexing into a list in .Net is 'zero' based.</span></span> <span data-ttu-id="85ea9-108">在 XPath 谓词中，对节点集合的索引是从 1 开始的。</span><span class="sxs-lookup"><span data-stu-id="85ea9-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="85ea9-109">本示例反映了这种差别。</span><span class="sxs-lookup"><span data-stu-id="85ea9-109">This example reflects this difference.</span></span>  
+ <span data-ttu-id="c7354-107">注意，在 .Net 中，对列表的索引是从零开始的。</span><span class="sxs-lookup"><span data-stu-id="c7354-107">Note that indexing into a list in .Net is 'zero' based.</span></span> <span data-ttu-id="c7354-108">在 XPath 谓词中，对节点集合的索引是从 1 开始的。</span><span class="sxs-lookup"><span data-stu-id="c7354-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="c7354-109">本示例反映了这种差别。</span><span class="sxs-lookup"><span data-stu-id="c7354-109">This example reflects this difference.</span></span>  
   
- <span data-ttu-id="85ea9-110">本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。</span><span class="sxs-lookup"><span data-stu-id="85ea9-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
+ <span data-ttu-id="c7354-110">本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。</span><span class="sxs-lookup"><span data-stu-id="c7354-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -72,7 +64,7 @@ else
 Console.WriteLine(customer1);  
 ```  
   
- <span data-ttu-id="85ea9-111">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="85ea9-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="c7354-111">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="c7354-111">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -92,5 +84,5 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="85ea9-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="85ea9-112">See Also</span></span>  
- [<span data-ttu-id="85ea9-113">针对 XPath 用户的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="85ea9-113">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="c7354-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="c7354-112">See Also</span></span>  
+ [<span data-ttu-id="c7354-113">针对 XPath 用户的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="c7354-113">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

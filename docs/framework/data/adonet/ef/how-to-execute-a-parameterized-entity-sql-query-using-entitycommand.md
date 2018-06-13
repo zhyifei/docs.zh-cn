@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767175"
 ---
 # <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a><span data-ttu-id="a4215-102">如何：使用 EntityCommand 执行参数化 Entity SQL 查询</span><span class="sxs-lookup"><span data-stu-id="a4215-102">How to: Execute a Parameterized Entity SQL Query Using EntityCommand</span></span>
 <span data-ttu-id="a4215-103">本主题演示如何执行[!INCLUDE[esql](../../../../../includes/esql-md.md)]通过使用具有参数的查询<xref:System.Data.EntityClient.EntityCommand>对象。</span><span class="sxs-lookup"><span data-stu-id="a4215-103">This topic shows how to execute an [!INCLUDE[esql](../../../../../includes/esql-md.md)] query that has parameters by using an <xref:System.Data.EntityClient.EntityCommand> object.</span></span>  

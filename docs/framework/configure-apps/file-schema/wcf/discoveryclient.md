@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753162"
 ---
 # <a name="ltdiscoveryclientgt"></a><span data-ttu-id="d3362-102">&lt;discoveryClient&gt;</span><span class="sxs-lookup"><span data-stu-id="d3362-102">&lt;discoveryClient&gt;</span></span>
 <span data-ttu-id="d3362-103">一个用于创建自定义绑定的配置元素，通过该绑定，客户端应用程序能够自动搜索可检测服务，并能够在运行时查找服务地址。</span><span class="sxs-lookup"><span data-stu-id="d3362-103">A configuration element for creating a custom binding that enables a client application to automatically search for a discoverable service and find its address at runtime.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759135"
 ---
 # <a name="adonet-code-examples"></a><span data-ttu-id="dacf3-102">ADO.NET 代码示例</span><span class="sxs-lookup"><span data-stu-id="dacf3-102">ADO.NET code examples</span></span>
 <span data-ttu-id="dacf3-103">本主题中的代码列表演示如何使用下面的 ADO.NET 技术从数据库中检索数据：</span><span class="sxs-lookup"><span data-stu-id="dacf3-103">The code listings in this topic demonstrate how to retrieve data from a database by using the following ADO.NET technologies:</span></span>

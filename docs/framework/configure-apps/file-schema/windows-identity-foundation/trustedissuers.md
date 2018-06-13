@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757465"
 ---
 # <a name="lttrustedissuersgt"></a><span data-ttu-id="f17da-102">&lt;trustedIssuers&gt;</span><span class="sxs-lookup"><span data-stu-id="f17da-102">&lt;trustedIssuers&gt;</span></span>
 <span data-ttu-id="f17da-103">配置使用的基于配置的颁发者名称注册表的受信任颁发者证书的列表 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>)。</span><span class="sxs-lookup"><span data-stu-id="f17da-103">Configures the list of trusted issuer certificates used by the configuration-based issuer name registry (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).</span></span>  

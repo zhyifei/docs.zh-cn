@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766863"
 ---
 # <a name="architecture-and-design"></a><span data-ttu-id="3a47e-102">体系结构和设计</span><span class="sxs-lookup"><span data-stu-id="3a47e-102">Architecture and Design</span></span>
 <span data-ttu-id="3a47e-103">中的 SQL 生成模块[示例提供程序](http://go.microsoft.com/fwlink/?LinkId=180616)作为表示命令目录树的表达式树访问者实现的。</span><span class="sxs-lookup"><span data-stu-id="3a47e-103">The SQL generation module in the [Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) is implemented as a visitor on the expression tree that represents the command tree.</span></span> <span data-ttu-id="3a47e-104">通过表达式树上的单个传递来执行生成。</span><span class="sxs-lookup"><span data-stu-id="3a47e-104">The generation is done in a single pass over the expression tree.</span></span>  

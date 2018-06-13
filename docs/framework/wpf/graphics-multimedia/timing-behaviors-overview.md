@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566319"
 ---
 # <a name="timing-behaviors-overview"></a><span data-ttu-id="81f30-102">计时行为概述</span><span class="sxs-lookup"><span data-stu-id="81f30-102">Timing Behaviors Overview</span></span>
 <span data-ttu-id="81f30-103">本主题介绍动画和其他的计时行为<xref:System.Windows.Media.Animation.Timeline>对象。</span><span class="sxs-lookup"><span data-stu-id="81f30-103">This topic describes the timing behaviors of animations and other <xref:System.Windows.Media.Animation.Timeline> objects.</span></span>  

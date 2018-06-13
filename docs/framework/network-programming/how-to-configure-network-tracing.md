@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395955"
 ---
 # <a name="how-to-configure-network-tracing"></a><span data-ttu-id="f798b-102">如何：配置网络跟踪</span><span class="sxs-lookup"><span data-stu-id="f798b-102">How to: Configure Network Tracing</span></span>
 <span data-ttu-id="f798b-103">应用程序或计算机配置文件可保存用于确定网络跟踪的格式和内容的设置。</span><span class="sxs-lookup"><span data-stu-id="f798b-103">The application or computer configuration file holds the settings that determine the format and content of network traces.</span></span> <span data-ttu-id="f798b-104">在执行此过程之前，请确保启用跟踪。</span><span class="sxs-lookup"><span data-stu-id="f798b-104">Before performing this procedure, be sure tracing is enabled.</span></span> <span data-ttu-id="f798b-105">有关如何启用跟踪的信息，请参阅[启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)。</span><span class="sxs-lookup"><span data-stu-id="f798b-105">For information about enabling tracing, see [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).</span></span>  

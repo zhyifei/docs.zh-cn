@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565309"
 ---
 # <a name="using-drawingvisual-objects"></a><span data-ttu-id="1b2e9-102">使用 DrawingVisual 对象</span><span class="sxs-lookup"><span data-stu-id="1b2e9-102">Using DrawingVisual Objects</span></span>
 <span data-ttu-id="1b2e9-103">本主题概述如何使用<xref:System.Windows.Media.DrawingVisual>中的对象[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可视化层。</span><span class="sxs-lookup"><span data-stu-id="1b2e9-103">This topic provides an overview of how to use <xref:System.Windows.Media.DrawingVisual> objects in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visual layer.</span></span>  

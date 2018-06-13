@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749483"
 ---
 # <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a><span data-ttu-id="8d1bb-102">WCF 的 &lt;states&gt;，&lt;workflowInstanceQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="8d1bb-102">&lt;states&gt; of WCF, &lt;workflowInstanceQuery&gt;</span></span>
 <span data-ttu-id="8d1bb-103">表示创建跟踪记录时已跟踪工作流实例中已订阅状态的集合。</span><span class="sxs-lookup"><span data-stu-id="8d1bb-103">Represents a collection of subscribed states from the tracked workflow instance when the tracking records are created.</span></span>  

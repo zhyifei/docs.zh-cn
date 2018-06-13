@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766915"
 ---
 # <a name="ltunrecognizedpolicyassertiongt"></a><span data-ttu-id="bd9d6-102">&lt;unrecognizedPolicyAssertion&gt;</span><span class="sxs-lookup"><span data-stu-id="bd9d6-102">&lt;unrecognizedPolicyAssertion&gt;</span></span>
 <span data-ttu-id="bd9d6-103">表示用于指定策略断言的绑定元素。</span><span class="sxs-lookup"><span data-stu-id="bd9d6-103">Represents a binding element that specifies policy assertion.</span></span> <span data-ttu-id="bd9d6-104">此元素没有属性并且以空开关形式存在。</span><span class="sxs-lookup"><span data-stu-id="bd9d6-104">This element has no attribute and is present as an empty switch.</span></span>  

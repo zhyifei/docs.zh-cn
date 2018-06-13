@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766850"
 ---
 # <a name="oracle-schema-collections"></a><span data-ttu-id="af691-102">Oracle 架构集合</span><span class="sxs-lookup"><span data-stu-id="af691-102">Oracle Schema Collections</span></span>
 <span data-ttu-id="af691-103">除了通用架构集合之外，Microsoft Oracle .NET Framework 数据提供程序还支持下列特定的架构集合：</span><span class="sxs-lookup"><span data-stu-id="af691-103">The Microsoft .NET Framework Data Provider for Oracle supports the following specific schema collections in addition to the common schema collections:</span></span>  

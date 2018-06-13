@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762450"
 ---
 # <a name="typed-datasets"></a><span data-ttu-id="cbc56-102">类型化数据集</span><span class="sxs-lookup"><span data-stu-id="cbc56-102">Typed DataSets</span></span>
 <span data-ttu-id="cbc56-103">在允许通过弱类型化变量对值进行后期绑定访问的同时，<xref:System.Data.DataSet> 还允许通过强类型化比喻对数据进行访问。</span><span class="sxs-lookup"><span data-stu-id="cbc56-103">Along with late bound access to values through weakly typed variables, the <xref:System.Data.DataSet> provides access to data through a strongly typed metaphor.</span></span> <span data-ttu-id="cbc56-104">表和列属于**数据集**可以使用用户友好名称来访问和强类型化变量。</span><span class="sxs-lookup"><span data-stu-id="cbc56-104">Tables and columns that are part of the **DataSet** can be accessed using user-friendly names and strongly typed variables.</span></span>  

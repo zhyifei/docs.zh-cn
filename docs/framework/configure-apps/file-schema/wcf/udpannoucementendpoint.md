@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766785"
 ---
 # <a name="ltudpannoucementendpointgt"></a><span data-ttu-id="c021e-102">&lt;udpAnnoucementEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="c021e-102">&lt;udpAnnoucementEndpoint&gt;</span></span>
 <span data-ttu-id="c021e-103">此配置元素定义服务通过 UDP 绑定发送公告消息所使用的标准终结点。</span><span class="sxs-lookup"><span data-stu-id="c021e-103">This configuration element defines a standard endpoint that is used by services to send announcement messages over a UDP binding.</span></span> <span data-ttu-id="c021e-104">它具有固定协定并支持两个发现版本。</span><span class="sxs-lookup"><span data-stu-id="c021e-104">It has a fixed contract and supports two discovery versions.</span></span> <span data-ttu-id="c021e-105">此外，根据 WS-Discovery 规范（WS-Discovery 2005 年 4 月版或 WS-Discovery 1.1 版）中的规定，它还具有固定 UDP 绑定和默认地址值。</span><span class="sxs-lookup"><span data-stu-id="c021e-105">In addition it has a fixed UDP binding and a default address value as specified in the WS-Discovery specifications (WS-Discovery April 2005 or WS-Discovery version 1.1).</span></span> <span data-ttu-id="c021e-106">您可以指定用于发送和接收公告消息的多播地址。</span><span class="sxs-lookup"><span data-stu-id="c021e-106">You can specify the multicast address to use for sending and receiving the announcement messages.</span></span>  

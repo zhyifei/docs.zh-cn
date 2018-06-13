@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758121"
 ---
 # <a name="how-to-create-a-publisher-policy"></a><span data-ttu-id="2b102-102">如何：创建发行者策略</span><span class="sxs-lookup"><span data-stu-id="2b102-102">How to: Create a Publisher Policy</span></span>
 <span data-ttu-id="2b102-103">程序集的供应商可以状态应用程序应使用通过包括发布服务器策略文件与已升级的程序集的程序集的较新版本。</span><span class="sxs-lookup"><span data-stu-id="2b102-103">Vendors of assemblies can state that applications should use a newer version of an assembly by including a publisher policy file with the upgraded assembly.</span></span> <span data-ttu-id="2b102-104">发布服务器策略文件指定程序集重定向和基本代码设置，并为应用程序配置文件使用相同的格式。</span><span class="sxs-lookup"><span data-stu-id="2b102-104">The publisher policy file specifies assembly redirection and code base settings, and uses the same format as an application configuration file.</span></span> <span data-ttu-id="2b102-105">发布服务器策略文件编译成程序集和放入全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="2b102-105">The publisher policy file is compiled into an assembly and placed in the global assembly cache.</span></span>  

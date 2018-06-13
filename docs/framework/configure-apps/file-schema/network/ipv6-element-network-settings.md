@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742479"
 ---
 # <a name="ltipv6gt-element-network-settings"></a><span data-ttu-id="01b33-102">&lt;ipv6&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="01b33-102">&lt;ipv6&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="01b33-103">启用 Internet 协议版本 6 (IPv6) 响应的过时成员<xref:System.Net.Dns>类。</span><span class="sxs-lookup"><span data-stu-id="01b33-103">Enables Internet Protocol version 6 (IPv6) responses from obsolete members of the <xref:System.Net.Dns> class.</span></span>  

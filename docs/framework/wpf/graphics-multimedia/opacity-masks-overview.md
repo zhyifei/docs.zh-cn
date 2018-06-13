@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566228"
 ---
 # <a name="opacity-masks-overview"></a><span data-ttu-id="f834b-102">不透明蒙板概述</span><span class="sxs-lookup"><span data-stu-id="f834b-102">Opacity Masks Overview</span></span>
 <span data-ttu-id="f834b-103">不透明蒙板能够使部分元素或视觉对象透明或部分透明。</span><span class="sxs-lookup"><span data-stu-id="f834b-103">Opacity masks enable you to make portions of an element or visual either transparent or partially transparent.</span></span> <span data-ttu-id="f834b-104">若要创建不透明蒙板，则应用<xref:System.Windows.Media.Brush>到<xref:System.Windows.UIElement.OpacityMask%2A>元素的属性或<xref:System.Windows.Media.Visual>。</span><span class="sxs-lookup"><span data-stu-id="f834b-104">To create an opacity mask, you apply a <xref:System.Windows.Media.Brush> to the <xref:System.Windows.UIElement.OpacityMask%2A> property of an element or <xref:System.Windows.Media.Visual>.</span></span>  <span data-ttu-id="f834b-105">画笔映射到元素或视觉对象，并且画笔的每个像素的不透明度值用于确定生成的元素或视觉对象的每个相应像素的不透明度。</span><span class="sxs-lookup"><span data-stu-id="f834b-105">The brush is mapped to the element or visual, and the opacity value of each brush pixel is used to determine the resulting opacity of each corresponding pixel of the element or visual.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746730"
 ---
 # <a name="ltdnsgt"></a><span data-ttu-id="e30ec-102">&lt;Dns&gt;</span><span class="sxs-lookup"><span data-stu-id="e30ec-102">&lt;dns&gt;</span></span>
 <span data-ttu-id="e30ec-103">指定服务器的所需标识。</span><span class="sxs-lookup"><span data-stu-id="e30ec-103">Specifies the expected identity of the server.</span></span> <span data-ttu-id="e30ec-104">如果服务器的证书包含具有相同值的 DNS，则此标识对于 X509 证书身份验证模式有效。</span><span class="sxs-lookup"><span data-stu-id="e30ec-104">This identity is valid for X509 Certificate authentication mode if the server’s certificate contains a DNS with the same value.</span></span> <span data-ttu-id="e30ec-105">如果 SPN 具有相同值，则它对于 Windows 身份验证模式同样有效。</span><span class="sxs-lookup"><span data-stu-id="e30ec-105">It is also valid for Windows authentication mode if the SPN has the same value.</span></span>  

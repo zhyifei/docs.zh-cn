@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752489"
 ---
 # <a name="message-encoding"></a><span data-ttu-id="63cc6-102">消息编码</span><span class="sxs-lookup"><span data-stu-id="63cc6-102">Message Encoding</span></span>
 <span data-ttu-id="63cc6-103">编码是将一组 Unicode 字符转换为一个字节序列的过程。</span><span class="sxs-lookup"><span data-stu-id="63cc6-103">Encoding is the process of transforming a set of Unicode characters into a sequence of bytes.</span></span> <span data-ttu-id="63cc6-104">解码是反向过程。</span><span class="sxs-lookup"><span data-stu-id="63cc6-104">Decoding is the reverse process.</span></span> <span data-ttu-id="63cc6-105">Windows Communication Foundation (WCF) 包含三种类型的 SOAP 消息编码：文本、二进制和消息传输优化机制 (MTOM)。</span><span class="sxs-lookup"><span data-stu-id="63cc6-105">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  

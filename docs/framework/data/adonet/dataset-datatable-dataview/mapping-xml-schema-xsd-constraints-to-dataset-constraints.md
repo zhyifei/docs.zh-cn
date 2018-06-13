@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760981"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="23777-102">将关键 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="23777-102">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>
 <span data-ttu-id="23777-103">XML 架构定义语言 (XSD) 允许对它所定义的元素和属性指定约束。</span><span class="sxs-lookup"><span data-stu-id="23777-103">The XML Schema definition language (XSD) allows constraints to be specified on the elements and attributes it defines.</span></span> <span data-ttu-id="23777-104">映射到关系架构中的 XML 架构时<xref:System.Data.DataSet>，XML 架构约束将映射到上的表和列中的相应关系约束**数据集**。</span><span class="sxs-lookup"><span data-stu-id="23777-104">When mapping an XML Schema to relational schema in a <xref:System.Data.DataSet>, XML Schema constraints are mapped to appropriate relational constraints on the tables and columns within the **DataSet**.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760201"
 ---
 # <a name="except-entity-sql"></a><span data-ttu-id="710b2-102">EXCEPT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="710b2-102">EXCEPT (Entity SQL)</span></span>
 <span data-ttu-id="710b2-103">返回由 EXCEPT 操作数左侧的查询表达式返回而不由 EXCEPT 操作数右侧的查询表达式返回的任何非重复值的集合。</span><span class="sxs-lookup"><span data-stu-id="710b2-103">Returns a collection of any distinct values from the query expression to the left of the EXCEPT operand that are not also returned from the query expression to the right of the EXCEPT operand.</span></span> <span data-ttu-id="710b2-104">所有表达式都必须与 `expression`一样属于同一类型或属于公共基类型或派生类型。</span><span class="sxs-lookup"><span data-stu-id="710b2-104">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  

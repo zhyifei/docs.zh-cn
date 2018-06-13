@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747848"
 ---
 # <a name="ltmetadatagt"></a><span data-ttu-id="d20c6-102">&lt;元数据&gt;</span><span class="sxs-lookup"><span data-stu-id="d20c6-102">&lt;metadata&gt;</span></span>
 <span data-ttu-id="d20c6-103">指定可以处理服务元数据的方式。</span><span class="sxs-lookup"><span data-stu-id="d20c6-103">Specifies how service metadata can be processed.</span></span>  

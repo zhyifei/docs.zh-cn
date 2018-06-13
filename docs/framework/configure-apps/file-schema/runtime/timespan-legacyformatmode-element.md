@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753965"
 ---
 # <a name="lttimespanlegacyformatmodegt-element"></a><span data-ttu-id="ecde2-102">&lt;TimeSpan_LegacyFormatMode&gt;元素</span><span class="sxs-lookup"><span data-stu-id="ecde2-102">&lt;TimeSpan_LegacyFormatMode&gt; Element</span></span>
 <span data-ttu-id="ecde2-103">确定运行时是否保留旧行为中的格式设置操作<xref:System.TimeSpan?displayProperty=nameWithType>值。</span><span class="sxs-lookup"><span data-stu-id="ecde2-103">Determines whether the runtime preserves legacy behavior in formatting operations with <xref:System.TimeSpan?displayProperty=nameWithType> values.</span></span>  

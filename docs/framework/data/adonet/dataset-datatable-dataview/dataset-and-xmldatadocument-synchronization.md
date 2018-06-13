@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759161"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a><span data-ttu-id="0d833-102">数据集和 XmlDataDocument 同步</span><span class="sxs-lookup"><span data-stu-id="0d833-102">DataSet and XmlDataDocument Synchronization</span></span>
 <span data-ttu-id="0d833-103">ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。</span><span class="sxs-lookup"><span data-stu-id="0d833-103">The ADO.NET <xref:System.Data.DataSet> provides you with a relational representation of data.</span></span> <span data-ttu-id="0d833-104">若要实现分层数据访问，可以使用 .NET Framework 中的可用 XML 类。</span><span class="sxs-lookup"><span data-stu-id="0d833-104">For hierarchical data access, you can use the XML classes available in the .NET Framework.</span></span> <span data-ttu-id="0d833-105">以前，数据的这两种表示形式是单独使用的。</span><span class="sxs-lookup"><span data-stu-id="0d833-105">Historically, these two representations of data have been used separately.</span></span> <span data-ttu-id="0d833-106">不过，.NET Framework 允许对通过数据的关系和分层表示的实时同步访问**数据集**对象和<xref:System.Xml.XmlDataDocument>对象，分别。</span><span class="sxs-lookup"><span data-stu-id="0d833-106">However, the .NET Framework enables real-time, synchronous access to both the relational and hierarchical representations of data through the **DataSet** object and the <xref:System.Xml.XmlDataDocument> object, respectively.</span></span>  

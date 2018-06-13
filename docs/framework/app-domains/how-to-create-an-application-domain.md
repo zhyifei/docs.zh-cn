@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751763"
 ---
 # <a name="how-to-create-an-application-domain"></a><span data-ttu-id="e3068-102">如何：创建应用程序域</span><span class="sxs-lookup"><span data-stu-id="e3068-102">How to: Create an Application Domain</span></span>
 <span data-ttu-id="e3068-103">需要应用程序域时，公共语言运行时主机会自动创建它们。</span><span class="sxs-lookup"><span data-stu-id="e3068-103">A common language runtime host creates application domains automatically when they are needed.</span></span> <span data-ttu-id="e3068-104">但是，可以创建自己的应用程序域并将其加载到需要亲自管理的程序集中。</span><span class="sxs-lookup"><span data-stu-id="e3068-104">However, you can create your own application domains and load into them those assemblies that you want to manage personally.</span></span> <span data-ttu-id="e3068-105">也可以创建从中执行代码的应用程序域。</span><span class="sxs-lookup"><span data-stu-id="e3068-105">You can also create application domains from which you execute code.</span></span>  

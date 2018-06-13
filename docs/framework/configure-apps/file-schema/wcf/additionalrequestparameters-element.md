@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746522"
 ---
 # <a name="ltadditionalrequestparametersgt-element"></a><span data-ttu-id="540fb-102">&lt;additionalRequestParameters&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="540fb-102">&lt;additionalRequestParameters&gt; element</span></span>
 <span data-ttu-id="540fb-103">此元素包含用于指定附加请求参数的配置元素的集合。</span><span class="sxs-lookup"><span data-stu-id="540fb-103">This contains a collection of configuration elements that specify additional request parameters.</span></span>  

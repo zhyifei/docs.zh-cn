@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319164"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="52fba-102">如何：联接不同文件的内容 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="52fba-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
 <span data-ttu-id="52fba-103">本示例演示如何联接两个逗号分隔文件中的数据，这两个文件共享一个用作匹配键的公共值。</span><span class="sxs-lookup"><span data-stu-id="52fba-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="52fba-104">如果需要合并来自两个电子表格的数据，或者从一个电子表格和具有另一种格式的文件合并到一个新文件时，此技术很有用。</span><span class="sxs-lookup"><span data-stu-id="52fba-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="52fba-105">可以修改此示例以用于任何类型的结构化文本。</span><span class="sxs-lookup"><span data-stu-id="52fba-105">You can modify the example to work with any kind of structured text.</span></span>  

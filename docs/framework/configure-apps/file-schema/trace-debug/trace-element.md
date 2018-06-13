@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746054"
 ---
 # <a name="lttracegt-element"></a><span data-ttu-id="dcec6-102">&lt;跟踪&gt;元素</span><span class="sxs-lookup"><span data-stu-id="dcec6-102">&lt;trace&gt; Element</span></span>
 <span data-ttu-id="dcec6-103">包含用于收集、存储和路由跟踪消息的侦听器。</span><span class="sxs-lookup"><span data-stu-id="dcec6-103">Contains listeners that collect, store, and route tracing messages.</span></span>  

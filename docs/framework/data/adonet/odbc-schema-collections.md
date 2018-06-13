@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766642"
 ---
 # <a name="odbc-schema-collections"></a><span data-ttu-id="e414e-102">ODBC 架构集合</span><span class="sxs-lookup"><span data-stu-id="e414e-102">ODBC Schema Collections</span></span>
 <span data-ttu-id="e414e-103">本节讨论对适用于 Microsoft SQL Server、Oracle 和 Microsoft Jet 的 ODBC 驱动程序的架构集合支持。</span><span class="sxs-lookup"><span data-stu-id="e414e-103">This section discusses schema collection support for the ODBC drivers for Microsoft SQL Server, Oracle, and Microsoft Jet.</span></span>  

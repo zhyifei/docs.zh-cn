@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747120"
 ---
 # <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="06cd4-102">&lt;claimTypeRequirements&gt; 的 &lt;clear&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="06cd4-102">&lt;clear&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="06cd4-103">指定所有声明类型都将从联合凭据中移除。</span><span class="sxs-lookup"><span data-stu-id="06cd4-103">Specifies that all the claim types to be removed in the federated credential.</span></span> <span data-ttu-id="06cd4-104">这样可以确保集合最初为空。</span><span class="sxs-lookup"><span data-stu-id="06cd4-104">This ensures that the collection starts empty.</span></span>  

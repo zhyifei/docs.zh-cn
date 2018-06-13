@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751007"
 ---
 # <a name="ltdefaultcertificategt-element"></a><span data-ttu-id="f2e91-102">&lt;defaultCertificate&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="f2e91-102">&lt;defaultCertificate&gt; Element</span></span>
 <span data-ttu-id="f2e91-103">指定在服务或 STS 未通过协商协议提供证书时要使用的 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="f2e91-103">Specifies an X.509 certificate to be used when a service or STS does not provide one via a negotiation protocol.</span></span>  

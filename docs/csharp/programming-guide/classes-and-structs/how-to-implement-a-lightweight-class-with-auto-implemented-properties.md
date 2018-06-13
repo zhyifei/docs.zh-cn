@@ -1,31 +1,26 @@
 ---
-title: "如何：使用自动实现的属性实现轻量类（C# 编程指南）"
+title: 如何：使用自动实现的属性实现轻量类（C# 编程指南）
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-caps.latest.revision: "11"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f43dfaffe6ff696387573729dc25cabe33c1fede
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9612ec916481776691e85a84503ce5063c20b099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321517"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="683e4-102">如何：使用自动实现的属性实现轻量类（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="683e4-102">How to: Implement a Lightweight Class with Auto-Implemented Properties (C# Programming Guide)</span></span>
-<span data-ttu-id="683e4-103">本示例演示如何创建一个仅用于封装一组自动实现的属性的不可变轻型类。</span><span class="sxs-lookup"><span data-stu-id="683e4-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="683e4-104">当你必须使用引用类型语义时，请使用此种构造而不是结构。</span><span class="sxs-lookup"><span data-stu-id="683e4-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>  
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="6c58d-102">如何：使用自动实现的属性实现轻量类（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="6c58d-102">How to: Implement a Lightweight Class with Auto-Implemented Properties (C# Programming Guide)</span></span>
+<span data-ttu-id="6c58d-103">本示例演示如何创建一个仅用于封装一组自动实现的属性的不可变轻型类。</span><span class="sxs-lookup"><span data-stu-id="6c58d-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="6c58d-104">当你必须使用引用类型语义时，请使用此种构造而不是结构。</span><span class="sxs-lookup"><span data-stu-id="6c58d-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>  
   
- <span data-ttu-id="683e4-105">可通过两种方法来实现不可变的属性。</span><span class="sxs-lookup"><span data-stu-id="683e4-105">You can make an immutable property in two ways.</span></span>  <span data-ttu-id="683e4-106">可以将 [set](../../../csharp/language-reference/keywords/set.md) 访问器声明为[专用](../../../csharp/language-reference/keywords/private.md)。</span><span class="sxs-lookup"><span data-stu-id="683e4-106">You can declare the [set](../../../csharp/language-reference/keywords/set.md) accessor.to be [private](../../../csharp/language-reference/keywords/private.md).</span></span>  <span data-ttu-id="683e4-107">属性只能在该类型中设置，但它对于使用者是不可变的。</span><span class="sxs-lookup"><span data-stu-id="683e4-107">The property is only settable within the type, but it is immutable to consumers.</span></span>  <span data-ttu-id="683e4-108">也可以仅声明 [get](../../../csharp/language-reference/keywords/get.md) 访问器，使属性除了能在该类型的构造函数中可变，在其他任何位置都不可变。</span><span class="sxs-lookup"><span data-stu-id="683e4-108">You can instead declare only the [get](../../../csharp/language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type’s constructor.</span></span>  
+ <span data-ttu-id="6c58d-105">可通过两种方法来实现不可变的属性。</span><span class="sxs-lookup"><span data-stu-id="6c58d-105">You can make an immutable property in two ways.</span></span>  <span data-ttu-id="6c58d-106">可以将 [set](../../../csharp/language-reference/keywords/set.md) 访问器声明为[专用](../../../csharp/language-reference/keywords/private.md)。</span><span class="sxs-lookup"><span data-stu-id="6c58d-106">You can declare the [set](../../../csharp/language-reference/keywords/set.md) accessor.to be [private](../../../csharp/language-reference/keywords/private.md).</span></span>  <span data-ttu-id="6c58d-107">属性只能在该类型中设置，但它对于使用者是不可变的。</span><span class="sxs-lookup"><span data-stu-id="6c58d-107">The property is only settable within the type, but it is immutable to consumers.</span></span>  <span data-ttu-id="6c58d-108">也可以仅声明 [get](../../../csharp/language-reference/keywords/get.md) 访问器，使属性除了能在该类型的构造函数中可变，在其他任何位置都不可变。</span><span class="sxs-lookup"><span data-stu-id="6c58d-108">You can instead declare only the [get](../../../csharp/language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type’s constructor.</span></span>  
   
- <span data-ttu-id="683e4-109">当你声明一个 private `set` 取值函数时，你无法使用对象初始值设定项来初始化属性。</span><span class="sxs-lookup"><span data-stu-id="683e4-109">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="683e4-110">你必须使用构造函数或工厂方法。</span><span class="sxs-lookup"><span data-stu-id="683e4-110">You must use a constructor or a factory method.</span></span>  
+ <span data-ttu-id="6c58d-109">当你声明一个 private `set` 取值函数时，你无法使用对象初始值设定项来初始化属性。</span><span class="sxs-lookup"><span data-stu-id="6c58d-109">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="6c58d-110">你必须使用构造函数或工厂方法。</span><span class="sxs-lookup"><span data-stu-id="6c58d-110">You must use a constructor or a factory method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="683e4-111">示例</span><span class="sxs-lookup"><span data-stu-id="683e4-111">Example</span></span>  
- <span data-ttu-id="683e4-112">下面的示例演示了实现具有自动实现属性的不可变类的两种方法。</span><span class="sxs-lookup"><span data-stu-id="683e4-112">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="683e4-113">这两种方法均使用 private `set` 声明其中一个属性，使用单独的 `get` 声明另一个属性。</span><span class="sxs-lookup"><span data-stu-id="683e4-113">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="683e4-114">第一个类仅使用构造函数来初始化属性，第二个类则使用可调用构造函数的静态工厂方法。</span><span class="sxs-lookup"><span data-stu-id="683e4-114">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>  
+## <a name="example"></a><span data-ttu-id="6c58d-111">示例</span><span class="sxs-lookup"><span data-stu-id="6c58d-111">Example</span></span>  
+ <span data-ttu-id="6c58d-112">下面的示例演示了实现具有自动实现属性的不可变类的两种方法。</span><span class="sxs-lookup"><span data-stu-id="6c58d-112">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="6c58d-113">这两种方法均使用 private `set` 声明其中一个属性，使用单独的 `get` 声明另一个属性。</span><span class="sxs-lookup"><span data-stu-id="6c58d-113">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="6c58d-114">第一个类仅使用构造函数来初始化属性，第二个类则使用可调用构造函数的静态工厂方法。</span><span class="sxs-lookup"><span data-stu-id="6c58d-114">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>  
   
 ```csharp  
 // This class is immutable. After an object is created,   
@@ -116,9 +111,9 @@ ms.lasthandoff: 11/21/2017
 */  
 ```  
   
- <span data-ttu-id="683e4-115">编译器为每个自动实现的属性创建了支持字段。</span><span class="sxs-lookup"><span data-stu-id="683e4-115">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="683e4-116">这些字段无法直接从源代码进行访问。</span><span class="sxs-lookup"><span data-stu-id="683e4-116">The fields are not accessible directly from source code.</span></span>  
+ <span data-ttu-id="6c58d-115">编译器为每个自动实现的属性创建了支持字段。</span><span class="sxs-lookup"><span data-stu-id="6c58d-115">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="6c58d-116">这些字段无法直接从源代码进行访问。</span><span class="sxs-lookup"><span data-stu-id="6c58d-116">The fields are not accessible directly from source code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="683e4-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="683e4-117">See Also</span></span>  
- [<span data-ttu-id="683e4-118">属性</span><span class="sxs-lookup"><span data-stu-id="683e4-118">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [<span data-ttu-id="683e4-119">struct</span><span class="sxs-lookup"><span data-stu-id="683e4-119">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)  
- [<span data-ttu-id="683e4-120">对象和集合初始值设定项</span><span class="sxs-lookup"><span data-stu-id="683e4-120">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+## <a name="see-also"></a><span data-ttu-id="6c58d-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="6c58d-117">See Also</span></span>  
+ [<span data-ttu-id="6c58d-118">属性</span><span class="sxs-lookup"><span data-stu-id="6c58d-118">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="6c58d-119">struct</span><span class="sxs-lookup"><span data-stu-id="6c58d-119">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)  
+ [<span data-ttu-id="6c58d-120">对象和集合初始值设定项</span><span class="sxs-lookup"><span data-stu-id="6c58d-120">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)

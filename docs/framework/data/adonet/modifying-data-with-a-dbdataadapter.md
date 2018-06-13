@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765836"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a><span data-ttu-id="b57d7-102">使用 DbDataAdapter 修改数据</span><span class="sxs-lookup"><span data-stu-id="b57d7-102">Modifying Data with a DbDataAdapter</span></span>
 <span data-ttu-id="b57d7-103"><xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> 对象的 <xref:System.Data.Common.DbProviderFactory> 方法为您提供 <xref:System.Data.Common.DbDataAdapter> 对象，该对象强类型化为创建工厂时指定的基础数据提供程序。</span><span class="sxs-lookup"><span data-stu-id="b57d7-103">The <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> method of a <xref:System.Data.Common.DbProviderFactory> object gives you a <xref:System.Data.Common.DbDataAdapter> object that is strongly typed to the underlying data provider specified at the time you create the factory.</span></span> <span data-ttu-id="b57d7-104">然后您可以使用 <xref:System.Data.Common.DbCommandBuilder> 创建命令，以插入、更新和删除数据源的 <xref:System.Data.DataSet> 中的数据。</span><span class="sxs-lookup"><span data-stu-id="b57d7-104">You can then use a <xref:System.Data.Common.DbCommandBuilder> to create commands to insert, update, and delete data from a <xref:System.Data.DataSet> to a data source.</span></span>  

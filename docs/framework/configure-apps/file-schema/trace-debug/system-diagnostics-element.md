@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750331"
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a><span data-ttu-id="a975b-102">&lt;system.diagnostics&gt;元素</span><span class="sxs-lookup"><span data-stu-id="a975b-102">&lt;system.diagnostics&gt; Element</span></span>
 <span data-ttu-id="a975b-103">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="a975b-103">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>  

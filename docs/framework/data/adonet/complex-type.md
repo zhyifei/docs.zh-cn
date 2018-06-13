@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756808"
 ---
 # <a name="complex-type"></a><span data-ttu-id="6ad54-102">Complex Type — 复杂类型</span><span class="sxs-lookup"><span data-stu-id="6ad54-102">complex type</span></span>
 <span data-ttu-id="6ad54-103">A*复杂类型*是用于定义上的丰富的结构化属性的模板[实体类型](../../../../docs/framework/data/adonet/entity-type.md)或其他复杂类型。</span><span class="sxs-lookup"><span data-stu-id="6ad54-103">A *complex type* is a template for defining rich, structured properties on [entity types](../../../../docs/framework/data/adonet/entity-type.md) or on other complex types.</span></span> <span data-ttu-id="6ad54-104">每个模板都包含以下内容：</span><span class="sxs-lookup"><span data-stu-id="6ad54-104">Each template contains the following:</span></span>  

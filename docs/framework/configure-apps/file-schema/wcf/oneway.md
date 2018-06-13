@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746717"
 ---
 # <a name="ltonewaygt"></a><span data-ttu-id="ebd83-102">&lt;oneWay&gt;</span><span class="sxs-lookup"><span data-stu-id="ebd83-102">&lt;oneWay&gt;</span></span>
 <span data-ttu-id="ebd83-103">对自定义绑定启用数据包路由并使用单向方法。</span><span class="sxs-lookup"><span data-stu-id="ebd83-103">Enables packet routing and the use of one-way methods for a custom binding.</span></span>  

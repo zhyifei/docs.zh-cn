@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754003"
 ---
 # <a name="sectiongroup-element-for-configsections"></a><span data-ttu-id="57c81-102">\<sectionGroup > 元素\<configSections ></span><span class="sxs-lookup"><span data-stu-id="57c81-102">\<sectionGroup> element for \<configSections></span></span>
 

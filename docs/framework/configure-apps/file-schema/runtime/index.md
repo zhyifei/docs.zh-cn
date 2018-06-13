@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747940"
 ---
 # <a name="runtime-settings-schema"></a><span data-ttu-id="39ab1-102">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="39ab1-102">Runtime Settings Schema</span></span>
 <span data-ttu-id="39ab1-103">运行设置由公共语言运行时用于配置面向 .NET Framework 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="39ab1-103">Runtime settings are used by the common language runtime to configure applications that target the .NET Framework.</span></span>  

@@ -14,7 +14,7 @@ author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: 84a2a7f572517aec72161817cb719057618de445
 ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ms.locfileid: "32753620"

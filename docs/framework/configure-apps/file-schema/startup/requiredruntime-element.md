@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749977"
 ---
 # <a name="ltrequiredruntimegt-element"></a><span data-ttu-id="fe2d7-102">&lt;requiredRuntime&gt;元素</span><span class="sxs-lookup"><span data-stu-id="fe2d7-102">&lt;requiredRuntime&gt; Element</span></span>
 <span data-ttu-id="fe2d7-103">指定应用程序仅支持 1.0 版本的公共语言运行时。</span><span class="sxs-lookup"><span data-stu-id="fe2d7-103">Specifies that the application supports only version 1.0 of the common language runtime.</span></span> <span data-ttu-id="fe2d7-104">此元素已弃用，并应不再使用。</span><span class="sxs-lookup"><span data-stu-id="fe2d7-104">This element is deprecated and should no longer be used.</span></span> <span data-ttu-id="fe2d7-105">[ `supportedRuntime` ](supportedruntime-element.md)元素应改为使用。</span><span class="sxs-lookup"><span data-stu-id="fe2d7-105">The [`supportedRuntime`](supportedruntime-element.md) element should be used instead.</span></span>

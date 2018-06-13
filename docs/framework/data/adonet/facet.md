@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762418"
 ---
 # <a name="facet"></a><span data-ttu-id="1c5c4-102">facet</span><span class="sxs-lookup"><span data-stu-id="1c5c4-102">facet</span></span>
 <span data-ttu-id="1c5c4-103">A*方面*用于向基元类型属性定义中添加详细信息。</span><span class="sxs-lookup"><span data-stu-id="1c5c4-103">A *facet* is used to add detail to a primitive type property definition.</span></span> <span data-ttu-id="1c5c4-104">A[属性](../../../../docs/framework/data/adonet/property.md)定义包含有关属性类型的信息，但通常需要更多详细信息。</span><span class="sxs-lookup"><span data-stu-id="1c5c4-104">A [property](../../../../docs/framework/data/adonet/property.md) definition contains information about the property type, but often more detail is necessary.</span></span> <span data-ttu-id="1c5c4-105">例如，概念模型中的实体类型可能有一个类型为 `String` 的属性，其值不能设置为 null。</span><span class="sxs-lookup"><span data-stu-id="1c5c4-105">For example, an entity type in a conceptual model might have a property of type `String` whose value cannot be set to null.</span></span> <span data-ttu-id="1c5c4-106">通过方面可以指定这种详细程度。</span><span class="sxs-lookup"><span data-stu-id="1c5c4-106">Facets allow you to specify this level of detail.</span></span>  

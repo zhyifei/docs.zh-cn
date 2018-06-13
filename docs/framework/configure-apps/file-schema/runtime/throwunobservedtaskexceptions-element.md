@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749421"
 ---
 # <a name="ltthrowunobservedtaskexceptionsgt-element"></a><span data-ttu-id="94d74-102">&lt;ThrowUnobservedTaskExceptions&gt;元素</span><span class="sxs-lookup"><span data-stu-id="94d74-102">&lt;ThrowUnobservedTaskExceptions&gt; Element</span></span>
 <span data-ttu-id="94d74-103">指定未经处理的任务异常是否应终止正在运行的进程。</span><span class="sxs-lookup"><span data-stu-id="94d74-103">Specifies whether unhandled task exceptions should terminate a running process.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750770"
 ---
 # <a name="ltbindingextensionsgt"></a><span data-ttu-id="79c7a-102">&lt;bindingExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="79c7a-102">&lt;bindingExtensions&gt;</span></span>
 <span data-ttu-id="79c7a-103">本节为使用计算机或应用程序配置文件中的用户定义绑定提供支持。</span><span class="sxs-lookup"><span data-stu-id="79c7a-103">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="79c7a-104">通过使用 `add` 关键字，并将元素的 `type` 属性设置为用户定义的绑定，将 `name` 属性设置为用户定义的绑定的名称，可以将用户定义的绑定添加到此集合中。</span><span class="sxs-lookup"><span data-stu-id="79c7a-104">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  

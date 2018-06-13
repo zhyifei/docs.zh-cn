@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763665"
 ---
 # <a name="merging-dataset-contents"></a><span data-ttu-id="c863a-102">合并数据集内容</span><span class="sxs-lookup"><span data-stu-id="c863a-102">Merging DataSet Contents</span></span>
 <span data-ttu-id="c863a-103">您可以使用 <xref:System.Data.DataSet.Merge%2A> 方法将 <xref:System.Data.DataSet>、<xref:System.Data.DataTable> 或 <xref:System.Data.DataRow> 数组的内容合并到现有的 `DataSet` 中。</span><span class="sxs-lookup"><span data-stu-id="c863a-103">You can use the <xref:System.Data.DataSet.Merge%2A> method to merge the contents of a <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, or <xref:System.Data.DataRow> array into an existing `DataSet`.</span></span> <span data-ttu-id="c863a-104">若干因素和选项会影响将新数据合并到现有 `DataSet` 中的方式。</span><span class="sxs-lookup"><span data-stu-id="c863a-104">Several factors and options affect how new data is merged into an existing `DataSet`.</span></span>  

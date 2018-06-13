@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755632"
 ---
 # <a name="ltsystemservicemodelgt-of-workflow"></a><span data-ttu-id="1d1e7-102">工作流的 &lt;system.serviceModel&gt;</span><span class="sxs-lookup"><span data-stu-id="1d1e7-102">&lt;system.serviceModel&gt; of workflow</span></span>
 <span data-ttu-id="1d1e7-103">此配置节包含所有工作流配置元素。</span><span class="sxs-lookup"><span data-stu-id="1d1e7-103">This configuration section contains all the workflow configuration elements.</span></span>  

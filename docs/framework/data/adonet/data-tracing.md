@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758498"
 ---
 # <a name="data-tracing-in-adonet"></a><span data-ttu-id="11d57-102">ADO.NET 中的数据跟踪</span><span class="sxs-lookup"><span data-stu-id="11d57-102">Data Tracing in ADO.NET</span></span>
 <span data-ttu-id="11d57-103">ADO.NET 具有内置数据跟踪功能的.NET 数据提供程序支持的 SQL Server、 Oracle、 OLE DB 和 ODBC，以及 ADO.NET <xref:System.Data.DataSet>，和 SQL Server 网络协议。</span><span class="sxs-lookup"><span data-stu-id="11d57-103">ADO.NET features built-in data tracing functionality that is supported by the .NET data providers for SQL Server, Oracle, OLE DB and ODBC, as well as the ADO.NET <xref:System.Data.DataSet>, and the SQL Server network protocols.</span></span>  

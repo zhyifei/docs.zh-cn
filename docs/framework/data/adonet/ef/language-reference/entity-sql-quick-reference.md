@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765849"
 ---
 # <a name="entity-sql-quick-reference"></a><span data-ttu-id="c8d5c-102">Entity SQL 快速参考</span><span class="sxs-lookup"><span data-stu-id="c8d5c-102">Entity SQL Quick Reference</span></span>
 <span data-ttu-id="c8d5c-103">本主题提供 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询的快速参考。</span><span class="sxs-lookup"><span data-stu-id="c8d5c-103">This topic provides a quick reference to [!INCLUDE[esql](../../../../../../includes/esql-md.md)] queries.</span></span> <span data-ttu-id="c8d5c-104">本主题中的查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="c8d5c-104">The queries in this topic are based on the AdventureWorks Sales model.</span></span>  

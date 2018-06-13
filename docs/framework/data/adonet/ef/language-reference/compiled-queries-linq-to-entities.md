@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761592"
 ---
 # <a name="compiled-queries--linq-to-entities"></a><span data-ttu-id="369c5-102">已编译的查询 (LINQ to Entities)</span><span class="sxs-lookup"><span data-stu-id="369c5-102">Compiled Queries  (LINQ to Entities)</span></span>
 <span data-ttu-id="369c5-103">如果应用程序需要在实体框架中多次执行结构类似的查询，通常可以通过仅编译查询一次并在每次执行时使用不同参数的方法来提高性能。</span><span class="sxs-lookup"><span data-stu-id="369c5-103">When you have an application that executes structurally similar queries many times in the Entity Framework, you can frequently increase performance by compiling the query one time and executing it several times with different parameters.</span></span> <span data-ttu-id="369c5-104">例如，某应用程序要检索特定城市的所有客户，而该城市是运行时由用户在窗体中指定的。</span><span class="sxs-lookup"><span data-stu-id="369c5-104">For example, an application might have to retrieve all the customers in a particular city; the city is specified at runtime by the user in a form.</span></span> <span data-ttu-id="369c5-105">LINQ to Entities 支持将已编译的查询用于此目的。</span><span class="sxs-lookup"><span data-stu-id="369c5-105">LINQ to Entities supports using compiled queries for this purpose.</span></span>  

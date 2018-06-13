@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763834"
 ---
 # <a name="set-entity-sql"></a><span data-ttu-id="91134-102">SET (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="91134-102">SET (Entity SQL)</span></span>
 <span data-ttu-id="91134-103">SET 表达式用于通过生成一个新集合（其中移除了所有重复元素）将对象集合转换为一个集。</span><span class="sxs-lookup"><span data-stu-id="91134-103">The SET expression is used to convert a collection of objects into a set by yielding a new collection with all duplicate elements removed.</span></span>  

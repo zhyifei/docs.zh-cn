@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747926"
 ---
 # <a name="ltdiagnosticsgt-for-activation"></a><span data-ttu-id="e7abd-102">激活的 &lt;diagnostics&gt;</span><span class="sxs-lookup"><span data-stu-id="e7abd-102">&lt;diagnostics&gt; for Activation</span></span>
 <span data-ttu-id="e7abd-103">配置 Windows Communication Foundation (WCF) 侦听器的诊断功能。</span><span class="sxs-lookup"><span data-stu-id="e7abd-103">Configures Windows Communication Foundation (WCF) listener's diagnostics functionalities.</span></span>  

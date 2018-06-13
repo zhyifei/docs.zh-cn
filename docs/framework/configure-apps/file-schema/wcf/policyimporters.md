@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749093"
 ---
 # <a name="ltpolicyimportersgt"></a><span data-ttu-id="dbc90-102">&lt;policyImporters&gt;</span><span class="sxs-lookup"><span data-stu-id="dbc90-102">&lt;policyImporters&gt;</span></span>
 <span data-ttu-id="dbc90-103">此配置元素指定用于控制有关绑定的自定义策略断言的导入的所有策略导入程序。</span><span class="sxs-lookup"><span data-stu-id="dbc90-103">This configuration element specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span> <span data-ttu-id="dbc90-104">每个子元素均为一个 <`policyImporter`>，可用于搜索有关绑定功能的自定义策略断言，并附加一个实现断言所需功能的自定义绑定元素。</span><span class="sxs-lookup"><span data-stu-id="dbc90-104">Each child element is a <`policyImporter`> that is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>  

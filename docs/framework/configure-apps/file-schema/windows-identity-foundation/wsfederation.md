@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758979"
 ---
 # <a name="ltwsfederationgt"></a><span data-ttu-id="2ec32-102">&lt;wsFederation&gt;</span><span class="sxs-lookup"><span data-stu-id="2ec32-102">&lt;wsFederation&gt;</span></span>
 <span data-ttu-id="2ec32-103">提供有关配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM)。</span><span class="sxs-lookup"><span data-stu-id="2ec32-103">Provides configuration for the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).</span></span>  

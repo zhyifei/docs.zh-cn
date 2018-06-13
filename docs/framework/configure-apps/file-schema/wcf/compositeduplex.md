@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748342"
 ---
 # <a name="ltcompositeduplexgt"></a><span data-ttu-id="fe5dd-102">&lt;compositeDuplex&gt;</span><span class="sxs-lookup"><span data-stu-id="fe5dd-102">&lt;compositeDuplex&gt;</span></span>
 <span data-ttu-id="fe5dd-103">定义绑定元素，客户端在必须公开一个终结点以使服务可以将消息发送回客户端时使用此元素。</span><span class="sxs-lookup"><span data-stu-id="fe5dd-103">Defines the binding element that is used when the client must expose an endpoint for the service to send messages back to the client.</span></span>  

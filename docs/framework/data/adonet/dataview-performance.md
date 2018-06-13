@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762775"
 ---
 # <a name="dataview-performance"></a><span data-ttu-id="a2f4b-102">DataView 性能</span><span class="sxs-lookup"><span data-stu-id="a2f4b-102">DataView Performance</span></span>
 <span data-ttu-id="a2f4b-103">本主题讨论使用 <xref:System.Data.DataView.Find%2A> 类的 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法并在 Web 应用程序中缓存 <xref:System.Data.DataView> 时所具有的性能优势。</span><span class="sxs-lookup"><span data-stu-id="a2f4b-103">This topic discusses the performance benefits of using the <xref:System.Data.DataView.Find%2A> and <xref:System.Data.DataView.FindRows%2A> methods of the <xref:System.Data.DataView> class, and of caching a <xref:System.Data.DataView> in a Web application.</span></span>  

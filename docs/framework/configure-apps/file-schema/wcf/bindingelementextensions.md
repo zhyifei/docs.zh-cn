@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747744"
 ---
 # <a name="ltbindingelementextensionsgt"></a><span data-ttu-id="a8afb-102">&lt;bindingElementExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="a8afb-102">&lt;bindingElementExtensions&gt;</span></span>
 <span data-ttu-id="a8afb-103">本节为使用计算机或应用程序配置文件中的自定义绑定元素提供支持。</span><span class="sxs-lookup"><span data-stu-id="a8afb-103">This section enables the use of a custom binding element from a machine or application configuration file.</span></span> <span data-ttu-id="a8afb-104">通过使用 `add` 关键字，然后将元素的 `type` 属性设置为绑定元素扩展，并将 `name` 属性设置为自定义绑定元素，您可以向此集合添加自定义绑定元素。</span><span class="sxs-lookup"><span data-stu-id="a8afb-104">You can add a custom binding element to this collection by using the `add` keyword, and setting the `type` attribute of the element to a binding element extension, as well as the `name` attribute to the custom binding element.</span></span>  

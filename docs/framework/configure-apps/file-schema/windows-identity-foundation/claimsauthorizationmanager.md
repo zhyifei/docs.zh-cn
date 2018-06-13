@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757367"
 ---
 # <a name="ltclaimsauthorizationmanagergt"></a><span data-ttu-id="60406-102">&lt;claimsAuthorizationManager&gt;</span><span class="sxs-lookup"><span data-stu-id="60406-102">&lt;claimsAuthorizationManager&gt;</span></span>
 <span data-ttu-id="60406-103">注册用于传入声明的声明授权管理器。</span><span class="sxs-lookup"><span data-stu-id="60406-103">Registers a claims authorization manager for the incoming claims.</span></span>  

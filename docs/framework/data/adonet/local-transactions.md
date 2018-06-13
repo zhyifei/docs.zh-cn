@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758888"
 ---
 # <a name="local-transactions"></a><span data-ttu-id="01b97-102">本地事务</span><span class="sxs-lookup"><span data-stu-id="01b97-102">Local Transactions</span></span>
 <span data-ttu-id="01b97-103">如果要将多项任务绑定在一起，使其作为单个工作单元来执行，可以使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的事务。</span><span class="sxs-lookup"><span data-stu-id="01b97-103">Transactions in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] are used when you want to bind multiple tasks together so that they execute as a single unit of work.</span></span> <span data-ttu-id="01b97-104">例如，假设应用程序执行两个任务。</span><span class="sxs-lookup"><span data-stu-id="01b97-104">For example, imagine that an application performs two tasks.</span></span> <span data-ttu-id="01b97-105">首先使用订单信息更新表。</span><span class="sxs-lookup"><span data-stu-id="01b97-105">First, it updates a table with order information.</span></span> <span data-ttu-id="01b97-106">然后更新包含库存信息的表，将已订购的商品记入借方。</span><span class="sxs-lookup"><span data-stu-id="01b97-106">Second, it updates a table that contains inventory information, debiting the items ordered.</span></span> <span data-ttu-id="01b97-107">如果任何一项任务失败，然后两个更新将回滚。</span><span class="sxs-lookup"><span data-stu-id="01b97-107">If either task fails, then both updates are rolled back.</span></span>  

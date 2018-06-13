@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762554"
 ---
 # <a name="handling-dataview-events"></a><span data-ttu-id="b7fc4-102">处理数据视图事件</span><span class="sxs-lookup"><span data-stu-id="b7fc4-102">Handling DataView Events</span></span>
 <span data-ttu-id="b7fc4-103">可以使用 <xref:System.Data.DataView.ListChanged> 的 <xref:System.Data.DataView> 事件确定某个视图是否已更新。</span><span class="sxs-lookup"><span data-stu-id="b7fc4-103">You can use the <xref:System.Data.DataView.ListChanged> event of the <xref:System.Data.DataView> to determine if a view has been updated.</span></span> <span data-ttu-id="b7fc4-104">引发该事件的更新包括添加、删除或修改基础表中的某行；在基础表的架构中添加或删除某列；更改父或子关系。</span><span class="sxs-lookup"><span data-stu-id="b7fc4-104">Updates that raise the event include adding, deleting, or modifying a row in the underlying table; adding or deleting a column to the schema of the underlying table; and a change in a parent or child relationship.</span></span> <span data-ttu-id="b7fc4-105">**ListChanged**事件还将通知你如果你正在查看的行的列表已显著更改由于新的排序顺序或筛选器的应用程序。</span><span class="sxs-lookup"><span data-stu-id="b7fc4-105">The **ListChanged** event also notifies you if the list of rows you are viewing has changed significantly due to the application of a new sort order or a filter.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747231"
 ---
 # <a name="ltchannelpoolsettingsgt"></a><span data-ttu-id="a0996-102">&lt;channelPoolSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="a0996-102">&lt;channelPoolSettings&gt;</span></span>
 <span data-ttu-id="a0996-103">指定自定义绑定的通道池设置。</span><span class="sxs-lookup"><span data-stu-id="a0996-103">Specifies the channel pool settings for a custom binding.</span></span>  

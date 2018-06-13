@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750747"
 ---
 # <a name="ltroutinggt-of-ltservicebehaviorgt"></a><span data-ttu-id="ffa19-102">&lt;serviceBehavior&gt; 的 &lt;routing&gt;</span><span class="sxs-lookup"><span data-stu-id="ffa19-102">&lt;routing&gt; of &lt;serviceBehavior&gt;</span></span>
 <span data-ttu-id="ffa19-103">提供对路由服务的运行时访问以允许对路由配置进行动态修改。</span><span class="sxs-lookup"><span data-stu-id="ffa19-103">Provides run-time access to the routing service to allow dynamic modification of the routing configuration.</span></span>  

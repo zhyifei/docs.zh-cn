@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764965"
 ---
 # <a name="linq-to-dataset-examples"></a><span data-ttu-id="2da65-102">LINQ to DataSet 示例</span><span class="sxs-lookup"><span data-stu-id="2da65-102">LINQ to DataSet Examples</span></span>
 <span data-ttu-id="2da65-103">本部分提供[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]编程使用标准查询运算符的示例。</span><span class="sxs-lookup"><span data-stu-id="2da65-103">This section provides [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programming examples that use the standard query operators.</span></span> <span data-ttu-id="2da65-104"><xref:System.Data.DataSet>这些示例中使用填充使用`FillDataSet`方法，指定在[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="2da65-104">The <xref:System.Data.DataSet> used in these examples is populated by using the `FillDataSet` method, which is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span> <span data-ttu-id="2da65-105">有关详细信息，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。</span><span class="sxs-lookup"><span data-stu-id="2da65-105">For more information, see [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749226"
 ---
 # <a name="ltservicesgt"></a><span data-ttu-id="2a913-102">&lt;服务&gt;</span><span class="sxs-lookup"><span data-stu-id="2a913-102">&lt;services&gt;</span></span>
 <span data-ttu-id="2a913-103">服务是在配置文件的 `services` 节中定义的。</span><span class="sxs-lookup"><span data-stu-id="2a913-103">Services are defined in the `services` section of the configuration file.</span></span> <span data-ttu-id="2a913-104">每个服务都有自己的 `service` 配置节。</span><span class="sxs-lookup"><span data-stu-id="2a913-104">Each service has its own `service` configuration section.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604011"
 ---
 # <a name="-operator-visual-basic"></a><span data-ttu-id="b0e01-102">+= 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b0e01-102">+= Operator (Visual Basic)</span></span>
 <span data-ttu-id="b0e01-103">将数值表达式的值添加到的数值变量或属性的值并将结果赋给该变量或属性。</span><span class="sxs-lookup"><span data-stu-id="b0e01-103">Adds the value of a numeric expression to the value of a numeric variable or property and assigns the result to the variable or property.</span></span> <span data-ttu-id="b0e01-104">此外可以使用要连接`String`表达式`String`变量或属性并将结果赋给变量或属性。</span><span class="sxs-lookup"><span data-stu-id="b0e01-104">Can also be used to concatenate a `String` expression to a `String` variable or property and assign the result to the variable or property.</span></span>  

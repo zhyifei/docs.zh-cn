@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745820"
 ---
 # <a name="ltaddgt-of-ltserviceactivationsgt"></a><span data-ttu-id="47b2a-102">&lt;serviceActivations&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="47b2a-102">&lt;add&gt; of &lt;serviceActivations&gt;</span></span>
 <span data-ttu-id="47b2a-103">一个配置元素，允许你定义虚拟服务激活设置映射到你的 Windows Communication Foundation (WCF) 服务类型。</span><span class="sxs-lookup"><span data-stu-id="47b2a-103">A configuration element that allows you to define virtual service activation settings that map to your Windows Communication Foundation (WCF) service types.</span></span> <span data-ttu-id="47b2a-104">使用此配置元素可以在不使用 .svc 文件的情况下激活承载在 WAS/IIS 中的服务。</span><span class="sxs-lookup"><span data-stu-id="47b2a-104">This makes it possible to activate services hosted in WAS/IIS without an .svc file.</span></span>  

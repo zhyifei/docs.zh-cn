@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760435"
 ---
 # <a name="-divide-entity-sql"></a><span data-ttu-id="b0ba9-102">/（除）(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="b0ba9-102">/ (Divide) (Entity SQL)</span></span>
 <span data-ttu-id="b0ba9-103">一个数字除另一个数字。</span><span class="sxs-lookup"><span data-stu-id="b0ba9-103">Divides one number by another.</span></span>  

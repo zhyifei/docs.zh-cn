@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759629"
 ---
 # <a name="limit-entity-sql"></a><span data-ttu-id="1ecbb-102">LIMIT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="1ecbb-102">LIMIT (Entity SQL)</span></span>
 <span data-ttu-id="1ecbb-103">在 ORDER BY 子句中使用 LIMIT 子子句可执行物理分页。</span><span class="sxs-lookup"><span data-stu-id="1ecbb-103">Physical paging can be performed by using LIMIT sub-clause in ORDER BY clause.</span></span> <span data-ttu-id="1ecbb-104">LIMIT 不能脱离 ORDER BY 子句单独使用。</span><span class="sxs-lookup"><span data-stu-id="1ecbb-104">LIMIT can not be used separately from ORDER BY clause.</span></span>  

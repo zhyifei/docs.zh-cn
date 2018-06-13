@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749616"
 ---
 # <a name="ltscopesgt"></a><span data-ttu-id="6409e-102">&lt;作用域&gt;</span><span class="sxs-lookup"><span data-stu-id="6409e-102">&lt;scopes&gt;</span></span>
 <span data-ttu-id="6409e-103">包含一个配置元素集合，这些元素指定可用于在查询时筛选服务终结点的自定义范围 URI。</span><span class="sxs-lookup"><span data-stu-id="6409e-103">Contains a collection of configuration elements that specify custom scope Uris that can be used to filter service endpoints during query.</span></span>  

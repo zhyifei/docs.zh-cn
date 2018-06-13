@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759980"
 ---
 # <a name="dataset-specific-operator-examples-linq-to-dataset"></a><span data-ttu-id="02c49-102">数据集特定的运算符示例 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="02c49-102">DataSet-Specific Operator Examples (LINQ to DataSet)</span></span>
 <span data-ttu-id="02c49-103">本主题中的示例演示如何使用 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法和 <xref:System.Data.DataRowComparer> 类。</span><span class="sxs-lookup"><span data-stu-id="02c49-103">The examples in this topic demonstrate how to use the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method and the <xref:System.Data.DataRowComparer> class.</span></span>  

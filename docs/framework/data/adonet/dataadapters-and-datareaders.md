@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758095"
 ---
 # <a name="dataadapters-and-datareaders"></a><span data-ttu-id="14fce-102">DataAdapter 和 DataReader</span><span class="sxs-lookup"><span data-stu-id="14fce-102">DataAdapters and DataReaders</span></span>
 <span data-ttu-id="14fce-103">你可以使用 ADO.NET **DataReader**以从数据库中检索数据的只读、 只进流。</span><span class="sxs-lookup"><span data-stu-id="14fce-103">You can use the ADO.NET **DataReader** to retrieve a read-only, forward-only stream of data from a database.</span></span> <span data-ttu-id="14fce-104">查询执行，以及存储在客户端上的网络缓冲区，直到你请求时，这些结果将返回使用**读取**方法**DataReader**。</span><span class="sxs-lookup"><span data-stu-id="14fce-104">Results are returned as the query executes, and are stored in the network buffer on the client until you request them using the **Read** method of the **DataReader**.</span></span> <span data-ttu-id="14fce-105">使用**DataReader**可以提高应用程序性能，检索数据，只要它不可用，并且 （默认） 存储在内存，从而减少系统开销中一次只有一个行。</span><span class="sxs-lookup"><span data-stu-id="14fce-105">Using the **DataReader** can increase application performance both by retrieving data as soon as it is available, and (by default) storing only one row at a time in memory, reducing system overhead.</span></span>  

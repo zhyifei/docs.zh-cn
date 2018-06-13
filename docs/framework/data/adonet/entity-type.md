@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765316"
 ---
 # <a name="entity-type"></a><span data-ttu-id="aa6b8-102">Entity Type — 实体类型</span><span class="sxs-lookup"><span data-stu-id="aa6b8-102">entity type</span></span>
 <span data-ttu-id="aa6b8-103">*实体类型*是用于描述实体数据模型 (EDM) 的数据结构的基本构建块。</span><span class="sxs-lookup"><span data-stu-id="aa6b8-103">The *entity type* is the fundamental building block for describing the structure of data with the Entity Data Model (EDM).</span></span> <span data-ttu-id="aa6b8-104">在概念模型中，实体类型表示顶级概念（例如客户或订单）的结构。</span><span class="sxs-lookup"><span data-stu-id="aa6b8-104">In a conceptual model, an entity type represents the structure of top-level concepts, such as customers or orders.</span></span> <span data-ttu-id="aa6b8-105">实体类型是实体类型实例的模板。</span><span class="sxs-lookup"><span data-stu-id="aa6b8-105">An entity type is a template for entity type instances.</span></span> <span data-ttu-id="aa6b8-106">每个模板都包含以下信息：</span><span class="sxs-lookup"><span data-stu-id="aa6b8-106">Each template contains the following information:</span></span>  

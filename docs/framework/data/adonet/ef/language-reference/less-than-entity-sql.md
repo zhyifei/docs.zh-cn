@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760968"
 ---
 # <a name="lt-less-than-entity-sql"></a><span data-ttu-id="e609d-102">&lt;（小于）(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e609d-102">&lt; (Less Than) (Entity SQL)</span></span>
 <span data-ttu-id="e609d-103">比较两个表达式以确定左侧表达式的值是否小于右侧表达式的值。</span><span class="sxs-lookup"><span data-stu-id="e609d-103">Compares two expressions to determine whether the left expression has a value less than the right expression.</span></span>  

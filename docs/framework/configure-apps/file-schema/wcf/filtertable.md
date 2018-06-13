@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747406"
 ---
 # <a name="ltfiltertablegt"></a><span data-ttu-id="0ea8a-102">&lt;filterTable&gt;</span><span class="sxs-lookup"><span data-stu-id="0ea8a-102">&lt;filterTable&gt;</span></span>
 <span data-ttu-id="0ea8a-103">表示包含要评估针对消息和消息路由到的客户端终结点，如果筛选器的计算结果为 true 的筛选器列表的路由表。</span><span class="sxs-lookup"><span data-stu-id="0ea8a-103">Represents a routing table that contains a list of filters to evaluate messages against and the client endpoint to route messages to if the filter evaluates to true.</span></span>  
