@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457652"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a><span data-ttu-id="219a6-102">可重载运算符（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="219a6-102">Overloadable Operators (C# Programming Guide)</span></span>
 

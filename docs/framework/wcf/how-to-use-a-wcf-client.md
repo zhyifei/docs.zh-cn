@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803801"
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="1109d-102">如何：使用 Windows Communication Foundation 客户端</span><span class="sxs-lookup"><span data-stu-id="1109d-102">How to: Use a Windows Communication Foundation Client</span></span>
 <span data-ttu-id="1109d-103">这是创建基本的 Windows Communication Foundation (WCF) 应用程序所需的六项任务的最后一个。</span><span class="sxs-lookup"><span data-stu-id="1109d-103">This is the last of six tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="1109d-104">有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。</span><span class="sxs-lookup"><span data-stu-id="1109d-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  

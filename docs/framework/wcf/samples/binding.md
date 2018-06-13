@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803561"
 ---
 # <a name="binding"></a><span data-ttu-id="91f7d-102">绑定</span><span class="sxs-lookup"><span data-stu-id="91f7d-102">Binding</span></span>
 <span data-ttu-id="91f7d-103">本节包含演示如何使用终结点元素的绑定特性的示例。</span><span class="sxs-lookup"><span data-stu-id="91f7d-103">This section contains samples that demonstrate using the binding attribute of an endpoint element.</span></span>  

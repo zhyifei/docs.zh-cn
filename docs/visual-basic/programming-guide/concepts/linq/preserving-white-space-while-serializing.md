@@ -1,32 +1,23 @@
 ---
-title: "保留空白时 Serializing2"
-ms.custom: 
+title: 保留空白时 Serializing2
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2d7abbd4-37f4-422b-89dd-0a694b5edc17
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 93cfc1c14d75078170d6e1bbb3fc4ad72f47a206
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a08d69a817c3e493e571d1b3b98f6f2a144ad995
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644974"
 ---
-# <a name="preserving-white-space-while-serializing"></a><span data-ttu-id="60cd8-102">在序列化时保留空白</span><span class="sxs-lookup"><span data-stu-id="60cd8-102">Preserving White Space While Serializing</span></span>
-<span data-ttu-id="60cd8-103">本主题描述在序列化 XML 树时如何控制空白。</span><span class="sxs-lookup"><span data-stu-id="60cd8-103">This topic describes how to control white space when serializing an XML tree.</span></span>  
+# <a name="preserving-white-space-while-serializing"></a><span data-ttu-id="d1e6d-102">在序列化时保留空白</span><span class="sxs-lookup"><span data-stu-id="d1e6d-102">Preserving White Space While Serializing</span></span>
+<span data-ttu-id="d1e6d-103">本主题描述在序列化 XML 树时如何控制空白。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-103">This topic describes how to control white space when serializing an XML tree.</span></span>  
   
- <span data-ttu-id="60cd8-104">一种常用情况是读取缩进的 XML，在内存中创建一个没有任何空白文本节点（即不保留空白）的 XML 树，对该 XML 执行某些操作，然后保存带缩进的 XML。</span><span class="sxs-lookup"><span data-stu-id="60cd8-104">A common scenario is to read indented XML, create an in-memory XML tree without any white space text nodes (that is, not preserving white space), perform some operations on the XML, and then save the XML with indentation.</span></span> <span data-ttu-id="60cd8-105">在序列化带格式的 XML 时，只保留 XML 树中有意义的空白。</span><span class="sxs-lookup"><span data-stu-id="60cd8-105">When you serialize the XML with formatting, only significant white space in the XML tree is preserved.</span></span> <span data-ttu-id="60cd8-106">这是 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的默认行为。</span><span class="sxs-lookup"><span data-stu-id="60cd8-106">This is the default behavior for [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
+ <span data-ttu-id="d1e6d-104">一种常用情况是读取缩进的 XML，在内存中创建一个没有任何空白文本节点（即不保留空白）的 XML 树，对该 XML 执行某些操作，然后保存带缩进的 XML。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-104">A common scenario is to read indented XML, create an in-memory XML tree without any white space text nodes (that is, not preserving white space), perform some operations on the XML, and then save the XML with indentation.</span></span> <span data-ttu-id="d1e6d-105">在序列化带格式的 XML 时，只保留 XML 树中有意义的空白。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-105">When you serialize the XML with formatting, only significant white space in the XML tree is preserved.</span></span> <span data-ttu-id="d1e6d-106">这是 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的默认行为。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-106">This is the default behavior for [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
- <span data-ttu-id="60cd8-107">另一个常见的情况是读取和修改已经有意缩进的 XML。</span><span class="sxs-lookup"><span data-stu-id="60cd8-107">Another common scenario is to read and modify XML that has already been intentionally indented.</span></span> <span data-ttu-id="60cd8-108">您可能不想以任何方式更改这种缩进。</span><span class="sxs-lookup"><span data-stu-id="60cd8-108">You might not want to change this indentation in any way.</span></span> <span data-ttu-id="60cd8-109">若要在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中执行此操作，您要在加载或解析 XML 时保留空白，并在序列化 XML 时禁用格式设置。</span><span class="sxs-lookup"><span data-stu-id="60cd8-109">To do this in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you preserve white space when you load or parse the XML and disable formatting when you serialize the XML.</span></span>  
+ <span data-ttu-id="d1e6d-107">另一个常见的情况是读取和修改已经有意缩进的 XML。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-107">Another common scenario is to read and modify XML that has already been intentionally indented.</span></span> <span data-ttu-id="d1e6d-108">您可能不想以任何方式更改这种缩进。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-108">You might not want to change this indentation in any way.</span></span> <span data-ttu-id="d1e6d-109">若要在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中执行此操作，您要在加载或解析 XML 时保留空白，并在序列化 XML 时禁用格式设置。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-109">To do this in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you preserve white space when you load or parse the XML and disable formatting when you serialize the XML.</span></span>  
   
-## <a name="white-space-behavior-of-methods-that-serialize-xml-trees"></a><span data-ttu-id="60cd8-110">用于序列化 XML 树的方法的空白行为</span><span class="sxs-lookup"><span data-stu-id="60cd8-110">White Space Behavior of Methods that Serialize XML Trees</span></span>  
- <span data-ttu-id="60cd8-111"><xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 类中的以下方法用于序列化 XML 树。</span><span class="sxs-lookup"><span data-stu-id="60cd8-111">The following methods in the <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XDocument> classes serialize an XML tree.</span></span> <span data-ttu-id="60cd8-112">可以将 XML 树序列化为文件、<xref:System.IO.TextReader> 或 <xref:System.Xml.XmlReader>。</span><span class="sxs-lookup"><span data-stu-id="60cd8-112">You can serialize an XML tree to a file, a <xref:System.IO.TextReader>, or an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="60cd8-113">`ToString` 方法序列化为字符串。</span><span class="sxs-lookup"><span data-stu-id="60cd8-113">The `ToString` method serializes to a string.</span></span>  
+## <a name="white-space-behavior-of-methods-that-serialize-xml-trees"></a><span data-ttu-id="d1e6d-110">用于序列化 XML 树的方法的空白行为</span><span class="sxs-lookup"><span data-stu-id="d1e6d-110">White Space Behavior of Methods that Serialize XML Trees</span></span>  
+ <span data-ttu-id="d1e6d-111"><xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 类中的以下方法用于序列化 XML 树。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-111">The following methods in the <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XDocument> classes serialize an XML tree.</span></span> <span data-ttu-id="d1e6d-112">可以将 XML 树序列化为文件、<xref:System.IO.TextReader> 或 <xref:System.Xml.XmlReader>。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-112">You can serialize an XML tree to a file, a <xref:System.IO.TextReader>, or an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="d1e6d-113">`ToString` 方法序列化为字符串。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-113">The `ToString` method serializes to a string.</span></span>  
   
 -   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
   
@@ -36,9 +27,9 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.Xml.Linq.XDocument.ToString%2A?displayProperty=nameWithType>  
   
- <span data-ttu-id="60cd8-114">如果方法不接受 <xref:System.Xml.Linq.SaveOptions> 作为参数，那么该方法将格式化（缩进）序列化的 XML。</span><span class="sxs-lookup"><span data-stu-id="60cd8-114">If the method does not take <xref:System.Xml.Linq.SaveOptions> as an argument, then the method will format (indent) the serialized XML.</span></span> <span data-ttu-id="60cd8-115">在这种情况下，将丢弃 XML 树中所有无意义的空白。</span><span class="sxs-lookup"><span data-stu-id="60cd8-115">In this case, all insignificant white space in the XML tree is discarded.</span></span>  
+ <span data-ttu-id="d1e6d-114">如果方法不接受 <xref:System.Xml.Linq.SaveOptions> 作为参数，那么该方法将格式化（缩进）序列化的 XML。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-114">If the method does not take <xref:System.Xml.Linq.SaveOptions> as an argument, then the method will format (indent) the serialized XML.</span></span> <span data-ttu-id="d1e6d-115">在这种情况下，将丢弃 XML 树中所有无意义的空白。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-115">In this case, all insignificant white space in the XML tree is discarded.</span></span>  
   
- <span data-ttu-id="60cd8-116">如果方法接受 <xref:System.Xml.Linq.SaveOptions> 作为参数，那么您可以指定不格式化（缩进）序列化的 XML。</span><span class="sxs-lookup"><span data-stu-id="60cd8-116">If the method does take <xref:System.Xml.Linq.SaveOptions> as an argument, then you can specify that the method not format (indent) the serialized XML.</span></span> <span data-ttu-id="60cd8-117">在这种情况下，将保留 XML 树中的所有空白。</span><span class="sxs-lookup"><span data-stu-id="60cd8-117">In this case, all white space in the XML tree is preserved.</span></span>  
+ <span data-ttu-id="d1e6d-116">如果方法接受 <xref:System.Xml.Linq.SaveOptions> 作为参数，那么您可以指定不格式化（缩进）序列化的 XML。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-116">If the method does take <xref:System.Xml.Linq.SaveOptions> as an argument, then you can specify that the method not format (indent) the serialized XML.</span></span> <span data-ttu-id="d1e6d-117">在这种情况下，将保留 XML 树中的所有空白。</span><span class="sxs-lookup"><span data-stu-id="d1e6d-117">In this case, all white space in the XML tree is preserved.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60cd8-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="60cd8-118">See Also</span></span>  
- [<span data-ttu-id="60cd8-119">序列化 XML 树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60cd8-119">Serializing XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="d1e6d-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="d1e6d-118">See Also</span></span>  
+ [<span data-ttu-id="d1e6d-119">序列化 XML 树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d1e6d-119">Serializing XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

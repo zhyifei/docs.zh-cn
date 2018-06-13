@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578945"
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a><span data-ttu-id="4dca3-103">在域模型层中设计验证</span><span class="sxs-lookup"><span data-stu-id="4dca3-103">Designing validations in the domain model layer</span></span>
 

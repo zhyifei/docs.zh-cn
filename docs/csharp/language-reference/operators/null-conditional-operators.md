@@ -17,6 +17,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457795"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a><span data-ttu-id="ebba9-102">?.</span><span class="sxs-lookup"><span data-stu-id="ebba9-102">?.</span></span> <span data-ttu-id="ebba9-103">和 ?[] NULL 条件运算符（C# 和 Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="ebba9-103">and ?[] null-conditional Operators (C# and Visual Basic)</span></span>
 <span data-ttu-id="ebba9-104">执行成员访问 (`?.`) 或索引 (`?[]`) 操作之前，测试左侧操作数的值为 null，如果左侧操作数计算结果为 `null`，则返回 `null`。</span><span class="sxs-lookup"><span data-stu-id="ebba9-104">Tests the value of the left-hand operand for null before performing a member access (`?.`) or index (`?[]`) operation; returns `null` if the left-hand operand evaluates to `null`.</span></span> 
