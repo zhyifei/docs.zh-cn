@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594762"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="2a95d-102">语句在命名空间中无效</span><span class="sxs-lookup"><span data-stu-id="2a95d-102">Statement is not valid in a namespace</span></span>
 <span data-ttu-id="2a95d-103">语句不能出现在命名空间的级别。</span><span class="sxs-lookup"><span data-stu-id="2a95d-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="2a95d-104">允许在命名空间级别上的唯一声明是模块、 接口、 类、 委托、 枚举和结构声明。</span><span class="sxs-lookup"><span data-stu-id="2a95d-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  

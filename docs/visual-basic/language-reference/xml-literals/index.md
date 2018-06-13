@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600761"
 ---
 # <a name="xml-literals-visual-basic"></a><span data-ttu-id="7b2cb-102">XML 文本 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7b2cb-102">XML Literals (Visual Basic)</span></span>
 <span data-ttu-id="7b2cb-103">本部分中的主题记录 Visual Basic 中的 XML 文本的语法。</span><span class="sxs-lookup"><span data-stu-id="7b2cb-103">The topics in this section document the syntax of XML literals in Visual Basic.</span></span> <span data-ttu-id="7b2cb-104">使用 XML 文本语法，可以将 XML 直接合并到代码中。</span><span class="sxs-lookup"><span data-stu-id="7b2cb-104">The XML literal syntax enables you to incorporate XML directly in your code.</span></span>  

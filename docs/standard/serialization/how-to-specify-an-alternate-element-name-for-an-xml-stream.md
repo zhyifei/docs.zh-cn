@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587705"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a><span data-ttu-id="92e1d-102">如何：指定 XML 流的替代元素名称</span><span class="sxs-lookup"><span data-stu-id="92e1d-102">How to: Specify an Alternate Element Name for an XML Stream</span></span>
 [<span data-ttu-id="92e1d-103">代码示例</span><span class="sxs-lookup"><span data-stu-id="92e1d-103">Code Example</span></span>](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  

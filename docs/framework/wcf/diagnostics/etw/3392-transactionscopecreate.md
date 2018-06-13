@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33465161"
 ---
 # <a name="3392---transactionscopecreate"></a><span data-ttu-id="a0540-102">3392 - TransactionScopeCreate</span><span class="sxs-lookup"><span data-stu-id="a0540-102">3392 - TransactionScopeCreate</span></span>
 ## <a name="properties"></a><span data-ttu-id="a0540-103">属性</span><span class="sxs-lookup"><span data-stu-id="a0540-103">Properties</span></span>  
