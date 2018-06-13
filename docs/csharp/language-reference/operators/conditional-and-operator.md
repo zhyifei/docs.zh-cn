@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171910"
 ---
 # <a name="ampamp-operator-c-reference"></a><span data-ttu-id="6f9f7-102">&amp;&amp; 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="6f9f7-102">&amp;&amp; Operator (C# Reference)</span></span>
 <span data-ttu-id="6f9f7-103">条件 AND 运算符 (`&&`) 对其 `bool` 操作数执行逻辑 AND 运算，但仅在必要时才计算第二个操作数。</span><span class="sxs-lookup"><span data-stu-id="6f9f7-103">The conditional-AND operator (`&&`) performs a logical-AND of its `bool` operands, but only evaluates its second operand if necessary.</span></span>  

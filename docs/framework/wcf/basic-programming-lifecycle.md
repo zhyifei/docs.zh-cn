@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803687"
 ---
 # <a name="basic-programming-lifecycle"></a><span data-ttu-id="57c8d-102">基本编程生命周期</span><span class="sxs-lookup"><span data-stu-id="57c8d-102">Basic Programming Lifecycle</span></span>
 <span data-ttu-id="57c8d-103">Windows Communication Foundation (WCF) 使应用程序通报它们是在同一计算机上分布在 Internet 上还是在不同的应用程序平台上。</span><span class="sxs-lookup"><span data-stu-id="57c8d-103">Windows Communication Foundation (WCF) enables applications to communicate whether they are on the same computer, across the Internet, or on different application platforms.</span></span> <span data-ttu-id="57c8d-104">本主题概述了生成 WCF 应用程序所需的任务。</span><span class="sxs-lookup"><span data-stu-id="57c8d-104">This topic outlines the tasks that are required to build a WCF application.</span></span> <span data-ttu-id="57c8d-105">有关工作示例应用程序，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。</span><span class="sxs-lookup"><span data-stu-id="57c8d-105">For a working sample application, see [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>  

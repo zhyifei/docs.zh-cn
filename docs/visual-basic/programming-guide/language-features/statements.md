@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655716"
 ---
 # <a name="statements-in-visual-basic"></a><span data-ttu-id="d6eb8-102">语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d6eb8-102">Statements in Visual Basic</span></span>
 <span data-ttu-id="d6eb8-103">在 Visual Basic 中的语句是完整的指令。</span><span class="sxs-lookup"><span data-stu-id="d6eb8-103">A statement in Visual Basic is a complete instruction.</span></span> <span data-ttu-id="d6eb8-104">它可以包含关键字、 运算符、 变量、 常量和表达式。</span><span class="sxs-lookup"><span data-stu-id="d6eb8-104">It can contain keywords, operators, variables, constants, and expressions.</span></span> <span data-ttu-id="d6eb8-105">每个语句都属于以下类别之一：</span><span class="sxs-lookup"><span data-stu-id="d6eb8-105">Each statement belongs to one of the following categories:</span></span>  

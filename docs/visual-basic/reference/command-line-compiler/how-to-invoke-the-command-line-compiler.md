@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656212"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a><span data-ttu-id="1c704-102">如何：调用命令行编译器 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c704-102">How to: Invoke the Command-Line Compiler (Visual Basic)</span></span>
 <span data-ttu-id="1c704-103">可以通过在命令行中，也称为 MS-DOS 提示符中键入其可执行文件的名称来调用命令行编译器。</span><span class="sxs-lookup"><span data-stu-id="1c704-103">You can invoke the command-line compiler by typing the name of its executable file into the command line, also known as the MS-DOS prompt.</span></span> <span data-ttu-id="1c704-104">如果从默认的 Windows 命令提示符下进行编译，你必须键入可执行文件的完全限定的路径。</span><span class="sxs-lookup"><span data-stu-id="1c704-104">If you compile from the default Windows Command Prompt, you must type the fully qualified path to the executable file.</span></span> <span data-ttu-id="1c704-105">若要重写此默认行为，你可以使用 Visual Studio 命令提示符处，或修改 PATH 环境变量。</span><span class="sxs-lookup"><span data-stu-id="1c704-105">To override this default behavior, you can either use the Visual Studio Command Prompt, or modify the PATH environment variable.</span></span> <span data-ttu-id="1c704-106">同时，可以从任何目录编译通过只需键入编译器的名称。</span><span class="sxs-lookup"><span data-stu-id="1c704-106">Both allow you to compile from any directory by simply typing the compiler name.</span></span>  

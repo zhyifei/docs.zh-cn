@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599747"
 ---
 # <a name="ltcodegt-visual-basic"></a><span data-ttu-id="b35dc-102">&lt;代码&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b35dc-102">&lt;code&gt; (Visual Basic)</span></span>
 <span data-ttu-id="b35dc-103">指示该文本是多行代码。</span><span class="sxs-lookup"><span data-stu-id="b35dc-103">Indicates that the text is multiple lines of code.</span></span>  
