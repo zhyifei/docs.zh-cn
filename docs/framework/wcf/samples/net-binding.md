@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805949"
 ---
 # <a name="net-binding"></a>网络绑定
 本节包含演示如何使用终结点元素的网络绑定特性的示例。  

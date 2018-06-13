@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654937"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>程序结构和代码约定 (Visual Basic)
 本部分介绍了典型的 Visual Basic 程序结构，提供一个简单的 Visual Basic 程序，"Hello，World"，并讨论了 Visual Basic 代码约定。 代码约定是针对不是程序的逻辑，而是其物理结构和外观的建议值。 以下它们使得你的代码易于阅读、 理解和维护。 代码约定，可以包括的其他：  

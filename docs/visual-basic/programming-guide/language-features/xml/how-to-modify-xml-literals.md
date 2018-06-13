@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656040"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>如何：修改 XML 文本 (Visual Basic)
 Visual Basic 提供方便的方法来修改 XML 文本。 你可以添加或删除元素和属性，并还可以用新的 XML 元素替换现有元素。 本主题提供如何修改现有 XML 文本的几个示例。  

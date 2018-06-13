@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656321"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>演练：在 Visual Basic 中实现 IEnumerable(Of T)
 <xref:System.Collections.Generic.IEnumerable%601>接口由可以一次返回的值的一个项的序列的类实现。 返回的数据一次的一项是不需要将完整的数据集加载到内存中进行处理它的优势。 只需使用足够的内存来从数据加载单个项。 类实现`IEnumerable(T)`接口可以用于`For Each`循环或 LINQ 查询。  
