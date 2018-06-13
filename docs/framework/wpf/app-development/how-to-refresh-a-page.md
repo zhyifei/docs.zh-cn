@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546525"
 ---
 # <a name="how-to-refresh-a-page"></a><span data-ttu-id="bcb9d-102">如何： 刷新的页面</span><span class="sxs-lookup"><span data-stu-id="bcb9d-102">How to: Refresh a Page</span></span>
 <span data-ttu-id="bcb9d-103">此示例演示如何调用<xref:System.Windows.Navigation.NavigationWindow.Refresh%2A>方法来刷新中的当前内容<xref:System.Windows.Navigation.NavigationWindow>。</span><span class="sxs-lookup"><span data-stu-id="bcb9d-103">This example shows how to call the <xref:System.Windows.Navigation.NavigationWindow.Refresh%2A> method to refresh the current content in a <xref:System.Windows.Navigation.NavigationWindow>.</span></span>  

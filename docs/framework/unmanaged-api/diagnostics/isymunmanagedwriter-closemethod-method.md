@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 71be697a8a1decd9b5f780d047c3dbb397e351d0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426882"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a><span data-ttu-id="8f772-102">ISymUnmanagedWriter::CloseMethod 方法</span><span class="sxs-lookup"><span data-stu-id="8f772-102">ISymUnmanagedWriter::CloseMethod Method</span></span>
 <span data-ttu-id="8f772-103">关闭当前方法。</span><span class="sxs-lookup"><span data-stu-id="8f772-103">Closes the current method.</span></span> <span data-ttu-id="8f772-104">一旦关闭方法，可以在其中定义没有更多的符号。</span><span class="sxs-lookup"><span data-stu-id="8f772-104">Once a method is closed, no more symbols can be defined within it.</span></span>  

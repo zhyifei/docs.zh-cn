@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532023"
 ---
 # <a name="how-to-disable-toolstripmenuitems"></a><span data-ttu-id="c2be0-102">如何：禁用 ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="c2be0-102">How to: Disable ToolStripMenuItems</span></span>
 <span data-ttu-id="c2be0-103">你可以限制或扩大用户可通过启用和禁用菜单项以响应用户活动的命令。</span><span class="sxs-lookup"><span data-stu-id="c2be0-103">You can limit or broaden the commands a user may make by enabling and disabling menu items in response to user activities.</span></span> <span data-ttu-id="c2be0-104">当创建，但这可以通过调整时，默认情况下启用菜单项<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c2be0-104">Menu items are enabled by default when they are created, but this can be adjusted through the <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> property.</span></span> <span data-ttu-id="c2be0-105">在设计时使用此属性可**属性**窗口或以编程方式通过在代码中设置。</span><span class="sxs-lookup"><span data-stu-id="c2be0-105">You can manipulate this property at design time in the **Properties** window or programmatically by setting it in code.</span></span>  

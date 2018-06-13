@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359310"
 ---
 # <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="e8f6d-102">从文件中插入图像</span><span class="sxs-lookup"><span data-stu-id="e8f6d-102">Inserting an Image from a File</span></span>
 <span data-ttu-id="e8f6d-103">可以将二进制大对象 (BLOB) 作为二进制或字符数据写入数据库，具体视数据源的字段类型而定。</span><span class="sxs-lookup"><span data-stu-id="e8f6d-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="e8f6d-104">BLOB 是一个表示 `text`、`ntext` 和 `image` 数据类型的通用术语，这些数据类型通常包含文档和图片。</span><span class="sxs-lookup"><span data-stu-id="e8f6d-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  

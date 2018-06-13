@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529128"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a><span data-ttu-id="c52ba-102">如何：通过扩展 Windows 窗体 DataGridView 控件中单元格和列的行为和外观对其进行自定义</span><span class="sxs-lookup"><span data-stu-id="c52ba-102">How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance</span></span>
 <span data-ttu-id="c52ba-103"><xref:System.Windows.Forms.DataGridView> 控件提供使用属性、事件和伴生类自定义其外观和行为的多种方式。</span><span class="sxs-lookup"><span data-stu-id="c52ba-103">The <xref:System.Windows.Forms.DataGridView> control provides a number of ways to customize its appearance and behavior using properties, events, and companion classes.</span></span> <span data-ttu-id="c52ba-104">有时，你可能对这些功能不提供的单元格有要求。</span><span class="sxs-lookup"><span data-stu-id="c52ba-104">Occasionally, you may have requirements for your cells that go beyond what these features can provide.</span></span> <span data-ttu-id="c52ba-105">你可以创建自己的自定义 <xref:System.Windows.Forms.DataGridViewCell> 类以提供扩展功能。</span><span class="sxs-lookup"><span data-stu-id="c52ba-105">You can create your own custom <xref:System.Windows.Forms.DataGridViewCell> class to provide extended functionality.</span></span>  
