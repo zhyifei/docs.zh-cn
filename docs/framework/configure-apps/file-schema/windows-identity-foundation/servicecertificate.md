@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766772"
 ---
 # <a name="ltservicecertificategt"></a><span data-ttu-id="cf8a1-102">&lt;serviceCertificate&gt;</span><span class="sxs-lookup"><span data-stu-id="cf8a1-102">&lt;serviceCertificate&gt;</span></span>
 <span data-ttu-id="cf8a1-103">配置用于加密和解密令牌的 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="cf8a1-103">Configures the X.509 certificate that is used to encrypt and decrypt tokens.</span></span>  

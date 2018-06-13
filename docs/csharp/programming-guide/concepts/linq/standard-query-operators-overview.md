@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337319"
 ---
 # <a name="standard-query-operators-overview-c"></a><span data-ttu-id="79513-102">标准查询运算符概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="79513-102">Standard Query Operators Overview (C#)</span></span>
 <span data-ttu-id="79513-103">*标准查询运算符*是组成 LINQ 模式的方法。</span><span class="sxs-lookup"><span data-stu-id="79513-103">The *standard query operators* are the methods that form the LINQ pattern.</span></span> <span data-ttu-id="79513-104">这些方法中的大多数都作用于序列；其中序列指其类型实现 <xref:System.Collections.Generic.IEnumerable%601> 接口或 <xref:System.Linq.IQueryable%601> 接口的对象。</span><span class="sxs-lookup"><span data-stu-id="79513-104">Most of these methods operate on sequences, where a sequence is an object whose type implements the <xref:System.Collections.Generic.IEnumerable%601> interface or the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="79513-105">标准查询运算符提供包括筛选、投影、聚合、排序等在内的查询功能。</span><span class="sxs-lookup"><span data-stu-id="79513-105">The standard query operators provide query capabilities including filtering, projection, aggregation, sorting and more.</span></span>  
