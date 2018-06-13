@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752268"
 ---
 # <a name="ltalwaysflowimpersonationpolicygt-element"></a><span data-ttu-id="a1bba-102">&lt;alwaysFlowImpersonationPolicy&gt;元素</span><span class="sxs-lookup"><span data-stu-id="a1bba-102">&lt;alwaysFlowImpersonationPolicy&gt; Element</span></span>
 <span data-ttu-id="a1bba-103">指定 Windows 标识始终流经异步点，而不考虑执行模拟的方式。</span><span class="sxs-lookup"><span data-stu-id="a1bba-103">Specifies that the Windows identity always flows across asynchronous points, regardless of how impersonation was performed.</span></span>  

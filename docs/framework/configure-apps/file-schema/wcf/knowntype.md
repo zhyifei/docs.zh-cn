@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753321"
 ---
 # <a name="ltknowntypegt"></a><span data-ttu-id="f51d2-102">&lt;knownType&gt;</span><span class="sxs-lookup"><span data-stu-id="f51d2-102">&lt;knownType&gt;</span></span>
 <span data-ttu-id="f51d2-103">指定在反序列化过程中将由 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的类型。</span><span class="sxs-lookup"><span data-stu-id="f51d2-103">Specifies a type to be used by <xref:System.Runtime.Serialization.DataContractSerializer> during deserialization.</span></span> <span data-ttu-id="f51d2-104">该元素指定由某个“声明的类型”的字段或属性返回到“已知类型”。</span><span class="sxs-lookup"><span data-stu-id="f51d2-104">The element specifies a "known type" that is returned by a field or property of a "declared type."</span></span> <span data-ttu-id="f51d2-105">有关详细信息，请参阅[数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。</span><span class="sxs-lookup"><span data-stu-id="f51d2-105">For more information, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  

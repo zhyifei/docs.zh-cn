@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755183"
 ---
 # <a name="ltroleclaimtypegt"></a><span data-ttu-id="3dd87-102">&lt;roleClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="3dd87-102">&lt;roleClaimType&gt;</span></span>
 <span data-ttu-id="3dd87-103">指定的集合中定义的角色类型声明的声明类型<xref:System.Security.Claims.ClaimsIdentity>返回的对象<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>令牌处理程序方法。</span><span class="sxs-lookup"><span data-stu-id="3dd87-103">Specifies the claim type that defines the role type claims in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of the token handler.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752191"
 ---
 # <a name="setting-assembly-attributes"></a><span data-ttu-id="ec32b-102">设置程序集特性</span><span class="sxs-lookup"><span data-stu-id="ec32b-102">Setting Assembly Attributes</span></span>
 <span data-ttu-id="ec32b-103">程序集特性是提供程序集相关信息的值。</span><span class="sxs-lookup"><span data-stu-id="ec32b-103">Assembly attributes are values that provide information about an assembly.</span></span> <span data-ttu-id="ec32b-104">特性分为以下几组信息：</span><span class="sxs-lookup"><span data-stu-id="ec32b-104">The attributes are divided into the following sets of information:</span></span>  

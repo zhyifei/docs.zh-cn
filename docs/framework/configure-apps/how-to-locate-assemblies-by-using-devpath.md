@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755456"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a><span data-ttu-id="a1934-102">如何：使用 DEVPATH 查找程序集</span><span class="sxs-lookup"><span data-stu-id="a1934-102">How to: Locate Assemblies by Using DEVPATH</span></span>
 <span data-ttu-id="a1934-103">开发人员可能想要确保它们在构建共享程序集与多个应用程序一起正常运行。</span><span class="sxs-lookup"><span data-stu-id="a1934-103">Developers might want to make sure that a shared assembly they are building works correctly with multiple applications.</span></span> <span data-ttu-id="a1934-104">而不是不断地将全局程序集缓存中的程序集放置在开发周期中，开发人员可以创建一个 DEVPATH 环境变量，指向程序集的生成输出目录。</span><span class="sxs-lookup"><span data-stu-id="a1934-104">Instead of continually putting the assembly in the global assembly cache during the development cycle, the developer can create a DEVPATH environment variable that points to the build output directory for the assembly.</span></span>  
