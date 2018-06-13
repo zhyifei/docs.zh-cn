@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605051"
 ---
 # <a name="parameter-list-visual-basic"></a>参数列表 (Visual Basic)
 指定一个过程需要调用的参数。 用逗号分隔多个参数。 下面是一个参数的语法。  

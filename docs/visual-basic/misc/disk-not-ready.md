@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633661"
 ---
 # <a name="disk-not-ready"></a>磁盘未准备好
 对于指定的驱动器，没有磁盘或者驱动器门处于打开状态。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636919"
 ---
 # <a name="for-loop-not-initialized-visual-basic"></a>未初始化 For 循环 (Visual Basic)
 跳转到 `For...Next` 循环中间。  

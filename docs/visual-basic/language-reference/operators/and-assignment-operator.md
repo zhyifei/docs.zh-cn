@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601876"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= 运算符 (Visual Basic)
 串联`String`表达式`String`变量或属性并将结果赋给该变量或属性。  

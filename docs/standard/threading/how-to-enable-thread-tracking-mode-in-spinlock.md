@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582104"
 ---
 # <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>如何：在 SpinLock 中启用线程跟踪模式
 <xref:System.Threading.SpinLock?displayProperty=nameWithType> 是一种低级互斥锁，可用于等待时间非常短的方案。 <xref:System.Threading.SpinLock> 不可重入。 进入锁后，线程必须先正确退出锁定，然后才能再次进入。 通常，只要尝试重入锁，就会导致死锁发生，且死锁的调试难度可能非常大。 作为开发的辅助手段，<xref:System.Threading.SpinLock?displayProperty=nameWithType> 支持线程跟踪模式。也就是说，如果线程尝试重入已保留的锁，就会导致异常抛出。 这样一来，可以更轻松地定位未正确退出锁的点。 线程跟踪模式的启用方法为，使用需要使用布尔输入参数的 <xref:System.Threading.SpinLock> 构造函数，并传入参数 `true`。 完成开发和测试阶段后，禁用线程跟踪模式，以提升性能。  

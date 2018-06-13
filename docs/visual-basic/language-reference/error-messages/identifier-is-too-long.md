@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586446"
 ---
 # <a name="identifier-is-too-long"></a>标识符太长
 名称或标识符，每个编程元素被限制为 1023年个字符。 此外，完全限定的名称不能超过 1023年个字符。 这意味着，整个标识符字符串 (`<namespace>.<...>.<namespace>.<class>.<element>`) 不能超过 1023年个字符长，包括成员访问运算符 (`.`) 字符。  

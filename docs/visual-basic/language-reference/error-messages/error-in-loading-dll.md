@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584678"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>加载 DLL 时出错 (Visual Basic)
 动态链接库 (DLL) 是中指定一个库`Lib`子句`Declare`语句。 此错误的可能原因包括：  

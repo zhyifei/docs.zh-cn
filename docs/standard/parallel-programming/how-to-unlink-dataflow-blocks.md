@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581545"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>如何：取消链接数据流块
 本文档介绍如何取消目标数据流块与其源的链接。

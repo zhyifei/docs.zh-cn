@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639306"
 ---
 # <a name="targetfilepath-specifies-an-existing-folder"></a>TargetFilePath 指定现有文件夹
 参数 `TargetFilePath` 指定现有的目录，但必须指定新目录的名称。  

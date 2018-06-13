@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586652"
 ---
 # <a name="expression-does-not-produce-a-value"></a>表达式不产生值
 已尝试使用不会生成值生成的上下文，例如，调用中的值的表达式`Sub`在上下文中其中`Function`预期。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638677"
 ---
 # <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a>某些文件和文件夹在操作期间导致异常
 当尝试执行操作，但用户缺少必要的权限时，目录和文件可能会引发异常。  
