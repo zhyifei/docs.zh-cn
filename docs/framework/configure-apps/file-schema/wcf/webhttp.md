@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767487"
 ---
 # <a name="ltwebhttpgt"></a>&lt;webHttp&gt;
 此元素通过配置指定终结点上的 <xref:System.ServiceModel.Description.WebHttpBehavior>。 此行为与结合使用时， [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)标准绑定，可使 Windows Communication Foundation (WCF) 服务的 Web 编程模型。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749109"
 ---
 # <a name="ltlocalissuergt"></a>&lt;localIssuer&gt;
 指定要用于颁发安全令牌的本地颁发者的地址和绑定。  

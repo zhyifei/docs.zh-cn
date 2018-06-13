@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763665"
 ---
 # <a name="merging-dataset-contents"></a>合并数据集内容
 您可以使用 <xref:System.Data.DataSet.Merge%2A> 方法将 <xref:System.Data.DataSet>、<xref:System.Data.DataTable> 或 <xref:System.Data.DataRow> 数组的内容合并到现有的 `DataSet` 中。 若干因素和选项会影响将新数据合并到现有 `DataSet` 中的方式。  

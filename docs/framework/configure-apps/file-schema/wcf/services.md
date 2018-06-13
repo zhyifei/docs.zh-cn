@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749226"
 ---
 # <a name="ltservicesgt"></a>&lt;服务&gt;
 服务是在配置文件的 `services` 节中定义的。 每个服务都有自己的 `service` 配置节。  

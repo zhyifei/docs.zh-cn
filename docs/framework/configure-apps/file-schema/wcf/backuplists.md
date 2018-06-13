@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749590"
 ---
 # <a name="ltbackuplistsgt"></a>&lt;backupLists&gt;
 表示一个配置节，用于定义一组用来处理错误的备份服务。 每个子元素是枚举一组你想要用于在的情况下无法访问主终结点的路由服务的终结点的备份列表。 如果列表中的第一个终结点关闭，则路由服务会自动故障转移到列表中的下一个终结点。  这样，可以方便地提高应用程序的可靠性，而不必告诉客户端应用程序应如何处理复杂模式或所有服务的部署位置。  

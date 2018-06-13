@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565433"
 ---
 # <a name="maximize-wpf-3d-performance"></a>最大程度地提高 WPF 三维性能
 当你使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]生成 3D 控件并将三维场景包括在你的应用程序，务必考虑性能优化。 本主题提供 3D 类和产生性能影响你的应用程序，以及有关使用它们时优化性能的建议的属性的列表。  

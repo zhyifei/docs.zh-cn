@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761501"
 ---
 # <a name="comparison-expressions"></a>比较表达式
 比较表达式检查常量值、属性值或方法结果是否等于、不等于、大于或小于另一个值。 如果特定比较对 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 无效，则将引发异常。 所有比较（无论隐式和显式）都要求所有组件在数据源中是可比较的。 比较表达式通常在 `Where` 子句中用于限制查询结果。  

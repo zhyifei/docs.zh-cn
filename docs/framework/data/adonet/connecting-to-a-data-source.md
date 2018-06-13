@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757107"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>连接到 ADO.NET 中的数据源
 在 ADO.NET 中使用**连接**要通过提供必要的身份验证信息来连接字符串连接到特定数据源对象。 **连接**你使用的对象取决于数据源的类型。  

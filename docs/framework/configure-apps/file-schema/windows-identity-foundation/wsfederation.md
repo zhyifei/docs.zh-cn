@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758979"
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 提供有关配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM)。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 |特性|描述|  
 |---------------|-----------------|  
 |AuthenticationType|一个 URI，指定身份验证类型。 设置的 WS 联合身份验证登录请求 wauth 参数。 可选。 默认值为空字符串，它指定 wauth 参数未包含在请求中。|  
-|新鲜度|所需的最长时间身份验证请求，以分钟为单位。 设置的 WS 联合身份验证登录请求 wfresh 参数。 可选。 默认值为零。 可选。 **警告：**中下一个版本的.NET Framework 4.5、`freshness`属性的类型将为`xs:string`，其默认值将为`null`。|  
+|新鲜度|所需的最长时间身份验证请求，以分钟为单位。 设置的 WS 联合身份验证登录请求 wfresh 参数。 可选。 默认值为零。 可选。 **警告：** 中下一个版本的.NET Framework 4.5、`freshness`属性的类型将为`xs:string`，其默认值将为`null`。|  
 |homeRealm|要用于身份验证标识提供程序 (IP) 主领域。 设置的 WS 联合身份验证登录请求 whr 参数。 可选。 默认值为空字符串，它指定 whr 参数未包含在请求中。|  
 |issuer|预期的令牌颁发者的 URI。 设置登录请求的基 URL 的 WS 联合身份验证和所需的注销请求。|  
 |persistentCookiesOnPassiveRedirects|指定是否在身份验证颁发了永久 cookie。 可选。 默认值为"false"，不发送 cookie。|  
@@ -63,8 +64,8 @@ ms.lasthandoff: 05/03/2018
 |requestPtr|指定令牌颁发请求的位置的 URL。 设置请求 wreqptr 参数。 可选。 默认值为空字符串，它指定 wreqptr 参数未包含在请求中。 不在请求中包括 wreq 或 wreqptr 参数意味着 STS，了解哪种类型的令牌颁发。|  
 |requireHttps|指定与安全令牌服务 (STS) 的通信是否必须使用 HTTPS 协议。 可选。 默认值为"true"时，必须使用 HTTPS。|  
 |Resource — 资源|一个 URI，标识要访问的资源的信赖方 (RP) 到到安全令牌服务 (STS)。 可选。 设置的 WS 联合身份验证登录请求 wres 参数。 可选。 默认值为空字符串，它指定 wres 参数未包含在请求中。 **注意：** wres 是旧的参数。 指定`realm`属性以改为使用 wtrealm 参数。|  
-|signInQueryString|提供一个扩展性点，以便在 WS 联合身份验证登录请求 URL 中指定应用程序定义查询参数。 可选。 默认值为空字符串，指定应在请求中包含任何其他参数。 参数指定为使用以下形式的查询字符串片段： `"param1=value1&param2=value2&param3=value3"` ，依此类推。 **注意：**配置文件中 &"必须使用其实体引用，指定查询字符串中的字符`&`。|  
-|signOutQueryString|提供一个扩展性点，以便在 WS 联合身份验证登录请求 URL 中指定应用程序定义查询参数。 可选。 默认值为空字符串，指定应在请求中包含任何其他参数。 参数指定为使用以下形式的查询字符串片段： `"param1=value1&param2=value2&param3=value3"` ，依此类推。 **注意：**配置文件中 &"必须使用其实体引用，指定查询字符串中的字符`&`。|  
+|signInQueryString|提供一个扩展性点，以便在 WS 联合身份验证登录请求 URL 中指定应用程序定义查询参数。 可选。 默认值为空字符串，指定应在请求中包含任何其他参数。 参数指定为使用以下形式的查询字符串片段： `"param1=value1&param2=value2&param3=value3"` ，依此类推。 **注意：** 配置文件中 &"必须使用其实体引用，指定查询字符串中的字符`&`。|  
+|signOutQueryString|提供一个扩展性点，以便在 WS 联合身份验证登录请求 URL 中指定应用程序定义查询参数。 可选。 默认值为空字符串，指定应在请求中包含任何其他参数。 参数指定为使用以下形式的查询字符串片段： `"param1=value1&param2=value2&param3=value3"` ，依此类推。 **注意：** 配置文件中 &"必须使用其实体引用，指定查询字符串中的字符`&`。|  
 |signOutReply|在被动注销通过 WS 联合身份验证协议期间指定的客户端应被重定向到由安全令牌服务 (STS) 的 URL。 WS 联合身份验证的注销请求上设置 wreply 参数。 可选。 默认值为空字符串，指定应在请求中包含任何其他参数。|  
   
 ### <a name="child-elements"></a>子元素  

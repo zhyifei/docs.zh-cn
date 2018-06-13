@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762418"
 ---
 # <a name="facet"></a>facet
 A*方面*用于向基元类型属性定义中添加详细信息。 A[属性](../../../../docs/framework/data/adonet/property.md)定义包含有关属性类型的信息，但通常需要更多详细信息。 例如，概念模型中的实体类型可能有一个类型为 `String` 的属性，其值不能设置为 null。 通过方面可以指定这种详细程度。  

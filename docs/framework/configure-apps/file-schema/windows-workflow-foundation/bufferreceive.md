@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766831"
 ---
 # <a name="ltbufferreceivegt"></a>&lt;bufferReceive&gt;
 一种服务行为，允许服务使用缓冲接收处理，以使工作流服务能够处理无序消息。  

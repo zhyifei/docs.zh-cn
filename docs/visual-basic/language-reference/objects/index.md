@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604245"
 ---
 # <a name="objects-visual-basic"></a>对象 (Visual Basic)
 本主题收录了记录 Visual Basic 运行时对象的其他主题的链接，并包含这些对象的成员过程、属性和事件表。  
