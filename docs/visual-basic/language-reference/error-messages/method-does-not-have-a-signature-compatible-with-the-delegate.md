@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593244"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>方法没有与委托兼容的签名
 函数调用的方法签名与你正在使用的委托没有不兼容。 `Delegate` 语句定义参数类型和委托类的返回类型。 任何具有兼容的类型的参数相匹配并且返回类型可以用于创建此委托类型的实例的过程。  

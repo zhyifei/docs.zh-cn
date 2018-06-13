@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592218"
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化简介
 序列化是将对象转换成易于传输的形式的过程。 例如，可以序列化对象，并使用 HTTP 通过 Internet 在客户端和服务器之间进行传输。 另一方面，反序列化在流中重新构建对象。  

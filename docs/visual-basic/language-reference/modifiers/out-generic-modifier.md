@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598148"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out（泛型修饰符）(Visual Basic)
 对于泛型类型参数，`Out`关键字指定的类型是协变。  

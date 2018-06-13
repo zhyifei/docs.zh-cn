@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596741"
 ---
 # <a name="lttype1gt39lttypenamegt39-must-implement-39ltmembernamegt39-for-interface-39ltinterfacenamegt39"></a>&lt;type1&gt;&#39;&lt;typename&gt; &#39;必须实现&#39; &lt;membername&gt; &#39;接口&#39; &lt;n a m e&gt;&#39;
 \<类型名称 > 必须实现\<成员名称 > 接口\<n a m e >。 实现属性必须拥有匹配的 ReadOnly / WriteOnly 说明符。  

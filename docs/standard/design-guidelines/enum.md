@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579244"
 ---
 # <a name="enum-design"></a>枚举设计
 枚举是特殊类型的值类型。 有两种枚举： 简单枚举和标志枚举。  
