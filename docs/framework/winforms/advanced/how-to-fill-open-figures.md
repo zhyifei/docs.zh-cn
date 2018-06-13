@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521155"
 ---
 # <a name="how-to-fill-open-figures"></a>如何：填充开放图形
 你可以通过传递填写路径<xref:System.Drawing.Drawing2D.GraphicsPath>对象传递给<xref:System.Drawing.Graphics.FillPath%2A>方法。 <xref:System.Drawing.Graphics.FillPath%2A>方法填充的填充模式 （备用或绕） 根据当前设置的路径的路径。 如果路径具有任何开放图形，路径已填充，就像这些图形闭合。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 通过从其结束的点到起始点绘制一条直线闭合图形。  

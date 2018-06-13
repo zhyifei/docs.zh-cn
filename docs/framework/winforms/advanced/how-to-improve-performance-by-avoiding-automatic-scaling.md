@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523037"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>如何：通过避免自动缩放改善性能
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 在绘制时，这会降低性能，可能自动缩放图像。 或者，你可以控制将传递到目标矩形的尺寸缩放图像<xref:System.Drawing.Graphics.DrawImage%2A>方法。  
