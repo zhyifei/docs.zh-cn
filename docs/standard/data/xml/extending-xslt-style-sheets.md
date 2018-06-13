@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568818"
 ---
 # <a name="extending-xslt-style-sheets"></a>扩展 XSLT 样式表
 本节介绍扩展 XSLT 功能的不同方法。 可以使用 <xref:System.Xml.Xsl.XsltArgumentList> 类添加扩展对象或参数。 然后，可以从样式表中调用扩展对象或参数。 此外，还可以使用 `msxsl:script` 元素将脚本块嵌入样式表中。  

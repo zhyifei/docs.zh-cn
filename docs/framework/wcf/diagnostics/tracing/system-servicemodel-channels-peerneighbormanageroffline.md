@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33479471"
 ---
 # <a name="systemservicemodelchannelspeerneighbormanageroffline"></a>System.ServiceModel.Channels.PeerNeighborManagerOffline
 PeerNode 现在处于脱机状态，指示当前没有已连接的邻居。  

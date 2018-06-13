@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172157"
 ---
 # <a name="string-c-reference"></a>string（C# 参考）
 `string` 类型表示零个或多个 Unicode 字符的序列。 `string` 是 <xref:System.String> 在 .NET 中的别名。  

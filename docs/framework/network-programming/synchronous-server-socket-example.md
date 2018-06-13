@@ -17,6 +17,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955948"
 ---
 # <a name="synchronous-server-socket-example"></a>同步服务器套接字示例
 以下示例程序创建从客户端接收连接请求的服务器。 服务器使用同步套接字构建，因此在等待客户端的连接时，暂停执行服务器应用程序。 应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。 来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。  

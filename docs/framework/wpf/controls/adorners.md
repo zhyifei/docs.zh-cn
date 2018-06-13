@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551760"
 ---
 # <a name="adorners"></a>装饰器
 本部分提供有关装饰器的信息和[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装饰器框架。  

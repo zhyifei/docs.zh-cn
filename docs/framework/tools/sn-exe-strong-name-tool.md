@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401116"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe（强名称工具）
 强名称工具 (Sn.exe) 有助于使用[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)对程序集进行签名。 Sn.exe 提供了用于密钥管理、签名生成和签名验证的选项。  

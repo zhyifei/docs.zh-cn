@@ -12,11 +12,12 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563038"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>如何：控制复合形状的填充
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A>属性<xref:System.Windows.Media.GeometryGroup>或<xref:System.Windows.Media.PathGeometry>，指定"规则"复合形状用于确定给定的点是否为的几何图形的一部分。 有两个可能值<xref:System.Windows.Media.FillRule>:<xref:System.Windows.Media.FillRule.EvenOdd>和<xref:System.Windows.Media.FillRule.Nonzero>。 以下各节将介绍如何使用这两个规则。  
   
- **EvenOdd：**此规则通过从一点向任意方向绘制一条射向无穷远的射线，然后计算给定形状中与该射线相交的路径段的数量，从而确定该点是否位于填充区域中。 如果此数目为奇数，那么该点则在内部；如果为偶数，则该点在外部。  
+ **EvenOdd：** 此规则通过从一点向任意方向绘制一条射向无穷远的射线，然后计算给定形状中与该射线相交的路径段的数量，从而确定该点是否位于填充区域中。 如果此数目为奇数，那么该点则在内部；如果为偶数，则该点在外部。  
   
  例如，下面的 XAML 创建复合形状组成同心环 （目标） 的一系列具有<xref:System.Windows.Media.GeometryGroup.FillRule%2A>设置为<xref:System.Windows.Media.FillRule.EvenOdd>。  
   
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
   
  ![关系图：EvenOdd 的 FillRule 属性值](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")  
   
- **NonZero：**此规则通过从一点向任意方向绘制一条射向无穷远的射线，并检查一段形状与射线相交的位置，从而确定该点是否位于路径的填充区域。 从零计数开始，从左到右每次添加与射线相交的一个段，然后从右到左每次减去与射线相交的一个路径段。 在对交叉点进行计数后，如果结果为零，那么该点则位于路径外。 否则，该点则在路径内。  
+ **NonZero：** 此规则通过从一点向任意方向绘制一条射向无穷远的射线，并检查一段形状与射线相交的位置，从而确定该点是否位于路径的填充区域。 从零计数开始，从左到右每次添加与射线相交的一个段，然后从右到左每次减去与射线相交的一个路径段。 在对交叉点进行计数后，如果结果为零，那么该点则位于路径外。 否则，该点则在路径内。  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/04/2018
   
  ![关系图：NonZero 的 FillRule 属性值](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")  
   
- **注意：**出于<xref:System.Windows.Media.FillRule>，所有形状被都视为闭合。 如果段中存在间隙，请绘制用于闭合该段的假想线。 在以上示例中，环中存在多个较小间隙。 考虑到这一点，人们可能希望穿过间隙的射线产生不同的结果，然后射线在另一个方向上运行。 下面是放大的举例说明了这些缺口和"虚部段"之一 (为了应用绘制的段<xref:System.Windows.Media.FillRule>)，将其关闭。  
+ **注意：** 出于<xref:System.Windows.Media.FillRule>，所有形状被都视为闭合。 如果段中存在间隙，请绘制用于闭合该段的假想线。 在以上示例中，环中存在多个较小间隙。 考虑到这一点，人们可能希望穿过间隙的射线产生不同的结果，然后射线在另一个方向上运行。 下面是放大的举例说明了这些缺口和"虚部段"之一 (为了应用绘制的段<xref:System.Windows.Media.FillRule>)，将其关闭。  
   
  ![关系图：对于 FillRule，段总是处于闭合状态](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
   
