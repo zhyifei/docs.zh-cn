@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639293"
 ---
 # <a name="system-event-log-cannot-be-deleted"></a>不能删除系统事件日志
 试图删除系统事件日志（该日志是不能被删除的）。 系统日志跟踪系统事件（如系统启动和硬件故障）。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804386"
 ---
 # <a name="bridging-and-error-handling"></a>桥接和错误处理
 此示例演示如何桥接客户端和服务使用不同绑定之间的通信使用 Windows Communication Foundation (WCF) 路由服务。 此示例还演示如何将备份服务用于故障转移方案。 路由服务是可以轻松地在你的应用程序中包含基于内容的路由器的 WCF 组件。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640363"
 ---
 # <a name="the-source-folder-does-not-exist"></a>项目文件夹不存在
 尝试的操作引用了不存在的源文件夹。 这可能是由于提供的文件路径不正确。  

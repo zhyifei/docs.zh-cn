@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641601"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>如何： 查找 Namespace (Visual Basic 中) 中的所有节点
 您可以对每个元素或属性的命名空间进行筛选，以便查找该特定命名空间中的所有节点。  

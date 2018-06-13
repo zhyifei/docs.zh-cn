@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643544"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>如何： 查询一组文件夹 (LINQ) (Visual Basic 中) 中的字节总数
 此示例演示如何检索由指定文件夹及其所有子文件夹中的所有文件使用的字节总数。  
