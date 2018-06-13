@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ebe2cf95f5637e6924b85c2389f1c59679580298
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449165"
 ---
 # <a name="corelementtype-enumeration1"></a><span data-ttu-id="ad6fa-102">CorElementType Enumeration1</span><span class="sxs-lookup"><span data-stu-id="ad6fa-102">CorElementType Enumeration1</span></span>
 <span data-ttu-id="ad6fa-103">指定公共语言运行时<xref:System.Type>、 类型修饰符，或者有关元数据类型签名中类型的信息。</span><span class="sxs-lookup"><span data-stu-id="ad6fa-103">Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.</span></span>  

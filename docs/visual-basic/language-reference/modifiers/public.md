@@ -13,6 +13,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235913"
 ---
 # <a name="public-visual-basic"></a><span data-ttu-id="fa504-102">Public (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fa504-102">Public (Visual Basic)</span></span>
 <span data-ttu-id="fa504-103">指定一个或多个已声明的编程元素具有任何访问限制。</span><span class="sxs-lookup"><span data-stu-id="fa504-103">Specifies that one or more declared programming elements have no access restrictions.</span></span>  

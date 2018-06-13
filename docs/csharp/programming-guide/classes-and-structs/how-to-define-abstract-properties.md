@@ -10,6 +10,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172056"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a><span data-ttu-id="5ca87-102">如何：定义抽象属性（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="5ca87-102">How to: Define Abstract Properties (C# Programming Guide)</span></span>
 <span data-ttu-id="5ca87-103">以下示例演示如何定义[抽象](../../../csharp/language-reference/keywords/abstract.md)属性。</span><span class="sxs-lookup"><span data-stu-id="5ca87-103">The following example shows how to define [abstract](../../../csharp/language-reference/keywords/abstract.md) properties.</span></span> <span data-ttu-id="5ca87-104">抽象属性声明不提供属性访问器的实现，它声明该类支持属性，而将访问器实现留给派生类。</span><span class="sxs-lookup"><span data-stu-id="5ca87-104">An abstract property declaration does not provide an implementation of the property accessors -- it declares that the class supports properties, but leaves the accessor implementation to derived classes.</span></span> <span data-ttu-id="5ca87-105">以下示例演示如何实现从基类继承抽象属性。</span><span class="sxs-lookup"><span data-stu-id="5ca87-105">The following example demonstrates how to implement the abstract properties inherited from a base class.</span></span>  

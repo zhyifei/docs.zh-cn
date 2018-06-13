@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957937"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a><span data-ttu-id="ae1ee-103">云优化应用程序中的 Microsoft 技术</span><span class="sxs-lookup"><span data-stu-id="ae1ee-103">Microsoft technologies in cloud-optimized applications</span></span>
 

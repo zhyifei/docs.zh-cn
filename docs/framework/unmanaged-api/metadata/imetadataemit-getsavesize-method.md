@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9a65f76aed00e2b848f8603f1fee4d6acc91f99
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449152"
 ---
 # <a name="imetadataemitgetsavesize-method"></a><span data-ttu-id="324ce-102">IMetaDataEmit::GetSaveSize 方法</span><span class="sxs-lookup"><span data-stu-id="324ce-102">IMetaDataEmit::GetSaveSize Method</span></span>
 <span data-ttu-id="324ce-103">获取当前范围内的程序集和其元数据的估计二进制大小。</span><span class="sxs-lookup"><span data-stu-id="324ce-103">Gets the estimated binary size of the assembly and its metadata in the current scope.</span></span>  

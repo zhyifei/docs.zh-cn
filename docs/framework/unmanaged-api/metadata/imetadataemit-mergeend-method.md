@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449437"
 ---
 # <a name="imetadataemitmergeend-method"></a><span data-ttu-id="2095d-102">IMetaDataEmit::MergeEnd 方法</span><span class="sxs-lookup"><span data-stu-id="2095d-102">IMetaDataEmit::MergeEnd Method</span></span>
 <span data-ttu-id="2095d-103">合并到当前作用域指定一个或多个之前调用的所有元数据作用域[imetadataemit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)。</span><span class="sxs-lookup"><span data-stu-id="2095d-103">Merges into the current scope all the metadata scopes specified by one or more prior calls to [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172118"
 ---
 # <a name="sealed-c-reference"></a><span data-ttu-id="0465d-102">sealed（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="0465d-102">sealed (C# Reference)</span></span>
 <span data-ttu-id="0465d-103">应用于某个类时，`sealed` 修饰符可阻止其他类继承自该类。</span><span class="sxs-lookup"><span data-stu-id="0465d-103">When applied to a class, the `sealed` modifier prevents other classes from inheriting from it.</span></span> <span data-ttu-id="0465d-104">在下面的示例中，类 `B` 继承自类 `A`，但没有类可以继承自类 `B`。</span><span class="sxs-lookup"><span data-stu-id="0465d-104">In the following example, class `B` inherits from class `A`, but no class can inherit from class `B`.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171988"
 ---
 # <a name="public-c-reference"></a><span data-ttu-id="73e8b-102">public（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="73e8b-102">public (C# Reference)</span></span>
 <span data-ttu-id="73e8b-103">`public` 关键字是类型和类型成员的访问修饰符。</span><span class="sxs-lookup"><span data-stu-id="73e8b-103">The `public` keyword is an access modifier for types and type members.</span></span> <span data-ttu-id="73e8b-104">公共访问是允许的最高访问级别。</span><span class="sxs-lookup"><span data-stu-id="73e8b-104">Public access is the most permissive access level.</span></span> <span data-ttu-id="73e8b-105">对访问公共成员没有限制，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="73e8b-105">There are no restrictions on accessing public members, as in this example:</span></span>  

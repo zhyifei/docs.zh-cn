@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956080"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a><span data-ttu-id="159b5-103">将关系数据库迁移到 azure</span><span class="sxs-lookup"><span data-stu-id="159b5-103">Migrate your relational databases to azure</span></span>
 

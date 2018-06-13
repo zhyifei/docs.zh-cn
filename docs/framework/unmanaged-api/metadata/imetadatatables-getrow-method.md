@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 954b4df6b341e18c5a995b57541a72e236278c45
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449590"
 ---
 # <a name="imetadatatablesgetrow-method"></a><span data-ttu-id="1a445-102">IMetaDataTables::GetRow 方法</span><span class="sxs-lookup"><span data-stu-id="1a445-102">IMetaDataTables::GetRow Method</span></span>
 <span data-ttu-id="1a445-103">获取指定的行索引处，在指定的表索引的表中的一行。</span><span class="sxs-lookup"><span data-stu-id="1a445-103">Gets the row at the specified row index, in the table at the specified table index.</span></span>  

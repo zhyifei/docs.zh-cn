@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503345"
 ---
 # <a name="object-references"></a><span data-ttu-id="1ae75-102">对象引用</span><span class="sxs-lookup"><span data-stu-id="1ae75-102">Object References</span></span>
 <span data-ttu-id="1ae75-103">此示例演示如何在服务器与客户端之间通过引用来传递对象。</span><span class="sxs-lookup"><span data-stu-id="1ae75-103">This sample demonstrates how to pass objects by references between server and client.</span></span> <span data-ttu-id="1ae75-104">此示例使用模拟*社交网络*。</span><span class="sxs-lookup"><span data-stu-id="1ae75-104">The sample uses simulated *social networks*.</span></span> <span data-ttu-id="1ae75-105">社会网络由一个 `Person` 类组成，该类包含一个朋友列表，其中每个朋友都是 `Person` 类的一个实例，并有自己的朋友列表。</span><span class="sxs-lookup"><span data-stu-id="1ae75-105">A social network consists of a `Person` class that contains a list of friends in which each friend is an instance of the `Person` class, with its own list of friends.</span></span> <span data-ttu-id="1ae75-106">这将创建一个对象图。</span><span class="sxs-lookup"><span data-stu-id="1ae75-106">This creates a graph of objects.</span></span> <span data-ttu-id="1ae75-107">服务在这些社会网络上公开操作。</span><span class="sxs-lookup"><span data-stu-id="1ae75-107">The service exposes operations on these social networks.</span></span>  

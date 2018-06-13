@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172105"
 ---
 # <a name="delegate-c-reference"></a><span data-ttu-id="5fb46-102">委托（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="5fb46-102">delegate (C# Reference)</span></span>
 <span data-ttu-id="5fb46-103">委托类型的声明与方法签名相似。</span><span class="sxs-lookup"><span data-stu-id="5fb46-103">The declaration of a delegate type is similar to a method signature.</span></span> <span data-ttu-id="5fb46-104">它有一个返回值和任意数目任意类型的参数：</span><span class="sxs-lookup"><span data-stu-id="5fb46-104">It has a return value and any number of parameters of any type:</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503719"
 ---
 # <a name="using-data-contracts"></a><span data-ttu-id="ee0cf-102">使用数据协定</span><span class="sxs-lookup"><span data-stu-id="ee0cf-102">Using Data Contracts</span></span>
 <span data-ttu-id="ee0cf-103">“数据协定”  是在服务与客户端之间达成的正式协议，用于以抽象方式描述要交换的数据。</span><span class="sxs-lookup"><span data-stu-id="ee0cf-103">A *data contract* is a formal agreement between a service and a client that abstractly describes the data to be exchanged.</span></span> <span data-ttu-id="ee0cf-104">也就是说，为了进行通信，客户端和服务不必共享相同的类型，而只需共享相同的数据协定。</span><span class="sxs-lookup"><span data-stu-id="ee0cf-104">That is, to communicate, the client and the service do not have to share the same types, only the same data contracts.</span></span> <span data-ttu-id="ee0cf-105">数据协定为每个参数或返回类型精确定义为进行交换而序列化哪些数据（将哪些数据转换为 XML）。</span><span class="sxs-lookup"><span data-stu-id="ee0cf-105">A data contract precisely defines, for each parameter or return type, what data is serialized (turned into XML) to be exchanged.</span></span>  

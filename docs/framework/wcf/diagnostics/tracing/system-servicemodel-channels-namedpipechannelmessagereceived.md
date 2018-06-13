@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33477982"
 ---
 # <a name="systemservicemodelchannelsnamedpipechannelmessagereceived"></a><span data-ttu-id="a4d39-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="a4d39-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>
 <span data-ttu-id="a4d39-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="a4d39-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>  

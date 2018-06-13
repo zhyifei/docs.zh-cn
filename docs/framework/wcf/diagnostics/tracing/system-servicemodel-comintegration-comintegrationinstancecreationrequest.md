@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33479503"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationinstancecreationrequest"></a><span data-ttu-id="db022-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span><span class="sxs-lookup"><span data-stu-id="db022-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span></span>
 <span data-ttu-id="db022-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span><span class="sxs-lookup"><span data-stu-id="db022-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span></span>  

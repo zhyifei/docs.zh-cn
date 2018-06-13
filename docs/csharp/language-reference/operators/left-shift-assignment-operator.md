@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171788"
 ---
 # <a name="ltlt-operator-c-reference"></a><span data-ttu-id="212cf-102">&lt;&lt;= 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="212cf-102">&lt;&lt;= Operator (C# Reference)</span></span>
 <span data-ttu-id="212cf-103">左移赋值运算符。</span><span class="sxs-lookup"><span data-stu-id="212cf-103">The left-shift assignment operator.</span></span>  

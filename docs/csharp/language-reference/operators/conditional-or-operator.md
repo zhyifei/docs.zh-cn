@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171801"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="86547-102">|| 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="86547-102">|| Operator (C# Reference)</span></span>
 <span data-ttu-id="86547-103">条件 OR 运算符 (`||`) 执行其 `bool` 操作数的逻辑 OR。</span><span class="sxs-lookup"><span data-stu-id="86547-103">The conditional-OR operator (`||`) performs a logical-OR of its `bool` operands.</span></span> <span data-ttu-id="86547-104">如果第一个操作数的计算结果为 `true`，则不计算第二个操作数。</span><span class="sxs-lookup"><span data-stu-id="86547-104">If the first operand evaluates to `true`, the second operand isn't evaluated.</span></span> <span data-ttu-id="86547-105">如果第一个操作数的计算结果为 `false`，则第二个运算符决定 OR 表达式整体的计算结果是 `true` 还是 `false`。</span><span class="sxs-lookup"><span data-stu-id="86547-105">If the first operand evaluates to `false`, the second operator determines whether the OR expression as a whole evaluates to `true` or `false`.</span></span>  

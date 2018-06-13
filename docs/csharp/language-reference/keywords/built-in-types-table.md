@@ -10,6 +10,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172261"
 ---
 # <a name="built-in-types-table-c-reference"></a><span data-ttu-id="a9ed2-102">内置类型表（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="a9ed2-102">Built-In Types Table (C# Reference)</span></span>
 <span data-ttu-id="a9ed2-103">下表显示内置 C# 类型的关键字，即 <xref:System> 命名空间中预定义类型的别名。</span><span class="sxs-lookup"><span data-stu-id="a9ed2-103">The following table shows the keywords for built-in C# types, which are aliases of predefined types in the <xref:System> namespace.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486719"
 ---
 # <a name="configuration-and-metadata-support"></a><span data-ttu-id="035f3-102">配置和元数据支持</span><span class="sxs-lookup"><span data-stu-id="035f3-102">Configuration and Metadata Support</span></span>
 <span data-ttu-id="035f3-103">本主题说明如何启用配置和元数据对绑定和绑定元素的支持。</span><span class="sxs-lookup"><span data-stu-id="035f3-103">This topic describes how to enable configuration and metadata support for bindings and binding elements.</span></span>  

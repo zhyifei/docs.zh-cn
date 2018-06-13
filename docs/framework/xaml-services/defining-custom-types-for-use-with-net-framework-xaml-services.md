@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566491"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a><span data-ttu-id="ce97c-102">定义与 .NET Framework XAML 服务一起使用的自定义类型</span><span class="sxs-lookup"><span data-stu-id="ce97c-102">Defining Custom Types for Use with .NET Framework XAML Services</span></span>
 <span data-ttu-id="ce97c-103">当你定义了业务对象的自定义类型或者不在特定框架具有依赖关系的类型时，有一些你可以遵循 xaml 某些最佳实践。</span><span class="sxs-lookup"><span data-stu-id="ce97c-103">When you define custom types that are business objects or are types that do not have a dependency on specific frameworks, there are certain best practices for XAML you can follow.</span></span> <span data-ttu-id="ce97c-104">如果您遵循这些做法，.NET Framework XAML 服务和其 XAML 读取器和 XAML 编写器可以发现你的类型的 XAML 特征，并为其提供适当的表示形式，在 XAML 节点流中使用的 XAML 类型系统。</span><span class="sxs-lookup"><span data-stu-id="ce97c-104">If you follow these practices, .NET Framework XAML Services and its XAML readers and XAML writers can discover the XAML characteristics of your type and give it appropriate representation in a XAML node stream using the XAML type system.</span></span> <span data-ttu-id="ce97c-105">本主题介绍类型定义，成员定义和 CLR 特性化的类型或成员的最佳做法。</span><span class="sxs-lookup"><span data-stu-id="ce97c-105">This topic describes best practices for type definitions, member definitions, and CLR attributing of types or members.</span></span>  

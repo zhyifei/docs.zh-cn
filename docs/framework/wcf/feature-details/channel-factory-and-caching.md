@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490986"
 ---
 # <a name="channel-factory-and-caching"></a><span data-ttu-id="a0bb6-102">通道工厂和缓存</span><span class="sxs-lookup"><span data-stu-id="a0bb6-102">Channel Factory and Caching</span></span>
 <span data-ttu-id="a0bb6-103">WCF 客户端应用程序使用 <xref:System.ServiceModel.ChannelFactory%601> 类来创建 WCF 服务的通信通道。</span><span class="sxs-lookup"><span data-stu-id="a0bb6-103">WCF client applications use the <xref:System.ServiceModel.ChannelFactory%601> class to create a communication channel with a WCF service.</span></span>  <span data-ttu-id="a0bb6-104">创建 <xref:System.ServiceModel.ChannelFactory%601> 实例会带来一定的开销，因为这涉及以下操作：</span><span class="sxs-lookup"><span data-stu-id="a0bb6-104">Creating <xref:System.ServiceModel.ChannelFactory%601> instances incurs some overhead because it involves the following operations:</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542166"
 ---
 # <a name="attached-properties-overview"></a><span data-ttu-id="fa1ed-102">附加属性概述</span><span class="sxs-lookup"><span data-stu-id="fa1ed-102">Attached Properties Overview</span></span>
 <span data-ttu-id="fa1ed-103">附加属性是由 XAML 定义的概念。</span><span class="sxs-lookup"><span data-stu-id="fa1ed-103">An attached property is a concept defined by XAML.</span></span> <span data-ttu-id="fa1ed-104">附加属性旨在用作可在任何对象上设置的一类全局属性。</span><span class="sxs-lookup"><span data-stu-id="fa1ed-104">An attached property is intended to be used as a type of global property that is settable on any object.</span></span> <span data-ttu-id="fa1ed-105">在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中，附加属性通常定义为没有常规属性“包装器”的依赖性属性的专用形式。</span><span class="sxs-lookup"><span data-stu-id="fa1ed-105">In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], attached properties are typically defined as a specialized form of dependency property that does not have the conventional property "wrapper".</span></span>  

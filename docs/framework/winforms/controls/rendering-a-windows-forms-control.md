@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541383"
 ---
 # <a name="rendering-a-windows-forms-control"></a><span data-ttu-id="e12e8-102">呈现 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="e12e8-102">Rendering a Windows Forms Control</span></span>
 <span data-ttu-id="e12e8-103">呈现是指创建在用户的屏幕上的可视表示形式的过程。</span><span class="sxs-lookup"><span data-stu-id="e12e8-103">Rendering refers to the process of creating a visual representation on a user's screen.</span></span> <span data-ttu-id="e12e8-104">Windows 窗体使用[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]（的新 Windows 图形库） 呈现。</span><span class="sxs-lookup"><span data-stu-id="e12e8-104">Windows Forms uses [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (the new Windows graphics library) for rendering.</span></span> <span data-ttu-id="e12e8-105">提供对访问托管的类[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]中<xref:System.Drawing?displayProperty=nameWithType>命名空间及其子命名空间。</span><span class="sxs-lookup"><span data-stu-id="e12e8-105">The managed classes that provide access to [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] are in the <xref:System.Drawing?displayProperty=nameWithType> namespace and its subnamespaces.</span></span>  

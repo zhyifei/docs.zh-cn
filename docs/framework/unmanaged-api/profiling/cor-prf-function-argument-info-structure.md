@@ -1,14 +1,6 @@
 ---
-title: "COR_PRF_FUNCTION_ARGUMENT_INFO 结构"
-ms.custom: 
+title: COR_PRF_FUNCTION_ARGUMENT_INFO 结构
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_PRF_FUNCTION_ARGUMENT_INFO
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 07cf3bab-e193-4991-8205-3f41cf2d67b3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e26377fe3c5cfbae68f90087e3fb624ae4db0dc8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1fbc41ca1366b412c37d6af09e90e3f1b042ba21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449980"
 ---
-# <a name="corprffunctionargumentinfo-structure"></a><span data-ttu-id="f512b-102">COR_PRF_FUNCTION_ARGUMENT_INFO 结构</span><span class="sxs-lookup"><span data-stu-id="f512b-102">COR_PRF_FUNCTION_ARGUMENT_INFO Structure</span></span>
-<span data-ttu-id="f512b-103">按从左向右的顺序表示函数的自变量。</span><span class="sxs-lookup"><span data-stu-id="f512b-103">Represents a function's arguments, in left-to-right order.</span></span>  
+# <a name="corprffunctionargumentinfo-structure"></a><span data-ttu-id="033fe-102">COR_PRF_FUNCTION_ARGUMENT_INFO 结构</span><span class="sxs-lookup"><span data-stu-id="033fe-102">COR_PRF_FUNCTION_ARGUMENT_INFO Structure</span></span>
+<span data-ttu-id="033fe-103">按从左向右的顺序表示函数的自变量。</span><span class="sxs-lookup"><span data-stu-id="033fe-103">Represents a function's arguments, in left-to-right order.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f512b-104">语法</span><span class="sxs-lookup"><span data-stu-id="f512b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="033fe-104">语法</span><span class="sxs-lookup"><span data-stu-id="033fe-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {  
@@ -47,29 +36,29 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
 } COR_PRF_FUNCTION_ARGUMENT_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f512b-105">成员</span><span class="sxs-lookup"><span data-stu-id="f512b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="033fe-105">成员</span><span class="sxs-lookup"><span data-stu-id="033fe-105">Members</span></span>  
   
-|<span data-ttu-id="f512b-106">成员</span><span class="sxs-lookup"><span data-stu-id="f512b-106">Member</span></span>|<span data-ttu-id="f512b-107">描述</span><span class="sxs-lookup"><span data-stu-id="f512b-107">Description</span></span>|  
+|<span data-ttu-id="033fe-106">成员</span><span class="sxs-lookup"><span data-stu-id="033fe-106">Member</span></span>|<span data-ttu-id="033fe-107">描述</span><span class="sxs-lookup"><span data-stu-id="033fe-107">Description</span></span>|  
 |------------|-----------------|  
-|`numRanges`|<span data-ttu-id="f512b-108">自变量块的数量。</span><span class="sxs-lookup"><span data-stu-id="f512b-108">The number of blocks of arguments.</span></span> <span data-ttu-id="f512b-109">也就是说，此值是数[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)结构中`ranges`数组。</span><span class="sxs-lookup"><span data-stu-id="f512b-109">That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.</span></span>|  
-|`totalArgumentSize`|<span data-ttu-id="f512b-110">所有自变量的总大小。</span><span class="sxs-lookup"><span data-stu-id="f512b-110">The total size of all arguments.</span></span> <span data-ttu-id="f512b-111">换而言之，此值是自变量长度的总和。</span><span class="sxs-lookup"><span data-stu-id="f512b-111">In other words, this value is the sum of the argument lengths.</span></span>|  
-|`ranges`|<span data-ttu-id="f512b-112">数组`COR_PRF_FUNCTION_ARGUMENT_RANGE`结构，其中每个表示的函数自变量的一个块。</span><span class="sxs-lookup"><span data-stu-id="f512b-112">An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.</span></span>|  
+|`numRanges`|<span data-ttu-id="033fe-108">自变量块的数量。</span><span class="sxs-lookup"><span data-stu-id="033fe-108">The number of blocks of arguments.</span></span> <span data-ttu-id="033fe-109">也就是说，此值是数[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)结构中`ranges`数组。</span><span class="sxs-lookup"><span data-stu-id="033fe-109">That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.</span></span>|  
+|`totalArgumentSize`|<span data-ttu-id="033fe-110">所有自变量的总大小。</span><span class="sxs-lookup"><span data-stu-id="033fe-110">The total size of all arguments.</span></span> <span data-ttu-id="033fe-111">换而言之，此值是自变量长度的总和。</span><span class="sxs-lookup"><span data-stu-id="033fe-111">In other words, this value is the sum of the argument lengths.</span></span>|  
+|`ranges`|<span data-ttu-id="033fe-112">数组`COR_PRF_FUNCTION_ARGUMENT_RANGE`结构，其中每个表示的函数自变量的一个块。</span><span class="sxs-lookup"><span data-stu-id="033fe-112">An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f512b-113">备注</span><span class="sxs-lookup"><span data-stu-id="f512b-113">Remarks</span></span>  
- <span data-ttu-id="f512b-114">一个函数可能具有多个自变量。</span><span class="sxs-lookup"><span data-stu-id="f512b-114">A function may have many arguments.</span></span> <span data-ttu-id="f512b-115">不可能在内存中连续存储这些自变量。</span><span class="sxs-lookup"><span data-stu-id="f512b-115">Those arguments might not be stored contiguously in memory.</span></span> <span data-ttu-id="f512b-116">你可能必须在一个位置的三个自变量的块、 在另一个位置中的两个自变量的块和最后一个块中的其他位置的一个自变量。</span><span class="sxs-lookup"><span data-stu-id="f512b-116">You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place.</span></span> <span data-ttu-id="f512b-117">这些参数均为相同的函数;它们只存储在不同的位置。</span><span class="sxs-lookup"><span data-stu-id="f512b-117">These arguments are all for the same function; they're just stored in different places.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="033fe-113">备注</span><span class="sxs-lookup"><span data-stu-id="033fe-113">Remarks</span></span>  
+ <span data-ttu-id="033fe-114">一个函数可能具有多个自变量。</span><span class="sxs-lookup"><span data-stu-id="033fe-114">A function may have many arguments.</span></span> <span data-ttu-id="033fe-115">不可能在内存中连续存储这些自变量。</span><span class="sxs-lookup"><span data-stu-id="033fe-115">Those arguments might not be stored contiguously in memory.</span></span> <span data-ttu-id="033fe-116">你可能必须在一个位置的三个自变量的块、 在另一个位置中的两个自变量的块和最后一个块中的其他位置的一个自变量。</span><span class="sxs-lookup"><span data-stu-id="033fe-116">You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place.</span></span> <span data-ttu-id="033fe-117">这些参数均为相同的函数;它们只存储在不同的位置。</span><span class="sxs-lookup"><span data-stu-id="033fe-117">These arguments are all for the same function; they're just stored in different places.</span></span>  
   
- <span data-ttu-id="f512b-118">`COR_PRF_FUNCTION_ARGUMENT_INFO`结构表示单个函数的所有参数。</span><span class="sxs-lookup"><span data-stu-id="f512b-118">The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function.</span></span> <span data-ttu-id="f512b-119">它使用数组引用的函数自变量的所有块。</span><span class="sxs-lookup"><span data-stu-id="f512b-119">It uses an array to reference all the blocks of function arguments.</span></span> <span data-ttu-id="f512b-120">因此，对于单个函数具有单个`COR_PRF_FUNCTION_ARGUMENT_INFO`结构，即在引用多个`COR_PRF_FUNCTION_ARGUMENT_RANGE`结构，其中每个指向一个或多个函数自变量。</span><span class="sxs-lookup"><span data-stu-id="f512b-120">So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.</span></span>  
+ <span data-ttu-id="033fe-118">`COR_PRF_FUNCTION_ARGUMENT_INFO`结构表示单个函数的所有参数。</span><span class="sxs-lookup"><span data-stu-id="033fe-118">The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function.</span></span> <span data-ttu-id="033fe-119">它使用数组引用的函数自变量的所有块。</span><span class="sxs-lookup"><span data-stu-id="033fe-119">It uses an array to reference all the blocks of function arguments.</span></span> <span data-ttu-id="033fe-120">因此，对于单个函数具有单个`COR_PRF_FUNCTION_ARGUMENT_INFO`结构，即在引用多个`COR_PRF_FUNCTION_ARGUMENT_RANGE`结构，其中每个指向一个或多个函数自变量。</span><span class="sxs-lookup"><span data-stu-id="033fe-120">So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.</span></span>  
   
- <span data-ttu-id="f512b-121">存储在寄存器中的自变量会溢出至内存来生成结构。</span><span class="sxs-lookup"><span data-stu-id="f512b-121">Arguments that are stored in registers are spilled into memory to build the structures.</span></span>  
+ <span data-ttu-id="033fe-121">存储在寄存器中的自变量会溢出至内存来生成结构。</span><span class="sxs-lookup"><span data-stu-id="033fe-121">Arguments that are stored in registers are spilled into memory to build the structures.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f512b-122">惠?</span><span class="sxs-lookup"><span data-stu-id="f512b-122">Requirements</span></span>  
- <span data-ttu-id="f512b-123">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f512b-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="033fe-122">要求</span><span class="sxs-lookup"><span data-stu-id="033fe-122">Requirements</span></span>  
+ <span data-ttu-id="033fe-123">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="033fe-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f512b-124">**标头：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="f512b-124">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="033fe-124">**标头：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="033fe-124">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="f512b-125">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f512b-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="033fe-125">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="033fe-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f512b-126">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f512b-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="033fe-126">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="033fe-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f512b-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="f512b-127">See Also</span></span>  
- [<span data-ttu-id="f512b-128">分析结构</span><span class="sxs-lookup"><span data-stu-id="f512b-128">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a><span data-ttu-id="033fe-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="033fe-127">See Also</span></span>  
+ [<span data-ttu-id="033fe-128">分析结构</span><span class="sxs-lookup"><span data-stu-id="033fe-128">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

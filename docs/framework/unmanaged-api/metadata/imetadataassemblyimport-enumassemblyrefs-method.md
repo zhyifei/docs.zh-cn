@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0a56d874e5e7ef491c24b0aef2ace700087de677
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447406"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a><span data-ttu-id="05d57-102">IMetaDataAssemblyImport::EnumAssemblyRefs 方法</span><span class="sxs-lookup"><span data-stu-id="05d57-102">IMetaDataAssemblyImport::EnumAssemblyRefs Method</span></span>
 <span data-ttu-id="05d57-103">枚举`mdAssemblyRef`程序集清单中定义的实例。</span><span class="sxs-lookup"><span data-stu-id="05d57-103">Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172207"
 ---
 # <a name="value-types-c-reference"></a><span data-ttu-id="29dca-102">值类型（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="29dca-102">Value Types (C# Reference)</span></span>
 <span data-ttu-id="29dca-103">值类型包含两个主要类别：</span><span class="sxs-lookup"><span data-stu-id="29dca-103">The value types consist of two main categories:</span></span>  

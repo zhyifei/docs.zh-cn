@@ -14,6 +14,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34234368"
 ---
 # <a name="checked-and-unchecked-c-reference"></a><span data-ttu-id="5ba41-102">Checked 和 Unchecked（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="5ba41-102">Checked and Unchecked (C# Reference)</span></span>
 <span data-ttu-id="5ba41-103">C# 语句既可以在已检查的上下文中执行，也可以在未检查的上下文中执行。</span><span class="sxs-lookup"><span data-stu-id="5ba41-103">C# statements can execute in either checked or unchecked context.</span></span> <span data-ttu-id="5ba41-104">在已检查的上下文中，算法溢出引发异常。</span><span class="sxs-lookup"><span data-stu-id="5ba41-104">In a checked context, arithmetic overflow raises an exception.</span></span> <span data-ttu-id="5ba41-105">在未选中的上下文中忽略算术溢出并将结果截断，方法是：丢弃任何不适应目标类型的高序位。</span><span class="sxs-lookup"><span data-stu-id="5ba41-105">In an unchecked context, arithmetic overflow is ignored and the result is truncated by discarding any high-order bits that don't fit in the destination type.</span></span>  

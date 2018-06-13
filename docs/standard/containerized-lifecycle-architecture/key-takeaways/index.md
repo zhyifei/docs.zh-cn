@@ -6,9 +6,10 @@ ms.author: wiwagn
 ms.date: 09/22/2017
 ms.openlocfilehash: 84ba63c1685fcc3a49c6333a5e88c363bdad8ed4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568974"
 ---
 # <a name="key-takeaways"></a><span data-ttu-id="d6a4a-103">关键结论</span><span class="sxs-lookup"><span data-stu-id="d6a4a-103">Key takeaways</span></span>
 

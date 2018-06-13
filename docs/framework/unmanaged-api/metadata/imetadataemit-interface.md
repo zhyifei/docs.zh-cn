@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4c77edfff640f796dd3f345eaeb4728830c5f4c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449139"
 ---
 # <a name="imetadataemit-interface"></a><span data-ttu-id="bd8eb-102">IMetaDataEmit 接口</span><span class="sxs-lookup"><span data-stu-id="bd8eb-102">IMetaDataEmit Interface</span></span>
 <span data-ttu-id="bd8eb-103">提供创建、 修改和当前定义的范围中保存有关程序集的元数据的方法。</span><span class="sxs-lookup"><span data-stu-id="bd8eb-103">Provides methods to create, modify, and save metadata about the assembly in the currently defined scope.</span></span> <span data-ttu-id="bd8eb-104">元数据可以存储在内存中或保存到磁盘。</span><span class="sxs-lookup"><span data-stu-id="bd8eb-104">The metadata can be stored in memory or saved to disk.</span></span>  

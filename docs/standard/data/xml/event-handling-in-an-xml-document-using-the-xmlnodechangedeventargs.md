@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569728"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="920d7-102">使用 mlNodeChangedEventArgs 的 XML 文档中的事件处理</span><span class="sxs-lookup"><span data-stu-id="920d7-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
 <span data-ttu-id="920d7-103">XmlNodeChangedEventArgs 封装传递给事件处理程序的参数，这些处理程序在 XmlDocument 对象上注册为用于处理事件。</span><span class="sxs-lookup"><span data-stu-id="920d7-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="920d7-104">下表提供了事件以及关于何时引发事件的说明。</span><span class="sxs-lookup"><span data-stu-id="920d7-104">The events and a description of when they are fired is given in the following table.</span></span>  

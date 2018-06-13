@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957947"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a><span data-ttu-id="62254-103">何时部署到 Azure 容器实例 (ACI) 的 Windows 容器</span><span class="sxs-lookup"><span data-stu-id="62254-103">When to deploy Windows Containers to Azure Container Instances (ACI)</span></span>
 
