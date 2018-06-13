@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559961"
 ---
 # <a name="how-to-create-a-composite-shape"></a>如何：创建复合形状
 此示例演示如何创建使用复合形状<xref:System.Windows.Media.Geometry>对象并将其显示使用<xref:System.Windows.Shapes.Path>元素。 在下面的示例中， <xref:System.Windows.Media.LineGeometry>， <xref:System.Windows.Media.EllipseGeometry>，和一个<xref:System.Windows.Media.RectangleGeometry>用于<xref:System.Windows.Media.GeometryGroup>来创建的复合的形状。 然后使用绘制几何图形的<xref:System.Windows.Shapes.Path>元素。  

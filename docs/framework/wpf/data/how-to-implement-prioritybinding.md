@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557753"
 ---
 # <a name="how-to-implement-prioritybinding"></a>如何：实现 PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> 在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的工作原理是指定的绑定的列表。 绑定列表按优先级从高到最低优先级排序。 如果高优先级的绑定返回一个值成功处理时则永远不会需要处理其他列表中的绑定。 它可能是最高的优先级绑定需要很长的时间要进行求值的用例时，将使用成功返回一个值的下一步最高优先级，直到较高优先级的绑定成功返回一个值。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599988"
 ---
 # <a name="argument-39ltargumentnamegt39-is-nothing"></a>自变量&#39; &lt;argumentname&gt; &#39;为 Nothing
 表达式包含 null 参数。  

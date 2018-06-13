@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524447"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog 组件（Windows 窗体）
 Windows 窗体`FolderBrowserDialog`组件显示与该用户可以浏览和选择的文件夹或创建一个新的接口。 它是对补充[OpenFileDialog 组件](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)组件，用于浏览和选择的文件。  

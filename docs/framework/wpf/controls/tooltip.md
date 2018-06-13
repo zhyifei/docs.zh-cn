@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556973"
 ---
 # <a name="tooltip"></a>ToolTip
 工具提示是当用户将鼠标指针暂停元素，如过度时显示一个小型弹出窗口<xref:System.Windows.Controls.Button>。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554471"
 ---
 # <a name="statusbar"></a>StatusBar
 A<xref:System.Windows.Controls.Primitives.StatusBar>是在应用程序可在其中显示状态信息的窗口底部的水平区域。  

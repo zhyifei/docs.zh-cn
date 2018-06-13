@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759109"
 ---
 # <a name="creating-a-dataview"></a>创建数据视图
 创建 <xref:System.Data.DataView> 的方法有两种。 你可以使用**DataView**构造函数，也可以创建对引用<xref:System.Data.DataTable.DefaultView%2A>属性<xref:System.Data.DataTable>。 **DataView**构造函数可以为空，或它可以采用**DataTable**作为单个参数，或**DataTable**与筛选条件、 排序条件和行状态筛选器。 有关用于与一起使用的其他参数的详细信息**DataView**，请参阅[排序和筛选数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)。  

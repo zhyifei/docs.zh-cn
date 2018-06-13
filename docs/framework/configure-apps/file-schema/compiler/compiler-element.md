@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754488"
 ---
 # <a name="ltcompilergt-element"></a>&lt;编译器&gt;元素
 指定语言提供程序的编译器配置属性。  

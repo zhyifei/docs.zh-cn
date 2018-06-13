@@ -1,13 +1,6 @@
 ---
-title: "构成控件"
-ms.custom: 
+title: 构成控件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,12 @@ helpviewer_keywords:
 - constituent controls [Windows Forms]
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d03b69c334148313b0cd495fad1b2dfd13df833
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6fb708b81089b4fcd3678b35d1bcf7da2244c6d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525557"
 ---
 # <a name="constituent-controls"></a>构成控件
 组成用户控件的控件（也称作“构成控件”）在自定义图形呈现方面的灵活性相对较差。 所有 Windows 窗体控件都处理其自身通过自己呈现<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 由于此方法受到保护，开发人员无法对其进行访问，因此在绘制控件时无法阻止其执行。 然而，这并不意味着不能添加影响构成控件外观的代码。 附加呈现可通过添加事件处理程序来完成。 例如，假设你编写<xref:System.Windows.Forms.UserControl>与名为按钮`MyButton`。 如果你希望将无法提供的附加呈现其<xref:System.Web.UI.WebControls.Button>，会将代码添加到你的用户控件类似于以下：  

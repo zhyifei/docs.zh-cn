@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554776"
 ---
 # <a name="how-to-get-or-set-a-dock-value"></a>如何：获取或设置 Dock 值
 下面的示例演示如何分配<xref:System.Windows.Controls.Dock>是对象的值。 该示例使用<xref:System.Windows.Controls.DockPanel.GetDock%2A>和<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法<xref:System.Windows.Controls.DockPanel>。  

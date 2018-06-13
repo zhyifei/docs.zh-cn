@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524434"
 ---
 # <a name="how-to-enumerate-installed-fonts"></a>如何：枚举已安装的字体
 <xref:System.Drawing.Text.InstalledFontCollection>类继承自<xref:System.Drawing.Text.FontCollection>抽象基类。 你可以使用<xref:System.Drawing.Text.InstalledFontCollection>对象枚举计算机上安装的字体。 <xref:System.Drawing.Text.FontCollection.Families%2A>属性<xref:System.Drawing.Text.InstalledFontCollection>对象是一个数组<xref:System.Drawing.FontFamily>对象。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745482"
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt;元素
 请求公共语言运行时 (CLR) 减少内存使用通过指定显式的堆栈大小，创建某些它在内部使用，而不是使用默认堆栈大小适用于这些线程的线程时。  

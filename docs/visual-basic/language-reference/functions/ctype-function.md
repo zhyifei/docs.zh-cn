@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603014"
 ---
 # <a name="ctype-function-visual-basic"></a>CType 函数 (Visual Basic)
 返回表达式显式转换为指定的数据类型、 对象、 结构、 类或接口的结果。  

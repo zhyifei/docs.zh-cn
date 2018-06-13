@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753490"
 ---
 # <a name="common-client-technologies-in-the-net-framework"></a>.NET Framework 中常用的客户端技术
 本节描述可在客户端应用程序中使用的各种技术。  

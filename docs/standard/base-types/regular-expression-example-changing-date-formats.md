@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568064"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>正则表达式示例：更改日期格式
 下面的代码示例使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法，将格式为 mm/dd/yy 的日期替换为格式为 dd-mm-yy 的日期。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530733"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>如何：控制 Windows 窗体 TextBox 控件中的插入点
 在 Windows 窗体时<xref:System.Windows.Forms.TextBox>控件首先获得焦点时，文本框内的默认插入位于任何现有的文本的左边。 用户可以移动鼠标或键盘的插入点。 如果文本框失去并且然后重新获得焦点，插入点将用户上次放置的任何位置它。  

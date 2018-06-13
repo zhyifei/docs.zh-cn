@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559796"
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>如何：使用 Visual 绘制区域
 此示例演示如何使用<xref:System.Windows.Media.VisualBrush>类来绘制带有区域<xref:System.Windows.Media.Visual>。  

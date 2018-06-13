@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766473"
 ---
 # <a name="string-functions"></a>字符串函数
 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种 `String` 函数，这些函数针对输入 `String` 执行操作并返回 `String` 或数值结果。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。  

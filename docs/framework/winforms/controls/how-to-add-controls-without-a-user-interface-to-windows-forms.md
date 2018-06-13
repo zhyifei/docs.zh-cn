@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529457"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>如何：向 Windows 窗体添加无用户界面的控件
 非可视控件 （或组件） 功能提供给你的应用程序。 不同于其他控件，组件不向用户提供的用户界面并因此不需要在 Windows 窗体设计器图面上显示。 后一个组件添加到窗体中，Windows 窗体设计器将在所有组件将都显示的窗体的底部显示可调整大小的任务栏。 控件现已添加到组件栏中后，你可选择的组件，设置其属性，就像任何其他控件在窗体上。  

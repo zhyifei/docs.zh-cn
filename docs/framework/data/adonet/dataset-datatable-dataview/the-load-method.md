@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758303"
 ---
 # <a name="the-load-method"></a>加载方法
 可以使用 <xref:System.Data.DataTable.Load%2A> 方法为 <xref:System.Data.DataTable> 加载数据源中行。 这是重载的方法，其最简单的形式，接受一个参数， **DataReader**。 在这种形式，它只需加载**DataTable**行。 或者，可以指定**LoadOption**参数，用于控制如何将数据添加到**DataTable**。  

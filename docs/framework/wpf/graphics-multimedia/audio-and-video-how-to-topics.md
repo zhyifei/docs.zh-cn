@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556011"
 ---
 # <a name="audio-and-video-how-to-topics"></a>音频和视频帮助主题
 以下主题演示如何使用<xref:System.Windows.Controls.MediaElement>集成你的应用程序中的音频和视频内容。  

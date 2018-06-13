@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556960"
 ---
 # <a name="how-to-implement-binding-validation"></a>如何：实现绑定验证
 此示例演示如何使用<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>和样式触发器，以提供可视反馈以通知用户输入无效值后，基于自定义验证规则。  

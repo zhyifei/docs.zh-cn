@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600683"
 ---
 # <a name="argument-39ltargument1gt39-must-be-less-than-or-equal-to-the-length-of-argument-39ltargument2gt39"></a>自变量&#39; &lt;argument1&gt; &#39;必须小于或等于自变量的长度&#39; &lt;argument2&gt;&#39;
 参数的长度超过了允许的限制，其由第二个参数的长度确定。  

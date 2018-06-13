@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744491"
 ---
 # <a name="client-application-services-overview"></a>客户端应用程序服务概述
 使用客户端应用程序服务，可简便地从 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序访问 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登录、角色和配置文件服务。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务包含在 Microsoft ASP.NET 2.0 AJAX Extensions 中，而它又包含在 [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] 和 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 中。 这些服务使多个基于 Web 和 Windows 的应用程序共享来自单个服务器的用户信息和用户管理功能。  

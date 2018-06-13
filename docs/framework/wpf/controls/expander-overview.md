@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557584"
 ---
 # <a name="expander-overview"></a>Expander 概述
 <xref:System.Windows.Controls.Expander>控件提供一种方法提供一个可展开的区域，它类似于一个窗口，并包含标头中的内容。  
