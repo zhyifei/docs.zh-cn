@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763938"
 ---
 # <a name="getschema-and-schema-collections"></a><span data-ttu-id="dd868-102">GetSchema 和架构集合</span><span class="sxs-lookup"><span data-stu-id="dd868-102">GetSchema and Schema Collections</span></span>
 <span data-ttu-id="dd868-103">**连接**中每个.NET Framework 托管提供程序实现的类**GetSchema**方法用于检索有关与当前连接的数据库的架构信息和从返回的架构信息**GetSchema**方法采用的形式<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="dd868-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="dd868-104">**GetSchema**方法属于重载的方法，提供可选参数来指定要返回的架构集合以及限制返回的信息量。</span><span class="sxs-lookup"><span data-stu-id="dd868-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  

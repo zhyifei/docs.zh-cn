@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763158"
 ---
 # <a name="named-type-constructor-entity-sql"></a><span data-ttu-id="b3662-102">命名类型构造函数 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="b3662-102">Named Type Constructor (Entity SQL)</span></span>
 <span data-ttu-id="b3662-103">用于创建概念模型名义类型（如实体或复杂类型）的实例。</span><span class="sxs-lookup"><span data-stu-id="b3662-103">Used to create instances of conceptual model nominal types such as Entity or Complex types.</span></span>  

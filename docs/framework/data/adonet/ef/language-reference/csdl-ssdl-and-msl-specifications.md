@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762356"
 ---
 # <a name="csdl-ssdl-and-msl-specifications"></a><span data-ttu-id="28141-102">CSDL、SSDL 和 MSL 规范</span><span class="sxs-lookup"><span data-stu-id="28141-102">CSDL, SSDL, and MSL Specifications</span></span>
 <span data-ttu-id="28141-103">[Msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef)网站现在是有关实体框架内容的主位置。</span><span class="sxs-lookup"><span data-stu-id="28141-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  

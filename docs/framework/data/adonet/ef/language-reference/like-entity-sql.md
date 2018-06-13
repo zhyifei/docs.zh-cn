@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763035"
 ---
 # <a name="like-entity-sql"></a><span data-ttu-id="42f95-102">LIKE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="42f95-102">LIKE (Entity SQL)</span></span>
 <span data-ttu-id="42f95-103">确定特定字符 `String` 是否与指定模式相匹配。</span><span class="sxs-lookup"><span data-stu-id="42f95-103">Determines whether a specific character `String` matches a specified pattern.</span></span>  
