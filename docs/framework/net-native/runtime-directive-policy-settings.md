@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396755"
 ---
 # <a name="runtime-directive-policy-settings"></a><span data-ttu-id="27fdf-102">运行时指令策略设置</span><span class="sxs-lookup"><span data-stu-id="27fdf-102">Runtime Directive Policy Settings</span></span>
 > [!NOTE]

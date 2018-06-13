@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558130"
 ---
 # <a name="binding-sources-overview"></a><span data-ttu-id="cea9a-102">绑定源概述</span><span class="sxs-lookup"><span data-stu-id="cea9a-102">Binding Sources Overview</span></span>
 <span data-ttu-id="cea9a-103">在数据绑定中，绑定源对象是指用户从其获取数据的对象。</span><span class="sxs-lookup"><span data-stu-id="cea9a-103">In data binding, the binding source object refers to the object you obtain data from.</span></span> <span data-ttu-id="cea9a-104">本主题讨论可用作绑定源的对象类型。</span><span class="sxs-lookup"><span data-stu-id="cea9a-104">This topic discusses the types of objects you can use as the binding source.</span></span>  

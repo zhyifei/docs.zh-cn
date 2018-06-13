@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559997"
 ---
 # <a name="how-to-seek-a-storyboard-synchronously"></a><span data-ttu-id="5bd1d-102">如何：同步搜寻演示图板</span><span class="sxs-lookup"><span data-stu-id="5bd1d-102">How to: Seek a Storyboard Synchronously</span></span>
 <span data-ttu-id="5bd1d-103">下面的示例演示如何使用<xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>方法<xref:System.Windows.Media.Animation.Storyboard>以定位到情节提要动画中任何位置以同步方式。</span><span class="sxs-lookup"><span data-stu-id="5bd1d-103">The following example shows how to use the <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A> method of a <xref:System.Windows.Media.Animation.Storyboard> to seek to any position in a storyboard animation synchronously.</span></span>  

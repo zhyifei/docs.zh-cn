@@ -1,13 +1,6 @@
 ---
-title: "如何：绘制椭圆或圆"
-ms.custom: 
+title: 如何：绘制椭圆或圆
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ellipses [WPF], drawing
 - circles [WPF], drawing
@@ -16,32 +9,28 @@ helpviewer_keywords:
 - graphics [WPF], drawing circles
 - graphics [WPF], drawing ellipses
 ms.assetid: 99763b8c-bfc8-44be-8231-8a70daf5481a
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f03fd8cea706e2927ed8e14b4f89a94a208e266
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69620d81eb77eb76f21f099b30017b142d818457
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559361"
 ---
-# <a name="how-to-draw-an-ellipse-or-a-circle"></a><span data-ttu-id="c95dd-102">如何：绘制椭圆或圆</span><span class="sxs-lookup"><span data-stu-id="c95dd-102">How to: Draw an Ellipse or a Circle</span></span>
-<span data-ttu-id="c95dd-103">此示例演示如何使用绘制椭圆形和圆形<xref:System.Windows.Shapes.Ellipse>元素。</span><span class="sxs-lookup"><span data-stu-id="c95dd-103">This example shows how to draw ellipses and circles by using the <xref:System.Windows.Shapes.Ellipse> element.</span></span> <span data-ttu-id="c95dd-104">若要绘制一个椭圆，创建<xref:System.Windows.Shapes.Ellipse>元素并指定其<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>。</span><span class="sxs-lookup"><span data-stu-id="c95dd-104">To draw an ellipse, create an <xref:System.Windows.Shapes.Ellipse> element and specify its <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A>.</span></span> <span data-ttu-id="c95dd-105">使用其<xref:System.Windows.Shapes.Shape.Fill%2A>属性指定<xref:System.Windows.Media.Brush>用于绘制椭圆的内部。</span><span class="sxs-lookup"><span data-stu-id="c95dd-105">Use its <xref:System.Windows.Shapes.Shape.Fill%2A> property to specify the <xref:System.Windows.Media.Brush> that is used to paint the interior of the ellipse.</span></span> <span data-ttu-id="c95dd-106">使用其<xref:System.Windows.Shapes.Shape.Stroke%2A>属性指定<xref:System.Windows.Media.Brush>用于绘制椭圆的边框。</span><span class="sxs-lookup"><span data-stu-id="c95dd-106">Use its <xref:System.Windows.Shapes.Shape.Stroke%2A> property to specify the <xref:System.Windows.Media.Brush> that is used to paint the outline of the ellipse.</span></span> <span data-ttu-id="c95dd-107"><xref:System.Windows.Shapes.Shape.StrokeThickness%2A>属性指定的椭圆的边框粗细。</span><span class="sxs-lookup"><span data-stu-id="c95dd-107">The <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> property specifies the thickness of the ellipse outline.</span></span>  
+# <a name="how-to-draw-an-ellipse-or-a-circle"></a><span data-ttu-id="7d57d-102">如何：绘制椭圆或圆</span><span class="sxs-lookup"><span data-stu-id="7d57d-102">How to: Draw an Ellipse or a Circle</span></span>
+<span data-ttu-id="7d57d-103">此示例演示如何使用绘制椭圆形和圆形<xref:System.Windows.Shapes.Ellipse>元素。</span><span class="sxs-lookup"><span data-stu-id="7d57d-103">This example shows how to draw ellipses and circles by using the <xref:System.Windows.Shapes.Ellipse> element.</span></span> <span data-ttu-id="7d57d-104">若要绘制一个椭圆，创建<xref:System.Windows.Shapes.Ellipse>元素并指定其<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>。</span><span class="sxs-lookup"><span data-stu-id="7d57d-104">To draw an ellipse, create an <xref:System.Windows.Shapes.Ellipse> element and specify its <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A>.</span></span> <span data-ttu-id="7d57d-105">使用其<xref:System.Windows.Shapes.Shape.Fill%2A>属性指定<xref:System.Windows.Media.Brush>用于绘制椭圆的内部。</span><span class="sxs-lookup"><span data-stu-id="7d57d-105">Use its <xref:System.Windows.Shapes.Shape.Fill%2A> property to specify the <xref:System.Windows.Media.Brush> that is used to paint the interior of the ellipse.</span></span> <span data-ttu-id="7d57d-106">使用其<xref:System.Windows.Shapes.Shape.Stroke%2A>属性指定<xref:System.Windows.Media.Brush>用于绘制椭圆的边框。</span><span class="sxs-lookup"><span data-stu-id="7d57d-106">Use its <xref:System.Windows.Shapes.Shape.Stroke%2A> property to specify the <xref:System.Windows.Media.Brush> that is used to paint the outline of the ellipse.</span></span> <span data-ttu-id="7d57d-107"><xref:System.Windows.Shapes.Shape.StrokeThickness%2A>属性指定的椭圆的边框粗细。</span><span class="sxs-lookup"><span data-stu-id="7d57d-107">The <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> property specifies the thickness of the ellipse outline.</span></span>  
   
- <span data-ttu-id="c95dd-108">若要绘制的圆形，请<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>的<xref:System.Windows.Shapes.Ellipse>彼此相等的元素。</span><span class="sxs-lookup"><span data-stu-id="c95dd-108">To draw a circle, make the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> of the <xref:System.Windows.Shapes.Ellipse> element equal to each other.</span></span>  
+ <span data-ttu-id="7d57d-108">若要绘制的圆形，请<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>的<xref:System.Windows.Shapes.Ellipse>彼此相等的元素。</span><span class="sxs-lookup"><span data-stu-id="7d57d-108">To draw a circle, make the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> of the <xref:System.Windows.Shapes.Ellipse> element equal to each other.</span></span>  
   
- <span data-ttu-id="c95dd-109">下面的示例绘制了四个<xref:System.Windows.Shapes.Ellipse>中的元素<xref:System.Windows.Controls.Canvas>。</span><span class="sxs-lookup"><span data-stu-id="c95dd-109">The following example draws four <xref:System.Windows.Shapes.Ellipse> elements within a <xref:System.Windows.Controls.Canvas>.</span></span>  
+ <span data-ttu-id="7d57d-109">下面的示例绘制了四个<xref:System.Windows.Shapes.Ellipse>中的元素<xref:System.Windows.Controls.Canvas>。</span><span class="sxs-lookup"><span data-stu-id="7d57d-109">The following example draws four <xref:System.Windows.Shapes.Ellipse> elements within a <xref:System.Windows.Controls.Canvas>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c95dd-110">示例</span><span class="sxs-lookup"><span data-stu-id="c95dd-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7d57d-110">示例</span><span class="sxs-lookup"><span data-stu-id="7d57d-110">Example</span></span>  
  [!code-xaml[drawingwithshapeelements#EllipseExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/ellipseexample.xaml#ellipseexample1)]  
   
- <span data-ttu-id="c95dd-111">虽然此示例使用<xref:System.Windows.Controls.Canvas>来包含省略号，但是您可以使用椭圆元素 （以及所有其他形状元素） 以及任何<xref:System.Windows.Controls.Panel>或<xref:System.Windows.Controls.Control>支持非文本内容。</span><span class="sxs-lookup"><span data-stu-id="c95dd-111">Although this example uses a <xref:System.Windows.Controls.Canvas> to contain the ellipses, you can use ellipse elements (and all the other shape elements) with any <xref:System.Windows.Controls.Panel> or <xref:System.Windows.Controls.Control> that supports non-text content.</span></span>  
+ <span data-ttu-id="7d57d-111">虽然此示例使用<xref:System.Windows.Controls.Canvas>来包含省略号，但是您可以使用椭圆元素 （以及所有其他形状元素） 以及任何<xref:System.Windows.Controls.Panel>或<xref:System.Windows.Controls.Control>支持非文本内容。</span><span class="sxs-lookup"><span data-stu-id="7d57d-111">Although this example uses a <xref:System.Windows.Controls.Canvas> to contain the ellipses, you can use ellipse elements (and all the other shape elements) with any <xref:System.Windows.Controls.Panel> or <xref:System.Windows.Controls.Control> that supports non-text content.</span></span>  
   
- <span data-ttu-id="c95dd-112">此示例摘自更大的示例;有关完整的示例，请参阅[形状元素示例](http://go.microsoft.com/fwlink/?LinkID=160037)。</span><span class="sxs-lookup"><span data-stu-id="c95dd-112">This example is part of a larger sample; for the complete sample, see [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).</span></span>  
+ <span data-ttu-id="7d57d-112">此示例摘自更大的示例;有关完整的示例，请参阅[形状元素示例](http://go.microsoft.com/fwlink/?LinkID=160037)。</span><span class="sxs-lookup"><span data-stu-id="7d57d-112">This example is part of a larger sample; for the complete sample, see [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c95dd-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="c95dd-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7d57d-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="7d57d-113">See Also</span></span>  
  <xref:System.Windows.Shapes.Ellipse>  
  <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="c95dd-114">形状元素示例</span><span class="sxs-lookup"><span data-stu-id="c95dd-114">Shape Elements Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160037)
+ [<span data-ttu-id="7d57d-114">形状元素示例</span><span class="sxs-lookup"><span data-stu-id="7d57d-114">Shape Elements Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160037)

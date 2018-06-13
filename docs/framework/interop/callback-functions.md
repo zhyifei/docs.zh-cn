@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397385"
 ---
 # <a name="callback-functions"></a><span data-ttu-id="4e8b9-102">回调函数</span><span class="sxs-lookup"><span data-stu-id="4e8b9-102">Callback Functions</span></span>
 <span data-ttu-id="4e8b9-103">回调函数是托管应用程序中的代码，可帮助非托管 DLL 函数完成一项任务。</span><span class="sxs-lookup"><span data-stu-id="4e8b9-103">A callback function is code within a managed application that helps an unmanaged DLL function complete a task.</span></span> <span data-ttu-id="4e8b9-104">对回调函数的调用间接从托管应用程序中进行传递、经过 DLL 函数，再回到托管实现。</span><span class="sxs-lookup"><span data-stu-id="4e8b9-104">Calls to a callback function pass indirectly from a managed application, through a DLL function, and back to the managed implementation.</span></span> <span data-ttu-id="4e8b9-105">一些通过平台调用的 DLL 函数需要托管代码中的回调函数才能正常运行。</span><span class="sxs-lookup"><span data-stu-id="4e8b9-105">Some of the many DLL functions called with platform invoke require a callback function in managed code to run properly.</span></span>  

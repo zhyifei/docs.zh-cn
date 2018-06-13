@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 60cb1640d374ce71d1d2fb51ba536b53ddd39b92
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443520"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a><span data-ttu-id="27151-102">IMetaDataEmit::DefineSecurityAttributeSet 方法</span><span class="sxs-lookup"><span data-stu-id="27151-102">IMetaDataEmit::DefineSecurityAttributeSet Method</span></span>
 <span data-ttu-id="27151-103">创建一组安全权限才能将附加到指定的标记所引用的对象。</span><span class="sxs-lookup"><span data-stu-id="27151-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560711"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a><span data-ttu-id="d89f9-102">如何：使用几何路径来旋转对象</span><span class="sxs-lookup"><span data-stu-id="d89f9-102">How to: Rotate an Object by Using a Geometric Path</span></span>
 <span data-ttu-id="d89f9-103">此示例演示如何旋转 (pivot) 沿着由定义的几何路径对对象<xref:System.Windows.Media.PathGeometry>对象。</span><span class="sxs-lookup"><span data-stu-id="d89f9-103">This example shows how to rotate (pivot) an object along a geometric path that is defined by a <xref:System.Windows.Media.PathGeometry> object.</span></span>  

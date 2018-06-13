@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397983"
 ---
 # <a name="ltsubtypesgt-element-net-native"></a><span data-ttu-id="f4f0b-102">&lt;子类型&gt;元素 (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="f4f0b-102">&lt;Subtypes&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="f4f0b-103">将运行时策略应用到从包含类型继承的所有类。</span><span class="sxs-lookup"><span data-stu-id="f4f0b-103">Applies runtime policy to all classes inherited from the containing type.</span></span>  

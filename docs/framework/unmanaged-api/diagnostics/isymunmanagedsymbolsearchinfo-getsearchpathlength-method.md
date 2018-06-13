@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3ad2167ab26eaa8164233ab9566854417f78df29
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427865"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpathlength-method"></a><span data-ttu-id="8470f-102">ISymUnmanagedSymbolSearchInfo::GetSearchPathLength 方法</span><span class="sxs-lookup"><span data-stu-id="8470f-102">ISymUnmanagedSymbolSearchInfo::GetSearchPathLength Method</span></span>
 <span data-ttu-id="8470f-103">获取搜索路径长度。</span><span class="sxs-lookup"><span data-stu-id="8470f-103">Gets the search path length.</span></span>  

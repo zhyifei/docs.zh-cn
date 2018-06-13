@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5caf432b5de7cb0c8ff0e6f53b3e79a64ecf802e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443308"
 ---
 # <a name="correftodefcheck-enumeration"></a><span data-ttu-id="74679-102">CorRefToDefCheck 枚举</span><span class="sxs-lookup"><span data-stu-id="74679-102">CorRefToDefCheck Enumeration</span></span>
 <span data-ttu-id="74679-103">指定用于控制将哪些引用项转换为相应定义以优化代码的标志。</span><span class="sxs-lookup"><span data-stu-id="74679-103">Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.</span></span>  

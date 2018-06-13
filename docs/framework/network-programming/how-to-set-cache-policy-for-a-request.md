@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395422"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="10534-102">如何为请求设置缓存策略</span><span class="sxs-lookup"><span data-stu-id="10534-102">How to: Set Cache Policy for a Request</span></span>
 <span data-ttu-id="10534-103">以下示例演示如何为请求设置缓存策略。</span><span class="sxs-lookup"><span data-stu-id="10534-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="10534-104">该示例输入是一个 URI，如 http://www.contoso.com/。</span><span class="sxs-lookup"><span data-stu-id="10534-104">The example input is a URI such as http://www.contoso.com/.</span></span>  

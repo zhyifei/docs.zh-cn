@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395240"
 ---
 # <a name="ltparametergt-element-net-native"></a><span data-ttu-id="aefdf-102">&lt;参数&gt;元素 (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="aefdf-102">&lt;Parameter&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="aefdf-103">将反射策略应用到传递到方法的自变量类型。</span><span class="sxs-lookup"><span data-stu-id="aefdf-103">Applies reflection policy to the type of the argument passed to a method.</span></span>  

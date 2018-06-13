@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555998"
 ---
 # <a name="scrollbar"></a><span data-ttu-id="7e827-102">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="7e827-102">ScrollBar</span></span>
 <span data-ttu-id="7e827-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> ，您可以查看通过滑动是当前查看区之外的内容<xref:System.Windows.Controls.Primitives.Thumb>使可见的内容。</span><span class="sxs-lookup"><span data-stu-id="7e827-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> allows you to view content that is outside of the current viewing area by sliding the <xref:System.Windows.Controls.Primitives.Thumb> to make the content visible.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561041"
 ---
 # <a name="how-to-draw-a-rectangle"></a><span data-ttu-id="8cdce-102">如何：绘制矩形</span><span class="sxs-lookup"><span data-stu-id="8cdce-102">How to: Draw a Rectangle</span></span>
 <span data-ttu-id="8cdce-103">此示例演示如何使用绘制矩形<xref:System.Windows.Shapes.Rectangle>元素。</span><span class="sxs-lookup"><span data-stu-id="8cdce-103">This example shows how to draw a rectangle by using the <xref:System.Windows.Shapes.Rectangle> element.</span></span>  

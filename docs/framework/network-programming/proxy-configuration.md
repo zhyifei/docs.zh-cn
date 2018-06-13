@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397528"
 ---
 # <a name="proxy-configuration"></a><span data-ttu-id="74eba-102">代理配置</span><span class="sxs-lookup"><span data-stu-id="74eba-102">Proxy Configuration</span></span>
 <span data-ttu-id="74eba-103">代理服务器处理客户端对资源的请求。</span><span class="sxs-lookup"><span data-stu-id="74eba-103">A proxy server handles client requests for resources.</span></span> <span data-ttu-id="74eba-104">代理可以从其缓存中返回已请求的资源，或将请求转发到资源驻留的服务器。</span><span class="sxs-lookup"><span data-stu-id="74eba-104">A proxy can return a requested resource from its cache or forward the request to the server where the resource resides.</span></span> <span data-ttu-id="74eba-105">代理可以通过减少发送到远程服务器的请求数量来提高网络性能。</span><span class="sxs-lookup"><span data-stu-id="74eba-105">Proxies can improve network performance by reducing the number of requests sent to remote servers.</span></span> <span data-ttu-id="74eba-106">代理还可以用于限制对资源的访问。</span><span class="sxs-lookup"><span data-stu-id="74eba-106">Proxies can also be used to restrict access to resources.</span></span>  

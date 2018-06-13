@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560265"
 ---
 # <a name="how-to-seek-a-storyboard"></a><span data-ttu-id="1badd-102">如何：搜寻演示图板</span><span class="sxs-lookup"><span data-stu-id="1badd-102">How to: Seek a Storyboard</span></span>
 <span data-ttu-id="1badd-103">下面的示例演示如何使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>方法<xref:System.Windows.Media.Animation.Storyboard>跳转到情节提要动画中任何位置。</span><span class="sxs-lookup"><span data-stu-id="1badd-103">The following example shows how to use the <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> method of a <xref:System.Windows.Media.Animation.Storyboard> to jump to any position in a storyboard animation.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4c12e1fff4910458a17c09e482ba8ede9c1625c4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434011"
 ---
 # <a name="iclroneventmanagerregisteractiononevent-method"></a><span data-ttu-id="33416-102">ICLROnEventManager::RegisterActionOnEvent 方法</span><span class="sxs-lookup"><span data-stu-id="33416-102">ICLROnEventManager::RegisterActionOnEvent Method</span></span>
 <span data-ttu-id="33416-103">注册指定的事件的回调指针。</span><span class="sxs-lookup"><span data-stu-id="33416-103">Registers a callback pointer for the specified event.</span></span>  

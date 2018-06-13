@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398604"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a><span data-ttu-id="e2966-102">适用于 Visual Studio 2012 的标识和访问工具</span><span class="sxs-lookup"><span data-stu-id="e2966-102">Identity and Access Tool for Visual Studio 2012</span></span>
 <span data-ttu-id="e2966-103">本主题描述了适用于 Visual Studio 11 的新的标识和访问工具。</span><span class="sxs-lookup"><span data-stu-id="e2966-103">This topic describes the new Identity and Access Tool for Visual Studio 11.</span></span> <span data-ttu-id="e2966-104">你可以从以下 URL 下载此工具： [ http://go.microsoft.com/fwlink/?LinkID=245849 ](http://go.microsoft.com/fwlink/?LinkID=245849)或直接从 Visual Studio 11 通过搜索直接在扩展管理器中的"标识"中。</span><span class="sxs-lookup"><span data-stu-id="e2966-104">You can download this tool from the following URL: [http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849) or directly from within Visual Studio 11 by searching for "identity" directly in the Extensions Manager.</span></span>  

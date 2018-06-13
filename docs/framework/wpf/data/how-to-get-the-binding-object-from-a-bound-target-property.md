@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556726"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a><span data-ttu-id="a5268-102">如何：从已绑定的目标属性获取绑定对象</span><span class="sxs-lookup"><span data-stu-id="a5268-102">How to: Get the Binding Object from a Bound Target Property</span></span>
 <span data-ttu-id="a5268-103">本示例演示如何从数据绑定的目标属性获取绑定对象。</span><span class="sxs-lookup"><span data-stu-id="a5268-103">This example shows how to obtain the binding object from a data-bound target property.</span></span>  

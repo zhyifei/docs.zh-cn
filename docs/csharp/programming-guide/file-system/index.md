@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334855"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a><span data-ttu-id="41ba2-102">文件系统和注册表（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="41ba2-102">File System and the Registry (C# Programming Guide)</span></span>
 <span data-ttu-id="41ba2-103">下面各主题介绍了如何使用 C# 和 .NET Framework 对文件、文件夹和注册表执行各种基本操作。</span><span class="sxs-lookup"><span data-stu-id="41ba2-103">The following topics show how to use C# and the .NET Framework to perform various basic operations on files, folders, and the Registry.</span></span>  
