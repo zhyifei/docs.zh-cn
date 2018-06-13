@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ee18cbdc821dc523e9012488f0c08d9211164e62
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445557"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a><span data-ttu-id="80722-102">IMetaDataEmit::SetFieldMarshal 方法</span><span class="sxs-lookup"><span data-stu-id="80722-102">IMetaDataEmit::SetFieldMarshal Method</span></span>
 <span data-ttu-id="80722-103">设置 PInvoke 封送处理指定的标记所引用的字段、 方法返回或方法参数的信息。</span><span class="sxs-lookup"><span data-stu-id="80722-103">Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.</span></span>  

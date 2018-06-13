@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765875"
 ---
 # <a name="identifiers-entity-sql"></a><span data-ttu-id="8580e-102">标识符 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="8580e-102">Identifiers (Entity SQL)</span></span>
 <span data-ttu-id="8580e-103">在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。</span><span class="sxs-lookup"><span data-stu-id="8580e-103">Identifiers are used in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to represent query expression aliases, variable references, properties of objects, functions, and so on.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="8580e-104"> 提供两种类型的标识符： 简单标识符和带引号的标识符。</span><span class="sxs-lookup"><span data-stu-id="8580e-104"> provides two kinds of identifiers: simple identifiers and quoted identifiers.</span></span>  

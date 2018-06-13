@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2c30fb5d5576a7bed403f48504ead923df212de9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450370"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a><span data-ttu-id="365c3-102">ICorProfilerCallback::ClassUnloadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="365c3-102">ICorProfilerCallback::ClassUnloadStarted Method</span></span>
 <span data-ttu-id="365c3-103">通知探查器正在卸载某个类。</span><span class="sxs-lookup"><span data-stu-id="365c3-103">Notifies the profiler that a class is being unloaded.</span></span>  

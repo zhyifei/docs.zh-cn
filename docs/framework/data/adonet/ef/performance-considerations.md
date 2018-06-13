@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766808"
 ---
 # <a name="performance-considerations-entity-framework"></a><span data-ttu-id="94890-102">性能注意事项（实体框架）</span><span class="sxs-lookup"><span data-stu-id="94890-102">Performance Considerations (Entity Framework)</span></span>
 <span data-ttu-id="94890-103">本主题介绍 ADO.NET 实体框架的性能特征，并提供一些注意事项帮助改善实体框架应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="94890-103">This topic describes performance characteristics of the ADO.NET Entity Framework and provides some considerations to help improve the performance of Entity Framework applications.</span></span>  
