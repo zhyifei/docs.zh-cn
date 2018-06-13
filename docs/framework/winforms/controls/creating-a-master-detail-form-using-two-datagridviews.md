@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529436"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>演练：使用两个 Windows 窗体 DataGridView 控件创建一个主/从窗体
 使用的最常见方案之一<xref:System.Windows.Forms.DataGridView>控件是*主/从*窗体中，在其中显示两个数据库表之间的父/子关系。 在主表中选择行，则会导致要使用的相应的子数据更新的详细信息表。  

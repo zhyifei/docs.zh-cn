@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410476"
 ---
 # <a name="ui-automation-support-for-the-group-control-type"></a>UI 自动化对 Group 控件类型的支持
 > [!NOTE]

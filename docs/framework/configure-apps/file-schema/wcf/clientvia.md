@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754127"
 ---
 # <a name="ltclientviagt"></a>&lt;clientVia&gt;
 指定应为其创建传输通道的 URI。 有关详细信息，请参阅<xref:System.ServiceModel.Description.ClientViaBehavior>。  

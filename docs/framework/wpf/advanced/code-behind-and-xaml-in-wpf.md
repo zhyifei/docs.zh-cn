@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541543"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的代码隐藏和 XAML
 <a name="introduction"></a> 代码隐藏是一个术语用于描述与采用标记定义的对象联接的代码时[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页进行标记编译。 本主题介绍隐藏代码的要求以及中的代码的可选内联代码机制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  

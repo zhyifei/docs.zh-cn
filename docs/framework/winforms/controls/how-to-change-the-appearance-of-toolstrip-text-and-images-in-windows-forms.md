@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530525"
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>如何：在 Windows 窗体中更改 ToolStrip 文本和图像的外观
 你可以控制是否在上显示文本和图像<xref:System.Windows.Forms.ToolStripItem>和它们彼此之间相对的对齐方式和<xref:System.Windows.Forms.ToolStrip>。  

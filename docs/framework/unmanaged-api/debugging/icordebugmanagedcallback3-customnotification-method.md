@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 098e140b7bffb7798a37b1881f2cb2ced36bcf1f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416480"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a>ICorDebugManagedCallback3::CustomNotification 方法
 指示已引发的自定义调试器通知。  
@@ -55,7 +56,7 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
  [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)接口有一定的通知或其内容的类型上没有策略和通知的语义仅限调试器，应用程序和.NET Framework 之间的协定。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
