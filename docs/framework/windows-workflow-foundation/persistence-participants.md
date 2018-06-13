@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519805"
 ---
 # <a name="persistence-participants"></a>持久性参与者
 持久性参与者可以参与应用程序宿主触发的持久性操作（保存或加载）。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]附带两个抽象类， **PersistenceParticipant**和**PersistenceIOParticipant**，可以用来创建持久性参与者。 持久性参与者派生自这些类之一，它实现所需的方法，然后将该类的实例添加到 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 集合。 应用程序宿主可在持久保存工作流实例时查找此类工作流扩展，并在适当时对持久性参与者调用适当的方法。  

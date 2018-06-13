@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536688"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>如何：在 Windows 窗体 TextBox 控件中选择文本
 你可在 Windows 窗体中以编程方式选择文本<xref:System.Windows.Forms.TextBox>控件。 例如，如果你创建搜索特定字符串文本的函数，你可以选择要以可视方式警报找到的字符串的位置的读取者的文本。  

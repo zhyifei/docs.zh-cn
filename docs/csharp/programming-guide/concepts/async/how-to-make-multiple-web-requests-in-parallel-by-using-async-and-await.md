@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337751"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>如何：使用 Async 和 Await 并行发起多个 Web 请求 (C#)
 在 async 方法中，任务在创建后即启动。 在任务完成前处理无法继续的方法中将 [await](../../../../csharp/language-reference/keywords/await.md) 运算符应用于任务。 通常任务被创建后即等待，如下面的示例所示。  

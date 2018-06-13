@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517960"
 ---
 # <a name="cardinal-splines-in-gdi"></a>GDI+ 中的基数样条
 基数样条是一系列的单个连接起来形成较大的曲线的曲线。 样条指定的点和张力参数数组中。 基数样条平滑地通过数组; 中的每个点有没有尖锐的角和曲线的拟合度在任何突然更改。 下图显示一组点和经过集中的每个点的基数样条。  

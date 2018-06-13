@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518058"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>使用 TryCatch 在 Flowchart 活动中进行错误处理
 此示例演示如何在复杂控制流活动中使用 <xref:System.Activities.Statements.TryCatch> 活动。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/04/2018
 |--------------------------|--------------------|  
 |Single|10|  
 |MNK|15|  
-|MWK|15 + (1-1 /`numberOfKids`)\*10**注意：**可能，此计算可能会引发<xref:System.DivideByZeroException>。 因此，将折扣计算包装在 <xref:System.Activities.Statements.TryCatch> 活动中，该活动可捕获 <xref:System.DivideByZeroException> 异常并将折扣设置为零。|  
+|MWK|15 + (1-1 /`numberOfKids`)\*10**注意：** 可能，此计算可能会引发<xref:System.DivideByZeroException>。 因此，将折扣计算包装在 <xref:System.Activities.Statements.TryCatch> 活动中，该活动可捕获 <xref:System.DivideByZeroException> 异常并将折扣设置为零。|  
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   

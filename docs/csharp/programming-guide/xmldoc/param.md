@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338008"
 ---
 # <a name="ltparamgt-c-programming-guide"></a>&lt;param&gt;（C# 编程指南）
 ## <a name="syntax"></a>语法  

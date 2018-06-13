@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524408"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Windows 窗体可视化继承
 有时，项目可能需要一个与之前项目中创建的窗体类似的窗体。 或者，可能需要创建一个基本窗体，其中包含某些设置，如随后将再次在项目中使用的水印或某种控件布局，然后每次重复使用时，都需要对该原始窗体模板进行修改。 通过窗体继承，可创建基窗体，然后从其继承并进行修改，同时保留所需的任何原始设置。  

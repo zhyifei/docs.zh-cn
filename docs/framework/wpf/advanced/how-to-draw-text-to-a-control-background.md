@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542972"
 ---
 # <a name="how-to-draw-text-to-a-control39s-background"></a>如何：将文本绘制到控件的背景上
 通过将文本字符串转换，可以直接到控件的背景绘制文本<xref:System.Windows.Media.FormattedText>对象，并在其中绘制对象到控件的<xref:System.Windows.Media.DrawingContext>。 你也可以使用此方法，从派生的对象的背景的绘制的<xref:System.Windows.Controls.Panel>，如<xref:System.Windows.Controls.Canvas>和<xref:System.Windows.Controls.StackPanel>。  

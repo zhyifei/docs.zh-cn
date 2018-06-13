@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495273"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>如何：用受限保留项替换 WCF URL 保留项
 URL 保留项使您能够限制谁可以接收来自某个 URL 或某一组 URL 的消息。 保留项由一个 URL 模板、一个访问控制列表 (ACL) 和一组标志组成。 URL 模板定义保留项所影响的 URL。 有关如何处理 URL 模板的详细信息，请参阅[路由传入请求](http://go.microsoft.com/fwlink/?LinkId=136764)。 ACL 控制哪个用户或用户组允许接收来自指定 URL 的消息。 标志指示保留项是赋予用户或用户组直接侦听 URL 的权限，还是将侦听权限委托给其他进程。  

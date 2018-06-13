@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524204"
 ---
 # <a name="how-to-obtain-font-metrics"></a>如何：获取字体规格
 <xref:System.Drawing.FontFamily>类提供下列方法来检索特定的系列样式组合的各种指标：  

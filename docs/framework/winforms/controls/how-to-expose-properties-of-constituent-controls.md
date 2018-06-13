@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532628"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>如何：公开构成控件的属性
 构成复合控件的控件称为*构成控件*。 这些控件通常被声明为私有的并因此不能由开发人员访问。 如果你想要使这些控件的属性适用于未来的用户，必须将它们公开给用户。 通过在用户控件中，创建的属性并使用公开构成控件的属性`get`和`set`访问器的该属性以影响构成控件的私有属性中更改。  

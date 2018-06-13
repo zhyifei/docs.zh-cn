@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544099"
 ---
 # <a name="how-to-create-a-routedcommand"></a>如何：创建 RoutedCommand
 此示例演示如何创建自定义<xref:System.Windows.Input.RoutedCommand>以及如何通过创建实现自定义命令<xref:System.Windows.Input.ExecutedRoutedEventHandler>和<xref:System.Windows.Input.CanExecuteRoutedEventHandler>和附加到<xref:System.Windows.Input.CommandBinding>。  有关命令的详细信息，请参阅[命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)。  

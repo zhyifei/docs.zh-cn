@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b8c972bcace3ba3d855a3b5eebc16e6b76994eb7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450699"
 ---
 # <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE 枚举
 指示缓存的函数搜索的结果。  
@@ -45,7 +46,7 @@ typedef enum {
 |`COR_PRF_FUNCTION_NOT_FOUND`|搜索未找到该函数。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

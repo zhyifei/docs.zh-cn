@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522849"
 ---
 # <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>如何：通过对窗体和控件使用双缓冲来减少图形闪烁
 双缓冲使用内容缓冲来解决与多个画图操作相关的闪烁问题。 启用双缓冲后，所有画图操作会首先呈现到内存缓冲而不是屏幕上的绘图图面。 所有画图操作完成后，内存缓冲会直接复制到与之关联的绘图图面。 由于在屏幕上，执行只有一个图形操作消除了复杂的绘制操作相关联的图形闪烁。对于大多数应用程序，默认双缓冲提供的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]将提供最佳结果。 标准 Windows 窗体控件都是双缓冲默认情况下。 你可以启用默认双缓冲你窗体中并编写两种方式的控件。 你可以设置<xref:System.Windows.Forms.Control.DoubleBuffered%2A>属性`true`，也可以调用<xref:System.Windows.Forms.Control.SetStyle%2A>方法以设置<xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer>标志切换为`true`。 这两种方法将启用默认双缓冲窗体或控件，并提供无闪烁的图形呈现。 调用<xref:System.Windows.Forms.Control.SetStyle%2A>方法建议仅对具有为其编写呈现的所有代码的自定义控件。  

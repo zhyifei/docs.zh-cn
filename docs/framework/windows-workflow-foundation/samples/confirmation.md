@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518840"
 ---
 # <a name="confirmation"></a>确认
 此示例演示针对 <xref:System.Activities.Statements.CompensableActivity> 的使用和确认的四种常见方案。 此示例运行四个工作流以显示确认。 此示例具有声明性版本和命令性版本。  
