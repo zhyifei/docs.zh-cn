@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e4db5f3c7deb300a9666182cb6b712eacf42cfa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436223"
 ---
 # <a name="iclrmetahost-interface"></a><span data-ttu-id="3c189-102">ICLRMetaHost 接口</span><span class="sxs-lookup"><span data-stu-id="3c189-102">ICLRMetaHost Interface</span></span>
 <span data-ttu-id="3c189-103">提供一些方法，返回特定版本的公共语言运行时 (CLR) 基于其版本号，列表所有已安装的 Clr 中，列出在指定的进程中加载的所有运行时，发现用于编译的程序集、 退出进程的 CLR 版本使用正常的运行时关闭和查询旧的 API 绑定。</span><span class="sxs-lookup"><span data-stu-id="3c189-103">Provides methods that return a specific version of the common language runtime (CLR) based on its version number, list all installed CLRs, list all runtimes that are loaded in a specified process, discover the CLR version used to compile an assembly, exit a process with a clean runtime shutdown, and query legacy API binding.</span></span>  

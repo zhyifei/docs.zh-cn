@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743701"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a><span data-ttu-id="bdeb8-102">如何：查看全局程序集缓存的内容</span><span class="sxs-lookup"><span data-stu-id="bdeb8-102">How to: View the Contents of the Global Assembly Cache</span></span>
 <span data-ttu-id="bdeb8-103">使用[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 可查看全局程序集缓存的内容。</span><span class="sxs-lookup"><span data-stu-id="bdeb8-103">Use the [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) to view the contents of the global assembly cache.</span></span>  

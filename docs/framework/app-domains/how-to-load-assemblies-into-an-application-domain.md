@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741901"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a><span data-ttu-id="da6ab-102">如何：将程序集加载到应用程序域中</span><span class="sxs-lookup"><span data-stu-id="da6ab-102">How to: Load Assemblies into an Application Domain</span></span>
 <span data-ttu-id="da6ab-103">可通过多种方法将程序集加载到应用程序域中。</span><span class="sxs-lookup"><span data-stu-id="da6ab-103">There are several ways to load an assembly into an application domain.</span></span> <span data-ttu-id="da6ab-104">推荐方法是使用 <xref:System.Reflection.Assembly?displayProperty=nameWithType> 类的 `static`（在 Visual Basic 中为 `Shared`）<xref:System.Reflection.Assembly.Load%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="da6ab-104">The recommended way is to use the `static` (`Shared` in Visual Basic) <xref:System.Reflection.Assembly.Load%2A> method of the <xref:System.Reflection.Assembly?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="da6ab-105">加载程序集的其他方法包括：</span><span class="sxs-lookup"><span data-stu-id="da6ab-105">Other ways assemblies can be loaded include:</span></span>  

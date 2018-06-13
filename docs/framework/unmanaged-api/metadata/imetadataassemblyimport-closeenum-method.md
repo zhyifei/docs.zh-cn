@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c5477578491c3cbc3f5fce694820971e99b45079
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444095"
 ---
 # <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="a62e7-102">IMetaDataAssemblyImport::CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="a62e7-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
 <span data-ttu-id="a62e7-103">释放指定的枚举实例的引用。</span><span class="sxs-lookup"><span data-stu-id="a62e7-103">Releases a reference to the specified enumeration instance.</span></span>  

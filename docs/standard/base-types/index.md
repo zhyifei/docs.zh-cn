@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567624"
 ---
 # <a name="working-with-base-types-in-net"></a><span data-ttu-id="f58c9-102">在 .NET 中使用基类型</span><span class="sxs-lookup"><span data-stu-id="f58c9-102">Working with Base Types in .NET</span></span>
 <span data-ttu-id="f58c9-103">本部分介绍 .NET 基类型操作，包括格式设置、转换和常用操作。</span><span class="sxs-lookup"><span data-stu-id="f58c9-103">This section describes .NET base type operations, including formatting, conversion, and common operations.</span></span>  

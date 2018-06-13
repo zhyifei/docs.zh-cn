@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744013"
 ---
 # <a name="ltgccpugroupgt-element"></a><span data-ttu-id="2a25b-102">&lt;GCCpuGroup&gt;元素</span><span class="sxs-lookup"><span data-stu-id="2a25b-102">&lt;GCCpuGroup&gt; Element</span></span>
 <span data-ttu-id="2a25b-103">指定垃圾回收是否支持多个 CPU 组。</span><span class="sxs-lookup"><span data-stu-id="2a25b-103">Specifies whether garbage collection supports multiple CPU groups.</span></span>  

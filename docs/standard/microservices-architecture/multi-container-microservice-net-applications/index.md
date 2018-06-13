@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571951"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a><span data-ttu-id="b0a83-103">设计和开发基于微服务的多容器 .NET 应用程序</span><span class="sxs-lookup"><span data-stu-id="b0a83-103">Designing and Developing Multi-Container and Microservice-Based .NET Applications</span></span>
 

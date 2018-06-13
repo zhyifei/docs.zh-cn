@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a1239546072192d6ff9497013ad7b7140ea13085
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443237"
 ---
 # <a name="iceegencomputepointer-method"></a><span data-ttu-id="836d7-102">ICeeGen::ComputePointer 方法</span><span class="sxs-lookup"><span data-stu-id="836d7-102">ICeeGen::ComputePointer Method</span></span>
 <span data-ttu-id="836d7-103">确定指定的代码部分的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="836d7-103">Determines the buffer for the specified code section.</span></span>  

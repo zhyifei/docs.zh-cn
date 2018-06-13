@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568526"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="266a9-102">将 XML 数据类型映射到 CLR 类型</span><span class="sxs-lookup"><span data-stu-id="266a9-102">Mapping XML Data Types to CLR Types</span></span>
 <span data-ttu-id="266a9-103">下表介绍 XML 数据类型与公共语言运行库 (CLR) 类型之间的默认映射。</span><span class="sxs-lookup"><span data-stu-id="266a9-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  

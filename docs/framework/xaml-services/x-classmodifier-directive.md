@@ -1,14 +1,6 @@
 ---
 title: x:ClassModifier 指令
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 f1_keywords:
 - xClassModifier
 - x:ClassModifier
@@ -18,22 +10,17 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-caps.latest.revision: 22
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ab6036ecb37bb80588a59b581af0b88fc83230a4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 67b53a63dbd6e1377d5684d64ed32b0374c84b5a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564373"
 ---
-# <a name="xclassmodifier-directive"></a><span data-ttu-id="14432-102">x:ClassModifier 指令</span><span class="sxs-lookup"><span data-stu-id="14432-102">x:ClassModifier Directive</span></span>
-<span data-ttu-id="14432-103">修改 XAML 编译行为时`x:Class`还提供。</span><span class="sxs-lookup"><span data-stu-id="14432-103">Modifies XAML compilation behavior when `x:Class` is also provided.</span></span> <span data-ttu-id="14432-104">具体而言，而不是创建一个分部`class`具有`Public`访问级别 （默认值），提供`x:Class`使用创建`NotPublic`访问级别。</span><span class="sxs-lookup"><span data-stu-id="14432-104">Specifically, instead of creating a partial `class` that has a `Public` access level (the default), the provided `x:Class` is created with a `NotPublic` access level.</span></span> <span data-ttu-id="14432-105">此行为会影响中生成的程序集的类的访问级别。</span><span class="sxs-lookup"><span data-stu-id="14432-105">This behavior affects the access level for the class in the generated assemblies.</span></span>  
+# <a name="xclassmodifier-directive"></a><span data-ttu-id="89e01-102">x:ClassModifier 指令</span><span class="sxs-lookup"><span data-stu-id="89e01-102">x:ClassModifier Directive</span></span>
+<span data-ttu-id="89e01-103">修改 XAML 编译行为时`x:Class`还提供。</span><span class="sxs-lookup"><span data-stu-id="89e01-103">Modifies XAML compilation behavior when `x:Class` is also provided.</span></span> <span data-ttu-id="89e01-104">具体而言，而不是创建一个分部`class`具有`Public`访问级别 （默认值），提供`x:Class`使用创建`NotPublic`访问级别。</span><span class="sxs-lookup"><span data-stu-id="89e01-104">Specifically, instead of creating a partial `class` that has a `Public` access level (the default), the provided `x:Class` is created with a `NotPublic` access level.</span></span> <span data-ttu-id="89e01-105">此行为会影响中生成的程序集的类的访问级别。</span><span class="sxs-lookup"><span data-stu-id="89e01-105">This behavior affects the access level for the class in the generated assemblies.</span></span>  
   
-## <a name="xaml-attribute-usage"></a><span data-ttu-id="14432-106">XAML 属性用法</span><span class="sxs-lookup"><span data-stu-id="14432-106">XAML Attribute Usage</span></span>  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="89e01-106">XAML 属性用法</span><span class="sxs-lookup"><span data-stu-id="89e01-106">XAML Attribute Usage</span></span>  
   
 ```  
 <object x:Class="namespace.classname" x:ClassModifier="NotPublic">  
@@ -41,34 +28,34 @@ ms.lasthandoff: 04/26/2018
 </object>  
 ```  
   
-## <a name="xaml-values"></a><span data-ttu-id="14432-107">XAML 值</span><span class="sxs-lookup"><span data-stu-id="14432-107">XAML Values</span></span>  
+## <a name="xaml-values"></a><span data-ttu-id="89e01-107">XAML 值</span><span class="sxs-lookup"><span data-stu-id="89e01-107">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="14432-108">*NotPublic*</span><span class="sxs-lookup"><span data-stu-id="14432-108">*NotPublic*</span></span>|<span data-ttu-id="14432-109">确切的字符串传递的用于指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>与<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>各不相同，具体取决于你使用的代码隐藏编程语言。</span><span class="sxs-lookup"><span data-stu-id="14432-109">The exact string to pass to specify <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> versus <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varies, depending on the code-behind programming language that you use.</span></span> <span data-ttu-id="14432-110">请参阅“备注”。</span><span class="sxs-lookup"><span data-stu-id="14432-110">See Remarks.</span></span>|  
+|<span data-ttu-id="89e01-108">*NotPublic*</span><span class="sxs-lookup"><span data-stu-id="89e01-108">*NotPublic*</span></span>|<span data-ttu-id="89e01-109">确切的字符串传递的用于指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>与<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>各不相同，具体取决于你使用的代码隐藏编程语言。</span><span class="sxs-lookup"><span data-stu-id="89e01-109">The exact string to pass to specify <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> versus <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varies, depending on the code-behind programming language that you use.</span></span> <span data-ttu-id="89e01-110">请参阅“备注”。</span><span class="sxs-lookup"><span data-stu-id="89e01-110">See Remarks.</span></span>|  
   
-## <a name="dependencies"></a><span data-ttu-id="14432-111">依赖项</span><span class="sxs-lookup"><span data-stu-id="14432-111">Dependencies</span></span>  
- <span data-ttu-id="14432-112">[X:class](../../../docs/framework/xaml-services/x-class-directive.md)还必须提供在同一元素上并且该元素必须在页中的根元素。</span><span class="sxs-lookup"><span data-stu-id="14432-112">[x:Class](../../../docs/framework/xaml-services/x-class-directive.md) must also be provided on the same element, and that element must be the root element in a page.</span></span> <span data-ttu-id="14432-113">有关详细信息，请参阅[ \[MS-XAML\]部分 4.3.1.8](http://go.microsoft.com/fwlink/?LinkId=114525)。</span><span class="sxs-lookup"><span data-stu-id="14432-113">For more information, see [\[MS-XAML\] Section 4.3.1.8](http://go.microsoft.com/fwlink/?LinkId=114525).</span></span>  
+## <a name="dependencies"></a><span data-ttu-id="89e01-111">依赖项</span><span class="sxs-lookup"><span data-stu-id="89e01-111">Dependencies</span></span>  
+ <span data-ttu-id="89e01-112">[X:class](../../../docs/framework/xaml-services/x-class-directive.md)还必须提供在同一元素上并且该元素必须在页中的根元素。</span><span class="sxs-lookup"><span data-stu-id="89e01-112">[x:Class](../../../docs/framework/xaml-services/x-class-directive.md) must also be provided on the same element, and that element must be the root element in a page.</span></span> <span data-ttu-id="89e01-113">有关详细信息，请参阅[ \[MS-XAML\]部分 4.3.1.8](http://go.microsoft.com/fwlink/?LinkId=114525)。</span><span class="sxs-lookup"><span data-stu-id="89e01-113">For more information, see [\[MS-XAML\] Section 4.3.1.8](http://go.microsoft.com/fwlink/?LinkId=114525).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="14432-114">备注</span><span class="sxs-lookup"><span data-stu-id="14432-114">Remarks</span></span>  
- <span data-ttu-id="14432-115">值`x:ClassModifier`.NET Framework XAML 服务中使用情况因编程语言。</span><span class="sxs-lookup"><span data-stu-id="14432-115">The value of `x:ClassModifier` in .NET Framework XAML Services usage varies by programming language.</span></span> <span data-ttu-id="14432-116">要使用的字符串取决于每种语言的实现方式其<xref:System.CodeDom.Compiler.CodeDomProvider>和它将返回定义的含义的类型转换器<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>，以及该语言是区分大小写。</span><span class="sxs-lookup"><span data-stu-id="14432-116">The string to use depends on how each language implements its <xref:System.CodeDom.Compiler.CodeDomProvider> and the type converters it returns to define the meanings for <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> and <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, and whether that language is case sensitive.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="89e01-114">备注</span><span class="sxs-lookup"><span data-stu-id="89e01-114">Remarks</span></span>  
+ <span data-ttu-id="89e01-115">值`x:ClassModifier`.NET Framework XAML 服务中使用情况因编程语言。</span><span class="sxs-lookup"><span data-stu-id="89e01-115">The value of `x:ClassModifier` in .NET Framework XAML Services usage varies by programming language.</span></span> <span data-ttu-id="89e01-116">要使用的字符串取决于每种语言的实现方式其<xref:System.CodeDom.Compiler.CodeDomProvider>和它将返回定义的含义的类型转换器<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>，以及该语言是区分大小写。</span><span class="sxs-lookup"><span data-stu-id="89e01-116">The string to use depends on how each language implements its <xref:System.CodeDom.Compiler.CodeDomProvider> and the type converters it returns to define the meanings for <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> and <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, and whether that language is case sensitive.</span></span>  
   
--   <span data-ttu-id="14432-117">对于 C#，要传递的用于指定的字符串<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`internal`。</span><span class="sxs-lookup"><span data-stu-id="14432-117">For C#, the string to pass to designate <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> is `internal`.</span></span>  
+-   <span data-ttu-id="89e01-117">对于 C#，要传递的用于指定的字符串<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`internal`。</span><span class="sxs-lookup"><span data-stu-id="89e01-117">For C#, the string to pass to designate <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> is `internal`.</span></span>  
   
--   <span data-ttu-id="14432-118">Microsoft Visual Basic.NET，要传递的用于指定的字符串的<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`Friend`。</span><span class="sxs-lookup"><span data-stu-id="14432-118">For Microsoft Visual Basic .NET, the string to pass to designate <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> is `Friend`.</span></span>  
+-   <span data-ttu-id="89e01-118">Microsoft Visual Basic.NET，要传递的用于指定的字符串的<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`Friend`。</span><span class="sxs-lookup"><span data-stu-id="89e01-118">For Microsoft Visual Basic .NET, the string to pass to designate <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> is `Friend`.</span></span>  
   
--   <span data-ttu-id="14432-119">有关[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，没有目标存在编译 XAML 支持，; 因此，未指定要传递的值。</span><span class="sxs-lookup"><span data-stu-id="14432-119">For [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], no targets exist that support compiling XAML; therefore, the value to pass is unspecified.</span></span>  
+-   <span data-ttu-id="89e01-119">有关[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，没有目标存在编译 XAML 支持，; 因此，未指定要传递的值。</span><span class="sxs-lookup"><span data-stu-id="89e01-119">For [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], no targets exist that support compiling XAML; therefore, the value to pass is unspecified.</span></span>  
   
- <span data-ttu-id="14432-120">你还可以指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>(`public`在 C# 中，`Public`在 Visual Basic 中); 但是，指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>不常做是因为<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>已是默认行为。</span><span class="sxs-lookup"><span data-stu-id="14432-120">You can also specify <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` in C#, `Public` in Visual Basic); however, specifying <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> is infrequently done because <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> is already the default behavior.</span></span>  
+ <span data-ttu-id="89e01-120">你还可以指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>(`public`在 C# 中，`Public`在 Visual Basic 中); 但是，指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>不常做是因为<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>已是默认行为。</span><span class="sxs-lookup"><span data-stu-id="89e01-120">You can also specify <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` in C#, `Public` in Visual Basic); however, specifying <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> is infrequently done because <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> is already the default behavior.</span></span>  
   
- <span data-ttu-id="14432-121">其他值与等效的用户代码访问级别限制，如`private`在 C# 中，不相关的`x:ClassModifier`因为在 XAML 中，不支持嵌套的类引用，因此，<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>修饰符具有相同的效果。</span><span class="sxs-lookup"><span data-stu-id="14432-121">Other values with equivalent user code access-level restrictions, such as `private` in C#, are not relevant for `x:ClassModifier` because nested class references are not supported in XAML, and therefore, the <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> modifier has the same effect.</span></span>  
+ <span data-ttu-id="89e01-121">其他值与等效的用户代码访问级别限制，如`private`在 C# 中，不相关的`x:ClassModifier`因为在 XAML 中，不支持嵌套的类引用，因此，<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>修饰符具有相同的效果。</span><span class="sxs-lookup"><span data-stu-id="89e01-121">Other values with equivalent user code access-level restrictions, such as `private` in C#, are not relevant for `x:ClassModifier` because nested class references are not supported in XAML, and therefore, the <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> modifier has the same effect.</span></span>  
   
-## <a name="security-notes"></a><span data-ttu-id="14432-122">安全说明</span><span class="sxs-lookup"><span data-stu-id="14432-122">Security Notes</span></span>  
- <span data-ttu-id="14432-123">中声明的访问级别`x:ClassModifier`仍将受到由特定框架和其功能的解释。</span><span class="sxs-lookup"><span data-stu-id="14432-123">The access level as declared in `x:ClassModifier` is still subject to interpretation by particular frameworks and their capabilities.</span></span> <span data-ttu-id="14432-124">WPF 包括功能，可加载和实例化类型其中`x:ClassModifier`是`internal`，如果从 WPF 通过包 URI 引用资源引用该类。</span><span class="sxs-lookup"><span data-stu-id="14432-124">WPF includes capabilities to load and instantiate types where `x:ClassModifier` is `internal`, if that class is referenced from a WPF resource through a pack URI reference.</span></span> <span data-ttu-id="14432-125">这种情况并且可能由其他框架实现类似的其他人，因此不依赖于以独占方式在`x:ClassModifier`若要阻止所有可能的实例化尝试。</span><span class="sxs-lookup"><span data-stu-id="14432-125">As a consequence of this case and potentially others like it implemented by other frameworks, do not rely exclusively on `x:ClassModifier` to block all possible instantiation attempts.</span></span>  
+## <a name="security-notes"></a><span data-ttu-id="89e01-122">安全说明</span><span class="sxs-lookup"><span data-stu-id="89e01-122">Security Notes</span></span>  
+ <span data-ttu-id="89e01-123">中声明的访问级别`x:ClassModifier`仍将受到由特定框架和其功能的解释。</span><span class="sxs-lookup"><span data-stu-id="89e01-123">The access level as declared in `x:ClassModifier` is still subject to interpretation by particular frameworks and their capabilities.</span></span> <span data-ttu-id="89e01-124">WPF 包括功能，可加载和实例化类型其中`x:ClassModifier`是`internal`，如果从 WPF 通过包 URI 引用资源引用该类。</span><span class="sxs-lookup"><span data-stu-id="89e01-124">WPF includes capabilities to load and instantiate types where `x:ClassModifier` is `internal`, if that class is referenced from a WPF resource through a pack URI reference.</span></span> <span data-ttu-id="89e01-125">这种情况并且可能由其他框架实现类似的其他人，因此不依赖于以独占方式在`x:ClassModifier`若要阻止所有可能的实例化尝试。</span><span class="sxs-lookup"><span data-stu-id="89e01-125">As a consequence of this case and potentially others like it implemented by other frameworks, do not rely exclusively on `x:ClassModifier` to block all possible instantiation attempts.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14432-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="14432-126">See Also</span></span>  
- [<span data-ttu-id="14432-127">x:Class 指令</span><span class="sxs-lookup"><span data-stu-id="14432-127">x:Class Directive</span></span>](../../../docs/framework/xaml-services/x-class-directive.md)  
- [<span data-ttu-id="14432-128">WPF 中的代码隐藏和 XAML</span><span class="sxs-lookup"><span data-stu-id="14432-128">Code-Behind and XAML in WPF</span></span>](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [<span data-ttu-id="14432-129">x:FieldModifier 指令</span><span class="sxs-lookup"><span data-stu-id="14432-129">x:FieldModifier Directive</span></span>](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)  
- [<span data-ttu-id="14432-130">安全性 (WPF)</span><span class="sxs-lookup"><span data-stu-id="14432-130">Security (WPF)</span></span>](../../../docs/framework/wpf/security-wpf.md)  
- [<span data-ttu-id="14432-131">从 WPF 迁移到 System.Xaml 的类型</span><span class="sxs-lookup"><span data-stu-id="14432-131">Types Migrated from WPF to System.Xaml</span></span>](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="89e01-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="89e01-126">See Also</span></span>  
+ [<span data-ttu-id="89e01-127">x:Class 指令</span><span class="sxs-lookup"><span data-stu-id="89e01-127">x:Class Directive</span></span>](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [<span data-ttu-id="89e01-128">WPF 中的代码隐藏和 XAML</span><span class="sxs-lookup"><span data-stu-id="89e01-128">Code-Behind and XAML in WPF</span></span>](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
+ [<span data-ttu-id="89e01-129">x:FieldModifier 指令</span><span class="sxs-lookup"><span data-stu-id="89e01-129">x:FieldModifier Directive</span></span>](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)  
+ [<span data-ttu-id="89e01-130">安全性 (WPF)</span><span class="sxs-lookup"><span data-stu-id="89e01-130">Security (WPF)</span></span>](../../../docs/framework/wpf/security-wpf.md)  
+ [<span data-ttu-id="89e01-131">从 WPF 迁移到 System.Xaml 的类型</span><span class="sxs-lookup"><span data-stu-id="89e01-131">Types Migrated from WPF to System.Xaml</span></span>](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

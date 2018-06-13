@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513544"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a><span data-ttu-id="23204-102">将自定义活动属性绑定到设计器控件</span><span class="sxs-lookup"><span data-stu-id="23204-102">Binding a custom activity property to a designer control</span></span>
 <span data-ttu-id="23204-103">将文本框设计器控件与活动自变量绑定非常简单；但将复杂设计器控件（如组合框）与活动自变量绑定则可能非常困难。</span><span class="sxs-lookup"><span data-stu-id="23204-103">Binding a text box designer control to an activity argument is fairly straightforward; binding a complex designer control (such as a combo box) to an activity argument may present challenges, however.</span></span> <span data-ttu-id="23204-104">本主题讨论如何将活动参数与自定义活动设计器上的组合框控件绑定。</span><span class="sxs-lookup"><span data-stu-id="23204-104">This topic discusses how to bind an activity argument to a combo box control on a custom activity designer.</span></span>  
