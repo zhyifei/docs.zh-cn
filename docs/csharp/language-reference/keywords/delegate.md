@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172105"
 ---
 # <a name="delegate-c-reference"></a>委托（C# 参考）
 委托类型的声明与方法签名相似。 它有一个返回值和任意数目任意类型的参数：  

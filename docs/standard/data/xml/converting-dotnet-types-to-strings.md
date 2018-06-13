@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568766"
 ---
 # <a name="converting-net-framework-types-to-strings"></a>将 .NET Framework 类型转换为字符串
 若要将 .NET Framework 类型转换为字符串，请使用 ToString 方法。 ToString 方法返回传入的类型的字符串表示形式。 下表列出了以映射到 XML 架构 (XSD) 规范的格式返回字符串的 .NET Framework 类型。  

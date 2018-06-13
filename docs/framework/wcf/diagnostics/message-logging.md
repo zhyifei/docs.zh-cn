@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474027"
 ---
 # <a name="message-logging"></a>消息日志记录
 Windows Communication Foundation (WCF) 提供了记录传入和传出消息以便脱机使用的功能。 使用消息日志记录功能，可以查看消息和消息正文是怎样的。 如果希望了解传入了哪些自变量以及接收终结点如何发现以 XML 形式表示的自变量，这种类型的日志记录会特别有用。 此外，通过在接收到消息时记录该消息，您可以诊断格式不正确的消息以及查看消息的到达方式。 您还可以检查所使用的安全令牌、经过加密和签名的部分以及保持不变的部分。  

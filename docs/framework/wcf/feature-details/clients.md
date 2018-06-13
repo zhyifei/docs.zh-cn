@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488798"
 ---
 # <a name="clients"></a>客户端
 本部分中的主题介绍客户端体系结构，如何访问 Windows Communication Foundation (WCF) 服务、 如何配置 WCF 客户端和 WCF 客户端的一些安全注意事项。  

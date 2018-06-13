@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172485"
 ---
 # <a name="data-templating-overview"></a>数据模板化概述
 WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 WPF 控件具有支持自定义数据表示的内置功能。 本主题首先演示了如何定义<xref:System.Windows.DataTemplate>，然后介绍其他数据模板化功能，例如选择了基于自定义逻辑和分层数据的显示的支持的模板。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493593"
 ---
 # <a name="retrieving-metadata"></a>检索元数据
 元数据检索是从元数据终结点（如 WS-MetadataExchange (MEX) 元数据终结点或 HTTP/GET 元数据终结点）请求和检索元数据的过程。  

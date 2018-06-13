@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488567"
 ---
 # <a name="authorization-in-wcf"></a>WCF 中的授权
 授权是控制对资源（例如服务或文件）的访问和权限的过程。 本部分中的主题说明如何在 Windows Communication Foundation (WCF) 中各种不同的方式执行此基本任务。  

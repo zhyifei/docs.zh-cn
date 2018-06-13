@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562357"
 ---
 # <a name="xaml-security-considerations"></a>XAML 安全注意事项
 本主题介绍在应用程序中的安全性的最佳做法，当你使用 XAML 和.NET Framework XAML 服务 API。  

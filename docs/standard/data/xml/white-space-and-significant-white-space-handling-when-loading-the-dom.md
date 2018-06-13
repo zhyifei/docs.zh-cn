@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569065"
 ---
 # <a name="white-space-and-significant-white-space-handling-when-loading-the-dom"></a>加载 DOM 时的空白和有效空白处理
 加载文档时，可以将选项设置为暂留空格，并在文档树中创建 XmlWhitespace 节点。 若要创建空格节点，请将 PreserveWhitespace 属性设置为 true。 如果将此属性设置为默认值 false，不会创建空格节点。 无论 PreserveWhitespace 标志的设置如何，始终暂留重要的空格节点，并且始终在内存中创建 XmlSignificantWhitespace 节点来表示此数据。  
