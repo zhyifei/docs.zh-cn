@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809727"
 ---
 # <a name="service-interoperability"></a><span data-ttu-id="5655f-102">服务互操作性</span><span class="sxs-lookup"><span data-stu-id="5655f-102">Service Interoperability</span></span>
 <span data-ttu-id="5655f-103">本节包含演示 Windows Communication Foundation (WCF) 和其他服务技术之间交互的示例。</span><span class="sxs-lookup"><span data-stu-id="5655f-103">This section contains samples that demonstrate interaction between Windows Communication Foundation (WCF) and other service technologies.</span></span>  

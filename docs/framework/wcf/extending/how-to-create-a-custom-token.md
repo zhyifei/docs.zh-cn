@@ -15,6 +15,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809204"
 ---
 # <a name="how-to-create-a-custom-token"></a><span data-ttu-id="a6cbf-102">如何：创建自定义令牌</span><span class="sxs-lookup"><span data-stu-id="a6cbf-102">How to: Create a Custom Token</span></span>
 <span data-ttu-id="a6cbf-103">本主题介绍如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 类创建自定义安全令牌，以及如何将其与自定义安全令牌提供程序和身份验证器进行集成。</span><span class="sxs-lookup"><span data-stu-id="a6cbf-103">This topic shows how to create a custom security token using the <xref:System.IdentityModel.Tokens.SecurityToken> class, and how to integrate it with a custom security token provider and authenticator.</span></span> <span data-ttu-id="a6cbf-104">有关完整的代码示例请参阅[自定义令牌](../../../../docs/framework/wcf/samples/custom-token.md)示例。</span><span class="sxs-lookup"><span data-stu-id="a6cbf-104">For a complete code example see the [Custom Token](../../../../docs/framework/wcf/samples/custom-token.md) sample.</span></span>  

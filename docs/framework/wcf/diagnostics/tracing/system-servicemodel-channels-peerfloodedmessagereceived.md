@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478106"
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagereceived"></a><span data-ttu-id="b8c70-102">System.ServiceModel.Channels.PeerFloodedMessageReceived</span><span class="sxs-lookup"><span data-stu-id="b8c70-102">System.ServiceModel.Channels.PeerFloodedMessageReceived</span></span>
 <span data-ttu-id="b8c70-103">PeerNode 收到溢满消息。</span><span class="sxs-lookup"><span data-stu-id="b8c70-103">A PeerNode received a flooded message.</span></span>  

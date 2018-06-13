@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809152"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a><span data-ttu-id="fdc88-102">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="fdc88-102">Using Tracing to Troubleshoot Your Application</span></span>
 <span data-ttu-id="fdc88-103">本节包含描述如何使用跟踪来排除应用程序故障的各种主题。</span><span class="sxs-lookup"><span data-stu-id="fdc88-103">This section contains various topics that describe how you can use tracing to troubleshoot your application.</span></span>  

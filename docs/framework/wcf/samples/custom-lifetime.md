@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809298"
 ---
 # <a name="custom-lifetime"></a><span data-ttu-id="a4d79-102">自定义生存期</span><span class="sxs-lookup"><span data-stu-id="a4d79-102">Custom Lifetime</span></span>
 <span data-ttu-id="a4d79-103">此示例演示如何编写要提供自定义生存期服务共享的 WCF 服务实例的 Windows Communication Foundation (WCF) 扩展。</span><span class="sxs-lookup"><span data-stu-id="a4d79-103">This sample demonstrates how to write a Windows Communication Foundation (WCF) extension to provide custom lifetime services for shared WCF service instances.</span></span>  
