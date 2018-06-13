@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639849"
 ---
 # <a name="this-system-does-not-contain-support-for-the-japanese-locale"></a>此系统不包含对日文区域设置的支持
 你正尝试使用 `VbStrConv.Japanese` 枚举成员，但你的系统不支持日文区域设置。  

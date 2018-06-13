@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809298"
 ---
 # <a name="custom-lifetime"></a>自定义生存期
 此示例演示如何编写要提供自定义生存期服务共享的 WCF 服务实例的 Windows Communication Foundation (WCF) 扩展。  

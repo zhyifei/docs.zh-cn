@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470408"
 ---
 # <a name="percent-of-max-concurrent-sessions"></a>最大并发会话数的百分比
 计数器名称：最大并发会话数的百分比  
