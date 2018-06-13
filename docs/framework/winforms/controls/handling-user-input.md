@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527795"
 ---
 # <a name="handling-user-input"></a><span data-ttu-id="dde6c-102">处理用户输入</span><span class="sxs-lookup"><span data-stu-id="dde6c-102">Handling User Input</span></span>
 <span data-ttu-id="dde6c-103">本主题描述由提供的主要键盘和鼠标事件<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="dde6c-103">This topic describes the main keyboard and mouse events provided by <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span> <span data-ttu-id="dde6c-104">处理事件时，控件作者应重写受保护的 `On`*EventName* 方法，而不是向事件附加委托。</span><span class="sxs-lookup"><span data-stu-id="dde6c-104">When handling an event, control authors should override the protected `On`*EventName* method rather than attaching a delegate to the event.</span></span> <span data-ttu-id="dde6c-105">若要查看事件，请参阅[从组件引发事件](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0)。</span><span class="sxs-lookup"><span data-stu-id="dde6c-105">For a review of events, see [Raising Events from a Component](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).</span></span>  

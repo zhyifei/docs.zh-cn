@@ -1,29 +1,20 @@
 ---
-title: "ICorDebugMergedAssemblyRecord::GetPublicKeyToken 方法"
-ms.custom: 
+title: ICorDebugMergedAssemblyRecord::GetPublicKeyToken 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a1871e6060303ad496e4edb7bed47b9d91ecf71f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 71b70118d77deb7ad6879ed4bd48b1cd37122820
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414003"
 ---
-# <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a><span data-ttu-id="12fee-102">ICorDebugMergedAssemblyRecord::GetPublicKeyToken 方法</span><span class="sxs-lookup"><span data-stu-id="12fee-102">ICorDebugMergedAssemblyRecord::GetPublicKeyToken Method</span></span>
-<span data-ttu-id="12fee-103">获取程序集的公钥标记。</span><span class="sxs-lookup"><span data-stu-id="12fee-103">Gets the assembly's public key token.</span></span>  
+# <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a><span data-ttu-id="2db32-102">ICorDebugMergedAssemblyRecord::GetPublicKeyToken 方法</span><span class="sxs-lookup"><span data-stu-id="2db32-102">ICorDebugMergedAssemblyRecord::GetPublicKeyToken Method</span></span>
+<span data-ttu-id="2db32-103">获取程序集的公钥标记。</span><span class="sxs-lookup"><span data-stu-id="2db32-103">Gets the assembly's public key token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="12fee-104">语法</span><span class="sxs-lookup"><span data-stu-id="12fee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2db32-104">语法</span><span class="sxs-lookup"><span data-stu-id="2db32-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPublicKeyToken(  
@@ -33,31 +24,31 @@ HRESULT GetPublicKeyToken(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="12fee-105">参数</span><span class="sxs-lookup"><span data-stu-id="12fee-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2db32-105">参数</span><span class="sxs-lookup"><span data-stu-id="2db32-105">Parameters</span></span>  
  `cbPublicKeyToken`  
- <span data-ttu-id="12fee-106">[in] `pbPublicKeyToken` 数组中的最大字节数。</span><span class="sxs-lookup"><span data-stu-id="12fee-106">[in] The maximum number of bytes in the `pbPublicKeyToken` array.</span></span>  
+ <span data-ttu-id="2db32-106">[in] `pbPublicKeyToken` 数组中的最大字节数。</span><span class="sxs-lookup"><span data-stu-id="2db32-106">[in] The maximum number of bytes in the `pbPublicKeyToken` array.</span></span>  
   
  `pcbPublicKeyToken`  
- <span data-ttu-id="12fee-107">[out] 指向写入 `pbPublicKeyToken` 数组的实际字节数的指针。</span><span class="sxs-lookup"><span data-stu-id="12fee-107">[out] A pointer to the actual number of bytes written to the `pbPublicKeyToken` array.</span></span>  
+ <span data-ttu-id="2db32-107">[out] 指向写入 `pbPublicKeyToken` 数组的实际字节数的指针。</span><span class="sxs-lookup"><span data-stu-id="2db32-107">[out] A pointer to the actual number of bytes written to the `pbPublicKeyToken` array.</span></span>  
   
  `pbPublicKeyToken`  
- <span data-ttu-id="12fee-108">[out] 指向包含程序集公钥标记的字节数组的指针。</span><span class="sxs-lookup"><span data-stu-id="12fee-108">[out] A pointer to a byte array that contains the assembly's public key token.</span></span>  
+ <span data-ttu-id="2db32-108">[out] 指向包含程序集公钥标记的字节数组的指针。</span><span class="sxs-lookup"><span data-stu-id="2db32-108">[out] A pointer to a byte array that contains the assembly's public key token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="12fee-109">备注</span><span class="sxs-lookup"><span data-stu-id="12fee-109">Remarks</span></span>  
- <span data-ttu-id="12fee-110">程序集的公钥标记是指其公钥中 SHA1 哈希的最后 8 个字节。</span><span class="sxs-lookup"><span data-stu-id="12fee-110">An assembly's public key token is the last eight bytes of a SHA1 hash of its public key.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2db32-109">备注</span><span class="sxs-lookup"><span data-stu-id="2db32-109">Remarks</span></span>  
+ <span data-ttu-id="2db32-110">程序集的公钥标记是指其公钥中 SHA1 哈希的最后 8 个字节。</span><span class="sxs-lookup"><span data-stu-id="2db32-110">An assembly's public key token is the last eight bytes of a SHA1 hash of its public key.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="12fee-111">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="12fee-111">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="2db32-111">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="2db32-111">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="12fee-112">惠?</span><span class="sxs-lookup"><span data-stu-id="12fee-112">Requirements</span></span>  
- <span data-ttu-id="12fee-113">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="12fee-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2db32-112">要求</span><span class="sxs-lookup"><span data-stu-id="2db32-112">Requirements</span></span>  
+ <span data-ttu-id="2db32-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2db32-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="12fee-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="12fee-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2db32-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2db32-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="12fee-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="12fee-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2db32-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2db32-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="12fee-116">**.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="12fee-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="2db32-116">**.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2db32-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="12fee-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="12fee-117">See Also</span></span>  
- [<span data-ttu-id="12fee-118">ICorDebugMergedAssemblyRecord 接口</span><span class="sxs-lookup"><span data-stu-id="12fee-118">ICorDebugMergedAssemblyRecord Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)  
- [<span data-ttu-id="12fee-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="12fee-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="2db32-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="2db32-117">See Also</span></span>  
+ [<span data-ttu-id="2db32-118">ICorDebugMergedAssemblyRecord 接口</span><span class="sxs-lookup"><span data-stu-id="2db32-118">ICorDebugMergedAssemblyRecord Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)  
+ [<span data-ttu-id="2db32-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="2db32-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

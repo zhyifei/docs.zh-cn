@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542010"
 ---
 # <a name="annotations-schema"></a><span data-ttu-id="21de1-102">批注架构</span><span class="sxs-lookup"><span data-stu-id="21de1-102">Annotations Schema</span></span>
 <span data-ttu-id="21de1-103">本主题介绍 Microsoft Annotations Framework 用来保存和检索用户批注数据的 XML 架构定义 (XSD)。</span><span class="sxs-lookup"><span data-stu-id="21de1-103">This topic describes the XML schema definition (XSD) used by the Microsoft Annotations Framework to save and retrieve user annotation data.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750734"
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a><span data-ttu-id="5aa03-102">&lt;messageSenderAuthentication&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="5aa03-102">&lt;messageSenderAuthentication&gt; element</span></span>
 <span data-ttu-id="5aa03-103">指定用于对等消息发送方的身份验证选项。</span><span class="sxs-lookup"><span data-stu-id="5aa03-103">Specifies authentication options for peer-to-peer message senders.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f03d8c993be1ac83ca84275bcb94f1bb3cdf884
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414978"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a><span data-ttu-id="22091-102">ICorDebugILFrame2::RemapFunction 方法</span><span class="sxs-lookup"><span data-stu-id="22091-102">ICorDebugILFrame2::RemapFunction Method</span></span>
 <span data-ttu-id="22091-103">通过指定新的 Microsoft 中间语言 (MSIL) 偏移量来重新映射的编辑的函数</span><span class="sxs-lookup"><span data-stu-id="22091-103">Remaps an edited function by specifying the new Microsoft intermediate language (MSIL) offset</span></span>  

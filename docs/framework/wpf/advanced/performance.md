@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546079"
 ---
 # <a name="performance"></a><span data-ttu-id="74e2f-102">性能</span><span class="sxs-lookup"><span data-stu-id="74e2f-102">Performance</span></span>
 <span data-ttu-id="74e2f-103">实现最佳应用程序性能要求在应用程序设计和最佳实践的了解您事先[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序开发。</span><span class="sxs-lookup"><span data-stu-id="74e2f-103">Achieving optimal application performance requires forethought in application design and an understanding of best practices for [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application development.</span></span> <span data-ttu-id="74e2f-104">此部分中的主题提供有关生成高性能的其他信息[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。</span><span class="sxs-lookup"><span data-stu-id="74e2f-104">The topics in this section provide additional information on building high performance [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span>  

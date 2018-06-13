@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20ceed164631169b3a47809381b2cc4e630ae718
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418612"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a><span data-ttu-id="b49f2-102">ICorDebugProcess::ModifyLogSwitch 方法</span><span class="sxs-lookup"><span data-stu-id="b49f2-102">ICorDebugProcess::ModifyLogSwitch Method</span></span>
 <span data-ttu-id="b49f2-103">设置指定的日志交换机的严重性级别。</span><span class="sxs-lookup"><span data-stu-id="b49f2-103">Sets the severity level of the specified log switch.</span></span>  

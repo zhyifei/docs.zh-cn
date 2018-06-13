@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 529a65285203ac831e1bcab9dc1bea69ac28a282
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412560"
 ---
 # <a name="icordebugcontrollercontinue-method"></a><span data-ttu-id="d1aa8-102">ICorDebugController::Continue 方法</span><span class="sxs-lookup"><span data-stu-id="d1aa8-102">ICorDebugController::Continue Method</span></span>
 <span data-ttu-id="d1aa8-103">恢复后调用的托管线程的执行[停止方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)。</span><span class="sxs-lookup"><span data-stu-id="d1aa8-103">Resumes execution of managed threads after a call to [Stop Method](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).</span></span>  

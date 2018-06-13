@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 85ff64e30519e448b87c2e9ae5d2c66959d836fa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412128"
 ---
 # <a name="icordebugdatatarget2-interface"></a><span data-ttu-id="7f7b7-102">“ICor调试数据目标2”接口</span><span class="sxs-lookup"><span data-stu-id="7f7b7-102">ICorDebugDataTarget2 Interface</span></span>
 <span data-ttu-id="7f7b7-103">合理扩展[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="7f7b7-103">Logically extends the [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)interface.</span></span>  

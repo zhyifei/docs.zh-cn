@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: be45022701f72e15e83b7ca28cd110ef58c809b0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415592"
 ---
 # <a name="icordebugilframe3-interface"></a><span data-ttu-id="0f2a7-102">ICorDebugILFrame3 接口</span><span class="sxs-lookup"><span data-stu-id="0f2a7-102">ICorDebugILFrame3 Interface</span></span>
 <span data-ttu-id="0f2a7-103">提供用于封装函数的返回值的方法。</span><span class="sxs-lookup"><span data-stu-id="0f2a7-103">Provides a method that encapsulates the return value of a function.</span></span> <span data-ttu-id="0f2a7-104">`ICorDebugILFrame3` 是的 ICorDebugILFrame 和 ICorDebugILFrame2 接口的逻辑扩展。</span><span class="sxs-lookup"><span data-stu-id="0f2a7-104">`ICorDebugILFrame3` is a logical extension of the ICorDebugILFrame and ICorDebugILFrame2 interfaces.</span></span>  

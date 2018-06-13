@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4bb275f08143362d62f241ea659ea39ff8eef5d0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413077"
 ---
 # <a name="icordebugmodule2getjitcompilerflags-method"></a><span data-ttu-id="163e1-102">ICorDebugModule2::GetJITCompilerFlags 方法</span><span class="sxs-lookup"><span data-stu-id="163e1-102">ICorDebugModule2::GetJITCompilerFlags Method</span></span>
 <span data-ttu-id="163e1-103">获取控制此 ICorDebugModule2 实时 (JIT) 编译的标志。</span><span class="sxs-lookup"><span data-stu-id="163e1-103">Gets the flags that control the just-in-time (JIT) compilation of this ICorDebugModule2.</span></span>  

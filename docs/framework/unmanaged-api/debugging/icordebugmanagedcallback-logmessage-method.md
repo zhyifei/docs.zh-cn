@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4c8494b1ffc80fc49acce01c5de0b3fd18c0f5c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414088"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a><span data-ttu-id="d06b5-102">ICorDebugManagedCallback::LogMessage 方法</span><span class="sxs-lookup"><span data-stu-id="d06b5-102">ICorDebugManagedCallback::LogMessage Method</span></span>
 <span data-ttu-id="d06b5-103">通知调试器公共语言运行时 (CLR) 托管线程，调用方法<xref:System.Diagnostics.EventLog>记录事件的类。</span><span class="sxs-lookup"><span data-stu-id="d06b5-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.EventLog> class to log an event.</span></span>  

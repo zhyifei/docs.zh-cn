@@ -6,6 +6,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955923"
 ---
 # <a name="attributeusage-c"></a><span data-ttu-id="e67fd-102">AttributeUsage (C#)</span><span class="sxs-lookup"><span data-stu-id="e67fd-102">AttributeUsage (C#)</span></span>
 

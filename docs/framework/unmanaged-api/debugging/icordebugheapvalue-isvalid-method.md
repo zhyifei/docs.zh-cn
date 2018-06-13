@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugHeapValue::IsValid 方法"
-ms.custom: 
+title: ICorDebugHeapValue::IsValid 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugHeapValue.IsValid
 api_location:
@@ -23,24 +15,21 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3f4f356c953feaf0e6597983f431222a469e90c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 95532d6721467b482b1d79d611f8055b606bb4a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413503"
 ---
-# <a name="icordebugheapvalueisvalid-method"></a><span data-ttu-id="5605b-102">ICorDebugHeapValue::IsValid 方法</span><span class="sxs-lookup"><span data-stu-id="5605b-102">ICorDebugHeapValue::IsValid Method</span></span>
-<span data-ttu-id="5605b-103">获取一个值，该值指示此 ICorDebugHeapValue 所表示的对象是否有效。</span><span class="sxs-lookup"><span data-stu-id="5605b-103">Gets a value that indicates whether the object represented by this ICorDebugHeapValue is valid.</span></span>  
+# <a name="icordebugheapvalueisvalid-method"></a><span data-ttu-id="9f52b-102">ICorDebugHeapValue::IsValid 方法</span><span class="sxs-lookup"><span data-stu-id="9f52b-102">ICorDebugHeapValue::IsValid Method</span></span>
+<span data-ttu-id="9f52b-103">获取一个值，该值指示此 ICorDebugHeapValue 所表示的对象是否有效。</span><span class="sxs-lookup"><span data-stu-id="9f52b-103">Gets a value that indicates whether the object represented by this ICorDebugHeapValue is valid.</span></span>  
   
- <span data-ttu-id="5605b-104">.NET Framework 2.0 版中，此方法已被否决。</span><span class="sxs-lookup"><span data-stu-id="5605b-104">This method has been deprecated in the .NET Framework version 2.0.</span></span>  
+ <span data-ttu-id="9f52b-104">.NET Framework 2.0 版中，此方法已被否决。</span><span class="sxs-lookup"><span data-stu-id="9f52b-104">This method has been deprecated in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5605b-105">语法</span><span class="sxs-lookup"><span data-stu-id="5605b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f52b-105">语法</span><span class="sxs-lookup"><span data-stu-id="9f52b-105">Syntax</span></span>  
   
 ```  
 HRESULT IsValid (  
@@ -48,20 +37,20 @@ HRESULT IsValid (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5605b-106">参数</span><span class="sxs-lookup"><span data-stu-id="5605b-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9f52b-106">参数</span><span class="sxs-lookup"><span data-stu-id="9f52b-106">Parameters</span></span>  
  `pbValid`  
- <span data-ttu-id="5605b-107">[out]指向一个布尔值，该值指示是否在堆上的此值为有效的指针。</span><span class="sxs-lookup"><span data-stu-id="5605b-107">[out] A pointer to a Boolean value that indicates whether this value on the heap is valid.</span></span>  
+ <span data-ttu-id="9f52b-107">[out]指向一个布尔值，该值指示是否在堆上的此值为有效的指针。</span><span class="sxs-lookup"><span data-stu-id="9f52b-107">[out] A pointer to a Boolean value that indicates whether this value on the heap is valid.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5605b-108">备注</span><span class="sxs-lookup"><span data-stu-id="5605b-108">Remarks</span></span>  
- <span data-ttu-id="5605b-109">如果垃圾回收器回收，则的值无效。</span><span class="sxs-lookup"><span data-stu-id="5605b-109">The value is invalid if it has been reclaimed by the garbage collector.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f52b-108">备注</span><span class="sxs-lookup"><span data-stu-id="9f52b-108">Remarks</span></span>  
+ <span data-ttu-id="9f52b-109">如果垃圾回收器回收，则的值无效。</span><span class="sxs-lookup"><span data-stu-id="9f52b-109">The value is invalid if it has been reclaimed by the garbage collector.</span></span>  
   
- <span data-ttu-id="5605b-110">此方法已被否决。</span><span class="sxs-lookup"><span data-stu-id="5605b-110">This method has been deprecated.</span></span> <span data-ttu-id="5605b-111">在.NET Framework 2.0 中，所有值都是有效期截止日期[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)调用，在这段时间的值都是失效。</span><span class="sxs-lookup"><span data-stu-id="5605b-111">In the .NET Framework 2.0, all values are valid until [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) is called, at which time the values are invalidated.</span></span>  
+ <span data-ttu-id="9f52b-110">此方法已被否决。</span><span class="sxs-lookup"><span data-stu-id="9f52b-110">This method has been deprecated.</span></span> <span data-ttu-id="9f52b-111">在.NET Framework 2.0 中，所有值都是有效期截止日期[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)调用，在这段时间的值都是失效。</span><span class="sxs-lookup"><span data-stu-id="9f52b-111">In the .NET Framework 2.0, all values are valid until [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) is called, at which time the values are invalidated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5605b-112">惠?</span><span class="sxs-lookup"><span data-stu-id="5605b-112">Requirements</span></span>  
- <span data-ttu-id="5605b-113">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5605b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f52b-112">要求</span><span class="sxs-lookup"><span data-stu-id="9f52b-112">Requirements</span></span>  
+ <span data-ttu-id="9f52b-113">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9f52b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5605b-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5605b-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9f52b-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9f52b-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5605b-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5605b-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9f52b-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9f52b-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5605b-116">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5605b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="9f52b-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f52b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

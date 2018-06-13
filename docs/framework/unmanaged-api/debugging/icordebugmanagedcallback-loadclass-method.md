@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1d920a97338bba3e90ec8f0c440f6dd2a93e722
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416200"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a><span data-ttu-id="b00dd-102">ICorDebugManagedCallback::LoadClass 方法</span><span class="sxs-lookup"><span data-stu-id="b00dd-102">ICorDebugManagedCallback::LoadClass Method</span></span>
 <span data-ttu-id="b00dd-103">通知调试器已加载的类。</span><span class="sxs-lookup"><span data-stu-id="b00dd-103">Notifies the debugger that a class has been loaded.</span></span>  

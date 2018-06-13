@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756847"
 ---
 # <a name="ltstategt-of-ltstatesgt"></a><span data-ttu-id="e562e-102">&lt;states&gt; 的 &lt;state&gt;</span><span class="sxs-lookup"><span data-stu-id="e562e-102">&lt;state&gt; of &lt;states&gt;</span></span>
 <span data-ttu-id="e562e-103">一个配置元素，该元素包含应为其发出跟踪记录的已订阅活动的状态。</span><span class="sxs-lookup"><span data-stu-id="e562e-103">A configuration element that contains the state of the subscribed activity for which a tracking record should be emitted.</span></span>  

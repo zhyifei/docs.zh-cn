@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a2462d1de9f1b5f94f2581c1a06ca2987712fd7b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421169"
 ---
 # <a name="icordebugvalue2-interface"></a><span data-ttu-id="888ef-102">ICorDebugValue2 接口</span><span class="sxs-lookup"><span data-stu-id="888ef-102">ICorDebugValue2 Interface</span></span>
 <span data-ttu-id="888ef-103">扩展"ICorDebugValue"接口，若要为"ICorDebugType"对象提供支持。</span><span class="sxs-lookup"><span data-stu-id="888ef-103">Extends the "ICorDebugValue" interface to provide support for "ICorDebugType" objects.</span></span>  

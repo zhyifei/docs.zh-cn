@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550055"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a><span data-ttu-id="8a4bd-102">如何：在 TextBox 中添加水印</span><span class="sxs-lookup"><span data-stu-id="8a4bd-102">How to: Add a Watermark to a TextBox</span></span>
 <span data-ttu-id="8a4bd-103">下面的示例演示如何帮助的用途<xref:System.Windows.Controls.TextBox>通过显示内的解释性背景图像<xref:System.Windows.Controls.TextBox>直到用户输入文本，此时删除映像。</span><span class="sxs-lookup"><span data-stu-id="8a4bd-103">The following example shows how to aid usability of a <xref:System.Windows.Controls.TextBox> by displaying an explanatory background image inside of the <xref:System.Windows.Controls.TextBox> until the user inputs text, at which point the image is removed.</span></span> <span data-ttu-id="8a4bd-104">此外，背景图像会再次还原如果用户中删除其输入。</span><span class="sxs-lookup"><span data-stu-id="8a4bd-104">In addition, the background image is restored again if the user removes their input.</span></span> <span data-ttu-id="8a4bd-105">请参阅下图中。</span><span class="sxs-lookup"><span data-stu-id="8a4bd-105">See illustration below.</span></span>  
