@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548360"
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>如何：从自定义控件选择墨迹
 通过添加<xref:System.Windows.Ink.IncrementalLassoHitTester>到自定义控件，您可以使控件，以便用户可以选择使用套索工具，方式类似于墨迹<xref:System.Windows.Controls.InkCanvas>选择使用套索墨迹。  

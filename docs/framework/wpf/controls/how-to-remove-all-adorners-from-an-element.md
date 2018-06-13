@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551611"
 ---
 # <a name="how-to-remove-all-adorners-from-an-element"></a>如何：从元素移除所有装饰器
 此示例演示如何以编程方式移除所有装饰器，从指定<xref:System.Windows.UIElement>。  

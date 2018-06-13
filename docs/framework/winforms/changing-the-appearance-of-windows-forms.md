@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523544"
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a>更改 Windows 窗体外观
 可以按多种不同的方式自定义 Windows 窗体应用程序的外观，例如，更改 Windows 窗体应用程序的边框、不透明度、形状、样式，或设置它的背景图像。  

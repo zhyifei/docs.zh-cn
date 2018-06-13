@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8b604e1d7fc3d3c8adf7d95bd95843bc0110dbc9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440013"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>IHostAssemblyStore::ProvideModule 方法
 解析程序集或链接 （而不是嵌入） 内的模块资源文件。  
@@ -67,11 +68,11 @@ HRESULT ProvideModule (
  返回标识值`pdwModuleId`宿主指定。 标识符在进程的生存期内必须是唯一的。 CLR 使用此值关联的流作为唯一标识符。 它会检查每个值对的值`pAssemblyId`返回通过调用[ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)和的值针对`pdwModuleId`返回到其他调用`ProvideModule`。 如果主机的另一个返回相同的标识符值`IStream`，CLR 将检查是否已映射了该流的内容。 如果是这样，CLR 加载映像而不是映射一个新的现有副本。 因此，标识符也不能重叠从返回的程序集标识符`ProvideAssembly`。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

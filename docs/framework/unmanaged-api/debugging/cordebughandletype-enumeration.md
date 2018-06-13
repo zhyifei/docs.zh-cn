@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2898f530fe3f9368778d0f854e8254f7b32d5293
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404932"
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType 枚举
 指示句柄类型。  
@@ -42,7 +43,7 @@ typedef enum CorDebugHandleType {
 |`HANDLE_WEAK_TRACK_RESURRECTION`|句柄弱，这不会阻止对象被垃圾回收回收。<br /><br /> 收集对象，该句柄将变为无效。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

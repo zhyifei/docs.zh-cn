@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c8b6c110a4e7754a6bcca326b659599ffa2caedf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440544"
 ---
 # <a name="ihostsecuritymanagergetsecuritycontext-method"></a>IHostSecurityManager::GetSecurityContext 方法
 获取请求[IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)从主机。  
@@ -57,11 +58,11 @@ HRESULT GetSecurityContext (
  主机可以控制的 CLR 和用户代码对线程标记的所有代码访问。 它还可确保完整的安全性在异步操作或具有受限制的代码访问权限的代码点间传递上下文信息。 `IHostSecurityContext` 封装此安全上下文信息，这就是不透明的 CLR。 CLR 捕获此信息并将其移动在线程池工作项调度、 终结器执行和模块和类的构造。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517064"
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>要基于一系列值进行切换的自定义活动
 此示例演示如何创建扩展对 <xref:System.Activities.Statements.Switch%601> 的使用的自定义活动。 常规的 <xref:System.Activities.Statements.Switch%601> 语句允许基于单个值进行切换。 但在一些业务方案中，活动必须基于一系列值进行切换。 例如，活动可能在基于 1 和 5 之间切换值时执行一个操作，在基于 6 和 10 之间切换值时执行另一个操作，并为所有其他值执行默认操作。 此自定义活动完全支持上述方案。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523486"
 ---
 # <a name="power-management-in-windows-forms"></a>Windows 窗体中的电源管理
 在 Windows 操作系统中，Windows 窗体应用程序可以充分利用电源管理功能。 你的应用程序可以监视计算机的电源状态，并发生状态更改时执行操作。 例如，如果便携式计算机上运行你的应用程序，你可能想要在计算机的电池电量低于特定级别时禁用你的应用程序中的某些功能。  

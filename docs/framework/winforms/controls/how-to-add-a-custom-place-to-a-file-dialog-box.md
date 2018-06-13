@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525734"
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>如何：向文件对话框添加自定义区域
 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] 上的默认打开和保存对话框在名为“收藏夹链接”的对话框左侧有一个区域。 此区域称为自定义区域。 <xref:System.Windows.Forms.OpenFileDialog>和<xref:System.Windows.Forms.SaveFileDialog>类，可以添加到的文件夹<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。  

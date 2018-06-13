@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516677"
 ---
 # <a name="migration-guidance"></a>迁移指南
 在[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，Microsoft 将发布的第二个主版本的 Windows Workflow Foundation (WF)。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 发布在 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中（包含 System.Workflow.* 命名空间中的类型；目前称之为 WF3）并在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中得到增强。 WF3 也是属于[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，但伴随新工作流技术 (System.Activities。 中的类型\*命名空间; 称之为 WF4)。 考虑何时采用 WF4 时，重要的是首先要认识到您来控制时间安排。  

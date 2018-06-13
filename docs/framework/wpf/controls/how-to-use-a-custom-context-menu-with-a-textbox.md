@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552774"
 ---
 # <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>如何：通过 TextBox 使用自定义上下文菜单
 此示例演示如何定义和实现简单的自定义上下文菜单<xref:System.Windows.Controls.TextBox>。  

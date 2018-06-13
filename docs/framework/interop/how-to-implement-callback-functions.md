@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389270"
 ---
 # <a name="how-to-implement-callback-functions"></a>如何：实现回调函数
 下面的过程和示例演示使用平台调用的托管应用程序如何在本地计算机上打印每个窗口的句柄值。 具体而言，过程和示例使用“EnumWindows” 函数来逐句通过窗口列表，使用托管回调函数（名为 CallBack）来打印窗口句柄的值。  

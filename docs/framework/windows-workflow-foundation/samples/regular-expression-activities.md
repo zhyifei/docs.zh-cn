@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519829"
 ---
 # <a name="regular-expression-activities"></a>正则表达式活动
 此示例演示如何一组活动，这些活动公开 <xref:System.Text.RegularExpressions> 命名空间的正则表达式功能。 这些自定义活动可以在工作流应用程序中使用。 有关正则表达式的详细信息，请参阅[N:System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace。  

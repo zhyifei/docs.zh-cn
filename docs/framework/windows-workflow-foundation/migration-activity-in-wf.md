@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514342"
 ---
 # <a name="migration-activity-in-wf"></a>WF 中的迁移活动
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 提供<xref:System.Activities.Statements.Interop>用于执行从活动的工作流中基于派生的活动的活动<xref:System.Activities.Activity>。 有关详细信息，请参阅[迁移指南](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)部分。  

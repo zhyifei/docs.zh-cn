@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c6cbf44bd02a45b9b99d2dad63fc5bd6219c4ee
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437672"
 ---
 # <a name="igchost2-interface"></a>IGCHost2 接口
 提供用于获取有关垃圾回收系统的信息以及控制垃圾回收的某些方面的方法。  
@@ -35,11 +36,11 @@ ms.lasthandoff: 05/04/2018
 |[SetGCStartupLimitsEx 方法](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|为第 0 代中设置的段大小和最大大小。 使第 0 代和段大小大于`DWORD`。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** GCHost.idl、 GCHost.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

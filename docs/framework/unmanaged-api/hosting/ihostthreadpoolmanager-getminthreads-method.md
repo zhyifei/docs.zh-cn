@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2064f134d83e6d410e851d8ea9498b45e36aea37
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442262"
 ---
 # <a name="ihostthreadpoolmanagergetminthreads-method"></a>IHostThreadPoolManager::GetMinThreads 方法
 在线程池中为预期的请求中获取的最小主机维护的空闲线程数。  
@@ -54,11 +55,11 @@ HRESULT GetMinThreads (
  主机不需要提供的实现`GetMinThreads`。 在这种情况下，它应返回 E_NOTIMPL 的 HRESULT 值。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

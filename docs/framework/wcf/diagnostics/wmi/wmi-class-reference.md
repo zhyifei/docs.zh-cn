@@ -1,27 +1,16 @@
 ---
-title: "WMI 类引用"
-ms.custom: 
+title: WMI 类引用
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487615"
 ---
 # <a name="wmi-class-reference"></a>WMI 类引用
-本节列出了由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] WMI 提供程序公开的所有 WMI 类。  
+本部分列出了由 Windows Communication Foundation (WCF) WMI 提供程序公开的所有 WMI 类。  
   
 ## <a name="accessing-wmi-instances"></a>访问 WMI 实例  
  除 Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation 和 Endpoint 外，不能直接实例化 WMI 对象引用中列出的所有类。 若要访问其他实例，则可以访问上述顶级类的属性。 例如，可以通过“终结点实例”->“绑定”->“BindingElement”访问 TransportBindingElement 实例。  

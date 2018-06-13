@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393914"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 事件
 本部分的主题介绍 Windows (ETW) 事件的事件跟踪。 每个事件都有关联的关键字和级别，详见 [CLR ETW 关键字和级别](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)主题。 CLR 有两个事件提供程序：  

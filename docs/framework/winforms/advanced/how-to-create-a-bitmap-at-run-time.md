@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520635"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>如何：在运行时创建位图
 此示例创建并绘制<xref:System.Drawing.Bitmap>对象，并显示现有的 Windows 窗体中<xref:System.Windows.Forms.PictureBox>控件。  

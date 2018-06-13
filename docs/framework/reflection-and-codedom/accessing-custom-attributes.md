@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397086"
 ---
 # <a name="accessing-custom-attributes"></a>访问自定义特性
 特性与程序元素相关联后，可使用反射来查询它们是否存在以及它们的值。 在 .NET Framework 1.0 和 1.1 版本中，在执行上下文中检查自定义特性。 .NET Framework 2.0 版本提供了新的加载上下文（仅反射上下文），可用于检查无法加载执行的代码。  
