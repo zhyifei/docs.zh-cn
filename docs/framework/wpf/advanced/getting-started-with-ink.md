@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546232"
 ---
 # <a name="getting-started-with-ink"></a>墨迹入门
 将数字墨迹合并到你的应用程序是比以往更容易。 墨迹已从正在实现完全集成到编程的 COM 和 Windows 窗体方法的必然结果发展[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 不需要安装单独的 Sdk 或运行时库。  

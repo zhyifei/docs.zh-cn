@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544506"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>如何：向墨迹数据添加自定义数据
 可以将自定义数据添加到墨迹保存为墨迹序列化格式 (ISF) 时将保存的墨迹。  你可以自定义将数据保存到<xref:System.Windows.Ink.DrawingAttributes>、 <xref:System.Windows.Ink.StrokeCollection>，或<xref:System.Windows.Ink.Stroke>。  能够将自定义数据保存在三个对象上使你能够决定最佳的位置来保存的数据。  所有三个类使用类似的方法来存储和访问自定义数据。  

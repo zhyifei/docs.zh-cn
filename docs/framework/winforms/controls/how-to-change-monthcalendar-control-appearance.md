@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531321"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>如何： 更改 Windows 窗体 MonthCalendar 控件&#39;s 外观
 Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许你自定义在许多方面的日历的外观。 例如，你可以设置配色方案，并选择以显示或隐藏周数和当前日期。  

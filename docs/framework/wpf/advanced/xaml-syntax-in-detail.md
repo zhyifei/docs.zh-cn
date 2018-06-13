@@ -34,6 +34,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549472"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义用于描述 XAML 语法的元素的条款。 这些条款本文档中，同时用于 WPF 文档的其余部分具体而言，并为使用 XAML 或通过在 System.Xaml 级别的 XAML 语言支持的基本 XAML 概念的其他框架经常使用。 本主题扩展主题中介绍的基本术语[XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  

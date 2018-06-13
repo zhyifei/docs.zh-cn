@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544227"
 ---
 # <a name="input-wpf"></a>输入 (WPF)
 Windows Presentation Foundation (WPF) 包含支持多种类型的输入。 此输入包含文本、 触摸、 鼠标、 命令、 焦点、 触摸、 拖放和数字墨迹。 本部分介绍相关输入在 WPF 中的主题。  

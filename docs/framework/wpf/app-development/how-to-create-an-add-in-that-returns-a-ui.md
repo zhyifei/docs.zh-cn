@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548228"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>如何：创建返回 UI 的外接程序
 此示例演示如何创建 Windows Presentation Foundation (WPF) 返回到主机的外接程序[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]独立的应用程序。  

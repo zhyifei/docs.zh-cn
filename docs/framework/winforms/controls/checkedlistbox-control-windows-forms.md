@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525583"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox 控件（Windows 窗体）
 Windows 窗体`CheckedListBox`控件显示的列表项，如<xref:System.Windows.Forms.ListBox>控制，并还可以在列表中显示项旁边的复选标记。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746704"
 ---
 # <a name="ltentriesgt"></a>&lt;条目&gt;
 一个路由项，包含路由筛选器与在筛选器匹配时消息要发送到的目标终结点之间的映射。  

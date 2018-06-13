@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551186"
 ---
 # <a name="combobox"></a>组合框
 <xref:System.Windows.Controls.ComboBox>控件向用户提供的选项列表。 显示和隐藏控件展开或折叠列表。 在其默认状态下，列表处于折叠状态，仅显示一个选项。 用户单击按钮以查看选项的完整列表。  

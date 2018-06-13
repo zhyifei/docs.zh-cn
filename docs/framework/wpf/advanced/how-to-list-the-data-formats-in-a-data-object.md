@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543476"
 ---
 # <a name="how-to-list-the-data-formats-in-a-data-object"></a>如何：列出数据对象中的数据格式
 下面的示例演示如何使用<xref:System.Windows.DataObject.GetFormats%2A>方法重载获取一个表示每个可用数据对象中的数据格式的字符串数组。  
