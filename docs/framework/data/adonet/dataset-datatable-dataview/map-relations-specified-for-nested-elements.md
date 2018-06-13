@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756691"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="6856c-102">映射为嵌套元素指定的关系</span><span class="sxs-lookup"><span data-stu-id="6856c-102">Map Relations Specified for Nested Elements</span></span>
 <span data-ttu-id="6856c-103">架构可以包含**msdata: relationship**批注来显式指定架构中任何两个元素之间的映射。</span><span class="sxs-lookup"><span data-stu-id="6856c-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="6856c-104">中指定的两个元素**msdata: relationship**可以嵌套在架构中，但不是一定要。</span><span class="sxs-lookup"><span data-stu-id="6856c-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="6856c-105">映射进程使用**msdata: relationship**架构以生成两个列之间主键/外的键关系中。</span><span class="sxs-lookup"><span data-stu-id="6856c-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  

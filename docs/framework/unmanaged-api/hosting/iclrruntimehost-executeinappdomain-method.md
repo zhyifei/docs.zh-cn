@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 96352ec5eaba67489dbef999925c56475611746c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435963"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a><span data-ttu-id="5c15d-102">ICLRRuntimeHost::ExecuteInAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="5c15d-102">ICLRRuntimeHost::ExecuteInAppDomain Method</span></span>
 <span data-ttu-id="5c15d-103">指定<xref:System.AppDomain>在其中执行指定的托管的代码。</span><span class="sxs-lookup"><span data-stu-id="5c15d-103">Specifies the <xref:System.AppDomain> in which to execute the specified managed code.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758368"
 ---
 # <a name="ltchunkedcookiehandlergt"></a><span data-ttu-id="2a43f-102">&lt;chunkedCookieHandler&gt;</span><span class="sxs-lookup"><span data-stu-id="2a43f-102">&lt;chunkedCookieHandler&gt;</span></span>
 <span data-ttu-id="2a43f-103">配置<xref:System.IdentityModel.Services.ChunkedCookieHandler>。</span><span class="sxs-lookup"><span data-stu-id="2a43f-103">Configures the <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span></span> <span data-ttu-id="2a43f-104">此元素仅可呈现如果`mode`属性`<cookieHandler>`元素是"默认"块"。</span><span class="sxs-lookup"><span data-stu-id="2a43f-104">This element may only be present if the `mode` attribute of the `<cookieHandler>` element is "Default" or "Chunked".</span></span>  

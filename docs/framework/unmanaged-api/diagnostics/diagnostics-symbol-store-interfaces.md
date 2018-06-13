@@ -13,9 +13,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435807"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a><span data-ttu-id="05439-102">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="05439-102">Diagnostics Symbol Store Interfaces</span></span>
 <span data-ttu-id="05439-103">本主题介绍使编译器生成符号信息以供由调试器使用的非托管的接口。</span><span class="sxs-lookup"><span data-stu-id="05439-103">This topic describes the unmanaged interfaces that enable a compiler to generate symbol information for use by a debugger.</span></span>  

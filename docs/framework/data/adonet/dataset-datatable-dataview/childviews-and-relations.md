@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755378"
 ---
 # <a name="childviews-and-relations"></a><span data-ttu-id="8d0a6-102">ChildView 和关系</span><span class="sxs-lookup"><span data-stu-id="8d0a6-102">ChildViews and Relations</span></span>
 <span data-ttu-id="8d0a6-103">如果 <xref:System.Data.DataSet> 中的表之间存在关系，则可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataRowView.CreateChildView%2A> 方法为父表中的行创建一个 <xref:System.Data.DataRowView>，包含相关子表中的行。</span><span class="sxs-lookup"><span data-stu-id="8d0a6-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="8d0a6-104">例如，下面的代码显示**类别**及其相关**产品**的字母顺序排序的**CategoryName**和**ProductName**.</span><span class="sxs-lookup"><span data-stu-id="8d0a6-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  

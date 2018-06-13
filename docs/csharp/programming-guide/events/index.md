@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339912"
 ---
 # <a name="events-c-programming-guide"></a><span data-ttu-id="75ba1-102">事件（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="75ba1-102">Events (C# Programming Guide)</span></span>
 <span data-ttu-id="75ba1-103">[类](../../../csharp/language-reference/keywords/class.md) 或对象可以通过事件向其他类或对象通知发生的相关事情。</span><span class="sxs-lookup"><span data-stu-id="75ba1-103">Events enable a [class](../../../csharp/language-reference/keywords/class.md) or object to notify other classes or objects when something of interest occurs.</span></span> <span data-ttu-id="75ba1-104">发送（或 *引发*）事件的类称为“发行者”  ，接收（或 *处理*）事件的类称为“订户” 。</span><span class="sxs-lookup"><span data-stu-id="75ba1-104">The class that sends (or *raises*) the event is called the *publisher* and the classes that receive (or *handle*) the event are called *subscribers*.</span></span>  

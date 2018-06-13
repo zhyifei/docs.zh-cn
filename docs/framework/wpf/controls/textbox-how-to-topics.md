@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555758"
 ---
 # <a name="textbox-how-to-topics"></a><span data-ttu-id="1c25a-102">TextBox 帮助主题</span><span class="sxs-lookup"><span data-stu-id="1c25a-102">TextBox How-to Topics</span></span>
 <span data-ttu-id="1c25a-103">本节提供演示如何完成使用的常见任务的示例<xref:System.Windows.Controls.TextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="1c25a-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.TextBox> control.</span></span>  

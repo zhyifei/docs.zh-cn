@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756054"
 ---
 # <a name="ltcertificatevalidationgt"></a><span data-ttu-id="61f6b-102">&lt;certificateValidation&gt;</span><span class="sxs-lookup"><span data-stu-id="61f6b-102">&lt;certificateValidation&gt;</span></span>
 <span data-ttu-id="61f6b-103">控制令牌处理程序用来验证证书的设置。</span><span class="sxs-lookup"><span data-stu-id="61f6b-103">Controls the settings that token handlers use to validate certificates.</span></span> <span data-ttu-id="61f6b-104">如果使用自己的验证程序配置特定的处理程序，则将重写这些设置。</span><span class="sxs-lookup"><span data-stu-id="61f6b-104">These settings are overridden if a specific handler is configured with its own validator.</span></span>  

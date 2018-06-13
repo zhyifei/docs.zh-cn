@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742999"
 ---
 # <a name="ltcryptoclassesgt-element"></a><span data-ttu-id="c7788-102">&lt;cryptoClasses&gt;元素</span><span class="sxs-lookup"><span data-stu-id="c7788-102">&lt;cryptoClasses&gt; Element</span></span>
 <span data-ttu-id="c7788-103">包含密码类的列表，这些类具有到 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 元素中的友好名称的映射。</span><span class="sxs-lookup"><span data-stu-id="c7788-103">Contains a list of cryptography classes that have a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>  

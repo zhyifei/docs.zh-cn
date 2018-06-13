@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554763"
 ---
 # <a name="printdialog"></a><span data-ttu-id="5997c-102">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="5997c-102">PrintDialog</span></span>
 <span data-ttu-id="5997c-103"><xref:System.Windows.Controls.PrintDialog>控件用于实例化自动配置的标准打印对话框<xref:System.Printing.PrintTicket>和<xref:System.Printing.PrintQueue>根据用户输入。</span><span class="sxs-lookup"><span data-stu-id="5997c-103">The <xref:System.Windows.Controls.PrintDialog> control is used to instantiate a standard print dialog box that automatically configures a <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintQueue> according to user input.</span></span>  

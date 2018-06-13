@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743220"
 ---
 # <a name="client-application-services"></a><span data-ttu-id="d4856-102">客户端应用程序服务</span><span class="sxs-lookup"><span data-stu-id="d4856-102">Client Application Services</span></span>
 <span data-ttu-id="d4856-103">借助客户端应用程序服务，可以轻松使用 Microsoft ASP.NET 2.0 AJAX Extensions 中包含的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登录名、角色和配置文件应用程序服务，创建基于 Windows 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="d4856-103">Client application services make it easy for you to create Windows-based applications that use the [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] login, roles, and profile application services included in the Microsoft ASP.NET 2.0 AJAX Extensions.</span></span> <span data-ttu-id="d4856-104">这些服务使多个基于 Web 和 Windows 的应用程序共享来自单个服务器的用户信息和用户管理功能。</span><span class="sxs-lookup"><span data-stu-id="d4856-104">These services enable multiple Web and Windows-based applications to share user information and user-management functionality from a single server.</span></span> <span data-ttu-id="d4856-105">例如，你可以使用这些服务来执行下列任务：</span><span class="sxs-lookup"><span data-stu-id="d4856-105">For example, you can use these services to perform the following tasks:</span></span>  

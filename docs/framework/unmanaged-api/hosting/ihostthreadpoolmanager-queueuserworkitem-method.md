@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b458739db024bdbe8cf0fb5a12a5d5f508d332da
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441716"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a><span data-ttu-id="9fd7d-102">IHostThreadPoolManager::QueueUserWorkItem 方法</span><span class="sxs-lookup"><span data-stu-id="9fd7d-102">IHostThreadPoolManager::QueueUserWorkItem Method</span></span>
 <span data-ttu-id="9fd7d-103">排队的执行，函数，并指定包含数据以供该函数的对象。</span><span class="sxs-lookup"><span data-stu-id="9fd7d-103">Queues a function for execution, and specifies an object containing data to be used by that function.</span></span> <span data-ttu-id="9fd7d-104">在有线程变得可用时，将执行该函数。</span><span class="sxs-lookup"><span data-stu-id="9fd7d-104">The function executes when a thread becomes available.</span></span>  

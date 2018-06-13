@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755960"
 ---
 # <a name="creating-a-dataset"></a><span data-ttu-id="01e93-102">创建数据集</span><span class="sxs-lookup"><span data-stu-id="01e93-102">Creating a DataSet</span></span>
 <span data-ttu-id="01e93-103">可以通过调用 <xref:System.Data.DataSet> 构造函数来创建 <xref:System.Data.DataSet> 的实例。</span><span class="sxs-lookup"><span data-stu-id="01e93-103">You create an instance of a <xref:System.Data.DataSet> by calling the <xref:System.Data.DataSet> constructor.</span></span> <span data-ttu-id="01e93-104">可以选择指定一个名称参数。</span><span class="sxs-lookup"><span data-stu-id="01e93-104">Optionally specify a name argument.</span></span> <span data-ttu-id="01e93-105">如果没有为 <xref:System.Data.DataSet> 指定名称，则该名称会设置为“NewDataSet”。</span><span class="sxs-lookup"><span data-stu-id="01e93-105">If you do not specify a name for the <xref:System.Data.DataSet>, the name is set to "NewDataSet".</span></span>  

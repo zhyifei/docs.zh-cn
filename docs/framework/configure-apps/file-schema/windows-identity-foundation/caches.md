@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755209"
 ---
 # <a name="ltcachesgt"></a><span data-ttu-id="6eb75-102">&lt;缓存&gt;</span><span class="sxs-lookup"><span data-stu-id="6eb75-102">&lt;caches&gt;</span></span>
 <span data-ttu-id="6eb75-103">注册用于会话令牌和令牌重放检测的缓存。</span><span class="sxs-lookup"><span data-stu-id="6eb75-103">Registers the caches used for session tokens and token replay detection.</span></span>  

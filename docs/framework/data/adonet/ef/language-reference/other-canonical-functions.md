@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761202"
 ---
 # <a name="other-canonical-functions"></a><span data-ttu-id="05e90-102">其他规范函数</span><span class="sxs-lookup"><span data-stu-id="05e90-102">Other Canonical Functions</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="05e90-103"> 中提供了不属于按位、聚合、数学、日期/时间和字符串类别的其他规范函数。</span><span class="sxs-lookup"><span data-stu-id="05e90-103"> includes canonical functions not classified as bitwise, aggregate, math, date/time, or string.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71f5cdfaf47c55107980edf089f8964c5936fb23
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440981"
 ---
 # <a name="ihostsecuritymanagersetthreadtoken-method"></a><span data-ttu-id="c5e95-102">IHostSecurityManager::SetThreadToken 方法</span><span class="sxs-lookup"><span data-stu-id="c5e95-102">IHostSecurityManager::SetThreadToken Method</span></span>
 <span data-ttu-id="c5e95-103">设置当前执行线程的句柄。</span><span class="sxs-lookup"><span data-stu-id="c5e95-103">Sets a handle for the currently executing thread.</span></span>  

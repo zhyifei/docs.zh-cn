@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561636"
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a><span data-ttu-id="24c8f-102">如何：圆化 RectangleGeometry 的角</span><span class="sxs-lookup"><span data-stu-id="24c8f-102">How to: Round the Corners of a RectangleGeometry</span></span>
 <span data-ttu-id="24c8f-103">改为圆角的<xref:System.Windows.Media.RectangleGeometry>，将其<xref:System.Windows.Media.RectangleGeometry.RadiusX%2A>和<xref:System.Windows.Media.RectangleGeometry.RadiusY%2A>属性设置为大于零的值。</span><span class="sxs-lookup"><span data-stu-id="24c8f-103">To round the corners of a <xref:System.Windows.Media.RectangleGeometry>, set its <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> and <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> properties to a value greater than zero.</span></span> <span data-ttu-id="24c8f-104">值越大，1 之间的矩形的角。</span><span class="sxs-lookup"><span data-stu-id="24c8f-104">The larger the values, the rounder the rectangle's corners.</span></span>  

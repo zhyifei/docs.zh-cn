@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750081"
 ---
 # <a name="ltservicebehaviorsgt"></a><span data-ttu-id="70749-102">&lt;serviceBehaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="70749-102">&lt;serviceBehaviors&gt;</span></span>
 <span data-ttu-id="70749-103">此配置节描述为特定服务定义的所有行为。</span><span class="sxs-lookup"><span data-stu-id="70749-103">This configuration section represents all the behaviors defined for a specific service.</span></span>  

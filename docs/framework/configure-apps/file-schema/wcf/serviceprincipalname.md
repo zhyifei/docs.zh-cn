@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750721"
 ---
 # <a name="ltserviceprincipalnamegt"></a><span data-ttu-id="dd9b7-102">&lt;ServicePrincipalName&gt;</span><span class="sxs-lookup"><span data-stu-id="dd9b7-102">&lt;servicePrincipalName&gt;</span></span>
 <span data-ttu-id="dd9b7-103">利用对应的服务主体名称 (SPN) 指定服务的标识。</span><span class="sxs-lookup"><span data-stu-id="dd9b7-103">Specifies the identity of a service by its Service Principal Name (SPN).</span></span>  

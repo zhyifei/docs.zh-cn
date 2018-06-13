@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339389"
 ---
 # <a name="inside-a-c-program"></a><span data-ttu-id="a2550-102">在 C# 程序内部</span><span class="sxs-lookup"><span data-stu-id="a2550-102">Inside a C# Program</span></span>
 <span data-ttu-id="a2550-103">本节讨论 C# 程序的一般结构，并包括标准的“Hello, World!”</span><span class="sxs-lookup"><span data-stu-id="a2550-103">The section discusses the general structure of a C# program, and includes the standard "Hello, World!"</span></span> <span data-ttu-id="a2550-104">示例。</span><span class="sxs-lookup"><span data-stu-id="a2550-104">example.</span></span>  

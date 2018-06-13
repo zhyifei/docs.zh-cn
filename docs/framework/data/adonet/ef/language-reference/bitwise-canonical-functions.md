@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761189"
 ---
 # <a name="bitwise-canonical-functions"></a><span data-ttu-id="c44cc-102">按位规范函数</span><span class="sxs-lookup"><span data-stu-id="c44cc-102">Bitwise Canonical Functions</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="c44cc-103"> 包含按位规范函数。</span><span class="sxs-lookup"><span data-stu-id="c44cc-103"> includes bitwise canonical functions.</span></span>  

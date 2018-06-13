@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 619a28d2382aa9cc3130a3130c07fa1e283119e4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437910"
 ---
 # <a name="idebuggerthreadcontrol-interface"></a><span data-ttu-id="7b7cd-102">IDebuggerThreadControl 接口</span><span class="sxs-lookup"><span data-stu-id="7b7cd-102">IDebuggerThreadControl Interface</span></span>
 <span data-ttu-id="7b7cd-103">提供用于通知主机有关阻止和取消阻止的线程调试服务的方法。</span><span class="sxs-lookup"><span data-stu-id="7b7cd-103">Provides methods for notifying the host about the blocking and unblocking of threads by the debugging services.</span></span>  

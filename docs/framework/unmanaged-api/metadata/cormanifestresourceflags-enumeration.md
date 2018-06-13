@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21cce26c94d26f6c079fca644a31bf83cd1a6432
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440705"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="9ce07-102">CorManifestResourceFlags 枚举</span><span class="sxs-lookup"><span data-stu-id="9ce07-102">CorManifestResourceFlags Enumeration</span></span>
 <span data-ttu-id="9ce07-103">指示程序集清单中编码的资源的可见性。</span><span class="sxs-lookup"><span data-stu-id="9ce07-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745378"
 ---
 # <a name="ltbypasstrustedappstrongnamesgt-element"></a><span data-ttu-id="be7b1-102">&lt;bypassTrustedAppStrongNames&gt;元素</span><span class="sxs-lookup"><span data-stu-id="be7b1-102">&lt;bypassTrustedAppStrongNames&gt; Element</span></span>
 <span data-ttu-id="be7b1-103">指定是否跳过上加载到完全信任的完全信任程序集的强名称验证<xref:System.AppDomain>。</span><span class="sxs-lookup"><span data-stu-id="be7b1-103">Specifies whether to bypass the validation of strong names on full-trust assemblies that are loaded into a full-trust <xref:System.AppDomain>.</span></span>  

@@ -1,34 +1,28 @@
 ---
 title: 查询对象的集合
 description: 如何查询集合。
-keywords: .NET、.NET Core、C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
 ms.date: 11/30/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 87a76f8a-0b58-4791-90ea-2fe0a30416c9
-ms.openlocfilehash: a62e5c6324d15376f1b42ad078eeb883b05ef14f
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: c690da2ae59d2a9b34a5bd403bc54797c4e95fa0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282387"
 ---
-# <a name="query-a-collection-of-objects"></a><span data-ttu-id="bd7b6-104">查询对象的集合</span><span class="sxs-lookup"><span data-stu-id="bd7b6-104">Query a collection of objects</span></span>
-<span data-ttu-id="bd7b6-105">此示例演示如何对一系列 `Student` 对象执行简单查询。</span><span class="sxs-lookup"><span data-stu-id="bd7b6-105">This example shows how to perform a simple query over a list of `Student` objects.</span></span> <span data-ttu-id="bd7b6-106">每个 `Student` 对象均包含一些关于学生的基本信息和表示学生在四门考试中的分数的列表。</span><span class="sxs-lookup"><span data-stu-id="bd7b6-106">Each `Student` object contains some basic information about the student, and a list that represents the student's scores on four examinations.</span></span>  
+# <a name="query-a-collection-of-objects"></a><span data-ttu-id="a433f-103">查询对象的集合</span><span class="sxs-lookup"><span data-stu-id="a433f-103">Query a collection of objects</span></span>
+<span data-ttu-id="a433f-104">此示例演示如何对一系列 `Student` 对象执行简单查询。</span><span class="sxs-lookup"><span data-stu-id="a433f-104">This example shows how to perform a simple query over a list of `Student` objects.</span></span> <span data-ttu-id="a433f-105">每个 `Student` 对象均包含一些关于学生的基本信息和表示学生在四门考试中的分数的列表。</span><span class="sxs-lookup"><span data-stu-id="a433f-105">Each `Student` object contains some basic information about the student, and a list that represents the student's scores on four examinations.</span></span>  
   
- <span data-ttu-id="bd7b6-107">该应用程序充当本部分中使用相同 `students` 数据源的许多其他示例的框架。</span><span class="sxs-lookup"><span data-stu-id="bd7b6-107">This application serves as the framework for many other examples in this section that use the same `students` data source.</span></span>  
+ <span data-ttu-id="a433f-106">该应用程序充当本部分中使用相同 `students` 数据源的许多其他示例的框架。</span><span class="sxs-lookup"><span data-stu-id="a433f-106">This application serves as the framework for many other examples in this section that use the same `students` data source.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bd7b6-108">示例</span><span class="sxs-lookup"><span data-stu-id="bd7b6-108">Example</span></span>  
- <span data-ttu-id="bd7b6-109">以下查询将返回在第一堂考试中得分为 90 或更高的学生。</span><span class="sxs-lookup"><span data-stu-id="bd7b6-109">The following query returns the students who received a score of 90 or greater on their first exam.</span></span>  
+## <a name="example"></a><span data-ttu-id="a433f-107">示例</span><span class="sxs-lookup"><span data-stu-id="a433f-107">Example</span></span>  
+ <span data-ttu-id="a433f-108">以下查询将返回在第一堂考试中得分为 90 或更高的学生。</span><span class="sxs-lookup"><span data-stu-id="a433f-108">The following query returns the students who received a score of 90 or greater on their first exam.</span></span>  
   
  [!code-csharp[csProgGuideLINQ#15](../../../samples/snippets/csharp/concepts/linq/how-to-query-a-collection-of-objects_1.cs)]  
   
- <span data-ttu-id="bd7b6-110">该查询有意简单，以使你可以进行实验。</span><span class="sxs-lookup"><span data-stu-id="bd7b6-110">This query is intentionally simple to enable you to experiment.</span></span> <span data-ttu-id="bd7b6-111">例如，你可以在 `where` 子句中尝试其他条件或使用 `orderby` 子句对结果进行排序。</span><span class="sxs-lookup"><span data-stu-id="bd7b6-111">For example, you can try more conditions in the `where` clause, or use an `orderby` clause to sort the results.</span></span>  
+ <span data-ttu-id="a433f-109">该查询有意简单，以使你可以进行实验。</span><span class="sxs-lookup"><span data-stu-id="a433f-109">This query is intentionally simple to enable you to experiment.</span></span> <span data-ttu-id="a433f-110">例如，你可以在 `where` 子句中尝试其他条件或使用 `orderby` 子句对结果进行排序。</span><span class="sxs-lookup"><span data-stu-id="a433f-110">For example, you can try more conditions in the `where` clause, or use an `orderby` clause to sort the results.</span></span>  
   
 
-## <a name="see-also"></a><span data-ttu-id="bd7b6-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="bd7b6-112">See also</span></span>  
- [<span data-ttu-id="bd7b6-113">LINQ 查询表达式</span><span class="sxs-lookup"><span data-stu-id="bd7b6-113">LINQ Query Expressions</span></span>](index.md)  
- [<span data-ttu-id="bd7b6-114">字符串内插</span><span class="sxs-lookup"><span data-stu-id="bd7b6-114">String interpolation</span></span>](../language-reference/tokens/interpolated.md)
+## <a name="see-also"></a><span data-ttu-id="a433f-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="a433f-111">See also</span></span>  
+ [<span data-ttu-id="a433f-112">LINQ 查询表达式</span><span class="sxs-lookup"><span data-stu-id="a433f-112">LINQ Query Expressions</span></span>](index.md)  
+ [<span data-ttu-id="a433f-113">字符串内插</span><span class="sxs-lookup"><span data-stu-id="a433f-113">String interpolation</span></span>](../language-reference/tokens/interpolated.md)

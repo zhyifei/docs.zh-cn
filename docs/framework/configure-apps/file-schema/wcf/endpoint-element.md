@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749499"
 ---
 # <a name="ltendpointgt-element"></a><span data-ttu-id="c3895-102">&lt;endpoint&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="c3895-102">&lt;endpoint&gt; element</span></span>
 <span data-ttu-id="c3895-103">指定用于公开服务的服务终结点的绑定、协定和地址属性。</span><span class="sxs-lookup"><span data-stu-id="c3895-103">Specifies binding, contract, and address properties for a service endpoint, which is used to expose services.</span></span>  

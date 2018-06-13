@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743048"
 ---
 # <a name="ltnameentrygt-element"></a><span data-ttu-id="bb039-102">&lt;nameEntry&gt;元素</span><span class="sxs-lookup"><span data-stu-id="bb039-102">&lt;nameEntry&gt; Element</span></span>
 <span data-ttu-id="bb039-103">将类名称映射到友好算法名称，允许一个类具有多个友好名称。</span><span class="sxs-lookup"><span data-stu-id="bb039-103">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>  

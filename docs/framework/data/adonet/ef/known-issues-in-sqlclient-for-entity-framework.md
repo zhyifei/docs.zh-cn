@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765654"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a><span data-ttu-id="98b68-102">SqlClient 中的已知问题（实体框架）</span><span class="sxs-lookup"><span data-stu-id="98b68-102">Known Issues in SqlClient for Entity Framework</span></span>
 <span data-ttu-id="98b68-103">本节介绍与 SQL Server .NET Framework 数据提供程序 (SqlClient) 有关的已知问题。</span><span class="sxs-lookup"><span data-stu-id="98b68-103">This section describes known issues related to the .NET Framework Data Provider for SQL Server (SqlClient).</span></span>  
