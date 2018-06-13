@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457211"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="b5021-102">?: 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="b5021-102">?: Operator (C# Reference)</span></span>
 <span data-ttu-id="b5021-103">条件运算符 (`?:`) 通常被称为三元条件运算符，根据 Boolean 表达式的值返回两个值之一。</span><span class="sxs-lookup"><span data-stu-id="b5021-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="b5021-104">下面是条件运算符的语法。</span><span class="sxs-lookup"><span data-stu-id="b5021-104">Following is the syntax for the conditional operator.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584419"
 ---
 # <a name="development-with-my-visual-basic"></a><span data-ttu-id="129b1-102">使用 My 开发 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="129b1-102">Development with My (Visual Basic)</span></span>
 <span data-ttu-id="129b1-103">Visual Basic 提供了支持快速应用程序开发的新功能，不仅功能强大，还有助于提高工作效率和易用性。</span><span class="sxs-lookup"><span data-stu-id="129b1-103">Visual Basic provides new features for rapid application development that improve productivity and ease of use while delivering power.</span></span> <span data-ttu-id="129b1-104">其中一项功能称为 `My`，可提供对与应用程序及其运行时环境相关的信息和默认对象实例的访问权限。</span><span class="sxs-lookup"><span data-stu-id="129b1-104">One of these features, called `My`, provides access to information and default object instances that are related to the application and its run-time environment.</span></span> <span data-ttu-id="129b1-105">此类信息按可通过 IntelliSense 搜索的格式进行编排，并根据用途进行了逻辑界定。</span><span class="sxs-lookup"><span data-stu-id="129b1-105">This information is organized in a format that is discoverable through IntelliSense and logically delineated according to use.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604466"
 ---
 # <a name="let-clause-visual-basic"></a><span data-ttu-id="7035c-102">Let 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7035c-102">Let Clause (Visual Basic)</span></span>
 <span data-ttu-id="7035c-103">计算一个值，并将其分配给查询中的新变量。</span><span class="sxs-lookup"><span data-stu-id="7035c-103">Computes a value and assigns it to a new variable within the query.</span></span>  

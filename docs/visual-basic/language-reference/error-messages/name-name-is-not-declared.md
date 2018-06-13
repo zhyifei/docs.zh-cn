@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594814"
 ---
 # <a name="name-39ltnamegt39-is-not-declared"></a><span data-ttu-id="26356-102">名称&#39;&lt;名称&gt;&#39;未声明</span><span class="sxs-lookup"><span data-stu-id="26356-102">Name &#39;&lt;name&gt;&#39; is not declared</span></span>
 <span data-ttu-id="26356-103">语句引用一个编程元素，但编译器找不到具有相同名称的元素。</span><span class="sxs-lookup"><span data-stu-id="26356-103">A statement refers to a programming element, but the compiler cannot find an element with that exact name.</span></span>  

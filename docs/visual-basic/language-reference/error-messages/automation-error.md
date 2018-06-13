@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583872"
 ---
 # <a name="automation-error"></a><span data-ttu-id="e1884-102">自动错误</span><span class="sxs-lookup"><span data-stu-id="e1884-102">Automation error</span></span>
 <span data-ttu-id="e1884-103">执行方法或者获取或设置对象变量的属性时发生错误。</span><span class="sxs-lookup"><span data-stu-id="e1884-103">An error occurred while executing a method or getting or setting a property of an object variable.</span></span> <span data-ttu-id="e1884-104">错误由创建该对象的应用程序报告。</span><span class="sxs-lookup"><span data-stu-id="e1884-104">The error was reported by the application that created the object.</span></span>  

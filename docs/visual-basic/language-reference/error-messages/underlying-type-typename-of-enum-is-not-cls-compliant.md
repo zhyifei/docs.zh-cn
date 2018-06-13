@@ -1,55 +1,47 @@
 ---
 title: 基础类型&lt;typename&gt;枚举不符合 CLS
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc40032
 - bc40032
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 44727a60f99e0d00cde7d569e2017928551b1812
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 876a59d1441c1ba4c5057556d5ef2fb2ecb43af6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596614"
 ---
-# <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a><span data-ttu-id="ac7ea-102">基础类型&lt;typename&gt;枚举不符合 CLS</span><span class="sxs-lookup"><span data-stu-id="ac7ea-102">Underlying type &lt;typename&gt; of Enum is not CLS-compliant</span></span>
-<span data-ttu-id="ac7ea-103">为此枚举不符合指定的数据类型的一部分[语言独立性和独立于语言的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-103">The data type specified for this enumeration is not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).</span></span> <span data-ttu-id="ac7ea-104">这不是在您的组件，一个错误，因为[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]和 Visual Basic 支持此数据类型。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-104">This is not an error within your component, because the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] and Visual Basic support this data type.</span></span> <span data-ttu-id="ac7ea-105">但是，在严格符合 cls 的代码中编写的另一个组件可能不支持此数据类型。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-105">However, another component written in strictly CLS-compliant code might not support this data type.</span></span> <span data-ttu-id="ac7ea-106">此类组件可能不能成功与你的组件进行交互。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-106">Such a component might not be able to interact successfully with your component.</span></span>  
+# <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a><span data-ttu-id="8c0be-102">基础类型&lt;typename&gt;枚举不符合 CLS</span><span class="sxs-lookup"><span data-stu-id="8c0be-102">Underlying type &lt;typename&gt; of Enum is not CLS-compliant</span></span>
+<span data-ttu-id="8c0be-103">为此枚举不符合指定的数据类型的一部分[语言独立性和独立于语言的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)。</span><span class="sxs-lookup"><span data-stu-id="8c0be-103">The data type specified for this enumeration is not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).</span></span> <span data-ttu-id="8c0be-104">这不是在您的组件，一个错误，因为[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]和 Visual Basic 支持此数据类型。</span><span class="sxs-lookup"><span data-stu-id="8c0be-104">This is not an error within your component, because the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] and Visual Basic support this data type.</span></span> <span data-ttu-id="8c0be-105">但是，在严格符合 cls 的代码中编写的另一个组件可能不支持此数据类型。</span><span class="sxs-lookup"><span data-stu-id="8c0be-105">However, another component written in strictly CLS-compliant code might not support this data type.</span></span> <span data-ttu-id="8c0be-106">此类组件可能不能成功与你的组件进行交互。</span><span class="sxs-lookup"><span data-stu-id="8c0be-106">Such a component might not be able to interact successfully with your component.</span></span>  
   
- <span data-ttu-id="ac7ea-107">下面的 Visual Basic 数据类型不符合 cls 的：</span><span class="sxs-lookup"><span data-stu-id="ac7ea-107">The following Visual Basic data types are not CLS-compliant:</span></span>  
+ <span data-ttu-id="8c0be-107">下面的 Visual Basic 数据类型不符合 cls 的：</span><span class="sxs-lookup"><span data-stu-id="8c0be-107">The following Visual Basic data types are not CLS-compliant:</span></span>  
   
--   [<span data-ttu-id="ac7ea-108">SByte 数据类型</span><span class="sxs-lookup"><span data-stu-id="ac7ea-108">SByte Data Type</span></span>](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+-   [<span data-ttu-id="8c0be-108">SByte 数据类型</span><span class="sxs-lookup"><span data-stu-id="8c0be-108">SByte Data Type</span></span>](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [<span data-ttu-id="ac7ea-109">UInteger 数据类型</span><span class="sxs-lookup"><span data-stu-id="ac7ea-109">UInteger Data Type</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+-   [<span data-ttu-id="8c0be-109">UInteger 数据类型</span><span class="sxs-lookup"><span data-stu-id="8c0be-109">UInteger Data Type</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [<span data-ttu-id="ac7ea-110">ULong 数据类型</span><span class="sxs-lookup"><span data-stu-id="ac7ea-110">ULong Data Type</span></span>](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+-   [<span data-ttu-id="8c0be-110">ULong 数据类型</span><span class="sxs-lookup"><span data-stu-id="8c0be-110">ULong Data Type</span></span>](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [<span data-ttu-id="ac7ea-111">UShort 数据类型</span><span class="sxs-lookup"><span data-stu-id="ac7ea-111">UShort Data Type</span></span>](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+-   [<span data-ttu-id="8c0be-111">UShort 数据类型</span><span class="sxs-lookup"><span data-stu-id="8c0be-111">UShort Data Type</span></span>](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
- <span data-ttu-id="ac7ea-112">默认情况下，此消息是一个警告。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-112">By default, this message is a warning.</span></span> <span data-ttu-id="ac7ea-113">有关隐藏警告或将警告视为错误的详细信息，请参阅[在 Visual Basic 中的配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-113">For more information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="8c0be-112">默认情况下，此消息是一个警告。</span><span class="sxs-lookup"><span data-stu-id="8c0be-112">By default, this message is a warning.</span></span> <span data-ttu-id="8c0be-113">有关隐藏警告或将警告视为错误的详细信息，请参阅[在 Visual Basic 中的配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="8c0be-113">For more information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="ac7ea-114">**错误 ID:** BC40032</span><span class="sxs-lookup"><span data-stu-id="ac7ea-114">**Error ID:** BC40032</span></span>  
+ <span data-ttu-id="8c0be-114">**错误 ID:** BC40032</span><span class="sxs-lookup"><span data-stu-id="8c0be-114">**Error ID:** BC40032</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ac7ea-115">更正此错误</span><span class="sxs-lookup"><span data-stu-id="ac7ea-115">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8c0be-115">更正此错误</span><span class="sxs-lookup"><span data-stu-id="8c0be-115">To correct this error</span></span>  
   
--   <span data-ttu-id="ac7ea-116">如果你的组件只与其他接口[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]组件，或者不与任何其他组件之间的接口，您不需要更改任何内容。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-116">If your component interfaces only with other [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] components, or does not interface with any other components, you do not need to change anything.</span></span>  
+-   <span data-ttu-id="8c0be-116">如果你的组件只与其他接口[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]组件，或者不与任何其他组件之间的接口，您不需要更改任何内容。</span><span class="sxs-lookup"><span data-stu-id="8c0be-116">If your component interfaces only with other [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] components, or does not interface with any other components, you do not need to change anything.</span></span>  
   
--   <span data-ttu-id="ac7ea-117">如果你没有为编写的组件与交互[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，你可能能够确定通过反射或从文档，它是否支持此数据类型。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-117">If you are interfacing with a component not written for the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], you might be able to determine, either through reflection or from documentation, whether it supports this data type.</span></span> <span data-ttu-id="ac7ea-118">如果是这样，你不需要更改任何内容。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-118">If it does, you do not need to change anything.</span></span>  
+-   <span data-ttu-id="8c0be-117">如果你没有为编写的组件与交互[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，你可能能够确定通过反射或从文档，它是否支持此数据类型。</span><span class="sxs-lookup"><span data-stu-id="8c0be-117">If you are interfacing with a component not written for the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], you might be able to determine, either through reflection or from documentation, whether it supports this data type.</span></span> <span data-ttu-id="8c0be-118">如果是这样，你不需要更改任何内容。</span><span class="sxs-lookup"><span data-stu-id="8c0be-118">If it does, you do not need to change anything.</span></span>  
   
--   <span data-ttu-id="ac7ea-119">如果你与不支持此数据类型的组件交互，你必须将其替换最接近的符合 cls 的类型。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-119">If you are interfacing with a component that does not support this data type, you must replace it with the closest CLS-compliant type.</span></span> <span data-ttu-id="ac7ea-120">例如，如果不需要 2147483647 以上的数值范围，可以使用 `UInteger` 取代 `Integer` 。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-120">For example, in place of `UInteger` you might be able to use `Integer` if you do not need the value range above 2,147,483,647.</span></span> <span data-ttu-id="ac7ea-121">如果确实需要更大范围，可以用 `UInteger` 代替 `Long`。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-121">If you do need the extended range, you can replace `UInteger` with `Long`.</span></span>  
+-   <span data-ttu-id="8c0be-119">如果你与不支持此数据类型的组件交互，你必须将其替换最接近的符合 cls 的类型。</span><span class="sxs-lookup"><span data-stu-id="8c0be-119">If you are interfacing with a component that does not support this data type, you must replace it with the closest CLS-compliant type.</span></span> <span data-ttu-id="8c0be-120">例如，如果不需要 2147483647 以上的数值范围，可以使用 `UInteger` 取代 `Integer` 。</span><span class="sxs-lookup"><span data-stu-id="8c0be-120">For example, in place of `UInteger` you might be able to use `Integer` if you do not need the value range above 2,147,483,647.</span></span> <span data-ttu-id="8c0be-121">如果确实需要更大范围，可以用 `UInteger` 代替 `Long`。</span><span class="sxs-lookup"><span data-stu-id="8c0be-121">If you do need the extended range, you can replace `UInteger` with `Long`.</span></span>  
   
--   <span data-ttu-id="ac7ea-122">如果在与自动化或 COM 对象对接，请记住，某些类型具有与 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中不同的数据宽度。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-122">If you are interfacing with Automation or COM objects, keep in mind that some types have different data widths than in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="ac7ea-123">例如，`uint` 在其他环境中通常为 16 位。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-123">For example, `uint` is often 16 bits in other environments.</span></span> <span data-ttu-id="ac7ea-124">如果你的 16 位自变量传递给此类组件，将其声明为`UShort`而不是`UInteger`托管 Visual Basic 代码中。</span><span class="sxs-lookup"><span data-stu-id="ac7ea-124">If you are passing a 16-bit argument to such a component, declare it as `UShort` instead of `UInteger` in your managed Visual Basic code.</span></span>  
+-   <span data-ttu-id="8c0be-122">如果在与自动化或 COM 对象对接，请记住，某些类型具有与 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中不同的数据宽度。</span><span class="sxs-lookup"><span data-stu-id="8c0be-122">If you are interfacing with Automation or COM objects, keep in mind that some types have different data widths than in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="8c0be-123">例如，`uint` 在其他环境中通常为 16 位。</span><span class="sxs-lookup"><span data-stu-id="8c0be-123">For example, `uint` is often 16 bits in other environments.</span></span> <span data-ttu-id="8c0be-124">如果你的 16 位自变量传递给此类组件，将其声明为`UShort`而不是`UInteger`托管 Visual Basic 代码中。</span><span class="sxs-lookup"><span data-stu-id="8c0be-124">If you are passing a 16-bit argument to such a component, declare it as `UShort` instead of `UInteger` in your managed Visual Basic code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac7ea-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="ac7ea-125">See Also</span></span>  
- [<span data-ttu-id="ac7ea-126">反射 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ac7ea-126">Reflection (Visual Basic)</span></span>](../../programming-guide/concepts/reflection.md)  
- [<span data-ttu-id="ac7ea-127">反射</span><span class="sxs-lookup"><span data-stu-id="ac7ea-127">Reflection</span></span>](../../../framework/reflection-and-codedom/reflection.md)  
+## <a name="see-also"></a><span data-ttu-id="8c0be-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="8c0be-125">See Also</span></span>  
+ [<span data-ttu-id="8c0be-126">反射 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8c0be-126">Reflection (Visual Basic)</span></span>](../../programming-guide/concepts/reflection.md)  
+ [<span data-ttu-id="8c0be-127">反射</span><span class="sxs-lookup"><span data-stu-id="8c0be-127">Reflection</span></span>](../../../framework/reflection-and-codedom/reflection.md)  
  

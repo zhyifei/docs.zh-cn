@@ -1,35 +1,23 @@
 ---
-title: "如何：控制派生类的序列化"
-ms.custom: 
+title: 如何：控制派生类的序列化
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8f66f737b0668028fa45434fed4e6d6180ee69f8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e54388737371cc450eba375e1ac09f0ddbe563a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582117"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a><span data-ttu-id="90dcb-102">如何：控制派生类的序列化</span><span class="sxs-lookup"><span data-stu-id="90dcb-102">How to: Control Serialization of Derived Classes</span></span>
-<span data-ttu-id="90dcb-103">使用 XmlElementAttribute 属性更改 XML 元素的名称不是自定义对象序列化的唯一方法。</span><span class="sxs-lookup"><span data-stu-id="90dcb-103">Using the **XmlElementAttribute** attribute to change the name of an XML element is not the only way to customize object serialization.</span></span> <span data-ttu-id="90dcb-104">您还可以自定义 XML 流，具体方法为从现有类派生以及指示 <xref:System.Xml.Serialization.XmlSerializer> 实例如何序列化新类。</span><span class="sxs-lookup"><span data-stu-id="90dcb-104">You can also customize the XML stream by deriving from an existing class and instructing the <xref:System.Xml.Serialization.XmlSerializer> instance how to serialize the new class.</span></span>  
+# <a name="how-to-control-serialization-of-derived-classes"></a><span data-ttu-id="9c6d5-102">如何：控制派生类的序列化</span><span class="sxs-lookup"><span data-stu-id="9c6d5-102">How to: Control Serialization of Derived Classes</span></span>
+<span data-ttu-id="9c6d5-103">使用 XmlElementAttribute 属性更改 XML 元素的名称不是自定义对象序列化的唯一方法。</span><span class="sxs-lookup"><span data-stu-id="9c6d5-103">Using the **XmlElementAttribute** attribute to change the name of an XML element is not the only way to customize object serialization.</span></span> <span data-ttu-id="9c6d5-104">您还可以自定义 XML 流，具体方法为从现有类派生以及指示 <xref:System.Xml.Serialization.XmlSerializer> 实例如何序列化新类。</span><span class="sxs-lookup"><span data-stu-id="9c6d5-104">You can also customize the XML stream by deriving from an existing class and instructing the <xref:System.Xml.Serialization.XmlSerializer> instance how to serialize the new class.</span></span>  
   
- <span data-ttu-id="90dcb-105">例如，假设有一个 `Book` 类，您可以从该类派生，并创建一个具有多个属性的 `ExpandedBook` 类。</span><span class="sxs-lookup"><span data-stu-id="90dcb-105">For example, given a `Book` class, you can derive from it and create an `ExpandedBook` class that has a few more properties.</span></span> <span data-ttu-id="90dcb-106">然而，序列化或反序列化时，必须指导 XmlSerializer 接受派生类型。</span><span class="sxs-lookup"><span data-stu-id="90dcb-106">However, you must instruct the **XmlSerializer** to accept the derived type when serializing or deserializing.</span></span> <span data-ttu-id="90dcb-107">可以通过创建一个 <xref:System.Xml.Serialization.XmlElementAttribute> 实例并将其 Type 属性设置为派生类类型来完成此操作。</span><span class="sxs-lookup"><span data-stu-id="90dcb-107">This can be done by creating a <xref:System.Xml.Serialization.XmlElementAttribute> instance and setting its **Type** property to the derived class type.</span></span> <span data-ttu-id="90dcb-108">将 XmlElementAttribute 添加到 <xref:System.Xml.Serialization.XmlAttributes> 实例。</span><span class="sxs-lookup"><span data-stu-id="90dcb-108">Add the **XmlElementAttribute** to a <xref:System.Xml.Serialization.XmlAttributes> instance.</span></span> <span data-ttu-id="90dcb-109">再将 XmlAttributes 添加到 <xref:System.Xml.Serialization.XmlAttributeOverrides> 实例，指定被重写的类型和接受派生类型的成员名。</span><span class="sxs-lookup"><span data-stu-id="90dcb-109">Then add the **XmlAttributes** to a <xref:System.Xml.Serialization.XmlAttributeOverrides> instance, specifying the type being overridden and the name of the member that accepts the derived class.</span></span> <span data-ttu-id="90dcb-110">这在下面的示例中显示。</span><span class="sxs-lookup"><span data-stu-id="90dcb-110">This is shown in the following example.</span></span>  
+ <span data-ttu-id="9c6d5-105">例如，假设有一个 `Book` 类，您可以从该类派生，并创建一个具有多个属性的 `ExpandedBook` 类。</span><span class="sxs-lookup"><span data-stu-id="9c6d5-105">For example, given a `Book` class, you can derive from it and create an `ExpandedBook` class that has a few more properties.</span></span> <span data-ttu-id="9c6d5-106">然而，序列化或反序列化时，必须指导 XmlSerializer 接受派生类型。</span><span class="sxs-lookup"><span data-stu-id="9c6d5-106">However, you must instruct the **XmlSerializer** to accept the derived type when serializing or deserializing.</span></span> <span data-ttu-id="9c6d5-107">可以通过创建一个 <xref:System.Xml.Serialization.XmlElementAttribute> 实例并将其 Type 属性设置为派生类类型来完成此操作。</span><span class="sxs-lookup"><span data-stu-id="9c6d5-107">This can be done by creating a <xref:System.Xml.Serialization.XmlElementAttribute> instance and setting its **Type** property to the derived class type.</span></span> <span data-ttu-id="9c6d5-108">将 XmlElementAttribute 添加到 <xref:System.Xml.Serialization.XmlAttributes> 实例。</span><span class="sxs-lookup"><span data-stu-id="9c6d5-108">Add the **XmlElementAttribute** to a <xref:System.Xml.Serialization.XmlAttributes> instance.</span></span> <span data-ttu-id="9c6d5-109">再将 XmlAttributes 添加到 <xref:System.Xml.Serialization.XmlAttributeOverrides> 实例，指定被重写的类型和接受派生类型的成员名。</span><span class="sxs-lookup"><span data-stu-id="9c6d5-109">Then add the **XmlAttributes** to a <xref:System.Xml.Serialization.XmlAttributeOverrides> instance, specifying the type being overridden and the name of the member that accepts the derived class.</span></span> <span data-ttu-id="9c6d5-110">这在下面的示例中显示。</span><span class="sxs-lookup"><span data-stu-id="9c6d5-110">This is shown in the following example.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="90dcb-111">示例</span><span class="sxs-lookup"><span data-stu-id="90dcb-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="9c6d5-111">示例</span><span class="sxs-lookup"><span data-stu-id="9c6d5-111">Example</span></span>  
   
 ```vb  
 Public Class Orders  
@@ -244,11 +232,11 @@ public class Run
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="90dcb-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="90dcb-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="9c6d5-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="9c6d5-112">See Also</span></span>  
  <xref:System.Xml.Serialization.XmlSerializer>  
  <xref:System.Xml.Serialization.XmlElementAttribute>  
  <xref:System.Xml.Serialization.XmlAttributes>  
  <xref:System.Xml.Serialization.XmlAttributeOverrides>  
- [<span data-ttu-id="90dcb-113">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="90dcb-113">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [<span data-ttu-id="90dcb-114">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="90dcb-114">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [<span data-ttu-id="90dcb-115">如何：指定 XML 流的替代元素名称</span><span class="sxs-lookup"><span data-stu-id="90dcb-115">How to: Specify an Alternate Element Name for an XML Stream</span></span>](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+ [<span data-ttu-id="9c6d5-113">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="9c6d5-113">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [<span data-ttu-id="9c6d5-114">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="9c6d5-114">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [<span data-ttu-id="9c6d5-115">如何：指定 XML 流的替代元素名称</span><span class="sxs-lookup"><span data-stu-id="9c6d5-115">How to: Specify an Alternate Element Name for an XML Stream</span></span>](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

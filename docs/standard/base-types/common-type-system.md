@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579582"
 ---
 # <a name="common-type-system"></a><span data-ttu-id="be44c-102">常规类型系统</span><span class="sxs-lookup"><span data-stu-id="be44c-102">Common Type System</span></span>
 <span data-ttu-id="be44c-103">通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。</span><span class="sxs-lookup"><span data-stu-id="be44c-103">The common type system defines how types are declared, used, and managed in the common language runtime, and is also an important part of the runtime's support for cross-language integration.</span></span> <span data-ttu-id="be44c-104">常规类型系统执行以下功能：</span><span class="sxs-lookup"><span data-stu-id="be44c-104">The common type system performs the following functions:</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582803"
 ---
 # <a name="scheduling-threads"></a><span data-ttu-id="1d24d-102">调度线程</span><span class="sxs-lookup"><span data-stu-id="1d24d-102">Scheduling Threads</span></span>
 <span data-ttu-id="1d24d-103">每个线程都会分配有线程优先级。</span><span class="sxs-lookup"><span data-stu-id="1d24d-103">Every thread has a thread priority assigned to it.</span></span> <span data-ttu-id="1d24d-104">在公共语言运行时内创建的线程初始分配有优先级 ThreadPriority.Normal。</span><span class="sxs-lookup"><span data-stu-id="1d24d-104">Threads created within the common language runtime are initially assigned the priority of **ThreadPriority.Normal**.</span></span> <span data-ttu-id="1d24d-105">在运行时外部创建的线程保留有在进入托管环境前的优先级。</span><span class="sxs-lookup"><span data-stu-id="1d24d-105">Threads created outside the runtime retain the priority they had before they entered the managed environment.</span></span> <span data-ttu-id="1d24d-106">若要获取或设置任意线程的优先级，可以使用 Thread.Priority 属性。</span><span class="sxs-lookup"><span data-stu-id="1d24d-106">You can get or set the priority of any thread with the **Thread.Priority** property.</span></span>  

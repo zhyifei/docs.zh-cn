@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601788"
 ---
 # <a name="erase-statement-visual-basic"></a><span data-ttu-id="440ef-102">Erase 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="440ef-102">Erase Statement (Visual Basic)</span></span>
 <span data-ttu-id="440ef-103">用于释放数组变量和解除分配的内存用于其元素。</span><span class="sxs-lookup"><span data-stu-id="440ef-103">Used to release array variables and deallocate the memory used for their elements.</span></span>  

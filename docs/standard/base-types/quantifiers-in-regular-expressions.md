@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579088"
 ---
 # <a name="quantifiers-in-regular-expressions"></a><span data-ttu-id="3c012-102">正则表达式中的限定符</span><span class="sxs-lookup"><span data-stu-id="3c012-102">Quantifiers in Regular Expressions</span></span>
 <span data-ttu-id="3c012-103">限定符指定输入中必须存在字符、组或字符类的多少实例才能找到匹配项。</span><span class="sxs-lookup"><span data-stu-id="3c012-103">Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found.</span></span>  <span data-ttu-id="3c012-104">下表列出了 .NET 支持的限定符。</span><span class="sxs-lookup"><span data-stu-id="3c012-104">The following table lists the quantifiers supported by .NET.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601626"
 ---
 # <a name="conversion-summary-visual-basic"></a><span data-ttu-id="e70a7-102">转换摘要 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e70a7-102">Conversion Summary (Visual Basic)</span></span>
 <span data-ttu-id="e70a7-103">Visual Basic 语言关键字和运行时库成员按目的组织和用途。</span><span class="sxs-lookup"><span data-stu-id="e70a7-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  

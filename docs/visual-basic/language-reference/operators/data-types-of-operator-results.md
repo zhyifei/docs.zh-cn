@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605428"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a><span data-ttu-id="e9fa4-102">运算符结果的数据类型 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9fa4-102">Data Types of Operator Results (Visual Basic)</span></span>
 <span data-ttu-id="e9fa4-103">Visual Basic 确定基于操作数的数据类型的操作的结果数据类型。</span><span class="sxs-lookup"><span data-stu-id="e9fa4-103">Visual Basic determines the result data type of an operation based on the data types of the operands.</span></span> <span data-ttu-id="e9fa4-104">在某些情况下这可能是更大的范围比两个操作数的数据类型。</span><span class="sxs-lookup"><span data-stu-id="e9fa4-104">In some cases this might be a data type with a greater range than that of either operand.</span></span>  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579172"
 ---
 # <a name="composite-formatting"></a><span data-ttu-id="6d62d-102">复合格式设置</span><span class="sxs-lookup"><span data-stu-id="6d62d-102">Composite Formatting</span></span>
 <span data-ttu-id="6d62d-103">.NET 复合格式设置功能使用对象列表和复合格式字符串作为输入。</span><span class="sxs-lookup"><span data-stu-id="6d62d-103">The .NET composite formatting feature takes a list of objects and a composite format string as input.</span></span> <span data-ttu-id="6d62d-104">复合格式字符串由固定文本和索引占位符混和组成，其中索引占位符称为格式项，对应于列表中的对象。</span><span class="sxs-lookup"><span data-stu-id="6d62d-104">A composite format string consists of fixed text intermixed with indexed placeholders, called format items, that correspond to the objects in the list.</span></span> <span data-ttu-id="6d62d-105">格式设置操作产生的结果字符串由原始固定文本和列表中对象的字符串表示形式混和组成。</span><span class="sxs-lookup"><span data-stu-id="6d62d-105">The formatting operation yields a result string that consists of the original fixed text intermixed with the string representation of the objects in the list.</span></span>  
