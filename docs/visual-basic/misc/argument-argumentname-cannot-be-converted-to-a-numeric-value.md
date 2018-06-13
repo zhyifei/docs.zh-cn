@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598951"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-a-numeric-value"></a><span data-ttu-id="af7f9-102">自变量&#39; &lt;argumentname&gt; &#39;不能转换为数字值</span><span class="sxs-lookup"><span data-stu-id="af7f9-102">Argument &#39;&lt;argumentname&gt;&#39; cannot be converted to a numeric value</span></span>
 <span data-ttu-id="af7f9-103">试图将变量（例如字符串）转换为为数值的转换。</span><span class="sxs-lookup"><span data-stu-id="af7f9-103">A conversion attempted to convert a variable, such as a string, to a numeric value.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234550"
 ---
 # <a name="private-visual-basic"></a><span data-ttu-id="fea0d-102">Private (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fea0d-102">Private (Visual Basic)</span></span>
 <span data-ttu-id="fea0d-103">指定的一个或多个已声明的编程元素都可以访问只能从在其声明上下文中，包括从文件内包含的任何类型。</span><span class="sxs-lookup"><span data-stu-id="fea0d-103">Specifies that one or more declared programming elements are accessible only from within their declaration context, including from within any contained types.</span></span>  

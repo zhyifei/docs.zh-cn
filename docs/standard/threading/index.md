@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589914"
 ---
 # <a name="managed-threading"></a><span data-ttu-id="baa4d-102">托管线程处理</span><span class="sxs-lookup"><span data-stu-id="baa4d-102">Managed Threading</span></span>
 <span data-ttu-id="baa4d-103">无论是要为具有一个还是多个处理器的计算机进行开发，你都希望应用程序能够提供响应最为迅速的用户交互，即使应用程序当前正在执行其他操作，也不例外。</span><span class="sxs-lookup"><span data-stu-id="baa4d-103">Whether you are developing for computers with one processor or several, you want your application to provide the most responsive interaction with the user, even if the application is currently doing other work.</span></span> <span data-ttu-id="baa4d-104">使用多线程执行是让应用程序一直迅速响应用户的最有效方式，同时也是在用户事件之间或在用户事件期间使用处理器的最有效方式。</span><span class="sxs-lookup"><span data-stu-id="baa4d-104">Using multiple threads of execution is one of the most powerful ways to keep your application responsive to the user and at the same time make use of the processor in between or even during user events.</span></span> <span data-ttu-id="baa4d-105">虽然本部分介绍的是线程基本概念，但将会重点介绍托管线程概念和如何使用托管线程。</span><span class="sxs-lookup"><span data-stu-id="baa4d-105">While this section introduces the basic concepts of threading, it focuses on managed threading concepts and using managed threading.</span></span>  

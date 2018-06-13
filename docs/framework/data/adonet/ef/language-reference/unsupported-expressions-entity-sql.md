@@ -9,6 +9,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234309"
 ---
 # <a name="unsupported-expressions"></a><span data-ttu-id="c4a4a-102">不支持的表达式</span><span class="sxs-lookup"><span data-stu-id="c4a4a-102">Unsupported expressions</span></span>
 

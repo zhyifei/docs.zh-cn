@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462184"
 ---
 # <a name="qualifiersetput-function"></a><span data-ttu-id="461c2-103">QualifierSet_Put 函数</span><span class="sxs-lookup"><span data-stu-id="461c2-103">QualifierSet_Put function</span></span>
 <span data-ttu-id="461c2-104">写入命名的限定符和值。</span><span class="sxs-lookup"><span data-stu-id="461c2-104">Writes the named qualifier and value.</span></span> <span data-ttu-id="461c2-105">新限定符将覆盖具有相同名称的以前的值。</span><span class="sxs-lookup"><span data-stu-id="461c2-105">The new qualifier overwrites the previous value of the same name.</span></span> <span data-ttu-id="461c2-106">如果限定符不存在，则创建它。</span><span class="sxs-lookup"><span data-stu-id="461c2-106">If the qualifier does not exist, it is created.</span></span> 

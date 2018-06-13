@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589468"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a><span data-ttu-id="aa744-102">如何：在 Visual Basic 中在不同的目录中创建文件的副本</span><span class="sxs-lookup"><span data-stu-id="aa744-102">How to: Create a Copy of a File in a Different Directory in Visual Basic</span></span>
 <span data-ttu-id="aa744-103">使用 `My.Computer.FileSystem.CopyFile` 方法可复制文件。</span><span class="sxs-lookup"><span data-stu-id="aa744-103">The `My.Computer.FileSystem.CopyFile` method allows you to copy files.</span></span> <span data-ttu-id="aa744-104">该方法的参数提供了各种功能，用于覆盖现有文件、重命名文件、显示操作进度以及允许用户取消操作。</span><span class="sxs-lookup"><span data-stu-id="aa744-104">Its parameters provide the ability to overwrite existing files, rename the file, show the progress of the operation, and allow the user to cancel the operation.</span></span>  

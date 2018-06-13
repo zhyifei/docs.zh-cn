@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599839"
 ---
 # <a name="key-visual-basic"></a><span data-ttu-id="99bff-102">Key (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99bff-102">Key (Visual Basic)</span></span>
 <span data-ttu-id="99bff-103">`Key`关键字允许您指定的属性的匿名类型的行为。</span><span class="sxs-lookup"><span data-stu-id="99bff-103">The `Key` keyword enables you to specify behavior for properties of anonymous types.</span></span> <span data-ttu-id="99bff-104">仅属性你指派为键属性参与的匿名类型实例或计算的哈希代码值之间的相等性测试。</span><span class="sxs-lookup"><span data-stu-id="99bff-104">Only properties you designate as key properties participate in tests of equality between anonymous type instances, or calculation of hash code values.</span></span> <span data-ttu-id="99bff-105">无法更改的键属性的值。</span><span class="sxs-lookup"><span data-stu-id="99bff-105">The values of key properties cannot be changed.</span></span>  
