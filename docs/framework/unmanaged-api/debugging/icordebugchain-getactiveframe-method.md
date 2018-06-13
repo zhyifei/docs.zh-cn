@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a104d4d3cc74a6c1cb343818c9b0b3e8978b97df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402794"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a><span data-ttu-id="d7603-102">ICorDebugChain::GetActiveFrame 方法</span><span class="sxs-lookup"><span data-stu-id="d7603-102">ICorDebugChain::GetActiveFrame Method</span></span>
 <span data-ttu-id="d7603-103">获取活动 (即，最新) 链上的帧。</span><span class="sxs-lookup"><span data-stu-id="d7603-103">Gets the active (that is, most recent) frame on the chain.</span></span>  

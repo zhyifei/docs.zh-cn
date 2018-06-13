@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408136"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a><span data-ttu-id="5bfa6-102">托管代码的安全编码指南</span><span class="sxs-lookup"><span data-stu-id="5bfa6-102">Secure Coding Guidelines for Unmanaged Code</span></span>
 <span data-ttu-id="5bfa6-103">有些库代码需要调入非托管代码（如本机代码 API（如 Win32））。</span><span class="sxs-lookup"><span data-stu-id="5bfa6-103">Some library code needs to call into unmanaged code (for example, native code APIs, such as Win32).</span></span> <span data-ttu-id="5bfa6-104">因为这意味着超出托管代码的安全外围，所以需要适当小心。</span><span class="sxs-lookup"><span data-stu-id="5bfa6-104">Because this means going outside the security perimeter for managed code, due caution is required.</span></span> <span data-ttu-id="5bfa6-105">如果你的代码在安全性方面是非特定的，你的代码和调用它的任何代码都必须具有非托管代码权限（指定了<xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ）。</span><span class="sxs-lookup"><span data-stu-id="5bfa6-105">If your code is security-neutral, both your code and any code that calls it must have unmanaged code permission (<xref:System.Security.Permissions.SecurityPermission> with the <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> flag specified).</span></span>  

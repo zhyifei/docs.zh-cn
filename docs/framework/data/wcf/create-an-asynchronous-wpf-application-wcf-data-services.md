@@ -1,47 +1,34 @@
 ---
-title: "如何：创建异步 Windows Presentation Framework 应用程序（WCF 数据服务）"
-ms.custom: 
+title: 如何：创建异步 Windows Presentation Framework 应用程序（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e922ad20f9954a17f63f42559877f0a05a2ba1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6acf3cbbfce491ebf98513b116d76ef9feb6d08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357629"
 ---
-# <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a><span data-ttu-id="e8dae-102">如何：创建异步 Windows Presentation Framework 应用程序（WCF 数据服务）</span><span class="sxs-lookup"><span data-stu-id="e8dae-102">How to: Create an Asynchronous Windows Presentation Framework Application (WCF Data Services)</span></span>
-<span data-ttu-id="e8dae-103">通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可以将从数据服务获取的数据绑定到 Windows Presentation Framework (WPF) 应用程序的用户界面元素。</span><span class="sxs-lookup"><span data-stu-id="e8dae-103">With [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], you can bind data obtained from a data service to UI element of a Windows Presentation Framework (WPF) application.</span></span> <span data-ttu-id="e8dae-104">有关详细信息，请参阅[数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。此外可以以异步方式，它使应用程序可继续做出响应，等待对数据服务请求的响应同时执行针对数据服务的操作。</span><span class="sxs-lookup"><span data-stu-id="e8dae-104">For more information, see [Binding Data to Controls](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).You can also execute operations against the data service in an asynchronous manner, which enables the application to continue to respond while waiting for a response to a data service request.</span></span> <span data-ttu-id="e8dae-105">若要对数据服务进行异步访问，必须使用适用于 Silverlight 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="e8dae-105">Applications for Silverlight are required to access the data service asynchronously.</span></span> <span data-ttu-id="e8dae-106">有关详细信息，请参阅[异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="e8dae-106">For more information, see [Asynchronous Operations](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).</span></span>  
+# <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a><span data-ttu-id="754ed-102">如何：创建异步 Windows Presentation Framework 应用程序（WCF 数据服务）</span><span class="sxs-lookup"><span data-stu-id="754ed-102">How to: Create an Asynchronous Windows Presentation Framework Application (WCF Data Services)</span></span>
+<span data-ttu-id="754ed-103">通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可以将从数据服务获取的数据绑定到 Windows Presentation Framework (WPF) 应用程序的用户界面元素。</span><span class="sxs-lookup"><span data-stu-id="754ed-103">With [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], you can bind data obtained from a data service to UI element of a Windows Presentation Framework (WPF) application.</span></span> <span data-ttu-id="754ed-104">有关详细信息，请参阅[数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。此外可以以异步方式，它使应用程序可继续做出响应，等待对数据服务请求的响应同时执行针对数据服务的操作。</span><span class="sxs-lookup"><span data-stu-id="754ed-104">For more information, see [Binding Data to Controls](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).You can also execute operations against the data service in an asynchronous manner, which enables the application to continue to respond while waiting for a response to a data service request.</span></span> <span data-ttu-id="754ed-105">若要对数据服务进行异步访问，必须使用适用于 Silverlight 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="754ed-105">Applications for Silverlight are required to access the data service asynchronously.</span></span> <span data-ttu-id="754ed-106">有关详细信息，请参阅[异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="754ed-106">For more information, see [Asynchronous Operations](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="e8dae-107">本主题介绍如何对数据服务进行异步访问并将结果绑定到 WPF 应用程序的元素。</span><span class="sxs-lookup"><span data-stu-id="e8dae-107">This topic shows how to access a data service asynchronously and bind the results to elements of a WPF application.</span></span> <span data-ttu-id="e8dae-108">本主题中的示例使用 Northwind 示例数据服务和自动生成的客户端数据服务类。</span><span class="sxs-lookup"><span data-stu-id="e8dae-108">The examples in this topic use the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="e8dae-109">在完成时创建此服务和客户端数据类[WCF 数据服务快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="e8dae-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="754ed-107">本主题介绍如何对数据服务进行异步访问并将结果绑定到 WPF 应用程序的元素。</span><span class="sxs-lookup"><span data-stu-id="754ed-107">This topic shows how to access a data service asynchronously and bind the results to elements of a WPF application.</span></span> <span data-ttu-id="754ed-108">本主题中的示例使用 Northwind 示例数据服务和自动生成的客户端数据服务类。</span><span class="sxs-lookup"><span data-stu-id="754ed-108">The examples in this topic use the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="754ed-109">在完成时创建此服务和客户端数据类[WCF 数据服务快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="754ed-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e8dae-110">示例</span><span class="sxs-lookup"><span data-stu-id="e8dae-110">Example</span></span>  
- <span data-ttu-id="e8dae-111">以下是定义 WPF 应用程序窗口的 XAML。</span><span class="sxs-lookup"><span data-stu-id="e8dae-111">The following XAML defines the window of the WPF application.</span></span>  
+## <a name="example"></a><span data-ttu-id="754ed-110">示例</span><span class="sxs-lookup"><span data-stu-id="754ed-110">Example</span></span>  
+ <span data-ttu-id="754ed-111">以下是定义 WPF 应用程序窗口的 XAML。</span><span class="sxs-lookup"><span data-stu-id="754ed-111">The following XAML defines the window of the WPF application.</span></span>  
   
  [!code-xaml[Astoria Northwind Client#WpfDataBindingAsyncXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerordersasync.xaml#wpfdatabindingasyncxaml)]  
   
-## <a name="example"></a><span data-ttu-id="e8dae-112">示例</span><span class="sxs-lookup"><span data-stu-id="e8dae-112">Example</span></span>  
- <span data-ttu-id="e8dae-113">该 XAML 文件的以下代码隐藏页通过使用数据服务执行一个异步查询，并将结果绑定到 WPF 窗口中的元素。</span><span class="sxs-lookup"><span data-stu-id="e8dae-113">The following code-behind page for the XAML file executes an asynchronous query by using the data service and binds the results to elements in the WPF window.</span></span>  
+## <a name="example"></a><span data-ttu-id="754ed-112">示例</span><span class="sxs-lookup"><span data-stu-id="754ed-112">Example</span></span>  
+ <span data-ttu-id="754ed-113">该 XAML 文件的以下代码隐藏页通过使用数据服务执行一个异步查询，并将结果绑定到 WPF 窗口中的元素。</span><span class="sxs-lookup"><span data-stu-id="754ed-113">The following code-behind page for the XAML file executes an asynchronous query by using the data service and binds the results to elements in the WPF window.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#WpfDataBindingAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerordersasync.xaml.cs#wpfdatabindingasync)]
  [!code-vb[Astoria Northwind Client#WpfDataBindingAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerordersasync.xaml.vb#wpfdatabindingasync)]  
   
-## <a name="see-also"></a><span data-ttu-id="e8dae-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="e8dae-114">See Also</span></span>  
- [<span data-ttu-id="e8dae-115">WCF Data Services 客户端库</span><span class="sxs-lookup"><span data-stu-id="e8dae-115">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a><span data-ttu-id="754ed-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="754ed-114">See Also</span></span>  
+ [<span data-ttu-id="754ed-115">WCF Data Services 客户端库</span><span class="sxs-lookup"><span data-stu-id="754ed-115">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

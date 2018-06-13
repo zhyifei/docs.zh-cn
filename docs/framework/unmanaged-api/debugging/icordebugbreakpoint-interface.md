@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 220cd1a41ed69325b557e6498a511865b78817ec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404510"
 ---
 # <a name="icordebugbreakpoint-interface1"></a><span data-ttu-id="737a8-102">ICorDebugBreakpoint 接口 1</span><span class="sxs-lookup"><span data-stu-id="737a8-102">ICorDebugBreakpoint Interface1</span></span>
 <span data-ttu-id="737a8-103">表示一个函数或对值的观察点中的断点。</span><span class="sxs-lookup"><span data-stu-id="737a8-103">Represents a breakpoint in a function, or a watch point on a value.</span></span>  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f40b99c0a81bf0f2b622c7d23157dbb5736df1ca
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403287"
 ---
 # <a name="getwin32resblob-method"></a><span data-ttu-id="c3752-102">GetWin32ResBlob 方法</span><span class="sxs-lookup"><span data-stu-id="c3752-102">GetWin32ResBlob Method</span></span>
 <span data-ttu-id="c3752-103">检索 Win32 资源 blob。</span><span class="sxs-lookup"><span data-stu-id="c3752-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="c3752-104">设置程序集选项后调用此方法。</span><span class="sxs-lookup"><span data-stu-id="c3752-104">Call this method after setting assembly options.</span></span>  

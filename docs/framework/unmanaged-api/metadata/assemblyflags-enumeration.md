@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2fc6d08e960b0ba82c76945a318ec723546f71b9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444901"
 ---
 # <a name="assemblyflags-enumeration"></a><span data-ttu-id="abcbe-102">AssemblyFlags 枚举</span><span class="sxs-lookup"><span data-stu-id="abcbe-102">AssemblyFlags Enumeration</span></span>
 <span data-ttu-id="abcbe-103">包含值，用于描述程序集的运行时功能。</span><span class="sxs-lookup"><span data-stu-id="abcbe-103">Contains values that describe run-time features of an assembly.</span></span>  

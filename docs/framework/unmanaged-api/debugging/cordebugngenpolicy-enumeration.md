@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc5a06e6b3cc1e9338d860cdb110bf7d516080be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404019"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a><span data-ttu-id="cd932-102">CorDebugNGenPolicy 枚举</span><span class="sxs-lookup"><span data-stu-id="cd932-102">CorDebugNGenPolicy Enumeration</span></span>
 <span data-ttu-id="cd932-103">提供用于确定调试器是否从本机映像缓存中加载本机 (NGen) 映像的值。</span><span class="sxs-lookup"><span data-stu-id="cd932-103">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  

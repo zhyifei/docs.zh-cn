@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356413"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a><span data-ttu-id="e6374-102">使用 LINQ to SQL 可执行的操作</span><span class="sxs-lookup"><span data-stu-id="e6374-102">What You Can Do With LINQ to SQL</span></span>
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="e6374-103"> 支持您作为 SQL 开发人员所期望的所有关键功能。</span><span class="sxs-lookup"><span data-stu-id="e6374-103"> supports all the key capabilities you would expect as a SQL developer.</span></span> <span data-ttu-id="e6374-104">您可以查询表中的信息、在表中插入信息以及更新和删除表中的信息。</span><span class="sxs-lookup"><span data-stu-id="e6374-104">You can query for information, and insert, update, and delete information from tables.</span></span>  

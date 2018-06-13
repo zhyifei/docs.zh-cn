@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398815"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="22ebf-102">.NET Framework 中的动态编程</span><span class="sxs-lookup"><span data-stu-id="22ebf-102">Dynamic Programming in the .NET Framework</span></span>
 <span data-ttu-id="22ebf-103">本节文档提供有关在 .NET Framework 中动态编程的信息。</span><span class="sxs-lookup"><span data-stu-id="22ebf-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  

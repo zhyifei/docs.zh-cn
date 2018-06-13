@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa8bbcf4d8e5aadee6a4250d23842187d6c2af09
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405481"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a><span data-ttu-id="b2ce2-102">“Cor调试解码事件标志窗口”枚举</span><span class="sxs-lookup"><span data-stu-id="b2ce2-102">CorDebugDecodeEventFlagsWindows Enumeration</span></span>
 <span data-ttu-id="b2ce2-103">提供关于 Windows 平台上的调试事件的其他信息。</span><span class="sxs-lookup"><span data-stu-id="b2ce2-103">Provides additional information about debug events on the Windows platform.</span></span>  

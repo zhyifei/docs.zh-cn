@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c2b590e7402bf29ffeb5bd14fc383edae41a04e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403985"
 ---
 # <a name="icordebugterminate-method"></a><span data-ttu-id="832ca-102">ICorDebug::Terminate 方法</span><span class="sxs-lookup"><span data-stu-id="832ca-102">ICorDebug::Terminate Method</span></span>
 <span data-ttu-id="832ca-103">终止`ICorDebug`对象。</span><span class="sxs-lookup"><span data-stu-id="832ca-103">Terminates the `ICorDebug` object.</span></span>  

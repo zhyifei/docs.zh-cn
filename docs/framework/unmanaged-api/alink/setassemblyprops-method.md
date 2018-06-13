@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aed553a3a8d54b5229a122e76b61e3e58d4af3c1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401961"
 ---
 # <a name="setassemblyprops-method"></a><span data-ttu-id="8469f-102">SetAssemblyProps 方法</span><span class="sxs-lookup"><span data-stu-id="8469f-102">SetAssemblyProps Method</span></span>
 <span data-ttu-id="8469f-103">将分配程序集级别属性。</span><span class="sxs-lookup"><span data-stu-id="8469f-103">Assigns assembly-level properties.</span></span>  

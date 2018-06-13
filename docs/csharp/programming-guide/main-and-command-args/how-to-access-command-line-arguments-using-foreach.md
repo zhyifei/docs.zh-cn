@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332502"
 ---
 # <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a><span data-ttu-id="0618f-102">如何：使用 foreach 访问命令行自变量（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="0618f-102">How to: Access Command-Line Arguments Using foreach (C# Programming Guide)</span></span>
 <span data-ttu-id="0618f-103">循环访问数组的另一种方法是使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句，如本例所示。</span><span class="sxs-lookup"><span data-stu-id="0618f-103">Another approach to iterating over the array is to use the [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement as shown in this example.</span></span> <span data-ttu-id="0618f-104">`foreach` 语句可用于循环访问数组、.NET Framework 集合类或任何实现 <xref:System.Collections.IEnumerable> 接口的类或结构。</span><span class="sxs-lookup"><span data-stu-id="0618f-104">The `foreach` statement can be used to iterate over an array, a .NET Framework collection class, or any class or struct that implements the <xref:System.Collections.IEnumerable> interface.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335275"
 ---
 # <a name="delegates-c-programming-guide"></a><span data-ttu-id="0a5d0-102">委托（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="0a5d0-102">Delegates (C# Programming Guide)</span></span>
 <span data-ttu-id="0a5d0-103">[委托](../../../csharp/language-reference/keywords/delegate.md)是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。</span><span class="sxs-lookup"><span data-stu-id="0a5d0-103">A [delegate](../../../csharp/language-reference/keywords/delegate.md) is a type that represents references to methods with a particular parameter list and return type.</span></span> <span data-ttu-id="0a5d0-104">在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。</span><span class="sxs-lookup"><span data-stu-id="0a5d0-104">When you instantiate a delegate, you can associate its instance with any method with a compatible signature and return type.</span></span> <span data-ttu-id="0a5d0-105">你可以通过委托实例调用方法。</span><span class="sxs-lookup"><span data-stu-id="0a5d0-105">You can invoke (or call) the method through the delegate instance.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399764"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a><span data-ttu-id="184fd-102">MDbg.exe（.NET Framework 命令行调试程序）</span><span class="sxs-lookup"><span data-stu-id="184fd-102">MDbg.exe (.NET Framework Command-Line Debugger)</span></span>
 <span data-ttu-id="184fd-103">.NET Framework 命令行调试器可以帮助工具供应商和应用程序开发人员查找并修复面向 .NET Framework 公共语言运行时的程序中的 Bug。</span><span class="sxs-lookup"><span data-stu-id="184fd-103">The NET Framework Command-Line Debugger helps tools vendors and application developers find and fix bugs in programs that target the .NET Framework common language runtime.</span></span> <span data-ttu-id="184fd-104">此工具使用运行时调试 API 提供调试服务。</span><span class="sxs-lookup"><span data-stu-id="184fd-104">This tool uses the runtime debugging API to provide debugging services.</span></span> <span data-ttu-id="184fd-105">可以使用 MDbg.exe 来仅调试托管代码；不支持调试非托管代码。</span><span class="sxs-lookup"><span data-stu-id="184fd-105">You can use MDbg.exe to debug only managed code; there is no support for debugging unmanaged code.</span></span>  

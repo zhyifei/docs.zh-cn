@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399751"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a><span data-ttu-id="dfe09-102">演练：在部分信任应用场景中发出代码</span><span class="sxs-lookup"><span data-stu-id="dfe09-102">Walkthrough: Emitting Code in Partial Trust Scenarios</span></span>
 <span data-ttu-id="dfe09-103">反射发出以完全信任或部分信任形式使用相同的 API 集，但某些功能在部分受信任代码中需要特殊权限。</span><span class="sxs-lookup"><span data-stu-id="dfe09-103">Reflection emit uses the same API set in full or partial trust, but some features require special permissions in partially trusted code.</span></span> <span data-ttu-id="dfe09-104">此外，反射发出具有一个功能，即匿名托管动态方法，旨在由安全透明的程序集采用部分信任的形式使用。</span><span class="sxs-lookup"><span data-stu-id="dfe09-104">In addition, reflection emit has a feature, anonymously hosted dynamic methods, that is designed to be used with partial trust and by security-transparent assemblies.</span></span>  

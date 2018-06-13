@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339094"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a><span data-ttu-id="131c3-102">使用 Async 和 Await 的异步编程 (C#)</span><span class="sxs-lookup"><span data-stu-id="131c3-102">Asynchronous programming with async and await (C#)</span></span>
 <span data-ttu-id="131c3-103">通过使用异步编程，你可以避免性能瓶颈并增强应用程序的总体响应能力。</span><span class="sxs-lookup"><span data-stu-id="131c3-103">You can avoid performance bottlenecks and enhance the overall responsiveness of your application by using asynchronous programming.</span></span> <span data-ttu-id="131c3-104">但是，编写异步应用程序的传统技术可能比较复杂，使它们难以编写、调试和维护。</span><span class="sxs-lookup"><span data-stu-id="131c3-104">However, traditional techniques for writing asynchronous applications can be complicated, making them difficult to write, debug, and maintain.</span></span>  
