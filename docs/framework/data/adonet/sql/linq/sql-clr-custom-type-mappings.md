@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359658"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR 自定义类型映射
 当使用 SQLMetal 命令行工具和对象关系设计器（O/R 设计器）时，将自动指定 SQL Server 与公共语言运行库 (CLR) 之间的类型映射。  

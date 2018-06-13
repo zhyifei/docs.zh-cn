@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526829"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>使用图像、位图、图标和图元文件
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供用于处理光栅图像的 `Bitmap` 类以及用于处理矢量图像的 `Metafile` 类。 `Bitmap` 和 `Metafile` 类都继承自 `Image` 类。  

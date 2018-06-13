@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536190"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>如何：在 Windows 窗体 RichTextBox 控件中保存文件
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以编写它在几种格式之一显示的信息：  
