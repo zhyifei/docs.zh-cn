@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596016"
 ---
 # <a name="mylog-object"></a><span data-ttu-id="7ab11-102">My.Log 对象</span><span class="sxs-lookup"><span data-stu-id="7ab11-102">My.Log Object</span></span>
 <span data-ttu-id="7ab11-103">提供属性和方法用于将事件和异常信息写入应用程序的日志侦听器。</span><span class="sxs-lookup"><span data-stu-id="7ab11-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span></span>  

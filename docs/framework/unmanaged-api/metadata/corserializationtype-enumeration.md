@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446654"
 ---
 # <a name="corserializationtype-enumeration"></a><span data-ttu-id="22edb-102">CorSerializationType 枚举</span><span class="sxs-lookup"><span data-stu-id="22edb-102">CorSerializationType Enumeration</span></span>
 <span data-ttu-id="22edb-103">指定如何将对象序列化公共语言运行时。</span><span class="sxs-lookup"><span data-stu-id="22edb-103">Specifies how an object is serialized by the common language runtime.</span></span>  

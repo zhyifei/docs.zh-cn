@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593683"
 ---
 # <a name="property-or-method-not-found"></a><span data-ttu-id="fea74-102">未找到属性或方法</span><span class="sxs-lookup"><span data-stu-id="fea74-102">Property or method not found</span></span>
 <span data-ttu-id="fea74-103">未定义的引用的对象方法或对象属性。</span><span class="sxs-lookup"><span data-stu-id="fea74-103">The referenced object method or object property is not defined.</span></span>  

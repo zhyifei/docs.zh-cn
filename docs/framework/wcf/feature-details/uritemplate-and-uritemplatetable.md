@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508810"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a><span data-ttu-id="99749-102">UriTemplate 和 UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="99749-102">UriTemplate and UriTemplateTable</span></span>
 <span data-ttu-id="99749-103">Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局。</span><span class="sxs-lookup"><span data-stu-id="99749-103">Web developers require the ability to describe the shape and layout of the URIs that their services respond to.</span></span> <span data-ttu-id="99749-104">Windows Communication Foundation (WCF) 添加两个新类，以便开发人员控制他们的 Uri。</span><span class="sxs-lookup"><span data-stu-id="99749-104">Windows Communication Foundation (WCF) added two new classes to give developers control over their URIs.</span></span> <span data-ttu-id="99749-105"><xref:System.UriTemplate> 和<xref:System.UriTemplateTable>在 WCF 中形成基于 URI 的调度引擎的基础。</span><span class="sxs-lookup"><span data-stu-id="99749-105"><xref:System.UriTemplate> and <xref:System.UriTemplateTable> form the basis of the URI-based dispatch engine in WCF.</span></span> <span data-ttu-id="99749-106">这些类还可在其自身，从而允许开发人员利用模板和 URI 映射机制而无需实现 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="99749-106">These classes can also be used on their own, allowing developers to take advantage of templates and the URI mapping mechanism without implementing a WCF service.</span></span>  

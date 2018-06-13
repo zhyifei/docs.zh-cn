@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d74ee7512f640ab906f1119f61e4998b5e882eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445682"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a><span data-ttu-id="4e545-102">IMetaDataEmit2::SetGenericParamProps 方法</span><span class="sxs-lookup"><span data-stu-id="4e545-102">IMetaDataEmit2::SetGenericParamProps Method</span></span>
 <span data-ttu-id="4e545-103">设置指定标记所引用的泛型参数定义的属性值。</span><span class="sxs-lookup"><span data-stu-id="4e545-103">Sets property values for the generic parameter definition referenced by the specified token.</span></span>  

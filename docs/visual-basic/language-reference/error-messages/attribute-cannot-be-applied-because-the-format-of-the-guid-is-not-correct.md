@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587555"
 ---
 # <a name="39ltattributegt39-cannot-be-applied-because-the-format-of-the-guid-39ltnumbergt39-is-not-correct"></a><span data-ttu-id="3ada0-102">&#39;&lt;属性&gt;&#39;无法应用，因为 GUID 的格式&#39;&lt;数&gt;&#39;不正确</span><span class="sxs-lookup"><span data-stu-id="3ada0-102">&#39;&lt;attribute&gt;&#39; cannot be applied because the format of the GUID &#39;&lt;number&gt;&#39; is not correct</span></span>
 <span data-ttu-id="3ada0-103">A`COMClassAttribute`特性块指定为 GUID 不到正确的格式不符合的全局唯一标识符 (GUID)。</span><span class="sxs-lookup"><span data-stu-id="3ada0-103">A `COMClassAttribute` attribute block specifies a globally unique identifier (GUID) that does not conform to the proper format for a GUID.</span></span> <span data-ttu-id="3ada0-104">`COMClassAttribute` 使用 Guid 来唯一地标识类、 接口和创建事件。</span><span class="sxs-lookup"><span data-stu-id="3ada0-104">`COMClassAttribute` uses GUIDs to uniquely identify the class, the interface, and the creation event.</span></span>  

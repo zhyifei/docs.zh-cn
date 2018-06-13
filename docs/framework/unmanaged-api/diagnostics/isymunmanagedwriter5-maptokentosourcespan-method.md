@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7751ed951c213c52c68125543622ed110124f5b1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427938"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a><span data-ttu-id="0baa7-102">ISymUnmanagedWriter5::MapTokenToSourceSpan 方法</span><span class="sxs-lookup"><span data-stu-id="0baa7-102">ISymUnmanagedWriter5::MapTokenToSourceSpan Method</span></span>
 <span data-ttu-id="0baa7-103">在指定的源文件中映射到给定的源行的给定元数据标记的分布。</span><span class="sxs-lookup"><span data-stu-id="0baa7-103">Maps the given metadata token to the given source line span in the specified source file.</span></span>  

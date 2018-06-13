@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593108"
 ---
 # <a name="textfieldparser-is-unable-to-complete-the-read-operation-because-maximum-buffer-size-has-been-exceeded"></a><span data-ttu-id="efc44-102">TextFieldParser 无法完成读取操作，因为已经超出最大缓冲区大小</span><span class="sxs-lookup"><span data-stu-id="efc44-102">TextFieldParser is unable to complete the read operation because maximum buffer size has been exceeded</span></span>
 <span data-ttu-id="efc44-103">无法完成操作，因为已超过最大缓冲区大小 （10,000,000 字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="efc44-103">The operation cannot be completed because the maximum buffer size (10,000,000 bytes) has been exceeded.</span></span>  

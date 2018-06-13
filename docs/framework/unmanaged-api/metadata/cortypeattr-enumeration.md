@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0f71e59eb13321517de61315d3ba06b96c5458f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449268"
 ---
 # <a name="cortypeattr-enumeration"></a><span data-ttu-id="0584a-102">CorTypeAttr 枚举</span><span class="sxs-lookup"><span data-stu-id="0584a-102">CorTypeAttr Enumeration</span></span>
 <span data-ttu-id="0584a-103">包含一些值，用于指示类型元数据。</span><span class="sxs-lookup"><span data-stu-id="0584a-103">Contains values that indicate type metadata.</span></span>  

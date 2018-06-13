@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514283"
 ---
 # <a name="custom-activity-designers"></a><span data-ttu-id="32e60-102">自定义活动设计器</span><span class="sxs-lookup"><span data-stu-id="32e60-102">Custom Activity Designers</span></span>
 <span data-ttu-id="32e60-103">本节包含使用自定义设计器在工作流设计器中进行显示的活动示例。</span><span class="sxs-lookup"><span data-stu-id="32e60-103">This section contains activity samples that use custom designers for display in the workflow designer.</span></span>  

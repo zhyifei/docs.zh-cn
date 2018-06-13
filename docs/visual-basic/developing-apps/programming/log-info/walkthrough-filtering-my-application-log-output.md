@@ -1,106 +1,97 @@
 ---
 title: 筛选 My.Application.Log 输出 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6c048578b320fedd2153aee7b466b1494551abe0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 43ac92cefe717b4bfa64969839b289e944980b7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591880"
 ---
-# <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a><span data-ttu-id="237b6-102">演练：筛选 My.Application.Log 输出 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="237b6-102">Walkthrough: Filtering My.Application.Log Output (Visual Basic)</span></span>
-<span data-ttu-id="237b6-103">本演练演示如何更改对 `My.Application.Log` 对象的默认日志筛选，以控制哪些信息可从 `Log` 对象传递到侦听器以及哪些信息可由侦听器编写。</span><span class="sxs-lookup"><span data-stu-id="237b6-103">This walkthrough demonstrates how to change the default log filtering for the `My.Application.Log` object, to control what information is passed from the `Log` object to the listeners and what information is written by the listeners.</span></span> <span data-ttu-id="237b6-104">生成应用程序后仍可以更改日志记录行为，因为配置信息存储在应用程序的配置文件中。</span><span class="sxs-lookup"><span data-stu-id="237b6-104">You can change the logging behavior even after building the application, because the configuration information is stored in the application's configuration file.</span></span>  
+# <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a><span data-ttu-id="c8221-102">演练：筛选 My.Application.Log 输出 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8221-102">Walkthrough: Filtering My.Application.Log Output (Visual Basic)</span></span>
+<span data-ttu-id="c8221-103">本演练演示如何更改对 `My.Application.Log` 对象的默认日志筛选，以控制哪些信息可从 `Log` 对象传递到侦听器以及哪些信息可由侦听器编写。</span><span class="sxs-lookup"><span data-stu-id="c8221-103">This walkthrough demonstrates how to change the default log filtering for the `My.Application.Log` object, to control what information is passed from the `Log` object to the listeners and what information is written by the listeners.</span></span> <span data-ttu-id="c8221-104">生成应用程序后仍可以更改日志记录行为，因为配置信息存储在应用程序的配置文件中。</span><span class="sxs-lookup"><span data-stu-id="c8221-104">You can change the logging behavior even after building the application, because the configuration information is stored in the application's configuration file.</span></span>  
   
-## <a name="getting-started"></a><span data-ttu-id="237b6-105">入门</span><span class="sxs-lookup"><span data-stu-id="237b6-105">Getting Started</span></span>  
- <span data-ttu-id="237b6-106">`My.Application.Log` 编写的每条消息均具有相关严重级别，筛选机制使用此级别控制日志输出。</span><span class="sxs-lookup"><span data-stu-id="237b6-106">Each message that `My.Application.Log` writes has an associated severity level, which filtering mechanisms use to control the log output.</span></span> <span data-ttu-id="237b6-107">此示例应用程序使用 `My.Application.Log` 方法编写具有不同严重级别的若干日志消息。</span><span class="sxs-lookup"><span data-stu-id="237b6-107">This sample application uses `My.Application.Log` methods to write several log messages with different severity levels.</span></span>  
+## <a name="getting-started"></a><span data-ttu-id="c8221-105">入门</span><span class="sxs-lookup"><span data-stu-id="c8221-105">Getting Started</span></span>  
+ <span data-ttu-id="c8221-106">`My.Application.Log` 编写的每条消息均具有相关严重级别，筛选机制使用此级别控制日志输出。</span><span class="sxs-lookup"><span data-stu-id="c8221-106">Each message that `My.Application.Log` writes has an associated severity level, which filtering mechanisms use to control the log output.</span></span> <span data-ttu-id="c8221-107">此示例应用程序使用 `My.Application.Log` 方法编写具有不同严重级别的若干日志消息。</span><span class="sxs-lookup"><span data-stu-id="c8221-107">This sample application uses `My.Application.Log` methods to write several log messages with different severity levels.</span></span>  
   
-#### <a name="to-build-the-sample-application"></a><span data-ttu-id="237b6-108">生成示例应用程序</span><span class="sxs-lookup"><span data-stu-id="237b6-108">To build the sample application</span></span>  
+#### <a name="to-build-the-sample-application"></a><span data-ttu-id="c8221-108">生成示例应用程序</span><span class="sxs-lookup"><span data-stu-id="c8221-108">To build the sample application</span></span>  
   
-1.  <span data-ttu-id="237b6-109">打开一个新的 Visual Basic Windows 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="237b6-109">Open a new Visual Basic Windows Application project.</span></span>  
+1.  <span data-ttu-id="c8221-109">打开一个新的 Visual Basic Windows 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="c8221-109">Open a new Visual Basic Windows Application project.</span></span>  
   
-2.  <span data-ttu-id="237b6-110">向 Form1 添加一个名为 Button1 的按钮。</span><span class="sxs-lookup"><span data-stu-id="237b6-110">Add a button named Button1 to Form1.</span></span>  
+2.  <span data-ttu-id="c8221-110">向 Form1 添加一个名为 Button1 的按钮。</span><span class="sxs-lookup"><span data-stu-id="c8221-110">Add a button named Button1 to Form1.</span></span>  
   
-3.  <span data-ttu-id="237b6-111">在 Button1 的 <xref:System.Windows.Forms.Control.Click> 事件处理程序中，添加以下代码：</span><span class="sxs-lookup"><span data-stu-id="237b6-111">In the <xref:System.Windows.Forms.Control.Click> event handler for Button1, add the following code:</span></span>  
+3.  <span data-ttu-id="c8221-111">在 Button1 的 <xref:System.Windows.Forms.Control.Click> 事件处理程序中，添加以下代码：</span><span class="sxs-lookup"><span data-stu-id="c8221-111">In the <xref:System.Windows.Forms.Control.Click> event handler for Button1, add the following code:</span></span>  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
-4.  <span data-ttu-id="237b6-112">在调试器中运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="237b6-112">Run the application in the debugger.</span></span>  
+4.  <span data-ttu-id="c8221-112">在调试器中运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="c8221-112">Run the application in the debugger.</span></span>  
   
-5.  <span data-ttu-id="237b6-113">按“Button1”。</span><span class="sxs-lookup"><span data-stu-id="237b6-113">Press **Button1**.</span></span>  
+5.  <span data-ttu-id="c8221-113">按“Button1”。</span><span class="sxs-lookup"><span data-stu-id="c8221-113">Press **Button1**.</span></span>  
   
-     <span data-ttu-id="237b6-114">应用程序将向应用程序的调试输出和日志文件中写入以下信息。</span><span class="sxs-lookup"><span data-stu-id="237b6-114">The application writes the following information to the application's debug output and log file.</span></span>  
+     <span data-ttu-id="c8221-114">应用程序将向应用程序的调试输出和日志文件中写入以下信息。</span><span class="sxs-lookup"><span data-stu-id="c8221-114">The application writes the following information to the application's debug output and log file.</span></span>  
   
      `DefaultSource Information: 0 : In Button1_Click`  
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  <span data-ttu-id="237b6-115">关闭该应用程序。</span><span class="sxs-lookup"><span data-stu-id="237b6-115">Close the application.</span></span>  
+6.  <span data-ttu-id="c8221-115">关闭该应用程序。</span><span class="sxs-lookup"><span data-stu-id="c8221-115">Close the application.</span></span>  
   
-     <span data-ttu-id="237b6-116">有关如何查看应用程序的调试输出窗口的信息，请参阅[输出窗口](/visualstudio/ide/reference/output-window)。</span><span class="sxs-lookup"><span data-stu-id="237b6-116">For information on how to view the application's debug output window, see [Output Window](/visualstudio/ide/reference/output-window).</span></span> <span data-ttu-id="237b6-117">有关应用程序日志文件的位置的信息，请参阅[演练：确定 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。</span><span class="sxs-lookup"><span data-stu-id="237b6-117">For information on the location of the application's log file, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span></span>  
+     <span data-ttu-id="c8221-116">有关如何查看应用程序的调试输出窗口的信息，请参阅[输出窗口](/visualstudio/ide/reference/output-window)。</span><span class="sxs-lookup"><span data-stu-id="c8221-116">For information on how to view the application's debug output window, see [Output Window](/visualstudio/ide/reference/output-window).</span></span> <span data-ttu-id="c8221-117">有关应用程序日志文件的位置的信息，请参阅[演练：确定 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。</span><span class="sxs-lookup"><span data-stu-id="c8221-117">For information on the location of the application's log file, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="237b6-118">默认情况下，应用程序关闭时将刷新日志文件输出。</span><span class="sxs-lookup"><span data-stu-id="237b6-118">By default, the application flushes the log-file output when the application closes.</span></span>  
+    >  <span data-ttu-id="c8221-118">默认情况下，应用程序关闭时将刷新日志文件输出。</span><span class="sxs-lookup"><span data-stu-id="c8221-118">By default, the application flushes the log-file output when the application closes.</span></span>  
   
-     <span data-ttu-id="237b6-119">在上面的示例中，对 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> 方法的第二次调用和对 <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> 方法的调用会产生日志输出，而对 `WriteEntry` 方法的第一次和最后一次调用则不会。</span><span class="sxs-lookup"><span data-stu-id="237b6-119">In the example above, the second call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> method and the call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> method produces log output, while the first and last calls to the `WriteEntry` method do not.</span></span> <span data-ttu-id="237b6-120">这是因为 `WriteEntry` 和 `WriteException` 的严重级别为“信息”和“错误”，而 `My.Application.Log` 对象的默认日志筛选支持这两种级别。</span><span class="sxs-lookup"><span data-stu-id="237b6-120">This is because the severity levels of `WriteEntry` and `WriteException` are "Information" and "Error", both of which are allowed by the `My.Application.Log` object's default log filtering.</span></span> <span data-ttu-id="237b6-121">但是，不允许严重级别为“开始”和“停止”的事件生成日志输出。</span><span class="sxs-lookup"><span data-stu-id="237b6-121">However, events with "Start" and "Stop" severity levels are prevented from producing log output.</span></span>  
+     <span data-ttu-id="c8221-119">在上面的示例中，对 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> 方法的第二次调用和对 <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> 方法的调用会产生日志输出，而对 `WriteEntry` 方法的第一次和最后一次调用则不会。</span><span class="sxs-lookup"><span data-stu-id="c8221-119">In the example above, the second call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> method and the call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> method produces log output, while the first and last calls to the `WriteEntry` method do not.</span></span> <span data-ttu-id="c8221-120">这是因为 `WriteEntry` 和 `WriteException` 的严重级别为“信息”和“错误”，而 `My.Application.Log` 对象的默认日志筛选支持这两种级别。</span><span class="sxs-lookup"><span data-stu-id="c8221-120">This is because the severity levels of `WriteEntry` and `WriteException` are "Information" and "Error", both of which are allowed by the `My.Application.Log` object's default log filtering.</span></span> <span data-ttu-id="c8221-121">但是，不允许严重级别为“开始”和“停止”的事件生成日志输出。</span><span class="sxs-lookup"><span data-stu-id="c8221-121">However, events with "Start" and "Stop" severity levels are prevented from producing log output.</span></span>  
   
-## <a name="filtering-for-all-myapplicationlog-listeners"></a><span data-ttu-id="237b6-122">对所有 My.Application.Log 侦听器的筛选</span><span class="sxs-lookup"><span data-stu-id="237b6-122">Filtering for All My.Application.Log Listeners</span></span>  
- <span data-ttu-id="237b6-123">`My.Application.Log` 对象使用名为 `DefaultSwitch` 的 <xref:System.Diagnostics.SourceSwitch>，以控制将哪些消息从 `WriteEntry` 和 `WriteException` 方法传递到日志侦听器。</span><span class="sxs-lookup"><span data-stu-id="237b6-123">The `My.Application.Log` object uses a <xref:System.Diagnostics.SourceSwitch> named `DefaultSwitch` to control which messages it passes from the `WriteEntry` and `WriteException` methods to the log listeners.</span></span> <span data-ttu-id="237b6-124">通过将 `DefaultSwitch` 的值设置为 <xref:System.Diagnostics.SourceLevels> 枚举值的其中一个，可在应用程序的配置文件中对其进行配置。</span><span class="sxs-lookup"><span data-stu-id="237b6-124">You can configure `DefaultSwitch` in the application's configuration file by setting its value to one of the <xref:System.Diagnostics.SourceLevels> enumeration values.</span></span> <span data-ttu-id="237b6-125">默认情况下，其值为“信息”。</span><span class="sxs-lookup"><span data-stu-id="237b6-125">By default, its value is "Information".</span></span>  
+## <a name="filtering-for-all-myapplicationlog-listeners"></a><span data-ttu-id="c8221-122">对所有 My.Application.Log 侦听器的筛选</span><span class="sxs-lookup"><span data-stu-id="c8221-122">Filtering for All My.Application.Log Listeners</span></span>  
+ <span data-ttu-id="c8221-123">`My.Application.Log` 对象使用名为 `DefaultSwitch` 的 <xref:System.Diagnostics.SourceSwitch>，以控制将哪些消息从 `WriteEntry` 和 `WriteException` 方法传递到日志侦听器。</span><span class="sxs-lookup"><span data-stu-id="c8221-123">The `My.Application.Log` object uses a <xref:System.Diagnostics.SourceSwitch> named `DefaultSwitch` to control which messages it passes from the `WriteEntry` and `WriteException` methods to the log listeners.</span></span> <span data-ttu-id="c8221-124">通过将 `DefaultSwitch` 的值设置为 <xref:System.Diagnostics.SourceLevels> 枚举值的其中一个，可在应用程序的配置文件中对其进行配置。</span><span class="sxs-lookup"><span data-stu-id="c8221-124">You can configure `DefaultSwitch` in the application's configuration file by setting its value to one of the <xref:System.Diagnostics.SourceLevels> enumeration values.</span></span> <span data-ttu-id="c8221-125">默认情况下，其值为“信息”。</span><span class="sxs-lookup"><span data-stu-id="c8221-125">By default, its value is "Information".</span></span>  
   
- <span data-ttu-id="237b6-126">此表显示了在给定的特定 `DefaultSwitch` 设置下，日志将消息写入侦听器所需的严重级别。</span><span class="sxs-lookup"><span data-stu-id="237b6-126">This table shows the severity level required for Log to write a message to the listeners, given a particular `DefaultSwitch` setting.</span></span>  
+ <span data-ttu-id="c8221-126">此表显示了在给定的特定 `DefaultSwitch` 设置下，日志将消息写入侦听器所需的严重级别。</span><span class="sxs-lookup"><span data-stu-id="c8221-126">This table shows the severity level required for Log to write a message to the listeners, given a particular `DefaultSwitch` setting.</span></span>  
   
-|<span data-ttu-id="237b6-127">DefaultSwitch 值</span><span class="sxs-lookup"><span data-stu-id="237b6-127">DefaultSwitch Value</span></span>|<span data-ttu-id="237b6-128">输出所需的消息严重级别</span><span class="sxs-lookup"><span data-stu-id="237b6-128">Message severity required for output</span></span>|  
+|<span data-ttu-id="c8221-127">DefaultSwitch 值</span><span class="sxs-lookup"><span data-stu-id="c8221-127">DefaultSwitch Value</span></span>|<span data-ttu-id="c8221-128">输出所需的消息严重级别</span><span class="sxs-lookup"><span data-stu-id="c8221-128">Message severity required for output</span></span>|  
 |---|---| 
 |`Critical`|`Critical`|  
-|`Error`|<span data-ttu-id="237b6-129">`Critical` 或 `Error`</span><span class="sxs-lookup"><span data-stu-id="237b6-129">`Critical` or `Error`</span></span>|  
-|`Warning`|<span data-ttu-id="237b6-130">`Critical`、`Error` 或 `Warning`</span><span class="sxs-lookup"><span data-stu-id="237b6-130">`Critical`, `Error`, or `Warning`</span></span>|  
-|`Information`|<span data-ttu-id="237b6-131">`Critical`、`Error`、`Warning` 或 `Information`</span><span class="sxs-lookup"><span data-stu-id="237b6-131">`Critical`, `Error`, `Warning`, or `Information`</span></span>|  
-|`Verbose`|<span data-ttu-id="237b6-132">`Critical`、`Error`、`Warning`、`Information` 或 `Verbose`</span><span class="sxs-lookup"><span data-stu-id="237b6-132">`Critical`, `Error`, `Warning`, `Information`, or `Verbose`</span></span>|  
-|`ActivityTracing`|<span data-ttu-id="237b6-133">`Start`、`Stop`、`Suspend`、`Resume` 或 `Transfer`</span><span class="sxs-lookup"><span data-stu-id="237b6-133">`Start`, `Stop`, `Suspend`, `Resume`, or `Transfer`</span></span>|  
-|`All`|<span data-ttu-id="237b6-134">允许所有消息。</span><span class="sxs-lookup"><span data-stu-id="237b6-134">All messages are allowed.</span></span>|  
-|`Off`|<span data-ttu-id="237b6-135">阻止所有消息。</span><span class="sxs-lookup"><span data-stu-id="237b6-135">All messages are blocked.</span></span>|  
+|`Error`|<span data-ttu-id="c8221-129">`Critical` 或 `Error`</span><span class="sxs-lookup"><span data-stu-id="c8221-129">`Critical` or `Error`</span></span>|  
+|`Warning`|<span data-ttu-id="c8221-130">`Critical`、`Error` 或 `Warning`</span><span class="sxs-lookup"><span data-stu-id="c8221-130">`Critical`, `Error`, or `Warning`</span></span>|  
+|`Information`|<span data-ttu-id="c8221-131">`Critical`、`Error`、`Warning` 或 `Information`</span><span class="sxs-lookup"><span data-stu-id="c8221-131">`Critical`, `Error`, `Warning`, or `Information`</span></span>|  
+|`Verbose`|<span data-ttu-id="c8221-132">`Critical`、`Error`、`Warning`、`Information` 或 `Verbose`</span><span class="sxs-lookup"><span data-stu-id="c8221-132">`Critical`, `Error`, `Warning`, `Information`, or `Verbose`</span></span>|  
+|`ActivityTracing`|<span data-ttu-id="c8221-133">`Start`、`Stop`、`Suspend`、`Resume` 或 `Transfer`</span><span class="sxs-lookup"><span data-stu-id="c8221-133">`Start`, `Stop`, `Suspend`, `Resume`, or `Transfer`</span></span>|  
+|`All`|<span data-ttu-id="c8221-134">允许所有消息。</span><span class="sxs-lookup"><span data-stu-id="c8221-134">All messages are allowed.</span></span>|  
+|`Off`|<span data-ttu-id="c8221-135">阻止所有消息。</span><span class="sxs-lookup"><span data-stu-id="c8221-135">All messages are blocked.</span></span>|  
   
 > [!NOTE]
->  <span data-ttu-id="237b6-136">`WriteEntry` 和 `WriteException` 方法分别具有一个未指定严重级别的重载。</span><span class="sxs-lookup"><span data-stu-id="237b6-136">The `WriteEntry` and `WriteException` methods each have an overload that does not specify a severity level.</span></span> <span data-ttu-id="237b6-137">`WriteEntry` 重载的隐式严重级别是“信息”，`WriteException` 重载的隐式严重级别是“错误”。</span><span class="sxs-lookup"><span data-stu-id="237b6-137">The implicit severity level for the `WriteEntry` overload is "Information", and the implicit severity level for the `WriteException` overload is "Error".</span></span>  
+>  <span data-ttu-id="c8221-136">`WriteEntry` 和 `WriteException` 方法分别具有一个未指定严重级别的重载。</span><span class="sxs-lookup"><span data-stu-id="c8221-136">The `WriteEntry` and `WriteException` methods each have an overload that does not specify a severity level.</span></span> <span data-ttu-id="c8221-137">`WriteEntry` 重载的隐式严重级别是“信息”，`WriteException` 重载的隐式严重级别是“错误”。</span><span class="sxs-lookup"><span data-stu-id="c8221-137">The implicit severity level for the `WriteEntry` overload is "Information", and the implicit severity level for the `WriteException` overload is "Error".</span></span>  
   
- <span data-ttu-id="237b6-138">此表说明上一示例中显示的日志输出：在 `DefaultSwitch` 默认设置为“信息”的情况下，只有对 `WriteEntry` 方法的第二次调用和对 `WriteException` 方法的调用能生成日志输出。</span><span class="sxs-lookup"><span data-stu-id="237b6-138">This table explains the log output shown in the previous example: with the default `DefaultSwitch` setting of "Information", only the second call to the `WriteEntry` method and the call to the `WriteException` method produce log output.</span></span>  
+ <span data-ttu-id="c8221-138">此表说明上一示例中显示的日志输出：在 `DefaultSwitch` 默认设置为“信息”的情况下，只有对 `WriteEntry` 方法的第二次调用和对 `WriteException` 方法的调用能生成日志输出。</span><span class="sxs-lookup"><span data-stu-id="c8221-138">This table explains the log output shown in the previous example: with the default `DefaultSwitch` setting of "Information", only the second call to the `WriteEntry` method and the call to the `WriteException` method produce log output.</span></span>  
   
-#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="237b6-139">仅记录活动跟踪事件</span><span class="sxs-lookup"><span data-stu-id="237b6-139">To log only activity tracing events</span></span>  
+#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="c8221-139">仅记录活动跟踪事件</span><span class="sxs-lookup"><span data-stu-id="c8221-139">To log only activity tracing events</span></span>  
   
-1.  <span data-ttu-id="237b6-140">在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。</span><span class="sxs-lookup"><span data-stu-id="237b6-140">Right-click app.config in the **Solution Explorer** and select **Open**.</span></span>  
+1.  <span data-ttu-id="c8221-140">在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。</span><span class="sxs-lookup"><span data-stu-id="c8221-140">Right-click app.config in the **Solution Explorer** and select **Open**.</span></span>  
   
-     <span data-ttu-id="237b6-141">或</span><span class="sxs-lookup"><span data-stu-id="237b6-141">-or-</span></span>  
+     <span data-ttu-id="c8221-141">或</span><span class="sxs-lookup"><span data-stu-id="c8221-141">-or-</span></span>  
   
-     <span data-ttu-id="237b6-142">如果其中没有 app.config 文件：</span><span class="sxs-lookup"><span data-stu-id="237b6-142">If there is no app.config file:</span></span>  
+     <span data-ttu-id="c8221-142">如果其中没有 app.config 文件：</span><span class="sxs-lookup"><span data-stu-id="c8221-142">If there is no app.config file:</span></span>  
   
-    1.  <span data-ttu-id="237b6-143">在 **“项目”** 菜单上选择 **“添加新项”**。</span><span class="sxs-lookup"><span data-stu-id="237b6-143">On the **Project** menu, choose **Add New Item**.</span></span>  
+    1.  <span data-ttu-id="c8221-143">在 **“项目”** 菜单上选择 **“添加新项”**。</span><span class="sxs-lookup"><span data-stu-id="c8221-143">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2.  <span data-ttu-id="237b6-144">在“添加新项”  对话框中，选择“应用程序配置文件” 。</span><span class="sxs-lookup"><span data-stu-id="237b6-144">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
+    2.  <span data-ttu-id="c8221-144">在“添加新项”  对话框中，选择“应用程序配置文件” 。</span><span class="sxs-lookup"><span data-stu-id="c8221-144">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3.  <span data-ttu-id="237b6-145">单击 **添加**。</span><span class="sxs-lookup"><span data-stu-id="237b6-145">Click **Add**.</span></span>  
+    3.  <span data-ttu-id="c8221-145">单击 **添加**。</span><span class="sxs-lookup"><span data-stu-id="c8221-145">Click **Add**.</span></span>  
   
-2.  <span data-ttu-id="237b6-146">找到 `<switches>` 部分，该部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。</span><span class="sxs-lookup"><span data-stu-id="237b6-146">Locate the `<switches>` section, which is in the `<system.diagnostics>` section, which is in the top-level `<configuration>` section.</span></span>  
+2.  <span data-ttu-id="c8221-146">找到 `<switches>` 部分，该部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。</span><span class="sxs-lookup"><span data-stu-id="c8221-146">Locate the `<switches>` section, which is in the `<system.diagnostics>` section, which is in the top-level `<configuration>` section.</span></span>  
   
-3.  <span data-ttu-id="237b6-147">找到将 `DefaultSwitch` 添加到开关集合的元素。</span><span class="sxs-lookup"><span data-stu-id="237b6-147">Find the element that adds `DefaultSwitch` to the collection of switches.</span></span> <span data-ttu-id="237b6-148">此元素应与下面的元素类似：</span><span class="sxs-lookup"><span data-stu-id="237b6-148">It should look similar to this element:</span></span>  
+3.  <span data-ttu-id="c8221-147">找到将 `DefaultSwitch` 添加到开关集合的元素。</span><span class="sxs-lookup"><span data-stu-id="c8221-147">Find the element that adds `DefaultSwitch` to the collection of switches.</span></span> <span data-ttu-id="c8221-148">此元素应与下面的元素类似：</span><span class="sxs-lookup"><span data-stu-id="c8221-148">It should look similar to this element:</span></span>  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  <span data-ttu-id="237b6-149">将 `value` 属性的值更改为“ActivityTracing”。</span><span class="sxs-lookup"><span data-stu-id="237b6-149">Change the value of the `value` attribute to "ActivityTracing".</span></span>  
+4.  <span data-ttu-id="c8221-149">将 `value` 属性的值更改为“ActivityTracing”。</span><span class="sxs-lookup"><span data-stu-id="c8221-149">Change the value of the `value` attribute to "ActivityTracing".</span></span>  
   
-5.  <span data-ttu-id="237b6-150">app.config 文件的内容应类似于下面的 XML：</span><span class="sxs-lookup"><span data-stu-id="237b6-150">The content of the app.config file should be similar to the following XML:</span></span>  
+5.  <span data-ttu-id="c8221-150">app.config 文件的内容应类似于下面的 XML：</span><span class="sxs-lookup"><span data-stu-id="c8221-150">The content of the app.config file should be similar to the following XML:</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -129,49 +120,49 @@ ms.lasthandoff: 04/26/2018
     </configuration>  
     ```  
   
-6.  <span data-ttu-id="237b6-151">在调试器中运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="237b6-151">Run the application in the debugger.</span></span>  
+6.  <span data-ttu-id="c8221-151">在调试器中运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="c8221-151">Run the application in the debugger.</span></span>  
   
-7.  <span data-ttu-id="237b6-152">按“Button1”。</span><span class="sxs-lookup"><span data-stu-id="237b6-152">Press **Button1**.</span></span>  
+7.  <span data-ttu-id="c8221-152">按“Button1”。</span><span class="sxs-lookup"><span data-stu-id="c8221-152">Press **Button1**.</span></span>  
   
-     <span data-ttu-id="237b6-153">应用程序将向应用程序的调试输出和日志文件中写入以下信息：</span><span class="sxs-lookup"><span data-stu-id="237b6-153">The application writes the following information to the application's debug output and log file:</span></span>  
+     <span data-ttu-id="c8221-153">应用程序将向应用程序的调试输出和日志文件中写入以下信息：</span><span class="sxs-lookup"><span data-stu-id="c8221-153">The application writes the following information to the application's debug output and log file:</span></span>  
   
      `DefaultSource Start: 4 : Entering Button1_Click`  
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  <span data-ttu-id="237b6-154">关闭该应用程序。</span><span class="sxs-lookup"><span data-stu-id="237b6-154">Close the application.</span></span>  
+8.  <span data-ttu-id="c8221-154">关闭该应用程序。</span><span class="sxs-lookup"><span data-stu-id="c8221-154">Close the application.</span></span>  
   
-9. <span data-ttu-id="237b6-155">将 `value` 属性的值改回“信息”。</span><span class="sxs-lookup"><span data-stu-id="237b6-155">Change the value of the `value` attribute back to "Information".</span></span>  
+9. <span data-ttu-id="c8221-155">将 `value` 属性的值改回“信息”。</span><span class="sxs-lookup"><span data-stu-id="c8221-155">Change the value of the `value` attribute back to "Information".</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="237b6-156">`DefaultSwitch` 开关设置仅控制 `My.Application.Log`。</span><span class="sxs-lookup"><span data-stu-id="237b6-156">The `DefaultSwitch` switch setting controls only `My.Application.Log`.</span></span> <span data-ttu-id="237b6-157">它不会更改 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]<xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 类的行为方式。</span><span class="sxs-lookup"><span data-stu-id="237b6-157">It does not change how the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> and <xref:System.Diagnostics.Debug?displayProperty=nameWithType> classes behave.</span></span>  
+    >  <span data-ttu-id="c8221-156">`DefaultSwitch` 开关设置仅控制 `My.Application.Log`。</span><span class="sxs-lookup"><span data-stu-id="c8221-156">The `DefaultSwitch` switch setting controls only `My.Application.Log`.</span></span> <span data-ttu-id="c8221-157">它不会更改 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]<xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 类的行为方式。</span><span class="sxs-lookup"><span data-stu-id="c8221-157">It does not change how the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> and <xref:System.Diagnostics.Debug?displayProperty=nameWithType> classes behave.</span></span>  
   
-## <a name="individual-filtering-for-myapplicationlog-listeners"></a><span data-ttu-id="237b6-158">对 My.Application.Log 侦听器的单独筛选</span><span class="sxs-lookup"><span data-stu-id="237b6-158">Individual Filtering For My.Application.Log Listeners</span></span>  
- <span data-ttu-id="237b6-159">上面的示例演示如何更改对所有 `My.Application.Log` 输出的筛选。</span><span class="sxs-lookup"><span data-stu-id="237b6-159">The previous example shows how to change the filtering for all `My.Application.Log` output.</span></span> <span data-ttu-id="237b6-160">此示例演示如何筛选单个日志侦听器。</span><span class="sxs-lookup"><span data-stu-id="237b6-160">This example demonstrates how to filter an individual log listener.</span></span> <span data-ttu-id="237b6-161">默认情况下，应用程序有两个可写入应用程序的调试输出和日志文件的侦听器。</span><span class="sxs-lookup"><span data-stu-id="237b6-161">By default, an application has two listeners that write to the application's debug output and the log file.</span></span>  
+## <a name="individual-filtering-for-myapplicationlog-listeners"></a><span data-ttu-id="c8221-158">对 My.Application.Log 侦听器的单独筛选</span><span class="sxs-lookup"><span data-stu-id="c8221-158">Individual Filtering For My.Application.Log Listeners</span></span>  
+ <span data-ttu-id="c8221-159">上面的示例演示如何更改对所有 `My.Application.Log` 输出的筛选。</span><span class="sxs-lookup"><span data-stu-id="c8221-159">The previous example shows how to change the filtering for all `My.Application.Log` output.</span></span> <span data-ttu-id="c8221-160">此示例演示如何筛选单个日志侦听器。</span><span class="sxs-lookup"><span data-stu-id="c8221-160">This example demonstrates how to filter an individual log listener.</span></span> <span data-ttu-id="c8221-161">默认情况下，应用程序有两个可写入应用程序的调试输出和日志文件的侦听器。</span><span class="sxs-lookup"><span data-stu-id="c8221-161">By default, an application has two listeners that write to the application's debug output and the log file.</span></span>  
   
- <span data-ttu-id="237b6-162">配置文件控制日志侦听器的行为，方法是允许每个侦听器拥有一个筛选器，这类似于 `My.Application.Log` 的开关。</span><span class="sxs-lookup"><span data-stu-id="237b6-162">The configuration file controls the behavior of the log listeners by allowing each one to have a filter, which is similar to a switch for `My.Application.Log`.</span></span> <span data-ttu-id="237b6-163">仅当日志的 `DefaultSwitch` 和日志侦听器的筛选器均支持消息的严重级别时，日志侦听器才会输出消息。</span><span class="sxs-lookup"><span data-stu-id="237b6-163">A log listener will output a message only if the message's severity is allowed by both the log's `DefaultSwitch` and the log listener's filter.</span></span>  
+ <span data-ttu-id="c8221-162">配置文件控制日志侦听器的行为，方法是允许每个侦听器拥有一个筛选器，这类似于 `My.Application.Log` 的开关。</span><span class="sxs-lookup"><span data-stu-id="c8221-162">The configuration file controls the behavior of the log listeners by allowing each one to have a filter, which is similar to a switch for `My.Application.Log`.</span></span> <span data-ttu-id="c8221-163">仅当日志的 `DefaultSwitch` 和日志侦听器的筛选器均支持消息的严重级别时，日志侦听器才会输出消息。</span><span class="sxs-lookup"><span data-stu-id="c8221-163">A log listener will output a message only if the message's severity is allowed by both the log's `DefaultSwitch` and the log listener's filter.</span></span>  
   
- <span data-ttu-id="237b6-164">此示例演示如何为新的调试侦听器配置筛选并将其添加到 `Log` 对象。</span><span class="sxs-lookup"><span data-stu-id="237b6-164">This example demonstrates how to configure filtering for a new debug listener and add it to the `Log` object.</span></span> <span data-ttu-id="237b6-165">应删除 `Log` 对象中的默认调试侦听器，以便明确调试消息来自新的调试侦听器。</span><span class="sxs-lookup"><span data-stu-id="237b6-165">The default debug listener should be removed from the `Log` object, so it is clear that the debug messages come from the new debug listener.</span></span>  
+ <span data-ttu-id="c8221-164">此示例演示如何为新的调试侦听器配置筛选并将其添加到 `Log` 对象。</span><span class="sxs-lookup"><span data-stu-id="c8221-164">This example demonstrates how to configure filtering for a new debug listener and add it to the `Log` object.</span></span> <span data-ttu-id="c8221-165">应删除 `Log` 对象中的默认调试侦听器，以便明确调试消息来自新的调试侦听器。</span><span class="sxs-lookup"><span data-stu-id="c8221-165">The default debug listener should be removed from the `Log` object, so it is clear that the debug messages come from the new debug listener.</span></span>  
   
-#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="237b6-166">仅记录活动跟踪事件</span><span class="sxs-lookup"><span data-stu-id="237b6-166">To log only activity-tracing events</span></span>  
+#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="c8221-166">仅记录活动跟踪事件</span><span class="sxs-lookup"><span data-stu-id="c8221-166">To log only activity-tracing events</span></span>  
   
-1.  <span data-ttu-id="237b6-167">在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。</span><span class="sxs-lookup"><span data-stu-id="237b6-167">Right-click app.config in the **Solution Explorer** and choose **Open**.</span></span>  
+1.  <span data-ttu-id="c8221-167">在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。</span><span class="sxs-lookup"><span data-stu-id="c8221-167">Right-click app.config in the **Solution Explorer** and choose **Open**.</span></span>  
   
-     <span data-ttu-id="237b6-168">或</span><span class="sxs-lookup"><span data-stu-id="237b6-168">-or-</span></span>  
+     <span data-ttu-id="c8221-168">或</span><span class="sxs-lookup"><span data-stu-id="c8221-168">-or-</span></span>  
   
-     <span data-ttu-id="237b6-169">如果其中没有 app.config 文件：</span><span class="sxs-lookup"><span data-stu-id="237b6-169">If there is no app.config file:</span></span>  
+     <span data-ttu-id="c8221-169">如果其中没有 app.config 文件：</span><span class="sxs-lookup"><span data-stu-id="c8221-169">If there is no app.config file:</span></span>  
   
-    1.  <span data-ttu-id="237b6-170">在 **“项目”** 菜单上选择 **“添加新项”**。</span><span class="sxs-lookup"><span data-stu-id="237b6-170">On the **Project** menu, choose **Add New Item**.</span></span>  
+    1.  <span data-ttu-id="c8221-170">在 **“项目”** 菜单上选择 **“添加新项”**。</span><span class="sxs-lookup"><span data-stu-id="c8221-170">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2.  <span data-ttu-id="237b6-171">在“添加新项”  对话框中，选择“应用程序配置文件” 。</span><span class="sxs-lookup"><span data-stu-id="237b6-171">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
+    2.  <span data-ttu-id="c8221-171">在“添加新项”  对话框中，选择“应用程序配置文件” 。</span><span class="sxs-lookup"><span data-stu-id="c8221-171">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3.  <span data-ttu-id="237b6-172">单击 **添加**。</span><span class="sxs-lookup"><span data-stu-id="237b6-172">Click **Add**.</span></span>  
+    3.  <span data-ttu-id="c8221-172">单击 **添加**。</span><span class="sxs-lookup"><span data-stu-id="c8221-172">Click **Add**.</span></span>  
   
-2.  <span data-ttu-id="237b6-173">在“解决方案资源管理器”中右键单击 app.config。</span><span class="sxs-lookup"><span data-stu-id="237b6-173">Right-click app.config in **Solution Explorer**.</span></span> <span data-ttu-id="237b6-174">选择“打开”。</span><span class="sxs-lookup"><span data-stu-id="237b6-174">Choose **Open**.</span></span>  
+2.  <span data-ttu-id="c8221-173">在“解决方案资源管理器”中右键单击 app.config。</span><span class="sxs-lookup"><span data-stu-id="c8221-173">Right-click app.config in **Solution Explorer**.</span></span> <span data-ttu-id="c8221-174">选择“打开”。</span><span class="sxs-lookup"><span data-stu-id="c8221-174">Choose **Open**.</span></span>  
   
-3.  <span data-ttu-id="237b6-175">找到 `<listeners>` 部分，该部分位于 `name` 属性为“DefaultSource”的 `<source>` 部分中，后者位于 `<sources>` 部分中。</span><span class="sxs-lookup"><span data-stu-id="237b6-175">Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", which is under the `<sources>` section.</span></span> <span data-ttu-id="237b6-176">`<sources>` 部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。</span><span class="sxs-lookup"><span data-stu-id="237b6-176">The `<sources>` section is under the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
+3.  <span data-ttu-id="c8221-175">找到 `<listeners>` 部分，该部分位于 `name` 属性为“DefaultSource”的 `<source>` 部分中，后者位于 `<sources>` 部分中。</span><span class="sxs-lookup"><span data-stu-id="c8221-175">Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", which is under the `<sources>` section.</span></span> <span data-ttu-id="c8221-176">`<sources>` 部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。</span><span class="sxs-lookup"><span data-stu-id="c8221-176">The `<sources>` section is under the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
   
-4.  <span data-ttu-id="237b6-177">将此元素添加到 `<listeners>` 部分：</span><span class="sxs-lookup"><span data-stu-id="237b6-177">Add this element to the `<listeners>` section:</span></span>  
+4.  <span data-ttu-id="c8221-177">将此元素添加到 `<listeners>` 部分：</span><span class="sxs-lookup"><span data-stu-id="c8221-177">Add this element to the `<listeners>` section:</span></span>  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -180,9 +171,9 @@ ms.lasthandoff: 04/26/2018
     <add name="NewDefault"/>  
     ```  
   
-5.  <span data-ttu-id="237b6-178">找到 `<sharedListeners>` 部分，该部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。</span><span class="sxs-lookup"><span data-stu-id="237b6-178">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
+5.  <span data-ttu-id="c8221-178">找到 `<sharedListeners>` 部分，该部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。</span><span class="sxs-lookup"><span data-stu-id="c8221-178">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
   
-6.  <span data-ttu-id="237b6-179">将此元素添加到该 `<sharedListeners>` 部分：</span><span class="sxs-lookup"><span data-stu-id="237b6-179">Add this element to that `<sharedListeners>` section:</span></span>  
+6.  <span data-ttu-id="c8221-179">将此元素添加到该 `<sharedListeners>` 部分：</span><span class="sxs-lookup"><span data-stu-id="c8221-179">Add this element to that `<sharedListeners>` section:</span></span>  
   
     ```xml  
     <add name="NewDefault"   
@@ -195,9 +186,9 @@ ms.lasthandoff: 04/26/2018
     </add>  
     ```  
   
-     <span data-ttu-id="237b6-180"><xref:System.Diagnostics.EventTypeFilter> 筛选器将其中一个 <xref:System.Diagnostics.SourceLevels> 枚举值用作其 `initializeData` 属性。</span><span class="sxs-lookup"><span data-stu-id="237b6-180">The <xref:System.Diagnostics.EventTypeFilter> filter takes one of the <xref:System.Diagnostics.SourceLevels> enumeration values as its `initializeData` attribute.</span></span>  
+     <span data-ttu-id="c8221-180"><xref:System.Diagnostics.EventTypeFilter> 筛选器将其中一个 <xref:System.Diagnostics.SourceLevels> 枚举值用作其 `initializeData` 属性。</span><span class="sxs-lookup"><span data-stu-id="c8221-180">The <xref:System.Diagnostics.EventTypeFilter> filter takes one of the <xref:System.Diagnostics.SourceLevels> enumeration values as its `initializeData` attribute.</span></span>  
   
-7.  <span data-ttu-id="237b6-181">app.config 文件的内容应类似于下面的 XML：</span><span class="sxs-lookup"><span data-stu-id="237b6-181">The content of the app.config file should be similar to the following XML:</span></span>  
+7.  <span data-ttu-id="c8221-181">app.config 文件的内容应类似于下面的 XML：</span><span class="sxs-lookup"><span data-stu-id="c8221-181">The content of the app.config file should be similar to the following XML:</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -238,28 +229,28 @@ ms.lasthandoff: 04/26/2018
     </configuration>  
     ```  
   
-8.  <span data-ttu-id="237b6-182">在调试器中运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="237b6-182">Run the application in the debugger.</span></span>  
+8.  <span data-ttu-id="c8221-182">在调试器中运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="c8221-182">Run the application in the debugger.</span></span>  
   
-9. <span data-ttu-id="237b6-183">按“Button1”。</span><span class="sxs-lookup"><span data-stu-id="237b6-183">Press **Button1**.</span></span>  
+9. <span data-ttu-id="c8221-183">按“Button1”。</span><span class="sxs-lookup"><span data-stu-id="c8221-183">Press **Button1**.</span></span>  
   
-     <span data-ttu-id="237b6-184">应用程序将以下信息写入应用程序的日志文件：</span><span class="sxs-lookup"><span data-stu-id="237b6-184">The application writes the following information to the application's log file:</span></span>  
+     <span data-ttu-id="c8221-184">应用程序将以下信息写入应用程序的日志文件：</span><span class="sxs-lookup"><span data-stu-id="c8221-184">The application writes the following information to the application's log file:</span></span>  
   
      `Default Information: 0 : In Button1_Click`  
   
      `Default Error: 2 : Error in the application.`  
   
-     <span data-ttu-id="237b6-185">由于筛选限制性更强，应用程序将较少的信息写入应用程序的调试输出。</span><span class="sxs-lookup"><span data-stu-id="237b6-185">The application writes less information to the application's debug output because of the more restrictive filtering.</span></span>  
+     <span data-ttu-id="c8221-185">由于筛选限制性更强，应用程序将较少的信息写入应用程序的调试输出。</span><span class="sxs-lookup"><span data-stu-id="c8221-185">The application writes less information to the application's debug output because of the more restrictive filtering.</span></span>  
   
      `Default Error   2   Error`  
   
-10. <span data-ttu-id="237b6-186">关闭该应用程序。</span><span class="sxs-lookup"><span data-stu-id="237b6-186">Close the application.</span></span>  
+10. <span data-ttu-id="c8221-186">关闭该应用程序。</span><span class="sxs-lookup"><span data-stu-id="c8221-186">Close the application.</span></span>  
   
- <span data-ttu-id="237b6-187">有关在部署后更改日志设置的详细信息，请参阅[使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)。</span><span class="sxs-lookup"><span data-stu-id="237b6-187">For more information about changing log settings after deployment, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).</span></span>  
+ <span data-ttu-id="c8221-187">有关在部署后更改日志设置的详细信息，请参阅[使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)。</span><span class="sxs-lookup"><span data-stu-id="c8221-187">For more information about changing log settings after deployment, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="237b6-188">请参阅</span><span class="sxs-lookup"><span data-stu-id="237b6-188">See Also</span></span>  
- [<span data-ttu-id="237b6-189">演练：确定 My.Application.Log 写入信息的位置</span><span class="sxs-lookup"><span data-stu-id="237b6-189">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
- [<span data-ttu-id="237b6-190">演练：更改 My.Application.Log 写入信息的位置</span><span class="sxs-lookup"><span data-stu-id="237b6-190">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- [<span data-ttu-id="237b6-191">演练：创建自定义日志侦听器</span><span class="sxs-lookup"><span data-stu-id="237b6-191">Walkthrough: Creating Custom Log Listeners</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
- [<span data-ttu-id="237b6-192">如何：编写日志消息</span><span class="sxs-lookup"><span data-stu-id="237b6-192">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [<span data-ttu-id="237b6-193">跟踪开关</span><span class="sxs-lookup"><span data-stu-id="237b6-193">Trace Switches</span></span>](../../../../framework/debug-trace-profile/trace-switches.md)  
- [<span data-ttu-id="237b6-194">记录来自应用程序的信息</span><span class="sxs-lookup"><span data-stu-id="237b6-194">Logging Information from the Application</span></span>](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+## <a name="see-also"></a><span data-ttu-id="c8221-188">请参阅</span><span class="sxs-lookup"><span data-stu-id="c8221-188">See Also</span></span>  
+ [<span data-ttu-id="c8221-189">演练：确定 My.Application.Log 写入信息的位置</span><span class="sxs-lookup"><span data-stu-id="c8221-189">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [<span data-ttu-id="c8221-190">演练：更改 My.Application.Log 写入信息的位置</span><span class="sxs-lookup"><span data-stu-id="c8221-190">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [<span data-ttu-id="c8221-191">演练：创建自定义日志侦听器</span><span class="sxs-lookup"><span data-stu-id="c8221-191">Walkthrough: Creating Custom Log Listeners</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ [<span data-ttu-id="c8221-192">如何：编写日志消息</span><span class="sxs-lookup"><span data-stu-id="c8221-192">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [<span data-ttu-id="c8221-193">跟踪开关</span><span class="sxs-lookup"><span data-stu-id="c8221-193">Trace Switches</span></span>](../../../../framework/debug-trace-profile/trace-switches.md)  
+ [<span data-ttu-id="c8221-194">记录来自应用程序的信息</span><span class="sxs-lookup"><span data-stu-id="c8221-194">Logging Information from the Application</span></span>](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)

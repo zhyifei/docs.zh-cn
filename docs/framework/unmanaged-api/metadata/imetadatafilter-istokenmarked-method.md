@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5bf5149e8e42a810a6a490767638b374f66b5679
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445859"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a><span data-ttu-id="d65fb-102">IMetaDataFilter::IsTokenMarked 方法</span><span class="sxs-lookup"><span data-stu-id="d65fb-102">IMetaDataFilter::IsTokenMarked Method</span></span>
 <span data-ttu-id="d65fb-103">获取一个值，该值指定元数据标记是否已标记为已处理。</span><span class="sxs-lookup"><span data-stu-id="d65fb-103">Gets a value indicating whether the specified metadata token has been marked as processed.</span></span>  

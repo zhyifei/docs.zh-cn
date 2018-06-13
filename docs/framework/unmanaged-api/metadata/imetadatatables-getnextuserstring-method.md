@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b9e729732175b7249e4d3be91996bc5e4050855
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450201"
 ---
 # <a name="imetadatatablesgetnextuserstring-method"></a><span data-ttu-id="6ccc8-102">IMetaDataTables::GetNextUserString 方法</span><span class="sxs-lookup"><span data-stu-id="6ccc8-102">IMetaDataTables::GetNextUserString Method</span></span>
 <span data-ttu-id="6ccc8-103">获取包含当前表列中的下一步的硬编码字符串的行的索引。</span><span class="sxs-lookup"><span data-stu-id="6ccc8-103">Gets the index of the row that contains the next hard-coded string in the current table column.</span></span>  

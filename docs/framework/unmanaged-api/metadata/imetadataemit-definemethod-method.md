@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 53fd830cdefda58d40f96f8662a80d1888d963dc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449194"
 ---
 # <a name="imetadataemitdefinemethod-method"></a><span data-ttu-id="d414c-102">IMetaDataEmit::DefineMethod 方法</span><span class="sxs-lookup"><span data-stu-id="d414c-102">IMetaDataEmit::DefineMethod Method</span></span>
 <span data-ttu-id="d414c-103">创建一个定义为方法或全局函数使用指定的签名，并将令牌返回到该方法定义。</span><span class="sxs-lookup"><span data-stu-id="d414c-103">Creates a definition for a method or global function with the specified signature, and returns a token to that method definition.</span></span>  

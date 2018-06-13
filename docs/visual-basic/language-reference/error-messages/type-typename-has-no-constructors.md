@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595028"
 ---
 # <a name="type-39lttypenamegt39-has-no-constructors"></a><span data-ttu-id="2bb94-102">类型&#39; &lt;typename&gt; &#39;没有构造函数</span><span class="sxs-lookup"><span data-stu-id="2bb94-102">Type &#39;&lt;typename&gt;&#39; has no constructors</span></span>
 <span data-ttu-id="2bb94-103">某个类型不支持对 `Sub New()` 的调用。</span><span class="sxs-lookup"><span data-stu-id="2bb94-103">A type does not support a call to `Sub New()`.</span></span> <span data-ttu-id="2bb94-104">一个可能的原因是编译器或二进制文件被损坏。</span><span class="sxs-lookup"><span data-stu-id="2bb94-104">One possible cause is a corrupted compiler or binary file.</span></span>  

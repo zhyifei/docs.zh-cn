@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593257"
 ---
 # <a name="this-key-is-already-associated-with-an-element-of-this-collection"></a><span data-ttu-id="49f9f-102">此关键字已与该集合的某个元素相关联</span><span class="sxs-lookup"><span data-stu-id="49f9f-102">This key is already associated with an element of this collection</span></span>
 <span data-ttu-id="49f9f-103">指定键的集合成员已标识的集合的另一个成员。</span><span class="sxs-lookup"><span data-stu-id="49f9f-103">The specified a key for a collection member already identifies another member of the collection.</span></span> <span data-ttu-id="49f9f-104">该键中指定的字符串`Add`唯一标识一个集合的特定成员的方法。</span><span class="sxs-lookup"><span data-stu-id="49f9f-104">A key is a string specified in the `Add` method that uniquely identifies a specific member of a collection.</span></span>  
