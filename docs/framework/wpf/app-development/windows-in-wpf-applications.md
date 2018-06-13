@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550772"
 ---
 # <a name="windows-in-wpf-applications"></a>WPF 应用程序中的窗口
 用户与通过 windows 应用程序进行交互。 窗口的基本目的是承载并显示内容。 内容，窗口承载取决于数据的类型，应用程序操作，其中包括媒体、 可扩展应用程序标记语言 (XAML) 页、 网页、 文档、 数据库表和记录和系统信息类型。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532933"
 ---
 # <a name="imagelist-component-windows-forms"></a>ImageList 组件（Windows 窗体）
 Windows 窗体 `ImageList` 组件用于存储图像，此图像之后可由控件显示。 借助图像列表，你可为图像的单个一致目录编写代码。  
