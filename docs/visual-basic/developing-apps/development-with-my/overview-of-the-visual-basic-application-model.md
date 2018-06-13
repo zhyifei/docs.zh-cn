@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591594"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 应用程序模型概述
 Visual Basic 都提供用于控制 Windows 窗体应用程序的行为定义完善的模型： Visual Basic 应用程序模型。 此模型包括事件，以处理应用程序的启动和关闭，以及用于捕获未经处理的异常事件。 它还提供有关在开发单实例应用程序的支持。 应用程序模型是可扩展的，因此需要更多控制权的开发人员可以自定义其可重写的方法。  

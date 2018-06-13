@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652713"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 使编译器不会自动引用标准库。  

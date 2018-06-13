@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590915"
 ---
 # <a name="key-security-concepts"></a>安全性的基础概念
 Microsoft .NET Framework 提供基于角色的安全性，帮助解决有关移动代码的安全性问题，并提供支持，使组件可以决定用户有权执行的操作。  

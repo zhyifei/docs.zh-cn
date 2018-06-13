@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757289"
 ---
 # <a name="copying-dataset-contents"></a>复制数据集内容
 你可以创建一份<xref:System.Data.DataSet>，以便可以处理的数据不会影响原始数据，或工作中的数据的子集**数据集**。 在复制**数据集**，你可以：  
