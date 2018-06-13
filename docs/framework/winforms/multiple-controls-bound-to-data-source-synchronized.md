@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539535"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>如何：确保绑定到同一数据源的多个控件保持同步
 通常当使用 Windows 窗体中的数据绑定时, 多个控件将绑定到同一数据源。 在某些情况下，可能需要进行额外的步骤，以确保控件的绑定的属性保持同步与彼此和数据源。 这些步骤是在两个情况下需要：  

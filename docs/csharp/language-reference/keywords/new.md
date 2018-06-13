@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266066"
 ---
 # <a name="new-c-reference"></a>new（C# 参考）
 在 C# 中，`new` 关键字可以用作运算符、修饰符或约束。  

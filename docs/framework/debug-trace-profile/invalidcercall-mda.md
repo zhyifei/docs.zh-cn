@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393612"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 方法没有可靠性协定或具有过弱协定时，如果受约束的执行区域 (CER) 图内存在对此类方法的调用，将激活 `invalidCERCall` 托管调试助手 (MDA)。 弱协定是这样的一种协定：它声明最坏情况下的状态损坏的范围超出传递给调用的实例，即 <xref:System.AppDomain> 或进程状态可能会损坏，或者在 CER 中调用它时不可始终明确地计算其结果。  

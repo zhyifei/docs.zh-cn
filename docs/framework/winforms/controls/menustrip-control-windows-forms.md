@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540185"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip 控件（Windows 窗体）
 此控件组应用程序对其执行命令并使其易访问。  

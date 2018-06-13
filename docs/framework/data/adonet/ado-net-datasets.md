@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758511"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 数据集
 <xref:System.Data.DataSet> 对象对于支持 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的断开连接的分布式数据方案起到至关重要的作用。 **数据集**是的内存驻留表示形式提供一致的关系编程模型，而不考虑数据源的数据。 它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 **数据集**表示一组完整的数据，包括相关的表、 约束和表之间的关系。 下图显示**数据集**对象模型。  

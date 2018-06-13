@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539914"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式
 如果想要显示非常大量的表格数据<xref:System.Windows.Forms.DataGridView>控件，则可设置<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性`true`和显式管理与其数据存储区的控件的交互。 这样可以微调控件在此情况下的性能。  

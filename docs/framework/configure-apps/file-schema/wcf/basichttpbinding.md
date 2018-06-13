@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751696"
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;
 表示 Windows Communication Foundation (WCF)服务可用来配置和公开终结点的绑定，这些终结点将能够与基于 ASMX 的 Web 服务和客户端以及其他符合 WS-I Basic Profile 1.1 的服务进行通信。  

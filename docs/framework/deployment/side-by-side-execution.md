@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395156"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>在 .NET Framework 中并行执行
 并行执行是在同一台计算机上运行应用程序或组件的多个版本的能力。 在同一台计算机上，可以同时安装公共语言运行时的多个版本，还可以同时安装使用运行时的某个版本的应用程序和组件的多个版本。  

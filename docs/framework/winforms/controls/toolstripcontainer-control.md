@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538843"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer 控件
 <xref:System.Windows.Forms.ToolStrip> 控件通过使用 <xref:System.Windows.Forms.ToolStripContainer> 而具有内置漂浮功能（停靠时在工具区域中共享水平或垂直空间）。  

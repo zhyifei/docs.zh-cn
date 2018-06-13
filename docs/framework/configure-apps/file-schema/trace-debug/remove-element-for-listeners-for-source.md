@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754270"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;删除&gt;元素&lt;侦听器&gt;为&lt;源&gt;
 从跟踪源的 `Listeners` 集合中删除侦听器。  

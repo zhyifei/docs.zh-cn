@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 19f76a163fae4a1390a2e0fcb85299f8ce78180c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435885"
 ---
 # <a name="icorpublishprocess-interface"></a>ICorPublishProcess 接口
 提供访问要显示有关进程的信息的方法。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
 |[IsManaged 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-ismanaged-method.md)|获取一个值，该值指示由此是否引用的进程`ICorPublishProcess`已知运行托管的代码。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorPub.idl、 CorPub.h  
   
