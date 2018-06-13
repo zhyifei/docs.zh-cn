@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8cec2a622a1a30881949ad5a9f2050077e195015
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461394"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 接口
 提供代码探查器用于与公共语言运行时 (CLR)，从而控制事件监视并请求信息通信的方法。 `ICorProfilerInfo2`接口是的扩展[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)接口。 也就是说，它提供了.NET Framework 2.0 版和更高版本中支持的新方法。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/04/2018
  CLR 将传递`ICorProfilerInfo2`到每个代码探查器在初始化，期间使用探查器的实现的接口[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)。 然后，代码探查器可以调用的方法`ICorProfilerInfo2`接口来获取有关正在 CLR 控件下执行的托管代码的信息。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

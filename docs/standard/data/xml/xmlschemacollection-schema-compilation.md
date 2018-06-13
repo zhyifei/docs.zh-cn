@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571480"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection 架构编译
 XmlSchemaCollection 是可用于存储和验证 XML 数据缩减 (XDR) 和 XML 架构定义语言 (XSD) 架构的缓存或库。 XmlSchemaCollection 在内存中缓存架构，而不是通过文件或 URL 访问架构，从而提升了性能。  

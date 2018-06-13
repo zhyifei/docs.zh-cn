@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460416"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 函数
 基于时间的格式转换是否将转换为指定的格式中，一个原始性能数据值或两个原始性能数据值。   
@@ -85,7 +86,7 @@ int FormatFromRawValue (
 此函数包装对的调用[FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx)函数。
 
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **库：** PerfCounter.dll  
   

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1fac897f743ca452c38282143cdf822b682df1df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460110"
 ---
 # <a name="qualifiersetbeginenumeration-function"></a>QualifierSet_BeginEnumeration 函数
 将枚举数对象的限定符重置为枚举的开头。  
@@ -74,7 +75,7 @@ HRESULT QualifierSet_BeginEnumeration (
 |`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 返回名称的列是限定符传播的另一个对象。 <br/> 属性： 返回仅限定符传播到此属性从类定义中，而不从本身的属性。 <br/> 实例： 从类定义返回仅这些限定符传播。 <br/> 类： 返回仅这些限定符名称从父类继承。 |
 
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

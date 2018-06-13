@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572104"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML 架构对象模型概述
 Microsoft .NET Framework 中的架构对象模型 (SOM) 是一个丰富 API，可以通过编程创建、编辑和验证架构。 SOM 对 XML 架构文档的作用类似与文档对象模型 (DOM) 对 XML 文档的作用。 XML 架构文档是有效的 XML 文件，在加载到 SOM 之后，传达其他符合该架构的 XML 文档的结构和有效性的含义。  

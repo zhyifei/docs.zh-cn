@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592075"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My 对项目类型的依赖方式 (Visual Basic)
 `My` 公开特定项目类型所需的那些对象。 例如，`My.Forms`对象是在 Windows 窗体应用程序中可用但在一个控制台应用程序中不可用。 本主题介绍其中`My`对象可在不同项目类型。  

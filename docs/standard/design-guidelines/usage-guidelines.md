@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571028"
 ---
 # <a name="usage-guidelines"></a>使用准则
 本部分包含在可公开访问的 Api 中使用公共类型的指导原则。 它涉及到直接使用内置的 Framework 类型 （例如，序列化属性） 和重载常用的运算符。  

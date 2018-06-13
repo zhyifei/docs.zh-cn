@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569325"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>嵌入到文档中的样式表指令
 有时，现有 XML 会包含 `<?xml:stylesheet?>` 形式的样式表指令。 Microsoft Internet Explorer 接受此指令作为 `<?xml-stylesheet?>` 语法的替换形式。 当 XML 数据包含 `<?xml:stylesheet?>` 指令时（如下面的数据所示），试图将此数据加载到 XML 文档对象模型 (DOM) 中将引发异常。  

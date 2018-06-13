@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570661"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 选择、计算和匹配 XML 数据
 <xref:System.Xml.XPath.XPathNavigator> 类提供的方法可以使用 XPath 查询在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中选择节点，计算和检查 XPath 表达式的结果，并确定 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的节点是否与给定的 XPath 表达式匹配。 这些和其他一些与在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中选择、计算和匹配节点有关的概念在下面的主题中介绍。  

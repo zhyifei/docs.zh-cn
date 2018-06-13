@@ -15,6 +15,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457302"
 ---
 # <a name="compiling-apps-with-net-native"></a>使用 .NET Native 编译引用
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 是包含在 Visual Studio 2015 和更高版本的预编译技术用于生成和部署 Windows 应用程序。 它自动将以托管代码（C# 或 Visual Basic）编写并面向 .NET Framework 和 Windows 10 的发布版本的应用编译为本机代码。  
