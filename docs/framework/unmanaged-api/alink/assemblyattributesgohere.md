@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c24ca43f35e237b6387e108563b1f9c9ed432242
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402390"
 ---
 # <a name="assemblyattributesgohere"></a>AssemblyAttributesGoHere
 由 ALink 用作占位符以存储有关自定义特性的信息。  

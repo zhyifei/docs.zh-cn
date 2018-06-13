@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399972"
 ---
 # <a name="custom-token-handlers"></a>自定义令牌处理程序
 本主题讨论 WIF 中的令牌处理程序，以及如何使用它们处理令牌。 还介绍为 WIF 中默认不支持的令牌类型创建自定义令牌处理程序所需的内容。  

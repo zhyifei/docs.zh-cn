@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318583"
 ---
 # <a name="creating-xml-trees-c"></a>创建 XML 树 (C#)
 最常见的 XML 任务之一是构造 XML 树。 本节介绍多种创建 XML 树的方法。  

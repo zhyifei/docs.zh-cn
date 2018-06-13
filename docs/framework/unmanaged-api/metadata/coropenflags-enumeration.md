@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6f231c4f9782518e30cbaa89c6b085c72aafcc92
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445440"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 枚举
 包含一些标志值，用于控制打开清单文件时的元数据行为。  
@@ -66,7 +67,7 @@ typedef enum CorOpenFlags
 |`ofReserved`|保留以供内部使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   

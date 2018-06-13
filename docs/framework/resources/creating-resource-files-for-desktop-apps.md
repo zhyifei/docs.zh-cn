@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399816"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>创建桌面应用程序的资源文件
 可以将字符串、图像或对象数据等资源包含在资源文件中，方便应用程序使用。 .NET Framework 提供了五种创建资源文件的方法：  

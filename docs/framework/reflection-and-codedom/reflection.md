@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399053"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework 中的反射
 <xref:System.Reflection> 命名空间中的类与 <xref:System.Type?displayProperty=nameWithType> 使你能够获取有关加载的[程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)和其中定义的类型的信息，如[类](http://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9)、[接口](http://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5)和[值类型](http://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de)。 可以使用反射在运行时创建、调用和访问类型实例。 有关反射的特定方面的主题，请参见本概述末的[相关主题](#related_topics)。  

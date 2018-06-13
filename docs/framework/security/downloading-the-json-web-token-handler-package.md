@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404672"
 ---
 # <a name="downloading-the-json-web-token-handler-package"></a>下载 JSON Web 标记处理程序包
 本主题讨论了如何在项目中下载和使用 JSON Web 令牌处理程序。  

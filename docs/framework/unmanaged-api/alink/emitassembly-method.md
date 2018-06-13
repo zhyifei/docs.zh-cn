@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1cd1c077a8f2a5fe3b2b46c2e1da2e92b5a797a6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402052"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly 方法
 创建程序集。 调用此方法后所有其他文件都将关闭的程序集文件除外。 当生成未绑定的模块时，请勿调用此方法。  

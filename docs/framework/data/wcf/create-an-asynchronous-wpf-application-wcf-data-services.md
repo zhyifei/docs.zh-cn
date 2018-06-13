@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357629"
 ---
 # <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>如何：创建异步 Windows Presentation Framework 应用程序（WCF 数据服务）
 通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可以将从数据服务获取的数据绑定到 Windows Presentation Framework (WPF) 应用程序的用户界面元素。 有关详细信息，请参阅[数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。此外可以以异步方式，它使应用程序可继续做出响应，等待对数据服务请求的响应同时执行针对数据服务的操作。 若要对数据服务进行异步访问，必须使用适用于 Silverlight 的应用程序。 有关详细信息，请参阅[异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399239"
 ---
 # <a name="wif-configuration-reference"></a>WIF 配置参考
 可以通过将元素添加到配置文件来配置应用程序中的 Windows Identity Foundation (WIF)。 本主题包含指向 WIF 配置元素参考主题的链接。  

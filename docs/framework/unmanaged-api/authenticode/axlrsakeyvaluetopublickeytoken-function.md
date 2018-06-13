@@ -1,14 +1,6 @@
 ---
-title: "_AxlRSAKeyValueToPublicKeyToken 函数"
-ms.custom: 
+title: _AxlRSAKeyValueToPublicKeyToken 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - _AxlRSAKeyValueToPublicKeyToken
 api_location:
@@ -16,17 +8,14 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1380f658d9c154d9ea41228cace5f9a3eed39b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7ef73f0f7599fdff887437756a5995591fd8ec89
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402403"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>_AxlRSAKeyValueToPublicKeyToken 函数
 将模数和指数转换为强名称公钥标记。  

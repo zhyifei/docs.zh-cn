@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409203"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe（PEVerify 工具）
 PEVerify 工具有助于生成 Microsoft 中间语言 (MSIL) 的开发人员（如编译器编写者、脚本引擎开发人员等）确定其 MSIL 代码及关联的元数据是否满足类型安全要求。 某些编译器仅当你避免使用某些语言构造时才生成可验证的类型安全代码。 如果你作为开发人员正在使用此类编译器，则可能需要确认你未危害代码的类型安全性。 在这种情况下，你可以对文件运行 PEVerify 工具来检查 MSIL 和元数据。  

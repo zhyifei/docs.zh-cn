@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361768"
 ---
 # <a name="debugging-support"></a>调试支持
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供有关常规调试支持[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目。  另请参阅[调试 LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.110\))或[调试 LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.120\))。  

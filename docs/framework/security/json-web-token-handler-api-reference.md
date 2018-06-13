@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399265"
 ---
 # <a name="json-web-token-handler-api-reference"></a>JSON Web 标记处理程序 API 参考
 本部分包含 JSON Web 令牌处理程序 WIF 扩展的 API 引用。
