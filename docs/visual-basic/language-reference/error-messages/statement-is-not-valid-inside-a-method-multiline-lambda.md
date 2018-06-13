@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598850"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>语句在方法/多行 lambda 内无效
 语句内无效`Sub`， `Function`，属性`Get`，或属性`Set`过程。 某些语句可以放置在模块或类级别。 其他，如`Option Strict`，必须在命名空间级别以及前面的所有其他声明。  

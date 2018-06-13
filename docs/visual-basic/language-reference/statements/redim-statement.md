@@ -31,6 +31,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605389"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 语句 (Visual Basic)
 为数组变量重新分配存储空间。  

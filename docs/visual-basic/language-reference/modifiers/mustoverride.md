@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599865"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
 指定属性或过程中此类未实现，并且必须重写派生类中才可以使用。  

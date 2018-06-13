@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638380"
 ---
 # <a name="internal-error-visual-basic"></a>内部错误 (Visual Basic)
 在 Visual Basic 中出现内部故障。  

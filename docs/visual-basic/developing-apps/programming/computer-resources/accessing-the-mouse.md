@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582585"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>访问鼠标 (Visual Basic)
 `My.Computer.Mouse` 对象提供一种方法用于查找有关计算机鼠标的信息，例如是否存在鼠标、鼠标按钮数，以及有关鼠标轮的详细信息。  

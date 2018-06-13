@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599042"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-type-39lttypenamegt39"></a>自变量&#39; &lt;argumentname&gt; &#39;无法转换为类型&#39; &lt;typename&gt;&#39;
 转换尝试将参数更改为无效的类型。  

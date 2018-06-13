@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604973"
 ---
 # <a name="synclock-statement"></a>SyncLock 语句
 在执行块之前获取语句块的排他的锁。  

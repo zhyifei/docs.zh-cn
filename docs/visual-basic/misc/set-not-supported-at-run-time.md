@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638338"
 ---
 # <a name="set-not-supported-at-run-time"></a>运行时不支持设置。
 你尝试设置或更改其值只能在设计时设置的属性。  

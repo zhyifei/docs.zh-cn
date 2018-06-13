@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596225"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
 指定的参数传递的方式调用的过程可以更改基础中调用代码的自变量的变量的值。  

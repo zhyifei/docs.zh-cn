@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585510"
 ---
 # <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;类&#39;语句必须以匹配结束&#39;结束类&#39;
 `Class` 用于启动`Class`块; 因此它只能出现在块中，以匹配开头`End Class`语句结束块。 有冗余`Class`语句，或你有未结束你`Class`块`End Class`。  

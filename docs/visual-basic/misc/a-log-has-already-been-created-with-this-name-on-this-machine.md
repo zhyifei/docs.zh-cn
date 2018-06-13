@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603419"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>此计算机上已创建了具有此名称的日志
 尝试使用已在使用中的名称创建日志。  

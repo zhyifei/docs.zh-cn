@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599507"
 ---
 # <a name="iterator-visual-basic"></a>迭代器 (Visual Basic)
 指定函数或`Get`访问器是迭代器。  

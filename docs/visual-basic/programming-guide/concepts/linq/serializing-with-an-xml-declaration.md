@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645260"
 ---
 # <a name="serializing-with-an-xml-declaration-visual-basic"></a>使用 XML 声明 (Visual Basic) 进行序列化
 本主题说明如何控制序列化是否生成 XML 声明。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604700"
 ---
 # <a name="myresources-object"></a>My.Resources 对象
 提供用于访问应用程序的资源的属性和类。  
