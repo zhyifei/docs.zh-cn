@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520456"
 ---
 # <a name="application-settings-overview"></a><span data-ttu-id="e7d5f-102">应用程序设置概述</span><span class="sxs-lookup"><span data-stu-id="e7d5f-102">Application Settings Overview</span></span>
 <span data-ttu-id="e7d5f-103">本主题讨论如何代表你的应用程序和你的用户创建和存储设置数据。</span><span class="sxs-lookup"><span data-stu-id="e7d5f-103">This topic discusses how to create and store settings data on behalf of your application and your users.</span></span>  

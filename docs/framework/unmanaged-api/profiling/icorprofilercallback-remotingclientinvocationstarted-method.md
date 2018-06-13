@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1dcb79c4130f6bd163cb807ff92b95db8360a185
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461963"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationstarted-method"></a><span data-ttu-id="59120-102">ICorProfilerCallback::RemotingClientInvocationStarted 方法</span><span class="sxs-lookup"><span data-stu-id="59120-102">ICorProfilerCallback::RemotingClientInvocationStarted Method</span></span>
 <span data-ttu-id="59120-103">通知探查器已启动的远程处理调用。</span><span class="sxs-lookup"><span data-stu-id="59120-103">Notifies the profiler that a remoting call has started.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577081"
 ---
 # <a name="resolving-external-resources"></a><span data-ttu-id="6f9ea-102">解析外部资源</span><span class="sxs-lookup"><span data-stu-id="6f9ea-102">Resolving External Resources</span></span>
 <span data-ttu-id="6f9ea-103">XmlDocument 类使用 XmlDocument 的 XmlResolver 属性，定位没有在 XML 数据中内联的资源，如外部文档类型定义 (DTD)、实体和架构。</span><span class="sxs-lookup"><span data-stu-id="6f9ea-103">The **XmlResolver** property of the **XmlDocument** is used by the **XmlDocument** class to locate resources that are not inline in the XML data, such as external document type definitions (DTDs), entities, and schemas.</span></span> <span data-ttu-id="6f9ea-104">这些项可以位于网络或本地驱动器上，并通过统一资源标识符 (URI) 进行标识。</span><span class="sxs-lookup"><span data-stu-id="6f9ea-104">These items can be located on a network or on a local drive, and are identifiable by a Uniform Resource Identifier (URI).</span></span> <span data-ttu-id="6f9ea-105">这样一来，XmlDocument 可以解析文档中的 EntityReference 节点，并根据外部 DTD 或架构验证文档。</span><span class="sxs-lookup"><span data-stu-id="6f9ea-105">This allows the **XmlDocument** to resolve **EntityReference** nodes that are present in the document and validate the document according to the external DTD or schema.</span></span>  

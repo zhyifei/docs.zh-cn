@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396826"
 ---
 # <a name="caching-in-net-framework-applications"></a><span data-ttu-id="a9995-102">.NET Framework 应用程序中的缓存</span><span class="sxs-lookup"><span data-stu-id="a9995-102">Caching in .NET Framework Applications</span></span>
 <span data-ttu-id="a9995-103">缓存可以将数据存储在内存中以便快速访问。</span><span class="sxs-lookup"><span data-stu-id="a9995-103">Caching enables you to store data in memory for rapid access.</span></span> <span data-ttu-id="a9995-104">再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。</span><span class="sxs-lookup"><span data-stu-id="a9995-104">When the data is accessed again, applications can get the data from the cache instead of retrieving it from the original source.</span></span> <span data-ttu-id="a9995-105">这可改善性能和可伸缩性。</span><span class="sxs-lookup"><span data-stu-id="a9995-105">This can improve performance and scalability.</span></span> <span data-ttu-id="a9995-106">此外，数据源暂时不可用时，缓存可提供数据。</span><span class="sxs-lookup"><span data-stu-id="a9995-106">In addition, caching makes data available when the data source is temporarily unavailable.</span></span>  
