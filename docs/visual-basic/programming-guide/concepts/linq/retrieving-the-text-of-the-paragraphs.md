@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647145"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>检索段落 (Visual Basic) 的文本
 此示例基于前面的示例中，[检索段落和他们样式 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)。 这个新示例将每个段落的文本作为字符串进行检索。  

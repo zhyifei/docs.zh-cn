@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804298"
 ---
 # <a name="scenario"></a>方案
 本节包含演示 Windows Communication Foundation (WCF) 的方案的示例。  

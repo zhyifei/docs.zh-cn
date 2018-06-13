@@ -17,6 +17,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472576"
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe（Windows 窗体资源编辑器）
 Windows 窗体资源编辑器 Winres.exe 是一种可视布局工具，可以帮助本地化专家对窗体使用的 Windows 窗体用户界面 (UI) 资源进行本地化。 利用可视设计环境（如 Microsoft Visual Studio），可以创建用作 Winres.exe 的输入的 .resx 或 .resources 文件。 有关在 .NET Framework 应用程序中部署资源的信息，请参阅[桌面应用中的资源](../../../docs/framework/resources/index.md)。  

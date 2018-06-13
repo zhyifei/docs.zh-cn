@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638470"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>如果文件不存在，则无法查询文件信息
 试图查询 <xref:System.IO.FileInfo> 对象以了解某个不存在的文件的相关信息。 通常这是由于提供文件名时出现了差错。  

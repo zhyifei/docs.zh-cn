@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655514"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>过程疑难解答 (Visual Basic)
 此页列出在使用过程时可能发生的一些常见问题。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
   
  语句`allOnes(i) = 1`生成一个编译器错误，因为它似乎是调用`allOnes`用错误数据类型参数 (singleton`Integer`而不是`Integer`数组)。 语句`Return allOnes()`生成一个编译器错误，因为它似乎是调用`allOnes`不带参数。  
   
- **正确的方法：**能够修改要返回的数组的元素，定义一个内部数组为本地变量。 下面的示例编译而不出错。  
+ **正确的方法：** 能够修改要返回的数组的元素，定义一个内部数组为本地变量。 下面的示例编译而不出错。  
   
  [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/04/2018
   
  第二个`MsgBox`调用显示"后 replace(n): 11、 21、 31、 41"。 因为`n`传递`ByVal`，`replace`不能修改变量`n`通过向它分配一个新数组。 当`replace`创建新的数组实例`k`并将其分配到本地变量`a`，它将失去对引用`n`传递中调用代码。 当它递增的成员`a`，只有本地数组`k`受到影响。  
   
- **正确的方法：**能够修改本身的基础变量元素，它通过引用传递。 下面的示例演示的声明中的更改`replace`允许它将替换中调用代码的另一个数组。  
+ **正确的方法：** 能够修改本身的基础变量元素，它通过引用传递。 下面的示例演示的声明中的更改`replace`允许它将替换中调用代码的另一个数组。  
   
  [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/04/2018
   
  不能通过一个或多个前述各项仅改变重载过程。  
   
- **正确的方法：**能够定义的过程重载，您必须改变签名。 因为你必须使用相同的名称，您必须改变数量、 顺序或参数的数据类型。 在泛型过程中，可以使用不同类型参数的数目。 在转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md))，您可以改变的返回类型。  
+ **正确的方法：** 能够定义的过程重载，您必须改变签名。 因为你必须使用相同的名称，您必须改变数量、 顺序或参数的数据类型。 在泛型过程中，可以使用不同类型参数的数目。 在转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md))，您可以改变的返回类型。  
   
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>重载决策可选和 ParamArray 自变量  
  如果重载具有一个或多个过程[可选](../../../../visual-basic/language-reference/modifiers/optional.md)参数或[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)参数，则必须避免复制任何*隐式重载*。 有关信息，请参阅[中重载过程注意事项](./considerations-in-overloading-procedures.md)。  
@@ -115,7 +116,7 @@ ms.lasthandoff: 05/04/2018
   
  在第二个调用中，编译器不能消除任何基于收缩的重载。 因为它可以调用使用最少扩大量自变量类型的第二个重载，它会出于同一原因如下所示的第一个调用，消除第三个重载。 但是，编译器无法解析的第一个和第二个重载之间。 每个具有一个已定义的参数类型扩大到另一部分中的相应类型 (`Byte`到`Short`，但`Single`到`Double`)。 因此，编译器将生成重载解析错误。  
   
- **正确的方法：**能够调用清楚无误地重载的过程，使用[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)以匹配的参数类型的参数数据类型。 下面的示例演示调用`z`对第二个重载强制解析。  
+ **正确的方法：** 能够调用清楚无误地重载的过程，使用[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)以匹配的参数类型的参数数据类型。 下面的示例演示调用`z`对第二个重载强制解析。  
   
  [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
   

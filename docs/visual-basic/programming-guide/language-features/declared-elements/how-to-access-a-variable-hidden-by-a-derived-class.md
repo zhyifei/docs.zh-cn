@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648042"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>如何：访问被派生类隐藏的变量 (Visual Basic)
 当在派生类中的代码访问的变量时，编译器通常将到最接近的可访问版本，即的可访问版本引用解析派生步骤最少向后从访问的类。 如果变量在派生类中定义的则代码通常会访问该定义。  
