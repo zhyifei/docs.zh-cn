@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79730bb98a7e2d84517ed068a52614ad8650f541
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406216"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a><span data-ttu-id="66dab-102">“Cor调试代码调用目的”枚举</span><span class="sxs-lookup"><span data-stu-id="66dab-102">CorDebugCodeInvokePurpose Enumeration</span></span>
 <span data-ttu-id="66dab-103">描述为何导出的函数会调用托管代码。</span><span class="sxs-lookup"><span data-stu-id="66dab-103">Describes why an exported function calls managed code.</span></span>  

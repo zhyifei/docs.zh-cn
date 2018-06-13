@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647678"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a><span data-ttu-id="07ebe-102">如何：在字符串内搜索 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07ebe-102">How to: Search Within a String (Visual Basic)</span></span>
 <span data-ttu-id="07ebe-103">此示例调用<xref:System.String.IndexOf%2A>方法<xref:System.String>要报告的子字符串的第一个匹配项的索引对象。</span><span class="sxs-lookup"><span data-stu-id="07ebe-103">This example calls the <xref:System.String.IndexOf%2A> method on a <xref:System.String> object to report the index of the first occurrence of a substring.</span></span>  

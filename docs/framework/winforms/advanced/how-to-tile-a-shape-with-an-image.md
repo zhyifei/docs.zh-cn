@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523118"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a><span data-ttu-id="cf75d-102">如何：在形状中平铺图像</span><span class="sxs-lookup"><span data-stu-id="cf75d-102">How to: Tile a Shape with an Image</span></span>
 <span data-ttu-id="cf75d-103">就像磁贴可以彼此以覆盖层相邻放置，可以将矩形映像彼此相邻放置于填充 （磁贴） 形状。</span><span class="sxs-lookup"><span data-stu-id="cf75d-103">Just as tiles can be placed next to each other to cover a floor, rectangular images can be placed next to each other to fill (tile) a shape.</span></span> <span data-ttu-id="cf75d-104">若要磁贴形状的内部，使用纹理画笔。</span><span class="sxs-lookup"><span data-stu-id="cf75d-104">To tile the interior of a shape, use a texture brush.</span></span> <span data-ttu-id="cf75d-105">构造时<xref:System.Drawing.TextureBrush>对象，将传递给构造函数的自变量之一为<xref:System.Drawing.Image>对象。</span><span class="sxs-lookup"><span data-stu-id="cf75d-105">When you construct a <xref:System.Drawing.TextureBrush> object, one of the arguments you pass to the constructor is an <xref:System.Drawing.Image> object.</span></span> <span data-ttu-id="cf75d-106">当你使用的纹理画笔绘制形状的内部时，形状填充使用此映像的重复副本。</span><span class="sxs-lookup"><span data-stu-id="cf75d-106">When you use the texture brush to paint the interior of a shape, the shape is filled with repeated copies of this image.</span></span>  

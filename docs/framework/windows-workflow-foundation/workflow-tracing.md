@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518172"
 ---
 # <a name="workflow-tracing"></a><span data-ttu-id="9386d-102">工作流跟踪</span><span class="sxs-lookup"><span data-stu-id="9386d-102">Workflow Tracing</span></span>
 <span data-ttu-id="9386d-103">工作流跟踪提供了一种使用 .NET Framework 跟踪侦听器捕获诊断信息的方法。</span><span class="sxs-lookup"><span data-stu-id="9386d-103">Workflow tracing offers a way to capture diagnostic information using .NET Framework trace listeners.</span></span> <span data-ttu-id="9386d-104">如果检测到应用程序存在问题，可以启用跟踪，然后在解决问题之后再次禁用跟踪。</span><span class="sxs-lookup"><span data-stu-id="9386d-104">Tracing can be enabled if a problem is detected with the application and then disabled again once the problem is resolved.</span></span> <span data-ttu-id="9386d-105">可以通过两种方法为工作流启用调试跟踪。</span><span class="sxs-lookup"><span data-stu-id="9386d-105">There are two ways you could enable debug tracing for workflows.</span></span> <span data-ttu-id="9386d-106">您可以使用事件跟踪查看器配置调试跟踪，也可以使用 <xref:System.Diagnostics> 向文件发送跟踪事件。</span><span class="sxs-lookup"><span data-stu-id="9386d-106">You can configure it using the Event Trace viewer or you can use <xref:System.Diagnostics> to send trace events to a file.</span></span>  

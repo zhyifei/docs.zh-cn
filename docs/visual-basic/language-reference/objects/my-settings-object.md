@@ -1,75 +1,68 @@
 ---
 title: My.Settings 对象
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.MySettingsProperty.Settings
 - My.Settings
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f744460f8ea6c6c7f5c8c5e1658bd357e910def
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 54176ae6706311b17227c7dc21a5060c9b369753
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603027"
 ---
-# <a name="mysettings-object"></a><span data-ttu-id="81a18-102">My.Settings 对象</span><span class="sxs-lookup"><span data-stu-id="81a18-102">My.Settings Object</span></span>
-<span data-ttu-id="81a18-103">提供属性和方法可以访问应用程序的设置。</span><span class="sxs-lookup"><span data-stu-id="81a18-103">Provides properties and methods for accessing the application's settings.</span></span>  
+# <a name="mysettings-object"></a><span data-ttu-id="eef59-102">My.Settings 对象</span><span class="sxs-lookup"><span data-stu-id="eef59-102">My.Settings Object</span></span>
+<span data-ttu-id="eef59-103">提供属性和方法可以访问应用程序的设置。</span><span class="sxs-lookup"><span data-stu-id="eef59-103">Provides properties and methods for accessing the application's settings.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="81a18-104">备注</span><span class="sxs-lookup"><span data-stu-id="81a18-104">Remarks</span></span>  
- <span data-ttu-id="81a18-105">`My.Settings`对象提供对应用程序的设置访问权限和可以动态存储和检索属性设置以及你的应用程序的其他信息。</span><span class="sxs-lookup"><span data-stu-id="81a18-105">The `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application.</span></span> <span data-ttu-id="81a18-106">有关详细信息，请参阅[管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。</span><span class="sxs-lookup"><span data-stu-id="81a18-106">For more information, see [Managing Application Settings (.NET)](/visualstudio/ide/managing-application-settings-dotnet).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eef59-104">备注</span><span class="sxs-lookup"><span data-stu-id="eef59-104">Remarks</span></span>  
+ <span data-ttu-id="eef59-105">`My.Settings`对象提供对应用程序的设置访问权限和可以动态存储和检索属性设置以及你的应用程序的其他信息。</span><span class="sxs-lookup"><span data-stu-id="eef59-105">The `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application.</span></span> <span data-ttu-id="eef59-106">有关详细信息，请参阅[管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。</span><span class="sxs-lookup"><span data-stu-id="eef59-106">For more information, see [Managing Application Settings (.NET)](/visualstudio/ide/managing-application-settings-dotnet).</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="81a18-107">属性</span><span class="sxs-lookup"><span data-stu-id="81a18-107">Properties</span></span>  
- <span data-ttu-id="81a18-108">`My.Settings` 对象的属性提供对应用程序设置的访问。</span><span class="sxs-lookup"><span data-stu-id="81a18-108">The properties of the `My.Settings` object provide access to your application's settings.</span></span> <span data-ttu-id="81a18-109">若要添加或删除设置，使用**设置设计器**。</span><span class="sxs-lookup"><span data-stu-id="81a18-109">To add or remove settings, use the **Settings Designer**.</span></span>  
+## <a name="properties"></a><span data-ttu-id="eef59-107">属性</span><span class="sxs-lookup"><span data-stu-id="eef59-107">Properties</span></span>  
+ <span data-ttu-id="eef59-108">`My.Settings` 对象的属性提供对应用程序设置的访问。</span><span class="sxs-lookup"><span data-stu-id="eef59-108">The properties of the `My.Settings` object provide access to your application's settings.</span></span> <span data-ttu-id="eef59-109">若要添加或删除设置，使用**设置设计器**。</span><span class="sxs-lookup"><span data-stu-id="eef59-109">To add or remove settings, use the **Settings Designer**.</span></span>  
   
- <span data-ttu-id="81a18-110">每个设置具有**名称**，**类型**，**作用域**，和**值**，并且这些设置确定如何用于访问每个设置的属性将出现在`My.Settings`对象：</span><span class="sxs-lookup"><span data-stu-id="81a18-110">Each setting has a **Name**, **Type**, **Scope**, and **Value**, and these settings determine how the property to access each setting appears in the `My.Settings` object:</span></span>  
+ <span data-ttu-id="eef59-110">每个设置具有**名称**，**类型**，**作用域**，和**值**，并且这些设置确定如何用于访问每个设置的属性将出现在`My.Settings`对象：</span><span class="sxs-lookup"><span data-stu-id="eef59-110">Each setting has a **Name**, **Type**, **Scope**, and **Value**, and these settings determine how the property to access each setting appears in the `My.Settings` object:</span></span>  
   
--   <span data-ttu-id="81a18-111">**名称**确定属性的名称。</span><span class="sxs-lookup"><span data-stu-id="81a18-111">**Name** determines the name of the property.</span></span>  
+-   <span data-ttu-id="eef59-111">**名称**确定属性的名称。</span><span class="sxs-lookup"><span data-stu-id="eef59-111">**Name** determines the name of the property.</span></span>  
   
--   <span data-ttu-id="81a18-112">**类型**确定属性的类型。</span><span class="sxs-lookup"><span data-stu-id="81a18-112">**Type** determines the type of the property.</span></span>  
+-   <span data-ttu-id="eef59-112">**类型**确定属性的类型。</span><span class="sxs-lookup"><span data-stu-id="eef59-112">**Type** determines the type of the property.</span></span>  
   
--   <span data-ttu-id="81a18-113">**作用域**指示属性是否是只读的。</span><span class="sxs-lookup"><span data-stu-id="81a18-113">**Scope** indicates if the property is read-only.</span></span> <span data-ttu-id="81a18-114">如果值为**应用程序**，该属性是只读的; 如果值为**用户**，属性为读写。</span><span class="sxs-lookup"><span data-stu-id="81a18-114">If the value is **Application**, the property is read-only; if the value is **User**, the property is read-write.</span></span>  
+-   <span data-ttu-id="eef59-113">**作用域**指示属性是否是只读的。</span><span class="sxs-lookup"><span data-stu-id="eef59-113">**Scope** indicates if the property is read-only.</span></span> <span data-ttu-id="eef59-114">如果值为**应用程序**，该属性是只读的; 如果值为**用户**，属性为读写。</span><span class="sxs-lookup"><span data-stu-id="eef59-114">If the value is **Application**, the property is read-only; if the value is **User**, the property is read-write.</span></span>  
   
--   <span data-ttu-id="81a18-115">**值**是属性的默认值。</span><span class="sxs-lookup"><span data-stu-id="81a18-115">**Value** is the default value of the property.</span></span>  
+-   <span data-ttu-id="eef59-115">**值**是属性的默认值。</span><span class="sxs-lookup"><span data-stu-id="eef59-115">**Value** is the default value of the property.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="81a18-116">方法</span><span class="sxs-lookup"><span data-stu-id="81a18-116">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="eef59-116">方法</span><span class="sxs-lookup"><span data-stu-id="eef59-116">Methods</span></span>  
   
-|<span data-ttu-id="81a18-117">方法</span><span class="sxs-lookup"><span data-stu-id="81a18-117">Method</span></span>|<span data-ttu-id="81a18-118">描述</span><span class="sxs-lookup"><span data-stu-id="81a18-118">Description</span></span>|  
+|<span data-ttu-id="eef59-117">方法</span><span class="sxs-lookup"><span data-stu-id="eef59-117">Method</span></span>|<span data-ttu-id="eef59-118">描述</span><span class="sxs-lookup"><span data-stu-id="eef59-118">Description</span></span>|  
 |---|---|  
-|`Reload`|<span data-ttu-id="81a18-119">将重新加载上次保存的值中的用户设置。</span><span class="sxs-lookup"><span data-stu-id="81a18-119">Reloads the user settings from the last saved values.</span></span>|  
-|`Save`|<span data-ttu-id="81a18-120">将保存当前的用户设置。</span><span class="sxs-lookup"><span data-stu-id="81a18-120">Saves the current user settings.</span></span>|  
+|`Reload`|<span data-ttu-id="eef59-119">将重新加载上次保存的值中的用户设置。</span><span class="sxs-lookup"><span data-stu-id="eef59-119">Reloads the user settings from the last saved values.</span></span>|  
+|`Save`|<span data-ttu-id="eef59-120">将保存当前的用户设置。</span><span class="sxs-lookup"><span data-stu-id="eef59-120">Saves the current user settings.</span></span>|  
   
- <span data-ttu-id="81a18-121">`My.Settings`对象还提供了高级的属性和方法，继承自<xref:System.Configuration.ApplicationSettingsBase>类。</span><span class="sxs-lookup"><span data-stu-id="81a18-121">The `My.Settings` object also provides advanced properties and methods, inherited from the <xref:System.Configuration.ApplicationSettingsBase> class.</span></span>  
+ <span data-ttu-id="eef59-121">`My.Settings`对象还提供了高级的属性和方法，继承自<xref:System.Configuration.ApplicationSettingsBase>类。</span><span class="sxs-lookup"><span data-stu-id="eef59-121">The `My.Settings` object also provides advanced properties and methods, inherited from the <xref:System.Configuration.ApplicationSettingsBase> class.</span></span>  
   
-## <a name="tasks"></a><span data-ttu-id="81a18-122">任务</span><span class="sxs-lookup"><span data-stu-id="81a18-122">Tasks</span></span>  
- <span data-ttu-id="81a18-123">下表列出了所涉及的任务的示例`My.Settings`对象。</span><span class="sxs-lookup"><span data-stu-id="81a18-123">The following table lists examples of tasks involving the `My.Settings` object.</span></span>  
+## <a name="tasks"></a><span data-ttu-id="eef59-122">任务</span><span class="sxs-lookup"><span data-stu-id="eef59-122">Tasks</span></span>  
+ <span data-ttu-id="eef59-123">下表列出了所涉及的任务的示例`My.Settings`对象。</span><span class="sxs-lookup"><span data-stu-id="eef59-123">The following table lists examples of tasks involving the `My.Settings` object.</span></span>  
   
-|<span data-ttu-id="81a18-124">到</span><span class="sxs-lookup"><span data-stu-id="81a18-124">To</span></span>|<span data-ttu-id="81a18-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="81a18-125">See</span></span>|  
+|<span data-ttu-id="eef59-124">到</span><span class="sxs-lookup"><span data-stu-id="eef59-124">To</span></span>|<span data-ttu-id="eef59-125">查看</span><span class="sxs-lookup"><span data-stu-id="eef59-125">See</span></span>|  
 |---|---|  
-|<span data-ttu-id="81a18-126">读取应用程序设置</span><span class="sxs-lookup"><span data-stu-id="81a18-126">Read an application setting</span></span>|[<span data-ttu-id="81a18-127">如何：在 Visual Basic 中读取应用程序设置</span><span class="sxs-lookup"><span data-stu-id="81a18-127">How to: Read Application Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|<span data-ttu-id="81a18-128">更改用户设置</span><span class="sxs-lookup"><span data-stu-id="81a18-128">Change a user setting</span></span>|[<span data-ttu-id="81a18-129">如何：在 Visual Basic 中更改用户设置</span><span class="sxs-lookup"><span data-stu-id="81a18-129">How to: Change User Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|<span data-ttu-id="81a18-130">保存用户设置</span><span class="sxs-lookup"><span data-stu-id="81a18-130">Persist user settings</span></span>|[<span data-ttu-id="81a18-131">如何：在 Visual Basic 中保存用户设置</span><span class="sxs-lookup"><span data-stu-id="81a18-131">How to: Persist User Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|<span data-ttu-id="81a18-132">创建用户设置的属性网格</span><span class="sxs-lookup"><span data-stu-id="81a18-132">Create a property grid for user settings</span></span>|[<span data-ttu-id="81a18-133">如何：在 Visual Basic 中创建用户设置的属性网格</span><span class="sxs-lookup"><span data-stu-id="81a18-133">How to: Create Property Grids for User Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|<span data-ttu-id="eef59-126">读取应用程序设置</span><span class="sxs-lookup"><span data-stu-id="eef59-126">Read an application setting</span></span>|[<span data-ttu-id="eef59-127">如何：在 Visual Basic 中读取应用程序设置</span><span class="sxs-lookup"><span data-stu-id="eef59-127">How to: Read Application Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|<span data-ttu-id="eef59-128">更改用户设置</span><span class="sxs-lookup"><span data-stu-id="eef59-128">Change a user setting</span></span>|[<span data-ttu-id="eef59-129">如何：在 Visual Basic 中更改用户设置</span><span class="sxs-lookup"><span data-stu-id="eef59-129">How to: Change User Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|<span data-ttu-id="eef59-130">保存用户设置</span><span class="sxs-lookup"><span data-stu-id="eef59-130">Persist user settings</span></span>|[<span data-ttu-id="eef59-131">如何：在 Visual Basic 中保存用户设置</span><span class="sxs-lookup"><span data-stu-id="eef59-131">How to: Persist User Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|<span data-ttu-id="eef59-132">创建用户设置的属性网格</span><span class="sxs-lookup"><span data-stu-id="eef59-132">Create a property grid for user settings</span></span>|[<span data-ttu-id="eef59-133">如何：在 Visual Basic 中创建用户设置的属性网格</span><span class="sxs-lookup"><span data-stu-id="eef59-133">How to: Create Property Grids for User Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
-## <a name="example"></a><span data-ttu-id="81a18-134">示例</span><span class="sxs-lookup"><span data-stu-id="81a18-134">Example</span></span>  
- <span data-ttu-id="81a18-135">此示例显示 `Nickname` 设置的值。</span><span class="sxs-lookup"><span data-stu-id="81a18-135">This example displays the value of the `Nickname` setting.</span></span>  
+## <a name="example"></a><span data-ttu-id="eef59-134">示例</span><span class="sxs-lookup"><span data-stu-id="eef59-134">Example</span></span>  
+ <span data-ttu-id="eef59-135">此示例显示 `Nickname` 设置的值。</span><span class="sxs-lookup"><span data-stu-id="eef59-135">This example displays the value of the `Nickname` setting.</span></span>  
   
  [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-settings-object_1.vb)]  
   
- <span data-ttu-id="81a18-136">若要使此示例正常工作，应用程序必须具有类型为 `String` 的 `Nickname` 设置。</span><span class="sxs-lookup"><span data-stu-id="81a18-136">For this example to work, your application must have a `Nickname` setting, of type `String`.</span></span>  
+ <span data-ttu-id="eef59-136">若要使此示例正常工作，应用程序必须具有类型为 `String` 的 `Nickname` 设置。</span><span class="sxs-lookup"><span data-stu-id="eef59-136">For this example to work, your application must have a `Nickname` setting, of type `String`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81a18-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="81a18-137">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="eef59-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="eef59-137">See Also</span></span>  
  <xref:System.Configuration.ApplicationSettingsBase>  
- [<span data-ttu-id="81a18-138">如何：在 Visual Basic 中读取应用程序设置</span><span class="sxs-lookup"><span data-stu-id="81a18-138">How to: Read Application Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)  
- [<span data-ttu-id="81a18-139">如何：在 Visual Basic 中更改用户设置</span><span class="sxs-lookup"><span data-stu-id="81a18-139">How to: Change User Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)  
- [<span data-ttu-id="81a18-140">如何：在 Visual Basic 中保存用户设置</span><span class="sxs-lookup"><span data-stu-id="81a18-140">How to: Persist User Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)  
- [<span data-ttu-id="81a18-141">如何：在 Visual Basic 中创建用户设置的属性网格</span><span class="sxs-lookup"><span data-stu-id="81a18-141">How to: Create Property Grids for User Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)  
- [<span data-ttu-id="81a18-142">管理应用程序设置 (.NET)</span><span class="sxs-lookup"><span data-stu-id="81a18-142">Managing Application Settings (.NET)</span></span>](/visualstudio/ide/managing-application-settings-dotnet)
+ [<span data-ttu-id="eef59-138">如何：在 Visual Basic 中读取应用程序设置</span><span class="sxs-lookup"><span data-stu-id="eef59-138">How to: Read Application Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)  
+ [<span data-ttu-id="eef59-139">如何：在 Visual Basic 中更改用户设置</span><span class="sxs-lookup"><span data-stu-id="eef59-139">How to: Change User Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)  
+ [<span data-ttu-id="eef59-140">如何：在 Visual Basic 中保存用户设置</span><span class="sxs-lookup"><span data-stu-id="eef59-140">How to: Persist User Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)  
+ [<span data-ttu-id="eef59-141">如何：在 Visual Basic 中创建用户设置的属性网格</span><span class="sxs-lookup"><span data-stu-id="eef59-141">How to: Create Property Grids for User Settings in Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)  
+ [<span data-ttu-id="eef59-142">管理应用程序设置 (.NET)</span><span class="sxs-lookup"><span data-stu-id="eef59-142">Managing Application Settings (.NET)</span></span>](/visualstudio/ide/managing-application-settings-dotnet)
