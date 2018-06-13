@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760292"
 ---
 # <a name="functions-entity-sql"></a><span data-ttu-id="20b02-102">函数 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="20b02-102">Functions (Entity SQL)</span></span>
 <span data-ttu-id="20b02-103">Entity SQL 支持用户定义函数、规范函数和提供程序特定的函数。</span><span class="sxs-lookup"><span data-stu-id="20b02-103">Entity SQL supports user-defined functions, canonical functions, and provider-specific functions.</span></span> <span data-ttu-id="20b02-104">用户定义函数在概念模型中指定，或在查询中内联指定。</span><span class="sxs-lookup"><span data-stu-id="20b02-104">User-defined functions are specified in the conceptual model or inline in the query.</span></span> <span data-ttu-id="20b02-105">有关详细信息，请参阅[用户定义函数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)。</span><span class="sxs-lookup"><span data-stu-id="20b02-105">For more information, see [User-Defined Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).</span></span>  

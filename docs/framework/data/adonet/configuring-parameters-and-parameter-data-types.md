@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759538"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a><span data-ttu-id="adad1-102">配置参数和参数数据类型</span><span class="sxs-lookup"><span data-stu-id="adad1-102">Configuring Parameters and Parameter Data Types</span></span>
 <span data-ttu-id="adad1-103">通过提供类型检查和验证，命令对象可使用参数来将值传递给 SQL 语句或存储过程。</span><span class="sxs-lookup"><span data-stu-id="adad1-103">Command objects use parameters to pass values to SQL statements or stored procedures, providing type checking and validation.</span></span> <span data-ttu-id="adad1-104">与命令文本不同，参数输入被视为文本值，而不是可执行代码。</span><span class="sxs-lookup"><span data-stu-id="adad1-104">Unlike command text, parameter input is treated as a literal value, not as executable code.</span></span> <span data-ttu-id="adad1-105">这样可帮助抵御“SQL 注入”攻击，这种攻击的攻击者会将命令插入 SQL 语句，从而危及服务器的安全。</span><span class="sxs-lookup"><span data-stu-id="adad1-105">This helps guard against "SQL injection" attacks, in which an attacker inserts a command that compromises security on the server into an SQL statement.</span></span>  

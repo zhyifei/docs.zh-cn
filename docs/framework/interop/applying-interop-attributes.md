@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392559"
 ---
 # <a name="applying-interop-attributes"></a><span data-ttu-id="d8174-102">应用互操作特性</span><span class="sxs-lookup"><span data-stu-id="d8174-102">Applying Interop Attributes</span></span>
 <span data-ttu-id="d8174-103"><xref:System.Runtime.InteropServices> 命名空间提供三类特定于互操作的特性：在设计时由你应用的特性、在转换进程中由 COM 互操作工具和 API 应用的特性以及由你或 COM 互操作应用的特性。</span><span class="sxs-lookup"><span data-stu-id="d8174-103">The <xref:System.Runtime.InteropServices> namespace provides three categories of interop-specific attributes: those applied by you at design time, those applied by COM interop tools and APIs during the conversion process, and those applied either by you or COM interop.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289147"
 ---
 # <a name="c-keywords"></a><span data-ttu-id="d33bb-102">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="d33bb-102">C# Keywords</span></span>
 <span data-ttu-id="d33bb-103">关键字是预定义的保留标识符，对编译器有特殊意义。</span><span class="sxs-lookup"><span data-stu-id="d33bb-103">Keywords are predefined, reserved identifiers that have special meanings to the compiler.</span></span> <span data-ttu-id="d33bb-104">除非前面有 `@` 前缀，否则不能在程序中用作标识符。</span><span class="sxs-lookup"><span data-stu-id="d33bb-104">They cannot be used as identifiers in your program unless they include `@` as a prefix.</span></span> <span data-ttu-id="d33bb-105">例如，`@if` 是有效标识符，而 `if` 则不是，因为 `if` 是关键字。</span><span class="sxs-lookup"><span data-stu-id="d33bb-105">For example, `@if` is a valid identifier, but `if` is not because `if` is a keyword.</span></span>  
