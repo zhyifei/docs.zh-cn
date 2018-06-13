@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766772"
 ---
 # <a name="ltservicecertificategt"></a>&lt;serviceCertificate&gt;
 配置用于加密和解密令牌的 X.509 证书。  
