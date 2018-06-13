@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34311905"
 ---
 # <a name="in-parameter-modifier-c-reference"></a><span data-ttu-id="22cb3-102">in 参数修饰符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="22cb3-102">in parameter modifier (C# Reference)</span></span>
 

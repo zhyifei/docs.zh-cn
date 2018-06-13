@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581773"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a><span data-ttu-id="66cfd-102">如何：创建 GenericPrincipal 和 GenericIdentity 对象</span><span class="sxs-lookup"><span data-stu-id="66cfd-102">How to: Create GenericPrincipal and GenericIdentity Objects</span></span>
 <span data-ttu-id="66cfd-103">你可以使用<xref:System.Security.Principal.GenericIdentity>结合类<xref:System.Security.Principal.GenericPrincipal>类，以创建独立的 Windows 域存在授权方案。</span><span class="sxs-lookup"><span data-stu-id="66cfd-103">You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.</span></span>  

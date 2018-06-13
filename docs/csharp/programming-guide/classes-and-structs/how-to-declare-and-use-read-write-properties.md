@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172311"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a><span data-ttu-id="fc461-102">如何：声明和使用读/写属性（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="fc461-102">How to: Declare and Use Read Write Properties (C# Programming Guide)</span></span>
 <span data-ttu-id="fc461-103">属性提供了公共数据成员的便利性，且不会产生未受保护、不可控制和未经验证地访问对象的数据的风险。</span><span class="sxs-lookup"><span data-stu-id="fc461-103">Properties provide the convenience of public data members without the risks that come with unprotected, uncontrolled, and unverified access to an object's data.</span></span> <span data-ttu-id="fc461-104">这通过访问器实现：从基础数据成员中赋值和检索值的特殊方法。</span><span class="sxs-lookup"><span data-stu-id="fc461-104">This is accomplished through *accessors*: special methods that assign and retrieve values from the underlying data member.</span></span> <span data-ttu-id="fc461-105">[set](../../../csharp/language-reference/keywords/set.md) 访问器可分配数据成员，[get](../../../csharp/language-reference/keywords/get.md) 访问器检索数据成员值。</span><span class="sxs-lookup"><span data-stu-id="fc461-105">The [set](../../../csharp/language-reference/keywords/set.md) accessor enables data members to be assigned, and the [get](../../../csharp/language-reference/keywords/get.md) accessor retrieves data member values.</span></span>  

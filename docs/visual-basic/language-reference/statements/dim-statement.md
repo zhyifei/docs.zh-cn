@@ -34,6 +34,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234722"
 ---
 # <a name="dim-statement-visual-basic"></a><span data-ttu-id="ffec5-102">Dim 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffec5-102">Dim Statement (Visual Basic)</span></span>
 <span data-ttu-id="ffec5-103">声明，并为一个或多个变量分配存储空间。</span><span class="sxs-lookup"><span data-stu-id="ffec5-103">Declares and allocates storage space for one or more variables.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579244"
 ---
 # <a name="enum-design"></a><span data-ttu-id="a6650-102">枚举设计</span><span class="sxs-lookup"><span data-stu-id="a6650-102">Enum Design</span></span>
 <span data-ttu-id="a6650-103">枚举是特殊类型的值类型。</span><span class="sxs-lookup"><span data-stu-id="a6650-103">Enums are a special kind of value type.</span></span> <span data-ttu-id="a6650-104">有两种枚举： 简单枚举和标志枚举。</span><span class="sxs-lookup"><span data-stu-id="a6650-104">There are two kinds of enums: simple enums and flag enums.</span></span>  

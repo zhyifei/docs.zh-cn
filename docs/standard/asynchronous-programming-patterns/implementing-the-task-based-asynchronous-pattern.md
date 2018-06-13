@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576512"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a><span data-ttu-id="13a96-102">实现基于任务的异步模式</span><span class="sxs-lookup"><span data-stu-id="13a96-102">Implementing the Task-based Asynchronous Pattern</span></span>
 <span data-ttu-id="13a96-103">可使用以下三种方式实现基于任务的异步模式 (TAP)：使用 Visual Studio 中的 C# 和 Visual Basic 编译器、手动实现或编译器和手动方法相结合。</span><span class="sxs-lookup"><span data-stu-id="13a96-103">You can implement the Task-based Asynchronous Pattern (TAP) in three ways: by using the C# and Visual Basic compilers in Visual Studio, manually, or through a combination of the compiler and manual methods.</span></span> <span data-ttu-id="13a96-104">以下各节详细地讨论了每一种方法。</span><span class="sxs-lookup"><span data-stu-id="13a96-104">The following sections discuss each method in detail.</span></span> <span data-ttu-id="13a96-105">可以使用 TAP 模式实现计算密集型和 I/O 密集型异步操作。</span><span class="sxs-lookup"><span data-stu-id="13a96-105">You can use the TAP pattern to implement both compute-bound and I/O-bound asynchronous operations.</span></span> <span data-ttu-id="13a96-106">[工作负载](#workloads)部分介绍了各种类型的操作。</span><span class="sxs-lookup"><span data-stu-id="13a96-106">The [Workloads](#workloads) section discusses each type of operation.</span></span>

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171858"
 ---
 # <a name="private-c-reference"></a><span data-ttu-id="6b0b9-102">private（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="6b0b9-102">private (C# Reference)</span></span>
 <span data-ttu-id="6b0b9-103">`private` 关键字是一个成员访问修饰符。</span><span class="sxs-lookup"><span data-stu-id="6b0b9-103">The `private` keyword is a member access modifier.</span></span> 
