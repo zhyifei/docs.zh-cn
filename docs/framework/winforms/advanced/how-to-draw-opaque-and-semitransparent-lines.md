@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524217"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a><span data-ttu-id="85abe-102">如何：绘制不透明和半透明的线条</span><span class="sxs-lookup"><span data-stu-id="85abe-102">How to: Draw Opaque and Semitransparent Lines</span></span>
 <span data-ttu-id="85abe-103">绘制线条时，必须将 <xref:System.Drawing.Pen> 对象传递给 <xref:System.Drawing.Graphics> 类的 <xref:System.Drawing.Graphics.DrawLine%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="85abe-103">When you draw a line, you must pass a <xref:System.Drawing.Pen> object to the <xref:System.Drawing.Graphics.DrawLine%2A> method of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="85abe-104"><xref:System.Drawing.Pen.%23ctor%2A> 构造函数的参数之一是 <xref:System.Drawing.Color> 对象。</span><span class="sxs-lookup"><span data-stu-id="85abe-104">One of the parameters of the <xref:System.Drawing.Pen.%23ctor%2A> constructor is a <xref:System.Drawing.Color> object.</span></span> <span data-ttu-id="85abe-105">若要绘制不透明的线条，请将颜色的 alpha 分量设置为 255。</span><span class="sxs-lookup"><span data-stu-id="85abe-105">To draw an opaque line, set the alpha component of the color to 255.</span></span> <span data-ttu-id="85abe-106">若要绘制半透明的线条，请将 alpha 分量设置为从 1 到 254 的任何值。</span><span class="sxs-lookup"><span data-stu-id="85abe-106">To draw a semitransparent line, set the alpha component to any value from 1 through 254.</span></span>  

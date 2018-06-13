@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549417"
 ---
 # <a name="wpf-and-win32-interoperation"></a><span data-ttu-id="3756d-102">WPF 和 Win32 互操作</span><span class="sxs-lookup"><span data-stu-id="3756d-102">WPF and Win32 Interoperation</span></span>
 <span data-ttu-id="3756d-103">本主题概述如何互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 代码。</span><span class="sxs-lookup"><span data-stu-id="3756d-103">This topic provides an overview of how to interoperate [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] and [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] code.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="3756d-104"> 提供了用于创建应用程序的丰富环境。</span><span class="sxs-lookup"><span data-stu-id="3756d-104"> provides a rich environment for creating applications.</span></span> <span data-ttu-id="3756d-105">但是，如果对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码投入很大，重复使用部分此代码可能更有效。</span><span class="sxs-lookup"><span data-stu-id="3756d-105">However, when you have a substantial investment in [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] code, it might be more effective to reuse some of that code.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767396"
 ---
 # <a name="navigation-property"></a><span data-ttu-id="47985-102">Navigation Property — 导航属性</span><span class="sxs-lookup"><span data-stu-id="47985-102">navigation property</span></span>
 <span data-ttu-id="47985-103">A*导航属性*上是一个可选属性[实体类型](../../../../docs/framework/data/adonet/entity-type.md)它允许从一个导航[结束](../../../../docs/framework/data/adonet/association-end.md)的[关联](../../../../docs/framework/data/adonet/association-type.md)到另一端。</span><span class="sxs-lookup"><span data-stu-id="47985-103">A *navigation property* is an optional property on an [entity type](../../../../docs/framework/data/adonet/entity-type.md) that allows for navigation from one [end](../../../../docs/framework/data/adonet/association-end.md) of an [association](../../../../docs/framework/data/adonet/association-type.md) to the other end.</span></span> <span data-ttu-id="47985-104">与其他不同[属性](../../../../docs/framework/data/adonet/property.md)，导航属性并不携带数据。</span><span class="sxs-lookup"><span data-stu-id="47985-104">Unlike other [properties](../../../../docs/framework/data/adonet/property.md), navigation properties do not carry data.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524204"
 ---
 # <a name="how-to-obtain-font-metrics"></a><span data-ttu-id="5ea2e-102">如何：获取字体规格</span><span class="sxs-lookup"><span data-stu-id="5ea2e-102">How to: Obtain Font Metrics</span></span>
 <span data-ttu-id="5ea2e-103"><xref:System.Drawing.FontFamily>类提供下列方法来检索特定的系列样式组合的各种指标：</span><span class="sxs-lookup"><span data-stu-id="5ea2e-103">The <xref:System.Drawing.FontFamily> class provides the following methods that retrieve various metrics for a particular family/style combination:</span></span>  

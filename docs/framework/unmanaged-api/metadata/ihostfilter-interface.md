@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 30d7fcbca82ee7336caf36edb5b01bdd4aa6a290
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446734"
 ---
 # <a name="ihostfilter-interface"></a><span data-ttu-id="0ad1f-102">IHostFilter 接口</span><span class="sxs-lookup"><span data-stu-id="0ad1f-102">IHostFilter Interface</span></span>
 <span data-ttu-id="0ad1f-103">提供方法，以指示将处理指定的令牌。</span><span class="sxs-lookup"><span data-stu-id="0ad1f-103">Provides a method to indicate that a specified token will be processed.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524408"
 ---
 # <a name="windows-forms-visual-inheritance"></a><span data-ttu-id="a0e28-102">Windows 窗体可视化继承</span><span class="sxs-lookup"><span data-stu-id="a0e28-102">Windows Forms Visual Inheritance</span></span>
 <span data-ttu-id="a0e28-103">有时，项目可能需要一个与之前项目中创建的窗体类似的窗体。</span><span class="sxs-lookup"><span data-stu-id="a0e28-103">Occasionally, you may decide that a project calls for a form similar to one that you have created in a previous project.</span></span> <span data-ttu-id="a0e28-104">或者，可能需要创建一个基本窗体，其中包含某些设置，如随后将再次在项目中使用的水印或某种控件布局，然后每次重复使用时，都需要对该原始窗体模板进行修改。</span><span class="sxs-lookup"><span data-stu-id="a0e28-104">Or, you may want to create a basic form with settings such as a watermark or certain control layout that you will then use again within a project, with each iteration containing modifications to the original form template.</span></span> <span data-ttu-id="a0e28-105">通过窗体继承，可创建基窗体，然后从其继承并进行修改，同时保留所需的任何原始设置。</span><span class="sxs-lookup"><span data-stu-id="a0e28-105">Form inheritance enables you to create a base form and then inherit from it and make modifications while preserving whatever original settings you need.</span></span>  

@@ -1,28 +1,20 @@
 ---
-title: "如何：在 CSV 文本文件中计算列值 (LINQ) (C#)"
-ms.custom: 
+title: 如何：在 CSV 文本文件中计算列值 (LINQ) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cee87fcb0d0b430d9577319abc30b8caf03e9188
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f203d7fa4a313be122d09d5bd68e77411c89ed2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328755"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="17f9e-102">如何：在 CSV 文本文件中计算列值 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="17f9e-102">How to: Compute Column Values in a CSV Text File (LINQ) (C#)</span></span>
-<span data-ttu-id="17f9e-103">此示例演示如何对 .csv 文件的列执行 Sum、Average、Min 和 Max 等聚合计算。</span><span class="sxs-lookup"><span data-stu-id="17f9e-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="17f9e-104">此处所示的示例原则可以应用于其他类型的结构化文本。</span><span class="sxs-lookup"><span data-stu-id="17f9e-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="12f6a-102">如何：在 CSV 文本文件中计算列值 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="12f6a-102">How to: Compute Column Values in a CSV Text File (LINQ) (C#)</span></span>
+<span data-ttu-id="12f6a-103">此示例演示如何对 .csv 文件的列执行 Sum、Average、Min 和 Max 等聚合计算。</span><span class="sxs-lookup"><span data-stu-id="12f6a-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="12f6a-104">此处所示的示例原则可以应用于其他类型的结构化文本。</span><span class="sxs-lookup"><span data-stu-id="12f6a-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-### <a name="to-create-the-source-file"></a><span data-ttu-id="17f9e-105">创建源文件</span><span class="sxs-lookup"><span data-stu-id="17f9e-105">To create the source file</span></span>  
+### <a name="to-create-the-source-file"></a><span data-ttu-id="12f6a-105">创建源文件</span><span class="sxs-lookup"><span data-stu-id="12f6a-105">To create the source file</span></span>  
   
-1.  <span data-ttu-id="17f9e-106">将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="17f9e-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="17f9e-107">假定第一列表示学生 ID，后面几列表示四次考试的分数。</span><span class="sxs-lookup"><span data-stu-id="17f9e-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
+1.  <span data-ttu-id="12f6a-106">将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="12f6a-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="12f6a-107">假定第一列表示学生 ID，后面几列表示四次考试的分数。</span><span class="sxs-lookup"><span data-stu-id="12f6a-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -39,7 +31,7 @@ ms.lasthandoff: 11/21/2017
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a><span data-ttu-id="17f9e-108">示例</span><span class="sxs-lookup"><span data-stu-id="17f9e-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="12f6a-108">示例</span><span class="sxs-lookup"><span data-stu-id="12f6a-108">Example</span></span>  
   
 ```csharp  
 class SumColumns  
@@ -164,11 +156,11 @@ class SumColumns
  */  
 ```  
   
- <span data-ttu-id="17f9e-109">查询的工作原理是使用 <xref:System.String.Split%2A> 方法将每一行文本转换为数组。</span><span class="sxs-lookup"><span data-stu-id="17f9e-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="17f9e-110">每个数组元素表示一列。</span><span class="sxs-lookup"><span data-stu-id="17f9e-110">Each array element represents a column.</span></span> <span data-ttu-id="17f9e-111">最后，每一列中的文本都转换为其数字表示形式。</span><span class="sxs-lookup"><span data-stu-id="17f9e-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="17f9e-112">如果文件是制表符分隔文件，只需将 `Split` 方法中的参数更新为 `\t`。</span><span class="sxs-lookup"><span data-stu-id="17f9e-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
+ <span data-ttu-id="12f6a-109">查询的工作原理是使用 <xref:System.String.Split%2A> 方法将每一行文本转换为数组。</span><span class="sxs-lookup"><span data-stu-id="12f6a-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="12f6a-110">每个数组元素表示一列。</span><span class="sxs-lookup"><span data-stu-id="12f6a-110">Each array element represents a column.</span></span> <span data-ttu-id="12f6a-111">最后，每一列中的文本都转换为其数字表示形式。</span><span class="sxs-lookup"><span data-stu-id="12f6a-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="12f6a-112">如果文件是制表符分隔文件，只需将 `Split` 方法中的参数更新为 `\t`。</span><span class="sxs-lookup"><span data-stu-id="12f6a-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="17f9e-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="17f9e-113">Compiling the Code</span></span>  
- <span data-ttu-id="17f9e-114">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="17f9e-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="12f6a-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="12f6a-113">Compiling the Code</span></span>  
+ <span data-ttu-id="12f6a-114">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="12f6a-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17f9e-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="17f9e-115">See Also</span></span>  
- [<span data-ttu-id="17f9e-116">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="17f9e-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [<span data-ttu-id="17f9e-117">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="17f9e-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="12f6a-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="12f6a-115">See Also</span></span>  
+ [<span data-ttu-id="12f6a-116">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="12f6a-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="12f6a-117">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="12f6a-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

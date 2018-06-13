@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9aef8c40be2456532bd6df6feb8d286cdaeefa7f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445626"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a><span data-ttu-id="d256d-102">IMetaDataAssemblyImport::EnumExportedTypes 方法</span><span class="sxs-lookup"><span data-stu-id="d256d-102">IMetaDataAssemblyImport::EnumExportedTypes Method</span></span>
 <span data-ttu-id="d256d-103">枚举当前元数据范围内的程序集清单引用的导出的类型。</span><span class="sxs-lookup"><span data-stu-id="d256d-103">Enumerates the exported types referenced in the assembly manifest in the current metadata scope.</span></span>  

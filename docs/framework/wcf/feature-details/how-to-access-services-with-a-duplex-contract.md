@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490147"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a><span data-ttu-id="6f46f-102">如何：使用双工协定访问服务</span><span class="sxs-lookup"><span data-stu-id="6f46f-102">How to: Access Services with a Duplex Contract</span></span>
 <span data-ttu-id="6f46f-103">一个功能的 Windows Communication Foundation (WCF) 是创建使用双工消息模式的服务的功能。</span><span class="sxs-lookup"><span data-stu-id="6f46f-103">One feature of Windows Communication Foundation (WCF) is the ability to create a service that uses a duplex messaging pattern.</span></span> <span data-ttu-id="6f46f-104">此模式允许服务通过回调与客户端进行通信。</span><span class="sxs-lookup"><span data-stu-id="6f46f-104">This pattern allows a service to communicate with the client through a callback.</span></span> <span data-ttu-id="6f46f-105">本主题说明的客户端类中实现回调接口创建 WCF 客户端的步骤。</span><span class="sxs-lookup"><span data-stu-id="6f46f-105">This topic shows the steps to create a WCF client in a client class that implements the callback interface.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955961"
 ---
 # <a name="event-c-reference"></a><span data-ttu-id="3383d-102">event（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="3383d-102">event (C# Reference)</span></span>
 <span data-ttu-id="3383d-103">`event` 关键字用于声明发布服务器类中的事件。</span><span class="sxs-lookup"><span data-stu-id="3383d-103">The `event` keyword is used to declare an event in a publisher class.</span></span>  

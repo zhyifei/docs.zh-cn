@@ -1,37 +1,26 @@
 ---
-title: "与 Web Services Enhancements 3.0 的互操作性"
-ms.custom: 
+title: 与 Web Services Enhancements 3.0 的互操作性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e8e589d2-12c6-4794-8a11-1ee90b47dfaa
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f23e4711f8a0952087494aa1b7b2d96aa0274f67
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2580ca4ba1aab0a1551c7bd0affcc9c9ec0d712c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490914"
 ---
-# <a name="interoperability-with-web-services-enhancements-30"></a><span data-ttu-id="4d592-102">与 Web Services Enhancements 3.0 的互操作性</span><span class="sxs-lookup"><span data-stu-id="4d592-102">Interoperability with Web Services Enhancements 3.0</span></span>
-<span data-ttu-id="4d592-103">当 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务配置为使用 2004 年 8 月版的 WS-Addressing 规范时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和服务在网络级与 Web Services Enhancements 3.0 for Microsoft .NET (WSE) 客户端和服务兼容。</span><span class="sxs-lookup"><span data-stu-id="4d592-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] clients and services are wire-level compatible with Web Services Enhancements 3.0 for Microsoft .NET (WSE) clients and services when [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients and services are configured to use the August 2004 version of the WS-Addressing specification.</span></span>  
+# <a name="interoperability-with-web-services-enhancements-30"></a><span data-ttu-id="0b659-102">与 Web Services Enhancements 3.0 的互操作性</span><span class="sxs-lookup"><span data-stu-id="0b659-102">Interoperability with Web Services Enhancements 3.0</span></span>
+<span data-ttu-id="0b659-103">Windows Communication Foundation (WCF) 客户端和服务是与 Web Services Enhancements 3.0 for Microsoft.NET (WSE) 客户端和服务的网络级别兼容性，WCF 客户端和服务配置为使用 2004 年 8 月版时Ws-addressing 规范。</span><span class="sxs-lookup"><span data-stu-id="0b659-103">Windows Communication Foundation (WCF) clients and services are wire-level compatible with Web Services Enhancements 3.0 for Microsoft .NET (WSE) clients and services when WCF clients and services are configured to use the August 2004 version of the WS-Addressing specification.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4d592-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="4d592-104">In This Section</span></span>  
- [<span data-ttu-id="4d592-105">如何：配置 WCF 服务以与 WSE 3.0 客户端进行互操作</span><span class="sxs-lookup"><span data-stu-id="4d592-105">How to: Configure WCF Services to Interoperate with WSE 3.0 Clients</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-wcf-services-to-interoperate-with-wse-3-0-clients.md)  
- <span data-ttu-id="4d592-106">描述如何配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，以使 Web Services Enhancements 3.0 for Microsoft .NET (WSE) 客户端可以与其通信。</span><span class="sxs-lookup"><span data-stu-id="4d592-106">Describes how to configure a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, so that a Web Services Enhancements 3.0 for Microsoft .NET (WSE) client can communicate with it.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0b659-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="0b659-104">In This Section</span></span>  
+ [<span data-ttu-id="0b659-105">如何：配置 WCF 服务以与 WSE 3.0 客户端进行互操作</span><span class="sxs-lookup"><span data-stu-id="0b659-105">How to: Configure WCF Services to Interoperate with WSE 3.0 Clients</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-wcf-services-to-interoperate-with-wse-3-0-clients.md)  
+ <span data-ttu-id="0b659-106">描述如何配置 WCF 服务，以便 Web Services Enhancements 3.0 for Microsoft.NET (WSE) 客户端可以与之通信。</span><span class="sxs-lookup"><span data-stu-id="0b659-106">Describes how to configure a WCF service, so that a Web Services Enhancements 3.0 for Microsoft .NET (WSE) client can communicate with it.</span></span>  
   
- [<span data-ttu-id="4d592-107">如何：配置 WCF 客户端以与 WSE3.0 服务进行互操作</span><span class="sxs-lookup"><span data-stu-id="4d592-107">How to: Configure a WCF Client to interoperate with WSE3.0 Services</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-client-to-interoperate-with-wse3-0-services.md)  
- <span data-ttu-id="4d592-108">详细说明如何配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端，以使其与 Web Services Enhancements 3.0 for Microsoft .NET (WSE) 服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="4d592-108">Details how to configure a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client, so that it communicates with a Web Services Enhancements 3.0 for Microsoft .NET (WSE) service.</span></span>  
+ [<span data-ttu-id="0b659-107">如何：配置 WCF 客户端以与 WSE3.0 服务进行互操作</span><span class="sxs-lookup"><span data-stu-id="0b659-107">How to: Configure a WCF Client to interoperate with WSE3.0 Services</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-client-to-interoperate-with-wse3-0-services.md)  
+ <span data-ttu-id="0b659-108">详细介绍如何配置 WCF 客户端，以便它与 Web Services Enhancements 3.0 for Microsoft.NET (WSE) 服务。</span><span class="sxs-lookup"><span data-stu-id="0b659-108">Details how to configure a WCF client, so that it communicates with a Web Services Enhancements 3.0 for Microsoft .NET (WSE) service.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="4d592-109">相关章节</span><span class="sxs-lookup"><span data-stu-id="4d592-109">Related Sections</span></span>  
- [<span data-ttu-id="4d592-110">将 WSE 3.0 Web 服务迁移到 WCF</span><span class="sxs-lookup"><span data-stu-id="4d592-110">Migrating WSE 3.0 Web Services to WCF</span></span>](../../../../docs/framework/wcf/feature-details/migrating-wse-3-0-web-services-to-wcf.md)  
+## <a name="related-sections"></a><span data-ttu-id="0b659-109">相关章节</span><span class="sxs-lookup"><span data-stu-id="0b659-109">Related Sections</span></span>  
+ [<span data-ttu-id="0b659-110">将 WSE 3.0 Web 服务迁移到 WCF</span><span class="sxs-lookup"><span data-stu-id="0b659-110">Migrating WSE 3.0 Web Services to WCF</span></span>](../../../../docs/framework/wcf/feature-details/migrating-wse-3-0-web-services-to-wcf.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4d592-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="4d592-111">See Also</span></span>  
- [<span data-ttu-id="4d592-112">与 ASP.NET Web 服务的互操作性</span><span class="sxs-lookup"><span data-stu-id="4d592-112">Interoperability with ASP.NET Web Services</span></span>](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)
+## <a name="see-also"></a><span data-ttu-id="0b659-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="0b659-111">See Also</span></span>  
+ [<span data-ttu-id="0b659-112">与 ASP.NET Web 服务的互操作性</span><span class="sxs-lookup"><span data-stu-id="0b659-112">Interoperability with ASP.NET Web Services</span></span>](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)

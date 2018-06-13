@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524698"
 ---
 # <a name="lines-curves-and-shapes"></a><span data-ttu-id="b0c01-102">直线、曲线和图形</span><span class="sxs-lookup"><span data-stu-id="b0c01-102">Lines, Curves, and Shapes</span></span>
 <span data-ttu-id="b0c01-103">矢量图形部分[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]用于绘制线条、 绘制曲线，和用于绘制和填充形状。</span><span class="sxs-lookup"><span data-stu-id="b0c01-103">The vector graphics portion of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is used to draw lines, draw curves, and to draw and fill shapes.</span></span>  

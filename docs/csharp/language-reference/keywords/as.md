@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172014"
 ---
 # <a name="as-c-reference"></a><span data-ttu-id="95383-102">as（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="95383-102">as (C# Reference)</span></span>
 <span data-ttu-id="95383-103">可以使用 `as` 运算符在符合的引用类型或[可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)之间执行某些类型的转换。</span><span class="sxs-lookup"><span data-stu-id="95383-103">You can use the `as` operator to perform certain types of conversions between compatible reference types or [nullable types](../../../csharp/programming-guide/nullable-types/index.md).</span></span> <span data-ttu-id="95383-104">以下代码显示一个示例。</span><span class="sxs-lookup"><span data-stu-id="95383-104">The following code shows an example.</span></span>  

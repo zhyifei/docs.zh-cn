@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486732"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a><span data-ttu-id="99310-102">跟踪和消息日志记录的推荐设置</span><span class="sxs-lookup"><span data-stu-id="99310-102">Recommended Settings for Tracing and Message Logging</span></span>
 <span data-ttu-id="99310-103">本主题描述用于不同操作环境的跟踪和消息日志记录的推荐设置。</span><span class="sxs-lookup"><span data-stu-id="99310-103">This topic describes recommended tracing and message logging settings for different operating environments.</span></span>  

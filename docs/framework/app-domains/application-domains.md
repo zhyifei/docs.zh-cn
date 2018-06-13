@@ -19,6 +19,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34233946"
 ---
 # <a name="application-domains"></a><span data-ttu-id="9e400-102">应用程序域</span><span class="sxs-lookup"><span data-stu-id="9e400-102">Application Domains</span></span>
 <span data-ttu-id="9e400-103">操作系统和运行时环境通常会在应用程序间提供某种形式的隔离。</span><span class="sxs-lookup"><span data-stu-id="9e400-103">Operating systems and runtime environments typically provide some form of isolation between applications.</span></span> <span data-ttu-id="9e400-104">例如，Windows 使用进程来隔离应用程序。</span><span class="sxs-lookup"><span data-stu-id="9e400-104">For example, Windows uses processes to isolate applications.</span></span> <span data-ttu-id="9e400-105">为确保在一个应用程序中运行的代码不会对其他不相关的应用程序产生不良影响，这种隔离是必需的。</span><span class="sxs-lookup"><span data-stu-id="9e400-105">This isolation is necessary to ensure that code running in one application cannot adversely affect other, unrelated applications.</span></span>  

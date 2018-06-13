@@ -1,13 +1,6 @@
 ---
-title: "如何：在 Windows 窗体 TextBox 控件中选择文本"
-ms.custom: 
+title: 如何：在 Windows 窗体 TextBox 控件中选择文本
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,35 +10,31 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 535ee9e7359782f24d48d895f094afbe47e1023b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fd1cfb0764d16b86cd639d8266d1cceff874932
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536688"
 ---
-# <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a><span data-ttu-id="887ca-102">如何：在 Windows 窗体 TextBox 控件中选择文本</span><span class="sxs-lookup"><span data-stu-id="887ca-102">How to: Select Text in the Windows Forms TextBox Control</span></span>
-<span data-ttu-id="887ca-103">你可在 Windows 窗体中以编程方式选择文本<xref:System.Windows.Forms.TextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="887ca-103">You can select text programmatically in the Windows Forms <xref:System.Windows.Forms.TextBox> control.</span></span> <span data-ttu-id="887ca-104">例如，如果你创建搜索特定字符串文本的函数，你可以选择要以可视方式警报找到的字符串的位置的读取者的文本。</span><span class="sxs-lookup"><span data-stu-id="887ca-104">For example, if you create a function that searches text for a particular string, you can select the text to visually alert the reader of the found string's position.</span></span>  
+# <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a><span data-ttu-id="82e49-102">如何：在 Windows 窗体 TextBox 控件中选择文本</span><span class="sxs-lookup"><span data-stu-id="82e49-102">How to: Select Text in the Windows Forms TextBox Control</span></span>
+<span data-ttu-id="82e49-103">你可在 Windows 窗体中以编程方式选择文本<xref:System.Windows.Forms.TextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="82e49-103">You can select text programmatically in the Windows Forms <xref:System.Windows.Forms.TextBox> control.</span></span> <span data-ttu-id="82e49-104">例如，如果你创建搜索特定字符串文本的函数，你可以选择要以可视方式警报找到的字符串的位置的读取者的文本。</span><span class="sxs-lookup"><span data-stu-id="82e49-104">For example, if you create a function that searches text for a particular string, you can select the text to visually alert the reader of the found string's position.</span></span>  
   
-### <a name="to-select-text-programmatically"></a><span data-ttu-id="887ca-105">若要以编程方式选择文本</span><span class="sxs-lookup"><span data-stu-id="887ca-105">To select text programmatically</span></span>  
+### <a name="to-select-text-programmatically"></a><span data-ttu-id="82e49-105">若要以编程方式选择文本</span><span class="sxs-lookup"><span data-stu-id="82e49-105">To select text programmatically</span></span>  
   
-1.  <span data-ttu-id="887ca-106">设置<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>到想要选择的文本开头的属性。</span><span class="sxs-lookup"><span data-stu-id="887ca-106">Set the <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> property to the beginning of the text you want to select.</span></span>  
+1.  <span data-ttu-id="82e49-106">设置<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>到想要选择的文本开头的属性。</span><span class="sxs-lookup"><span data-stu-id="82e49-106">Set the <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> property to the beginning of the text you want to select.</span></span>  
   
-     <span data-ttu-id="887ca-107"><xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>属性为一个数字，指示插入点的文本字符串内，则为 0 表示最左边的位置。</span><span class="sxs-lookup"><span data-stu-id="887ca-107">The <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> property is a number that indicates the insertion point within the string of text, with 0 being the left-most position.</span></span> <span data-ttu-id="887ca-108">如果<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>属性设置为值等于或大于的字符数的文本框中，插入点被置于最后一个字符之后。</span><span class="sxs-lookup"><span data-stu-id="887ca-108">If the <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> property is set to a value equal to or greater than the number of characters in the text box, the insertion point is placed after the last character.</span></span>  
+     <span data-ttu-id="82e49-107"><xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>属性为一个数字，指示插入点的文本字符串内，则为 0 表示最左边的位置。</span><span class="sxs-lookup"><span data-stu-id="82e49-107">The <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> property is a number that indicates the insertion point within the string of text, with 0 being the left-most position.</span></span> <span data-ttu-id="82e49-108">如果<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>属性设置为值等于或大于的字符数的文本框中，插入点被置于最后一个字符之后。</span><span class="sxs-lookup"><span data-stu-id="82e49-108">If the <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> property is set to a value equal to or greater than the number of characters in the text box, the insertion point is placed after the last character.</span></span>  
   
-2.  <span data-ttu-id="887ca-109">设置<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>属性设置为你想要选择的文本的长度。</span><span class="sxs-lookup"><span data-stu-id="887ca-109">Set the <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> property to the length of the text you want to select.</span></span>  
+2.  <span data-ttu-id="82e49-109">设置<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>属性设置为你想要选择的文本的长度。</span><span class="sxs-lookup"><span data-stu-id="82e49-109">Set the <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> property to the length of the text you want to select.</span></span>  
   
-     <span data-ttu-id="887ca-110"><xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>属性是一个数字值，设置插入点的宽度。</span><span class="sxs-lookup"><span data-stu-id="887ca-110">The <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> property is a numeric value that sets the width of the insertion point.</span></span> <span data-ttu-id="887ca-111">设置<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>为大数字不是 0 导致要选择的字符数，从当前的插入点。</span><span class="sxs-lookup"><span data-stu-id="887ca-111">Setting the <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> to a number greater than 0 causes that number of characters to be selected, starting from the current insertion point.</span></span>  
+     <span data-ttu-id="82e49-110"><xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>属性是一个数字值，设置插入点的宽度。</span><span class="sxs-lookup"><span data-stu-id="82e49-110">The <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> property is a numeric value that sets the width of the insertion point.</span></span> <span data-ttu-id="82e49-111">设置<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>为大数字不是 0 导致要选择的字符数，从当前的插入点。</span><span class="sxs-lookup"><span data-stu-id="82e49-111">Setting the <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> to a number greater than 0 causes that number of characters to be selected, starting from the current insertion point.</span></span>  
   
-3.  <span data-ttu-id="887ca-112">（可选）访问通过所选的文本<xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="887ca-112">(Optional) Access the selected text through the <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> property.</span></span>  
+3.  <span data-ttu-id="82e49-112">（可选）访问通过所选的文本<xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="82e49-112">(Optional) Access the selected text through the <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> property.</span></span>  
   
-     <span data-ttu-id="887ca-113">选择下面的代码的文本内容框中时控件的<xref:System.Windows.Forms.Control.Enter>事件发生。</span><span class="sxs-lookup"><span data-stu-id="887ca-113">The code below selects the contents of a text box when the control's <xref:System.Windows.Forms.Control.Enter> event occurs.</span></span> <span data-ttu-id="887ca-114">此示例检查文本框中是否具有的值<xref:System.Windows.Forms.TextBox.Text%2A>属性不是`null`或空字符串。</span><span class="sxs-lookup"><span data-stu-id="887ca-114">This example checks if the text box has a value for the <xref:System.Windows.Forms.TextBox.Text%2A> property that is not `null` or an empty string.</span></span> <span data-ttu-id="887ca-115">在文本框中接收到焦点，在文本框中的当前文本选择。</span><span class="sxs-lookup"><span data-stu-id="887ca-115">When the text box receives the focus, the current text in the text box is selected.</span></span> <span data-ttu-id="887ca-116">`TextBox1_Enter`事件处理程序必须绑定到控件; 有关详细信息，请参阅[如何： 在运行时添加的 Windows 窗体创建事件处理程序](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="887ca-116">The `TextBox1_Enter` event handler must be bound to the control; for more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span></span>  
+     <span data-ttu-id="82e49-113">选择下面的代码的文本内容框中时控件的<xref:System.Windows.Forms.Control.Enter>事件发生。</span><span class="sxs-lookup"><span data-stu-id="82e49-113">The code below selects the contents of a text box when the control's <xref:System.Windows.Forms.Control.Enter> event occurs.</span></span> <span data-ttu-id="82e49-114">此示例检查文本框中是否具有的值<xref:System.Windows.Forms.TextBox.Text%2A>属性不是`null`或空字符串。</span><span class="sxs-lookup"><span data-stu-id="82e49-114">This example checks if the text box has a value for the <xref:System.Windows.Forms.TextBox.Text%2A> property that is not `null` or an empty string.</span></span> <span data-ttu-id="82e49-115">在文本框中接收到焦点，在文本框中的当前文本选择。</span><span class="sxs-lookup"><span data-stu-id="82e49-115">When the text box receives the focus, the current text in the text box is selected.</span></span> <span data-ttu-id="82e49-116">`TextBox1_Enter`事件处理程序必须绑定到控件; 有关详细信息，请参阅[如何： 在运行时添加的 Windows 窗体创建事件处理程序](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="82e49-116">The `TextBox1_Enter` event handler must be bound to the control; for more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span></span>  
   
-     <span data-ttu-id="887ca-117">若要测试此示例，请按 Tab 键，直到文本框中获得焦点。</span><span class="sxs-lookup"><span data-stu-id="887ca-117">To test this example, press the Tab key until the text box has the focus.</span></span> <span data-ttu-id="887ca-118">如果你单击文本框中，将取消选中文本。</span><span class="sxs-lookup"><span data-stu-id="887ca-118">If you click in the text box, the text is unselected.</span></span>  
+     <span data-ttu-id="82e49-117">若要测试此示例，请按 Tab 键，直到文本框中获得焦点。</span><span class="sxs-lookup"><span data-stu-id="82e49-117">To test this example, press the Tab key until the text box has the focus.</span></span> <span data-ttu-id="82e49-118">如果你单击文本框中，将取消选中文本。</span><span class="sxs-lookup"><span data-stu-id="82e49-118">If you click in the text box, the text is unselected.</span></span>  
   
     ```vb  
     Private Sub TextBox1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Enter  
@@ -78,12 +67,12 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="887ca-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="887ca-119">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="82e49-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="82e49-119">See Also</span></span>  
  <xref:System.Windows.Forms.TextBox>  
- [<span data-ttu-id="887ca-120">TextBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="887ca-120">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [<span data-ttu-id="887ca-121">如何：在 Windows 窗体 TextBox 控件中控制插入点</span><span class="sxs-lookup"><span data-stu-id="887ca-121">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- [<span data-ttu-id="887ca-122">如何：使用 Windows 窗体 TextBox 控件创建密码文本框</span><span class="sxs-lookup"><span data-stu-id="887ca-122">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [<span data-ttu-id="887ca-123">如何：创建只读文本框</span><span class="sxs-lookup"><span data-stu-id="887ca-123">How to: Create a Read-Only Text Box</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [<span data-ttu-id="887ca-124">如何：在字符串中添加引号</span><span class="sxs-lookup"><span data-stu-id="887ca-124">How to: Put Quotation Marks in a String</span></span>](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- [<span data-ttu-id="887ca-125">如何：在 Windows 窗体 TextBox 控件中查看多个行</span><span class="sxs-lookup"><span data-stu-id="887ca-125">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [<span data-ttu-id="887ca-126">TextBox 控件</span><span class="sxs-lookup"><span data-stu-id="887ca-126">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+ [<span data-ttu-id="82e49-120">TextBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="82e49-120">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="82e49-121">如何：在 Windows 窗体 TextBox 控件中控制插入点</span><span class="sxs-lookup"><span data-stu-id="82e49-121">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="82e49-122">如何：使用 Windows 窗体 TextBox 控件创建密码文本框</span><span class="sxs-lookup"><span data-stu-id="82e49-122">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="82e49-123">如何：创建只读文本框</span><span class="sxs-lookup"><span data-stu-id="82e49-123">How to: Create a Read-Only Text Box</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [<span data-ttu-id="82e49-124">如何：在字符串中添加引号</span><span class="sxs-lookup"><span data-stu-id="82e49-124">How to: Put Quotation Marks in a String</span></span>](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [<span data-ttu-id="82e49-125">如何：在 Windows 窗体 TextBox 控件中查看多个行</span><span class="sxs-lookup"><span data-stu-id="82e49-125">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="82e49-126">TextBox 控件</span><span class="sxs-lookup"><span data-stu-id="82e49-126">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

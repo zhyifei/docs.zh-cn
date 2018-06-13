@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765459"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a><span data-ttu-id="c3e65-102">LINQ to Entities 中的已知问题和注意事项</span><span class="sxs-lookup"><span data-stu-id="c3e65-102">Known Issues and Considerations in LINQ to Entities</span></span>
 <span data-ttu-id="c3e65-103">本节提供有关 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询的已知问题的信息。</span><span class="sxs-lookup"><span data-stu-id="c3e65-103">This section provides information about known issues with [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries.</span></span>  

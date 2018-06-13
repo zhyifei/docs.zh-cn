@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 34db47b9f43412c9b6c5f58dd6afded505703905
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445372"
 ---
 # <a name="imetadataemitdeletepinvokemap-method"></a><span data-ttu-id="31de4-102">IMetaDataEmit::DeletePinvokeMap 方法</span><span class="sxs-lookup"><span data-stu-id="31de4-102">IMetaDataEmit::DeletePinvokeMap Method</span></span>
 <span data-ttu-id="31de4-103">销毁指定标记所引用的对象的 PInvoke 映射元数据。</span><span class="sxs-lookup"><span data-stu-id="31de4-103">Destroys the PInvoke mapping metadata for the object referenced by the specified token.</span></span>  

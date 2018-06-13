@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544917"
 ---
 # <a name="how-to-apply-transforms-to-text"></a><span data-ttu-id="92e8c-102">如何：向文本应用变换</span><span class="sxs-lookup"><span data-stu-id="92e8c-102">How to: Apply Transforms to Text</span></span>
 <span data-ttu-id="92e8c-103">应用变换可以改变应用程序中文本的显示。</span><span class="sxs-lookup"><span data-stu-id="92e8c-103">Transforms can alter the display of text in your application.</span></span> <span data-ttu-id="92e8c-104">下面的示例使用不同类型的呈现转换来影响中的文本显示<xref:System.Windows.Controls.TextBlock>控件。</span><span class="sxs-lookup"><span data-stu-id="92e8c-104">The following examples use different types of rendering transforms to affect the display of text in a <xref:System.Windows.Controls.TextBlock> control.</span></span>  

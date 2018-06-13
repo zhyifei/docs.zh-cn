@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234752"
 ---
 # <a name="protected-visual-basic"></a><span data-ttu-id="c8c3f-102">Protected (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8c3f-102">Protected (Visual Basic)</span></span>
 <span data-ttu-id="c8c3f-103">指定一个或多个声明编程元素的成员访问修饰符只能从来访问在其自身的类或从派生类。</span><span class="sxs-lookup"><span data-stu-id="c8c3f-103">A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.</span></span>  
