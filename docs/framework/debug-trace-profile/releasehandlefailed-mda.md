@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393719"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 当 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 派生的类的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法返回 `false` 时，激活 `releaseHandleFailed` 托管调试助手 (MDA) 通知开发人员。  

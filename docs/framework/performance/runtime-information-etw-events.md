@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391597"
 ---
 # <a name="runtime-information-etw-events"></a>运行时信息 ETW 事件
 这些 ETW 事件记录有关运行时的信息，包括 SKU、版本号、激活运行时的方式、启动运行时所使用的命令行参数、GUID（如果适用）以及其他相关信息。 如果多个运行时在一个进程内执行，这些事件 (ClrInstanceID) 提供的信息可帮助消除不同运行时的歧义。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394574"
 ---
 # <a name="how-to-list-directory-contents-with-ftp"></a>如何：使用 FTP 列出目录内容
 此示例演示如何列出 FTP 服务器的目录内容。  
