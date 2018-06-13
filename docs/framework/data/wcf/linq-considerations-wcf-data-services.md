@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365964"
 ---
 # <a name="linq-considerations-wcf-data-services"></a><span data-ttu-id="e583f-102">LINQ 注意事项（WCF 数据服务）</span><span class="sxs-lookup"><span data-stu-id="e583f-102">LINQ Considerations (WCF Data Services)</span></span>
 <span data-ttu-id="e583f-103">本主题提供有关使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端时 LINQ 查询的编写和执行方式的信息以及使用 LINQ 查询实现[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 的数据服务的限制。</span><span class="sxs-lookup"><span data-stu-id="e583f-103">This topic provides information about the way in which LINQ queries are composed and executed when you are using the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client and limitations of using LINQ to query a data service that implements the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)].</span></span> <span data-ttu-id="e583f-104">有关编写和执行针对查询的详细信息[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于数据服务，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="e583f-104">For more information about composing and executing queries against an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-based data service, see [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).</span></span>  

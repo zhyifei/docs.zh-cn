@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5668d75c831710b4f077c325b40352a518ee2c96
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434299"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a><span data-ttu-id="17b3f-102">ICLRSyncManager::GetMonitorOwner 方法</span><span class="sxs-lookup"><span data-stu-id="17b3f-102">ICLRSyncManager::GetMonitorOwner Method</span></span>
 <span data-ttu-id="17b3f-103">获取[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)拥有由指定的 cookie 的监视器的实例。</span><span class="sxs-lookup"><span data-stu-id="17b3f-103">Gets the [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance that owns the monitor identified by the specified cookie.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753386"
 ---
 # <a name="ltcertificategt-of-ltclientcertificategt-element"></a><span data-ttu-id="96548-102">&lt;clientCertificate&gt; 的 &lt;certificate&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="96548-102">&lt;certificate&gt; of &lt;clientCertificate&gt; Element</span></span>
 <span data-ttu-id="96548-103">指定用于对消息进行签名和加密的 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="96548-103">Specifies an X.509 certificate used to sign and encrypt messages.</span></span>  

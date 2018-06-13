@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285884"
 ---
 # <a name="gtgt-operator-c-reference"></a><span data-ttu-id="883ac-102">&gt;&gt; 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="883ac-102">&gt;&gt; Operator (C# Reference)</span></span>
 <span data-ttu-id="883ac-103">右移运算符 (`>>`) 将第一个操作数向右移动第二个操作数指定的位数。</span><span class="sxs-lookup"><span data-stu-id="883ac-103">The right-shift operator (`>>`) shifts its first operand right by the number of bits specified by its second operand.</span></span>  

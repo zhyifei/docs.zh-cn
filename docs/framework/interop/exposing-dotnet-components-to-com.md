@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387427"
 ---
 # <a name="exposing-net-framework-components-to-com"></a><span data-ttu-id="497d5-102">向 COM 公开 .NET Framework 组件</span><span class="sxs-lookup"><span data-stu-id="497d5-102">Exposing .NET Framework Components to COM</span></span>
 <span data-ttu-id="497d5-103">对开发人员而言，编写 .NET 类型以及从非托管代码使用该类型是不同的活动。</span><span class="sxs-lookup"><span data-stu-id="497d5-103">Writing a .NET type and consuming that type from unmanaged code are distinct activities for developers.</span></span> <span data-ttu-id="497d5-104">本部分介绍编写与 COM 客户端互操作的托管代码的几个提示：</span><span class="sxs-lookup"><span data-stu-id="497d5-104">This section describes several tips for writing managed code that interoperates with COM clients:</span></span>  

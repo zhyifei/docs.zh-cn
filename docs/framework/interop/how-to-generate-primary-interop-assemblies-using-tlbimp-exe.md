@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389988"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a><span data-ttu-id="023ed-102">如何：使用 Tlbimp.exe 生成主互操作程序集</span><span class="sxs-lookup"><span data-stu-id="023ed-102">How to: Generate Primary Interop Assemblies Using Tlbimp.exe</span></span>
 <span data-ttu-id="023ed-103">有两种生成主互操作程序集的方法：</span><span class="sxs-lookup"><span data-stu-id="023ed-103">There are two ways to generate a primary interop assembly:</span></span>  

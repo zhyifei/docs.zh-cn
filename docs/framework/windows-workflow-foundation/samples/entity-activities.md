@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519131"
 ---
 # <a name="entity-activities"></a><span data-ttu-id="407ad-102">实体活动</span><span class="sxs-lookup"><span data-stu-id="407ad-102">Entity Activities</span></span>
 <span data-ttu-id="407ad-103">此示例演示如何使用 ADO.NET 实体框架 Windows Workflow Foundation 来简化数据访问。</span><span class="sxs-lookup"><span data-stu-id="407ad-103">This sample shows how to use the ADO.NET Entity Framework with Windows Workflow Foundation to simplify data access.</span></span>  

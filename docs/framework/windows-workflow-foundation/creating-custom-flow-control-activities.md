@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513209"
 ---
 # <a name="creating-custom-flow-control-activities"></a><span data-ttu-id="b8ae3-102">创建自定义流控制活动</span><span class="sxs-lookup"><span data-stu-id="b8ae3-102">Creating custom flow control activities</span></span>
 <span data-ttu-id="b8ae3-103">.NET Framework 包含多种流控制活动，这些活动与抽象编程结构（如 <xref:System.Activities.Statements.Flowchart>）或标准编程语句（如 <xref:System.Activities.Statements.If>）的作用类似。</span><span class="sxs-lookup"><span data-stu-id="b8ae3-103">The .Net Framework contains a variety of flow-control activities that function similarly to abstract programming structures (such as <xref:System.Activities.Statements.Flowchart>)   or to standard programming statements (such as <xref:System.Activities.Statements.If>).</span></span> <span data-ttu-id="b8ae3-104">本主题讨论的示例项目之一的体系结构[非泛型 ForEach](../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md)。</span><span class="sxs-lookup"><span data-stu-id="b8ae3-104">This topic discusses the architecture of one of the sample projects, [Non-Generic ForEach](../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md).</span></span>  

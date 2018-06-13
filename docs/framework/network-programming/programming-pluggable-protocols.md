@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396130"
 ---
 # <a name="programming-pluggable-protocols"></a><span data-ttu-id="0a5a8-102">对可插入协议进行编程</span><span class="sxs-lookup"><span data-stu-id="0a5a8-102">Programming Pluggable Protocols</span></span>
 <span data-ttu-id="0a5a8-103"><xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 抽象类为可插入协议提供了基础。</span><span class="sxs-lookup"><span data-stu-id="0a5a8-103">The abstract <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes provide the base for pluggable protocols.</span></span> <span data-ttu-id="0a5a8-104">通过从 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 派生协议特定的类，应用程序可以请求 Internet 资源中的数据并读取响应而无需指定所使用的协议。</span><span class="sxs-lookup"><span data-stu-id="0a5a8-104">By deriving protocol-specific classes from <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse>, an application can request data from an Internet resource and read the response without specifying the protocol being used.</span></span>  
