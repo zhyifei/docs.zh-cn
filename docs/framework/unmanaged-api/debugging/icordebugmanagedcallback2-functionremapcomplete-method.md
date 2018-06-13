@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4051c3f8300b02581c86642455954615d920c3ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415436"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a><span data-ttu-id="6b3b9-102">ICorDebugManagedCallback2::FunctionRemapComplete 方法</span><span class="sxs-lookup"><span data-stu-id="6b3b9-102">ICorDebugManagedCallback2::FunctionRemapComplete Method</span></span>
 <span data-ttu-id="6b3b9-103">通知调试器执行代码已切换到新版本的已编辑函数。</span><span class="sxs-lookup"><span data-stu-id="6b3b9-103">Notifies the debugger that code execution has switched to a new version of an edited function.</span></span>  

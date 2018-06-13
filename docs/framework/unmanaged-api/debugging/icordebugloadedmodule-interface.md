@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 07d6dcc1873e24f84f97c877e8198c27eceef0c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420786"
 ---
 # <a name="icordebugloadedmodule-interface"></a><span data-ttu-id="b35e1-102">ICorDebugLoadedModule 接口</span><span class="sxs-lookup"><span data-stu-id="b35e1-102">ICorDebugLoadedModule Interface</span></span>
 <span data-ttu-id="b35e1-103">提供有关已加载模块的信息。</span><span class="sxs-lookup"><span data-stu-id="b35e1-103">Provides information about a loaded module.</span></span>  

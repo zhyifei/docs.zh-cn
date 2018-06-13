@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538536"
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="f289c-102">使用 Windows 窗体 DataGridView 控件中的单元格、行和列编程</span><span class="sxs-lookup"><span data-stu-id="f289c-102">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="f289c-103">本部分提供了演示各种涉及单元格、 行和列对象的编程任务的主题。</span><span class="sxs-lookup"><span data-stu-id="f289c-103">This section provides topics that demonstrate various programming tasks involving cell, row, and column objects.</span></span>  

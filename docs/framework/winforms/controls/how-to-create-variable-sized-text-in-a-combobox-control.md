@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533226"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a><span data-ttu-id="9dedc-102">如何：在 ComboBox 控件中创建大小可变的文本</span><span class="sxs-lookup"><span data-stu-id="9dedc-102">How to: Create Variable Sized Text in a ComboBox Control</span></span>
 <span data-ttu-id="9dedc-103">此示例演示中的文本的自定义绘制<xref:System.Windows.Forms.ComboBox>控件。</span><span class="sxs-lookup"><span data-stu-id="9dedc-103">This example demonstrates custom drawing of text in a <xref:System.Windows.Forms.ComboBox> control.</span></span> <span data-ttu-id="9dedc-104">当项满足特定条件时，它是在更大的字体绘制，变为红色。</span><span class="sxs-lookup"><span data-stu-id="9dedc-104">When an item meets a certain criteria, it is drawn in a larger font and turned red.</span></span>  

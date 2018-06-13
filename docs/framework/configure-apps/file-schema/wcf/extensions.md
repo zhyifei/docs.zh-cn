@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746873"
 ---
 # <a name="ltextensionsgt"></a><span data-ttu-id="de4f9-102">&lt;扩展&gt;</span><span class="sxs-lookup"><span data-stu-id="de4f9-102">&lt;extensions&gt;</span></span>
 <span data-ttu-id="de4f9-103">此配置元素包含一个 XML 元素集合，该集合包含随可检测到的标准元数据（EPR、ContractTypeName、BindingName、Scope 和 ListenURI）一起发布的自定义元数据。</span><span class="sxs-lookup"><span data-stu-id="de4f9-103">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="de4f9-104">下面是使用此配置元素的示例。</span><span class="sxs-lookup"><span data-stu-id="de4f9-104">The following is an example of using this configuration element.</span></span>  

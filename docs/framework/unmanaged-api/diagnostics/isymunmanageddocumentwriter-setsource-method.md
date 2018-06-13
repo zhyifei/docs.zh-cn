@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f25f66d7092c50247e24051280eaa7b714297c20
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424412"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a><span data-ttu-id="45f19-102">ISymUnmanagedDocumentWriter::SetSource 方法</span><span class="sxs-lookup"><span data-stu-id="45f19-102">ISymUnmanagedDocumentWriter::SetSource Method</span></span>
 <span data-ttu-id="45f19-103">正在写入的文档集嵌入的源。</span><span class="sxs-lookup"><span data-stu-id="45f19-103">Sets embedded source for a document that is being written.</span></span>  

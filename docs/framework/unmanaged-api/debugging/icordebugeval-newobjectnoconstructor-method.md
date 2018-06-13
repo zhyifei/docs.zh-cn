@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3e99cafe39a030a412bf33aeb9d96d5006ca02df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415956"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a><span data-ttu-id="af9bb-102">ICorDebugEval::NewObjectNoConstructor 方法</span><span class="sxs-lookup"><span data-stu-id="af9bb-102">ICorDebugEval::NewObjectNoConstructor Method</span></span>
 <span data-ttu-id="af9bb-103">分配新的对象实例的指定类型，而不尝试调用构造函数方法。</span><span class="sxs-lookup"><span data-stu-id="af9bb-103">Allocates a new object instance of the specified type, without attempting to call a constructor method.</span></span>  

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugValueEnum::Next 方法"
-ms.custom: 
+title: ICorDebugValueEnum::Next 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugValueEnum.Next
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: f5ef94dd-dfee-49d3-a398-b110f8906dd8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4a497488c06dd387f65182318c22f3189dfd7725
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 433e387365834498203e444ed2f85889f8adde06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420438"
 ---
-# <a name="icordebugvalueenumnext-method"></a><span data-ttu-id="d86d7-102">ICorDebugValueEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="d86d7-102">ICorDebugValueEnum::Next Method</span></span>
-<span data-ttu-id="d86d7-103">获取指定的数量的"ICorDebugValue"实例的枚举，从当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="d86d7-103">Gets the specified number of "ICorDebugValue" instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugvalueenumnext-method"></a><span data-ttu-id="5b32e-102">ICorDebugValueEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="5b32e-102">ICorDebugValueEnum::Next Method</span></span>
+<span data-ttu-id="5b32e-103">获取指定的数量的"ICorDebugValue"实例的枚举，从当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="5b32e-103">Gets the specified number of "ICorDebugValue" instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d86d7-104">语法</span><span class="sxs-lookup"><span data-stu-id="d86d7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5b32e-104">语法</span><span class="sxs-lookup"><span data-stu-id="5b32e-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -49,25 +38,25 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d86d7-105">参数</span><span class="sxs-lookup"><span data-stu-id="d86d7-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5b32e-105">参数</span><span class="sxs-lookup"><span data-stu-id="5b32e-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="d86d7-106">[in]数`ICorDebugValue`要检索的实例。</span><span class="sxs-lookup"><span data-stu-id="d86d7-106">[in] The number of `ICorDebugValue` instances to be retrieved.</span></span>  
+ <span data-ttu-id="5b32e-106">[in]数`ICorDebugValue`要检索的实例。</span><span class="sxs-lookup"><span data-stu-id="5b32e-106">[in] The number of `ICorDebugValue` instances to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="d86d7-107">[out]一个指针，其中每个指向数组`ICorDebugValue`对象。</span><span class="sxs-lookup"><span data-stu-id="d86d7-107">[out] An array of pointers, each of which points to an `ICorDebugValue` object.</span></span>  
+ <span data-ttu-id="5b32e-107">[out]一个指针，其中每个指向数组`ICorDebugValue`对象。</span><span class="sxs-lookup"><span data-stu-id="5b32e-107">[out] An array of pointers, each of which points to an `ICorDebugValue` object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="d86d7-108">[out]指向数`ICorDebugValue`实际返回的实例。</span><span class="sxs-lookup"><span data-stu-id="d86d7-108">[out] Pointer to the number of `ICorDebugValue` instances actually returned.</span></span> <span data-ttu-id="d86d7-109">此值可能为 null 如果`celt`是之一。</span><span class="sxs-lookup"><span data-stu-id="d86d7-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="5b32e-108">[out]指向数`ICorDebugValue`实际返回的实例。</span><span class="sxs-lookup"><span data-stu-id="5b32e-108">[out] Pointer to the number of `ICorDebugValue` instances actually returned.</span></span> <span data-ttu-id="5b32e-109">此值可能为 null 如果`celt`是之一。</span><span class="sxs-lookup"><span data-stu-id="5b32e-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d86d7-110">惠?</span><span class="sxs-lookup"><span data-stu-id="d86d7-110">Requirements</span></span>  
- <span data-ttu-id="d86d7-111">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d86d7-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5b32e-110">要求</span><span class="sxs-lookup"><span data-stu-id="5b32e-110">Requirements</span></span>  
+ <span data-ttu-id="5b32e-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5b32e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d86d7-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d86d7-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5b32e-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5b32e-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d86d7-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d86d7-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5b32e-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5b32e-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d86d7-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d86d7-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5b32e-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5b32e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d86d7-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="d86d7-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5b32e-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="5b32e-115">See Also</span></span>  
     
  

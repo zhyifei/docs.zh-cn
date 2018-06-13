@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413935"
 ---
 # <a name="icordebugevalnewarray-method"></a><span data-ttu-id="80a3d-102">ICorDebugEval::NewArray 方法</span><span class="sxs-lookup"><span data-stu-id="80a3d-102">ICorDebugEval::NewArray Method</span></span>
 <span data-ttu-id="80a3d-103">分配的指定的元素类型和维度的一个新数组。</span><span class="sxs-lookup"><span data-stu-id="80a3d-103">Allocates a new array of the specified element type and dimensions.</span></span>  

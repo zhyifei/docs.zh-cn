@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37917577c802514fcebc3ea0792cbce9bb8a7345
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414074"
 ---
 # <a name="icordebugcode-interface1"></a><span data-ttu-id="cc4c1-102">ICorDebugCode 接口 1</span><span class="sxs-lookup"><span data-stu-id="cc4c1-102">ICorDebugCode Interface1</span></span>
 <span data-ttu-id="cc4c1-103">表示 Microsoft 中间语言 (MSIL) 代码段或本机代码段。</span><span class="sxs-lookup"><span data-stu-id="cc4c1-103">Represents a segment of either Microsoft intermediate language (MSIL) code or native code.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fe360a50038f49fdea1528c8c520dc893b258057
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427081"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a><span data-ttu-id="2aff7-102">ISymUnmanagedVariable::GetAddressField2 方法</span><span class="sxs-lookup"><span data-stu-id="2aff7-102">ISymUnmanagedVariable::GetAddressField2 Method</span></span>
 <span data-ttu-id="2aff7-103">获取此变量的第二个地址字段。</span><span class="sxs-lookup"><span data-stu-id="2aff7-103">Gets the second address field for this variable.</span></span> <span data-ttu-id="2aff7-104">其含义取决于类型的地址。</span><span class="sxs-lookup"><span data-stu-id="2aff7-104">Its meaning depends on the kind of address.</span></span>  

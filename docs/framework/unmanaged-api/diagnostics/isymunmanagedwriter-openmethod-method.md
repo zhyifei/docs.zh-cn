@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc41acd6a4f2ef2557d3b39523c5e398c887c454
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427903"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a><span data-ttu-id="de2b8-102">ISymUnmanagedWriter::OpenMethod 方法</span><span class="sxs-lookup"><span data-stu-id="de2b8-102">ISymUnmanagedWriter::OpenMethod Method</span></span>
 <span data-ttu-id="de2b8-103">打开一个到哪些符号发出信息的方法。</span><span class="sxs-lookup"><span data-stu-id="de2b8-103">Opens a method into which symbol information is emitted.</span></span> <span data-ttu-id="de2b8-104">给定的方法成为当前方法的调用定义序列点、 参数和词法范围。</span><span class="sxs-lookup"><span data-stu-id="de2b8-104">The given method becomes the current method for calls to define sequence points, parameters, and lexical scopes.</span></span> <span data-ttu-id="de2b8-105">没有整个方法隐式词法范围。</span><span class="sxs-lookup"><span data-stu-id="de2b8-105">There is an implicit lexical scope around the entire method.</span></span> <span data-ttu-id="de2b8-106">重新打开之前关闭的方法清除为该方法的任何先前定义的符号。</span><span class="sxs-lookup"><span data-stu-id="de2b8-106">Reopening a method that was previously closed erases any previously defined symbols for that method.</span></span> <span data-ttu-id="de2b8-107">一次可以有只有一个打开方法。</span><span class="sxs-lookup"><span data-stu-id="de2b8-107">There can be only one open method at a time.</span></span>  

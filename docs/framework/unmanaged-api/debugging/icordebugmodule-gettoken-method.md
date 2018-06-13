@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d1e0f0d57440f0074a7ca179955a7a13e41f5d5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415849"
 ---
 # <a name="icordebugmodulegettoken-method"></a><span data-ttu-id="8e39c-102">ICorDebugModule::GetToken 方法</span><span class="sxs-lookup"><span data-stu-id="8e39c-102">ICorDebugModule::GetToken Method</span></span>
 <span data-ttu-id="8e39c-103">获取此模块的表项的令牌。</span><span class="sxs-lookup"><span data-stu-id="8e39c-103">Gets the token for the table entry for this module.</span></span>  

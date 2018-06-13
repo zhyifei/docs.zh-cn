@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504885"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a><span data-ttu-id="7bbda-102">数据协定序列化程序支持的类型</span><span class="sxs-lookup"><span data-stu-id="7bbda-102">Types Supported by the Data Contract Serializer</span></span>
 <span data-ttu-id="7bbda-103">Windows Communication Foundation (WCF) 使用<xref:System.Runtime.Serialization.DataContractSerializer>作为其默认序列化引擎将数据转换为 XML，并将 XML 转换回数据。</span><span class="sxs-lookup"><span data-stu-id="7bbda-103">Windows Communication Foundation (WCF) uses the <xref:System.Runtime.Serialization.DataContractSerializer> as its default serialization engine to convert data into XML and to convert XML back into data.</span></span> <span data-ttu-id="7bbda-104"><xref:System.Runtime.Serialization.DataContractSerializer> 是专为序列化数据协定  类型而设计的。</span><span class="sxs-lookup"><span data-stu-id="7bbda-104">The <xref:System.Runtime.Serialization.DataContractSerializer> is designed to serialize *data contract* types.</span></span> <span data-ttu-id="7bbda-105">但是，它支持许多其他可视为具有隐式数据协定的类型。</span><span class="sxs-lookup"><span data-stu-id="7bbda-105">However, it supports many other types, which can be thought of as having an implicit data contract.</span></span> <span data-ttu-id="7bbda-106">以下是可以序列化的类型的完整列表：</span><span class="sxs-lookup"><span data-stu-id="7bbda-106">The following is a complete list of types that can be serialized:</span></span>  

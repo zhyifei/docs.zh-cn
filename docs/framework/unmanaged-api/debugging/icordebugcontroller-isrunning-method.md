@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4605b893169ccfc592aae0d07dc032f455314cc5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412726"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a><span data-ttu-id="d2b26-102">ICorDebugController::IsRunning 方法</span><span class="sxs-lookup"><span data-stu-id="d2b26-102">ICorDebugController::IsRunning Method</span></span>
 <span data-ttu-id="d2b26-103">获取一个值，该值指示是否在进程中的线程当前自由地运行。</span><span class="sxs-lookup"><span data-stu-id="d2b26-103">Gets a value that indicates whether the threads in the process are currently running freely.</span></span>  

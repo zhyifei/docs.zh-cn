@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 45a710e6d8be4a041d9852585ea83fea85376f66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413821"
 ---
 # <a name="icordebuginternalframe-interface1"></a><span data-ttu-id="bf076-102">ICorDebugInternalFrame 接口 1</span><span class="sxs-lookup"><span data-stu-id="bf076-102">ICorDebugInternalFrame Interface1</span></span>
 <span data-ttu-id="bf076-103">表示在堆栈上的运行时内部帧。</span><span class="sxs-lookup"><span data-stu-id="bf076-103">Represents a runtime-internal frame on the stack.</span></span> <span data-ttu-id="bf076-104">此接口是 ICorDebugFrame 接口的子类。</span><span class="sxs-lookup"><span data-stu-id="bf076-104">This interface is a subclass of the ICorDebugFrame interface.</span></span>  

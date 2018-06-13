@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f994dfb2b72eacce0b53ae6f49a8173749dd96f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418573"
 ---
 # <a name="icordebugreferencevaluedereferencestrong-method"></a><span data-ttu-id="dced3-102">ICorDebugReferenceValue::DereferenceStrong 方法</span><span class="sxs-lookup"><span data-stu-id="dced3-102">ICorDebugReferenceValue::DereferenceStrong Method</span></span>
 <span data-ttu-id="dced3-103">`DereferenceStrong` 未实现。</span><span class="sxs-lookup"><span data-stu-id="dced3-103">`DereferenceStrong` is not implemented.</span></span> <span data-ttu-id="dced3-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="dced3-104">Do not call this method.</span></span>  

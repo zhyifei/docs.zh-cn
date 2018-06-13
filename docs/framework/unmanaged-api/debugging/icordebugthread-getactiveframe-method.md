@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a1bbe5674ba11b5ee6033c65f229d698eff15ae
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420636"
 ---
 # <a name="icordebugthreadgetactiveframe-method"></a><span data-ttu-id="6a053-102">ICorDebugThread::GetActiveFrame 方法</span><span class="sxs-lookup"><span data-stu-id="6a053-102">ICorDebugThread::GetActiveFrame Method</span></span>
 <span data-ttu-id="6a053-103">获取此 ICorDebugThread 对象上活动的 （最新） 帧的接口指针。</span><span class="sxs-lookup"><span data-stu-id="6a053-103">Gets an interface pointer to the active (most recent) frame on this ICorDebugThread object.</span></span>  

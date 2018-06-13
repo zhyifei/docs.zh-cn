@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3bb4331b1c55cbda818866c5ff08f9bacd3ebae0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413980"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a><span data-ttu-id="469a3-102">ICorDebugFrame::GetFunctionToken 方法</span><span class="sxs-lookup"><span data-stu-id="469a3-102">ICorDebugFrame::GetFunctionToken Method</span></span>
 <span data-ttu-id="469a3-103">获取包含与此堆栈帧关联的代码的函数的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="469a3-103">Gets the metadata token for the function that contains the code associated with this stack frame.</span></span>  

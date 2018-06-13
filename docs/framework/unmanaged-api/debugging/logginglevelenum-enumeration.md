@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 331065d4aae82c66b9ebd82e99427501c3ba8a98
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435950"
 ---
 # <a name="logginglevelenum-enumeration"></a><span data-ttu-id="de237-102">LoggingLevelEnum 枚举</span><span class="sxs-lookup"><span data-stu-id="de237-102">LoggingLevelEnum Enumeration</span></span>
 <span data-ttu-id="de237-103">指示在托管线程记录事件时写入事件日志的描述性消息的严重级别。</span><span class="sxs-lookup"><span data-stu-id="de237-103">Indicates the severity level of a descriptive message that is written to the event log when a managed thread logs an event.</span></span>  

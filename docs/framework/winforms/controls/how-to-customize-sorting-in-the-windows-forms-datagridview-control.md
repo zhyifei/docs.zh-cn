@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533411"
 ---
 # <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="df75b-102">如何：自定义 Windows 窗体 DataGridView 控件中的排序方式</span><span class="sxs-lookup"><span data-stu-id="df75b-102">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="df75b-103"><xref:System.Windows.Forms.DataGridView> 控件提供自动排序，但根据需要，你可能需要自定义排序操作。</span><span class="sxs-lookup"><span data-stu-id="df75b-103">The <xref:System.Windows.Forms.DataGridView> control provides automatic sorting but, depending on your needs, you might need to customize sort operations.</span></span> <span data-ttu-id="df75b-104">例如，你可以使用编程排序来创建替代的用户界面 (UI)。</span><span class="sxs-lookup"><span data-stu-id="df75b-104">For example, you can use programmatic sorting to create an alternate user interface (UI).</span></span> <span data-ttu-id="df75b-105">或者，你可以处理 <xref:System.Windows.Forms.DataGridView.SortCompare> 事件或调用 <xref:System.Windows.Forms.DataGridView.Sort%2A> 方法的 `Sort(IComparer)` 重载，以便进行更灵活的排序，例如对多个列进行排序。</span><span class="sxs-lookup"><span data-stu-id="df75b-105">Alternatively, you can handle the <xref:System.Windows.Forms.DataGridView.SortCompare> event or call the `Sort(IComparer)` overload of the <xref:System.Windows.Forms.DataGridView.Sort%2A> method for greater sorting flexibility, such as sorting multiple columns.</span></span>  

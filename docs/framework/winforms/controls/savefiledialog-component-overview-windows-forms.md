@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537442"
 ---
 # <a name="savefiledialog-component-overview-windows-forms"></a><span data-ttu-id="e23d7-102">SaveFileDialog 组件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="e23d7-102">SaveFileDialog Component Overview (Windows Forms)</span></span>
 <span data-ttu-id="e23d7-103">Windows 窗体 <xref:System.Windows.Forms.SaveFileDialog> 组件是一个预配置的对话框。</span><span class="sxs-lookup"><span data-stu-id="e23d7-103">The Windows Forms <xref:System.Windows.Forms.SaveFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="e23d7-104">它等同于标准**保存文件**Windows 使用的对话框。</span><span class="sxs-lookup"><span data-stu-id="e23d7-104">It is the same as the standard **Save File** dialog box used by Windows.</span></span> <span data-ttu-id="e23d7-105">它继承自 <xref:System.Windows.Forms.CommonDialog> 类。</span><span class="sxs-lookup"><span data-stu-id="e23d7-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa12252c4f2a8e710a4a880af103aa324f8118ac
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432395"
 ---
 # <a name="iassemblyname-interface"></a><span data-ttu-id="f6433-102">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="f6433-102">IAssemblyName Interface</span></span>
 <span data-ttu-id="f6433-103">提供用于描述和使用程序集的唯一标识的方法。</span><span class="sxs-lookup"><span data-stu-id="f6433-103">Provides methods for describing and working with an assembly's unique identity.</span></span>  

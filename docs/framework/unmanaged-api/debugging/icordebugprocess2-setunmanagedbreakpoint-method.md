@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4326c6d8a3ee780cf63652badc8c527f55a075c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420812"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a><span data-ttu-id="738de-102">ICorDebugProcess2::SetUnmanagedBreakpoint 方法</span><span class="sxs-lookup"><span data-stu-id="738de-102">ICorDebugProcess2::SetUnmanagedBreakpoint Method</span></span>
 <span data-ttu-id="738de-103">指定的本机映像的偏移量处设置非托管的断点。</span><span class="sxs-lookup"><span data-stu-id="738de-103">Sets an unmanaged breakpoint at the specified native image offset.</span></span>  

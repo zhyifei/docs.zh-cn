@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426970"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a><span data-ttu-id="6b624-102">ISymUnmanagedWriter::DefineParameter 方法</span><span class="sxs-lookup"><span data-stu-id="6b624-102">ISymUnmanagedWriter::DefineParameter Method</span></span>
 <span data-ttu-id="6b624-103">在当前方法中定义的单个参数。</span><span class="sxs-lookup"><span data-stu-id="6b624-103">Defines a single parameter in the current method.</span></span> <span data-ttu-id="6b624-104">参数类型均从内方法的签名的参数的位置 （序列）。</span><span class="sxs-lookup"><span data-stu-id="6b624-104">The parameter type is taken from the parameter's position (sequence) within the method's signature.</span></span>  

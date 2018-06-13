@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81f9db872e9904d2297221e266be710837d0fb66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427377"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a><span data-ttu-id="6e1ed-102">ISymUnmanagedReader::UpdateSymbolStore 方法</span><span class="sxs-lookup"><span data-stu-id="6e1ed-102">ISymUnmanagedReader::UpdateSymbolStore Method</span></span>
 <span data-ttu-id="6e1ed-103">使用增量符号存储区更新现有的符号存储区。</span><span class="sxs-lookup"><span data-stu-id="6e1ed-103">Updates the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="6e1ed-104">此方法在编辑并继续方案中用于更新要匹配的原始的可移植可执行 (PE) 文件的增量可以保持的符号存储区。</span><span class="sxs-lookup"><span data-stu-id="6e1ed-104">This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747341"
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="529e8-102">&lt;添加&gt;元素&lt;侦听器&gt;为&lt;跟踪&gt;</span><span class="sxs-lookup"><span data-stu-id="529e8-102">&lt;add&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
 <span data-ttu-id="529e8-103">将侦听器添加到**侦听器**集合。</span><span class="sxs-lookup"><span data-stu-id="529e8-103">Adds a listener to the **Listeners** collection.</span></span>  

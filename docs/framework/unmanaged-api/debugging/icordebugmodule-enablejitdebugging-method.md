@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71722293bfb80a7e57393916560f922d970ea2ab
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415637"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a><span data-ttu-id="2b078-102">ICorDebugModule::EnableJITDebugging 方法</span><span class="sxs-lookup"><span data-stu-id="2b078-102">ICorDebugModule::EnableJITDebugging Method</span></span>
 <span data-ttu-id="2b078-103">控制是否在实时 (JIT) 编译器会保留为此模块中的方法的调试信息。</span><span class="sxs-lookup"><span data-stu-id="2b078-103">Controls whether the just-in-time (JIT) compiler preserves debugging information for methods within this module.</span></span>  

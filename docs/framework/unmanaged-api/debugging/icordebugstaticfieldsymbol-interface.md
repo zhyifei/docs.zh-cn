@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cde5f60764772ece8528eb67a82836c0ae9e651b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422453"
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a><span data-ttu-id="14009-102">ICorDebugStaticFieldSymbol 接口</span><span class="sxs-lookup"><span data-stu-id="14009-102">ICorDebugStaticFieldSymbol Interface</span></span>
 <span data-ttu-id="14009-103">表示某个静态字段的调试符号信息。</span><span class="sxs-lookup"><span data-stu-id="14009-103">Represents the debug symbol information for a static field.</span></span>  

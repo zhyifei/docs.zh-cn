@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 03607cf96d73e96eef63fe62b86b50be02f34421
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428190"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a><span data-ttu-id="01d84-102">ISymUnmanagedReader::ReplaceSymbolStore 方法</span><span class="sxs-lookup"><span data-stu-id="01d84-102">ISymUnmanagedReader::ReplaceSymbolStore Method</span></span>
 <span data-ttu-id="01d84-103">用增量符号存储区替换现有的符号存储区。</span><span class="sxs-lookup"><span data-stu-id="01d84-103">Replaces the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="01d84-104">此方法类似于是[UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)方法，只不过给定的增量充当更新而不是完全替换。</span><span class="sxs-lookup"><span data-stu-id="01d84-104">This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.</span></span>  

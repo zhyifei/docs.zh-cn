@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 95c2218aadd62902ff9bc7f2e6a190aa2ce241ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418842"
 ---
 # <a name="icordebugprocess3-interface"></a><span data-ttu-id="57a95-102">ICorDebugProcess3 接口</span><span class="sxs-lookup"><span data-stu-id="57a95-102">ICorDebugProcess3 Interface</span></span>
 <span data-ttu-id="57a95-103">控制自定义调试器通知。</span><span class="sxs-lookup"><span data-stu-id="57a95-103">Controls custom debugger notifications.</span></span>  

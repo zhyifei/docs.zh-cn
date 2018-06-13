@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1982226e90792d4bbda1cb023d80dec96fcb2060
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418101"
 ---
 # <a name="icordebugilcode2-interface"></a><span data-ttu-id="038a9-102">ICorDebugILCode2 接口</span><span class="sxs-lookup"><span data-stu-id="038a9-102">ICorDebugILCode2 Interface</span></span>
 <span data-ttu-id="038a9-103">[仅在 .NET Framework 4.5.2 及更高版本中受支持]</span><span class="sxs-lookup"><span data-stu-id="038a9-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  

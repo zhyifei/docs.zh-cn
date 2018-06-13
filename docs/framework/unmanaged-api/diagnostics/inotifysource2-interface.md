@@ -1,14 +1,6 @@
 ---
-title: "INotifySource2 接口"
-ms.custom: 
+title: INotifySource2 接口
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - INotifySource2
 api_location:
@@ -22,31 +14,28 @@ helpviewer_keywords:
 ms.assetid: f432fb85-5c78-43d1-8302-53b8fc605c97
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 11cf9ca6dbfc0711cbd234fbd5e5bc5cd4a730fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 025aeb564743b6ae08a11d7922f0e8b641220929
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424685"
 ---
-# <a name="inotifysource2-interface"></a><span data-ttu-id="0a1b9-102">INotifySource2 接口</span><span class="sxs-lookup"><span data-stu-id="0a1b9-102">INotifySource2 Interface</span></span>
-<span data-ttu-id="0a1b9-103">声明用于设置通知筛选器的方法。</span><span class="sxs-lookup"><span data-stu-id="0a1b9-103">Declares a method for setting notification filters.</span></span>  
+# <a name="inotifysource2-interface"></a><span data-ttu-id="647fa-102">INotifySource2 接口</span><span class="sxs-lookup"><span data-stu-id="647fa-102">INotifySource2 Interface</span></span>
+<span data-ttu-id="647fa-103">声明用于设置通知筛选器的方法。</span><span class="sxs-lookup"><span data-stu-id="647fa-103">Declares a method for setting notification filters.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0a1b9-104">方法</span><span class="sxs-lookup"><span data-stu-id="0a1b9-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="647fa-104">方法</span><span class="sxs-lookup"><span data-stu-id="647fa-104">Methods</span></span>  
   
-|<span data-ttu-id="0a1b9-105">方法</span><span class="sxs-lookup"><span data-stu-id="0a1b9-105">Method</span></span>|<span data-ttu-id="0a1b9-106">描述</span><span class="sxs-lookup"><span data-stu-id="0a1b9-106">Description</span></span>|  
+|<span data-ttu-id="647fa-105">方法</span><span class="sxs-lookup"><span data-stu-id="647fa-105">Method</span></span>|<span data-ttu-id="647fa-106">描述</span><span class="sxs-lookup"><span data-stu-id="647fa-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0a1b9-107">SetNotifyFilter 方法</span><span class="sxs-lookup"><span data-stu-id="0a1b9-107">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|<span data-ttu-id="0a1b9-108">将分配与此源使用通知筛选器。</span><span class="sxs-lookup"><span data-stu-id="0a1b9-108">Assigns a notification filter for use with this source.</span></span>|  
+|[<span data-ttu-id="647fa-107">SetNotifyFilter 方法</span><span class="sxs-lookup"><span data-stu-id="647fa-107">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|<span data-ttu-id="647fa-108">将分配与此源使用通知筛选器。</span><span class="sxs-lookup"><span data-stu-id="647fa-108">Assigns a notification filter for use with this source.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0a1b9-109">惠?</span><span class="sxs-lookup"><span data-stu-id="0a1b9-109">Requirements</span></span>  
- <span data-ttu-id="0a1b9-110">**标头：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="0a1b9-110">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="647fa-109">要求</span><span class="sxs-lookup"><span data-stu-id="647fa-109">Requirements</span></span>  
+ <span data-ttu-id="647fa-110">**标头：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="647fa-110">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a1b9-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="0a1b9-111">See Also</span></span>  
- [<span data-ttu-id="0a1b9-112">INotifyConnection2 接口</span><span class="sxs-lookup"><span data-stu-id="0a1b9-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [<span data-ttu-id="0a1b9-113">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="0a1b9-113">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [<span data-ttu-id="0a1b9-114">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="0a1b9-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="647fa-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="647fa-111">See Also</span></span>  
+ [<span data-ttu-id="647fa-112">INotifyConnection2 接口</span><span class="sxs-lookup"><span data-stu-id="647fa-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
+ [<span data-ttu-id="647fa-113">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="647fa-113">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
+ [<span data-ttu-id="647fa-114">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="647fa-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
