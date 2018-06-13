@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762853"
 ---
 # <a name="function-overload-resolution-entity-sql"></a><span data-ttu-id="e9891-102">函数重载解析 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e9891-102">Function Overload Resolution (Entity SQL)</span></span>
 <span data-ttu-id="e9891-103">本主题描述如何解析 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 函数。</span><span class="sxs-lookup"><span data-stu-id="e9891-103">This topic describes how [!INCLUDE[esql](../../../../../../includes/esql-md.md)] functions are resolved.</span></span>  

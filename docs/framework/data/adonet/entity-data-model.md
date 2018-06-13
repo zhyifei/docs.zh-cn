@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765238"
 ---
 # <a name="entity-data-model"></a><span data-ttu-id="a811e-102">实体数据模型</span><span class="sxs-lookup"><span data-stu-id="a811e-102">Entity Data Model</span></span>
 <span data-ttu-id="a811e-103">实体数据模型 (EDM) 是一组描述数据结构（而不管其存储形式如何）的概念。</span><span class="sxs-lookup"><span data-stu-id="a811e-103">The Entity Data Model (EDM) is a set of concepts that describe the structure of data, regardless of its stored form.</span></span> <span data-ttu-id="a811e-104">EDM 借自于 Peter Chen 于 1976 年所描述的实体关系模型，但它是在实体关系模型基础上构建的并扩展了其传统用途。</span><span class="sxs-lookup"><span data-stu-id="a811e-104">The EDM borrows from the Entity-Relationship Model described by Peter Chen in 1976, but it also builds on the Entity-Relationship Model and extends its traditional uses.</span></span>  

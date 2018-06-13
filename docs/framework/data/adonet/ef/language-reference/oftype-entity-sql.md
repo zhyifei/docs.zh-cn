@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764117"
 ---
 # <a name="oftype-entity-sql"></a><span data-ttu-id="677b7-102">OFTYPE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="677b7-102">OFTYPE (Entity SQL)</span></span>
 <span data-ttu-id="677b7-103">从查询表达式返回特定类型的对象集合。</span><span class="sxs-lookup"><span data-stu-id="677b7-103">Returns a collection of objects from a query expression that is of a specific type.</span></span>  

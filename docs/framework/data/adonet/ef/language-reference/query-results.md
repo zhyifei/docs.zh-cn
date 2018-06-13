@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762317"
 ---
 # <a name="query-results"></a><span data-ttu-id="7f2a4-102">查询结果</span><span class="sxs-lookup"><span data-stu-id="7f2a4-102">Query Results</span></span>
 <span data-ttu-id="7f2a4-103">[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询在转换为命令目录树执行之后，通常以下列形式之一返回查询结果：</span><span class="sxs-lookup"><span data-stu-id="7f2a4-103">After a [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query is converted to command trees and executed, the query results are usually returned as one of the following:</span></span>  

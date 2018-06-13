@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767318"
 ---
 # <a name="literals-entity-sql"></a><span data-ttu-id="52712-102">文本 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="52712-102">Literals (Entity SQL)</span></span>
 <span data-ttu-id="52712-103">本主题介绍 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 对于文字的支持。</span><span class="sxs-lookup"><span data-stu-id="52712-103">This topic describes [!INCLUDE[esql](../../../../../../includes/esql-md.md)] support for literals.</span></span>  

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290928"
 ---
 # <a name="language-integrated-query-linq"></a><span data-ttu-id="11b01-103">语言集成查询 (LINQ)</span><span class="sxs-lookup"><span data-stu-id="11b01-103">Language Integrated Query (LINQ)</span></span>
 

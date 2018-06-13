@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762606"
 ---
 # <a name="gt-greater-than-entity-sql"></a><span data-ttu-id="f892a-102">&gt;（大于）(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f892a-102">&gt; (Greater Than) (Entity SQL)</span></span>
 <span data-ttu-id="f892a-103">比较两个表达式以确定左侧表达式的值是否大于右侧表达式的值。</span><span class="sxs-lookup"><span data-stu-id="f892a-103">Compares two expressions to determine whether the left expression has a value greater than the right expression.</span></span>  

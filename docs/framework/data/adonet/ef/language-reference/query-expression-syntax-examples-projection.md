@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762808"
 ---
 # <a name="query-expression-syntax-examples-projection"></a><span data-ttu-id="dca88-102">查询表达式语法示例：投影</span><span class="sxs-lookup"><span data-stu-id="dca88-102">Query Expression Syntax Examples: Projection</span></span>
 <span data-ttu-id="dca88-103">本主题中的示例演示如何使用`Select`方法和`From … From …`关键字来查询[AdventureWorks 销售模型](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。</span><span class="sxs-lookup"><span data-stu-id="dca88-103">The examples in this topic demonstrate how to use the `Select` method and the `From … From …` keywords to query the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) using query expression syntax.</span></span> <span data-ttu-id="dca88-104">`From … From …`与 `SelectMany` 方法等效，但前者基于查询。</span><span class="sxs-lookup"><span data-stu-id="dca88-104">`From … From …` is the query based equivalent of the `SelectMany` method.</span></span> <span data-ttu-id="dca88-105">这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。</span><span class="sxs-lookup"><span data-stu-id="dca88-105">The AdventureWorks Sales model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  

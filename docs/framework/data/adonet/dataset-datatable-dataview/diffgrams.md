@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760029"
 ---
 # <a name="diffgrams"></a><span data-ttu-id="0f4b0-102">DiffGrams</span><span class="sxs-lookup"><span data-stu-id="0f4b0-102">DiffGrams</span></span>
 <span data-ttu-id="0f4b0-103">DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="0f4b0-103">A DiffGram is an XML format that identifies current and original versions of data elements.</span></span> <span data-ttu-id="0f4b0-104"><xref:System.Data.DataSet> 使用 DiffGram 格式来加载和保持其内容，并将其内容序列化，以便通过网络连接来进行传输。</span><span class="sxs-lookup"><span data-stu-id="0f4b0-104">The <xref:System.Data.DataSet> uses the DiffGram format to load and persist its contents, and to serialize its contents for transport across a network connection.</span></span> <span data-ttu-id="0f4b0-105">当<xref:System.Data.DataSet>编写为 DiffGram，则它会为 DiffGram 所有必要的信息来精确地重新创建内容，但不架构的填充<xref:System.Data.DataSet>，包括从这两个列值**原始**和**当前**行版本、 行错误信息以及行顺序。</span><span class="sxs-lookup"><span data-stu-id="0f4b0-105">When a <xref:System.Data.DataSet> is written as a DiffGram, it populates the DiffGram with all the necessary information to accurately recreate the contents, though not the schema, of the <xref:System.Data.DataSet>, including column values from both the **Original** and **Current** row versions, row error information, and row order.</span></span>  

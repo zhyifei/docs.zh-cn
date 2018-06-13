@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576427"
 ---
 # <a name="names-of-namespaces"></a><span data-ttu-id="d026d-102">命名空间的名称</span><span class="sxs-lookup"><span data-stu-id="d026d-102">Names of Namespaces</span></span>
 <span data-ttu-id="d026d-103">作为与其他命名准则命名命名空间时的目标足够清楚起见为创建使用 framework 立即知道的内容的命名空间是什么，可能需要程序员。</span><span class="sxs-lookup"><span data-stu-id="d026d-103">As with other naming guidelines, the goal when naming namespaces is creating sufficient clarity for the programmer using the framework to immediately know what the content of the namespace is likely to be.</span></span> <span data-ttu-id="d026d-104">以下模板指定命名命名空间的一般规则：</span><span class="sxs-lookup"><span data-stu-id="d026d-104">The following template specifies the general rule for naming namespaces:</span></span>  

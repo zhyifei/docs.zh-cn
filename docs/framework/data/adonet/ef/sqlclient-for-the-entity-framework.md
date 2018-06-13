@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765082"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a><span data-ttu-id="7e3cf-102">用于实体框架的 SqlClient</span><span class="sxs-lookup"><span data-stu-id="7e3cf-102">SqlClient for the Entity Framework</span></span>
 <span data-ttu-id="7e3cf-103">本节介绍用于 SQL Server (SqlClient) 的 .NET Framework 数据提供程序，该提供程序使实体框架能够在 Microsoft SQL Server 上工作。</span><span class="sxs-lookup"><span data-stu-id="7e3cf-103">This section describes the .NET Framework Data Provider for SQL Server (SqlClient), which enables the Entity Framework to work over Microsoft SQL Server.</span></span>  

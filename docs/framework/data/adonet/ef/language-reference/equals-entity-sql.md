@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761394"
 ---
 # <a name="-equals-entity-sql"></a><span data-ttu-id="c46c9-102">=（等于）(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="c46c9-102">= (Equals) (Entity SQL)</span></span>
 <span data-ttu-id="c46c9-103">比较两个表达式是否相等。</span><span class="sxs-lookup"><span data-stu-id="c46c9-103">Compares the equality of two expressions.</span></span>  

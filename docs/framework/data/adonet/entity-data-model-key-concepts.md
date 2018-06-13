@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765628"
 ---
 # <a name="entity-data-model-key-concepts"></a><span data-ttu-id="68be9-102">实体数据模型关键概念</span><span class="sxs-lookup"><span data-stu-id="68be9-102">Entity Data Model Key Concepts</span></span>
 <span data-ttu-id="68be9-103">实体数据模型 (EDM) 使用三个关键概念来描述数据结构：*实体类型*，*关联类型*，和*属性*。</span><span class="sxs-lookup"><span data-stu-id="68be9-103">The Entity Data Model (EDM) uses three key concepts to describe the structure of data: *entity type*, *association type*, and *property*.</span></span> <span data-ttu-id="68be9-104">在任何 EDM 实现中，这些都是描述数据结构的最重要概念。</span><span class="sxs-lookup"><span data-stu-id="68be9-104">These are the most important concepts in describing the structure of data in any implementation of the EDM.</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0b50befa4346e17048598afd3d018dbde2fe8572
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458557"
 ---
 # <a name="getqualifierset-function"></a><span data-ttu-id="b907c-103">GetQualifierSet 函数</span><span class="sxs-lookup"><span data-stu-id="b907c-103">GetQualifierSet function</span></span>
 <span data-ttu-id="b907c-104">检索为的类实例或类定义设置的限定符。</span><span class="sxs-lookup"><span data-stu-id="b907c-104">Retrieves the qualifier set for a class instance or a class definition.</span></span>

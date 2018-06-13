@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764627"
 ---
 # <a name="-member-access-entity-sql"></a><span data-ttu-id="e0710-103">.</span><span class="sxs-lookup"><span data-stu-id="e0710-103">.</span></span> <span data-ttu-id="e0710-104">（成员访问）(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e0710-104">(Member Access) (Entity SQL)</span></span>
 <span data-ttu-id="e0710-105">点运算符 （.） 是[!INCLUDE[esql](../../../../../../includes/esql-md.md)]成员访问运算符。</span><span class="sxs-lookup"><span data-stu-id="e0710-105">The dot operator (.) is the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] member access operator.</span></span> <span data-ttu-id="e0710-106">使用成员访问运算符可生成结构化概念模型类型实例的属性或字段的值。</span><span class="sxs-lookup"><span data-stu-id="e0710-106">You use the member access operator to yield the value of a property or field of an instance of structural conceptual model type.</span></span>  
