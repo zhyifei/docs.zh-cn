@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571259"
 ---
 # <a name="handling-com-interop-exceptions"></a>处理 COM 互操作异常
 托管和非托管代码可协同工作来处理异常。 如果方法在托管代码中引发异常，公共语言运行时可将 HRESULT 传递至 COM 对象。 如果方法因返回失败 HRESULT 而在非托管代码中失败，运行时会引发可由托管代码捕获的异常。  

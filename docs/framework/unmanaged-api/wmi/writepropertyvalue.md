@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461079"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 函数
 将指定的数目的字节写入由属性句柄识别的属性。
@@ -75,7 +76,7 @@ HRESULT WritePropertyValue (
 对于非字符串属性值，`lNumBytes`必须是指定的属性类型的正确的数据大小。 字符串属性值，`lNumBytes`必须是长度以字节为单位，指定的字符串和字符串本身必须为偶数长度以字节为单位，以 null 终止字符开始便遵循。
 
 ## <a name="requirements"></a>要求  
-**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

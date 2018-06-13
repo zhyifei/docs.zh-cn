@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f5a4a6bc7b1e79068b11b099352cec64dd09f301
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459448"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread 方法
 初始化之前在同一线程调用的 API，因此可以避免该死锁的后续探查器的当前线程。  
@@ -39,7 +40,7 @@ HRESULT InitializeCurrentThread ();
 >  `InitializeCurrentThread` 执行初始化提前以完成任务，可采用锁，并可能发生死锁。 调用`InitializeCurrentThread`仅当没有任何挂起的线程时。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

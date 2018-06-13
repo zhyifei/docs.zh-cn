@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571230"
 ---
 # <a name="how-to-copy-directories"></a>如何：复制目录
 此示例演示如何使用 I/O 类将目录下的内容同步复制到另一个位置。 在此示例中，用户可以指定是否同时复制子目录。 如果复制子目录，则此示例中的方法将通过对每个后续子目录调用其自身的方法来递归复制它们，直到再也没有子目录可以复制为止。  
