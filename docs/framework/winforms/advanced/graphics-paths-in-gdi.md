@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523882"
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+ 中的图形路径
 路径是通过组合线条、 矩形和简单曲线而形成。 回想一下，从[向量图形概述](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)以下的基本构建基块已证明绘制图片的最有用：  

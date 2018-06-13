@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522264"
 ---
 # <a name="how-to-print-a-windows-form"></a>如何：打印 Windows 窗体
 作为开发过程的一部分，你通常将想要打印一份 Windows 窗体。 下面的代码示例演示如何通过使用打印一份当前窗体<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法。  

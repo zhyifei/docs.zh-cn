@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524337"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>使用钢笔绘制线条和形状
 使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]`Pen`对象绘制直线线段、 曲线和形状的轮廓。 在本部分中，*行*指任一这些，除非另行指定，表示仅一条直线段。 设置钢笔若要控制颜色、 宽度、 对齐方式，以及使用该钢笔绘制的直线的样式的属性。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357697"
 ---
 # <a name="null-semantics"></a>Null 语义
 下表提供指向各个部分的[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档其中`null`(`Nothing`在 Visual Basic 中) 问题进行讨论。  

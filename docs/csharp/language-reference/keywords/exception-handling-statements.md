@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213218"
 ---
 # <a name="exception-handling-statements-c-reference"></a>异常处理语句（C# 参考）
 C# 提供用于处理反常情况（称为异常，可能会在执行程序的过程中发生）的内置支持。 这些异常由正常控制流之外的代码进行处理。  

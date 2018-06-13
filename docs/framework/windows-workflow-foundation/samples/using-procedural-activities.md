@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516004"
 ---
 # <a name="using-procedural-activities"></a>使用过程性活动
 此示例使用 <xref:System.Activities.Statements.Sequence>、<xref:System.Activities.Statements.Assign>、<xref:System.Activities.Statements.If>、<xref:System.Activities.Statements.While>、<xref:System.Activities.Statements.Switch%601>、<xref:System.Activities.Statements.TryCatch> 和 <xref:System.Activities.Statements.WriteLine> 活动实现猜谜游戏。 猜谜游戏将选择一个随机数，然后玩家必须猜出该数字。 当玩家所猜测的数字错误时，工作流会给出一个提示，指示所猜的数字是过大还是过小。 如果玩家在 7 次之内猜出该数字，则将为其显示特定的祝贺语。  

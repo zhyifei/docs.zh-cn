@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519894"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>为工作流中的取消行为进行建模
 可以在工作流内部通过一个 <xref:System.Activities.Statements.Parallel> 活动（此活动在其 <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> 的计算结果为 `true` 时将取消不完整的分支）取消活动，也可以从工作流外部取消活动（如果主机调用 <xref:System.Activities.WorkflowApplication.Cancel%2A>）。 若要提供取消处理，工作流作者可以使用 <xref:System.Activities.Statements.CancellationScope> 活动和 <xref:System.Activities.Statements.CompensableActivity> 活动，也可以创建提供取消逻辑的自定义活动。 本主题概述了工作流中的取消。  

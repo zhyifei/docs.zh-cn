@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358874"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>数据服务提供程序（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持用于将数据作为公开多个提供程序模型[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 本主题提供的信息有助于为数据源选择最佳的 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]提供程序。  

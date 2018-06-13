@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517931"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>使用 FlowChart 与 Pick 的组合的 StateMachine 方案
 此示例演示如何使用 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Pick> 活动的组合实现一个简单的秒表方案。 它使用 Pick 活动中的 Receive 和 Send 来侦听秒表事件。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515618"
 ---
 # <a name="overloadgroups"></a>OverloadGroups
 此示例包含 `CreateLocation` 活动，它具有两个有趣的特征：  
