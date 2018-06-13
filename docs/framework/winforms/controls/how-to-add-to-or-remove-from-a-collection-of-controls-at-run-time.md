@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525991"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="b192e-102">如何：在运行时在控件集合中进行添加或移除</span><span class="sxs-lookup"><span data-stu-id="b192e-102">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
 <span data-ttu-id="b192e-103">应用程序开发中的常见任务是将控件添加到和从窗体上任何容器控件中删除控件 (如<xref:System.Windows.Forms.Panel>或<xref:System.Windows.Forms.GroupBox>控件或甚至窗体本身)。</span><span class="sxs-lookup"><span data-stu-id="b192e-103">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="b192e-104">在设计时，可直接将控件拖到面板或分组框上。</span><span class="sxs-lookup"><span data-stu-id="b192e-104">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="b192e-105">在运行时，这些控件维护一个 `Controls` 集合，该集合会跟踪集合中放置了哪些控件。</span><span class="sxs-lookup"><span data-stu-id="b192e-105">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  

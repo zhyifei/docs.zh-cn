@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489104"
 ---
 # <a name="authentication-in-wcf"></a><span data-ttu-id="e96df-102">WCF 中的身份验证</span><span class="sxs-lookup"><span data-stu-id="e96df-102">Authentication in WCF</span></span>
 <span data-ttu-id="e96df-103">以下主题中 Windows Communication Foundation (WCF) 提供身份验证，例如、 Windows 身份验证、 X.509 证书和用户名和密码显示多种不同的机制。</span><span class="sxs-lookup"><span data-stu-id="e96df-103">The following topics show a number of different mechanisms in Windows Communication Foundation (WCF) that provide authentication, for example, Windows authentication, X.509 certificates, and user name and passwords.</span></span>  

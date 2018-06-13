@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389270"
 ---
 # <a name="how-to-implement-callback-functions"></a><span data-ttu-id="c3689-102">如何：实现回调函数</span><span class="sxs-lookup"><span data-stu-id="c3689-102">How to: Implement Callback Functions</span></span>
 <span data-ttu-id="c3689-103">下面的过程和示例演示使用平台调用的托管应用程序如何在本地计算机上打印每个窗口的句柄值。</span><span class="sxs-lookup"><span data-stu-id="c3689-103">The following procedure and example demonstrate how a managed application, using platform invoke, can print the handle value for each window on the local computer.</span></span> <span data-ttu-id="c3689-104">具体而言，过程和示例使用“EnumWindows” 函数来逐句通过窗口列表，使用托管回调函数（名为 CallBack）来打印窗口句柄的值。</span><span class="sxs-lookup"><span data-stu-id="c3689-104">Specifically, the procedure and example use the **EnumWindows** function to step through the list of windows and a managed callback function (named CallBack) to print the value of the window handle.</span></span>  

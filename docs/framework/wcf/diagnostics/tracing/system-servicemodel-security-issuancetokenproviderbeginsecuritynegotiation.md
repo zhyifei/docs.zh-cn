@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482644"
 ---
 # <a name="systemservicemodelsecurityissuancetokenproviderbeginsecuritynegotiation"></a><span data-ttu-id="4e32b-102">System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="4e32b-102">System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation</span></span>
 <span data-ttu-id="4e32b-103">System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="4e32b-103">System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation</span></span>  

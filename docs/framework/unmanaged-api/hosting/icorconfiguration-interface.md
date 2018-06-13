@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63699f0af69b3a7623c5e9da156c2ff8ae83ccfc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437503"
 ---
 # <a name="icorconfiguration-interface"></a><span data-ttu-id="45498-102">ICorConfiguration 接口</span><span class="sxs-lookup"><span data-stu-id="45498-102">ICorConfiguration Interface</span></span>
 <span data-ttu-id="45498-103">提供用于配置公共语言运行时 (CLR) 方法。</span><span class="sxs-lookup"><span data-stu-id="45498-103">Provides methods for configuring the common language runtime (CLR).</span></span>  

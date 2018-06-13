@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b2ad9ef473a498804e5b3ac0469b5b68697c49f5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439168"
 ---
 # <a name="iclrvalidatorvalidate-method"></a><span data-ttu-id="65cbf-102">ICLRValidator::Validate 方法</span><span class="sxs-lookup"><span data-stu-id="65cbf-102">ICLRValidator::Validate Method</span></span>
 <span data-ttu-id="65cbf-103">验证的可移植可执行 (PE) 或指定文件中的 Microsoft 中间语言 (MSIL)。</span><span class="sxs-lookup"><span data-stu-id="65cbf-103">Validates the portable executable (PE) or Microsoft intermediate language (MSIL) in the specified file.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550080"
 ---
 # <a name="adorners-how-to-topics"></a><span data-ttu-id="40b12-102">装饰器帮助主题</span><span class="sxs-lookup"><span data-stu-id="40b12-102">Adorners How-to Topics</span></span>
 <span data-ttu-id="40b12-103">下面的示例演示如何完成常见任务使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装饰器框架。</span><span class="sxs-lookup"><span data-stu-id="40b12-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  

@@ -1,40 +1,30 @@
 ---
-title: "LINQ to Objects 活动"
-ms.custom: 
+title: LINQ to Objects 活动
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 403c82e8-7f2b-42f6-93cd-95c35bc76ead
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff77211000cfdda9c35e5a0dcbc69fc0eaf5c3be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e2c2be52a88d8f9a886f0e59c027e1d6c737497c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516664"
 ---
-# <a name="linq-to-objects-activity"></a><span data-ttu-id="a691a-102">LINQ to Objects 活动</span><span class="sxs-lookup"><span data-stu-id="a691a-102">LINQ to Objects Activity</span></span>
-<span data-ttu-id="a691a-103">此示例演示如何创建活动以使用 LINQ to Objects 查询集合中的元素。</span><span class="sxs-lookup"><span data-stu-id="a691a-103">This sample demonstrates how to create an activity to use LINQ to Objects to query elements in a collection.</span></span>  
+# <a name="linq-to-objects-activity"></a><span data-ttu-id="470ba-102">LINQ to Objects 活动</span><span class="sxs-lookup"><span data-stu-id="470ba-102">LINQ to Objects Activity</span></span>
+<span data-ttu-id="470ba-103">此示例演示如何创建活动以使用 LINQ to Objects 查询集合中的元素。</span><span class="sxs-lookup"><span data-stu-id="470ba-103">This sample demonstrates how to create an activity to use LINQ to Objects to query elements in a collection.</span></span>  
   
-## <a name="activity-details-for-findincollection"></a><span data-ttu-id="a691a-104">FindInCollection 的活动详细信息</span><span class="sxs-lookup"><span data-stu-id="a691a-104">Activity Details for FindInCollection</span></span>  
- <span data-ttu-id="a691a-105">此活动允许用户使用 LINQ to Objects 查询内存中集合的元素。</span><span class="sxs-lookup"><span data-stu-id="a691a-105">This activity allows users to query elements from collections in memory using LINQ to Objects.</span></span> <span data-ttu-id="a691a-106">您必须提供 lambda 表达式形式的 LINQ 谓词以筛选结果。</span><span class="sxs-lookup"><span data-stu-id="a691a-106">You must provide a LINQ predicate in the form of a lambda expression to filter the results.</span></span> <span data-ttu-id="a691a-107">可将此活动与 <xref:System.Activities.Statements.AddToCollection%601> 活动一起使用。</span><span class="sxs-lookup"><span data-stu-id="a691a-107">This activity can be used in conjunction with <xref:System.Activities.Statements.AddToCollection%601> activities.</span></span>  
+## <a name="activity-details-for-findincollection"></a><span data-ttu-id="470ba-104">FindInCollection 的活动详细信息</span><span class="sxs-lookup"><span data-stu-id="470ba-104">Activity Details for FindInCollection</span></span>  
+ <span data-ttu-id="470ba-105">此活动允许用户使用 LINQ to Objects 查询内存中集合的元素。</span><span class="sxs-lookup"><span data-stu-id="470ba-105">This activity allows users to query elements from collections in memory using LINQ to Objects.</span></span> <span data-ttu-id="470ba-106">您必须提供 lambda 表达式形式的 LINQ 谓词以筛选结果。</span><span class="sxs-lookup"><span data-stu-id="470ba-106">You must provide a LINQ predicate in the form of a lambda expression to filter the results.</span></span> <span data-ttu-id="470ba-107">可将此活动与 <xref:System.Activities.Statements.AddToCollection%601> 活动一起使用。</span><span class="sxs-lookup"><span data-stu-id="470ba-107">This activity can be used in conjunction with <xref:System.Activities.Statements.AddToCollection%601> activities.</span></span>  
   
- <span data-ttu-id="a691a-108">下表详述了此活动的属性和返回值。</span><span class="sxs-lookup"><span data-stu-id="a691a-108">The following table details the property and return values for the activity.</span></span>  
+ <span data-ttu-id="470ba-108">下表详述了此活动的属性和返回值。</span><span class="sxs-lookup"><span data-stu-id="470ba-108">The following table details the property and return values for the activity.</span></span>  
   
-|<span data-ttu-id="a691a-109">属性或返回值</span><span class="sxs-lookup"><span data-stu-id="a691a-109">Property or Return Value</span></span>|<span data-ttu-id="a691a-110">描述</span><span class="sxs-lookup"><span data-stu-id="a691a-110">Description</span></span>|  
+|<span data-ttu-id="470ba-109">属性或返回值</span><span class="sxs-lookup"><span data-stu-id="470ba-109">Property or Return Value</span></span>|<span data-ttu-id="470ba-110">描述</span><span class="sxs-lookup"><span data-stu-id="470ba-110">Description</span></span>|  
 |------------------------------|-----------------|  
-|<span data-ttu-id="a691a-111">`Collection` 属性</span><span class="sxs-lookup"><span data-stu-id="a691a-111">`Collection` property</span></span>|<span data-ttu-id="a691a-112">必需属性，用于指定源集合。</span><span class="sxs-lookup"><span data-stu-id="a691a-112">A required property that specifies the source collection.</span></span>|  
-|<span data-ttu-id="a691a-113">`Predicate` 属性</span><span class="sxs-lookup"><span data-stu-id="a691a-113">`Predicate` property</span></span>|<span data-ttu-id="a691a-114">必需属性，用于指定 lambda 表达式形式的集合筛选器。</span><span class="sxs-lookup"><span data-stu-id="a691a-114">A required property that specifies the filter for the collection in the form of a lambda expression.</span></span>|  
-|<span data-ttu-id="a691a-115">返回值</span><span class="sxs-lookup"><span data-stu-id="a691a-115">Return Value</span></span>|<span data-ttu-id="a691a-116">经过筛选的集合。</span><span class="sxs-lookup"><span data-stu-id="a691a-116">The filtered collection.</span></span>|  
+|<span data-ttu-id="470ba-111">`Collection` 属性</span><span class="sxs-lookup"><span data-stu-id="470ba-111">`Collection` property</span></span>|<span data-ttu-id="470ba-112">必需属性，用于指定源集合。</span><span class="sxs-lookup"><span data-stu-id="470ba-112">A required property that specifies the source collection.</span></span>|  
+|<span data-ttu-id="470ba-113">`Predicate` 属性</span><span class="sxs-lookup"><span data-stu-id="470ba-113">`Predicate` property</span></span>|<span data-ttu-id="470ba-114">必需属性，用于指定 lambda 表达式形式的集合筛选器。</span><span class="sxs-lookup"><span data-stu-id="470ba-114">A required property that specifies the filter for the collection in the form of a lambda expression.</span></span>|  
+|<span data-ttu-id="470ba-115">返回值</span><span class="sxs-lookup"><span data-stu-id="470ba-115">Return Value</span></span>|<span data-ttu-id="470ba-116">经过筛选的集合。</span><span class="sxs-lookup"><span data-stu-id="470ba-116">The filtered collection.</span></span>|  
   
-## <a name="code-sample-that-uses-the-custom-activity"></a><span data-ttu-id="a691a-117">使用自定义活动的代码示例</span><span class="sxs-lookup"><span data-stu-id="a691a-117">Code Sample that uses the Custom Activity</span></span>  
- <span data-ttu-id="a691a-118">下面的代码示例使用 `FindInCollection` 自定义活动查找员工集合中的所有行，这些员工的 `Role` 属性设置为 `Manager`，`Location` 属性设置为 `Redmond`。</span><span class="sxs-lookup"><span data-stu-id="a691a-118">The following code example uses the `FindInCollection` custom activity to find all rows in a collection of employees that have a `Role` property set to `Manager` and the `Location` property set to `Redmond`.</span></span>  
+## <a name="code-sample-that-uses-the-custom-activity"></a><span data-ttu-id="470ba-117">使用自定义活动的代码示例</span><span class="sxs-lookup"><span data-stu-id="470ba-117">Code Sample that uses the Custom Activity</span></span>  
+ <span data-ttu-id="470ba-118">下面的代码示例使用 `FindInCollection` 自定义活动查找员工集合中的所有行，这些员工的 `Role` 属性设置为 `Manager`，`Location` 属性设置为 `Redmond`。</span><span class="sxs-lookup"><span data-stu-id="470ba-118">The following code example uses the `FindInCollection` custom activity to find all rows in a collection of employees that have a `Role` property set to `Manager` and the `Location` property set to `Redmond`.</span></span>  
   
 ```csharp  
 // Find all program managers in Redmond in the employees collection.  
@@ -46,7 +36,7 @@ Activity wf = new FindInCollection<Employee>
 };  
 ```  
   
- <span data-ttu-id="a691a-119">下面的代码演示如何创建一个工作流程序，此程序使用自定义 FindInCollection 活动、<xref:System.Activities.Statements.AddToCollection%601> 和 <xref:System.Activities.Statements.ForEach%601> 活动，在集合中填入员工，查找 Redmond 市角色为开发人员的所有员工，然后循环访问结果列表。</span><span class="sxs-lookup"><span data-stu-id="a691a-119">The following code shows how to create a workflow program that uses the custom FindInCollection activity, <xref:System.Activities.Statements.AddToCollection%601>, and <xref:System.Activities.Statements.ForEach%601> activities to populate a collection with employees, find all the employees that have developer roles and are located in Redmond, and then iterate through the resulting list.</span></span>  
+ <span data-ttu-id="470ba-119">下面的代码演示如何创建一个工作流程序，此程序使用自定义 FindInCollection 活动、<xref:System.Activities.Statements.AddToCollection%601> 和 <xref:System.Activities.Statements.ForEach%601> 活动，在集合中填入员工，查找 Redmond 市角色为开发人员的所有员工，然后循环访问结果列表。</span><span class="sxs-lookup"><span data-stu-id="470ba-119">The following code shows how to create a workflow program that uses the custom FindInCollection activity, <xref:System.Activities.Statements.AddToCollection%601>, and <xref:System.Activities.Statements.ForEach%601> activities to populate a collection with employees, find all the employees that have developer roles and are located in Redmond, and then iterate through the resulting list.</span></span>  
   
 ```csharp  
 // Create the Linq predicate for the find expression  
@@ -106,23 +96,23 @@ Activity sampleWorkflow = new Sequence
 };  
 ```  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="a691a-120">使用此示例</span><span class="sxs-lookup"><span data-stu-id="a691a-120">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="470ba-120">使用此示例</span><span class="sxs-lookup"><span data-stu-id="470ba-120">To use this sample</span></span>  
   
-1.  <span data-ttu-id="a691a-121">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 LinqToObjects.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="a691a-121">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the LinqToObjects.sln solution file.</span></span>  
+1.  <span data-ttu-id="470ba-121">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 LinqToObjects.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="470ba-121">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the LinqToObjects.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="a691a-122">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="a691a-122">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="470ba-122">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="470ba-122">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="a691a-123">若要运行解决方案，请按 F5。</span><span class="sxs-lookup"><span data-stu-id="a691a-123">To run the solution, press F5.</span></span>  
+3.  <span data-ttu-id="470ba-123">若要运行解决方案，请按 F5。</span><span class="sxs-lookup"><span data-stu-id="470ba-123">To run the solution, press F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="a691a-124">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="a691a-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="a691a-125">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="a691a-125">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="470ba-124">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="470ba-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="470ba-125">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="470ba-125">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="a691a-126">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="a691a-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a691a-127">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="a691a-127">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="470ba-126">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="470ba-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="470ba-127">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="470ba-127">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Linq\LinqToObjects`  
   
-## <a name="see-also"></a><span data-ttu-id="a691a-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="a691a-128">See Also</span></span>  
- [<span data-ttu-id="a691a-129">Lambda 表达式 （C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="a691a-129">Lambda Expressions (C# Programming Guide)</span></span>](http://go.microsoft.com/fwlink/?LinkId=150381)  
- [<span data-ttu-id="a691a-130">LINQ to Objects</span><span class="sxs-lookup"><span data-stu-id="a691a-130">LINQ to Objects</span></span>](http://go.microsoft.com/fwlink/?LinkID=150380)
+## <a name="see-also"></a><span data-ttu-id="470ba-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="470ba-128">See Also</span></span>  
+ [<span data-ttu-id="470ba-129">Lambda 表达式 （C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="470ba-129">Lambda Expressions (C# Programming Guide)</span></span>](http://go.microsoft.com/fwlink/?LinkId=150381)  
+ [<span data-ttu-id="470ba-130">LINQ to Objects</span><span class="sxs-lookup"><span data-stu-id="470ba-130">LINQ to Objects</span></span>](http://go.microsoft.com/fwlink/?LinkID=150380)

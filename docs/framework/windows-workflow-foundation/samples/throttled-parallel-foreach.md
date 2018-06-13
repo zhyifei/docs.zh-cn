@@ -1,47 +1,37 @@
 ---
-title: "限制并行 ForEach"
-ms.custom: 
+title: 限制并行 ForEach
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b8811327fee8eb2ca3b2ba87d54a0014b20673a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 195c627d62665f832384989d4ef03105c4af3757
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516257"
 ---
-# <a name="throttled-parallel-foreach"></a><span data-ttu-id="75a69-102">限制并行 ForEach</span><span class="sxs-lookup"><span data-stu-id="75a69-102">Throttled Parallel ForEach</span></span>
-<span data-ttu-id="75a69-103">`ThrottleParallelForEach`活动是类似于<!--zz <xref:System.Activities.Statements.ParallelForEach>-->`System.Activities.Statements.ParallelForEach`活动有一个例外在于前者允许设置并发系数来限制要执行的并发分支的数目。</span><span class="sxs-lookup"><span data-stu-id="75a69-103">The `ThrottleParallelForEach` activity is similar to the <!--zz <xref:System.Activities.Statements.ParallelForEach>--> `System.Activities.Statements.ParallelForEach` activity with the one exception that it allows setting a concurrency factor to restrict the number of simultaneous branches to execute.</span></span> <span data-ttu-id="75a69-104">`ThrottleParallelForEach` 活动派生自 <xref:System.Activities.NativeActivity>，因为该活动需要对其他活动（子活动）进行计划，并且只有通过 <xref:System.Activities.NativeActivityContext> 类才能对此进行访问。</span><span class="sxs-lookup"><span data-stu-id="75a69-104">The `ThrottleParallelForEach` activity derives from <xref:System.Activities.NativeActivity>, because it needs to schedule other activities (the child activities) and this is only accessible through the <xref:System.Activities.NativeActivityContext> class.</span></span>  
+# <a name="throttled-parallel-foreach"></a><span data-ttu-id="fa6f9-102">限制并行 ForEach</span><span class="sxs-lookup"><span data-stu-id="fa6f9-102">Throttled Parallel ForEach</span></span>
+<span data-ttu-id="fa6f9-103">`ThrottleParallelForEach`活动是类似于<!--zz <xref:System.Activities.Statements.ParallelForEach>-->`System.Activities.Statements.ParallelForEach`活动有一个例外在于前者允许设置并发系数来限制要执行的并发分支的数目。</span><span class="sxs-lookup"><span data-stu-id="fa6f9-103">The `ThrottleParallelForEach` activity is similar to the <!--zz <xref:System.Activities.Statements.ParallelForEach>--> `System.Activities.Statements.ParallelForEach` activity with the one exception that it allows setting a concurrency factor to restrict the number of simultaneous branches to execute.</span></span> <span data-ttu-id="fa6f9-104">`ThrottleParallelForEach` 活动派生自 <xref:System.Activities.NativeActivity>，因为该活动需要对其他活动（子活动）进行计划，并且只有通过 <xref:System.Activities.NativeActivityContext> 类才能对此进行访问。</span><span class="sxs-lookup"><span data-stu-id="fa6f9-104">The `ThrottleParallelForEach` activity derives from <xref:System.Activities.NativeActivity>, because it needs to schedule other activities (the child activities) and this is only accessible through the <xref:System.Activities.NativeActivityContext> class.</span></span>  
   
-## <a name="projects"></a><span data-ttu-id="75a69-105">项目</span><span class="sxs-lookup"><span data-stu-id="75a69-105">Projects</span></span>  
+## <a name="projects"></a><span data-ttu-id="fa6f9-105">项目</span><span class="sxs-lookup"><span data-stu-id="fa6f9-105">Projects</span></span>  
   
-|<span data-ttu-id="75a69-106">**ProjectName**</span><span class="sxs-lookup"><span data-stu-id="75a69-106">**ProjectName**</span></span>|<span data-ttu-id="75a69-107">**说明**</span><span class="sxs-lookup"><span data-stu-id="75a69-107">**Description**</span></span>|<span data-ttu-id="75a69-108">**主要文件**</span><span class="sxs-lookup"><span data-stu-id="75a69-108">**Main Files**</span></span>|  
+|<span data-ttu-id="fa6f9-106">**ProjectName**</span><span class="sxs-lookup"><span data-stu-id="fa6f9-106">**ProjectName**</span></span>|<span data-ttu-id="fa6f9-107">**说明**</span><span class="sxs-lookup"><span data-stu-id="fa6f9-107">**Description**</span></span>|<span data-ttu-id="fa6f9-108">**主要文件**</span><span class="sxs-lookup"><span data-stu-id="fa6f9-108">**Main Files**</span></span>|  
 |-|-|-|  
-|<span data-ttu-id="75a69-109">ThrottledParallelForEach</span><span class="sxs-lookup"><span data-stu-id="75a69-109">ThrottledParallelForEach</span></span>|<span data-ttu-id="75a69-110">包含 `ThrottledParallelForEach` 活动及其设计器。</span><span class="sxs-lookup"><span data-stu-id="75a69-110">Contains `ThrottledParallelForEach` activity and its designer.</span></span>|<span data-ttu-id="75a69-111">ThrottledParallelForEach.cs</span><span class="sxs-lookup"><span data-stu-id="75a69-111">ThrottledParallelForEach.cs</span></span><br /><br /> <span data-ttu-id="75a69-112">`ThrottledParallelForEach` 活动定义。</span><span class="sxs-lookup"><span data-stu-id="75a69-112">The `ThrottledParallelForEach` activity definition.</span></span>|  
-|<span data-ttu-id="75a69-113">CodeTestClient</span><span class="sxs-lookup"><span data-stu-id="75a69-113">CodeTestClient</span></span>|<span data-ttu-id="75a69-114">示例客户端应用程序，通过使用命令性代码的 `ThrottledParallelForEach` 来配置和运行工作流。</span><span class="sxs-lookup"><span data-stu-id="75a69-114">Sample client application that configures and runs a workflow with a `ThrottledParallelForEach` using imperative code.</span></span>|<span data-ttu-id="75a69-115">Program.cs</span><span class="sxs-lookup"><span data-stu-id="75a69-115">Program.cs</span></span><br /><br /> <span data-ttu-id="75a69-116">定义和运行示例工作流的实例。</span><span class="sxs-lookup"><span data-stu-id="75a69-116">Defines and runs an instance of the sample workflow.</span></span>|  
+|<span data-ttu-id="fa6f9-109">ThrottledParallelForEach</span><span class="sxs-lookup"><span data-stu-id="fa6f9-109">ThrottledParallelForEach</span></span>|<span data-ttu-id="fa6f9-110">包含 `ThrottledParallelForEach` 活动及其设计器。</span><span class="sxs-lookup"><span data-stu-id="fa6f9-110">Contains `ThrottledParallelForEach` activity and its designer.</span></span>|<span data-ttu-id="fa6f9-111">ThrottledParallelForEach.cs</span><span class="sxs-lookup"><span data-stu-id="fa6f9-111">ThrottledParallelForEach.cs</span></span><br /><br /> <span data-ttu-id="fa6f9-112">`ThrottledParallelForEach` 活动定义。</span><span class="sxs-lookup"><span data-stu-id="fa6f9-112">The `ThrottledParallelForEach` activity definition.</span></span>|  
+|<span data-ttu-id="fa6f9-113">CodeTestClient</span><span class="sxs-lookup"><span data-stu-id="fa6f9-113">CodeTestClient</span></span>|<span data-ttu-id="fa6f9-114">示例客户端应用程序，通过使用命令性代码的 `ThrottledParallelForEach` 来配置和运行工作流。</span><span class="sxs-lookup"><span data-stu-id="fa6f9-114">Sample client application that configures and runs a workflow with a `ThrottledParallelForEach` using imperative code.</span></span>|<span data-ttu-id="fa6f9-115">Program.cs</span><span class="sxs-lookup"><span data-stu-id="fa6f9-115">Program.cs</span></span><br /><br /> <span data-ttu-id="fa6f9-116">定义和运行示例工作流的实例。</span><span class="sxs-lookup"><span data-stu-id="fa6f9-116">Defines and runs an instance of the sample workflow.</span></span>|  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="75a69-117">使用此示例</span><span class="sxs-lookup"><span data-stu-id="75a69-117">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="fa6f9-117">使用此示例</span><span class="sxs-lookup"><span data-stu-id="fa6f9-117">To use this sample</span></span>  
   
-1.  <span data-ttu-id="75a69-118">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 ThrottledParallelForEach.sln 文件。</span><span class="sxs-lookup"><span data-stu-id="75a69-118">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the ThrottledParallelForEach.sln file.</span></span>  
+1.  <span data-ttu-id="fa6f9-118">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 ThrottledParallelForEach.sln 文件。</span><span class="sxs-lookup"><span data-stu-id="fa6f9-118">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the ThrottledParallelForEach.sln file.</span></span>  
   
-2.  <span data-ttu-id="75a69-119">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="75a69-119">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="fa6f9-119">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="fa6f9-119">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="75a69-120">若要运行解决方案，请按 F5。</span><span class="sxs-lookup"><span data-stu-id="75a69-120">To run the solution, press F5.</span></span>  
+3.  <span data-ttu-id="fa6f9-120">若要运行解决方案，请按 F5。</span><span class="sxs-lookup"><span data-stu-id="fa6f9-120">To run the solution, press F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="75a69-121">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="75a69-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="75a69-122">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="75a69-122">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="fa6f9-121">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="fa6f9-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="fa6f9-122">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="fa6f9-122">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="75a69-123">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="75a69-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="75a69-124">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="75a69-124">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="fa6f9-123">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="fa6f9-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="fa6f9-124">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="fa6f9-124">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\ThrottledParallelForEach`

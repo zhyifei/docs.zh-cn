@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391311"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a><span data-ttu-id="2fbe2-102">用平台调用封送数据</span><span class="sxs-lookup"><span data-stu-id="2fbe2-102">Marshaling Data with Platform Invoke</span></span>
 <span data-ttu-id="2fbe2-103">若要调用从非托管库中导出的函数，.NET Framework 应用程序需要托管代码中表示非托管函数的函数原型。</span><span class="sxs-lookup"><span data-stu-id="2fbe2-103">To call functions exported from an unmanaged library, a .NET Framework application requires a function prototype in managed code that represents the unmanaged function.</span></span> <span data-ttu-id="2fbe2-104">若要创建使平台调用能正确封送数据的原型，必须执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="2fbe2-104">To create a prototype that enables platform invoke to marshal data correctly, you must do the following:</span></span>  

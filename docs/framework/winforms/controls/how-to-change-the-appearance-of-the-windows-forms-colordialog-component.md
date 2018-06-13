@@ -1,13 +1,6 @@
 ---
-title: "如何：更改 Windows 窗体 ColorDialog 组件的外观"
-ms.custom: 
+title: 如何：更改 Windows 窗体 ColorDialog 组件的外观
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,27 +10,23 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af3a9ec6ba301a27a7940bc752ffaf12f345abec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 816850fa61de97b5f4c251571a74da7e0a70cba8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530242"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a><span data-ttu-id="94030-102">如何：更改 Windows 窗体 ColorDialog 组件的外观</span><span class="sxs-lookup"><span data-stu-id="94030-102">How to: Change the Appearance of the Windows Forms ColorDialog Component</span></span>
-<span data-ttu-id="94030-103">你可以配置 Windows 窗体外观<xref:System.Windows.Forms.ColorDialog>组件与大量的其属性。</span><span class="sxs-lookup"><span data-stu-id="94030-103">You can configure the appearance of the Windows Forms <xref:System.Windows.Forms.ColorDialog> component with a number of its properties.</span></span> <span data-ttu-id="94030-104">对话框中有两个部分-一个显示基本颜色和一个允许用户定义自定义颜色。</span><span class="sxs-lookup"><span data-stu-id="94030-104">The dialog box has two sections — one that shows basic colors and one that allows the user to define custom colors.</span></span>  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a><span data-ttu-id="d425c-102">如何：更改 Windows 窗体 ColorDialog 组件的外观</span><span class="sxs-lookup"><span data-stu-id="d425c-102">How to: Change the Appearance of the Windows Forms ColorDialog Component</span></span>
+<span data-ttu-id="d425c-103">你可以配置 Windows 窗体外观<xref:System.Windows.Forms.ColorDialog>组件与大量的其属性。</span><span class="sxs-lookup"><span data-stu-id="d425c-103">You can configure the appearance of the Windows Forms <xref:System.Windows.Forms.ColorDialog> component with a number of its properties.</span></span> <span data-ttu-id="d425c-104">对话框中有两个部分-一个显示基本颜色和一个允许用户定义自定义颜色。</span><span class="sxs-lookup"><span data-stu-id="d425c-104">The dialog box has two sections — one that shows basic colors and one that allows the user to define custom colors.</span></span>  
   
- <span data-ttu-id="94030-105">属性中的大多数限制哪些用户可以从对话框中选择的颜色。</span><span class="sxs-lookup"><span data-stu-id="94030-105">Most of the properties restrict what colors the user can select from the dialog box.</span></span> <span data-ttu-id="94030-106">如果<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>属性设置为`true`，允许用户定义自定义颜色。</span><span class="sxs-lookup"><span data-stu-id="94030-106">If the <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> property is set to `true`, the user is allowed to define custom colors.</span></span> <span data-ttu-id="94030-107"><xref:System.Windows.Forms.ColorDialog.FullOpen%2A>属性是`true`如果对话框中展开定义自定义颜色; 通过否则用户必须单击"定义自定义颜色"按钮。</span><span class="sxs-lookup"><span data-stu-id="94030-107">The <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> property is `true` if the dialog box is expanded to define custom colors; otherwise the user must click a "Define Custom Colors" button.</span></span> <span data-ttu-id="94030-108">当<xref:System.Windows.Forms.ColorDialog.AnyColor%2A>属性设置为`true`，对话框中显示基本颜色集中可用的所有颜色。</span><span class="sxs-lookup"><span data-stu-id="94030-108">When the <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> property is set to `true`, the dialog box displays all available colors in the set of basic colors.</span></span> <span data-ttu-id="94030-109">如果<xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>属性设置为`true`，用户无法选择抖色的颜色; 仅纯色可供选择。</span><span class="sxs-lookup"><span data-stu-id="94030-109">If the <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> property is set to `true`, the user cannot select dithered colors; only solid colors are available to select.</span></span>  
+ <span data-ttu-id="d425c-105">属性中的大多数限制哪些用户可以从对话框中选择的颜色。</span><span class="sxs-lookup"><span data-stu-id="d425c-105">Most of the properties restrict what colors the user can select from the dialog box.</span></span> <span data-ttu-id="d425c-106">如果<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>属性设置为`true`，允许用户定义自定义颜色。</span><span class="sxs-lookup"><span data-stu-id="d425c-106">If the <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> property is set to `true`, the user is allowed to define custom colors.</span></span> <span data-ttu-id="d425c-107"><xref:System.Windows.Forms.ColorDialog.FullOpen%2A>属性是`true`如果对话框中展开定义自定义颜色; 通过否则用户必须单击"定义自定义颜色"按钮。</span><span class="sxs-lookup"><span data-stu-id="d425c-107">The <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> property is `true` if the dialog box is expanded to define custom colors; otherwise the user must click a "Define Custom Colors" button.</span></span> <span data-ttu-id="d425c-108">当<xref:System.Windows.Forms.ColorDialog.AnyColor%2A>属性设置为`true`，对话框中显示基本颜色集中可用的所有颜色。</span><span class="sxs-lookup"><span data-stu-id="d425c-108">When the <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> property is set to `true`, the dialog box displays all available colors in the set of basic colors.</span></span> <span data-ttu-id="d425c-109">如果<xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>属性设置为`true`，用户无法选择抖色的颜色; 仅纯色可供选择。</span><span class="sxs-lookup"><span data-stu-id="d425c-109">If the <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> property is set to `true`, the user cannot select dithered colors; only solid colors are available to select.</span></span>  
   
- <span data-ttu-id="94030-110">如果<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>属性设置为`true`，帮助按钮是否显示在对话框中。</span><span class="sxs-lookup"><span data-stu-id="94030-110">If the <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> property is set to `true`, a Help button appears on the dialog box.</span></span> <span data-ttu-id="94030-111">当用户单击帮助按钮，<xref:System.Windows.Forms.ColorDialog>组件的<xref:System.Windows.Forms.CommonDialog.HelpRequest>引发事件。</span><span class="sxs-lookup"><span data-stu-id="94030-111">When the user clicks the Help button, the <xref:System.Windows.Forms.ColorDialog> component's <xref:System.Windows.Forms.CommonDialog.HelpRequest> event is raised.</span></span>  
+ <span data-ttu-id="d425c-110">如果<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>属性设置为`true`，帮助按钮是否显示在对话框中。</span><span class="sxs-lookup"><span data-stu-id="d425c-110">If the <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> property is set to `true`, a Help button appears on the dialog box.</span></span> <span data-ttu-id="d425c-111">当用户单击帮助按钮，<xref:System.Windows.Forms.ColorDialog>组件的<xref:System.Windows.Forms.CommonDialog.HelpRequest>引发事件。</span><span class="sxs-lookup"><span data-stu-id="d425c-111">When the user clicks the Help button, the <xref:System.Windows.Forms.ColorDialog> component's <xref:System.Windows.Forms.CommonDialog.HelpRequest> event is raised.</span></span>  
   
-### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a><span data-ttu-id="94030-112">若要配置的颜色对话框中的外观</span><span class="sxs-lookup"><span data-stu-id="94030-112">To configure the appearance of the color dialog box</span></span>  
+### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a><span data-ttu-id="d425c-112">若要配置的颜色对话框中的外观</span><span class="sxs-lookup"><span data-stu-id="d425c-112">To configure the appearance of the color dialog box</span></span>  
   
-1.  <span data-ttu-id="94030-113">设置<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>， <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>， <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>，和<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>属性设置为所需的值。</span><span class="sxs-lookup"><span data-stu-id="94030-113">Set the <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>, and <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> properties to the desired values.</span></span>  
+1.  <span data-ttu-id="d425c-113">设置<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>， <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>， <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>，和<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>属性设置为所需的值。</span><span class="sxs-lookup"><span data-stu-id="d425c-113">Set the <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>, and <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> properties to the desired values.</span></span>  
   
     ```vb  
     ColorDialog1.AllowFullOpen = True  
@@ -60,7 +49,7 @@ ms.lasthandoff: 12/22/2017
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="94030-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="94030-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d425c-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="d425c-114">See Also</span></span>  
  <xref:System.Windows.Forms.ColorDialog>  
- [<span data-ttu-id="94030-115">ColorDialog 组件</span><span class="sxs-lookup"><span data-stu-id="94030-115">ColorDialog Component</span></span>](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
- [<span data-ttu-id="94030-116">ColorDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="94030-116">ColorDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)
+ [<span data-ttu-id="d425c-115">ColorDialog 组件</span><span class="sxs-lookup"><span data-stu-id="d425c-115">ColorDialog Component</span></span>](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
+ [<span data-ttu-id="d425c-116">ColorDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="d425c-116">ColorDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742505"
 ---
 # <a name="multifile-assemblies"></a><span data-ttu-id="86f0e-102">多文件程序集</span><span class="sxs-lookup"><span data-stu-id="86f0e-102">Multifile Assemblies</span></span>
 <span data-ttu-id="86f0e-103">可以使用命令行编译器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 和 Visual C++，创建多文件程序集。</span><span class="sxs-lookup"><span data-stu-id="86f0e-103">You can create multifile assemblies using command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] with Visual C++.</span></span> <span data-ttu-id="86f0e-104">程序集中的一个文件必须包含程序集清单。</span><span class="sxs-lookup"><span data-stu-id="86f0e-104">One file in the assembly must contain the assembly manifest.</span></span> <span data-ttu-id="86f0e-105">启动应用程序的程序集还必须包含入口点，如 Main 或 WinMain 方法。</span><span class="sxs-lookup"><span data-stu-id="86f0e-105">An assembly that starts an application must also contain an entry point, such as a Main or WinMain method.</span></span>  

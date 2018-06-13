@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550132"
 ---
 # <a name="window-management-how-to-topics"></a><span data-ttu-id="14ee6-102">窗口管理操作指南主题</span><span class="sxs-lookup"><span data-stu-id="14ee6-102">Window Management How-to Topics</span></span>
 <span data-ttu-id="14ee6-103">下面的主题介绍如何管理[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]windows。</span><span class="sxs-lookup"><span data-stu-id="14ee6-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516017"
 ---
 # <a name="durable-delay"></a><span data-ttu-id="fa1e9-102">持久延迟</span><span class="sxs-lookup"><span data-stu-id="fa1e9-102">Durable Delay</span></span>
 <span data-ttu-id="fa1e9-103">此示例演示如何使用持久延迟，在持久延迟过程中，将把工作流保留到持久性设备。</span><span class="sxs-lookup"><span data-stu-id="fa1e9-103">This sample demonstrates how to use a durable delay, which is a delay that persists the workflow to a durable device during the delay.</span></span> <span data-ttu-id="fa1e9-104">示例工作流包含发送到控制台并由延迟分隔的两个消息。</span><span class="sxs-lookup"><span data-stu-id="fa1e9-104">The sample workflow contains two messages to the console that are separated by a delay.</span></span> <span data-ttu-id="fa1e9-105">触发延迟时，工作流会卸载，并在重新加载到内存中之前，在工作流实例存储中等待 5 秒。</span><span class="sxs-lookup"><span data-stu-id="fa1e9-105">When the delay is triggered, the workflow is unloaded and waits 5 seconds in the workflow instance store before being reloaded in memory.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525489"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="5c998-102">Windows 窗体 DataGridView 控件中的基本列、行和单元格功能</span><span class="sxs-lookup"><span data-stu-id="5c998-102">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="5c998-103">许多基本行为`DataGridView`单元格、 行和列可以修改通过设置单个属性。</span><span class="sxs-lookup"><span data-stu-id="5c998-103">Many basic behaviors of `DataGridView` cells, rows, and columns can be modified by setting single properties.</span></span> <span data-ttu-id="5c998-104">本部分中的主题介绍几个最常使用的这些功能。</span><span class="sxs-lookup"><span data-stu-id="5c998-104">The topics in this section describe several of the most commonly used of these features.</span></span>  

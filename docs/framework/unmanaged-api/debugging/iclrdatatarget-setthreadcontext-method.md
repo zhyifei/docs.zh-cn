@@ -1,14 +1,6 @@
 ---
-title: "ICLRDataTarget::SetThreadContext 方法"
-ms.custom: 
+title: ICLRDataTarget::SetThreadContext 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDataTarget.SetThreadContext
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 02b77bbb721a44ff24734499011402f2b9165ef4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 73697fdd19f2492aabdc0d76e8c1a27c917c85f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405533"
 ---
-# <a name="iclrdatatargetsetthreadcontext-method"></a><span data-ttu-id="e749f-102">ICLRDataTarget::SetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="e749f-102">ICLRDataTarget::SetThreadContext Method</span></span>
-<span data-ttu-id="e749f-103">设置目标进程中的指定线程的当前上下文。</span><span class="sxs-lookup"><span data-stu-id="e749f-103">Sets the current context of the specified thread in the target process.</span></span> <span data-ttu-id="e749f-104">由公共语言运行时 (CLR) 数据访问服务调用此方法。</span><span class="sxs-lookup"><span data-stu-id="e749f-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
+# <a name="iclrdatatargetsetthreadcontext-method"></a><span data-ttu-id="abc26-102">ICLRDataTarget::SetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="abc26-102">ICLRDataTarget::SetThreadContext Method</span></span>
+<span data-ttu-id="abc26-103">设置目标进程中的指定线程的当前上下文。</span><span class="sxs-lookup"><span data-stu-id="abc26-103">Sets the current context of the specified thread in the target process.</span></span> <span data-ttu-id="abc26-104">由公共语言运行时 (CLR) 数据访问服务调用此方法。</span><span class="sxs-lookup"><span data-stu-id="abc26-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e749f-105">语法</span><span class="sxs-lookup"><span data-stu-id="e749f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="abc26-105">语法</span><span class="sxs-lookup"><span data-stu-id="abc26-105">Syntax</span></span>  
   
 ```  
 HRESULT SetThreadContext (  
@@ -49,29 +38,29 @@ HRESULT SetThreadContext (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e749f-106">参数</span><span class="sxs-lookup"><span data-stu-id="e749f-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="abc26-106">参数</span><span class="sxs-lookup"><span data-stu-id="abc26-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="e749f-107">[in]目标进程中线程的操作系统标识符。</span><span class="sxs-lookup"><span data-stu-id="e749f-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="abc26-107">[in]目标进程中线程的操作系统标识符。</span><span class="sxs-lookup"><span data-stu-id="abc26-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="e749f-108">[in]上下文的大小。</span><span class="sxs-lookup"><span data-stu-id="e749f-108">[in] The size of the context.</span></span>  
+ <span data-ttu-id="abc26-108">[in]上下文的大小。</span><span class="sxs-lookup"><span data-stu-id="abc26-108">[in] The size of the context.</span></span>  
   
  `context`  
- <span data-ttu-id="e749f-109">[in]指向包含上下文的缓冲区的指针。</span><span class="sxs-lookup"><span data-stu-id="e749f-109">[in] Pointer to a buffer containing the context.</span></span>  
+ <span data-ttu-id="abc26-109">[in]指向包含上下文的缓冲区的指针。</span><span class="sxs-lookup"><span data-stu-id="abc26-109">[in] Pointer to a buffer containing the context.</span></span>  
   
- <span data-ttu-id="e749f-110">中的数据`context`缓冲区将 Win32 格式`CONTEXT`结构。</span><span class="sxs-lookup"><span data-stu-id="e749f-110">The data in the `context` buffer will be in the format of the Win32 `CONTEXT` structure.</span></span> <span data-ttu-id="e749f-111">上下文指定特定于处理器的寄存器数据，因此将 win32 定义`CONTEXT`结构取决于处理器的体系结构。</span><span class="sxs-lookup"><span data-stu-id="e749f-111">The context specifies processor-specific register data, so the definition of the Win32 `CONTEXT` structure depends on the processor's architecture.</span></span> <span data-ttu-id="e749f-112">参阅 WinNT.h 中的标头文件的定义 Win32`CONTEXT`结构。</span><span class="sxs-lookup"><span data-stu-id="e749f-112">Refer to the WinNT.h header file for the definition of the Win32 `CONTEXT` structure.</span></span>  
+ <span data-ttu-id="abc26-110">中的数据`context`缓冲区将 Win32 格式`CONTEXT`结构。</span><span class="sxs-lookup"><span data-stu-id="abc26-110">The data in the `context` buffer will be in the format of the Win32 `CONTEXT` structure.</span></span> <span data-ttu-id="abc26-111">上下文指定特定于处理器的寄存器数据，因此将 win32 定义`CONTEXT`结构取决于处理器的体系结构。</span><span class="sxs-lookup"><span data-stu-id="abc26-111">The context specifies processor-specific register data, so the definition of the Win32 `CONTEXT` structure depends on the processor's architecture.</span></span> <span data-ttu-id="abc26-112">参阅 WinNT.h 中的标头文件的定义 Win32`CONTEXT`结构。</span><span class="sxs-lookup"><span data-stu-id="abc26-112">Refer to the WinNT.h header file for the definition of the Win32 `CONTEXT` structure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e749f-113">备注</span><span class="sxs-lookup"><span data-stu-id="e749f-113">Remarks</span></span>  
- <span data-ttu-id="e749f-114">此方法由调试应用程序的编写器实现。</span><span class="sxs-lookup"><span data-stu-id="e749f-114">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="abc26-113">备注</span><span class="sxs-lookup"><span data-stu-id="abc26-113">Remarks</span></span>  
+ <span data-ttu-id="abc26-114">此方法由调试应用程序的编写器实现。</span><span class="sxs-lookup"><span data-stu-id="abc26-114">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e749f-115">惠?</span><span class="sxs-lookup"><span data-stu-id="e749f-115">Requirements</span></span>  
- <span data-ttu-id="e749f-116">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e749f-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="abc26-115">要求</span><span class="sxs-lookup"><span data-stu-id="abc26-115">Requirements</span></span>  
+ <span data-ttu-id="abc26-116">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="abc26-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e749f-117">**标头：** ClrData.idl、 ClrData.h</span><span class="sxs-lookup"><span data-stu-id="e749f-117">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="abc26-117">**标头：** ClrData.idl、 ClrData.h</span><span class="sxs-lookup"><span data-stu-id="abc26-117">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="e749f-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e749f-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="abc26-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="abc26-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e749f-119">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e749f-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="abc26-119">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abc26-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e749f-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="e749f-120">See Also</span></span>  
- [<span data-ttu-id="e749f-121">ICLRDataTarget 接口</span><span class="sxs-lookup"><span data-stu-id="e749f-121">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="abc26-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="abc26-120">See Also</span></span>  
+ [<span data-ttu-id="abc26-121">ICLRDataTarget 接口</span><span class="sxs-lookup"><span data-stu-id="abc26-121">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

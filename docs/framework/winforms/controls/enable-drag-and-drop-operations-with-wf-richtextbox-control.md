@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529761"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="8f8ed-102">如何：在 Windows 窗体 RichTextBox 控件中启用拖放操作</span><span class="sxs-lookup"><span data-stu-id="8f8ed-102">How to: Enable Drag-and-Drop Operations with the Windows Forms RichTextBox Control</span></span>
 <span data-ttu-id="8f8ed-103">通过处理 <xref:System.Windows.Forms.RichTextBox> 和 <xref:System.Windows.Forms.RichTextBox.DragEnter> 事件，在 Windows 窗体 <xref:System.Windows.Forms.RichTextBox.DragDrop> 控件中进行拖放操作。</span><span class="sxs-lookup"><span data-stu-id="8f8ed-103">Drag-and-drop operations with the Windows Forms <xref:System.Windows.Forms.RichTextBox> control are done by handling the <xref:System.Windows.Forms.RichTextBox.DragEnter> and <xref:System.Windows.Forms.RichTextBox.DragDrop> events.</span></span> <span data-ttu-id="8f8ed-104">因此，在 <xref:System.Windows.Forms.RichTextBox> 控件中进行拖放操作是非常简单的。</span><span class="sxs-lookup"><span data-stu-id="8f8ed-104">Thus, drag-and-drop operations are extremely simple with the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
