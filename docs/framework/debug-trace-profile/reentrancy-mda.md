@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387856"
 ---
 # <a name="reentrancy-mda"></a><span data-ttu-id="9535a-102">重入 MDA</span><span class="sxs-lookup"><span data-stu-id="9535a-102">reentrancy MDA</span></span>
 <span data-ttu-id="9535a-103">先前未通过有序转换执行从托管代码到本机代码的转换的情况下，如果尝试执行从本机代码到托管代码的转换，会激活 `reentrancy` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="9535a-103">The `reentrancy` managed debugging assistant (MDA) is activated when an attempt is made to transition from native to managed code in cases where a prior switch from managed to native code was not performed through an orderly transition.</span></span>  
