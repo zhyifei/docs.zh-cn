@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806313"
 ---
 # <a name="custom-message-interceptor"></a><span data-ttu-id="a5821-102">自定义消息拦截器</span><span class="sxs-lookup"><span data-stu-id="a5821-102">Custom Message Interceptor</span></span>
 <span data-ttu-id="a5821-103">此示例演示通道扩展模型的使用。</span><span class="sxs-lookup"><span data-stu-id="a5821-103">This sample demonstrates the use of the channel extensibility model.</span></span> <span data-ttu-id="a5821-104">特别是，演示如何实现可创建通道工厂和通道侦听器的自定义绑定元素，以便在运行时堆栈的特定点截获所有传入和传出消息。</span><span class="sxs-lookup"><span data-stu-id="a5821-104">In particular, it shows how to implement a custom binding element that creates channel factories and channel listeners to intercept all incoming and outgoing messages at a particular point in the run-time stack.</span></span> <span data-ttu-id="a5821-105">此示例还包括一个客户端和一个服务器，用于演示这些自定义工厂的使用。</span><span class="sxs-lookup"><span data-stu-id="a5821-105">The sample also includes a client and server that demonstrate the use of these custom factories.</span></span>  

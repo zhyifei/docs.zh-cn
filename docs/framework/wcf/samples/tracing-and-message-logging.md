@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807978"
 ---
 # <a name="tracing-and-message-logging"></a><span data-ttu-id="a0af9-102">跟踪和消息日志记录</span><span class="sxs-lookup"><span data-stu-id="a0af9-102">Tracing and Message Logging</span></span>
 <span data-ttu-id="a0af9-103">本示例演示如何启用跟踪和消息日志记录。</span><span class="sxs-lookup"><span data-stu-id="a0af9-103">This sample demonstrates how to enable tracing and message logging.</span></span> <span data-ttu-id="a0af9-104">生成的跟踪和消息日志使用查看[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="a0af9-104">The resulting traces and message logs are viewed using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="a0af9-105">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="a0af9-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  

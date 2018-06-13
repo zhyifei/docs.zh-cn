@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804058"
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a><span data-ttu-id="62846-102">Windows Communication Foundation (WCF) 示例</span><span class="sxs-lookup"><span data-stu-id="62846-102">Windows Communication Foundation (WCF) Samples</span></span>
 <span data-ttu-id="62846-103">这些示例提供了有关各个方面的 Windows Communication Foundation (WCF) 的说明。</span><span class="sxs-lookup"><span data-stu-id="62846-103">These samples provide instruction on various aspects of Windows Communication Foundation (WCF).</span></span>  

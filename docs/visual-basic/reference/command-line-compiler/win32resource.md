@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649869"
 ---
 # <a name="-win32resource"></a><span data-ttu-id="cae5b-102">-win32resource</span><span class="sxs-lookup"><span data-stu-id="cae5b-102">-win32resource</span></span>
 <span data-ttu-id="cae5b-103">在输出文件中插入 Win32 资源文件。</span><span class="sxs-lookup"><span data-stu-id="cae5b-103">Inserts a Win32 resource file in the output file.</span></span>  

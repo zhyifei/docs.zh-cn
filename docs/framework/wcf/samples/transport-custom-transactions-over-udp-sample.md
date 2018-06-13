@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806141"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a><span data-ttu-id="36321-102">传输：UDP 示例上的自定义事务</span><span class="sxs-lookup"><span data-stu-id="36321-102">Transport: Custom Transactions over UDP Sample</span></span>
 <span data-ttu-id="36321-103">此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)中 Windows Communication Foundation (WCF) 示例[传输可扩展性](../../../../docs/framework/wcf/samples/transport-extensibility.md)。</span><span class="sxs-lookup"><span data-stu-id="36321-103">This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample in the Windows Communication Foundation (WCF)[Transport Extensibility](../../../../docs/framework/wcf/samples/transport-extensibility.md).</span></span> <span data-ttu-id="36321-104">它扩展 UDP 传输示例，以支持自定义事务流并演示 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 属性的用法。</span><span class="sxs-lookup"><span data-stu-id="36321-104">It extends the UDP Transport sample to support custom transaction flow and demonstrates the use of the <xref:System.ServiceModel.Channels.TransactionMessageProperty> property.</span></span>  

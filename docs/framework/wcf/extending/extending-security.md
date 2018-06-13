@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809396"
 ---
 # <a name="extending-security"></a><span data-ttu-id="e61fd-102">扩展安全性</span><span class="sxs-lookup"><span data-stu-id="e61fd-102">Extending Security</span></span>
 <span data-ttu-id="e61fd-103">若要适应新的声明类型和自定义令牌，可以扩展安全基础结构的 Windows Communication Foundation (WCF)。</span><span class="sxs-lookup"><span data-stu-id="e61fd-103">To accommodate new claim types and custom tokens, you can extend the security infrastructure of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="e61fd-104">本节中的主题将向您介绍如何完成此任务。</span><span class="sxs-lookup"><span data-stu-id="e61fd-104">The topics in this section show you how this is done.</span></span>  

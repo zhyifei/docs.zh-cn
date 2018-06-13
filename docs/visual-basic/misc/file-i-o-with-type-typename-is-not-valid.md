@@ -1,29 +1,23 @@
 ---
-title: "类型 &#39; 的文件 I/O&lt;typename&gt;&#39; 不是有效"
+title: 包含类型的文件 I/O &#39; &lt;typename&gt; &#39;无效
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrArgument_UnsupportedIOType1
 ms.assetid: b6c527e3-b75a-4c1a-b6f1-ee9f7460b5f0
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: dac3b94efd63121e9ce35dab4fe94a6f1ecc3f03
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 1016c989ec889b40c846a52fad6e81314f044ca2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636482"
 ---
-# <a name="file-io-with-type-39lttypenamegt39-is-not-valid"></a><span data-ttu-id="7ec9c-102">类型 &#39; 的文件 I/O&lt;typename&gt;&#39; 不是有效</span><span class="sxs-lookup"><span data-stu-id="7ec9c-102">File I/O with type &#39;&lt;typename&gt;&#39; is not valid</span></span>
-<span data-ttu-id="7ec9c-103">尝试将不受支持的类型写入文件。</span><span class="sxs-lookup"><span data-stu-id="7ec9c-103">You are attempting to write an unsupported type to a file.</span></span>  
+# <a name="file-io-with-type-39lttypenamegt39-is-not-valid"></a><span data-ttu-id="7d70f-102">包含类型的文件 I/O &#39; &lt;typename&gt; &#39;无效</span><span class="sxs-lookup"><span data-stu-id="7d70f-102">File I/O with type &#39;&lt;typename&gt;&#39; is not valid</span></span>
+<span data-ttu-id="7d70f-103">尝试将不受支持的类型写入文件。</span><span class="sxs-lookup"><span data-stu-id="7d70f-103">You are attempting to write an unsupported type to a file.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="7ec9c-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="7ec9c-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7d70f-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="7d70f-104">To correct this error</span></span>  
   
--   <span data-ttu-id="7ec9c-105">检查结构来确定不支持的类型出现的位置，然后将其更改为有效类型。</span><span class="sxs-lookup"><span data-stu-id="7ec9c-105">Check the structure to determine where the unsupported type occurs, and then change it to a valid type.</span></span>  
+-   <span data-ttu-id="7d70f-105">检查结构来确定不支持的类型出现的位置，然后将其更改为有效类型。</span><span class="sxs-lookup"><span data-stu-id="7d70f-105">Check the structure to determine where the unsupported type occurs, and then change it to a valid type.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7ec9c-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="7ec9c-106">See Also</span></span>  
- [<span data-ttu-id="7ec9c-107">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="7ec9c-107">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)  
- [<span data-ttu-id="7ec9c-108">My.Computer.FileSystem.WriteAllBytes</span><span class="sxs-lookup"><span data-stu-id="7ec9c-108">My.Computer.FileSystem.WriteAllBytes</span></span>](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.WriteAllBytes%2A)
+## <a name="see-also"></a><span data-ttu-id="7d70f-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="7d70f-106">See Also</span></span>  
+ [<span data-ttu-id="7d70f-107">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="7d70f-107">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)  
+ [<span data-ttu-id="7d70f-108">My.Computer.FileSystem.WriteAllBytes</span><span class="sxs-lookup"><span data-stu-id="7d70f-108">My.Computer.FileSystem.WriteAllBytes</span></span>](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.WriteAllBytes%2A)

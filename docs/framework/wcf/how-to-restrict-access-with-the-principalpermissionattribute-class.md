@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805767"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a><span data-ttu-id="9d8a8-102">如何：使用 PrincipalPermissionAttribute 类限制访问</span><span class="sxs-lookup"><span data-stu-id="9d8a8-102">How to: Restrict Access with the PrincipalPermissionAttribute Class</span></span>
 <span data-ttu-id="9d8a8-103">控制对 Windows 域计算机上的资源的访问是一项基本的安全任务。</span><span class="sxs-lookup"><span data-stu-id="9d8a8-103">Controlling the access to resources on a Windows-domain computer is a basic security task.</span></span> <span data-ttu-id="9d8a8-104">例如，应该只有某些用户才能查看敏感数据，例如工资单信息。</span><span class="sxs-lookup"><span data-stu-id="9d8a8-104">For example, only certain users should be able to view sensitive data, such as payroll information.</span></span> <span data-ttu-id="9d8a8-105">本主题解释如何通过要求用户属于某个预定义组来限制对方法的访问。</span><span class="sxs-lookup"><span data-stu-id="9d8a8-105">This topic explains how to restrict access to a method by demanding that the user belong to a predefined group.</span></span> <span data-ttu-id="9d8a8-106">有关工作示例，请参阅[授权服务操作访问权限](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="9d8a8-106">For a working sample, see [Authorizing Access to Service Operations](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653398"
 ---
 # <a name="-optioncompare"></a><span data-ttu-id="ee811-102">-optioncompare</span><span class="sxs-lookup"><span data-stu-id="ee811-102">-optioncompare</span></span>
 <span data-ttu-id="ee811-103">指定如何进行字符串比较。</span><span class="sxs-lookup"><span data-stu-id="ee811-103">Specifies how string comparisons are made.</span></span>  

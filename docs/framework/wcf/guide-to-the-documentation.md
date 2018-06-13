@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805533"
 ---
 # <a name="guide-to-the-documentation"></a><span data-ttu-id="08d9d-102">文档指南</span><span class="sxs-lookup"><span data-stu-id="08d9d-102">Guide to the Documentation</span></span>
 <span data-ttu-id="08d9d-103">提供以下是有关 Windows Communication Foundation (WCF) 文档的指南。</span><span class="sxs-lookup"><span data-stu-id="08d9d-103">Provided here is guidance about the Windows Communication Foundation (WCF) documentation.</span></span> <span data-ttu-id="08d9d-104">建议从链接的文档开始，它们按照特定的兴趣和专业技术水平进行分组。</span><span class="sxs-lookup"><span data-stu-id="08d9d-104">The linked documents are recommended starting points grouped according to specific interests and levels of expertise.</span></span>  

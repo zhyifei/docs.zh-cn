@@ -1,27 +1,18 @@
 ---
-title: "示例 XML 文件： 合并的购买 Orders3"
-ms.custom: 
+title: 示例 XML 文件： 合并的购买 Orders3
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ccb1e08ee6fc45ea407fbe3a0501062e8340ea02
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4de74aab208b3ee09a49210dd1f97c13af273789
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644841"
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="9cf3d-102">示例 XML 文件：合并的采购订单</span><span class="sxs-lookup"><span data-stu-id="9cf3d-102">Sample XML File: Consolidated Purchase Orders</span></span>
-<span data-ttu-id="9cf3d-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="9cf3d-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="9cf3d-104">此文件是一组来自多家公司、具有不同形状的采购订单。</span><span class="sxs-lookup"><span data-stu-id="9cf3d-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="9cf3d-105">每家公司的采购订单位于单独的命名空间中。</span><span class="sxs-lookup"><span data-stu-id="9cf3d-105">Purchase orders from each company are in separate namespaces.</span></span>  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="7978f-102">示例 XML 文件：合并的采购订单</span><span class="sxs-lookup"><span data-stu-id="7978f-102">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="7978f-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="7978f-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="7978f-104">此文件是一组来自多家公司、具有不同形状的采购订单。</span><span class="sxs-lookup"><span data-stu-id="7978f-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="7978f-105">每家公司的采购订单位于单独的命名空间中。</span><span class="sxs-lookup"><span data-stu-id="7978f-105">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="9cf3d-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="9cf3d-106">ConsolidatedPurchaseOrders.xml</span></span>  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="7978f-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="7978f-106">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -153,5 +144,5 @@ ms.lasthandoff: 10/18/2017
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9cf3d-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="9cf3d-107">See Also</span></span>  
- [<span data-ttu-id="9cf3d-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="9cf3d-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="7978f-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="7978f-107">See Also</span></span>  
+ [<span data-ttu-id="7978f-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="7978f-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

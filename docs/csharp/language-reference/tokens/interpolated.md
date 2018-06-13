@@ -17,6 +17,7 @@ ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34058822"
 ---
 # <a name="---string-interpolation-c-reference"></a><span data-ttu-id="409f0-103">$ - 字符串内插（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="409f0-103">$ - string interpolation (C# Reference)</span></span>
 

@@ -1,28 +1,22 @@
 ---
-title: 命名自变量 &#39;&lt;argumentname&gt;&#39; 指定多次
+title: 命名自变量&#39; &lt;argumentname&gt; &#39;指定多次
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrNamedArgumentAlreadyUsed1
 ms.assetid: a5113d23-ca66-4961-909f-74f97a0eaf87
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: adff48e87b2405df5c166d7924a1053c0cd516be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4704c9184faa1b4091e17e4b4385419b96597ec1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635754"
 ---
-# <a name="named-argument-39ltargumentnamegt39-specified-multiple-times"></a><span data-ttu-id="1ac85-102">命名自变量 &#39;&lt;argumentname&gt;&#39; 指定多次</span><span class="sxs-lookup"><span data-stu-id="1ac85-102">Named argument &#39;&lt;argumentname&gt;&#39; specified multiple times</span></span>
-<span data-ttu-id="1ac85-103">你多次指定了命名参数。</span><span class="sxs-lookup"><span data-stu-id="1ac85-103">You specified a named argument more than once.</span></span>  
+# <a name="named-argument-39ltargumentnamegt39-specified-multiple-times"></a><span data-ttu-id="b479e-102">命名自变量&#39; &lt;argumentname&gt; &#39;指定多次</span><span class="sxs-lookup"><span data-stu-id="b479e-102">Named argument &#39;&lt;argumentname&gt;&#39; specified multiple times</span></span>
+<span data-ttu-id="b479e-103">你多次指定了命名参数。</span><span class="sxs-lookup"><span data-stu-id="b479e-103">You specified a named argument more than once.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1ac85-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="1ac85-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b479e-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="b479e-104">To correct this error</span></span>  
   
--   <span data-ttu-id="1ac85-105">在这些规范中，删除多余规范，保留一个即可。</span><span class="sxs-lookup"><span data-stu-id="1ac85-105">Remove all but one of the specifications.</span></span>  
+-   <span data-ttu-id="b479e-105">在这些规范中，删除多余规范，保留一个即可。</span><span class="sxs-lookup"><span data-stu-id="b479e-105">Remove all but one of the specifications.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1ac85-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1ac85-106">See Also</span></span>  
- [<span data-ttu-id="1ac85-107">按位置和按名称传递自变量</span><span class="sxs-lookup"><span data-stu-id="1ac85-107">Passing Arguments by Position and by Name</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
+## <a name="see-also"></a><span data-ttu-id="b479e-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="b479e-106">See Also</span></span>  
+ [<span data-ttu-id="b479e-107">按位置和按名称传递自变量</span><span class="sxs-lookup"><span data-stu-id="b479e-107">Passing Arguments by Position and by Name</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)

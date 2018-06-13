@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807917"
 ---
 # <a name="instancing-initialization"></a><span data-ttu-id="779f7-102">实例化初始化</span><span class="sxs-lookup"><span data-stu-id="779f7-102">Instancing Initialization</span></span>
 <span data-ttu-id="779f7-103">此示例扩展[Pooling](../../../../docs/framework/wcf/samples/pooling.md)示例通过定义一个接口， `IObjectControl`，其中的激活和停用它自定义对象的初始化。</span><span class="sxs-lookup"><span data-stu-id="779f7-103">This sample extends the [Pooling](../../../../docs/framework/wcf/samples/pooling.md) sample by defining an interface, `IObjectControl`, which customizes the initialization of an object by activating and deactivating it.</span></span> <span data-ttu-id="779f7-104">客户端调用向池中返回对象以及不向池中返回对象的方法。</span><span class="sxs-lookup"><span data-stu-id="779f7-104">The client invokes methods that return the object to the pool and that do not return the object to the pool.</span></span>  

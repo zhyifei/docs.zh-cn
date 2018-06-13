@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803879"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a><span data-ttu-id="f51fd-102">通过自定义绑定发布和检索元数据</span><span class="sxs-lookup"><span data-stu-id="f51fd-102">Publishing and Retrieving Metadata Over a Custom Binding</span></span>
 <span data-ttu-id="f51fd-103"><xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 提供对向服务添加元数据终结点的支持。</span><span class="sxs-lookup"><span data-stu-id="f51fd-103">The <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> provides support for adding metadata endpoint to a service.</span></span> <span data-ttu-id="f51fd-104">这些元数据终结点可以对具有的 URL 处的 HTTP GET 请求作出响应`?wsdl`查询字符串并可对 Ws-transfer GET 请求的 Ws-metadataexchange (MEX) 规范中定义。</span><span class="sxs-lookup"><span data-stu-id="f51fd-104">These metadata endpoints can respond to HTTP GET requests at a URL that has a `?wsdl` querystring and to WS-Transfer GET requests as defined in the WS-MetadataExchange (MEX) specification.</span></span> <span data-ttu-id="f51fd-105">MEX 终结点可实现 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 协定。</span><span class="sxs-lookup"><span data-stu-id="f51fd-105">MEX endpoints implement the <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> contract.</span></span>  

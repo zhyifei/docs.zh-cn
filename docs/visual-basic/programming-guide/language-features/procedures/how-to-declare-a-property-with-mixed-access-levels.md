@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651406"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a><span data-ttu-id="c95ca-102">如何：声明具有混合访问级别的属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c95ca-102">How to: Declare a Property with Mixed Access Levels (Visual Basic)</span></span>
 <span data-ttu-id="c95ca-103">如果你想`Get`和`Set`要具有不同的访问级别的属性的过程，你可以使用中的更多的权限级别`Property`语句和中限制性更强的级别`Get`或`Set`语句。</span><span class="sxs-lookup"><span data-stu-id="c95ca-103">If you want the `Get` and `Set` procedures on a property to have different access levels, you can use the more permissive level in the `Property` statement and the more restrictive level in either the `Get` or `Set` statement.</span></span> <span data-ttu-id="c95ca-104">当你想要能够获取属性的值的代码的某些部分和某些其他部分的代码将无法更改的值时，可以在属性上使用混合的访问级别。</span><span class="sxs-lookup"><span data-stu-id="c95ca-104">You use mixed access levels on a property when you want certain parts of the code to be able to get the property's value, and certain other parts of the code to be able to change the value.</span></span>  

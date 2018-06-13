@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805036"
 ---
 # <a name="message-security-binding"></a><span data-ttu-id="a1097-102">消息安全绑定</span><span class="sxs-lookup"><span data-stu-id="a1097-102">Message Security Binding</span></span>
 <span data-ttu-id="a1097-103">本节包含演示在 WCF 中的 Windows 服务中的消息安全绑定的示例。</span><span class="sxs-lookup"><span data-stu-id="a1097-103">This section contains samples that demonstrate message security binding in Windows Services in WCF.</span></span>  
