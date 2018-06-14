@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646053"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>如何： 从 XML 文件 (Visual Basic 中) 中读取对象数据
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类读取之前写入 XML 文件的对象数据。  

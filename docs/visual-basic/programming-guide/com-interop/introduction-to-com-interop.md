@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644389"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM 互操作介绍 (Visual Basic)
 组件对象模型 (COM) 允许到其他组件和承载应用程序公开其功能的对象。 COM 对象进行了 Windows 编程多年的基础，而应用程序面向公共语言运行时 (CLR) 提供了许多优点。  

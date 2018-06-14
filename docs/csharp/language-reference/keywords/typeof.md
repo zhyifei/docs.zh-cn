@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171936"
 ---
 # <a name="typeof-c-reference"></a>typeof（C# 参考）
 用于为类型获取 `System.Type` 对象。 `typeof` 表达式采用以下格式：  

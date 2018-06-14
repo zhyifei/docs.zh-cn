@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637877"
 ---
 # <a name="cannot-save-file-to-temp"></a>无法将文件保存到 TEMP
 组件找不到名为 TEMP 目录，或者包含 TEMP 目录的驱动器或分区的空间不足，不能保存信息。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524529"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox 控件（Windows 窗体）
 Windows 窗体`ComboBox`控件用于在下拉组合框中显示数据。 默认情况下，`ComboBox`控件出现在两个部分： 顶部是文本框中，用户可以键入列表项。 第二部分是显示的项，用户可以从中选择一个列表的列表框。  

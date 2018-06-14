@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649258"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>如何：创建过程 (Visual Basic)
 你将包含起始的声明语句之间的过程 (`Sub`或`Function`) 和结束的声明语句 (`End Sub`或`End Function`)。 过程的所有代码均位于这些语句之间。  

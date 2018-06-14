@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595304"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
 指示转换运算符 (`CType`) 将一个类或结构转换为可以包含原始类或结构的所有可能值的类型。  

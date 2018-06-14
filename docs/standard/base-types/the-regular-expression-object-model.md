@@ -42,6 +42,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579855"
 ---
 # <a name="the-regular-expression-object-model"></a>正则表达式对象模型
 <a name="introduction"></a> 本主题介绍了处理 .NET 正则表达式时使用的对象模型。 它包含下列部分：  

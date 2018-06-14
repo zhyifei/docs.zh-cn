@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553918"
 ---
 # <a name="radiobutton"></a>RadioButton
 <xref:System.Windows.Controls.RadioButton> 控件是通常组合在一起以提供若干选项; 中的单个选项的用户可以选择只包含一个按钮一次。  

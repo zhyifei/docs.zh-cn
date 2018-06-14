@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594304"
 ---
 # <a name="xml-axis-properties-do-not-support-late-binding"></a>XML 轴属性不支持后期绑定
 非类型化的对象引用了 XML 轴属性。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490768"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>如何：创建单向协定
 本主题演示了创建使用单向协定的方法所需的基本步骤。 此类方法调用对 Windows Communication Foundation (WCF) 服务从客户端的操作，但是不预期回复。 例如，可以使用这种类型的协定将通知发布给许多订户。 在创建双工（双向）协定（可使得客户端和服务器可以独立地相互通信，这样双方都可以启动对另一方的呼叫）时，还可以使用单向协定。 具体而言，这样做可允许服务器对客户端进行单向呼叫，而客户端可以将这些呼叫视为事件。 有关指定单向方法的详细信息，请参见 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 属性和 <xref:System.ServiceModel.OperationContractAttribute> 类。  

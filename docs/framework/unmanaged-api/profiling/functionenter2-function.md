@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d79249a2540adbd7f1b7e9bf36c899ba94d71e2e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452385"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 函数
 控件被传递给函数，并提供帧和函数的自变量的有关堆栈的信息，请通知探查器。 此函数将取代[FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)函数。  
@@ -69,7 +70,7 @@ void __stdcall FunctionEnter2 (
  此外，`FunctionEnter2`函数不能调用进入托管代码或以任何方式导致托管的内存分配。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
   

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517165"
 ---
 # <a name="application-settings-for-windows-forms"></a>Windows 窗体的应用程序设置
 借助 Windows 窗体的应用程序设置功能，可轻松地在客户端创建、存储和维护自定义应用程序和用户首选项。 借助应用程序设置，可存储应用程序数据（如数据库连接字符串）以及用户特定的数据（如工具栏位置和最近使用的列表）。  

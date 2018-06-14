@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529020"
 ---
 # <a name="types-of-bitmaps"></a>位图类型
 位图的像素为单位的矩形数组中指定的每个像素的颜色的位数组。 专用于单个像素的比特数确定可以分配给该像素的颜色数。 例如，如果每个像素都由 4 位，然后给定的像素可以分配 16 种不同颜色之一 (2 ^4 = 16)。 下表显示可以指定数目的 bits 通过分配给表示像素的颜色数的几个示例。  

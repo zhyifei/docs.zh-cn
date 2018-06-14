@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639750"
 ---
 # <a name="specified-dll-function-not-found"></a>未找到指定的 DLL 函数
 已找到用户库引用中的动态链接库 (DLL)，但是未在该 DLL 中找到指定的 DLL 函数。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280148"
 ---
 # <a name="override-c-reference"></a>override（C# 参考）
 扩展或修改继承的方法、属性、索引器或事件的抽象或虚拟实现需要 `override` 修饰符。  

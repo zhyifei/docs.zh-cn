@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513809"
 ---
 # <a name="writing-projects-targeting-the-net-framework-30-and-35-in-visual-studio-2010"></a>在 Visual Studio 2010 中编写面向 .NET Framework 3.0 和 3.5 的项目
 可使用 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 创建面向 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 版本 3.0 或 3.5 的项目。 本主题介绍如何执行此操作。  

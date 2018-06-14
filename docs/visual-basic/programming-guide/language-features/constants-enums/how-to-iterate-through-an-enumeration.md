@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646573"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>如何：在 Visual Basic 中循环访问枚举
 枚举提供了使用相关常量集以及将常量值与名称相关联的一个便捷方法。 若要循环枚举，你可以将其移到数组使用<xref:System.Enum.GetValues%2A>方法。 你还可以循环访问枚举使用`For...Each`语句中，使用<xref:System.Enum.GetNames%2A>或<xref:System.Enum.GetValues%2A>方法以提取的字符串或数值的值。  

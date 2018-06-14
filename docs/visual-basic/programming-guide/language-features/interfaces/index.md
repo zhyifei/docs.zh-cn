@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654417"
 ---
 # <a name="interfaces-visual-basic"></a>接口 (Visual Basic)
 接口定义了类可以实现的属性、方法和事件。 接口允许将功能定义为一些紧密相关的属性、方法和事件的小组；这样就减少了兼容性问题，因为可以在不损害现有代码的情况下开发接口的增强型实现。 在任何时候都可以通过开发附加接口和实现来添加新的功能。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589875"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>后期绑定重载解决方法不能应用于&#39;&lt;过程名称&gt;&#39;因为访问实例是一个接口类型
 编译器正在尝试解析的引用的重载的属性或过程，但引用失败，因为自变量的类型`Object`和引用的对象具有接口的数据类型。 `Object`参数强制编译器将引用解析为后期绑定。  

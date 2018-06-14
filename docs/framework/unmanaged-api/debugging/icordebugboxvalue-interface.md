@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b546d65e2c3cf498c80e19cc7236a6e424515577
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405921"
 ---
 # <a name="icordebugboxvalue-interface1"></a>ICorDebugBoxValue 接口 1
 "ICorDebugHeapValue"表示装箱的值类对象的子类。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

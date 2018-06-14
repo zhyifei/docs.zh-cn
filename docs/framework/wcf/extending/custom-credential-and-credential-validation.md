@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803448"
 ---
 # <a name="custom-credential-and-credential-validation"></a>自定义凭据和凭据验证
 在 Windows Communication Foundation (WCF) 安全取决于服务和客户端之间的凭据交换。 大多数安全方案均可使用常见的凭据类型来实现，如 Windows (Kerberos)、用户名和密码以及证书。 而本节中的主题针对需要使用新类型的凭据的情况说明如何处理和验证这些新类型。  

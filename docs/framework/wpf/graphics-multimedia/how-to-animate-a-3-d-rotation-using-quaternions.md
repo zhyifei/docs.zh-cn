@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556934"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a>如何：使用四元数对三维旋转进行动画处理
 此示例演示如何进行动画处理的三维对象使用四元数旋转。  

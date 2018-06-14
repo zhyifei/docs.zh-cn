@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743022"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;删除&gt;webRequestModules （网络设置） 的元素
 从应用程序中删除自定义的 Web 请求模块。  

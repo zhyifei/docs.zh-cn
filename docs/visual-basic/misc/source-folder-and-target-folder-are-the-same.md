@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640476"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>源文件夹和目标文件夹是相同的
 尝试复制或移动文件，但指定的源目录和目标目录是相同的。 这可能导致不正确地分析文件路径。  

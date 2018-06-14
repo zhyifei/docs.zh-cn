@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806737"
 ---
 # <a name="creating-user-defined-bindings"></a>创建用户定义的绑定
 有多种方式可以创建系统未提供的绑定：  

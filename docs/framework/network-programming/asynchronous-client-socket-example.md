@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390294"
 ---
 # <a name="asynchronous-client-socket-example"></a>异步客户端套接字示例
 以下示例程序创建连接到服务器的客户端。 该客户端是使用异步套接字构建的，因此当服务器返回响应时，不会挂起客户端应用程序的执行。 应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。  

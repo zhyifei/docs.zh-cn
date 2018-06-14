@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b18c89cee0c3f5088a9978e448a0d61de1b9848
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434240"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation 枚举
 介绍一的组主机可以为其应用策略操作的操作。  
@@ -61,7 +62,7 @@ typedef enum {
  CLR 还区分中止正常和非正常 （强制） 中止。 一般情况下，正常中止使各种方法，以便中止任务，而强制中止则没有此类保证之前运行异常处理例程和终结器。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   

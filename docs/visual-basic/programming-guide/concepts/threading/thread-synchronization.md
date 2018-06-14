@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655086"
 ---
 # <a name="thread-synchronization-visual-basic"></a>线程同步 (Visual Basic)
 以下各节中描述的功能和类可用于同步访问多线程应用程序中的资源。  

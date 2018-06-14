@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550181"
 ---
 # <a name="how-to-enable-tab-characters-in-a-textbox-control"></a>如何：在 TextBox 控件中启用制表符
 此示例演示如何作为正常输入中启用的制表符字符数的接受<xref:System.Windows.Controls.TextBox>控件。  

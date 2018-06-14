@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545527"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>不在对象树中的对象元素的初始化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 初始化时某些方面会被推迟，在通常依赖连接到逻辑树或可视化树的元素的进程中执行。 本主题介绍了针对未连接到两种树之一的元素，将其初始化可能需要的步骤。  

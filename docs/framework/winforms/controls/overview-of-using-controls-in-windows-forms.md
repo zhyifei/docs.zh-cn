@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537357"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>在“Windows 窗体”中使用控件的概述
 本主题介绍 Windows 窗体应用程序的重要元素，并提供一个简单的示例使用控件并处理在 Windows 窗体应用程序中的事件。  

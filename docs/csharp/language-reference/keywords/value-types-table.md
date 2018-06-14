@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280889"
 ---
 # <a name="value-types-table-c-reference"></a>值类型表（C# 参考）
 下表按类别列出 C# 值类型。  

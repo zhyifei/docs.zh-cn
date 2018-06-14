@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545878"
 ---
 # <a name="how-to-determine-if-a-page-is-browser-hosted"></a>如何： 确定是否页是托管浏览器
 此示例演示如何确定如果<xref:System.Windows.Controls.Page>托管浏览器中。  

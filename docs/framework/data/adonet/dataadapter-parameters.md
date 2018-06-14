@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759366"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter 参数
 <xref:System.Data.Common.DbDataAdapter> 具有四个用于从数据源检索数据和更新数据源中数据的属性：<xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> 属性返回数据源中的数据；<xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> 属性用于管理数据源中的更改。 调用 `SelectCommand` 的 `Fill` 方法之前必须设置 `DataAdapter` 属性。 在调用 `InsertCommand` 的 `UpdateCommand` 方法之前必须设置 `DeleteCommand`、`Update` 或 `DataAdapter` 属性，具体取决于对 <xref:System.Data.DataTable> 中的数据做了哪些更改。 例如，如果已添加行，在调用 `InsertCommand` 之前必须设置 `Update`。 当 `Update` 正在处理已插入、已更新或已删除的行时，`DataAdapter` 将使用相应的 `Command` 属性来处理该操作。 有关已修改行的当前信息将通过 `Command` 集合传递到 `Parameters` 对象。  
@@ -161,7 +162,7 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
->  如果未为参数提供参数名称，给定参数的参数递增的默认名称*N* *，*从"Parameter1"开始。 我们建议避免使用 Parameter*N*命名约定时提供参数名称，因为你提供的名称可能与中现有的默认参数名称发生冲突`ParameterCollection`。 如果提供的名称已经存在，将引发异常。  
+>  如果未为参数提供参数名称，给定参数的参数递增的默认名称*N* *，* 从"Parameter1"开始。 我们建议避免使用 Parameter*N*命名约定时提供参数名称，因为你提供的名称可能与中现有的默认参数名称发生冲突`ParameterCollection`。 如果提供的名称已经存在，将引发异常。  
   
 ## <a name="see-also"></a>请参阅  
  [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  

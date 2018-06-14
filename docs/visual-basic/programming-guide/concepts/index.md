@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643341"
 ---
 # <a name="programming-concepts-visual-basic"></a>编程概念 (Visual Basic)
 此部分介绍了 Visual Basic 语言中的编程概念。  

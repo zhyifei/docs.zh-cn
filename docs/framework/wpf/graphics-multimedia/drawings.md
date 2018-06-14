@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556026"
 ---
 # <a name="drawings"></a>绘图
 <xref:System.Windows.Media.Drawing> 对象用于有效地绘制形状、 图像或文本。 绘图时绘制与使用<xref:System.Windows.Media.DrawingBrush>或编程与<xref:System.Windows.Media.Visual>对象。  

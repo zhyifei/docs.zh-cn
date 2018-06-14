@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580739"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>如何：处理 PLINQ 查询中的异常
 本主题中的第一个示例展示了如何处理 PLINQ 查询在执行时可能会抛出的 <xref:System.AggregateException?displayProperty=nameWithType>。 第二个示例展示了如何将 try-catch 块置于委托中，并尽可能靠近抛出异常的代码位置。 这样一来，可以在异常发生时尽快捕获它们，并继续执行查询。 如果允许异常向上冒泡回到联接线程，则查询也许可以在引发异常后继续处理一些项。  

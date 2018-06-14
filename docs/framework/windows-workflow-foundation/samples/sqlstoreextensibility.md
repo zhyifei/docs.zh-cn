@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518481"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 此示例演示了 SQL 工作流实例存储中的已提升属性的使用和配置。 SQL 工作流实例存储是基于 SQL 的实例存储实现。 利用此存储，实例可保存其状态，并将其状态加载到 SQL Server 或 SQL Server Express 数据库中以及从 SQL Server 或 SQL Server Express 数据库中加载其状态。 用户可使用存储扩展性功能来定义存储在示例存储中的属性。 这些属性显示在已提升属性视图中，用户可利用该视图查询这些属性。  

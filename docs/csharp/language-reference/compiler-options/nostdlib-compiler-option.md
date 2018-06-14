@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216130"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib（C# 编译器选项）
 -nostdlib 可防止导入 mscorlib.dll，后者定义了整个 System 命名空间。  

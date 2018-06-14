@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 404f1bdf5865733648084e34a558b7b20a59b3ee
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423073"
 ---
 # <a name="icordebugthread-interface1"></a>ICorDebugThread 接口 1
 表示进程中的线程。 `ICorDebugThread` 实例的生存期与它表示的线程的生存期相同。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/04/2018
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

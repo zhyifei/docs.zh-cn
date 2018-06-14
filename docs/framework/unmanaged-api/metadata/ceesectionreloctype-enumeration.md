@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: babd7d87f1bb6f238c347d68814a3ecdaef64b40
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442866"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 枚举
 提供值来影响的一种`reloc`指令发出对的调用中[iceegen:: Addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)。  
@@ -70,11 +71,11 @@ typedef enum  {
 |`srRelocPtr`|一个值，该值的内存的前修正内容一个指针，而不是部分偏移量。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：**作为 MsCorEE.dll 中的资源  
+ **库：** 作为 MsCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

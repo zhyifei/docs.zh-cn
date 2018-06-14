@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529853"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>设计时开发 Windows 窗体控件
 .NET Framework 为控件创作者提供了丰富的控件创作技术。 作者不再局限于设计作为现有控件集合的复合控件。 通过继承，可根据现有复合控件或现有 Windows 窗体控件创建自己的控件。 还可以自己设计实现自定义绘制的控件。 这些选项对可视化界面的设计和功能赋予了很大的灵活性。 若要利用这些功能，应熟悉基于对象的编程概念。  

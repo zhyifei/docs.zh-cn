@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358825"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>查找数值序列中的最小值
 使用 <xref:System.Linq.Enumerable.Min%2A> 运算符可返回数值序列中的最小值。  

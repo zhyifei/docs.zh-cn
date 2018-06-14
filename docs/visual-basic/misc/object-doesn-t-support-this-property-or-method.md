@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638702"
 ---
 # <a name="object-doesn39t-support-this-property-or-method-visual-basic"></a>对象没有&#39;t 支持此属性或方法 (Visual Basic)
 你指定的属性或方法不在此自动对象中。  

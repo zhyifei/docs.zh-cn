@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496930"
 ---
 # <a name="message-filters"></a>消息筛选器
 为了实现基于内容的路由，路由服务使用 <xref:System.ServiceModel.Dispatcher.MessageFilter> 实现，这些实现检查消息的特定部分，例如地址、终结点名称或特定 XPath 语句。 如果随 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 一起提供的消息筛选器均无法满足您的需求，则您可以通过创建 <xref:System.ServiceModel.Dispatcher.MessageFilter> 基类的新实现来创建自定义筛选器。  

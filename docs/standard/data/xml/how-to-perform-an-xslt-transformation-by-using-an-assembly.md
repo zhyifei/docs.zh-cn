@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569498"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>如何：通过使用程序集执行 XSLT 转换
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 可以将该程序集直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。  

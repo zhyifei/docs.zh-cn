@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027384"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>演练和技术获取启动的概述
 

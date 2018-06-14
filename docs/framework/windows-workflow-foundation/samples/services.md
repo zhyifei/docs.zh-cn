@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517694"
 ---
 # <a name="services"></a>服务
 本部分包含的示例演示 Windows Workflow Foundation (WF) 服务功能的链接。  

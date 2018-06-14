@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524302"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.CheckedListBox>控件扩展<xref:System.Windows.Forms.ListBox>控件。 它执行几乎所有操作都列表框不，还可以在列表中显示项旁边的复选标记。 其他两个控件之间的区别是，选中列表框仅支持<xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; 并且，选中列表框只能有一项或选择无。 请注意，所选的项将会突出显示窗体上，并且不是与选中的项相同。  

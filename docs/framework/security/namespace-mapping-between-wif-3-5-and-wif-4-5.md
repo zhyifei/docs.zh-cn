@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407977"
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>WIF 3.5 和 WIF 4.5 之间的命名空间映射
 从 .NET 4.5 开始，Windows Identity Foundation (WIF) 已完全集成到 .NET Framework 中。 这种集成引起了名称更改及 WIF 命名空间和 API 表面的某些合并。 本主题提供一些指导以及 WIF 3.5 命名空间和 WIF 4.5 命名空间之间的常规映射。 它的目的并不是提供详尽的说明，而是提供一些常规信息，说明在 WIF 4.5 中的什么位置可以找到熟悉的 WIF 3.5 类。 有关 WIF 3.5 和 WIF 4.5 之间差异的更多详细信息，请参阅 [Windows Identity Foundation 4.5 中的新增功能](../../../docs/framework/security/whats-new-in-wif.md)。 有关如何将使用 WIF 3.5 生成的应用程序迁移到 WIF 4.5 的指南，请参阅[将使用 WIF 3.5 生成的应用程序迁移到 WIF 4.5 的指南](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)。  

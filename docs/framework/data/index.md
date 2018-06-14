@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356747"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework 中的数据和建模
 本节提供有关如何使用 ADO.NET、语言集成查询 (LINQ)、WCF 数据服务和 XML 访问数据的信息。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604791"
 ---
 # <a name="xor-operator-visual-basic"></a>异或运算符 (Visual Basic)
 执行逻辑异或对两个`Boolean`表达式或对两个数值表达式的按位异。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586833"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>利用 Visual Basic 自定义项目并扩展 My 对象
 你可以自定义项目模板，可以提供其他`My`对象。 这样，可轻松其他开发人员查找并使用您的对象。  

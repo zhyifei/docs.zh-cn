@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766083"
 ---
 # <a name="distributed-transactions"></a>分布式事务
 事务是一组相关的任务，作为独立于其他任务的独立单元成功（提交）或失败（中止）。 A*分布式事务*是影响多个资源的事务。 要提交分布式事务，所有参与者都必须保证对数据的任何更改是永久的。 即使发生系统崩溃或其他不可预见的事件，更改也必须是永久的。 即使只有一个参与者无法保证这一点，整个事务也将失败，在事务范围内对数据的任何更改均将回滚。  

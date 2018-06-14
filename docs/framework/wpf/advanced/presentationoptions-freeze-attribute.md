@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546066"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze 特性
 集<xref:System.Windows.Freezable.IsFrozen%2A>状态`true`上包含<xref:System.Windows.Freezable>元素。 默认行为<xref:System.Windows.Freezable>而无需`PresentationOptions:Freeze`指定的属性是<xref:System.Windows.Freezable.IsFrozen%2A>是`false`加载时间和依赖于一般<xref:System.Windows.Freezable>在运行时的行为。  

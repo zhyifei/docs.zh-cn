@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651829"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>如何：从过程返回值 (Visual Basic)
 A`Function`过程返回一个值给调用代码通过执行`Return`语句或在遇到`Exit Function`或`End Function`语句。  

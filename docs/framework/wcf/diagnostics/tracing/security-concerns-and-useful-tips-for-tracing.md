@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33484564"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>有关跟踪的安全注意事项和有用提示
 本主题说明防止敏感信息公开的方法以及使用 WebHost 时的有用提示。  

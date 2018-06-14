@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491970"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>访问工作流服务内的标识信息
 若要访问工作流服务内的标识信息，您必须实现自定义执行属性中的 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 接口。 在 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> 方法中，您可以访问 <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> 来访问标识信息。 本主题将指导您实现此执行属性，以及一个在运行时会将此属性呈现给 <xref:System.ServiceModel.Activities.Receive> 活动的自定义活动。  自定义活动将实现相同的行为<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活动时除外，<xref:System.ServiceModel.Activities.Receive>置于内，<xref:System.ServiceModel.Activities.IReceiveMessageCallback>将调用，且将检索的标识信息。  

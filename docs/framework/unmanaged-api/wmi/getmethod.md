@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65b8cb74a028892a3494e818f2b523f75e8766a1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460442"
 ---
 # <a name="getmethod-function"></a>GetMethod 函数
 检索有关指定方法的信息。
@@ -79,7 +80,7 @@ HRESULT GetMethod (
 在`ppInSignature`和`ppOutSignature`分别，为中的属性描述输入和输出参数，`IWbemClassObject`系统类的实例[_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx)。 中的属性`ppInsignature`名为 **Param * * * n*，其中*n*是方法签名中的参数位置 (如`Param1`，`Param2`等。)。 中的属性`ppOutSignature`也名为 **Param * * * n*，和返回值名为**ReturnValue**。 有关详细信息及示例，请参阅[IWbemClassObject::GetMethod 方法](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx)。
 
 ## <a name="requirements"></a>要求  
-**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

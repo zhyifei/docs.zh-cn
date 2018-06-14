@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569741"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>如何：在 ConcurrentDictionary 中添加和移除项
 本示例演示如何在 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 中添加、检索、更新和删除项。 此集合类是一个线程安全实现。 建议在多个线程可能同时尝试访问元素时使用此集合类。  

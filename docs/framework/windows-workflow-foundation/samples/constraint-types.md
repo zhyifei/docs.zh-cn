@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517503"
 ---
 # <a name="constraint-types"></a>约束类型
 本实例演示将约束应用于工作流的两种不同方法：一种方法是从活动内部应用（生成），另一种方法是从活动外部应用（策略）。 在此方案中，某个活动作者（来自于第三方软件公司）想要验证两个参数之间的关系。 在此例中，成本应小于或等于价格。 这是一个常规的验证生成约束。  

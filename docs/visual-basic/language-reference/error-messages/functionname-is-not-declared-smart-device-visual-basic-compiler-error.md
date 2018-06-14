@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584766"
 ---
 # <a name="39ltfunctionnamegt39-is-not-declared-smart-devicevisual-basic-compiler-error"></a>&#39;&lt;functionname&gt; &#39;未声明 （智能设备 /visual Basic 编译器错误）
 <`functionname`> 未声明。 文件 I/O 功能在 `Microsoft.VisualBasic` 命名空间中通常是可用的，但目标版本的 .NET Compact Framewor 不支持它。  

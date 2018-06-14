@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339652"
 ---
 # <a name="expressions-c-programming-guide"></a>表达式（C# 编程指南）
 表达式是由一个或多个操作数以及零个或多个运算符组成的序列，其计算结果为一个值、对象、方法或命名空间。 表达式可以包含文本值、方法调用、运算符及其操作数，或简单名称。 简单名称可以是变量名、类型成员名、方法参数名、命名空间名或类型名。  

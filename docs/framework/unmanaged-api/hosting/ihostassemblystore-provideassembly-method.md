@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e32d48931177a42dd14092b4052370764a217abe
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440358"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly 方法
 获取未被引用程序集的引用[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)从返回[ihostassemblymanager:: Getnonhoststoreassemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)。 公共语言运行时 (CLR) 调用`ProvideAssembly`列表中未显示每个程序集。  
@@ -71,11 +72,11 @@ HRESULT ProvideAssembly (
  返回标识值`pAssemblyId`宿主指定。 标识符在进程的生存期内必须是唯一的。 CLR 使用此值流作为唯一标识符。 它会检查每个值对的值`pAssemblyId`返回到其他调用`ProvideAssembly`。 如果主机返回相同`pAssemblyId`另一项的值`IStream`，CLR 将检查是否已映射了该流的内容。 如果是这样，则运行时将加载映像而不是映射一个新的现有副本。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

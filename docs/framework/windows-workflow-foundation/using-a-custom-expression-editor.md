@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518572"
 ---
 # <a name="using-a-custom-expression-editor"></a>使用自定义表达式编辑器
 可以实现自定义表达式编辑器，以提供更丰富或更简单的表达式编辑体验。 在以下几种情况下，您可能需要使用自定义表达式编辑器：  

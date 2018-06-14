@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490625"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>如何：创建支持 AJAX 的 WCF 服务和访问该服务的 ASP.NET 客户端
 本主题演示如何使用 Visual Studio 2008 创建启用了 AJAX 的 Windows Communication Foundation (WCF) 服务和 ASP.NET 客户端访问该服务。 在“过程”一节中描述了创建服务和客户端的代码的步骤之后，在“示例”一节中提供了相应的代码。  

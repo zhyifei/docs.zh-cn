@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355517"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>枚举 SQL Server 的实例 (ADO.NET)
 SQL Server 允许应用程序查找当前的网络中的 SQL Server 实例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 类向应用程序开发人员公开此信息，提供包含所有可见服务器的信息的 <xref:System.Data.DataTable>。 此返回的表包含与用户尝试创建一个新的连接时提供的列表匹配和扩展包含在所有可用的服务器上的下拉列表的网络上可用的服务器实例的列表**连接属性**对话框。 显示的结果并非总是完整的。  

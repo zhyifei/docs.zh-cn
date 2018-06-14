@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588453"
 ---
 # <a name="playing-sounds-visual-basic"></a>播放声音 (Visual Basic)
 `My.Computer.Audio` 对象提供用于播放声音的方法。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526932"
 ---
 # <a name="filedialog-class"></a>FileDialog 类
 Windows 窗体<xref:System.Windows.Forms.FileDialog>类是公共类的基类<xref:System.Windows.Forms.OpenFileDialog>和<xref:System.Windows.Forms.SaveFileDialog>组件。 你可以更改到<xref:System.Windows.Forms.FileDialog>影响的外观和行为的这些对话框，具体取决于应用程序运行上的 Windows 版本的类。  

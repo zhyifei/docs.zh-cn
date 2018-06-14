@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493252"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>如何：审核 Windows Communication Foundation 安全事件
 Windows Communication Foundation (WCF)，可安全事件记录到 Windows 事件日志中，可以使用 Windows 事件查看器查看。 本主题说明如何设置应用程序以使其记录安全事件。 有关 WCF 审核的详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  

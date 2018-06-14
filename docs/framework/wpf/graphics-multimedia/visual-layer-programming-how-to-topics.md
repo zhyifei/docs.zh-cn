@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561971"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>可视化层编程帮助主题
 此部分中的主题演示如何使用可视化层进行命中测试和低级别的组合。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600800"
 ---
 # <a name="bad-record-number"></a>错误的记录号
 中的记录号`a FileGet`， `FilePut`， `FileGetObject`，或`FilePutObject`语句是小于或等于零。  

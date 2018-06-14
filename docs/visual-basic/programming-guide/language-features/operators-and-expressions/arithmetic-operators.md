@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655579"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>算术运算符 (Visual Basic)
 算术运算符用于执行很多熟悉的算术运算，涉及计算的文本、 变量、 其他表达式、 函数和属性调用和常量所表示的数字值。 算术运算符也属于是移位运算符，它们充当级别的单个位进行运算的操作数和向左或向右移动其位模式。  

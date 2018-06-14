@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756613"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>将对象标识符映射到加密算法
 数字签名确保数据不被篡改时它从一个程序发送到另一个。 通常通过将数学函数应用到的数据进行签名的哈希计算的数字签名。 在设置格式的哈希值进行签名，某些数字签名算法追加格式设置操作的一部分 ASN.1 对象标识符 (OID)。 OID 标识用于计算哈希算法。 你可以映射到对象标识符，以扩展加密机制，以便使用自定义算法的算法。 下面的示例演示如何将对象标识符映射到新的哈希算法。  

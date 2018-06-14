@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581298"
 ---
 # <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>如何：将对象序列化为 SOAP 编码的 XML 流
   

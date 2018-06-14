@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578348"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>使用 XPathNavigator 验证架构
 使用 <xref:System.Xml.XmlDocument> 类，可以通过两种方式验证 <xref:System.Xml.XmlDocument> 对象中包含的 XML 内容。 第一种方式是使用验证 <xref:System.Xml.XmlReader> 对象验证 XML 内容，第二种方式是使用 <xref:System.Xml.XmlDocument.Validate%2A> 类的 <xref:System.Xml.XmlDocument> 方法。 还可以使用 <xref:System.Xml.XPath.XPathDocument> 类对 XML 内容执行只读验证。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745170"
 ---
 # <a name="ltetwenablegt-element"></a>&lt;etwEnable&gt;元素
 指定是否为公共语言运行时事件启用 Windows 事件跟踪 (ETW)。  

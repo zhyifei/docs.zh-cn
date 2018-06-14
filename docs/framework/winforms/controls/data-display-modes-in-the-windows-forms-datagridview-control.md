@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528598"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的数据显示模式
 <xref:System.Windows.Forms.DataGridView>控件可以在三种不同模式中显示数据： 绑定、 未绑定，和虚拟。 选择最合适的模式，基于你的要求。  

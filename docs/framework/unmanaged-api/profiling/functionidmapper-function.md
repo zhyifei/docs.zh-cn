@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 151b790afaf6a251ba5d8d8932f44a503cde853a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458593"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper 函数
 通知探查器函数的给定的标识符可能被重新映射到要在中使用的备用 ID [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)， [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)，和[FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)该函数的回调。 `FunctionIDMapper` 此外还要使探查器指示它是否想要接收该函数的回调。  
@@ -54,7 +55,7 @@ UINT_PTR __stdcall FunctionIDMapper (
  探查器应容许所分析应用程序的多个线程同时调用每个函数的方法相同的情况。 在这种情况下，探查器可能会收到多个`FunctionIDMapper`相同的回调`FunctionID`。 探查器应请务必从此回调返回相同的值，它具有相同调用多次时`FunctionID`。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
   

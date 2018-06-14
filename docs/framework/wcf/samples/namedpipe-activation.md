@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806378"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 激活
 本示例演示如何承载使用 Windows 进程激活服务 (WAS) 的服务以激活通过命名管道进行通信的服务。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)和需要[!INCLUDE[wv](../../../../includes/wv-md.md)]运行。  

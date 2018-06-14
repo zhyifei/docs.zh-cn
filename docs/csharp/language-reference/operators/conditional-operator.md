@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457211"
 ---
 # <a name="-operator-c-reference"></a>?: 运算符（C# 参考）
 条件运算符 (`?:`) 通常被称为三元条件运算符，根据 Boolean 表达式的值返回两个值之一。 下面是条件运算符的语法。  

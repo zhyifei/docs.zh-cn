@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586381"
 ---
 # <a name="initializer-expected"></a>应为初始值设定项
 您试图使用在其中初始化列表为空，下面的示例中所示的对象初始值设定项声明类的实例。  

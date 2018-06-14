@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590941"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>创建、删除和移动文件和目录 (Visual Basic)
 本节列出了与在 Visual Basic 中创建、删除、移动和重命名文件及目录相关的任务。  

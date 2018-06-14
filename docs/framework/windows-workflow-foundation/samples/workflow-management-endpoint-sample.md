@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517089"
 ---
 # <a name="workflow-management-endpoint-sample"></a>工作流管理终结点示例
 此示例演示如何使用工作流控制终结点以本地方式和远程方式创建和运行工作流。 此示例演示如何承载一个控制终结点并编写调用此控制终结点的客户端，以创建和运行工作流的实例。 工作流不是服务。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540444"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>如何：设置 Windows 窗体 DataGrid 控件的格式
 > [!NOTE]

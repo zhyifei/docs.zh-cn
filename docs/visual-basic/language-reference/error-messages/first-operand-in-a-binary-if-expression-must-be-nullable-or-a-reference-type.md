@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590824"
 ---
 # <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>二进制文件中的第一个操作数&#39;如果&#39;表达式必须是可以为 null 或类型的引用
 `If`表达式可以采用两个或三个自变量。 当你发送只有两个自变量时，第一个参数必须是引用类型或可以为 null 的类型。 如果第一个自变量的计算结果为任何内容而不是`Nothing`，返回其值。 如果第一个自变量的计算结果为`Nothing`，计算第二个参数并将其返回。  

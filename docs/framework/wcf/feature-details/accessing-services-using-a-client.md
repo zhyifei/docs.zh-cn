@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495991"
 ---
 # <a name="accessing-services-using-a-client"></a>使用客户端访问服务
 客户端应用程序必须创建、 配置和使用 WCF 客户端或通道对象与服务进行通信。 [WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)主题提供的对象和创建基本的客户端和通道对象和使用它们所涉及的步骤概述。  

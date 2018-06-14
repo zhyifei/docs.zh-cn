@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398243"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri 中的国际资源标识符支持
 <xref:System.Uri?displayProperty=nameWithType> 类在国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持下已得到扩展。 NET Framework 3.5、3.0 SP1 和 2.0 SP1 提供了这些增强功能。  

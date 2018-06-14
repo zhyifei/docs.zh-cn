@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317497"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>如何：基于位置查找子元素 (XPath-LINQ to XML) (C#)
 有时需要根据元素的位置查找元素。 您可能想查找第二个元素，或者查找第三到第五个元素。  

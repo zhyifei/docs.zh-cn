@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9d562aef58c1e3b5bbbe690b54eb08384052c657
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456770"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage 函数
 获取位于指定的内存地址处的二进制表示形式的程序集映像。  
@@ -58,11 +59,11 @@ BOOLEAN StrongNameGetBlobFromImage (
  如果`StrongNameGetBlobFromImage`函数未成功完成，请调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数可检索的最后一个生成的错误。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** StrongName.h  
   
- **库：**作为 MsCorEE.dll 中的资源  
+ **库：** 作为 MsCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

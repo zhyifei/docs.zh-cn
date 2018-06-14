@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766317"
 ---
 # <a name="walkthrough-sql-generation"></a>演练：SQL 生成
 本主题说明了如何在进行 SQL 生成[示例提供程序](http://go.microsoft.com/fwlink/?LinkId=180616)。 下面的 Entity SQL 查询使用随示例提供程序提供的模型：  

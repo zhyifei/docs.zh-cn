@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499396"
 ---
 # <a name="using-a-data-contract-resolver"></a>使用数据协定解析程序
 使用数据协定解析程序可以动态配置已知类型。 序列化或反序列化并非数据协定所需的类型时，要求提供已知类型。 有关已知类型的详细信息，请参阅[数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。 已知类型通常以静态方式指定。 这意味着您必须了解在实现某个操作期间，该操作可能接收的所有可能类型。 在某些方案中无法做到这一点，因此能够以动态方式指定已知类型十分重要。  

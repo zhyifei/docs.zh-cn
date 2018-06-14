@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Modifiers 和 GenerateMember 属性"
-ms.custom: 
+title: 如何：使用 Modifiers 和 GenerateMember 属性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,12 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f11595daac74ceb76c5d017af015d5523506bdf3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 451c54bf6272b4fbff46b5298ba5b6a9290656e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523989"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>如何：使用 Modifiers 和 GenerateMember 属性
 当将一个组件放在 Windows 窗体上时，由设计环境提供两个属性：`GenerateMember`和`Modifiers`。 `GenerateMember`属性指定当 Windows 窗体设计器生成的组件的成员变量。 `Modifiers`属性是分配给该成员变量的访问修饰符。 如果值`GenerateMember`属性是`false`的值`Modifiers`属性不起作用。  

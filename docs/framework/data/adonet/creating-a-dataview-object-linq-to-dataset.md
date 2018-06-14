@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759174"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>创建 DataView 对象 (LINQ to DataSet)
 在 <xref:System.Data.DataView> 上下文中创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 有两种方式。 您可以通过针对 <xref:System.Data.DataView> 的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询创建 <xref:System.Data.DataTable>，也可以从类型化或非类型化 <xref:System.Data.DataTable> 创建该对象。 在这两种情况下，你将创建<xref:System.Data.DataView>使用之一<xref:System.Data.DataTableExtensions.AsDataView%2A>扩展方法; 这些方法<xref:System.Data.DataView>不可直接构造中[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]上下文。  

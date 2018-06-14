@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520209"
 ---
 # <a name="tracking-events-reference"></a>跟踪事件参考
 执行期间，[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中的工作流在逐步经历其生存期内的各个阶段时会引发跟踪事件。 宿主可以订阅这些事件并且在生存期内使工作流的进度状态保持最新。 本节介绍引发的跟踪事件。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743246"
 ---
 # <a name="configuring-cryptography-classes"></a>配置加密类
 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]允许计算机管理员配置的默认加密算法和.NET Framework 和相应地编写的应用程序使用的算法实现。  例如，具有自己的加密算法的实现的企业可以将该实现作为默认而不是在中提供实现[!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]。 虽然使用加密的托管应用程序始终可以选择显式地绑定到特定的实现，但建议他们通过使用加密配置系统创建加密对象。  

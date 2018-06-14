@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520885"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>如何：构造字体系列和字体
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 分组到字体系列的字体的字体相同但不同的样式。 例如，Arial 字体系列包含以下字体：  

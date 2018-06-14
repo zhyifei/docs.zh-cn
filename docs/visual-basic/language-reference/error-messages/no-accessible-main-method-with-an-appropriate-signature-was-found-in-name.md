@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593215"
 ---
 # <a name="no-accessible-39main39-method-with-an-appropriate-signature-was-found-in-39ltnamegt39"></a>没有可访问&#39;Main&#39;中找到具有适当签名方法&#39;&lt;名称&gt;&#39;
 命令行应用程序必须具有`Sub Main`定义。 `Main` 必须声明为`Public Shared`如果它定义在类中，或作为`Public`如果的模块中定义。  

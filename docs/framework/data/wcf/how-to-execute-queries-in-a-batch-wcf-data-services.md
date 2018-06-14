@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355404"
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>如何：在一个批处理作业中执行查询（WCF 数据服务）
 通过使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，你可以在单个批处理中执行针对数据服务的多个查询。 有关详细信息，请参阅[批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)。  

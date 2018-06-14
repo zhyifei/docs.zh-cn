@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444134"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 枚举
 指定模块的类型。  
@@ -53,11 +54,11 @@ typedef enum
 |`ValidatorModuleTypeMax`|最大值`CorValidatorModuleType`枚举。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：**作为 MsCorEE.dll 中的资源  
+ **库：** 作为 MsCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

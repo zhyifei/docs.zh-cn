@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586736"
 ---
 # <a name="input-past-end-of-file"></a>输入超出文件尾
 任一`Input`语句正在读取或为空的文件中，一个在其中使用的所有数据时，或者你都使用`EOF`以二进制访问方式打开文件的函数。  

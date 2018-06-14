@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754257"
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt;元素
 指定使用部分名称时应动态加载的程序集全名。  

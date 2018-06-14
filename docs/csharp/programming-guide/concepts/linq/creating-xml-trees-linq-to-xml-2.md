@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335442"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>在 C# 中创建 XML 树 (LINQ to XML)
 本节提供有关使用 C# 来创建 XML 树的信息。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592413"
 ---
 # <a name="the-managed-thread-pool"></a>托管线程池
 <xref:System.Threading.ThreadPool> 类为你的应用程序提供一个受系统管理的辅助线程池，从而使你能够专注于应用程序任务，而非线程管理。 如果有需要后台处理的短任务，托管的线程池则为利用多个线程的简便方法。 例如，从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，可以创建 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象，它们在线程池线程上执行异步任务。  

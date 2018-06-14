@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766980"
 ---
 # <a name="connection-strings"></a>连接字符串
 连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。 其语法取决于数据提供程序，并且会在试图打开连接的过程中对连接字符串进行分析。 实体框架使用的连接字符串包含用于连接到支持实体框架的基础 ADO.NET 数据提供程序的信息。 它们还包含有关所需的模型和映射文件的信息。  
@@ -46,7 +47,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |选项|描述|  
 |-|-|  
-|`assemblyFullName`|包含嵌入资源的程序集的完整名称。 该名称包含简单名称、版本名称、支持的区域性以及公钥，如下所示：<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 资源可嵌入到应用程序能够访问的任何程序集中。<br /><br /> 如果指定通配符 (\*) 为`assemblyFullName`，实体框架运行库将在搜索资源的以下位置，请按以下顺序：<br /><br /> 1.调用程序集。<br />2.引用的程序集。<br />3.应用程序的 bin 目录中的程序集。<br /><br /> 如果文件不在这些位置，则引发异常。 **注意：**时使用通配符 （*），实体框架已在具有正确名称的资源的所有程序集中查找。 若要提高性能，请指定程序集名称而不使用通配符。|  
+|`assemblyFullName`|包含嵌入资源的程序集的完整名称。 该名称包含简单名称、版本名称、支持的区域性以及公钥，如下所示：<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 资源可嵌入到应用程序能够访问的任何程序集中。<br /><br /> 如果指定通配符 (\*) 为`assemblyFullName`，实体框架运行库将在搜索资源的以下位置，请按以下顺序：<br /><br /> 1.调用程序集。<br />2.引用的程序集。<br />3.应用程序的 bin 目录中的程序集。<br /><br /> 如果文件不在这些位置，则引发异常。 **注意：** 时使用通配符 （*），实体框架已在具有正确名称的资源的所有程序集中查找。 若要提高性能，请指定程序集名称而不使用通配符。|  
 |`resourceName`|包含的资源的名称，如 AdvendtureWorksModel.csdl。 元数据服务仅查找具有以下任一扩展名的文件或资源：.csdl、.ssdl、或 .msl。 如果未指定 `resourceName`，则将加载所有元数据资源。 资源应在程序集中具有唯一的名称。 如果在程序集中的不同目录中为多个文件定义了相同的名称，则 `resourceName` 必须在资源名称前面包含文件夹结构，例如 FolderName.FileName.csdl。<br /><br /> 如果为 `resourceName` 指定通配符 (*)，则无需指定 `assemblyFullName`。|  
   
 > [!NOTE]

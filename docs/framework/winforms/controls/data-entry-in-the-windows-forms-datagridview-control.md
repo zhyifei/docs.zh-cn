@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526815"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的数据输入
 `DataGridView`控件提供了一些功能，可让你更改用户添加或修改控件中的数据的方式。 例如，你可以使数据输入更高效通过提供新行的默认值和错误发生时通知用户。  

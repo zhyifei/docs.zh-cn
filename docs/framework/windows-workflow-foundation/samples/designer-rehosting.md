@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516144"
 ---
 # <a name="designer-rehosting"></a>重新承载设计器
 设计器重新承载是一个常用方案，它是指在自定义应用程序内部承载工作流设计画布。 Visual Studio 是大多数人所熟知的承载应用程序，然而在很多方案中，应用程序中的工作流设计器可能会很有用：  

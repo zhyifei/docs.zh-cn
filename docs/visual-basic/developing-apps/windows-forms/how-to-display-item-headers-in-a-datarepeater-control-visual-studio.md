@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592127"
 ---
 # <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>如何：在 DataRepeater 控件中显示项标题 (Visual Studio)
 项标头中的<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件提供可视指示器时<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>选择。 当<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>属性设置为<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical>（默认值），每个项的左侧是否显示项标头。 当<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>属性设置为<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>，每个项顶部显示项标头。  

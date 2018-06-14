@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570401"
 ---
 # <a name="xslt-transformations-over-different-stores"></a>不同存储区的 XSLT 转换
 > [!NOTE]

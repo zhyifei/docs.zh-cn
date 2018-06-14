@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549199"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Direct3D9 和 WPF 互操作性的性能注意事项
 你可以通过使用承载 Direct3D9 内容<xref:System.Windows.Interop.D3DImage>类。 承载 Direct3D9 内容可能会影响你的应用程序的性能。 本主题介绍在承载 Windows Presentation Foundation (WPF) 应用程序中的 Direct3D9 内容时优化性能的最佳做法。 这些最佳实践包括如何使用<xref:System.Windows.Interop.D3DImage>以及当你使用的 Windows Vista、 Windows XP 中，且多监视器显示最佳实践。  

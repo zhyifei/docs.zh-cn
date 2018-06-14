@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766590"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>CLR 方法至规范函数映射
 实体框架提供了一组规范函数（如字符串操作函数和数学函数），这些函数可以实现很多数据库系统通用的功能。 这使开发人员可以面向广泛的数据库系统。 通过查询技术（如 LINQ to Entities）调用时，这些规范函数将转换为要使用的提供程序的相应正确存储区函数。 这样，可以用一种数据源通用的形式表示函数调用，从而在数据源之间提供一致的查询体验。 如果操作数是数值类型，则按位 AND、OR、NOT 和 XOR 运算符也将映射到规范函数。 对于布尔操作数，按位 AND、OR、NOT 和 XOR 运算符将计算其操作数的逻辑 AND、OR、NOT 和 XOR 运算。 有关详细信息，请参阅[规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)。  

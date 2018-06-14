@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574045"
 ---
 # <a name="culture-insensitive-string-operations"></a>不区分区域性的字符串操作
 如果要创建旨在按区域性向用户显示结果的应用程序，则区分区域性的字符串操作无疑是一个有利条件。 默认情况下，区分区域性的方法从当前线程的 <xref:System.Globalization.CultureInfo.CurrentCulture%2A> 属性中获得要使用的区域性。  

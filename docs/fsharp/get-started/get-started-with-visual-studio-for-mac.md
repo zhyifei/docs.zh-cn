@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565553"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>开始使用 Visual Studio 中的 F # 适用于 Mac
 

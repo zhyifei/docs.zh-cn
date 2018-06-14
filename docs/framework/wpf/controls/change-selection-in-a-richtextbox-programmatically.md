@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550997"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>以编程方式更改 RichTextBox 中的选定内容
 此示例演示如何以编程方式更改中的当前选定<xref:System.Windows.Controls.RichTextBox>。 如果因为用户已通过使用用户界面选择内容，选择此选项都是相同的。  

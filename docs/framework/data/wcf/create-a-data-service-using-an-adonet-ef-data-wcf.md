@@ -1,29 +1,16 @@
 ---
 title: 如何：使用 ADO.NET 实体框架数据源创建数据服务（WCF 数据服务）
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5993837546b28742756ed4a5ec323e6f1a5ef782
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 95439e2f73350e8f67aff61de7a97d80410109ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365691"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：使用 ADO.NET 实体框架数据源创建数据服务（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 将实体数据作为数据服务公开。 此实体数据由[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]时数据源是一个关系数据库。 本主题演示如何创建[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-基于的 Visual Studio Web 应用程序基于现有数据库和使用此数据模型来创建新的数据服务中的数据模型。  
@@ -48,7 +35,7 @@ ms.lasthandoff: 04/26/2018
   
      **选择你的数据连接**的对话框中更新你的数据库的连接设置。  
   
-7.  确保**实体连接设置另存为 App.Config 中：**选中复选框。 然后，单击 **“下一步”**。  
+7.  确保**实体连接设置另存为 App.Config 中：** 选中复选框。 然后，单击 **“下一步”**。  
   
 8.  在**选择数据库对象**对话框中，选择的所有数据库对象你打算在数据服务中公开。  
   

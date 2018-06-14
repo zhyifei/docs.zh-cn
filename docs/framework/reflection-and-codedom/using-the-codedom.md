@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399014"
 ---
 # <a name="using-the-codedom"></a>使用 CodeDom
 CodeDOM 提供表示多种常见源代码元素的类型。 可以设计一个程序，它使用 CodeDOM 元素生成源代码模型来组合对象图。 对于支持的编程语言，可使用 CodeDOM 代码生成器将此对象图呈现为源代码。 还可使用 CodeDOM 将源代码编译为二进制程序集。  

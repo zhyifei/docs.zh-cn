@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265228"
 ---
 # <a name="on-c-reference"></a>on（C# 参考）
 `on` 上下文关键字用于在查询表达式的[ join 子句](../../../csharp/language-reference/keywords/join-clause.md)中指定联接条件。  

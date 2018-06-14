@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537585"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Windows 窗体应用程序中的鼠标输入
 Windows 窗体包含各种鼠标事件，另外还支持自定义的鼠标光标、鼠标捕获和拖放行为。  

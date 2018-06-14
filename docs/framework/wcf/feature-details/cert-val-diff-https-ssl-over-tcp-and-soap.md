@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489464"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>HTTPS、通过 TCP 的 SSL 与 SOAP 安全之间的证书验证差异
 你可以使用证书在 Windows Communication Foundation (WCF) 消息层 (SOAP) 安全传输层安全性 (TLS) 除了通过 HTTP (HTTPS) 或 TCP。 本主题介绍此类证书的验证方式的差异。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473509"
 ---
 # <a name="com"></a>COM+
 下图演示如何在 COM+ 应用程序中使用活动跟踪。 可以为每个对 COM+ 对象模型的方法调用定义一个 COM+ 活动，而不是在服务器上执行用户代码。  

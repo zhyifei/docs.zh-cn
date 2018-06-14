@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267875"
 ---
 # <a name="amp-operator-c-reference"></a>&amp; 运算符（C# 参考）
 `&` 运算符既可作为一元运算符也可作为二元运算符。  

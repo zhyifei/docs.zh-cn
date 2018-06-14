@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33467788"
 ---
 # <a name="endpoint-call-duration"></a>终结点：调用持续时间
 对此终结点的调用的平均持续时间。  平均持续时间根据此公式计算：(N1-N0)/(D1-D0)。  

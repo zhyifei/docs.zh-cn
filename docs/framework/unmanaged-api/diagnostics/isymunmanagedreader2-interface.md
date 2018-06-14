@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1dfc67ecf1eeb9ea5a19c98a8c378e73021da6c8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426823"
 ---
 # <a name="isymunmanagedreader2-interface"></a>ISymUnmanagedReader2 接口
 表示提供对文档、 方法和符号存储区内的变量的访问的符号读取器。 此接口扩展[ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)接口。  

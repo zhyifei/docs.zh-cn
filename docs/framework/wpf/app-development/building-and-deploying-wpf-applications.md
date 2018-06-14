@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547136"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>生成和部署 WPF 应用程序
 生成和部署模型提供的功能生成和部署应用程序，本地或远程管理，其中包括：  

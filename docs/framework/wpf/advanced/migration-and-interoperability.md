@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544848"
 ---
 # <a name="migration-and-interoperability"></a>迁移和互操作性
 此网页包含指向讨论如何实现之间进行互操作的文档[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序和其他类型的[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]应用程序。  

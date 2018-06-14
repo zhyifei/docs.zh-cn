@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed6ba8a738b4086b9150e0a1c7b300a519fa3092
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419102"
 ---
 # <a name="icordebughandlevalue-interface1"></a>ICorDebugHandleValue 接口 1
 表示调试器已为其创建了垃圾回收句柄的引用值的 ICorDebugReferenceValue 子类。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

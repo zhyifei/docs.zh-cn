@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655819"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>按类别列出的 Visual Basic 编译器选项
 Visual Basic 命令行编译器提供作为编译的程序从 Visual Studio 集成的开发环境 (IDE) 中的替代方法。 下面是 Visual Basic 命令行编译器选项按功能分类排序的列表。  

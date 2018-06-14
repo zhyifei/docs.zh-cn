@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496953"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>可靠消息传送协议版本 1.1
 本主题介绍 Windows Communication Foundation (WCF) 的实现详细信息，用于 Ws-reliablemessaging 2007 年 2 月 （版本 1.1） 协议需要使用 HTTP 传输进行互操作。 WCF 遵循 WS ReliableMessaging 规范的约束和本主题中所述的说明。 请注意，Ws-reliablemessaging 版本 1.1 协议实现开头[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]。  

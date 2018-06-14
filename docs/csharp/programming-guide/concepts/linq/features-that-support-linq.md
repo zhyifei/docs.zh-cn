@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325203"
 ---
 # <a name="c-features-that-support-linq"></a>支持 LINQ 的 C# 功能
 下一节介绍 C# 3.0 中引入的新语言构造。 虽然这些新功能在一定程度上都用于 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询，但并不限于 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，如果认为有用，在任何情况下都可以使用这些新功能。  

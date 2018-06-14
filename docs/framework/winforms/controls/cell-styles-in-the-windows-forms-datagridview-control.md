@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529654"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的单元格样式
 中的每个单元格<xref:System.Windows.Forms.DataGridView>控件可以具有其自己的样式，例如文本格式、 背景色、 前景颜色和字体。 但是，通常情况下，多个单元格将具有特定样式特征。  

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757614"
 ---
 # <a name="ltactivitystatequerygt"></a>&lt;activityStateQuery&gt;
 表示一个查询，该查询用于跟踪构成工作流实例的活动的生命周期更改。 例如，你可能想要跟踪的每次完成工作流实例中的"发送电子邮件"活动。 跟踪参与者需要用此查询来订阅活动状态记录对象。 在 ActivityStates 中指定了要订阅的可用状态。  

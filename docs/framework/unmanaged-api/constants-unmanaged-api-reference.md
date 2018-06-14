@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65925b7dafb9e89433253d68327c488365674963
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406262"
 ---
 # <a name="constants-unmanaged-api-reference"></a>常量（非托管 API 参考）
 本主题介绍语言类型、 语言提供商和在 CorSym.idl 中定义的文档类型常量。  

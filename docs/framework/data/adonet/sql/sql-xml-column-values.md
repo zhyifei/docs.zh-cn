@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362732"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 列值
 SQL Server 支持`xml`数据类型和开发人员可以检索结果集包括此类型使用的标准行为<xref:System.Data.SqlClient.SqlCommand>类。 `xml` 列可以像任意列一样进行检索（例如检索到 <xref:System.Data.SqlClient.SqlDataReader> 中），但是如果要以 XML 的形式使用列内容，必须使用 <xref:System.Xml.XmlReader>。  

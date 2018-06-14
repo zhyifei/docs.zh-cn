@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600168"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>字符串操作摘要 (Visual Basic)
 Visual Basic 语言关键字和运行时库成员按目的组织和用途。  

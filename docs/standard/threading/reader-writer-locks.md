@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586368"
 ---
 # <a name="reader-writer-locks"></a>读取器/编写器锁
 借助 <xref:System.Threading.ReaderWriterLockSlim> 类，多个线程可以同时读取资源，但线程必须等待排他锁生成，才能对资源执行写入操作。  

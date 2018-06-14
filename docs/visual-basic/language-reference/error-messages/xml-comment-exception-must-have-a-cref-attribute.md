@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597378"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>XML 注释异常必须具有&#39;cref&#39;属性
 \<异常 > 标记使您能够文档可能由方法引发的异常。 所需`cref`特性将指定的成员，它由文档生成器检查的名称。 如果该成员存在，则将其转换为文档文件中的规范的元素名称。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490638"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>如何：配置 WCF 客户端以与 WSE 3.0 服务进行互操作
 当 WCF 客户端配置为使用 2004 年 8 月版 Ws-addressing 规范时，Windows Communication Foundation (WCF) 客户端是与 Web Services Enhancements 3.0 for Microsoft.NET (WSE) 服务的网络级别兼容性。  

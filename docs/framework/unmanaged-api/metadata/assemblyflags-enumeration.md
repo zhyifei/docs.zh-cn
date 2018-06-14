@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2fc6d08e960b0ba82c76945a318ec723546f71b9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444901"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 枚举
 包含值，用于描述程序集的运行时功能。  
@@ -51,11 +52,11 @@ typedef enum {
  0x0010 和 0x0070 （含)，之间的值用于描述的引用的程序集的并排显示兼容性功能。 如果这些值均未设置，则假定程序集是通过并行兼容。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MsCorEE.h  
   
- **库：**作为 MsCorEE.dll 中的资源  
+ **库：** 作为 MsCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

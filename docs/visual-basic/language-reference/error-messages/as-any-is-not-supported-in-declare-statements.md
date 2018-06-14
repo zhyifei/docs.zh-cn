@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588221"
 ---
 # <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;与任何&#39;中不支持&#39;Declare&#39;语句
 `Any`与使用的数据类型`Declare`Visual Basic 6.0 和早期版本，以允许使用的自变量，无法包含任何类型的数据中的语句。 Visual Basic 支持重载，但是，也因此使得`Any`数据类型已过时。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0644258eb1622f388f55d0657c8922079fe4dc1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407221"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary 方法
 获取一个库提供程序允许公共语言运行时 (CLR) 特定于版本的调试库需要定位和加载上的回调接口。  
@@ -69,7 +70,7 @@ HRESULT ProvideLibrary(
 >  如果在已发布的库中，如 mscordbi.dll 或 mscordacwks.dll，发现了严重的安全问题填充程序可以进行修补，以识别错误版本的文件。 然后，填充程序可以发出修补版本的文件的请求并拒绝不适用的版本，如果对任何请求响应中提供。 仅当用户具有修补到该填充程序的新版本时，才会出现此问题。 未安装修补程序的版本仍易受攻击。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

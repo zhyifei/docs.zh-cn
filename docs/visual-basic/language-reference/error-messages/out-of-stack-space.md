@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593280"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>堆栈空间不足 (Visual Basic)
 堆栈是内存的动态与执行程序的需求的增长和缩减的工作区域。 已超出其限制。  

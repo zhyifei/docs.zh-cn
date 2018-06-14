@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595272"
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a>模块&lt;关键字&gt;(Visual Basic)
 指定源文件开头特性应用于当前程序集模块。  

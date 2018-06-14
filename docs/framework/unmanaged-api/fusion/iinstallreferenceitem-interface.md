@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd3c19bbbcb5b1a5f0e89b9df86f87beca32cd00
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431346"
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem 接口
 表示安装在全局程序集缓存中的项。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/04/2018
 |[GetReference 方法](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|获取一个指向`FUSION_INSTALL_REFERENCE`结构由此`IInstallReferenceItem`。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   

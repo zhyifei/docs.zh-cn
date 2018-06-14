@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498239"
 ---
 # <a name="wcf-syndication-overview"></a>WCF 联合概述
 Windows Communication Foundation (WCF) 提供对公开从 WCF 服务的联合源的支持。 联合是一种应用程序集成机制，在这种机制中，服务器以一种可互操作的格式（称为源）公开某些应用程序数据。 源是应用程序数据的集合，其中包括一些源级别的元数据（标题、作者、URL 和其他元数据）以及一系列源项。 在源内，源项通常是按时间的倒序顺序排序的。 源项由一组标准的项级别元数据（标题、URL、创建日期、类别和其他项级别的元数据）以及任意数量的应用程序特定数据组成。 联合源的两种最常见类型为真正简单的整合 (RSS) 2.0 和 Atom 1.0，WCF 支持这两种。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553931"
 ---
 # <a name="how-to-extract-the-text-content-from-a-richtextbox"></a>如何：从 RichTextBox 中提取文本内容
 此示例演示如何将内容提取<xref:System.Windows.Controls.RichTextBox>作为纯文本。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394135"
 ---
 # <a name="security-transparent-code-level-2"></a>安全透明的代码，级别 2
 <a name="top"></a>

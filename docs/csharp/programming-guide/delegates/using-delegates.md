@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337400"
 ---
 # <a name="using-delegates-c-programming-guide"></a>使用委托（C# 编程指南）
 [委托](../../../csharp/language-reference/keywords/delegate.md)是安全封装方法的类型，类似于 C 和 C++ 中的函数指针。 与 C 函数指针不同的是，委托是面向对象的、类型安全的和可靠的。 委托的类型由委托的名称确定。 以下示例声明名为 `Del` 的委托，该委托可以封装采用[字符串](../../../csharp/language-reference/keywords/string.md)作为参数并返回 [void](../../../csharp/language-reference/keywords/void.md) 的方法：  

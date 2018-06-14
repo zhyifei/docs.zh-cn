@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360756"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime 方法
 以下受 LINQ to SQL 支持的方法、运算符和属性可以在 LINQ to SQL 查询中使用。 当某个方法、运算符或属性不受支持时，LINQ to SQL 将无法转换成员以在 SQL Server 上执行。 您可以在代码中使用这些成员，但是在将查询转换为 Transact-SQL 之前或在已经从数据库中检索结果之后，必须对这些成员进行计算。  

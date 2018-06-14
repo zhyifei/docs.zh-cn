@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650613"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>串联运算符 (Visual Basic)
 串联运算符将多个字符串联接为一个字符串。 有两种串联运算符：`+` 和 `&`。 这两种串联运算符都执行基本的串联运算，如下面的示例所示。  

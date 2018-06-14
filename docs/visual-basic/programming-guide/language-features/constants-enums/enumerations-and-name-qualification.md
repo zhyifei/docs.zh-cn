@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648575"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>枚举和名称限定 (Visual Basic)
 通常情况下，当引用时枚举的成员，你必须限定枚举名称的成员名称。 例如，若要引用`Sunday`的成员你`Days`枚举，你将使用以下语法：  

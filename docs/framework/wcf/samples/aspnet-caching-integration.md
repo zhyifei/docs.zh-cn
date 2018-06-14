@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805403"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 缓存集成
 此示例演示如何通过 WCF WEB HTTP 编程模型使用 ASP.NET 输出缓存。 请参阅[基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)自承载版本讨论深度中的服务实现此方案的示例。 本主题重点介绍 ASP.NET 输出缓存集成功能。  

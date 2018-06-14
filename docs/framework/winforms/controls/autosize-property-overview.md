@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529985"
 ---
 # <a name="autosize-property-overview"></a>AutoSize 属性概述
 <xref:System.Windows.Forms.Control.AutoSize%2A>属性使控件能够更改其大小，如有必要，以获得指定的值<xref:System.Windows.Forms.Control.PreferredSize%2A>属性。 通过设置调整特定的控件的大小调整行为`AutoSizeMode`属性。  

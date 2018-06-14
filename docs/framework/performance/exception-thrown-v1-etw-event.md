@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393850"
 ---
 # <a name="exception-thrownv1-etw-event"></a>异常 Thrown_V1 ETW 事件
 该事件捕获有关引发的异常的信息。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bc1d3ffc34cd74d68bf10cb677b68f0a75bb7c67
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444225"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 枚举
 包含指示公共语言运行时 (CLR) 的启动行为的值。 默认情况下，垃圾回收是是非并发的并且只基类库加载到非特定于域的区域。  
@@ -56,7 +57,7 @@ typedef enum {
   
 |成员|描述|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|指定应使用并发垃圾回收。 如果在单处理器计算机上，调用方要求提供服务器版本和并发垃圾回收，工作站版本和非并发垃圾回收是改为运行。 **注意：**运行 WOW64 的应用程序中不支持并发垃圾回收 x86 仿真程序上实现 （以前称为 ia-64） 的 Intel 的 Itanium 体系结构的 64 位系统。 有关使用 64 位 Windows 系统上的 WOW64 的详细信息，请参阅[运行 32 位应用程序](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx)。|  
+|`STARTUP_CONCURRENT_GC`|指定应使用并发垃圾回收。 如果在单处理器计算机上，调用方要求提供服务器版本和并发垃圾回收，工作站版本和非并发垃圾回收是改为运行。 **注意：** 运行 WOW64 的应用程序中不支持并发垃圾回收 x86 仿真程序上实现 （以前称为 ia-64） 的 Intel 的 Itanium 体系结构的 64 位系统。 有关使用 64 位 Windows 系统上的 WOW64 的详细信息，请参阅[运行 32 位应用程序](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx)。|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|指定应发生的加载程序优化。|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|不指定的任何程序集加载为非特定于域的。|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|指定的所有程序集加载为非特定于域的。|  
@@ -74,7 +75,7 @@ typedef enum {
 |`STARTUP_ARM`|指定启用了应用程序域资源监视。 请参阅<xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>属性和[ \<appDomainResourceMonitoring > 元素](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   

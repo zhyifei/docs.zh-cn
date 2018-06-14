@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638366"
 ---
 # <a name="class-not-registered-on-local-machine"></a>未在本地计算机上注册的类
 此错误通常是由于文件损坏而出现的。 你可能需要重新安装 Visual Studio。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352634"
 ---
 # <a name="referential-integrity-constraint"></a>引用完整性约束
 A*引用完整性约束*实体数据模型 (EDM) 中是类似于关系数据库中的引用完整性约束。 与数据库表中一列 （或多） 可以引用另一个表的主键相同的方式[属性](../../../../docs/framework/data/adonet/property.md)（或属性） 的[实体类型](../../../../docs/framework/data/adonet/entity-type.md)可以引用[实体键](../../../../docs/framework/data/adonet/entity-key.md)另一个实体类型。 引用的实体类型称为*主体端*的约束。 引用主体端的实体类型称为*依赖端*的约束。  

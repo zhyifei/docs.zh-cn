@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540912"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式
 若要实现中的虚拟模式的其中一个原因<xref:System.Windows.Forms.DataGridView>控件是仅在需要时仅检索数据。 这称为*中实时数据加载*。  

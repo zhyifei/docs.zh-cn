@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398113"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>使用 IPv6 和 Teredo 的 NAT 遍历
 增强了功能：为网络地址转换 (NAT) 遍历提供支持。 这些更改旨在用于 IPv6 和 Teredo，但也同样适用于其他 IP 隧道技术。 这些增强功能会影响 <xref:System.Net> 和相关命名空间中的类。  

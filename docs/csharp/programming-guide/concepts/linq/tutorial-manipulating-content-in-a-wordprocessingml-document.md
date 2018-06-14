@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340107"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>教程：操作 WordprocessingML 文档中的内容 (C#)
 本教程演示如何应用函数转换方法和 LINQ to XML 来操作 XML 文档。 C# 示例查询和操作用 Microsoft Word 保存的 Office Open XML WordprocessingML 文档中的信息。  

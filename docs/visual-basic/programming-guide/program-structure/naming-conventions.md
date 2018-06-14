@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651913"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic 命名约定
 在 Visual Basic 应用程序中命名某个元素时，该名称的第一个字符必须是字母字符或下划线。 但请注意，名称以下划线开头不符合[语言独立性和独立于语言的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)。  

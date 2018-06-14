@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356935"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>从 DataAdapter 填充数据集
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> 是数据的内存驻留表示形式，它提供了独立于数据源的一致关系编程模型。 `DataSet` 表示整个数据集，其中包含表、约束和表之间的关系。 由于 `DataSet` 独立于数据源，因此 `DataSet` 可以包含应用程序本地的数据，也可以包含来自多个数据源的数据。 与现有数据源的交互通过 `DataAdapter`来控制。  

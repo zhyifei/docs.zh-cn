@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748901"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
 表示一个配置节，用于定义一组的传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 WCF 绑定之间的默认协议映射。 当在运行时创建默认终结点，Windows Communication Foundation (WCF) 配置的映射查找并确定要用于特定的绑定基于地址。  

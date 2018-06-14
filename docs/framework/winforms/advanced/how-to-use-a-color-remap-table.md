@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522468"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>如何：使用颜色重新映射表
 重新映射是将转换在映像中颜色重新映射表根据颜色的过程。 颜色重新映射表是一个数组<xref:System.Drawing.Imaging.ColorMap>对象。 每个<xref:System.Drawing.Imaging.ColorMap>数组中的对象具有<xref:System.Drawing.Imaging.ColorMap.OldColor%2A>属性和<xref:System.Drawing.Imaging.ColorMap.NewColor%2A>属性。  

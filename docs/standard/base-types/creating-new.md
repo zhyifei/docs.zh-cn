@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567814"
 ---
 # <a name="creating-new-strings-in-net"></a>新建 .NET 中的字符串
 借助 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，可以使用简单的分配来创建字符串，也可以重载类构造函数，以支持使用许多不同参数来创建字符串。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 还在 <xref:System.String?displayProperty=nameWithType> 类中提供了多个方法，可通过合并多个字符串、字符串数组或对象来新建字符串对象。  

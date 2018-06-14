@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754605"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;filters&gt; 的 &lt;add&gt;
 一个 XPath 筛选器，用于指定要记录的消息的种类。  

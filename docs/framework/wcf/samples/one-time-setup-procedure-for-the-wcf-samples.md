@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506896"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 示例的一次性安装过程
 大多数 Windows Communication Foundation (WCF) 示例均承载于 Internet 信息服务 (IIS)，并从公共虚拟目录运行。 此一次性安装过程在磁盘; 上创建一个文件夹它还将虚拟目录添加到名为的 IIS **ServiceModelSamples**。  

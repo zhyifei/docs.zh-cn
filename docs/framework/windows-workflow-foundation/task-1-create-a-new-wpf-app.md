@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517944"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>任务 1：创建一个新的 Windows Presentation Foundation 应用程序
 在此任务中，你将使用 WPF 应用程序 Visual Studio 模板创建空的 Windows Presentation Foundation (WPF) 应用程序并添加对相应的引用[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]工作流程序集。  

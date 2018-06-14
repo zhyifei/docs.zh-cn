@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528439"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>如何：在 Windows 窗体上锚定控件
 如果您正在设计用户可以在运行时调整大小的窗体，你的窗体上的控件应调整大小和重新定位正确。 若要调整动态处理该窗体控件的大小，可以使用<xref:System.Windows.Forms.Control.Anchor%2A>Windows 窗体控件的属性。 <xref:System.Windows.Forms.Control.Anchor%2A>属性定义控件的定位点位置。 当控件定位到窗体和窗体调整时，控件将保持该控件的定位点位置之间的距离。 例如，如果你有<xref:System.Windows.Forms.TextBox>调整窗体的大小时，定位到的左侧、 右侧和底部边缘该窗体的控件<xref:System.Windows.Forms.TextBox>水平控件调整，以便它维护窗体左右两侧距离相同。 此外，该控件垂直定位其自身，以便其位置总是与窗体的下边缘的距离相同。 如果控件不锚定和窗体调整，则更改相对于边缘的窗体控件的位置。  

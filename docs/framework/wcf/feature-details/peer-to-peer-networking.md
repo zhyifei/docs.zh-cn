@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491863"
 ---
 # <a name="peer-to-peer-networking"></a>对等网络
 对等通道是多方、 对等 (P2P) 通信技术中 Windows Communication Foundation (WCF)。 它为应用程序开发人员提供了基于消息的、安全且可伸缩的 P2P 信道。 可从对等通道中获益的多方应用程序的一个常见示例是协作应用程序，例如聊天应用程序，其中一组人以对等方式（无需服务器）相互聊天。 对等通道可为消费者和企业方案启用 P2P 协作、内容分发、负载平衡和分布式处理。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 130ba2864537f017bd3037412d742d887df1ae68
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405722"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue 方法
 目标进程中的指定线程的线程本地存储 (TLS) 从获取一个值。 由公共语言运行时 (CLR) 数据访问服务调用此方法。  
@@ -50,7 +51,7 @@ HRESULT GetTLSValue (
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** ClrData.idl、 ClrData.h  
   

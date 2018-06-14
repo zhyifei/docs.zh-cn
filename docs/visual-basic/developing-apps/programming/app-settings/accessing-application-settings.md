@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591906"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>访问应用程序设置 (Visual Basic)
 本部分包含描述 `My.Settings` 对象及其允许完成的任务的主题。  

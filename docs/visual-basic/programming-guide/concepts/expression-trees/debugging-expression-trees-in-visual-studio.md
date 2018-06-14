@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644233"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>调试 Visual Studio (Visual Basic 中) 中的表达式树
 可以在调试应用程序时分析表达式树的结构和内容。 若要快速了解表达式树结构，可以使用 `DebugView` 属性，该属性仅在调试模式下可用。 有关调试的详细信息，请参阅[在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)。  

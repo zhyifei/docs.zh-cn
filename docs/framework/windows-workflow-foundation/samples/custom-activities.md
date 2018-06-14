@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513079"
 ---
 # <a name="custom-activities"></a>自定义活动
 本节包含演示如何创建在 Windows Workflow Foundation (WF) 的自定义活动的示例。  

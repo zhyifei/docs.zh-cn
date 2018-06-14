@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580109"
 ---
 # <a name="storing-application-secrets-safely-during-development"></a>在开发过程中安全地存储应用程序机密
 

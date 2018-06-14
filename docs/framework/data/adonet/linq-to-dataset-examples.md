@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764965"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet 示例
 本部分提供[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]编程使用标准查询运算符的示例。 <xref:System.Data.DataSet>这些示例中使用填充使用`FillDataSet`方法，指定在[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 有关详细信息，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  

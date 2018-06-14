@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654130"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>从命令行生成 (Visual Basic)
 Visual Basic 项目组成一个或多个单独的源代码文件。 在称为编译过程中，这些文件被集中到一个包中，可以为应用程序运行的单个可执行文件。  

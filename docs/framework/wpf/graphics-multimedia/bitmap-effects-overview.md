@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558000"
 ---
 # <a name="bitmap-effects-overview"></a>位图效果概述
 位图效果，设计人员和开发人员应用到视觉效果呈现 Windows Presentation Foundation (WPF) 内容。 例如，位图效果，可以轻松地将应用<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>效果还是模糊效果为图像或按钮。  

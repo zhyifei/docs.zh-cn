@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652917"
 ---
 # <a name="-main"></a>-主要
 指定包含 `Sub Main` 过程的类或模块。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>若要设置-主要在 Visual Studio 集成的开发环境  
   
-1.  在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。  
+1.  在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。  
   
 2.  单击“应用程序”  选项卡。  
   

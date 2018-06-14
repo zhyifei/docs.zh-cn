@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541559"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>文件对话框自定义区域的已知文件夹 GUID
 你使用<xref:System.Guid>指定[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知文件夹添加到的文件夹时<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。 已知文件夹 Guid 不区分大小写和在 KnownFolders.h 文件中定义[!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]。  

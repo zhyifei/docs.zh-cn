@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596803"
 ---
 # <a name="derived-math-functions-visual-basic"></a>派生的数学函数 (Visual Basic)
 下表显示可以派生自的内部函数的数学函数的非内部的数学函数<xref:System.Math?displayProperty=nameWithType>对象。 你可以通过添加访问内部函数的数学函数`Imports System.Math`向你的文件或项目。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216760"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res（C# 编译器选项）
 -win32res 选项会在输出文件中插入 Win32 资源。  

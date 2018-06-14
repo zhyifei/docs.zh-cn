@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397567"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>如何：使用反射检查和实例化泛型类型
 获取泛型类型信息的方式与获取其他类型信息的方式相同：检查表示泛型类型的 <xref:System.Type> 对象。 主要的差异在于，泛型类型具有表示其泛型类型参数的 <xref:System.Type> 对象列表。 本部分的第一个过程是检查泛型类型。  

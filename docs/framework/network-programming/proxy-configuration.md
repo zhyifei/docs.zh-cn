@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397528"
 ---
 # <a name="proxy-configuration"></a>代理配置
 代理服务器处理客户端对资源的请求。 代理可以从其缓存中返回已请求的资源，或将请求转发到资源驻留的服务器。 代理可以通过减少发送到远程服务器的请求数量来提高网络性能。 代理还可以用于限制对资源的访问。  

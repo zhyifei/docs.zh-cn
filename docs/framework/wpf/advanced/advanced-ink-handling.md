@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539022"
 ---
 # <a name="advanced-ink-handling"></a>高级墨迹处理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]附带<xref:System.Windows.Controls.InkCanvas>，，是您可以将其放在应用程序以立即开始收集和显示墨迹元素。 但是，如果<xref:System.Windows.Controls.InkCanvas>控件不提供足够精细的控制级别，你可以通过自定义你自己的墨迹集合和墨迹呈现类使用保留在较高级别控制<xref:System.Windows.Input.StylusPlugIns>。  

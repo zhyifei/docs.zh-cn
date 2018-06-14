@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656277"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>对象变量声明 (Visual Basic)
 你可以使用正常的声明语句来声明对象变量。 对于数据类型中，你指定`Object`(即， [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)) 或更具体的类是要创建对象。  

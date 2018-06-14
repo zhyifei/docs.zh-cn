@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271245"
 ---
 # <a name="-operator-c-reference"></a>^ 运算符（C# 参考）
 针对整型类型和 `bool` 预定义了二元 `^` 运算符。 对于整型类型，`^` 会计算其操作数的按位异或。 对于 `bool` 操作数，`^` 计算其操作数的逻辑异或；即，当且仅当其一个操作数为 `true` 时，结果才为 `true`。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526428"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>在托管 HTML 文档对象模型中访问未公开成员
 托管 HTML 文档对象模型 (DOM) 包含一个名为类<xref:System.Windows.Forms.HtmlElement>公开属性、 方法和所有 HTML 元素都具有共同的事件。 有时，但是，你将需要访问托管的接口未直接公开的成员。 本主题检查两种方式访问未公开的成员，包括[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]和 VBScript 函数定义内网页。  

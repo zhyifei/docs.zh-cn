@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564373"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier 指令
 修改 XAML 编译行为时`x:Class`还提供。 具体而言，而不是创建一个分部`class`具有`Public`访问级别 （默认值），提供`x:Class`使用创建`NotPublic`访问级别。 此行为会影响中生成的程序集的类的访问级别。  

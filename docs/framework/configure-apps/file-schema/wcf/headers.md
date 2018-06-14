@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747146"
 ---
 # <a name="ltheadersgt"></a>&lt;标头&gt;
 除了其基本 URI 外，终结点可以按一个或多个 SOAP 标头寻址。 这一点在其中很有用的一组方案是一组 SOAP 媒介方案，其中终结点要求该终结点的客户端包括以媒介为目标的 SOAP 头。 此配置元素可用于定义此类自定义地址标头。 终结点标头集合中的项是用户定义的 XML 元素。 每个元素必须是格式良好的 XML。  

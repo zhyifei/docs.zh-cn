@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648757"
 ---
 # <a name="-nowin32manifest-visual-basic"></a>-nowin32manifest (Visual Basic)
 指示编译器不在可执行文件中嵌入任何应用程序清单。  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 728acc09f739fe567fca4a2571cbabf1ba8838a2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427426"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod 接口
 表示符号存储区内的方法。 此接口提供的一种方法，而不是与类型相关的属性仅与符号相关的属性的访问。  

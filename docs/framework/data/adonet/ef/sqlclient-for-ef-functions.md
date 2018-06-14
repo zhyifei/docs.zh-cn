@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764666"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>用于实体框架函数的 SqlClient
 用于实体框架的 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供一组执行数学和聚合运算的函数，以及执行 `System.DateTime` 和 `string` 运算的函数。 这些函数位于 `SQLServer` 命名空间中。  

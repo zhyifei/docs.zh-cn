@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268916"
 ---
 # <a name="new-operator-c-reference"></a>new 运算符（C# 参考）
 用于创建对象和调用构造函数。 例如:  

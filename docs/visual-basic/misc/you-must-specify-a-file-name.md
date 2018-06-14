@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640998"
 ---
 # <a name="you-must-specify-a-file-name"></a>必须指定文件名
 你试图执行的操作（如移动或复制文件）需要提供文件名。  

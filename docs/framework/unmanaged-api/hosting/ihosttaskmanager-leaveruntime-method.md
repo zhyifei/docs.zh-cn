@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::LeaveRuntime 方法"
-ms.custom: 
+title: IHostTaskManager::LeaveRuntime 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.LeaveRuntime
 api_location:
@@ -23,17 +15,14 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a4c168cffba44a21d6705e8abd921ecbf8a9da6b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3d31c5c1b95d250f90b202b391d908f9c12afb84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444472"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime 方法
 通知主机当前正在执行的任务来保持公共语言运行时 (CLR)，然后输入非托管的代码。  
@@ -57,7 +46,7 @@ HRESULT LeaveRuntime (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime`已成功返回。|  
+|S_OK|`LeaveRuntime` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用操作已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -77,14 +66,14 @@ HRESULT LeaveRuntime (
 |C# 函数将执行返回给第一个非托管函数。|`IHostTaskManager::ReverseLeaveRuntime`|  
 |第一个非托管的函数将执行返回到 Visual Basic 程序。|`IHostTaskManager::EnterRuntime`|  
   
-## <a name="requirements"></a>惠?  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

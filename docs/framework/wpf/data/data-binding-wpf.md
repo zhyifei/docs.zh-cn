@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555771"
 ---
 # <a name="data-binding-wpf"></a>数据绑定 (WPF)
 Windows Presentation Foundation (WPF) 数据绑定提供了简单的应用程序为与数据交互和呈现的一致方法。 元素可以从多个公共语言运行时 (CLR) 对象和 XML 的形式中的数据源绑定到数据。  

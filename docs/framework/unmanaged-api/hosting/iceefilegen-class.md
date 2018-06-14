@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436304"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 类
 提供用于创建本机可移植可执行 (PE) 文件的功能。 接口将通常用于由编译器生成其已编译的输出可执行文件。  
@@ -236,7 +237,7 @@ public:
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** ICeeFileGen.h  
   

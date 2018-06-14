@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605259"
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>结束&lt;关键字&gt;语句 (Visual Basic)
 在后面带有其他关键字，终止引起该关键字的语句块的定义。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352872"
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
 包含的指定用户帐户，进程承载 Windows Communication Foundation (WCF) 服务并被授予了对该共享服务的连接访问权限的配置元素的集合。  

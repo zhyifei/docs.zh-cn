@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504963"
 ---
 # <a name="unwrapped-messages"></a>未包装的消息
 此示例演示未包装的消息。 默认情况下，消息正文的格式设置为对服务操作的参数进行包装。 下面的示例演示一个包装模式下的对 `Add` 服务的 `ICalculator` 请求消息。  

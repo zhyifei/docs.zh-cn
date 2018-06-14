@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645559"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>如何： 命名空间 (Visual Basic 中) 中的 XML 编写查询
 若要针对命名空间中的 XML 编写查询，必须使用具有正确命名空间的 <xref:System.Xml.Linq.XName> 对象。  

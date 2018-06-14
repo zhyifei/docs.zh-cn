@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521198"
 ---
 # <a name="how-to-flatten-a-curved-path-into-a-line"></a>如何：将曲线路径展平为直线
 A<xref:System.Drawing.Drawing2D.GraphicsPath>对象存储一系列行和贝塞尔样条。 可以将多种类型的曲线 （省略号、 弧、 基数样条） 添加到路径时，但之前存储在路径中，每个曲线转换为贝塞尔样条。 平展路径组成，将在路径中的每个贝塞尔样条转换为直线的序列。 下图显示路径之前和之后平展。  

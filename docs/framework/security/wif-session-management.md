@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399104"
 ---
 # <a name="wif-session-management"></a>WIF 会话管理
 客户端首次尝试访问信赖方托管的受保护资源时，客户端应先向信赖方信任的安全令牌服务 (STS) 验证自身身份。 然后，STS 向客户端颁发安全令牌。 客户端向信赖方出示此令牌，然后信赖方授予客户端访问受保护资源的权限。 但是，不希望客户端针对每个请求重新向 STS 进行身份验证，特别是因为它甚至可能与依赖方不在同一台计算机上或同一个域中。 相反，Windows Identity Foundation (WIF) 中客户端和信赖方建立一个会话，该会话中客户端为首次请求后的所有请求使用会话安全令牌向信赖方验证自身身份。 信赖方可以使用 cookie 中存储的此会话安全令牌重构客户端的 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>。  

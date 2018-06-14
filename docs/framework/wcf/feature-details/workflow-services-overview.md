@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502723"
 ---
 # <a name="workflow-services-overview"></a>工作流服务概述
 工作流服务是使用工作流实现的基于 WCF 的服务。 工作流服务是使用消息传递活动发送和接收 Windows Communication Foundation (WCF) 消息的工作流。 .NET Framework 4.5 引入了多个消息传递活动，可用于从工作流中发送和接收消息。 有关消息传送活动以及如何使用它们来实现不同的消息交换模式的详细信息，请参阅[消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。  

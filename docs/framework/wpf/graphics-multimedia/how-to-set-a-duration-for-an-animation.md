@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561370"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>如何：设置动画的持续时间
 A<xref:System.Windows.Media.Animation.Timeline>表示的时间段和段的长度由时间线的<xref:System.Windows.Duration>。 当<xref:System.Windows.Media.Animation.Timeline>到达结尾的其持续时间，就会停止播放。 如果<xref:System.Windows.Media.Animation.Timeline>具有子时间线，它们也会停止播放。 对于动画，<xref:System.Windows.Duration>指定动画的时间转换从其起始值为其结束的值。  

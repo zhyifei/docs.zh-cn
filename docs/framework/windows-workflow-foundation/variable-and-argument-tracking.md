@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516979"
 ---
 # <a name="variable-and-argument-tracking"></a>变量和自变量跟踪
 当跟踪工作流的执行时，提取数据往往很有用。 这在访问跟踪记录后续执行时可提供其他上下文。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，您可以使用跟踪在工作流的任意活动范围内提取所有可见变量或参数。 跟踪配置文件简化了对数据的提取。  

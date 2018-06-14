@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525760"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器更改 Windows 窗体 DataGridView 控件中列的顺序
 当你将绑定 Windows 窗体<xref:System.Windows.Forms.DataGridView>控件添加到数据源，自动生成的列的显示顺序由数据源。 如果此顺序是不需要，你可以更改使用设计器的列的顺序。 你可能还想要将未绑定的列添加到控件和更改其显示顺序。 有关如何以编程方式更改列顺序的信息，请参阅[如何： 更改 Windows 窗体 DataGridView 控件中的列顺序](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)。  

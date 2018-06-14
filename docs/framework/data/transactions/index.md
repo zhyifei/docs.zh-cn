@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355212"
 ---
 # <a name="transaction-processing"></a>事务处理
 当您从网上书店购买书籍时，会用钱（以信贷方式）来交换书籍。 如果您的信用良好，则一系列相关操作可确保您和书店可以相应地获得书籍和钱。 但如果在交换期间该系列操作中的单个操作发生故障，则整个交换就会失败。 结果，您就得不到书籍，而书店也得不到钱。  

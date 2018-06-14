@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760773"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员使用 Visual Basic 或 Visual C# 根据实体框架概念模型编写查询。 针对实体框架的查询由针对对象上下文执行的命令目录树查询表示。 LINQ to Entities 将语言集成查询 (LINQ) 查询转换为命令目录树查询，针对实体框架执行这些查询，并返回可同时由实体框架和 LINQ 使用的对象。 以下是创建和执行 LINQ to Entities 查询的过程：  

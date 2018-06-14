@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356598"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>ADO.NET 的 SQL Server 进程内特定行为
 在 <xref:Microsoft.SqlServer.Server> 命名空间中可以发现，对 ADO.NET 主要功能的扩展有四种，是专门供进程中使用的：<xref:Microsoft.SqlServer.Server.SqlContext>、<xref:Microsoft.SqlServer.Server.SqlPipe>、<xref:Microsoft.SqlServer.Server.SqlTriggerContext> 和 <xref:Microsoft.SqlServer.Server.SqlDataRecord>。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645949"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML 文档的样式部件
 本主题演示 Office Open XML WordprocessingML 文档的样式部分的示例。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390570"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用跟踪和调试进行条件编译
 在开发过程中调试应用程序时，跟踪和调试输出都会出现在 Visual Studio 的“输出”窗口中。 但是，若要在已部署的应用程序中包含跟踪功能，则必须在 TRACE 编译器指令处于启动状态下编译已检测应用程序。 这样就可以将跟踪代码编译成应用程序的发布版本。 如果未启用 TRACE 指令，将在编译过程中忽略所有跟踪代码，并且不会将其包含在将部署的可执行代码中。  

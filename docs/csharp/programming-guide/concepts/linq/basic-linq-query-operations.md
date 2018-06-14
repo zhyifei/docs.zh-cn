@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333035"
 ---
 # <a name="basic-linq-query-operations-c"></a>基本 LINQ 查询操作 (C#)
 本主题简要介绍了 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式和一些在查询中执行的典型操作。 下面各主题中提供了更具体的信息：  

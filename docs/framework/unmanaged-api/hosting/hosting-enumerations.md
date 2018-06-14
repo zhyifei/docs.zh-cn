@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05fc295d394dca7a4f0edead64d326032958b070
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435759"
 ---
 # <a name="hosting-enumerations"></a>承载枚举
 本部分描述承载 API 使用的非托管的枚举。  

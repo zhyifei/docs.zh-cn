@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554568"
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>如何：为拖动的 GridView 列标题创建样式
 此示例演示如何更改外观的拖动<xref:System.Windows.Controls.GridViewColumnHeader>当用户更改列的位置。  

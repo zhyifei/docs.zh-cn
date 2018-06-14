@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526072"
 ---
 # <a name="why-transformation-order-is-significant"></a>为什么转换顺序非常重要
 单个<xref:System.Drawing.Drawing2D.Matrix>对象可以存储一次转换的序列。 后者称为复合转换。 复合转换的矩阵被获取的各个变换的矩阵相乘。  

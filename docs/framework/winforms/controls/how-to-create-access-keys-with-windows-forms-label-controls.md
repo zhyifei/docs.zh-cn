@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530798"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>如何：使用 Windows 窗体 Label 控件创建访问键
 Windows 窗体<xref:System.Windows.Forms.Label>控件可以用于定义其他控件的访问密钥。 当标签控件中定义的访问密钥时，用户可以按 ALT 键加你指定要将焦点移到控件的 tab 键顺序将它后面的字符。 因为标签不能接收焦点，焦点将自动移动到下一个控件的 tab 键顺序。 使用此方法将访问密钥分配到文本框、 组合框、 列表框和数据网格。  

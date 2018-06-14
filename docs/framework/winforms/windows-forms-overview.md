@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541721"
 ---
 # <a name="windows-forms-overview"></a>Windows 窗体概述
 以下概述介绍了智能客户端应用程序的优点、Windows 窗体编程的主要功能以及可以如何使用 Windows 窗体来构建可满足当今企业和最终用户需求的智能客户端。  

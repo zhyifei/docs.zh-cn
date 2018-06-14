@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603829"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA 文本 (Visual Basic)
 一个文本表示<xref:System.Xml.Linq.XCData>对象。  

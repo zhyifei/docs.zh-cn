@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9d02a68e80e34be906e9fe09f3457a0f2214c6f0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405062"
 ---
 # <a name="icordebugchaingetreason-method"></a>ICorDebugChain::GetReason 方法
 获取此调用链的生成的原因。  
@@ -39,7 +40,7 @@ HRESULT GetReason (
  [out]指向 CorDebugChainReason 枚举，该值指示此调用链的生成的原因的值 （按位组合） 的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

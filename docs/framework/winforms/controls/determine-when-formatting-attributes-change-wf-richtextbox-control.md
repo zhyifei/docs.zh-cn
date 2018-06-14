@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525209"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>如何：确定 Windows 窗体 RichTextBox 控件中的格式设置特性何时更改
 一种常用的 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件格式化文本属性例如字体选项或段落样式。 你的应用程序可能需要跟踪的文本格式用于显示一个工具栏，如下所示许多字处理应用程序中的任何更改。  

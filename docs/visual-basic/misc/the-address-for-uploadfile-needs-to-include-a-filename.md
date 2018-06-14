@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638471"
 ---
 # <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a>UploadFile 的地址中需要包括文件名
 当用 `UploadFile` 方法上载文件时，必须提供目标路径中的文件名。  

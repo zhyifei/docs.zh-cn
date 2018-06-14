@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502369"
 ---
 # <a name="uritemplate-sample"></a>UriTemplate 示例
 <xref:System.UriTemplate> 类提供了用于处理共享公共结构的 URI 组的方法。 此示例演示与 `UriTemplate` 相关的以下关键概念：  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495361"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>如何：创建开发期间使用的临时证书
 时开发安全服务或使用 Windows Communication Foundation (WCF) 客户端，它通常是需要提供 X.509 证书以用作凭据。 该证书通常是证书链的一部分，在计算机的受信任的根证书颁发机构存储区中可找到根证书颁发机构。 拥有一个证书链，使您可以限定一组证书，其中根证书颁发机构通常来自于您的组织或业务单元。 若要在开发时模拟此情况，请创建两个证书以满足安全要求。 第一个证书是自签名证书，放置在受信任的根证书颁发机构存储区中；第二个证书是从第一个证书创建的，放置在本地计算机位置的个人存储区中或当前用户位置的个人存储区中。 本主题指导你逐步完成使用 [证书创建工具 (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185)创建这两个证书的步骤，该工具由 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK 提供。  
@@ -17,7 +18,7 @@ ms.lasthandoff: 05/04/2018
 > [!IMPORTANT]
 >  证书创建工具生成的证书仅供测试使用。 部署服务或客户程序时，请确保使用证书颁发机构提供的适当证书。 这可能是来自于组织或第三方的 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 证书服务器。  
 >   
->  默认情况下， [Makecert.exe （证书创建工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)创建的证书的根证书颁发机构称为"根证书代理**。"** 的证书。由于“根证书代理”不是受信任的根证书颁发机构存储区，这会使这些证书不安全。 创建一个放置在受信任的根证书颁发机构存储区的自签名证书，您可以创建一个与您的部署环境极其类似的开发环境。  
+>  默认情况下， [Makecert.exe （证书创建工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)创建的证书的根证书颁发机构称为"根证书代理 **。"** 的证书。由于“根证书代理”不是受信任的根证书颁发机构存储区，这会使这些证书不安全。 创建一个放置在受信任的根证书颁发机构存储区的自签名证书，您可以创建一个与您的部署环境极其类似的开发环境。  
   
  有关创建和使用证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 有关使用证书作为凭据的详细信息，请参阅[保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 有关使用 Microsoft Authenticode 技术的教程，请参阅 [Authenticode Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=88919)（Authenticode 概述和教程）。  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 05/04/2018
  有关在 WCF 中使用证书的详细信息，请参阅 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 请确保通过右击证书，再单击 **“删除”** ，从 **“受信任的根证书颁发机构”** 和 **“个人”**文件夹中删除所有临时根证书颁发机构证书。  
+ 请确保通过右击证书，再单击 **“删除”** ，从 **“受信任的根证书颁发机构”** 和 **“个人”** 文件夹中删除所有临时根证书颁发机构证书。  
   
 ## <a name="see-also"></a>请参阅  
  [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  

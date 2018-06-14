@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355293"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>将 XML 值指定为参数
 如果查询需要其值为一个 XML 字符串的参数，开发人员可以使用提供该值的实例**SqlXml**数据类型。 真的没有任何窍门;SQL Server 中的 XML 列接受参数值，方式与其他数据类型完全相同。  

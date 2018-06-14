@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396602"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>使用异步服务器套接字
 异步服务器套接字使用 .NET Framework 异步编程模型处理网络服务请求。 <xref:System.Net.Sockets.Socket> 类遵循标准 .NET Framework 异步命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Accept%2A> 方法对应于异步 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 和 <xref:System.Net.Sockets.Socket.EndAccept%2A> 方法。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591403"
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm 组件 (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>适用于 Visual Basic 组件，可以在运行时打印 Windows 窗体的图像。 其行为取代了 Visual Basic 早期版本中的 `PrintForm` 方法。  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741901"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>如何：将程序集加载到应用程序域中
 可通过多种方法将程序集加载到应用程序域中。 推荐方法是使用 <xref:System.Reflection.Assembly?displayProperty=nameWithType> 类的 `static`（在 Visual Basic 中为 `Shared`）<xref:System.Reflection.Assembly.Load%2A> 方法。 加载程序集的其他方法包括：  

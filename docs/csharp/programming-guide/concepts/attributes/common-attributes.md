@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332525"
 ---
 # <a name="common-attributes-c"></a>通用属性 (C#)
 本主题介绍在 C# 程序中最常用的属性。  

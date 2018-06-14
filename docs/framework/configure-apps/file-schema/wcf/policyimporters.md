@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749093"
 ---
 # <a name="ltpolicyimportersgt"></a>&lt;policyImporters&gt;
 此配置元素指定用于控制有关绑定的自定义策略断言的导入的所有策略导入程序。 每个子元素均为一个 <`policyImporter`>，可用于搜索有关绑定功能的自定义策略断言，并附加一个实现断言所需功能的自定义绑定元素。  

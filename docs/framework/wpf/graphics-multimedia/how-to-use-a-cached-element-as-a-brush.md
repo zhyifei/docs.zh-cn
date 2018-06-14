@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561519"
 ---
 # <a name="how-to-use-a-cached-element-as-a-brush"></a>如何：使用缓存的元素作为画笔
 使用<xref:System.Windows.Media.BitmapCacheBrush>类，以有效地重用缓存的元素。 若要缓存的元素，创建的新实例<xref:System.Windows.Media.BitmapCache>类并将其分配给元素的<xref:System.Windows.UIElement.CacheMode%2A>属性。  

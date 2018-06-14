@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584574"
 ---
 # <a name="error-creating-win32-resources-lterror-messagegt"></a>创建 Win32 资源时出错：&lt;错误消息&gt;
 Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。 该链接器已报告在创建内存中资源时出错。 原因可能是环境有问题，或计算机的内存不足。  

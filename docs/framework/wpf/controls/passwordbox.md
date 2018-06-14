@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550847"
 ---
 # <a name="passwordbox"></a>密码框
 <xref:System.Windows.Controls.PasswordBox>控件用于输入敏感或私人信息。  

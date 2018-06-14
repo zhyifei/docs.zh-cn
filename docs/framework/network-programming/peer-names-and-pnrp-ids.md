@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397580"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>对等名称和 PNRP ID
 对等名称代表通信的终结点，可以是计算机、用户、组、服务或者任何与对等有关的、可以解析为 IPv6 地址的事物。 对等名称解析协议 (PNRP) 将统计学上唯一的对等名称用于创建标识云成员的 PNRP ID。  

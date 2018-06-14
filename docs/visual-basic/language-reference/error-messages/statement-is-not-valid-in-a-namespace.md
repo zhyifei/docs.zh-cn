@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594762"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>语句在命名空间中无效
 语句不能出现在命名空间的级别。 允许在命名空间级别上的唯一声明是模块、 接口、 类、 委托、 枚举和结构声明。  

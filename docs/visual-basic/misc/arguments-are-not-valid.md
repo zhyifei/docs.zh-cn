@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599071"
 ---
 # <a name="arguments-are-not-valid"></a>参数无效
 传递给函数或子例程的参数无效。  

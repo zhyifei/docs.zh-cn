@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391742"
 ---
 # <a name="trace-listeners"></a>跟踪侦听器
 使用 Trace、Debug 和 <xref:System.Diagnostics.TraceSource> 时，必须具有用于收集和记录发送的消息的机制。 跟踪消息可由侦听器接收。 侦听器的用途是收集、存储和路由跟踪消息。 侦听器会将跟踪输出定向到适当的目标，如日志、窗口或文本文件。  

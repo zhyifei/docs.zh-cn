@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397684"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>任务并行库和 PLINQ 中的 ETW 事件
 任务并行库和 PLINQ 均可生成 Windows 事件跟踪 (ETW) 事件，通过 Windows 性能分析器等工具使用这些事件可分析并排除应用程序故障。 但在大多数情况下，分析并行应用程序代码的最佳方式是使用 [!INCLUDE[vsUltShort](../../../includes/vsultshort-md.md)] 中的[并发可视化工具](/visualstudio/profiling/concurrency-visualizer)。  

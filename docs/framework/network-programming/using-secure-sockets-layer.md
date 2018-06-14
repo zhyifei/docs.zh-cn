@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396241"
 ---
 # <a name="using-secure-sockets-layer"></a>使用安全套接字层
 <xref:System.Net> 类使用安全套接字层 (SSL) 为若干网络协议加密连接。  

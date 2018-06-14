@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401997"
 ---
 # <a name="wif-extensions"></a>WIF 扩展
 本部分介绍 Windows Identity Foundation 的扩展。  

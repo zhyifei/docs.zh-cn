@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588169"
 ---
 # <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;表达式&gt;&#39;不能用作类型约束
 约束列表包含的表达式不表示对类型形参的有效约束。  

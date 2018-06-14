@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b7c96439cf50c18e336baa70cf463b9463203290
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461173"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames 函数
 检索所有的限定符或某些限定符可从当前对象或属性的名称。 
@@ -76,7 +77,7 @@ HRESULT QualifierSet_GetNames (
 它不是给定的对象，因此具有零个限定符，一个错误中的字符串的数量`pstrNames`返回可为 0，即使该函数将返回`WBEM_S_NO_ERROR`。
 
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

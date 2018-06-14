@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575929"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>清理非托管资源
 对于应用创建的大多数对象，可以依赖 .NET 的垃圾回收器来处理内存管理。 但是，如果创建包括非托管资源的对象，则当你在应用中使用完非托管资源后，必须显式释放这些资源。 最常用的非托管资源类型是包装操作系统资源的对象，如文件、窗口、网络连接或数据库连接。 虽然垃圾回收器可以跟踪封装非托管资源的对象的生存期，但无法了解如何发布并清理这些非托管资源。  

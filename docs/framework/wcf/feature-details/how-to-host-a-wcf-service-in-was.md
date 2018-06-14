@@ -1,36 +1,23 @@
 ---
 title: 如何：在 WAS 中承载 WCF 服务
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c4613587d829b082ee7182cc32e34d2d2d563241
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7050d866233b248c7c8f9f41337ce451b5510c30
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492663"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>如何：在 WAS 中承载 WCF 服务
-本主题概述了创建由 Windows 进程激活服务（也称为 WAS）承载的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所需的基本步骤。 WAS 是新的进程激活服务，是对使用非 HTTP 传输协议的 Internet Information Services (IIS) 功能的泛化。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用监听器适配器接口传递激活请求，这些请求是通过由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的非 HTTP 协议（如 TCP、命名管道和消息队列）收到的。  
+本主题概述了创建由 Windows 进程激活服务 (也称为 WAS) 所需的基本步骤的托管 Windows Communication Foundation (WCF) 服务。 WAS 是新的进程激活服务，是对使用非 HTTP 传输协议的 Internet Information Services (IIS) 功能的泛化。 WCF 使用侦听器适配器接口传递激活请求，通过 WCF，如 TCP、 命名管道和消息队列支持的非 HTTP 协议接收请求。  
   
  此主机选项要求正确安装和配置 WAS 激活组件，但不要求编写任何主机代码作为应用程序的一部分。 有关安装和配置 WAS 的详细信息，请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
   
 > [!WARNING]
 >  如果将 Web 服务器的请求处理管道设置为经典模式，则将不支持 WAS 激活。 如果要使用 WAS 激活，则必须将 Web 服务器的请求处理管道设置为集成模式。  
   
- 在 WAS 中承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，可按照通常的方式使用标准绑定。 但是，在使用 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 配置 WAS 承载的服务时，必须满足一个约束条件。 当不同的终结点使用相同的传输时，绑定设置必须在以下的七个属性上相匹配：  
+ 当在 WAS 中承载 WCF 服务时，按照通常的方式使用标准绑定。 但是，在使用 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 配置 WAS 承载的服务时，必须满足一个约束条件。 当不同的终结点使用相同的传输时，绑定设置必须在以下的七个属性上相匹配：  
   
 -   ConnectionBufferSize  
   

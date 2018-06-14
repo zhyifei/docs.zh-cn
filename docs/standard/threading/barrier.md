@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584293"
 ---
 # <a name="barrier-net-framework"></a>屏障 (.NET Framework)
 屏障是用户定义的同步基元，以便于多个线程（称为“参与者”）可以分阶段同时处理算法。 达到代码中的屏障点之前，每个参与者将继续执行。 屏障表示工作阶段的末尾。 单个参与者到达屏障后将被阻止，直至所有参与者都已达到同一障碍。 所有参与者都已达到屏障后，你可以选择调用阶段后操作。 此阶段后操作可由单线程用于执行操作，而所有其他线程仍被阻止。 执行此操作后，所有参与者将不受阻止。  

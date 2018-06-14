@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569884"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>修整和删除 .NET 中的字符串字符
 如果将句子分析成单个单词，最后得到的结果可能是任意一端带有空白（也称为空格）的单词。 在这种情形下，可以使用 **System.String** 类中的其中一种剪裁方法，从字符串中的指定位置移除任何数量的空格或其他字符。 下表描述了可用的剪裁方法。  

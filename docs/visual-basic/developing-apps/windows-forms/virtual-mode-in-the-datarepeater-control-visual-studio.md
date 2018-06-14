@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592231"
 ---
 # <a name="virtual-mode-in-the-datarepeater-control-visual-studio"></a>DataRepeater 控件中的虚拟模式 (Visual Studio)
 如果想要显示大量的表格数据<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件，您可以通过设置改善性能<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>属性`True`和显式管理与其数据源的控件的交互。 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件提供可以处理与数据源进行交互并根据需要在运行时显示的数据的多个事件。  

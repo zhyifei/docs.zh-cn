@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513999"
 ---
 # <a name="compensable-activity-sample"></a>可补偿活动示例
 此示例演示如何使用 `CompensableActivity` 活动来定义在正常执行过程中要为某个给定操作完成的工作，以及为补偿该操作而需完成的工作（如果稍后需要这样做）。  此示例的第一部分演示如何补偿工作的单元可以定义为在 Windows Workflow Foundation (WF) 使用`CompensableActivity`活动和，它们如何执行中成功运行。  此示例的第二部分演示在遇到意外事件和取消工作流实例时，相同单元数量的可补偿工作如何自动负责补偿。  

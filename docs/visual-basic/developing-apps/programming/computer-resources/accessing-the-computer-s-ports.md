@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585536"
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>访问计算机的端口 (Visual Basic)
 `My.Computer.Ports` 对象提供用于访问计算机的串行端口的属性和方法。  

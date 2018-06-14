@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387099"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM 互操作示例：.NET 客户端和 COM 服务器
 本示例演示为访问 [COM 服务器](#cpconcominteropsamplenetclientcomserveranchor2)而生成的 [.NET client](#cpconcominteropsamplenetclientcomserveranchor1) 如何创建 COM 组件类的实例并调用类成员来执行抵押贷款计算。  

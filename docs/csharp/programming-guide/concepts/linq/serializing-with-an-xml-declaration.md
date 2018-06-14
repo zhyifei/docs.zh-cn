@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329782"
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>带 XML 声明的序列化 (C#)
 本主题说明如何控制序列化是否生成 XML 声明。  

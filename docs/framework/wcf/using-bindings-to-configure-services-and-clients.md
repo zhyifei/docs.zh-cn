@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806066"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用绑定配置服务和客户端
 绑定是指定连接到终结点所需的通信详细信息的对象。 更具体地说，绑定包含用于创建客户端或服务运行时的配置信息，创建方法是定义用于各个终结点或客户端通道的传输、连网格式（消息编码）和协议的具体内容。 若要创建的正常运行的 Windows Communication Foundation (WCF) 服务，在服务中的每个终结点需要的绑定。 本主题解释什么是绑定、如何定义绑定以及如何为终结点指定特定的绑定。  

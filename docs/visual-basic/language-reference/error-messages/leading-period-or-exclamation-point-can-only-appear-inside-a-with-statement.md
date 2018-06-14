@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589442"
 ---
 # <a name="leading-3939-or-3939-can-only-appear-inside-a-39with39-statement"></a>前导&#39;。&#39;或&#39;！&#39;只能出现在&#39;与&#39;语句
 句点 （.） 或感叹号 （！） 不内部`With`块没有左侧的表达式时出现。 成员访问 (`.`) 和字典成员访问 (`!`) 需要一个表达式来指定包含该成员的元素。 这必须紧靠的左边的访问器或作为目标的`With`包含成员访问的块。  

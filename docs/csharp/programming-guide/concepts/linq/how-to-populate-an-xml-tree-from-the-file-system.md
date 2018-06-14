@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328170"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>如何：从文件系统填充 XML 树 (C#)
 XML 树有一种有用的常见应用，即作为层次结构名称/值数据存储区。 您可以使用层次结构数据填充 XML 树，然后对它进行查询、转换和序列化（如有必要）。 在这种用法中，很多 XML 特定的语义（如命名空间和空白行为）都不重要。 相反，你将 XML 树用作内存中的小型单用户层次结构数据库。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571450"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath 查询和命名空间
 XPath 查询支持 XML 文档中的命名空间，可以使用命名空间前缀来限定元素和属性的名称。 使用命名空间前缀来限定元素和属性的名称可以限制 XPath 查询只返回属于特定命名空间的节点。  

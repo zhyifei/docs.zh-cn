@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548641"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 如果实现由 PresentationHost.exe 若要从主机中获取自定义的进度和错误消息调用。  

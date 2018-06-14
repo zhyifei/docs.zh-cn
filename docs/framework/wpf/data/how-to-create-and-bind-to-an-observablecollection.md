@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556713"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>如何：创建和绑定到 ObservableCollection
 此示例演示如何创建并绑定到一个集合，其中派生自<xref:System.Collections.ObjectModel.ObservableCollection%601>类，它是一个集合类，可在添加或删除项时提供通知。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365405"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 用户实例
 Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，只有在使用用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 时该功能才可用。 用户实例是 SQL Server Express 数据库引擎的单独实例，该单独实例由父实例生成。 不是其本地计算机的管理员的用户可以将用户实例附加和连接到 SQL Server Express 数据库。 在每个用户一个实例的基础上，每个实例在单个用户的安全上下文中运行。  

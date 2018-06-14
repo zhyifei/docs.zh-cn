@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551975"
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>如何：获取或设置画布定位属性
 此示例演示如何使用的定位方法<xref:System.Windows.Controls.Canvas>元素来定位子内容。 此示例使用中的内容<xref:System.Windows.Controls.ListBoxItem>来表示定位值，并将值的实例转换为<xref:System.Double>，这是用于定位一个必需的参数。 然后重新转换为字符串和文本的形式显示值<xref:System.Windows.Controls.TextBlock>元素中的使用<xref:System.Windows.Controls.Canvas.GetLeft%2A>方法。  

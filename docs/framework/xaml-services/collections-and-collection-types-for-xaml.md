@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562971"
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>XAML 的集合类型
 本主题介绍如何定义旨在支持一个集合，并以用于实例化作为元素的父对象元素或属性元素的子级的收集项的支持 XAML 语法的类型的属性。  

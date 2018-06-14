@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529192"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式的界面
 Visual Studio 的优点之一是能够在短时间内创建具有专业水准的 Windows 窗体应用程序。 一种常见方案使用创建用户界面 (UI)<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>类似于 Windows 操作系统的 Windows 资源管理器功能的控件。 Windows 资源管理器显示的层次结构的文件和文件夹的用户的计算机上。  
@@ -53,7 +54,7 @@ Visual Studio 的优点之一是能够在短时间内创建具有专业水准的
   
     2.  将 <xref:System.Windows.Forms.ListView.View%2A> 属性设置为 <xref:System.Windows.Forms.View.Details>。  
   
-    3.  打开 ColumnHeader 集合编辑器中，单击省略号 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 中<xref:System.Windows.Forms.ListView.Columns%2A>属性**。** 添加三个列，并设置其<xref:System.Windows.Forms.ColumnHeader.Text%2A>属性`Name`， `Type`，和`Last Modified`分别。 单击“确定”关闭对话框。  
+    3.  打开 ColumnHeader 集合编辑器中，单击省略号 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 中<xref:System.Windows.Forms.ListView.Columns%2A>属性 **。** 添加三个列，并设置其<xref:System.Windows.Forms.ColumnHeader.Text%2A>属性`Name`， `Type`，和`Last Modified`分别。 单击“确定”关闭对话框。  
   
     4.  将 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 属性设置为 `imageList1.`  
   
@@ -72,7 +73,7 @@ Visual Studio 的优点之一是能够在短时间内创建具有专业水准的
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]  
   
-11. 处理<xref:System.Windows.Forms.TreeView.NodeMouseClick>事件`treeview1` **，**和实现代码以填充`listview1`时单击节点的节点的内容。 添加此代码与`Form1`类。  
+11. 处理<xref:System.Windows.Forms.TreeView.NodeMouseClick>事件`treeview1` **，** 和实现代码以填充`listview1`时单击节点的节点的内容。 添加此代码与`Form1`类。  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]  

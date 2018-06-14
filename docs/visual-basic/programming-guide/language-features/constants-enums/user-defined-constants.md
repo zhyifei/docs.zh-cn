@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648770"
 ---
 # <a name="user-defined-constants-visual-basic"></a>用户定义的常量 (Visual Basic)
 常量是有意义的名称发生的数字或字符串不会更改。 顾名思义，常量存储在应用程序的执行过程中保持不变的值。 你可以使用由控件或你使用的组件定义的常量或可以创建你自己。 你自己创建的常量被描述为*用户定义*。  

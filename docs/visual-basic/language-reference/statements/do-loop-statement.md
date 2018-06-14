@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604934"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop 语句 (Visual Basic)
 重复时的语句块`Boolean`条件是`True`或直到条件变为`True`。  

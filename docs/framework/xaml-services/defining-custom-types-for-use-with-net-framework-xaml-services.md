@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566491"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>定义与 .NET Framework XAML 服务一起使用的自定义类型
 当你定义了业务对象的自定义类型或者不在特定框架具有依赖关系的类型时，有一些你可以遵循 xaml 某些最佳实践。 如果您遵循这些做法，.NET Framework XAML 服务和其 XAML 读取器和 XAML 编写器可以发现你的类型的 XAML 特征，并为其提供适当的表示形式，在 XAML 节点流中使用的 XAML 类型系统。 本主题介绍类型定义，成员定义和 CLR 特性化的类型或成员的最佳做法。  

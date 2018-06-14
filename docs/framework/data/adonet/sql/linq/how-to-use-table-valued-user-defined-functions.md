@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362894"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>如何：使用表值用户定义的函数
 表值函数返回单个行集（与存储过程不同，存储过程可返回多个结果形状）。 由于表值函数的返回类型为 `Table`，因此在 SQL 中可以使用表的任何地方均可以使用表值函数。 此外，您还可以完全像处理表那样来处理表值函数。  

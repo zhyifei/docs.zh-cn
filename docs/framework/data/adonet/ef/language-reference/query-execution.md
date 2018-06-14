@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804815"
 ---
 # <a name="query-execution"></a>查询执行
 在用户创建 LINQ 查询后，该查询将转换为一个命令目录树。 命令目录树是与实体框架兼容的查询表示形式。 然后，针对数据源执行该命令目录树。 在执行查询时，将计算所有查询表达式（即查询的所有组成部分），包括在结果具体化中使用的那些表达式。  

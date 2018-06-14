@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f050a3d9d37e43713c40896fb162bcf9932c6512
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403365"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee 方法
 获取被调用链的链。  
@@ -42,7 +43,7 @@ HRESULT GetCallee (
  此证书链将等待调用链返回，然后才会继续执行。 对于跨线程封送调用另一个线程可能会被调用的链。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

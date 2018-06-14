@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91e64bb2e1c8a7b11fe70024eb4a4fa1717c06e5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407344"
 ---
 # <a name="corheapobject-structure"></a>COR_HEAPOBJECT 结构
 提供有关托管堆上的对象的信息。  
@@ -55,7 +56,7 @@ typedef struct _COR_HEAPOBJECT {
  `COR_HEAPOBJECT`结构包含引用计数 COM 接口。 如果你检索`COR_HEAPOBJECT`从通过调用枚举器实例[icordebugheapenum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)方法，你随后必须释放该引用。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

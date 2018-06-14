@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa79382d597d303d492e3a441c15a422697be279
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405962"
 ---
 # <a name="icordebuginitialize-method"></a>ICorDebug::Initialize 方法
 初始化 `ICorDebug` 对象。  
@@ -36,7 +37,7 @@ HRESULT Initialize ();
  调试器必须调用`Initialize`在创建时间来初始化调试服务。 必须对任何其他方法之前调用此方法`ICorDebug`调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

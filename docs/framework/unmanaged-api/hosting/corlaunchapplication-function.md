@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a53b0a9cdcec33846f9d491e7d6567bcf9235b5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428757"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication 函数
 启动位于指定的网络路径，使用指定的清单和其他应用程序数据的应用程序。  
@@ -65,7 +66,7 @@ HRESULT CorLaunchApplication (
  [out]有关应用程序加载的过程的信息指向的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   

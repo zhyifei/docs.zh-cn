@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398890"
 ---
 # <a name="claims-based-identity-model"></a>基于声明的标识模型
 在生成声明感知应用程序时，用户标识在应用程序中表示为一组声明。 一个声明可能是用户的名称，另一个可能是电子邮件地址。 其理念是，配置外部标识系统以便为您的应用程序提供所需的一切，是其了解用户及用户发出的每个请求和加密，从而确保您收到的标识数据来自受信任的源。  

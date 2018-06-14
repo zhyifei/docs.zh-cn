@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590529"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte 数据类型 (Visual Basic)
 包含无符号的 8 位 （1 个字节） 整数，值的范围从 0 到 255 之间。

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498103"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
 有时，开发人员必须完全控制从服务操作返回数据的方式。 服务操作必须在由 WCF 不支持的格式返回数据时，这种情况。 本主题讨论如何使用 WCF WEB HTTP 编程模型来创建此类服务。 此服务具有一个返回流的操作。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490592"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>如何：实现向发现代理注册的可检测到的服务
 本主题是讨论如何实现发现代理的四个主题中的第二个主题。 在前面的主题中，[如何： 实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，实现发现代理。 在本主题中，你将创建将发送公告消息的 WCF 服务 (`Hello`和`Bye`) 向发现代理，从而可以注册和注销自身向发现代理。  

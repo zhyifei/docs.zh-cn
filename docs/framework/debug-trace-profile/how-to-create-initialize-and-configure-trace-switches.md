@@ -1,13 +1,6 @@
 ---
-title: "如何：创建、初始化和配置跟踪开关"
-ms.custom: 
+title: 如何：创建、初始化和配置跟踪开关
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,14 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41e41f65b82061cebc52485ed08176633c45613d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392926"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：创建、初始化和配置跟踪开关
 跟踪开关用于启用、禁用和筛选跟踪输出。  
@@ -84,11 +75,11 @@ ms.lasthandoff: 12/22/2017
   
 2.  如果项目不包含配置文件（app.config 或 Web.config），则从“项目”菜单中选择“添加新项”。  
   
-    -   **Visual Basic：**在“添加新项”对话框中，选择“应用程序配置文件”。  
+    -   **Visual Basic：** 在“添加新项”对话框中，选择“应用程序配置文件”。  
   
          创建并打开应用程序配置文件。 这是一个根元素为 `<configuration>.` 的 XML 文档  
   
-    -   **Visual C#：**在“添加新项”对话框中，选择“XML 文件”。 将此文件命名为 app.config。XML 编辑器中，在 XML 声明后，添加以下 XML：  
+    -   **Visual C#：** 在“添加新项”对话框中，选择“XML 文件”。 将此文件命名为 app.config。XML 编辑器中，在 XML 声明后，添加以下 XML：  
   
         ```xml  
         <configuration>  

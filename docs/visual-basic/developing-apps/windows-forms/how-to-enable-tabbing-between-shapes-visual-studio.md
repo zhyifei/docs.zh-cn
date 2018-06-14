@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589542"
 ---
 # <a name="how-to-enable-tabbing-between-shapes-visual-studio"></a>如何：使用 Tab 键在形状之间切换 (Visual Studio)
 Line 和 shape 控件不具有`TabStop`或`TabIndex`属性，但你仍然可以启用它们之间按 tab 键。 在下面的示例中，按 CTRL 和 TAB 键将选项卡之间形状;按 TAB 键仅按钮之间将选项卡上。  

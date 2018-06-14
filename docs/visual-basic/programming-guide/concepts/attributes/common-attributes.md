@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644155"
 ---
 # <a name="common-attributes-visual-basic"></a>公共特性 (Visual Basic)
 本主题介绍在 Visual Basic 程序中最常使用的属性。  

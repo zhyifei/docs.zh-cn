@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557545"
 ---
 # <a name="navigation-topologies-overview"></a>导航拓扑概述
 <a name="introduction"></a> 此概述提供的简介中的导航拓扑[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 三个常见导航拓扑及示例将在随后讨论。  

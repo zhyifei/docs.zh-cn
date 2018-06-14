@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361635"
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>自定义插入、更新和删除操作
 默认情况下，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会生成动态 SQL 来实现插入、读取、更新和删除操作。 但实际上，您通常要自定义应用程序以满足您的业务需要。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579660"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>使用可移植类库的跨平台开发
 Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速轻松地为 Microsoft 平台构建跨平台应用和库。  
@@ -57,7 +58,7 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
 ## <a name="creating-a-portable-class-library-project"></a>创建可移植类库项目  
  若要创建可移植类库，你应该使用 Visual Studio 中提供的模板之一。 创建一个新的项目，然后在**新项目**对话框中，在**模板**，选择你的目标语言 （C# 或 Visual Basic 中），，然后选择想要面向的平台之一。 可在下一步选择附加的平台。  
   
- 在 Visual Studio 2013 Update 2，你可以选择**类库 （可移植）**针对你选择的语言和平台以创建可移植类库模板。 你将看到面向以下平台的此模板：  
+ 在 Visual Studio 2013 Update 2，你可以选择**类库 （可移植）** 针对你选择的语言和平台以创建可移植类库模板。 你将看到面向以下平台的此模板：  
   
 -   应用商店应用  
   
@@ -84,7 +85,7 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
   
 <a name="platforms"></a>   
 ## <a name="target-options"></a>目标选项  
- 在创建可移植类库项目时，可以选择操作系统以及你想要针对的 NET Framework 版本。 如果你使用 Visual Studio 2013 和已安装 Update 2 或更高版本，你可以选择**类库 （可移植的通用应用）**模板来创建可移植类库面向 Windows 8.1 和 Windows Phone 8.1。 下表显示了可用的目标，具体取决于你使用的 Visual Studio 版本。  
+ 在创建可移植类库项目时，可以选择操作系统以及你想要针对的 NET Framework 版本。 如果你使用 Visual Studio 2013 和已安装 Update 2 或更高版本，你可以选择**类库 （可移植的通用应用）** 模板来创建可移植类库面向 Windows 8.1 和 Windows Phone 8.1。 下表显示了可用的目标，具体取决于你使用的 Visual Studio 版本。  
   
 |目标选项|Visual Studio 2012|Visual Studio 2013|Visual Studio 2013 Update 2 或更高版本|  
 |-|-|-|-|  

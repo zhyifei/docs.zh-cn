@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576804"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>样式表参数和扩展对象的 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 类包含可扩展样式表语言转换 (XSLT) 参数和 XSLT 扩展对象。 传入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法后，这些参数和扩展对象可以从样式表中进行调用。  

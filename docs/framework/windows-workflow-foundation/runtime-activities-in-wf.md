@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513030"
 ---
 # <a name="runtime-activities-in-wf"></a>WF 中的运行时活动
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 为访问工作流运行时的功能提供若干系统提供的活动，如持久性和终止。  

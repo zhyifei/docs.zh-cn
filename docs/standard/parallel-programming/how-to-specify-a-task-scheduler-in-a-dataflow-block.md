@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585497"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>如何：在数据流块中指定任务计划程序
 本文档演示在应用程序中使用数据流时如何关联特定任务计划程序。 示例在 Windows 窗体应用程序中使用 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 类来显示读取器任务处于活动状态的时间和编写器任务处于活动状态的时间。 它还使用 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法使数据流块能够在用户界面线程上运行。

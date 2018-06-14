@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538856"
 ---
 # <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>如何：设置 Windows 窗体 DataGridView 控件中的数据格式
 以下过程演示了使用的单元格值的基本格式设置<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>属性<xref:System.Windows.Forms.DataGridView>控件和控件中的特定列。 有关高级的数据格式设置信息，请参阅[如何： 在 Windows 窗体 DataGridView 控件中自定义数据格式](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  

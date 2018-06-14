@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520063"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>在 WF 中创建异步活动
 <xref:System.Activities.AsyncCodeActivity> 提供一个可供活动作者使用的基类，该基类允许派生的活动实现异步执行逻辑。 这对如下自定义活动非常有用：必须执行异步工作，而不会保持工作流计划程序线程并阻止可以并行运行的所有活动。 本主题概述了如何使用 <xref:System.Activities.AsyncCodeActivity> 创建自定义异步活动。  

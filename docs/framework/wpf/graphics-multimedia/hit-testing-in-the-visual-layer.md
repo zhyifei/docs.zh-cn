@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558104"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>可视化层中的命中测试
 本主题概述可视化层提供的命中测试功能。 命中测试的支持使你能够确定是否几何图形或点值落在所呈现内容的<xref:System.Windows.Media.Visual>，从而可以实现用户界面行为，例如选择矩形来选择多个对象。  

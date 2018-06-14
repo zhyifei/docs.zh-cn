@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574873"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>如何：在独立存储中查找现有文件和目录
 为了搜索独立存储中的目录，请使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> 方法。 此方法接受表示搜索模式的字符串。 您可以在搜索模式中使用单字符 (?) 和多字符 (*) 通配符，但是通配符必须出现在名称的最后一部分。 例如，`directory1/*ect*` 是有效的搜索字符串，但 `*ect*/directory2` 不是。  

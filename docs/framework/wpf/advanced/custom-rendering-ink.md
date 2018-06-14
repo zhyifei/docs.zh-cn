@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540428"
 ---
 # <a name="custom-rendering-ink"></a>自定义呈现墨迹
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>笔画属性允许你指定的外观描边，如其大小、 颜色和形状，但可能有些时候你想要自定义超出什么外观<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>允许。 建议通过使用喷笔、油画和多种其他效果呈现外观，从而自定义墨迹的外观。 Windows Presentation Foundation (WPF) 允许你自定义实现自定义呈现墨迹<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>和<xref:System.Windows.Ink.Stroke>对象。  

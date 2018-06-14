@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503434"
 ---
 # <a name="workflow-discovery-sample"></a>工作流发现示例
 此示例演示如何使工作流服务可发现，以及如何编写搜索特定服务的自定义代码活动。  

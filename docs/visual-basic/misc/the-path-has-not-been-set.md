@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638325"
 ---
 # <a name="the-path-has-not-been-set"></a>尚未设置路径
 试图进行文件操作（例如，移动或复制文件），但未提供必要的路径。 这可能是由于未正确分析路径造成的。  

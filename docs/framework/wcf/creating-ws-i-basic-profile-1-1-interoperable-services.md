@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804934"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>创建 WS-I 基本配置文件 1.1 可互操作服务
 若要配置 WCF 服务终结点进行互操作与[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]Web 服务客户端：  

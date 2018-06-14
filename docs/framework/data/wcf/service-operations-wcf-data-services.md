@@ -1,13 +1,6 @@
 ---
-title: "服务操作（WCF 数据服务）"
-ms.custom: 
+title: 服务操作（WCF 数据服务）
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,12 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72af11330bc9190ea0c07e23f2e87e5f4840b677
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da8d482fbf506749f9805edcbbaad3c893ad56b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365847"
 ---
 # <a name="service-operations-wcf-data-services"></a>服务操作（WCF 数据服务）
 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以在数据服务中定义服务操作，以便在服务器上公开方法。 与其他数据服务资源一样，服务操作也是通过 URI 进行寻址。 使用服务操作可以在数据服务中公开业务逻辑；例如，实现验证逻辑，应用基于角色的安全性或公开专用查询功能。 服务操作是添加到派生自 <xref:System.Data.Services.DataService%601> 的数据服务类的方法。 与所有其他数据服务资源一样，也可以向服务操作方法提供参数。 例如，以下服务操作 URI (基于[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)数据服务) 将值传递`London`到`city`参数：  

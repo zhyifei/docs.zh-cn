@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569969"
 ---
 # <a name="load-data-from-a-reader"></a>从读取器中加载数据
 如果使用 <xref:System.Xml.XmlDocument.Load%2A> 方法和 <xref:System.Xml.XmlReader> 的参数加载 XML 文档，与从其他格式加载数据的行为相比，发生的行为有所不同。 如果读取器处于初始状态，<xref:System.Xml.XmlDocument.Load%2A> 将使用读取器中的全部内容，并通过读取器中的所有数据生成 XML 文档对象模型 (DOM)。  

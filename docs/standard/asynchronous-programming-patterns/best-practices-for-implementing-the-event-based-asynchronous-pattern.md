@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578416"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>实现基于事件的异步模式的最佳做法
 基于事件的异步模式提供了一种在类中使用熟悉的事件和委托语义公开异步行为的有效方法。 若要实现基于事件的异步模式，你需要遵循某些特定的行为要求。 以下部分描述了在你实现遵循基于事件的异步模式的类时应该考虑的要求和准则。  

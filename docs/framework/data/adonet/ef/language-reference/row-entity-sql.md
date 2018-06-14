@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765602"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 从一个或多个值构造结构上类型化的匿名记录。  

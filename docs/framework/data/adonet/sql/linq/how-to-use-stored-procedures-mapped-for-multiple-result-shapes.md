@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356784"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>如何：使用针对多个结果形状映射的存储过程
 当存储过程可以返回多个结果形状时，返回类型无法强类型化为单个投影形状。 尽管 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以生成所有可能的投影类型，但它无法获知将以何种顺序返回它们。  

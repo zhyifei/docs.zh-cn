@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269275"
 ---
 # <a name="-operator-c-reference"></a>= 运算符（C# 参考）
 赋值运算符 (`=`) 在由左操作数表示的存储位置、属性或索引器中存储右操作数的值，并将该值作为结果返回。 操作数类型必须相同（或右操作数必须可隐式转换为左操作数的类型）。  

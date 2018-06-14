@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516157"
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>如何：查询非持有化实例
 创建某个服务的新实例时，如果该服务已定义 SQL 工作流实例存储行为，则服务主机将在实例存储区中为该服务实例创建一个初始项。 随后，当该服务实例第一次持久化时，SQL 工作流实例存储行为会将当前实例状态与执行激活、恢复和控制操作所需的其他数据一起存储。  

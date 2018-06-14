@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 839052b72d908e48a4b6f88dab05ec3c3d575d65
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405406"
 ---
 # <a name="icordebugchaingetnext-method"></a>ICorDebugChain::GetNext 方法
 获取线程的下一步帧链。  
@@ -39,7 +40,7 @@ HRESULT GetNext (
  [out]指向一个表示下一个线程的帧链 ICorDebugChain 对象的地址的指针。 如果此链是最后一个链，`ppChain`为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

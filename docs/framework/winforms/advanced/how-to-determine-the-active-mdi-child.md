@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521713"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>如何：确定活动的 MDI 子窗体
 有时，你将想要在当前处于活动状态的子窗体具有焦点的控件上提供的命令。 例如，假设你想要将子窗体的文本框中的选定的文本复制到剪贴板。 将创建一个过程，它将选定的文本复制到剪贴板使用<xref:System.Windows.Forms.Control.Click>标准的编辑菜单上的复制菜单项的事件。  

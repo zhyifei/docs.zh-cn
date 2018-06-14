@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805855"
 ---
 # <a name="service-channel-level-programming"></a>服务通道级编程
 本主题介绍如何编写 Windows Communication Foundation (WCF) 服务应用程序时无需使用<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>及其关联的对象模型。  

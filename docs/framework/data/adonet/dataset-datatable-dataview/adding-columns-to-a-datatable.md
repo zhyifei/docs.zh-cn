@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760461"
 ---
 # <a name="adding-columns-to-a-datatable"></a>向数据表添加列
 A<xref:System.Data.DataTable>包含一套<xref:System.Data.DataColumn>所引用的对象**列**的表的属性。 这个列的集合与任何约束一起定义表的架构（即结构）。  
@@ -46,7 +47,7 @@ workTable.Columns.Add("Purchases", typeof(Double));
  在示例中，请注意，属性**CustID**列设置为不允许**DBNull**值并将值是唯一约束。 但是，如果你定义**CustID**为主密钥列的表、 列**AllowDBNull**属性将自动设置为**false**和**Unique**属性将自动设置为**true**。 有关详细信息，请参阅[定义主键](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
   
 > [!CAUTION]
->  如果列名称未提供的列，该列会得到递增的默认名称的列*N，*从"Column1"开始，当它添加到**DataColumnCollection**。 我们建议你避免的命名约定"列*N*"时提供的列名，因为提供的名称可能与中的现有默认列名称相冲突**DataColumnCollection**。 如果提供的名称已经存在，将引发异常。  
+>  如果列名称未提供的列，该列会得到递增的默认名称的列*N，* 从"Column1"开始，当它添加到**DataColumnCollection**。 我们建议你避免的命名约定"列*N*"时提供的列名，因为提供的名称可能与中的现有默认列名称相冲突**DataColumnCollection**。 如果提供的名称已经存在，将引发异常。  
   
  如果将 <xref:System.Xml.Linq.XElement> 用作 <xref:System.Data.DataColumn.DataType%2A> 中的 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataTable>，则在读入数据时，XML 序列化将不起作用。 例如，如果通过使用 <xref:System.Xml.XmlDocument> 方法来写出 `DataTable.WriteXml`，则在序列化为 XML 时，<xref:System.Xml.Linq.XElement> 中会出现一个额外的父节点。 若要解决此问题，请使用 <xref:System.Data.SqlTypes.SqlXml> 类型来代替 <xref:System.Xml.Linq.XElement>。 `ReadXml` 和 `WriteXml` 对 <xref:System.Data.SqlTypes.SqlXml> 均能正确使用。  
   

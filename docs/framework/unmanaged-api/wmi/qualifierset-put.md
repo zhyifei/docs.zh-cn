@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462184"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 函数
 写入命名的限定符和值。 新限定符将覆盖具有相同名称的以前的值。 如果限定符不存在，则创建它。 
@@ -79,7 +80,7 @@ HRESULT QualifierSet_Put (
 此函数包装对的调用[IWbemQualifierSet::Put](https://msdn.microsoft.com/library/aa391871(v=vs.85).aspx)方法。
 
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

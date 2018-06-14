@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528267"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>如何：向 ListView 控件添加搜索功能
 通常当使用中的项的大型列表时<xref:System.Windows.Forms.ListView>控件，你想要向用户提供搜索功能。 <xref:System.Windows.Forms.ListView>控制两个不同的方式提供此功能： 文本匹配和搜索位置。  

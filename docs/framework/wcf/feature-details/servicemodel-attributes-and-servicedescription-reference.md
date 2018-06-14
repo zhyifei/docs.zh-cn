@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505965"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 属性和 ServiceDescription 引用
 *说明树*是类型的层次结构 (从开始<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>类)，一起描述服务的每个方面。 Windows Communication Foundation (WCF) 使用说明树形来生成有效的服务运行时，发布 Web 服务描述语言 (WSDL)、 XML 架构定义语言 (XSD) 和有关服务的客户端可以使用的策略断言 （元数据）连接到和使用服务，并生成各种代码和配置文件表示形式之间的说明树值。  

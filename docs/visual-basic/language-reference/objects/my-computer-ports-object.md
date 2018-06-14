@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595935"
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports 对象
 提供了用于访问计算机的串行端口的属性和方法。  

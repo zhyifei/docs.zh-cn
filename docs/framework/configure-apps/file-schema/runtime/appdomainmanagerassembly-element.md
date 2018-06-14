@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744845"
 ---
 # <a name="ltappdomainmanagerassemblygt-element"></a>&lt;appDomainManagerAssembly&gt;元素
 指定为过程中的默认应用程序域提供应用程序域管理器的程序集。  

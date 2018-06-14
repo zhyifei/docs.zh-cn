@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539661"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>如何：开发简单的 Windows 窗体控件
 本部分演示创建自定义 Windows 窗体控件的关键步骤。 在本演练中开发的简单控件允许的对齐方式其<xref:System.Windows.Forms.Control.Text%2A>要更改属性。 它不会引发或处理事件。  

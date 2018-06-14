@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339964"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>从 XML 树中删除元素、属性和节点 (C#)
 可以修改 XML 树，移除元素、属性和其他类型的节点。  

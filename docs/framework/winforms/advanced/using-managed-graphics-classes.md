@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524881"
 ---
 # <a name="using-managed-graphics-classes"></a>使用托管图形类
 以下主题介绍如何使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]托管的类 framework 中的 API。  

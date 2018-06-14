@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d741bda5426dee1292df0e6fd9107cc2f44c8a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413314"
 ---
 # <a name="icordebugmodulegetsize-method"></a>ICorDebugModule::GetSize 方法
 获取用字节表示，该模块的大小。  
@@ -41,7 +42,7 @@ HRESULT GetSize(
  如果该模块通过本机映像生成器 (NGen.exe) 生成的该模块的大小将为零。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

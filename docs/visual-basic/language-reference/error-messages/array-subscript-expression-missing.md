@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583859"
 ---
 # <a name="array-subscript-expression-missing"></a>缺少数组下标表达式
 数组初始化省略了一个或多个定义数组边界的下标。 例如，语句可能包含表达式`myArray (5,5,,10)`，其中省略了第三个下标。  

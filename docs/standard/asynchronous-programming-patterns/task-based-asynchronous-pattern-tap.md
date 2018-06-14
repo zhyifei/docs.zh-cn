@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579010"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>基于任务的异步模式 (TAP)
 基于任务的异步模式 (TAP) 是基于 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 命名空间中的 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks?displayProperty=nameWithType> 类型，这些类型用于表示任意异步操作。 TAP 是用于新开发的建议的异步设计模式。  

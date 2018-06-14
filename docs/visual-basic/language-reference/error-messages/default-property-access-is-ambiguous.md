@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590850"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>默认属性访问之间不明确继承的接口成员&#39; &lt;defaultpropertyname&gt; &#39;的接口&#39; &lt;interfacename1&gt; &#39;和&#39; &lt;defaultpropertyname&gt; &#39;的接口&#39; &lt;interfacename2&gt;&#39;
 接口继承自两个接口，其中每个声明具有相同名称的默认属性。 编译器无法解析访问而无需限定此默认属性。 下面的示例阐释了这一点。  

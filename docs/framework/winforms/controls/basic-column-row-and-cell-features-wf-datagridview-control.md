@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525489"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的基本列、行和单元格功能
 许多基本行为`DataGridView`单元格、 行和列可以修改通过设置单个属性。 本部分中的主题介绍几个最常使用的这些功能。  

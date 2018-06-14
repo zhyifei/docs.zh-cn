@@ -1,30 +1,19 @@
 ---
-title: "使用 DataView 进行排序 (LINQ to DataSet)"
-ms.custom: 
+title: 使用 DataView 进行排序 (LINQ to DataSet)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e8eda365fa1970f4fa836440151cc1ba0d3ae9dd
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 41f6f56765e1a623f8f2bdc8f2322589125d123e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365899"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>使用 DataView 进行排序 (LINQ to DataSet)
-基于特定条件对数据进行排序，然后通过 UI 控件向客户端表示该数据的能力是数据绑定的一个重要特征。 <xref:System.Data.DataView> 提供多种方式对数据进行排序并返回按指定排序条件排序的数据行。 除了基于字符串的排序功能以外，<xref:System.Data.DataView>还可用于使用[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]排序条件的表达式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]表达式允许执行比基于字符串的排序更复杂而功能强大的排序操作。 本主题介绍这两种使用 <xref:System.Data.DataView> 的排序方法。  
+基于特定条件对数据进行排序，然后通过 UI 控件向客户端表示该数据的能力是数据绑定的一个重要特征。 <xref:System.Data.DataView> 提供多种方式对数据进行排序并返回按指定排序条件排序的数据行。 除了基于字符串的排序功能以外，<xref:System.Data.DataView>还可用于使用[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]排序条件的表达式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 表达式允许执行比基于字符串的排序更复杂而功能强大的排序操作。 本主题介绍这两种使用 <xref:System.Data.DataView> 的排序方法。  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>通过具有排序信息的查询创建 DataView  
  可以通过 <xref:System.Data.DataView> 查询创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 对象。 如果查询包含 <xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.OrderByDescending%2A>、<xref:System.Linq.Enumerable.ThenBy%2A> 或 <xref:System.Linq.Enumerable.ThenByDescending%2A> 子句，则这些子句中的表达式将用作对 <xref:System.Data.DataView> 中的数据进行排序的基础。 例如，如果查询包含 `Order By…` 和 `Then By…` 子句，则生成的 <xref:System.Data.DataView> 将按指定的两个列对数据进行排序。  

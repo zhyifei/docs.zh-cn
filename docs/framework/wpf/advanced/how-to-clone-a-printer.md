@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544187"
 ---
 # <a name="how-to-clone-a-printer"></a>如何：克隆打印机
 大多数的企业在某些时候，将购买的同一模型的多个打印机。 通常情况下，这些进行所有安装使用几乎相同的配置设置。 安装每个打印机会很耗时，而且容易出错。 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType>命名空间和<xref:System.Printing.PrintServer.InstallPrintQueue%2A>都通过 Microsoft.NET Framework 公开的类，使可以立即安装任意数目的其他已克隆的打印队列，从现有的打印队列。  

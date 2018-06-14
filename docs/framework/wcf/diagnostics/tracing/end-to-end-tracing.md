@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474215"
 ---
 # <a name="end-to-end-tracing"></a>端到端跟踪
 端到端 (e2e) 跟踪可使开发人员跟踪中的 Windows Communication Foundation (WCF) 基础结构，从而调查代码路径失败的原因，或者提供详细的跟踪以进行容量规划和性能分析的代码执行。 Windows Communication Foundation (WCF) 提供三种关联机制帮助诊断错误的原因： 活动、 传输和传播。  

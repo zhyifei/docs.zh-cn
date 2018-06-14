@@ -35,6 +35,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654351"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>代码中的特殊字符 (Visual Basic)
 有时您必须使用特殊字符，在代码中，即，不是字母或数字的字符。 标点和 Visual Basic 字符集中的特殊字符各有其用途，从组织程序文本到定义编译器或已编译的程序执行的任务。 它们不指定要执行的操作。  

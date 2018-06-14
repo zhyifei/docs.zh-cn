@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539395"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows 窗体中的拖放功能
 Windows 窗体包含一组实现拖放行为的方法、事件和类。 本主题概述了 Windows 窗体对拖放功能的支持。  另请参阅[拖放操作和剪贴板支持](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\))。  

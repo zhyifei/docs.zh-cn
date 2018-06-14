@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554867"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>如何：重写面板的 OnRender 方法
 此示例演示如何重写<xref:System.Windows.Controls.Panel.OnRender%2A>方法<xref:System.Windows.Controls.Panel>以便将自定义图形效果添加到布局元素。  

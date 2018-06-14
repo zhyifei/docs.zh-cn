@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562254"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>如何：在使用演示图板对属性进行动画处理后设置该属性
 在某些情况下，它可能显示，你不能更改属性的值后进行动画处理。  

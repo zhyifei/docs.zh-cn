@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531259"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>如何：在 Windows 窗体中更改 ToolStrip 项的间距和对齐方式
 <xref:System.Windows.Forms.ToolStrip>控件完全支持布局功能，如调整大小的间距<xref:System.Windows.Forms.ToolStripItem>上的控件相对于彼此，控件的排列<xref:System.Windows.Forms.ToolStrip>，以及相对于控件的间距<xref:System.Windows.Forms.ToolStrip>。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394974"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>通过代理访问 Internet
 如果网站使用代理提供对 Internet 的访问，则必须配置代理实例，以使应用程序能够与 Web 代理通信。  

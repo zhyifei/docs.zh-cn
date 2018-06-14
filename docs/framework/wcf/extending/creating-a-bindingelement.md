@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807184"
 ---
 # <a name="creating-a-bindingelement"></a>创建 BindingElement
 绑定和绑定元素 (扩展的对象<xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>和<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>分别) 是 Windows Communication Foundation (WCF) 应用程序模型是与通道工厂和通道侦听器相关联的位置。 而无需绑定，使用自定义通道需要在通道级编程中所述[服务通道级编程](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)和[客户端通道级编程](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。 本主题讨论在 WCF 的开发中使用您的通道支持的最低要求<xref:System.ServiceModel.Channels.BindingElement>为你的通道，然后从应用程序的步骤 4 中所述启用使用[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  

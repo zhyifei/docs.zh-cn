@@ -1,24 +1,15 @@
 ---
-title: "生成我的第一个声明感知 ASP.NET Web 应用程序"
-ms.custom: 
+title: 生成我的第一个声明感知 ASP.NET Web 应用程序
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
-caps.latest.revision: "5"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 182f7c1646e112026852efcb5bb110607fe19360
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e36ec5b824f60057ce7b1f18c695607cf9b88a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399660"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>生成我的第一个声明感知 ASP.NET Web 应用程序
 ## <a name="applies-to"></a>适用于  
@@ -45,9 +36,9 @@ ms.lasthandoff: 12/22/2017
   
 -   [Active Directory 联合身份验证服务 (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) (http://go.microsoft.com/fwlink/?LinkID=247516)  
   
--   [Microsoft Azure 访问控制服务 (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517)。  
+-   [Windows Azure 访问控制服务 (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517)。  
   
- AD FS 2.0 是 Windows Server R2 的一部分并可用作本地方案的 STS。 ACS 是一项云服务，它作为 Microsoft Azure 平台的一部分提供。 出于测试或教学目的，你还可以使用其他 STS 以生成声明感知应用程序。 例如，可以使用联机免费提供的[用于 Visual Studio 的标识和访问工具](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849) 一部分的本地开发 STS。  
+ AD FS 2.0 是 Windows Server R2 的一部分并可用作本地方案的 STS。 ACS 是一项云服务，它作为 Microsoft Azure 平台的一部分提供。 出于测试或教学目的，你还可以使用其他 STS 以生成声明感知应用程序。 例如，你可以使用属于本地开发 STS [Identity and Access Tool for Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849)这是免费提供联机。  
   
  若要使用 WIF 生成您的第一个声明感知 ASP.NET 应用程序，请按照下列主题之一中的说明进行操作：  
   

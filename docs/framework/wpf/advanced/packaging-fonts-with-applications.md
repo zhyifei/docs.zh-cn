@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548215"
 ---
 # <a name="packaging-fonts-with-applications"></a>将字体与应用程序一起打包
 本主题概述如何为包版本，如果有你[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  
@@ -165,7 +166,7 @@ ms.lasthandoff: 05/04/2018
   
 -   **使用包的绝对 URI： 表示法：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序不允许您创建<xref:System.Windows.Media.FontFamily>对象以编程方式使用"包:"作为一部分绝对[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]为字体的引用。 例如，`"pack://application:,,,/resources/#Pericles Light"`是一个无效的字体引用。  
   
--   **自动嵌入字体：**在设计时，不支持搜索应用程序对字体的使用情况，而且不支持自动在应用程序的资源中嵌入字体。  
+-   **自动嵌入字体：** 在设计时，不支持搜索应用程序对字体的使用情况，而且不支持自动在应用程序的资源中嵌入字体。  
   
 -   **字体子集：**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序不支持为非固定文档创建字体子集。  
   

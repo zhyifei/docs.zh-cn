@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 11cf96f5957d41e0647c309a7b0bb08fc9b31c91
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452099"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 函数
 通知探查器当前正在执行的函数来执行对另一个函数的结尾调用。  
@@ -56,7 +57,7 @@ void __stdcall FunctionTailcall (
  此外，`FunctionTailcall`函数不能调用进入托管代码或以任何方式导致托管的内存分配。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
   

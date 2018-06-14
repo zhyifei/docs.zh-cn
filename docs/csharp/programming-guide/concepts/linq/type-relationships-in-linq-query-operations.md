@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339574"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ 查询操作中的类型关系 (C#)
 若要有效编写查询，应了解完整的查询操作中的变量类型是如何全部彼此关联的。 如果了解这些关系，就能够更容易地理解文档中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 示例和代码示例。 另外，还能了解在使用 `var` 隐式对变量进行类型化时的后台操作。  

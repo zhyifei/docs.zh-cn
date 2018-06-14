@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556752"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>如何：在视图中对数据进行排序
 本示例介绍了如何在视图中的数据进行排序。  

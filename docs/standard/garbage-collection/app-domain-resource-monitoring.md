@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578325"
 ---
 # <a name="application-domain-resource-monitoring"></a>应用程序域资源监控
 借助应用域资源监视 (ARM)，主机可以通过应用域监视 CPU 和内存使用情况。 对于在长时间运行的进程中使用多个应用域的 ASP.NET 等主机，这就很有用。 主机可以卸载对整个进程的性能有不利影响的应用的应用域，但仅当能够发现有问题的应用时，才可以这样做。 ARM 提供的信息就有助于作出此类决定。  

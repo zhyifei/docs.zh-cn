@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573576"
 ---
 # <a name="choosing-between-class-and-struct"></a>在类和结构之间选择
 每个框架设计器将面向的基本设计决策之一是要设计一个类型作为类 （引用类型） 或结构 （值类型）。 熟悉的引用类型和值类型的行为差异在进行此选择至关重要。  

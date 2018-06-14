@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751215"
 ---
 # <a name="ltnettcpcontextbindinggt"></a>&lt;netTcpContextBinding&gt;
 为要求对保护级别进行签名的 <xref:System.ServiceModel.NetTcpBinding> 指定上下文。 NetTcpContextBinding 的 contextExchangeMechanism 是 SOAPHeader。  

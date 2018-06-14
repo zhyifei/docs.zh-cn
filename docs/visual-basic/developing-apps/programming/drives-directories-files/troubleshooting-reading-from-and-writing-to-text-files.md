@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587519"
 ---
 # <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>疑难解答：读取和写入文本文件 (Visual Basic)
 本主题讨论处理文本文件时遇到的常见问题，并针对每个问题提供建议解决方法。  

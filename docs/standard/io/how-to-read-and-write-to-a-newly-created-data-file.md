@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572692"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>如何：对新建的数据文件进行读取和写入
 <xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader?displayProperty=nameWithType> 类用于写入和读取数据，而不是字符串。 下面的示例演示如何向新的空文件流 `Test.data` 写入数据及从中读取数据。 在当前目录中创建了数据文件之后，也就同时创建了相关的 <xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader> 对象，并且 <xref:System.IO.BinaryWriter> 对象用于向 `Test.data` 写入整数 0 到 10，这会将文件指针置于文件尾。 在将文件指针设置回初始位置后，<xref:System.IO.BinaryReader> 对象会读出指定的内容。  

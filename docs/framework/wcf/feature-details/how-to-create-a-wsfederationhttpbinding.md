@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496307"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>如何：创建 WSFederationHttpBinding
 在 Windows Communication Foundation (WCF)<xref:System.ServiceModel.WSFederationHttpBinding>类 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)配置中) 提供了用于公开联合的服务的机制。 即，服务要求客户端使用安全令牌服务颁发的安全令牌进行身份验证。 本主题演示如何通过代码和配置来设置 <xref:System.ServiceModel.WSFederationHttpBinding>。 绑定一经创建，您就可以设置一个终结点来使用该绑定。  

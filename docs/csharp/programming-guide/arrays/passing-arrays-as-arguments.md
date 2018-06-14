@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315511"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>将数组作为自变量传递（C# 编程指南）
 数组可以作为实参传递给方法形参。 由于数组是引用类型，因此方法可以更改元素的值。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550055"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>如何：在 TextBox 中添加水印
 下面的示例演示如何帮助的用途<xref:System.Windows.Controls.TextBox>通过显示内的解释性背景图像<xref:System.Windows.Controls.TextBox>直到用户输入文本，此时删除映像。 此外，背景图像会再次还原如果用户中删除其输入。 请参阅下图中。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505162"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP 格式设置
 通过 WCF Web HTTP 编程模型，你可以动态确定服务操作返回其响应所采用的最佳格式。 支持使用以下两种方法来确定相应格式：即自动和显式。  

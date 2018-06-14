@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed8b6bf60790c10b9869dcc41678be050b8979dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420220"
 ---
 # <a name="icordebugnativeframesetip-method"></a>ICorDebugNativeFrame::SetIP 方法
 将指令指针设置为指定的偏移量位置，在本机代码中。  
@@ -46,7 +47,7 @@ HRESULT SetIP (
  在 64 位平台上的指令指针不能移动外`catch`或`finally`块。 如果`SetIP`称为若要使此类移动在 64 位平台上的，它将返回 HRESULT，指示失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

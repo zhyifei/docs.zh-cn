@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765836"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>使用 DbDataAdapter 修改数据
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> 对象的 <xref:System.Data.Common.DbProviderFactory> 方法为您提供 <xref:System.Data.Common.DbDataAdapter> 对象，该对象强类型化为创建工厂时指定的基础数据提供程序。 然后您可以使用 <xref:System.Data.Common.DbCommandBuilder> 创建命令，以插入、更新和删除数据源的 <xref:System.Data.DataSet> 中的数据。  

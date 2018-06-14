@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410142"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe（安装程序工具）
 安装程序工具是一个命令行实用工具，你可以通过此工具执行指定程序集中的安装程序组件，从而安装和卸载服务器资源。 此工具与 <xref:System.Configuration.Install> 命名空间中的类配合使用。  

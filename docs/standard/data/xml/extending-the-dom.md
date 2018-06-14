@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572247"
 ---
 # <a name="extending-the-dom"></a>扩展 DOM
 Microsoft .NET Framework 包含一组基类，用于实现 XML 文档对象模型 (DOM)。 <xref:System.Xml.XmlNode> 及其派生类提供的方法和属性可以浏览、查询和修改 XML 文档的内容和结构。  

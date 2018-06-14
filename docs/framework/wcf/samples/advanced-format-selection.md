@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805585"
 ---
 # <a name="advanced-format-selection"></a>高级格式选择
 此示例演示如何扩展 Windows Communication Foundation (WCF) REST 编程模型以支持新的传出响应格式。 此外，本示例使用 T4 模板以 HTML 页的形式返回响应，从而演示如何实现视图样式编程模型。  

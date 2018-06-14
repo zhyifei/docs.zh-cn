@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541763"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件
 某些应用程序需要这样一个窗体，该窗体的布局可在窗体重新调整大小或在内容更改大小时对自身进行排列。 当你需要动态布局并且不希望在代码中显式处理 <xref:System.Windows.Forms.Control.Layout> 事件时，请考虑使用布局面板。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  创建一个名为“FlowLayoutPanelExample”的基于 Windows 的应用程序项目。 有关详细信息，请参阅[如何：创建 Windows 应用程序项目](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
-2.  在 **“窗体设计器”**中选择窗体。  
+2.  在 **“窗体设计器”** 中选择窗体。  
   
 ## <a name="arranging-controls-horizontally-and-vertically"></a>沿水平方向和垂直方向排列控件  
  <xref:System.Windows.Forms.FlowLayoutPanel> 控件允许你沿行或列放置控件，而无需精确指定每个控件的位置。  
@@ -134,7 +135,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  在“工具箱” <xref:System.Windows.Forms.Button>**中，双击**控件图标。 请注意，新的 <xref:System.Windows.Forms.Button> 控件会出现在 <xref:System.Windows.Forms.FlowLayoutPanel> 控件中。  
   
-2.  在 **“工具箱”**中再双击几个控件。 请注意，新控件会相继出现在 <xref:System.Windows.Forms.FlowLayoutPanel> 控件中。  
+2.  在 **“工具箱”** 中再双击几个控件。 请注意，新控件会相继出现在 <xref:System.Windows.Forms.FlowLayoutPanel> 控件中。  
   
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>通过绘制控件轮廓将其插入  
  你可以通过在单元格中绘制控件轮廓将控件插入 <xref:System.Windows.Forms.FlowLayoutPanel> 控件并指定其大小。  

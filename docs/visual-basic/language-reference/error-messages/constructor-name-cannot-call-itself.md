@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588991"
 ---
 # <a name="constructor-39ltnamegt39-cannot-call-itself"></a>构造函数&#39;&lt;名称&gt;&#39;不能调用其自身
 A`Sub New`类或结构中的过程调用其自身。  

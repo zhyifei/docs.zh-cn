@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462281"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 探查器和 Windows 应用商店应用
 本主题讨论你需要考虑时写入诊断工具来分析托管代码中的 Windows 应用商店应用运行。  它还提供了一些指南，可以修改现有的开发工具，以使它们继续正常工作时针对 Windows 应用商店应用运行时。  若要了解此信息，最好是如果你熟悉公共语言运行时分析 API，已在运行 Windows 桌面应用程序，并且你针对正确现在感兴趣修改该工具的诊断工具中使用此 API若要针对 Windows 应用商店应用程序正确运行。  

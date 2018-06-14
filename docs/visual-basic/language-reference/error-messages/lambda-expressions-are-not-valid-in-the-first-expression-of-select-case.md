@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588916"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Lambda 表达式不是有效的第一个表达式中&#39;Select Case&#39;语句
 不能使用 lambda 表达式中的测试表达式`Select Case`语句。 Lambda 表达式定义返回函数和的测试表达式`Select Case`语句必须是基本数据类型。  

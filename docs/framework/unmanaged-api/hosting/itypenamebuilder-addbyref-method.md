@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3118f80086df13681e43ecc0c46c276a9cf9e033
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442126"
 ---
 # <a name="itypenamebuilderaddbyref-method"></a>ITypeNameBuilder::AddByRef 方法
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
@@ -37,7 +38,7 @@ HRESULT AddByRef ( );
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

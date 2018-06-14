@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753737"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;添加&gt;connectionManagement （网络设置） 的元素
 将 IP 地址或 DNS 名称添加到连接管理列表。  

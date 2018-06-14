@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763938"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema 和架构集合
 **连接**中每个.NET Framework 托管提供程序实现的类**GetSchema**方法用于检索有关与当前连接的数据库的架构信息和从返回的架构信息**GetSchema**方法采用的形式<xref:System.Data.DataTable>。 **GetSchema**方法属于重载的方法，提供可选参数来指定要返回的架构集合以及限制返回的信息量。  

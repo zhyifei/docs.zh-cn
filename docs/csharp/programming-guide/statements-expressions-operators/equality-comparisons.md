@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335243"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等比较（C# 编程指南）
 有时需要比较两个值是否相等。 在某些情况下，测试的是“值相等性”，也称为“等效性”，这意味着两个变量包含的值相等。 在其他情况下，必须确定两个变量是否引用内存中的同一基础对象。 此类型的相等性称为“引用相等性”或“标识”。 本主题介绍这两种相等性，并提供指向其他主题的链接，供用户了解详细信息。  

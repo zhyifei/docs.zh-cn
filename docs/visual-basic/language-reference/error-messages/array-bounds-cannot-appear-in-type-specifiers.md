@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583678"
 ---
 # <a name="array-bounds-cannot-appear-in-type-specifiers"></a>数组界限不能出现在类型说明符中
 数组大小不能声明为数据类型说明符的一部分。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597694"
 ---
 # <a name="argument-39life39-cannot-be-zero"></a>自变量&#39;生命&#39;不能为零
 `Life`的参数（必须为指定资产的使用年限的长度的 `Double` ）无效。  

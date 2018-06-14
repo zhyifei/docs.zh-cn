@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552709"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>如何：使用 BetweenShowDelay 属性
 此示例演示如何使用<xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>时间属性，以便快速显示工具提示-且很少或没有延迟-当用户将移动鼠标指针从一个工具提示直接到另一个。  

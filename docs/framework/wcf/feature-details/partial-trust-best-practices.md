@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497264"
 ---
 # <a name="partial-trust-best-practices"></a>部分信任最佳实践
 本主题介绍时在部分信任环境中运行 Windows Communication Foundation (WCF) 的最佳做法。  

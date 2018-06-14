@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543388"
 ---
 # <a name="how-to-change-the-cursor-type"></a>如何：更改光标类型
 此示例演示如何更改<xref:System.Windows.Input.Cursor>鼠标指针的特定元素和应用程序。  

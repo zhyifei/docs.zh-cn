@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171858"
 ---
 # <a name="private-c-reference"></a>private（C# 参考）
 `private` 关键字是一个成员访问修饰符。 

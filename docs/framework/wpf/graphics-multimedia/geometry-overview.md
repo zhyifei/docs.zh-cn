@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558065"
 ---
 # <a name="geometry-overview"></a>Geometry 概述
 本概述介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Media.Geometry>类来描述形状。 本主题还形成了鲜明对比之间的差异<xref:System.Windows.Media.Geometry>对象和<xref:System.Windows.Shapes.Shape>元素。  

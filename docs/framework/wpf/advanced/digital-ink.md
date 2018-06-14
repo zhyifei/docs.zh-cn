@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537468"
 ---
 # <a name="digital-ink"></a>数字墨迹
 此部分讨论了中的数字墨迹使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 传统上只能在 Tablet PC SDK 中找到，数字墨迹现已在核心 Windows Presentation Foundation。 这意味着你现在可以通过使用 Windows Presentation Foundation 的强大开发完备 Tablet PC 应用程序。  

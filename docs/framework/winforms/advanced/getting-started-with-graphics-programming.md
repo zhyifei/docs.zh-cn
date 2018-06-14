@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522820"
 ---
 # <a name="getting-started-with-graphics-programming"></a>图形编程入门
 本部分说明如何开始使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]在 Windows 窗体应用程序。 下面的主题介绍如何完成几个[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]任务，如绘制和填充形状和文本。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359421"
 ---
 # <a name="privacy-and-data-security"></a>隐私和数据安全性
 保护和管理 ADO.NET 应用程序中的敏感信息依赖于用于创建这些信息的基础产品和技术。 ADO.NET 不直接提供用于保护或加密数据的服务。  

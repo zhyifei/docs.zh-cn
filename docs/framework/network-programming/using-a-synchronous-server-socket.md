@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398139"
 ---
 # <a name="using-a-synchronous-server-socket"></a>使用同步服务器套接字
 同步服务器套接字会挂起应用程序的执行，直到在套接字上收到连接请求。 同步服务器套接字不适用于在其操作中大量使用网络的应用程序，但它们可能适用于简单的网络应用程序。  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543281"
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>如何：以编程方式将元素插入文本
 下面的示例演示如何使用两个<xref:System.Windows.Documents.TextPointer>对象来指定要应用文本内的范围<xref:System.Windows.Documents.Span>到的元素。  

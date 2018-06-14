@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536613"
 ---
 # <a name="printdocument-component-windows-forms"></a>PrintDocument 组件（Windows 窗体）
 将 Windows 窗体 `PrintDocument` 组件用于设置描述打印内容的属性，然后打印基于 Windows 的应用程序中的文档。 此组件可与 <xref:System.Windows.Forms.PrintDialog> 组件一起用于命令文档打印的各方面。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540405"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 标记扩展
 定义和引用从外部程序集加载的资源键。 这使得资源查找功能可以在一个程序集，而不是在程序集或在类上的显式资源字典中指定的目标类型。  

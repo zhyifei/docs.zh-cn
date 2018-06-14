@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595131"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
 标识为其类、 结构或接口的默认属性的属性。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516628"
 ---
 # <a name="accessing-operationcontext"></a>访问 OperationContext
 此示例演示如何消息传递活动 (<xref:System.ServiceModel.Activities.Receive>和<xref:System.ServiceModel.Activities.Send>) 可以使用与自定义范围活动来访问<xref:System.ServiceModel.OperationContext.Current%2A>并附加或检索传出或传入消息中的自定义消息头。  

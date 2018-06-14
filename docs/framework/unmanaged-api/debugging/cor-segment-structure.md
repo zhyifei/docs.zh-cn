@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b816087f54e652f07dc791b7d66eb1af8f52f55e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406502"
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT 结构
 包含有关托管堆中的内存区域的信息。  
@@ -51,7 +52,7 @@ typedef struct _COR_SEGMENT {
  `heap`字段是处理器数，它对应于正在报告堆。 对于工作站垃圾回收器，其值始终是零，因为工作站具有只有一个垃圾回收堆。 对于服务器垃圾回收器，其值对应于堆附加到的处理器。 请注意，可能会出现更多或更少的垃圾回收堆多于实际处理器由于垃圾回收器的实现详细信息。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

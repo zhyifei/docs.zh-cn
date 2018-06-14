@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537156"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>NumericUpDown 控件概述（Windows 窗体）
 <xref:System.Windows.Forms.NumericUpDown>控件看起来像一对用户可以单击来调整值的箭头和一个文本框的组合。 该控件显示，并从一组固定数字值选项的设置的单个数值。 用户可以增加和减少的数量，通过单击向上和向下箭头，按向上和向下箭头键，或通过控件的文本框部分中键入一个数字。 单击向上箭头键移动朝着最大值; 数单击向下箭头键来移动朝着最小值的数量。  

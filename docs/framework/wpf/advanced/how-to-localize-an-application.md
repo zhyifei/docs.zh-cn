@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549326"
 ---
 # <a name="how-to-localize-an-application"></a>如何：对应用程序进行本地化
 本教程介绍如何通过使用 LocBaml 工具创建本地化应用程序。  
@@ -102,9 +103,9 @@ ms.lasthandoff: 05/04/2018
   
     -   **asmpath**或 **-asmpath:** {*文件目录*] **:** 如果你[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]代码包含自定义控件，则必须提供**asmpath**对自定义控件程序集。  
   
-    -   **nologo：**显示没有徽标或版权信息。  
+    -   **nologo：** 显示没有徽标或版权信息。  
   
-    -   **verbose：**显示详细模式信息。  
+    -   **verbose：** 显示详细模式信息。  
   
     > [!NOTE]
     >  如果运行该工具时，你需要的选项列表，请键入**LocBaml.exe** ，然后按 enter 键。  

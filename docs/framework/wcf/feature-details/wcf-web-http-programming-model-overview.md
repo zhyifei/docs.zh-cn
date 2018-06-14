@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507108"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 编程模型概述
 Windows Communication Foundation (WCF) WEB HTTP 编程模型提供生成与 WCF WEB HTTP 服务所需的基本元素。 WCF WEB HTTP 服务旨在提供给最大范围的可能客户端，包括 Web 浏览器访问，并且具有以下独特要求：  

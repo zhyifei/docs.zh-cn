@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574717"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>管理 XML 文档中的命名空间
 XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定义的 URI 关联起来。 要创建这些关联，您应为命名空间 URI 定义前缀，并使用这些前缀来限定 XML 数据中的元素和属性名称。 命名空间可防止元素和属性名称冲突，并允许以不同方式处理和验证同名的元素和属性。  

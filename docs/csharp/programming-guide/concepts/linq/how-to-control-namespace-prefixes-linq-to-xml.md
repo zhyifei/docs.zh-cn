@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327748"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>如何：控制命名空间前缀 (C#) (LINQ to XML)
 本主题介绍在序列化 XML 树时如何控制命名空间前缀。  

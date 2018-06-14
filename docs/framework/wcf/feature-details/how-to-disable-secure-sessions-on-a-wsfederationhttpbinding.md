@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489871"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>如何：在 WSFederationHttpBinding 上禁用安全会话
 某些服务可能需要联合凭据，但不支持安全会话。 在这种情况下，必须禁用安全会话功能。 与不同 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>，则<xref:System.ServiceModel.WSFederationHttpBinding>类不提供一种方法，以禁用安全会话与服务通信时。 相反，你必须创建一个自定义绑定，以便用引导来替换安全会话设置。  

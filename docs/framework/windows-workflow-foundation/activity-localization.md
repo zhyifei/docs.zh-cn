@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512458"
 ---
 # <a name="activity-localization"></a>活动本地化
 当工作流应用程序和组件可能要根据其他区域文化和语言进行本地化时，应使用资源字符串，以便无需重新编译即可对它们进行本地化。  

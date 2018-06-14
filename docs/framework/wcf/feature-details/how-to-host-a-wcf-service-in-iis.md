@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492478"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>如何：在 IIS 中承载 WCF 服务
 本主题概述了创建 Internet 信息服务 (IIS) 中的托管的 Windows Communication Foundation (WCF) 服务所需的基本步骤。 本主题假设您熟悉 IIS 且了解如何使用 IIS 管理工具创建和管理 IIS 应用程序。 有关 IIS 的详细信息请参阅[Internet Information Services](http://go.microsoft.com/fwlink/?LinkId=132449)。 WCF 服务，将在 IIS 环境中的运行充分利用 IIS 功能，如进程回收、 空闲关闭、 进程状况监视和基于消息的激活。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 只可以将 IIS 宿主与 HTTP 传输协议一起使用。  

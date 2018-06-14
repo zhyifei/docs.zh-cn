@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392741"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>如何：将托管代码 DCOM 迁移到 WCF
 Windows Communication Foundation (WCF) 是针对分布式组件对象模型 (DCOM) 建议的安全选择，可用于处理分布式环境中服务器和客户端间的托管代码调用。 本文介绍在以下情景中，如何将代码从 DCOM 迁移到 WCF。  

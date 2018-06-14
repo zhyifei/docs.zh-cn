@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647626"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>如何：从文件、字符串或流加载 XML (Visual Basic)
 你可以创建[XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)并通过使用几种方法使用从外部源如文件、 字符串或流的内容填充它们。 在下面的示例演示了这些方法。  

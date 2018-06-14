@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650681"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>参数和自变量之间的差异 (Visual Basic)
 在大多数情况下中的过程必须具有已在其中调用它的情况有关的一些信息。 执行重复或共享任务过程每个调用使用不同的信息。 此信息包含变量、 常量和调用它时传递给过程的表达式。  

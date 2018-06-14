@@ -1,13 +1,6 @@
 ---
-title: "在 GDI+ 中限制绘制图面"
-ms.custom: 
+title: 在 GDI+ 中限制绘制图面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,12 @@ helpviewer_keywords:
 - clipping [Windows Forms], using GDI+
 - GDI+, restricting drawing surface
 ms.assetid: 8b5f71d9-d2f0-4540-9c41-740f90fd4c26
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b7834c95959972e7264e1caa2cfc21b190341b21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b457e94acb334dc012f017090c63189de372592d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523918"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>在 GDI+ 中限制绘制图面
 剪辑涉及将绘制限制为某些矩形或区域。 下图显示字符串"Hello"剪辑到心形区域。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582803"
 ---
 # <a name="scheduling-threads"></a>调度线程
 每个线程都会分配有线程优先级。 在公共语言运行时内创建的线程初始分配有优先级 ThreadPriority.Normal。 在运行时外部创建的线程保留有在进入托管环境前的优先级。 若要获取或设置任意线程的优先级，可以使用 Thread.Priority 属性。  

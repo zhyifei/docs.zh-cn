@@ -1,24 +1,13 @@
 ---
 title: 使用 WorkflowIdentity 和版本控制
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc527fe59468544cf94256d100a1f90dd3cd44dd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0d8c02dca67d24399972417f9d6485d668215742
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520118"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>使用 WorkflowIdentity 和版本控制
 <xref:System.Activities.WorkflowIdentity> 为工作流应用程序开发人员提供了一种将名称和 <xref:System.Version> 与工作流定义关联的方法，这种方法还可用于将此信息与持久化工作流实例相关联。 工作流应用程序开发人员可以使用这些标识信息，为一些情景（如并行执行一个工作流定义的多个版本）提供支持，并为其他功能（如动态更新）提供基础。 此主题概述了如何将 <xref:System.Activities.WorkflowIdentity> 与 <xref:System.Activities.WorkflowApplication> 承载一起使用。 通过并行执行的工作流服务中的工作流定义的信息，请参阅[WorkflowServiceHost 中的并行版本控制](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)。 动态更新的信息，请参阅[动态更新](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)。  
@@ -157,7 +146,7 @@ wfApp.Load(instance);
  **Sqlworkflowinstancestore 的数据库版本为"4.0.0.0"。InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' 无法针对此数据库版本运行。请请将数据库升级到"4.5.0.0"。**  
 ###  <a name="ToUpgrade"></a> 若要升级数据库架构  
   
-1.  打开 SQL Server Management Studio 并连接到持久性数据库服务器，例如**。 \SQLEXPRESS**。  
+1.  打开 SQL Server Management Studio 并连接到持久性数据库服务器，例如 **。 \SQLEXPRESS**。  
   
 2.  选择**打开**，**文件**从**文件**菜单。 浏览到以下文件夹：`C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
   

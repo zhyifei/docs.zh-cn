@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588929"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>如何：在同一目录中创建文件副本 (Visual Basic)
 使用 `My.Computer.FileSystem.CopyFile` 方法复制文件。 使用参数可以覆盖现有文件、重命名文件、显示操作的进度以及允许用户取消操作。  

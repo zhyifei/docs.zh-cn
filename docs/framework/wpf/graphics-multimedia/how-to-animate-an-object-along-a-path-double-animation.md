@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559900"
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>如何：沿着路径针对对象进行动画处理（双重动画）
 此示例演示如何使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>类定义的路径沿移动对象<xref:System.Windows.Media.PathGeometry>。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598487"
 ---
 # <a name="into-clause-visual-basic"></a>Into 子句 (Visual Basic)
 标识聚合函数或分组以将应用于集合。  

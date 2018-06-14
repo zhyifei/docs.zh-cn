@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536740"
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>如何：应用 PropertyNameChanged 模式
 下面的代码示例演示如何应用*PropertyName*Changed 模式的自定义控件。 实现与 Windows 窗体数据绑定引擎使用的自定义控件时，则适用此模式。  

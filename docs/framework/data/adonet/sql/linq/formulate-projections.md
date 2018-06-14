@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364943"
 ---
 # <a name="formulate-projections"></a>构建投影
 下面的示例演示如何`select`C# 中的语句和`Select`在 Visual Basic 中的语句可以与其他功能结合以构建查询投影。  

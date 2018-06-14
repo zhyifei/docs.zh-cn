@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213433"
 ---
 # <a name="by-c-reference"></a>by（C# 参考）
 `by` 上下文关键字用于在查询表达式的 `group` 子句中指定应返回项的分组方式。 有关详细信息，请参阅 [group 子句](../../../csharp/language-reference/keywords/group-clause.md)。  

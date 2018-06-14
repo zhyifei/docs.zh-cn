@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604687"
 ---
 # <a name="mywebservices-object"></a>My.WebServices 对象
 提供用于创建和访问当前的项目所引用的每个 XML Web 服务的单个实例的属性。  

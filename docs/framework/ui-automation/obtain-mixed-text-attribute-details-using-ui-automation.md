@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400037"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>使用 UI 自动化获取混合文本特性的详细信息
 > [!NOTE]

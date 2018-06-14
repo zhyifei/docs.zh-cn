@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805533"
 ---
 # <a name="guide-to-the-documentation"></a>文档指南
 提供以下是有关 Windows Communication Foundation (WCF) 文档的指南。 建议从链接的文档开始，它们按照特定的兴趣和专业技术水平进行分组。  

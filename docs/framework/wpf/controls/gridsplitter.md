@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550889"
 ---
 # <a name="gridsplitter"></a>GridSplitter
 <xref:System.Windows.Controls.GridSplitter>的行或列之间重新分配空间<xref:System.Windows.Controls.Grid>控件。  

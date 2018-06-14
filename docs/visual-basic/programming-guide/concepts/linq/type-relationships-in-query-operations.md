@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655337"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>查询操作中的类型关系 (Visual Basic)
 在中使用变量[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查询操作强类型和必须彼此兼容。 数据源中、 在查询本身、 和的查询执行过程中，都使用强类型。 下图列出术语用于描述[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询。 有关查询的部件的详细信息，请参阅[基本查询操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  

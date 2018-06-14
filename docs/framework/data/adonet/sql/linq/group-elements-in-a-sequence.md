@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364498"
 ---
 # <a name="group-elements-in-a-sequence"></a>对序列中的元素进行分组
 <xref:System.Linq.Enumerable.GroupBy%2A> 运算符用于对序列中的元素进行分组。 下面的示例使用 Northwind 数据库。  

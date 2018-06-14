@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579562"
 ---
 # <a name="globalization"></a>全球化
 全球化涉及到设计和开发世界通用的应用，这些应用支持本地化界面和区域数据，供位于多个区域性的用户使用。 在设计阶段开始之前，应确定应用将支持哪些区域性。 虽然应用以单一区域性或区域作为默认目标，但可设计和编写应用，使其能够轻松地供其他区域性或区域的用户使用。  

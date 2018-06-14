@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639635"
 ---
 # <a name="too-many-dll-application-clients"></a>DLL 应用程序客户端太多
 适用于 Visual Basic 的动态链接库 (DLL) 只能由有限个主机应用程序进行访问。 你的应用程序和其他应用程序 （其中一些可能由你的应用程序访问） 的 Visual Basic 主机同时尝试在同一时间访问 Visual Basic DLL。  

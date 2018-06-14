@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493469"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>如何：创建基本 WCF Web HTTP 服务
 Windows Communication Foundation (WCF) 允许你创建公开 Web 终结点的服务。 Web 终结点通过 XML 或 JSON 发送数据，没有 SOAP 信封。 本主题演示如何公开这类终结点。  

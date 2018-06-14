@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653265"
 ---
 # <a name="serialization-visual-basic"></a>序列化 (Visual Basic)
 序列化是指将对象转换成字节流，从而存储对象或将对象传输到内存、数据库或文件的过程。 它的主要用途是保存对象的状态，以便能够在需要时重新创建对象。 反向过程称为“反序列化”。  

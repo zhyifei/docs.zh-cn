@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578854"
 ---
 # <a name="guidelines-for-collections"></a>集合准则
 专门用于操作具有一些公共特征的对象的组的任何类型可被视为集合。 它几乎始终适合于要实现此类类型<xref:System.Collections.IEnumerable>或<xref:System.Collections.Generic.IEnumerable%601>，因此在本部分中我们仅考虑实现一个或两个接口要集合的类型。  

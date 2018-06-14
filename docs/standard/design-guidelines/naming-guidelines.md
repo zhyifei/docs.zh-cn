@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572965"
 ---
 # <a name="naming-guidelines"></a>命名准则
 以下一致的开发中的 framework 的命名约定集可以是框架的可用性起着主要作用。 它使框架可以广泛分隔项目上的许多开发人员使用。 窗体的一致性，超出的框架元素名称必须能轻松理解，必须传达每个元素的功能。  

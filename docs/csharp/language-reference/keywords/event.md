@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955961"
 ---
 # <a name="event-c-reference"></a>event（C# 参考）
 `event` 关键字用于声明发布服务器类中的事件。  

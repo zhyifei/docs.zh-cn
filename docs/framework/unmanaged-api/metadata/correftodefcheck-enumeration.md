@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5caf432b5de7cb0c8ff0e6f53b3e79a64ecf802e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443308"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck 枚举
 指定用于控制将哪些引用项转换为相应定义以优化代码的标志。  
@@ -48,7 +49,7 @@ typedef enum CorRefToDefCheck {
 |`MDMemberRefToDef`|指定应将仅成员引用转换的定义。 也就是说，成员引用应转换为方法的定义或字段定义。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   

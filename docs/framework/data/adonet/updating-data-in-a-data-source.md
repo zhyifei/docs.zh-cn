@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357788"
 ---
 # <a name="updating-data-in-a-data-source"></a>更新数据源中的数据
 修改数据的 SQL 语句（如 INSERT、UPDATE 或 DELETE）不返回行。 同样，许多存储过程执行操作但不返回行。 若要执行不返回行的命令，创建**命令**使用相应的 SQL 命令的对象和一个**连接**，包括所有必需**参数**。 执行该命令与**ExecuteNonQuery**方法**命令**对象。  

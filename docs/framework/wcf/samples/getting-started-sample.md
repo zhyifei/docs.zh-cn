@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505764"
 ---
 # <a name="getting-started-sample"></a>入门示例
 此入门示例演示如何实现典型的服务和典型的客户端使用 Windows Communication Foundation (WCF)。 此示例是所有其他基本技术示例的基础。  

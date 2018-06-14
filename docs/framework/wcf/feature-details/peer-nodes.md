@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491525"
 ---
 # <a name="peer-nodes"></a>对等节点
 PeerNode 是对等通道网格中的单个终结点。 一个应用程序可以具有加入不同网格的多个对等节点。 例如，对等聊天应用程序可以是两个独立网格的一部分：一个网格用于与中学的朋友聊天；另一个网格用于与工作同事聊天。  

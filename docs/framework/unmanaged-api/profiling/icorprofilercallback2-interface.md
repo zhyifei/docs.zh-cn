@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a218b58ed2ab40505204768f7d6071dea6db5e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461044"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 接口
 提供公共语言运行时 (CLR) 用于探查器已订阅的事件发生时通知代码探查器的方法。 `ICorProfilerCallback2`接口是的扩展[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)接口。 也就是说，它提供了.NET Framework 2.0 版中引入的新回调。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/04/2018
 >  探查器注册的单个 COM 对象。 如果探查器面向.NET Framework 版本 1.0 或 1.1，该 COM 对象仅需要实现的方法`ICorProfilerCallback`。 如果针对.NET Framework 2.0 版和更高版本，COM 对象还必须实现的方法`ICorProfilerCallback2`。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

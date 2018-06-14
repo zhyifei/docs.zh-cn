@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358157"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>如何：加载相关实体（WCF 数据服务）
 如果需要在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中加载关联实体，可以使用 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 类的 <xref:System.Data.Services.Client.DataServiceContext> 方法。 你还可以使用<xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>方法<xref:System.Data.Services.Client.DataServiceQuery%601>需要，在相同的查询响应中积极加载相关的实体。  

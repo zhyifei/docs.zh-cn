@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653450"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>如何：通过 LINQ 使用联接合并数据 (Visual Basic)
 Visual Basic 提供`Join`和`Group Join`查询子句以使您能够合并根据集合之间的常见值的多个集合的内容。 这些值称为*密钥*值。 开发人员熟悉关系数据库概念将识别`Join`作为 INNER JOIN 子句和`Group Join`作为，实际上，LEFT OUTER JOIN 子句。  

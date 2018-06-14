@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635175"
 ---
 # <a name="cannot-delete-a-registry-hive"></a>不能删除注册表配置单元
 尝试删除注册表配置单元。 配置单元是顶级注册表项（例如 `HKEY_CURRENT_USER` 和 `HKEY_LOCAL_MACHINE`），无法删除。  

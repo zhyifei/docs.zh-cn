@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2cd0fc9f86515d63533275002301eb47f11feebb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411261"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop 方法
 在进程中运行托管的代码的所有线程上执行协作停止。  
@@ -47,7 +48,7 @@ HRESULT Stop (
  调试器维护停止计数器。 在计数器变为零时，控制器将继续运行。 每次调用`Stop`或每次调度的回调递增的计数器。 每次调用`ICorDebugController::Continue`递减计数器。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

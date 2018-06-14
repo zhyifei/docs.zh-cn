@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762710"
 ---
 # <a name="inferring-element-text"></a>推断元素文本
 如果元素包含文本但不包含任何子元素被推断为表如 （具有属性的元素） 或重复的元素名称的新列**TableName_Text**将添加到为该元素推断的表。 该元素中包含的文本将添加到此表中的一行，并存储在新列中。 **ColumnMapping**新列的属性将设置为**MappingType.SimpleContent**。  

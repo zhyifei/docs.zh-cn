@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583064"
 ---
 # <a name="foreground-and-background-threads"></a>前台和后台线程
 托管线程可以是后台线程，也可以是前台线程。 后台线程和前台线程几乎完全相同，只有一处不同，即后台线程不会确保托管执行环境一直运行。 一旦托管进程（其中 .exe 文件为托管程序集）中的所有前台线程都停止，系统会停止并关闭所有后台线程。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766743"
 ---
 # <a name="date-and-time-canonical-functions"></a>日期和时间规范函数
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供日期和时间规范函数。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 |`DiffDays(` `startExpression`, `endExpression``)`|返回 `startExpression` 和 `endExpression` 之间的差（天）。<br /><br /> **参数**<br /><br /> `startExpression`、`endExpression`：`DateTime` 或 `DateTimeOffset`。 **注意：** `startExpression`和`endExpression`必须属于同一类型。   <br /><br /> **返回值**<br /><br /> 一个 `Int32`。|  
 |`DiffMonths(` `startExpression`, `endExpression``)`|返回 `startExpression` 和 `endExpression` 之间的差（月）。<br /><br /> **参数**<br /><br /> `startExpression`、`endExpression`：`DateTime` 或 `DateTimeOffset`。 **注意：** `startExpression`和`endExpression`必须属于同一类型。   <br /><br /> **返回值**<br /><br /> 一个 `Int32`。|  
 |`DiffYears(` `startExpression`, `endExpression``)`|返回 `startExpression` 和 `endExpression` 之间的差（年）。<br /><br /> **参数**<br /><br /> `startExpression`、`endExpression`：`DateTime` 或 `DateTimeOffset`。 **注意：** `startExpression`和`endExpression`必须属于同一类型。   <br /><br /> **返回值**<br /><br /> 一个 `Int32`。|  
-|`GetTotalOffsetMinutes(` `datetimeoffset` `)`|返回 `datetimeoffset` 相对于 GMT 偏移的分钟数。 此值通常介于 +780 到 -780 之间（+ 或 - 13 小时）。 **注意：**此函数仅支持在 SQL Server 2008 中。 <br /><br /> **参数**<br /><br /> `DateTimeOffset`。<br /><br /> **返回值**<br /><br /> 一个 `Int32`。|  
+|`GetTotalOffsetMinutes(` `datetimeoffset` `)`|返回 `datetimeoffset` 相对于 GMT 偏移的分钟数。 此值通常介于 +780 到 -780 之间（+ 或 - 13 小时）。 **注意：** 此函数仅支持在 SQL Server 2008 中。 <br /><br /> **参数**<br /><br /> `DateTimeOffset`。<br /><br /> **返回值**<br /><br /> 一个 `Int32`。|  
 |`Hour (` `expression` `)`|将 `expression` 的小时部分作为一个介于 0 到 23 之间的 `Int32` 返回。<br /><br /> **参数**<br /><br /> `DateTime, Time` 和 `DateTimeOffset`。<br /><br /> **示例**<br /><br /> `-- The following example returns 22.`<br /><br /> `Hour(cast('22:35:5' as DateTime))`|  
 |`Millisecond(` `expression` `)`|将 `expression` 的毫秒部分作为一个介于 0 到 999 之间的 `Int32` 返回。<br /><br /> **参数**<br /><br /> `DateTime, Time` 和 `DateTimeOffset`。<br /><br /> **返回值**<br /><br /> 一个 `Int32`。|  
 |`Minute(` `expression` `)`|将 `expression` 的分钟部分作为一个介于 0 到 59 之间的 `Int32` 返回。<br /><br /> **参数**<br /><br /> `DateTime, Time` 或 `DateTimeOffset`。<br /><br /> **返回值**<br /><br /> 一个 `Int32`。<br /><br /> **示例**<br /><br /> `-- The following example returns 35`<br /><br /> `Minute(cast('22:35:5' as DateTime))`|  

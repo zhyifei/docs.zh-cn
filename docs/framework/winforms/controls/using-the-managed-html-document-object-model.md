@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535946"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>使用托管 HTML 文档对象模型
 托管的 HTML 文档对象模型 (DOM) 提供基于包装[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]公开由 Internet Explorer 的 HTML 类。 这些类用于处理 HTML 页面中托管<xref:System.Windows.Forms.WebBrowser>控件，或生成从开始处的新页。  

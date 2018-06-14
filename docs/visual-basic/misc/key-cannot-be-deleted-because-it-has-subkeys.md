@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638895"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>无法删除项，因为它具有子项
 无法删除该项，因为它具有子项。  

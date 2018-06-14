@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604323"
 ---
 # <a name="unable-to-link-to-resource-file-39ltfilenamegt39-lterror-messagegt"></a>无法链接到资源文件&#39; &lt;filename&gt;&#39;:&lt;错误消息&gt;
 Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。 该链接器已报告从程序集链接到本机 COM+ 资源文件时出错。  

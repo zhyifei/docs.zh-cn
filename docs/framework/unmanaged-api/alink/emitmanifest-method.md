@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6df28cd3eaadfe62cd34e20e6e03d5a89e6bb425
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401204"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest 方法
 发出最终的清单。 在导入所有其他文件和设置所有选项之后调用此方法。 请勿对未绑定模块中调用此方法。  

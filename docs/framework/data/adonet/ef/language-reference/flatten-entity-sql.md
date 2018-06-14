@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760565"
 ---
 # <a name="flatten-entity-sql"></a>FLATTEN (Entity SQL)
 将一个由多个集合组成的集合转换为一个平展集合。 新集合与旧集合包含所有相同的元素，但没有嵌套结构。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507348"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP 编程对象模型
 WCF WEB HTTP 编程模型允许开发人员无需 SOAP 公开通过基本 HTTP 请求的 Windows Communication Foundation (WCF) Web 服务。 WCF WEB HTTP 编程模型是基础的现有的 WCF 扩展性模型生成的。 它定义以下各类：  

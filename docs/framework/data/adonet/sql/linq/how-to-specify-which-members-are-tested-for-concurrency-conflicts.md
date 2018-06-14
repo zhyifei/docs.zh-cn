@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362421"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>如何：指定针对并发冲突对哪些成员进行测试
 将应用到的三个枚举之一[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>属性<xref:System.Data.Linq.Mapping.ColumnAttribute>特性来指定哪些成员要包括在更新检查的开放式并发冲突检测。  

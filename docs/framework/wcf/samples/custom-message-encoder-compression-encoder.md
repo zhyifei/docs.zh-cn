@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808736"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自定义消息编码器：压缩编码器
 此示例演示如何实现自定义编码器使用的 Windows Communication Foundation (WCF) 平台。  

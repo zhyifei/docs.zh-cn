@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557519"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox 概述
 <xref:System.Windows.Controls.RichTextBox>控制，你可以显示或编辑流内容包括段落、 图像、 表和的详细信息。 本主题介绍<xref:System.Windows.Controls.TextBox>类，并提供如何使用中的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和 C#。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/04/2018
 |<xref:System.Windows.Controls.TextBox>|是|是|否|不是。|  
 |<xref:System.Windows.Controls.RichTextBox>|是|是|是|是|  
   
- **注意：**尽管<xref:System.Windows.Controls.TextBox>不支持格式设置等相关的命令<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)，由这两个控件如支持基本的许多命令<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>。  
+ **注意：** 尽管<xref:System.Windows.Controls.TextBox>不支持格式设置等相关的命令<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)，由这两个控件如支持基本的许多命令<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>。  
   
  后面将更详细地介绍上表中的功能。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/04/2018
   
  元素<xref:System.Windows.Documents.Paragraph>和<xref:System.Windows.Documents.Bold>确定如何在内容<xref:System.Windows.Controls.RichTextBox>显示。 当用户编辑<xref:System.Windows.Controls.RichTextBox>内容，他们更改此流内容。 若要了解有关流内容的功能及其工作方式的详细信息，请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
   
- **注意：**内部的流内容<xref:System.Windows.Controls.RichTextBox>的行为与其他控件中包含的流内容完全一样。 例如，有中的没有列<xref:System.Windows.Controls.RichTextBox>和因此没有自动调整大小行为。 此外，内置功能，例如搜索、 查看模式、 页面导航和缩放在不可用<xref:System.Windows.Controls.RichTextBox>。  
+ **注意：** 内部的流内容<xref:System.Windows.Controls.RichTextBox>的行为与其他控件中包含的流内容完全一样。 例如，有中的没有列<xref:System.Windows.Controls.RichTextBox>和因此没有自动调整大小行为。 此外，内置功能，例如搜索、 查看模式、 页面导航和缩放在不可用<xref:System.Windows.Controls.RichTextBox>。  
   
 <a name="realtime_spellechecking"></a>   
 ## <a name="real-time-spell-checking"></a>实时拼写检查  

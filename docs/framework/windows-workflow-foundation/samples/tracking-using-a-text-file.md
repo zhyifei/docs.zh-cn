@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805793"
 ---
 # <a name="tracking-using-a-text-file"></a>使用文本文件跟踪
 此示例演示如何通过创建自定义跟踪参与者扩展跟踪在 Windows Workflow Foundation (WF)。 跟踪参与者是一些 .NET Framework 类，这些类将接收从运行时发出的跟踪记录。 可以创建一个跟踪参与者以将跟踪事件传输给方案所需的任何目标。 例如，ETW（Windows 事件跟踪）跟踪参与者将作为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的一部分提供。 此示例中的跟踪参与者以 XML 格式将记录写入文本文件。  

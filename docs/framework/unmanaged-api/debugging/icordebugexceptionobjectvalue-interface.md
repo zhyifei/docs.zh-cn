@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6805b7b49f76b80161aef5051fe3c284192f582
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413769"
 ---
 # <a name="icordebugexceptionobjectvalue-interface"></a>ICorDebugExceptionObjectValue 接口
 扩展"ICorDebugObjectValue"接口，以提供来自托管的异常对象的堆栈跟踪信息。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
  调用`QueryInterface`将成功执行派生自的托管对象<xref:System.Exception?displayProperty=nameWithType>。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

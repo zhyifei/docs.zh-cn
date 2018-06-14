@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275696"
 ---
 # <a name="query-keywords-c-reference"></a>查询关键字（C# 参考）
 本部分包含在查询表达式中使用的上下文关键字。  

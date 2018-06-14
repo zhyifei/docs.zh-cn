@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591711"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ 的潜在缺陷
 在许多情况下，与顺序 LINQ to Objects 查询相比，PLINQ 可以显著提升性能。 不过，并行执行查询增加了工作复杂性，可能会导致在顺序代码中不常见或根本不会遇到的问题。 本主题列出了一些在编写 PLINQ 查询时要避免的做法。  

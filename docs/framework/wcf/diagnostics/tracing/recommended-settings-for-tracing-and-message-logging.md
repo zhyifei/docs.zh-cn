@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486732"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>跟踪和消息日志记录的推荐设置
 本主题描述用于不同操作环境的跟踪和消息日志记录的推荐设置。  

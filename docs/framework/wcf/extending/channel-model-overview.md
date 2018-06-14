@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804633"
 ---
 # <a name="channel-model-overview"></a>通道模型概述
 Windows Communication Foundation (WCF) 通道堆栈是分层的通信堆栈处理消息的一个或多个频道。 堆栈底部是传输通道，它负责使通道堆栈适应基础传输（例如，TCP、HTTP、SMTP 和其他类型的传输）。 通道为消息的发送和接收提供了一个低级编程模型。 此编程模型依赖于多个接口和其他类型统称为 WCF 通道模型。 本主题讨论通道形状、基本通道侦听器（在服务上）和通道工厂（在客户端上）的构造。  

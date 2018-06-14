@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809464"
 ---
 # <a name="data-contract-surrogates"></a>数据协定代理项
 数据协定*代理项*是基于数据协定模型而生成一个高级的功能。 在设计上，此功能用于在用户希望更改对类型进行序列化、反序列化或将其设计成元数据的方式时，进行类型自定义和替换。 在以下情况下可以使用代理项：还没有为类型指定数据协定；字段和属性 (Property) 没有用 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute) 进行标记；用户希望动态创建架构变体。  

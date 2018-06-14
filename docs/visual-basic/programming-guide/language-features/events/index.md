@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655266"
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
 大多数程序时可能会将 Visual Studio 项目可视化为一系列实际上，在序列中，执行的过程是事件驱动的-也就是说执行流由外部发生的事情调用决定*事件*。  

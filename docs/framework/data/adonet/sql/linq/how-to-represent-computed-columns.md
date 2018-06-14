@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353094"
 ---
 # <a name="how-to-represent-computed-columns"></a>如何：表示计算所得的列
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>属性<xref:System.Data.Linq.Mapping.ColumnAttribute>属性以表示其内容是计算的结果的列。  

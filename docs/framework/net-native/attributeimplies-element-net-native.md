@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395435"
 ---
 # <a name="ltattributeimpliesgt-element-net-native"></a>&lt;特性暗示&gt;元素 (.NET Native)
 为包含特性应用的代码元素定义策略。  

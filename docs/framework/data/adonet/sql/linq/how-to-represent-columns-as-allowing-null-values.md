@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355972"
 ---
 # <a name="how-to-represent-columns-as-allowing-null-values"></a>如何：将列表示为允许 Null 值
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>属性<xref:System.Data.Linq.Mapping.ColumnAttribute>属性用于指定关联的数据库列可以保存 null 值。  

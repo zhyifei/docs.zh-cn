@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566816"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML 的类型转换器概述
 类型转换器为对象编写器提供逻辑，用于从 XAML 标记中的字符串转换为对象图中的特定对象。 在 .NET Framework XAML 服务中，类型转换器必须是派生自 <xref:System.ComponentModel.TypeConverter>的类。 某些转换器还支持 XAML 保存路径，可以用于将对象从序列化标记序列化为字符串形式。 本主题介绍如何以及何时调用 XAML 中的类型转换器，以及为 <xref:System.ComponentModel.TypeConverter>的方法重写提供实现建议。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578061"
 ---
 # <a name="serialization"></a>序列化
 序列化是将对象转换为一种格式，可以随时保存或传输的过程。 例如，你可以将对象序列化，传输通过 Internet 使用 HTTP，和目标计算机上反其序列化。  

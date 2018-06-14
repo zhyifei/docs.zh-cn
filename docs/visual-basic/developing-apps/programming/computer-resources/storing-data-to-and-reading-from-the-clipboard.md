@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591374"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>将数据存储到剪贴板以及从剪贴板读取数据 (Visual Basic)
 剪贴板可用于存储文本和图像等数据。 由于所有活动进程都共享剪贴板，因此它可用于在这些活动进程之间传输数据。 使用 `My.Computer.Clipboard` 对象可轻松访问剪贴板并从中读取和向其写入数据。  

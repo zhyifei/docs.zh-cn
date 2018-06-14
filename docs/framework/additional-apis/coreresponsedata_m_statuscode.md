@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751904"
 ---
 # <a name="coreresponsedatamstatuscode-field"></a>CoreResponseData.m\_StatusCode 字段
 
@@ -35,6 +36,6 @@ public HttpStatusCode m_StatusCode
 
 **Namespace:** <xref:System.Net>
 
-**程序集：**系统 （在 System.dll)
+**程序集：** 系统 （在 System.dll)
 
-**.NET framework 版本：**自 2.0 之后可用。
+**.NET framework 版本：** 自 2.0 之后可用。

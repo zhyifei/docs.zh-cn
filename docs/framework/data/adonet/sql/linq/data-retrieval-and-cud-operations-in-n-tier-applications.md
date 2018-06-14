@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365834"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 层应用程序中的数据检索和 CUD 操作 (LINQ to SQL)
 在将实体对象（如 Customers 或 Orders）通过网络序列化到客户端时，这些实体会与其数据上下文分离。 数据上下文不再跟踪这些实体的更改或它们与其他对象的关联。 只要客户端只读取数据，这就不会成为问题。 要使客户端可以向数据库添加新行，也比较容易做到。 但是，如果应用程序要求客户端能够更新或删除数据，则必须在调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> 之前将实体附加到新的数据上下文。 此外，如果对原始值使用开放式并发检查，则还需要一种为数据库同时提供原始实体和修改后的实体的方式。 使用 `Attach` 方法可以在实体分离后将其放入新的数据上下文中。  

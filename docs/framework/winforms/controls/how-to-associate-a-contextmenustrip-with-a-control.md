@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526405"
 ---
 # <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>如何：将 ContextMenuStrip 与控件关联
 创建控件和快捷菜单后，使用以下过程在用户右键单击控件时显示给定的快捷菜单。 这些过程将 <xref:System.Windows.Forms.ContextMenuStrip> 与 Windows 窗体和 <xref:System.Windows.Forms.ToolStrip> 控件相关联。  

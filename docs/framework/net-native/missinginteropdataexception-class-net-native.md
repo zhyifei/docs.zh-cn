@@ -1,27 +1,18 @@
 ---
-title: "缺少互操作数据异常类 (.NET Native)"
-ms.custom: 
+title: 缺少互操作数据异常类 (.NET Native)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: caf3882b8ba9c684d4751cafb5719606125dd983
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 189b50b4d35d061c511fbd06cc843296607062b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392965"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>缺少互操作数据异常类 (.NET Native)
 **适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  

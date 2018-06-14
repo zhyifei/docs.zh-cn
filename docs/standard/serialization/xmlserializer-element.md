@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583248"
 ---
 # <a name="ltxmlserializergt-element"></a>&lt;xmlSerializer&gt; 元素
 指定是否完成 <xref:System.Xml.Serialization.XmlSerializer> 进度的额外检查。  

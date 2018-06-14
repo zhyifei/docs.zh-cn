@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572936"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>按名称或索引检索未排序节点
 XmlNamedNodeMap 在万维网联合会 (W3C) 规范中被描述为 NamedNodeMap，它对于处理未排序的节点集并能够按节点名称或索引引用节点是必需的。 访问 XmlNamedNodeMap 的唯一方式是通过方法或属性返回 XmlNamedNodeMap。 有三个方法或属性返回 XmlNamedNodeMap：  

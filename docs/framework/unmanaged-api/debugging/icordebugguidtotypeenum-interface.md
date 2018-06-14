@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91d653587d5b7c35a2a43c7eed7c4bf33e5401f6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416746"
 ---
 # <a name="icordebugguidtotypeenum-interface"></a>ICorDebugGuidToTypeEnum 接口
 提供定义一组的 Guid 和其相应的类型，由 ICorDebugType 实例之间的映射的枚举器。 此接口继承自 ICorDebugEnum 接口的方法。  

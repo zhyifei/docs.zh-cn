@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485751"
 ---
 # <a name="extending-bindings"></a>扩展绑定
 绑定指定连接到终结点所需要的传输、编码和协议。 绑定扩展和自定义绑定实现支持应用程序功能所需要的自定义通信功能。  

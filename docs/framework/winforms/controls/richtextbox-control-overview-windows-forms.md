@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542114"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件用于显示、 输入和操作具有格式的文本。 <xref:System.Windows.Forms.RichTextBox>控件的作用的所有内容<xref:System.Windows.Forms.TextBox>控件的作用，但它还可以显示字体、 颜色和链接; 从文件; 加载文本和嵌入的图像并查找指定的字符。 <xref:System.Windows.Forms.RichTextBox>控件通常用于文本操作，并显示类似于 Microsoft Word 等文字处理应用程序的功能。 如<xref:System.Windows.Forms.TextBox>控件，<xref:System.Windows.Forms.RichTextBox>控件可以显示滚动条; 但与<xref:System.Windows.Forms.TextBox>控件，其默认设置是显示水平和垂直滚动条，根据需要并包含其他滚动条设置。  

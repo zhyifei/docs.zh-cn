@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bcd7bfb52cadf740d8fe3cb92a09b071f530b7ee
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417396"
 ---
 # <a name="icordebugstepperdeactivate-method"></a>ICorDebugStepper::Deactivate 方法
 导致此 ICorDebugStepper 取消它收到的最后一个步骤命令。  
@@ -36,7 +37,7 @@ HRESULT Deactivate ();
  已取消在最近收到的步骤命令后，可以发出一个新的单步执行命令。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593598"
 ---
 # <a name="ordinal-is-not-valid"></a>序号无效
 对动态链接库 (DLL) 的调用指示而不是过程名称，后面使用一个数字使用`#num`语法。 此错误具有以下可能的原因：  

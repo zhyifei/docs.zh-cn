@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541776"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>如何：在代码中模拟鼠标和键盘事件
 Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输入。 本主题将简要阐述这些选项。  

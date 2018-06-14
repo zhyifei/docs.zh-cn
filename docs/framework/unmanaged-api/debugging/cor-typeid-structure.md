@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d4e07fb3d0988838fde662f4bb7d4719cc2d50f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408335"
 ---
 # <a name="cortypeid-structure"></a>COR_TYPEID 结构
 包含类型标识符。  
@@ -47,7 +48,7 @@ typedef struct COR_TYPEID{
  A`COR_TYPEID`对象用于不透明。 其各个字段不应访问或操作。 其唯一的用途是作为标识符用作`out`中参数的方法调用和可，反过来，传递给其他方法来提供其他信息。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

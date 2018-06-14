@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582631"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>.NET 中的并行处理、并发和异步编程
 借助 .NET，可以通过多种方式来编写异步代码，以提高应用程序的用户响应速度；并能编写并行代码，以使用多个执行线程来最大限度地提升用户计算机的性能。  

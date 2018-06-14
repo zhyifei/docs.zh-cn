@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493743"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>终结点：地址、绑定和协定
 与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点提供客户端访问 WCF 服务提供的功能。  

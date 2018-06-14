@@ -33,6 +33,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234119"
 ---
 # <a name="function-statement-visual-basic"></a>Function 语句 (Visual Basic)
 声明名称、 参数和定义的代码`Function`过程。  

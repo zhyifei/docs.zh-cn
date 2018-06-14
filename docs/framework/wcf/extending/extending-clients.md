@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806644"
 ---
 # <a name="extending-clients"></a>扩展客户端
 在调用应用程序中，服务模型层负责将应用程序代码中的方法调用转换成出站消息、将它们推送到基础通道、将结果转换回应用程序代码中的返回值和 out 参数并将结果返回到调用方。 服务模型扩展将修改或实现执行或通信行为与功能，包括客户端或调度程序功能、自定义行为、消息和参数截获以及其他扩展功能。  

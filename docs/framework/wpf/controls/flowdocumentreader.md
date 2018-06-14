@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551916"
 ---
 # <a name="flowdocumentreader"></a>FlowDocumentReader
 <xref:System.Windows.Controls.FlowDocumentReader>控件用于查看<xref:System.Windows.Documents.FlowDocument>内容。 它支持多个查看模式。  

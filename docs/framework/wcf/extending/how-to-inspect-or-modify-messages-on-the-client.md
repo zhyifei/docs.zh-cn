@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804165"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>如何：检查或修改客户端的消息
 您可以检查或修改跨 WCF 客户端的传入或传出消息，通过实现<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>并将其插入到客户端运行时。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。 服务上的等效功能为 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 有关完整的代码示例请参阅[消息检查器](../../../../docs/framework/wcf/samples/message-inspectors.md)示例。  

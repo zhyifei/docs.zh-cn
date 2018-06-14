@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761423"
 ---
 # <a name="navigating-datarelations"></a>导航 DataRelation
 <xref:System.Data.DataRelation> 的一项主要功能就是在 <xref:System.Data.DataTable> 中从一个 <xref:System.Data.DataSet> 浏览到另一个。 这允许您检索所有相关<xref:System.Data.DataRow>中一个对象**DataTable**在给定单个**DataRow**从相关**DataTable**。 例如，在建立后**DataRelation**之间客户表和订单表，你可以检索特定客户行使用的所有订单行**GetChildRows**。  

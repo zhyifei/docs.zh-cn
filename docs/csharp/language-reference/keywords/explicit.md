@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216472"
 ---
 # <a name="explicit-c-reference"></a>explicit（C# 参考）
 `explicit` 关键字声明必须通过转换来调用的用户定义的类型转换运算符。 例如，此运算符将名为华氏度的类转换为名为摄氏度的类：  

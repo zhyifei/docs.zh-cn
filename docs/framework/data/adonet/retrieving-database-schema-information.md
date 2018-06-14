@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359684"
 ---
 # <a name="retrieving-database-schema-information"></a>检索数据库架构信息
 从数据库获取架构信息通过架构发现过程来完成。 通过架构发现，应用程序可以请求托管提供程序查找并返回有关数据库架构的信息也称为*元数据*，给定数据库。 不同的数据库架构元素（例如表、列和存储过程）通过架构集合进行公开。 每个架构集合包含所使用的提供程序特定的各种架构信息。  

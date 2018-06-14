@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526573"
 ---
 # <a name="how-to-read-image-metadata"></a>如何：读取图像元数据
 某些图像文件包含您可以读取以确定图像的功能的元数据。 例如，数码相片可能包含您可以读取以确定的品牌和型号的照相机用于捕获映像的元数据。 与[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您可以读取现有的元数据，并且你还可以向图像文件写入新的元数据。  

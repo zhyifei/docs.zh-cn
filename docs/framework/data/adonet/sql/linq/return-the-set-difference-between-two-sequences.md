@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356213"
 ---
 # <a name="return-the-set-difference-between-two-sequences"></a>返回两个序列之间的差集
 使用 <xref:System.Linq.Queryable.Except%2A> 运算符可返回两个序列之间的差集。  

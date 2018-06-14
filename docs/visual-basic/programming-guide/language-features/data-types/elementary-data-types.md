@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646372"
 ---
 # <a name="elementary-data-types-visual-basic"></a>基本数据类型 (Visual Basic)
 Visual Basic 提供一组预定义的数据类型，你可以使用很多编程元素。 本部分介绍这些类型以及如何使用它们。  

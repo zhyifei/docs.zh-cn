@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593949"
 ---
 # <a name="39optional39-expected"></a>&#39;可选&#39;预期
 过程声明中的可选自变量后跟一个必需的参数。 每个参数跟在可选参数还必须是可选的。  

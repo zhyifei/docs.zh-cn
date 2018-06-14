@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c58ce0389c77b6534cbbf37fe985f89c187065df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435820"
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>ICLRDebugManager::EndConnection 方法
 删除的任务列表和标识符和友好名称之间的关联。  
@@ -57,11 +58,11 @@ HRESULT EndConnection (
 >  必须按特定顺序为每一组任务调用这三种方法。 `BeginConnection` 都会首先调用来建立新连接。 `SetConnectionTasks` 调用下一步可提供的任务与该连接关联集。 `EndConnection` 调用上一次可删除任务列表的标识符和友好名称之间的关联。但是，可以嵌套不同连接的调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

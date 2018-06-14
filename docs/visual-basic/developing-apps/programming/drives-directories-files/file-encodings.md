@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582280"
 ---
 # <a name="file-encodings-visual-basic"></a>文件编码 (Visual Basic)
 文件编码也称为字符编码，用于指定在处理文本时如何表示字符。 虽然 Unicode 是最常用的编码，但根据编码能否处理某种语言字符，另一种编码可能更优。  

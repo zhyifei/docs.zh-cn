@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496707"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>如何：实现发现代理
 本主题介绍如何实现发现代理。 有关发现功能在 Windows Communication Foundation (WCF) 的详细信息，请参阅[WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 可以通过创建一个扩展 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象类的类来实现发现代理。 此示例中定义并使用了多个其他支持类。 `OnResolveAsyncResult`、`OnFindAsyncResult` 和 `AsyncResult`。 这些类实现 <xref:System.IAsyncResult> 接口。 有关详细信息<xref:System.IAsyncResult>请参阅[System.IAsyncResult 接口](xref:System.IAsyncResult)。

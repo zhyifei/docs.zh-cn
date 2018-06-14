@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757692"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt;元素 （Web 设置）
 指定 ASP.NET 用于 ASP.NET 应用程序在中集成模式下运行时管理进程范围的行为的配置设置[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本。  

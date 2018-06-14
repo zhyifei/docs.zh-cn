@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597440"
 ---
 # <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>需要对程序集的引用&#39; &lt;assemblyidentity&gt; &#39;包含类型&#39; &lt;typename&gt;&#39;，但由于语意不明确之间找不到合适的引用项目&#39; &lt;projectname1&gt; &#39;和&#39;&lt;项目名称 2>&gt;&#39;
 表达式使用在项目外部定义的类型，如类、结构、接口、枚举或委托。 但是，你具有对定义该类型的多个程序集的项目引用。  

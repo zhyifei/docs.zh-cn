@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582923"
 ---
 # <a name="destroying-threads"></a>销毁线程
 <xref:System.Threading.Thread.Abort%2A> 方法用于永久停止托管线程。 调用 <xref:System.Threading.Thread.Abort%2A> 时，公共语言运行时在目标线程中抛出目标线程可以捕获的 <xref:System.Threading.ThreadAbortException>。 有关更多信息，请参见<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594338"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>变量使用了 Visual Basic 不支持的自动化类型
 试图使用类型库或具有不支持 Visual Basic 数据类型的对象库中定义的变量。  

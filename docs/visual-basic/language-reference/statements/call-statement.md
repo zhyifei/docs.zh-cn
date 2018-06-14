@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603387"
 ---
 # <a name="call-statement-visual-basic"></a>Call 语句 (Visual Basic)
 将传输到的控件`Function`， `Sub`，或动态链接库 (DLL) 过程。  

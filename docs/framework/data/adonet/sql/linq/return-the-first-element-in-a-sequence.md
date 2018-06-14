@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361343"
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>返回序列中的第一个元素
 使用 <xref:System.Linq.Enumerable.First%2A> 运算符可返回序列中的第一个元素。 使用 <xref:System.Linq.Enumerable.First%2A> 的查询是立即执行的。  

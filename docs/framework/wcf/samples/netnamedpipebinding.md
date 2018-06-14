@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503192"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 本示例演示在同一台计算机上提供跨进程通信的 `netNamedPipeBinding` 绑定。 命名管道不能跨计算机工作。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)计算器服务。  

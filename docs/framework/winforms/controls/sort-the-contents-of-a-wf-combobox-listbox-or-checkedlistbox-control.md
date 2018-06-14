@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535641"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：对 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件的内容排序
 在数据绑定时，Windows 窗体控件不进行排序。 若要显示已排序的数据，使用支持排序的数据源，然后对它进行排序的数据源。 支持排序的数据源是： 数据视图，数据查看管理器，并已排序数组。  

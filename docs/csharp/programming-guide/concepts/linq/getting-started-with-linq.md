@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339314"
 ---
 # <a name="getting-started-with-linq-in-c"></a>C# 中的 LINQ 入门
 本部分包含可帮助了解 LINQ 文档和示例的其余内容的基本背景信息。  

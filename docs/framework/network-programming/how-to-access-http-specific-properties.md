@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389608"
 ---
 # <a name="how-to-access-http-specific-properties"></a>如何：访问 HTTP 特定的属性
 此示例演示如何关闭 HTTP 保持的连接行为并从 Web 服务器获取协议版本号。  

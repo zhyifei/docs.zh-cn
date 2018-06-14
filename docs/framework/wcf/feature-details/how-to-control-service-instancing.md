@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489139"
 ---
 # <a name="how-to-control-service-instancing"></a>如何：控制服务实例化
 通过设置服务的实例模式，可以指定创建 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>（及其关联的用户定义服务对象）的时间。 有关可能模式，请参见 <xref:System.ServiceModel.InstanceContextMode> 枚举。 有关各种行为的详细信息，请参阅[配置和扩展的运行时带有行为](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。 有关工作示例，请参阅[行为](../../../../docs/framework/wcf/samples/behaviors.md)。  

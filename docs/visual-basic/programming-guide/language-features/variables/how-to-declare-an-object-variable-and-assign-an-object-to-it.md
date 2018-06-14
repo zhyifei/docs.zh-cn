@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648871"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>如何：在 Visual Basic 中声明对象变量并为它分配对象
 声明的变量[Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)通过指定`As Object`中[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。 通过将对象放在等号后的对象分配给此类变量 (`=`) 在赋值语句或初始化子句中。  

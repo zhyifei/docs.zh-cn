@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638862"
 ---
 # <a name="named-argument-not-found-visual-basic"></a>未找到命名参数 (Visual Basic)
 除非命名参数出现在过程定义中，否则不能在过程调用中使用命名参数。 你指定了一个命名参数，但未将过程未定义为接受该名称的参数。  

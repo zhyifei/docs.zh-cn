@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356854"
 ---
 # <a name="transaction-management-escalation"></a>事务管理升级
 Windows 承载一组服务和模块，它们共同构成了一个事务管理器。 事务管理升级描述将事务从一个事务管理器组件迁移到另一个事务管理器组件的过程。  

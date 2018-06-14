@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558808"
 ---
 # <a name="how-to-animate-in-a-style"></a>如何：在样式中进行动画处理
 此示例演示如何在样式中的属性进行动画处理。 在样式中进行动画处理时, 可以直接针对为其定义样式的框架元素。 若要针对可冻结对象，你必须"dot 向下"从应用了样式元素的属性。  

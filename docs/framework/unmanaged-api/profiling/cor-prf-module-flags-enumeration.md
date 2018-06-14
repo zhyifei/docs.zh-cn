@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 48617022940d889abedb9a9d25f04782371c4a5f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451940"
 ---
 # <a name="corprfmoduleflags-enumeration"></a>COR_PRF_MODULE_FLAGS 枚举
 指定模块的属性。  
@@ -56,7 +57,7 @@ typedef enum
  从 COR_PRF_MODULE_FLAGS 位将返回到探查器在`pdwModuleFlags`输出参数的[icorprofilerinfo3:: Getmoduleinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md)方法。 某些组合两个或多个标志是可能的但并非所有组合都都可能。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

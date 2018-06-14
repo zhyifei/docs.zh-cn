@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495904"
 ---
 # <a name="endpoint-addresses"></a>终结点地址
 每个终结点都具有与其关联的地址，该地址用于查找和标识终结点。 此地址主要包括指定终结点位置的统一资源标识符 (URI)。 在通过 Windows Communication Foundation (WCF) 编程模型中表示的终结点地址<xref:System.ServiceModel.EndpointAddress>类，该类包含一个可选<xref:System.ServiceModel.EndpointAddress.Identity%2A>进行身份验证的其他终结点的终结点的属性，交换消息，以及一组可选<xref:System.ServiceModel.EndpointAddress.Headers%2A>属性，用于定义到达服务所需的任何其他 SOAP 头。 可选头提供其他的更详细寻址信息以标识服务终结点或与之交互。 终结点的地址在网络上表示为 WS-Addressing 终结点引用 (EPR)。  

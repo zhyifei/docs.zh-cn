@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655018"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML 文本概述 (Visual Basic)
 *XML 文本*，可将 XML 直接合并到 Visual Basic 代码。 XML 文本语法表示[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象，也是如此相似的 XML 1.0 语法。 这样会更容易，以编程方式创建 XML 元素和文档，因为你的代码具有相同的结构与最终的 XML。  

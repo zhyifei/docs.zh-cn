@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389563"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>缓解：WPF 窗口呈现
 在 Windows 8 及更高版本上运行的 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中，当一个窗口超出多监视器方案中的单个显示屏时，会不经剪辑就呈现整个窗口。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638778"
 ---
 # <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a>输入的路径引用了一个文件，但是以目录分隔符字符结尾
 尝试的操作要求提供文件名，但提供的名称以目录分隔符 (`\`) 结尾。 这可能是由于不正确解析文件路径造成的。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494557"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>将 ASP.NET Web 服务迁移到 WCF
 ASP.NET 提供 .NET Framework 类库和工具以用于生成 Web 服务，并提供用于在 Internet Information Services (IIS) 内承载服务的功能。 Windows Communication Foundation (WCF) 提供.NET Framework 类库、 工具和承载功能，使软件实体可以使用任何协议，包括由 Web 服务使用的协议进行通信。  将 ASP.NET Web 服务迁移到 WCF 允许你的应用程序充分利用新功能和特定于 WCF 的改进。  

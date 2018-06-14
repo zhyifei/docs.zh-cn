@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532878"
 ---
 # <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>如何：操作 Windows 窗体 DataGridView 控件中的列
 以下代码示例介绍了使用 <xref:System.Windows.Forms.DataGridViewColumn> 类的属性处理 <xref:System.Windows.Forms.DataGridView> 列的各种方法。  

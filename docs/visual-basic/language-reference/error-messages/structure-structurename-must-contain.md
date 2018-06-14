@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594492"
 ---
 # <a name="structure-39ltstructurenamegt39-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-39custom39"></a>结构&#39; &lt;structurename&gt; &#39;必须包含至少一个实例成员变量或未标记为至少一个实例事件声明&#39;自定义&#39;
 结构定义不包含任何非共享的变量或非共享的非自定义事件。  

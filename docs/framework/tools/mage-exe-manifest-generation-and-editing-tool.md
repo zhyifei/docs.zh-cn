@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410385"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe（清单生成和编辑工具）
 清单生成和编辑工具 (Mage.exe) 是一种命令行工具，可以支持创建和编辑应用程序和部署清单。 作为命令行工具，Mage.exe 可以从批处理脚本和其他基于 Windows 的应用程序（包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序）运行。  

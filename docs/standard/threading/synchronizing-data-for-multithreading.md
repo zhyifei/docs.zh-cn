@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591526"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>为多线程处理同步数据
 多个线程可以调用单个对象的属性和方法时，对这些调用进行同步处理是非常重要的。 否则，一个线程可能会中断另一个线程正在执行的任务，可能使该对象处于无效状态。 其成员不受这类中断影响的类叫做线程安全类。  

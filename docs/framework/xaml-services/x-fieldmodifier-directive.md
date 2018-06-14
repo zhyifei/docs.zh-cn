@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565042"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 指令
 修改 XAML 编译行为，以便与定义的已命名的对象引用的字段<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>而不是访问<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>默认行为。  

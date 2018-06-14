@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567583"
 ---
 # <a name="manipulating-strings-in-net"></a>控制 .NET 中的字符串
 .NET 提供了一组广泛的例程，使你可以高效地创建、比较和修改字符串，以及快速分析大量文本和数据以搜索、删除和替换文本模式。  

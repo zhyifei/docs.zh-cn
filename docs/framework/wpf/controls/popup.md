@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551747"
 ---
 # <a name="popup"></a>弹出项
 <xref:System.Windows.Controls.Primitives.Popup>控件通过当前的应用程序窗口浮动的单独窗口中显示内容。  

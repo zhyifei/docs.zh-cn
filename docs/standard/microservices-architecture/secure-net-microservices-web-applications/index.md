@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591971"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>保护 .NET 微服务和 Web 应用程序
 
@@ -62,13 +63,13 @@ ASP.NET Core 还支持使用[外部身份验证提供程序](https://docs.micros
 
 下面显示常用的外部身份验证提供程序及其关联的 NuGet 包。
 
-**Microsoft：**Microsoft.AspNetCore.Authentication.MicrosoftAccount
+**Microsoft：** Microsoft.AspNetCore.Authentication.MicrosoftAccount
 
-**Google：**Microsoft.AspNetCore.Authentication.Google
+**Google：** Microsoft.AspNetCore.Authentication.Google
 
-**Facebook：**Microsoft.AspNetCore.Authentication.Facebook
+**Facebook：** Microsoft.AspNetCore.Authentication.Facebook
 
-**Twitter：**Microsoft.AspNetCore.Authentication.Twitter
+**Twitter：** Microsoft.AspNetCore.Authentication.Twitter
 
 在所有情况下，中间件都会向类似于 Startup.Configure 中的 app.Use{ExternalProvider}Authentication 的注册方法调用注册。 根据提供程序的需要，这些注册方法会采用包含应用程序 ID 和机密信息（例如密码）的选项对象。 外部身份验证提供程序要求注册应用程序（如 [ASP.NET Core 文档](https://docs.microsoft.com/aspnet/core/security/authentication/social/)所述），以便通知用户哪些应用程序正在请求访问其标识。
 

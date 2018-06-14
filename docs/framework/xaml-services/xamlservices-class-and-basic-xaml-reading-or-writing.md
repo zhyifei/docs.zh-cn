@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565907"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices 类和基本的 XAML 读取或写入
 <xref:System.Xaml.XamlServices> 是由 .NET Framework XAML 服务提供的一个类，可用于解决无需对 XAML 节点流的特定访问权限的 XAML 方案，或从这些节点获取的 XAML 类型系统信息。 <xref:System.Xaml.XamlServices> API 可总结如下： `Load` 或 `Parse` 用以支持 XAML 加载路径， `Save` 用以支持 XAML 保存路径，以及 `Transform` ，用以提供联接加载路径和保存的技术。 `Transform` 可用于从一个 XAML 架构更改为另一个。 本主题总结了每个 API 分类，并介绍了特定方法重载之间的差异。  

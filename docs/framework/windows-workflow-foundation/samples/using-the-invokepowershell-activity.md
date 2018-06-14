@@ -1,23 +1,13 @@
 ---
-title: "使用 InvokePowerShell 活动"
-ms.custom: 
+title: 使用 InvokePowerShell 活动
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4cf7092d6eac4fc2d70c4606f4a76f3a83ed9dcf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520235"
 ---
 # <a name="using-the-invokepowershell-activity"></a>使用 InvokePowerShell 活动
 InvokePowerShell 示例演示如何使用 `InvokePowerShell` 活动调用 Windows PowerShell 命令。  
@@ -35,7 +25,7 @@ InvokePowerShell 示例演示如何使用 `InvokePowerShell` 活动调用 Window
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
@@ -205,7 +195,7 @@ new ForEach<PSObject>
   
 1.  如果从另一个项目引用 `InvokePowerShell` 活动程序集或项目时导致出现生成错误，则可能需要手动将 `<SpecificVersion>True</SpecificVersion>` 元素添加到该新项目的 .csproj 文件中引用 `InvokePowerShell` 的行下方。  
   
-2.  如果未安装 Windows PowerShell，只要你添加时，Visual Studio 显示以下错误消息`InvokePowerShell`活动拖放到工作流：`Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
+2.  如果未安装 Windows PowerShell，只要你添加时，Visual Studio 显示以下错误消息`InvokePowerShell`活动拖放到工作流： `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
   
 3.  在 Windows PowerShell 2.0 中，以编程方式调用 `$input.MoveNext()` 失败，并且使用 `$input.MoveNext()` 的脚本会产生意外的错误和结果。 若要解决此问题，请考虑在循环访问数组时使用 PowerShell 谓词 `foreach` 而不是调用 `MoveNext()`。    
   
@@ -214,6 +204,6 @@ new ForEach<PSObject>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`

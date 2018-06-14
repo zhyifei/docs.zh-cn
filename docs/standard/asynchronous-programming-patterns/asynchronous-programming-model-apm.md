@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573784"
 ---
 # <a name="asynchronous-programming-model-apm"></a>异步编程模型 (APM)
 使用 <xref:System.IAsyncResult> 设计模式的异步操作是通过名为 BeginOperationName 和 EndOperationName 的两个方法来实现的，这两个方法分别开始和结束异步操作 OperationName。 例如， <xref:System.IO.FileStream> 类提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法来从文件异步读取字节。 这两个方法实现了 <xref:System.IO.FileStream.Read%2A> 方法的异步版本。  

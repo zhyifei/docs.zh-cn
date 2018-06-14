@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473855"
 ---
 # <a name="microsofttransactionstransactionbridgecoordinatorrecovered"></a>Microsoft.Transactions.TransactionBridge.CoordinatorRecovered
 从事务管理器日志恢复了一个协调程序列入。  

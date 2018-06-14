@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568454"
 ---
 # <a name="removing-nodes-from-the-dom"></a>从 DOM 中移除节点
 若要移除 XML 文档对象模型 (DOM) 中的节点，请使用 <xref:System.Xml.XmlNode.RemoveChild%2A> 方法移除特定节点。 在移除节点时，方法将移除属于所移除节点的子树；即如果不是叶节点。  

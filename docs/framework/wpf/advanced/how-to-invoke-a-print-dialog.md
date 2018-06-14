@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545553"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>如何：调用打印对话框
 若要使你能够从你应用程序打印，可以只需创建并打开<xref:System.Windows.Controls.PrintDialog>对象。  

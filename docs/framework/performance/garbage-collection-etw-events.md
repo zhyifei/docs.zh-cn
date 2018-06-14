@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396930"
 ---
 # <a name="garbage-collection-etw-events"></a>垃圾回收 ETW 事件
 <a name="top"></a> 这些事件可收集有关垃圾回收的信息。 它们可帮助进行诊断和调试，包括确定垃圾回收执行的次数、垃圾回收期间释放的内存量等。  

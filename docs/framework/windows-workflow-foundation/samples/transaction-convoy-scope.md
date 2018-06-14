@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516560"
 ---
 # <a name="transaction-convoy-scope"></a>事务队列范围
 此示例演示如何创建“并行保护”消息传递活动模式与 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，以便构建一个协议，允许很多操作在同一事务下按任意顺序执行。 此示例还演示 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 如何在某个事务无法流向服务器时自动创建新的事务，以便客户端不使用任何事务。  

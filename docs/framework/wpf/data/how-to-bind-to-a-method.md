@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557090"
 ---
 # <a name="how-to-bind-to-a-method"></a>如何：绑定到方法
 下面的示例演示如何将绑定到方法使用<xref:System.Windows.Data.ObjectDataProvider>。  

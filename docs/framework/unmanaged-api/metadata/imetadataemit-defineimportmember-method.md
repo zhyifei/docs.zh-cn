@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f9995fda70d1d5a3c19c30496de6c32f20015d47
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449385"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember 方法
 创建到的指定成员的类型或模块，它定义出当前范围，并定义该引用的令牌的引用。  
@@ -78,11 +79,11 @@ HRESULT DefineImportMember (
 -   如果目标成员的父级将解决更高版本的编译器或链接器，则传递`mdTokenNil`中`tkParent`。 这适用的唯一情形时，可以全局函数或全局变量从最终将链接到当前模块的.obj 文件导入和合并的元数据。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：**用作 MSCorEE.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

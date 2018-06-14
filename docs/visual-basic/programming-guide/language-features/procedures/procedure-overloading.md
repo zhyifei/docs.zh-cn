@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653909"
 ---
 # <a name="procedure-overloading-visual-basic"></a>过程重载 (Visual Basic)
 *重载*过程意味着在多个版本，使用相同名称但不同的参数列表中定义它。 重载的目的是定义过程的几个密切相关的版本，而无需将它们按名称区分开来。 通过不同的参数列表来执行此操作。  

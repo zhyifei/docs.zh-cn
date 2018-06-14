@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528585"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>如何：在 Windows 窗体上对齐多个控件
 标准化的基于 Windows 的应用程序的用户界面 (UI) 的布局，您可以定位控件使用单个命令组。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590707"
 ---
 # <a name="short-data-type-visual-basic"></a>Short 数据类型 (Visual Basic)
 保存有符号 16 位 （2 个字节） 整数，值的范围从-32768 到 32767。  

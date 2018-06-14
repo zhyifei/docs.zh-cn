@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495088"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>如何：配置本地颁发者
 本主题说明如何配置客户端以便为已颁发令牌使用本地颁发者。  

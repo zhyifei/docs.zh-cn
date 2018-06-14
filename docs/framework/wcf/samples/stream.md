@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508210"
 ---
 # <a name="stream"></a>流
 流示例演示流传输模式通信的用法。 收发流的若干操作都由服务公开。 此示例是自承载的。 客户端和服务都是控制台程序。  

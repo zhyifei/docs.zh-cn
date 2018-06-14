@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363375"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL 中的代码生成
 可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 命令行工具生成表示数据库的代码。 在任一情况下，端到端代码生成都分成三个阶段：  

@@ -42,6 +42,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591789"
 ---
 # <a name="data-type-summary-visual-basic"></a>数据类型摘要 (Visual Basic)
 下表显示 Visual Basic 数据类型、 其支持的公共语言运行时类型、 他们的名义存储分配和其值的范围。  

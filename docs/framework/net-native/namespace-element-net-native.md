@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391685"
 ---
 # <a name="ltnamespacegt-element-net-native"></a>&lt;命名空间&gt;元素 (.NET Native)
 将运行时反射策略应用到一个指定的命名空间中的所有类型。  

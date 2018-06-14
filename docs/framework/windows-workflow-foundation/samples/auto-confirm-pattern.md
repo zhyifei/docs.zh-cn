@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515988"
 ---
 # <a name="auto-confirm-pattern"></a>自动确认模式
 此示例包含三个用来说明自定义 `AutoConfirmScope` 活动的方案。 第一个示例演示一个由四个可补偿活动组成的序列的成功执行，其中的第二个和第三个可补偿活动嵌套到 `AutoConfirmScope` 中。 第二个示例演示相同的序列，但在执行第四个 <xref:System.Activities.Statements.CompensableActivity> 之后会发生异常。 第三个方案演示相同的序列，但在第二个 `AutoConfirmScope` 完成后 <xref:System.Activities.Statements.CompensableActivity> 中会发生异常。  

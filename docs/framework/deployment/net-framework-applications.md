@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391646"
 ---
 # <a name="deploying-net-framework-applications"></a>部署 .NET Framework 应用程序
 本部分 .NET Framework 文档提供了用于部署 .NET Framework 应用程序的基本信息，其中包括用于加载程序集、解析程序集引用和通过本机映像生成改善应用程序性能的指导原则。  

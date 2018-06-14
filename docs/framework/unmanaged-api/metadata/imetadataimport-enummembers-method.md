@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 46ee8c62861a62ac044f295f7da082756d87347b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447628"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers 方法
 枚举表示指定类型的成员的 MemberDef 标记。  
@@ -65,11 +66,11 @@ HRESULT EnumMembers (
  枚举的成员的类集合时`EnumMembers`返回仅直接在类上定义的成员。 即使此类提供这些继承成员的实现，它不返回此类继承，任何成员。 若要枚举继承的成员，调用方必须显式引导继承链。 请注意，继承链的规则可能会有所不同，具体取决于语言或发出的原始元数据的编译器。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：**作为 MsCorEE.dll 中的资源  
+ **库：** 作为 MsCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

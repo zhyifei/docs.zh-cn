@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604141"
 ---
 # <a name="string-functions-visual-basic"></a>字符串函数 (Visual Basic)
 下表列出了 Visual Basic 提供搜索和操作字符串的函数。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809909"
 ---
 # <a name="configuration-based-activation"></a>基于配置的激活
 此示例演示如何激活 Windows Communication Foundation (WCF) 服务，而无需.svc 文件。  

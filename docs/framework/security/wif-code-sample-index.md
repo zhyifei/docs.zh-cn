@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405598"
 ---
 # <a name="wif-code-sample-index"></a>WIF 代码示例索引
 以下是 Windows Identity Foundation 4.5 的代码示例：  

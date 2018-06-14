@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766629"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>支持和不支持的 LINQ 方法 (LINQ to Entities)
 本节提供有关 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中支持和不支持的语言集成查询 (LINQ) 标准查询运算符的信息。 许多 LINQ 标准查询运算符都有可接受整数自变量的重载版本。 该整数参数对应于正在操作的序列中从零开始的索引，<xref:System.Collections.Generic.IEqualityComparer%601> 或 <xref:System.Collections.Generic.IComparer%601>。 除非专门指定，否则这些 LINQ 标准查询运算符的重载版本并不受支持，尝试使用它们将引发异常。  

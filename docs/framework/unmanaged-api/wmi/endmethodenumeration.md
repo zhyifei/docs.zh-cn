@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d09a2ee278dba7e711891bc6d72043bb3a499dd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458485"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration 函数
 终止通过调用启动枚举序列[BeginMethodEnumeration 函数](beginmethodenumeration.md)。  
@@ -60,7 +61,7 @@ HRESULT EndMethodEnumeration (
 调用方开始枚举序列使用[BeginMethodEnumeration 函数](beginmethodenumeration.md)，然后调用[NextMethod 函数](nextmethod.md )直到该方法返回`WBEM_S_NO_MORE_DATA`。 调用方 （可选） 可以通过调用来完成序列`EndMethodEnumeration`。 调用方可能较早终止枚举，通过调用`EndMethodEnumeration`在任何时间。
 
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

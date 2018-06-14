@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755521"
 ---
 # <a name="connection-pooling"></a>连接池
 连接到数据源可能需要很长时间。 打开连接的成本降到最低，ADO.NET 使用称为的优化方法*连接池*，其中重复打开和关闭连接的成本降至最低。 .NET Framework 数据提供程序处理连接池的方式有所不同。  

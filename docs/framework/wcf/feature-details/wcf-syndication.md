@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499162"
 ---
 # <a name="wcf-syndication"></a>WCF 联合
 Windows Communication Foundation (WCF) 提供支持可以轻松处理 Atom、 RSS 或其他自定义格式的联合源与可用于读取和创建它们，以及将它们公开为服务终结点。 本节中的主题详细描述用于联合的此种编程模型。  

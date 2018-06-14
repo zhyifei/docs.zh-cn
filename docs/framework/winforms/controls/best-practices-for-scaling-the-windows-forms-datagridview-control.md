@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529803"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>缩放 Windows 窗体 DataGridView 控件的最佳做法
 <xref:System.Windows.Forms.DataGridView>控件旨在提供最大可伸缩性。 如果想要显示的数据量大，则应遵循避免使用大量的内存或降低用户界面 (UI) 的响应能力本主题中所述准则。 本主题讨论了以下问题：  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656014"
 ---
 # <a name="nullable-value-types-visual-basic"></a>可以为 Null 的值类型 (Visual Basic)
 有时，你将使用在某些情况下没有已定义的值的值类型。 例如，数据库中的字段可能需要区分具有有意义的分配的值并不具有分配的值。 可以扩展值类型，以使其正常值或 null 值。 调用此类扩展*可以为 null 的类型*。  

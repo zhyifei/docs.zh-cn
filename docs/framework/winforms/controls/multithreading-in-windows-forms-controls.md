@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536352"
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>Windows 窗体控件中的多线程处理
 在许多应用程序，你可以进行用户界面 (UI) 更快地响应执行耗时的操作在另一个线程上。 有多种工具都是可用于多线程处理你的 Windows 窗体控件，包括<xref:System.Threading>命名空间，<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>方法，与`BackgroundWorker`组件。  

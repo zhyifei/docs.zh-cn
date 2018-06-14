@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365379"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 对象模型
 在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，用开发人员的编程语言表示的对象模型映射到关系数据库的数据模型。 然后就会按照对象模型来执行对数据的操作。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546736"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>如何：诊断有问题的打印作业
 网络管理员经常接收到有关打印作业无法打印或打印速度慢的用户投诉。 打印作业属性中公开的丰富[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一种执行打印作业进行快速远程故障排除。  

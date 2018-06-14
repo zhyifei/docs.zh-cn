@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473550"
 ---
 # <a name="security-calls-not-authorized-per-second"></a>Security Calls Not Authorized Per Second（每秒未授权的安全调用次数）
 计数器名称：Security Calls Not Authorized Per Second（每秒未授权的安全调用次数）。  

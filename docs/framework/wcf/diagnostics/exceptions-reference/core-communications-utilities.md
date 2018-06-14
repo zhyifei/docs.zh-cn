@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469647"
 ---
 # <a name="core-communications-utilities"></a>核心通信：实用程序
 本主题列出了由核心通信实用程序生成的所有异常。  

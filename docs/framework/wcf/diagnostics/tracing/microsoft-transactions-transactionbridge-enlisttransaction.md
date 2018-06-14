@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474423"
 ---
 # <a name="microsofttransactionstransactionbridgeenlisttransaction"></a>Microsoft.Transactions.TransactionBridge.EnlistTransaction
 WS-Atomic Transaction 协议服务成功列入了使用提供的协调上下文的事务上。  

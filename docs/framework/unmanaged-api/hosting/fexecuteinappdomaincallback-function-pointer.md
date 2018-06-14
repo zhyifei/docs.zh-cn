@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4c3cafe3a8912702a093f9df7234112c0057b440
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431295"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback 函数指针
 指向以公共语言运行时 (CLR) 以执行托管的代码调用的函数。  
@@ -42,7 +43,7 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
  由调用方 (CLR) 控制的分配和生存期的此内存。 这不是 CLR 托管堆内存。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   

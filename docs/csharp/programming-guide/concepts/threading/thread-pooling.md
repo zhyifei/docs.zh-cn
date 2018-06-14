@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334192"
 ---
 # <a name="thread-pooling-c"></a>线程池 (C#)
 线程池是可用于在后台执行多种任务的线程集合。 （有关背景信息，请参阅[线程处理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)。）这使主线程可以自由地异步执行其他任务。  

@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c92ba2b5eac5eb1368a7d7ccf3b666886f4ca92a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454709"
 ---
 # <a name="corprfhighmonitor-enumeration"></a>COR_PRF_HIGH_MONITOR 枚举
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -50,7 +51,7 @@ typedef enum {
 `COR_PRF_HIGH_MONITOR_IMMUTABLE` 被用于表示仅在初始化过程设置的所有标志的位掩码。 尝试更改任何其他位置将导致故障这些标志`HRESULT`。
 
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

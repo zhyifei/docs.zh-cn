@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572068"
 ---
 # <a name="automatic-memory-management"></a>自动内存管理
 自动内存管理是公共语言运行时在[托管执行](../../docs/standard/managed-execution-process.md)过程中提供的服务之一。 公共语言运行时的垃圾回收器为应用程序管理内存的分配和释放。 对开发人员而言，这就意味着在开发托管应用程序时不必编写执行内存管理任务的代码。 自动内存管理可解决常见问题，例如，忘记释放对象并导致内存泄漏，或尝试访问已释放对象的内存。 本节描述垃圾回收器如何分配和释放内存。  

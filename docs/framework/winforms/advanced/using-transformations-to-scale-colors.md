@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525962"
 ---
 # <a name="using-transformations-to-scale-colors"></a>使用转换来调整颜色
 缩放变换乘以一个或多个由大量的四个颜色组件。 下表给出颜色矩阵条目，用于表示缩放。  

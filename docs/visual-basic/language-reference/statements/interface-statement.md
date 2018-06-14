@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233907"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface 语句 (Visual Basic)
 声明的接口的名称，并引入了接口包含成员的定义。  

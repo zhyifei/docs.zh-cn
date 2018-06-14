@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763782"
 ---
 # <a name="ampamp-and-entity-sql"></a>&amp;&amp; （和）(Entity SQL)
 如果两个表达式均为 `true` ，则返回 `true`；否则，返回 `false` 或 `NULL`。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494688"
 ---
 # <a name="message-security-with-a-certificate-client"></a>使用证书客户端的消息安全
 下面的方案演示 Windows Communication Foundation (WCF) 客户端和服务使用消息安全模式保护。 使用证书对客户端和服务进行身份验证。 有关详细信息，请参阅[分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  

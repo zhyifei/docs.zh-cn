@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602513"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 指定某一属性或过程可重写从基类中继承的具有相同名称的属性或过程。  

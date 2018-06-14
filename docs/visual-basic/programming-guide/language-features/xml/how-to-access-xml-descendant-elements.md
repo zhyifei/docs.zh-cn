@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648481"
 ---
 # <a name="how-to-access-xml-descendant-elements-visual-basic"></a>如何：访问 XML 后代元素 (Visual Basic)
 此示例演示如何使用子代轴属性来访问具有指定的名称且包含的 XML 元素下的所有 XML 元素。 具体而言，它使用`Value`属性集合中获取的第一个元素的值`name`子代轴属性返回。 `name`子代轴属性可获取名为的所有元素`name`中包含`contacts`对象。 此示例还使用`phone`子代轴属性来访问名为的所有后代`phone`中包含`contacts`对象。  

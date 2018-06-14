@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488606"
 ---
 # <a name="claims-and-denying-access-to-resources"></a>声明和拒绝访问资源
 Windows Communication Foundation (WCF) 支持基于声明的授权机制。 在基于是否存在声明来允许访问资源的同时，系统通常也基于是否存在声明来拒绝访问资源。 这样的系统应该在查找导致允许访问的声明之前先检查 <xref:System.IdentityModel.Policy.AuthorizationContext> 是否存在导致拒绝访问的声明。  

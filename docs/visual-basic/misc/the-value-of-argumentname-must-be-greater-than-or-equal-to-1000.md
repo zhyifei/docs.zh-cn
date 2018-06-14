@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640425"
 ---
 # <a name="the-value-of-ltargumentnamegt-must-be-greater-than-or-equal-to-1000"></a>值&lt;argumentname&gt;必须大于或等于 1000。
 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> 属性的值必须大于或等于 1000。  

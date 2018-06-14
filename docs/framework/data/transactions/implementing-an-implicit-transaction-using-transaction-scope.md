@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365301"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用事务范围实现隐式事务
 <xref:System.Transactions.TransactionScope> 类提供了一种简单方法，使您无需与事务自身进行交互，就可以在参与事务时对代码块进行标记。 事务范围可以自动选择和管理环境事务。 由于 <xref:System.Transactions.TransactionScope> 具有简单易用性和高效性，因此建议您在开发事务应用程序时使用该类。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325677"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>文档标记的分隔符（C# 编程指南）
 XML 文档注释需要使用分隔符，用来向编译器指示文档注释开始和结束的位置。 可以使用以下采用 XML 文档标记的分隔符：  

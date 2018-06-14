@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567297"
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a>使用基于事件的异步模式进行多线程编程
 有多种方式可向客户端代码公开异步功能。 基于事件的异步模式为类规定了用于显示异步行为的建议方式。  

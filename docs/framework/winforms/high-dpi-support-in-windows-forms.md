@@ -14,6 +14,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483536"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows 窗体中的高 DPI 支持
 

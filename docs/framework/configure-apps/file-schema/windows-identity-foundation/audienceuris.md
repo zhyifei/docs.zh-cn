@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755989"
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 指定是可接受的信赖方 (RP) 标识符的 Uri 的集。 除非允许的受众 Uri 之一划分作用域，将不会接受令牌。  

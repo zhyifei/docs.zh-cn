@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751982"
 ---
 # <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;清除&gt;authenticationModules （网络设置） 的元素
 清除从应用程序的所有身份验证模块。  

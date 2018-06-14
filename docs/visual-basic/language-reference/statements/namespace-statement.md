@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604857"
 ---
 # <a name="namespace-statement"></a>Namespace 语句
 声明命名空间的名称，并使遵循声明在该命名空间中进行编译的源代码。  

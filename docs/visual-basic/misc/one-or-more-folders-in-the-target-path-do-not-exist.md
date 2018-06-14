@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636710"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a>目标路径中的一个或多个文件夹不存在
 目标路径提供的一个或多个目录不存在。 这可能是不正确地分析路径的结果，如果提供了相对路径则尤其可能发生。  

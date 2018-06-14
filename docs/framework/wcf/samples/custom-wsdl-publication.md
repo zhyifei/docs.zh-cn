@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807874"
 ---
 # <a name="custom-wsdl-publication"></a>自定义 WSDL 发布
 此示例演示如何：  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590761"
 ---
 # <a name="single-data-type-visual-basic"></a>Single 数据类型 (Visual Basic)
 存储带符号 IEEE 32 位 （4 字节） 单精度浮点数，值范围从-3.4028235 e + 38 到-1.401298 e-45 负值和从 1.401298 e-45 到 3.4028235 e + 38 正值。 单精度数存储实际数目的近似值。  

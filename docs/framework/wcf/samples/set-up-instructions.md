@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809100"
 ---
 # <a name="set-up-instructions"></a>设置说明
 这组主题描述如何设置运行 Windows Communication Foundation (WCF) 服务所需的服务。  

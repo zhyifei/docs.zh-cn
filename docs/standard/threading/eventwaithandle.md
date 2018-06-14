@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592192"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 借助 <xref:System.Threading.EventWaitHandle> 类，线程可以通过发出信号和等待信号进行相互通信。 事件等待句柄（亦简称为“事件”）是可以收到信号以释放一个或多个等待线程的等待句柄。 收到信号后，事件等待句柄便会进行手动或自动重置。 <xref:System.Threading.EventWaitHandle> 类可以表示本地事件等待句柄（本地事件），也可以表示命名系统事件等待句柄（对所有进程可见的命名事件或系统事件）。  

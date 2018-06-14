@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549677"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters 和 XAML
 本主题介绍将从字符串进行的类型转换作为常规 XAML 语言功能的用途。 在.NET Framework 中，<xref:System.ComponentModel.TypeConverter>类用作可作为 XAML 属性用法中的属性值的托管自定义类实现的一部分的某种特定用途。 如果你编写的自定义的类，并且你希望你的类，若要能够用作 XAML 可设置属性值的实例，你可能需要应用<xref:System.ComponentModel.TypeConverterAttribute>到该类，编写自定义<xref:System.ComponentModel.TypeConverter>类，或两者。  

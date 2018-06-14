@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523603"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>如何：用不透明和半透明的画笔绘制
 当填充形状时，必须将 <xref:System.Drawing.Brush> 对象传递到 <xref:System.Drawing.Graphics> 类的填充方法之一。 <xref:System.Drawing.SolidBrush.%23ctor%2A> 构造函数的参数是 <xref:System.Drawing.Color> 对象。 若要填充不透明的形状，将颜色的 alpha 分量设置为 255。 若要填充半透明的形状，将 alpha 分量设置为从 1 到 254 之间的任何值。  

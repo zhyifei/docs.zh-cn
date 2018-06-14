@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361500"
 ---
 # <a name="transaction-fundamentals"></a>事务基础知识
 事务将多个任务绑定在一起。 例如，假设应用程序执行两个任务。 首先，它在数据库中创建一个新表。 然后，它调用一个专用对象，来收集数据、设置数据格式以及将数据插入新表中。 这两个任务是相关的，甚至是相互依赖的，以便只有在可以用数据填充表时才创建新表。 在单个事务范围内执行这两个任务时，会在它们之间强制建立连接。 如果第二个任务失败，则第一个任务会回滚到创建新表之前的点。  

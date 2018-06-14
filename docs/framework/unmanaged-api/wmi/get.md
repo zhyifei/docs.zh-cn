@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460143"
 ---
 # <a name="get-function"></a>Get 函数
 如果它存在，请检索指定的属性值。
@@ -87,7 +88,7 @@ HRESULT Get (
 `pVal`自变量分配的正确类型和值限定符和 COM [VariantInit](https://msdn.microsoft.com/library/ms221402(v=vs.85).aspx)函数
 
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   

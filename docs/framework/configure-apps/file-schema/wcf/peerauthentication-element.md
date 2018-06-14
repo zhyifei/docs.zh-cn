@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749811"
 ---
 # <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt; 元素
 指定用于对等客户端的身份验证选项。  

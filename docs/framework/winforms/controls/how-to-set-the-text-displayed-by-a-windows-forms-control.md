@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535608"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>如何：设置 Windows 窗体控件所显示的文本
 Windows 窗体控件通常会显示一些与控件的主要功能相关的文本。 例如，<xref:System.Windows.Forms.Button> 控件通常会显示一个题注，用于指示单击按钮时将执行的操作。 对于所有控件而言，都可通过使用 <xref:System.Windows.Forms.Control.Text%2A> 属性来设置或返回文本。 可以使用 <xref:System.Windows.Forms.Control.Font%2A> 属性更改字体。 还可使用设计器来设置文本。  另请参阅[如何： 创建访问键的 Windows 窗体控件使用设计器](http://msdn.microsoft.com/library/ms233673\(v=vs.110\))，[如何： 设置 Windows 窗体控件使用文本显示设计器](http://msdn.microsoft.com/library/ms233665\(v=vs.110\))，[如何： 设置图像通过显示 Windows 窗体控件使用设计器](http://msdn.microsoft.com/library/ms233656\(v=vs.110\))。  

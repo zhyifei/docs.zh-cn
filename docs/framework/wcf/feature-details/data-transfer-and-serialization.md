@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489201"
 ---
 # <a name="data-transfer-and-serialization"></a>数据传输和序列化
 在已连接的系统中，服务和客户端依赖于数据交换来完成任何任务。 作为开发人员的服务或客户端，您还必须了解 Windows Communication Foundation (WCF) 如何才能创建高效且易于维护应用程序处理了数据和数据序列化。  

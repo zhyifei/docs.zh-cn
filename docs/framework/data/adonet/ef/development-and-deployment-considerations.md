@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760341"
 ---
 # <a name="development-and-deployment-considerations"></a>开发和部署注意事项
 本节中的主题介绍在开发或部署基于 ADO.NET 实体框架的应用程序时要注意的问题。  

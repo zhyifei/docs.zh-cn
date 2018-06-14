@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6a3d5bb8a8cc5acc88373fa4952848d08ccd485
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434911"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>ICLRPolicyManager::SetUnhandledExceptionPolicy 方法
 发生未处理的异常时，请指定公共语言运行时 (CLR) 的行为。  
@@ -53,11 +54,11 @@ HRESULT SetUnhandledExceptionPolicy (
  默认情况下，CLR 的最后一个处理程序所有未经处理的异常，并且其默认行为是关闭进程。 主机可以更改此行为，通过设置`policy`eHostDeterminedPolicy 的值。 此值允许宿主实现其自己的默认行为，与早期版本的 CLR。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

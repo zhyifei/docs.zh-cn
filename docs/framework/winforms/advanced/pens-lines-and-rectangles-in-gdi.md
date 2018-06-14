@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527465"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+ 中的笔、直线和矩形
 若要使用绘制直线[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]你需要创建<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Graphics>对象提供实际完成绘图，方法与<xref:System.Drawing.Pen>对象存储属性，例如线条颜色、 宽度和样式。  

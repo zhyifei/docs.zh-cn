@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331462"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>如何：在注册表中创建注册表项 (Visual C#)
 本示例将值对“Name”和“Isabella”添加到当前用户注册表中的项“Names”之下。  

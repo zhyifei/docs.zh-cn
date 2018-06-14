@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810247"
 ---
 # <a name="hello-world-with-the-routing-service"></a>通过路由服务进行通信
 此示例演示 Windows Communication Foundation (WCF) 路由服务。 路由服务是可以轻松地在你的应用程序中包含基于内容的路由器的 WCF 组件。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。 在此示例中，计算器客户端配置为将消息发送到由路由器公开的一个终结点。 路由服务配置为接受发送给它的所有消息，然后将这些消息转发至与计算器服务对应的终结点。 因此，从客户端发送的消息将由路由器接收，并重新路由到实际的计算器服务。 来自计算器服务的消息将发回到路由器，后者又将这些消息传回到计算器客户端。  

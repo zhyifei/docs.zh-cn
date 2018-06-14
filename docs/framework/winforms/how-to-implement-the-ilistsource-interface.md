@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539411"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>如何：实现 IListSource 接口
 实现<xref:System.ComponentModel.IListSource>接口可创建可绑定的类不实现<xref:System.Collections.IList>而是提供了另一个位置中的列表。  

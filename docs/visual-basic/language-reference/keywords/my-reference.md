@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597316"
 ---
 # <a name="my-reference-visual-basic"></a>My 引用 (Visual Basic)
 `My`功能使编程更快且更易到常用的方法、 属性和事件向您提供直观的访问。 此表列出了中包含的对象`My`，以及可以与每个执行的操作。  

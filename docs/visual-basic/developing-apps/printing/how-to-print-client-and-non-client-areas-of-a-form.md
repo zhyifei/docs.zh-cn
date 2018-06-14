@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584737"
 ---
 # <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>如何：打印窗体的工作区和非工作区 (Visual Basic)
 通过 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 组件，可以在不使用 <xref:System.Drawing.Printing.PrintDocument> 组件的情况下如实快速打印窗体的图像。 下面的过程演示如何打印窗体，包括工作区和非工作区。 非工作区包括标题栏、边框和滚动条。  

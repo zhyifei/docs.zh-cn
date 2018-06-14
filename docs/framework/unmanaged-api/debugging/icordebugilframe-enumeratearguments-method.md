@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2e4a727dcfbc80b131f526a08b00bd0ec91ca209
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415017"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a>ICorDebugILFrame::EnumerateArguments 方法
 此帧中获取自变量的枚举数。  
@@ -42,7 +43,7 @@ HRESULT EnumerateArguments (
  `EnumerateArguments` 获取枚举数，可以列出此 ICorDebugILFrame 对象表示的调用帧中可用的自变量。 列表中会包含由自变量[vararg](/cpp/windows/vararg) （即，数目可变的参数） 不是自变量以及`vararg`。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592179"
 ---
 # <a name="threads-and-threading"></a>线程与线程处理
 操作系统使用进程隔开正在执行的不同应用。 线程是操作系统向其分配处理器时间的基本单位，在相应进程内多个线程可以同时执行代码。 每个线程负责维护异常处理程序、计划优先级，以及系统用来保存被排入计划前线程上下文的一组结构。 线程上下文包含线程在其主机进程地址空间中顺畅继续执行所需的全部信息，包括线程的一组 CPU 寄存器和堆栈。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595233"
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>类型的值&#39; &lt;typename1&gt; &#39;不能转换为&#39; &lt;typename2&gt;&#39;
 类型的值\<typename1 > 不能转换为\<typename2 >。 类型不匹配可能是由于文件引用与程序集的项目引用混合使用\<程序集名称 >。 请尝试替换为对的文件引用\<filepath > 项目中\<projectname1 > 的项目引用与\<项目名称 2> >。  

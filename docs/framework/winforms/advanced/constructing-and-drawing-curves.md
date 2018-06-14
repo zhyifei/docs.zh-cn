@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520612"
 ---
 # <a name="constructing-and-drawing-curves"></a>构造并绘制曲线
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支持多种类型的曲线： 省略号、 弧、 基数样条和贝塞尔样条。 椭圆定义其边界的矩形; 通过一段弧线，是椭圆的由起始角度和扫描角度定义的一部分。 由一组点和张力参数定义的基数样条-曲线平滑地通过在数组中，每个点和张力参数影响曲线弯曲的方式。 由两个终结点和通过控点、 未通过曲线的两个控制点定义的贝塞尔样条，但控点影响方向，并将弯曲，因为在曲线将从一个终结点与其他。  

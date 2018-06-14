@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751917"
 ---
 # <a name="ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;
 表示 Windows Communication Foundation (WCF) 服务可用于配置和公开能够通过 HTTP 进行通信的终结点的绑定。 如果用于双工协定，将使用 Web Sockets，否则将使用 HTTP。  

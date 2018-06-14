@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333451"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>示例 XML 文档 (LINQ to XML)
 整个 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的代码示例和代码段中均使用下面的示例文件。  

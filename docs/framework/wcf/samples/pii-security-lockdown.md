@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809025"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全锁定
 此示例演示如何控制的 Windows Communication Foundation (WCF) 服务的多个与安全相关功能：  

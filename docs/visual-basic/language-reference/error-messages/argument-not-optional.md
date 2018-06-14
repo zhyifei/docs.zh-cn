@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585111"
 ---
 # <a name="argument-not-optional-visual-basic"></a>非可选自变量 (Visual Basic)
 数量和类型的自变量必须符合要求。 自变量数目不正确，或者省略自变量不是可选的。 如果声明它时自变量可以仅中对用户定义过程的调用会省略`Optional`过程定义中。  

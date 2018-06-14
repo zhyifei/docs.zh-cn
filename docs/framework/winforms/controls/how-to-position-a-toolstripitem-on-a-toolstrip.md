@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531579"
 ---
 # <a name="how-to-position-a-toolstripitem-on-a-toolstrip"></a>如何：将 ToolStripItem 置于 ToolStrip
 你可以移动窗口或添加<xref:System.Windows.Forms.ToolStripItem>左侧或右侧<xref:System.Windows.Forms.ToolStrip>。  

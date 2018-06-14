@@ -8,6 +8,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "339564
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 中的新增功能
 

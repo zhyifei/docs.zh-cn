@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488294"
 ---
 # <a name="building-a-peer-channel-application"></a>生成对等通道应用程序
 下面几节提供有关开发对等通道应用程序的指南。  

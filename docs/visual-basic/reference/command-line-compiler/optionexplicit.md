@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653593"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 如果在使用之前，不声明变量，会导致编译器报告错误。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中设置-optionexplicit  
   
-1.  在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。   
+1.  在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。   
   
 2.  单击“编译”选项卡。  
   

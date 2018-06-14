@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584900"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>如何：取消数据流块
 本文档介绍如何在应用程序中启用取消。 此示例使用 Windows 窗体显示数据流管道中工作项的活动位置以及取消的效果。  

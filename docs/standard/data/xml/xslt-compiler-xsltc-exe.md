@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575435"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 编译器 (xsltc.exe)
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 然后可以将已编译的样式表直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 不能用 xsltc.exe 生成签名的程序集。  

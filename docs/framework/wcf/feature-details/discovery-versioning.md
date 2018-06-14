@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489175"
 ---
 # <a name="discovery-versioning"></a>发现版本控制
 本主题简要概述了一些新增发现功能的实现， 还概述了如何选择要使用的发现版本。  

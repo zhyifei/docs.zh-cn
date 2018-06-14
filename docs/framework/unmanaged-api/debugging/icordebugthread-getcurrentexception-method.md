@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82686fdd14783257987ec5bf9a24db7d87049d42
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421741"
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>ICorDebugThread::GetCurrentException 方法
 获取一个表示托管代码所引发的异常的 ICorDebugValue 对象的接口指针。  
@@ -46,7 +47,7 @@ HRESULT GetCurrentException (
  在异常的生命周期更改可能的异常对象和类型。 例如，将引发异常的类型为 x 后，公共语言运行时 (CLR) 可能内存不足的情况并将其升级到内存不足异常。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

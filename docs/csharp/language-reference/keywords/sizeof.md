@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270573"
 ---
 # <a name="sizeof-c-reference"></a>sizeof（C# 参考）
 用于获取非托管类型的大小（以字节为单位）。 非托管类型包括下表列出的内置类型以及以下类型：  

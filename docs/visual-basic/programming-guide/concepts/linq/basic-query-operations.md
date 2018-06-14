@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644116"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查询操作 (Visual Basic)
 本主题提供了的简要介绍[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]表达式在 Visual Basic 中，并以一些典型的一种在查询中执行的操作。 有关详细信息，请参阅下列主题：  

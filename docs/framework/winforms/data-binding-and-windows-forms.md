@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541656"
 ---
 # <a name="data-binding-and-windows-forms"></a>数据绑定和 Windows 窗体
 在 Windows 窗体中，你不仅可以绑定到传统的数据源，还可以绑定到几乎任何包含数据的结构。 可以绑定到你在运行时、从文件读取时或从其他控件的值派生时计算的一数组值。  

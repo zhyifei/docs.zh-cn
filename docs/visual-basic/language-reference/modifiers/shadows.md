@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604641"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 指定声明的编程元素重新声明并隐藏具有相同名称的元素或在基类中的重载元素集。  

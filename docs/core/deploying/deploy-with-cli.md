@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217826"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令行接口 (CLI) 工具部署 .NET Core 应用
 

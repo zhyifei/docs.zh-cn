@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590889"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 数据示例
 此示例包含 .csv 格式的示例数据，以及将它转换为“客户”、“产品”、“订单”和“订单详情”内存中集合的方法。 若要进一步试验 PLINQ，可以将其他一些主题中的代码示例粘贴到本主题的代码中，并通过 `Main` 方法调用它。 也可以将此类数据用于自己的 PLINQ 查询。  

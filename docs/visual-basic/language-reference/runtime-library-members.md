@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604583"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 运行库成员
 `Microsoft.VisualBasic`命名空间包含类、 模块、 常量和枚举构成 Visual Basic 运行库。 这些库成员提供过程、 属性和可以在代码中使用的常量值。 每个模块和类表示一个特定的功能类别。  

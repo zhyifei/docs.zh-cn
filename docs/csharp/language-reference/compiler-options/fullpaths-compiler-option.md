@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215305"
 ---
 # <a name="-fullpaths-c-compiler-options"></a>-fullpaths（C# 编译器选项）
 -fullpaths 选项导致编译器在列出编译错误和警告时指定文件的完整路径。  

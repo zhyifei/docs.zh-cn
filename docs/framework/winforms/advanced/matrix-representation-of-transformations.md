@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527279"
 ---
 # <a name="matrix-representation-of-transformations"></a>转换的矩阵表示形式
 M × n 矩阵是一组按 m 行和 n 列排列的数字。 下图显示几个矩阵。  

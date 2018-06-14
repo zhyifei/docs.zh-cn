@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492979"
 ---
 # <a name="peer-channel-scenarios"></a>对等通道方案
 对等通道 API 支持下列开发方案。  

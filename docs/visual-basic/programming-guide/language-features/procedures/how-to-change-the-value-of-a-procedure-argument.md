@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655832"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>如何：更改过程自变量的值 (Visual Basic)
 当调用过程时，你提供每个自变量对应于在过程中定义的参数之一。 在某些情况下，该过程代码可以更改基础中调用代码的自变量的值。 在其他情况下，该过程只可以更改其本地副本的自变量。  

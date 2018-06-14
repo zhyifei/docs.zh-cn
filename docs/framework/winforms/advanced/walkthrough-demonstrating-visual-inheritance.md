@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529696"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>演练：演示可视化继承
 通过 Visual 继承，可以查看基本表单上的控件和添加新控件。 在本演练中，你将创建基窗体，并将其编译到类库。 将此类库导入另一个项目，并创建一个从基窗体继承的新窗体。 在本演练中，你将学会如何执行以下任务：  
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/04/2018
   
     -   设置**文本**属性**Say Hello**。  
   
-    -   设置**（名称）**属性**btnProtected**。  
+    -   设置 **（名称）** 属性**btnProtected**。  
   
     -   设置**修饰符**属性**受保护**。 这使得继承的窗体**Form1**若要修改的属性**btnProtected**。  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 05/04/2018
   
     -   设置**文本**属性**Say Goodbye**。  
   
-    -   设置**（名称）**属性**btnPrivate**。  
+    -   设置 **（名称）** 属性**btnPrivate**。  
   
     -   设置**修饰符**属性**私有**。 这使继承的窗体**Form1**若要修改的属性**btnPrivate**。  
   

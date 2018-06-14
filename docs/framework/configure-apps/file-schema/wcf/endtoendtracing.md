@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753464"
 ---
 # <a name="ltendtoendtracinggt"></a>&lt;endToEndTracing&gt;
 一个配置元素，用于启用和禁用服务应用程序运行过程中端对端跟踪的不同方面。  

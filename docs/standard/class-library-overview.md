@@ -44,6 +44,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577301"
 ---
 # <a name="net-class-library-overview"></a>.NET 类库概述
 .NET 实现包括可加快和优化开发过程并提供对系统功能的访问的类、接口、委托和值类型。 为了便于语言之间进行交互操作，大多数 .NET 类型都符合 CLS，因而可在编译器符合公共语言规范 (CLS) 的任何编程语言中使用。  

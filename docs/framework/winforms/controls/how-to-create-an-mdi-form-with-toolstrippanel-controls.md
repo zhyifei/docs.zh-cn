@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530450"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>如何：创建带有 ToolStripPanel 控件的 MDI 窗体
 可以创建四面均框有 <xref:System.Windows.Forms.ToolStrip> 控件的多文档界面 (MDI) 窗体。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566556"
 ---
 # <a name="key-frame-animations-overview"></a>关键帧动画概述
 本主题介绍关键帧动画。 通过关键帧动画，可以使用两个以上的目标值进行动画处理，并控制动画的内插方法。  

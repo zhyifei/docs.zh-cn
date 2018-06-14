@@ -17,9 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 96a9672ee05cb1fe2573620bd1dea23e57339c93
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460836"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 方法
 通过返回其完全限定的路径来解析类型库的简单名称。  
@@ -65,7 +66,7 @@ HRESULT ResolveTypeLib(
  此接口的自定义实现必须返回[BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) ，其中包含在名为的类型库的完整路径`bstrSimpleName`参数。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** TlbRef.idl、 TlbRef.h  
   

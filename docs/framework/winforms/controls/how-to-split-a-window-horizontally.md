@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533122"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>如何：水平拆分窗口
 下面的代码示例使拆分<xref:System.Windows.Forms.SplitContainer>控制水平。  

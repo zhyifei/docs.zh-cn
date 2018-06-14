@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655126"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic 中的过程
 A*过程*是的 Visual Basic 语句括在声明语句块 (`Function`， `Sub`， `Operator`， `Get`， `Set`) 和一个匹配`End`声明。 在 Visual Basic 中的所有可执行语句必须位于某个过程内。  

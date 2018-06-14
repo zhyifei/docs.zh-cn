@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648900"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>使用全局命名空间 (Visual Basic) (LINQ to XML)
 在 Visual Basic 中的 XML 文本的主要功能之一是能够使用声明 XML 命名空间`Imports`语句。 使用此功能时，您可以声明使用前缀的 XML 命名空间，也可以声明默认的 XML 命名空间。  

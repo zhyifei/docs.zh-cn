@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491796"
 ---
 # <a name="how-to-service-data-partitioning"></a>如何：划分服务数据
 本主题概述了在同一目标服务的多个实例之间划分消息时所需采取的基本步骤。 如果需要缩放服务以提供更好的服务质量，或者需要以特定方式处理来自不同客户的请求，此时通常采用服务数据划分。 例如，从高价值即"黄金"客户的消息可能需要在更高的优先级比从标准客户的消息处理。  

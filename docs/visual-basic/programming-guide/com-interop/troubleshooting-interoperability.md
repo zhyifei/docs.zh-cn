@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643700"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>互操作性疑难解答 (Visual Basic)
 当你 COM 和托管的代码之间的互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，你可能会遇到一个或多个以下的常见问题。  

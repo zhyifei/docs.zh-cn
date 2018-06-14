@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492702"
 ---
 # <a name="interoperability-and-integration"></a>互操作性和集成
 本部分介绍互操作性和集成与 Windows Communication Foundation (WCF)。  

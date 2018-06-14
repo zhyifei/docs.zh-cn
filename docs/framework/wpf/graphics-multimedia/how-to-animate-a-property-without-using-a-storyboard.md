@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561009"
 ---
 # <a name="how-to-animate-a-property-without-using-a-storyboard"></a>如何：在不使用演示图板的情况下对属性进行动画处理
 此示例演示一种方法向属性应用动画，而无需使用<xref:System.Windows.Media.Animation.Storyboard>。  

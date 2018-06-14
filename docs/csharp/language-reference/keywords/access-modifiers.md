@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217163"
 ---
 # <a name="access-modifiers-c-reference"></a>访问修饰符（C# 参考）
 访问修饰符是关键字，用于指定成员或类型已声明的可访问性。 本部分介绍四个访问修饰符：  

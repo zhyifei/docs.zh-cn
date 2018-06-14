@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651406"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>如何：声明具有混合访问级别的属性 (Visual Basic)
 如果你想`Get`和`Set`要具有不同的访问级别的属性的过程，你可以使用中的更多的权限级别`Property`语句和中限制性更强的级别`Get`或`Set`语句。 当你想要能够获取属性的值的代码的某些部分和某些其他部分的代码将无法更改的值时，可以在属性上使用混合的访问级别。  

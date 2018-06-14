@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537637"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件的选项和剪贴板使用
 `DataGridView`控件提供了各种用于配置如何，用户可以选择单元格、 行和列的选项。 例如，你可以启用单个或多个所选内容、 选择整行或列，当用户单击单元格或选择整行或列仅当用户单击其标头，这样单元格选定区域。 如果你想要为所选内容提供你自己的用户界面，可以禁用普通的选择，并以编程方式处理所有选项。 此外，可以使用户能够将所选的值复制到剪贴板。  

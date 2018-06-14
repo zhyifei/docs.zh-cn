@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487706"
 ---
 # <a name="systemservicemodelchannelshttpsclientcertificatenotpresent"></a>System.ServiceModel.Channels.HttpsClientCertificateNotPresent
 需要客户端证书。 在请求中未找到任何证书。  

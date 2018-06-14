@@ -34,6 +34,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234722"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim 语句 (Visual Basic)
 声明，并为一个或多个变量分配存储空间。  

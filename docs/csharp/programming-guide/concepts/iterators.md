@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338866"
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 迭代器可用于逐步迭代集合，例如列表和数组。  

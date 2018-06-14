@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac4a8a0c13ba6aa0d5c65ec7fa1aa3b771c964eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404854"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags 枚举
 指定在其上激发托管调试助手 (MDA) 的线程的状态。  
@@ -43,7 +44,7 @@ typedef enum CorDebugMDAFlags {
  当调用堆栈不再描述最初引发 MDA 的位置时，该线程被视为具有*跳过*。 这是一种特殊情况，由在退出时的无效操作的线程的执行。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

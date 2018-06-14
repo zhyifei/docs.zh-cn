@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654789"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda 表达式 (Visual Basic)
 A *lambda 表达式*是可以在委托有效的任何地方使用的名称没有函数或子例程。 Lambda 表达式可以是函数或子例程，可以为单行或多行。 可以将值从当前作用域传递到 lambda 表达式中。  

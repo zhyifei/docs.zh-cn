@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573589"
 ---
 # <a name="saving-and-writing-a-document"></a>保存和写出文档
 加载并保存 <xref:System.Xml.XmlDocument> 后，保存的文档在下列方面可能不同于原始文档：  

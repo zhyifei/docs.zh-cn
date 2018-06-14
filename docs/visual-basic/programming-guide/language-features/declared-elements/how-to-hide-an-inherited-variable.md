@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649134"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>如何：隐藏继承的变量 (Visual Basic)
 派生的类继承其基类的所有定义。 如果你想要定义变量使用相同的名称与某一元素的基类，则可以隐藏，或*卷影*，该基类元素，当在派生类中定义你的变量。 如果这样做，派生类中的代码可访问你的变量，除非显式绕过隐藏的机制。  

@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c397a325edb49e3f10a46b242888b8d138957af
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462372"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>强命名（非托管 API 参考）
 强命名 API 允许客户端管理的程序集强名称签名。  

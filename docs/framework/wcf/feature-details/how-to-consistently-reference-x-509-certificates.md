@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489380"
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>如何：以一致的方式引用 X.509 证书
 可以采用下列多种方式来标识证书：证书哈希、颁发者和序列号或者使用者密钥标识符 (SKI)。 SKI 为证书的使用者公钥提供唯一标识，通常用于处理 XML 数字签名。 SKI 值通常为形式的 X.509 证书的一部分*X.509 证书扩展*。 Windows Communication Foundation (WCF) 具有一个默认*引用样式*如果 SKI 扩展，则证书中缺少使用颁发者和序列号。 如果证书中包含 SKI 扩展，该默认引用样式将使用 SKI 来指向证书。 如果在开发过程中应用程序，使用不使用 SKI 扩展的使用 SKI 扩展的证书的证书，则使用 WCF 生成消息中的引用样式也会更改。  

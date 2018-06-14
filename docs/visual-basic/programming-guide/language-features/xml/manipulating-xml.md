@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650408"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>在 Visual Basic 中操作 XML
 你可以使用*XML 文本*从外部源如字符串、 文件或流加载 XML。 然后，可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]来操作 XML 和使用[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]来查询 XML。  

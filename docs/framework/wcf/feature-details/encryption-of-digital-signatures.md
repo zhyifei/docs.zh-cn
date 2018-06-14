@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490306"
 ---
 # <a name="encryption-of-digital-signatures"></a>数字签名的加密
 默认情况下，会对消息进行签名和加密，并对签名进行数字加密。 您可以对此进行控制，方法是用 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 的实例创建一个自定义绑定，然后将其中一个类的 `MessageProtectionOrder` 属性设置为一个 <xref:System.ServiceModel.Security.MessageProtectionOrder> 枚举值。 默认值为 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>。 此过程要比仅仅签名和加密多花 10% 到 40% 的时间。 但是，禁用签名的加密可能会使攻击者猜出消息的内容。 这种情况是可能的，原因是签名元素包含消息中每个签名部分的纯文本的哈希代码。 例如，尽管默认情况下加密了消息正文，可是未加密的签名包含消息正文的哈希代码。 如果消息简短，攻击者有可能推测出内容。 对签名进行加密可减小或消除这种可能性。  

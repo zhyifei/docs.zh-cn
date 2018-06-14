@@ -1,24 +1,13 @@
 ---
-title: "安全 Overview2"
-ms.custom: 
+title: 安全 Overview2
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c952a79b70314ff9de195da322efd78d54176201
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4e8d1502096dc452d21158e4fb3684298be9b982
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361934"
 ---
 # <a name="security-overview"></a>安全性概述
 保护应用程序的安全是一个持续的过程。 因为不可能预知将来会出现哪种新的攻击技术，所以开发人员永远都不能保证某一应用程序可以免受所有的攻击。 仅因为还没有人发现（或发布）系统中的安全性缺陷，也不意味着不存在或可能不存在安全性缺陷。 在项目的设计阶段，您需要对安全性进行规划，并规划如何在应用程序生存期内维护其安全。  

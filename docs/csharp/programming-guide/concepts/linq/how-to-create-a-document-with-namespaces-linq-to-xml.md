@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330686"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>如何：使用命名空间创建文档 (C#) (LINQ to XML)
 本主题演示如何创建包含命名空间的文档。  

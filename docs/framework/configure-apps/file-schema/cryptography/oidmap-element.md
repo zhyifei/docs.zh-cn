@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350217"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt;元素
 包含 ASN.1 对象标识符 (OID) 映射到类。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803018"
 ---
 # <a name="deploying-a-wcf-library-project"></a>部署 WCF 库项目
 本主题介绍如何部署 Windows Communication Foundation (WCF) 服务库项目。  

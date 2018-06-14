@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507749"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 身份验证模式
 Windows Communication Foundation (WCF) 提供了几种模式的客户端和服务互相进行身份验证。 您可以通过使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类上的静态方法或通过配置为这些身份验证模式创建安全绑定元素。 本主题简要说明 18 种身份验证模式。  

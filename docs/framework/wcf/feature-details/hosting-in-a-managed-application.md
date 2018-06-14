@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489737"
 ---
 # <a name="hosting-in-a-managed-application"></a>在托管应用程序中承载
 Windows Communication Foundation (WCF) 服务可以承载于任何[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]应用程序。 自承载服务是最灵活的宿主选项，因为此服务部署所需要的基础结构最少。 但是，它也是最不可靠的宿主选项，因为托管应用程序执行不提供的高级宿主和管理功能，如 Internet 信息服务 (IIS) 和 Windows 服务在 WCF 中，其他宿主选项。  

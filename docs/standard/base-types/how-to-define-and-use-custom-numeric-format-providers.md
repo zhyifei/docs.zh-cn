@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575819"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>如何：定义和使用自定义数值格式提供程序
 借助 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，可以全面控制数值的字符串表示形式。 它支持用于自定义数值格式的以下功能：  

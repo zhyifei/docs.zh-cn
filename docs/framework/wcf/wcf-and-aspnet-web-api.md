@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504102"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF 和 ASP.NET Web API
 WCF 是 Microsoft 为生成面向服务的应用程序而提供的统一编程模型。 借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。 [ASP.NET Web API](http://www.asp.net/web-api)是一个框架，可以轻松地生成覆盖广泛的客户端，包括浏览器和移动设备的 HTTP 服务。 ASP.NET Web API 是用于在 .NET Framework 上生成 RESTful 应用程序的理想平台。 本主题提供了一些指南，可帮助您决定哪种技术能够最佳满足您的需要。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595256"
 ---
 # <a name="unable-to-find-required-file-39ltfilenamegt39"></a>找不到所需的文件&#39; &lt;filename&gt;&#39;
 Visual Studio 所需的文件丢失或已损坏。  

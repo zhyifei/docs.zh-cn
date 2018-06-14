@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518344"
 ---
 # <a name="application-settings-attributes"></a>应用程序设置特性
 应用程序设置体系结构提供了许多特性，它们可以应用于应用程序设置包装类或其各个属性。 这些属性是在运行时通过检查应用程序设置基础结构通常专门设置提供程序，以便定制的自定义包装规定的需求的功能。  

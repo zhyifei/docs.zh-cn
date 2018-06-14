@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542205"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>如何：创建绑定控件并设置显示数据的格式
 使用 Windows 窗体数据绑定，你可以设置使用数据绑定控件中显示的数据格式**格式设置和高级绑定**对话框。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  在窗体中，选择控件，然后打开“属性”窗口。  
   
-3.  展开 **(DataBindings)** 属性，然后在**（高级）**框中，单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 以显示**格式设置和高级绑定**对话框中，具有该控件的属性的完整列表。  
+3.  展开 **(DataBindings)** 属性，然后在 **（高级）** 框中，单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 以显示**格式设置和高级绑定**对话框中，具有该控件的属性的完整列表。  
   
 4.  选择你想要将绑定，然后单击的属性**绑定**箭头。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/04/2018
     |货币|使用指定的小数位数**小数位数**up-down 控件。|  
     |日期时间|选择的日期和时间应显示方式选择其中一个中的项**类型**选择框。|  
     |科学记数法|使用指定的小数位数**小数位数**up-down 控件。|  
-    |自定义|指定一个自定义格式字符串用法。<br /><br /> 有关详细信息，请参阅[类型格式设置](../../../docs/standard/base-types/formatting-types.md)。 **注意：**自定义格式字符串不能保证可成功往返行程之间的数据源和绑定的控件。 请改为处理该绑定的 <xref:System.Windows.Forms.Binding.Parse> 或 <xref:System.Windows.Forms.Binding.Format> 事件，并在事件处理代码中应用自定义格式设置。|  
+    |自定义|指定一个自定义格式字符串用法。<br /><br /> 有关详细信息，请参阅[类型格式设置](../../../docs/standard/base-types/formatting-types.md)。 **注意：** 自定义格式字符串不能保证可成功往返行程之间的数据源和绑定的控件。 请改为处理该绑定的 <xref:System.Windows.Forms.Binding.Parse> 或 <xref:System.Windows.Forms.Binding.Format> 事件，并在事件处理代码中应用自定义格式设置。|  
   
 8.  单击**确定**关闭**格式设置和高级绑定**对话框并返回到属性窗口。  
   

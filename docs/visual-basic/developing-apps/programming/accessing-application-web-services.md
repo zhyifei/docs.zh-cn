@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583729"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>访问应用程序 Web 服务 (Visual Basic)
 `My.WebServices` 对象提供当前项目所引用的每个 Web 服务的实例。 按需实例化每个实例。 可以通过 `My.WebServices` 对象的属性访问这些 Web 服务。 该属性的名称与该属性所访问的 Web 服务的名称相同。 任何自 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> 继承的类均为 Web 服务。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757055"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>从数据视图中创建数据表
 如果从数据源检索到数据，并且使用该数据填充了 <xref:System.Data.DataTable>，则在可能需要对返回的数据进行排序和筛选，或者通过其他方式限制返回的数据时，不必重新检索该数据。 <xref:System.Data.DataView> 类可以实现此目的。 此外，如果你需要创建一个新<xref:System.Data.DataTable>从<xref:System.Data.DataView>，你可以使用<xref:System.Data.DataView.ToTable%2A>方法将所有行和列或者数据的子集复制到新<xref:System.Data.DataTable>。 <xref:System.Data.DataView.ToTable%2A> 方法使您可以：  

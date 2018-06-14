@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550745"
 ---
 # <a name="checkbox"></a>CheckBox
 你可以使用<xref:System.Windows.Controls.CheckBox>中[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的应用程序以表示用户可以选择或清除的选项。 你可以使用一个复选框，或可以组两个或多个复选框。  

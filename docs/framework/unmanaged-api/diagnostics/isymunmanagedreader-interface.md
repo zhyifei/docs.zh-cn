@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a78616ea1dccdf82c4e00d23d2ff630c98cb4e38
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431898"
 ---
 # <a name="isymunmanagedreader-interface"></a>ISymUnmanagedReader 接口
 表示提供对文档、 方法和符号存储区内的变量的访问的符号读取器。  

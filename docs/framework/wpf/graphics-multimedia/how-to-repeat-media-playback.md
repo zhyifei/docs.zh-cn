@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558650"
 ---
 # <a name="how-to-repeat-media-playback"></a>如何：重复媒体播放
 此示例演示如何无限期播放媒体，即设置媒体使其以无限循环方式播放。  

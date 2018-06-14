@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569446"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM 中的命名空间支持
 XML 文档对象模型 (DOM) 完全识别命名空间。 只支持识别命名空间的 XML 文档。 万维网联合会 (W3C) 指定实现级别 1 的 DOM 应用程序可以不识别命名空间，而 DOM 级别 2 功能识别命名空间。 然而，XML DOM 中的所有功能都识别命名空间，不论该方法来自级别 1 还是级别 2 DOM 建议。  

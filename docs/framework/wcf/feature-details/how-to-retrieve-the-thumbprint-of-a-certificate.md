@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492429"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>如何：检索证书的指纹
 时，使用 X.509 证书进行身份验证的情况下编写 Windows Communication Foundation (WCF) 应用程序，它通常是需要指定在证书中找到的声明。 例如，在 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 方法中使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 枚举时，必须提供指纹声明。 查找声明值有两个步骤。 首先，打开用于证书的 Microsoft 管理控制台 (MMC) 管理单元 （请参阅 [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。）接着，如下文所述，查找适当的证书并复制其指纹（或其他声明值）。  

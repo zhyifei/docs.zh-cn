@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647925"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>如何：将一个数组赋给另一个数组 (Visual Basic)
 因为数组对象，你可以在赋值语句和其他对象类型一样使用它们。 一个数组变量保留一个指向数据构成的数组元素和的秩和长度的信息，并赋值将复制仅此指针。  

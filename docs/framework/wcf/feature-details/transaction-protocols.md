@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508432"
 ---
 # <a name="transaction-protocols"></a>事务协议
 Windows Communication Foundation (WCF) 实现 Ws-atomic Transaction 和 Ws-coordination 协议。  

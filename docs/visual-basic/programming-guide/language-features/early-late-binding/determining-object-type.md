@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648289"
 ---
 # <a name="determining-object-type-visual-basic"></a>确定对象类型 (Visual Basic)
 一般的对象变量 (即，变量声明为`Object`) 可以包含来自任何类的对象。 使用类型的变量时`Object`，可能需要采取不同的基于对象的类; 例如，某些对象可能不支持特定属性或方法。 Visual Basic 提供以下两种方法确定哪种类型的对象存储在一个对象变量：`TypeName`函数和`TypeOf...Is`运算符。  

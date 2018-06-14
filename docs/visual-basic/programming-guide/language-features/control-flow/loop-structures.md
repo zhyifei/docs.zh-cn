@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647886"
 ---
 # <a name="loop-structures-visual-basic"></a>循环结构 (Visual Basic)
 Visual Basic 循环结构，可以重复运行的代码的一个或多个行。 您可以重复循环结构中的语句，直到条件为`True`，直到条件`False`，集合中指定的次数，或者一次每个元素。  

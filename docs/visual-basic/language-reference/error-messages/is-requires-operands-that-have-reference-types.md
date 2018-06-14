@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585575"
 ---
 # <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a>&#39;是&#39;需要操作数具有引用类型，但此操作数具有值类型&#39; &lt;typename&gt;&#39;
 `Is`比较运算符确定是否两个对象变量引用同一个实例。 此比较不为值类型定义。  

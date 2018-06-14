@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356096"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>具有 Web 服务的 LINQ to SQL N 层
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 旨在特别针对在如 Web 服务的松耦合数据访问层 (DAL) 的中间层上使用。 如果表示层为 ASP.NET 网页，则使用 <xref:System.Web.UI.WebControls.LinqDataSource> Web 服务器控件管理用户界面与中间层上的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 之间的数据传输。 如果表示层不是 ASP.NET 页，则中间层和表示层都必须执行一些附加工作以管理数据的序列化和反序列化。  

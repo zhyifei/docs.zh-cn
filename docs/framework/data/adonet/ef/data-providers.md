@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760383"
 ---
 # <a name="entity-framework-data-providers"></a>实体框架数据提供程序
 本节提供有关支持[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的数据提供程序的信息。  

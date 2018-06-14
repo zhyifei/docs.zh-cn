@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754514"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;添加&gt;将 bypasslist （网络设置） 的元素
 将 IP 地址或 DNS 名称添加到代理绕过列表。  

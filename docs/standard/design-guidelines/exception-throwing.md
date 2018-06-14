@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573716"
 ---
 # <a name="exception-throwing"></a>异常引发
 在本部分中所述的异常引发准则需要正确定义的执行失败的含义。 执行失败每当某一成员不能执行其设计目的 （什么成员名称所暗示的）。 例如，如果`OpenFile`方法无法返回到调用方的一个打开的文件句柄，它将被认为执行失败。  

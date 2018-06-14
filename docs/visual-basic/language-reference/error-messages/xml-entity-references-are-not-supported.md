@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595821"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>不支持 XML 实体引用
 实体引用 (例如， `©`) 未定义在 XML 1.0 规范是包含作为 XML 文本的值。 仅`&`， `"`， `<`， `>`，和`'`XML 文本中支持 XML 实体引用。  

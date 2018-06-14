@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525078"
 ---
 # <a name="button-control-windows-forms"></a>Button 控件（Windows 窗体）
 Windows 窗体 `Button` 控件允许用户通过单击来执行某项操作。 `Button` 控件可以显示文本和图像。 单击该按钮时，看上去它像是被按下并释放。  

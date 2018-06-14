@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575182"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>如何：在独立存储中创建文件和目录
 获得独立存储区之后，您可以创建用于存储数据的目录和文件。 在存储中，文件名和目录名称是相对于虚拟文件系统的根目录进行指定。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558209"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>可样式化控件的设计准则
 本文档概述在设计可方便地样式化和模板化的控件时需要考虑的一组最佳做法。 在为内置的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件集处理主题控件样式时，我们通过大量试验和错误总结出了这组最佳做法。 我们已经认识到，成功的样式设置不只是设计完善的对象模型的功能，也是样式本身的功能。 本文档面向控件作者，而不是样式作者。  

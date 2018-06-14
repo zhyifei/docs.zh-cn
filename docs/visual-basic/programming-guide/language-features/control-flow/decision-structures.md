@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648192"
 ---
 # <a name="decision-structures-visual-basic"></a>决策结构 (Visual Basic)
 Visual Basic，可以测试条件，然后执行不同的操作，具体取决于该测试的结果。 你可以测试条件是 true 或 false 的各种值的表达式，或生成时执行一系列语句的各种异常。  

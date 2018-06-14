@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760188"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>从命令目录树生成 SQL - 最佳做法
 输出查询命令目录树高度模拟可使用 SQL 表示的查询。 但是，对于提供程序编写者而言，从输出命令目录树生成 SQL 还是存在一些常见的难题。 本主题讨论这些难题。 在下一主题中，示例提供程序将演示如何解决这些难题。  

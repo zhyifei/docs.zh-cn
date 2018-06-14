@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528318"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>在 Windows 窗体控件中定义属性
 有关属性的概述，请参阅[属性概述](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。 定义属性时需考虑以下重要注意事项：  

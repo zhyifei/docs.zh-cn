@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533327"
 ---
 # <a name="how-to-provide-standard-menu-items-to-a-form"></a>如何：向窗体提供标准菜单项
 可使用 <xref:System.Windows.Forms.MenuStrip> 控件向窗体提供标准菜单。  

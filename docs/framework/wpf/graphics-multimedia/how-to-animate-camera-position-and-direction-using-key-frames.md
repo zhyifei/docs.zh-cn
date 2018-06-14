@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558824"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>如何：使用关键帧对照相机位置和方向进行动画处理
 在下面的示例中，<xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames>用于进行动画处理的位置<xref:System.Windows.Media.Media3D.PerspectiveCamera>三维场景中。 此外，<xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames>用于进行动画处理照相机指向在三维场景中的方向。 这两类动画使用若干关键帧来创建动画效果的一系列：  

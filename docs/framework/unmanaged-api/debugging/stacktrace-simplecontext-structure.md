@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acf2ba752ace49ae288857dc22819a8e7e429a34
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424048"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 结构
 提供可用于代替完整的 `CONTEXT` 结构的简单上下文。  
@@ -49,7 +50,7 @@ struct StackTrace_SimpleContext
  因为堆栈跟踪函数通常需要返回地址、 帧偏移量和堆栈地址，你可以选择使用`SimpleContext`而不是较大的结构`CONTEXT`结构。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** SOS_Stacktrace.h  
   

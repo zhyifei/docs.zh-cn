@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744390"
 ---
 # <a name="manipulations-and-inertia-overview"></a>操作和惯性概述
 操作使用户可借助操控器移动、旋转用户界面 (UI) 元素以及调整它的大小。 操控器是指鼠标或（在可触摸情况下）触笔或手指。  

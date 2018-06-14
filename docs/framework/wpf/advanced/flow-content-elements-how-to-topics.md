@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546369"
 ---
 # <a name="flow-content-elements-how-to-topics"></a>流内容元素帮助主题
 本部分中的主题介绍如何完成使用各种流内容元素和相关的功能的常见任务。  

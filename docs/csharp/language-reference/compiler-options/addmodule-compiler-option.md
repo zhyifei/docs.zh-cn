@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215766"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule（C# 编译器选项）
 此选项将添加一个模块，该模块通过将 target: module 切换到当前编译进行创建。  

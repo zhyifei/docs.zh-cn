@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398022"
 ---
 # <a name="lazy-initialization"></a>延迟初始化
 对象的迟缓初始化意味着推迟创建该对象，直到它被首次使用。 （在本主题中，术语迟缓初始化和迟缓实例化是同义词。）迟缓初始化主要用于提升性能、避免计算浪费和降低程序内存需求。 以下是常见方案：  

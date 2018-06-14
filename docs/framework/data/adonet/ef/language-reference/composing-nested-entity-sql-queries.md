@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760851"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>撰写嵌套的 Entity SQL 查询
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是一种功能丰富的语言。 构建基块[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是一个表达式。 与传统的 SQL 不同[!INCLUDE[esql](../../../../../../includes/esql-md.md)]并不仅限于表格结果集：[!INCLUDE[esql](../../../../../../includes/esql-md.md)]支持编写可以具有文本、 参数或嵌套的表达式的复杂表达式。 表达式中的值可以参数化，或由其他表达式构成。  

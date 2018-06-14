@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520274"
 ---
 # <a name="tracking-records"></a>跟踪记录
 检测工作流运行时的目的是为了发出跟踪记录，以便跟踪工作流实例的执行。  

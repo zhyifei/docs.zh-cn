@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd7a67237d89864915f8b4f1f7361d1f113d1e5d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404724"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator 接口
 由数据访问服务层用于在目标进程中查找程序集的元数据。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
  API 客户端（即调试器）必须针对特定的目标进程实现此接口。 例如，活动进程的实现是不同于内存转储的。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** ClrData.idl、 ClrData.h  
   

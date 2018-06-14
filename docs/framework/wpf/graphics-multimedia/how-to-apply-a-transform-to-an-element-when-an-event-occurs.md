@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558972"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>如何：在事件发生时向元素应用变换
 此示例演示如何将应用<xref:System.Windows.Media.ScaleTransform>事件发生时。 此处说明的概念与用于应用其他类型的转换的概念相同。 有关可用类型的转换的详细信息，请参阅<xref:System.Windows.Media.Transform>类或[转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)。  

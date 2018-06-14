@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755118"
 ---
 # <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
 使用的服务或安全令牌处理程序集合中注册的令牌重放缓存。  

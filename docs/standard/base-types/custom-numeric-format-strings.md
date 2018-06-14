@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579231"
 ---
 # <a name="custom-numeric-format-strings"></a>自定义数字格式字符串
 你可以创建自定义数字格式字符串，这种字符串由一个或多个自定义数字说明符组成，用于定义设置数值数据格式的方式。 自定义数字格式字符串是任何不属于 [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)的格式字符串。  

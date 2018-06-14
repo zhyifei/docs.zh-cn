@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398620"
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 的基于声明的授权
 在依赖方应用程序中，授权可确定允许已经过身份验证的标识访问的资源以及允许该标识对这些资源执行的操作。 授权不当会导致信息泄露和数据篡改。 本主题概述了可用于通过 Windows Identity Foundation (WIF) 和安全令牌服务 (STS) 来实现针对声明感知 ASP.NET Web 应用程序和服务（例如，Microsoft Azure 访问控制服务 (ACS)）的授权的方法。  

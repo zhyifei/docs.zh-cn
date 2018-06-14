@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542257"
 ---
 # <a name="using-keyboard-events"></a>使用键盘事件
 大多数 Windows 窗体程序通过处理键盘事件处理键盘输入。 本主题提供对键盘事件的概述，包括有关何时使用每个事件和向每个事件提供的数据的详细信息。  另请参阅[事件处理程序概述 （Windows 窗体）](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))，[事件概述 （Windows 窗体）](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))。  

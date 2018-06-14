@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 761dd55d2ae48739f24a03b8ce81c571fb211a5a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453152"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>ICorProfilerInfo::GetInprocInspectionInterface 方法
 对于"ICorDebugProcess"接口获取可以查询的对象。 此方法是.NET Framework 2.0 版中过时。  
@@ -41,7 +42,7 @@ HRESULT GetInprocInspectionInterface(
  公共语言运行时 (CLR) 调试 API 支持.NET Framework 1.0 版中进程内调试的限制。 探查器使用了调试 API 的检查部分启用进程内调试。 由于客户反馈，进程内调试已从.NET Framework 2.0 版中，在中删除和替换为一组是根据分析 API 的详细信息的功能。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

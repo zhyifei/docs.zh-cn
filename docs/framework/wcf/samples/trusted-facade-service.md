@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807656"
 ---
 # <a name="trusted-facade-service"></a>受信任的外观服务
 本方案示例演示如何以流从一项服务的调用方的标识信息到另一个使用 Windows Communication Foundation (WCF) 安全基础结构。  

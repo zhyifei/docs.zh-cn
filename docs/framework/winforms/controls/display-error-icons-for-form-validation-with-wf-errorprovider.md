@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527295"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标
 你可以使用 Windows 窗体<xref:System.Windows.Forms.ErrorProvider>组件以显示错误图标，当用户输入无效数据。 你必须具有它们之间切换，从而调用的验证代码以在窗体上的至少两个控件。  

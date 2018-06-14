@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553363"
 ---
 # <a name="styles-and-templates"></a>样式和模板
 Windows Presentation Foundation (WPF) 样式和模板化指套件的允许的应用程序、 文档或用户界面 (UI) 设计器来创建视觉效果更佳的应用程序的功能 （样式、 模板、 触发器和情节提要） 和标准化尤其是查找其产品。  

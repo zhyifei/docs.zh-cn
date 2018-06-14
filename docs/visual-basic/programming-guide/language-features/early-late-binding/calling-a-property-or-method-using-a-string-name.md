@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649222"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字符串名调用属性或方法 (Visual Basic)
 在大多数情况下，可以在设计时发现的属性和方法的对象，并编写代码来处理它们。 但是，在某些情况下你可能事先不知道有关对象的属性和方法，或者您可能只想启用最终用户可以指定属性或在运行时执行方法的灵活性。  

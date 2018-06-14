@@ -1,26 +1,13 @@
 ---
 title: 针对相关的疑难解答
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2de3a8cac6e12d898173f8181b295c3e2e461cc7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c597012a5ff69ecb700c51e00ac7d1218962e9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508379"
 ---
 # <a name="troubleshooting-correlation"></a>针对相关的疑难解答
 相关用于在工作流服务消息之间和工作流服务消息与正确的工作流实例之间建立关联，如果未正确配置相关，则将接收不到消息，且应用程序无法正常运行。 本主题概述了对相关问题进行疑难解答的几种方法，还列出了使用相关时可能出现的一些常见问题。  
@@ -146,7 +133,7 @@ supports the context protocol and has a valid context initialized.
  有关详细信息，请参阅[上下文交换](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)。  
   
 ## <a name="common-request-reply-correlation-issues"></a>常见请求-答复相关问题  
- 请求-答复相关用于<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>对配合使用的工作流服务与实现双向操作<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>中调用双向操作在另一个站点中的对服务。 在 WCF 服务中调用双向操作时，该服务可以是传统的基于命令性代码的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，也可以是工作流服务。 若要使用请求-答复相关，必须使用双向绑定（如 <xref:System.ServiceModel.BasicHttpBinding>），且操作则必须是双向的。  
+ 请求-答复相关用于<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>对配合使用的工作流服务与实现双向操作<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>中调用双向操作在另一个站点中的对服务。 该服务调用 WCF 服务中的双向操作时，可以是传统命令性代码基于 WCF 服务，也可以是工作流服务。 若要使用请求-答复相关，必须使用双向绑定（如 <xref:System.ServiceModel.BasicHttpBinding>），且操作则必须是双向的。  
   
  如果工作流服务具有并行或重叠的双向操作<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>或<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>对，则隐式相关句柄管理由<xref:System.ServiceModel.Activities.WorkflowServiceHost>可能不足，尤其是在高压力方案和可能无法正确路由消息。 若要防止此问题发生，我们建议您在使用请求-答复相关时，始终显式指定 <xref:System.ServiceModel.Activities.CorrelationHandle>。 使用时**SendAndReceiveReply**和**ReceiveAndSendReply**中的消息部分的模板**工具箱**中工作流设计器中， <xref:System.ServiceModel.Activities.CorrelationHandle>显式默认配置。 使用代码生成工作流时，将在对中第一个活动的 <xref:System.ServiceModel.Activities.CorrelationHandle> 中指定 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>。 在下面的示例中，使用 <xref:System.ServiceModel.Activities.Receive> 中指定的显式 <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> 来配置 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> 活动。  
   

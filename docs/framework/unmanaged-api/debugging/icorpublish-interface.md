@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65daa8d783210426136860d95dd5782e21de33a4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421527"
 ---
 # <a name="icorpublish-interface"></a>ICorPublish 接口
 用作发布进程的信息和有关应用程序域的信息，这些进程中的常规接口。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 |[GetProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublish-getprocess-method.md)|获取[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)实例，它表示具有指定标识符的过程。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorPub.idl、 CorPub.h  
   

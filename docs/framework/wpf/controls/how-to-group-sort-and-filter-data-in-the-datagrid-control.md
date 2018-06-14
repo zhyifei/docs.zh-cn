@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557025"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>如何：在 DataGrid 控件中对数据进行分组、排序和筛选
 通常很有用数据在<xref:System.Windows.Controls.DataGrid>通过分组、 排序和筛选的数据不同的方式。 若要进行分组、 排序和筛选数据中的<xref:System.Windows.Controls.DataGrid>，你将其绑定到<xref:System.Windows.Data.CollectionView>支持这些功能。 你可以然后使用中的数据<xref:System.Windows.Data.CollectionView>而不会影响基础数据源。 集合视图中的更改会反映在<xref:System.Windows.Controls.DataGrid>用户界面 (UI)。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571108"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET 中的类型转换表
 当一种类型的值转换为大小相等或更大的另一类型时，将发生扩大转换。 当一种类型的值转换为较小的另一种类型时，将发生收缩转换。 本主题中的表格解释了这两种转换类型的行为。  

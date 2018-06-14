@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643767"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>如何： 投影对象图 (Visual Basic)
 本主题演示如何从 XML 投影或填充对象图。  

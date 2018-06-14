@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529586"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>如何：使用设计器向选项卡页添加控件
 Windows 窗体使用<xref:System.Windows.Forms.TabControl>是组织方式显示其他控件。 可以使用这些说明要显示的图片上的选项卡页的主要部分。 有关将图标添加到选项卡页的标签部分的信息，请参阅[如何： 更改 Windows 窗体 TabControl 的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)。  

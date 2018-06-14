@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652573"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>代码中用作元素名称的关键字 (Visual Basic)
 任何程序元素-例如变量、 类或成员-可以具有相同的名称与受限制的关键字。 例如，可以创建一个名为变量`Loop`。 但是，来指代你版-它具有与同名的受限`Loop`关键字-必须在它前面加上一个完全限定字符串，或将它括在方括号 (`[ ]`)，如下面的示例所示。  

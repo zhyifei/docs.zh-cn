@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744572"
 ---
 # <a name="pipeline-development"></a>管线开发
 外接程序管线是主机应用程序和其外接程序必须使用才能相互之间进行通信的管道段的路径。  

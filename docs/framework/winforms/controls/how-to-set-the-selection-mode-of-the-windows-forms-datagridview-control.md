@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533551"
 ---
 # <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>如何：设置 Windows 窗体 DataGridView 控件的选择模式
 下面的代码示例演示如何配置<xref:System.Windows.Forms.DataGridView>控件，以便单击任意位置行中自动选择整行，并且可以选择一次只有一个该行。  

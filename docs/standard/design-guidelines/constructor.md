@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575552"
 ---
 # <a name="constructor-design"></a>构造函数设计
 有两种类型的构造函数： 键入构造函数和实例构造函数。  

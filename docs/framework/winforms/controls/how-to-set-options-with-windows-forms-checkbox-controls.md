@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534081"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>如何：使用 Windows 窗体 CheckBox 控件设置选项
 Windows 窗体<xref:System.Windows.Forms.CheckBox>控制用于授予用户 True/False 或是/否选项。 选择此项时，该控件将显示一个复选标记。  

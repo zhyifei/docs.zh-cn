@@ -1,14 +1,6 @@
 ---
 title: SAML 令牌和声明
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,20 +10,15 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 374fde23a1bf8df704f76500b4808c16d142ddd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494727"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 令牌和声明
-安全断言标记语言 (SAML)*令牌*是声明的 XML 表示形式。 默认情况下，SAML 令牌[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]在联合的安全方案的用途是*颁发的令牌*。  
+安全断言标记语言 (SAML)*令牌*是声明的 XML 表示形式。 默认情况下，Windows Communication Foundation (WCF) 在联合的安全方案中使用的 SAML 令牌是*颁发的令牌*。  
   
  SAML 令牌包含由一个实体所生成的关于另一实体的多组声明的语句。 例如，在联合安全方案中，语句是由安全令牌服务针对系统中的某一用户所生成的。 安全令牌服务将对 SAML 令牌进行签名，以指示令牌中所包含语句的真实性。 此外，SAML 令牌与 SAML 令牌用户确实了解的加密密钥材料关联。 这就向依赖方证明了 SAML 令牌实际上是颁发给该用户的。 例如，在典型的方案中：  
   
@@ -44,7 +31,7 @@ ms.lasthandoff: 04/28/2018
 4.  依赖方可通过 SAML 令牌上的签名了解到，该令牌是由安全令牌服务颁发的； 依赖方还可通过使用校验密钥创建的消息签名了解到，该令牌是颁发给客户端的。  
   
 ## <a name="from-claims-to-samlattributes"></a>从 Claim 到 SamlAttribute  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，SAML 令牌中的语句是作为 <xref:System.IdentityModel.Tokens.SamlAttribute> 对象建模的，可以直接从 <xref:System.IdentityModel.Claims.Claim> 对象填充，前提是 <xref:System.IdentityModel.Claims.Claim> 对象的 <xref:System.IdentityModel.Claims.Claim.Right%2A> 属性为 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>，并且 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 属性的类型为 <xref:System.String>。 例如：  
+ 在 WCF，SAML 令牌中的语句进行建模为<xref:System.IdentityModel.Tokens.SamlAttribute>对象，可以直接从填充<xref:System.IdentityModel.Claims.Claim>对象，提供<xref:System.IdentityModel.Claims.Claim>对象具有<xref:System.IdentityModel.Claims.Claim.Right%2A>属性<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>和<xref:System.IdentityModel.Claims.Claim.Resource%2A>属性属于类型<xref:System.String>。 例如：  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  

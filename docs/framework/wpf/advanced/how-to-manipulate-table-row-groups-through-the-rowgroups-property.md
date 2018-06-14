@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545160"
 ---
 # <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>如何： 处理表&#39;s 行组通过行组属性
 此示例演示一些较常见的操作可以在通过表的行组上执行<xref:System.Windows.Documents.Table.RowGroups%2A>属性。  

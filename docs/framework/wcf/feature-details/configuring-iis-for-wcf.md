@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491711"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>为 Windows Communication Foundation 配置 Internet Information Services 7.0
 Internet Information Services (IIS) 7.0 具有模块化设计，允许有选择地安装需要的组件。 此设计基于在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中引入的新清单驱动的组件化技术。 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 有 40 多个独立功能组件可以独立安装。 这使 IT 专业人士能够轻松地按需要自定义安装。 本主题讨论如何配置[!INCLUDE[iisver](../../../../includes/iisver-md.md)]有关使用 Windows Communication Foundation (WCF) 并确定所需的组件。  

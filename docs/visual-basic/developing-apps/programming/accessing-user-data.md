@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582839"
 ---
 # <a name="accessing-user-data-visual-basic"></a>访问用户数据 (Visual Basic)
 本部分包含有关处理 `My.User` 对象的主题以及可通过该操作完成的任务。  

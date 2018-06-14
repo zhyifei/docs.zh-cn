@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592114"
 ---
 # <a name="string-data-type-visual-basic"></a>String 数据类型 (Visual Basic)
 包含从 0 到 65535 之间的值中的无符号的 16 位 （2 个字节） 码位的序列该范围。 每个*代码点*，或字符代码，表示单个 Unicode 字符。 一个字符串可以包含从 0 到二十亿 (2 ^31) Unicode 字符。  

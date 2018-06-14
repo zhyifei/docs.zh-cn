@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499332"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>如何：指定客户端凭据类型
 设置安全模式（传输或消息）后，您可以设置客户端凭据类型。 此属性指定客户端必须向服务提供以进行身份验证的凭据类型。 有关设置安全模式 （之前设置客户端凭据类型的必需步骤） 的详细信息，请参阅[如何： 将安全模式设置](../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  

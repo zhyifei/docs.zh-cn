@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575370"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>执行不区分区域性的字符串操作
 默认情况下，大多数执行区域性敏感型字符串操作的 .NET Framework 方法提供方法重载，以便于通过传递 <xref:System.Globalization.CultureInfo> 参数来显式指定要使用的区域性。 这些重载允许消除大小写映射和排序规则中的区域性差异，保证获得不区分区域性的结果。  

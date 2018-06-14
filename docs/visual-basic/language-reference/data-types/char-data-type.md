@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590793"
 ---
 # <a name="char-data-type-visual-basic"></a>Char 数据类型 (Visual Basic)
 取值范围为 0 到 65535 的保存无符号的 16 位 （2 个字节） 码位。 每个*代码点*，或字符代码，表示单个 Unicode 字符。  

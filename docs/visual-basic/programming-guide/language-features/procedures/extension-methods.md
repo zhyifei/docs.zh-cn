@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655279"
 ---
 # <a name="extension-methods-visual-basic"></a>扩展方法 (Visual Basic)
 扩展方法使开发人员能够将自定义功能添加到已定义而无需创建新的派生的类型的数据类型。 扩展方法使您可以用来编写可以就像它是现有类型的实例方法调用的方法。  

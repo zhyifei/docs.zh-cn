@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557766"
 ---
 # <a name="textbox-overview"></a>TextBox 概述
 <xref:System.Windows.Controls.TextBox>类使你能够显示或编辑无格式的文本。 一个常见用途<xref:System.Windows.Controls.TextBox>正在编辑的窗体中的未格式化的文本。 例如，一个表单要求输入用户的名称，电话号码等将使用<xref:System.Windows.Controls.TextBox>文本输入的控件。 本主题介绍<xref:System.Windows.Controls.TextBox>类，并提供如何使用中的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和 C#。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331436"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>编译器生成的异常（C# 编程指南）
 当基本操作失败时，.NET Framework 的公共语言运行时 (CLR) 会自动引发一些异常。 这些异常及其错误条件在下表中列出。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 256afe9a4304654ddb263a0671db7525f3bedcba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429632"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 函数
 获取指定从最新的安装公共语言运行时 (CLR) 版本导出的函数的地址。  
@@ -53,7 +54,7 @@ HRESULT GetRealProcAddress (
 |CLR_E_SHIM_RUNTIMEEXPORT|不会在运行时中导出函数。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   

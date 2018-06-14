@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645371"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>如何： 使用 XSD (LINQ to XML) 进行验证 (Visual Basic)
 <xref:System.Xml.Schema> 命名空间包含扩展方法，这些扩展方法可以简化针对 XML 架构定义语言 (XSD) 文件验证 XML 树的过程。 有关更多信息，请参见 <xref:System.Xml.Schema.Extensions.Validate%2A> 方法文档。  

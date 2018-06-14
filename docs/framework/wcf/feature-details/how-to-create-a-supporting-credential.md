@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495881"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>如何：创建支持凭据
 自定义安全方案可能要求提供多个凭据。 例如，某个服务可能要求客户端不仅提供用户名和密码，还要提供能够证明客户端用户已满 18 岁的凭据。 第二个凭据是*支持凭据*。 本主题说明如何在 Windows Communication Foundation (WCF) 客户端中实现此类凭据。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584197"
 ---
 # <a name="visual-basic-power-packs-controls"></a>Visual Basic Power Pack 控件
 Visual Basic Power Packs 控件是附加的 Windows 窗体控件。 它们未包含在 Visual Studio 中。  你可以[下载这些](http://go.microsoft.com/fwlink/?LinkId=321343)，但作为提供的原样，不支持。  

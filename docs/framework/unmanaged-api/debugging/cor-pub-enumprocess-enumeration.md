@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fcdb5883e109d7e0c73c8fb76ee61b52cf23091f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406996"
 ---
 # <a name="corpubenumprocess-enumeration"></a>COR_PUB_ENUMPROCESS 枚举
 标识要枚举的进程的类型。  
@@ -43,7 +44,7 @@ typedef enum {
  非托管调试 API 的当前版本仅枚举托管进程。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorPub.idl、 CorPub.h  
   

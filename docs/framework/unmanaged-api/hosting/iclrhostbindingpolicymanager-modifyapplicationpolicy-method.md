@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a221b286ada97c3c03387556cb30ee6ddd2c453
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436249"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy 方法
 修改指定的程序集绑定策略，并创建新版本的策略。  
@@ -79,11 +80,11 @@ HRESULT  ModifyApplicationPolicy (
  `ModifyApplicationPolicy`两次调用方法。 第一次调用应提供的 null 值`pbNewApplicationPolicy`参数。 此调用将返回包含必需的值的`pcbNewAppPolicySize`。 第二个调用应提供此值`pcbNewAppPolicySize`，并指向该大小的缓冲区`pbNewApplicationPolicy`。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

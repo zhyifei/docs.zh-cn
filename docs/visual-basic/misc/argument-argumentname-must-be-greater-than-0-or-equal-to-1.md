@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597586"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-greater-than-0-or-equal-to--1"></a>自变量&#39; &lt;argumentname&gt; &#39;必须大于 0 或等于-1
 参数的值小于 0，但不等于 -1。  

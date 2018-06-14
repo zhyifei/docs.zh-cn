@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397736"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>使用 .NET Native 衡量启动改善
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 显著地缩短了应用的启动时间。 这一改善在便携式、低功耗设备上和在使用复杂应用时尤其明显。 该主题将帮助你初步了解衡量这个启动提升所需的基本检测。  

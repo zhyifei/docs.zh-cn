@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234752"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 指定一个或多个声明编程元素的成员访问修饰符只能从来访问在其自身的类或从派生类。  

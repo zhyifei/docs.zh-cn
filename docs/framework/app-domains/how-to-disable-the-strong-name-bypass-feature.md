@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742414"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>如何：禁用强名称跳过功能
 从 .NET Framework 3.5 版 Service Pack 1 (SP1) 开始，当程序集加载到完全信任的 <xref:System.AppDomain> 对象（如 `MyComputer` 区域的默认 <xref:System.AppDomain>）时，不会验证强名称签名。 这被称之为强名称跳过功能。 在完全信任的环境中，对于已签名的完全信任的程序集，无需考虑其签名，对 <xref:System.Security.Permissions.StrongNameIdentityPermission> 的要求总是成功。 唯一的限制是该程序集必须完全受信任，因为其区域是完全受信任的。 因为在这些条件下，强名称不是决定性因素，所以没有理由验证强名称。 跳过验证强名称签名可显著提高性能。  

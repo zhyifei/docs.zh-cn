@@ -1,24 +1,13 @@
 ---
 title: 在 .NET Framework 4 工作流中使用 Interop 活动
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ebef74097d22c9624a29470f4cda231bbb32fe90
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 64e8aef01aefa23dc98b42ab835de097d6c222df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520222"
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>在 .NET Framework 4 工作流中使用 Interop 活动
 通过使用 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 活动，可在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 工作流中使用通过 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 或 <xref:System.Activities.Statements.Interop> 创建的活动。 本主题概述如何使用 <xref:System.Activities.Statements.Interop> 活动。  
@@ -55,7 +44,7 @@ ms.lasthandoff: 04/28/2018
   
 1.  右键单击**PolicyActivityLibrary**中**解决方案资源管理器**和选择**添加**然后**活动...**.  
   
-2.  选择**Activity （具有单独的代码）**从**Visual C# 项**列表。 类型`DiscountCalculator`中**名称**框中，单击**确定**。  
+2.  选择**Activity （具有单独的代码）** 从**Visual C# 项**列表。 类型`DiscountCalculator`中**名称**框中，单击**确定**。  
   
 3.  右键单击**DiscountCalculator.xoml**中**解决方案资源管理器**和选择**查看代码**。  
   

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598578"
 ---
 # <a name="pathfile-access-error"></a>路径/文件访问错误
 在文件访问或磁盘访问操作中，操作系统无法获得路径和文件名称之间的连接。  

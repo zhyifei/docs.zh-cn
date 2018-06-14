@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637525"
 ---
 # <a name="public-member-39ltmembernamegt39-on-type-39lttypenamegt39-not-found"></a>公共成员&#39; &lt;membername&gt; &#39;类型&#39; &lt;typename&gt; &#39;找不到
 找不到你尝试访问的成员。 访问后期绑定对象的非公共成员时，可能出现此错误。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563970"
 ---
 # <a name="wpf-samples"></a>WPF 示例
 有关演示的示例的列表[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]，请参阅[WPF 文档示例](http://go.microsoft.com/fwlink/?LinkID=159044)MSDN 代码库上。

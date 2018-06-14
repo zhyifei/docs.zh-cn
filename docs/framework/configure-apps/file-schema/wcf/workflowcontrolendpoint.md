@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754780"
 ---
 # <a name="ltworkflowcontrolendpointgt"></a>&lt;workflowControlEndpoint&gt;
 此配置元素定义用于控制工作流实例的执行（创建、运行、挂起、终止等）的标准终结点。  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539486"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何： 从命令行创建 Windows 窗体应用程序
 下面的过程介绍从命令行创建和运行 Windows 窗体应用程序所必须完成的基本步骤。 在 Visual Studio 中没有对这些过程的扩展支持。  另请参阅[演练： 创建简单的 Windows 窗体](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))。  

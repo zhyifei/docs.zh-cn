@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569901"
 ---
 # <a name="memory-management-and-garbage-collection-in-net"></a>.NET 中的内存管理和垃圾回收
 本节文档介绍了如何在 .NET 中管理内存。  

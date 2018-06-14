@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594947"
 ---
 # <a name="mycomputerinfo-object"></a>My.Computer.Info 对象
 提供了用于获取计算机内存、已加载程序集、名称和操作系统相关信息的属性。  

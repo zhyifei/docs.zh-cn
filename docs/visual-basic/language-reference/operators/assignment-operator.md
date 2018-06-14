@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603595"
 ---
 # <a name="-operator-visual-basic"></a>= 运算符 (Visual Basic)
 将值分配给变量或属性。  

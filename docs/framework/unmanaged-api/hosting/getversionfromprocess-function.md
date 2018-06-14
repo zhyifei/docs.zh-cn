@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0b57d04a8a49371872c679a331b5ae9c45dce797
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433068"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 函数
 获取与指定的进程句柄关联公共语言运行时 (CLR) 的版本号。  
@@ -63,7 +64,7 @@ HRESULT GetVersionFromProcess (
 |E_NOTIMPL|此方法不是在 Microsoft Windows 95、 Microsoft Windows 98、 或 Microsoft Windows Millennium Edition 操作系统上可用的。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   

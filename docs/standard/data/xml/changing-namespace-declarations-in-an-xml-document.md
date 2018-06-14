@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568051"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>更改 XML 文档中的命名空间声明
 XmlDocument 将命名空间声明和 xmlns 属性公开为文档对象模型的一部分。 这些声明和属性存储在 XmlDocument 中，因此在可以保存文档时暂留这些属性的位置。 更改这些属性对树中现有其他节点的 Name、NamespaceURI 和 Prefix 属性没有影响。 例如，如果加载以下文档，`test` 元素包含 NamespaceURI `123.`  

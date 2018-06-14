@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635829"
 ---
 # <a name="could-not-obtain-memory-information-due-to-internal-error"></a>由于内部错误，无法获取内存信息
 对 `My.Computer.Info` 对象的内存信息属性之一的调用失败。  

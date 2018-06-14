@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2484fa61c03b95e7cbdb452b92a68a2049701374
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429512"
 ---
 # <a name="ireferenceappid-interface"></a>IReferenceAppId 接口
 表示当前范围中的应用程序的唯一标识符的引用。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
 |`IReferenceAppId::put_SubscriptionId`|设置与此订阅的令牌标识符`IReferenceAppId`到指定的字符串值。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747941"
 ---
 # <a name="ltcallbackdebuggt"></a>&lt;callbackDebug&gt;
 指定服务调试 Windows Communication Foundation (WCF) 回调对象。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 |特性|描述|  
 |---------------|-----------------|  
-|`includeExceptionDetailInFaults`|一个值，指定客户端回调对象是否向服务返回 SOAP 错误中的托管异常信息。<br /><br /> 如果以编程方式将此属性设置为 `true`，则可以将客户端回调对象中的托管异常信息回流到服务，以便进行调试。 **注意：**返回托管的异常信息返回给客户端可能会带来安全风险。 这是因为，异常详细信息公开了有关内部服务实现的信息，这些信息可能被未经授权的客户端使用。|  
+|`includeExceptionDetailInFaults`|一个值，指定客户端回调对象是否向服务返回 SOAP 错误中的托管异常信息。<br /><br /> 如果以编程方式将此属性设置为 `true`，则可以将客户端回调对象中的托管异常信息回流到服务，以便进行调试。 **注意：** 返回托管的异常信息返回给客户端可能会带来安全风险。 这是因为，异常详细信息公开了有关内部服务实现的信息，这些信息可能被未经授权的客户端使用。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  

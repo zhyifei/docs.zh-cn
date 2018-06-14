@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392247"
 ---
 # <a name="ltbindinggt"></a>&lt;绑定&gt;
 可以使用 `binding` 元素来配置 Windows Communication Foundation (WCF) 提供的不同类型的预定义绑定。  

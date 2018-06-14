@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596601"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>未定义 Property Let 过程，并且 Property Get 过程未返回对象
 某些属性、 方法和操作仅适用于`Collection`对象。 你指定的操作或属性用于专用于集合，但该对象不是一个集合。  

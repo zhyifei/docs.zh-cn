@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752606"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;添加&gt;元素&lt;sharedListeners&gt;
 将侦听器添加到 `sharedListeners` 集合中。 `sharedListeners` 是的侦听器集合的任何[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以引用。  默认情况下，侦听器中`sharedListeners`集合不都将置于`Listeners`集合。 它们肯定会添加到名称[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不能获取侦听器`sharedListeners`在运行时在代码中的集合。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567271"
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>如何：实现基于事件的异步模式的客户端
 下面的代码示例展示了如何使用符合[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)要求的组件。 此示例的窗体使用[如何：实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)中介绍的 `PrimeNumberCalculator` 组件。  

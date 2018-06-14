@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566894"
 ---
 # <a name="storyboards-overview"></a>演示图板概述
 本主题演示如何使用<xref:System.Windows.Media.Animation.Storyboard>对象来组织和应用动画。 它描述如何以交互方式操作<xref:System.Windows.Media.Animation.Storyboard>对象，并说明间接属性目标语法。  
@@ -260,7 +261,7 @@ ms.lasthandoff: 05/04/2018
   
  使用这些方法的优点是不需要创建<xref:System.Windows.Trigger>或<xref:System.Windows.TriggerAction>对象; 你只需对可控制的引用<xref:System.Windows.Media.Animation.Storyboard>你想要操作。  
   
- **注意：**采取的所有交互操作<xref:System.Windows.Media.Animation.Clock>，因此同样，在<xref:System.Windows.Media.Animation.Storyboard>将发生的也会很快在下一步呈现之前的计时引擎的下一步刻度线上。 例如，如果你使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>方法来跳转到在动画，属性值中的另一个点不会立即更改、 的值而不是，计时引擎的下一步刻度线上发生更改。  
+ **注意：** 采取的所有交互操作<xref:System.Windows.Media.Animation.Clock>，因此同样，在<xref:System.Windows.Media.Animation.Storyboard>将发生的也会很快在下一步呈现之前的计时引擎的下一步刻度线上。 例如，如果你使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>方法来跳转到在动画，属性值中的另一个点不会立即更改、 的值而不是，计时引擎的下一步刻度线上发生更改。  
   
  下面的示例演示如何应用和控制使用的交互式方法的动画<xref:System.Windows.Media.Animation.Storyboard>类。  
   

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525949"
 ---
 # <a name="recoloring-images"></a>对图像重新着色
 重新着色是调整图像颜色的过程。 重新着色的一些示例在一种颜色更改为另一个，调整相对于另一种颜色的颜色强度、 调整亮度或的所有颜色的对比度和转换为灰色阴影的颜色。  

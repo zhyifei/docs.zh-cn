@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514150"
 ---
 # <a name="bookmarks"></a>书签
 此示例演示如何编写一个自定义活动，该活动创建一个书签以接收外部输入。 此示例还包含一个基本控制台应用程序，该应用程序使用工作流中的自定义活动，并演示如何发现和恢复与正在运行的工作流实例关联的书签。 有关书签的详细信息，请参阅[书签](../../../../docs/framework/windows-workflow-foundation/bookmarks.md)。  

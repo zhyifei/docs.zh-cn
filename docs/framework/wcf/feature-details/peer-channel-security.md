@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494499"
 ---
 # <a name="peer-channel-security"></a>对等通道安全性
 对等通道启用依赖于多方消息传递的多种分布式应用程序类型。 示例包括在 Internet 范围内由受信任源分发内容（如媒体或软件更新）、朋友们一起交换音乐和图片或同事们一起协作编辑一个文档。 这些方案都需要一个独特的安全模型。 对等通道安全模型就是为满足这些方案而设计的，此模型为不同标识、身份验证和授权模型的各自需要提供可靠的安全模型。  

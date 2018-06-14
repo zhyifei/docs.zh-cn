@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588877"
 ---
 # <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>如何：在 Visual Basic 中读取逗号分隔的文本文件
 `TextFieldParser` 对象提供一种可以轻松而高效地分析结构化文本文件（如日志）的方法。 `TextFieldType` 属性用于定义文件是带分隔符的文件还是具有固定宽度文本字段的文件。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538461"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows 窗体中的事件顺序
 对于依次处理其中每个事件的开发人员，Windows 窗体应用程序中引发事件的顺序非常具有吸引力。 当出现需要谨慎处理事件的情况时（例如，在重绘窗体的某些部件时），有必要了解运行时引发事件的确切顺序。 本主题提供了应用程序和控件的生存期中几个重要阶段中的事件顺序的详细信息。 有关鼠标输入事件的顺序的特定详细信息，请参阅[Windows 窗体中的鼠标事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。 Windows 窗体中的事件的概述，请参阅[事件概述](../../../docs/framework/winforms/events-overview-windows-forms.md)。 有关事件处理程序的构成的详细信息，请参阅[事件处理程序概述](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)。  

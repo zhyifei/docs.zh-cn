@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494145"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>如何：向 SOAP 和 Web 客户端公开协定
 默认情况下，Windows Communication Foundation (WCF) 使终结点仅供 SOAP 客户端。 在[如何： 创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)，终结点可用于非 SOAP 客户端。 有时可能需要使相同的协定可以同时作为 Web 终结点和 SOAP 终结点使用。 本主题演示了如何实现此目的的示例。  

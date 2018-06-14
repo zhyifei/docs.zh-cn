@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644376"
 ---
 # <a name="friend-assemblies-visual-basic"></a>友元程序集 (Visual Basic)
 A*友元程序集*是可以访问另一个程序集的程序集[友元](../../../../visual-basic/language-reference/modifiers/friend.md)类型和成员。 如果将一个程序集标识为友元程序集，则无需再将类型和成员标记为公共，其他程序集就能访问它们。 此举在下列情境中尤其方便：  

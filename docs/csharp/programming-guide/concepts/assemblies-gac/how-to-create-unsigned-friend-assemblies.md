@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340198"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>如何：创建未签名的友元程序集 (C#)
 本示例演示如何将友元程序集和未签名的程序集一起使用。  

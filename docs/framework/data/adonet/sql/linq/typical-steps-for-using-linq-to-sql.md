@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364770"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>使用 LINQ to SQL 的典型步骤
 若要实现 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序，请按照本主题后面部分说明的步骤操作。 请注意，很多步骤是可选的。 您可以以对象模型的默认状态使用它，这种可能性很高。  

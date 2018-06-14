@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560177"
 ---
 # <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>如何：使用 PathGeometry 创建形状
 此示例演示如何创建形状使用<xref:System.Windows.Media.PathGeometry>类。 <xref:System.Windows.Media.PathGeometry> 对象包括一个或多个<xref:System.Windows.Media.PathFigure>对象; 每个<xref:System.Windows.Media.PathFigure>表示不同的"图"或形状。 每个<xref:System.Windows.Media.PathFigure>本身由一个或多个<xref:System.Windows.Media.PathSegment>对象，每个表示连接的部分图或形状。 段类型包括<xref:System.Windows.Media.LineSegment>， <xref:System.Windows.Media.ArcSegment>，和<xref:System.Windows.Media.BezierSegment>。  

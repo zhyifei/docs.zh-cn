@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362881"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>如何：将更改提交到数据库
 无论您对对象做了多少项更改，都只是在更改内存中的副本。 您并未对数据库中的实际数据做任何更改。 直到您对 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 显式调用 <xref:System.Data.Linq.DataContext>，您所做的更改才会传输到服务器。  

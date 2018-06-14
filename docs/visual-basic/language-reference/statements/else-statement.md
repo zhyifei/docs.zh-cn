@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597681"
 ---
 # <a name="else-statement-visual-basic"></a>Else 语句 (Visual Basic)
 引入了一组要运行或编译如果运行的语句的任何其他条件组或将其编译的语句。  

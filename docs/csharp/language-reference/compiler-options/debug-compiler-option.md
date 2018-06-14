@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218840"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug（C# 编译器选项）
 -debug 选项将使编译器生成调试信息，并将此信息放置在输出文件或文件中。  

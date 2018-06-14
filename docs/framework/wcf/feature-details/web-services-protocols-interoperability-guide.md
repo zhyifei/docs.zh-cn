@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506602"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服务协议互操作性指南
 Windows Communication Foundation (WCF) 实现许多 Web 服务协议。 这些协议中有许多都包含大量留给实施者来决定的选项和扩展点。 本主题提供了 WCF 实现的 Web 服务协议的列表。 本节中的其他主题介绍每个受支持的协议的实现详细信息。  

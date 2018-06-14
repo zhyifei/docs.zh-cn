@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472382"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server 中的身份验证
 SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合模式。  

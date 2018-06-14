@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593527"
 ---
 # <a name="reference-required-to-assembly-39ltassemblynamegt39-containing-the-base-class-39ltclassnamegt39"></a>需要对程序集的引用&#39; &lt;assemblyname&gt; &#39;包含基类&#39;&lt;类名&gt;&#39;
 需要引用程序集\<程序集名称 > 包含基类的\<类名 >。 请向项目中添加一个。  

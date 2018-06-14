@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528704"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>如何：设计时将控件与窗体边缘对齐
 你可以通过设置窗体的边缘对齐控件<xref:System.Windows.Forms.Control.Dock%2A>。 此属性指定控件在窗体中的驻留位置。 可以将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为下列值：  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536249"
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox 控件（Windows 窗体）
 若要获取用户输入或显示文本使用 Windows 窗体的文本框。 `TextBox`控件通常用于可编辑文本，虽然也可使其成为只读的。 文本框可以显示多个行，为该控件的大小的文本换行并添加基本格式设置。 `TextBox`控件允许文本控件中输入或显示一种格式。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758823"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>从查询创建数据表 (LINQ to DataSet)
 数据绑定是 <xref:System.Data.DataTable> 对象的一种常用形式。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法接收查询结果并将数据复制到 <xref:System.Data.DataTable> 中，后者随后会使用该数据进行数据绑定。 在执行数据操作后，新的 <xref:System.Data.DataTable> 将合并回源 <xref:System.Data.DataTable>。  

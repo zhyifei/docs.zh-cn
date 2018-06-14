@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555395"
 ---
 # <a name="treeview-how-to-topics"></a>TreeView 帮助主题
 本部分中的主题介绍如何使用<xref:System.Windows.Controls.TreeView>控件来显示层次结构中的信息。  

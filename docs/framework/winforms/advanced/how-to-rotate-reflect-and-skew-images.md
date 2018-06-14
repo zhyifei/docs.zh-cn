@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523450"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>如何：旋转、反射和扭曲图像
 你可以旋转、 反射和扭曲图像通过指定的原始图像的左上角、 右上角和左下角的目标点。 三个目标点确定映射到一个平行四边形的原始矩形图像仿射转换。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809220"
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>如何：定义 Windows Communication Foundation 服务协定
 这是创建基本的 Windows Communication Foundation (WCF) 应用程序所需的六项任务的第一个。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  

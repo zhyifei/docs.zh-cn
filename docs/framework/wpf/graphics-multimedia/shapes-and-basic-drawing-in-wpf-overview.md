@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566306"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中的形状和基本图形概述
 本主题将概述如何绘制与<xref:System.Windows.Shapes.Shape>对象。 A<xref:System.Windows.Shapes.Shape>是一种<xref:System.Windows.UIElement>，使您可以向屏幕绘制形状。 因为它们是用户界面元素，<xref:System.Windows.Shapes.Shape>对象可使用内部<xref:System.Windows.Controls.Panel>元素和大多数控件。  

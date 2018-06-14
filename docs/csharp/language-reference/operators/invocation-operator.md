@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275020"
 ---
 # <a name="-operator-c-reference"></a>() 运算符（C# 参考）
 除了用于指定表达式中的运算顺序外，圆括号还用于执行以下任务：  

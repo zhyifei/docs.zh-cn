@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536675"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.TabControl> 显示多个选项卡，就像笔记本中的分隔线或档案柜中一组文件夹的标签。 选项卡可以包含图片和其他控件。 你可以使用选项卡控件生成出现 Windows 操作系统，如控件面板显示属性中的许多位置多页对话框中的类型。 此外，<xref:System.Windows.Forms.TabControl>可用来创建用于设置一组相关属性的属性页。  

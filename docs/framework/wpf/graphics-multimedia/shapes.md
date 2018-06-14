@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562188"
 ---
 # <a name="shapes"></a>形状
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 为绘制基本形状使用提供支持<xref:System.Windows.Shapes.Shape>类。 形状对象派生自<xref:System.Windows.FrameworkElement>和在这种情况下，参与布局系统，并可以只需使用绘制[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  

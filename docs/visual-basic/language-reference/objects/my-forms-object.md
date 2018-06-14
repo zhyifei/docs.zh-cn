@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603894"
 ---
 # <a name="myforms-object"></a>My.Forms 对象
 提供用于访问在当前项目中声明每个 Windows 窗体的实例的属性。  

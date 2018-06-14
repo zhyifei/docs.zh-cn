@@ -1,40 +1,29 @@
 ---
-title: "如何：与 WCF 终结点和消息队列应用程序交换消息"
-ms.custom: 
+title: 如何：与 WCF 终结点和消息队列应用程序交换消息
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 807a34ac50ea317ace42ec12eddcd9ec7cf3736b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491074"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>如何：与 WCF 终结点和消息队列应用程序交换消息
-通过使用 MSMQ 集成绑定，可以将现有消息队列 (MSMQ) 应用程序与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序进行集成，从而在 MSMQ 消息与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息之间进行转换。 利用这一功能，可以在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端调用 MSMQ 接收方应用程序，也可以在 MSMQ 发送方应用程序中调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+通过使用 MSMQ 集成绑定来与其他 WCF 消息转换 MSMQ 消息，可以将现有消息队列 (MSMQ) 应用程序集成与 Windows Communication Foundation (WCF) 应用程序。 这样，你可以调入 WCF 客户端从 MSMQ 接收方应用程序，以及从 MSMQ 发送方应用程序调入 WCF 服务。  
   
- 本节中，将说明如何将 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 用于 (1) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和使用 System.Messaging 编写的 MSMQ 应用程序服务之间的排队通信，以及 (2) MSMQ 应用程序客户端和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务之间的排队通信。  
+ 在本部分中，我们将介绍如何使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>（1） WCF 客户端和使用 System.Messaging 和 （2） MSMQ 应用程序客户端和 WCF 服务编写的 MSMQ 应用程序服务之间的排队通信。  
   
- 有关完整示例，演示如何调用 MSMQ 接收方应用程序从[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端，请参阅[Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)示例。  
+ 有关完整示例，演示如何从 WCF 客户端调用 MSMQ 接收方应用程序的说明，请参阅[Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)示例。  
   
- 有关完整示例，演示如何调用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务从 MSMQ 客户端，请参阅[消息队列 Windows Communication foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)示例。  
+ 有关完整示例，演示如何从 MSMQ 客户端调用 WCF 服务的说明，请参阅[消息队列 Windows Communication foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)示例。  
   
 ### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a>创建从 MSMQ 客户端接收消息的 WCF 服务  
   
-1.  定义一个接口，该接口为从 MSMQ 发送方应用程序接收排队消息的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务定义服务协定，如下面的示例代码所示。  
+1.  定义用于定义从 MSMQ 发送方应用程序，接收排队的消息的 WCF 服务的服务协定，如下面的代码示例中所示的接口。  
   
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
@@ -54,12 +43,12 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>创建向 MSMQ 接收方应用程序发送消息的 WCF 客户端  
   
-1.  定义一个接口，该接口为向 MSMQ 接收方发送排队消息的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端定义服务协定，如下面的示例代码所示。  
+1.  定义用于定义发送排队消息到 MSMQ 接收方，WCF 客户端的服务协定，如下面的代码示例中所示的接口。  
   
      [!code-csharp[S_WcfToMsmq#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/proxy.cs#6)]
      [!code-vb[S_WcfToMsmq#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/proxy.vb#6)]  
   
-2.  定义一个客户端类，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端使用该类来调用 MSMQ 接收方。  
+2.  定义 WCF 客户端调用 MSMQ 接收方使用的客户端类。  
   
      [!code-csharp[S_WcfToMsmq#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#2)]
      [!code-vb[S_WcfToMsmq#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#2)]  

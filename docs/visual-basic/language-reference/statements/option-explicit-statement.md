@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604596"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 语句 (Visual Basic)
 强制显式声明所有变量在文件中，或允许隐式声明的变量。  

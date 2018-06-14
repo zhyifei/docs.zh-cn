@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 338120932b0bcbe390332515856aaeaa3bc34a56
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461693"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 方法
 上的指定线程的堆栈遍历托管的帧并将信息发送到通过回调探查器。  
@@ -99,7 +100,7 @@ HRESULT DoStackSnapshot(
  此外，还有死锁风险如果调用`DoStackSnapshot`从你的探查器已创建，以便你可以遍历的单独目标线程堆栈的线程。 第一次你创建的线程进入某些`ICorProfilerInfo*`方法 (包括`DoStackSnapshot`)，CLR 将执行每个线程，该线程上的特定于 CLR 的初始化。 如果你的探查器已暂停目标线程尝试引导，其堆栈和该目标线程发生拥有锁所需执行此每个线程初始化，将发生死锁。 若要避免这种死锁，进行初始调用`DoStackSnapshot`从您探查器创建的线程遍历单独目标线程，但首先未挂起此目标线程。 此初始调用可确保每个线程初始化，可以在不死锁的情况下完成。 如果`DoStackSnapshot`成功，并且报告至少一个帧，此后，它将该探查器创建线程在可以挂起任何目标线程和调用安全`DoStackSnapshot`遍历该目标线程的堆栈。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

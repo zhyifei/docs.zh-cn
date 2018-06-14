@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564308"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 内部 XAML 类型
 允许在 XAML 生产的代码的放置位置。 也可以由任何编译 XAML，也可以由运行时留在更高版本使用 如解释在 XAML 生产的 XAML 处理器实现编译此类代码。  

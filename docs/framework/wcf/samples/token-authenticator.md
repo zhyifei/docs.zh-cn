@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808320"
 ---
 # <a name="token-authenticator"></a>令牌身份验证器
 此示例演示如何实现一个自定义令牌身份验证器。 Windows Communication Foundation (WCF) 中的令牌身份验证用于验证消息、 使用的令牌验证它自身一致，并进行身份验证标识与令牌相关联。  

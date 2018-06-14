@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509042"
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 类
 Windows Communication Foundation (WCF) 可以使用两种不同的序列化技术将数据转换为客户端和服务，称为序列化的进程之间进行传输的 XML 应用程序中。  

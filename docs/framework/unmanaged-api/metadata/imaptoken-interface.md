@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 661aeff56955f729a5728f00f563bb2bef971a9f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444387"
 ---
 # <a name="imaptoken-interface"></a>IMapToken 接口
 提供程序集之间的映射功能。  
@@ -35,11 +36,11 @@ ms.lasthandoff: 05/04/2018
 |[Map 方法](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|映射使用元数据签名的两个程序集之间的关系。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：**用作 MsCorEE.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

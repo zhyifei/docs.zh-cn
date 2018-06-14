@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633115"
 ---
 # <a name="cannot-calculate-number-of-periods-using-the-arguments-provided"></a>无法计算使用提供的参数的周期数
 调用`NPer`函数不包含所有必需自变量。  

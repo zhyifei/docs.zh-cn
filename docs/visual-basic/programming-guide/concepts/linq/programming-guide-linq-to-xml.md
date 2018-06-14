@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647412"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>编程指南 (LINQ to XML) (Visual Basic)
 本节提供有关使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 进行编程的概念性和指导性信息。  

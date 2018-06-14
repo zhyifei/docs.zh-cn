@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402127"
 ---
 # <a name="ialink3-interface"></a>IALink3 接口
 提供单一的方法， `SetManifestFile`，从中可以指定或重置链接器将创建时使用此程序集清单文件。  

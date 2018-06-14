@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574928"
 ---
 # <a name="selecting-a-collection-class"></a>选择集合类
 请务必仔细选择你的集合类。 使用错误的类型可能会限制集合的使用。 一般情况下，应避免使用 <xref:System.Collections> 命名空间中的类型，除非特别面向 .NET Framework 版本 1.1。 由于集合的泛型版本和并发版本具有更高的类型安全性和其他改进，将首选这些版本。  

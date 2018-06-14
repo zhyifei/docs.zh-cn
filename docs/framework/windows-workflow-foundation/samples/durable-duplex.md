@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809422"
 ---
 # <a name="durable-duplex"></a>持久双工
 此示例演示如何设置和配置持久双工消息交换使用 Windows Workflow Foundation (WF) 中的消息传递活动。 持久双工消息交换是一类持续时间较长的双向消息交换。 消息交换的生存期可能比通信通道的生存期和服务实例的内存生存期要长一些。  

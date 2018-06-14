@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589966"
 ---
 # <a name="interlocked-operations"></a>互锁操作
 <xref:System.Threading.Interlocked> 类中的方法可用于同步对多个线程共享的变量的访问。 如果该变量位于共享内存中，则不同进程的线程都可以使用此机制。 互锁操作是原子的 - 即整个操作是不能由相同变量上的另一个互锁操作中断的单元。 这在抢占式多线程处理操作系统中非常重要，在此类操作系统中，可在从内存地址加载值之后但有机会更改和存储该值之前将线程挂起。  

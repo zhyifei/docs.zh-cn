@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3bae50f695de81856d4fddcb2af3d1188d896642
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430006"
 ---
 # <a name="guidmanagedname-attribute"></a>GUID_ManagedName 特性
 定义指定的组件对象模型 (COM) 库的管理的命名空间名称的自定义接口属性。  

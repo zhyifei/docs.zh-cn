@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393304"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：获取 .NET Framework 4.5 安装程序的进度
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 是可再发行运行时。 如果开发基于此 .NET framework 版本的应用程序，则可以将（链）[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序作为必备组件包括在应用的安装程序中。 若要提供自定义或统一的安装体验，可能需要以无提示方式启动 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序并跟踪其进度，同时显示应用的安装进度。 若要启用无提示跟踪，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序（可观察）通过使用内存映射 I/O (MMIO) 段来定义协议，以便与安装程序（观察程序或链接器）进行通信。 此协议定义链接器获取进度信息、详细结果，响应消息和取消 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装的方式。  

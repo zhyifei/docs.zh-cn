@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636178"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>没有可访问的重载&#39; &lt;methodname&gt; &#39;可以用无需收缩转换这些参数调用
 调用了重载方法，但是方法不可与所提供的未进行收缩转换的参数列表相匹配。  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5b28c18d55b91d6315003229295ab0e6781be183
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406300"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder 方法
 将类型转发器添加到给定的程序集的类型表。  

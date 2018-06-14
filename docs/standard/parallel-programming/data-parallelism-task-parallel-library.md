@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584652"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>数据并行（任务并行库）
 *数据并行*指的是对源集合或数组的元素同时（即，并行）执行相同操作的场景。 在数据并行操作中，对源集合进行分区，以便多个线程能够同时在不同的网段上操作。  

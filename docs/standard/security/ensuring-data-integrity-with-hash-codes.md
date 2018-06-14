@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581568"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>使用哈希代码确保数据完整性
 哈希值是用于唯一标识数据的固定长度的数字值。 哈希值以小得多的数字值表示大量数据，因此与数字签名配合使用。 对哈希值进行签名比对较大的值进行签名更为高效。 对于验证通过不安全通道发送的数据的完整性，哈希值也很有用。 当被发送出去确定数据是否已更改时，将接收数据的哈希值与数据的哈希值相比较。  

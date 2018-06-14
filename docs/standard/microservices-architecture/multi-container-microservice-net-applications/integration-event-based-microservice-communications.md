@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579166"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>在微服务（集成事件）之间实现基于事件的通信
 

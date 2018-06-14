@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603309"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot 运算符 (Visual Basic)
 比较两个对象引用变量。  

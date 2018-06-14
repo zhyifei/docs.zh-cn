@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7a95f09d1baebed65bae994550431d88ba0dfc9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412466"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate 方法
 终止指定的退出代码的进程。  
@@ -48,7 +49,7 @@ HRESULT Terminate (
 >  此方法由不实现应用程序域。 也就是说，未实现在<xref:System.AppDomain>级别。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

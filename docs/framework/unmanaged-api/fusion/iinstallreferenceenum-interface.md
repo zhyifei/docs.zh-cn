@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cac9f9db0b7527a80671c825a4435e8ea2d135b8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429655"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum 接口
 表示引用的程序集安装到全局程序集缓存中的枚举数。  
@@ -44,7 +45,7 @@ interface IInstallReferenceEnum : IUnknown {
 |[GetNextInstallReferenceItem 方法](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|获取一个指针指向下一步`IInstallReferenceItem`包含在此`IInstallReferenceEnum`。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   

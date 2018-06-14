@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488977"
 ---
 # <a name="data-contract-serializer"></a>数据协定序列化程序
 Windows Communication Foundation (WCF) 基础结构使用<xref:System.Runtime.Serialization.DataContractSerializer>类作为默认序列化程序。 本节中的主题提供将该类用作独立序列化程序的更多详细信息。  

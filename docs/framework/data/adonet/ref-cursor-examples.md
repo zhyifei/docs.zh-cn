@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353542"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR 示例
 REF CURSOR 示例包括下列三个 Visual Basic 示例，演示如何使用 REF CURSOR。  

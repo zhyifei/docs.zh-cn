@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595883"
 ---
 # <a name="myrequest-object"></a>My.Request 对象
 获取所请求的页面的 <xref:System.Web.HttpRequest> 对象。  

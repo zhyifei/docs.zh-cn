@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651604"
 ---
 # <a name="optional-parameters-visual-basic"></a>可选参数 (Visual Basic)
 可以指定过程参数是可选的，并且在调用过程时不必为其提供自变量。 *可选参数*由指示`Optional`过程定义中的关键字。 适用以下规则：  

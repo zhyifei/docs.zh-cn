@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651578"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 在 Visual Basic 中，数据类型是基于其分类来实现的。 Visual Basic 数据类型可以根据特定类型的变量存储其自己的数据或指向的数据进行分类。 如果它存储其自己的数据则*值类型*; 如果它保留一个指向它的内存中其他位置的数据*引用类型*。  

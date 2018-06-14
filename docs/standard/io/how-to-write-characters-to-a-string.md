@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572029"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>如何：向字符串写入字符
 下面的代码示例从字符数组以同步和异步方式向字符串写入字符。  

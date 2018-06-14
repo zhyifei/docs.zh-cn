@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564347"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>常见 XAML 语言基元的内置类型
 XAML 2009 引入了对多种数据类型的 XAML 语言级支持（这些数据类型是公共语言运行时 (CLR) 和其他编程语言中的常用基元）。 XAML 2009 增加了对以下基元的支持： `x:Object`、 `x:Boolean`、 `x:Char`、 `x:String`、 `x:Decimal`、 `x:Single`、 `x:Double`、 `x:Int16`、 `x:Int32`、 `x:Int64`、 `x:TimeSpan`、 `x:Uri`、 `x:Byte`和 `x:Array`  

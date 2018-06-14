@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329876"
 ---
 # <a name="preserving-white-space-while-serializing"></a>在序列化时保留空白
 本主题描述在序列化 XML 树时如何控制空白。  

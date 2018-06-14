@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334179"
 ---
 # <a name="async-return-types-c"></a>异步返回类型 (C#)
 异步方法可以具有以下返回类型：

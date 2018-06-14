@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501211"
 ---
 # <a name="basic-data-contract"></a>基本数据协定
 本示例演示如何实现数据协定。 数据协定允许您在服务中传入和传出结构化数据。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)但使用而不是基本数值类型的复数。  

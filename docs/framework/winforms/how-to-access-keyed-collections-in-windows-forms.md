@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538721"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>如何：在 Windows 窗体中访问键控集合
 -   可通过键访问单个集合项。 此功能已添加到 Windows 窗体应用程序通常使用的许多集合类。 以下列表显示了一些具有可访问键控的集合的集合类：  

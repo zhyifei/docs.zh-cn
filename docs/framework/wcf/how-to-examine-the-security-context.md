@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499471"
 ---
 # <a name="how-to-examine-the-security-context"></a>如何：检查安全上下文
 编程时 Windows Communication Foundation (WCF) 服务，服务安全上下文可用于确定有关的客户端凭据和声明用于与服务进行身份验证的详细信息。 这是使用 <xref:System.ServiceModel.ServiceSecurityContext> 类的属性进行的。  

@@ -1,28 +1,20 @@
 ---
-title: "UI 自动化对 Calendar 控件类型的支持"
-ms.custom: 
+title: UI 自动化对 Calendar 控件类型的支持
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Calendar control type
 - Calendar control type
 - control types, Calendar
 ms.assetid: e91a7393-a7f9-4838-a1a6-857438b24bc9
-caps.latest.revision: "26"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: e190d2476d28c9ea5231f59a4fe43ec24b0f6cda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 752ac4cfddd5ca8c8b42d05e1a452cd0ef60ee36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409513"
 ---
 # <a name="ui-automation-support-for-the-calendar-control-type"></a>UI 自动化对 Calendar 控件类型的支持
 > [!NOTE]
@@ -48,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出了值或定义与日历控件密切相关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。 有关详细信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]属性，请参阅[的客户端 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|备注|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|说明|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -65,19 +57,19 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-control-patterns"></a>必需的 UI 自动化控件模式  
  下表列出需要由所有日历控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
   
-|控件模式/模式属性|支持|备注|  
+|控件模式/模式属性|支持|说明|  
 |---------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|是|日历控件始终支持“网格”模式，因为月份中的日期是可以在空间中导航的项。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|视情况而定|大多数日历控件支持按页翻转视图。 建议使用“滚动”模式支持分页导航。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|视情况而定|大多数日历控件将特定日期、月份或年份保留为子元素的选定项。 某些日历具有多选功能和其他日历只能进行单选。|  
 |<xref:System.Windows.Automation.Provider.ITableProvider>|是|日历控件在其子树内始终具有该星期所有日期的标头，因此必须支持表格模式。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|No|Value 控件模式对于日历控件而言不是必要的，因为无法直接在控件上设置值。 如果特定日期与控件关联，则信息应由 Selection 控件模式提供。|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|否|Value 控件模式对于日历控件而言不是必要的，因为无法直接在控件上设置值。 如果特定日期与控件关联，则信息应由 Selection 控件模式提供。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有日历控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|备注|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|说明|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  

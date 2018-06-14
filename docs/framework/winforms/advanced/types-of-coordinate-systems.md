@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529748"
 ---
 # <a name="types-of-coordinate-systems"></a>坐标系类型
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 使用三个坐标空间： world、 页和设备。 世界坐标是用于模型对特定图形世界的坐标，将传递到.NET Framework 中的方法的坐标。 页坐标是指由绘图图面，如窗体或控件使用的坐标系统。 设备坐标是由进行绘制，如屏幕或张纸的物理设备的坐标。 进行调用时`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`，传递给点<xref:System.Drawing.Graphics.DrawLine%2A>方法-`(0, 0)`和`(160, 80)`-位于世界坐标空间。 之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以在屏幕上绘制线条、 坐标传递的转换序列。 一个转换，调用的世界变换，将世界坐标转换为的页坐标，并调用页转换，另一个转换将页坐标转换为设备坐标。  

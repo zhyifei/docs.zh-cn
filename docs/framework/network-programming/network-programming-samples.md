@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397463"
 ---
 # <a name="network-programming-samples"></a>网络编程示例
 本节包含可下载的网络编程示例的说明和链接，这些示例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相关命名空间中的类。 

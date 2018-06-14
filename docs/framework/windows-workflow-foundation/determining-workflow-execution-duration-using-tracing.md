@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515080"
 ---
 # <a name="determining-workflow-execution-duration-using-tracing"></a>使用跟踪确定工作流执行持续时间
 本主题演示如何使用工作流跟踪来确定执行成功完成的自承载工作流所需的时间。  

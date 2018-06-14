@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527205"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>对话框控件和组件（Windows 窗体）
 以下 Windows 窗体控件和组件提供标准对话框。 单击链接，获取有关每个对话框中可用函数的详细信息。  

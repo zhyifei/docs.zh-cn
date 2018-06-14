@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541341"
 ---
 # <a name="how-keyboard-input-works"></a>键盘输入工作原理
 Windows 窗体通过引发键盘事件来处理键盘输入，以响应 Windows 消息。 大多数 Windows 窗体应用程序都通过处理键盘事件来以独占方式处理键盘输入。 但是，必须了解键盘消息的工作方式，才能实现更高级的键盘输入方案（如在按键到达控件之前截获它们）。 本主题描述 Windows 窗体能够识别的按键数据的类型，并概述键盘消息的传送方式。 有关键盘事件的信息，请参阅[使用键盘事件](../../../docs/framework/winforms/using-keyboard-events.md)。  
@@ -37,7 +38,7 @@ Windows 窗体通过引发键盘事件来处理键盘输入，以响应 Windows 
 |操作|相关方法|说明|  
 |------------|--------------------|-----------|  
 |检查命令键（如快捷键或菜单快捷键）。|<xref:System.Windows.Forms.Control.ProcessCmdKey%2A>|此方法处理命令键，命令键的优先级高于常规键。 如果此方法返回 `true`，则不调度键消息，而且不发生键事件。 如果它返回`false`，<xref:System.Windows.Forms.Control.IsInputKey%2A>称为`.`|  
-|检查是否有需要预处理的特殊键或普通字符键中应引发<xref:System.Windows.Forms.Control.KeyDown>事件和调度到控件。|<xref:System.Windows.Forms.Control.IsInputKey%2A>|如果该方法返回`true`，则意味着控件是常规字符和<xref:System.Windows.Forms.Control.KeyDown>引发事件。 如果`false`，<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>调用。 **注意：**若要确保控件获取密钥的组合，你可以处理<xref:System.Windows.Forms.Control.PreviewKeyDown>事件并设置<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A>的<xref:System.Windows.Forms.PreviewKeyDownEventArgs>到`true`为或多个所需的键。|  
+|检查是否有需要预处理的特殊键或普通字符键中应引发<xref:System.Windows.Forms.Control.KeyDown>事件和调度到控件。|<xref:System.Windows.Forms.Control.IsInputKey%2A>|如果该方法返回`true`，则意味着控件是常规字符和<xref:System.Windows.Forms.Control.KeyDown>引发事件。 如果`false`，<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>调用。 **注意：** 若要确保控件获取密钥的组合，你可以处理<xref:System.Windows.Forms.Control.PreviewKeyDown>事件并设置<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A>的<xref:System.Windows.Forms.PreviewKeyDownEventArgs>到`true`为或多个所需的键。|  
 |检查该键是否为导航键（Esc、Tab、回车键或箭头键）。|<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|此方法处理在控件内实现特殊功能（如在控件与其父级之间切换焦点）的物理按键。 如果即时控制并不处理密钥，<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>称为父控件等的层次结构中最顶端控件上。 如果此方法返回 `true`，则完成预处理，而且不生成按键事件。 如果它返回`false`、<xref:System.Windows.Forms.Control.KeyDown>事件发生。|  
   
 ### <a name="preprocessing-for-a-keypress-event"></a>KeyPress 事件的预处理  
@@ -61,7 +62,7 @@ Windows 窗体通过引发键盘事件来处理键盘输入，以响应 Windows 
   
 |任务|方法|  
 |----------|------------|  
-|截获导航键并引发<xref:System.Windows.Forms.Control.KeyDown>事件。 例如，希望在文本框中处理 Tab 键和回车键。|重写 <xref:System.Windows.Forms.Control.IsInputKey%2A>。 **注意：**或者，你可以处理<xref:System.Windows.Forms.Control.PreviewKeyDown>事件并设置<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A>的<xref:System.Windows.Forms.PreviewKeyDownEventArgs>到`true`为或多个所需的键。|  
+|截获导航键并引发<xref:System.Windows.Forms.Control.KeyDown>事件。 例如，希望在文本框中处理 Tab 键和回车键。|重写 <xref:System.Windows.Forms.Control.IsInputKey%2A>。 **注意：** 或者，你可以处理<xref:System.Windows.Forms.Control.PreviewKeyDown>事件并设置<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A>的<xref:System.Windows.Forms.PreviewKeyDownEventArgs>到`true`为或多个所需的键。|  
 |在控件上执行特殊的输入或导航处理。 例如，你可能希望在列表控件中使用箭头键更改选定项。|重写 <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |截获导航键并引发<xref:System.Windows.Forms.Control.KeyPress>事件。 例如，你希望在数字调整框控件中，多次按箭头键来加快项的调整进度。|重写 <xref:System.Windows.Forms.Control.IsInputChar%2A>。|  
 |执行特殊的输入或导航处理期间<xref:System.Windows.Forms.Control.KeyPress>事件。 例如，在列表控件中，按住“r”键将跳到以字母 r 开头的项并在这些项间切换。|重写 <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  

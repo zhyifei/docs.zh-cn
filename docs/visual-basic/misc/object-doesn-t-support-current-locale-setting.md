@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636791"
 ---
 # <a name="object-doesn39t-support-current-locale-setting-visual-basic"></a>对象没有&#39;t 支持当前区域设置 (Visual Basic)
 你尝试访问不支持当前项目的区域设置的对象。  

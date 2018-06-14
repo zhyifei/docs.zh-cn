@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273310"
 ---
 # <a name="operator-keywords-c-reference"></a>运算符关键字（C# 参考）
 用于执行其他操作，例如创建对象、检查对象的运行时类型、获取类型的大小等等。 本部分介绍以下关键字：  

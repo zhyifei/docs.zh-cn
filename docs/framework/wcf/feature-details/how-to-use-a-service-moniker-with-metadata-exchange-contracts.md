@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491245"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>如何：将服务标记与元数据交换协定一起使用
 开发某些新的 WCF 服务之后，你可能决定你想要能够从脚本或 Visual Basic 6.0 应用程序中调用这些服务。 一种方法将生成 WCF 客户端程序集，向 COM 注册程序集，将程序集安装在 GAC 中，然后在 Visual Basic 代码中引用 COM 类型。 分发应用程序时，必须将分发的 WCF 客户端程序集。 然后，用户必须使用 COM 注册 WCF 客户端程序集，并且将该程序集放置在 GAC 中。 WCF COM 互操作还让你可以在相同的服务调用，而不依赖于 WCF 客户端程序集。 WCF 标记使您能够从任何 COM 兼容语言 （Visual Basic、 VBScript、 Visual Basic for Applications (VBA) 和等等） 可通过指定元数据交换 (Mex) 终结点的服务标记用于提取类型的 URI 调用任何 WCF 服务有关服务的信息。 本主题介绍如何调用 WCF 入门示例使用指定 Mex 终结点的 WCF 标记。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593650"
 ---
 # <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a>过程调用或自变量无效 (Visual Basic)
 无法完成调用的某些部分。  

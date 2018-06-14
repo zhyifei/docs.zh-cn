@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491850"
 ---
 # <a name="claims-and-tokens"></a>声明和令牌
 本主题介绍从它支持的默认令牌创建 Windows Communication Foundation (WCF) 的各种声明类型。  

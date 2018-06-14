@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585034"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>用来控制 XML 序列化的属性
 通过将下表中的特性应用于类和类成员，可以控制 <xref:System.Xml.Serialization.XmlSerializer> 序列化或反序列化该类的实例的方式。 若要了解这些属性如何控制 XML 序列化，请参阅[使用属性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)。  

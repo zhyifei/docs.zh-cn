@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555998"
 ---
 # <a name="scrollbar"></a>ScrollBar
 A <xref:System.Windows.Controls.Primitives.ScrollBar> ，您可以查看通过滑动是当前查看区之外的内容<xref:System.Windows.Controls.Primitives.Thumb>使可见的内容。  

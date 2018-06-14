@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591429"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>由于不等待此调用，因此在调用完成之前，当前方法将继续运行
 在调用完成之前，会继续执行当前方法，原因是此调用不处于等待状态。 请考虑向调用结果应用“Await”运算符。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581581"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>如何：使用 JoinBlock 从多个源读取数据
 本文档介绍如何在来自多个源的数据可用时使用 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 类执行操作。 还演示了如何使用非贪婪模式使多个联接块更有效地共享数据源。

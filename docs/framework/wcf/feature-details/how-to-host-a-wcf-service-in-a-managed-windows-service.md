@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497212"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>如何：在托管 Windows 服务中承载 WCF 服务
 本主题概述了创建由 Windows 服务承载 Windows Communication Foundation (WCF) 服务所需的基本步骤。 此方案是通过启用托管 Windows 服务主机是不是消息激活的安全环境中承载 Internet 信息服务 (IIS) 外部的长时间运行 WCF 服务的选项。 服务的生存期改由操作系统控制。 此宿主选项在 Windows 的所有版本中都是可用的。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537403"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>MonthCalendar 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件显示直观的图形界面，供用户查看并设置日期信息。 该控件将显示一个日历： 包含排列在列下方的日期突出显示所选的范围内一周中的天的月份的编号的日期的网格。 你可以通过单击箭头按钮在月标题的任意一侧选择不同的月份。 与类似<xref:System.Windows.Forms.DateTimePicker>控件，您可以选择与此控件的多个日期。 有关详细信息<xref:System.Windows.Forms.DateTimePicker>控制，请参阅[DateTimePicker 控件](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491983"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>如何：设置签名确认
 *签名确认*是消息发起方确保接收到的答复在发件人的原始消息的响应中生成一种机制。 WS-Security 1.1 规范中对签名确认进行了定义。 如果终结点支持 WS-Security 1.0，则不能使用签名确认。  

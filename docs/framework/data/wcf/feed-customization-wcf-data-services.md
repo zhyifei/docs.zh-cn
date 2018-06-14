@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365886"
 ---
 # <a name="feed-customization-wcf-data-services"></a>源自定义（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]来公开作为源的数据。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持 Atom 和 JavaScript 对象表示法 (JSON) 格式的数据馈送。 当你使用 Atom 馈送时，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供标准的方法来序列化数据，如实体和关系，为 XML 格式，可以包含在 HTTP 消息的正文。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定义实体中包含的数据与 Atom 元素之间的默认实体-属性映射。 有关详细信息，请参阅[OData: Atom 格式](http://go.microsoft.com/fwlink/?LinkID=185794)。  

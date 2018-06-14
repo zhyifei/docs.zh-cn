@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ac69bab45ccd39b6a055fe4d2f74950ab47da779
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447027"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField 方法
 获取指向与 FieldDef 标记为包含该字段指定<xref:System.Type>并具有指定的名称和元数据签名。  
@@ -62,11 +63,11 @@ HRESULT FindField (
  `FindField` 查找直接在类或接口; 中定义的字段找不到继承的所有字段。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：**作为 MsCorEE.dll 中的资源  
+ **库：** 作为 MsCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

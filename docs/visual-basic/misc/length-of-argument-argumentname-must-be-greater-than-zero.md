@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635614"
 ---
 # <a name="length-of-argument-39ltargumentnamegt39-must-be-greater-than-zero"></a>自变量长度&#39; &lt;argumentname&gt; &#39;必须是大于零
 参数的值小于或等于零。  

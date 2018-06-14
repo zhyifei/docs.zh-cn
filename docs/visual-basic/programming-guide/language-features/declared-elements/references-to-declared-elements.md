@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655806"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>对已声明元素的引用 (Visual Basic)
 如果你的代码引用声明的元素，Visual Basic 编译器匹配该名称的相应声明你引用中的名称。 如果多个元素具有相同名称声明，则可以控制这些元素哪一项将引用的*合格*其名称。  

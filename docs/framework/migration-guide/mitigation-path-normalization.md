@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389496"
 ---
 # <a name="mitigation-path-normalization"></a>缓解：路径规范化
 自定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的应用程序起，.NET Framework 中的路径规范化已更改。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409588"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe（Windows 窗体 ActiveX 控件导入程序）
 ActiveX 控件导入程序将 ActiveX 控件的 COM 类型库中的类型定义转换为 Windows 窗体控件。  

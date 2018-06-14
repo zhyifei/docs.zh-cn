@@ -1,14 +1,6 @@
 ---
-title: "CloseCLREnumeration 函数"
-ms.custom: 
+title: CloseCLREnumeration 函数
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CloseCLREnumeration
 api_location:
@@ -24,17 +16,14 @@ helpviewer_keywords:
 ms.assetid: 5e3c3958-80bb-43b1-a96b-dd3e6dbd9cd7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f6de2d1625b4d9f66ec27ad7ed3e6ba33cc59b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 18903bd00b0a9d09365d03c155531a25dc013189
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406083"
 ---
 # <a name="closeclrenumeration-function"></a>CloseCLREnumeration 函数
 关闭任何有效的公共语言运行时 (CLR) 继续启动事件位于返回的句柄数组[EnumerateCLRs 函数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)，并释放句柄和字符串路径数组的内存。  
@@ -69,8 +58,8 @@ HRESULT CloseCLREnumeration (
  E_FAIL（或其他 E_ 返回代码）  
  此函数无法释放 `pHandleArray` 和 `pStringArray` 的内存。  
   
-## <a name="requirements"></a>惠?  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** dbgshim.h  
   

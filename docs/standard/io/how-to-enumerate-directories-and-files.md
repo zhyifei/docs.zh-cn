@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575845"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>如何：枚举目录和文件
 通过使用可返回目录和文件名的可枚举字符串集合的方法，可枚举目录和文件。 也可以使用返回 <xref:System.IO.DirectoryInfo>、<xref:System.IO.FileInfo> 或 <xref:System.IO.FileSystemInfo> 对象的可枚举集合的方法。 在处理目录和文件的大型集合时，可枚举的集合能够比数组提供更好的性能。  

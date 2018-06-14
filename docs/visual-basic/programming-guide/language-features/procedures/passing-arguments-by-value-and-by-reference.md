@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654172"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>通过值和通过引用传递自变量 (Visual Basic)
 在 Visual Basic 中，可以传递了参数给过程*按值*或*通过引用*。 这称为*传递机制*，同时确定过程是否可以修改调用代码中的以该参数基础的编程元素。 过程声明确定每个参数的传递机制，通过指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字。  

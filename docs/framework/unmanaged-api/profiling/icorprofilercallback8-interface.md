@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b92120cc5948efca696d922448da215601f9e6b3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455278"
 ---
 # <a name="icorprofilercallback8-interface"></a>ICorProfilerCallback8 接口
 [在.NET Framework 4.7 和更高版本中受支持]  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
 |[DynamicMethodJITCompilationFinished 方法](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|通知探查器已完成的动态方法的 JIT 编译。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

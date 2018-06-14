@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ad2dd4cded6800ce016d821f8e3ffe01dcb6264b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418254"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject 方法
 获取公共语言运行时 (CLR) 线程的接口指针。  
@@ -39,7 +40,7 @@ HRESULT GetObject (
  [out]指向表示 CLR 线程 ICorDebugValue 接口对象的地址的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

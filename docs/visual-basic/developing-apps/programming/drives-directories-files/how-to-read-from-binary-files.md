@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588022"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>如何：在 Visual Basic 中读取二进制文件
 `My.Computer.FileSystem` 对象提供用于读取二进制文件的 `ReadAllBytes` 方法。  

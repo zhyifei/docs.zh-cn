@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a94797e6279a1f1d419b977c22d73ca41bbafc9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443368"
 ---
 # <a name="ihosttaskmanagerbeginthreadaffinity-method"></a>IHostTaskManager::BeginThreadAffinity 方法
 通知宿主托管代码正在进入在其中将当前的任务必须不移动到另一个操作系统线程的周期。  
@@ -47,11 +48,11 @@ HRESULT BeginThreadAffinity ();
  CLR 通常调用`IHostTaskManager::BeginThreadAffinity`对的调用的上下文中<xref:System.Threading.Thread.BeginThreadAffinity%2A?displayProperty=nameWithType>。 当前的任务必须不能重新计划进行相应地调用是到[ihosttaskmanager:: Endthreadaffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)。 任务可以切换出去，但当它们切换回时，必须将它们分配到从中它们已切出的同一操作系统线程。嵌套调用`BeginThreadAffinity`没有任何效果，因为调用是指当前任务。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 作为 MSCorEE.dll 中的资源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

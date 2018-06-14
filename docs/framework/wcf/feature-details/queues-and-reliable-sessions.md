@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494665"
 ---
 # <a name="queues-and-reliable-sessions"></a>队列和可靠会话
 队列和可靠会话是 Windows Communication Foundation (WCF) 功能用于实现可靠消息传递。 本节中所包含的主题讨论 WCF 可靠消息传递功能。  

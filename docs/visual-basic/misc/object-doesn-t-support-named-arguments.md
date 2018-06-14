@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636736"
 ---
 # <a name="object-doesn39t-support-named-arguments"></a>对象没有&#39;t 支持命名自变量
 你尝试访问其方法不支持已命名的参数的对象。  

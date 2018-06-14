@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397164"
 ---
 # <a name="using-tcp-services"></a>使用 TCP 服务
 <xref:System.Net.Sockets.TcpClient> 类使用 TCP 从 Internet 资源请求数据。 TcpClient 的方法和属性会摘录为了通过 TCP 请求和接收数据而创建的 <xref:System.Net.Sockets.Socket> 的详细信息。 与远程设备的连接表示为流，因此可以使用 .NET Framework 流处理技术读取和写入数据。  

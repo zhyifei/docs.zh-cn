@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804230"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>如何：创建自定义授权策略
 标识模型基础结构在 Windows Communication Foundation (WCF) 支持基于声明的授权模型。 声明从令牌中提取，并可以选择由自定义授权策略进行处理，然后放入 <xref:System.IdentityModel.Policy.AuthorizationContext> 中，之后进行检查以做出授权决定。 可以使用自定义策略将声明从传入令牌转换成应用程序需要的声明。 这种方式，应用程序层可以受由 WCF 支持的不同令牌类型的不同声明的详细信息。 本主题演示如何实现自定义授权策略和如何将该策略添加到服务所使用的策略集中。  

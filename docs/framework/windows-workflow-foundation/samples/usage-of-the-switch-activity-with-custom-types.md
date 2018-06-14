@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517876"
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>带自定义类型的切换活动的用法
 此示例介绍如何使 <xref:System.Activities.Statements.Switch%601> 活动能够在运行时计算用户定义的复杂类型。 在大多数传统的过程性编程语言，[切换](http://go.microsoft.com/fwlink/?LinkId=180521)语句选择执行逻辑基于变量的条件评估。 传统上，`switch` 语句会操作可静态计算的表达式。 例如，在 C# 中，这表示仅支持基元类型（如 <xref:System.Boolean>、<xref:System.Int32>、<xref:System.String>）和枚举类型。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394860"
 ---
 # <a name="using-application-protocols"></a>使用应用程序协议
 .NET Framework 支持常用的 Internet 应用程序协议。 本部分包括有关使用 [HTTP](../../../docs/framework/network-programming/http.md)、“TCP”和“UDP”协议的信息，以及使用 [Windows Sockets](../../../docs/framework/network-programming/sockets.md) 接口实现自定义协议的相关信息。  

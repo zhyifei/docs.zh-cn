@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527656"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>如何：访问托管 HTML 文档对象模型
 可以从两种类型的应用程序访问托管 HTML 文档对象模型 (DOM)：  

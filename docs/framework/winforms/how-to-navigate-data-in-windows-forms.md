@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540363"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>如何：在 Windows 窗体中导航数据
 在 Windows 应用程序，以浏览数据源中的记录的最简单方法是将绑定<xref:System.Windows.Forms.BindingSource>组件到数据源，然后将控件绑定到<xref:System.Windows.Forms.BindingSource>。 你可以然后使用内置的导航方法上,<xref:System.Windows.Forms.BindingSource>此类<xref:System.Windows.Forms.BindingSource.MoveNext%2A>， <xref:System.Windows.Forms.BindingSource.MoveLast%2A>，<xref:System.Windows.Forms.BindingSource.MovePrevious%2A>和<xref:System.Windows.Forms.BindingSource.MoveFirst%2A>。 使用这些方法将调整<xref:System.Windows.Forms.BindingSource.Position%2A>和<xref:System.Windows.Forms.BindingSource.Current%2A>属性<xref:System.Windows.Forms.BindingSource>正确。 此外可以查找某个项，并将其设置为当前项，通过设置<xref:System.Windows.Forms.BindingSource.Position%2A>属性。  

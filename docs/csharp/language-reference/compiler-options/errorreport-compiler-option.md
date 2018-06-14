@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218980"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport（C# 编译器选项）
 此选项提供向 Microsoft 报告 C# 内部编译错误的简便方法。  

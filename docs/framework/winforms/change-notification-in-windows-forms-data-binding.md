@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527727"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows 窗体数据绑定中的更改通知
 Windows 窗体数据绑定的最重要概念之一是*更改通知*。 若要确保你的数据源和绑定的控件始终具有最新的数据，必须添加数据绑定的更改通知。 具体而言，你想要确保对其数据源，所做的更改，会通知绑定的控件，并且数据源会通知的控件的绑定属性所做的更改。  

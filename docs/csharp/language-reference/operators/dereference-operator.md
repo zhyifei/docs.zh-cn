@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171975"
 ---
 # <a name="-gt-operator-c-reference"></a>-&gt; 运算符（C# 参考）
 `->` 运算符将取消指针引用与成员访问结合起来。  

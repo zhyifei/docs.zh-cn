@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538403"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Windows 窗体中的鼠标捕获
 *鼠标捕获*指控制所采用的所有鼠标输入的命令。 当控件已捕获鼠标时，它会接收鼠标输入，指示在其边框内为指针。  

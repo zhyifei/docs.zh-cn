@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566738"
 ---
 # <a name="property-animation-techniques-overview"></a>属性动画技术概述
 本主题介绍了处理动画属性的不同方法：情节提要、本地动画、时钟和基于帧的动画。  

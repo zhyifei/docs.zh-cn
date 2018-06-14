@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496339"
 ---
 # <a name="how-to-use-filters"></a>如何：使用筛选器
 本主题概述创建使用多个筛选器的路由配置所需执行的基本步骤。 在本示例中，消息将路由到两个计算器服务实现，即 regularCalc 和 roundingCalc。 这两个实现都支持相同的运算；但其中一个服务在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用服务的舍入版本；如果未表示任何服务首选项，则消息将在这两个服务间执行负载平衡。 这两个服务公开的运算包括：  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578984"
 ---
 # <a name="dispose-pattern"></a>释放模式
 所有程序执行过程中都获取一个或多个系统资源，如内存、 系统句柄或数据库连接。 开发人员必须是时使用此类系统资源，请小心，因为它们必须在已获取并使用后释放。  

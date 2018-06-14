@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644870"
 ---
 # <a name="linq-and-reflection-visual-basic"></a>LINQ 和反射 (Visual Basic)
 .NET Framework 类库反射 API 可用于检查 .NET 程序集中的元数据，以及创建位于该程序集中的类型、类型成员、参数等等的集合。 因为这些集合支持泛型 `IEnumerable` 接口，所以可以使用 LINQ 查询它们。  

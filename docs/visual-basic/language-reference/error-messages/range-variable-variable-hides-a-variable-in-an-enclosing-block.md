@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593121"
 ---
 # <a name="range-variable-ltvariablegt-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a>范围变量&lt;变量&gt;隐藏封闭块、 以前定义的范围变量或查询表达式中隐式声明的变量中的变量
 中指定的范围变量名称`Select`， `From`， `Aggregate`，或`Let`子句的查询，或查询，隐式声明的变量名之前已指定的范围变量的名称重复例如，字段名称或聚合函数的名称。  

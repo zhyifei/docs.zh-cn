@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587718"
 ---
 # <a name="managed-thread-states"></a>托管线程状态
 <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> 属性提供了位掩码，以指明线程的当前状态。 一个线程始终处于 <xref:System.Threading.ThreadState> 枚举中的至少一个可能状态，并且可以同时处于多个状态。  

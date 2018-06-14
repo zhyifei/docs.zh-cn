@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593911"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>可选参数必须指定默认值
 可选参数必须不提供在调用过程提供任何参数，则可以使用的默认值。  

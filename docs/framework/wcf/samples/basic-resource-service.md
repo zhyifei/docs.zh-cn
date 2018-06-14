@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803723"
 ---
 # <a name="basic-resource-service"></a>基本资源服务
 此示例演示如何实现基于 HTTP 的服务使用 Windows Communication Foundation (WCF) REST 编程模型公开支持检索客户的集合、 添加、 删除和替换操作。 此示例由两个组件的自承载的 WCF HTTP 服务 (Service.cs) 和一个控制台应用程序 (program.cs)，创建服务并对其进行调用。  

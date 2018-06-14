@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362622"
 ---
 # <a name="query-examples"></a>查询示例
 本部分提供的典型的 Visual Basic 和 C# 示例[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查询。 在示例部分，使用 Visual Studio 的开发人员可以在提供的示例解决方案找到许多的更多示例。 有关详细信息，请参阅[示例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)。  

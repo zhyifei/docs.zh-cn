@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568792"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生产环境中运行由和基于微服务的应用程序
 

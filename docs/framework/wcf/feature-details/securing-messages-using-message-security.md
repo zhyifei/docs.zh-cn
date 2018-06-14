@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498685"
 ---
 # <a name="securing-messages-using-message-security"></a>使用消息安全保护消息
 本部分讨论 WCF 消息安全性时使用<xref:System.ServiceModel.NetMsmqBinding>。  

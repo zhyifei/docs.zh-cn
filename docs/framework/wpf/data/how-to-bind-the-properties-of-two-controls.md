@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555576"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>如何：绑定两个控件的属性
 此示例演示如何将一个实例化控件的属性绑定到的另一个使用<xref:System.Windows.Data.Binding.ElementName%2A>属性。  

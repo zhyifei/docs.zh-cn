@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656305"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>自动实现的属性 (Visual Basic)
 *自动实现的属性*使你可以快速指定类的属性，而无需编写代码`Get`和`Set`属性。 为自动实现的属性编写代码时，Visual Basic 编译器会自动创建私有字段以存储属性变量，并且会创建关联的 `Get` 和 `Set` 过程。  

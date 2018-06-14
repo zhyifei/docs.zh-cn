@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495546"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF
 本主题概述了基本的 ASP.NET AJAX 服务迁移到等效的启用了 AJAX 的 Windows Communication Foundation (WCF) 服务的过程。 它演示如何创建 ASP.NET AJAX 服务的功能上等效 WCF 版本。 然后可以并排比较，使用这两项服务或 WCF 服务可以用于替换 ASP.NET AJAX 服务。  

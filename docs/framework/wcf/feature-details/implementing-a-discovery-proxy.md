@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492214"
 ---
 # <a name="implementing-a-discovery-proxy"></a>实现发现代理
 本节说明实现发现代理所需执行的步骤。 发现代理是包含服务存储库的独立服务。 客户端可以查询发现代理，以便查找该代理已知的可检测服务。 使用服务填充代理的方式由实施者决定。 例如，发现代理可以连接到现有服务存储库并使该信息可供检测，管理员可以使用管理 API 向代理添加可检测服务，或者发现代理也可以使用公告功能更新其内部缓存。  

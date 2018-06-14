@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506034"
 ---
 # <a name="etw-tracing"></a>ETW 跟踪
 本示例演示如何通过使用 Windows 事件跟踪 (ETW) 和本示例提供的 `ETWTraceListener` 来实现端对端 (E2E) 跟踪。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)并包括 ETW 跟踪。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363359"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 应用程序中的 SqlDependency
 本节中的示例演示如果通过利用 ASP.NET <xref:System.Data.SqlClient.SqlDependency> 对象间接使用 <xref:System.Web.Caching.SqlCacheDependency>。 <xref:System.Web.Caching.SqlCacheDependency> 对象使用 <xref:System.Data.SqlClient.SqlDependency> 来侦听通知和正确更新缓存。  

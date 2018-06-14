@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652956"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>如何：使用 LINQ 转换 XML (Visual Basic)
 [XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)方便地从一个源读取的 XML 并将它转换为新的 XML 格式。 你可以利用 LINQ 查询以检索内容后，若要转换，或将现有的文档中的内容更改为新的 XML 格式。  

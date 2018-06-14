@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492900"
 ---
 # <a name="federation-and-trust"></a>联合与信任
 本主题介绍与联合应用程序、 信任边界和配置和已颁发令牌中 Windows Communication Foundation (WCF) 的使用相关的各个方面。  

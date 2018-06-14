@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537871"
 ---
 # <a name="windows-forms-coordinates"></a>Windows 窗体坐标
 Windows 窗体坐标系统基于设备坐标，并度量值时在 Windows 窗体中绘制的基本单位是设备单元 （通常情况下，像素）。 在屏幕上的点的 x 坐标和 y 坐标对所述增加到右侧和 y 坐标增加从顶部到底部的 x 坐标。 来源，相对于屏幕中，位置将有所不同具体取决于是否指定屏幕或客户端坐标。  

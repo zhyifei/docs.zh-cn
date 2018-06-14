@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa72f82d2fc78110fc2bee8edd265916996aa884
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403141"
 ---
 # <a name="icordebugarrayvaluegetcount-method"></a>ICorDebugArrayValue::GetCount 方法
 获取数组中的元素总数。  
@@ -39,7 +40,7 @@ HRESULT GetCount (
  [out]指向数组中的元素总数的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   

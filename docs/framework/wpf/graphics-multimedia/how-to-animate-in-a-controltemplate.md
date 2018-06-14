@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558763"
 ---
 # <a name="how-to-animate-in-a-controltemplate"></a>如何：在 ControlTemplate 中进行动画处理
 此示例演示如何使用<xref:System.Windows.Media.Animation.Storyboard>， <xref:System.Windows.EventTrigger>，和<xref:System.Windows.Trigger>对象中进行动画处理<xref:System.Windows.Controls.ControlTemplate>。  

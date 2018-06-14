@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599185"
 ---
 # <a name="argument-value-39ltpathnamegt39-contains-characters-that-are-not-valid-in-a-path-name"></a>自变量值&#39;&lt;路径名&gt;&#39;包含在路径名中无效的字符
 路径名包含一个或多个无效字符。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513147"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>公开和调用 ActivityActions
 此示例演示如何开发具有 <xref:System.Activities.ActivityAction> 的自定义活动。 它还演示如何通过提供 <xref:System.Activities.ActivityAction> 的实现来使用此活动。  

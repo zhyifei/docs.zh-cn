@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591828"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>扩展 Visual Basic 中的 My 命名空间
 `My`在 Visual Basic 中的命名空间公开属性和方法，您可以轻松地利用.NET Framework 的功能。 `My`命名空间简化了常见的编程问题，通常可一行代码将一个困难的任务。 此外， `My` ，以便你可以自定义的行为，命名空间是完全可扩展`My`并将新的服务添加到其层次结构，从而满足特定应用程序需求。 本主题将讨论如何自定义的现有成员`My`命名空间以及如何将添加到你自己自定义类`My`命名空间。  

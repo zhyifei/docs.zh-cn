@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366003"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>反射提供程序（WCF 数据服务）
 除通过实体框架公开数据模型中的数据以外，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 还可以公开未在基于实体的模型中严格定义的数据。 反射提供程序公开类中的数据，这些类返回实现 <xref:System.Linq.IQueryable%601> 接口的类型。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用反射推断这些类的数据模型，并且可以将针对资源的基于地址的查询转换为针对已公开 <xref:System.Linq.IQueryable%601> 类型的基于语言集成查询 (LINQ) 的查询。  

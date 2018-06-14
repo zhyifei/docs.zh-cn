@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499458"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用传输安全保护消息
 本节讨论消息队列 (MSMQ) 传输安全，您可将其用于保护发送到队列的消息。  

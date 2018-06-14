@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592141"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>自定义 My 中可用的对象 (Visual Basic)
 本主题介绍如何控制哪些`My`通过设置你的项目的情况下启用对象`_MYTYPE`条件编译常量。 Visual Studio 集成开发环境 (IDE) 保留`_MYTYPE`与项目的类型同步的项目的条件编译常量。  

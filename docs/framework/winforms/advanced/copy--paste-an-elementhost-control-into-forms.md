@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520937"
 ---
 # <a name="walkthrough-copying-and-pasting-an-elementhost-control-into-separate-windows-forms"></a>演练：将 ElementHost 控件复制并粘贴到单独的 Windows 窗体中
 本演练显示了如何将 Windows Presentation Foundation (WPF) 控件从一个 Windows 窗体复制到其他 Windows 窗体。  

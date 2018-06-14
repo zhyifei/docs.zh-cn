@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386166"
 ---
 # <a name="wcf-directive-syntax"></a>WCF 指令语法
 指定由.svc 文件中的 Windows Communication Foundation (WCF) 指令用来指挥编译器的设置。 每个指令都可以包含一个或多个特定于该指令的特性（与值成对出现）。 WCF 只有[ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指令。  

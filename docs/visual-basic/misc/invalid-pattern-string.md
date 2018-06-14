@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635640"
 ---
 # <a name="invalid-pattern-string"></a>无效模式字符串
 在搜索的 `Like` 操作中指定的模式字符串无效。  

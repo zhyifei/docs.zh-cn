@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473368"
 ---
 # <a name="msmq-integration-transport"></a>MSMQ 集成传输
 本主题列出由 MSMQ 集成传输生成的所有异常。  
