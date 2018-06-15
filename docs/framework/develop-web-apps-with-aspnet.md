@@ -16,7 +16,7 @@ ms.locfileid: "33386943"
 # <a name="developing-web-applications-with-aspnet"></a>用 ASP.NET 开发 Web 应用程序
 ASP.NET 是用于创建 Web 应用程序的 .NET Framework 技术。 为了方便起见，提供了下列链接：  
 
-- [ASP.NET 核心文档](/aspnet/core/)   
+- [ASP.NET Core 文档](/aspnet/core/)   
 - [ASP.NET 文档](/aspnet/overview)   
 - [ASP.NET MVC](http://go.microsoft.com/fwlink/p/?LinkID=227227)   
 - [ASP.NET 网页](http://go.microsoft.com/fwlink/p/?LinkId=251040)   

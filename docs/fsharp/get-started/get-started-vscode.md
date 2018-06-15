@@ -25,7 +25,7 @@ Ionide 使用[Mono](http://www.mono-project.com)。 在 macOS 上安装 Mono 的
 brew install mono
 ```
 
-你还必须安装[.NET 核心 SDK](https://www.microsoft.com/net/download)。
+你还必须安装[.NET Core SDK](https://www.microsoft.com/net/download)。
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
@@ -36,13 +36,13 @@ sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
-你还必须安装[.NET 核心 SDK](https://www.microsoft.com/net/download)。
+你还必须安装[.NET Core SDK](https://www.microsoft.com/net/download)。
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 如果你在 Windows 上，你必须[使用 F # 支持安装 Visual Studio](get-started-visual-studio.md#installing-f)。 这将安装所有必需的组件来编写、 编译和执行 F # 代码。
 
-你还必须安装[.NET 核心 SDK](https://www.microsoft.com/net/download/)。
+你还必须安装[.NET Core SDK](https://www.microsoft.com/net/download/)。
 
 ---
 

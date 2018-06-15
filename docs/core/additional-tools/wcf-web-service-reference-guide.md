@@ -31,7 +31,7 @@ ms.locfileid: "33215373"
 > * Visual C# > .NET Standard
 > * Visual C# > Web > ASP.NET Core Web 应用程序
 
-以“ASP.NET 核心 Web 应用程序”项目模板为例，本文将介绍如何向该项目中添加 WCF 服务引用：
+以“ASP.NET Core Web 应用程序”项目模板为例，本文将介绍如何向该项目中添加 WCF 服务引用：
 
 1. 在解决方案资源管理器中，双击项目的“连接的服务”节点（对于 .NET Core 或 .NET Standard 项目，当在解决方案资源管理器中右键单击项目的“依赖项”节点时，该选项可用）。
 

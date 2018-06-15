@@ -68,7 +68,7 @@ ms.locfileid: "32752814"
  `<EnableAmPmParseAdjustment>`元素没有任何影响<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>， <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>， <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>，和<xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>方法。  
   
 > [!IMPORTANT]
->  在.NET 核心和.NET Native，默认情况下启用的调整后的 AM/PM 分析规则。  
+>  在.NET Core 和.NET Native，默认情况下启用的调整后的 AM/PM 分析规则。  
   
  如果未启用分析的调整规则，该字符串的第一个数字解释为 12 小时时钟小时和除外 AM/PM 指示符的字符串的其余部分将被忽略。 日期和时间分析方法返回包含当前日期和从日期字符串中提取一天中的小时。  
   

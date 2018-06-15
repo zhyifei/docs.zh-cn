@@ -32,7 +32,7 @@ ms.locfileid: "34728311"
 | 目标 Framework      | 最新 <br/> 稳定版本 | 目标框架名字对象 (TFM) | 已实现 <br/> .NET Standard 版本 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.0                         | netstandard2.0                 | 不可用                                     |
-| .NET 核心             | 2.1                         | netcoreapp2.1                  | 2.0                                     |
+| .NET Core             | 2.1                         | netcoreapp2.1                  | 2.0                                     |
 | .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>支持的目标框架版本
@@ -42,7 +42,7 @@ ms.locfileid: "34728311"
 | 目标 Framework           | TFM |
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET 核心                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
 | Windows 应用商店              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |

@@ -38,7 +38,7 @@ dotnet build [-h|--help]
 
 `dotnet build` 命令将项目及其依赖项生成为一组二进制文件。 二进制文件包括中间语言 (IL) 文件（带 *.dll* 扩展名）和用于调试的符号文件（带 *.pdb* 扩展名）中的项目的代码。 生成依赖项 JSON 文件 (*\*.deps.json*)，该文件列出了应用程序的依赖项。 生成 *\*.runtimeconfig.json* 文件，该文件指定应用程序的共享运行时及其版本。
 
-如果项目有第三方依赖项（如来自 NuGet 的库），将从 NuGet 缓存解析这些依赖项，并且它们不适用于项目的生成输出。 考虑到这一点，`dotnet build` 的产品还未准备好转移到另一台计算机进行运行。 这与 .NET Framework 的行为相反，后者在构建可执行项目（一个应用程序）时，将生成可在任何已安装 .NET Framework 的计算机上运行的输出。 为了能够获得相似的 .NET Core 使用体验，需要使用 [dotnet publish](dotnet-publish.md) 命令。 有关详细信息，请参阅 [.NET 核心应用程序部署](../deploying/index.md)。
+如果项目有第三方依赖项（如来自 NuGet 的库），将从 NuGet 缓存解析这些依赖项，并且它们不适用于项目的生成输出。 考虑到这一点，`dotnet build` 的产品还未准备好转移到另一台计算机进行运行。 这与 .NET Framework 的行为相反，后者在构建可执行项目（一个应用程序）时，将生成可在任何已安装 .NET Framework 的计算机上运行的输出。 为了能够获得相似的 .NET Core 使用体验，需要使用 [dotnet publish](dotnet-publish.md) 命令。 有关详细信息，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
 
 构建需要 *project.assets.json* 文件，该文件列出了你的应用程序的依赖项。 此文件在 [`dotnet restore`](dotnet-restore.md) 执行时创建。 如果资产文件未就位，那么工具将无法解析引用程序集，进而导致错误生成。 通过 .NET Core 1.x SDK，需要在运行 `dotnet build` 之前显式运行 `dotnet restore`。 自 .NET Core 2.0 SDK 起，`dotnet restore` 在 `dotnet build` 运行时隐式运行。 若要在运行 build 命令时禁用隐式还原，可以传递 `--no-restore` 选项。
 

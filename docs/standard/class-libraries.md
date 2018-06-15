@@ -49,7 +49,7 @@ ms.locfileid: "33570586"
 
 下列平台支持 .NET Standard 库：
 
-* .NET 核心
+* .NET Core
 * .NET Framework
 * Mono
 * Xamarin.iOS、Xamarin.Mac、Xamarin.Android

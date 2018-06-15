@@ -83,8 +83,8 @@ ms.locfileid: "34312022"
 | [安装指南](../../../docs/framework/install/index.md) | 提供有关安装 .NET Framework 的信息。 |  
 | [.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) | 介绍 .NET Framework 带外版本以及如何在应用中使用它们。 |
 | [系统要求](../../../docs/framework/get-started/system-requirements.md) | 列出运行 .NET Framework 的硬件和软件要求。 |
-| [.NET 核心和开放源代码](../../../docs/framework/get-started/net-core-and-open-source.md) | 介绍 .NET Core 与 .NET Framework 的关系，以及如何访问开放源代码 .NET Core 项目。 |
-| [.NET 核心文档](https://docs.microsoft.com/dotnet/) | 提供 .NET Core 的概念和 API 参考文档。 |
+| [.NET Core 和开放源代码](../../../docs/framework/get-started/net-core-and-open-source.md) | 介绍 .NET Core 与 .NET Framework 的关系，以及如何访问开放源代码 .NET Core 项目。 |
+| [.NET Core 文档](https://docs.microsoft.com/dotnet/) | 提供 .NET Core 的概念和 API 参考文档。 |
 | [.NET Standard](~/docs/standard/net-standard.md) | 讨论 .NET Standard，这是 .NET 实现支持的版本管理规范，用于保证可在多个平台上使用一致的 API 集。
 
 ## <a name="see-also"></a>请参阅

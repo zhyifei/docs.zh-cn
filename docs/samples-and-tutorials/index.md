@@ -20,7 +20,7 @@ ms.locfileid: "30957641"
 
 .NET 文档包含指导用户如何使用 .NET 的一系列示例和教程。 本主题介绍如何查找、查看和下载 .NET Core、ASP.NET Core 和 C# 示例和教程。 可在 [F# 基础站点](http://fsharp.org/learn.html)找到学习 F# 编程语言的资源。 如果你对使用联机代码编辑器探索 C# 感兴趣，可以从[本交互教程](https://www.microsoft.com/net/learn/in-browser-tutorial/1)入手，然后使用 [C# 交互快速入门](../csharp/quick-starts/index.md)继续深入学习。 有关如何查看和下载示例代码的说明，请参阅[查看和下载示例](#viewing-and-downloading-samples)部分。
 
-## <a name="net-core"></a>.NET 核心
+## <a name="net-core"></a>.NET Core
 
 ### <a name="samples"></a>示例
 

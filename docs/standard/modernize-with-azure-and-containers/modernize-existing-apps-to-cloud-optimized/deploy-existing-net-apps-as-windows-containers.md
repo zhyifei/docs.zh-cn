@@ -67,17 +67,17 @@ Docker 容器 (为简单起见，*容器*) 可以本机 Linux 和 Windows 上运
 
 使用 Windows 容器的好处本质都是相同的好处一般情况下获取来自容器。 使用 Windows 容器是有关从而大大提高灵活性、 可移植性和控制。
 
-现有的.NET 应用程序是指使用.NET Framework 创建这些应用程序。 例如，它们可能是传统的 ASP.NET web 应用程序-不使用.NET 核心，后者是较新，并运行跨平台在 Linux、 Windows 和 MacOS 上。
+现有的.NET 应用程序是指使用.NET Framework 创建这些应用程序。 例如，它们可能是传统的 ASP.NET web 应用程序-不使用.NET Core，后者是较新，并运行跨平台在 Linux、 Windows 和 MacOS 上。
 
 .NET Framework 中的主要依赖关系是 Windows。 它还具有传统 ASP.NET 中的辅助依赖项，如 IIS 和 System.Web。
 
-.NET Framework 应用程序必须运行在 Windows 上，时间段所示。 如果你想要化现有.NET Framework 应用程序并且你不能或不希望投资迁移到.NET 核心 （"如果它能正常工作，不将其迁移"），你有针对容器是唯一选择是使用 Windows 容器。
+.NET Framework 应用程序必须运行在 Windows 上，时间段所示。 如果你想要化现有.NET Framework 应用程序并且你不能或不希望投资迁移到.NET Core （"如果它能正常工作，不将其迁移"），你有针对容器是唯一选择是使用 Windows 容器。
 
 因此，Windows 容器的主要好处之一是，它们提供了一种方法来提升你现有的.NET Framework 应用程序在 Windows 通过容器化上运行。 从根本上讲，Windows 容器，让你通过使用容器灵活性、 可移植性和更好地控制正在寻找的好处。
 
 ## <a name="choose-an-os-to-target-with-net-based-containers"></a>选择为目标的 OS。基于网络的容器
 
-给定的操作系统支持 Docker，以及.NET Framework 和.NET 核心之间的差异的多样性，应针对特定操作系统和基于正在使用的 framework 的特定版本。
+给定的操作系统支持 Docker，以及.NET Framework 和.NET Core 之间的差异的多样性，应针对特定操作系统和基于正在使用的 framework 的特定版本。
 
 对于 Windows，可使用 Windows Server Core 或 Windows Nano Server。 这些 Windows 版本提供需要的.NET Framework 或.NET Core 应用程序的不同特征 （如与自承载的 web 服务器 Kestrel 例如 IIS)。
 
@@ -98,16 +98,16 @@ Docker 容器 (为简单起见，*容器*) 可以本机 Linux 和 Windows 上运
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x 在 Windows Server Core 上 |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x 使用其他 ASP.NET 自定义，在 Windows Server Core 上 |
 
-为.NET 核心 （适用于 Linux 和 Windows 跨平台），标记将如下所示：
+为.NET Core （适用于 Linux 和 Windows 跨平台），标记将如下所示：
 
 > | **标记** | **系统和版本**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | .NET 核心 2.0 仅运行时在 Linux 上 |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET 核心 2.0 仅运行时在 Windows Nano Server 上 |
+> | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 仅运行时在 Linux 上 |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2.0 仅运行时在 Windows Nano Server 上 |
 
 ### <a name="multi-arch-images"></a>多 arch 映像
 
-从 2017 中旬开始，你还可以使用新功能在 Docker 调用中[多体系结构](https://github.com/moby/moby/issues/15866)映像。 .NET 核心 Docker 映像可以使用多 arch 标记。 Dockerfile 不再文件需定义你面向的操作系统。 使用多 arch 功能，用于跨多个计算机配置的单个标记。 例如，多体系结构，您可以使用一个通用的标签： **microsoft/dotnet:2.0.0-runtime**。 如果请求 Linux 容器环境中的使用该标记时，获取基于 Debian 的映像。 如果请求 Windows 容器环境中使用该标记时，获取基于 Nano Server 的映像。
+从 2017 中旬开始，你还可以使用新功能在 Docker 调用中[多体系结构](https://github.com/moby/moby/issues/15866)映像。 .NET Core Docker 映像可以使用多 arch 标记。 Dockerfile 不再文件需定义你面向的操作系统。 使用多 arch 功能，用于跨多个计算机配置的单个标记。 例如，多体系结构，您可以使用一个通用的标签： **microsoft/dotnet:2.0.0-runtime**。 如果请求 Linux 容器环境中的使用该标记时，获取基于 Debian 的映像。 如果请求 Windows 容器环境中使用该标记时，获取基于 Nano Server 的映像。
 
 对于.NET Framework 映像，因为传统的.NET Framework 支持仅 Windows 中，不能使用多 arch 功能。
 

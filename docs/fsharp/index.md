@@ -47,7 +47,7 @@ F # 即将其核心的工作效率。 对 F # 的工具支持是无处不在和�
 
 [要开始使用 Visual Studio 代码中的 F #](get-started/get-started-vscode.md)如果所需的轻量跨平台和功能打包 IDE 体验。
 
-[要开始使用 F # 使用.NET 核心 CLI](get-started/get-started-command-line.md)如果你想要使用命令行工具。
+[要开始使用 F # 使用.NET Core CLI](get-started/get-started-command-line.md)如果你想要使用命令行工具。
 
 [F # 和 Xamarin 入门](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)移动使用 F # 的编程。
 

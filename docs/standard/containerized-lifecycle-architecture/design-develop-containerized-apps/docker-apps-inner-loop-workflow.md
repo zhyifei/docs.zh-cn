@@ -67,28 +67,28 @@ Microsoft 提供了 Visual Studio 代码，这是在 Mac、 Windows 和 Linux �
 
 图 4-16： 在 Visual Studio Code 中安装 Docker 扩展
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>步骤 2： 创建与现有映像 （纯 OS 或开发人员环境类似于.NET 核心、 Node.js 和 Ruby） 相关的 DockerFile
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>步骤 2： 创建与现有映像 （纯 OS 或开发人员环境类似于.NET Core、 Node.js 和 Ruby） 相关的 DockerFile
 
 你将需要每个要生成的自定义图像和每个要部署的容器的 DockerFile，因此，如果你的应用程序组成单个自定义服务，你将需要单个 DockerFile。 但是，如果你的应用程序组成 （如所示的微服务体系结构） 的多个服务，你将需要每个服务的一个 Dockerfile。
 
-DockerFile 通常放置在你的应用或服务的根文件夹内，并包含所需的命令，这样该 Docker 就知道如何设置和运行该应用程序或服务。 你可以创建 DockerFile 并将其添加到你的项目以及你的代码 (node.js，.NET 核心等)，或者，如果你不熟悉的环境，看一看以下提示。
+DockerFile 通常放置在你的应用或服务的根文件夹内，并包含所需的命令，这样该 Docker 就知道如何设置和运行该应用程序或服务。 你可以创建 DockerFile 并将其添加到你的项目以及你的代码 (node.js，.NET Core 等)，或者，如果你不熟悉的环境，看一看以下提示。
 
 > [!TIP]
 > 你可以使用命令行工具调用[则 docker](https://github.com/Microsoft/generator-docker)，其中的基架你项目中，选择并添加所需的 Docker 配置文件的语言中的文件。 基本上，以帮助开发人员入门，它创建相应的 DockerFile，docker-compose.yml 和其他关联的脚本，以生成并运行你的 Docker 容器。 此 yeoman 生成器将提示你使用几个问题，要求你所选的开发语言和目标容器主机。
 
 ![则 docker](./media/image21.png)
 
-例如，图 4-17 显示终端中的两个屏幕快照，在 Windows 中，在 Mac 上，在这两种情况下，运行则 docker，将生成的示例代码项目 （当前.NET 核心、 Golang 和 Node.js 用作受支持的语言） 已配置为在上工作Docker 的顶部。
+例如，图 4-17 显示终端中的两个屏幕快照，在 Windows 中，在 Mac 上，在这两种情况下，运行则 docker，将生成的示例代码项目 （当前.NET Core、 Golang 和 Node.js 用作受支持的语言） 已配置为在上工作Docker 的顶部。
 
 ![](./media/image22.PNG)  ![](./media/image23.png)
 
 图 4-17： 则 docker 命令在 Windows （左） 和在 Mac 上的工具
 
-图 4-18 提供了示例则 docker 后使用你的位置，以将基架的一个现有的.NET 核心项目。
+图 4-18 提供了示例则 docker 后使用你的位置，以将基架的一个现有的.NET Core 项目。
 
 ![](./media/image24.PNG)
 
-图 4-18： 则使用现有的.NET 核心 docker 项目就地
+图 4-18： 则使用现有的.NET Core docker 项目就地
 
 从此 DockerFile，你指定哪些基本的 Docker 映像，你将使用 （如使用"发件人 microsoft/dotnet:1.0.0-core"）。 你通常将生成你在你可以从在任何官方存储库获取的基本映像之上的自定义映像[Docker Hub 注册表](https://hub.docker.com/)(如[.NET Core 的映像](https://hub.docker.com/r/microsoft/dotnet/)或一个[for Node.js](https://hub.docker.com/_/node/)).
 
@@ -96,7 +96,7 @@ DockerFile 通常放置在你的应用或服务的根文件夹内，并包含所
 
 使用版本号语言堆栈的官方存储库，可确保相同的语言功能是可用 （包括开发、 测试和生产） 的所有计算机上。
 
-以下是示例 DockerFile.NET 核心容器：
+以下是示例 DockerFile.NET Core 容器：
 
 ```
 # Base Docker image to use
@@ -114,11 +114,11 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-在这种情况下，它适用于 Linux 名为 microsoft/aspnetcore:1.0.1 使用正式的 ASP.NET 核心 Docker 映像的版本 1.0.1。 有关更多详细信息，请查阅[ASP.NET Core Docker 映像页](https://hub.docker.com/r/microsoft/aspnetcore/)和[.NET Core Docker 映像页](https://hub.docker.com/r/microsoft/dotnet/)。 你还可能正在使用另一可比较的映像，如节点： 4-Node.js，或对于开发语言，可在许多其他预配置的映像的 onbuild [Docker Hub](https://hub.docker.com/explore/)。
+在这种情况下，它适用于 Linux 名为 microsoft/aspnetcore:1.0.1 使用正式的 ASP.NET Core Docker 映像的版本 1.0.1。 有关更多详细信息，请查阅[ASP.NET Core Docker 映像页](https://hub.docker.com/r/microsoft/aspnetcore/)和[.NET Core Docker 映像页](https://hub.docker.com/r/microsoft/dotnet/)。 你还可能正在使用另一可比较的映像，如节点： 4-Node.js，或对于开发语言，可在许多其他预配置的映像的 onbuild [Docker Hub](https://hub.docker.com/explore/)。
 
 DockerFile，还需要指示 Docker 侦听到将在运行时 （如端口 80） 使用的 TCP 端口。
 
-有其他行的这样 Docker 就知道如何运行该应用程序可以在具体取决于你使用的，语言/框架 DockerFile 中添加的配置。 例如，你需要使用的入口点行\["dotnet"，"MyCustomMicroservice.dll"\]运行.NET 核心应用程序中，虽然您可以有多个不同版本，具体取决于生成并运行你的服务的方法。 如果你正在使用的 SDK 和 dotnet CLI 生成并运行.NET 应用程序，则将为略有不同。 底部行是入口点行加上其他行将无法为应用程序选择的语言/平台而异。
+有其他行的这样 Docker 就知道如何运行该应用程序可以在具体取决于你使用的，语言/框架 DockerFile 中添加的配置。 例如，你需要使用的入口点行\["dotnet"，"MyCustomMicroservice.dll"\]运行.NET Core 应用程序中，虽然您可以有多个不同版本，具体取决于生成并运行你的服务的方法。 如果你正在使用的 SDK 和 dotnet CLI 生成并运行.NET 应用程序，则将为略有不同。 底部行是入口点行加上其他行将无法为应用程序选择的语言/平台而异。
 
 **详细信息** 有关构建.NET Core 应用程序的 Docker 映像的信息，请转到<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>。
 
@@ -229,7 +229,7 @@ cesardl/netcore-webapi-microservice-docker:first
 
 此步骤根据你的应用程序正在执行什么操作会有所不同。
 
-在非常简单.NET 核心 Web API"Hello World"部署为单个容器或服务，你只需通过提供 DockerFile 中指定的 TCP 端口访问服务。
+在非常简单.NET Core Web API"Hello World"部署为单个容器或服务，你只需通过提供 DockerFile 中指定的 TCP 端口访问服务。
 
 如果 localhost 未打开，以导航到你的服务，则使用此命令的 IP 地址查找机：
 
