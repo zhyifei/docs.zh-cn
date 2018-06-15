@@ -7,11 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
-ms.openlocfilehash: d02668303f61f6a22f99bd7c86c41c9c139a716f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e64a819e9670a29e97140a32c81f5ff9006f83e
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231499"
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>演练：在 DataRepeater 控件中显示数据 (Visual Studio)
 本演练提供了在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件中显示绑定数据的完整基本方案。  
@@ -19,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="prerequisite"></a>必备组件  
  本演练需要 Northwind 示例数据库。  
   
- 如果你的开发计算机上没有此数据库，可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=98088)进行下载。 有关说明，请参阅[下载示例数据库](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+ 如果你的开发计算机上没有此数据库，您可以从 Microsoft 下载中心下载它。 有关说明，请参阅[下载示例数据库](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
 ## <a name="overview"></a>概述  
  本演练的第一部分主要有以下四个任务：  
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/04/2018
   
     -   如果下拉列表中包含到 Northwind 示例数据库的数据连接，请单击该连接。  
   
-         -或-  
+         或  
   
     -   单击**新连接**来配置新的数据连接。 有关详细信息，请参阅[添加新连接](/visualstudio/data-tools/add-new-connections)。  
   

@@ -3044,25 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 44bc5647fe740a4900b99794fe7af907e6328665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231458"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>抱歉，我们不&#39;t 对此 Visual Basic 错误的详细信息
 很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可使用以下论坛之一咨询其他开发人员：  
   
- [Visual Basic 语言](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ [Visual Basic 语言](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
  提供论坛供问题有关及常规讨论的 Visual Basic 语言语法和编译器。  
   
- [Visual Basic 互操作和升级](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ [Visual Basic 互操作和升级](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
  提供论坛供大家讨论有关和升级到 Visual Basic 并使用互操作性功能的问题。  
   
- [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  提供有关如何在 Visual Studio 环境中的问题的论坛。  
   
- [Visual Basic 常规信息](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ [Visual Basic 常规信息](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
  提供论坛供大家讨论有关和与其他论坛中未涉及的 Visual Basic 问题。  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
