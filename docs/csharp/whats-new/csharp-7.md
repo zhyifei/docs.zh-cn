@@ -28,17 +28,17 @@ C# 7.0 向 C# 语言添加了许多新功能：
 * [更多的 expression-bodied 成员](#more-expression-bodied-members)
     - 可使用表达式创作的成员列表有所增长。
 * [`throw` 表达式](#throw-expressions)
-    - 可以在之前因为 `throw` 是语句而不被允许的代码构造中引发异常。 
+    - 可以在之前因为 `throw` 是语句而不被允许的代码构造中引发异常。
 * [通用的异步返回类型](#generalized-async-return-types)
     - 使用 `async` 修饰符声明的方法可以返回除 `Task` 和 `Task<T>` 以外的其他类型。
 * [数字文本语法改进](#numeric-literal-syntax-improvements)
     - 新令牌可提高数值常量的可读性。
 
-本主题的其余部分讨论了每项功能。 你将了解每项功能背后的原理。 将了解语法。 将看到一些示例方案，从中可看出使用新功能将提高你作为开发人员的工作效率。 
+本主题的其余部分讨论了每项功能。 你将了解每项功能背后的原理。 将了解语法。 将看到一些示例方案，从中可看出使用新功能将提高你作为开发人员的工作效率。
 
 ## <a name="out-variables"></a>`out` 变量
 
-支持 `out` 参数的现有语法已在此版本中得到改进。  
+支持 `out` 参数的现有语法已在此版本中得到改进。
 
 以前，你需要将 out 变量的声明及其初始化分为两个不同的语句：
 
@@ -52,7 +52,7 @@ C# 7.0 向 C# 语言添加了许多新功能：
 
 [!code-csharp[OutVarVariableDeclarations](../../../samples/snippets/csharp/new-in-7/program.cs#02_OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* 代码更易于阅读。 
+* 代码更易于阅读。
     - 在使用 out 变量的地方声明 out 变量，而不是在上面的另一行。
 * 无需分配初始值。
     - 通过在方法调用中使用 `out` 变量的位置声明该变量，使得在分配它之前不可能意外使用它。
@@ -63,7 +63,7 @@ C# 7.0 向 C# 语言添加了许多新功能：
 
 ```csharp
 if (!int.TryParse(input, out int result))
-{    
+{
     return null;
 }
 
@@ -89,7 +89,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
-此赋值会创建其成员为 `Item1` 和 `Item2` 的元祖，其使用方式与 <xref:System.Tuple> 的相同。可更改语法，以创建为每个元组成员提供语义名称的元组：
+此赋值会创建其成员为 `Item1` 和 `Item2` 的元组，其使用方式与 <xref:System.Tuple> 的相同。可更改语法，以创建为每个元组成员提供语义名称的元组：
 
 [!code-csharp[NamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#05_NamedTuple "Named tuple")]
 
@@ -114,7 +114,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 以这种方式使用元组有若干优点：
 
-* 不用再费心创作定义返回类型的 `class` 或 `struct`。 
+* 不用再费心创作定义返回类型的 `class` 或 `struct`。
 * 无需创建新类型。
 * 借助该语言增强功能，无需调用 <xref:System.Tuple.Create``1(``0)> 方法。
 
@@ -129,12 +129,12 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 还可以为 .NET 中的任何类型提供类似的析构。 这通过将 `Deconstruct` 方法编写为类的成员来完成。 `Deconstruct` 方法为你要提取的每个属性提供一组 `out` 参数。 考虑提供析构函数方法的此 `Point` 类，该方法提取 `X` 和 `Y` 坐标：
 
 [!code-csharp[PointWithDeconstruction](../../../samples/snippets/csharp/new-in-7/point.cs#11_PointWithDeconstruction "Point with deconstruction method")]
- 
+
 可以通过向元组分配 `Point` 来提取各个字段：
 
 [!code-csharp[DeconstructPoint](../../../samples/snippets/csharp/new-in-7/program.cs#12_DeconstructPoint "Deconstruct a point")]
 
-不会受到 `Deconstruct` 方法中定义的名称的约束。 可以在分配过程中重命名提取变量：  
+不会受到 `Deconstruct` 方法中定义的名称的约束。 可以在分配过程中重命名提取变量：
 
 [!code-csharp[DeconstructNames](../../../samples/snippets/csharp/new-in-7/program.cs#13_DeconstructNames "Deconstruct with new names")]
 
@@ -159,10 +159,10 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 有关详细信息，请参阅[放弃](../discards.md)。
- 
+
 ## <a name="pattern-matching"></a>模式匹配
 
-模式匹配是一种可让你对除对象类型以外的属性实现方法分派的功能。 你可能已经熟悉基于对象类型的方法分派。 在面向对象的编程中，虚拟和重写方法提供语言语法来实现基于对象类型的方法分派。 基类和派生类提供不同的实现。 模式匹配表达式扩展了这一概念，以便你可以通过继承层次结构为不相关的类型和数据元素轻松实现类似的分派模式。 
+模式匹配是一种可让你对除对象类型以外的属性实现方法分派的功能。 你可能已经熟悉基于对象类型的方法分派。 在面向对象的编程中，虚拟和重写方法提供语言语法来实现基于对象类型的方法分派。 基类和派生类提供不同的实现。 模式匹配表达式扩展了这一概念，以便你可以通过继承层次结构为不相关的类型和数据元素轻松实现类似的分派模式。
 
 模式匹配支持 `is` 表达式和 `switch` 表达式。 每个表达式都允许检查对象及其属性以确定该对象是否满足所寻求的模式。 使用 `when` 关键字来指定模式的其他规则。
 
@@ -184,7 +184,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 ### <a name="switch-statement-updates"></a>`switch` 语句更新
 
-匹配表达式具有熟悉的语法，它基于已属于 C# 语言的 `switch` 语句。 在添加新 case 之前，让我们将现有代码转换为使用匹配表达式： 
+匹配表达式具有熟悉的语法，它基于已属于 C# 语言的 `switch` 语句。 在添加新 case 之前，让我们将现有代码转换为使用匹配表达式：
 
 [!code-csharp[SumUsingSwitch](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#16_SumUsingSwitch "Sum using switch")]
 
@@ -201,7 +201,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 此版本还添加了一个 `default` case。 无论在源中出现的顺序如何，`default` case 总是最后计算的。 因此，惯例是将 `default` case 放在最后。
 
-最后，让我们为新样式的骰子添加最后一个 `case`。 某些游戏使用百分比骰子来表示更大范围的数字。 
+最后，让我们为新样式的骰子添加最后一个 `case`。 某些游戏使用百分比骰子来表示更大范围的数字。
 
 > [!NOTE]
 > 两个 10 面百分比骰子可以表示 0 到 99 之间的每个数字。 一个骰子的各面标记为 `00`、`10`、`20`, ... `90`。 另一个骰子的各面标记为 `0`、`1`、`2`, ... `9`。 将两个骰子的值加在一起，可以得到 0 到 99 之间的每个数字。
@@ -239,7 +239,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 首先修改 `Find` 方法声明，使其返回一个 `ref int`，而不是一个元组。 然后修改 return 语句，使其返回存储在矩阵中的值，而不是两个索引：
 
 ```csharp
-// Note that this won't compile. 
+// Note that this won't compile.
 // Method declaration indicates ref return,
 // but return statement specifies a value return.
 public static ref int Find2(int[,] matrix, Func<int, bool> predicate)
@@ -277,7 +277,7 @@ C# 语言还设有三条规则，可防止你误用 `ref` 局部变量和返回�
 * `ref` 局部变量和返回结果不可用于异步方法。
     - 编译器无法知道异步方法返回时，引用的变量是否已设置为其最终值。
 
-添加 ref 局部变量和 ref 返回结果可通过避免复制值或多次执行取消引用操作，允许更为高效的算法。 
+添加 ref 局部变量和 ref 返回结果可通过避免复制值或多次执行取消引用操作，允许更为高效的算法。
 
 ## <a name="local-functions"></a>本地函数
 
@@ -352,7 +352,7 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 
 从异步方法返回 `Task` 对象可能在某些路径中导致性能瓶颈。 `Task` 是引用类型，因此使用它意味着分配对象。 如果使用 `async` 修饰符声明的方法返回缓存结果或以同步方式完成，那么额外的分配在代码的性能关键部分可能要耗费相当长的时间。 如果这些分配发生在紧凑循环中，则成本会变得非常高。
 
-新语言功能意味着异步方法可以返回除 `Task`、`Task<T>` 和 `void` 以外的其他类型。 返回类型必须仍满足异步模式，这意味着 `GetAwaiter` 方法必须是可访问的。 作为一个具体示例，已将 `ValueTask` 类型添加到 .NET framework 中，以使用这一新语言功能： 
+新语言功能意味着异步方法可以返回除 `Task`、`Task<T>` 和 `void` 以外的其他类型。 返回类型必须仍满足异步模式，这意味着 `GetAwaiter` 方法必须是可访问的。 作为一个具体示例，已将 `ValueTask` 类型添加到 .NET framework 中，以使用这一新语言功能：
 
 [!code-csharp[UsingValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#30_UsingValueTask "Using ValueTask")]
 
@@ -362,7 +362,7 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 一个简单的优化是在之前使用 `Task` 的地方使用 `ValueTask`。 但是，如果要手动执行额外的优化，则可以缓存来自异步工作的结果，并在后续调用中重用结果。 `ValueTask` 结构具有带 `Task` 参数的构造函数，以便你可以从任何现有异步方法的返回值构造 `ValueTask`：
 
 [!code-csharp[AsyncOptimizedValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#31_AsyncOptimizedValueTask "Return async result or cached value")]
- 
+
 与所有性能建议一样，应在对代码进行大规模更改之前对两个版本进行基准测试。
 
 ## <a name="numeric-literal-syntax-improvements"></a>数字文本语法改进
