@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522871"
 ---
 # <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>如何：在运行时从 PrintDialog 中捕获用户输入
 尽管你可以设置与在设计时打印相关的选项，有时想要在运行时，由于用户所做选择最有可能更改这些选项。 你可以捕获有关打印文档使用的用户输入<xref:System.Windows.Forms.PrintDialog>和<xref:System.Drawing.Printing.PrintDocument>组件。  

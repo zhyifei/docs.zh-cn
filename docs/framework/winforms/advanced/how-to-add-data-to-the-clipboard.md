@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522062"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>如何：将数据添加到剪贴板
 <xref:System.Windows.Forms.Clipboard>类提供了可以使用与 Windows 操作系统的剪贴板功能进行交互的方法。 许多应用程序的数据作为临时存储库使用剪贴板。 例如，字处理器在剪切和粘贴操作期间使用剪贴板。 剪贴板还可用于将数据传输到另一个应用程序。  

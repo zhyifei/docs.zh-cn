@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489067"
 ---
 # <a name="how-to-compare-claims"></a>如何：比较声明
 标识模型基础结构在 Windows Communication Foundation (WCF) 用于执行授权检查。 因此，一个常见的任务是将授权上下文中的声明与执行请求的操作或访问请求的资源所需的声明进行比较。 本主题说明如何比较声明，包括内置和自定义声明类型。 有关标识模型基础结构的详细信息，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  

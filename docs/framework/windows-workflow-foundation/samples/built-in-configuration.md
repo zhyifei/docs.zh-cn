@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518615"
 ---
 # <a name="built-in-configuration"></a>内置配置
 此示例演示了 SQL 工作流实例存储的使用和配置。 SQL 工作流实例存储是基于 SQL 的实例存储实现。 它允许实例将状态保存到 SQL Server 或 SQL Server Express 数据库中以及从中加载状态。  

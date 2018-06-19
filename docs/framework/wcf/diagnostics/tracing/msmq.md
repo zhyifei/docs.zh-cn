@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33475281"
 ---
 # <a name="msmq"></a>MSMQ
 在 MSMQ 应用程序中，不会在 MSMQ 与队列通道之间传输任何额外活动。  

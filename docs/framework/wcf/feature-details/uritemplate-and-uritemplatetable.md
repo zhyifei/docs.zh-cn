@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508810"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 和 UriTemplateTable
 Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局。 Windows Communication Foundation (WCF) 添加两个新类，以便开发人员控制他们的 Uri。 <xref:System.UriTemplate> 和<xref:System.UriTemplateTable>在 WCF 中形成基于 URI 的调度引擎的基础。 这些类还可在其自身，从而允许开发人员利用模板和 URI 映射机制而无需实现 WCF 服务。  
