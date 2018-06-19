@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537776"
 ---
 # <a name="creating-a-new-windows-form"></a><span data-ttu-id="75d23-102">创建新的 Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="75d23-102">Creating a New Windows Form</span></span>
 <span data-ttu-id="75d23-103">本主题包含介绍如何创建你的第一个 Windows 窗体应用程序的主题链接。</span><span class="sxs-lookup"><span data-stu-id="75d23-103">This topic contains links to topics that describe how to create your first Windows Forms application.</span></span> <span data-ttu-id="75d23-104">此外，本部分中的主题还将介绍一些基本的词汇和当开始创建 Windows 窗体应用程序时，应该了解的准则。</span><span class="sxs-lookup"><span data-stu-id="75d23-104">Also, the topics in this section introduce some of the basic vocabulary and guidelines that you should understand when you start to create a Windows Forms application.</span></span> <span data-ttu-id="75d23-105">若要了解有关 Windows 窗体应用程序的详细信息，可以使用它们、 事件和处理事件和如何处理来自用户的输入上的控件，请参阅相关的主题列表。</span><span class="sxs-lookup"><span data-stu-id="75d23-105">To learn more about Windows Forms applications, the controls you can use on them, events and handling events, and how to handle input from the user, see the related topic list.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521773"
 ---
 # <a name="coordinate-systems-and-transformations"></a><span data-ttu-id="3c80c-102">坐标系和坐标转换</span><span class="sxs-lookup"><span data-stu-id="3c80c-102">Coordinate Systems and Transformations</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="3c80c-103"> 提供世界变换和页转换，以便你可以将转换 （旋转、 缩放、 转换，等等） 所绘制的项。</span><span class="sxs-lookup"><span data-stu-id="3c80c-103"> provides a world transformation and a page transformation so that you can transform (rotate, scale, translate, and so on) the items you draw.</span></span> <span data-ttu-id="3c80c-104">两个转换还允许你各种各样的坐标系统中的工作。</span><span class="sxs-lookup"><span data-stu-id="3c80c-104">The two transformations also allow you to work in a variety of coordinate systems.</span></span>  
