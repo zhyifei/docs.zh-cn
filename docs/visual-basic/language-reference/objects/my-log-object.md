@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596016"
 ---
 # <a name="mylog-object"></a>My.Log 对象
 提供属性和方法用于将事件和异常信息写入应用程序的日志侦听器。  

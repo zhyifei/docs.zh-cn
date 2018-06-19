@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521773"
 ---
 # <a name="coordinate-systems-and-transformations"></a>坐标系和坐标转换
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供世界变换和页转换，以便你可以将转换 （旋转、 缩放、 转换，等等） 所绘制的项。 两个转换还允许你各种各样的坐标系统中的工作。  
