@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522765"
 ---
 # <a name="how-to-load-and-display-metafiles"></a><span data-ttu-id="17736-102">如何：加载和显示图元文件</span><span class="sxs-lookup"><span data-stu-id="17736-102">How to: Load and Display Metafiles</span></span>
 <span data-ttu-id="17736-103"><xref:System.Drawing.Imaging.Metafile>类，该类继承自<xref:System.Drawing.Image>类中，提供用于记录、 显示和检查矢量图像的方法。</span><span class="sxs-lookup"><span data-stu-id="17736-103">The <xref:System.Drawing.Imaging.Metafile> class, which inherits from the <xref:System.Drawing.Image> class, provides methods for recording, displaying, and examining vector images.</span></span>  

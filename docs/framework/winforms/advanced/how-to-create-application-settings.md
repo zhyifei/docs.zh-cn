@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524165"
 ---
 # <a name="how-to-create-application-settings"></a><span data-ttu-id="c05d5-102">如何：创建应用程序设置</span><span class="sxs-lookup"><span data-stu-id="c05d5-102">How to: Create Application Settings</span></span>
 <span data-ttu-id="c05d5-103">使用托管代码时，你可以创建新的应用程序设置并将其绑定窗体或窗体控件的属性上，以便在运行时自动加载和保存这些设置。</span><span class="sxs-lookup"><span data-stu-id="c05d5-103">Using managed code, you can create new application settings and bind them to properties on your form or your form's controls, so that these settings are loaded and saved automatically at run time.</span></span>  

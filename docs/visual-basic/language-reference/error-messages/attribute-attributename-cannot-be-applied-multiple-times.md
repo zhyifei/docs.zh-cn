@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584854"
 ---
 # <a name="attribute-39ltattributenamegt39-cannot-be-applied-multiple-times"></a><span data-ttu-id="ea1a6-102">属性&#39; &lt;attributename&gt; &#39;不能应用多次</span><span class="sxs-lookup"><span data-stu-id="ea1a6-102">Attribute &#39;&lt;attributename&gt;&#39; cannot be applied multiple times</span></span>
 <span data-ttu-id="ea1a6-103">该属性只能应用一次。</span><span class="sxs-lookup"><span data-stu-id="ea1a6-103">The attribute can only be applied once.</span></span> <span data-ttu-id="ea1a6-104">`AttributeUsage`属性确定是否可以多次应用的特性。</span><span class="sxs-lookup"><span data-stu-id="ea1a6-104">The `AttributeUsage` attribute determines whether an attribute can be applied more than once.</span></span>  

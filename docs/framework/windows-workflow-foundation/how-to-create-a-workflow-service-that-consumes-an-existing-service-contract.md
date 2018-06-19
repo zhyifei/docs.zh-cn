@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515300"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a><span data-ttu-id="aabdc-102">如何：创建使用现有服务协定的工作流服务</span><span class="sxs-lookup"><span data-stu-id="aabdc-102">How to: Create a workflow service that consumes an existing service contract</span></span>
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<span data-ttu-id="aabdc-103"> 以协定优先工作流开发的形式实现了 Web 服务与工作流之间的更佳集成。</span><span class="sxs-lookup"><span data-stu-id="aabdc-103"> features better integration between web services and workflows in the form of contract-first workflow development.</span></span> <span data-ttu-id="aabdc-104">通过协定优先的工作流开发工具，可以在代码中优先设计协定。</span><span class="sxs-lookup"><span data-stu-id="aabdc-104">The contract-first workflow development tool allows you to design the contract in code first.</span></span> <span data-ttu-id="aabdc-105">然后该工具在工具箱中为协定中的操作自动生成活动模板。</span><span class="sxs-lookup"><span data-stu-id="aabdc-105">The tool then automatically generates an activity template in the toolbox for the operations in the contract.</span></span>  

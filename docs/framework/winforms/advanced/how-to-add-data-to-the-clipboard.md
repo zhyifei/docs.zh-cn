@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522062"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a><span data-ttu-id="aa137-102">如何：将数据添加到剪贴板</span><span class="sxs-lookup"><span data-stu-id="aa137-102">How to: Add Data to the Clipboard</span></span>
 <span data-ttu-id="aa137-103"><xref:System.Windows.Forms.Clipboard>类提供了可以使用与 Windows 操作系统的剪贴板功能进行交互的方法。</span><span class="sxs-lookup"><span data-stu-id="aa137-103">The <xref:System.Windows.Forms.Clipboard> class provides methods that you can use to interact with the Windows operating system Clipboard feature.</span></span> <span data-ttu-id="aa137-104">许多应用程序的数据作为临时存储库使用剪贴板。</span><span class="sxs-lookup"><span data-stu-id="aa137-104">Many applications use the Clipboard as a temporary repository for data.</span></span> <span data-ttu-id="aa137-105">例如，字处理器在剪切和粘贴操作期间使用剪贴板。</span><span class="sxs-lookup"><span data-stu-id="aa137-105">For example, word processors use the Clipboard during cut-and-paste operations.</span></span> <span data-ttu-id="aa137-106">剪贴板还可用于将数据传输到另一个应用程序。</span><span class="sxs-lookup"><span data-stu-id="aa137-106">The Clipboard is also useful for transferring data from one application to another.</span></span>  

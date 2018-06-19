@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f9a70cf0812f84908630f109ef06aafa4b4f7525
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434417"
 ---
 # <a name="iclrmetahostpolicy-interface"></a><span data-ttu-id="5a0cf-102">ICLRMetaHostPolicy 接口</span><span class="sxs-lookup"><span data-stu-id="5a0cf-102">ICLRMetaHostPolicy Interface</span></span>
 <span data-ttu-id="5a0cf-103">提供[GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法，将指针返回到基于策略条件的公共语言运行时 (CLR) 接口，托管程序集、 版本和配置文件。</span><span class="sxs-lookup"><span data-stu-id="5a0cf-103">Provides the [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) method, which returns a pointer to a common language runtime (CLR) interface based on a policy criteria, managed assembly, version and configuration file.</span></span>  

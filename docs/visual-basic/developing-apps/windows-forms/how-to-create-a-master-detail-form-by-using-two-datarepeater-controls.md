@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590902"
 ---
 # <a name="how-to-create-a-masterdetail-form-by-using-two-datarepeater-controls-visual-studio"></a><span data-ttu-id="6ed9b-102">如何：使用两个 DataRepeater 控件创建主/详细信息窗体 (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="6ed9b-102">How to: Create a Master/Detail Form by Using Two DataRepeater Controls (Visual Studio)</span></span>
 <span data-ttu-id="6ed9b-103">你可以使用两个或多个显示相关的数据<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件创建主/从窗体。</span><span class="sxs-lookup"><span data-stu-id="6ed9b-103">You can display related data by using two or more <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controls to create a master/detail form.</span></span> <span data-ttu-id="6ed9b-104">例如，你可能想要一个中显示一个客户列表<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>，并当用户选择某个客户，在第二个中显示的该客户的订单列表<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>。</span><span class="sxs-lookup"><span data-stu-id="6ed9b-104">For example, you might want to display a list of customers in one <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, and when the user selects a customer, display a list of that customer's orders in a second <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.</span></span>  

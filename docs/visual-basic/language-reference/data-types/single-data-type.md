@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590761"
 ---
 # <a name="single-data-type-visual-basic"></a><span data-ttu-id="499cb-102">Single 数据类型 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="499cb-102">Single Data Type (Visual Basic)</span></span>
 <span data-ttu-id="499cb-103">存储带符号 IEEE 32 位 （4 字节） 单精度浮点数，值范围从-3.4028235 e + 38 到-1.401298 e-45 负值和从 1.401298 e-45 到 3.4028235 e + 38 正值。</span><span class="sxs-lookup"><span data-stu-id="499cb-103">Holds signed IEEE 32-bit (4-byte) single-precision floating-point numbers ranging in value from -3.4028235E+38 through -1.401298E-45 for negative values and from 1.401298E-45 through 3.4028235E+38 for positive values.</span></span> <span data-ttu-id="499cb-104">单精度数存储实际数目的近似值。</span><span class="sxs-lookup"><span data-stu-id="499cb-104">Single-precision numbers store an approximation of a real number.</span></span>  

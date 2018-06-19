@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33463851"
 ---
 # <a name="3366---sharedlistenerproxyregisterfailed"></a><span data-ttu-id="981e8-102">3366 - SharedListenerProxyRegisterFailed</span><span class="sxs-lookup"><span data-stu-id="981e8-102">3366 - SharedListenerProxyRegisterFailed</span></span>
 ## <a name="properties"></a><span data-ttu-id="981e8-103">属性</span><span class="sxs-lookup"><span data-stu-id="981e8-103">Properties</span></span>  

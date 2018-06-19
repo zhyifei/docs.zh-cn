@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587513"
 ---
 # <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a><span data-ttu-id="ef0d4-102">&#39;自定义&#39;修饰符声明而无需显式委托类型的事件上无效</span><span class="sxs-lookup"><span data-stu-id="ef0d4-102">&#39;Custom&#39; modifier is not valid on events declared without explicit delegate types</span></span>
 <span data-ttu-id="ef0d4-103">与不同的非自定义事件，`Custom Event`声明要求`As`子句之后显式指定事件的委托类型的事件名称。</span><span class="sxs-lookup"><span data-stu-id="ef0d4-103">Unlike a non-custom event, a `Custom Event` declaration requires an `As` clause following the event name that explicitly specifies the delegate type for the event.</span></span>  

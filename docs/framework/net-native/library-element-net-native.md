@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34311970"
 ---
 # <a name="ltlibrarygt-element-net-native"></a><span data-ttu-id="10c29-102">&lt;Library&gt; 元素 (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="10c29-102">&lt;Library&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="10c29-103">定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。</span><span class="sxs-lookup"><span data-stu-id="10c29-103">Defines the assembly that contains types and type members whose metadata is available for reflection at run time.</span></span>  

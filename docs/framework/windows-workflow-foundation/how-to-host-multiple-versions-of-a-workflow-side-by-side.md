@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520482"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a><span data-ttu-id="4cef0-102">如何：并行承载多个版本的工作流</span><span class="sxs-lookup"><span data-stu-id="4cef0-102">How to: Host Multiple Versions of a Workflow Side-by-Side</span></span>
 <span data-ttu-id="4cef0-103">`WorkflowIdentity` 为工作流应用程序开发人员提供了一种将名称和版本与工作流定义关联的方法，这种方法还可用于将此信息与持久化工作流实例相关联。</span><span class="sxs-lookup"><span data-stu-id="4cef0-103">`WorkflowIdentity` provides a way for workflow application developers to associate a name and a version with a workflow definition, and for this information to be associated with a persisted workflow instance.</span></span> <span data-ttu-id="4cef0-104">工作流应用程序开发人员可以使用这些标识信息，为一些情景（如并行执行一个工作流定义的多个版本）提供支持，并为其他功能（如动态更新）提供基础。</span><span class="sxs-lookup"><span data-stu-id="4cef0-104">This identity information can be used by workflow application developers to enable scenarios such as side-by-side execution of multiple versions of a workflow definition, and provides the cornerstone for other functionality such as dynamic update.</span></span> <span data-ttu-id="4cef0-105">该教程中的此步骤演示了如何使用 `WorkflowIdentity` 来同时承载多个版本的工作流。</span><span class="sxs-lookup"><span data-stu-id="4cef0-105">This step in the tutorial demonstrates how to use `WorkflowIdentity` to host multiple versions of a workflow at the same time.</span></span>  

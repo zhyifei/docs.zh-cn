@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 77cd8b7d791d11f6d40386f4747c60cd4832521a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428089"
 ---
 # <a name="symlinedelta-structure"></a><span data-ttu-id="ad72f-102">SYMLINEDELTA 结构</span><span class="sxs-lookup"><span data-stu-id="ad72f-102">SYMLINEDELTA Structure</span></span>
 <span data-ttu-id="ad72f-103">提供有关方法的结果编辑已移动到符号处理程序信息。</span><span class="sxs-lookup"><span data-stu-id="ad72f-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  

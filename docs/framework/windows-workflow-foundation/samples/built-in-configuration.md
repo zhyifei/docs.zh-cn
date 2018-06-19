@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518615"
 ---
 # <a name="built-in-configuration"></a><span data-ttu-id="7a2dc-102">内置配置</span><span class="sxs-lookup"><span data-stu-id="7a2dc-102">Built-in Configuration</span></span>
 <span data-ttu-id="7a2dc-103">此示例演示了 SQL 工作流实例存储的使用和配置。</span><span class="sxs-lookup"><span data-stu-id="7a2dc-103">This sample demonstrates the use and configuration of the SQL workflow instance store.</span></span> <span data-ttu-id="7a2dc-104">SQL 工作流实例存储是基于 SQL 的实例存储实现。</span><span class="sxs-lookup"><span data-stu-id="7a2dc-104">The SQL workflow instance store is a SQL-based implementation of an instance store.</span></span> <span data-ttu-id="7a2dc-105">它允许实例将状态保存到 SQL Server 或 SQL Server Express 数据库中以及从中加载状态。</span><span class="sxs-lookup"><span data-stu-id="7a2dc-105">It allows an instance to save and load its state to and from a SQL Server or SQL Server Express database.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522567"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a><span data-ttu-id="6d2f0-102">拖放操作和剪贴板支持</span><span class="sxs-lookup"><span data-stu-id="6d2f0-102">Drag-and-Drop Operations and Clipboard Support</span></span>
 <span data-ttu-id="6d2f0-103">可以通过处理一系列事件（最主要是 <xref:System.Windows.Forms.Control.DragEnter>、<xref:System.Windows.Forms.Control.DragLeave> 和 <xref:System.Windows.Forms.Control.DragDrop> 事件），在基于 Windows 的应用程序中启用用户拖放操作。</span><span class="sxs-lookup"><span data-stu-id="6d2f0-103">You can enable user drag-and-drop operations within a Windows-based application by handling a series of events, most notably the <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, and <xref:System.Windows.Forms.Control.DragDrop> events.</span></span>  

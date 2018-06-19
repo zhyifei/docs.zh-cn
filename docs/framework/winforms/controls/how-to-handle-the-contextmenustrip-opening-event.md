@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531857"
 ---
 # <a name="how-to-handle-the-contextmenustrip-opening-event"></a><span data-ttu-id="78a4f-102">如何：处理 ContextMenuStrip 打开事件</span><span class="sxs-lookup"><span data-stu-id="78a4f-102">How to: Handle the ContextMenuStrip Opening Event</span></span>
 <span data-ttu-id="78a4f-103">你可以自定义的行为你<xref:System.Windows.Forms.ContextMenuStrip>通过处理控件<xref:System.Windows.Forms.ToolStripDropDown.Opening>事件。</span><span class="sxs-lookup"><span data-stu-id="78a4f-103">You can customize the behavior of your <xref:System.Windows.Forms.ContextMenuStrip> control by handling the <xref:System.Windows.Forms.ToolStripDropDown.Opening> event.</span></span>  
