@@ -1,14 +1,15 @@
 ---
 title: .NET 微服务。 适用于容器化 .NET 应用程序的体系结构
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 前页
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务可是模块化且可独立部署的服务。 （适用于 Linux 和 Windows）的 Docker 容器可将服务及其依赖项绑定到单个单元，使该单元在一个独立的环境中运行，因而可简化部署和测试。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: d4499384d63f11a1d78d0aa84749aed8ea554794
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/06/2018
+ms.openlocfilehash: 58bb915c825cd69c68b3955573145ae6a1b1a6e4
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231416"
 ---
 ![](./media/cover.png)
 
@@ -26,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-版权所有 © 2017 Microsoft Corporation
+版权所有 © 2018 Microsoft Corporation
 
 保留所有权利。 未经发布者书面许可，不得以任何形式或任何方式复制或传播本书中的任何内容。
 
