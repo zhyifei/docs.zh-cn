@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: a9bd6bb730ff84a48c180c7f1ac435afbf75fbc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b48a93cef2ea8fd2d39f58d8f458c4b287a10154
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525512"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207503"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>在托管 HTML 文档对象模型中访问框架
 一些 HTML 文档由外*帧*，或可以存放其自己独特的 HTML 文档的 windows。 使用框架可以轻松地创建 HTML 页面，页面中的一个或多个部分（如导航栏）保持静态，而其它框架则不断更改内容。  

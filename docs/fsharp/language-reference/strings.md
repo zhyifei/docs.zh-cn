@@ -2,12 +2,12 @@
 title: 字符串 (F#)
 description: "了解如何 F # 'string' 类型表示不可变的文本为 Unicode 字符序列。"
 ms.date: 05/16/2016
-ms.openlocfilehash: bdd1d1a542e70bcd95fce51e75d0c1ddffceb008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c08f5b768dd826745e07b8c5726093050ab730
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564847"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207100"
 ---
 # <a name="strings"></a>字符串
 
@@ -17,7 +17,7 @@ ms.locfileid: "33564847"
 `string`类型不可变的文本表示为 Unicode 字符序列。 `string` 是 .NET Framework 中 `System.String` 的别名。
 
 ## <a name="remarks"></a>备注
-由引号 （"） 字符分隔字符串。 反斜杠字符 (\)使用某些特殊字符进行编码。 反斜杠和组合在一起的下一个字符被称为*转义序列*。 转义序列在 F # 字符串文本显示在下表中受支持。
+由引号 （"） 字符分隔字符串。 反斜杠字符 ( \\ ) 使用某些特殊字符进行编码。 反斜杠和组合在一起的下一个字符被称为*转义序列*。 转义序列在 F # 字符串文本显示在下表中受支持。
 
 |字符|转义序列|
 |---------|---------------|

@@ -2,11 +2,12 @@
 title: 动态更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: cfd10e4b93351c607ef270487a12bec19ded4ca8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207516"
 ---
 # <a name="dynamic-update"></a>动态更新
 动态更新为工作流应用程序开发人员提供了一种机制，可用于更新持久化工作流实例的工作流定义。 操作可以是实施 bug 修复、实施新的要求或适应意外的变化。 此主题概述了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的动态更新功能。  

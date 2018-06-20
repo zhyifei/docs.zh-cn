@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 511721c3ffffb3b80b339c4671ad99e16bafda93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53e89b664b3885bea7d2da8633505488438a1af5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565894"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207542"
 ---
 # <a name="xkey-directive"></a>x:Key 指令
 唯一标识元素创建和引用 XAML 定义的字典中。 添加`x:Key`到 XAML 对象元素的值是标识资源字典中，例如在 WPF 中的资源的最常见方法<xref:System.Windows.ResourceDictionary>。  

@@ -2,12 +2,12 @@
 title: 计算表达式 (F#)
 description: '了解如何创建在 F #，可以对其进行排列和组合使用控制流构造和绑定中编写计算的方便语法。'
 ms.date: 05/16/2016
-ms.openlocfilehash: a4ddb3fde284452bc901c5270551611e43742c1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566608"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207428"
 ---
 # <a name="computation-expressions"></a>计算表达式
 
@@ -15,6 +15,7 @@ F # 中的计算表达式为编写计算，可以对其进行排列和组合使�
 
 
 ## <a name="built-in-workflows"></a>内置的工作流
+
 序列表达式是计算表达式的示例，如同异步工作流和查询表达式。 有关详细信息，请参阅[序列](sequences.md)，[异步工作流](asynchronous-workflows.md)，和[查询表达式](query-expressions.md)。
 
 某些功能序列表达式和异步工作流均通用的并说明计算表达式的基本语法：

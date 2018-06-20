@@ -5,11 +5,12 @@ helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 750d94caf08776ae457dbff153afbc8ec9368f07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1a79bc3a799edc8b0472bb31983a7215f6f9e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208564"
 ---
 # <a name="enhancing-windows-forms-applications"></a>增强 Windows 窗体应用程序
 Windows 窗体包含很多功能，可用于增强基于 Windows 的应用程序以满足特定用户需求。 以下主题介绍这些功能及其使用方式。  
@@ -30,7 +31,7 @@ Windows 窗体包含很多功能，可用于增强基于 Windows 的应用程序
  [Windows 窗体应用程序中的网络](../../../../docs/framework/winforms/advanced/networking-in-windows-forms-applications.md)  
  包含一些指向描述和显示如何在 Windows 窗体中使用网络的主题的链接。  
   
- [全球化 Windows 窗体](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
+ [全球化 Windows 窗体应用程序](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
  包含一些指向显示如何全球化 Windows 窗体应用程序的主题的链接。  
   
  [Windows 窗体和非托管应用程序](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  

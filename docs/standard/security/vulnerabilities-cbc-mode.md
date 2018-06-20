@@ -4,16 +4,16 @@ description: 了解如何来检测问题和解决计时漏洞进行密码块链�
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: a07acbb943c430f6e26bec44f55a5c84306da513
-ms.sourcegitcommit: 73a662360bbe2f43c19aca1fbcc2565025c60cd8
-ms.translationtype: HT
+ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35327448"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208681"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>计时漏洞进行 CBC 模式对称解密使用填充
 
-基于当前已知的加密研究的 Microsoft 认为，除非是非常具体的情况下，就会不再安全时可验证填充已被使用对称加密的密码块链接 (CBC) 模式加密的数据进行解密应用而无需第一个确保的密码文本的完整性。
+Microsoft 认为，将无法再安全在可验证填充已应用未第一个除外确保完整性的密码，使用对称加密的密码块链接 (CBC) 模式加密的数据进行解密非常具体情况。 此判断基于当前已知的加密研究。 
 
 ## <a name="introduction"></a>介绍
 

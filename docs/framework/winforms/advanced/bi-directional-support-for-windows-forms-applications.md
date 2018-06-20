@@ -1,10 +1,6 @@
 ---
 title: Windows 窗体应用程序的双向支持
 ms.date: 09/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
 - Windows Forms, international
@@ -13,14 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: dbe14e6c05fd6ef155b564e499157e00c5d809e5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208556"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows 窗体应用程序的双向支持
 可以使用 Visual Studio 来创建基于 Windows 的应用程序支持的双向 （右到左） 语言，如阿拉伯语和希伯莱语。 这包括标准窗体、对话框、MDI 窗体以及可在这些窗体中使用的所有控件 — 即，<xref:System.Windows.Forms.Control> 命名空间中的所有对象。  
@@ -123,6 +117,7 @@ ms.lasthandoff: 04/27/2018
   
  已封装某些控件。 因此，它们无法派生出新控件。 这些包括 <xref:System.Windows.Forms.ImageList> 和 <xref:System.Windows.Forms.ProgressBar> 控件。  
   
-## <a name="see-also"></a>请参阅  
- [ASP.NET Web 应用程序的双向支持](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
- [全球化 Windows 窗体](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a>请参阅
+
+[ASP.NET Web 应用程序的双向支持](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[全球化 Windows 窗体应用程序](globalizing-windows-forms.md)
