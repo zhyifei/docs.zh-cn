@@ -11,7 +11,7 @@ ms.locfileid: "33562032"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>要开始使用 F # 使用.NET Core CLI
 
-本文介绍如何你可以开始使用 F # 在任何操作系统上 （Windows、 macOS 或 Linux） 使用.NET Core CLI。 它将经历生成使用由一个控制台应用程序的类库的多项目解决方案。
+本文介绍如何你可以开始使用 F # 在任何操作系统上 （Windows、 macOS 或 Linux） 使用.NET Core  CLI。 它将经历生成使用由一个控制台应用程序的类库的多项目解决方案。
 
 ## <a name="prerequisites"></a>系统必备
 
