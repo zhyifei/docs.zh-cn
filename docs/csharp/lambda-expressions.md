@@ -78,7 +78,7 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 ## <a name="lambda-expressions-and-tuples"></a>Lambda 表达式和元组 ##
 
-从 C# 7.0 开始，C# 语言为元组提供内置支持。 可以提供一个元组作为 Lambda 表达式的参数，同时 Lambda 表达式也可以返回元组。 在某些情况下，C# 编译器使用类型推理来确定元组组件的类型。
+从 C# 7.0 开始，C# 语言为元组提供内置支持。 可以提供一个元组作为 Lambda 表达式的参数，同时 Lambda 表达式也可以返回元组。 在某些情况下，C# 编译器使用类型推理来确定元组组件的类型。 
 
 可通过用括号括住用逗号分隔的组件列表来定义元组。 以下示例使用包含 5 个组件的元组将一系列数字传递给 Lambda 表达式，此 Lambda 表达式将每个值加倍，然后返回包含乘法运算结果的 5 个组件的元组。
 
@@ -154,6 +154,6 @@ Lambda 类型推理的一般规则如下：
 
 ## <a name="see-also"></a>请参阅 ##
 
-[LINQ（语言集成查询）](../standard/using-linq.md)
-[匿名方法](programming-guide/statements-expressions-operators/anonymous-methods.md)
+[LINQ（语言集成查询）](../standard/using-linq.md)   
+[匿名方法](programming-guide/statements-expressions-operators/anonymous-methods.md)   
 [表达式树](expression-trees.md)

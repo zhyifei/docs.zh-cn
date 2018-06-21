@@ -89,7 +89,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
-此赋值会创建其成员为 `Item1` 和 `Item2` 的元祖，其使用方式与 <xref:System.Tuple> 的相同。可更改语法，以创建为每个元组成员提供语义名称的元组：
+此赋值会创建其成员为 `Item1` 和 `Item2` 的元组，其使用方式与 <xref:System.Tuple> 的相同。可更改语法，以创建为每个元组成员提供语义名称的元组：
 
 [!code-csharp[NamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#05_NamedTuple "Named tuple")]
 

@@ -272,7 +272,7 @@ ms.locfileid: "33592610"
 - <xref:System.Security.Authentication.InvalidCredentialException?displayProperty=nameWithType> （适用于.NET Core 2.0.4 和更高版本）
 - <xref:System.Security.Cryptography.CryptographicException?displayProperty=nameWithType> （适用于.NET Core 2.0.4 和更高版本）
 - <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException?displayProperty=nameWithType> （适用于.NET Core 2.0.4 和更高版本）
-- `System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException` <!--zz <xref:System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException?displayProperty=nameWithType --> （适用于.NET Core 2.0.4 和更高版本）
+- `System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException` <!--zz <xref:System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException?displayProperty=nameWithType --> （适用于.NET Core  2.0.4 和更高版本）
 - <xref:System.Security.HostProtectionException?displayProperty=nameWithType> （适用于.NET Core 2.0.4 和更高版本）
 - <xref:System.Security.Policy.PolicyException?displayProperty=nameWithType> （适用于.NET Core 2.0.4 和更高版本）
 - <xref:System.Security.Principal.IdentityNotMappedException?displayProperty=nameWithType> （适用于.NET Core 2.0.4 和更高版本）
