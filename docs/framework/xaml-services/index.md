@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566829"
 ---
 # <a name="xaml-services"></a>XAML 服务
 本主题介绍的技术集称为.NET Framework XAML 服务的功能。 服务和 Api 所述的大部分都位于引入 System.Xaml 的应用，这是程序集的程序集[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].NET Core 程序集。 服务包括读取器和编写器，架构类和架构支持的工厂，特性化的类、 XAML 语言内部函数支持和其他 XAML 语言功能。  
