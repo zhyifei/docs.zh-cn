@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc54b8bdc96a5038dc75111d9833e70e7ffd2e9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
+ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578035"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36338099"
 ---
 # <a name="general-naming-conventions"></a>通用命名约定
 本部分介绍通用命名约定与 word 选择相关指导说明了如何避免使用特定于语言的名称使用缩写和首字母缩写词和建议。  
@@ -85,7 +85,7 @@ ms.locfileid: "33578035"
   
  **✓ 执行**喜欢添加一个后缀，而不是以指示现有 API 的新版本的前缀。  
   
- 这将帮助发现浏览文档，或使用 Intellisense。 将新的 Api，接近组织旧版本的 API，因为大多数浏览器和 Intellisense 按字母顺序显示标识符。  
+ 这将帮助发现浏览文档，或使用 IntelliSense。 将新的 Api，接近组织旧版本的 API，因为大多数浏览器和 IntelliSense 按字母顺序显示标识符。  
   
  **请考虑 ✓**使用全新，但有意义标识符，而不添加一个后缀或前缀。  
   
