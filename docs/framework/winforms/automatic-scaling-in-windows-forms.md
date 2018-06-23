@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529878"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314758"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows 窗体中的自动缩放
 借助自动缩放功能，在某台计算机上以某种显示分辨率或系统字体设计的窗体及其控件可以在其他计算机上以不同的显示分辨率或系统字体适当显示。 它确保窗体及其控件将以智能方式调整大小，以便与本机 Windows 以及用户和其他开发人员的计算机上的其他应用程序保持一致。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 支持自动缩放和视觉样式，这使 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序可以在与每个用户的计算机上的本机 Windows 应用程序比较时保持一致的外观和感觉。
@@ -42,14 +42,6 @@ ms.locfileid: "33529878"
 - 自动缩放仅在 <xref:System.Windows.Forms.Form> 类中实现，无法在 <xref:System.Windows.Forms.ContainerControl> 类中实现。 因此，只有在用户控件的分辨率设计为与窗体的相同且在设计时置于窗体时，用户控件才可正确缩放。
 
 - 窗体及其子控件只可由计算机分辨率相同的多名开发人员进行同时设计。 同样，如果窗体依赖与父窗体关联的分辨率，也会被继承。
-
-> [!NOTE]
-> 极端差异在显示 Dpi，尤其是在新式 2-1 设备，这仍可能会出现带有最新版本的.NET Framework 和 Visual Studio。 若要解决此问题在使用不同的 DPI 显示的组中，请确保 Visual Studio 始终在非 DPI 感知模式下启动，使 Windows 窗体设计器始终基本 96 DPI 布局计算。 为此，只需设置以下注册表项以禁用 Visual Studio HighDPI 感知：
->
-> ```
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe]
-> "dpiAwareness"=dword:00000000
-> ```
 
 - 与 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 版本引入的较新布局管理器（如 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>）不兼容。
 

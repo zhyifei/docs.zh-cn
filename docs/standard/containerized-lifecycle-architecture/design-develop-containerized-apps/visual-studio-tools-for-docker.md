@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 05db5cf8e8dc073dd341fbffab619c326b48f136
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62da6a3ff595422e42450cb1341976424acc5a52
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569286"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314706"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)
 
@@ -23,7 +23,7 @@ ms.locfileid: "33569286"
 
 如果你在使用 Visual Studio 2015，你必须具有 Update 3 或更高版本以及 Visual Studio Tools for Docker。
 
-**详细信息：** 安装 Visual Studio 的说明，请转到[ https://www.visualstudio.com/\ 产品/vs-2015年-产品的版本](https://www.visualstudio.com/products/vs-2015-product-editions)。
+**详细信息：** 安装 Visual Studio 的说明，请转到[https://visualstudio.microsoft.com/\产品/vs-2015年-产品的版本](https://visualstudio.microsoft.com/products/vs-2015-product-editions)。
 
 若要查看更多有关安装 Visual Studio Tools for Docker，请转到<http://aka.ms/vstoolsfordocker>和<https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>。
 
@@ -33,7 +33,7 @@ ms.locfileid: "33569286"
 
 Visual Studio Tools for Docker 提供一致的方法来开发和验证本地 Docker 容器的 Linux Linux Docker 主机或 VM 或你直接在 Windows 上的 Windows 容器中。
 
-如果你使用单个容器，需要开始第一件事是开启 Docker 支持在.NET Core 项目。 为此，右键单击项目文件，在图 4-25 中所示。
+如果你使用单个容器，需要开始第一件事是开启 Docker 支持在.NET 核心项目。 为此，右键单击项目文件，在图 4-25 中所示。
 
 ![https://i1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/image/file/205468/1/add-docker-support.png](./media/image31.png)
 
