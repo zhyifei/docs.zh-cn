@@ -17,7 +17,7 @@ ms.locfileid: "33216091"
 
 ### <a name="creating-the-source-project"></a>创建源项目
 
-打开 shell 窗口。 创建一个名为 *unit-testing-using-dotnet-test* 的目录，以保留该解决方案。 在此新目录中，运行 [`dotnet new sln`](../tools/dotnet-new.md) 为类库和测试项目创建新的解决方案文件。 接下来，创建 PrimeService 目录。 下图显示了当前的目录和文件结构：
+打开 shell 窗口。 创建一个名为 *unit-testing-using-mstest* 的目录，以保留该解决方案。 在此新目录中，运行 [`dotnet new sln`](../tools/dotnet-new.md) 为类库和测试项目创建新的解决方案文件。 接下来，创建 PrimeService 目录。 下图显示了当前的目录和文件结构：
 
 ```
 /unit-testing-using-mstest
