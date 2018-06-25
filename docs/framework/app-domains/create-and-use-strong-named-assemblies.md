@@ -14,15 +14,18 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94659919d4e902f8562e669fbb0f98d6ebc679ab
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7d0ff21ee4846b2f5586317e70ac96f37517621f
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744637"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270495"
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>创建和使用具有强名称的程序集
 <a name="top"></a>强名称是由程序集的标识加上公钥和数字签名组成的。其中，程序集的标识包括简单文本名称、版本号和区域性信息（如果提供的话）。 它使用相应私钥从程序集文件生成。 （程序集文件包含程序集清单，该清单包含组成程序集的所有文件的名称和哈希。）  
+
+> [!WARNING]
+> 不要依赖于通过强名称实现安全性。 它们仅提供唯一的标识。
   
  具有强名称的程序集只能使用其他具有强名称的程序集的类型。 否则，将会危害强名称程序集的完整性。  
   

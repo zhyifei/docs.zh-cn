@@ -3,12 +3,12 @@ title: 语义分析入门
 description: 本教程概述如何使用.NET 编译器 SDK 进行语义分析。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 360d31b86a677adfe51ebd6752fca8475814fd89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358747"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270456"
 ---
 # <a name="get-started-with-semantic-analysis"></a>语义分析入门
 
@@ -131,7 +131,7 @@ Press any key to continue . . .
 
 还可以使用 LINQ 查询语法生成完整查询，然后在控制台中显示所有方法名称：
 
-[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Build and display the results of the query.")]
+[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
 
 生成并运行该程序。 您应看到以下输出：
 

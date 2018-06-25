@@ -3,12 +3,12 @@ title: 元组类型 - C# 指南
 description: 了解 C# 中的未命名元组类型和命名元组类型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 5ef8d89f62a30d3d64f7377972e31d9c4d93d41e
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 6c3b6edb0481b8c2e4d92989b605f657aac607fa
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34235972"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208293"
 ---
 # <a name="c-tuple-types"></a>C# 元组类型 #
 
@@ -92,7 +92,8 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-有几条规则，可使元组相等测试更方便。 如果其中一个元组是可以为空值的元组，则元组相等将执行[提升转换](/dotnet/csharp/language-reference/language-specification/conversions.md#lifted-conversion-operators)，如以下代码中所示：
+有几条规则，可使元组相等测试更方便。 如果其中一个元组是可以为空值的元组，则元组相等将执行[提升转换](/dotnet/csharp/language-reference/language-specification/conversions#lifted-conversion-operators)，如以下代码中所示：
+
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
@@ -161,7 +162,7 @@ named = differentShape;
 在 Visual Studio 的重构支持下，可以轻松地将核心统计信息的功能提取到私有方法中。 从而得到一个 `private static` 方法，该方法返回具有 `Sum`、`SumOfSquares` 和 `Count` 这三个值的元组类型：
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
-
+ 
 如果你想手动进行一些快速编辑，该语言可提供更多选项供你使用。 首先，可以使用 `var` 声明来初始化 `ComputeSumAndSumOfSquares` 方法调用的元组结果。 此外，还可以在 `ComputeSumAndSumOfSquares` 方法内创建三个离散变量。 下面的代码演示了最终版本：
 
 [!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
@@ -221,7 +222,7 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 
 [!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
-还可以在括号内将 `var` 关键字与任意或全部变量声明结合使用。
+还可以在括号内将 `var` 关键字与任意或全部变量声明结合使用。 
 
 ```csharp
 (double sum, var sumOfSquares, var count) = ComputeSumAndSumOfSquares(sequence);
@@ -280,6 +281,6 @@ if (("Althea", "Goodwin") == p)
 
 `Deconstruct` 方法无法将 `Person` 对象 `p` 转换为包含两个字符串的元组，但它在相等测试上下文中不适用。
 
-## <a name="conclusion"></a>结束语
+## <a name="conclusion"></a>结束语 
 
 命名元组的新语言和库支持简化了设计工作：与类和结构一样，使用数据结构存储多个元素，但不定义行为。 对这些类型使用元组非常简单明了。 既可以获得静态类型检查的所有好处，又不需要使用更复杂的 `class` 或 `struct` 语法来创作类型。 即便如此，元组还是对 `private` 或 `internal` 这样的实用方法最有用。 当公共方法返回具有多个元素的值时，请创建用户定义的类型（`class` 或 `struct` 类型）。

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 2ded01ef3192e0f34d586cd63d93b894b5347e7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82dfc2e11d6a8a025aa9b7557255a13b69ffa508
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275020"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207889"
 ---
 # <a name="-operator-c-reference"></a>() 运算符（C# 参考）
 除了用于指定表达式中的运算顺序外，圆括号还用于执行以下任务：  
@@ -31,9 +31,7 @@ ms.locfileid: "33275020"
   
  不能重载 `()` 运算符。  
   
- 有关详细信息，请参阅[强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。  
-  
- 强制转换表达式可能会使语法发生歧义。 例如，表达式 `(x)–y` 既可以解释为强制转换表达式（将 –y 强制转换为类型 x），也可以解释为结合了带括号表达式的相加表达式（计算 x – y 的值）。  
+ 有关详细信息，请参阅[显式转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。  
   
  有关方法调用的详细信息，请参阅[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)。  
   

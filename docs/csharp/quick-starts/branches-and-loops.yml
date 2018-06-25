@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: interpolated-strings.yml
   nextTutorialTitle: C# 中的字符串内插
-  ms.openlocfilehash: 787ea7c8eb7724fba82bf40621bde429450b1850
-  ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+  ms.openlocfilehash: 83061e2dfac30ce9b6012404259a223f7504e918
+  ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 05/07/2018
-  ms.locfileid: "33805637"
+  ms.lasthandoff: 06/20/2018
+  ms.locfileid: "36270313"
 items:
 - durationInMinutes: 1
   content: >
@@ -54,4 +54,30 @@ items:
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 完成挑战
   durationInMinutes: 1
+  content: >
+    最后是否生成如下代码？
+
+
+    ```csharp
+
+    int sum = 0;
+
+    for (int number = 1; number < 21; number++)
+
+    {
+      if (number % 3 == 0)
+      {
+        sum = sum + number;
+      }
+    }
+
+    Console.WriteLine($"The sum is {sum}");
+
+    ```
+
+
+    > [!NOTE]
+
+    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
+- title: 祝贺你！
   content: "已完成“分支和循环”快速入门教程。 \n\n你可继续在自己的开发环境中学习这些教程。 请先了解[本地开发](local-environment.md)基础知识，再选择一个快速入门教程。 可以再次尝试本练习，也可以直接学习下一个快速入门教程，亦可以重新开始学习 [C# 中的数字](numbers-in-csharp-local.md)快速入门教程。\n\n若要详细了解这些概念，请参阅下列主题：\n\n[If 和 else 语句](../language-reference/keywords/if-else.md)   \n[While 语句](../language-reference/keywords/while.md)   \n[Do 语句](../language-reference/keywords/do.md)   \n[For 语句](../language-reference/keywords/for.md)"

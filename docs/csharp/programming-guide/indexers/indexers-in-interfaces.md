@@ -5,12 +5,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: cb039755b7440cbfd1f782cc118d11a03b47da04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 120b6e72a6ab906437c593d6eb33024d1df8f52b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331118"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207865"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>接口中的索引器（C# 编程指南）
 可以在[接口](../../../csharp/language-reference/keywords/interface.md)上声明索引器。 接口索引器的访问器与[类](../../../csharp/language-reference/keywords/class.md)索引器的访问器有所不同，差异如下：  
@@ -35,7 +35,7 @@ ms.locfileid: "33331118"
  在前面的示例中，可通过使用接口成员的完全限定名来使用显示接口成员实现。 例如:  
   
 ```  
-public string ISomeInterface.this[int index]   
+string ISomeInterface.this[int index]   
 {   
 }   
 ```  
@@ -43,7 +43,7 @@ public string ISomeInterface.this[int index]
  但仅当类采用相同的索引签名实现多个接口时，才需用到完全限定名称以避免歧义。 例如，如果 `Employee` 类正在实现接口 `ICitizen` 和接口 `IEmployee`，而这两个接口具有相同的索引签名，则需要用到显式接口成员实现。 即是说以下索引器声明：  
   
 ```  
-public string IEmployee.this[int index]   
+string IEmployee.this[int index]   
 {   
 }   
 ```  
@@ -51,7 +51,7 @@ public string IEmployee.this[int index]
  在 `IEmployee` 接口中实现索引器，而以下声明：  
   
 ```  
-public string ICitizen.this[int index]
+string ICitizen.this[int index]
 {   
 }   
 ```  
