@@ -1,38 +1,44 @@
 ---
 title: do（C# 参考）
-ms.date: 07/20/2015
+ms.date: 05/28/2018
 f1_keywords:
 - do_CSharpKeyword
 - do
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 5599f079e29fd094c4d6a6a75afba89fb562a166
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b918b378623a239803fb4e0a65fcf82fd677b21f
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566080"
 ---
 # <a name="do-c-reference"></a>do（C# 参考）
-`do` 语句重复执行一个语句或语句块，直到指定的表达式计算为 `false` 值。 循环体必须括在大括号 `{}` 内，除非它由单个语句组成。 在这种情况下，大括号是可选的。  
-  
-## <a name="example"></a>示例  
- 在下面的示例中，只要变量 `x` 小于 5，`do-while` 循环语句就开始执行。  
-  
- [!code-csharp[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]  
-  
- 与 [while](../../../csharp/language-reference/keywords/while.md) 语句不同的是，`do-while` 循环会在计算条件表达式之前执行一次。  
-  
- 在 `do-while` 块中的任何点，都可使用 [break](../../../csharp/language-reference/keywords/break.md) 语句跳出循环。 可通过使用 [continue](../../../csharp/language-reference/keywords/continue.md) 语句直接步入 `while` 表达式计算语句。 如果 `while` 表达式计算结果为 true，则继续执行循环中的第一个语句。 如果表达式的计算结果为 false，则继续执行 `do-while` 循环后的第一个语句。  
-  
- `do-while` 循环还可以通过 [goto](../../../csharp/language-reference/keywords/goto.md)、[return](../../../csharp/language-reference/keywords/return.md) 或 [throw](../../../csharp/language-reference/keywords/throw.md) 语句退出。  
-  
-## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+
+在指定的布尔表达式的计算结果为 `true` 时，`do` 语句会执行一条语句或一个语句块。 由于在每次执行循环之后都会计算此表达式，所以 `do-while` 循环会执行一次或多次。 这不同于 [while](while.md) 循环（该循环执行零次或多次）。
+
+在 `do` 语句块中的任何点，都可使用 [break](break.md) 语句中断循环。
+
+可通过使用 [continue](continue.md) 语句直接步入 `while` 表达式的计算部分。 如果表达式计算结果为 `true`，则继续执行循环中的第一个语句。 否则，将在循环后的第一个语句处继续执行。
+
+还可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 语句退出 `do-while` 循环。
+
+## <a name="example"></a>示例
+
+下面的示例演示 `do` 语句的用法。 选择“运行”以运行示例代码。 然后可以修改代码并再次运行它。
+
+[!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
+
+## <a name="c-language-specification"></a>C# 语言规范
+
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>请参阅
+
+ [C# 参考](../index.md)  
+ [C# 编程指南](../../programming-guide/index.md)  
+ [C# 关键字](index.md)  
  [do-while 语句 (C++)](/cpp/cpp/do-while-statement-cpp)  
- [迭代语句](../../../csharp/language-reference/keywords/iteration-statements.md)
+ [迭代语句](iteration-statements.md)  
+ [while 语句](while.md)  

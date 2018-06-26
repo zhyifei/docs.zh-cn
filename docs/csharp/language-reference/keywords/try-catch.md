@@ -10,11 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: f917d662366dc8ff540cdee6222199fe8f5606c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696434"
 ---
 # <a name="try-catch-c-reference"></a>try-catch（C# 参考）
 Try-catch 语句包含一个后接一个或多个 `catch` 子句的 `try` 块，这些子句指定不同异常的处理程序。  
@@ -42,7 +43,7 @@ catch (InvalidCastException e)
   
  可以使用同一 try-catch 语句中的多个特定 `catch` 子句。 在这种情况下，`catch` 子句的顺序很重要，因为 `catch` 子句是按顺序检查的。 在使用更笼统的子句之前获取特定性更强的异常。 如果捕获块的排序使得永不会达到之后的块，则编译器将产生错误。  
   
- 筛选想要处理的异常的一种方式是使用 `catch` 参数。  也可以使用谓词表达式进一步检查该异常以决定是否要对其进行处理。  如果谓词表达式返回 false，则继续搜索处理程序。  
+ 筛选想要处理的异常的一种方式是使用 `catch` 参数。  也可以使用异常筛选器进一步检查该异常以决定是否要对其进行处理。  如果异常筛选器返回 false，则继续搜索处理程序。  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -50,7 +51,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- 异常筛选器要优于捕获和重新引发（如下所述），因为筛选器将保留堆栈不受损坏。  如果之后的处理程序转储堆栈，可以查看到异常的原始来源，而不只是重新引发它的最后一个位置。  异常筛选器表达式的一个常见用途是日志记录。  可以创建一个始终返回 false 并输出到日志的谓词函数，而且可以在异常通过时进行记录，无需处理并重新引发它们。  
+ 异常筛选器要优于捕获和重新引发（如下所述），因为筛选器将保留堆栈不受损坏。  如果之后的处理程序转储堆栈，可以查看到异常的原始来源，而不只是重新引发它的最后一个位置。  异常筛选器表达式的一个常见用途是日志记录。  可以创建一个始终返回 false 并输出到日志的筛选器，能在异常通过时进行记录，且无需处理并重新引发它们。  
   
  可在 `catch` 块中使用 [throw](../../../csharp/language-reference/keywords/throw.md) 语句以重新引发已由 `catch` 语句捕获的异常。 下面的示例从 <xref:System.IO.IOException> 异常提取源信息，然后向父方法引发异常。  
   
@@ -92,9 +93,19 @@ catch (InvalidCastException e)
     {  
         // Take some action.  
     }  
- }  
+}  
 ```  
-  
+
+> [!NOTE]
+> 还可以使用异常筛选器以更简洁的方式获取类似的结果（不修改堆栈，如本文档前面的部分所述）。 下面的示例中，调用方的行为类似于前面的示例。 当 `e.Data` 为 `null` 时，该函数引发 `InvalidCastException` 返回至调用方。
+> 
+> ```csharp
+> catch (InvalidCastException e) when (e.Data != null)   
+> {  
+>     // Take some action.  
+> }
+> ```   
+
  从 `try` 块内，仅初始化在其中声明的变量。 否则，在完成执行块之前，可能会出现异常。 例如，在下面的代码示例中，变量 `n` 在 `try` 块内部初始化。 尝试在 `Write(n)` 语句的 `try` 块外部使用此变量将生成编译器错误。  
   
 ```csharp  

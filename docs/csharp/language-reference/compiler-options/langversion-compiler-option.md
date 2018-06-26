@@ -8,11 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 299ff121bab87482b7cdcaebc8b43cb8a1b559ec
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 2a9501c883fec7478932b22ea2cdcad70865e0fd
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696281"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion（C# 编译器选项）
 使编译器仅接受包含在所选 C# 语言规范中的语法。  
@@ -52,19 +53,11 @@ ms.lasthandoff: 05/19/2018
   
  每个版本的 C# 编译器都包含语言规范的扩展，因此 -langversion 不提供早期版本编译器的同等功能。  
  
- 此外，虽然 C# 版本更新通常与主要的 .Net Framework 版本一致，但新的语法和功能不一定绑定到该特定的 Framework 版本。 虽然新功能肯定会需要与 C# 修订版一起发布的新编译器更新，但每项具体功能都有自己的最小 .Net API 或公共语言运行时要求，这些要求通过包括 NuGet 包或其他库允许功能本身在下层框架上运行。
+ 此外，虽然 C# 版本更新通常与主要的 .NET Framework 版本一致，但新的语法和功能不一定绑定到该特定的 Framework 版本。 虽然新功能肯定需要与 C# 修订版一起发布的新编译器更新，但每项具体功能都有自己的最小 .NET API 或公共语言运行时要求，这些要求通过包括 NuGet 包或其他库允许功能在下层框架上运行。
   
  无论使用哪一项 -langversion 设置，都将使用当前版本的公共语言运行时来创建 .exe 或 .dll。 友元程序集和 [-moduleassemblyname（C# 编译器选项）](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)是一个例外，它们在 -langversion:ISO-1 下工作。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
-  
-1.  打开项目的“属性”页。  
-  
-2.  单击“生成”属性页。  
-  
-3.  单击“高级”按钮。  
-  
-4.  修改“语言版本”属性。  
+ 
+ 若要了解指定 C# 语言版本的其他方式，请参阅[选择 C# 语言版本](../configure-language-version.md)主题。
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>。  
     

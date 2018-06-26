@@ -3,26 +3,19 @@ title: 具有值类型的引用语义
 description: 了解安全地最大程度减少结构复制操作的语言功能
 ms.date: 11/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3c53a426a6adb37f5091e4ad61835fef6c9f7729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0646a7fbc01ed76883fb6b16ce04006049ef054a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566275"
 ---
 # <a name="reference-semantics-with-value-types"></a>具有值类型的引用语义
 
 使用值类型的优点之一是通常可避免堆分配。
 缺点是它们按值进行复制。 由于存在这种折衷，因此难以优化针对大量数据执行的算法。 C# 7.2 中新增的语言功能可提供支持按具有值类型的引用语义传递的机制。 请恰当地使用这些功能，以最大程度地减少分配和复制操作。 本文将介绍这些新功能。
 
-文本中的很多示例代码演示了 C# 7.2 中增加的功能。 若要使用这些功能，必须将项目配置为使用 C# 7.2 或更高版本。 可以使用 Visual Studio 进行选择。 对于每个项目，从菜单中选择“项目”，然后选择“属性”。 选择“生成”选项卡，然后单击“高级”。 在此处配置语言版本。 选择“7.2”或“最新”。  或者，可以编辑 csproj 文件，并添加以下节点：
-
-```XML
-  <PropertyGroup>
-    <LangVersion>7.2</LangVersion>
-  </PropertyGroup>
-```
-
-可以将“7.2”或“最新”用作值。
+文本中的很多示例代码演示了 C# 7.2 中增加的功能。 若要使用这些功能，必须将项目配置为使用 C# 7.2 或更高版本。 有关设置语言版本的详细信息，请参阅[配置语言版本](language-reference/configure-language-version.md)。
 
 ## <a name="passing-arguments-by-readonly-reference"></a>按只读引用传递参数
 

@@ -3,12 +3,12 @@ title: C# 6 中的新增功能 - C# 指南
 description: 了解 C# 版本 6 中的新增功能
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: c23d4f45441451fbf8a2ad2f939bdb1ed6144154
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483484"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34565873"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 中的新增功能
 
@@ -38,6 +38,8 @@ C# 6.0 版本包含许多可提高开发人员工作效率的功能。 此版本
     - 除成员方法以外，集合初始值设定项还可以依赖可访问的扩展方法。
 * [改进了重载解析](#improved-overload-resolution)：
     - 先前生成了不明确的方法调用的某些构造现在可以正确解析。
+* [`deterministic` 编译器选项](#deterministic-compiler-output)：
+    - 该确定性的编译器选项确保同一源的后续编译生成同样的二进制输出内容。
 
 这些功能的总体效果是让你编写的代码更简洁、更具可读性。 该语法不像许多常见做法那样繁琐。 可以更轻松地看出设计意图。 好好了解这些功能有助于你提高工作效率、编写更具可读性的代码，并更专注于核心功能而不是语言的构造。
 
@@ -388,3 +390,12 @@ C# 5 对于可放置 `await` 表达式的位置有若干限制。
 [!code-csharp[Lambda](../../../samples/snippets/csharp/new-in-6/overloads.cs#Lambda)]
 
 C# 6 编译器正确地确定 `Task.Run(Func<Task>())` 是更好的选择。
+
+### <a name="deterministic-compiler-output"></a>确定性的编译器选项
+
+`-deterministic` 选项指示编译器为同一源文件的后续编译生成完全相同的输出程序集。
+
+默认情况下，每个编译都生成唯一的输出内容。 编译器添加一个时间戳和一个随机生成的 GUID。 如果想按字节比较输出以确保各项生成之间的一致性，请使用此选项。
+
+有关详细信息，请参阅 [-deterministic 编译器选项](../language-reference/compiler-options/deterministic-compiler-option.md)文章。
+

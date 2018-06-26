@@ -3,12 +3,13 @@ title: 为服务器应用选择 .NET Core 或 .NET Framework
 description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NET 实现的指南。
 author: cartermp
 ms.author: mairaw
-ms.date: 03/15/2018
-ms.openlocfilehash: 5626c6c1687fe0b8d558df8772fc69c32981787c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.date: 06/19/2018
+ms.openlocfilehash: a9eaeae515041ee1d99ede5b004ecc85e453de2d
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298183"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -65,7 +66,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 ## <a name="when-to-choose-net-framework"></a>选择 .NET Framework 的情形
 
-.NET Core 对新应用程序和应用程序模式特别有用。 但 .NET Framework 仍是许多现有方案非常自然的选择。 对于所有服务器应用程序，.NET Framework 不会被 .NET Core 代替。
+.NET Core 对新应用程序和应用程序模式特别有用。 但是在很多现有方案中依然会自然而然地选择 .NET Framework，并且对于所有服务器应用程序，.NET Framework 不会被 .NET Core 代替。
 
 ### <a name="current-net-framework-applications"></a>现有的 .NET Framework 应用程序
 
@@ -87,8 +88,6 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 * ASP.NET Web 窗体应用程序：ASP.NET Web 窗体仅在.NET Framework 中可用。 ASP.NET Core 不能用于 ASP.NET Web 窗体。 目前没有将 ASP.NET Web 窗体引入 .NET Core 的计划。
 
 * ASP.NET 网页应用程序：ASP.NET 网页未包含在 ASP.NET Core 中。 ASP.NET Core [Razor 页](/aspnet/core/mvc/razor-pages/)与网页有许多相似之处。
-
-* ASP.NET SignalR 服务器/客户端实现。 目前对于 ASP.NET Core 2.1 提供预览版 [ASP.NET SignalR](https://github.com/aspnet/SignalR)。
 
 * WCF 服务的实现。 虽然 [WCF 客户端库](https://github.com/dotnet/wcf)可从 .NET Core 使用 WCF 服务，WCF 服务器实现目前只在 .NET Framework 上可用。 这种情况虽然不属于 .NET Core 当前计划，但将来会考虑这点。
 

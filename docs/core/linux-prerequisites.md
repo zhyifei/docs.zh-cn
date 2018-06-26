@@ -3,13 +3,13 @@ title: Linux 上 .NET Core 的先决条件
 description: 支持的 Linux 版本和 .NET Core 依赖项，用于在 Linux 计算机上开发、部署和运行 .NET Core 应用程序。
 author: jralexander
 ms.author: johalex
-ms.date: 05/08/2018
-ms.openlocfilehash: 4890f682ee2d0b55dc5059d8f1d3091def07a8a5
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.date: 06/01/2018
+ms.openlocfilehash: 30448d84a8377e27b0606b3bdabdcbac96c048aa
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483497"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728542"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先决条件
 
@@ -27,19 +27,39 @@ ms.locfileid: "34483497"
 
 .NET Core 2.x 将 Linux 视为一个操作系统。 支持的 Linux 分发都对应有一个 Linux 内部版本（根据芯片体系结构）。
 
-以下 Linux 64 位（`x86_64` 或 `amd64`）发行版本/版本支持 NET Core 2.x：
+**.NET Core 2.1**
+
+以下 Linux 64 位（`x86_64` 或 `amd64`）发行版本/版本支持 NET Core 2.1：
+
+
+* Red Hat Enterprise Linux 7、6
+* CentOS 7
+* Oracle Linux 7
+* Fedora 27
+* Debian 9、8.7 或更高版本
+* Ubuntu 18.04、17.10、16.04、14.04
+* Linux Mint 18、17
+* openSUSE 42.3 或更高版本
+* SUSE Enterprise Linux (SLES) 12 Service Pack 2 或更高版本
+* Alpine Linux 3.7 或更高版本
+
+有关 .NET Core 2.0 支持的操作系统、发行版本和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 2.0 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)。
+
+**.NET Core 2.0**
+
+以下 Linux 64 位（`x86_64` 或 `amd64`）发行版本/版本支持 NET Core 2.0：
 
 * Red Hat Enterprise Linux 7
 * CentOS 7
 * Oracle Linux 7
-* Fedora 27、26
+* Fedora 27
 * Debian 9、8.7 或更高版本
 * Ubuntu 18.04、17.10、16.04、14.04
 * Linux Mint 18、17
 * openSUSE 42.3 或更高版本
 * SUSE Enterprise Linux (SLES) 12 Service Pack 2 或更高版本
 
-有关 .NET Core 2.x 支持的操作系统、分发和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 2.x - 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)。
+有关 .NET Core 2.0 支持的操作系统、发行版本和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 2.0 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -120,7 +140,19 @@ CentOS 发行版本需要安装以下库：
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-为确保获得最新的安装信息，请遵循适用于支持的 RHEL 版本的 [.NET Core 2.x SDK 和 Runtime 安装程序说明](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-current)。
+**.NET Core 2.0**
+
+ 在支持的 RHEL 版本上安装 .NET Core 2.0：
+
+* .NET Core Runtime 2.0.8 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/rhel/runtime-2.0.8)
+* .NET Core Runtime 2.0.7 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/rhel/runtime-2.0.7)
+* .NET Core Runtime 2.0.6 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/rhel/runtime-2.0.6)
+* .NET Core Runtime 2.0.5 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/rhel/runtime-2.0.5)
+* .NET Core SDK 2.1.200 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.1.200)
+* .NET Core SDK 2.1.105 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.1.105)
+* .NET Core SDK 2.1.103 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.1.103)
+* .NET Core SDK 2.0.3 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.0.3)
+* .NET Core SDK 2.0.0 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.0.0)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -152,9 +184,11 @@ CentOS 发行版本需要安装以下库：
 
 |Runtime / SDK          |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04 / Linux Mint 18|Ubuntu 14.04 / Linux Mint 17|
 |-------------------------|----------------|----------------|----------------------------|----------------------------|
+|.NET Core Runtime 2.0.8  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.8)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.8)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.8)          |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.8)            |
 |.NET Core Runtime 2.0.7  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.7)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.7)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.7)          |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.7)            |
 |.NET Core Runtime 2.0.6  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.6)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
 |.NET Core Runtime 2.0.5  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.5)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
+|.NET Core SDK 2.1.200    |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.200)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.200)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.200)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.200)            |
 |.NET Core SDK 2.1.105    |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.105)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.105)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.105)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.105)            |
 |.NET Core SDK 2.1.103    |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.103)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
 |.NET Core SDK 2.0.3      |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.0.3)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
@@ -167,13 +201,8 @@ CentOS 发行版本需要安装以下库：
 
 |Runtime / SDK                  |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04 / Linux Mint 18|Ubuntu 14.04 / Linux Mint 17|
 |---------------------------------|----------------|----------------|----------------------------|----------------------------|
-|.NET Core Runtime 2.1.0-rc1      |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-rc1)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-rc1)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-rc1)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-rc1)            |
-|.NET Core Runtime 2.1.0-preview2 |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-preview2)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview2)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview2)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview2)            |
-|.NET Core Runtime 2.1.0-preview1 |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-preview1)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview1)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview1)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview1)            |
-|.NET Core SDK 2.1.300-rc1  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-rc1)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-rc1)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-rc1)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-rc1)            |
-|.NET Core SDK 2.1.300-preview2   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-preview2)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview2)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview2)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview2)            |
-|.NET Core SDK 2.1.300-preview1   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-preview1)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview1)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview1)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview1)            |
-
+|.NET Core Runtime 2.1.0          |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0)            |
+|.NET Core SDK 2.1.300     |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300)            |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -211,9 +240,11 @@ CentOS 发行版本需要安装以下库：
 
 |Runtime / SDK          |Debian 9       |Debian 8       |
 |-------------------------|---------------|---------------|
+|.NET Core Runtime 2.0.8  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.8)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.8)   |
 |.NET Core Runtime 2.0.7  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.7)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.7)   |
 |.NET Core Runtime 2.0.6  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.6)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.6)   |
 |.NET Core Runtime 2.0.5  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.5)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.5)   |
+|.NET Core SDK 2.1.200    |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.200)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.200)   |
 |.NET Core SDK 2.1.105    |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.105)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.105)   |
 |.NET Core SDK 2.1.103    |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.103)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.103)   |
 |.NET Core SDK 2.0.3      |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.3)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.3)   |
@@ -226,12 +257,8 @@ CentOS 发行版本需要安装以下库：
 
 |Runtime / SDK                  |Debian 9       |Debian 8       |
 |---------------------------------|---------------|---------------|
-|.NET Core Runtime 2.1.0-rc1      |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-rc1)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-rc1)   |
-|.NET Core Runtime 2.1.0-preview2 |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview2)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview2)   |
-|.NET Core Runtime 2.1.0-preview1 |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview1)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview1)   |
-|.NET Core SDK 2.1.300-rc1        |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-rc1)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-rc1)        |
-|.NET Core SDK 2.1.300-preview2   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview2)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview2)   |
-|.NET Core SDK 2.1.300-preview1   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview1)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview1)   |
+|.NET Core Runtime 2.1.0          |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0)   |
+|.NET Core SDK 2.1.300        |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300)        |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -267,9 +294,11 @@ CentOS 发行版本需要安装以下库：
 
 |Runtime / SDK          |Fedora 26 或更高版本 |Fedora 25 或以前版本 |
 |-------------------------|-------------------|----------------------|
+|.NET Core Runtime 2.0.8  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.8)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.8)           |
 |.NET Core Runtime 2.0.7  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.7)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.7)           |
 |.NET Core Runtime 2.0.6  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.6)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.6)           |
 |.NET Core Runtime 2.0.5  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.5)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.5)           |
+|.NET Core SDK 2.1.200    |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.200)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.200)           |
 |.NET Core SDK 2.1.105    |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.105)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.105)           |
 |.NET Core SDK 2.1.103    |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.103)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.103)           |
 |.NET Core SDK 2.0.3      |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.0.3)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.0.3)           |
@@ -281,12 +310,8 @@ CentOS 发行版本需要安装以下库：
 
 |Runtime / SDK                  |Fedora 27          |Fedora 26             |
 |---------------------------------|-------------------|----------------------|
-|.NET Core Runtime 2.1.0-rc1      |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-rc1)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-rc1)           |
-|.NET Core Runtime 2.1.0-preview2 |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview2)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview2)           |
-|.NET Core Runtime 2.1.0-preview1 |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview1)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)           |
-|.NET Core SDK 2.1.300-rc1        |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300-rc1)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-rc1)           |
-|.NET Core SDK 2.1.300-preview2   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300-preview2)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview2)）           |
-|.NET Core SDK 2.1.300-preview1   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview1)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)           |
+|.NET Core Runtime 2.1.0          |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0)           |
+|.NET Core SDK 2.1.300          |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300)           |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -325,9 +350,11 @@ CentOS 发行版本需要安装以下库：
 
 **.NET Core 2.0**
 
-* .NET Core Runtime 2.0.7 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
+* .NET Core Runtime 2.0.8 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.8)
+* .NET Core Runtime 2.0.7 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.7)
 * .NET Core Runtime 2.0.6 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
 * .NET Core Runtime 2.0.5 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.5)
+* .NET Core SDK 2.1.200 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.200)
 * .NET Core SDK 2.1.105 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.105)
 * .NET Core SDK 2.1.103 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.103)
 * .NET Core SDK 2.0.3 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.3)
@@ -338,12 +365,8 @@ CentOS 发行版本需要安装以下库：
 >[!IMPORTANT]
 > 若要将 .NET Core 2.1 与 Visual Studio 一起使用，需要[安装 Visual Studio 2017 15.7 Preview 1 或更高版本](https://www.visualstudio.com/vs/preview/)。
 
-* .NET Core Runtime 2.1.0-rc1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-rc1)
-* .NET Core Runtime 2.1.0-preview2 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview2)
-* .NET Core Runtime 2.1.0-preview1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview1)
-* .NET Core SDK 2.1.300-rc1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-rc1)
-* .NET Core SDK 2.1.300-preview2 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview2)
-* .NET Core SDK 2.1.300-preview1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview1)
+* .NET Core Runtime 2.1.0 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0)
+* .NET Core SDK 2.1.300 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -376,9 +399,11 @@ CentOS 发行版本需要安装以下库：
 
 **SUSE Linux Enterprise Server**
 
+* .NET Core Runtime 2.0.8 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.8)
 * .NET Core Runtime 2.0.7 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.7)
 * .NET Core Runtime 2.0.6 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.6)
 * .NET Core Runtime 2.0.5 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.5)
+* .NET Core SDK 2.1.200 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.200)
 * .NET Core SDK 2.1.105 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.105)
 * .NET Core SDK 2.1.103 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.103)
 * .NET Core SDK 2.0.3 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.0.3)
@@ -386,6 +411,7 @@ CentOS 发行版本需要安装以下库：
 
 **openSUSE**
 
+* .NET Core Runtime 2.0.8 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.8)
 * .NET Core Runtime 2.0.7 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.7)
 * .NET Core Runtime 2.0.6 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.6)
 * .NET Core Runtime 2.0.5 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.5)
@@ -401,21 +427,13 @@ CentOS 发行版本需要安装以下库：
 
 **SUSE Linux Enterprise Server**
 
-* .NET Core Runtime 2.1.0-rc1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-rc1)
-* .NET Core Runtime 2.1.0-preview2 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-preview2)
-* .NET Core Runtime 2.1.0-preview1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-preview1)
-* .NET Core SDK 2.1.300-rc1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-rc1)
-* .NET Core SDK 2.1.300-preview2 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-preview2)
-* .NET Core SDK 2.1.300-preview1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-preview1)
+* .NET Core Runtime 2.1.0 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0)
+* .NET Core SDK 2.1.300 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300)
 
 **openSUSE**
 
-* .NET Core Runtime 2.1.0-rc1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-rc1)
-* .NET Core Runtime 2.1.0-preview2 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview2)
-* .NET Core Runtime 2.1.0-preview1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview1)
-* .NET Core SDK 2.1.300-rc1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-rc1)
-* .NET Core SDK 2.1.300-preview2 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview2)
-* .NET Core SDK 2.1.300-preview1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview1)
+* .NET Core Runtime 2.1.0 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0)
+* .NET Core SDK 2.1.300 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -435,6 +453,16 @@ CentOS 发行版本需要安装以下库：
 * .NET Core SDK 1.0.1 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-opensuse-24-x64-binaries)
 
 ---
+
+## <a name="install-net-core-for-supported-alpine-linux-versions-64-bit"></a>为支持的 Alpine Linux 版本（64 位）安装 .NET Core
+
+> [!NOTE]
+> 必须有用户控制目录，才能通过 tar.gz 在 Linux 系统上进行安装。
+
+以下链接是针对支持的 Alpine Linux 版本（64 位）的安装说明，请下载 .NET Core 2.1 并按说明进行安装：
+
+* .NET Core Runtime 2.1.0 [下载链接](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0)
+* .NET Core SDK 2.1.300 [下载链接](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300)
 
 > [!IMPORTANT]
 > 若对在支持的 Linux 分发/版本上安装 .NET Core 有疑问，请参阅下方你所安装的分发/版本的相应主题：

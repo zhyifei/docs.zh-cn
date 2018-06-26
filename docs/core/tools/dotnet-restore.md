@@ -3,14 +3,15 @@ title: dotnet restore 命令 - .NET Core CLI
 description: 了解如何使用 dotnet-restore 命令还原依赖项和特定于项目的工具。
 author: mairaw
 ms.author: mairaw
-ms.date: 11/30/2017
-ms.openlocfilehash: 6f8aaa2060ab7e6b2e9b99ce4d35588c2bf54d36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: fcfa3f2f7133c3add2b02823937dd26fce690453
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696580"
 ---
-# <a name="dotnet-restore"></a>dotnet restore
+# <a name="dotnet-restore"></a>dotnet 还原
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
@@ -21,30 +22,28 @@ ms.lasthandoff: 05/04/2018
 ## <a name="synopsis"></a>摘要
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
+    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
 ```
-
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
+    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
 ```
-
 ---
 
 ## <a name="description"></a>描述
 
-`dotnet restore` 命令使用 NuGet 还原依赖项以及在 project 文件中指定的特定于项目的工具。 默认情况下，并行执行对依赖项和工具的还原。
+`dotnet restore` 命令使用 NuGet 还原依赖项以及在 project 文件中指定的特定于项目的工具。 默认情况下会并行执行对依赖项和工具的还原。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 为了还原依赖项，NuGet 需要包所在的源。 通常通过 *NuGet.config* 配置文件提供源。 安装 CLI 工具时提供一个默认的配置文件。 可以通过在项目目录中创建自己的 *NuGet.config* 文件来指定其他源。 也可以在命令提示符处指定每次调用的其他源。
 
-对于依赖项，使用 `--packages` 参数指定还原操作期间放置还原包的位置。 如未指定，将使用默认的 NuGet 包缓存，可在所有操作系统上的用户主目录（例如，Linux 上的 */home/user1* 或 Windows 上的 *C:\Users\user1*）中的 `.nuget/packages` 目录找到它。
+对于依赖项，使用 `--packages` 参数指定还原操作期间放置还原包的位置。 如未指定，将使用默认的 NuGet 包缓存，可在所有操作系统上的用户主目录中的 `.nuget/packages` 目录找到它。 例如 Linux 上的 /home/user1 或 Windows 上的 C:\Users\user1。
 
 对于特定于项目的工具，`dotnet restore` 首先还原打包工具所在的包，然后继续还原 project 文件中指定的工具依赖项。
 
@@ -56,14 +55,15 @@ dotnet restore [-h|--help]
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
+- [`dotnet build server`](dotnet-build-server.md)
 - [`dotnet run`](dotnet-run.md)
 - [`dotnet test`](dotnet-test.md)
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-在大多数情况下，不再需要显式使用 `dotnet restore` 命令。 
+在大多数情况下，不再需要显式使用 `dotnet restore` 命令。
 
-在某些情况下，隐式运行 `dotnet restore` 很不方便。 例如，某些自动化系统（如生成系统）需要显式调用 `dotnet restore`，以控制还原发生的时间，以便可以控制网络使用量。 要防止隐式运行 `dotnet restore`，可以通过上述任意命令使用 `--no-restore` 开关，禁用隐式还原。
+有时，隐式运行 `dotnet restore` 可能不方便。 例如，某些自动化系统（如生成系统）需要显式调用 `dotnet restore`，以控制还原发生的时间，以便可以控制网络使用量。 要防止隐式运行 `dotnet restore`，可以通过上述任意命令使用 `--no-restore` 标记以禁用隐式还原。
 
 ## <a name="arguments"></a>自变量
 
@@ -85,7 +85,7 @@ dotnet restore [-h|--help]
 
 `--force`
 
-强制解析所有依赖项，即使上次还原已成功，也不例外。 这相当于删除 project.assets.json 文件。
+强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件。
 
 `-h|--help`
 
@@ -113,7 +113,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在还原操作期间使用的 NuGet 包源。 这会替代 NuGet.config 文件中指定的所有源。 多次指定此选项可以提供多个源。
+指定要在还原操作期间使用的 NuGet 包源。 此设置会替代 NuGet.config 文件中指定的所有源。 多次指定此选项可以提供多个源。
 
 `--verbosity <LEVEL>`
 

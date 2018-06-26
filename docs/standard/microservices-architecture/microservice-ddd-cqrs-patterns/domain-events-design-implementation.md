@@ -4,11 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 424408ca095eadeda33690277dcf38bac923e29f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697191"
 ---
 # <a name="domain-events-design-and-implementation"></a>域事件：设计和实现
 
@@ -151,7 +152,7 @@ public abstract class Entity
 
 要引发事件时，只需将其在聚合根实体的方法处添加到代码中的事件集合。
 
-以下代码（属于 [ eShopOnContainers 的订单聚合根](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)）演示如下示例：
+以下代码（属于 [eShopOnContainers 的订单聚合根](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)）演示如下示例：
 
 ```csharp
 var orderStartedDomainEvent = new OrderStartedDomainEvent(this, //Order object
@@ -339,8 +340,8 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 -   **Jimmy Bogard。A better domain events pattern**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)（更好的域事件模式）
 
--   **Vaughn Vernon。Effective Aggregate Design Part II: Making Aggregates Work Together**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)（高效聚合设计第二部：协同聚合）
+-   **Vaughn Vernon。高效聚合设计第 II 部分：协同聚合**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Jimmy Bogard。Strengthening your domain: Domain Events**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>*（强化域：域事件）

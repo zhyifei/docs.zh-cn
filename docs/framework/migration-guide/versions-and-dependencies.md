@@ -1,18 +1,18 @@
 ---
 title: .NET Framework 版本和依赖关系
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 05/31/2018
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b3a32e21573ae7f2e59655b191278e4aec7c4ab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 7c2c3ca038508b63533a7e17f6ceb6ebf1ad6842
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457598"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728610"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和依赖关系
 每个版本的 .NET framework 都包含公共语言运行时 (CLR)、基类库和其他托管库。 本主题按版本介绍了 .NET Framework 的关键功能，提供了有关基础 CLR 版本和相关开发环境的信息，并标识了 Windows 操作系统所安装的版本。  
@@ -45,9 +45,13 @@ ms.locfileid: "34457598"
 |2.0|2.0|-   泛型<br />-   ASP.NET 添加项<br />-   [更多...](http://msdn.microsoft.com/library/t357fb32\(v=vs.80\).aspx)|2005|-|✓ 2008 R2 SP1<br />✓ 2008 SP2<br />✓ 2003|请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.1|1.1|-   ASP.NET 和 ADO.NET 更新<br />-   并行执行<br />-   [更多...](http://msdn.microsoft.com/library/9wtde3k4\(v=vs.80\).aspx)|2003|-|✓ 2003|请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.0|1.0|.NET Framework 的第一个版本。|Visual Studio .NET|-|-|请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
-  
- 通常，你不应卸载计算机上安装的 .NET Framework 的任何版本，因为你使用的应用程序可能依赖于特定版本，如果你移除该版本，则应用程序可能会中断。 你可以在一台计算机上同时加载 .NET Framework 的多个版本。 这意味着，你可以安装 .NET Framework 而无需卸载早期版本。 有关详细信息，请参阅[入门](../../../docs/framework/get-started/index.md)。  
-  
+
+**备注**
+
+<sup>\*</sup>&nbsp;&nbsp;必须通过[控制面板 (Windows) 或服务器管理器 (Windows Server)](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel) 在此操作系统上启用 .NET Framework。
+
+ 通常，你不应卸载计算机上安装的 .NET Framework 的任何版本，因为你使用的应用程序可能依赖于特定版本，如果你移除该版本，则应用程序可能会中断。 你可以在一台计算机上同时加载 .NET Framework 的多个版本。 这意味着，你可以安装 .NET Framework 而无需卸载早期版本。 有关详细信息，请参阅[入门](../../../docs/framework/get-started/index.md)。
+
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>面向并运行 .NET Framework 版本 4.5 和更高版本的应用  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 是替代计算机上的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的就地更新，同样，[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 4.5.2、4.6、4.6.1、4.6.2、4.7 和 4.7.1 是对 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的就地更新，这意味着它们将使用相同的运行时版本，但是程序集版本会更新并包括新类型和成员。 在安装其中某个更新后，你的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、.NET Framework 4.6 或 .NET Framework 4.7 应用应继续运行，而无需重新编译。 但是，反过来则不行。 建议不要在较早版本的 .NET Framework 上运行面向更高版本的 .NET Framework 的应用。 例如，我们建议你不要在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 上运行面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用。 以下准则将适用：  
   

@@ -3,12 +3,13 @@ title: dotnet nuget push 命令 - .NET Core CLI
 description: dotnet nuget push 命令可将包推送到服务器并发布。
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 090b11646a81859eeadb5fe9d36b43721fc70a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/01/2018
+ms.openlocfilehash: 8a64f9cdc11d03bed82a132265c3b4e1de290807
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728571"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -20,7 +21,25 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>摘要
 
-`dotnet nuget push [<ROOT>] [-s|--source] [-ss|--symbol-source] [-t|--timeout] [-k|--api-key] [-sk|--symbol-api-key] [-d|--disable-buffering] [-n|--no-symbols] [--force-english-output] [-h|--help]`
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+---
 
 ## <a name="description"></a>描述
 
@@ -34,15 +53,41 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="options"></a>选项
 
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+`-d|--disable-buffering`
+
+当推送到 HTTP(S) 服务器以减少内存使用率时，禁用缓冲。
+
+`--force-english-output`
+
+使用固定的、基于英语的区域性强制运行应用程序。
+
 `-h|--help`
 
 打印出有关命令的简短帮助。
+
+`-k|--api-key <API_KEY>`
+
+服务器的 API 密钥。
+
+`-n|--no-symbols`
+
+不推送符号（即使存在）。
+
+`--no-service-endpoint`
+
+不将“api/v2/package”追加至源 URL。
 
 `-s|--source <SOURCE>`
 
 指定服务器 URL。 除非在 NuGet 配置文件中设置了 `DefaultPushSource` 配置值，否则此选项是必需的。
 
-`--symbol-source <SOURCE>`
+`-sk|--symbol-api-key <API_KEY>`
+
+符号服务器的 API 密钥。
+
+`-ss|--symbol-source <SOURCE>`
 
 指定符号服务器 URL。
 
@@ -50,33 +95,91 @@ ms.lasthandoff: 05/04/2018
 
 指定推送到服务器的超时（秒）。 默认值为 300 秒（5 分钟）。 指定为 0（零秒）将应用默认值。
 
-`-k|--api-key <API_KEY>`
-
-服务器的 API 密钥。
-
-`--symbol-api-key <API_KEY>`
-
-符号服务器的 API 密钥。
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-d|--disable-buffering`
 
 当推送到 HTTP(S) 服务器以减少内存使用率时，禁用缓冲。
 
+`--force-english-output`
+
+使用固定的、基于英语的区域性强制运行应用程序。
+
+`-h|--help`
+
+打印出有关命令的简短帮助。
+
+`-k|--api-key <API_KEY>`
+
+服务器的 API 密钥。
+
 `-n|--no-symbols`
 
 不推送符号（即使存在）。
 
+`-s|--source <SOURCE>`
+
+指定服务器 URL。 除非在 NuGet 配置文件中设置了 `DefaultPushSource` 配置值，否则此选项是必需的。
+
+`-sk|--symbol-api-key <API_KEY>`
+
+符号服务器的 API 密钥。
+
+`-ss|--symbol-source <SOURCE>`
+
+指定符号服务器 URL。
+
+`-t|--timeout <TIMEOUT>`
+
+指定推送到服务器的超时（秒）。 默认值为 300 秒（5 分钟）。 指定为 0（零秒）将应用默认值。
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-d|--disable-buffering`
+
+当推送到 HTTP(S) 服务器以减少内存使用率时，禁用缓冲。
+
 `--force-english-output`
 
-强制所有记录的输出以英语显示。
+使用固定的、基于英语的区域性强制运行应用程序。
+
+`-h|--help`
+
+打印出有关命令的简短帮助。
+
+`-k|--api-key <API_KEY>`
+
+服务器的 API 密钥。
+
+`-n|--no-symbols`
+
+不推送符号（即使存在）。
+
+`-s|--source <SOURCE>`
+
+指定服务器 URL。 除非在 NuGet 配置文件中设置了 `DefaultPushSource` 配置值，否则此选项是必需的。
+
+`-sk|--symbol-api-key <API_KEY>`
+
+符号服务器的 API 密钥。
+
+`-ss|--symbol-source <SOURCE>`
+
+指定符号服务器 URL。
+
+`-t|--timeout <TIMEOUT>`
+
+指定推送到服务器的超时（秒）。 默认值为 300 秒（5 分钟）。 指定为 0（零秒）将应用默认值。
+
+---
 
 ## <a name="examples"></a>示例
 
-将 *foo.nupkg* 推送到默认推送源（提供 API 密钥）：
+将 foo.nupkg 推送到默认推送源（指定 API 密钥）：
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
 
-将 *foo.nupkg* 推送到自定义推送源 `http://customsource`（提供 API 密钥）：
+将 foo.nupkg 推送到自定义推送源 `http://customsource`（指定 API 密钥）：
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
 
@@ -88,7 +191,7 @@ ms.lasthandoff: 05/04/2018
 
 `dotnet nuget push foo.symbols.nupkg`
 
-将 *foo.nupkg* 推送到默认推送源（指定 360 秒超时时间）：
+将 foo.nupkg 推送到默认推送源（指定 360 秒超时时间）：
 
 `dotnet nuget push foo.nupkg --timeout 360`
 

@@ -3,11 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 1c7b91a3a5c77059ca8d7acef95252b4a3557b28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e659f2438e9785a02f7016e49b78015ad46b9133
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696970"
 ---
 # <a name="the-history-of-c"></a>C# 发展历史 #
 
@@ -98,7 +99,7 @@ C# 在 3.0 版和 5.0 版对面向对象的语言添加了令人影响深刻的�
 - [Null 传播器](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
 - [字符串内插](../language-reference/tokens/interpolated.md)
 - [nameof 运算符](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [字典初始值设定项](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)
+- [索引初始值设定项](csharp-6.md#index-initializers)
 
 这些功能每一个都很有趣。 但从整体来看，可以发现一个有趣的模式。 在此版本中，C# 消除语言样本，让代码更简洁且更具可读性。 所以对喜欢简洁代码的用户来说，此语言版本非常成功。
 

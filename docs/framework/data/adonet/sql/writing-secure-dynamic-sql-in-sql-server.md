@@ -2,21 +2,22 @@
 title: 在 SQL Server 中编写安全的动态 SQL
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 0dc372b4e5554623d51a4add9a43f33d4a320f18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbfbfd59d78cb5504679fd8ae78f79d0c180dc4d
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753469"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>在 SQL Server 中编写安全的动态 SQL
-SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过程。 如果输入的语句没有经过验证直接传递到服务器，并且应用程序不慎执行了注入的代码，这种攻击有可能损坏或毁坏数据。  
+SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过程。 如果输入的语句没有经过验证直接传递到服务器，并且应用程序不慎执行了注入的代码，这种攻击有可能损坏或销毁数据。  
   
  任何构造 SQL 语句的过程都应该针对注入漏洞进行审核，因为 SQL Server 将执行它扪收到的所有语法上有效的查询。 技术熟练的蓄意攻击者甚至可以操作参数化数据。 如果您使用动态 SQL，请确保将命令参数化，绝不要在查询字符串中直接包括参数值。  
   
 ## <a name="anatomy-of-a-sql-injection-attack"></a>SQL 注入攻击剖析  
  注入过程的工作原理是过早终止某一文本字符串并追加一个新命令。 因为插入的命令可能在执行之前已追加了其他字符串，攻击者可以使用注释标记“--”终止注入的字符串。 执行时会忽略后续的文本。 通过使用分号 (;) 分隔符可以插入多个命令。  
   
- 只要注入的 SQL 代码在语法上正确，就无法通过编程方式检测到这种篡改。 因此，您必须验证所有用户输入并仔细检查将在您使用的服务器上执行构造的 SQL 命令的代码。 切勿连接未经验证的用户输入。 字符串连接是脚本注入的主要入口点。  
+ 只要注入的 SQL 代码在语法上正确，就无法通过编程方式检测到这种篡改。 因此，您必须验证所有用户输入并仔细评审将在您使用的服务器上执行构造的 SQL 命令的代码。 切勿连接未经验证的用户输入。 字符串连接是脚本注入的主要入口点。  
   
  下面是几条有帮助的准则：  
   
@@ -45,9 +46,9 @@ SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过�
   
  SQL Server 提供了使用存储过程和可执行动态 SQL 的用户定义函数来授予用户对数据的访问权限的方法。  
   
--   模拟使用 TRANSACT-SQL EXECUTE AS 子句中, 所述[模拟 SQL Server 中的自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)。  
+-   如[在 SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)中所述，将模拟用于 Transact-SQL EXECUTE AS 子句。  
   
--   签名证书，使用存储的过程中所述[签名 SQL Server 中的存储过程](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)。  
+-   使用证书对存储过程签名，如[在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)中所述。  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  EXECUTE AS 子句用 EXECUTE AS 子句中指定的用户的权限替换调用方的权限。 嵌套的存储过程或触发器在代理用户的安全上下文下执行。 这可能会中断依赖于行级安全性或要求审核的应用程序。 某些可返回用户标识的函数会返回 EXECUTE AS 子句中指定的用户的标识，而不是原始调用方的标识。 只有在执行该过程或发出 REVERT 语句后，执行上下文才会恢复到原始调用方。  
@@ -56,15 +57,14 @@ SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过�
  在执行使用证书进行签名的存储过程时，授予给证书用户的权限会与调用方的权限合并。 执行上下文保持不变，证书用户不模拟调用方。 为存储过程签名需要执行多个步骤才能实现。 每次修改过程时，都必须重新签名。  
   
 ### <a name="cross-database-access"></a>跨数据库访问  
- 在执行动态创建的 SQL 语句时，跨数据库的所属权链接不起作用。 你可以解决此 SQL Server 中通过创建一个可访问另一个数据库中的数据的存储的过程并签名具有这两个数据库中存在的证书的过程。 这可为用户提供访问该过程所使用的数据库资源的权限，而不必向他们授予数据库访问权或权限。  
+ 在执行动态创建的 SQL 语句时，跨数据库的所属权链接不起作用。 在 SQL Server 中，可以通过创建一个可访问另一个数据库中数据的存储过程并用两个数据库中都存在的证书为此过程签名来解决这个问题。 这可为用户提供访问该过程所使用的数据库资源的权限，而不必向他们授予数据库访问权或权限。  
   
 ## <a name="external-resources"></a>外部资源  
  有关更多信息，请参见以下资源。  
   
 |资源|描述|  
 |--------------|-----------------|  
-|[存储过程](http://go.microsoft.com/fwlink/?LinkId=98233)和[SQL 注入](http://go.microsoft.com/fwlink/?LinkId=98234)SQL Server 联机丛书中|说明如何创建存储过程和 SQL 注入工作原理的主题。|  
-|[新的 SQL 截断攻击以及如何避免它们](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/)MSDN 杂志中。|说明截断攻击如何分隔字符和字符串、SQL 注入和所进行的修改。|  
+|SQL Server 联机丛书中的[存储过程](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)和 [SQL 注入](/sql/relational-databases/security/sql-injection)|说明如何创建存储过程和 SQL 注入工作原理的主题。|  
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

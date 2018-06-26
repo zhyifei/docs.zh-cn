@@ -3,12 +3,13 @@ title: dotnet msbuild 命令 - .NET Core CLI
 description: dotnet msbuild 命令可提供对 MSBuild 命令行的访问权限。
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: c51c058391de4925afd4339fe84e28500d692e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 58aac2a5314758b8711c0b014154022168fb671c
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696840"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/04/2018
 
 `dotnet msbuild` 命令允许访问功能完备的 MSBuild。
 
-该命令与现有的 MSBuild 命令行客户端具有完全相同的功能。 选项一致。 使用 [MSBuild 命令行引用](/visualstudio/msbuild/msbuild-command-line-reference)获取可用选项的信息。 
+该命令与现有的 MSBuild 命令行客户端具有完全相同的功能。 选项一致。 有关可用选项的详细信息，请参阅 [MSBuild 命令行参考](/visualstudio/msbuild/msbuild-command-line-reference)。
 
 ## <a name="examples"></a>示例
 

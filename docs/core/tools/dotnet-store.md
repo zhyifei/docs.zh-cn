@@ -3,12 +3,13 @@ title: dotnet store 命令
 description: “dotnet store”命令可将指定的程序集存储到运行时包存储区。
 author: bleroy
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: f819444c92afde0e1a5349a58918f993868a0143
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696320"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-包存储区清单文件是包含要存储的包列表的 XML 文件。 清单文件的格式与 csproj 格式兼容。 因此，引用相应包的 csproj 项目文件能够与 `-m|--manifest` 选项结合使用，以便于将程序集存储到运行时包存储区。 若要指定多个清单文件，请为各个文件重复指定选项和路径：`--manifest packages1.csproj --manifest packages2.csproj`。
+包存储区清单文件是包含要存储的包列表的 XML 文件。 清单文件的格式与 SDK 样式项目格式兼容。 因此，引用所需的包的项目文件能够与 `-m|--manifest` 选项结合使用，以便于将程序集存储到运行时包存储区。 若要指定多个清单文件，请为各个文件重复指定选项和路径。 例如：`--manifest packages1.csproj --manifest packages2.csproj`。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -82,4 +83,4 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="see-also"></a>请参阅
 
-[运行时包存储](../deploying/runtime-store.md)   
+[运行时包存储](../deploying/runtime-store.md)

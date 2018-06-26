@@ -3,12 +3,13 @@ title: dotnet build 命令 - .NET Core CLI
 description: dotnet build 命令可生成项目及其所有依赖项。
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 4fc93e013c271fdf856f5c73affffd3880d0dbea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697126"
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -38,17 +39,17 @@ dotnet build [-h|--help]
 
 `dotnet build` 命令将项目及其依赖项生成为一组二进制文件。 二进制文件包括中间语言 (IL) 文件（带 *.dll* 扩展名）和用于调试的符号文件（带 *.pdb* 扩展名）中的项目的代码。 生成依赖项 JSON 文件 (*\*.deps.json*)，该文件列出了应用程序的依赖项。 生成 *\*.runtimeconfig.json* 文件，该文件指定应用程序的共享运行时及其版本。
 
-如果项目有第三方依赖项（如来自 NuGet 的库），将从 NuGet 缓存解析这些依赖项，并且它们不适用于项目的生成输出。 考虑到这一点，`dotnet build` 的产品还未准备好转移到另一台计算机进行运行。 这与 .NET Framework 的行为相反，后者在构建可执行项目（一个应用程序）时，将生成可在任何已安装 .NET Framework 的计算机上运行的输出。 为了能够获得相似的 .NET Core 使用体验，需要使用 [dotnet publish](dotnet-publish.md) 命令。 有关详细信息，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
+如果项目有第三方依赖项（如来自 NuGet 的库），将从 NuGet 缓存解析这些依赖项，并且它们不适用于项目的生成输出。 考虑到这一点，`dotnet build` 的产品还未准备好转移到另一台计算机进行运行。 这与 .NET Framework 的行为相反，后者在构建可执行项目（一个应用程序）时，将生成可在任何已安装 .NET Framework 的计算机上运行的输出。 为了能够获得相似的 .NET Core 使用体验，需要使用 [dotnet publish](dotnet-publish.md) 命令。 有关详细信息，请参阅 [.NET 核心应用程序部署](../deploying/index.md)。
 
-构建需要 *project.assets.json* 文件，该文件列出了你的应用程序的依赖项。 此文件在 [`dotnet restore`](dotnet-restore.md) 执行时创建。 如果资产文件未就位，那么工具将无法解析引用程序集，进而导致错误生成。 通过 .NET Core 1.x SDK，需要在运行 `dotnet build` 之前显式运行 `dotnet restore`。 自 .NET Core 2.0 SDK 起，`dotnet restore` 在 `dotnet build` 运行时隐式运行。 若要在运行 build 命令时禁用隐式还原，可以传递 `--no-restore` 选项。
+构建需要 *project.assets.json* 文件，该文件列出了你的应用程序的依赖项。 此文件在 [`dotnet restore`](dotnet-restore.md) 执行时创建。 如果资产文件未就位，那么工具将无法解析引用程序集，进而导致错误生成。 使用 .NET Core 1.x SDK，需要在运行 `dotnet build` 之前显式运行 `dotnet restore`。 自 .NET Core 2.0 SDK 起，`dotnet restore` 在 `dotnet build` 运行时隐式运行。 若要在运行 build 命令时禁用隐式还原，可以传递 `--no-restore` 选项。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-`dotnet build` 使用 MSBuild 构建项目；因此，它支持并行生成和增量生成。 有关详细信息，请参阅[增量生成](/visualstudio/msbuild/incremental-builds)。
+`dotnet build` 使用 MSBuild 生成项目，因此它支持并行生成和增量生成。 有关详细信息，请参阅[增量生成](/visualstudio/msbuild/incremental-builds)。
 
-除其自己的选项外，`dotnet build` 命令也接受 MSBuild 选项，如用来设置属性的 `/p` 或用来定义记录器的 `/l`。 在 [MSBuild 命令行引用](/visualstudio/msbuild/msbuild-command-line-reference)中了解这些选项的详细信息。 
+除其自己的选项外，`dotnet build` 命令也接受 MSBuild 选项，如用来设置属性的 `/p` 或用来定义记录器的 `/l`。 有关这些选项的详细信息，请参阅 [MSBuild 命令行参考](/visualstudio/msbuild/msbuild-command-line-reference)。
 
-项目是否可执行由项目文件中的 `<OutputType>` 属性决定。 以下示例显示会生成可执行代码的项目：
+项目是否可执行由项目文件中的 `<OutputType>` 属性决定。 以下示例显示生成可执行代码的项目：
 
 ```xml
 <PropertyGroup>
@@ -56,7 +57,7 @@ dotnet build [-h|--help]
 </PropertyGroup>
 ```
 
-若要生成库，则省略 `<OutputType>` 属性。 生成输出中的主要区别在于，针对某个库的 IL DLL 不包含入口点，并且不能执行。 
+若要生成库，则省略 `<OutputType>` 属性。 生成输出中的主要区别在于，针对某个库的 IL DLL 不包含入口点，并且不能执行。
 
 ## <a name="arguments"></a>自变量
 
@@ -78,7 +79,7 @@ dotnet build [-h|--help]
 
 `--force`
 
- 强制解析所有依赖项，即使上次还原已成功，也不例外。 这相当于删除 project.assets.json 文件。
+强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件。
 
 `-h|--help`
 
@@ -86,11 +87,11 @@ dotnet build [-h|--help]
 
 `--no-dependencies`
 
-忽略项目间 (P2P) 引用，并仅生成指定要生成的根项目。
+忽略项目到项目 (P2P) 引用，并仅生成指定的根项目。
 
 `--no-incremental`
 
-将生成标记为对增量生成不安全。 这将关闭增量编译并强制完全重新生成项目依赖项关系图。
+将生成标记为对增量生成不安全。 此标记关闭增量编译，并强制完全重新生成项目依赖项关系图。
 
 `--no-restore`
 
@@ -128,11 +129,11 @@ dotnet build [-h|--help]
 
 `--no-dependencies`
 
-忽略项目间 (P2P) 引用，并仅生成指定要生成的根项目。
+忽略项目到项目 (P2P) 引用，并仅生成指定的根项目。
 
 `--no-incremental`
 
-将生成标记为对增量生成不安全。 这将关闭增量编译并强制完全重新生成项目依赖项关系图。
+将生成标记为对增量生成不安全。 此标记关闭增量编译，并强制完全重新生成项目依赖项关系图。
 
 `-o|--output <OUTPUT_DIRECTORY>`
 

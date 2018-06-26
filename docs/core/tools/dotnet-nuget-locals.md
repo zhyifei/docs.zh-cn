@@ -3,12 +3,13 @@ title: dotnet nuget locals 命令 - .NET Core CLI
 description: dotnet nuget locals 命令可清除或列出本地 NuGet 资源，如 http 请求缓存、临时缓存或整个计算机范围内的全局包文件夹。
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: d0c900a06b00fd5e6b7ad66527c6582483222c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 799acb92d6ab7439e15c23c9f0b7b572c966adda
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696866"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -20,7 +21,10 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>摘要
 
-`dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
+```
+dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
+dotnet nuget locals [-h|--help]
+```
 
 ## <a name="description"></a>描述
 
@@ -30,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 
 `CACHE_LOCATION`
 
-以下值之一：
+要列出或清除的缓存位置。 可以接受以下值之一：
 
 * `all` - 表示指定的操作应用于所有缓存类型，即 http 请求缓存、全局包缓存和临时缓存。
 * `http-cache` - 表示指定的操作仅应用于 http 请求缓存。 其他缓存位置不受影响。
@@ -39,21 +43,21 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="options"></a>选项
 
+`--force-english-output`
+
+使用固定的、基于英语的区域性强制运行应用程序。
+
 `-h|--help`
 
 打印出有关命令的简短帮助。
 
 `-c|--clear`
 
-清除选项对指定的缓存类型执行清除操作。 缓存目录的内容被以递归方式删除。 正在执行的用户/组必须具有对缓存目录中的文件的相关权限。 反之，则显示错误，指示未被清除的文件/文件夹。
+清除选项对指定的缓存类型执行清除操作。 缓存目录的内容被以递归方式删除。 正在执行的用户/组必须具有对缓存目录中的文件的相关权限。 反之，则显示错误，指示未清除的文件/文件夹。
 
 `-l|--list`
 
-列表选项用于显示指定缓存类型的位置。 
-
-`--force-english-output`
-
-强制命令行输出以英语显示。
+列表选项用于显示指定缓存类型的位置。
 
 ## <a name="examples"></a>示例
 

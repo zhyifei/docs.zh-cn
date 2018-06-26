@@ -8,11 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b75429d0de69c60e7c24551bf1d9218e74d0c5ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31d14a8ef6a4b17eea1b9160e811bb92946d775b
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728636"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的应用程序兼容性
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 05/04/2018
 * 在项目文件中指定目标框架。
 * 向源代码应用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>。
 
-如果应用在比目标 .NET 版本更高的版本上运行，.NET Framework 会通过怪异的行为来模拟旧版目标版本。 也就是说，应用虽然在更高版本的 Framework 上运行，但行为就像在旧版本 .NET 上运行一样。 .NET Framework 各版本之间的许多兼容性问题都是通过这种怪异的模型进行缓解。
+如果应用在比目标 .NET 版本更高的版本上运行，.NET Framework 会通过怪异的行为来模拟旧版目标版本。 也就是说，应用虽然在更高版本的 Framework 上运行，但行为就像在旧版本 .NET 上运行一样。 .NET Framework 各版本之间的许多兼容性问题都是通过这种怪异的模型进行缓解。 应用程序面向的 .NET Framework 版本取决于运行代码的应用程序域的输入程序集的目标版本。 该应用程序域中加载的所有附加程序集都面向此 .NET Framework 版本。 例如，如果是可执行文件，该可执行文件面向的框架就是一个兼容模式，应用程序域中的所有程序集都将在这个兼容模式下运行。
 
 ## <a name="runtime-changes"></a>运行时更改
 
