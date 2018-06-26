@@ -3,12 +3,13 @@ title: dotnet test 命令 - .NET Core CLI
 description: dotnet test 命令可用于在给定项目中执行单元测试。
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: d85ca0bf75baa94e63358bd66d11bc29e8b9284b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 8a10ac9175ee5fcf8649efbb07d8d382ac3afdc7
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696265"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,16 +21,19 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>摘要
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 ```
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
 dotnet test [-h|--help]
 ```
-
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+dotnet test [-h|--help]
+```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
 dotnet test [-h|--help]
@@ -48,11 +52,77 @@ dotnet test [-h|--help]
 
 `PROJECT`
 
-指定测试项目的路径。 如果省略，则默认为当前目录。
+指向测试项目的路径。 如未指定，则默认为当前目录。
 
 ## <a name="options"></a>选项
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+
+在测试运行中使用来自指定路径的自定义测试适配器。
+
+`--blame`
+
+在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 它会在当前目录中创建一个输出文件 (Sequence.xml)，其中捕获了故障前的测试执行顺序。
+
+`-c|--configuration {Debug|Release}`
+
+定义生成配置。 默认值为 `Debug`，但项目配置可以替代此默认 SDK 设置。
+
+`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
+
+为测试运行启用数据收集器。 有关详细信息，请参阅[监视和分析测试运行](https://aka.ms/vstest-collect)。
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+启用测试平台的诊断模式，并将诊断消息写入指定文件。
+
+`-f|--framework <FRAMEWORK>`
+
+查找特定[框架](../../standard/frameworks.md)的测试二进制文件。
+
+`--filter <EXPRESSION>`
+
+使用给定表达式筛选掉当前项目中的测试。 有关详细信息，请参阅[筛选选项详细信息](#filter-option-details)部分。 若要获取使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
+
+`-h|--help`
+
+打印出有关命令的简短帮助。
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+指定测试结果记录器。
+
+`--no-build`
+
+不在运行测试项目之前生成它。 还隐式设置 `--no-restore` 标记。
+
+`--no-restore`
+
+运行此命令时不执行隐式还原。
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+查找要运行的二进制文件的目录。
+
+`-r|--results-directory <PATH>`
+
+用于放置测试结果的目录。 如果指定的目录不存在，则会创建该目录。
+
+`-s|--settings <SETTINGS_FILE>`
+
+运行测试时要使用的设置。
+
+`-t|--list-tests`
+
+列出当前项目中发现的所有测试。
+
+`-v|--verbosity <LEVEL>`
+
+设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -76,7 +146,7 @@ dotnet test [-h|--help]
 
 `--filter <EXPRESSION>`
 
-使用给定表达式筛选掉当前项目中的测试。 有关详细信息，请参阅[筛选选项详细信息](#filter-option-details)部分。 有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
+使用给定表达式筛选掉当前项目中的测试。 有关详细信息，请参阅[筛选选项详细信息](#filter-option-details)部分。 若要获取使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
 `-h|--help`
 
@@ -88,7 +158,7 @@ dotnet test [-h|--help]
 
 `--no-build`
 
-运行前不生成测试项目。
+不在运行测试项目之前生成它。 还隐式设置 `--no-restore` 标记。
 
 `--no-restore`
 
@@ -100,7 +170,7 @@ dotnet test [-h|--help]
 
 `-r|--results-directory <PATH>`
 
-用于放置测试结果的目录。 如果没有，将创建指定目录。
+用于放置测试结果的目录。 如果指定的目录不存在，则会创建该目录。
 
 `-s|--settings <SETTINGS_FILE>`
 
@@ -134,7 +204,7 @@ dotnet test [-h|--help]
 
 `--filter <EXPRESSION>`
 
-使用给定表达式筛选掉当前项目中的测试。 有关详细信息，请参阅[筛选选项详细信息](#filter-option-details)部分。 有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
+使用给定表达式筛选掉当前项目中的测试。 有关详细信息，请参阅[筛选选项详细信息](#filter-option-details)部分。 若要获取使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
 `-h|--help`
 
@@ -146,7 +216,7 @@ dotnet test [-h|--help]
 
 `--no-build`
 
-运行前不生成测试项目。
+不在运行测试项目之前生成它。
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -185,9 +255,9 @@ dotnet test [-h|--help]
 `<property>` 是 `Test Case` 的特性。 下面介绍了常用单元测试框架支持的属性：
 
 | 测试框架 | 支持的属性                                                                                      |
-| :------------: | --------------------------------------------------------------------------------------------------------- |
+| -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>name</li><li>ClassName</li><li>优先级</li><li>TestCategory</li></ul> |
-| Xunit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>特征</li></ul>                                   |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>特征</li></ul>                                   |
 
 `<operator>` 说明了属性和值之间的关系：
 
@@ -203,16 +273,16 @@ dotnet test [-h|--help]
 
 表达式可与条件运算符结合使用：
 
-| 运算符 | 函数 |
-| :------: | :------: |
-| <code>&#124;</code>      | 或       |
-| `&`      | AND      |
+| 运算符            | 函数 |
+| ------------------- | -------- |
+| <code>&#124;</code> | 或       |
+| `&`                 | AND      |
 
 使用条件运算符时，可以用括号将表达式括起来（例如，`(Name~TestMethod1) | (Name~TestMethod2)`）。
 
-有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
+若要获取使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
 ## <a name="see-also"></a>请参阅
 
- [框架和目标](../../standard/frameworks.md)  
- [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
+[框架和目标](../../standard/frameworks.md)  
+[.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)

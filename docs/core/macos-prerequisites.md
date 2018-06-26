@@ -4,16 +4,16 @@ description: 在 macOS 计算机上开发、部署和运行 .NET Core 应用程�
 author: guardrex
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: b1f4d3b49be7ba5349197187d6576b78db58798c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31fee3bbc85daa66019b63e50b48509b79606fce
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219074"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315061"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>macOS 上 .NET Core 的先决条件
 
-本文介绍了在 macOS 计算机上开发、部署和运行 .NET Core 应用程序所需的受支持的 macOS 版本和 .NET Core 依赖项。 支持的操作系统版本和随附的依赖项适用于在 Mac 上开发 .NET Core 应用的三种方法：[结合使用常用编辑器和命令行](tutorials/using-with-xplat-cli.md)、[Visual Studio Code](https://code.visualstudio.com/) 和 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)。
+本文介绍了在 macOS 计算机上开发、部署和运行 .NET Core 应用程序所需的受支持的 macOS 版本和 .NET Core 依赖项。 支持的操作系统版本和随附的依赖项适用于在 Mac 上开发 .NET Core 应用的三种方法：[结合使用常用编辑器和命令行](tutorials/using-with-xplat-cli.md)、[Visual Studio Code](https://code.visualstudio.com/) 和 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)。
 
 ## <a name="supported-macos-versions"></a>支持的 macOS 版本
 
@@ -102,11 +102,11 @@ echo 'ulimit -n 2048' | sudo tee -a /etc/profile
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 
-可以使用任何编辑器，通过 .NET Core SDK 开发 .NET Core 应用程序。 但是，若要在集成的开发环境中的 Mac 上开发 .NET Core 应用程序，可以使用 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)。 
+可以使用任何编辑器，通过 .NET Core SDK 开发 .NET Core 应用程序。 但是，若要在集成的开发环境中的 Mac 上开发 .NET Core 应用程序，可以使用 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)。 
 
 使用 Visual Studio for Mac 在 macOS 上进行 .NET Core 开发需要：
 
 * macOS 操作系统的受支持版本
 * OpenSSL（仅 .NET Core 1.x；.NET Core 2.x 使用 macOS 上本机可用的安全服务）
 * .NET Core SDK for Mac
-* [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
+* [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)

@@ -3,12 +3,13 @@ title: dotnet pack 命令 - .NET Core CLI
 description: dotnet pack 命令可为 .NET Core 项目创建 NuGet 包。
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 6e6136e22c4bac201cfa0e4af321329432c04936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696814"
 ---
 # <a name="dotnet-pack"></a>dotnet 包
 
@@ -21,16 +22,15 @@ ms.lasthandoff: 05/04/2018
 ## <a name="synopsis"></a>摘要
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
+    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 ---
@@ -41,7 +41,7 @@ dotnet pack [-h|--help]
 
 将被打包项目的 NuGet 依赖项添加到 *.nuspec* 文件，以便在安装包时可以进行正确解析。 项目到项目的引用不会打包到项目内。 目前，如果具有项目到项目的依赖项，则每个项目均必须包含一个包。
 
-默认情况下，`dotnet pack` 先构建项目。 如果希望避免此行为，则传递 `--no-build` 选项。 这通常在持续集成 (CI) 生成方案中非常有用，在其中你可以知道代码是之前生成的。
+默认情况下，`dotnet pack` 先构建项目。 如果希望避免此行为，则传递 `--no-build` 选项。 此选项在持续集成 (CI) 生成方案中通常非常有用，你可以知道代码是之前生成的。
 
 可向 `dotnet pack` 命令提供 MSBuild 属性，用于打包进程。 有关详细信息，请参阅 [NuGet 元数据属性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令行引用](/visualstudio/msbuild/msbuild-command-line-reference)。 [示例](#examples)部分介绍了如何在不同的情况下使用 MSBuild /p 开关。
 
@@ -51,7 +51,7 @@ dotnet pack [-h|--help]
 
 `PROJECT`
 
-要打包的项目。 它可能是 [csproj 文件](csproj.md)或目录的路径。 如果省略，则默认为当前目录。
+要打包的项目。 它可能是 [csproj 文件](csproj.md)或目录的路径。 如果未指定，则默认为当前目录。
 
 ## <a name="options"></a>选项
 
@@ -61,7 +61,9 @@ dotnet pack [-h|--help]
 
 定义生成配置。 默认值为 `Debug`。
 
-`--force` - 强制解析所有依赖项，即使上次还原已成功，也不例外。 这相当于删除 project.assets.json 文件。
+`--force`
+
+强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件。
 
 `-h|--help`
 
@@ -77,7 +79,7 @@ dotnet pack [-h|--help]
 
 `--no-build`
 
-打包前不生成项目。
+打包前不生成项目。 还隐式设置 `--no-restore` 标记。
 
 `--no-dependencies`
 
@@ -91,7 +93,7 @@ dotnet pack [-h|--help]
 
 将生成的包放置在指定目录。
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+`--runtime <RUNTIME_IDENTIFIER>`
 
 指定要为其还原包的目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
 

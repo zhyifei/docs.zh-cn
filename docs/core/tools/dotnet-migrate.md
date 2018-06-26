@@ -3,12 +3,13 @@ title: dotnet migrate 命令 - .NET Core CLI
 description: dotnet migrate 命令可迁移项目及其所有依赖项。
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: bdc1da5c1b70fdceac0170b2f002059a66ca5880
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 67a845f7604dededd00746fa6b74a320b3e134fa
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697100"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -20,15 +21,18 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>摘要
 
-`dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file] [-s|--skip-project-references] [-r|--report-file] [--format-report-file-json] [--skip-backup] [-h|--help]`
+```
+dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
+dotnet migrate [-h|--help]
+```
 
 ## <a name="description"></a>描述
 
-`dotnet migrate` 命令将有效的基于预览版 2 *project.json* 的项目迁移到有效的 .NET Core SDK 1.0 *csproj* 项目。 
+`dotnet migrate` 命令将有效的基于预览版 2 *project.json* 的项目迁移到有效的 .NET Core SDK 1.0 *csproj* 项目。
 
-默认情况下，命令迁移根项目和根项目包含的任何项目引用。 在运行时使用 `--skip-project-references` 选项禁用此行为。 
+默认情况下，命令迁移根项目和根项目包含的任何项目引用。 在运行时使用 `--skip-project-references` 选项禁用此行为。
 
-在以下情况下执行迁移：
+可在下列资产上执行迁移：
 
 * 通过指定 *project.json* 文件进行迁移的单个项目。
 * 通过将路径传递到 *global.json* 文件在 *global.json* 文件中指定的所有目录。
@@ -37,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 
 `dotnet migrate` 命令将迁移的 *project.json* 文件保存在 `backup` 目录中，如果该目录不存在，将创建一个。 使用 `--skip-backup` 选项重写此行为。
 
-默认情况下，迁移操作会将迁移过程的状态输出到标准输出 (STDOUT)。 如果使用 `--report-file <REPORT_FILE>` 选项，输出将保存到指定的文件中。 
+默认情况下，迁移操作会将迁移过程的状态输出到标准输出 (STDOUT)。 如果使用 `--report-file <REPORT_FILE>` 选项，输出将保存到指定的文件中。
 
 `dotnet migrate` 命令仅支持有效的预览版 2 基于 *project.json* 的项目。 这意味着，不能使用它将 DNX 或预览版 1 基于 *project.json* 的项目直接迁移到 MSBuild/csproj 项目。 首先需要将项目手动迁移到预览版 2 基于 *project.json* 的项目，然后使用 `dotnet migrate` 命令迁移该项目。
 
@@ -48,17 +52,33 @@ ms.lasthandoff: 05/04/2018
 下列路径之一：
 
 * 要迁移的 *project.json* 文件。
-* *global.json*文件，用于迁移 *global.json* 中指定的文件夹。
-* *solution.sln* 文件，它将迁移解决方案中引用的项目。
-* 要迁移的目录，它将以递归方式搜索要迁移的 *project.json* 文件。
+* global.json 文件：迁移在 global.json 中指定的文件夹。
+* solution.sln 文件：迁移该解决方案中引用的项目。
+* 要迁移的目录：在指定的目录中以递归方式搜索要迁移的 project.json 文件。
 
 如未指定，则默认为当前目录。
 
 ## <a name="options"></a>选项
 
+`--format-report-file-json <REPORT_FILE>`
+
+将迁移报告文件（而非用户消息）作为 JSON 输出。
+
 `-h|--help`
 
 打印出有关命令的简短帮助。
+
+`-r|--report-file <REPORT_FILE>`
+
+除控制台外，还将迁移报告输出到文件。
+
+`-s|--skip-project-references [Debug|Release]`
+
+跳过迁移项目引用。 默认情况下，以递归方式迁移项目引用。
+
+`--skip-backup`
+
+在成功迁移后，跳过将 *project.json*、*global.json* 和 *\*.xproj* 移动到 `backup` 目录的步骤。
 
 `-t|--template-file <TEMPLATE_FILE>`
 
@@ -71,22 +91,6 @@ ms.lasthandoff: 05/04/2018
 `-x|--xproj-file <FILE>`
 
 要使用的 xproj 文件的路径。 当项目目录中有多个 xproj 时需要。
-
-`-s|--skip-project-references [Debug|Release]`
-
-跳过迁移项目引用。 默认情况下，以递归方式迁移项目引用。
-
-`-r|--report-file <REPORT_FILE>`
-
-除控制台外，还将迁移报告输出到文件。
-
-`--format-report-file-json <REPORT_FILE>`
-
-将迁移报告文件（而非用户消息）作为 JSON 输出。
-
-`--skip-backup`
-
-在成功迁移后，跳过将 *project.json*、*global.json* 和 *\*.xproj* 移动到 `backup` 目录的步骤。
 
 ## <a name="examples"></a>示例
 
