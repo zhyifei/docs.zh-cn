@@ -2,12 +2,12 @@
 title: SqlClient 对高可用性的支持，灾难恢复
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: e3599c11743a33ca7cd071573bc67699eed7f606
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 001b99d7a7ec7dd7e483887ceeb0b2563a46da0a
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365704"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948519"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 对高可用性的支持，灾难恢复
 本主题介绍对高可用性、灾难恢复（AlwaysOn 可用性组）的 SqlClient支持（[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的新功能）。  AlwaysOn 可用性组功能已添加到 SQL Server 2012。 有关 AlwaysOn 可用性组的详细信息，请参阅 SQL Server 联机丛书。  
@@ -32,7 +32,7 @@ ms.locfileid: "33365704"
 2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
->  设置`MultiSubnetFailover`到`true`无需与[!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) 或更高版本。
+>  设置`MultiSubnetFailover`到`true`无需与[!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]或更高版本。
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 连接  
  始终指定`MultiSubnetFailover=True`时连接到 SQL Server 2012 可用性组侦听器或 SQL Server 2012 故障转移群集实例。 `MultiSubnetFailover` 所有可用性组或故障转移群集实例在 SQL Server 2012 和将显著减少单个和多子网 AlwaysOn 拓扑的故障转移时间，请使更快的故障转移。 在多子网故障转移期间，客户端将尝试并行连接。 在子网故障转移期间，将积极重试 TCP 连接。  

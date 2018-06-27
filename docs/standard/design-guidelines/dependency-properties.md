@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 039015f895a491d8709815d6aff52eb6139d779f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7398202cc265fbd55b9bf0b5a53367dedcab57b0
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576111"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948480"
 ---
 # <a name="dependency-properties"></a>依赖项属性
 依赖项属性 (DP) 是将其值存储在属性存储而不是存储在类型变量 （字段），例如一个常规属性。  
@@ -43,7 +43,7 @@ ms.locfileid: "33576111"
   
  附加属性的一个典型示例是<xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType>属性。 该属性表示按钮 （不网格的） 列位置，但它才是相关，如果按钮包含在网格中，因此它"附加"到按钮的网格。  
   
-```  
+```xaml
 <Grid>  
     <Grid.ColumnDefinitions>  
         <ColumnDefinition />  
@@ -57,7 +57,7 @@ ms.locfileid: "33576111"
   
  附加属性的属性定义类似于主要的正则依赖项属性，只不过访问器都由静态的 Get 和 Set 方法：  
   
-```  
+```csharp
 public class Grid {  
   
     public static int GetColumn(DependencyObject obj) {  
