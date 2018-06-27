@@ -11,7 +11,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 06/04/2018
 ms.locfileid: "34696580"
 ---
-# <a name="dotnet-restore"></a>dotnet 还原
+# <a name="dotnet-restore"></a>dotnet restore
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
