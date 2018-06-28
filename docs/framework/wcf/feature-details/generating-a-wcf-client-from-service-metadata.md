@@ -2,12 +2,12 @@
 title: 根据服务元数据生成 WCF 客户端
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: bd349099213a7818555a910aac1949999a57a58f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55034868b465b63dca3ca28238d81b348d9d6893
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494010"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027923"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>根据服务元数据生成 WCF 客户端
 本主题介绍如何使用 Svcutil.exe 中的各种开关，根据元数据文档生成客户端。  
@@ -20,7 +20,7 @@ ms.locfileid: "33494010"
   
 -   DISCO 请求 (使用[DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777)从 ASP.NET Web 服务) 针对所提供地址。  
   
- Svcutil.exe 基于 Web 服务描述语言 (WSDL) 或从服务接收的策略文件生成客户端。 通过将用户名与“@”连接在一起，然后添加完全限定的域名 (FQDN)，生成用户主体名称 (UPN)。 但是，对于在 Active Directory 注册的用户，此格式无效，该工具生成的 UPN 会导致出现以下错误消息的 Kerberos 身份验证：**登录尝试失败。** 若要解决此问题，请手动修复该工具生成的客户端文件。  
+ Svcutil.exe 基于 Web 服务描述语言 (WSDL) 或从服务接收的策略文件生成客户端。 通过串联在用户名的前面生成的用户主体名称 (UPN)"\@"，然后将添加一个完全限定的域名 (FQDN)。 但是，对于在 Active Directory 注册的用户，此格式无效，该工具生成的 UPN 会导致出现以下错误消息的 Kerberos 身份验证：**登录尝试失败。** 若要解决此问题，请手动修复该工具生成的客户端文件。  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
