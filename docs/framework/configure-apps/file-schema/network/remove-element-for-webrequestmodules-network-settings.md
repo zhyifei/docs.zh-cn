@@ -13,12 +13,12 @@ ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e20d414b3be41fc175037c6691518adf6a424b69
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743022"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073016"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;删除&gt;webRequestModules （网络设置） 的元素
 从应用程序中删除自定义的 Web 请求模块。  
@@ -57,7 +57,7 @@ ms.locfileid: "32743022"
 ## <a name="remarks"></a>备注  
  `remove`元素中移除指定的 URI 前缀已注册的 Web 请求模块。  
   
- 值`prefix`属性应为有效的 URI-例如，"http"，前导字符或"http://www.contoso.com"。  
+ 值`prefix`属性应为有效的 URI-例如，"http"，前导字符或"`http://www.contoso.com` "。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  

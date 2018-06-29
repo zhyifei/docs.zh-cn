@@ -2,12 +2,12 @@
 title: 公共架构集合
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: fc8b581a127fbef0f32cdee53eaa62d241e4ae31
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 29ccd2af4268a86ae4c2047ad2523f68b0f6489e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759304"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072119"
 ---
 # <a name="common-schema-collections"></a>公共架构集合
 通用架构集合是每个 .NET Framework 托管提供程序均实现的架构集合。 您可以查询由.NET Framework 托管提供程序以确定支持的架构集合列表，通过调用**GetSchema**不带任何参数，或包含架构集合名称"MetaDataCollections"的方法。 此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。 这些集合描述所有必需的列。 提供程序可以根据需要随意添加其他列。 例如，`SqlClient` 和 `OracleClient` 向限制集合中添加 ParameterName。  
@@ -30,7 +30,7 @@ ms.locfileid: "32759304"
   
 |列名|数据类型|描述|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|string|匹配复合标识符中的复合分隔符的正则表达式。 例如，"\\。" （适用于 SQL Server) 或"@&#124;\\。" （针对 Oracle）。<br /><br /> 复合标识符通常是什么适用于数据库对象名，例如： pubs.dbo.authors 或pubs@dbo.authors。<br /><br /> 对于 SQL Server，使用正则表达式"\\。"。 对于 OracleClient，使用"@&#124;\\。"。<br /><br /> 对于 ODBC，使用 Catalog_name_seperator。<br /><br /> 对于 OLE DB，使用 DBLITERAL_CATALOG_SEPARATOR 或 DBLITERAL_SCHEMA_SEPARATOR。|  
+|CompositeIdentifierSeparatorPattern|string|匹配复合标识符中的复合分隔符的正则表达式。 例如，"\\。" （适用于 SQL Server) 或"\@&#124;\\。" （针对 Oracle）。<br /><br /> 复合标识符通常是什么适用于数据库对象名，例如： pubs.dbo.authors 或pubs@dbo.authors。<br /><br /> 对于 SQL Server，使用正则表达式"\\。"。 对于 OracleClient，使用"\@&#124;\\。"。<br /><br /> 对于 ODBC，使用 Catalog_name_seperator。<br /><br /> 对于 OLE DB，使用 DBLITERAL_CATALOG_SEPARATOR 或 DBLITERAL_SCHEMA_SEPARATOR。|  
 |DataSourceProductName|string|通过提供程序访问的产品名称，例如“Oracle”或“SQLServer”。|  
 |DataSourceProductVersion|string|指示提供程序访问的产品版本，采用数据源本机格式，而不是 Microsoft 格式。<br /><br /> 有时，DataSourceProductVersion 和 DataSourceProductVersionNormalized 的值相同。 对于 OLE DB 和 ODBC，这两个值始终相同，因为它们映射到基础本机 API 中相同的函数调用。|  
 |DataSourceProductVersionNormalized|string|数据源的标准化版本，以便可以使用 `String.Compare()` 进行比较。 对于提供程序的所有版本，此值的格式一致，以避免版本 10 排序在版本 1 和版本 2 之间。<br /><br /> 例如，Oracle 提供程序使用的格式为"nn.nn.nn.nn.nn"有关其规范化的版本，这会导致 Oracle 8i 数据源将返回"08.01.07.04.01"。 SQL Server 使用典型的 Microsoft"nn.nn.nnnn"格式。<br /><br /> 有时，DataSourceProductVersion 和 DataSourceProductVersionNormalized 的值相同。 对于 OLE DB 和 ODBC，这两个值始终相同，因为它们映射到基础本机 API 中相同的函数调用。|  
@@ -38,7 +38,7 @@ ms.locfileid: "32759304"
 |IdentifierPattern|string|匹配标识符并且包含标识符的匹配值的正则表达式。 例如“[A-Za-z0-9_#$]”。|  
 |IdentifierCase|<xref:System.Data.Common.IdentifierCase>|表示未加引号的标识符是否区分大小写。|  
 |OrderByColumnsInSelect|bool|指定 ORDER BY 子句中的列是否必须在选择列表中。 如果值为 true，表示这些列必须在选择列表中，如果值为 false，表示这些列不必在选择列表中。|  
-|ParameterMarkerFormat|string|表示如何格式化参数的格式化字符串。<br /><br /> 如果数据源不支持命名的参数，此字符串中的第一个占位符应是格式化参数名的位置。<br /><br /> 例如，如果数据源期望参数以名为且带有前缀: 这将是":{0}"。 在使用参数名“p1”格式化此字符串时，生成的字符串为“:p1”。<br /><br /> 如果数据源期望参数以前缀为 @，但名称中已包含它们，这应为{0}，并格式化一个名为参数的结果"@p1"将只是"@p1"。<br /><br /> 数据源不期望使用命名的参数和期望使用？ 字符，可以简单地指定的格式字符串？，这样将忽略参数名称。 对于 OLE DB，将返回‘?’。|  
+|ParameterMarkerFormat|string|表示如何格式化参数的格式化字符串。<br /><br /> 如果数据源不支持命名的参数，此字符串中的第一个占位符应是格式化参数名的位置。<br /><br /> 例如，如果数据源期望参数以名为且带有前缀: 这将是":{0}"。 在使用参数名“p1”格式化此字符串时，生成的字符串为“:p1”。<br /><br /> 如果数据源期望参数以前缀为 @，但名称中已包含它们，这应为{0}，并格式化一个名为参数的结果"\@p1"将只是"\@p1"。<br /><br /> 数据源不期望使用命名的参数和期望使用？ 字符，可以简单地指定的格式字符串？，这样将忽略参数名称。 对于 OLE DB，将返回‘?’。|  
 |ParameterMarkerPattern|string|匹配参数标记的正则表达式。 该表达式将包含参数名的匹配值（如果有）。<br /><br /> 例如，如果受支持命名参数包含将包括在参数名中的“@”引导字符，则为：“(@[A-Za-z0-9_$#]*)”。<br /><br /> 但是，如果使用支持命名的参数: 由于引导字符，并且它不是参数名称的一部分，这将是:": ([A Za z0 9_$ #]\*)"。<br /><br /> 当然，如果数据源不支持命名参数，将只为“?”。|  
 |ParameterNameMaxLength|int|参数名的最大长度（字符数）。 Visual Studio 期望如果支持参数名，最大长度的最小值为 30 个字符。<br /><br /> 如果数据源不支持命名参数，此属性将返回零。|  
 |ParameterNamePattern|string|匹配有效参数名的正则表达式。 对于参数名可以使用的字符，不同的数据源采用不同的规则。<br /><br /> Visual Studio 期望如果支持参数名，字符“\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}”是参数名支持的最小有效字符集。|  

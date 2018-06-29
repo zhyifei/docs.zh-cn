@@ -2,12 +2,12 @@
 title: 消息协议
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d188c79d3879ef383d24f56c81d66973266636bc
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496632"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072717"
 ---
 # <a name="messaging-protocols"></a>消息协议
 Windows Communication Foundation (WCF) 通道堆栈采用编码和传输通道将转换成其网络传输格式的内部消息表示，并且使用特定传输进行发送。 用于 Web 服务互操作性的最常见传输是 HTTP，Web 服务使用的最常见编码是基于 XML 的 SOAP 1.1、SOAP 1.2 和消息传输优化机制 (MTOM)。  
@@ -130,7 +130,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  B3121: WCF 采用 Ws-metadataexchange (MEX) 规范第 6 部分以通过值或引用包括终结点引用的元数据中所述的机制。  
   
- 其中的 WCF 服务需要使用在令牌颁发者颁发的安全断言标记语言 (SAML) 令牌身份验证的方案，请考虑http://sts.fabrikam123.com。WCF 终结点描述此身份验证要求使用`sp:IssuedToken`与嵌套断言`sp:Issuer`指向令牌颁发者的断言。 访问该 `sp:Issuer` 断言的客户端应用程序需要知道如何与令牌颁发机构终结点进行通信。 客户端需要知道令牌颁发机构的有关元数据。 WCF 使用 MEX 中定义的终结点引用元数据扩展，提供了对令牌颁发者元数据的引用。  
+ 其中的 WCF 服务需要使用在令牌颁发者颁发的安全断言标记语言 (SAML) 令牌身份验证的方案，请考虑http://sts.fabrikam123.com。 WCF 终结点描述此身份验证要求使用`sp:IssuedToken`与嵌套断言`sp:Issuer`指向令牌颁发者的断言。 访问该 `sp:Issuer` 断言的客户端应用程序需要知道如何与令牌颁发机构终结点进行通信。 客户端需要知道令牌颁发机构的有关元数据。 WCF 使用 MEX 中定义的终结点引用元数据扩展，提供了对令牌颁发者元数据的引用。  
   
 ```xml  
 <sp:IssuedToken>  
@@ -452,7 +452,7 @@ Content-Length: 0
   
 -   R4132：HTTP Content-Type 标头必须具有一个类型参数，并且值 `application/xop+xml` 括在双引号中。  
   
- 要求使用双引号括起来，尽管不是在 RFC 2387 中显式其文字提到所有 multipart/related 媒体类型参数最有可能包含保留字符，如"@" or "/"，因此需要双引号。  
+ 要求使用双引号括起来，尽管不是在 RFC 2387 中显式其文字提到所有 multipart/related 媒体类型参数最有可能包含之类的保留的字符"\@"或"/"，因此需要双引号将标记。  
   
 -   R4133：HTTP Content-Type 标头应该有一个 start 参数，其值为包含 SOAP 1.x 信封的 MIME 部分的 Content-ID 标头，并且括在双引号中。 如果省略 start 参数，则第一个 MIME 部分必须包含 SOAP 1.x 信封。  
   

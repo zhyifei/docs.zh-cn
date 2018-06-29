@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 011f37cbbfa3eacab92705cd8e4363b36a746cf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ca518e1d98e26755167ec6cf2f67ba9f7295679
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509139"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071326"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 元数据实用工具 (Svcutil.exe)
 ServiceModel 元数据实用工具用于依据元数据文档生成服务模型代码，以及依据服务模型代码生成元数据文档。  
@@ -66,7 +66,7 @@ ServiceModel 元数据实用工具用于依据元数据文档生成服务模型�
  而对于使用 BasicHttpContextbinding 终结点的服务，Svcutil.exe 将生成 `allowCookies` 属性设置为 `true` 的 BasicHttpBinding。 Cookie 用于服务器上的上下文。 如果在服务使用 Cookie 时，您要管理客户端上的上下文，则可以手动修改配置以使用上下文绑定。  
   
 > [!CAUTION]
->  Svcutil.exe 基于 WSDL 或从服务收到的策略文件生成客户端。 用户主要名称 (UPN) 是通过将用户名、“@”和完全限定域名 (FQDN) 串联在一起生成的。 但是，对于在 Active Directory 上注册的用户，此格式无效，并且工具生成的 UPN 将导致 Kerberos 身份验证失败，错误消息为“登录没有成功”。 若要解决此问题，您应手动修复此工具生成的客户端文件。  
+>  Svcutil.exe 基于 WSDL 或从服务收到的策略文件生成客户端。 通过串联用户名，生成的用户主体名称 (UPN)"\@"和完全限定域名 (FQDN)。 但是，对于在 Active Directory 上注册的用户，此格式无效，并且工具生成的 UPN 将导致 Kerberos 身份验证失败，错误消息为“登录没有成功”。 若要解决此问题，您应手动修复此工具生成的客户端文件。  
   
  `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`  
   

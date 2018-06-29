@@ -2,12 +2,12 @@
 title: '&lt;identity&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 9cfd1d6cc7c278fd7e95c13df0a6f801cfabbc33
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1fc47b9595f409cf375dc75f2bf43e83f58491df
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749161"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071287"
 ---
 # <a name="ltidentitygt"></a>&lt;identity&gt;
 标识元素允许客户端开发人员在设计时指定服务的期望标识。 在客户端和服务之间的握手过程中，Windows Communication Foundation (WCF) 基础结构将确保预期的服务匹配此元素的值的标识，因此可以进行身份验证。 有关详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "32749161"
 |dns|指定用于对服务进行身份验证的 X.509 证书的 DNS。 此元素包含一个字符串属性 `value`，并包含实际的标识。|  
 |rsa|指定用于向客户端验证服务身份的 X.509 证书的 RSA 字段的值。 此元素包含一个字符串属性 `value`，并包含实际的标识。|  
 |servicePrincipalName|指定服务器主体名称 (SPN) 标识，它是客户端用来唯一标识一个服务实例的主体名称。 此元素包含一个 `value` 属性，该属性是一个字符串，其中包含实际的主体名称。 此元素的类型为 <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>。|  
-|userPrincipalName|指定用户主体名称 (UPN) 标识，它是网络上的用户登录名类型。 用户主体名称包含 Active Directory 中使用的用户对象名称，后跟一个 @ 符号并且通常随后紧跟域名系统的父域。 例如，Fabrikam.com 域树中的 Jeff 可能具有用户主要名称[ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com)。此元素包含一个 `value` 属性，该属性是一个字符串，其中包含实际的主体名称。 此元素的类型为 <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>。|  
+|userPrincipalName|指定用户主体名称 (UPN) 标识，它是网络上的用户登录名类型。 用户主体名称包含 Active Directory 后, 跟中使用的用户对象名称 at 符号 (\@)，然后，通常情况下，域名系统父域。 例如，Fabrikam.com 域树中的 Jeff 可能具有用户主要名称[ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com)。  此元素包含一个 `value` 属性，该属性是一个字符串，其中包含实际的主体名称。 此元素的类型为 <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   

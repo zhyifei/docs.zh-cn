@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 455609ea602f450803718f5be34618b087560d21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2451885c673515eb6690b0784fd5bd22de629209
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539447"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071141"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>如何：在 Windows 窗体应用程序中响应字体方案更改
 在 Windows 操作系统，用户可以更改系统范围的字体设置，以使显示的默认字体放大或缩小。 更改这些字体设置为有视觉障碍并需要更大的类型来读取其屏幕上的文本的用户至关重要。 你可以调整 Windows 窗体应用程序以通过增加或减少的大小的窗体和所有包含的文本的字体方案更改时对这些更改做出响应。 如果你想窗体以动态地适应字体大小的更改，你可以将代码添加到你的窗体。  
@@ -40,13 +40,13 @@ ms.locfileid: "33539447"
   
 5.  最后，实现的处理程序<xref:System.Windows.Forms.Form.FormClosing>分离的事件<xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>事件处理程序。  
   
-> [!IMPORTANT]
->  不包括此代码将导致应用程序泄漏内存。  
+     > [!IMPORTANT]
+     > 不包括此代码将导致应用程序泄漏内存。  
   
- [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
- [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
+     [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
+     [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-1.  编译并运行该代码。  
+6.  编译并运行该代码。  
   
 ### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>若要手动更改在 Windows XP 中的字体方案  
   
@@ -56,7 +56,7 @@ ms.locfileid: "33539447"
   
 3.  从**字体大小**下拉列表框中，选择新的字体大小。  
   
-     你将注意到该窗体，现在做出反应的桌面字体方案中运行时更改。 当用户更改之间**正常**，**大字体**，和**特大字体**，窗体更改字体，并正确缩放。  
+     你会注意到该窗体现在响应桌面字体方案中的运行时更改。 当用户更改之间**正常**，**大字体**，和**特大字体**，窗体更改字体，并正确缩放。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]

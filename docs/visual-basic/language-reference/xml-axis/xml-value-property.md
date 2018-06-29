@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 31c9ce2774d6c6182403885a4438c4aa6bf143ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 927158f940d9b96cd06873c7d3e710be91b887e9
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604180"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071613"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML 值属性 (Visual Basic)
 提供对的集合的第一个元素的值的访问<xref:System.Xml.Linq.XElement>对象。  
@@ -38,7 +38,7 @@ object.Value
  <xref:System.Xml.Linq.XElement.Value%2A>属性，则可以轻松访问的集合中的第一个元素的值<xref:System.Xml.Linq.XElement>对象。 此属性首先检查集合是否包含至少一个对象。 如果该集合为空，则此属性返回`Nothing`。 否则，此属性返回的值<xref:System.Xml.Linq.XElement.Value%2A>集合中的第一个元素的属性。  
   
 > [!NOTE]
->  当你访问的 XML 属性使用值 @ 标识符，则返回属性值为`String`并且不需要显式指定<xref:System.Xml.Linq.XAttribute.Value%2A>属性。  
+>  当你访问的 XML 属性使用值\@标识符，则返回属性值为`String`并且不需要显式指定<xref:System.Xml.Linq.XAttribute.Value%2A>属性。  
   
  若要访问集合中的其他元素，可以使用 XML 扩展索引器属性。 有关详细信息，请参阅[扩展索引器属性](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)。  
   
