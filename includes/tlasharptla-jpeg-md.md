@@ -1,1 +1,1 @@
-<span data-ttu-id="0d346-101">JPEG</span><span class="sxs-lookup"><span data-stu-id="0d346-101">JPEG</span></span>
+<span data-ttu-id="54870-101">JPEG</span><span class="sxs-lookup"><span data-stu-id="54870-101">JPEG</span></span>
