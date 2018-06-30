@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 0fa43263e789bba5b720792e7e8dc5321af795b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c7de61f421cf2c45cd3c5ee9afc5a388e985b52
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576215"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105558"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps 协作基础的容器
 
@@ -68,4 +68,5 @@ DevOps 应视为一种部署模式，而非目的。 它应以增量方式实现
 -   即插很好地与你现有的 DevOps 投资，包括在开放源代码中的投资的很多
 
 >[!div class="step-by-step"]
-[以前] (index.md) [下一步] (.../Microsoft-platform-tools-containerized-apps/index.md)
+[上一页](index.md)
+[下一页](../Microsoft-platform-tools-containerized-apps/index.md)

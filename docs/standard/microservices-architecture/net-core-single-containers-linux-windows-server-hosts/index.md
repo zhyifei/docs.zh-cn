@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的体系结构 | 在 Linux 或
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f429bc0c6e76c2be2e4f491768a15ab36ecb0d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 662e1af8595c074ee1aeba5ad4d83660b667c1cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591089"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105522"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>在 Linux 或 Windows Nano Server 主机上部署基于单容器的 .NET Core Web 应用
 
@@ -142,4 +142,5 @@ services:
 添加 Docker 支持的向导会与正在运行的 Docker 进程通信。 如果启动向导时 Docker 未处于运行状态，则向导无法正常运行。 此外，向导会检查当前的容器选择，添加正确的 Docker 支持。 若要为 Windows 容器添加支持，需在配置了 Windows 容器的 Docker 运行时运行向导。 若要为 Linux 容器添加支持，则运行向导，同时运行配置有 Linux 容器的 Docker。
 
 >[!div class="step-by-step"]
-[上一页] (../docker-application-development-process/docker-app-development-workflow.md) [下一页] (../containerize-net-framework-applications/index.md)
+[上一页](../docker-application-development-process/docker-app-development-workflow.md)
+[下一页](../containerize-net-framework-applications/index.md)

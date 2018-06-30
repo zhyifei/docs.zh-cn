@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 47685bfd8dca50c5e93be7574ea6ef30a49cbede
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4192ff1d67a3f70bb5eeb9a36245cfd35bafb53
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568792"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105626"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生产环境中运行由和基于微服务的应用程序
 
@@ -35,4 +35,5 @@ Orchestration 是广泛的术语，表示与容器计划、 群集管理和可�
 
 
 >[!div class="step-by-step"]
-[以前] (index.md) [下一步] (管理-生产-docker-environments.md)
+[上一页](index.md)
+[下一页](manage-production-docker-environments.md)

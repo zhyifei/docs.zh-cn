@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台的容器化 Docker 应用程序生命周期
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b4a88725de78f59c62aac1bd33764db6b2e0887e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b915c53b70192139c64c63d8b47110263e1621d0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32768484"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104460"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>使用 Microsoft 工具的 Docker 应用程序 DevOps 工作流
 
@@ -35,4 +35,5 @@ Microsoft 工具可以自动完成容器化应用程序（Docker、.NET Core 或
 
 
 >[!div class="step-by-step"]
-[上一篇] (../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md) [下一篇] (docker-application-outer-loop-devops-workflow.md)
+[上一页](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+[下一页](docker-application-outer-loop-devops-workflow.md)

@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 7a8ec2233b7927c1e3f85f5a3536a889a6a55e22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b13f28f4314ef72fbcaffe894bf823486665d3f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574018"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106092"
 ---
 # <a name="docker-terminology"></a>Docker 术语
 
@@ -47,4 +47,5 @@ ms.locfileid: "33574018"
 
 
 >[!div class="step-by-step"]
-[以前] (what-is-docker.md) [下一步] (docker-containers-images-and-registries.md)
+[上一页](what-is-docker.md)
+[下一页](docker-containers-images-and-registries.md)

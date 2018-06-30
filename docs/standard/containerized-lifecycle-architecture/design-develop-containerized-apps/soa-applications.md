@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 37313c4eb437b6b7a362456a7d1ee3b3aecb6020
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 276071a5d55015f2feecc27020ad614684907b4c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569409"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105206"
 ---
 # <a name="soa-applications"></a>SOA 应用程序
 
@@ -21,4 +21,5 @@ SOA 是的使用过度的术语，意味着要对不同的人是许多不同的�
 
 
 >[!div class="step-by-step"]
-[以前] (state-and-data-in-docker-applications.md) [下一步] (orchestrate-high-scalability-availability.md)
+[上一页](state-and-data-in-docker-applications.md)
+[下一页](orchestrate-high-scalability-availability.md)

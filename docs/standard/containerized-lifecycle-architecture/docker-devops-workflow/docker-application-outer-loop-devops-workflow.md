@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 198313c260b36d3f3025606e73e220c361a7ebb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b88eb5637bf266ab2e0a6d255f2e83f6aadc8af2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578997"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106157"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 应用程序的外部循环 DevOps 工作流中的步骤
 
@@ -111,7 +111,7 @@ Docker 容器形式运行 Visual Studio Team Services 代理： [ https://hub.do
 
 VSTS Docker 扩展： <https://aka.ms/vstsdockerextension>
 
-构建利用 Visual Studio Team Services 的.NET Core Linux Docker 映像： <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
+构建利用 Visual Studio Team Services 的.NET 核心 Linux Docker 映像： <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 
 构建 Docker 支持与基于 Linux 的 Visual Studio 团队服务生成计算机： <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
@@ -234,4 +234,5 @@ Mesosphere DC/OS: <https://mesosphere.com/product/>
 仅当时监视和诊断中的 DevOps 领域的 100%被监视的进程和由开发团队针对测试或 beta 环境执行的分析。 通过执行负载测试或只需通过监视 beta 或 QA 环境，beta 测试人员要新版本，则是完成此操作。
 
 >[!div class="step-by-step"]
-[以前] (index.md) [下一步] (.../run-manage-monitor-docker-environments/index.md)
+[上一页](index.md)
+[下一页](../run-manage-monitor-docker-environments/index.md)

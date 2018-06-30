@@ -2,12 +2,12 @@
 title: 传输：UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 4f69730831ec57efc782a95d7412496aa69a4afb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 64452e36f34f87aef491cf66f6dd94ddc3a59f34
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808411"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106033"
 ---
 # <a name="transport-udp"></a>传输：UDP
 UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Communication Foundation (WCF) 传输。 此示例介绍了使用通道框架并遵循 WCF 最佳做法在 WCF 中, 创建自定义传输的推荐的过程。 创建自定义传输的步骤如下：  
@@ -72,9 +72,9 @@ UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Co
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> 类实现 <xref:System.ServiceModel.ICommunicationObject> 并强制执行前面步骤 2 中所述的状态机。 
 
--   '<xref:System.ServiceModel.Channels.ChannelManagerBase>类实现<xref:System.ServiceModel.Channels.CommunicationObject>并提供的统一的基类<xref:System.ServiceModel.Channels.ChannelFactoryBase>和<xref:System.ServiceModel.Channels.ChannelListenerBase>。 <xref:System.ServiceModel.Channels.ChannelManagerBase> 类与 <xref:System.ServiceModel.Channels.ChannelBase>（用来实现 <xref:System.ServiceModel.Channels.IChannel> 的基类）结合使用。  
+-   <xref:System.ServiceModel.Channels.ChannelManagerBase> 类实现 <xref:System.ServiceModel.Channels.CommunicationObject> 并为 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 和 <xref:System.ServiceModel.Channels.ChannelListenerBase> 提供统一的基类。 <xref:System.ServiceModel.Channels.ChannelManagerBase> 类与 <xref:System.ServiceModel.Channels.ChannelBase>（用来实现 <xref:System.ServiceModel.Channels.IChannel> 的基类）结合使用。  
   
--   '<xref:System.ServiceModel.Channels.ChannelFactoryBase>类实现<xref:System.ServiceModel.Channels.ChannelManagerBase>和<xref:System.ServiceModel.Channels.IChannelFactory>，并将整合`CreateChannel`成一个重载`OnCreateChannel`抽象方法。  
+-   <xref:System.ServiceModel.Channels.ChannelFactoryBase>类实现<xref:System.ServiceModel.Channels.ChannelManagerBase>和<xref:System.ServiceModel.Channels.IChannelFactory>，并将整合`CreateChannel`成一个重载`OnCreateChannel`抽象方法。  
   
 -   <xref:System.ServiceModel.Channels.ChannelListenerBase> 类实现 <xref:System.ServiceModel.Channels.IChannelListener>。 它负责执行基本状态管理。  
   
@@ -109,13 +109,13 @@ this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Coun
 ```  
   
 ### <a name="the-udpchannellistener"></a>UdpChannelListener  
- ' UdpChannelListener 此示例实现派生自<xref:System.ServiceModel.Channels.ChannelListenerBase>类。 它使用单个 UDP 套接字来接收数据报。 `OnOpen` 方法使用该 UDP 套接字以异步循环形式接收数据。 收到的数据随后将借助于消息编码系统转换为消息。  
+ `UdpChannelListener`此示例实现派生自<xref:System.ServiceModel.Channels.ChannelListenerBase>类。 它使用单个 UDP 套接字来接收数据报。 `OnOpen` 方法使用该 UDP 套接字以异步循环形式接收数据。 收到的数据随后将借助于消息编码系统转换为消息。  
   
 ```csharp
 message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffer, 0, count), bufferManager);  
 ```  
   
- 由于可以用同一个数据报通道来表示来自多个源的消息，因此 `UdpChannelListener` 是一个单一实例侦听器。 不存在，在大多数，1 个活动<xref:System.ServiceModel.Channels.IChannel>' 一次与此侦听器相关联。 只有当随后释放了由 `AcceptChannel` 方法返回的通道时，该示例才生成另一个通道。 收到的消息将排入这个单一实例通道的队列中。  
+ 由于可以用同一个数据报通道来表示来自多个源的消息，因此 `UdpChannelListener` 是一个单一实例侦听器。 不存在，在大多数，1 个活动<xref:System.ServiceModel.Channels.IChannel>一次与此侦听器相关联。 只有当随后释放了由 `AcceptChannel` 方法返回的通道时，该示例才生成另一个通道。 收到的消息将排入这个单一实例通道的队列中。  
   
 #### <a name="udpinputchannel"></a>UdpInputChannel  
  `UdpInputChannel` 类实现 `IInputChannel`。 该类包括一个传入消息队列，该队列由 `UdpChannelListener` 的套接字来填充。 这些消息可以由 `IInputChannel.Receive` 方法取消排队。  

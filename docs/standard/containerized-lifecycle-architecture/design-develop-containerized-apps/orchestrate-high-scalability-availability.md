@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: 3a505e10b2a37032a7ccfefdf4a6f4bb64d65486
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7016fa8b731170a63f5d0f9d9bed3b72090be4
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579543"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106374"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>协调微服务和以高可伸缩性和可用性的 multicontainer 应用程序
 
@@ -181,4 +181,5 @@ Service Fabric 是与你可以定义另一个逻辑体系结构 （业务微服�
 
 
 >[!div class="step-by-step"]
-[以前] (soa-applications.md) [下一步] (docker-apps-development-environment.md)
+[上一页](soa-applications.md)
+[下一页](docker-apps-development-environment.md)

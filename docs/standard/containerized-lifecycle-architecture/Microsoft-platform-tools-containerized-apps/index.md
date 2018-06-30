@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 02bd144f5bfd64ab3a0b0d30aad642c5c3099c7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576238"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106186"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>有关适用于容器化应用的 Microsoft 平台和工具的简介
 
@@ -59,4 +59,5 @@ ms.locfileid: "33576238"
 因此，Microsoft 为端到端容器化 Docker 应用程序生命周期提供了完整的基础。 但是，它是产品和技术的集合，使用户可选择并集成现有工具和流程。 凭借大量方法的灵活性和功能深度优势，Microsoft 在容器化 Docker 应用程序开发领域占据有力地位。
 
 >[!div class="step-by-step"]
-[上一个] (../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md) [下一个] (../design-develop-containerized-apps/index.md)
+[上一页](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+[下一页](../design-develop-containerized-apps/index.md)

@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 43b76f738fa4b7c89423a5b9fac7ef91f40880c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff5a1f3e4b09ac9f7ea600d3f127523b96fcce55
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568727"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106358"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和注册表
 
@@ -34,4 +34,5 @@ ms.locfileid: "33568727"
 -   在映像和所选部署环境之间，希望网络延迟保持最低。 例如，如果你的生产环境是 Azure，你可能想要在 Azure 容器注册表中存储映像，以便将降至最低网络延迟。 同样，如果生产环境是在本地，便需要使本地 Docker 信任的注册表在相同的本地网络中可用。
 
 >[!div class="step-by-step"]
-[以前] (docker-terminology.md) [下一步] (Docker-application-lifecycle/index.md)
+[上一页](docker-terminology.md)
+[下一页](Docker-application-lifecycle/index.md)

@@ -4,12 +4,12 @@ description: 容器化 .NET 应用程序的 .NET 微服务体系结构 | 将旧�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: a12012f115629a79734c18c3bc75733ae2fc8195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01b84d29a559bde02ebd30535488c272d5208167
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578828"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106510"
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>将旧版整体式 .NET Framework 应用程序迁移到 Windows 容器
 
@@ -186,4 +186,5 @@ Visual Studio 集成属于向解决方案添加 Docker 支持时，还可以从�
 在开发环境中，必须在相同的操作系统中运行所有的容器。 Docker CE for Windows 不支持同时运行基于 Windows 的容器和基于 Linux 的容器。 在生产环境中，可以决定是在单个 Docker 主机（或群集）的 Windows 容器中运行目录微服务，还是让 Web 窗体应用程序与在其他 Docker 主机的 Linux 容器中运行的目录微服务实例通信。 这取决于优化网络延迟所要采用的方法。 在大多数情况下，希望应用程序所依赖的微服务能在同一 Docker 主机（或 swarm）中运行，以便于部署并降低通信延迟。 在这些配置中，唯一花费较高的通信是微服务实例与永久性数据存储的高可用性服务器之间的通信。
 
 >[!div class="step-by-step"]
-[上一页] (../net-core-single-containers-linux-windows-server-hosts/index.md) [下一页] (../multi-container-microservice-net-applications/index.md)
+[上一页](../net-core-single-containers-linux-windows-server-hosts/index.md)
+[下一页](../multi-container-microservice-net-applications/index.md)

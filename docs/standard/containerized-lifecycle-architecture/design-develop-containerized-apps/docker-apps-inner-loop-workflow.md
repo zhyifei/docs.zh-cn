@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: cda9aa77ca033dced8b6b30538f19f28a5fa63a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e578599c61053704202946772c43bdb5ef895c2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579205"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105584"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>对于 Docker 应用程序的内部循环开发工作流
 
@@ -122,7 +122,7 @@ DockerFile，还需要指示 Docker 侦听到将在运行时 （如端口 80） 
 
 **详细信息** 有关构建.NET Core 应用程序的 Docker 映像的信息，请转到<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>。
 
-若要了解有关生成你自己的映像的详细信息，请转到[ https://docs.docker.com/engine/\教程/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)。
+若要了解有关生成你自己的映像的详细信息，请转到[ https://docs.docker.com/engine/\ 教程/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)。
 
 **多平台映像存储库**
 
@@ -255,8 +255,9 @@ Visual Studio Code 支持调试 Docker，如果你使用 Node.js 和其他平台
 
 你还可以调试在 Docker 中的.NET Core 容器时使用 Visual Studio 中下, 一节中所述。
 
-**详细信息：** 若要了解有关调试 Node.js Docker 容器的详细信息，请转到<https://blog.docker.com/2016/07/live-debugging-docker/>和[ https://blogs.msdn.microsoft.com/\ 用户\_ed/2016年/02/27 /visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
+**详细信息：** 若要了解有关调试 Node.js Docker 容器的详细信息，请转到<https://blog.docker.com/2016/07/live-debugging-docker/>和[https://blogs.msdn.microsoft.com/\用户\_ed/2016年/02/27 /visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
 
 
 >[!div class="step-by-step"]
-[以前] (docker-应用程序的开发-environment.md) [下一步] (visual-studio 的工具的对于-docker.md)
+[上一页](docker-apps-development-environment.md)
+[下一页](visual-studio-tools-for-docker.md)

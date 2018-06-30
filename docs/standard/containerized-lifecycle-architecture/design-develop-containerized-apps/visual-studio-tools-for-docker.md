@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 62da6a3ff595422e42450cb1341976424acc5a52
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: facc295399a7471edfd3e59eb1cc0e90f01ef11b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314706"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104887"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)
 
@@ -71,4 +71,5 @@ Visual Studio Tools for Docker 提供一致的方法来开发和验证本地 Doc
 
 
 >[!div class="step-by-step"]
-[以前] (docker-apps-inner-loop-workflow.md) [下一步] (set-up-windows-containers-with-powershell.md)
+[上一页](docker-apps-inner-loop-workflow.md)
+[下一页](set-up-windows-containers-with-powershell.md)

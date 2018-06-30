@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 881817f4f1007edad85eefb9002d56764cbf2a02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61bc9ca6fed8f5249dcb125619aa1b07f290ba7e
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574779"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106874"
 ---
 # <a name="development-process-for-docker-based-applications"></a>基于 Docker 的应用程序的开发流程
 
@@ -46,4 +46,5 @@ ms.locfileid: "33574779"
 
 
 >[!div class="step-by-step"]
-[上一页] (../architect-microservice-container-applications/using-azure-service-fabric.md) [下一页] (docker-app-development-workflow.md)
+[上一页](../architect-microservice-container-applications/using-azure-service-fabric.md)
+[下一页](docker-app-development-workflow.md)

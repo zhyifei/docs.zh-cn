@@ -4,11 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: fe25fa8772c60625c5564d5e7194957366a6010a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d25ef131cf149eb869fa2acd40eddff5ee0b55d
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106614"
 ---
 # <a name="monolithic-applications"></a>整体应用程序
 
@@ -70,4 +71,5 @@ ms.lasthandoff: 05/04/2018
 
 
 >[!div class="step-by-step"]
-[以前] (common-container-design-principles.md) [下一步] (state-and-data-in-docker-applications.md)
+[上一页](common-container-design-principles.md)
+[下一页](state-and-data-in-docker-applications.md)
