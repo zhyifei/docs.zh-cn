@@ -2,12 +2,12 @@
 title: 配置和元数据支持
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 4dfeeba6db220e03ad981b13e2bb093bedcd43c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d316e373177d86b7ba2b715f29fe3dace9082e8b
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486719"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140146"
 ---
 # <a name="configuration-and-metadata-support"></a>配置和元数据支持
 本主题说明如何启用配置和元数据对绑定和绑定元素的支持。  
@@ -182,7 +182,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  自定义绑定元素可以在 WSDL 绑定中为服务终结点导出策略断言以表示该绑定元素的功能。 下面的代码示例摘自[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
   
 #### <a name="policy-export"></a>策略导出  
- `UdpTransportBindingElement`类型实现 '<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>来添加对导出策略支持。 因此，<xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 在为任何包含它的绑定而生成策略时都包含 `UdpTransportBindingElement`。  
+ `UdpTransportBindingElement`类型实现<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>来添加对导出策略支持。 因此，<xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 在为任何包含它的绑定而生成策略时都包含 `UdpTransportBindingElement`。  
   
  在 <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType> 中，如果通道处于多路广播模式，添加 UDP 的断言和其他断言。 这是因为，多路广播模式影响通信堆栈的构造方式，因此必须在两端之间进行协调。  
   

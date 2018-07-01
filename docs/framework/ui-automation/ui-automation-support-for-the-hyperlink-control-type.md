@@ -9,12 +9,12 @@ ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c8eb7bfc56b4dddaf352477e3817864700460db7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaafe77a71713b24752ed7db7ec016bfc14eb406
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409976"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140237"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>UI 自动化对 Hyperlink 控件类型的支持
 > [!NOTE]
@@ -38,7 +38,7 @@ ms.locfileid: "33409976"
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出了值或定义与 Hyperlink 控件类型密切相关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。 有关详细信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]属性，请参阅[的客户端 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|说明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|“值”|说明|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -60,7 +60,7 @@ ms.locfileid: "33409976"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|是|所有超链接控件必须支持 Invoke 模式。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|视情况而定|当链接包含可用且对用户有意义的信息时，超链接控件应支持 Value 控件模式。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|例如，"http://www...。"|Internet 或 Intranet 地址的 URL 是一个包含对用户有意义的信息的超链接示例。 但是，以编程方式的链接仅对应用程序有意义，不建议用于 Value 属性。|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|例如，`"http://www...."`|Internet 或 Intranet 地址的 URL 是一个包含对用户有意义的信息的超链接示例。 但是，以编程方式的链接仅对应用程序有意义，不建议用于 Value 属性。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
