@@ -11,21 +11,21 @@ ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a91775ff9f46eba772a959cfac3115c9720ac5ab
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e9548c6d43824ea5017b73a132eb49444ed6c77
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742713"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140185"
 ---
-# <a name="ltdefaultproxygt-element-network-settings"></a><span data-ttu-id="1128c-102">&lt;defaultProxy&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="1128c-102">&lt;defaultProxy&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="1128c-103">配置超文本传输协议 (HTTP) 代理服务器。</span><span class="sxs-lookup"><span data-stu-id="1128c-103">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>  
+# <a name="ltdefaultproxygt-element-network-settings"></a><span data-ttu-id="b4ae1-102">&lt;defaultProxy&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="b4ae1-102">&lt;defaultProxy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="b4ae1-103">配置超文本传输协议 (HTTP) 代理服务器。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-103">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>  
   
- <span data-ttu-id="1128c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="1128c-104">\<configuration></span></span>  
-<span data-ttu-id="1128c-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="1128c-105">\<system.net></span></span>  
-<span data-ttu-id="1128c-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="1128c-106">\<defaultProxy></span></span>  
+ <span data-ttu-id="b4ae1-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b4ae1-104">\<configuration></span></span>  
+<span data-ttu-id="b4ae1-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="b4ae1-105">\<system.net></span></span>  
+<span data-ttu-id="b4ae1-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="b4ae1-106">\<defaultProxy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1128c-107">语法</span><span class="sxs-lookup"><span data-stu-id="1128c-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b4ae1-107">语法</span><span class="sxs-lookup"><span data-stu-id="b4ae1-107">Syntax</span></span>  
   
 ```xml  
       <defaultProxy  
@@ -37,40 +37,40 @@ ms.locfileid: "32742713"
       </defaultProxy>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1128c-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="1128c-108">Attributes and Elements</span></span>  
- <span data-ttu-id="1128c-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="1128c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b4ae1-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="b4ae1-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="b4ae1-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1128c-110">特性</span><span class="sxs-lookup"><span data-stu-id="1128c-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b4ae1-110">特性</span><span class="sxs-lookup"><span data-stu-id="b4ae1-110">Attributes</span></span>  
   
-|<span data-ttu-id="1128c-111">**元素**</span><span class="sxs-lookup"><span data-stu-id="1128c-111">**Element**</span></span>|<span data-ttu-id="1128c-112">**说明**</span><span class="sxs-lookup"><span data-stu-id="1128c-112">**Description**</span></span>|  
+|<span data-ttu-id="b4ae1-111">**元素**</span><span class="sxs-lookup"><span data-stu-id="b4ae1-111">**Element**</span></span>|<span data-ttu-id="b4ae1-112">**说明**</span><span class="sxs-lookup"><span data-stu-id="b4ae1-112">**Description**</span></span>|  
 |-----------------|---------------------|  
-|`enabled`|<span data-ttu-id="1128c-113">指定是否使用 Web 代理。</span><span class="sxs-lookup"><span data-stu-id="1128c-113">Specifies whether a web proxy is used.</span></span> <span data-ttu-id="1128c-114">默认值为 `true`。</span><span class="sxs-lookup"><span data-stu-id="1128c-114">The default value is `true`.</span></span>|  
-|`useDefaultCredentials`|<span data-ttu-id="1128c-115">指定是否使用此主机的默认凭据来访问 Web 代理。</span><span class="sxs-lookup"><span data-stu-id="1128c-115">Specifies whether the default credentials for this host are used to access the web proxy.</span></span> <span data-ttu-id="1128c-116">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="1128c-116">The default value is `false`.</span></span>|  
+|`enabled`|<span data-ttu-id="b4ae1-113">指定是否使用 Web 代理。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-113">Specifies whether a web proxy is used.</span></span> <span data-ttu-id="b4ae1-114">默认值为 `true`。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-114">The default value is `true`.</span></span>|  
+|`useDefaultCredentials`|<span data-ttu-id="b4ae1-115">指定是否使用此主机的默认凭据来访问 Web 代理。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-115">Specifies whether the default credentials for this host are used to access the web proxy.</span></span> <span data-ttu-id="b4ae1-116">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-116">The default value is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="1128c-117">子元素</span><span class="sxs-lookup"><span data-stu-id="1128c-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b4ae1-117">子元素</span><span class="sxs-lookup"><span data-stu-id="b4ae1-117">Child Elements</span></span>  
   
-|<span data-ttu-id="1128c-118">**元素**</span><span class="sxs-lookup"><span data-stu-id="1128c-118">**Element**</span></span>|<span data-ttu-id="1128c-119">**说明**</span><span class="sxs-lookup"><span data-stu-id="1128c-119">**Description**</span></span>|  
+|<span data-ttu-id="b4ae1-118">**元素**</span><span class="sxs-lookup"><span data-stu-id="b4ae1-118">**Element**</span></span>|<span data-ttu-id="b4ae1-119">**说明**</span><span class="sxs-lookup"><span data-stu-id="b4ae1-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="1128c-120">将 bypasslist</span><span class="sxs-lookup"><span data-stu-id="1128c-120">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="1128c-121">提供一组描述不使用代理的地址的正则表达式。</span><span class="sxs-lookup"><span data-stu-id="1128c-121">Provides a set of regular expressions that describe addresses that do not use the proxy.</span></span>|  
-|[<span data-ttu-id="1128c-122">模块</span><span class="sxs-lookup"><span data-stu-id="1128c-122">module</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|<span data-ttu-id="1128c-123">向应用程序添加新的代理模块。</span><span class="sxs-lookup"><span data-stu-id="1128c-123">Adds a new proxy module to the application.</span></span>|  
-|[<span data-ttu-id="1128c-124">代理</span><span class="sxs-lookup"><span data-stu-id="1128c-124">proxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|<span data-ttu-id="1128c-125">定义代理服务器。</span><span class="sxs-lookup"><span data-stu-id="1128c-125">Defines a proxy server.</span></span>|  
+|[<span data-ttu-id="b4ae1-120">将 bypasslist</span><span class="sxs-lookup"><span data-stu-id="b4ae1-120">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="b4ae1-121">提供一组描述不使用代理的地址的正则表达式。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-121">Provides a set of regular expressions that describe addresses that do not use the proxy.</span></span>|  
+|[<span data-ttu-id="b4ae1-122">模块</span><span class="sxs-lookup"><span data-stu-id="b4ae1-122">module</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|<span data-ttu-id="b4ae1-123">向应用程序添加新的代理模块。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-123">Adds a new proxy module to the application.</span></span>|  
+|[<span data-ttu-id="b4ae1-124">代理</span><span class="sxs-lookup"><span data-stu-id="b4ae1-124">proxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|<span data-ttu-id="b4ae1-125">定义代理服务器。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-125">Defines a proxy server.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="1128c-126">父元素</span><span class="sxs-lookup"><span data-stu-id="1128c-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b4ae1-126">父元素</span><span class="sxs-lookup"><span data-stu-id="b4ae1-126">Parent Elements</span></span>  
   
-|<span data-ttu-id="1128c-127">**元素**</span><span class="sxs-lookup"><span data-stu-id="1128c-127">**Element**</span></span>|<span data-ttu-id="1128c-128">**说明**</span><span class="sxs-lookup"><span data-stu-id="1128c-128">**Description**</span></span>|  
+|<span data-ttu-id="b4ae1-127">**元素**</span><span class="sxs-lookup"><span data-stu-id="b4ae1-127">**Element**</span></span>|<span data-ttu-id="b4ae1-128">**说明**</span><span class="sxs-lookup"><span data-stu-id="b4ae1-128">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="1128c-129">system.net</span><span class="sxs-lookup"><span data-stu-id="1128c-129">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="1128c-130">包含指定 .NET Framework 如何连接到网络的设置。</span><span class="sxs-lookup"><span data-stu-id="1128c-130">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="b4ae1-129">system.net</span><span class="sxs-lookup"><span data-stu-id="b4ae1-129">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="b4ae1-130">包含指定 .NET Framework 如何连接到网络的设置。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-130">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1128c-131">备注</span><span class="sxs-lookup"><span data-stu-id="1128c-131">Remarks</span></span>  
- <span data-ttu-id="1128c-132">如果 defaultProxy 元素为空，则将沿用 Internet Explorer 中的代理设置。</span><span class="sxs-lookup"><span data-stu-id="1128c-132">If the defaultProxy element is empty, the proxy settings from Internet Explorer will be used.</span></span> <span data-ttu-id="1128c-133">这种行为在 .NET Framework 1.1 版中有所不同。</span><span class="sxs-lookup"><span data-stu-id="1128c-133">This behavior is different from version 1.1 of the .NET Framework.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b4ae1-131">备注</span><span class="sxs-lookup"><span data-stu-id="b4ae1-131">Remarks</span></span>  
+ <span data-ttu-id="b4ae1-132">如果 defaultProxy 元素为空，则将沿用 Internet Explorer 中的代理设置。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-132">If the defaultProxy element is empty, the proxy settings from Internet Explorer will be used.</span></span> <span data-ttu-id="b4ae1-133">这种行为在 .NET Framework 1.1 版中有所不同。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-133">This behavior is different from version 1.1 of the .NET Framework.</span></span>  
   
- <span data-ttu-id="1128c-134">如果引发异常[模块](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)元素指定非公共类型，类型不派生自<xref:System.Net.IWebProxy>类，此对象的默认构造函数的异常发生，或者出现异常时检索系统指定的默认代理。</span><span class="sxs-lookup"><span data-stu-id="1128c-134">An exception is thrown if the [module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) element specifies a non-public type, the type is not deriving from the <xref:System.Net.IWebProxy> class, an exception from the default constructor of this object occurred, or an exception occurred while retrieving the system-specified default proxy.</span></span> <span data-ttu-id="1128c-135">异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。</span><span class="sxs-lookup"><span data-stu-id="1128c-135">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
+ <span data-ttu-id="b4ae1-134">如果引发异常[模块](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)元素指定非公共类型，类型不派生自<xref:System.Net.IWebProxy>类，此对象的默认构造函数的异常发生，或者出现异常时检索系统指定的默认代理。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-134">An exception is thrown if the [module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) element specifies a non-public type, the type is not deriving from the <xref:System.Net.IWebProxy> class, an exception from the default constructor of this object occurred, or an exception occurred while retrieving the system-specified default proxy.</span></span> <span data-ttu-id="b4ae1-135">异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-135">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="1128c-136">配置文件</span><span class="sxs-lookup"><span data-stu-id="1128c-136">Configuration Files</span></span>  
- <span data-ttu-id="1128c-137">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="1128c-137">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="b4ae1-136">配置文件</span><span class="sxs-lookup"><span data-stu-id="b4ae1-136">Configuration Files</span></span>  
+ <span data-ttu-id="b4ae1-137">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-137">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1128c-138">示例</span><span class="sxs-lookup"><span data-stu-id="1128c-138">Example</span></span>  
- <span data-ttu-id="1128c-139">下面的示例使用来自 Internet 资源管理器代理的默认值，指定代理地址，并跳过代理进行本地访问和访问 contoso.com。</span><span class="sxs-lookup"><span data-stu-id="1128c-139">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access and contoso.com.</span></span>  
+## <a name="example"></a><span data-ttu-id="b4ae1-138">示例</span><span class="sxs-lookup"><span data-stu-id="b4ae1-138">Example</span></span>  
+ <span data-ttu-id="b4ae1-139">下面的示例使用来自 Internet 资源管理器代理的默认值，指定代理地址，并跳过代理进行本地访问和访问 contoso.com。</span><span class="sxs-lookup"><span data-stu-id="b4ae1-139">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access and contoso.com.</span></span>  
   
 ```xml  
 <configuration>  
@@ -82,13 +82,13 @@ ms.locfileid: "32742713"
         bypassonlocal="true"  
       />  
       <bypasslist>  
-        <add address="[a-z]+\.contoso\.com" />  
+        <add address="[a-z]+\.contoso\.com$" />  
       </bypasslist>  
     </defaultProxy>  
   </system.net>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1128c-140">请参阅</span><span class="sxs-lookup"><span data-stu-id="1128c-140">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b4ae1-140">请参阅</span><span class="sxs-lookup"><span data-stu-id="b4ae1-140">See Also</span></span>  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [<span data-ttu-id="1128c-141">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="1128c-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="b4ae1-141">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="b4ae1-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
