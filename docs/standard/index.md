@@ -6,18 +6,20 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 01eb2e94b57da5e5dad0fa355246bcbcbc153dab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: cbe08d87e90d319c074e85d0157e62fe023cce8c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457006"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105167"
 ---
 # <a name="net-guide"></a>.NET 指南
 
 .NET 指南提供大量关于 .NET 的信息。  根据对 .NET 的熟悉程度，可浏览本指南的不同部分以及 .NET 文档的其他部分。
 
 ## <a name="new-to-net"></a>初次使用 .NET
+
+如果希望了解有关 .NET 的高级概述，请查看[什么是 .NET？](https://www.microsoft.com/net/learn/what-is-dotnet)。
 
 如果不熟悉 .NET，请查看[入门](get-started.md)文章。
 

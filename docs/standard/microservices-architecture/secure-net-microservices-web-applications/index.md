@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c2c7d692517c6a46225542936e05656db915bf0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591971"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106692"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>保护 .NET 微服务和 Web 应用程序
 
@@ -224,8 +224,8 @@ JWT 持有者身份验证中间件还可以支持更高级的方案，例如颁�
 
 ## <a name="additional-resources"></a>其他资源
 
--   **在应用程序之间共享 Cookie**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#在应用程序之间共享身份验证 Cookie*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+-   **在应用程序之间共享 cookie**
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
 -   **标识简介**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
@@ -250,4 +250,5 @@ JWT 持有者身份验证中间件还可以支持更高级的方案，例如颁�
 
 
 >[!div class="step-by-step"]
-[上一页] (../implement-resilient-applications/monitor-app-health.md) [下一页] (authorization-net-microservices-web-applications.md)
+[上一页](../implement-resilient-applications/monitor-app-health.md)
+[下一页](authorization-net-microservices-web-applications.md)
