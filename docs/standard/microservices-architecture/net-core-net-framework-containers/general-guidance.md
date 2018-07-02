@@ -4,49 +4,51 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd654c23cf8a8d0986575642ef25d6864251a4e4
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592569"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104074"
 ---
-# <a name="general-guidance"></a><span data-ttu-id="d04a6-103">通用指南</span><span class="sxs-lookup"><span data-stu-id="d04a6-103">General guidance</span></span>
+# <a name="general-guidance"></a><span data-ttu-id="25bea-103">通用指南</span><span class="sxs-lookup"><span data-stu-id="25bea-103">General guidance</span></span>
 
-<span data-ttu-id="d04a6-104">本部分提供有关何时选择 .NET Core 或 .NET Framework 的总结。</span><span class="sxs-lookup"><span data-stu-id="d04a6-104">This section provides a summary of when to choose .NET Core or .NET Framework.</span></span> <span data-ttu-id="d04a6-105">后面各部分将提供对上述选择的详细介绍。</span><span class="sxs-lookup"><span data-stu-id="d04a6-105">We provide more details about these choices in the sections that follow.</span></span>
+<span data-ttu-id="25bea-104">本部分提供有关何时选择 .NET Core 或 .NET Framework 的总结。</span><span class="sxs-lookup"><span data-stu-id="25bea-104">This section provides a summary of when to choose .NET Core or .NET Framework.</span></span> <span data-ttu-id="25bea-105">后面各部分将提供对上述选择的详细介绍。</span><span class="sxs-lookup"><span data-stu-id="25bea-105">We provide more details about these choices in the sections that follow.</span></span>
 
-<span data-ttu-id="d04a6-106">将 .NET Core 与 Linux 或 Windows 容器结合使用并用于容器化 Docker 服务器应用程序的适用情况：</span><span class="sxs-lookup"><span data-stu-id="d04a6-106">You should use .NET Core, with Linux or Windows Containers, for your containerized Docker server application when:</span></span>
+<span data-ttu-id="25bea-106">将 .NET Core 与 Linux 或 Windows 容器结合使用并用于容器化 Docker 服务器应用程序的适用情况：</span><span class="sxs-lookup"><span data-stu-id="25bea-106">You should use .NET Core, with Linux or Windows Containers, for your containerized Docker server application when:</span></span>
 
--   <span data-ttu-id="d04a6-107">用户有跨平台需求。</span><span class="sxs-lookup"><span data-stu-id="d04a6-107">You have cross-platform needs.</span></span> <span data-ttu-id="d04a6-108">例如，想同时使用 Linux 和 Windows 容器。</span><span class="sxs-lookup"><span data-stu-id="d04a6-108">For example, you want to use both Linux and Windows Containers.</span></span>
+-   <span data-ttu-id="25bea-107">用户有跨平台需求。</span><span class="sxs-lookup"><span data-stu-id="25bea-107">You have cross-platform needs.</span></span> <span data-ttu-id="25bea-108">例如，想同时使用 Linux 和 Windows 容器。</span><span class="sxs-lookup"><span data-stu-id="25bea-108">For example, you want to use both Linux and Windows Containers.</span></span>
 
--   <span data-ttu-id="d04a6-109">应用程序体系结构基于微服务。</span><span class="sxs-lookup"><span data-stu-id="d04a6-109">Your application architecture is based on microservices.</span></span>
+-   <span data-ttu-id="25bea-109">应用程序体系结构基于微服务。</span><span class="sxs-lookup"><span data-stu-id="25bea-109">Your application architecture is based on microservices.</span></span>
 
--   <span data-ttu-id="d04a6-110">需快速启动容器且每个容器内存占用较小，以实现更好的密度，或每个硬件单位中的容器较多，以降低成本。</span><span class="sxs-lookup"><span data-stu-id="d04a6-110">You need to start containers fast and want a small footprint per container to achieve better density or more containers per hardware unit in order to lower your costs.</span></span>
+-   <span data-ttu-id="25bea-110">需快速启动容器且每个容器内存占用较小，以实现更好的密度，或每个硬件单位中的容器较多，以降低成本。</span><span class="sxs-lookup"><span data-stu-id="25bea-110">You need to start containers fast and want a small footprint per container to achieve better density or more containers per hardware unit in order to lower your costs.</span></span>
 
-<span data-ttu-id="d04a6-111">简单地说，在创建新的容器化 .NET 应用程序时，应考虑将 .NET Core 作为默认选择。</span><span class="sxs-lookup"><span data-stu-id="d04a6-111">In short, when you create new containerized .NET applications, you should consider .NET Core as the default choice.</span></span> <span data-ttu-id="d04a6-112">它具有许多好处，并最匹配容器的基本原理和运行方式。</span><span class="sxs-lookup"><span data-stu-id="d04a6-112">It has many benefits and fits best with the containers philosophy and style of working.</span></span>
+<span data-ttu-id="25bea-111">简单地说，在创建新的容器化 .NET 应用程序时，应考虑将 .NET Core 作为默认选择。</span><span class="sxs-lookup"><span data-stu-id="25bea-111">In short, when you create new containerized .NET applications, you should consider .NET Core as the default choice.</span></span> <span data-ttu-id="25bea-112">它具有许多好处，并最匹配容器的基本原理和运行方式。</span><span class="sxs-lookup"><span data-stu-id="25bea-112">It has many benefits and fits best with the containers philosophy and style of working.</span></span>
 
-<span data-ttu-id="d04a6-113">使用 .NET Core 的另一个好处是可在同一台计算机中并行运行 .NET 版本的应用程序。</span><span class="sxs-lookup"><span data-stu-id="d04a6-113">An additional benefit of using .NET Core is that you can run side by side .NET versions for applications within the same machine.</span></span> <span data-ttu-id="d04a6-114">这一优势对于不使用容器的服务器或虚拟机而言更为重要，因为容器会隔离应用所需的 .NET 版本。</span><span class="sxs-lookup"><span data-stu-id="d04a6-114">This benefit is more important for servers or VMs that do not use containers, because containers isolate the versions of .NET that the app needs.</span></span> <span data-ttu-id="d04a6-115">（只要它们与基础操作系统兼容。）</span><span class="sxs-lookup"><span data-stu-id="d04a6-115">(As long as they are compatible with the underlying OS.)</span></span>
+<span data-ttu-id="25bea-113">使用 .NET Core 的另一个好处是可在同一台计算机中并行运行 .NET 版本的应用程序。</span><span class="sxs-lookup"><span data-stu-id="25bea-113">An additional benefit of using .NET Core is that you can run side by side .NET versions for applications within the same machine.</span></span> <span data-ttu-id="25bea-114">这一优势对于不使用容器的服务器或虚拟机而言更为重要，因为容器会隔离应用所需的 .NET 版本。</span><span class="sxs-lookup"><span data-stu-id="25bea-114">This benefit is more important for servers or VMs that do not use containers, because containers isolate the versions of .NET that the app needs.</span></span> <span data-ttu-id="25bea-115">（只要它们与基础操作系统兼容。）</span><span class="sxs-lookup"><span data-stu-id="25bea-115">(As long as they are compatible with the underlying OS.)</span></span>
 
-<span data-ttu-id="d04a6-116">将 .NET Framework 与 Windows 容器结合使用并用于容器化 Docker 服务器应用程序的适用情况：</span><span class="sxs-lookup"><span data-stu-id="d04a6-116">You should use .NET Framework, with Windows Containers, for your containerized Docker server application when:</span></span>
+<span data-ttu-id="25bea-116">将 .NET Framework 与 Windows 容器结合使用并用于容器化 Docker 服务器应用程序的适用情况：</span><span class="sxs-lookup"><span data-stu-id="25bea-116">You should use .NET Framework, with Windows Containers, for your containerized Docker server application when:</span></span>
 
--   <span data-ttu-id="d04a6-117">应用程序当前使用 .NET Framework 并在 Windows 上具有强依赖关系。</span><span class="sxs-lookup"><span data-stu-id="d04a6-117">Your application currently uses .NET Framework and has strong dependencies on Windows.</span></span>
+-   <span data-ttu-id="25bea-117">应用程序当前使用 .NET Framework 并在 Windows 上具有强依赖关系。</span><span class="sxs-lookup"><span data-stu-id="25bea-117">Your application currently uses .NET Framework and has strong dependencies on Windows.</span></span>
 
--   <span data-ttu-id="d04a6-118">需要使用 .NET Core 不支持的 Windows API。</span><span class="sxs-lookup"><span data-stu-id="d04a6-118">You need to use Windows APIs that are not supported by .NET Core.</span></span>
+-   <span data-ttu-id="25bea-118">需要使用 .NET Core 不支持的 Windows API。</span><span class="sxs-lookup"><span data-stu-id="25bea-118">You need to use Windows APIs that are not supported by .NET Core.</span></span>
 
--   <span data-ttu-id="d04a6-119">用户需要使用不可用于 .NET Core 的第三方 .NET 库或 NuGet 包。</span><span class="sxs-lookup"><span data-stu-id="d04a6-119">You need to use third-party .NET libraries or NuGet packages that are not available for .NET Core.</span></span>
+-   <span data-ttu-id="25bea-119">用户需要使用不可用于 .NET Core 的第三方 .NET 库或 NuGet 包。</span><span class="sxs-lookup"><span data-stu-id="25bea-119">You need to use third-party .NET libraries or NuGet packages that are not available for .NET Core.</span></span>
 
-<span data-ttu-id="d04a6-120">在 Docker 上使用.NET Framework 可通过最大限度地减少部署问题来提升部署体验。</span><span class="sxs-lookup"><span data-stu-id="d04a6-120">Using .NET Framework on Docker can improve your deployment experiences by minimizing deployment issues.</span></span> <span data-ttu-id="d04a6-121">此[*“提升和移动”方案*](https://aka.ms/liftandshiftwithcontainersebook)对于针对最初使用传统 .NET Framework（如 ASP.NET WebForms、MVC web 应用或 WCF (Windows Communication Foundation) 服务）开发的旧应用程序实施容器化而言很重要。</span><span class="sxs-lookup"><span data-stu-id="d04a6-121">This [*"lift and shift" scenario*](https://aka.ms/liftandshiftwithcontainersebook) is important for containerizing legacy applications that were originally developed with the traditional .NET Framework, like ASP.NET WebForms, MVC web apps or WCF (Windows Communication Foundation) services.</span></span>
+<span data-ttu-id="25bea-120">在 Docker 上使用.NET Framework 可通过最大限度地减少部署问题来提升部署体验。</span><span class="sxs-lookup"><span data-stu-id="25bea-120">Using .NET Framework on Docker can improve your deployment experiences by minimizing deployment issues.</span></span> <span data-ttu-id="25bea-121">此[*“提升和移动”方案*](https://aka.ms/liftandshiftwithcontainersebook)对于针对最初使用传统 .NET Framework（如 ASP.NET WebForms、MVC web 应用或 WCF (Windows Communication Foundation) 服务）开发的旧应用程序实施容器化而言很重要。</span><span class="sxs-lookup"><span data-stu-id="25bea-121">This [*"lift and shift" scenario*](https://aka.ms/liftandshiftwithcontainersebook) is important for containerizing legacy applications that were originally developed with the traditional .NET Framework, like ASP.NET WebForms, MVC web apps or WCF (Windows Communication Foundation) services.</span></span>
 
-### <a name="additional-resources"></a><span data-ttu-id="d04a6-122">其他资源</span><span class="sxs-lookup"><span data-stu-id="d04a6-122">Additional resources</span></span>
+### <a name="additional-resources"></a><span data-ttu-id="25bea-122">其他资源</span><span class="sxs-lookup"><span data-stu-id="25bea-122">Additional resources</span></span>
 
--   <span data-ttu-id="d04a6-123">**电子书：使用 Azure 和 Windows 容器更新现有 .NET Framework 应用程序**
-    [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)</span><span class="sxs-lookup"><span data-stu-id="d04a6-123">**e-book: Modernize existing .NET Framework applications with Azure and Windows Containers**
+-   <span data-ttu-id="25bea-123">**电子书：使用 Azure 和 Windows 容器更新现有 .NET Framework 应用程序**
+    [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)</span><span class="sxs-lookup"><span data-stu-id="25bea-123">**e-book: Modernize existing .NET Framework applications with Azure and Windows Containers**
 [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)</span></span>
 
--   <span data-ttu-id="d04a6-124">**示例应用：使用 Windows 容器更新旧的 ASP.NET web 应用**
-    [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)</span><span class="sxs-lookup"><span data-stu-id="d04a6-124">**Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers**
+-   <span data-ttu-id="25bea-124">**示例应用：使用 Windows 容器更新旧的 ASP.NET web 应用**
+    [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)</span><span class="sxs-lookup"><span data-stu-id="25bea-124">**Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers**
 [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)</span></span>
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="d04a6-125">[上一项] (index.md) [下一项] (net-core-container-scenarios.md)</span><span class="sxs-lookup"><span data-stu-id="d04a6-125">[Previous] (index.md) [Next] (net-core-container-scenarios.md)</span></span>
+<span data-ttu-id="25bea-125">[上一页](index.md)
+[下一页](net-core-container-scenarios.md)</span><span class="sxs-lookup"><span data-stu-id="25bea-125">[Previous](index.md)
+[Next](net-core-container-scenarios.md)</span></span>
