@@ -1,21 +1,22 @@
 ---
-title: 使用 Visual Studio 2017 调用 .NET Core 类库
+title: 在 Visual Studio 2017 中使用 .NET Standard 库
 description: 了解如何使用 Visual Studio 2017 调用类库中的成员。
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 0a7002f2a5dba5a5aad32a83a43a933cd2cc5722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e71001ee8595741119293304190fd9ef4251148
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827308"
 ---
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 调用 .NET Core 类库
+# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Standard 库
 
-如果已按照[使用 Visual Studio 2017 生成 C# .NET Core 类库](./library-with-visual-studio.md)或[使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库](vb-library-with-visual-studio.md)以及[使用 Visual Studio 2017 测试 .NET Core 类库](testing-library-with-visual-studio.md)中的步骤创建并测试类库，并且已生成库的发布版本，下一步就是使其可供调用方使用。 可以通过以下两种方式执行此操作：
+如果已按照[使用 Visual Studio 2017 生成 C# .NET Core 类库](./library-with-visual-studio.md)或[使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库](vb-library-with-visual-studio.md)以及[使用 Visual Studio 2017 测试 .NET Core 类库](testing-library-with-visual-studio.md)中的步骤创建并测试 .NET Standard 类库，并且已生成库的发布版本，下一步就是使其可供调用方使用。 可以通过以下两种方式执行此操作：
 
 * 如果库将供一个解决方案使用（例如，如果它是一个大型应用程序中的组件），可以将其以项目的形式添加到解决方案中。
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/04/2018
 
    [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
 
-   此代码使用 [Console.WindowHeight](xref:System.Console.WindowHeight) 属性来确定控制台窗口中的行数。 只要 [Console.CursorTop](xref:System.Console.CursorTop) 属性大于或等于控制台窗口中的行数，此代码就会清除控制台窗口，然后向用户显示消息。
+   该代码使用 `row` 变量来维护写入到控制台窗口的数据行数计数。 如果大于或等于 25，该代码将清除控制台窗口，并向用户显示一条消息。
 
    该程序会提示用户输入字符串。 它会指明字符串是否以大写字符开头。 如果用户没有输入字符串就按 Enter 键，应用程序会终止且控制台窗口会关闭。
 
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/04/2018
 
     [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   此代码使用 [Console.WindowHeight](xref:System.Console.WindowHeight) 属性来确定控制台窗口中的行数。 只要 [Console.CursorTop](xref:System.Console.CursorTop) 属性大于或等于控制台窗口中的行数，此代码就会清除控制台窗口，然后向用户显示消息。
+   该代码使用 `row` 变量来维护写入到控制台窗口的数据行数计数。 如果大于或等于 25，该代码将清除控制台窗口，并向用户显示一条消息。
 
    该程序会提示用户输入字符串。 它会指明字符串是否以大写字符开头。 如果用户没有输入字符串就按 Enter 键，应用程序会终止且控制台窗口会关闭。
 

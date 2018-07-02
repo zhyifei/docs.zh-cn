@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4f791ea339c9188ac8fada525611fc68821351d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f78df1a85bacae3019fe27857731174796d8a311
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743415"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270417"
 ---
 # <a name="assembly-security-considerations"></a>程序集安全注意事项
 <a name="top"></a>在生成程序集时，可指定该程序集运行所需的一组权限。 是否将特定的权限授予程序集是基于证据的。  
@@ -45,9 +45,13 @@ ms.locfileid: "32743415"
  在加载时，程序集的证据用作安全策略的输入。 安全策略是由企业和计算机的管理员以及用户策略设置建立的，它在执行时确定向所有托管代码授予的权限组。 可以为该程序集（如果该程序集具有签名工具生成的签名）的发行者建立安全策略，或者为该程序集的下载网站和区域（就 Internet Explorer 而言）建立安全策略，也可以为该程序集的强名称建立该策略。 例如，一台计算机的管理员可以建立这样一种安全策略：它允许从某一网站下载由指定软件公司签发用以访问计算机上的数据库的所有代码，但不授予对该计算机磁盘的写访问权。  
   
 ## <a name="strong-named-assemblies-and-signing-tools"></a>强名称程序集和签名工具  
+
+ > [!WARNING]
+ > 不要依赖于通过强名称实现安全性。 它们仅提供唯一的标识。
+
  可采用两种不同但相互补充的方式对程序集进行签名：使用强名称或使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)。 使用强名称对程序集进行签名将向包含程序集清单的文件添加公钥加密。 强名称签名帮助验证名称的唯一性，避免名称欺骗，并在解析引用时向调用方提供某标识。  
   
- 但是，任何信任级别都不会与一个强名称关联，这就使 [ SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)变得十分重要。 这两个签名工具要求发行者向第三方证书颁发机构证实其标识并获取证书。 然后此证书将嵌入到你的文件中，并且管理员能够使用该证书来决定是否相信这些代码的真实性。  
+ 任何信任级别都不会与一个强名称关联，这就使 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)变得十分重要。 这两个签名工具要求发行者向第三方证书颁发机构证实其标识并获取证书。 然后此证书将嵌入到你的文件中，并且管理员能够使用该证书来决定是否相信这些代码的真实性。  
   
  可将强名称和使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)创建的数字签名一起提供给程序集，或者可以单独使用其中之一。 这两个签名工具一次只能对一个文件进行签名，对于多文件程序集，您可以对包含程序集清单的文件进行签名。 强名称存储在包含程序集清单的文件中，但使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)创建的签名存储在该程序集清单所在的可迁移可执行 (PE) 文件中保留的槽中。 在已具有依赖于 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)生成的签名的信任层次结构时，或者当策略只使用密钥部分并且不检查信任链时，就可以使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)对程序集进行的签名（带或不带强名称）。  
   

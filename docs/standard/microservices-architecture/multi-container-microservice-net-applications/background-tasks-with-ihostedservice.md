@@ -4,11 +4,12 @@ description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 083d2a8c6a0d1649f8bfb2c21a92fb43381fe9ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb6d412ee91ab8d2c97a4917f23ee914e3fb9068
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805563"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 
@@ -99,7 +100,7 @@ namespace Microsoft.Extensions.Hosting
 
 可以从头开始创建自定义托管服务类并实现 `IHostedService`，因为在使用 .NET Core 2.0 时需执行这些操作。 
 
-但是，由于大多数后台任务在取消令牌管理和其他典型操作方面都有类似的需求，因此 .NET Core 2.1 将提供一个非常方便且可以从中进行派生的抽象基类，名为 BackgroundService。
+但是，由于大多数后台任务在取消令牌管理和其他典型操作方面都有类似的需求，因此 .NET Core 2.1 将提供一个非常方便且可以从中进行派生的抽象基类，名为“BackgroundService”。
 
 该类提供设置后台任务所需的主要工作。 请注意，此类将在 .NET Core 2.1 库中提供，因此无需编写。
 
@@ -193,7 +194,7 @@ public class GracePeriodManagerService : BackgroundService
             {
                 _logger.LogDebug($"GracePeriod task doing background work.");
 
-                // This eShopOnContainers method is quering a database table 
+                // This eShopOnContainers method is querying a database table 
                 // and publishing events into the Event Bus (RabbitMS / ServiceBus)
                 CheckConfirmedGracePeriodOrders();
 

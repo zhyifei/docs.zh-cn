@@ -3,11 +3,12 @@ title: 模式匹配 - C# 指南
 description: 了解 C# 中的模式匹配表达式
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 635ab45c89a38f3dedac2d60ea1e31ebf394c9b2
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231471"
 ---
 # <a name="pattern-matching"></a>模式匹配 #
 
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/07/2018
 模式匹配 `switch` 语句使用的语法对于使用过传统 C 样式 `switch` 语句的开发人员会比较熟悉。 会计算每个 `case`，并执行与输入变量匹配的条件下的代码。 执行代码不能从一个 case 表达式“贯穿”到下一个表达式；`case` 语句的语法要求每个 `case` 都以 `break`、`return` 或 `goto` 结尾。
 
 > [!NOTE]
-> 用于跳转到其他标签的 `goto` 语句仅对常量模式（即经典 switch 语句）有效。
+> 用于跳转到其他标签的 `goto` 语句仅对常量模式（经典 switch 语句）有效。
 
 有一些用于控制 `switch` 语句的重要新规则。 针对 `switch` 表达式中的变量类型的限制已移除。
 任何类型（如此示例中的 `object`）都可以使用。 Case 表达式不再限制为常量值。 移除该限制意味着对 `switch` 部分重新排序可能会更改程序的行为。

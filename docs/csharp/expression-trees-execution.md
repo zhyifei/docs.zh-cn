@@ -3,26 +3,28 @@ title: 执行表达式树
 description: 介绍通过将表达式树转换为可执行的中间语言 (IL) 指令，执行表达式树。
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 54706cd5d8ebe60bb893bc82f05aecddae370602
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218158"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207380"
 ---
 # <a name="executing-expression-trees"></a>执行表达式树
 
 [上一部分 -- 支持表达式树的框架类型](expression-classes.md)
 
 *表达式树*是表示一些代码的数据结构。
-它不是已编译且可执行的代码。 如果想要执行由表达式树表示的 .NET 代码，则必须将其转换为可执行的 IL 指令。 
+它不是已编译且可执行的代码。 如果想要执行由表达式树表示的 .NET 代码，则必须将其转换为可执行的 IL 指令。
+
 ## <a name="lambda-expressions-to-functions"></a>Lambda 表达式到函数
-可以将任何 LambdaExpression 或派生自 LambdaExpression 的任何类型转换为可执行的 IL。 其他表达式类型不能直接转换为代码。 此限制在实践中影响不大。 Lambda 表达式是你可通过转换为可执行的中间语言 (IL) 来执行的唯一表达式类型。 （思考直接执行 `ConstantExpression` 意味着什么。 这是否意味着任何用处？）`LamdbaExpression` 或派生自 `LambdaExpression` 的类型的任何表达式树均可转换为 IL。
+
+可以将任何 LambdaExpression 或派生自 LambdaExpression 的任何类型转换为可执行的 IL。 其他表达式类型不能直接转换为代码。 此限制在实践中影响不大。 Lambda 表达式是你可通过转换为可执行的中间语言 (IL) 来执行的唯一表达式类型。 （思考直接执行 `ConstantExpression` 意味着什么。 这是否意味着任何用处？）`LambdaExpression` 或派生自 `LambdaExpression` 的类型的任何表达式树均可转换为 IL。
 表达式类型 `Expression<TDelegate>` 是 .NET Core 库中的唯一具体示例。 它用于表示映射到任何委托类型的表达式。 由于此类型映射到一个委托类型，因此 .NET 可以检查表达式，并为匹配 lambda 表达式签名的适当委托生成 IL。 
 
-在大多数情况下，这将在表达式和其对应的委托之间创建简单映射。 例如，由 `Expression<Func<int>>` 表示的表达式树将被转换为 `Func<int>` 类型的委托。 对于具有任何返回类型和参数列表的 lambda 表达式，存在这样的委托类型：该类型是由该 lamdba 表达式表示的可执行代码的目标类型。
+在大多数情况下，这将在表达式和其对应的委托之间创建简单映射。 例如，由 `Expression<Func<int>>` 表示的表达式树将被转换为 `Func<int>` 类型的委托。 对于具有任何返回类型和参数列表的 Lambda 表达式，存在这样的委托类型：该类型是由该 Lambda 表达式表示的可执行代码的目标类型。
 
-`LamdbaExpression` 类型包含用于将表达式树转换为可执行代码的 `Compile` 和 `CompileToMethod` 成员。 `Compile` 方法创建委托。 `CompileToMethod` 方法通过表示表达式树的已编译输出的 IL 更新 `MethodBuilder` 对象。 请注意，`CompileToMethod` 仅在完整的桌面框架上可用，不能用于 .NET Core 框架。
+`LambdaExpression` 类型包含用于将表达式树转换为可执行代码的 `Compile` 和 `CompileToMethod` 成员。 `Compile` 方法创建委托。 `CompileToMethod` 方法通过表示表达式树的已编译输出的 IL 更新 `MethodBuilder` 对象。 请注意，`CompileToMethod` 仅在完整的桌面框架中可用，不能用于 .NET Core。
 
 还可以选择性地提供 `DebugInfoGenerator`，它将接收生成的委托对象的符号调试信息。 这让你可以将表达式树转换为委托对象，并拥有生成的委托的完整调试信息。
 
@@ -35,11 +37,11 @@ var answer = func(); // Invoke Delegate
 Console.WriteLine(answer);
 ```
 
-请注意，该委托类型基于表达式类型。 如果想要以强类型的方式使用委托对象，则必须知道返回类型和参数列表。 `LambdaExpression.Compile()` 方法返回 `Delegate` 类型。 必须将其转换为正确的委托类型，以便使任何编译时工具检查返回类型的参数列表。
+请注意，该委托类型基于表达式类型。 如果想要以强类型的方式使用委托对象，则必须知道返回类型和参数列表。 `LambdaExpression.Compile()` 方法返回 `Delegate` 类型。 必须将其转换为正确的委托类型，以便使任何编译时工具检查参数列表或返回类型。
 
 ## <a name="execution-and-lifetimes"></a>执行和生存期
 
-通过调用在调用 `LamdbaExpression.Compile()` 时创建的委托来执行代码。 可以在上面进行查看，其中 `add.Compile()` 返回了一个委托。 通过调用 `func()` 调用该委托将执行代码。
+通过调用在调用 `LambdaExpression.Compile()` 时创建的委托来执行代码。 可以在上面进行查看，其中 `add.Compile()` 返回了一个委托。 通过调用 `func()` 调用该委托将执行代码。
 
 该委托表示表达式树中的代码。 可以保留该委托的句柄并在稍后调用它。 不需要在每次想要执行表达式树所表示的代码时编译表达式树。 （请记住，表达式树是不可变的，且在之后编译同一表达式树将创建执行相同代码的委托。）
 

@@ -3,12 +3,12 @@ title: 生成表达式树
 description: 了解生成表达式树的方法。
 ms.date: 06/20/2016
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 52e03bd1ea2635d75da6d70af6918b33b64622b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216309"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207184"
 ---
 # <a name="building-expression-trees"></a>生成表达式树
 
@@ -43,10 +43,10 @@ var addition = Expression.Add(one, two);
 一旦获得了加法表达式，就可以创建 lambda 表达式：
 
 ```csharp
-var lamdba = Expression.Lambda(addition);
+var lambda = Expression.Lambda(addition);
 ```
 
-这是一个非常简单的 LambdaExpression，因为它不包含任何参数。
+这是一个非常简单的 Lambda 表达式，因为它不包含任何参数。
 在本节的后续部分，你将了解如何将实参映射到形参并生成更复杂的表达式。
 
 对于此类简单的表达式，可以将所有调用合并到单个语句中：

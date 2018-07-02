@@ -1,33 +1,34 @@
 ---
 title: Docker 中托管的微服务 - C#
 description: 了解如何创建在 Docker 容器中运行的 ASP.NET Core 服务
-ms.date: 02/03/2017
+ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 7428051c1d9a29ba98ca1f28288b3c50ea36ae1a
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: b043b0109bcf8a67867d2c73a5ab22e43a4963cf
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207873"
 ---
 # <a name="microservices-hosted-in-docker"></a>Docker 中托管的微服务
 
 此教程将详细介绍在 Docker 容器中生成和部署 ASP.NET Core 微服务时必须完成的任务。 在此教程中，你将了解：
 
-* 如何使用 Yeoman 生成 ASP.NET Core 应用程序
-* 如何创建 Docker 开发环境
+* 如何生成 ASP.NET Core 应用程序。
+* 如何创建 Docker 开发环境。
 * 如何根据现有映像生成 Docker 映像。
 * 如何将服务部署到 Docker 容器中。
 
 与此同时，你还将了解下面这些 C# 语言功能：
 
 * 如何将 C# 对象转换成 JSON 有效负载。
-* 如何生成不可变的数据传输对象
-* 如何处理传入的 HTTP 请求并生成 HTTP 响应
-* 如何使用可以为 null 的值类型
+* 如何生成不可变的数据传输对象。
+* 如何处理传入的 HTTP 请求并生成 HTTP 响应。
+* 如何使用可以为 null 的值类型。
 
 你可以[查看或下载本主题的示例应用](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-### <a name="why-docker"></a>为什么要使用 Docker？
+## <a name="why-docker"></a>为什么要使用 Docker？
 
 使用 Docker，可以轻松地创建标准计算机映像，从而在数据中心或公有云中托管服务。 使用 Docker，可以配置映像，并根据需要复制映像来扩展应用程序安装。
 
@@ -35,72 +36,57 @@ ms.lasthandoff: 05/25/2018
 附加 Docker 安装任务适用于 ASP.NET Core 应用程序。 
 
 ## <a name="prerequisites"></a>系统必备
-必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。
-可以在 Windows、Ubuntu Linux、macOS 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
+
+必须将计算机设置为运行 .NET Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。
+可以在 Windows、Linux、macOS 或 Docker 容器中运行此应用程序。
+必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 
 还必须安装 Docker 引擎。 请参阅 [Docker 安装页](http://www.docker.com/products/docker)，了解适用于自己的平台的说明。
 可以在许多 Linux 发行版本、macOS 或 Windows 中安装 Docker。 上面引用的页面分部分提供了各个可安装的版本。
 
-大多数组件的安装是通过程序包管理器完成的。 如果已安装 node.js 的程序包管理器 `npm`，可跳过这一步。 否则，请从 [nodejs.org](https://nodejs.org) 下载并安装最新的 NodeJs，即会安装 npm 程序包管理器。 
-
-此时，需要安装许多支持 ASP.NET Core 开发的命令行工具。 命令行模板使用 Yeoman、Bower、Grunt、和 Gulp。 如果已全部安装，可继续执行其他操作；否则，请在常用的命令行管理程序中键入以下命令：
-
-`npm install -g yo bower grunt-cli gulp`
-
-`-g` 选项指明此为全局安装，这些工具可在整个系统范围内使用。 （本地安装将包限定为只能供一个项目使用。） 安装这些核心工具后，必须安装 Yeoman ASP.NET 模板生成器：
-
-`npm install -g generator-aspnet`
-
 ## <a name="create-the-application"></a>创建应用程序
 
-至此，你已安装所有工具，是时候新建 ASP.NET Core 应用程序了。 若要使用命令行生成器，请在常用的命令行管理程序中执行以下 Yeoman 命令：
+至此，你已安装所有工具，是时候新建 ASP.NET Core 应用程序了。 为此，请创建一个名为“WeatherMicroservice”的新目录，并在喜欢的 shell 中的该目录中执行以下命令：
 
-`yo aspnet`
+```console
+dotnet new web
+```
 
-此命令会提示你选择要创建的应用程序类型。 对于此微服务，需要的是最简单最轻量级的 Web 应用程序，因此选择“空 Web 应用程序”。 此模板会提示你选择名称。 选择“WeatherMicroservice”。 
+`dotnet` 命令可运行 .NET 开发所需的工具。 每个谓词执行一个不同的命令。
 
-此模板将为你创建以下八个文件：
+`dotnet new` 命令用于创建 .Net Core 项目。
 
-* 为 ASP.NET Core 应用程序定制的 .gitignore 文件。
+对于此微服务，我们需要尽可能简单、轻型的 Web 应用程序，因此我们使用了“ASP.NET Core 空”模板，并指定其短名称为 `web`。
+
+此模板将为你创建以下四个文件：
+
 * Startup.cs 文件。 其中包含应用程序的基本内容。
 * Program.cs 文件。 其中包含应用程序的入口点。
 * WeatherMicroservice.csproj 文件。 这是应用程序的生成文件。
-* Dockerfile。 此脚本将创建应用程序的 Docker 映像。
-* README.md 文件。 其中包含指向其他 ASP.NET Core 资源的链接。
-* web.config 文件。 其中包含基本配置信息。
-* runtimeconfig.template.json 文件。 其中包含 IDE 使用的调试设置。
+* Properties/launchSettings.json 文件。 其中包含 IDE 使用的调试设置。
 
-现在可以运行模板生成的应用程序了。 为此，可通过命令行使用一系列工具。 `dotnet` 命令可运行 .NET 开发所需的工具。 每个谓词执行一个不同的命令
-
-第一步是还原所有依赖项：
-
-```console
-dotnet restore
-```
-
-dotnet restore 使用 NuGet 程序包管理器将所有必需包安装到应用程序目录中。 还将生成 project.json.lock 文件。 此文件包含引用的各个包的相关信息。 还原所有依赖项后，生成应用程序：
-
-```console
-dotnet build
-```
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-生成应用程序后，使用命令行运行程序：
+现在可以运行模板生成的应用程序了：
 
 ```console
 dotnet run
 ```
 
+此命令将首先还原生成应用程序所需的依赖项，然后生成应用程序。
+
 默认配置侦听的是 `http://localhost:5000`。 可以打开浏览器并转到相应页面，看到的是“Hello World!” 消息。
+
+完成后，可以按 <kbd>Ctrl</kbd>+<kbd>C</kbd> 关闭应用程序。
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>ASP.NET Core 应用程序剖析
 
-至此，已生成应用程序，让我们来看看此应用程序功能是如何实现的。 此时，生成的文件中有两个需要特别关注：project.json 和 Startup.cs。 
+至此，已生成应用程序，让我们来看看此应用程序功能是如何实现的。 此时，生成的文件中有两个需要特别关注：WeatherMicroservice.csproj 和 Startup.cs。 
 
-Project.json 包含项目相关信息。 经常要用到的两个节点是“依赖项”和“框架”。 “依赖项”节点列出了此应用程序需要的所有包。
-此时，这是一个小型节点，只需要列出运行 Web 服务器的包。
+.csproj 文件包含项目相关信息。
+最有趣的两个节点是 `<TargetFramework>` 和 `<PackageReference>`。
 
-“框架”节点指定了将运行此应用程序的 .NET Framework 的版本和配置。
+`<TargetFramework>` 节点指定将运行此应用程序的 .NET 版本。
+
+使用每个 `<PackageReference>` 节点指定此应用程序所需的包。
 
 此应用程序是在 Startup.cs 中实现。 此文件包含启动类。
 
@@ -120,11 +106,13 @@ ASP.NET Core 基础结构调用两种方法来配置并运行此应用程序。 
 
 下面各部分将引导你逐一完成这些步骤。
 
-### <a name="parsing-the-query-string"></a>分析查询字符串。
+### <a name="parsing-the-query-string"></a>分析查询字符串
 
 首先要分析查询字符串。 此服务接受在以下形式的查询字符串中使用“lat”和“long”自变量：
 
-`http://localhost:5000/?lat=-35.55&long=-12.35`  
+```
+http://localhost:5000/?lat=-35.55&long=-12.35
+```
 
 只需更改定义为启动类中 `app.Run` 的自变量的 lambda 表达式。
 
@@ -132,7 +120,7 @@ lambda 表达式中的自变量是请求的 `HttpContext`。 其属性之一是 
 
 [!code-csharp[ReadQueryString](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ReadQueryString "read variables from the query string")]
 
-查询字典值属于 `StringValue` 类型。 此类型可以包含一系列字符串。 对于天气服务，每个值都是一个字符串。 正因如此，上面的代码调用 `FirstOrDefault()`。 
+`Query` 字典值属于 `StringValue` 类型。 此类型可以包含一系列字符串。 对于天气服务，每个值都是一个字符串。 正因如此，上面的代码调用 `FirstOrDefault()`。 
 
 接下来，需要将字符串转换成双精度类型值。 用于将字符串转换成双精度类型值的方法是 `double.TryParse()`：
 
@@ -148,9 +136,13 @@ bool TryParse(string s, out double result);
 
 [!code-csharp[TryParseExtension](../../../samples/csharp/getting-started/WeatherMicroservice/Extensions.cs#TryParseExtension "try parse to a nullable")]
 
-`default(double?)` 表达式返回 `double?` 类型的默认值。 默认值是 null（或缺少的）值。
+调用扩展方法前，将当前区域性更改为固定区域性：
 
-可以使用此扩展方法将查询字符串自变量转换成双精度类型：
+[!code-csharp[SetCulture](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#SetCulture "set current culture to invariant")]
+
+这可以确保应用程序在任意服务器上用相同的方式解析数字，而不管其默认区域性。
+
+现在，可以使用此扩展方法将查询字符串自变量转换成双精度类型：
 
 [!code-csharp[UseTryParse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#UseTryParse "Use the try parse extension method")]
 
@@ -167,7 +159,7 @@ bool TryParse(string s, out double result);
 ```csharp
 public class WeatherReport
 {
-    private static readonly string[] PossibleConditions = new string[]
+    private static readonly string[] PossibleConditions =
     {
         "Sunny",
         "Mostly Sunny",
@@ -177,26 +169,35 @@ public class WeatherReport
         "Rain"
     };
 
-    public int HiTemperature { get; }
-    public int LoTemperature { get; }
-    public int AverageWindSpeed { get; }
-    public string Conditions { get; }
+    public int HighTemperatureFahrenheit { get; }
+    public int LowTemperatureFahrenheit { get; }
+    public int AverageWindSpeedMph { get; }
+    public string Condition { get; }
 }
 ```
 
-接下来，生成用于随机设置这些值的构造函数。 此构造函数将经纬度值用作随机数生成器的源。 也就是说，同一地理位置的天气预报也是相同的。 如果更改经纬度自变量，将会生成不同的天气预报（因为源不同）。
+接下来，生成用于随机设置这些值的构造函数。 此构造函数将经纬度值用作 `Random` 数生成器的源。 也就是说，同一地理位置的天气预报也是相同的。 如果更改经纬度自变量，将会生成不同的天气预报（因为源不同）。
 
 [!code-csharp[WeatherReportConstructor](../../../samples/csharp/getting-started/WeatherMicroservice/WeatherReport.cs#WeatherReportConstructor "Weather Report Constructor")]
 
 现在可以在响应方法中生成 5 天的天气预报：
 
-[!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "Generate a random weather report")]
+```csharp
+if (latitude.HasValue && longitude.HasValue)
+{
+    var forecast = new List<WeatherReport>();
+    for (var days = 1; days <= 5; days++)
+    {
+        forecast.Add(new WeatherReport(latitude.Value, longitude.Value, days));
+    }
+}
+```
 
 ### <a name="build-the-json-response"></a>生成 JSON 响应
 
-服务器上的最后一项代码任务是，将 WeatherReport 数组转换成 JSON 数据包，然后将其发送回客户端。 首先，我们要创建 JSON 数据包。 将把 NewtonSoft JSON 序列化程序添加到依赖项列表中。 为此，请使用 `dotnet` CLI：
+服务器的最终代码任务是将 `WeatherReport` 列表转换为 JSON 文档并将其发送回客户端。 首先，我们要创建 JSON 文档。 将把 Newtonsoft JSON 序列化程序添加到依赖项列表中。 可以使用以下 `dotnet` 命令执行此操作：
 
-```
+```console
 dotnet add package Newtonsoft.Json
 ```
 
@@ -204,7 +205,7 @@ dotnet add package Newtonsoft.Json
 
 [!code-csharp[ConvertToJson](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ConvertToJSON "Convert objects to JSON")]
 
-上面的代码将 forecast 对象（`WeatherForecast` 对象列表）转换成 JSON 数据包。 构造响应数据包后，将内容类型设置为 `application/json`，并编写字符串。
+上面的代码将 forecast 对象（`WeatherForecast` 对象列表）转换成 JSON 文档。 构造响应文档后，将内容类型设置为 `application/json`，并编写字符串。
 
 应用程序现在可以运行并返回随机天气预报。
 
@@ -214,51 +215,76 @@ dotnet add package Newtonsoft.Json
 
 ***Docker 映像***是定义应用程序运行环境的文件。
 
-***Docker 容器***表示 Docker 映像的正在运行实例。
+***Docker 容器***表示正在运行的 Docker 映像实例。
 
 通过类推，可以将 *Docker 映像*视为*类*，将 *Docker 容器*视为对象或此类的实例。  
 
-ASP.NET 模板创建的 Dockerfile 可供我们自行使用。 我们先来介绍一下此文件的内容。
-
-第一行指定的是源映像：
+以下 Dockerfile 可供我们自行使用：
 
 ```
-FROM microsoft/dotnet:1.1-sdk-msbuild
+FROM microsoft/dotnet:2.1-sdk AS build
+WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
+
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "WeatherMicroservice.dll"]
+```
+
+我们先来介绍一下此文件的内容。
+
+第一行指定用于生成应用程序的源映像：
+
+```
+FROM microsoft/dotnet:2.1-sdk AS build
 ```
 
 通过 Docker，可以根据源模板配置计算机映像。 也就是说，开始时并不需要提供所有计算机参数，只需提供全部更改。 此处所说的更改包括我们的应用程序在内。
 
-在这第一个示例中，我们将使用 .NET 映像的 `1.1-sdk-msbuild` 版本。 这是创建有效 Docker 环境的最简单方式。 此映像包括 .NET Core 运行时和 .NET SDK。 这样更便于着手生成映像，但创建的映像会比较大。
+在此示例中，我们将使用 `dotnet` 映像的 `2.1-sdk` 版本。 这是创建有效 Docker 环境的最简单方式。 此映像包括 .NET Core 运行时和 .NET Core SDK。
+这使得入门和生成更加轻松，但是创建的映像会更大，所以我们将使用此映像生成应用程序，使用另一个映像运行应用程序。
 
-接下来的五行代码用于设置并生成应用程序：
+下面几行代码用于设置并生成应用程序：
 
 ```
 WORKDIR /app
 
-# copy csproj and restore as distinct layers
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
 
-COPY WeatherMicroService.csproj .
-RUN dotnet restore 
-
-# copy and build everything else
-
-COPY . .
-
-# RUN dotnet restore
+# Copy everything else and build
+COPY . ./
 RUN dotnet publish -c Release -o out
 ```
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+这会将当前目录中的项目文件复制到 Docker VM 中，并还原所有包。 使用 .NET CLI 意味着 Docker 映像必须包含 .NET Core SDK。 完成上述操作之后，应用程序的其余部分会得到复制，然后 `dotnet
+publish` 命令会生成并打包应用程序。
 
-这会将当前目录中的项目文件复制到 Docker VM 中，并还原所有包。 使用 .NET CLI 意味着 Docker 映像必须包含 .NET Core SDK。 完成上述操作之后，应用程序的其余部分会得到复制，然后 .NET 发布命令会生成并打包应用程序。
-
-此文件的最后一行代码用于运行应用程序：
+最后，我们创建运行应用程序的第二个 Docker 映像：
 
 ```
-ENTRYPOINT ["dotnet", "out/WeatherMicroService.dll", "--server.urls", "http://0.0.0.0:5000"]
+# Build runtime image
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "WeatherMicroservice.dll"]
 ```
 
-Dockerfile 最后一行代码中 `dotnet` 的 `--server.urls` 自变量引用此配置端口。 `ENTRYPOINT` 命令用于指示 Docker 哪些命令和命令行选项启动了服务。 
+此映像使用 `dotnet` 映像的 `2.1-aspnetcore-runtime` 版本，其中包含运行 ASP.NET Core 应用程序所需的全部内容，但是不包括 .NET Core SDK。 这意味着，此映像不能用于生成 .NET Core 应用程序，但它可以使最终映像变得更小。
+
+为了实现此目的，我们将生成的应用程序从第一个映像复制到第二个。
+
+`ENTRYPOINT` 命令通知 Docker 启动服务的命令。
 
 ## <a name="building-and-running-the-image-in-a-container"></a>在容器中生成并运行映像
 
@@ -281,10 +307,10 @@ docker build -t weather-microservice .
 运行以下命令，启动容器和服务：
 
 ```console
-docker run -d -p 80:5000 --name hello-docker weather-microservice
+docker run -d -p 80:80 --name hello-docker weather-microservice
 ```
 
-`-d` 选项表示运行从当前终端拆离出来的容器。 也就是说，终端中不会显示命令输出。 `-p` 选项指示服务和主机之间的端口映射。 即指应将端口 80 上的所有传入请求都转发到容器上的端口 5000。 在上面的 Dockerfile 中指定的命令行自变量中，使用 5000 匹配服务要侦听的端口。 `--name` 自变量用于命名正在运行的容器。 此名称可方便与容器结合使用。 
+`-d` 选项表示运行从当前终端拆离出来的容器。 也就是说，终端中不会显示命令输出。 `-p` 选项指示服务和主机之间的端口映射。 即指应将端口 80 上的所有传入请求都转发到容器上的端口 80。 使用 80 与服务正在侦听的端口相匹配，这是生产应用程序的默认端口。 `--name` 自变量用于命名正在运行的容器。 此名称可方便与容器结合使用。
 
 可以运行以下命令来确定映像能否正常运行：
 
@@ -292,7 +318,7 @@ docker run -d -p 80:5000 --name hello-docker weather-microservice
 docker ps
 ```
 
-如果容器能正常运行，那么正在运行的进程中就会有一行列出它来 （可能是唯一一行）。
+如果容器能正常运行，那么正在运行的进程中就会有一行列出它来 （可能是唯一的。）
 
 可以打开浏览器并转到 localhost，然后指定经纬度，从而测试服务：
 
@@ -308,14 +334,14 @@ http://localhost/?lat=35.5&long=40.75
 docker attach --sig-proxy=false hello-docker
 ```
 
-`--sig-proxy=false` 自变量表示 `Ctrl-C` 命令未发送到容器进程，而是停止运行 `docker attach` 命令。 最后的自变量是为 `docker run` 命令中的容器命名的名称。 
+`--sig-proxy=false` 自变量表示 <kbd>Ctrl</kbd>+<kbd>C</kbd> 命令未发送到容器进程，而是停止运行 `docker attach` 命令。 最后的自变量是为 `docker run` 命令中的容器命名的名称。 
 
 > [!NOTE]
-> 还可以使用 Docker 分配的容器 ID 来引用任何容器。 如果没有在 `docker run` 中命名容器，必须使用容器 ID。
+> 还可以使用 Docker 分配的容器 ID 来引用任何容器。 如果没有在 `docker run` 中指定容器名称，则必须使用容器 ID。
 
 打开浏览器并转到服务。 将可以在命令窗口中查看附加的正在运行的容器生成的诊断消息。
 
-按 `Ctrl-C` 可停止附加进程。
+按 <kbd>Ctrl</kbd>+<kbd>C</kbd> 可停止附加进程。
 
 使用完后，可以停止运行容器：
 

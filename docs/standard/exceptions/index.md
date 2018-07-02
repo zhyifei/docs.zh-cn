@@ -1,24 +1,24 @@
 ---
-title: 处理和引发异常
-ms.date: 03/30/2017
+title: 在 .NET 中处理和引发异常
+ms.date: 06/19/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- exceptions [.NET Framework], handling
+- exceptions [.NET], handling
 - runtime, exceptions
 - filtering exceptions
-- errors [.NET Framework], exceptions
-- exceptions [.NET Framework], throwing
-- exceptions [.NET Framework]
+- errors [.NET], exceptions
+- exceptions [.NET], throwing
+- exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b71ffd9bfcfcb048f148ac1a3a418c03b9834ea2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a278940528966e32646a3551b4c133223de9746e
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575448"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298339"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中处理和引发异常
 
@@ -42,32 +42,31 @@ ms.locfileid: "33575448"
 
 - 可向应用程序添加异常处理代码以提高程序的可靠性。
 
-异常相较于其他错误通知方法（如返回代码）具有多种优势。 故障不会被忽略掉，因为如果引发了异常且未得到解决，运行时会终止应用程序。 因为代码未能检查出是否存在故障返回代码，所以无效值不会继续在系统中传播。 
+异常相较于其他错误通知方法（如返回代码）具有多种优势。 故障不会被忽略掉，因为如果引发了异常且未得到解决，运行时会终止应用程序。 因为代码未能检查出是否存在故障返回代码，所以无效值不会继续在系统中传播。
 
 ## <a name="common-exceptions"></a>常见异常
 
 下表列出了一些常见的异常，以及会引发这些异常的原因的示例。
 
-| 异常类型 | 基类型 | 描述 | 示例 |
-| -------------- | --------- | ----------- | ------- |
-| <xref:System.Exception> | <xref:System.Object> | 所有异常的基类。 | 无（使用此异常的派生类）。 |
-| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | 仅当错误地对数组进行索引时，才由运行时引发。 | 在数组的有效范围外对数组进行索引：`arr[arr.Length+1]` |
-| <xref:System.NullReferenceException> | <xref:System.Exception> | 仅当引用 null 对象时，才由运行时引发。 | `object o = null; o.ToString();` |
-| <xref:System.InvalidOperationException> | <xref:System.Exception> | 当处于无效状态时，由方法引发。 | 从基础集合删除项后调用 `Enumerator.GetNext()`。 |
-| <xref:System.ArgumentException> | <xref:System.Exception> | 所有自变量异常的基类。 | 无（使用此异常的派生类）。 |
-| <xref:System.ArgumentNullException> | <xref:System.Exception> | 由不允许参数为 null 的方法引发。 | `String s = null; "Calculate".IndexOf (s);` |
-| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | 由验证自变量是否位于给定范围内的方法引发。 | `String s = "string"; s.Substring(s.Length+1);` |
+| 异常类型 | 描述 | 示例 |
+| -------------- | ----------- | ------- |
+| <xref:System.Exception> | 所有异常的基类。 | 无（使用此异常的派生类）。 |
+| <xref:System.IndexOutOfRangeException> | 仅当错误地对数组进行索引时，才由运行时引发。 | 在数组的有效范围外对数组进行索引： <br /> `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | 仅当引用 null 对象时，才由运行时引发。 | `object o = null;` <br /> `o.ToString();` |
+| <xref:System.InvalidOperationException> | 当处于无效状态时，由方法引发。 | 从基础集合删除项后调用 `Enumerator.MoveNext()`。 |
+| <xref:System.ArgumentException> | 所有自变量异常的基类。 | 无（使用此异常的派生类）。 |
+| <xref:System.ArgumentNullException> | 由不允许参数为 null 的方法引发。 | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
+| <xref:System.ArgumentOutOfRangeException> | 由验证自变量是否位于给定范围内的方法引发。 | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>请参阅
 
-* [异常类和属性](exception-class-and-properties.md)
-* [如何：使用 Try-Catch 块捕捉异常](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-* [如何：在 Catch 块中使用特定异常](how-to-use-specific-exceptions-in-a-catch-block.md)
-* [如何显式引发异常](how-to-explicitly-throw-exceptions.md)
-* [如何：创建用户定义的异常](how-to-create-user-defined-exceptions.md)
-* [使用用户筛选的异常处理程序](using-user-filtered-exception-handlers.md)
-* [如何：使用 Finally 块](how-to-use-finally-blocks.md)
-* [处理 COM 互操作异常](handling-com-interop-exceptions.md)
-* [与异常有关的最佳做法](best-practices-for-exceptions.md)
-
-若要了解有关 .NET 中异常的工作方式的详细信息，请参阅[运行时中每个开发人员都需要了解的有关异常的事项](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)。
+[异常类和属性](exception-class-and-properties.md)  
+[如何：使用 Try-Catch 块捕捉异常](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
+[如何：在 Catch 块中使用特定异常](how-to-use-specific-exceptions-in-a-catch-block.md)  
+[如何显式引发异常](how-to-explicitly-throw-exceptions.md)  
+[如何：创建用户定义的异常](how-to-create-user-defined-exceptions.md)  
+[使用用户筛选的异常处理程序](using-user-filtered-exception-handlers.md)  
+[如何：使用 Finally 块](how-to-use-finally-blocks.md)  
+[处理 COM 互操作异常](handling-com-interop-exceptions.md)  
+[与异常有关的最佳做法](best-practices-for-exceptions.md)  
+[每个开发人员都需要了解的有关运行时异常方面的内容](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)。

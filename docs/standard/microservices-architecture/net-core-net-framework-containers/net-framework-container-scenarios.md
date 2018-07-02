@@ -3,12 +3,13 @@ title: 何时为 Docker 容器选择 .NET Framework
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 何时为 Docker 容器选择 .NET Framework
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/07/2018
+ms.openlocfilehash: 06b67f702b38202f598745826fa48f1ca97b7282
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251030"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>何时为 Docker 容器选择 .NET Framework
 
@@ -22,15 +23,15 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>使用不可用于 .NET Core 的第三方 .NET 库或 NuGet 包
 
-第三方库正在迅速采用 [.NET Standard](../../net-standard.md)，这样可跨各种 .NET 版本（包括 .NET Core）共享代码。 在 .NET Standard 库 2.0 及更高版本中，跨不同框架的 API 表面兼容性变得更加庞大；在 .NET Core 2.0 中，应用程序还可以直接引用现有的 .NET Framework 库（请参阅[兼容性填充程序](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)）。
+第三方库正在迅速采用 [.NET Standard](../../net-standard.md)，这样可跨各种 .NET 版本（包括 .NET Core）共享代码。 在 .NET Standard 库 2.0 及更高版本中，跨不同框架的 API 表面兼容性变得更加庞大；在 .NET Core 2.x 中，应用程序还可以直接引用现有的 .NET Framework 库（请参阅[兼容性填充程序](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)）。
 
 但即使 .NET Standard 2.0 和 .NET Core 2.0 取得了如此重大的进展，也可能出现某些 NuGet 包需要在 Windows 上运行并且可能不支持 .NET Core 的情况。 如果这些软件包对于应用程序至关重要，那么将需要在 Windows 容器上使用 .NET Framework。
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>使用不可用于 .NET Core 的 .NET 技术 
 
-当前版本的 .NET Core（撰写本文时为 2.0 版）中没有提供某些 .NET Framework 技术。 虽然某些技术将在更高版本的 .NET Core (.NET Core 2.x) 中提供，但其他技术不适用于 .NET Core 面向的新应用程序模式，因此可能永远不可用。
+当前版本的 .NET Core（撰写本文时为 2.1 版）中没有提供某些 .NET Framework 技术。 虽然某些技术将在更高版本的 .NET Core (.NET Core 2.x) 中提供，但其他技术不适用于 .NET Core 面向的新应用程序模式，因此可能永远不可用。
 
-以下列表展示了在 .NET Core 2.0 中不可用的大多数技术：
+以下列表展示了在 .NET Core 2.1 中不可用的大多数技术：
 
 -   ASP.NET Web 窗体。 该技术仅在 .NET Framework 上可用。 目前没有将 ASP.NET Web 窗体引入 .NET Core 的计划。
 

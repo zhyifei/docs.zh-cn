@@ -3,13 +3,13 @@ title: dotnet new 命令 - .NET Core CLI
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 author: mairaw
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: ae24c4145cc67ca863c07e4d22af8a1c2c2dd732
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.date: 06/12/2018
+ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34570458"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207757"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -151,8 +151,8 @@ dotnet new [-h|--help]
 
 要创建的模板的语言。 接受的语言因模板而异（请参阅[参数](#arguments)部分中的默认值）。 对于某些模板无效。
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> 某些 shell 将 `#` 解释为特殊字符。 在这些情况下，需要括住语言参数值，如 `dotnet new console -lang "F#"`。
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -202,8 +202,8 @@ dotnet new [-h|--help]
 
 要创建的模板的语言。 接受的语言因模板而异（请参阅[参数](#arguments)部分中的默认值）。 对于某些模板无效。
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> 某些 shell 将 `#` 解释为特殊字符。 在这些情况下，需要括住语言参数值，如 `dotnet new console -lang "F#"`。
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -243,8 +243,8 @@ dotnet new [-h|--help]
 
 要创建的模板的语言。 接受的语言因模板而异（请参阅[参数](#arguments)部分中的默认值）。 对于某些模板无效。
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> 某些 shell 将 `#` 解释为特殊字符。 在这些情况下，需要括住语言参数值，如 `dotnet new console -lang "F#"`。
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -502,13 +502,13 @@ console、angular、react、reactredux、razorclasslib
 
 `dotnet new classlib -lang VB -o MyLibrary`
 
-在当前目录中新建定目标到 .NET Core 2.0 且没有设置身份验证的 ASP.NET Core C# MVC 应用程序项目：
+在当前目录中新建没有设置身份验证的 ASP.NET Core C# MVC 应用程序项目：
 
-`dotnet new mvc -au None -f netcoreapp2.0`
+`dotnet new mvc -au None`
 
-新建定目标到 .NET Core 2.0 的 xUnit 应用程序：
+创建新的 xUnit 应用程序：
 
-`dotnet new xunit --framework netcoreapp2.0`
+`dotnet new xunit`
 
 列出适用于 MVC 的所有模板：
 

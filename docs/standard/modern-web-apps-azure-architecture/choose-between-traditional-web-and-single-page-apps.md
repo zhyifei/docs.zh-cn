@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Microsoft Azure 构建新式 Web 应用程�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 834c71b92cb1bfd19bdc7fec8a19d3b2a87b74bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582894"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208137"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>在传统 Web 应用和单页应用 (SPA) 之间选择
 
@@ -71,10 +71,10 @@ SPA 可支持丰富客户端功能，当用户执行操作或在应用的各区�
 编写 SPA 需要熟悉 JavaScript 和/或 TypeScript 以及客户端编程技术和库。 团队应有能力像使用 Angular 一样使用 SPA 框架编写新式 JavaScript。
 
 > ### <a name="references--spa-frameworks"></a>参考 - SPA 框架
-> - **AngularJS**  
-> <https://angularjs.org/>
-> - **比较 4 种常见的 JavaScript 框架**  
-> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
+> - **Angular**  
+> <https://angular.io>
+> - **JavaScript 框架的比较**  
+> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **应用程序已为其他（内部或公共）客户端公开 API**
 

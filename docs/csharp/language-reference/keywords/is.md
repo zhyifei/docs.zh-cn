@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: c01152d016a852c15ffa1d1c82c16d6795965f31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289212"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207872"
 ---
 # <a name="is-c-reference"></a>is（C# 参考） #
 
@@ -75,7 +75,7 @@ ms.locfileid: "33289212"
 
 其中 *expr* 是计算结果为某个类型的实例的表达式，*type* 是 *expr* 结果要转换到的类型的名称，*varname* 是 *expr* 结果要转换到的对象（如果 `is` 测试为 `true`）。 
 
-如果以下任一条件成立，则 `is` 表达式为 `true`：
+如果 expr 不为 `null` 且以下任意内容为 true，那么 `is` 表达式为 `true`：
 
 - *expr* 是与 *type* 具有相同类型的一个实例。
 
@@ -85,7 +85,7 @@ ms.locfileid: "33289212"
 
 - *expr* 是实现 *type* 接口的类型的一个实例。
 
-如果 *exp* 为 `true`，且 `is` 与 `if` 语句一起使用，则会分配 *varname*，并且其仅在 `if` 语句中具有局部范围。
+如果 expr 为 `true`，且 `is` 与 `if` 语句一起使用，则会分配 varname，并且其仅在 `if` 语句中具有局部范围。
 
 下列示例使用 `is` 类型模式为类型的 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> 方法提供实现。
 

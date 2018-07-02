@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: f069686866c4fd0e8e380af3ef448d282df34801
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf374f9d1fd7e343e5eba868d3f686784428a2d0
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389486"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270443"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>在 Windows 10 和 Windows Server 2016 上安装 .NET Framework
 
@@ -66,7 +66,7 @@ ms.locfileid: "33389486"
 
 - 如果计算机上已安装更高版本，则不能安装 .NET Framework 的早期版本。
 
-- .NET Framework 4.x 版本可用于运行针对 .NET Framework 4.0 到该版本生成的应用程序。 例如，.NET Framework 4.7 可用于运行针对 .NET Framework 4.0-4.7 生成的应用程序。 最新版本（即 .NET Framework 4.7.1）可用于运行针对从 .NET Framework 4.0 开始的 .NET Framework 的所有版本生成的应用程序。
+- .NET Framework 4.x 版本可用于运行针对 .NET Framework 4.0 到该版本生成的应用程序。 例如，.NET Framework 4.7 可用于运行针对 .NET Framework 4.0-4.7 生成的应用程序。 最新版本（即 .NET Framework 4.7.2）可用于运行使用从 .NET Framework 4.0 开始的 .NET Framework 的所有版本生成的应用程序。
 
 如需可供下载的 .NET Framework 所有版本的列表，请参阅 [.NET 下载](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)页。
 

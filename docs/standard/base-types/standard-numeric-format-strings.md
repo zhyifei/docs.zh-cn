@@ -1,6 +1,6 @@
 ---
 title: 标准数字格式字符串
-ms.date: 09/10/2017
+ms.date: 06/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,13 +18,15 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1cad76c234ce73772d3b65b11596ab0e4e0ae3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208149"
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
+
 标准数字格式字符串用于格式化通用数值类型。 标准数字格式字符串采用 `Axx` 的形式，其中：  
   
 -   `A` 是称为“格式说明符”的单个字母字符。 任何包含一个以上字母字符（包括空白）的数字格式字符串都被解释为自定义数字格式字符串。 有关更多信息，请参见[自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。  
@@ -64,24 +66,27 @@ ms.lasthandoff: 05/04/2018
   
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>使用标准数字格式字符串  
- 可采用以下两种方式之一使用标准数字格式字符串定义数值的格式：  
+
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+
+可采用以下两种方式之一使用标准数字格式字符串定义数值的格式：  
   
 -   可以传递给拥有 `ToString` 参数的 `format` 方法的重载。 下面的示例将数值的格式设置为当前区域性（在此示例中，为 en-US 区域性）中的货币字符串。  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
-     [!code-csharp[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
 -   它可作为与 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 等方法一起使用的格式项中的 `formatString` 参数提供。 有关更多信息，请参见[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。 下面的示例使用格式项在字符串中插入货币值。  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
-     [!code-csharp[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
      [!code-vb[Formatting.Numeric.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#11)]  
   
      可以视需要选择提供 `alignment` 参数，以指定数字字段宽度以及值是右对齐还是左对齐。 下面的示例在 28 位字符的字段中左对齐货币值，在 14 位字符的字段中右对齐货币值。  
   
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
-     [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
 -   可以提供它作为内插字符串的内插表达式项中的 `formatString` 参数。 有关详细信息，请参阅 C# 参考中的[字符串内插](../../csharp/language-reference/tokens/interpolated.md)主题，或 Visual Basic 参考中的[内插字符串](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)主题。  
@@ -110,7 +115,7 @@ ms.lasthandoff: 05/04/2018
  下面的示例使用货币格式说明符设置 <xref:System.Double> 值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
- [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
  [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]  
   
  [返回表首](#table)  
@@ -130,7 +135,7 @@ ms.lasthandoff: 05/04/2018
  下面的示例使用十进制格式说明符设置 <xref:System.Int32> 值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#2)]
- [!code-csharp[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
  [!code-vb[Formatting.Numeric.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#2)]  
   
  [返回表首](#table)  
@@ -154,7 +159,7 @@ ms.lasthandoff: 05/04/2018
  下面的示例使用指数格式说明符设置 <xref:System.Double> 值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
- [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
  [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]  
   
  [返回表首](#table)  
@@ -176,7 +181,7 @@ ms.lasthandoff: 05/04/2018
  下面的示例使用定点格式说明符设置 <xref:System.Double> 和 <xref:System.Int32> 值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
- [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
  [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]  
   
  [返回表首](#table)  
@@ -205,10 +210,10 @@ ms.lasthandoff: 05/04/2018
  
 请注意，如果与 <xref:System.Double> 值结合使用，"G17" 格式说明符可确保原始 <xref:System.Double> 值成功往返。 这是因为 <xref:System.Double> 是符合 IEEE 754-2008 要求的双精度 (`binary64`) 浮点数，最高可提供 17 位有效数字的精度。 建议使用此说明符，而不是 ["R" 格式说明符](#RFormatString)，因为在某些情况下，"R" 无法成功往返双精度浮点值。 下面的示例阐释了这样一种情况。
 
-[!code-csharp[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
+[!code-csharp-interactive[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
 [!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]   
 
-如果与 <xref:System.Single> 值结合使用，"G9" 格式说明符可确保原始 <xref:System.Single> 值成功往返。 这是因为 <xref:System.Single> 是符合 IEEE 754-2008 要求的但精度 (`binary32`) 浮点数，最高可提供 9 位有效数字的精度。 建议使用此说明符，而不是 ["R" 格式说明符](#RFormatString)，因为在某些情况下，"R" 无法成功往返单精度浮点值。
+如果与 <xref:System.Single> 值结合使用，"G9" 格式说明符可确保原始 <xref:System.Single> 值成功往返。 这是因为 <xref:System.Single> 是符合 IEEE 754-2008 要求的但精度 (`binary32`) 浮点数，最高可提供 9 位有效数字的精度。 出于性能原因，我们建议使用它而不是[“R”格式说明符](#RFormatString)。
 
  结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制结果字符串的格式。  
   
@@ -221,7 +226,7 @@ ms.lasthandoff: 05/04/2018
  下面的示例使用常规格式说明符设置各种浮点值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
- [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
  [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]  
   
  [返回表首](#table)  
@@ -244,7 +249,7 @@ ms.lasthandoff: 05/04/2018
  下面的示例使用数字格式说明符设置各种浮点值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
- [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
  [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]  
   
  [返回表首](#table)  
@@ -269,7 +274,7 @@ ms.lasthandoff: 05/04/2018
  下面的示例使用百分比格式说明符设置浮点值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
- [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
  [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]  
   
  [返回表首](#table)  
@@ -278,7 +283,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="the-round-trip-r-format-specifier"></a>往返过程（“R”）格式说明符  
  往返 ("R") 格式说明符试图确保将转换为字符串的数值分析回相同的数值。 只有 <xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger> 类型支持此格式。  
 
-对于 <xref:System.Double> 和 <xref:System.Single> 值，在某些情况下，"R" 格式说明符无法成功往返原始值，并且性能相对较差。 建议改用 ["G17"](#GFormatString) 格式说明符以成功往返 <xref:System.Double> 值，并改用 ["G9"](#GFormatString) 格式说明符以成功往返 <xref:System.Single> 值。
+对于 <xref:System.Double> 值，某些情况下的“R”格式说明符未能成功往返原始值。 对于两个 <xref:System.Double> 和 <xref:System.Single> 值，它还提供相对较差的性能。 建议改用 ["G17"](#GFormatString) 格式说明符以成功往返 <xref:System.Double> 值，并改用 ["G9"](#GFormatString) 格式说明符以成功往返 <xref:System.Single> 值。
 
  如果使用此说明符设置 <xref:System.Numerics.BigInteger> 值的格式，其字符串表示形式将包含 <xref:System.Numerics.BigInteger> 值中的所有有效位。  
   
@@ -294,7 +299,7 @@ ms.lasthandoff: 05/04/2018
  下面的示例使用往返格式说明符设置 <xref:System.Numerics.BigInteger> 值的格式。  
   
  [!code-cpp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cpp)]
- [!code-csharp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
+ [!code-csharp-interactive[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
  [!code-vb[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.vb)]  
   
 > [!IMPORTANT]
@@ -302,7 +307,7 @@ ms.lasthandoff: 05/04/2018
   
  若要解决使用“R”标准数字格式字符串格式化的 <xref:System.Double> 值在使用 `/platform:x64` 或 `/platform:anycpu` 交换机进行编译并在 64 位系统上运行时所出现的往返不成功的问题，可以使用“G17”标准数字格式字符格式化 <xref:System.Double> 值。 以下示例将“R”格式字符串与无法成功往返的 <xref:System.Double> 值配合使用，并使用“G17”格式字符串以成功往返原始值。  
   
- [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
+ [!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
   
  [返回表首](#table)  
@@ -318,7 +323,7 @@ ms.lasthandoff: 05/04/2018
  下面的示例使用十六进制数法格式说明符设置 <xref:System.Int32> 值的格式。  
   
  [!code-cpp[Formatting.Numeric.Standard#9](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#9)]
- [!code-csharp[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
  [!code-vb[Formatting.Numeric.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#9)]  
   
  [返回表首](#table)  
@@ -343,11 +348,13 @@ ms.lasthandoff: 05/04/2018
 ### <a name="floating-point-infinities-and-nan"></a>浮点型无穷大和 NaN  
  无论格式字符串原来是什么值，只要 <xref:System.Single> 或 <xref:System.Double> 浮点类型的值为正无穷大、负无穷大或非数值 (NaN)，格式字符串就分别是当前适用的 <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A> 对象指定的 <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>、<xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> 或 <xref:System.Globalization.NumberFormatInfo> 属性的值。  
   
-<a name="example"></a>   
 ## <a name="example"></a>示例  
+ 
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+ 
  下面的示例使用 en-US 区域性和所有标准数字格式说明符设置一个整型数值和一个浮点型数值的格式。 此示例使用两个特定的数值类型（<xref:System.Double> 和 <xref:System.Int32>），但对于任何一个其他数值基类型（<xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>、<xref:System.Numerics.BigInteger>、<xref:System.Decimal> 和 <xref:System.Single>）都将产生类似的结果。  
   
- [!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
+ [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
 ## <a name="see-also"></a>请参阅  

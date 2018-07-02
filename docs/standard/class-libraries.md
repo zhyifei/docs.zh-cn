@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 7d2f81ef08892c994163d609a56008c1accadaa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8026ac821dfeed03127c894a5768a4c91b13beb3
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570586"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207168"
 ---
 # <a name="net-class-libraries"></a>.NET 类库
 
@@ -39,7 +39,7 @@ ms.locfileid: "33570586"
 
 许多库开发人员已经从由一个源开发多个平台特定的库（使用条件编译指令）转向开发可移植库。 有[多种方法](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)可在可移植库中访问平台特定的功能，其中[诱饵替换](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)是目前最广为接受的方法。
 
-### <a name="net-standard-class-libraries"></a>.NET Standard 类库
+## <a name="net-standard-class-libraries"></a>.NET Standard 类库
 
 .NET Standard 库是平台特定的库和可移植库概念的替代。 .NET Core 库可从基础平台公开所有功能（无合成平台或平台交集），就此而言，它是平台特定的库。 该库可在所有支持平台上运行，就此而言，它是可移植库。
 
@@ -60,6 +60,6 @@ ms.locfileid: "33570586"
 
 有关详细信息，请参阅 [.NET Standard](net-standard.md) 主题。
 
-### <a name="mono-class-libraries"></a>Mono 类库
+## <a name="mono-class-libraries"></a>Mono 类库
 
 Mono 支持多种类库，包括上述三种类型的库。 Mono 常被视为（正确地）Microsoft .NET Framework 的跨平台实现。 部分原因是，平台特定的 .NET Framework 库可在 Mono 运行时上运行，而无需修改或重新编译。 创建可移植库之前，此特性就已存在，因此在 .NET Framework 和 Mono 之间启用二进制可移植性是显而易见的选择（虽然它只能单向运行）。

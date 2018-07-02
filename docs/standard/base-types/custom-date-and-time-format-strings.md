@@ -16,11 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 665c90ca9950424be21539a83992e1c36dc51ba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dbdb4aa70fcd14a914e1cb1b608260f1e51c1d0
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208153"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自定义日期和时间格式字符串
 日期和时间格式字符串定义由格式设置操作生成的 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值的文本表示形式。 它还可定义分析操作中需要的日期和时间值的表示形式，以便成功将字符串转换为日期和时间。 自定义格式字符串由一个或多个自定义日期和时间格式说明符组成。 任何不是[标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)的字符串都会解释为自定义日期和时间格式字符串。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/04/2018
 |“m”|分钟（0 到 59）。<br /><br /> 有关详细信息，请参阅[“m”自定义格式说明符](#mSpecifier)。|2009-06-15T01:09:30 -> 9<br /><br /> 2009-06-15T13:29:30 -> 29|  
 |“mm”|分钟（00 到 59）。<br /><br /> 有关详细信息，请参阅[“mm”自定义格式说明符](#mmSpecifier)。|2009-06-15T01:09:30 -> 09<br /><br /> 2009-06-15T01:45:30 -> 45|  
 |“M”|月份（1 到 12）。<br /><br /> 有关详细信息，请参阅[“M”自定义格式说明符](#M_Specifier)。|2009-06-15T13:45:30 -> 6|  
-|“MM”|月份（01 到 12）。<br /><br /> 有关详细信息，请参阅[“MM”自定义格式说明符](#MM_Specifier)。|2009-06-15T13:45:30 -> 06|  
+|“MM”|月份（1 到 12）。<br /><br /> 有关详细信息，请参阅[“MM”自定义格式说明符](#MM_Specifier)。|2009-06-15T13:45:30 -> 06|  
 |“MMM”|月份的缩写名称。<br /><br /> 有关详细信息，请参阅[“MMM”自定义格式说明符](#MMM_Specifier)。|2009-06-15T13:45:30 -> Jun (en-US)<br /><br /> 2009-06-15T13:45:30 -> juin (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> Jun (zu-ZA)|  
 |“MMMM”|月份的完整名称。<br /><br /> 有关详细信息，请参阅[“MMMM”自定义格式说明符](#MMMM_Specifier)。|2009-06-15T13:45:30 -> June (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> uJuni (zu-ZA)|  
 |“s”|秒（0 到 59）。<br /><br /> 有关详细信息，请参阅[“s”自定义格式说明符](#sSpecifier)。|2009-06-15T13:45:09 -> 9|  
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/04/2018
 |"/"|日期分隔符。<br /><br /> 有关详细信息，请参阅[“/”自定义格式说明符](#dateSeparator)。|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|  
 |"string"<br /><br /> 'string'|文本字符串分隔符。<br /><br /> 有关详细信息，请参阅[字符文本](#Literals)。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|  
 |%|将下面的字符定义为自定义格式说明符。<br /><br /> 有关详细信息，请参阅[使用单个自定义格式说明符](#UsingSingleSpecifiers)。|2009-06-15T13:45:30 (%h) -> 1|  
-|\|转义字符。<br /><br /> 有关详细信息，请参阅[字符文本](#Literals)和[使用转义字符](#escape)。|2009-06-15T13:45:30 (h \h) -> 1 h|  
+|\\|转义字符。<br /><br /> 有关详细信息，请参阅[字符文本](#Literals)和[使用转义字符](#escape)。|2009-06-15T13:45:30 (h \h) -> 1 h|  
 |任何其他字符|字符将复制到未更改的结果字符串。<br /><br /> 有关详细信息，请参阅[字符文本](#Literals)。|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|  
   
  以下各节提供有关每个自定义日期和时间格式说明符的附加信息。 除非另行说明，否则，每个说明符将生成相同的字符串表示形式，这与它是与 <xref:System.DateTime> 值一起使用还是与 <xref:System.DateTimeOffset> 值一起使用无关。  

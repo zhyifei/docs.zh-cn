@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e659f2438e9785a02f7016e49b78015ad46b9133
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696970"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207529"
 ---
 # <a name="the-history-of-c"></a>C# 发展历史 #
 
@@ -18,9 +18,22 @@ ms.locfileid: "34696970"
 
 回想起来，C# 1.0 版非常像 Java。 在 [ECMA 制定的设计目标](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)中，它旨在成为一种“简单、现代、面向对象的常规用途语言”。  当时，它和 Java 类似，说明已经实现了上述早期设计目标。
 
-不过如果现在回顾 C# 1.0，你会觉得有点晕。 它没有我们习以为常的内置异步功能和以泛型为中心的巧妙功能。 其实它完全不具备泛型。  那 [LINQ](../linq/index.md) 呢？ 尚不可用。 需要几年后才会面世。
+不过如果现在回顾 C# 1.0，你会觉得有点晕。 它没有习以为常的内置异步功能和以泛型为中心的巧妙功能。 其实它完全不具备泛型。  那 [LINQ](../linq/index.md) 呢？ 尚不可用。 这些新增内容需要几年才能推出。
 
 与现在的 C# 相比，C# 1.0 版少了很多功能。 你会发现自己的代码很冗长。 不过凡事总要有个开始。 在 Windows 平台上，C# 1.0 版是 Java 的一个可行的替代之选。
+
+C# 1.0 的主要功能包括：
+
+- [类](../programming-guide/classes-and-structs/classes.md)
+- [结构](../programming-guide/classes-and-structs/structs.md)
+- [接口](../programming-guide/interfaces/index.md)
+- [事件](../events-overview.md)
+- [属性](../properties.md)
+- [委托](../delegates-overview.md)
+- [表达式](../programming-guide/statements-expressions-operators/expressions.md)
+- [语句](../programming-guide/statements-expressions-operators/statements.md)
+- [特性](../programming-guide/concepts/attributes/index.md)
+- 文本
 
 ## <a name="c-version-20"></a>C# 2.0 版
 
@@ -33,11 +46,18 @@ ms.locfileid: "34696970"
 - [迭代器](../programming-guide/concepts/iterators.md)
 - [协变和逆变](../programming-guide/concepts/covariance-contravariance/index.md)
 
-C# 一开始是非常通用的面向对象的 (OO) 语言，而 C# 2.0 版很快改变了这一点。 做好基础准备后，他们开始追求解决一些严重影响开发者的难点。 结果他们彻底地解决了这些问题。
+除现有功能以外的其他 C# 2.0 功能：
 
-通过泛型，你将获得可以对任意类型操作的类型和方法，同时保持类型安全性。 例如，通过 <xref:System.Collections.Generic.List%601>，你将获得 `List<string>` 或 `List<int>` 并且可以对这些字符串或整数执行类型安全操作，同时对其进行循环访问。 比起为每个操作从 `Object` 创建 `ListInt` 继承者或强制转换要好很多。
+- getter/setter 单独可访问性
+- 方法组转换（委托）
+- 静态类
+- 委托推断
 
-C# 2.0 版引入了迭代器。 简单地说就是可以使用 `foreach` 循环对 `List`（或其他可枚举类型）中的项进行循环访问。 这是该语言最重要的一部分，显著提升了语言的可读性以及人们推出代码的能力。
+C# 一开始是面向对象的 (OO) 通用语言，而 C# 2.0 版很快改变了这一点。 做好基础准备后，他们开始追求解决一些严重影响开发者的难点。 且他们以显著的方式追求这些难点。
+
+通过泛型，类型和方法可以操作任意类型，同时保持类型安全性。 例如，通过 <xref:System.Collections.Generic.List%601>，将获得 `List<string>` 或 `List<int>` 并且可以对这些字符串或整数执行类型安全操作，同时对其进行循环访问。 使用泛型优于创建派生自 `ArrayList` 的 `ListInt` 或者从每个操作的 `Object` 强制转换。
+
+C# 2.0 版引入了迭代器。 简单来说，迭代器允许使用 `foreach` 循环来检查 `List`（或其他可枚举类型）中的所有项。 拥有迭代器是该语言最重要的一部分，显著提升了语言的可读性以及人们推出代码的能力。
 
 不过 C# 依然在追赶 Java 的道路上。 当时 Java 已发布包含泛型和迭代器的版本。 但是随着语言各自的演化，形势很快发生了变化。
 
@@ -51,6 +71,9 @@ C# 3.0 版和 Visual Studio 2008 一起发布于 2007 年下半年，但完整�
 - [Lambda 表达式](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
 - [表达式树](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
 - [扩展方法](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
+- [隐式类型本地变量](../language-reference/keywords/var.md)
+- [分部方法](../language-reference/keywords/partial-method.md)
+- 对象和集合初始值设定项
 
 回顾过去，这些功能中大多数似乎都是不可或缺，难以分割的。 它们的组合都是经过巧妙布局。 我们通常认为 C# 版本的杀手锏是查询表达式，也就是语言集成查询 (LINQ)。
 
@@ -75,11 +98,11 @@ C# 4.0 版很难达到 3.0 版的创新水平。 在 3.0 版中，C# 已经完�
 
 主要功能是引入 `dynamic` 关键字。 在 C# 4.0 版中引入 `dynamic` 关键字让用户可以替代编译时类型上的编译器。 通过使用 dynamic 关键字，可以创建和动态类型语言（例如 JavaScript）类似的构造。 可以创建 `dynamic x = "a string"` 再向它添加六个，然后让运行时理清下一步操作。
 
-这就存在出错的可能性，不过同时也为你提供了强大的语言功能。
+动态绑定存在出错的可能性，不过同时也为你提供了强大的语言功能。
 
 ## <a name="c-version-50"></a>C# 5.0 版
 
-C# 5.0 版是该语言非常有针对性的一个版本。 在此版本中所做的所有工作几乎都针对另一个突破性的语言概念。  下面是主要功能列表：
+C# 5.0 版是该语言有针对性的一个版本。 在此版本中所做的所有工作几乎都针对另一个突破性的语言概念：适用于异步编程的 `async` 和 `await` 模型。  下面是主要功能列表：
 
 - [异步成员](../async.md)
 - [调用方信息特性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
@@ -90,7 +113,7 @@ C# 5.0 版是该语言非常有针对性的一个版本。 在此版本中所做
 
 ## <a name="c-version-60"></a>C# 6.0 版
 
-C# 在 3.0 版和 5.0 版对面向对象的语言添加了令人影响深刻的功能。 在 6.0 版中，它不再推出主导性的杀手锏，而是发布了很多让语言用户喜爱的功能。 以下介绍了部分功能：
+C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 在 6.0 版中，它不再推出主导性的杀手锏，而是发布了很多使得 C# 编程更有效率的小功能。 以下介绍了部分功能：
 
 - [静态导入](../language-reference/keywords/using-static.md)
 - [异常筛选器](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
@@ -100,6 +123,11 @@ C# 在 3.0 版和 5.0 版对面向对象的语言添加了令人影响深刻的�
 - [字符串内插](../language-reference/tokens/interpolated.md)
 - [nameof 运算符](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
 - [索引初始值设定项](csharp-6.md#index-initializers)
+
+其他新功能包括：
+
+- Catch/Finally 块中的 Await
+- 仅限 getter 属性的默认值
 
 这些功能每一个都很有趣。 但从整体来看，可以发现一个有趣的模式。 在此版本中，C# 消除语言样本，让代码更简洁且更具可读性。 所以对喜欢简洁代码的用户来说，此语言版本非常成功。
 
@@ -116,8 +144,16 @@ C# 7.0 版是最新的主版本。 虽然该版本继承和发展了 C# 6.0，�
 - [已扩展 expression bodied 成员](./csharp-7.md#more-expression-bodied-members)
 - [Ref 局部变量和返回结果](./csharp-7.md#ref-locals-and-returns)
 
+其他功能包括：
+
+- [弃元](../discards.md)
+- [二进制文本](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
+- [数字分隔符](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
+- ref 返回值和局部变量
+- [引发表达式](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+
 这些都为开发者提供了很棒的新功能，帮助编写比以往任何时候都简洁的代码。 重点是缩减了使用 `out` 关键字的变量声明，并通过元组实现了多个返回值。
 
-但 C# 的用途更加广泛了。 .NET Core 现在面向所有操作系统，着眼于云和可移植性。  语言设计者除了推出新功能外，也会在这方面付出时间和精力。
+但 C# 的用途更加广泛了。 .NET Core 现在面向所有操作系统，着眼于云和可移植性。  语言设计者除了推出新功能外，也会在这些新功能方面付出时间和精力。
 
 _文章_[_最初发布在 NDepend 博客上_](https://blog.ndepend.com/c-versions-look-language-history/)_，由 Erik Dietrich 和 Patrick Smacchia 提供_。

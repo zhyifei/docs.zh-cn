@@ -3,24 +3,22 @@ title: 官方 .NET Docker 映像
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 官方 .NET Docker 映像
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: d2105603fe1fcbacd995710c9b365ec406bad255
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/06/2018
+ms.openlocfilehash: bb2190a4fae6f8a26b220fd12ecb9f65ea6f4b96
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251111"
 ---
 # <a name="official-net-docker-images"></a>官方 .NET Docker 映像
 
 官方 .NET Docker 映像是由 Microsoft 创建和优化的 Docker 映像。 这些映像在 [Docker 中心](https://hub.docker.com/u/microsoft/)的 Microsoft 存储库中公开提供。 每个存储库可以包含多个映像，具体取决于 .NET 版本以及操作系统和版本（Linux Debian、Linux Alpine、Windows Nano Server、Windows Server Core 等）。
 
-Microsoft 对 .NET 存储库的愿景是要具有细粒度和集中存储库，其中存储库表示特定方案或工作负荷。 例如，当在 Docker 上使用 ASP.NET Core 时，应使用 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) 映像，因为这些 ASP.NET Core 映像提供了额外的优化，以便容器可以更快地启动。
-
-另一方面，.NET Core 映像 (microsoft/dotnet) 适用于基于 .NET Core 的控制台应用。 例如，批处理、Azure WebJobs 和其他控制台方案应使用 .NET Core。 这些映像不包括 ASP.NET Core 堆栈，因此导致容器映像更小。
+自 .NET Core 2.1 起，包括 ASP.NET Core 在内的所有 .NET Core 映像都在 [.NET Core 映像存储库](https://hub.docker.com/r/microsoft/dotnet/)的 Docker 中心提供。
 
 大多数映像存储库提供广泛的标记，以帮助选择特定的框架版本以及 OS（Linux 发行版或 Windows 版本）。
 
-有关 Microsoft 提供的官方 .NET Docker 映像的详细信息，请参阅 [.NET Docker 映像摘要](https://aka.ms/dotnetdockerimages)。
 
 ## <a name="net-core-and-docker-image-optimizations-for-development-versus-production"></a>适用于开发与生产的 .NET Core 和 Docker 映像优化
 
@@ -34,13 +32,13 @@ Microsoft 对 .NET 存储库的愿景是要具有细粒度和集中存储库，�
 
 ### <a name="during-development-and-build"></a>在开发和生成过程中
 
-在开发期间，重要的是可循环访问更改的速度以及调试更改的能力。 与更改代码的能力和快速查看更改相比，映像的大小不是那么重要。 某些工具和“build-agent 容器”在开发和生成进程中使用开发 ASP.NET Core 映像 (microsoft/aspnetcore-build)。 在 Docker 容器中生成时，重要方面是为了编译应用所需要的元素。 这包括编译器和任何其他 .NET 依赖项，以及 npm、Gulp和 Bower 等 Web 开发依赖项。
+在开发期间，重要的是可循环访问更改的速度以及调试更改的能力。 与更改代码的能力和快速查看更改相比，映像的大小不是那么重要。 某些工具和“build-agent 容器”在开发和生成进程中使用开发 ASP.NET Core 映像 (microsoft/dotnet:2.1-sdk)。 在 Docker 容器中生成时，重要方面是为了编译应用所需要的元素。 这包括编译器和任何其他 .NET 依赖项，以及 Web 开发依赖项。
 
-为什么此类型的生成映像很重要？ 不能将此映像部署到生产中。 相反，它是用于生成放置在生产映像中的内容的映像。 此映像将用于持续集成 (CI) 环境或生成环境中。 例如，生成代理会将 .NET Core 实例化，其中包含构建应用程序所需的所有依赖项，而不是直接在生成代理主机（例如 VM）上手动安装所有应用程序依赖项。 生成代理只需要了解如何运行此 Docker 映像即可。 这简化了 CI 环境，并使其更可预测。
+为什么此类型的生成映像很重要？ 不能将此映像部署到生产中。 相反，它是用于生成放置在生产映像中的内容的映像。 此映像将用于持续集成 (CI) 环境，或在使用 Docker 多阶段生成时用于生成环境。
 
 ### <a name="in-production"></a>生产中
 
-在生产中重要的是基于生产 .NET Core 映像部署和启动容器的速度。 因此，基于 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) 的仅运行时映像很小，以便它可以通过网络从 Docker 注册表快速传输到 Docker 主机。 已准备运行内容，以此实现从启动容器到处理结果的最快时间。 在 Docker 模型中，不需要编译 C\# 代码，但在使用生成容器运行 dotnet 生成或 dotnet 发布时需要。
+在生产中重要的是基于生产 .NET Core 映像部署和启动容器的速度。 因此，基于 microsoft/dotnet:2.1-aspnetcore-runtime 的仅运行时映像很小，以便它可以通过网络从 Docker 注册表快速传输到 Docker 主机。 已准备运行内容，以此实现从启动容器到处理结果的最快时间。 在 Docker 模型中，不需要编译 C\# 代码，但在使用生成容器运行 dotnet 生成或 dotnet 发布时需要。
 
 在此优化的映像中，只放置运行应用程序所需的二进制文件和其他内容。 例如，由 dotnet 发布创建的内容仅包含已编译的.NET 二进制文件、映像、.js 和 .css 文件。 随着时间的推移，用户将看到包含预实时编译的包。
 
@@ -48,13 +46,13 @@ Microsoft 对 .NET 存储库的愿景是要具有细粒度和集中存储库，�
 
 在 Docker 中心浏览 .NET 映像存储库时，会发现已使用标记将多个映像版本进行分类或标记。 这些标记有助于决定使用哪一个，具体取决于需要的版本，如下表所示：
 
--   microsoft/**aspnetcore:2.0**
+-   microsoft/dotnet:2.1-aspnetcore-runtime
 
         ASP.NET Core, with runtime only and ASP.NET Core optimizations, on Linux and Windows (multi-arch)
 
--   microsoft/aspnetcore-build:2.0
+-   microsoft/dotnet:2.1-sdk
 
-        ASP.NET Core, with SDKs included, on Linux and Windows (multi-arch)
+        .NET Core, with SDKs included, on Linux and Windows (multi-arch)
 
 
 >[!div class="step-by-step"]

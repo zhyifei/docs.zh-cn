@@ -3,11 +3,12 @@ title: 委托和事件
 description: 了解委托和事件的相关信息在 .NET Core 文档中的位置。
 ms.date: 06/20/2016
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-ms.openlocfilehash: 939bb0f441e5a18b1ae8d48fe9a8021bd2dad3f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b802a7aa8ef3e9ab0c05af23186d124dcc07bdb5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826823"
 ---
 # <a name="delegates--events"></a>委托和事件
 
@@ -45,3 +46,4 @@ ms.lasthandoff: 05/04/2018
 
     这篇文章讨论应如何区分在设计中使用事件和委托。
  
+可以从我们的 GitHub 示例存储库下载[委托示例](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events)和[事件示例](https://github.com/dotnet/samples/tree/master/csharp/events)。

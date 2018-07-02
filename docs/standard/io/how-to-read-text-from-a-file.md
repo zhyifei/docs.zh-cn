@@ -1,6 +1,6 @@
 ---
 title: 如何：从文件读取文本
-ms.date: 03/30/2017
+ms.date: 06/19/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bb37c5beaaa529ea09fa23f31b55a0d6bc6d510
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7c54e5e55770f3df44819cdf6d2d2c866f7e0fc
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574525"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298157"
 ---
 # <a name="how-to-read-text-from-a-file"></a>如何：从文件读取文本
 下面的示例演示如何使用适用于桌面应用的 .NET 以异步方式和同步方式从文本文件中读取文本。 在这两个示例中，当你创建 <xref:System.IO.StreamReader> 类的实例时，你会提供文件的绝对路径或相对路径。 以下示例假定名为 TestFile.txt 的文件位于此应用程序所在的文件夹中。  
   
- 这些代码示例不适用于针对 Windows 应用商店应用的开发，因为 Windows 运行时提供了对文件进行读写操作的不同的流类型。 有关展示了如何在 Microsoft Store 应用上下文中读取文件文本的示例，请参阅[快速入门：对文件执行读取和写入操作](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx)。 有关展示了如何在 .NET Framework 流和 Windows 运行时流之间转换的示例，请参阅[如何：在 .NET Framework 流和 Windows 运行时流之间转换](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)。  
+ 这些代码示例不适用于针对 Windows 应用商店应用的开发，因为 Windows 运行时提供了对文件进行读写操作的不同的流类型。 有关展示了如何在 Microsoft Store 应用中读取文件文本的示例，请参阅[快速入门：对文件执行读取和写入操作](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh758325(v=win.10))。 有关展示了如何在 .NET Framework 流和 Windows 运行时流之间转换的示例，请参阅[如何：在 .NET Framework 流和 Windows 运行时流之间转换](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)。  
   
 ## <a name="example"></a>示例  
- 第一个示例演示控制台应用程序中的同步读取操作。 在此示例中，使用流读取器打开文本文件，将内容复制到一个字符串中，然后将字符串输出到控制台。  
+ 以下示例演示控制台应用程序中的同步读取操作。 在此示例中，使用流读取器打开文本文件，将内容复制到一个字符串中，然后将字符串输出到控制台。  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source3.cs#3)]
  [!code-vb[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source3.vb#3)]  
   
 ## <a name="example"></a>示例  
- 第二个示例演示 Windows Presentation Foundation (WPF) 应用程序中的异步读取操作。  
+ 以下示例演示 Windows Presentation Foundation (WPF) 应用程序中的异步读取操作。  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source6.cs#6)]
  [!code-vb[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source6.vb#6)]  

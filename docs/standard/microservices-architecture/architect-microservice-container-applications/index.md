@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 91f63343ba2d7458d0d3b03978ac79a3a7e8427a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 185279cb4df70d9896d7e11c995170e7cd214f73
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573641"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106809"
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a>构建基于容器和微服务的应用程序
 
@@ -23,7 +23,7 @@ ms.locfileid: "33573641"
 
 在容器模型中，容器映像实例表示单个进程。 将容器映像定义为进程边界，可以创建可用于对进程进行缩放或批处理的基元。
 
-当你设计的容器映像时，你将看到[入口点](https://docs.docker.com/engine/reference/builder/)Dockerfile 中的定义。 这定义了一个进程，其生命周期控制容器的生命周期。 该进程完成，则容器的生命周期结束。 容器可以表示 Web 服务器等长时间运行的进程，但也可表示批处理作业等生存期较短的进程，这些进程以前可能已实现为 Azure [WebJobs](https://docs.microsoft.com/azure/app-service-web/websites-webjobs-resources)。
+设计容器映像时，可在 Dockerfile 中看到 [入口点](https://docs.docker.com/engine/reference/builder/) 定义。 这定义了一个进程，其生命周期控制容器的生命周期。 该进程完成，则容器的生命周期结束。 容器可以表示 Web 服务器等长时间运行的进程，但也可表示批处理作业等生存期较短的进程，这些进程以前可能已实现为 Azure [WebJobs](https://docs.microsoft.com/azure/app-service-web/websites-webjobs-resources)。
 
 如果进程失败，则容器结束，Orchestrator 接管。 如果 Orchestrator 已配置为使五个实例保持运行，而其中一个实例失败，则 Orchestrator 会创建另一个容器实例，来替换失败的进程。 在批处理作业中，使用参数启动该进程。 进程完成，则工作完成。 本指南接下来将深入介绍业务流程协调程序。
 
@@ -31,4 +31,5 @@ ms.locfileid: "33573641"
 
 
 >[!div class="step-by-step"]
-[上一页] (../net-core-net-framework-containers/official-net-docker-images.md) [下一页] (containerize-monolithic-applications.md)
+[上一页](../net-core-net-framework-containers/official-net-docker-images.md)
+[下一页](containerize-monolithic-applications.md)

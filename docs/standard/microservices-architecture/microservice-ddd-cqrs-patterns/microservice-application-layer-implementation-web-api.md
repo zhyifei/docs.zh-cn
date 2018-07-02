@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 7c785814c4726dd805ad7b0dccb6a3584118cc65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9572540f17e5628d7f71c94ee68f7cba17d64d07
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579751"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207633"
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 实现微服务应用层
 
@@ -667,7 +667,7 @@ public class CreateOrderCommandHandler
 
 这是将命令与命令处理程序关联的代码。 此处理程序仅仅是简单类，但它继承自 RequestHandler&lt;T&gt;，MediatR 确保其使用正确负载调用。
 
-## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-meadiatr"></a>使用 MeadiatR 中的行为处理命令时，应用整合问题
+## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>使用 MediatR 中的行为处理命令时，应用整合问题
 
 还需要执行一个操作：将整合问题应用到转存进程管道。 还可在 Autofac 注册模块代码的末尾查看其如何注册行为类型，特别是 LoggingBehavior 类和 ValidatorBehavior 类。 但也可添加其他自定义行为。
 
@@ -828,12 +828,12 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 ##### <a name="the-mediator-pattern"></a>转存进程模式
 
 -   **转存进程模式**
-    [https://en.wikipedia.org/wiki/Mediator\_pattern](https://en.wikipedia.org/wiki/Mediator_pattern)
+    [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>修饰器模式
 
 -   **修饰器模式**
-    [https://en.wikipedia.org/wiki/Decorator\_pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
+    [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 

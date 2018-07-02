@@ -3,12 +3,12 @@ title: 索引器
 description: 了解 C# 索引器以及它们如何实现索引属性，这些属性是使用一个或多个参数引用的属性。
 ms.date: 06/20/2016
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 73f79f58cd20187a6fd0de29f53f1a31a269e0e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 012213a4cdf8b70ec919639a082d5700228dde6b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218294"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207490"
 ---
 # <a name="indexers"></a>索引器
 
@@ -176,7 +176,7 @@ public class DataSamples
 
 ### <a name="dictionaries"></a>字典
 
-另一个常见场景是需要对字典或映射进行建模时。 当类型存储基于键（通常是文本键）的值时出现此情况。 本示例创建的字典将命令行参数映射到管理这些选项的 [lamdba 表达式](delegates-overview.md)。 以下示例演示了两个类：`ArgsActions` 类将命令行选项映射到 `Action` 委托；`ArgsProcessor` 类在遇到此选项时使用 `ArgsActions` 执行每个 `Action`。
+另一个常见场景是需要对字典或映射进行建模时。 当类型存储基于键（通常是文本键）的值时出现此情况。 本示例创建的字典将命令行参数映射到管理这些选项的 [Lambda 表达式](delegates-overview.md)。 以下示例演示了两个类：`ArgsActions` 类将命令行选项映射到 `Action` 委托；`ArgsProcessor` 类在遇到此选项时使用 `ArgsActions` 执行每个 `Action`。
 
 ```csharp
 public class ArgsProcessor

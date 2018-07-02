@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 354b9fe1171e8e41702db001ab3c0e5daa65431e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f65e8bb1a61bad458cb33a3bf9d2553479c750e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208152"
 ---
 # <a name="custom-timespan-format-strings"></a>自定义的 TimeSpan 格式字符串
 <xref:System.TimeSpan> 格式字符串定义格式设置操作生成的 <xref:System.TimeSpan> 值的字符串表示形式。 自定义格式字符串包含一个或多个自定义 <xref:System.TimeSpan> 格式说明符，以及任意数量的文本字符。 任何不是[标准 TimeSpan 格式字符串](../../../docs/standard/base-types/standard-timespan-format-strings.md)的字符串都会被解释为自定义 <xref:System.TimeSpan> 格式字符串。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/04/2018
 |“FFFFFF”|时间间隔中的百万分之几秒。 不显示任何小数尾随零。<br /><br /> 有关详细信息，请参阅[“FFFFFF”自定义格式说明符](#F6_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`：<br /><br /> `ss\.FFFFFF`: 03.1|  
 |“FFFFFFF”|时间间隔中的千万分之几秒。 不显示任何小数尾随零或七个零。<br /><br /> 有关详细信息，请参阅[“FFFFFFF”自定义格式说明符](#F7_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`：<br /><br /> `ss\.FFFFFF`: 03.19|  
 |'string'|文本字符串分隔符。<br /><br /> 有关详细信息，请参阅[其他字符](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|  
-|\|转义字符。<br /><br /> 有关详细信息，请参阅[其他字符](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
+|\\|转义字符。<br /><br /> 有关详细信息，请参阅[其他字符](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
 |任何其他字符|任何其他未转义字符会解释为自定义格式说明符。<br /><br /> 有关详细信息，请参阅[其他字符](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
   
 <a name="dSpecifier"></a>   
