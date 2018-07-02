@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 0f3b4539156f3ba437c77dea721ca53206d1ed40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6003252d7e87428c7f954b57c3b67a041e3f3b15
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579894"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106471"
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 实现基础结构持久性层
 
@@ -471,4 +471,5 @@ public IEnumerable<T> List(ISpecification<T> spec)
     
 
 >[!div class="step-by-step"]
-[上一页] (infrastructure-persistence-layer-design.md) [下一页] (nosql-database-persistence-infrastructure.md)
+[上一页](infrastructure-persistence-layer-design.md)
+[下一页](nosql-database-persistence-infrastructure.md)

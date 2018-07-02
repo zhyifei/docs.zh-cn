@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ce4addefc7b6b1cf82551bf8304b7f06f1614796
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67560cc93b3d147be36a691af440bb78f2315557
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573810"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104999"
 ---
 # <a name="service-oriented-architecture"></a>面向服务的体系结构 
 
@@ -27,4 +27,5 @@ ms.locfileid: "33573810"
 
 
 >[!div class="step-by-step"]
-[上一页] (docker-application-state-data.md) [下一页] (microservices-architecture.md)
+[上一页](docker-application-state-data.md)
+[下一页](microservices-architecture.md)

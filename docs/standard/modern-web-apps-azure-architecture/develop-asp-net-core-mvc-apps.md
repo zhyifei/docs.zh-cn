@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 开�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: 59f0d46dadb736ad55e53f6715b7ca1b62e9cec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a90f88e117965aec1550a45f114cabfda5204468
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592400"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106588"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
@@ -552,4 +552,5 @@ ASP.NET Core 应用程序是控制台应用程序，服务器启动时必须启�
 > <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[上一篇] (common-client-side-web-technologies.md) [下一篇] (work-with-data-in-asp-net-core-apps.md)
+[上一页](common-client-side-web-technologies.md)
+[下一页](work-with-data-in-asp-net-core-apps.md)

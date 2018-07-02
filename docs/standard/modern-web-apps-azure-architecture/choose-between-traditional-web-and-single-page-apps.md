@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Microsoft Azure 构建新式 Web 应用程�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208137"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104761"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>在传统 Web 应用和单页应用 (SPA) 之间选择
 
@@ -92,4 +92,5 @@ SPA 可支持丰富客户端功能，当用户执行操作或在应用的各区�
   | 丰富而复杂的用户界面要求 | **受限** | **适合** |
 
 >[!div class="step-by-step"]
-[上一篇] (modern-web-applications-characteristics.md) [下一篇](architectural-principles.md)
+[上一页](modern-web-applications-characteristics.md)
+[下一页](architectural-principles.md)

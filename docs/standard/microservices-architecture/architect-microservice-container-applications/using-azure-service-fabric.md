@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: d65968e3d37f53cceee55120110ad4bb3c13d304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5058023aa7cbb42bcf39d061a3273b30e0e9b74c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577673"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105815"
 ---
 # <a name="using-azure-service-fabric"></a>使用 Azure Service Fabric
 
@@ -89,4 +89,5 @@ Service Fabric 充分展示了什么是一个好的平台，开发人员可在�
 请注意，Docker 容器本身是无状态的。 若要实现有状态服务，需到前面提到的某个级别更高的规范框架。 
 
 >[!div class="step-by-step"]
-[上一篇] (scalable-available-multi-container-microservice-applications.md) [下一篇] (../docker-application-development-process/index.md)
+[上一页](scalable-available-multi-container-microservice-applications.md)
+[下一页](../docker-application-development-process/index.md)

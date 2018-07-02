@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 520f2928eb0d300ab0dc2d328d974455e102e4d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579348"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105766"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>设计面向 DDD 的微服务
 
@@ -106,4 +106,5 @@ ms.locfileid: "33579348"
 
 
 >[!div class="step-by-step"]
-[上一项] (cqrs-microservice-reads.md) [下一项] (microservice-domain-model.md)
+[上一页](cqrs-microservice-reads.md)
+[下一页](microservice-domain-model.md)

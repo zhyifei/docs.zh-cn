@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: e2b0f1a6152df5d323164fb2eca102fcb973667e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb9bf51d947774cddd7b42ade0f05abc8fb3d7e9
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580225"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104748"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>使用 RabbitMQ 实现用于开发或测试环境的事件总线
 
@@ -111,4 +111,5 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 
 >[!div class="step-by-step"]
-[上一篇] (integration-event-based-microservice-communications.md) [下一篇] (subscribe-events.md)
+[上一页](integration-event-based-microservice-communications.md)
+[下一页](subscribe-events.md)

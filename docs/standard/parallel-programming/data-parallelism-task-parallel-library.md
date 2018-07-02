@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65084296cd4fb462670d0c4927b741a698a59da9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bf162a3ef9f66e7c7d74c96f13c055857818a2b
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584652"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070949"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>数据并行（任务并行库）
 *数据并行*指的是对源集合或数组的元素同时（即，并行）执行相同操作的场景。 在数据并行操作中，对源集合进行分区，以便多个线程能够同时在不同的网段上操作。  
@@ -47,7 +47,7 @@ ms.locfileid: "33584652"
 |[如何：编写简单的 Parallel.ForEach 循环](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|描述如何编写遍历任何 <xref:System.Collections.Generic.IEnumerable%601> 源集合的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环。|  
 |[如何：停止或中断 Parallel.For 循环](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|描述如何停止或中断并行循环，以便所有线程都获得该操作的通知。|  
 |[如何：编写具有线程局部变量的 Parallel.For 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|描述如何编写 <xref:System.Threading.Tasks.Parallel.For%2A> 循环，该循环中每个线程都维持有对其它任何线程不可见的私有变量，以及如何在循环完成时，同步所有线程的结果。|  
-|[如何：编写具有线程局部变量的 Parallel.ForEach 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|描述如何编写 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环，该循环中每个线程都维持有对其它任何线程不可见的私有变量，以及如何在循环完成时，同步所有线程的结果。|  
+|[如何：使用分区局部变量编写 Parallel.ForEach 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|描述如何编写 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环，该循环中每个线程都维持有对其它任何线程不可见的私有变量，以及如何在循环完成时，同步所有线程的结果。|  
 |[如何：取消 Parallel.For 或 ForEach Loop](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|描述如何通过使用 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 取消并行循环|  
 |[如何：加快小型循环体的速度](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|描述在循环主体极小时加快执行速度的方法。|  
 |[任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|提供任务并行库的概述。|  

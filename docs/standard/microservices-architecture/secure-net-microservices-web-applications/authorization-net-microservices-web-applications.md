@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2ea56f5a28d115fc5d91a98604b82565c8bf5c78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b2981579f28c083a31d7af6ae42f4e3ca8bbd88
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582816"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105496"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>关于 .NET 微服务和 Web 应用中的授权
 
@@ -129,4 +129,5 @@ ASP.NET Core [授权文档](https://docs.asp.net/en/latest/security/authorizatio
 
 
 >[!div class="step-by-step"]
-[Previous] (index.md) [Next] (developer-app-secrets-storage.md)
+[上一页](index.md)
+[下一页](developer-app-secrets-storage.md)

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 0e384fabca88d8ad6f93ae626140fb3d5dcaf971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c45fbb9f26e6cd315e1b623ba2c79d5d038a6919
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589316"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105295"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>决策表：用于 Docker 的 .NET Framework
 
@@ -58,4 +58,5 @@ ms.locfileid: "33589316"
     - 如果使用适用于 .NET Core 的客户端 API，还可选择 Linux 容器或 Windows 容器。
 
 >[!div class="step-by-step"]
-[上一页] (net-framework-container-scenarios.md) [下一页] (net-container-os-targets.md)
+[上一页](net-framework-container-scenarios.md)
+[下一页](net-container-os-targets.md)

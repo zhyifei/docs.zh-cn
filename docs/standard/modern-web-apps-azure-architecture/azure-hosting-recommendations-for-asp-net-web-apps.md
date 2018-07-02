@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 关�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: aea8a54bdee7eebd977f8b67d9888c2288dcd26d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 756f74cacec0a9f5be502ee02659510869d79746
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590327"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105704"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>关于 ASP.NET Core Web 应用的 Azure 托管建议
 
@@ -126,4 +126,4 @@ Azure 提供多种数据存储选择，以便应用程序可使用恰当的数�
     <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
-[上一篇] (development-process-for-azure.md)
+[上一篇](development-process-for-azure.md)

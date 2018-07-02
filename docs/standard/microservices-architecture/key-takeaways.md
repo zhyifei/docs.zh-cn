@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 880f99228dbfe7374878b497582ccf540658fc12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3366fa2494615db841b768f9149a070a65da58ee
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578178"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105509"
 ---
 # <a name="key-takeaways"></a>关键结论
 
@@ -38,4 +38,4 @@ ms.locfileid: "33578178"
 **业务流程协调程序。** 对于任何生产就绪的基于微服务的应用程序和任何具有显著复杂性、可伸缩性需求和不断发展的多容器应用程序，基于容器的业务流程协调程序（如 Azure 容器服务（Kubernetes、Mesos DC/OS 和 Docker Swarm）和 Azure Service Fabric 中所提供的那些）是不可或缺的。 本指南介绍了业务流程协调程序及其在基于微服务和基于容器的解决方案中的角色。 如果应用程序需要转移到复杂的容器化应用程序，建议查看其他资源以详细了解业务流程协调程序
 
 >[!div class="step-by-step"]
-[上一页] (secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+[上一篇](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

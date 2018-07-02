@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce2c47b172afee8745cdf5f68323d64dd550ea59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579140"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072951"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>使用 .NET 中的 StringBuilder 类
 <xref:System.String> 对象不可变。 每次使用 <xref:System.String?displayProperty=nameWithType> 类中的方法之一，都要在内存中新建字符串对象，这就需要为新对象分配新空间。 在需要重复修改字符串的情况下，与新建 <xref:System.String> 对象关联的开销可能会非常大。 若要修改字符串（而不新建对象），可以使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 类。 例如，如果在循环中将许多字符串连接在一起，使用 <xref:System.Text.StringBuilder> 类可以提升性能。  
@@ -43,7 +43,7 @@ ms.locfileid: "33579140"
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
 ## <a name="setting-the-capacity-and-length"></a>设置容量和长度  
- 虽然 <xref:System.Text.StringBuilder> 是动态对象，支持扩展它封装的字符串中的字符数，但可以指定值，作为对象可保留的字符数上限。 此值称为“对象容量”，不得将它与当前 <xref:System.Text.StringBuilder> 保留的字符串长度相混淆。 例如，可以使用长度为 5 的字符串“Hello”新建 <xref:System.Text.StringBuilder> 类的实例，同时可以指定此对象的最大容量为 25。 修改 <xref:System.Text.StringBuilder> 时，除非达到容量，否则对象不会为自己重新分配空间。 当达到容量时，将自动分配新的空间且容量翻倍。 可以使用重载的构造函数之一，指定 <xref:System.Text.StringBuilder> 类的容量。 下面的示例指定可以将 `MyStringBuilder` 对象增加到最多 25 个空间。  
+ 虽然 <xref:System.Text.StringBuilder> 是动态对象，支持扩展它封装的字符串中的字符数，但可以指定值，作为对象可保留的字符数上限。 此值称为“对象容量”，不得将它与当前 <xref:System.Text.StringBuilder> 保留的字符串长度相混淆。 例如，可以使用长度为 5 的字符串“Hello”新建 <xref:System.Text.StringBuilder> 类的实例，同时可以指定此对象的最大容量为 25。 修改 <xref:System.Text.StringBuilder> 时，除非达到容量，否则对象不会为自己重新分配空间。 当达到容量时，将自动分配新的空间且容量翻倍。 可以使用重载的构造函数之一，指定 <xref:System.Text.StringBuilder> 类的容量。 下面的示例指定可以将 `myStringBuilder` 对象增加到最多 25 个空间。  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]

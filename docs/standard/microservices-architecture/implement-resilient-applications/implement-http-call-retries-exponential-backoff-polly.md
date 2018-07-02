@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 66ac57fc824e01f96d6584ab86bb95ba1b0174a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cce1392bb381859e7cad89c9f2518113241ae724
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576976"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106926"
 ---
 # <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a>使用 Polly 实现使用指数退避算法的 HTTP 调用重试
 
@@ -171,4 +171,5 @@ private Policy[] CreatePolicies()
 
 
 >[!div class="step-by-step"]
-[上一篇] (implement-custom-http-call-retries-exponential-backoff.md) [下一篇] (implement-circuit-breaker-pattern.md)
+[上一页](implement-custom-http-call-retries-exponential-backoff.md)
+[下一页](implement-circuit-breaker-pattern.md)

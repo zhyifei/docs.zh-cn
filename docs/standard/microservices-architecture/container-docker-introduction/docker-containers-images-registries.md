@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 02ee40ebab37ae1898dc46e215728cba512a23e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4716159d052fd8e229ac42e5d17c72717ac86d9f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574081"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106455"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和注册表
 
@@ -34,4 +34,5 @@ ms.locfileid: "33574081"
 -   在映像和所选部署环境之间，希望网络延迟保持最低。 例如，如果生产环境是 Azure 云，为实现最低的网络延迟，可将映像存储在 Azure 容器注册表中。 同样，如果生产环境是在本地，便需要使本地 Docker 信任的注册表在相同的本地网络中可用。
 
 >[!div class="step-by-step"]
-[上一篇] (docker-terminology.md) [下一篇] (../net-core-net-framework-containers/index.md)
+[上一页](docker-terminology.md)
+[下一页](../net-core-net-framework-containers/index.md)

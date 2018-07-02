@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: 8ff6afbe9618df918e0a965fa1202bbb999eee5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42b0bf43ace00b1eb4b48c39604b89ea76c99220
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578165"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106144"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>使用作为容器而运行的数据库服务器
 
@@ -201,4 +201,5 @@ docker-compose.yml 中的这段代码基于 redis 映像定义了一个名为 ba
 
 
 >[!div class="step-by-step"]
-[Previous] (multi-container-applications-docker-compose.md) [Next] (integration-event-based-microservice-communications.md)
+[上一页](multi-container-applications-docker-compose.md)
+[下一页](integration-event-based-microservice-communications.md)

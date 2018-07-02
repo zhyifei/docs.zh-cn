@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b3aa0d50ba3ab64440ef51201d611177fea78ce4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e06f582677e61209d0b226fc68bca81dfe593e5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582670"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104395"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>测试 ASP.NET Core 服务和 Web 应用
 
@@ -124,4 +124,5 @@ public class PrimeWebDefaultRequestShould
 compose 应用程序运行后，如果运行 Visual Studio，可利用断点和异常。 或者可在 Visual Studio Team Services 或其他任何支持 Docker 容器的 CI/CD 系统中的 CI 管道中自动运行集成测试。
 
 >[!div class="step-by-step"]
-[Previous] (subscribe-events.md) [Next] (../microservice-ddd-cqrs-patterns/index.md)
+[上一页](subscribe-events.md)
+[下一页](../microservice-ddd-cqrs-patterns/index.md)

@@ -4,12 +4,12 @@ description: 了解如何将 .NET Framework 中的库项目移植到 .NET Core�
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 88513eaee35a82d6424fc2218f8cbbe635a8e02c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218353"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028040"
 ---
 # <a name="porting-to-net-core---libraries"></a>移植到 .NET Core - 库
 
@@ -72,18 +72,6 @@ AppDomain 可将应用相互隔离。 AppDomain 需要运行时支持并且通�
 与 CAS 相似，借助安全透明度可以以声明性方式将沙盒代码与安全关键代码隔离，但是[不再支持将它作为安全边界](~/docs/framework/misc/security-transparent-code.md)。 Silverlight 大规模使用了此功能。 
 
 可使用操作系统提供的安全边界，例如虚拟化、容器或用于运行进程的用户帐户具有最少的一组特权。
-
-### <a name="globaljson"></a>global.json
-
-global.json 文件是可选文件，可以通过它设置项目的 .NET Core 工具版本。 如果正在使用 .NET Core 进行每日构建，并且想要指定 SDK 的特定版本，则可使用 global.json 文件指定该版本。 其通常位于当前的工作目录或其父目录之一。 
-
-```json
-{
-  "sdk": {
-    "version": "2.1.0-preview1-006491"
-  }
-}
-```
 
 ## <a name="converting-a-pcl-project"></a>转换 PCL 项目
 

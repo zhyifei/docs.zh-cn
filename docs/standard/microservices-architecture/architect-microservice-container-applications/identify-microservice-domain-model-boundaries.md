@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: b11d2838539b8ddbe21bcfcb77845a10e466c760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb02d2102659abd910f9a7e62652511c65574ab7
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578101"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106231"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>标识每个微服务的域模型边界
 
@@ -53,4 +53,5 @@ ms.locfileid: "33578101"
 
 
 >[!div class="step-by-step"]
-[上一篇] (distributed-data-management.md) [下一篇] (direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+[上一页](distributed-data-management.md)
+[下一页](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: e8552f79a4196c161ec70d7ea46156215e52db26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aab939af29849ceeef76d6f61b3d4f59d701094c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578880"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105457"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -135,4 +135,5 @@ ACS 当前可用于 Azure 中的标准 A、D、DS、G 和 GS 系列 Linux 虚拟
 
 
 >[!div class="step-by-step"]
-[上一页] (resilient-high-availability-microservices.md) [下一页] (using-azure-service-fabric.md)
+[上一页](resilient-high-availability-microservices.md)
+[下一页](using-azure-service-fabric.md)

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: c5cfe617335d8150d069149ac87f79206b1b5eca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1469038af29167f7dbb1a161b951eee742cf4bec
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578650"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105613"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据
 
@@ -59,4 +59,5 @@ Azure 存储。 业务数据通常需要放在外部资源或数据库中，如 
 
 
 >[!div class="step-by-step"]
-[上一篇] (containerize-monolithic-applications.md) [下一篇] (service-oriented-architecture.md)
+[上一页](containerize-monolithic-applications.md)
+[下一页](service-oriented-architecture.md)

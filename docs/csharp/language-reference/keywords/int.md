@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-ms.openlocfilehash: c7d9bb0ee3d59ef3e0cf56d26e73a925fcfb4206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41ee5ecdae815eaddf8652a4873c060fb8f92bc3
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275286"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028261"
 ---
 # <a name="int-c-reference"></a>int（C# 参考）
 
 `int` 表示一种整型类型，该类型根据下表显示的大小和范围存储值。  
   
-|类型|范围|大小|.NET Framework 类型|默认值|  
-|----------|-----------|----------|-------------------------|-------------------|  
-|`int`|-2,147,483,648 到 2,147,483,647|带符号的 32 位整数|<xref:System.Int32?displayProperty=nameWithType>|0|  
+|类型|范围|大小|.NET 类型|  
+|----------|-----------|----------|-------------------------|  
+|`int`|-2,147,483,648 到 2,147,483,647|带符号的 32 位整数|<xref:System.Int32?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>文本  
  

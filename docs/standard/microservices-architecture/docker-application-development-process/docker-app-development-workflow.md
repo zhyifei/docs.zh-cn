@@ -4,12 +4,12 @@ description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 2e29e88a104050230b7816da6793120d61de7bc6
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 0627a61e910b1d278fd2e604dd8de7021fdb0fed
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314947"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106212"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 应用开发工作流
 
@@ -421,4 +421,5 @@ RUN powershell add-windowsfeature web-asp-net45
     [*https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
 
 >[!div class="step-by-step"]
-[上一篇] (index.md) [下一篇] (../net-core-single-containers-linux-windows-server-hosts/index.md)
+[上一页](index.md)
+[下一页](../net-core-single-containers-linux-windows-server-hosts/index.md)
