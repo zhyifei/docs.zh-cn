@@ -4,12 +4,12 @@ description: 浏览 ML.NET 中支持的不同机器学习任务。
 ms.date: 06/04/2018
 author: aditidugar
 ms.author: johalex
-ms.openlocfilehash: 22249ac2d275a4168dbd8b03b90d9698fe90f2d1
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 875006a9cddb87b5f9436b78773420858fd842dd
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34860640"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207713"
 ---
 # <a name="machine-learning-tasks"></a>机器学习任务
 
@@ -29,13 +29,17 @@ ms.locfileid: "34860640"
 * 诊断患者是否患有某种疾病。
 * 决定是否要将电子邮件标记为“垃圾邮件”。
 
-## <a name="multi-class-classification"></a>多类分类
+有关详细信息，请参阅 Wikipedia 上的[二元分类](https://en.wikipedia.org/wiki/Binary_classification)一文。
+
+## <a name="multiclass-classification"></a>多类分类
 
 [监管式机器学习](glossary.md#supervised-machine-learning)任务，用于预测数据实例的类（类别）。 分类算法输入是一组标记示例。 每个标签是 0 到 k-1 之间的整数，其中 k 表示类的数目。 分类算法的输出是一个分类器，可用于预测未标记的新实例的类。 多类分类方案示例包括：
 
 * 确定狗的品种是“西伯利亚哈士奇”、“金毛寻回犬”、“贵宾犬”等。
 * 了解电影评论是“正面”、“中立”还是“负面”。
 * 将酒店评语分类为“位置”、“价格”、“整洁度”等。
+
+有关详细信息，请参阅 Wikipedia 上的[多类分类](https://en.wikipedia.org/wiki/Multiclass_classification)一文。
 
 ## <a name="regression"></a>回归
 

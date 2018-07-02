@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63767a3ba2831ca9cadd9b99998eb871780143e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579036"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105649"
 ---
 # <a name="file-and-stream-io"></a>文件和流 I/O
 文件和流 I/O（输入/输出）是指在存储媒介中传入或传出数据。 在 .NET Framework 中，`System.IO` 命名空间包含允许以异步方式和同步方式对数据流和文件进行读取和写入操作的类型。 这些命名空间还包含对文件执行压缩和解压缩的类型，以及通过管道和串行端口启用通信的类型。  
@@ -26,6 +26,8 @@ ms.locfileid: "33579036"
   
 ## <a name="files-and-directories"></a>文件和目录  
  你可以使用 <xref:System.IO?displayProperty=nameWithType> 命名空间中的类型与文件和目录进行交互。 例如，你可以获取和设置文件和目录的属性，并基于搜索条件检索文件和目录的集合。  
+
+若要深入了解 Windows 系统中的路径命名约定和 文件路径的表示方式，包括在 .NET Core 1.1 及更高版本和 .NET Framework 4.6.2 及更高版本中支持的 DOS 设备语法，请参阅 [ Windows 系统中的文件路径格式](file-path-formats.md)。 
   
  下面是一些常用的文件和目录类：  
   
