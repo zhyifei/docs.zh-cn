@@ -4,7 +4,7 @@
 #### [如何：编写简单的 Parallel.For 循环](how-to-write-a-simple-parallel-for-loop.md)
 #### [如何：编写简单的 Parallel.ForEach 循环](how-to-write-a-simple-parallel-foreach-loop.md)
 #### [如何：编写具有线程局部变量的 Parallel.For 循环](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
-#### [如何：编写具有线程局部变量的 Parallel.ForEach 循环](how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)
+#### [如何：使用分区局部变量编写 Parallel.ForEach 循环](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)
 #### [如何：取消 Parallel.For 或 ForEach Loop](how-to-cancel-a-parallel-for-or-foreach-loop.md)
 #### [如何：处理并行循环中的异常](how-to-handle-exceptions-in-parallel-loops.md)
 #### [如何：加快小型循环体的速度](how-to-speed-up-small-loop-bodies.md)

@@ -1,173 +1,165 @@
 ---
 title: Docker 中托管的微服务 - C#
 description: 了解如何创建在 Docker 容器中运行的 ASP.NET Core 服务
-ms.date: 02/03/2017
+ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 7428051c1d9a29ba98ca1f28288b3c50ea36ae1a
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: b043b0109bcf8a67867d2c73a5ab22e43a4963cf
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207873"
 ---
-# <a name="microservices-hosted-in-docker"></a><span data-ttu-id="ea7f6-103">Docker 中托管的微服务</span><span class="sxs-lookup"><span data-stu-id="ea7f6-103">Microservices hosted in Docker</span></span>
+# <a name="microservices-hosted-in-docker"></a><span data-ttu-id="18975-103">Docker 中托管的微服务</span><span class="sxs-lookup"><span data-stu-id="18975-103">Microservices hosted in Docker</span></span>
 
-<span data-ttu-id="ea7f6-104">此教程将详细介绍在 Docker 容器中生成和部署 ASP.NET Core 微服务时必须完成的任务。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-104">This tutorial details the tasks necessary to build and deploy an ASP.NET Core microservice in a Docker container.</span></span> <span data-ttu-id="ea7f6-105">在此教程中，你将了解：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-105">During the course of this tutorial, you'll learn:</span></span>
+<span data-ttu-id="18975-104">此教程将详细介绍在 Docker 容器中生成和部署 ASP.NET Core 微服务时必须完成的任务。</span><span class="sxs-lookup"><span data-stu-id="18975-104">This tutorial details the tasks necessary to build and deploy an ASP.NET Core microservice in a Docker container.</span></span> <span data-ttu-id="18975-105">在此教程中，你将了解：</span><span class="sxs-lookup"><span data-stu-id="18975-105">During the course of this tutorial, you'll learn:</span></span>
 
-* <span data-ttu-id="ea7f6-106">如何使用 Yeoman 生成 ASP.NET Core 应用程序</span><span class="sxs-lookup"><span data-stu-id="ea7f6-106">How to generate an ASP.NET Core application using Yeoman</span></span>
-* <span data-ttu-id="ea7f6-107">如何创建 Docker 开发环境</span><span class="sxs-lookup"><span data-stu-id="ea7f6-107">How to create a development Docker environment</span></span>
-* <span data-ttu-id="ea7f6-108">如何根据现有映像生成 Docker 映像。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-108">How to build a Docker image based on an existing image.</span></span>
-* <span data-ttu-id="ea7f6-109">如何将服务部署到 Docker 容器中。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-109">How to deploy your service into a Docker container.</span></span>
+* <span data-ttu-id="18975-106">如何生成 ASP.NET Core 应用程序。</span><span class="sxs-lookup"><span data-stu-id="18975-106">How to generate an ASP.NET Core application.</span></span>
+* <span data-ttu-id="18975-107">如何创建 Docker 开发环境。</span><span class="sxs-lookup"><span data-stu-id="18975-107">How to create a development Docker environment.</span></span>
+* <span data-ttu-id="18975-108">如何根据现有映像生成 Docker 映像。</span><span class="sxs-lookup"><span data-stu-id="18975-108">How to build a Docker image based on an existing image.</span></span>
+* <span data-ttu-id="18975-109">如何将服务部署到 Docker 容器中。</span><span class="sxs-lookup"><span data-stu-id="18975-109">How to deploy your service into a Docker container.</span></span>
 
-<span data-ttu-id="ea7f6-110">与此同时，你还将了解下面这些 C# 语言功能：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-110">Along the way, you'll also see some C# language features:</span></span>
+<span data-ttu-id="18975-110">与此同时，你还将了解下面这些 C# 语言功能：</span><span class="sxs-lookup"><span data-stu-id="18975-110">Along the way, you'll also see some C# language features:</span></span>
 
-* <span data-ttu-id="ea7f6-111">如何将 C# 对象转换成 JSON 有效负载。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-111">How to convert C# objects into JSON payloads.</span></span>
-* <span data-ttu-id="ea7f6-112">如何生成不可变的数据传输对象</span><span class="sxs-lookup"><span data-stu-id="ea7f6-112">How to build immutable Data Transfer Objects</span></span>
-* <span data-ttu-id="ea7f6-113">如何处理传入的 HTTP 请求并生成 HTTP 响应</span><span class="sxs-lookup"><span data-stu-id="ea7f6-113">How to process incoming HTTP Requests and generate the HTTP Response</span></span>
-* <span data-ttu-id="ea7f6-114">如何使用可以为 null 的值类型</span><span class="sxs-lookup"><span data-stu-id="ea7f6-114">How to work with nullable value types</span></span>
+* <span data-ttu-id="18975-111">如何将 C# 对象转换成 JSON 有效负载。</span><span class="sxs-lookup"><span data-stu-id="18975-111">How to convert C# objects into JSON payloads.</span></span>
+* <span data-ttu-id="18975-112">如何生成不可变的数据传输对象。</span><span class="sxs-lookup"><span data-stu-id="18975-112">How to build immutable Data Transfer Objects.</span></span>
+* <span data-ttu-id="18975-113">如何处理传入的 HTTP 请求并生成 HTTP 响应。</span><span class="sxs-lookup"><span data-stu-id="18975-113">How to process incoming HTTP Requests and generate the HTTP Response.</span></span>
+* <span data-ttu-id="18975-114">如何使用可以为 null 的值类型。</span><span class="sxs-lookup"><span data-stu-id="18975-114">How to work with nullable value types.</span></span>
 
-<span data-ttu-id="ea7f6-115">你可以[查看或下载本主题的示例应用](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice)。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-115">You can [view or download the sample app](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) for this topic.</span></span> <span data-ttu-id="ea7f6-116">有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-116">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
+<span data-ttu-id="18975-115">你可以[查看或下载本主题的示例应用](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice)。</span><span class="sxs-lookup"><span data-stu-id="18975-115">You can [view or download the sample app](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) for this topic.</span></span> <span data-ttu-id="18975-116">有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。</span><span class="sxs-lookup"><span data-stu-id="18975-116">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-### <a name="why-docker"></a><span data-ttu-id="ea7f6-117">为什么要使用 Docker？</span><span class="sxs-lookup"><span data-stu-id="ea7f6-117">Why Docker?</span></span>
+## <a name="why-docker"></a><span data-ttu-id="18975-117">为什么要使用 Docker？</span><span class="sxs-lookup"><span data-stu-id="18975-117">Why Docker?</span></span>
 
-<span data-ttu-id="ea7f6-118">使用 Docker，可以轻松地创建标准计算机映像，从而在数据中心或公有云中托管服务。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-118">Docker makes it easy to create standard machine images to host your services in a data center, or the public cloud.</span></span> <span data-ttu-id="ea7f6-119">使用 Docker，可以配置映像，并根据需要复制映像来扩展应用程序安装。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-119">Docker enables you to configure the image, and replicate it as needed to scale the installation of your application.</span></span>
+<span data-ttu-id="18975-118">使用 Docker，可以轻松地创建标准计算机映像，从而在数据中心或公有云中托管服务。</span><span class="sxs-lookup"><span data-stu-id="18975-118">Docker makes it easy to create standard machine images to host your services in a data center, or the public cloud.</span></span> <span data-ttu-id="18975-119">使用 Docker，可以配置映像，并根据需要复制映像来扩展应用程序安装。</span><span class="sxs-lookup"><span data-stu-id="18975-119">Docker enables you to configure the image, and replicate it as needed to scale the installation of your application.</span></span>
 
-<span data-ttu-id="ea7f6-120">此教程中的所有代码适用于任何 .NET Core 环境。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-120">All the code in this tutorial will work in any .NET Core environment.</span></span>
-<span data-ttu-id="ea7f6-121">附加 Docker 安装任务适用于 ASP.NET Core 应用程序。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-121">The additional tasks for a Docker installation will work for an ASP.NET Core application.</span></span> 
+<span data-ttu-id="18975-120">此教程中的所有代码适用于任何 .NET Core 环境。</span><span class="sxs-lookup"><span data-stu-id="18975-120">All the code in this tutorial will work in any .NET Core environment.</span></span>
+<span data-ttu-id="18975-121">附加 Docker 安装任务适用于 ASP.NET Core 应用程序。</span><span class="sxs-lookup"><span data-stu-id="18975-121">The additional tasks for a Docker installation will work for an ASP.NET Core application.</span></span> 
 
-## <a name="prerequisites"></a><span data-ttu-id="ea7f6-122">系统必备</span><span class="sxs-lookup"><span data-stu-id="ea7f6-122">Prerequisites</span></span>
-<span data-ttu-id="ea7f6-123">必须将计算机设置为运行 .Net Core。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-123">You’ll need to setup your machine to run .NET core.</span></span> <span data-ttu-id="ea7f6-124">有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-124">You can find the installation instructions on the [.NET Core](https://www.microsoft.com/net/core) page.</span></span>
-<span data-ttu-id="ea7f6-125">可以在 Windows、Ubuntu Linux、macOS 或 Docker 容器中运行此应用程序。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-125">You can run this application on Windows, Ubuntu Linux, macOS or in a Docker container.</span></span> <span data-ttu-id="ea7f6-126">必须安装常用的代码编辑器。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-126">You’ll need to install your favorite code editor.</span></span> <span data-ttu-id="ea7f6-127">在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-127">The descriptions below use [Visual Studio Code](https://code.visualstudio.com/) which is an open source, cross platform editor.</span></span> <span data-ttu-id="ea7f6-128">不过，你可以使用习惯使用的任意工具。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-128">However, you can use whatever tools you are comfortable with.</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="18975-122">系统必备</span><span class="sxs-lookup"><span data-stu-id="18975-122">Prerequisites</span></span>
 
-<span data-ttu-id="ea7f6-129">还必须安装 Docker 引擎。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-129">You'll also need to install the Docker engine.</span></span> <span data-ttu-id="ea7f6-130">请参阅 [Docker 安装页](http://www.docker.com/products/docker)，了解适用于自己的平台的说明。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-130">See the [Docker Installation page](http://www.docker.com/products/docker) for instructions for your platform.</span></span>
-<span data-ttu-id="ea7f6-131">可以在许多 Linux 发行版本、macOS 或 Windows 中安装 Docker。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-131">Docker can be installed in many Linux distributions, macOS, or Windows.</span></span> <span data-ttu-id="ea7f6-132">上面引用的页面分部分提供了各个可安装的版本。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-132">The page referenced above contains sections to each of the available installations.</span></span>
+<span data-ttu-id="18975-123">必须将计算机设置为运行 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="18975-123">You’ll need to setup your machine to run .NET Core.</span></span> <span data-ttu-id="18975-124">有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。</span><span class="sxs-lookup"><span data-stu-id="18975-124">You can find the installation instructions on the [.NET Core](https://www.microsoft.com/net/core) page.</span></span>
+<span data-ttu-id="18975-125">可以在 Windows、Linux、macOS 或 Docker 容器中运行此应用程序。</span><span class="sxs-lookup"><span data-stu-id="18975-125">You can run this application on Windows, Linux, macOS or in a Docker container.</span></span>
+<span data-ttu-id="18975-126">必须安装常用的代码编辑器。</span><span class="sxs-lookup"><span data-stu-id="18975-126">You’ll need to install your favorite code editor.</span></span> <span data-ttu-id="18975-127">在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。</span><span class="sxs-lookup"><span data-stu-id="18975-127">The descriptions below use [Visual Studio Code](https://code.visualstudio.com/) which is an open source, cross platform editor.</span></span> <span data-ttu-id="18975-128">不过，你可以使用习惯使用的任意工具。</span><span class="sxs-lookup"><span data-stu-id="18975-128">However, you can use whatever tools you are comfortable with.</span></span>
 
-<span data-ttu-id="ea7f6-133">大多数组件的安装是通过程序包管理器完成的。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-133">Most components to be installed are done by a package manager.</span></span> <span data-ttu-id="ea7f6-134">如果已安装 node.js 的程序包管理器 `npm`，可跳过这一步。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-134">If you have node.js's package manager `npm` installed you can skip this step.</span></span> <span data-ttu-id="ea7f6-135">否则，请从 [nodejs.org](https://nodejs.org) 下载并安装最新的 NodeJs，即会安装 npm 程序包管理器。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-135">Otherwise install the latest NodeJs from [nodejs.org](https://nodejs.org) which will install the npm package manager.</span></span> 
+<span data-ttu-id="18975-129">还必须安装 Docker 引擎。</span><span class="sxs-lookup"><span data-stu-id="18975-129">You'll also need to install the Docker engine.</span></span> <span data-ttu-id="18975-130">请参阅 [Docker 安装页](http://www.docker.com/products/docker)，了解适用于自己的平台的说明。</span><span class="sxs-lookup"><span data-stu-id="18975-130">See the [Docker Installation page](http://www.docker.com/products/docker) for instructions for your platform.</span></span>
+<span data-ttu-id="18975-131">可以在许多 Linux 发行版本、macOS 或 Windows 中安装 Docker。</span><span class="sxs-lookup"><span data-stu-id="18975-131">Docker can be installed in many Linux distributions, macOS, or Windows.</span></span> <span data-ttu-id="18975-132">上面引用的页面分部分提供了各个可安装的版本。</span><span class="sxs-lookup"><span data-stu-id="18975-132">The page referenced above contains sections to each of the available installations.</span></span>
 
-<span data-ttu-id="ea7f6-136">此时，需要安装许多支持 ASP.NET Core 开发的命令行工具。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-136">At this point you will need to install a number of command line tools that support ASP.NET core development.</span></span> <span data-ttu-id="ea7f6-137">命令行模板使用 Yeoman、Bower、Grunt、和 Gulp。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-137">The command line templates use Yeoman, Bower, Grunt, and Gulp.</span></span> <span data-ttu-id="ea7f6-138">如果已全部安装，可继续执行其他操作；否则，请在常用的命令行管理程序中键入以下命令：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-138">If you have them installed that is good, otherwise type the following into your favorite shell:</span></span>
+## <a name="create-the-application"></a><span data-ttu-id="18975-133">创建应用程序</span><span class="sxs-lookup"><span data-stu-id="18975-133">Create the Application</span></span>
 
-`npm install -g yo bower grunt-cli gulp`
-
-<span data-ttu-id="ea7f6-139">`-g` 选项指明此为全局安装，这些工具可在整个系统范围内使用。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-139">The `-g` option indicates that it is a global install, and those tools are available system wide.</span></span> <span data-ttu-id="ea7f6-140">（本地安装将包限定为只能供一个项目使用。）</span><span class="sxs-lookup"><span data-stu-id="ea7f6-140">(A local install scopes the package to a single project).</span></span> <span data-ttu-id="ea7f6-141">安装这些核心工具后，必须安装 Yeoman ASP.NET 模板生成器：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-141">Once you've installed those core tools, you need to install the yeoman ASP.NET template generators:</span></span>
-
-`npm install -g generator-aspnet`
-
-## <a name="create-the-application"></a><span data-ttu-id="ea7f6-142">创建应用程序</span><span class="sxs-lookup"><span data-stu-id="ea7f6-142">Create the Application</span></span>
-
-<span data-ttu-id="ea7f6-143">至此，你已安装所有工具，是时候新建 ASP.NET Core 应用程序了。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-143">Now that you've installed all the tools, create a new ASP.NET Core application.</span></span> <span data-ttu-id="ea7f6-144">若要使用命令行生成器，请在常用的命令行管理程序中执行以下 Yeoman 命令：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-144">To use the command line generator, execute the following yeoman command in your favorite shell:</span></span>
-
-`yo aspnet`
-
-<span data-ttu-id="ea7f6-145">此命令会提示你选择要创建的应用程序类型。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-145">This command prompts you to select what Type of application you want to create.</span></span> <span data-ttu-id="ea7f6-146">对于此微服务，需要的是最简单最轻量级的 Web 应用程序，因此选择“空 Web 应用程序”。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-146">For this microservice, you want the simplest, most lightweight web application possible, so select 'Empty Web Application'.</span></span> <span data-ttu-id="ea7f6-147">此模板会提示你选择名称。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-147">The template will prompt you for a name.</span></span> <span data-ttu-id="ea7f6-148">选择“WeatherMicroservice”。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-148">Select 'WeatherMicroservice'.</span></span> 
-
-<span data-ttu-id="ea7f6-149">此模板将为你创建以下八个文件：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-149">The template creates eight files for you:</span></span>
-
-* <span data-ttu-id="ea7f6-150">为 ASP.NET Core 应用程序定制的 .gitignore 文件。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-150">A .gitignore, customized for ASP.NET Core applications.</span></span>
-* <span data-ttu-id="ea7f6-151">Startup.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-151">A Startup.cs file.</span></span> <span data-ttu-id="ea7f6-152">其中包含应用程序的基本内容。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-152">This contains the basis of the application.</span></span>
-* <span data-ttu-id="ea7f6-153">Program.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-153">A Program.cs file.</span></span> <span data-ttu-id="ea7f6-154">其中包含应用程序的入口点。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-154">This contains the entry point of the application.</span></span>
-* <span data-ttu-id="ea7f6-155">WeatherMicroservice.csproj 文件。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-155">A WeatherMicroservice.csproj file.</span></span> <span data-ttu-id="ea7f6-156">这是应用程序的生成文件。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-156">This is the build file for the application.</span></span>
-* <span data-ttu-id="ea7f6-157">Dockerfile。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-157">A Dockerfile.</span></span> <span data-ttu-id="ea7f6-158">此脚本将创建应用程序的 Docker 映像。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-158">This script creates a Docker image for the application.</span></span>
-* <span data-ttu-id="ea7f6-159">README.md 文件。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-159">A README.md.</span></span> <span data-ttu-id="ea7f6-160">其中包含指向其他 ASP.NET Core 资源的链接。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-160">This contains links to other ASP.NET Core resources.</span></span>
-* <span data-ttu-id="ea7f6-161">web.config 文件。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-161">A web.config file.</span></span> <span data-ttu-id="ea7f6-162">其中包含基本配置信息。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-162">This contains basic configuration information.</span></span>
-* <span data-ttu-id="ea7f6-163">runtimeconfig.template.json 文件。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-163">A runtimeconfig.template.json file.</span></span> <span data-ttu-id="ea7f6-164">其中包含 IDE 使用的调试设置。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-164">This contains debugging settings used by IDEs.</span></span>
-
-<span data-ttu-id="ea7f6-165">现在可以运行模板生成的应用程序了。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-165">Now you can run the template generated application.</span></span> <span data-ttu-id="ea7f6-166">为此，可通过命令行使用一系列工具。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-166">That's done using a series of tools from the command line.</span></span> <span data-ttu-id="ea7f6-167">`dotnet` 命令可运行 .NET 开发所需的工具。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-167">The `dotnet` command runs the tools necessary for .NET development.</span></span> <span data-ttu-id="ea7f6-168">每个谓词执行一个不同的命令</span><span class="sxs-lookup"><span data-stu-id="ea7f6-168">Each verb executes a different command</span></span>
-
-<span data-ttu-id="ea7f6-169">第一步是还原所有依赖项：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-169">The first step is to restore all the dependencies:</span></span>
+<span data-ttu-id="18975-134">至此，你已安装所有工具，是时候新建 ASP.NET Core 应用程序了。</span><span class="sxs-lookup"><span data-stu-id="18975-134">Now that you've installed all the tools, create a new ASP.NET Core application.</span></span> <span data-ttu-id="18975-135">为此，请创建一个名为“WeatherMicroservice”的新目录，并在喜欢的 shell 中的该目录中执行以下命令：</span><span class="sxs-lookup"><span data-stu-id="18975-135">To do that, create a new directory called "WeatherMicroservice" and execute the following command in that directory in your favorite shell:</span></span>
 
 ```console
-dotnet restore
+dotnet new web
 ```
 
-<span data-ttu-id="ea7f6-170">dotnet restore 使用 NuGet 程序包管理器将所有必需包安装到应用程序目录中。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-170">Dotnet restore uses the NuGet package manager to install all the necessary packages into the application directory.</span></span> <span data-ttu-id="ea7f6-171">还将生成 project.json.lock 文件。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-171">It also generates a project.json.lock file.</span></span> <span data-ttu-id="ea7f6-172">此文件包含引用的各个包的相关信息。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-172">This file contains information about each package that is referenced.</span></span> <span data-ttu-id="ea7f6-173">还原所有依赖项后，生成应用程序：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-173">After restoring all the dependencies, you build the application:</span></span>
+<span data-ttu-id="18975-136">`dotnet` 命令可运行 .NET 开发所需的工具。</span><span class="sxs-lookup"><span data-stu-id="18975-136">The `dotnet` command runs the tools necessary for .NET development.</span></span> <span data-ttu-id="18975-137">每个谓词执行一个不同的命令。</span><span class="sxs-lookup"><span data-stu-id="18975-137">Each verb executes a different command.</span></span>
 
-```console
-dotnet build
-```
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+<span data-ttu-id="18975-138">`dotnet new` 命令用于创建 .Net Core 项目。</span><span class="sxs-lookup"><span data-stu-id="18975-138">The `dotnet new` command is used to create .Net Core projects.</span></span>
 
-<span data-ttu-id="ea7f6-174">生成应用程序后，使用命令行运行程序：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-174">And once you build the application, you run it from the command line:</span></span>
+<span data-ttu-id="18975-139">对于此微服务，我们需要尽可能简单、轻型的 Web 应用程序，因此我们使用了“ASP.NET Core 空”模板，并指定其短名称为 `web`。</span><span class="sxs-lookup"><span data-stu-id="18975-139">For this microservice, we want the simplest, most lightweight web application possible, so we used the "ASP.NET Core Empty" template, by specifying its short name, `web`.</span></span>
+
+<span data-ttu-id="18975-140">此模板将为你创建以下四个文件：</span><span class="sxs-lookup"><span data-stu-id="18975-140">The template creates four files for you:</span></span>
+
+* <span data-ttu-id="18975-141">Startup.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="18975-141">A Startup.cs file.</span></span> <span data-ttu-id="18975-142">其中包含应用程序的基本内容。</span><span class="sxs-lookup"><span data-stu-id="18975-142">This contains the basis of the application.</span></span>
+* <span data-ttu-id="18975-143">Program.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="18975-143">A Program.cs file.</span></span> <span data-ttu-id="18975-144">其中包含应用程序的入口点。</span><span class="sxs-lookup"><span data-stu-id="18975-144">This contains the entry point of the application.</span></span>
+* <span data-ttu-id="18975-145">WeatherMicroservice.csproj 文件。</span><span class="sxs-lookup"><span data-stu-id="18975-145">A WeatherMicroservice.csproj file.</span></span> <span data-ttu-id="18975-146">这是应用程序的生成文件。</span><span class="sxs-lookup"><span data-stu-id="18975-146">This is the build file for the application.</span></span>
+* <span data-ttu-id="18975-147">Properties/launchSettings.json 文件。</span><span class="sxs-lookup"><span data-stu-id="18975-147">A Properties/launchSettings.json file.</span></span> <span data-ttu-id="18975-148">其中包含 IDE 使用的调试设置。</span><span class="sxs-lookup"><span data-stu-id="18975-148">This contains debugging settings used by IDEs.</span></span>
+
+<span data-ttu-id="18975-149">现在可以运行模板生成的应用程序了：</span><span class="sxs-lookup"><span data-stu-id="18975-149">Now you can run the template generated application:</span></span>
 
 ```console
 dotnet run
 ```
 
-<span data-ttu-id="ea7f6-175">默认配置侦听的是 `http://localhost:5000`。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-175">The default configuration listens to `http://localhost:5000`.</span></span> <span data-ttu-id="ea7f6-176">可以打开浏览器并转到相应页面，看到的是“Hello World!”</span><span class="sxs-lookup"><span data-stu-id="ea7f6-176">You can open a browser and navigate to that page and see a "Hello World!"</span></span> <span data-ttu-id="ea7f6-177">消息。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-177">message.</span></span>
+<span data-ttu-id="18975-150">此命令将首先还原生成应用程序所需的依赖项，然后生成应用程序。</span><span class="sxs-lookup"><span data-stu-id="18975-150">This command will first restore dependencies required to build the application and then it will build the application.</span></span>
 
-### <a name="anatomy-of-an-aspnet-core-application"></a><span data-ttu-id="ea7f6-178">ASP.NET Core 应用程序剖析</span><span class="sxs-lookup"><span data-stu-id="ea7f6-178">Anatomy of an ASP.NET Core application</span></span>
+<span data-ttu-id="18975-151">默认配置侦听的是 `http://localhost:5000`。</span><span class="sxs-lookup"><span data-stu-id="18975-151">The default configuration listens to `http://localhost:5000`.</span></span> <span data-ttu-id="18975-152">可以打开浏览器并转到相应页面，看到的是“Hello World!”</span><span class="sxs-lookup"><span data-stu-id="18975-152">You can open a browser and navigate to that page and see a "Hello World!"</span></span> <span data-ttu-id="18975-153">消息。</span><span class="sxs-lookup"><span data-stu-id="18975-153">message.</span></span>
 
-<span data-ttu-id="ea7f6-179">至此，已生成应用程序，让我们来看看此应用程序功能是如何实现的。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-179">Now that you've built the application, let's look at how this functionality is implemented.</span></span> <span data-ttu-id="ea7f6-180">此时，生成的文件中有两个需要特别关注：project.json 和 Startup.cs。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-180">There are two of the generated files that are particularly interesting at this point: project.json and Startup.cs.</span></span> 
+<span data-ttu-id="18975-154">完成后，可以按 <kbd>Ctrl</kbd>+<kbd>C</kbd> 关闭应用程序。</span><span class="sxs-lookup"><span data-stu-id="18975-154">When you're done, you can shut down the application by pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>.</span></span>
 
-<span data-ttu-id="ea7f6-181">Project.json 包含项目相关信息。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-181">Project.json contains information about the project.</span></span> <span data-ttu-id="ea7f6-182">经常要用到的两个节点是“依赖项”和“框架”。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-182">The two nodes you'll often work with are 'dependencies' and 'frameworks'.</span></span> <span data-ttu-id="ea7f6-183">“依赖项”节点列出了此应用程序需要的所有包。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-183">The dependencies node lists all the packages that are needed for this application.</span></span>
-<span data-ttu-id="ea7f6-184">此时，这是一个小型节点，只需要列出运行 Web 服务器的包。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-184">At the moment, this is a small node, needing only the packages that run the web server.</span></span>
+### <a name="anatomy-of-an-aspnet-core-application"></a><span data-ttu-id="18975-155">ASP.NET Core 应用程序剖析</span><span class="sxs-lookup"><span data-stu-id="18975-155">Anatomy of an ASP.NET Core application</span></span>
 
-<span data-ttu-id="ea7f6-185">“框架”节点指定了将运行此应用程序的 .NET Framework 的版本和配置。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-185">The 'frameworks' node specifies the versions and configurations of the .NET framework that will run this application.</span></span>
+<span data-ttu-id="18975-156">至此，已生成应用程序，让我们来看看此应用程序功能是如何实现的。</span><span class="sxs-lookup"><span data-stu-id="18975-156">Now that you've built the application, let's look at how this functionality is implemented.</span></span> <span data-ttu-id="18975-157">此时，生成的文件中有两个需要特别关注：WeatherMicroservice.csproj 和 Startup.cs。</span><span class="sxs-lookup"><span data-stu-id="18975-157">There are two of the generated files that are particularly interesting at this point: WeatherMicroservice.csproj and Startup.cs.</span></span> 
 
-<span data-ttu-id="ea7f6-186">此应用程序是在 Startup.cs 中实现。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-186">The application is implemented in Startup.cs.</span></span> <span data-ttu-id="ea7f6-187">此文件包含启动类。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-187">This file contains the startup class.</span></span>
+<span data-ttu-id="18975-158">.csproj 文件包含项目相关信息。</span><span class="sxs-lookup"><span data-stu-id="18975-158">The .csproj file contains information about the project.</span></span>
+<span data-ttu-id="18975-159">最有趣的两个节点是 `<TargetFramework>` 和 `<PackageReference>`。</span><span class="sxs-lookup"><span data-stu-id="18975-159">The two nodes that are most interesting are `<TargetFramework>` and `<PackageReference>`.</span></span>
 
-<span data-ttu-id="ea7f6-188">ASP.NET Core 基础结构调用两种方法来配置并运行此应用程序。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-188">The two methods are called by the ASP.NET Core infrastructure to configure and run the application.</span></span> <span data-ttu-id="ea7f6-189">`ConfigureServices` 方法描述了此应用程序所需的服务。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-189">The `ConfigureServices` method describes the services that are necessary for this application.</span></span> <span data-ttu-id="ea7f6-190">由于要生成的是精简的微服务，因此无需配置任何依赖项。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-190">You're building a lean microservice, so it doesn't need to configure any dependencies.</span></span> <span data-ttu-id="ea7f6-191">`Configure` 方法配置传入 HTTP 请求的处理程序。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-191">The `Configure` method configures the handlers for incoming HTTP Requests.</span></span> <span data-ttu-id="ea7f6-192">模板生成简单的处理程序来响应所有关于文本“Hello World!”的请求。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-192">The template generates a simple handler that responds to any request with the text 'Hello World!'.</span></span>
+<span data-ttu-id="18975-160">`<TargetFramework>` 节点指定将运行此应用程序的 .NET 版本。</span><span class="sxs-lookup"><span data-stu-id="18975-160">The `<TargetFramework>` node specifies the version of .NET that will run this application.</span></span>
 
-## <a name="build-a-microservice"></a><span data-ttu-id="ea7f6-193">生成微服务</span><span class="sxs-lookup"><span data-stu-id="ea7f6-193">Build a microservice</span></span>
+<span data-ttu-id="18975-161">使用每个 `<PackageReference>` 节点指定此应用程序所需的包。</span><span class="sxs-lookup"><span data-stu-id="18975-161">Each `<PackageReference>` node is used to specify a package that is needed for this application.</span></span>
 
-<span data-ttu-id="ea7f6-194">要生成的服务将用于传递世界各地的天气预报。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-194">The service you're going to build will deliver weather reports from anywhere around the globe.</span></span> <span data-ttu-id="ea7f6-195">在生产应用程序中，需要调用一些服务来检索天气数据。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-195">In a production application, you'd call some service to retrieve weather data.</span></span> <span data-ttu-id="ea7f6-196">在此示例中，我们将生成随机天气预报服务。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-196">For our sample, we'll generate a random weather forecast.</span></span> 
+<span data-ttu-id="18975-162">此应用程序是在 Startup.cs 中实现。</span><span class="sxs-lookup"><span data-stu-id="18975-162">The application is implemented in Startup.cs.</span></span> <span data-ttu-id="18975-163">此文件包含启动类。</span><span class="sxs-lookup"><span data-stu-id="18975-163">This file contains the startup class.</span></span>
 
-<span data-ttu-id="ea7f6-197">需要执行以下许多任务，才能实现随机天气预报服务：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-197">There are a number of tasks you'll need to perform in order to implement our random weather service:</span></span>
+<span data-ttu-id="18975-164">ASP.NET Core 基础结构调用两种方法来配置并运行此应用程序。</span><span class="sxs-lookup"><span data-stu-id="18975-164">The two methods are called by the ASP.NET Core infrastructure to configure and run the application.</span></span> <span data-ttu-id="18975-165">`ConfigureServices` 方法描述了此应用程序所需的服务。</span><span class="sxs-lookup"><span data-stu-id="18975-165">The `ConfigureServices` method describes the services that are necessary for this application.</span></span> <span data-ttu-id="18975-166">由于要生成的是精简的微服务，因此无需配置任何依赖项。</span><span class="sxs-lookup"><span data-stu-id="18975-166">You're building a lean microservice, so it doesn't need to configure any dependencies.</span></span> <span data-ttu-id="18975-167">`Configure` 方法配置传入 HTTP 请求的处理程序。</span><span class="sxs-lookup"><span data-stu-id="18975-167">The `Configure` method configures the handlers for incoming HTTP Requests.</span></span> <span data-ttu-id="18975-168">模板生成简单的处理程序来响应所有关于文本“Hello World!”的请求。</span><span class="sxs-lookup"><span data-stu-id="18975-168">The template generates a simple handler that responds to any request with the text 'Hello World!'.</span></span>
 
-* <span data-ttu-id="ea7f6-198">分析传入请求，读取经纬度。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-198">Parse the incoming request to read the latitude and longitude.</span></span>
-* <span data-ttu-id="ea7f6-199">生成一些随机预报数据。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-199">Generate some random forecast data.</span></span>
-* <span data-ttu-id="ea7f6-200">将随机预报数据从 C# 对象转换成 JSON 数据包。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-200">Convert that random forecast data from C# objects into JSON packets.</span></span>
-* <span data-ttu-id="ea7f6-201">将响应头设置为指示服务发送回 JSON。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-201">Set the response header to indicate that your service sends back JSON.</span></span>
-* <span data-ttu-id="ea7f6-202">编写响应。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-202">Write the response.</span></span>
+## <a name="build-a-microservice"></a><span data-ttu-id="18975-169">生成微服务</span><span class="sxs-lookup"><span data-stu-id="18975-169">Build a microservice</span></span>
 
-<span data-ttu-id="ea7f6-203">下面各部分将引导你逐一完成这些步骤。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-203">The next sections walk you through each of these steps.</span></span>
+<span data-ttu-id="18975-170">要生成的服务将用于传递世界各地的天气预报。</span><span class="sxs-lookup"><span data-stu-id="18975-170">The service you're going to build will deliver weather reports from anywhere around the globe.</span></span> <span data-ttu-id="18975-171">在生产应用程序中，需要调用一些服务来检索天气数据。</span><span class="sxs-lookup"><span data-stu-id="18975-171">In a production application, you'd call some service to retrieve weather data.</span></span> <span data-ttu-id="18975-172">在此示例中，我们将生成随机天气预报服务。</span><span class="sxs-lookup"><span data-stu-id="18975-172">For our sample, we'll generate a random weather forecast.</span></span> 
 
-### <a name="parsing-the-query-string"></a><span data-ttu-id="ea7f6-204">分析查询字符串。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-204">Parsing the Query String.</span></span>
+<span data-ttu-id="18975-173">需要执行以下许多任务，才能实现随机天气预报服务：</span><span class="sxs-lookup"><span data-stu-id="18975-173">There are a number of tasks you'll need to perform in order to implement our random weather service:</span></span>
 
-<span data-ttu-id="ea7f6-205">首先要分析查询字符串。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-205">You'll begin by parsing the query string.</span></span> <span data-ttu-id="ea7f6-206">此服务接受在以下形式的查询字符串中使用“lat”和“long”自变量：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-206">The service will accept 'lat' and 'long' arguments on the query string in this form:</span></span>
+* <span data-ttu-id="18975-174">分析传入请求，读取经纬度。</span><span class="sxs-lookup"><span data-stu-id="18975-174">Parse the incoming request to read the latitude and longitude.</span></span>
+* <span data-ttu-id="18975-175">生成一些随机预报数据。</span><span class="sxs-lookup"><span data-stu-id="18975-175">Generate some random forecast data.</span></span>
+* <span data-ttu-id="18975-176">将随机预报数据从 C# 对象转换成 JSON 数据包。</span><span class="sxs-lookup"><span data-stu-id="18975-176">Convert that random forecast data from C# objects into JSON packets.</span></span>
+* <span data-ttu-id="18975-177">将响应头设置为指示服务发送回 JSON。</span><span class="sxs-lookup"><span data-stu-id="18975-177">Set the response header to indicate that your service sends back JSON.</span></span>
+* <span data-ttu-id="18975-178">编写响应。</span><span class="sxs-lookup"><span data-stu-id="18975-178">Write the response.</span></span>
 
-`http://localhost:5000/?lat=-35.55&long=-12.35`  
+<span data-ttu-id="18975-179">下面各部分将引导你逐一完成这些步骤。</span><span class="sxs-lookup"><span data-stu-id="18975-179">The next sections walk you through each of these steps.</span></span>
 
-<span data-ttu-id="ea7f6-207">只需更改定义为启动类中 `app.Run` 的自变量的 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-207">All the changes you need to make are in the lambda expression defined as the argument to `app.Run` in your startup class.</span></span>
+### <a name="parsing-the-query-string"></a><span data-ttu-id="18975-180">分析查询字符串</span><span class="sxs-lookup"><span data-stu-id="18975-180">Parsing the Query String</span></span>
 
-<span data-ttu-id="ea7f6-208">lambda 表达式中的自变量是请求的 `HttpContext`。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-208">The argument on the lambda expression is the `HttpContext` for the request.</span></span> <span data-ttu-id="ea7f6-209">其属性之一是 `Request` 对象。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-209">One of its properties is the `Request` object.</span></span> <span data-ttu-id="ea7f6-210">`Request` 对象具有 `Query` 属性，其中包含请求查询字符串中所有值的字典。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-210">The `Request` object has a `Query` property that contains a dictionary of all the values on the query string for the request.</span></span> <span data-ttu-id="ea7f6-211">第一次添加的代码是为了查找经纬度值：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-211">The first addition is to find the latitude and longitude values:</span></span>
+<span data-ttu-id="18975-181">首先要分析查询字符串。</span><span class="sxs-lookup"><span data-stu-id="18975-181">You'll begin by parsing the query string.</span></span> <span data-ttu-id="18975-182">此服务接受在以下形式的查询字符串中使用“lat”和“long”自变量：</span><span class="sxs-lookup"><span data-stu-id="18975-182">The service will accept 'lat' and 'long' arguments on the query string in this form:</span></span>
+
+```
+http://localhost:5000/?lat=-35.55&long=-12.35
+```
+
+<span data-ttu-id="18975-183">只需更改定义为启动类中 `app.Run` 的自变量的 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="18975-183">All the changes you need to make are in the lambda expression defined as the argument to `app.Run` in your startup class.</span></span>
+
+<span data-ttu-id="18975-184">lambda 表达式中的自变量是请求的 `HttpContext`。</span><span class="sxs-lookup"><span data-stu-id="18975-184">The argument on the lambda expression is the `HttpContext` for the request.</span></span> <span data-ttu-id="18975-185">其属性之一是 `Request` 对象。</span><span class="sxs-lookup"><span data-stu-id="18975-185">One of its properties is the `Request` object.</span></span> <span data-ttu-id="18975-186">`Request` 对象具有 `Query` 属性，其中包含请求查询字符串中所有值的字典。</span><span class="sxs-lookup"><span data-stu-id="18975-186">The `Request` object has a `Query` property that contains a dictionary of all the values on the query string for the request.</span></span> <span data-ttu-id="18975-187">第一次添加的代码是为了查找经纬度值：</span><span class="sxs-lookup"><span data-stu-id="18975-187">The first addition is to find the latitude and longitude values:</span></span>
 
 [!code-csharp[ReadQueryString](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ReadQueryString "read variables from the query string")]
 
-<span data-ttu-id="ea7f6-212">查询字典值属于 `StringValue` 类型。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-212">The Query dictionary values are `StringValue` type.</span></span> <span data-ttu-id="ea7f6-213">此类型可以包含一系列字符串。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-213">That type can contain a collection of strings.</span></span> <span data-ttu-id="ea7f6-214">对于天气服务，每个值都是一个字符串。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-214">For your weather service, each value is a single string.</span></span> <span data-ttu-id="ea7f6-215">正因如此，上面的代码调用 `FirstOrDefault()`。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-215">That's why there's the call to `FirstOrDefault()` in the code above.</span></span> 
+<span data-ttu-id="18975-188">`Query` 字典值属于 `StringValue` 类型。</span><span class="sxs-lookup"><span data-stu-id="18975-188">The `Query` dictionary values are `StringValue` type.</span></span> <span data-ttu-id="18975-189">此类型可以包含一系列字符串。</span><span class="sxs-lookup"><span data-stu-id="18975-189">That type can contain a collection of strings.</span></span> <span data-ttu-id="18975-190">对于天气服务，每个值都是一个字符串。</span><span class="sxs-lookup"><span data-stu-id="18975-190">For your weather service, each value is a single string.</span></span> <span data-ttu-id="18975-191">正因如此，上面的代码调用 `FirstOrDefault()`。</span><span class="sxs-lookup"><span data-stu-id="18975-191">That's why there's the call to `FirstOrDefault()` in the code above.</span></span> 
 
-<span data-ttu-id="ea7f6-216">接下来，需要将字符串转换成双精度类型值。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-216">Next, you need to convert the strings to doubles.</span></span> <span data-ttu-id="ea7f6-217">用于将字符串转换成双精度类型值的方法是 `double.TryParse()`：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-217">The method you'll use to convert the string to a double is `double.TryParse()`:</span></span>
+<span data-ttu-id="18975-192">接下来，需要将字符串转换成双精度类型值。</span><span class="sxs-lookup"><span data-stu-id="18975-192">Next, you need to convert the strings to doubles.</span></span> <span data-ttu-id="18975-193">用于将字符串转换成双精度类型值的方法是 `double.TryParse()`：</span><span class="sxs-lookup"><span data-stu-id="18975-193">The method you'll use to convert the string to a double is `double.TryParse()`:</span></span>
 
 ```csharp
 bool TryParse(string s, out double result);
 ```
 
-<span data-ttu-id="ea7f6-218">此方法利用 C# out 参数来指示能否将输入字符串转换成双精度类型值。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-218">This method leverages C# out parameters to indicate if the input string can be converted to a double.</span></span> <span data-ttu-id="ea7f6-219">如果字符串确实是双精度类型值的有效表示形式，那么此方法会返回 true，并且 `result` 自变量中包含相应的值。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-219">If the string does represent a valid representation for a double, the method returns true, and the `result` argument contains the value.</span></span> <span data-ttu-id="ea7f6-220">如果字符串不是双精度类型值的有效表示形式，则此方法返回 false。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-220">If the string does not represent a valid double, the method returns false.</span></span>
+<span data-ttu-id="18975-194">此方法利用 C# out 参数来指示能否将输入字符串转换成双精度类型值。</span><span class="sxs-lookup"><span data-stu-id="18975-194">This method leverages C# out parameters to indicate if the input string can be converted to a double.</span></span> <span data-ttu-id="18975-195">如果字符串确实是双精度类型值的有效表示形式，那么此方法会返回 true，并且 `result` 自变量中包含相应的值。</span><span class="sxs-lookup"><span data-stu-id="18975-195">If the string does represent a valid representation for a double, the method returns true, and the `result` argument contains the value.</span></span> <span data-ttu-id="18975-196">如果字符串不是双精度类型值的有效表示形式，则此方法返回 false。</span><span class="sxs-lookup"><span data-stu-id="18975-196">If the string does not represent a valid double, the method returns false.</span></span>
 
-<span data-ttu-id="ea7f6-221">能够使用返回*可以为 null 的双精度类型值*的*扩展方法*来调整此 API。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-221">You can adapt that API with the use of an *extension method* that returns a *nullable double*.</span></span> <span data-ttu-id="ea7f6-222">*可以为 null 的值类型*是某种值类型的类型表示形式，还可以保留缺少的值或 null 值。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-222">A *nullable value type* is a type that represents some value type, and can also hold a missing, or null value.</span></span> <span data-ttu-id="ea7f6-223">可以为 null 的类型以类型声明中追加的 `?` 字符表示。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-223">A nullable type is represented by appending the `?` character to the type declaration.</span></span> 
+<span data-ttu-id="18975-197">能够使用返回*可以为 null 的双精度类型值*的*扩展方法*来调整此 API。</span><span class="sxs-lookup"><span data-stu-id="18975-197">You can adapt that API with the use of an *extension method* that returns a *nullable double*.</span></span> <span data-ttu-id="18975-198">*可以为 null 的值类型*是某种值类型的类型表示形式，还可以保留缺少的值或 null 值。</span><span class="sxs-lookup"><span data-stu-id="18975-198">A *nullable value type* is a type that represents some value type, and can also hold a missing, or null value.</span></span> <span data-ttu-id="18975-199">可以为 null 的类型以类型声明中追加的 `?` 字符表示。</span><span class="sxs-lookup"><span data-stu-id="18975-199">A nullable type is represented by appending the `?` character to the type declaration.</span></span> 
 
-<span data-ttu-id="ea7f6-224">虽然扩展方法被定义为静态方法，但可以在第一个参数中添加 `this` 修饰符，这样便能调用扩展方法，就像是相应类的成员方法一样。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-224">Extension methods are methods that are defined as static methods, but by adding the `this` modifier on the first parameter, can be called as though they are members of that class.</span></span> <span data-ttu-id="ea7f6-225">只能在静态类中定义扩展方法。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-225">Extension methods may only be defined in static classes.</span></span> <span data-ttu-id="ea7f6-226">下面定义了包含用于分析的扩展方法的类：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-226">Here's the definition of the class containing the extension method for parse:</span></span>
+<span data-ttu-id="18975-200">虽然扩展方法被定义为静态方法，但可以在第一个参数中添加 `this` 修饰符，这样便能调用扩展方法，就像是相应类的成员方法一样。</span><span class="sxs-lookup"><span data-stu-id="18975-200">Extension methods are methods that are defined as static methods, but by adding the `this` modifier on the first parameter, can be called as though they are members of that class.</span></span> <span data-ttu-id="18975-201">只能在静态类中定义扩展方法。</span><span class="sxs-lookup"><span data-stu-id="18975-201">Extension methods may only be defined in static classes.</span></span> <span data-ttu-id="18975-202">下面定义了包含用于分析的扩展方法的类：</span><span class="sxs-lookup"><span data-stu-id="18975-202">Here's the definition of the class containing the extension method for parse:</span></span>
 
 [!code-csharp[TryParseExtension](../../../samples/csharp/getting-started/WeatherMicroservice/Extensions.cs#TryParseExtension "try parse to a nullable")]
 
-<span data-ttu-id="ea7f6-227">`default(double?)` 表达式返回 `double?` 类型的默认值。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-227">The `default(double?)` expression returns the default value for the `double?` type.</span></span> <span data-ttu-id="ea7f6-228">默认值是 null（或缺少的）值。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-228">That default value is the null (or missing) value.</span></span>
+<span data-ttu-id="18975-203">调用扩展方法前，将当前区域性更改为固定区域性：</span><span class="sxs-lookup"><span data-stu-id="18975-203">Before calling the extension method, change the current culture to invariant:</span></span>
 
-<span data-ttu-id="ea7f6-229">可以使用此扩展方法将查询字符串自变量转换成双精度类型：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-229">You can use this extension method to convert the query string arguments into the double type:</span></span>
+[!code-csharp[SetCulture](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#SetCulture "set current culture to invariant")]
+
+<span data-ttu-id="18975-204">这可以确保应用程序在任意服务器上用相同的方式解析数字，而不管其默认区域性。</span><span class="sxs-lookup"><span data-stu-id="18975-204">This ensures that your application parses numbers the same on any server, regardless of its default culture.</span></span>
+
+<span data-ttu-id="18975-205">现在，可以使用此扩展方法将查询字符串自变量转换成双精度类型：</span><span class="sxs-lookup"><span data-stu-id="18975-205">Now you can use the extension method to convert the query string arguments into the double type:</span></span>
 
 [!code-csharp[UseTryParse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#UseTryParse "Use the try parse extension method")]
 
-<span data-ttu-id="ea7f6-230">为了能够轻松测试分析代码，请将响应更新为包含以下自变量值：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-230">To easily test the parsing code, update the response to include the values of the arguments:</span></span>
+<span data-ttu-id="18975-206">为了能够轻松测试分析代码，请将响应更新为包含以下自变量值：</span><span class="sxs-lookup"><span data-stu-id="18975-206">To easily test the parsing code, update the response to include the values of the arguments:</span></span>
 
 [!code-csharp[WriteResponse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#WriteResponse "Write the output response")]
 
-<span data-ttu-id="ea7f6-231">此时，可以运行 Web 应用程序，并检查分析代码是否有效。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-231">At this point, you can run the web application and see if your parsing code is working.</span></span> <span data-ttu-id="ea7f6-232">在浏览器中向 Web 请求添加值，应该能够看到更新后的结果。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-232">Add values to the web request in a browser, and you should see the updated results.</span></span>
+<span data-ttu-id="18975-207">此时，可以运行 Web 应用程序，并检查分析代码是否有效。</span><span class="sxs-lookup"><span data-stu-id="18975-207">At this point, you can run the web application and see if your parsing code is working.</span></span> <span data-ttu-id="18975-208">在浏览器中向 Web 请求添加值，应该能够看到更新后的结果。</span><span class="sxs-lookup"><span data-stu-id="18975-208">Add values to the web request in a browser, and you should see the updated results.</span></span>
 
-### <a name="build-a-random-weather-forecast"></a><span data-ttu-id="ea7f6-233">生成随机天气预报</span><span class="sxs-lookup"><span data-stu-id="ea7f6-233">Build a random weather forecast</span></span>
+### <a name="build-a-random-weather-forecast"></a><span data-ttu-id="18975-209">生成随机天气预报</span><span class="sxs-lookup"><span data-stu-id="18975-209">Build a random weather forecast</span></span>
 
-<span data-ttu-id="ea7f6-234">下一个任务是生成随机天气预报。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-234">Your next task is to build a random weather forecast.</span></span> <span data-ttu-id="ea7f6-235">让我们从包含天气预报所需值的数据容器入手：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-235">Let's start with a data container that holds the values you'd want for a weather forecast:</span></span>
+<span data-ttu-id="18975-210">下一个任务是生成随机天气预报。</span><span class="sxs-lookup"><span data-stu-id="18975-210">Your next task is to build a random weather forecast.</span></span> <span data-ttu-id="18975-211">让我们从包含天气预报所需值的数据容器入手：</span><span class="sxs-lookup"><span data-stu-id="18975-211">Let's start with a data container that holds the values you'd want for a weather forecast:</span></span>
 
 ```csharp
 public class WeatherReport
 {
-    private static readonly string[] PossibleConditions = new string[]
+    private static readonly string[] PossibleConditions =
     {
         "Sunny",
         "Mostly Sunny",
@@ -177,92 +169,127 @@ public class WeatherReport
         "Rain"
     };
 
-    public int HiTemperature { get; }
-    public int LoTemperature { get; }
-    public int AverageWindSpeed { get; }
-    public string Conditions { get; }
+    public int HighTemperatureFahrenheit { get; }
+    public int LowTemperatureFahrenheit { get; }
+    public int AverageWindSpeedMph { get; }
+    public string Condition { get; }
 }
 ```
 
-<span data-ttu-id="ea7f6-236">接下来，生成用于随机设置这些值的构造函数。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-236">Next, build a constructor that randomly sets those values.</span></span> <span data-ttu-id="ea7f6-237">此构造函数将经纬度值用作随机数生成器的源。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-237">This constructor uses the values for the latitude and longitude to seed the Random number generator.</span></span> <span data-ttu-id="ea7f6-238">也就是说，同一地理位置的天气预报也是相同的。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-238">That means the forecast for the same location is the same.</span></span> <span data-ttu-id="ea7f6-239">如果更改经纬度自变量，将会生成不同的天气预报（因为源不同）。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-239">If you change the arguments for the latitude and longitude, you'll get a different forecast (because you start with a different seed.)</span></span>
+<span data-ttu-id="18975-212">接下来，生成用于随机设置这些值的构造函数。</span><span class="sxs-lookup"><span data-stu-id="18975-212">Next, build a constructor that randomly sets those values.</span></span> <span data-ttu-id="18975-213">此构造函数将经纬度值用作 `Random` 数生成器的源。</span><span class="sxs-lookup"><span data-stu-id="18975-213">This constructor uses the values for the latitude and longitude to seed the `Random` number generator.</span></span> <span data-ttu-id="18975-214">也就是说，同一地理位置的天气预报也是相同的。</span><span class="sxs-lookup"><span data-stu-id="18975-214">That means the forecast for the same location is the same.</span></span> <span data-ttu-id="18975-215">如果更改经纬度自变量，将会生成不同的天气预报（因为源不同）。</span><span class="sxs-lookup"><span data-stu-id="18975-215">If you change the arguments for the latitude and longitude, you'll get a different forecast (because you start with a different seed).</span></span>
 
 [!code-csharp[WeatherReportConstructor](../../../samples/csharp/getting-started/WeatherMicroservice/WeatherReport.cs#WeatherReportConstructor "Weather Report Constructor")]
 
-<span data-ttu-id="ea7f6-240">现在可以在响应方法中生成 5 天的天气预报：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-240">You can now generate the 5-day forecast in your response method:</span></span>
+<span data-ttu-id="18975-216">现在可以在响应方法中生成 5 天的天气预报：</span><span class="sxs-lookup"><span data-stu-id="18975-216">You can now generate the 5-day forecast in your response method:</span></span>
 
-[!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "Generate a random weather report")]
-
-### <a name="build-the-json-response"></a><span data-ttu-id="ea7f6-241">生成 JSON 响应</span><span class="sxs-lookup"><span data-stu-id="ea7f6-241">Build the JSON response.</span></span>
-
-<span data-ttu-id="ea7f6-242">服务器上的最后一项代码任务是，将 WeatherReport 数组转换成 JSON 数据包，然后将其发送回客户端。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-242">The final code task on the server is to convert the WeatherReport array into a JSON packet, and send that back to the client.</span></span> <span data-ttu-id="ea7f6-243">首先，我们要创建 JSON 数据包。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-243">Let's start by creating the JSON packet.</span></span> <span data-ttu-id="ea7f6-244">将把 NewtonSoft JSON 序列化程序添加到依赖项列表中。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-244">You'll add the NewtonSoft JSON Serializer to the list of dependencies.</span></span> <span data-ttu-id="ea7f6-245">为此，请使用 `dotnet` CLI：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-245">You can do that using the `dotnet` CLI:</span></span>
-
+```csharp
+if (latitude.HasValue && longitude.HasValue)
+{
+    var forecast = new List<WeatherReport>();
+    for (var days = 1; days <= 5; days++)
+    {
+        forecast.Add(new WeatherReport(latitude.Value, longitude.Value, days));
+    }
+}
 ```
+
+### <a name="build-the-json-response"></a><span data-ttu-id="18975-217">生成 JSON 响应</span><span class="sxs-lookup"><span data-stu-id="18975-217">Build the JSON response</span></span>
+
+<span data-ttu-id="18975-218">服务器的最终代码任务是将 `WeatherReport` 列表转换为 JSON 文档并将其发送回客户端。</span><span class="sxs-lookup"><span data-stu-id="18975-218">The final code task on the server is to convert the `WeatherReport` list into JSON document, and send that back to the client.</span></span> <span data-ttu-id="18975-219">首先，我们要创建 JSON 文档。</span><span class="sxs-lookup"><span data-stu-id="18975-219">Let's start by creating the JSON document.</span></span> <span data-ttu-id="18975-220">将把 Newtonsoft JSON 序列化程序添加到依赖项列表中。</span><span class="sxs-lookup"><span data-stu-id="18975-220">You'll add the Newtonsoft JSON serializer to the list of dependencies.</span></span> <span data-ttu-id="18975-221">可以使用以下 `dotnet` 命令执行此操作：</span><span class="sxs-lookup"><span data-stu-id="18975-221">You can do that using the following `dotnet` command:</span></span>
+
+```console
 dotnet add package Newtonsoft.Json
 ```
 
-<span data-ttu-id="ea7f6-246">然后，可以使用 `JsonConvert` 类将对象写入字符串：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-246">Then, you can use the `JsonConvert` class to write the object to a string:</span></span>
+<span data-ttu-id="18975-222">然后，可以使用 `JsonConvert` 类将对象写入字符串：</span><span class="sxs-lookup"><span data-stu-id="18975-222">Then, you can use the `JsonConvert` class to write the object to a string:</span></span>
 
 [!code-csharp[ConvertToJson](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ConvertToJSON "Convert objects to JSON")]
 
-<span data-ttu-id="ea7f6-247">上面的代码将 forecast 对象（`WeatherForecast` 对象列表）转换成 JSON 数据包。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-247">The code above converts the forecast object (a list of `WeatherForecast` objects) into a JSON packet.</span></span> <span data-ttu-id="ea7f6-248">构造响应数据包后，将内容类型设置为 `application/json`，并编写字符串。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-248">After you've constructed the response packet, you set the content type to `application/json`, and write the string.</span></span>
+<span data-ttu-id="18975-223">上面的代码将 forecast 对象（`WeatherForecast` 对象列表）转换成 JSON 文档。</span><span class="sxs-lookup"><span data-stu-id="18975-223">The code above converts the forecast object (a list of `WeatherForecast` objects) into a JSON document.</span></span> <span data-ttu-id="18975-224">构造响应文档后，将内容类型设置为 `application/json`，并编写字符串。</span><span class="sxs-lookup"><span data-stu-id="18975-224">After you've constructed the response document, you set the content type to `application/json`, and write the string.</span></span>
 
-<span data-ttu-id="ea7f6-249">应用程序现在可以运行并返回随机天气预报。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-249">The application now runs and returns random forecasts.</span></span>
+<span data-ttu-id="18975-225">应用程序现在可以运行并返回随机天气预报。</span><span class="sxs-lookup"><span data-stu-id="18975-225">The application now runs and returns random forecasts.</span></span>
 
-## <a name="build-a-docker-image"></a><span data-ttu-id="ea7f6-250">生成 Docker 映像</span><span class="sxs-lookup"><span data-stu-id="ea7f6-250">Build a Docker image</span></span>
+## <a name="build-a-docker-image"></a><span data-ttu-id="18975-226">生成 Docker 映像</span><span class="sxs-lookup"><span data-stu-id="18975-226">Build a Docker image</span></span>
 
-<span data-ttu-id="ea7f6-251">最后一项任务是在 Docker 中运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-251">Our final task is to run the application in Docker.</span></span> <span data-ttu-id="ea7f6-252">我们将创建一个 Docker 容器，用于运行表示此应用程序的 Docker 映像。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-252">We'll create a Docker container that runs a Docker image that represents our application.</span></span>
+<span data-ttu-id="18975-227">最后一项任务是在 Docker 中运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="18975-227">Our final task is to run the application in Docker.</span></span> <span data-ttu-id="18975-228">我们将创建一个 Docker 容器，用于运行表示此应用程序的 Docker 映像。</span><span class="sxs-lookup"><span data-stu-id="18975-228">We'll create a Docker container that runs a Docker image that represents our application.</span></span>
 
-<span data-ttu-id="ea7f6-253">***Docker 映像***是定义应用程序运行环境的文件。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-253">A ***Docker Image*** is a file that defines the environment for running the application.</span></span>
+<span data-ttu-id="18975-229">***Docker 映像***是定义应用程序运行环境的文件。</span><span class="sxs-lookup"><span data-stu-id="18975-229">A ***Docker Image*** is a file that defines the environment for running the application.</span></span>
 
-<span data-ttu-id="ea7f6-254">***Docker 容器***表示 Docker 映像的正在运行实例。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-254">A ***Docker Container*** represents a running instance of a Docker image.</span></span>
+<span data-ttu-id="18975-230">***Docker 容器***表示正在运行的 Docker 映像实例。</span><span class="sxs-lookup"><span data-stu-id="18975-230">A ***Docker Container*** represents a running instance of a Docker Image.</span></span>
 
-<span data-ttu-id="ea7f6-255">通过类推，可以将 *Docker 映像*视为*类*，将 *Docker 容器*视为对象或此类的实例。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-255">By analogy, you can think of the *Docker Image* as a *class*, and the *Docker Container* as an object, or an instance of that class.</span></span>  
+<span data-ttu-id="18975-231">通过类推，可以将 *Docker 映像*视为*类*，将 *Docker 容器*视为对象或此类的实例。</span><span class="sxs-lookup"><span data-stu-id="18975-231">By analogy, you can think of the *Docker Image* as a *class*, and the *Docker Container* as an object, or an instance of that class.</span></span>  
 
-<span data-ttu-id="ea7f6-256">ASP.NET 模板创建的 Dockerfile 可供我们自行使用。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-256">The Dockerfile created by the ASP.NET template will serve for our purposes.</span></span> <span data-ttu-id="ea7f6-257">我们先来介绍一下此文件的内容。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-257">Let's go over its contents.</span></span>
-
-<span data-ttu-id="ea7f6-258">第一行指定的是源映像：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-258">The first line specifies the source image:</span></span>
+<span data-ttu-id="18975-232">以下 Dockerfile 可供我们自行使用：</span><span class="sxs-lookup"><span data-stu-id="18975-232">The following Dockerfile will serve for our purposes:</span></span>
 
 ```
-FROM microsoft/dotnet:1.1-sdk-msbuild
+FROM microsoft/dotnet:2.1-sdk AS build
+WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
+
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "WeatherMicroservice.dll"]
 ```
 
-<span data-ttu-id="ea7f6-259">通过 Docker，可以根据源模板配置计算机映像。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-259">Docker allows you to configure a machine image based on a source template.</span></span> <span data-ttu-id="ea7f6-260">也就是说，开始时并不需要提供所有计算机参数，只需提供全部更改。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-260">That means you don't have to supply all the machine parameters when you start, you only need to supply any changes.</span></span> <span data-ttu-id="ea7f6-261">此处所说的更改包括我们的应用程序在内。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-261">The changes here will be to include our application.</span></span>
+<span data-ttu-id="18975-233">我们先来介绍一下此文件的内容。</span><span class="sxs-lookup"><span data-stu-id="18975-233">Let's go over its contents.</span></span>
 
-<span data-ttu-id="ea7f6-262">在这第一个示例中，我们将使用 .NET 映像的 `1.1-sdk-msbuild` 版本。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-262">In this first sample, we'll use the `1.1-sdk-msbuild` version of the dotnet image.</span></span> <span data-ttu-id="ea7f6-263">这是创建有效 Docker 环境的最简单方式。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-263">This is the easiest way to create a working Docker environment.</span></span> <span data-ttu-id="ea7f6-264">此映像包括 .NET Core 运行时和 .NET SDK。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-264">This image include the dotnet core runtime, and the dotnet SDK.</span></span> <span data-ttu-id="ea7f6-265">这样更便于着手生成映像，但创建的映像会比较大。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-265">That makes it easier to get started and build, but does create a larger image.</span></span>
+<span data-ttu-id="18975-234">第一行指定用于生成应用程序的源映像：</span><span class="sxs-lookup"><span data-stu-id="18975-234">The first line specifies the source image used for building the application:</span></span>
 
-<span data-ttu-id="ea7f6-266">接下来的五行代码用于设置并生成应用程序：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-266">The next five lines setup and build your application:</span></span>
+```
+FROM microsoft/dotnet:2.1-sdk AS build
+```
+
+<span data-ttu-id="18975-235">通过 Docker，可以根据源模板配置计算机映像。</span><span class="sxs-lookup"><span data-stu-id="18975-235">Docker allows you to configure a machine image based on a source template.</span></span> <span data-ttu-id="18975-236">也就是说，开始时并不需要提供所有计算机参数，只需提供全部更改。</span><span class="sxs-lookup"><span data-stu-id="18975-236">That means you don't have to supply all the machine parameters when you start, you only need to supply any changes.</span></span> <span data-ttu-id="18975-237">此处所说的更改包括我们的应用程序在内。</span><span class="sxs-lookup"><span data-stu-id="18975-237">The changes here will be to include our application.</span></span>
+
+<span data-ttu-id="18975-238">在此示例中，我们将使用 `dotnet` 映像的 `2.1-sdk` 版本。</span><span class="sxs-lookup"><span data-stu-id="18975-238">In this sample, we'll use the `2.1-sdk` version of the `dotnet` image.</span></span> <span data-ttu-id="18975-239">这是创建有效 Docker 环境的最简单方式。</span><span class="sxs-lookup"><span data-stu-id="18975-239">This is the easiest way to create a working Docker environment.</span></span> <span data-ttu-id="18975-240">此映像包括 .NET Core 运行时和 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="18975-240">This image includes the .NET Core runtime, and the .NET Core SDK.</span></span>
+<span data-ttu-id="18975-241">这使得入门和生成更加轻松，但是创建的映像会更大，所以我们将使用此映像生成应用程序，使用另一个映像运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="18975-241">That makes it easier to get started and build, but does create a larger image, so we'll use this image for building the application and a different image to run it.</span></span>
+
+<span data-ttu-id="18975-242">下面几行代码用于设置并生成应用程序：</span><span class="sxs-lookup"><span data-stu-id="18975-242">The next lines setup and build your application:</span></span>
 
 ```
 WORKDIR /app
 
-# copy csproj and restore as distinct layers
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
 
-COPY WeatherMicroService.csproj .
-RUN dotnet restore 
-
-# copy and build everything else
-
-COPY . .
-
-# RUN dotnet restore
+# Copy everything else and build
+COPY . ./
 RUN dotnet publish -c Release -o out
 ```
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+<span data-ttu-id="18975-243">这会将当前目录中的项目文件复制到 Docker VM 中，并还原所有包。</span><span class="sxs-lookup"><span data-stu-id="18975-243">This will copy the project file from the  current directory to the Docker VM, and restore all the packages.</span></span> <span data-ttu-id="18975-244">使用 .NET CLI 意味着 Docker 映像必须包含 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="18975-244">Using the dotnet CLI means that the Docker image must include the .NET Core SDK.</span></span> <span data-ttu-id="18975-245">完成上述操作之后，应用程序的其余部分会得到复制，然后 `dotnet
+publish` 命令会生成并打包应用程序。</span><span class="sxs-lookup"><span data-stu-id="18975-245">After that, the rest of your application gets copied, and the `dotnet
+publish` command builds and packages your application.</span></span>
 
-<span data-ttu-id="ea7f6-267">这会将当前目录中的项目文件复制到 Docker VM 中，并还原所有包。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-267">This will copy the project file from the  current directory to the Docker VM, and restore all the packages.</span></span> <span data-ttu-id="ea7f6-268">使用 .NET CLI 意味着 Docker 映像必须包含 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-268">Using the dotnet CLI means that the Docker image must include the .NET Core SDK.</span></span> <span data-ttu-id="ea7f6-269">完成上述操作之后，应用程序的其余部分会得到复制，然后 .NET 发布命令会生成并打包应用程序。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-269">After that, the rest of your application gets copied, and the dotnet publish command builds and packages your application.</span></span>
-
-<span data-ttu-id="ea7f6-270">此文件的最后一行代码用于运行应用程序：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-270">The final line of the file runs the application:</span></span>
+<span data-ttu-id="18975-246">最后，我们创建运行应用程序的第二个 Docker 映像：</span><span class="sxs-lookup"><span data-stu-id="18975-246">Finally, we create a second Docker image that runs the application:</span></span>
 
 ```
-ENTRYPOINT ["dotnet", "out/WeatherMicroService.dll", "--server.urls", "http://0.0.0.0:5000"]
+# Build runtime image
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "WeatherMicroservice.dll"]
 ```
 
-<span data-ttu-id="ea7f6-271">Dockerfile 最后一行代码中 `dotnet` 的 `--server.urls` 自变量引用此配置端口。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-271">This configured port is referenced in the `--server.urls` argument to `dotnet` on the last  line of the Dockerfile.</span></span> <span data-ttu-id="ea7f6-272">`ENTRYPOINT` 命令用于指示 Docker 哪些命令和命令行选项启动了服务。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-272">The `ENTRYPOINT` command informs Docker what command and command-line options start the service.</span></span> 
+<span data-ttu-id="18975-247">此映像使用 `dotnet` 映像的 `2.1-aspnetcore-runtime` 版本，其中包含运行 ASP.NET Core 应用程序所需的全部内容，但是不包括 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="18975-247">This image uses the `2.1-aspnetcore-runtime` version of the `dotnet` image, which contains everything necessary to run ASP.NET Core applications, but does not include the .NET Core SDK.</span></span> <span data-ttu-id="18975-248">这意味着，此映像不能用于生成 .NET Core 应用程序，但它可以使最终映像变得更小。</span><span class="sxs-lookup"><span data-stu-id="18975-248">This means this image can't be used to build .NET Core applications, but it also makes the final image smaller.</span></span>
 
-## <a name="building-and-running-the-image-in-a-container"></a><span data-ttu-id="ea7f6-273">在容器中生成并运行映像</span><span class="sxs-lookup"><span data-stu-id="ea7f6-273">Building and running the image in a container.</span></span>
+<span data-ttu-id="18975-249">为了实现此目的，我们将生成的应用程序从第一个映像复制到第二个。</span><span class="sxs-lookup"><span data-stu-id="18975-249">To make this work, we copy the built application from the first image to the second one.</span></span>
 
-<span data-ttu-id="ea7f6-274">让我们在 Docker 容器中生成映像并运行服务。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-274">Let's build an image and run the service inside a Docker container.</span></span> <span data-ttu-id="ea7f6-275">不是要将本地目录中的所有文件都复制到映像中，</span><span class="sxs-lookup"><span data-stu-id="ea7f6-275">You don't want all the files from your local directory copied into the image.</span></span> <span data-ttu-id="ea7f6-276">而是要在容器中生成应用程序。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-276">Instead, you'll build the application in the container.</span></span> <span data-ttu-id="ea7f6-277">将创建 `.dockerignore` 文件来指定不要复制到映像中的目录。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-277">You'll create a `.dockerignore` file to specify the directories that are not copied into the image.</span></span> <span data-ttu-id="ea7f6-278">你不想复制任何生成资产。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-278">You don't want any of the build assets copied.</span></span> <span data-ttu-id="ea7f6-279">请在 `.dockerignore` 文件中指定生成和发布目录：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-279">Specify the build and publish directories in the `.dockerignore` file:</span></span>
+<span data-ttu-id="18975-250">`ENTRYPOINT` 命令通知 Docker 启动服务的命令。</span><span class="sxs-lookup"><span data-stu-id="18975-250">The `ENTRYPOINT` command informs Docker what command starts the service.</span></span>
+
+## <a name="building-and-running-the-image-in-a-container"></a><span data-ttu-id="18975-251">在容器中生成并运行映像</span><span class="sxs-lookup"><span data-stu-id="18975-251">Building and running the image in a container</span></span>
+
+<span data-ttu-id="18975-252">让我们在 Docker 容器中生成映像并运行服务。</span><span class="sxs-lookup"><span data-stu-id="18975-252">Let's build an image and run the service inside a Docker container.</span></span> <span data-ttu-id="18975-253">不是要将本地目录中的所有文件都复制到映像中，</span><span class="sxs-lookup"><span data-stu-id="18975-253">You don't want all the files from your local directory copied into the image.</span></span> <span data-ttu-id="18975-254">而是要在容器中生成应用程序。</span><span class="sxs-lookup"><span data-stu-id="18975-254">Instead, you'll build the application in the container.</span></span> <span data-ttu-id="18975-255">将创建 `.dockerignore` 文件来指定不要复制到映像中的目录。</span><span class="sxs-lookup"><span data-stu-id="18975-255">You'll create a `.dockerignore` file to specify the directories that are not copied into the image.</span></span> <span data-ttu-id="18975-256">你不想复制任何生成资产。</span><span class="sxs-lookup"><span data-stu-id="18975-256">You don't want any of the build assets copied.</span></span> <span data-ttu-id="18975-257">请在 `.dockerignore` 文件中指定生成和发布目录：</span><span class="sxs-lookup"><span data-stu-id="18975-257">Specify the build and publish directories in the `.dockerignore` file:</span></span>
 
 ```
 bin/*
@@ -270,75 +297,75 @@ obj/*
 out/*
 ```
 
-<span data-ttu-id="ea7f6-280">使用 `docker build` 命令生成映像。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-280">You build the image using the `docker build` command.</span></span> <span data-ttu-id="ea7f6-281">从包含代码的目录运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-281">Run the following command from the directory containing your code.</span></span>
+<span data-ttu-id="18975-258">使用 `docker build` 命令生成映像。</span><span class="sxs-lookup"><span data-stu-id="18975-258">You build the image using the `docker build` command.</span></span> <span data-ttu-id="18975-259">从包含代码的目录运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="18975-259">Run the following command from the directory containing your code.</span></span>
 
 ```console
 docker build -t weather-microservice .
 ```
 
-<span data-ttu-id="ea7f6-282">此命令将根据 Dockerfile 中的所有信息生成容器映像。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-282">This command builds the container image based on all the information in your Dockerfile.</span></span> <span data-ttu-id="ea7f6-283">`-t` 自变量提供此容器映像的标记或名称。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-283">The `-t` argument provides a tag, or name, for this container image.</span></span> <span data-ttu-id="ea7f6-284">在上面的命令行中，Docker 容器的标记是 `weather-microservice`。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-284">In the command line above, the tag used for the Docker container is `weather-microservice`.</span></span> <span data-ttu-id="ea7f6-285">此命令完成后，就生成了一个可用于运行新服务的容器。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-285">When this command completes, you have a container ready to run your new service.</span></span> 
+<span data-ttu-id="18975-260">此命令将根据 Dockerfile 中的所有信息生成容器映像。</span><span class="sxs-lookup"><span data-stu-id="18975-260">This command builds the container image based on all the information in your Dockerfile.</span></span> <span data-ttu-id="18975-261">`-t` 自变量提供此容器映像的标记或名称。</span><span class="sxs-lookup"><span data-stu-id="18975-261">The `-t` argument provides a tag, or name, for this container image.</span></span> <span data-ttu-id="18975-262">在上面的命令行中，Docker 容器的标记是 `weather-microservice`。</span><span class="sxs-lookup"><span data-stu-id="18975-262">In the command line above, the tag used for the Docker container is `weather-microservice`.</span></span> <span data-ttu-id="18975-263">此命令完成后，就生成了一个可用于运行新服务的容器。</span><span class="sxs-lookup"><span data-stu-id="18975-263">When this command completes, you have a container ready to run your new service.</span></span> 
 
-<span data-ttu-id="ea7f6-286">运行以下命令，启动容器和服务：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-286">Run the following command to start the container and launch your service:</span></span>
+<span data-ttu-id="18975-264">运行以下命令，启动容器和服务：</span><span class="sxs-lookup"><span data-stu-id="18975-264">Run the following command to start the container and launch your service:</span></span>
 
 ```console
-docker run -d -p 80:5000 --name hello-docker weather-microservice
+docker run -d -p 80:80 --name hello-docker weather-microservice
 ```
 
-<span data-ttu-id="ea7f6-287">`-d` 选项表示运行从当前终端拆离出来的容器。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-287">The `-d` option means to run the container detached from the current terminal.</span></span> <span data-ttu-id="ea7f6-288">也就是说，终端中不会显示命令输出。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-288">That means you won't see the command output in your terminal.</span></span> <span data-ttu-id="ea7f6-289">`-p` 选项指示服务和主机之间的端口映射。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-289">The `-p` option indicates the port mapping between the service and the host.</span></span> <span data-ttu-id="ea7f6-290">即指应将端口 80 上的所有传入请求都转发到容器上的端口 5000。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-290">Here it says that any incoming request on port 80 should be forwarded to port 5000 on the container.</span></span> <span data-ttu-id="ea7f6-291">在上面的 Dockerfile 中指定的命令行自变量中，使用 5000 匹配服务要侦听的端口。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-291">Using 5000 matches the port your service is listening on from the command line arguments specified in the Dockerfile above.</span></span> <span data-ttu-id="ea7f6-292">`--name` 自变量用于命名正在运行的容器。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-292">The `--name` argument names your running container.</span></span> <span data-ttu-id="ea7f6-293">此名称可方便与容器结合使用。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-293">It's a convenient name you can use to work with that container.</span></span> 
+<span data-ttu-id="18975-265">`-d` 选项表示运行从当前终端拆离出来的容器。</span><span class="sxs-lookup"><span data-stu-id="18975-265">The `-d` option means to run the container detached from the current terminal.</span></span> <span data-ttu-id="18975-266">也就是说，终端中不会显示命令输出。</span><span class="sxs-lookup"><span data-stu-id="18975-266">That means you won't see the command output in your terminal.</span></span> <span data-ttu-id="18975-267">`-p` 选项指示服务和主机之间的端口映射。</span><span class="sxs-lookup"><span data-stu-id="18975-267">The `-p` option indicates the port mapping between the service and the host.</span></span> <span data-ttu-id="18975-268">即指应将端口 80 上的所有传入请求都转发到容器上的端口 80。</span><span class="sxs-lookup"><span data-stu-id="18975-268">Here it says that any incoming request on port 80 should be forwarded to port 80 on the container.</span></span> <span data-ttu-id="18975-269">使用 80 与服务正在侦听的端口相匹配，这是生产应用程序的默认端口。</span><span class="sxs-lookup"><span data-stu-id="18975-269">Using 80 matches the port your service is listening on, which is the default port for production applications.</span></span> <span data-ttu-id="18975-270">`--name` 自变量用于命名正在运行的容器。</span><span class="sxs-lookup"><span data-stu-id="18975-270">The `--name` argument names your running container.</span></span> <span data-ttu-id="18975-271">此名称可方便与容器结合使用。</span><span class="sxs-lookup"><span data-stu-id="18975-271">It's a convenient name you can use to work with that container.</span></span>
 
-<span data-ttu-id="ea7f6-294">可以运行以下命令来确定映像能否正常运行：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-294">You can see if the image is running by checking the command:</span></span>
+<span data-ttu-id="18975-272">可以运行以下命令来确定映像能否正常运行：</span><span class="sxs-lookup"><span data-stu-id="18975-272">You can see if the image is running by checking the command:</span></span>
 
 ```console
 docker ps
 ```
 
-<span data-ttu-id="ea7f6-295">如果容器能正常运行，那么正在运行的进程中就会有一行列出它来</span><span class="sxs-lookup"><span data-stu-id="ea7f6-295">If your container is running, you'll see a line that lists it in the running processes.</span></span> <span data-ttu-id="ea7f6-296">（可能是唯一一行）。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-296">(It may be the only one).</span></span>
+<span data-ttu-id="18975-273">如果容器能正常运行，那么正在运行的进程中就会有一行列出它来</span><span class="sxs-lookup"><span data-stu-id="18975-273">If your container is running, you'll see a line that lists it in the running processes.</span></span> <span data-ttu-id="18975-274">（可能是唯一的。）</span><span class="sxs-lookup"><span data-stu-id="18975-274">(It may be the only one.)</span></span>
 
-<span data-ttu-id="ea7f6-297">可以打开浏览器并转到 localhost，然后指定经纬度，从而测试服务：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-297">You can test your service by opening a browser and navigating to localhost, and specifying a latitude and longitude:</span></span>
+<span data-ttu-id="18975-275">可以打开浏览器并转到 localhost，然后指定经纬度，从而测试服务：</span><span class="sxs-lookup"><span data-stu-id="18975-275">You can test your service by opening a browser and navigating to localhost, and specifying a latitude and longitude:</span></span>
 
 ```
 http://localhost/?lat=35.5&long=40.75
 ```
 
-## <a name="attaching-to-a-running-container"></a><span data-ttu-id="ea7f6-298">附加到正在运行的容器</span><span class="sxs-lookup"><span data-stu-id="ea7f6-298">Attaching to a running container</span></span>
+## <a name="attaching-to-a-running-container"></a><span data-ttu-id="18975-276">附加到正在运行的容器</span><span class="sxs-lookup"><span data-stu-id="18975-276">Attaching to a running container</span></span>
 
-<span data-ttu-id="ea7f6-299">在命令窗口中运行服务时，可以查看针对各个请求打印输出的诊断信息。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-299">When you ran your sevice in a command window, you could see diagnostic information printed for each request.</span></span> <span data-ttu-id="ea7f6-300">如果容器是在拆离模式下运行，则看不到此类信息。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-300">You don't see that information when your container is running in detached mode.</span></span> <span data-ttu-id="ea7f6-301">使用 Docker 附加命令，可以将窗口附加到正在运行的容器，以便查看日志信息。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-301">The Docker attach command enables you to attach to a running container so that you can see the log information.</span></span>  <span data-ttu-id="ea7f6-302">在命令窗口中运行以下命令：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-302">Run this command from a command window:</span></span>
+<span data-ttu-id="18975-277">在命令窗口中运行服务时，可以查看针对各个请求打印输出的诊断信息。</span><span class="sxs-lookup"><span data-stu-id="18975-277">When you ran your service in a command window, you could see diagnostic information printed for each request.</span></span> <span data-ttu-id="18975-278">如果容器是在拆离模式下运行，则看不到此类信息。</span><span class="sxs-lookup"><span data-stu-id="18975-278">You don't see that information when your container is running in detached mode.</span></span> <span data-ttu-id="18975-279">使用 Docker 附加命令，可以将窗口附加到正在运行的容器，以便查看日志信息。</span><span class="sxs-lookup"><span data-stu-id="18975-279">The Docker attach command enables you to attach to a running container so that you can see the log information.</span></span>  <span data-ttu-id="18975-280">在命令窗口中运行以下命令：</span><span class="sxs-lookup"><span data-stu-id="18975-280">Run this command from a command window:</span></span>
 
 ```console
 docker attach --sig-proxy=false hello-docker
 ```
 
-<span data-ttu-id="ea7f6-303">`--sig-proxy=false` 自变量表示 `Ctrl-C` 命令未发送到容器进程，而是停止运行 `docker attach` 命令。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-303">The `--sig-proxy=false` argument means that `Ctrl-C` commands do not get sent to the container process, but rather stop the `docker attach` command.</span></span> <span data-ttu-id="ea7f6-304">最后的自变量是为 `docker run` 命令中的容器命名的名称。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-304">The final argument is the name given to the container in the `docker run` command.</span></span> 
+<span data-ttu-id="18975-281">`--sig-proxy=false` 自变量表示 <kbd>Ctrl</kbd>+<kbd>C</kbd> 命令未发送到容器进程，而是停止运行 `docker attach` 命令。</span><span class="sxs-lookup"><span data-stu-id="18975-281">The `--sig-proxy=false` argument means that <kbd>Ctrl</kbd>+<kbd>C</kbd> commands do not get sent to the container process, but rather stop the `docker attach` command.</span></span> <span data-ttu-id="18975-282">最后的自变量是为 `docker run` 命令中的容器命名的名称。</span><span class="sxs-lookup"><span data-stu-id="18975-282">The final argument is the name given to the container in the `docker run` command.</span></span> 
 
 > [!NOTE]
-> <span data-ttu-id="ea7f6-305">还可以使用 Docker 分配的容器 ID 来引用任何容器。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-305">You can also use the Docker assigned container ID to refer to any container.</span></span> <span data-ttu-id="ea7f6-306">如果没有在 `docker run` 中命名容器，必须使用容器 ID。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-306">If you didn't specify a name for your container in `docker run` you must use the container id.</span></span>
+> <span data-ttu-id="18975-283">还可以使用 Docker 分配的容器 ID 来引用任何容器。</span><span class="sxs-lookup"><span data-stu-id="18975-283">You can also use the Docker assigned container ID to refer to any container.</span></span> <span data-ttu-id="18975-284">如果没有在 `docker run` 中指定容器名称，则必须使用容器 ID。</span><span class="sxs-lookup"><span data-stu-id="18975-284">If you didn't specify a name for your container in `docker run` you must use the container ID.</span></span>
 
-<span data-ttu-id="ea7f6-307">打开浏览器并转到服务。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-307">Open a browser and navigate to your service.</span></span> <span data-ttu-id="ea7f6-308">将可以在命令窗口中查看附加的正在运行的容器生成的诊断消息。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-308">You'll see the diagnostic messages in the command windows from the attached running container.</span></span>
+<span data-ttu-id="18975-285">打开浏览器并转到服务。</span><span class="sxs-lookup"><span data-stu-id="18975-285">Open a browser and navigate to your service.</span></span> <span data-ttu-id="18975-286">将可以在命令窗口中查看附加的正在运行的容器生成的诊断消息。</span><span class="sxs-lookup"><span data-stu-id="18975-286">You'll see the diagnostic messages in the command windows from the attached running container.</span></span>
 
-<span data-ttu-id="ea7f6-309">按 `Ctrl-C` 可停止附加进程。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-309">Press `Ctrl-C` to stop the attach process.</span></span>
+<span data-ttu-id="18975-287">按 <kbd>Ctrl</kbd>+<kbd>C</kbd> 可停止附加进程。</span><span class="sxs-lookup"><span data-stu-id="18975-287">Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to stop the attach process.</span></span>
 
-<span data-ttu-id="ea7f6-310">使用完后，可以停止运行容器：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-310">When you are done working with your container, you can stop it:</span></span>
+<span data-ttu-id="18975-288">使用完后，可以停止运行容器：</span><span class="sxs-lookup"><span data-stu-id="18975-288">When you are done working with your container, you can stop it:</span></span>
 
 ```console
 docker stop hello-docker
 ```
 
-<span data-ttu-id="ea7f6-311">容器和映像仍可供重启。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-311">The container and image is still available for you to restart.</span></span>  <span data-ttu-id="ea7f6-312">若要从计算机中删除容器，可以运行以下命令：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-312">If you want to remove the container from your machine, you use this command:</span></span>
+<span data-ttu-id="18975-289">容器和映像仍可供重启。</span><span class="sxs-lookup"><span data-stu-id="18975-289">The container and image is still available for you to restart.</span></span>  <span data-ttu-id="18975-290">若要从计算机中删除容器，可以运行以下命令：</span><span class="sxs-lookup"><span data-stu-id="18975-290">If you want to remove the container from your machine, you use this command:</span></span>
 
 ```console
 docker rm hello-docker
 ```
 
-<span data-ttu-id="ea7f6-313">若要从计算机中删除未使用的映像，可以运行以下命令：</span><span class="sxs-lookup"><span data-stu-id="ea7f6-313">If you want to remove unused images from your machine, you use this command:</span></span>
+<span data-ttu-id="18975-291">若要从计算机中删除未使用的映像，可以运行以下命令：</span><span class="sxs-lookup"><span data-stu-id="18975-291">If you want to remove unused images from your machine, you use this command:</span></span>
 
 ```console
 docker rmi weather-microservice
 ```
 
-## <a name="conclusion"></a><span data-ttu-id="ea7f6-314">结束语</span><span class="sxs-lookup"><span data-stu-id="ea7f6-314">Conclusion</span></span> 
+## <a name="conclusion"></a><span data-ttu-id="18975-292">结束语</span><span class="sxs-lookup"><span data-stu-id="18975-292">Conclusion</span></span> 
 
-<span data-ttu-id="ea7f6-315">在此教程中，你生成了 ASP.NET Core 微服务，并添加了一些简单的功能。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-315">In this tutorial, you built an ASP.NET Core microservice, and added a few simple features.</span></span>
+<span data-ttu-id="18975-293">在此教程中，你生成了 ASP.NET Core 微服务，并添加了一些简单的功能。</span><span class="sxs-lookup"><span data-stu-id="18975-293">In this tutorial, you built an ASP.NET Core microservice, and added a few simple features.</span></span>
 
-<span data-ttu-id="ea7f6-316">此外，你还生成了此服务的 Docker 容器映像，并在计算机上运行了相应的容器。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-316">You built a Docker container image for that service, and ran that container on your machine.</span></span> <span data-ttu-id="ea7f6-317">最后，你还将终端窗口附加到了服务中，并查看服务生成的诊断消息。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-317">You attached a terminal window to the service, and saw the diagnostic messages from your service.</span></span>
+<span data-ttu-id="18975-294">此外，你还生成了此服务的 Docker 容器映像，并在计算机上运行了相应的容器。</span><span class="sxs-lookup"><span data-stu-id="18975-294">You built a Docker container image for that service, and ran that container on your machine.</span></span> <span data-ttu-id="18975-295">最后，你还将终端窗口附加到了服务中，并查看服务生成的诊断消息。</span><span class="sxs-lookup"><span data-stu-id="18975-295">You attached a terminal window to the service, and saw the diagnostic messages from your service.</span></span>
 
-<span data-ttu-id="ea7f6-318">与此同时，你还了解了多项 C# 语言功能的实际运用。</span><span class="sxs-lookup"><span data-stu-id="ea7f6-318">Along the way, you saw several features of the C# language in action.</span></span>
+<span data-ttu-id="18975-296">与此同时，你还了解了多项 C# 语言功能的实际运用。</span><span class="sxs-lookup"><span data-stu-id="18975-296">Along the way, you saw several features of the C# language in action.</span></span>
