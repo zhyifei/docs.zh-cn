@@ -1,4 +1,5 @@
 # [文件和流 I/O](index.md)
+## [Windows 系统中的文件路径格式](file-path-formats.md)
 ## [通用 I/O 任务](common-i-o-tasks.md)
 ### [如何：复制目录](how-to-copy-directories.md)
 ### [如何：枚举目录和文件](how-to-enumerate-directories-and-files.md)
