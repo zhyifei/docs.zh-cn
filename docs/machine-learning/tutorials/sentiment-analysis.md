@@ -4,12 +4,12 @@ description: 了解如何在二元分类方案中使用 ML.NET，以了解如何
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 898b4664120b6eeb0ef18aac3acdc94b0ca0bacd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314833"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948613"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教程：在情绪分析二元分类方案中使用 ML.NET
 
@@ -113,13 +113,13 @@ ms.locfileid: "36314833"
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#1 "Add necessary usings")]
 
-需要创建三个全局变量，来保存最近下载的文件路径：
+需要创建三个全局字段，来保存最近下载的文件的路径：
 
 * `_dataPath` 具有用于定型模型的数据集路径。
 * `_testDataPath` 具有用于评估模型的数据集路径。
 * `_modelPath` 具有在其中保存定型模型的路径。
 
-将以下代码添加到上面 `Main` 方法右侧的行中，以指定将最近下载的文件：
+将以下代码添加到 `Main` 方法上方的行中，以指定这些路径：
 
 [!code-csharp[Declare file variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#2 "Declare variables to store data files")]
 

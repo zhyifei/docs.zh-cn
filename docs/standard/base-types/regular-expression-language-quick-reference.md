@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b41161d1511f7dce975ac5ad916750734972fa3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579868"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948600"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正则表达式语言 - 快速参考
 <a name="top"></a> 正则表达式是正则表达式引擎尝试匹配输入文本的一种模式。 模式由一个或多个字符文本、运算符或构造组成。  有关简要介绍，请参阅 [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -93,8 +93,8 @@ ms.locfileid: "33579868"
   
 |断言|描述|模式|匹配|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|匹配必须从字符串或一行的开头开始。|`^\d{3}`|“901”<br /><br /> “901-”|  
-|`$`|匹配必须出现在字符串的末尾或出现在行或字符串末尾的 `\n` 之前。|`-\d{3}$`|“-333”<br /><br /> “-333”|  
+|`^`|默认情况下，必须从字符串的开头开始匹配；在多行模式中，必须从该行的开头开始。|`^\d{3}`|“901”<br /><br /> “901-”|  
+|`$`|默认情况下，匹配必须出现在字符串的末尾，或在字符串末尾的 `\n` 之前；在多行模式中，必须出现在该行的末尾之前，或在该行末尾的 `\n` 之前。|`-\d{3}$`|“-333”<br /><br /> “-333”|  
 |`\A`|匹配必须出现在字符串的开头。|`\A\d{3}`|“901”<br /><br /> “901-”|  
 |`\Z`|匹配必须出现在字符串的末尾或出现在字符串末尾的 `\n` 之前。|`-\d{3}\Z`|“-333”<br /><br /> “-333”|  
 |`\z`|匹配必须出现在字符串的末尾。|`-\d{3}\z`|“-333”<br /><br /> “-333”|  

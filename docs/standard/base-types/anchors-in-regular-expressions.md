@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cbf0ceb7d5f8e56955f8989e5eb4efba99540bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578022"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948584"
 ---
 # <a name="anchors-in-regular-expressions"></a>正则表达式中的定位点
 <a name="top"></a> 定位点（原子零宽度断言）指定字符串中必须出现匹配的位置。 在搜索表达式中使用定位点时，正则表达式引擎不在字符串中前进或使用字符，它仅在指定位置查找匹配。 例如， `^` 指定必须从行或字符串的开头开始匹配。 因此，正则表达式 `^http:` 仅当 "http:" 出现在行开头时才与之匹配。 下表列出了 .NET 中正则表达式支持的定位点。  
   
 |定位点|描述|  
 |------------|-----------------|  
-|`^`|匹配必须出现在字符串或行的开头位置。 有关详细信息，请参阅 [字符串或行的开头](#Start)。|  
-|`$`|匹配必须出现在字符串或行的末尾，或出现在字符串或行末尾的 `\n` 之前。 有关详细信息，请参阅 [字符串或行的末尾](#End)。|  
+|`^`|默认情况下，匹配必须出现在字符串的开头；在多行模式中，必须出现在该行的开头。 有关详细信息，请参阅 [字符串或行的开头](#Start)。|  
+|`$`|默认情况下，匹配必须出现在字符串的末尾，或在字符串末尾的 `\n` 之前；在多行模式中，必须出现在该行的末尾，或在该行末尾的 `\n` 之前。 有关详细信息，请参阅 [字符串或行的末尾](#End)。|  
 |`\A`|匹配必须仅出现在字符串的开头位置（无多行支持）。 有关详细信息，请参阅 [仅字符串的开头](#StartOnly)。|  
 |`\Z`|匹配必须出现在字符串的末尾，或出现在字符串末尾的 `\n` 之前。 有关详细信息，请参阅 [字符串的末尾或结束换行之前](#EndOrNOnly)。|  
 |`\z`|匹配必须仅出现在字符串的末尾。 有关详细信息，请参阅 [仅字符串的末尾](#EndOnly)。|  
@@ -40,7 +40,7 @@ ms.locfileid: "33578022"
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>字符串或行的开头：^  
- `^` 定位点指定以下模式必须从字符串的第一个字符位置开始。 如果结合使用 `^` 与 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项（请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)），匹配必须出现在每行的开头。  
+ 默认情况下，`^` 定位点指定以下模式必须从字符串的第一个字符位置开始。 如果结合使用 `^` 与 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项（请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)），匹配必须出现在每行的开头。  
   
  以下示例在正则表达式中使用 `^` 定位点，可提取有关某些职业棒球队存在年限的信息。 该示例调用 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法的两个重载：  
   

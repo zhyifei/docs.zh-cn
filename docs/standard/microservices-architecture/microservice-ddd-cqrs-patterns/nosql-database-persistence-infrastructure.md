@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 2618e8c068ec538f5bfed2f8243d1c594478fcb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf43f9914a05c2745f914a6e36fcab13fb7feffa
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578958"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106640"
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>将 NoSQL 数据库用作持久性基础结构
 
@@ -310,7 +310,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 -   Introduction to Azure Cosmos DB: API for MongoDB（Azure Cosmos DB 介绍：API for MongoDB）**** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
 
--   Azure Cosmos DB: Build a MongoDB API web app with .NET and the Azure portal（Azure Cosmos DB：使用 .NET 和 Azure 门户生成 MongoDB API web 应用）**** 
+-   Azure Cosmos DB: Build a MongoDB API web app with .NET and the Azure portal（Azure Cosmos DB：使用 .NET 和 Azure 门户生成 MongoDB API Web 应用）**** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
 
 -   Use the Azure Cosmos DB Emulator for local development and testing（将 Azure Cosmos DB 仿真器用于本地开发和测试）**** 
@@ -330,4 +330,5 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 
 >[!div class="step-by-step"]
-[上一篇] (infrastructure-persistence-layer-implemenation-entity-framework-core.md) [下一篇] (microservice-application-layer-web-api-design.md)
+[上一页](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[下一页](microservice-application-layer-web-api-design.md)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: dotnet-ml
 ms.devlang: dotnet
 manager: wpickett
-ms.openlocfilehash: 332d9e14bea165992f9f00b048286e185269ea79
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b7690eb6931f4a491b1a03812fe3f2d8a64cfcd4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34860629"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207714"
 ---
 # <a name="machine-learning-glossary"></a>机器学习库
 
@@ -33,7 +33,7 @@ ms.locfileid: "34860629"
 
 ## <a name="binary-classification"></a>二元分类
 
-一个[分类](#classification)事例，其中[标签](#label)仅为两个类中的一个。 有关详细信息，请参阅 Wikipedia 上的[二元分类](https://en.wikipedia.org/wiki/Binary_classification)一文。
+一个[分类](#classification)事例，其中[标签](#label)仅为两个类中的一个。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[二元分类](tasks.md#binary-classification)部分。
 
 ## <a name="classification"></a>分类
 
@@ -85,7 +85,7 @@ ms.locfileid: "34860629"
 
 ## <a name="multiclass-classification"></a>多类分类
 
-一个[分类](#classification)事例，其中[标签](#label)是三个或更多类中的一个。 有关详细信息，请参阅 Wikipedia 上的[多类分类](https://en.wikipedia.org/wiki/Multiclass_classification)一文。
+一个[分类](#classification)事例，其中[标签](#label)是三个或更多类中的一个。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[多类分类](tasks.md#multiclass-classification)部分。
 
 ## <a name="n-gram"></a>N 元语法
 
@@ -113,7 +113,7 @@ ms.locfileid: "34860629"
 
 ## <a name="regression"></a>回归
 
-[监管式机器学习](#supervised-machine-learning)任务，其中输出是一个实际值，例如，双精度值。 示例包括预测股票价格。
+[监管式机器学习](#supervised-machine-learning)任务，其中输出是一个实际值，例如，双精度值。 示例包括预测股票价格。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[回归](tasks.md#regression)部分。
 
 ## <a name="relative-absolute-error"></a>相对绝对误差
 

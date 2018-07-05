@@ -3,12 +3,12 @@ title: C# 类和对象 - C# 语言介绍
 description: 刚开始接触 C#？ 请阅读这篇概述类、对象和继承的文章
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298287"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140276"
 ---
 # <a name="classes-and-objects"></a>类和对象
 
@@ -55,7 +55,7 @@ ms.locfileid: "36298287"
 
 ## <a name="accessibility"></a>可访问性
 
-每个类成员都有关联的可访问性，用于控制能够访问成员的程序文本区域。 可访问性有五种可能的形式。 总结如下。
+每个类成员都有关联的可访问性，用于控制能够访问成员的程序文本区域。 可访问性有六种可能的形式。 总结如下。
 
 * `public`
     - 访问不受限
@@ -64,7 +64,7 @@ ms.locfileid: "36298287"
 * `internal`
     - 访问限于当前程序集（.exe、.dll 等）
 * `protected internal`
-    - 访问限于包含类或派生自包含类的类
+    - 访问限于包含类、派生自包含类的类或同一程序集中的类
 * `private`
     - 只能访问此类
 * `private protected`

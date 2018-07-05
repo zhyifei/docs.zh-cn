@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579452"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106247"
 ---
 # <a name="designing-a-microservice-domain-model"></a>设计微服务域模型
 
@@ -153,4 +153,5 @@ public class Order : Entity, IAggregateRoot
 
 
 >[!div class="step-by-step"]
-[上一篇] (ddd-oriented-microservice.md) [下一篇] (net-core-microservice-domain-model.md)
+[上一页](ddd-oriented-microservice.md)
+[下一页](net-core-microservice-domain-model.md)

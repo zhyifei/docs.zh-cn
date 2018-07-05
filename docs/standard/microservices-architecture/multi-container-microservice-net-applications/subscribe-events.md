@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 8ef9f39b0d99db32438e7dcf83318a1aa9054967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592439"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106572"
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 
@@ -320,7 +320,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [http://go.particular.net/eShopOnContainers](http://go.particular.net/eShopOnContainers)
 
 -   **Event Driven Messaging**（事件驱动的消息传递）
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **Jimmy Bogard。Refactoring Towards Resilience: Evaluating Coupling**（重构复原能力：评估耦合度）
     [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
@@ -331,8 +331,8 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 -   **绑定上下文之间的通信**
     [https://msdn.microsoft.com/library/jj591572.aspx](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual consistency**（最终一致性）
-    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Eventual Consistency**（最终一致性）
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Philip Brown。Strategies for Integrating Bounded Contexts**（集成有界上下文的策略）
     [http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
@@ -352,8 +352,8 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 -   **Patrick Nommensen。Event-Driven Data Management for Microservices**（微服务的事件驱动数据管理）<https://dzone.com/articles/event-driven-data-management-for-microservices-1>
     **
 
--   **The CAP Theorem**
-    （CAP 定理）[https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **The CAP Theorem**（CAP 定理）
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
 -   **What is CAP Theorem?**（什么是 CAP 定理？）
     [https://www.quora.com/What-Is-CAP-Theorem-1](https://www.quora.com/What-Is-CAP-Theorem-1)
@@ -367,15 +367,16 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 -   **Eric Brewer。CAP Twelve Years Later: How the "Rules" Have Changed**（CAP 十二年之后：“规则”发生了哪些变化）
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Participating in External (DTC) Transactions**（参与外部 (DTC) 事务）(MSMQ) [https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Participating in External (DTC) Transactions**（参与外部 (DTC) 事务）(MSMQ)[*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
 -   **Azure 服务总线。Brokered Messaging: Duplicate Detection**（中转消息传送：重复检测）
     [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **可靠性指南**（RabbitMQ 文档）[https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Reliability Guide**（可靠性指南）（RabbitMQ 文档）[*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 
 
 >[!div class="step-by-step"]
-[上一篇] (rabbitmq-event-bus-development-test-environment.md) [下一篇] (test-aspnet-core-services-web-apps.md)
+[上一页](rabbitmq-event-bus-development-test-environment.md)
+[下一页](test-aspnet-core-services-web-apps.md)

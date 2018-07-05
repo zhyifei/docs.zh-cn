@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: bee9a6215d2952f6c7f71607b1c4b1f44d1c0faf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fb5d2f9f4f63ee885752a5dcc45cc45f71dc32f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579127"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106403"
 ---
 # <a name="asynchronous-message-based-communication"></a>基于消息的异步通信
 
@@ -86,7 +86,7 @@ ms.locfileid: "33579127"
 ## <a name="additional-resources"></a>其他资源
 
 -   **Event Driven Messaging**（事件驱动的消息传递）
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **Publish/Subscribe Channel**（发布/订阅通道）
     [http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
@@ -100,12 +100,13 @@ ms.locfileid: "33579127"
 -   **绑定上下文之间的通信**
     [https://msdn.microsoft.com/library/jj591572.aspx](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual consistency**（最终一致性）
-    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Eventual Consistency**（最终一致性）
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Jimmy Bogard。Refactoring Towards Resilience: Evaluating Coupling**（重构复原能力：评估耦合度）
     [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 
 >[!div class="step-by-step"]
-[上一篇] (communication-in-microservice-architecture.md) [下一篇] (maintain-microservice-apis.md)
+[上一页](communication-in-microservice-architecture.md)
+[下一页](maintain-microservice-apis.md)

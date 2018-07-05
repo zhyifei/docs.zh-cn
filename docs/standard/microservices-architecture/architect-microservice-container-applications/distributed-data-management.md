@@ -4,12 +4,12 @@ description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7d173133ab7c803c7ab48b39c50b02ee4f3b1721
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d079dc7eef2f4abfbdec5a01b4233c8504d449d
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578932"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106484"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分布式数据管理的挑战和解决方案
 
@@ -83,11 +83,11 @@ ms.locfileid: "33578932"
 
 ## <a name="additional-resources"></a>其他资源
 
--   **CAP theorem**（CAP 定理）
-    [https://en.wikipedia.org/wiki/CAP\_定理](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **The CAP Theorem**（CAP 定理）
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Eventual consistency**（最终一致性）
-    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Eventual Consistency**（最终一致性）
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Data Consistency Primer**（数据一致性入门指南）
     [https://msdn.microsoft.com/library/dn589800.aspx](https://msdn.microsoft.com/library/dn589800.aspx)
@@ -109,4 +109,5 @@ ms.locfileid: "33578932"
 
 
 >[!div class="step-by-step"]
-[上一页] (logical-versus-physical-architecture.md) [下一页] (identify-microservice-domain-model-boundaries.md)
+[上一页](logical-versus-physical-architecture.md)
+[下一页](identify-microservice-domain-model-boundaries.md)

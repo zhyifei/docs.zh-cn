@@ -4,16 +4,16 @@ description: 了解自包含部署的 dotnet publish 更改。
 author: jralexander
 ms.author: kdollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 40d28e81e2ac1b27e7fd89e16d2d906a080fd18b
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697205"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071027"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>自包含部署运行时前滚
 
-.NET Core [自包含应用程序部署](index.md)包括 .NET Core 库和 .NET Core 运行时。 从 NET Core SDK 2.1.300 (.NET Core 2.1) 开始，自包含应用程序部署[在计算机上发布最高版本的修补程序运行时](https://github.com/dotnet/designs/pull/36)。 默认情况下，自包含部署的 [`dotnet publish`](../tools/dotnet-publish.md) 选择安装的最新版本，作为要发布的计算机上的 SDK 的一部分。 这让部署的应用程序在 `publish` 期间能与安全修补程序（以及其他修补程序）配合运行。 若要获取新的修补程序，需要重新发布应用程序。 自包含应用程序是通过在 `dotnet publish` 命令上指定 `-r <RID>` 创建的，或是通过在项目文件 (csproj / vbproj) 或命令行中指定[运行时标识符 (RID)](../rid-catalog.md) 创建的。
+.NET Core [自包含应用程序部署](index.md)包括 .NET Core 库和 .NET Core 运行时。 从 NET Core SDK 2.1.300 (.NET Core 2.1) 开始，自包含应用程序部署[在计算机上发布最高版本的修补程序运行时](https://github.com/dotnet/designs/pull/36)。 默认情况下，自包含部署的 [`dotnet publish`](../tools/dotnet-publish.md) 选择作为发布计算机上 SDK 一部分而安装的最新版本。 这让部署的应用程序在 `publish` 期间能与安全修补程序（以及其他修补程序）配合运行。 若要获取新的修补程序，需要重新发布应用程序。 自包含应用程序是通过在 `dotnet publish` 命令上指定 `-r <RID>` 创建的，或是通过在项目文件 (csproj / vbproj) 或命令行中指定[运行时标识符 (RID)](../rid-catalog.md) 创建的。
 
 ## <a name="patch-version-roll-forward-overview"></a>修补程序版本前滚概述
 
@@ -28,15 +28,15 @@ ms.locfileid: "34697205"
 
 你可能在进行 `publish` 操作时不需要运行 `restore`。 在创建自包含应用程序时，若要避免在 `publish` 过程中进行 `restore`，请执行以下操作：
 
-* 将 `RuntimeIdentifiers` 属性设为一个分号分隔的列表，其中包含所有要发布的 [RID](../rid-catalog.md)
-* 将 `TargetLatestRuntimePatch` 属性设置为 `true`
+* 将 `RuntimeIdentifiers` 属性设为一个分号分隔的列表，其中包含所有要发布的 [RID](../rid-catalog.md)。
+* 将 `TargetLatestRuntimePatch` 属性设置为 `true`。
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>使用 dotnet publish 选项的 no-restore 参数
 
 如果要使用同样的项目文件创建自包含应用程序和[依赖框架的应用程序](index.md)，并且想通过 `dotnet publish` 使用 `--no-restore` 参数，请选择以下各项之一：
 
-1. 首选依赖框架的行为。 如果是依赖框架的应用程序，则此选项为默认行为。 如果是自包含应用程序，并且能使用未带修补程序的 2.1.0 本地运行时，请在项目文件 (csproj / vbproj) 中将 `TargetLatestRuntimePatch` 设为 `false`。
+1. 首选依赖框架的行为。 如果是依赖框架的应用程序，则此选项为默认行为。 如果是自包含应用程序，并且能使用未带修补程序的 2.1.0 本地运行时，请在项目文件中将 `TargetLatestRuntimePatch` 设为 `false`。
 
-2. 首选自包含行为。 如果是自包含应用程序，则此选项为默认行为。 如果是依赖框架的应用程序，且需要安装最新版本的修补程序，请在项目文件 (csproj / vbproj) 中将 `TargetLatestRuntimePatch` 设为 `true`。
+2. 首选自包含行为。 如果是自包含应用程序，则此选项为默认行为。 如果是依赖框架的应用程序，且需要安装最新版本的修补程序，请在项目文件中将 `TargetLatestRuntimePatch` 设为 `true`。
 
-3. 通过在项目文件 (csproj / vbproj) 中将 `RuntimeFrameworkVersion` 设为特定的修补程序版本，可对运行时框架版本进行显式地控制。
+3. 通过在项目文件中将 `RuntimeFrameworkVersion` 设为特定的修补程序版本，可对运行时框架版本进行显式控制。
