@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 06/18/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 690e39dcbd02d81b8d4afe918a74795aa02f7fc6
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 9706dad0a8e32651496e0404be4501c2c70e9d75
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314960"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948626"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>教程：使用 ML.NET 预测纽约出租车费（回归）
 
@@ -82,7 +82,7 @@ ms.locfileid: "36314960"
 
 1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
 1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“TaxiTrip.cs”。 然后，选择“添加”按钮。
-1. 将以下 `using` 语句添加到新文件中：
+1. 将以下 `using` 指令添加到新文件：
 
    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
 
@@ -96,19 +96,23 @@ ms.locfileid: "36314960"
 
 ## <a name="define-data-and-model-paths"></a>定义数据和模型路径
 
-返回到 Program.cs 文件并创建三个全局常数，以保存到有数据集的文件的路径并保存模型：
+返回到 Program.cs 文件并添加三个字段，以保存具有数据集的文件的路径以及用于保存模型的文件的路径：
 
-* `_datapath` 具有用于定型模型的数据集路径。
-* `_testdatapath` 具有用于评估模型的数据集路径。
-* `_modelpath` 具有在其中存储定型模型的路径。
+* `_datapath` 包含具有用于定型模型的数据集的文件的路径。
+* `_testdatapath` 包含具有用于评估模型的数据集的文件的路径。
+* `_modelpath` 包含用于存储定型模型的文件的路径。
 
-将以下代码添加到 `Main` 方法上方的行中，以指定这些路径：
+将以下代码添加到 `Main` 方法上方，以指定这些路径：
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
+要编译前面的代码，请将以下 `using` 指令添加到 Program.cs 文件顶部：
+
+[!code-csharp[AddUsingsForPaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Using statements for path definitions")]
+
 ## <a name="create-a-learning-pipeline"></a>创建学习管道
 
-将以下附加的 `using` 语句添加到“Program.cs”文件顶部：
+将以下附加 `using` 指令添加到 Program.cs 文件顶部：
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
@@ -135,7 +139,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>加载和转换数据
 
-学习管道执行的第一步是从定型数据集加载数据。 在本例中，定型数据集存储在有 `_datapath` 常数定义的路径的文本文件中。 该文件包含有列名的标头，所以加载数据时应忽略第一行。 文件中的列用逗号 (",") 分割。 将以下代码添加到 `Train` 方法：
+学习管道执行的第一步是从定型数据集加载数据。 在本例中，定型数据集存储在具有 `_datapath` 字段所定义路径的文本文件中。 该文件包含有列名的标头，所以加载数据时应忽略第一行。 文件中的列用逗号 (",") 分割。 将以下代码添加到 `Train` 方法：
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
@@ -215,7 +219,7 @@ pipeline.Add(new FastTreeRegressor());
 
 [!code-csharp[AsyncMain](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Make the Main method async and return a task.")]
 
-还需要将下面的 `using` 语句添加到文件顶部：
+还需要将以下 `using` 指令添加到文件顶部：
 
 [!code-csharp[UsingTasks](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Add System.Threading.Tasks. to your usings.")]
 
