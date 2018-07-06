@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579764"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071859"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正则表达式中的回溯
 <a name="top"></a> 当正则表达式模式包含可选 [限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)时，会发生回溯，并且正则表达式引擎会返回以前保存的状态，以继续搜索匹配项。 回溯是正则表达式的强大功能的中心；它使得表达式强大、灵活，可以匹配非常复杂的模式。 同时，这种强大功能需要付出一定代价。 通常，回溯是影响正则表达式引擎性能的单个最重要的因素。 幸运的是，开发人员可以控制正则表达式引擎的行为及其使用回溯的方式。 本主题说明回溯的工作方式以及如何对其进行控制。  
@@ -169,7 +169,7 @@ ms.locfileid: "33579764"
 |`[-.\w]*`|匹配零个、一个或多个连字符、句号或单词字符。|  
 |`[0-9A-Z]`|匹配字母数字字符。|  
 |`([-.\w]*[0-9A-Z])*`|匹配以下零个或多个事例：即零个或多个连字符、句号或单词字符后跟一个字母数字字符的组合。 这是第一个捕获组。|  
-|`@`|匹配 at 符号（“@”）。|  
+|`@`|匹配 at 符号（“\@”）。|  
   
  第二个正则表达式模式 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`使用正回顾断言。 其定义如下表所示。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "33579764"
 |`[0-9A-Z]`|匹配字母数字字符。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
 |`[-.\w]*`|匹配零个或多个连字符、句号或单词字符。|  
 |`(?<=[0-9A-Z])`|回顾最后一个匹配的字符，如果该字符是字母数字字符，则继续匹配。 请注意，字母数字字符是由句号、连字符和所有单词字符构成的集合的子集。|  
-|`@`|匹配 at 符号（“@”）。|  
+|`@`|匹配 at 符号（“\@”）。|  
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>预测先行断言  
