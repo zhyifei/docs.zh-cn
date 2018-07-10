@@ -58,7 +58,7 @@ ms.locfileid: "33392443"
   
 -   URI `file:///path` 不再转换为 file://path。  
   
--   现在，“#”被识别为主机名终止符。 即，“http://consoto.com#fragment”现在转换为“http://contoso.com/#fragment”。  
+-   现在，“#”被识别为主机名终止符。 即， “http://consoto.com#fragment” 现在转换为 “http://contoso.com/#fragment” 。  
   
 -   结合基 URI 与片段时的 bug 已修复。  
   
