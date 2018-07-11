@@ -32,7 +32,7 @@ ms.locfileid: "34753495"
   
 ## <a name="to-create-a-new-console-application-to-host-the-service"></a>新建用于承载服务的控制台应用程序  
   
-1.  通过右键单击入门解决方案，依次选择“添加”、“新建项目”，创建新的控制台应用程序项目。 在对话框左侧的“添加新项目”对话框中，在“C#”或“VB”下选择“Windows”。 在对话框的中心部分选择“控制台应用程序”。 将项目命名为 GettingStartedHost。  
+1.  通过右键单击`GettingStarted`解决方案，依次选择“添加”、“新建项目”，创建新的控制台应用程序项目。 在对话框左侧的“添加新项目”对话框中，在“C#”或“VB”下选择“Windows”。 在对话框的中心部分选择“控制台应用程序”。 将项目命名为 GettingStartedHost。  
   
 2.  在解决方案资源管理器中右键单击“GettingStartedHost”并选择“属性”，将 GettingStartedHost 项目的目标框架设置为 .NET Framework 4.5。 在标记为“目标框架”的下拉框中，选择“.NET Framework 4.5”。 设置 VB 项目的目标框架稍有不同，在 GettingStartedHost 项目属性对话框中，单击屏幕左侧的“编译”选项卡，然后单击对话框左下角的“高级编译选项”按钮。 然后，在标记为“目标框架”的下拉框中选择“.NET Framework 4.5”。  
   
