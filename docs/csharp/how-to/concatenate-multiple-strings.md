@@ -16,7 +16,7 @@ ms.locfileid: "33213241"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>如何：串联多个字符串（C# 指南）
 
-串联是将一个字符串追加到另一字符串末尾的过程。 可使用 `+` 运算符连接字符串。 对于字符串文本和字符串常量，会在编译时进行串联，运行时不串联。 对于字符串变量，仅在运行时窗帘。
+串联是将一个字符串追加到另一字符串末尾的过程。 可使用 `+` 运算符连接字符串。 对于字符串文本和字符串常量，会在编译时进行串联，运行时不串联。 对于字符串变量，仅在运行时串联。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
