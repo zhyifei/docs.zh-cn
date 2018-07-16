@@ -3,10 +3,10 @@ title: '&lt;basicHttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
 ms.openlocfilehash: 7f543a91f1d11575df239267a6a8a0b244d99cb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 378f0e075030239d8259a92a6a0193dd6faf54b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/16/2018
 ms.locfileid: "33366042"
 ---
 # <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; 的 &lt;message&gt;
@@ -41,8 +41,8 @@ ms.locfileid: "33366042"
   
 |值|描述|  
 |-----------|-----------------|  
-|UserName|-要求客户端在使用 UserName 凭据向服务器进行身份验证。 此凭据需要指定使用[ \<c a t e >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)。<br />WCF 不支持发送密码摘要，也使用派生密钥的密码并使用这样的密钥来提供消息安全性。 因此，WCF 强制使用 UserName 凭据时，传输进行保护。 对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
-|证书|要求使用证书向服务器对客户端进行身份验证。 在这种情况下，客户端凭据需要指定使用[ \<c a t e >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)和[ \<t i a l >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)。 此外，在使用消息安全模式时，需要向客户端提供服务证书。 在这种情况下需要使用指定服务凭据<xref:System.ServiceModel.Description.ClientCredentials>类或`ClientCredentials`行为元素并指定服务证书使用[ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。|  
+|UserName|-要求客户端使用 UserName 凭据向服务器进行身份验证。 该凭据需要能够使用指定[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)。<br />WCF 不支持发送密码摘要，也派生密钥的密码并使用此类密钥来提供消息安全性。 因此，WCF 强制要求使用 UserName 凭据时保护传输的。 对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
+|证书|要求使用证书向服务器对客户端进行身份验证。 在这种情况下，客户端凭据需要使用指定[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)并且[ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)。 此外，在使用消息安全模式时，需要向客户端提供服务证书。 在这种情况下需要使用指定服务凭据<xref:System.ServiceModel.Description.ClientCredentials>类或`ClientCredentials`行为元素并指定服务证书使用[ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
