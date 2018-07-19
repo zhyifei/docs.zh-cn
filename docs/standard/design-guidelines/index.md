@@ -17,15 +17,15 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33572978"
 ---
 # <a name="framework-design-guidelines"></a>框架设计准则
-本部分提供有关设计的库扩展且使用.NET Framework 进行交互的准则。 目的是帮助确保通过提供用于开发的编程语言无关的统一编程模型的 API 一致性和易于使用的库设计器。 我们建议你遵循这些设计准则，开发的类和扩展.NET Framework 的组件时。 不一致的库设计产生负面影响开发人员工作效率，并且不鼓励采用。  
+本节提供了有关设计扩展.NET Framework并与.NET Framework交互的库的准则。 目的是通过提供独立于于开发的编程语言的统一编程模型来帮助库设计者确保API的一致性和易用性。 我们建议您在开发扩展.NET Framework的类和组件时遵循这些设计准则。 不一致的库设计会对开发人员的工作效率产生负面影响，不鼓励采用。  
   
- 这些准则组织为包含以这些前缀的简单建议`Do`， `Consider`， `Avoid`，和`Do not`。 这些指南旨在帮助了解不同的解决方案之间权衡的类库设计器。 可能有很好的库设计需要违反这些设计准则的情况。 这种情况下应该很少见，而且很重要，必须为你确定有充分的理由。  
+准则的形式为一些简单的建议，前缀为`务必（Do）`，`考虑（Consider）`，`避免（Avoid）`和`不要（Do not）`。 这些准则旨在帮助类库设计人员理解不同解决方案之间的权衡取舍。 在某些情况下，良好的库设计需要您违反这些设计准则。 这种情况应该很罕见，重要的是你的决定要有明确和令人信服的理由。  
   
- 这些准则摘自书*Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式*、 Krzysztof Cwalina 和 Brad Abrams。  
+这些准则摘自Krzysztof Cwalina 和 Brad Abrams的书*Framework 设计指南： 可重用.NET 库的约定、 惯用法模式 第2版*。  
   
 ## <a name="in-this-section"></a>本节内容  
  [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)  
- 命名程序集、 命名空间、 类型和成员类库中的提供了准则。  
+ 提供在类库中命名程序集、名称空间、类型和成员的准则。 
   
  [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
  提供用于静态和抽象类、 接口、 枚举、 结构和其他类型的准则。  
@@ -34,20 +34,20 @@ ms.locfileid: "33572978"
  提供有关设计和使用属性、 方法、 构造函数、 字段、 事件、 运算符和参数的准则。  
   
  [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- 讨论了扩展性机制，例如子类化，使用事件、 虚拟成员和回调，并说明如何选择最好地满足您的框架的需求的机制。  
+ 讨论可扩展性机制，例如子类化，使用事件、 虚拟成员和回调，并说明如何选择最符合框架的需求的机制。  
   
  [异常的设计准则](../../../docs/standard/design-guidelines/exceptions.md)  
  描述设计、 引发和捕获异常的设计准则。  
   
  [使用准则](../../../docs/standard/design-guidelines/usage-guidelines.md)  
- 介绍如何使用常见的类型，如数组、 属性和集合、 支持序列化，以及重载相等运算符的指南。  
+ 描述使用常见类型，如数组、属性和集合、支持序列化及重载相等运算符的准则。
   
  [常用设计模型](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- 选择并实施依赖项属性和的释放模式提供了准则。  
+ 提供有关选择和实现依赖项属性和dispose模式的准则。
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *由 Pearson Education, Inc 许可，转载自[Framework 设计准则： 可重用.NET 库的约定、 惯用法和模式 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者 Krzysztof Cwalina 和 Brad Abrams，由Addison Wesley Professional 于 2008 年 10 月 22 日发布，作为 Microsoft Windows 开发系列的一部分。*
   
 ## <a name="see-also"></a>请参阅  
  [概述](../../../docs/framework/get-started/overview.md)  

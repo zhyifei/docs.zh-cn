@@ -19,33 +19,34 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33575279"
 ---
 # <a name="capitalization-conventions"></a>大小写约定
-简单的方法来使用此章布局中的准则种情况下，当一致地应用生成标识符的类型、 成员和参数易于阅读。  
+本章中的准则列出了一种简单方法，当统一应用此用例时，可以使类型、成员和参数的标识符易于阅读。
   
 ## <a name="capitalization-rules-for-identifiers"></a>标识符的大小写规则  
- 若要区分标识符中的单词，将在标识符中的每个单词的第一个字母都大写。 不使用下划线来区分的单词，或其实，标识符中任意位置。 有两种适当的方法，以使其大写标识符，根据使用的标识符：  
+若要区分标识符中的单词，请将标识符中每个单词的首字母大写。 不要使用下划线来区分单词或标识符中的任何位置。 根据标识符的使用，有两种适当的方法来标识标识符：  
   
--   PascalCasing  
+- PascalCasing  
   
--   camelcasing 大小写约定  
+- camelcasing
   
- 用于除参数名称的所有标识符的 PascalCasing 约定转换成大写 （其中包括通过的长度的两个字母的首字母缩写词） 的每个单词的第一个字符，如下面的示例中所示：  
+ PascalCasing 约定用于除参数名称之外的所有标识符，将每个单词的第一个字符大写（包括超过两个字母的首字母缩写），如以下示例所示： 
   
  `PropertyDescriptor`  
  `HtmlTag`  
   
- 一种特殊情况由两个字母首字母缩写词在其中两个字母都大写，如以下标识符中所示：  
+ 一个特殊情况是针对两个字母的首字母缩略词，其中两个字母都大写，如下面的标识符所示：
   
  `IOStream`  
   
- Camelcasing 大小写约定使用的约定，仅为参数名称转换成大写除第一个字，每个单词的第一个字符，如下面的示例中所示。 如该示例还演示，开始混合使用大小写的标识符的两个字母缩写词都小写。  
+ camelCasing 约定仅用于参数名称，将除第一个单词之外的每个单词的第一个字符大写，如以下示例所示。 该示例还显示，以 camelCasing 标识符开始的双字母缩写词都是小写的。
+  
   
  `propertyDescriptor`  
  `ioStream`  
  `htmlTag`  
   
- **✓ 执行**PascalCasing 用于所有的公共成员、 类型和命名空间名称，包含多个单词。  
+ **✓ 务必** 将 PascalCasing 用于包含多个单词的所有的公共成员、 类型和命名空间名称。  
   
- **✓ 执行**camelcasing 大小写约定用于参数名称。  
+ **✓ 务必** 将 camelCasing 用于参数名称。  
   
  下表描述了不同类型的标识符的大小写规则。  
   
@@ -61,14 +62,14 @@ ms.locfileid: "33575279"
 |枚举值|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |参数|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
-## <a name="capitalizing-compound-words-and-common-terms"></a>利用复合词和常用术语  
- 大多数复合字词被视为单个字的大小写的目的。  
+## <a name="capitalizing-compound-words-and-common-terms"></a>复合词和常用术语的大写  
+ 出于大写的目的，大多数复合词被视为单个词。 
   
- **X 不**利用所谓关闭窗体复合词中的每个单词。  
+ **X 不要** 将所谓封闭形式的复合词中的每个单词大写。
   
- 这些是编写为单个字词，如终结点的组合词。 为了大小写规则，将关闭格式的复合词视为单个单词。 使用当前字典来确定是否在关闭窗体中编写的组合词。  
+ 这些是书写为单个单词的复合词，例如 endpoint。 为了符合大小写准则，将封闭形式的复合词视为单个词。 使用该字典确定复合词是否以封闭形式书写。
   
-|Pascal|Camel|不|  
+|Pascal|Camel|Not|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
@@ -97,13 +98,13 @@ ms.locfileid: "33575279"
 |`Writable`|`writable`|`Writeable`|  
   
 ## <a name="case-sensitivity"></a>区分大小写  
- 可以在 CLR 运行的语言不要求支持区分大小写，尽管某些作用。 即使你的语言支持它，不这样做可能会访问你的 framework 的其他语言。 因此，任何 Api 时从外部访问，不能依赖于用例单独来区分这两个名称相同的上下文中。  
+ 可以在 CLR 上运行的语言不要求支持区分大小写，尽管有些语言可以支持。 即使您的语言支持，其他可能访问您的框架的语言可能不支持。 因此，任何可从外部访问的API都不能仅依赖于大小写来区分同一上下文中的两个名称。
   
- **X 不**假定所有编程语言不区分大小写。 它们不是。 名称不能通过大小写来区分。  
+ **X 不要** 假定所有编程语言都区分大小写。 它们不是。 名称不能通过大小写来区分。  
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *由 Pearson Education, Inc 许可，转载自[Framework 设计准则： 可重用.NET 库的约定、 惯用法和模式 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者 Krzysztof Cwalina 和 Brad Abrams，由Addison Wesley Professional 于 2008 年 10 月 22 日发布，作为 Microsoft Windows 开发系列的一部分。*
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  

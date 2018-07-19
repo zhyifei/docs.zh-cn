@@ -21,11 +21,11 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33572965"
 ---
 # <a name="naming-guidelines"></a>命名准则
-以下一致的开发中的 framework 的命名约定集可以是框架的可用性起着主要作用。 它使框架可以广泛分隔项目上的许多开发人员使用。 窗体的一致性，超出的框架元素名称必须能轻松理解，必须传达每个元素的功能。  
+在框架开发中遵循一套一致的命名约定可对框架的可用性起主要作用。 它允许多数开发人员在广泛分隔的项目中使用该框架。 除了形式的一致性之外，框架元素的名称必须易于理解，并且必须传达每个元素的功能。  
   
- 本章旨在提供一组一致的命名约定，导致对开发人员即时意义的名称。  
+本章的目标是提供一组一致的命名约定，从而产生对开发人员有直观意义的名称。
   
- 尽管采用这些命名约定，因为常规的代码开发指导原则会导致更一致的方式命名在整个代码，将要求你仅将其应用到公共公开的 Api (公共或受保护的类型和成员，并显式实现接口）。  
+虽然采用这些命名约定作为通用代码开发指南可以在整个代码中实现更一致的命名，但只需将其应用于公共公开的API（公共或受保护类型和成员以及显式实现的接口）。  
   
 ## <a name="in-this-section"></a>本节内容  
  [大小写约定](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "33572965"
  [命名资源](../../../docs/standard/design-guidelines/naming-resources.md)  
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *由 Pearson Education, Inc 许可，转载自[Framework 设计准则： 可重用.NET 库的约定、 惯用法和模式 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者 Krzysztof Cwalina 和 Brad Abrams，由Addison Wesley Professional 于 2008 年 10 月 22 日发布，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)
