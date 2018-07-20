@@ -102,7 +102,7 @@ ms.locfileid: "33502942"
   
  指定的地址使用 https:// 方案。  
   
- 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当你尝试访问 https 时显示安全警报： 地址，如https://localhost/servicemodelsamples/service.svc，从你的浏览器。 若要允许 Windows Communication Foundation (WCF) 客户端使用位置中的测试证书，一些附加代码已添加到客户端以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
+ 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当你尝试访问 https 时显示安全警报： 地址，如 https://localhost/servicemodelsamples/service.svc ，从你的浏览器。 若要允许 Windows Communication Foundation (WCF) 客户端使用位置中的测试证书，一些附加代码已添加到客户端以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  

@@ -207,7 +207,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  Setup 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。 这要求路径环境变量指向 SDK 的安装目录。 将在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中自动设置此环境变量。  
   
-3.  验证是否可以通过输入地址使用浏览器的服务访问http://localhost/servicemodelsamples/service.svc。  
+3.  验证是否可以通过输入地址使用浏览器的服务访问 http://localhost/servicemodelsamples/service.svc 。  
   
 4.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   

@@ -73,7 +73,7 @@ public interface IUseAndStyleCalculator
 }  
 ```  
   
- 若要查看不同的 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 设置之间的差异，请在服务中修改这些设置、重新生成客户端、运行示例并用服务跟踪查看器工具检查 c:\logs\message.logs 文件。 此外通过查看观察对元数据的影响http://localhost/ServiceModelSamples/service.svc?wsdl。 服务的元数据通常分为多页。 Wsdl 主页包含 WSDL 绑定，但查看http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0可观察到消息定义。  
+ 若要查看不同的 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 设置之间的差异，请在服务中修改这些设置、重新生成客户端、运行示例并用服务跟踪查看器工具检查 c:\logs\message.logs 文件。 此外通过查看观察对元数据的影响 http://localhost/ServiceModelSamples/service.svc?wsdl 。 服务的元数据通常分为多页。 Wsdl 主页包含 WSDL 绑定，但查看 http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 可观察到消息定义。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   

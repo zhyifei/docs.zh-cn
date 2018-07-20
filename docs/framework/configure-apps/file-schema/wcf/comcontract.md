@@ -70,7 +70,7 @@ ms.locfileid: "32749057"
 |comContracts|包含 `comContract` 元素的集合。|  
   
 ## <a name="remarks"></a>备注  
- COM + 集成服务协定是当前只限于"http://tempuri.org"命名空间，而协定名称从支持的 COM 接口派生。 但是，可以使用配置文件中的 `comContracts` 节以及 `comContract` 元素来指定替代服务协定。 例如，可以使用下面的配置来指定服务协定的命名空间、协定名称、要包含的用户定义类型以及其他设置。  
+ COM + 集成服务协定是当前只限于" http://tempuri.org "命名空间，而协定名称从支持的 COM 接口派生。 但是，可以使用配置文件中的 `comContracts` 节以及 `comContract` 元素来指定替代服务协定。 例如，可以使用下面的配置来指定服务协定的命名空间、协定名称、要包含的用户定义类型以及其他设置。  
   
 ```xml  
 <comContracts>  

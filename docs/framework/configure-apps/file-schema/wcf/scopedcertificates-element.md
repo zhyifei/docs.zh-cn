@@ -59,7 +59,7 @@ endpointBehaviors 部分
  有关详细信息，请参阅的"作用域证书"部分[如何： 创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例指定客户端在其域名与终结点进行通信时要使用的服务证书http://www.contoso.com通过 HTTP 协议。  
+ 下面的示例指定客户端在其域名与终结点进行通信时要使用的服务证书 http://www.contoso.com 通过 HTTP 协议。  
   
 ```xml  
 <serviceCertificate>  

@@ -102,7 +102,7 @@ ms.locfileid: "33497186"
   
     4.  **TargetType**: NestedServices.StringLibrary  
   
-8.  现在将对已修改的字符串调用第一个服务。 右键单击项目并选择**添加服务引用**。 添加对在服务的服务引用http://localhost/NestedServices/StringReverserService.xamlx和生成项目以创建自定义活动来访问第一个 Web 服务。  
+8.  现在将对已修改的字符串调用第一个服务。 右键单击项目并选择**添加服务引用**。 添加对在服务的服务引用 http://localhost/NestedServices/StringReverserService.xamlx 和生成项目以创建自定义活动来访问第一个 Web 服务。  
   
 9. 将新活动的实例之间拖到工作流， **InvokeMethod**活动和**SendReplyToReceive**活动。 将 StringToReverse 变量分配给新活动的 InputString 属性，并将 StringToReturn 变量分配给 StringToReturn 属性。  
   

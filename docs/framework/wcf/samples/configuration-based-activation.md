@@ -60,7 +60,7 @@ ms.locfileid: "33809909"
   
 7.  按 Ctrl+Shift+A 设置服务地址。  
   
-8.  将该地址设置http://localhost/ServiceModelSamples/Calculator.svc。  
+8.  将该地址设置 http://localhost/ServiceModelSamples/Calculator.svc 。  
   
 9. 执行 `Add` 操作。 将 `n1` 参数上的值设置为 10，并将 `n2` 参数上的值设置为 15。  
   

@@ -175,7 +175,7 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  此命令是单行文本。 此命令启用 /servicemodelsamples 应用程序使用同时访问http://localhost/servicemodelsamples和 net.tcp: //localhost/servicemodelsamples。  
+        >  此命令是单行文本。 此命令启用 /servicemodelsamples 应用程序使用同时访问 http://localhost/servicemodelsamples 和 net.tcp: //localhost/servicemodelsamples。  
   
 4.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   

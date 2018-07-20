@@ -33,7 +33,7 @@ public interface ICalculator
 
  通过使用 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 在服务上创建 AJAX 终结点，就像在基本 AJAX 服务示例中一样。  
   
- 与 GET 请求不同的是，不能从浏览器中调用 POST 服务。 例如，导航到http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200产生错误，因为 POST 服务要求`n1`和`n2`要在消息正文中发送的参数-采用 JSON 格式-，不能在 URL。  
+ 与 GET 请求不同的是，不能从浏览器中调用 POST 服务。 例如，导航到 http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 产生错误，因为 POST 服务要求`n1`和`n2`要在消息正文中发送的参数-采用 JSON 格式-，不能在 URL。  
   
  客户端网页 PostAjaxClientPage.aspx 包含 ASP.NET 代码以便在用户单击页面上的操作按钮之一时调用服务。 服务响应中的相同方式为[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例 GET 请求。  
   
@@ -52,6 +52,6 @@ public interface ICalculator
   
 2.  生成解决方案 PostAjaxService.sln 中所述[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  导航到http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx（不要打开 PostAjaxClientPage.aspx 浏览器中从项目目录中）。  
+3.  导航到 http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx （不要打开 PostAjaxClientPage.aspx 浏览器中从项目目录中）。  
   
 ## <a name="see-also"></a>请参阅

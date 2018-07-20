@@ -321,7 +321,7 @@ ms.locfileid: "33496741"
   
 8.  将 web.config 复制到你的 IIS 应用程序目录。  
   
-9. 测试以查看创建终结点是否正在工作通过启动 Internet Explorer 并浏览到http://localhost/MyCreationEndpoint/Workflow1.xamlx。 Internet Explorer 应显示下面的屏幕：  
+9. 测试以查看创建终结点是否正在工作通过启动 Internet Explorer 并浏览到 http://localhost/MyCreationEndpoint/Workflow1.xamlx 。 Internet Explorer 应显示下面的屏幕：  
   
      ![正在测试服务](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   

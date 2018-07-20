@@ -56,7 +56,7 @@ ms.locfileid: "33502678"
 </system.serviceModel>  
 ```  
   
- 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当你尝试访问 HTTPS 时显示安全警报： 在浏览器中，如地址https://localhost/servicemodelsamples/service.svc。 若要允许 Windows Communication Foundation (WCF) 客户端使用测试证书，一些附加代码添加到客户端以禁用安全警报。 使用真正的证书时不需要此代码和附带的类。  
+ 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当你尝试访问 HTTPS 时显示安全警报： 在浏览器中，如地址 https://localhost/servicemodelsamples/service.svc 。 若要允许 Windows Communication Foundation (WCF) 客户端使用测试证书，一些附加代码添加到客户端以禁用安全警报。 使用真正的证书时不需要此代码和附带的类。  
 
 ```csharp
 // This code is required only for test certificates such as those   
