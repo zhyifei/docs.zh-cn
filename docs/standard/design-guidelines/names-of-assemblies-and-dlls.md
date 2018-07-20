@@ -18,23 +18,23 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33570403"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>程序集和 DLL 的名称
-程序集是部署和托管的代码程序的标识的单元。 程序集可以跨一个或多个文件，尽管通常程序集进行一对一映射 DLL。 因此，本部分介绍了唯一 DLL 命名约定，然后可以映射到程序集命名约定。  
+程序集是托管代码程序的部署和标识单元。 虽然程序集可以跨越一个或多个文件，但通常程序集与DLL是一对一映射的。 因此，本节仅描述DLL命名约定，然后可以将其映射到程序集命名约定。  
   
- **✓ 执行**选择您的程序集建议的功能，例如 System.Data 大量的 Dll 的名称。  
+ **✓ 务必**为建议大量功能的程序集DLL选择名称，例如 System.Data。  
   
- 程序集和 DLL 名称无需对应于命名空间名称，但它是合理命名程序集时应遵循的命名空间名称。 好的经验法则是名称的公共前缀的程序集中包含的命名空间所基于的 DLL。 例如，包含两个命名空间中的程序集`MyCompany.MyTechnology.FirstFeature`和`MyCompany.MyTechnology.SecondFeature`，无法调用`MyCompany.MyTechnology.dll`。  
+ 程序集和 DLL 名称不必与命名空间名称相对应，但在命名程序集时遵循命名空间名称是合理的。 一个好的经验法则是根据程序集中包含的命名空间的公共前缀命名 DLL。 例如，包含两个命名空间中的程序集`MyCompany.MyTechnology.FirstFeature`和`MyCompany.MyTechnology.SecondFeature`，可以命名为`MyCompany.MyTechnology.dll`。  
   
- **请考虑 ✓**按照下面的模式命名 Dll:  
+ **✓ 考虑**按照下面的模式命名 Dll:  
   
  `<Company>.<Component>.dll`  
   
  其中`<Component>`包含一个或多个以点分隔的子句。 例如：  
   
- `Litware.Controls.dll`。  
+ `Litware.Controls.dll`。
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *由 Pearson Education, Inc 许可，转载自[Framework 设计准则： 可重用.NET 库的约定、 惯用法和模式 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者 Krzysztof Cwalina 和 Brad Abrams，由Addison Wesley Professional 于 2008 年 10 月 22 日发布，作为 Microsoft Windows 开发系列的一部分。*
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
