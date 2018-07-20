@@ -47,7 +47,7 @@ ms.locfileid: "33496794"
 |`elementFormDefault`|必须进行限定。 必须对一个架构的所有元素进行限定才能得到 `DataContractSerializer`的支持。 这可以通过这两个设置xs:schema/@elementFormDefault到"限定"或通过设置xs:element/@form为"限定"上每个单独元素声明。|  
 |`finalDefault`|已忽略。|  
 |`Id`|已忽略。|  
-|`targetNamespace`|支持，并已映射到数据协定命名空间。 如果未指定此属性，则使用空白命名空间。 不能为保留的命名空间http://schemas.microsoft.com/2003/10/Serialization/。|  
+|`targetNamespace`|支持，并已映射到数据协定命名空间。 如果未指定此属性，则使用空白命名空间。 不能为保留的命名空间 http://schemas.microsoft.com/2003/10/Serialization/ 。|  
 |`version`|已忽略。|  
   
 ### <a name="xsschema-contents"></a>\<xs:schema >： 内容  
@@ -524,7 +524,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>。|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 类型映射  
- 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.0 中，已引入 `ISerializable` 作为一种用于序列化持久性或数据传输对象的机制。 有许多实现 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 `ISerializable` 类型，这些类型可以在应用程序之间进行传递。 `DataContractSerializer` 自然支持 `ISerializable` 类。 `DataContractSerializer` 映射到 `ISerializable` 实现架构类型，这些类型仅在类型的 QName（限定名）上存在不同，并且实际上是属性集合。 例如，`DataContractSerializer`映射<xref:System.Exception>到中的以下 XSD 类型http://schemas.datacontract.org/2004/07/System命名空间。  
+ 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.0 中，已引入 `ISerializable` 作为一种用于序列化持久性或数据传输对象的机制。 有许多实现 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 `ISerializable` 类型，这些类型可以在应用程序之间进行传递。 `DataContractSerializer` 自然支持 `ISerializable` 类。 `DataContractSerializer` 映射到 `ISerializable` 实现架构类型，这些类型仅在类型的 QName（限定名）上存在不同，并且实际上是属性集合。 例如，`DataContractSerializer`映射<xref:System.Exception>到中的以下 XSD 类型 http://schemas.datacontract.org/2004/07/System 命名空间。  
   
 ```xml  
 <xs:complexType name="Exception">  
