@@ -98,7 +98,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- 此示例将配置路由服务公开单个终结点地址为"http://localhost:8000/routingservice/router"，用于接收要路由消息。 由于消息路由到请求-答复终结点，因此该服务终结点使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 协定。 此配置还定义的单个客户端终结点"http://localhost:8000/servicemodelsample/service"消息将路由到。 名为"routingTable1"的筛选器表 （未显示） 包含用于路由消息的路由逻辑并关联与服务终结点通过使用**RoutingBehavior** （适用于配置文件） 或**RoutingConfiguration** （适用于编程配置）。  
+ 此示例将配置路由服务公开单个终结点地址为" http://localhost:8000/routingservice/router "，用于接收要路由消息。 由于消息路由到请求-答复终结点，因此该服务终结点使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 协定。 此配置还定义的单个客户端终结点" http://localhost:8000/servicemodelsample/service "消息将路由到。 名为"routingTable1"的筛选器表 （未显示） 包含用于路由消息的路由逻辑并关联与服务终结点通过使用**RoutingBehavior** （适用于配置文件） 或**RoutingConfiguration** （适用于编程配置）。  
   
 ### <a name="routing-logic"></a>路由逻辑  
  若要定义用于路由消息的路由逻辑，必须确定传入消息包含的哪些数据可以采用唯一方式执行操作。 例如，如果要路由到的所有目标终结点共享相同的 SOAP 操作，则消息中包含的 Action 的值无法很好地指示应将消息路由到的特定终结点。 如果必须以唯一方式将消息路由至某一特定终结点，您应当根据唯一标识消息将路由至的目标终结点的数据进行筛选。  
@@ -160,7 +160,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   多个筛选器在计算消息时必须返回 `true`。  
   
- 如果满足这些条件，则将消息路由至计算结果为 `true` 的所有筛选器的所有终结点。 下面的示例定义路由的配置会导致消息同时路由至两个终结点，如果消息中的终结点地址为http://localhost:8000/routingservice/router/rounding。  
+ 如果满足这些条件，则将消息路由至计算结果为 `true` 的所有筛选器的所有终结点。 下面的示例定义路由的配置会导致消息同时路由至两个终结点，如果消息中的终结点地址为 http://localhost:8000/routingservice/router/rounding 。  
   
 ```xml  
 <!--ROUTING SECTION -->  

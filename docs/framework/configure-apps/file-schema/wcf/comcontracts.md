@@ -13,7 +13,7 @@ ms.locfileid: "32746405"
 `comContracts` 配置节所包含的元素允许指定 COM+ 集成服务协定的各个属性。  
   
 ## <a name="specifying-namespace-and-contract"></a>指定命名空间和协定  
- COM + 集成服务协定是当前只限于"http://tempuri.org"命名空间，而协定名称从支持的 COM 接口派生。 但是，可以使用配置文件中的 `comContracts` 节来指定替代服务协定。  
+ COM + 集成服务协定是当前只限于" http://tempuri.org "命名空间，而协定名称从支持的 COM 接口派生。 但是，可以使用配置文件中的 `comContracts` 节来指定替代服务协定。  
   
  例如，可以使用以下配置来指定服务协定的命名空间和协定名称，也可以指定某个选项以在会话绑定上强制使用。  
   
