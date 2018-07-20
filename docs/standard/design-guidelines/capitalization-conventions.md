@@ -44,9 +44,9 @@ ms.locfileid: "33575279"
  `ioStream`  
  `htmlTag`  
   
- **✓ 务必**将 PascalCasing 用于包含多个单词的所有的公共成员、 类型和命名空间名称。  
+ **✓ 要**将 PascalCasing 用于包含多个单词的所有的公共成员、 类型和命名空间名称。  
   
- **✓ 务必**将 camelCasing 用于参数名称。  
+ **✓ 要**将 camelCasing 用于参数名称。  
   
  下表描述了不同类型的标识符的大小写规则。  
   
