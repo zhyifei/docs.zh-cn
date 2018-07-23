@@ -57,7 +57,7 @@ ms.locfileid: "32753087"
 |特性|描述|  
 |---------------|-----------------|  
 |`allowCookies`|一个布尔值，指示客户端是否接受 Cookie 并在今后的请求中传播这些 Cookie。 默认值为 `false`。<br /><br /> 在与使用 Cookie 的 ASMX Web 服务进行交互时，可以使用此属性。 通过这种方式，可以确保从服务器返回的 Cookie 自动复制到客户端今后对该服务的所有请求。|  
-|`bypassProxyOnLocal`|一个布尔值，指示是否对本地地址不使用代理服务器。 默认值为 `false`。<br /><br /> 如果 Internet 资源具有本地地址，则该资源是本地资源。 本地地址是指位于同一台计算机、 本地 LAN 或 intranet 上和标识，语法上通过省略句点 （.） 如 Uri" http://webserver/ " 和 " http://localhost/"。<br /><br /> 通过设置此属性，可以确定在访问本地资源时，采用 BasicHttpBinding 配置的终结点是否使用代理服务器。 如果此属性为 `true`，则对本地 Internet 资源的请求不使用代理服务器。 当此属性设置为 `true` 时，如果希望客户端在与同一台计算机上的服务通话时使用代理，请使用主机名称（而非 localhost）。<br /><br /> 当此属性为 `false` 时，所有 Internet 请求都通过代理服务器发出。|  
+|`bypassProxyOnLocal`|一个布尔值，指示是否对本地地址不使用代理服务器。 默认值为 `false`。<br /><br /> 如果 Internet 资源具有本地地址，则该资源是本地资源。 本地地址是指位于同一台计算机、 本地 LAN 或 intranet 上和标识，语法上通过省略句点 （.） 如 Uri "http://webserver/" 和 "http://localhost/"。<br /><br /> 通过设置此属性，可以确定在访问本地资源时，采用 BasicHttpBinding 配置的终结点是否使用代理服务器。 如果此属性为 `true`，则对本地 Internet 资源的请求不使用代理服务器。 当此属性设置为 `true` 时，如果希望客户端在与同一台计算机上的服务通话时使用代理，请使用主机名称（而非 localhost）。<br /><br /> 当此属性为 `false` 时，所有 Internet 请求都通过代理服务器发出。|  
 |`closeTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成关闭操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
 |`envelopeVersion`|指定用于通过此绑定处理的消息的 SOAP 版本。 只有 Soap11 是有效值。|  
 |`hostnameComparisonMode`|指定用于分析 URI 的 HTTP 主机名比较模式。 此属性的类型为 <xref:System.ServiceModel.HostNameComparisonMode>，指示在对 URI 进行匹配时，是否使用主机名来访问服务。 默认值为 <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>，表示忽略匹配项中的主机名。|  
