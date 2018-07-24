@@ -25,7 +25,7 @@ C# 7.3 版本有两个主要主题。 第一个主题提供使安全代码的性
 
 - 可以使用元组类型测试 `==` 和 `!=`。
 - 可以在多个位置使用表达式变量。
-- 可以将属性附加到自动实现的属性的支持字段。
+- 可以将特性附加到自动实现的属性的支持字段。
 - 由 `in` 区分的参数的方法解析得到了改进。
 - 重载解析的多义情况现在变得更少。
 
@@ -136,7 +136,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 C# 元组类型现在支持 `==` 和 `!=`。 有关详细信息，请参阅有关[元组](../tuples.md)文章中的转换[等式](../tuples.md#equality-and-tuples)部分。
 
-### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>将属性添加到自动实现的属性的支持字段
+### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>将特性添加到自动实现的属性的支持字段
 
 现在支持此语法：
 
@@ -145,7 +145,7 @@ C# 元组类型现在支持 `==` 和 `!=`。 有关详细信息，请参阅有�
 public int SomeProperty { get; set; }
 ```
 
-属性 `SomeThingAboutFieldAttribute` 应用于编译器生成的 `SomeProperty` 的支持字段。 有关详细信息，请参阅 C# 编程指南中的[属性](../programming-guide/concepts/attributes/index.md)。
+特性 `SomeThingAboutFieldAttribute` 应用于编译器生成的 `SomeProperty` 的支持字段。 有关详细信息，请参阅 C# 编程指南中的[特性](../programming-guide/concepts/attributes/index.md)。
 
 ### <a name="in-method-overload-resolution-tiebreaker"></a>`in` 方法重载解析决胜属性
 
