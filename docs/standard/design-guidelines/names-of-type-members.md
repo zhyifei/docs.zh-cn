@@ -75,9 +75,9 @@ public class Control {
   
  例如，窗口关闭之前引发的事件称为 `Closing`，窗口关闭之后引发的事件称为 `Closed`。  
   
- **X 不**使用"Before"或"After"前缀或 postfixes 以指示预和后期事件。 使用存在和过去时态如上所述。  
+ **X 不要**使用 “Before” 或 “After” 前缀和后缀来指示事件之前或之后。 应按前述使用现在时态和过去时态。  
   
- **✓ 执行**具有"EventHandler"后缀，名称事件处理程序 （委托用作事件类型），如下面的示例中所示：  
+ **✓ 务必**使用 “EventHandler” 后缀来命名事件处理程序（委托，用作事件类型），如以下示例所示：  
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   

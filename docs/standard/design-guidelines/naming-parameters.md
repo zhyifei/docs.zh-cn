@@ -25,17 +25,17 @@ ms.locfileid: "33570481"
  **✓ 考虑**使用基于参数含义而非参数类型的名称。  
   
 ### <a name="naming-operator-overload-parameters"></a>命名运算符重载参数  
- **✓ 执行**使用`left`和`right`为二元运算符重载参数名称，如果没有给参数的类型没有意义。  
+ **✓ 务必执行**：如果参数没有意义，请为二元运算符重载参数名称使用 `left` 和 `right`。  
   
- **✓ 执行**使用`value`的一元运算符重载参数名称，如果没有给参数的类型没有意义。  
+ **✓ 务必执行**：如果参数没有意义，请为一元运算符重载参数名称使用 `value`。  
   
- **请考虑 ✓**有意义的名称，运算符的重载参数，如果这样做会增加巨大的价值。  
+ **✓ 考虑**为运算符重载参数使用有意义的名称（如果这样做很有用的话）。  
   
- **X 不**使用缩写或数值索引运算符重载参数名称。  
+ **X 不要**在运算符重载参数名称中使用缩写形式或数值索引。  
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
