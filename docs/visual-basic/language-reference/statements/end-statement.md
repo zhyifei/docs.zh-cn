@@ -1,5 +1,5 @@
 ---
-title: End 语句
+title: End 语句 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.End
@@ -14,48 +14,48 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 864ac5ef1713f8ffa93c18accede8ecd5b3b7a8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fd489dc9f12f7e80ef2dd49c6e2dee6c28ae761
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604416"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199388"
 ---
-# <a name="end-statement"></a><span data-ttu-id="31cbf-102">End 语句</span><span class="sxs-lookup"><span data-stu-id="31cbf-102">End Statement</span></span>
-<span data-ttu-id="31cbf-103">会立即终止执行。</span><span class="sxs-lookup"><span data-stu-id="31cbf-103">Terminates execution immediately.</span></span>  
+# <a name="end-statement"></a><span data-ttu-id="4b753-102">End 语句</span><span class="sxs-lookup"><span data-stu-id="4b753-102">End Statement</span></span>
+<span data-ttu-id="4b753-103">立即终止执行。</span><span class="sxs-lookup"><span data-stu-id="4b753-103">Terminates execution immediately.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="31cbf-104">语法</span><span class="sxs-lookup"><span data-stu-id="31cbf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4b753-104">语法</span><span class="sxs-lookup"><span data-stu-id="4b753-104">Syntax</span></span>  
   
 ```  
 End  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="31cbf-105">备注</span><span class="sxs-lookup"><span data-stu-id="31cbf-105">Remarks</span></span>  
- <span data-ttu-id="31cbf-106">你可以将放置`End`以强制整个应用程序停止运行过程中的任意位置的语句。</span><span class="sxs-lookup"><span data-stu-id="31cbf-106">You can place the `End` statement anywhere in a procedure to force the entire application to stop running.</span></span> <span data-ttu-id="31cbf-107">`End` 关闭使用打开的任何文件`Open`语句，并清除应用程序的所有变量。</span><span class="sxs-lookup"><span data-stu-id="31cbf-107">`End` closes any files opened with an `Open` statement and clears all the application's variables.</span></span> <span data-ttu-id="31cbf-108">应用程序关闭一旦没有保留对其对象的引用其他程序并没有其代码运行。</span><span class="sxs-lookup"><span data-stu-id="31cbf-108">The application closes as soon as there are no other programs holding references to its objects and none of its code is running.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4b753-105">备注</span><span class="sxs-lookup"><span data-stu-id="4b753-105">Remarks</span></span>  
+ <span data-ttu-id="4b753-106">可以将放置`End`强制停止正在运行的整个应用程序的过程中的任意位置的语句。</span><span class="sxs-lookup"><span data-stu-id="4b753-106">You can place the `End` statement anywhere in a procedure to force the entire application to stop running.</span></span> <span data-ttu-id="4b753-107">`End` 关闭打开的任何文件`Open`语句，并清除应用程序的所有变量。</span><span class="sxs-lookup"><span data-stu-id="4b753-107">`End` closes any files opened with an `Open` statement and clears all the application's variables.</span></span> <span data-ttu-id="4b753-108">在应用程序关闭在没有保存对其对象的引用其他程序并无其代码运行。</span><span class="sxs-lookup"><span data-stu-id="4b753-108">The application closes as soon as there are no other programs holding references to its objects and none of its code is running.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="31cbf-109">`End`语句突然，停止执行代码并不会调用`Dispose`或`Finalize`方法或任何其他 Visual Basic 代码。</span><span class="sxs-lookup"><span data-stu-id="31cbf-109">The `End` statement stops code execution abruptly, and does not invoke the `Dispose` or `Finalize` method, or any other Visual Basic code.</span></span> <span data-ttu-id="31cbf-110">持有的其他程序对象引用将会失效。</span><span class="sxs-lookup"><span data-stu-id="31cbf-110">Object references held by other programs are invalidated.</span></span> <span data-ttu-id="31cbf-111">如果`End`内遇到语句`Try`或`Catch`块中，控件不会将传递给相应`Finally`块。</span><span class="sxs-lookup"><span data-stu-id="31cbf-111">If an `End` statement is encountered within a `Try` or `Catch` block, control does not pass to the corresponding `Finally` block.</span></span>  
+>  <span data-ttu-id="4b753-109">`End`语句突然停止执行代码并不会调用`Dispose`或`Finalize`方法或任何其他 Visual Basic 代码。</span><span class="sxs-lookup"><span data-stu-id="4b753-109">The `End` statement stops code execution abruptly, and does not invoke the `Dispose` or `Finalize` method, or any other Visual Basic code.</span></span> <span data-ttu-id="4b753-110">保留由其他程序的对象引用都将失效。</span><span class="sxs-lookup"><span data-stu-id="4b753-110">Object references held by other programs are invalidated.</span></span> <span data-ttu-id="4b753-111">如果`End`语句中遇到`Try`或`Catch`块中，控件不会将传递给相应`Finally`块。</span><span class="sxs-lookup"><span data-stu-id="4b753-111">If an `End` statement is encountered within a `Try` or `Catch` block, control does not pass to the corresponding `Finally` block.</span></span>  
   
- <span data-ttu-id="31cbf-112">`Stop`语句挂起执行，但与`End`，它不会关闭任何文件或清除任何变量，除非在已编译可执行文件 (.exe) 文件中遇到。</span><span class="sxs-lookup"><span data-stu-id="31cbf-112">The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.</span></span>  
+ <span data-ttu-id="4b753-112">`Stop`语句将暂停执行，但不同于`End`，它不会关闭任何文件或清除任何变量，除非遇到编译可执行文件 (.exe) 文件中。</span><span class="sxs-lookup"><span data-stu-id="4b753-112">The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.</span></span>  
   
- <span data-ttu-id="31cbf-113">因为`End`终止而不顾及应用程序的任何可能已打开的资源，你应尝试彻底关闭然后再使用它。</span><span class="sxs-lookup"><span data-stu-id="31cbf-113">Because `End` terminates your application without attending to any resources that might be open, you should try to close down cleanly before using it.</span></span> <span data-ttu-id="31cbf-114">例如，如果应用程序的任何打开的窗体，你应该先关闭这些控件达到`End`语句。</span><span class="sxs-lookup"><span data-stu-id="31cbf-114">For example, if your application has any forms open, you should close them before control reaches the `End` statement.</span></span>  
+ <span data-ttu-id="4b753-113">因为`End`终止而不顾及应用程序对任何可能处于打开状态的资源，您应尝试彻底关闭然后再使用它。</span><span class="sxs-lookup"><span data-stu-id="4b753-113">Because `End` terminates your application without attending to any resources that might be open, you should try to close down cleanly before using it.</span></span> <span data-ttu-id="4b753-114">例如，如果你的应用程序具有打开的任何窗体，您应关闭它们再控制达到`End`语句。</span><span class="sxs-lookup"><span data-stu-id="4b753-114">For example, if your application has any forms open, you should close them before control reaches the `End` statement.</span></span>  
   
- <span data-ttu-id="31cbf-115">应使用`End`尽量少，且仅当你需要立即停止。</span><span class="sxs-lookup"><span data-stu-id="31cbf-115">You should use `End` sparingly, and only when you need to stop immediately.</span></span> <span data-ttu-id="31cbf-116">终止过程的正常方式 ([Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)和[退出语句](../../../visual-basic/language-reference/statements/exit-statement.md)) 不仅完全关闭过程，但还为调用的代码提供彻底关闭的机会。</span><span class="sxs-lookup"><span data-stu-id="31cbf-116">The normal ways to terminate a procedure ([Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) and [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)) not only close down the procedure cleanly but also give the calling code the opportunity to close down cleanly.</span></span> <span data-ttu-id="31cbf-117">控制台应用程序，例如，可以只需`Return`从`Main`过程。</span><span class="sxs-lookup"><span data-stu-id="31cbf-117">A console application, for example, can simply `Return` from the `Main` procedure.</span></span>  
+ <span data-ttu-id="4b753-115">应使用`End`尽量少，且仅当需要立即停止。</span><span class="sxs-lookup"><span data-stu-id="4b753-115">You should use `End` sparingly, and only when you need to stop immediately.</span></span> <span data-ttu-id="4b753-116">终止一个过程的正常方法 ([Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)并[退出语句](../../../visual-basic/language-reference/statements/exit-statement.md)) 不仅彻底关闭该过程，但也使调用代码有机会彻底关闭。</span><span class="sxs-lookup"><span data-stu-id="4b753-116">The normal ways to terminate a procedure ([Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) and [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)) not only close down the procedure cleanly but also give the calling code the opportunity to close down cleanly.</span></span> <span data-ttu-id="4b753-117">控制台应用程序，例如，可以只需`Return`从`Main`过程。</span><span class="sxs-lookup"><span data-stu-id="4b753-117">A console application, for example, can simply `Return` from the `Main` procedure.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="31cbf-118">`End`语句也会调用<xref:System.Environment.Exit%2A>方法<xref:System.Environment>类<xref:System>命名空间。</span><span class="sxs-lookup"><span data-stu-id="31cbf-118">The `End` statement calls the <xref:System.Environment.Exit%2A> method of the <xref:System.Environment> class in the <xref:System> namespace.</span></span> <span data-ttu-id="31cbf-119"><xref:System.Environment.Exit%2A> 你需要具有`UnmanagedCode`权限。</span><span class="sxs-lookup"><span data-stu-id="31cbf-119"><xref:System.Environment.Exit%2A> requires that you have `UnmanagedCode` permission.</span></span> <span data-ttu-id="31cbf-120">如果你不希望这样做，<xref:System.Security.SecurityException>发生错误。</span><span class="sxs-lookup"><span data-stu-id="31cbf-120">If you do not, a <xref:System.Security.SecurityException> error occurs.</span></span>  
+>  <span data-ttu-id="4b753-118">`End`语句也会调用<xref:System.Environment.Exit%2A>方法<xref:System.Environment>类中<xref:System>命名空间。</span><span class="sxs-lookup"><span data-stu-id="4b753-118">The `End` statement calls the <xref:System.Environment.Exit%2A> method of the <xref:System.Environment> class in the <xref:System> namespace.</span></span> <span data-ttu-id="4b753-119"><xref:System.Environment.Exit%2A> 要求具有`UnmanagedCode`权限。</span><span class="sxs-lookup"><span data-stu-id="4b753-119"><xref:System.Environment.Exit%2A> requires that you have `UnmanagedCode` permission.</span></span> <span data-ttu-id="4b753-120">如果没有，<xref:System.Security.SecurityException>发生错误。</span><span class="sxs-lookup"><span data-stu-id="4b753-120">If you do not, a <xref:System.Security.SecurityException> error occurs.</span></span>  
   
- <span data-ttu-id="31cbf-121">当附加关键字后, 跟[结束\<关键字 > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)描述的定义的相应过程或块的末尾。</span><span class="sxs-lookup"><span data-stu-id="31cbf-121">When followed by an additional keyword, [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md) delineates the end of the definition of the appropriate procedure or block.</span></span> <span data-ttu-id="31cbf-122">例如，`End Function`终止的定义`Function`过程。</span><span class="sxs-lookup"><span data-stu-id="31cbf-122">For example, `End Function` terminates the definition of a `Function` procedure.</span></span>  
+ <span data-ttu-id="4b753-121">当其他关键字后, 跟[最终\<关键字 > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)描述相应的过程或块定义的末尾。</span><span class="sxs-lookup"><span data-stu-id="4b753-121">When followed by an additional keyword, [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md) delineates the end of the definition of the appropriate procedure or block.</span></span> <span data-ttu-id="4b753-122">例如，`End Function`终止的定义`Function`过程。</span><span class="sxs-lookup"><span data-stu-id="4b753-122">For example, `End Function` terminates the definition of a `Function` procedure.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="31cbf-123">示例</span><span class="sxs-lookup"><span data-stu-id="31cbf-123">Example</span></span>  
- <span data-ttu-id="31cbf-124">下面的示例使用`End`语句，终止执行代码，如果用户请求它。</span><span class="sxs-lookup"><span data-stu-id="31cbf-124">The following example uses the `End` statement to terminate code execution if the user requests it.</span></span>  
+## <a name="example"></a><span data-ttu-id="4b753-123">示例</span><span class="sxs-lookup"><span data-stu-id="4b753-123">Example</span></span>  
+ <span data-ttu-id="4b753-124">下面的示例使用`End`语句终止执行代码，如果用户请求它。</span><span class="sxs-lookup"><span data-stu-id="4b753-124">The following example uses the `End` statement to terminate code execution if the user requests it.</span></span>  
   
  [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/end-statement_1.vb)]  
   
-## <a name="smart-device-developer-notes"></a><span data-ttu-id="31cbf-125">智能设备的开发人员说明</span><span class="sxs-lookup"><span data-stu-id="31cbf-125">Smart Device Developer Notes</span></span>  
- <span data-ttu-id="31cbf-126">不支持此语句。</span><span class="sxs-lookup"><span data-stu-id="31cbf-126">This statement is not supported.</span></span>  
+## <a name="smart-device-developer-notes"></a><span data-ttu-id="4b753-125">智能设备开发人员说明</span><span class="sxs-lookup"><span data-stu-id="4b753-125">Smart Device Developer Notes</span></span>  
+ <span data-ttu-id="4b753-126">不支持此语句。</span><span class="sxs-lookup"><span data-stu-id="4b753-126">This statement is not supported.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="31cbf-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="31cbf-127">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4b753-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="4b753-127">See Also</span></span>  
  <xref:System.Security.Permissions.SecurityPermissionFlag>  
- [<span data-ttu-id="31cbf-128">Stop 语句</span><span class="sxs-lookup"><span data-stu-id="31cbf-128">Stop Statement</span></span>](../../../visual-basic/language-reference/statements/stop-statement.md)  
- [<span data-ttu-id="31cbf-129">结束\<关键字 > 语句</span><span class="sxs-lookup"><span data-stu-id="31cbf-129">End \<keyword> Statement</span></span>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+ [<span data-ttu-id="4b753-128">Stop 语句</span><span class="sxs-lookup"><span data-stu-id="4b753-128">Stop Statement</span></span>](../../../visual-basic/language-reference/statements/stop-statement.md)  
+ [<span data-ttu-id="4b753-129">结束\<关键字 > 语句</span><span class="sxs-lookup"><span data-stu-id="4b753-129">End \<keyword> Statement</span></span>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

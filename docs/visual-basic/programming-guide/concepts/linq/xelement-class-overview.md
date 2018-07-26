@@ -3,30 +3,30 @@ title: XElement 类概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 52331fcd-6023-4d19-b423-7b24f2d86ded
 ms.openlocfilehash: 321f812176fc129e0922878c1d071621c32ccf57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648130"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199337"
 ---
-# <a name="xelement-class-overview-visual-basic"></a><span data-ttu-id="48717-102">XElement 类概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="48717-102">XElement Class Overview (Visual Basic)</span></span>
-<span data-ttu-id="48717-103"><xref:System.Xml.Linq.XElement> 类是 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的基础类之一。</span><span class="sxs-lookup"><span data-stu-id="48717-103">The <xref:System.Xml.Linq.XElement> class is one of the fundamental classes in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="48717-104">它表示一个 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="48717-104">It represents an XML element.</span></span> <span data-ttu-id="48717-105">可以使用该类创建元素；更改元素内容；添加、更改或删除子元素；向元素中添加属性；或以文本格式序列化元素内容。</span><span class="sxs-lookup"><span data-stu-id="48717-105">You can use this class to create elements; change the content of the element; add, change, or delete child elements; add attributes to an element; or serialize the contents of an element in text form.</span></span> <span data-ttu-id="48717-106">还可以与 <xref:System.Xml?displayProperty=nameWithType> 中的其他类（例如 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter> 和 <xref:System.Xml.Xsl.XslCompiledTransform>）进行互操作。</span><span class="sxs-lookup"><span data-stu-id="48717-106">You can also interoperate with other classes in <xref:System.Xml?displayProperty=nameWithType>, such as <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, and <xref:System.Xml.Xsl.XslCompiledTransform>.</span></span>  
+# <a name="xelement-class-overview-visual-basic"></a><span data-ttu-id="6fe3d-102">XElement 类概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6fe3d-102">XElement Class Overview (Visual Basic)</span></span>
+<span data-ttu-id="6fe3d-103"><xref:System.Xml.Linq.XElement> 类是 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的基础类之一。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-103">The <xref:System.Xml.Linq.XElement> class is one of the fundamental classes in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="6fe3d-104">它表示一个 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-104">It represents an XML element.</span></span> <span data-ttu-id="6fe3d-105">可以使用该类创建元素；更改元素内容；添加、更改或删除子元素；向元素中添加属性；或以文本格式序列化元素内容。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-105">You can use this class to create elements; change the content of the element; add, change, or delete child elements; add attributes to an element; or serialize the contents of an element in text form.</span></span> <span data-ttu-id="6fe3d-106">还可以与 <xref:System.Xml?displayProperty=nameWithType> 中的其他类（例如 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter> 和 <xref:System.Xml.Xsl.XslCompiledTransform>）进行互操作。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-106">You can also interoperate with other classes in <xref:System.Xml?displayProperty=nameWithType>, such as <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, and <xref:System.Xml.Xsl.XslCompiledTransform>.</span></span>  
   
-## <a name="xelement-functionality"></a><span data-ttu-id="48717-107">XElement 功能</span><span class="sxs-lookup"><span data-stu-id="48717-107">XElement Functionality</span></span>  
- <span data-ttu-id="48717-108">本主题描述 <xref:System.Xml.Linq.XElement> 类提供的功能。</span><span class="sxs-lookup"><span data-stu-id="48717-108">This topic describes the functionality provided by the <xref:System.Xml.Linq.XElement> class.</span></span>  
+## <a name="xelement-functionality"></a><span data-ttu-id="6fe3d-107">XElement 功能</span><span class="sxs-lookup"><span data-stu-id="6fe3d-107">XElement Functionality</span></span>  
+ <span data-ttu-id="6fe3d-108">本主题描述 <xref:System.Xml.Linq.XElement> 类提供的功能。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-108">This topic describes the functionality provided by the <xref:System.Xml.Linq.XElement> class.</span></span>  
   
-### <a name="constructing-xml-trees"></a><span data-ttu-id="48717-109">构造 XML 树</span><span class="sxs-lookup"><span data-stu-id="48717-109">Constructing XML Trees</span></span>  
- <span data-ttu-id="48717-110">可以使用各种方式构造 XML 树，包括以下方式：</span><span class="sxs-lookup"><span data-stu-id="48717-110">You can construct XML trees in a variety of ways, including the following:</span></span>  
+### <a name="constructing-xml-trees"></a><span data-ttu-id="6fe3d-109">构造 XML 树</span><span class="sxs-lookup"><span data-stu-id="6fe3d-109">Constructing XML Trees</span></span>  
+ <span data-ttu-id="6fe3d-110">可以使用各种方式构造 XML 树，包括以下方式：</span><span class="sxs-lookup"><span data-stu-id="6fe3d-110">You can construct XML trees in a variety of ways, including the following:</span></span>  
   
--   <span data-ttu-id="48717-111">可以在代码中构造 XML 树。</span><span class="sxs-lookup"><span data-stu-id="48717-111">You can construct an XML tree in code.</span></span> <span data-ttu-id="48717-112">有关详细信息，请参阅[创建 XML 树 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)。</span><span class="sxs-lookup"><span data-stu-id="48717-112">For more information, see [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).</span></span>  
+-   <span data-ttu-id="6fe3d-111">可以在代码中构造 XML 树。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-111">You can construct an XML tree in code.</span></span> <span data-ttu-id="6fe3d-112">有关详细信息，请参阅[创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-112">For more information, see [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).</span></span>  
   
--   <span data-ttu-id="48717-113">可以从包括 <xref:System.IO.TextReader>、文本文件或 Web 地址 (URL) 在内的各种源解析 XML。</span><span class="sxs-lookup"><span data-stu-id="48717-113">You can parse XML from various sources, including a <xref:System.IO.TextReader>, text files, or a Web address (URL).</span></span> <span data-ttu-id="48717-114">有关详细信息，请参阅[分析 XML (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="48717-114">For more information, see [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md).</span></span>  
+-   <span data-ttu-id="6fe3d-113">可以从包括 <xref:System.IO.TextReader>、文本文件或 Web 地址 (URL) 在内的各种源解析 XML。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-113">You can parse XML from various sources, including a <xref:System.IO.TextReader>, text files, or a Web address (URL).</span></span> <span data-ttu-id="6fe3d-114">有关详细信息，请参阅[分析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-114">For more information, see [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md).</span></span>  
   
--   <span data-ttu-id="48717-115">可以使用 <xref:System.Xml.XmlReader> 来填充树。</span><span class="sxs-lookup"><span data-stu-id="48717-115">You can use an <xref:System.Xml.XmlReader> to populate the tree.</span></span> <span data-ttu-id="48717-116">有关详细信息，请参阅<xref:System.Xml.Linq.XNode.ReadFrom%2A>。</span><span class="sxs-lookup"><span data-stu-id="48717-116">For more information, see <xref:System.Xml.Linq.XNode.ReadFrom%2A>.</span></span>  
+-   <span data-ttu-id="6fe3d-115">可以使用 <xref:System.Xml.XmlReader> 来填充树。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-115">You can use an <xref:System.Xml.XmlReader> to populate the tree.</span></span> <span data-ttu-id="6fe3d-116">有关详细信息，请参阅<xref:System.Xml.Linq.XNode.ReadFrom%2A>。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-116">For more information, see <xref:System.Xml.Linq.XNode.ReadFrom%2A>.</span></span>  
   
--   <span data-ttu-id="48717-117">如果您有一个可以将内容写入 <xref:System.Xml.XmlWriter> 的模块，则可以使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 方法来创建编写器，将该编写器传递到该模块，然后使用写入 <xref:System.Xml.XmlWriter> 的内容来填充 XML 树。</span><span class="sxs-lookup"><span data-stu-id="48717-117">If you have a module that can write content to an <xref:System.Xml.XmlWriter>, you can use the <xref:System.Xml.Linq.XContainer.CreateWriter%2A> method to create a writer, pass the writer to the module, and then use the content that is written to the <xref:System.Xml.XmlWriter> to populate the XML tree.</span></span>  
+-   <span data-ttu-id="6fe3d-117">如果您有一个可以将内容写入 <xref:System.Xml.XmlWriter> 的模块，则可以使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 方法来创建编写器，将该编写器传递到该模块，然后使用写入 <xref:System.Xml.XmlWriter> 的内容来填充 XML 树。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-117">If you have a module that can write content to an <xref:System.Xml.XmlWriter>, you can use the <xref:System.Xml.Linq.XContainer.CreateWriter%2A> method to create a writer, pass the writer to the module, and then use the content that is written to the <xref:System.Xml.XmlWriter> to populate the XML tree.</span></span>  
   
- <span data-ttu-id="48717-118">但是，创建 XML 树的最常见的方法如下：</span><span class="sxs-lookup"><span data-stu-id="48717-118">However, the most common way to create an XML tree is as follows:</span></span>  
+ <span data-ttu-id="6fe3d-118">但是，创建 XML 树的最常见的方法如下：</span><span class="sxs-lookup"><span data-stu-id="6fe3d-118">However, the most common way to create an XML tree is as follows:</span></span>  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -44,7 +44,7 @@ Dim contacts As XElement = _
     </Contacts>  
 ```  
   
- <span data-ttu-id="48717-119">另一个创建 XML 树的十分常用的方法是使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的结果来填充 XML 树，如下面的示例所示：</span><span class="sxs-lookup"><span data-stu-id="48717-119">Another very common technique for creating an XML tree involves using the results of a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query to populate an XML tree, as shown in the following example:</span></span>  
+ <span data-ttu-id="6fe3d-119">另一个创建 XML 树的十分常用的方法是使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的结果来填充 XML 树，如下面的示例所示：</span><span class="sxs-lookup"><span data-stu-id="6fe3d-119">Another very common technique for creating an XML tree involves using the results of a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query to populate an XML tree, as shown in the following example:</span></span>  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -66,7 +66,7 @@ Dim xmlTree As XElement = _
 Console.WriteLine(xmlTree)  
 ```  
   
- <span data-ttu-id="48717-120">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="48717-120">This example produces the following output:</span></span>  
+ <span data-ttu-id="6fe3d-120">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="6fe3d-120">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -78,25 +78,25 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-### <a name="serializing-xml-trees"></a><span data-ttu-id="48717-121">序列化 XML 树</span><span class="sxs-lookup"><span data-stu-id="48717-121">Serializing XML Trees</span></span>  
- <span data-ttu-id="48717-122">可以将 XML 树序列化为 <xref:System.IO.File>、<xref:System.IO.TextWriter> 或 <xref:System.Xml.XmlWriter>。</span><span class="sxs-lookup"><span data-stu-id="48717-122">You can serialize the XML tree to a <xref:System.IO.File>, a <xref:System.IO.TextWriter>, or an <xref:System.Xml.XmlWriter>.</span></span>  
+### <a name="serializing-xml-trees"></a><span data-ttu-id="6fe3d-121">序列化 XML 树</span><span class="sxs-lookup"><span data-stu-id="6fe3d-121">Serializing XML Trees</span></span>  
+ <span data-ttu-id="6fe3d-122">可以将 XML 树序列化为 <xref:System.IO.File>、<xref:System.IO.TextWriter> 或 <xref:System.Xml.XmlWriter>。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-122">You can serialize the XML tree to a <xref:System.IO.File>, a <xref:System.IO.TextWriter>, or an <xref:System.Xml.XmlWriter>.</span></span>  
   
- <span data-ttu-id="48717-123">有关详细信息，请参阅[序列化 XML 树 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)。</span><span class="sxs-lookup"><span data-stu-id="48717-123">For more information, see [Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md).</span></span>  
+ <span data-ttu-id="6fe3d-123">有关详细信息，请参阅[序列化 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-123">For more information, see [Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md).</span></span>  
   
-### <a name="retrieving-xml-data-via-axis-methods"></a><span data-ttu-id="48717-124">通过轴方法检索 XML 数据</span><span class="sxs-lookup"><span data-stu-id="48717-124">Retrieving XML Data via Axis Methods</span></span>  
- <span data-ttu-id="48717-125">可以使用轴方法检索属性、子元素、子代元素和上级元素。</span><span class="sxs-lookup"><span data-stu-id="48717-125">You can use axis methods to retrieve attributes, child elements, descendant elements, and ancestor elements.</span></span> [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]<span data-ttu-id="48717-126"> 查询对轴方法进行操作，并提供了多种灵活而有效的方法导航和处理 XML 树。</span><span class="sxs-lookup"><span data-stu-id="48717-126"> queries operate on axis methods, and provide several flexible and powerful ways to navigate through and process an XML tree.</span></span>  
+### <a name="retrieving-xml-data-via-axis-methods"></a><span data-ttu-id="6fe3d-124">通过轴方法检索 XML 数据</span><span class="sxs-lookup"><span data-stu-id="6fe3d-124">Retrieving XML Data via Axis Methods</span></span>  
+ <span data-ttu-id="6fe3d-125">可以使用轴方法检索属性、子元素、子代元素和上级元素。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-125">You can use axis methods to retrieve attributes, child elements, descendant elements, and ancestor elements.</span></span> [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]<span data-ttu-id="6fe3d-126"> 查询对轴方法进行操作，并提供了多种灵活而有效的方法导航和处理 XML 树。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-126"> queries operate on axis methods, and provide several flexible and powerful ways to navigate through and process an XML tree.</span></span>  
   
- <span data-ttu-id="48717-127">有关详细信息，请参阅[LINQ to XML 轴 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)。</span><span class="sxs-lookup"><span data-stu-id="48717-127">For more information, see [LINQ to XML Axes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md).</span></span>  
+ <span data-ttu-id="6fe3d-127">有关详细信息，请参阅[LINQ to XML 轴 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-127">For more information, see [LINQ to XML Axes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md).</span></span>  
   
-### <a name="querying-xml-trees"></a><span data-ttu-id="48717-128">查询 XML 树</span><span class="sxs-lookup"><span data-stu-id="48717-128">Querying XML Trees</span></span>  
- <span data-ttu-id="48717-129">可以编写从 XML 树提取数据的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询。</span><span class="sxs-lookup"><span data-stu-id="48717-129">You can write [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries that extract data from an XML tree.</span></span>  
+### <a name="querying-xml-trees"></a><span data-ttu-id="6fe3d-128">查询 XML 树</span><span class="sxs-lookup"><span data-stu-id="6fe3d-128">Querying XML Trees</span></span>  
+ <span data-ttu-id="6fe3d-129">可以编写从 XML 树提取数据的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-129">You can write [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries that extract data from an XML tree.</span></span>  
   
- <span data-ttu-id="48717-130">有关详细信息，请参阅[查询 XML 树 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)。</span><span class="sxs-lookup"><span data-stu-id="48717-130">For more information, see [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md).</span></span>  
+ <span data-ttu-id="6fe3d-130">有关详细信息，请参阅[查询 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-130">For more information, see [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md).</span></span>  
   
-### <a name="modifying-xml-trees"></a><span data-ttu-id="48717-131">修改 XML 树</span><span class="sxs-lookup"><span data-stu-id="48717-131">Modifying XML Trees</span></span>  
- <span data-ttu-id="48717-132">可以通过各种方式修改元素，例如更改元素的内容或属性。</span><span class="sxs-lookup"><span data-stu-id="48717-132">You can modify an element in a variety of ways, including changing its content or attributes.</span></span> <span data-ttu-id="48717-133">还可以从元素的父级移除元素。</span><span class="sxs-lookup"><span data-stu-id="48717-133">You can also remove an element from its parent.</span></span>  
+### <a name="modifying-xml-trees"></a><span data-ttu-id="6fe3d-131">修改 XML 树</span><span class="sxs-lookup"><span data-stu-id="6fe3d-131">Modifying XML Trees</span></span>  
+ <span data-ttu-id="6fe3d-132">可以通过各种方式修改元素，例如更改元素的内容或属性。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-132">You can modify an element in a variety of ways, including changing its content or attributes.</span></span> <span data-ttu-id="6fe3d-133">还可以从元素的父级移除元素。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-133">You can also remove an element from its parent.</span></span>  
   
- <span data-ttu-id="48717-134">有关详细信息，请参阅[修改 XML 树 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="48717-134">For more information, see [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="6fe3d-134">有关详细信息，请参阅[修改 XML 树 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="6fe3d-134">For more information, see [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48717-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="48717-135">See Also</span></span>  
- [<span data-ttu-id="48717-136">LINQ to XML 编程概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="48717-136">LINQ to XML Programming Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a><span data-ttu-id="6fe3d-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="6fe3d-135">See Also</span></span>  
+ [<span data-ttu-id="6fe3d-136">LINQ to XML 编程概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6fe3d-136">LINQ to XML Programming Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
