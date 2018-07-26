@@ -25,7 +25,7 @@ ms.locfileid: "33572965"
   
  本文的目的是提供一组一致的命名约定，用于生成便于开发人员理解和使用的名称。  
   
- 尽管采用这些命名约定，因为常规的代码开发指导原则会导致更一致的方式命名在整个代码，将要求你仅将其应用到公共公开的 Api (公共或受保护的类型和成员，并显式实现接口）。  
+ 虽然采用这些命名约定并将其用作常规代码开发准则，可以在整个代码中实现更一致的命名，但要求仅将其用于向公共领域公开的 API（公共或受保护的类型和成员以及显式实现的接口）。  
   
 ## <a name="in-this-section"></a>本节内容  
  [大小写约定](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "33572965"
  [命名资源](../../../docs/standard/design-guidelines/naming-resources.md)  
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)
