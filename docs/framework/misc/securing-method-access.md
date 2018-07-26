@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0d9ddbd6c7b027a7c342f4c14192a7571beb592
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 314ceb86219ce143e84a00392727d610c0779e48
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397879"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243673"
 ---
 # <a name="securing-method-access"></a>保护方法访问
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,19 +28,19 @@ ms.locfileid: "33397879"
   
  托管代码提供几种方法来限制方法访问：  
   
--   如果可以信任类、程序集或派生类，则限制它们的可访问性的范围。 这是限制方法访问的最简单的方法。 请注意，派生类的可信度通常可低于其从中派生的类，尽管在某些情况下它们共享父类的标识。 具体而言，而作出推断从关键字**保护**，因为并不一定使用的安全上下文中。  
+-   如果可以信任类、程序集或派生类，则限制它们的可访问性的范围。 这是限制方法访问的最简单的方法。 请注意，派生类的可信度通常可低于其从中派生的类，尽管在某些情况下它们共享父类的标识。 具体而言，不推断从关键字**保护**，这不一定使用的安全上下文中。  
   
--   限制到指定的标识-实质上，任何特定的调用方的方法访问[证据](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da)你选择的 （强名称、 发布者、 区域等）。  
+-   限制对指定的标识-从根本上讲，任何特定的调用方的方法访问[证据](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da)选择 （强名称、 发布服务器、 区域等）。  
   
 -   限制对具有你选择的任何权限的调用方的方法访问。  
   
- 同样，声明性安全使你可以控制类的继承。 你可以使用**InheritanceDemand**以执行以下操作：  
+ 同样，声明性安全使你可以控制类的继承。 可以使用**InheritanceDemand**来执行以下操作：  
   
 -   要求派生类具有指定的标识或权限。  
   
 -   要求重写特定方法的派生类具有指定的标识或权限。  
   
- 下面的示例演示如何通过要求使用特定强名称对调用方进行签名来帮助保护具有有限访问权限的公共类。 此示例使用<xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute>与**需**强名称。 有关如何对具有强名称的程序集进行签名的基于任务的信息，请参阅[创建和使用具有强名称程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)。  
+ 下面的示例演示如何通过要求使用特定强名称对调用方进行签名来帮助保护具有有限访问权限的公共类。 此示例使用<xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute>与**需**为强名称。 有关如何为程序集具有强名称签名的基于任务的信息，请参阅[创建和使用具有强名称程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)。  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -62,7 +62,7 @@ public class Class1
 > [!NOTE]
 >  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中引入了新的透明度模型。 [安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)模型标识安全代码与<xref:System.Security.SecurityCriticalAttribute>属性。 安全关键代码需要调用方和继承者均完全受信任。 在早期 .NET Framework 版本中的代码访问安全性规则下运行的程序集可以调用级别 2 程序集。 在这种情况下，安全关键属性将被视为完全信任的链接要求。  
   
- 在具有强名称程序集中， [LinkDemand](../../../docs/framework/misc/link-demands.md)应用于所有可公开访问的方法、 属性和其中对他们使用限制到完全信任的调用的事件。 若要禁用此功能，必须应用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 特性。 因此，仅未签名的程序集或具有此特性的程序集需要显式标记类以排除不受信任调用方；可以使用这些声明来标记其中并不打算用于不受信任的调用方的类型子集。  
+ 在强名称的程序集中[LinkDemand](../../../docs/framework/misc/link-demands.md)应用于所有可以访问的方法、 属性和其中到完全受信任调用方限制其使用的事件。 若要禁用此功能，必须应用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 特性。 因此，仅未签名的程序集或具有此特性的程序集需要显式标记类以排除不受信任调用方；可以使用这些声明来标记其中并不打算用于不受信任的调用方的类型子集。  
   
  下面的示例说明如何防止不受信任的代码使用类和成员。  
   
@@ -110,7 +110,7 @@ End Class
 ```csharp  
 [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name="FullTrust")]  
 [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name="FullTrust")]  
-public abstract class CannotCreateInstanceOfMe_CanCastToMe{}  
+public abstract class CannotCreateInstanceOfMe_CanCastToMe {}  
 ```  
   
  对于公共虚拟函数：  
@@ -145,7 +145,7 @@ End Class 'Base2
 ```  
   
 ```csharp  
-abstract class Base2{  
+abstract class Base2 {  
 [System.Security.Permissions.PermissionSetAttribute(  
 System.Security.Permissions.SecurityAction.InheritanceDemand, Name = "FullTrust")]  
 [System.Security.Permissions.PermissionSetAttribute(  
@@ -234,9 +234,9 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Virtual Internal 重写或 Overloads Overridable Friend  
   
 > [!NOTE]
->  本部分的安全问题时将方法声明为同时会发出的警告`virtual`和`internal`(`Overloads``Overridable``Friend`在 Visual Basic 中)。 此警告仅适用于.NET framework 1.0 和 1.1 版，不适用于更高版本。  
+>  本部分中的安全问题时将方法声明为同时发出警告`virtual`并`internal`(`Overloads``Overridable``Friend`在 Visual Basic 中)。 此警告仅适用于.NET framework 1.0 和 1.1 版，不适用于更高版本。  
   
- 在.NET framework 1.0 和 1.1 版中，你必须注意类型系统可访问性的细微差别时确认你的代码不可用于其他程序集。 声明的方法**虚拟**和**内部**(**Overloads Overridable Friend**在 Visual Basic 中) 可以重写父类的 vtable 条目，并且可以仅从使用同一程序集中因为它是内部。 但是，重写的可访问性由**虚拟**关键字，并且只要代码有权访问类本身从另一个程序集重写，就可以。 如果重写的可能性存在问题，请使用声明性安全来解决该问题，或删除**虚拟**如果它不是绝对必需的关键字。  
+ 在.NET framework 1.0 和 1.1 版中，您必须注意类型系统可访问性的细微差别时确认你的代码对其他程序集不可用。 声明的方法**虚拟**并**内部**(**Overloads Overridable Friend**在 Visual Basic 中) 可以重写父类的 vtable 条目，并可以仅通过使用在同一程序集中因为它是内部。 但是，由重写的可访问性**虚拟**关键字，并且可以覆盖从另一个程序集，只要该代码有权访问类本身。 如果重写可能会出现问题，使用声明性安全来解决问题，或删除**虚拟**如果不是绝对必需的关键字。  
   
  请注意，即使语言编译器通过编译错误防止这些重写，使用其他编译器编写的代码也可能发生重写。  
   

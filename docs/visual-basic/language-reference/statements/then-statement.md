@@ -1,18 +1,18 @@
 ---
-title: Then 语句
+title: Then 语句 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Then keyword [Visual Basic]
 ms.assetid: 41fdb422-d222-4c10-b5b0-c421c79e9070
-ms.openlocfilehash: c8ff993c1066dfd4bc94f68f2d7753c09d6eabe1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ae3043f478ad7582a7ca3558cf0bebbc531e5db
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598393"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244619"
 ---
 # <a name="then-statement"></a>Then 语句
-引入会编译或经过测试的条件为 true 时执行的语句块。  
+引入一个要编译或测试的条件为 true 时执行的语句块。  
   
 ## <a name="remarks"></a>备注  
  `Then` 关键字可用于以下上下文中：  

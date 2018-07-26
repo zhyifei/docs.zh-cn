@@ -3,11 +3,11 @@ title: 如何： 联接两个集合 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
 ms.openlocfilehash: 3ceb9cf7dfdd1d18a07e93d15624fd8fac045d07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643687"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245695"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>如何： 联接两个集合 (LINQ to XML) (Visual Basic)
 XML 文档中的元素或属性有时可以引用另一个其他元素或属性。 例如，[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) XML 文档包含一个客户列表和一个订单列表。 每个 `Customer` 元素都包含一个 `CustomerID` 属性。 每个 `Order` 元素都包含一个 `CustomerID` 元素。 每个订单中的 `CustomerID` 元素都引用客户中的 `CustomerID` 属性。  
@@ -18,7 +18,7 @@ XML 文档中的元素或属性有时可以引用另一个其他元素或属性�
   
  请注意，由于没有可用的索引，这种联接的运行时性能较差。  
   
- 有关详细信息有关`Join`，请参阅[加入操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)。  
+ 有关更多有关详细信息`Join`，请参阅[联接操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例将 `Customer` 元素与 `Order` 元素联接在一起，并生成一个新的 XML 文档，该文档包含订单中的 `CompanyName` 元素。  

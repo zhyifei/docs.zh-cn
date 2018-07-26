@@ -4,11 +4,11 @@ description: 了解 .NET Core 工具层及最新版本中的更改。
 author: blackdwarf
 ms.date: 03/06/2017
 ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696538"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245124"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中变更的高级概述
 

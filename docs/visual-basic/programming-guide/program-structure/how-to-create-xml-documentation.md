@@ -6,35 +6,35 @@ helpviewer_keywords:
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
 ms.openlocfilehash: 7fb56da8a28367a6dcd5e28f208b4519510d7d95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650876"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243874"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>如何：在 Visual Basic 中创建 XML 文档
 此示例演示如何将 XML 文档注释添加到你的代码。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-xml-documentation-for-a-type-or-member"></a>若要创建一个类型或成员的 XML 文档  
+### <a name="to-create-xml-documentation-for-a-type-or-member"></a>若要创建的类型或成员的 XML 文档  
   
-1.  在**代码编辑器**，放置在你想要创建文档的类型或成员上方的行的光标。  
+1.  在中**代码编辑器**，将光标放置在你想要创建文档的类型或成员上面的行上。  
   
-2.  类型`'''`（三个单引号引起来）。  
+2.  类型`'''`（三个非单引号）。  
   
-     在中添加该类型或成员的 XML 主干**代码编辑器**。  
+     在添加对类型或成员的 XML 主干**代码编辑器**。  
   
-3.  添加到相应的标记之间的描述性信息。  
+3.  添加相应的标记之间的描述性信息。  
   
     > [!NOTE]
-    >  如果你添加的 XML 文档块中的其他行，每行必须以开头`'''`。  
+    >  如果添加 XML 文档块中的其他行，每行必须以`'''`。  
   
-4.  添加新的 XML 文档注释中使用该类型或成员的其他代码。  
+4.  添加新的 XML 文档注释中使用的类型或成员的其他代码。  
   
-     IntelliSense 会在显示中的文本\<摘要 > 标记的类型或成员。  
+     IntelliSense 将显示从文本\<摘要 > 标记的类型或成员。  
   
-5.  编译代码，以生成包含文档注释的 XML 文件。 有关详细信息，请参阅 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)。  
+5.  编译代码，生成包含文档注释的 XML 文件。 有关详细信息，请参阅 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 XML 记录代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  

@@ -3,11 +3,11 @@ title: 演练： 在 Visual Studio (Visual Basic 中) 中嵌入托管程序集�
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
 ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644181"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245454"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>演练： 在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型
 如果嵌入强命名托管程序集中的类型信息，则可以对应用程序中的类型进行松耦合，以实现版本独立性。 也就是说，可以将程序编写为使用多个托管库版本中的类型，而不必对每个版本重新编译程序。  
@@ -56,7 +56,7 @@ ms.locfileid: "33644181"
   
 2.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“类库”。 在“名称”框中，键入 `TypeEquivalenceInterface`，然后单击“确定”。 新项目创建完成。  
   
-3.  在**解决方案资源管理器**，右键单击 Class1.vb 文件，然后单击**重命名**。 将文件重命名为 `ISampleInterface.vb`，然后按 Enter。 重命名文件也会将类重命名为 `ISampleInterface`。 此类将表示类的公共接口。  
+3.  在中**解决方案资源管理器**，右键单击 Class1.vb 文件，然后单击**重命名**。 将文件重命名为 `ISampleInterface.vb`，然后按 Enter。 重命名文件也会将类重命名为 `ISampleInterface`。 此类将表示类的公共接口。  
   
 4.  右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。 单击“编译”选项卡。将输出路径设置为开发计算机上的有效位置，例如 `C:\TypeEquivalenceSample`。 本演练的后续步骤中也将使用此位置。  
   
@@ -77,11 +77,11 @@ ms.locfileid: "33644181"
   
 7.  在“工具”菜单上，单击“创建 Guid”。 在“创建 GUID”对话框中，单击“注册表格式”，然后单击“复制”。 单击“退出” 。  
   
-8.  在 `Guid` 特性中，删除示例 GUID ，并粘贴从“创建 GUID”对话框复制的 GUID。 删除大括号 ({}) 从复制的 GUID。  
+8.  在 `Guid` 特性中，删除示例 GUID ，并粘贴从“创建 GUID”对话框复制的 GUID。 删除复制的 GUID 中的大括号 ({})。  
   
 9. 在“项目”菜单上，单击“显示所有文件”。  
   
-10. 在**解决方案资源管理器**，展开**我的项目**文件夹。 双击 AssemblyInfo.vb。 向文件中添加以下特性。  
+10. 在中**解决方案资源管理器**，展开**我的项目**文件夹。 双击 AssemblyInfo.vb。 向文件中添加以下特性。  
   
     ```vb  
     <Assembly: ImportedFromTypeLib("")>  
@@ -101,7 +101,7 @@ ms.locfileid: "33644181"
   
 2.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“类库”。 在“名称”框中，键入 `TypeEquivalenceRuntime`，然后单击“确定”。 新项目创建完成。  
   
-3.  在**解决方案资源管理器**，右键单击 Class1.vb 文件，然后单击**重命名**。 将文件重命名为 `SampleClass.vb`，然后按 Enter。 重命名文件也会将类重命名为 `SampleClass`。 此类将实现 `ISampleInterface` 接口。  
+3.  在中**解决方案资源管理器**，右键单击 Class1.vb 文件，然后单击**重命名**。 将文件重命名为 `SampleClass.vb`，然后按 Enter。 重命名文件也会将类重命名为 `SampleClass`。 此类将实现 `ISampleInterface` 接口。  
   
 4.  右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。 单击“编译”选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "33644181"
   
 6.  在“解决方案资源管理器”中，展开“引用”文件夹。 选择 TypeEquivalenceInterface 引用。 在 TypeEquivalenceInterface 引用的“属性”窗口中，将“嵌入互操作类型”属性设置为“True”。  
   
-7.  将以下代码添加到要创建客户端程序的 Module1.vb 文件。  
+7.  将以下代码添加到 Module1.vb 文件以创建客户端程序。  
   
     ```vb  
     Imports TypeEquivalenceInterface  
