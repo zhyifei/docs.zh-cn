@@ -18,27 +18,27 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="naming-resources"></a>命名资源
-由于可以通过某些对象引用可本地化资源，就好像它们是属性一样，因此资源的命名准则与属性准则类似。
+由于可本地化的资源可像属性那样通过某些对象进行引用，因此资源的命名准则与属性准则相似。
   
- **✓ 要**对资源键使用 PascalCasing 。  
+ **✓ 务必**在资源键中使用 PascalCasing。 
   
- **✓ 要**提供描述性的名称而不是短的标识符。  
+ **✓ 务必**提供描述性标识符而非简短标识符。  
   
- **X 不要**使用主要 CLR 语言中的语言特定关键字。  
+ **X 不要**使用主要 CLR 语言中的语言特定关键字。   
   
- **✓ 要**仅在命名资源中使用字母数字字符和下划线。  
+ **✓ 务必执行**：命名资源中只能使用字母数字字符和下划线。   
   
- **✓ 要**对异常消息资源使用以下命名约定。
+ **✓ 务必**为异常消息资源使用以下命名约定。
   
- 资源标识符应该是异常类型名称加上异常的短标识符：
+ 资源标识符应为异常类型名称加上异常的短标识符：
   
  `ArgumentExceptionIllegalCharacters`  
  `ArgumentExceptionInvalidName`  
  `ArgumentExceptionFileNameIsMalformed`  
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
   
- *由 Pearson Education, Inc 许可，转载自[Framework 设计准则： 可重用.NET 库的约定、 惯用法和模式 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者 Krzysztof Cwalina 和 Brad Abrams，由Addison Wesley Professional 于 2008 年 10 月 22 日发布，作为 Microsoft Windows 开发系列的一部分。
+ *经 Pearson Education, Inc 授权，转载自《框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版》(https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
