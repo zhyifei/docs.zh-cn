@@ -2,12 +2,12 @@
 title: 如何：创建请求-答复协定
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 76a3bbb9415a34218896bc561066c7ac4a30e6b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d41973d04fc75f70011505a3361e71e89a05276
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489568"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220979"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>如何：创建请求-答复协定
 请求-答复协定指定返回答复的方法。 必须根据此协定的条款发送答复并与请求相关联。 即使该方法不返回任何答复（采用 C# 语言时，返回 `void`，采用 Visual Basic 语言时，返回 `Sub`），基础结构也将创建一条空消息并将其发送给调用方。 若要防止发送空答复消息，请对操作使用单向协定。  
@@ -25,7 +25,7 @@ ms.locfileid: "33489568"
 ## <a name="example"></a>示例  
  下面的示例为提供 `Add` 和 `Subtract` 方法的计算器服务定义一个协定。 `Multiply` 方法不是协定的一部分，因为它没有通过 <xref:System.ServiceModel.OperationContractAttribute> 类进行标记，因此不可以由客户端访问。  
   
-```
+```csharp
 using System.ServiceModel;
 
 [ServiceContract]
