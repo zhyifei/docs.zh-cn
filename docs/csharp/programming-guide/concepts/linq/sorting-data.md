@@ -2,38 +2,38 @@
 title: 对数据排序 (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 6e223ecbfc68e904762bff998b3bd37f88607f7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90ff7d52e6832935fe16e081e904acae3a24669a
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332554"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245423"
 ---
-# <a name="sorting-data-c"></a><span data-ttu-id="e4d1a-102">对数据排序 (C#)</span><span class="sxs-lookup"><span data-stu-id="e4d1a-102">Sorting Data (C#)</span></span>
-<span data-ttu-id="e4d1a-103">排序操作基于一个或多个属性对序列的元素进行排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-103">A sorting operation orders the elements of a sequence based on one or more attributes.</span></span> <span data-ttu-id="e4d1a-104">第一个排序条件对元素执行主要排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-104">The first sort criterion performs a primary sort on the elements.</span></span> <span data-ttu-id="e4d1a-105">通过指定第二个排序条件，您可以对每个主要排序组内的元素进行排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-105">By specifying a second sort criterion, you can sort the elements within each primary sort group.</span></span>  
+# <a name="sorting-data-c"></a><span data-ttu-id="01786-102">对数据排序 (C#)</span><span class="sxs-lookup"><span data-stu-id="01786-102">Sorting Data (C#)</span></span>
+<span data-ttu-id="01786-103">排序操作基于一个或多个属性对序列的元素进行排序。</span><span class="sxs-lookup"><span data-stu-id="01786-103">A sorting operation orders the elements of a sequence based on one or more attributes.</span></span> <span data-ttu-id="01786-104">第一个排序条件对元素执行主要排序。</span><span class="sxs-lookup"><span data-stu-id="01786-104">The first sort criterion performs a primary sort on the elements.</span></span> <span data-ttu-id="01786-105">通过指定第二个排序条件，您可以对每个主要排序组内的元素进行排序。</span><span class="sxs-lookup"><span data-stu-id="01786-105">By specifying a second sort criterion, you can sort the elements within each primary sort group.</span></span>  
   
- <span data-ttu-id="e4d1a-106">下图演示对一个字符序列执行按字母排序操作的结果。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-106">The following illustration shows the results of an alphabetical sort operation on a sequence of characters.</span></span>  
+ <span data-ttu-id="01786-106">下图演示对一个字符序列执行按字母排序操作的结果。</span><span class="sxs-lookup"><span data-stu-id="01786-106">The following illustration shows the results of an alphabetical sort operation on a sequence of characters.</span></span>  
   
- <span data-ttu-id="e4d1a-107">![LINQ 排序操作](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")</span><span class="sxs-lookup"><span data-stu-id="e4d1a-107">![LINQ Sorting Operation](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")</span></span>  
+ <span data-ttu-id="01786-107">![LINQ 排序操作](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")</span><span class="sxs-lookup"><span data-stu-id="01786-107">![LINQ Sorting Operation](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")</span></span>  
   
- <span data-ttu-id="e4d1a-108">下节列出了对数据进行排序的标准查询运算符方法。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-108">The standard query operator methods that sort data are listed in the following section.</span></span>  
+ <span data-ttu-id="01786-108">下节列出了对数据进行排序的标准查询运算符方法。</span><span class="sxs-lookup"><span data-stu-id="01786-108">The standard query operator methods that sort data are listed in the following section.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="e4d1a-109">方法</span><span class="sxs-lookup"><span data-stu-id="e4d1a-109">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="01786-109">方法</span><span class="sxs-lookup"><span data-stu-id="01786-109">Methods</span></span>  
   
-|<span data-ttu-id="e4d1a-110">方法名</span><span class="sxs-lookup"><span data-stu-id="e4d1a-110">Method Name</span></span>|<span data-ttu-id="e4d1a-111">描述</span><span class="sxs-lookup"><span data-stu-id="e4d1a-111">Description</span></span>|<span data-ttu-id="e4d1a-112">C# 查询表达式语法</span><span class="sxs-lookup"><span data-stu-id="e4d1a-112">C# Query Expression Syntax</span></span>|<span data-ttu-id="e4d1a-113">详细信息</span><span class="sxs-lookup"><span data-stu-id="e4d1a-113">More Information</span></span>|  
+|<span data-ttu-id="01786-110">方法名</span><span class="sxs-lookup"><span data-stu-id="01786-110">Method Name</span></span>|<span data-ttu-id="01786-111">描述</span><span class="sxs-lookup"><span data-stu-id="01786-111">Description</span></span>|<span data-ttu-id="01786-112">C# 查询表达式语法</span><span class="sxs-lookup"><span data-stu-id="01786-112">C# Query Expression Syntax</span></span>|<span data-ttu-id="01786-113">详细信息</span><span class="sxs-lookup"><span data-stu-id="01786-113">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|<span data-ttu-id="e4d1a-114">OrderBy</span><span class="sxs-lookup"><span data-stu-id="e4d1a-114">OrderBy</span></span>|<span data-ttu-id="e4d1a-115">按升序对值排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-115">Sorts values in ascending order.</span></span>|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="e4d1a-116">OrderByDescending</span><span class="sxs-lookup"><span data-stu-id="e4d1a-116">OrderByDescending</span></span>|<span data-ttu-id="e4d1a-117">按降序对值排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-117">Sorts values in descending order.</span></span>|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="e4d1a-118">ThenBy</span><span class="sxs-lookup"><span data-stu-id="e4d1a-118">ThenBy</span></span>|<span data-ttu-id="e4d1a-119">按升序执行次要排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-119">Performs a secondary sort in ascending order.</span></span>|`orderby …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="e4d1a-120">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="e4d1a-120">ThenByDescending</span></span>|<span data-ttu-id="e4d1a-121">按降序执行次要排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-121">Performs a secondary sort in descending order.</span></span>|`orderby …, … descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="e4d1a-122">Reverse</span><span class="sxs-lookup"><span data-stu-id="e4d1a-122">Reverse</span></span>|<span data-ttu-id="e4d1a-123">反转集合中元素的顺序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-123">Reverses the order of the elements in a collection.</span></span>|<span data-ttu-id="e4d1a-124">不适用。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-124">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="01786-114">OrderBy</span><span class="sxs-lookup"><span data-stu-id="01786-114">OrderBy</span></span>|<span data-ttu-id="01786-115">按升序对值排序。</span><span class="sxs-lookup"><span data-stu-id="01786-115">Sorts values in ascending order.</span></span>|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="01786-116">OrderByDescending</span><span class="sxs-lookup"><span data-stu-id="01786-116">OrderByDescending</span></span>|<span data-ttu-id="01786-117">按降序对值排序。</span><span class="sxs-lookup"><span data-stu-id="01786-117">Sorts values in descending order.</span></span>|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="01786-118">ThenBy</span><span class="sxs-lookup"><span data-stu-id="01786-118">ThenBy</span></span>|<span data-ttu-id="01786-119">按升序执行次要排序。</span><span class="sxs-lookup"><span data-stu-id="01786-119">Performs a secondary sort in ascending order.</span></span>|`orderby …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="01786-120">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="01786-120">ThenByDescending</span></span>|<span data-ttu-id="01786-121">按降序执行次要排序。</span><span class="sxs-lookup"><span data-stu-id="01786-121">Performs a secondary sort in descending order.</span></span>|`orderby …, … descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="01786-122">Reverse</span><span class="sxs-lookup"><span data-stu-id="01786-122">Reverse</span></span>|<span data-ttu-id="01786-123">反转集合中元素的顺序。</span><span class="sxs-lookup"><span data-stu-id="01786-123">Reverses the order of the elements in a collection.</span></span>|<span data-ttu-id="01786-124">不适用。</span><span class="sxs-lookup"><span data-stu-id="01786-124">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-examples"></a><span data-ttu-id="e4d1a-125">查询表达式语法示例</span><span class="sxs-lookup"><span data-stu-id="e4d1a-125">Query Expression Syntax Examples</span></span>  
+## <a name="query-expression-syntax-examples"></a><span data-ttu-id="01786-125">查询表达式语法示例</span><span class="sxs-lookup"><span data-stu-id="01786-125">Query Expression Syntax Examples</span></span>  
   
-### <a name="primary-sort-examples"></a><span data-ttu-id="e4d1a-126">主要排序示例</span><span class="sxs-lookup"><span data-stu-id="e4d1a-126">Primary Sort Examples</span></span>  
+### <a name="primary-sort-examples"></a><span data-ttu-id="01786-126">主要排序示例</span><span class="sxs-lookup"><span data-stu-id="01786-126">Primary Sort Examples</span></span>  
   
-#### <a name="primary-ascending-sort"></a><span data-ttu-id="e4d1a-127">主要升序排序</span><span class="sxs-lookup"><span data-stu-id="e4d1a-127">Primary Ascending Sort</span></span>  
- <span data-ttu-id="e4d1a-128">下面的示例演示如何在 LINQ 查询中使用 `orderby` 子句按字符串长度对数组中的字符串进行升序排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-128">The following example demonstrates how to use the `orderby` clause in a LINQ query to sort the strings in an array by string length, in ascending order.</span></span>  
+#### <a name="primary-ascending-sort"></a><span data-ttu-id="01786-127">主要升序排序</span><span class="sxs-lookup"><span data-stu-id="01786-127">Primary Ascending Sort</span></span>  
+ <span data-ttu-id="01786-128">下面的示例演示如何在 LINQ 查询中使用 `orderby` 子句按字符串长度对数组中的字符串进行升序排序。</span><span class="sxs-lookup"><span data-stu-id="01786-128">The following example demonstrates how to use the `orderby` clause in a LINQ query to sort the strings in an array by string length, in ascending order.</span></span>  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -55,8 +55,8 @@ foreach (string str in query)
 */  
 ```  
   
-#### <a name="primary-descending-sort"></a><span data-ttu-id="e4d1a-129">主要降序排序</span><span class="sxs-lookup"><span data-stu-id="e4d1a-129">Primary Descending Sort</span></span>  
- <span data-ttu-id="e4d1a-130">下面的示例演示如何在 LINQ 查询中使用 `orderby``descending` 子句按字符串的第一个字母对字符串进行降序排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-130">The next example demonstrates how to use the `orderby``descending` clause in a LINQ query to sort the strings by their first letter, in descending order.</span></span>  
+#### <a name="primary-descending-sort"></a><span data-ttu-id="01786-129">主要降序排序</span><span class="sxs-lookup"><span data-stu-id="01786-129">Primary Descending Sort</span></span>  
+ <span data-ttu-id="01786-130">下面的示例演示如何在 LINQ 查询中使用 `orderby descending` 子句按字符串的第一个字母对字符串进行降序排序。</span><span class="sxs-lookup"><span data-stu-id="01786-130">The next example demonstrates how to use the `orderby descending` clause in a LINQ query to sort the strings by their first letter, in descending order.</span></span>  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -78,10 +78,10 @@ foreach (string str in query)
 */  
 ```  
   
-### <a name="secondary-sort-examples"></a><span data-ttu-id="e4d1a-131">次要排序示例</span><span class="sxs-lookup"><span data-stu-id="e4d1a-131">Secondary Sort Examples</span></span>  
+### <a name="secondary-sort-examples"></a><span data-ttu-id="01786-131">次要排序示例</span><span class="sxs-lookup"><span data-stu-id="01786-131">Secondary Sort Examples</span></span>  
   
-#### <a name="secondary-ascending-sort"></a><span data-ttu-id="e4d1a-132">次要升序排序</span><span class="sxs-lookup"><span data-stu-id="e4d1a-132">Secondary Ascending Sort</span></span>  
- <span data-ttu-id="e4d1a-133">下面的示例演示如何在 LINQ 查询中使用 `orderby` 子句对数组中的字符串执行主要和次要排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-133">The following example demonstrates how to use the `orderby` clause in a LINQ query to perform a primary and secondary sort of the strings in an array.</span></span> <span data-ttu-id="e4d1a-134">首先按字符串长度，其次按字符串的第一个字母，对字符串进行升序排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-134">The strings are sorted primarily by length and secondarily by the first letter of the string, both in ascending order.</span></span>  
+#### <a name="secondary-ascending-sort"></a><span data-ttu-id="01786-132">次要升序排序</span><span class="sxs-lookup"><span data-stu-id="01786-132">Secondary Ascending Sort</span></span>  
+ <span data-ttu-id="01786-133">下面的示例演示如何在 LINQ 查询中使用 `orderby` 子句对数组中的字符串执行主要和次要排序。</span><span class="sxs-lookup"><span data-stu-id="01786-133">The following example demonstrates how to use the `orderby` clause in a LINQ query to perform a primary and secondary sort of the strings in an array.</span></span> <span data-ttu-id="01786-134">首先按字符串长度，其次按字符串的第一个字母，对字符串进行升序排序。</span><span class="sxs-lookup"><span data-stu-id="01786-134">The strings are sorted primarily by length and secondarily by the first letter of the string, both in ascending order.</span></span>  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -103,8 +103,8 @@ foreach (string str in query)
 */  
 ```  
   
-#### <a name="secondary-descending-sort"></a><span data-ttu-id="e4d1a-135">次要降序排序</span><span class="sxs-lookup"><span data-stu-id="e4d1a-135">Secondary Descending Sort</span></span>  
- <span data-ttu-id="e4d1a-136">下面的示例演示如何在 LINQ 查询中使用 `orderby``descending` 子句按升序执行主要排序，按降序执行次要排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-136">The next example demonstrates how to use the `orderby``descending` clause in a LINQ query to perform a primary sort, in ascending order, and a secondary sort, in descending order.</span></span> <span data-ttu-id="e4d1a-137">首先按字符串长度，其次按字符串的第一个字母，对字符串进行排序。</span><span class="sxs-lookup"><span data-stu-id="e4d1a-137">The strings are sorted primarily by length and secondarily by the first letter of the string.</span></span>  
+#### <a name="secondary-descending-sort"></a><span data-ttu-id="01786-135">次要降序排序</span><span class="sxs-lookup"><span data-stu-id="01786-135">Secondary Descending Sort</span></span>  
+ <span data-ttu-id="01786-136">下面的示例演示如何在 LINQ 查询中使用 `orderby descending` 子句按升序执行主要排序，按降序执行次要排序。</span><span class="sxs-lookup"><span data-stu-id="01786-136">The next example demonstrates how to use the `orderby descending` clause in a LINQ query to perform a primary sort, in ascending order, and a secondary sort, in descending order.</span></span> <span data-ttu-id="01786-137">首先按字符串长度，其次按字符串的第一个字母，对字符串进行排序。</span><span class="sxs-lookup"><span data-stu-id="01786-137">The strings are sorted primarily by length and secondarily by the first letter of the string.</span></span>  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -126,9 +126,9 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e4d1a-138">请参阅</span><span class="sxs-lookup"><span data-stu-id="e4d1a-138">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="01786-138">请参阅</span><span class="sxs-lookup"><span data-stu-id="01786-138">See Also</span></span>  
  <xref:System.Linq>  
- [<span data-ttu-id="e4d1a-139">标准查询运算符概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="e4d1a-139">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [<span data-ttu-id="e4d1a-140">orderby 子句</span><span class="sxs-lookup"><span data-stu-id="e4d1a-140">orderby clause</span></span>](../../../../csharp/language-reference/keywords/orderby-clause.md)  
- [<span data-ttu-id="e4d1a-141">如何：对 Join 子句的结果进行排序</span><span class="sxs-lookup"><span data-stu-id="e4d1a-141">How to: Order the Results of a Join Clause</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
- [<span data-ttu-id="e4d1a-142">如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="e4d1a-142">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+ [<span data-ttu-id="01786-139">标准查询运算符概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="01786-139">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="01786-140">orderby 子句</span><span class="sxs-lookup"><span data-stu-id="01786-140">orderby clause</span></span>](../../../../csharp/language-reference/keywords/orderby-clause.md)  
+ [<span data-ttu-id="01786-141">如何：对 Join 子句的结果进行排序</span><span class="sxs-lookup"><span data-stu-id="01786-141">How to: Order the Results of a Join Clause</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+ [<span data-ttu-id="01786-142">如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="01786-142">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
