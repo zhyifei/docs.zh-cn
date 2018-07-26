@@ -7,11 +7,11 @@ helpviewer_keywords:
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
 ms.openlocfilehash: e67e568b67400807ba7a1668acb6b3a36b4c7f22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213194"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220784"
 ---
 # <a name="c-compiler-errors"></a>C# 编译器错误
 一些 C# 编译器错误有对应的主题，其中介绍了导致错误生成的原因，在某些情况下还介绍了错误修复方法。 请执行下列操作之一，查看是否有特定错误消息的相关帮助资料。  

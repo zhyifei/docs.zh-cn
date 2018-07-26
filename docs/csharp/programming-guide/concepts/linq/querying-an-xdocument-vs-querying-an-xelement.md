@@ -3,11 +3,11 @@ title: 查询 XDocument 与查询 XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
 ms.openlocfilehash: 61d8c70b9cbaeeb487059e4acfc88dc165c45d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320646"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960129"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>查询 XDocument 与查询 XElement (C#)
 通过 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 加载文档时，您会注意到，您要编写的查询与通过 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 加载文档时稍有不同。  

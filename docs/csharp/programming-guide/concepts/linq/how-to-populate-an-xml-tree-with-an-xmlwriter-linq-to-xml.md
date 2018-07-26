@@ -3,11 +3,11 @@ title: 如何：使用 XmlWriter 填充 XML 树 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
 ms.openlocfilehash: cc3aeb8e8fbef3b109c9bc591084f0d033f5f476
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323669"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198544"
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>如何：使用 XmlWriter 填充 XML 树 (LINQ to XML) (C#)
 填充 XML 树的一种方式是使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 创建一个 <xref:System.Xml.XmlWriter>，然后写入 <xref:System.Xml.XmlWriter>。 XML 树将用写入到 <xref:System.Xml.XmlWriter> 的所有节点进行填充。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
 ms.openlocfilehash: ec275d4782fee047b16fd114c4d22ceb03eecb11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314104"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199209"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>访问修饰符（C# 编程指南）
 所有类型和类型成员都具有可访问性级别，该级别可以控制是否可以从你的程序集或其他程序集中的其他代码中使用它们。 可以使用以下访问修饰符在进行声明时指定类型或成员的可访问性：  

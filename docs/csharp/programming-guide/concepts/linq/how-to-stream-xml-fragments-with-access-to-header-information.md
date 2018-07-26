@@ -3,11 +3,11 @@ title: 如何：通过对标头信息的访问流式处理 XML 片段 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
 ms.openlocfilehash: af8f83ba746292289bb97f591103cc91d6febbad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325027"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199287"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>如何：通过对标头信息的访问流式处理 XML 片段 (C#)
 有时，您必须读取任意大的 XML 文件并在编写您的应用程序时可以预测应用程序的内存需求量。 如果您试图用大 XML 文件填充 XML 树，则内存占用量将与文件大小成正比，也就是说会占用过多内存。 因此，您应改用流处理技术。  

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 44fbe79c9ed7cfd4a79daf6ee9b3d39afd33a910
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 3daab93a97c57521ae6f16ea2498c3f36f30d795
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106020"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937122"
 ---
 # <a name="domain-events-design-and-implementation"></a>域事件：设计和实现
 
@@ -185,7 +185,7 @@ public class OrderingContext : DbContext, IUnitOfWork
         await _mediator.DispatchDomainEventsAsync(this);
 
         // After this line runs, all the changes (from the Command Handler and Domain
-        // event handlers) performed through the DbContext will be commited
+        // event handlers) performed through the DbContext will be committed
         var result = await base.SaveChangesAsync();
     }
 }

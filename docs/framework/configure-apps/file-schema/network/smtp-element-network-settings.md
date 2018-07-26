@@ -11,12 +11,12 @@ ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56912e09d24fc83e93a91cc42b1d96dcc68210f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b6e01906c31316cfa8f148ed96944f309517f95
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741888"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874918"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;smtp&gt;元素 （网络设置）
 配置传递格式、 传递方法和发件人发送电子邮件地址。  
@@ -45,8 +45,8 @@ ms.locfileid: "32741888"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`deliveryFormat`|指定传出电子邮件的传送格式。 可接受的值为 SevenBit 和 International。|  
-|`deliveryMethod`|指定电子邮件的传递方法。 可接受的值是网络、 pickupDirectoryFromIis 和 specifiedPickupDirectory。|  
+|`deliveryFormat`|指定传出电子邮件的传递格式。 可接受的值为 SevenBit 和 International。|  
+|`deliveryMethod`|指定电子邮件的传递方法。 可接受的值是网络、 PickupDirectoryFromIis 和 SpecifiedPickupDirectory。|  
 |`from`|指定发件人的传出电子邮件地址。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -54,7 +54,7 @@ ms.locfileid: "32741888"
 |特性|描述|  
 |---------------|-----------------|  
 |`specifiedPickupDirectory`|配置简单邮件传输协议 (SMTP) 服务器的本地目录。|  
-|`network`|配置外部的 SMTP 服务器的网络选项。|  
+|`network`|配置外部 SMTP 服务器的网络选项。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -69,7 +69,7 @@ ms.locfileid: "32741888"
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
+      <smtp deliveryMethod="Network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
         <network  
           host="localhost"  
           port="25"  

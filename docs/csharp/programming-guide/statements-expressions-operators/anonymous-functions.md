@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 51a3c2e8399fdaae19ebe33f0d9ecc4bfd598799
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e368105c090f95435a4529470bdf1b41346d039c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321842"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936745"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>匿名函数（C# 编程指南）
 匿名函数是一个“内联”语句或表达式，可在需要委托类型的任何地方使用。 可以使用匿名函数来初始化命名委托，或传递命名委托（而不是命名委托类型）作为方法参数。  
@@ -35,8 +35,9 @@ ms.locfileid: "33321842"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [语句、表达式和运算符](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
- [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [委托](../../../csharp/programming-guide/delegates/index.md)  
- [表达式树](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+## <a name="see-also"></a>请参阅
+
+[语句、表达式和运算符](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
+[Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+[委托](../../../csharp/programming-guide/delegates/index.md)  
+[表达式树 (C#)](../concepts/expression-trees/index.md)  

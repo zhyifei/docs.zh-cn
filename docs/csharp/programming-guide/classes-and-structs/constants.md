@@ -6,11 +6,11 @@ helpviewer_keywords:
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
 ms.openlocfilehash: 90423c868ca303f8e94c16f44bc5e0b23615fc17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314052"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199373"
 ---
 # <a name="constants-c-programming-guide"></a>常量（C# 编程指南）
 常量是不可变的值，在编译时是已知的，在程序的生命周期内不会改变。 常量使用 [const](../../../csharp/language-reference/keywords/const.md) 修饰符声明。 仅 C# 内置类型（不包括 <xref:System.Object?displayProperty=nameWithType>）可声明为 `const`。 有关内置类型的列表，请参阅[内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)。 用户定义的类型（包括类、结构和数组）不能为 `const`。 使用 [readonly](../../../csharp/language-reference/keywords/readonly.md) 修饰符创建在运行时一次性（例如在构造函数中）初始化的类、结构或数组，此后不能更改。  

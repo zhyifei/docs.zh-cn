@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
 ms.openlocfilehash: c165f78c53cec0417d39320580b812ff01fef68b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333253"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199297"
 ---
 # <a name="data-transformations-with-linq-c"></a>使用 LINQ 进行数据转换 (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 不只是检索数据。 它也是用于转换数据的强大工具。 通过使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询，可以使用源序列作为输入，并通过多种方式对其进行修改，以创建新的输出序列。 通过排序和分组，你可以修改序列本身，而无需修改这些元素本身。 但也许 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询最强大的功能是创建新类型。 这可以在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中完成。 例如，可以执行下列任务：  

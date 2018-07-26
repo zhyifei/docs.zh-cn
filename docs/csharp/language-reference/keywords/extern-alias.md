@@ -9,11 +9,11 @@ helpviewer_keywords:
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
 ms.openlocfilehash: a2803d09ee64af854cad352f6a158fb84bb6d410
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217384"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960577"
 ---
 # <a name="extern-alias-c-reference"></a>外部别名（C# 参考）
 有时你可能不得不引用具有相同的完全限定类型名称的程序集的两个版本。 例如，可能需要在同一应用程序中使用某程序集的两个或多个版本。 通过使用外部程序集别名，可在别名命名的根级别命名空间内包装每个程序集的命名空间，使其能够在同一文件中使用。  

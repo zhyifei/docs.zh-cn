@@ -8,11 +8,11 @@ helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
 ms.openlocfilehash: 4f57149dd18deb08aa11b72d0a6d5f71b3838bd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266684"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960292"
 ---
 # <a name="partial-type-c-reference"></a>分部（类型）（C# 参考）
 通过分部类型可以定义要拆分到多个文件中的类、结构或接口。  

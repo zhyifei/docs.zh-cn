@@ -2,12 +2,12 @@
 title: 线程处理 (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: 9f1c7071972d8e449bc06054fbe6d70e447b694f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8325132a359c8b65572943bb79c9f02a485eb290
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335830"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874661"
 ---
 # <a name="threading-c"></a>线程处理 (C#)
 通过线程处理，C# 程序可执行并行处理，让你可一次执行多个操作。 例如，可使用线程处理来监视来自用户的输入、执行后台任务和处理并行输入流。  
@@ -41,7 +41,6 @@ ms.locfileid: "33335830"
 |[多线程过程的参数和返回值 (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|描述如何使用多线程的应用程序传递和返回参数。|  
 |[演练：利用 BackgroundWorker 组件进行多线程处理 (C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|演示如何创建简单的多线程应用程序。|  
 |[线程同步 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|描述如何控制线程的交互。|  
-|[线程计时器 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md)|描述如何按固定时间间隔在单独的线程上运行过程。|  
 |[线程池 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|描述如何使用由系统托管的工作线程池。|  
 |[如何：使用线程池 (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|展示线程池中多线程的同步使用。|  
 |[线程处理](../../../../../docs/standard/threading/index.md)|描述如何在 .NET Framework 中实现线程处理。|

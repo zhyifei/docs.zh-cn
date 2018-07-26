@@ -8,11 +8,11 @@ helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
 ms.openlocfilehash: 2ce870e8caa67d780ce603a6f1dbcc7cd303b842
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274214"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960943"
 ---
 # <a name="lock-statement-c-reference"></a>“锁定”语句（C# 参考）
 `lock` 关键字将语句块标记为关键部分，方法是获取给定对象的互斥锁，执行语句，然后释放该锁。 以下示例包含一个 `lock` 语句。  

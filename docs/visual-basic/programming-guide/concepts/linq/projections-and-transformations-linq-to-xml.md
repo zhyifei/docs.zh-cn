@@ -3,11 +3,11 @@ title: 投影和转换 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 297de224-b625-44cf-8c00-186b6189aa0e
 ms.openlocfilehash: 33be64420eb2c42ed1c8b680985609ceca241b4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645221"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199207"
 ---
 # <a name="projections-and-transformations-linq-to-xml-visual-basic"></a>投影和转换 (LINQ to XML) (Visual Basic)
 本节提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 投影和转换的示例。  
@@ -17,8 +17,8 @@ ms.locfileid: "33645221"
 |主题|描述|  
 |-----------|-----------------|  
 |[如何： 使用字典使用 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md)|演示如何将字典转换为 XML，以及如何将 XML 转换为字典。|  
-|[如何： 转换 XML 树 (Visual Basic) 的形状](../../../../visual-basic/programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md)|演示如何转换 XML 文档的形状。|  
-|[如何： 控制投影 (Visual Basic) 的类型](../../../../visual-basic/programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md)|演示如何控制 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询的类型。|  
+|[如何： 转换 XML 树 (Visual Basic 中) 的形状](../../../../visual-basic/programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md)|演示如何转换 XML 文档的形状。|  
+|[如何： 控制投影 (Visual Basic 中) 的类型](../../../../visual-basic/programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md)|演示如何控制 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询的类型。|  
 |[如何： 投影新类型 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-project-a-new-type-linq-to-xml.md)|演示如何从 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询投影用户定义类型的集合。|  
 |[如何： 投影对象图 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-project-an-object-graph.md)|演示如何从 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询投影更复杂的对象图。|  
 |[如何： 投影匿名类型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-project-an-anonymous-type.md)|演示如何从 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询投影匿名对象的集合。|  

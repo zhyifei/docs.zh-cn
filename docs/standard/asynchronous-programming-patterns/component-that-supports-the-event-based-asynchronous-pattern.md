@@ -1,5 +1,5 @@
 ---
-title: 演练：实现支持基于事件的异步模式的组件
+title: 如何：实现支持基于事件的异步模式的组件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 9156a538e306fb8657855a840dd8185cef8794b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5282befe15dc65db5ba320f558c7f22949ae7c2
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579257"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220758"
 ---
-# <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>演练：实现支持基于事件的异步模式的组件
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>如何：实现支持基于事件的异步模式的组件
 若要编写的类有一些可能会带来明显延迟的操作，请考虑按照[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)中的步骤操作，为它实现异步功能。  
   
  本演练展示了如何创建实现基于事件的异步模式的组件。 此组件是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空间中的帮助程序类进行实现，这可确保它在任何应用模型（包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]、控制台应用和 Windows 窗体应用）下都能正常运行。 也可以使用 <xref:System.Windows.Forms.PropertyGrid> 控件和自己的自定义设计器来设计此组件。  
@@ -254,6 +254,4 @@ ms.locfileid: "33579257"
 ## <a name="see-also"></a>请参阅  
  [如何：在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [未构造：Visual Basic 中的多线程处理](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [如何：实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
- [使用基于事件的异步模式进行多线程编程](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)
+ [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  

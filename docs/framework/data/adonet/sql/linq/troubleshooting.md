@@ -2,17 +2,17 @@
 title: 疑难解答
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 24c7ddd42a4e66785921d9c63a6a757d9806503d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364819"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198804"
 ---
 # <a name="troubleshooting"></a>疑难解答
 下面的信息揭示您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序中可能遇到的一些问题，并提供建议以避免这些问题或减少这些问题的影响。  
   
- 其他问题，请参阅[Frequently Asked Questions](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)。  
+ 在解决其他问题[Frequently Asked Questions](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)。  
   
 ## <a name="unsupported-standard-query-operators"></a>不支持的标准查询运算符  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持某些标准查询运算符方法（例如，<xref:System.Linq.Enumerable.ElementAt%2A>）。 因此，编译后的项目仍然可能产生运行时错误。 有关详细信息，请参阅[标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "33364819"
   
 -   您具有对 `System.Core.dll` 和 `System.Data.Linq.dll` 的引用。  
   
--   你有`Imports`(Visual Basic 中) 或`using`(C#) 指令<xref:System.Linq>和<xref:System.Data.Linq>。  
+-   你有`Imports`(Visual Basic) 或`using`(C#) 指令<xref:System.Linq>和<xref:System.Data.Linq>。  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  在调试 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 项目的过程中，可能会遍历某个实体的关系。 这样做会使这些项进入缓存，而 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会检测到这些项的存在。 如果随后试图执行 <xref:System.Data.Linq.Table%601.Attach%2A> 或 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>，或者执行一个生成具有相同键的多个行的类似方法，则会引发 <xref:System.Data.Linq.DuplicateKeyException>。  
@@ -55,12 +55,12 @@ ms.locfileid: "33364819"
  不支持映射到 `[n]text` 和其他 `[n][var]char` 的操作数的串联。 映射到两个不同类型集的字符串的串联会引发异常。 有关详细信息，请参阅[System.String 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)。  
   
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>SQL Server 2000 中的 Skip 和 Take 异常  
- 在对 SQL Server 2000 数据库使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> 或 <xref:System.Linq.Queryable.Take%2A> 时，必须使用标识成员 (<xref:System.Linq.Queryable.Skip%2A>)。 查询必须针对单个表（即，不是联接），或必须为 <xref:System.Linq.Queryable.Distinct%2A>、<xref:System.Linq.Queryable.Except%2A>、<xref:System.Linq.Queryable.Intersect%2A> 或 <xref:System.Linq.Queryable.Union%2A> 操作，且不得包含 <xref:System.Linq.Queryable.Concat%2A> 操作。 有关详细信息，请参阅中的"SQL Server 2000 支持"一节[标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)。  
+ 在对 SQL Server 2000 数据库使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> 或 <xref:System.Linq.Queryable.Take%2A> 时，必须使用标识成员 (<xref:System.Linq.Queryable.Skip%2A>)。 查询必须针对单个表（即，不是联接），或必须为 <xref:System.Linq.Queryable.Distinct%2A>、<xref:System.Linq.Queryable.Except%2A>、<xref:System.Linq.Queryable.Intersect%2A> 或 <xref:System.Linq.Queryable.Union%2A> 操作，且不得包含 <xref:System.Linq.Queryable.Concat%2A> 操作。 有关详细信息，请参阅中的"SQL Server 2000 支持"部分[标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)。  
   
  此要求不适用于 [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)]。  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
- 如果在按 <xref:System.Linq.Enumerable.GroupBy%2A> 表达式进行分组的 `boolean` 查询（如 `group x by (Phone==@phone)`）中有一个列值为 null，则会引发此异常。 因为表达式`boolean`，密钥将被推断`boolean`，而不`nullable``boolean`。 当转换后的比较生成 null 值时，尝试分配`nullable``boolean`到`boolean`，并且会引发异常。  
+ 如果在按 <xref:System.Linq.Enumerable.GroupBy%2A> 表达式进行分组的 `boolean` 查询（如 `group x by (Phone==@phone)`）中有一个列值为 null，则会引发此异常。 因为表达式的类型为 `boolean`，所以会将键的类型推理为 `boolean` 而不是 `nullable` `boolean`。 在转换后的比较生成 null 值时，系统会试图将一个 `nullable` `boolean` 值赋给一个 `boolean`，从而引发该异常。  
   
  若要避免发生这种情况（假定您希望将 null 视为 false），请使用如下方式：  
   

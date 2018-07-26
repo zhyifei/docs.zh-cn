@@ -3,11 +3,11 @@ title: 针对 XPath 用户的 LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
 ms.openlocfilehash: e55e763db2169b704b0b1fcc72e21d9e339b01f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337891"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199116"
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>针对 XPath 用户的 LINQ to XML (C#)
 这组主题演示很多 XPath 表达式及其 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 等效表达式。  

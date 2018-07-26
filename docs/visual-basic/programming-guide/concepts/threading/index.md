@@ -2,12 +2,12 @@
 title: 线程处理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
-ms.openlocfilehash: 6f7290b611d8314391d66397bd5f0f43928b8338
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd1530a2b03c01b0a1cba0ce3ed4e18f2bf29046
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651858"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874828"
 ---
 # <a name="threading-visual-basic"></a>线程处理 (Visual Basic)
 通过线程处理，Visual Basic 程序可以执行并发处理，从而能够一次执行多项操作。 例如，可使用线程处理来监视来自用户的输入、执行后台任务和处理并行输入流。  
@@ -41,7 +41,6 @@ ms.locfileid: "33651858"
 |[多线程过程的参数和返回值 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|描述如何使用多线程的应用程序传递和返回参数。|  
 |[演练：利用 BackgroundWorker 组件进行多线程处理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|演示如何创建简单的多线程应用程序。|  
 |[线程同步 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)|描述如何控制线程的交互。|  
-|[线程计时器 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)|描述如何按固定时间间隔在单独的线程上运行过程。|  
 |[线程池 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|描述如何使用由系统托管的工作线程池。|  
 |[如何：使用线程池 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|展示线程池中多线程的同步使用。|  
 |[线程处理](../../../../standard/threading/index.md)|描述如何在 .NET Framework 中实现线程处理。|

@@ -1,16 +1,17 @@
 ---
 title: F# 语言参考
-description: 'F # 语言功能从查找信息语言令牌、 概念、 类型、 表达式和编译器支持的结构主题对此引用。'
+description: '查找 F # 语言中的功能信息语言标记、 概念、 类型、 表达式和编译器支持的结构的主题对此引用。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 1c25ab4a4936b532a21aed8b2b0202fec1dd7133
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0f0b54ab95e634538fc8511a18aac9d8ee00f26
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937080"
 ---
 # <a name="f-language-reference"></a>F# 语言参考
 
-本部分是对 F # 语言，面向.NET 多范例编程语言的引用。 F# 语言支持函数式、命令式、面向对象的编程模式。
+本部分是对 F # 语言，面向.NET 的多模式编程语言的引用。 F# 语言支持函数式、命令式、面向对象的编程模式。
 
 
 ## <a name="f-tokens"></a>F# 标记
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/04/2018
 |标题|描述|
 |-----|-----------|
 |[值](values/index.md)|介绍值，它是具有特定类型的不可变数量；值可以是整数或浮点数、字符或文本、列表、序列、数组、元组、可区分联合、记录、类类型或函数值。|
-|[基元类型](primitive-types.md)|介绍在 F# 语言中使用的基础基元类型。 它还提供每种类型的相应 .NET 类型和最小和最大值。|
+|[基本类型](basic-types.md)|介绍 F # 语言中使用的基本基本类型。 它还提供每种类型的相应 .NET 类型和最小和最大值。|
 |[Unit 类型](unit-type.md)|介绍 `unit` 类型，它指示缺少某特定值；`unit` 类型只有一个值，不存在任何其他值或者不需要其他值时，该值作为一个占位符。|
 |[字符串](strings.md)|介绍 F# 中的字符串。 `string` 类型将不可变的文本表示为 Unicode 字符的序列。 `string` 是 .NET Framework 中 `System.String` 的别名。|
 |[元组](tuples.md)|介绍元组，它是未命名但有序的值的组合，值的类型可能不同。|

@@ -3,11 +3,11 @@ title: 启用数据源以进行 LINQ 查询 1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
 ms.openlocfilehash: 5b67995f40bc0cb703003aa80b511268f21da8b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339691"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220992"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>启用数据源以进行 LINQ 查询
 可通过多种方式来扩展 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，以便能够在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式中查询任何数据源。 数据源可以是数据结构、Web 服务、文件系统或数据库等。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式使客户端可以轻松地查询能够进行 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的数据源，因为查询的语法和模式没有更改。 可通过以下方式将 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 扩展到这些数据源：  

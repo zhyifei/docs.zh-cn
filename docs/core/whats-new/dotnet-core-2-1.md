@@ -4,12 +4,12 @@ description: 了解 .NET Core 2.1 的新增功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 241ac0195e5edcd17ac67ea7ea0fac159af97414
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 52fe2d47dbca9bc43c2f1274b0d9e535ba9f9abc
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34826927"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874567"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新增功能
 
@@ -218,11 +218,11 @@ dotnet tool install -g dotnetsay
 <xref:System.Net.Http.SocketsHttpHandler> 是 .NET Core 2.1 中的默认实现。 但是，你可以通过调用 <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> 方法配置应用程序以使用较旧的 <xref:System.Net.Http.HttpClientHandler> 类：
 
 ```csharp
-AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", false);
+AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);
 ```
 
 ```vb
-AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", False)
+AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 ```
 
 还可以使用环境变量选择退出使用基于 <xref:System.Net.Http.SocketsHttpHandler> 的套接字实现。 为此，需要将 `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` 设置为 `false` 或 0。

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
-ms.openlocfilehash: 5aa05384cba826f9cdd7a948a31b2860eaad7f18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13e5e821f68e839039569b4ac8a993a20c45ab27
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358072"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37403942"
 ---
 # <a name="return-the-set-union-of-two-sequences"></a>返回两个序列的并集
 使用 <xref:System.Linq.Queryable.Union%2A> 运算符可返回两个序列的并集。  
@@ -21,7 +21,7 @@ ms.locfileid: "33358072"
  [!code-csharp[DLinqQueryExamples#43](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#43)]
  [!code-vb[DLinqQueryExamples#43](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#43)]  
   
- 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，<xref:System.Linq.Queryable.Union%2A> 运算符是为多重集定义的，定义为多重集的无序串联（实际上是 SQL 中的 `UNION ALL` 子句的执行结果）。  
+ 在中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，则<xref:System.Linq.Queryable.Union%2A>运算符定义为多重集为多重集的无序串联 (有效的结果[ `UNION ALL` ](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) SQL 中的子句)。  
   
 ## <a name="see-also"></a>请参阅  
  [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  

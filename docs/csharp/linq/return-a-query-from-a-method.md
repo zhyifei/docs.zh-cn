@@ -3,12 +3,12 @@ title: 从方法中返回查询
 description: 如何返回查询。
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: 6a1d581c46c7b0b2062859fd60701dd25ea54eea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13f0839f712cb76b34c98157a30315787d300109
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274945"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404146"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>如何：从方法中返回查询（C# 编程指南）
 此示例演示如何以返回值和 `out` 参数形式从方法中返回查询。  
@@ -18,7 +18,7 @@ ms.locfileid: "33274945"
 ## <a name="example"></a>示例  
  在下面的示例中，第一个方法以返回值的形式返回查询，第二个方法以 `out` 参数的形式返回查询。 请注意，在这两种情况下，返回的都是查询，而不是查询结果。  
   
- [!code-csharp[csProgGuideLINQ#80](../../../samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
 ## <a name="see-also"></a>请参阅  
- [LINQ 查询表达式](index.md)
+ [语言集成查询 (LINQ)](index.md)

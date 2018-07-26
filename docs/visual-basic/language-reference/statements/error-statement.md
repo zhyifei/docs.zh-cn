@@ -1,5 +1,5 @@
 ---
-title: Error 语句
+title: Error 语句 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.error
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 3ecfe18392de15dc937d90565b49641415dd7e0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603881"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199474"
 ---
 # <a name="error-statement"></a>Error 语句
-模拟出错的匹配项。  
+模拟错误的匹配项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,23 +31,23 @@ Error errornumber
  必须的。 可以是任何有效的错误号。  
   
 ## <a name="remarks"></a>备注  
- `Error`向后兼容性支持语句。 在新代码，尤其是在创建对象时，使用`Err`对象的`Raise`方法以生成运行时错误。  
+ `Error`语句支持向后兼容性。 在新代码，尤其是在创建对象时，使用`Err`对象的`Raise`方法以生成运行时错误。  
   
- 如果`errornumber`定义，`Error`语句后的属性调用错误处理程序`Err`对象分配以下默认值：  
+ 如果`errornumber`定义，则`Error`语句的属性后调用错误处理程序`Err`对象分配以下默认值：  
   
-|属性|值|  
+|属性|“值”|  
 |--------------|-----------|  
-|`Number`|指定为参数的值`Error`语句。 可以是任何有效的错误号。|  
+|`Number`|值指定为参数`Error`语句。 可以是任何有效的错误号。|  
 |`Source`|当前的 Visual Basic 项目的名称。|  
-|`Description`|字符串对应的返回值的表达式`Error`函数为指定`Number`，如果存在此字符串。 如果字符串不存在，`Description`包含零长度字符串 ("")。|  
+|`Description`|字符串表达式的返回值对应`Error`函数为指定`Number`，如果存在此字符串。 如果字符串不存在，`Description`包含一个零长度字符串 ("")。|  
 |`HelpFile`|完全限定的驱动器、 路径和相应的 Visual Basic 帮助文件的文件名。|  
-|`HelpContext`|相应的 Visual Basic 帮助文件对应的错误的上下文 ID`Number`属性。|  
+|`HelpContext`|相应的 Visual Basic 帮助文件上下文 ID 的错误相对应的`Number`属性。|  
 |`LastDLLError`|为零。|  
   
- 如果没有错误处理程序存在，或者如果未启用，创建并从显示一条错误消息`Err`对象属性。  
+ 如果没有错误处理程序存在，或者如果未启用，一条错误消息创建并显示从`Err`对象属性。  
   
 > [!NOTE]
->  某些 Visual Basic 主机应用程序无法创建对象。 请参阅主机应用程序的文档，以确定它是否可以创建类和对象。  
+>  某些 Visual Basic 主机应用程序无法创建对象。 请参阅主机应用程序的文档以确定其是否可以创建类和对象。  
   
 ## <a name="example"></a>示例  
  此示例使用`Error`语句生成错误号 11。  

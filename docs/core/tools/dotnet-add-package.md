@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
 ms.openlocfilehash: 31dda9dbb101238b3a33d8b0d9a17765744480e0
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696294"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244388"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -47,7 +47,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 `PROJECT`
 

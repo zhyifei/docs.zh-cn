@@ -5,11 +5,11 @@ helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
 ms.openlocfilehash: 76c2c27d4575918bb2ed4209a7ff7d2b0517b6f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288614"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960493"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 参数修饰符（C# 参考）
 `out` 关键字通过引用传递参数。 它与 [ref](ref.md) 关键字相似，只不过 `ref` 要求在传递之前初始化变量。 它也类似于 [in](in-parameter-modifier.md) 关键字，只不过 `in` 不允许通过调用方法来修改参数值。 若要使用 `out` 参数，方法定义和调用方法均必须显式使用 `out` 关键字。 例如:  

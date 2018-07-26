@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: d3ce1122c54c14b1baf35641f28d062a2855d335
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: a6397cdc9d1e36423a14158a57ca2c1b3fe9df17
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140263"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874957"
 ---
 # <a name="foreach-in-c-reference"></a>foreach，in（C# 参考）
 
@@ -35,11 +35,11 @@ ms.locfileid: "37140263"
 
 下一个示例使用 `foreach` 语句，其中包含 <xref:System.Span%601?displayProperty=nameWithType> 类型的实例，该实例不实现任何接口：
 
-[!code-csharp[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
+[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
 从 C# 7.3 开始，如果枚举器的 `Current` 属性返回 [引用返回值](../../programming-guide/classes-and-structs/ref-returns.md)（`ref T`，其中 `T` 为集合元素类型），就可以使用 `ref` 或 `ref readonly` 修饰符来声明迭代变量。 下面的示例使用 `ref` 迭代变量来设置 stackalloc 数组中每个项的值。 `ref readonly` 版本循环访问该集合以打印所有值。 `readonly` 声明使用隐式局部变量声明。 隐式变量声明可与 `ref` 或 `ref readonly` 声明配合使用，显式类型化变量声明也一样。
 
-[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
+[!code-csharp-interactive[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
