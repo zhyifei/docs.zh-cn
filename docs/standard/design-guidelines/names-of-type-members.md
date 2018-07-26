@@ -22,12 +22,12 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33575344"
 ---
 # <a name="names-of-type-members"></a>类型成员的名称
-类型由成员组成： 方法、 属性、 事件、 构造函数和字段。 以下各节描述了命名类型成员的准则。  
+类型的成员包括：方法、属性、事件、构造函数和字段。以下各部分介绍各类型成员的命名准则。  
   
 ## <a name="names-of-methods"></a>方法名称  
- 因为方法意味着执行操作，所以设计准则要求方法名称是谓词或谓词短语。 遵循本准则还可以区分方法名称与属性和类型名称，即名词或形容词短语。
+ 由于方法是操作执行的途径，所以设计准则要求方法名称是谓词或谓词短语。通过遵循这一准则，还可将方法名称与属性和类型名称（即名词或形容词短语）区分开来。
   
- **✓ 要**使用谓词或谓词短语作为方法的名称。  
+ **✓ 务必**使用谓词或谓词短语作为方法名称。
   
 ```  
 public class String {  
@@ -38,24 +38,24 @@ public class String {
 ```  
   
 ## <a name="names-of-properties"></a>属性名称  
- 与其他成员不同，属性应为名词短语或形容词名称。 这是因为属性引用数据，并且属性的名称也反映了这一点。 始终将 PascalCasing 用于属性名称。  
+ 与其他成员不同，属性名称须为名词短语或形容词。这是因为属性引用数据，且属性名称反映了这一点。应始终为属性名称使用 PascalCasing。 
   
- **✓ 要**用名词、 名词短语或形容词命名属性。  
+ **✓ 务必**使用名词、名词短语或形容词来命名属性。
   
- **X 不要**具有与"Get"方法的名称匹配的属性，如以下示例所示：  
+ **X 不要**设立与 "Get" 方法名称匹配的属性，如下例所示：
   
  `public string TextWriter { get {...} set {...} }`  
  `public string GetTextWriter(int value) { ... }`  
   
- 此模式通常表明该属性应实际上是一种方法。  
+ 此模式通常表明该属性实际上应是一种方法。
   
- **✓ 要**使用描述集合中项目的复数短语命名集合属性，而不是使用单个短语，后跟“List”或“Collection”。 
+ **✓ 务必**使用用于描述集合中项目的复数形式短语来命名集合属性，而不是使用后跟 "List" 或 "Collection" 的单数形式短语来命名。 
   
- **✓ 要**使用肯定短语命名布尔型属性 (`CanSeek`而不是`CantSeek`)。 或者，还可以使用前缀"Is"，"Can"或"Has"为布尔型属性添加前缀，但仅在它有意义的位置。  
+ **✓ 务必**使用肯定语气的短语（`CanSeek` 而不是 `CantSeek`）来命名布尔型属性。 或者，还可以为布尔型属性使用前缀 "Is"、"Can" 或 "Has"，但仅在适用时使用。   
   
- **✓ 考虑**给予属性与其类型相同的名称。
+ **✓ 考虑**使用属性的类型的名称为属性命名。
   
- 例如，以下属性正确获取并设置名为`Color`的枚举值，因此该属性名为`Color`:  
+ 例如，以下属性正确获取并设置了名为 `Color` 的枚举值，因此该属性名为 `Color`：
   
 ```  
 public enum Color {...}  
@@ -65,42 +65,42 @@ public class Control {
 ```  
   
 ## <a name="names-of-events"></a>事件的名称  
- 事件总是指某个动作，无论是正在发生的动作还是已经发生的动作。 因此，与方法一样，事件用谓词命名，谓词时态用于指示事件引发的时间。 
+ 事件始终是指某个操作，这个操作可能正在发生，也可能已经发生。因此与方法一样，事件用谓词命名，谓词时态用于指示事件引发的时间。 
   
- **✓ 要**使用谓词或谓词短语命名事件。  
+ **✓ 务必**使用谓词或谓词短语来命名事件。 
   
- 示例包括`Clicked`， `Painting`， `DroppedDown`，等等。  
+ 示例：`Clicked`、`Painting`、`DroppedDown` 等。 
   
- **✓ 要**使用现在和过去时态，给予事件名称前后的概念。
+ **✓ 务必**通过使用现在时态和过去时态，让事件名称含有时间先后的概念。
   
- 例如，将窗口关闭之前引发的事件称为`Closing`，而在窗口关闭之后引发的事件被称为`Closed`。  
+ 例如，窗口关闭之前引发的事件称为 `Closing`，窗口关闭之后引发的事件称为 `Closed`。   
   
- **X 不要**使用“Before”或“After”前缀和后缀来指示事件的前后。 使用刚刚描述的当前和过去时态。
+ **X 不要**使用 “Before” 或 “After” 前缀和后缀来指示事件之前或之后。应按前述使用现在时态和过去时态。
   
- **✓ 要**使用“EventHandler”后缀命名事件处理程序（用作事件类型的委托），如以下示例所示： 
+ **✓ 务必**使用 “EventHandler” 后缀来命名事件处理程序（委托，用作事件类型），如以下示例所示：
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   
- **✓ 要**在事件处理程序中使用两个名为`sender`和`e`的参数。  
+ **✓ 务必**在事件处理程序中使用两个名为 `sender` 和 `e` 的参数。 
   
- sender参数表示引发事件的对象。 sender参数的类型通常是`object`，但也可使用更具体的类型。  
+ sender 参数表示引发事件的对象。sender 参数的类型通常是 `object`，且可能会使用更具体的类型。   
   
- **✓ 要**使用"EventArgs"后缀命名事件参数类。  
+ **✓ 务必**使用“EventArgs”后缀来命名事件参数类。  
   
 ## <a name="names-of-fields"></a>字段的名称  
- 字段命名准则适用于静态公共字段和受保护字段。 准则不包含内部和私有字段，[成员设计准则](../../../docs/standard/design-guidelines/member.md)不允许使用公共或受保护的实例字段。
+ 字段命名准则适用于静态公共字段和受保护字段。准则不适用于内部字段和专用字段，[成员设计准则](../../../docs/standard/design-guidelines/member.md)不允许使用公共或受保护的实例字段。
   
- **✓ 要**在字段名称中使用 PascalCasing。  
+ **✓ 务必**在字段名称中使用 PascalCasing。
   
- **✓ 要**使用名词、 名词短语或形容词命名字段。  
+ **✓ 务必**使用名词、名词短语或形容词来命名字段。
   
- **X 不要**在字段名称中使用前缀。  
+ **X 不要**在字段名称中使用前缀。 
   
- 例如，不要使用"g_"或"s_"来指示静态字段。  
+ 例如，不要使用 "g_" 或 "s_" 来指示静态字段。 
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
   
- *由 Pearson Education, Inc 许可，转载自[Framework 设计准则： 可重用.NET 库的约定、 惯用法和模式 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者 Krzysztof Cwalina 和 Brad Abrams，由Addison Wesley Professional 于 2008 年 10 月 22 日发布，作为 Microsoft Windows 开发系列的一部分。
+ *经 Pearson Education, Inc 授权，转载自《框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版》(https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
