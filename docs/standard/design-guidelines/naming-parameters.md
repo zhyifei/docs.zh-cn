@@ -16,26 +16,26 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33570481"
 ---
 # <a name="naming-parameters"></a>命名参数
-除了明显的可读性的原因之外，遵循参数名称的准则非常重要，因为当可视化设计工具提供智能感知和类浏览功能时，参数会显示在文档和设计器中。
+除了提升可读性这一明显目的外，遵循参数名称准则的一个重要原因是文档和设计器（可视化设计工具在提供 Intellisense 和类浏览功能时）中会显示参数。
   
- **✓ 要**参数名称中使用 camelCasing。  
+ **✓ 务必**在参数名称中使用 camelCasing。 
   
- **✓ 要**使用描述性的参数名称。  
+ **✓ 务必**使用描述性参数名称。 
   
- **✓ 考虑**使用基于参数含义的名称，而不是参数类型的名称。  
+ **✓ 考虑**使用基于参数含义而非参数类型的名称。 
   
 ### <a name="naming-operator-overload-parameters"></a>命名运算符重载参数  
- **✓ 要**如果参数没有意义，请对`left`和`right`使用二进制运算符重载参数名称。  
+ **✓ 务必执行**：如果参数没有意义，请为二元运算符重载参数名称使用 `left` 和 `right`。 
   
- **✓ 要**如果参数没有意义，请将`value`用于一元运算符重载参数名称。
+ **✓ 务必执行**：如果参数没有意义，请为一元运算符重载参数名称使用 `value`。
   
- **✓ 考虑**为运算符的重载参数使用有意义的名称，如果这样做会很有意义。  
+ **✓ 考虑**为运算符重载参数使用有意义的名称（如果这样做很有用的话）。 
   
- **X 不要**对运算符重载参数名称使用缩写或数字索引。
+ **X 不要**在运算符重载参数名称中使用缩写形式或数值索引。
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
   
- *由 Pearson Education, Inc 许可，转载自[Framework 设计准则： 可重用.NET 库的约定、 惯用法和模式 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者 Krzysztof Cwalina 和 Brad Abrams，由Addison Wesley Professional 于 2008 年 10 月 22 日发布，作为 Microsoft Windows 开发系列的一部分。
+ *经 Pearson Education, Inc 授权，转载自《框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版》(https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
