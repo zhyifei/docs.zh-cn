@@ -4,12 +4,12 @@ description: 部署 .NET Core 应用程序。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 27f9260166f7e7899501e1798333b982fb728152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212670"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792421"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 应用程序部署
 
@@ -41,7 +41,7 @@ ms.locfileid: "33212670"
 
 ## <a name="self-contained-deployments-scd"></a>独立部署 (SCD)
 
-对于独立部署，可以部署应用和所需的第三方依赖项以及生成应用所使用的 .NET Core 版本。 创建 SCD 不包括各种平台上的 [.NET Core 本机依赖项](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)，因此运行应用前这些依赖项必须已存在。
+对于独立部署，可以部署应用和所需的第三方依赖项以及生成应用所使用的 .NET Core 版本。 创建 SCD 不包括各种平台上的 [.NET Core 本机依赖项](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)，因此运行应用前这些依赖项必须已存在。 有关在运行时进行版本绑定的详细信息，请参阅有关 [.NET Core 中的版本绑定](../versions/selection.md)的文章
 
 FDD 和 SCD 部署使用单独的主机可执行文件，使你可以使用发布者签名为 SCD 签署主机可执行文件。
 

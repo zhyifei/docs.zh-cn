@@ -3,17 +3,17 @@ title: 实现具有恢复能力的应用程序
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 实现具有恢复能力的应用程序
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: ddb0f54b15735b9192d2088495947588f59829a0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106046"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875114"
 ---
 # <a name="implementing-resilient-applications"></a>实现具有恢复能力的应用程序
 
-基于微服务和云的应用程序必须包容最终必然会发生的部分故障。需要设计应用程序，使其可从这些部分故障中恢复。
+微服务和基于云的应用程序必须允许最终必然会发生的部分故障。需要设计应用程序，使其可从这些部分故障中恢复。
 
 恢复能力是指从故障中恢复并继续工作的能力。 这并不是指避免故障，而是接受会发生故障这一事实，并以能够避免停机或数据丢失的方式对故障做出响应。 恢复的目标是使应用程序在发生故障后回到完全正常运行的状态。
 
