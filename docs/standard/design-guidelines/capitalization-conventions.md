@@ -19,34 +19,34 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33575279"
 ---
 # <a name="capitalization-conventions"></a>大小写约定
-本章中的准则列出了一种简单方法，当统一应用此用例时，可以使类型、成员和参数的标识符易于阅读。
+本章中的准则列出了一种针对用例的简单方法，当统一应用此方法时，可以使类型、成员和参数的标识符易于阅读。
   
 ## <a name="capitalization-rules-for-identifiers"></a>标识符的大小写规则  
-若要区分标识符中的单词，请将标识符中每个单词的首字母大写。 不要使用下划线来区分单词或标识符中的任何位置。 根据标识符的使用，有两种适当的方法来标识标识符：  
+若要区分标识符中的单词，请将标识符中每个单词的首字母大写。不要使用下划线来区分单词，也不要为此在标识符中的任何位置使用下划线。根据标识符的使用情况，可以通过两种适当的方法将标识符大写：
   
 - PascalCasing  
   
-- camelcasing
+- camelCasing
   
  PascalCasing 约定用于除参数名称之外的所有标识符，将每个单词的第一个字符大写（包括超过两个字母的首字母缩写），如以下示例所示： 
   
  `PropertyDescriptor`  
  `HtmlTag`  
   
- 一个特殊情况是针对两个字母的首字母缩略词，其中两个字母都大写，如下面的标识符所示：
+ 这里有一种特殊情况，即遇到两个字母的首字母缩略词时，两个字母都要大写，如下面的标识符所示：
   
  `IOStream`  
   
- camelCasing 约定仅用于参数名称，将除第一个单词之外的每个单词的第一个字符大写，如以下示例所示。 该示例还显示，以 camelCasing 标识符开始的双字母缩写词都是小写的。
+ camelCasing 约定仅用于参数名称，将除第一个单词之外的每个单词的第一个字符大写，如以下示例所示。该示例还显示，以 camelCasing 标识符开始的双字母缩写词都是小写的。
   
   
  `propertyDescriptor`  
  `ioStream`  
  `htmlTag`  
   
- **✓ 要**将 PascalCasing 用于包含多个单词的所有的公共成员、 类型和命名空间名称。  
+ **✓ 请**将 PascalCasing 用于包含多个单词的所有公共成员、类型和命名空间名称。   
   
- **✓ 要**将 camelCasing 用于参数名称。  
+**✓ 请**将 camelCasing 用于参数名称。 
   
  下表描述了不同类型的标识符的大小写规则。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "33575279"
   
  **X 不要**将所谓封闭形式的复合词中的每个单词大写。
   
- 这些是书写为单个单词的复合词，例如 endpoint。 为了符合大小写准则，将封闭形式的复合词视为单个词。 使用该字典确定复合词是否以封闭形式书写。
+ 下面是以单个单词形式拼写的复合词，例如 endpoint。根据大小写准则，请将封闭形式的复合词视为单个单词。请使用最新字典确定复合词是否以封闭形式拼写。
   
 |Pascal|Camel|Not|  
 |------------|-----------|---------|  
@@ -98,13 +98,13 @@ ms.locfileid: "33575279"
 |`Writable`|`writable`|`Writeable`|  
   
 ## <a name="case-sensitivity"></a>区分大小写  
- 可以在 CLR 上运行的语言不要求支持区分大小写，尽管有些语言可以支持。 即使您的语言支持，其他可能访问您的框架的语言可能不支持。 因此，任何可从外部访问的API都不能仅依赖于大小写来区分同一上下文中的两个名称。
+ 可以在 CLR 上运行的语言不要求区分大小写，尽管有些语言要求。即使你的语言支持该功能，其他可能访问你的框架的语言也可能不支持。因此，任何可从外部访问的 API 都不能仅依赖于大小写来区分同一上下文中的两个名称。
   
- **X 不要**假定所有编程语言都区分大小写。 它们不是。 名称不能通过大小写来区分。  
+ **X 不要**假定所有编程语言都区分大小写。它们不是这样的。名称不能仅通过大小写来区分。 
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*
   
- *由 Pearson Education, Inc 许可，转载自[Framework 设计准则： 可重用.NET 库的约定、 惯用法和模式 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者 Krzysztof Cwalina 和 Brad Abrams，由Addison Wesley Professional 于 2008 年 10 月 22 日发布，作为 Microsoft Windows 开发系列的一部分。*
+ *由 Pearson Education, Inc 许可，转载自 [Framework 设计准则：可重用.NET 库的约定、惯用法和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日作为 Microsoft Windows 开发系列的一部分发布。*
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
