@@ -1,76 +1,113 @@
 ---
 title: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
-description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 简介
+description: 本指南提供了使用 ASP.NET Core 和 Azure 生成单片式 Web 应用的端到端指导。
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 085ec85002fc1661d6e20b3c3f11cf4b6ea2161b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: e2d2545108b55043c322baffbd609b2422d2743b
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37103914"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936979"
 ---
-# <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a><span data-ttu-id="3d6dd-103">使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序</span><span class="sxs-lookup"><span data-stu-id="3d6dd-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span>
+# <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a><span data-ttu-id="57598-103">使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序</span><span class="sxs-lookup"><span data-stu-id="57598-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span>
 
-![封面图像](./media/cover.jpg)
+![封面图像](./media/cover.png)
 
+<span data-ttu-id="57598-105">发布者</span><span class="sxs-lookup"><span data-stu-id="57598-105">PUBLISHED BY</span></span>
 
-<span data-ttu-id="3d6dd-105">相比传统 .NET 开发，.NET Core 和 ASP.NET Core 具有一系列优势。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-105">.NET Core and ASP.NET Core offer several advantages over traditional .NET development.</span></span> <span data-ttu-id="3d6dd-106">如果以下所有方面或一些方面对于你的应用程序成功至关重要，应将 .NET Core 用于服务器应用程序：</span><span class="sxs-lookup"><span data-stu-id="3d6dd-106">You should use .NET Core for your server applications if some or all of the following are important to your application's success:</span></span>
+<span data-ttu-id="57598-106">Microsoft 开发人员部门、.NET 和 Visual Studio 产品团队</span><span class="sxs-lookup"><span data-stu-id="57598-106">Microsoft Developer Division, .NET, and Visual Studio product teams</span></span>
 
--   <span data-ttu-id="3d6dd-107">跨平台支持</span><span class="sxs-lookup"><span data-stu-id="3d6dd-107">Cross-platform support</span></span>
+<span data-ttu-id="57598-107">Microsoft Corporation 的一个部门</span><span class="sxs-lookup"><span data-stu-id="57598-107">A division of Microsoft Corporation</span></span>
 
--   <span data-ttu-id="3d6dd-108">微服务的使用</span><span class="sxs-lookup"><span data-stu-id="3d6dd-108">Use of microservices</span></span>
+<span data-ttu-id="57598-108">One Microsoft Way</span><span class="sxs-lookup"><span data-stu-id="57598-108">One Microsoft Way</span></span>
 
--   <span data-ttu-id="3d6dd-109">Docker 容器的使用</span><span class="sxs-lookup"><span data-stu-id="3d6dd-109">Use of Docker containers</span></span>
+<span data-ttu-id="57598-109">Redmond, Washington 98052-6399</span><span class="sxs-lookup"><span data-stu-id="57598-109">Redmond, Washington 98052-6399</span></span>
 
--   <span data-ttu-id="3d6dd-110">高性能和可伸缩性要求</span><span class="sxs-lookup"><span data-stu-id="3d6dd-110">High performance and scalability requirements</span></span>
+<span data-ttu-id="57598-110">版权所有 © 2018 Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="57598-110">Copyright © 2018 by Microsoft Corporation</span></span>
 
--   <span data-ttu-id="3d6dd-111">在同一服务器上通过应用程序对 .NET 版本进行并行版本控制</span><span class="sxs-lookup"><span data-stu-id="3d6dd-111">Side-by-side versioning of .NET versions by application on the same server</span></span>
+<span data-ttu-id="57598-111">保留所有权利。</span><span class="sxs-lookup"><span data-stu-id="57598-111">All rights reserved.</span></span> <span data-ttu-id="57598-112">未经发布者书面许可，不得以任何形式或任何方式复制或传播本书中的任何内容。</span><span class="sxs-lookup"><span data-stu-id="57598-112">No part of the contents of this book may be reproduced or transmitted in any form or by any means without the written permission of the publisher.</span></span>
 
-<span data-ttu-id="3d6dd-112">传统 .NET 应用程序虽然支持以上要求，但是 ASP.NET Core 和 .NET Core 已经过优化，可为以上方案提供完善的支持。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-112">Traditional .NET applications can and do support these requirements, but ASP.NET Core and .NET Core have been optimized to offer improved support for the above scenarios.</span></span>
+<span data-ttu-id="57598-113">本书“按原样”提供，表达作者的观点和看法。</span><span class="sxs-lookup"><span data-stu-id="57598-113">This book is provided “as-is” and expresses the author’s views and opinions.</span></span> <span data-ttu-id="57598-114">本书中表达的观点、看法和信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。</span><span class="sxs-lookup"><span data-stu-id="57598-114">The views, opinions and information expressed in this book, including URL and other Internet website references, may change without notice.</span></span>
 
-<span data-ttu-id="3d6dd-113">越来越多的组织选择使用 Microsoft Azure 等服务，在云中托管 web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-113">More and more organizations are choosing to host their web applications in the cloud using services like Microsoft Azure.</span></span> <span data-ttu-id="3d6dd-114">如果以下方面对你的应用程序或组织至关重要，应该考虑在云中托管应用程序：</span><span class="sxs-lookup"><span data-stu-id="3d6dd-114">You should consider hosting your application in the cloud if the following are important to your application or organization:</span></span>
+<span data-ttu-id="57598-115">本书中提及的一些示例仅用于说明，纯属虚构。</span><span class="sxs-lookup"><span data-stu-id="57598-115">Some examples depicted herein are provided for illustration only and are fictitious.</span></span> <span data-ttu-id="57598-116">不存在任何实际关联或联系，请勿妄加推断。</span><span class="sxs-lookup"><span data-stu-id="57598-116">No real association or connection is intended or should be inferred.</span></span>
 
--   <span data-ttu-id="3d6dd-115">减少对数据中心的成本投入（硬件、软件、空间、实用工具等）</span><span class="sxs-lookup"><span data-stu-id="3d6dd-115">Reduced investment in data center costs (hardware, software, space, utilities, etc)</span></span>
+<span data-ttu-id="57598-117">Microsoft 和 https://www.microsoft.com 上“商标”网页列出的商标是 Microsoft 集团公司的商标。</span><span class="sxs-lookup"><span data-stu-id="57598-117">Microsoft and the trademarks listed at https://www.microsoft.com on the “Trademarks” webpage are trademarks of the Microsoft group of companies.</span></span>
 
--   <span data-ttu-id="3d6dd-116">灵活的定价（基于使用情况付费，无需为空闲容量付费）</span><span class="sxs-lookup"><span data-stu-id="3d6dd-116">Flexible pricing (pay based on usage, not for idle capacity)</span></span>
+<span data-ttu-id="57598-118">Mac 和 macOS 是 Apple Inc. 的商标</span><span class="sxs-lookup"><span data-stu-id="57598-118">Mac and macOS are trademarks of Apple Inc.</span></span>
 
--   <span data-ttu-id="3d6dd-117">高可靠性</span><span class="sxs-lookup"><span data-stu-id="3d6dd-117">Extreme reliability</span></span>
+<span data-ttu-id="57598-119">Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。</span><span class="sxs-lookup"><span data-stu-id="57598-119">The Docker whale logo is a registered trademark of Docker, Inc. Used by permission.</span></span>
 
--   <span data-ttu-id="3d6dd-118">改善应用移动性；可轻松更改部署应用的位置和方式</span><span class="sxs-lookup"><span data-stu-id="3d6dd-118">Improved app mobility; easily change where and how your app is deployed</span></span>
+<span data-ttu-id="57598-120">所有其他标记和徽标均为其各自所有者的财产。</span><span class="sxs-lookup"><span data-stu-id="57598-120">All other marks and logos are property of their respective owners.</span></span>
 
--   <span data-ttu-id="3d6dd-119">灵活的容量；基于实际需要增加或减少</span><span class="sxs-lookup"><span data-stu-id="3d6dd-119">Flexible capacity; scale up or down based on actual needs</span></span>
+<span data-ttu-id="57598-121">作者:</span><span class="sxs-lookup"><span data-stu-id="57598-121">Author:</span></span>
 
-<span data-ttu-id="3d6dd-120">使用 Microsoft Azure 中托管的 ASP.NET Core 生成 web 应用程序，与传统替代方法相比，这能提供许多竞争优势。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-120">Building web applications with ASP.NET Core, hosted in Microsoft Azure, offers numerous competitive advantages over traditional alternatives.</span></span> <span data-ttu-id="3d6dd-121">ASP.NET Core 针对新式 web 应用程序开发做法和云托管方案进行了优化。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-121">ASP.NET Core is optimized for modern web application development practices and cloud hosting scenarios.</span></span> <span data-ttu-id="3d6dd-122">本指南介绍如何构建 ASP.NET Core 应用程序，充分利用这些功能。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-122">In this guide, you will learn how to architect your ASP.NET Core applications to best take advantage of these capabilities.</span></span>
+> <span data-ttu-id="57598-122">Steve Smith (@ardalis)，[Ardalis.com 软件体系结构顾问](https://ardalis.com)</span><span class="sxs-lookup"><span data-stu-id="57598-122">**Steve Smith (@ardalis)**, Software Architecture Advisor, [Ardalis.com](https://ardalis.com)</span></span>
 
-## <a name="purpose"></a><span data-ttu-id="3d6dd-123">目标</span><span class="sxs-lookup"><span data-stu-id="3d6dd-123">Purpose</span></span>
+<span data-ttu-id="57598-123">编辑：</span><span class="sxs-lookup"><span data-stu-id="57598-123">Editors:</span></span>
 
-<span data-ttu-id="3d6dd-124">本指南提供了使用 ASP.NET Core 和 Azure 构建单片 web 应用程序的端到端指导。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-124">This guide provides end-to-end guidance on building monolithic web applications using ASP.NET Core and Azure.</span></span>
+> <span data-ttu-id="57598-124">Maira Wenzel</span><span class="sxs-lookup"><span data-stu-id="57598-124">**Maira Wenzel**</span></span>
 
-<span data-ttu-id="3d6dd-125">本指南是对“使用 .NET 构建和开发容器化和基于微服务的应用程序”的补充，偏重于 Docker、微服务和托管企业应用程序的容器部署。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-125">This guide is complementary to the "*Architecting and Developing Containerized and Microservice-based Applications with .NET*" which focuses more on Docker, Microservices, and Deployment of Containers to host enterprise applications.</span></span>
+## <a name="introduction"></a><span data-ttu-id="57598-125">介绍</span><span class="sxs-lookup"><span data-stu-id="57598-125">Introduction</span></span>
 
-> ### <a name="architecting-and-developing-containerized-microservice-based-apps-in-net"></a><span data-ttu-id="3d6dd-126">在 .NET 中构建和开发基于微服务的容器化应用</span><span class="sxs-lookup"><span data-stu-id="3d6dd-126">Architecting and Developing Containerized Microservice Based Apps in .NET</span></span>
-> - <span data-ttu-id="3d6dd-127">电子书</span><span class="sxs-lookup"><span data-stu-id="3d6dd-127">**e-book**</span></span>  
-> <http://aka.ms/MicroservicesEbook>
-> - <span data-ttu-id="3d6dd-128">示例应用程序</span><span class="sxs-lookup"><span data-stu-id="3d6dd-128">**Sample Application**</span></span>  
-> <http://aka.ms/microservicesarchitecture>
+<span data-ttu-id="57598-126">相比传统 .NET 开发，.NET Core 和 ASP.NET Core 具有一系列优势。</span><span class="sxs-lookup"><span data-stu-id="57598-126">.NET Core and ASP.NET Core offer several advantages over traditional .NET development.</span></span> <span data-ttu-id="57598-127">如果以下所有方面或一些方面对于你的应用程序成功至关重要，应将 .NET Core 用于服务器应用程序：</span><span class="sxs-lookup"><span data-stu-id="57598-127">You should use .NET Core for your server applications if some or all of the following are important to your application's success:</span></span>
 
-## <a name="who-should-use-this-guide"></a><span data-ttu-id="3d6dd-129">本指南的目标读者</span><span class="sxs-lookup"><span data-stu-id="3d6dd-129">Who should use this guide</span></span>
+- <span data-ttu-id="57598-128">跨平台支持。</span><span class="sxs-lookup"><span data-stu-id="57598-128">Cross-platform support.</span></span>
 
-<span data-ttu-id="3d6dd-130">本指南的受众主要是对使用云中的 Microsoft 技术和服务生成新式 web 应用程序感兴趣的开发者、开发潜在顾客和架构师。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-130">The audience for this guide is mainly developers, development leads, and architects who are interested in building modern web applications using Microsoft technologies and services in the cloud.</span></span>
+- <span data-ttu-id="57598-129">微服务的使用。</span><span class="sxs-lookup"><span data-stu-id="57598-129">Use of microservices.</span></span>
 
-<span data-ttu-id="3d6dd-131">次要受众是技术决策制定者，他们已经熟悉 ASP.NET 和/或 Azure，并想要了解是否需要为新项目或现有项目升级到 ASP.NET Core。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-131">A secondary audience is technical decision makers who are already familiar ASP.NET and/or Azure and are looking for information on whether it makes sense to upgrade to ASP.NET Core for new or existing projects.</span></span>
+- <span data-ttu-id="57598-130">Docker 容器的使用。</span><span class="sxs-lookup"><span data-stu-id="57598-130">Use of Docker containers.</span></span>
 
-## <a name="how-you-can-use-this-guide"></a><span data-ttu-id="3d6dd-132">如何使用本指南</span><span class="sxs-lookup"><span data-stu-id="3d6dd-132">How you can use this guide</span></span>
+- <span data-ttu-id="57598-131">高性能和可伸缩性需求。</span><span class="sxs-lookup"><span data-stu-id="57598-131">High performance and scalability requirements.</span></span>
 
-<span data-ttu-id="3d6dd-133">本指南已精简为较小的文档，侧重介绍如何使用新式 .NET 技术和 Windows Azure 生成 web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-133">This guide has been condensed into a relatively small document that focuses on building web applications with modern .NET technologies and Windows Azure.</span></span> <span data-ttu-id="3d6dd-134">可通读本指南，了解有关此类应用程序及其技术注意事项的基本信息。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-134">As such, it can be read in its entirety to provide a foundation of understanding such applications and their technical considerations.</span></span> <span data-ttu-id="3d6dd-135">本指南及其示例应用程序还可作为操作起点或参考。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-135">The guide, along with its sample application, can also serve as a starting point or reference.</span></span> <span data-ttu-id="3d6dd-136">可将相关示例应用程序作为你自己的应用程序的模板，或者了解如何组织应用程序的组件部件。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-136">Use the associated sample application as a template for your own applications, or to see how you might organize your application's component parts.</span></span> <span data-ttu-id="3d6dd-137">在对自己的应用程序进行选择权衡时，请参考指南的原则、体系结构的范围以及技术选项和决策注意事项。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-137">Refer back to the guide's principles and coverage of architecture and technology options and decision considerations when weighing these choices for your own application.</span></span>
+- <span data-ttu-id="57598-132">在同一服务器上通过应用程序对 .NET 版本进行并行版本控制。</span><span class="sxs-lookup"><span data-stu-id="57598-132">Side-by-side versioning of .NET versions by application on the same server.</span></span>
 
-<span data-ttu-id="3d6dd-138">请将本指南转发到团队中，这有助于确保对这些注意事项和机会的共同理解。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-138">Feel free to forward this guide to your team to help ensure a common understanding of these considerations and opportunities.</span></span> <span data-ttu-id="3d6dd-139">确保每个人使用共同的术语和基础原则工作，这有助于构建模式和做法的一致应用。</span><span class="sxs-lookup"><span data-stu-id="3d6dd-139">Having everybody working from a common set of terminology and underlying principles will help ensure consistent application of architectural patterns and practices.</span></span>
+<span data-ttu-id="57598-133">传统 .NET 应用程序虽然支持以上要求，但是 ASP.NET Core 和 .NET Core 已经过优化，可为以上方案提供完善的支持。</span><span class="sxs-lookup"><span data-stu-id="57598-133">Traditional .NET applications can and do support these requirements, but ASP.NET Core and .NET Core have been optimized to offer improved support for the above scenarios.</span></span>
 
-## <a name="references"></a><span data-ttu-id="3d6dd-140">参考资料</span><span class="sxs-lookup"><span data-stu-id="3d6dd-140">References</span></span>
-- <span data-ttu-id="3d6dd-141">**为服务器应用选择 .NET Core 或 .NET Framework**</span><span class="sxs-lookup"><span data-stu-id="3d6dd-141">**Choosing between .NET Core and .NET Framework for server apps**</span></span>  
-<https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+<span data-ttu-id="57598-134">越来越多的组织选择使用 Microsoft Azure 等服务，在云中托管 web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="57598-134">More and more organizations are choosing to host their web applications in the cloud using services like Microsoft Azure.</span></span> <span data-ttu-id="57598-135">如果以下方面对你的应用程序或组织至关重要，应该考虑在云中托管应用程序：</span><span class="sxs-lookup"><span data-stu-id="57598-135">You should consider hosting your application in the cloud if the following are important to your application or organization:</span></span>
+
+- <span data-ttu-id="57598-136">减少对数据中心的成本投入（硬件、软件、空间、实用工具等）</span><span class="sxs-lookup"><span data-stu-id="57598-136">Reduced investment in data center costs (hardware, software, space, utilities, etc.)</span></span>
+
+- <span data-ttu-id="57598-137">灵活的定价（基于使用情况付费，无需为空闲容量付费）。</span><span class="sxs-lookup"><span data-stu-id="57598-137">Flexible pricing (pay based on usage, not for idle capacity).</span></span>
+
+- <span data-ttu-id="57598-138">高可靠性。</span><span class="sxs-lookup"><span data-stu-id="57598-138">Extreme reliability.</span></span>
+
+- <span data-ttu-id="57598-139">改善应用移动性；可轻松更改部署应用的位置和方式。</span><span class="sxs-lookup"><span data-stu-id="57598-139">Improved app mobility; easily change where and how your app is deployed.</span></span>
+
+- <span data-ttu-id="57598-140">灵活的容量；基于实际需要增加或减少。</span><span class="sxs-lookup"><span data-stu-id="57598-140">Flexible capacity; scale up or down based on actual needs.</span></span>
+
+<span data-ttu-id="57598-141">使用 Azure 中托管的 ASP.NET Core 生成 Web 应用，与传统替代方法相比，这能提供许多竞争优势。</span><span class="sxs-lookup"><span data-stu-id="57598-141">Building web applications with ASP.NET Core, hosted in Azure, offers many competitive advantages over traditional alternatives.</span></span> <span data-ttu-id="57598-142">ASP.NET Core 针对新式 web 应用程序开发做法和云托管方案进行了优化。</span><span class="sxs-lookup"><span data-stu-id="57598-142">ASP.NET Core is optimized for modern web application development practices and cloud hosting scenarios.</span></span> <span data-ttu-id="57598-143">本指南介绍如何构建 ASP.NET Core 应用程序以充分利用这些功能。</span><span class="sxs-lookup"><span data-stu-id="57598-143">In this guide, you'll learn how to architect your ASP.NET Core applications to best take advantage of these capabilities.</span></span>
+
+## <a name="purpose"></a><span data-ttu-id="57598-144">目的</span><span class="sxs-lookup"><span data-stu-id="57598-144">Purpose</span></span>
+
+<span data-ttu-id="57598-145">本指南提供了使用 ASP.NET Core 和 Azure 构建单片 web 应用程序的端到端指导。</span><span class="sxs-lookup"><span data-stu-id="57598-145">This guide provides end-to-end guidance on building monolithic web applications using ASP.NET Core and Azure.</span></span>
+
+<span data-ttu-id="57598-146">本指南是[“_.NET 微服务 - 容器化 .NET 应用程序体系结构_”](../microservices-architecture/index.md)的补充，该文章更侧重于介绍 Docker、微服务和部署容器以托管企业应用程序。</span><span class="sxs-lookup"><span data-stu-id="57598-146">This guide is complementary to the ["_.NET Microservices. Architecture for Containerized .NET Applications_"](../microservices-architecture/index.md) which focuses more on Docker, Microservices, and Deployment of Containers to host enterprise applications.</span></span>
+
+### <a name="net-microservices-architecture-for-containerized-net-applications"></a><span data-ttu-id="57598-147">.NET 微服务。</span><span class="sxs-lookup"><span data-stu-id="57598-147">.NET Microservices.</span></span> <span data-ttu-id="57598-148">适用于容器化 .NET 应用程序的体系结构</span><span class="sxs-lookup"><span data-stu-id="57598-148">Architecture for Containerized .NET Applications</span></span>
+
+- <span data-ttu-id="57598-149">电子书</span><span class="sxs-lookup"><span data-stu-id="57598-149">**e-book**</span></span>  
+  <https://aka.ms/MicroservicesEbook>
+- <span data-ttu-id="57598-150">示例应用程序</span><span class="sxs-lookup"><span data-stu-id="57598-150">**Sample Application**</span></span>  
+  <https://aka.ms/microservicesarchitecture>
+
+## <a name="who-should-use-this-guide"></a><span data-ttu-id="57598-151">本指南的目标读者</span><span class="sxs-lookup"><span data-stu-id="57598-151">Who should use this guide</span></span>
+
+<span data-ttu-id="57598-152">本指南的受众主要是对使用云中的 Microsoft 技术和服务生成新式 web 应用程序感兴趣的开发者、开发潜在顾客和架构师。</span><span class="sxs-lookup"><span data-stu-id="57598-152">The audience for this guide is mainly developers, development leads, and architects who are interested in building modern web applications using Microsoft technologies and services in the cloud.</span></span>
+
+<span data-ttu-id="57598-153">次要受众是技术决策者，他们已经熟悉 ASP.NET 或 Azure，并想要了解是否需要为新项目或现有项目升级到 ASP.NET Core。</span><span class="sxs-lookup"><span data-stu-id="57598-153">A secondary audience is technical decision makers who are already familiar ASP.NET or Azure and are looking for information on whether it makes sense to upgrade to ASP.NET Core for new or existing projects.</span></span>
+
+## <a name="how-you-can-use-this-guide"></a><span data-ttu-id="57598-154">如何使用本指南</span><span class="sxs-lookup"><span data-stu-id="57598-154">How you can use this guide</span></span>
+
+<span data-ttu-id="57598-155">本指南已精简为较小的文档，侧重介绍如何使用新式 .NET 技术和 Windows Azure 生成 web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="57598-155">This guide has been condensed into a relatively small document that focuses on building web applications with modern .NET technologies and Windows Azure.</span></span> <span data-ttu-id="57598-156">可通读本指南，了解有关此类应用程序及其技术注意事项的基本信息。</span><span class="sxs-lookup"><span data-stu-id="57598-156">As such, it can be read in its entirety to provide a foundation of understanding such applications and their technical considerations.</span></span> <span data-ttu-id="57598-157">本指南及其示例应用程序还可作为操作起点或参考。</span><span class="sxs-lookup"><span data-stu-id="57598-157">The guide, along with its sample application, can also serve as a starting point or reference.</span></span> <span data-ttu-id="57598-158">可将相关示例应用程序作为你自己的应用程序的模板，或者了解如何组织应用程序的组件部件。</span><span class="sxs-lookup"><span data-stu-id="57598-158">Use the associated sample application as a template for your own applications, or to see how you might organize your application's component parts.</span></span> <span data-ttu-id="57598-159">在对自己的应用程序进行选择权衡时，请参考指南的原则、体系结构的范围以及技术选项和决策注意事项。</span><span class="sxs-lookup"><span data-stu-id="57598-159">Refer back to the guide's principles and coverage of architecture and technology options and decision considerations when you're weighing these choices for your own application.</span></span>
+
+<span data-ttu-id="57598-160">请将本指南转发到团队中，这有助于确保对这些注意事项和机会的共同理解。</span><span class="sxs-lookup"><span data-stu-id="57598-160">Feel free to forward this guide to your team to help ensure a common understanding of these considerations and opportunities.</span></span> <span data-ttu-id="57598-161">确保每个人使用共同的术语和基础原则工作，这有助于构建模式和做法的一致应用。</span><span class="sxs-lookup"><span data-stu-id="57598-161">Having everybody working from a common set of terminology and underlying principles helps ensure consistent application of architectural patterns and practices.</span></span>
+
+## <a name="references"></a><span data-ttu-id="57598-162">参考资料</span><span class="sxs-lookup"><span data-stu-id="57598-162">References</span></span>
+
+- <span data-ttu-id="57598-163">**为服务器应用选择 .NET Core 或 .NET Framework**</span><span class="sxs-lookup"><span data-stu-id="57598-163">**Choosing between .NET Core and .NET Framework for server apps**</span></span>  
+  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
-[<span data-ttu-id="3d6dd-142">下一篇</span><span class="sxs-lookup"><span data-stu-id="3d6dd-142">Next</span></span>](modern-web-applications-characteristics.md)
+[<span data-ttu-id="57598-164">下一篇</span><span class="sxs-lookup"><span data-stu-id="57598-164">Next</span></span>](modern-web-applications-characteristics.md)
