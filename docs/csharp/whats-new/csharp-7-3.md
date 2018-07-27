@@ -136,7 +136,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 C# 元组类型现在支持 `==` 和 `!=`。 有关详细信息，请参阅有关[元组](../tuples.md)文章中的转换[等式](../tuples.md#equality-and-tuples)部分。
 
-### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>将属性添加到自动实现的属性的支持字段
+### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>将特性添加到自动实现的属性的支持字段
 
 现在支持此语法：
 
