@@ -3,11 +3,11 @@ title: 功能构造 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
 ms.openlocfilehash: 360c321f993c8adb17767987060a0edcccad082a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644285"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39333008"
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>功能构造 (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 为创建 XML 元素提供了一种称为“函数构造”的有效方式。 函数构造是指在单个语句中创建 XML 树的能力。  
@@ -22,7 +22,7 @@ ms.locfileid: "33644285"
   
  下面是一个示例：  
   
- 这些功能使你能够编写代码以创建 XML 树，以及编写使用的结果的代码使用 XML 文本[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询创建 XML 树时：  
+ 这些功能使您能够编写代码以创建 XML 树，以及编写使用的结果的代码使用 XML 文本[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询创建 XML 树时：  
   
 ```vb  
 Dim srcTree As XElement = _  
