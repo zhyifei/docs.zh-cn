@@ -18,13 +18,13 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33570403"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>程序集和 DLL 的名称
-程序集是托管代码程序的部署和标识单元。 虽然程序集可以跨越一个或多个文件，但通常程序集与DLL是一对一映射的。 因此，本节仅描述DLL命名约定，然后可以将其映射到程序集命名约定。  
+程序集是托管代码程序的部署和标识单元。虽然程序集可以跨一个或多个文件，但通常程序集与 DLL 是一对一映射的。因此，本部分仅描述 DLL 命名约定，然后可以将其映射到程序集命名约定。 
   
- **✓ 要**为建议大量功能的程序集DLL选择名称，例如 System.Data。  
+ **✓ 要**为程序集 DLL 选择能够使人联想到大量功能的名称，例如 System.Data。 
   
- 程序集和 DLL 名称不必与命名空间名称相对应，但在命名程序集时遵循命名空间名称是合理的。 一个好的经验法则是根据程序集中包含的命名空间的公共前缀命名 DLL。 例如，包含两个命名空间中的程序集`MyCompany.MyTechnology.FirstFeature`和`MyCompany.MyTechnology.SecondFeature`，可以命名为`MyCompany.MyTechnology.dll`。  
+ 程序集和 DLL 名称不必与命名空间名称相对应，但在命名程序集时应采用命名空间名称。通常是根据程序集中包含的命名空间的公共前缀来命名 DLL。例如，如果程序集的两个命名空间为 `MyCompany.MyTechnology.FirstFeature` 和 `MyCompany.MyTechnology.SecondFeature`，则可将其命名为 `MyCompany.MyTechnology.dll`。
   
- **✓ 考虑**按照下面的模式命名 Dll:  
+ **✓ 考虑**按照下面的模式命名 Dll：
   
  `<Company>.<Component>.dll`  
   
@@ -32,9 +32,9 @@ ms.locfileid: "33570403"
   
  `Litware.Controls.dll`。
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*
+ *部分 © 2005，2009 Microsoft Corporation。保留所有权利。*
   
- *由 Pearson Education, Inc 许可，转载自[Framework 设计准则： 可重用.NET 库的约定、 惯用法和模式 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者 Krzysztof Cwalina 和 Brad Abrams，由Addison Wesley Professional 于 2008 年 10 月 22 日发布，作为 Microsoft Windows 开发系列的一部分。*
+ *由 Pearson Education, Inc 许可，转载自 [Framework 设计准则：可重用 .NET 库的约定、惯用法和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日作为 Microsoft Windows 开发系列的一部分发布。*
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
