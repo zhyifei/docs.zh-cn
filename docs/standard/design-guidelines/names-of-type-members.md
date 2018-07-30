@@ -15,19 +15,19 @@ ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25fe93b63c518f54ee72300f26dfcb3f3ad21d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/26/2018
 ms.locfileid: "33575344"
 ---
 # <a name="names-of-type-members"></a>类型成员的名称
-类型由的成员： 方法、 属性、 事件、 构造函数和字段。 以下各节描述了命名类型成员的准则。  
+类型由以下成员构成：方法、属性、事件、构造函数和字段。 以下各节介绍命名类型成员的准则。  
   
-## <a name="names-of-methods"></a>方法名称  
- 由于方法的执行操作的方法，但设计准则要求方法名称是谓词或谓词短语。 也遵循这一准则选项可用于将方法名称区分开来的属性和类型名称，它们是名词或形容词短语。  
+## <a name="names-of-methods"></a>方法的名称  
+ 方法是执行操作的方式，设计准则要求方法名称为谓词或谓词短语。 遵循此准则，还有利于区分方法名称与属性和类型名称，后者为名词或形容词性短语。  
   
- **✓ 执行**谓词或谓词短语的方法的名称。  
+ **✓ 正确做法** 用谓词或谓词短语为方法命名。  
   
 ```  
 public class String {  
@@ -37,25 +37,25 @@ public class String {
 }  
 ```  
   
-## <a name="names-of-properties"></a>属性名称  
- 与其他成员不同属性应为名词短语或形容词名称。 这是因为属性指数据，并且属性的名称将反映出的。 PascalCasing 始终用于属性名称。  
+## <a name="names-of-properties"></a>属性的名称  
+ 与其他成员不同，应向属性给定名词性短语或形容词性名称。 这是因为属性是指数据，属性的名称应反映这一点。 属性名称总是采用帕斯卡大小写。  
   
- **✓ 执行**用名词、 名词短语或形容词命名属性。  
+ **✓ 正确做法** 使用名词、名词性短语或形容词为属性命名。  
   
- **X 不**具有一些属性，如以下示例所示的"Get"方法的名称匹配：  
+ **X 错误做法** 拥有与“Get”方法同名的属性，如以下示例所示：  
   
  `public string TextWriter { get {...} set {...} }`  
  `public string GetTextWriter(int value) { ... }`  
   
- 此模式通常指示该属性应实际上是一种方法。  
+ 此模式通常意味着该属性事实上是一种方法。  
   
- **✓ 执行**具有描述而不是使用单数短语跟"列表"或"集合"。 集合中的项的复数形式短语名称集合属性  
+ **✓ 正确做法** 用描述集合中项目的复数短语（而不是使用单数短语后接“List”或“Collection”）为集合属性命名。  
   
- **✓ 执行**名称与赞成短语的布尔型属性 (`CanSeek`而不是`CantSeek`)。 （可选） 还前缀布尔型属性使用"Is"，"可以"或"具有，"但仅在它增添价值。  
+ **✓ 正确做法** 用肯定性短语（`CanSeek` 而非 `CantSeek`）为布尔属性命名。 还可选择为布尔属性添加“Is”、“Can”或“Has”，但仅在可带来益处时这么做。  
   
- **请考虑 ✓**指定相同的名称作为其类型的属性。  
+ **✓ 可以考虑** 为属性提供与其类型相同的名称。  
   
- 例如，以下属性正确获取和设置名为枚举值`Color`，因此该属性名为`Color`:  
+ 例如，以下属性可正确获取和设置名为 `Color` 的枚举值，因此属性名为 `Color`：  
   
 ```  
 public enum Color {...}  
@@ -65,42 +65,42 @@ public class Control {
 ```  
   
 ## <a name="names-of-events"></a>事件的名称  
- 始终引用某一操作，是指位于发生或一个已发生事件。 因此，与方法一样，事件名称中带有谓词，并且谓词时态用于指示何时引发事件的时间。  
+ 事件始终指操作，可以是即将发生的，也可以是已经发生的。 因此，对于方法，事件用谓词命名，并用谓词时态指示引发事件的时间。  
   
- **✓ 执行**命名事件的谓词或谓词短语。  
+ **✓ 正确做法** 用谓词或谓词短语为事件命名。  
   
- 示例包括`Clicked`， `Painting`， `DroppedDown`，依次类推。  
+ 示例包括`Clicked`、`Painting` 和 `DroppedDown`。  
   
- **✓ 执行**为提供了事件名称的概念与之前和之后，使用现在时或过去时态。  
+ **✓ 正确做法** 使用现在时和过去时，为事件名称赋予之前和之后的概念。  
   
- 例如，窗口关闭之前引发的事件称为 `Closing`，窗口关闭之后引发的事件称为 `Closed`。  
+ 例如，在窗口关闭前引发的关闭事件可命名为 `Closing`，而在窗口关闭后后引发的关闭事件可命名为 `Closed`。  
   
- **X 不要**使用 “Before” 或 “After” 前缀和后缀来指示事件之前或之后。 应按前述使用现在时态和过去时态。  
+ **X 错误做法** 使用“Before”或“After”前缀或后缀指示发生在事件前后。 请如上所示使用现在时和过去时。  
   
- **✓ 务必**使用 “EventHandler” 后缀来命名事件处理程序（委托，用作事件类型），如以下示例所示：  
+ **✓ 正确做法** 为事件处理程序（用作事件类型的委托）添加“EventHandler”后缀，如以下示例中所示：  
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   
- **✓ 执行**使用两个参数名为`sender`和`e`在事件处理程序。  
+ **✓ 正确做法** 在事件处理程序中使用名为 `sender` 和 `e` 的两个参数。  
   
- 发件人参数表示引发事件的对象。 发件人参数的类型通常是`object`，即使它也可使用更具体的类型。  
+ sender 参数表示引发事件的对象。 sender 参数的类型通常是 `object`，即使可以使用更具体的类型。  
   
- **✓ 执行**命名自变量类与"EventArgs"后缀的事件。  
+ **✓ 正确做法** 为事件参数类名称添加“EventArgs”后缀。  
   
 ## <a name="names-of-fields"></a>字段的名称  
- 字段命名准则适用于静态的公共和受保护字段。 内部和私有字段未涵盖的准则，和公共或受保护的实例字段都不允许的[成员设计准则](../../../docs/standard/design-guidelines/member.md)。  
+ 字段命名准则适用于静态公开字段和受保护的字段。 原则不涉及内部和专用字段，而[成员设计准则](../../../docs/standard/design-guidelines/member.md)不允许使用公开字段或受保护的实例字段。  
   
- **✓ 执行**在字段名称中使用 PascalCasing。  
+ **✓ 正确做法** 在字段名称中使用帕斯卡大小写。  
   
- **✓ 执行**命名字段使用名词、 名词短语或形容词。  
+ **✓ 正确做法** 使用名词、名词性短语或形容词为字段命名。  
   
- **X 不**字段名称中使用前缀。  
+ **X 错误做法** 在字段名称中使用前缀。  
   
- 例如，不要使用"g_"或"s_"以指示静态字段。  
+ 例如，请勿使用“g_”或“s_”来指示静态字段。  
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *Portions © 2005, 2009 Microsoft Corporation 版权所有。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *在 Pearson Education, Inc. 授权下，由 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分再版自 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)（Framework 设计准则：可重用 .NET 库的约定、惯例和模式第 2 版），由 Krzysztof Cwalina 和 Brad Abrams 发布于 2008 年 10 月 22 日。  
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
