@@ -75,7 +75,7 @@ ms.locfileid: "33520508"
   
 3.  在 **“解决方案资源管理器”** 中，打开 **MyNewService.cs** 或 **MyNewService.vb**的上下文菜单，然后选择 **“查看代码”**。  
   
-4.  此时，类中 **已添加“eventLog”**`MyNewService` 对象的声明，位置紧随声明 `components` 变量的行后：  
+4. 在`MyNewService`类中添加 **“eventLog”** 对象的声明，位置紧随声明 `components` 变量的行后： 
   
      [!code-csharp[VbRadconService#16](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#16)]
      [!code-vb[VbRadconService#16](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#16)]  
