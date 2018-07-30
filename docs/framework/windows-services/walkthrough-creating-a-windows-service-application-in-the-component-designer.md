@@ -59,7 +59,7 @@ ms.locfileid: "33520508"
   
 3.  在“编辑”  菜单上，依次选择“查找和替换” 、“在文件中查找”  （键盘：Ctrl+Shift+F）。 更改 `Service1` 到 `MyNewService`的所有匹配项。 你将在 Service1.cs、Program.cs 和 Service1.Designer.cs（或它们的 .vb 等效项）中找到实例。  
   
-4.  在“Service1.cs [Design]”  或“Service1.vb [Design]”  的“属性” 窗口中，将 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 和 **的“(Name)”**`Service1` 属性设置为 **MyNewService**（如果尚未设置）。  
+4.  在“Service1.cs [Design]”  或“Service1.vb [Design]”  的“属性” 窗口中，将`Service1`的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 和 **“(Name)”** 属性设置为 **MyNewService**（如果尚未设置）。  
   
 5.  在解决方案资源管理器中，将 **Service1.cs** 重命名为 **MyNewService.cs**，或将 **Service1.vb** 重命名为 **MyNewService.vb**。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33520508"
   
 3.  在 **“解决方案资源管理器”** 中，打开 **MyNewService.cs** 或 **MyNewService.vb**的上下文菜单，然后选择 **“查看代码”**。  
   
-4.  在 **类中添加“eventLog”**`MyNewService` 对象的声明，位置紧随声明 `components` 变量的行后：  
+4. 在`MyNewService`类中添加 **“eventLog”** 对象的声明，位置紧随声明 `components` 变量的行后： 
   
      [!code-csharp[VbRadconService#16](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#16)]
      [!code-vb[VbRadconService#16](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#16)]  
