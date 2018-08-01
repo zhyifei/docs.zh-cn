@@ -1,0 +1,1 @@
+<span data-ttu-id="52099-101">本主题适用于：✓ .NET Core SDK 2.1.300 及更高版本</span><span class="sxs-lookup"><span data-stu-id="52099-101">**This topic applies to: ✓** .NET Core SDK 2.1.300 and later versions</span></span>
