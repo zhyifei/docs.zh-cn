@@ -21,44 +21,44 @@ ms.locfileid: "33574590"
 本部分介绍框架和它们的用法的详细信息提供的标准异常。 列表并不详尽。 请参阅其他 Framework 异常类型的.NET Framework 参考文档的使用情况。  
   
 ## <a name="exception-and-systemexception"></a>异常和 SystemException  
- **X 不**引发<xref:System.Exception?displayProperty=nameWithType>或<xref:System.SystemException?displayProperty=nameWithType>。  
+ **X DO NOT**引发<xref:System.Exception?displayProperty=nameWithType>或<xref:System.SystemException?displayProperty=nameWithType>。  
   
- **X 不**捕获`System.Exception`或`System.SystemException`在 framework 代码中，除非您想要重新引发。  
+ **X DO NOT**捕获`System.Exception`或`System.SystemException`在 framework 代码中，除非您想要重新引发。  
   
- **请避免 x**捕捉`System.Exception`或`System.SystemException`，除非在顶级异常处理程序。  
+ **X AVOID**捕捉`System.Exception`或`System.SystemException`，除非在顶级异常处理程序。  
   
 ## <a name="applicationexception"></a>ApplicationException  
- **X 不**引发或从其派生<xref:System.ApplicationException>。  
+ **X DO NOT**引发或从其派生<xref:System.ApplicationException>。  
   
 ## <a name="invalidoperationexception"></a>InvalidOperationException  
- **✓ 执行**引发<xref:System.InvalidOperationException>如果此对象处于不合适的状态。  
+ **✓ DO**引发<xref:System.InvalidOperationException>如果此对象处于不合适的状态。  
   
 ## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException、 ArgumentNullException 和 ArgumentOutOfRangeException  
- **✓ 执行**引发<xref:System.ArgumentException>或如果错误的自变量传递给成员及其子类型之一。 如果适用，更喜欢的派生程度最高的异常类型。  
+ **✓ DO**引发<xref:System.ArgumentException>或如果错误的自变量传递给成员及其子类型之一。 如果适用，更喜欢的派生程度最高的异常类型。  
   
- **✓ 执行**设置`ParamName`属性时引发的子类之一`ArgumentException`。  
+ **✓ DO**设置`ParamName`属性时引发的子类之一`ArgumentException`。  
   
  此属性表示导致引发异常的参数的名称。 请注意，可以使用构造函数重载之一设置该属性。  
   
- **✓ 执行**使用`value`属性 setter 的隐式值参数的名称。  
+ **✓ DO**使用`value`属性 setter 的隐式值参数的名称。  
   
 ## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException、 IndexOutOfRangeException 和 AccessViolationException  
- **X 不**允许公开可调用 Api 显式或隐式引发<xref:System.NullReferenceException>， <xref:System.AccessViolationException>，或<xref:System.IndexOutOfRangeException>。 这些异常是保留并且由执行引擎引发并且在大多数情况下指示 bug。  
+ **X DO NOT**允许公开可调用 Api 显式或隐式引发<xref:System.NullReferenceException>， <xref:System.AccessViolationException>，或<xref:System.IndexOutOfRangeException>。 这些异常是保留并且由执行引擎引发并且在大多数情况下指示 bug。  
   
  应进行检查以避免引发这些异常的参数。 引发这些异常公开你可能随时间变化的方法的实现详细信息。  
   
 ## <a name="stackoverflowexception"></a>StackOverflowException  
- **X 不**显式引发<xref:System.StackOverflowException>。 应仅由 CLR 显式引发异常。  
+ **X DO NOT**显式引发<xref:System.StackOverflowException>。 应仅由 CLR 显式引发异常。  
   
- **X 不**捕获`StackOverflowException`。  
+ **X DO NOT**捕获`StackOverflowException`。  
   
  它是几乎无法编写保持一致出现任意堆栈溢出的托管的代码。 按使用探测将移到定义完善的地方而导致堆栈溢出而不是从任意堆栈溢出退出，CLR 的非托管的部分保持一致。  
   
 ## <a name="outofmemoryexception"></a>OutOfMemoryException  
- **X 不**显式引发<xref:System.OutOfMemoryException>。 此异常是引发仅供 CLR 基础结构。  
+ **X DO NOT**显式引发<xref:System.OutOfMemoryException>。 此异常是引发仅供 CLR 基础结构。  
   
 ## <a name="comexception-sehexception-and-executionengineexception"></a>ComException、 SEHException 和 ExecutionEngineException  
- **X 不**显式引发<xref:System.Runtime.InteropServices.COMException>， <xref:System.ExecutionEngineException>，和<xref:System.Runtime.InteropServices.SEHException>。 这些异常将会引发仅供 CLR 基础结构。  
+ **X DO NOT**显式引发<xref:System.Runtime.InteropServices.COMException>， <xref:System.ExecutionEngineException>，和<xref:System.Runtime.InteropServices.SEHException>。 这些异常将会引发仅供 CLR 基础结构。  
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   

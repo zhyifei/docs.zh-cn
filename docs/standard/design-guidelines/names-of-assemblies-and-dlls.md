@@ -24,7 +24,7 @@ ms.locfileid: "33570403"
   
  程序集和 DLL 名称不必与命名空间名称相对应，但在命名程序集时应采用命名空间名称。 通常是根据程序集中包含的命名空间的公共前缀来命名 DLL。 例如，如果程序集的两个命名空间为 `MyCompany.MyTechnology.FirstFeature` 和 `MyCompany.MyTechnology.SecondFeature`，则可将其命名为 `MyCompany.MyTechnology.dll`。  
   
- **请考虑 ✓**按照下面的模式命名 Dll:  
+ **✓ CONSIDER**按照下面的模式命名 Dll:  
   
  `<Company>.<Component>.dll`  
   

@@ -32,7 +32,7 @@ ms.locfileid: "33572884"
   
  委托、 异常、 属性、 数组和集合是适用于特定用途的引用类型的所有特殊情况和本书中别处讨论的设计和使用情况的准则。  
   
- **✓ 执行**确保每个类型定义完善的一组相关成员，而不仅仅是随机的不相关的功能集合。  
+ **✓ DO**确保每个类型定义完善的一组相关成员，而不仅仅是随机的不相关的功能集合。  
   
 ## <a name="in-this-section"></a>本节内容  
  [在类和结构之间选择](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
