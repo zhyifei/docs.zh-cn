@@ -27,24 +27,24 @@ ms.locfileid: "33576427"
  `Fabrikam.Math`  
  `Litware.Security`  
   
- **✓ 务必**使用一个公司名作为命名空间的前缀，以防止不同公司的命名空间具有相同的名称。  
+ **✓ 务必** 使用一个公司名作为命名空间的前缀，以防止不同公司的命名空间具有相同的名称。  
   
- **✓ DO**命名空间名称的第二个级别使用的稳定、 独立于版本的产品名称。  
+ **✓ DO** 命名空间名称的第二个级别使用的稳定、 独立于版本的产品名称。  
   
- **X DO NOT**作为基础命名空间层次结构中的名称使用组织的层次结构，因为公司内的组名称可能会改变。 将组织的相关技术的组周围的命名空间的层次结构。  
+ **X DO NOT** 作为基础命名空间层次结构中的名称使用组织的层次结构，因为公司内的组名称可能会改变。 将组织的相关技术的组周围的命名空间的层次结构。  
   
- **✓ DO**与期使用 PascalCasing 和单独的命名空间组件 (例如， `Microsoft.Office.PowerPoint`)。 如果你的品牌采用非传统的大小写，则应遵循由您的品牌、 定义的大小写，即使背离常用的命名空间的大小写。  
+ **✓ DO** 与期使用 PascalCasing 和单独的命名空间组件 (例如， `Microsoft.Office.PowerPoint`)。 如果你的品牌采用非传统的大小写，则应遵循由您的品牌、 定义的大小写，即使背离常用的命名空间的大小写。  
   
- **✓ CONSIDER**使用复数形式的命名空间名称，在适当的位置。  
+ **✓ CONSIDER** 使用复数形式的命名空间名称，在适当的位置。  
   
  例如，使用`System.Collections`而不是`System.Collection`。 品牌名称和首字母缩写词但是是此规则的例外情况。 例如，使用`System.IO`而不是`System.IOs`。  
   
- **X DO NOT**使用该命名空间中的命名空间和类型相同的名称。  
+ **X DO NOT** 使用该命名空间中的命名空间和类型相同的名称。  
   
  例如，不要使用`Debug`与命名空间名称，然后还提供一个名为类`Debug`同一命名空间中。 多个编译器要求是完全限定的此类类型。  
   
 ### <a name="namespaces-and-type-name-conflicts"></a>命名空间和类型名称冲突  
- **X DO NOT**如引入泛型类型名称`Element`， `Node`， `Log`，和`Message`。  
+ **X DO NOT** 如引入泛型类型名称`Element`， `Node`， `Log`，和`Message`。  
   
  没有这样做将导致类型名称共同点冲突方案非常高概率。 你应限定泛型类型名称 (`FormElement`， `XmlNode`， `EventLog`， `SoapMessage`)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "33576427"
      `System.Windows*`   
      `System.Web.UI*`  
   
-     **X DO NOT**为单个应用程序模型中的命名空间中的类型提供相同的名称。  
+     **X DO NOT** 为单个应用程序模型中的命名空间中的类型提供相同的名称。  
   
      例如，不要添加名为的类型`Page`到<xref:System.Web.UI.Adapters?displayProperty=nameWithType>命名空间，因为<xref:System.Web.UI?displayProperty=nameWithType>命名空间已包含名为的类型`Page`。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "33576427"
   
      核心命名空间包括所有`System`命名空间，不包括命名空间中的，应用程序模型和基础结构命名空间。 核心命名空间包含，及其他`System`， `System.IO`， `System.Xml`，和`System.Net`。  
   
-     **X DO NOT**给予类型会冲突的名称与核心命名空间中的任何类型。  
+     **X DO NOT** 给予类型会冲突的名称与核心命名空间中的任何类型。  
   
      例如，永远不会使用`Stream`为类型名称。 它将与冲突<xref:System.IO.Stream?displayProperty=nameWithType>、 一个非常常用的类型。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "33576427"
   
      此类别包括具有相同的前两个命名空间节点的所有命名空间`(<Company>.<Technology>*`)，如`Microsoft.Build.Utilities`和`Microsoft.Build.Tasks`。 很重要属于某个单一技术类型不会彼此发生冲突。  
   
-     **X DO NOT**分配会冲突的类型名称与某个单一技术中其他类型。  
+     **X DO NOT** 分配会冲突的类型名称与某个单一技术中其他类型。  
   
-     **X DO NOT**（除非该技术不应与应用程序模型一起使用） 引入技术命名空间中的类型和应用程序模型命名空间之间的类型名称冲突。  
+     **X DO NOT** （除非该技术不应与应用程序模型一起使用） 引入技术命名空间中的类型和应用程序模型命名空间之间的类型名称冲突。  
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   

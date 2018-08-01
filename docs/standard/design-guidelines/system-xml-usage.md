@@ -15,13 +15,13 @@ ms.locfileid: "33572809"
 # <a name="systemxml-usage"></a>System.Xml 使用情况
 本部分介绍有关驻留在的几种类型的使用情况<xref:System.Xml?displayProperty=nameWithType>可以用于表示 XML 数据的命名空间。  
   
- **X DO NOT**使用<xref:System.Xml.XmlNode>或<xref:System.Xml.XmlDocument>来表示 XML 数据。 倾向于使用的实例<xref:System.Xml.XPath.IXPathNavigable>， <xref:System.Xml.XmlReader>， <xref:System.Xml.XmlWriter>，或子类型的<xref:System.Xml.Linq.XNode>相反。 `XmlNode` 和`XmlDocument`不适用于公共 Api 中公开。  
+ **X DO NOT** 使用<xref:System.Xml.XmlNode>或<xref:System.Xml.XmlDocument>来表示 XML 数据。 倾向于使用的实例<xref:System.Xml.XPath.IXPathNavigable>， <xref:System.Xml.XmlReader>， <xref:System.Xml.XmlWriter>，或子类型的<xref:System.Xml.Linq.XNode>相反。 `XmlNode` 和`XmlDocument`不适用于公共 Api 中公开。  
   
- **✓ DO**使用`XmlReader`， `IXPathNavigable`，或子类型的`XNode`为输入或输出的接受或返回 XML 的成员。  
+ **✓ DO** 使用`XmlReader`， `IXPathNavigable`，或子类型的`XNode`为输入或输出的接受或返回 XML 的成员。  
   
  使用而不是这些抽象映射`XmlDocument`， `XmlNode`，或<xref:System.Xml.XPath.XPathDocument>，因为这将从内存中 XML 文档的特定实现的方法脱耦，并允许它们可以使用虚拟公开的 XML 数据源`XNode``XmlReader`，或<xref:System.Xml.XPath.XPathNavigator>。  
   
- **X DO NOT**子类`XmlDocument`如果你想要创建表示基础对象模型或数据源的 XML 视图的类型。  
+ **X DO NOT** 子类`XmlDocument`如果你想要创建表示基础对象模型或数据源的 XML 视图的类型。  
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   

@@ -3,20 +3,18 @@ title: 开发 ASP.NET Core MVC 应用
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 开发 ASP.NET Core MVC 应用
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: a90f88e117965aec1550a45f114cabfda5204468
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 2fd3eb1e123959130884b96ee9d2e59b83c41b0a
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106588"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404640"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
 > “第一次是否正确完成并不重要。 最后一次正确完成才至关重要。”  
 > — Andrew Hunt 和 David Thomas
-
-## <a name="summary"></a>总结
 
 ASP.NET Core 是一个跨平台的开源框架，用于构建新式云优化 Web 应用程序。 ASP.NET Core 具有轻量级和模块化的特点，并且内置了对依赖关系注入的支持，因此具有更好的可测试性和可维护性。 而 MVC 支持构建新式 Web API 和基于视图的应用，ASP.NET Core 与之结合后将成为一个功能强大的框架，用于构建企业 Web 应用程序。
 
@@ -45,9 +43,10 @@ public class HomeController : Controller
     [Route("Index")] // Combines to define route template "Home/Index"
     [Route("/")] // Does not combine, defines the route template ""
     public IActionResult Index() {}
+}
 ```
 
-可以在 [HttpGet] 和类似属性上指定路由，而无需添加单独的 [Route\] 属性。 属性路由还可以通过使用令牌来减少重复控制器或操作名称的次数，如下所示：
+可以在 [HttpGet] 和类似属性上指定路由，而无需添加单独的 [Route] 属性。 属性路由还可以通过使用令牌来减少重复控制器或操作名称的次数，如下所示：
 
 ```csharp
 [Route("[controller\]")]
@@ -55,29 +54,32 @@ public class ProductsController : Controller
 {
     [Route("")] // Matches 'Products'
     [Route("Index")] // Matches 'Products/Index'
-    public IActionResult Index()
+    public IActionResult Index() {}
 }
 ```
 
-给定请求与路由匹配之后，ASP.NET Core MVC 会对该请求执行[模型绑定](https://docs.microsoft.com/aspnet/core/mvc/models/model-binding)和[模型验证](https://docs.microsoft.com/aspnet/core/mvc/models/validation)，然后才调用操作方法。 模型绑定负责将传入到指定 .NET 类型的 HTTP 数据转换为要调用的操作方法的参数。 例如，如果操作方法需要一个 int id 参数，模型绑定将尝试根据请求中提供的值来提供此参数。 为此，模型绑定会查找已发布表单中的值、路由中的值和查询字符串值。 假设找到了 id 值，该值会被转换为整数，然后传入操作方法。
+给定请求与路由匹配之后，ASP.NET Core MVC 会对该请求执行[模型绑定](/aspnet/core/mvc/models/model-binding)和[模型验证](/aspnet/core/mvc/models/validation)，然后才调用操作方法。 模型绑定负责将传入到指定 .NET 类型的 HTTP 数据转换为要调用的操作方法的参数。 例如，如果操作方法需要一个 int id 参数，模型绑定将尝试根据请求中提供的值来提供此参数。 为此，模型绑定会查找已发布表单中的值、路由中的值和查询字符串值。 假设找到了 id 值，该值会被转换为整数，然后传入操作方法。
 
 模型验证发生在绑定模型之后，调用操作方法之前。 模型验证对模型类型使用可选属性，且有助于确保提供的模型对象符合特定数据要求。 可以将某些值指定为必需项，将其限制为特定长度，或将其限制在一定数值范围内，等等。如果指定了验证特性，但该模型不符合其要求，则属性 ModelState.IsValid 将为 false，并且失败的验证规则集将可被发送到发出请求的客户端。
 
-使用模型验证时，执行任何状态更改命令之前，务必确保模型有效，以防无效数据损坏应用。 使用[筛选器](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters)可避免在每个操作中都为此添加代码的需要。 ASP.NET Core MVC 筛选器具有截获多组请求的功能，因此可以有针对性地应用通用策略和横切关注点。 筛选器可应用于单个操作、整个控制器或应用程序全局。
+使用模型验证时，执行任何状态更改命令之前，务必确保模型有效，以防无效数据损坏应用。 使用[筛选器](/aspnet/core/mvc/controllers/filters)可避免在每个操作中都为此添加代码的需要。 ASP.NET Core MVC 筛选器具有截获多组请求的功能，因此可以有针对性地应用通用策略和横切关注点。 筛选器可应用于单个操作、整个控制器或应用程序全局。
 
-对于 Web API，ASP.NET Core MVC 支持[*内容协商*](https://docs.microsoft.com/aspnet/core/mvc/models/formatting)，允许对指定如何设置响应格式进行请求。 根据请求中提供的标头，操作返回的数据将采用 XML、JSON 或其他支持格式作为响应的格式。 借助此功能，同一个 API 可供数据格式要求不同的多个客户端使用。
+对于 Web API，ASP.NET Core MVC 支持[_内容协商_](/aspnet/core/mvc/models/formatting)，允许对指定如何设置响应格式进行请求。 根据请求中提供的标头，操作返回的数据将采用 XML、JSON 或其他支持格式作为响应的格式。 借助此功能，同一个 API 可供数据格式要求不同的多个客户端使用。
 
 > ### <a name="references--mapping-requests-to-responses"></a>参考 - 将请求映射到响应
+>
 > - **路由到控制器操作**
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **模型绑定** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
+> - **模型绑定**
+> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **模型验证**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **筛选器** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **筛选器**
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>处理依赖关系
 
-ASP.NET Core 内置了对[依赖关系注入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)技术的支持，并且在内部使用这一技术。 依赖关系注入技术可以在应用程序的不同部分之间实现松散耦合。 比较松散的耦合更符合需要，因为它可以更轻松地将应用程序的某些部分隔离开，然后进行测试或替换。 它还可以降低对应用程序某个部分进行更改会对应用程序中的其他位置产生意外影响的可能性。 依赖关系注入的基础是依赖关系反转原则，并且通常是实现开放/闭合原则的关键。 评估应用程序对其依赖关系的处理方式时，请注意 [static cling](http://deviq.com/static-cling/)（静态粘附）这一代码味，并请记住这句格言：[新增即粘附](https://ardalis.com/new-is-glue)。
+ASP.NET Core 内置了对[依赖关系注入](/aspnet/core/fundamentals/dependency-injection)技术的支持，并且在内部使用这一技术。 依赖关系注入技术可以在应用程序的不同部分之间实现松散耦合。 比较松散的耦合更符合需要，因为它可以更轻松地将应用程序的某些部分隔离开，然后进行测试或替换。 它还可以降低对应用程序某个部分进行更改会对应用程序中的其他位置产生意外影响的可能性。 依赖关系注入的基础是依赖关系反转原则，并且通常是实现开放/闭合原则的关键。 评估应用程序对其依赖关系的处理方式时，请注意 [static cling](https://deviq.com/static-cling/)（静态粘附）这一代码味，并请记住这句格言：[新增即粘附](https://ardalis.com/new-is-glue)。
 
 类调用静态方法或访问静态属性时，会对基础结构造成负面影响或产生依赖关系，此时会发生静态粘附。 例如，如果一个方法调用静态方法，静态方法反过来又写入数据库，则该方法与该数据库紧密耦合。 破坏该数据库调用的任何内容都会破坏该方法。 测试此类方法非常困难，因为此类测试要么需要使用商业模拟库来模拟静态调用，要么只能使用已有测试数据库进行测试。 不依赖于任何基础结构的静态调用，尤其是完全无状态的静态调用可以进行正常调用，并且对耦合或可测试性没有任何影响（超越了将代码耦合到静态调用本身）。
 
@@ -118,7 +120,7 @@ ConfigureServices 方法是此行为的例外情况，它必须使用 IServiceCo
 > [!NOTE]
 > 如果需确保某些服务可供 Startup 类使用，可以使用 WebHostBuilder 及其 ConfigureServices 方法对其进行配置。
 
-Startup 类是一个范例，应照此构建 ASP.NET Core 应用程序的其他部分，从控制器到中间件到筛选器再到自己的服务。 在任何情况下都应遵守[显式依赖关系原则](http://deviq.com/explicit-dependencies-principle/)，请求依赖关系，而不要直接创建依赖关系，在整个应用程序中充分利用依赖关系注入。 注意对实现进行直接实例化的位置和方式，特别是使用基础结构或会产生负面影响的服务和对象。 相较于对特定实现类型的引用进行硬编码，最好是使用在应用程序核心中定义并作为参数传递的抽象元素。
+Startup 类是一个范例，应照此构建 ASP.NET Core 应用程序的其他部分，从控制器到中间件到筛选器再到自己的服务。 在任何情况下都应遵守[显式依赖关系原则](https://deviq.com/explicit-dependencies-principle/)，请求依赖关系，而不要直接创建依赖关系，在整个应用程序中充分利用依赖关系注入。 注意对实现进行直接实例化的位置和方式，特别是使用基础结构或会产生负面影响的服务和对象。 相较于对特定实现类型的引用进行硬编码，最好是使用在应用程序核心中定义并作为参数传递的抽象元素。
 
 ## <a name="structuring-the-application"></a>构建应用程序
 
@@ -136,7 +138,7 @@ ASP.NET Core UI 项目负责所有 UI 级问题，但不得包含业务逻辑或
 
 ### <a name="feature-organization"></a>功能整理
 
-默认情况下，ASP.NET Core 应用程序将其文件夹结构整理为包含 Controllers 和 Views，还经常包含 ViewModels。 支持这些服务器端结构的客户端代码通常单独存放在 wwwroot 文件夹中。 但是对于大型应用程序而言，这种整理方式可能会出现问题，因为处理任何给定功能通常会要求在这些文件夹之间跳转。 每个文件夹中的文件和子文件夹数量越多，通过解决方案资源管理器的滚动就越多，这种整理方式实现起来也就越难。 解决此问题的其中一种办法是按功能，而不要按文件类型来整理应用程序代码。 这种整理方式通常被称为功能文件夹或功能切片（另请参阅：[垂直切片](http://deviq.com/vertical-slices/)）。
+默认情况下，ASP.NET Core 应用程序将其文件夹结构整理为包含 Controllers 和 Views，还经常包含 ViewModels。 支持这些服务器端结构的客户端代码通常单独存放在 wwwroot 文件夹中。 但是对于大型应用程序而言，这种整理方式可能会出现问题，因为处理任何给定功能通常会要求在这些文件夹之间跳转。 每个文件夹中的文件和子文件夹数量越多，通过解决方案资源管理器的滚动就越多，这种整理方式实现起来也就越难。 解决此问题的其中一种办法是按功能，而不要按文件类型来整理应用程序代码。 这种整理方式通常被称为功能文件夹或功能切片（另请参阅：[垂直切片](https://deviq.com/vertical-slices/)）。
 
 ASP.NET Core MVC 支持使用 Areas 实现此目的。 使用区域可以在每个 Area 文件夹中创建单独的 Controllers 和 Views 文件夹集（以及任何关联的模型）。 图 7-1 显示了一个使用 Areas 的示例文件夹结构。
 
@@ -205,7 +207,7 @@ ASP.NET Core MVC 还使用约定来确定视图的位置。 可以使用自定�
 
 ### <a name="cross-cutting-concerns"></a>横切关注点
 
-随着应用程序的发展，将横切关注点分解出来，以消除重复和保持一致性变得越来越重要。 ASP.NET Core 应用程序中的横切关注点非常多，例如身份验证、模型验证规则、输出缓存和错误处理等等。 ASP.NET Core MVC [筛选器](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters)允许在请求处理管道中的特定步骤之前或之后运行代码。 例如，可以在模型绑定之前/之后、某个操作之前/之后或某个操作结果之前/之后运行筛选器。 还可以使用授权筛选器来控制对管道其余部分的访问权限。 图 7-2 显示了请求执行如何流经筛选器（如果配置）。
+随着应用程序的发展，将横切关注点分解出来，以消除重复和保持一致性变得越来越重要。 ASP.NET Core 应用程序中的横切关注点非常多，例如身份验证、模型验证规则、输出缓存和错误处理等等。 ASP.NET Core MVC [筛选器](/aspnet/core/mvc/controllers/filters)允许在请求处理管道中的特定步骤之前或之后运行代码。 例如，可以在模型绑定之前/之后、某个操作之前/之后或某个操作结果之前/之后运行筛选器。 还可以使用授权筛选器来控制对管道其余部分的访问权限。 图 7-2 显示了请求执行如何流经筛选器（如果配置）。
 
 ![请求通过授权筛选器、资源筛选器、模型绑定、操作筛选器、操作执行和操作结果转换、异常筛选器、结果筛选器和结果执行进行处理。 返回时，请求仅由结果筛选器和资源筛选器进行处理，变成发送到客户端的响应。](./media/image7-2.png)
 
@@ -264,7 +266,6 @@ public class ValidateModelAttribute : ActionFilterAttribute
 同样，可以使用筛选器来检查某条记录是否存在，并在执行操作前返回 404，而无需在操作中执行这些检查。 将常见约定提取出来，并在整理解决方案时将基础结构代码和业务逻辑与 UI 分离开，这样 MVC 操作方法会变得极其精简：
 
 ```csharp
-// PUT api/authors/2/5
 [HttpPut("{id}")]
 [ValidateAuthorExists]
 public async Task<IActionResult> Put(int id, [FromBody]Author author)
@@ -277,18 +278,19 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 可在 MSDN 文章[实际的 ASP.NET Core MVC 筛选器](https://msdn.microsoft.com/magazine/mt767699.aspx)中了解有关实现筛选器的详细信息并下载工作示例。
 
 > ### <a name="references--structuring-applications"></a>参考 - 构建应用程序
+>
 > - **区域**  
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN – ASP.NET Core MVC 的功能切分**
->  <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
+> - **MSDN 杂志 - ASP.NET Core MVC 的功能切分**  
+ > <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **筛选器**  
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+>   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN - 实际的 ASP.NET Core MVC 筛选器**  
-> <https://msdn.microsoft.com/magazine/mt767699.aspx>
+>   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>安全性
 
-保护 Web 应用程序是一个非常大的主题，涉及到许多问题。 安全性涉及的最基本问题是，确保你知道是谁发出的给定请求，然后确保该请求只对它应访问的资源具有访问权限。 身份验证是将请求提供的凭据与受信任数据存储中的凭据进行对比的过程，目的在于确定该请求是否应被视为来源于已知实体。 授权是根据用户标识限制对某些资源的访问权限的过程。 第三个安全问题是保护请求免遭第三方窃听，对于此问题至少应[确保 SSL 由你的应用程序使用](https://docs.microsoft.com/aspnet/core/security/enforcing-ssl)。
+保护 Web 应用程序是一个非常大的主题，涉及到许多问题。 安全性涉及的最基本问题是，确保你知道是谁发出的给定请求，然后确保该请求只对它应访问的资源具有访问权限。 身份验证是将请求提供的凭据与受信任数据存储中的凭据进行对比的过程，目的在于确定该请求是否应被视为来源于已知实体。 授权是根据用户标识限制对某些资源的访问权限的过程。 第三个安全问题是保护请求免遭第三方窃听，对于此问题至少应[确保 SSL 由你的应用程序使用](/aspnet/core/security/enforcing-ssl)。
 
 ### <a name="authentication"></a>身份验证
 
@@ -329,7 +331,7 @@ public void Configure(IApplicationBuilder app)
 
 在 Configure 方法中，UseIdentity 应出现在 UseMvc 之前，这一点很重要。 在 ConfigureServices 中配置标识时，请注意对 AddDefaultTokenProviders 的调用。 这与用于保护 Web 通信的令牌无关，它引用的是创建提示的提供者，该提示会通过短信或电子邮件发送给用户让其确认身份。
 
-可从官方 ASP.NET Core 文档详细了解有关[配置双重身份验证](https://docs.microsoft.com/aspnet/core/security/authentication/2fa)和[启用外部登录提供者](https://docs.microsoft.com/aspnet/core/security/authentication/social/)的信息。
+可从官方 ASP.NET Core 文档详细了解有关[配置双重身份验证](/aspnet/core/security/authentication/2fa)和[启用外部登录提供者](/aspnet/core/security/authentication/social/)的信息。
 
 ### <a name="authorization"></a>授权
 
@@ -383,40 +385,41 @@ public void ConfigureServices(IServiceCollection services)
 **图 7-4.** Web API 基于令牌的身份验证。
 
 > ### <a name="references--security"></a>参考 - 安全
+>
 > - **安全性文档概述**  
-> https://docs.microsoft.com/aspnet/core/security/
+>   https://docs.microsoft.com/aspnet/core/security/
 > - **在 ASP.NET Core 应用中强制实施 SSL**  
-> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
+>   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **标识简介**  
-> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
+>   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **授权简介**  
-> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
+>   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Azure 应用服务中 API 应用的身份验证和授权**  
-> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
+>   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>客户端通信
 
 除了通过 Web API 提供页面和响应数据请求之外，ASP.NET Core 应用还能与已连接的客户端直接通信。 这种出站通信可以使用多种传输技术，其中最常见的是 WebSocket。 ASP.NET Core SignalR 是一个库，它简化了向应用程序添加某种实时服务器到客户端的通信功能的过程。 SignalR 支持多种传输技术，包括 WebSocket，并从开发人员处抽象出许多实现细节。
 
-ASP.NET Core SignalR 目前正在开发中，将在下一版本的 ASP.NET Core 中提供。 但是，目前已有其他一些[开源 WebSocket 库](https://github.com/radu-matei/websocket-manager)可供使用。
+ASP.NET Core SignalR 可用于 ASP.NET Core 2.1。
 
 无论是直接使用 WebSocket 还是使用其他技术，实时客户端通信在许多应用程序方案中都很有用。 一些示例包括：
 
--   实时聊天室应用程序
+- 实时聊天室应用程序
 
--   监视应用程序
+- 监视应用程序
 
--   作业进度更新
+- 作业进度更新
 
--   通知
+- 通知
 
--   交互式窗体应用程序
+- 交互式窗体应用程序
 
 在应用程序中构建客户端通信时，通常有两个组件：
 
--   服务器端连接管理器（SignalR Hub、WebSocketManager WebSocketHandler）
+- 服务器端连接管理器（SignalR Hub、WebSocketManager WebSocketHandler）
 
--   客户端库
+- 客户端库
 
 客户端不限于浏览器 - 移动应用、控制台应用和其他本地应用也可以使用 SignalR/WebSocket 进行通信。 下面的简单程序是 WebSocketManager 示例应用程序的一部分，它向控制台回显发送给聊天应用程序的所有内容：
 
@@ -434,26 +437,28 @@ public class Program
         Console.ReadLine();
         StopConnectionAsync();
     }
-    
+
     public static async Task StartConnectionAsync()
     {
         _connection = new Connection();
         await _connection.StartConnectionAsync("ws://localhost:65110/chat");
     }
-    
+
     public static async Task StopConnectionAsync()
     {
         await _connection.StopConnectionAsync();
     }
+}
 ```
 
 请思考应用程序可通过哪些方式与客户端应用程序直接通信，以及实时通信是否会改善应用的用户体验。
 
 > ### <a name="references--client-communication"></a>参考 - 客户端通信
+>
 > - **ASP.NET Core SignalR**  
-> <https://github.com/aspnet/SignalR>
+>   <https://github.com/aspnet/SignalR>
 > - **WebSocket 管理器**  
-> https://github.com/radu-matei/websocket-manager
+>   https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>域驱动的设计 - 是否该使用？
 
@@ -463,29 +468,29 @@ public class Program
 
 组成域模型的对象彼此交互，以表现系统行为。 这些对象可分为以下几类：
 
--   [实体](http://deviq.com/entity/)，表示具有一系列标识的对象。 实体通常使用键永久存储，并且之后可使用该键进行检索。
+- [实体](https://deviq.com/entity/)，表示具有一系列标识的对象。 实体通常使用键永久存储，并且之后可使用该键进行检索。
 
--   [聚合](http://deviq.com/aggregate-pattern/)，表示应作为单元保留的一组对象。
+- [聚合](https://deviq.com/aggregate-pattern/)，表示应作为单元保留的一组对象。
 
--   [值对象](http://deviq.com/value-object/)，表示可以根据其属性值的总和进行比较的概念。 例如，包含开始日期和结束日期的 DateRange。
+- [值对象](https://deviq.com/value-object/)，表示可以根据其属性值的总和进行比较的概念。 例如，包含开始日期和结束日期的 DateRange。
 
--   [域事件](https://martinfowler.com/eaaDev/DomainEvent.html)，表示系统中发生的与系统其他部分相关的事件。
+- [域事件](https://martinfowler.com/eaaDev/DomainEvent.html)，表示系统中发生的与系统其他部分相关的事件。
 
-请注意，DDD 域模型应封装模型中的复杂行为。 尤其是实体，它不应该仅仅是属性的集合。 域模型缺少行为，并且仅表示系统状态时，就是所谓的[贫乏性模型](http://deviq.com/anemic-model/)，DDD 中应避免此类模型。
+请注意，DDD 域模型应封装模型中的复杂行为。 尤其是实体，它不应该仅仅是属性的集合。 域模型缺少行为，并且仅表示系统状态时，就是所谓的[贫乏性模型](https://deviq.com/anemic-model/)，DDD 中应避免此类模型。
 
 除这些模型类型之外，DDD 通常还采用多种模式：
 
--   [存储库](http://deviq.com/repository-pattern/)，用于提取持久保留详细信息。
+- [存储库](https://deviq.com/repository-pattern/)，用于提取持久保留详细信息。
 
--   [工厂](https://en.wikipedia.org/wiki/Factory_method_pattern)，用于封装复杂对象创建。
+- [工厂](https://en.wikipedia.org/wiki/Factory_method_pattern)，用于封装复杂对象创建。
 
--   域事件，用于从触发行为中分离依赖性行为。
+- 域事件，用于从触发行为中分离依赖性行为。
 
--   [服务](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/)，用于封装复杂行为和/或基础结构实现详细信息。
+- [服务](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/)，用于封装复杂行为和/或基础结构实现详细信息。
 
--   [命令](https://en.wikipedia.org/wiki/Command_pattern)，用于分离发出的命令并执行命令本身。
+- [命令](https://en.wikipedia.org/wiki/Command_pattern)，用于分离发出的命令并执行命令本身。
 
--   [规范](http://deviq.com/specification-pattern/)，用于封装查询详细信息。
+- [规范](https://deviq.com/specification-pattern/)，用于封装查询详细信息。
 
 DDD 还建议使用之前介绍过的干净体系结构，以实现松散耦合、封装和使用单元测试即可轻松验证的代码。
 
@@ -500,8 +505,9 @@ DDD 需要在建模、体系结构和通信方面进行投资，这对于较小�
 可以使用混合方法，只对应用程序中的事务性区域或比较复杂的区域使用 DDD，而不对应用程序中比较简单的 CRUD 或只读部分使用 DDD。 例如，如果是为显示报表或将仪表板数据可视化而查询数据，则无需具有聚合约束。 使用单独的、更简单的读取模型处理这类要求是完全可以接受的。
 
 > ### <a name="references--domain-driven-design"></a>参考 - 域驱动设计
+>
 > - **简明 DDD（StackOverflow 答案）**  
-> <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
+>   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>部署
 
@@ -525,31 +531,32 @@ ASP.NET Core 应用程序是控制台应用程序，服务器启动时必须启�
 
 如果在 Azure 上托管应用程序，则可以使用 Microsoft Azure 应用程序网关作为专用虚拟设备来提供多项服务。 除了充当单个应用程序的反向代理之外，应用程序网关还可以提供以下功能：
 
--   HTTP 负载均衡
+- HTTP 负载均衡
 
--   SSL 卸载（仅到 Internet 的 SSL）
+- SSL 卸载（仅到 Internet 的 SSL）
 
--   端到端 SSL
+- 端到端 SSL
 
--   多站点路由（在单个应用程序网关上整合最多 20 个站点）
+- 多站点路由（在单个应用程序网关上整合最多 20 个站点）
 
--   Web 应用程序防火墙
+- Web 应用程序防火墙
 
--   Websocket 支持
+- Websocket 支持
 
--   高级诊断
+- 高级诊断
 
-请在第 10 章中了解有关 Azure 部署选项的详细信息。
+请在[第 10 章](development-process-for-azure.md)中了解有关 Azure 部署选项的详细信息。
 
 > ### <a name="references--deployment"></a>参考 - 部署
+>
 > - **托管和部署概述**  
-> <https://docs.microsoft.com/aspnet/core/publishing/>
+>   <https://docs.microsoft.com/aspnet/core/publishing/>
 > - **何时结合使用 Kestrel 和反向代理**  
-> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
+>   <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **在 Docker 容器中托管 ASP.NET Core 应用**  
-> <https://docs.microsoft.com/aspnet/core/publishing/docker>
+>   <https://docs.microsoft.com/aspnet/core/publishing/docker>
 > - **应用程序网关简介**  
-> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
+>   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
 [上一页](common-client-side-web-technologies.md)

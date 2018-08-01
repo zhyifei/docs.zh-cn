@@ -23,23 +23,23 @@ ms.locfileid: "33573034"
   
  其他接口中的定义是相应的情形是在创建了公共接口，可以支持几种类型，包括某些值类型。 值类型不能从继承类型以外<xref:System.ValueType>，但它们可以实现接口，因此使用接口是为了提供通用的基类型的唯一选项。  
   
- **✓ DO**定义一个接口，如果你需要一些常见的 API 来支持的一组包含值类型的类型。  
+ **✓ DO** 定义一个接口，如果你需要一些常见的 API 来支持的一组包含值类型的类型。  
   
- **✓ CONSIDER**定义的接口，如果你需要在已继承自其他类型的类型上支持其功能。  
+ **✓ CONSIDER** 定义的接口，如果你需要在已继承自其他类型的类型上支持其功能。  
   
- **X AVOID**使用标记接口 （不包含任何成员的接口）。  
+ **X AVOID** 使用标记接口 （不包含任何成员的接口）。  
   
  如果你需要将标记为具有特定特征 （标记） 的类，通常情况下，使用的自定义特性，而不是接口。  
   
- **✓ DO**提供至少一种类型的接口的实现。  
+ **✓ DO** 提供至少一种类型的接口的实现。  
   
  执行此可帮助验证接口的设计。 例如，<xref:System.Collections.Generic.List%601>实现的<xref:System.Collections.Generic.IList%601>接口。  
   
- **✓ DO**提供使用你定义的每个接口的至少一个 API （采用作为参数或属性的接口的方法类型化为接口）。  
+ **✓ DO** 提供使用你定义的每个接口的至少一个 API （采用作为参数或属性的接口的方法类型化为接口）。  
   
  执行此可帮助验证接口设计。 例如，<xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>使用<xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>接口。  
   
- **X DO NOT**将成员添加到具有以前发布的接口。  
+ **X DO NOT** 将成员添加到具有以前发布的接口。  
   
  这样将会破坏接口的实现。 为了避免版本控制问题，应创建一个新的接口。  
   

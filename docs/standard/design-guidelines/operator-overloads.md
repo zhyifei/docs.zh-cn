@@ -22,25 +22,25 @@ ms.locfileid: "33579302"
   
  虽然允许，并且在某些情况下有用，应慎重使用运算符重载。 有很多情况下在哪些运算符重载具有已被滥用，如 framework 设计器启动时若要使用的操作，应是简单的方法的运算符。 以下准则可帮助您决定何时以及如何使用运算符重载。  
   
- **X AVOID**定义运算符重载，除了应感觉基元 （内置） 类型的类型中。  
+ **X AVOID** 定义运算符重载，除了应感觉基元 （内置） 类型的类型中。  
   
- **✓ CONSIDER**应感觉类似于基元类型的类型中定义运算符重载。  
+ **✓ CONSIDER** 应感觉类似于基元类型的类型中定义运算符重载。  
   
  例如，<xref:System.String?displayProperty=nameWithType>具有`operator==`和`operator!=`定义。  
   
- **✓ DO**中表示的数字的结构定义运算符重载 (如<xref:System.Decimal?displayProperty=nameWithType>)。  
+ **✓ DO** 中表示的数字的结构定义运算符重载 (如<xref:System.Decimal?displayProperty=nameWithType>)。  
   
- **X DO NOT**过于刻意定义运算符重载时。  
+ **X DO NOT** 过于刻意定义运算符重载时。  
   
  运算符重载可种情况下在其中显而易见将哪些操作的结果。 例如，它有意义能够减去<xref:System.DateTime>从另一个`DateTime`并获取<xref:System.TimeSpan>。 但是，不适合使用逻辑 union 运算符到联合的两个数据库查询，或使用移位运算符将写入到流。  
   
- **X DO NOT**提供运算符重载，除非至少其中一个操作数是定义重载的类型。  
+ **X DO NOT** 提供运算符重载，除非至少其中一个操作数是定义重载的类型。  
   
- **✓ DO**对称方式重载运算符。  
+ **✓ DO** 对称方式重载运算符。  
   
  例如，如果重载`operator==`，还应该重载`operator!=`。 同样，如果重载`operator<`，还应该重载`operator>`，依次类推。  
   
- **✓ CONSIDER**提供的友好名称的对应到每个重载运算符的方法。  
+ **✓ CONSIDER** 提供的友好名称的对应到每个重载运算符的方法。  
   
  许多语言不支持运算符重载。 出于此原因，建议重载运算符的类型包括具有正确的特定于域的名称，它提供等效功能的辅助方法。  
   
@@ -93,21 +93,21 @@ ms.locfileid: "33579302"
 ### <a name="conversion-operators"></a>转换运算符  
  转换运算符是一元运算符，从而允许从一种类型到另一个转换。 必须将运算符定义为操作数或返回类型上的静态成员。 有两种类型的转换运算符： 隐式和显式。  
   
- **X DO NOT**提供转换运算符，如果最终用户未明确要求这种转换。  
+ **X DO NOT** 提供转换运算符，如果最终用户未明确要求这种转换。  
   
- **X DO NOT**定义转换运算符之外的类型的域。  
+ **X DO NOT** 定义转换运算符之外的类型的域。  
   
  例如， <xref:System.Int32>， <xref:System.Double>，和<xref:System.Decimal>是所有数值类型，而<xref:System.DateTime>不是。 因此，应该有任何转换运算符以转换`Double(long)`到`DateTime`。 在这种情况下被首选构造函数。  
   
- **X DO NOT**提供隐式转换运算符，如果转换，则可能丢失信息。  
+ **X DO NOT** 提供隐式转换运算符，如果转换，则可能丢失信息。  
   
  例如，存在不应为隐式转换`Double`到`Int32`因为`Double`更广范围比`Int32`。 可以提供显式转换运算符，即使该转换是可能丢失信息。  
   
- **X DO NOT**从隐式强制转换引发异常。  
+ **X DO NOT** 从隐式强制转换引发异常。  
   
  它是最终用户了解发生了什么情况，因为它们可能不知道正在进行转换很难。  
   
- **✓ DO**引发<xref:System.InvalidCastException?displayProperty=nameWithType>如果对强制转换运算符的调用导致有损转换和运算符的协定不允许丢失数据的转换。  
+ **✓ DO** 引发<xref:System.InvalidCastException?displayProperty=nameWithType>如果对强制转换运算符的调用导致有损转换和运算符的协定不允许丢失数据的转换。  
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   

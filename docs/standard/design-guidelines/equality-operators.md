@@ -21,29 +21,29 @@ ms.locfileid: "33571012"
 # <a name="equality-operators"></a>相等运算符
 本部分讨论重载相等运算符并引用`operator==`和`operator!=`作为相等运算符。  
   
- **X DO NOT**重载相等运算符和不在其他之一。  
+ **X DO NOT** 重载相等运算符和不在其他之一。  
   
- **✓ DO**确保<xref:System.Object.Equals%2A?displayProperty=nameWithType>和相等运算符具有完全相同的语义和类似的性能特征。  
+ **✓ DO** 确保<xref:System.Object.Equals%2A?displayProperty=nameWithType>和相等运算符具有完全相同的语义和类似的性能特征。  
   
  这通常意味着`Object.Equals`需要时重载相等运算符时被重写。  
   
- **X AVOID**相等运算符从引发异常。  
+ **X AVOID** 相等运算符从引发异常。  
   
  例如，返回 false 如果的自变量之一为 null 而不是引发`NullReferenceException`。  
   
 ## <a name="equality-operators-on-value-types"></a>有关值类型的相等运算符  
- **✓ DO**重载相等运算符的值类型，如果相等是有意义。  
+ **✓ DO** 重载相等运算符的值类型，如果相等是有意义。  
   
  在大多数编程语言中，没有默认实现的`operator==`为值类型。  
   
 ## <a name="equality-operators-on-reference-types"></a>对引用类型的相等运算符  
- **X AVOID**重载相等运算符对可变引用类型。  
+ **X AVOID** 重载相等运算符对可变引用类型。  
   
  许多语言都有内置的相等运算符对于引用类型。 内置运算符通常实现引用相等性，并更改为值相等的默认行为时，许多开发人员感到惊奇多功能。  
   
  因为不可变性使困难得多，需要注意引用相等性和值相等性之间的差异，用于不可变的引用类型缓解此问题。  
   
- **X AVOID**重载相等运算符对引用类型，如果实现可能会显著慢于引用相等性的。  
+ **X AVOID** 重载相等运算符对引用类型，如果实现可能会显著慢于引用相等性的。  
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   

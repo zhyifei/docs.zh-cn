@@ -1,41 +1,43 @@
 ---
 title: C# 中的 LINQ
-description: 主题链接，提供有关 LINQ 的详细信息。
+description: 主题链接，提供有关 C# 中的 LINQ 的详细信息。
 ms.date: 11/30/2016
 ms.assetid: 8eb3284f-0ab9-4cad-9216-2da58d9761a5
-ms.openlocfilehash: 8501156bf2dfeff63a99a56d6f776ee7f2e350dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2defe82f93c8961eddd2a69e78ea446e2e996c7e
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275621"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404039"
 ---
-# <a name="linq-in-c"></a>C# 中的 LINQ
-此部分包含提供有关 LINQ 的详细信息的主题链接。  
-  
-## <a name="in-this-section"></a>本节内容  
- [LINQ 查询简介](../programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- 介绍所有语言和数据源共有的基本 LINQ 查询操作的 3 个部分。  
-  
- [LINQ 和泛型类型](../programming-guide/concepts/linq/linq-and-generic-types.md)  
- 简单介绍泛型类型在 LINQ 中的使用。  
-  
- [使用 LINQ 进行数据转换](../programming-guide/concepts/linq/data-transformations-with-linq.md)  
- 介绍转换在查询中检索到的数据时可采用的各种方式。  
-  
- [LINQ 查询操作中的类型关系](../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
- 介绍如何在 LINQ 查询操作的 3 个部分中保留和/或转换类型  
-  
- [LINQ 中的查询语法和方法语法](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
- 比较表达 LINQ 查询的两种方式：方法语法和查询语法。  
-  
- [支持 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)  
- 描述 C# 中支持 LINQ 的语言构造。  
-   
-## <a name="related-sections"></a>相关章节  
- [LINQ 查询表达式](../programming-guide/linq-query-expressions/index.md)  
- 概述 LINQ 中的查询并提供指向其他资源的链接。  
-  
- [标准查询运算符概述](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
- 介绍 LINQ 中使用的标准方法。  
-  
+# <a name="linq-in-c"></a>C# 中的 LINQ #
+
+此部分包含提供有关 LINQ 的详细信息的主题链接。
+
+## <a name="in-this-section"></a>本节内容
+
+[LINQ 查询简介](../programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+介绍所有语言和数据源共有的基本 LINQ 查询操作的 3 个部分。  
+
+[LINQ 和泛型类型](../programming-guide/concepts/linq/linq-and-generic-types.md)  
+简单介绍泛型类型在 LINQ 中的使用。
+
+[使用 LINQ 进行数据转换](../programming-guide/concepts/linq/data-transformations-with-linq.md)  
+介绍转换在查询中检索到的数据时可采用的各种方式。
+
+[LINQ 查询操作中的类型关系](../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
+介绍如何在 LINQ 查询操作的 3 个部分中保留和/或转换类型
+
+[LINQ 中的查询语法和方法语法](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
+比较表达 LINQ 查询的两种方式：方法语法和查询语法。
+
+[支持 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)  
+描述 C# 中支持 LINQ 的语言构造。
+
+## <a name="related-sections"></a>相关章节
+
+[LINQ 查询表达式](../programming-guide/linq-query-expressions/index.md)  
+概述 LINQ 中的查询并提供指向其他资源的链接。
+
+[标准查询运算符概述](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
+介绍 LINQ 中使用的标准方法。

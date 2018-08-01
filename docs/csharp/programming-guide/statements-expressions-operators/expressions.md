@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 830c68e6857e72fe19099753ba57a7e22491af2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb70a7e3dfd8b274987bf68568004d785afd0ee1
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339652"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936941"
 ---
 # <a name="expressions-c-programming-guide"></a>表达式（C# 编程指南）
 表达式是由一个或多个操作数以及零个或多个运算符组成的序列，其计算结果为一个值、对象、方法或命名空间。 表达式可以包含文本值、方法调用、运算符及其操作数，或简单名称。 简单名称可以是变量名、类型成员名、方法参数名、命名空间名或类型名。  
@@ -61,8 +61,9 @@ DoWork();
 ## <a name="lambda-expressions"></a>Lambda 表达式  
  Lambda 表达式表示没有名称但可以具有输入参数和多个语句的“内联方法”。 它们在 LINQ 中广泛用于向方法传递参数。 Lambda 表达式会编译为委托或表达式树，具体取决于使用它们的上下文。 有关详细信息，请参阅 [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
-## <a name="expression-trees"></a>表达式树  
- 使用表达式树可将表达式表示为数据结构。 表达式树由 LINQ 提供程序广泛使用，用来将查询表达式转换为在其他某些上下文（如 SQL 数据库）中有意义的代码。 有关详细信息，请参阅[表达式树](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)。  
+## <a name="expression-trees"></a>表达式树
+
+使用表达式树可将表达式表示为数据结构。 表达式树由 LINQ 提供程序广泛使用，用来将查询表达式转换为在其他某些上下文（如 SQL 数据库）中有意义的代码。 有关详细信息，请参阅[表达式树 (C#)](../concepts/expression-trees/index.md)。
   
 ## <a name="expression-body-definitions"></a>表达式主体定义
 

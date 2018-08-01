@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207529"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404588"
 ---
 # <a name="the-history-of-c"></a>C# 发展历史 #
 
@@ -73,7 +73,7 @@ C# 3.0 版和 Visual Studio 2008 一起发布于 2007 年下半年，但完整�
 - [扩展方法](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [隐式类型本地变量](../language-reference/keywords/var.md)
 - [分部方法](../language-reference/keywords/partial-method.md)
-- 对象和集合初始值设定项
+- [对象和集合初始值设定项](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 回顾过去，这些功能中大多数似乎都是不可或缺，难以分割的。 它们的组合都是经过巧妙布局。 我们通常认为 C# 版本的杀手锏是查询表达式，也就是语言集成查询 (LINQ)。
 

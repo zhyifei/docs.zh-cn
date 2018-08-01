@@ -1,57 +1,87 @@
 ---
 title: .NET Core 入门
 description: 查找相关资源，了解如何在 Windows、Linux 和 macOS 上生成 .NET Core 应用程序。
-author: johalex
-ms.author: johalex
-ms.date: 09/14/2017
-ms.openlocfilehash: 7e70cd4ba9891403f6b5890aa585dafb77c76898
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+author: thraka
+ms.author: adegeo
+ms.date: 06/27/2018
+ms.openlocfilehash: fa5deb46b64e1a09c9ad6582486a993a24336b42
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212945"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792395"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 入门
 
-.NET Core 可以在 [Windows](#windows)、[Linux](#linux) 和 [macOS/OS X](#os-x--macos) 上运行。
+本文提供 .NET Core 入门的相关信息。 可在 Windows、Linux 和 macOS 上安装 .NET Core。 你可在最喜欢的文本编辑器中编写代码并生成跨平台的库和应用程序。 
 
-## <a name="windows"></a>Windows
+如果不确定 .NET Core 是什么或其与其他 .NET 技术的关系，请首先参阅 [What is .NET](https://www.microsoft.com/net/learn/what-is-dotnet)（.NET 是什么）概述。 简单地说，.NET Core 是一个跨平台的开放源 .NET 实现。
 
-在 [Windows](https://www.microsoft.com/net/core#windows) 上安装 .NET Core。 
+## <a name="create-an-application"></a>创建应用程序
 
-可以通过以下分步教程着手开发 .NET Core 应用。
+首先，在计算机上下载并安装 [.NET Core SDK](https://www.microsoft.com/net/download/)。
 
-* [在 Visual Studio 2017 中使用 .NET Core 生成 C# Hello World 应用程序](./tutorials/with-visual-studio.md) - 了解如何使用 C# 和 Visual Studio 2017 生成、调试和发布简单的 .NET Core 控制台应用程序。
-* [在 Visual Studio 2017 中使用 C# 和 .NET Core 生成类库](./tutorials/library-with-visual-studio.md) - 了解如何使用 Visual Studio 2017 生成用 C# 编写的类库。
-* [在 Visual Studio 2017 中使用 .NET Core 生成 Visual Basic Hello World 应用程序](./tutorials/vb-with-visual-studio.md) - 了解如何使用 Visual Basic 和 Visual Studio 2017 生成、调试和发布简单的 .NET Core 控制台应用程序。 
-* [在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 生成类库](./tutorials/vb-library-with-visual-studio.md) - 了解如何使用 Visual Studio 2017 生成用 Visual Basic 编写的类库。
-* [使用 C# 和 .NET Core 在 Windows 上开始 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) - 本[第 9 频道](https://channel9.msdn.com)视频演示了如何安装并使用 Microsoft 轻量级跨平台代码编辑器 [Visual Studio Code](https://code.visualstudio.com/) 在 .NET Core 中创建第一个控制台应用程序。
-* [开始使用 .NET Core 和 Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017)本[第 9 频道](https://channel9.msdn.com)视频演示了如何安装和使用 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)Microsoft 的功能完备的 IDE）在 .NET Core 中创建你的第一个跨平台控制台应用程序。
-* [使用命令行开始 .NET Core](tutorials/using-with-xplat-cli.md) - 可以结合使用任何代码编辑器和 [.NET Core 跨平台命令行接口 (CLI)](tools/index.md)。
+然后，打开某一终端，如 PowerShell、命令提示符或 Bash。 键入以下 `dotnet` 命令以创建并运行 C# 应用程序。
 
-有关受支持的 Windows 版本列表，请参阅 [Windows 开发的先决条件](windows-prerequisites.md)主题。
+```console
+dotnet new console --output sample1
+dotnet run --project sample1
+```
 
-## <a name="linux"></a>Linux
+您应看到以下输出：
 
-在 [Linux](https://www.microsoft.com/net/core#linuxredhat) 上安装 .NET Core。
+```console
+Hello World!
+```
 
-可以通过以下分步教程着手开发 .NET Core 应用。
+祝贺你！ 现已创建了一个简单的 .NET Core 应用程序。 此外，还可以使用 [Visual Studio Code](tutorials/with-visual-studio-code.md)、[Visual Studio 2017](tutorials/with-visual-studio.md)（仅限 Windows）或 [Visual Studio for Mac](tutorials/using-on-mac-vs.md)（仅限 macOS）来创建 .NET Core 应用程序。
 
-* [使用命令行开始 .NET Core](tutorials/using-with-xplat-cli.md) - 可以结合使用任何代码编辑器和 [.NET Core 跨平台命令行接口 (CLI)](tools/index.md)。
-* [在 Ubuntu 上使用 Visual Studio Code 创建 C# .NET Core 应用入门](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) - 此 [Channel9](https://channel9.msdn.com) 视频展示了如何安装并使用 Microsoft 轻型跨平台代码编辑器 [Visual Studio Code](https://code.visualstudio.com/)，在 Ubuntu 14.04 上创建首个 .NET Core 控制台应用。
+## <a name="tutorials"></a>教程
 
-有关支持的 Linux 发行版和版本列表，请参阅 [Linux 开发的先决条件](linux-prerequisites.md)主题。
+可以通过以下分步教程着手开发 .NET Core 应用程序。
 
-## <a name="os-x--macos"></a>OS X/macOS
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-安装适用于 [macOS](https://www.microsoft.com/net/core#macos) 的 .NET Core。 .NET Core 可在 OS X El Capitan（版本 10.11）和 macOS Sierra（版本 10.12）上使用。
+* [使用 Visual Studio 2017 生成 C# .NET Core“Hello World”应用程序。](./tutorials/with-visual-studio.md)
 
-可以通过以下分步教程着手开发 .NET Core 应用。
+* [使用 Visual Studio 2017 生成 C# .NET Core 类库。](./tutorials/library-with-visual-studio.md)
 
-* [在 macOS 上使用 Visual Studio Code 创建 C# .NET Core 应用入门](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac) - 此 [Channel9](https://channel9.msdn.com) 视频展示了如何安装并使用 Microsoft 轻型跨平台代码编辑器 [Visual Studio Code](https://code.visualstudio.com/)，创建首个 .NET Core 控制台应用。 
-* [在 macOS 上使用 Visual Studio Code 创建 .NET Core 应用入门](tutorials/using-on-macos.md) - 了解使用 Visual Studio Code 创建 .NET Core 解决方案的步骤和工作流，包括单元测试、第三方库和如何使用调试工具。
-* [使用命令行开始 .NET Core](tutorials/using-with-xplat-cli.md) - 可以结合使用任何代码编辑器和 [.NET Core 跨平台命令行接口 (CLI)](tools/index.md)。
-* [使用 Visual Studio for Mac 在 macOS 上入门 .NET Core](tutorials/using-on-mac-vs.md) - 本教程演示了如何使用 Visual Studio for Mac 生成简单的 .NET Core 控制台应用程序。
-* [使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案](tutorials/using-on-mac-vs-full-solution.md) - 本教程为你演示如何构建包含可重用的库和单元测试的完整的 .NET Core 解决方案。
+* [使用 Visual Studio 2017 生成 Visual Basic .NET Core“Hello World”应用程序。](./tutorials/vb-with-visual-studio.md)
 
-有关支持的 OS X/macOS 版本列表，请参阅 [macOS 开发的先决条件](macos-prerequisites.md)主题。
+* [使用 Visual Studio 2017 生成 Visual Basic 和 .NET Core 类库。](./tutorials/vb-library-with-visual-studio.md)  
+
+* 观看视频，了解[如何安装和使用 Visual Studio Code 和 .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)。
+
+* 观看视频，了解[如何安装和使用 Visual Studio 2017 和 .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)。
+
+* [使用命令行实现 .NET Core 入门。](tutorials/using-with-xplat-cli.md)
+
+有关受支持的 Windows 版本列表，请参阅 [Windows 开发的先决条件](windows-prerequisites.md)一文。
+
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+
+可以通过以下分步教程着手开发 .NET Core 应用程序。
+
+* [使用命令行实现 .NET Core 入门。](tutorials/using-with-xplat-cli.md)
+
+* 观看视频：[在 Ubuntu 上使用 C# 和 .NET Core 实现 Visual Studio Code 入门](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)。
+
+有关受支持的 Linux 发行版和版本列表，请参阅 [Linux 开发的先决条件](linux-prerequisites.md)一文。
+
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
+
+可以通过以下分步教程着手开发 .NET Core 应用程序。
+
+* 观看视频：[在 macOS 上使用 C# 和 .NET Core 实现 Visual Studio Code 入门](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)。
+
+* [使用 Visual Studio Code 在 macOS 上实现 .NET Core 入门。](tutorials/using-on-macos.md)
+
+* [使用命令行实现 .NET Core 入门。](tutorials/using-with-xplat-cli.md)
+
+* [借助 Visual Studio for Mac 在 macOS 上实现 .NET Core 入门。](tutorials/using-on-mac-vs.md)
+
+* [使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案。](tutorials/using-on-mac-vs-full-solution.md)
+
+有关受支持的 OS X/macOS 版本列表，请参阅 [macOS 开发的先决条件](macos-prerequisites.md)一文。
+
+***

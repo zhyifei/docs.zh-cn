@@ -3,13 +3,13 @@ title: Azure 的开发过程
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | Azure 的开发过程
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/08/2017
-ms.openlocfilehash: ea7b173369cea3b785297a136546d65965c3d789
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106848"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404384"
 ---
 # <a name="development-process-for-azure"></a>Azure 的开发过程
 
@@ -40,8 +40,6 @@ ms.locfileid: "37106848"
 
 [下载 Visual Studio Code](https://code.visualstudio.com/download)
 
-
-
 ## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Azure 托管型 ASP.NET Core 应用的开发工作流
 
 应用程序开发生命周期始于每位开发人员的计算机，开发人员使用其首选语言对应用进行编码和本地测试。 开发人员可选择其青睐的源代码管理系统，并可使用生成服务器或基于内置 Azure 功能配置持续集成 (CI) 和/或持续交付/部署 (CD)。
@@ -52,9 +50,9 @@ ms.locfileid: "37106848"
 
 若要为应用创建发布管道，需要具备源代码管理中的应用程序代码。 设置一个本地存储库，并将其连接到团队项目中的远程存储库。 请按照以下说明执行操作：
 
--   [使用 Git 和 Visual Studio 分享代码](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs)或
+- [使用 Git 和 Visual Studio 分享代码](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs)或
 
--   [使用 TFVC 和 Visual Studio 分享代码](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [使用 TFVC 和 Visual Studio 分享代码](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 创建要在其中部署应用程序的 Azure 应用服务。 转至 Azure 门户上的“应用服务”选项卡，创建一个 Web 应用。 单击“+添加”，选择 Web 应用模板，单击“创建”并提供名称或其他详细信息。 该 Web 应用可通过 {name}.azurewebsites.net 进行访问。
 
@@ -98,7 +96,7 @@ ms.locfileid: "37106848"
 
 生成成功后，CD 过程将选取产生的生成项目。 其中包括一个 Web 部署包。 生成服务器将此包部署到 Azure 应用服务，使用新创建的服务替换任何现有服务。 通常该步骤面向过渡环境，但是部分应用程序通过 CD 过程直接部署到生产。
 
-#### <a name="step-5-azure-app-service-web-app"></a>步骤 5。 Azure 应用服务。 Web 应用。
+#### <a name="step-5-azure-app-service-web-app"></a>步骤 5。 Azure 应用服务 Web 应用
 
 部署后，ASP.NET Core 应用程序在 Azure 应用服务 Web 应用的上下文运行。 可使用 Azure 门户监视以及进一步配置该 Web 应用。
 
@@ -110,7 +108,6 @@ ms.locfileid: "37106848"
 
 **构建 ASP.NET Core 应用并将其部署到 Azure**  
 <https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
-
 
 >[!div class="step-by-step"]
 [上一页](test-asp-net-core-mvc-apps.md)

@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 06/18/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9706dad0a8e32651496e0404be4501c2c70e9d75
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: e3ff2124a43cf42ce26cf94cfd5384387eef0ed9
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948626"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937067"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>教程：使用 ML.NET 预测纽约出租车费（回归）
 
@@ -296,6 +296,6 @@ private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> m
 > * 评估模型
 > * 使用预测模型
 
-查看我们的 GitHub 存储库以继续学习，并找到更多示例。
+进入下一教程了解详细信息。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/)
+> [Iris 聚类分析](iris-clustering.md)

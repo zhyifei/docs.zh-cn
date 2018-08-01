@@ -2,12 +2,12 @@
 title: 异步返回类型 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 07aefcf3149b2210e3dc97713647fa3a0133a535
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02e3cdd433d5d6d4d58667d56592b9fc2bf374c4
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143552"
 ---
 # <a name="async-return-types-c"></a>异步返回类型 (C#)
 异步方法可以具有以下返回类型：
@@ -24,7 +24,7 @@ ms.locfileid: "33334179"
   
 在以下其中一节检查每个返回类型，且在本主题末尾可以找到使用全部三种类型的完整示例。  
   
-##  <a name="BKMK_TaskTReturnType"></a>Task(T) 返回类型  
+##  <a name="BKMK_TaskTReturnType"></a> Task\<TResult\> 返回类型  
 <xref:System.Threading.Tasks.Task%601> 返回类型用于某种异步方法，此异步方法包含 [return](../../../../csharp/language-reference/keywords/return.md) (C#) 语句，其中操作数具有类型 `TResult`。  
   
 在下面的示例中，`GetLeisureHours` 异步方法包含返回整数的 `return` 语句。 因此，该方法声明必须指定 `Task<int>` 的返回类型。  <xref:System.Threading.Tasks.Task.FromResult%2A> 异步方法是返回字符串的操作的占位符。
@@ -60,13 +60,13 @@ ms.locfileid: "33334179"
   
 返回 void 的异步方法的调用方无法捕获从该方法引发的异常，且此类未经处理的异常可能会导致应用程序故障。 如果返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的异步方法中出现异常，此异常将存储于返回的任务中，并在等待该任务时再次引发。 因此，请确保可以产生异常的任何异步方法都具有返回类型 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>，并确保会等待对方法的调用。  
   
-有关如何在异步方法中捕捉异常的更多信息，请参阅 [try-catch](../../../../csharp/language-reference/keywords/try-catch.md)。  
+有关如何在异步方法中捕获异常的详细信息，请参阅 [try-catch](../../../language-reference/keywords/try-catch.md) 主题的[异步方法中的异常](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods)部分。  
   
 以下示例定义一个异步事件处理程序。  
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  
-## <a name="generalized-async-return-types-and-valuetaskt"></a>通用的异步返回类型和 ValueTask<T>
+## <a name="generalized-async-return-types-and-valuetasktresult"></a>通用的异步返回类型和 ValueTask\<TResult\>
 
 从 C# 7.0 开始，异步方法可返回任何具有可访问的 `GetAwaiter` 方法的类型。
  

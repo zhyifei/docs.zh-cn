@@ -7,29 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: a4d5719bccd240658880cc5c6e549e8c912ca1b9
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: a72624d5702ec12bfda98d49a16474cc84205ff0
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696389"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245747"
 ---
 # <a name="ref-c-reference"></a>ref（C# 参考）
 
-`ref` 关键字指示按引用传递的值。 它用在三种不同的上下文中： 
+`ref` 关键字指示按引用传递的值。 它用在四种不同的上下文中：
 
 - 在方法签名和方法调用中，按引用将参数传递给方法。 有关详细信息，请参阅[引用传递参数](#passing-an-argument-by-reference)。
-
 - 在方法签名中，按引用将值返回给调用方。 有关详细信息，请参阅[引用返回值](#reference-return-values)。
-
 - 在成员正文中，指示引用返回值是否作为调用方欲修改的引用被存储在本地，或在一般情况下，局部变量按引用访问另一个值。 有关详细信息，请参阅 [ref 局部变量](#ref-locals)。
+- 在 `struct` 声明中声明 `ref struct` 或 `ref readonly struct`。 请参阅 [ref 结构声明](#ref-struct-declarations)，了解更多详细信息。
 
 ## <a name="passing-an-argument-by-reference"></a>按引用传递参数
 
 在方法的参数列表中使用 `ref` 关键字时，它指示参数按引用传递，而非按值传递。 按引用传递的效果是，对所调用方法中参数进行的任何更改都反映在调用方法中。 例如，如果调用方传递本地变量表达式或数组元素访问表达式，所调用方法会替换 ref 参数引用的对象，然后，当该方法返回时，调用方的本地变量或数组元素将开始引用新对象。
 
 > [!NOTE]
->  不要混淆通过引用传递的概念与引用类型的概念。 这两种概念是不同的。 无论方法参数是值类型还是引用类型，均可由 `ref` 修改。 当通过引用传递时，不会对值类型装箱。  
+> 不要混淆通过引用传递的概念与引用类型的概念。 这两种概念是不同的。 无论方法参数是值类型还是引用类型，均可由 `ref` 修改。 当通过引用传递时，不会对值类型装箱。  
 
 若要使用 `ref` 参数，方法定义和调用方法均必须显式使用 `ref` 关键字，如下面的示例所示。  
 
@@ -48,6 +47,7 @@ class CS0663_Example
     public void SampleMethod(ref int i) { }
 }
 ```
+
 但是，当一个方法具有 `ref`、`in` 或 `out` 参数，另一个方法具有值参数时，则可以重载方法，如下面的示例所示。
   
 [!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#2)]
@@ -65,7 +65,7 @@ class CS0663_Example
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>按引用传递参数：示例
 
-前面的示例按引用传递值类型。 还可使用 `ref` 关键字按引用传递引用类型。 按引用传递引用类型使所调用方能够替换调用方中引用参数引用的对象。 对象的存储位置按引用参数的值传递到方法。 如果更改参数存储位置中的值（以指向新对象），你还可以将存储位置更改为调用方所引用的位置。 下面的示例将引用类型的实例作为 `ref` 参数传递。   
+前面的示例按引用传递值类型。 还可使用 `ref` 关键字按引用传递引用类型。 按引用传递引用类型使所调用方能够替换调用方中引用参数引用的对象。 对象的存储位置按引用参数的值传递到方法。 如果更改参数存储位置中的值（以指向新对象），你还可以将存储位置更改为调用方所引用的位置。 下面的示例将引用类型的实例作为 `ref` 参数传递。
   
 [!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
 
@@ -73,22 +73,23 @@ class CS0663_Example
   
 ## <a name="reference-return-values"></a>引用返回值
 
-引用返回值（或 ref 返回值）是由方法按引用向调用方返回的值。 即是说，调用方可以修改方法所返回的值，此更改反映在包含方法的对象的状态中。 
+引用返回值（或 ref 返回值）是由方法按引用向调用方返回的值。 即是说，调用方可以修改方法所返回的值，此更改反映在包含方法的对象的状态中。
 
 使用 `ref` 关键字来定义引用返回值：
 
 - 在方法签名中。 例如，下列方法签名指示 `GetCurrentPrice` 方法按引用返回了 <xref:System.Decimal> 值。
 
-   ```csharp
-   public ref decimal GetCurrentValue()
-   ``` 
-- 在 `return` 标记和方法的 `return` 语句中返回的变量之间。 例如:
- 
-   ```csharp
-   return ref DecimalArray[0];
-   ``` 
+```csharp
+public ref decimal GetCurrentValue()
+```
 
-为方便调用方修改对象的状态，引用返回值必须存储在被显式定义为 [ref 局部变量](#ref-locals)的变量中。 
+- 在 `return` 标记和方法的 `return` 语句中返回的变量之间。 例如:
+
+```csharp
+return ref DecimalArray[0];
+```
+
+为方便调用方修改对象的状态，引用返回值必须存储在被显式定义为 [ref 局部变量](#ref-locals)的变量中。
 
 有关示例，请参阅 [ref 返回值和 ref 局部变量示例](#a-ref-returns-and-ref-locals-example)
 
@@ -96,7 +97,7 @@ class CS0663_Example
 
 ref 局部变量用于指代使用 `return ref` 返回的值。  必须将 ref 局部变量初始化，并赋予 ref 返回值。 任何对 ref 本地变量值的修改都将反映在对象的状态中，该对象的方法按引用返回值。
 
-在变量声明前或在方法（该方法将按引用返回值）调用前使用 `ref` 关键字定义 ref 局部变量。 
+在变量声明前或在方法（该方法将按引用返回值）调用前使用 `ref` 关键字定义 ref 局部变量。
 
 例如，下列语句定义名为 `GetEstimatedValue` 的方法返回的 ref 局部变量值：
 
@@ -110,8 +111,8 @@ ref decimal estValue = ref Building.GetEstimatedValue();
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-请注意，在这两个示例中，必须在两个位置同时使用 `ref` 关键字，否则编译器将生成错误 CS8172：“无法使用值对按引用变量进行初始化”。 
- 
+请注意，在这两个示例中，必须在两个位置同时使用 `ref` 关键字，否则编译器将生成错误 CS8172：“无法使用值对按引用变量进行初始化”。
+
 ## <a name="a-ref-returns-and-ref-locals-example"></a>ref 返回值和 ref 局部变量示例
 
 下列示例定义一个具有两个 <xref:System.String> 字段（`Title` 和 `Author`）的 `Book` 类。 还定义包含 `Book` 对象的专用数组的 `BookCollection` 类。 通过调用 `GetBookByTitle` 方法，可按引用返回个别 book 对象。
@@ -122,10 +123,14 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 [!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
-## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="ref-struct-declarations"></a>Ref 结构声明
+
+## <a name="c-language-specification"></a>C# 语言规范
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
+
  [引用语义结合值类型](../../reference-semantics-with-value-types.md)  
  [传递参数](../../programming-guide/classes-and-structs/passing-parameters.md)  
  [方法参数](method-parameters.md)  

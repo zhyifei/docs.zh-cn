@@ -17,11 +17,11 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33570382"
 ---
 # <a name="arrays"></a>数组
-**✓ DO**喜欢使用通过公共 Api 中的数组的集合。 [集合](../../../docs/standard/design-guidelines/guidelines-for-collections.md)部分提供有关如何选择之间集合和数组的详细信息。  
+**✓ DO** 喜欢使用通过公共 Api 中的数组的集合。 [集合](../../../docs/standard/design-guidelines/guidelines-for-collections.md)部分提供有关如何选择之间集合和数组的详细信息。  
   
- **X DO NOT**使用只读数组字段。 字段自身是只读的和不能更改，但可以更改数组中的元素。  
+ **X DO NOT** 使用只读数组字段。 字段自身是只读的和不能更改，但可以更改数组中的元素。  
   
- **✓ CONSIDER**使用交错的数组而不多维数组。  
+ **✓ CONSIDER** 使用交错的数组而不多维数组。  
   
  交错的数组是包含也是数组的元素的数组。 构成元素的数组可以是不同的大小，以减少浪费空间某些集的数据 （例如，稀疏矩阵） 相比多维数组。 此外，CLR 优化对交错数组的索引操作，以便它们可能会在某些情况下更好的运行时性能表现出。  
   

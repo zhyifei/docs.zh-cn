@@ -17,26 +17,26 @@ ms.locfileid: "36948480"
   
  附加依赖项属性是一种建模为静态的 Get 和 Set 方法表示描述对象和其容器之间的关系的"属性"的依赖项属性 (例如的位置`Button`对象上`Panel`容器）。  
   
- **✓ DO**提供的依赖项属性，如果你需要以支持诸如样式、 触发器、 数据绑定、 动画、 动态资源和继承的 WPF 功能的属性。  
+ **✓ DO** 提供的依赖项属性，如果你需要以支持诸如样式、 触发器、 数据绑定、 动画、 动态资源和继承的 WPF 功能的属性。  
   
 ## <a name="dependency-property-design"></a>依赖项属性设计  
- **✓ DO**继承<xref:System.Windows.DependencyObject>，或子类型，在实现依赖项属性之一。 类型提供一个非常有效的属性存储实现，并自动支持 WPF 数据绑定。  
+ **✓ DO** 继承<xref:System.Windows.DependencyObject>，或子类型，在实现依赖项属性之一。 类型提供一个非常有效的属性存储实现，并自动支持 WPF 数据绑定。  
   
- **✓ DO**提供正则 CLR 属性和公共的静态只读字段，存储的实例<xref:System.Windows.DependencyProperty?displayProperty=nameWithType>每个依赖属性。  
+ **✓ DO** 提供正则 CLR 属性和公共的静态只读字段，存储的实例<xref:System.Windows.DependencyProperty?displayProperty=nameWithType>每个依赖属性。  
   
- **✓ DO**实现通过调用实例方法的依赖项属性<xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType>和<xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>。  
+ **✓ DO** 实现通过调用实例方法的依赖项属性<xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType>和<xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>。  
   
- **✓ DO**通过在"属性"。 使用属性的名称来命名依赖项属性的静态字段  
+ **✓ DO** 通过在"属性"。 使用属性的名称来命名依赖项属性的静态字段  
   
- **X DO NOT**在代码中显式设置的依赖项属性的默认值; 而是将它们设置在元数据中。  
+ **X DO NOT** 在代码中显式设置的依赖项属性的默认值; 而是将它们设置在元数据中。  
   
  如果显式设置属性默认值，则你可能会阻止通过一些隐式方式，如样式设置该属性。  
   
- **X DO NOT**将代码放在属性访问器标准 code 之外，若要访问静态字段。  
+ **X DO NOT** 将代码放在属性访问器标准 code 之外，若要访问静态字段。  
   
  代码不会执行如果通过隐式方式，如样式，设置该属性，因为样式直接使用的静态字段。  
   
- **X DO NOT**依赖项属性用于存储安全数据。 可以公开访问甚至私有依赖项属性。  
+ **X DO NOT** 依赖项属性用于存储安全数据。 可以公开访问甚至私有依赖项属性。  
   
 ## <a name="attached-dependency-property-design"></a>附加依赖项属性设计  
  在前面部分所述的依赖项属性表示声明类型; 内部的属性例如，`Text`属性是属性的`TextButton`，其中声明它。 一种特殊的依赖项属性是附加依赖项属性。  
@@ -82,15 +82,15 @@ public class Grid {
   
  遗憾的是依赖项属性访问器不能包含任意验证代码。 相反，依赖项属性的验证逻辑，必须在注册过程中指定。  
   
- **X DO NOT**将依赖项属性的验证逻辑放入的属性访问器。 相反，将传递到的验证回调`DependencyProperty.Register`方法。  
+ **X DO NOT** 将依赖项属性的验证逻辑放入的属性访问器。 相反，将传递到的验证回调`DependencyProperty.Register`方法。  
   
 ## <a name="dependency-property-change-notifications"></a>依赖项属性更改通知  
- **X DO NOT**在依赖项属性访问器中实现更改通知逻辑。 依赖项属性具有一种内置的更改通知功能，必须通过提供更改通知回调到使用<xref:System.Windows.PropertyMetadata>。  
+ **X DO NOT** 在依赖项属性访问器中实现更改通知逻辑。 依赖项属性具有一种内置的更改通知功能，必须通过提供更改通知回调到使用<xref:System.Windows.PropertyMetadata>。  
   
 ## <a name="dependency-property-value-coercion"></a>依赖项属性值强制转换  
  属性存储实际修改之前，属性 setter 到给定的值修改通过 setter 时将属性强制转换。  
   
- **X DO NOT**在依赖项属性访问器中实现强制逻辑。  
+ **X DO NOT** 在依赖项属性访问器中实现强制逻辑。  
   
  依赖项属性具有内置的强制转换功能，，但它可通过提供强制回调到`PropertyMetadata`。  
   

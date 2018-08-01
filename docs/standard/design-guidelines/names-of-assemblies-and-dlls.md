@@ -20,11 +20,11 @@ ms.locfileid: "33570403"
 # <a name="names-of-assemblies-and-dlls"></a>程序集和 DLL 的名称
 程序集是托管代码程序的部署和标识单元。 虽然程序集可以跨一个或多个文件，但通常程序集与 DLL 是一对一映射的。 因此，本部分仅描述 DLL 命名约定，然后可以将其映射到程序集命名约定。  
   
- **✓ 要**为程序集 DLL 选择能够使人联想到大量功能的名称，例如 System.Data。  
+ **✓ 要** 为程序集 DLL 选择能够使人联想到大量功能的名称，例如 System.Data。  
   
  程序集和 DLL 名称不必与命名空间名称相对应，但在命名程序集时应采用命名空间名称。 通常是根据程序集中包含的命名空间的公共前缀来命名 DLL。 例如，如果程序集的两个命名空间为 `MyCompany.MyTechnology.FirstFeature` 和 `MyCompany.MyTechnology.SecondFeature`，则可将其命名为 `MyCompany.MyTechnology.dll`。  
   
- **✓ CONSIDER**按照下面的模式命名 Dll:  
+ **✓ CONSIDER** 按照下面的模式命名 Dll:  
   
  `<Company>.<Component>.dll`  
   

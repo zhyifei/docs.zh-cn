@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: f0bf9b1da76033ef40cc72657ee722083a6f8b1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a96641e6dd42e033f2d28b847fc071dfc514912d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567623"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936992"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>如何：使用支持基于事件的异步模式的组件
 许多组件都支持异步执行工作。 例如，通过 <xref:System.Media.SoundPlayer> 和 <xref:System.Windows.Forms.PictureBox> 组件，可以“在后台”加载音频和图像，同时主线程继续运行而不中断。  
@@ -63,4 +63,4 @@ ms.locfileid: "33567623"
 ## <a name="see-also"></a>请参阅  
  [如何：在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [未构造：Visual Basic 中的多线程处理](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)
+ [Visual Basic 中的多线程处理](../../../docs/visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)

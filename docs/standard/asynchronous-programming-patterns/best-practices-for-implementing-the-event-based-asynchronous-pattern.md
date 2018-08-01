@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: eaf410fa198fdb38a39a0474e9e147542919df8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 519c22e3c2647e2ae3423688b468e133a3e5eb84
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578416"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937109"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>实现基于事件的异步模式的最佳做法
 基于事件的异步模式提供了一种在类中使用熟悉的事件和委托语义公开异步行为的有效方法。 若要实现基于事件的异步模式，你需要遵循某些特定的行为要求。 以下部分描述了在你实现遵循基于事件的异步模式的类时应该考虑的要求和准则。  
@@ -28,14 +28,14 @@ ms.locfileid: "33578416"
  若要实现基于事件的异步模式，你必须提供一些保证来确保类的行为正确且类的客户端能够依赖这种行为。  
   
 ### <a name="completion"></a>完成  
- 操作成功完成、出错或取消时，应始终调用 MethodNameCompleted ****** 事件处理程序。 任何情况下，应用程序都不应遇到这样的情况：应用程序保持空闲状态，而操作却一直不能完成。 此规则的例外情况是：异步操作本身设计为永不完成。  
+ 操作成功完成、出错或取消时，始终应调用 <em>MethodName</em>Completed 事件处理程序。 任何情况下，应用程序都不应遇到这样的情况：应用程序保持空闲状态，而操作却一直不能完成。 此规则的例外情况是：异步操作本身设计为永不完成。  
   
 ### <a name="completed-event-and-eventargs"></a>已完成的事件和 EventArgs  
- 应对每个 MethodNameAsync ****** 方法都提出以下设计要求：  
+ 针对每个单独的 <em>MethodName</em>Async 方法，请应用以下设计要求：  
   
--   应对方法所属类定义 MethodNameCompleted ****** 事件。  
+-   在与该方法相同的类上定义 <em>MethodName</em>Completed 事件。  
   
--   应对派生自 <xref:System.ComponentModel.AsyncCompletedEventArgs> 类的 MethodNameCompleted ****** 事件定义 <xref:System.EventArgs> 类和随附委托。 默认类名应采用 MethodName**CompletedEventArgs 形式。  
+-   为派生自 <xref:System.ComponentModel.AsyncCompletedEventArgs> 类的 <em>MethodName</em>Completed 事件定义一个 <xref:System.EventArgs> 类和随附委托。 默认类名应采用 MethodName**CompletedEventArgs 形式。  
   
 -   确保 <xref:System.EventArgs> 类特定于 *MethodName* 方法的返回值。 在使用 <xref:System.EventArgs> 类时，切勿要求开发人员强制转换结果。  
   
