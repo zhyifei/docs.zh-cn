@@ -1,5 +1,5 @@
 ---
-title: 延迟初始化
+title: 迟缓初始化
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,7 +16,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 06/28/2018
 ms.locfileid: "37073211"
 ---
-# <a name="lazy-initialization"></a>延迟初始化
+# <a name="lazy-initialization"></a>迟缓初始化
 对象的迟缓初始化意味着推迟创建该对象，直到它被首次使用。 （在本主题中，术语迟缓初始化和迟缓实例化是同义词。）迟缓初始化主要用于提升性能、避免计算浪费和降低程序内存需求。 以下是常见方案：  
   
 -   对象创建成本高且程序可能不会使用它。 例如，假定内存中有具有 `Orders` 属性的 `Customer` 对象，该对象包含大量 `Order` 对象，初始化这些对象需要数据库连接。 如果用户永远不要求显示 Orders 或在计算中使用该数据，则无需使用系统内存或计算周期来创建它。 通过使用 `Lazy<Orders>` 来声明 `Orders` 对象用于迟缓初始化，可以避免在不使用该对象时浪费系统资源。  
@@ -87,7 +87,7 @@ ms.locfileid: "37073211"
   
 <a name="ExceptionsInLazyObjects"></a>   
 ## <a name="exceptions-in-lazy-objects"></a>迟缓对象的异常  
- 如前所述，<xref:System.Lazy%601> 对象始终返回其初始化的相同对象或值，因此 <xref:System.Lazy%601.Value%2A> 属性是只读的。 如果启用异常缓存，则此永久性还会扩展到异常行为。 如果延迟初始化的对象异常启用了缓存，并且引发其初始化方法中的发生异常时<xref:System.Lazy%601.Value%2A>首先访问属性时，相同的异常会在每个后续尝试访问上引发<xref:System.Lazy%601.Value%2A>属性. 也就是说，即使在多线程方案中，包装类型的构造函数也绝不会被重新调用。 因此，<xref:System.Lazy%601> 对象不能在一次访问时引发异常，并在随后访问时返回值。  
+ 如前所述，<xref:System.Lazy%601> 对象始终返回其初始化的相同对象或值，因此 <xref:System.Lazy%601.Value%2A> 属性是只读的。 如果启用异常缓存，则此永久性还会扩展到异常行为。 如果迟缓初始化的对象异常启用了缓存，并且引发其初始化方法中的发生异常时<xref:System.Lazy%601.Value%2A>首先访问属性时，相同的异常会在每个后续尝试访问上引发<xref:System.Lazy%601.Value%2A>属性. 也就是说，即使在多线程方案中，包装类型的构造函数也绝不会被重新调用。 因此，<xref:System.Lazy%601> 对象不能在一次访问时引发异常，并在随后访问时返回值。  
   
  当使用任何采用初始化方法（`valueFactory` 参数）的 <xref:System.Lazy%601?displayProperty=nameWithType> 构造函数时，都会启用异常缓存；例如，当使用 `Lazy(T)(Func(T))` 构造函数时，会启用异常缓存。 如果构造函数还使用 <xref:System.Threading.LazyThreadSafetyMode> 值（`mode` 参数），请指定 <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> 或 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>。 指定初始化方法可启用这两种模式的异常缓存。 初始化方法非常简单。 例如，它可能会调用 `T` 的默认构造函数：C# 中的 `new Lazy<Contents>(() => new Contents(), mode)` 或 Visual Basic 中的 `New Lazy(Of Contents)(Function() New Contents())`。 如果你使用不指定初始化方法的 <xref:System.Lazy%601?displayProperty=nameWithType> 构造函数，则不会缓存 `T` 默认构造函数引发的异常。 有关详细信息，请参见 <xref:System.Threading.LazyThreadSafetyMode> 枚举。  
   
