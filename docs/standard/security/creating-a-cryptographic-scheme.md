@@ -30,7 +30,7 @@ ms.locfileid: "33580752"
   
 5.  然后，双方使用对称加密启动一个对话。  
   
- 创建加密方案是一项重要任务。 有关使用加密的详细信息，请参阅处平台 SDK 文档中的加密主题http://msdn.microsoft.com/library。  
+ 创建加密方案是一项重要任务。 有关使用加密的详细信息，请参阅处平台 SDK 文档中的加密主题 http://msdn.microsoft.com/library。  
   
 ## <a name="see-also"></a>请参阅  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
