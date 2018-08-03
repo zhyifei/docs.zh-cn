@@ -1,1 +1,1 @@
-<span data-ttu-id="daac6-101">Windows 8.x 应用商店</span><span class="sxs-lookup"><span data-stu-id="daac6-101">Windows 8.x Store</span></span>
+<span data-ttu-id="c85af-101">Windows 8.x 应用商店</span><span class="sxs-lookup"><span data-stu-id="c85af-101">Windows 8.x Store</span></span>
