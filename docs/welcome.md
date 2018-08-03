@@ -55,7 +55,7 @@ ms.lasthandoff: 09/11/2017
 
 此外，还可以浏览 [.NET API 引用](/dotnet/api)。
 
-## <a name="open-source"></a>打开源
+## <a name="open-source"></a>开源
 
 此文档是完全[开源](https://github.com/dotnet/docs)的。 可通过任何方式参与此文档，如创建问题、编写文档等。  此外，许多 .NET 本身也是开源的：
 
