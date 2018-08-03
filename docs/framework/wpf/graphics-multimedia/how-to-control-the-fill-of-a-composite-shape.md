@@ -8,18 +8,18 @@ helpviewer_keywords:
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
 ms.openlocfilehash: a9a17434f11f432f6446e09bd853ed0d2f23fbe8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33563038"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>如何：控制复合形状的填充
-<xref:System.Windows.Media.GeometryGroup.FillRule%2A>属性<xref:System.Windows.Media.GeometryGroup>或<xref:System.Windows.Media.PathGeometry>，指定"规则"复合形状用于确定给定的点是否为的几何图形的一部分。 有两个可能值<xref:System.Windows.Media.FillRule>:<xref:System.Windows.Media.FillRule.EvenOdd>和<xref:System.Windows.Media.FillRule.Nonzero>。 以下各节将介绍如何使用这两个规则。  
+<xref:System.Windows.Media.GeometryGroup.FillRule%2A>的属性<xref:System.Windows.Media.GeometryGroup>或<xref:System.Windows.Media.PathGeometry>，指定用于确定给定的点是否是几何图形的一部分复合形状的"规则"。 有两个可能值<xref:System.Windows.Media.FillRule>:<xref:System.Windows.Media.FillRule.EvenOdd>和<xref:System.Windows.Media.FillRule.Nonzero>。 以下各节将介绍如何使用这两个规则。  
   
  **EvenOdd：** 此规则通过从一点向任意方向绘制一条射向无穷远的射线，然后计算给定形状中与该射线相交的路径段的数量，从而确定该点是否位于填充区域中。 如果此数目为奇数，那么该点则在内部；如果为偶数，则该点在外部。  
   
- 例如，下面的 XAML 创建复合形状组成同心环 （目标） 的一系列具有<xref:System.Windows.Media.GeometryGroup.FillRule%2A>设置为<xref:System.Windows.Media.FillRule.EvenOdd>。  
+ 例如，以下 XAML 创建的一系列同心环 （目标） 组成的复合形状<xref:System.Windows.Media.GeometryGroup.FillRule%2A>设置为<xref:System.Windows.Media.FillRule.EvenOdd>。  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleEvenOddValue](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillruleevenoddvalue)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33563038"
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
   
- 使用以下示例中，值为<xref:System.Windows.Media.FillRule.Nonzero>为<xref:System.Windows.Media.GeometryGroup.FillRule%2A>因此提供下图：  
+ 使用以下示例中，值为<xref:System.Windows.Media.FillRule.Nonzero>为<xref:System.Windows.Media.GeometryGroup.FillRule%2A>因此了以下图示：  
   
  ![屏幕快照：NonZero 的 FillRule 值](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero1.png "FillRuleNonZero1")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33563038"
   
  ![关系图：FillRule 属性值等于 NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero2.png "FillRuleNonZero2")  
   
- 为了更好地演示行为<xref:System.Windows.Media.FillRule.Nonzero>规则更复杂的形状段运行采用不同的方向是必需的。 下面的 XAML 代码与前面的示例创建形状是类似，只不过使用创建<xref:System.Windows.Media.PathGeometry>而不是<xref:System.Windows.Media.EllipseGeometry>这将创建四个同心弧而不是完全关闭同心圆。  
+ 若要更好地演示行为的<xref:System.Windows.Media.FillRule.Nonzero>是必需的规则与段以不同方向运行更复杂的形状。 下面的 XAML 代码与前面的示例创建字形相似，只不过它使用创建<xref:System.Windows.Media.PathGeometry>而不是<xref:System.Windows.Media.EllipseGeometry>这将创建四个同心弧而不是完全闭合的同心环。  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValuePathGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovaluepathgeometry)]  
   
@@ -55,7 +55,7 @@ ms.locfileid: "33563038"
   
  ![关系图：NonZero 的 FillRule 属性值](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")  
   
- **注意：** 出于<xref:System.Windows.Media.FillRule>，所有形状被都视为闭合。 如果段中存在间隙，请绘制用于闭合该段的假想线。 在以上示例中，环中存在多个较小间隙。 考虑到这一点，人们可能希望穿过间隙的射线产生不同的结果，然后射线在另一个方向上运行。 下面是放大的举例说明了这些缺口和"虚部段"之一 (为了应用绘制的段<xref:System.Windows.Media.FillRule>)，将其关闭。  
+ **注意：** 出于<xref:System.Windows.Media.FillRule>，所有形状都视为已关闭。 如果段中存在间隙，请绘制用于闭合该段的假想线。 在以上示例中，环中存在多个较小间隙。 考虑到这一点，人们可能希望穿过间隙的射线产生不同的结果，然后射线在另一个方向上运行。 下面是放大的举例说明了一种存在的这些障碍和的"假想段"(用于应用的目的绘制的段<xref:System.Windows.Media.FillRule>)，将其关闭。  
   
  ![关系图：对于 FillRule，段总是处于闭合状态](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
   

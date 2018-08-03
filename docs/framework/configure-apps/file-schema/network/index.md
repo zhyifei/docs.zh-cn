@@ -16,10 +16,10 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: c080ff7ebef680712581d1f77fd4eb1ec99c6a86
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "32742609"
 ---
 # <a name="network-settings-schema"></a>网络设置架构
@@ -31,8 +31,7 @@ ms.locfileid: "32742609"
 |[\<connectionManagement> 元素（网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定到 Internet 主机的最大连接数。|  
 |[\<defaultProxy> 元素（网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|指定用于路由到 Internet 的 HTTP 请求的代理服务器。|  
 |[\<mailSettings> 元素（网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|包含邮件发送选项的设置。|  
-|[\<requestCaching> 元素（网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|指定用于从 Internet 主机请求信息的模块。|  
-|[\<requestCaching> 元素（网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|配置 <xref:System.Net?displayProperty=nameWithType> 命名空间的基本网络选项。|  
+|[\<requestCaching> 元素（网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制网络请求的缓存机制。|  
 |[\<webRequestModules> 元素（网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定用于从 Internet 主机请求信息的模块。|  
   
  URI 设置指定 .NET Framework 如何处理使用统一资源标识符 (URI) 表示的 Web 地址。 下表描述 [\<Uri> 元素（Uri 设置）](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)下每个子配置元素的函数。  

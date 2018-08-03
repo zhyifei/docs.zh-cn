@@ -15,10 +15,10 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579647"
 ---
 # <a name="regular-expression-options"></a>正则表达式选项
@@ -275,7 +275,7 @@ ms.locfileid: "33579647"
   
 -   始终按原义解释字符内的空格。 例如，正则表达式模式 `[ .,;:]` 匹配任意单个空白字符、句号、逗号、分号或冒号。  
   
--   加括号的限定符内不允许有空格，如 `{`n`}`、`{`n`,}` 和 `{`n`,`m`}`。 例如，因为它包含一个空白字符，所以正则表达式模式 `\d{1. 3}` 与任何从 1 到 3 位数的数字序列不匹配。  
+-   加括号的限定符内不允许有空格，如 `{`n`}`、`{`n`,}` 和 `{`n`,`m`}`。 例如，因为它包含一个空白字符，所以正则表达式模式 `\d{1, 3}` 与任何从 1 到 3 位数的数字序列不匹配。  
   
 -   引入语言元素的字符序列内不允许有空格。 例如:  
   

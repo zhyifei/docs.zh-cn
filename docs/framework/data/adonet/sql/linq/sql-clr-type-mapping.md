@@ -1,18 +1,18 @@
 ---
 title: SQL-CLR 类型映射
-ms.date: 03/30/2017
+ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33365522"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 类型映射
 在 LINQ to SQL 中，关系数据库的数据模型映射到用您所选择的编程语言表示的对象模型。 当应用程序运行时，LINQ to SQL 会将对象模型中的语言集成查询转换为 SQL，然后将它们发送到数据库进行执行。 当数据库返回结果时，LINQ to SQL 会将它们转换回您可以用您自己的编程语言处理的对象。  
   
- 要转换的对象模型和数据库之间的数据*类型映射*必须定义。 LINQ to SQL 使用类型映射将每个公共语言运行时 (CLR) 类型与一种特定 SQL Server 类型相匹配。 您可以使用基于属性的映射在对象模型内部定义类型映射和其他映射信息，例如数据库结构和表关系。 或者，您可以使用外部映射文件在对象模型外部指定映射信息。 有关详细信息，请参阅[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)和[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
+ 要转换的对象模型和数据库之间的数据*类型映射*必须定义。 LINQ to SQL 使用类型映射将每个公共语言运行时 (CLR) 类型与一种特定 SQL Server 类型相匹配。 您可以使用基于属性的映射在对象模型内部定义类型映射和其他映射信息，例如数据库结构和表关系。 或者，您可以使用外部映射文件在对象模型外部指定映射信息。 有关详细信息，请参阅[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)并[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
   
  本主题讨论下列内容：  
   
@@ -26,7 +26,7 @@ ms.locfileid: "33365522"
   
 -   [数值映射](#NumericMapping)  
   
--   [文本和 XML 映射](#TextMapping)  
+-   [文本和 XML 的映射](#TextMapping)  
   
 -   [日期和时间映射](#DateMapping)  
   
@@ -43,7 +43,9 @@ ms.locfileid: "33365522"
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>类型映射运行时行为矩阵  
  下图显示了数据从数据库检索或保存到数据库时特定类型映射的预期运行时行为。 除序列化之外，LINQ to SQL 不支持任何该矩阵中未指定的 CLR 或 SQL Server 数据类型之间的映射。 有关序列化支持的详细信息，请参阅[二进制序列化](#BinarySerialization)。  
-  
+ 
+![SQL Server 到 SQL CLR 数据类型映射表](media/sql-clr-type-mapping.png)
+
 > [!NOTE]
 >  在进行数据库转换时，某些类型映射可能会导致溢出或数据丢失异常。  
   
@@ -77,9 +79,9 @@ ms.locfileid: "33365522"
 > [!NOTE]
 >  将 SQL 文本类型映射到 CLR <xref:System.Enum?displayProperty=nameWithType> 时，映射的 SQL 列中仅包含 <xref:System.Enum> 成员的名称。 <xref:System.Enum> 映射的 SQL 列不支持其他值。  
   
- O/R 设计器和 SQLMetal 命令行工具无法将 SQL 类型自动映射到 CLR <xref:System.Enum> 类。 您必须通过自定义 DBML 文件以供 O/R 设计器和 SQLMetal 使用来显式配置此映射。 有关自定义类型映射的信息的详细信息，请参阅[SQL-CLR 自定义类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)。  
+ O/R 设计器和 SQLMetal 命令行工具无法将 SQL 类型自动映射到 CLR <xref:System.Enum> 类。 您必须通过自定义 DBML 文件以供 O/R 设计器和 SQLMetal 使用来显式配置此映射。 有关自定义类型映射的详细信息，请参阅[SQL-CLR 自定义类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)。  
   
- 因为用于枚举的 SQL 列将具有与其他数值和文本列; 同一类型这些工具将无法识别您的意图并默认的映射在下面的示例所述[数值映射](#NumericMapping)和[文本和 XML 映射](#TextMapping)部分。 有关使用 DBML 文件生成代码的详细信息，请参阅[LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)。  
+ 其他数字和文本的列;，因为用于枚举的 SQL 列将属于相同类型在下面的示例所述，这些工具将识别你的意向和默认的映射[数值映射](#NumericMapping)并[文本和 XML 映射](#TextMapping)部分。 有关使用 DBML 文件生成代码的详细信息，请参阅[LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)。  
   
  <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法创建一个数值类型的 SQL 列以映射 CLR <xref:System.Enum?displayProperty=nameWithType> 类型。  
   
@@ -120,7 +122,7 @@ ms.locfileid: "33365522"
  有许多其他可以选择的数值映射，但是某些数值映射在转换到数据库或从数据库中转换时，可能会导致溢出或数据丢失异常。 有关详细信息，请参阅[类型映射运行时行为矩阵](#BehaviorMatrix)。  
   
 ### <a name="decimal-and-money-types"></a>Decimal 和 Money 类型  
- SQL Server 的默认精度`DECIMAL`类型 （18 十进制数字的左侧和右侧的小数点） 是比 CLR 的精度小得多<!--zz <xref:System.Decima?displayProperty=nameWithType>l -->`Decimal`与默认情况下配对的类型。 这可导致将数据保存到数据库时的精度降低。 但是，如果将 SQL Server `DECIMAL` 类型配置为大于 29 位精度，则会产生相反的结果。 将 SQL Server `DECIMAL` 类型的精度配置为大于 CLR <xref:System.Decimal?displayProperty=nameWithType> 时，则在从数据库检索数据时会发生精度降低。  
+ SQL Server 的默认精度`DECIMAL`类型 （18 十进制数字的左侧和右侧的小数点） 是 CLR 的精度比小得多<!--zz <xref:System.Decima?displayProperty=nameWithType>l -->`Decimal`与默认情况下配对的类型。 这可导致将数据保存到数据库时的精度降低。 但是，如果将 SQL Server `DECIMAL` 类型配置为大于 29 位精度，则会产生相反的结果。 将 SQL Server `DECIMAL` 类型的精度配置为大于 CLR <xref:System.Decimal?displayProperty=nameWithType> 时，则在从数据库检索数据时会发生精度降低。  
   
  默认情况下和 CLR `MONEY` 类型成对使用的 SQL Server `SMALLMONEY` 和 <xref:System.Decimal?displayProperty=nameWithType> 具有非常小的精度，在将数据保存到数据库时可导致溢出或数据丢失异常。  
   
@@ -160,10 +162,10 @@ ms.locfileid: "33365522"
   
 -   注释  
   
- 尽管你可以映射<xref:System.Xml.Linq.XElement>和<xref:System.Xml.Linq.XDocument>到 SQL Server 中所示[类型映射运行时行为矩阵](#BehaviorMatrix)、<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>方法具有这些类型的任何默认 SQL Server 类型映射。  
+ 尽管可以将映射<xref:System.Xml.Linq.XElement>并<xref:System.Xml.Linq.XDocument>到 SQL Server 中所示[类型映射运行时行为矩阵](#BehaviorMatrix)，则<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>方法具有这些类型没有默认 SQL Server 类型映射。  
   
 ### <a name="custom-types"></a>自定义类型  
- 如果一个类实现`Parse()`和`ToString()`，可以将对象映射到任何 SQL 文本类型 (`CHAR`， `NCHAR`， `VARCHAR`， `NVARCHAR`， `TEXT`， `NTEXT`， `XML`)。 通过将 `ToString()` 返回的值发送到映射的数据库列，把对象存储在数据库中。 通过在数据库返回的字符串上调用 `Parse()` 重新构造对象。  
+ 如果一个类实现`Parse()`并`ToString()`，则可以将对象映射到任何 SQL 文本类型 (`CHAR`， `NCHAR`， `VARCHAR`， `NVARCHAR`， `TEXT`， `NTEXT`， `XML`)。 通过将 `ToString()` 返回的值发送到映射的数据库列，把对象存储在数据库中。 通过在数据库返回的字符串上调用 `Parse()` 重新构造对象。  
   
 > [!NOTE]
 >  LINQ to SQL 不支持使用 <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType> 进行序列化。  
@@ -195,7 +197,7 @@ ms.locfileid: "33365522"
 >  从 Microsoft SQL Server 2008 开始，提供了 SQL Server 类型 `DATETIME2`、`DATETIMEOFFSET`、`DATE` 和 `TIME`。 从 .NET Framework 版本 3.5 SP1 开始，LINQ to SQL 支持映射到这些新类型。  
   
 ### <a name="systemdatetime"></a>System.Datetime  
- CLR <xref:System.DateTime?displayProperty=nameWithType> 类型的范围和精度大于 SQL Server `DATETIME` 类型，这是 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法的默认类型映射。 要避免与 `DATETIME` 范围之外的日期相关的异常，请使用 `DATETIME2`（从 Microsoft SQL Server 2008 开始可用）。 `DATETIME2` 可以与匹配的范围和精度 CLR <xref:System.DateTime?displayProperty=nameWithType>。  
+ CLR <xref:System.DateTime?displayProperty=nameWithType> 类型的范围和精度大于 SQL Server `DATETIME` 类型，这是 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法的默认类型映射。 要避免与 `DATETIME` 范围之外的日期相关的异常，请使用 `DATETIME2`（从 Microsoft SQL Server 2008 开始可用）。 `DATETIME2` 可以与匹配的范围和精度的 clr <xref:System.DateTime?displayProperty=nameWithType>。  
   
  SQL Server 日期不具有 <xref:System.TimeZone>（CLR 中得到充分支持的一种功能）的概念。 无论原始 <xref:System.TimeZone> 信息如何，<xref:System.TimeZone> 值均不进行 <xref:System.DateTimeKind> 转换，按原样保存到数据库中。 从数据库中检索到 <xref:System.DateTime> 值时，它们的值按原样加载到 <xref:System.DateTime> 为 <xref:System.DateTimeKind> 的 <xref:System.DateTimeKind.Unspecified> 中。 有关详细信息支持<xref:System.DateTime?displayProperty=nameWithType>方法，请参阅[System.DateTime 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)。  
   
@@ -213,7 +215,7 @@ ms.locfileid: "33365522"
 |`BINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(MAX)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
-|`VARBINARY(MAX)` 与`FILESTREAM`属性|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
+|`VARBINARY(MAX)` 使用`FILESTREAM`属性|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`IMAGE`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`TIMESTAMP`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
   
