@@ -25,7 +25,7 @@ Redmond, Washington 98052-6399
 
 保留所有权利。 未经发布者书面许可，不得以任何形式或任何方式复制本书中的任何内容。
 
-本书位于免费电子书 （电子图书） 可通过 microsoft 的多个通道的形式如 http://dot.net/architecture。
+本书位于免费电子书 （电子图书） 可通过 microsoft 的多个通道的形式如 http://dot.net/architecture 。
 
 若要了解本书的相关问题，请发送电子邮件至 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -33,7 +33,7 @@ Redmond, Washington 98052-6399
 
 本书中提及的一些示例仅用于说明，纯属虚构。 不存在任何实际关联或联系，请勿妄加推断。
 
-Microsoft 和列在商标http://www.microsoft.com"商标"网页上是 Microsoft 公司集团的商标。 所有其他标记均为其各自所有者的财产。
+Microsoft 和列在商标 http://www.microsoft.com "商标"网页上是 Microsoft 公司集团的商标。 所有其他标记均为其各自所有者的财产。
 
 作者:
 > **Cesar de la Torre**，Microsoft Corp. .NET 产品团队的高级项目经理。
