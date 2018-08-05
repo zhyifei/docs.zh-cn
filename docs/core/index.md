@@ -49,7 +49,7 @@ C#、Visual Basic 和 F# 编译器以及 .NET Core 工具已集成到或可以�
 
 ### <a name="relationship-to-net-standard"></a>与 .NET Standard 的关系
 
-[.NET 标准](../standard/net-standard.md)是一种 API 规范，用于描述开发者可以在每个 .NET 实现代码中使用的一组一致 .NET API。 .NET 实现需要实现此规范才能被视为符合 .NET Standard ，并且才能支持面向 .NET Standard 的库。 
+[.NET Standard](../standard/net-standard.md)是一种 API 规范，用于描述开发者可以在每个 .NET 实现代码中使用的一组一致 .NET API。 .NET 实现需要实现此规范才能被视为符合 .NET Standard ，并且才能支持面向 .NET Standard 的库。 
 
 由于 .NET Core 可实现 .NET Standard，因此也支持 .NET Standard 库。
 
