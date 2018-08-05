@@ -249,7 +249,7 @@
 ### [Lambda 表达式](csharp/lambda-expressions.md)
 ### [属性](csharp/properties.md)
 ### [索引器](csharp/indexers.md)
-### [放弃](csharp/discards.md)
+### [占位符](csharp/discards.md)
 ### [泛型](csharp/programming-guide/generics/index.md)
 ### [迭代器](csharp/iterators.md)
 ### [委托和事件](csharp/delegates-events.md)
