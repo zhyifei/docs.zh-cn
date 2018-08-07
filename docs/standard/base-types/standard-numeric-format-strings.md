@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36208149"
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
@@ -67,7 +67,7 @@ ms.locfileid: "36208149"
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>使用标准数字格式字符串  
 
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 可采用以下两种方式之一使用标准数字格式字符串定义数值的格式：  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36208149"
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>定点（“F”）格式说明符  
- 固定点 ("F") 格式说明符将数字转换为“-ddd.ddd…”格式的字符串， 其中每个“d”表示一个数字 (0-9)。 如果该数字为负，则该字符串以减号开头。  
+ 定点（“F”）格式说明符将数字转换为“-ddd.ddd…”形式的字符串，其中每个“d”表示一个数字 (0-9)。 如果该数字为负，则该字符串以减号开头。  
   
  精度说明符指示所需的小数位数。 如果省略精度说明符，则当前 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 属性提供数值精度。  
   
@@ -350,7 +350,7 @@ ms.locfileid: "36208149"
   
 ## <a name="example"></a>示例  
  
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
  
  下面的示例使用 en-US 区域性和所有标准数字格式说明符设置一个整型数值和一个浮点型数值的格式。 此示例使用两个特定的数值类型（<xref:System.Double> 和 <xref:System.Int32>），但对于任何一个其他数值基类型（<xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>、<xref:System.Numerics.BigInteger>、<xref:System.Decimal> 和 <xref:System.Single>）都将产生类似的结果。  
   

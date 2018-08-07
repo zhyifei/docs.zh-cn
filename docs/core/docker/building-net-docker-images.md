@@ -7,16 +7,15 @@ ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "34827334"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>为 .NET Core 应用程序生成 Docker 映像
 
- 本教程重点介绍了如何在 Docker 上使用 .NET Core。 首先，我们探讨 Microsoft 维护和提供的各种不同的 Docker 映像，及其使用情况。
- 然后讲解了如何生成和 Docker 化 ASP.NET Core 应用。
+ 本教程重点介绍了如何在 Docker 上使用 .NET Core。 首先，我们探讨 Microsoft 维护和提供的各种不同的 Docker 映像，及其使用情况。 然后讲解了如何生成和 Docker 化 ASP.NET Core 应用。
 
 在本教程中可学习：
 
@@ -87,6 +86,17 @@ ms.locfileid: "34827334"
 * [此 ASP.NET Core Docker 示例](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp)演示了生成 ASP.NET Core 应用程序的 Docker 映像以用于生产的最佳实践模式。 此示例适用于 Linux 和 Windows 容器。
 
 * 此 .NET Core Docker 示例演示了[生成 .NET Core 应用程序的 Docker 映像以用于生产](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp)的最佳实践模式。
+
+## <a name="forward-the-request-scheme-and-original-ip-address"></a>转发请求方案和原始 IP 地址
+
+代理服务器、负载均衡器和其他网络设备通常会在请求到达容器化应用之前隐藏有关请求的信息：
+
+* 当通过 HTTP 代理 HTTPS 请求时，原方案 (HTTPS) 将丢失，并且必须在标头中转接。
+* 由于应用收到来自代理的请求，而不是 Internet 或公司网络上请求的真实源，因此原始客户端 IP 地址也必须在标头中转接。
+
+此信息在请求处理中可能很重要，例如在重定向、身份验证、链接生成、策略评估和客户端地理位置中。
+
+要将方案和原始 IP 地址转发到 ASP.NET Core 容器化应用，请使用 Forwarded Headers 中间件。 有关详细信息，请参阅[配置 ASP.NET Core 以使用代理服务器和负载均衡器](/aspnet/core/host-and-deploy/proxy-load-balancer)。
 
 ## <a name="your-first-aspnet-core-docker-app"></a>第一个 ASP.NET Core Docker 应用
 
@@ -262,7 +272,6 @@ dotnet published/aspnetapp.dll
 > * 在本地运行 ASP.NET 示例应用
 > * 使用 Docker for Linux 容器生成和运行示例
 > * 使用 Docker for Windows 容器生成和运行示例
-
 
 **后续步骤**
 

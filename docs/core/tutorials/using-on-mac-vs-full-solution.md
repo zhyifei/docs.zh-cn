@@ -5,17 +5,17 @@ author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
 ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36314693"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
 
 Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面的集成开发环境 (IDE)。 本主题演示了构建包含可重用的库和单元测试的 .NET Core 解决方案。
 
-本教程介绍了如何创建接受来自用户的搜索词和文本字符串、使用类库中的方法计算字符串中出现的搜索词的次数，并将结果返回给用户的应用程序。 该解决方案还包括针对类库的单元测试作为测试驱动开发 (TDD) 概念的介绍。 如果希望使用完整的示例学习该教程，请下载[示例解决方案](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教程介绍了如何创建接受来自用户的搜索词和文本字符串、使用类库中的方法计算字符串中出现的搜索词的次数，并将结果返回给用户的应用程序。 该解决方案还包括类库的单元测试（作为单元测试概念的介绍）。 如果希望使用完整的示例学习该教程，请下载[示例解决方案](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 > [!NOTE]
 > 你的反馈非常有价值。 有两种方法可以向开发团队提供有关 Visual Studio for Mac 的反馈：
@@ -106,15 +106,15 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
    ![在 IDE 主窗口中检查 GetWordCount 的初始单元测试](./media/using-on-mac-vs-full-solution/vsmacfull08.png)
 
-   使用 TDD 时，请务必使新的测试失败一次，以确定其测试逻辑正确无误。 该方法使用“Jack”和“jack”（大写和小写）传递名称“Jack”（大写）和字符串。 如果 `GetWordCount` 方法运行正常，则返回搜索词的两个实例的计数。 为了有意进行失败测试，首先实现测试断言，即搜索词“Jack”的两个实例不是由 `GetWordCount` 方法返回的。 继续执行下一步骤，有意使测试失败。
+   请务必使新的测试失败一次，以确定其测试逻辑正确无误。 该方法使用“Jack”和“jack”（大写和小写）传递名称“Jack”（大写）和字符串。 如果 `GetWordCount` 方法运行正常，则返回搜索词的两个实例的计数。 为了有意进行失败测试，首先实现测试断言，即搜索词“Jack”的两个实例不是由 `GetWordCount` 方法返回的。 继续执行下一步骤，有意使测试失败。
 
 1. 打开屏幕右侧的“单元测试”面板。
 
-![“单元测试”面板](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
+   ![“单元测试”面板](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
 
 1. 单击“停靠”图标使此面板保持打开状态。
 
-![“单元测试”面板“停靠”图标](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
+   ![“单元测试”面板“停靠”图标](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. 单击“全部运行”按钮。
    
