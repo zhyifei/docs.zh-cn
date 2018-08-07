@@ -12,10 +12,10 @@ ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33578074"
 ---
 # <a name="best-practices-for-exceptions"></a>异常的最佳做法
@@ -104,17 +104,19 @@ ms.locfileid: "33578074"
 
 - 如果两个应用域不共享一个公共应用程序基，则用强名称为包含异常信息的程序集签名并将其部署到全局程序集缓存中。
 
-## <a name="include-a-localized-description-string-in-every-exception"></a>在每个异常中都包含一个本地化描述字符串
-
-用户看到的错误消息派生自引发的异常的描述字符串，而不是派生自异常类的名称。
-
 ## <a name="use-grammatically-correct-error-messages"></a>使用语法正确的错误消息
 
-编写清晰的句子，包括结束标点。 在异常的描述字符串中，每个句子都应以句号结尾。 例如，“日志表已溢出”。 就是一个正确的描述字符串。
+编写清晰的句子，包括结束标点。 分配给 <xref:System.Exception.Message?displayProperty=nameWithType> 属性的字符串中的每个句子应以句点结尾。 例如，“日志表已溢出”。 是一个正确的消息字符串。
+
+## <a name="include-a-localized-string-message-in-every-exception"></a>在每个异常中都包含一个本地化字符串消息
+
+用户看到的错误消息派生自引发的异常的 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，而不是派生自异常类的名称。 通常将值赋给 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，方法是将消息字符串传递到[异常构造函数](xref:System.Exception.%23ctor%2A)的 `message` 参数。 
+
+对于本地化应用程序，应为应用程序可能引发的每个异常提供本地化消息字符串。 资源文件用于提供本地化错误消息。 若要了解如何本地化应用程序和检索本地化字符串，请参阅[桌面应用中的资源](../../framework/resources/index.md)和 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>。
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>在自定义异常中，按需提供其他属性
 
-仅当存在附加信息有用的编程方案时，才在异常中提供附加属性（不包括描述字符串）。 例如，<xref:System.IO.FileNotFoundException> 提供 <xref:System.IO.FileNotFoundException.FileName> 属性。
+仅当存在附加信息有用的编程方案时，才在异常中提供附加属性（不包括自定义消息字符串）。 例如，<xref:System.IO.FileNotFoundException> 提供 <xref:System.IO.FileNotFoundException.FileName> 属性。
 
 ## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>放置引发语句，使得堆栈跟踪有所帮助
 
