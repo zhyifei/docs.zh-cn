@@ -514,7 +514,7 @@ The expression body is:
 
 即使最后一个示例也只可识别可能的节点类型的一部分。
 你仍可以向其添加许多将导致其失败的表达式。
-完整的实现包含在名为 [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) 的 .NET 标准中，且可以处理所有可能的节点类型。
+完整的实现包含在名为 [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) 的 .NET Standard 中，且可以处理所有可能的节点类型。
 
 最后，在本文中所使用的库是为演示和学习目的而生成。 它未进行优化。 编写它是为了让所使用的结构非常清晰，以及强调用于访问节点和对此进行分析的技术。 生产实现将更加注重性能。
 

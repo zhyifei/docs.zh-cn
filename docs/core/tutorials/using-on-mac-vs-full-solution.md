@@ -32,7 +32,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 ## <a name="building-a-library"></a>生成库
 
-1. 在欢迎屏幕上，选择“新建项目”。 在“多平台”节点下的“新建项目”对话框中，选择“.NET 标准库”模板。 选择“下一步”。
+1. 在欢迎屏幕上，选择“新建项目”。 在“多平台”节点下的“新建项目”对话框中，选择“.NET Standard 库”模板。 选择“下一步”。
 
    ![“新建项目”对话框](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
 
