@@ -15,7 +15,7 @@ ms.locfileid: "37104646"
 
 .NET Core 的模块化和轻量级特点使其特别适用于容器。 在部署和启动容器时，使用 .NET Core 时容器的映像大小要远小于使用 .NET Framework 时的大小。 与此相反，若要为某个容器使用 .NET Framework，必须以 Windows Server Core 映像作为映像的基础，此映像在体量上远大于用于 .NET Core 的 Windows Nano Server 或 Linux 映像。
 
-此外，.NET 核心可跨平台应用，这样便可使用 Linux 或 Windows 容器映像部署服务器应用。 但如果使用传统的 .NET Framework，只能够基于 Windows Server Core 部署映像。
+此外，.NET Core 可跨平台应用，这样便可使用 Linux 或 Windows 容器映像部署服务器应用。 但如果使用传统的 .NET Framework，只能够基于 Windows Server Core 部署映像。
 
 以下是有关为何要选择 .NET Core 的详尽说明。
 
@@ -43,7 +43,7 @@ ms.locfileid: "37104646"
 
 微服务意味着尽可能得小：可轻松访问、占用空间小、小型的界定上下文、较少的关注度、能够快速启动和停止。 为满足这些要求，需要使用可快速实例化的轻量型容器映像，例如 .NET Core 容器映像。
 
-微服务体系结构还允许跨服务边界，组合使用技术。 这样，在其他微服务或服务使用 Node.js、 Python、 Java、 GoLang 或其他技术开发的一起工作的新微服务的逐步迁移到.NET 核心。
+微服务体系结构还允许跨服务边界，组合使用技术。 这样，在其他微服务或服务使用 Node.js、 Python、 Java、 GoLang 或其他技术开发的一起工作的新微服务的逐步迁移到.NET Core。
 
 ## <a name="deploying-high-density-in-scalable-systems"></a>在可缩放的系统中部署高密度
 
