@@ -81,7 +81,7 @@ ms.locfileid: "33352293"
     - `x && y`：仅当 `x` 不是 `false` 时，才计算 `y`
 * 条件“或”
     - `x || y`：仅当 `x` 不是 `true` 时，才计算 `y`
-* null coalescing
+* null 合并
     - `x ?? y`：如果 `x` 为 null，计算结果为 `y`；否则，计算结果为 `x`
 * 条件运算
     - `x ? y : z`：如果 `x` 为 `true`，计算 `y`；如果 `x` 为 `false`，计算 `z`
