@@ -1,105 +1,174 @@
 ---
 title: 类型扩展 (F#)
 description: '了解如何 F # 类型扩展允许将新成员添加到以前定义的对象类型。'
-ms.date: 05/16/2016
+ms.date: 07/20/2018
 ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33566881"
 ---
-# <a name="type-extensions"></a><span data-ttu-id="c72bc-103">类型扩展</span><span class="sxs-lookup"><span data-stu-id="c72bc-103">Type Extensions</span></span>
+# <a name="type-extensions"></a><span data-ttu-id="e3a10-103">类型扩展</span><span class="sxs-lookup"><span data-stu-id="e3a10-103">Type extensions</span></span>
 
-<span data-ttu-id="c72bc-104">类型扩展允许你将新成员添加到以前定义的对象类型。</span><span class="sxs-lookup"><span data-stu-id="c72bc-104">Type extensions let you add new members to a previously defined object type.</span></span>
+<span data-ttu-id="e3a10-104">类型扩展 (也称为_扩大_) 是一系列功能，让你将新成员添加到以前定义的对象类型。</span><span class="sxs-lookup"><span data-stu-id="e3a10-104">Type extensions (also called _augmentations_) are a family of features that let you add new members to a previously defined object type.</span></span> <span data-ttu-id="e3a10-105">三个功能是：</span><span class="sxs-lookup"><span data-stu-id="e3a10-105">The three features are:</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c72bc-105">语法</span><span class="sxs-lookup"><span data-stu-id="c72bc-105">Syntax</span></span>
+* <span data-ttu-id="e3a10-106">内部类型扩展</span><span class="sxs-lookup"><span data-stu-id="e3a10-106">Intrinsic type extensions</span></span>
+* <span data-ttu-id="e3a10-107">可选类型扩展</span><span class="sxs-lookup"><span data-stu-id="e3a10-107">Optional type extensions</span></span>
+* <span data-ttu-id="e3a10-108">扩展方法</span><span class="sxs-lookup"><span data-stu-id="e3a10-108">Extension methods</span></span>
+
+<span data-ttu-id="e3a10-109">每个可用于不同方案和不同的权衡。</span><span class="sxs-lookup"><span data-stu-id="e3a10-109">Each can be used in different scenarios and has different tradeoffs.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="e3a10-110">语法</span><span class="sxs-lookup"><span data-stu-id="e3a10-110">Syntax</span></span>
 
 ```fsharp
-// Intrinsic extension.
+// Intrinsic and optional extensions
 type typename with
     member self-identifier.member-name =
         body
     ...
-[ end ]
 
-// Optional extension.
-type typename with
-    member self-identifier.member-name =
+// Extension methods
+open System.Runtime.CompilerServices
+
+[<Extension>]
+type Extensions() =
+    [static] member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
-[ end ]
 ```
 
-## <a name="remarks"></a><span data-ttu-id="c72bc-106">备注</span><span class="sxs-lookup"><span data-stu-id="c72bc-106">Remarks</span></span>
-<span data-ttu-id="c72bc-107">有两种形式的具有略有不同的语法和行为的类型扩展。</span><span class="sxs-lookup"><span data-stu-id="c72bc-107">There are two forms of type extensions that have slightly different syntax and behavior.</span></span> <span data-ttu-id="c72bc-108">*内部扩展*作为要扩展的类型是相同的命名空间或模块中，在同一源文件中，，而在同一程序集 （DLL 或可执行文件） 的扩展。</span><span class="sxs-lookup"><span data-stu-id="c72bc-108">An *intrinsic extension* is an extension that appears in the same namespace or module, in the same source file, and in the same assembly (DLL or executable file) as the type being extended.</span></span> <span data-ttu-id="c72bc-109">*可选扩展*是显示原始的模块、 命名空间或要扩展的类型的程序集外部的扩展。</span><span class="sxs-lookup"><span data-stu-id="c72bc-109">An *optional extension* is an extension that appears outside the original module, namespace, or assembly of the type being extended.</span></span> <span data-ttu-id="c72bc-110">类型检查通过反射，但可选扩展不这样做时，内部扩展会出现在类型上。</span><span class="sxs-lookup"><span data-stu-id="c72bc-110">Intrinsic extensions appear on the type when the type is examined by reflection, but optional extensions do not.</span></span> <span data-ttu-id="c72bc-111">可选扩展必须在模块中，并且它们是仅在作用域中打开包含扩展的模块时。</span><span class="sxs-lookup"><span data-stu-id="c72bc-111">Optional extensions must be in modules, and they are only in scope when the module that contains the extension is open.</span></span>
+## <a name="intrinsic-type-extensions"></a><span data-ttu-id="e3a10-111">内部类型扩展</span><span class="sxs-lookup"><span data-stu-id="e3a10-111">Intrinsic type extensions</span></span>
 
-<span data-ttu-id="c72bc-112">在上述语法中， *typename*表示要扩展的类型。</span><span class="sxs-lookup"><span data-stu-id="c72bc-112">In the previous syntax, *typename* represents the type that is being extended.</span></span> <span data-ttu-id="c72bc-113">可以扩展可访问任何类型，但类型名称必须是一个实际类型名称，而不是类型缩写。</span><span class="sxs-lookup"><span data-stu-id="c72bc-113">Any type that can be accessed can be extended, but the type name must be an actual type name, not a type abbreviation.</span></span> <span data-ttu-id="c72bc-114">一种类型扩展中，可以定义多个成员。</span><span class="sxs-lookup"><span data-stu-id="c72bc-114">You can define multiple members in one type extension.</span></span> <span data-ttu-id="c72bc-115">*自我标识符*表示正在调用，就像普通成员中一样的对象的实例。</span><span class="sxs-lookup"><span data-stu-id="c72bc-115">The *self-identifier* represents the instance of the object being invoked, just as in ordinary members.</span></span>
+<span data-ttu-id="e3a10-112">内部类型扩展是一个类型扩展，扩展的用户定义的类型。</span><span class="sxs-lookup"><span data-stu-id="e3a10-112">An intrinsic type extension is a type extension that extends a user-defined type.</span></span>
 
-<span data-ttu-id="c72bc-116">`end`关键字是轻量语法中可选的。</span><span class="sxs-lookup"><span data-stu-id="c72bc-116">The `end` keyword is optional in lightweight syntax.</span></span>
+<span data-ttu-id="e3a10-113">内部类型扩展必须在同一文件中定义**和**中相同的命名空间或模块是作为正在扩展的类型。</span><span class="sxs-lookup"><span data-stu-id="e3a10-113">Intrinsic type extensions must be defined in the same file **and** in the same namespace or module as the type they're extending.</span></span> <span data-ttu-id="e3a10-114">任何其他定义将导致其正在[可选类型扩展](type-extensions.md#optional-type-extensions)。</span><span class="sxs-lookup"><span data-stu-id="e3a10-114">Any other definition will result in them being [optional type extensions](type-extensions.md#optional-type-extensions).</span></span>
 
-<span data-ttu-id="c72bc-117">类型扩展中定义的成员可对类类型上的其他成员一样。</span><span class="sxs-lookup"><span data-stu-id="c72bc-117">Members defined in type extensions can be used just like other members on a class type.</span></span> <span data-ttu-id="c72bc-118">与其他成员一样，它们可以是静态或实例成员。</span><span class="sxs-lookup"><span data-stu-id="c72bc-118">Like other members, they can be static or instance members.</span></span> <span data-ttu-id="c72bc-119">这些方法是也称为*扩展方法*; 属性被称为*扩展属性*，依次类推。</span><span class="sxs-lookup"><span data-stu-id="c72bc-119">These methods are also known as *extension methods*; properties are known as *extension properties*, and so on.</span></span> <span data-ttu-id="c72bc-120">可选扩展成员被编译到的对象实例隐式作为传递的第一个参数的静态成员。</span><span class="sxs-lookup"><span data-stu-id="c72bc-120">Optional extension members are compiled to static members for which the object instance is passed implicitly as the first parameter.</span></span> <span data-ttu-id="c72bc-121">但是，它们充当就像它们是实例成员或根据声明方式的静态成员。</span><span class="sxs-lookup"><span data-stu-id="c72bc-121">However, they act as if they were instance members or static members according to how they are declared.</span></span> <span data-ttu-id="c72bc-122">隐式扩展成员包括作为该类型的成员，可以使用不受限制。</span><span class="sxs-lookup"><span data-stu-id="c72bc-122">Implicit extension members are included as members of the type and can be used without restriction.</span></span>
-
-<span data-ttu-id="c72bc-123">扩展方法不能为虚拟或抽象方法。</span><span class="sxs-lookup"><span data-stu-id="c72bc-123">Extension methods cannot be virtual or abstract methods.</span></span> <span data-ttu-id="c72bc-124">它们可以重载具有相同名称的其他方法，但编译器则报告首选项设置为对于不明确的调用的非扩展方法。</span><span class="sxs-lookup"><span data-stu-id="c72bc-124">They can overload other methods of the same name, but the compiler gives preference to non-extension methods in the case of an ambiguous call.</span></span>
-
-<span data-ttu-id="c72bc-125">如果一个类型的存在多个内部类型扩展，所有成员必须都是唯一的。</span><span class="sxs-lookup"><span data-stu-id="c72bc-125">If multiple intrinsic type extensions exist for one type, all members must be unique.</span></span> <span data-ttu-id="c72bc-126">对于可选类型扩展，为同一类型的不同类型扩展中的成员可以具有相同的名称。</span><span class="sxs-lookup"><span data-stu-id="c72bc-126">For optional type extensions, members in different type extensions to the same type can have the same names.</span></span> <span data-ttu-id="c72bc-127">仅当客户端代码将打开两个不同的作用域定义相同的成员名称，则会出现多义性错误。</span><span class="sxs-lookup"><span data-stu-id="c72bc-127">Ambiguity errors occur only if client code opens two different scopes that define the same member names.</span></span>
-
-<span data-ttu-id="c72bc-128">在下面的示例中，模块中的类型有内部类型扩展。</span><span class="sxs-lookup"><span data-stu-id="c72bc-128">In the following example, a type in a module has an intrinsic type extension.</span></span> <span data-ttu-id="c72bc-129">外部模块的客户端代码，类型扩展将显示为在所有方面的类型的常规成员。</span><span class="sxs-lookup"><span data-stu-id="c72bc-129">To client code outside the module, the type extension appears as a regular member of the type in all respects.</span></span>
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3701.fs)]
-
-<span data-ttu-id="c72bc-130">内部类型扩展可用于分隔成不同的部分类型的定义。</span><span class="sxs-lookup"><span data-stu-id="c72bc-130">You can use intrinsic type extensions to separate the definition of a type into sections.</span></span> <span data-ttu-id="c72bc-131">这可以是用于管理大型类型定义，例如，保持编译器生成的代码和编写的代码单独或组合在一起创建的不同的人或不同的功能与关联的代码。</span><span class="sxs-lookup"><span data-stu-id="c72bc-131">This can be useful in managing large type definitions, for example, to keep compiler-generated code and authored code separate or to group together code created by different people or associated with different functionality.</span></span>
-
-<span data-ttu-id="c72bc-132">在下面的示例中，可选类型扩展将扩展`System.Int32`类型的扩展方法与`FromString`调用静态成员`Parse`。</span><span class="sxs-lookup"><span data-stu-id="c72bc-132">In the following example, an optional type extension extends the `System.Int32` type with an extension method `FromString` that calls the static member `Parse`.</span></span> <span data-ttu-id="c72bc-133">`testFromString`方法演示新成员称为就像任何实例成员一样。</span><span class="sxs-lookup"><span data-stu-id="c72bc-133">The `testFromString` method demonstrates that the new member is called just like any instance member.</span></span>
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3702.fs)]
-
-<span data-ttu-id="c72bc-134">新的实例成员将出现的任何其他方法一样`Int32`类型在 IntelliSense 中，而只包含扩展模块作用域中是打开或以其他方式。</span><span class="sxs-lookup"><span data-stu-id="c72bc-134">The new instance member will appear like any other method of the `Int32` type in IntelliSense, but only when the module that contains the extension is open or otherwise in scope.</span></span>
-
-## <a name="generic-extension-methods"></a><span data-ttu-id="c72bc-135">泛型扩展方法</span><span class="sxs-lookup"><span data-stu-id="c72bc-135">Generic Extension Methods</span></span>
-<span data-ttu-id="c72bc-136">在 F # 3.1 之前, 的 F # 编译器不支持使用 C# 的样式与泛型类型变量、 数组类型、 元组类型或 F # 函数类型作为"this"参数的扩展方法。</span><span class="sxs-lookup"><span data-stu-id="c72bc-136">Before F# 3.1, the F# compiler didn't support the use of C#-style extension methods with a generic type variable, array type, tuple type, or an F# function type as the "this" parameter.</span></span> <span data-ttu-id="c72bc-137">F # 3.1 支持这些扩展成员使用。</span><span class="sxs-lookup"><span data-stu-id="c72bc-137">F# 3.1 supports the use of these extension members.</span></span>
-
-<span data-ttu-id="c72bc-138">例如，在 F # 3.1 代码中，你可以使用与类似于以下语法在 C# 中的签名的扩展方法：</span><span class="sxs-lookup"><span data-stu-id="c72bc-138">For example, in F# 3.1 code, you can use extension methods with signatures that resemble the following syntax in C#:</span></span>
-
-```csharp
-static member Method<T>(this T input, T other)
-```
-
-<span data-ttu-id="c72bc-139">约束的泛型类型参数时，这种方法是特别有用。</span><span class="sxs-lookup"><span data-stu-id="c72bc-139">This approach is particularly useful when the generic type parameter is constrained.</span></span> <span data-ttu-id="c72bc-140">此外，你现在可以声明如下 F # 代码中的扩展成员并定义其他的、 在语义上丰富的一组扩展方法。</span><span class="sxs-lookup"><span data-stu-id="c72bc-140">Further, you can now declare extension members like this in F# code and define an additional, semantically rich set of extension methods.</span></span> <span data-ttu-id="c72bc-141">在 F # 中，你通常扩展成员定义如下面的示例所示：</span><span class="sxs-lookup"><span data-stu-id="c72bc-141">In F#, you usually define extension members as the following example shows:</span></span>
+<span data-ttu-id="e3a10-115">内部类型扩展有时是更简洁的方式来区分类型声明功能。</span><span class="sxs-lookup"><span data-stu-id="e3a10-115">Intrinsic type extensions are sometimes a cleaner way to separate functionality from the type declaration.</span></span> <span data-ttu-id="e3a10-116">下面的示例演示如何定义内部类型扩展：</span><span class="sxs-lookup"><span data-stu-id="e3a10-116">The following example shows how to define an intrinsic type extension:</span></span>
 
 ```fsharp
+namespace Example
+
+type Variant =
+    | Num of int
+    | Str of string
+  
+module Variant =
+    let print v =
+        match v with
+        | Num n -> printf "Num %d" n
+        | Str s -> printf "Str %s" s
+
+// Add a member to Variant as an extension
+type Variant with
+    member x.Print() = Variant.print x
+```
+
+<span data-ttu-id="e3a10-117">使用类型扩展，可单独的以下各项：</span><span class="sxs-lookup"><span data-stu-id="e3a10-117">Using a type extension allows you to separate each of the following:</span></span>
+
+* <span data-ttu-id="e3a10-118">声明`Variant`类型</span><span class="sxs-lookup"><span data-stu-id="e3a10-118">The declaration of a `Variant` type</span></span>
+* <span data-ttu-id="e3a10-119">若要打印的功能`Variant`类，具体取决于其"形状"</span><span class="sxs-lookup"><span data-stu-id="e3a10-119">Functionality to print the `Variant` class depending on its "shape"</span></span>
+* <span data-ttu-id="e3a10-120">用于访问对象样式使用的打印功能的方法`.`-表示法</span><span class="sxs-lookup"><span data-stu-id="e3a10-120">A way to access the printing functionality with object-style `.`-notation</span></span>
+
+<span data-ttu-id="e3a10-121">这是一种替代方法上定义为成员的所有内容`Variant`。</span><span class="sxs-lookup"><span data-stu-id="e3a10-121">This is an alternative to defining everything as a member on `Variant`.</span></span> <span data-ttu-id="e3a10-122">虽然它不是功能的本质上是功能的更好的方法，它可以是功能的在某些情况下的更简洁表示形式。</span><span class="sxs-lookup"><span data-stu-id="e3a10-122">Although it is not an inherently better approach, it can be a cleaner representation of functionality in some situations.</span></span>
+
+<span data-ttu-id="e3a10-123">内部类型扩展编译为它们增加时，会显示在类型上反射检查类型的类型的成员。</span><span class="sxs-lookup"><span data-stu-id="e3a10-123">Intrinsic type extensions are compiled as members of the type they augment, and appear on the type when the type is examined by reflection.</span></span>
+
+## <a name="optional-type-extensions"></a><span data-ttu-id="e3a10-124">可选类型扩展</span><span class="sxs-lookup"><span data-stu-id="e3a10-124">Optional type extensions</span></span>
+
+<span data-ttu-id="e3a10-125">可选类型扩展是类型的显示原始模块、 命名空间或要扩展的程序集外部的扩展。</span><span class="sxs-lookup"><span data-stu-id="e3a10-125">An optional type extension is an extension that appears outside the original module, namespace, or assembly of the type being extended.</span></span>
+
+<span data-ttu-id="e3a10-126">可选类型扩展可用于扩展具有未定义自己的类型。</span><span class="sxs-lookup"><span data-stu-id="e3a10-126">Optional type extensions are useful for extending a type that you have not defined yourself.</span></span> <span data-ttu-id="e3a10-127">例如：</span><span class="sxs-lookup"><span data-stu-id="e3a10-127">For example:</span></span>
+
+```fsharp
+module Extensions
+
 open System.Collections.Generic
 
 type IEnumerable<'T> with
     /// Repeat each element of the sequence n times
     member xs.RepeatElements(n: int) =
-        seq { for x in xs do for i in 1 .. n do yield x }
+        seq {
+            for x in xs do
+                for i in 1 .. n do
+                    yield x
+        }
 ```
 
-<span data-ttu-id="c72bc-142">但是，对于泛型类型，类型变量可能不受到约束。</span><span class="sxs-lookup"><span data-stu-id="c72bc-142">However, for a generic type, the type variable may not be constrained.</span></span> <span data-ttu-id="c72bc-143">你现在可以声明一个 C# 的 F # 若要解决此限制中的样式扩展成员。</span><span class="sxs-lookup"><span data-stu-id="c72bc-143">You can now declare a C#-style extension member in F# to work around this limitation.</span></span> <span data-ttu-id="c72bc-144">在你合并此类声明使用 F # 的内联功能，你可以作为扩展成员呈现泛型算法。</span><span class="sxs-lookup"><span data-stu-id="c72bc-144">When you combine this kind of declaration with the inline feature of F#, you can present generic algorithms as extension members.</span></span>
+<span data-ttu-id="e3a10-128">现在可以访问`RepeatElements`如同它是的成员<xref:System.Collections.Generic.IEnumerable%601>只要`Extensions`模块打开您正处于作用域中。</span><span class="sxs-lookup"><span data-stu-id="e3a10-128">You can now access `RepeatElements` as if it's a member of <xref:System.Collections.Generic.IEnumerable%601> as long as the `Extensions` module is opened in the scope that you are working in.</span></span>
 
-<span data-ttu-id="c72bc-145">请考虑以下声明：</span><span class="sxs-lookup"><span data-stu-id="c72bc-145">Consider the following declaration:</span></span>
+<span data-ttu-id="e3a10-129">可选扩展不显示在当反射检查时，扩展的类型。</span><span class="sxs-lookup"><span data-stu-id="e3a10-129">Optional extensions do not appear on the extended type when examined by reflection.</span></span> <span data-ttu-id="e3a10-130">可选扩展必须在模块中，并且时，它们仅在作用域中包含扩展的模块是打开的或者在作用域中的其他方面。</span><span class="sxs-lookup"><span data-stu-id="e3a10-130">Optional extensions must be in modules, and they're only in scope when the module that contains the extension is open or is otherwise in scope.</span></span>
+
+<span data-ttu-id="e3a10-131">可选扩展成员将会编译成静态成员，为其对象实例隐式传递的第一个参数。</span><span class="sxs-lookup"><span data-stu-id="e3a10-131">Optional extension members are compiled to static members for which the object instance is passed implicitly as the first parameter.</span></span> <span data-ttu-id="e3a10-132">但是，它们的作用像是实例成员或根据它们的声明的静态成员。</span><span class="sxs-lookup"><span data-stu-id="e3a10-132">However, they act as if they're instance members or static members according to how they're declared.</span></span>
+
+## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a><span data-ttu-id="e3a10-133">泛型的内部函数和可选类型扩展限制</span><span class="sxs-lookup"><span data-stu-id="e3a10-133">Generic limitation of intrinsic and optional type extensions</span></span>
+
+<span data-ttu-id="e3a10-134">它是可以受限类型变量的泛型类型上声明的类型扩展。</span><span class="sxs-lookup"><span data-stu-id="e3a10-134">It's possible to declare a type extension on a generic type where the type variable is constrained.</span></span> <span data-ttu-id="e3a10-135">要求是类型的扩展声明的约束与声明的约束相匹配。</span><span class="sxs-lookup"><span data-stu-id="e3a10-135">The requirement is that the constraint of the extension declaration matches the constraint of the declared type.</span></span>
+
+<span data-ttu-id="e3a10-136">但是，即使约束匹配的声明的类型和类型扩展之间，有可能有一定比声明的类型的类型参数的不同要求的扩展成员正文推断出来的约束。</span><span class="sxs-lookup"><span data-stu-id="e3a10-136">However, even when constraints are matched between a declared type and a type extension, it's possible for a constraint to be inferred by the body of an extended member that imposes a different requirement on the type parameter than the declared type.</span></span> <span data-ttu-id="e3a10-137">例如：</span><span class="sxs-lookup"><span data-stu-id="e3a10-137">For example:</span></span>
 
 ```fsharp
+open System.Collections.Generic
+
+// NOT POSSIBLE AND FAILS TO COMPILE!
+//
+// The member 'Sum' has a different requirement on 'T than the type IEnumerable<'T>
+type IEnumerable<'T> with
+    member this.Sum() = Seq.sum this
+```
+
+<span data-ttu-id="e3a10-138">没有方法来获取此代码以使用可选类型扩展：</span><span class="sxs-lookup"><span data-stu-id="e3a10-138">There is no way to get this code to work with an optional type extension:</span></span>
+
+* <span data-ttu-id="e3a10-139">原样`Sum`成员都有不同的约束`'T`(`static member get_Zero`和`static member (+)`) 比类型扩展的定义。</span><span class="sxs-lookup"><span data-stu-id="e3a10-139">As is, the `Sum` member has a different constraint on `'T` (`static member get_Zero` and `static member (+)`) than what the type extension defines.</span></span>
+* <span data-ttu-id="e3a10-140">修改类型扩展具有同一约束作为`Sum`将不再匹配上定义的约束`IEnumerable<'T>`。</span><span class="sxs-lookup"><span data-stu-id="e3a10-140">Modifying the type extension to have the same constraint as `Sum` will no longer match the defined constraint on `IEnumerable<'T>`.</span></span>
+* <span data-ttu-id="e3a10-141">进行更改的成员`member inline Sum`将产生类型约束不匹配错误</span><span class="sxs-lookup"><span data-stu-id="e3a10-141">Making changing the member to `member inline Sum` will give an error that type constraints are mismatched</span></span>
+
+<span data-ttu-id="e3a10-142">所需的内容是"空间中浮动"，可以提供好像它们扩展类型的静态方法。</span><span class="sxs-lookup"><span data-stu-id="e3a10-142">What is desired are static methods that "float in space" and can be presented as if they're extending a type.</span></span> <span data-ttu-id="e3a10-143">这是其中的扩展方法变得非常必要。</span><span class="sxs-lookup"><span data-stu-id="e3a10-143">This is where extension methods become necessary.</span></span>
+
+## <a name="extension-methods"></a><span data-ttu-id="e3a10-144">扩展方法</span><span class="sxs-lookup"><span data-stu-id="e3a10-144">Extension methods</span></span>
+
+<span data-ttu-id="e3a10-145">最后，扩展方法 （有时称为"C# 样式扩展成员"） 可以声明在 F # 中为静态成员方法的类上。</span><span class="sxs-lookup"><span data-stu-id="e3a10-145">Finally, extension methods (sometimes called "C# style extension members") can be declared in F# as a static member method on a class.</span></span>
+
+<span data-ttu-id="e3a10-146">扩展方法可用于当你希望将约束类型变量的泛型类型上定义扩展。</span><span class="sxs-lookup"><span data-stu-id="e3a10-146">Extension methods are useful for when you wish to define extensions on a generic type that will constrain the type variable.</span></span> <span data-ttu-id="e3a10-147">例如：</span><span class="sxs-lookup"><span data-stu-id="e3a10-147">For example:</span></span>
+
+```fsharp
+namespace Extensions
+
+open System.Runtime.CompilerServices
+
 [<Extension>]
-type ExtraCSharpStyleExtensionMethodsInFSharp () =
+type IEnumerableExtensions() =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-<span data-ttu-id="c72bc-146">通过使用此声明，可以编写类似于下面的示例代码。</span><span class="sxs-lookup"><span data-stu-id="c72bc-146">By using this declaration, you can write code that resembles the following sample.</span></span>
+<span data-ttu-id="e3a10-148">使用时，此代码将使其看起来像`Sum`上定义<xref:System.Collections.Generic.IEnumerable%601>，但前提是`Extensions`已打开或在范围内。</span><span class="sxs-lookup"><span data-stu-id="e3a10-148">When used, this code will make it appear as if `Sum` is defined on <xref:System.Collections.Generic.IEnumerable%601>, so long as `Extensions` has been opened or is in scope.</span></span>
 
-```fsharp
-let listOfIntegers = [ 1 .. 100 ]
-let listOfBigIntegers = [ 1I to 100I ]
-let sum1 = listOfIntegers.Sum()
-let sum2 = listOfBigIntegers.Sum()
-```
+## <a name="other-remarks"></a><span data-ttu-id="e3a10-149">其他备注</span><span class="sxs-lookup"><span data-stu-id="e3a10-149">Other remarks</span></span>
 
-<span data-ttu-id="c72bc-147">在此代码中，相同的泛型算术代码应用于两个类型的列表的如果没有重载，通过定义单个的扩展成员。</span><span class="sxs-lookup"><span data-stu-id="c72bc-147">In this code, the same generic arithmetic code is applied to lists of two types without overloading, by defining a single extension member.</span></span>
+<span data-ttu-id="e3a10-150">类型扩展还具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="e3a10-150">Type extensions also have the following attributes:</span></span>
 
+* <span data-ttu-id="e3a10-151">可以扩展任何可访问的类型。</span><span class="sxs-lookup"><span data-stu-id="e3a10-151">Any type that can be accessed can be extended.</span></span>
+* <span data-ttu-id="e3a10-152">可以定义内部函数和可选类型扩展_任何_成员类型，而不仅仅是方法。</span><span class="sxs-lookup"><span data-stu-id="e3a10-152">Intrinsic and optional type extensions can define _any_ member type, not just methods.</span></span> <span data-ttu-id="e3a10-153">因此扩展属性也有可能，例如。</span><span class="sxs-lookup"><span data-stu-id="e3a10-153">So extension properties are also possible, for example.</span></span>
+* <span data-ttu-id="e3a10-154">`self-identifier`令牌[语法](type-extensions.md#syntax)表示调用，就像普通成员的类型的实例。</span><span class="sxs-lookup"><span data-stu-id="e3a10-154">The `self-identifier` token in the [syntax](type-extensions.md#syntax) represents the instance of the type being invoked, just like ordinary members.</span></span>
+* <span data-ttu-id="e3a10-155">扩展的成员可以是静态或实例成员。</span><span class="sxs-lookup"><span data-stu-id="e3a10-155">Extended members can be static or instance members.</span></span>
+* <span data-ttu-id="e3a10-156">在类型扩展的类型变量必须与匹配的声明类型的约束。</span><span class="sxs-lookup"><span data-stu-id="e3a10-156">Type variables on a type extension must match the constraints of the declared type.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c72bc-148">请参阅</span><span class="sxs-lookup"><span data-stu-id="c72bc-148">See Also</span></span>
-[<span data-ttu-id="c72bc-149">F# 语言参考</span><span class="sxs-lookup"><span data-stu-id="c72bc-149">F# Language Reference</span></span>](index.md)
+<span data-ttu-id="e3a10-157">类型扩展还存在以下限制：</span><span class="sxs-lookup"><span data-stu-id="e3a10-157">The following limitations also exist for type extensions:</span></span>
 
-[<span data-ttu-id="c72bc-150">成员</span><span class="sxs-lookup"><span data-stu-id="c72bc-150">Members</span></span>](members/index.md)
+* <span data-ttu-id="e3a10-158">类型扩展不支持虚拟或抽象方法。</span><span class="sxs-lookup"><span data-stu-id="e3a10-158">Type extensions do not support virtual or abstract methods.</span></span>
+* <span data-ttu-id="e3a10-159">类型扩展不支持扩大作为替代方法。</span><span class="sxs-lookup"><span data-stu-id="e3a10-159">Type extensions do not support override methods as augmentations.</span></span>
+* <span data-ttu-id="e3a10-160">不支持类型扩展[静态解析的类型参数](generics/statically-resolved-type-parameters.md)。</span><span class="sxs-lookup"><span data-stu-id="e3a10-160">Type extensions do not support [Statically Resolved Type Parameters](generics/statically-resolved-type-parameters.md).</span></span>
+* <span data-ttu-id="e3a10-161">可选类型扩展不支持扩大作为构造函数。</span><span class="sxs-lookup"><span data-stu-id="e3a10-161">Optional Type extensions do not support constructors as augmentations.</span></span>
+* <span data-ttu-id="e3a10-162">不能在定义类型扩展[类型缩写，用](type-abbreviations.md)。</span><span class="sxs-lookup"><span data-stu-id="e3a10-162">Type extensions cannot be defined on [type abbreviations](type-abbreviations.md).</span></span>
+* <span data-ttu-id="e3a10-163">类型扩展不是有效的`byref<'T>`（尽管它们可以声明）。</span><span class="sxs-lookup"><span data-stu-id="e3a10-163">Type extensions are not valid for `byref<'T>` (though they can be declared).</span></span>
+* <span data-ttu-id="e3a10-164">类型扩展不是有效的属性 （但它们可以声明）。</span><span class="sxs-lookup"><span data-stu-id="e3a10-164">Type extensions are not valid for attributes (though they can be declared).</span></span>
+* <span data-ttu-id="e3a10-165">可以定义重载具有相同名称的其他方法的扩展，但 F # 编译器提供了首选项设置为非扩展方法，如果调用不明确。</span><span class="sxs-lookup"><span data-stu-id="e3a10-165">You can define extensions that overload other methods of the same name, but the F# compiler gives preference to non-extension methods if there is an ambiguous call.</span></span>
+
+<span data-ttu-id="e3a10-166">最后，如果多个内部类型扩展存在一种类型，所有成员必须都是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e3a10-166">Finally, if multiple intrinsic type extensions exist for one type, all members must be unique.</span></span> <span data-ttu-id="e3a10-167">对于可选类型扩展为同一类型的不同类型扩展中的成员可以具有相同的名称。</span><span class="sxs-lookup"><span data-stu-id="e3a10-167">For optional type extensions, members in different type extensions to the same type can have the same names.</span></span> <span data-ttu-id="e3a10-168">仅当客户端代码打开两个不同的作用域定义相同成员名称，则会出现多义性错误。</span><span class="sxs-lookup"><span data-stu-id="e3a10-168">Ambiguity errors occur only if client code opens two different scopes that define the same member names.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="e3a10-169">请参阅</span><span class="sxs-lookup"><span data-stu-id="e3a10-169">See also</span></span>
+
+[<span data-ttu-id="e3a10-170">F# 语言参考</span><span class="sxs-lookup"><span data-stu-id="e3a10-170">F# Language Reference</span></span>](index.md)
+
+[<span data-ttu-id="e3a10-171">成员</span><span class="sxs-lookup"><span data-stu-id="e3a10-171">Members</span></span>](members/index.md)

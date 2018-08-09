@@ -6,45 +6,45 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: 65bc0439696612cd8331a9c0718efcfee83af574
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33602731"
 ---
-# <a name="ltincludegt-visual-basic"></a><span data-ttu-id="632bb-102">&lt;包括&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="632bb-102">&lt;include&gt; (Visual Basic)</span></span>
-<span data-ttu-id="632bb-103">是指描述的类型和成员在源代码中的另一个文件。</span><span class="sxs-lookup"><span data-stu-id="632bb-103">Refers to another file that describes the types and members in your source code.</span></span>  
+# <a name="ltincludegt-visual-basic"></a><span data-ttu-id="b71ff-102">&lt;包括&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b71ff-102">&lt;include&gt; (Visual Basic)</span></span>
+<span data-ttu-id="b71ff-103">表示描述的类型和成员在源代码中的另一个文件。</span><span class="sxs-lookup"><span data-stu-id="b71ff-103">Refers to another file that describes the types and members in your source code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="632bb-104">语法</span><span class="sxs-lookup"><span data-stu-id="632bb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b71ff-104">语法</span><span class="sxs-lookup"><span data-stu-id="b71ff-104">Syntax</span></span>  
   
 ```xml  
 <include file="filename" path="tagpath[@name='id']" />  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="632bb-105">参数</span><span class="sxs-lookup"><span data-stu-id="632bb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b71ff-105">参数</span><span class="sxs-lookup"><span data-stu-id="b71ff-105">Parameters</span></span>  
  `filename`  
- <span data-ttu-id="632bb-106">必须的。</span><span class="sxs-lookup"><span data-stu-id="632bb-106">Required.</span></span> <span data-ttu-id="632bb-107">包含文档的文件的名称。</span><span class="sxs-lookup"><span data-stu-id="632bb-107">The name of the file containing the documentation.</span></span> <span data-ttu-id="632bb-108">可使用路径来限定文件名。</span><span class="sxs-lookup"><span data-stu-id="632bb-108">The file name can be qualified with a path.</span></span> <span data-ttu-id="632bb-109">括起`filename`在双引号 ("")。</span><span class="sxs-lookup"><span data-stu-id="632bb-109">Enclose `filename` in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="b71ff-106">必须的。</span><span class="sxs-lookup"><span data-stu-id="b71ff-106">Required.</span></span> <span data-ttu-id="b71ff-107">包含文档的文件的名称。</span><span class="sxs-lookup"><span data-stu-id="b71ff-107">The name of the file containing the documentation.</span></span> <span data-ttu-id="b71ff-108">可使用路径来限定文件名。</span><span class="sxs-lookup"><span data-stu-id="b71ff-108">The file name can be qualified with a path.</span></span> <span data-ttu-id="b71ff-109">将`filename`在双引号 ("")。</span><span class="sxs-lookup"><span data-stu-id="b71ff-109">Enclose `filename` in double quotation marks (" ").</span></span>  
   
  `tagpath`  
- <span data-ttu-id="632bb-110">必须的。</span><span class="sxs-lookup"><span data-stu-id="632bb-110">Required.</span></span> <span data-ttu-id="632bb-111">`filename` 中标记的路径，它指向标记 `name`。</span><span class="sxs-lookup"><span data-stu-id="632bb-111">The path of the tags in `filename` that leads to the tag `name`.</span></span> <span data-ttu-id="632bb-112">将路径括在双引号 ("")。</span><span class="sxs-lookup"><span data-stu-id="632bb-112">Enclose the path in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="b71ff-110">必须的。</span><span class="sxs-lookup"><span data-stu-id="b71ff-110">Required.</span></span> <span data-ttu-id="b71ff-111">`filename` 中标记的路径，它指向标记 `name`。</span><span class="sxs-lookup"><span data-stu-id="b71ff-111">The path of the tags in `filename` that leads to the tag `name`.</span></span> <span data-ttu-id="b71ff-112">将该路径括在双引号 ("")。</span><span class="sxs-lookup"><span data-stu-id="b71ff-112">Enclose the path in double quotation marks (" ").</span></span>  
   
  `name`  
- <span data-ttu-id="632bb-113">必须的。</span><span class="sxs-lookup"><span data-stu-id="632bb-113">Required.</span></span> <span data-ttu-id="632bb-114">名称的说明符之前注释的标记中。</span><span class="sxs-lookup"><span data-stu-id="632bb-114">The name specifier in the tag that precedes the comments.</span></span> <span data-ttu-id="632bb-115">`Name` 将具有`id`。</span><span class="sxs-lookup"><span data-stu-id="632bb-115">`Name` will have an `id`.</span></span>  
+ <span data-ttu-id="b71ff-113">必须的。</span><span class="sxs-lookup"><span data-stu-id="b71ff-113">Required.</span></span> <span data-ttu-id="b71ff-114">中位于注释前的标记的名称说明符。</span><span class="sxs-lookup"><span data-stu-id="b71ff-114">The name specifier in the tag that precedes the comments.</span></span> <span data-ttu-id="b71ff-115">`Name` 将具有`id`。</span><span class="sxs-lookup"><span data-stu-id="b71ff-115">`Name` will have an `id`.</span></span>  
   
  `id`  
- <span data-ttu-id="632bb-116">必须的。</span><span class="sxs-lookup"><span data-stu-id="632bb-116">Required.</span></span> <span data-ttu-id="632bb-117">标记的 ID（位于注释之前）。</span><span class="sxs-lookup"><span data-stu-id="632bb-117">The ID for the tag that precedes the comments.</span></span> <span data-ttu-id="632bb-118">将此 ID 括在单引号 (' ')。</span><span class="sxs-lookup"><span data-stu-id="632bb-118">Enclose the ID in single quotation marks (' ').</span></span>  
+ <span data-ttu-id="b71ff-116">必须的。</span><span class="sxs-lookup"><span data-stu-id="b71ff-116">Required.</span></span> <span data-ttu-id="b71ff-117">标记的 ID（位于注释之前）。</span><span class="sxs-lookup"><span data-stu-id="b71ff-117">The ID for the tag that precedes the comments.</span></span> <span data-ttu-id="b71ff-118">将 ID 括在单引号 (' ')。</span><span class="sxs-lookup"><span data-stu-id="b71ff-118">Enclose the ID in single quotation marks (' ').</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="632bb-119">备注</span><span class="sxs-lookup"><span data-stu-id="632bb-119">Remarks</span></span>  
- <span data-ttu-id="632bb-120">使用`<include>`标记来引用另一个文件中的注释，用于描述的类型和成员在源代码中的。</span><span class="sxs-lookup"><span data-stu-id="632bb-120">Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code.</span></span> <span data-ttu-id="632bb-121">这是对直接在源代码文件中放入文档注释的替代方法。</span><span class="sxs-lookup"><span data-stu-id="632bb-121">This is an alternative to placing documentation comments directly in your source code file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b71ff-119">备注</span><span class="sxs-lookup"><span data-stu-id="b71ff-119">Remarks</span></span>  
+ <span data-ttu-id="b71ff-120">使用`<include>`标记引用另一个文件中描述的类型的注释和你的源代码中的成员。</span><span class="sxs-lookup"><span data-stu-id="b71ff-120">Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code.</span></span> <span data-ttu-id="b71ff-121">这是对直接在源代码文件中放入文档注释的替代方法。</span><span class="sxs-lookup"><span data-stu-id="b71ff-121">This is an alternative to placing documentation comments directly in your source code file.</span></span>  
   
- <span data-ttu-id="632bb-122">`<include>`标记使用 W3C XML 路径语言 (XPath) 1.0 版建议。</span><span class="sxs-lookup"><span data-stu-id="632bb-122">The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation.</span></span> <span data-ttu-id="632bb-123">有关用于自定义的方法的详细信息你`<include>`使用位于http://www.w3.org/TR/xpath。</span><span class="sxs-lookup"><span data-stu-id="632bb-123">More information for ways to customize your `<include>` use is available at http://www.w3.org/TR/xpath.</span></span>  
+ <span data-ttu-id="b71ff-122">`<include>`标记使用 W3C XML 路径语言 (XPath) 1.0 版建议。</span><span class="sxs-lookup"><span data-stu-id="b71ff-122">The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation.</span></span> <span data-ttu-id="b71ff-123">有关如何自定义的详细信息您`<include>`使用位于http://www.w3.org/TR/xpath。</span><span class="sxs-lookup"><span data-stu-id="b71ff-123">More information for ways to customize your `<include>` use is available at http://www.w3.org/TR/xpath.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="632bb-124">示例</span><span class="sxs-lookup"><span data-stu-id="632bb-124">Example</span></span>  
- <span data-ttu-id="632bb-125">此示例使用`<include>`要从名为的文件导入成员文档注释标记`commentFile.xml`。</span><span class="sxs-lookup"><span data-stu-id="632bb-125">This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.</span></span>  
+## <a name="example"></a><span data-ttu-id="b71ff-124">示例</span><span class="sxs-lookup"><span data-stu-id="b71ff-124">Example</span></span>  
+ <span data-ttu-id="b71ff-125">此示例使用`<include>`标记从名为的文件导入成员文档注释`commentFile.xml`。</span><span class="sxs-lookup"><span data-stu-id="b71ff-125">This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
- <span data-ttu-id="632bb-126">格式`commentFile.xml`如下。</span><span class="sxs-lookup"><span data-stu-id="632bb-126">The format of the `commentFile.xml` is as follows.</span></span>  
+ <span data-ttu-id="b71ff-126">格式`commentFile.xml`如下所示。</span><span class="sxs-lookup"><span data-stu-id="b71ff-126">The format of the `commentFile.xml` is as follows.</span></span>  
   
 ```xml  
 <Docs>  
@@ -59,5 +59,5 @@ ms.locfileid: "33602731"
 </Docs>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="632bb-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="632bb-127">See Also</span></span>  
- [<span data-ttu-id="632bb-128">XML 注释标记</span><span class="sxs-lookup"><span data-stu-id="632bb-128">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="b71ff-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="b71ff-127">See Also</span></span>  
+ [<span data-ttu-id="b71ff-128">XML 注释标记</span><span class="sxs-lookup"><span data-stu-id="b71ff-128">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
