@@ -22,7 +22,7 @@ ms.locfileid: "33956250"
 - **部署灵活：** 可以包含在应用或已安装的并行用户或计算机范围中。
 - **跨平台：** 可以在 Windows、macOS 和 Linux 上运行；也可移植到其他操作系统。 Microsoft、其他公司和个人提供的[支持的操作系统 (OS)](https://github.com/dotnet/core/blob/master/roadmap.md)、CPU 和应用程序方案会随着时间推移而增多。
 - **命令行工具：** 可在命令行中执行所有产品方案。 
-- **兼容性：**.NET Core 通过 [.NET 标准](../standard/net-standard.md)与 .NET Framework、Xamarin 和 Mono 兼容。
+- **兼容性：**.NET Core 通过 [.NET Standard](../standard/net-standard.md)与 .NET Framework、Xamarin 和 Mono 兼容。
 - **开放源：**.NET Core 是一个开放源平台，使用 MIT 和 Apache 2 许可证。 文档由 [CC-BY](https://creativecommons.org/licenses/by/4.0/) 许可发行。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
 - **由 Microsoft 支持：**.NET Core 由 Microsoft 依据 [.NET Core 支持](https://www.microsoft.com/net/core/support/)提供支持
 
@@ -43,7 +43,7 @@ C#、Visual Basic 和 F# 编译器以及 .NET Core 工具已集成到或可以�
 
 ### <a name="net-apis-and-compatibility"></a>.NET API 和兼容性
 
-可将 .NET Core 看作是 .NET Framework 在 .NET Framework 基类库 (BCL) 的跨平台版本。 它实施 [.NET 标准](../standard/net-standard.md)规范。 .NET Core 提供了一个可用于 .NET Framework 或 Mono/Xamarin 的 API 子集。 在某些情况下，类型未完全实现（某些成员不可用或已移动）。
+可将 .NET Core 看作是 .NET Framework 在 .NET Framework 基类库 (BCL) 的跨平台版本。 它实施 [.NET Standard](../standard/net-standard.md)规范。 .NET Core 提供了一个可用于 .NET Framework 或 Mono/Xamarin 的 API 子集。 在某些情况下，类型未完全实现（某些成员不可用或已移动）。
 
 有关 .NET Core API 的详细信息，请参阅 [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md)（.NET Core API 产品系列）。
 
@@ -129,7 +129,7 @@ Windows 和 Unix 实现大小相似。 Windows 具有较大的实现，因为 Co
 .NET Core 和 .NET Framework 的主要差异在于： 
 
 - **应用模型** -- .NET Core 不支持所有 .NET Framework 应用模型，某种程度上是因为其中许多模型都是基于 Windows 技术，如 WPF（基于 DirectX 生成）。  但 .NET Core 和 .NET Framework 两者都支持控制台和 ASP.NET Core 应用模型。 
-- **API** -- .NET Core 包含很多与 .NET Framework 相同，但数量较少的 API，并且具有不同的组成要素（程序集名称不同；关键用例中的类型形状不同）。 目前，这些差异通常都需要更改，以将源移植到 .NET Core。 .NET Core 实现 [.NET 标准](../standard/net-standard.md) API，随着时间的推移，将包含更多 .NET Framework BCL API。
+- **API** -- .NET Core 包含很多与 .NET Framework 相同，但数量较少的 API，并且具有不同的组成要素（程序集名称不同；关键用例中的类型形状不同）。 目前，这些差异通常都需要更改，以将源移植到 .NET Core。 .NET Core 实现 [.NET Standard](../standard/net-standard.md) API，随着时间的推移，将包含更多 .NET Framework BCL API。
 - **子系统** -- .NET Core 实现 .NET Framework 中子系统的子级，目的是实现更简单的实现和编程模型。 例如，不支持代码访问安全性 (CAS)，但支持反射。
 - **平台** -- .NET Framework 支持 Windows 和 Windows Server，而 NET Core 还支持 macOS 和 Linux。
 - **开放源** -- .NET Core 属于开放源，而 [.NET Framework 的只读子集](https://github.com/microsoft/referencesource)属于开放源。
@@ -138,7 +138,7 @@ Windows 和 Unix 实现大小相似。 Windows 具有较大的实现，因为 Co
 
 ### <a name="comparison-with-mono"></a>与 Mono 比较
 
-[Mono](http://www.mono-project.com/) 是原始的跨平台和 [开放源](https://github.com/mono/mono) .NET 实现，于 2004 年首次发布。 可以把它看作是 .NET Framework 的社区克隆。 Mono 项目团队依赖于 Microsoft 发布的开放 [.NET 标准](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335），以便实现兼容性。
+[Mono](http://www.mono-project.com/) 是原始的跨平台和 [开放源](https://github.com/mono/mono) .NET 实现，于 2004 年首次发布。 可以把它看作是 .NET Framework 的社区克隆。 Mono 项目团队依赖于 Microsoft 发布的开放 [.NET Standard](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335），以便实现兼容性。
 
 .NET Core 和 Mono 的主要差异在于：
 
