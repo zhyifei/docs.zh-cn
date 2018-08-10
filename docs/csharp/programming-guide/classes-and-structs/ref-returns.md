@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
 ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33339613"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 返回值和局部变量
@@ -35,16 +35,19 @@ ms.locfileid: "33339613"
  
 ## <a name="defining-a-ref-return-value"></a>定义 ref 返回值
 
-通过向方法签名的返回类型添加 [ref](../../language-reference/keywords/ref.md) 关键字来定义 ref 返回值。 例如下列签名表示，`GetContactInformation` 属性将对 `Person` 对象的引用返回给调用方：
+返回引用返回值的方法必须满足以下两个条件：
+
+- 方法签名在返回类型前面有 [ref](../../language-reference/keywords/ref.md) 关键字。
+- 方法主体中的每个 [return](../../language-reference/keywords/return.md) 语句都在返回实例的名称前面有 [ref](../../language-reference/keywords/ref.md) 关键字。
+
+下面的示例方法满足这些条件，且返回对名为 `p` 的 `Person` 对象的引用：
 
 ```csharp
-public ref Person GetContactInformation(string fname, string lname);
-```
-
-此外，方法正文中每个 [return](../../language-reference/keywords/return.md) 语句所返回对象的名称前面须有 [ref](../../language-reference/keywords/ref.md) 关键字。 例如，下面的 `return` 语句返回对 `Person` 对象的引用 `p`：
-
-```csharp
-return ref p;
+public ref Person GetContactInformation(string fname, string lname)
+{
+    // ...method implementation...
+    return ref p;
+}
 ```
 
 ## <a name="consuming-a-ref-return-value"></a>使用 ref 返回值

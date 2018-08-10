@@ -32,7 +32,7 @@ ms.locfileid: "33531393"
   
 4.  使用 WSDL 工具输入 Web 服务的 .asmx 文件或 WSDL 文件的 `wsdl` 和 URL，后接应用程序的命名空间，并可选择性地接正在使用的语言。  
   
-     下面的代码示例使用 Web 服务位于http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx。 例如，对于 C# 类型，位于 `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`，对于 Visual Basic 类型，则位于 `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`。 将路径作为参数传递到 WSDL 工具将以指定语言在与应用程序相同的目录和命名空间中生成客户端代理。 如果使用 Visual Studio，则将文件添加到你的项目。  
+     下面的代码示例使用 Web 服务位于 http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx。 例如，对于 C# 类型，位于 `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`，对于 Visual Basic 类型，则位于 `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`。 将路径作为参数传递到 WSDL 工具将以指定语言在与应用程序相同的目录和命名空间中生成客户端代理。 如果使用 Visual Studio，则将文件添加到你的项目。  
   
 5.  选择客户端代理中要将绑定到的类型。  
   
