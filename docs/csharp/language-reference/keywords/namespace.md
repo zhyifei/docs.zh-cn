@@ -27,7 +27,7 @@ ms.locfileid: "39245605"
   
 -   [class](../../../csharp/language-reference/keywords/class.md)  
   
--   [接口](../../../csharp/language-reference/keywords/interface.md)  
+-   [interface](../../../csharp/language-reference/keywords/interface.md)  
   
 -   [struct](../../../csharp/language-reference/keywords/struct.md)  
   
