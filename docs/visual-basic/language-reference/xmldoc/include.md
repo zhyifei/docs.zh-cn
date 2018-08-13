@@ -37,7 +37,7 @@ ms.locfileid: "33602731"
 ## <a name="remarks"></a>备注  
  使用`<include>`标记引用另一个文件中描述的类型的注释和你的源代码中的成员。 这是对直接在源代码文件中放入文档注释的替代方法。  
   
- `<include>`标记使用 W3C XML 路径语言 (XPath) 1.0 版建议。 有关如何自定义的详细信息您`<include>`使用位于http://www.w3.org/TR/xpath。  
+ `<include>`标记使用 W3C XML 路径语言 (XPath) 1.0 版建议。 有关如何自定义的详细信息您`<include>`使用位于 http://www.w3.org/TR/xpath。  
   
 ## <a name="example"></a>示例  
  此示例使用`<include>`标记从名为的文件导入成员文档注释`commentFile.xml`。  
