@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 053c94bc540b130510f155506b6fad32f032a475
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
 ms.locfileid: "33449541"
 ---
-# <a name="imetadatavalidatevalidatorinit-method"></a><span data-ttu-id="20f00-102">IMetaDataValidate::ValidatorInit 方法</span><span class="sxs-lookup"><span data-stu-id="20f00-102">IMetaDataValidate::ValidatorInit Method</span></span>
-<span data-ttu-id="20f00-103">设置一个标志，该标志指定当前元数据范围内的模块类型，并注册验证错误的指定回调方法。</span><span class="sxs-lookup"><span data-stu-id="20f00-103">Sets a flag that specifies the type of the module in the current metadata scope, and registers the specified callback method for validation errors.</span></span>  
+# <a name="imetadatavalidatevalidatorinit-method"></a><span data-ttu-id="20949-102">IMetaDataValidate::ValidatorInit 方法</span><span class="sxs-lookup"><span data-stu-id="20949-102">IMetaDataValidate::ValidatorInit Method</span></span>
+<span data-ttu-id="20949-103">设置一个标志，该标志指定当前元数据范围内的模块类型，并注册验证错误的指定回调方法。</span><span class="sxs-lookup"><span data-stu-id="20949-103">Sets a flag that specifies the type of the module in the current metadata scope, and registers the specified callback method for validation errors.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20f00-104">语法</span><span class="sxs-lookup"><span data-stu-id="20f00-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20949-104">语法</span><span class="sxs-lookup"><span data-stu-id="20949-104">Syntax</span></span>  
   
 ```  
 HRESULT ValidatorInit (  
@@ -36,21 +36,21 @@ HRESULT ValidatorInit (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="20f00-105">参数</span><span class="sxs-lookup"><span data-stu-id="20f00-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="20949-105">参数</span><span class="sxs-lookup"><span data-stu-id="20949-105">Parameters</span></span>  
  `dwModule`  
- <span data-ttu-id="20f00-106">[in]值为[CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md)枚举当前元数据范围内指定的模块类型。</span><span class="sxs-lookup"><span data-stu-id="20f00-106">[in] A value of the [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) enumeration that specifies the type of the module in the current metadata scope.</span></span>  
+ <span data-ttu-id="20949-106">[in]值为[CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md)枚举，用于在当前元数据范围内指定的模块的类型。</span><span class="sxs-lookup"><span data-stu-id="20949-106">[in] A value of the [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) enumeration that specifies the type of the module in the current metadata scope.</span></span>  
   
  `pUnk`  
- <span data-ttu-id="20f00-107">[in]一个指向 <<!--zzxref:IUnknown --> `IUnknown`> 用作验证错误回调函数的实例。</span><span class="sxs-lookup"><span data-stu-id="20f00-107">[in] A pointer to an <<!--zzxref:IUnknown --> `IUnknown`> instance that serves as a function callback for validation errors.</span></span>  
+ <span data-ttu-id="20949-107">[in]一个指向[IUnknown](/cpp/atl/iunknown)用作验证错误回调函数的实例。</span><span class="sxs-lookup"><span data-stu-id="20949-107">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) instance that serves as a function callback for validation errors.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20f00-108">要求</span><span class="sxs-lookup"><span data-stu-id="20f00-108">Requirements</span></span>  
- <span data-ttu-id="20f00-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="20f00-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20949-108">要求</span><span class="sxs-lookup"><span data-stu-id="20949-108">Requirements</span></span>  
+ <span data-ttu-id="20949-109">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="20949-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="20f00-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="20f00-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="20949-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="20949-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="20f00-111">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="20f00-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="20949-111">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="20949-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="20f00-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20f00-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="20949-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20949-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20f00-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="20f00-113">See Also</span></span>  
- [<span data-ttu-id="20f00-114">IMetaDataValidate 接口</span><span class="sxs-lookup"><span data-stu-id="20f00-114">IMetaDataValidate Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
+## <a name="see-also"></a><span data-ttu-id="20949-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="20949-113">See Also</span></span>  
+ [<span data-ttu-id="20949-114">IMetaDataValidate 接口</span><span class="sxs-lookup"><span data-stu-id="20949-114">IMetaDataValidate Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
