@@ -101,7 +101,7 @@ NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位
 
 ## <a name="targeting-net-standard"></a>定位 .NET Standard
 
-可以结合使用 `netstandard` 框架和 NETStandard.Library 元包来[构建.NET 标准库](../core/tutorials/libraries.md)。 可以查看[使用 .NET Core 工具定位 .NET Standard](../core/packages.md) 的示例。
+可以结合使用 `netstandard` 框架和 NETStandard.Library 元包来[构建.NET Standard 库](../core/tutorials/libraries.md)。 可以查看[使用 .NET Core 工具定位 .NET Standard](../core/packages.md) 的示例。
 
 ## <a name="net-framework-compatibility-mode"></a>.NET Framework 兼容性模式
 

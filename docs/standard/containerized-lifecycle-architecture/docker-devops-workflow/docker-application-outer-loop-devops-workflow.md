@@ -111,7 +111,7 @@ Docker 容器形式运行 Visual Studio Team Services 代理： [ https://hub.do
 
 VSTS Docker 扩展： <https://aka.ms/vstsdockerextension>
 
-构建利用 Visual Studio Team Services 的.NET 核心 Linux Docker 映像： <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
+构建利用 Visual Studio Team Services 的.NET Core Linux Docker 映像： <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 
 构建 Docker 支持与基于 Linux 的 Visual Studio 团队服务生成计算机： <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 

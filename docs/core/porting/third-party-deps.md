@@ -75,7 +75,7 @@ dotnet5.4
 dotnet5.5
 ```
 
-尽管这些 TFM 也许可以使用代码，但不保证其兼容性。 使用预发行的 .NET Core 包生成内含这些 TFM 的包。 请记下使用这些 TFM 的包何时（或是否）更新为基于 .NET 标准。
+尽管这些 TFM 也许可以使用代码，但不保证其兼容性。 使用预发行的 .NET Core 包生成内含这些 TFM 的包。 请记下使用这些 TFM 的包何时（或是否）更新为基于 .NET Standard。
 
 > [!NOTE]
 > 若要使用面向传统 PCL 或预发行的 .NET Core 目标的包，必须在项目文件中使用 `PackageTargetFallback` MSBuild 元素。

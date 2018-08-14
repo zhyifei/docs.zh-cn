@@ -17,7 +17,7 @@ ms.locfileid: "36207761"
 > [!NOTE]
 > 下例是关于使用 Unix 的命令行。  此处显示的 `dotnet pack` 命令工作方式与在 Windows 上相同。
 
-对于 .NET Core 1.0，所有库都应以 NuGet 包方式发布。  实际上，这是所有 .NET 标准库的发布和使用方式。  可以使用 `dotnet pack` 命令轻松实现此操作。
+对于 .NET Core 1.0，所有库都应以 NuGet 包方式发布。  实际上，这是所有 .NET Standard 库的发布和使用方式。  可以使用 `dotnet pack` 命令轻松实现此操作。
 
 假设你刚编写了一个很棒的新库，并想通过 NuGet 发布。  你就可以使用跨平台工具创建一个 NuGet 包，完全照做就行！  下例假定使用一个名为 **SuperAwesomeLibrary** 的库，该库以 `netstandard1.0` 为目标。
 

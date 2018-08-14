@@ -109,7 +109,7 @@ ms.locfileid: "34472797"
 
 ### <a name="net-standard"></a>.NET Standard
 
-.NET Standard（目标框架名字对象：`netstandard`）框架表示在 [.NET Standard](../standard/net-standard.md) 基础之上生成并由其定义的 API。 如果构建的库将用于在多个运行时上运行，就应将此框架作为目标。 这样便可在任何一种兼容 .NET 标准的运行时上受支持，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 每个运行时都支持一组 .NET Standard 版本，具体取决于实现的 API。
+.NET Standard（目标框架名字对象：`netstandard`）框架表示在 [.NET Standard](../standard/net-standard.md) 基础之上生成并由其定义的 API。 如果构建的库将用于在多个运行时上运行，就应将此框架作为目标。 这样便可在任何一种兼容 .NET Standard 的运行时上受支持，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 每个运行时都支持一组 .NET Standard 版本，具体取决于实现的 API。
 
 `netstandard` 框架隐式引用 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) 元包。 例如，以下 MSBuild 项目文件指示项目以 `netstandard1.6` 为目标，其引用 [`NETStandard.Library` 1.6 版](https://www.nuget.org/packages/NETStandard.Library/1.6.0)元包。
 

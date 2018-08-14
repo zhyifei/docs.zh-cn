@@ -49,7 +49,7 @@ ms.locfileid: "33579712"
 ## <a name="encodings-in-net"></a>.NET 中的编码  
  .NET 中的所有字符编码类都继承自 <xref:System.Text.Encoding?displayProperty=nameWithType> 类，这是定义所有字符编码通用功能的抽象类。 若要访问在 .NET 中实现的单个编码对象，请执行以下操作：  
   
--   使用 <xref:System.Text.Encoding> 类的静态属性，这些属性返回表示 .NET 标准字符编码（ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32）的对象。 例如，<xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 属性返回 <xref:System.Text.UnicodeEncoding> 对象。 每个对象都使用替换回退处理不能进行编码的字符串和不能进行解码的字节。 （有关详细信息，请参阅 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 一节。）  
+-   使用 <xref:System.Text.Encoding> 类的静态属性，这些属性返回表示 .NET Standard 字符编码（ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32）的对象。 例如，<xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 属性返回 <xref:System.Text.UnicodeEncoding> 对象。 每个对象都使用替换回退处理不能进行编码的字符串和不能进行解码的字节。 （有关详细信息，请参阅 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 一节。）
   
 -   调用编码的类构造函数。 以这种方式可以将 ASCII、utf-7、utf-8、utf-16 和 utf-32 编码对象实例化。 默认情况下，每个对象都使用替换回退处理不能进行编码的字符串和不能进行解码的字节，但你可指定应引发异常。 （有关详细信息，请参阅 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 和 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 一节。）  
   

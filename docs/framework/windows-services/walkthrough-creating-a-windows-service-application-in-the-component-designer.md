@@ -55,7 +55,7 @@ ms.locfileid: "33520508"
   
 2.  在 Visual Basic 或 Visual C# 项目模板列表中，选择“Windows 服务” ，然后对项目 **MyNewService**命名。 选择 **“确定”**。  
   
-     项目模板自动添加从 `Service1` 继承的名为 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 的组件类。  
+     项目模板自动添加从 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 继承的名为 `Service1` 的组件类。  
   
 3.  在“编辑”  菜单上，依次选择“查找和替换” 、“在文件中查找”  （键盘：Ctrl+Shift+F）。 更改 `Service1` 到 `MyNewService`的所有匹配项。 你将在 Service1.cs、Program.cs 和 Service1.Designer.cs（或它们的 .vb 等效项）中找到实例。  
   
