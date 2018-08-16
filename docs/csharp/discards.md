@@ -46,7 +46,7 @@ ms.locfileid: "33219227"
 
 ## <a name="pattern-matching-with-switch-and-is"></a>使用 `switch` 和 `is` 的模式匹配
 
-弃元模式可通过 [is](language-reference/keywords/is.md) 和 [switch](language-reference/keywords/switch.md) 关键字用于模式匹配。 每个表达式始终匹配弃元模式。
+占位符模式可通过 [is](language-reference/keywords/is.md) 和 [switch](language-reference/keywords/switch.md) 关键字用于模式匹配。 每个表达式始终匹配占位符模式。
 
 以下示例定义了一个 `ProvidesFormatInfo` 方法，该方法使用 [is](language-reference/keywords/is.md) 语句来确定对象是否提供 <xref:System.IFormatProvider> 实现并测试对象是否为 `null`。 它还使用弃元模式来处理任何其他类型的非 null 对象。
 
@@ -68,7 +68,7 @@ ms.locfileid: "33219227"
 
 请注意，`_` 也是有效标识符。 当在支持的上下文之外使用时，`_` 不视为弃元，而视为有效变量。 如果名为 `_` 的标识符已在范围内，则使用 `_` 作为独立弃元可能导致：
 
-- 将预期的弃元的值赋给范围内 `_` 变量，会导致该变量的值被意外修改。 例如:
+- 将预期的占位符的值赋给范围内 `_` 变量，会导致该变量的值被意外修改。 例如:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
  

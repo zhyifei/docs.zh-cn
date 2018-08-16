@@ -1,6 +1,6 @@
 ---
 title: 编写自定义特性
-ms.date: 03/30/2017
+ms.date: 07/17/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,10 +19,10 @@ ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 114d24c1fc523d5501deb4aa17f9541c5a918276
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
 ms.locfileid: "33574642"
 ---
 # <a name="writing-custom-attributes"></a>编写自定义特性
@@ -30,39 +30,36 @@ ms.locfileid: "33574642"
   
  正确设计自定义特性的主要步骤如下：  
   
--   [应用 AttributeUsageAttribute](#cpconapplyingattributeusageattribute)  
+- [应用 AttributeUsageAttribute](#applying-the-attributeusageattribute)  
   
--   [声明特性类](#cpcondeclaringattributeclass)  
+- [声明特性类](#declaring-the-attribute-class)  
   
--   [声明构造函数](#cpcondeclaringconstructors)  
+- [声明构造函数](#declaring-constructors)  
   
--   [声明属性](#cpcondeclaringproperties)  
+- [声明属性](#declaring-properties)  
   
- 本节描述上述各个步骤，并以 [自定义特性的示例](#cpconcustomattributeexample)结束本节的描述。  
+ 本节描述上述各个步骤，并以[自定义特性的示例](#custom-attribute-example)结束本节的描述。  
   
-<a name="cpconapplyingattributeusageattribute"></a>   
 ## <a name="applying-the-attributeusageattribute"></a>应用 AttributeUsageAttribute  
- 自定义特性声明以 **AttributeUsageAttribute**开始，定义了特性类的一些主要特征。 例如，你可以指定其他类是否可以继承你的特性，或者指定此特性可以应用到哪些元素。 下面的代码段演示如何使用 **AttributeUsageAttribute**。  
+ 自定义特性声明以 <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> 开头，定义了特性类的一些主要特征。 例如，你可以指定其他类是否可以继承你的特性，或者指定此特性可以应用到哪些元素。 下面的代码片段演示了 <xref:System.AttributeUsageAttribute> 的使用方式。  
   
  [!code-cpp[Conceptual.Attributes.Usage#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#5)]
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> 包含下列三个成员，它们对创建自定义属性非常重要：[AttributeTargets](#cpconwritingcustomattributesanchor1)、[Inherited](#cpconwritingcustomattributesanchor2) 和 [AllowMultiple](#cpconwritingcustomattributesanchor3)。  
+ <xref:System.AttributeUsageAttribute> 包含下列三个成员，它们对创建自定义属性非常重要：[AttributeTargets](#attributetargets-member)、[Inherited](#inherited-property) 和 [AllowMultiple](#allowmultiple-property)。  
   
-<a name="cpconwritingcustomattributesanchor1"></a>   
 ### <a name="attributetargets-member"></a>AttributeTargets 成员  
- 在前面的示例中指定了 **AttributeTargets.All** ，这表示此特性可以应用于所有程序元素。 或者，你可以指定 **AttributeTargets.Class**，表示你的特性只能应用于一个类，或者指定 **AttributeTargets.Method**，表示你的特性只能应用于一种方法。 所有程序元素都可以通过这种方式使用自定义特性来标记，以对其进行描述。  
+ 上述示例中指定了 <xref:System.AttributeTargets.All?displayProperty=nameWithType>，它表示此特性可应用于所有程序元素。 或者，你可指定 <xref:System.AttributeTargets.Class?displayProperty=nameWithType> 和 <xref:System.AttributeTargets.Method?displayProperty=nameWithType>，前者表示你的特性仅可适用于一个类，后者表示你的特性仅可应用于一种方法。 所有程序元素都可以通过这种方式使用自定义特性来标记，以对其进行描述。  
   
- 你还可以传递 <xref:System.AttributeTargets>的多个实例。 下面的代码段指定了自定义特性可应用于任何类或方法。  
+ 你还可传递多个 <xref:System.AttributeTargets> 值。 下面的代码段指定了自定义特性可应用于任何类或方法。  
   
  [!code-cpp[Conceptual.Attributes.Usage#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#6)]
  [!code-csharp[Conceptual.Attributes.Usage#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#6)]
  [!code-vb[Conceptual.Attributes.Usage#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#6)]  
   
-<a name="cpconwritingcustomattributesanchor2"></a>   
 ### <a name="inherited-property"></a>Inherited 属性  
- <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> 属性指明要对其应用属性的类的派生类能否继承此属性。 此属性使用 **true** （默认值）或 **false** 标志。 例如，在以下示例中， `MyAttribute` 的 <xref:System.AttributeUsageAttribute.Inherited%2A> 的默认值为 **true**， `YourAttribute` 的 <xref:System.AttributeUsageAttribute.Inherited%2A> 的值为 **false**。  
+ <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> 属性指明要对其应用属性的类的派生类能否继承此属性。 此属性使用 `true`（默认值）或 `false` 标志。 在下例中，`MyAttribute` 的 <xref:System.AttributeUsageAttribute.Inherited%2A> 值为默认值 `true`，而 `YourAttribute` 的 <xref:System.AttributeUsageAttribute.Inherited%2A> 值为 `false`。  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Attributes.Usage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#7)]
@@ -80,11 +77,10 @@ ms.locfileid: "33574642"
  [!code-csharp[Conceptual.Attributes.Usage#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#10)]
  [!code-vb[Conceptual.Attributes.Usage#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#10)]  
   
-<a name="cpconwritingcustomattributesanchor3"></a>   
 ### <a name="allowmultiple-property"></a>AllowMultiple 属性  
- <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> 属性指明元素能否包含属性的多个实例。 如果设置为 **true**，则允许多个实例；如果设置为 **false** （默认值），则只允许一个实例。  
+ <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> 属性指明元素能否包含属性的多个实例。 如果设置为 `true`，则允许多个实例；如果设置为 `false`（默认值），则只允许一个实例。  
   
- 在下面的示例中， `MyAttribute` 的 <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 的默认值为 **false**， `YourAttribute` 的对应值为 **true**。  
+ 在下例中，`MyAttribute` 的 <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 值为默认值 `false`，而 `YourAttribute` 的值为 `true`。  
   
  [!code-cpp[Conceptual.Attributes.Usage#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#11)]
  [!code-csharp[Conceptual.Attributes.Usage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#11)]
@@ -96,9 +92,8 @@ ms.locfileid: "33574642"
  [!code-csharp[Conceptual.Attributes.Usage#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#13)]
  [!code-vb[Conceptual.Attributes.Usage#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#13)]  
   
- 如果 <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 属性和 <xref:System.AttributeUsageAttribute.Inherited%2A> 属性都设置为 **true**，那么从另一个类继承的类可以继承一个特性，并且具有应用于同一子类的同一特性的另一个实例。 如果 <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 设置为 **false**，那么父类中的任何特性的值将被子类中同一特性的新实例覆盖。  
+ 如果 <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 属性和 <xref:System.AttributeUsageAttribute.Inherited%2A> 属性都设置为 `true`，则从另一个类继承的类可继承一个特性，并且具有同一子类中应用的同一特性的另一个实例。 如果 <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 设置为 `false`，则父类中的所有特性的值将被子类中同一特性的新实例覆盖。  
   
-<a name="cpcondeclaringattributeclass"></a>   
 ## <a name="declaring-the-attribute-class"></a>声明特性类  
  应用 <xref:System.AttributeUsageAttribute>以后，可以开始定义特性的细节。 特性类的声明类似于传统类的声明，如以下代码所示。  
   
@@ -108,17 +103,16 @@ ms.locfileid: "33574642"
   
  此特性定义说明了以下几点：  
   
--   特性类必须声明为公共类。  
+- 特性类必须声明为公共类。  
   
--   按照约定，特性类的名称以单词 **Attribute**结束。 尽管没有要求，但仍建议执行此约定以保证可读性。 应用特性时，可以选择是否包含单词 Attribute。  
+- 按照约定，特性类的名称以单词 **Attribute**结束。 尽管没有要求，但仍建议执行此约定以保证可读性。 应用特性时，可以选择是否包含单词 Attribute。  
   
--   所有特性类必须直接或间接从 **System.Attribute**继承。  
+- 所有特性类必须直接或间接从 <xref:System.Attribute?displayProperty=nameWithType> 继承。  
   
--   在 Microsoft Visual Basic 中，所有自定义特性类必须具有 **AttributeUsageAttribute** 特性。  
+- 在 Microsoft Visual Basic 中，所有自定义特性类必须具有 <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> 特性。  
   
-<a name="cpcondeclaringconstructors"></a>   
 ## <a name="declaring-constructors"></a>声明构造函数  
- 与传统类的初始化方式相同，使用构造函数初始化特性。 下面的代码段阐明了典型的特性构造函数。 此公共构造函数采用一个参数，并将其值设置为与成员变量的值相等。  
+ 与传统类的初始化方式相同，使用构造函数初始化特性。 下面的代码段阐明了典型的特性构造函数。 此公共构造函数采用一个参数，并设置一个等于其值的成员变量。  
   
  [!code-cpp[Conceptual.Attributes.Usage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#15)]
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
@@ -132,7 +126,6 @@ ms.locfileid: "33574642"
  [!code-csharp[Conceptual.Attributes.Usage#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#17)]
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
-<a name="cpcondeclaringproperties"></a>   
 ## <a name="declaring-properties"></a>声明属性  
  如果你想要定义一个命名参数，或者提供一种简单的方法来返回由特性存储的值，请声明[属性](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。 应将特性的属性声明为公共实体，此公告实体包含将返回的数据类型的描述。 定义将保存属性值的变量，并将此变量与 **get** 和 **set** 方法相关联。 下面的代码示例说明如何在特性中实现一个简单属性。  
   
@@ -140,7 +133,6 @@ ms.locfileid: "33574642"
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]
  [!code-vb[Conceptual.Attributes.Usage#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#16)]  
   
-<a name="cpconcustomattributeexample"></a>   
 ## <a name="custom-attribute-example"></a>自定义特性的示例  
  本节内容结合了前面的信息，显示如何设计一个简单特性来记录有关代码段的作者的信息。 本示例中的特性存储了编程人员的姓名和级别，以及是否已检查此代码的信息。 它使用三个私有变量来存储要保存的实际值。 每个变量用获取和设置这些值的公共属性表示。 最后，使用两个必选参数定义构造函数。  
   
@@ -158,5 +150,5 @@ ms.locfileid: "33574642"
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Attribute?displayProperty=nameWithType>  
- <xref:System.AttributeUsageAttribute>  
+ <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
  [特性](../../../docs/standard/attributes/index.md)
