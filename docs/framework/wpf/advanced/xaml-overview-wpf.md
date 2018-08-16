@@ -33,7 +33,7 @@ ms.locfileid: "39220771"
   
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>什么是 XAML？  
- XAML 是一种声明性标记语言。应用于.NET Framework 编程模型时，XAML 可以简化为 .NET Framework 应用程序创建 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的过程。可以在声明性 XAML 标记中创建可见的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，然后使用代码隐藏文件（通过分部类定义与标记相联接）将 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 定义与运行时逻辑分离。XAML 直接以程序集中定义的特定的一组支持类型表示对象的实例化。这与大多数其他标记语言不同，后者通常是与支持类型系统没有此类直接关系的解释语言。在XAML 实现的工作流中，各方可以采用可能是不同的工具来处理 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 和应用程序的逻辑。 
+ XAML 是一种声明性标记语言。 应用于.NET Framework 编程模型，XAML 简化了创建[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]为.NET Framework 应用程序。 可以在声明性 XAML 标记中创建可见的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，然后使用代码隐藏文件（通过分部类定义与标记相连接）将 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 定义与运行时逻辑相分离。 XAML 直接以程序集中定义的一组特定后备类型表示对象的实例化。 这与大多数其他标记语言不同，后者通常是与后备类型系统没有此类直接关系的解释语言。 XAML 实现了一个工作流，通过此工作流，各方可以采用不同的工具来处理 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 和应用程序的逻辑。  
   
  以文本表示时，XAML 文件是通常具有 `.xaml` 扩展名的 XML 文件。 可通过任何 XML 编码对文件进行编码，但通常以 UTF-8 编码。  
   
@@ -45,10 +45,10 @@ ms.locfileid: "39220771"
 ## <a name="xaml-syntax-in-brief"></a>XAML 语法概述  
  下面章节介绍 XAML 语法的基本形式，并提供一个简短的标记示例。 这些章节并不提供每个语法形式的完整信息，例如这些语法形式如何在后备类型系统中表示。 有关本主题中介绍的每种语法形式的 XAML 语法详情，请参阅 [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
   
- 如果熟悉 XML 语言，则下面几节中的很多内容对你而言都是基础知识。这归因于 XAML 的一个基本设计原则。XAML 语言可以定义其自己的概念，但这些概念也适用 XML 语言和标记形式。 
+ 如果熟悉 XML 语言，则下面几节中的很多内容对你而言都是基础知识。 这归因于 XAML 的一个基本设计原则。  XAML 语言可以定义其自己的概念，但这些概念也适用 XML 语言和标记形式。  
   
 ### <a name="xaml-object-elements"></a>XAML 对象元素  
- 对象元素通常声明一个类型的实例。该类型在程序集中定义，而后者则为使用 XAML 作为语言的技术提供后备类型。  
+ 对象元素通常声明一个类型的实例。 该类型在程序集中定义，而后者则为使用 XAML 作为语言的技术提供后备类型。  
   
  对象元素语法始终以左尖括号 (\<) 开头。 后跟要创建实例的类型的名称。 （该名称可能包含前缀，下文将解释前缀的概念。）此后可以选择声明该对象元素的特性。 要完成对象元素标记，请以右尖括号 (>) 结尾。 也可以使用不含任何内容的自结束形式，方法是用一个正斜杠后接一个右尖括号 (/>) 来完成标记。 例如，请再次查看之前演示的标记片段：  
   
@@ -159,7 +159,7 @@ ms.locfileid: "39220771"
   
 <a name="case_and_white space_in_xaml"></a>   
 ## <a name="case-and-white-space-in-xaml"></a>用例和 XAML 中的空白区域  
- XAML 通常区分大小写。出于解析后备类型的目的，WPF XAML 按照 CLR 区分大小写的相同规则来区分大小写。遇到以下情况时，对象元素、属性元素和特性名称均需使用区分大小写的形式来指定：按名称与程序集中的基础类型进行比较，或者与类型的成员进行比较。XAML 语言关键字和基元也区分大小写。值并不总是区分大小写。值是否区分大小写将取决于与采用该值的属性关联的类型转换器行为，或取决于属性值类型。例如，采用 <xref:System.Boolean> 类型的属性可以使用 `true` 或 `True` 作为等效值，但只是因为在将字符串的本机 WPF XAML 分析器类型转换为 <xref:System.Boolean> 时，已允许将这些作为等效项。
+ XAML 通常区分大小写。 出于解析后备类型的目的，WPF XAML 按照 CLR 区分大小写的相同规则来区分大小写。 遇到以下情况时，对象元素、属性元素和特性名称均需使用区分大小写的形式来指定：按名称与程序集中的基础类型进行比较，或者与类型的成员进行比较。 XAML 语言关键字和基元也区分大小写。 值并不总是区分大小写。 值是否区分大小写将取决于与采用该值的属性关联的类型转换器行为，或取决于属性值类型。 例如，采用 <xref:System.Boolean> 类型的属性可以使用 `true` 或 `True` 作为等效值，但只是因为在将字符串的本机 WPF XAML 分析器类型转换为 <xref:System.Boolean> 时，已允许将这些作为等效项。  
   
  WPF XAML 处理器和序列化程序将忽略或删除所有无意义的空白区域，并标准化任何有意义的空白。 这是与 XAML 规范的默认空白行为建议一致。 通常，只有在 XAML 内容属性中指定字符串时，此行为的重要性才会体现出来。 简言之，XAML 将空格、换行符和制表符转化为空格，如果它们出现在一个连续字符串的任一端，则保留一个空格。 本主题中未涉及的 XAML 空白处理的完整说明。 有关详细信息，请参阅[处理在 XAML 中的空白区域](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。  
   
