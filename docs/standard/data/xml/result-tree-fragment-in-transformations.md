@@ -36,7 +36,7 @@ ms.locfileid: "33574694"
   
  对于 `parameter` 和 `variable` 这两个元素，如果通过 XPath 表达式赋值，则将返回四种基本 XPath 类型之一：布尔值、字符串、数字或节点集。 如果是通过非空模板正文赋值，则会返回非 XPath 数据类型，而且将是一个结果树片段。  
   
- 只有当变量绑定到结果树片段而非这四种基本 XPath 数据类型之一时，XPath 查询才会返回这四种 XPath 对象类型以外的类型。 结果树片段及其行为在万维网联合会 (W3C) 规范 (http://www.w3.org/XSLT) 第 11.1 节“Result Tree Fragments”至第 11.6 节“Passing Parameters to Templates”中讲述。 另外，第 1 节“Introduction”讲述了模板如何包含 XSLT 命名空间中返回或创建结果树片段的元素。  
+ 只有当变量绑定到结果树片段而非这四种基本 XPath 数据类型之一时，XPath 查询才会返回这四种 XPath 对象类型以外的类型。 结果树片段及其行为在万维网联合会 (W3C) 规范 (www.w3.org/XSLT) 第 11.1 节“Result Tree Fragments”至第 11.6 节“Passing Parameters to Templates”中讲述。 另外，第 1 节“Introduction”讲述了模板如何包含 XSLT 命名空间中返回或创建结果树片段的元素。  
   
  从概念上说，结果树片段的行为就像一个只有单个根节点的节点集。 不过，返回的其余节点都是子节点。 若要以编程方式查看子节点，请使用 `<xsl:copy-of>` 元素将结果树片段复制到结果树中。 在执行 copy-of 时，所有子节点也都按顺序复制到结果树中。 在使用 `copy` 或 `copy-of` 之前，结果树片段不是结果树或转换输出的一部分。  
   
