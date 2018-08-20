@@ -78,7 +78,7 @@ ms.locfileid: "36338099"
   
  **✓ DO** 使用公用名，如`value`或`item`，而不是重复的类型名称，在极少数的情况下当的标识符具有任何语义含义和参数的类型并不重要。  
   
-## <a name="naming-new-versions-of-existing-apis"></a>命名新版本的现有的 Api  
+## <a name="naming-new-versions-of-existing-apis"></a>为现有 API 的新版本命名  
  **✓ DO** 时创建的现有 API 的新版本使用类似于旧 API 的名称。  
   
  这有助于突出显示 Api 之间的关系。  

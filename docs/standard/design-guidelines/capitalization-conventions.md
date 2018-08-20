@@ -26,7 +26,7 @@ ms.locfileid: "33575279"
   
 -   PascalCasing  
   
--   camelcasing 大小写约定  
+-   camelCasing  
   
  PascalCasing 约定用于除参数名称之外的所有标识符，将每个单词的第一个字符大写（包括超过两个字母的首字母缩写），如以下示例所示：  
   
