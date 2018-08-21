@@ -18,7 +18,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33576427"
 ---
 # <a name="names-of-namespaces"></a>命名空间的名称
-作为与其他命名准则命名命名空间时的目标足够清楚起见为创建使用 framework 立即知道的内容的命名空间是什么，可能需要程序员。 以下模板指定命名命名空间的一般规则：  
+与其他命名准则一样，为命名空间命名的目的是为了让使用该框架的程序员能够通过名称快速了解命名空间所涉及的内容。 以下模板指定了为命名空间命名的一般规则：  
   
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`  
   
