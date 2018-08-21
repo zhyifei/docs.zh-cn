@@ -87,17 +87,17 @@ ms.locfileid: "36338099"
   
  这有助于在浏览文档或使用 IntelliSense 时更易发现所需内容。 旧版 API 的组织方式与新版 API 接近，因为大多数浏览器和 IntelliSense 都按字母顺序显示标识符。  
   
- **✓ CONSIDER** 使用全新，但有意义标识符，而不添加一个后缀或前缀。  
+ **✓ 考虑**使用全新但有意义的标识符，而不是添加一个后缀或前缀。  
   
- **✓ DO** 使用数字后缀指示新版本的现有 API，特别是当 API 的现有名称是 （即，如果它是一种行业标准） 有意义的唯一名称，而且如果添加任何有意义后缀 （或更改名称） 不是应用程序ropriate 选项。  
+ **✓ 务必**使用数字后缀来指示现有 API 的新版本，特别是在 API 的现有名称是唯一有意义的名称（即该名称为行业标准）并且添加任何有意义的后缀（或更改其名称）都不合适的情况下。  
   
- **X DO NOT** 使用"Ex"（或类似） 的标识符，以区别于相同的 API 的早期版本的后缀。  
+ **X 不要**使用 "Ex"（或类似）后缀作为区分同一 API 的早期版本和新版本的标识符。  
   
- **✓ DO** 引入 api，而不是一个 32 位整数的 64 位整数 （长整型） 上运行的版本时，使用"64"后缀。 只需现有的 32 位 API 存在; 时采用此方法不执行操作的使用仅 64 位版本的全新 Api。  
+ **✓ 务必**在引入以 64 位整数（长整型）而非 32 位整数运行的 API 版本时，使用后缀 "64"。 只需在存在 32 位 API 时采用此方法；不要对只有 64 位版本的全新 API 应用此方法。  
   
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
