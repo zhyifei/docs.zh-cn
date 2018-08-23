@@ -10,12 +10,12 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b197aa539e60a9dbcee55cf190c44b45da3a5fb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 408b71bf38427d12418e05f8b509fe841bc95ef1
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402010"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754462"
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a>_AxlGetIssuerPublicKeyHash 函数
 检索与用于对指定证书进行签名的私钥关联的公钥的 SHA-1 哈希。  
@@ -31,7 +31,7 @@ HRESULT _AxlGetIssuerPublicKeyHash (
   
 #### <a name="parameters"></a>参数  
  `pChainContext`  
- [in] CSP 公钥 Blob。 请参阅[CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx)结构。  
+ [in] CSP 公钥 Blob。 请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。  
   
  `ppwszPublicKeyHash`  
  [out] 指向 WCHAR * 的指针，用于接收十六进制编码的公钥标记。  

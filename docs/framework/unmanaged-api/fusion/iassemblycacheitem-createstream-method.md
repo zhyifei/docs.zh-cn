@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8057406552525be19f8e6457de9faf841edc6e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429496"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754588"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream 方法
-具有指定的名称和格式创建一个流。  
+创建具有指定的名称和格式的流。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,19 +42,19 @@ HRESULT CreateStream (
   
 #### <a name="parameters"></a>参数  
  `dwFlags`  
- [in]在包括中定义的标志。  
+ [in]包括的标志。  
   
  `pszStreamName`  
- [in]要创建的流名称。  
+ [in]若要创建的流的名称。  
   
  `dwFormat`  
  [in]要进行流处理的文件的格式。  
   
  `dwFormatFlags`  
- [in]在包括中定义的特定格式的标志。  
+ [in]包括特定于格式的标志。  
   
  `ppIStream`  
- [out]返回的地址指针[IStream](https://msdn.microsoft.com/library/aa380034.aspx)实例。  
+ [out]指向所返回的地址的指针[IStream](/windows/desktop/api/objidl/nn-objidl-istream)实例。  
   
  `puliMaxSize`  
  [in，可选]引用的流的最大大小`ppIStream`。  
@@ -64,7 +64,7 @@ HRESULT CreateStream (
   
  **标头：** Fusion.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [IAssemblyCacheItem 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
