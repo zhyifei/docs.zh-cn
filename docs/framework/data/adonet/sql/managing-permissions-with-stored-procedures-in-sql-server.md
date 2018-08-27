@@ -2,12 +2,12 @@
 title: 在 SQL Server 中使用存储过程管理权限
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 2472481156f44b55726243e9d939522e46796070
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d16a6609603cfb83fc6523606cc7ec9e7bfd8dba
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361279"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912060"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>在 SQL Server 中使用存储过程管理权限
 为数据库创建多道防线的一个方法是使用存储过程或用户定义的函数实现所有数据访问。 撤消或拒绝对基础对象（如表）的所有权限，并授予对存储过程的 EXECUTE 权限。 这会为数据和数据库对象有效创建安全外围防线。  
@@ -54,7 +54,7 @@ ms.locfileid: "33361279"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[存储过程](http://msdn.microsoft.com/library/ms190782.aspx)和[SQL 注入](http://go.microsoft.com/fwlink/?LinkId=98234)SQL Server 联机丛书中|说明如何创建存储过程和 SQL 注入工作原理的主题。|  
+|SQL Server 联机丛书中的[存储过程](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)和 [SQL 注入](http://go.microsoft.com/fwlink/?LinkId=98234)|说明如何创建存储过程和 SQL 注入工作原理的主题。|  
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

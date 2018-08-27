@@ -3,11 +3,11 @@ title: 使用 Async 和 Await 的异步编程 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
 ms.openlocfilehash: 5a0d2d40b815037e6eb3ed47c500c135ad116aaf
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753521"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925237"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>使用 Async 和 Await 的异步编程 (Visual Basic)
 通过使用异步编程，你可以避免性能瓶颈并增强应用程序的总体响应能力。 但是，编写异步应用程序的传统技术可能比较复杂，使它们难以编写、调试和维护。  
@@ -140,14 +140,14 @@ Dim urlContents As String = Await client.GetStringAsync()
 ##  <a name="BKMK_APIAsyncMethods"></a>API 异步方法  
  你可能想知道从何处可以找到 `GetStringAsync` 等支持异步编程的方法。 .NET Framework 4.5 或更高版本包含许多可与 `Async` 和 `Await` 结合使用的成员。 可以通过附加到成员名称的“Async”后缀和 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的返回类型识别这些成员。 例如，`System.IO.Stream` 类包含 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A> 等方法，以及同步方法 <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> 和 <xref:System.IO.Stream.Write%2A>。  
   
- Windows 运行时也包含许多可以在 Windows 应用中与 `Async` 和 `Await` 结合使用的方法。 有关详细信息和示例方法，请参阅[调用 C# 或 Visual Basic 中的异步 Api](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)，[异步编程 （Windows 运行时应用）](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))，和[WhenAny:.NET 之间的桥接Framework 和 Windows 运行时](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))。  
+ Windows 运行时也包含许多可以在 Windows 应用中与 `Async` 和 `Await` 结合使用的方法。 有关详细信息和示例方法，请参阅[调用异步 Api 在 C# 或 Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)，[异步编程 （Windows 运行时应用）](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))，和[WhenAny:.NET 之间的桥接Framework 和 Windows 运行时](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))。  
   
 ##  <a name="BKMK_Threads"></a>线程  
  异步方法旨在成为非阻止操作。 异步方法中的 `Await` 表达式在等待的任务正在运行时不会阻止当前线程。 相反，表达式在继续时注册方法的其余部分并将控件返回到异步方法的调用方。  
   
  `Async` 和 `Await` 关键字不会创建其他线程。 因为异步方法不会在其自身线程上运行，因此它不需要多线程。 只有当方法处于活动状态时，该方法将在当前同步上下文中运行并使用线程上的时间。 可以使用 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 将占用大量 CPU 的工作移到后台线程，但是后台线程不会帮助正在等待结果的进程变为可用状态。  
   
- 对于异步编程而言，该基于异步的方法优于几乎每个用例中的现有方法。 具体而言，这种方法优于<xref:System.ComponentModel.BackgroundWorker>的 O 绑定的操作，因为代码更简单且无需防止争用条件。 结合 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 使用时，异步编程比 <xref:System.ComponentModel.BackgroundWorker> 更适用于 CPU 绑定的操作，因为异步编程将运行代码的协调细节与 `Task.Run` 传输至线程池的工作区分开来。  
+ 对于异步编程而言，该基于异步的方法优于几乎每个用例中的现有方法。 具体而言，这种方法优于<xref:System.ComponentModel.BackgroundWorker>的 I/O 绑定操作因为代码更简单且无需防止争用条件。 结合 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 使用时，异步编程比 <xref:System.ComponentModel.BackgroundWorker> 更适用于 CPU 绑定的操作，因为异步编程将运行代码的协调细节与 `Task.Run` 传输至线程池的工作区分开来。  
   
 ##  <a name="BKMK_AsyncandAwait"></a>Async 和 Await  
  如果使用 [Async](../../../../visual-basic/language-reference/modifiers/async.md) 修饰符将某种方法指定为异步方法，即启用以下两种功能。  
@@ -225,7 +225,7 @@ Await Task_MethodAsync()
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
   
- 有关详细信息及示例，请参阅[调用 C# 或 Visual Basic 中的异步 Api](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)。  
+ 有关详细信息和示例，请参阅[调用 C# 或 Visual Basic 中的异步 Api](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)。  
   
 ##  <a name="BKMK_NamingConvention"></a>命名约定  
  按照约定，将“Async”追加到包含 `Async` 修饰符的方法的名称中。  

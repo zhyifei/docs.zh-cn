@@ -7,31 +7,35 @@ helpviewer_keywords:
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02905c193387f78430ce1885449055060d07bf82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7bd54a2325c9721ad17943ba663e7ec0c300632e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571028"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925071"
 ---
 # <a name="usage-guidelines"></a>使用准则
-本部分包含在可公开访问的 Api 中使用公共类型的指导原则。 它涉及到直接使用内置的 Framework 类型 （例如，序列化属性） 和重载常用的运算符。  
+
+本部分包含在可公开访问的 Api 中使用公共类型的指导原则。 它可以处理直接使用内置的框架类型 （例如，序列化属性） 和重载常见的运算符。
   
- <xref:System.IDisposable?displayProperty=nameWithType>接口在此部分中，不会对其进行介绍，但已在[释放模式](../../../docs/standard/design-guidelines/dispose-pattern.md)部分。  
-  
+<xref:System.IDisposable?displayProperty=nameWithType>接口未涵盖在此部分中，但在讨论[Dispose 模式](../../../docs/standard/design-guidelines/dispose-pattern.md)部分。
+
 > [!NOTE]
->  准则和其他常见有关其他信息，内置的.NET Framework 类型，请参阅以下参考主题： <xref:System.DateTime?displayProperty=nameWithType>， <xref:System.DateTimeOffset?displayProperty=nameWithType>， <xref:System.ICloneable?displayProperty=nameWithType>， <xref:System.IComparable%601?displayProperty=nameWithType>， <xref:System.IEquatable%601?displayProperty=nameWithType>， <xref:System.Nullable%601?displayProperty=nameWithType>， <xref:System.Object?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>.  
+> 有关指导原则和其他常见有关其他信息，内置的.NET Framework 类型，请参阅以下参考主题： <xref:System.DateTime?displayProperty=nameWithType>， <xref:System.DateTimeOffset?displayProperty=nameWithType>， <xref:System.ICloneable?displayProperty=nameWithType>， <xref:System.IComparable%601?displayProperty=nameWithType>， <xref:System.IEquatable%601?displayProperty=nameWithType>， <xref:System.Nullable%601?displayProperty=nameWithType>， <xref:System.Object?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>.
+
+## <a name="in-this-section"></a>本节内容
+
+[数组](arrays.md)  
+[特性](attributes.md)  
+[集合](guidelines-for-collections.md)  
+[序列化](serialization.md)  
+[System.Xml 使用情况](system-xml-usage.md)  
+[相等运算符](equality-operators.md)  
+
+*部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*
+
+*经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*
   
-## <a name="in-this-section"></a>本节内容  
- [数组](../../../docs/standard/design-guidelines/arrays.md)  
- [特性](../../../docs/standard/design-guidelines/attributes.md)  
- [集合](/cpp/mfc/collections)  
- [序列化](../../../docs/standard/design-guidelines/serialization.md)  
- [System.Xml 使用情况](../../../docs/standard/design-guidelines/system-xml-usage.md)  
- [相等运算符](../../../docs/standard/design-guidelines/equality-operators.md)  
- *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
-  
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
-  
-## <a name="see-also"></a>请参阅  
- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>请参阅
+
+[框架设计指南](../../../docs/standard/design-guidelines/index.md)

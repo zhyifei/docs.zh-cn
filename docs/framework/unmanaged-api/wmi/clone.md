@@ -1,5 +1,5 @@
 ---
-title: 克隆函数 （非托管 API 参考）
+title: Clone 函数 （非托管 API 参考）
 description: 克隆函数返回是当前的完整克隆一个新对象。
 ms.date: 11/06/2017
 api_name:
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5cd87cb619ef2dc1e0548c7553585b7e51e94c4f
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457311"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924770"
 ---
-# <a name="clone-function"></a>克隆函数
+# <a name="clone-function"></a>Clone 函数
 返回是当前对象的完整克隆一个新对象。   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,28 +41,28 @@ HRESULT Clone (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]未使用此参数。
+[in]此参数是未使用。
 
 `ptr`  
-[in]指向的指针[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)实例。
+[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
 
 `ppCopy`  
-[out]是一个完整的新对象的唯一`ptr`。 此参数不能为`null`如果它收到当前对象的副本。
+[out]是一个完整的新对象的单个`ptr`。 此参数不能为`null`如果它收到的当前对象的副本。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
+此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | 发生了常规错误。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` 已指定为参数，且它不是合法在这种用法。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存可克隆对象。 |
+| `WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` 指定为参数，且是不合法在这种用法。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 可克隆该对象没有足够的内存。 |
 | `WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::Clone](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx)方法。
+此函数包装对的调用[IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone)方法。
 
 克隆的对象是 COM 对象的引用计数为 1。
 
@@ -71,7 +71,7 @@ HRESULT Clone (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

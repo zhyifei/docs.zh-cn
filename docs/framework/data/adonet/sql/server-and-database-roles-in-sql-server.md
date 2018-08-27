@@ -2,12 +2,12 @@
 title: SQL Server 中的服务器和数据库角色
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 9a563c2b448b07dc6536ff42a21c256195ba52fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 196ca0791f42414b9da8dff32eb8285045fd7e63
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364793"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925460"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的服务器和数据库角色
 所有版本的 SQL Server 均使用基于角色的安全，它允许您为角色、用户组而不是各个用户分配权限。 固定服务器和固定数据库角色具有分配给它们的一组固定的权限。  
@@ -27,8 +27,8 @@ ms.locfileid: "33364793"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[服务器级角色](http://msdn.microsoft.com/library/ms188659.aspx)和[固定的服务器角色的权限](http://msdn.microsoft.com/library/ms175892.aspx)SQL Server 联机丛书中|描述固定的服务器角色和 SQL Server 中与它们关联的权限。|  
-|[数据库级角色](http://msdn.microsoft.com/library/ms189121.aspx)和[固定的数据库角色的权限](http://msdn.microsoft.com/library/ms189612.aspx)SQL Server 联机丛书中|描述固定数据库角色及与其关联的权限|  
+|[服务器级别角色](/sql/relational-databases/security/authentication-access/server-level-roles)并[固定的服务器角色的权限](http://msdn.microsoft.com/library/ms175892.aspx)SQL Server 联机丛书中|介绍了固定的服务器角色和 SQL Server 中与之关联的权限。|  
+|[数据库级别角色](/sql/relational-databases/security/authentication-access/database-level-roles)并[固定的数据库角色的权限](http://msdn.microsoft.com/library/ms189612.aspx)SQL Server 联机丛书中|描述固定数据库角色及与其关联的权限|  
   
 ## <a name="database-roles-and-users"></a>数据库角色和用户  
  要使用数据库对象，必须将登录映射到数据库用户帐户。 这样就可以将数据库用户添加到数据库角色，从而继承与这些角色关联的任何权限集。 可以授予所有权限。  
@@ -42,7 +42,7 @@ ms.locfileid: "33364793"
  `dbo` 或数据库所有者是具有在数据库中执行所有活动的默示权限的用户帐户。 `sysadmin` 固定服务器角色的成员会自动映射到 `dbo`。  
   
 > [!NOTE]
->  `dbo` 也是一个架构的名称，如中所述[所有权和 SQL Server 中的用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)。  
+>  `dbo` 也是在架构的名称，如中所述[所有权和 SQL Server 中的用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)。  
   
  `dbo` 用户帐户经常与 `db_owner` 固定数据库角色相混淆。 `db_owner` 的作用域是一个数据库；`sysadmin` 的作用域是整个服务器。 `db_owner` 角色中的成员无法授予 `dbo` 用户特权。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "33364793"
 |资源|描述|  
 |--------------|-----------------|  
 |[标识和访问控制](http://msdn.microsoft.com/library/bb510418.aspx)SQL Server 联机丛书中|包含指向描述主体、角色、凭据、安全对象和权限的主题的链接。|  
-|[主体](http://msdn.microsoft.com/library/ms181127.aspx)SQL Server 联机丛书中|描述主体并包含指向描述服务器和数据库角色的主题的链接。|  
+|[主体](/sql/relational-databases/security/authentication-access/principals-database-engine)SQL Server 联机丛书中|描述主体并包含指向描述服务器和数据库角色的主题的链接。|  
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
