@@ -9,109 +9,109 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: eff5f05aa8b5081069b9e0f2f5f152669afaea18
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b4bf63af1955582083e7ff54a5717f1ce56dfbb1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207871"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929281"
 ---
-# <a name="boxing-and-unboxing-c-programming-guide"></a><span data-ttu-id="929b5-102">装箱和取消装箱（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="929b5-102">Boxing and Unboxing (C# Programming Guide)</span></span>
-<span data-ttu-id="929b5-103">装箱是将[值类型](../../../csharp/language-reference/keywords/value-types.md)转换为 `object` 类型或由此值类型实现的任何接口类型的过程。</span><span class="sxs-lookup"><span data-stu-id="929b5-103">Boxing is the process of converting a [value type](../../../csharp/language-reference/keywords/value-types.md) to the type `object` or to any interface type implemented by this value type.</span></span> <span data-ttu-id="929b5-104">当 CLR 对值类型进行装箱时，会将该值包装到 System.Object 内部，再将后者存储在托管堆上。</span><span class="sxs-lookup"><span data-stu-id="929b5-104">When the CLR boxes a value type, it wraps the value inside a System.Object and stores it on the managed heap.</span></span> <span data-ttu-id="929b5-105">取消装箱将从对象中提取值类型。</span><span class="sxs-lookup"><span data-stu-id="929b5-105">Unboxing extracts the value type from the object.</span></span> <span data-ttu-id="929b5-106">装箱是隐式的；取消装箱是显式的。</span><span class="sxs-lookup"><span data-stu-id="929b5-106">Boxing is implicit; unboxing is explicit.</span></span> <span data-ttu-id="929b5-107">装箱和取消装箱的概念是类型系统 C# 统一视图的基础，其中任一类型的值都被视为一个对象。</span><span class="sxs-lookup"><span data-stu-id="929b5-107">The concept of boxing and unboxing underlies the C# unified view of the type system in which a value of any type can be treated as an object.</span></span>  
+# <a name="boxing-and-unboxing-c-programming-guide"></a><span data-ttu-id="188e8-102">装箱和取消装箱（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="188e8-102">Boxing and Unboxing (C# Programming Guide)</span></span>
+<span data-ttu-id="188e8-103">装箱是将[值类型](../../../csharp/language-reference/keywords/value-types.md)转换为 `object` 类型或由此值类型实现的任何接口类型的过程。</span><span class="sxs-lookup"><span data-stu-id="188e8-103">Boxing is the process of converting a [value type](../../../csharp/language-reference/keywords/value-types.md) to the type `object` or to any interface type implemented by this value type.</span></span> <span data-ttu-id="188e8-104">当 CLR 对值类型进行装箱时，会将该值包装到 System.Object 内部，再将后者存储在托管堆上。</span><span class="sxs-lookup"><span data-stu-id="188e8-104">When the CLR boxes a value type, it wraps the value inside a System.Object and stores it on the managed heap.</span></span> <span data-ttu-id="188e8-105">取消装箱将从对象中提取值类型。</span><span class="sxs-lookup"><span data-stu-id="188e8-105">Unboxing extracts the value type from the object.</span></span> <span data-ttu-id="188e8-106">装箱是隐式的；取消装箱是显式的。</span><span class="sxs-lookup"><span data-stu-id="188e8-106">Boxing is implicit; unboxing is explicit.</span></span> <span data-ttu-id="188e8-107">装箱和取消装箱的概念是类型系统 C# 统一视图的基础，其中任一类型的值都被视为一个对象。</span><span class="sxs-lookup"><span data-stu-id="188e8-107">The concept of boxing and unboxing underlies the C# unified view of the type system in which a value of any type can be treated as an object.</span></span>  
   
- <span data-ttu-id="929b5-108">下例将整型变量 `i` 进行了装箱并分配给对象 `o`。</span><span class="sxs-lookup"><span data-stu-id="929b5-108">In the following example, the integer variable `i` is *boxed* and assigned to object `o`.</span></span>  
+ <span data-ttu-id="188e8-108">下例将整型变量 `i` 进行了装箱并分配给对象 `o`。</span><span class="sxs-lookup"><span data-stu-id="188e8-108">In the following example, the integer variable `i` is *boxed* and assigned to object `o`.</span></span>  
   
  [!code-csharp[csProgGuideTypes#14](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_1.cs)]  
   
- <span data-ttu-id="929b5-109">然后，可以将对象 `o` 取消装箱并分配给整型变量 `i`：</span><span class="sxs-lookup"><span data-stu-id="929b5-109">The object `o` can then be unboxed and assigned to integer variable `i`:</span></span>  
+ <span data-ttu-id="188e8-109">然后，可以将对象 `o` 取消装箱并分配给整型变量 `i`：</span><span class="sxs-lookup"><span data-stu-id="188e8-109">The object `o` can then be unboxed and assigned to integer variable `i`:</span></span>  
   
  [!code-csharp[csProgGuideTypes#15](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_2.cs)]  
   
- <span data-ttu-id="929b5-110">以下示例演示如何在 C# 中使用装箱。</span><span class="sxs-lookup"><span data-stu-id="929b5-110">The following examples illustrate how boxing is used in C#.</span></span>  
+ <span data-ttu-id="188e8-110">以下示例演示如何在 C# 中使用装箱。</span><span class="sxs-lookup"><span data-stu-id="188e8-110">The following examples illustrate how boxing is used in C#.</span></span>  
   
  [!code-csharp[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_3.cs)]  
   
-## <a name="performance"></a><span data-ttu-id="929b5-111">性能</span><span class="sxs-lookup"><span data-stu-id="929b5-111">Performance</span></span>  
- <span data-ttu-id="929b5-112">相对于简单的赋值而言，装箱和取消装箱过程需要进行大量的计算。</span><span class="sxs-lookup"><span data-stu-id="929b5-112">In relation to simple assignments, boxing and unboxing are computationally expensive processes.</span></span> <span data-ttu-id="929b5-113">对值类型进行装箱时，必须分配并构造一个新对象。</span><span class="sxs-lookup"><span data-stu-id="929b5-113">When a value type is boxed, a new object must be allocated and constructed.</span></span> <span data-ttu-id="929b5-114">取消装箱所需的强制转换也需要进行大量的计算，只是程度较轻。</span><span class="sxs-lookup"><span data-stu-id="929b5-114">To a lesser degree, the cast required for unboxing is also expensive computationally.</span></span> <span data-ttu-id="929b5-115">有关更多信息，请参阅[性能](https://msdn.microsoft.com/library/ms173196(VS.110).aspx)。</span><span class="sxs-lookup"><span data-stu-id="929b5-115">For more information, see [Performance](https://msdn.microsoft.com/library/ms173196(VS.110).aspx).</span></span>  
+## <a name="performance"></a><span data-ttu-id="188e8-111">性能</span><span class="sxs-lookup"><span data-stu-id="188e8-111">Performance</span></span>  
+ <span data-ttu-id="188e8-112">相对于简单的赋值而言，装箱和取消装箱过程需要进行大量的计算。</span><span class="sxs-lookup"><span data-stu-id="188e8-112">In relation to simple assignments, boxing and unboxing are computationally expensive processes.</span></span> <span data-ttu-id="188e8-113">对值类型进行装箱时，必须分配并构造一个新对象。</span><span class="sxs-lookup"><span data-stu-id="188e8-113">When a value type is boxed, a new object must be allocated and constructed.</span></span> <span data-ttu-id="188e8-114">取消装箱所需的强制转换也需要进行大量的计算，只是程度较轻。</span><span class="sxs-lookup"><span data-stu-id="188e8-114">To a lesser degree, the cast required for unboxing is also expensive computationally.</span></span> <span data-ttu-id="188e8-115">有关更多信息，请参阅[性能](../../../../docs/framework/performance/performance-tips.md)。</span><span class="sxs-lookup"><span data-stu-id="188e8-115">For more information, see [Performance](../../../../docs/framework/performance/performance-tips.md).</span></span>  
   
-## <a name="boxing"></a><span data-ttu-id="929b5-116">装箱</span><span class="sxs-lookup"><span data-stu-id="929b5-116">Boxing</span></span>  
- <span data-ttu-id="929b5-117">装箱用于在垃圾回收堆中存储值类型。</span><span class="sxs-lookup"><span data-stu-id="929b5-117">Boxing is used to store value types in the garbage-collected heap.</span></span> <span data-ttu-id="929b5-118">装箱是[值类型](../../../csharp/language-reference/keywords/value-types.md)到 `object` 类型或到此值类型所实现的任何接口类型的隐式转换。</span><span class="sxs-lookup"><span data-stu-id="929b5-118">Boxing is an implicit conversion of a [value type](../../../csharp/language-reference/keywords/value-types.md) to the type `object` or to any interface type implemented by this value type.</span></span> <span data-ttu-id="929b5-119">对值类型装箱会在堆中分配一个对象实例，并将该值复制到新的对象中。</span><span class="sxs-lookup"><span data-stu-id="929b5-119">Boxing a value type allocates an object instance on the heap and copies the value into the new object.</span></span>  
+## <a name="boxing"></a><span data-ttu-id="188e8-116">装箱</span><span class="sxs-lookup"><span data-stu-id="188e8-116">Boxing</span></span>  
+ <span data-ttu-id="188e8-117">装箱用于在垃圾回收堆中存储值类型。</span><span class="sxs-lookup"><span data-stu-id="188e8-117">Boxing is used to store value types in the garbage-collected heap.</span></span> <span data-ttu-id="188e8-118">装箱是[值类型](../../../csharp/language-reference/keywords/value-types.md)到 `object` 类型或到此值类型所实现的任何接口类型的隐式转换。</span><span class="sxs-lookup"><span data-stu-id="188e8-118">Boxing is an implicit conversion of a [value type](../../../csharp/language-reference/keywords/value-types.md) to the type `object` or to any interface type implemented by this value type.</span></span> <span data-ttu-id="188e8-119">对值类型装箱会在堆中分配一个对象实例，并将该值复制到新的对象中。</span><span class="sxs-lookup"><span data-stu-id="188e8-119">Boxing a value type allocates an object instance on the heap and copies the value into the new object.</span></span>  
   
- <span data-ttu-id="929b5-120">请看以下值类型变量的声明：</span><span class="sxs-lookup"><span data-stu-id="929b5-120">Consider the following declaration of a value-type variable:</span></span>  
+ <span data-ttu-id="188e8-120">请看以下值类型变量的声明：</span><span class="sxs-lookup"><span data-stu-id="188e8-120">Consider the following declaration of a value-type variable:</span></span>  
   
  [!code-csharp[csProgGuideTypes#17](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_4.cs)]  
   
- <span data-ttu-id="929b5-121">以下语句对变量 `i` 隐式应用了装箱操作：</span><span class="sxs-lookup"><span data-stu-id="929b5-121">The following statement implicitly applies the boxing operation on the variable `i`:</span></span>  
+ <span data-ttu-id="188e8-121">以下语句对变量 `i` 隐式应用了装箱操作：</span><span class="sxs-lookup"><span data-stu-id="188e8-121">The following statement implicitly applies the boxing operation on the variable `i`:</span></span>  
   
  [!code-csharp[csProgGuideTypes#18](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_5.cs)]  
   
- <span data-ttu-id="929b5-122">此语句的结果是在堆栈上创建对象引用 `o`，而在堆上则引用 `int` 类型的值。</span><span class="sxs-lookup"><span data-stu-id="929b5-122">The result of this statement is creating an object reference `o`, on the stack, that references a value of the type `int`, on the heap.</span></span> <span data-ttu-id="929b5-123">该值是赋给变量 `i` 的值类型值的一个副本。</span><span class="sxs-lookup"><span data-stu-id="929b5-123">This value is a copy of the value-type value assigned to the variable `i`.</span></span> <span data-ttu-id="929b5-124">下图说明了两个变量 `i` 和 `o` 之间的差异。</span><span class="sxs-lookup"><span data-stu-id="929b5-124">The difference between the two variables, `i` and `o`, is illustrated in the following figure.</span></span>  
+ <span data-ttu-id="188e8-122">此语句的结果是在堆栈上创建对象引用 `o`，而在堆上则引用 `int` 类型的值。</span><span class="sxs-lookup"><span data-stu-id="188e8-122">The result of this statement is creating an object reference `o`, on the stack, that references a value of the type `int`, on the heap.</span></span> <span data-ttu-id="188e8-123">该值是赋给变量 `i` 的值类型值的一个副本。</span><span class="sxs-lookup"><span data-stu-id="188e8-123">This value is a copy of the value-type value assigned to the variable `i`.</span></span> <span data-ttu-id="188e8-124">下图说明了两个变量 `i` 和 `o` 之间的差异。</span><span class="sxs-lookup"><span data-stu-id="188e8-124">The difference between the two variables, `i` and `o`, is illustrated in the following figure.</span></span>  
   
- <span data-ttu-id="929b5-125">![装箱转换图](../../../csharp/programming-guide/types/media/vcboxingconversion.gif "vcBoxingConversion")</span><span class="sxs-lookup"><span data-stu-id="929b5-125">![BoxingConversion graphic](../../../csharp/programming-guide/types/media/vcboxingconversion.gif "vcBoxingConversion")</span></span>  
-<span data-ttu-id="929b5-126">装箱转换</span><span class="sxs-lookup"><span data-stu-id="929b5-126">Boxing Conversion</span></span>  
+ <span data-ttu-id="188e8-125">![装箱转换图](../../../csharp/programming-guide/types/media/vcboxingconversion.gif "vcBoxingConversion")</span><span class="sxs-lookup"><span data-stu-id="188e8-125">![BoxingConversion graphic](../../../csharp/programming-guide/types/media/vcboxingconversion.gif "vcBoxingConversion")</span></span>  
+<span data-ttu-id="188e8-126">装箱转换</span><span class="sxs-lookup"><span data-stu-id="188e8-126">Boxing Conversion</span></span>  
   
- <span data-ttu-id="929b5-127">还可以像下面的示例一样执行显式装箱，但显式装箱从来不是必需的：</span><span class="sxs-lookup"><span data-stu-id="929b5-127">It is also possible to perform the boxing explicitly as in the following example, but explicit boxing is never required:</span></span>  
+ <span data-ttu-id="188e8-127">还可以像下面的示例一样执行显式装箱，但显式装箱从来不是必需的：</span><span class="sxs-lookup"><span data-stu-id="188e8-127">It is also possible to perform the boxing explicitly as in the following example, but explicit boxing is never required:</span></span>  
   
  [!code-csharp[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_6.cs)]  
   
-## <a name="description"></a><span data-ttu-id="929b5-128">描述</span><span class="sxs-lookup"><span data-stu-id="929b5-128">Description</span></span>  
- <span data-ttu-id="929b5-129">此示例使用装箱将整型变量 `i` 转换为对象 `o`。</span><span class="sxs-lookup"><span data-stu-id="929b5-129">This example converts an integer variable `i` to an object `o` by using boxing.</span></span> <span data-ttu-id="929b5-130">这样一来，存储在变量 `i` 中的值就从 `123` 更改为 `456`。</span><span class="sxs-lookup"><span data-stu-id="929b5-130">Then, the value stored in the variable `i` is changed from `123` to `456`.</span></span> <span data-ttu-id="929b5-131">该示例表明原始值类型和装箱的对象使用不同的内存位置，因此能够存储不同的值。</span><span class="sxs-lookup"><span data-stu-id="929b5-131">The example shows that the original value type and the boxed object use separate memory locations, and therefore can store different values.</span></span>  
+## <a name="description"></a><span data-ttu-id="188e8-128">描述</span><span class="sxs-lookup"><span data-stu-id="188e8-128">Description</span></span>  
+ <span data-ttu-id="188e8-129">此示例使用装箱将整型变量 `i` 转换为对象 `o`。</span><span class="sxs-lookup"><span data-stu-id="188e8-129">This example converts an integer variable `i` to an object `o` by using boxing.</span></span> <span data-ttu-id="188e8-130">这样一来，存储在变量 `i` 中的值就从 `123` 更改为 `456`。</span><span class="sxs-lookup"><span data-stu-id="188e8-130">Then, the value stored in the variable `i` is changed from `123` to `456`.</span></span> <span data-ttu-id="188e8-131">该示例表明原始值类型和装箱的对象使用不同的内存位置，因此能够存储不同的值。</span><span class="sxs-lookup"><span data-stu-id="188e8-131">The example shows that the original value type and the boxed object use separate memory locations, and therefore can store different values.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="929b5-132">示例</span><span class="sxs-lookup"><span data-stu-id="929b5-132">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="188e8-132">示例</span><span class="sxs-lookup"><span data-stu-id="188e8-132">Example</span></span>  
  [!code-csharp[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_7.cs)]  
   
-## <a name="unboxing"></a><span data-ttu-id="929b5-133">取消装箱</span><span class="sxs-lookup"><span data-stu-id="929b5-133">Unboxing</span></span>  
- <span data-ttu-id="929b5-134">取消装箱是从 `object` 类型到[值类型](../../../csharp/language-reference/keywords/value-types.md)或从接口类型到实现该接口的值类型的显式转换。</span><span class="sxs-lookup"><span data-stu-id="929b5-134">Unboxing is an explicit conversion from the type `object` to a [value type](../../../csharp/language-reference/keywords/value-types.md) or from an interface type to a value type that implements the interface.</span></span> <span data-ttu-id="929b5-135">取消装箱操作包括：</span><span class="sxs-lookup"><span data-stu-id="929b5-135">An unboxing operation consists of:</span></span>  
+## <a name="unboxing"></a><span data-ttu-id="188e8-133">取消装箱</span><span class="sxs-lookup"><span data-stu-id="188e8-133">Unboxing</span></span>  
+ <span data-ttu-id="188e8-134">取消装箱是从 `object` 类型到[值类型](../../../csharp/language-reference/keywords/value-types.md)或从接口类型到实现该接口的值类型的显式转换。</span><span class="sxs-lookup"><span data-stu-id="188e8-134">Unboxing is an explicit conversion from the type `object` to a [value type](../../../csharp/language-reference/keywords/value-types.md) or from an interface type to a value type that implements the interface.</span></span> <span data-ttu-id="188e8-135">取消装箱操作包括：</span><span class="sxs-lookup"><span data-stu-id="188e8-135">An unboxing operation consists of:</span></span>  
   
--   <span data-ttu-id="929b5-136">检查对象实例，以确保它是给定值类型的装箱值。</span><span class="sxs-lookup"><span data-stu-id="929b5-136">Checking the object instance to make sure that it is a boxed value of the given value type.</span></span>  
+-   <span data-ttu-id="188e8-136">检查对象实例，以确保它是给定值类型的装箱值。</span><span class="sxs-lookup"><span data-stu-id="188e8-136">Checking the object instance to make sure that it is a boxed value of the given value type.</span></span>  
   
--   <span data-ttu-id="929b5-137">将该值从实例复制到值类型变量中。</span><span class="sxs-lookup"><span data-stu-id="929b5-137">Copying the value from the instance into the value-type variable.</span></span>  
+-   <span data-ttu-id="188e8-137">将该值从实例复制到值类型变量中。</span><span class="sxs-lookup"><span data-stu-id="188e8-137">Copying the value from the instance into the value-type variable.</span></span>  
   
- <span data-ttu-id="929b5-138">下面的语句演示装箱和取消装箱两种操作：</span><span class="sxs-lookup"><span data-stu-id="929b5-138">The following statements demonstrate both boxing and unboxing operations:</span></span>  
+ <span data-ttu-id="188e8-138">下面的语句演示装箱和取消装箱两种操作：</span><span class="sxs-lookup"><span data-stu-id="188e8-138">The following statements demonstrate both boxing and unboxing operations:</span></span>  
   
  [!code-csharp[csProgGuideTypes#21](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_8.cs)]  
   
- <span data-ttu-id="929b5-139">下图演示上述语句的结果。</span><span class="sxs-lookup"><span data-stu-id="929b5-139">The following figure demonstrates the result of the previous statements.</span></span>  
+ <span data-ttu-id="188e8-139">下图演示上述语句的结果。</span><span class="sxs-lookup"><span data-stu-id="188e8-139">The following figure demonstrates the result of the previous statements.</span></span>  
   
- <span data-ttu-id="929b5-140">![取消装箱转换图](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")</span><span class="sxs-lookup"><span data-stu-id="929b5-140">![UnBoxing Conversion graphic](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")</span></span>  
-<span data-ttu-id="929b5-141">取消装箱转换</span><span class="sxs-lookup"><span data-stu-id="929b5-141">Unboxing Conversion</span></span>  
+ <span data-ttu-id="188e8-140">![取消装箱转换图](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")</span><span class="sxs-lookup"><span data-stu-id="188e8-140">![UnBoxing Conversion graphic](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")</span></span>  
+<span data-ttu-id="188e8-141">取消装箱转换</span><span class="sxs-lookup"><span data-stu-id="188e8-141">Unboxing Conversion</span></span>  
   
- <span data-ttu-id="929b5-142">要在运行时成功取消装箱值类型，被取消装箱的项必须是对一个对象的引用，该对象是先前通过装箱该值类型的实例创建的。</span><span class="sxs-lookup"><span data-stu-id="929b5-142">For the unboxing of value types to succeed at run time, the item being unboxed must be a reference to an object that was previously created by boxing an instance of that value type.</span></span> <span data-ttu-id="929b5-143">尝试取消装箱 `null` 会导致 <xref:System.NullReferenceException>。</span><span class="sxs-lookup"><span data-stu-id="929b5-143">Attempting to unbox `null` causes a <xref:System.NullReferenceException>.</span></span> <span data-ttu-id="929b5-144">尝试取消装箱对不兼容值类型的引用会导致 <xref:System.InvalidCastException>。</span><span class="sxs-lookup"><span data-stu-id="929b5-144">Attempting to unbox a reference to an incompatible value type causes an <xref:System.InvalidCastException>.</span></span>  
+ <span data-ttu-id="188e8-142">要在运行时成功取消装箱值类型，被取消装箱的项必须是对一个对象的引用，该对象是先前通过装箱该值类型的实例创建的。</span><span class="sxs-lookup"><span data-stu-id="188e8-142">For the unboxing of value types to succeed at run time, the item being unboxed must be a reference to an object that was previously created by boxing an instance of that value type.</span></span> <span data-ttu-id="188e8-143">尝试取消装箱 `null` 会导致 <xref:System.NullReferenceException>。</span><span class="sxs-lookup"><span data-stu-id="188e8-143">Attempting to unbox `null` causes a <xref:System.NullReferenceException>.</span></span> <span data-ttu-id="188e8-144">尝试取消装箱对不兼容值类型的引用会导致 <xref:System.InvalidCastException>。</span><span class="sxs-lookup"><span data-stu-id="188e8-144">Attempting to unbox a reference to an incompatible value type causes an <xref:System.InvalidCastException>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="929b5-145">示例</span><span class="sxs-lookup"><span data-stu-id="929b5-145">Example</span></span>  
- <span data-ttu-id="929b5-146">下面的示例演示无效的取消装箱及引发的 `InvalidCastException`。</span><span class="sxs-lookup"><span data-stu-id="929b5-146">The following example demonstrates a case of invalid unboxing and the resulting `InvalidCastException`.</span></span> <span data-ttu-id="929b5-147">使用 `try` 和 `catch`，在发生错误时显示错误信息。</span><span class="sxs-lookup"><span data-stu-id="929b5-147">Using `try` and `catch`, an error message is displayed when the error occurs.</span></span>  
+## <a name="example"></a><span data-ttu-id="188e8-145">示例</span><span class="sxs-lookup"><span data-stu-id="188e8-145">Example</span></span>  
+ <span data-ttu-id="188e8-146">下面的示例演示无效的取消装箱及引发的 `InvalidCastException`。</span><span class="sxs-lookup"><span data-stu-id="188e8-146">The following example demonstrates a case of invalid unboxing and the resulting `InvalidCastException`.</span></span> <span data-ttu-id="188e8-147">使用 `try` 和 `catch`，在发生错误时显示错误信息。</span><span class="sxs-lookup"><span data-stu-id="188e8-147">Using `try` and `catch`, an error message is displayed when the error occurs.</span></span>  
   
  [!code-csharp[csProgGuideTypes#20](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_9.cs)]  
   
- <span data-ttu-id="929b5-148">此程序输出：</span><span class="sxs-lookup"><span data-stu-id="929b5-148">This program outputs:</span></span>  
+ <span data-ttu-id="188e8-148">此程序输出：</span><span class="sxs-lookup"><span data-stu-id="188e8-148">This program outputs:</span></span>  
   
  `Specified cast is not valid. Error: Incorrect unboxing.`  
   
- <span data-ttu-id="929b5-149">如果将下列语句：</span><span class="sxs-lookup"><span data-stu-id="929b5-149">If you change the statement:</span></span>  
+ <span data-ttu-id="188e8-149">如果将下列语句：</span><span class="sxs-lookup"><span data-stu-id="188e8-149">If you change the statement:</span></span>  
   
-```  
+```csharp
 int j = (short) o;  
 ```  
   
- <span data-ttu-id="929b5-150">更改为：</span><span class="sxs-lookup"><span data-stu-id="929b5-150">to:</span></span>  
+ <span data-ttu-id="188e8-150">更改为：</span><span class="sxs-lookup"><span data-stu-id="188e8-150">to:</span></span>  
   
-```  
+```csharp
 int j = (int) o;  
 ```  
   
- <span data-ttu-id="929b5-151">将执行转换，并将得到以下输出：</span><span class="sxs-lookup"><span data-stu-id="929b5-151">the conversion will be performed, and you will get the output:</span></span>  
+ <span data-ttu-id="188e8-151">将执行转换，并将得到以下输出：</span><span class="sxs-lookup"><span data-stu-id="188e8-151">the conversion will be performed, and you will get the output:</span></span>  
   
  `Unboxing OK.`  
   
-## <a name="c-language-specification"></a><span data-ttu-id="929b5-152">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="929b5-152">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="188e8-152">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="188e8-152">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="related-sections"></a><span data-ttu-id="929b5-153">相关章节</span><span class="sxs-lookup"><span data-stu-id="929b5-153">Related Sections</span></span>  
- <span data-ttu-id="929b5-154">更多相关信息：</span><span class="sxs-lookup"><span data-stu-id="929b5-154">For more information:</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="188e8-153">相关章节</span><span class="sxs-lookup"><span data-stu-id="188e8-153">Related Sections</span></span>  
+ <span data-ttu-id="188e8-154">更多相关信息：</span><span class="sxs-lookup"><span data-stu-id="188e8-154">For more information:</span></span>  
   
--   [<span data-ttu-id="929b5-155">引用类型</span><span class="sxs-lookup"><span data-stu-id="929b5-155">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
+-   [<span data-ttu-id="188e8-155">引用类型</span><span class="sxs-lookup"><span data-stu-id="188e8-155">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [<span data-ttu-id="929b5-156">值类型</span><span class="sxs-lookup"><span data-stu-id="929b5-156">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)  
+-   [<span data-ttu-id="188e8-156">值类型</span><span class="sxs-lookup"><span data-stu-id="188e8-156">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)  
   
-## <a name="see-also"></a><span data-ttu-id="929b5-157">请参阅</span><span class="sxs-lookup"><span data-stu-id="929b5-157">See Also</span></span>  
- [<span data-ttu-id="929b5-158">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="929b5-158">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="188e8-157">请参阅</span><span class="sxs-lookup"><span data-stu-id="188e8-157">See Also</span></span>  
+ [<span data-ttu-id="188e8-158">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="188e8-158">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)

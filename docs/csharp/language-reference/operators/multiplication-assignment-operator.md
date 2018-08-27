@@ -7,37 +7,38 @@ helpviewer_keywords:
 - '*= operator [C#]'
 - binary multiplication assignment operator (*=) [C#]
 ms.assetid: 2e472155-59db-4dbf-bb94-bcccfa1a794d
-ms.openlocfilehash: 6bbf2142ca7e9e05010a29920da52e1439f6e882
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: e47bc5c681c94ac3fc5c345c56b3814350ffa5ec
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171545"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932345"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="a2957-102">\*= 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="a2957-102">\*= Operator (C# Reference)</span></span>
-<span data-ttu-id="a2957-103">二进制乘法赋值运算符。</span><span class="sxs-lookup"><span data-stu-id="a2957-103">The binary multiplication assignment operator.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="007de-102">\*= 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="007de-102">\*= Operator (C# Reference)</span></span>
+<span data-ttu-id="007de-103">二进制乘法赋值运算符。</span><span class="sxs-lookup"><span data-stu-id="007de-103">The binary multiplication assignment operator.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a2957-104">备注</span><span class="sxs-lookup"><span data-stu-id="a2957-104">Remarks</span></span>  
- <span data-ttu-id="a2957-105">使用 `*=` 赋值运算符的表达式，如</span><span class="sxs-lookup"><span data-stu-id="a2957-105">An expression using the `*=` assignment operator, such as</span></span>  
+## <a name="remarks"></a><span data-ttu-id="007de-104">备注</span><span class="sxs-lookup"><span data-stu-id="007de-104">Remarks</span></span>  
+ <span data-ttu-id="007de-105">使用 `*=` 赋值运算符的表达式，如</span><span class="sxs-lookup"><span data-stu-id="007de-105">An expression using the `*=` assignment operator, such as</span></span>  
   
 ```csharp  
 x *= y  
 ```  
   
- <span data-ttu-id="a2957-106">等效于</span><span class="sxs-lookup"><span data-stu-id="a2957-106">is equivalent to</span></span>  
+ <span data-ttu-id="007de-106">等效于</span><span class="sxs-lookup"><span data-stu-id="007de-106">is equivalent to</span></span>  
   
 ```csharp  
 x = x * y  
 ```  
   
- <span data-ttu-id="a2957-107">不同的是 `x` 只计算一次。</span><span class="sxs-lookup"><span data-stu-id="a2957-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="a2957-108">针对数值类型预定义了 [\* 运算符](../../../csharp/language-reference/operators/multiplication-operator.md)以进行乘法运算。</span><span class="sxs-lookup"><span data-stu-id="a2957-108">The [\* operator](../../../csharp/language-reference/operators/multiplication-operator.md) is predefined for numeric types to perform multiplication.</span></span>  
+ <span data-ttu-id="007de-107">不同的是 `x` 只计算一次。</span><span class="sxs-lookup"><span data-stu-id="007de-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="007de-108">针对数值类型预定义了 [\* 运算符](../../../csharp/language-reference/operators/multiplication-operator.md)以进行乘法运算。</span><span class="sxs-lookup"><span data-stu-id="007de-108">The [\* operator](../../../csharp/language-reference/operators/multiplication-operator.md) is predefined for numeric types to perform multiplication.</span></span>  
   
- <span data-ttu-id="a2957-109">不能直接重载 `*=` 运算符，但用户定义的类型可重载 [* 运算符](../../../csharp/language-reference/operators/multiplication-operator.md)（请参阅[运算符](../../../csharp/language-reference/keywords/operator.md)）。</span><span class="sxs-lookup"><span data-stu-id="a2957-109">The `*=` operator cannot be overloaded directly, but user-defined types can overload the [* operator](../../../csharp/language-reference/operators/multiplication-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
+ <span data-ttu-id="007de-109">不能直接重载 `*=` 运算符，但用户定义的类型可重载 [* 运算符](../../../csharp/language-reference/operators/multiplication-operator.md)（请参阅[运算符](../../../csharp/language-reference/keywords/operator.md)）。</span><span class="sxs-lookup"><span data-stu-id="007de-109">The `*=` operator cannot be overloaded directly, but user-defined types can overload the [* operator](../../../csharp/language-reference/operators/multiplication-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a2957-110">示例</span><span class="sxs-lookup"><span data-stu-id="a2957-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="007de-110">示例</span><span class="sxs-lookup"><span data-stu-id="007de-110">Example</span></span>  
  [!code-csharp[csRefOperators#13](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="a2957-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="a2957-111">See Also</span></span>  
- [<span data-ttu-id="a2957-112">C# 参考</span><span class="sxs-lookup"><span data-stu-id="a2957-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="a2957-113">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="a2957-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="a2957-114">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="a2957-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="007de-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="007de-111">See Also</span></span>
+
+- [<span data-ttu-id="007de-112">C# 参考</span><span class="sxs-lookup"><span data-stu-id="007de-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="007de-113">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="007de-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="007de-114">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="007de-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

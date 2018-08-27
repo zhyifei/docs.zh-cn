@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56a9b97f37240e385dbd1788bafea62578d687a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ec28c581b8e6e0aff3a2765720b6e9795be931b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457862"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931699"
 ---
-# <a name="gettypelibinfo-function"></a><span data-ttu-id="feb5c-102">GetTypeLibInfo 函数</span><span class="sxs-lookup"><span data-stu-id="feb5c-102">GetTypeLibInfo Function</span></span>
-<span data-ttu-id="feb5c-103">返回有关指定的类型库的信息通过检查其[TLIBATTR](https://msdn.microsoft.com/library/ms221376\(v=vs.85\).aspx)结构。</span><span class="sxs-lookup"><span data-stu-id="feb5c-103">Returns information about the specified type library by examining its [TLIBATTR](https://msdn.microsoft.com/library/ms221376\(v=vs.85\).aspx) structure.</span></span>  
+# <a name="gettypelibinfo-function"></a><span data-ttu-id="1a9af-102">GetTypeLibInfo 函数</span><span class="sxs-lookup"><span data-stu-id="1a9af-102">GetTypeLibInfo Function</span></span>
+<span data-ttu-id="1a9af-103">返回有关指定的类型库的信息通过检查其[TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr)结构。</span><span class="sxs-lookup"><span data-stu-id="1a9af-103">Returns information about the specified type library by examining its [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="feb5c-104">语法</span><span class="sxs-lookup"><span data-stu-id="feb5c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1a9af-104">语法</span><span class="sxs-lookup"><span data-stu-id="1a9af-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeLibInfo(  
@@ -39,39 +39,39 @@ HRESULT GetTypeLibInfo(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="feb5c-105">参数</span><span class="sxs-lookup"><span data-stu-id="feb5c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1a9af-105">参数</span><span class="sxs-lookup"><span data-stu-id="1a9af-105">Parameters</span></span>  
  `szFile`  
- <span data-ttu-id="feb5c-106">[in]类型库的文件名称。</span><span class="sxs-lookup"><span data-stu-id="feb5c-106">[in] The file name of the type library.</span></span>  
+ <span data-ttu-id="1a9af-106">[in]类型库文件名称。</span><span class="sxs-lookup"><span data-stu-id="1a9af-106">[in] The file name of the type library.</span></span>  
   
  `pTypeLibID`  
- <span data-ttu-id="feb5c-107">[out]类型库的 GUID。</span><span class="sxs-lookup"><span data-stu-id="feb5c-107">[out] The GUID of the type library.</span></span>  
+ <span data-ttu-id="1a9af-107">[out]类型库的 GUID。</span><span class="sxs-lookup"><span data-stu-id="1a9af-107">[out] The GUID of the type library.</span></span>  
   
  `pTypeLibLCID`  
- <span data-ttu-id="feb5c-108">[out]类型库的本地化 ID。</span><span class="sxs-lookup"><span data-stu-id="feb5c-108">[out] The localization ID of the type library.</span></span>  
+ <span data-ttu-id="1a9af-108">[out]类型库的本地化 ID。</span><span class="sxs-lookup"><span data-stu-id="1a9af-108">[out] The localization ID of the type library.</span></span>  
   
  `pTypeLibPlatform`  
- <span data-ttu-id="feb5c-109">[out]A [SYSKIND](https://msdn.microsoft.com/library/ms221272\(v=vs.85\).aspx)标识目标操作系统为类型库的标志。</span><span class="sxs-lookup"><span data-stu-id="feb5c-109">[out] A [SYSKIND](https://msdn.microsoft.com/library/ms221272\(v=vs.85\).aspx) flag that identifies the target operating system for the type library.</span></span> <span data-ttu-id="feb5c-110">常见的值为 SYS_WIN32 和 SYS_WIN64。</span><span class="sxs-lookup"><span data-stu-id="feb5c-110">Common values are SYS_WIN32 and SYS_WIN64.</span></span>  
+ <span data-ttu-id="1a9af-109">[out]一个[SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind)标识目标操作系统的类型库的标志。</span><span class="sxs-lookup"><span data-stu-id="1a9af-109">[out] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) flag that identifies the target operating system for the type library.</span></span> <span data-ttu-id="1a9af-110">常见的值为 SYS_WIN32 和 SYS_WIN64。</span><span class="sxs-lookup"><span data-stu-id="1a9af-110">Common values are SYS_WIN32 and SYS_WIN64.</span></span>  
   
  `pTypeLibMajorVer`  
- <span data-ttu-id="feb5c-111">[out]主版本号，类型库。</span><span class="sxs-lookup"><span data-stu-id="feb5c-111">[out] The major version number of the type library.</span></span> <span data-ttu-id="feb5c-112">例如，对于版本*x.y*，主版本号是*x*。</span><span class="sxs-lookup"><span data-stu-id="feb5c-112">For example, for version *x.y*, the major version number is *x*.</span></span>  
+ <span data-ttu-id="1a9af-111">[out]类型库的主版本号。</span><span class="sxs-lookup"><span data-stu-id="1a9af-111">[out] The major version number of the type library.</span></span> <span data-ttu-id="1a9af-112">例如，对于版本*x.y*，主版本号是*x*。</span><span class="sxs-lookup"><span data-stu-id="1a9af-112">For example, for version *x.y*, the major version number is *x*.</span></span>  
   
  `pTypeLibMinorVer`  
- <span data-ttu-id="feb5c-113">[out]类型库次版本号。</span><span class="sxs-lookup"><span data-stu-id="feb5c-113">[out] The minor version number of the type library.</span></span> <span data-ttu-id="feb5c-114">例如，对于版本*x.y*，次版本号是*y*。</span><span class="sxs-lookup"><span data-stu-id="feb5c-114">For example, for version *x.y*, the minor version number is *y*.</span></span>  
+ <span data-ttu-id="1a9af-113">[out]类型库的次版本号。</span><span class="sxs-lookup"><span data-stu-id="1a9af-113">[out] The minor version number of the type library.</span></span> <span data-ttu-id="1a9af-114">例如，对于版本*x.y*的次版本号是*y*。</span><span class="sxs-lookup"><span data-stu-id="1a9af-114">For example, for version *x.y*, the minor version number is *y*.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="feb5c-115">备注</span><span class="sxs-lookup"><span data-stu-id="feb5c-115">Remarks</span></span>  
- <span data-ttu-id="feb5c-116">`GetTypeLibInfo`函数调用[Tlbexp.exe （类型库导出程序）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)。</span><span class="sxs-lookup"><span data-stu-id="feb5c-116">The `GetTypeLibInfo` function is called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span> <span data-ttu-id="feb5c-117">此工具会生成类型库描述公共语言运行时 (CLR) 程序集中的类型。</span><span class="sxs-lookup"><span data-stu-id="feb5c-117">This tool generates a type library that describes the types in a common language runtime (CLR) assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1a9af-115">备注</span><span class="sxs-lookup"><span data-stu-id="1a9af-115">Remarks</span></span>  
+ <span data-ttu-id="1a9af-116">`GetTypeLibInfo`调用函数[Tlbexp.exe （类型库导出程序）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)。</span><span class="sxs-lookup"><span data-stu-id="1a9af-116">The `GetTypeLibInfo` function is called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span> <span data-ttu-id="1a9af-117">此工具生成类型库描述公共语言运行时 (CLR) 程序集中的类型。</span><span class="sxs-lookup"><span data-stu-id="1a9af-117">This tool generates a type library that describes the types in a common language runtime (CLR) assembly.</span></span>  
   
- <span data-ttu-id="feb5c-118">如果任何参数为 null，则该函数将返回`HRESULT`的`E_POINTER`。</span><span class="sxs-lookup"><span data-stu-id="feb5c-118">If any parameter is null, the function returns an `HRESULT` of `E_POINTER`.</span></span> <span data-ttu-id="feb5c-119">否则，它将返回 `S_OK`。</span><span class="sxs-lookup"><span data-stu-id="feb5c-119">Otherwise, it returns `S_OK`.</span></span>  
+ <span data-ttu-id="1a9af-118">如果任何参数为 null，该函数返回`HRESULT`的`E_POINTER`。</span><span class="sxs-lookup"><span data-stu-id="1a9af-118">If any parameter is null, the function returns an `HRESULT` of `E_POINTER`.</span></span> <span data-ttu-id="1a9af-119">否则，它将返回 `S_OK`。</span><span class="sxs-lookup"><span data-stu-id="1a9af-119">Otherwise, it returns `S_OK`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="feb5c-120">要求</span><span class="sxs-lookup"><span data-stu-id="feb5c-120">Requirements</span></span>  
- <span data-ttu-id="feb5c-121">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="feb5c-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1a9af-120">要求</span><span class="sxs-lookup"><span data-stu-id="1a9af-120">Requirements</span></span>  
+ <span data-ttu-id="1a9af-121">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1a9af-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="feb5c-122">**标头：** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="feb5c-122">**Header:** TlbRef.h</span></span>  
+ <span data-ttu-id="1a9af-122">**标头：** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="1a9af-122">**Header:** TlbRef.h</span></span>  
   
- <span data-ttu-id="feb5c-123">**库：** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="feb5c-123">**Library:** TlbRef.lib</span></span>  
+ <span data-ttu-id="1a9af-123">**库：** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="1a9af-123">**Library:** TlbRef.lib</span></span>  
   
- <span data-ttu-id="feb5c-124">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="feb5c-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1a9af-124">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1a9af-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="feb5c-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="feb5c-125">See Also</span></span>  
- [<span data-ttu-id="feb5c-126">Tlbexp Helper 函数</span><span class="sxs-lookup"><span data-stu-id="feb5c-126">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- <span data-ttu-id="feb5c-127">[LoadTypeLibEx 函数](https://msdn.microsoft.com/library/ms221249\(v=vs.85\).aspx)</span><span class="sxs-lookup"><span data-stu-id="feb5c-127">[LoadTypeLibEx Function](https://msdn.microsoft.com/library/ms221249\(v=vs.85\).aspx)</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a9af-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="1a9af-125">See Also</span></span>  
+ [<span data-ttu-id="1a9af-126">Tlbexp Helper 函数</span><span class="sxs-lookup"><span data-stu-id="1a9af-126">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [<span data-ttu-id="1a9af-127">LoadTypeLibEx 函数</span><span class="sxs-lookup"><span data-stu-id="1a9af-127">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

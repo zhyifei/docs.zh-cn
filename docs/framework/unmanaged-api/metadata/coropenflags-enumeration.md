@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f231c4f9782518e30cbaa89c6b085c72aafcc92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa9e7a4dacceb492dfe037b4b64f22f231323de5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445440"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933217"
 ---
-# <a name="coropenflags-enumeration"></a><span data-ttu-id="4e1e9-102">CorOpenFlags 枚举</span><span class="sxs-lookup"><span data-stu-id="4e1e9-102">CorOpenFlags Enumeration</span></span>
-<span data-ttu-id="4e1e9-103">包含一些标志值，用于控制打开清单文件时的元数据行为。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-103">Contains flag values that control metadata behavior upon opening manifest files.</span></span>  
+# <a name="coropenflags-enumeration"></a><span data-ttu-id="1c141-102">CorOpenFlags 枚举</span><span class="sxs-lookup"><span data-stu-id="1c141-102">CorOpenFlags Enumeration</span></span>
+<span data-ttu-id="1c141-103">包含一些标志值，用于控制打开清单文件时的元数据行为。</span><span class="sxs-lookup"><span data-stu-id="1c141-103">Contains flag values that control metadata behavior upon opening manifest files.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4e1e9-104">语法</span><span class="sxs-lookup"><span data-stu-id="4e1e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c141-104">语法</span><span class="sxs-lookup"><span data-stu-id="1c141-104">Syntax</span></span>  
   
 ```  
 typedef enum CorOpenFlags  
@@ -48,30 +48,30 @@ typedef enum CorOpenFlags
 } CorOpenFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4e1e9-105">成员</span><span class="sxs-lookup"><span data-stu-id="4e1e9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1c141-105">成员</span><span class="sxs-lookup"><span data-stu-id="1c141-105">Members</span></span>  
   
-|<span data-ttu-id="4e1e9-106">成员</span><span class="sxs-lookup"><span data-stu-id="4e1e9-106">Member</span></span>|<span data-ttu-id="4e1e9-107">描述</span><span class="sxs-lookup"><span data-stu-id="4e1e9-107">Description</span></span>|  
+|<span data-ttu-id="1c141-106">成员</span><span class="sxs-lookup"><span data-stu-id="1c141-106">Member</span></span>|<span data-ttu-id="1c141-107">描述</span><span class="sxs-lookup"><span data-stu-id="1c141-107">Description</span></span>|  
 |------------|-----------------|  
-|`ofRead`|<span data-ttu-id="4e1e9-108">指示该文件应在只读状态下打开。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-108">Indicates that the file should be opened for reading only.</span></span>|  
-|`ofWrite`|<span data-ttu-id="4e1e9-109">指示该文件应在可写入状态下打开。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-109">Indicates that the file should be opened for writing.</span></span><br /><br /> <span data-ttu-id="4e1e9-110">如果在打开 .winmd 文件时使用 `ofWrite` 标志，则你还应该传递 `ofNoTransform` 标志。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-110">If you are using the `ofWrite` flag when opening a .winmd file, you should also pass the `ofNoTransform` flag.</span></span>|  
-|`ofReadWriteMask`|<span data-ttu-id="4e1e9-111">读写操作的掩码。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-111">A mask for reading and writing.</span></span>|  
-|`ofCopyMemory`|<span data-ttu-id="4e1e9-112">指示应将该文件读入内存。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-112">Indicates that the file should be read into memory.</span></span> <span data-ttu-id="4e1e9-113">元数据应保持自己的副本。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-113">Metadata should maintain its own copy.</span></span>|  
-|`ofCacheImage`|<span data-ttu-id="4e1e9-114">已过时。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-114">Obsolete.</span></span> <span data-ttu-id="4e1e9-115">将忽略此标志。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-115">This flag is ignored.</span></span>|  
-|`ofManifestMetadata`|<span data-ttu-id="4e1e9-116">已过时。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-116">Obsolete.</span></span> <span data-ttu-id="4e1e9-117">将忽略此标志。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-117">This flag is ignored.</span></span>|  
-|`ofReadOnly`|<span data-ttu-id="4e1e9-118">指示应打开文件进行读取，并且调用`QueryInterface`为[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)无法进行。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-118">Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.</span></span>|  
-|`ofTakeOwnership`|<span data-ttu-id="4e1e9-119">指示已分配内存的使用调用[CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c)和由元数据会被释放。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-119">Indicates that the memory was allocated using a call to [CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c) and will be freed by the metadata.</span></span>|  
-|`ofNoTypeLib`|<span data-ttu-id="4e1e9-120">已过时。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-120">Obsolete.</span></span> <span data-ttu-id="4e1e9-121">将忽略此标志。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-121">This flag is ignored.</span></span>|  
-|`ofNoTransform`|<span data-ttu-id="4e1e9-122">指示应该禁用 .winmd 文件的自动转换。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-122">Indicates that automatic transforms of .winmd files should be disabled.</span></span> <span data-ttu-id="4e1e9-123">也就是说，应该禁用从 Windows 运行时类型到 .NET Framework 类型的投影。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-123">In other words, the projection of a Windows Runtime type to a .NET Framework type should be disabled.</span></span> <span data-ttu-id="4e1e9-124">有关详细信息，请参阅[.NET 和 Windows 运行时的内涵](http://msdn.microsoft.com/magazine/jj651569.aspx)。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-124">For more information, see [Underneath the Hood with .NET and the Windows Runtime](http://msdn.microsoft.com/magazine/jj651569.aspx).</span></span>|  
-|`ofReserved1`|<span data-ttu-id="4e1e9-125">保留以供内部使用。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-125">Reserved for internal use.</span></span>|  
-|`ofReserved2`|<span data-ttu-id="4e1e9-126">保留以供内部使用。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-126">Reserved for internal use.</span></span>|  
-|`ofReserved`|<span data-ttu-id="4e1e9-127">保留以供内部使用。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-127">Reserved for internal use.</span></span>|  
+|`ofRead`|<span data-ttu-id="1c141-108">指示该文件应在只读状态下打开。</span><span class="sxs-lookup"><span data-stu-id="1c141-108">Indicates that the file should be opened for reading only.</span></span>|  
+|`ofWrite`|<span data-ttu-id="1c141-109">指示该文件应在可写入状态下打开。</span><span class="sxs-lookup"><span data-stu-id="1c141-109">Indicates that the file should be opened for writing.</span></span><br /><br /> <span data-ttu-id="1c141-110">如果在打开 .winmd 文件时使用 `ofWrite` 标志，则你还应该传递 `ofNoTransform` 标志。</span><span class="sxs-lookup"><span data-stu-id="1c141-110">If you are using the `ofWrite` flag when opening a .winmd file, you should also pass the `ofNoTransform` flag.</span></span>|  
+|`ofReadWriteMask`|<span data-ttu-id="1c141-111">读写操作的掩码。</span><span class="sxs-lookup"><span data-stu-id="1c141-111">A mask for reading and writing.</span></span>|  
+|`ofCopyMemory`|<span data-ttu-id="1c141-112">指示应将该文件读入内存。</span><span class="sxs-lookup"><span data-stu-id="1c141-112">Indicates that the file should be read into memory.</span></span> <span data-ttu-id="1c141-113">元数据应保持自己的副本。</span><span class="sxs-lookup"><span data-stu-id="1c141-113">Metadata should maintain its own copy.</span></span>|  
+|`ofCacheImage`|<span data-ttu-id="1c141-114">已过时。</span><span class="sxs-lookup"><span data-stu-id="1c141-114">Obsolete.</span></span> <span data-ttu-id="1c141-115">将忽略此标志。</span><span class="sxs-lookup"><span data-stu-id="1c141-115">This flag is ignored.</span></span>|  
+|`ofManifestMetadata`|<span data-ttu-id="1c141-116">已过时。</span><span class="sxs-lookup"><span data-stu-id="1c141-116">Obsolete.</span></span> <span data-ttu-id="1c141-117">将忽略此标志。</span><span class="sxs-lookup"><span data-stu-id="1c141-117">This flag is ignored.</span></span>|  
+|`ofReadOnly`|<span data-ttu-id="1c141-118">指示应打开文件进行读取，并且调用`QueryInterface`有关[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)无法进行。</span><span class="sxs-lookup"><span data-stu-id="1c141-118">Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.</span></span>|  
+|`ofTakeOwnership`|<span data-ttu-id="1c141-119">指示内存被分配通过调用[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) ，将释放由元数据。</span><span class="sxs-lookup"><span data-stu-id="1c141-119">Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.</span></span>|  
+|`ofNoTypeLib`|<span data-ttu-id="1c141-120">已过时。</span><span class="sxs-lookup"><span data-stu-id="1c141-120">Obsolete.</span></span> <span data-ttu-id="1c141-121">将忽略此标志。</span><span class="sxs-lookup"><span data-stu-id="1c141-121">This flag is ignored.</span></span>|  
+|`ofNoTransform`|<span data-ttu-id="1c141-122">指示应该禁用 .winmd 文件的自动转换。</span><span class="sxs-lookup"><span data-stu-id="1c141-122">Indicates that automatic transforms of .winmd files should be disabled.</span></span> <span data-ttu-id="1c141-123">也就是说，应该禁用从 Windows 运行时类型到 .NET Framework 类型的投影。</span><span class="sxs-lookup"><span data-stu-id="1c141-123">In other words, the projection of a Windows Runtime type to a .NET Framework type should be disabled.</span></span> <span data-ttu-id="1c141-124">有关详细信息，请参阅[其下方底层信息使用.NET 和 Windows 运行时](http://msdn.microsoft.com/magazine/jj651569.aspx)。</span><span class="sxs-lookup"><span data-stu-id="1c141-124">For more information, see [Underneath the Hood with .NET and the Windows Runtime](http://msdn.microsoft.com/magazine/jj651569.aspx).</span></span>|  
+|`ofReserved1`|<span data-ttu-id="1c141-125">保留以供内部使用。</span><span class="sxs-lookup"><span data-stu-id="1c141-125">Reserved for internal use.</span></span>|  
+|`ofReserved2`|<span data-ttu-id="1c141-126">保留以供内部使用。</span><span class="sxs-lookup"><span data-stu-id="1c141-126">Reserved for internal use.</span></span>|  
+|`ofReserved`|<span data-ttu-id="1c141-127">保留以供内部使用。</span><span class="sxs-lookup"><span data-stu-id="1c141-127">Reserved for internal use.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4e1e9-128">要求</span><span class="sxs-lookup"><span data-stu-id="4e1e9-128">Requirements</span></span>  
- <span data-ttu-id="4e1e9-129">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4e1e9-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c141-128">要求</span><span class="sxs-lookup"><span data-stu-id="1c141-128">Requirements</span></span>  
+ <span data-ttu-id="1c141-129">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1c141-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4e1e9-130">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="4e1e9-130">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="1c141-130">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="1c141-130">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="4e1e9-131">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4e1e9-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1c141-131">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c141-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4e1e9-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e1e9-132">See Also</span></span>  
- [<span data-ttu-id="4e1e9-133">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="4e1e9-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="1c141-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="1c141-132">See Also</span></span>  
+ [<span data-ttu-id="1c141-133">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="1c141-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

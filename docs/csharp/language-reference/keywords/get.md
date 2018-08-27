@@ -7,34 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: 671cadce0bd120ec0728562ec448b2ce6edf2dd7
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 182f7164ad929232c185903a3dbf024a2e5d22a7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961347"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998636"
 ---
-# <a name="get-c-reference"></a><span data-ttu-id="92693-102">get（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="92693-102">get (C# Reference)</span></span>
+# <a name="get-c-reference"></a><span data-ttu-id="a2b39-102">get（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="a2b39-102">get (C# Reference)</span></span>
 
-<span data-ttu-id="92693-103">`get` 关键字在属性或索引器中定义访问器方法，它将返回属性值或索引器元素。</span><span class="sxs-lookup"><span data-stu-id="92693-103">The `get` keyword defines an *accessor* method in a property or indexer that returns the property value or the indexer element.</span></span> <span data-ttu-id="92693-104">有关详细信息，请参阅[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[自动实现的属性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引器](../../../csharp/programming-guide/indexers/index.md)。</span><span class="sxs-lookup"><span data-stu-id="92693-104">For more information, see [Properties](../../../csharp/programming-guide/classes-and-structs/properties.md), [Auto-Implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) and [Indexers](../../../csharp/programming-guide/indexers/index.md).</span></span>  
+<span data-ttu-id="a2b39-103">`get` 关键字在属性或索引器中定义访问器方法，它将返回属性值或索引器元素。</span><span class="sxs-lookup"><span data-stu-id="a2b39-103">The `get` keyword defines an *accessor* method in a property or indexer that returns the property value or the indexer element.</span></span> <span data-ttu-id="a2b39-104">有关详细信息，请参阅[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[自动实现的属性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引器](../../../csharp/programming-guide/indexers/index.md)。</span><span class="sxs-lookup"><span data-stu-id="a2b39-104">For more information, see [Properties](../../../csharp/programming-guide/classes-and-structs/properties.md), [Auto-Implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) and [Indexers](../../../csharp/programming-guide/indexers/index.md).</span></span>  
   
-<span data-ttu-id="92693-105">以下示例为名为 `Seconds` 的属性同时定义 `get` 和 `set` 访问器。</span><span class="sxs-lookup"><span data-stu-id="92693-105">The following example defines both a `get` and a `set` accessor for a property named `Seconds`.</span></span> <span data-ttu-id="92693-106">它使用名为 `_seconds` 的私有字段备份属性值。</span><span class="sxs-lookup"><span data-stu-id="92693-106">It uses a private field named `_seconds` to back the property value.</span></span>  
+<span data-ttu-id="a2b39-105">以下示例为名为 `Seconds` 的属性同时定义 `get` 和 `set` 访问器。</span><span class="sxs-lookup"><span data-stu-id="a2b39-105">The following example defines both a `get` and a `set` accessor for a property named `Seconds`.</span></span> <span data-ttu-id="a2b39-106">它使用名为 `_seconds` 的私有字段备份属性值。</span><span class="sxs-lookup"><span data-stu-id="a2b39-106">It uses a private field named `_seconds` to back the property value.</span></span>  
  
  [!code-csharp[get#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
   
-<span data-ttu-id="92693-107">通常，`get` 访问器包含返回一个值的单个语句，如前面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="92693-107">Often, the `get` accessor consists of a single statement that returns a value, as it did in the previous example.</span></span> <span data-ttu-id="92693-108">从 C# 7.0 开始，可以将 `get` 访问器作为 expression-bodied 成员实现。</span><span class="sxs-lookup"><span data-stu-id="92693-108">Starting with C# 7.0, you can implement the `get` accessor as an expression-bodied member.</span></span> <span data-ttu-id="92693-109">以下示例将 `get` 和 `set` 访问器都作为 expression-bodied 成员实现。</span><span class="sxs-lookup"><span data-stu-id="92693-109">The following example implements both the `get` and the `set` accessor as expression-bodied members.</span></span>
+<span data-ttu-id="a2b39-107">通常，`get` 访问器包含返回一个值的单个语句，如前面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="a2b39-107">Often, the `get` accessor consists of a single statement that returns a value, as it did in the previous example.</span></span> <span data-ttu-id="a2b39-108">从 C# 7.0 开始，可以将 `get` 访问器作为 expression-bodied 成员实现。</span><span class="sxs-lookup"><span data-stu-id="a2b39-108">Starting with C# 7.0, you can implement the `get` accessor as an expression-bodied member.</span></span> <span data-ttu-id="a2b39-109">以下示例将 `get` 和 `set` 访问器都作为 expression-bodied 成员实现。</span><span class="sxs-lookup"><span data-stu-id="a2b39-109">The following example implements both the `get` and the `set` accessor as expression-bodied members.</span></span>
 
  [!code-csharp[get#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
  
-<span data-ttu-id="92693-110">对于属性的 `get` 和 `set` 访问器不执行除设置或检索私有支持字段中的值以外的任何其他操作的简单情况，可以利用 C# 编译器对自动实现的属性的支持。</span><span class="sxs-lookup"><span data-stu-id="92693-110">For simple cases in which a property's `get` and `set` accessors perform no other operation than setting or retrieving a value in a private backing field, you can take advantage of the C# compiler's support for auto-implemented properties.</span></span> <span data-ttu-id="92693-111">以下示例将 `Hours` 作为自动实现的属性来实现。</span><span class="sxs-lookup"><span data-stu-id="92693-111">The following example implements `Hours` as an auto-implemented property.</span></span> 
+<span data-ttu-id="a2b39-110">对于属性的 `get` 和 `set` 访问器不执行除设置或检索私有支持字段中的值以外的任何其他操作的简单情况，可以利用 C# 编译器对自动实现的属性的支持。</span><span class="sxs-lookup"><span data-stu-id="a2b39-110">For simple cases in which a property's `get` and `set` accessors perform no other operation than setting or retrieving a value in a private backing field, you can take advantage of the C# compiler's support for auto-implemented properties.</span></span> <span data-ttu-id="a2b39-111">以下示例将 `Hours` 作为自动实现的属性来实现。</span><span class="sxs-lookup"><span data-stu-id="a2b39-111">The following example implements `Hours` as an auto-implemented property.</span></span> 
   
  [!code-csharp[get#2](../../../../samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]  
   
-## <a name="c-language-specification"></a><span data-ttu-id="92693-112">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="92693-112">C# Language Specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="a2b39-112">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="a2b39-112">C# Language Specification</span></span>
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="92693-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="92693-113">See Also</span></span>  
- [<span data-ttu-id="92693-114">C# 参考</span><span class="sxs-lookup"><span data-stu-id="92693-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="92693-115">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="92693-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- <span data-ttu-id="92693-116">[C# 关键字](../../../csharp/language-reference/keywords/index.md)[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)</span><span class="sxs-lookup"><span data-stu-id="92693-116">[C# Keywords](../../../csharp/language-reference/keywords/index.md) [Properties](../../../csharp/programming-guide/classes-and-structs/properties.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2b39-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="a2b39-113">See Also</span></span>
+
+- [<span data-ttu-id="a2b39-114">C# 参考</span><span class="sxs-lookup"><span data-stu-id="a2b39-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="a2b39-115">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="a2b39-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="a2b39-116">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="a2b39-116">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="a2b39-117">属性</span><span class="sxs-lookup"><span data-stu-id="a2b39-117">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)
