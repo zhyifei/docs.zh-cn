@@ -5,25 +5,25 @@ helpviewer_keywords:
 - list [LINQ in Visual Basic]
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
-ms.openlocfilehash: 3887d556c025fc667de9089f7a3bc90da8ef3f20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51adccb4a82520cf063ae26dd9596836e53c27ff
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642803"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924891"
 ---
-# <a name="how-to-create-a-list-of-items"></a><span data-ttu-id="2c5c7-102">如何：创建项列表</span><span class="sxs-lookup"><span data-stu-id="2c5c7-102">How to: Create a List of Items</span></span>
-<span data-ttu-id="2c5c7-103">本主题中的代码定义一个 `Student` 类，并创建该类的实例列表。</span><span class="sxs-lookup"><span data-stu-id="2c5c7-103">The code in this topic defines a `Student` class and creates a list of instances of the class.</span></span> <span data-ttu-id="2c5c7-104">列表旨在支持主题[演练： 在 Visual Basic 中编写查询](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)。</span><span class="sxs-lookup"><span data-stu-id="2c5c7-104">The list is designed to support the topic [Walkthrough: Writing Queries in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).</span></span> <span data-ttu-id="2c5c7-105">它还可以用于需要对象列表的任何应用程序。</span><span class="sxs-lookup"><span data-stu-id="2c5c7-105">It also can be used for any application that requires a list of objects.</span></span> <span data-ttu-id="2c5c7-106">代码使用对象初始值设定项定义学生列表中的项。</span><span class="sxs-lookup"><span data-stu-id="2c5c7-106">The code defines the items in the list of students by using object initializers.</span></span>  
+# <a name="how-to-create-a-list-of-items"></a><span data-ttu-id="29861-102">如何：创建项列表</span><span class="sxs-lookup"><span data-stu-id="29861-102">How to: Create a List of Items</span></span>
+<span data-ttu-id="29861-103">本主题中的代码定义一个 `Student` 类，并创建该类的实例列表。</span><span class="sxs-lookup"><span data-stu-id="29861-103">The code in this topic defines a `Student` class and creates a list of instances of the class.</span></span> <span data-ttu-id="29861-104">列表设计为支持主题[演练： 在 Visual Basic 中编写查询](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)。</span><span class="sxs-lookup"><span data-stu-id="29861-104">The list is designed to support the topic [Walkthrough: Writing Queries in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).</span></span> <span data-ttu-id="29861-105">它还可以用于需要对象列表的任何应用程序。</span><span class="sxs-lookup"><span data-stu-id="29861-105">It also can be used for any application that requires a list of objects.</span></span> <span data-ttu-id="29861-106">代码使用对象初始值设定项定义学生列表中的项。</span><span class="sxs-lookup"><span data-stu-id="29861-106">The code defines the items in the list of students by using object initializers.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2c5c7-107">示例</span><span class="sxs-lookup"><span data-stu-id="2c5c7-107">Example</span></span>  
- <span data-ttu-id="2c5c7-108">如果你在使用演练，则可以将此代码用于在其中创建的项目的 Module1.vb 文件。</span><span class="sxs-lookup"><span data-stu-id="2c5c7-108">If you are working on the walkthrough, you can use this code for the Module1.vb file of the project that is created there.</span></span> <span data-ttu-id="2c5c7-109">只需将 `Main` 方法中使用 **** 进行标记的行替换为在演练中提供的查询和查询执行。</span><span class="sxs-lookup"><span data-stu-id="2c5c7-109">Just replace the lines marked with **** in the `Main` method with the queries and query executions that are provided in the walkthrough.</span></span>  
+## <a name="example"></a><span data-ttu-id="29861-107">示例</span><span class="sxs-lookup"><span data-stu-id="29861-107">Example</span></span>  
+ <span data-ttu-id="29861-108">如果你在使用演练，则可以将此代码用于在其中创建的项目的 Module1.vb 文件。</span><span class="sxs-lookup"><span data-stu-id="29861-108">If you are working on the walkthrough, you can use this code for the Module1.vb file of the project that is created there.</span></span> <span data-ttu-id="29861-109">只需将 `Main` 方法中使用 **** 进行标记的行替换为在演练中提供的查询和查询执行。</span><span class="sxs-lookup"><span data-stu-id="29861-109">Just replace the lines marked with **** in the `Main` method with the queries and query executions that are provided in the walkthrough.</span></span>  
   
  [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/how-to-create-a-list-of-items_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="2c5c7-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="2c5c7-110">See Also</span></span>  
- [<span data-ttu-id="2c5c7-111">演练： 在 Visual Basic 中编写查询</span><span class="sxs-lookup"><span data-stu-id="2c5c7-111">Walkthrough: Writing Queries in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- [<span data-ttu-id="2c5c7-112">Visual Basic 中的 LINQ 入门</span><span class="sxs-lookup"><span data-stu-id="2c5c7-112">Getting Started with LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [<span data-ttu-id="2c5c7-113">对象初始值设定项：命名类型和匿名类型</span><span class="sxs-lookup"><span data-stu-id="2c5c7-113">Object Initializers: Named and Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [<span data-ttu-id="2c5c7-114">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="2c5c7-114">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [<span data-ttu-id="2c5c7-115">LINQ</span><span class="sxs-lookup"><span data-stu-id="2c5c7-115">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [<span data-ttu-id="2c5c7-116">查询</span><span class="sxs-lookup"><span data-stu-id="2c5c7-116">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)
+## <a name="see-also"></a><span data-ttu-id="29861-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="29861-110">See Also</span></span>  
+ [<span data-ttu-id="29861-111">演练： 在 Visual Basic 中编写查询</span><span class="sxs-lookup"><span data-stu-id="29861-111">Walkthrough: Writing Queries in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
+ [<span data-ttu-id="29861-112">Visual Basic 中的 LINQ 入门</span><span class="sxs-lookup"><span data-stu-id="29861-112">Getting Started with LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [<span data-ttu-id="29861-113">对象初始值设定项：命名类型和匿名类型</span><span class="sxs-lookup"><span data-stu-id="29861-113">Object Initializers: Named and Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [<span data-ttu-id="29861-114">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="29861-114">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="29861-115">LINQ</span><span class="sxs-lookup"><span data-stu-id="29861-115">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="29861-116">查询</span><span class="sxs-lookup"><span data-stu-id="29861-116">Queries</span></span>](../../../../visual-basic/language-reference/queries/index.md)
