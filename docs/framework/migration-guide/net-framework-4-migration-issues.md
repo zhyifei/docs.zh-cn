@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa8cbe0cc87e656eeb8cd0234875a87ade9c05f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eeb050e7741422b286c553182cea891278ac9ee7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393596"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998742"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 迁移问题
 
@@ -122,7 +122,7 @@ ms.locfileid: "33393596"
 | **程序集加载** | 为了阻止过多加载程序集并节省虚拟地址空间，CLR 现仅通过使用 Win32 `MapViewOfFile` 函数来加载程序集。 此外，它不再调用 `LoadLibrary` 函数。<br><br>此更改以以下方式影响诊断应用程序：<br><br>* <xref:System.Diagnostics.ProcessModuleCollection> 将不再包含通过调用 `Process.GetCurrentProcess().Modules` 获取的类库（.dll 文件）中的任何模块。<br>* 使用 `EnumProcessModules` 函数的 Win32 应用程序将看不到列出的所有托管模块。 | 无。 |
 | **声明类型** | 当类型没有声明类型时，<xref:System.Type.DeclaringType> 属性现将正确返回 null。 | 无。 |
 | **委托** | 在将 null 值传递给委托的构造函数时，委托现将引发 <xref:System.ArgumentNullException> 而不是 <xref:System.NullReferenceException>。 | 确保任何异常处理捕获 <xref:System.ArgumentNullException>。 |
-| **全局程序集缓存位置更改** | 对于 .NET Framework 4 程序集，已将全局程序集缓存从 Windows 目录 (%WINDIR%) 移动到 Microsoft.Net 子目录 (%WINDIR%\\Microsoft.Net)。 早期版本中的程序集保留在较早的目录中。<br><br>非托管 [ASM_CACHE_FLAGS](https://msdn.microsoft.com/library/ms231621(v=vs.100).aspx) 枚举包含新的 `ASM_CACHE_ROOT_EX` 标志。 此标志可获得 .NET Framework 4 程序集的缓存位置，可通过 [GetCachePath](/dotnet/framework/unmanaged-api/fusion/getcachepath-function) 函数获取此位置。 | 无，假定应用程序不使用程序集的显式路径（不建议这样做）。 |
+| **全局程序集缓存位置更改** | 对于 .NET Framework 4 程序集，已将全局程序集缓存从 Windows 目录 (%WINDIR%) 移动到 Microsoft.Net 子目录 (%WINDIR%\\Microsoft.Net)。 早期版本中的程序集保留在较早的目录中。<br><br>非托管 [ASM_CACHE_FLAGS](../unmanaged-api/fusion/asm-cache-flags-enumeration.md) 枚举包含新的 `ASM_CACHE_ROOT_EX` 标志。 此标志可获得 .NET Framework 4 程序集的缓存位置，可通过 [GetCachePath](../unmanaged-api/fusion/getcachepath-function.md) 函数获取此位置。 | 无，假定应用程序不使用程序集的显式路径（不建议这样做）。 |
 | **全局程序集缓存工具** | [Gacutil.exe（全局程序集缓存工具）](https://msdn.microsoft.com/library/ex0ss12c(v=vs.100).aspx)不再支持 shell 插件查看器。 | 无。 |
 
 ### <a name="interoperability"></a>互操作性
@@ -131,9 +131,9 @@ ms.locfileid: "33393596"
 
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |
-| **缓冲区长度**（非托管 API） | 为了节省内存，已更改 [ICorProfilerInfo2::GetStringLayout](/dotnet/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method) 方法的 `pBufferLengthOffset` 参数的功能，以匹配 `pStringLengthOffset` 参数。 这两个参数目前都指向字符串长度的偏移量位置。 已从字符串类的表示形式中删除缓冲区长度。 | 删除缓冲区长度的任何依赖项。 |
+| **缓冲区长度**（非托管 API） | 为了节省内存，已更改 [ICorProfilerInfo2::GetStringLayout](../unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) 方法的 `pBufferLengthOffset` 参数的功能，以匹配 `pStringLengthOffset` 参数。 这两个参数目前都指向字符串长度的偏移量位置。 已从字符串类的表示形式中删除缓冲区长度。 | 删除缓冲区长度的任何依赖项。 |
 | **JIT 调试** | 为了简化实时 (JIT) 调试的注册过程，.NET Framework 调试器现仅使用 AeDebug 注册表项，此注册表项可控制本机代码的 JIT 调试行为。 此更改产生以下结果：<br><br>* 不再能够为托管代码和本机代码注册两个不同的调试器。<br>* 不再能够为非交互式进程自动启动调试器，但可就交互式进程提示用户。<br>* 当调试器无法启动或当没有应启动的任何注册的调试器时，不再收到通知。<br>* 不再支持依赖于应用程序交互性的自动启动策略。 | 根据需要调整调试操作。 |
-| **平台调用** | 为了改进与非托管代码的互操作性的性能，平台调用中不正确的调用约定会导致应用程序失败。 在早期版本中，封送层在堆栈中向上解析这些错误。 | 在 Microsoft Visual Studio 2010 中调试应用程序时，将向用户通知这些错误，以便能够纠正它们。<br><br>如果二进制文件无法更新，可将 [\<NetFx40_PInvokeStackResilience>](/dotnet/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element) 元素包含在应用程序的配置文件中，以便能够在早期版本中的堆栈上解析这些调用错误。 但这可能会影响应用程序的性能。 |
+| **平台调用** | 为了改进与非托管代码的互操作性的性能，平台调用中不正确的调用约定会导致应用程序失败。 在早期版本中，封送层在堆栈中向上解析这些错误。 | 在 Microsoft Visual Studio 2010 中调试应用程序时，将向用户通知这些错误，以便能够纠正它们。<br><br>如果二进制文件无法更新，可将 [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 元素包含在应用程序的配置文件中，以便能够在早期版本中的堆栈上解析这些调用错误。 但这可能会影响应用程序的性能。 |
 | **移除的接口**（非托管 API） | 为了避免开发人员产生困惑，已移除以下接口，因为这些接口不提供任何有用的运行时方案，并且 CLR 不提供或接受任何实现：<br><br>* INativeImageINativeImageDependency<br>* INativeImageInstallInfo<br>* INativeImageEvaluate<br>* INativeImageConverter<br>* ICorModule<br>* IMetaDataConverter | 无。 |
 
 ## <a name="data"></a>数据

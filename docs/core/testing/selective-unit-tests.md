@@ -4,11 +4,12 @@ description: 介绍了如何使用筛选表达式通过 dotnet 测试命令运�
 author: smadala
 ms.author: mairaw
 ms.date: 03/22/2017
-ms.openlocfilehash: caea91e9884dba6bc07a7ef6a99699e43d23399c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 428e31014f5d8d487deb7c4b4317ebcef13c294d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935175"
 ---
 # <a name="running-selective-unit-tests"></a>运行选择性单元测试
 
@@ -17,21 +18,21 @@ ms.lasthandoff: 05/04/2018
 ## <a name="mstest"></a>MSTest
 
 ```csharp
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 namespace MSTestNamespace
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     [TestClass]
-    public class UnitTestClass1
+    public class UnitTest1
     {
-        [Priority(2)]
+        [TestCategory("CategoryA")]
+        [Priority(1)]
         [TestMethod]
         public void TestMethod1()
         {
         }
 
-        [TestCategory("CategoryA")]
-        [Priority(3)]
+        [Priority(2)]
         [TestMethod]
         public void TestMethod2()
         {
@@ -44,37 +45,38 @@ namespace MSTestNamespace
 | ---------- | ------ |
 | `dotnet test --filter Method` | 运行 `FullyQualifiedName` 包含 `Method` 的测试。 在 `vstest 15.1+` 中可用。 |
 | `dotnet test --filter Name~TestMethod1` | 运行名称包含 `TestMethod1` 的测试。 |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTestClass1` | 运行属于类 `MSTestNamespace.UnitTestClass1` 的测试。<br>**注意：** 由于 `ClassName` 值应有命名空间，因此 `ClassName=UnitTestClass1` 无效。 |
-| `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTestClass1.TestMethod1` | 运行除 `MSTestNamespace.UnitTestClass1.TestMethod1` 之外的其他所有测试。 |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | 运行属于类 `MSTestNamespace.UnitTest1` 的测试。<br>**注意：** 由于 `ClassName` 值应有命名空间，因此 `ClassName=UnitTest1` 无效。 |
+| `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | 运行除 `MSTestNamespace.UnitTest1.TestMethod1` 之外的其他所有测试。 |
 | `dotnet test --filter TestCategory=CategoryA` | 运行含 `[TestCategory("CategoryA")]` 批注的测试。 |
-| `dotnet test --filter Priority=3` | 运行含 `[Priority(3)]` 批注的测试。<br>**注意：**`Priority~3` 值无效，因为它不是字符串。 |
+| `dotnet test --filter Priority=2` | 运行含 `[Priority(2)]` 批注的测试。<br>
 
 **使用条件运算符 | 和 &amp;**
 
 | 表达式 | 结果 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTestClass1&#124;TestCategory=CategoryA"</code> | 运行 `FullyQualifiedName` 包含 `UnitTestClass1` **或** `TestCategory` 是 `CategoryA` 的测试。 |
-| `dotnet test --filter "FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA"` | 运行 `FullyQualifiedName` 包含 `UnitTestClass1` **且** `TestCategory` 是 `CategoryA` 的测试。 |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA)&#124;Priority=1"</code> | 运行 `FullyQualifiedName` 包含 `UnitTestClass1` **且** `TestCategory` 是 `CategoryA` **或** `Priority` 是 1 的测试。 |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | 运行 `FullyQualifiedName` 包含 `UnitTest1` **或** `TestCategory` 是 `CategoryA` 的测试。 |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | 运行 `FullyQualifiedName` 包含 `UnitTest1` **且** `TestCategory` 是 `CategoryA` 的测试。 |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | 运行 `FullyQualifiedName` 包含 `UnitTest1` **且** `TestCategory` 是 `CategoryA` **或** `Priority` 是 1 的测试。 |
 
 ## <a name="xunit"></a>xUnit
 
 ```csharp
+using Xunit;
+
 namespace XUnitNamespace
 {
     public class TestClass1
     {
-        [Trait("Category", "bvt")]
+        [Trait("Category", "CategoryA")]
         [Trait("Priority", "1")]
         [Fact]
-        public void foo()
+        public void Test1()
         {
         }
 
-        [Trait("Category", "Nightly")]
         [Trait("Priority", "2")]
         [Fact]
-        public void bar()
+        public void Test2()
         {
         }
     }
@@ -92,12 +94,54 @@ namespace XUnitNamespace
 | 表达式 | 结果 |
 | ---------- | ------ |
 | `dotnet test --filter XUnit` | 运行 `FullyQualifiedName` 包含 `XUnit` 的测试。  在 `vstest 15.1+` 中可用。 |
-| `dotnet test --filter Category=bvt` | 运行包含 `[Trait("Category", "bvt")]` 的测试。 |
+| `dotnet test --filter Category=CategoryA` | 运行包含 `[Trait("Category", "CategoryA")]` 的测试。 |
 
 **使用条件运算符 | 和 &amp;**
 
 | 表达式 | 结果 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | 运行 `FullyQualifiedName` 包含 `TestClass1` **或** `Category`是 `Nightly` 的测试。 |
-| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=Nightly"` | 运行 `FullyQualifiedName` 包含 `TestClass1` **且** `Category`是 `Nightly` 的测试。 |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=Nightly)&#124;Priority=1"</code> | 运行 `FullyQualifiedName` 包含 `TestClass1` **且** `Category` 是 `CategoryA` **或** `Priority` 是 1 的测试。 |
+| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | 运行 `FullyQualifiedName` 包含 `TestClass1` **或** `Category`是 `CategoryA` 的测试。 |
+| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | 运行 `FullyQualifiedName` 包含 `TestClass1` **且** `Category`是 `CategoryA` 的测试。 |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | 运行 `FullyQualifiedName` 包含 `TestClass1` **且** `Category` 是 `CategoryA` **或** `Priority` 是 1 的测试。 |
+
+## <a name="nunit"></a>NUnit
+
+```csharp
+using NUnit.Framework;
+
+namespace NUnitNamespace
+{
+    public class UnitTest1
+    {
+        [Category("CategoryA")]
+        [Property("Priority", 1)]
+        [Test]
+        public void TestMethod1()
+        {
+        }
+
+        [Property("Priority", 2)]
+        [Test]
+        public void TestMethod2()
+        {
+        }
+    }
+}
+```
+
+| 表达式 | 结果 |
+| ---------- | ------ |
+| `dotnet test --filter Method` | 运行 `FullyQualifiedName` 包含 `Method` 的测试。 在 `vstest 15.1+` 中可用。 |
+| `dotnet test --filter Name~TestMethod1` | 运行名称包含 `TestMethod1` 的测试。 |
+| `dotnet test --filter FullyQualifiedName~NUnitNamespace.UnitTest1` | 运行属于类 `NUnitNamespace.UnitTest1` 的测试。<br>
+| `dotnet test --filter FullyQualifiedName!=NUnitNamespace.UnitTest1.TestMethod1` | 运行除 `NUnitNamespace.UnitTest1.TestMethod1` 之外的其他所有测试。 |
+| `dotnet test --filter TestCategory=CategoryA` | 运行含 `[Category("CategoryA")]` 批注的测试。 |
+| `dotnet test --filter Priority=2` | 运行含 `[Priority(2)]` 批注的测试。<br>
+
+**使用条件运算符 | 和 &amp;**
+
+| 表达式 | 结果 |
+| ---------- | ------ |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | 运行 `FullyQualifiedName` 包含 `UnitTest1` **或** `TestCategory` 是 `CategoryA` 的测试。 |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | 运行 `FullyQualifiedName` 包含 `UnitTest1` **且** `TestCategory` 是 `CategoryA` 的测试。 |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | 运行 `FullyQualifiedName` 包含 `UnitTest1` **且** `TestCategory` 是 `CategoryA` **或** `Priority` 是 1 的测试。 |

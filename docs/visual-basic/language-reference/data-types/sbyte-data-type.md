@@ -16,39 +16,39 @@ helpviewer_keywords:
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20a5a9182da50345f97331e6f01e0e3665a2a61c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94ab72b2ac2678640697e3cfab426e5a7d6d889a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591416"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933147"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 数据类型 (Visual Basic)
 
-存储带符号的 8 位 （1 个字节） 整数，值的范围从-128 到 127。  
+保存有符号 8 位 （1 个字节） 整数，值的范围从-128 到 127。  
   
 ## <a name="remarks"></a>备注
 
-使用`SByte`数据类型包含不需要的完整数据宽度的整数值`Integer`甚至数据长度的一半的`Short`。 在某些情况下，公共语言运行时可能能够包你`SByte`紧密合作，以节省内存消耗的变量。
+使用`SByte`数据类型包含不需要的完整数据宽度的整数值`Integer`甚至数据长度的一半的`Short`。 在某些情况下，公共语言运行时可以打包在`SByte`变量紧密合作，以节省内存消耗。
 
 `SByte` 的默认值为 0。
 
 ## <a name="literal-assignments"></a>文本分配
   
-你可以声明并初始化`SByte`变量中将其分配为十进制文本、 八进制文本中，为十六进制文本、 （开始或利用 Visual Basic 自 2017 年 1） 二进制文本。
+您可以声明并初始化`SByte`变量由将其分配十进制文本、 十六进制文本八进制文本，或 （Visual Basic 从 2017年开始） 二进制文本。
 
-在下面的示例中，整数等于表示为十进制数字，十六进制，-102 和二进制文本分配给`SByte`值。 此示例需要使用编译`/removeintchecks`编译器开关。
+在以下示例中，整数等于-102、 表示为十进制、 十六进制和二进制文本分配给`SByte`值。 此示例需要使用编译`/removeintchecks`编译器开关。
 
 [!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]  
 
 > [!NOTE] 
-> 使用前缀`&h`或`&H`来表示为十六进制文本、 前缀`&b`或`&B`来表示二进制文字和前缀`&o`或`&O`来表示八进制文本。 十进制文本没有前缀。
+> 使用前缀`&h`或`&H`来表示十六进制文本前缀`&b`或`&B`来表示二进制文本和前缀`&o`或`&O`来表示八进制文本。 十进制文本没有前缀。
 
-从 Visual Basic 自 2017 年开始，你还可以使用下划线字符， `_`，作为数字分隔符以增强可读性，如以下示例所示。
+从 Visual Basic 2017 开始，你还可以使用下划线字符， `_`，作为数字分隔符，以增强可读性，如以下示例所示。
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
 
-从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如：
+从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 作为前缀和十六进制、 二进制或八进制数字之间的前导分隔符。 例如：
 
 ```vb
 Dim number As SByte = &H_F9
@@ -56,19 +56,19 @@ Dim number As SByte = &H_F9
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-如果整数文本在 `SByte` 范围之外（即，如果它小于 <xref:System.SByte.MinValue?displayProperty=nameWithType> 或大于 <xref:System.SByte.MaxValue?displayProperty=nameWithType>），会发生编译错误。 当一个整数文本具有无后缀[整数](integer-data-type.md)这方面的推断。 如果整数文本之外的范围，则`Integer`类型，[长](long-data-type.md)这方面的推断。 这意味着，在前面的示例中，数字文本`0x9A`和`0b10011010`都会被解释为 32 位有符号整数值为 156，这超出<xref:System.SByte.MaxValue?displayProperty=nameWithType>。 若要成功编译代码如下将分配到一个非十进制整数`SByte`，你可以执行以下任一操作：
+如果整数文本在 `SByte` 范围之外（即，如果它小于 <xref:System.SByte.MinValue?displayProperty=nameWithType> 或大于 <xref:System.SByte.MaxValue?displayProperty=nameWithType>），会发生编译错误。 如果整数文本没有后缀，[整数](integer-data-type.md)这方面的推断。 如果整数文本超出的范围`Integer`类型，[长](long-data-type.md)这方面的推断。 这意味着，在上一示例中，数字文本`0x9A`并`0b10011010`被解释为 32 位有符号整数值为 156，这超过了<xref:System.SByte.MaxValue?displayProperty=nameWithType>。 若要成功编译如下将分配到一个非十进制整数代码`SByte`，可以执行以下任一操作：
 
-- 通过使用编译禁用整数边界检查`/removeintchecks`编译器开关。
+- 通过编译与禁用整数边界检查`/removeintchecks`编译器开关。
 
-- 使用[键入字符](../../programming-guide\language-features\data-types/type-characters.md)明确地定义你想要分配到的文本值`SByte`。 下面的示例将负文本`Short`值赋给`SByte`。 请注意，负数，必须设置数值的高序位字的高顺序位。 对于本示例中，这位的文本的 15`Short`值。
+- 使用[类型字符](../../programming-guide\language-features\data-types/type-characters.md)显式定义你想要分配到的文本值`SByte`。 下面的示例将负文字`Short`值设为`SByte`。 请注意，对于负数，数字文本的高序位字的高顺序位必须进行设置。 对于本示例中，这位文字的 15`Short`值。
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 
 ## <a name="programming-tips"></a>编程提示
   
--   **CLS 遵从性。** `SByte`数据类型不是属于[公共语言规范](http://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用的组件，使用它。
+-   **CLS 遵从性。** `SByte`数据类型不属于[公共语言规范](http://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。
 
--   **扩大转换。** `SByte`数据类型加宽到`Short`， `Integer`， `Long`， `Decimal`， `Single`，和`Double`。 这意味着你可以将转换`SByte`到而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。
+-   **扩大转换。** `SByte`数据类型加宽到`Short`， `Integer`， `Long`， `Decimal`， `Single`，和`Double`。 这意味着可以将转换`SByte`而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。
   
 -   **类型字符。** `SByte` 不包含文本类型字符或标识符类型字符。  
   
@@ -77,7 +77,7 @@ Dim number As SByte = &H_F9
 ## <a name="see-also"></a>请参阅
 
  <xref:System.SByte?displayProperty=nameWithType>  
- [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
  [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)  

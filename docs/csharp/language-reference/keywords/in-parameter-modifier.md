@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 58500cf2caa1446af6b663f1b765c0be92309f1d
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 913957e6afad1d9d516a01f4bb0e377b94a40aea
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198417"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924983"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 参数修饰符（C# 参考）
 
@@ -122,4 +122,5 @@ Method(in i); // passed by readonly reference, explicitly using `in`
  [C# 参考](../index.md)  
  [C# 编程指南](../../programming-guide/index.md)  
  [C# 关键字](index.md)  
- [方法参数](method-parameters.md)[具有值类型的引用语义](../../reference-semantics-with-value-types.md)
+ [方法参数](method-parameters.md)  
+ [具有值类型的引用语义](../../reference-semantics-with-value-types.md)  

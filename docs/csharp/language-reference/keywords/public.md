@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 9bef5d076d9ab84aa15e2cdec2d176db8d1ac82b
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 853f9c9ebe36345a897337d4e793d3c88059e068
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960239"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998722"
 ---
 # <a name="public-c-reference"></a>public（C# 参考）
 `public` 关键字是类型和类型成员的访问修饰符。 公共访问是允许的最高访问级别。 对访问公共成员没有限制，如以下示例所示：  
@@ -38,14 +38,15 @@ class SampleClass
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)  
- [可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)  
- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)  
- [private](../../../csharp/language-reference/keywords/private.md)  
- [protected](../../../csharp/language-reference/keywords/protected.md)  
- [internal](../../../csharp/language-reference/keywords/internal.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)  
+- [可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)  
+- [private](../../../csharp/language-reference/keywords/private.md)  
+- [protected](../../../csharp/language-reference/keywords/protected.md)  
+- [internal](../../../csharp/language-reference/keywords/internal.md)

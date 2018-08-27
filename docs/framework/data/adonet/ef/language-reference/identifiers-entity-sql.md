@@ -2,21 +2,21 @@
 title: 标识符 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 390c69dec6caed1ffe6faccb5893174d2c211a6b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765875"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932179"
 ---
 # <a name="identifiers-entity-sql"></a>标识符 (Entity SQL)
-在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供两种类型的标识符： 简单标识符和带引号的标识符。  
+在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了两种类型的标识符： 简单标识符和带引号的标识符。  
   
 ## <a name="simple-identifiers"></a>简单标识符  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的简单标识符是字母数字和下划线字符的序列。 标识符的第一个字符必须是字母字符（a-z 或 A-Z）。  
   
 ## <a name="quoted-identifiers"></a>带引号的标识符  
- 带引号的标识符是括在方括号 ([]) 中的任何字符序列。 使用带引号的标识符可以指定含有在标识符中无效的字符的标识符。 方括号中的所有字符都是标识符的一部分，包括所有空格。  
+ 带引号的标识符是括在方括号 ([]) 中的任何字符序列。 使用带引号的标识符可以指定含有在标识符中无效的字符的标识符。 方括号之间的所有字符都成为标识符，包括所有空白区域的一部分。  
   
  带引号的标识符不能包含以下字符：  
   
@@ -101,7 +101,7 @@ SELECT 1 AS X, 2 AS X …
  参数不在一个作用域内。 由于对参数的引用包含特殊语法，参数名称不会与查询中的其他名称冲突。  
   
 ### <a name="query-expressions"></a>查询表达式  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询表达式引入一个新的作用域。 在 FROM 子句中定义的名称引入到从出现的顺序的作用域，从左到右。 在联接列表中，表达式可以引用列表前面定义的名称。 在 FROM 子句中标识的元素的公共属性（字段等）不添加到“from”作用域。 它们必须始终由别名限定名称引用。 通常，SELECT 表达式的所有部分都被视为在“from”作用域内。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询表达式引入一个新的作用域。 在 FROM 子句中定义的名称引入到范围中的出现顺序，从左到右。 在联接列表中，表达式可以引用列表前面定义的名称。 在 FROM 子句中标识的元素的公共属性（字段等）不添加到“from”作用域。 它们必须始终由别名限定名称引用。 通常，SELECT 表达式的所有部分都被视为在“from”作用域内。  
   
  GROUP BY 子句也引入一个新的同级作用域。 每个组都可以有一个引用组中元素集合的组名称。 每个分组表达式也将向“group”作用域引入一个新名称。 此外，嵌套聚合（即命名组）也添加到作用域中。 分组表达式本身在“from”作用域中。 但是，当使用 GROUP BY 子句时，选择列表（投影）、HAVING 子句和 ORDER BY 子句被视为在“group”作用域中，而不是在“from”作用域中。 聚合有特殊的处理方式，如下列内容所述。  
   

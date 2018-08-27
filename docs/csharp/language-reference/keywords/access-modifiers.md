@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 9629b1727fc210025256724db8db82b13b63b7db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff313df9683dbc76bab684ff484b746ad05e065a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217163"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935556"
 ---
 # <a name="access-modifiers-c-reference"></a>访问修饰符（C# 参考）
 访问修饰符是关键字，用于指定成员或类型已声明的可访问性。 本部分介绍四个访问修饰符：  
@@ -42,9 +42,9 @@ ms.locfileid: "33217163"
 -   [对使用可访问性级别的限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)：概括对使用已声明的可访问性级别的限制。  
   
 ## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [访问关键字](../../../csharp/language-reference/keywords/access-keywords.md)  
- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [访问关键字](../../../csharp/language-reference/keywords/access-keywords.md)  
+- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)

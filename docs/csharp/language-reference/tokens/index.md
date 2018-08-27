@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d69332988c698b7dd33aeadbc2cf5d1e9ed8f8be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cc105b335069635791e9e558fe6f9a28eba8b60
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282111"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931026"
 ---
 # <a name="c-special-characters"></a>C# 特殊字符
 
@@ -27,7 +27,7 @@ ms.locfileid: "33282111"
 
 - [$](../../../csharp/language-reference/tokens/interpolated.md)：内插的字符串字符。
 
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>请参阅
 
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)

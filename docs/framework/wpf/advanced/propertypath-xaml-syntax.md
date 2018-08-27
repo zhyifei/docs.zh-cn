@@ -5,32 +5,32 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 547c7d009d2fecf863284324c7ea45006d20d20c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548982"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934108"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 语法
-<xref:System.Windows.PropertyPath>对象支持复杂内联[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]设置需要的各种属性的语法<xref:System.Windows.PropertyPath>作为其值的类型。 本主题讨论<xref:System.Windows.PropertyPath>语法应用于绑定和动画的语法。  
+<xref:System.Windows.PropertyPath>对象支持复杂内联[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]设置的各种属性的语法<xref:System.Windows.PropertyPath>类型作为其值。 本主题介绍<xref:System.Windows.PropertyPath>应用于绑定和动画语法的语法。  
     
   
 <a name="where"></a>   
 ## <a name="where-propertypath-is-used"></a>PropertyPath 的使用情景  
- <xref:System.Windows.PropertyPath> 是一个用于多种的公共对象[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]功能。 尽管使用此通用<xref:System.Windows.PropertyPath>为了属性路径信息，每个用法功能区域其中<xref:System.Windows.PropertyPath>用作类型而变化。 因此，基于每个功能来讨论语法更为可行。  
+ <xref:System.Windows.PropertyPath> 是一个常见对象，用于多种[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]功能。 尽管使用通用<xref:System.Windows.PropertyPath>传输属性路径信息，为每个使用情况功能区域其中<xref:System.Windows.PropertyPath>用作一种类型会有所不同。 因此，基于每个功能来讨论语法更为可行。  
   
- 主要原因是，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.PropertyPath>来描述对象模型以遍历对象数据源的属性的路径，并可进行说明目标动画的目标路径。  
+ 主要[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.PropertyPath>来描述对象模型路径以遍历属性的对象数据源，并描述目标动画的目标路径。  
   
- 某些样式和模板的属性，如<xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType>采用限定的属性名称看起来类似于<xref:System.Windows.PropertyPath>。 但这不是真正的<xref:System.Windows.PropertyPath>; 相反，它是限定*owner.property*字符串格式用法，它通过 WPF[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]结合的类型转换器的处理器<xref:System.Windows.DependencyProperty>。  
+ 某些样式和模板的属性，如<xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType>需要看起来类似的限定的属性名<xref:System.Windows.PropertyPath>。 但这不是真正<xref:System.Windows.PropertyPath>; 相反，它是限定*owner.property*字符串格式用法启用由 WPF[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器的类型转换器与<xref:System.Windows.DependencyProperty>。  
   
 <a name="databinding_s"></a>   
 ## <a name="propertypath-for-objects-in-data-binding"></a>数据绑定中对象的 PropertyPath  
- 数据绑定是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，借此可以绑定到任意依赖属性的目标值。 但是，此类数据绑定的源不需要是依赖属性；可以是适用数据提供程序能识别的任意属性类型。 属性路径特别适用于<xref:System.Windows.Data.ObjectDataProvider>，它用于获取从绑定源[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象及其属性。  
+ 数据绑定是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，借此可以绑定到任意依赖属性的目标值。 但是，此类数据绑定的源不需要是依赖属性；可以是适用数据提供程序能识别的任意属性类型。 属性路径特别用于<xref:System.Windows.Data.ObjectDataProvider>，用于获取从绑定源[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象及其属性。  
   
- 请注意，数据绑定到[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]不使用<xref:System.Windows.PropertyPath>，因为它不使用<xref:System.Windows.Data.Binding.Path%2A>中<xref:System.Windows.Data.Binding>。 相反，你使用<xref:System.Windows.Data.Binding.XPath%2A>并指定有效的 XPath 语法，到[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]的数据。 <xref:System.Windows.Data.Binding.XPath%2A> 此外指定为字符串，但未在此处; 介绍请参阅[将绑定到 XML 数据使用 XPath 查询和 XMLDataProvider](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
+ 请注意，数据绑定到[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]不使用<xref:System.Windows.PropertyPath>，因为它不使用<xref:System.Windows.Data.Binding.Path%2A>中<xref:System.Windows.Data.Binding>。 相反，使用<xref:System.Windows.Data.Binding.XPath%2A>并指定到有效的 XPath 语法[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]的数据。 <xref:System.Windows.Data.Binding.XPath%2A> 此外指定为字符串，但未在此处; 介绍请参阅[XMLDataProvider 和 XPath 查询绑定到 XML 数据使用](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
   
- 理解数据绑定中的属性路径的关键是将绑定到单个属性值设置为目标，或者改为绑定到采用列表或集合的目标属性。 如果你正在绑定集合，例如绑定<xref:System.Windows.Controls.ListBox>，将根据多少数据项是在集合中，展开然后属性路径应引用集合对象，而不是单个集合项。 数据绑定引擎将匹配集合用作数据源绑定目标的类型为自动，导致的行为，例如填充<xref:System.Windows.Controls.ListBox>具有项数组。  
+ 理解数据绑定中的属性路径的关键是将绑定到单个属性值设置为目标，或者改为绑定到采用列表或集合的目标属性。 如果要绑定的集合，例如绑定<xref:System.Windows.Controls.ListBox>，具体取决于在集合中，有多少数据项将展开，则属性路径应引用集合对象，而不是单个集合项。 数据绑定引擎将匹配的数据源的绑定目标的类型为自动，从而导致的行为，例如填充用作集合<xref:System.Windows.Controls.ListBox>使用项数组。  
   
 <a name="singlecurrent"></a>   
 ### <a name="single-property-on-the-immediate-object-as-data-context"></a>直接对象上作为数据上下文的单个属性  
@@ -39,7 +39,7 @@ ms.locfileid: "33548982"
 <Binding Path="propertyName" .../>  
 ```  
   
- *propertyName*必须解析为在当前的属性的名称<xref:System.Windows.FrameworkElement.DataContext%2A>为<xref:System.Windows.Data.Binding.Path%2A>使用情况。 如果绑定更新源，则属性必须是可读取/写入的，并且源对象必须可变。  
+ *propertyName*必须解析为位于当前属性的名称<xref:System.Windows.FrameworkElement.DataContext%2A>为<xref:System.Windows.Data.Binding.Path%2A>使用情况。 如果绑定更新源，则属性必须是可读取/写入的，并且源对象必须可变。  
   
 <a name="singleindex"></a>   
 ### <a name="single-indexer-on-the-immediate-object-as-data-context"></a>直接对象上作为数据上下文的单个索引器  
@@ -48,9 +48,9 @@ ms.locfileid: "33548982"
 <Binding Path="[key]" .../>  
 ```  
   
- `key` 必须是字典或哈希表的类型化索引，或者是数组的整数索引。 此外，键值必须是可直接绑定到所应用属性的类型。 例如，包含字符串键和字符串值的哈希表可用于这种方式将绑定到文本<xref:System.Windows.Controls.TextBox>。 或者，如果键指向集合或子索引，则可使用此语法绑定到目标集合属性。 否则，需要通过 `<Binding Path="[``key``].``propertyName``" .../>` 等语法来引用特定属性。  
+ `key` 必须是字典或哈希表的类型化索引，或者是数组的整数索引。 此外，键值必须是可直接绑定到所应用属性的类型。 例如，包含字符串键和字符串值的哈希表可用于这种方式将绑定到文本<xref:System.Windows.Controls.TextBox>。 或者，如果键指向集合或子索引，则可使用此语法绑定到目标集合属性。 否则，需要通过 `<Binding Path="[key].propertyName" .../>` 等语法来引用特定属性。  
   
- 如有必要，可以指定索引的类型。 索引的属性路径的这个方面的详细信息，请参阅<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>。  
+ 如有必要，可以指定索引的类型。 有关此方面的索引的属性路径的详细信息，请参阅<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>。  
   
 <a name="multipleindirect"></a>   
 ### <a name="multiple-property-indirect-property-targeting"></a>多个属性（间接属性目标设置）  
@@ -59,7 +59,7 @@ ms.locfileid: "33548982"
 <Binding Path="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName` 必须解析为当前的属性的名称<xref:System.Windows.FrameworkElement.DataContext%2A>。 路径属性 `propertyName` 和 `propertyName2` 可以是关系中的任意属性，其中 `propertyName2` 是存在于类型中的值为 `propertyName` 的属性。  
+ `propertyName` 必须解析为的一个属性，它是当前名称<xref:System.Windows.FrameworkElement.DataContext%2A>。 路径属性 `propertyName` 和 `propertyName2` 可以是关系中的任意属性，其中 `propertyName2` 是存在于类型中的值为 `propertyName` 的属性。  
   
 <a name="singleattached"></a>   
 ### <a name="single-property-attached-or-otherwise-type-qualified"></a>附加的或类型限定的单个属性  
@@ -68,7 +68,7 @@ ms.locfileid: "33548982"
 <object property="(ownerType.propertyName)" .../>  
 ```  
   
- 括号，则指示在此属性<xref:System.Windows.PropertyPath>应使用部分限定构造。 它可以使用 XML 命名空间来查找具有适当映射的类型。 `ownerType`搜索类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器具有访问权限，通过<xref:System.Windows.Markup.XmlnsDefinitionAttribute>中每个程序集的声明。 大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。  `propertyName` 必须解析为 `ownerType` 中存在的属性名称。 此语法一般用于以下任一情况：  
+ 括号指示此属性在<xref:System.Windows.PropertyPath>应使用部分限定构造。 它可以使用 XML 命名空间来查找具有适当映射的类型。 `ownerType`搜索类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器有权访问，通过<xref:System.Windows.Markup.XmlnsDefinitionAttribute>中每个程序集的声明。 大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。  `propertyName` 必须解析为 `ownerType` 中存在的属性名称。 此语法一般用于以下任一情况：  
   
 -   路径是在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的样式或模板（该样式或模板没有指定的目标类型）中指定的。 除此之外，限定用法一般无效，因为在非样式、非模板情况下，属性存在于实例中，而不是类型中。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "33548982"
   
 -   要绑定到静态属性中。  
   
- 对于将用作情节提要目标，该属性指定为`propertyName`必须<xref:System.Windows.DependencyProperty>。  
+ 用作情节提要目标，该属性指定为`propertyName`必须是<xref:System.Windows.DependencyProperty>。  
   
 <a name="sourcetraversal"></a>   
 ### <a name="source-traversal-binding-to-hierarchies-of-collections"></a>源遍历（绑定到集合的层次结构）  
@@ -88,7 +88,7 @@ ms.locfileid: "33548982"
  此语法中的 / 用于在分层数据源对象中导航，并且支持使用连续的 / 字符分多个步骤导航层次结构。 源遍历说明了当前记录指针位置，该位置是通过将数据与其视图的 UI 同步而确定的。 有关与分层数据源对象绑定的详细信息，以及数据绑定中当前记录指针的概念，请参阅[对分层数据使用主-从模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)或[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
   
 > [!NOTE]
->  此语法看起来类似 [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]。 真正的[!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]表达式绑定到[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据源不用作<xref:System.Windows.Data.Binding.Path%2A>值，并应改为将用于相互排斥<xref:System.Windows.Data.Binding.XPath%2A>属性。  
+>  此语法看起来类似 [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]。 真正[!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]绑定到表达式[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据源不用作<xref:System.Windows.Data.Binding.Path%2A>值，而是应为互相排斥<xref:System.Windows.Data.Binding.XPath%2A>属性。  
   
 ### <a name="collection-views"></a>集合视图  
  若要引用一个已命名的集合视图，请使用哈希字符 (`#`) 为集合视图名称添加前缀。  
@@ -110,7 +110,7 @@ or
   
 <a name="mixing"></a>   
 ### <a name="mixing-syntaxes"></a>混合语法  
- 上述每条语法都可以独立使用。 例如，以下是在特定的 x 和 y 值创建颜色的属性路径的示例`ColorGrid`属性，它包含的像素网格数组<xref:System.Windows.Media.SolidColorBrush>对象：  
+ 上述每条语法都可以独立使用。 例如，下面是在特定的 x 和 y 值创建颜色的属性路径的示例`ColorGrid`属性，其中包含像素网格数组的<xref:System.Windows.Media.SolidColorBrush>对象：  
   
 ```xml  
 <Rectangle Fill="{Binding ColorGrid[20,30].SolidColorBrushResult}" .../>  
@@ -138,15 +138,15 @@ or
   
 <a name="databinding_sa"></a>   
 ## <a name="propertypath-for-animation-targets"></a>动画目标的 PropertyPath  
- 动画的目标属性必须是接受的依赖项属性<xref:System.Windows.Freezable>或基元类型。 但是，类型中的目标属性和最终动画属性可以存在于不同的对象中。 对于动画，属性路径用于通过遍历属性值中的对象-属性关系，定义命名动画目标对象的属性和预期目标动画属性之间的连接。  
+ 动画的目标属性必须是使用的依赖项属性<xref:System.Windows.Freezable>或基元类型。 但是，类型中的目标属性和最终动画属性可以存在于不同的对象中。 对于动画，属性路径用于通过遍历属性值中的对象-属性关系，定义命名动画目标对象的属性和预期目标动画属性之间的连接。  
   
 <a name="general"></a>   
 ### <a name="general-object-property-considerations-for-animations"></a>动画的一般对象-属性注意事项  
  有关一般动画概念的详细信息，请参阅[情节提要概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)和[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
   
- 值类型或正在进行动画处理的属性必须是<xref:System.Windows.Freezable>类型或基元。 开始路径的属性必须解析为存在于指定的依赖项属性的名称<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。  
+ 值类型或要进行动画处理的属性必须是<xref:System.Windows.Freezable>类型或基元。 开始路径的属性必须解析为存在于指定的依赖属性的名称<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。  
   
- 为了支持克隆进行动画处理<xref:System.Windows.Freezable>的已冻结，指定的对象<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>必须<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>派生类。  
+ 为了支持克隆进行动画处理<xref:System.Windows.Freezable>已冻结，由指定的对象<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>必须是<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>派生的类。  
   
 <a name="singlestepanim"></a>   
 ### <a name="single-property-on-the-target-object"></a>目标对象上的单个属性  
@@ -155,7 +155,7 @@ or
 <animation Storyboard.TargetProperty="propertyName" .../>  
 ```  
   
- `propertyName` 必须解析为存在于指定的依赖项属性的名称<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。  
+ `propertyName` 必须解析为存在于指定的依赖属性的名称<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。  
   
 <a name="indirectanim"></a>   
 ### <a name="indirect-property-targeting"></a>间接属性目标设定  
@@ -164,13 +164,13 @@ or
 <animation Storyboard.TargetProperty="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName` 必须是一个属性，可以是<xref:System.Windows.Freezable>值类型或基元，存在于指定<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。  
+ `propertyName` 必须是一个属性，它可以是<xref:System.Windows.Freezable>值类型或基元，存在于指定<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。  
   
- `propertyName2` 必须为依赖属性的名称，该属性存在于作为 `propertyName` 值的对象中。 换而言之，`propertyName2`作为依赖项属性的类型上必须存在`propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>。  
+ `propertyName2` 必须为依赖属性的名称，该属性存在于作为 `propertyName` 值的对象中。 换而言之，`propertyName2`作为依赖属性的类型上必须存在`propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>。  
   
- 因为应用了样式和模板，所以间接设定动画的目标是必要的。 若要确定动画的目标，你需要<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>目标对象，而该名称将由建立[X:name](../../../../docs/framework/xaml-services/x-name-directive.md)或<xref:System.Windows.FrameworkElement.Name%2A>。 虽然模板和样式元素也可以有名称，但这些名称仅在样式和模板的命名范围内有效。 （如果模板和样式与应用程序标记共享命名范围，则名称不唯一。 样式和模板的确在实例之间共享，并将保留重复名称。）因此，如果要进行动画处理的元素的各个属性来自样式或模板，则需要从不是来自样式模板的命名元素实例开始，然后将样式或模板可视化树设定为目标，以到达要进行动画处理的属性。  
+ 因为应用了样式和模板，所以间接设定动画的目标是必要的。 为了设定动画的目标，您需要<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>上的目标对象，并且名称由[X:name](../../../../docs/framework/xaml-services/x-name-directive.md)或<xref:System.Windows.FrameworkElement.Name%2A>。 虽然模板和样式元素也可以有名称，但这些名称仅在样式和模板的命名范围内有效。 （如果模板和样式与应用程序标记共享命名范围，则名称不唯一。 样式和模板的确在实例之间共享，并将保留重复名称。）因此，如果要进行动画处理的元素的各个属性来自样式或模板，则需要从不是来自样式模板的命名元素实例开始，然后将样式或模板可视化树设定为目标，以到达要进行动画处理的属性。  
   
- 例如，<xref:System.Windows.Controls.Panel.Background%2A>属性<xref:System.Windows.Controls.Panel>是一个完整<xref:System.Windows.Media.Brush>(实际上为<xref:System.Windows.Media.SolidColorBrush>) 来自主题模板。 要进行动画处理<xref:System.Windows.Media.Brush>完全，存在都需要 BrushAnimation (可能有一个用于每个<xref:System.Windows.Media.Brush>类型) 和不存在此类的类型。 要进行动画处理画笔，则改为属性进行动画处理的特定<xref:System.Windows.Media.Brush>类型。 你需要从获取<xref:System.Windows.Media.SolidColorBrush>到其<xref:System.Windows.Media.SolidColorBrush.Color%2A>应用<xref:System.Windows.Media.Animation.ColorAnimation>存在。 本示例的属性路径是 `Background.Color`。  
+ 例如，<xref:System.Windows.Controls.Panel.Background%2A>的属性<xref:System.Windows.Controls.Panel>是一个完整<xref:System.Windows.Media.Brush>(实际上<xref:System.Windows.Media.SolidColorBrush>) 来自主题模板。 若要进行动画处理<xref:System.Windows.Media.Brush>完全，则需要 BrushAnimation (可能是一个用于每个<xref:System.Windows.Media.Brush>类型) 并不存在此类的类型。 若要对一个画笔进行动画处理，而是进行动画处理的特定属性<xref:System.Windows.Media.Brush>类型。 您需要获得<xref:System.Windows.Media.SolidColorBrush>到其<xref:System.Windows.Media.SolidColorBrush.Color%2A>应用<xref:System.Windows.Media.Animation.ColorAnimation>存在。 本示例的属性路径是 `Background.Color`。  
   
 <a name="attachedanim"></a>   
 ### <a name="attached-properties"></a>附加属性  
@@ -179,7 +179,7 @@ or
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>  
 ```  
   
- 括号，则指示在此属性<xref:System.Windows.PropertyPath>应使用部分限定构造。 可以使用 XML 命名空间来查找类型。 `ownerType`搜索类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器具有访问权限，通过<xref:System.Windows.Markup.XmlnsDefinitionAttribute>中每个程序集的声明。 大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。 `propertyName` 必须解析为 `ownerType` 中存在的属性名称。 指定为属性`propertyName`必须<xref:System.Windows.DependencyProperty>。 （所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加属性都实现为依赖属性，因此该问题仅与自定义附加属性相关。）  
+ 括号指示此属性在<xref:System.Windows.PropertyPath>应使用部分限定构造。 可以使用 XML 命名空间来查找类型。 `ownerType`搜索类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器有权访问，通过<xref:System.Windows.Markup.XmlnsDefinitionAttribute>中每个程序集的声明。 大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。 `propertyName` 必须解析为 `ownerType` 中存在的属性名称。 为指定的属性`propertyName`必须是<xref:System.Windows.DependencyProperty>。 （所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加属性都实现为依赖属性，因此该问题仅与自定义附加属性相关。）  
   
 <a name="indexanim"></a>   
 ### <a name="indexers"></a>索引器  
@@ -188,13 +188,13 @@ or
 <animation Storyboard.TargetProperty="propertyName.propertyName2[index].propertyName3" .../>  
 ```  
   
- 大多数依赖项属性或<xref:System.Windows.Freezable>类型不支持索引器。 因此，动画路径中唯一使用索引器的地方是在用于启动命名目标上的链的属性与最终动画属性之间的中间位置。 在提供的语法中，为 `propertyName2`。 例如，索引器使用情况可能是如果中间属性是一个集合，如有必要<xref:System.Windows.Media.TransformGroup>，如属性路径中`RenderTransform.Children[1].Angle`。  
+ 大多数依赖项属性或<xref:System.Windows.Freezable>类型不支持索引器。 因此，动画路径中唯一使用索引器的地方是在用于启动命名目标上的链的属性与最终动画属性之间的中间位置。 在提供的语法中，为 `propertyName2`。 例如，索引器使用情况可能是如果中间属性是一个集合，如有必要<xref:System.Windows.Media.TransformGroup>，在属性路径，如`RenderTransform.Children[1].Angle`。  
   
 <a name="ppincode"></a>   
 ## <a name="propertypath-in-code"></a>代码中的 PropertyPath  
- 代码的使用情况<xref:System.Windows.PropertyPath>，包括如何构造<xref:System.Windows.PropertyPath>中的参考主题所述<xref:System.Windows.PropertyPath>。  
+ 代码的使用情况<xref:System.Windows.PropertyPath>，包括如何构建<xref:System.Windows.PropertyPath>，将的参考主题中所述<xref:System.Windows.PropertyPath>。  
   
- 一般情况下，<xref:System.Windows.PropertyPath>设计为使用两个不同的构造函数，另一个用于绑定用法和最简单的动画用法，一个用于复杂动画用法。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>绑定用法，其中对象一个字符串的签名。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>对于一步动画路径，该对象所在的签名<xref:System.Windows.DependencyProperty>。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29>用于复杂动画的签名。 后一种构造函数使用第一个参数的令牌字符串，以及在该令牌字符串中填充位置的对象的数组，以定义属性路径关系。  
+ 一般情况下，<xref:System.Windows.PropertyPath>设计为使用两个不同的构造函数，另一个用于绑定用法和最简单的动画用法，一个用于复杂动画用法。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>签名对绑定用法，其中对象一个字符串。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>单步动画路径，其中对象是签名<xref:System.Windows.DependencyProperty>。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29>复杂动画的签名。 后一种构造函数使用第一个参数的令牌字符串，以及在该令牌字符串中填充位置的对象的数组，以定义属性路径关系。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.PropertyPath>  

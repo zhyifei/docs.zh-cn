@@ -8,12 +8,12 @@ helpviewer_keywords:
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-ms.openlocfilehash: 04a0d3a62ebd2b3a938445995725994d72d5bd4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 615160088ee3a884919628152f153bd34c81b8a9
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216920"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755062"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage（C# 编译器选项）
 如果所需页不是系统的当前默认代码页，则此选项指定编译期间要使用的代码页。  
@@ -33,7 +33,7 @@ ms.locfileid: "33216920"
   
  如果源代码文件是使用计算机上采用的相同代码页创建的，或者如果是通过 UNICODE 或 UTF-8 创建的，则无需使用 -codepage。  
   
- 有关如何查找系统上支持哪些代码页的信息，请参阅 [GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx)。  
+ 有关如何查找系统上支持哪些代码页的信息，请参阅 [GetCPInfo](/windows/desktop/api/winnls/nf-winnls-getcpinfo)。  
   
  此编译器选项在 Visual Studio 中不可用，并且无法以编程方式更改。  
   

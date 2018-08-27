@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: b918b378623a239803fb4e0a65fcf82fd677b21f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961321"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932382"
 ---
 # <a name="do-c-reference"></a>do（C# 参考）
 
@@ -36,9 +36,9 @@ ms.locfileid: "37961321"
 
 ## <a name="see-also"></a>请参阅
 
- [C# 参考](../index.md)  
- [C# 编程指南](../../programming-guide/index.md)  
- [C# 关键字](index.md)  
- [do-while 语句 (C++)](/cpp/cpp/do-while-statement-cpp)  
- [迭代语句](iteration-statements.md)  
- [while 语句](while.md)  
+- [C# 参考](../index.md)  
+- [C# 编程指南](../../programming-guide/index.md)  
+- [C# 关键字](index.md)  
+- [do-while 语句 (C++)](/cpp/cpp/do-while-statement-cpp)  
+- [迭代语句](iteration-statements.md)  
+- [while 语句](while.md)  

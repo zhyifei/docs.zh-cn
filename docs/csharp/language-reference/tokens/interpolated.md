@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 407ca9e4744ea9be45867a08e87c502821226472
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058822"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000971"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字符串内插（C# 参考）
 
@@ -88,12 +88,13 @@ ms.locfileid: "34058822"
 
 如果不熟悉字符串内插，请参阅 [C# 中的字符串内插](../../quick-starts/interpolated-strings.yml)快速入门。 请参阅 [C# 中的字符串内插](../../tutorials/string-interpolation.md)教程查看更多相关示例。
 
-## <a name="see-also"></a>请参阅  
- <xref:System.String.Format%2A?displayProperty=nameWithType>  
- <xref:System.FormattableString?displayProperty=nameWithType>  
- <xref:System.IFormattable?displayProperty=nameWithType>  
- [复合格式设置](../../../standard/base-types/composite-formatting.md)  
- [字符串](../../programming-guide/strings/index.md)  
- [C# 编程指南](../../programming-guide/index.md)  
- [C# 特殊字符](index.md)  
- [C# 参考](../index.md)  
+## <a name="see-also"></a>请参阅
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [复合格式设置](../../../standard/base-types/composite-formatting.md)
+- [字符串](../../programming-guide/strings/index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 特殊字符](index.md)
+- [C# 参考](../index.md)

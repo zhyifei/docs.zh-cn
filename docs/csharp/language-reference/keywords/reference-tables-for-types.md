@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], reference tables
 - C# language, data types
 ms.assetid: 1d2b6a9b-31fd-4fa6-a7b2-bfd9c806ac8a
-ms.openlocfilehash: c432140dfd009518290ac6a21129cfb968f661b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a46766b17f413346c22dd6980b461421af26391c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266806"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999102"
 ---
 # <a name="reference-tables-for-types-c-reference"></a>类型参考表（C# 参考）
 以下参考表概括了 C# 类型：  
@@ -34,8 +34,9 @@ ms.locfileid: "33266806"
   
  有关设置数值类型的输出格式的信息，请参阅[设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)。  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)  
- [值类型](../../../csharp/language-reference/keywords/value-types.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)  
+- [值类型](../../../csharp/language-reference/keywords/value-types.md)

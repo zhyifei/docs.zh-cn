@@ -4,12 +4,12 @@ description: 了解 .NET Core 2.1 的新增功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 52fe2d47dbca9bc43c2f1274b0d9e535ba9f9abc
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874567"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935574"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新增功能
 
@@ -123,7 +123,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="windows-compatibility-pack"></a>Windows 兼容包
 
-当你将现有代码从 .NET Framework 转移到 .NET Core 时，可以使用 [Windows 兼容包](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)。 除了 .NET Core 中提供的 API，它使你还能够访问额外的 20,000 多个 API。 这些 API 包括 <xref:System.Drawing?displayProperty="nameWithType"> 命名空间中的类型、<xref:System.Diagnostics.EventLog> 类、WMI、性能计数器、Windows 服务以及 Windows 注册表类型和成员。
+当你将现有代码从 .NET Framework 转移到 .NET Core 时，可以使用 [Windows 兼容包](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)。 除了 .NET Core 中提供的 API，它使你还能够访问额外的 20,000 多个 API。 这些 API 包括 <xref:System.Drawing?displayProperty=nameWithType> 命名空间中的类型、<xref:System.Diagnostics.EventLog> 类、WMI、性能计数器、Windows 服务以及 Windows 注册表类型和成员。
 
 ## <a name="jit-compiler-improvements"></a>JIT 编译器改进
 
@@ -195,7 +195,7 @@ dotnet tool install -g dotnetsay
 
   - <xref:System.Security.Cryptography.CryptographicOperations.ZeroMemory%2A> 是不能进行优化的内存清理例程。
 
-- 静态 <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=fullName> 方法用随机值填充 <xref:System.Span%601>。
+- 静态 <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> 方法用随机值填充 <xref:System.Span%601>。
 
 - <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> 现在在 Linux 和 maxOS 上受支持。
 
@@ -215,7 +215,7 @@ dotnet tool install -g dotnetsay
 
 - 在所有 .NET Core 平台之间保持行为一致。
 
-<xref:System.Net.Http.SocketsHttpHandler> 是 .NET Core 2.1 中的默认实现。 但是，你可以通过调用 <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> 方法配置应用程序以使用较旧的 <xref:System.Net.Http.HttpClientHandler> 类：
+<xref:System.Net.Http.SocketsHttpHandler> 是 .NET Core 2.1 中的默认实现。 但是，你可以通过调用 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 方法配置应用程序以使用较旧的 <xref:System.Net.Http.HttpClientHandler> 类：
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);

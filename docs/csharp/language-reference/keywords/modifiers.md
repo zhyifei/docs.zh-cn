@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-ms.openlocfilehash: 241cbc767a3d094d664cf77f488e4154812d7516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5000f94a954994769eda2ac09404ba6a71c4639b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272677"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930359"
 ---
 # <a name="modifiers-c-reference"></a>修饰符（C# 参考）
 修饰符用于修改类型和类型成员的声明。 本节介绍 C# 修饰符。  
@@ -33,7 +33,8 @@ ms.locfileid: "33272677"
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|在派生类中声明其实现可由重写成员更改的方法或访问器。|  
 |[volatile](../../../csharp/language-reference/keywords/volatile.md)|指示字段可在程序中由操作系统、硬件或并发执行线程等项修改。|  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)

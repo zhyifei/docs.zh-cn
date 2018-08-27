@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 7e0a6bd77ca2594e9d74e669fcd9cddf91ee1cad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 181cc641bb12329c898cc3bb226ea49f0836e979
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600895"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932022"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 子句 (Visual Basic)
 包括集合中指定条件为 `true` 的任何元素，并绕过剩余元素。  
@@ -28,21 +28,21 @@ Take While expression
   
 |术语|定义|  
 |---|---|  
-|`expression`|必须的。 一个表示要测试的元素的条件的表达式。 该表达式必须返回`Boolean`值或等效的功能，如`Integer`作为计算`Boolean`。|  
+|`expression`|必须的。 一个表达式，表示要测试的元素的条件。 该表达式必须返回`Boolean`值或功能上等效，如`Integer`被视为`Boolean`。|  
   
 ## <a name="remarks"></a>备注  
- `Take While`子句之前提供包括从查询结果的开始元素`expression`返回`false`。 后`expression`返回`false`，查询将跳过所有剩余元素。 `expression`对于剩余的结果，将忽略。  
+ `Take While`子句之前提供包括查询结果的开始元素`expression`返回`false`。 之后`expression`返回`false`，查询将跳过所有剩余元素。 `expression`忽略其余的结果。  
   
- `Take While`子句不同于`Where`中的子句`Where`子句可用来进行包括从查询满足特定条件的所有元素。 `Take While`子句之前未满足的条件的第一个时间仅包括元素。 `Take While`子句在你正在使用排序的查询结果时最有用。  
+ `Take While`子句不同于`Where`中的子句`Where`子句可用于包括从查询满足特定条件的所有元素。 `Take While`子句仅在未满足的条件的第一个时间前包括元素。 `Take While`子句正在使用排序的查询结果时最有用。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例使用`Take While`子句来检索结果，直到找到第一个客户没有任何订单。  
+ 下面的代码示例使用`Take While`子句来检索结果，直到找到第一个客户，而无需任何订单。  
   
  [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
   
 ## <a name="see-also"></a>请参阅  
  [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查询](../../../visual-basic/language-reference/queries/queries.md)  
+ [查询](../../../visual-basic/language-reference/queries/index.md)  
  [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Take 子句](../../../visual-basic/language-reference/queries/take-clause.md)  

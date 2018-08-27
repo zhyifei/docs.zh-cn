@@ -2,12 +2,12 @@
 title: 线程处理 (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: f9ba0793876f38b3ada2f65c4594562ea1a66983
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 35f0ee3bfd67104d9eaab7c4dde7e35a28a374c5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296177"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934696"
 ---
 # <a name="threading-c"></a>线程处理 (C#)
 通过线程处理，C# 程序可执行并行处理，让你可一次执行多个操作。 例如，可使用线程处理来监视来自用户的输入、执行后台任务和处理并行输入流。  
@@ -37,8 +37,5 @@ ms.locfileid: "39296177"
   
 |标题|描述|  
 |-----------|-----------------|  
-|[多线程应用程序 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)|描述如何创建和使用线程。|  
 |[线程同步 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|描述如何控制线程的交互。|  
-|[线程池 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|描述如何使用由系统托管的工作线程池。|  
-|[如何：使用线程池 (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|展示线程池中多线程的同步使用。|  
 |[线程处理](../../../../../docs/standard/threading/index.md)|描述如何在 .NET Framework 中实现线程处理。|

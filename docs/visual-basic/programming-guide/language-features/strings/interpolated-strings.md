@@ -3,16 +3,16 @@ title: 内插的字符串 (Visual Basic)
 ms.date: 10/31/2017
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 313e74d5ce252884f1df2479ef1db8b4b24b5cce
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653554"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930545"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>内插的字符串 （Visual Basic 参考）
 
-用于构造字符串。  内插字符串类似于包含内插表达式的模板字符串。  内插字符串返回的字符串可替换内插表达式并且包含其字符串表示形式。 此功能是在 Visual Basic 14 和更高版本中可用。
+用于构造字符串。  内插字符串类似于包含内插表达式的模板字符串。  内插字符串返回的字符串可替换内插表达式并且包含其字符串表示形式。 此功能现已推出 Visual Basic 14 及更高版本。
 
 与[复合格式字符串](../../../../standard/base-types/composite-formatting.md#composite-format-string)相比，内插字符串的参数更易于理解。  例如，内插字符串  
   
@@ -35,7 +35,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 - *field-width* 是一个带符号整数，表示字段中的字符数。 如果为正数，则字段右对齐；如果为负数，则左对齐。 
 
-- “格式字符串”是适合正在设置格式的对象类型的格式字符串。 例如，对于<xref:System.DateTime>值，它可以是[标准日期和时间格式字符串](~/docs/standard/base-types/standard-date-and-time-format-strings.md)如"D"或"d"。
+- “格式字符串”是适合正在设置格式的对象类型的格式字符串。 例如，对于<xref:System.DateTime>的值，它可以是[标准日期和时间格式字符串](~/docs/standard/base-types/standard-date-and-time-format-strings.md)如"D"或"d"。
 
 > [!IMPORTANT]
 > 字符串开头的 `$` 和 `"` 之间不能有任何空格。 这样做会导致编译器错误。
@@ -66,15 +66,15 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
    请注意，只能通过使用反射来检查内插字符串。 如果将其传递给字符串格式设置方法，例如 <xref:System.Console.WriteLine(System.String)>，则会解析其格式项并返回结果字符串。 
 
-3. 转换到相比内, 插字符串的<xref:System.FormattableString>表示复合格式字符串的变量。 例如，检查复合格式字符串及其呈现为结果字符串的方式可能有助于在生成查询时防止注入攻击。 A<xref:System.FormattableString>还包括：
+3. 内插字符串转换为<xref:System.FormattableString>表示复合格式字符串的变量。 例如，检查复合格式字符串及其呈现为结果字符串的方式可能有助于在生成查询时防止注入攻击。 一个<xref:System.FormattableString>还包括：
 
       - <xref:System.FormattableString.ToString> 重载，生成 <xref:System.Globalization.CultureInfo.CurrentCulture> 的结果字符串。
       
-      - A<xref:System.FormattableString.Invariant%2A>要求方法能够生成的字符串<xref:System.Globalization.CultureInfo.InvariantCulture>。
+      - 一个<xref:System.FormattableString.Invariant%2A>方法，生成的字符串<xref:System.Globalization.CultureInfo.InvariantCulture>。
       
       - <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法，生成特定区域性的结果字符串。 
   
-    将出现所有双大括号 ("{{"和"}}") 设置格式之前保持为双大括号。  所有包含的内插表达式都转换为{0}， {1}，依次类推。  
+    出现的所有双大括号 ("{{"和"}}") 仍保留为双大括号直至您设置的格式。  所有包含的内插表达式都转换为{0}， {1}，依次类推。  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 

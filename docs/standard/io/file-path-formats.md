@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a5fccf5ea86469f14963fad8e7d2af0f7c68d2df
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107027"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933600"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系统中的文件路径格式
 
@@ -181,7 +181,7 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
 
 ## <a name="skipping-normalization"></a>跳过规范化
 
-一般来说，任何传递到 Windows API 的路径都会（有效地）传递到 [GetFullPathName 函数](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)并进行规范化。 但是有一种很重要的例外情况：以问号（而不是句点）开头的设备路径。 除非路径确切地以 `\\?\` 开头（注意使用的是规范的反斜杠），否则会对它进行规范化。
+一般来说，任何传递到 Windows API 的路径都会（有效地）传递到 [GetFullPathName 函数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)并进行规范化。 但是有一种很重要的例外情况：以问号（而不是句点）开头的设备路径。 除非路径确切地以 `\\?\` 开头（注意使用的是规范的反斜杠），否则会对它进行规范化。
 
 为什么要跳过规范化过程？ 主要有三方面的原因：
 
@@ -196,9 +196,9 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
 
 跳过规范化和路径上限检查是两种设备路径语法之间唯一的区别；除此以外它们是完全相同的。 请谨慎地选择跳过规范化，因为很容易就会创建出“一般”应用程序难以处理的路径。
 
-如果将开头为 `\\?\` 的路径显式地传递至 [GetFullPathName 函数](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)，则依然会对它们进行规范化。
+如果将开头为 `\\?\` 的路径显式地传递至 [GetFullPathName 函数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)，则依然会对它们进行规范化。
 
-请注意，可将超过 `MAX_PATH` 字符数的路径传递至 [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx)，前提是该路径不含 `\\?\`。 支持任意长度的路径，只要其字符串大小在 Windows 能处理的范围内。
+请注意，可将超过 `MAX_PATH` 字符数的路径传递至 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)，前提是该路径不含 `\\?\`。 支持任意长度的路径，只要其字符串大小在 Windows 能处理的范围内。
 
 ## <a name="case-and-the-windows-file-system"></a>大小写和 Windows 文件系统
 

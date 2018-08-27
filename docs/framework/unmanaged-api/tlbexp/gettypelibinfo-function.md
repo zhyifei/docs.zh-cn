@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56a9b97f37240e385dbd1788bafea62578d687a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ec28c581b8e6e0aff3a2765720b6e9795be931b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457862"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931699"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 函数
-返回有关指定的类型库的信息通过检查其[TLIBATTR](https://msdn.microsoft.com/library/ms221376\(v=vs.85\).aspx)结构。  
+返回有关指定的类型库的信息通过检查其[TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr)结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ HRESULT GetTypeLibInfo(
   
 #### <a name="parameters"></a>参数  
  `szFile`  
- [in]类型库的文件名称。  
+ [in]类型库文件名称。  
   
  `pTypeLibID`  
  [out]类型库的 GUID。  
@@ -50,18 +50,18 @@ HRESULT GetTypeLibInfo(
  [out]类型库的本地化 ID。  
   
  `pTypeLibPlatform`  
- [out]A [SYSKIND](https://msdn.microsoft.com/library/ms221272\(v=vs.85\).aspx)标识目标操作系统为类型库的标志。 常见的值为 SYS_WIN32 和 SYS_WIN64。  
+ [out]一个[SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind)标识目标操作系统的类型库的标志。 常见的值为 SYS_WIN32 和 SYS_WIN64。  
   
  `pTypeLibMajorVer`  
- [out]主版本号，类型库。 例如，对于版本*x.y*，主版本号是*x*。  
+ [out]类型库的主版本号。 例如，对于版本*x.y*，主版本号是*x*。  
   
  `pTypeLibMinorVer`  
- [out]类型库次版本号。 例如，对于版本*x.y*，次版本号是*y*。  
+ [out]类型库的次版本号。 例如，对于版本*x.y*的次版本号是*y*。  
   
 ## <a name="remarks"></a>备注  
- `GetTypeLibInfo`函数调用[Tlbexp.exe （类型库导出程序）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)。 此工具会生成类型库描述公共语言运行时 (CLR) 程序集中的类型。  
+ `GetTypeLibInfo`调用函数[Tlbexp.exe （类型库导出程序）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)。 此工具生成类型库描述公共语言运行时 (CLR) 程序集中的类型。  
   
- 如果任何参数为 null，则该函数将返回`HRESULT`的`E_POINTER`。 否则，它将返回 `S_OK`。  
+ 如果任何参数为 null，该函数返回`HRESULT`的`E_POINTER`。 否则，它将返回 `S_OK`。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -70,8 +70,8 @@ HRESULT GetTypeLibInfo(
   
  **库：** TlbRef.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [Tlbexp Helper 函数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx 函数](https://msdn.microsoft.com/library/ms221249\(v=vs.85\).aspx)
+ [LoadTypeLibEx 函数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

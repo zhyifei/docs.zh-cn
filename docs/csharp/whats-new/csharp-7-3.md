@@ -2,12 +2,12 @@
 title: C# 7.3 中的新增功能
 description: C# 7.3 中的新增功能概述
 ms.date: 05/16/2018
-ms.openlocfilehash: 135351fa06a498e4aa90cb4d9372880b8119de0f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 921374773d57d3fa6f8dd614f2691d345cf6eab7
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106770"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42907729"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 中的新增功能
 
@@ -25,7 +25,7 @@ C# 7.3 版本有两个主要主题。 第一个主题提供使安全代码的性
 
 - 可以使用元组类型测试 `==` 和 `!=`。
 - 可以在多个位置使用表达式变量。
-- 可以将特性附加到自动实现的属性的支持字段。
+- 可以将属性附加到自动实现的属性的支持字段。
 - 由 `in` 区分的参数的方法解析得到了改进。
 - 重载解析的多义情况现在变得更少。
 
@@ -178,7 +178,7 @@ public class B
 
 public class D : B
 {
-   public D(int i) : B(i, out var j)
+   public D(int i) : base(i, out var j)
    {
       Console.WriteLine($"The value of 'j' is {j}");
    }

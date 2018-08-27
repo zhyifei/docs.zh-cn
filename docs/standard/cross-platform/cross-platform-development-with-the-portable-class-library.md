@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314934"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933698"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>使用可移植类库的跨平台开发
 Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速轻松地为 Microsoft 平台构建跨平台应用和库。  
@@ -147,7 +147,7 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
  ➌ 要求[Microsoft HTTP 客户端库](https://www.nuget.org/packages/Microsoft.Net.Http)包  
   
 > [!WARNING]
->  引用时，可能会遇到错误[Microsoft 压缩](https://www.nuget.org/packages/Microsoft.Bcl.Compression)并[Microsoft HTTP 客户端库](https://www.nuget.org/packages/Microsoft.Net.Http)Windows Phone Silverlight 8.1 应用使用的可移植库中的包。 有关详细信息，请参阅[平台兼容性和重大更改的 Windows Phone Silverlight 8.1 应用程序](/previous-versions/windows/apps/dn642084(v=vs.105))。  
+>  引用时，可能会遇到错误[Microsoft 压缩](https://www.nuget.org/packages/Microsoft.Bcl.Compression)并[Microsoft HTTP 客户端库](https://www.nuget.org/packages/Microsoft.Net.Http)Windows Phone Silverlight 8.1 应用使用的可移植库中的包。 有关详细信息，请参阅[平台兼容性和重大更改的 Windows Phone Silverlight 8.1 应用程序](https://docs.microsoft.com/previous-versions/windows/apps/dn642084(v=vs.105))。  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>支持的类型和成员  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 ms.openlocfilehash: 95c528c4d686c44d0d77d1f55833be75ab14f8bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656264"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931885"
 ---
 # <a name="-link-visual-basic"></a>-链接 (Visual Basic)
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
@@ -55,7 +55,7 @@ ms.locfileid: "33656264"
   
  使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)指定一个或多个程序集引用所在的目录。  
   
- 如[/参考](../../../visual-basic/reference/command-line-compiler/reference.md)编译器选项，`-link`编译器选项使用 Vbc.rsp 响应文件，该引用常用文件[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]程序集。 使用[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)编译器选项，如果您不希望编译器使用 Vbc.rsp 文件。  
+ 像[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)编译器选项`-link`编译器选项使用 Vbc.rsp 响应文件引用常用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]程序集。 使用[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)编译器选项，如果不希望编译器使用 Vbc.rsp 文件。  
   
  `-link` 的缩写形式是 `-l`。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "33656264"
  [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
 ## <a name="example"></a>示例  
- 下面的命令行编译源文件`OfficeApp.vb`和引用程序集从`COMData1.dll`和`COMData2.dll`生成`OfficeApp.exe`。  
+ 下面的命令行编译源文件`OfficeApp.vb`和引用程序集从`COMData1.dll`并`COMData2.dll`以生成`OfficeApp.exe`。  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  

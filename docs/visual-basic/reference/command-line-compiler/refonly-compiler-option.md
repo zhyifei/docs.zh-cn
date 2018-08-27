@@ -10,15 +10,15 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8f6c15084ac9b1a07aef8a0311edfcc4a93337c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653041"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932658"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
-**-Refonly**选项指示编译的主输出应引用程序集而不是实现程序集。 `-refonly` 参数以无提示方式禁用输出 PDB，因为无法执行引用程序集。
+**-Refonly**选项表示编译的主输出应引用程序集而不是实现程序集。 `-refonly` 参数以无提示方式禁用输出 PDB，因为无法执行引用程序集。
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -32,9 +32,9 @@ ms.locfileid: "33653041"
 
 Visual Basic 支持`-refout`切换从版本 15.3 开始。
 
-引用程序集是包含元数据，但没有实现代码的仅包含元数据的程序集。 它们包括用于匿名类型以外的所有内容的类型和成员信息。 使用 `throw null` 主体（而非不使用主体）的原因在于，这样做可以运行和传递 PEVerify（从而验证元数据的完整性）。
+引用程序集是包含元数据，但没有实现代码的仅限元数据的程序集。 它们包括匿名类型以外的所有内容的类型和成员信息。 使用 `throw null` 主体（而非不使用主体）的原因在于，这样做可以运行和传递 PEVerify（从而验证元数据的完整性）。
 
-引用程序集包括程序集级别[ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute)属性。 可以在源中指定此属性（之后编译器就不需要进行合成）。 由于此属性，运行时将无法加载执行的引用程序集 （但仍可以在仅限反射上下文中加载它们）。 在程序集反映的工具需要确保它们的加载为仅限反射的; 的引用程序集否则，运行时会引发<xref:System.BadImageFormatException>。
+引用程序集包括程序集级别[ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute)属性。 可以在源中指定此属性（之后编译器就不需要进行合成）。 由于有此属性中，运行时会拒绝加载用于执行引用程序集 （但仍可在仅限反射上下文中加载）。 在程序集反映的工具需要确保它们的加载为仅反射; 的引用程序集否则，运行时会引发<xref:System.BadImageFormatException>。
 
 `-refonly` 和 [`-refout`](refout-compiler-option.md) 选项互斥。
 

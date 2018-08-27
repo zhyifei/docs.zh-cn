@@ -2,12 +2,12 @@
 title: SQL Server 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: 87e46ad9e83929e40daecc3e3af2eb1281c5ced9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb24be22ebec9a49c489ddcbff4824c4cd3cf34
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360708"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935079"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET
 本节描述适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 特定的功能和行为。  
@@ -38,7 +38,7 @@ ms.locfileid: "33360708"
   
  有关 SQL Server 数据库引擎的完整文档，请参见与您所使用的 SQL Server 版本对应的 SQL Server 联机丛书。  
   
- [SQL Server 联机丛书](http://msdn.microsoft.com/library/ms130214.aspx)  
+ [SQL Server 联机丛书](/sql/sql-server/sql-server-technical-documentation)  
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

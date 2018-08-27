@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e96ba458edfe7261fd5857b7bcb8486f4a6636
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460040"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929777"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete 函数
 按名称删除指定的限定符。  
@@ -41,38 +41,38 @@ HRESULT QualifierSet_Delete (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]未使用此参数。
+[in]此参数是未使用。
 
 `ptr`   
-[in]指向的指针[IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)实例。
+[in]一个指向[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)实例。
 
 `wszName`   
 [in]要删除的限定符的名称。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
+此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName`参数无效。 |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | 删除此限定符是非法的。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的限定符。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
-| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | 本地重写已删除并从父对象的原始限定符已恢复作用域。 |
+| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | 本地替代已删除并从父对象的原始限定符已恢复作用域。 |
 
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemQualifierSet::Delete](https://msdn.microsoft.com/library/aa391864(v=vs.85).aspx)方法。
+此函数包装对的调用[IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete)方法。
 
-由于限定符传播规则，而特定限定符可能已继承自另一个对象和仅在当前类或实例中重写。 在这种情况下，`QualifierSet_Delete`方法将限定符重置为其原始的继承值。 函数将在此情况下返回状态代码`WBEM_S_RESET_TO_DEFAULT`。
+由于限定符传播规则特定限定符可能已继承自另一个对象和仅在当前类或实例中重写。 在这种情况下，`QualifierSet_Delete`方法将限定符重置为其原始继承的值。 该函数在这种情况下返回状态代码`WBEM_S_RESET_TO_DEFAULT`。
 
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

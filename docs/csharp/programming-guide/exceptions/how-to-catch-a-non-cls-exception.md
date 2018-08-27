@@ -5,11 +5,11 @@ helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
 ms.openlocfilehash: c3153da78e0c25d59da7b5d83bd33f8080c7fae8
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198765"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754938"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>如何：捕捉非 CLS 异常
 包括 C++/CLI 在内的某些 .NET 语言允许对象引发并非派生自 <xref:System.Exception> 的异常。 这类异常被称为非 CLS 异常或非异常。 无法在 C# 中引发非 CLS 异常，但有两种方式可以捕获它们：  

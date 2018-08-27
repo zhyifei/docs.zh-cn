@@ -2,12 +2,12 @@
 title: 流处理源示例
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 2c420bad9ad96107f56b5435efa6fffd6941cdaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50fa7ccfde544ac9e0ab762434ccc5c3b94958ea
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505532"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929242"
 ---
 # <a name="streaming-feeds-sample"></a>流处理源示例
 此示例演示如何管理包含大量项的联合源。 在服务器上，此示例演示如何延迟在源中创建各个 <xref:System.ServiceModel.Syndication.SyndicationItem> 对象，一直到项就要被写入网络流之前。  
@@ -16,7 +16,7 @@ ms.locfileid: "33505532"
   
  为了最充分地演示联合 API 的流处理功能，此示例使用了一个似乎不可能的方案，在这个方案中，服务器公开一个包含无数个项的源。 在这种情况下，服务器继续在源中生成新的项，一直到它认为客户端已从源中读取指定数目（默认为 10）的项为止。 为简单起见，客户端和服务器是在同一个进程中实现的，并且使用一个共享 `ItemCounter` 对象跟踪客户端生成的项数。 `ItemCounter` 类型存在的唯一目的是为了使示例方案能够完全终止，它并不是所演示的模式的核心元素。  
   
- 演示将使用的 Visual C# 中迭代器 (使用`yield``return`关键字构造)。 有关迭代器的详细信息，请参阅 MSDN 上的"使用迭代器"主题。  
+ 此演示将使用的 Visual C# 迭代器 (使用`yield return`关键字构造)。 有关迭代器的详细信息，请参阅 MSDN 上的"Using Iterators"主题。  
   
 ## <a name="service"></a>服务  
  服务实现包含一个操作的基本 <xref:System.ServiceModel.Web.WebGetAttribute> 协定，如下面的代码所示。  
@@ -65,7 +65,7 @@ public Atom10FeedFormatter StreamedFeed()
 }  
 ```  
   
- 因此，项流永远不会完全缓冲到内存中。 你可以通过上设置断点来观察此行为`yield``return`语句内的`ItemGenerator.GenerateItems()`方法，并注意此断点服务在返回的结果后第一次遇到`StreamedFeed()`方法。  
+ 因此，项流永远不会完全缓冲到内存中。 您可以通过上设置断点来观察此行为`yield return`内的语句`ItemGenerator.GenerateItems()`方法，并注意服务在返回的结果后第一次遇到此断点`StreamedFeed()`方法。  
   
 ## <a name="client"></a>客户端  
  此示例中的客户端使用自定义 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 实现，该实现延迟各个项在源中的具体化，而不是将它们缓冲到内存中。 自定义 `StreamedAtom10FeedFormatter` 实例的使用如下所示。  
@@ -97,24 +97,24 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 }  
 ```  
   
- 因此，在遍历 `ReadItems()` 结果的客户端应用程序准备好使用每个项之前，并不会从网络中读取每个项。 你可以通过上设置断点来观察此行为`yield``return`语句内的`StreamedAtom10FeedFormatter.DelayReadItems()`并注意到在调用后首次遇到此断点`ReadFrom()`完成。  
+ 因此，在遍历 `ReadItems()` 结果的客户端应用程序准备好使用每个项之前，并不会从网络中读取每个项。 您可以通过上设置断点来观察此行为`yield return`内的语句`StreamedAtom10FeedFormatter.DelayReadItems()`并注意到在调用后第一次遇到此断点`ReadFrom()`完成。  
   
  下面的说明演示如何生成并运行示例。 请注意，尽管服务器在客户端读取 10 个项后停止生成项，但输出显示客户端读取的项数远远超过 10 个。 这是因为示例使用的网络绑定以 4 KB 段传输数据。 因此，客户端在有机会读取一个项之前，已收到 4KB 的项数据。 这是正常的行为（以合理大小的段发送经过流处理的 HTTP 数据可以提高性能）。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   

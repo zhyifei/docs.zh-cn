@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1841fbfcb76d5b56681b63ec4b39e9a7418707f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f60a2283c01d0dc2665dafaa99ea52000aa3bc47
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576137"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931202"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>类、结构和接口的名称
 以下命名准则适用于常规类型命名。  
@@ -45,7 +45,7 @@ ms.locfileid: "33576137"
  **✓ 务必**确保在定义类和接口对时，类名称和接口名称的区别仅在于 "I" 前缀，其中类是接口的标准实现。  
   
 ## <a name="names-of-generic-type-parameters"></a>泛型类型参数的名称  
- .NET Framework 2.0 中增添了泛型。 该功能引入了一种名为*类型参数*的新标识符。  
+ .NET Framework 2.0 中增添了泛型。 此功能引入了一种新的标识符称为*类型参数*。  
   
  **✓ 务必**使用描述性名称命名泛型参数，除非单字母名称可完整体现要传达的含义且描述性名称意义不大。  
   
@@ -60,7 +60,7 @@ public struct Nullable<T> where T:struct { ... }
  **✓ 务必**使用 `T` 作为描述性类型参数名称的前缀。  
   
 ```  
-public interface ISessionChannel<TSession> where TSession : ISession{  
+public interface ISessionChannel<TSession> where TSession : ISession {  
     TSession Session { get; }  
 }  
 ```  
@@ -72,7 +72,7 @@ public interface ISessionChannel<TSession> where TSession : ISession{
 ## <a name="names-of-common-types"></a>常见类型的名称  
  **✓ 务必**在命名从某些 .NET Framework 类型派生的类型或在实现某些 .NET Framework 类型时，遵循下表所述准则。  
   
-|基类型|派生/实现类型准则|  
+|基类型|派生的实现类型准则|  
 |---------------|------------------------------------------|  
 |`System.Attribute`|**✓ 务必**为自定义属性类的名称添加后缀 "Attribute"。|  
 |`System.Delegate`|**✓ 务必**向事件中所用委托的名称中添加后缀 "EventHandler"。<br /><br /> **✓ 务必**在用作事件处理程序的委托以外的委托名称中添加后缀 "Callback"。<br /><br /> **X 不要**将后缀 "Delegate" 添加到委托。|  
