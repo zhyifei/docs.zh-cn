@@ -2,12 +2,12 @@
 title: 操作指南（C# 指南）
 description: 快速提示及重点短代码示例集合
 ms.date: 12/20/2017
-ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549371"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999558"
 ---
 # <a name="how-to-c"></a>操作指南 (C#)
 
@@ -68,7 +68,7 @@ ms.locfileid: "34549371"
 - [使用 `as` 和 `is` 安全地转换为另一种类型](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)。
 - [定义 `struct` 类型的转换运算符](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)。
 - [确定类型是否为可为 null 的值类型](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md)。
-- [在可为 null 和不可为 null 的值类型之间转换](../programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md)。
+- [在可为 null 和不可为 null 的值类型之间转换](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type)。
 
 ## <a name="equality-and-ordering-comparisons"></a>相等比较和排序比较
 
@@ -126,7 +126,7 @@ ms.locfileid: "34549371"
 
 - [使用 `System.Threading.Tasks.Task.WhenAll` 提高异步性能](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
 - [使用 `async` 和 `await` 并行发出多个 Web 请求](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)。
-- [使用线程池](../programming-guide/concepts/threading/how-to-use-a-thread-pool.md)。
+- [使用线程池](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool)。
 
 ## <a name="command-line-args-to-your-program"></a>程序的命令行参数
 
