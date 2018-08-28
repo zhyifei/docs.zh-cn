@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK (Roslyn API)
 description: 了解如何使用 .NET Compiler Platform SDK（亦称为“Roslyn API”）来理解 .NET 代码、发现并修复错误。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: e524cb8f2fcb5c59550932243b6586019ea7139b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fb67b1d7ff963a01696ce163fdcef0b7944dcee
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358976"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925026"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
@@ -21,9 +21,9 @@ ms.locfileid: "33358976"
 
 使用 .NET Compiler Platform SDK，可以生成分析器和代码修补程序，从而发现和更正编码错误。 分析器不仅理解代码的语法和结构，还能检测应更正的做法。 代码修补程序建议一处或多处修复，以修复分析器发现的编码错误。 通常情况下，分析器和关联的代码修补程序一起打包在一个项目中。 
 
-分析器和代码修补程序通过静态分析来理解代码。 它们既不运行代码，也未带来其他测试方面的好处。 不过，它们可以指出哪些做法常常导致 bug 出现、代码不可维护或需要验证标准指南。
+分析器和代码修补程序通过静态分析来理解代码。 它们既不运行代码，也未带来其他测试方面的好处。 但是，它们可以指出经常导致 bug 的做法、无法维护的代码或标准指导性验证。
 
-.NET Compiler Platform SDK 提供了一组 API，可便于检查和理解 C# 或 Visual Basic 基准代码。 由于可以使用这一基准代码，因此能够利用 .NET Compiler Platform SDK 提供的语法和语义分析 API，更轻松地编写分析器和代码修补程序。 从复制编译器完成的分析这项大型任务中解放出来后，便可以专注于执行更有针对性的任务，即发现和修复项目或库的常见编码错误。
+.NET Compiler Platform SDK 提供了一组 API，可便于检查和理解 C# 或 Visual Basic 基准代码。 由于可以使用这一基准代码，因此能够利用 .NET Compiler Platform SDK 提供的语法和语义分析 API，更轻松地编写分析器和代码修补程序。 从复制由编译器执行的分析的繁重任务中解放出来，可以将精力放在为项目或库查找常见编码错误并进行修复的更为重要的任务上。
 
 这带来的一个小小的好处是，分析器和代码修补程序较小，在 Visual Studio 中加载时占用的内存比为了理解项目中的代码而编写自己的基准代码占用的内存少得多。 利用编译器和 Visual Studio 使用的相同类，可以创建自己的静态分析工具。 也就是说，团队可以使用分析器和代码修补程序，而不会对 IDE 的性能造成显著影响。
 

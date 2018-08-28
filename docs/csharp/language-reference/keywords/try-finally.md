@@ -8,12 +8,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: 696eb531fe3e340f7fe0ae12483648119cf5a7eb
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: beb54cf6c4e6dc87b9a08b81586b24d72f92b84b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925174"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001417"
 ---
 # <a name="try-finally-c-reference"></a>try-finally（C# 参考）
 通过使用 `finally` 块，可以清除 [try](../../../csharp/language-reference/keywords/try-catch.md) 块中分配的任何资源，即使在 `try` 块中发生异常，也可以运行代码。 通常情况下，`finally` 块的语句会在控件离开 `try` 语句时运行。 正常执行中，执行 `break`、`continue`、`goto` 或 `return` 语句，或者从 `try` 语句外传播异常都可能会导致发生控件转换。  
@@ -38,12 +38,13 @@ ms.locfileid: "42925174"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [try、throw 和 catch 语句 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
- [异常处理语句](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
- [throw](../../../csharp/language-reference/keywords/throw.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [如何显式引发异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [try、throw 和 catch 语句 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
+- [异常处理语句](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+- [throw](../../../csharp/language-reference/keywords/throw.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [如何显式引发异常](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

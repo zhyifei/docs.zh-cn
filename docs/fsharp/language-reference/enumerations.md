@@ -1,17 +1,17 @@
 ---
 title: 枚举 (F#)
-description: '了解如何使用 F # 枚举代替文本以使代码更具可读性且更容易维护。'
+description: '了解如何使用 F # 枚举来代替文本以使代码更具可读性且更易于维护。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 00faf6e2ad08a7b232a8ae35aa0f7deb1ba3e76a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b51df53caf2e193496cb3694c913cbae08f7eaf5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562987"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003094"
 ---
 # <a name="enumerations"></a>枚举
 
-*枚举*，也称为*枚举*、 都是整型其中将标签分配给值的子集。 可以使用它们来代替文本，使代码更具可读性且更易维护。
+*枚举*，也称为*枚举*、 是整型类型的标签分配到值的子集。 可以使用它们来代替文本，使代码更具可读性且更易维护。
 
 
 ## <a name="syntax"></a>语法
@@ -24,29 +24,31 @@ type enum-name =
 ```
 
 ## <a name="remarks"></a>备注
-枚举看起来非常类似于具有简单值的可区分联合只不过可以指定的值。 这些值通常是从 0 或 1，开始的整数或整数，用于表示位位置。 如果枚举用于表示位位置，你还应使用[标志](xref:System.FlagsAttribute)属性。
+一个枚举，看上去像可区分联合具有简单的值，只不过可以指定的值。 这些值通常是从 0 或 1，开始的整数或整数，用于表示位位置。 如果一个枚举，用于表示位位置，还应使用[标志](xref:System.FlagsAttribute)属性。
 
-枚举的基础类型由使用时，该文本，以便，例如，你可以使用文本替换为后缀，例如`1u`， `2u`，依此类推，对于无符号整数 (`uint32`) 类型。
+枚举的基础类型由文本使用，以便，例如，您可以使用文本带有后缀，如`1u`， `2u`，依此类推，对于无符号整数 (`uint32`) 类型。
 
-当引用已命名的值时，你必须使用枚举类型本身的名称用作限定符，即`enum-name.value1`，而不是`value1`。 此行为不同于可区分联合。 这是因为枚举始终具有[RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)属性。
+如果是指已命名值时，您必须使用枚举类型本身的名称用作限定符，，即`enum-name.value1`，而不是`value1`。 此行为有何不同的可区分联合。 这是因为枚举始终具有[RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)属性。
 
-下面的代码演示的声明和用法的枚举。
+下面的代码演示声明和使用的枚举。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2101.fs)]
 
-你可以轻松地将转换枚举的基础类型通过使用适当的运算符，如下面的代码中所示。
+您可以轻松地转换为枚举的基础类型通过使用相应的运算符，如下面的代码中所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2102.fs)]
 
-枚举的类型可以具有以下基础类型之一： `sbyte`， `byte`， `int16`， `uint16`， `int32`， `uint32`， `int64`， `uint16`， `uint64`，和`char`。 枚举类型.NET Framework 中表示为从继承的类型`System.Enum`，其反过来继承自`System.ValueType`。 因此，它们就是位于堆栈或在包含的对象中，内联的值类型和基础类型的任何值是有效的值的枚举。 这很重要时模式匹配枚举值，因为你必须提供一种模式，捕获未命名的值。
+枚举的类型可以具有以下基础类型之一： `sbyte`， `byte`， `int16`， `uint16`， `int32`， `uint32`， `int64`， `uint16`， `uint64`，和`char`。 枚举类型在.NET Framework 中表示为从继承的类型`System.Enum`，其又继承自`System.ValueType`。 因此，它们是位于堆栈或内联的包含对象中的值类型，任何值的基础类型是枚举的有效值。 这很重要时模式匹配枚举值，因为您必须提供一种模式可捕获未命名的值。
 
-`enum` F # 库中的函数可用来生成一个枚举值，即使其中一个的预定义以外的值命名值。 你使用`enum`函数，如下所示。
+`enum` F # 库中的函数可用于生成一个枚举值，甚至之外的预定义的值命名值。 您使用`enum`函数，如下所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 
-默认值`enum`函数配合类型`int32`。 因此，它不用于具有其他基础类型的枚举类型。 相反，使用以下命令。
+默认值`enum`函数适用于类型`int32`。 因此，它不能用于具有其他的基础类型的枚举类型。 相反，使用以下命令。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
+
+此外，情况下，对于枚举时，始终发出作为`public`。 这是以使它们与 C# 和.NET 平台的其余部分保持一致。
     
 ## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)

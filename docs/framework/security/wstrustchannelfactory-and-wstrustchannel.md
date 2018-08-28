@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3fabd7e3cad76e17061751d0fe0bb4ae06bf6fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410450"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998461"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 和 WSTrustChannel
 如果已熟悉 Windows Communication Foundation (WCF)，便知道 WCF 客户端已可感知联合。 通过使用 <xref:System.ServiceModel.WSFederationHttpBinding> 或相似的自定义绑定配置 WCF 客户端，便可对服务启用联合身份验证。  
@@ -34,10 +34,10 @@ ms.locfileid: "33410450"
 > [!TIP]
 >  ActAs 和 OnBehalfOf 有何区别？  
 >   
->  从 WS-Trust 协议的角度来看：  
+>  从 Ws-trust 协议的角度来看：  
 >   
->  1.  ActAs RST 元素指示请求者想要的令牌包含有关两个不同实体的声明，这两个实体分别是请求者和由 ActAs 元素中的令牌表示的外部实体。  
-> 2.  OnBehalfOf RST 元素指示请求者想要的令牌包含仅与一个实体有关的声明，这个实体是由 OnBehalfOf 元素中的令牌表示的外部实体。  
+> 1. ActAs RST 元素指示请求者想要的令牌包含有关两个不同实体的声明，这两个实体分别是请求者和由 ActAs 元素中的令牌表示的外部实体。  
+> 2. OnBehalfOf RST 元素指示请求者想要的令牌包含仅与一个实体有关的声明，这个实体是由 OnBehalfOf 元素中的令牌表示的外部实体。  
 >   
 >  ActAs 功能通常用于需要复合委派的方案，其中所颁发令牌的最终接收方可以检查整个委派链，可以查看客户端和所有中介。 这样，它可以基于整个标识委派链执行访问控制、审核和其他相关活动。 ActAs 功能通常用于在多层系统中进行身份验证以及在层之间传递有关标识的信息（无需在应用程序/业务逻辑层传递此信息）。  
 >   

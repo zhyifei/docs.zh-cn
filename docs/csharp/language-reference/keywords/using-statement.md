@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 7bf9138721ecee63c65c2e39922aee96b1dfaa41
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ec4849dda0f28ad1f0e0ebb2c493a33005107db4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960942"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003107"
 ---
 # <a name="using-statement-c-reference"></a>using 语句（C# 参考）
 提供可确保正确使用 <xref:System.IDisposable> 对象的方便语法。  
@@ -43,11 +43,12 @@ ms.locfileid: "37960942"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [using 指令](../../../csharp/language-reference/keywords/using-directive.md)  
- [垃圾回收](../../../standard/garbage-collection/index.md)  
- [使用实现 IDisposable 的对象](../../../standard/garbage-collection/using-objects.md)  
- [IDisposable 接口](xref:System.IDisposable)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [using 指令](../../../csharp/language-reference/keywords/using-directive.md)  
+- [垃圾回收](../../../standard/garbage-collection/index.md)  
+- [使用实现 IDisposable 的对象](../../../standard/garbage-collection/using-objects.md)  
+- [IDisposable 接口](xref:System.IDisposable)

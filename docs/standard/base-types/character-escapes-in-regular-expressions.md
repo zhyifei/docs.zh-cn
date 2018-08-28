@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f19cbf305165c2553d5a493f7011a6aea19fb23
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569897"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931854"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正则表达式中的字符转义
 正则表达式中的反斜杠 (\\) 指示以下值之一：  
@@ -38,7 +38,7 @@ ms.locfileid: "33569897"
   
 |字符或序列|描述|  
 |---------------------------|-----------------|  
-|除以下字符外的所有字符：<br /><br /> . $ ^ { [ ( &#124; ) * + ? \|“字符或序列”列中未包含的字符在正则表达式中没有特殊含义；此类字符与自身匹配。<br /><br /> “字符或序列”列中包括的字符均为特殊的正则表达式语言元素。 若要在正则表达式中匹配这些字符，必须将其转义或纳入[正字符组](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，正则表达式 `\$\d+` 或 `[$]\d+` 匹配“$1200”。|  
+|除以下字符外的所有字符：<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |“字符或序列”列中未包含的字符在正则表达式中没有特殊含义；此类字符与自身匹配。<br /><br /> “字符或序列”列中包括的字符均为特殊的正则表达式语言元素。 若要在正则表达式中匹配这些字符，必须将其转义或纳入[正字符组](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，正则表达式 `\$\d+` 或 `[$]\d+` 匹配“$1200”。|  
 |`\a`|匹配响铃（警报）字符，`\u0007`。|  
 |`\b`|在 `[`character_group`]` 字符类中，匹配退格，`\u0008`。  （请参阅[字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。）在字符类之外，`\b` 是匹配字边界的定位点。 （请参阅[定位标记](../../../docs/standard/base-types/anchors-in-regular-expressions.md)）|  
 |`\t`|匹配制表符，`\u0009`。|  

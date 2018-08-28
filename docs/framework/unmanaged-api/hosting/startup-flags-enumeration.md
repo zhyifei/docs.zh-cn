@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc1d3ffc34cd74d68bf10cb677b68f0a75bb7c67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444225"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998898"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 枚举
-包含指示公共语言运行时 (CLR) 的启动行为的值。 默认情况下，垃圾回收是是非并发的并且只基类库加载到非特定于域的区域。  
+包含指示公共语言运行时 (CLR) 的启动行为的值。 默认情况下，垃圾回收是非并发，只有在基类库加载到非特定于域的区域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,22 +57,22 @@ typedef enum {
   
 |成员|描述|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|指定应使用并发垃圾回收。 如果在单处理器计算机上，调用方要求提供服务器版本和并发垃圾回收，工作站版本和非并发垃圾回收是改为运行。 **注意：** 运行 WOW64 的应用程序中不支持并发垃圾回收 x86 仿真程序上实现 （以前称为 ia-64） 的 Intel 的 Itanium 体系结构的 64 位系统。 有关使用 64 位 Windows 系统上的 WOW64 的详细信息，请参阅[运行 32 位应用程序](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx)。|  
-|`STARTUP_LOADER_OPTIMIZATION_MASK`|指定应发生的加载程序优化。|  
-|`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|不指定的任何程序集加载为非特定于域的。|  
-|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|指定的所有程序集加载为非特定于域的。|  
-|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`|指定所有具有强名称程序集将作为非特定于域的加载。|  
-|`STARTUP_LOADER_SAFEMODE`|指定 CLR 版本策略将不应用于中传递的版本。 将加载指定的 CLR 的确切版本。 填充码不评估策略，以确定最新的兼容版本。|  
-|`STARTUP_LOADER_SETPREFERENCE`|指定将设置，但不是实际启动首选的运行时。|  
+|`STARTUP_CONCURRENT_GC`|指定应使用并发垃圾回收。 如果在单处理器计算机上，调用方要求的服务器版本和并发垃圾回收，工作站版本和非并发垃圾回收是改为运行。 **注意：** 并发垃圾回收的应用程序运行在 WOW64 中不支持 x86 仿真程序上实现 Intel Itanium 体系结构 （以前称为 IA-64） 的 64 位系统。 有关在 64 位 Windows 系统上使用 WOW64 的详细信息，请参阅[运行 32 位应用程序](/windows/desktop/WinProg64/running-32-bit-applications)。|  
+|`STARTUP_LOADER_OPTIMIZATION_MASK`|指定只应出现加载程序优化。|  
+|`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|不指定的任何程序集加载为非特定于域。|  
+|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|指定的所有程序集加载为非特定于域。|  
+|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`|指定所有强名称的程序集将作为非特定于域的加载。|  
+|`STARTUP_LOADER_SAFEMODE`|指定 CLR 版本策略将不应用于传入的版本。 将加载指定的 clr 的确切版本。 填充程序不评估策略，以确定最新的兼容版本。|  
+|`STARTUP_LOADER_SETPREFERENCE`|指定首选的运行时将设置，但不是实际启动。|  
 |`STARTUP_SERVER_GC`|指定将使用服务器垃圾回收。|  
-|`STARTUP_HOARD_GC_VM`|指定垃圾回收将使用的虚拟地址。|  
+|`STARTUP_HOARD_GC_VM`|指定垃圾回收，将保留使用的虚拟地址。|  
 |`STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`|指定，将不会允许混合使用托管接口。|  
-|`STARTUP_LEGACY_IMPERSONATION`|指定的模拟不应流经异步点默认情况下。|  
-|`STARTUP_DISABLE_COMMITTHREADSTACK`|指定当线程开始运行时不应提交完整的线程堆栈。|  
-|`STARTUP_ALWAYSFLOW_IMPERSONATION`|指定托管的模拟和实现通过平台调用将流经异步点。 默认情况下，只有托管的模拟将流经异步点。|  
-|`STARTUP_TRIM_GC_COMMIT`|指定当系统内存不足时，垃圾回收将使用较少的提交的空间。 请参阅`gcTrimCommitOnLowMemory`中[针对共享的 Web 承载优化](../../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)。|  
-|`STARTUP_ETW`|指定为公共语言运行时事件启用了事件跟踪 Windows (ETW)。 从 Windows Vista 开始，事件跟踪始终会启用，因此此标志没有任何效果。 请参阅[控制.NET Framework 日志记录](../../../../docs/framework/performance/controlling-logging.md)。|  
-|`STARTUP_ARM`|指定启用了应用程序域资源监视。 请参阅<xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>属性和[ \<appDomainResourceMonitoring > 元素](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)。|  
+|`STARTUP_LEGACY_IMPERSONATION`|指定模拟应不流经异步点默认情况下。|  
+|`STARTUP_DISABLE_COMMITTHREADSTACK`|指定在线程开始运行时不应提交完整线程堆栈。|  
+|`STARTUP_ALWAYSFLOW_IMPERSONATION`|指定托管的模拟并通过平台来实现的模拟调用将流经异步点。 默认情况下，仅托管的模拟将流经异步点。|  
+|`STARTUP_TRIM_GC_COMMIT`|指定当系统内存不足时，垃圾回收会占用较少的提交空间。 请参阅`gcTrimCommitOnLowMemory`中[针对共享的 Web 承载优化](../../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)。|  
+|`STARTUP_ETW`|指定启用公共语言运行时事件的事件跟踪的 Windows (ETW)。 从 Windows Vista 开始，事件是始终启用跟踪，因此此标志无效。 请参阅[控制.NET Framework 日志记录](../../../../docs/framework/performance/controlling-logging.md)。|  
+|`STARTUP_ARM`|指定启用应用程序域资源监视。 请参阅<xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>属性和[ \<appDomainResourceMonitoring > 元素](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -81,7 +81,7 @@ typedef enum {
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

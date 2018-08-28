@@ -7,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: bc040e17f5c612b9fc43a9ef24fb6f15f0942b8e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 8607c79a8b1e9a9fd999e4f5b77ecfac786161b3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243989"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003146"
 ---
 # <a name="where-clause-c-reference"></a>where 子句（C# 参考）
 `where` 子句用在查询表达式中，用于指定将在查询表达式中返回数据源中的哪些元素。 它将一个布尔条件（谓词）应用于每个源元素（由范围变量引用），并返回满足指定条件的元素。 一个查询表达式可以包含多个 `where` 子句，一个子句可以包含多个谓词子表达式。  
@@ -39,10 +39,11 @@ ms.locfileid: "39243989"
   
  在编译时，`where` 关键字将转换为对 <xref:System.Linq.Enumerable.Where%2A> 标准查询运算符方法的调用。  
   
-## <a name="see-also"></a>请参阅  
- [查询关键字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [from 子句](../../../csharp/language-reference/keywords/from-clause.md)  
- [select 子句](../../../csharp/language-reference/keywords/select-clause.md)  
- [筛选数据](../../programming-guide/concepts/linq/filtering-data.md)  
- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [C# 中的 LINQ 入门](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>请参阅
+
+- [查询关键字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+- [from 子句](../../../csharp/language-reference/keywords/from-clause.md)  
+- [select 子句](../../../csharp/language-reference/keywords/select-clause.md)  
+- [筛选数据](../../programming-guide/concepts/linq/filtering-data.md)  
+- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [C# 中的 LINQ 入门](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
