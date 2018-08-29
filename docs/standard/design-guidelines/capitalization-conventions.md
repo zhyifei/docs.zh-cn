@@ -1,5 +1,5 @@
 ---
-title: 大小写约定
+title: 大写约定
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -18,11 +18,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33575279"
 ---
-# <a name="capitalization-conventions"></a>大小写约定
+# <a name="capitalization-conventions"></a>大写约定
 本章中的准则列出了一种针对用例的简单方法，当统一应用此方法时，可以使类型、成员和参数的标识符易于阅读。  
   
 ## <a name="capitalization-rules-for-identifiers"></a>标识符的大小写规则  
- 若要区分标识符中的单词，将在标识符中的每个单词的第一个字母都大写。 不使用下划线来区分的单词，或其实，标识符中任意位置。 有两种适当的方法，以使其大写标识符，根据使用的标识符：  
+ 若要区分标识符中的单词，请将标识符中每个单词的首字母大写。 不要使用下划线来区分单词，也不要为此在标识符中的任何位置使用下划线。 根据标识符的使用情况，可以通过两种适当的方法将标识符大写：  
   
 -   PascalCasing  
   
