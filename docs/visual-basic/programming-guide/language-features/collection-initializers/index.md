@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: 20bf9b263a349f327f12d1f3c7753fb9f34436e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e844a673f1a60d5a151a6ae612d4af7a6712eef4
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654211"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332547"
 ---
 # <a name="collection-initializers-visual-basic"></a>集合初始值设定项 (Visual Basic)
 集合初始值设定项提供了用于创建集合并在其中填充一组初始值的缩短语法。 若要通过一组已知值（例如，菜单选项或类别列表、一组初始数字值、字符串（如日期或月份名称）或地理位置（如用于验证的州或省/自治区/直辖市列表）静态列表）创建集合，将会发现集合初始值设定项非常有用。  
   
- 有关集合的详细信息，请参阅[集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)。  
+ 有关集合的详细信息，请参阅[集合](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)。  
   
  在 `From` 关键字后面使用大括号 (`{}`) 来标识集合初始值设定项。 这类似于[数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)中所述的数组文本语法。 下面的示例展示了使用集合初始值设定项创建集合的各种方法。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33654211"
 |[如何：创建集合初始值设定项所使用的集合](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|展示了如何在实现 `IEnumerable` 的集合类中添加 `Add` 方法，从而启用集合初始值设定项。|  
   
 ## <a name="see-also"></a>请参阅  
- [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [集合](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [对象初始值设定项：命名类型和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)  

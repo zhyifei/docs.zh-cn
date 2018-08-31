@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 3c642a2a0eccc5a2b08cee71ca719515b115b2f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ef387437befe3df67e261b719140456a3fde9dd
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529920"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332502"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView 控件（Windows 窗体）
 `DataGridView` 控件提供一种以表格格式显示数据的功能强大且灵活的方法。 可以使用 `DataGridView` 控件来显示少量数据的只读视图，或者可以缩放该控件以显示大型数据集的可编辑视图。  
@@ -73,7 +73,7 @@ ms.locfileid: "33529920"
  [Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
  描述 `DataGridView` 控件如何改进和替换 <xref:System.Windows.Forms.DataGrid> 控件。  
   
- 另请参阅[与 Windows 窗体 DataGridView 控件一起使用设计器](http://msdn.microsoft.com/library/ms171593\(v=vs.110\))。  
+ 另请参阅[设计器中使用 Windows 窗体 DataGridView 控件](using-the-designer-with-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGridView>  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 855e32463284604fc27d4b73331ae48967dddefb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83c3d9976f61513165e917da73dd50e846db3e83
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650447"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330940"
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic 中的数据类型
 编程元素的*数据类型*是指可以保留的数据种类以及相应类型数据的存储方式。 数据类型适用于所有可以存储到计算机内存中或参与表达式求值的值。 每个变量、文本、常量、枚举、属性、过程参数、过程自变量和过程返回值都有对应的数据类型。  
@@ -32,7 +32,7 @@ ms.locfileid: "33650447"
 |过程自变量|在调用的代码中；每个自变量都是一个已声明的编程元素或包含已声明元素的表达式<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
 |过程返回值|使用 [Function 语句](../../../../visual-basic/language-reference/statements/function-statement.md)或 [Operator 语句](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
   
- 有关 Visual Basic 数据类型的列表，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
+ 有关 Visual Basic 数据类型的列表，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/index.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
@@ -44,5 +44,5 @@ ms.locfileid: "33650447"
  [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [元组](tuples.md)     
  [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
  [有效使用数据类型](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

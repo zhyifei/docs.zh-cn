@@ -7,22 +7,22 @@ dev_langs:
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 1407593bf90b28a1890a8c18564b31d0aa67e0cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad5862064966ccae4c313e7fa3d982ec9abbbcd2
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494171"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332182"
 ---
 # <a name="message-security-with-mutual-certificates"></a>使用相互证书的消息安全
-下面的方案演示 Windows Communication Foundation (WCF) 服务和使用消息安全模式保护的客户端。 使用证书对客户端和服务进行身份验证。  
+以下方案显示了 Windows Communication Foundation (WCF) 服务和使用消息安全模式保护的客户端。 使用证书对客户端和服务进行身份验证。  
   
  本方案是可互操作的，因为它使用具有 X.509 证书令牌配置文件的 WS-Security。  
   
 > [!NOTE]
 >  本方案不对服务证书执行协商。 在进行任何通信之前，必须先向客户端提供服务证书。 服务器证书可以随应用程序一起分发，也可以通过带外通信来提供。  
   
- ![消息安全使用相互证书](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
+ ![消息使用相互证书的安全](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
 |特征|描述|  
 |--------------------|-----------------|  
@@ -109,7 +109,7 @@ ms.locfileid: "33494171"
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>配置  
- 下面配置客户端。 必须使用指定的客户端证书[ \<t i a l >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。 此外，使用指定的服务证书[ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)。  
+ 下面配置客户端。 必须使用指定的客户端证书[ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。 此外，使用指定的服务证书[ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -162,5 +162,5 @@ ms.locfileid: "33494171"
   
 ## <a name="see-also"></a>请参阅  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [如何： 创建和安装临时证书在 WCF 中实现传输安全在开发过程](http://go.microsoft.com/fwlink/?LinkId=244264)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [如何： 创建和安装临时证书在 WCF 中的传输安全模式在开发过程](https://go.microsoft.com/fwlink/?LinkId=244264)

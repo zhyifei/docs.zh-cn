@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: f9230e9b5ac0c906652c03111b82df5147267143
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dccf3ab1a619222cdf2db54673718eb103aee2fb
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760760"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331717"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities 查询中的表达式
 表达式是求值结果可以为单个值、对象、方法或命名空间的一段代码。 表达式可以包含文本值、方法调用、运算符及其操作数，或者简单名称。 简单名称可以是变量名、类型成员名、方法参数名、命名空间名或类型名。 表达式可以使用运算符（运算符又可使用其他表达式作为参数）或方法调用（方法调用的参数又可以是其他方法调用）。 因此，表达式可以非常简单，也可以极其复杂。  
@@ -34,7 +34,7 @@ ms.locfileid: "32760760"
   
  [初始化表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
   
- [导航属性](http://msdn.microsoft.com/library/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
+ [导航属性](https://msdn.microsoft.com/library/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
   
 ## <a name="see-also"></a>请参阅  
  [ADO.NET 实体框架](../../../../../../docs/framework/data/adonet/ef/index.md)

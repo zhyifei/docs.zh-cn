@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buttons
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
-ms.openlocfilehash: d7eef53967962804033334750b9f3230b95a949d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2f421afe8e64b38851b3063c7091d9ee105ade9
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525078"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332014"
 ---
 # <a name="button-control-windows-forms"></a>Button 控件（Windows 窗体）
 Windows 窗体 `Button` 控件允许用户通过单击来执行某项操作。 `Button` 控件可以显示文本和图像。 单击该按钮时，看上去它像是被按下并释放。  
@@ -31,7 +31,7 @@ Windows 窗体 `Button` 控件允许用户通过单击来执行某项操作。 `
  [如何选择 Windows 窗体 Button 控件](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
  列出选择按钮的方法。  
   
- 另请参阅[如何： 将 Windows 窗体按钮指定为接受按钮使用设计器](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)和[如何： 将 Windows 窗体按钮指定为取消按钮使用设计器](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)。  
+ 另请参阅[如何： 将 Windows 窗体按钮指定为接受按钮使用设计器](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)并[如何： 在设计器将 Windows 窗体按钮指定为取消按钮使用](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.Button> 类  
@@ -41,4 +41,4 @@ Windows 窗体 `Button` 控件允许用户通过单击来执行某项操作。 `
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。  
   
- 另请参阅[对话框的用户输入](http://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55)和[如何： 关闭对话框并保留用户输入](http://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d)。
+ 另请参阅[对话框的用户输入](https://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55)并[如何： 关闭对话框并保留用户输入](https://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d)。

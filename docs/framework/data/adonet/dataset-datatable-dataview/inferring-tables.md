@@ -2,15 +2,15 @@
 title: 推断表
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: b14cbc39b02136ac7f226faf2636a69ac072f529
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757822"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332848"
 ---
 # <a name="inferring-tables"></a>推断表
-当从 XML 文档推断 <xref:System.Data.DataSet> 的架构时，ADO.NET 首先会确定哪些 XML 元素表示表。 以下 XML 结构导致表以获取**数据集**架构：  
+当从 XML 文档推断 <xref:System.Data.DataSet> 的架构时，ADO.NET 首先会确定哪些 XML 元素表示表。 以下 XML 结构生成的表**数据集**架构：  
   
 -   具有属性的元素  
   
@@ -60,7 +60,7 @@ ms.locfileid: "32757822"
 |-------------------|  
 |Text1|  
   
- 如果文档元素（即根元素）具有将被推断为列的属性或子元素，将生成推断表。 如果文档元素具有任何属性，也将被推断为列没有子元素，该元素被推断为**数据集**。 例如，考虑以下 XML：  
+ 如果文档元素（即根元素）具有将被推断为列的属性或子元素，将生成推断表。 如果文档元素不具有属性和将被推断为列没有子元素，该元素被推断为**数据集**。 例如，考虑以下 XML：  
   
 ```xml  
 <DocumentElement>  
@@ -87,7 +87,7 @@ ms.locfileid: "32757822"
 </DocumentElement>  
 ```  
   
- 推断过程将生成**数据集**名为"DocumentElement"包含一个名为"Element1。"表  
+ 推断过程将生成**数据集**名为"DocumentElement"的包含一个名为"Element1"。  
   
  **数据集：** DocumentElement  
   
@@ -124,4 +124,4 @@ ms.locfileid: "32757822"
  [从 XML 加载数据集构架信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
