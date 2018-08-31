@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457547"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254348"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 本文提供用于改进大型 .NET Framework 应用或处理大量数据（如文件或数据库）的应用的性能的提示。 这些提示来自在托管代码中重写的 C# 和 Visual Basic 编译器，并且本文包括来自 C# 编译器的几个真实示例。  
@@ -23,7 +23,7 @@ ms.locfileid: "34457547"
   
  当你的最终用户与你的应用交互时，他们期望应用能够响应。  永远不应阻止键入或命令处理。  帮助应该迅速弹出，如果用户继续键入则帮助应中止。  你的应用应该避免通过使应用感觉迟钝的长计算阻止 UI 线程。  
   
- 有关 Roslyn 编译器的详细信息，请访问[dotnet/roslyn](https://github.com/dotnet/roslyn) GitHub 上的存储库。
+ Roslyn 编译器有关的详细信息，请访问[dotnet/roslyn](https://github.com/dotnet/roslyn) GitHub 上的存储库。
  <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>事实小结  
@@ -196,7 +196,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...  
 ```  
   
- `WriteFormattedDocComment()` 的第一个版本分配了一个数组、多个子字符串、一个修整的子字符串和一个空 `params` 数组。  它还针对 `"///"` 进行检查。  修改后的代码仅使用索引且不执行分配。  它查找不是空格的第一个字符，然后逐字符检查字符串是否以 `"///"` 开头。  新代码使用 `IndexOfFirstNonWhiteSpaceChar` 而不是 <xref:System.String.TrimStart%2A> 以返回出现非空白字符的第一个索引（在指定的开始索引后）。  修复并不完整，但你可以看到如何为完整解决方案应用类似的修复。  通过在整个代码中应用此方法，你可以删除 `WriteFormattedDocComment()` 中的所有分配。  
+ `WriteFormattedDocComment()` 的第一个版本分配了一个数组、多个子字符串、一个修整的子字符串和一个空 `params` 数组。  它还针对 `"///"` 进行检查。  修改后的代码仅使用索引且不执行分配。  它查找不是空格的第一个字符，然后逐字符检查字符串是否以 `"///"` 开头。  新代码将使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>返回出现非空白字符的位置 （在指定的开始索引） 的第一个索引。  修复并不完整，但你可以看到如何为完整解决方案应用类似的修复。  通过在整个代码中应用此方法，你可以删除 `WriteFormattedDocComment()` 中的所有分配。  
   
  **示例 4：StringBuilder**  
   
@@ -277,7 +277,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  这个简单的缓存策略符合良好的缓存设计要求，因为它具有大小上限。  然而，现在存在比原来更多的代码，这意味着更多的维护成本。  仅当你发现了性能问题时，并且 PerfView 已显示 <xref:System.Text.StringBuilder> 分配是一个重要的参与者，才应采用该缓存策略。  
   
 ### <a name="linq-and-lambdas"></a>LINQ 和 lambda  
- 使用语言集成查询 (LINQ) 和 Lambda 表达式是一个使用高效率功能的出色示例，如果代码对性能有显著的影响，你以后可能会发现需要重写这些功能。  
+语言集成查询 (LINQ)，与 lambda 表达式结合使用是工作效率功能的一个示例。 但是，它的使用可能对随着时间的推移性能产生重大影响，并且可能会发现您需要重新编写您的代码。
   
  **示例 5：Lambda、List\<T> 和 IEnumerable\<T>**  
   
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 第一行中，[Lambda 表达式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)`s => s.Name == name`[封盖](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)本地变量 `name`。  这意味着除了针对 `predicate` 所保存的 [委托](~/docs/csharp/language-reference/keywords/delegate.md)分配对象以外，该代码分配了静态类以保存捕获 `name` 的值的环境。  编译器生成的代码如下所示：  
+ 在第一行[lambda 表达式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [覆盖](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)本地变量`name`。  这意味着除了针对 `predicate` 所保存的 [委托](~/docs/csharp/language-reference/keywords/delegate.md)分配对象以外，该代码分配了静态类以保存捕获 `name` 的值的环境。  编译器生成的代码如下所示：  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -412,7 +412,7 @@ class Compilation { /*...*/
   
  **示例 6 的修复**  
   
- 若要删除已完成<xref:System.Threading.Tasks.Task>分配，你可以缓存已完成的结果的任务对象：  
+ 若要删除已完成<xref:System.Threading.Tasks.Task>分配，可以缓存已完成的结果的任务对象：  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -462,12 +462,12 @@ class Compilation { /*...*/
 -   一切皆与分配有关 – 这就是编译器平台团队花大部分时间改进新编译器性能的原因所在。  
   
 ## <a name="see-also"></a>请参阅  
- [本主题的演示文稿的视频](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+ [本主题的演示视频](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [性能](../../../docs/framework/performance/index.md)  
  [.NET 性能提示](http://msdn.microsoft.com/library/ms973839.aspx)  
  [Windows Phone 性能分析工具](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [查找与 Visual Studio 探查器的应用程序瓶颈](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [查找与 Visual Studio Profiler 的应用程序瓶颈](http://msdn.microsoft.com/magazine/cc337887.aspx)  
  [通道 9 PerfView 教程](http://channel9.msdn.com/Series/PerfView-Tutorial)  
  [高级性能提示](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [在 GitHub 上的 dotnet/roslyn 存储库](https://github.com/dotnet/roslyn)
+ [GitHub 上的 dotnet/roslyn 存储库](https://github.com/dotnet/roslyn)

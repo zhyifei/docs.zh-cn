@@ -9,15 +9,15 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 1ba51c51f30293e05dee17f9cf78cc049e1c751f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e91bf597e344dd09e80bee5787e92383065b654
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496281"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254576"
 ---
 # <a name="data-contract-versioning"></a>数据协定版本管理
-随着应用程序的发展，您也可能不得不更改服务使用的数据协定。 本主题说明如何管理数据协定的版本。 本主题介绍数据协定版本管理机制。 有关完整概述和版本管理指南，请参阅[最佳做法： 数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
+随着应用程序的发展，您也可能不得不更改服务使用的数据协定。 本主题说明如何管理数据协定的版本。 本主题介绍数据协定版本管理机制。 有关完整概述和版本管理说明指南，请参阅[最佳做法： 数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
   
 ## <a name="breaking-vs-nonbreaking-changes"></a>重大更改与非重大更改  
  对数据协定的更改可能是重大更改，也可能是非重大更改。 对数据协定进行非重大更改时，使用较早版本协定的应用程序和使用较新版本协定的应用程序可以互相通信。 另一方面，如果进行重大更改，则会阻止单向或双向通信。  
@@ -88,7 +88,7 @@ ms.locfileid: "33496281"
 >  尽管 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性设置为 `true`，但传入数据可能为 null 或零，类型必须准备好处理这种可能的情况。 不要将 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 用作安全机制来防止不良传入数据。  
   
 ## <a name="omitted-default-values"></a>省略的默认值  
- （尽管不建议这样做） 可以设置`EmitDefaultValue`DataMemberAttribute 属性与属性`false`中所述，[数据成员默认值](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)。 如果该属性设置为 `false`，而数据成员设置为其默认值（通常为 null 或零），则不会发出该数据成员。 这样，就在两个方面与不同版本中的必需数据成员不兼容：  
+ （尽管不推荐使用） 可以设置`EmitDefaultValue`属性将 DataMemberAttribute 属性`false`，如中所述[数据成员默认值](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)。 如果该属性设置为 `false`，而数据成员设置为其默认值（通常为 null 或零），则不会发出该数据成员。 这样，就在两个方面与不同版本中的必需数据成员不兼容：  
   
 -   一个版本中具有必需数据成员的数据协定无法从该数据成员的 `EmitDefaultValue` 已设置为 `false` 的另一个版本接收默认值（null 或零）数据。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "33496281"
 ## <a name="schema-considerations"></a>架构注意事项  
  为数据协定类型生成哪种架构的说明，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
- WCF 的架构生成为数据协定类型进行版本控制未提供任何生成。 也就是说，从类型的某个版本中导出的架构仅包含该版本的数据成员。 实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口不会改变类型的架构。  
+ WCF 的架构生成数据协定类型上做出的版本控制功能没有相应的规定。 也就是说，从类型的某个版本中导出的架构仅包含该版本的数据成员。 实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口不会改变类型的架构。  
   
  默认情况下，数据成员是作为可选元素导出到架构的。 即，`minOccurs`（XML 属性）值设置为 0。 如果 `minOccurs` 设置为 1，则导出必需的数据成员。  
   
@@ -109,10 +109,10 @@ ms.locfileid: "33496281"
  实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口是非重大更改。 但是，在实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 的版本之前，类型版本不提供往返过程支持。 有关详细信息，请参阅[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ## <a name="enumerations"></a>枚举  
- 添加或移除枚举成员是重大更改。 更改枚举成员的名称是重大更改，除非使用 `EnumMemberAtttribute` 属性将其协定名称保持为与旧版本中的名称相同。 有关详细信息，请参阅[数据协定中的枚举类型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
+ 添加或移除枚举成员是重大更改。 更改枚举成员的名称是重大更改，除非使用 `EnumMemberAttribute` 属性将其协定名称保持为与旧版本中的名称相同。 有关详细信息，请参阅[中的数据协定的枚举类型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
   
 ## <a name="collections"></a>集合  
- 大多数集合更改是非重大更改，这是因为在数据协定模型中，大多数集合类型可以彼此互换。 但是，将非自定义集合更改为自定义集合是重大更改，反之亦然。 此外，更改集合的自定义设置（即，更改其数据协定名称和命名空间、重复元素名称、键元素名称以及值元素名称）也是重大更改。 有关集合自定义的详细信息，请参阅[数据协定中的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
+ 大多数集合更改是非重大更改，这是因为在数据协定模型中，大多数集合类型可以彼此互换。 但是，将非自定义集合更改为自定义集合是重大更改，反之亦然。 此外，更改集合的自定义设置（即，更改其数据协定名称和命名空间、重复元素名称、键元素名称以及值元素名称）也是重大更改。 集合自定义的详细信息，请参阅[中的数据协定的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
 更改集合内容的数据协定（例如，从整数列表更改为字符串列表）自然也是重大更改。  
   
 ## <a name="see-also"></a>请参阅  

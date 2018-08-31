@@ -5,32 +5,32 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: ce4585a1c5c2b9acbdb7ec33c62a1e91851b720e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538807"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258716"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>如何：在 Windows 窗体上创建简单绑定控件
-与*简单绑定*，你可以在控件中显示单个数据元素，如从数据集表中列的值。 可以将控件的任何属性的简单绑定到数据值。  
+与*简单绑定*，可以在控件中显示单个数据元素，如从数据集表中列的值。 可以将控件属性简单绑定到数据值。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-simple-bind-a-control"></a>简单绑定控件  
   
 1.  连接到数据源。 有关详细信息，请参阅[连接到数据源](../../../docs/framework/data/adonet/connecting-to-a-data-source.md)。  
   
-2.  在表单中，选择控件，并显示**属性**窗口。  
+2.  在表单中，选择控件并显示**属性**窗口。  
   
 3.  展开 **(DataBindings)** 属性。  
   
-     最常绑定的属性将显示下 **(DataBindings)** 属性。 例如，在大多数控件，**文本**最经常绑定属性。  
+     最常绑定的属性将显示下面 **(DataBindings)** 属性。 例如，在大多数控件而言**文本**最经常绑定属性。  
   
-4.  如果属性你想要绑定不是一个经常绑定的属性，单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 在 **（高级）** 框，以显示**格式设置和高级绑定**对话框中的完整列表与该控件的属性。  
+4.  如果该属性要绑定不经常绑定的属性之一，请单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 中 **（高级）** 框，以显示**格式设置和高级绑定**为该控件的属性的完整列表对话框。  
   
-5.  选择你想要将绑定并单击下的下拉箭头的属性**绑定**。  
+5.  选择你想要绑定，并单击下的下拉箭头的属性**绑定**。  
   
      此时将显示可用数据源的列表。  
   
@@ -38,12 +38,12 @@ ms.locfileid: "33538807"
   
 7.  单击要绑定到的元素的名称。  
   
-8.  如果你正在处理**格式设置和高级绑定**对话框中，单击**确定**以返回到**属性**窗口。  
+8.  如果您正在处理**格式设置和高级绑定**对话框中，单击**确定**回到**属性**窗口。  
   
 9. 如果你想要将绑定控件的其他属性，请重复步骤 3 至 7。  
   
     > [!NOTE]
-    >  因为简单绑定控件显示仅包含单个数据元素，它是非常典型导航逻辑包括在 Windows 窗体控件与简单绑定控件。  
+    >  由于简单绑定控件显示单个数据元素，它是非常典型，若要在具有简单绑定控件的 Windows 窗体中包含导航逻辑。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Binding>  

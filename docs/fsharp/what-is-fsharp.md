@@ -3,11 +3,11 @@ title: '什么是 F #'
 description: '了解有关 F # 编程语言的含义和新增 F # 编程。 了解丰富的数据类型、 函数和它们如何组合在一起。'
 ms.date: 08/03/2018
 ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40240634"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256705"
 ---
 # <a name="what-is-f"></a>什么是 F # #
 

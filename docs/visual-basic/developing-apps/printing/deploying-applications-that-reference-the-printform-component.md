@@ -5,11 +5,11 @@ helpviewer_keywords:
 - PrintForm component [Visual Basic], deploying
 ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
 ms.openlocfilehash: 3dd7c348c4dc36a7ff64e76a93c05ddb24837079
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584691"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254697"
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>部署引用 PrintForm 组件 (Visual Basic 中) 的应用程序
 如果你想要部署引用 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 组件的应用程序，则必须在目标计算机上安装该组件。  
@@ -19,7 +19,7 @@ ms.locfileid: "33584691"
 ## <a name="installing-the-printform-as-a-prerequisite"></a>将 PrintForm 安装为必备项  
  若要成功部署应用程序，你还必须部署应用程序引用的所有组件。 安装必备组件的过程称为 *引导*。  
   
- 当<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>开发计算机上安装组件，Microsoft Visual Basic Power Pack 引导程序包添加到 Visual Studio 引导程序目录。 按照添加 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 或 Windows 安装程序部署必备项的过程进行操作时即可使用此包。  
+ 当<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>在开发计算机上安装组件，Microsoft Visual Basic Power Pack 引导程序包添加到 Visual Studio 引导程序目录。 按照添加 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 或 Windows 安装程序部署必备项的过程进行操作时即可使用此包。  
   
  默认情况下，引导组件将从与安装包的相同的位置进行部署。 或者，你可以选择从 URL 或文件共享位置部署组件，用户可从这些位置按需进行下载。  
   

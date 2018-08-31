@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 62bf3ce4bc7a0ff8109ec34fba77dd854c7679b8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f56445e9bdd030d591f9fc6300f9a24d330dbc20
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697113"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257365"
 ---
 # <a name="working-with-certificates"></a>使用证书
 对 Windows Communication Foundation (WCF) 安全性进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 WCF 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 WCF 和证书来完成常见任务。  
@@ -102,9 +102,9 @@ ms.locfileid: "34697113"
  关于证书的常见问题是要使用哪个证书以及使用它的原因。 答案取决于是对客户端编程还是对服务编程。 下面的信息提供了一个一般准则，但未对这些问题提供详尽解答。  
   
 ### <a name="service-certificates"></a>服务证书  
- 服务证书的主要任务是向客户端验证服务器的身份。 客户端对服务器进行身份验证时所进行的初始检查之一是将“使用者”字段的值与用来联系服务的统一资源标识符 (URI) 进行比较：二者的 DNS 必须匹配。 例如，如果服务的 URI 为“http://www.contoso.com/endpoint/”，则“使用者”字段也必须包含值“www.contoso.com”。  
+ 服务证书的主要任务是向客户端验证服务器的身份。 客户端对服务器进行身份验证时所进行的初始检查之一是将“使用者”字段的值与用来联系服务的统一资源标识符 (URI) 进行比较：二者的 DNS 必须匹配。 例如，如果该服务的 URI 是`http://www.contoso.com/endpoint/`然后**使用者**字段也必须包含值`www.contoso.com`。  
   
- 请注意，该字段可以包含多个值，每个值都以一个起始值前缀来指示其值。 最常见的起始值是以“CN”表示公用名，例如“CN = www.contoso.com”。 “使用者”字段还可能为空白，这种情况下，“使用者可选名称”字段可以包含“DNS 名称”值。  
+ 请注意，该字段可以包含多个值，每个值都以一个起始值前缀来指示其值。 大多数情况下，初始化是"CN"表示公用名，例如， `CN = www.contoso.com`。 “使用者”字段还可能为空白，这种情况下，“使用者可选名称”字段可以包含“DNS 名称”值。  
   
  另请注意，证书“预期目的”字段的值应包含一个适当的值，例如“服务器身份验证”或“客户端身份验证”。  
   
