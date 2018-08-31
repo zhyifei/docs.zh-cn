@@ -10,12 +10,12 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ab732ffedfbe05b1b246d8d8eef1c374e223eb39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401175"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931610"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 和嵌入式对象概述
 > [!NOTE]
@@ -29,10 +29,10 @@ ms.locfileid: "33401175"
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>嵌入对象和 UI 自动化树  
  在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控制视图中，嵌入对象被视为独立元素。 由于它们都是作为文本容器的子级公开的，因此可以通过与 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中的其他控件相同的模型进行访问。  
   
- ![嵌入的文本容器中的表与映像](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
+ ![嵌入的文本容器中的表使用映像](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
 具有表、图像和超链接嵌入对象的文本容器示例  
   
- ![内容视图，则前面示例的](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example2.PNG "UIA_TextPattern_Embedded_Objects_Overview_Example2")  
+ ![内容前面的示例中的视图](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example2.PNG "UIA_TextPattern_Embedded_Objects_Overview_Example2")  
 前述文本容器的一部分的内容视图示例  
   
 <a name="Expose_Embedded_Objects_Using_TextPattern_and"></a>   
@@ -41,12 +41,12 @@ ms.locfileid: "33401175"
   
  文本容器和嵌入对象（如超链接或表格单元格）的文本内容（或内部文本）在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图中作为单个连续文本流公开，对象边界被忽略。 如果 UI 自动化客户端检索文本的目的是以某种方式进行叙述、解释或分析，则应检查文本范围中的特殊情况，例如含有文本内容或其他嵌入对象的表格。 此操作可通过以下方式实现：调用 <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> 以获取每个嵌入对象的 <xref:System.Windows.Automation.AutomationElement> ，然后调用 <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 以获取每个元素的文本范围。 以递归方式完成操作，直到检索到所有文本内容。  
   
- ![跨的嵌入对象的文本范围。] (../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
+ ![文本范围跨越的嵌入对象。](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
 含有嵌入对象及其范围跨度的文本流示例  
   
  如果需要遍历文本范围的内容，为使 <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> 方法成功执行，将在后台进行一系列步骤。  
   
-1.  对文本范围进行了规范化。也就是说，已在 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 终结点将文本范围折叠为退化范围，这使得 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 终结点成为多余。 此步骤是必需的文本范围跨越其中的情况下消除歧义<xref:System.Windows.Automation.Text.TextUnit>边界： 例如，"{The U} RL [ http://www.microsoft.com ](http://www.microsoft.com)文本中嵌入"位置"{"和"}"是文本范围端点。  
+1.  对文本范围进行了规范化。也就是说，已在 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 终结点将文本范围折叠为退化范围，这使得 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 终结点成为多余。 此步骤是必需的文本范围跨越的情况下消除歧义<xref:System.Windows.Automation.Text.TextUnit>边界： 例如，"{The U} RL [ http://www.microsoft.com ](http://www.microsoft.com)文本中嵌入"其中"{"和"}"是文本范围的终结点。  
   
 2.  生成的范围在 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 中向后移动到所请求的 <xref:System.Windows.Automation.Text.TextUnit> 边界的开头。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "33401175"
   
 4.  然后通过将 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 终结点移动一个所请求的 <xref:System.Windows.Automation.Text.TextUnit> 边界，范围从退化范围状态扩展开来。  
   
- ![通过 Move 和 expandtoenclosingunit 进行的范围调整](../../../docs/framework/ui-automation/media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
+ ![范围通过 Move 和 expandtoenclosingunit 进行的调整](../../../docs/framework/ui-automation/media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
 如何针对 Move() 和 ExpandToEnclosingUnit() 调整文本范围的示例  
   
 <a name="Common_Scenarios"></a>   
@@ -82,7 +82,7 @@ ms.locfileid: "33401175"
   
  **示例 2 - 部分跨越嵌入文本超链接的文本范围**  
   
- URL http://{[www]} 嵌入在文本中。  
+ URL`http://{[www]}`嵌入在文本中。  
   
 |调用方法|结果|  
 |-------------------|------------|  
@@ -90,21 +90,21 @@ ms.locfileid: "33401175"
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|返回结束文本范围的最内层 <xref:System.Windows.Automation.AutomationElement> 。在本例中，即为超链接控件。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|由于文本范围未跨越整个 URL 字符串，因此返回 `null` 。|  
   
- **示例 3-部分跨越文本容器的内容的文本范围。文本容器包含不属于文本范围一部分的嵌入的文本超链接。**  
+ **示例 3-部分跨越文本容器的内容的文本范围。文本容器包含不属于文本范围的嵌入的文本超链接。**  
   
- {The URL}[ http://www.microsoft.com ](http://www.microsoft.com)嵌入文本中。  
+ {URL}[ http://www.microsoft.com ](http://www.microsoft.com)嵌入在文本中。  
   
 |调用方法|结果|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|返回字符串“The URL”。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|返回结束文本范围的最内层 <xref:System.Windows.Automation.AutomationElement> 。在本例中，即为表示文本提供程序本身的 <xref:System.Windows.Automation.AutomationElement> 。|  
-|具有参数 (TextUnit.Word, 1) 的<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> 。|将文本范围跨度移到“http”，因为该超链接的文本由独立单词组成。 在本例中，不将超链接视为单个对象。<br /><br /> URL {[http]} 嵌入在文本中。|  
+|具有参数 (TextUnit.Word, 1) 的<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> 。|将文本范围跨度移到“http”，因为该超链接的文本由独立单词组成。 在本例中，不将超链接视为单个对象。<br /><br /> 在文本中嵌入 URL {[http]}。|  
   
 <a name="Image"></a>   
 ### <a name="image"></a>图像  
  **示例 1 - 包含嵌入图像的文本范围**  
   
- {映像![嵌入式图像示例](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")嵌入在文本}。  
+ {图像![嵌入式图像示例](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")嵌入在文本}。  
   
 |调用方法|结果|  
 |-------------------|------------|  
@@ -113,9 +113,9 @@ ms.locfileid: "33401175"
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|返回表示图像控件的 <xref:System.Windows.Automation.AutomationElement> 。|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ，其中 <xref:System.Windows.Automation.AutomationElement> 是由上一个 <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> 方法返回的对象。|返回表示的退化范围"![嵌入式图像示例](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")"。|  
   
- **示例 2-部分跨越文本容器的内容的文本范围。文本容器包含不是文本范围的一部分的嵌入的图像。**  
+ **示例 2-部分跨越文本容器的内容的文本范围。文本容器包含不属于文本范围的嵌入的图像。**  
   
- {The image}![嵌入式图像示例](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")嵌入文本中。  
+ {The image}![嵌入式图像示例](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")嵌入在文本中。  
   
 |调用方法|结果|  
 |-------------------|------------|  
@@ -130,9 +130,9 @@ ms.locfileid: "33401175"
   
 |带图像的单元格|带文本的单元格|  
 |---------------------|--------------------|  
-|![嵌入图像示例](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
-|![嵌入图像示例 2](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
-|![嵌入图像示例 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Z 的图像|Z|  
+|![嵌入式图像示例](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
+|![嵌入式图像示例 2](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
+|![嵌入式图像示例 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Z 的图像|Z|  
   
  **示例 1 - 从单元格的内容获取文本容器。**  
   

@@ -4,50 +4,50 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 438733b2cde1d4eff178a5fd4a4ed0bb93804f76
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105444"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257352"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据
 
-容器的基元是不可变性。 与 VM 相比，容器不会消失，作为一种常见情况。 在从死进程、 重载的 CPU 或完整或失败的磁盘的各种窗体中，VM 可能会失败。 但，我们希望在虚拟机可用并 RAID 驱动器是司空见惯以确保驱动器故障维护数据。
+容器的基元是不可变性。 与 VM 相比，容器将不会作为一种常见情况消失。 在从死信进程、 重载的 CPU 或完整或失败的磁盘的各种窗体中，VM 可能会失败。 我们希望在可用的 VM 和 RAID 驱动器来确保驱动器故障维护的数据。
 
-但是，容器是认为要是进程的实例。 进程不会继续持久状态。 即使一个容器可以写入其本地存储，假设，该实例都将围绕无限期地将等效于假定单复制内存将持久。 您应假定复制的容器，如进程，终止，或当使用容器 orchestrator 管理，则可能会将它们移。
+但是，容器被认为是非进程的实例。 进程不维护持久状态。 即使容器可以写入其本地存储，假定将无限期地将围绕该实例将等效于假定单副本内存将持久。 您应假定复制的容器与进程一样，，已终止，或者，当托管容器业务流程协调程序时，可能会将它们移动。
 
-Docker 使用一个称作功能*覆盖文件系统*来实现写入时复制流程存储任何更新信息到根文件系统中的容器，相比所基于的原始映像。 如果随后从系统中删除容器，这些更改将丢失。 一个容器，因此，不默认不具有持久存储。 但也可以保存容器的状态，设计解决此系统将为与容器体系结构原则冲突。
+Docker 使用一项功能称为*覆盖文件系统*实现写入时复制过程，用于存储任何更新信息到容器，相比原始映像所基于的根文件系统。 如果随后从系统删除该容器，这些更改将丢失。 一个容器，因此，不具有持久性存储区默认情况下。 尽管可以保存容器的状态，但设计系统解决此问题是与容器体系结构原则冲突。
 
 若要管理 Docker 应用程序中的持久性数据，还有常见解决方案：
 
--   [**数据卷**](https://docs.docker.com/engine/tutorials/dockervolumes/) 这些装载到刚设定的主机。
+-   [**数据卷**](https://docs.docker.com/engine/tutorials/dockervolumes/) 这些装载到主机，只需特别说明。
 
--   [**数据卷容器**](https://docs.docker.com/engine/tutorials/dockervolumes/#/creating-and-mounting-a-data-volume-container) 这些跨容器，使用可以循环外部容器提供共享的存储。
+-   [**数据卷容器**](https://docs.docker.com/engine/tutorials/dockervolumes/#/creating-and-mounting-a-data-volume-container) 这些跨容器，使用可以循环的外部容器提供共享的存储。
 
--   [**卷插件**](https://docs.docker.com/engine/tutorials/dockervolumes/#/mount-a-shared-storage-volume-as-a-data-volume) 这些装载到远程位置，提供长期的持久性的卷。
+-   [**卷插件**](https://docs.docker.com/engine/tutorials/dockervolumes/#/mount-a-shared-storage-volume-as-a-data-volume) 这些卷装载到远程位置，提供持久性。
 
--   **远程数据源** 示例包括 SQL 和非 SQL 数据库或缓存 Redis 等服务。
+-   **远程数据源** 示例包括 SQL 数据库和无 SQL 数据库或缓存服务，如 Redis。
 
--   [**Azure 存储**](https://docs.microsoft.com/azure/storage/) 这提供异地可分发平台即服务 (PaaS) 存储，提供容器的最佳为长期的持久性。
+-   [**Azure 存储**](https://docs.microsoft.com/azure/storage/) 这提供异地可分发平台即服务 (PaaS) 存储，提供最佳的容器为持久性。
 
-数据卷专门指定在跳过的一个或多个容器内的目录[联合的文件系统](https://docs.docker.com/v1.8/reference/glossary#union-file-system)。 数据卷用于维护数据，独立于容器的生命周期。 Docker 因此永远不会自动删除卷时您删除容器，也不能将它不再引用的容器的"垃圾收集"卷。 主机操作系统可以浏览和编辑中的任何卷的数据自由，这是另一个原因应谨慎使用数据卷。
+数据卷被专门指定跳过的一个或多个容器内的目录[联合的文件系统](https://docs.docker.com/glossary/?term=Union%20file%20system)。 数据卷用于维护数据，独立于容器的生命周期。 Docker 因此永远不会自动删除卷时您删除容器，也不能将它不再引用的容器的"垃圾收集"的卷。 主机操作系统可以浏览和编辑任何卷中的数据公开发布，这是尽量少使用的数据卷的只是另一个原因。
 
-A[数据卷容器](https://docs.docker.com/v1.8/userguide/dockervolumes/)是对常规数据卷的改进。 它是实质上是具有一个或多个数据卷 （如前面所述），在其中创建的休眠的容器。 数据卷容器从中央装入点提供对容器的访问。 访问此方法的好处是它提取原始数据，进行逻辑装入点的数据容器的位置。 它还允许访问数据容器卷以创建和销毁时将数据保存在专用的容器中持久保留的"应用程序"容器。
+一个[数据卷容器](https://docs.docker.com/glossary/?term=volume)是对常规数据卷的改进。 实质上是处于休眠状态容器具有一个或多个数据卷 （如前面所述），在其中创建它。 数据卷容器从中央装入点提供对容器的访问。 访问此方法的优点是它抽象出原始数据，使逻辑装入点的数据容器的位置。 它还允许访问的数据容器卷来创建和销毁时将数据保存在专用容器中持久保留的"应用程序"容器。
 
-图 4-5 显示正则 Docker 卷可以置于存储容器本身外，但在主机服务器/VM 物理边界内。 *Docker 卷没有使用到另一台主机服务器/虚拟机从卷的能力*。
+图 4-5 显示了常规 Docker 卷可以置于存储超出容器本身，但在主机服务器/VM 物理边界内。 *Docker 卷不能使用到另一个将卷从一台主机服务器/VM*。
 
 ![](./media/image5.png)
 
-图 4-5： 数据量和容器应用程序/容器的外部数据源
+图 4-5： 数据卷和用于容器的应用/容器的外部数据源
 
-由于管理在单独的物理主机运行的容器之间共享的数据，建议你不使用卷业务数据除非 Docker 主机已固定的主机/VM，因为在 orchestrator 中使用 Docker 容器时容器应介于 1 到另一台主机，具体取决于要由群集执行的优化移动。
+因为无法管理在单独的物理主机运行的容器之间共享的数据，建议不使用卷用于业务数据除非 Docker 主机是固定的主机/VM，因为在业务流程协调程序中使用 Docker 容器时容器应介于 1 到另一台主机，具体取决于要由群集执行的优化移动。
 
-因此，正则数据卷的合适的机制用于跟踪文件、 临时文件或任何类似的概念，或如果你的容器将跨多个主机时并不影响业务数据一致性。
+因此，常规数据卷是一个良好的机制用于跟踪文件、 临时文件或任何类似的概念，并不影响业务数据一致性，如果或跨多个主机移动用户的容器。
 
-卷插件喜欢[Flocker](https://clusterhq.com/flocker/)跨群集中的所有主机提供数据。 尽管不是所有卷插件都是相同的卷插件通常会提供外部化持久的可靠存储来自不可变的容器。
+[卷插件](https://docs.docker.com/engine/extend/plugins_volume/)跨群集中的所有主机提供的数据。 尽管并非所有卷插件都是相同的但卷插件通常提供外部化不可变的容器中的持久可靠存储。
 
-远程数据源和类似 SQL 数据库、 DocumentDB、 或远程如 Redis 缓存的缓存可能与开发而容器没有相同。 这是一种的首选方法，并经过验证，以存储业务应用程序数据。
+远程数据源和 SQL 数据库、 DocumentDB、 或的远程如 Redis 缓存等缓存应该是与开发不带容器相同。 这是一种首选方法，且经实践证明的业务应用程序数据存储。
 
 
 >[!div class="step-by-step"]
