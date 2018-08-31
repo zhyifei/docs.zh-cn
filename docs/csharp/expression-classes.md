@@ -3,22 +3,22 @@ title: 支持表达式树的框架类型
 description: 了解支持表达式树的框架类型、创建表达式树和使用表达式树 API 的方法。
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 3110f2a9534085aba95fcb5c8e76f66229e79f86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214940"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934787"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>支持表达式树的框架类型
 
 [上一步 - 已解释的表达式树](expression-trees-explained.md)
 
 存在可与表达式树配合使用的 .NET Core framework 中的类的大型列表。
-可以在[此处](/dotnet/core/api/System.Linq.Expressions)查看完整列表。
+可以在 <xref:System.Linq.Expressions> 查看完整列表。
 让我们来了解一下 framework 类的设计方式，而不是逐一查看完整列表。
 
-在语言设计中，表达式是可计算并返回值的代码主体。 表达式可能非常简单：常数表达式 `1` 返回常数值 1。 也可能较复杂：表达式 `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` 返回二次方程的一个根（若方程有解）。  
+在语言设计中，表达式是可计算并返回值的代码主体。 表达式可能非常简单：常数表达式 `1` 返回常数值 1。 也可能较复杂：表达式 `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` 返回二次方程的一个根（若方程有解）。  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>这一切都始于 System.Linq.Expression
 

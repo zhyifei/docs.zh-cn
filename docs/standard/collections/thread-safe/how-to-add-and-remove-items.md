@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6aa309f2c6c44934f491229ac43003a05301bacb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8bb84f2e26471e004678afde99a1dd725db6832
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569741"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755101"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>如何：在 ConcurrentDictionary 中添加和移除项
 本示例演示如何在 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 中添加、检索、更新和删除项。 此集合类是一个线程安全实现。 建议在多个线程可能同时尝试访问元素时使用此集合类。  
@@ -36,13 +36,13 @@ ms.locfileid: "33569741"
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 专为多线程方案而设计。 无需在代码中使用锁定即可在集合中添加或移除项。 但始终可能出现以下情况：一个线程检索一个值，而另一线程通过为同一键赋予新值来立即更新集合。  
   
- 此外，尽管 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 的所有方法都是线程安全的，但并非所有方法都是原子的，尤其是 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>。 传递给这些方法的用户委托将在词典的内部锁之外调用。 （这样做是为了防止未知代码阻塞所有线程。）因此，可能发生以下事件序列：  
+ 此外，尽管 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 的所有方法都是线程安全的，但并非所有方法都是原子的，尤其是 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>。 传递给这些方法的用户委托将在词典的内部锁之外调用（此操作旨在防止未知代码阻止所有线程）。 因此，可能发生以下事件序列：  
   
  1\) threadA 调用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>，未找到项，通过调用 valueFactory 委托创建要添加的新项。  
   
  2\) threadB 并发调用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>，其 valueFactory 委托受到调用，并且它在 threadA 之前到达内部锁，并将其新键值对添加到词典中。  
   
- 3\) threadA 的用户委托完成，此线程到达锁位置，但现在发现已有项存在  
+ 3\) threadA 的用户委托完成，此线程到达锁位置，但现在发现已有项存在。  
   
  4\) threadA 执行“Get”，返回之前由 threadB 添加的数据。  
   

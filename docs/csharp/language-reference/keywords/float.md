@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 9500aceed62904e68d6b7ee8bec569d12103bb18
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 98f89ba3d79f7679b69ce10fd875b3caf69c5257
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028235"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932905"
 ---
 # <a name="float-c-reference"></a>float（C# 参考）
 
@@ -21,7 +21,7 @@ ms.locfileid: "37028235"
 
 |类型|大致范围|精度|.NET 类型|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|-3.4×10<sup>38</sup> 到 +3.4×10<sup>38</sup>|7 位|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|±1.5 x 10<sup>−45</sup> 至 ±3.4 x 10<sup>38</sup>|7 位|<xref:System.Single?displayProperty=nameWithType>|  
 
 ## <a name="literals"></a>文本
 
@@ -37,9 +37,9 @@ float x = 3.5F;
 
 可以在表达式中混合使用数值整型和浮点类型。 在这种情况下，整数类型将转换为浮点类型。 根据以下规则对表达式求值：
 
-- 如果浮点类型之一是 [double](double.md)，该表达式的计算结果为关系或布尔表达式中 [double](double.md) 或 [bool](bool.md)。
+- 如果其中一个浮点类型是 [double](double.md)，该表达式在关系比较或相等比较中求值类型为 [double](double.md) 或 [bool](bool.md)。
 
-- 如果表达式中无 [double](double.md) 类型，则该表达式的计算结果为关系或布尔表达式中 `float` 或 [bool](bool.md)。
+- 如果表达式中没有 [double](double.md) 类型，则表达式在关系比较或相等比较中求值类型为 `float` 或 [bool](bool.md)。
 
 浮点表达式可以包含下列值集：
 
@@ -65,12 +65,12 @@ float x = 3.5F;
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.Single>  
-[C# 参考](../index.md)  
-[C# 编程指南](../../programming-guide/index.md)  
-[强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)  
-[C# 关键字](index.md)  
-[整型表](integral-types-table.md)  
-[内置类型表](built-in-types-table.md)  
-[隐式数值转换表](implicit-numeric-conversions-table.md)  
-[显式数值转换表](explicit-numeric-conversions-table.md)  
+- <xref:System.Single>  
+- [C# 参考](../index.md)  
+- [C# 编程指南](../../programming-guide/index.md)  
+- [强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)  
+- [C# 关键字](index.md)  
+- [整型表](integral-types-table.md)  
+- [内置类型表](built-in-types-table.md)  
+- [隐式数值转换表](implicit-numeric-conversions-table.md)  
+- [显式数值转换表](explicit-numeric-conversions-table.md)  

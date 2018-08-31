@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314638"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931548"
 ---
 # <a name="tour-of-net"></a>.NET 教程
 
@@ -79,7 +79,7 @@ Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic (VB
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#、VB 和 F# 支持本地类型推理。 类型推理是指编译器根据右侧的表达式推断左侧表达式的类型。 这并不意味着类型安全遭到破坏或规避。 生成的类型具有一个隐含所有信息的强类型。 在上例中，重写了 `dog` 和 `cat` 以介绍类型推理，示例的其余部分保持不变：
+C#、VB 和 F# 支持本地类型推理。 类型推理是指编译器根据右侧的表达式推断左侧表达式的类型。 这并不意味着类型安全遭到破坏或规避。 生成的类型具有一个隐含所有信息的强类型。 在上例中，重写了 `dog` 以介绍类型推理，示例的其余部分保持不变：
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 

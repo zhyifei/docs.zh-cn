@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: 41814129d038f8cb1ab98db0c7a4e0cbd7e7cd54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397255"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925499"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
@@ -119,7 +119,7 @@ WCF 使用与 .NET Framework 的其余部分相同的网络堆栈。
 
 除非显式配置协议版本，否则 WCF 框架将自动选择高至 TLS 1.2 的最高协议。 有关详细信息，请参阅上一部分[对于使用具有证书凭据的传输安全性的 WCF TCP 传输](#wcf-tcp-cert)。
 
-### <a name="for-net-framework-35---451-and-not-wcf"></a>对于 .NET Framework 3.5 - 4.5.1 且不是 WFC
+### <a name="for-net-framework-35---452-and-not-wcf"></a>对于 .NET Framework 3.5 - 4.5.2（而不是 WFC）
 
 我们建议将你的应用升级到 .NET Framework 4.7 或更高版本。 如果不能升级，请执行以下步骤。 在未来的某个时间点，如果不升级到 .NET Framework 4.7 或更高版本，你的应用程序可能会无法使用。
 

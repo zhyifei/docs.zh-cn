@@ -1,6 +1,6 @@
 ---
 title: 有关使用 .NET 中字符串的最佳做法
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bdc23c909be0f9df051d538ca93cbb0a8e31426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579725"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000146"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>有关使用 .NET 中字符串的最佳做法
 <a name="top"></a> .NET 为开发本地化和全球化应用提供广泛支持，并方便用户在执行排序和显示字符串等常见操作时，轻松应用当前区域性或特定区域性的约定。 但排序或比较字符串并不总是区分区域性的操作。 例如，对于应用程序内部使用的字符串，通常应该跨所有区域性以相同的方式对其进行处理。 如果将 XML 标记、HTML 标记、用户名、文件路径和系统对象名称等与区域性无关的字符串数据解释为区分区域性，则应用程序代码会遭遇细微的错误、不佳的性能，在某些情况下，还会遭遇安全性问题。  
@@ -121,7 +121,10 @@ ms.locfileid: "33579725"
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>字符串比较的详细信息  
  字符串比较是许多字符串相关操作的核心，特别是排序和相等性测试操作。 字符串以确定的顺序进行排序：如果在排序的字符串列表中，“my”出现在“string”之前，则“my”必定小于或等于“string”。 此外，比较可隐式确定相等性。 对于认为是相等的字符串，比较操作将返回零。 对此很好的解释是两个字符串都不小于对方。 涉及到字符串的最有意义的操作包括这些步骤中的一个或两个步骤：与另一个字符串进行比较和执行明确的排序操作。  
-  
+
+> [!NOTE]
+> 可以下载[排序权重表](https://www.microsoft.com/en-us/download/details.aspx?id=10921)，这是一组文本文件，其中包含有关 Windows 操作系统排序和比较操作中使用的字符权重的信息。
+
  但是，评估两个字符串的相等性或排序顺序不会生成一个正确的结果；其结果取决于用于比较这两个字符串的条件。 特别是，序号或基于当前区域性或固定区域性（基于英语语言的区域设置不明确的区域性）的大小写和排序约定的字符串比较可能会产生不同的结果。  
   
 <a name="current_culture"></a>   
@@ -258,7 +261,7 @@ ms.locfileid: "33579725"
   
  此方法当前不提供指定 <xref:System.StringComparison> 类型的重载。 通常可以将此方法转换为建议的 <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 形式。  
   
- 实现 <xref:System.IComparable> 和 <xref:System.IComparable%601> 接口的类型实现此方法。 由于它不提供 <xref:System.StringComparison> 参数选项，因此实现类型经常使用户在其构造函数中指定 <xref:System.StringComparer> 。 下面的示例定义 `FileName` 类，其类构造函数包括 <xref:System.StringComparer> 参数。 然后此 <xref:System.StringComparer> 对象将用于 `FileName.CompareTo` 方法。  
+ 实现 <xref:System.IComparable> 和 <xref:System.IComparable%601> 接口的类型实现此方法。 由于它不提供 <xref:System.StringComparison> 参数选项，因此实现类型经常使用户在其构造函数中指定 <xref:System.StringComparer>。 下面的示例定义 `FileName` 类，其类构造函数包括 <xref:System.StringComparer> 参数。 然后此 <xref:System.StringComparer> 对象将用于 `FileName.CompareTo` 方法。  
   
  [!code-csharp[Conceptual.Strings.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/api1.cs#6)]
  [!code-vb[Conceptual.Strings.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/api1.vb#6)]  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d97d38c903cbb33097db0e109758d98527e00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14c046094db52f2db55bb095839d354c7e6c691e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591932"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912037"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用延续任务来链接任务
 在异步编程中，一个异步操作在完成时调用另一个操作并将数据传递到其中的情况非常常见。 传统上，此过程是通过使用回调方法完成的。 在任务并行库中， *延续任务*提供了同样的功能。 延续任务（也简称为“延续”）是一个异步任务，由另一个任务（称为 *前面的任务*）在完成时调用。  
@@ -44,7 +44,7 @@ ms.locfileid: "33591932"
  延续本身是 <xref:System.Threading.Tasks.Task> ，并不阻止它在其上启动的线程。 调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法进行阻止，直到延续任务完成。  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>为一个前面的任务创建延续  
- 通过调用 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法创建在其前面的任务完成时执行的延续。 下面的示例演示基本模式（为清楚起见，省略了异常处理）。 它会执行一个先行任务 - `taskA`，将返回一个 <xref:System.DayOfWeek> 对象，指示当天为周几。 前面的任务完成时，将向延续任务 `taskB`传递该前面的任务，并将显示包含其结果的字符串。  
+ 通过调用 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法创建在其前面的任务完成时执行的延续。 下面的示例演示基本模式（为清楚起见，省略了异常处理）。 它会执行一个先行任务 - `taskA`，将返回一个 <xref:System.DayOfWeek> 对象，指示当天为周几。 前面的任务完成时，将向延续任务 `continuation` 传递前面的任务，并显示包含其结果的字符串。  
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  

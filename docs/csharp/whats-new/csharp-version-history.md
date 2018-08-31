@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404588"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752073"
 ---
 # <a name="the-history-of-c"></a>C# 发展历史 #
 
@@ -105,7 +105,11 @@ C# 4.0 版很难达到 3.0 版的创新水平。 在 3.0 版中，C# 已经完�
 C# 5.0 版是该语言有针对性的一个版本。 在此版本中所做的所有工作几乎都针对另一个突破性的语言概念：适用于异步编程的 `async` 和 `await` 模型。  下面是主要功能列表：
 
 - [异步成员](../async.md)
-- [调用方信息特性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [调用方信息特性](../programming-guide/concepts/caller-information.md)
+
+### <a name="see-also"></a>请参阅
+
+* [代码项目：C# 5.0 中的调用方信息属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 调用方信息特性让你可以轻松检索上下文的信息，不需要采用大量样本反射代码。 这在诊断和日志记录任务中也很有用。
 

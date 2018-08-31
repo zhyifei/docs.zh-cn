@@ -1,5 +1,5 @@
 ---
-title: for（C# 参考）
+title: C# for 语句
 ms.date: 06/13/2018
 f1_keywords:
 - for
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207874"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930945"
 ---
 # <a name="for-c-reference"></a>for（C# 参考）
 
 在指定的布尔表达式的计算结果为 `true` 时，`for` 语句会执行一条语句或一个语句块。
 
 在 `for` 语句块中的任何点上，可以使用 [break](break.md) 语句中断循环，或者可以使用 [continue](continue.md) 语句继续执行到循环中的下一次迭代。 还可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 语句退出 `for` 循环。
-  
+
 ## <a name="structure-of-the-for-statement"></a>`for` 语句的结构
 
 `for` 语句定义初始化表达式、条件和迭代器部分：
-  
+
 ```csharp
-for (initializer; condition; iterator)  
-    body  
+for (initializer; condition; iterator)
+    body
 ```
 
 三个部分都是可选的。 循环体是一个语句或一个语句块。
@@ -45,11 +45,11 @@ for (initializer; condition; iterator)
 
   - [赋值](../operators/assignment-operator.md)语句
 
-  - 方法的调用  
+  - 方法的调用
 
-  - 为 [increment](../operators/increment-operator.md) 表达式添加前缀或后缀，如 `++i` 或 `i++`  
+  - 为 [increment](../operators/increment-operator.md) 表达式添加前缀或后缀，如 `++i` 或 `i++`
 
-  - 为 [decrement](../operators/decrement-operator.md) 表达式添加前缀或后缀，如 `--i` 或 `i--`  
+  - 为 [decrement](../operators/decrement-operator.md) 表达式添加前缀或后缀，如 `--i` 或 `i--`
 
   - 通过使用 [new](new-operator.md) 关键字创建对象
 
@@ -73,15 +73,15 @@ i < 5
 
 ### <a name="the-iterator-section"></a>“迭代器”部分
 
-“迭代器”部分定义循环主体的每次迭代后将执行的操作。 “迭代器”部分包含用逗号分隔的零个或多个以下语句表达式：  
+“迭代器”部分定义循环主体的每次迭代后将执行的操作。 “迭代器”部分包含用逗号分隔的零个或多个以下语句表达式：
 
 - [赋值](../operators/assignment-operator.md)语句
 
-- 方法的调用  
+- 方法的调用
 
-- 为 [increment](../operators/increment-operator.md) 表达式添加前缀或后缀，如 `++i` 或 `i++`  
+- 为 [increment](../operators/increment-operator.md) 表达式添加前缀或后缀，如 `++i` 或 `i++`
 
-- 为 [decrement](../operators/decrement-operator.md) 表达式添加前缀或后缀，如 `--i` 或 `i--`  
+- 为 [decrement](../operators/decrement-operator.md) 表达式添加前缀或后缀，如 `--i` 或 `i--`
 
 - 通过使用 [new](new-operator.md) 关键字创建对象
 
@@ -96,23 +96,23 @@ i++
 ## <a name="examples"></a>示例
 
 下面的示例阐释了几种不太常见的 `for` 语句部分的使用情况：为“初始化表达式”部分中的外部循环变量赋值、同时在“初始化表达式”部分和“迭代器”部分中调用一种方法，以及更改迭代器部分中的两个变量的值。 选择“运行”以运行示例代码。 然后可以修改代码并再次运行它。
-  
+
 [!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
-  
+
 以下示例定义无限 `for` 循环：
-  
+
 [!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
-  
-## <a name="c-language-specification"></a>C# 语言规范  
+
+## <a name="c-language-specification"></a>C# 语言规范
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-  
+
 ## <a name="see-also"></a>请参阅
 
-[for 语句（C# 语言规范）](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[C# 参考](../index.md)  
-[C# 编程指南](../../programming-guide/index.md)  
-[C# 关键字](index.md)  
-[foreach, in](foreach-in.md)  
-[for 语句 (C++)](/cpp/cpp/for-statement-cpp)  
-[迭代语句](iteration-statements.md)
+- [for 语句（C# 语言规范）](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](index.md)
+- [foreach, in](foreach-in.md)
+- [for 语句 (C++)](/cpp/cpp/for-statement-cpp)
+- [迭代语句](iteration-statements.md)

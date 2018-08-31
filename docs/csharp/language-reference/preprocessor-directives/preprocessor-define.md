@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: f40c32a89641256e4f8fe30cd24f523b898139d5
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 305d52c26fb2592874d06f2c9a75ec63b472a812
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143474"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933059"
 ---
 # <a name="define-c-reference"></a>#define（C# 参考）
 使用 `#define` 来定义符号。 将符号用作传递给 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 指令的表达式时，该表达式的计算结果为 `true`，如以下示例所示：  
@@ -25,7 +25,7 @@ ms.locfileid: "37143474"
 > [!NOTE]
 >  `#define` 指令不能用于声明常量值，这与 C 和 C++ 中的通常做法一样。 C# 中的常量最好定义为类或结构的静态成员。 如果具有多个此类常量，请考虑创建一个单独的“常量”类来容纳它们。  
   
- 符号可用于指定编译的条件。 可通过 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 或 [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) 测试符号。 还可以使用 `conditional` 属性来执行条件编译。  
+ 符号可用于指定编译的条件。 可通过 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 或 [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) 测试符号。 还可以使用 <xref:System.Diagnostics.ConditionalAttribute> 来执行条件编译。  
   
  可以定义一个符号，但不能向符号分配值。 文件中必须先出现 `#define` 指令，才能使用并非同时也是预处理器指令的任何指示。  
   
@@ -63,11 +63,12 @@ public class TestDefine
   
  有关如何取消对符号进行定义的示例，请参阅 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)。  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)  
- [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)  
- [const](../../../csharp/language-reference/keywords/const.md)  
- [如何：使用跟踪和调试进行条件编译](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
- [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
+## <a name="see-also"></a>请参阅
+
+- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)  
+- [const](../../../csharp/language-reference/keywords/const.md)  
+- [如何：使用跟踪和调试进行条件编译](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
+- [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)

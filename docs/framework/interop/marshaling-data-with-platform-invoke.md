@@ -1,6 +1,6 @@
 ---
 title: 用平台调用封送数据
-ms.date: 03/30/2017
+ms.date: 07/31/2018
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391311"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911726"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>用平台调用封送数据
 若要调用从非托管库中导出的函数，.NET Framework 应用程序需要托管代码中表示非托管函数的函数原型。 若要创建使平台调用能正确封送数据的原型，必须执行以下操作：  
@@ -33,7 +33,8 @@ ms.locfileid: "33391311"
   
 |Wtypes.h 中的非托管类型|非托管 C 语言类型|托管类名称|描述|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**HANDLE**|\*void|<xref:System.IntPtr?displayProperty=nameWithType>|在 32 位 Windows 操作系统上为 32 位、在 64 位 Windows 操作系统上为 64 位。|  
+|**VOID**|**void**|<xref:System.Void?displayProperty=nameWithType>|应用于不返回值的函数。|
+|**HANDLE**|**void \***|<xref:System.IntPtr?displayProperty=nameWithType>|在 32 位 Windows 操作系统上为 32 位、在 64 位 Windows 操作系统上为 64 位。|  
 |**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 位|  
 |**short**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 位|  
 |**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16 位|  
@@ -45,10 +46,10 @@ ms.locfileid: "33391311"
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 位|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|使用 ANSI 修饰。|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|使用 Unicode 修饰。|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 ANSI 修饰。|  
+|**LPSTR**|**char \***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 ANSI 修饰。|  
 |**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 ANSI 修饰。|  
-|**LPWSTR**|wchar_t\*|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 修饰。|  
-|**LPCWSTR**|Const wchar_t\*|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 修饰。|  
+|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 修饰。|  
+|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 修饰。|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 位|  
 |**DOUBLE**|**双精度**|<xref:System.Double?displayProperty=nameWithType>|64 位|  
   
