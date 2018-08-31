@@ -7,48 +7,48 @@ dev_langs:
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 1407593bf90b28a1890a8c18564b31d0aa67e0cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad5862064966ccae4c313e7fa3d982ec9abbbcd2
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494171"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332182"
 ---
-# <a name="message-security-with-mutual-certificates"></a><span data-ttu-id="a300c-102">使用相互证书的消息安全</span><span class="sxs-lookup"><span data-stu-id="a300c-102">Message Security with Mutual Certificates</span></span>
-<span data-ttu-id="a300c-103">下面的方案演示 Windows Communication Foundation (WCF) 服务和使用消息安全模式保护的客户端。</span><span class="sxs-lookup"><span data-stu-id="a300c-103">The following scenario shows a Windows Communication Foundation (WCF) service and client secured using message security mode.</span></span> <span data-ttu-id="a300c-104">使用证书对客户端和服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="a300c-104">The client and the service are authenticated with certificates.</span></span>  
+# <a name="message-security-with-mutual-certificates"></a><span data-ttu-id="9a528-102">使用相互证书的消息安全</span><span class="sxs-lookup"><span data-stu-id="9a528-102">Message Security with Mutual Certificates</span></span>
+<span data-ttu-id="9a528-103">以下方案显示了 Windows Communication Foundation (WCF) 服务和使用消息安全模式保护的客户端。</span><span class="sxs-lookup"><span data-stu-id="9a528-103">The following scenario shows a Windows Communication Foundation (WCF) service and client secured using message security mode.</span></span> <span data-ttu-id="9a528-104">使用证书对客户端和服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="9a528-104">The client and the service are authenticated with certificates.</span></span>  
   
- <span data-ttu-id="a300c-105">本方案是可互操作的，因为它使用具有 X.509 证书令牌配置文件的 WS-Security。</span><span class="sxs-lookup"><span data-stu-id="a300c-105">This scenario is interoperable because it uses WS-Security with the X.509 certificate token profile.</span></span>  
+ <span data-ttu-id="9a528-105">本方案是可互操作的，因为它使用具有 X.509 证书令牌配置文件的 WS-Security。</span><span class="sxs-lookup"><span data-stu-id="9a528-105">This scenario is interoperable because it uses WS-Security with the X.509 certificate token profile.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a300c-106">本方案不对服务证书执行协商。</span><span class="sxs-lookup"><span data-stu-id="a300c-106">This scenario does not perform negotiation of the service certificate.</span></span> <span data-ttu-id="a300c-107">在进行任何通信之前，必须先向客户端提供服务证书。</span><span class="sxs-lookup"><span data-stu-id="a300c-107">The service certificate must be provided to the client in advance of any communication.</span></span> <span data-ttu-id="a300c-108">服务器证书可以随应用程序一起分发，也可以通过带外通信来提供。</span><span class="sxs-lookup"><span data-stu-id="a300c-108">The server certificate can be distributed with the application or provided in an out-of-band communication.</span></span>  
+>  <span data-ttu-id="9a528-106">本方案不对服务证书执行协商。</span><span class="sxs-lookup"><span data-stu-id="9a528-106">This scenario does not perform negotiation of the service certificate.</span></span> <span data-ttu-id="9a528-107">在进行任何通信之前，必须先向客户端提供服务证书。</span><span class="sxs-lookup"><span data-stu-id="9a528-107">The service certificate must be provided to the client in advance of any communication.</span></span> <span data-ttu-id="9a528-108">服务器证书可以随应用程序一起分发，也可以通过带外通信来提供。</span><span class="sxs-lookup"><span data-stu-id="9a528-108">The server certificate can be distributed with the application or provided in an out-of-band communication.</span></span>  
   
- <span data-ttu-id="a300c-109">![消息安全使用相互证书](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span><span class="sxs-lookup"><span data-stu-id="a300c-109">![Message security with mutual certificates](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span></span>  
+ <span data-ttu-id="9a528-109">![消息使用相互证书的安全](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span><span class="sxs-lookup"><span data-stu-id="9a528-109">![Message security with mutual certificates](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span></span>  
   
-|<span data-ttu-id="a300c-110">特征</span><span class="sxs-lookup"><span data-stu-id="a300c-110">Characteristic</span></span>|<span data-ttu-id="a300c-111">描述</span><span class="sxs-lookup"><span data-stu-id="a300c-111">Description</span></span>|  
+|<span data-ttu-id="9a528-110">特征</span><span class="sxs-lookup"><span data-stu-id="9a528-110">Characteristic</span></span>|<span data-ttu-id="9a528-111">描述</span><span class="sxs-lookup"><span data-stu-id="9a528-111">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="a300c-112">安全模式</span><span class="sxs-lookup"><span data-stu-id="a300c-112">Security Mode</span></span>|<span data-ttu-id="a300c-113">消息</span><span class="sxs-lookup"><span data-stu-id="a300c-113">Message</span></span>|  
-|<span data-ttu-id="a300c-114">互操作性</span><span class="sxs-lookup"><span data-stu-id="a300c-114">Interoperability</span></span>|<span data-ttu-id="a300c-115">是，使用 WS-Security 和 X.509 证书令牌配置文件兼容的客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="a300c-115">Yes, with WS-Security and X.509 certificate token profile compatible clients and services.</span></span>|  
-|<span data-ttu-id="a300c-116">身份验证</span><span class="sxs-lookup"><span data-stu-id="a300c-116">Authentication</span></span>|<span data-ttu-id="a300c-117">服务器和客户端的相互身份验证。</span><span class="sxs-lookup"><span data-stu-id="a300c-117">Mutual authentication of the server and client.</span></span>|  
-|<span data-ttu-id="a300c-118">完整性</span><span class="sxs-lookup"><span data-stu-id="a300c-118">Integrity</span></span>|<span data-ttu-id="a300c-119">是</span><span class="sxs-lookup"><span data-stu-id="a300c-119">Yes</span></span>|  
-|<span data-ttu-id="a300c-120">保密性</span><span class="sxs-lookup"><span data-stu-id="a300c-120">Confidentiality</span></span>|<span data-ttu-id="a300c-121">是</span><span class="sxs-lookup"><span data-stu-id="a300c-121">Yes</span></span>|  
-|<span data-ttu-id="a300c-122">传输</span><span class="sxs-lookup"><span data-stu-id="a300c-122">Transport</span></span>|<span data-ttu-id="a300c-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="a300c-123">HTTP</span></span>|  
-|<span data-ttu-id="a300c-124">绑定</span><span class="sxs-lookup"><span data-stu-id="a300c-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="9a528-112">安全模式</span><span class="sxs-lookup"><span data-stu-id="9a528-112">Security Mode</span></span>|<span data-ttu-id="9a528-113">消息</span><span class="sxs-lookup"><span data-stu-id="9a528-113">Message</span></span>|  
+|<span data-ttu-id="9a528-114">互操作性</span><span class="sxs-lookup"><span data-stu-id="9a528-114">Interoperability</span></span>|<span data-ttu-id="9a528-115">是，使用 WS-Security 和 X.509 证书令牌配置文件兼容的客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="9a528-115">Yes, with WS-Security and X.509 certificate token profile compatible clients and services.</span></span>|  
+|<span data-ttu-id="9a528-116">身份验证</span><span class="sxs-lookup"><span data-stu-id="9a528-116">Authentication</span></span>|<span data-ttu-id="9a528-117">服务器和客户端的相互身份验证。</span><span class="sxs-lookup"><span data-stu-id="9a528-117">Mutual authentication of the server and client.</span></span>|  
+|<span data-ttu-id="9a528-118">完整性</span><span class="sxs-lookup"><span data-stu-id="9a528-118">Integrity</span></span>|<span data-ttu-id="9a528-119">是</span><span class="sxs-lookup"><span data-stu-id="9a528-119">Yes</span></span>|  
+|<span data-ttu-id="9a528-120">保密性</span><span class="sxs-lookup"><span data-stu-id="9a528-120">Confidentiality</span></span>|<span data-ttu-id="9a528-121">是</span><span class="sxs-lookup"><span data-stu-id="9a528-121">Yes</span></span>|  
+|<span data-ttu-id="9a528-122">传输</span><span class="sxs-lookup"><span data-stu-id="9a528-122">Transport</span></span>|<span data-ttu-id="9a528-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="9a528-123">HTTP</span></span>|  
+|<span data-ttu-id="9a528-124">绑定</span><span class="sxs-lookup"><span data-stu-id="9a528-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="a300c-125">服务</span><span class="sxs-lookup"><span data-stu-id="a300c-125">Service</span></span>  
- <span data-ttu-id="a300c-126">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="a300c-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="a300c-127">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="a300c-127">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="9a528-125">服务</span><span class="sxs-lookup"><span data-stu-id="9a528-125">Service</span></span>  
+ <span data-ttu-id="9a528-126">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="9a528-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="9a528-127">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="9a528-127">Do one of the following:</span></span>  
   
--   <span data-ttu-id="a300c-128">使用代码（而不使用配置）创建独立服务。</span><span class="sxs-lookup"><span data-stu-id="a300c-128">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="9a528-128">使用代码（而不使用配置）创建独立服务。</span><span class="sxs-lookup"><span data-stu-id="9a528-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="a300c-129">使用提供的配置创建服务，但不定义任何终结点。</span><span class="sxs-lookup"><span data-stu-id="a300c-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="9a528-129">使用提供的配置创建服务，但不定义任何终结点。</span><span class="sxs-lookup"><span data-stu-id="9a528-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="a300c-130">代码</span><span class="sxs-lookup"><span data-stu-id="a300c-130">Code</span></span>  
- <span data-ttu-id="a300c-131">下面的代码演示如何创建使用消息安全的服务终结点。</span><span class="sxs-lookup"><span data-stu-id="a300c-131">The following code shows creates a service endpoint that uses message security.</span></span> <span data-ttu-id="a300c-132">服务请求一个证书来使自己通过身份验证。</span><span class="sxs-lookup"><span data-stu-id="a300c-132">The service requires a certificate to authenticate itself.</span></span>  
+### <a name="code"></a><span data-ttu-id="9a528-130">代码</span><span class="sxs-lookup"><span data-stu-id="9a528-130">Code</span></span>  
+ <span data-ttu-id="9a528-131">下面的代码演示如何创建使用消息安全的服务终结点。</span><span class="sxs-lookup"><span data-stu-id="9a528-131">The following code shows creates a service endpoint that uses message security.</span></span> <span data-ttu-id="9a528-132">服务请求一个证书来使自己通过身份验证。</span><span class="sxs-lookup"><span data-stu-id="9a528-132">The service requires a certificate to authenticate itself.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### <a name="configuration"></a><span data-ttu-id="a300c-133">配置</span><span class="sxs-lookup"><span data-stu-id="a300c-133">Configuration</span></span>  
- <span data-ttu-id="a300c-134">可以使用下面的配置，而不使用代码来创建同样的服务。</span><span class="sxs-lookup"><span data-stu-id="a300c-134">The following configuration can be used instead of the code to create the same service.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="9a528-133">配置</span><span class="sxs-lookup"><span data-stu-id="9a528-133">Configuration</span></span>  
+ <span data-ttu-id="9a528-134">可以使用下面的配置，而不使用代码来创建同样的服务。</span><span class="sxs-lookup"><span data-stu-id="9a528-134">The following configuration can be used instead of the code to create the same service.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -92,24 +92,24 @@ ms.locfileid: "33494171"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="a300c-135">客户端</span><span class="sxs-lookup"><span data-stu-id="a300c-135">Client</span></span>  
- <span data-ttu-id="a300c-136">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="a300c-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="a300c-137">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="a300c-137">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="9a528-135">客户端</span><span class="sxs-lookup"><span data-stu-id="9a528-135">Client</span></span>  
+ <span data-ttu-id="9a528-136">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="9a528-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="9a528-137">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="9a528-137">Do one of the following:</span></span>  
   
--   <span data-ttu-id="a300c-138">使用代码（和客户端代码）创建独立客户端。</span><span class="sxs-lookup"><span data-stu-id="a300c-138">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="9a528-138">使用代码（和客户端代码）创建独立客户端。</span><span class="sxs-lookup"><span data-stu-id="9a528-138">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="a300c-139">创建不定义任何终结点地址的客户端。</span><span class="sxs-lookup"><span data-stu-id="a300c-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="a300c-140">而使用将配置名称作为参数的客户端构造函数。</span><span class="sxs-lookup"><span data-stu-id="a300c-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="a300c-141">例如：</span><span class="sxs-lookup"><span data-stu-id="a300c-141">For example:</span></span>  
+-   <span data-ttu-id="9a528-139">创建不定义任何终结点地址的客户端。</span><span class="sxs-lookup"><span data-stu-id="9a528-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="9a528-140">而使用将配置名称作为参数的客户端构造函数。</span><span class="sxs-lookup"><span data-stu-id="9a528-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="9a528-141">例如：</span><span class="sxs-lookup"><span data-stu-id="9a528-141">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="a300c-142">代码</span><span class="sxs-lookup"><span data-stu-id="a300c-142">Code</span></span>  
- <span data-ttu-id="a300c-143">下面的代码创建客户端。</span><span class="sxs-lookup"><span data-stu-id="a300c-143">The following code creates the client.</span></span> <span data-ttu-id="a300c-144">安全模式设置为“消息”，客户端凭据类型设置为“证书”。</span><span class="sxs-lookup"><span data-stu-id="a300c-144">The security mode is set to Message, and the client credential type is set to Certificate.</span></span>  
+### <a name="code"></a><span data-ttu-id="9a528-142">代码</span><span class="sxs-lookup"><span data-stu-id="9a528-142">Code</span></span>  
+ <span data-ttu-id="9a528-143">下面的代码创建客户端。</span><span class="sxs-lookup"><span data-stu-id="9a528-143">The following code creates the client.</span></span> <span data-ttu-id="9a528-144">安全模式设置为“消息”，客户端凭据类型设置为“证书”。</span><span class="sxs-lookup"><span data-stu-id="9a528-144">The security mode is set to Message, and the client credential type is set to Certificate.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### <a name="configuration"></a><span data-ttu-id="a300c-145">配置</span><span class="sxs-lookup"><span data-stu-id="a300c-145">Configuration</span></span>  
- <span data-ttu-id="a300c-146">下面配置客户端。</span><span class="sxs-lookup"><span data-stu-id="a300c-146">The following configures the client.</span></span> <span data-ttu-id="a300c-147">必须使用指定的客户端证书[ \<t i a l >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。</span><span class="sxs-lookup"><span data-stu-id="a300c-147">A client certificate must be specified using the [\<clientCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span> <span data-ttu-id="a300c-148">此外，使用指定的服务证书[ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)。</span><span class="sxs-lookup"><span data-stu-id="a300c-148">Also, the service certificate is specified using the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span></span>  
+### <a name="configuration"></a><span data-ttu-id="9a528-145">配置</span><span class="sxs-lookup"><span data-stu-id="9a528-145">Configuration</span></span>  
+ <span data-ttu-id="9a528-146">下面配置客户端。</span><span class="sxs-lookup"><span data-stu-id="9a528-146">The following configures the client.</span></span> <span data-ttu-id="9a528-147">必须使用指定的客户端证书[ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。</span><span class="sxs-lookup"><span data-stu-id="9a528-147">A client certificate must be specified using the [\<clientCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span> <span data-ttu-id="9a528-148">此外，使用指定的服务证书[ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)。</span><span class="sxs-lookup"><span data-stu-id="9a528-148">Also, the service certificate is specified using the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -160,7 +160,7 @@ ms.locfileid: "33494171"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a300c-149">请参阅</span><span class="sxs-lookup"><span data-stu-id="a300c-149">See Also</span></span>  
- [<span data-ttu-id="a300c-150">安全性概述</span><span class="sxs-lookup"><span data-stu-id="a300c-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="a300c-151">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="a300c-151">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [<span data-ttu-id="a300c-152">如何： 创建和安装临时证书在 WCF 中实现传输安全在开发过程</span><span class="sxs-lookup"><span data-stu-id="a300c-152">How to: Create and Install Temporary Certificates in WCF for Transport Security During Development</span></span>](http://go.microsoft.com/fwlink/?LinkId=244264)
+## <a name="see-also"></a><span data-ttu-id="9a528-149">请参阅</span><span class="sxs-lookup"><span data-stu-id="9a528-149">See Also</span></span>  
+ [<span data-ttu-id="9a528-150">安全性概述</span><span class="sxs-lookup"><span data-stu-id="9a528-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="9a528-151">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="9a528-151">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [<span data-ttu-id="9a528-152">如何： 创建和安装临时证书在 WCF 中的传输安全模式在开发过程</span><span class="sxs-lookup"><span data-stu-id="9a528-152">How to: Create and Install Temporary Certificates in WCF for Transport Security During Development</span></span>](https://go.microsoft.com/fwlink/?LinkId=244264)
