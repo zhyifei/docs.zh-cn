@@ -1,116 +1,116 @@
 ---
 title: 使用可以为 null 的类型（C# 编程指南）
-ms.date: 07/20/2015
+description: 了解如何使用 C# 可以为 null 的类型
+ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600a18cc4dc9d3eda5577336f209c5814a7edb88
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336916"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933118"
 ---
-# <a name="using-nullable-types-c-programming-guide"></a><span data-ttu-id="4884d-102">使用可以为 null 的类型（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="4884d-102">Using Nullable Types (C# Programming Guide)</span></span>
-<span data-ttu-id="4884d-103">可以为 null 的类型可表示一个基础类型的所有值，还可以再表示一个 [null](../../../csharp/language-reference/keywords/null.md) 值。</span><span class="sxs-lookup"><span data-stu-id="4884d-103">Nullable types can represent all the values of an underlying type, and an additional [null](../../../csharp/language-reference/keywords/null.md) value.</span></span> <span data-ttu-id="4884d-104">可通过以下两种方式之一声明可为 null 的类型：</span><span class="sxs-lookup"><span data-stu-id="4884d-104">Nullable types are declared in one of two ways:</span></span>  
+# <a name="using-nullable-types-c-programming-guide"></a><span data-ttu-id="291a2-103">使用可以为 null 的类型（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="291a2-103">Using nullable types (C# Programming Guide)</span></span>
+
+<span data-ttu-id="291a2-104">可以为 null 的类型是表示基础值类型 `T` 的所有值的类型，还可表示一个 [NULL](../../language-reference/keywords/null.md) 值。</span><span class="sxs-lookup"><span data-stu-id="291a2-104">Nullable types are types that represent all the values of an underlying value type `T`, and an additional [null](../../language-reference/keywords/null.md) value.</span></span> <span data-ttu-id="291a2-105">有关详细信息，请参阅[可以为 null 的类型](index.md)主题。</span><span class="sxs-lookup"><span data-stu-id="291a2-105">For more information, see the [Nullable types](index.md) topic.</span></span>
+
+<span data-ttu-id="291a2-106">可使用以下任何一种形式引用可以为 null 的类型：`Nullable<T>` 或 `T?`。</span><span class="sxs-lookup"><span data-stu-id="291a2-106">You can refer to a nullable type in any of the following forms: `Nullable<T>` or `T?`.</span></span> <span data-ttu-id="291a2-107">这两种形式是可互换的。</span><span class="sxs-lookup"><span data-stu-id="291a2-107">These two forms are interchangeable.</span></span>  
   
- `System.Nullable<T> variable`  
+## <a name="declaration-and-assignment"></a><span data-ttu-id="291a2-108">声明和赋值</span><span class="sxs-lookup"><span data-stu-id="291a2-108">Declaration and assignment</span></span>
+
+<span data-ttu-id="291a2-109">由于值类型可隐式转换为相应的可以为 null 的类型，因此可像为其基础值类型赋值一样，为可以为 null 的类型赋值。</span><span class="sxs-lookup"><span data-stu-id="291a2-109">As a value type can be implicitly converted to the corresponding nullable type, you assign a value to a nullable type as you would for its underlying value type.</span></span> <span data-ttu-id="291a2-110">还可分配 `null` 值。</span><span class="sxs-lookup"><span data-stu-id="291a2-110">You also can assign the `null` value.</span></span>  <span data-ttu-id="291a2-111">例如:</span><span class="sxs-lookup"><span data-stu-id="291a2-111">For example:</span></span>
   
- <span data-ttu-id="4884d-105">或</span><span class="sxs-lookup"><span data-stu-id="4884d-105">-or-</span></span>  
+[!code-csharp[declare and assign](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#1)]
+
+## <a name="examination-of-a-nullable-type-value"></a><span data-ttu-id="291a2-112">检查可以为 null 的类型的值</span><span class="sxs-lookup"><span data-stu-id="291a2-112">Examination of a nullable type value</span></span>
+
+<span data-ttu-id="291a2-113">使用以下只读属性检查可以为 null 的类型的实例是否为 null，并检索基础类型的值：</span><span class="sxs-lookup"><span data-stu-id="291a2-113">Use the following readonly properties to examine an instance of a nullable type for null and retrieve a value of an underlying type:</span></span>  
   
- `T? variable`  
+- <span data-ttu-id="291a2-114"><xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> 指示可以为 null 的类型的实例是否具有其基础类型的值。</span><span class="sxs-lookup"><span data-stu-id="291a2-114"><xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> indicates whether an instance of a nullable type has a value of its underlying type.</span></span>
   
- <span data-ttu-id="4884d-106">`T` 是可以为 null 的类型的基础类型。</span><span class="sxs-lookup"><span data-stu-id="4884d-106">`T` is the underlying type of the nullable type.</span></span> <span data-ttu-id="4884d-107">`T` 可以是包括 `struct` 在内的任意值类型；它不能是引用类型。</span><span class="sxs-lookup"><span data-stu-id="4884d-107">`T` can be any value type including `struct`; it cannot be a reference type.</span></span>  
+- <span data-ttu-id="291a2-115">如果 <xref:System.Nullable%601.HasValue%2A> 为 `true`，则 <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 获取基础类型的值。</span><span class="sxs-lookup"><span data-stu-id="291a2-115"><xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> gets the value of an underlying type if <xref:System.Nullable%601.HasValue%2A> is `true`.</span></span> <span data-ttu-id="291a2-116">如果 <xref:System.Nullable%601.HasValue%2A> 为 `false`，则 <xref:System.Nullable%601.Value%2A> 属性将引发 <xref:System.InvalidOperationException>。</span><span class="sxs-lookup"><span data-stu-id="291a2-116">If <xref:System.Nullable%601.HasValue%2A> is `false`, the <xref:System.Nullable%601.Value%2A> property throws an <xref:System.InvalidOperationException>.</span></span>
   
- <span data-ttu-id="4884d-108">有关可为 null 的类型的使用示例，可思考一个普通布尔变量如何能够具有两个值：true 和 false。</span><span class="sxs-lookup"><span data-stu-id="4884d-108">For an example of when you might use a nullable type, consider how an ordinary Boolean variable can have two values: true and false.</span></span> <span data-ttu-id="4884d-109">没有值表示“未定义”的意思。</span><span class="sxs-lookup"><span data-stu-id="4884d-109">There is no value that signifies "undefined".</span></span> <span data-ttu-id="4884d-110">在许多编程应用程序中，尤其是数据库交互中，变量可能处于未定义的状态。</span><span class="sxs-lookup"><span data-stu-id="4884d-110">In many programming applications, most notably database interactions, variables can occur in an undefined state.</span></span> <span data-ttu-id="4884d-111">例如，数据库中的字段可能包含值 true 或 false，但它也可能根本不包含任何值。</span><span class="sxs-lookup"><span data-stu-id="4884d-111">For example, a field in a database may contain the values true or false, but it may also contain no value at all.</span></span> <span data-ttu-id="4884d-112">同样，可以将引用类型设置为 `null` 以指示它们未初始化。</span><span class="sxs-lookup"><span data-stu-id="4884d-112">Similarly, reference types can be set to `null` to indicate that they are not initialized.</span></span>  
+<span data-ttu-id="291a2-117">以下示例中的代码使用 `HasValue` 属性在显示值之前测试变量是否包含该值：</span><span class="sxs-lookup"><span data-stu-id="291a2-117">The code in the following example uses the `HasValue` property to test whether the variable contains a value before displaying it:</span></span>
   
- <span data-ttu-id="4884d-113">这种不一致可能会导致额外的编程工作，包括使用更多变量来存储状态信息以及使用特殊值等。</span><span class="sxs-lookup"><span data-stu-id="4884d-113">This disparity can create extra programming work, with additional variables used to store state information, the use of special values, and so on.</span></span> <span data-ttu-id="4884d-114">通过使用可为 null 的类型修饰符，C# 能够创建指示未定义值的值类型变量。</span><span class="sxs-lookup"><span data-stu-id="4884d-114">The nullable type modifier enables C# to create value-type variables that indicate an undefined value.</span></span>  
+[!code-csharp-interactive[use HasValue](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#2)]
   
-## <a name="examples-of-nullable-types"></a><span data-ttu-id="4884d-115">可为 null 的类型的示例</span><span class="sxs-lookup"><span data-stu-id="4884d-115">Examples of Nullable Types</span></span>  
- <span data-ttu-id="4884d-116">任何值类型都可用作可为 null 的类型的基础。</span><span class="sxs-lookup"><span data-stu-id="4884d-116">Any value type may be used as the basis for a nullable type.</span></span> <span data-ttu-id="4884d-117">例如:</span><span class="sxs-lookup"><span data-stu-id="4884d-117">For example:</span></span>  
+<span data-ttu-id="291a2-118">还可将可以为 null 的类型的变量与 `null` 进行比较，而不是使用 `HasValue` 属性，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="291a2-118">You also can compare a nullable type variable with `null` instead of using the `HasValue` property, as the following example shows:</span></span>  
   
- [!code-csharp[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_1.cs)]  
+[!code-csharp-interactive[use comparison with null](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#3)]
+
+<span data-ttu-id="291a2-119">从 C# 7.0 开始，可以使用[模式匹配](../../pattern-matching.md)来检查和获取可以为 null 的类型的值：</span><span class="sxs-lookup"><span data-stu-id="291a2-119">Beginning with C# 7.0, you can use [pattern matching](../../pattern-matching.md) to both examine and get a value of a nullable type:</span></span>
+
+[!code-csharp-interactive[use pattern matching](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#4)]
+
+## <a name="conversion-from-a-nullable-type-to-an-underlying-type"></a><span data-ttu-id="291a2-120">从可以为 null 的类型转换为基础类型</span><span class="sxs-lookup"><span data-stu-id="291a2-120">Conversion from a nullable type to an underlying type</span></span>
+
+<span data-ttu-id="291a2-121">如果需要将可以为 null 的类型的值分配给不可以为 null 的类型，请使用 [null-coalescing 运算符`??`](../../language-reference/operators/null-coalescing-operator.md)指定可以为 null 的类型的值为 null 时要分配的值（也可使用 <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> 方法来执行此操作）：</span><span class="sxs-lookup"><span data-stu-id="291a2-121">If you need to assign a nullable type value to a non-nullable type, use the [null-coalescing operator `??`](../../language-reference/operators/null-coalescing-operator.md) to specify the value to be assigned if a nullable type value is null (you also can use the <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> method to do that):</span></span>
   
-## <a name="the-members-of-nullable-types"></a><span data-ttu-id="4884d-118">可为 null 的类型的成员</span><span class="sxs-lookup"><span data-stu-id="4884d-118">The Members of Nullable Types</span></span>  
- <span data-ttu-id="4884d-119">可以为 null 的类型的每个实例都有两个公共只读属性：</span><span class="sxs-lookup"><span data-stu-id="4884d-119">Each instance of a nullable type has two public read-only properties:</span></span>  
+[!code-csharp-interactive[?? operator](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#5)]
+
+<span data-ttu-id="291a2-122">如果可以为 null 的类型的值为 null 时要使用的值应为基础值类型的默认值，请使用 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="291a2-122">Use the <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> method if the value to be used when a nullable type value is null should be the default value of the underlying value type.</span></span>
   
--   `HasValue`  
+<span data-ttu-id="291a2-123">可显式地将可以为 null 的类型强制转换为不可以为 null 的类型。</span><span class="sxs-lookup"><span data-stu-id="291a2-123">You can explicitly cast a nullable type to a non-nullable type.</span></span> <span data-ttu-id="291a2-124">例如:</span><span class="sxs-lookup"><span data-stu-id="291a2-124">For example:</span></span>  
   
-     <span data-ttu-id="4884d-120">`HasValue` 的类型为 `bool`。</span><span class="sxs-lookup"><span data-stu-id="4884d-120">`HasValue` is of type `bool`.</span></span> <span data-ttu-id="4884d-121">如果该变量包含非 null 值，则将其设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="4884d-121">It is set to `true` when the variable contains a non-null value.</span></span>  
+[!code-csharp[explicit cast](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#6)]
+
+<span data-ttu-id="291a2-125">在运行时，如果可以为 null 的类型的值为 null，则显式强制转换将引发 <xref:System.InvalidOperationException>。</span><span class="sxs-lookup"><span data-stu-id="291a2-125">At run time, if the value of a nullable type is null, the explicit cast throws an <xref:System.InvalidOperationException>.</span></span>
+
+<span data-ttu-id="291a2-126">不可以为 null 的值类型隐式转换为相应的可以为 null 的类型。</span><span class="sxs-lookup"><span data-stu-id="291a2-126">A non-nullable value type is implicitly converted to the corresponding nullable type.</span></span>
   
--   `Value`  
+## <a name="operators"></a><span data-ttu-id="291a2-127">运算符</span><span class="sxs-lookup"><span data-stu-id="291a2-127">Operators</span></span>
+
+<span data-ttu-id="291a2-128">可为 null 的类型还可使用预定义的一元运算符和二元运算符以及任何用于值类型的用户定义的运算符。</span><span class="sxs-lookup"><span data-stu-id="291a2-128">The predefined unary and binary operators and any user-defined operators that exist for value types may also be used by nullable types.</span></span> <span data-ttu-id="291a2-129">如果一个或两个操作数为 null，则这些运算符将生成一个 null 值；否则，运算符使用所包含的值来计算结果。</span><span class="sxs-lookup"><span data-stu-id="291a2-129">These operators produce a null value if one or both operands are null; otherwise, the operator uses the contained values to calculate the result.</span></span> <span data-ttu-id="291a2-130">例如:</span><span class="sxs-lookup"><span data-stu-id="291a2-130">For example:</span></span>  
   
-     <span data-ttu-id="4884d-122">`Value` 的类型与基础类型相同。</span><span class="sxs-lookup"><span data-stu-id="4884d-122">`Value` is of the same type as the underlying type.</span></span> <span data-ttu-id="4884d-123">如果 `HasValue` 为 `true`，则 `Value` 包含有意义的值。</span><span class="sxs-lookup"><span data-stu-id="4884d-123">If `HasValue` is `true`, `Value` contains a meaningful value.</span></span> <span data-ttu-id="4884d-124">如果 `HasValue` 是 `false`，则访问 `Value` 将引发 <xref:System.InvalidOperationException>。</span><span class="sxs-lookup"><span data-stu-id="4884d-124">If `HasValue` is `false`, accessing `Value` will throw a <xref:System.InvalidOperationException>.</span></span>  
+[!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
   
- <span data-ttu-id="4884d-125">在此示例中，`HasValue` 成员用于在显示变量之前测试变量是否包含值。</span><span class="sxs-lookup"><span data-stu-id="4884d-125">In this example, the `HasValue` member is used to test whether the variable contains a value before it tries to display it.</span></span>  
+<span data-ttu-id="291a2-131">对于关系运算符（`<`、`>`、`<=`、`>=`），如果一个或两个操作数为 null，则结果为 `false`。</span><span class="sxs-lookup"><span data-stu-id="291a2-131">For the relational operators (`<`, `>`, `<=`, `>=`), if one or both operands are null, the result is `false`.</span></span> <span data-ttu-id="291a2-132">请勿作出如下假定：由于某个特定的比较（例如 `<=`）返回 `false`，则相反的比较 (`>`) 返回 `true`。</span><span class="sxs-lookup"><span data-stu-id="291a2-132">Do not assume that because a particular comparison (for example, `<=`) returns `false`, the opposite comparison (`>`) returns `true`.</span></span> <span data-ttu-id="291a2-133">以下示例显示 10</span><span class="sxs-lookup"><span data-stu-id="291a2-133">The following example shows that 10 is</span></span>
+
+- <span data-ttu-id="291a2-134">既不大于等于 null，</span><span class="sxs-lookup"><span data-stu-id="291a2-134">neither greater than or equal to null,</span></span>
+- <span data-ttu-id="291a2-135">也不小于 null。</span><span class="sxs-lookup"><span data-stu-id="291a2-135">nor less than null.</span></span>
   
- [!code-csharp[csProgGuideTypes#5](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_2.cs)]  
+[!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
- <span data-ttu-id="4884d-126">也可按以下示例所示进行值测试：</span><span class="sxs-lookup"><span data-stu-id="4884d-126">Testing for a value can also be done as in the following example:</span></span>  
+<span data-ttu-id="291a2-136">以上示例还表明，对两个均为 null 的可以为 null 的类型进行相等比较，其计算结果为 `true`。</span><span class="sxs-lookup"><span data-stu-id="291a2-136">The above example also shows that an equality comparison of two nullable types that are both null evaluates to `true`.</span></span>
+
+## <a name="boxing-and-unboxing"></a><span data-ttu-id="291a2-137">装箱和取消装箱</span><span class="sxs-lookup"><span data-stu-id="291a2-137">Boxing and unboxing</span></span>
+
+<span data-ttu-id="291a2-138">可通过以下规则将可以为 null 的值类型[装箱](../types/boxing-and-unboxing.md)：</span><span class="sxs-lookup"><span data-stu-id="291a2-138">A nullable value type is [boxed](../types/boxing-and-unboxing.md) by the following rules:</span></span>
+
+- <span data-ttu-id="291a2-139">如果 <xref:System.Nullable%601.HasValue%2A> 返回 `false`，则生成空引用。</span><span class="sxs-lookup"><span data-stu-id="291a2-139">If <xref:System.Nullable%601.HasValue%2A> returns `false`, the null reference is produced.</span></span>  
+- <span data-ttu-id="291a2-140">如果 <xref:System.Nullable%601.HasValue%2A> 返回 `true`，则基础值类型 `T` 的值将装箱，而不对 <xref:System.Nullable%601> 的实例进行装箱。</span><span class="sxs-lookup"><span data-stu-id="291a2-140">If <xref:System.Nullable%601.HasValue%2A> returns `true`, a value of the underlying value type `T` is boxed, not the instance of <xref:System.Nullable%601>.</span></span>
+
+<span data-ttu-id="291a2-141">可将已装箱的值类型取消装箱到相应的可以为 null 的类型，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="291a2-141">You can unbox the boxed value type to the corresponding nullable type, as the following example shows:</span></span>
+
+[!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
+
+## <a name="the-bool-type"></a><span data-ttu-id="291a2-142">bool? 类型</span><span class="sxs-lookup"><span data-stu-id="291a2-142">The bool? type</span></span>
+
+<span data-ttu-id="291a2-143">可以为 null 的类型 `bool?` 可包含三个不同的值：[true](../../language-reference/keywords/true-literal.md)、[false](../../language-reference/keywords/false-literal.md) 和 [null](../../language-reference/keywords/null.md)。</span><span class="sxs-lookup"><span data-stu-id="291a2-143">The `bool?` nullable type can contain three different values: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) and [null](../../language-reference/keywords/null.md).</span></span> <span data-ttu-id="291a2-144">`bool?` 类型类似于在 SQL 中使用的布尔变量类型。</span><span class="sxs-lookup"><span data-stu-id="291a2-144">The `bool?` type is like the Boolean variable type that is used in SQL.</span></span> <span data-ttu-id="291a2-145">为确保 `&` 和 `|` 运算符产生的结果与 SQL 中具有三个值的布尔值类型一致，在此提供以下预定义运算符：</span><span class="sxs-lookup"><span data-stu-id="291a2-145">To ensure that the results produced by the `&` and `|` operators are consistent with the three-valued Boolean type in SQL, the following predefined operators are provided:</span></span>
+
+- `bool? operator &(bool? x, bool? y)`  
+- `bool? operator |(bool? x, bool? y)`  
   
- [!code-csharp[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_3.cs)]  
+<span data-ttu-id="291a2-146">由下表定义这些运算符的语义：</span><span class="sxs-lookup"><span data-stu-id="291a2-146">The semantics of these operators is defined by the following table:</span></span>  
   
-## <a name="explicit-conversions"></a><span data-ttu-id="4884d-127">显式转换</span><span class="sxs-lookup"><span data-stu-id="4884d-127">Explicit Conversions</span></span>  
- <span data-ttu-id="4884d-128">可通过显式转换或使用 `Value` 属性将可为 null 的类型转换为常规类型。</span><span class="sxs-lookup"><span data-stu-id="4884d-128">A nullable type can be cast to a regular type, either explicitly with a cast, or by using the `Value` property.</span></span> <span data-ttu-id="4884d-129">例如:</span><span class="sxs-lookup"><span data-stu-id="4884d-129">For example:</span></span>  
-  
- [!code-csharp[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_4.cs)]  
-  
- <span data-ttu-id="4884d-130">如果定义了（用户定义的）两种数据类型之间的转换，还可将同一转换用于这些数据类型的可为 null 的版本。</span><span class="sxs-lookup"><span data-stu-id="4884d-130">If a user-defined conversion is defined between two data types, the same conversion can also be used with the nullable versions of these data types.</span></span>  
-  
-## <a name="implicit-conversions"></a><span data-ttu-id="4884d-131">隐式转换</span><span class="sxs-lookup"><span data-stu-id="4884d-131">Implicit Conversions</span></span>  
- <span data-ttu-id="4884d-132">可以使用 `null` 关键字将可为 null 的类型的变量设置为 null，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="4884d-132">A variable of nullable type can be set to null with the `null` keyword, as shown in the following example:</span></span>  
-  
- [!code-csharp[csProgGuideTypes#8](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_5.cs)]  
-  
- <span data-ttu-id="4884d-133">普通类型到可为 null 的类型的转换是隐式的。</span><span class="sxs-lookup"><span data-stu-id="4884d-133">The conversion from an ordinary type to a nullable type, is implicit.</span></span>  
-  
- [!code-csharp[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_6.cs)]  
-  
-## <a name="operators"></a><span data-ttu-id="4884d-134">运算符</span><span class="sxs-lookup"><span data-stu-id="4884d-134">Operators</span></span>  
- <span data-ttu-id="4884d-135">可为 null 的类型还可使用预定义的一元运算符和二元运算符以及任何用于值类型的用户定义的运算符。</span><span class="sxs-lookup"><span data-stu-id="4884d-135">The predefined unary and binary operators and any user-defined operators that exist for value types may also be used by nullable types.</span></span> <span data-ttu-id="4884d-136">如果操作数为 null，则这些运算符将产生一个 null 值；否则，运算符使用所包含的值来计算结果。</span><span class="sxs-lookup"><span data-stu-id="4884d-136">These operators produce a null value if the operands are null; otherwise, the operator uses the contained value to calculate the result.</span></span> <span data-ttu-id="4884d-137">例如:</span><span class="sxs-lookup"><span data-stu-id="4884d-137">For example:</span></span>  
-  
- [!code-csharp[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_7.cs)]  
-  
- <span data-ttu-id="4884d-138">将可为 null 的类型进行比较时，如果其中一个可以为 null 的类型的值为 null，而另一个为非 null，则除 `!=`（不等于）外，所有比较的计算结果均为 `false`。</span><span class="sxs-lookup"><span data-stu-id="4884d-138">When you perform comparisons with nullable types, if the value of one of the nullable types is null and the other is not, all comparisons evaluate to `false` except for `!=` (not equal).</span></span> <span data-ttu-id="4884d-139">请勿假定由于某个特定的比较返回 `false`，则相反的情况下便会返回 `true`。</span><span class="sxs-lookup"><span data-stu-id="4884d-139">It is important not to assume that because a particular comparison returns `false`, the opposite case returns `true`.</span></span> <span data-ttu-id="4884d-140">在下面的示例中，10 不大于、小于或等于 null。</span><span class="sxs-lookup"><span data-stu-id="4884d-140">In the following example, 10 is not greater than, less than, nor equal to null.</span></span> <span data-ttu-id="4884d-141">仅 `num1 != num2` 的计算结果为 `true`。</span><span class="sxs-lookup"><span data-stu-id="4884d-141">Only `num1 != num2` evaluates to `true`.</span></span>  
-  
- [!code-csharp[csProgGuideTypes#11](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_8.cs)]  
-  
- <span data-ttu-id="4884d-142">对两个均为 null 的可为 null 的类型进行相等比较，其计算结果为 `true`。</span><span class="sxs-lookup"><span data-stu-id="4884d-142">An equality comparison of two nullable types that are both null evaluates to `true`.</span></span>  
-  
-## <a name="the--operator"></a><span data-ttu-id="4884d-143">??</span><span class="sxs-lookup"><span data-stu-id="4884d-143">The ??</span></span> <span data-ttu-id="4884d-144">运算符</span><span class="sxs-lookup"><span data-stu-id="4884d-144">Operator</span></span>  
- <span data-ttu-id="4884d-145">`??` 运算符定义一个默认值，若将一个可为 null 的类型赋给不可为 null 的类型，则会返回该值。</span><span class="sxs-lookup"><span data-stu-id="4884d-145">The `??` operator defines a default value that is returned when a nullable type is assigned to a non-nullable type.</span></span>  
-  
- [!code-csharp[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_9.cs)]  
-  
- <span data-ttu-id="4884d-146">此运算符还可与多个可为 null 的类型一起使用。</span><span class="sxs-lookup"><span data-stu-id="4884d-146">This operator can also be used with multiple nullable types.</span></span> <span data-ttu-id="4884d-147">例如:</span><span class="sxs-lookup"><span data-stu-id="4884d-147">For example:</span></span>  
-  
- [!code-csharp[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_10.cs)]  
-  
-## <a name="the-bool-type"></a><span data-ttu-id="4884d-148">bool? 类型</span><span class="sxs-lookup"><span data-stu-id="4884d-148">The bool? type</span></span>  
- <span data-ttu-id="4884d-149">可以为 null 的类型 `bool?` 可包含三个不同的值：[true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 和 [null](../../../csharp/language-reference/keywords/null.md)。</span><span class="sxs-lookup"><span data-stu-id="4884d-149">The `bool?` nullable type can contain three different values: [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) and [null](../../../csharp/language-reference/keywords/null.md).</span></span> <span data-ttu-id="4884d-150">若要了解如何将 bool? 转换为 bool，请参阅[如何：安全地将 bool? 转换为 bool](../../../csharp/programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md)。</span><span class="sxs-lookup"><span data-stu-id="4884d-150">For information about how to cast from a bool? to a bool, see [How to: Safely Cast from bool? to bool](../../../csharp/programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md).</span></span>  
-  
- <span data-ttu-id="4884d-151">可为 null 的布尔值类似于在 SQL 中使用的布尔值变量类型。</span><span class="sxs-lookup"><span data-stu-id="4884d-151">Nullable Booleans are like the Boolean variable type that is used in SQL.</span></span> <span data-ttu-id="4884d-152">为确保 `&` 和 `|` 运算符产生的结果与 SQL 中具有三个值的布尔值类型一致，在此提供以下预定义运算符：</span><span class="sxs-lookup"><span data-stu-id="4884d-152">To ensure that the results produced by the `&` and `|` operators are consistent with the three-valued Boolean type in SQL, the following predefined operators are provided:</span></span>  
-  
- `bool? operator &(bool? x, bool? y)`  
-  
- `bool? operator |(bool? x, bool? y)`  
-  
- <span data-ttu-id="4884d-153">下表列出了这些运算符的结果：</span><span class="sxs-lookup"><span data-stu-id="4884d-153">The results of these operators are listed in the following table:</span></span>  
-  
-|<span data-ttu-id="4884d-154">X</span><span class="sxs-lookup"><span data-stu-id="4884d-154">X</span></span>|<span data-ttu-id="4884d-155">y</span><span class="sxs-lookup"><span data-stu-id="4884d-155">y</span></span>|<span data-ttu-id="4884d-156">x 和 y</span><span class="sxs-lookup"><span data-stu-id="4884d-156">x&y</span></span>|<span data-ttu-id="4884d-157">x&#124;y</span><span class="sxs-lookup"><span data-stu-id="4884d-157">x&#124;y</span></span>|  
+|<span data-ttu-id="291a2-147">x</span><span class="sxs-lookup"><span data-stu-id="291a2-147">x</span></span>|<span data-ttu-id="291a2-148">y</span><span class="sxs-lookup"><span data-stu-id="291a2-148">y</span></span>|<span data-ttu-id="291a2-149">x 和 y</span><span class="sxs-lookup"><span data-stu-id="291a2-149">x&y</span></span>|<span data-ttu-id="291a2-150">x&#124;y</span><span class="sxs-lookup"><span data-stu-id="291a2-150">x&#124;y</span></span>|  
 |-------|-------|---------|--------------|  
-|<span data-ttu-id="4884d-158">true</span><span class="sxs-lookup"><span data-stu-id="4884d-158">true</span></span>|<span data-ttu-id="4884d-159">true</span><span class="sxs-lookup"><span data-stu-id="4884d-159">true</span></span>|<span data-ttu-id="4884d-160">true</span><span class="sxs-lookup"><span data-stu-id="4884d-160">true</span></span>|<span data-ttu-id="4884d-161">true</span><span class="sxs-lookup"><span data-stu-id="4884d-161">true</span></span>|  
-|<span data-ttu-id="4884d-162">true</span><span class="sxs-lookup"><span data-stu-id="4884d-162">true</span></span>|<span data-ttu-id="4884d-163">False</span><span class="sxs-lookup"><span data-stu-id="4884d-163">false</span></span>|<span data-ttu-id="4884d-164">false</span><span class="sxs-lookup"><span data-stu-id="4884d-164">false</span></span>|<span data-ttu-id="4884d-165">true</span><span class="sxs-lookup"><span data-stu-id="4884d-165">true</span></span>|  
-|<span data-ttu-id="4884d-166">true</span><span class="sxs-lookup"><span data-stu-id="4884d-166">true</span></span>|<span data-ttu-id="4884d-167">null</span><span class="sxs-lookup"><span data-stu-id="4884d-167">null</span></span>|<span data-ttu-id="4884d-168">null</span><span class="sxs-lookup"><span data-stu-id="4884d-168">null</span></span>|<span data-ttu-id="4884d-169">true</span><span class="sxs-lookup"><span data-stu-id="4884d-169">true</span></span>|  
-|<span data-ttu-id="4884d-170">False</span><span class="sxs-lookup"><span data-stu-id="4884d-170">false</span></span>|<span data-ttu-id="4884d-171">true</span><span class="sxs-lookup"><span data-stu-id="4884d-171">true</span></span>|<span data-ttu-id="4884d-172">False</span><span class="sxs-lookup"><span data-stu-id="4884d-172">false</span></span>|<span data-ttu-id="4884d-173">true</span><span class="sxs-lookup"><span data-stu-id="4884d-173">true</span></span>|  
-|<span data-ttu-id="4884d-174">False</span><span class="sxs-lookup"><span data-stu-id="4884d-174">false</span></span>|<span data-ttu-id="4884d-175">False</span><span class="sxs-lookup"><span data-stu-id="4884d-175">false</span></span>|<span data-ttu-id="4884d-176">False</span><span class="sxs-lookup"><span data-stu-id="4884d-176">false</span></span>|<span data-ttu-id="4884d-177">False</span><span class="sxs-lookup"><span data-stu-id="4884d-177">false</span></span>|  
-|<span data-ttu-id="4884d-178">False</span><span class="sxs-lookup"><span data-stu-id="4884d-178">false</span></span>|<span data-ttu-id="4884d-179">null</span><span class="sxs-lookup"><span data-stu-id="4884d-179">null</span></span>|<span data-ttu-id="4884d-180">False</span><span class="sxs-lookup"><span data-stu-id="4884d-180">false</span></span>|<span data-ttu-id="4884d-181">null</span><span class="sxs-lookup"><span data-stu-id="4884d-181">null</span></span>|  
-|<span data-ttu-id="4884d-182">null</span><span class="sxs-lookup"><span data-stu-id="4884d-182">null</span></span>|<span data-ttu-id="4884d-183">true</span><span class="sxs-lookup"><span data-stu-id="4884d-183">true</span></span>|<span data-ttu-id="4884d-184">null</span><span class="sxs-lookup"><span data-stu-id="4884d-184">null</span></span>|<span data-ttu-id="4884d-185">true</span><span class="sxs-lookup"><span data-stu-id="4884d-185">true</span></span>|  
-|<span data-ttu-id="4884d-186">null</span><span class="sxs-lookup"><span data-stu-id="4884d-186">null</span></span>|<span data-ttu-id="4884d-187">False</span><span class="sxs-lookup"><span data-stu-id="4884d-187">false</span></span>|<span data-ttu-id="4884d-188">False</span><span class="sxs-lookup"><span data-stu-id="4884d-188">false</span></span>|<span data-ttu-id="4884d-189">null</span><span class="sxs-lookup"><span data-stu-id="4884d-189">null</span></span>|  
-|<span data-ttu-id="4884d-190">null</span><span class="sxs-lookup"><span data-stu-id="4884d-190">null</span></span>|<span data-ttu-id="4884d-191">null</span><span class="sxs-lookup"><span data-stu-id="4884d-191">null</span></span>|<span data-ttu-id="4884d-192">null</span><span class="sxs-lookup"><span data-stu-id="4884d-192">null</span></span>|<span data-ttu-id="4884d-193">null</span><span class="sxs-lookup"><span data-stu-id="4884d-193">null</span></span>|  
+|<span data-ttu-id="291a2-151">true</span><span class="sxs-lookup"><span data-stu-id="291a2-151">true</span></span>|<span data-ttu-id="291a2-152">true</span><span class="sxs-lookup"><span data-stu-id="291a2-152">true</span></span>|<span data-ttu-id="291a2-153">true</span><span class="sxs-lookup"><span data-stu-id="291a2-153">true</span></span>|<span data-ttu-id="291a2-154">true</span><span class="sxs-lookup"><span data-stu-id="291a2-154">true</span></span>|  
+|<span data-ttu-id="291a2-155">true</span><span class="sxs-lookup"><span data-stu-id="291a2-155">true</span></span>|<span data-ttu-id="291a2-156">False</span><span class="sxs-lookup"><span data-stu-id="291a2-156">false</span></span>|<span data-ttu-id="291a2-157">false</span><span class="sxs-lookup"><span data-stu-id="291a2-157">false</span></span>|<span data-ttu-id="291a2-158">true</span><span class="sxs-lookup"><span data-stu-id="291a2-158">true</span></span>|  
+|<span data-ttu-id="291a2-159">true</span><span class="sxs-lookup"><span data-stu-id="291a2-159">true</span></span>|<span data-ttu-id="291a2-160">null</span><span class="sxs-lookup"><span data-stu-id="291a2-160">null</span></span>|<span data-ttu-id="291a2-161">null</span><span class="sxs-lookup"><span data-stu-id="291a2-161">null</span></span>|<span data-ttu-id="291a2-162">true</span><span class="sxs-lookup"><span data-stu-id="291a2-162">true</span></span>|  
+|<span data-ttu-id="291a2-163">False</span><span class="sxs-lookup"><span data-stu-id="291a2-163">false</span></span>|<span data-ttu-id="291a2-164">true</span><span class="sxs-lookup"><span data-stu-id="291a2-164">true</span></span>|<span data-ttu-id="291a2-165">False</span><span class="sxs-lookup"><span data-stu-id="291a2-165">false</span></span>|<span data-ttu-id="291a2-166">true</span><span class="sxs-lookup"><span data-stu-id="291a2-166">true</span></span>|  
+|<span data-ttu-id="291a2-167">False</span><span class="sxs-lookup"><span data-stu-id="291a2-167">false</span></span>|<span data-ttu-id="291a2-168">False</span><span class="sxs-lookup"><span data-stu-id="291a2-168">false</span></span>|<span data-ttu-id="291a2-169">False</span><span class="sxs-lookup"><span data-stu-id="291a2-169">false</span></span>|<span data-ttu-id="291a2-170">False</span><span class="sxs-lookup"><span data-stu-id="291a2-170">false</span></span>|  
+|<span data-ttu-id="291a2-171">False</span><span class="sxs-lookup"><span data-stu-id="291a2-171">false</span></span>|<span data-ttu-id="291a2-172">null</span><span class="sxs-lookup"><span data-stu-id="291a2-172">null</span></span>|<span data-ttu-id="291a2-173">False</span><span class="sxs-lookup"><span data-stu-id="291a2-173">false</span></span>|<span data-ttu-id="291a2-174">null</span><span class="sxs-lookup"><span data-stu-id="291a2-174">null</span></span>|  
+|<span data-ttu-id="291a2-175">null</span><span class="sxs-lookup"><span data-stu-id="291a2-175">null</span></span>|<span data-ttu-id="291a2-176">true</span><span class="sxs-lookup"><span data-stu-id="291a2-176">true</span></span>|<span data-ttu-id="291a2-177">null</span><span class="sxs-lookup"><span data-stu-id="291a2-177">null</span></span>|<span data-ttu-id="291a2-178">true</span><span class="sxs-lookup"><span data-stu-id="291a2-178">true</span></span>|  
+|<span data-ttu-id="291a2-179">null</span><span class="sxs-lookup"><span data-stu-id="291a2-179">null</span></span>|<span data-ttu-id="291a2-180">False</span><span class="sxs-lookup"><span data-stu-id="291a2-180">false</span></span>|<span data-ttu-id="291a2-181">False</span><span class="sxs-lookup"><span data-stu-id="291a2-181">false</span></span>|<span data-ttu-id="291a2-182">null</span><span class="sxs-lookup"><span data-stu-id="291a2-182">null</span></span>|  
+|<span data-ttu-id="291a2-183">null</span><span class="sxs-lookup"><span data-stu-id="291a2-183">null</span></span>|<span data-ttu-id="291a2-184">null</span><span class="sxs-lookup"><span data-stu-id="291a2-184">null</span></span>|<span data-ttu-id="291a2-185">null</span><span class="sxs-lookup"><span data-stu-id="291a2-185">null</span></span>|<span data-ttu-id="291a2-186">null</span><span class="sxs-lookup"><span data-stu-id="291a2-186">null</span></span>|  
+
+<span data-ttu-id="291a2-187">请注意，这两个运算符不遵循[运算符](#operators)部分中描述的规则：即使其中一个操作数为 null，运算符求值的结果也可以为非 null。</span><span class="sxs-lookup"><span data-stu-id="291a2-187">Note that these two operators don't follow the rules described in the [Operators](#operators) section: the result of an operator evaluation can be non-null even if one of the operands is null.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="4884d-194">请参阅</span><span class="sxs-lookup"><span data-stu-id="4884d-194">See Also</span></span>  
- [<span data-ttu-id="4884d-195">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="4884d-195">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="4884d-196">可以为 null 的类型</span><span class="sxs-lookup"><span data-stu-id="4884d-196">Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/index.md)  
- [<span data-ttu-id="4884d-197">装箱可以为 null 的类型</span><span class="sxs-lookup"><span data-stu-id="4884d-197">Boxing Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
- [<span data-ttu-id="4884d-198">可以为 null 的值类型</span><span class="sxs-lookup"><span data-stu-id="4884d-198">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a><span data-ttu-id="291a2-188">请参阅</span><span class="sxs-lookup"><span data-stu-id="291a2-188">See also</span></span>
+
+ [<span data-ttu-id="291a2-189">可以为 null 的类型</span><span class="sxs-lookup"><span data-stu-id="291a2-189">Nullable types</span></span>](index.md)  
+ [<span data-ttu-id="291a2-190">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="291a2-190">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+ [<span data-ttu-id="291a2-191">“提升”的准确含义是什么？</span><span class="sxs-lookup"><span data-stu-id="291a2-191">What exactly does 'lifted' mean?</span></span>](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  

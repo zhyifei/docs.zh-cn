@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: c56458e0100c23450655e48b2abfb346e18e0bb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59ca63d5089e377627a9116f24f9a0a1681bb4b2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268178"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932672"
 ---
-# <a name="warning-c-reference"></a><span data-ttu-id="3b74d-102">#warning（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="3b74d-102">#warning (C# Reference)</span></span>
-<span data-ttu-id="3b74d-103">`#warning` 可从代码中的特定位置生成一个级别的警告。</span><span class="sxs-lookup"><span data-stu-id="3b74d-103">`#warning` lets you generate a level one warning from a specific location in your code.</span></span> <span data-ttu-id="3b74d-104">例如:</span><span class="sxs-lookup"><span data-stu-id="3b74d-104">For example:</span></span>  
+# <a name="warning-c-reference"></a><span data-ttu-id="948c3-102">#warning（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="948c3-102">#warning (C# Reference)</span></span>
+<span data-ttu-id="948c3-103">`#warning` 允许你从代码中的特定位置生成 [ CS1030](../../misc/cs1030.md) 第一级编译器警告。</span><span class="sxs-lookup"><span data-stu-id="948c3-103">`#warning` lets you generate a [CS1030](../../misc/cs1030.md) level one compiler warning from a specific location in your code.</span></span> <span data-ttu-id="948c3-104">例如:</span><span class="sxs-lookup"><span data-stu-id="948c3-104">For example:</span></span>  
   
 ```csharp
 #warning Deprecated code in this method.  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="3b74d-105">备注</span><span class="sxs-lookup"><span data-stu-id="3b74d-105">Remarks</span></span>  
- <span data-ttu-id="3b74d-106">`#warning` 常用于条件指令中。</span><span class="sxs-lookup"><span data-stu-id="3b74d-106">A common use of `#warning` is in a conditional directive.</span></span> <span data-ttu-id="3b74d-107">还可使用 [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md) 生成用户定义错误。</span><span class="sxs-lookup"><span data-stu-id="3b74d-107">It is also possible to generate a user-defined error with [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="948c3-105">备注</span><span class="sxs-lookup"><span data-stu-id="948c3-105">Remarks</span></span>
+ <span data-ttu-id="948c3-106">`#warning` 常用于条件指令中。</span><span class="sxs-lookup"><span data-stu-id="948c3-106">A common use of `#warning` is in a conditional directive.</span></span> <span data-ttu-id="948c3-107">还可使用 [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md) 生成用户定义错误。</span><span class="sxs-lookup"><span data-stu-id="948c3-107">It is also possible to generate a user-defined error with [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3b74d-108">示例</span><span class="sxs-lookup"><span data-stu-id="3b74d-108">Example</span></span>  
-  
+## <a name="example"></a><span data-ttu-id="948c3-108">示例</span><span class="sxs-lookup"><span data-stu-id="948c3-108">Example</span></span>  
+
 ```csharp
 // preprocessor_warning.cs  
 // CS1030 expected  
 #define DEBUG  
-class MainClass   
+class MainClass
 {  
-    static void Main()   
+    static void Main()
     {  
 #if DEBUG  
 #warning DEBUG is defined  
@@ -39,8 +39,9 @@ class MainClass
     }  
 }  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="3b74d-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="3b74d-109">See Also</span></span>  
- [<span data-ttu-id="3b74d-110">C# 参考</span><span class="sxs-lookup"><span data-stu-id="3b74d-110">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="3b74d-111">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="3b74d-111">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="3b74d-112">C# 预处理器指令</span><span class="sxs-lookup"><span data-stu-id="3b74d-112">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+
+## <a name="see-also"></a><span data-ttu-id="948c3-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="948c3-109">See Also</span></span>
+
+- [<span data-ttu-id="948c3-110">C# 参考</span><span class="sxs-lookup"><span data-stu-id="948c3-110">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="948c3-111">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="948c3-111">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="948c3-112">C# 预处理器指令</span><span class="sxs-lookup"><span data-stu-id="948c3-112">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
