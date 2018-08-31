@@ -5,21 +5,21 @@ helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 74fd333b97f2e5fbbee3771f6715cc36bbd12037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587405"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255197"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic 编程
 此部分将介绍在创建 Visual Basic 应用程序过程中可能想要详细了解的编程任务。  
   
 ## <a name="in-this-section"></a>本节内容  
- [访问计算机资源](../../../visual-basic/developing-apps/programming/computer-resources/computer-resources.md)  
+ [访问计算机资源](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
  所含文档介绍了如何使用 `My.Computer` 对象访问运行应用程序的计算机的相关信息，并控制计算机。  
   
- [记录来自应用程序的信息](../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)  
+ [记录来自应用程序的信息](../../../visual-basic/developing-apps/programming/log-info/index.md)  
  所含文档介绍了如何使用 `My.Application.Log` 和 `My.Log` 对象记录应用程序的信息，以及如何扩展应用程序的日志记录功能。  
   
  [访问用户数据](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "33587405"
  [访问应用程序 Web 服务](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  所含文档介绍了如何使用 `My.WebServices` 对象访问应用程序引用的 Web 服务。  
   
- [访问应用程序设置](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)  
+ [访问应用程序设置](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  所含文档介绍了如何使用 `My.Settings` 对象访问应用程序的设置。  
   
  [处理驱动器、目录和文件](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
