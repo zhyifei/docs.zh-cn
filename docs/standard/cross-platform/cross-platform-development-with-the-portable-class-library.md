@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 628c571ce645710482a29c813adb4fe1a59fd349
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933698"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400177"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>使用可移植类库的跨平台开发
 Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速轻松地为 Microsoft 平台构建跨平台应用和库。  
@@ -25,7 +25,7 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
   
  即使是在 Visual Studio 中创建可移植类库项目并开始开发它之后，你仍然可以更改目标平台。 Visual Studio 将使用新的程序集编译你的库，这可帮助识别你需要在代码中进行的更改。  
   
- 本文讨论了 Visual Studio 中的应用开发，但 Microsoft 还提供了可用于在其他工具（如 Xamarin）中开发应用和库的可移植类库引用程序集。 可以在非 Microsoft 平台的任何基于 .NET Framework 运行时上使用这些应用和库。 有关引用程序集的详细信息，请参阅博客文章[可移植类库 (PCL) 现已在所有平台上](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx)。 若要下载该程序集，请参阅[Microsoft.NET 可移植库引用程序集](http://www.microsoft.com/download/details.aspx?id=40727)中从 Microsoft 下载中心获得。 有关如何通过 Xamarin 使用程序集的详细信息，请参阅博客文章[PCL 和.NET NuGet 库现在已为 Xamarin 启用](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx)。  
+ 本文讨论了 Visual Studio 中的应用开发，但 Microsoft 还提供了可用于在其他工具（如 Xamarin）中开发应用和库的可移植类库引用程序集。 可以在非 Microsoft 平台的任何基于 .NET Framework 运行时上使用这些应用和库。 有关引用程序集的详细信息，请参阅博客文章[可移植类库 (PCL) 现已在所有平台上](https://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx)。 若要下载该程序集，请参阅[Microsoft.NET 可移植库引用程序集](https://www.microsoft.com/download/details.aspx?id=40727)中从 Microsoft 下载中心获得。 有关如何通过 Xamarin 使用程序集的详细信息，请参阅博客文章[PCL 和.NET NuGet 库现在已为 Xamarin 启用](https://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx)。  
   
  Visual Studio 提供了帮助你使用可移植类库进行开发的模板。 根据你正在使用的 Visual Studio 版本，可用的模板和菜单可能会与本文中所述的有所不同。  
   
@@ -110,7 +110,7 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
   
  在你更改目标时，供你在开发项目时使用的 API 也将发生更改以匹配你的选择。 Visual Studio 报告因目标更改而可能导致的错误和警告。  
   
- 如果您想要评估可移植性的程序集之前在 Visual Studio 中进行更改，可以使用[.NET 可移植性分析器](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)。  
+ 如果您想要评估可移植性的程序集之前在 Visual Studio 中进行更改，可以使用[.NET 可移植性分析器](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)。  
   
  菜单选项将有所不同，具体取决于你使用的 Visual Studio 版本。  
   
@@ -224,6 +224,6 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
 ## <a name="see-also"></a>请参阅  
  [将可移植类库与 MVVM 配合使用](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
  [面向多个平台的库的应用资源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
- [.NET 可移植性分析器](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+ [.NET 可移植性分析器](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
  [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [部署](../../../docs/framework/deployment/net-framework-applications.md)

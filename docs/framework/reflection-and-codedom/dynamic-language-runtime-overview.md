@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09cd345daffa2418b33f032e8bab47c81e2a8526
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 5a4645efc9276429cbdb0812f1ca501c89ea5dbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33397281"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393762"
 ---
 # <a name="dynamic-language-runtime-overview"></a>动态语言运行时概述
 动态语言运行时 (DLR) 是一种运行时环境，可以将一组动态语言服务添加到公共语言运行时 (CLR)。 使用 DLR 可以轻松开发在 .NET Framework 上运行的动态语言，并为静态类型语言添加动态特征。  
@@ -52,7 +52,7 @@ ms.locfileid: "33397281"
   
 -   IronPython。 在 [GitHub](https://github.com/IronLanguages/ironpython2) 网站上作为开源软件提供。  
   
--   IronRuby。 在 [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) 网站上作为开源软件提供。  
+-   IronRuby。 在 [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) 网站上作为开源软件提供。  
   
 ## <a name="primary-dlr-advantages"></a>DLR 的主要优点  
  DLR 具有以下优点。  
@@ -80,7 +80,7 @@ DLR 体系结构
   
  DLR 向 CLR 添加了一组服务，以便更好地支持动态语言。 这些服务包括：  
   
--   表达式树。 DLR 使用表达式树来表示语言语义。 为此，DLR 扩展了 LINQ 表达式树，使其包含控制流、分配和其他语言建模节点。 有关详细信息，请参阅[表达式树](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)。  
+-   表达式树。 DLR 使用表达式树来表示语言语义。 为此，DLR 扩展了 LINQ 表达式树，使其包含控制流、分配和其他语言建模节点。 有关详细信息，请参阅[表达式树](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)。  
   
 -   调用站点缓存。 动态调用站点是代码中对动态对象执行 `a + b` 或 `a.b()` 等操作的位置。 DLR 会缓存 `a` 和 `b`（通常为这些对象的类型）的特征，以及有关操作的信息。 如果之前已经执行过此类操作，则 DLR 会从缓存中检索所有的必要信息，以实现快速调度。  
   
@@ -95,5 +95,5 @@ DLR 体系结构
  <xref:System.Dynamic.ExpandoObject>  
  <xref:System.Dynamic.DynamicObject>  
  [公共语言运行时](../../../docs/standard/clr.md)  
- [表达式树](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [表达式树](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
  [演练：创建和使用动态对象](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
