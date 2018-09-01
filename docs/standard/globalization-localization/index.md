@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 653a39d1e217d0478ff7c9b01c6ac146fe6b5fac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35250994"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419142"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>对 .NET 应用程序进行全球化和本地化
-开发[全球通用的应用程序](http://msdn.microsoft.com/goglobal/bb978433.aspx)（包括可本地化为一种或多种语言的应用程序）分为三步：全球化、可本地化性审核和本地化。  
+开发[全球通用的应用程序](https://msdn.microsoft.com/goglobal/bb978433.aspx)（包括可本地化为一种或多种语言的应用程序）分为三步：全球化、可本地化性审核和本地化。  
   
  [全球化](../../../docs/standard/globalization-localization/globalization.md)  
  此步骤包括设计和编码非特定区域性和非特定语言的应用程序，以及设计和编码支持所有用户的本地化用户界面和区域数据的应用程序。 它涉及做出不基于区域性特定的假设的设计和编程决策。 虽然全球化应用程序未本地化，但它经过设计和编写，因此随后可相对容易地将其本地化为一种或多种语言。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 6ef872876e800674a58b440e0e4001b86b0f8244
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b6cdffdaab508d898e7caa8c93ac0f7b1365d01
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337582"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408875"
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 接口包含[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)可以实现的一组相关功能的定义。  
@@ -91,7 +91,7 @@ ms.locfileid: "33337582"
 -   [索引器](../../../csharp/programming-guide/indexers/index.md)  
   
 ## <a name="featured-book-chapter"></a>重要章节  
- [学习 C# 3.0：掌握 C# 3.0 的基础知识](http://msdn.microsoft.com/library/orm-9780596521066-01.aspx)中的[接口](http://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx)  
+ [学习 C# 3.0：掌握 C# 3.0 的基础知识](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)中的[接口](https://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx)  
   
 ## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  

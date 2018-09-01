@@ -4,16 +4,16 @@ description: 适用于容器化 .NET 应用程序的体系结构 | 在 Linux 或
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 56c41a51cddeca6c74b09710f9536195a6a88904
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 45be99a86a52ed450b795ca5f91c01ab82c7da47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404494"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388623"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>在 Linux 或 Windows Nano Server 主机上部署基于单容器的 .NET Core Web 应用
 
-_对于简单 Web 应用的整体部署，可以使用 Docker 容器。这样可以改进持续集成和连续部署管道，并有助于成功实现部署到生产。不再出现“为什么可以在我的计算机上正常运行，却不能在生产中正常运行？”的问题_
+_对于简单 Web 应用的整体部署，可以使用 Docker 容器。这样可以改进持续集成和持续部署管道，并有助于成功实现部署到生产环境。不再出现“为什么可以在我的计算机上正常运行，却不能在生产环境中正常运行？”的问题_
 
 基于微服务的体系结构具有许多优势，但以增加复杂性为代价。 在某些情况下，成本超过了收益，在单个或几个容器中运行的单片式部署应用程序更为实用。
 
@@ -41,7 +41,7 @@ _对于简单 Web 应用的整体部署，可以使用 Docker 容器。这样可
 
 该应用程序使用 SQL Server 数据库实现目录存储。 在基于容器的部署中，此单片式应用程序与基于微服务的应用程序可访问相同的数据存储。 该应用程序配置为在与单片式应用程序并列的容器中运行 SQL Server。 在生产环境中，SQL Server 会在 Docker 主机以外的高可用性计算机上运行。 为方便起见，在开发或测试环境中，建议在自己的容器中运行 SQL Server。
 
-初始功能集仅提供浏览目录的功能。 通过更新实现容器化应用程序的完整功能集。 在 [ASP.NET Web 应用体系结构实践](https://aka.ms/webappebook)电子书和相关 [eShopOnWeb 示例应用程序](http://aka.ms/WebAppArchitecture)中介绍了更高级的单片式 Web 应用体系结构。
+初始功能集仅提供浏览目录的功能。 通过更新实现容器化应用程序的完整功能集。 在 [ASP.NET Web 应用体系结构实践](https://aka.ms/webappebook)电子书和相关 [eShopOnWeb 示例应用程序](https://aka.ms/WebAppArchitecture)中介绍了更高级的单片式 Web 应用体系结构。
 
 ## <a name="docker-support"></a>Docker 支持
 

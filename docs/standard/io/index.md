@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7aacb6ca64a8b45a9b54b3f9d8785c7c61a07e09
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254307"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394329"
 ---
 # <a name="file-and-stream-io"></a>文件和流 I/O
 文件和流 I/O（输入/输出）是指在存储媒介中传入或传出数据。 在 .NET Framework 中，`System.IO` 命名空间包含允许以异步方式和同步方式对数据流和文件进行读取和写入操作的类型。 这些命名空间还包含对文件执行压缩和解压缩的类型，以及通过管道和串行端口启用通信的类型。  
@@ -137,13 +137,13 @@ ms.locfileid: "43254307"
   
  在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用 I/O 操作时，要注意一些重要差异：  
   
--   专门与文件操作相关的类型（如 <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo>）未包含在[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中。 请改用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 命名空间中的类型，如 [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) 和 [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx)。  
+-   专门与文件操作相关的类型（如 <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo>）未包含在[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中。 请改用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的 [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 命名空间中的类型，如 [StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) 和 [StorageFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx)。  
   
 -   独立存储不可用；请改用[应用程序数据](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。  
   
 -   使用异步方法（如 <xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>）可防止 UI 线程受阻。  
   
--   基于路径的压缩类型 <xref:System.IO.Compression.ZipFile> 和 <xref:System.IO.Compression.ZipFileExtensions> 不可用。 请改用 [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) 命名空间中的类型。  
+-   基于路径的压缩类型 <xref:System.IO.Compression.ZipFile> 和 <xref:System.IO.Compression.ZipFileExtensions> 不可用。 请改用 [Windows.Storage.Compression](https://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) 命名空间中的类型。  
   
  如果需要，你可以在 .NET Framework 流和 Windows 运行时流之间进行转换。 有关详细信息，请参阅[如何：在 .NET Framework 流和 Windows 运行时流之间进行转换](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)或 [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx)。 <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   

@@ -2,12 +2,12 @@
 title: 编程概念 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: a557812ff99f09f20d3eb17ea7ff4dd80483a4a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 965ce386bcf6ff8d11c9e20616c1ca44640ddaf2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335631"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403018"
 ---
 # <a name="programming-concepts-c"></a>编程概念 (C#)
 此部分介绍了 C# 语言中的编程概念。  
@@ -34,4 +34,4 @@ ms.locfileid: "33335631"
   
 |||  
 |---|---|  
-|[性能提示](https://msdn.microsoft.com/library/ms173196(VS.110).aspx) | 介绍了多项有助于提升应用程序性能的基本规则。|
+|[性能提示](../../../../docs/framework/performance/performance-tips.md) | 介绍了多项有助于提升应用程序性能的基本规则。|

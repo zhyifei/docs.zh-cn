@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2686d0db966192606656167d6e505f34ded333f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f38ed31748560292753789e38595a5e30f6ea08a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396524"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404603"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和应用程序
 本文有助于你开始部署应用程序的 .NET Framework。 大部分信息都是供开发人员、OEM 和企业管理人员使用的。 想在其自己的计算机上安装 .NET Framework 的用户应阅读[安装 .NET Framework](~/docs/framework/install/index.md)。  
@@ -58,13 +58,13 @@ ms.locfileid: "33396524"
   
 -   部署.NET Framework（适用于 OEM 和管理人员）：  
   
-    -   [Windows 评估和部署工具包 (ADK)](http://go.microsoft.com/fwlink/p/?LinkId=254976)  
+    -   [Windows 评估和部署工具包 (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)  
   
     -   [管理员指南](../../../docs/framework/deployment/guide-for-administrators.md)  
   
  **服务**  
   
--   有关一般信息，请参阅 [.NET Framework 博客](http://go.microsoft.com/fwlink/p/?LinkId=254977)  
+-   有关一般信息，请参阅 [.NET Framework 博客](https://go.microsoft.com/fwlink/p/?LinkId=254977)  
   
 -   [检测版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
   

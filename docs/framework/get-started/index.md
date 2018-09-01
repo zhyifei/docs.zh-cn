@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07b19c062d314fe3280d9ebed818b484ff9d1b13
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: aef77e6f2ec572ec0969166770aaf617cc933d67
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314745"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387768"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 入门
 
@@ -69,7 +69,7 @@ ms.locfileid: "36314745"
 
 1. 如果未在操作系统上预安装 .NET Framework，请安装应用所面向的 .NET Framework 版本。 最新的生产版本是 .NET Framework 4.7.2，此版本预安装在 Windows 10 2018 年 4 月更新上，并可下载到旧版 Windows 操作系统。 有关 .NET Framework 系统要求，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关安装其他版本的 .NET Framework 的信息，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。 其他 .NET Framework 包为带外发布，这意味着这些包在滚动基础上发布，没有任何定期或计划的发布周期。 有关这些包的信息，请参阅 [.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。
 
-2. 选择要用于开发应用的 .NET Framework 所支持的语言。 大量语言可供选择，包括来自 Microsoft 的 [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 和 C++/CLI。 （一种用于开发 .NET Framework 应用的编程语言，它遵循[公共语言基础结构 (CLI) 规范](http://go.microsoft.com/fwlink/?LinkId=199862)。）
+2. 选择要用于开发应用的 .NET Framework 所支持的语言。 大量语言可供选择，包括来自 Microsoft 的 [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 和 C++/CLI。 （一种用于开发 .NET Framework 应用的编程语言，它遵循[公共语言基础结构 (CLI) 规范](https://go.microsoft.com/fwlink/?LinkId=199862)。）
 
 3. 选择并安装将用于创建应用并支持所选程序语言的开发环境。 适用于 .NET Framework 应用的 Microsoft 集成开发环境 (IDE) 是 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 它提供多种版本。
 

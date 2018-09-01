@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2765d7bf98c8e22e0bf495ac91ab1c15327bae42
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 372ffd7e17f60b8045cd5f89d52456c5f9655de1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42907974"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408157"
 ---
 # <a name="parallel-programming-in-net"></a>.NET 中的并行编程
 
@@ -29,7 +29,7 @@ ms.locfileid: "42907974"
 |[用于并行编程的数据结构](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|提供一些链接，这些链接指向有关线程安全集合类、轻量同步类型以及延迟初始化类型的文档。|
 |[并行诊断工具](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|提供一些链接，这些链接指向任务和并行堆栈的 Visual Studio 调试器窗口和[并发可视化工具](/visualstudio/profiling/concurrency-visualizer)的文档。|
 |[PLINQ 和 TPL 的自定义分区程序](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|描述分区程序的工作方式，以及如何配置默认分区程序或创建新的分区程序。|
-|[任务计划程序](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|描述计划程序的工作方式，以及如何配置默认计划程序。|
+|[任务计划程序](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|描述计划程序的工作方式，以及如何配置默认计划程序。|
 |[PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|简要概述 C# 和 Visual Basic 中的 Lambda 表达式，并演示如何在 PLINQ 和任务并行库中使用这些表达式。|
 |[其他阅读材料](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|收录了指向其他信息以及 .NET 中并行编程示例资源的链接。|
 

@@ -3,11 +3,11 @@ title: 程序集和全局程序集缓存 (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 ms.openlocfilehash: 07ee54fc19abecba5e8335f063277418ede80b36
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933020"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408913"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>程序集和全局程序集缓存 (C#)
 程序集构成了 .NET 应用程序的部署、版本控制、重用、激活范围和安全权限的基本单元。 作为 .NET Framework 的构建基块，程序集采用可执行文件 (.exe) 或动态链接库文件 (.dll) 的形式。 它们向公共语言运行时提供了注意类型实现代码所需的信息。 可以将程序集视为一组构成功能逻辑单元并旨在配合使用的类型和资源。  
