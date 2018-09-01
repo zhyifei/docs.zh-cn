@@ -10,74 +10,74 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: 02bb87235efbdef8a5474fec9799757f75877876
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6040401ce3e98c835677be3c4cc7698013348f37
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604284"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386109"
 ---
-# <a name="xml-descendant-axis-property-visual-basic"></a><span data-ttu-id="6f6e9-102">XML 后代轴属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6f6e9-102">XML Descendant Axis Property (Visual Basic)</span></span>
-<span data-ttu-id="6f6e9-103">提供的访问权限的后代中的以下：<xref:System.Xml.Linq.XElement>对象，<xref:System.Xml.Linq.XDocument>对象、 一套<xref:System.Xml.Linq.XElement>对象或一套<xref:System.Xml.Linq.XDocument>对象。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-103">Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span>  
+# <a name="xml-descendant-axis-property-visual-basic"></a><span data-ttu-id="bc577-102">XML 后代轴属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc577-102">XML Descendant Axis Property (Visual Basic)</span></span>
+<span data-ttu-id="bc577-103">提供对以下的后代的访问：<xref:System.Xml.Linq.XElement>对象，<xref:System.Xml.Linq.XDocument>对象、 一系列<xref:System.Xml.Linq.XElement>对象或一系列<xref:System.Xml.Linq.XDocument>对象。</span><span class="sxs-lookup"><span data-stu-id="bc577-103">Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f6e9-104">语法</span><span class="sxs-lookup"><span data-stu-id="6f6e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bc577-104">语法</span><span class="sxs-lookup"><span data-stu-id="bc577-104">Syntax</span></span>  
   
 ```  
 object...<descendant>  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="6f6e9-105">部件</span><span class="sxs-lookup"><span data-stu-id="6f6e9-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="bc577-105">部件</span><span class="sxs-lookup"><span data-stu-id="bc577-105">Parts</span></span>  
  `object`  
- <span data-ttu-id="6f6e9-106">必须的。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-106">Required.</span></span> <span data-ttu-id="6f6e9-107"><xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象、<xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-107">An <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span>  
+ <span data-ttu-id="bc577-106">必须的。</span><span class="sxs-lookup"><span data-stu-id="bc577-106">Required.</span></span> <span data-ttu-id="bc577-107"><xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象、<xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="bc577-107">An <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span>  
   
- <span data-ttu-id="6f6e9-108">...<</span><span class="sxs-lookup"><span data-stu-id="6f6e9-108">...<</span></span>  
- <span data-ttu-id="6f6e9-109">必须的。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-109">Required.</span></span> <span data-ttu-id="6f6e9-110">表示子代轴属性的开头。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-110">Denotes the start of a descendant axis property.</span></span>  
+ <span data-ttu-id="bc577-108">...<</span><span class="sxs-lookup"><span data-stu-id="bc577-108">...<</span></span>  
+ <span data-ttu-id="bc577-109">必须的。</span><span class="sxs-lookup"><span data-stu-id="bc577-109">Required.</span></span> <span data-ttu-id="bc577-110">表示子代轴属性的开头。</span><span class="sxs-lookup"><span data-stu-id="bc577-110">Denotes the start of a descendant axis property.</span></span>  
   
  `descendant`  
- <span data-ttu-id="6f6e9-111">必须的。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-111">Required.</span></span> <span data-ttu-id="6f6e9-112">若要访问，在窗体的子代节点的名称 [`prefix``:`]`name`。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-112">Name of the descendant nodes to access, of the form [`prefix``:`]`name`.</span></span>  
+ <span data-ttu-id="bc577-111">必须的。</span><span class="sxs-lookup"><span data-stu-id="bc577-111">Required.</span></span> <span data-ttu-id="bc577-112">若要访问，窗体的子代节点的名称 [`prefix``:`]`name`。</span><span class="sxs-lookup"><span data-stu-id="bc577-112">Name of the descendant nodes to access, of the form [`prefix``:`]`name`.</span></span>  
   
-|<span data-ttu-id="6f6e9-113">部件</span><span class="sxs-lookup"><span data-stu-id="6f6e9-113">Part</span></span>|<span data-ttu-id="6f6e9-114">描述</span><span class="sxs-lookup"><span data-stu-id="6f6e9-114">Description</span></span>|  
+|<span data-ttu-id="bc577-113">部件</span><span class="sxs-lookup"><span data-stu-id="bc577-113">Part</span></span>|<span data-ttu-id="bc577-114">描述</span><span class="sxs-lookup"><span data-stu-id="bc577-114">Description</span></span>|  
 |----------|-----------------|  
-|`prefix`|<span data-ttu-id="6f6e9-115">可选。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-115">Optional.</span></span> <span data-ttu-id="6f6e9-116">子代节点的 XML 命名空间前缀。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-116">XML namespace prefix for the descendant node.</span></span> <span data-ttu-id="6f6e9-117">必须使用定义的全局 XML 命名空间`Imports`语句。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-117">Must be a global XML namespace that is defined by using an `Imports` statement.</span></span>|  
-|`name`|<span data-ttu-id="6f6e9-118">必须的。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-118">Required.</span></span> <span data-ttu-id="6f6e9-119">子代节点的本地名称。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-119">Local name of the descendant node.</span></span> <span data-ttu-id="6f6e9-120">请参阅[声明的 XML 元素和属性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-120">See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span></span>|  
+|`prefix`|<span data-ttu-id="bc577-115">可选。</span><span class="sxs-lookup"><span data-stu-id="bc577-115">Optional.</span></span> <span data-ttu-id="bc577-116">子代节点的 XML 命名空间前缀。</span><span class="sxs-lookup"><span data-stu-id="bc577-116">XML namespace prefix for the descendant node.</span></span> <span data-ttu-id="bc577-117">必须使用定义的全局 XML 命名空间`Imports`语句。</span><span class="sxs-lookup"><span data-stu-id="bc577-117">Must be a global XML namespace that is defined by using an `Imports` statement.</span></span>|  
+|`name`|<span data-ttu-id="bc577-118">必须的。</span><span class="sxs-lookup"><span data-stu-id="bc577-118">Required.</span></span> <span data-ttu-id="bc577-119">子代节点的本地名称。</span><span class="sxs-lookup"><span data-stu-id="bc577-119">Local name of the descendant node.</span></span> <span data-ttu-id="bc577-120">请参阅[声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。</span><span class="sxs-lookup"><span data-stu-id="bc577-120">See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span></span>|  
   
  \>  
- <span data-ttu-id="6f6e9-121">必须的。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-121">Required.</span></span> <span data-ttu-id="6f6e9-122">表示子代轴属性的结尾。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-122">Denotes the end of a descendant axis property.</span></span>  
+ <span data-ttu-id="bc577-121">必须的。</span><span class="sxs-lookup"><span data-stu-id="bc577-121">Required.</span></span> <span data-ttu-id="bc577-122">表示子代轴属性的结尾。</span><span class="sxs-lookup"><span data-stu-id="bc577-122">Denotes the end of a descendant axis property.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6f6e9-123">返回值</span><span class="sxs-lookup"><span data-stu-id="6f6e9-123">Return Value</span></span>  
- <span data-ttu-id="6f6e9-124"><xref:System.Xml.Linq.XElement> 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-124">A collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bc577-123">返回值</span><span class="sxs-lookup"><span data-stu-id="bc577-123">Return Value</span></span>  
+ <span data-ttu-id="bc577-124"><xref:System.Xml.Linq.XElement> 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="bc577-124">A collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6f6e9-125">备注</span><span class="sxs-lookup"><span data-stu-id="6f6e9-125">Remarks</span></span>  
- <span data-ttu-id="6f6e9-126">你可以使用 XML 子代轴属性按名称从访问子代节点<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>对象，或从集合<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>对象。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-126">You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects.</span></span> <span data-ttu-id="6f6e9-127">使用 XML`Value`属性来访问返回的集合中的第一个子代节点的值。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-127">Use the XML `Value` property to access the value of the first descendant node in the returned collection.</span></span> <span data-ttu-id="6f6e9-128">有关详细信息，请参阅[XML 值属性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-128">For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bc577-125">备注</span><span class="sxs-lookup"><span data-stu-id="bc577-125">Remarks</span></span>  
+ <span data-ttu-id="bc577-126">可以使用 XML 子代轴属性按名称从访问子代节点<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>对象，或从一系列<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>对象。</span><span class="sxs-lookup"><span data-stu-id="bc577-126">You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects.</span></span> <span data-ttu-id="bc577-127">使用 XML`Value`属性来访问返回的集合中的第一个子代节点的值。</span><span class="sxs-lookup"><span data-stu-id="bc577-127">Use the XML `Value` property to access the value of the first descendant node in the returned collection.</span></span> <span data-ttu-id="bc577-128">有关详细信息，请参阅[XML 值属性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。</span><span class="sxs-lookup"><span data-stu-id="bc577-128">For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
   
- <span data-ttu-id="6f6e9-129">Visual Basic 编译器将子代轴属性转换为对的调用<xref:System.Xml.Linq.XContainer.Descendants%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-129">The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.</span></span>  
+ <span data-ttu-id="bc577-129">Visual Basic 编译器将调用转换为子代轴属性<xref:System.Xml.Linq.XContainer.Descendants%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="bc577-129">The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.</span></span>  
   
-## <a name="xml-namespaces"></a><span data-ttu-id="6f6e9-130">XML 命名空间</span><span class="sxs-lookup"><span data-stu-id="6f6e9-130">XML Namespaces</span></span>  
- <span data-ttu-id="6f6e9-131">子代轴属性中的名称可以使用仅 XML 命名空间使用全局声明`Imports`语句。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-131">The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement.</span></span> <span data-ttu-id="6f6e9-132">它不能使用在 XML 元素文本中局部声明的 XML 命名空间。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-132">It cannot use XML namespaces declared locally within XML element literals.</span></span> <span data-ttu-id="6f6e9-133">有关详细信息，请参阅[Imports 语句 (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-133">For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span></span>  
+## <a name="xml-namespaces"></a><span data-ttu-id="bc577-130">XML 命名空间</span><span class="sxs-lookup"><span data-stu-id="bc577-130">XML Namespaces</span></span>  
+ <span data-ttu-id="bc577-131">子代轴属性中的名称可以使用只有 XML 命名空间与全局声明`Imports`语句。</span><span class="sxs-lookup"><span data-stu-id="bc577-131">The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement.</span></span> <span data-ttu-id="bc577-132">它不能使用在 XML 元素文本中局部声明的 XML 命名空间。</span><span class="sxs-lookup"><span data-stu-id="bc577-132">It cannot use XML namespaces declared locally within XML element literals.</span></span> <span data-ttu-id="bc577-133">有关详细信息，请参阅[Imports 语句 (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="bc577-133">For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6f6e9-134">示例</span><span class="sxs-lookup"><span data-stu-id="6f6e9-134">Example</span></span>  
- <span data-ttu-id="6f6e9-135">下面的示例演示如何访问名为的第一个子代节点的值`name`和名为的所有子代节点的值`phone`从`contacts`对象。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-135">The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="bc577-134">示例</span><span class="sxs-lookup"><span data-stu-id="bc577-134">Example</span></span>  
+ <span data-ttu-id="bc577-135">下面的示例演示如何访问名为的第一个子代节点的值`name`和名为的所有子代节点的值`phone`从`contacts`对象。</span><span class="sxs-lookup"><span data-stu-id="bc577-135">The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.</span></span>  
   
  [!code-vb[VbXMLSamples#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_1.vb)]  
   
- <span data-ttu-id="6f6e9-136">此代码显示以下文本：</span><span class="sxs-lookup"><span data-stu-id="6f6e9-136">This code displays the following text:</span></span>  
+ <span data-ttu-id="bc577-136">此代码显示以下文本：</span><span class="sxs-lookup"><span data-stu-id="bc577-136">This code displays the following text:</span></span>  
   
  `Name: Patrick Hines`  
   
  `Home Phone = 206-555-0144`  
   
-## <a name="example"></a><span data-ttu-id="6f6e9-137">示例</span><span class="sxs-lookup"><span data-stu-id="6f6e9-137">Example</span></span>  
- <span data-ttu-id="6f6e9-138">下面的示例声明 `ns` 作为 XML 命名空间前缀。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-138">The following example declares `ns` as an XML namespace prefix.</span></span> <span data-ttu-id="6f6e9-139">然后，它使用的命名空间前缀创建 XML 文本并访问具有限定名的第一个子节点的值`ns:name`。</span><span class="sxs-lookup"><span data-stu-id="6f6e9-139">It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.</span></span>  
+## <a name="example"></a><span data-ttu-id="bc577-137">示例</span><span class="sxs-lookup"><span data-stu-id="bc577-137">Example</span></span>  
+ <span data-ttu-id="bc577-138">下面的示例声明 `ns` 作为 XML 命名空间前缀。</span><span class="sxs-lookup"><span data-stu-id="bc577-138">The following example declares `ns` as an XML namespace prefix.</span></span> <span data-ttu-id="bc577-139">然后，它使用的命名空间前缀来创建 XML 文本和访问具有限定名称的第一个子节点的值`ns:name`。</span><span class="sxs-lookup"><span data-stu-id="bc577-139">It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.</span></span>  
   
  [!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_2.vb)]  
   
- <span data-ttu-id="6f6e9-140">此代码显示以下文本：</span><span class="sxs-lookup"><span data-stu-id="6f6e9-140">This code displays the following text:</span></span>  
+ <span data-ttu-id="bc577-140">此代码显示以下文本：</span><span class="sxs-lookup"><span data-stu-id="bc577-140">This code displays the following text:</span></span>  
   
  `Name: Patrick Hines`  
   
-## <a name="see-also"></a><span data-ttu-id="6f6e9-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="6f6e9-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="bc577-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="bc577-141">See Also</span></span>  
  <xref:System.Xml.Linq.XElement>  
- [<span data-ttu-id="6f6e9-142">XML 轴属性</span><span class="sxs-lookup"><span data-stu-id="6f6e9-142">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
- [<span data-ttu-id="6f6e9-143">XML 文本</span><span class="sxs-lookup"><span data-stu-id="6f6e9-143">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
- [<span data-ttu-id="6f6e9-144">在 Visual Basic 中创建 XML</span><span class="sxs-lookup"><span data-stu-id="6f6e9-144">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [<span data-ttu-id="6f6e9-145">已声明的 XML 元素和特性的名称</span><span class="sxs-lookup"><span data-stu-id="6f6e9-145">Names of Declared XML Elements and Attributes</span></span>](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+ [<span data-ttu-id="bc577-142">XML 轴属性</span><span class="sxs-lookup"><span data-stu-id="bc577-142">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)  
+ [<span data-ttu-id="bc577-143">XML 文本</span><span class="sxs-lookup"><span data-stu-id="bc577-143">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [<span data-ttu-id="bc577-144">在 Visual Basic 中创建 XML</span><span class="sxs-lookup"><span data-stu-id="bc577-144">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ [<span data-ttu-id="bc577-145">已声明的 XML 元素和特性的名称</span><span class="sxs-lookup"><span data-stu-id="bc577-145">Names of Declared XML Elements and Attributes</span></span>](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

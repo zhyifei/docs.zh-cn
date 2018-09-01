@@ -1,171 +1,171 @@
 ---
-title: 如何：创建支持 AJAX 的 WCF 服务和访问该服务的 ASP.NET 客户端
-ms.date: 03/30/2017
+title: 在 Visual Studio 中创建启用了 AJAX 的 WCF 服务和 ASP.NET 客户端
+ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 58971d11ab76112627dd81d53381236932268e25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07a1e903991e09243572f2a99c19edae7f9793b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490625"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384281"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="34544-102">如何：创建支持 AJAX 的 WCF 服务和访问该服务的 ASP.NET 客户端</span><span class="sxs-lookup"><span data-stu-id="34544-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
-<span data-ttu-id="34544-103">本主题演示如何使用 Visual Studio 2008 创建启用了 AJAX 的 Windows Communication Foundation (WCF) 服务和 ASP.NET 客户端访问该服务。</span><span class="sxs-lookup"><span data-stu-id="34544-103">This topic shows how to use Visual Studio 2008 to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span> <span data-ttu-id="34544-104">在“过程”一节中描述了创建服务和客户端的代码的步骤之后，在“示例”一节中提供了相应的代码。</span><span class="sxs-lookup"><span data-stu-id="34544-104">The code for the service and for the client are provided in the Example section after the steps for creating them are described in the Procedures section.</span></span>  
-  
-### <a name="to-create-the-aspnet-client-application"></a><span data-ttu-id="34544-105">创建 ASP.NET 客户端应用程序</span><span class="sxs-lookup"><span data-stu-id="34544-105">To create the ASP.NET client application</span></span>  
-  
-1.  <span data-ttu-id="34544-106">打开 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="34544-106">Open [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
-  
-2.  <span data-ttu-id="34544-107">从**文件**菜单上，选择**新建**，然后**项目**，然后**Web**，然后选择**ASP.NET Web 应用程序**.</span><span class="sxs-lookup"><span data-stu-id="34544-107">From the **File** menu, select **New**, then **Project**, then **Web**, and then select **ASP.NET Web Application**.</span></span>  
-  
-3.  <span data-ttu-id="34544-108">将项目`SandwichServices`单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="34544-108">Name the Project `SandwichServices` and click **OK**.</span></span>  
-  
-### <a name="to-create-the-wcf-ajax-enabled-service"></a><span data-ttu-id="34544-109">创建 WCF 支持 AJAX 的服务</span><span class="sxs-lookup"><span data-stu-id="34544-109">To create the WCF AJAX-enabled service</span></span>  
-  
-1.  <span data-ttu-id="34544-110">右键单击`SandwichServices`项目中**解决方案资源管理器**窗口，然后选择**添加**，然后**新项**，，然后**启用了 AJAX 的 WCF 服务**.</span><span class="sxs-lookup"><span data-stu-id="34544-110">Right-click the `SandwichServices` project in the **Solution Explorer** window and select **Add**, then **New Item**, and then **AJAX-enabled WCF Service**.</span></span>  
-  
-2.  <span data-ttu-id="34544-111">将服务`CostService`中**名称**框中，单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="34544-111">Name the service `CostService` in the **Name** box and click **Add**.</span></span>  
-  
-3.  <span data-ttu-id="34544-112">打开 CostService.svc.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="34544-112">Open the CostService.svc.cs file.</span></span>  
-  
-4.  <span data-ttu-id="34544-113">指定`Namespace`为<xref:System.ServiceModel.ServiceContractAttribute>作为`SandwichService`:</span><span class="sxs-lookup"><span data-stu-id="34544-113">Specify the `Namespace` for <xref:System.ServiceModel.ServiceContractAttribute> as `SandwichService`:</span></span>  
-  
-    ```  
-    namespace SandwichServices  
-    {  
-      [ServiceContract(Namespace = "SandwichServices")]  
-      [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]  
-       public class CostService  
-       {  
-         …  
-       }  
-     }  
-    ```  
-  
-5.  <span data-ttu-id="34544-114">在服务中实现操作。</span><span class="sxs-lookup"><span data-stu-id="34544-114">Implement the operations in the service.</span></span> <span data-ttu-id="34544-115">将 <xref:System.ServiceModel.OperationContractAttribute> 添加到每个操作，以指定这些操作属于协定的一部分。</span><span class="sxs-lookup"><span data-stu-id="34544-115">Add the <xref:System.ServiceModel.OperationContractAttribute> to each of the operations to indicate that they are part of the contract.</span></span> <span data-ttu-id="34544-116">下面的示例实现一个返回给定数量的三明治的费用的方法。</span><span class="sxs-lookup"><span data-stu-id="34544-116">The following example implements a method that returns the cost of a given quantity of sandwiches.</span></span>  
-  
-    ```  
-    public class CostService  
-    {  
-        [OperationContract]  
-        public double CostOfSandwiches(int quantity)  
-        {  
-            return 1.25 * quantity;  
-        }  
-  
-    // Add more operations here and mark them with [OperationContract]  
-    }  
-    ```  
-  
-### <a name="to-configure-the-client-to-access-the-service"></a><span data-ttu-id="34544-117">配置客户端以访问服务</span><span class="sxs-lookup"><span data-stu-id="34544-117">To configure the client to access the service</span></span>  
-  
-1.  <span data-ttu-id="34544-118">打开 Default.aspx 页并选择**设计**视图。</span><span class="sxs-lookup"><span data-stu-id="34544-118">Open the Default.aspx page and select the **Design** view.</span></span>  
-  
-2.  <span data-ttu-id="34544-119">从**视图**菜单上，选择**工具箱**。</span><span class="sxs-lookup"><span data-stu-id="34544-119">From the **View** menu, select **Toolbox**.</span></span>  
-  
-3.  <span data-ttu-id="34544-120">展开**AJAX Extensions**节点和拖放**ScriptManager**到 Default.aspx 页。</span><span class="sxs-lookup"><span data-stu-id="34544-120">Expand the **AJAX Extensions** node and drag and drop a **ScriptManager** on to the Default.aspx page.</span></span>  
-  
-4.  <span data-ttu-id="34544-121">右键单击**ScriptManager**和选择**属性**。</span><span class="sxs-lookup"><span data-stu-id="34544-121">Right-click the **ScriptManager** and select **Properties**.</span></span>  
-  
-5.  <span data-ttu-id="34544-122">展开**服务**中的集合**属性**窗口以打开**ServiceReference 集合编辑器**窗口。</span><span class="sxs-lookup"><span data-stu-id="34544-122">Expand the **Services** collection in the **Properties** window to open up the **ServiceReference Collection Editor** window.</span></span>  
-  
-6.  <span data-ttu-id="34544-123">单击**添加**，指定`CostService.svc`作为**路径**引用，并且单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="34544-123">Click **Add**, specify `CostService.svc` as the **Path** referenced, and click **OK**.</span></span>  
-  
-7.  <span data-ttu-id="34544-124">展开**HTML**中的节点**工具箱**和拖放**Input (Button)** 到 Default.aspx 页。</span><span class="sxs-lookup"><span data-stu-id="34544-124">Expand the **HTML** node in the **Toolbox** and drag and drop an **Input (Button)** on to the Default.aspx page.</span></span>  
-  
-8.  <span data-ttu-id="34544-125">右键单击**按钮**和选择**属性**。</span><span class="sxs-lookup"><span data-stu-id="34544-125">Right-click the **Button** and select **Properties**.</span></span>  
-  
-9. <span data-ttu-id="34544-126">更改**值**字段`Price for 3 Sandwiches`。</span><span class="sxs-lookup"><span data-stu-id="34544-126">Change the **Value** field to `Price for 3 Sandwiches`.</span></span>  
-  
-10. <span data-ttu-id="34544-127">双击**按钮**以访问 JavaScript 代码。</span><span class="sxs-lookup"><span data-stu-id="34544-127">Double-click the **Button** to access the JavaScript code.</span></span>  
-  
-11. <span data-ttu-id="34544-128">中的以下 JavaScript 代码传递 <`script`> 元素。</span><span class="sxs-lookup"><span data-stu-id="34544-128">Pass in the following JavaScript code within the <`script`> element.</span></span>  
-  
-    ```  
-    function Button1_onclick() {  
-    var service = new SandwichServices.CostService();  
-    service.CostOfSandwiches(3, onSuccess, null, null);  
-    }  
-  
-    function onSuccess(result){  
-    alert(result);  
-    }  
-    ```  
-  
-### <a name="to-access-the-service-from-the-client"></a><span data-ttu-id="34544-129">从客户端访问服务</span><span class="sxs-lookup"><span data-stu-id="34544-129">To access the service from the client</span></span>  
-  
-1.  <span data-ttu-id="34544-130">使用 Ctrl +F5 启动服务和 Web 客户端。</span><span class="sxs-lookup"><span data-stu-id="34544-130">Use Ctrl +F5 to launch the service and the Web client.</span></span> <span data-ttu-id="34544-131">单击**3 份三明治的价格**按钮以生成预期的输出为"3.75"。</span><span class="sxs-lookup"><span data-stu-id="34544-131">Click the **Price for 3 Grilled Sandwiches** button to generate the expected output of "3.75".</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="34544-132">示例</span><span class="sxs-lookup"><span data-stu-id="34544-132">Example</span></span>  
- <span data-ttu-id="34544-133">本示例包含 WCFService.svc.cs 文件中的服务代码和 Default.aspx 文件中的客户端代码。</span><span class="sxs-lookup"><span data-stu-id="34544-133">This example contains the service code contained in the WCFService.svc.cs file and the client code contained in the Default.aspx file.</span></span>  
-  
-```  
-//The service code contained in the CostService.svc.cs file.  
-  
-using System;  
-using System.Linq;  
-using System.Runtime.Serialization;  
-using System.ServiceModel;  
-using System.ServiceModel.Activation;  
-using System.ServiceModel.Web;  
-  
-namespace SandwichServices  
-{  
-    [ServiceContract(Namespace="SandwichServices")]  
-    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]  
-    public class CostService  
-    {  
-        // Add [WebGet] attribute to use HTTP GET  
-        [OperationContract]  
-        public double CostOfSandwiches(int quantity)  
-        {  
-            return 1.25 * quantity;  
-        }  
-  
-        // Add more operations here and mark them with [OperationContract]  
-    }  
-}  
-//The code for hosting the service is contained in the CostService.svc file.  
-  
-<%@ ServiceHost Language="C#" Debug="true" Service="SandwichServices.CostService" CodeBehind="CostService.svc.cs" %>  
-  
-//The client code contained in the Default.aspx file.  
-  
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SandwichServices._Default" %>  
-  
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
-  
-<html >  
-<head runat="server">  
-    <title>Untitled Page</title>  
-<script language="javascript" type="text/javascript">  
-// <!CDATA[  
-  
-function Button1_onclick() {  
-var service = new SandwichServices.CostService();  
-service.CostOfSandwiches(3, onSuccess, null, null);  
-}  
-  
-function onSuccess(result){  
-alert(result);  
-}  
-  
-// ]]>  
-</script>  
-</head>  
-<body>  
-    <form id="form1" runat="server">  
-    <div>  
-  
-    </div>  
-    <asp:ScriptManager ID="ScriptManager1" runat="server">  
-        <services>  
-            <asp:servicereference Path="CostService.svc" />  
-        </services>  
-    </asp:ScriptManager>  
-    </form>  
-    <p>  
-        <input id="Button1" type="button" value="Price for 3 Sandwiches" onclick="return Button1_onclick()" /></p>  
-</body>  
-</html>  
-```     
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="c7b32-102">如何：创建支持 AJAX 的 WCF 服务和访问该服务的 ASP.NET 客户端</span><span class="sxs-lookup"><span data-stu-id="c7b32-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
+
+<span data-ttu-id="c7b32-103">本主题演示如何使用 Visual Studio 来创建启用了 AJAX 的 Windows Communication Foundation (WCF) 服务和 ASP.NET 客户端访问该服务。</span><span class="sxs-lookup"><span data-stu-id="c7b32-103">This topic shows how to use Visual Studio to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span>
+
+## <a name="create-an-aspnet-web-app"></a><span data-ttu-id="c7b32-104">创建 ASP.NET Web 应用</span><span class="sxs-lookup"><span data-stu-id="c7b32-104">Create an ASP.NET web app</span></span>
+
+1. <span data-ttu-id="c7b32-105">打开 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="c7b32-105">Open Visual Studio.</span></span>
+
+1. <span data-ttu-id="c7b32-106">从**文件**菜单中，选择**新建** > **项目**</span><span class="sxs-lookup"><span data-stu-id="c7b32-106">From the **File** menu, select **New** > **Project**</span></span>
+
+1. <span data-ttu-id="c7b32-107">在中**新的项目**对话框中，展开**已安装** > **Visual C#** > **Web**类别，然后选择**ASP.NET Web 应用程序 (.NET Framework)**。</span><span class="sxs-lookup"><span data-stu-id="c7b32-107">In the **New Project** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select **ASP.NET Web Application (.NET Framework)**.</span></span>
+
+1. <span data-ttu-id="c7b32-108">将项目命名**SandwichServices**然后单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="c7b32-108">Name the Project **SandwichServices** and click **OK**.</span></span>
+
+1. <span data-ttu-id="c7b32-109">在中**新的 ASP.NET Web 应用程序**对话框中，选择**空**，然后选择**确定**。</span><span class="sxs-lookup"><span data-stu-id="c7b32-109">In the **New ASP.NET Web Application** dialog, select **Empty** and then select **OK**.</span></span>
+
+   ![Visual Studio 中的 ASP.NET web 应用程序类型对话框](../media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+
+## <a name="add-a-web-form"></a><span data-ttu-id="c7b32-111">添加 web 窗体</span><span class="sxs-lookup"><span data-stu-id="c7b32-111">Add a web form</span></span>
+
+1. <span data-ttu-id="c7b32-112">右键单击 SandwichServices 项目中的**解决方案资源管理器**，然后选择**添加** > **新项**。</span><span class="sxs-lookup"><span data-stu-id="c7b32-112">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
+
+1. <span data-ttu-id="c7b32-113">在中**添加新项**对话框中，展开**已安装** > **Visual C#** > **Web**类别，然后选择**Web 窗体**模板。</span><span class="sxs-lookup"><span data-stu-id="c7b32-113">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **Web Form** template.</span></span>
+
+1. <span data-ttu-id="c7b32-114">接受默认名称 (**WebForm1**)，然后选择**添加**。</span><span class="sxs-lookup"><span data-stu-id="c7b32-114">Accept the default name (**WebForm1**), and then select **Add**.</span></span>
+
+   <span data-ttu-id="c7b32-115">*WebForm1.aspx*中打开**源**视图。</span><span class="sxs-lookup"><span data-stu-id="c7b32-115">*WebForm1.aspx* opens in **Source** view.</span></span>
+
+1. <span data-ttu-id="c7b32-116">添加以下标记内的**\<正文 >** 标记：</span><span class="sxs-lookup"><span data-stu-id="c7b32-116">Add the following markup inside the **\<body>** tags:</span></span>
+
+   ```html
+   <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
+   <br />
+   <span id="additionResult"></span>
+   ```
+
+## <a name="create-an-ajax-enabled-wcf-service"></a><span data-ttu-id="c7b32-117">创建启用了 AJAX 的 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="c7b32-117">Create an AJAX-enabled WCF service</span></span>
+
+1. <span data-ttu-id="c7b32-118">右键单击 SandwichServices 项目中的**解决方案资源管理器**，然后选择**添加** > **新项**。</span><span class="sxs-lookup"><span data-stu-id="c7b32-118">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
+
+1. <span data-ttu-id="c7b32-119">在中**添加新项**对话框中，展开**已安装** > **Visual C#** > **Web**类别，然后选择**WCF 服务 (ajax)** 模板。</span><span class="sxs-lookup"><span data-stu-id="c7b32-119">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **WCF Service (AJAX-enabled)** template.</span></span>
+
+   ![在 Visual Studio 中的 WCF 服务 (ajax) 项模板](../media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+
+1. <span data-ttu-id="c7b32-121">将服务命名**CostService** ，然后选择**添加**。</span><span class="sxs-lookup"><span data-stu-id="c7b32-121">Name the service **CostService** and then select **Add**.</span></span>
+
+   <span data-ttu-id="c7b32-122">*CostService.svc.cs*在编辑器中打开。</span><span class="sxs-lookup"><span data-stu-id="c7b32-122">*CostService.svc.cs* opens in the editor.</span></span>
+
+1. <span data-ttu-id="c7b32-123">在服务中实现该操作。</span><span class="sxs-lookup"><span data-stu-id="c7b32-123">Implement the operation in the service.</span></span> <span data-ttu-id="c7b32-124">将以下方法添加到 CostService 类，以计算量的三明治的成本：</span><span class="sxs-lookup"><span data-stu-id="c7b32-124">Add the following method to the CostService class to calculate the cost of a quantity of sandwiches:</span></span>
+
+    ```csharp
+    [OperationContract]
+    public double CostOfSandwiches(int quantity)
+    {
+        return 1.25 * quantity;
+    }
+    ```
+
+## <a name="configure-the-client-to-access-the-service"></a><span data-ttu-id="c7b32-125">配置客户端访问服务</span><span class="sxs-lookup"><span data-stu-id="c7b32-125">Configure the client to access the service</span></span>
+
+1. <span data-ttu-id="c7b32-126">打开*WebForm1.aspx*文件，然后选择**设计**视图。</span><span class="sxs-lookup"><span data-stu-id="c7b32-126">Open the *WebForm1.aspx* file and select the **Design** view.</span></span>
+
+2. <span data-ttu-id="c7b32-127">从**视图**菜单中，选择**工具箱**。</span><span class="sxs-lookup"><span data-stu-id="c7b32-127">From the **View** menu, select **Toolbox**.</span></span>
+
+3. <span data-ttu-id="c7b32-128">展开**AJAX Extensions**节点和拖放**ScriptManager**拖到窗体。</span><span class="sxs-lookup"><span data-stu-id="c7b32-128">Expand the **AJAX Extensions** node and drag and drop a **ScriptManager** onto the form.</span></span>
+
+4. <span data-ttu-id="c7b32-129">回到**源**视图中，添加以下代码之间 **\<ScriptManager >** 标记，以指定 WCF 服务的路径：</span><span class="sxs-lookup"><span data-stu-id="c7b32-129">Back in the **Source** view, add the following code between the **\<ScriptManager>** tags to specify the path to the WCF service:</span></span>
+
+    ```html
+    <Services>
+       <asp:ServiceReference Path="~/CostService.svc" />
+    </Services>
+    ```
+
+1. <span data-ttu-id="c7b32-130">添加 Javascript 函数的代码`Calculate()`。</span><span class="sxs-lookup"><span data-stu-id="c7b32-130">Add the code for the Javascript function `Calculate()`.</span></span> <span data-ttu-id="c7b32-131">将以下代码中的放置**head** web 窗体的部分：</span><span class="sxs-lookup"><span data-stu-id="c7b32-131">Place the following code in the **head** section of the web form:</span></span>
+
+    ```javascript
+    <script type="text/javascript">
+
+        function Calculate() {
+            CostService.CostOfSandwiches(3, onSuccess);
+        }
+
+        function onSuccess(result) {
+            var myres = $get("additionResult");
+            myres.innerHTML = result;
+        }
+
+    </script>
+    ```
+
+   <span data-ttu-id="c7b32-132">此代码调用 CostService 来计算三个三明治的价格的方法，并在调用的范围显示结果**additionResult**。</span><span class="sxs-lookup"><span data-stu-id="c7b32-132">This code calls the method of CostService to calculate the price for three sandwiches, and then displays the result in the span called **additionResult**.</span></span>
+
+## <a name="run-the-program"></a><span data-ttu-id="c7b32-133">运行程序</span><span class="sxs-lookup"><span data-stu-id="c7b32-133">Run the program</span></span>
+
+<span data-ttu-id="c7b32-134">请确保*WebForm1.aspx*具有焦点，，然后按**启动**按钮以启动 web 客户端。</span><span class="sxs-lookup"><span data-stu-id="c7b32-134">Make sure that *WebForm1.aspx* has focus, and then press **Start** button to launch the web client.</span></span> <span data-ttu-id="c7b32-135">按钮有一个绿色三角形和内容类似于**IIS Express (Microsoft Edge)**。</span><span class="sxs-lookup"><span data-stu-id="c7b32-135">The button has a green triangle and says something like **IIS Express (Microsoft Edge)**.</span></span> <span data-ttu-id="c7b32-136">或者，可以按**F5**。</span><span class="sxs-lookup"><span data-stu-id="c7b32-136">Or, you can press **F5**.</span></span> <span data-ttu-id="c7b32-137">单击**3 三明治的价格**按钮以生成预期的输出为"3.75"。</span><span class="sxs-lookup"><span data-stu-id="c7b32-137">Click the **Price of 3 sandwiches** button to generate the expected output of "3.75".</span></span>
+
+## <a name="example-code"></a><span data-ttu-id="c7b32-138">示例代码</span><span class="sxs-lookup"><span data-stu-id="c7b32-138">Example code</span></span>
+
+<span data-ttu-id="c7b32-139">以下是中的完整代码*CostService.svc.cs*文件：</span><span class="sxs-lookup"><span data-stu-id="c7b32-139">Following is the full code in the *CostService.svc.cs* file :</span></span>
+
+```csharp
+using System.ServiceModel;
+using System.ServiceModel.Activation;
+
+namespace SandwichServices
+{
+    [ServiceContract(Namespace = "")]
+    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
+    public class CostService
+    {
+        [OperationContract]
+        public double CostOfSandwiches(int quantity)
+        {
+            return 1.25 * quantity;
+        }
+    }
+}
+```
+
+<span data-ttu-id="c7b32-140">下面是完整的内容*WebForm1.aspx*页：</span><span class="sxs-lookup"><span data-stu-id="c7b32-140">Following is the full contents of the *WebForm1.aspx* page:</span></span>
+
+```aspx-csharp
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SandwichServices.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+
+        function Calculate() {
+            CostService.CostOfSandwiches(3, onSuccess);
+        }
+
+        function onSuccess(result) {
+            var myres = $get("additionResult");
+            myres.innerHTML = result;
+        }
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        </div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Services>
+                <asp:ServiceReference Path="~/CostService.svc" />
+            </Services>
+        </asp:ScriptManager>
+
+        <input type="button" value="Price of 3 sandwiches" onclick="Calculate()" />
+        <br />
+        <span id="additionResult"></span>
+    </form>
+</body>
+</html>
+```
