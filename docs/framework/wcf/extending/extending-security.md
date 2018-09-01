@@ -6,19 +6,19 @@ helpviewer_keywords:
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 94aefe80674c5b4ec6fcce6a41d9b68e093f4262
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a16416e580dabd6a9057e11a8183437529ca83e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809396"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384407"
 ---
 # <a name="extending-security"></a>扩展安全性
 若要适应新的声明类型和自定义令牌，可以扩展安全基础结构的 Windows Communication Foundation (WCF)。 本节中的主题将向您介绍如何完成此任务。  
   
 ## <a name="in-this-section"></a>本节内容  
- [安全体系结构](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- 演练 WCF 安全系统的体系结构。  
+ [安全体系结构](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
+ 介绍了整个 WCF 安全系统的体系结构。  
   
  [自定义凭据和凭据验证](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  说明在验证自定义凭据时如何使用标识模型。  

@@ -2,18 +2,18 @@
 title: 自定义跟踪
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: a025c23f967b0a8f2c387aa581536233ddb70a76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c986d9845bb76219ad8b0657a3a7252aaaf4c6cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517999"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392538"
 ---
 # <a name="custom-tracking"></a>自定义跟踪
 此示例演示如何创建自定义跟踪参与者并将跟踪数据的内容写入控制台。 另外，此示例还演示如何发出使用用户定义的数据填充的 <xref:System.Activities.Tracking.CustomTrackingRecord> 对象。 基于控制台的跟踪参与者将使用代码中创建的跟踪配置文件对象来筛选由工作流发出的 <xref:System.Activities.Tracking.TrackingRecord> 对象。  
   
 ## <a name="sample-details"></a>示例详细信息  
- Windows Workflow Foundation (WF) 提供一个跟踪基础结构，用于跟踪工作流实例的执行。 跟踪运行时实现一个工作流实例，以便发出与工作流生命周期有关的事件、来自工作流活动的事件和自定义跟踪事件。 下表详细介绍了跟踪基础结构的主要组件。  
+ Windows Workflow Foundation (WF) 提供了一个跟踪基础结构来跟踪工作流实例的执行。 跟踪运行时实现一个工作流实例，以便发出与工作流生命周期有关的事件、来自工作流活动的事件和自定义跟踪事件。 下表详细介绍了跟踪基础结构的主要组件。  
   
 |组件|描述|  
 |---------------|-----------------|  
@@ -144,9 +144,9 @@ context.Track(customRecord);
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

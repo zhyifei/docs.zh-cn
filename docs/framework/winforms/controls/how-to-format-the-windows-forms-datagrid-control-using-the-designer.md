@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 9d2abdb7025c861df4efe1b662cf4cc91de5bbf8
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: e0d703e16ab89243c7f7cf57dc858a0a3889a590
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255891"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389016"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体 DataGrid 控件的格式
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "43255891"
   
  作为在格式设置数据网格中的初始步骤，可以设置的属性<xref:System.Windows.Forms.DataGrid>本身。 这些颜色和格式选择窗体从其然后可以进行更改，具体取决于数据的表和列显示的基础。  
   
- 下面的过程需要**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.DataGrid>控件。 有关设置此类项目的信息，请参阅[如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)并[如何： 向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。 在中[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，则<xref:System.Windows.Forms.DataGrid>控件将不处于**工具箱**默认情况下。 有关详细信息，请参阅[如何： 将项添加到工具箱](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)。  
+ 下面的过程需要**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.DataGrid>控件。 有关设置此类项目的信息，请参阅[如何： 创建 Windows 应用程序项目](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)并[如何： 向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。 在中[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，则<xref:System.Windows.Forms.DataGrid>控件将不处于**工具箱**默认情况下。 有关详细信息，请参阅[如何： 将项添加到工具箱](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  

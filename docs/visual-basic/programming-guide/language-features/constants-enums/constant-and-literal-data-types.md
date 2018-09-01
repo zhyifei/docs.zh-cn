@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
 ms.openlocfilehash: 1d030f8058cd497212c20bca8f064f2bedc99fce
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999922"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389556"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>常量和 Literal 数据类型 (Visual Basic)
 文本是一个值，表示为本身而不是变量的值或表达式，如数字 3 或字符串"Hello"的结果。 常量是有意义的名称，它接受文本的位置，并将保留在整个程序，而不是变量，其值可能会更改此相同的值。  

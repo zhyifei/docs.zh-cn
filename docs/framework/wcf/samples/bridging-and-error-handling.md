@@ -2,22 +2,22 @@
 title: 桥接和错误处理
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804386"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389063"
 ---
 # <a name="bridging-and-error-handling"></a>桥接和错误处理
-此示例演示如何桥接客户端和服务使用不同绑定之间的通信使用 Windows Communication Foundation (WCF) 路由服务。 此示例还演示如何将备份服务用于故障转移方案。 路由服务是可以轻松地在你的应用程序中包含基于内容的路由器的 WCF 组件。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。  
+此示例演示如何将 Windows Communication Foundation (WCF) 路由服务使用桥接客户端和使用不同绑定的服务之间的通信。 此示例还演示如何将备份服务用于故障转移方案。 路由服务是一个 WCF 组件，它可以轻松地在应用程序中包含基于内容的路由器。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\ErrorHandlingAndBridging`  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33804386"
   
 2.  在 Visual Studio 中按 F5 或 Ctrl+Shift+B  
   
-    1.  如果你想要自动启动所需的项目，按 F5 时，右键单击该解决方案，请选择**属性**，然后在**启动项目**节点下的**通用属性**，选择**多启动项目**，并将所有项目都设置为**启动**。  
+    1.  如果你想要自动启动所需的项目，按 F5 时，右键单击该解决方案，请选择**属性**，然后在**启动项目**节点下的**通用属性**，选择**多个启动项目**，并将所有项目都设置为**启动**。  
   
     2.  如果使用 Ctrl+Shift+B 生成项目，则必须启动以下应用程序：  
   
@@ -70,4 +70,4 @@ ms.locfileid: "33804386"
  Contoso 希望在内部优化性能的同时，向外界提供一个可互操作的服务终结点。 因此，它通过一个使用 BasicHttpBinding 的终结点向外界公开其服务，而在内部使用路由服务将该连接桥接到使用 NetTcpBinding（由其服务使用）的终结点。 而且，Contoso 还希望其提供的服务能够容许他们的任何一个生产服务发生暂时中断，从而通过使用错误处理功能来虚拟化路由器服务后面的多个终结点，以便在必要时自动故障转移到备份终结点。  
   
 ## <a name="see-also"></a>请参阅  
- [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

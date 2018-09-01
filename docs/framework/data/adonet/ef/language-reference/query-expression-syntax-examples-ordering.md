@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
-ms.openlocfilehash: c4cc8bf1c43c2153cf8031427bb11c4fa45b8f4c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc8bfaabb9e90e66e4ec81e551fd66319a78ca7e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762190"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387853"
 ---
 # <a name="query-expression-syntax-examples-ordering"></a>查询表达式语法示例：排序
-本主题中的示例演示如何使用`OrderBy`和`OrderByDescending`方法来查询[AdventureWorks 销售模型](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
+本主题中的示例演示如何使用`OrderBy`并`OrderByDescending`方法来查询[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用查询表达式语法。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   
  本主题中的示例使用以下`using` / `Imports`语句：  
   

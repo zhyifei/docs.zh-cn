@@ -2,12 +2,12 @@
 title: '&lt;clientCredentials&gt; 的 &lt;peer&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 9d64f682f67dcc7c4f0c0f1600938f8ff9ac0dd6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9d63aaaa6404b791559d1288730098075f1fd8eb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746470"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385471"
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 的 &lt;peer&gt; 元素
 指定在向对等客户端进行身份验证时使用的凭据。  
@@ -50,7 +50,7 @@ ms.locfileid: "32746470"
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用于向服务验证客户端身份的凭据。|  
   
 ## <a name="remarks"></a>备注  
- 此配置元素指定对等节点用于向网格中的其他节点证明它自己的身份的凭据，以及对等节点用于验证其他对等节点的身份的身份验证设置。 有关详细信息，请参阅[对等通道消息身份验证](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)和[保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)。  
+ 此配置元素指定对等节点用于向网格中的其他节点证明它自己的身份的凭据，以及对等节点用于验证其他对等节点的身份的身份验证设置。 有关详细信息，请参阅[对等通道消息身份验证](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)并[保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
@@ -62,7 +62,7 @@ ms.locfileid: "32746470"
  <xref:System.ServiceModel.Security.PeerCredential>  
  [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)  
- [对等通道消息身份验证](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [对等通道自定义身份验证](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [对等通道消息身份验证](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [对等通道自定义身份验证](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
  [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

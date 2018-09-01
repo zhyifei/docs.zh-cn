@@ -10,12 +10,12 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: 91a9930a3678e08fc0e46335f1eb95330bd171a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536756"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384949"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl 控件（Windows 窗体）
 Windows 窗体 `TabControl` 显示多个选项卡，就像笔记本中的分隔线或档案柜中一组文件夹的标签。 选项卡可以包含图片和其他控件。 使用 `TabControl` 创建属性页。  
@@ -36,7 +36,7 @@ Windows 窗体 `TabControl` 显示多个选项卡，就像笔记本中的分隔�
  [如何：禁用选项卡页](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
  说明如何限制对选项卡页的访问，可能根据用户凭据进行限制。  
   
- 另请参阅[如何： 添加和移除 Windows 窗体 TabControl 使用设计器选项卡](http://msdn.microsoft.com/library/ms233654\(v=vs.110\))，[如何： 将控件添加到选项卡页使用的设计器](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
+ 另请参阅[如何： 添加和移除选项卡使用在 Windows 窗体 tabcontrol 控件设计器](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md)，[如何： 将控件添加到选项卡页使用的设计器](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.TabControl> 类  

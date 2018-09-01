@@ -2,12 +2,12 @@
 title: 禁止显示事务范围
 ms.date: 03/30/2017
 ms.assetid: 49fb6dd4-30d4-4067-925c-c5de44c8c740
-ms.openlocfilehash: b38d168e7da4510b75ebeda7f4984c26fb68898d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44814d66a4de4b3e72bb33eb46019eb1088ab040
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518455"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385189"
 ---
 # <a name="suppress-transaction-scope"></a>禁止显示事务范围
 此示例演示如何创作自定义 `SuppressTransactionScope` 活动以禁止环境运行时事务（如果存在的话）。  
@@ -17,7 +17,7 @@ ms.locfileid: "33518455"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\SuppressTransactionScope`  
   
@@ -34,11 +34,11 @@ ms.locfileid: "33518455"
   
 1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开 SuppressTransactionScope.sln 解决方案。  
   
-2.  若要生成解决方案，按 CTRL + SHIFT + B 或选择**生成解决方案**从**生成**菜单。  
+2.  若要生成解决方案，请按 CTRL + SHIFT + B 或选择**生成解决方案**从**生成**菜单。  
   
-3.  成功生成之后，右键单击解决方案并选择**设置启动项目**。 在对话框中，选择**多启动项目**并确保这两个项目的操作是**启动**。  
+3.  成功生成之后，右键单击解决方案并选择**设置启动项目**。 从对话框中，选择**多个启动项目**，并确保这两个项目的操作是**启动**。  
   
-4.  按 F5，或选择**启动调试**从**调试**菜单。 或者，你可以按 CTRL + F5，或选择**启动但不调试**从**调试**菜单运行而不调试。  
+4.  按 F5 或选择**开始调试**从**调试**菜单。 或者，可以按 CTRL + F5 或选择**启动但不调试**从**调试**菜单运行而不进行调试。  
   
     > [!NOTE]
     >  在启动客户端之前，服务器必须正在运行。 承载该服务的控制台窗口的输出将指示它启动的时间。  
@@ -48,6 +48,6 @@ ms.locfileid: "33518455"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\SuppressTransactionScope`

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 ms.openlocfilehash: 8e64a819e9670a29e97140a32c81f5ff9006f83e
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231499"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388547"
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>演练：在 DataRepeater 控件中显示数据 (Visual Studio)
 本演练提供了在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件中显示绑定数据的完整基本方案。  
@@ -20,7 +20,7 @@ ms.locfileid: "35231499"
 ## <a name="prerequisite"></a>必备组件  
  本演练需要 Northwind 示例数据库。  
   
- 如果你的开发计算机上没有此数据库，您可以从 Microsoft 下载中心下载它。 有关说明，请参阅[下载示例数据库](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+ 如果在开发计算机上没有此数据库，您可以从 Microsoft 下载中心下载它。 有关说明，请参阅[下载示例数据库](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
 ## <a name="overview"></a>概述  
  本演练的第一部分主要有以下四个任务：  
@@ -52,7 +52,7 @@ ms.locfileid: "35231499"
   
      Windows 窗体设计器即会打开。  
   
-6.  在“Windows 窗体设计器”中选择窗体。 在**属性**窗口中，设置**大小**属性`800, 700`。  
+6.  在“Windows 窗体设计器”中选择窗体。 在中**属性**窗口中，将**大小**属性设置为`800, 700`。  
   
 ## <a name="adding-a-datarepeater-control"></a>添加 DataRepeater 控件  
  在此步骤中，向窗体添加一个 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件。  
@@ -67,9 +67,9 @@ ms.locfileid: "35231499"
   
 3.  拖动<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件拖动到**Form1**。  
   
-4.  在属性窗口中，设置**位置**属性`0, 25`。  
+4.  在属性窗口中设置**位置**属性设置为`0, 25`。  
   
-5.  设置**大小**属性`460, 600`。  
+5.  设置**大小**属性设置为`460, 600`。  
   
 ## <a name="adding-a-data-source"></a>添加数据源  
  在此步骤中，为 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件添加一个数据源。  
@@ -88,7 +88,7 @@ ms.locfileid: "35231499"
   
          或  
   
-    -   单击**新连接**来配置新的数据连接。 有关详细信息，请参阅[添加新连接](/visualstudio/data-tools/add-new-connections)。  
+    -   单击**新的连接**来配置新的数据连接。 有关详细信息，请参阅[添加新连接](/visualstudio/data-tools/add-new-connections)。  
   
 5.  如果数据库需要密码，请选择该选项以包括敏感数据，然后单击 **“下一步”**。  
   
@@ -99,30 +99,30 @@ ms.locfileid: "35231499"
   
 7.  在 **“选择数据库对象”** 页面上展开 **“表”** 节点。  
   
-8.  选中的复选框旁边**客户**和**订单**表，，然后单击**完成**。  
+8.  选中的复选框旁边**客户**并**订单**表，并单击**完成**。  
   
-     **NorthwindDataSet**添加到你的项目和**客户**和**订单**表将显示在**数据源**窗口。  
+     **NorthwindDataSet**添加到你的项目和**客户**并**订单**表中出现**数据源**窗口。  
   
 ## <a name="adding-data-bound-controls"></a>添加数据绑定控件  
  在此步骤中，向 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>添加数据绑定控件。  
   
 #### <a name="to-add-data-bound-controls"></a>添加数据绑定控件  
   
-1.  在**数据源**窗口中，选择的顶级节点**客户**表。  
+1.  在中**数据源**窗口中，选择的顶级节点**客户**表。  
   
-2.  将该表拖放类型更改**详细信息**通过单击**详细信息**表节点上的下拉列表中。  
+2.  将表拖放类型更改**详细信息**通过单击**详细信息**表节点上的下拉列表中。  
   
-3.  选择**客户**表节点，然后将其拖到的项模板区域 （上半部分区域）<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。  
+3.  选择**客户**表节点，然后将其拖动到项模板区域 （上半部分区域） 的<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。  
   
-     A<xref:System.Windows.Forms.BindingNavigator>控件添加到窗体中，与**NorthwindDataSet**， **CustomersBindingSource**， **CustomersTableAdapter**， **TableAdapterManager**，和**customersbindingnavigator**组件将被添加到组件栏。  
+     一个<xref:System.Windows.Forms.BindingNavigator>控件添加到窗体，并**NorthwindDataSet**， **CustomersBindingSource**， **CustomersTableAdapter**， **TableAdapterManager**，并**CustomersBindingNavigator**组件添加到组件栏。  
   
 4.  选择所有字段及其关联标签，并将它们置于项模板区域左边缘附近。  
   
-5.  选择后五个字段 (**区域**，**邮政编码**，**国家/地区**， **Phone**，和**传真**) 和及其关联的标签并将它们移到前六个字段的右侧。  
+5.  选择的最后五个字段 (**区域**，**邮政编码**，**国家/地区**， **Phone**，并**传真**) 和及其关联的标签并将它们上移到前六个字段的右侧。  
   
 6.  选择项模板（控件的上半部分区域）。  
   
-7.  在属性窗口中，设置**大小**属性`427, 170`。  
+7.  在属性窗口中设置**大小**属性设置为`427, 170`。  
   
  此时，你就得到了一个有效的应用程序，该应用程序将显示客户的重复列表。 可以按 F5 运行该应用程序、更改数据以及添加或删除客户记录。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "35231499"
     > [!NOTE]
     >  此步骤是必需的因为<xref:System.Windows.Forms.BindingSource>将启用**DeleteItem**按钮每次当前记录更改时。  
   
-5.  按 F5 运行该应用程序。 请注意， **DeleteItem**按钮处于禁用状态，以及你无法删除项目，通过按 DELETE 键。  
+5.  按 F5 运行该应用程序。 请注意， **DeleteItem**按钮处于禁用状态以及你不能删除项目，通过按 DELETE 键。  
   
 ## <a name="adding-search-capability-to-the-datarepeater-control"></a>向 DataRepeater 控件添加搜索功能  
  在此可选步骤中，你将实现在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件中搜索值的功能。 如果找到了搜索字符串，该控件将选中包含该值的项并将该项滚动到视图中。  
@@ -197,18 +197,18 @@ ms.locfileid: "35231499"
   
      将它置于 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件的下方。  
   
-2.  在属性窗口中，更改**名称**属性**SearchTextBox**。  
+2.  在属性窗口中更改**名称**属性设置为**SearchTextBox**。  
   
 3.  拖动<xref:System.Windows.Forms.Button>控件从**工具箱**拖到窗体包含<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。 将它置于 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件的下方。  
   
-4.  在属性窗口中，更改**名称**属性**SearchButton**。 更改**文本**属性**搜索**。  
+4.  在属性窗口中更改**名称**属性设置为**SearchButton**。 更改**文本**属性设置为**搜索**。  
   
 5.  双击 <xref:System.Windows.Forms.Button> 控件打开代码编辑器，并将以下代码添加到 `SearchButton_Click` 事件处理程序中。  
   
      [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.cs)]
      [!code-vb[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.vb)]  
   
-6.  按 F5 运行该应用程序。 键入的客户 ID **SearchTextBox**单击**搜索**按钮。  
+6.  按 F5 运行该应用程序。 键入客户 ID，采用**SearchTextBox**然后单击**搜索**按钮。  
   
 ## <a name="adding-a-master-and-detail-table-to-the-datarepeater"></a>向 DataRepeater 添加主表和详细信息表  
  在此可选步骤中，你将再添加一个 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件来显示每个客户的相关订单。  
@@ -217,17 +217,17 @@ ms.locfileid: "35231499"
   
 1.  将另一个<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件从**Visual Basic PowerPacks**选项卡中**工具箱**拖到窗体。  
   
-2.  在属性窗口中，设置**位置**属性`465, 25`。  
+2.  在属性窗口中设置**位置**属性设置为`465, 25`。  
   
-3.  设置**大小**属性`315, 600`。  
+3.  设置**大小**属性设置为`315, 600`。  
   
-4.  在**数据源**窗口中，展开**客户**表节点，然后选择的详细信息节点**订单**表。  
+4.  在中**数据源**窗口中，展开**客户**表节点，然后选择详细信息节点**订单**表。  
   
 5.  此拖放类型更改**订单**通过单击详细信息表**详细信息**表节点上的下拉列表中。  
   
 6.  将该**订单**表节点拖到第二个项模板区域 （上半部分区域）<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。  
   
-     **OrdersBindingSource**组件和**OrdersTableAdapter**组件添加到组件栏。  
+     **OrdersBindingSource**组件和一个**OrdersTableAdapter**组件添加到组件栏。  
   
 7.  按 F5 运行该应用程序。 当你在第一个 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件中选择每个客户时，该客户的订单会显示在第二个 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件中。  
   
@@ -238,7 +238,7 @@ ms.locfileid: "35231499"
  [如何：更改 DataRepeater 控件的布局](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
  [如何：在 DataRepeater 控件中显示项标题](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)  
  [如何：在 DataRepeater 控件中搜索数据](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
- [如何： 使用两个 DataRepeater 控件 (Visual Studio) 中创建主/从窗体](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
+ [如何： 使用两个 DataRepeater 控件 (Visual Studio) 创建母版/详细信息窗体](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
  [如何：更改 DataRepeater 控件的外观](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
  [如何：禁止添加和删除 DataRepeater 项](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)  
  [DataRepeater 控件疑难解答](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

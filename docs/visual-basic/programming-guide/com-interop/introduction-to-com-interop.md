@@ -5,19 +5,19 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 639b621215f25bc1042274a92a21fca2985e5918
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: ecd514231c36cf3b65b1f0dd05f26d05f3c9c88d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244109"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389739"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM 互操作介绍 (Visual Basic)
 组件对象模型 (COM) 允许到其他组件和主机应用程序公开其功能的对象。 虽然 COM 对象的基础 Windows 编程的许多年来，应用程序面向公共语言运行时 (CLR) 提供了许多优点。  
   
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] com 开发的那些，最终将取代应用程序 到那时，您可能需要使用或通过使用 Visual Studio 创建 COM 对象。 通过 COM 互操作性或*COM 互操作*，使您能够使用现有的 COM 对象，同时转换到[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]您自己的节奏。  
   
- 通过使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]若要创建 COM 组件，可以使用免注册 COM 互操作。 这样可以控制多个版本的计算机上，安装并可让最终用户使用 XCOPY 或 FTP 复制到其计算机上的相应目录的应用程序可以运行时启用哪些 DLL 版本。 有关详细信息，请参阅[免注册 COM 互操作](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)。  
+ 通过使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]若要创建 COM 组件，可以使用免注册 COM 互操作。 这样可以控制多个版本的计算机上，安装并可让最终用户使用 XCOPY 或 FTP 复制到其计算机上的相应目录的应用程序可以运行时启用哪些 DLL 版本。 有关详细信息，请参阅[免注册 COM 互操作](https://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)。  
   
 ## <a name="managed-code-and-data"></a>托管的代码和数据  
  为开发的代码[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]被称为*托管代码*，并包含由 CLR 使用元数据。 使用的数据[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]应用程序称为*托管数据*因为运行时管理与数据相关的任务，比如分配和回收内存以及执行类型检查。 默认情况下，Visual Basic.NET 中使用托管的代码和数据，但您可以访问的非托管的代码和 COM 对象使用互操作程序集 （稍后介绍在此页上） 的数据。  
@@ -43,7 +43,7 @@ ms.locfileid: "39244109"
 ### <a name="importing-and-exporting-type-libraries"></a>导入和导出类型库  
  Visual Studio 包含一个实用程序，Tlbimp，它允许您从类型库到导入信息[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]应用程序。 通过使用 Tlbexp 实用工具，可以从程序集生成类型库。  
   
- Tlbimp 和 Tlbexp 有关的信息，请参阅[Tlbimp.exe （类型库导入程序）](../../../framework/tools/tlbimp-exe-type-library-importer.md)并[Tlbexp.exe （类型库导出程序）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)。  
+ Tlbimp 和 Tlbexp 有关的信息，请参阅[Tlbimp.exe （类型库导入程序）](../../../framework/tools/tlbimp-exe-type-library-importer.md)并[Tlbexp.exe （类型库导出程序）](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)。  
   
 ## <a name="interop-assemblies"></a>互操作程序集  
  互操作程序集都[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]程序集的桥之间托管和非托管代码，映射到等效的 COM 对象成员[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]管理成员。 创建 Visual Basic.NET 的互操作程序集处理的许多使用 COM 对象，如互操作封送处理的详细信息。  
@@ -58,6 +58,6 @@ ms.locfileid: "39244109"
  [互操作性疑难解答](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Tlbimp.exe（类型库导入程序）](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe（类型库导出程序）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [Tlbexp.exe（类型库导出程序）](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
  [互操作封送处理](../../../framework/interop/interop-marshaling.md)  
- [免注册 COM 互操作](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)
+ [免注册 COM 互操作](https://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)

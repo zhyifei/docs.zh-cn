@@ -7,17 +7,17 @@ dev_langs:
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 7bda1bc18e2b5af1365c799c6f2be9d8d220e9ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 215d23be53fad330b6ab056af83ad907f207259e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495127"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386540"
 ---
 # <a name="message-security-with-a-user-name-client"></a>用户名客户端的消息安全
-下图显示 Windows Communication Foundation (WCF) 服务和客户端使用消息级别安全保护。 服务使用 X.509 证书进行身份验证。 客户端使用用户名和密码进行身份验证。  
+下图显示了 Windows Communication Foundation (WCF) 服务和客户端使用消息级安全保护。 服务使用 X.509 证书进行身份验证。 客户端使用用户名和密码进行身份验证。  
   
- 有关示例应用程序，请参阅[消息安全用户名称](../../../../docs/framework/wcf/samples/message-security-user-name.md)。  
+ 示例应用程序，请参阅[用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)。  
   
  ![使用用户名身份验证的消息安全](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
@@ -132,4 +132,4 @@ ms.locfileid: "33495127"
  [用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
  [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [\<标识 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

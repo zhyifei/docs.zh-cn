@@ -2,15 +2,15 @@
 title: Windows Presentation Foundation 客户端中的数据绑定
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 225bdedb67e218092ff3369d4fe742c4fc897fc6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69e61a52adc3d5058b9ccd65d2cde2ca7d74bbe6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502541"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393856"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation 客户端中的数据绑定
-本示例演示 Windows Presentation Foundation (WPF) 客户端中数据绑定的用法。 此示例使用数组的唱片集以返回到客户端会随机生成的 Windows Communication Foundation (WCF) 服务。 每个唱片集都有名称、价格和唱片集曲目列表。 唱片集曲目具有名称和持续时间。 服务返回的信息自动绑定到 Windows Presentation Foundation (WPF) 客户端提供的用户界面 (UI) 中。  
+本示例演示 Windows Presentation Foundation (WPF) 客户端中数据绑定的用法。 此示例使用随机生成一个数组的唱片集以返回到客户端的 Windows Communication Foundation (WCF) 服务。 每个唱片集都有名称、价格和唱片集曲目列表。 唱片集曲目具有名称和持续时间。 服务返回的信息自动绑定到 Windows Presentation Foundation (WPF) 客户端提供的用户界面 (UI) 中。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -67,18 +67,18 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
   

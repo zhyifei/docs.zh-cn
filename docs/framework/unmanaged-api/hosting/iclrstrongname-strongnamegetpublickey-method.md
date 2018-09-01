@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b736e58a1a48a2bb4492b6b8ff58af1567babcf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c8d97653a195ec0fc287455079f37b311c3d42e4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434475"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387152"
 ---
 # <a name="iclrstrongnamestrongnamegetpublickey-method"></a>ICLRStrongName::StrongNameGetPublicKey 方法
-获取从公钥/私钥对的公钥。 可以提供的密钥对，为加密服务提供商 (CSP) 中的密钥容器名称或原始字节的集合。  
+获取从公钥/私钥对的公钥。 加密服务提供商 (CSP) 中的密钥容器名称或作为原始字节的集合，可提供的密钥对。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,26 +41,26 @@ HRESULT StrongNameGetPublicKey (
   
 #### <a name="parameters"></a>参数  
  `szKeyContainer`  
- [in]包含公钥/私钥对的密钥容器的名称。 如果`pbKeyBlob`为 null，`szKeyContainer`必须指定一个有效的容器的 CSP 中。 在这种情况下， [iclrstrongname:: Strongnamegetpublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)方法从容器中存储的密钥对中提取公钥。  
+ [in]包含公钥/私钥对的密钥容器的名称。 如果`pbKeyBlob`为 null，`szKeyContainer`必须指定有效的 CSP 中的容器。 在这种情况下， [iclrstrongname:: Strongnamegetpublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)方法从容器中存储的密钥对中提取的公钥。  
   
- 如果`pbKeyBlob`不为 null，则假定的密钥对要包含在密钥二进制大型对象 (BLOB)。  
+ 如果`pbKeyBlob`不为 null，则假定为密钥对要包含在密钥二进制大型对象 (BLOB) 中。  
   
- 键必须为 1024年位 Rivest 仅使用 Adleman (RSA) 签名密钥。 这次不支持的密钥的任何其他类型。  
+ 键必须是 1024年位 Rivest 仅使用 Adleman (RSA) 签名密钥。 目前不支持任何其他类型的密钥。  
   
  `pbKeyBlob`  
- [in]指向公钥/私钥对的指针。 此对采用以下格式创建由 Win32`CryptExportKey`函数。 如果`pbKeyBlob`是 null，指定的密钥容器`szKeyContainer`假定包含密钥对。  
+ [in]一个指向公钥/私钥对。 此对的格式创建的 Win32`CryptExportKey`函数。 如果`pbKeyBlob`是 null，指定的密钥容器`szKeyContainer`假定包含密钥对。  
   
  `cbKeyBlob`  
  [in]大小，以字节为单位的`pbKeyBlob`。  
   
  `ppbPublicKeyBlob`  
- [out]返回的公钥 BLOB。 `ppbPublicKeyBlob`参数是由公共语言运行时分配的和返回到调用方。 调用方必须释放的内存使用[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法。  
+ [out]返回的公钥 BLOB。 `ppbPublicKeyBlob`参数是分配的公共语言运行时，返回到调用方。 调用方必须使用释放内存[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法。  
   
  `pcbPublicKeyBlob`  
- [out]返回的公共密钥 BLOB 的大小。  
+ [out]返回公钥 BLOB 的大小。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功，则完成的方法否则为该值指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)有关的列表)。  
+ `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  
   
 ## <a name="remarks"></a>备注  
  中包含的公钥[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)结构。  
@@ -72,7 +72,7 @@ HRESULT StrongNameGetPublicKey (
   
  **库：** 作为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [StrongNameTokenFromPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  

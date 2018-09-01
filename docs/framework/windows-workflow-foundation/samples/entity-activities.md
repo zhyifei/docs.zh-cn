@@ -2,24 +2,24 @@
 title: 实体活动
 ms.date: 03/30/2017
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-ms.openlocfilehash: 96301c15b849749299e744a435068c3ec9be2e3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03bd0e42c70f1226558d492bcb3b2cfa5c7010f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519131"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385799"
 ---
 # <a name="entity-activities"></a>实体活动
-此示例演示如何使用 ADO.NET 实体框架 Windows Workflow Foundation 来简化数据访问。  
+此示例演示如何使用 Windows Workflow Foundation 与 ADO.NET 实体框架来简化数据访问。  
   
- ADO.NET 实体框架使开发人员可以处理以下形式的数据：特定于域的对象、属性和关系（例如客户、订单、订单详细信息以及这些实体之间的关系）。 ADO.NET 实体框架通过提供一个抽象级别以便能够针对一个概念应用程序模型编程（而不是针对一个关系存储架构直接编程）来做到这一点。 ADO.NET 实体框架，请参阅有关详细信息[ADO.NET 实体框架](http://go.microsoft.com/fwlink/?LinkId=165549)。  
+ ADO.NET 实体框架使开发人员可以处理以下形式的数据：特定于域的对象、属性和关系（例如客户、订单、订单详细信息以及这些实体之间的关系）。 ADO.NET 实体框架通过提供一个抽象级别以便能够针对一个概念应用程序模型编程（而不是针对一个关系存储架构直接编程）来做到这一点。 有关 ADO.NET 实体框架，请参阅详细信息[ADO.NET 实体框架](https://go.microsoft.com/fwlink/?LinkId=165549)。  
   
 ## <a name="sample-details"></a>示例详细信息  
  此示例使用 `Northwind` 数据库，并包含用于创建和移除 `Northwind` 数据库的脚本（Setup.cmd 和 Cleanup.cmd）。 此示例中的项目包含一个基于 `Northwind` 数据库的实体数据模型。 您可以通过打开包含在项目中的 `Northwind.edmx` 文件找到此模型。 此模型用于定义可使用 ADO.NET 实体框架访问的对象的形状。  
   
  此示例中包括以下活动：  
   
--   `EntitySQLQuery`：`EntitySQLQuery` 活动允许您基于 Entity SQL 查询字符串从数据库中检索对象。 Entity SQL 是一种与 SQL 相似的、独立于存储的语言，它允许您基于概念模型以及属于该模型或域的一部分的实体来指定查询。 有关实体 SQL 语言的详细信息，请参阅[Entity SQL 语言](http://go.microsoft.com/fwlink/?LinkId=165646)。  
+-   `EntitySQLQuery`：`EntitySQLQuery` 活动允许您基于 Entity SQL 查询字符串从数据库中检索对象。 Entity SQL 是一种与 SQL 相似的、独立于存储的语言，它允许您基于概念模型以及属于该模型或域的一部分的实体来指定查询。 有关实体 SQL 语言的详细信息，请参阅[Entity SQL 语言](https://go.microsoft.com/fwlink/?LinkId=165646)。  
   
 -   `EntityLinqQuery`：此活动允许您基于 LINQ 查询或谓词从数据库中检索对象。  
   
@@ -227,7 +227,7 @@ return new ObjectContextScope
   
 2.  在新的命令提示窗口中，定位到 EntityActivities\CS 文件夹。  
   
-3.  类型`setup.cmd`，然后按 enter 键。  
+3.  类型`setup.cmd`然后按 ENTER。  
   
 #### <a name="to-run-the-sample"></a>运行示例  
   
@@ -245,13 +245,13 @@ return new ObjectContextScope
   
 2.  在新的命令提示窗口中，定位到 EntityActivities\CS 文件夹。  
   
-3.  类型`cleanup.cmd`，然后按 enter 键。  
+3.  类型`cleanup.cmd`然后按 ENTER。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`

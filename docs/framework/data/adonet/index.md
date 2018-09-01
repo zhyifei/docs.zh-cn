@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 5869cbe62f8f3dd1b81dd176cf95a4a0a5491967
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 59828e988659b9fc5644ff801f77171103630660
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765433"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388217"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 ADO.NET 为创建分布式数据共享应用程序提供了一组丰富的组件。 它提供了对关系数据、XML 和应用程序数据的访问，因此是 .NET Framework 中不可缺少的一部分。 ADO.NET 支持多种开发需求，包括创建由应用程序、工具、语言或 Internet 浏览器使用的前端数据库客户端和中间层业务对象。  
@@ -19,7 +19,7 @@ ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 A
  [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  提供对 ADO.NET 设计和组件的介绍。  
   
- [Entity Framework](http://go.microsoft.com/fwlink/?LinkID=213876)  
+ [Entity Framework](https://go.microsoft.com/fwlink/?LinkID=213876)  
  描述如何使用实体框架创建应用程序。  
   
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -44,10 +44,10 @@ ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 A
  描述 Oracle .NET Framework 数据提供程序特定的功能和行为。  
   
 ## <a name="related-sections"></a>相关章节  
- [本机代码和 .NET Framework 代码的安全性](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
+ [本机代码和 .NET Framework 代码的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  提供指向 Visual Studio、.NET Framework 和加密的相关安全主题的链接。  
   
- [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  提供指向 LINQ 主题和示例的链接。  
   
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
@@ -64,4 +64,4 @@ ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 A
   
 ## <a name="see-also"></a>请参阅  
  [在 Visual Studio 中访问数据](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

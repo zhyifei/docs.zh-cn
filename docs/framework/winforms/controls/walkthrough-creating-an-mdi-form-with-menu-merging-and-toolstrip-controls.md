@@ -14,12 +14,12 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: d5fa1ebcc044a18e21e57aa2f66bd8486369fe42
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: a84b51679969f38955dd6a72ffe94ec8ca70b3df
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255688"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393039"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>演练：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体
 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间支持多文档界面 (MDI) 应用程序，而 <xref:System.Windows.Forms.MenuStrip> 控件支持菜单合并。 MDI 窗体还可支持 <xref:System.Windows.Forms.ToolStrip> 控件。  
@@ -107,7 +107,7 @@ ms.locfileid: "43255688"
   
 1.  添加名为一个新窗体`ChildForm`到项目。  
   
-     有关详细信息，请参阅[如何： 向项目添加 Windows 窗体](http://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
+     有关详细信息，请参阅[如何： 向项目添加 Windows 窗体](https://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
   
 2.  从**工具箱**，拖动<xref:System.Windows.Forms.MenuStrip>到子窗体上的控件。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "43255688"
   
 4.  在中**项集合编辑器**对话框框中，添加一个新<xref:System.Windows.Forms.ToolStripMenuItem>名为**ChildMenuItem**到子菜单。  
   
-     有关详细信息，请参阅[ToolStrip 项集合编辑器](http://msdn.microsoft.com/library/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)。  
+     有关详细信息，请参阅[ToolStrip 项集合编辑器](https://msdn.microsoft.com/library/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)。  
   
 ## <a name="testing-the-form"></a>测试窗体  
   

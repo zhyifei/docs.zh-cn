@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: a8ee4107ee7db20f2948ea9a33ef853815a22665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3d1dd9f7ef8122ac5573121e4f779fade776c8c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549599"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389671"
 ---
 # <a name="opentype-font-features"></a>OpenType 字体功能
 本主题概述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体技术的一些主要功能。  
@@ -40,7 +40,7 @@ ms.locfileid: "33549599"
 > [!NOTE]
 >  Windows SDK 包含了一组可用于 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序的示例 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体。 这些字体提供本主题余下部分所述的大多数功能。 有关详细信息，请参阅[示例 OpenType 字体包](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)。  
   
- 有关 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体格式的详细信息，请参阅 [OpenType 规范](http://go.microsoft.com/fwlink/?LinkId=96731)。  
+ 有关 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体格式的详细信息，请参阅 [OpenType 规范](https://go.microsoft.com/fwlink/?LinkId=96731)。  
   
 ### <a name="advanced-typographic-extensions"></a>高级版式扩展  
  高级版式表格（[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 布局表格）扩展了具有 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 或 CFF 边框的字体的功能。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 布局字体包含一些其他信息，可扩展字体功能以支持高质量国际版式。 大多数 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体仅体现全部可用 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 功能的一部分。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体提供以下功能。  
@@ -51,9 +51,9 @@ ms.locfileid: "33549599"
   
 -   字体中包含的显式脚本和语言信息，使文本处理应用程序可相应调整其行为。  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 布局表格在 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 规范的[“字体文件表格”](http://www.microsoft.com/typography/otspec/otff.htm)部分中进行了更详细的描述。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 布局表格在 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 规范的[“字体文件表格”](https://www.microsoft.com/typography/otspec/otff.htm)部分中进行了更详细的描述。  
   
- 本概述的其余部分介绍的广度和灵活性的直观地关注一些[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]功能公开的属性的<xref:System.Windows.Documents.Typography>对象。 有关此对象的详细信息，请参阅[版式类](#typography_class)。  
+ 本概述的其余部分介绍的广度和灵活性的一些直观有趣[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]的属性公开的功能<xref:System.Windows.Documents.Typography>对象。 有关此对象的详细信息，请参阅[版式类](#typography_class)。  
   
 <a name="variants"></a>   
 ## <a name="variants"></a>变量  
@@ -67,7 +67,7 @@ ms.locfileid: "33549599"
  ![使用 OpenType 上标的文本](../../../../docs/framework/wpf/advanced/media/opentypefont14.gif "opentypefont14")  
 使用 OpenType 上标的文本  
   
- 下面的标记示例演示如何定义使用的属性的使用字体的上标<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义使用的属性的 Palatino Linotype 字体的上标<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
   
@@ -76,7 +76,7 @@ ms.locfileid: "33549599"
  ![使用 OpenType 下标的文本](../../../../docs/framework/wpf/advanced/media/opentypefont15.gif "opentypefont15")  
 使用 OpenType 下标的文本  
   
- 下面的标记示例演示如何定义使用的属性的使用字体的下标<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义 Palatino Linotype 字体的使用的属性的下标<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
   
@@ -86,7 +86,7 @@ ms.locfileid: "33549599"
  ![使用 OpenType 上标和下标的文本](../../../../docs/framework/wpf/advanced/media/opentypefont16.gif "opentypefont16")  
 使用 OpenType 上标和下标的文本  
   
- 下面的标记示例演示如何定义上标和下标字体，使用属性<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义上标和下标字体使用的属性的<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
   
@@ -99,7 +99,7 @@ ms.locfileid: "33549599"
  ![使用 OpenType 大写字母的文本](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")  
 使用 OpenType 大写字母的文本  
   
- 下面的标记示例演示如何定义使用的属性的 Pescadero 字体大写字母<xref:System.Windows.Documents.Typography>对象。 使用“SmallCaps”格式时会忽略任何前导大写字母。  
+ 以下标记示例演示如何定义使用的属性的 Pescadero 字体的大写字母<xref:System.Windows.Documents.Typography>对象。 使用“SmallCaps”格式时会忽略任何前导大写字母。  
   
  [!code-xaml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33549599"
  ![使用 OpenType 标题大写字母的文本](../../../../docs/framework/wpf/advanced/media/opentypefont20.gif "OpenTypeFont20")  
 使用 OpenType 标题大写字母的文本  
   
- 下面的标记示例演示如何定义 Pescadero 字体，使用属性的标题大写字母<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义 Pescadero 字体使用的属性的标题大写字母<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
   
@@ -119,7 +119,7 @@ ms.locfileid: "33549599"
  ![使用 OpenType 大写字母间距的文本](../../../../docs/framework/wpf/advanced/media/opentypefont21.gif "OpenTypeFont21")  
 使用 OpenType 大写字母间距的文本  
   
- 下面的标记示例演示如何定义 Pescadero 字体，使用属性的大写字母间距<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义使用的属性的 Pescadero 字体的大写字母间距<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
   
@@ -140,7 +140,7 @@ ms.locfileid: "33549599"
  ![使用 OpenType 标准连字的文本](../../../../docs/framework/wpf/advanced/media/opentypefont04.gif "opentypefont04")  
 使用 OpenType 标准连字的文本  
   
- 下面的标记示例演示如何定义标准连字的 Pericles 字体使用的属性的标志符号<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义使用的属性的 Pericles 字体的标准连字字形<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "33549599"
  ![使用 OpenType 自由连字的文本](../../../../docs/framework/wpf/advanced/media/opentypefont05.gif "opentypefont05")  
 使用 OpenType 自由连字的文本  
   
- 下面的标记示例演示如何定义自由连字的 Pericles 字体使用的属性的标志符号<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义使用的属性的 Pericles 字体的自由连字字形<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
@@ -163,7 +163,7 @@ ms.locfileid: "33549599"
  ![文本使用禁用的 OpenType 标准连字](../../../../docs/framework/wpf/advanced/media/opentypefont07.gif "opentypefont07")  
 使用禁用的 OpenType 标准连字的文本  
   
- 下面的标记示例演示如何禁用使用字体，使用属性的标准连字标志符号<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何禁用 Palatino Linotype 字体的使用的属性的标准连字字形<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
   
@@ -171,25 +171,25 @@ ms.locfileid: "33549599"
 ## <a name="swashes"></a>花体  
  花体是使用精美修饰的装饰性字形，通常与书法相关。 以下文本显示 Pescadero 字体的标准和花体字形。  
   
- ![使用 OpenType 标准和花体标志符号的文本](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")  
+ ![使用 OpenType 标准和花体字形的文本](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")  
 使用 OpenType 标准和花体连字的文本  
   
  花体通常用作事件公告等简短文章中的修饰元素。 以下文本使用花体强调事件名称的大写字母。  
   
- ![使用 OpenType 花体的文本](../../../../docs/framework/wpf/advanced/media/opentypefont09.gif "opentypefont09")  
+ ![使用 OpenType 连接形式花体的文本](../../../../docs/framework/wpf/advanced/media/opentypefont09.gif "opentypefont09")  
 使用 OpenType 花体的文本  
   
- 下面的标记示例演示如何定义连接形式花体字体，使用属性<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义字体花体，使用的属性<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
   
 ### <a name="contextual-swashes"></a>连接形式花体  
  花体字形的某些组合可能导致文本外观欠佳，例如相邻字母的下行处出现重叠。 通过连接形式花体，可使用能生成更佳外观的替代花体字形。 以下文本显示同一单词应用连接形式花体前后的外观。  
   
- ![使用 OpenType 上下文花体的文本](../../../../docs/framework/wpf/advanced/media/opentypefont19.gif "OpenTypeFont19")  
+ ![使用 OpenType 花体的文本](../../../../docs/framework/wpf/advanced/media/opentypefont19.gif "OpenTypeFont19")  
 使用 OpenType 连接形式花体的文本  
   
- 下面的标记示例演示如何定义使用的属性的 Pescadero 字体上下文花体<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义 Pescadero 字体使用的属性的上下文花体<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
   
@@ -197,21 +197,21 @@ ms.locfileid: "33549599"
 ## <a name="alternates"></a>备用项  
  备用项是可替代标准字形的字形。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体（例如以下示例中使用的 Pericles 字体）可包含用于塑造不同文本外观的备用字形。 以下文本显示 Pericles 字体的标准字形。  
   
- ![使用 OpenType 标准标志符号的文本](../../../../docs/framework/wpf/advanced/media/opentypefont01.gif "opentypefont01")  
+ ![使用 OpenType 标准字形的文本](../../../../docs/framework/wpf/advanced/media/opentypefont01.gif "opentypefont01")  
 使用 OpenType 标准字形的文本  
   
  Pericles [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体包含其他字形，可为标准自行集提供样式备用项。 以下文本显示样式备用字形。  
   
- ![使用 OpenType 样式备用标志符号的文本](../../../../docs/framework/wpf/advanced/media/opentypefont02.gif "opentypefont02")  
+ ![使用 OpenType 样式备用字形的文本](../../../../docs/framework/wpf/advanced/media/opentypefont02.gif "opentypefont02")  
 使用 OpenType 样式备用标志符号的文本  
   
- 下面的标记示例演示如何定义 Pericles 字体，使用属性的样式备用标志符号<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义 Pericles 字体的使用的属性的样式备用字形<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
   
  以下文本显示 Pericles 字体的几种其他样式备用字形。  
   
- ![使用 OpenType 样式备用标志符号的文本](../../../../docs/framework/wpf/advanced/media/opentypefont03.gif "opentypefont03")  
+ ![使用 OpenType 样式备用字形的文本](../../../../docs/framework/wpf/advanced/media/opentypefont03.gif "opentypefont03")  
 使用 OpenType 样式备用标志符号的文本  
   
  以下标记示例演示如何定义其他样式备用字形。  
@@ -221,10 +221,10 @@ ms.locfileid: "33549599"
 ### <a name="random-contextual-alternates"></a>随机备用连接形式  
  随机备用连接形式为单个字符提供多种备用字形。 实现脚本类型字体时，此功能可通过使用一组随机选择的外观稍有差异的字形来模拟手写内容。 以下文本使用 Lindsey 字体的随机备用连接形式。 请注意字母“a”外观稍有变化  
   
- ![使用 OpenType 随机上下文替代项的文本](../../../../docs/framework/wpf/advanced/media/opentypefont23.gif "OpenTypeFont23")  
+ ![使用 OpenType 随机备用连接形式的文本](../../../../docs/framework/wpf/advanced/media/opentypefont23.gif "OpenTypeFont23")  
 使用 OpenType 随机备用连接形式的文本  
   
- 下面的标记示例演示如何定义 Lindsey 字体，使用属性的随机上下文替代项<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义 Lindsey 字体使用的属性的随机备用<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
   
@@ -234,7 +234,7 @@ ms.locfileid: "33549599"
  ![使用 OpenType 历史形式的文本](../../../../docs/framework/wpf/advanced/media/opentypefont10.gif "opentypefont10")  
 使用 OpenType 历史形式的文本  
   
- 下面的标记示例演示如何定义使用字体，使用属性的历史形式<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义 Palatino Linotype 字体的使用的属性的历史记录格式<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
   
@@ -250,14 +250,14 @@ ms.locfileid: "33549599"
  ![文本使用 OpenType 横式分数和竖式](../../../../docs/framework/wpf/advanced/media/opentypefont12.gif "opentypefont12")  
 使用 OpenType 横式分数和竖式分数的文本  
   
- 下面的标记示例演示如何定义使用字体，使用属性的分数样式<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义 Palatino Linotype 字体的使用的属性的分数样式<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>旧样式数字  
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体支持旧样式数字格式。 此格式对于显示不再是标准样式的数字非常有用。 以下文本以 Palatino Linotype 字体的标准和旧样式数字格式显示 18 世纪日期。  
   
- ![使用 OpenType 旧样式数字文本](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")  
+ ![使用 OpenType 旧样式数字的文本](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")  
 使用 OpenType 旧样式数字的文本  
   
  以下文本显示 Palatino Linotype 字体的标准数字，后跟旧样式数字。  
@@ -265,7 +265,7 @@ ms.locfileid: "33549599"
  ![使用 OpenType 旧样式数字集的文本](../../../../docs/framework/wpf/advanced/media/opentypefont13.gif "opentypefont13")  
 使用 OpenType 旧样式数字集的文本  
   
- 下面的标记示例演示如何定义使用字体，使用属性的旧样式数字<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义 Palatino Linotype 字体的使用的属性的旧样式数字<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
@@ -274,10 +274,10 @@ ms.locfileid: "33549599"
   
  以下文本使用 Miramonte 字体显示第一列中的两个表格式数字。 请注意数字“5”和“1”之间的宽度差异。 第二列显示相同的两个数值，并通过使用表格式数字功能调整其宽度。  
   
- ![使用 OpenType 比例和表格式数字的文本](../../../../docs/framework/wpf/advanced/media/opentypefont22.gif "OpenTypeFont22")  
+ ![使用 OpenType 比例数字和表格式数字的文本](../../../../docs/framework/wpf/advanced/media/opentypefont22.gif "OpenTypeFont22")  
 使用 OpenType 比例数字和表格式数字的文本  
   
- 下面的标记示例演示如何定义 Miramonte 字体，使用属性的比例和表格数字<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义比例数字和表格式数字 Miramonte 字体使用的属性的<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
@@ -289,20 +289,20 @@ ms.locfileid: "33549599"
  ![文本使用 OpenType 斜线零数字](../../../../docs/framework/wpf/advanced/media/opentypefont17.gif "OpenTypeFont17")  
 使用 OpenType 斜线零数字的文本  
   
- 下面的标记示例演示如何定义斜线零数字 Miramonte 字体，使用属性的<xref:System.Windows.Documents.Typography>对象。  
+ 以下标记示例演示如何定义使用的属性的 Miramonte 字体的斜线零数字<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>版式类  
- <xref:System.Windows.Documents.Typography>对象公开的功能集，[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体支持。 通过设置的属性<xref:System.Windows.Documents.Typography>在标记中，你可以轻松地编写充分利用的文档[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]功能。  
+ <xref:System.Windows.Documents.Typography>对象公开的功能集的[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体支持。 通过设置的属性<xref:System.Windows.Documents.Typography>在标记中，您可以轻松地编写文档，充分利用[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]功能。  
   
  以下文本显示 Pescadero 字体的标准大写字母，其后接样式为“SmallCaps”和“AllSmallCaps”的字母。 本例中，对所有三个单词均使用相同的字体大小。  
   
  ![使用 OpenType 大写字母的文本](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")  
 使用 OpenType 大写字母的文本  
   
- 下面的标记示例演示如何定义使用的属性的 Pescadero 字体大写字母<xref:System.Windows.Documents.Typography>对象。 使用“SmallCaps”格式时会忽略任何前导大写字母。  
+ 以下标记示例演示如何定义使用的属性的 Pescadero 字体的大写字母<xref:System.Windows.Documents.Typography>对象。 使用“SmallCaps”格式时会忽略任何前导大写字母。  
   
  [!code-xaml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
@@ -362,7 +362,7 @@ ms.locfileid: "33549599"
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Documents.Typography>  
- [OpenType 规范](http://go.microsoft.com/fwlink/?LinkId=96731)  
+ [OpenType 规范](https://go.microsoft.com/fwlink/?LinkId=96731)  
  [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [示例 OpenType 字体包](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
  [将字体与应用程序一起打包](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

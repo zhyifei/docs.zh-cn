@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 272ce198a61e0d1bbe9c44514aaf51db72f5d04c
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 5bb7a28e314d6c0b007c1579f371a26d0a714fce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257918"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390537"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows 窗体控件中的特性
 .NET Framework 提供了多种可应用于自定义控件和组件的成员的特性。 其中的一些特性会影响类的运行时行为，另一些会影响设计时行为。  
@@ -63,5 +63,5 @@ ms.locfileid: "43257918"
 ## <a name="see-also"></a>请参阅  
  <xref:System.Attribute>  
  [如何：在 Windows 窗体控件中应用特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
- [扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

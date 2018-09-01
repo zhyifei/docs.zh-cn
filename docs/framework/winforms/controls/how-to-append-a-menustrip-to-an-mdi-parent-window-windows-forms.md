@@ -9,19 +9,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: 048add340a81856cd30482c52c93c76bbf6181f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfce2e5c787bd18321d1203286e98d8f75cbf173
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529550"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386073"
 ---
 # <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>如何：将 MenuStrip 追加到 MDI 父窗口（Windows 窗体）
 在某些应用程序中，多文档界面 (MDI) 子窗口的类型可以不同于 MDI 父窗口。 例如，MDI 父窗口可能为电子表格，而 MDI 子窗口可能为图表。 在这种情况下，由于激活了不同类型的 MDI 子窗口，你想用 MDI 子菜单上的内容更新 MDI 父菜单的内容。  
   
  下面的过程使用 <xref:System.Windows.Forms.Form.IsMdiContainer%2A>、<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>、<xref:System.Windows.Forms.MergeAction> 和 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 属性将 MDI 子菜单附加到 MDI 父菜单。 关闭 MDI 子窗口可将附加的菜单从 MDI 父窗口中删除。  
   
- 另请参阅[多文档界面 (MDI) 应用程序](http://msdn.microsoft.com/library/xyhh2e7e\(v=vs.110\))。  
+ 另请参阅[多文档界面 (MDI) 应用程序](https://msdn.microsoft.com/library/xyhh2e7e\(v=vs.110\))。  
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>将菜单项附加到 MDI 父菜单  
   

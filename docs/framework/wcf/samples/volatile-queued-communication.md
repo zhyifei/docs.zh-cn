@@ -2,12 +2,12 @@
 title: 可变排队通信
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: b03bfff66cb9bed7ea9f1514d25096cf6b79f88a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508024"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394015"
 ---
 # <a name="volatile-queued-communication"></a>可变排队通信
 此示例演示如何通过消息队列 (MSMQ) 传输来执行可变排队通信。 此示例使用 <xref:System.ServiceModel.NetMsmqBinding>。 此例中的服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -48,7 +48,7 @@ public class StockTickerService : IStockTicker
 }  
 ```  
   
- 服务是自承载服务。 使用 MSMQ 传输时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在此示例中，该服务包含代码，以检查队列是否存在并在必要时创建队列。 从配置文件中读取队列名称。 基址由[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)来为服务生成代理。  
+ 服务是自承载服务。 使用 MSMQ 传输时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在此示例中，该服务包含代码，以检查队列是否存在并在必要时创建队列。 从配置文件中读取队列名称。 通过使用基址[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)来生成该服务的代理。  
 
 ```csharp
 // Host the service within this EXE console application.  
@@ -82,7 +82,7 @@ public static void Main()
  MSMQ 队列名是在配置文件的 appSettings 节中指定的。 服务终结点是在配置文件的 system.serviceModel 节中定义的，它指定了 `netMsmqBinding` 绑定。  
   
 > [!NOTE]
->  队列名称对本地计算机使用圆点 (.)，并在使用 <xref:System.Messaging> 创建队列时在其路径中使用反斜杠分隔符。 Windows Communication Foundation (WCF) 终结点地址指定一个 net.msmq： 方案，使用"localhost"使用本地计算机和在其路径中的正斜杠。  
+>  队列名称对本地计算机使用圆点 (.)，并在使用 <xref:System.Messaging> 创建队列时在其路径中使用反斜杠分隔符。 Windows Communication Foundation (WCF) 终结点地址指定一个 net.msmq： 方案，使用"localhost"的本地计算机和在其路径中的正斜杠。  
   
  消息的保证和持久性或可变性也在配置中指定。  
   
@@ -156,13 +156,13 @@ Stock Tick zzz9:43.3
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
- 默认情况下使用 <xref:System.ServiceModel.NetMsmqBinding> 启用传输安全。 有两个相关属性对于 MSMQ 传输安全，<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>和<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`默认情况下，身份验证模式设置为`Windows`和保护级别设置为`Sign`。 为了使 MSMQ 提供身份验证和签名功能，MSMQ 必须是域的一部分，并且必须安装 MSMQ 的 Active Directory 集成选项。 如果在不满足这些条件的计算机上运行此示例，将会收到错误。  
+ 默认情况下使用 <xref:System.ServiceModel.NetMsmqBinding> 启用传输安全。 有两个 MSMQ 传输安全相关的属性<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>并<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`默认情况下，身份验证模式设置为`Windows`和保护级别设置为`Sign`。 为了使 MSMQ 提供身份验证和签名功能，MSMQ 必须是域的一部分，并且必须安装 MSMQ 的 Active Directory 集成选项。 如果在不满足这些条件的计算机上运行此示例，将会收到错误。  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>在加入到工作组或在没有 Active Directory 集成的计算机上运行示例  
   
@@ -223,7 +223,7 @@ Stock Tick zzz9:43.3
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   

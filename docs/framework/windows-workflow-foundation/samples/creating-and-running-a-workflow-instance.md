@@ -2,12 +2,12 @@
 title: 创建和运行工作流实例
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
-ms.openlocfilehash: 3bfcde3dd635820fa66d639134a43e5e43186c17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 571d41194ebc98be81646fb5bfdab060225015ca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513681"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393775"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>创建和运行工作流实例
 此示例演示如何运行工作流实例。 它演示如何以同步方式和异步方式执行这一操作。  
@@ -25,7 +25,7 @@ ms.locfileid: "33513681"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`  
   

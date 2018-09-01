@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: 02bb87235efbdef8a5474fec9799757f75877876
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6040401ce3e98c835677be3c4cc7698013348f37
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604284"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386109"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML 后代轴属性 (Visual Basic)
-提供的访问权限的后代中的以下：<xref:System.Xml.Linq.XElement>对象，<xref:System.Xml.Linq.XDocument>对象、 一套<xref:System.Xml.Linq.XElement>对象或一套<xref:System.Xml.Linq.XDocument>对象。  
+提供对以下的后代的访问：<xref:System.Xml.Linq.XElement>对象，<xref:System.Xml.Linq.XDocument>对象、 一系列<xref:System.Xml.Linq.XElement>对象或一系列<xref:System.Xml.Linq.XDocument>对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,12 +34,12 @@ object...<descendant>
  必须的。 表示子代轴属性的开头。  
   
  `descendant`  
- 必须的。 若要访问，在窗体的子代节点的名称 [`prefix``:`]`name`。  
+ 必须的。 若要访问，窗体的子代节点的名称 [`prefix``:`]`name`。  
   
 |部件|描述|  
 |----------|-----------------|  
 |`prefix`|可选。 子代节点的 XML 命名空间前缀。 必须使用定义的全局 XML 命名空间`Imports`语句。|  
-|`name`|必须的。 子代节点的本地名称。 请参阅[声明的 XML 元素和属性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
+|`name`|必须的。 子代节点的本地名称。 请参阅[声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
   
  \>  
  必须的。 表示子代轴属性的结尾。  
@@ -48,12 +48,12 @@ object...<descendant>
  <xref:System.Xml.Linq.XElement> 对象的集合。  
   
 ## <a name="remarks"></a>备注  
- 你可以使用 XML 子代轴属性按名称从访问子代节点<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>对象，或从集合<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>对象。 使用 XML`Value`属性来访问返回的集合中的第一个子代节点的值。 有关详细信息，请参阅[XML 值属性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
+ 可以使用 XML 子代轴属性按名称从访问子代节点<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>对象，或从一系列<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>对象。 使用 XML`Value`属性来访问返回的集合中的第一个子代节点的值。 有关详细信息，请参阅[XML 值属性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
   
- Visual Basic 编译器将子代轴属性转换为对的调用<xref:System.Xml.Linq.XContainer.Descendants%2A>方法。  
+ Visual Basic 编译器将调用转换为子代轴属性<xref:System.Xml.Linq.XContainer.Descendants%2A>方法。  
   
 ## <a name="xml-namespaces"></a>XML 命名空间  
- 子代轴属性中的名称可以使用仅 XML 命名空间使用全局声明`Imports`语句。 它不能使用在 XML 元素文本中局部声明的 XML 命名空间。 有关详细信息，请参阅[Imports 语句 (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。  
+ 子代轴属性中的名称可以使用只有 XML 命名空间与全局声明`Imports`语句。 它不能使用在 XML 元素文本中局部声明的 XML 命名空间。 有关详细信息，请参阅[Imports 语句 (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何访问名为的第一个子代节点的值`name`和名为的所有子代节点的值`phone`从`contacts`对象。  
@@ -67,7 +67,7 @@ object...<descendant>
  `Home Phone = 206-555-0144`  
   
 ## <a name="example"></a>示例  
- 下面的示例声明 `ns` 作为 XML 命名空间前缀。 然后，它使用的命名空间前缀创建 XML 文本并访问具有限定名的第一个子节点的值`ns:name`。  
+ 下面的示例声明 `ns` 作为 XML 命名空间前缀。 然后，它使用的命名空间前缀来创建 XML 文本和访问具有限定名称的第一个子节点的值`ns:name`。  
   
  [!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_2.vb)]  
   
@@ -77,7 +77,7 @@ object...<descendant>
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Linq.XElement>  
- [XML 轴属性](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML 轴属性](../../../visual-basic/language-reference/xml-axis/index.md)  
  [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)  
  [在 Visual Basic 中创建 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  [已声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

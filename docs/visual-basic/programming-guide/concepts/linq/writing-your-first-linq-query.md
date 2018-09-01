@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 44fbf35ee4ab5a0c4763269808f0817a33d05b40
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998432"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387629"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>编写第一个 LINQ 查询 (Visual Basic)
 *查询*是一种从数据源检索数据的表达式。 查询用专用的查询语言表示。 随着时间推移，不同的语言已针对开发了不同类型的数据源，例如，用于关系数据库的 SQL 和用于 XML 的 XQuery。 这样，就需要为应用程序开发人员若要了解每种类型的数据源或数据格式受支持的新查询语言。  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- 有关如何创建特定类型的数据源的详细信息，请参阅各种 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序的文档。 (有关这些提供程序的列表，请参阅[LINQ （语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。)基本规则很简单：[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]数据源是支持泛型的任何对象<xref:System.Collections.Generic.IEnumerable%601>接口或从其继承的接口。  
+ 有关如何创建特定类型的数据源的详细信息，请参阅各种 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序的文档。 (有关这些提供程序的列表，请参阅[LINQ （语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。)基本规则很简单：[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]数据源是支持泛型的任何对象<xref:System.Collections.Generic.IEnumerable%601>接口或从其继承的接口。  
   
 > [!NOTE]
 >  类型，如<xref:System.Collections.ArrayList>支持非泛型<xref:System.Collections.IEnumerable>接口也可以用作[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]数据源。 有关使用示例<xref:System.Collections.ArrayList>，请参阅[如何： 使用 LINQ (Visual Basic) 查询 ArrayList](how-to-query-an-arraylist-with-linq.md)。  

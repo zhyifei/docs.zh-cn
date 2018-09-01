@@ -2,12 +2,12 @@
 title: LINQ to XML 与DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: f62b7564e9ba7adfe1aa83c5d0336d7a43e7c362
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0a23a773e927155ca22456ea403549b255718ad
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652768"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389940"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML 与DOM (Visual Basic)
 本节说明 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和当前主导 XML 编程 API（W3C 文档对象模型 (DOM)）之间的主要区别。  
@@ -74,7 +74,7 @@ Dim contacts = _
   
  请注意，缩进用于构造 XML 树的代码可显示基础 XML 的结构。  
   
- 有关详细信息，请参阅[创建 XML 树 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)。  
+ 有关详细信息，请参阅[创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)。  
   
 ## <a name="working-directly-with-xml-elements"></a>直接使用 XML 元素  
  在使用 XML 编程时，主要关注的通常是 XML 元素，也可能关注属性。 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，可以直接使用 XML 元素和属性。 例如，可以执行以下操作：  
@@ -99,12 +99,12 @@ doc.AppendChild(name)
  使用 LINQ to XML 时，仅在文档的根级别添加注释或处理说明时，才需使用 <xref:System.Xml.Linq.XDocument> 类。  
   
 ## <a name="simplified-handling-of-names-and-namespaces"></a>名称和命名空间的简化处理  
- 处理名称、命名空间和命名空间前缀通常是 XML 编程的复杂部分。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 完全不需要处理命名空间前缀，从而简化了名称和命名空间。 可以轻松控制命名空间前缀。 但如果您决定不显式控制命名空间前缀，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 将会在序列化过程中分配命名空间前缀（如果需要）或使用默认命名空间进行序列化（如果不需要）。 如果使用默认命名空间，则生成的文档中将没有命名空间前缀。 有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 处理名称、命名空间和命名空间前缀通常是 XML 编程的复杂部分。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 完全不需要处理命名空间前缀，从而简化了名称和命名空间。 可以轻松控制命名空间前缀。 但如果您决定不显式控制命名空间前缀，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 将会在序列化过程中分配命名空间前缀（如果需要）或使用默认命名空间进行序列化（如果不需要）。 如果使用默认命名空间，则生成的文档中将没有命名空间前缀。 有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
   
  DOM 的另一个问题是它不允许您更改节点的名称。 您必须创建新节点并将所有子节点复制到此节点，从而会失去原始节点标识。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许对节点设置 <xref:System.Xml.Linq.XName> 属性，因此可避免此问题。  
   
 ## <a name="static-method-support-for-loading-xml"></a>对加载 XML 的静态方法支持  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许您通过使用静态方法而不是实例方法来加载 XML。 这简化了加载和分析。 有关详细信息，请参阅[如何： 从文件 (Visual Basic 中) 的负载 XML](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许您通过使用静态方法而不是实例方法来加载 XML。 这简化了加载和分析。 有关详细信息，请参阅[如何： 加载 XML 文件 (Visual Basic 中) 从](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)。  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>移除对 DTD 构造的支持  
  通过移除对实体和实体引用的支持，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 进一步简化了 XML 编程。 实体因管理复杂而很少使用。 移除对它们的支持可提高性能并简化编程接口。 在填充 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 树时，会展开所有 DTD 实体。  
@@ -125,10 +125,10 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 将空白存储为 <xref:System.Xml.Linq.XText> 节点，而不像 DOM 那样具有专门的 <xref:System.Xml.XmlNodeType.Whitespace> 节点类型。  
   
 ## <a name="support-for-annotations"></a>对批注的支持  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 元素支持可扩展的批注集。 这对于跟踪有关元素的杂项信息（如架构信息、关于元素是否绑定到 UI 的信息或应用程序特定的任何其他信息）很有用。 有关详细信息，请参阅 [LINQ to XML 批注](http://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5)。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 元素支持可扩展的批注集。 这对于跟踪有关元素的杂项信息（如架构信息、关于元素是否绑定到 UI 的信息或应用程序特定的任何其他信息）很有用。 有关详细信息，请参阅 [LINQ to XML 批注](https://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5)。  
   
 ## <a name="support-for-schema-information"></a>对架构信息的支持  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的扩展方法提供对 XSD 验证的支持。 你可以验证 XML 树是否符合 XSD。 你可以用架构验证后信息集 (PSVI) 填充 XML 树。 有关详细信息，请参阅[如何：使用 XSD 进行验证](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b)和 <xref:System.Xml.Schema.Extensions>。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的扩展方法提供对 XSD 验证的支持。 你可以验证 XML 树是否符合 XSD。 你可以用架构验证后信息集 (PSVI) 填充 XML 树。 有关详细信息，请参阅[如何：使用 XSD 进行验证](https://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b)和 <xref:System.Xml.Schema.Extensions>。  
   
 ## <a name="see-also"></a>请参阅  
  [入门 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

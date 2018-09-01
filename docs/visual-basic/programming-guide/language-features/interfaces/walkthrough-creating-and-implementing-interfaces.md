@@ -8,15 +8,15 @@ helpviewer_keywords:
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
 ms.openlocfilehash: af9305deb60637b642d091501e743f2c7a57ccad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653606"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391076"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>演练：创建和实现接口 (Visual Basic)
 
-接口描述的属性、 方法和事件，特征，但保留最多结构或类的实现详细信息。  
+接口描述特征的属性、 方法和事件，但保留最多结构或类的实现详细信息。  
   
  本演练演示如何声明和实现接口。  
   
@@ -29,11 +29,11 @@ ms.locfileid: "33653606"
   
 1.  打开一个新的 Visual Basic Windows 应用程序项目。  
   
-2.  向项目添加新的模块，通过单击**添加模块**上**项目**菜单。  
+2.  将新模块添加到项目中，通过单击**添加模块**上**项目**菜单。  
   
-3.  命名新模块`Module1.vb`单击**添加**。 显示新的模块的代码。  
+3.  命名新模块`Module1.vb`然后单击**添加**。 显示新的模块的代码。  
   
-4.  定义一个接口，该接口名为`TestInterface`内`Module1`通过键入`Interface TestInterface`之间`Module`和`End Module`语句，并按 ENTER。 **代码编辑器**缩进`Interface`关键字，并将添加`End Interface`语句来形成代码块。  
+4.  定义一个名为的接口`TestInterface`内`Module1`通过键入`Interface TestInterface`之间`Module`和`End Module`语句，并按 ENTER。 **代码编辑器**缩进`Interface`关键字，并将添加`End Interface`语句以形成一个代码块。  
   
 5.  通过将下面的代码之间定义属性、 方法和事件接口`Interface`和`End Interface`语句：  
   
@@ -41,29 +41,29 @@ ms.locfileid: "33653606"
   
 ## <a name="implementation"></a>实现
 
- 你可能注意到用于声明的接口成员的语法是不同于用于声明类成员声明的语法。 这种差异反映接口不能包含实现代码的情况。  
+ 你可能会发现用于声明接口成员的语法不同于用来声明类成员的语法。 这一区别反映了这一事实，接口不能包含实现代码。  
   
 ### <a name="to-implement-the-interface"></a>若要实现接口
   
-1.  添加一个名为类`ImplementationClass`通过添加以下语句到`Module1`后面`End Interface`语句之前`End Module`语句，并按 ENTER:  
+1.  添加名为的类`ImplementationClass`通过将添加到下面的语句`Module1`后面`End Interface`语句之前`End Module`语句，并按 ENTER:  
   
      [!code-vb[VbVbalrOOP#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#99)]
   
-     如果你正在集成的开发环境中中,**代码编辑器**提供一条匹配`End Class`语句时按 ENTER。  
+     如果你正在使用集成的开发环境**代码编辑器**提供一条匹配`End Class`语句时按 ENTER。  
   
 2.  添加以下`Implements`语句`ImplementationClass`，命名的类接口实现：  
   
      [!code-vb[VbVbalrOOP#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#100)]
   
-     当分别列出类或结构的顶部其他项的`Implements`语句指示类或结构实现的接口。  
+     当分别列出了在类或结构的顶部的其他项的`Implements`语句指示类或结构实现的接口。  
   
-     如果你正在集成的开发环境中中,**代码编辑器**实现所需的类成员`TestInterface`时按 ENTER，并且你可以跳过下一步。  
+     如果你正在使用集成的开发环境**代码编辑器**实现所需的类成员`TestInterface`时按 enter 键，并且你可以跳过下一步。  
   
-3.  如果你未在集成的开发环境中工作，则必须实现该接口的所有成员`MyInterface`。 以下代码添加到`ImplementationClass`实现`Event1`， `Method1`，和`Prop1`:  
+3.  如果不使用集成的开发环境中，则必须实现该接口的所有成员`MyInterface`。 将以下代码添加到`ImplementationClass`来实现`Event1`， `Method1`，和`Prop1`:  
   
      [!code-vb[VbVbalrOOP#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#101)]
   
-     `Implements`语句指定的接口和所实现的接口成员。  
+     `Implements`语句命名的接口和实现的接口成员。  
   
 4.  完成的定义`Prop1`通过将私有字段添加到存储的属性值的类中：  
   
@@ -73,23 +73,23 @@ ms.locfileid: "33653606"
   
      [!code-vb[VbVbalrOOP#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#103)]
   
-     设置的值`pval`在属性 set 访问器。  
+     值设置`pval`在属性 set 访问器。  
   
      [!code-vb[VbVbalrOOP#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#104)]
   
-5.  完成的定义`Method1`通过添加下面的代码。  
+5.  完成的定义`Method1`通过添加以下代码。  
   
      [!code-vb[VbVbalrOOP#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#105)]
   
-### <a name="to-test-the-implementation-of-the-interface"></a>若要测试的接口的实现
+### <a name="to-test-the-implementation-of-the-interface"></a>若要测试接口的实现
   
-1.  右键单击你的项目中的启动窗体**解决方案资源管理器**，然后单击**查看代码**。 编辑器将显示为启动窗体的类。 默认情况下，启动窗体称为`Form1`。  
+1.  右键单击你的项目中的启动窗体**解决方案资源管理器**，然后单击**查看代码**。 编辑器会显示启动窗体的类。 默认情况下，启动窗体称为`Form1`。  
   
-2.  添加以下`testInstance`字段`Form1`类：  
+2.  添加以下`testInstance`字段改为`Form1`类：  
   
      [!code-vb[VbVbalrOOP#120](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#120)]
   
-     通过声明`testInstance`作为`WithEvents`、`Form1`类可以处理其事件。  
+     通过声明`testInstance`作为`WithEvents`，则`Form1`类可以处理其事件。  
   
 3.  添加到以下事件处理程序`Form1`类来处理引发的事件`testInstance`:  
   
@@ -99,13 +99,13 @@ ms.locfileid: "33653606"
   
      [!code-vb[VbVbalrOOP#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#107)]
   
-     `Test`过程创建的类的实现实例`MyInterface`，将分配到该实例`testInstance`字段中，设置一个属性，并运行通过接口的方法。  
+     `Test`过程将创建实现的类的实例`MyInterface`，将分配到该实例`testInstance`字段中，设置属性，并通过界面运行某个方法。  
   
-5.  添加代码来调用`Test`过程从`Form1 Load`启动窗体的过程：  
+5.  添加代码以调用`Test`过程从`Form1 Load`启动窗体的过程：  
   
      [!code-vb[VbVbalrOOP#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#108)]
   
-6.  运行`Test`过程通过按 F5。 将显示消息"Prop1 已设置为 9"。 之后你单击确定，显示"Method1 X 参数为 5"的消息。 单击确定，并显示"事件处理程序捕获事件"的消息。  
+6.  运行`Test`过程通过按 F5。 显示消息"Prop1 已设置为 9"。 之后，单击确定，显示"Method1 X 参数是 5"的消息。 单击确定，并显示"事件处理程序捕获到事件"的消息。  
   
 ## <a name="see-also"></a>请参阅
 

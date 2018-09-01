@@ -10,12 +10,12 @@ helpviewer_keywords:
 - image columns [Windows Forms], Windows Forms
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
-ms.openlocfilehash: b1c3fb5048419944507e9269c5ffd46fbe4a722b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7948ee69b35aaca111fa71e6f0540f2fcffc05dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532767"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388741"
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>如何：使用 Windows 窗体 DataGridView 控件中的图像列
 下面的代码示例显示如何在交互式用户界面 (UI) 中使用 <xref:System.Windows.Forms.DataGridView> 图像列。 该示例还演示了如何使用 <xref:System.Windows.Forms.DataGridViewImageColumn> 调整图像大小和布局。  
@@ -30,7 +30,7 @@ ms.locfileid: "33532767"
   
 -   对 System 和 System.Windows.Forms 程序集的引用。  
   
- 为 Visual Basic 或 Visual C# 中生成此示例从命令行有关的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 你也可以通过将代码粘贴到新项目中生成 Visual Studio 中的此示例。  另请参阅 [如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
 ms.openlocfilehash: bfaccf470d93a6a72451e7ad8b41e8dbb1171c71
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932465"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387615"
 ---
 # <a name="take-clause-visual-basic"></a>Take 子句 (Visual Basic)
 从集合的开头返回指定数量的连续元素。  

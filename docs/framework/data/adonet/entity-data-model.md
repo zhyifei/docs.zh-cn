@@ -2,12 +2,12 @@
 title: 实体数据模型
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: bb3c529a19ca96ea5695061fb1b612f9179899be
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e76527b497434ada06762fcab931522fffa2a16b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765238"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385589"
 ---
 # <a name="entity-data-model"></a>实体数据模型
 实体数据模型 (EDM) 是一组描述数据结构（而不管其存储形式如何）的概念。 EDM 借自于 Peter Chen 于 1976 年所描述的实体关系模型，但它是在实体关系模型基础上构建的并扩展了其传统用途。  
@@ -62,6 +62,6 @@ ms.locfileid: "32765238"
  [引用完整性约束](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>请参阅  
- [ADO.NET 实体数据模型工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
- [.edmx 文件概述](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [ADO.NET 实体数据模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
+ [.edmx 文件概述](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [CSDL 规范](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

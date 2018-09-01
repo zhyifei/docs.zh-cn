@@ -2,19 +2,19 @@
 title: 发现代理示例
 ms.date: 03/30/2017
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-ms.openlocfilehash: e9cbfcb717f502a849d4d508d13df6c00b95db58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fc0680bc6b61a6fe1b4b141c8b1e5081df5a124
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503179"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393016"
 ---
 # <a name="discovery-proxy-sample"></a>发现代理示例
 此示例演示如何创建发现代理的实现以存储有关现有服务的信息，并演示客户端如何可以查询该代理以获取信息。 此示例由三个项目组成：  
   
 -   **服务**： 简单 Windows Communication Foundation (WCF) 计算器服务向发现代理注册自身。  
   
--   **发现代理**： 发现代理服务的实现。  
+-   **发现代理**： 实现发现代理服务。  
   
 -   **客户端**： 要搜索的发现代理调用服务的 WCF 客户端应用程序。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "33503179"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   

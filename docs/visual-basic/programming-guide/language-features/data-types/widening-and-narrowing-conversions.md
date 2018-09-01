@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: e574c20ec259953fea4b11d8f65e546373a4fe8c
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: ad49e5443016dc4fed57be4a991df9f6d6095b55
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332569"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391389"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>扩大转换和收缩转换 (Visual Basic)
 类型转换的一个重要考虑因素是转换的结果是否在目标数据类型的范围内。  
@@ -114,5 +114,5 @@ shape = square
  [字符串和其他类型之间的转换](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [如何： 将对象转换为 Visual Basic 中的另一种类型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  [数组转换](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
  [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

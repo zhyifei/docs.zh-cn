@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: 8aad85ce3369f84e82100072bccf389b03c38221
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 50a4dff90dc1ce02869978f1da147e530cefc3e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754206"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393877"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>如何：使用 LINQ 调用存储过程 (Visual Basic)
 语言集成查询 (LINQ)，使得可以轻松地访问数据库的信息，包括数据库对象，如存储过程。  
@@ -70,7 +70,7 @@ ms.locfileid: "42754206"
   
 ## <a name="see-also"></a>请参阅  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查询](../../../../visual-basic/language-reference/queries/queries.md)  
+ [查询](../../../../visual-basic/language-reference/queries/index.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法 （O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [如何： 分配存储的过程以便执行更新、 插入和删除操作 （O/R 设计器）](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+ [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
+ [如何：分配存储过程以便执行更新、插入和删除操作（O/R 设计器）](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

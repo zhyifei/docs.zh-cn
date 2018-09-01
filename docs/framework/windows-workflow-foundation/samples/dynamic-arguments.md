@@ -2,12 +2,12 @@
 title: 动态自变量
 ms.date: 03/30/2017
 ms.assetid: 122ad479-d306-4602-a943-5aefe711329d
-ms.openlocfilehash: 5c00b9678191e4e88e9e41380d6b10be39684b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcf6b84889f3bd7d043f736336c39634cd5384c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517973"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387235"
 ---
 # <a name="dynamic-arguments"></a>动态自变量
 此示例演示如何实现由活动使用方而不是活动作者为其定义自变量的活动。 此示例是通过重写运行时构造活动元数据的方式来做到这一点的。  
@@ -41,6 +41,6 @@ ms.locfileid: "33517973"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\DynamicArguments`

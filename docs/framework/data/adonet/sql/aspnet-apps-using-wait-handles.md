@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: 867b225336da2188b8d1709c09d480317a6d02e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 608cec63f08869ebb3a6519f9de0fe7fa02a344f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356458"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386277"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>使用等待句柄的 ASP.NET 应用程序
 在您的应用程序一次只处理一个异步操作时，用于处理异步操作的回调和轮询模型十分有用。 等待模型提供了一种更灵活的方式来处理多个异步操作。 有两种等待模型，是根据用于实现它们的 <xref:System.Threading.WaitHandle> 方法命名的：等待（任何）模型和等待（所有）模型。  
@@ -581,4 +581,4 @@ void Button1_Click(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>请参阅  
  [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

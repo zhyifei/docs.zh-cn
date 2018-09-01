@@ -2,12 +2,12 @@
 title: '&lt;peerAuthentication&gt; 元素'
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: db544b1bbf46d0656b763d5be769d9521a299f1a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4fb8cc4989313afa3ef16c90b54e0feae1ccb71d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749811"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390327"
 ---
 # <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt; 元素
 指定用于对等客户端的身份验证选项。  
@@ -20,7 +20,7 @@ ms.locfileid: "32749811"
 \<行为 >  
 \<clientCredentials>  
 \<对等 >  
-\<PeerAuthentication >  
+\<peerAuthentication >  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |`customCertificateValidatorType`|可选的字符串。 一个用于验证自定义类型的类型和程序集。 当 `certificateValidationMode` 设置为 `Custom` 时，必须设置此属性。|  
 |`certifcateValidationMode`|可选的枚举。 指定用来验证凭据的三种模式之一。 如果设置为 `Custom`，则还必须提供 `customCertificateValidator`。 默认值为 `ChainTrust`。|  
 |`revocationMode`|可选的枚举。 用于检查吊销证书列表 (CRL) 的一种模式。 默认值为 `Online`。|  
-|`trustedStoreLocation`|可选的枚举。 两个系统存储位置之一：`LocalMachine` 或 `CurrentUser`。 在向客户端协商服务证书时使用此值。 验证针对**受信任人**将存储在指定的存储位置。 默认值为 `CurrentUser`。|  
+|`trustedStoreLocation`|可选的枚举。 两个系统存储位置之一：`LocalMachine` 或 `CurrentUser`。 在向客户端协商服务证书时使用此值。 对执行验证**受信任的人员**将存储在指定的存储位置。 默认值为 `CurrentUser`。|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 属性  
   
@@ -55,13 +55,13 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |值|描述|  
 |-----------|-----------------|  
-|枚举|下列值之一：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust` 和 `Custom`。 默认值为 `ChainTrust`。<br /><br /> 有关详细信息，请参阅[使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
+|枚举|下列值之一：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust` 和 `Custom`。 默认值为 `ChainTrust`。<br /><br /> 有关详细信息，请参阅[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
 |值|描述|  
 |-----------|-----------------|  
-|枚举|下列值之一：`NoCheck`、`Online` 和 `Offline`。 默认值为 `Online`。<br /><br /> 有关详细信息，请参阅[使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
+|枚举|下列值之一：`NoCheck`、`Online` 和 `Offline`。 默认值为 `Online`。<br /><br /> 有关详细信息，请参阅[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
@@ -110,6 +110,6 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
  [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [对等通道消息身份验证](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [对等通道自定义身份验证](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [对等通道消息身份验证](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [对等通道自定义身份验证](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

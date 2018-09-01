@@ -2,21 +2,21 @@
 title: IIS 和 WAS 中的基于配置的激活
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: aa4a3c682ab1d5d7ca0869fee588934b9ed2bf75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d15202a7d34f3246cd7679687b6a510252fe3541
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488938"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384790"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS 和 WAS 中的基于配置的激活
-通常当承载于 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 的 Windows Communication Foundation (WCF) 服务时，你必须提供.svc 文件。 .svc 文件包含该服务的名称以及可选的自定义服务主机工厂。 此附加文件将增加可管理性开销。 基于配置的激活功能不要求具有 .svc 文件，因此不会有相关开销。  
+通常当托管在 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 下的 Windows Communication Foundation (WCF) 服务，必须提供.svc 文件。 .svc 文件包含该服务的名称以及可选的自定义服务主机工厂。 此附加文件将增加可管理性开销。 基于配置的激活功能不要求具有 .svc 文件，因此不会有相关开销。  
   
 ## <a name="configuration-based-activation"></a>基于配置的激活  
- 基于配置的激活接受通常放置在 .svc 文件中的元数据并将其放置在 Web.config 文件中。 在 <`serviceHostingEnvironment`> 没有的元素 <`serviceActivations`> 元素。 在 <`serviceActivations`> 元素是一个或多个 <`add`> 元素、 一个用于每个托管服务。 <`add`> 元素包含使你能够设置的服务以及服务类型或服务主机工厂的相对地址的属性。 下面的配置示例代码演示如何使用此节。  
+ 基于配置的激活接受通常放置在 .svc 文件中的元数据并将其放置在 Web.config 文件中。 在 <`serviceHostingEnvironment`> 元素没有 <`serviceActivations`> 元素。 在 <`serviceActivations`> 元素有一个或多个 <`add`> 元素、 一个用于每个托管服务。 <`add`> 元素包含使你能够设置的服务以及服务类型或服务主机工厂的相对地址的属性。 下面的配置示例代码演示如何使用此节。  
   
 > [!NOTE]
->  每个 <`add`> 元素必须指定服务或工厂特性。 允许同时指定服务特性和工厂特性。  
+>  每个 <`add`> 元素中必须指定服务特性或工厂特性。 允许同时指定服务特性和工厂特性。  
   
 ```xml  
 <serviceHostingEnvironment>  
@@ -30,7 +30,7 @@ ms.locfileid: "33488938"
   
 > [!NOTE]
 >  -   使用基于配置的激活时，不支持 .svc 文件中的内联代码。  
-> -   `relativeAddress`属性必须设置为一个相对地址，如"\<子目录 > / service.svc"或"~ /\<子 directory/service.svc"。  
+> -   `relativeAddress`属性必须设置为相对地址如"\<子目录 > / service.svc"或"~ /\<子 /service.svc"。  
 > -   如果注册的相对地址不具有与 WCF 关联的已知扩展，则会引发配置异常。  
 > -   指定的相对地址相对于虚拟应用程序的根目录。  
 > -   由于配置具有分层模型，因此虚拟应用程序继承计算机和站点级别的已注册相对地址。  
@@ -42,4 +42,4 @@ ms.locfileid: "33488938"
  [托管服务](../../../../docs/framework/wcf/hosting-services.md)  
  [承载工作流服务概述](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
  [\<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)  
- [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

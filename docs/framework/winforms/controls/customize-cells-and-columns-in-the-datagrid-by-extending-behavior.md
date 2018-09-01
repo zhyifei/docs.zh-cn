@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 0a5d2dd5ac72d5199d143c6173e28457e1a80f6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c183cb03535832dce9b2c3ed97eb4d68fab19796
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529128"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385759"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>如何：通过扩展 Windows 窗体 DataGridView 控件中单元格和列的行为和外观对其进行自定义
 <xref:System.Windows.Forms.DataGridView> 控件提供使用属性、事件和伴生类自定义其外观和行为的多种方式。 有时，你可能对这些功能不提供的单元格有要求。 你可以创建自己的自定义 <xref:System.Windows.Forms.DataGridViewCell> 类以提供扩展功能。  
@@ -68,7 +68,7 @@ ms.locfileid: "33529128"
   
 -   对 System、System.Windows.Forms 和 System.Drawing 程序集的引用。  
   
- 为 Visual Basic 或 Visual C# 中生成此示例从命令行有关的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 你也可以通过将代码粘贴到新项目中生成 Visual Studio 中的此示例。  另请参阅 [如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  

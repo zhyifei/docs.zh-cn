@@ -2,20 +2,20 @@
 title: 设计模式：基于列表的发布-订阅
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: ee05be76607975bd771c0e6f83c242ad944251df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2807cc8cc197ff39417e3b6375ebbd595cf73c54
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506527"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387541"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>设计模式：基于列表的发布-订阅
-本示例演示作为 Windows Communication Foundation (WCF) 程序实现的基于列表的发布-订阅模式。  
+此示例演示基于列表的发布-订阅模式实现作为 Windows Communication Foundation (WCF) 的程序。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 基于列表的发布-订阅设计模式在 Microsoft 模式和实践出版物中，所述[集成模式](http://go.microsoft.com/fwlink/?LinkId=95894)。 发布-订阅模式可以向已经订阅某一信息主题的接收者群体传递信息。 基于列表的发布-订阅可维护一份订户列表。 如果有要共享的信息，则会向列表上的每个订户发送一份副本。 本示例演示基于列表的动态发布-订阅模式，在此模式下客户端可以根据需要随时订阅或取消订阅。  
+ 基于列表的发布-订阅设计模式 Microsoft 模式和实施方案发布中所述[集成模式](https://go.microsoft.com/fwlink/?LinkId=95894)。 发布-订阅模式可以向已经订阅某一信息主题的接收者群体传递信息。 基于列表的发布-订阅可维护一份订户列表。 如果有要共享的信息，则会向列表上的每个订户发送一份副本。 本示例演示基于列表的动态发布-订阅模式，在此模式下客户端可以根据需要随时订阅或取消订阅。  
   
  基于列表的发布-订阅示例由客户端、服务和数据源程序组成。 可以有多个客户端和多个数据源程序同时运行。 客户端订阅服务、接收通知，然后取消订阅。 数据源程序向服务发送将与所有当前订户共享的信息。  
   
@@ -112,25 +112,25 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例  
   
-1.  测试是否可以访问通过输入以下地址使用浏览器的服务： http://localhost/servicemodelsamples/service.svc。 在响应中应显示确认页。  
+1.  测试是否可以访问使用浏览器通过输入以下地址的服务： http://localhost/servicemodelsamples/service.svc。 在响应中应显示确认页。  
   
-2.  从 \client\bin 运行 Client.exe\\，在语言特定文件夹。 客户端活动将显示在客户端控制台窗口上。 启动多个客户端。  
+2.  从 \client\bin 运行 Client.exe\\，从特定于语言的文件夹下。 客户端活动将显示在客户端控制台窗口上。 启动多个客户端。  
   
-3.  从 \datasource\bin 中运行 Datasource.exe\\，在语言特定文件夹。 数据源活动将显示在控制台窗口中。 数据源向服务发送信息后，信息应传递到每个客户端。  
+3.  从 \datasource\bin 运行 Datasource.exe\\，从特定于语言的文件夹下。 数据源活动将显示在控制台窗口中。 数据源向服务发送信息后，信息应传递到每个客户端。  
   
-4.  如果客户端、 数据源和服务计划不能进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端、 数据源和服务程序能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-run-the-sample-across-machines"></a>跨计算机运行示例  
   
 1.  安装服务计算机：  
   
-    1.  在服务计算机上创建一个名为 ServiceModelSamples 的虚拟目录。 批处理文件从 Setupvroot.bat[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可用来创建磁盘目录和虚拟目录。  
+    1.  在服务计算机上创建一个名为 ServiceModelSamples 的虚拟目录。 批处理文件 Setupvroot.bat[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可用于创建磁盘目录和虚拟目录。  
   
     2.  从 %SystemDrive%\Inetpub\wwwroot\servicemodelsamples 中将服务程序文件复制到服务计算机上的 ServiceModelSamples 虚拟目录中。 确保在 \bin 目录中包括这些文件。  
   
@@ -157,7 +157,7 @@ public class PriceChangeEventArgs : EventArgs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
   

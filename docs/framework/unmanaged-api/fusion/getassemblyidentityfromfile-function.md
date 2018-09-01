@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6dfb0b404413351761d269c800be19e75acfb41f
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258688"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390140"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile 函数
 获取一个指向`IUnknown`对象具有指定`IID`中程序集在指定的文件路径。  

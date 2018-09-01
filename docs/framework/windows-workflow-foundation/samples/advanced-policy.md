@@ -2,11 +2,12 @@
 title: 高级策略
 ms.date: 03/30/2017
 ms.assetid: 75a22c88-5e54-4ae8-84cb-fbb22a612f0a
-ms.openlocfilehash: 81cf2fb428833d4ca8cccf197011b69f2ccf3108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: becdc28affd877239474d6f0f007a480297bccb8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387884"
 ---
 # <a name="advanced-policy"></a>高级策略
 此示例扩展了简单策略示例。 除了简单策略示例中的住户折扣和企业折扣规则外，还添加了若干新规则。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\AdvancedPolicy`  
   

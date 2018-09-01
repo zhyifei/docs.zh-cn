@@ -5,22 +5,22 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 8310e7c465d0e3494482b6a38a7b2a67b67ae842
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3b051c7ea152606721388ea35b6f508eada1c5d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495361"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385172"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>如何：创建开发期间使用的临时证书
-时开发安全服务或使用 Windows Communication Foundation (WCF) 客户端，它通常是需要提供 X.509 证书以用作凭据。 该证书通常是证书链的一部分，在计算机的受信任的根证书颁发机构存储区中可找到根证书颁发机构。 拥有一个证书链，使您可以限定一组证书，其中根证书颁发机构通常来自于您的组织或业务单元。 若要在开发时模拟此情况，请创建两个证书以满足安全要求。 第一个证书是自签名证书，放置在受信任的根证书颁发机构存储区中；第二个证书是从第一个证书创建的，放置在本地计算机位置的个人存储区中或当前用户位置的个人存储区中。 本主题指导你逐步完成使用 [证书创建工具 (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185)创建这两个证书的步骤，该工具由 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK 提供。  
+开发时的安全服务或使用 Windows Communication Foundation (WCF) 客户端，它通常是需要提供要用作凭据的 X.509 证书。 该证书通常是证书链的一部分，在计算机的受信任的根证书颁发机构存储区中可找到根证书颁发机构。 拥有一个证书链，使您可以限定一组证书，其中根证书颁发机构通常来自于您的组织或业务单元。 若要在开发时模拟此情况，请创建两个证书以满足安全要求。 第一个证书是自签名证书，放置在受信任的根证书颁发机构存储区中；第二个证书是从第一个证书创建的，放置在本地计算机位置的个人存储区中或当前用户位置的个人存储区中。 本主题将指导完成创建使用这两个证书的步骤[证书创建工具 (MakeCert.exe)](https://go.microsoft.com/fwlink/?LinkId=248185)，其中提供的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]SDK。  
   
 > [!IMPORTANT]
 >  证书创建工具生成的证书仅供测试使用。 部署服务或客户程序时，请确保使用证书颁发机构提供的适当证书。 这可能是来自于组织或第三方的 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 证书服务器。  
 >   
->  默认情况下， [Makecert.exe （证书创建工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)创建的证书的根证书颁发机构称为"根证书代理 **。"** 的证书。由于“根证书代理”不是受信任的根证书颁发机构存储区，这会使这些证书不安全。 创建一个放置在受信任的根证书颁发机构存储区的自签名证书，您可以创建一个与您的部署环境极其类似的开发环境。  
+>  默认情况下[Makecert.exe （证书创建工具）](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)创建名为根证书颁发机构的证书"根机构 **。"** 的证书。由于“根证书代理”不是受信任的根证书颁发机构存储区，这会使这些证书不安全。 创建一个放置在受信任的根证书颁发机构存储区的自签名证书，您可以创建一个与您的部署环境极其类似的开发环境。  
   
- 有关创建和使用证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 有关使用证书作为凭据的详细信息，请参阅[保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 有关使用 Microsoft Authenticode 技术的教程，请参阅 [Authenticode Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=88919)（Authenticode 概述和教程）。  
+ 有关创建和使用证书的详细信息，请参阅[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 有关使用证书作为凭据的详细信息，请参阅[保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 有关使用 Microsoft Authenticode 技术的教程，请参阅[Authenticode 概述和教程](https://go.microsoft.com/fwlink/?LinkId=88919)。  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>创建一个自签名根证书颁发机构证书并导出私钥  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33495361"
   
 #### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>在受信任的根证书颁发机构中安装自签名证书  
   
-1.  打开证书管理单元。 有关详细信息，请参阅[如何： 使用 mmc 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+1.  打开证书管理单元。 有关详细信息，请参阅[如何：使用 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
 2.  打开要存储证书的文件夹， **“本地计算机”** 或 **“当前用户”**。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "33495361"
     </bindings>  
     ```  
   
- 在客户端的配置文件，使用下面的 XML 指定证书在用户的存储中找到，并且可以通过搜索"CohoWinery。"的值在 SubjectName 字段中找到  
+ 在客户端的配置文件，使用下面的 XML 指定的证书位于用户的存储，以及可以通过搜索"CohoWinery。"的值在 SubjectName 字段中找到  
   
 ```xml  
 <behaviors>  

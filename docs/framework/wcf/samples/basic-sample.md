@@ -2,12 +2,12 @@
 title: 基本示例
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 67c626dfa511251043da81e025aab20578be3016
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c99b4955dcc00015d54391dcb509b312190ddab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502133"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392245"
 ---
 # <a name="basic-sample"></a>基本示例
 此示例演示如何使服务可发现以及如何搜索和调用可发现服务。 此示例由两个项目组成：服务项目和客户端项目。  
@@ -82,7 +82,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1.  此示例使用 HTTP 终结点，若要运行此示例，必须添加正确的 URL ACL。 有关详细信息，请参阅[配置 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353)。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用您的域和用户名替换以下参数。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  此示例使用 HTTP 终结点，若要运行此示例，必须添加正确的 URL ACL。 有关详细信息，请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用您的域和用户名替换以下参数。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 打开 Basic.sln 并生成示例。  
   
@@ -97,7 +97,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  
   

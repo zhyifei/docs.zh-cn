@@ -2,18 +2,18 @@
 title: 采用 Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 3ca2561356fb57fa685c778e509682581e317092
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 5773d2687eb06cfc562dbe25fa9b94864b1b3a49
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999328"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389607"
 ---
 # <a name="adopting-windows-communication-foundation"></a>采用 Windows Communication Foundation
 
 您可以选择要用于新开发的 Windows Communication Foundation (WCF)，同时继续维护现有应用程序开发使用 ASP.NET。 因为 WCF 将是最合适的选择与在任何情况下.NET framework 构建应用程序之间的通信，所以它可以充当以解决各种软件通信问题的方式的标准工具 ASP.NET不能。
 
-新的 WCF 应用程序可以部署在作为现有的 ASP.NET Web 服务在同一台计算机上。 如果现有的 ASP.NET Web 服务使用的.NET Framework 2.0 版之前的版本，然后可以使用 ASP.NET IIS 注册工具来有选择地将.NET Framework 2.0 部署到 IIS 应用程序是用来托管新的 WCF 应用程序。 该工具所述[ASP.NET IIS 注册工具 (Aspnet_regiis.exe)](http://go.microsoft.com/fwlink/?LinkId=94687)，并具有内置于 IIS 6.0 管理控制台用户界面。
+新的 WCF 应用程序可以部署在作为现有的 ASP.NET Web 服务在同一台计算机上。 如果现有的 ASP.NET Web 服务使用的.NET Framework 2.0 版之前的版本，然后可以使用 ASP.NET IIS 注册工具来有选择地将.NET Framework 2.0 部署到 IIS 应用程序是用来托管新的 WCF 应用程序。 该工具所述[ASP.NET IIS 注册工具 (Aspnet_regiis.exe)](https://go.microsoft.com/fwlink/?LinkId=94687)，并具有内置于 IIS 6.0 管理控制台用户界面。
 
 WCF 可以用于通过添加 WCF 服务配置为在 ASP.NET 兼容性模式下运行在 IIS 中的现有 ASP.NET Web 服务应用程序添加到现有的 ASP.NET Web 服务的新功能。 由于 ASP.NET 兼容模式下，新的 WCF 服务的代码可以访问和使用更新预先存在的 ASP.NET 代码，与相同的应用程序状态信息<xref:System.Web.HttpContext>类。 这些应用程序还可以共享相同的类库。
 

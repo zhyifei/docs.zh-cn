@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
-ms.openlocfilehash: 49bf94959b2efb19ff6e3a273f4cd09905089b31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72ce238fdcbdcb81fc710a21d1675de67f4adc15
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540701"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393545"
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip 控件（Windows 窗体）
 <xref:System.Windows.Forms.ToolStrip> 控件是可承载 Windows 窗体应用程序中菜单、控件和用户控件的工具栏。  
@@ -68,22 +68,22 @@ ms.locfileid: "33540701"
  描述如何创建支持 <xref:System.Windows.Forms.ToolStrip> 控件和菜单合并功能的 MDI 窗体。  
   
  [如何：创建采用专业样式的 ToolStrip 控件](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)  
- 介绍如何使用<xref:System.Windows.Forms.ToolStripProfessionalRenderer>类创建模拟的复合控件**导航窗格中**Microsoft Outlook® 提供的。  
+ 介绍如何使用<xref:System.Windows.Forms.ToolStripProfessionalRenderer>类来创建复合控件，以模拟**导航窗格**Microsoft Outlook® 提供的。  
   
  [如何：实现自定义 ToolStripRenderer](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)  
  描述如何通过实现从 <xref:System.Windows.Forms.ToolStripRenderer> 中派生的类来自定义 <xref:System.Windows.Forms.ToolStrip> 控件的外观。  
   
--   [如何： 创建含有标准项使用设计器的基本 Windows 窗体 ToolStrip](http://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
+-   [如何： 创建含有标准项使用设计器的基本 Windows 窗体 ToolStrip](https://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
   
--   [如何：将 ToolStrip 从 ToolStripContainer 移出到窗体上](http://msdn.microsoft.com/library/ms171701\(v=vs.110\))  
+-   [如何：将 ToolStrip 从 ToolStripContainer 移出到窗体上](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
--   [演练：创建采用专业样式的 ToolStrip 控件](http://msdn.microsoft.com/library/ms233664\(v=vs.110\))  
+-   [演练：创建采用专业样式的 ToolStrip 控件](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
--   [演练：创建启用了菜单合并功能和 ToolStrip 控件的 MDI 窗体](http://msdn.microsoft.com/library/ms233676\(v=vs.110\))  
+-   [演练：创建启用了菜单合并功能和 ToolStrip 控件的 MDI 窗体](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
--   [ToolStrip 任务对话框](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [ToolStrip 任务对话框](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
   
--   [ToolStrip 项集合编辑器](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [ToolStrip 项集合编辑器](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.ToolStrip> 类  

@@ -2,12 +2,12 @@
 title: '&lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: 881a7d0890991aa4f542ff92c2a721b9d9cb7b29
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5e4c19c48709ffd81cb00e9820e6c3cdb297ec7e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749434"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391715"
 ---
 # <a name="ltcommonparametersgt"></a>&lt;commonParameters&gt;
 表示在多个服务之间全局使用的参数的集合。 此集合通常将包括可由持久性服务共享的数据库连接字符串。  
@@ -45,7 +45,7 @@ ms.locfileid: "32749434"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<workflowRuntime>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|指定的实例的设置<xref:System.Workflow.Runtime.WorkflowRuntime>用于承载基于工作流的 Windows Communication Foundation (WCF) 服务。|  
+|[\<workflowRuntime>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|指定的实例设置<xref:System.Workflow.Runtime.WorkflowRuntime>用于承载基于工作流的 Windows Communication Foundation (WCF) 服务。|  
   
 ## <a name="remarks"></a>备注  
  `<commonParameters>` 元素定义在多个服务之间全局使用的任何参数，例如，使用 `ConnectionString` 时的<xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>。  
@@ -73,7 +73,7 @@ ms.locfileid: "32749434"
 </WorkflowRuntime>  
 ```  
   
- 请注意，`EnableRetries`参数可设置在全局级别 (如中所示*CommonParameters*部分) 或为个别服务支持`EnableRetries`(中所示*服务*部分)。  
+ 请注意，`EnableRetries`参数可以设置在全局级别 (如中所示*CommonParameters*部分) 或为个别支持的服务`EnableRetries`(如中所示*服务*部分)。  
   
  下面的示例代码演示如何通过编程方式更改公共参数。  
   
@@ -85,7 +85,7 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- 有关如何使用配置文件来控制的行为的详细信息<xref:System.Workflow.Runtime.WorkflowRuntime>对象的 Windows Workflow Foundation 宿主应用程序，请参阅[工作流配置文件](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)。  
+ 有关使用配置文件来控制行为的详细信息<xref:System.Workflow.Runtime.WorkflowRuntime>对象的 Windows Workflow Foundation 主机应用程序，请参阅[工作流配置文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
   
 ## <a name="example"></a>示例  
   
@@ -102,5 +102,5 @@ config.Save();
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
  <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
- [工作流配置文件](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
+ [工作流配置文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)

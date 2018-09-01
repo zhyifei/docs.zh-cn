@@ -1,6 +1,6 @@
 ---
 title: WritePropertyValue 函数 （非托管 API 参考）
-description: WritePropertyValue 函数将字节写入属性。
+description: WritePropertyValue 函数将字节写入到一个属性。
 ms.date: 11/06/2017
 api_name:
 - WritePropertyValue
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f2a4eb444967390492be33b25866de8a93a1698c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461079"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393902"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 函数
-将指定的数目的字节写入由属性句柄识别的属性。
+将指定的字节数写入到由属性句柄标识的属性。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -43,25 +43,25 @@ HRESULT WritePropertyValue (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]未使用此参数。
+[in]此参数是未使用。
 
 `ptr`  
-[in]指向的指针[IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx)实例。
+[in]一个指向[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)实例。
 
 `lHandle`  
-[in]一个整数，包含标识此属性的句柄。 可通过调用检索句柄[GetPropertyHandle](getpropertyhandle.md)函数。   
+[in]一个整数，包含标识此属性的句柄。 可以通过调用来检索该句柄[GetPropertyHandle](getpropertyhandle.md)函数。   
 
 `lNumBytes`  
-[in]正在写入的属性的字节数。 请参阅[备注](#remarks)部分以了解更多信息。
+[in]正在写入到的属性的字节数。 请参阅[备注](#remarks)部分，了解详细信息。
 
 `pHandle`   
 [out]指向包含数据的字节数组的指针。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
+此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
 |`WBEM_E_TYPE_MISMATCH` | 0x80041005 | 出现类型不匹配。 |
@@ -69,18 +69,18 @@ HRESULT WritePropertyValue (
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::WritePropertyValue](https://msdn.microsoft.com/library/aa391783(v=vs.85).aspx)方法。
+此函数包装对的调用[IWbemClassObject::WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue)方法。
 
-使用此函数可设置字符串和所有其他非`DWORD`或非-`QWORD`数据。
+使用此函数来设置字符串和所有其他非`DWORD`或非-`QWORD`数据。
 
-对于非字符串属性值，`lNumBytes`必须是指定的属性类型的正确的数据大小。 字符串属性值，`lNumBytes`必须是长度以字节为单位，指定的字符串和字符串本身必须为偶数长度以字节为单位，以 null 终止字符开始便遵循。
+对于非字符串属性值，`lNumBytes`必须是指定的属性类型的正确的数据大小。 有关字符串属性值，`lNumBytes`必须是长度以字节为单位，指定的字符串和字符串本身必须将甚至长度以字节为单位的并且后跟一个 null 终止字符。
 
 ## <a name="requirements"></a>要求  
 **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅  
 [WMI 和性能计数器 （非托管 API 参考）](index.md)

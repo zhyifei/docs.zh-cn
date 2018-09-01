@@ -8,16 +8,16 @@ ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 571d94c7654038c7ea47721caa35c41d31983016
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02244043d802029364c7a725940f03ecdd21f573
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410044"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391507"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 自动化客户端的控件模式映射
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题列出了控件类型及其关联的控件模式。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "33410044"
 |控件类型|支持|有条件支持|不支持|  
 |------------------|---------------|-------------------------|-------------------|  
 |Button|无|调用、切换、展开折叠|无|  
-|Calendar|网格、表|选择、滚动|值|  
+|Calendar|网格、表|选择、滚动|“值”|  
 |复选框|切换|无|无|  
 |组合框|展开/折叠|选择、值|Scroll|  
 |数据网格|Grid|滚动、选择、表|无|  
@@ -48,7 +48,7 @@ ms.locfileid: "33410044"
 |Group|无|展开/折叠|无|  
 |Header|无|Transform|无|  
 |标头项|无|转换、调用|无|  
-|超链接|调用|值|无|  
+|超链接|调用|“值”|无|  
 |图像|无|网格项、表项|调用、选择项|  
 |列表|无|网格、多个视图、滚动、选择|表|  
 |列表项|选择项|展开折叠、网格项、调用、滚动项、切换、值|无|  
@@ -67,7 +67,7 @@ ms.locfileid: "33410044"
 |Tab|选择|Scroll|无|  
 |选项卡项|选择项|无|调用|  
 |表|网格、网格项、表、表项|无|无|  
-|Text|无|网格项、表项、文本|值|  
+|Text|无|网格项、表项、文本|“值”|  
 |Thumb|Transform|无|无|  
 |标题栏|无|无|无|  
 |工具栏|无|停靠、展开折叠、转换|无|  

@@ -2,15 +2,15 @@
 title: 编程模型项树
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: c5bbbba4f599801c5bffdbd19e14295ff239dfcd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a24e52ec2b7cab10471d756a721611c6dd10516e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516469"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393483"
 ---
 # <a name="programming-model-item-tree"></a>编程模型项树
-此示例演示如何导航<xref:System.Activities.Presentation.Model.ModelItem>树进行从 Windows Presentation Foundation (WPF) 树视图中的声明性数据绑定。  
+此示例演示如何导航<xref:System.Activities.Presentation.Model.ModelItem>树使用的 Windows Presentation Foundation (WPF) 树视图中的声明性数据绑定。  
   
 ## <a name="sample-details"></a>示例详细信息  
  <xref:System.Activities.Presentation.Model.ModelItem> 树是 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 基础结构用来公开有关要编辑的基础实例的数据的抽象。 下图描述了 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 中的基础结构的各层。  
@@ -31,11 +31,11 @@ justAdded.Properties["DisplayName"].SetValue("new name");
   
 1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开 ProgrammingModelItemTree.sln 解决方案。  
   
-2.  生成解决方案，通过选择**生成解决方案**从**生成**菜单。  
+2.  通过选择生成解决方案**生成解决方案**从**生成**菜单。  
   
 3.  按 F5 运行该应用程序。 这将显示 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 格式。  
   
-4.  单击**加载 WF**按钮加载<xref:System.Activities.Presentation.Model.ModelItem>并将其绑定到树视图。  
+4.  单击**加载 WF**按钮以加载<xref:System.Activities.Presentation.Model.ModelItem>并将其绑定到树视图。  
   
 5.  单击**更改模型项树**按钮执行前面的代码，将项添加到树并设置一个属性。  
   
@@ -44,7 +44,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   

@@ -10,28 +10,28 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 068a85a5fffd9b7463875695a4b494340ef66cd9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ad8d071a91edaef184c4cc1fa28298f8ec3d71a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548215"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391761"
 ---
 # <a name="packaging-fonts-with-applications"></a>将字体与应用程序一起打包
-本主题概述如何为包版本，如果有你[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  
+本主题提供概述了如何使用包字体在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  
   
 > [!NOTE]
->  与大多数软件类型一样，字体文件也采用许可模式，而不是出售。 来控制字体使用的许可证而异供应商，但通常大多数许可证，包括那些涵盖字体[!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)]提供与应用程序和[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]，不允许的字体嵌入应用程序中或以其他方式重新分发。 因此，开发人员有责任确保自己具备必要的许可权，可以在应用程序中嵌入相应的字体或者以其他方式重新分布。  
+>  与大多数软件类型一样，字体文件也采用许可模式，而不是出售。 许可证来控制字体使用不同供应商，但一般情况下大多数许可证，包括那些涵盖字体[!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)]提供与应用程序和[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]，不允许将字体嵌入应用程序中或以其他方式重新分发。 因此，开发人员有责任确保自己具备必要的许可权，可以在应用程序中嵌入相应的字体或者以其他方式重新分布。  
   
 
   
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>字体打包简介  
- 你可以轻松地打包为资源内的字体你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序显示用户界面文本和其他类型的文本基于内容。 字体可以与应用程序的程序集文件分开，也可以嵌入到这些程序集文件中。 还可以创建纯资源字体库，以供应用程序引用。  
+ 您可以轻松地字体作为资源打包在您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序显示用户界面文本和其他类型的文本基于内容。 字体可以与应用程序的程序集文件分开，也可以嵌入到这些程序集文件中。 还可以创建纯资源字体库，以供应用程序引用。  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 和[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体包含类型标志，fsType，指示字体嵌入许可权限的字体。 但是，这个类型标志仅引用存储在文档中的嵌入字体，而不引用嵌入到应用程序中的字体。 你可以检索通过创建嵌入字体的权限的字体<xref:System.Windows.Media.GlyphTypeface>对象和引用其<xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>属性。 请参阅"OS/2 和 Windows 的度量值"部分的[OpenType 规范](http://www.microsoft.com/typography/otspec/os2.htm)有关 fsType 标志的详细信息。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 和[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体包含类型标志 fsType，指示字体的字体嵌入许可权。 但是，这个类型标志仅引用存储在文档中的嵌入字体，而不引用嵌入到应用程序中的字体。 您可以检索字体的字体嵌入字体的权限通过创建<xref:System.Windows.Media.GlyphTypeface>对象并引用其<xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>属性。 请参阅的"OS/2 和 Windows 指标"部分[OpenType 规范](https://www.microsoft.com/typography/otspec/os2.htm)有关 fsType 标志的详细信息。  
   
- [Microsoft 版式](http://www.microsoft.com/typography/links/)网站包括可帮助你查找特定字体供应商或字体供应商查找自定义工作的联系信息。  
+ [Microsoft 版式](https://www.microsoft.com/typography/links/)网站包括可帮助您找到特定的字体供应商或查找自定义工作的字体供应商的联系信息。  
   
 <a name="adding_fonts_as_content_items"></a>   
 ## <a name="adding-fonts-as-content-items"></a>将字体作为内容项添加  
@@ -49,7 +49,7 @@ ms.locfileid: "33548215"
 </Project>  
 ```  
   
- 为了确保应用程序可以在运行时使用字体，这些字体必须能够从应用程序的部署目录中访问。 `<CopyToOutputDirectory>`应用程序的项目文件中的元素，你可以将字体自动复制到应用程序部署目录在生成过程。 以下项目文件示例演示如何将字体复制到部署目录中。  
+ 为了确保应用程序可以在运行时使用字体，这些字体必须能够从应用程序的部署目录中访问。 `<CopyToOutputDirectory>`应用程序的项目文件中的元素可用于将字体自动复制到应用程序部署目录在生成过程。 以下项目文件示例演示如何将字体复制到部署目录中。  
   
 ```xml  
 <ItemGroup>  
@@ -83,19 +83,19 @@ ms.locfileid: "33548215"
 ```  
   
 > [!NOTE]
->  当将字体作为资源添加到你的应用程序时，请确保您正在设置`<Resource>`元素，而不`<EmbeddedResource>`应用程序的项目文件中的元素。 `<EmbeddedResource>` ，不支持的生成操作的元素。  
+>  时将字体作为资源添加到你的应用程序时，请确保您设置`<Resource>`元素，而不`<EmbeddedResource>`应用程序的项目文件中的元素。 `<EmbeddedResource>`不支持生成操作的元素。  
   
  以下标记示例演示如何引用应用程序的字体资源。  
   
  [!code-xaml[FontSnippets#FontPackageSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
   
 ### <a name="referencing-font-resource-items-from-code"></a>在代码中引用字体资源项  
- 若要从代码中引用字体资源项，必须提供两个部分构成字体资源引用： 基[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]; 和字体位置引用。 这些值用作参数<xref:System.Windows.Media.FontFamily.%23ctor%2A>方法。 下面的代码示例演示如何引用调用项目子目录中的应用程序的字体资源`resources`。  
+ 若要从代码中引用字体资源项，必须提供两个部分组成的字体资源引用： 基[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]; 和字体位置引用。 这些值用作参数<xref:System.Windows.Media.FontFamily.%23ctor%2A>方法。 下面的代码示例演示如何引用名为的项目子目录中的应用程序的字体资源`resources`。  
   
  [!code-csharp[FontSnippets#FontPackageSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
  [!code-vb[FontSnippets#FontPackageSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
   
- 基[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]可以包括字体资源所在的位置的应用程序子目录。 在这种情况下，字体位置引用不需要指定一个目录，但必须包括一个前导"`./`"，它指示字体资源已由基类指定的同一目录中[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]。 以下代码示例演示另一种引用字体资源项的方法，该示例与上面的代码示例等效。  
+ 基[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]可以包括字体资源所在的应用程序子目录。 在这种情况下，字体位置引用不需要指定一个目录，但必须包括前缀"`./`"，指示字体资源是指定的基的相同目录中[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]。 以下代码示例演示另一种引用字体资源项的方法，该示例与上面的代码示例等效。  
   
  [!code-csharp[FontSnippets#FontPackageSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
  [!code-vb[FontSnippets#FontPackageSnippet5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
@@ -121,7 +121,7 @@ ms.locfileid: "33548215"
  [!code-vb[FontSnippets#FontPackageSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/pages/homepage.xaml.vb#fontpackagesnippet4)]  
   
 ### <a name="enumerating-fonts-in-an-application"></a>在应用程序中枚举字体  
- 若要为你的应用程序中的资源项枚举字体，请使用<xref:System.Windows.Media.Fonts.GetFontFamilies%2A>或<xref:System.Windows.Media.Fonts.GetTypefaces%2A>方法。 下面的示例演示如何使用<xref:System.Windows.Media.Fonts.GetFontFamilies%2A>方法返回的集合<xref:System.Windows.Media.FontFamily>从应用程序字体位置的对象。 在本示例中，应用程序包含一个名为“resources”的子目录。  
+ 若要枚举字体作为资源应用程序中的项，请使用<xref:System.Windows.Media.Fonts.GetFontFamilies%2A>或<xref:System.Windows.Media.Fonts.GetTypefaces%2A>方法。 下面的示例演示如何使用<xref:System.Windows.Media.Fonts.GetFontFamilies%2A>方法返回的集合<xref:System.Windows.Media.FontFamily>从应用程序字体位置的对象。 在本示例中，应用程序包含一个名为“resources”的子目录。  
   
  [!code-csharp[FontSnippets#FontsSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
  [!code-vb[FontSnippets#FontsSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
@@ -154,17 +154,17 @@ ms.locfileid: "33548215"
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  此 SDK 包含一组示例[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]你可以使用的字体[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 这些字体是在纯资源库中定义的。 有关详细信息，请参阅[示例 OpenType 字体包](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)。  
+>  此 SDK 包含一组示例[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]您可以使用的字体[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 这些字体是在纯资源库中定义的。 有关详细信息，请参阅[示例 OpenType 字体包](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)。  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>字体的使用限制  
- 下表介绍了打包和字体中使用的几个限制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序：  
+ 以下列表介绍上打包和字体中使用的几个限制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序：  
   
--   **字体嵌入权限位：**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序不检查或实施任何字体嵌入权限位。 请参阅[Introduction_to_Packing 字体](#introduction_to_packaging_fonts)部分以了解更多信息。  
+-   **字体嵌入权限位：**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序不检查或实施任何字体嵌入权限位。 请参阅[Introduction_to_Packing Fonts](#introduction_to_packaging_fonts)部分，了解详细信息。  
   
 -   **源字体站点：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序不允许对 http 或 ftp 的字体引用[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]。  
   
--   **使用包的绝对 URI： 表示法：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序不允许您创建<xref:System.Windows.Media.FontFamily>对象以编程方式使用"包:"作为一部分绝对[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]为字体的引用。 例如，`"pack://application:,,,/resources/#Pericles Light"`是一个无效的字体引用。  
+-   **使用包的绝对 URI： 表示法：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序不允许您创建<xref:System.Windows.Media.FontFamily>对象以编程方式使用"pack:"作为一部分绝对[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]对字体引用。 例如，`"pack://application:,,,/resources/#Pericles Light"`是无效的字体引用。  
   
 -   **自动嵌入字体：** 在设计时，不支持搜索应用程序对字体的使用情况，而且不支持自动在应用程序的资源中嵌入字体。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "33548215"
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Documents.Typography>  
  <xref:System.Windows.Media.FontFamily>  
- [Microsoft 版式： 链接、 新闻和联系人](http://www.microsoft.com/typography/links/)  
- [OpenType 规范](http://www.microsoft.com/typography/otspec/)  
+ [Microsoft 版式： 链接、 新闻和联系人](https://www.microsoft.com/typography/links/)  
+ [OpenType 规范](https://www.microsoft.com/typography/otspec/)  
  [OpenType 字体功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
  [示例 OpenType 字体包](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - WPF application [WPF], building
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
-ms.openlocfilehash: a3d1c01b10c1a356a3d9075ec2f3d1680c94d975
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bed7484f7ff487d1ff34ef1ff1e86bc8689a2cfc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548333"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389287"
 ---
 # <a name="build-and-deploy-how-to-topics"></a>生成和部署帮助主题
-下面的主题介绍如何创建项目文件，各种[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序类型。  
+以下主题说明如何创建针对各种项目文件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序类型。  
   
 ## <a name="in-this-section"></a>本节内容  
  [将 IIS 5.0 和 IIS 6.0 配置为部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
@@ -30,6 +30,6 @@ ms.locfileid: "33548333"
   
  [部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
   
- [如何： 创建新的 WPF 应用程序项目](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)  
+ [如何： 创建新的 WPF 应用程序项目](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)  
   
- [如何： 创建新的 WPF 浏览器应用程序项目](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)
+ [如何： 创建新的 WPF 浏览器应用程序项目](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)

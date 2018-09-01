@@ -2,12 +2,12 @@
 title: 消息检查器
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 05dbee820a002feb1f2a1672220be0c4a397f952
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 253be4d13649d4f6394aad1bb002f5cd555d8af2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508990"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385839"
 ---
 # <a name="message-inspectors"></a>消息检查器
 本示例演示如何实现和配置客户端和服务消息检查器。  
@@ -202,7 +202,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>行为  
- 消息检查器是客户端运行时或调度运行时的扩展。 使用配置这样的扩展*行为*。 行为是通过更改默认配置或添加扩展（如消息检查器）来更改服务模型运行时行为的类。  
+ 消息检查器是客户端运行时或调度运行时的扩展。 使用配置了此类扩展插件*行为*。 行为是通过更改默认配置或添加扩展（如消息检查器）来更改服务模型运行时行为的类。  
   
  下面的 `SchemaValidationBehavior` 类是用于将本示例的消息检查器添加到客户端运行时或调度运行时的行为。 该实现在这两种情况下都是相当基础的行为。 在 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> 和 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> 中，将创建消息检查器并将其添加到各自运行时的 <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> 集合中。  
   
@@ -259,7 +259,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 >  此特定行为不能复制为属性，因此不能以声明性方式添加到服务类型的协定类型上。 这是设计使然，由于架构集合不能加载到属性声明中，因此引用此属性中的其他配置位置（例如引用应用程序设置）意味着会创建与服务模型配置的其余元素不一致的配置元素。 因此，只能通过代码和通过服务模型配置扩展强制添加此行为。  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>通过配置添加消息检查器  
- 在应用程序配置文件中的终结点上配置自定义行为，服务模型需要使用实现器来创建配置*扩展元素*由类派生自表示<xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。 然后，必须将此扩展添加到服务模型的配置节作为扩展，如本节讨论的以下扩展所示。  
+ 对于应用程序配置文件中的终结点上配置自定义行为，服务模型需要实施者能创建配置*扩展元素*由派生自的类表示<xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。 然后，必须将此扩展添加到服务模型的配置节作为扩展，如本节讨论的以下扩展所示。  
   
 ```xml  
 <system.serviceModel>  
@@ -398,18 +398,18 @@ catch (Exception e)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
   

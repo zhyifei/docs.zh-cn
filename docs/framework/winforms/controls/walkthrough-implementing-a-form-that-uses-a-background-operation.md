@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 428dae2d10cd0f49a337c5b0439c5dcc72f83432
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257378"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385867"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>演练：实现一个使用后台操作的窗体
 如果某项操作需要很长时间才能完成，并且您不希望用户界面 (UI) 停止响应或"挂起，可以使用<xref:System.ComponentModel.BackgroundWorker>类，以另一个线程上执行此操作。  
@@ -57,7 +57,7 @@ ms.locfileid: "43257378"
   
 5.  重命名第一个<xref:System.Windows.Forms.Button>控制`startAsyncButton`并设置<xref:System.Windows.Forms.Control.Text%2A>属性设置为`Start Async`。 重命名第二个<xref:System.Windows.Forms.Button>控制`cancelAsyncButton`，并设置<xref:System.Windows.Forms.Control.Text%2A>属性设置为`Cancel Async`。 设置其<xref:System.Windows.Forms.Control.Enabled%2A>属性设置为`false`。  
   
-6.  创建事件处理程序的两个<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件。 有关详细信息，请参阅[如何：使用设计器创建事件处理程序](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
+6.  创建事件处理程序的两个<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件。 有关详细信息，请参阅[如何：使用设计器创建事件处理程序](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
   
 7.  拖动<xref:System.Windows.Forms.Label>控件从**工具箱**拖到窗体并将其重命名`resultLabel`。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "43257378"
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>实现异步事件处理程序  
   
-1.  在中**属性**窗口中，使用<xref:System.ComponentModel.BackgroundWorker>组件仍处于选中状态，单击**事件**按钮。 双击<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件创建事件处理程序。 若要深入了解如何使用事件处理程序，请参阅[如何：使用设计器创建事件处理程序](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
+1.  在中**属性**窗口中，使用<xref:System.ComponentModel.BackgroundWorker>组件仍处于选中状态，单击**事件**按钮。 双击<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件创建事件处理程序。 若要深入了解如何使用事件处理程序，请参阅[如何：使用设计器创建事件处理程序](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
   
 2.  在窗体中新建一个名为 `ComputeFibonacci` 的新方法。 此方法完成实际的工作，并在后台运行。 这些代码演示了 Fibonacci 算法的递归实现，这种算法的效率非常低，对于较大的数值花费的时间按指数增长。 在这里使用是出于演示的目的，为了说明在应用程序中某项操作可能带来长时间的延迟。  
   
@@ -166,8 +166,8 @@ ms.locfileid: "43257378"
 ## <a name="see-also"></a>请参阅  
  <xref:System.ComponentModel.BackgroundWorker>  
  [托管线程处理的最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)  
- [组件中的多线程处理](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [未构造：Visual Basic 中的多线程处理](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [组件中的多线程处理](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [未构造：Visual Basic 中的多线程处理](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [如何：实现使用后台操作的窗体](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
  [演练：在后台运行操作](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
  [BackgroundWorker 组件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

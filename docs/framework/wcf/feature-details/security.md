@@ -8,27 +8,27 @@ helpviewer_keywords:
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: fb48ae39d269f21a7120ecf143dc4c4680efe39d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a070800ea15c5a7f16b52ca69c7e454c92618e1a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499084"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384923"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 安全性
-本部分中的主题介绍 Windows Communication Foundation (WCF) 安全功能以及如何使用它们来帮助确保消息。  
+在本部分中的主题介绍 Windows Communication Foundation (WCF) 安全功能以及如何使用它们来保护消息。  
   
- 有关 Windows Server AppFabric 和安全性的详细信息，请参阅[Windows Server AppFabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ 有关 Windows Server AppFabric 和安全性的详细信息，请参阅[Windows Server AppFabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>本节内容  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  介绍 WCF 中的安全功能。  
   
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- 介绍基本术语和概念在 WCF 安全中使用。  
+ 介绍基本术语和 WCF 安全中使用的概念。  
   
  [常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- 介绍方案和拓扑，你可以使用 WCF 配置。  
+ 介绍方案和拓扑可以使用 WCF 配置。  
   
  [安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  概要介绍会影响安全的 WCF 行为，例如设置凭据。  
@@ -37,7 +37,7 @@ ms.locfileid: "33499084"
  面向安全的绑定视图，包括演示如何创建自定义安全绑定的主题。  
   
  [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- 描述如何保护消息使用 WCF 安全功能。  
+ 介绍如何保护消息使用 WCF 安全功能。  
   
  [身份验证](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  演示常见的身份验证任务。  
@@ -49,13 +49,13 @@ ms.locfileid: "33499084"
  描述联合身份验证的基本知识以及如何创建与联合服务器进行通信的客户端。  
   
  [部分信任](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- 描述如何运行部分受信任时运行部分受信任的方案和 WCF 限制。  
+ 介绍如何运行部分受信任时运行部分受信任的方案和 WCF 限制。  
   
  [审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  描述如何审核安全事件。  
   
  [安全指导和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- 用于创建安全的 WCF 应用程序的准则。  
+ 有关创建安全的 WCF 应用程序的指导。  
   
 ## <a name="reference"></a>参考  
  <xref:System.ServiceModel>  

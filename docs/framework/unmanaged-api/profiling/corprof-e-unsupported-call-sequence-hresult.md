@@ -8,34 +8,34 @@ helpviewer_keywords:
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6cce181037ee4f4db3a828f98cc3e07dfb45aff3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bb3e382a93f28ea99c66268e6e402ea275961047
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461625"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387190"
 ---
 # <a name="corprofeunsupportedcallsequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
-.NET Framework 2.0 版中引入了 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]以下两种情况返回此 HRESULT:  
+在.NET Framework 2.0 版中引入 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]在两个方案中返回此 HRESULT:  
   
--   当劫持探查器强制重置线程的时注册上下文在任意时间，以便线程试图访问处于不一致状态的结构。  
+-   时劫持探查器会强行将线程的重置注册上下文在任意时间，以便该线程尝试访问处于不一致状态的结构。  
   
--   探查器尝试调用触发禁止垃圾回收的回调方法中的垃圾回收的信息性方法时。  
+-   当探查器尝试调用触发垃圾回收禁止垃圾回收的回调方法中的一条信息性方法。  
   
- 这两个方案以下各节所述。  
+ 以下各节中讨论了这两种方案。  
   
 ## <a name="hijacking-profilers"></a>拦截探查器  
- （这种情况下是主要问题劫持探查器，尽管有非劫持探查器在哪里可以看到此 HRESULT 的情况。）  
+ （这种情况下是主要问题拦截探查器，尽管某些情况下，非拦截探查器可以在此处查看此 HRESULT。）  
   
- 在此方案中，劫持探查器强制重置线程的寄存器上下文在任意时间，以便线程可以输入探查器代码或重新输入公共语言运行时 (CLR) 通过[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)方法。  
+ 在此方案中，攻击探查器强制重置线程的寄存器上下文在任意时间，以便线程可以输入探查器代码或重新输入公共语言运行时 (CLR) 通过[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)方法。  
   
- 许多分析 API 提供了用于在 CLR 中的数据结构点的 Id。 许多`ICorProfilerInfo`调用只是读取这些数据结构的信息，并将它们传回。 但是，CLR 可能会更改这些结构中的内容，如运行，并且它可能使用锁若要这样做。 假设 CLR 已保存 （或尝试获取） 时锁定探查器劫持线程。 如果线程重新进入 CLR，并尝试执行更多的锁或检查正被修改的结构，这些结构可能处于不一致状态。 在这种情况下很容易发生死锁和访问冲突。  
+ 许多分析 API 提供了指向在 CLR 中的数据结构的 Id。 许多`ICorProfilerInfo`调用只是读取这些数据结构的信息，并将其传递回。 但是，CLR 可能会更改这些结构中运行，以及它可以使用锁来执行此操作。 假设 CLR 已保存 （或尝试获取） 时锁定探查器拦截该线程。 如果线程重新进入 CLR，并尝试执行更多的锁或检查正被修改的结构，这些结构可能处于不一致的状态。 在这种情况下很容易发生死锁和访问冲突。  
   
- 一般情况下，执行时非劫持探查器内的代码[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)方法并调用到`ICorProfilerInfo`方法与有效的参数，它不应发生死锁或收到访问冲突。 例如，探查器中运行的代码[icorprofilercallback:: Classloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)方法通过调用可能会要求有关类信息[icorprofilerinfo2:: Getclassidinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)方法。 该代码可能会收到一个 CORPROF_E_DATAINCOMPLETE HRESULT，指示信息不可用;但是，它将不发生死锁或收到访问冲突。 此类调入`ICorProfilerInfo`称为同步，因为它们源自`ICorProfilerCallback`方法。  
+ 一般情况下，当非攻击方式探查器执行代码时，才[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)方法并调用到`ICorProfilerInfo`方法使用有效的参数，它不应发生死锁或收到访问冲突。 例如，探查器中运行的代码[icorprofilercallback:: Classloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)方法可能会通过调用请求有关类的信息[ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)方法。 代码可能会收到一个 CORPROF_E_DATAINCOMPLETE HRESULT，指示信息是不可用;但是，它不会发生死锁或收到访问冲突。 调用此类`ICorProfilerInfo`称为同步的因为它们源自`ICorProfilerCallback`方法。  
   
- 但是，托管的线程中执行不在两者之间的代码`ICorProfilerCallback`方法，则认为进行的异步调用。 在.NET Framework 版本 1 中，很难确定中的异步调用可能会发生什么。 调用可能发生死锁、 崩溃，或为提供无效的答案。 .NET Framework 2.0 版引入了一些简单的检查，以帮助你避免此问题。 在.NET Framework 2.0 中，如果调用不安全`ICorProfilerInfo`异步函数，它将失败，CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  
+ 但是，托管的线程的执行不在两者之间的代码`ICorProfilerCallback`方法被认为对此进行的异步调用。 在.NET Framework 版本 1 中，很难确定异步调用中可能会发生什么。 在调用可能发生死锁、 崩溃，或给出无效的回答。 .NET Framework 2.0 版引入了一些简单的检查，以帮助您避免此问题。 在.NET Framework 2.0 中，如果调用不安全`ICorProfilerInfo`异步函数中，将失败并出现 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  
   
- 一般情况下，异步调用是不安全的。 但是，以下方法是安全的专门支持异步调用：  
+ 一般情况下，异步调用是不安全的。 但是，以下方法是安全的特别是支持异步调用：  
   
 -   [GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)  
   
@@ -69,12 +69,12 @@ ms.locfileid: "33461625"
   
 -   [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
   
- 有关其他信息，请参阅文章[我们使用 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](http://go.microsoft.com/fwlink/?LinkId=169156) CLR 分析 API 博客中。  
+ 有关其他信息，请参阅文章[我们使用了 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://go.microsoft.com/fwlink/?LinkId=169156) CLR 分析 API 博客中。  
   
 ## <a name="triggering-garbage-collections"></a>触发垃圾回收  
- 此方案涉及到探查器回调方法中运行程序 (例如，一个的`ICorProfilerCallback`方法)，禁止垃圾回收。 如果探查器尝试调用信息性方法 (例如上的方法`ICorProfilerInfo`接口)，可能会触发垃圾回收，信息性的方法将失败，CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  
+ 此方案涉及到回调方法中运行的探查器 (例如，一个的`ICorProfilerCallback`方法) 禁止垃圾回收。 如果探查器尝试调用信息性方法 (例如上, 一个方法`ICorProfilerInfo`接口) 的可能触发垃圾收集、 信息性方法失败，错误为 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  
   
- 下表显示可能会触发垃圾回收的信息性方法和禁止垃圾回收的回调方法。 如果探查器内列出的回调方法之一执行，并通过调用另外一个列出的信息性方法，该信息性的方法将失败并 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  
+ 下表显示可能会触发垃圾回收的信息性方法和禁止垃圾回收的回调方法。 如果探查器中列出的回调方法之一执行并调用其中一个列出的信息性方法，该信息性方法将失败并 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  
   
 |禁止垃圾回收的回叫方法|触发垃圾回收的信息性方法|  
 |------------------------------------------------------|------------------------------------------------------------|  

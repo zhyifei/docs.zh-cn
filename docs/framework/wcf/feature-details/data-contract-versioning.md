@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
 ms.openlocfilehash: 0e91bf597e344dd09e80bee5787e92383065b654
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254576"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393180"
 ---
 # <a name="data-contract-versioning"></a>数据协定版本管理
 随着应用程序的发展，您也可能不得不更改服务使用的数据协定。 本主题说明如何管理数据协定的版本。 本主题介绍数据协定版本管理机制。 有关完整概述和版本管理说明指南，请参阅[最佳做法： 数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: b3625510028d5941173848849ab915f56260577a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9491c7eee7dee197e9a3b91d35bc7f71f4e956
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532780"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392623"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体控件显示的图像
-多个 Windows 窗体控件可以显示图像。 图像可以是说明目的的控件，如按钮表示上的磁盘图标的图标**保存**命令。 或者，该图标可以为以提供所需的外观的控件的背景图像。  
+多个 Windows 窗体控件可以显示图像。 图像可以是一个说明用途的控件，如上按钮表示的磁盘图标的图标**保存**命令。 或者，该图标可以是以提供所需的外观的控件的背景图像。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>若要设置控件所显示的图像  
   
-1.  在**属性**窗口中，选择**映像**或**BackgroundImage**属性的控件，然后单击省略号按钮 （  
+1.  在中**属性**窗口中，选择**映像**或**BackgroundImage**属性的控件，然后单击省略号按钮 （  
   
      ![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")  
   
