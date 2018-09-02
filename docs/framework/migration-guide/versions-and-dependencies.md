@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2575d6fbc5e8a26da301826ef8f7b0611a84871e
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c18659fa3db1f2e7e047f1bbdc4f75ba6e96f0c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255556"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464095"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和依赖关系
 每个版本的 .NET framework 都包含公共语言运行时 (CLR)、基类库和其他托管库。 本主题按版本介绍了 .NET Framework 的关键功能，提供了有关基础 CLR 版本和相关开发环境的信息，并标识了 Windows 操作系统所安装的版本。  
@@ -61,7 +61,7 @@ ms.locfileid: "43255556"
   
      此处使用的 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 和 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 仅作为示例。 此原则适用于任意满足以下条件的应用：应用所面向的 .NET framework 版本高于运行该应用的系统上的 .NET framework 版本。  
   
- .NET Framework 中的某些更改可能需要更改应用代码；请先参阅[应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility.md)，然后再使用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更高版本运行现有应用。 若要了解如何安装当前版本，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。 有关对 .NET Framework 的支持的信息，请参阅 Microsoft 支持网站上的 [Microsoft .NET Framework 支持生命周期策略](http://go.microsoft.com/fwlink/?LinkId=196607)。  
+ .NET Framework 中的某些更改可能需要更改应用代码；请先参阅[应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility.md)，然后再使用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更高版本运行现有应用。 若要了解如何安装当前版本，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。 有关对 .NET Framework 的支持的信息，请参阅 Microsoft 支持网站上的 [Microsoft .NET Framework 支持生命周期策略](https://go.microsoft.com/fwlink/?LinkId=196607)。  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>以针对早期版本的应用程序为目标并运行这些应用程序  
  .NET Framework 版本 2.0、3.0 和 3.5 是使用同一 CLR 版本 (CLR 2.0) 生成的。 这些版本表示单个安装的连续层。 每个版本将基于早期版本以增量方式生成。 无法在计算机上并行运行版本 2.0、3.0 和 3.5。 在安装 3.5 版时，你将自动获得 2.0 和 3.0 层，并且为版本 2.0、3.0 和 3.5 生成的应用程序均可在 3.5 版上运行。 但是，.NET Framework 4 结束了此分层方法，.NET Framework 4 及其更高版本（.NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 和 4.7.2）也表示单个安装的连续层。  从 .NET Framework 4 开始，可使用进程内并行承载在单个进程中运行 CLR 的多个版本。 有关详细信息，请参阅[程序集和并行执行](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)。  
@@ -81,5 +81,5 @@ ms.locfileid: "43255556"
 ## <a name="see-also"></a>请参阅
 
 [版本兼容性](../../../docs/framework/migration-guide/version-compatibility.md)   
-[Microsoft .NET Framework 支持生命周期策略](http://go.microsoft.com/fwlink/?LinkId=196607)   
+[Microsoft .NET Framework 支持生命周期策略](https://go.microsoft.com/fwlink/?LinkId=196607)   
 [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
