@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 4fc9a787aa03af311ed219f0831a4d0e41544be8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363388"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416703"
 ---
-# <a name="polling-in-console-applications"></a><span data-ttu-id="8e386-102">在控制台应用程序中轮询</span><span class="sxs-lookup"><span data-stu-id="8e386-102">Polling in Console Applications</span></span>
-<span data-ttu-id="8e386-103">ADO.NET 中的异步操作使你可以在一个线程上启动需要很长时间的数据库操作，同时在另一个线程上执行其他任务。</span><span class="sxs-lookup"><span data-stu-id="8e386-103">Asynchronous operations in ADO.NET allow you to initiate time-consuming database operations on one thread while performing other tasks on another thread.</span></span> <span data-ttu-id="8e386-104">但是，在大多数方案中，最终将到达一个临界点，此时，应用程序在数据库操作完成后才应继续。</span><span class="sxs-lookup"><span data-stu-id="8e386-104">In most scenarios, however, you will eventually reach a point where your application should not continue until the database operation is complete.</span></span> <span data-ttu-id="8e386-105">在这种情况下，可以轮询异步操作，确定操作是否已完成。</span><span class="sxs-lookup"><span data-stu-id="8e386-105">For such cases, it is useful to poll the asynchronous operation to determine whether the operation has completed or not.</span></span>  
+# <a name="polling-in-console-applications"></a><span data-ttu-id="48134-102">在控制台应用程序中轮询</span><span class="sxs-lookup"><span data-stu-id="48134-102">Polling in Console Applications</span></span>
+<span data-ttu-id="48134-103">ADO.NET 中的异步操作使你可以在一个线程上启动需要很长时间的数据库操作，同时在另一个线程上执行其他任务。</span><span class="sxs-lookup"><span data-stu-id="48134-103">Asynchronous operations in ADO.NET allow you to initiate time-consuming database operations on one thread while performing other tasks on another thread.</span></span> <span data-ttu-id="48134-104">但是，在大多数方案中，最终将到达一个临界点，此时，应用程序在数据库操作完成后才应继续。</span><span class="sxs-lookup"><span data-stu-id="48134-104">In most scenarios, however, you will eventually reach a point where your application should not continue until the database operation is complete.</span></span> <span data-ttu-id="48134-105">在这种情况下，可以轮询异步操作，确定操作是否已完成。</span><span class="sxs-lookup"><span data-stu-id="48134-105">For such cases, it is useful to poll the asynchronous operation to determine whether the operation has completed or not.</span></span>  
   
- <span data-ttu-id="8e386-106">可以使用 <xref:System.IAsyncResult.IsCompleted%2A> 属性确定操作是否已完成。</span><span class="sxs-lookup"><span data-stu-id="8e386-106">You can use the <xref:System.IAsyncResult.IsCompleted%2A> property to find out whether or not the operation has completed.</span></span>  
+ <span data-ttu-id="48134-106">可以使用 <xref:System.IAsyncResult.IsCompleted%2A> 属性确定操作是否已完成。</span><span class="sxs-lookup"><span data-stu-id="48134-106">You can use the <xref:System.IAsyncResult.IsCompleted%2A> property to find out whether or not the operation has completed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8e386-107">示例</span><span class="sxs-lookup"><span data-stu-id="8e386-107">Example</span></span>  
- <span data-ttu-id="8e386-108">以下控制台应用程序更新中的数据**AdventureWorks**示例数据库，以异步方式执行其工作。</span><span class="sxs-lookup"><span data-stu-id="8e386-108">The following console application updates data within the **AdventureWorks** sample database, doing its work asynchronously.</span></span> <span data-ttu-id="8e386-109">为了模拟长时间运行的进程，此示例在命令文本中插入一个 WAITFOR 语句。</span><span class="sxs-lookup"><span data-stu-id="8e386-109">In order to emulate a long-running process, this example inserts a WAITFOR statement in the command text.</span></span> <span data-ttu-id="8e386-110">通常情况下，您不会试图使命令运行速度更慢，但是在这种情况下，这样做可以更容易演示异步行为。</span><span class="sxs-lookup"><span data-stu-id="8e386-110">Normally, you would not try to make your commands run slower, but doing so in this case makes it easier to demonstrate asynchronous behavior.</span></span>  
+## <a name="example"></a><span data-ttu-id="48134-107">示例</span><span class="sxs-lookup"><span data-stu-id="48134-107">Example</span></span>  
+ <span data-ttu-id="48134-108">以下控制台应用程序更新中的数据**AdventureWorks**示例数据库，以异步方式执行其工作。</span><span class="sxs-lookup"><span data-stu-id="48134-108">The following console application updates data within the **AdventureWorks** sample database, doing its work asynchronously.</span></span> <span data-ttu-id="48134-109">为了模拟长时间运行的进程，此示例在命令文本中插入一个 WAITFOR 语句。</span><span class="sxs-lookup"><span data-stu-id="48134-109">In order to emulate a long-running process, this example inserts a WAITFOR statement in the command text.</span></span> <span data-ttu-id="48134-110">通常情况下，您不会试图使命令运行速度更慢，但是在这种情况下，这样做可以更容易演示异步行为。</span><span class="sxs-lookup"><span data-stu-id="48134-110">Normally, you would not try to make your commands run slower, but doing so in this case makes it easier to demonstrate asynchronous behavior.</span></span>  
   
 ```vb  
 Imports System  
@@ -190,6 +190,6 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8e386-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="8e386-111">See Also</span></span>  
- [<span data-ttu-id="8e386-112">异步操作</span><span class="sxs-lookup"><span data-stu-id="8e386-112">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [<span data-ttu-id="8e386-113">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="8e386-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="48134-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="48134-111">See Also</span></span>  
+ [<span data-ttu-id="48134-112">异步操作</span><span class="sxs-lookup"><span data-stu-id="48134-112">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [<span data-ttu-id="48134-113">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="48134-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,16 +3,16 @@ title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
 ms.openlocfilehash: 93eea5d539e943c57ed7c6236caa854486ac238e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933848"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402645"
 ---
-# <a name="select-entity-sql"></a><span data-ttu-id="27e88-102">SELECT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="27e88-102">SELECT (Entity SQL)</span></span>
-<span data-ttu-id="27e88-103">指定查询所返回的元素。</span><span class="sxs-lookup"><span data-stu-id="27e88-103">Specifies the elements returned by a query.</span></span>  
+# <a name="select-entity-sql"></a><span data-ttu-id="44499-102">SELECT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="44499-102">SELECT (Entity SQL)</span></span>
+<span data-ttu-id="44499-103">指定查询所返回的元素。</span><span class="sxs-lookup"><span data-stu-id="44499-103">Specifies the elements returned by a query.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27e88-104">语法</span><span class="sxs-lookup"><span data-stu-id="27e88-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="44499-104">语法</span><span class="sxs-lookup"><span data-stu-id="44499-104">Syntax</span></span>  
   
 ```  
 SELECT [ ALL | DISTINCT ] [ topSubclause ] aliasedExpr   
@@ -21,86 +21,86 @@ or
 SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="27e88-105">自变量</span><span class="sxs-lookup"><span data-stu-id="27e88-105">Arguments</span></span>  
- <span data-ttu-id="27e88-106">ALL</span><span class="sxs-lookup"><span data-stu-id="27e88-106">ALL</span></span>  
- <span data-ttu-id="27e88-107">指定结果集中可以出现重复项。</span><span class="sxs-lookup"><span data-stu-id="27e88-107">Specifies that duplicates can appear in the result set.</span></span> <span data-ttu-id="27e88-108">ALL 为默认值。</span><span class="sxs-lookup"><span data-stu-id="27e88-108">ALL is the default.</span></span>  
+## <a name="arguments"></a><span data-ttu-id="44499-105">自变量</span><span class="sxs-lookup"><span data-stu-id="44499-105">Arguments</span></span>  
+ <span data-ttu-id="44499-106">ALL</span><span class="sxs-lookup"><span data-stu-id="44499-106">ALL</span></span>  
+ <span data-ttu-id="44499-107">指定结果集中可以出现重复项。</span><span class="sxs-lookup"><span data-stu-id="44499-107">Specifies that duplicates can appear in the result set.</span></span> <span data-ttu-id="44499-108">ALL 为默认值。</span><span class="sxs-lookup"><span data-stu-id="44499-108">ALL is the default.</span></span>  
   
- <span data-ttu-id="27e88-109">DISTINCT</span><span class="sxs-lookup"><span data-stu-id="27e88-109">DISTINCT</span></span>  
- <span data-ttu-id="27e88-110">指定结果集中只能出现唯一的结果。</span><span class="sxs-lookup"><span data-stu-id="27e88-110">Specifies that only unique results can appear in the result set.</span></span>  
+ <span data-ttu-id="44499-109">DISTINCT</span><span class="sxs-lookup"><span data-stu-id="44499-109">DISTINCT</span></span>  
+ <span data-ttu-id="44499-110">指定结果集中只能出现唯一的结果。</span><span class="sxs-lookup"><span data-stu-id="44499-110">Specifies that only unique results can appear in the result set.</span></span>  
   
- <span data-ttu-id="27e88-111">VALUE</span><span class="sxs-lookup"><span data-stu-id="27e88-111">VALUE</span></span>  
- <span data-ttu-id="27e88-112">仅允许指定一个项，且不添加到行包装上。</span><span class="sxs-lookup"><span data-stu-id="27e88-112">Allows only one item to be specified, and does not add on a row wrapper.</span></span>  
+ <span data-ttu-id="44499-111">VALUE</span><span class="sxs-lookup"><span data-stu-id="44499-111">VALUE</span></span>  
+ <span data-ttu-id="44499-112">仅允许指定一个项，且不添加到行包装上。</span><span class="sxs-lookup"><span data-stu-id="44499-112">Allows only one item to be specified, and does not add on a row wrapper.</span></span>  
   
  `topSubclause`  
- <span data-ttu-id="27e88-113">任何有效的表达式，用于指示第一个要返回的结果格式的查询从`top(expr)`。</span><span class="sxs-lookup"><span data-stu-id="27e88-113">Any valid expression that indicates the number of first results to return from the query, of the form `top(expr)`.</span></span>  
+ <span data-ttu-id="44499-113">任何有效的表达式，用于指示第一个要返回的结果格式的查询从`top(expr)`。</span><span class="sxs-lookup"><span data-stu-id="44499-113">Any valid expression that indicates the number of first results to return from the query, of the form `top(expr)`.</span></span>  
   
- <span data-ttu-id="27e88-114">LIMIT 参数[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)运算符，您还可以选择在结果集中的前 n 个项。</span><span class="sxs-lookup"><span data-stu-id="27e88-114">The LIMIT parameter of the [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) operator also lets you select the first n items in the result set.</span></span>  
+ <span data-ttu-id="44499-114">LIMIT 参数[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)运算符，您还可以选择在结果集中的前 n 个项。</span><span class="sxs-lookup"><span data-stu-id="44499-114">The LIMIT parameter of the [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) operator also lets you select the first n items in the result set.</span></span>  
   
  `aliasedExpr`  
- <span data-ttu-id="27e88-115">形式如下的表达式：</span><span class="sxs-lookup"><span data-stu-id="27e88-115">An expression of the form:</span></span>  
+ <span data-ttu-id="44499-115">形式如下的表达式：</span><span class="sxs-lookup"><span data-stu-id="44499-115">An expression of the form:</span></span>  
   
- <span data-ttu-id="27e88-116">`expr` 作为`identifier`&#124; `expr`</span><span class="sxs-lookup"><span data-stu-id="27e88-116">`expr` as `identifier` &#124; `expr`</span></span>  
+ <span data-ttu-id="44499-116">`expr` 作为`identifier`&#124; `expr`</span><span class="sxs-lookup"><span data-stu-id="44499-116">`expr` as `identifier` &#124; `expr`</span></span>  
   
  `expr`  
- <span data-ttu-id="27e88-117">文本或表达式。</span><span class="sxs-lookup"><span data-stu-id="27e88-117">A literal or expression.</span></span>  
+ <span data-ttu-id="44499-117">文本或表达式。</span><span class="sxs-lookup"><span data-stu-id="44499-117">A literal or expression.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="27e88-118">备注</span><span class="sxs-lookup"><span data-stu-id="27e88-118">Remarks</span></span>  
- <span data-ttu-id="27e88-119">SELECT 子句在计算后[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)， [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)，并[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)子句已经过评估。</span><span class="sxs-lookup"><span data-stu-id="27e88-119">The SELECT clause is evaluated after the [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), and [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) clauses have been evaluated.</span></span> <span data-ttu-id="27e88-120">SELECT 子句只能引用当前处于范围内的项（FROM 子句指定的范围或外部范围）。</span><span class="sxs-lookup"><span data-stu-id="27e88-120">The SELECT clause can only refer to items currently in-scope (from the FROM clause, or from outer scopes).</span></span> <span data-ttu-id="27e88-121">如果指定了 GROUP BY 子句，则仅允许 SELECT 子句引用 GROUP BY 键的别名。</span><span class="sxs-lookup"><span data-stu-id="27e88-121">If a GROUP BY clause has been specified, the SELECT clause is only allowed to reference the aliases for the GROUP BY keys.</span></span> <span data-ttu-id="27e88-122">仅允许在聚合函数中引用 FROM 子句项。</span><span class="sxs-lookup"><span data-stu-id="27e88-122">Referring to the FROM clause items is only permitted in aggregate functions.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="44499-118">备注</span><span class="sxs-lookup"><span data-stu-id="44499-118">Remarks</span></span>  
+ <span data-ttu-id="44499-119">SELECT 子句在计算后[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)， [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)，并[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)子句已经过评估。</span><span class="sxs-lookup"><span data-stu-id="44499-119">The SELECT clause is evaluated after the [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), and [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) clauses have been evaluated.</span></span> <span data-ttu-id="44499-120">SELECT 子句只能引用当前处于范围内的项（FROM 子句指定的范围或外部范围）。</span><span class="sxs-lookup"><span data-stu-id="44499-120">The SELECT clause can only refer to items currently in-scope (from the FROM clause, or from outer scopes).</span></span> <span data-ttu-id="44499-121">如果指定了 GROUP BY 子句，则仅允许 SELECT 子句引用 GROUP BY 键的别名。</span><span class="sxs-lookup"><span data-stu-id="44499-121">If a GROUP BY clause has been specified, the SELECT clause is only allowed to reference the aliases for the GROUP BY keys.</span></span> <span data-ttu-id="44499-122">仅允许在聚合函数中引用 FROM 子句项。</span><span class="sxs-lookup"><span data-stu-id="44499-122">Referring to the FROM clause items is only permitted in aggregate functions.</span></span>  
   
- <span data-ttu-id="27e88-123">跟在 SELECT 关键字之后的一个或多个查询表达式的列表称为“选择列表”，更加正式的名称为“投影”。</span><span class="sxs-lookup"><span data-stu-id="27e88-123">The list of one or more query expressions following the SELECT keyword is known as the select list, or more formally as the projection.</span></span> <span data-ttu-id="27e88-124">最普通的投影形式为单个查询表达式。</span><span class="sxs-lookup"><span data-stu-id="27e88-124">The most general form of projection is a single query expression.</span></span> <span data-ttu-id="27e88-125">如果从集合 `member1` 选择一个成员 `collection1`，则会生成 `member1` 中每个对象的所有 `collection1`值的新集合（如下面的示例所示）。</span><span class="sxs-lookup"><span data-stu-id="27e88-125">If you select a member `member1` from a collection `collection1`, you will produce a new collection of all the `member1` values for each object in `collection1`, as illustrated in the following example.</span></span>  
+ <span data-ttu-id="44499-123">跟在 SELECT 关键字之后的一个或多个查询表达式的列表称为“选择列表”，更加正式的名称为“投影”。</span><span class="sxs-lookup"><span data-stu-id="44499-123">The list of one or more query expressions following the SELECT keyword is known as the select list, or more formally as the projection.</span></span> <span data-ttu-id="44499-124">最普通的投影形式为单个查询表达式。</span><span class="sxs-lookup"><span data-stu-id="44499-124">The most general form of projection is a single query expression.</span></span> <span data-ttu-id="44499-125">如果从集合 `member1` 选择一个成员 `collection1`，则会生成 `member1` 中每个对象的所有 `collection1`值的新集合（如下面的示例所示）。</span><span class="sxs-lookup"><span data-stu-id="44499-125">If you select a member `member1` from a collection `collection1`, you will produce a new collection of all the `member1` values for each object in `collection1`, as illustrated in the following example.</span></span>  
   
 ```  
 SELECT collection1.member1 FROM collection1  
 ```  
   
- <span data-ttu-id="27e88-126">例如，如果 `customers` 是类型为 `Customer` 的集合，且该类型有类型为 `Name` 的属性 `string`，则从 `Name` 选择 `customers` 将生成一个字符串集合（如下面的示例所示）。</span><span class="sxs-lookup"><span data-stu-id="27e88-126">For example, if `customers` is a collection of type `Customer` that has a property `Name` that is of type `string`, selecting `Name` from `customers` will yield a collection of strings, as illustrated in the following example.</span></span>  
+ <span data-ttu-id="44499-126">例如，如果 `customers` 是类型为 `Customer` 的集合，且该类型有类型为 `Name` 的属性 `string`，则从 `Name` 选择 `customers` 将生成一个字符串集合（如下面的示例所示）。</span><span class="sxs-lookup"><span data-stu-id="44499-126">For example, if `customers` is a collection of type `Customer` that has a property `Name` that is of type `string`, selecting `Name` from `customers` will yield a collection of strings, as illustrated in the following example.</span></span>  
   
 ```  
 SELECT customers.Name FROM customers AS c  
 ```  
   
- <span data-ttu-id="27e88-127">也可以使用 JOIN 语法（FULL、INNER、LEFT、OUTER、ON 和 RIGHT）。</span><span class="sxs-lookup"><span data-stu-id="27e88-127">It is also possible to use JOIN syntax (FULL, INNER, LEFT, OUTER, ON, and RIGHT).</span></span> <span data-ttu-id="27e88-128">ON 是内部联接的必需语法，但不允许用于交叉联接。</span><span class="sxs-lookup"><span data-stu-id="27e88-128">ON is required for inner joins and is nto allowed for cross joins.</span></span>  
+ <span data-ttu-id="44499-127">也可以使用 JOIN 语法（FULL、INNER、LEFT、OUTER、ON 和 RIGHT）。</span><span class="sxs-lookup"><span data-stu-id="44499-127">It is also possible to use JOIN syntax (FULL, INNER, LEFT, OUTER, ON, and RIGHT).</span></span> <span data-ttu-id="44499-128">ON 是内部联接的必需语法，但不允许用于交叉联接。</span><span class="sxs-lookup"><span data-stu-id="44499-128">ON is required for inner joins and is nto allowed for cross joins.</span></span>  
   
-## <a name="row-and-value-select-clauses"></a><span data-ttu-id="27e88-129">行和值选择子句</span><span class="sxs-lookup"><span data-stu-id="27e88-129">Row and Value Select Clauses</span></span>  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="27e88-130"> 支持 SELECT 子句的两种变体。</span><span class="sxs-lookup"><span data-stu-id="27e88-130"> supports two variants of the SELECT clause.</span></span> <span data-ttu-id="27e88-131">第一种变体是行选择，由 SELECT 关键字标识，可以用于指定应提取出的一个或多个值。由于返回值的两侧会隐式添加行包装，因此查询表达式的结果始终为行的多集。</span><span class="sxs-lookup"><span data-stu-id="27e88-131">The first variant, row select, is identified by the SELECT keyword, and can be used to specify one or more values that should be projected out. Because a row wrapper is implicitly added around the values returned, the result of the query expression is always a multiset of rows.</span></span>  
+## <a name="row-and-value-select-clauses"></a><span data-ttu-id="44499-129">行和值选择子句</span><span class="sxs-lookup"><span data-stu-id="44499-129">Row and Value Select Clauses</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="44499-130"> 支持 SELECT 子句的两种变体。</span><span class="sxs-lookup"><span data-stu-id="44499-130"> supports two variants of the SELECT clause.</span></span> <span data-ttu-id="44499-131">第一种变体是行选择，由 SELECT 关键字标识，可以用于指定应提取出的一个或多个值。由于返回值的两侧会隐式添加行包装，因此查询表达式的结果始终为行的多集。</span><span class="sxs-lookup"><span data-stu-id="44499-131">The first variant, row select, is identified by the SELECT keyword, and can be used to specify one or more values that should be projected out. Because a row wrapper is implicitly added around the values returned, the result of the query expression is always a multiset of rows.</span></span>  
   
- <span data-ttu-id="27e88-132">行选择中的每个查询表达式都必须指定一个别名。</span><span class="sxs-lookup"><span data-stu-id="27e88-132">Each query expression in a row select must specify an alias.</span></span> <span data-ttu-id="27e88-133">如果不指定别名，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 会尝试使用别名生成规则生成别名。</span><span class="sxs-lookup"><span data-stu-id="27e88-133">If no alias is specified,[!INCLUDE[esql](../../../../../../includes/esql-md.md)] attempts to generate an alias by using the alias generation rules.</span></span>  
+ <span data-ttu-id="44499-132">行选择中的每个查询表达式都必须指定一个别名。</span><span class="sxs-lookup"><span data-stu-id="44499-132">Each query expression in a row select must specify an alias.</span></span> <span data-ttu-id="44499-133">如果不指定别名，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 会尝试使用别名生成规则生成别名。</span><span class="sxs-lookup"><span data-stu-id="44499-133">If no alias is specified,[!INCLUDE[esql](../../../../../../includes/esql-md.md)] attempts to generate an alias by using the alias generation rules.</span></span>  
   
- <span data-ttu-id="27e88-134">SELECT 子句的另一种变体为值选择，由 SELECT VALUE 关键字标识。</span><span class="sxs-lookup"><span data-stu-id="27e88-134">The other variant of the SELECT clause, value select, is identified by the SELECT VALUE keyword.</span></span> <span data-ttu-id="27e88-135">该变体仅允许指定一个值，且不添加行包装。</span><span class="sxs-lookup"><span data-stu-id="27e88-135">It allows only one value to be specified, and does not add a row wrapper.</span></span>  
+ <span data-ttu-id="44499-134">SELECT 子句的另一种变体为值选择，由 SELECT VALUE 关键字标识。</span><span class="sxs-lookup"><span data-stu-id="44499-134">The other variant of the SELECT clause, value select, is identified by the SELECT VALUE keyword.</span></span> <span data-ttu-id="44499-135">该变体仅允许指定一个值，且不添加行包装。</span><span class="sxs-lookup"><span data-stu-id="44499-135">It allows only one value to be specified, and does not add a row wrapper.</span></span>  
   
- <span data-ttu-id="27e88-136">行选择总是可通过 VALUE SELECT 进行表示（如下面的示例所示）。</span><span class="sxs-lookup"><span data-stu-id="27e88-136">A row select is always expressible in terms of VALUE SELECT, as illustrated in the following example.</span></span>  
+ <span data-ttu-id="44499-136">行选择总是可通过 VALUE SELECT 进行表示（如下面的示例所示）。</span><span class="sxs-lookup"><span data-stu-id="44499-136">A row select is always expressible in terms of VALUE SELECT, as illustrated in the following example.</span></span>  
   
 ```  
 SELECT 1 AS a, "abc" AS b FROM C  
 SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C   
 ```  
   
-## <a name="all-and-distinct-modifiers"></a><span data-ttu-id="27e88-137">All 和 Distinct 修饰符</span><span class="sxs-lookup"><span data-stu-id="27e88-137">All and Distinct Modifiers</span></span>  
- <span data-ttu-id="27e88-138">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的两种 SELECT 变体都允许指定 ALL 或 DISTINCT 修饰符。</span><span class="sxs-lookup"><span data-stu-id="27e88-138">Both variants of SELECT in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] allow the specification of an ALL or DISTINCT modifier.</span></span> <span data-ttu-id="27e88-139">如果指定 DISTINCT 修饰符，则将从查询表达式（直到并包括 SELECT 子句）生成的集合中消除重复项。</span><span class="sxs-lookup"><span data-stu-id="27e88-139">If the DISTINCT modifier is specified, duplicates are eliminated from the collection produced by the query expression (up to and including the SELECT clause).</span></span> <span data-ttu-id="27e88-140">如果指定 ALL 修饰符，则不消除重复项；ALL 为默认值。</span><span class="sxs-lookup"><span data-stu-id="27e88-140">If the ALL modifier is specified, no duplicate elimination is performed; ALL is the default.</span></span>  
+## <a name="all-and-distinct-modifiers"></a><span data-ttu-id="44499-137">All 和 Distinct 修饰符</span><span class="sxs-lookup"><span data-stu-id="44499-137">All and Distinct Modifiers</span></span>  
+ <span data-ttu-id="44499-138">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的两种 SELECT 变体都允许指定 ALL 或 DISTINCT 修饰符。</span><span class="sxs-lookup"><span data-stu-id="44499-138">Both variants of SELECT in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] allow the specification of an ALL or DISTINCT modifier.</span></span> <span data-ttu-id="44499-139">如果指定 DISTINCT 修饰符，则将从查询表达式（直到并包括 SELECT 子句）生成的集合中消除重复项。</span><span class="sxs-lookup"><span data-stu-id="44499-139">If the DISTINCT modifier is specified, duplicates are eliminated from the collection produced by the query expression (up to and including the SELECT clause).</span></span> <span data-ttu-id="44499-140">如果指定 ALL 修饰符，则不消除重复项；ALL 为默认值。</span><span class="sxs-lookup"><span data-stu-id="44499-140">If the ALL modifier is specified, no duplicate elimination is performed; ALL is the default.</span></span>  
   
-## <a name="differences-from-transact-sql"></a><span data-ttu-id="27e88-141">与 Transact-SQL 的区别</span><span class="sxs-lookup"><span data-stu-id="27e88-141">Differences from Transact-SQL</span></span>  
- <span data-ttu-id="27e88-142">与 Transact-SQL 不同， [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持在 SELECT 子句中使用 \* 参数。</span><span class="sxs-lookup"><span data-stu-id="27e88-142">Unlike Transact-SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] does not support use of the \* argument in the SELECT clause.</span></span>  <span data-ttu-id="27e88-143">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 允许查询通过从 FROM 子句引用集合别名来提取出完整的记录（如下面的示例所示）。</span><span class="sxs-lookup"><span data-stu-id="27e88-143">Instead, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] allows queries to project out entire records by referencing the collection aliases from the FROM clause, as illustrated in the following example.</span></span>  
+## <a name="differences-from-transact-sql"></a><span data-ttu-id="44499-141">与 Transact-SQL 的区别</span><span class="sxs-lookup"><span data-stu-id="44499-141">Differences from Transact-SQL</span></span>  
+ <span data-ttu-id="44499-142">与 Transact-SQL 不同， [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持在 SELECT 子句中使用 \* 参数。</span><span class="sxs-lookup"><span data-stu-id="44499-142">Unlike Transact-SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] does not support use of the \* argument in the SELECT clause.</span></span>  <span data-ttu-id="44499-143">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 允许查询通过从 FROM 子句引用集合别名来提取出完整的记录（如下面的示例所示）。</span><span class="sxs-lookup"><span data-stu-id="44499-143">Instead, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] allows queries to project out entire records by referencing the collection aliases from the FROM clause, as illustrated in the following example.</span></span>  
   
 ```  
 SELECT * FROM T1, T2  
 ```  
   
- <span data-ttu-id="27e88-144">上面的 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 查询表达式在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中表示如下。</span><span class="sxs-lookup"><span data-stu-id="27e88-144">The previous [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] query expression is expressed in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] in the following way.</span></span>  
+ <span data-ttu-id="44499-144">上面的 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 查询表达式在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中表示如下。</span><span class="sxs-lookup"><span data-stu-id="44499-144">The previous [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] query expression is expressed in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] in the following way.</span></span>  
   
 ```  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
 ```  
   
-## <a name="example"></a><span data-ttu-id="27e88-145">示例</span><span class="sxs-lookup"><span data-stu-id="27e88-145">Example</span></span>  
- <span data-ttu-id="27e88-146">下面的 Entity SQL 查询使用 SELECT 运算符指定查询要返回的元素。</span><span class="sxs-lookup"><span data-stu-id="27e88-146">The following Entity SQL query uses the SELECT operator to specify the elements to be returned by a query.</span></span> <span data-ttu-id="27e88-147">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="27e88-147">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="27e88-148">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="27e88-148">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="44499-145">示例</span><span class="sxs-lookup"><span data-stu-id="44499-145">Example</span></span>  
+ <span data-ttu-id="44499-146">下面的 Entity SQL 查询使用 SELECT 运算符指定查询要返回的元素。</span><span class="sxs-lookup"><span data-stu-id="44499-146">The following Entity SQL query uses the SELECT operator to specify the elements to be returned by a query.</span></span> <span data-ttu-id="44499-147">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="44499-147">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="44499-148">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="44499-148">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="27e88-149">执行 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。</span><span class="sxs-lookup"><span data-stu-id="27e88-149">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="44499-149">执行 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。</span><span class="sxs-lookup"><span data-stu-id="44499-149">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="27e88-150">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="27e88-150">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="44499-150">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="44499-150">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
-## <a name="see-also"></a><span data-ttu-id="27e88-151">请参阅</span><span class="sxs-lookup"><span data-stu-id="27e88-151">See Also</span></span>  
- [<span data-ttu-id="27e88-152">查询表达式</span><span class="sxs-lookup"><span data-stu-id="27e88-152">Query Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
- [<span data-ttu-id="27e88-153">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="27e88-153">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [<span data-ttu-id="27e88-154">TOP</span><span class="sxs-lookup"><span data-stu-id="27e88-154">TOP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="44499-151">请参阅</span><span class="sxs-lookup"><span data-stu-id="44499-151">See Also</span></span>  
+ [<span data-ttu-id="44499-152">查询表达式</span><span class="sxs-lookup"><span data-stu-id="44499-152">Query Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
+ [<span data-ttu-id="44499-153">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="44499-153">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="44499-154">TOP</span><span class="sxs-lookup"><span data-stu-id="44499-154">TOP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
