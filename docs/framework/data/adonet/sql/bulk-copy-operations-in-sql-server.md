@@ -2,15 +2,15 @@
 title: SQL Server 中的批量复制操作
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: 87373f55181742a243c60bc4b471334535d88ff7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16709d1bdc03c767d1e3aed808de220bf91e76ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360421"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455661"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server 中的批量复制操作
-Microsoft SQL Server 包括一个名为的常用命令行实用工具**bcp**为快速批量将大型文件复制到 SQL Server 数据库中表或视图。 使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类可以编写提供类似功能的托管代码解决方案。 还可以通过其他方式将数据加载到 SQL Server 表中（例如 INSERT 语句），但是 <xref:System.Data.SqlClient.SqlBulkCopy> 提供的性能要明显优于这些方式。  
+Microsoft SQL Server 包含名为的常用命令行实用工具**bcp**的快速大容量复制大型文件到表或视图中的 SQL Server 数据库。 使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类可以编写提供类似功能的托管代码解决方案。 还可以通过其他方式将数据加载到 SQL Server 表中（例如 INSERT 语句），但是 <xref:System.Data.SqlClient.SqlBulkCopy> 提供的性能要明显优于这些方式。  
   
  <xref:System.Data.SqlClient.SqlBulkCopy> 类只能用于向 SQL Server 表中写入数据。 但是，数据源不限于 SQL Server；可以使用任何数据源，只要数据可以加载到 <xref:System.Data.DataTable> 实例或使用 <xref:System.Data.IDataReader> 实例读取即可。  
   
@@ -23,7 +23,7 @@ Microsoft SQL Server 包括一个名为的常用命令行实用工具**bcp**为�
 -   事务中的批量复制操作  
   
 > [!NOTE]
->  使用.NET Framework 1.1 或更早版本时 (后者不支持<xref:System.Data.SqlClient.SqlBulkCopy>类)，你可以执行 SQL Server TRANSACT-SQL**大容量插入**语句使用<xref:System.Data.SqlClient.SqlCommand>对象。  
+>  使用.NET Framework 1.1 或更早版本时 (不支持<xref:System.Data.SqlClient.SqlBulkCopy>类)，可以执行 SQL Server TRANSACT-SQL **BULK INSERT**语句使用<xref:System.Data.SqlClient.SqlCommand>对象。  
   
 ## <a name="in-this-section"></a>本节内容  
  [大容量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  
@@ -40,4 +40,4 @@ Microsoft SQL Server 包括一个名为的常用命令行实用工具**bcp**为�
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

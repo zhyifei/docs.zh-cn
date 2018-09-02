@@ -3,11 +3,11 @@ title: 访问控制 (F#)
 description: '了解如何控制对编程元素，如类型、 方法和函数，F # 编程语言中的访问。'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6b13ac03d2a4a6c53b53d4c790760f5d51b334ee
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332234"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456339"
 ---
 # <a name="access-control"></a>访问控制
 

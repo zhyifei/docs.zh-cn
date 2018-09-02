@@ -2,12 +2,12 @@
 title: 符号和运算符参考 (F#)
 description: '了解符号和 F # 编程语言中使用的运算符。'
 ms.date: 04/04/2018
-ms.openlocfilehash: 79518b990f3a5c794f7658490bdadc2d5b985504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a52fc7539027f0cf86a82223a5970d86d7ec60c5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566699"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457195"
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
@@ -82,10 +82,10 @@ ms.locfileid: "33566699"
 |`=?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，计算“等于”运算。<br /></li><ul/>|
 |`==`|不适用。|<ul><li>F# 中不使用。 使用 `=` 进行相等运算。<br /></li><ul/>|
 |`>`|[算术运算符](arithmetic-operators.md)|<ul><li>如果左侧大于右侧，则返回 `true`；否则返回 `false`。<br /></li><ul/>|
-|`>?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，计算“大于”运算。<br /></li><ul/>|
+|`>?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，则计算"大于"操作。<br /></li><ul/>|
 |`>>`|[函数](../functions/index.md)|<ul><li>组合两个函数（正向组合运算符）。<br /></li><ul/>|
 |`>>>`|[位运算符](bitwise-operators.md)|<ul><li>将左侧的位数向右移动右侧指定的位数。<br /></li><ul/>|
-|`>=`|[算术运算符](arithmetic-operators.md)|<ul><li>返回`true`左侧是否大于或等于右侧的数字; 否则，返回`false`。<br /></li><ul/>|
+|`>=`|[算术运算符](arithmetic-operators.md)|<ul><li>返回`true`左侧和右侧是否大于或等于右侧的数字; 否则，返回`false`。<br /></li><ul/>|
 |`>=?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，计算“大于或等于”运算。<br /></li><ul/>|
 |`?`|[参数和自变量](../parameters-and-arguments.md)|<ul><li>指定可选自变量。<br /></li><li>用作动态方法和属性调用的运算符。 你必须提供自己的实现。<br /></li><ul/>|
 |`? ... <- ...`|无可用的详细信息。|<ul><li>用作设置动态属性的运算符。 你必须提供自己的实现。<br /></li><ul/>|
@@ -131,7 +131,7 @@ ms.locfileid: "33566699"
 |`or`, <code>&#124;&#124;</code>|左侧|
 |`&`, `&&`|左侧|
 |`:>`, `:?>`|右|
-|`!=`*操作*， `<`*操作*， `>`*操作*， `=`， <code>&#124;</code>*操作*， `&`*操作*, `&`<br /><br />（包括 `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`）|左侧|
+|`!=`*op*， `<` *op*， `>` *op*， `=`， <code>&#124;</code> *op*， `&`*操作*, `&`<br /><br />（包括 `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`）|左侧|
 |`^`*op*<br /><br />（包括 `^^^`）|右|
 |`::`|右|
 |`:?`|未关联|

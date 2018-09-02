@@ -16,12 +16,12 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: d4e5b4353b53c382dad2b390db1b8fc224e7f261
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911739"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468625"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>如何：对 Windows 窗体控件进行线程安全调用
 
@@ -406,7 +406,7 @@ private:
  以下代码示例是一个完整的 Windows 窗体应用程序，由带有三个按钮和一个文本框的窗体组成。 第一个按钮演示了不安全的跨线程访问，第二个按钮使用 <xref:System.Windows.Forms.Control.Invoke%2A>演示了安全的访问，第三个按钮通过使用 <xref:System.ComponentModel.BackgroundWorker>演示了安全的访问。
 
 > [!NOTE]
-> 有关如何运行该示例的说明，请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416)。 该示例需引用 System.Drawing 和 System.Windows.Forms 程序集。
+> 有关如何运行该示例的说明，请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416)。 该示例需引用 System.Drawing 和 System.Windows.Forms 程序集。
 
 ```csharp
 using System;

@@ -2,12 +2,12 @@
 title: '&lt;net.tcp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 9e44ddcc3a3e983abe6e36d4b6095c5c4a67529f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae6837bf6dc8167e165a3adcd1fca8abc3dcd396
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349878"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467596"
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 指定允许多个进程共享同一 TCP 端口的 NET.TCP 端口共享服务的配置设置。  
@@ -52,17 +52,17 @@ ms.locfileid: "33349878"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`listenBacklog`|一个整数，指定从共享连接接受但仍未调度到 Windows Communication Foundation (WCF) 服务的最大未完成连接。 默认值为 10。|  
+|`listenBacklog`|一个整数，指定从共享连接接受但仍未调度给 Windows Communication Foundation (WCF) 服务的最大未完成连接。 默认值为 10。|  
 |`maxPendingAccepts`|一个整数，指定共享服务侦听终结点上的最大未完成并发接受线程数。 默认值为 2。|  
 |`MaxPendingConnections`|侦听器可以拥有的正在等待应用程序接受的最大连接数。 超出此配额值时，新的传入连接会被丢弃而不是等待接受。 连接功能（如消息安全）可能会使客户端打开多个连接。 在设置此配额值时，服务管理员应该考虑这些额外的连接。 默认值为 10。|  
 |`receiveTimeout`|`TimeSpan`，它将为读取组帧数据并执行来自基础连接的连接调度指定超时值。 默认值为“00:00:10”。|  
-|`teredoEnabled`|一个布尔值，该值指示端口共享服务是否使用 Microsoft Teredo 服务代表 WCF 服务的 TCP 端口上侦听。 默认值为 `false`。|  
+|`teredoEnabled`|一个布尔值，该值指示端口共享服务是否使用 Microsoft Teredo 服务代表 WCF 服务的 TCP 端口上进行侦听。 默认值为 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|包含的配置元素的集合`securityIdentifier`特性来指定这些进程承载 WCF 服务并被授予对该共享服务的连接访问权限的用户帐户。|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|包含的配置元素的集合`securityIdentifier`属性指定的进程的承载 WCF 服务并被授予对共享服务的连接访问权限的用户帐户。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -71,9 +71,9 @@ ms.locfileid: "33349878"
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|包含侦听器进程 SMSvcHost.exe 的配置设置。|  
   
 ## <a name="remarks"></a>备注  
- 端口共享的详细信息，请参阅[Net.TCP 端口共享](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)。 若要了解如何配置端口共享服务，请参阅[配置 Net.TCP Port Sharing Service](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)。  
+ 端口共享的详细信息，请参阅[Net.TCP 端口共享](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)。 若要了解如何配置端口共享服务，请参阅[配置 Net.TCP 端口共享服务](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Net.TCP 端口共享](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
- [配置 Net.TCP 端口共享服务](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [Net.TCP 端口共享](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [配置 Net.TCP 端口共享服务](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)

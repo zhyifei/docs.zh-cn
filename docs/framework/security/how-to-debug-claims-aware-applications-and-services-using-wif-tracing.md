@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69c7e30168686eeb7d530b167b1f87c567c63874
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408627"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463190"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>如何：使用 WIF 跟踪调试声明感知应用程序和服务
 ## <a name="applies-to"></a>适用于  
@@ -77,14 +77,14 @@ ms.locfileid: "33408627"
     </system.diagnostics>  
     ```  
   
-3.  以上配置指示 WIF 生成详细的跟踪事件并将其记录到 WIFTrace.e2e 文件中。 有关 switchValue 开关的值的完整列表，请参阅以下主题中的跟踪级别表：[配置跟踪](http://msdn.microsoft.com/library/ms733025.aspx)。  
+3.  以上配置指示 WIF 生成详细的跟踪事件并将其记录到 WIFTrace.e2e 文件中。 有关 switchValue 开关的值的完整列表，请参阅以下主题中的跟踪级别表：[配置跟踪](../wcf/diagnostics/tracing/configuring-tracing.md)。  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>步骤 2 – 使用跟踪查看器工具分析 WIF 跟踪文件  
  在此步骤中，将使用跟踪查看器工具 (SvcTraceViewer.exe) 来分析 WIF 跟踪日志。  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>使用跟踪查看器工具 (SvcTraceViewer.exe) 分析 WIF 跟踪日志  
   
-1.  跟踪查看器工具 (SvcTraceViewer.exe) 作为 Windows SDK 的一部分提供。 如果尚未安装 Windows SDK，可在 [Windows SDK](http://www.microsoft.com/download/en/details.aspx?id=8279) 中下载。  
+1.  跟踪查看器工具 (SvcTraceViewer.exe) 作为 Windows SDK 的一部分提供。 如果尚未安装 Windows SDK，可在 [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279) 中下载。  
   
 2.  运行跟踪查看器工具 (SvcTraceViewer.exe)。 通常可以在安装路径的 Bin 文件夹中找到。  
   
@@ -105,8 +105,8 @@ ms.locfileid: "33408627"
   
 |**错误 ID**|**错误消息**|**修复错误所需操作**|  
 |-|-|-|  
-|ID4175|IssuerNameRegistry 未识别的安全令牌的颁发者。  若要接受来自此颁发者的安全令牌，请将 IssuerNameRegistry 配置为返回此颁发者的有效名称。|从 MMC 管理单元复制指纹并将其粘贴到 Web.config 文件中可能会导致此错误。 具体而言，从证书属性窗口中复制时，可以获得文本字符串中额外的非打印字符。 此额外的字符会导致指纹匹配失败。正确复制指纹的过程可在此处找到： [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|IssuerNameRegistry 未识别的安全令牌的颁发者。  若要接受来自此颁发者的安全令牌，请将 IssuerNameRegistry 配置为返回此颁发者的有效名称。|从 MMC 管理单元复制指纹并将其粘贴到 Web.config 文件中可能会导致此错误。 具体而言，从证书属性窗口中复制时，可以获得文本字符串中额外的非打印字符。 此额外的字符将导致指纹匹配失败。可在此处找到正确复制指纹的过程： [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>相关项  
   
--   [使用服务跟踪查看器查看相关跟踪和进行故障排除](http://msdn.microsoft.com/library/aa751795.aspx)
+-   [使用服务跟踪查看器查看相关跟踪和进行故障排除](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

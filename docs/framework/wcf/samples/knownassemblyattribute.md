@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: f12049ba1230b052f61994bd0c2db496a0da4aae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02d151ee322cb2793df6f31e5e4b72dfb1027aec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506205"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462345"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 此示例演示如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 类来自定义序列化和反序列化过程。 此示例演示如何在序列化和反序列化过程中动态添加已知类型。  
@@ -346,28 +346,28 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>设置、运行和生成示例  
   
-1.  右键单击该解决方案**KnownAssemblyAttribute**和选择**属性**。  
+1.  右键单击该解决方案**KnownAssemblyAttribute** ，然后选择**属性**。  
   
-2.  在**通用属性**，选择**启动项目**，然后单击**多启动项目**。  
+2.  在中**常见属性**，选择**启动项目**，然后单击**多个启动项目**。  
   
-3.  添加**启动**操作**服务**和**客户端**项目。  
+3.  添加**启动**操作**服务**并**客户端**项目。  
   
-4.  单击**确定**，按**F5**运行示例。  
+4.  单击**确定**，然后按**F5**运行示例。  
   
 5.  如果应用程序未正确运行，请按照以下步骤确保已正确设置了您的环境：  
   
-6.  确保已执行[的一次性安装过程 Windows Communication Foundation 示例的](http://go.microsoft.com/fwlink/?LinkId=150774)。  
+6.  请确保您具有执行[一次性安装过程 Windows Communication Foundation 示例的](https://go.microsoft.com/fwlink/?LinkId=150774)。  
   
-7.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](http://go.microsoft.com/fwlink/?LinkId=150775)。  
+7.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](https://go.microsoft.com/fwlink/?LinkId=150775)。  
   
-8.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](http://go.microsoft.com/fwlink/?LinkId=150776)。  
+8.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](https://go.microsoft.com/fwlink/?LinkId=150776)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
   

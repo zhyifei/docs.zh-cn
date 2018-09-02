@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 60e33f9f3ab767a6fd1d5489721fd2a82950155e
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 685c68967f69e8933ff3dd2cd062e0893c7e2da6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754545"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465983"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>演练：本地化混合应用程序
 
@@ -28,7 +28,7 @@ ms.locfileid: "42754545"
 
 -   使用 LocBaml 工具生成附属程序集。
 
-在本演练中所涉及任务的完整代码列表，请参阅[本地化混合应用程序示例](http://go.microsoft.com/fwlink/?LinkID=160015)。
+在本演练中所涉及任务的完整代码列表，请参阅[本地化混合应用程序示例](https://go.microsoft.com/fwlink/?LinkID=160015)。
 
 完成后，你将拥有一个本地化的混合应用程序。
 
@@ -44,7 +44,7 @@ ms.locfileid: "42754545"
 
 ### <a name="to-create-the-host-project"></a>创建宿主项目
 
-1.  创建**WPF 应用程序**名为项目`LocalizingWpfInWf`。 有关详细信息，请参阅[如何：创建 Windows 应用程序项目](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。
+1.  创建**WPF 应用程序**名为项目`LocalizingWpfInWf`。  (**文件** > **新** > **项目** > **Visual C#** 或**Visual Basic**  > **经典桌面** > **WPF 应用程序**)。
 
 2.  添加[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl>元素称为`SimpleControl`到项目。
 
@@ -177,5 +177,5 @@ Windows 窗体设计器提供用于在附属程序集中启用本地化的设置
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [对应用程序进行本地化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
-- [演练： 本地化 Windows 窗体](http://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
-- [WPF 设计器](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [演练： 本地化 Windows 窗体](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

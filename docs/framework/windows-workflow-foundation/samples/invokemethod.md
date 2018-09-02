@@ -2,12 +2,12 @@
 title: InvokeMethod
 ms.date: 03/30/2017
 ms.assetid: 04988eb3-65f8-456d-b1bd-509f5d05a57c
-ms.openlocfilehash: 12d028515c34c0e3593c90b81a5589fb05f36b82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 861e0cf160aec9814abcf8c27c37ce13a5d88b2a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517733"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457176"
 ---
 # <a name="invokemethod"></a>InvokeMethod
 本示例演示使用 <xref:System.Activities.Statements.InvokeMethod> 活动调用类的方法的不同方式。  
@@ -42,7 +42,7 @@ ms.locfileid: "33517733"
 12. 从对象的实例检索一个值。  
   
 ## <a name="to-use-this-sample"></a>使用此示例  
- 此示例分为两个版本。 此示例的第一个版本演示如何使用<xref:System.Activities.Statements.InvokeMethod>通过 C# 代码使用的 Windows Workflow Foundation (WF) 的编程模型，并可以在 CodedWorkflow\CS 文件夹下找到。 此示例的第二个版本使用 XAML 演示 <xref:System.Activities.Statements.InvokeMethod> 的用法，它可以在 DesignerWorkflow\CS 文件夹下找到。  
+ 此示例分为两个版本。 此示例的第一个版本演示如何使用<xref:System.Activities.Statements.InvokeMethod>通过 C# 代码使用 Windows Workflow Foundation (WF) 编程模型和可以在 CodedWorkflow\CS 文件夹下找到。 此示例的第二个版本使用 XAML 演示 <xref:System.Activities.Statements.InvokeMethod> 的用法，它可以在 DesignerWorkflow\CS 文件夹下找到。  
   
 #### <a name="to-run-the-coded-workflow-sample"></a>运行编码的工作流示例  
   
@@ -65,6 +65,6 @@ ms.locfileid: "33517733"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`

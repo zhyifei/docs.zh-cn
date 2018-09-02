@@ -2,12 +2,12 @@
 title: '&lt;netHttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: be96306b61b3eb6bfb8d3305ccbb05bb3ec4549d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30098d2b9a9087eb0543bdd7c8a899cd66c91ed8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354107"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466706"
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; 的 &lt;message&gt;
 定义的消息级安全性设置[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
@@ -41,7 +41,7 @@ ms.locfileid: "33354107"
   
 |值|描述|  
 |-----------|-----------------|  
-|UserName|-要求客户端在使用 UserName 凭据向服务器进行身份验证。 需要使用 <`clientCredentials`> 元素来指定此凭据。<br />WCF 不支持发送密码摘要，也使用派生密钥的密码并使用这样的密钥来提供消息安全性。 因此，WCF 强制使用 UserName 凭据时，传输进行保护。 对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
+|UserName|-要求客户端使用 UserName 凭据向服务器进行身份验证。 需要使用 <`clientCredentials`> 元素来指定此凭据。<br />WCF 不支持发送密码摘要，也派生密钥的密码并使用此类密钥来提供消息安全性。 因此，WCF 强制要求使用 UserName 凭据时保护传输的。 对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
 |证书|要求使用证书向服务器对客户端进行身份验证。 在此情况下，需要使用 <`clientCredentials`> 和 <`clientCertificate`> 来指定客户端凭据。 此外，在使用消息安全模式时，需要向客户端提供服务证书。 在这种情况下需要使用指定服务凭据<xref:System.ServiceModel.Description.ClientCredentials>类或`ClientCredentials`行为元素并指定服务证书使用\<serviceCertificate > serviceCredentials 的元素。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -129,5 +129,5 @@ ms.locfileid: "33354107"
  [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用绑定来配置 Windows Communication Foundation 服务和客户端](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<绑定 >](../../../../../docs/framework/misc/binding.md)

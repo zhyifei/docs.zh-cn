@@ -2,12 +2,12 @@
 title: 连接字符串语法
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 1df49a9ed5d45a1a1ee50145ff036c98ec72cca8
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 3d8b37315ab3ceea2ddedd139787627e86b6a131
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472745"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469916"
 ---
 # <a name="connection-string-syntax"></a>连接字符串语法
 每个 .NET Framework 数据提供程序都有一个继承自 `Connection` 的 <xref:System.Data.Common.DbConnection> 对象，以及一个提供程序特定的 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 属性。 每个提供程序的特定连接字符串语法记录在其 `ConnectionString` 属性中。 下表列出了 .NET Framework 中包含的四个数据提供程序。  
@@ -49,10 +49,10 @@ ms.locfileid: "34472745"
 <xref:System.Data.SqlClient.SqlConnection> 连接字符串的语法记录在 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 属性中。 您可以使用 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 属性来获取或设置 SQL Server 数据库的连接字符串。 如果您需要连接到早期版本的 SQL Server，则必须使用适用于 OleDb 的 .NET Framework 数据提供程序 (<xref:System.Data.OleDb>)。 大多数连接字符串关键字还会在 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 中映射为属性。  
 
 > [!IMPORTANT]
->  默认设置`Persist Security Info`关键字是`false`。 如果将其设置为 `true` 或 `yes`，则允许在打开连接后通过连接获取安全敏感信息（包括用户 ID 和密码）。 保留`Persist Security Info`设置为`false`以确保不受信任的源没有访问敏感的连接字符串信息。  
+>  默认设置为`Persist Security Info`关键字是`false`。 如果将其设置为 `true` 或 `yes`，则允许在打开连接后通过连接获取安全敏感信息（包括用户 ID 和密码）。 保持`Persist Security Info`设置为`false`以确保不受信任的源不能访问敏感的连接字符串信息。  
 
-### <a name="windows-authentication-with-sqlclient"></a>使用 SqlClient 的 Windows 身份验证 
- 每个以下形式的语法使用 Windows 身份验证连接到**AdventureWorks**的本地服务器上的数据库。  
+### <a name="windows-authentication-with-sqlclient"></a>与 SqlClient 一起使用的 Windows 身份验证 
+ 下面的语法的每个使用 Windows 身份验证连接到**AdventureWorks**本地服务器上的数据库。  
   
 ```  
 "Persist Security Info=False;Integrated Security=true;  
@@ -63,20 +63,20 @@ ms.locfileid: "34472745"
     database=AdventureWorks;server=(local)"  
 ```  
   
-### <a name="sql-server-authentication-with-sqlclient"></a>使用 SqlClient 的 SQL Server 身份验证   
+### <a name="sql-server-authentication-with-sqlclient"></a>与 SqlClient 一起使用的 SQL Server 身份验证   
  Windows 身份验证是用于连接到 SQL Server 的首选方法。 但是，如果需要 SQL Server 身份验证，请使用下列语法来指定用户名和密码。 在此示例中，星号用来表示有效用户名和密码。  
   
 ```  
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-当你连接到 Azure SQL 数据库或 Azure SQL 数据仓库，并提供格式中的登录名`user@servername`，请确保`servername`于此登录中的值与提供的值匹配`Server=`。
+当你连接到 Azure SQL 数据库或 Azure SQL 数据仓库，并提供格式中的登录名`user@servername`，请确保`servername`登录名中的值与为提供的值相匹配`Server=`。
 
 > [!NOTE]
 >  Windows 身份验证优先于 SQL Server 登录。 如果您同时指定 Integrated Security=true 以及用户名和密码，将忽略用户名和密码，而使用 Windows 身份验证。  
 
 ### <a name="connect-to-a-named-instance-of-sql-server"></a>连接到 SQL Server 的命名实例
-若要连接到 SQL Server 的命名实例，使用*服务器名称 \ 实例名称*语法。  
+若要连接到 SQL Server 的命名实例，请使用*服务器名称 \ 实例名称*语法。  
   
 ```  
 Data Source=MySqlServer\MSSQL1;"  
@@ -93,7 +93,7 @@ Data Source=MySqlServer\MSSQL1;"
  使用用户实例的详细信息，请参阅[SQL Server Express 用户实例](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)。  
   
 ## <a name="using-trustservercertificate"></a>使用 TrustServerCertificate  
- `TrustServerCertificate`关键字无效，仅当连接到 SQL Server 实例使用有效的证书。 当 `TrustServerCertificate` 设置为 `true` 时，传输层将使用 SSL 来加密通道并跳过证书链以验证信任。  
+ `TrustServerCertificate`仅当连接到 SQL Server 实例使用有效的证书时，关键字才有效。 当 `TrustServerCertificate` 设置为 `true` 时，传输层将使用 SSL 来加密通道并跳过证书链以验证信任。  
   
 ```  
 "TrustServerCertificate=true;"   
@@ -103,9 +103,9 @@ Data Source=MySqlServer\MSSQL1;"
 >  如果 `TrustServerCertificate` 设置为 `true` 并已启动加密，将使用对服务器指定的加密级别，即使 `Encrypt` 在连接字符串中被设置为 `false`。 否则连接将会失败。  
   
 ### <a name="enabling-encryption"></a>启用加密  
- 若要启用加密证书不设置后在服务器上，**强制协议加密**和**信任服务器证书**选项必须设置在 SQL Server 配置管理器中。 在此情况下，如果未向服务器提供可验证的证书，加密将使用未经验证的自签名服务器证书。  
+ 若要启用加密时未在服务器上，设置证书**强制协议加密**并**信任服务器证书**选项必须设置 SQL Server 配置管理器中。 在此情况下，如果未向服务器提供可验证的证书，加密将使用未经验证的自签名服务器证书。  
   
- 应用程序设置无法降低在 SQL Server 中配置的安全级别，但可以增强安全级别。 应用程序可以通过设置请求加密`TrustServerCertificate`和`Encrypt`关键字`true`，从而保证，加密进行，即使尚未设置服务器证书和**强制协议加密**尚未配置客户端。 但是，如果未在客户端配置中启用 `TrustServerCertificate`，则仍需要提供服务器证书。  
+ 应用程序设置无法降低在 SQL Server 中配置的安全级别，但可以增强安全级别。 应用程序可以通过设置请求加密`TrustServerCertificate`并`Encrypt`关键字来`true`，保证加密会发生即使服务器证书未预配和**强制协议加密**尚未为客户端配置。 但是，如果未在客户端配置中启用 `TrustServerCertificate`，则仍需要提供服务器证书。  
   
  下表描述了各种情况。  
   
@@ -113,13 +113,13 @@ Data Source=MySqlServer\MSSQL1;"
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |No|不可用|否（默认值）|忽略|不加密。|  
 |No|不可用|是|否（默认值）|只有在具有可验证的服务器证书的情况下才能进行加密，否则连接尝试将失败。|  
-|No|不可用|是|是|加密始终发生，但可能会使用自签名的服务器证书。|  
-|是|No|忽略|忽略|只有在可验证服务器证书，则会发生加密否则，连接尝试失败。|  
-|是|是|否（默认值）|忽略|加密始终发生，但可能会使用自签名的服务器证书。|  
-|是|是|是|否（默认值）|只有在可验证服务器证书，则会发生加密否则，连接尝试失败。|  
-|是|是|是|是|加密始终发生，但可能会使用自签名的服务器证书。|  
+|No|不可用|是|是|加密始终会发生，但可以使用自签名的服务器证书。|  
+|是|No|忽略|忽略|加密时发生才可验证的服务器证书;否则，连接尝试失败。|  
+|是|是|否（默认值）|忽略|加密始终会发生，但可以使用自签名的服务器证书。|  
+|是|是|是|否（默认值）|加密时发生才可验证的服务器证书;否则，连接尝试失败。|  
+|是|是|是|是|加密始终会发生，但可以使用自签名的服务器证书。|  
   
- 有关详细信息，请参阅[使用未经验证的加密](http://go.microsoft.com/fwlink/?LinkId=120500)SQL Server 联机丛书中。  
+ 有关详细信息，请参阅[使用未经验证的加密](/sql/relational-databases/native-client/features/using-encryption-without-validation)。
   
 ## <a name="oledb-connection-strings"></a>OleDb 连接字符串  
  通过 <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> 的 <xref:System.Data.OleDb.OleDbConnection> 属性，您可以获取或设置 OLE DB 数据源（如 Microsoft Access）的连接字符串。 也可以使用 `OleDb` 类在运行时创建一个 <xref:System.Data.OleDb.OleDbConnectionStringBuilder> 连接字符串。  
@@ -138,7 +138,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 ```  
   
 > [!IMPORTANT]
->  可以提供的连接信息**OleDbConnection**在通用数据链接 (UDL) 文件; 但是，应避免这样做。 UDL 文件未加密，会以明文形式公开连接字符串信息。 因为 UDL 文件对您的应用程序来说是一个基于文件的外部资源，所以无法使用 .NET Framework 保护该文件。 不支持 UDL 文件**SqlClient**。  
+>  它是可以提供连接信息**OleDbConnection**在通用数据链接 (UDL) 文件中; 但是您应避免这样做。 UDL 文件未加密，会以明文形式公开连接字符串信息。 因为 UDL 文件对您的应用程序来说是一个基于文件的外部资源，所以无法使用 .NET Framework 保护该文件。 不支持 UDL 文件**SqlClient**。  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>使用 DataDirectory 连接到 Access/Jet  
  `DataDirectory` 不是 `SqlClient` 独占的。 它还可以用于 <xref:System.Data.OleDb> 和 <xref:System.Data.Odbc> .NET 数据提供程序。 下面的 <xref:System.Data.OleDb.OleDbConnection> 字符串示例演示连接到应用程序 app_data 文件夹中的 Northwind.mdb 所需的语法。 系统数据库 (System.mdw) 也存储在该位置。  
@@ -197,4 +197,4 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
 ## <a name="see-also"></a>请参阅  
  [连接字符串](../../../../docs/framework/data/adonet/connection-strings.md)  
  [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

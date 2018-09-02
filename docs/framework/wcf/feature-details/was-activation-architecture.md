@@ -2,12 +2,12 @@
 title: WAS 激活体系结构
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497992"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457155"
 ---
 # <a name="was-activation-architecture"></a>WAS 激活体系结构
 本主题详细列举和讨论了 Windows 进程激活服务（也称为 WAS）的组件。  
@@ -30,11 +30,11 @@ ms.locfileid: "33497992"
  ![WAS 体系结构](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
 ### <a name="listener-adapters"></a>侦听器适配器  
- 侦听器适配器是一些单独的 Windows 服务，这些服务可以实现用于通过其侦听的网络协议接收消息的网络通信逻辑。 下表列出 Windows Communication Foundation (WCF) 协议的侦听器的适配器。  
+ 侦听器适配器是一些单独的 Windows 服务，这些服务可以实现用于通过其侦听的网络协议接收消息的网络通信逻辑。 下表列出了 Windows Communication Foundation (WCF) 协议的侦听器适配器。  
   
 |侦听器适配器服务名称|协议|说明|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|提供 IIS 7.0 和 WCF HTTP 激活的公共组件。|  
+|W3SVC|http|提供有关 IIS 7.0 和 WCF HTTP 激活的常见组件。|  
 |NetTcpActivator|net.tcp|取决于 NetTcpPortSharing 服务。|  
 |NetPipeActivator|net.pipe||  
 |NetMsmqActivator|net.msmq|与基于 WCF 的消息队列应用程序一起使用。|  
@@ -87,4 +87,4 @@ ms.locfileid: "33497992"
   
 ## <a name="see-also"></a>请参阅  
  [配置 WAS 以用于 WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

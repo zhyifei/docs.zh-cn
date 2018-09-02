@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: f97406ccf826bfa5b7c3ed87bdb58478b272a216
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04c2f4bdfe2a6309fde0821db308ee2a83887323
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399104"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456365"
 ---
 # <a name="wif-session-management"></a>WIF 会话管理
 客户端首次尝试访问信赖方托管的受保护资源时，客户端应先向信赖方信任的安全令牌服务 (STS) 验证自身身份。 然后，STS 向客户端颁发安全令牌。 客户端向信赖方出示此令牌，然后信赖方授予客户端访问受保护资源的权限。 但是，不希望客户端针对每个请求重新向 STS 进行身份验证，特别是因为它甚至可能与依赖方不在同一台计算机上或同一个域中。 相反，Windows Identity Foundation (WIF) 中客户端和信赖方建立一个会话，该会话中客户端为首次请求后的所有请求使用会话安全令牌向信赖方验证自身身份。 信赖方可以使用 cookie 中存储的此会话安全令牌重构客户端的 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>。  
@@ -30,4 +30,4 @@ ms.locfileid: "33399104"
 ## <a name="extensibility"></a>扩展性  
  可以扩展会话管理机制。 原因之一是可提升性能。 例如，可以创建一个自定义 cookie 处理程序，该处理程序转换或优化内存中状态间的会话安全令牌和进入 cookie 中的内容。 为此，可以配置 <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> 的 <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> 属性以使用派生自 <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType> 的自定义 cookie 处理程序。 <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType> 是默认 cookie 处理程序，因为 cookie 超过了超文本传输协议 (HTTP) 允许的大小；如果使用自定义 cookie 处理程序代替，必须进行分块。  
   
- 有关详细信息，请参阅[ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408)示例。 此示例演示场就绪会话缓存（相对于 tokenreplycache），以便可以通过引用而非交换大型 cookie 使用会话。此示例还演示保护群集中的 cookie 更简单的方法。 会话缓存基于 WCF。 至于会话保护，该示例演示 WIF 4.5 中基于 MachineKey 的 cookie 转换的新功能，只需在 web.config 中粘贴适当的代码片段即可激活。示例本身并未“场化”，但是它显示应用场就绪需要什么。
+ 有关详细信息，请参阅[ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)示例。 此示例演示场就绪会话缓存（相对于 tokenreplycache），以便可以通过引用而非交换大型 cookie 使用会话。此示例还演示保护群集中的 cookie 更简单的方法。 会话缓存基于 WCF。 至于会话保护，该示例演示 WIF 4.5 中基于 MachineKey 的 cookie 转换的新功能，只需在 web.config 中粘贴适当的代码片段即可激活。示例本身并未“场化”，但是它显示应用场就绪需要什么。

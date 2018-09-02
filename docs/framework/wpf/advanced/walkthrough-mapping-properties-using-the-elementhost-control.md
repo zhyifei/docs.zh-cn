@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 89d2c6476334080fb162eadd4b2bf5984970f3fd
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 34119d889c8d6600fdda12cac33192c32d8e0fa6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934676"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467119"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>演练：使用 ElementHost 控件映射属性
 
@@ -29,7 +29,7 @@ ms.locfileid: "42934676"
 
 -   扩展默认属性映射。
 
-在本演练中所涉及任务的完整代码列表，请参阅[映射属性使用 ElementHost 控件示例](http://go.microsoft.com/fwlink/?LinkID=160018)。
+在本演练中所涉及任务的完整代码列表，请参阅[映射属性使用 ElementHost 控件示例](https://go.microsoft.com/fwlink/?LinkID=160018)。
 
 完成后，你将能够映射[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]相对应的属性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]上承载的元素的属性。
 
@@ -62,7 +62,7 @@ ms.locfileid: "42934676"
 
 4.  在 Windows 窗体设计器中打开 `Form1`。 双击要添加的事件处理程序的窗体<xref:System.Windows.Forms.Form.Load>事件。
 
-5.  返回到 Windows 窗体设计器并添加事件处理程序的窗体的<xref:System.Windows.Forms.Control.Resize>事件。 有关详细信息，请参阅[如何： 使用设计器创建事件处理程序](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。
+5.  返回到 Windows 窗体设计器并添加事件处理程序的窗体的<xref:System.Windows.Forms.Control.Resize>事件。 有关详细信息，请参阅[如何： 使用设计器创建事件处理程序](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。
 
 6.  声明<xref:System.Windows.Forms.Integration.ElementHost>字段中`Form1`类。
 
@@ -146,5 +146,5 @@ ms.locfileid: "42934676"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Windows 窗体和 WPF 属性映射](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [WPF 设计器](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [演练：在 Windows 窗体中承载 WPF 复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

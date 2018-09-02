@@ -10,15 +10,15 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: ca989c1cd7baa1eaeb10c65bd9ebef8e400968c3
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255217"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461058"
 ---
 # <a name="query-projections-wcf-data-services"></a>查询投影（WCF 数据服务）
-投影提供一种机制中的[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以减少在响应中返回的只有某些实体的属性通过指定查询返回的源中的数据量。 有关详细信息，请参阅[OData: Select 系统查询选项 ($select)](http://go.microsoft.com/fwlink/?LinkId=186076)。  
+投影提供一种机制中的[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以减少在响应中返回的只有某些实体的属性通过指定查询返回的源中的数据量。 有关详细信息，请参阅[OData: Select 系统查询选项 ($select)](https://go.microsoft.com/fwlink/?LinkId=186076)。  
   
  本主题介绍如何定义查询投影、实体和非实体类型的需求、对投影的结果进行更新、创建投影的类型，还列出一些投影的注意事项。  
   

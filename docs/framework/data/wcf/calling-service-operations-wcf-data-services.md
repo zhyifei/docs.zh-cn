@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: 82bba149f06fc68f2f01e0e7641d98ebb861dbe6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62e2d05ec724b633de42c4b8e7183676d411791d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364851"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468821"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>调用服务操作（WCF 数据服务）
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 定义数据服务的服务操作。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]允许您将这类操作定义为数据服务的方法。 与其他数据服务资源一样，这些服务操作也通过 URI 进行寻址。 服务操作可以返回实体类型的集合、单个实体类型实例的集合和基元类型（如整数和字符串）的集合。 服务操作还可以返回 `null`（在 Visual Basic 中为 `Nothing`）。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库可以用于访问支持 HTTP GET 请求的服务操作。 这些种类的服务操作定义为应用了 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 有关详细信息，请参阅[服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。  
@@ -24,7 +24,7 @@ ms.locfileid: "33364851"
 ## <a name="considerations-for-calling-service-operations"></a>调用服务操作的注意事项  
  使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端调用服务操作时的注意事项如下。  
   
--   当异步访问数据服务，必须使用同等异步<xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>方法<xref:System.Data.Services.Client.DataServiceContext>或<xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>方法<xref:System.Data.Services.Client.DataServiceQuery%601>。  
+-   以异步方式访问数据服务，必须使用同等异步<xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>上的方法<xref:System.Data.Services.Client.DataServiceContext>或<xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>方法<xref:System.Data.Services.Client.DataServiceQuery%601>。  
   
 -   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库不能具体化返回基元类型集合的服务操作的结果。  
   
@@ -32,29 +32,29 @@ ms.locfileid: "33364851"
   
 -   您不能使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 调用这样的 GET 服务操作：它返回实体或基元类型的单个结果，或需要多个输入参数。 必须调用 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法。  
   
--   请考虑对强类型 <xref:System.Data.Services.Client.DataServiceContext> 分部类创建扩展方法，该分部类通过工具生成，使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 或 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法来调用服务操作。 这样您就可以直接从上下文调用服务操作。 有关详细信息，请参阅博客文章[服务操作和 WCF 数据服务客户端](http://go.microsoft.com/fwlink/?LinkId=215668)。  
+-   请考虑对强类型 <xref:System.Data.Services.Client.DataServiceContext> 分部类创建扩展方法，该分部类通过工具生成，使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 或 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法来调用服务操作。 这样您就可以直接从上下文调用服务操作。 有关详细信息，请参阅博客文章[服务操作和 WCF 数据服务客户端](https://go.microsoft.com/fwlink/?LinkId=215668)。  
   
--   使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 调用服务操作时，客户端库会自动对提供给 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 的字符进行转义，方法是执行保留字符百分比编码（如“and”符 (&)），并转义字符串中的单引号。 但是，当你调用之一*执行*方法来调用服务操作，您必须记住要执行的任何用户提供的字符串值的此转义。 URI 中的单引号转义为单引号对。  
+-   使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 调用服务操作时，客户端库会自动对提供给 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 的字符进行转义，方法是执行保留字符百分比编码（如“and”符 (&)），并转义字符串中的单引号。 但是，当您调用之一*Execute*方法来调用服务操作时，您必须记得对执行的任何用户提供的字符串值的这种转义。 URI 中的单引号转义为单引号对。  
   
 ## <a name="examples-of-calling-service-operations"></a>调用服务操作示例  
  本节通过以下示例演示如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库来调用服务操作：  
   
--   [调用执行&lt;T&gt;返回的实体集合](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
+-   [调用 Execute&lt;T&gt;返回实体的集合](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   
--   [使用 CreateQuery&lt;T&gt;返回的实体集合](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
+-   [使用 CreateQuery&lt;T&gt;返回实体的集合](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
   
--   [调用执行&lt;T&gt;以返回单个实体](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
+-   [调用 Execute&lt;T&gt;以返回单个实体](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
   
--   [调用执行&lt;T&gt;以返回基元值的集合](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
+-   [调用 Execute&lt;T&gt;以返回基元值的集合](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
   
--   [调用执行&lt;T&gt;以返回单个基元值](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
+-   [调用 Execute&lt;T&gt;以返回单个基元值](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
   
 -   [调用服务操作不返回任何数据](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteVoid)  
   
 -   [以异步方式调用服务操作](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteAsync)  
   
 <a name="ExecuteIQueryable"></a>   
-### <a name="calling-executet-to-return-a-collection-of-entities"></a>调用执行\<T > 若要返回的实体集合  
+### <a name="calling-executet-to-return-a-collection-of-entities"></a>调用 Execute\<T > 返回的实体集合  
  下面的示例调用名为 GetOrdersByCity 的服务操作，该操作采用字符串参数 `city`，并返回 <xref:System.Linq.IQueryable%601>：  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationiqueryable)]
@@ -63,7 +63,7 @@ ms.locfileid: "33364851"
  在此示例中，该服务操作返回 `Order` 对象的集合，其中含有相关的 `Order_Detail` 对象。  
   
 <a name="CreateQueryIQueryable"></a>   
-### <a name="using-createqueryt-to-return-a-collection-of-entities"></a>使用 CreateQuery\<T > 若要返回的实体集合  
+### <a name="using-createqueryt-to-return-a-collection-of-entities"></a>使用 CreateQuery\<T > 返回的实体集合  
  下面的示例使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 来返回用于调用同一 GetOrdersByCity 服务操作的 <xref:System.Data.Services.Client.DataServiceQuery%601>：  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationCreateQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationcreatequery)]
@@ -72,7 +72,7 @@ ms.locfileid: "33364851"
  在此示例中，<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法用于向查询中添加参数，而 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 方法用于在结果中包括相关 Order_Details 对象。  
   
 <a name="ExecuteSingleEntity"></a>   
-### <a name="calling-executet-to-return-a-single-entity"></a>调用执行\<T > 若要返回单个实体  
+### <a name="calling-executet-to-return-a-single-entity"></a>调用 Execute\<T > 若要返回单个实体  
  下面的示例调用名为 GetNewestOrder 的服务操作，该操作仅返回单个 Order 实体：  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleEntity](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationsingleentity)]
@@ -81,13 +81,13 @@ ms.locfileid: "33364851"
  在此示例中，<xref:System.Linq.Enumerable.FirstOrDefault%2A> 方法用于在执行时仅请求单个 Order 实体。  
   
 <a name="ExecutePrimitiveCollection"></a>   
-### <a name="calling-executet-to-return-a-collection-of-primitive-values"></a>调用执行\<T > 以返回基元值的集合  
+### <a name="calling-executet-to-return-a-collection-of-primitive-values"></a>调用 Execute\<T > 返回基元值的集合  
  下面的示例调用返回字符串值集合的服务操作：  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationEnumString](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationenumstring)]  
   
 <a name="ExecutePrimitiveValue"></a>   
-### <a name="calling-executet-to-return-a-single-primitive-value"></a>调用执行\<T > 若要返回单个基元值  
+### <a name="calling-executet-to-return-a-single-primitive-value"></a>调用 Execute\<T > 返回单个基元值  
  下面的示例调用返回单个字符串值的服务操作：  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleInt](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationsingleint)]

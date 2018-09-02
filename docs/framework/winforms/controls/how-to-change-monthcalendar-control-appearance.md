@@ -1,5 +1,5 @@
 ---
-title: 如何： 更改 Windows 窗体 MonthCalendar 控件&#39;s 外观
+title: 如何： 更改 Windows 窗体 MonthCalendar 控件&#39;的外观
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: aab2625afd5159cb2ce726bce16e917a9ad4d834
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f91363764099cabfa1a7939ff07e627aeb6c815
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531321"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467660"
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>如何： 更改 Windows 窗体 MonthCalendar 控件&#39;s 外观
-Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许你自定义在许多方面的日历的外观。 例如，你可以设置配色方案，并选择以显示或隐藏周数和当前日期。  
+# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>如何： 更改 Windows 窗体 MonthCalendar 控件&#39;的外观
+Windows 窗体<xref:System.Windows.Forms.MonthCalendar>让您可以自定义在很多方面的日历的外观。 例如，可以设置配色方案，并选择要显示或隐藏周数和当前日期。  
   
-### <a name="to-change-the-month-calendars-color-scheme"></a>若要更改月历的配色方案  
+### <a name="to-change-the-month-calendars-color-scheme"></a>若要更改月日历的配色方案  
   
--   设置属性，如<xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>，<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>和<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>属性还为每周天数中确定的字体颜色。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>属性确定的日期之前和之后显示的月份的颜色。  
+-   设置属性，如<xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>，<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>和<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>属性还为每周天数中确定的字体颜色。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>属性确定的日期之前和之后显示的月或几个月的颜色。  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -42,11 +42,11 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许你自定义�
     ```  
   
     > [!NOTE]
-    >  启动与 Windows Vista 和具体取决于主题，设置某些属性可能不更改的外观的日历。 例如，如果 Windows 设置为使用 Aero 主题，设置<xref:System.Windows.Forms.MonthCalendar.BackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>，或<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>属性不起作用。 这是因为日历的更新的版本呈现在运行时派生自当前的操作系统主题的外观。 如果你想要使用这些属性和启用日历的早期版本，你可以为你的应用程序禁用视觉样式。 禁用视觉样式可能会影响的外观和应用程序中其他控件的行为。 若要禁用在 Visual Basic 中的视觉样式，打开项目设计器，并取消选中**启用 XP 视觉样式**复选框。 若要禁用在 C# 中的视觉样式，打开 Program.cs，并注释掉`Application.EnableVisualStyles();`。 关于视觉样式的详细信息，请参阅[如何： 启用 Windows XP 视觉样式](http://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)。  
+    >  从开始使用 Windows Vista，具体取决于主题，设置某些属性可能会更改日历的外观。 例如，如果 Windows 设置为使用 Aero 主题，则将设置<xref:System.Windows.Forms.MonthCalendar.BackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>，或<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>属性不起作用。 这是因为该日历的更新的版本呈现在运行时派生自当前操作系统主题的外观。 如果你想要使用这些属性，并启用日历的早期版本，则可以为应用程序禁用视觉样式。 禁用视觉样式，可能会影响的外观和行为的应用程序中的其他控件。 若要禁用在 Visual Basic 中的视觉样式，请打开项目设计器，并取消选中**启用 XP 视觉样式**复选框。 若要禁用视觉样式在 C# 中的，打开 Program.cs，并注释掉`Application.EnableVisualStyles();`。 视觉样式的详细信息，请参阅[如何： 启用 Windows XP 视觉样式](https://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)。  
   
-### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>若要在控件底部显示当前日期  
+### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>若要在控件的底部显示当前日期  
   
--   将 <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 属性设置为 `true`。 下面的示例显示和省略窗体时在双击今天的日期之间切换。  
+-   将 <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 属性设置为 `true`。 下面的示例显示和省略双击窗体之后今天的日期之间切换。  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -74,7 +74,7 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许你自定义�
        }  
     ```  
   
-     (Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。  
+     (Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数，以注册事件处理程序。  
   
     ```csharp  
     this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  
@@ -87,9 +87,9 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许你自定义�
   
 ### <a name="to-display-week-numbers"></a>若要显示周数  
   
--   将 <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 属性设置为 `true`。 在代码中或在属性窗口中，你可以设置此属性。  
+-   将 <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 属性设置为 `true`。 在代码中或在属性窗口中，可以设置此属性。  
   
-     在一周的第一天左侧一个单独的列中显示周数。  
+     在左侧的一周的第一天到一个单独的列中显示周数。  
   
     ```vb  
     MonthCalendar1.ShowWeekNumbers = True  

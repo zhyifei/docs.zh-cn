@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a44819e8a8c0b07b3ffbfb2d92533cbdc558ef6
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3909855db109938794fad3e0afc99d492009b81c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874739"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461782"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET Native
-.NET 本机提供应用在 Windows 应用商店中或开发人员的计算机上的静态的编译。 这不同于及时生成 (JIT) 编译器或 [本地映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 在该设备上为 Windows 应用商店应用执行的动态编译。 尽管存在不同，.NET Native 尝试保持与兼容性[.NET for Windows Store 应用](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)。 大多数情况下，用于.NET for Windows Store 应用的内容也适用于.NET Native。  然而，在某些情况下，你可能会遇到行为变更。 本文档介绍了以下几个方面之间的标准.NET for Windows Store 应用和.NET Native 的这些差异：  
+.NET 本机提供应用在 Windows 应用商店中或开发人员的计算机上的静态的编译。 这不同于及时生成 (JIT) 编译器或 [本地映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 在该设备上为 Windows 应用商店应用执行的动态编译。 尽管存在不同，.NET Native 尝试保持与兼容性[.NET for Windows Store 应用](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)。 大多数情况下，用于.NET for Windows Store 应用的内容也适用于.NET Native。  然而，在某些情况下，你可能会遇到行为变更。 本文档介绍了以下几个方面之间的标准.NET for Windows Store 应用和.NET Native 的这些差异：  
   
 -   [常规运行时差异](#Runtime)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "37874739"
   
 -   位于 <xref:System.RuntimeFieldHandle> 和 <xref:System.RuntimeMethodHandle> 结构上的公共成员不受支持。 这些受到支持的类型仅用于 LINQ、表达式树和静态阵列初始化。  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 在基类中包含隐藏成员，因此可能会在没有显示重写的情况下遭到重写。 这也适用于其他 [RuntimeReflectionExtensions.GetRuntime*](http://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx) 方法。  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 在基类中包含隐藏成员，因此可能会在没有显示重写的情况下遭到重写。 这也是如此的其他[runtimereflectionextensions.getruntime *](https://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx)方法。  
   
 -   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 和 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 在你试图创建特定组合（例如，ByRef 阵列）时不会发生故障。  
   
@@ -151,13 +151,13 @@ ms.locfileid: "37874739"
   
 -   如果 <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> 特性未应用于类型，<xref:System.PlatformNotSupportedException> 属性就会导致 <xref:System.Runtime.InteropServices.GuidAttribute> 异常。 GUID 主要用于 COM 支持。  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>方法会正确解析包含在.NET Native 的短日期的字符串。 然而，它不会继续兼容 Microsoft 知识库文章 [KB2803771](http://support.microsoft.com/kb/2803771) 和 [KB2803755](http://support.microsoft.com/kb/2803755)中描述的日期和时间解析的变更。  
+-   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>方法会正确解析包含在.NET Native 的短日期的字符串。 但是，它不会继续兼容性的更改日期和时间来分析在 Microsoft 知识库文章中所述[KB2803771](https://support.microsoft.com/kb/2803771)并[KB2803755](https://support.microsoft.com/kb/2803755)。  
   
 -   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` 正确舍入中.NET Native。 在某些版本的 CLR 中，结果字符串会缩短，而不是舍入。  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient 差异  
- 在.NET Native<xref:System.Net.Http.HttpClientHandler>类在内部使用 WinINet (通过[HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)类) 而不是<xref:System.Net.WebRequest>和<xref:System.Net.WebResponse>标准.NET for Windows Store 应用中使用的类。  WinINet 并不支持 <xref:System.Net.Http.HttpClientHandler> 类支持的所有配置选项。  因此：  
+ 在.NET Native<xref:System.Net.Http.HttpClientHandler>类在内部使用 WinINet (通过[HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)类) 而不是<xref:System.Net.WebRequest>和<xref:System.Net.WebResponse>标准.NET for Windows Store 应用中使用的类。  WinINet 并不支持 <xref:System.Net.Http.HttpClientHandler> 类支持的所有配置选项。  因此：  
   
 -   某些能力属性在<xref:System.Net.Http.HttpClientHandler>返回`false`有关.NET Native，而它们返回`true`标准.NET for Windows Store 应用中。  
   
@@ -167,11 +167,11 @@ ms.locfileid: "37874739"
   
  **代理**  
   
- [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) 类不支持基于每个请求配置或重写代理。  这意味着.NET Native 上的所有请求都使用的系统配置的代理服务器或未使用代理服务器，具体取决于值<xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType>属性。  在 Windows 应用商店应用的 .NET 中，代理服务器由 <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> 属性定义。  有关.NET Native，设置<xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>以外的值为`null`引发<xref:System.PlatformNotSupportedException>异常。  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType>属性返回`false`有关.NET Native，而它返回`true`标准的.NET Framework for Windows Store 应用中。  
+ [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)类不支持配置或重写基于每个请求的代理。  这意味着.NET Native 上的所有请求都使用的系统配置的代理服务器或未使用代理服务器，具体取决于值<xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType>属性。  在 Windows 应用商店应用的 .NET 中，代理服务器由 <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> 属性定义。  有关.NET Native，设置<xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>以外的值为`null`引发<xref:System.PlatformNotSupportedException>异常。  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType>属性返回`false`有关.NET Native，而它返回`true`标准的.NET Framework for Windows Store 应用中。  
   
  **自动重定向**  
   
- [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) 类不允许配置自动重新定向的最大数目。  Windows 应用商店应用的标准 .NET 中 <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> 属性的值默认为 50，且可修改。 有关.NET Native，此属性的值为 10，若要对其进行修改，则会引发<xref:System.PlatformNotSupportedException>异常。  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType>属性返回`false`有关.NET Native，而它返回`true`.NET for Windows Store 应用中。  
+ [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx)类不允许配置自动重新定向的最大数目。  Windows 应用商店应用的标准 .NET 中 <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> 属性的值默认为 50，且可修改。 有关.NET Native，此属性的值为 10，若要对其进行修改，则会引发<xref:System.PlatformNotSupportedException>异常。  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType>属性返回`false`有关.NET Native，而它返回`true`.NET for Windows Store 应用中。  
   
  **自动解压缩**  
   
@@ -217,9 +217,9 @@ ms.locfileid: "37874739"
 |<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 受支持，但在某些情况下，例如，当与使用会引发异常[IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx)或 byref 变量。  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 受支持，但在某些情况下，例如，当与使用会引发异常[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)或 byref 变量。  
   
- 不推荐将 API 用于 [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) 支持：  
+ 已弃用的 Api [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)支持：  
   
 |类型|成员|  
 |----------|------------|  
@@ -318,7 +318,7 @@ ms.locfileid: "37874739"
   
     -   `BStr`  
   
-    -   [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509.aspx)  
+    -   [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
   
  但是，.NET 本机不支持以下功能：  
   
@@ -326,7 +326,7 @@ ms.locfileid: "37874739"
   
 -   在托管类型上实施 <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> 接口  
   
--   实现[IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx)上的托管类型通过接口<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>属性。 然而，请注意你无法通过 `IDispatch`调用 COM 对象，而且你的托管对象无法实施 `IDispatch`。  
+-   实现[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)上的托管类型通过接口<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>属性。 然而，请注意你无法通过 `IDispatch`调用 COM 对象，而且你的托管对象无法实施 `IDispatch`。  
   
  使用反射来调用平台调用方法不受支持。 你可以巧妙绕过这种限制，具体做法是将方法调用包装在另一种方法中，并使用反射调用包装方法。  
   
@@ -400,7 +400,7 @@ ms.locfileid: "37874739"
   
  **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**  
   
- 中的类型[system.servicemodel.* 命名空间](http://msdn.microsoft.com/library/gg145010.aspx)中.NET Native 不受支持。 这些包括以下类型：  
+ 中的类型[system.servicemodel.* 命名空间](https://msdn.microsoft.com/library/gg145010.aspx)中.NET Native 不受支持。 这些包括以下类型：  
   
 ||  
 |-|  
@@ -673,5 +673,5 @@ ms.locfileid: "37874739"
 ## <a name="see-also"></a>请参阅  
  [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [.NET for Windows Store 应用概述](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+ [.NET for Windows Store 应用概述](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
  [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

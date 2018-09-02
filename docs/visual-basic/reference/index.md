@@ -5,12 +5,12 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: f9005a25b99b0a17f8e00f350547aa4bc313c4ac
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 773aca8cbbd78f5480e254ff559192955beb18d9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961016"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455674"
 ---
 # <a name="reference-visual-basic"></a>参考 (Visual Basic)
 本部分提供指向 Visual Basic 编程的各个方面的参考信息。  
@@ -42,5 +42,5 @@ ms.locfileid: "37961016"
  [Visual Studio 中的 XML 工具](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  提供有关 Visual Studio 中提供的各种 XML 工具的主题的链接。  
   
- [自动化与扩展性参考](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
+ [自动化与扩展性参考](https://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
  提供指向介绍的自动化和扩展性在 Visual Studio 中，共享和特定于语言的组件的主题。

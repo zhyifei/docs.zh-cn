@@ -2,12 +2,12 @@
 title: WorkflowApplication ReadLine 主机
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518533"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470848"
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine 主机
 此示例是一个泛型 ReadLine 主机。 可以使用包含的 `ReadLine` 活动（或是从通过字符串恢复的书签获取数据的其他类似活动）来加载和运行任何工作流。 `WriteLine` 活动的输出或写入 <xref:System.Activities.Statements.WriteLine.TextWriter%2A> 扩展的任何内容会定向到主机窗口。 当某个实例处于空闲状态时，该实例的可用书签会出现在一个组合框中。 选择书签、输入某些文本和按恢复书签按钮都会继续执行工作流。 也可以取消、中止或终止选择的工作流。 默认情况下持久性处于启用状态 - 您可以关闭主机，然后将其重新打开，实例列表会被那些存储在数据库中的实例所填充。 跟踪可用于将 <xref:System.Activities.WorkflowApplication> 级别事件输出到主机（可以选择在活动级别添加详细跟踪）。  
@@ -33,17 +33,17 @@ ms.locfileid: "33518533"
   
 6.  一旦运行，便可以选择关闭或打开持久性。 另外，也可以选择打开或关闭详细活动跟踪。  
   
-7.  按旁边的省略号按钮**运行**按钮以浏览 XAML 文件中定义的工作流  
+7.  按旁边的省略号按钮**运行**按钮以浏览在 XAML 文件中定义的工作流  
   
      SampleWorkflows 文件夹下面有两个示例。 parallel1.xaml 示例进入空闲状态。  
   
 8.  选择示例后，按**运行**按钮。  
   
-9. 如果或当工作流进入空闲状态时、**书签**组合框填充有可用书签。  
+9. 如果或工作流进入空闲状态，当**书签**组合框填充有可用书签。  
   
 10. 此时的选项可用于恢复书签以及取消、中止或终止工作流。 也可以关闭主机然后重新启动。 如果持久性保留为打开，则会在关机时卸载实例，并在启动时重新加载。  
   
-     若要恢复书签，选择所需的书签，组合框和按旁边的文本框中输入值**恢复书签**。  
+     若要恢复书签，选择所需的书签中，键入该组合框并按旁边的文本框中的值**恢复书签**。  
   
 #### <a name="to-remove-the-instance-store-database"></a>删除实例存储区数据库  
   
@@ -56,6 +56,6 @@ ms.locfileid: "33518533"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

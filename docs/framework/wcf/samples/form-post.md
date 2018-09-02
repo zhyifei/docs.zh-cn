@@ -2,12 +2,12 @@
 title: 窗体发布
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-ms.openlocfilehash: 005aba6ab8a8fcbe4f4e4f79055e04cff059f47d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503758"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464929"
 ---
 # <a name="form-post"></a>窗体发布
 此示例演示如何扩展 WCF REST 编程模型以支持新的传入请求格式。 该示例还包含一个格式化程序的实现，该格式化程序可以将请求从 HTML 窗体发布反序列化为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型。 此外，该示例使用一个 T4 模板返回 HTML 页，该页提供用户可以回发到 WCF REST 服务的 HTML 窗体。  
@@ -27,7 +27,7 @@ ms.locfileid: "33503758"
   
  此控制台应用程序项目扩展[基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)示例。 基本资源服务示例演示如何以使用 WCF REST 编程模型的方式公开资源。 在基本资源服务示例中，公开了一个客户集合资源，从而可以创建、检索、更新和删除集合中的客户。 基本资源服务示例仅使用两个本机支持的传入请求格式，即 XML 和 JSON。  
   
- 此窗体发布示例中的控制台应用程序利用 HtmlFormProcessing 库中的自定义格式化程序，该格式化程序使用户可以通过使用浏览器从 HTML 窗体发布发送请求来创建客户。 它还添加返回 HTML 页的操作，该页包含要回发到服务的窗体。 此 HTML 页使用预处理的 T4 模板生成，该模板包含一个 .tt 文件和一个自动生成的 .cs 文件。 通过 .tt 文件，开发人员可以采用包含变量和控制结构的模板形式编写响应。 T4 的更多信息，请参阅[通过使用文本模板生成项目](http://go.microsoft.com/fwlink/?LinkId=178139)。  
+ 此窗体发布示例中的控制台应用程序利用 HtmlFormProcessing 库中的自定义格式化程序，该格式化程序使用户可以通过使用浏览器从 HTML 窗体发布发送请求来创建客户。 它还添加返回 HTML 页的操作，该页包含要回发到服务的窗体。 此 HTML 页使用预处理的 T4 模板生成，该模板包含一个 .tt 文件和一个自动生成的 .cs 文件。 通过 .tt 文件，开发人员可以采用包含变量和控制结构的模板形式编写响应。 T4 的更多信息，请参阅[通过使用文本模板生成项目](https://go.microsoft.com/fwlink/?LinkId=178139)。  
   
 #### <a name="to-run-the-sample"></a>运行示例  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33503758"
   
 4.  该示例运行时，客户端将当前活动的状态（是添加客户、更新客户、删除客户还是从服务获取当前客户的列表）写入控制台窗口。  
   
-5.  然后，会提示您浏览至客户窗体的 URI。 打开浏览器并浏览至给定 URI。 键入名称和地址的客户和单击**提交**按钮。  
+5.  然后，会提示您浏览至客户窗体的 URI。 打开浏览器并浏览至给定 URI。 键入名称和地址作为客户，然后单击**提交**按钮。  
   
 6.  对控制台窗口按任何键以继续运行示例。  
   
@@ -52,6 +52,6 @@ ms.locfileid: "33503758"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和针对.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Web\FormPost`

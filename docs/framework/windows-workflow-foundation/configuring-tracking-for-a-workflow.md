@@ -2,12 +2,12 @@
 title: 为工作流配置跟踪
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 23a20b014962b74b6408c8b3c9ac6764d4a42d56
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ae6b61bf572da1757920b737b03861c891637f51
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809698"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468575"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>为工作流配置跟踪
 工作流可以按以下三种方法执行：  
@@ -47,7 +47,7 @@ instance.Extensions.Add(trackingParticipant);
 ```  
   
 ### <a name="configuring-workflow-service-tracking"></a>配置工作流服务跟踪  
- 工作流可以作为 WCF 服务中承载时公开<xref:System.ServiceModel.Activities.WorkflowServiceHost>服务主机。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 是基于工作流的服务的指定 .NET ServiceHost 实现。 本节介绍如何为在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中运行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流服务配置跟踪。 通过在 Web.config 文件（对于 Web 承载的服务）或 App.config 文件（对于在独立的应用程序中承载的服务，例如在控制台应用程序中承载的服务）中指定服务行为，或通过使用代码向服务宿主的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中添加与跟踪相关的行为，可以完成上述配置。  
+ 工作流可以公开为 WCF 服务中托管时<xref:System.ServiceModel.Activities.WorkflowServiceHost>服务主机。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 是基于工作流的服务的指定 .NET ServiceHost 实现。 本节介绍如何为在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中运行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流服务配置跟踪。 通过在 Web.config 文件（对于 Web 承载的服务）或 App.config 文件（对于在独立的应用程序中承载的服务，例如在控制台应用程序中承载的服务）中指定服务行为，或通过使用代码向服务宿主的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中添加与跟踪相关的行为，可以完成上述配置。  
   
  对于 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务，您可以使用配置文件中的 <<xref:System.Activities.Tracking.EtwTrackingParticipant>> 元素添加 `behavior`，如以下示例所示。  
   
@@ -64,7 +64,7 @@ instance.Extensions.Add(trackingParticipant);
  此外，对于 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务，您可以通过代码添加 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行为扩展。 若要添加自定义跟踪参与者，请创建一个新的行为扩展并将其添加到 <xref:System.ServiceModel.ServiceHost> 中，如以下代码示例中所示。  
   
 > [!NOTE]
->  如果你想要查看代码演示如何创建添加自定义跟踪参与者的自定义行为元素的示例代码，请参阅[跟踪](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)示例。  
+>  如果你想要查看演示如何创建添加自定义跟踪参与者的自定义行为元素的示例代码，请参阅[跟踪](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)示例。  
   
 ```  
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new   
@@ -134,7 +134,7 @@ if (null != workflowServiceHost)
 ```  
   
 > [!NOTE]
->  有关跟踪配置文件的详细信息，请参阅[跟踪配置文件](http://go.microsoft.com/fwlink/?LinkId=201310)。  
+>  有关跟踪配置文件的详细信息，请参阅[跟踪配置文件](https://go.microsoft.com/fwlink/?LinkId=201310)。  
   
 ### <a name="configuring-tracking-using-workflowinvoker"></a>配置使用 WorkflowInvoker 的跟踪  
  若要对使用 <xref:System.Activities.WorkflowInvoker> 执行的工作流配置跟踪，请添加跟踪提供程序作为 <xref:System.Activities.WorkflowInvoker> 实例的扩展。 下面的代码示例摘自[自定义跟踪](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)示例。  
@@ -152,9 +152,9 @@ invoker.Invoke();
   
 1.  若要打开事件查看器，请单击**启动**，然后单击**运行。** 在运行对话框中，键入`eventvwr`。  
   
-2.  在事件查看器对话框中，展开**Applications and Services Logs**节点。  
+2.  在事件查看器对话框中，展开**应用程序和服务日志**节点。  
   
-3.  展开**Microsoft**， **Windows**，和**应用程序服务器-应用程序**节点。  
+3.  展开**Microsoft**， **Windows**，并**应用程序服务器-应用程序**节点。  
   
 4.  右键单击**调试**节点下的**应用程序服务器-应用程序**节点，然后选择**启用日志**。  
   
@@ -168,15 +168,15 @@ invoker.Invoke();
   
 1.  若要打开事件查看器，请单击**启动**，然后单击**运行。** 在运行对话框中，键入`eventvwr`。  
   
-2.  在事件查看器对话框中，展开**Applications and Services Logs**节点。  
+2.  在事件查看器对话框中，展开**应用程序和服务日志**节点。  
   
-3.  展开**Microsoft**， **Windows**，和**应用程序服务器-应用程序**节点。  
+3.  展开**Microsoft**， **Windows**，并**应用程序服务器-应用程序**节点。  
   
-4.  右键单击**分析**节点下的**应用程序服务器-应用程序**节点，然后选择**启用日志**。  
+4.  右键单击**Analytic**节点下的**应用程序服务器-应用程序**节点，然后选择**启用日志**。  
   
 5.  执行启用跟踪的应用程序以生成跟踪记录。  
   
-6.  右键单击**分析**节点，然后选择**刷新。** 跟踪记录应会显示在中心窗格中。  
+6.  右键单击**Analytic**节点，然后选择**刷新。** 跟踪记录应会显示在中心窗格中。  
   
  下面的图像显示了事件查看器中的跟踪事件。  
   
@@ -193,7 +193,7 @@ invoker.Invoke();
     </system.serviceModel>  
     ```  
   
-2.  将清单文件复制从 %windir%\Microsoft.NET\Framework\\< 最新版本的[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man 到临时位置，并将其命名为Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
+2.  将清单文件从 %windir%\Microsoft.NET\Framework\\< 最新版本的[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man 到临时位置，其重命名为Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
   
 3.  将清单文件中的 GUID 更改为新的 GUID。  
   
@@ -219,7 +219,7 @@ invoker.Invoke();
   
 6.  按照以下这些步骤生成资源 DLL。  
   
-    1.  安装 Windows SDK。 Windows SDK 包括消息编译器 ([mc.exe](http://go.microsoft.com/fwlink/?LinkId=184606)) 和资源编译器 ([rc.exe](http://go.microsoft.com/fwlink/?LinkId=184605))。  
+    1.  安装 Windows SDK。 Windows SDK 包括消息编译器 ([mc.exe](https://go.microsoft.com/fwlink/?LinkId=184606)) 和资源编译器 ([rc.exe](https://go.microsoft.com/fwlink/?LinkId=184605))。  
   
     2.  在 Windows SDK 命令提示中，对新清单文件运行 mc.exe。  
   
@@ -247,12 +247,12 @@ invoker.Invoke();
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">  
         ```  
   
-    7.  使用[wevtutil](http://go.microsoft.com/fwlink/?LinkId=184608)注册清单。  
+    7.  使用[wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608)注册清单。  
   
         ```  
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
         ```  
   
 ## <a name="see-also"></a>请参阅  
- [Windows Server App Fabric 监视](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 监视应用程序](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [使用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)

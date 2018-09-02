@@ -9,16 +9,16 @@ ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: bef3393cda31e546afdb7b720cb08a2d45cb45bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3008b710a6fcaba476fd8c425beaa8eb11f9e52
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409461"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470072"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>UI 自动化对 DataItem 控件类型的支持
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍 DataItem 控件类型的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 支持。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。 这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33409461"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 内容视图|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|DataItem<br /><br /> -而异 (0 个或更多; 可采用层次结构形式构成)|DataItem<br /><br /> -而异 (0 个或更多; 可采用层次结构形式构成)|  
+|DataItem<br /><br /> -各不相同 (0 或更多; 可以采用层次结构)|DataItem<br /><br /> -各不相同 (0 或更多; 可以采用层次结构)|  
   
  在数据网格中的数据项元素可以承载各种对象，包括另一层数据项或特定的网格元素（如文本、图像或编辑控件）。 如果数据项元素具有特定的对象角色，该元素应作为一种特定的控件类型公开；例如，网格中可选择数据项的 ListItem 控件类型。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33409461"
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出其值或定义与数据项控件尤其相关的属性。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|属性|值|说明|  
+|属性|“值”|说明|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -99,13 +99,13 @@ ms.locfileid: "33409461"
 ## <a name="dataitem-control-type-example"></a>DataItem 控件类型示例  
  下图说明了列表视图控件中的 DataItem 控件类型，其支持丰富的列表信息。  
   
- ![具有两个数据项的列表视图控件图形](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![具有两个数据项的列表视图控件的图形](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
  与数据项控件相关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图如下所示。 每个自动化元素的控件模式均显示在括号中。 “Contoso”组也是数据网格宿主控件的网格的一部分。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 内容视图|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|-Group"Contoso"（表、 网格）<br />-DataItem"Accounts Receivable.doc"(TableItem、 GridItem、 SelectionItem、 Invoke)<br />映像"Accounts Receivable.doc"<br />-编辑"Name"(TableItem、 GridItem、 Value"Accounts Receivable.doc")<br />-编辑"修改日期"(TableItem、 GridItem、 Value"8/25/2006年 3:29 PM")<br />-编辑"大小"(GridItem、 TableItem、 Value"11.0 KB)<br />-DataItem"Accounts Payable.doc"(TableItem、 GridItem、 SelectionItem、 Invoke)<br />-   ...|-Group"Contoso"（表、 网格）<br />-DataItem"Accounts Receivable.doc"(TableItem、 GridItem、 SelectionItem、 Invoke)<br />映像"Accounts Receivable.doc"<br />-编辑"Name"(TableItem、 GridItem、 Value"Accounts Receivable.doc")<br />-编辑"修改日期"(TableItem、 GridItem、 Value"8/25/2006年 3:29 PM")<br />-编辑"大小"(GridItem、 TableItem、 Value"11.0 KB)<br />-DataItem"Accounts Payable.doc"(TableItem、 GridItem、 SelectionItem、 Invoke)<br />-   …|  
+|-组"Contoso"（表、 网格）<br />-DataItem"Accounts Receivable.doc"(TableItem、 GridItem、 SelectionItem、 Invoke)<br />-图像"Accounts Receivable.doc"<br />-编辑"Name"(TableItem、 GridItem、 Value"Accounts Receivable.doc")<br />-编辑"修改日期"(TableItem、 GridItem、 Value"8/25/2006年 3:29 PM")<br />-编辑"大小"(GridItem、 TableItem、 Value"11.0 KB)<br />-DataItem"Accounts Payable.doc"(TableItem、 GridItem、 SelectionItem、 Invoke)<br />-   ...|-组"Contoso"（表、 网格）<br />-DataItem"Accounts Receivable.doc"(TableItem、 GridItem、 SelectionItem、 Invoke)<br />-图像"Accounts Receivable.doc"<br />-编辑"Name"(TableItem、 GridItem、 Value"Accounts Receivable.doc")<br />-编辑"修改日期"(TableItem、 GridItem、 Value"8/25/2006年 3:29 PM")<br />-编辑"大小"(GridItem、 TableItem、 Value"11.0 KB)<br />-DataItem"Accounts Payable.doc"(TableItem、 GridItem、 SelectionItem、 Invoke)<br />-   …|  
   
  如果一个网格表示可选择项的列表，则可以使用 ListItem 控件类型而不是 DataItem 控件类型公开相应的 UI 元素。 在前面的示例中，可以通过将组（“Contoso”）下的 DataItem 元素（“Accounts Receivable.doc”和“Accounts Payable.doc”）作为 ListItem 控件类型公开来对其进行改进，因为该类型已支持 SelectionItem 控件模式。  
   

@@ -2,15 +2,15 @@
 title: SQL Server 二进制和大值数据
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
-ms.openlocfilehash: c0202f6dc17d36fafb28206e17b71fc6d68d88c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ebbe23dfbcac7825ce449dd40f62b921d13ab4a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363401"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466193"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server 二进制和大值数据
-SQL Server 提供 `max` 说明符，它可扩展 `varchar`、`nvarchar` 和 `varbinary` 数据类型的存储容量。 `varchar(max)``nvarchar(max)`，和`varbinary(max)`统称为*大型值数据类型*。 您可以使用大值数据类型来存储最大为 2^31-1 个字节的数据。  
+SQL Server 提供 `max` 说明符，它可扩展 `varchar`、`nvarchar` 和 `varbinary` 数据类型的存储容量。 `varchar(max)``nvarchar(max)`，并`varbinary(max)`统称为*大型值数据类型*。 您可以使用大值数据类型来存储最大为 2^31-1 个字节的数据。  
   
  SQL Server 2008 引入了 FILESTREAM 属性，该属性不是一种数据类型，而是一种可在列上定义的属性，因而允许将大值数据存储在文件系统上而不是存储在数据库中。  
   
@@ -25,4 +25,4 @@ SQL Server 提供 `max` 说明符，它可扩展 `varchar`、`nvarchar` 和 `var
  [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [ADO.NET 中的 SQL Server 数据操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
  [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

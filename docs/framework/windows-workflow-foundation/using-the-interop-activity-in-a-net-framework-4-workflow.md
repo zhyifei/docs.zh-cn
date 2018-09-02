@@ -2,51 +2,51 @@
 title: 在 .NET Framework 4 工作流中使用 Interop 活动
 ms.date: 03/30/2017
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-ms.openlocfilehash: 64e8aef01aefa23dc98b42ab835de097d6c222df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02eeaf5bb7ff484ba5982197fc395e247cd5a87f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520222"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466720"
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>在 .NET Framework 4 工作流中使用 Interop 活动
 通过使用 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 活动，可在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 工作流中使用通过 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 或 <xref:System.Activities.Statements.Interop> 创建的活动。 本主题概述如何使用 <xref:System.Activities.Statements.Interop> 活动。  
   
 > [!NOTE]
->  <xref:System.Activities.Statements.Interop>活动在工作流的项目具有除非未出现在工作流设计器工具箱其**目标框架**设置设为 **.Net Framework 4**或更高版本。  
+>  <xref:System.Activities.Statements.Interop>工作流设计器工具箱中不会出现活动，除非工作流项目还有其**目标框架**设置设为 **.Net Framework 4**或更高版本。  
   
 ## <a name="using-the-interop-activity-in-net-framework-45-workflows"></a>在 .NET Framework 4.5 工作流中使用 Interop 活动  
  在本主题中，将要创建一个包含 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活动的 `DiscountCalculator` 活动库。 `DiscountCalculator` 基于购买量计算折扣，它由包含一个 <xref:System.Workflow.Activities.SequenceActivity> 的 <xref:System.Workflow.Activities.PolicyActivity> 组成。  
   
 > [!NOTE]
->  本主题中创建的 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活动使用 <xref:System.Workflow.Activities.PolicyActivity> 来实现该活动的逻辑。 不必使用自定义 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活动或 <xref:System.Activities.Statements.Interop> 活动也能在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流中使用规则。 有关使用中的规则的示例[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]流，并且不使用<xref:System.Activities.Statements.Interop>活动，请参阅[.NET Framework 4.5 中的策略活动](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)示例。  
+>  本主题中创建的 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活动使用 <xref:System.Workflow.Activities.PolicyActivity> 来实现该活动的逻辑。 不必使用自定义 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活动或 <xref:System.Activities.Statements.Interop> 活动也能在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流中使用规则。 有关使用中的规则的示例[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]而无需使用工作流<xref:System.Activities.Statements.Interop>活动，请参阅[.NET Framework 4.5 中的策略活动](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)示例。  
   
 #### <a name="to-create-the-net-framework-35-activity-library-project"></a>创建 .NET Framework 3.5 活动库项目  
   
-1.  打开[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]和选择**新建**然后**项目...** 从**文件**菜单。  
+1.  打开[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]，然后选择**新建**，然后**项目...** 从**文件**菜单。  
   
-2.  展开**其他项目类型**中的节点**已安装的模板**窗格中，然后选择**Visual Studio 解决方案**。  
+2.  展开**其他项目类型**中的节点**已安装的模板**窗格，然后选择**Visual Studio 解决方案**。  
   
-3.  选择**空白解决方案**从**Visual Studio 解决方案**列表。 类型`PolicyInteropDemo`中**名称**框中，单击**确定**。  
+3.  选择**空白解决方案**从**Visual Studio 解决方案**列表。 类型`PolicyInteropDemo`中**名称**框，然后单击**确定**。  
   
-4.  右键单击**PolicyInteropDemo**中**解决方案资源管理器**和选择**添加**然后**新项目...**.  
+4.  右键单击**PolicyInteropDemo**中**解决方案资源管理器**，然后选择**添加**，然后**新建项目...**.  
   
     > [!TIP]
-    >  如果**解决方案资源管理器**窗口不可见，则选择**解决方案资源管理器**从**视图**菜单。  
+    >  如果**解决方案资源管理器**窗口不可见，请选择**解决方案资源管理器**从**视图**菜单。  
   
-5.  在**已安装的模板**列表中，选择**Visual C#** 然后**工作流**。 选择 **.NET Framework 3.5**从.NET Framework 版本下拉列表，，然后选择**工作流活动库**从**模板**列表。  
+5.  在中**已安装的模板**列表中，选择**Visual C#** ，然后**工作流**。 选择 **.NET Framework 3.5**从.NET Framework 版本下拉列表，并选择**工作流活动库**从**模板**列表。  
   
-6.  类型`PolicyActivityLibrary`中**名称**框中，单击**确定**。  
+6.  类型`PolicyActivityLibrary`中**名称**框，然后单击**确定**。  
   
-7.  右键单击**Activity1.cs**中**解决方案资源管理器**和选择**删除**。 单击 **“确定”** 以确认。  
+7.  右键单击**Activity1.cs**中**解决方案资源管理器**，然后选择**删除**。 单击 **“确定”** 以确认。  
   
 #### <a name="to-create-the-discountcalculator-activity"></a>创建 DiscountCalculator 活动  
   
-1.  右键单击**PolicyActivityLibrary**中**解决方案资源管理器**和选择**添加**然后**活动...**.  
+1.  右键单击**PolicyActivityLibrary**中**解决方案资源管理器**，然后选择**添加**，然后**活动...**.  
   
-2.  选择**Activity （具有单独的代码）** 从**Visual C# 项**列表。 类型`DiscountCalculator`中**名称**框中，单击**确定**。  
+2.  选择**Activity （具有单独的代码）** 从**Visual C# 项**列表。 类型`DiscountCalculator`中**名称**框，然后单击**确定**。  
   
-3.  右键单击**DiscountCalculator.xoml**中**解决方案资源管理器**和选择**查看代码**。  
+3.  右键单击**DiscountCalculator.xoml**中**解决方案资源管理器**，然后选择**查看代码**。  
   
 4.  将以下三个属性添加到 `DiscountCalculator` 类中。  
   
@@ -59,33 +59,33 @@ ms.locfileid: "33520222"
     }  
     ```  
   
-5.  右键单击**DiscountCalculator.xoml**中**解决方案资源管理器**和选择**视图设计器**。  
+5.  右键单击**DiscountCalculator.xoml**中**解决方案资源管理器**，然后选择**视图设计器**。  
   
-6.  拖动**策略**活动从**Windows Workflow v3.0**部分**工具箱**拖放**DiscountCalculator**活动.  
+6.  拖动**策略**活动从**Windows 工作流 v3.0**一部分**工具箱**并将其放置**DiscountCalculator**活动.  
   
     > [!TIP]
-    >  如果**工具箱**窗口不可见，则选择**工具箱**从**视图**菜单。  
+    >  如果**工具箱**窗口不可见，请选择**工具箱**从**视图**菜单。  
   
 #### <a name="to-configure-the-rules"></a>配置规则  
   
-1.  单击新添加**策略**活动以选择它，如果尚未选择。  
+1.  单击新添加**策略**活动以选择它，如果未选中。  
   
-2.  单击**rulesetreference**中的属性**属性**窗口选择它，然后单击属性右侧的省略号按钮。  
+2.  单击**RuleSetReference**属性中的**属性**窗口以选择它，并单击属性右侧的省略号按钮。  
   
     > [!TIP]
     >  如果**属性**窗口不可见，请选择**属性窗口**从**视图**菜单。  
   
-3.  选择**新单击...**.  
+3.  选择**单击新建...**.  
   
 4.  单击**添加规则**。  
   
-5.  以下表达式键入**条件**框。  
+5.  将以下表达式键入**条件**框。  
   
     ```  
     this.Subtotal >= 50 && this.Subtotal < 100  
     ```  
   
-6.  以下表达式键入**Then 操作**框。  
+6.  将以下表达式键入**Then 操作**框。  
   
     ```  
     this.DiscountPercent = 0.075  
@@ -93,13 +93,13 @@ ms.locfileid: "33520222"
   
 7.  单击**添加规则**。  
   
-8.  以下表达式键入**条件**框。  
+8.  将以下表达式键入**条件**框。  
   
     ```  
     this.Subtotal >= 100  
     ```  
   
-9. 以下表达式键入**Then 操作**框。  
+9. 将以下表达式键入**Then 操作**框。  
   
     ```  
     this.DiscountPercent = 0.15  
@@ -107,27 +107,27 @@ ms.locfileid: "33520222"
   
 10. 单击**添加规则**。  
   
-11. 以下表达式键入**条件**框。  
+11. 将以下表达式键入**条件**框。  
   
     ```  
     this.DiscountPercent > 0  
     ```  
   
-12. 以下表达式键入**Then 操作**框。  
+12. 将以下表达式键入**Then 操作**框。  
   
     ```  
     this.Total = this.Subtotal - this.Subtotal * this.DiscountPercent  
     ```  
   
-13. 以下表达式键入**Else 操作**框。  
+13. 将以下表达式键入**Else 操作**框。  
   
     ```  
     this.Total = this.Subtotal  
     ```  
   
-14. 单击**确定**关闭**规则集编辑器**对话框。  
+14. 单击**确定**以关闭**规则集编辑器**对话框。  
   
-15. 确保新创建<xref:System.Workflow.Activities.Rules.RuleSet>中选择**名称**列表，然后单击**确定**。  
+15. 确保新创建<xref:System.Workflow.Activities.Rules.RuleSet>中选定**名称**列表，然后单击**确定**。  
   
 16. 按 Ctrl+Shift+B 生成解决方案。  
   
@@ -152,25 +152,25 @@ Rule3: IF this.DiscountPercent > 0
   
 #### <a name="to-create-the-host-application"></a>创建主机应用程序  
   
-1.  右键单击**PolicyInteropDemo**中**解决方案资源管理器**和选择**添加**，，然后**新项目...**.  
+1.  右键单击**PolicyInteropDemo**中**解决方案资源管理器**，然后选择**添加**，然后**新建项目...**.  
   
-2.  确保 **.NET Framework 4.5**已选中在.NET Framework 版本下拉列表中，然后选中**工作流控制台应用程序**从**Visual C# 项**列表。  
+2.  絋粄 **.NET Framework 4.5**已选中在.NET Framework 版本下拉列表中，然后选中**工作流控制台应用程序**从**Visual C# 项**列表。  
   
-3.  类型`PolicyInteropHost`到**名称**框中，单击**确定**。  
+3.  类型`PolicyInteropHost`成**名称**框，然后单击**确定**。  
   
-4.  右键单击**PolicyInteropHost**中**解决方案资源管理器**和选择**属性**。  
+4.  右键单击**PolicyInteropHost**中**解决方案资源管理器**，然后选择**属性**。  
   
-5.  在**目标框架**下拉列表中，更改从选择 **.NET Framework 4 Client Profile**到 **.NET Framework 4.5**。 单击**是**以确认。  
+5.  在中**目标框架**下拉列表中，更改从所选 **.NET Framework 4 Client Profile**到 **.NET Framework 4.5**。 单击**是**以确认。  
   
-6.  右键单击**PolicyInteropHost**中**解决方案资源管理器**和选择**添加引用...**.  
+6.  右键单击**PolicyInteropHost**中**解决方案资源管理器**，然后选择**添加引用...**.  
   
 7.  选择**PolicyActivityLibrary**从**项目**选项卡，单击**确定**。  
   
-8.  右键单击**PolicyInteropHost**中**解决方案资源管理器**和选择**添加引用...**.  
+8.  右键单击**PolicyInteropHost**中**解决方案资源管理器**，然后选择**添加引用...**.  
   
-9. 选择**System.Workflow.Activities**， **System.Workflow.ComponentModel**，，然后**System.Workflow.Runtime**从 **.NET**选项卡，单击**确定**。  
+9. 选择**System.Workflow.Activities**， **System.Workflow.ComponentModel**，然后**System.Workflow.Runtime**从 **.NET**选项卡，单击**确定**。  
   
-10. 右键单击**PolicyInteropHost**中**解决方案资源管理器**和选择**设为启动项目**。  
+10. 右键单击**PolicyInteropHost**中**解决方案资源管理器**，然后选择**设为启动项目**。  
   
 11. 按 Ctrl+Shift+B 生成解决方案。  
   
@@ -179,7 +179,7 @@ Rule3: IF this.DiscountPercent > 0
   
 ##### <a name="to-use-the-interop-activity-in-code"></a>在代码中使用 Interop 活动  
   
-1.  右键单击**Program.cs**中**解决方案资源管理器**和选择**查看代码**。  
+1.  右键单击**Program.cs**中**解决方案资源管理器**，然后选择**查看代码**。  
   
 2.  将下面的 `using` 语句添加到文件的顶部。  
   
@@ -263,49 +263,49 @@ Rule3: IF this.DiscountPercent > 0
   
 ##### <a name="to-host-the-policyactivity-using-a-workflow-designer-created-workflow"></a>使用工作流设计器创建的工作流承载 PolicyActivity  
   
-1.  右键单击**Workflow1.xaml**中**解决方案资源管理器**和选择**删除**。 单击 **“确定”** 以确认。  
+1.  右键单击**Workflow1.xaml**中**解决方案资源管理器**，然后选择**删除**。 单击 **“确定”** 以确认。  
   
-2.  右键单击**PolicyInteropHost**中**解决方案资源管理器**和选择**添加**，**新建项...**.  
+2.  右键单击**PolicyInteropHost**中**解决方案资源管理器**，然后选择**添加**，**新项...**.  
   
 3.  展开**Visual C# 项**节点，然后选择**工作流**。 选择**活动**从**Visual C# 项**列表。  
   
-4.  类型`DiscountWorkflow`到**名称**框中，单击**添加**。  
+4.  类型`DiscountWorkflow`成**名称**框，然后单击**添加**。  
   
-5.  单击**参数**上要显示的工作流设计器左下方按钮**参数**窗格。  
+5.  单击**自变量**按钮以显示工作流设计器左下方**自变量**窗格。  
   
-6.  单击**创建自变量**。  
+6.  单击**创建参数**。  
   
-7.  类型`Subtotal`到**名称**框中，选择**中**从**方向**下拉列表中，选择**Double**从**自变量类型**下拉列表中，然后按 enter 键保存该自变量。  
-  
-    > [!NOTE]
-    >  如果**Double**不在**自变量类型**下拉列表中，选择**浏览类型...**，类型`System.Double`中**类型名称**框中，然后单击**确定**。  
-  
-8.  单击**创建自变量**。  
-  
-9. 类型`DiscountPercent`到**名称**框中，选择**出**从**方向**下拉列表中，选择**Double**从**自变量类型**下拉列表中，然后按 enter 键保存该自变量。  
-  
-10. 单击**创建自变量**。  
-  
-11. 类型`Total`到**名称**框中，选择**出**从**方向**下拉列表中，选择**Double**从**自变量类型**下拉列表中，然后按 enter 键保存该自变量。  
-  
-12. 单击**参数**上要关闭的工作流设计器左下方按钮**参数**窗格。  
-  
-13. 拖动**序列**活动从**控制流**部分**工具箱**并将其放到工作流设计器图面上。  
-  
-14. 拖动**互操作**活动从**迁移**部分**工具箱**拖放**序列**活动。  
-  
-15. 单击**互操作**上的活动**单击此项可浏览...** 标记中，键入**DiscountCalculator**中**类型名称**框中，然后单击**确定**。  
+7.  类型`Subtotal`成**名称**框中，选择**中**从**方向**下拉列表中，选择**Double**从**自变量类型**下拉列表中，然后按 enter 键保存该自变量。  
   
     > [!NOTE]
-    >  当 <xref:System.Activities.Statements.Interop> 活动添加到工作流并且 `DiscountCalculator` 类型指定为该活动的 <xref:System.Activities.Statements.Interop.ActivityType%2A> 时，<xref:System.Activities.Statements.Interop> 活动会公开三个 <xref:System.Activities.ArgumentDirection.In> 参数和三个 <xref:System.Activities.ArgumentDirection.Out> 参数，它们表示 `DiscountCalculator` 活动的三个公共属性。 <xref:System.Activities.ArgumentDirection.In>自变量具有相同的名称为三个公共属性，而三个<xref:System.Activities.ArgumentDirection.Out>自变量具有相同名称的与**出**追加到属性名称。 在以下步骤中，之前步骤中创建的工作流参数将绑定到 <xref:System.Activities.Statements.Interop> 活动的参数。  
+    >  如果**双**未处于**自变量类型**下拉列表中，选择**浏览类型...**，类型`System.Double`中**类型名称**框中，然后单击**确定**。  
   
-16. 类型`DiscountPercent`到**输入 VB 表达式**右侧的框中**DiscountPercentOut**属性然后按 tab 键。  
+8.  单击**创建参数**。  
   
-17. 类型`Subtotal`到**输入 VB 表达式**右侧的框中**Subtotal**属性然后按 tab 键。  
+9. 类型`DiscountPercent`成**名称**框中，选择**出**从**方向**下拉列表中，选择**Double**从**自变量类型**下拉列表中，然后按 enter 键保存该自变量。  
   
-18. 类型`Total`到**输入 VB 表达式**右侧的框中**TotalOut**属性然后按 tab 键。  
+10. 单击**创建参数**。  
   
-19. 右键单击**Program.cs**中**解决方案资源管理器**和选择**查看代码**。  
+11. 类型`Total`成**名称**框中，选择**出**从**方向**下拉列表中，选择**Double**从**自变量类型**下拉列表中，然后按 enter 键保存该自变量。  
+  
+12. 单击**自变量**按钮以关闭工作流设计器左下方**自变量**窗格。  
+  
+13. 拖动**序列**活动从**控制流**一部分**工具箱**并将其放到工作流设计器图面上。  
+  
+14. 拖动**互操作**活动从**迁移**一部分**工具箱**并将其放置**序列**活动。  
+  
+15. 单击**Interop**上的活动**单击此项可浏览...** 标签中，键入**DiscountCalculator**中**类型名称**框中，然后单击**确定**。  
+  
+    > [!NOTE]
+    >  当 <xref:System.Activities.Statements.Interop> 活动添加到工作流并且 `DiscountCalculator` 类型指定为该活动的 <xref:System.Activities.Statements.Interop.ActivityType%2A> 时，<xref:System.Activities.Statements.Interop> 活动会公开三个 <xref:System.Activities.ArgumentDirection.In> 参数和三个 <xref:System.Activities.ArgumentDirection.Out> 参数，它们表示 `DiscountCalculator` 活动的三个公共属性。 <xref:System.Activities.ArgumentDirection.In>自变量具有相同名称的三个公共属性，以及三个<xref:System.Activities.ArgumentDirection.Out>自变量具有相同的名称与**出**追加到属性名称。 在以下步骤中，之前步骤中创建的工作流参数将绑定到 <xref:System.Activities.Statements.Interop> 活动的参数。  
+  
+16. 类型`DiscountPercent`成**输入 VB 表达式**右侧的框中**DiscountPercentOut**属性然后按 TAB 键。  
+  
+17. 类型`Subtotal`成**输入 VB 表达式**右侧的框中**Subtotal**属性然后按 TAB 键。  
+  
+18. 类型`Total`成**输入 VB 表达式**右侧的框中**TotalOut**属性然后按 TAB 键。  
+  
+19. 右键单击**Program.cs**中**解决方案资源管理器**，然后选择**查看代码**。  
   
 20. 将下面的 `using` 语句添加到文件的顶部。  
   
@@ -359,11 +359,11 @@ Rule3: IF this.DiscountPercent > 0
   
 |规则功能|文档|  
 |-------------------|-------------------|  
-|规则概述|[Windows Workflow Foundation 规则引擎简介](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|RuleSet|[工作流中使用 Ruleset](http://go.microsoft.com/fwlink/?LinkId=178516)和 <xref:System.Workflow.Activities.Rules.RuleSet>|  
-|规则计算|[Ruleset 中的规则评估](http://go.microsoft.com/fwlink/?LinkId=178517)|  
-|规则链接|[正向链接控制](http://go.microsoft.com/fwlink/?LinkId=178518)和[正向链接的规则](http://go.microsoft.com/fwlink/?LinkId=178519)|  
-|处理规则中的集合|[处理规则中的集合](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|使用 PolicyActivity|[使用 PolicyActivity 活动](http://go.microsoft.com/fwlink/?LinkId=178521)和 <xref:System.Workflow.Activities.PolicyActivity>|  
+|规则概述|[Windows Workflow Foundation 规则引擎简介](https://go.microsoft.com/fwlink/?LinkID=152836)|  
+|RuleSet|[在工作流中使用 Ruleset](https://go.microsoft.com/fwlink/?LinkId=178516)和 <xref:System.Workflow.Activities.Rules.RuleSet>|  
+|规则计算|[中的规则集的规则评估](https://go.microsoft.com/fwlink/?LinkId=178517)|  
+|规则链接|[正向链接控制](https://go.microsoft.com/fwlink/?LinkId=178518)和[规则的正向链接](https://go.microsoft.com/fwlink/?LinkId=178519)|  
+|处理规则中的集合|[处理规则中的集合](https://go.microsoft.com/fwlink/?LinkId=178520)|  
+|使用 PolicyActivity|[使用 PolicyActivity 活动](https://go.microsoft.com/fwlink/?LinkId=178521)和 <xref:System.Workflow.Activities.PolicyActivity>|  
   
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中创建的工作流不使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 提供的所有规则功能，例如声明性活动条件以及诸如 <xref:System.Workflow.Activities.ConditionedActivityGroup> 和 <xref:System.Workflow.Activities.ReplicatorActivity> 等条件活动。 如果需要，此功能可用于使用 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 和 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 创建的工作流。 有关详细信息，请参阅[迁移指南](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。

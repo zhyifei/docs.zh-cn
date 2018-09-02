@@ -3,11 +3,11 @@ title: 高级查询技术 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 79be877c-fadc-4dfb-9f03-426082b13656
 ms.openlocfilehash: 67227dddfcf44201ddd7e4adebd06a6022c6f2f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641968"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473887"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>高级查询技术 (LINQ to XML) (Visual Basic)
 本节提供更多高级 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询技术的示例。  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 7f8a23c32d4c1e2a91cd83770935b071764943e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365470"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457016"
 ---
 # <a name="windows-applications-using-callbacks"></a>使用回调的 Windows 应用程序
 在大多数异步处理方案中，需要开始一个数据库操作并继续运行其他进程，而不必等待数据库操作完成。 但是，许多方案在数据库操作结束后需要执行某些操作。 例如，在 Windows 应用程序中，可能需要将长时间运行的操作委托给后台线程，同时允许用户界面线程保持响应状态。 但是，在数据库操作完成后，需要使用结果填充窗体。 此类方案最适合使用回调实现。  
@@ -380,4 +380,4 @@ private void Form1_Load(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>请参阅  
  [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,13 +1,13 @@
 ---
-title: 示例 XML 文件： 多个采购订单中 Namespace3
+title: 示例 XML 文件： 命名空间 3 中的多个采购订单
 ms.date: 07/20/2015
 ms.assetid: 03f754c6-89f7-4143-8456-4963044be7e5
 ms.openlocfilehash: 20d1807b58e0cf9302413cf9007c62d0fbec9c16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645572"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465742"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>示例 XML 文件：命名空间中的多个采购订单
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件包含多个采购订单。 该 XML 在某个命名空间中。  

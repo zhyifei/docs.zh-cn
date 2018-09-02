@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: 2a618dae8d5f2f5ea6a6581fff2758fe8419f511
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537728"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456660"
 ---
 # <a name="user-input-in-windows-forms"></a>Windows 窗体中的用户输入
 Windows 窗体包括一种用户输入模型，该模型基于在处理相关的 Windows 消息时所引发的事件。 本节中的主题提供了有关鼠标和键盘用户输入的信息，其中包括演示如何执行特定任务的代码示例。  
@@ -37,4 +37,4 @@ Windows 窗体包括一种用户输入模型，该模型基于在处理相关的
  描述用于验证 Windows 窗体应用程序中的用户输入的方法。  
   
 ## <a name="related-sections"></a>相关章节  
- 另请参阅[Windows 窗体中创建事件处理程序](http://msdn.microsoft.com/library/dacysss4\(v=vs.110\))。
+ 另请参阅[在 Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\))。

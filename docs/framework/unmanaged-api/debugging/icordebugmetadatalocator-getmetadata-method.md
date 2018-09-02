@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c7042f7eee1ccd03d04cc20c5a0db83d986b0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421913"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470822"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData 方法
 要求调试器返回模块（完成该调试器请求的操作需要其元数据）的完整路径。  
@@ -43,10 +43,10 @@ HRESULT GetMetaData(
   
 #### <a name="parameters"></a>参数  
  `wszImagePath`  
- [in] 以 null 结尾的字符串，表示文件的完整路径。 如果完整路径不可用，名称和文件的扩展名 (*filename*。*扩展*)。  
+ [in] 以 null 结尾的字符串，表示文件的完整路径。 如果不可用，完整路径的名称和扩展名的文件 (*文件名*。*扩展*)。  
   
  `dwImageTimeStamp`  
- [in] 来自图像 PE 文件头的时间戳。 此参数可以可能用于符号服务器 ([SymSrv](http://msdn.microsoft.com/library/cc266470.aspx)) 查找。  
+ [in] 来自图像 PE 文件头的时间戳。 此参数可潜在用于符号服务器 ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) 查找。  
   
  `dwImageSize`  
  [in] PE 文件头中的图像大小。 此参数可能可以用于 SymSrv 查找。  
@@ -62,7 +62,7 @@ HRESULT GetMetaData(
  `wszPathBuffer`  
  [out] 指向一个缓冲区的指针，调试器会将包含请求的元数据的文件的完整路径复制到该缓冲区中。  
   
- `ofReadOnly`标志[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)枚举用于请求对此文件中的元数据的只读访问权限。  
+ `ofReadOnly`标志，从[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)枚举用于请求对此文件中的元数据的只读访问权限。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。 所有其他失败的 HRESULT 均指示文件不可检索。  
@@ -78,11 +78,11 @@ HRESULT GetMetaData(
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [ICorDebugThread4 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
