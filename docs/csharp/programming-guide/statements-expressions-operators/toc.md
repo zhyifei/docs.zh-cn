@@ -13,7 +13,6 @@
 ### [使用转换运算符](using-conversion-operators.md)
 ### [如何：在结构之间实现用户定义的转换](how-to-implement-user-defined-conversions-between-structs.md)
 ## [默认值表达式](default-value-expressions.md)
-## [如何：使用运算符重载创建复数类](how-to-use-operator-overloading-to-create-a-complex-number-class.md)
 ## [相等比较](equality-comparisons.md)
 ### [如何：为类型定义值相等性](how-to-define-value-equality-for-a-type.md)
 ### [如何：测试引用相等性（标识）](how-to-test-for-reference-equality-identity.md)
